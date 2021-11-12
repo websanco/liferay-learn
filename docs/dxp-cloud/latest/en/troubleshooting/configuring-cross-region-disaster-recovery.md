@@ -107,8 +107,8 @@ Follow these steps to disable the restoration schedule while it is accessible:
 
 Next, restore a backup from your Production environment to ensure your DR environment has the most recent updates.
 
-```important::
-   If you were using the ``LCP_BACKUP_RESTORE_SCHEDULE`` environment variable to regularly restore to your DR environment, you may already have a more recent stable backup restored and ready (depending on your configured frequency). If you had a backup automatically restored more recently, skip manually restoring the backup.
+```{important}
+If you were using the `LCP_BACKUP_RESTORE_SCHEDULE` environment variable to regularly restore to your DR environment, you may already have a more recent stable backup restored and ready (depending on your configured frequency). If you had a backup automatically restored more recently, skip manually restoring the backup.
 ```
 
 Follow these steps to restore the latest stable backup of Production to the DR environment:
@@ -116,8 +116,8 @@ Follow these steps to restore the latest stable backup of Production to the DR e
 1. In the DR environment, click the *Backups* tab.
 1. Click the tab corresponding to the Production environment.
 
-    ```note::
-       The Backup History lists the backups in two tabs: one for the DR environment and one for the Production environment.
+    ```{note}
+    The Backup History lists the backups in two tabs: one for the DR environment and one for the Production environment.
     ```
 
 1. Click *Actions* (![Actions](./configuring-cross-region-disaster-recovery/images/03.png)) for the latest stable backup in the Production environment; then select *Restore*.
@@ -187,8 +187,8 @@ Restore the data from your DR environment back to your normal production environ
 1. In the DR environment, click *Backups* in the menu on the left.
 1. Click the tab corresponding to the DR environment.
 
-    ```note::
-       The Backup History lists the backups in two tabs: one for the DR environment and one for the Production environment.
+    ```{note}
+    The Backup History lists the backups in two tabs: one for the DR environment and one for the Production environment.
     ```
 
 1. For the most recent backup (the one you just created), click the *Actions* button (![Actions](./configuring-cross-region-disaster-recovery/images/03.png)) and select *Restore*.
@@ -224,8 +224,8 @@ Because the webserver service redirected all traffic to the DR environment durin
 
 1. Remove the custom domain from the DR environment.
 
-    ```warning::
-       Removing the custom domain creates downtime until your Production environment is receiving traffic again.
+    ```{warning}
+    Removing the custom domain creates downtime until your Production environment is receiving traffic again.
     ```
 
 1. Update the DNS records and add the custom domain back to the Production environment. For more information, see [Custom Domains](../infrastructure-and-operations/networking/custom-domains.md).

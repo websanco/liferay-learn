@@ -16,8 +16,8 @@ For every connection configured in this private network, you must specify these 
 default value `false` restricts the connection to internal DXP Cloud 
 connections.
 
-```tip::
-   If you expose a connection to external connections, then you may need to troubleshoot the connection using your service's shell. See `Shell Access <../../troubleshooting/shell-access.md>`__ for more information.
+```{tip}
+If you expose a connection to external connections, then you may need to troubleshoot the connection using your service's shell. See [Shell Access](../../troubleshooting/shell-access.md)_ for more information.
 ```
 
 Here's an example configuration: 

@@ -8,8 +8,8 @@ Using this feature, a service can automatically increase (upscale) the number of
   "scale": 2,
 ```
 
-```note::
-   Auto-scaling is only available for the Liferay DXP service in production environments. Once auto-scaling is enabled, each extra instance of the service will incur an hourly charge. For more information on how auto-scaling is charged, see `How Auto-scaling is Charged <https://help.liferay.com/hc/en-us/articles/360030843592-How-Auto-Scaling-is-charged->`_.
+```{note}
+Auto-scaling is only available for the Liferay DXP service in production environments. Once auto-scaling is enabled, each extra instance of the service will incur an hourly charge. For more information on how auto-scaling is charged, see [How Auto-scaling is Charged](https://help.liferay.com/hc/en-us/articles/360030843592-How-Auto-Scaling-is-charged-).
 ```
 
 ## JVM Memory Configuration
@@ -32,8 +32,8 @@ The recommended configuration is to set the `-Xms` flag using 25% of the availab
 | 32 GB | -Xms8192m -Xmx24576m |
 | 64 GB | -Xms16384m -Xmx49152m |
 
-```note::
-   The ``LIFERAY_JAVA_OPTS`` variable may sometimes be used with other flags, in addition to ``-Xms`` and ``-Xmx``. If other flags are present, then update the environment variable with the memory arguments without removing the others.
+```{note}
+The `LIFERAY_JAVA_OPTS` variable may sometimes be used with other flags, in addition to `-Xms` and `-Xmx`. If other flags are present, then update the environment variable with the memory arguments without removing the others.
 ```
 
 See [Defining Environment Variables](../reference/defining-environment-variables.md) for help adding this environment variable to your `liferay` service.

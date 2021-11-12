@@ -29,8 +29,8 @@ Define the specific service pack and fix pack through the `gradle.properties` fi
 liferay.workspace.docker.image.liferay=liferay/dxp:7.2.10-sp2-202005120922
 ```
 
-```note::
-   If your DXP Cloud stack is not yet updated to 4.x.x, then by default, this version is instead located within a ``gradle.properties`` file at the root of the repository. In this case, define the version with the ``liferay.workspace.lcp.liferay.image`` property (which does not need to be defined separately from the major version). See `Understanding Service Stack Versions <../reference/understanding-service-stack-versions.md>`__ for more information on checking the version.
+```{note}
+If your DXP Cloud stack is not yet updated to 4.x.x, then by default, this version is instead located within a `gradle.properties` file at the root of the repository. In this case, define the version with the `liferay.workspace.lcp.liferay.image` property (which does not need to be defined separately from the major version). See [Understanding Service Stack Versions](../reference/understanding-service-stack-versions.md)_ for more information on checking the version.
 ```
 
 You can check the [Services Changelog](https://help.liferay.com/hc/en-us/sections/360006251311-Services-Changelog) for DXP Cloud to see a reference for each new release. Each new Service update includes Docker images that you can use for your instance. You can also directly check the [DXP tags on Docker Hub](https://hub.docker.com/r/liferay/dxp/tags?page=1) to find the Docker image names to use.
@@ -55,8 +55,8 @@ Environment variables are also used to configure the Liferay service and, in som
 
 Hot deploy can be done via the Liferay DXP UI. To do so, navigate to the Control Panel → Apps → App Manager. Then, click the dots in the upper-right corner, and click "Upload." From this screen, you can choose a file from your local file system to deploy and install.
 
-```note::
-   Using hot deploy in DXP Cloud is *not* recommended because any customizations deployed with this method will be lost upon a subsequent DXP service deployment.
+```{note}
+Using hot deploy in DXP Cloud is *not* recommended because any customizations deployed with this method will be lost upon a subsequent DXP service deployment.
 ```
 
 ## Enabling Clustering
@@ -81,8 +81,8 @@ liferay
             └── remove-log-files.sh
 ```
 
-```note::
-   If you are using version 3.x.x services, then scripts instead belong in the ``lcp/liferay/script/`` folder in the repository. See `Understanding Service Stack Versions <../reference/understanding-service-stack-versions.md>`__ for more information on checking the version.
+```{note}
+If you are using version 3.x.x services, then scripts instead belong in the `lcp/liferay/script/` folder in the repository. See [Understanding Service Stack Versions](../reference/understanding-service-stack-versions.md)_ for more information on checking the version.
 ```
 
 ## Limitations

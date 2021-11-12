@@ -27,8 +27,8 @@ If not, then follow these steps to upgrade:
 
 1. Deploy the Jenkins service.
 
-```note::
-    If you've customized your Jenkinsfile, follow this guide to `extend the Default Jenkinsfile <../platform-services/continuous-integration.md#extending-the-default-jenkinsfile>`__.
+```{note}
+If you've customized your Jenkinsfile, follow this guide to [extend the Default Jenkinsfile](../platform-services/continuous-integration.md#extending-the-default-jenkinsfile)_.
 ```
 
 ## Creating a Bitbucket Repository
@@ -61,8 +61,8 @@ Follow these steps to transfer the provisioned GitHub repository to your own Bit
 
     ```git clone git@github.com:dxpcloud/example.git```
 
-    ```note::
-       If you have already cloned the repository for work with another provider, then you can skip this step and work within the same clone.
+    ```{note}
+    If you have already cloned the repository for work with another provider, then you can skip this step and work within the same clone.
     ```
 
 1. Add a new Git remote and point to Bitbucket:
@@ -100,8 +100,8 @@ Perform the following steps to generate an app password:
 
 1. Copy the app password (you won't see it again otherwise). This is BitBucket's equivalent of a personal access token.
 
-```important::
-   The user that generated the app password must use their username for the ``LCP_CI_SCM_USERNAME`` environment variable.
+```{important}
+The user that generated the app password must use their username for the `LCP_CI_SCM_USERNAME` environment variable.
 ```
 
 ## Checking Branch Types and Prefixes

@@ -4,8 +4,8 @@ The DXP Cloud backup service creates backups of an environment's database and th
 
 Users can also download or upload environment backups [using the DXP Cloud Console](#uploading-backups-via-the-console), or through [Backup APIs](#backup-service-apis).
 
-```note::
-   The Backups page is only available in production environments for backup service versions older than 4.3.5.
+```{note}
+The Backups page is only available in production environments for backup service versions older than 4.3.5.
 ```
 
 ## Downloading Backups via the Console
@@ -20,14 +20,14 @@ Follow these steps to download a backup from the *Backups* page in your chosen e
 
 1. Click on the *Database* (`.gz`) or *Liferay* (`.tgz`) file to start downloading. Together, these zip archives comprise the environment backup.
 
-    ```note::
-       If your Backup service is not yet updated to version ``4.2`` or above, then the Database volume is downloaded as a ``.tgz`` archive instead of ``.gz``.
+    ```{note}
+    If your Backup service is not yet updated to version `4.2` or above, then the Database volume is downloaded as a `.tgz` archive instead of `.gz`.
     ```
 
     ![Click to download the database and Liferay data volume files.](./downloading-and-uploading-backups/images/02.png)
 
-```note::
-   Only administrators for the chosen environment can download backups from the Backups page.
+```{note}
+Only administrators for the chosen environment can download backups from the Backups page.
 ```
 
 ## Uploading Backups via the Console
@@ -36,8 +36,8 @@ You can also upload a backup to your project through the *Backups* page in your 
 
 Before you can upload a backup to DXP Cloud, you must compress the database dump and document library in separate archives. See [Preparing the Database and Document Library for Upload](#preparing-the-database-and-document-library-for-upload) for more information on preparing for the upload for an on-premises environment.
 
-```warning::
-   Once an upload is initiated, the Backup service is unavailable to generate or restore other backups until the upload is completed.
+```{warning}
+Once an upload is initiated, the Backup service is unavailable to generate or restore other backups until the upload is completed.
 ```
 
 Follow these steps from the *Backups* page:
@@ -92,8 +92,8 @@ curl -X POST \
   -F 'volume=@/my-folder/volume.tgz'
 ```
 
-```note::
-   Passing the user token in the header ``dxpcloud-authorization`` only works for versions ``3.2.0`` or greater of the backup service. Previous versions should be upgraded to at least ``3.2.0``. Requests to earlier versions must use the header ``Authorization: Bearer <PROJECT_MASTER_TOKEN>``. You can find the project master token by running the command ``env | grep LCP_PROJECT_MASTER_TOKEN`` in any shell in the Liferay DXP Cloud console.
+```{note}
+Passing the user token in the header `dxpcloud-authorization` only works for versions `3.2.0` or greater of the backup service. Previous versions should be upgraded to at least `3.2.0`. Requests to earlier versions must use the header `Authorization: Bearer <PROJECT_MASTER_TOKEN>`. You can find the project master token by running the command `env | grep LCP_PROJECT_MASTER_TOKEN` in any shell in the Liferay DXP Cloud console.
 ```
 
 ### Download Database API
@@ -115,8 +115,8 @@ curl -X GET \
   --output database.gz
 ```
 
-```note::
-   If your Backup service is not yet updated to version ``4.2`` or above, then the Database volume is downloaded as a ``.tgz`` archive instead of ``.gz``.
+```{note}
+If your Backup service is not yet updated to version `4.2` or above, then the Database volume is downloaded as a `.tgz` archive instead of `.gz`.
 ```
 
 ### Download Data Volume API
@@ -182,8 +182,8 @@ To create a MySQL dump (as a `.sql` script) and compress it into a `.gz` archive
 mysqldump -uroot -ppassword --add-drop-database --databases lportal | gzip -c | cat > database.gz
 ```
 
-```note::
-   If your Backup service is not updated to at least version ``4.2``, then you must also run the following command to convert the archive to a ``.tgz`` file: ``tar zcvf database.tgz database.gz``. Then use the resulting ``.tgz`` archive to upload.
+```{note}
+If your Backup service is not updated to at least version `4.2`, then you must also run the following command to convert the archive to a `.tgz` file: `tar zcvf database.tgz database.gz`. Then use the resulting `.tgz` archive to upload.
 ```
 
 The `databases` and `add-drop-database` options are necessary for backup restoration to work correctly. You can also use the `/backup/download` API to see how the backup service creates its MySQL dump file.

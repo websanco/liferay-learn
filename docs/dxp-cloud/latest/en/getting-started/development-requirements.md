@@ -6,8 +6,8 @@ In order to set up a local environment for development with DXP Cloud, the follo
 
 * [JDK 1.8 or JDK 11](http://www.oracle.com/technetwork/java/javase/downloads/index.html): required for running Liferay DXP locally
 
-    ```important::
-       JDK 9 and JDK 10 are unsupported. Please see the latest `Compatibility Matrix <https://help.liferay.com/hc/en-us/articles/360049238151>`_ for more information.
+    ```{important}
+    JDK 9 and JDK 10 are unsupported. Please see the latest [Compatibility Matrix](https://help.liferay.com/hc/en-us/articles/360049238151) for more information.
     ```
 
 * [Gradle 4+](http://www.gradle.org/downloads): used to run any of various build commands for Liferay DXP and DXP Cloud
@@ -20,8 +20,8 @@ In order to set up a local environment for development with DXP Cloud, the follo
   * [Bitbucket](https://bitbucket.org/)
   * [GitLab](https://gitlab.com/)
 
-```note::
-    Liferay DXP Cloud has similar prerequisites to `Liferay Workspace <https://help.liferay.com/hc/en-us/articles/360029147471-Liferay-Workspace>`_. Developers who are familiar with creating a Liferay Workspace using `Liferay Dev Studio <https://customer.liferay.com/downloads?p_p_id=com_liferay_osb_customer_downloads_display_web_DownloadsDisplayPortlet&_com_liferay_osb_customer_downloads_display_web_DownloadsDisplayPortlet_productAssetCategoryId=118191007&_com_liferay_osb_customer_downloads_display_web_DownloadsDisplayPortlet_fileTypeAssetCategoryId=118191038>`_, `Maven <https://help.liferay.com/hc/en-us/articles/360017885592-Maven-Workspace>`_, or the `Liferay IntelliJ Plugin <https://plugins.jetbrains.com/plugin/10739-liferay-intellij-plugin>`_ will have most of the necessary tools already set up.
+```{note}
+Liferay DXP Cloud has similar prerequisites to [Liferay Workspace](https://help.liferay.com/hc/en-us/articles/360029147471-Liferay-Workspace). Developers who are familiar with creating a Liferay Workspace using [Liferay Dev Studio](https://customer.liferay.com/downloads?p_p_id=com_liferay_osb_customer_downloads_display_web_DownloadsDisplayPortlet&_com_liferay_osb_customer_downloads_display_web_DownloadsDisplayPortlet_productAssetCategoryId=118191007&_com_liferay_osb_customer_downloads_display_web_DownloadsDisplayPortlet_fileTypeAssetCategoryId=118191038), [Maven](https://help.liferay.com/hc/en-us/articles/360017885592-Maven-Workspace), or the [Liferay IntelliJ Plugin](https://plugins.jetbrains.com/plugin/10739-liferay-intellij-plugin) will have most of the necessary tools already set up.
 ```
 
 ## Additional Information

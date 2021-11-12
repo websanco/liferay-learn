@@ -36,8 +36,8 @@ This page lists all activities that have occurred on the DXP Cloud instance.
 
 ![Figure 2: View extended environment activities from the Activities page.](./team-activities/images/02.png)
 
-```note::
-   You can also view all build and deployment activities from your project environments via the *Builds* and *Deployments* pages. See `Overview of the DXP Cloud Deployment Workflow <../build-and-deploy/overview-of-the-dxp-cloud-deployment-workflow.md>`_ for more information about these pages.
+```{note}
+You can also view all build and deployment activities from your project environments via the *Builds* and *Deployments* pages. See [Overview of the DXP Cloud Deployment Workflow](../build-and-deploy/overview-of-the-dxp-cloud-deployment-workflow.md) for more information about these pages.
 ```
 
 ## Additional Information

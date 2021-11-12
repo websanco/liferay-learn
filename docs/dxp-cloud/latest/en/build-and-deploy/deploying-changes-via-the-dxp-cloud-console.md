@@ -4,8 +4,8 @@ This tutorial walks through the process of adding a portal property to the Lifer
 
 To get started, you need a code hosting service integrated with your project's CI service and a local, working copy of your project's repository.
 
-```note::
-   For an alternative deployment workflow, see `Deploying Changes via the CLI Tool <./deploying-changes-via-the-cli-tool.md>`__ to learn how to deploy local changes to your project environments using the Liferay Cloud Platform CLI tool.
+```{note}
+For an alternative deployment workflow, see [Deploying Changes via the CLI Tool](./deploying-changes-via-the-cli-tool.md)_ to learn how to deploy local changes to your project environments using the Liferay Cloud Platform CLI tool.
 ```
 
 * [Adding a Portal Property to the Liferay Service](#adding-a-portal-property-to-the-liferay-service)
@@ -31,8 +31,8 @@ Begin the deployment life cycle by adding a portal property to the `dev` environ
    web.server.display.node=true
    ```
 
-   ```note::
-      If you're using version 3.x.x services, then the appropriate folder path is ``lcp/liferay/deploy/dev``. See `DXP Cloud Project Changes in Version 4 <../reference/dxp-cloud-project-changes-in-version-4.md>`__ for more information on the differences in the directory structure, and `Understanding Service Stack Versions <../reference/understanding-service-stack-versions.md>`__ for how to check the version of your services.
+   ```{note}
+   If you're using version 3.x.x services, then the appropriate folder path is `lcp/liferay/deploy/dev`. See [DXP Cloud Project Changes in Version 4](../reference/dxp-cloud-project-changes-in-version-4.md)_ for more information on the differences in the directory structure, and [Understanding Service Stack Versions](../reference/understanding-service-stack-versions.md)_ for how to check the version of your services.
    ```
 
 1. Add and commit your changes to the `portal-env.properties` file with the following commands:
@@ -83,8 +83,8 @@ Once your new build is ready, deploy it to your project's `dev` environment via 
 
    ![Use the checkboxes to confirm your deployment, and click on Deploy Build.](./deploying-changes-via-the-dxp-cloud-console/images/06.png)
 
-   ```tip::
-      You can also access the *Deploy Build to...* page by clicking on the *Build ID* for the build you want to deploy.
+   ```{tip}
+   You can also access the *Deploy Build to...* page by clicking on the *Build ID* for the build you want to deploy.
    ```
 
    You can view the status of your deployment from the *Deployments* page, as well as the *Logs* and *Activities* pages of the `dev` environment.

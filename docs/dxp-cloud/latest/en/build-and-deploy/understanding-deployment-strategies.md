@@ -11,8 +11,8 @@ Users expect applications to be available all the time and developers are expect
 | `RollingUpdate` | New versions are released incrementally, maximizing uptime | Full roll outs can take additional time relative to number of instances |
 | `Recreate` | Application state entirely renewed at once | Downtime length that occurs is dependent on shutdown and boot up duration for the application |
 
-```important::
-   Deployments defined with the ``Recreate`` strategy will terminate all the running instances before recreating them with the newer version.
+```{important}
+Deployments defined with the `Recreate` strategy will terminate all the running instances before recreating them with the newer version.
 ```
 
 In general, the `RollingUpdate` strategy is our recommended approach. The `Recreate` strategy can be used in non-production environments or very specific edge cases.

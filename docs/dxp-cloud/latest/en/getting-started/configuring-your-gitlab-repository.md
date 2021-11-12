@@ -27,8 +27,8 @@ If not, then follow these steps to upgrade:
 
 1. Deploy the Jenkins service.
 
-```note::
-    If you've customized your Jenkinsfile, follow this guide to `extend the Default Jenkinsfile <../platform-services/continuous-integration.md#extending-the-default-jenkinsfile>`__.
+```{note}
+If you've customized your Jenkinsfile, follow this guide to [extend the Default Jenkinsfile](../platform-services/continuous-integration.md#extending-the-default-jenkinsfile)_.
 ```
 
 ## Creating a GitLab Repository
@@ -59,8 +59,8 @@ Follow these steps to transfer the provisioned GitHub repository to your own Git
 
     ```git clone git@github.com:dxpcloud/example.git```
 
-    ```note::
-       If you have already cloned the repository for work with another provider, then you can skip this step and work within the same clone.
+    ```{note}
+    If you have already cloned the repository for work with another provider, then you can skip this step and work within the same clone.
     ```
 
 1. Add a new Git remote and point to GitLab:

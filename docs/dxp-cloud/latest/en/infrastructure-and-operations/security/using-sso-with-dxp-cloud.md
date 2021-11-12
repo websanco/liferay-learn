@@ -56,8 +56,8 @@ Once the SP metadata has been received from the DXP Cloud team, enter the SP met
 
 Once SSO is enabled, Users with the appropriate identity provider(s) may use it to authenticate.
 
-```warning::
-   Once a User authenticates with SSO for the first time, that User account will be changed and they must authenticate using SSO from then on.
+```{warning}
+Once a User authenticates with SSO for the first time, that User account will be changed and they must authenticate using SSO from then on.
 ```
 
 To log into DXP Cloud using SSO:
@@ -70,8 +70,8 @@ To log into DXP Cloud using SSO:
 1. Enter the **Company Name** in the _Organization ID_ field.
 1. Click _Continue_.
 
-    ```note::
-       If you have already authenticated on your organization's SSO, you may not need to proceed through the following steps.
+    ```{note}
+    If you have already authenticated on your organization's SSO, you may not need to proceed through the following steps.
     ```
 
 1. Enter the **Email Address** in the _Email Address_ field. This must be the same email address stored in the company's database or directory service (such as an LDAP or ADFS).

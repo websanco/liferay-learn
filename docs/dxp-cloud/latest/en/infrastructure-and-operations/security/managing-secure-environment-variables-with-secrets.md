@@ -18,8 +18,8 @@ Secrets are stored with encryption, and have additional security in the backend 
 
 New secrets are added through the _Settings_ screen in DXP Cloud. Only Users with the _Admin_ role can add new secrets.
 
-```warning::
-   Adding a new secret to a service causes the service to restart, so that the value can take effect.
+```{warning}
+Adding a new secret to a service causes the service to restart, so that the value can take effect.
 ```
 
 Follow these steps to add a new secret:
@@ -64,8 +64,8 @@ To view or modify an existing secret, navigate to the _Settings_ page for any en
 
 ![View, edit, or delete an existing secret from the Settings page.](./managing-secure-environment-variables-with-secrets/images/09.png)
 
-```note::
-   Even if a User has permission to view a secret, only Users with the `Admin` role can edit or delete an existing secret. If a User without the `Admin` role clicks the Actions menu for a secret, then only the option to view the secret is shown.
+```{note}
+Even if a User has permission to view a secret, only Users with the `Admin` role can edit or delete an existing secret. If a User without the `Admin` role clicks the Actions menu for a secret, then only the option to view the secret is shown.
 ```
 
 This is the page shown when a User (with the permission to view) clicks the _View_ option for a secret:

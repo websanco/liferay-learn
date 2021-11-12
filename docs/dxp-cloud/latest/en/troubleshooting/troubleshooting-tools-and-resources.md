@@ -15,8 +15,8 @@ The ability to quickly diagnose and resolve technical issues is vital. Familiari
 
 With these tools and resources, you can track project activities, configure services, resolve technical issues, and more.
 
-```note::
-   Details are subject to your legal agreement with Liferay. For information about legal agreements and services, see the `Liferay Legal <https://www.liferay.com/legal>`_ page.
+```{note}
+Details are subject to your legal agreement with Liferay. For information about legal agreements and services, see the [Liferay Legal](https://www.liferay.com/legal) page.
 ```
 
 ## Application Metrics
@@ -136,8 +136,8 @@ From here, users can access the DXP Cloud [Knowledge Base](https://help.liferay.
 
 Users can also subscribe to receive email notifications of the latest DXP Cloud [Help Center Updates](https://www.liferay.com/web/l/subscribe-to-liferay-dxp-cloud-updates). These updates include new platform releases, service updates, and security alerts and patches.
 
-```note::
-   Liferay DXP Cloud notifications are only distributed to customers with an active Liferay Enterprise Subscription.
+```{note}
+Liferay DXP Cloud notifications are only distributed to customers with an active Liferay Enterprise Subscription.
 ```
 
 For additional support, users can contact one of Liferay's global [Support Centers](https://help.liferay.com/hc/en-us/articles/360017784212?_ga=2.254167624.1908736764.1562000563-1350017715.1560788053) by phone, or submit a ticket via the [Help Center](https://help.liferay.com/) page.

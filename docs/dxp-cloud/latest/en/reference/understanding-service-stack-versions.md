@@ -51,8 +51,8 @@ For example, see this section of an `LCP.json` file for the `database` service:
 
 In this example, the `image` property's value has a name ending in `4.0.0`, indicating that the service stack is at version 4.x.x.
 
-```tip::
-   Upgrading your service stack to version ``4.x.x`` is recommended for access to the latest improvements. See `Upgrading Your DXP Cloud Stack <./upgrading-your-dxp-cloud-stack.md>`__ for steps on performing the upgrade.
+```{tip}
+Upgrading your service stack to version `4.x.x` is recommended for access to the latest improvements. See [Upgrading Your DXP Cloud Stack](./upgrading-your-dxp-cloud-stack.md)_ for steps on performing the upgrade.
 ```
 
 ## Additional Information

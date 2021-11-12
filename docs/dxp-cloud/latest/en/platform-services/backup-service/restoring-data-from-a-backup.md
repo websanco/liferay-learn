@@ -6,8 +6,8 @@ You can also use custom SQL scripts to perform additional updates to a database 
 
 See [Backup Service](./backup-service-overview.md) and [Downloading and Uploading Backups](./downloading-and-uploading-backups.md) for more information about the Backups page.
 
-```important::
-   Only users with the Admin role for the chosen environment can manually restore environments via the DXP Cloud console.
+```{important}
+Only users with the Admin role for the chosen environment can manually restore environments via the DXP Cloud console.
 ```
 
 ## Restoring an Environment from the Backups Page
@@ -28,8 +28,8 @@ Follow these steps to restore an environment from a backup:
 
    ![Figure 2: Select the environment you want to restore.](./restoring-data-from-a-backup/images/02.png)
 
-   ```note::
-      Administrators can only restore environments to which they have access.
+   ```{note}
+   Administrators can only restore environments to which they have access.
    ```
 
 1. Click all *checkboxes* that appear below. You must check these boxes to enable the button to initiate the restore.
@@ -46,8 +46,8 @@ You can track the status of the restore in the backup service's *Logs* and the *
 
 You can also use custom SQL scripts to perform additional updates to your database with a normal data restore. This approach is ideal for sanitizing sensitive data, since it allows you to apply the scripts to separately maintained database backups.
 
-```note::
-   Using this feature requires version 3.0.7 or newer of the backup service.
+```{note}
+Using this feature requires version 3.0.7 or newer of the backup service.
 ```
 
 ### Preparing SQL Scripts
@@ -61,8 +61,8 @@ Note that scripts are run in alphanumerical order when they are executed. SQL sc
 
 Place SQL scripts into the appropriate, environment-specific `backup/configs/{ENV}/scripts/` folder.
 
-```note::
-   If you are using version 3.x.x services, then SQL scripts instead belong in the appropriate ``lcp/backup/script/{ENV}/`` folder. See `Understanding Service Stack Versions <../../reference/understanding-service-stack-versions.md>`__ for more information on checking the version.
+```{note}
+If you are using version 3.x.x services, then SQL scripts instead belong in the appropriate `lcp/backup/script/{ENV}/` folder. See [Understanding Service Stack Versions](../../reference/understanding-service-stack-versions.md)_ for more information on checking the version.
 ```
 
 ### Performing the Data Restore

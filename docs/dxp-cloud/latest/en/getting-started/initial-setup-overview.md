@@ -48,8 +48,8 @@ Once you have found your provisioned repository, you must:
 
 See [Configuring Your GitHub Repository](./configuring-your-github-repository.md) for detailed instructions.
 
-```note::
-   Using an alternative hosting service? See how to configure your `Bitbucket <./configuring-your-bitbucket-repository.md>`_ or `GitLab <./configuring-your-gitlab-repository.md>`_ repositories.
+```{note}
+Using an alternative hosting service? See how to configure your [Bitbucket](./configuring-your-bitbucket-repository.md) or [GitLab](./configuring-your-gitlab-repository.md) repositories.
 ```
 
 ## Log in to Your CI and DXP Services

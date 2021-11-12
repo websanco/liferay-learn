@@ -25,8 +25,8 @@ repository
 └── settings.gradle
 ```
 
-```important::
-   If the repository does not follow this structure (and there is no ``gradle.properties`` file or ``lcp`` folder present at the root), then this indicates an upgrade to version 4.x.x has already been completed.
+```{important}
+If the repository does not follow this structure (and there is no `gradle.properties` file or `lcp` folder present at the root), then this indicates an upgrade to version 4.x.x has already been completed.
 ```
 
 Open the `gradle.properties` file and review the versions specified for any of your Docker images. For example, this is the image version for the Liferay service:
@@ -39,8 +39,8 @@ The number at the end of the Docker image name indicates the version of the DXP 
 
 Next, make sure your Git repository is on a clean branch. The upgrade script will commit any previously uncommitted files and check out a new branch called `upgrade-workspace`.
 
-```important::
-   If you already have an ``upgrade-workspace`` branch, then the script will skip creating it and will work with your current branch.
+```{important}
+If you already have an `upgrade-workspace` branch, then the script will skip creating it and will work with your current branch.
 ```
 
 ## Running the Upgrade Script
@@ -91,8 +91,8 @@ Perform the following steps to upgrade:
     Please enter a comma-delimited list of environments: dev,uat,prd
     ```
 
-    ```important::
-       Only enter the names of Liferay environments that you add files to in your project repository. Do not add the infrastructure (`infra`) environment.
+    ```{important}
+    Only enter the names of Liferay environments that you add files to in your project repository. Do not add the infrastructure (`infra`) environment.
     ```
 
 1. If you want to install Elasticsearch plugins to all of your Liferay environments, enter a comma-delimited list of their names at the prompt. Otherwise, press enter.
@@ -149,8 +149,8 @@ Since a default Jenkinsfile is [no longer required](./dxp-cloud-project-changes-
 }
 ```
 
-```note::
-   You must define the ``LCP_CI_SCM_JENKINSFILE_HOOKS_DIR`` variable if you want to use hooks to extend the default Jenkinsfile.
+```{note}
+You must define the `LCP_CI_SCM_JENKINSFILE_HOOKS_DIR` variable if you want to use hooks to extend the default Jenkinsfile.
 ```
 
 If you are defining your own Jenkinsfile within your `ci` service directory to override the default, then ensure your environment variables instead look like this:

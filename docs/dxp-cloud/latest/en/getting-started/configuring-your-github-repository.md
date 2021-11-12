@@ -6,8 +6,8 @@ Upon receiving a DXP Cloud onboarding email, you're provisioned a GitHub reposit
 
 1. Integrate their private repository with the Jenkins (CI) service in DXP Cloud using a Webhook.
 
-```note::
-   If you are using an organization account, then you must have administrative privileges to transfer the repository to the organization.
+```{note}
+If you are using an organization account, then you must have administrative privileges to transfer the repository to the organization.
 ```
 
 ## Transferring the Repository
@@ -69,22 +69,22 @@ Set these environment variables in the Jenkins service to point to your new repo
 
 For the `LCP_CI_SCM_TOKEN` value, use the personal access token created for your GitHub organization. For instructions on creating and accessing this token, see [GitHub's documentation](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line).
 
-```note::
-   If you are using an organization account with SAML single sign-on authentication, then you must take additional steps to authorize your access token. See `GitHub's official documentation <https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/authorizing-a-personal-access-token-for-use-with-saml-single-sign-on>`__ for more information.
+```{note}
+If you are using an organization account with SAML single sign-on authentication, then you must take additional steps to authorize your access token. See [GitHub's official documentation](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/authorizing-a-personal-access-token-for-use-with-saml-single-sign-on)_ for more information.
 ```
 
 After updating these environment variables, the Jenkins service will restart. Any pushed branches and pull requests in the new repository now trigger builds.
 
-```note::
-   Jenkins versions prior to ``2.222.1-3.2.0`` use the environment variables ``GITHUB_REPOSITORY`` and ``GITHUB_TOKEN`` instead. To use the ``LCP_CI_SCM_*`` environment variables, ensure you are running Jenkins ``2.222.1-3.2.0`` or higher.
+```{note}
+Jenkins versions prior to `2.222.1-3.2.0` use the environment variables `GITHUB_REPOSITORY` and `GITHUB_TOKEN` instead. To use the `LCP_CI_SCM_*` environment variables, ensure you are running Jenkins `2.222.1-3.2.0` or higher.
 ```
 
 ### Personal Access Token Usage
 
 The personal access token referenced by the `LCP_CI_SCM_TOKEN` value is needed for DXP Cloud to integrate with your repository.
 
-```warning::
-   If the personal access token belongs to a personal user account and that user is removed from the organization, all builds will fail to complete. Instead, use an account specifically belonging to the organization. See `GitHub's official documentation <https://docs.github.com/en/actions/learn-github-actions/security-hardening-for-github-actions#considering-cross-repository-access>`__ for more information.
+```{warning}
+If the personal access token belongs to a personal user account and that user is removed from the organization, all builds will fail to complete. Instead, use an account specifically belonging to the organization. See [GitHub's official documentation](https://docs.github.com/en/actions/learn-github-actions/security-hardening-for-github-actions#considering-cross-repository-access)_ for more information.
 ```
 
 By default, the GitHub organization's [Personal Access Token](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token) must have the `admin:repo_hook` permissions in order for the CI service to successfully integrate using the default web hook.

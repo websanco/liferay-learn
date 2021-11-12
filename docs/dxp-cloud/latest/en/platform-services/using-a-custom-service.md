@@ -2,8 +2,8 @@
 
 DXP Cloud allows you to run more than just the standard set of services provided out-of-the-box. You can also create and deploy a custom service to run any new processes within the DXP Cloud infrastructure. Customers who wish to enable the use custom services on their DXP Cloud environments must first contact their sales representative in order to enable this functionality and ensure that their environments are provisioned accordingly.
 
-```note::
-   You must have sufficient hardware resources provisioned to be able to add a custom service. You can allocate additional resources for custom services during the provisioning process.
+```{note}
+You must have sufficient hardware resources provisioned to be able to add a custom service. You can allocate additional resources for custom services during the provisioning process.
 ```
 
 DXP Cloud uses Docker images as the basis for its services. If you want to run these services locally, [install Docker](https://docs.docker.com/get-docker/) on your local system.
@@ -31,10 +31,10 @@ Use the following steps to add your own custom service to a build in DXP Cloud:
 
 	See [Configuration via LCP.json](../reference/configuration-via-lcp-json.md) for more information on adding configurations to this file.
 
-    ```warning::
-        If you trigger a build with a new custom service, but do not have enough resources provisioned for the new service, then it may interfere with the resources allocated to your other services.
+    ```{warning}
+    If you trigger a build with a new custom service, but do not have enough resources provisioned for the new service, then it may interfere with the resources allocated to your other services.
 
-        Directly set the memory and CPU allocation for your new service in its LCP.json file to make sure it gets the correct amount of hardware resources.
+    Directly set the memory and CPU allocation for your new service in its LCP.json file to make sure it gets the correct amount of hardware resources.
     ```
 
 1. Specify which environments your custom service will apply to in your `LCP.json`. This may depend on how many resources you have provisioned for your new service.
@@ -63,8 +63,8 @@ Use the following steps to add your own custom service to a build in DXP Cloud:
 
     * **If you are using a local Dockerfile:** Add the Dockerfile into your custom service's directory. When your service is built, the Docker image from the Dockerfile will automatically be picked up as the image for the service.
 
-      ```note::
-        The Dockerfile is automatically used as the image for your service. As a result, any "image" property in your LCP.json will be ignored.
+      ```{note}
+      The Dockerfile is automatically used as the image for your service. As a result, any "image" property in your LCP.json will be ignored.
       ```
 
 1. Commit these changes to your branch in version control:

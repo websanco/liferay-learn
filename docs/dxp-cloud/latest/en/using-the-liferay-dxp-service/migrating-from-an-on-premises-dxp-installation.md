@@ -25,8 +25,8 @@ mysqldump -uroot -ppassword --databases --add-drop-database lportal | gzip -c | 
 tar zcvf database.tgz database.gz
 ```
 
-```important::
-   The ``databases`` and ``add-drop-database`` options are necessary for backup restoration to work correctly.
+```{important}
+The `databases` and `add-drop-database` options are necessary for backup restoration to work correctly.
 ```
 
 Database dumps imported into DXP Cloud must be in MySQL format for the database service to use it.
@@ -41,8 +41,8 @@ Add the document library to a zip file with this command:
 cd $LIFERAY_HOME/data && tar -czvf volume.tgz document_library
 ```
 
-```important::
-   If you are currently using the `Amazon S3 <https://help.liferay.com/hc/en-us/articles/360028810172-Using-Amazon-Simple-Storage-Service>`_, `CMIS <https://help.liferay.com/hc/en-us/articles/360018176171-Using-the-CMIS-Store>`_, or `DBStore <https://help.liferay.com/hc/en-us/articles/360028810192-Using-the-DBStore>`_ storage methods, you must first migrate to a `File System Store <https://help.liferay.com/hc/en-us/articles/360028810132-Using-the-Simple-File-System-Store>`_.
+```{important}
+If you are currently using the [Amazon S3](https://help.liferay.com/hc/en-us/articles/360028810172-Using-Amazon-Simple-Storage-Service), [CMIS](https://help.liferay.com/hc/en-us/articles/360018176171-Using-the-CMIS-Store), or [DBStore](https://help.liferay.com/hc/en-us/articles/360028810192-Using-the-DBStore) storage methods, you must first migrate to a [File System Store](https://help.liferay.com/hc/en-us/articles/360028810132-Using-the-Simple-File-System-Store).
 ```
 
 ### Invoke Backup Service API
@@ -64,8 +64,8 @@ Substitute `<PROJECT-NAME>` with the appropriate name for your DXP Cloud project
 
 Once these are uploaded, the backup service will initialize a DXP Cloud backup.
 
-```note::
-   The backup will appear on the `Backups` page in your chosen environment, but it will not apply to any of your environments until you choose to restore it.
+```{note}
+The backup will appear on the `Backups` page in your chosen environment, but it will not apply to any of your environments until you choose to restore it.
 ```
 
 ## Copy Liferay DXP Configurations
@@ -85,8 +85,8 @@ liferay
 
 Any portal properties of the form `portal-*.properties` placed in one of the appropriate folders will be automatically copied over to the `$LIFERAY_HOME` within the Liferay DXP service for the applicable environment(s). OSGi properties (.cfg or .config files) will be copied over to the `osgi/configs` folder within the Liferay DXP service for the applicable environment(s).
 
-```note::
-   If you are using version 3.x services, these configuration files belong in the appropriate ``lcp/liferay/config/{ENV}/`` folder in your repository. See `Understanding Service Stack Versions <../reference/understanding-service-stack-versions.md>`__ for more information on checking the version.
+```{note}
+If you are using version 3.x services, these configuration files belong in the appropriate `lcp/liferay/config/{ENV}/` folder in your repository. See [Understanding Service Stack Versions](../reference/understanding-service-stack-versions.md)_ for more information on checking the version.
 ```
 
 ## Add Service Configurations
@@ -115,8 +115,8 @@ Now that the backup has been uploaded and your service configurations are applie
 
 1. Click _Restore to environment_.
 
-```note::
-   The chosen environment will be unavailable while the backup is being deployed.
+```{note}
+The chosen environment will be unavailable while the backup is being deployed.
 ```
 
 When the restore process finishes, the chosen environment has your migrated instance of DXP available in it. At this point, most of the migration to DXP Cloud is complete.

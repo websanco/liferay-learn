@@ -58,8 +58,8 @@ By default, the services in DXP Cloud are pre-configured in order to fit a major
 }
 ```
 
-```note::
-   The deployment type of the services in DXP Cloud must only be changed with caution, as it may result in data loss or impacted performance.
+```{note}
+The deployment type of the services in DXP Cloud must only be changed with caution, as it may result in data loss or impacted performance.
 ```
 
 ## Additional Information

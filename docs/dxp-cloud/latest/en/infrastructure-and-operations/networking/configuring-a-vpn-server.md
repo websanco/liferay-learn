@@ -2,8 +2,8 @@
 
 The following scenario walks through how to set up an IPsec or OpenVPN VPN server. Once a VPN server is configured, a secure connection can be established between an internal network and the production environment on DXP Cloud. This example uses Ubuntu Server 18.0.4 as a proof of concept. Please read the [VPN Integration Overview](./vpn-integration-overview.md) article for an overview on DXP Cloud's Client-to-Site VPNs functionality.
 
-```warning::
-   Configuration commands and values are subject to change and should be adapted for your specific environment.
+```{warning}
+Configuration commands and values are subject to change and should be adapted for your specific environment.
 ```
 
 `EAP-TLS` and `EAP-MSCHAPV2` authentication protocols are both supported for VPN connections.

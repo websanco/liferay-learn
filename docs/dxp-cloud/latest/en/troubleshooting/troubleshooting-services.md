@@ -84,8 +84,8 @@ If your probe configurations are correct, then the probes failing may be a sign 
 
 Check the logs to look for any error messages that may indicate a failed startup. If you can identify an error or problem in the startup logs, then this may be what is causing one or more probes to fail, which would trigger a service restart.
 
-```tip::
-   For the Liferay service, look for this message to signal the first logs after a restart: ``[LIFERAY] To SSH into this container, run: "docker exec -it liferay-<node-id> /bin/bash".``
+```{tip}
+For the Liferay service, look for this message to signal the first logs after a restart: `[LIFERAY] To SSH into this container, run: "docker exec -it liferay-<node-id> /bin/bash".`
 ```
 
 [Contact Support](https://help.liferay.com/hc/en-us) if you need assistance in handling Liferay startup errors.

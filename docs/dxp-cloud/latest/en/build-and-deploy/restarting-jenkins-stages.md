@@ -15,8 +15,8 @@ In the following example, stashes are preserved for the last 3 builds, while art
 
 By default, the `LCP_CI_PRESERVE_STASHES_BUILD_COUNT` value is set to `20`, while the `LCP_CI_ARTIFACT_NUM_TO_KEEP` value is set to `1`. If restarting stages isn't important to you, then you can set their values to `0` to prevent CI from retaining either stashes or artifacts.
 
-```important::
-   Stashes cannot be preserved for more builds than allowed by the ``LCP_CI_ARTIFACT_NUM_TO_KEEP`` variable, regardless of the number of builds set for the ``LCP_CI_PRESERVE_STASHES_BUILD_COUNT`` variable.
+```{important}
+Stashes cannot be preserved for more builds than allowed by the `LCP_CI_ARTIFACT_NUM_TO_KEEP` variable, regardless of the number of builds set for the `LCP_CI_PRESERVE_STASHES_BUILD_COUNT` variable.
 ```
 
 ## How to Restart a Jenkins Stage
@@ -25,8 +25,8 @@ Follow these steps to restart a Jenkins stage:
 
 1. Access your project's CI service page (i.e., `ci-<project>-infra.lfr.cloud`), and click on the *Open Blue Ocean* plugin to view your project's pipelines.
 
-   ```note::
-      While pipelines stages can be restarted via the standard Jenkins console, the Open Blue Ocean plugin provides a clearer and more intuitive user experience when viewing or managing pipeline stages.
+   ```{note}
+   While pipelines stages can be restarted via the standard Jenkins console, the Open Blue Ocean plugin provides a clearer and more intuitive user experience when viewing or managing pipeline stages.
    ```
 
    ![Click on the Open Blue Ocean plugin to view your project's pipelines.](./restarting-jenkins-stages/images/02.png)
