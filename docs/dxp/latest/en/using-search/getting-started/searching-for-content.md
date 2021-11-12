@@ -82,6 +82,29 @@ http://localhost:8080/web/guest/search?q=data&target=this-site
 
 **Use Advanced Search Syntax:** If using Elasticsearch, enabling this allows users to enter [Query String Syntax](https://www.elastic.co/guide/en/elasticsearch/reference/7.6/query-dsl-simple-query-string-query.html) into the Search Bar. If using Solr, consult its documentation for the [proper syntax](https://lucene.apache.org/solr/guide/7_0/query-syntax-and-parsing.html).
 
+## Searching for Liferay Objects
+
+Liferay 7.4 includes [Liferay Objects](../../developing-applications/developing-low-code-applications/objects.md), a GUI-driven application-building framework. Fields of each Object's definition can be declared searchable; Object Entries (the records submitted by the application's users) can then be queried returned in the Search Results widget. 
+
+```{important}
+The scope of the Object determines how it must be searched:
+
+* If the scope of the Object is Company, the Object's Entries are only searched when the Search Bar is configured to search Everything.
+* If the scope of the Object is Site, the Object's Entries can be searched when the Search bar is configured to search in This Site.
+```
+
+The Type Facet and the Search Results widget support searching for Liferay Objects in the following manner:
+
+* The Type Facet automatically includes published Objects: 
+
+   ![Published Objects are added to the Type Facet widget.](./searching-for-content/images/09.png)
+
+* The Search Results widget automatically displays the Object Entry's title and a summary.
+
+   ![A title and a content summary are displayed for Object Entries.](./searching-for-content/images/10.png)
+
+<!-- * If configured in the Object, a display page can be shown when the Object Entry is clicked in Search Results. -->
+
 ## Additional Information
 
 * [Understanding Search Results](../search-pages-and-widgets/search-results/search-results-behavior.md)

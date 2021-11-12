@@ -9,6 +9,8 @@ Previously, you [learned](./configuring-the-search-results-widget.md) how to dis
 * [Search results when Publications are enabled](#search-and-publications)
 * [Search results summaries](#result-summaries)
 * [Search results term highlighting](#highlighting)
+* [Search results and content pages](#returning-pages-in-search-results)
+* [Returning Objects in Search Results](#returning-objects-in-search-results)
 
 ## Filtering Results with Facets
 
@@ -113,3 +115,9 @@ Although the content field is not indexed and searchable for private or staged p
 To discover which fields are indexed for content pages, enable the Search Results widget's _Display Results in Document Form_ setting. See [Inspecting Search Engine Documents](./configuring-the-search-results-widget.md#inspecting-search-engine-documents) for more details.
 
 ![Inspect the document view of a content page to see what fields are indexed.](./search-results-behavior/images/12.png)
+
+## Returning Objects in Search Results
+
+Liferay 7.4 includes [Liferay Objects](../../developing-applications/developing-low-code-applications/objects.md), a GUI-driven application-building framework. Fields of each Object's definition can be declared searchable; Object Entries (the records submitted by the application's users) [can then be queried](../../getting-started/searching-for-content.md#searching-for-liferay-objects) and returned in the Search Results widget.
+
+![A title and a content summary are displayed for Object Entries.](./search-results-behavior/images/13.png)
