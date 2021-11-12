@@ -75,8 +75,8 @@ To get the mappings from the source code, if you have [Liferay DXP Source Code A
 1. Navigate to `modules/apps/portal-search-elasticsearch(6 or 7)/portal-search-elasticsearch(6 or 7)-impl/src/main/resources/META-INF/mappings`
 1. Here you will find the mentioned JSON file (`liferay-type-mappings.json`).
 
-```warning::
-   Index mappings and settings can change between versions, and sometimes within a minor version (via a Fix Pack or Service Pack). Customizations to the mappings and settings must be reviewed and adapted as necessary when upgrading or moving to a new patch level. In addition, Liferay's Search team plans to add support for more languages out-of-the-box in future verisons, making customizations unnecessary.
+```{warning}
+Index mappings and settings can change between versions, and sometimes within a minor version (via a Fix Pack or Service Pack). Customizations to the mappings and settings must be reviewed and adapted as necessary when upgrading or moving to a new patch level. In addition, Liferay's Search team plans to add support for more languages out-of-the-box in future verisons, making customizations unnecessary.
 ```
 
 ### Adding a Language
@@ -134,8 +134,8 @@ Now that you have the default mapping file, make the necessary changes to add th
 
 1. Using  the Override Type Mappings field, change the analyzer for the `template_fr` dynamic field to use the custom analyzer (`custom_liferay_analyzer_fr`):
    
-   ```important::
-      This example is clipped for brevity. Override Type Mappings completely overrides and ignores Liferay's default type mappings, so you must provide a complete mappings file, not just the overridden portion.   
+   ```{important}
+   This example is clipped for brevity. Override Type Mappings completely overrides and ignores Liferay's default type mappings, so you must provide a complete mappings file, not just the overridden portion.   
    ```
 
    ```json
@@ -164,8 +164,8 @@ Now that you have the default mapping file, make the necessary changes to add th
 
 1. Save the changes to the configuration.
 
-   ```tip::
-      If you're using the Sidecar Elasticsearch server, you may see an error in the console. Restart Liferay DXP to resolve the issue.
+   ```{tip}
+   If you're using the Sidecar Elasticsearch server, you may see an error in the console. Restart Liferay DXP to resolve the issue.
    ```
 
 1. Now go to System Settings &rarr; Search &rarr; Synonyms.

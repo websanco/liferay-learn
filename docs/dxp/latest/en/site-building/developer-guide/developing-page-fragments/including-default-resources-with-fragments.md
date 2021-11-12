@@ -75,8 +75,8 @@ The image resource is included in the Collection's `resources` folder. Here's th
 * `[fragment-name]/`: contains all of a Fragment's files.
 * `resources/`: contains files available to all the Collection's Fragments.
 
-```tip::
-  Alternatively, you can upload the image through the *Resources* tab in the `Fragments Editor <./using-the-fragments-editor.md>`_.
+```{tip}
+Alternatively, you can upload the image through the *Resources* tab in the [Fragments Editor](./using-the-fragments-editor.md).
 ```
 
 Image files are referenced in a Fragment's HTML with the syntax `[resources:image-name.extension]`. The example Fragment HTML has this `img` element:
@@ -88,12 +88,12 @@ Image files are referenced in a Fragment's HTML with the syntax `[resources:imag
 />
 ```
 
-```note::
-  The resource name is case-sensitive and must match the name and case exactly in the reference.
+```{note}
+The resource name is case-sensitive and must match the name and case exactly in the reference.
 ```
 
-```tip::
-  You can style the image resource in your CSS with the syntax ``img[src="[resources:image-name.extension]"]``.
+```{tip}
+You can style the image resource in your CSS with the syntax `img[src="[resources:image-name.extension]"]`.
 ```
 
 ## Include a New Resource
@@ -122,8 +122,8 @@ Now that you know how to include a resource and reference it in a Fragment, you 
 
 ![The Fragments includes the new image.](./including-default-resources-with-fragments/images/04.png)
 
-```note::
-   Any Fragment in a Fragment Collection has access to the Collection's resources.
+```{note}
+Any Fragment in a Fragment Collection has access to the Collection's resources.
 ```
 
 Great! Now you know how to use image resources Fragment Collections.

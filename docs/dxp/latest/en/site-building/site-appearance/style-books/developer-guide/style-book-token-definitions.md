@@ -157,8 +157,8 @@ body {
 
 The value in the token definition's `mappings` (`font-family-base`) matches the variable name in the CSS. Use two hyphens to precede the CSS variable name (in this example, `--font-family-base`).
 
-```important::
-   If a value for ``defaultValue`` is included in your token definition, then this must match the default value defined in the matching CSS variable definition.
+```{important}
+If a value for `defaultValue` is included in your token definition, then this must match the default value defined in the matching CSS variable definition.
 ```
 
 ## Additional Information

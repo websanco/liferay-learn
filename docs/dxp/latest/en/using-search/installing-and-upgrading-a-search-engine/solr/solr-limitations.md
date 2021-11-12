@@ -1,7 +1,7 @@
 # Solr Limitations 
 
-```important::
-   Liferay's Solr support is deprecated. Please plan to migrate to `Elasticsearch <../elasticsearch/getting-started-with-elasticsearch.md>`_.
+```{important}
+Liferay's Solr support is deprecated. Please plan to migrate to [Elasticsearch](../elasticsearch/getting-started-with-elasticsearch.md).
 ```
 
 ## End-User Feature Limitations 
@@ -49,6 +49,6 @@ The following APIs are not currently supported by Liferay's Solr connector.
     * `SuggestSearchRequest`
   * `com.liferay.portal.search.engine.adapter.snapshot.*`
 
-```note::
-   Liferay Commerce requires the ``TermsSetFilter`` implementation which is only available in the Elasticsearch connector.
+```{note}
+Liferay Commerce requires the `TermsSetFilter` implementation which is only available in the Elasticsearch connector.
 ```

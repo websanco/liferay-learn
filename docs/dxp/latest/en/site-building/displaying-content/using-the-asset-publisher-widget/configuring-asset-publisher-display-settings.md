@@ -61,8 +61,8 @@ These options are available:
 | Enable ... | Enable/disable these options for displayed assets. The Print option adds a *Print* link to the full view of an asset. Clicking *Print* opens a new browser window with a print view of the asset. Enabling flags, related assets, ratings, comments, comment ratings, or social bookmarks add links to the corresponding social features to the full view of the asset. |
 | Social Bookmarks | Specify which social media links to display by moving the bookmark from the Available box to the Current box |
 
-```tip::
-   An alternate way to add flags, comments, and ratings to a page is through the *Page Flags*, *Page Comments*, and *Page Ratings* applications. Just add the applications in the appropriate location near the asset that should have feedback.
+```{tip}
+An alternate way to add flags, comments, and ratings to a page is through the *Page Flags*, *Page Comments*, and *Page Ratings* applications. Just add the applications in the appropriate location near the asset that should have feedback.
 ```
 
 ### Metadata

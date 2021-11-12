@@ -93,8 +93,8 @@ Here are the command's arguments:
 | `-d "{\"articleBody\": \"Foo\", \"headline\": \"Able\"}"` | The data you are requesting to post |
 | `-u "test@liferay.com:test"` | Basic authentication credentials |
 
-```note::
-   Basic authentication is used here for demonstration purposes. For production, you should authorize users via `OAuth2 <../../../installation-and-upgrades/securing-liferay/configuring-sso/using-oauth2/introduction-to-using-oauth2.md>`_.
+```{note}
+Basic authentication is used here for demonstration purposes. For production, you should authorize users via [OAuth2](../../../installation-and-upgrades/securing-liferay/configuring-sso/using-oauth2/introduction-to-using-oauth2.md).
 ```
 
 The other cURL commands use similar JSON arguments.
@@ -117,8 +117,8 @@ This class invokes the REST service using only three lines of code:
 | `BlogPostingResource blogPostingResource = builder.authentication(...).build();` | Specifies basic authentication and generates a `BlogPostingResource` service instance. |
 | `BlogPosting blogPosting = blogPostingResource.postSiteBlogPosting(...);` | Calls the `BlogPostingResource.postSiteBlogPosting` method and passes the data to post. |
 
-```note::
-   The ``main`` method's comment demonstrates running the class.
+```{note}
+The `main` method's comment demonstrates running the class.
 ```
 
 The other example Java classes are similar to this one, but call different `BlogPostingResource` methods.
@@ -169,8 +169,8 @@ The site's `BlogPosting` objects are listed in JSON.
 
 Get a specific blog post with the following cURL or Java command. Replace `1234` with the blog post's ID.
 
-```tip:: 
-   Use ``BlogPostings_GET_FromSite.[java|sh]`` to get ``BlogPosting`` IDs.
+```{tip}
+Use `BlogPostings_GET_FromSite.[java|sh]` to get `BlogPosting` IDs.
 ```
 
 ### BlogPosting_GET_ById.sh

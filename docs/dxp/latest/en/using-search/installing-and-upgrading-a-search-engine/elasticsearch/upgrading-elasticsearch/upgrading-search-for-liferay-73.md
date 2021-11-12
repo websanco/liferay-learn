@@ -2,10 +2,10 @@
 
 After upgrading Liferay, there are additional steps to upgrade the search experience. The exact steps depend on your existing search engine installation and Liferay version, but you'll always want to start by [backing up your existing indexes](./backing-up-elasticsearch.md).
 
-```important::
-   Always consult Liferay's `Breaking Changes <../../../../liferay-internals/reference/7-3-breaking-changes.md>`__ before upgrading. One such breaking change that impacts the upgraded search experience: `Dynamic Data Mapping fields in Elasticsearch have changed to a nested document <../../../../liferay-internals/reference/7-3-breaking-changes.md#dynamic-data-mapping-fields-in-elasticsearch-have-changed-to-a-nested-document>`__. 
+```{important}
+Always consult Liferay's [Breaking Changes](../../../../liferay-internals/reference/7-3-breaking-changes.md)_ before upgrading. One such breaking change that impacts the upgraded search experience: [Dynamic Data Mapping fields in Elasticsearch have changed to a nested document](../../../../liferay-internals/reference/7-3-breaking-changes.md#dynamic-data-mapping-fields-in-elasticsearch-have-changed-to-a-nested-document)_. 
 
-   This change affects custom code that executes queries in the Elasticsearch index using ``ddm__keyword__*`` and ``ddm__text__*`` fields, as well as Search Widget configurations (e.g., Custom Filter or Custom Facet widgets) that make use of those fields. Manual updates to code and configurations are required to account for the change.
+This change affects custom code that executes queries in the Elasticsearch index using `ddm__keyword__*` and `ddm__text__*` fields, as well as Search Widget configurations (e.g., Custom Filter or Custom Facet widgets) that make use of those fields. Manual updates to code and configurations are required to account for the change.
 ```
 
 ## Search Upgrade Overview
@@ -29,8 +29,8 @@ The list below just scratches the surface of the search upgrade picture: it does
 
 ## Common Upgrade Steps
 
-```important::
-   `Back up the search indexes <./backing-up-elasticsearch.md>`__ before proceeding with these steps.
+```{important}
+[Back up the search indexes](./backing-up-elasticsearch.md)_ before proceeding with these steps.
 ```
 
 Upgrade scenarios for systems not including LES apps include these steps:
@@ -51,8 +51,8 @@ Upgrade scenarios for systems not including LES apps include these steps:
 
 ## LES Upgrade Steps
 
-```important::
-   `Back up the search indexes <./backing-up-elasticsearch.md>`__ before proceeding with these steps.
+```{important}
+[Back up the search indexes](./backing-up-elasticsearch.md)_ before proceeding with these steps.
 ```
 
 Systems using LES apps must follow these additional steps:

@@ -10,8 +10,8 @@ Recycle Bin functionality is available for the following assets:
 * Web Content
 * Wiki (and attachments)
 
-```note::
-   Attachments added to Wiki and Message Board entries do not go to the Recycle Bin when they are deleted. They can be restored in a similar fashion from the *Removed Attachments* menu within the application.
+```{note}
+Attachments added to Wiki and Message Board entries do not go to the Recycle Bin when they are deleted. They can be restored in a similar fashion from the *Removed Attachments* menu within the application.
 ```
 
 ## Moving Items to the Recycle Bin
@@ -64,8 +64,8 @@ A status message appears indicating which items have been restored, along with q
 
    ![Check the recycled folders and assets you want to delete.](./using-the-recycle-bin/images/07.png)
 
-```important::
-   Deleting your content is the permanent and cannot be undone. Deleted files cannot be retrieved and are gone forever.
+```{important}
+Deleting your content is the permanent and cannot be undone. Deleted files cannot be retrieved and are gone forever.
 ```
 
 A status message appears indicating whether your request was successful.

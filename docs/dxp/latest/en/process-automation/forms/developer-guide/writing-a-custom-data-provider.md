@@ -4,8 +4,8 @@ Liferay Forms fields can be populated using a [Data Provider](../data-providers/
 
 If the REST Data Provider doesn't serve your purpose, use the `DDMDataProvider` extension point to create your own.
 
-```note::
-   The example Data Provider demonstrated here consumes XML data from the `GeoDataSource™ Location Search Web Service <https://www.geodatasource.com/web-service/location-search>`__. The API key of a Liferay employee is hard-coded into this sample; please do not overuse the sample. Never use it in production environments.
+```{note}
+The example Data Provider demonstrated here consumes XML data from the [GeoDataSource™ Location Search Web Service](https://www.geodatasource.com/web-service/location-search)_. The API key of a Liferay employee is hard-coded into this sample; please do not overuse the sample. Never use it in production environments.
 ```
 
 ## Deploy a Custom Data Provider
@@ -32,7 +32,7 @@ If the REST Data Provider doesn't serve your purpose, use the `DDMDataProvider` 
    ./gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)
    ```
 
-   ```tip::
+   ```{tip}
    This command is the same as copying the deployed jars to /opt/liferay/osgi/modules on the Docker container.
    ```
 
@@ -159,8 +159,8 @@ The data provider settings class defines the settings that this data provider ne
       :lines: 26-28
    ```
 
-   ```note:: 
-      In addition to the ``outputParameters`` field, an ``inputParameters`` field is also provided in `DDMDataProviderParameterSettings <https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/dynamic-data-mapping/dynamic-data-mapping-api/src/main/java/com/liferay/dynamic/data/mapping/data/provider/DDMDataProviderParameterSettings.java>`__ 
+   ```{note}
+   In addition to the `outputParameters` field, an `inputParameters` field is also provided in [DDMDataProviderParameterSettings](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/dynamic-data-mapping/dynamic-data-mapping-api/src/main/java/com/liferay/dynamic/data/mapping/data/provider/DDMDataProviderParameterSettings.java)_ 
    ```
 
 ![The data provider settings form is ready for work.](./writing-a-custom-data-provider/images/05.png)

@@ -101,8 +101,8 @@ Here are example steps for removing intermediate Journal Article versions:
 
 You can write similar code to remove intermediate versions of other entities. Once your code is ready, run it using either a sample module, or running it as a script using the script console.
 
-```tip::
-   Print the version (and any other information of interest) of each object you're removing. You can also comment out the object deletion call and read the printout of versions to be removed as a test before committing to deleting them.
+```{tip}
+Print the version (and any other information of interest) of each object you're removing. You can also comment out the object deletion call and read the printout of versions to be removed as a test before committing to deleting them.
 ```
 
 ## Additional Information

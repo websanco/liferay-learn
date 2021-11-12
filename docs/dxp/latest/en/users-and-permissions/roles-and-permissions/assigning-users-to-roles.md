@@ -44,8 +44,8 @@ You can assign Users to a Site Role in the Memberships section of a Site's Peopl
 
 ![Assign a Site Role within the Site Menu's People &rarr; Memberships section.](./assigning-users-to-roles/images/01.png)
 
-```note::
-   As of Liferay CE 7.3.1 GA2 and Liferay DXP 7.2 SP3+, you can assign Site Roles to `User Segments <../../site-building/personalizing-site-experience/segmentation/creating-and-managing-user-segments.md>`__. See `Assigning Roles to User Segments <./assigning-roles-to-user-segments.md>`_ for more details.
+```{note}
+As of Liferay CE 7.3.1 GA2 and Liferay DXP 7.2 SP3+, you can assign Site Roles to [User Segments](../../site-building/personalizing-site-experience/segmentation/creating-and-managing-user-segments.md)_. See [Assigning Roles to User Segments](./assigning-roles-to-user-segments.md) for more details.
 ```
 
 ## Organization Roles

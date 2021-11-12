@@ -44,8 +44,8 @@ To get an example `SimilarResultsContributor` up and running on your instance of
     ./gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)
     ```
 
-    ```note::
-       This command is the same as copying the deployed jars to /opt/liferay/osgi/modules on the Docker container.
+    ```{note}
+    This command is the same as copying the deployed jars to /opt/liferay/osgi/modules on the Docker container.
     ```
 
 1. Confirm the deployment in the Liferay Docker container console.
@@ -109,8 +109,8 @@ public void detectRoute(RouteBuilder routeBuilder, RouteHelper routeHelper);
 
 Implement `detectRoute` to provide a distinctive portion of your entity's URL pattern, so that the Similar Results widget can detect if your contributor should be invoked. The URL pattern is added as an attribute of the `RouteBuilder` object. The `RouteHelper` is useful for retrieving the whole URL String for parsing.
 
-```note::
-   Only one `SimilarResultsContributor` is supported for each display portlet.
+```{note}
+Only one `SimilarResultsContributor` is supported for each display portlet.
 ```
 
 ```java
@@ -201,8 +201,8 @@ public void resolveCriteria(
 
 Look up the search engine document corresponding to the page's displayed entity. You must provide the `criteriaBuilder.uid` method the value of the appropriate search engine document's `uid` field (this is usually equal to the Elasticsearch-specified `_id` field in the document). In the Liferay DXP index, this field is a composition of the entry class name and the class primary key. Pass both as Strings to `Field.getUID` to obtain the value. Our example starts by fetching the model entity using the ID you added to the attribute in the `detectRoute` method (the `urlTitle`), and then uses it to retrieve the asset entry. 
 
-```important::
-   There's a difference between Liferay DXP 7.2 and Liferay DXP 7.3, so a condition to check the version, with logic for each, is provided here. In Liferay DXP 7.3, `getPrimaryKeyObj` is used in conjunction with the class name, whereas in Liferay DXP 7.2, `getResourcePrimKey` is needed.
+```{important}
+There's a difference between Liferay DXP 7.2 and Liferay DXP 7.3, so a condition to check the version, with logic for each, is provided here. In Liferay DXP 7.3, `getPrimaryKeyObj` is used in conjunction with the class name, whereas in Liferay DXP 7.2, `getResourcePrimKey` is needed.
 ```
 
 Now that matching documents can be found, write the destination URL so the similar results are updated.

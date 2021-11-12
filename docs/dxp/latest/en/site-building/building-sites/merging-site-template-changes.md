@@ -9,8 +9,8 @@ If you want to propagate changes from the Site Template to the Site after they'v
 1. Click the Information icon (![Information](../../images/icon-control-menu-information.png)) that appears in the Control Menu to bring up the Information dialog.
 1. Click the *Reset Changes* link in the Information dialog to merge any updates from the Site Template.
 
-    ```warning::
-     Resetting changes **reverts any changes made to the page** since the Site and Site Template became unlinked. This can result in changes being unintentionally lost. Proceed with caution.
+    ```{warning}
+    Resetting changes **reverts any changes made to the page** since the Site and Site Template became unlinked. This can result in changes being unintentionally lost. Proceed with caution.
     ```
 
 If multiple site pages have been modified and you'd like to re-apply the Site Template pages to them, you must click the *Reset Changes* button from each page manually.
@@ -25,8 +25,8 @@ Site Template Administrators can set preferences for apps on Site Template pages
 
 Site Administrators can also add data to Site Template applications. For example, Site Template Administrators can add the Wiki app to a Site Template page and use the Wiki to create lots of articles. When a Liferay Administrator creates a Site from a Site Template, data is copied from the Site Template's apps to the Site's apps. The preferences of the Site's apps are updated with the IDs of the copied data. For example, if a Site is created from a Site Template that has a Wiki app with multiple wiki articles, the wiki articles are copied from the Site Template's scope to the Site's scope and the Site's Wiki app is updated with the IDs of the copied wiki articles.
 
-```important::
-  App data (such as Message Board categories), Fragment-based pages, related resources, and permissions on resources are only copied from a Site Template to a Site when that site is *first* created based on the template. No changes made to these entities are propagated to the Site after the Site is created. Neither are such changes propagated to a Site by the *Reset* or *Reset and Propagate* features.
+```{important}
+App data (such as Message Board categories), Fragment-based pages, related resources, and permissions on resources are only copied from a Site Template to a Site when that site is *first* created based on the template. No changes made to these entities are propagated to the Site after the Site is created. Neither are such changes propagated to a Site by the *Reset* or *Reset and Propagate* features.
 ```
 
 ## Resolving Site Template Merge Conflicts
@@ -37,8 +37,8 @@ In some cases, merging Site Template and Site changes fails. For example, if pag
 2. After you've resolved the conflicts, open the Product Menu and go to *Configuration* &rarr; *Site Settings* under the Site Menu.
 3. Click the *Reset and Propagate* button to reset the merge fail count and attempts to propagate your site's changes again.
 
-```note::
-  This process can also be done with Page Template merging, which follows similar steps.
+```{note}
+This process can also be done with Page Template merging, which follows similar steps.
 ```
 
 ![Figure 2: This type of warning is given when there are friendly URL conflicts with Site Template pages.](./merging-site-template-changes/images/02.png)

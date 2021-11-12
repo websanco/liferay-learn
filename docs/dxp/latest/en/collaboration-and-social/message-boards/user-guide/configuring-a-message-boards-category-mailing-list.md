@@ -38,8 +38,8 @@ To add a mailing list to a Message Boards Category:
 
 The mailing list is now active for this category. Users who have subscribed to this category now receive email notifications for new threads in the category.
 
-```important::
-   If using the `IMAP <https://support.google.com/mail/answer/7126229?hl=en>`_ protocol for a category’s mailing list, make sure to `configure the IMAP inbox to delete messages <https://support.google.com/mail/answer/78892?hl=en>`_ as they are pulled by the email client that sends messages to the users on the mailing list. Otherwise, each email message retained on the server is sent to the mailing list each time there's a new post or update in the category.
+```{important}
+If using the [IMAP](https://support.google.com/mail/answer/7126229?hl=en) protocol for a category’s mailing list, make sure to [configure the IMAP inbox to delete messages](https://support.google.com/mail/answer/78892?hl=en) as they are pulled by the email client that sends messages to the users on the mailing list. Otherwise, each email message retained on the server is sent to the mailing list each time there's a new post or update in the category.
 ```
 
 ## Related Information

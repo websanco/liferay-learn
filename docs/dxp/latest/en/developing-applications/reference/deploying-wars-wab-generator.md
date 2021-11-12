@@ -61,8 +61,8 @@ When a WAR-style portlet is deployed to Liferay and processed by the WAB Generat
 
 The major difference is the addition of the `META-INF/MANIFEST.MF` file. The WAB Generator automatically generates an OSGi-ready manifest file. If you want to affect the content of the manifest file, you can place Bnd directives and OSGi headers directly into your plugin's `liferay-plugin-package.properties` file.
 
-```note::
-   A generated WAB cannot use a manually added ``bnd.bnd`` file or a build-time plugin (e.g., ``bnd-maven-plugin``).
+```{note}
+A generated WAB cannot use a manually added `bnd.bnd` file or a build-time plugin (e.g., `bnd-maven-plugin`).
 ```
 
 ## Deploying a WAR

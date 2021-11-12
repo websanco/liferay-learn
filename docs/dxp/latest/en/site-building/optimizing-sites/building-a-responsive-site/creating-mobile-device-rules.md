@@ -71,8 +71,8 @@ To configure a mobile device rule for a specific page,
 
 Once you've created some mobile device families and added some rules to them, add mobile device actions. These actions defined for a family determine what happens to a request when the device is detected and the family has been found to apply.
 
-```tip::
-   Segmentation and Personalization has a *Device* rule that evaluates whether a User is accessing content using a particular device family. This rule is integrated with the Mobile Device Families app.
+```{tip}
+Segmentation and Personalization has a *Device* rule that evaluates whether a User is accessing content using a particular device family. This rule is integrated with the Mobile Device Families app.
 ```
 
 You can add Mobile Device Actions to a Page Set or to a specific page.
@@ -112,8 +112,8 @@ By default, there are four kinds of actions that can be configured for mobile fa
 | **URL Redirect** | Sends mobile users to any URL. This can be used to direct mobile users to a mobile app download or a mobile version of the page. |
 | **Site Redirect** | Sends mobile users to a different Site on your portal. In some cases, mobile content could be created on a mirror of your Site. |
 
-```tip::
-   Liferay was designed from the ground up to be responsive and adapt to any device that might be accessing it. Before creating new themes or forcing a layout template change, you should test how the Site behaves out-of-the-box. Certain features, like URL Redirects, can be disruptive and frustrating if used improperly.
+```{tip}
+Liferay was designed from the ground up to be responsive and adapt to any device that might be accessing it. Before creating new themes or forcing a layout template change, you should test how the Site behaves out-of-the-box. Certain features, like URL Redirects, can be disruptive and frustrating if used improperly.
 ```
 
 ## Additional Information

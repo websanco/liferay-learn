@@ -31,8 +31,8 @@ When working with Staging, you must think about the applications you're using on
 
 \* *Only published when the Page is published*
 
-```important::
-   After configuration, users can't change whether or not an application data or content type is staged. This is because staging and unstaging this data and content could cause inconsistencies between Staging and Live environments. To change these settings, you must turn staging off and re-enable it with your new configuration.
+```{important}
+After configuration, users can't change whether or not an application data or content type is staged. This is because staging and unstaging this data and content could cause inconsistencies between Staging and Live environments. To change these settings, you must turn staging off and re-enable it with your new configuration.
 ```
 
 ## Publishing Data and Content Types
@@ -61,8 +61,8 @@ When working within a Site, you can select vocabularies from both the current Si
 
 For environments that use both global and local vocabularies, note that global vocabularies must be published to the Live Site through global Site Staging. One way to avoid vocabulary confusion is to keep all vocabularies local or global. If both must be used, you can resolve the issue by ensuring that dependencies (e.g., categories and vocabularies) are published before publishing the Site that depends on them, whether the dependencies are local or global.
 
-```note::
-   Assets like tags, categories, structures, templates, widget templates, document types, and dynamic data lists can also be shared by a parent to its child Sites. In this case, ensure that the parent's dependencies are published before the Site in question.
+```{note}
+Assets like tags, categories, structures, templates, widget templates, document types, and dynamic data lists can also be shared by a parent to its child Sites. In this case, ensure that the parent's dependencies are published before the Site in question.
 ```
 
 ### Deletions

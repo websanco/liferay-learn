@@ -20,8 +20,8 @@ npm install -g yo gulp
 
 Use the upgrade task to update the theme's version dependencies.
 
-```important::
-   The upgrade task may change or overwrite files in your theme. Back up your theme's files before running it. 
+```{important}
+The upgrade task may change or overwrite files in your theme. Back up your theme's files before running it. 
 ``` 
 
 Run this command from inside your theme's folder:

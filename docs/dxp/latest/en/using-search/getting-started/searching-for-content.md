@@ -32,8 +32,8 @@ With prefix searching, searching for the term *instrument* returns documents not
 
 ![Searching for "lever" also returns "leverage" and "leveraging".](./searching-for-content/images/03.png)
 
-```note::
-   Prefix searching is available for many fields out of the box, but it's more complicated under the hood. The details of the field mapping, including the analyzer used on the field and any transformations performed, determine the final behavior.
+```{note}
+Prefix searching is available for many fields out of the box, but it's more complicated under the hood. The details of the field mapping, including the analyzer used on the field and any transformations performed, determine the final behavior.
 ```
 
 Another way to ensure users see results is through [search suggestions](../search-pages-and-widgets/search-results/enabling-search-suggestions.md).
@@ -44,8 +44,8 @@ The Search Bar's behavior can be configured via its portlet configuration screen
 
 ![Configure the search bar behavior in its configuration screen.](./searching-for-content/images/05.png)
 
-```note::
-   When you configure the globally embedded Search Bar widget at the top of one page, it configures the page-top Search Bar widget on all pages in the site. It also overrides the `destination Search Page's <../search-pages-and-widgets/working-with-search-pages/search-pages.md>`_ Search Bar portlet, if they're configured differently. However, it does not override Search Bar widgets manually placed on other pages.
+```{note}
+When you configure the globally embedded Search Bar widget at the top of one page, it configures the page-top Search Bar widget on all pages in the site. It also overrides the [destination Search Page's](../search-pages-and-widgets/working-with-search-pages/search-pages.md) Search Bar portlet, if they're configured differently. However, it does not override Search Bar widgets manually placed on other pages.
 ```
 
 There are several options:

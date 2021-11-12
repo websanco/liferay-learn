@@ -11,8 +11,8 @@ With Results Rankings you can
 * Add results that normally wouldn't be returned for a certain keyword.
 * Re-order pinned results with a drag-and-drop interface.
 
-```note::
-   Result Rankings affect only searches using the newer search widgets (Search Bar, Search Results, etc.). The rankings you customize do not apply to the legacy Search portlet results or to the individual application search bars.
+```{note}
+Result Rankings affect only searches using the newer search widgets (Search Bar, Search Results, etc.). The rankings you customize do not apply to the legacy Search portlet results or to the individual application search bars.
 ```
 
 ## Requirement and Limitations

@@ -30,14 +30,14 @@ You can set the default values for a Structure's fields. For example, a Structur
 1. Choose *Edit Default Values*.
 1. In the *Structure Default Values* page, configure the default values for your fields.
 
-    ```tip::
-      You can restore the original values of the Structure at any time by clicking the *Reset Values* button at the top.
+    ```{tip}
+    You can restore the original values of the Structure at any time by clicking the *Reset Values* button at the top.
     ```
 
 1. Click *Save* to apply the changes.
 
-```tip::
-   You can also use the *Predefined Value* setting for the structure field to set default values. For more information, see Editing and `Configuring Structures' Content <./configuring-structure-fields.md)>`_
+```{tip}
+You can also use the *Predefined Value* setting for the structure field to set default values. For more information, see Editing and [Configuring Structures' Content](./configuring-structure-fields.md))
 ```
 
 ## Copying an Existing Structure
@@ -49,8 +49,8 @@ You can copy an existing structure to create a new one. From the Structures Page
 1. Optionally check the *Copy Templates* box if you want to copy the Web Content Templates associated with the Structure. 
 1. Click *Copy*.
 
-```tip::
-   Liferay DXP generates a unique ID for the copied Structure. The new copy inherits all the attributes from the original Structure, including the name. To avoid confusing the copy with the original, use a different name for the copy.
+```{tip}
+Liferay DXP generates a unique ID for the copied Structure. The new copy inherits all the attributes from the original Structure, including the name. To avoid confusing the copy with the original, use a different name for the copy.
 ```
 
 ## Related Information

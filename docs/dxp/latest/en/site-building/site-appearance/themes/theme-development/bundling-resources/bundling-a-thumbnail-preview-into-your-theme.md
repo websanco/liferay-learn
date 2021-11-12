@@ -30,8 +30,8 @@ Follow these steps to create a thumbnail and bundle it in your theme:
 
 ![The chosen image displays as the thumbnail when selecting your theme.](./bundling-a-thumbnail-preview-into-your-theme/images/02.png)
 
-```note::
-   You may need to clear your browser's cache for the new thumbnail to display on the screen.
+```{note}
+You may need to clear your browser's cache for the new thumbnail to display on the screen.
 ```
 
 The chosen file now displays in the theme selection screen as the thumbnail.

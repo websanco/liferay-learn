@@ -48,8 +48,8 @@ To make this Style Book the new default for your Site, open the Actions menu (![
 
 When you are editing a Style Book, the categories available from the drop-down box show different options for styling your pages.
 
-```tip::
-   You can place the ``Style Guide Sample`` widget on your pages to help test out the various options in your Style Book categories. This sample widget contains many different UI elements that leverage most of the features in the Classic theme, so you can use it to test your page styles. 
+```{tip}
+You can place the `Style Guide Sample` widget on your pages to help test out the various options in your Style Book categories. This sample widget contains many different UI elements that leverage most of the features in the Classic theme, so you can use it to test your page styles. 
 ```
 
 The categories listed here are available as options for the Classic theme.
@@ -60,8 +60,8 @@ The colors used for fonts and visual elements defined in your theme are customiz
 
 ![Change the colors used for displays or UI elements with options under the Color System category.](./using-a-style-book-to-standardize-site-appearance/images/03.png)
 
-```note::
-   Changing the colors for alert-related elements (such as *Success* or *Warning*) may not affect the color of incoming alerts on your Site because each type of alert may use one of many colors. To fully customize the color of alerts, you must define customizable colors and use them in your own theme's categories.
+```{note}
+Changing the colors for alert-related elements (such as *Success* or *Warning*) may not affect the color of incoming alerts on your Site because each type of alert may use one of many colors. To fully customize the color of alerts, you must define customizable colors and use them in your own theme's categories.
 ```
 
 ### Spacing

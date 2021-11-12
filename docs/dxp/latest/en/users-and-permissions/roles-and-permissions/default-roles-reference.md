@@ -20,8 +20,8 @@ All roles available in a Liferay DXP installation can be viewed in the Roles adm
 
 **Site Administrator:** The Site Administrator Role grants permission to manage *almost* all aspects of a Site including Site content, Site memberships, and Site settings. Site Administrators cannot delete the membership of or remove Roles from other Site Administrators or Site Owners. They also *cannot* assign other Users as Site Administrators or Site Owners.
 
-```note::
-   The built-in Site Administrator Role intentionally grants a permission that is not normally possible for a Site-scoped Role: Site Administrators can view Users that are not yet part of the Site. This view permission is required to add Users to the Site. A custom Site Role cannot duplicate this ability because of the Regular-scoped permission that's required: `View Users`. Therefore, to duplicate the Site Administrator's permissions within a custom Role, you must create two Roles: the Site Role and a separate `Regular Role with permission <./defining-role-permissions.md>`__ to view the globally scoped User resource.
+```{note}
+The built-in Site Administrator Role intentionally grants a permission that is not normally possible for a Site-scoped Role: Site Administrators can view Users that are not yet part of the Site. This view permission is required to add Users to the Site. A custom Site Role cannot duplicate this ability because of the Regular-scoped permission that's required: `View Users`. Therefore, to duplicate the Site Administrator's permissions within a custom Role, you must create two Roles: the Site Role and a separate [Regular Role with permission](./defining-role-permissions.md)_ to view the globally scoped User resource.
 ```
 
 **Site Owner:** The Site Owner Role is the same as the Site Administrator Role except that it grants permission to manage *all* aspects of a Site, including permission to delete the membership of or remove Roles from Site Administrators or other Site Owners. They *can* assign other Users as Site Administrators or Site Owners.
@@ -44,10 +44,10 @@ All roles available in a Liferay DXP installation can be viewed in the Roles adm
 
 **Asset Library Owner:** The Asset Library Owner Role is the same as the Asset Library Administrator Role except that it grants permission to manage *all* aspects of a Asset Library, including permission to delete the membership of or remove Roles from Asset Library Administrators or other Asset Library Owners. They *can* assign other Users as Asset Library Administrators or Asset Library Owners.
 
-```note::
-   It's easy to overlook the differences between owner type Roles and administrator type Roles. Administrators cannot remove the administrator or owner Role from any other administrator or owner, and they cannot appoint other Users as administrators or owners.
+```{note}
+It's easy to overlook the differences between owner type Roles and administrator type Roles. Administrators cannot remove the administrator or owner Role from any other administrator or owner, and they cannot appoint other Users as administrators or owners.
 
-   In contrast, owners can do those things.
+In contrast, owners can do those things.
 ```
 
 <!-- commented out section as per LRDOCS-8188

@@ -46,8 +46,8 @@ Use a cURL script to upload a file to [Documents and Media](../documents-and-med
     ./Document_POST_ToSite.sh 1234
 	```
 
-    ```note:: 
-       If your user and password aren't ``test@liferay.com`` and ``test``, respectively, replace those values in the ``Document_POST_ToSite.sh`` script before running it.
+    ```{note}
+    If your user and password aren't `test@liferay.com` and `test`, respectively, replace those values in the `Document_POST_ToSite.sh` script before running it.
     ```
 
 The script uploads itself to your site's Documents and Media.
@@ -87,8 +87,8 @@ Next you'll use a Java class to upload a file.
     java -classpath .:* -DsiteId=1234 Document_POST_ToSite
     ```
 
-    ```note:: 
-       If your user and password aren't ``test@liferay.com`` and ``test``, respectively, replace those values in the ``Document_POST_ToSite.java`` file and recompile the class before running it.
+    ```{note}
+    If your user and password aren't `test@liferay.com` and `test`, respectively, replace those values in the `Document_POST_ToSite.java` file and recompile the class before running it.
     ```
 
 The class uploads its source file `Document_POST_ToSite.java` to Documents and Media.
@@ -115,8 +115,8 @@ Here are the command's arguments:
 | `"http://localhost:8080/o/headless-delivery/v1.0/sites/${1}/documents"` | The REST service endpoint. Your site ID parameter replaces `${1}`. |
 | `-u "test@liferay.com:test"` | Basic authentication credentials. |
 
-```note::
-   Basic authentication is used here for demonstration purposes. For production, you should authorize users via `OAuth 2.0 <../../../headless-delivery/using-oauth2/using-oauth2.md>`_.
+```{note}
+Basic authentication is used here for demonstration purposes. For production, you should authorize users via [OAuth 2.0](../../../headless-delivery/using-oauth2/using-oauth2.md).
 ```
 
 Other cURL commands for the `Document` and `DocumentFolder` REST services use similar arguments.
@@ -141,14 +141,14 @@ This class invokes the REST service using only three lines of code:
 | `DocumentResource documentResource = builder.authentication(...).build();` | Specifies basic authentication and generates a `DocumentResource` service instance. |
 | `Document document = documentResource.postSiteDocument(...);` | Calls the `DocumentResource.postSiteDocument` method, passing in a site ID, a `Document` object to represent the uploaded file, and a hash map that specifies the file to upload. The file is arbitrary--this example uses the local file `Document_POST_ToSite.java` for convenience. |
 
-```note::
-   The ``main`` method's comment demonstrates running the class.
+```{note}
+The `main` method's comment demonstrates running the class.
 ```
 
 The other example Java classes are similar to this one, but call different `DocumentResource` methods.
 
-```important::
-   See `DocumentResource <https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/headless/headless-delivery/headless-delivery-client/src/main/java/com/liferay/headless/delivery/client/resource/v1_0/DocumentResource.java>`_ for service details.
+```{important}
+See [DocumentResource](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/headless/headless-delivery/headless-delivery-client/src/main/java/com/liferay/headless/delivery/client/resource/v1_0/DocumentResource.java) for service details.
 ```
 
 Below are examples of calling other `Document` REST services using cURL and Java.
@@ -193,8 +193,8 @@ The site's `Document` objects are listed in JSON.
 
 You can get a `Document`'s fields by executing the following cURL or Java command. Replace `1234` with the `Document`'s ID.
 
-```tip:: 
-   Use ``Documents_GET_FromSite.[java|sh]`` to get site ``Document`` IDs.
+```{tip}
+Use `Documents_GET_FromSite.[java|sh]` to get site `Document` IDs.
 ```
 
 ### Document_GET_ById.sh
@@ -375,8 +375,8 @@ The Java code above calls `DocumentResource`'s `putDocument` method, passing in 
 
 The above cURL command and Java class replace `Document` instances with completely new ones that have the new titles "Document_PUT_ById.sh" and "Document_PUT_ById.java", respectively, and have the description "Goo."
 
-```warning::
-   Unless you want to use the current ``Document``'s title, make sure to specify the ``title`` value you want for the replacement ``Document``.
+```{warning}
+Unless you want to use the current `Document`'s title, make sure to specify the `title` value you want for the replacement `Document`.
 ```
 
 ![The cURL command replaced the document.](./document-api-basics/images/04.png)

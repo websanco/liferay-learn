@@ -24,8 +24,8 @@ To access the collections management menu, follow these steps:
 
    **Import**: Select a `.zip` file to upload with additional Page Fragments. If you want to replace an existing collection, make sure the box is checked for *Overwrite Existing Files*. You can import a Collection that was created in Liferay DXP, a Collection created using external tools, or Page Fragments without a Collection. If an imported Fragment has invalid rules, it is automatically saved as a draft.
 
-   ```note::
-      Exporting and importing Page Fragments is the preferred way to share code or bring it into your Site.
+   ```{note}
+   Exporting and importing Page Fragments is the preferred way to share code or bring it into your Site.
    ```
 
    **Delete**: Remove the current collection and all its contents.

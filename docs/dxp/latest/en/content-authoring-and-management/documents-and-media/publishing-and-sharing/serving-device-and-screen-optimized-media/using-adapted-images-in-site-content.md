@@ -2,8 +2,8 @@
 
 Adaptive Media works in the background creating different resolutions for the images you upload to Liferay DXP. When Blog, Web Content, and Content Page creators use these images, Adaptive Media chooses the best resolution for the target screen size automatically. Adaptive Media identifies each adapted image in the content's HTML with a `data-fileentryid` attribute that is replaced with the latest adapted image when the user views the content. This lets Adaptive Media deliver the latest adapted images to your content, even if the content existed prior to those images.
 
-```note::
-   If you `disable Adaptive Media for an image <./managing-image-resolutions.md>`_, the original image appears in the Blog entries, Web Content articles, and Content Pages.
+```{note}
+If you [disable Adaptive Media for an image](./managing-image-resolutions.md), the original image appears in the Blog entries, Web Content articles, and Content Pages.
 ```
 
 ## Including Adapted Images in Content

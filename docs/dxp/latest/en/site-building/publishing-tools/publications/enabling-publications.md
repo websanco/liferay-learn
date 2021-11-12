@@ -2,8 +2,8 @@
 
 Publications provides a convenient and flexible way for you and your teams to develop, track, and publish changes to your DXP instance. When enabled, Publications is activated globally and can be accessed anywhere to edit supported entities in your instance.
 
-```important::
-   Staging and Publications cannot be enabled at the same time. If Staging is enabled on any of your Sites, you must first disable Staging before enabling Publications. See `Disabling Local Live Staging <../staging/configuring-local-live-staging.html#disabling-local-live-staging>`_ and `Disabling Remote Live Staging <../staging/configuring-remote-live-staging.html#disabling-remote-live-staging>`_ for more information.
+```{important}
+Staging and Publications cannot be enabled at the same time. If Staging is enabled on any of your Sites, you must first disable Staging before enabling Publications. See [Disabling Local Live Staging](../staging/configuring-local-live-staging.html#disabling-local-live-staging) and [Disabling Remote Live Staging](../staging/configuring-remote-live-staging.html#disabling-remote-live-staging) for more information.
 ```
 
 ## How to Enable Publications
@@ -26,8 +26,8 @@ Once enabled, you can access the drop-down Publications bar menu from any page i
 
 Once enabled, you can disable Publications at any time, via the Publications *Settings* page. Set the toggle switch to *No* and then click on *Submit*.
 
-```important::
-   Once disabled, all active publications are deactivated, scheduled publications are canceled, and you can no longer access your publication history. DXP, however, retains your instance's publication history, so you can access it again if you re-enable Publications.
+```{important}
+Once disabled, all active publications are deactivated, scheduled publications are canceled, and you can no longer access your publication history. DXP, however, retains your instance's publication history, so you can access it again if you re-enable Publications.
 ```
 
 ## Additional Information

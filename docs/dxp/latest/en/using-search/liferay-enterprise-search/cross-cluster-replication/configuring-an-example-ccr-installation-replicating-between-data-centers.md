@@ -6,8 +6,8 @@ This example configures Liferay DXP's Cross-Cluster Replication module and Elast
 
 ![With Cross-Cluster Replication, disparate data centers can hold synchronized Elasticsearch clusters with Liferay DXP indexes.](./configuring-an-example-ccr-installation-replicating-between-data-centers/images/01.png)
 
-```important::
-   Differences in the configurations and procedure between Liferay DXP 7.1, 7.2 and 7.3 are noted inline throughout these instructions.
+```{important}
+Differences in the configurations and procedure between Liferay DXP 7.1, 7.2 and 7.3 are noted inline throughout these instructions.
 ```
 
 You'll use two single-node Elasticsearch clusters on `localhost`, each with a copy of the same indexes. This is the simplest scenario you can configure to reap the data locality and disaster recovery benefits of Cross-Cluster Replication.
@@ -16,8 +16,8 @@ A vanilla Liferay DXP installation contains the indexes presented in [Cross Clus
 
 Elasticsearch API calls provided here can be copied and pasted into Kibana's Dev Tools console, accessible via a separate Kibana installation or through the [LES Monitoring widget](../monitoring-elasticsearch.md).
 
-```note::
-   To use Kibana, remember that you have multiple Elasticsearch clusters (two single-node clusters in this example) running. The ``elasticsearch.hosts: [ "http://localhost:<port>" ]`` setting in Kibana's ``kibana.yml`` file must point to the correct port when managing the indexes and other configurations described below to avoid mixing the leader and the follower clusters. Here, it's assumed that your leader Elasticserach cluster node uses port ``9200`` and the follower uses port ``9202``. 
+```{note}
+To use Kibana, remember that you have multiple Elasticsearch clusters (two single-node clusters in this example) running. The `elasticsearch.hosts: [ "http://localhost:<port>" ]` setting in Kibana's `kibana.yml` file must point to the correct port when managing the indexes and other configurations described below to avoid mixing the leader and the follower clusters. Here, it's assumed that your leader Elasticserach cluster node uses port `9200` and the follower uses port `9202`. 
 ```
 
 ## Cluster Liferay DXP 
@@ -45,8 +45,8 @@ To encrypt communication (TLS/SSL) and enable user authentication between the Li
 
 1. Configure X-Pack Security in your Elasticsearch clusters. Make sure the node certificates are signed by the same CA and the security settings of the Leader and the Follower clusters match.
 
-   ```note::
-      TLS/SSL must be enabled for the HTTP and Transport layers on the follower Elasticsearch cluster nodes. Liferay DXP connects to the follower cluster over HTTP to re-follow the company indexes after a full reindex is performed.
+   ```{note}
+   TLS/SSL must be enabled for the HTTP and Transport layers on the follower Elasticsearch cluster nodes. Liferay DXP connects to the follower cluster over HTTP to re-follow the company indexes after a full reindex is performed.
    ```
 
 1. Configure the DXP nodes. 
@@ -66,8 +66,8 @@ The example configurations are provided in full [here](./ccr-basic-use-case-conf
 
 1. [Install the LPKG](../../../system-administration/installing-and-managing-apps/installing-apps/installing-apps.md) into all DXP nodes.
 
-```tip::
-   Because you only use multiple Elasticsearch connections on Liferay DXP 7.1 and 7.2 with Cross-Cluster Replication, the Connections UI is only visible in the Search administration panel (Control Panel > Configuration > Search---under the Connections tab) if the Cross-Cluster Replication LPKG is deployed. On Liferay DXP 7.3, the Connections UI is always present.
+```{tip}
+Because you only use multiple Elasticsearch connections on Liferay DXP 7.1 and 7.2 with Cross-Cluster Replication, the Connections UI is only visible in the Search administration panel (Control Panel > Configuration > Search---under the Connections tab) if the Cross-Cluster Replication LPKG is deployed. On Liferay DXP 7.3, the Connections UI is always present.
 ```
 
 If all your prerequisite tasks are completed and the Cross-Cluster Replication module is installed, continue by [configuring the servers in your remote data center](./configuring-ccr-in-a-remote-leader-data-center.md).

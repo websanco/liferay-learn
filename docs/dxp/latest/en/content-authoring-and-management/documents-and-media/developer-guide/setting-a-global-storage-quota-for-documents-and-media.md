@@ -4,8 +4,8 @@ You can define storage quotas in Documents and Media by enabling the `data.limit
 
 ![Upload attempts that would exceed the limit fail and display an error message.](./setting-a-global-storage-quota-for-documents-and-media/images/01.png)
 
-```important::
-   Although the setting is global, each instance keeps track of its current consumed quota. If you define a quota of 100MB and you have 10 instances, the maximum global storage that can be consumed by Documents and Media is roughly 1TB.
+```{important}
+Although the setting is global, each instance keeps track of its current consumed quota. If you define a quota of 100MB and you have 10 instances, the maximum global storage that can be consumed by Documents and Media is roughly 1TB.
 ```
 
 By default, the `data.limit.dl.storage.max.size` portal property is disabled. You can override this value using a `portal-ext.properties` file.
@@ -30,8 +30,8 @@ Follow these steps to set a global storage quota for Documents and Media in a Li
 
 Under normal circumstances, the system dynamically updates the storage quota. However, in some cases, a manual update may be required due to database corruption, runtime errors, or some other cause. To do this, run the `documentLibrary:update` OSGi command from the Gogo Shell.
 
-```warning::
-   Updating a quota can be time and resource intensive, depending on the amount of documents stored in Documents and Media. Please exercise care when running this command in your production environment.
+```{warning}
+Updating a quota can be time and resource intensive, depending on the amount of documents stored in Documents and Media. Please exercise care when running this command in your production environment.
 ```
 
 ## Additional Information

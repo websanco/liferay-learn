@@ -4,8 +4,8 @@ Contributed Fragment Collections are deployable modules containing Page Fragment
 
 This example runs on Liferay 7.3+.
 
-```note::
-  All Fragments added through a Contributed Fragment Collection are available globally to all Sites.
+```{note}
+All Fragments added through a Contributed Fragment Collection are available globally to all Sites.
 ```
 
 To add a contributed Fragment Collection, you extend the [`BaseFragmentCollectionContributor` Class](https://docs.liferay.com/dxp/apps/fragment/latest/javadocs/com/liferay/fragment/contributor/BaseFragmentCollectionContributor.html), which itself implements the [`FragmentCollectionContributor` interface](https://docs.liferay.com/dxp/apps/fragment/latest/javadocs/com/liferay/fragment/contributor/FragmentCollectionContributor.html).
@@ -46,8 +46,8 @@ First, deploy an example to see what a contributed Fragment Collection looks lik
     ./gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)
     ```
 
-    ```note::
-      If testing on Windows, you may need to build the module first with `./gradlew build` and then manually copy the JAR to `docker cp docker-container-name:/opt/liferay/osgi/modules` directly if deployment fails.
+    ```{note}
+    If testing on Windows, you may need to build the module first with `./gradlew build` and then manually copy the JAR to `docker cp docker-container-name:/opt/liferay/osgi/modules` directly if deployment fails.
     ```
 
 1. Confirm the deployment to the Liferay Docker container console. The log message below should appear in the Docker console:
@@ -117,12 +117,12 @@ Follow these steps to add a new packaged Fragment to the contributed Fragment Co
 
     See [Developing Page Fragments with the Fragments Toolkit](./using-the-fragments-toolkit.md) for more information on creating Fragments.
 
-    ```note::
-      Packaged Fragments go in the `dependencies folder, and the class package name and resources package name must match (e.g. ``[class.package.path].dependencies``).
+    ```{note}
+    Packaged Fragments go in the `dependencies folder, and the class package name and resources package name must match (e.g. `[class.package.path].dependencies`).
     ```
 
-    ```note::
-      Contributed Fragment Collections do not support `included resources <./including-default-resources-with-fragments.md>`_.
+    ```{note}
+    Contributed Fragment Collections do not support [included resources](./including-default-resources-with-fragments.md).
     ```
 
 ## Deploy and Test
@@ -139,8 +139,8 @@ You can build and deploy the updated contributed Fragment Collection as you did 
     ./gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)
     ```
 
-    ```note::
-      If deployment fails on Windows, you may need to `bind mount Liferay in the container <../../../installation-and-upgrades/installing-liferay/using-liferay-docker-images/providing-files-to-the-container.md>`_, build the module JAR with ``.\gradlew jar``, and copy the JAR to the appropriate bind-mounted folder.
+    ```{note}
+    If deployment fails on Windows, you may need to [bind mount Liferay in the container](../../../installation-and-upgrades/installing-liferay/using-liferay-docker-images/providing-files-to-the-container.md), build the module JAR with `.\gradlew jar`, and copy the JAR to the appropriate bind-mounted folder.
     ```
 
 1. Verify that the updated Fragment is included in the contributed Collection. Point your browser to `https://localhost:8080`, and under the Site Menu on the left side of the screen, go to *Design* &rarr; *Fragments*. The L3M9 Jumbotron Fragment appears in the L3M9 Collection.

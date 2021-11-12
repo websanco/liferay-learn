@@ -10,8 +10,8 @@ You can map the single-value Content field directly to a Fragment, but you need 
 
 ![Create a Web Content Template that uses the Same Structure as the Web Content Article.](./mapping-web-content-templates-to-fragments/images/07.png)
 
-```note::
-  If you want to map several Structure field values to individual Fragments, you must create a separate Web Content Template that renders just one field for each field that uses that Structure. If you render all your fields in one Template, all their values map to the Fragment when you select the Template.
+```{note}
+If you want to map several Structure field values to individual Fragments, you must create a separate Web Content Template that renders just one field for each field that uses that Structure. If you render all your fields in one Template, all their values map to the Fragment when you select the Template.
 ```
 
 ## Mapping a Web Content Template to a Fragment

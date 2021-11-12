@@ -36,8 +36,8 @@ Follow these steps to install the Liferay REST Connector to SharePoint.
 
 Once the connector is successfully deployed and installed, you can add SharePoint OAuth2 configuration entries to complete setup. If desired, you can also define custom search sources to restrict and fine tune SharePoint search results.
 
-```important::
-   Since the REST connector uses Azure ACS with OAuth2 for SharePoint server authorization, ensure HTTPS support is enabled in your Server.
+```{important}
+Since the REST connector uses Azure ACS with OAuth2 for SharePoint server authorization, ensure HTTPS support is enabled in your Server.
 ```
 
 ## Updating to the Latest Version

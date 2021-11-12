@@ -19,8 +19,8 @@ The following table summarizes the main differences between Categories and Tags:
 
 You can find Categories and Tags under the Categorization panel in the Site Navigation menu. From here, you can create new Categories and Tags or customize the existing ones. You create Tags and Categories at the Site level.
 
-```note::
-   Only Site administrators can manage Categories and Tags in the Categorization panel.
+```{note}
+Only Site administrators can manage Categories and Tags in the Categorization panel.
 ```
 
 ![Find the Categories and Tags options under the Categorization panel](./organizing-content-with-categories-and-tags/images/01.png)
@@ -79,8 +79,8 @@ You edit the Audience and Stage vocabularies in the Global Site. You can use the
 
 ![Edit the Audience and Stage Vocabularies in the Global Site](./organizing-content-with-categories-and-tags/images/06.png)
 
-```note::
-   In previous Liferay versions, the *Topic* vocabulary exists on each Site. For 7.3+, the *Topic* vocabulary exists now at the Global Site.
+```{note}
+In previous Liferay versions, the *Topic* vocabulary exists on each Site. For 7.3+, the *Topic* vocabulary exists now at the Global Site.
 ```
 
 ## Related Information

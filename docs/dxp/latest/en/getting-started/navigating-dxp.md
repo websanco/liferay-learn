@@ -48,8 +48,8 @@ For [Widget Pages](../site-building/creating-pages/using-widget-pages/adding-wid
 - Content Performance (![Performance](../images/icon-analytics.png))
 - Page Audit (![Page Audit](../images/icon-information.png))
 
-```note::
-   The Application Bar options for Content Pages and Widget Pages depend on your Liferay DXP version. `Content Performance <../content-authoring-and-management/content-performance-tool/about-the-content-performance-tool.md>`_ is available for Content Pages starting with Liferay DXP 7.3 and for Widget Pages starting with Liferay DXP 7.4. Page Audit is available starting with Liferay DXP 7.4. The Toggle Controls option is available starting with Liferay DXP 7.3.
+```{note}
+The Application Bar options for Content Pages and Widget Pages depend on your Liferay DXP version. [Content Performance](../content-authoring-and-management/content-performance-tool/about-the-content-performance-tool.md) is available for Content Pages starting with Liferay DXP 7.3 and for Widget Pages starting with Liferay DXP 7.4. Page Audit is available starting with Liferay DXP 7.4. The Toggle Controls option is available starting with Liferay DXP 7.3.
 ```
 
 ## Personal Menu
@@ -70,8 +70,8 @@ Users can use the personal menu to:
 
 The DXP _Global Menu_ contains the _Applications Menu_ and the _Control Panel_. Click the _Applications Menu_ icon (![Applications Menu icon](../images/icon-applications-menu.png)) at the top of the screen to access it.
 
-```note::
-   By default, Users with the *Guest* or *User* roles are not able to access the Global Menu.
+```{note}
+By default, Users with the *Guest* or *User* roles are not able to access the Global Menu.
 ```
 
 You can also navigate to other Sites available to you from either the _Applications_ or _Control Panel_ tabs in the _Global Menu_, on the right side of the interface.

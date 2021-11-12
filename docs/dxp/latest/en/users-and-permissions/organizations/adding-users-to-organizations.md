@@ -2,8 +2,8 @@
 
 With Liferay [Organizations](./understanding-organizations.md), you can manage Users and permissions to model your real-life organizational hierarchy, which can then be quickly implemented in [Organization Sites](./organization-sites.md). You can either assign existing portal Users to an Organization, or create new Users with a specific Organization affiliation.
 
-```note::
-   Portal Administrators can assign any existing Users to any Organization, or create new Users with any Organization affiliation. By contrast, Organization Owners and Administrators can can only assign existing portal Users to child Organizations if the User is already affiliated with their parent Organization. They can also only create new portal Users within their own Organization, or a child Organization.
+```{note}
+Portal Administrators can assign any existing Users to any Organization, or create new Users with any Organization affiliation. By contrast, Organization Owners and Administrators can can only assign existing portal Users to child Organizations if the User is already affiliated with their parent Organization. They can also only create new portal Users within their own Organization, or a child Organization.
 ```
 
 ## Assigning Existing Portal Users to an Organization
@@ -12,8 +12,8 @@ Follow these steps to assign existing Users to an Organization:
 
 1. Open the *Global Menu*, and go to *Control Panel* &rarr; *Users* &rarr; *Users and Organizations*. Then, click on the *Organizations* tab.
 
-    ```note::
-       To access these options, Organization Administrators and Owners without portal administration privileges can go to *My Organizations* in the *Personal Menu*.
+    ```{note}
+    To access these options, Organization Administrators and Owners without portal administration privileges can go to *My Organizations* in the *Personal Menu*.
     ```
 
 1. Click on the *Actions* button (![Actions Button](../../images/icon-actions.png)) for an existing Organization, and select *Assign Users*.
@@ -34,8 +34,8 @@ Follow these steps to add a new portal User to an Organization:
 
 1. Open the *Global Menu*, and go to *Control Panel* &rarr; *Users* &rarr; *Users and Organizations*. Then, click on the *Organizations* tab.
 
-    ```note::
-       To access these options, Organization Administrators and Owners without portal administration privileges can go to *My Organizations* in the *Personal Menu*.
+    ```{note}
+    To access these options, Organization Administrators and Owners without portal administration privileges can go to *My Organizations* in the *Personal Menu*.
     ```
 
 1. Click on the *Actions* button (![Actions Button](../../images/icon-actions.png)) for an existing Organization, and select *Add User*.

@@ -2,12 +2,12 @@
 
 Here's how to install, configure, and start Elasticsearch on-premises.
 
-```important::
-   The Sidecar Elasticsearch server bundled with Liferay 7.3 uses the Elasticsearch OSS distribution. Do not install the OSS version for production. To run Liferay securely with Elasticsearch, you must install the Basic level of Elasticsearch at a minimum. See `Elastic's subscriptions page <https://www.elastic.co/subscriptions>`__ for more information.
+```{important}
+The Sidecar Elasticsearch server bundled with Liferay 7.3 uses the Elasticsearch OSS distribution. Do not install the OSS version for production. To run Liferay securely with Elasticsearch, you must install the Basic level of Elasticsearch at a minimum. See [Elastic's subscriptions page](https://www.elastic.co/subscriptions)_ for more information.
 ```
 
-```note::
-   If you have Elasticsearch indexes used for primary data storage (storing data not backed by a database) you can bring that data into your new Elasticsearch cluster using the `snapshot and restore approach <./upgrading-elasticsearch/backing-up-elasticsearch.md>`__. Liferay's own Search Tuning indexes (for Result Rankings and Synyonyms) are primary storage indexes.
+```{note}
+If you have Elasticsearch indexes used for primary data storage (storing data not backed by a database) you can bring that data into your new Elasticsearch cluster using the [snapshot and restore approach](./upgrading-elasticsearch/backing-up-elasticsearch.md)_. Liferay's own Search Tuning indexes (for Result Rankings and Synyonyms) are primary storage indexes.
 ```
 
 ## Environment Setup for Production-Like Installation
@@ -37,8 +37,8 @@ sysctl -w vm.max_map_count=262144
 
 1. Download an Elasticsearch archive (not the OSS version) from [Elastic's website](https://www.elastic.co).
 
-    ```important::
-       Download the latest Elasticsearch archive `compatible with your Liferay version <./connecting-to-elasticsearch.html#available-liferay-elasticsearch-connectors>`_.
+    ```{important}
+    Download the latest Elasticsearch archive [compatible with your Liferay version](./connecting-to-elasticsearch.html#available-liferay-elasticsearch-connectors).
     ```
 
 1. Extract the archive contents to a local folder where you want to run Elasticsearch. This folder is your *Elasticsearch Home*.
@@ -89,8 +89,8 @@ transport.port: 9300
 
 This cluster called `LiferayElasticsearchCluster` has one node called `es-node1`.
 
-```tip::
-   If you are not configuring hosts for a production mode setup, use ``localhost`` as the host value. Elasticsearch can bind to loopback addresses for HTTP and Transport communication. Along with single node discovery, this means the Elasticsearch server is running in `development mode`.
+```{tip}
+If you are not configuring hosts for a production mode setup, use `localhost` as the host value. Elasticsearch can bind to loopback addresses for HTTP and Transport communication. Along with single node discovery, this means the Elasticsearch server is running in `development mode`.
 ```
 
 ### Example: Multi-Node Production Elasticsearch Cluster
@@ -117,28 +117,28 @@ transport.port: 9302
 # Add security settings here
 ```
 
-```tip::
-   If you are not configuring hosts for a production mode setup, use ``localhost`` as the host value. Elasticsearch can bind to loopback addresses for HTTP and Transport communication. This is referred to as `development mode`.
+```{tip}
+If you are not configuring hosts for a production mode setup, use `localhost` as the host value. Elasticsearch can bind to loopback addresses for HTTP and Transport communication. This is referred to as `development mode`.
 
-   Related Elasticsearch Documentation:
+Related Elasticsearch Documentation:
 
-   - `Important Elasticsearch configuration <https://www.elastic.co/guide/en/elasticsearch/reference/7.x/important-settings.html>`_
+- [Important Elasticsearch configuration](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/important-settings.html)
 
-   - `Security settings in Elasticsearch <https://www.elastic.co/guide/en/elasticsearch/reference/7.x/security-settings.html>`_
+- [Security settings in Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/security-settings.html)
 
-   - `Bootstrap Checks, Development vs. production mode <https://www.elastic.co/guide/en/elasticsearch/reference/7.x/bootstrap-checks.html>`_
+- [Bootstrap Checks, Development vs. production mode](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/bootstrap-checks.html)
 ```
 
-```important::
-   Each Elasticsearch node's ``elasticsearch.yml`` file must use unique values for the following properties.
+```{important}
+Each Elasticsearch node's `elasticsearch.yml` file must use unique values for the following properties.
 
-   - ``node.name``
+- `node.name`
 
-   - ``http.port``
+- `http.port`
 
-   - ``network.host``
+- `network.host`
 
-   - ``transport.port``
+- `transport.port`
 ```
 
 ### Enforce Bootstrap Checks for Single Server in Production Mode

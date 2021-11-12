@@ -93,7 +93,7 @@ Open the `F5D5MVCPortlet.java` class. In an MVC Portlet, the portlet class is th
 
    This example uses a reference to [`UUIDItemSelectorReturnType`](http://docs.liferay.com/portal/7.3-latest/apps/item-selector-3.0.4/javadocs/com/liferay/item/selector/criteria/UUIDItemSelectorReturnType.html) to define the selected Roles' `UUID` value as the crucial data to return. If multiple Roles are selected, they are returned as a comma-delimited list.
 
-   ```note::
+   ```{note}
    If a UUID is not available, the primary key is returned.
    ```
 

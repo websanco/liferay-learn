@@ -22,8 +22,8 @@ The categories you define on this Vocabulary (1) are the ones you can choose whe
 
 You can create a new global Vocabulary or use an existing one. To create a new Vocabulary or update the Categories on an existing one, see [Defining Categories and Vocabularies for Content](./defining-categories-and-vocabularies-for-content.md). You can use vocabularies with [Public or Internal Visibility](./organizing-content-with-categories-and-tags.md#vocabulary-visibility). Session Property Vocabularies only work with global vocabularies.
 
-```note::
-   You can only create and edit global vocabularies in the global Site.
+```{note}
+You can only create and edit global vocabularies in the global Site.
 ```
 
 ## Defining the Session Property Vocabulary
@@ -41,8 +41,8 @@ After [configuring the Vocabulary for the session-based Segment](#configuring-th
 
     ![Select the property you want to associate to the global Vocabulary.](./session-property-vocabularies/images/06.png)
 
-    ```note::
-       You cannot select properties that belong to another Session Property Vocabulary. These properties are grayed-out and unavailable.
+    ```{note}
+    You cannot select properties that belong to another Session Property Vocabulary. These properties are grayed-out and unavailable.
     ```
 
 1. Select the _Vocabulary_ in the Vocabulary Name drop-down menu.
@@ -56,8 +56,8 @@ After [configuring the Vocabulary](#configuring-the-vocabulary-for-the-session-b
 
 When you define the Segment's conditions and you use one of the session properties linked to the global Vocabulary, the conditions for the session property are now predefined and you can select them from a drop-down menu. This drop-down menu corresponds the list of categories for [the Vocabulary you define](#defining-the-session-property-vocabulary) in the Session Property Vocabulary.
 
-```important::
-   When you delete one of the categories or the Vocabulary that is linked to a User Segment in a Session Property Vocabulary, the Segment keeps working based on your definiton. Liferay alerts you of this situation in the Segment editor.
+```{important}
+When you delete one of the categories or the Vocabulary that is linked to a User Segment in a Session Property Vocabulary, the Segment keeps working based on your definiton. Liferay alerts you of this situation in the Segment editor.
 ```
 
 ![A warning message appears when one of the categories or the Vocabulary in the Session Property Vocabulary is missing.](./session-property-vocabularies/images/08.png)

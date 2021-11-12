@@ -43,8 +43,8 @@ Resolve all unmet requirements reported by the script and rerun the script until
 
 The Fragments Toolkit's `yo liferay-fragments` command launches an interface for generating a Fragments Project.
 
-```warning::
-   Don't nest Fragments projects. Make sure to create new Fragments projects in their own location, outside of any existing Fragments projects.
+```{warning}
+Don't nest Fragments projects. Make sure to create new Fragments projects in their own location, outside of any existing Fragments projects.
 ```
 
 If you're in the `liferay-x2y6` project folder, exit it (e.g., `cd ..`).
@@ -141,8 +141,8 @@ Import the sample Fragment Collection to Liferay to view the Fragments:
 
     ![The Collection is available.](./using-the-fragments-toolkit/images/01.png)
 
-    ```note::
-       For Liferay DXP 7.1 and 7.2, instead navigate to *Site* → *Site Builder* → *Page Fragments* under the Product Menu to get to the *Fragments* page.
+    ```{note}
+    For Liferay DXP 7.1 and 7.2, instead navigate to *Site* → *Site Builder* → *Page Fragments* under the Product Menu to get to the *Fragments* page.
     ```
 
 1. Select a Fragment to view it in the Fragments Editor.
@@ -252,12 +252,12 @@ The `add-fragment` command generates a Fragment per your input.
     ? Use new data-lfr editable syntax? Yes
     ```
 
-    ```note::
-       If you accepted using React in your fragment, the toolkit assumes you're on Liferay 7.3+ and configures the new editable element syntax.
+    ```{note}
+    If you accepted using React in your fragment, the toolkit assumes you're on Liferay 7.3+ and configures the new editable element syntax.
     ```
 
-    ```note::
-       Please see `Fragment-Specific Tags <../reference/fragments/fragment-specific-tags-reference.md>`_ for more information on Liferay's editable data syntax.
+    ```{note}
+    Please see [Fragment-Specific Tags](../reference/fragments/fragment-specific-tags-reference.md) for more information on Liferay's editable data syntax.
     ```
 
 1. Select the Collection you just created (`My Collection`).
@@ -271,8 +271,8 @@ The `add-fragment` command generates a Fragment per your input.
        create src/my-collection/my-jumbotron/configuration.json
     ```
 
-    ```note::
-        The ``fragment.json`` defines the paths to the Fragment's CSS, HTML, and JavaScript. If you change any of these file names, update their paths in the ``fragment.json``.
+    ```{note}
+    The `fragment.json` defines the paths to the Fragment's CSS, HTML, and JavaScript. If you change any of these file names, update their paths in the `fragment.json`.
     ```
 
 Here is the Fragment's `index.html`:
@@ -338,14 +338,14 @@ For example, you can build off of the above HTML and use [Clay](https://clayui.c
 </div>
 ```
 
-```note::
-   If you are using Liferay 7.2 or below, remove the ``data-lfr-editable-[id|type]`` attributes and wrap the content elements in ``lfr-editable`` elements as described in `Fragment-Specific Tags <../reference/fragments/fragment-specific-tags-reference.md>`_.
+```{note}
+If you are using Liferay 7.2 or below, remove the `data-lfr-editable-[id|type]` attributes and wrap the content elements in `lfr-editable` elements as described in [Fragment-Specific Tags](../reference/fragments/fragment-specific-tags-reference.md).
 ```
 
 The first `div` element's `class="component-my-jumbotron"` attribute attempts to uniquely identify this Fragment on a page.
 
-```tip::
-  In your Fragment's HTML file, use the main wrapper element (the ``<div>`` in the example above) to uniquely identify the Fragment so it doesn't conflict with other components on a page.
+```{tip}
+In your Fragment's HTML file, use the main wrapper element (the `<div>` in the example above) to uniquely identify the Fragment so it doesn't conflict with other components on a page.
 ```
 
 Next the `<div class="jumbotron"/>` element wraps the content, applying [Bootstrap](https://getbootstrap.com/)'s jumbotron component. This component makes the content stand out. Here are the content elements:
@@ -357,8 +357,8 @@ Next the `<div class="jumbotron"/>` element wraps the content, applying [Bootstr
 
 You can also include resources in your Fragments. See [Including Default Resources in Fragments](./including-default-resources-with-fragments.md) for more information.
 
-```note::
-  The Fragment and configuration object are passed in as arguments in JavaScript and are available as ``fragmentElement`` and ``configuration`` parameters, respectively.
+```{note}
+The Fragment and configuration object are passed in as arguments in JavaScript and are available as `fragmentElement` and `configuration` parameters, respectively.
 ```
 
 ## Import Your New Fragment

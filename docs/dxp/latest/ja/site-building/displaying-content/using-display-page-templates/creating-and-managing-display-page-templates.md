@@ -43,8 +43,8 @@
 
 You can manage the different Display Page Templates using the *Actions* menu (![Actions](../../../images/icon-actions.png)). From here, the *View Usages* option provides a list of content that uses a specific Display Page Template.
 
-```note::
-   The *View Usages* option does not provide the usage of content assigned to the default Display Page Template.
+```{note}
+The *View Usages* option does not provide the usage of content assigned to the default Display Page Template.
 ```
 
 ![Managing your Display Page Template using the Actions menu](./creating-and-managing-display-page-templates/images/06.png)

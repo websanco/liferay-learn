@@ -92,8 +92,8 @@ One of the Liferay DXP nodes in this setup reads and writes to/from the leader/r
    logExceptionsOnly="false"
    ```
 
-   ```tip::
-      During development and testing, it's useful to set ``logExceptionsOnly="false"`` in the configuration files. 
+   ```{tip}
+   During development and testing, it's useful to set `logExceptionsOnly="false"` in the configuration files. 
    ```
 
 1. Configure the remote connection. 
@@ -113,8 +113,8 @@ One of the Liferay DXP nodes in this setup reads and writes to/from the leader/r
    truststoreType="pkcs12"
    ```
 
-   ```important::
-      The ``remoteClusterConnectionId`` value in the ``ElasticsearchConfiguration.config`` must match the ``connectionId`` in the ``ElasticsearchConnectionConfiguration-remote.config`` file. 
+   ```{important}
+   The `remoteClusterConnectionId` value in the `ElasticsearchConfiguration.config` must match the `connectionId` in the `ElasticsearchConnectionConfiguration-remote.config` file. 
    ```
 
    For Liferay DXP 7.2, secure the connection by providing a configuration file named `com.liferay.portal.search.elasticsearch7.configuration.XPackSecurityConfiguration.config` with these contents:
@@ -136,8 +136,8 @@ One of the Liferay DXP nodes in this setup reads and writes to/from the leader/r
 
 1. Start the Liferay DXP server.
 
-   ```important::
-      If you're configuring a new DXP installation, make sure to reindex the spell check indexes at Control Panel > Configuration > Search, in the *Index Actions* tab.
+   ```{important}
+   If you're configuring a new DXP installation, make sure to reindex the spell check indexes at Control Panel > Configuration > Search, in the *Index Actions* tab.
    ```
 
 If Kibana is connected to your remote/leader Elasticsearch cluster, navigate to Management &rarr; Index Management to see the available Liferay indexes:

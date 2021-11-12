@@ -58,11 +58,11 @@ You can use your own default profile image:
     image.default.user.portrait=com/liferay/portal/dependencies/user_portrait.png
     ```
 
-    ```tip::
-       If you use the binary gender field to collect information on users' genders, then you have two default images to override. Set these properties instead:
-       ::
-         image.default.user.female.portrait=image-filename.png
-         image.default.user.male.portrait=image-filename.png
+    ```{tip}
+    If you use the binary gender field to collect information on users' genders, then you have two default images to override. Set these properties instead:
+    ::
+    image.default.user.female.portrait=image-filename.png
+    image.default.user.male.portrait=image-filename.png
     ```
 
 1. Restart the application server.

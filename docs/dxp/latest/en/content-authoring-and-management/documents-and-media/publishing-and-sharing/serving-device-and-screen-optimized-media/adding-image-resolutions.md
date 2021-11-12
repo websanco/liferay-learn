@@ -26,8 +26,8 @@ Images uploaded before you create a resolution are _not_ affected and must be ad
 
 ![The form for adding a new Adaptive Media resolution.](./adding-image-resolutions/images/02.png)
 
-```tip::
-   Image resolutions and their identifiers cannot be updated if the resolution has been used to adapt images. This prevents inconsistencies in generated images.
+```{tip}
+Image resolutions and their identifiers cannot be updated if the resolution has been used to adapt images. This prevents inconsistencies in generated images.
 ```
 
 ## Additional Information

@@ -2,8 +2,8 @@
 
 Use a Jump to Page rule to navigate automatically to a specific page in the form based on one or more conditions. This is useful if some pages do not apply to all the form's users. Even fields marked as required on the skipped pages can be successfully skipped using this rule.
 
-```important::
-   This action does not appear in the rule builder unless the form has multiple pages.
+```{important}
+This action does not appear in the rule builder unless the form has multiple pages.
 ```
 
 In this example, there are three pages:
@@ -31,8 +31,8 @@ To configure the Jump to Page Rule:
 
 1. Click _Save_ when finished.
 
-```note::
-   It's best to use the *is not equal to* condition with fields existing on the same page. Forms checks the first field, and if it is returned as *true*, it skips the second field.
+```{note}
+It's best to use the *is not equal to* condition with fields existing on the same page. Forms checks the first field, and if it is returned as *true*, it skips the second field.
 ```
 
 ## Additional Information

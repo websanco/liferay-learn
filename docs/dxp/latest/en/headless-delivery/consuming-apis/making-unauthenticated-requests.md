@@ -73,6 +73,6 @@ curl localhost:8080/o/headless-admin-user/v1.0/sites/20122
 
 You can apply this pattern to open access to any headless REST API. Leverage the flexibility of Service Access Policies to make this as granular as you need.
 
-```important::
-   Service Access Policies can't discriminate between GraphQL APIs as easily as Headless REST APIs, since all the APIs are consolidated under a single endpoint. So while opening up GraphQL access like this may work in some cases, it isn't generally recommended, because you might accidently grant access to too much data.
+```{important}
+Service Access Policies can't discriminate between GraphQL APIs as easily as Headless REST APIs, since all the APIs are consolidated under a single endpoint. So while opening up GraphQL access like this may work in some cases, it isn't generally recommended, because you might accidently grant access to too much data.
    ```

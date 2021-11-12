@@ -6,8 +6,8 @@ If you create a Role with permission to access something in the Control Panel, t
 
 To determine the permissions to carry out an action within Liferay DXP, iteration is necessary. Add one or two permissions, then test the Role to ensure the behavior you see is what you expected. As you create more Roles, you'll better understand how to combine permissions to accomplish a given task.
 
-```tip::
-   Assigning a User to the Role and then `Impersonating the User <./../users/adding-and-managing-users.md#impersonating-users>`__ is a good way to see what permissions the User has inherited from the Role.
+```{tip}
+Assigning a User to the Role and then [Impersonating the User](./../users/adding-and-managing-users.md#impersonating-users)_ is a good way to see what permissions the User has inherited from the Role.
 ```
 
 To define permissions for any Role in Liferay DXP,
@@ -24,8 +24,8 @@ To define permissions for any Role in Liferay DXP,
 
 Of course, the bulk of the work is in choosing the permissions for the Role. Use the Search bar to find the permissions you need.
 
-```note::
-   The Roles application in the Control Panel is the main, but not the only place where permissions are configured. You can configure a Role's permissions on a resource at a more granular level. For example, you can configure permissions on a particular widget from its Permissions menu. Permissions granted or removed in the Control Panel override permissions defined at the more granular level.
+```{note}
+The Roles application in the Control Panel is the main, but not the only place where permissions are configured. You can configure a Role's permissions on a resource at a more granular level. For example, you can configure permissions on a particular widget from its Permissions menu. Permissions granted or removed in the Control Panel override permissions defined at the more granular level.
 ```
 
 ## Example: Defining a User Group Manager
@@ -67,8 +67,8 @@ Site application permissions affect the application as a whole, throughout the s
 
 Don't limit yourself to just one category: when defining a custom Role you can mix and match permissions from all of these categories.
 
-```tip::
-   You can change the scope of a permission: click the *Change* link in the *Scope* column of the permissions table, then choose a new scope. Click *Save* to see a list of all permissions currently granted to the Role along with their scope. From the Summary view, you can add more permissions or go back to the Role Application default view by clicking on the *Back* (<) icon.
+```{tip}
+You can change the scope of a permission: click the *Change* link in the *Scope* column of the permissions table, then choose a new scope. Click *Save* to see a list of all permissions currently granted to the Role along with their scope. From the Summary view, you can add more permissions or go back to the Role Application default view by clicking on the *Back* (<) icon.
 ```
 
 ![You can fine-tune Role permissions by changing the scope of the permissions.](./defining-role-permissions/images/03.png)
@@ -79,8 +79,8 @@ You may find that a certain permission grants more or less access than what you 
 
 A Site Role cannot, by definition, define permissions to act on entities outside the Site scope. This can be problematic when defining administrative type permissions in a custom Role. For example, if you try to duplicate the default Site Administrator Role in a Custom Site Administrator Role, you'll find that adding all the _Site and Asset Library Permissions_ &rarr; _People_ &rarr; _Membership_ permissions isn't enough to assign new members to the Site. Users that aren't already Site Members are not visible to the Custom Site Administrator. To grant the proper permissions, you need a Regular Role on top of the Site Role. To give the Regular Role view permission on the User resource, go to the _Define Permissions_ section of the Roles application, then _Control Panel_ &rarr; _Users_ &rarr; _Users and Organizations_). Users with the Site Role and the Regular Role can now see the Users in the system and add them to the Site.
 
-```note::
-   The built-in Site Administrator Role automatically grants permission to view Users.
+```{note}
+The built-in Site Administrator Role automatically grants permission to view Users.
 ```
 
 ## Delegating Social Activities Configuration

@@ -8,12 +8,12 @@ Once Publications is enabled, you can create, edit, publish, or remove a publica
 
 To access this Page, open the *Global Menu* (![Global Menu](../../../images/icon-applications-menu.png)), and go to *Publications* in the Applications tab.
 
-```tip::
-   Quickly access the Global Menu anywhere in your DXP instance using the following shortcut:
+```{tip}
+Quickly access the Global Menu anywhere in your DXP instance using the following shortcut:
 
-   **Mac OS**: Cmd+Shift+M
+**Mac OS**: Cmd+Shift+M
 
-   **Windows/Linux**: Ctrl+Shift+M
+**Windows/Linux**: Ctrl+Shift+M
 ```
 
 ![Access the Publications overview Page in the Applications tab of the Global Menu.](./creating-and-managing-publications/images/01.png)
@@ -35,8 +35,8 @@ Follow these steps to create a new publication for your instance.
 
 1. Enter a *name* for your new publication.
 
-   ```tip::
-      Unique publication names aren't required, though using unique names can be helpful for organization.
+   ```{tip}
+   Unique publication names aren't required, though using unique names can be helpful for organization.
    ```
 
 1. Optionally, enter a *description* of your new publication.
@@ -71,8 +71,8 @@ By clicking on a publication's *Actions* button ( ![Actions button](../../../ima
 
 **Delete:** Remove a publication from your instance. When selected, you are prompted to confirm your choice.
 
-```important::
-   Deleting a publication permanently removes all of its changes from your database and cannot be undone. Before deleting a publication, ensure you've saved any data you want to preserve.
+```{important}
+Deleting a publication permanently removes all of its changes from your database and cannot be undone. Before deleting a publication, ensure you've saved any data you want to preserve.
 ```
 
 ## Managing Scheduled Publications
@@ -91,8 +91,8 @@ The *History* tab lists all previously published publications for your instance.
 
 Click *Revert* to easily create publications that revert previously published changes to your instance. You can also make additional changes to your DXP instance as part of your Revert publication. See [Reverting Changes](./reverting-changes.md) for more information about this process.
 
-```tip::
-   Its recommended Users enable Publications early on in your development process to achieve a more complete audit of your instance's changes.
+```{tip}
+Its recommended Users enable Publications early on in your development process to achieve a more complete audit of your instance's changes.
 ```
 
 ## Additional Information

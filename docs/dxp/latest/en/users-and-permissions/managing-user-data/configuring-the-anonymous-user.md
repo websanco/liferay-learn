@@ -32,8 +32,8 @@ As with all System Settings and Instance Settings, a `.config` [file](../../syst
 com.liferay.user.associated.data.web.internal.configuration.AnonymousUserConfiguration.scoped-[uniqueId].config
 ```
 
-```tip::
-   Using the Web ID or Instance ID (equivalent to the Company ID) for each Virtual Instance as its configuration file's `-subname` can help you differentiate between the files at a glance.
+```{tip}
+Using the Web ID or Instance ID (equivalent to the Company ID) for each Virtual Instance as its configuration file's `-subname` can help you differentiate between the files at a glance.
 ```
 
 Give it contents like this:
@@ -45,8 +45,8 @@ userId=36059
 
 To find the `companyId` for a [Virtual Instance](../../system-administration/configuring-liferay/virtual_instances.rst), go to Control Panel &rarr; System &rarr; Virtual Instances. The Instance ID displayed in the table is the `companyId` to use in the configuration file.
 
-```note::
-   `Why is there an extra field in the configuration file?`
+```{note}
+`Why is there an extra field in the configuration file?`
 
-   When configuring the Anonymous User by configuration file, you must provide the Company ID of the instance. In Instance Settings the configuration is already associated to the instance where it's being configured, but the configuration file is deployed at the system scope, so it must contain the ID of the instance where it applies.
+When configuring the Anonymous User by configuration file, you must provide the Company ID of the instance. In Instance Settings the configuration is already associated to the instance where it's being configured, but the configuration file is deployed at the system scope, so it must contain the ID of the instance where it applies.
 ```

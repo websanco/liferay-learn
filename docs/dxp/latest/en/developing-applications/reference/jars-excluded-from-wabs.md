@@ -14,8 +14,8 @@ module.framework.web.generator.excluded.paths=\
     ...
 ```
 
-```note::
-    Liferay excludes these JARs from a WAB, even if the WAB lists the JARs in a ``portal-dependency-jars`` property in a `liferay-plugin-package.properties <https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/liferay-plugin-package_7_3_0.properties.html>`_ file.
+```{note}
+Liferay excludes these JARs from a WAB, even if the WAB lists the JARs in a `portal-dependency-jars` property in a [liferay-plugin-package.properties](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/liferay-plugin-package_7_3_0.properties.html) file.
 ```
 
 ## Including a Different Version of a Third Party Package
@@ -60,8 +60,8 @@ For example, here's how to include a different version of a Spring Framework pac
 
 1. If the artifact you need has the same name as an excluded artifact (see the previous step), rename the artifact you need. For example, you can use Spring Framework version 3.0.7's Spring AOP JAR by including it in a project's `WEB-INF/lib` folder but renaming it to something other than `spring-aop.jar` (the excluded JAR).
 
-    ```tip::
-       Adding the version to a JAR name (i.e., `spring-aop-3.0.7.RELEASE.jar`) differentiates it from the excluded JAR and prevents it from being stripped from the WAB (the bundled WAR).
+    ```{tip}
+    Adding the version to a JAR name (i.e., `spring-aop-3.0.7.RELEASE.jar`) differentiates it from the excluded JAR and prevents it from being stripped from the WAB (the bundled WAR).
     ```
 
 You are now including the version of the JAR your WAB requires.

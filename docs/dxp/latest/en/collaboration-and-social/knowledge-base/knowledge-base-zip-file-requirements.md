@@ -2,8 +2,8 @@
 
 The Knowledge Base importer supports article hierarchies, so Markdown files can be specified anywhere in the ZIP file’s directory structure. They can be nested in any number of folders. Image files are the only files supported for attachments.
 
-```note::
-   Imported articles are independent of the workflow settings. This means that imported articles are automatically approved.
+```{note}
+Imported articles are independent of the workflow settings. This means that imported articles are automatically approved.
 ```
 
 Only users with the Import Articles permission assigned to their Role are able to import articles. This permission can be assigned manually through Control Panel &rarr; Users &rarr; Roles. 

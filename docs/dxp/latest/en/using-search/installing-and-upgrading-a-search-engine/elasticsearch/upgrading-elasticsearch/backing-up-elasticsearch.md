@@ -4,8 +4,8 @@
 
 One good occasion to back up and test restoring your Elasticsearch indexes is before you [upgrade](./upgrading-search-for-liferay-73.md). In fact, taking a [snapshot of your app-specific indexes (like Liferay's Search Tuning indexes)](#backing-up-and-restoring-indexes-used-for-primary-storage) is essential if your data is stored only in the search index. The snapshot can be used to reindex your previous data (e.g., Synonym Sets and Result Rankings) when you set up a new Elasticsearch server. Make sure to read the Elasticsearch documentation on [snapshot and restore version compatibility](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/snapshot-restore.html#snapshot-restore-version-compatibility) before attempting this approach.
 
-```tip::
-   It's convenient to create and manage snapshots via the `Kibana 7.x UI <https://www.elastic.co/guide/en/kibana/7.x/snapshot-repositories.html>`__.
+```{tip}
+It's convenient to create and manage snapshots via the [Kibana 7.x UI](https://www.elastic.co/guide/en/kibana/7.x/snapshot-repositories.html)_.
 ```
 
 Back up your Elasticsearch cluster and test restoring the backup in three steps: 
@@ -16,8 +16,8 @@ Back up your Elasticsearch cluster and test restoring the backup in three steps:
 
 1. Restore from the snapshot
 
-```note::
-   For more detailed information, refer to Elastic's `Elasticsearch administration guide <https://www.elastic.co/guide/en/elasticsearch/guide/master/administration.html>`_, and in particular to the `Snapshot and Restore module <https://www.elastic.co/guide/en/elasticsearch/reference/7.x/snapshot-restore.html>`_.
+```{note}
+For more detailed information, refer to Elastic's [Elasticsearch administration guide](https://www.elastic.co/guide/en/elasticsearch/guide/master/administration.html), and in particular to the [Snapshot and Restore module](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/snapshot-restore.html).
 ```
 
 ## Create a Repository
@@ -100,8 +100,8 @@ green  open   liferay-0                                          jPIEOfZhSCKZSWn
 green  open   liferay-20101-search-tuning-synonyms               pAUN8st1RmaV1NxXtj-Sig   1   0          1            0      4.1kb          4.1kb
 ```
 
-```note::
-   Elasticsearch uses a *smart snapshots* approach. To understand what that means, consider a single index. The first snapshot includes a copy of the entire index, while subsequent snapshots only include the delta between the first, complete index snapshot and the current state of the index.
+```{note}
+Elasticsearch uses a *smart snapshots* approach. To understand what that means, consider a single index. The first snapshot includes a copy of the entire index, while subsequent snapshots only include the delta between the first, complete index snapshot and the current state of the index.
 ```
 
 Eventually you'll end up with a lot of snapshots in your repository, and no matter how cleverly you name the snapshots, you may forget what some snapshots contain. You can get a description using the Elasticsearch API. For example,

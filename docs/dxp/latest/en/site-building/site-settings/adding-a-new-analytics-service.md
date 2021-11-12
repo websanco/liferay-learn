@@ -16,8 +16,8 @@ Liferay DXP includes support for Google Analytics and Piwik for analyzing traffi
 
 1. Once you have entered the name, open the Site Menu and go to *Configuration* &rarr; *Settings* &rarr; *Advanced* &rarr; *Analytics* page for the Site where you wish to add analytics.
 
-    ```note::
-       In Liferay DXP 7.1 and 7.2, instead navigate to *Configuration* → *Site Settings* → *Advanced* → *Analytics* in the Site Menu.
+    ```{note}
+    In Liferay DXP 7.1 and 7.2, instead navigate to *Configuration* → *Site Settings* → *Advanced* → *Analytics* in the Site Menu.
     ```
 
 1. Copy the JavaScript tracking code provided by your analytics platform into the corresponding field for your service.

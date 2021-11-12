@@ -14,8 +14,8 @@ Follow these steps to checkout and then check-in a Document Library file:
 5. From the file's Edit screen, select the edited local file for upload.
 6. Click *Save and Check In*. In the pop-up that appears, select whether your change is a major or minor version, add any version notes that you need, and click *Save*.
 
-```tip::
-   If you edit a file without checking it out, the file's edit screen displays a toggle for *Customize the Version Number Increment and Describe My Changes*. Setting this to *YES* lets you specify the version increment's type and description.
+```{tip}
+If you edit a file without checking it out, the file's edit screen displays a toggle for *Customize the Version Number Increment and Describe My Changes*. Setting this to *YES* lets you specify the version increment's type and description.
 ```
 
 ## Viewing the File's Version History

@@ -2,8 +2,8 @@
 
 Forms often request the same sets of information, such as name, birthday, and address. Rather than adding these fields for every new form, you can group elements as a set to be reused. Element Sets include the layout and configuration of the fields.
 
-```note::
-   Forms created using an Element Set *do not* inherit changes that are made later to an Element set.
+```{note}
+Forms created using an Element Set *do not* inherit changes that are made later to an Element set.
 ```
 
 ## Creating Element Sets
@@ -32,8 +32,8 @@ The steps to create an Element Set are the same as [creating a form](./creating-
 
 The Element Set has been created and is ready for use.
 
-```tip::
-   You can use Element Sets to create Element Sets.
+```{tip}
+You can use Element Sets to create Element Sets.
 ```
 
 ## Using Element Sets

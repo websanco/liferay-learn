@@ -26,8 +26,8 @@ To manage a Master Page Template, follow these steps:
 
 **Discard Draft:** Discard the Master Page Draft. This option is available when the Master Page Template is in the *Draft* status.
 
-```note::
-   After changes are made and published, they are propagated to all pages that use the Master Page Template.
+```{note}
+After changes are made and published, they are propagated to all pages that use the Master Page Template.
 ```
 
 ## Changing the Master Page Template of a Page

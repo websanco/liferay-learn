@@ -6,22 +6,22 @@ You can edit Structure fields and their properties:
 1. Select the *Structures* tab.
 1. Click the name of the Structure you want to modify.
 
-    ```tip::
-       You can also open the Actions Menu next to the Structure and select *Edit*.
+    ```{tip}
+    You can also open the Actions Menu next to the Structure and select *Edit*.
     ```
 
 1. Add, [remove](#structure-field-options), or reorganize the fields in the Structure.
 1. Select the field you want to configure and click the *Settings* tab, or hover over the field and click the *Settings* (![Settings icon](../../../images/icon-control-menu-gear.png)) icon in the context menu that appears. You can also perform [other actions](#structure-field-options) in the context menu.
 1. [Configure your desired settings](#configurable-settings) for the field and *Save* the changes.
 
-```tip::
-   When you create or `edit a Structure <./configuring-structure-fields.md>`_, the *View* tab is the default. You can switch to the *Source* tab to view the Structure's raw XML and modify it directly.
+```{tip}
+When you create or [edit a Structure](./configuring-structure-fields.md), the *View* tab is the default. You can switch to the *Source* tab to view the Structure's raw XML and modify it directly.
 ```
 
 ## Configurable Settings
 
-```note::
-   Field settings depend on the type of field. A setting listed below may not apply for a field.
+```{note}
+Field settings depend on the type of field. A setting listed below may not apply for a field.
 ```
 
 **Type:** The type of field placed in the definition. This is not editable but is available to reference from a Web Content Template.
@@ -34,8 +34,8 @@ You can edit Structure fields and their properties:
 
 **Name:** The variable name used in Web Content Templates for this field. You should enter a descriptive name. A default name is automatically generated.
 
-```tip::
-   Liferay DXP assigns a random name for each new field in the Structure. Replace the default value with something more descriptive, so template developers can identify the field to place its data in a Web Content Template or Display Page.
+```{tip}
+Liferay DXP assigns a random name for each new field in the Structure. Replace the default value with something more descriptive, so template developers can identify the field to place its data in a Web Content Template or Display Page.
 ```
 
 **Predefined Value:** The default placeholder value for a field. Alternatively, you can define predefined values using the *Edit Default Values* option. See [Managing Structures](./managing-structures.md#edit-default-values) for more information.

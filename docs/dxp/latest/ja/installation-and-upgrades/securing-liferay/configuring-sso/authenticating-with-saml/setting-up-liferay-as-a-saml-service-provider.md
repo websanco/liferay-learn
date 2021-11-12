@@ -5,8 +5,8 @@
 
 <!-- Many of these steps are similar to configuring Liferay DXP as a SAML Identity Provider. As a reminder, a single Liferay DXP installation can be configured as a SAML Identify Provider *or* as a SAML Service Provider but not as both. If your installation is already a SAML Identity Provider, use a *different* Liferay installation as a SAML Service Provider.
 
-```note::
-   If you have a third party IdP with Liferay DXP as the SP, all messages coming from the IdP must be signed. If they're not, an error message appears and communication between the IdP and Liferay fails.
+```{note}
+If you have a third party IdP with Liferay DXP as the SP, all messages coming from the IdP must be signed. If they're not, an error message appears and communication between the IdP and Liferay fails.
 ```
 
 1. Click on *Control Panel* &rarr; *Configuration* and then on *SAML Admin*. Select the *Service Provider* SAML role. Choose your own entity ID. Then click *Save* and a new section entitled Certificate and Private Key appears.
@@ -47,8 +47,8 @@
     * Attribute Mapping: See settings.
     * Keep Alive URL: See settings.
 
-    ```important::
-       The Liferay Connector to SAML 2.0 app supports using *either* a URL to a SAML IdP metadata file *or* an actual (uploaded) SAML metadata XML file. The value entered in the *Metadata URL* field is persisted to the database only when there a metadata URL and there is no specified metadata XML file. Otherwise, Liferay DXP keeps the original metadata URL in its database. This behavior ensures that once a metadata URL has been specified, there is always a metadata URL saved in the database. This way, if you forget the previously entered metadata URL or its format, you can look at the displayed metadata URL and choose to modify the displayed metadata URL or overwrite the previously saved metadata URL by specifying a metadata XML file.
+    ```{important}
+    The Liferay Connector to SAML 2.0 app supports using *either* a URL to a SAML IdP metadata file *or* an actual (uploaded) SAML metadata XML file. The value entered in the *Metadata URL* field is persisted to the database only when there a metadata URL and there is no specified metadata XML file. Otherwise, Liferay DXP keeps the original metadata URL in its database. This behavior ensures that once a metadata URL has been specified, there is always a metadata URL saved in the database. This way, if you forget the previously entered metadata URL or its format, you can look at the displayed metadata URL and choose to modify the displayed metadata URL or overwrite the previously saved metadata URL by specifying a metadata XML file.
     ```
 
 1. Finally, after you save your certificate and private key information and configure an Identity Provider connection, check the *Enabled* box at the top of the General tab and click *Save*. Liferay is now a SAML Service Provider!

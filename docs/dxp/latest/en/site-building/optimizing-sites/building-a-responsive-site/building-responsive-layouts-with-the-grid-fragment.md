@@ -33,8 +33,8 @@ When you access this 'Services' Content Page from your computer, the grid layout
 
     ![Use the Device Display and Styles options in the Content Page editor to customize the Grid Fragment's layout.](./building-responsive-layouts-with-the-grid-fragment/images/03.gif)
 
-```tip::
-    You can save and reuse the Grid Fragment configuration of your choice in other Content Pages. For more information, see `Saving a Fragment Composition <../../displaying-content/using-fragments/saving-a-fragment-composition.md>`_.
+```{tip}
+You can save and reuse the Grid Fragment configuration of your choice in other Content Pages. For more information, see [Saving a Fragment Composition](../../displaying-content/using-fragments/saving-a-fragment-composition.md).
 ```
 
 ## Additional Information

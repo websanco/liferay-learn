@@ -17,8 +17,8 @@ When the A/B Test finishes, you can review the test results and publish the pref
 
 ## Running the A/B Test
 
-```note::
-   Before running the test, you must create the A/B Test and test Variant. For more information, read `Creating A/B Tests <./creating-ab-tests.md>`_.
+```{note}
+Before running the test, you must create the A/B Test and test Variant. For more information, read [Creating A/B Tests](./creating-ab-tests.md).
 ```
 
 1. Go to the Content Page where you want to run the A/B Test

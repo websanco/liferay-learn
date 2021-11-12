@@ -29,8 +29,8 @@ With Audience Targeting, you could display personalized content using the User S
 | User Segment Content Display | [Manual Content Sets or Collections](../../../content-authoring-and-management/collections-and-collection-pages/creating-collections.md#creating-a-manual-collection) |
 | Asset Publisher Personalization | [Dynamic Content Sets](../../../content-authoring-and-management/collections-and-collection-pages/creating-collections.md#creating-a-dynamic-collection) |
 
-```note::
-   For users on Liferay 7.2, Collections are referred to as `Content Sets <../../../content-authoring-and-management/collections-and-collection-pages/about-collections-and-collection-pages.md#liferay-dxp-7-2>`_.
+```{note}
+For users on Liferay 7.2, Collections are referred to as [Content Sets](../../../content-authoring-and-management/collections-and-collection-pages/about-collections-and-collection-pages.md#liferay-dxp-7-2).
 ```
 
 Whether you use Content Sets or Collections, you can personalize the content using [Personalized Variations](../experience-personalization/personalizing-collections.md).

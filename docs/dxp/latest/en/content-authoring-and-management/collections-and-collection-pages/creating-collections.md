@@ -1,7 +1,7 @@
 # Creating Collections
 
-```note::
-   This information applies to Liferay DXP 7.3+. For previous Liferay DXP versions, see `Liferay DXP 7.2 <#liferay-dxp-7-2>`_.
+```{note}
+This information applies to Liferay DXP 7.3+. For previous Liferay DXP versions, see [Liferay DXP 7.2](#liferay-dxp-7-2).
 ```
 
 You can create *Manual* or *Dynamic* Collections. For information about the different types of Collections, see [About Collections and Collection Pages](./about-collections-and-collection-pages.md).
@@ -38,8 +38,8 @@ You can create *Manual* or *Dynamic* Collections. For information about the diff
 
 Note that Documents and Media folders and Web Content folders can be added to a Collection.
 
-```note::
-   While Documents and Media and Web Content folders can be added to a collection, the content is not displayed when the folder is published on a Collections Page or in an Asset Publisher widget. Even if these assets are added to a collection, they can only be viewed separately. This is a known limitation and will be fixed in a future release.
+```{note}
+While Documents and Media and Web Content folders can be added to a collection, the content is not displayed when the folder is published on a Collections Page or in an Asset Publisher widget. Even if these assets are added to a collection, they can only be viewed separately. This is a known limitation and will be fixed in a future release.
 ```
 
 ## Creating a Dynamic Collection
@@ -72,14 +72,14 @@ Note that Documents and Media folders and Web Content folders can be added to a 
 
    ![Filter your Dynamic Collection by adding one or more rules.](./creating-collections/images/10.png)
 
-    ```tip::
-        You can add multiple rules to your Filter clicking on the Add button. The final content in the Dynamic Collection is the result of adding all the rules.
+    ```{tip}
+    You can add multiple rules to your Filter clicking on the Add button. The final content in the Dynamic Collection is the result of adding all the rules.
     ```
 
    **Content Recommendation:** Enable this option to display content based on user behavior. For more information, see [Configuring Content Recommendations](../../site-building/personalizing-site-experience/experience-personalization/configuring-content-recommendations.md).
 
-   ```note::
-    The Content Recommendation option is available when you connect the DXP instance to Analytics Cloud and synchronize the content.
+   ```{note}
+   The Content Recommendation option is available when you connect the DXP instance to Analytics Cloud and synchronize the content.
     ```
 
    **Ordering:** Items in the collection appear using the order criteria you define here.

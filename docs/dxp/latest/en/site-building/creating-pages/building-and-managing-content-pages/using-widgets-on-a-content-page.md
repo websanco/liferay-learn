@@ -2,8 +2,8 @@
 
 The Widgets section functions just like the [*Add* menu on a Widget Page](../using-widget-pages/adding-widgets-to-a-page.md). The full list of available widgets appears, and you can add them to the page. The main difference is that only the main configuration options for Widgets are available on Content Pages.
 
-```note::
-   While widgets are rendered according to `render-weight <https://learn.liferay.com/reference/latest/en/dxp/definitions/liferay-portlet-app_7_3_0.dtd.html#render-weight>`_ on Widget Pages, this is not true for Content Pages. Instead, they are rendered in the order they appear on the Page (i.e. left to right, top to bottom).
+```{note}
+While widgets are rendered according to [render-weight](https://learn.liferay.com/reference/latest/en/dxp/definitions/liferay-portlet-app_7_3_0.dtd.html#render-weight) on Widget Pages, this is not true for Content Pages. Instead, they are rendered in the order they appear on the Page (i.e. left to right, top to bottom).
 ```
 
 ## Adding Widgets on Content Pages
@@ -26,8 +26,8 @@ Follow these steps to configure a Widget on a Content Page:
 
 1. Click *Save* to apply the changes.
 
-```note::
-  Since Liferay Portal 7.3 GA2, you also configure permissions for the widget by selecting *Permissions* from the widget's Options Menu.
+```{note}
+Since Liferay Portal 7.3 GA2, you also configure permissions for the widget by selecting *Permissions* from the widget's Options Menu.
 ```
 
 ## Configuring Widget Permissions on Content Pages
@@ -41,8 +41,8 @@ Since Liferay Portal 7.3 GA2, you can configure permissions for widgets from a C
 
 ![You can configure widget permissions on Content Pages through their Options Menu.](./using-widgets-on-a-content-page/images/02.png)
 
-```note::
-  When you create a page based on a `page template <../adding-pages/creating-a-page-template.md>`_, permissions are copied too. Permissions for a Master Page are set in the `Master Page <../defining-headers-and-footers/managing-master-page-templates.md>`_, not in the pages.
+```{note}
+When you create a page based on a [page template](../adding-pages/creating-a-page-template.md), permissions are copied too. Permissions for a Master Page are set in the [Master Page](../defining-headers-and-footers/managing-master-page-templates.md), not in the pages.
 ```
 
 ## Content Page Limitations for Widgets

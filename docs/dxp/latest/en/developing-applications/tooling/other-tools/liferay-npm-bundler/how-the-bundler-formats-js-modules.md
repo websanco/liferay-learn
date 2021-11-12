@@ -73,8 +73,8 @@ define(
 );
 ```
 
-```note::
-  The module's name must be based on its package, version, and file path (for example ``my-bundle-package$isobject@2.1.0/index``), otherwise Liferay AMD Loader can't find it.
+```{note}
+The module's name must be based on its package, version, and file path (for example `my-bundle-package$isobject@2.1.0/index`), otherwise Liferay AMD Loader can't find it.
 ```
 
 Note the module's dependencies: `['module', 'require', 'my-bundle-package$isarray']`.

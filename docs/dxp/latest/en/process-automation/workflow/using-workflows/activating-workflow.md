@@ -37,8 +37,8 @@ When a workflow process is enabled on a site, other sites on the same instances 
 
 Once enabled, the selected asset types always require a review process before publication on this site. If you have previously activated workflow for a particular asset type, those settings are reflected here.
 
-```tip::
-   You can always disable workflow for an asset type on a site even if it was enabled instance wide.
+```{tip}
+You can always disable workflow for an asset type on a site even if it was enabled instance wide.
 ```
 
 ## Activating Workflow For Specific Applications

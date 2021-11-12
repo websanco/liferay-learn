@@ -8,8 +8,8 @@
 
 Liferay DXP 7.3 comes with out-of-the-box support for Elasticsearch 7. The minimum required version is 7.9. Refer to the [Search Engine Compatibility Matrix](https://help.liferay.com/hc/en-us/articles/360016511651) for detailed support information.
 
-```important::
-   Elasticsearch 6.x is not supported on Liferay CE/DXP 7.3.
+```{important}
+Elasticsearch 6.x is not supported on Liferay CE/DXP 7.3.
 ```
 
 ### The Elasticsearch 7 Connector is Based on the REST Client

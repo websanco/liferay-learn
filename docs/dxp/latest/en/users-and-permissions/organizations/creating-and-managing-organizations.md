@@ -14,12 +14,12 @@ If you're not sure what Organizations are or whether you need them, start [here]
 
 Once you submit the form, you see a success message, and a new form appears where you can enter additional information about the Organization. Organizations can have associated multiple email addresses, postal addresses, web sites, and phone numbers. You can use the Services link to indicate the operating hours of the Organization, if any.
 
-```tip::
-   After creating an Organization, assign a user to the Organization Owner Role. The Organization Owner can do everything that an Organization Administrator can, within the context of the assigned organization. In addition, Organization Owners can do these things:
+```{tip}
+After creating an Organization, assign a user to the Organization Owner Role. The Organization Owner can do everything that an Organization Administrator can, within the context of the assigned organization. In addition, Organization Owners can do these things:
 
-   - Appoint other Users to be Organization Administrators
-   - Appoint other Users to be Organization Owners
-   - Remove the memberships of other Organization Administrators or Owners
+- Appoint other Users to be Organization Administrators
+- Appoint other Users to be Organization Owners
+- Remove the memberships of other Organization Administrators or Owners
 ```
 
 Organization Administrators can't make these Role assignments and can't manage the memberships of other Organization Administrators or Owners.

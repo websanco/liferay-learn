@@ -2,7 +2,7 @@
 
 Performing an upgrade impacts the database differently from daily running in production. Because of this, you should tune your database for the upgrade process before you run it, and then re-apply your production settings after the upgrade completes.
 
-```note::
+```{note}
 The tips given in this article worked well in test runs on specific versions of each database. Optimal tuning depends on your own data, infrastructure conditions, and database vendor. Analyze your data, tune for upgrade, and time your test upgrades to determine the best database and Java process configuration for your Liferay DXP data upgrade.
 ```
 
@@ -16,8 +16,8 @@ Many more update statements are executed during data upgrade than in production.
 
 * Increase the interval to flush commits to disk.
 
-```warning::
-   Some database properties and configurations are global and affect schemas in the same database.
+```{warning}
+Some database properties and configurations are global and affect schemas in the same database.
 ```
 
 The sections below link to vendor-specific information on tuning each database in the ways mentioned above.

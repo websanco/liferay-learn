@@ -28,8 +28,8 @@ The steps below show how to create and use Widget and Content Page Templates.
 
 1. You're automatically transported to the new Page Template. Follow the instructions in [Widget Pages](./understanding-pages.md#widget-pages) to create your Widget Page Template. Likewise, see [Building Content Pages](./building-content-pages.md) to configure your Content Page Template.
 
-```note::
-  After a Page Template has been created, by default only the creator of the Page Template can use it. To give other users access to it, select *Permissions* from the Page Template's Actions menu and check the *View* permission for the Roles that you want to view the Page Template. If you want any user who can create a page to be able to use the Page Template, check the *View* permission for the *User* Role.
+```{note}
+After a Page Template has been created, by default only the creator of the Page Template can use it. To give other users access to it, select *Permissions* from the Page Template's Actions menu and check the *View* permission for the Roles that you want to view the Page Template. If you want any user who can create a page to be able to use the Page Template, check the *View* permission for the *User* Role.
 ```
 
 ## Additional Information
@@ -38,10 +38,10 @@ The steps below show how to create and use Widget and Content Page Templates.
 
 When creating a page from a Widget Page Template, changes are inherited from the Page Template by default, so future changes are propagated to the pages that use the Page Template. Site Administrators can disable this behavior through the [settings for the individual page](./06-configuring-individual-pages.md#general). However, this is not true for Content Pages. Changes **are not automatically propagated** for Content Pages created from Content Page Templates. You can, however, propagate changes made to the Fragments used on a Content Page. See [Propagating Fragment Changes](TODO) for more information.
 
-```note::
-  If staging has been enabled, changes to the Widget Page Template are automatically propagated to the staged page. These changes must still be approved before the page is published to the live site. For this reason, the automatic propagation of Widget Page Template changes to the staged page cannot be turned off and the *Inherit Changes* selector does not appear. You can read more about staging in the [Staging](TODO) section.
+```{note}
+If staging has been enabled, changes to the Widget Page Template are automatically propagated to the staged page. These changes must still be approved before the page is published to the live site. For this reason, the automatic propagation of Widget Page Template changes to the staged page cannot be turned off and the *Inherit Changes* selector does not appear. You can read more about staging in the [Staging](TODO) section.
 ```
 
-```note::
-  You can share your Page Templates with other sites using the same process as you would for pages. Follow the instructions in [Importing and Exporting Pages and Content](../01-building-sites/09-importing-exporting-pages-and-content.md) to learn how.
+```{note}
+You can share your Page Templates with other sites using the same process as you would for pages. Follow the instructions in [Importing and Exporting Pages and Content](../01-building-sites/09-importing-exporting-pages-and-content.md) to learn how.
 ``` -->

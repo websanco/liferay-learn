@@ -10,8 +10,8 @@ Text Auto Tagging is disabled by default. You must [enable Auto Tagging](./confi
 
 * **OpenNLP Text Auto Tagging**: Uses the open source [Apache OpenNLP](https://opennlp.apache.org/) library to analyze and automatically tag portal content. Three models are used: location name finder, organization finder, and person name finder.
 
-```tip::
-   Use this provider with caution because its accuracy may be limited.
+```{tip}
+Use this provider with caution because its accuracy may be limited.
 ```
 
 ## Configuring Google Cloud Natural Language Text Auto Tagging

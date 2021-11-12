@@ -24,14 +24,14 @@ With Local Live Staging, both your Staging and Live environments are hosted on t
 
    ![Select the data and content types you want to stage.](./configuring-local-live-staging/images/04.png)
 
-   ```warning::
-      When applications are checked, their data is copied to Staging, and it may not be possible to edit them directly in Live. When unchecking an application, first make sure that any changes in Staging are published, since they may be lost. See `Managing Data and Content Types in Staging <./managing-data-and-content-types-in-staging.md>`_ for more information.
+   ```{warning}
+   When applications are checked, their data is copied to Staging, and it may not be possible to edit them directly in Live. When unchecking an application, first make sure that any changes in Staging are published, since they may be lost. See [Managing Data and Content Types in Staging](./managing-data-and-content-types-in-staging.md) for more information.
    ```
 
 1. Click on *Save* to initiate the cloning process. The duration of this process depends on the size of your Site.
 
-   ```tip::
-      Stage your Site early on to reduce cloning time and record a more complete history of your Site's update history, since updates are only recorded once you enable Page Versioning.
+   ```{tip}
+   Stage your Site early on to reduce cloning time and record a more complete history of your Site's update history, since updates are only recorded once you enable Page Versioning.
    ```
 
 Once the process is complete, you are ready to use Local Live Staging. See [Site Staging UI Reference](./site-staging-ui-reference.md) for information about navigating the Staging environment's publishing features.
@@ -60,8 +60,8 @@ Once the process is complete, you are ready to use Local Live Staging. See [Site
 
 If for any reason you must disable Staging for your Site or Asset Library, you can do that from your staging environment. However, be aware that disabling Local Live Staging deletes the Staging environment, along with all unpublished content. For this reason, ensure all necessary information is published or preserved elsewhere before disabling Staging.
 
-```tip::
-   This process may take some time, depending on the size of your Staging environment. It's best not to disable staging when your DXP instance is busy.
+```{tip}
+This process may take some time, depending on the size of your Staging environment. It's best not to disable staging when your DXP instance is busy.
 ```
 
 Follow these steps to disable Local Live Staging:

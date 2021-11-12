@@ -64,8 +64,8 @@ Once you've successfully added a URL redirect, you can edit or remove it at any 
 
 ![You can edit or remove a redirect at any time.](./using-the-redirection-tool/images/09.png)
 
-```note::
-   Changes made to a redirect may not immediately display in browsers that have cached the old redirect configuration.
+```{note}
+Changes made to a redirect may not immediately display in browsers that have cached the old redirect configuration.
 ```
 
 ## 404 URLs

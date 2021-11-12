@@ -45,13 +45,13 @@ The default Liferay DXP 7.3 indexes in your installation approximate the list be
 | liferay-20101-workflow-metrics-tokens                 | App Index     | Store data about Workflow Tokens for the Workflow Metrics application |
 | liferay-20101-workflow-metrics-transitions            | App Index     | Store data about Workflow Transitions for the Workflow Metrics application |
 
-```important::
-   Liferay 7.2 index names are more complex, as patches have introduced changes to the index naming pattern. See `Multi-Tenant Index Names <../../getting-started/whats-new-in-search-for-73.md#multi-tenant-index-names>`__ for more information.
-   Liferay 7.1 installations contain just company and system indexes.
+```{important}
+Liferay 7.2 index names are more complex, as patches have introduced changes to the index naming pattern. See [Multi-Tenant Index Names](../../getting-started/whats-new-in-search-for-73.md#multi-tenant-index-names)_ for more information.
+Liferay 7.1 installations contain just company and system indexes.
 ```
 
-```note::
-   Liferay DXP provides APIs for creating and using (writing to and reading from) custom Elasticsearch indexes that remain completely under your control. See the `Developer Guide <../../developer_guide.html>`__ for information on using these APIs.
+```{note}
+Liferay DXP provides APIs for creating and using (writing to and reading from) custom Elasticsearch indexes that remain completely under your control. See the [Developer Guide](../../developer_guide.html)_ for information on using these APIs.
 ```
 
 If you have a [Liferay Commerce](https://www.liferay.com/products/commerce) subscription and it is activated in your installation, you also have indexes like these:
@@ -74,8 +74,8 @@ CCR requires an Elasticsearch Platinum level license, but [LES customers](../../
 
 ## Connect Liferay DXP to Elasticsearch
 
-```important::
-   Configure the Liferay Clustering behavior first. In the example provided in the tutorial, some configuration is provided for testing purposes. See the `clustering documentation <../../../installation-and-upgrades/setting-up-liferay/clustering-for-high-availability.md>`__ for more information on setting up a production cluster.
+```{important}
+Configure the Liferay Clustering behavior first. In the example provided in the tutorial, some configuration is provided for testing purposes. See the [clustering documentation](../../../installation-and-upgrades/setting-up-liferay/clustering-for-high-availability.md)_ for more information on setting up a production cluster.
 ```
 
 All Liferay DXP nodes must have two Elasticsearch configurations: production mode enabled and the remote Elasticsearch connection declared. Supporting this, the remote Elasticsearch connection must be configured in Elasticsearch Connections. Nodes that read from the follower Elasticsearch cluster must also have that additional connection defined. Provide the proper configuration values (via a `.config` file or in System Settings), then start (or restart) the DXP nodes. Make sure the nodes that read and write to the leader indexes are functioning properly.

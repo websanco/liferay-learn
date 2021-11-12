@@ -24,8 +24,8 @@ The current module's resource bundle is prioritized over those of the listed mod
 
 At build time, Liferay's bnd plugin converts the bnd instruction to `Require-Capability` and `Provide-Capability` parameters automatically. 
 
-```note::
-   To aggregate resources with Liferay's native modules you must specify the parameters manually. 
+```{note}
+To aggregate resources with Liferay's native modules you must specify the parameters manually. 
 ```
 
 ## Reference

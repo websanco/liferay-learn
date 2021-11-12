@@ -24,8 +24,8 @@ To access your Personal Site pages, follow these steps:
 
 1. Manage the pages as you would any other [Widget Page](../creating-pages/using-widget-pages/adding-widgets-to-a-pag
 
-    ```tip::
-       You can switch between the Dashboard and Profile pages from the Pages page by switching between the Public Pages and Private Pages menus and selecting the *View* option from the page's Actions Menu.
+    ```{tip}
+    You can switch between the Dashboard and Profile pages from the Pages page by switching between the Public Pages and Private Pages menus and selecting the *View* option from the page's Actions Menu.
     ```
 
 You can also add and define pages for a User's Personal Site via a User Group. See [User Group Sites](../../users-and-permissions/user-groups/user-group-sites.md) for more information.

@@ -2,8 +2,8 @@
 
 Web Content Templates use the FreeMarker Template Language (FTL) to determine how content fields are rendered on a Page. Each Template can be associated with a Web Content [Structure](../web-content-structures/creating-structures.md), or even [embedded in other Templates](./embedding-widgets-in-templates.md#embedding-other-templates).
 
-```important::
-   Grant permission to Create or Edit templates in FreeMarker to trusted users only. See `Assigning Permissions to Web Content Structures and Templates <../web-content-structures/assigning-permissions-to-structures-and-templates.md#security-considerations-for-web-content-templates>`_ for information about Web Content Templates security.
+```{important}
+Grant permission to Create or Edit templates in FreeMarker to trusted users only. See [Assigning Permissions to Web Content Structures and Templates](../web-content-structures/assigning-permissions-to-structures-and-templates.md#security-considerations-for-web-content-templates) for information about Web Content Templates security.
 ```
 
 ## How to Create a Web Content Template
@@ -28,8 +28,8 @@ Web Content Templates use the FreeMarker Template Language (FTL) to determine ho
 
 1. Click on *Save* when finished or *Save and Continue* to save your progress and continue editing.
 
-   ```important::
-      Once your Template is linked with a Structure and saved, you can no longer change this Template property.
+   ```{important}
+   Once your Template is linked with a Structure and saved, you can no longer change this Template property.
    ```
 
    When saved, DXP automatically generates a DDM Template Key, URL, and WebDAV URL for your Template, which you can view in its Properties panel.
@@ -38,8 +38,8 @@ Web Content Templates use the FreeMarker Template Language (FTL) to determine ho
 
 Once you've created a Template, you can [use it for Web Content](../web-content-articles/adding-a-basic-web-content-article.md) created with its linked Structure or [embed it in other Templates](./embedding-widgets-in-templates.md#embedding-other-templates), depending on its configuration. You can also edit your Template at any time.
 
-```note::
-   Changes in a Structure may require changes in associated Templates. For example, if a Structure field name referenced in a Template is renamed or removed, the Template's reference must be updated manually.
+```{note}
+Changes in a Structure may require changes in associated Templates. For example, if a Structure field name referenced in a Template is renamed or removed, the Template's reference must be updated manually.
 ```
 
 ## Configurable Template Properties

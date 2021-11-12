@@ -2,8 +2,8 @@
 
 DXP automatically generates thumbnails for images in Documents and Media using Adaptive Media. This functionality is installed by default beginning in DXP 7.1+. However, if you were using a legacy version that did not support Adaptive Media, have upgraded to the latest DXP version, and want to use Adaptive Media to manage your Documents and Media thumbnails, read on to learn the migration process.
 
-```note::
-   You must be a Portal Administrator to perform the actions described here.
+```{note}
+You must be a Portal Administrator to perform the actions described here.
 ```
 
 ## Adding the Replacement Image Resolutions

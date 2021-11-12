@@ -13,8 +13,8 @@ To configure an individual page, follow these steps:
 
 1. Update the settings under the [*General*](#general), [*SEO*](#seo), [*Look and Feel*](#look-and-feel), and [*Advanced*](#advanced) tabs with the new values. Note that the *Look and Feel* and *Advanced* tabs aren't available for Content Pages
 
-  ```note::
-    Many of the configuration field values are localizable. Click the language flag next to a localized field, select the desired flag for the localization, and provide the translation for the user's locale to translate the field.
+  ```{note}
+  Many of the configuration field values are localizable. Click the language flag next to a localized field, select the desired flag for the localization, and provide the translation for the user's locale to translate the field.
   ```
 
 1. Click *Save* to apply the updates to the page.
@@ -69,8 +69,8 @@ SEO provides several ways to optimize the data the page provides to an indexer t
 
 You can also configure canonical URLs at the global and instance levels.
 
-```note::
-  Any custom canonical URLs set for individual pages take precedent over the global and instance level settings.
+```{note}
+Any custom canonical URLs set for individual pages take precedent over the global and instance level settings.
 ```
 
 1. Open the Product Menu and go to *Control Panel* &rarr; *Configuration*
@@ -103,8 +103,8 @@ Follow these steps to manage the Theme for a page:
 
 The *Advanced* tab contains options useful for specific cases. Some of these are the same as the options available at the Site or Page Set level, but *Custom Fields*, *Embedded Widgets*, and *Customization Settings* are unique to the individual page configuration.
 
-```warning::
-  The *Advanced* section contains powerful options that should only be used by those with a firm command of the technology, or they can have major unintended side effects. Proceed with caution.
+```{warning}
+The *Advanced* section contains powerful options that should only be used by those with a firm command of the technology, or they can have major unintended side effects. Proceed with caution.
 ```
 
 ### Advanced Section

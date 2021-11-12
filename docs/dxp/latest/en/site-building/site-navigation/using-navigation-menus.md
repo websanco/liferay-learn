@@ -13,8 +13,8 @@ For example, a navigation menu can contain all child pages of a given page. You 
 
 ![The Navigation Menu widget can be configured to display the pages that you want.](./using-navigation-menus/images/09.png)
 
-```tip::
-   In DXP 7.3+, you can use Custom Fields to add more information to each item in your navigation menus (under `Site Navigation Menu Item` in the `Custom Fields` menu). You can then use Application Display Templates to use this information to further customize your navigation menus.
+```{tip}
+In DXP 7.3+, you can use Custom Fields to add more information to each item in your navigation menus (under `Site Navigation Menu Item` in the `Custom Fields` menu). You can then use Application Display Templates to use this information to further customize your navigation menus.
 ```
 <!-- Add links to this annotation for Custom Fields and ADTs when available. -->
 

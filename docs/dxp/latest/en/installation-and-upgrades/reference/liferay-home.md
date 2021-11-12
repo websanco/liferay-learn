@@ -52,6 +52,6 @@ Here is a breakdown of each folder with a brief description of its purpose:
 * `tools`: For the database upgrade tool and target platform indexer.
 * `work`: Module Jasper work files.
 
-```note::
-   If DXP cannot create resources in the Liferay Home folder or when DXP runs on certain application servers, it creates a folder called `liferay` in the home folder of the operating system user that is running DXP. In this case, that ``liferay`` folder becomes the Liferay Home. For example, if your operating system user name is *jbloggs*, the `liferay` folder path is ``/home/jbloggs/liferay`` or ``C:\Users\jbloggs\liferay``.
+```{note}
+If DXP cannot create resources in the Liferay Home folder or when DXP runs on certain application servers, it creates a folder called `liferay` in the home folder of the operating system user that is running DXP. In this case, that `liferay` folder becomes the Liferay Home. For example, if your operating system user name is *jbloggs*, the `liferay` folder path is `/home/jbloggs/liferay` or `C:\Users\jbloggs\liferay`.
 ```

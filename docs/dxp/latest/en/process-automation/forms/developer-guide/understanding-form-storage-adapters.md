@@ -6,8 +6,8 @@ When a User adds a form record, the Forms API routes the processing of the reque
 
 The Dynamic Data Mapping (DDM) back-end can *adapt* to other storage formats for form records. This makes it easy to serialize form data as XML or YAML (or whatever format you like) instead of the default JSON. You can then choose to store form data anywhere, including the Liferay database.
 
-```important::
-   A newly added storage adapter can only be used with new Forms. All existing Forms continue to use the adapter selected (JSON by default) at the time of their creation, and a different storage adapter cannot be selected.
+```{important}
+A newly added storage adapter can only be used with new Forms. All existing Forms continue to use the adapter selected (JSON by default) at the time of their creation, and a different storage adapter cannot be selected.
 ```
 
 ## Saving Form Records

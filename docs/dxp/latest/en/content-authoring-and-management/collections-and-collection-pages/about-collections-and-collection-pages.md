@@ -1,7 +1,7 @@
 # About Collections and Collection Pages
 
-```note::
-   This information applies to Liferay DXP 7.3+. In previous Liferay versions, Collections were called Content Sets. For information on Content Sets, see `Liferay DXP 7.2 <#liferay-dxp-7-2>`_.
+```{note}
+This information applies to Liferay DXP 7.3+. In previous Liferay versions, Collections were called Content Sets. For information on Content Sets, see [Liferay DXP 7.2](#liferay-dxp-7-2).
 ```
 
 Collections are sets of content items that you can use to group and filter information. Consider the following example. You plan to create a new section in your product web page with customer success stories. You want this section to show new success stories automatically as these stories are published. In this case, you can create a Collection that groups all your success stories with a Collection Page that shows the Collection's content. In addition to Collection Pages, you can show this Collection in other Content Pages using a Collection Display Fragment (for more information, see [Displaying Collections](../../site-building/displaying-content/additional-content-display-options/displaying-collections.md).)
@@ -54,8 +54,8 @@ You can create Collections directly or from an [Asset Publisher Widget](../../si
 
 A Content Set is exactly what it sounds like: a set of content items. In short, an administrator can defines a list of content, and then that list can be displayed. The way that the Content Set is displayed is determined by the method that is used to display it. For example, if the Content Set is being used by a smartwatch app, it could be displayed as a simple list of titles, and selecting a title would cause the full article to display on a connected mobile device. The same Content Set could be displayed in a web browser with the full content of each article.
 
-```note::
-    In previous versions of Liferay DXP, you used the Asset Publisher to define and display either static lists of assets or dynamic lists based on criteria like tags, categories, or asset type. In Liferay DXP Content Sets take the core idea of defining different types of asset lists and expands it. Content Lists are created outside of the context of a specific application or widget and can be used and re-used across different channels and applications.
+```{note}
+In previous versions of Liferay DXP, you used the Asset Publisher to define and display either static lists of assets or dynamic lists based on criteria like tags, categories, or asset type. In Liferay DXP Content Sets take the core idea of defining different types of asset lists and expands it. Content Lists are created outside of the context of a specific application or widget and can be used and re-used across different channels and applications.
 ```
 
 ### Creating and Displaying Content Sets

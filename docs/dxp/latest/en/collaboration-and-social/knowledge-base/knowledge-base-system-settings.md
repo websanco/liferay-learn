@@ -10,8 +10,8 @@ Administrators can use the System Settings UI to set the Knowledge Base’s glob
 
 The *Knowledge Base Service* section’s settings apply defaults to all the Knowledge Base widgets, and to the Knowledge Base app in Site Administration. The other sections apply to specific Knowledge Base widgets and override the *Knowledge Base Service* defaults.
 
-```important::
-   Advanced configuration of the Knowledge Base application’s system settings should only be performed by a Liferay DXP administrator.
+```{important}
+Advanced configuration of the Knowledge Base application’s system settings should only be performed by a Liferay DXP administrator.
 ```
 
 The Knowledge Base has several optional features that are disabled by default, but can be enabled and configured from System Settings. These include importer file conventions, new article priority increment, source URL, and section names.

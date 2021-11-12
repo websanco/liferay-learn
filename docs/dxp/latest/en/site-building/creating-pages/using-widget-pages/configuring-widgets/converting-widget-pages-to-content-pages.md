@@ -28,12 +28,12 @@ Some features of Widget Pages aren't supported by Content Pages and therefore ca
 
 * **Custom Page Layouts:** If the layout can be converted, the structure of the layout is conserved and the user is warned and given a chance to review the conversion draft before proceeding. If the layout can't be converted, all widgets are placed in a single row and column and you must manually reorganize them after the page is converted.
 
-```note::
-  If you've already confirmed that a custom layout template can be converted, You can disable the layout template conversion warning for the layout template so you don't keep seeing it each time you convert a Widget Page that uses the layout. Open the Liferay DXP Menu and go to *Control Panel* -> *Configuration* -> *System Settings*. Select *Pages* under Content and Data and add the layout template ID to the list of "Verified Layout Template IDs" under the System Scope.
+```{note}
+If you've already confirmed that a custom layout template can be converted, You can disable the layout template conversion warning for the layout template so you don't keep seeing it each time you convert a Widget Page that uses the layout. Open the Liferay DXP Menu and go to *Control Panel* -> *Configuration* -> *System Settings*. Select *Pages* under Content and Data and add the layout template ID to the list of "Verified Layout Template IDs" under the System Scope.
 ```
 
-```note::
-  While portlets are rendered according to `render-weight <https://learn.liferay.com/reference/latest/en/dxp/definitions/liferay-portlet-app_7_3_0.dtd.html#render-weight>`_ on Widget Pages, that is not true for Content Pages. Portlets are rendered in the order they appear on the page on Content Pages (i.e. left to right, top to bottom), so you may notice some portlets are rendered sooner or later, depending on their placement on the Content Page.
+```{note}
+While portlets are rendered according to [render-weight](https://learn.liferay.com/reference/latest/en/dxp/definitions/liferay-portlet-app_7_3_0.dtd.html#render-weight) on Widget Pages, that is not true for Content Pages. Portlets are rendered in the order they appear on the page on Content Pages (i.e. left to right, top to bottom), so you may notice some portlets are rendered sooner or later, depending on their placement on the Content Page.
 ```
 
 ## Converting Widget Pages Directly to Content Pages

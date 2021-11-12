@@ -26,8 +26,8 @@ To begin embedding widgets in your web content templates, follow these steps:
 
 1. Click _Save_ when finished.
 
-```important::
-   The ``theme`` variable is no longer injected into the FreeMarker context. For more information about why the theme variable was removed for DXP 7.0 and suggestions for updating your code, visit the `Taglibs Are No Longer Accessible via the theme Variable in FreeMarker <https://help.liferay.com/hc/articles/360017892092-Introduction-to-Breaking-Changes-#taglibs-are-no-longer-accessible-via-the-theme-variable-in-freemarker>`_ breaking change entry.
+```{important}
+The `theme` variable is no longer injected into the FreeMarker context. For more information about why the theme variable was removed for DXP 7.0 and suggestions for updating your code, visit the [Taglibs Are No Longer Accessible via the theme Variable in FreeMarker](https://help.liferay.com/hc/articles/360017892092-Introduction-to-Breaking-Changes-#taglibs-are-no-longer-accessible-via-the-theme-variable-in-freemarker) breaking change entry.
 ```
 
 ## Embedding Other Templates

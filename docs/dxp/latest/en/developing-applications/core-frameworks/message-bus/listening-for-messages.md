@@ -38,8 +38,8 @@ You can listen for messages sent to any registered Message Bus destination, whet
     ./gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)
     ```
 
-    ```note::
-       This command is the same as copying the compiled module JAR to ``/opt/liferay/osgi/modules`` on the Docker container.
+    ```{note}
+    This command is the same as copying the compiled module JAR to `/opt/liferay/osgi/modules` on the Docker container.
     ```
 
 1. Confirm the deployment in the Liferay Docker container console.

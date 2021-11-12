@@ -28,8 +28,8 @@ To see REST Builder in action, you can deploy an example API that retrieves a du
     ./gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)
     ```
 
-    ```note::
-       This command is the same as copying the deployed jars to /opt/liferay/osgi/modules on the Docker container.
+    ```{note}
+    This command is the same as copying the deployed jars to /opt/liferay/osgi/modules on the Docker container.
     ```
 
 1. Confirm the deployment in the Docker container console for both the `api` and `impl` bundles:
@@ -148,8 +148,8 @@ info:
 openapi: 3.0.1
 ```
 
-```important::
-   The ``version`` field defined here becomes part of the URL when your API paths are exposed within your Liferay instance.
+```{important}
+The `version` field defined here becomes part of the URL when your API paths are exposed within your Liferay instance.
 ```
 
 ### Define the Necessary Schemas
@@ -231,8 +231,8 @@ paths:
             # Place operations on other entities as needed.
 ```
 
-```tip::
-   You can add paths for different kinds of requests, including ``get``, ``post``, ``put``, ``patch``, and ``delete``.
+```{tip}
+You can add paths for different kinds of requests, including `get`, `post`, `put`, `patch`, and `delete`.
 ```
 
 The path (`foo/{fooId}`) specifies that this API (`getFoo`) can be reached by appending the path string to the end of the URL (which also includes the `baseURI` and `version` values from your `rest-config.yaml` file). For instance, this example API is accessed via the full URL: `localhost:8080/o/headless-r3b2/v1.0/foo/{fooId}`.
@@ -269,8 +269,8 @@ REST Builder uses your configuration and populates both your `api` and `impl` cl
 
 The last step is to define the logic for each API you have defined. Within your `impl` module, find the Java resource class where your implementation goes, based on the schema name you defined in `rest-openapi.yaml` (in this example, `FooResourceImpl.java` and `GooResourceImpl.java`).
 
-```tip::
-   The location of the class for your implementation depends on the value you defined for ``apiPackagePath`` in your ``rest-config.yaml`` file. Follow that path and then navigate into ``internal/resource/<version>/`` within it. If you used the same path as this example, then the file is located within ``src/main/java/com/acme/headless/r3b2/internal/resource/v1_0/``.
+```{tip}
+The location of the class for your implementation depends on the value you defined for `apiPackagePath` in your `rest-config.yaml` file. Follow that path and then navigate into `internal/resource/<version>/` within it. If you used the same path as this example, then the file is located within `src/main/java/com/acme/headless/r3b2/internal/resource/v1_0/`.
 ```
 
 The implementation class (`[SchemaName]ResourceImpl`) is located beside the base class (`Base[SchemaName]ResourceImpl`). Open the implementation class. Since this is just an example, this implementation uses a pre-populated `HashTable`, and the `getFoo` method returns the product from the `HashTable` with the matching `fooId`. See `FooResourceImpl.java` in the project for the full implementation.

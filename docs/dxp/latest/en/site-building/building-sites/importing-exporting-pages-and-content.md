@@ -42,8 +42,8 @@ Follow these steps to export and import your Site's pages:
 
 1. Under the *Content* category, select *All* to export all content or specify a date range or time to filter the content to export.
 
-    ```note::
-      If you select one of the *Choose* radio selectors or *Change* links, you're given checkboxes for options to choose. Application content can also be selected for export, including the Documents and Media Library, Message Boards, and Web Content assets. You can even export the theme you're using.
+    ```{note}
+    If you select one of the *Choose* radio selectors or *Change* links, you're given checkboxes for options to choose. Application content can also be selected for export, including the Documents and Media Library, Message Boards, and Web Content assets. You can even export the theme you're using.
     ```
 
 1. Select whether the permissions for your exported pages and content are included.

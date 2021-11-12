@@ -1,7 +1,7 @@
 # Getting Started with Dynamic Data Lists
 
-```important::
-   Dynamic Data Lists is deprecated as of Liferay DXP 7.3. It is replaced by `App Builder <../../../developing-applications/developing-low-code-applications/app-builder-overview.md>`_ and `Forms Reports <../sharing-forms-and-managing-submissions/form-reports.md>`_.
+```{important}
+Dynamic Data Lists is deprecated as of Liferay DXP 7.3. It is replaced by [App Builder](../../../developing-applications/developing-low-code-applications/app-builder-overview.md) and [Forms Reports](../sharing-forms-and-managing-submissions/form-reports.md).
 ```
 
 Dynamic data lists display forms created from field sets called data definitions. Data definitions consist of a form’s field types (e.g., text, boolean, date, radio buttons, selector menus, etc.) and those fields’ labels and settings. Data definitions effectively serve as data models for a dynamic data list. For example, you could create a data definition with three fields for conference registration: one for a user’s name, one for their email address, and a dropdown list for t-shirt size. This data definition could then be used for every conference registration form you create.
@@ -39,8 +39,8 @@ Under the Dynamic Data Lists setting:
 
 **CSV Export:** Choose whether Dynamic Data List records can be exported in CSV format with or without a warning, or disable this option. Here’s what the warning says:
 
-```warning::
-   This CSV file contains user supplied inputs. Opening a CSV file in a spreadsheet program may be dangerous.
+```{warning}
+This CSV file contains user supplied inputs. Opening a CSV file in a spreadsheet program may be dangerous.
 ```
 
 **Default Display View:** Choose whether to use a table based default view or a list based default view.

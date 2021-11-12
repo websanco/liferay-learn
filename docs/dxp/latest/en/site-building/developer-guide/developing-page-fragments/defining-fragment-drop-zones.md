@@ -9,8 +9,8 @@ Follow these steps to define a drop zone:
 1. Click the Fragment's *Actions* (![Action](./../../../images/icon-actions.png)) button and select *Edit* to open the [Fragments Editor](./using-the-fragments-editor.md).
 1. In the HTML code area, add the `<lfr-drop-zone></lfr-drop-zone>` label to define a drop zone within a Fragment.
 
-   ```important::
-      Drop zones cannot be added to editable elements within a fragment.
+   ```{important}
+   Drop zones cannot be added to editable elements within a fragment.
    ```
 
 The following code excerpt shows how to use this label to define drop zones within a Tabs Fragment:
@@ -51,8 +51,8 @@ The following example demonstrates how to use the `data-lfr-drop-zone-id` attrib
       </div>
    ```
 
-   ```tip::
-      You can configure the order of the drop zones and other elements in the Fragment. For more information, see `Setting the Order of Elements in a Fragment <./setting-the-order-of-elements-in-a-fragment.md>`_.
+   ```{tip}
+   You can configure the order of the drop zones and other elements in the Fragment. For more information, see [Setting the Order of Elements in a Fragment](./setting-the-order-of-elements-in-a-fragment.md).
    ```
 
 ## Additional Information

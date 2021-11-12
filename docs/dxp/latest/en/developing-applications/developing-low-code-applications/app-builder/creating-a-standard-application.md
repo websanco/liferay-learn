@@ -64,8 +64,8 @@ Table views display and manage (deleting, editing) entries submitted to your app
 
 1. Save the table view.
 
-```note::
-    Even though it's not in the table view, the Comment field still appears in the Details View of an individual record. In a deployed application, click a specific record from the table view to display its Details View. 
+```{note}
+Even though it's not in the table view, the Comment field still appears in the Details View of an individual record. In a deployed application, click a specific record from the table view to display its Details View. 
 ```
 
 ## Deploying the Application
@@ -78,8 +78,8 @@ The Time Off Request has two apps to deploy: a widget application for adding to 
 
 1. From the _Apps_ tab, click the Add button (![Add](../../../images/icon-add.png)).
 
-   ```note::
-      If you want to create a `Workflow Powered` app for the object (available to DXP subscribers), you must create and deploy the app from the Apps entry in the Application Menu. See `Creating a Workflow Powered Application <./creating-a-workflow-powered-application.md>`__ for details.
+   ```{note}
+   If you want to create a `Workflow Powered` app for the object (available to DXP subscribers), you must create and deploy the app from the Apps entry in the Application Menu. See [Creating a Workflow Powered Application](./creating-a-workflow-powered-application.md)_ for details.
    ```
 
 1. Name the app _Time Off Requester_.

@@ -42,8 +42,8 @@ Update the property's value to the version of Liferay for which you're developin
 
 ## Using JDK 11
 
-```note::
-   If you compile under JDK 11, you must run under JDK 11. Make sure your app servers are running JDK 11 before making any changes to Workspace. Note that Liferay's Docker images use JDK 8 by default. To override this, create your Docker image using the ``-e JAVA_VERSION=zulu11`` environment variable.
+```{note}
+If you compile under JDK 11, you must run under JDK 11. Make sure your app servers are running JDK 11 before making any changes to Workspace. Note that Liferay's Docker images use JDK 8 by default. To override this, create your Docker image using the `-e JAVA_VERSION=zulu11` environment variable.
 ```
 
 **Prerequisite:** If you're using an older version of Workspace, you must upgrade two things: 
@@ -213,8 +213,8 @@ Now you can generate environments to run locally or to distribute to your server
 
    This builds a gzipped `tar` file in the `build` folder. You can take this archive and install it on your development server as you would any other Liferay bundle, except that this bundle is fully configured the way you wanted it and has all your applications already installed. 
 
-```note::
-You can use the ``distBundleZip`` command if you would rather have a .zip archive.
+```{note}
+You can use the `distBundleZip` command if you would rather have a .zip archive.
 ```
 
 Follow the above steps to test and build each environment. 

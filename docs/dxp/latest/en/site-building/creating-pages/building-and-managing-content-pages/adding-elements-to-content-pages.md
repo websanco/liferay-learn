@@ -20,14 +20,14 @@ After you [create a Content Page](../adding-pages/adding-a-page-to-a-site.md), y
 
     ![Add Fragments and Widgets from the Content Page sidebar.](adding-elements-to-content-pages/images/03.png)
 
-    ```note::
-       New Content Pages start empty and in a *Draft* status. The Page is not visible until you plublish it.
+    ```{note}
+    New Content Pages start empty and in a *Draft* status. The Page is not visible until you plublish it.
     ```
 
 1. Configure the look and content preferences of the Fragments and Widgets. For more information, see [Configuring Elements on Content Pages](./configuring-elements-on-content-pages.md).
 
-    ```tip::
-       In progress work on a Content Page is automatically saved.
+    ```{tip}
+    In progress work on a Content Page is automatically saved.
     ```
 
 1. Click the *Publish* button in the top right to make the updates available to the live Page.

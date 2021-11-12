@@ -17,8 +17,8 @@ Follow these steps to create portlet filters for auditing portlet activities:
 
 1. Declare the portlet filter a Component within the OSGi framework using the `@Component` annotation and identify it as a `PortletFilter.class` service.
 
-   ```note::
-      Portlet filters are `OSGi Declarative Service (DS) Components <https://enroute.osgi.org/FAQ/300-declarative-services.html>`_. Filters can also be applied to a portlet using a ``portlet.xml`` descriptor or a ``@PortletLifecycleFilter`` annotation. See Portlet 3.0 Specification for details.
+   ```{note}
+   Portlet filters are [OSGi Declarative Service (DS) Components](https://enroute.osgi.org/FAQ/300-declarative-services.html). Filters can also be applied to a portlet using a `portlet.xml` descriptor or a `@PortletLifecycleFilter` annotation. See Portlet 3.0 Specification for details.
    ```
 
 1. Enter the following properties into the `@Component` declaration.

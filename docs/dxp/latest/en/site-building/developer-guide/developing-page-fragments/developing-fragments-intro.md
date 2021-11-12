@@ -24,8 +24,8 @@ Fragments can be enhanced using the below resources, making them much more power
 * [Configuration Options](./adding-configuration-options-to-fragments.md) <!-- TODO: Fix link -->: Add configuration options to the application's Configuration Menu, like modifying the Fragment's font color.
 * [FreeMarker](https://freemarker.apache.org/): FreeMarker is a templating language that enhances HTML with variables, conditional statements, and more. From your HTML, you can use the [alternative (square bracket) syntax](https://freemarker.apache.org/docs/dgui_misc_alternativesyntax.html) for FreeMarker.
 
-```important::
-   Grant permission to Create or Edit templates in FreeMarker to trusted users only. See `Assigning Permissions to Web Content Structures and Templates <../../../content-authoring-and-management/web-content/web-content-structures/assigning-permissions-to-structures-and-templates.md#security-considerations-for-web-content-templates>`_ for information about Web Content Templates security.
+```{important}
+Grant permission to Create or Edit templates in FreeMarker to trusted users only. See [Assigning Permissions to Web Content Structures and Templates](../../../content-authoring-and-management/web-content/web-content-structures/assigning-permissions-to-structures-and-templates.md#security-considerations-for-web-content-templates) for information about Web Content Templates security.
 ```
 
 ## Best Practices

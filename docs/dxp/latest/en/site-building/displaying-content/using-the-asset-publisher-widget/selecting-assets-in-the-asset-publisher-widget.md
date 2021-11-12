@@ -2,8 +2,8 @@
 
 You can configure the Asset Publisher Widget to select Assets dynamically based on specific criteria, or manually, specifying exactly what assets to display. You can also display Assets from [Collections](../../../content-authoring-and-management/collections-and-collection-pages/about-collections-and-collection-pages.md).
 
-```note::
-   On Liferay 7.2 and below, Collections are referred to as `Content Sets <../../../content-authoring-and-management/collections-and-collection-pages/about-collections-and-collection-pages.md#liferay-dxp-7-2>`_.
+```{note}
+On Liferay 7.2 and below, Collections are referred to as [Content Sets](../../../content-authoring-and-management/collections-and-collection-pages/about-collections-and-collection-pages.md#liferay-dxp-7-2).
 ```
 
 To select Assets to publish in the *Asset Publisher* widget,
@@ -54,8 +54,8 @@ Here you can set parameters and manually filter specific Assets:
 
  ![Here is an example of filtering for Basic Web Content and manually selecting items](selecting-assets-in-the-asset-publisher-widget/images/03.png)
 
- ```note::
-    A new Collection is created based on your selection.
+ ```{note}
+ A new Collection is created based on your selection.
  ```
 
 ### Collection

@@ -7,8 +7,8 @@ By default for demonstration purposes, Liferay DXP is configured to use an embed
 * Oracle
 * PostgreSQL
 
-```important::
-   The `Liferay DXP Compatibility Matrix <https://help.liferay.com/hc/en-us/articles/360049238151>`_ lists the supported databases and versions.
+```{important}
+The [Liferay DXP Compatibility Matrix](https://help.liferay.com/hc/en-us/articles/360049238151) lists the supported databases and versions.
 ```
 
 ## Configure the database
@@ -21,8 +21,8 @@ By default for demonstration purposes, Liferay DXP is configured to use an embed
 
 1. Set up a database user with full database permissions. If your organization requires the DXP database user to have limited database access, see [High Security Database User Practices](../reference/database-configurations.md#high-security-database-user-practices).
 
-    ```important::
-       Liferay requires reading from and writing to the database. The Liferay database user must therefore have permissions to read and write data.
+    ```{important}
+    Liferay requires reading from and writing to the database. The Liferay database user must therefore have permissions to read and write data.
     ```
 
 1. Install a JDBC Connector. The DXP bundle includes several open source JDBC connectors in the `/lib/ext` folder. Connectors for proprietary database, like Oracle or DB2 (see the table below), must be downloaded from the vendor.
@@ -36,8 +36,8 @@ By default for demonstration purposes, Liferay DXP is configured to use an embed
 
 Congratulations! You configured a database for Liferay DXP.
 
-```note::
-   For database configuration details, see the `Database Configuration Reference <../reference/database-configurations.md>`_.
+```{note}
+For database configuration details, see the [Database Configuration Reference](../reference/database-configurations.md).
 ```
 
 ## Next Steps

@@ -20,8 +20,8 @@ Follow these steps to create a widget template
 
 1. Click one of the fields in the _Fields_ menu to insert that field into the editor. The value of the field will be displayed when your widget template is used.
 
-    ```note::
-       Clicking any of the fields in the menu will insert the field name wherever the cursor is. You can also begin typing a field name yourself (starting with "${") to show suggestions for auto-completion.
+    ```{note}
+    Clicking any of the fields in the menu will insert the field name wherever the cursor is. You can also begin typing a field name yourself (starting with "${") to show suggestions for auto-completion.
     ```
 
 1. Click _Save_ to complete the template.
@@ -36,8 +36,8 @@ Once you have a widget template ready for a widget on one of your pages, follow 
 
     ![The Display Template drop-down box in the Asset Publisher configuration.](./styling-widgets-with-widget-templates/images/03.png)
 
-    ```note::
-       This drop-down menu is on the default tab, Setup, for most widgets. For the Asset Publisher widget, this setting is found under the Display Settings tab.
+    ```{note}
+    This drop-down menu is on the default tab, Setup, for most widgets. For the Asset Publisher widget, this setting is found under the Display Settings tab.
     ```
 
 1. Click _Save._

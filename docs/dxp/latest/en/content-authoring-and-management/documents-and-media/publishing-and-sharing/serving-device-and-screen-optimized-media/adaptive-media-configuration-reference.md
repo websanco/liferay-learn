@@ -97,8 +97,8 @@ The _Processes_ configuration is related to Adaptive Media's asynchronous proces
 | Max Processes | The maximum number of processes for generating adapted media. The default value is `5`. |
 | Core Processes | The number of processes always available for generating adapted media. The default value is `2`. This setting can't exceed the _Max processes_ setting. |
 
-```warning::
-   Larger values for Max Processes and Core Processes may cause out of memory errors, as processing more images at once can consume large amounts of memory. Out of memory errors can also occur if the source images Adaptive Media uses to generate adapted images are large. You can restrict the maximum size of such images via the *Max Image Size* setting in the *Adaptive Media Image* configuration, which is described next. You should run performance tests to optimize these settings for the amount of memory available on your system.
+```{warning}
+Larger values for Max Processes and Core Processes may cause out of memory errors, as processing more images at once can consume large amounts of memory. Out of memory errors can also occur if the source images Adaptive Media uses to generate adapted images are large. You can restrict the maximum size of such images via the *Max Image Size* setting in the *Adaptive Media Image* configuration, which is described next. You should run performance tests to optimize these settings for the amount of memory available on your system.
 ```
 
 ## Additional Information

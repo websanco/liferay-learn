@@ -6,10 +6,10 @@
 
 Dispatch provides a convenient UI for viewing and managing all instance [jobs scheduled using the `MessageListener` interface](#viewing-and-managing-scheduled-jobs).
 
-```note::
-   When deciding whether to use Dispatch or ``MessageListener`` to schedule instance jobs, consider the following Dispatch benefits.
-   Dispatch Tasks are more flexible than jobs scheduled using ``MessageListener``, since changes can be applied to Dispatch Tasks in runtime through the Dispatch UI. Changes to ``MessageListener`` jobs must be hardcoded and redeployed. 
-   The Dispatch UI also provides a more complete overview of each Dispatch Task's execution properties (e.g., cron expression, start/end date, cluster mode) and execution history. This information is not provided in the UI for ``MessageListener`` jobs.
+```{note}
+When deciding whether to use Dispatch or `MessageListener` to schedule instance jobs, consider the following Dispatch benefits.
+Dispatch Tasks are more flexible than jobs scheduled using `MessageListener`, since changes can be applied to Dispatch Tasks in runtime through the Dispatch UI. Changes to `MessageListener` jobs must be hardcoded and redeployed. 
+The Dispatch UI also provides a more complete overview of each Dispatch Task's execution properties (e.g., cron expression, start/end date, cluster mode) and execution history. This information is not provided in the UI for `MessageListener` jobs.
 ```
 
 ## Adding a New Dispatch Task
@@ -20,10 +20,10 @@ Dispatch provides a convenient UI for viewing and managing all instance [jobs sc
 
    Each template is an implementation of the `DispatchTaskExecutor` interface, and each Dispatch Task is an instance of the selected template. See [Understanding the Dispatch Framework](./understanding-the-dispatch-framework.md) for more information about how it works.
 
-   ```note::
-      Liferay DXP provides a variety of Dispatch Task templates, while Liferay Portal only includes the Talend Dispatch Task Executor.
-      
-      You can also create your own templates. See `Creating a New Dispatch Task Executor <./creating-a-new-dispatch-task-executor.md>`_ to learn how.
+   ```{note}
+   Liferay DXP provides a variety of Dispatch Task templates, while Liferay Portal only includes the Talend Dispatch Task Executor.
+
+   You can also create your own templates. See [Creating a New Dispatch Task Executor](./creating-a-new-dispatch-task-executor.md) to learn how.
    ```
 
    ![Click the Add button and select a Dispatch Task Executor template for your Dispatch Task.](./using-dispatch/images/02.png)
@@ -36,8 +36,8 @@ Dispatch provides a convenient UI for viewing and managing all instance [jobs sc
 
    All settings added in this way are soft-coded, so you can configure your Dispatch Tasks without having to edit and redeploy the Executor's code.
 
-   ```tip::
-      You can create multiple instances of the same Dispatch Task Executor and modify their properties and behavior using the settings editor.
+   ```{tip}
+   You can create multiple instances of the same Dispatch Task Executor and modify their properties and behavior using the settings editor.
    ```
 
 1. Click *Save* to create a new Dispatch Task for the selected template.

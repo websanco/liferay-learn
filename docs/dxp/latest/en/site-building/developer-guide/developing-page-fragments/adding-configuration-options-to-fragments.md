@@ -66,8 +66,8 @@ First, deploy an example to see how Fragment configuration options work:
 
     ![The Collection is available.](./adding-configuration-options-to-fragments/images/01.png)
 
-    ```note::
-       For Liferay DXP 7.1 and 7.2, instead navigate to *Site* → *Site Builder* → *Page Fragments* under the Product Menu to get to the Fragments page.
+    ```{note}
+    For Liferay DXP 7.1 and 7.2, instead navigate to *Site* → *Site Builder* → *Page Fragments* under the Product Menu to get to the Fragments page.
     ```
 
 1. Go to the Home Page and click the (![Edit icon](../../../images/icon-edit-pencil.png)) icon to edit the Content Page.
@@ -146,8 +146,8 @@ This selector is a part of a field set labeled *C7F8* (the label is optional). I
 
 ![Here is the selector for the C7F8 Card Fragment](./adding-configuration-options-to-fragments/images/03.png)
 
-```warning::
-   The Fragments Editor won't save the configuration until it's valid. Make sure your JSON configuration is valid before previewing it.
+```{warning}
+The Fragments Editor won't save the configuration until it's valid. Make sure your JSON configuration is valid before previewing it.
 ```
 
 The configuration values selected by the user are made available to the HTML through the FreeMarker context. They are referenced in the HTML with the notation `${configuration.fieldName}`. The example  (`${configuration.textAppliedStyle}`) returns `dark` or `light` depending on the configuration value selected by the user, setting the CSS class to `text-light` or `text-dark`:
@@ -220,8 +220,8 @@ Now that you know how the configuration works, you can modify it.
 
 1. Under the Site Menu on the left side of the screen, go to *Design* &rarr; *Fragments*. The Collection appears in the Collection list.
 
-    ```note::
-       For Liferay DXP 7.1 and 7.2, instead navigate to *Site* → *Site Builder* → *Page Fragments* under the Product Menu to get to the Fragments page.
+    ```{note}
+    For Liferay DXP 7.1 and 7.2, instead navigate to *Site* → *Site Builder* → *Page Fragments* under the Product Menu to get to the Fragments page.
     ```
 
 1. Select the *C7F8 Collection*, click *Actions* (![Actions Icon](../../../images/icon-actions.png)) for the C7F8 Card and select *Edit*. The Fragments Editor appears.
@@ -249,8 +249,8 @@ Now that you know how the configuration works, you can modify it.
     [/#if]
     ```
 
-```note::
-  You can also access the configuration's value through the JavaScript with the syntax ``const configurationValue = configuration.textAppliedStyle;``.
+```{note}
+You can also access the configuration's value through the JavaScript with the syntax `const configurationValue = configuration.textAppliedStyle;`.
 ```
 
 ## Propagate the Changes and Test

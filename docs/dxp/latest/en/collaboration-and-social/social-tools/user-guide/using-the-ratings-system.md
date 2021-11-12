@@ -48,8 +48,8 @@ From either of these settings menus, find the icon for the chosen asset type und
 
 ![Administrators can also enable or disable ratings for a widget across multiple Sites.](./using-the-ratings-system/images/06.png)
 
-```note::
-   Not every widget that supports content ratings can have ratings enabled or disabled from the Control Panel.
+```{note}
+Not every widget that supports content ratings can have ratings enabled or disabled from the Control Panel.
 ```
 
 <!-- TODO: (When developer-oriented article available) You can also enable ratings for your own applications by adding just a few lines of code. See the article on [adding support for ratings](link) to your content widgets for more information. -->

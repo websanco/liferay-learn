@@ -11,14 +11,14 @@ Liferay DXP includes a built-in [editor](../reference/fragments/page-fragment-ed
 
 1. Open the *Site Menu*, and go to *Design* &rarr; *Fragments*
 
-    ```note::
-       In Liferay DXP 7.1 and 7.2, open the *Product Menu*, and go to *Site* → *Site Builder* → *Page Fragments*.
+    ```{note}
+    In Liferay DXP 7.1 and 7.2, open the *Product Menu*, and go to *Site* → *Site Builder* → *Page Fragments*.
     ```
 
 1. Click the *Add* button (![Add Button](../../../images/icon-duplicate.png)) next to the Collection's sidebar, and enter a *name* and *description* for the new Collection. The Collection's name is displayed in the Fragments and Widgets panel of the Content Page sidebar.
 
-    ```tip::
-      Create Collections that group Fragments by functionality or by teams and departments.
+    ```{tip}
+    Create Collections that group Fragments by functionality or by teams and departments.
     ```
 
 1. Click *Save*.
@@ -31,8 +31,8 @@ Once you've made your first Collection, you can begin creating new Fragments.
 
 1. Go to the desired Collection and click _Add_ (![Add Button](../../../images/icon-add.png)) to create a new Fragment.
 
-   ```note::
-      Prior to Liferay DXP 7.3, a Fragment could either be a Section or a Component. In Liferay DXP 7.3+, all Page Fragments are Components.
+   ```{note}
+   Prior to Liferay DXP 7.3, a Fragment could either be a Section or a Component. In Liferay DXP 7.3+, all Page Fragments are Components.
    ```
 
 1. Enter a *name* for the Fragment, and click *Save*.
@@ -90,8 +90,8 @@ Once you've made your first Collection, you can begin creating new Fragments.
 
 While developing a Fragment, changes are automatically saved as a draft until your Fragment is published. Once added to a collection, you can copy, export, edit, and remove a Fragment at any time in the Fragments editor. See [Managing Page Fragments](../../displaying-content/using-fragments/managing-page-fragments.md) for more information on available actions for Page Fragments.
 
-```note::
-   Since Liferay DXP 7.2 SP1+ and Liferay Portal 7.2 GA2+, you can create Page Fragments on the *Global* Site to make them available for all Sites. To expose this feature in the initial releases of these versions, you must create a ``.config`` file named ``com.liferay.fragment.web.internal.configuration.FragmentGlobalPanelAppConfiguration.config`` and add the ``enabled=B"true"`` property. Then copy it to your Liferay DXP instance's ``osgi/configs`` folder. Global Page Fragments are inherited by child Sites and can only be edited from the Global Site. Any resources the Global Page Fragment references from the Global Site are copied to a Site that leverages the Page Fragment.
+```{note}
+Since Liferay DXP 7.2 SP1+ and Liferay Portal 7.2 GA2+, you can create Page Fragments on the *Global* Site to make them available for all Sites. To expose this feature in the initial releases of these versions, you must create a `.config` file named `com.liferay.fragment.web.internal.configuration.FragmentGlobalPanelAppConfiguration.config` and add the `enabled=B"true"` property. Then copy it to your Liferay DXP instance's `osgi/configs` folder. Global Page Fragments are inherited by child Sites and can only be edited from the Global Site. Any resources the Global Page Fragment references from the Global Site are copied to a Site that leverages the Page Fragment.
 ```
 
 ## Additional Information

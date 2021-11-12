@@ -67,8 +67,8 @@ With [Publications](../../../site-building/publishing-tools/publications/publica
 
 A result summary includes the information from a document that the asset's developer felt is most useful to those searching for the asset. Each asset can have different fields included in the summary. For assets with text content, a common summary format includes the title and some of the content, with title displayed first. The asset type always appears on the second line, and a snippet of the content that matches the search term is on the last line. Assets without content fields, like Documents and Media documents, display the description instead.
 
-```note::
-   Users are different. Only the User's full name and the asset type (User) appear in User result summaries.
+```{note}
+Users are different. Only the User's full name and the asset type (User) appear in User result summaries.
 ```
 
 ![For users, only the user's full name appears for summary.](./search-results-behavior/images/03.png)

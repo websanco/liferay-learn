@@ -2,8 +2,8 @@
 
 Password policies enhance the security of your installation. You can use the default policy that ships with Liferay (modified or as is), or you can create your own policies. Policies can be assigned to Users or Organizations.
 
-```note::
-   New Users are assigned to the Default Password Policy by default. If you wish to associate Users with a custom password policy they must be assigned as members of that policy.
+```{note}
+New Users are assigned to the Default Password Policy by default. If you wish to associate Users with a custom password policy they must be assigned as members of that policy.
 ```
 
 ## Overview

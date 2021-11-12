@@ -17,11 +17,11 @@ DXP uses System Properties files in these ways:
 * DXP _extends_ properties using new properties in `system.properties` (and in `system-ext.properties`), unless the system property `system.properties.set` is `false`
 * DXP _overrides_ properties using new values in `system.properties` (and in `system-ext.properties`), unless the system property `system.properties.set.override` is `false`.
 
-```warning::
-   Setting or reseting system properties after application server startup has risks:
+```{warning}
+Setting or reseting system properties after application server startup has risks:
 
-   * If permissions are enabled on the application server, they may forbid changing system values.
-   * System properties are treated as immutable. Another process on the application server can conceivably cache an initial property value before DXP resets the value. In such a case, the system attempts to operate with different values for the same property.
+* If permissions are enabled on the application server, they may forbid changing system values.
+* System properties are treated as immutable. Another process on the application server can conceivably cache an initial property value before DXP resets the value. In such a case, the system attempts to operate with different values for the same property.
 ```
 
 Here both ways of specifying system properties are demonstrated:

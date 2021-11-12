@@ -18,8 +18,8 @@ There are several page types available when you [add a page](../adding-pages/add
 
 ![You must select a page type when adding pages.](./understanding-pages/images/01.png)
 
-```tip::
-   The Page Type of the currently viewed page appears at the top of the page to help you determine the administration options you have and where you need to go to configure the page.
+```{tip}
+The Page Type of the currently viewed page appears at the top of the page to help you determine the administration options you have and where you need to go to configure the page.
 ```
 
 ### Content Pages
@@ -83,8 +83,8 @@ Pages can also be created in a hierarchical fashion by creating Child Pages. Chi
 
 ![You can add a child Page to a top-level page to organize pages hierarchically.](./understanding-pages/images/06.png)
 
-```tip::
-  You can navigate among pages of a Site hierarchy with the Site Map application. A Site Administrator can configure a root page and a display depth. The display depth of the Site Map application determines how many levels of nested pages to display.
+```{tip}
+You can navigate among pages of a Site hierarchy with the Site Map application. A Site Administrator can configure a root page and a display depth. The display depth of the Site Map application determines how many levels of nested pages to display.
 ```
 
 ## Related Information

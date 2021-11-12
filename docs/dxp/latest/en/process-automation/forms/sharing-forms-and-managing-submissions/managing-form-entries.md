@@ -41,8 +41,8 @@ Users need the following permissions to edit Form Entries:
 
 ![Users with permissions can edit form entries.](./managing-form-entries/images/09.png)
 
-```note::
-   The Update permission on the Form Instance is the same permission required to edit the Form itself.
+```{note}
+The Update permission on the Form Instance is the same permission required to edit the Form itself.
 ```
 
 The Update Form Instance permission can also be granted on a single form, by navigating to the Forms application, then opening the Actions menu (![Actions](../../../images/icon-actions.png)) for a single form. Select _Permissions_. In the Permissions editor for the form, grant the _Update_ permissions to the Role. These Users must still have the _View Site and Asset Library Menu_ and _Forms: Access in Site and Asset Library Administration_.

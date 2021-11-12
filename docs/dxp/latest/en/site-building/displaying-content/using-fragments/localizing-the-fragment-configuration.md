@@ -15,8 +15,8 @@ You can add localization in different languages for the image description (also 
 
 ![You can localize the Image Description in the Content Page editor.](./localizing-the-fragment-configuration/images/01.png)
 
-```tip::
-    Localizable fields show a flag icon next to their Image Descriptions. 
+```{tip}
+Localizable fields show a flag icon next to their Image Descriptions. 
 ```
 
 If the Image Description doesn't have a translation, the description shows the default Content Page language.

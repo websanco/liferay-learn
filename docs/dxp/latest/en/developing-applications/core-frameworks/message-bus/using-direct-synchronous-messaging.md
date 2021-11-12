@@ -32,8 +32,8 @@ In an example project, you'll use a `SynchronousMessageSender` to send a message
     ./gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)
     ```
 
-    ```note::
-       This command is the same as copying the module JARs to ``/opt/liferay/osgi/modules`` on the Docker container.
+    ```{note}
+    This command is the same as copying the module JARs to `/opt/liferay/osgi/modules` on the Docker container.
     ```
 
 1. The Docker container console shows that the modules started.
@@ -112,8 +112,8 @@ The `x6n5-baker-impl` module's `X6N5BakerOSGiCommands` class provides an OSGi Co
 
 `X6N5BakerOSGiCommands` is a service `Component` of its own class type. It uses a `@Reference` annotation to inject a `SynchronousMessageSender` that's set to *direct* mode (specified by the annotation's `target = "(mode=DIRECT)"` attribute). 
 
-```note::
-   In *direct* mode, the ``SynchronousMessageSender`` ``send`` method blocks the calling class until the current thread delivers the message to all listeners.
+```{note}
+In *direct* mode, the `SynchronousMessageSender` `send` method blocks the calling class until the current thread delivers the message to all listeners.
 ```
 
 `X6N5BakerOSGiCommands`'s `@Component` properties define a Gogo shell command function called `sendMessage` and in the `x6n5` scope. The command and maps to the `sendMessage(String)` method and takes an input `String`.

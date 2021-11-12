@@ -2,8 +2,8 @@
 
 All Workflow definitions in Liferay DXP are written in XML format. To craft your own workflow definition, remember that definitions should reflect real life approval processes.
 
-```tip::
-   Subscribers using DXP can use a `graphical designer <../user-guide/workflow-designer/workflow-designer-overview.md>`_ to create workflows. If you've already begun crafting workflows in XML, you can upload them and continue in the GUI. 
+```{tip}
+Subscribers using DXP can use a [graphical designer](../user-guide/workflow-designer/workflow-designer-overview.md) to create workflows. If you've already begun crafting workflows in XML, you can upload them and continue in the GUI. 
 ```
 
 1. Open the Global Menu (![Global Menu](../../../images/icon-applications-menu.png)). Under Workflow, select _Process Builder_. 

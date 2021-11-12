@@ -6,8 +6,8 @@ Access the default search page at [`localhost:8080/web/guest/search`](http://loc
 
 Users can opt to customize search experience by creating a new Search page, adding different Search Widgets, and tweaking a variety of available widget configurations to provide a precise and tailored search experience for a site's users. Using the [default](#default-search-pages) search page can be a good starting point to creating your own custom search pages.
 
-```note::
-   Newly created sites do not get a Search Page created by default. You'll need to create one. You can use an existing Search Page Template or create a new Search Page yourself.
+```{note}
+Newly created sites do not get a Search Page created by default. You'll need to create one. You can use an existing Search Page Template or create a new Search Page yourself.
 ```
 
 ![A new, blank site needs a search page to be created and configured.](./search-pages/images/01.png)

@@ -14,8 +14,8 @@ The `.npmbundlerrc` file has four possible phase definitions: *copy-process*, *p
 
 **Babel:** Defined with the `.babelrc` definition. Specifies the `.babelrc` file to use when running Babel through the package's `.js` files.
 
-```note::
-  During this phase, Babel transforms package files (for example, to convert them to AMD format, if necessary), but doesn't transpile them. In theory, you could also transpile them by configuring the proper plugins. We recommend transpiling before running the bundler, to avoid mixing both unrelated processes.
+```{note}
+During this phase, Babel transforms package files (for example, to convert them to AMD format, if necessary), but doesn't transpile them. In theory, you could also transpile them by configuring the proper plugins. We recommend transpiling before running the bundler, to avoid mixing both unrelated processes.
 ```
 
 **Post-Process:** Defined with the `post-plugins` property. An alternative to using the *pre-process* phase, this specifies plugins to run after the Babel phase has completed.
@@ -103,8 +103,8 @@ Here's an example of a `.npmbundlerrc` configuration:
 }
 ```
 
-```note::
-  Not all definition formats (``*``, ``some-package-name``, and ``some-package-name@version``) shown above are required. In most cases, the wildcard definition (``*``) is enough. The non-wildcard formats (``some-package-name`` and ``some-package-name@version``) are rare exceptions for packages that require a more specific configuration than the wildcard definition provides.
+```{note}
+Not all definition formats (`*`, `some-package-name`, and `some-package-name@version`) shown above are required. In most cases, the wildcard definition (`*`) is enough. The non-wildcard formats (`some-package-name` and `some-package-name@version`) are rare exceptions for packages that require a more specific configuration than the wildcard definition provides.
 ```
 
 ### Standard Configuration Options
@@ -290,12 +290,12 @@ Since version 2.2.0, the liferay-npm-bundler can create widget OSGi bundles for 
 
 * **create-jar.features.settings:** This option is deprecated. Use the `create-jar.features.configuration` option instead.
 
-```note::
-  Plugins' configuration specifies the options for configuring plugins in all the possible phases, as well as the ``.babelrc`` file to use when running Babel (see `Babel's documentation <https://babeljs.io/docs/usage/babelrc/>`_ for more information on that file format).
+```{note}
+Plugins' configuration specifies the options for configuring plugins in all the possible phases, as well as the `.babelrc` file to use when running Babel (see [Babel's documentation](https://babeljs.io/docs/usage/babelrc/) for more information on that file format).
 ```
 
-```note::
-  Prior to version 1.4.0 of the liferay-npm-bundler, package configurations were placed next to the tools options (``*``, ``output``, ``exclude``, etc.) To prevent package name collisions, package configurations are now namespaced and placed under the ``packages`` section. To maintain backwards compatibility, the liferay-npm-bundler falls back to the root section outside ``packages`` for package configuration, if no package configurations (``package-name@version``, ``package-name``, or ``*``) are found in the ``packages`` section.
+```{note}
+Prior to version 1.4.0 of the liferay-npm-bundler, package configurations were placed next to the tools options (`*`, `output`, `exclude`, etc.) To prevent package name collisions, package configurations are now namespaced and placed under the `packages` section. To maintain backwards compatibility, the liferay-npm-bundler falls back to the root section outside `packages` for package configuration, if no package configurations (`package-name@version`, `package-name`, or `*`) are found in the `packages` section.
 ```
 
 Now you know the structure of the `.npmbundlerrc` file!

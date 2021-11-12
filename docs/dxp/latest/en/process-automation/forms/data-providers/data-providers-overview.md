@@ -11,8 +11,8 @@ One common example is using a REST Data Provider to populate a Select from List 
 
 Some data sources are from third party sources, such as the [restcountries.eu](https://restcountries.eu) data provider. Liferay DXP also has its own registered web services. If you are running a local server, see [http://localhost:8080/api/jsonws](http://localhost:8080/api/jsonws) for a list. If populating a list of countries, you'll find two `get-countries` JSON web services; either one works. Click _Invoke_ to generate the results.
 
-```warning::
-   To test using Liferay's web services with data providers in a local testing environment, you must enable local network access. See `Enabling Access to Data on the Local Network <./using-the-rest-data-provider-to-populate-form-options.md#enabling-access-to-data-on-the-local-network>`__.  
+```{warning}
+To test using Liferay's web services with data providers in a local testing environment, you must enable local network access. See [Enabling Access to Data on the Local Network](./using-the-rest-data-provider-to-populate-form-options.md#enabling-access-to-data-on-the-local-network)_.  
 ```
 
 The _Result_ tab shows a list of countries using JSON syntax, like this record for Afghanistan:
@@ -87,8 +87,8 @@ You can add multiple Inputs. To provide a way to specify the input value, use an
 
 The Output Path field is specified in [JsonPath syntax](https://github.com/json-path/JsonPath), so it must always start with a `$`. The type of data returned by the Path must match the type you choose in the Type field. Using the `restcountries.eu` service, specify the `name` field as an Output by entering enter `$..name` in the Path field. If you have a more complex JsonPath expression to construct (for example, you need the names of all countries with a population over 100 million---`$..[?(@.population>100000000)].name` with the `restcountries.eu` service), consider using a `JsonPath` evaluator, like [this one](http://jsonpath.herokuapp.com/) or [this one](https://jsonpath.com/).
 
-```tip::
-   To display one value but persist another in the database, enter both into the Paths field, separated by a semicolon: ``$..name;$..numericCode``
+```{tip}
+To display one value but persist another in the database, enter both into the Paths field, separated by a semicolon: `$..name;$..numericCode`
 ```
 
 If using the `restcountries.eu` data provider, the name of the country appears for the User, while the numeric country code is stored in the database.

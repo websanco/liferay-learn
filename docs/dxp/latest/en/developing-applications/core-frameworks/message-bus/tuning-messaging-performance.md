@@ -60,8 +60,8 @@ The example project creates a destination, registers message listeners, and list
     ./gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)
     ```
 
-    ```note::
-       This command is the same as copying the module JARs to ``/opt/liferay/osgi/modules`` on the Docker container.
+    ```{note}
+    This command is the same as copying the module JARs to `/opt/liferay/osgi/modules` on the Docker container.
     ```
 
 1. The Docker container console confirms module startup and reports the destination configuration.

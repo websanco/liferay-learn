@@ -2,8 +2,8 @@
 
 With Page Versioning enabled, you and your team can work in parallel on multiple versions of your Site's Pages and Page sets. These different versions are called *variations*, which you can create and manage for Widget Pages and Content Pages via the Staging bar. Page versioning also maintains a history that you can use to revert changes made to your staged Pages to earlier versions if needed.
 
-```note::
-   Starting with Liferay DXP 7.4, 7.3 Fix Pack 1, and 7.2 Fix Pack 11, you can create variations in Widget Pages and Content Pages. In previous Liferay DXP versions, you could create variations only on Widget Pages. To learn more about variations in these types of pages, see `Types of Variations <#types-of-variations>`_.
+```{note}
+Starting with Liferay DXP 7.4, 7.3 Fix Pack 1, and 7.2 Fix Pack 11, you can create variations in Widget Pages and Content Pages. In previous Liferay DXP versions, you could create variations only on Widget Pages. To learn more about variations in these types of pages, see [Types of Variations](#types-of-variations).
 ```
 
 You can enable Page versioning for your Private and Public Pages during initial Staging configuration, or anytime afterward via the *Staging Configuration* page. Once enabled, you can create, merge, and publish variations for individual Pages or Page sets. You can also manage variation permissions for different User Roles.
@@ -23,16 +23,16 @@ When you enable *Page versioning* for a Page set, you can create and manage two 
 
 - **Page Variations**: Single Page variations that exist within Page set variations. You can create Page Variations on Widgets Pages only. To create different versions of a Content Page, use [Experiences](../../../site-building/personalizing-site-experience/experience-personalization/content-page-personalization.md).
 
-   ```tip::
-      Page variations in Content Pages use `Experiences <../../../site-building/personalizing-site-experience/experience-personalization/content-page-personalization.md>`_ and do not require the Staging tool. 
+   ```{tip}
+   Page variations in Content Pages use [Experiences](../../../site-building/personalizing-site-experience/experience-personalization/content-page-personalization.md) and do not require the Staging tool. 
    ```
 
 Both variation types only affect Pages and do not affect your Site's content, since all variations in your staging Site share the same content. That said, each variation can use and configure the same content and applications in different ways, and each variation of a Page set can have different Pages.
 
 However, modifying the *layout type* or *friendly URL* of a Page does affect every Site Page variation. For example, if a Page template is modified, those modifications are propagated to the Pages configured to inherit changes from the template.
 
-```note::
-   Page templates are not recognized by the Staging framework. This means that existing Page templates are not viewable or editable on a staged Site. If they're created on a staged Site, they are lost if staging is disabled.
+```{note}
+Page templates are not recognized by the Staging framework. This means that existing Page templates are not viewable or editable on a staged Site. If they're created on a staged Site, they are lost if staging is disabled.
 ```
 
 ## Creating Variations
@@ -61,8 +61,8 @@ Follow these steps to create new variations of a Page or Page set:
 
    ![Determine whether your new Page set variation copies Pages from existing variations](./page-versioning/images/06.png)
 
-   ```note::
-      If you decide to copy existing Page variations into your new Page set variation, only the latest version marked as ready for publishing is copied.
+   ```{note}
+   If you decide to copy existing Page variations into your new Page set variation, only the latest version marked as ready for publishing is copied.
    ```
 
 1. Click on *Add* to create your new variation.

@@ -2,8 +2,8 @@
 
 Once [asset auto tagging has been enabled](./configuring-asset-auto-tagging.md), you can also enable image auto tagging. Image auto tagging tags images uploaded to the Documents and Media Library.
 
-```tip::
-   Currently, tags applied automatically are English only.
+```{tip}
+Currently, tags applied automatically are English only.
 ```
 
 By default, Image Auto Tagging is disabled by default. In addition to enabling Auto Tagging in DXP, you must also configure an image tagging provider. Three providers are available:

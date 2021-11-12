@@ -33,8 +33,8 @@ The sample below is a hotel guest feedback survey form.
     * **Neutral**
     * **Bad**
 
-    ```note::
-       Typing in one of the fields automatically adds another blank selection line. Just leave the last one blank when you're done.
+    ```{note}
+    Typing in one of the fields automatically adds another blank selection line. Just leave the last one blank when you're done.
     ```
 
     ![Select from List option](./creating-forms/images/03.png)

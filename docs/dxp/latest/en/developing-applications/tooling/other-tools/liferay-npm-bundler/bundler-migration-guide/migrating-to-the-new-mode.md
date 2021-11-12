@@ -46,8 +46,8 @@ Since [issue #303](https://github.com/liferay/liferay-js-toolkit/issues/303), tw
     }
     ```
 
-    ```note::
-      Although the new mode of the liferay-npm-bundler acts very much like webpack, **it is not compatible with webpack**. Webpack creates a single JavaScript bundle file while the liferay-npm-bundler targets AMD loader.
+    ```{note}
+    Although the new mode of the liferay-npm-bundler acts very much like webpack, **it is not compatible with webpack**. Webpack creates a single JavaScript bundle file while the liferay-npm-bundler targets AMD loader.
     ```
 
 ## Related Information

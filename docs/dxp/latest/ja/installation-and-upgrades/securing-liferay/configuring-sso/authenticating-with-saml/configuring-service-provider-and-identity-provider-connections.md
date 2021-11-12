@@ -9,8 +9,8 @@ The Service Provider tab includes these options:
 
 **Require Assertion Signature?:** Check this box to require SAML assertions to be individually signed in addition to the entire SAML message.
 
-```note::
-   Individual assertions need not be signed as long as the SAML response itself is signed. The SP and IdP should always communicate over `https` to have encryption at the transport level.
+```{note}
+Individual assertions need not be signed as long as the SAML response itself is signed. The SP and IdP should always communicate over `https` to have encryption at the transport level.
 ```
 
 If you believe man-in-the-middle attacks are possible, the SAML response can be signed. The only reason to sign the assertions is if the SAML response is not signed. In this case, assertions should not only be signed but also encrypted.

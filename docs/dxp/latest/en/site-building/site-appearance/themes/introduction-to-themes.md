@@ -10,8 +10,8 @@ Themes are available and used out-of-the-box on any Site you create. There are a
 
 Themes are one of the most broad and flexible ways to add customizations, in the hierarchy of ways to design your Site's appearance. Themes are used for providing the most foundational basis for your Site that more specific tools (such as [Master Pages](../../creating-pages/defining-headers-and-footers/master-page-templates.md) and [Style Books](../style-books/using-a-style-book-to-standardize-site-appearance.md)) can build on top of. However, you may also use themes to add more customizations that are not possible with those other methods.
 
-```warning::
-   Adding customizations to your site through a theme can come with increased maintenance when upgrading from one version of Liferay to another. When possible, manage your site's appearance through the use of `Master Pages Templates <../../creating-pages/defining-headers-and-footers/master-page-templates.md>`_ and `Style Books <../style-books/using-a-style-book-to-standardize-site-appearance.md>`_.
+```{warning}
+Adding customizations to your site through a theme can come with increased maintenance when upgrading from one version of Liferay to another. When possible, manage your site's appearance through the use of [Master Pages Templates](../../creating-pages/defining-headers-and-footers/master-page-templates.md) and [Style Books](../style-books/using-a-style-book-to-standardize-site-appearance.md).
 ```
 
 ## Developing Themes
@@ -30,8 +30,8 @@ Themes are also a complement to [Page Templates](../../creating-pages/adding-pag
 
 For example, you can [embed widgets in your theme](./theme-development/working-with-templates/embedding-widgets-via-templates.md) to make them a permanent fixture of your Site's pages.
 
-```note::
-    You can also create templates for your pages using `Master Pages <../../creating-pages/defining-headers-and-footers/master-page-templates.md>`__ or `Page Templates <../../creating-pages/adding-pages/creating-a-page-template.md>`__.
+```{note}
+You can also create templates for your pages using [Master Pages](../../creating-pages/defining-headers-and-footers/master-page-templates.md)_ or [Page Templates](../../creating-pages/adding-pages/creating-a-page-template.md)_.
 ```
 
 ### Bundling Resources
@@ -44,8 +44,8 @@ Resources may be bundled into your theme or from other sources to bring together
 
 * The Resources Importer<!--Add link when available--> uses Site Templates to import files and content necessary to implement a theme.
 
-```warning::
-   The Resources Importer is deprecated as of Liferay DXP 7.1.
+```{warning}
+The Resources Importer is deprecated as of Liferay DXP 7.1.
 ```
 
 ### Modifying Behavior

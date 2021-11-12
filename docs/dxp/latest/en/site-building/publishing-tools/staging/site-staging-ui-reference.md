@@ -14,8 +14,8 @@ When Staging is enabled for a Site, you can access additional options via the St
 
 ![When Staging is enabled for a Site, you can access the Staging bar on each of your Site's Pages](./site-staging-ui-reference/images/02.png)
 
-```tip::
-   There are differences in the way you work with Widget Pages and Content Pages in a staged Site. To simplify your workflow with Staging, use either Widget Pages or Content Pages.
+```{tip}
+There are differences in the way you work with Widget Pages and Content Pages in a staged Site. To simplify your workflow with Staging, use either Widget Pages or Content Pages.
 ```
 
 The following table and pictures describe the staging bar options and editing tools:
@@ -53,8 +53,8 @@ When you click on *Publish to Live*, a modal window appears with additional opti
 
 **Pages to Publish**: View the number of Pages included in your current publish process.
 
-```note::
-   This displays the number of Page deletions tracked by the Staging framework. Keep in mind that this number counts the Page deletions on the Staging Site, not how many Pages will be deleted on the on the Live Site. There could be an inconsistency between the number of Page deletions to be published and the actual number of Pages present on either of the Staging and Live Sites.
+```{note}
+This displays the number of Page deletions tracked by the Staging framework. Keep in mind that this number counts the Page deletions on the Staging Site, not how many Pages will be deleted on the on the Live Site. There could be an inconsistency between the number of Page deletions to be published and the actual number of Pages present on either of the Staging and Live Sites.
 ```
 
 When ready, click on *Publish to Live* to initiate publishing.
@@ -96,8 +96,8 @@ If you want to publish pages with a custom theme, you must check the Theme Setti
 | *Date Range* | Shows the content updated during a specific period of time. |
 | *Last* | Shows the content updated in the last hours or days. |
 
-```note::
-   After selecting your Content option, click *Refresh Counts* to update the number of results.
+```{note}
+After selecting your Content option, click *Refresh Counts* to update the number of results.
 ```
 
 You can also click on *Change* for each content type to manage items and other settings included in each type, such as *version history*, *vocabularies*, and *previews and thumbnails*. See [Managing Data and Content Types in Staging](./managing-data-and-content-types-in-staging.md) for more information.

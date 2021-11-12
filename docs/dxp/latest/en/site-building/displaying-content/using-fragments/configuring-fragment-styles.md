@@ -2,8 +2,8 @@
 
 Fragment Styles can be used to customize the look and feel of Page Fragments. You can add borders, change the font, the background color, or upload background images. See the [Fragment Styles Reference](./fragment-styles-reference.md) for a complete list of all available styles. Available styling options are defined in a Style Book; see [Using a Style Book to Standardize Site Appearance](../../site-appearance/style-books/using-a-style-book-to-standardize-site-appearance.md) for more information.
 
-```tip::
-   Many of the styles correspond to CSS classes. If you know CSS, many of the fields will be familiar.
+```{tip}
+Many of the styles correspond to CSS classes. If you know CSS, many of the fields will be familiar.
 ```
 
 To configure a Fragment's style:

@@ -14,8 +14,8 @@ Create a local folder structure that can be bind mounted to the Elasticsearch an
 mkdir -p test-es-install/dxp/files/osgi/configs && mkdir -p test-es-install/elasticsearch && cd test-es-install
 ```
 
-```tip::
-   The ``cd test-es-install`` command at the end puts you in the ``test-es-install`` folder. Make sure you run the remaining commands for both Elasticsearch and Liferay DXP from this folder.
+```{tip}
+The `cd test-es-install` command at the end puts you in the `test-es-install` folder. Make sure you run the remaining commands for both Elasticsearch and Liferay DXP from this folder.
 ```
 ## Install Elasticsearch
 

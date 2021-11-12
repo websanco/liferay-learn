@@ -49,8 +49,8 @@ First deploy and observe a working `ActionExecutor`.
    ./gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)
    ```
 
-   ```tip::
-      This command is the same as copying the deployed jars to ``/opt/liferay/osgi/modules`` on the Docker container.
+   ```{tip}
+   This command is the same as copying the deployed jars to `/opt/liferay/osgi/modules` on the Docker container.
    ```
 
 1. Confirm the deployment in the Liferay Docker container console.
@@ -59,8 +59,8 @@ First deploy and observe a working `ActionExecutor`.
    STARTED com.acme.e5c9.impl_1.0.0
    ```
 
-```note::
-   For convenience, the ``activate`` method of the ``ActionExecutor`` autoloaded a E5C9 Single Approver workflow definition. This code achieved the same thing as navigating to the Workflow Process Builder and uploading a workflow definition. See `Uploading a New Workflow Definition <../designing-and-managing-workflows/managing-workflows.md#uploading-a-new-workflow-definition>`__.
+```{note}
+For convenience, the `activate` method of the `ActionExecutor` autoloaded a E5C9 Single Approver workflow definition. This code achieved the same thing as navigating to the Workflow Process Builder and uploading a workflow definition. See [Uploading a New Workflow Definition](../designing-and-managing-workflows/managing-workflows.md#uploading-a-new-workflow-definition)_.
 ```
 
 ## Test the Action Executor

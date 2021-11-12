@@ -47,16 +47,16 @@ By default, the Liferay logo is used for your Site's pages. To use your own logo
 
 1. Choose whether to display the Site name on the Site. When *Show Site Name* is enabled, the Site name appears next to the logo.
 
-  ```note::
-    This option is enabled by default and can't be disabled if the *Allow Site Administrators to set their own logo* option is disabled in *Instance Settings*. Removing the Site name is not available for the default Liferay Site---you can configure this only for new Sites and User pages.
+  ```{note}
+  This option is enabled by default and can't be disabled if the *Allow Site Administrators to set their own logo* option is disabled in *Instance Settings*. Removing the Site name is not available for the default Liferay Site---you can configure this only for new Sites and User pages.
   ```
 
 1. Click *Save* to apply the changes.
 
 ## Advanced
 
-```warning::
-  The *Advanced* tab contains powerful options that should only be used by those with a firm command of the technology, or they could have major unintended side effects. Proceed with caution.
+```{warning}
+The *Advanced* tab contains powerful options that should only be used by those with a firm command of the technology, or they could have major unintended side effects. Proceed with caution.
 ```
 
 ### JavaScript

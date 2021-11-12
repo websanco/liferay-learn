@@ -24,12 +24,12 @@ To create a search page using a template and have it inherit changes made to the
 
     ![Click Inherit Changes to enable this feature.](./using-a-search-page-template/images/02.png)
 
-    ```tip::
-       For new pages, you can enable this when the page is first created. For an existing page based on the search template, navigate to the Site menu → *Site Builder* → *Pages*, and then click *Configure* within the Actions menu.
+    ```{tip}
+    For new pages, you can enable this when the page is first created. For an existing page based on the search template, navigate to the Site menu → *Site Builder* → *Pages*, and then click *Configure* within the Actions menu.
     ```
 
-    ```warning::
-       Some settings within the page configuration will become unavailable if the page is set to inherit changes from the page template.
+    ```{warning}
+    Some settings within the page configuration will become unavailable if the page is set to inherit changes from the page template.
     ```
 
 Your search page will now be updated whenever the Page Template is updated.

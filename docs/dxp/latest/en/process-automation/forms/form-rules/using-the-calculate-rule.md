@@ -2,8 +2,8 @@
 
 Users can create Calculate rules that populate a numeric field by calculating its value based on other fields. For example, a Calculate rule can calculate a camp or conference's total registration costs by multiplying the number of attendees and the registration fee (17 people at $130 each).
 
-```important::
-   Calculations are limited to numeric fields.
+```{important}
+Calculations are limited to numeric fields.
 ```
 
 This example has a form with three numeric fields:

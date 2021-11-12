@@ -2,8 +2,8 @@
 
 The Recycle Bin supports instance-wide scope or Site-specific scope. By default, the Recycle Bin is enabled instance-wide.
 
-```tip::
-   You can disable the Recycle Bin for a specific Site. If you disable the Recycle Bin while it is still holding recycled items, the recycled items remain stored and reappear in the Recycle Bin if it is re-enabled.
+```{tip}
+You can disable the Recycle Bin for a specific Site. If you disable the Recycle Bin while it is still holding recycled items, the recycled items remain stored and reappear in the Recycle Bin if it is re-enabled.
 ```
 
 To configure the Recycle Bin,

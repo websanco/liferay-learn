@@ -24,8 +24,8 @@ jdbc.default.password=
 
 ## MySQL
 
-```important::
-   MySQL Connector/J 8.0 is highly recommended for use with MySQL Server 8.0 and 5.7.
+```{important}
+MySQL Connector/J 8.0 is highly recommended for use with MySQL Server 8.0 and 5.7.
 ```
 
 ### Portal Properties

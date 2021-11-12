@@ -9,8 +9,8 @@ The Search Insights Widget, when added to a Search Page, is for inspecting two t
 
 - The response string returned from the search engine
 
-```note::
-   The JSON returned as a request string is pruned from several Elasticsearch query defaults for clarity. To see the full request JSON that Elasticsearch processed, adjust the `Elasticsearch server's logging <https://www.elastic.co/guide/en/elasticsearch/reference/6.x/logging.html>`__.
+```{note}
+The JSON returned as a request string is pruned from several Elasticsearch query defaults for clarity. To see the full request JSON that Elasticsearch processed, adjust the [Elasticsearch server's logging](https://www.elastic.co/guide/en/elasticsearch/reference/6.x/logging.html)_.
 ```
 
 With the _Enable Score Explanation_ option (enabled by default), the Insights widget also prints a relevance score explanation for each returned result.

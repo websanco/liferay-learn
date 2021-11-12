@@ -4,8 +4,8 @@ Liferay's Staging application provides a working environment for making changes 
 
 When setting up Staging, determine whether to host your Site or Asset Library locally (i.e., on the same server) or remotely (i.e., on separate servers connected by a network). Then customize which application data is staged. For Sites, you can also enable Page versioning for Widget Pages and Content Pages.
 
-```note::
-   Staging is supported for Asset Libraries since Liferay DXP 7.4 and 7.3.10 FP1.
+```{note}
+Staging is supported for Asset Libraries since Liferay DXP 7.4 and 7.3.10 FP1.
 ```
 
 * [Configuration Options](#staging-configuration-options)
@@ -29,8 +29,8 @@ As part of Staging configuration, you can select which content groups and applic
 
 When configuring Staging for Sites, you can enable the *Page versioning* feature. With this feature, you and your team can simultaneously develop variations of a Site's Content Pages and Widget Pages, whether public or private. You can see the complete history of Page versions and revert Pages to an earlier version if needed. See [Page Versioning](./page-versioning.md) to learn how to create and manage variations and [Managing Staging Permissions](./managing-staging-permissions.md) to learn about managing permissions for each variation.
 
-```note::
-   Starting with Liferay DXP 7.4, 7.3 Fix Pack 1, and 7.2 Fix Pack 11, you can use page versioning in Widget Pages and Content Pages. In previous versions, you could only create variations for Widget Pages. To learn more about variations for each type of Page, see `Types of Variations <./page-versioning.md#types-of-variations>`_.
+```{note}
+Starting with Liferay DXP 7.4, 7.3 Fix Pack 1, and 7.2 Fix Pack 11, you can use page versioning in Widget Pages and Content Pages. In previous versions, you could only create variations for Widget Pages. To learn more about variations for each type of Page, see [Types of Variations](./page-versioning.md#types-of-variations).
 ```
 
 ## Understanding the Publishing Process

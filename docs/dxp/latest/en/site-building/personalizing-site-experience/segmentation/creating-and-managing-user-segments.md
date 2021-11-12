@@ -10,8 +10,8 @@ You can combine existing Segments to create a new _Compound Segment_. The Compou
 
 To understand how Compound Segments work, consider the following example. Visitors from the USA and Canada have different needs, so you create two Segments with different properties, one Segment for each country. Later, you create a new standard Segment for North America visitors, where you manually copy the properties of the USA and Canada Segments. When you change the properties of the USA or Canada Segments, the North America Segment doesn't inherit the changes. You must manually update the North America segment to reflect these changes. However, if you create the North America segment as a Compound Segment, this Compound Segment automatically updates its definition and members when you change the USA or Canada Segments.
 
-```important::
-   You cannot use an existing Compound Segment to create a new one.
+```{important}
+You cannot use an existing Compound Segment to create a new one.
 ```
 
 ![Combine two or more segments to create a new Compound Segment](./creating-and-managing-user-segments/images/08.png)
@@ -28,8 +28,8 @@ These steps describe how to create a new Segment:
 
 1. Click in the top text area and enter a name for your User Segment.
 
-   ```tip::
-      You can use the flag selector next to the Segment's name to translate the name of your Segment.
+   ```{tip}
+   You can use the flag selector next to the Segment's name to translate the name of your Segment.
    ```
 
 1. From the *Properties* area, select the group and property to define your Segment. Drag and drop the *Property* to the *Conditions* area.
@@ -59,8 +59,8 @@ After you create your User Segment, you can see it in the list of User Segments 
 
 ![You can edit, delete or manage permissions from the actions menu.](./creating-and-managing-user-segments/images/05.png)
 
-```note::
-  You can't delete a User Segment if it's used in an experience.
+```{note}
+You can't delete a User Segment if it's used in an experience.
 ```
 
 ## Related Information

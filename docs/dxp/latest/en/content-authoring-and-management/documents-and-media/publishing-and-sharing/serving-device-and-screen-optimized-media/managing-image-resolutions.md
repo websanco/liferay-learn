@@ -39,8 +39,8 @@ The Image Resolution has been deleted.
 
 ## Editing Image Resolutions
 
-```tip::
-   Image resolutions and their identifiers can't be updated if the resolution has been used to adapt images. This prevents inconsistencies in generated images.
+```{tip}
+Image resolutions and their identifiers can't be updated if the resolution has been used to adapt images. This prevents inconsistencies in generated images.
 ```
 
 Therefore, editing an image resolution is only possible if Adaptive Media hasn't yet generated adapted images for it. If you must change the values of a resolution that already has adapted images, you must delete that resolution and create a new one with the new values. 

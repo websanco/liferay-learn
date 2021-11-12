@@ -32,8 +32,8 @@ Note, an application's configuration is overridden if portlet preferences are im
     ./gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)
     ```
 
-    ```note::
-       This command is the same as copying the deployed jars to /opt/liferay/osgi/modules on the Docker container.
+    ```{note}
+    This command is the same as copying the deployed jars to /opt/liferay/osgi/modules on the Docker container.
     ```
 
 1. Confirm the deployment in the Liferay Docker container console.

@@ -10,8 +10,8 @@ Before running A/B Testing on your Content pages, you must verify these requirem
 
     ![Selecting the Site in the Liferay DXP configuration for Analytics Cloud](verifying-ab-test-requirements/images/01.png)
 
-    ```note::
-       When setting up the connection to Analytics Cloud, you must select the Site containing the content you want to test. Click *Control Panel* → *Configuration* → *Instance Settings* → *Analytics Cloud* → *Analytics Cloud Connection*.
+    ```{note}
+    When setting up the connection to Analytics Cloud, you must select the Site containing the content you want to test. Click *Control Panel* → *Configuration* → *Instance Settings* → *Analytics Cloud* → *Analytics Cloud Connection*.
     ```
 
 To verify or configure the *Update* permission,

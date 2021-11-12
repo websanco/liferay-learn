@@ -13,8 +13,8 @@ The code editor is split into four panes:
 
 **HTML:** Supports standard HTML, along with Liferay Portal specific tags and FreeMarker (using the [alternative (square bracket) syntax](https://freemarker.apache.org/docs/dgui_misc_alternativesyntax.html)) that can be used to add dynamic behavior.
 
-```tip::
-   Type ``$(`` to begin using auto-completion to find variable names. Type ``[@`` to use auto-completion to find taglib names.
+```{tip}
+Type `$(` to begin using auto-completion to find variable names. Type `[@` to use auto-completion to find taglib names.
 ```
 
 **CSS:** Supports standard CSS.
@@ -27,14 +27,14 @@ The code editor is split into four panes:
 
 ## Configuration
 
-```note::
-  Defining configurations for Page Fragments is available in Liferay DXP 7.2 SP1+ and Liferay Portal GA2+.
+```{note}
+Defining configurations for Page Fragments is available in Liferay DXP 7.2 SP1+ and Liferay Portal GA2+.
 ```
 
 The Configuration tab provides input for adding configuration options to the Page Fragment's Configuration Menu. This is equivalent to the `configuration.json` file that the [Fragments Toolkit](../../developing-page-fragments/using-the-fragments-toolkit.md) produces. For example, you can add a selector to your Page Fragment's configuration options that lets users choose a color for the Page Fragment's heading. Defining configuration options for a Page Fragment gives it more flexibility, reducing the number of Page Fragments you must maintain.
 
-```note::
-  Changes made to the configuration are automatically made available to the code editor. If your configuration is invalid, you can't publish your Page Fragment. Be sure to always have a valid JSON configuration before previewing or publishing Page Fragments.
+```{note}
+Changes made to the configuration are automatically made available to the code editor. If your configuration is invalid, you can't publish your Page Fragment. Be sure to always have a valid JSON configuration before previewing or publishing Page Fragments.
 ```
 
 Configuration values are made available to the Page Fragment through the FreeMarker context in the HTML pane. You can combine configuration options with conditional values in the HTML to create dynamic experiences for the user. You can also access these values via JavaScript. See [Making Page Fragments Configurable](../../developing-page-fragments/adding-configuration-options-to-fragments.md) for more information.

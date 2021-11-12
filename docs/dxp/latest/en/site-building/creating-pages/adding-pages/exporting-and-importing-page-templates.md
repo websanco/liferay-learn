@@ -2,8 +2,8 @@
 
 Sometimes it's easier to edit templates in a code editor. Once you've [created a Page Template](./creating-a-page-template.md), you can [export](../../building-sites/importing-exporting-pages-and-content.md) it, edit it locally in the editor of your choice, and then import the template back into Liferay. You can import the template into any Site on the system. 
 
-```tip::
-   Page Templates are part of the larger Collections framework. For more information, see `About Collections and Collection Pages <../../../content-authoring-and-management/collections-and-collection-pages/about-collections-and-collection-pages.md>`_.
+```{tip}
+Page Templates are part of the larger Collections framework. For more information, see [About Collections and Collection Pages](../../../content-authoring-and-management/collections-and-collection-pages/about-collections-and-collection-pages.md).
 ```
 
 For more general information about the Export/Import Framework, see [Importing/ Exporting Sites and Content](../../building-sites/importing-exporting-pages-and-content.md).
@@ -24,8 +24,8 @@ For more general information about the Export/Import Framework, see [Importing/ 
 
 The Page Template downloads as a ZIP file to your local machine. 
 
-```tip::
-   You can export more than one Content Template at once. However, you cannot include Widget Templates with Content Pages in the same ZIP file.
+```{tip}
+You can export more than one Content Template at once. However, you cannot include Widget Templates with Content Pages in the same ZIP file.
 ```
 
 The last published version of the Page Template is always exported. If the Page Template has never been published, it cannot be exported.

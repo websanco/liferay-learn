@@ -7,8 +7,8 @@ After [setting up Elasticsearch](./installing-elasticsearch.md), you must connec
 
 Notable installation and configuration procedure differences are presented here. 
 
-```important::
-   Stop each Liferay server node before configuring the connection.
+```{important}
+Stop each Liferay server node before configuring the connection.
 ```
 
 If you're on Liferay 7.2, skip to [Liferay 7.2: Installing Elasticsearch 7 Connector](#liferay-7-2-installing-elasticsearch-7-connector).
@@ -64,14 +64,14 @@ A simple 7.3 connector configuration enables production mode (`productionModeEna
 1. Place the `.config` file in your `[Liferay Home]/osgi/configs` folder.
 
 
-```tip::
-   The connectors contain many configuration settings. See the `Elasticsearch Connector Settings <./elasticsearch-connector-configuration-reference.md>`_ for their definitions. Most of the configurations correspond to settings available in `Elasticsearch <https://www.elastic.co/guide/en/elasticsearch/reference/7.x/index.html>`_.
+```{tip}
+The connectors contain many configuration settings. See the [Elasticsearch Connector Settings](./elasticsearch-connector-configuration-reference.md) for their definitions. Most of the configurations correspond to settings available in [Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/index.html).
 ```
 
 To refer to Elasticsearch servers by name, map each Elasticsearch server name to its IP address in your DNS or your Liferay server's `/etc/hosts` file.
 
-```tip::
-  The network host address format is ``http[s]://[host name]:[port]``. If you're using a Liferay Docker container, you can use ``--add-host [host name]:[IP address]`` options with your ``docker run`` command to map a host name to each Elasticsearch server IP address. The port is defined in the Elasticsearch container's docker run command as the first value of the ``-p 1234:5678`` option (it's ``1234`` in this case). If you're running a local test environment without HTTPS enabled, all the addresses can be ``http://localhost:port``. See `Docker's documentation <https://docs.docker.com/engine/reference/run/#managing-etchosts>`_ for more details.
+```{tip}
+The network host address format is `http[s]://[host name]:[port]`. If you're using a Liferay Docker container, you can use `--add-host [host name]:[IP address]` options with your `docker run` command to map a host name to each Elasticsearch server IP address. The port is defined in the Elasticsearch container's docker run command as the first value of the `-p 1234:5678` option (it's `1234` in this case). If you're running a local test environment without HTTPS enabled, all the addresses can be `http://localhost:port`. See [Docker's documentation](https://docs.docker.com/engine/reference/run/#managing-etchosts) for more details.
 ```
 
 ## Liferay 7.2: Installing Elasticsearch 7 Connector
@@ -103,8 +103,8 @@ On Liferay 7.2, the bundled connector application and APIs are for Elasticsearch
 
     When you start the Liferay server (not yet), Liferay reads this file and blocks the declared bundles from starting.
 
-    ```tip::
-      **Docker:** ``Liferay Home`` and other important folders of a Liferay installation are accessed in a Docker container at ``/mnt/liferay`` as described `here <../../../installation-and-upgrades/installing-liferay/using-liferay-docker-images/container-lifecycle-and-api.md#api>`_. You can use ``docker cp /path/to/local/file [container_name]:/mnt/liferay/files/osgi/configs`` to place configuration files into the container. Later, you can use ``docker cp`` to deploy the Liferay Connector to Elasticsearch 7 LPKG file.
+    ```{tip}
+    **Docker:** `Liferay Home` and other important folders of a Liferay installation are accessed in a Docker container at `/mnt/liferay` as described [here](../../../installation-and-upgrades/installing-liferay/using-liferay-docker-images/container-lifecycle-and-api.md#api). You can use `docker cp /path/to/local/file [container_name]:/mnt/liferay/files/osgi/configs` to place configuration files into the container. Later, you can use `docker cp` to deploy the Liferay Connector to Elasticsearch 7 LPKG file.
     ```
 
 ### Install the Elasticsearch 7 Connector
@@ -170,8 +170,8 @@ On Liferay 7.3, Re-index the [Workflow Metrics](../../../process-automation/work
 
 1. Click _Reindex All_. Repeat this operation for each Virtual Instance in your system.
 
-```note::
-   If you have Elasticsearch indexes used for primary data storage (storing data not backed by a database) you can bring that data into your new Elasticsearch cluster using the `snapshot and restore approach <./upgrading-elasticsearch/backing-up-elasticsearch.md>`__. Liferay's own Search Tuning indexes (for Result Rankings and Synyonyms) are primary storage indexes.
+```{note}
+If you have Elasticsearch indexes used for primary data storage (storing data not backed by a database) you can bring that data into your new Elasticsearch cluster using the [snapshot and restore approach](./upgrading-elasticsearch/backing-up-elasticsearch.md)_. Liferay's own Search Tuning indexes (for Result Rankings and Synyonyms) are primary storage indexes.
 ```
 
 Now Liferay is indexing content into your remote Elasticsearch 7 installation.

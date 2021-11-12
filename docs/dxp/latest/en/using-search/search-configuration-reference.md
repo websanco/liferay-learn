@@ -56,10 +56,10 @@ If the header Search Bar (the search bar embedded in the default theme) uses the
 
 The Search Bar widget is instanceable, so one page can contain multiple Search Bar widgets configured differently. All Search Bar instances must point to a Search Page within the Site to be effective.
 
-```important::
-    If the destination Search Page has a Search Bar widget instance in addition to a theme-embedded header Search Bar (like Liferay's default theme), the configurations of the header Search Bar take precedence over the page's widget instance.
+```{important}
+If the destination Search Page has a Search Bar widget instance in addition to a theme-embedded header Search Bar (like Liferay's default theme), the configurations of the header Search Bar take precedence over the page's widget instance.
 
-    Conversely, searching from a Search Bar widget instance on other pages honors their configurations, even if they differ from the header Search Bar configuration.
+Conversely, searching from a Search Bar widget instance on other pages honors their configurations, even if they differ from the header Search Bar configuration.
 ```
 
 See [Configuring the Search Bar](../getting-started/searching-for-content.md#configuring-the-search-bar) for more information.

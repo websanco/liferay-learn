@@ -24,8 +24,8 @@ Once added, you can change its placement at any time. You can also view its plac
 
 Liferay DXP provides options for configuring individual Fragments as well as their sub-elements. These options can vary, though some are common to all. You can view available configuration options in the *Selection* panel (![Selection](../../../images/icon-pages-tree.png)) of the Sidebar Menu. Click on a Fragment or element and select which options you'd like to configure from the available tabs.
 
-```note::
-   You can also localize some Fragment settings for the target audience's language. To learn more, see `Localizing the Fragment Configuration <../../displaying-content/using-fragments/localizing-the-fragment-configuration.md>`_.
+```{note}
+You can also localize some Fragment settings for the target audience's language. To learn more, see [Localizing the Fragment Configuration](../../displaying-content/using-fragments/localizing-the-fragment-configuration.md).
 ```
 
 ### General
@@ -100,8 +100,8 @@ In this table you can see a description of the Dropdown Fragment General options
 
 ![You can define the drop zone size in the Dropdown panel using the Panel Type options.](./page-fragments-user-interface-reference/images/18.png)
 
-```tip::
-   Place the Dropdown Fragment inside a Grid Fragment to observe the differences between the *Full Width* and *Mega Menu* panel types.
+```{tip}
+Place the Dropdown Fragment inside a Grid Fragment to observe the differences between the *Full Width* and *Mega Menu* panel types.
 ```
 
 ### External Video
@@ -112,8 +112,8 @@ Use the *External Video* Fragment to embed additional video sources in your Cont
 
 ![The External Video Fragment supports video sources in a valid video URL and Documents and Media](./page-fragments-user-interface-reference/images/16.gif)
 
-```note::
-   The External Video Fragment does not support video controls for autoplay, loop, or mute. If you don't need these controls in the Content Page, use the External Video Fragment. If you need to provide these controls, use the `Video URL Fragment <#video-url>`_ instead.
+```{note}
+The External Video Fragment does not support video controls for autoplay, loop, or mute. If you don't need these controls in the Content Page, use the External Video Fragment. If you need to provide these controls, use the [Video URL Fragment](#video-url) instead.
 ```
 
 ### Heading

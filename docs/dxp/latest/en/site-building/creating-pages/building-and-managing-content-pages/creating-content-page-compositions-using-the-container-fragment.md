@@ -2,8 +2,8 @@
 
 Layout and composition are the foundation of your [Content Page](./content-pages-overview.md) design. When you get this right, your Content Page is easier to read and navigate, resulting in a richer and more consistent user experience. Using the [Container Fragment](./page-fragments-user-interface-reference.md#container) in Liferay DXP, you can define drop zones for other Fragments, create Page compositions with a high degree of customization, and reuse these compositions across your Site Pages.
 
-```tip::
-   In addition to the Container Fragment, you can use the `Grid Fragment <./page-fragments-user-interface-reference.md#grid>`_ to customize the Content Page layout and create a responsive design. For more information, see `Building Responsive Layouts with the Grid Fragment <../../optimizing-sites/building-a-responsive-site/building-responsive-layouts-with-the-grid-fragment.md>`_.
+```{tip}
+In addition to the Container Fragment, you can use the [Grid Fragment](./page-fragments-user-interface-reference.md#grid) to customize the Content Page layout and create a responsive design. For more information, see [Building Responsive Layouts with the Grid Fragment](../../optimizing-sites/building-a-responsive-site/building-responsive-layouts-with-the-grid-fragment.md).
 ```
 
 When you [create a new Content Page](../adding-pages/adding-a-page-to-a-site.md), a default drop zone appears. You can add any Fragment to this area, but using the Container Fragment as the first element in your composition has important advantages:
@@ -15,8 +15,8 @@ When you [create a new Content Page](../adding-pages/adding-a-page-to-a-site.md)
 
 ![You can add Fragments on the by-default drop zone of a new Content Page.](./creating-content-page-compositions-using-the-container-fragment/images/01.png)
 
-```note::
-   When designing your Content Page layout, start with the Container Fragment. Add other Fragments on top of this Container for maximum flexibility and layout control.
+```{note}
+When designing your Content Page layout, start with the Container Fragment. Add other Fragments on top of this Container for maximum flexibility and layout control.
 ```
 
 ## Example: Using the Container Fragment for a Banner Composition
@@ -80,8 +80,8 @@ This step-by-step example shows you how to create a banner-style composition usi
 
     ![Configure the button Fragment target link.](./creating-content-page-compositions-using-the-container-fragment/images/09.png)
 
-```note::
-   You don't need to Publish the Content Page. In-progress work on a Content Page is automatically saved as a draft.
+```{note}
+You don't need to Publish the Content Page. In-progress work on a Content Page is automatically saved as a draft.
 ```
 
 ### Step 3: Saving the Fragment Composition
@@ -96,8 +96,8 @@ By default, the Container Fragment uses a *Fluid* width configuration. You can c
 
 ![You can change the Container Width property to use a fixed width or adapt to the Page width.](./creating-content-page-compositions-using-the-container-fragment/images/18.gif)
 
-```warning::
-   To avoid breaking your Site layout configuration, use a test environment when working with Style Books. Do not update a Style Book configuration for testing purposes on a production Site.
+```{warning}
+To avoid breaking your Site layout configuration, use a test environment when working with Style Books. Do not update a Style Book configuration for testing purposes on a production Site.
 ```
 
 1. From the Selection (![Selection](../../../images/icon-pages-tree.png)) panel, click the inner Container Fragment.

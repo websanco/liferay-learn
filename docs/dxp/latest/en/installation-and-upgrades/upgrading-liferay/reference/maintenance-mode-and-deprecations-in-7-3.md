@@ -12,7 +12,7 @@ Obsolete features are eventually removed or replaced with newer, better features
 Plan to stop using deprecated features because their support may cease as early as the next minor release.
 ```
 
-```important
+```{important}
 Please see [Maintenance Mode and Deprecation Policies](https://help.liferay.com/hc/en-us/articles/360015767952-Maintenance-Mode-and-Deprecation) for details.
 ```
 

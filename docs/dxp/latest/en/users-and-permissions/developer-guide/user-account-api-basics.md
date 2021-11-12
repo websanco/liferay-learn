@@ -113,8 +113,8 @@ Here are the command's arguments:
 | `-d "{\"alternateName\": \"Able\", \"emailAddress\": \"able@liferay.com\", \"familyName\": \"Foo\", \"givenName\": \"Able\"}"` | The data you are requesting to post |
 | `-u "test@liferay.com:test"` | Basic authentication credentials |
 
-```note::
-   Basic authentication is used here for demonstration purposes. For production, you should authorize users via `OAuth2 <../../headless-delivery/using-oauth2/using-oauth2.md>`_.
+```{note}
+Basic authentication is used here for demonstration purposes. For production, you should authorize users via [OAuth2](../../headless-delivery/using-oauth2/using-oauth2.md).
 ```
 
 The other cURL commands use similar JSON arguments.
@@ -137,14 +137,14 @@ The class calls the REST service with only three lines of code:
 | `UserAccountResource userAccountResource = builder.authentication(...).build()` | Specifies basic authentication and generates a `UserAccountResources` service instance. |
 | `UserAccount userAccount = userAccountResource.postUserAccount(...)` | Calls the `userAccountResource.postUserAccount` method and passes the data to post. |
 
-```note::
-   The ``main`` method's comment demonstrates running the class.
+```{note}
+The `main` method's comment demonstrates running the class.
 ```
 
 The other example Java classes are similar to this one but call different `UserAccountResource` methods.
 
-```important::
-   See `UserAccountResource <https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/headless/headless-admin-user/headless-admin-user-client/src/main/java/com/liferay/headless/admin/user/client/resource/v1_0/UserAccountResource.java>`_ for service details.
+```{important}
+See [UserAccountResource](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/headless/headless-admin-user/headless-admin-user-client/src/main/java/com/liferay/headless/admin/user/client/resource/v1_0/UserAccountResource.java) for service details.
 ```
 
 Below are examples of calling the other User REST services using cURL and Java.

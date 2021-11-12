@@ -11,16 +11,16 @@ Page Fragments have access to these types of liferay-specific tags and attribute
 - [Embedded Widgets](#including-widgets-within-a-fragment)
 - [Localizable Fragment Fields](#localizing-fragment-configuration-fields)
 
-```note::
-  When you start typing the name of a tag, the `HTML editor <../../developing-page-fragments/using-the-fragments-editor.md>`_ provides auto-completion for `lfr` tags like editable elements and embeddable widgets.
+```{note}
+When you start typing the name of a tag, the [HTML editor](../../developing-page-fragments/using-the-fragments-editor.md) provides auto-completion for `lfr` tags like editable elements and embeddable widgets.
 ```
 
 The text or images you provide here are the default values for the fields. You may want to display them in the final version of the page, or you may want filler text that should be replaced before the page is published.
 
 All of these work together to help you create dynamic, reusable elements for building a site. For example, if you need a small text box with an image and link to provide a product description, you can create a Fragment containing editable filler text, space for an editable image, the appropriate formatting, and an editable link. You can then add the Fragment to multiple pages and define the image, text, and link for each product you need to describe.
 
-```warning::
-  IDs of editable elements must be unique. Do not change the ID after the Page Fragment has been added to a page. Changing the ID of an editable Fragment after it's been modified can cause the changes to be lost.
+```{warning}
+IDs of editable elements must be unique. Do not change the ID after the Page Fragment has been added to a page. Changing the ID of an editable Fragment after it's been modified can cause the changes to be lost.
 ```
 
 You can make a Fragment even more dynamic by including a widget. Currently, portlets are the only embeddable types of widgets, but other options are planned.
@@ -29,8 +29,8 @@ You can make a Fragment even more dynamic by including a widget. Currently, port
 
 This reference list the available editable tags and attributes along with examples of how to use them in your Fragments.
 
-```note::
-  Since Liferay Portal 7.3 GA3 and Liferay DXP 7.3, you can use ``data-lfr-editable*`` attributes to define elements as editable, rather than wrapping editable elements with ``lfr-editable`` tags. The old tags still work for backwards compatibility, but we recommend that you use the newer data attributes if you're running Portal 7.3 GA3+ or Liferay DXP 7.3, as they are easier to write.
+```{note}
+Since Liferay Portal 7.3 GA3 and Liferay DXP 7.3, you can use `data-lfr-editable*` attributes to define elements as editable, rather than wrapping editable elements with `lfr-editable` tags. The old tags still work for backwards compatibility, but we recommend that you use the newer data attributes if you're running Portal 7.3 GA3+ or Liferay DXP 7.3, as they are easier to write.
 ```
 
 ## Making Text Editable
@@ -43,8 +43,8 @@ You can make Fragment text editable by including the `data-lfr-editable-type="te
 </p>
 ```
 
-```note::
-   All block elements and inline elements are supported for editable text.
+```{note}
+All block elements and inline elements are supported for editable text.
 ```
 
 For Liferay Portal 7.3 GA2 and below, use the syntax below. A unique ID is required to render the element properly:
@@ -63,8 +63,8 @@ If you need formatting options like text or color styles, use `rich-text`:
 </p>
 ```
 
-```note::
-   All block element tags are supported for editable Rich text.
+```{note}
+All block element tags are supported for editable Rich text.
 ```
 
 For Liferay Portal 7.3 GA2 and below, use the syntax below:
@@ -75,8 +75,8 @@ For Liferay Portal 7.3 GA2 and below, use the syntax below:
 </lfr-editable>
 ```
 
-```note::
-  If you want to make text inside an HTML element editable, you must use the ``rich-text`` type. The ``text`` type strips HTML formatting out of the text before rendering.
+```{note}
+If you want to make text inside an HTML element editable, you must use the `rich-text` type. The `text` type strips HTML formatting out of the text before rendering.
 ```
 
 ## Making Images Editable
@@ -210,8 +210,8 @@ When you deploy your widget, it's available to add. The name you specify in the 
 </lfr-widget-app-name>
 ```
 
-```note::
-    According to the W3C HTML standards, custom elements can't be self-closing. Therefore, even though you can't add anything between the opening and closing ``<lfr-widget...>`` tags, you can't use the self-closing notation for the tag.
+```{note}
+According to the W3C HTML standards, custom elements can't be self-closing. Therefore, even though you can't add anything between the opening and closing `<lfr-widget...>` tags, you can't use the self-closing notation for the tag.
 ```
 
 ## Localizing Fragment Configuration Fields
@@ -220,8 +220,8 @@ When you deploy your widget, it's available to add. The name you specify in the 
 
 You can change the Fragment configuration fields depending on the Page's target language. For example, on a Button Fragment you can define one button type when the page language is en-US, and a different button type when the page language is es-ES. To localize a Fragment configuration field, use the `localizable` attribute.
 
-```note::
-    The `localizable` attribute is not available for Fragment configuration fields where the `configurationRole` property is set to `style`. 
+```{note}
+The `localizable` attribute is not available for Fragment configuration fields where the `configurationRole` property is set to `style`. 
 ```
 
 In the following code excerpt, the Button Fragment configuration sets the `localizable` attribute to `true` for the `fields` section under `fieldSets`. The `localizable` attribute is set at the field level. In the example, there is only one `buttonType` field. If you have a fragment with multiple fields, you can set the `localizable` attribute for each one:
@@ -265,8 +265,8 @@ You can use this sample code to change the button type depending on the Page's t
 
 ![Localizable elements in the Fragment show the flag icon under the General tab and support different configurations for different languages.](./fragment-specific-tags-reference/images/04.png)
 
-```tip::
-    The flag icon under the Fragment's General settings indicates the configuration field as localizable. 
+```{tip}
+The flag icon under the Fragment's General settings indicates the configuration field as localizable. 
 ```
 
 Fragments with the `localizable` attribute that do not specify a custom configuration for a language use the default Page language's configuration.

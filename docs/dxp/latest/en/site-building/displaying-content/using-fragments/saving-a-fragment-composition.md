@@ -23,7 +23,7 @@ To save the Fragment composition,
 
       ![Provide the information for the Fragment composition in the dialog that appears.](./saving-a-fragment-composition/images/02.png)
 
-    ```note::
+    ```{note}
     If no Site-specific Fragment Collection exists, the saved Fragment composition is saved automatically to a new Fragment Collection called Saved Fragments.
     ```
 
@@ -47,14 +47,14 @@ Your can use a saved Fragment composition from the Content Page editor:
 
 Your Fragment compositions are saved in the Fragments page, under the *Site Menu* &rarr; *Design* &rarr; *Fragments*. From here, you can manage your composition in the same way you manage other Fragments. For more information, read [Managing Page Fragments](./managing-page-fragments.md). Compositions can be exported or imported between Sites just as any other Fragment.
 
-```note::
-    In Liferay DXP 7.1 and 7.2, open the *Product Menu*, and go to *Site* → *Site Builder* → *Page Fragments*.
+```{note}
+In Liferay DXP 7.1 and 7.2, open the *Product Menu*, and go to *Site* → *Site Builder* → *Page Fragments*.
 ```
 
 ![The saved Fragment composition can be used immediately.](./saving-a-fragment-composition/images/05.png)
 
-```note::
-  The latest version of the `Liferay Fragments Toolkit <../../developer-guide/developing-page-fragments/using-the-fragments-editor.md>`_ supports creation, export/import, and preview of Fragment compositions.
+```{note}
+The latest version of the [Liferay Fragments Toolkit](../../developer-guide/developing-page-fragments/using-the-fragments-editor.md) supports creation, export/import, and preview of Fragment compositions.
 ```
 
 ## Related Information

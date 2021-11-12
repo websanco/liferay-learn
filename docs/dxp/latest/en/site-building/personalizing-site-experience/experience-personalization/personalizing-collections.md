@@ -4,16 +4,16 @@
 
 By default, any user can see all the Collection's content and is part of *Anyone* group. You can create a *Personalized Variation* of the Collection's items using [Segments](../segmentation/creating-and-managing-user-segments.md). When you use a Personalized Variation, the items that are part of your Collection don't change, but the Collection Page or Collection Display Fragment show the items filtered for the Segment.
 
-```note::
-   To customize a Collection using Segments, you must define the Segments first. For more information, see `Creating and Managing User Segments <../segmentation/creating-and-managing-user-segments.md>`_.
+```{note}
+To customize a Collection using Segments, you must define the Segments first. For more information, see [Creating and Managing User Segments](../segmentation/creating-and-managing-user-segments.md).
 ```
 
 ![Collections are available for anyone, by default](./personalizing-collections/images/02.png)
 
 Consider the following example. You want to increase sales in your online Kitchenware Store by offering exclusive promotions to registered users. You create a Collection including promotions for registered users and news about your products. You want all users to see the news about your products, but you want to restrict the promotions to registered users. In this example, you can create a new Segment for registered users, and link the Segment to a new Personalized Variation that filters the promotional content.
 
-```tip::
-   You can create multiple Personalized Variations for a Collection, and edit or delete them as needed. You can also edit the *Anyone* Personalized Variation, but you cannot delete it.
+```{tip}
+You can create multiple Personalized Variations for a Collection, and edit or delete them as needed. You can also edit the *Anyone* Personalized Variation, but you cannot delete it.
 ```
 
 ## Creating a Personalized Variation

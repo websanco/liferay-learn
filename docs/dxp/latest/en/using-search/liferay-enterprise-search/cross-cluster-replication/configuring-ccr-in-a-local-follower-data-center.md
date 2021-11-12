@@ -10,8 +10,8 @@ The example configurations are also provided in full in the [CCR configuration r
 
 The local Elasticsearch cluster must hold follower (replicated; read-only) indexes and acts as the local search engine co-located Liferay DXP nodes can read from.
 
-```important::
-   **Securing a CCR Installation:** As `stated earlier <./configuring-an-example-ccr-installation-replicating-between-data-centers.md#prerequisite-for-security-configure-authentication-and-encryption>`__ the Elasticsearch clusters should use node certificates signed by the same CA and the security settings of each cluster should match. For other approaches and details, `see Elastic's documentation <https://www.elastic.co/guide/en/elasticsearch/reference/7.x/cross-cluster-configuring.html>`__.
+```{important}
+**Securing a CCR Installation:** As [stated earlier](./configuring-an-example-ccr-installation-replicating-between-data-centers.md#prerequisite-for-security-configure-authentication-and-encryption)_ the Elasticsearch clusters should use node certificates signed by the same CA and the security settings of each cluster should match. For other approaches and details, [see Elastic's documentation](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/cross-cluster-configuring.html)_.
 ```
 
 1. Configure its `elasticsearch.yml`:
@@ -62,16 +62,16 @@ The local Elasticsearch cluster must hold follower (replicated; read-only) index
 
 ## Configure the Local Liferay DXP Cluster Node
 
-```tip::
-   If testing locally, configure Tomcat to use different ports than your remote DXP node. Use `9080` as the HTTP port, `9443` as the redirect port, and `9005` as the shutdown port to follow this example setup (change the server ports in `[Liferay Home]/tomcat-[version]/conf/server.xml`).
+```{tip}
+If testing locally, configure Tomcat to use different ports than your remote DXP node. Use `9080` as the HTTP port, `9443` as the redirect port, and `9005` as the shutdown port to follow this example setup (change the server ports in `[Liferay Home]/tomcat-[version]/conf/server.xml`).
 ```
 
 1. Copy the [Elasticsearch connection configuration files](./configuring-ccr-in-a-remote-leader-data-center.md#configure-the-remote-liferay-dxp-cluster-node) from the remote DXP cluster node's `osgi/configs` folder, into the corresponding folder on the local DXP cluster node. 
 
    For Liferay DXP 7.3, this includes `*ElasticsearchConnectionConfiguration-remote.config` and `*ElasticsearchConfiguration.config`.
 
-   ```important::
-      The ``remoteClusterConnectionId`` value in the ``ElasticsearchConfiguration.config`` must match the ``connectionId`` in the ``ElasticsearchConnectionConfiguration-remote.config`` file. 
+   ```{important}
+   The `remoteClusterConnectionId` value in the `ElasticsearchConfiguration.config` must match the `connectionId` in the `ElasticsearchConnectionConfiguration-remote.config` file. 
    ```
 
    For Liferay DXP 7.1 and 7.2, this includes `*ElasticsearchConfiguration.config` and `*XPackSecurityConfiguration.config`.
@@ -99,8 +99,8 @@ The local Elasticsearch cluster must hold follower (replicated; read-only) index
 
    For Liferay DXP 7.1 and 7.2, provide a configuration file to `Liferay Home/osgi/configs` named `com.liferay.portal.search.elasticsearch.cross.cluster.replication.internal.configuration.ElasticsearchConnectionConfiguration-ccr.config`.
 
-   ```warning::
-      On Liferay 7.2, do not deploy the configuration file for the CCR connection (e.g., ``ElasticsearchConnectionConfiguration-ccr.config``) simultaneously with the LES Cross-Cluster Replication LPKG's initial deployment. There's a known bug (`LPS-127821 <https://issues.liferay.com/browse/LPS-127821>`__) that breaks Liferay's search functionality if the configuration file is deployed before the module is fully started. If you've already encounterd this, see `Troubleshooting Cross-Cluster Replication <./troubleshooting-cross-cluster-replication.md#liferay-7-2-after-deploying-the-ccr-lpkg-and-the-elasticsearchconnectionconfiguration-file-search-is-broken>`__ for the workaround.
+   ```{warning}
+   On Liferay 7.2, do not deploy the configuration file for the CCR connection (e.g., `ElasticsearchConnectionConfiguration-ccr.config`) simultaneously with the LES Cross-Cluster Replication LPKG's initial deployment. There's a known bug ([LPS-127821](https://issues.liferay.com/browse/LPS-127821)_) that breaks Liferay's search functionality if the configuration file is deployed before the module is fully started. If you've already encounterd this, see [Troubleshooting Cross-Cluster Replication](./troubleshooting-cross-cluster-replication.md#liferay-7-2-after-deploying-the-ccr-lpkg-and-the-elasticsearchconnectionconfiguration-file-search-is-broken)_ for the workaround.
    ```
 
    ```properties
@@ -141,8 +141,8 @@ The LES Cross-Cluster Replication module triggers the following of the leader cl
 
 1. Set one value in _Local Cluster Configurations_ `localhost:9080,ccr`.
 
-   ```important::
-      Never set the value to the remote data center here (in the example, it would be ``localhost:8080,remote``). Setting this would cause follower indexes to be created in the remote cluster, where leader indexes of the same name already reside.
+   ```{important}
+   Never set the value to the remote data center here (in the example, it would be `localhost:8080,remote`). Setting this would cause follower indexes to be created in the remote cluster, where leader indexes of the same name already reside.
    ```
 
    This defines the connections that should be read-only. In human language, each entry here is saying "the Liferay server at this address (``localhost:9080``) reads from the Elasticsearch connection with this name (``ccr`` in this example)." 

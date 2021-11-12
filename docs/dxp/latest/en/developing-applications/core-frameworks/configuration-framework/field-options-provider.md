@@ -26,7 +26,7 @@ You can populate a [drop-down list manually](./setting-and-accessing-configurati
     ./gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)
     ```
 
-    ```note::
+    ```{note}
     This command is the same as copying the deployed jars to `/opt/liferay/osgi/modules` on the Docker container.
     ```
 

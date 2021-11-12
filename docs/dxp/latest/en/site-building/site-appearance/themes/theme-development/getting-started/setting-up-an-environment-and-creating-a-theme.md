@@ -6,8 +6,8 @@ Creating a theme is the first step in theme development. Once you have your own 
 
 Themes are created using the Liferay Theme Generator. Liferay DXP 7.3 uses version 10.x.x of the Theme Generator.
 
-```note::
-   Older versions of the Liferay Theme Generator can be used to generate themes for older versions of Liferay DXP. To create themes for DXP 7.0 or 7.1, install version 8.x.x of the Theme Generator.
+```{note}
+Older versions of the Liferay Theme Generator can be used to generate themes for older versions of Liferay DXP. To create themes for DXP 7.0 or 7.1, install version 8.x.x of the Theme Generator.
 ```
 
 ### Installation
@@ -34,8 +34,8 @@ Run the Liferay Theme Generator with these steps:
     yo liferay-theme
     ```
 
-    ```important::
-       You can add the name of a base theme to this command to base your new theme off of it. For example, running ``yo liferay-theme:classic`` will base your new theme off of DXP's Classic theme.
+    ```{important}
+    You can add the name of a base theme to this command to base your new theme off of it. For example, running `yo liferay-theme:classic` will base your new theme off of DXP's Classic theme.
     ```
     <!-- Add link to an explanation of choosing (and changing) the base theme when available.-->
 

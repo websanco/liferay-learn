@@ -6,8 +6,8 @@ Liferay [Organizations](./understanding-organizations.md) provide a convenient w
 
 Organization role permissions are defined at the global level and are scoped to the specific Organization in which they're assigned. These roles also grant Users corresponding, implicit privileges in a connected [Organization Site](./organization-sites.md). However, some Organization roles also grant privileges in child Organizations and their Sites. If desired, you can use Site Roles and create [Site Teams](../../site-building/building-sites/site-membership/creating-teams-for-sites.md) to explicitly assign additional roles to Users within an Organization Site. See [Understanding Roles and Permissions](../roles-and-permissions/understanding-roles-and-permissions.md) for more information.
 
-```note::
-   By default, Organization roles do not grant access to the Control Panel. However, Organization Administrators and Owners can access any Organizations they manage by clicking on *My Organizations* in the dropdown *Personal Menu*.
+```{note}
+By default, Organization roles do not grant access to the Control Panel. However, Organization Administrators and Owners can access any Organizations they manage by clicking on *My Organizations* in the dropdown *Personal Menu*.
 ```
 
 Liferay DXP provides the following default Organization Roles:
@@ -16,8 +16,8 @@ Liferay DXP provides the following default Organization Roles:
 
 This role grants basic privileges within an Organization and is automatically assigned to all its members. If the Organization has an attached Site, this role also grants the User basic Site membership.
 
-```note::
-   Members of child Organizations are implicit members of their parent Organizations. This means, for example, that members of child Organizations can access the private pages of their parent Organizations. This behavior can be customized in the ``Organizations`` `section of the portal-ext.properties <https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#Organizations>`_ file where the properties specific to Organizations are listed.
+```{note}
+Members of child Organizations are implicit members of their parent Organizations. This means, for example, that members of child Organizations can access the private pages of their parent Organizations. This behavior can be customized in the `Organizations` [section of the portal-ext.properties](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#Organizations) file where the properties specific to Organizations are listed.
 ```
 
 ### Organization Administrator

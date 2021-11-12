@@ -2,8 +2,8 @@
 
 Most Liferay DXP System Settings allow just one set of configurations for an entry. To change the configuration, you update the single configuration form, and it applies throughout the [affected configuration scope](../understanding-configuration-scope.md). Less commonly, a configuration supports multiple entries that simultaneously coexist: these are called *factory configurations*. For factory configurations, each configuration set provides a unique configuration. A common usage is for configuring system-scoped connections to third party servers (e.g., LDAP and Elasticsearch). Since each connection to these servers requires unique configuration values, a factory configuration is used to make it possible.
 
-```tip::
-    Factory Configuration Example: `Adding Organization types <../../../users-and-permissions/organizations/adding-a-new-organization-type.md>`_ is supported, and is useful if you need to model real-life hierarchies or enforce hierarchical rules. In Liferay DXP, each Organization type is created via a factory configuration entry in System Settings.
+```{tip}
+Factory Configuration Example: [Adding Organization types](../../../users-and-permissions/organizations/adding-a-new-organization-type.md) is supported, and is useful if you need to model real-life hierarchies or enforce hierarchical rules. In Liferay DXP, each Organization type is created via a factory configuration entry in System Settings.
 ```
 
 ## Identifying Factory Configurations
@@ -49,8 +49,8 @@ The next instance contains a unique *subname* (something other than *default*). 
 com.liferay.organizations.internal.configuration.OrganizationTypeConfiguration~league.config
 ```
 
-```warning::
-   Providing a configuration file with a subname forces a factory configuration scenario, even if the service isn't designed to accept multiple configuration entries. Use the System Settings UI as described above to determine if using factory configurations is supported for a configuration entry. 
+```{warning}
+Providing a configuration file with a subname forces a factory configuration scenario, even if the service isn't designed to accept multiple configuration entries. Use the System Settings UI as described above to determine if using factory configurations is supported for a configuration entry. 
 ```
 
 Some System Settings entries that support factory configuration don't ship with a configuration file for the default instance (e.g., the Anonymous User entry). If you export a factory configuration file to obtain the `.config` file, it doesn't use the `~default.config` naming convention. Instead, whether it's the first occurrence or an additional one, it's given a guaranteed unique identifier for its subname:

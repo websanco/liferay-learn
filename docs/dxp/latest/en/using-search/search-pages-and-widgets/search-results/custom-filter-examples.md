@@ -87,8 +87,8 @@ There's no configuration for searching multiple Sites on one Search Page without
    - Create at least one parent Site with a child Site.
    - Create at least one additional Site that won't be included in the search.
 
-   ```tip::
-      To find the Group ID of a Site, in the site menu navigate to Configuration > Settings. The displayed `Site ID` is the ``groupId`` you can use to filter the Site.
+   ```{tip}
+   To find the Group ID of a Site, in the site menu navigate to Configuration > Settings. The displayed `Site ID` is the `groupId` you can use to filter the Site.
    ```
 
 1. Create at least one piece of content in each Site (a Blogs Entry), and include the word _Liferay_ in each.
@@ -146,8 +146,8 @@ Using parentheses is recommended to ensure that your intended precedence is enfo
 
 Simplifying the configuration of a search page (often a complex case is handled with just one Custom Filter widget) is nice, but the Query String query is not the answer to all complexity in the custom Filter widget. Some queries cannot be mimicked using the Query String type. For example, it cannot handle Nested queries to search nested documents, Term queries to avoid analysis, or Prefix queries to search based on prefixes.
 
-```warning::
-   The Query String query should not be used if the value being passed is coming from the search bar (as demonstrated in `Boosting Matches to Designated Fields`_. If the Search Bar's user enters a keyword containing invalid syntax, an error is returned.
+```{warning}
+The Query String query should not be used if the value being passed is coming from the search bar (as demonstrated in `Boosting Matches to Designated Fields`_. If the Search Bar's user enters a keyword containing invalid syntax, an error is returned.
 ```
 
 ## Boosting Matches to Nested Fields

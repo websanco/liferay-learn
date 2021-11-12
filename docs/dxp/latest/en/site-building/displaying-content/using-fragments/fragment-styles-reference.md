@@ -13,8 +13,8 @@ If you use a [Container Fragment](./using-page-fragments.md#layout-elements), yo
 | Fluid | The Container's width changes if the browser window is resized; you can configure the Left and Right Margins (see below). |
 | Fixed Width | The Left and Right Margins are of a fixed size. |
 
-```tip::
-   Many of the styles correspond to CSS classes. If you know CSS, many of the following fields will be familiar.
+```{tip}
+Many of the styles correspond to CSS classes. If you know CSS, many of the following fields will be familiar.
 ```
 
 Many of the following styles have defined tokens; see [Creating a Style Book](../../site-appearance/style-books/using-a-style-book-to-standardize-site-appearance.md) and [Style Book Token Definitions](../../site-appearance/style-books/developer-guide/style-book-token-definitions.md) for more information.

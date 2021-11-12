@@ -33,8 +33,8 @@ You can set different style options like background color, background image, mar
 
       ![You can set different style options for your layout.](./configuring-elements-on-content-pages/images/05.png)
 
-```note::
-   The available color palette can be configured by the Fragment developer. See `Fragment Configuration Types Reference <../../../site-building/developer-guide/reference/fragments/fragment-configuration-types-reference.md>`_ for more information.
+```{note}
+The available color palette can be configured by the Fragment developer. See [Fragment Configuration Types Reference](../../../site-building/developer-guide/reference/fragments/fragment-configuration-types-reference.md) for more information.
 ```
 
 ## Editing Text In-Line
@@ -45,8 +45,8 @@ You can set different style options like background color, background image, mar
 
     ![You can modify editable text.](./configuring-elements-on-content-pages/images/07.png)
 
-```note::
-   Heading fragments cannot have line breaks. This is because Heading fields use ``text`` while Paragraph fragments use ``rich-text`` fields; only the latter can have multiple line texts separated by a line break.
+```{note}
+Heading fragments cannot have line breaks. This is because Heading fields use `text` while Paragraph fragments use `rich-text` fields; only the latter can have multiple line texts separated by a line break.
 ```
 
 Starting with Liferay DXP 7.4, you can configure a link to a URL or Page in editable text elements.
@@ -100,8 +100,8 @@ You can also specify a background image for a layout by [setting the layout styl
 
 Starting with Liferay DXP 7.4, you can use [Adaptive Media](../../../content-authoring-and-management/documents-and-media/publishing-and-sharing/serving-device-and-screen-optimized-media/how-adaptive-media-works.md) to adjust the image resolution dynamically, based on the target screen size.
 
-```note::
-   Adaptive Media is enabled by default in Liferay DXP. 
+```{note}
+Adaptive Media is enabled by default in Liferay DXP. 
 ```
 
 After you [enable an image resolution](../../../content-authoring-and-management/documents-and-media/publishing-and-sharing/serving-device-and-screen-optimized-media/managing-image-resolutions.md) in Adaptive Media, the resolution is available in the Resolution drop-down menu for your Content Page image.
@@ -133,8 +133,8 @@ You can adjust the module's width to customize the layout:
 
    ![You can adjust the spacing of modules in a Layout.](./configuring-elements-on-content-pages/images/16.gif)
 
-   ```tip::
-      You can use the Grid Fragment to customize the content layout for the different screens on desktop and mobile devices. For more information, see `Building Responsive Layouts with the Grid Fragment <../../optimizing-sites/building-a-responsive-site/building-responsive-layouts-with-the-grid-fragment.md>`_
+   ```{tip}
+   You can use the Grid Fragment to customize the content layout for the different screens on desktop and mobile devices. For more information, see [Building Responsive Layouts with the Grid Fragment](../../optimizing-sites/building-a-responsive-site/building-responsive-layouts-with-the-grid-fragment.md)
    ```
 
 ## Copying a Page Fragment
@@ -146,12 +146,12 @@ To save time, you can duplicate a Fragment (Component, Section, Row, etc.):
 
     ![You can duplicate Fragments on the Page.](./configuring-elements-on-content-pages/images/10.png)
 
-```note::
-  When you duplicate a Fragment, you also duplicate the mappings and customizations.
+```{note}
+When you duplicate a Fragment, you also duplicate the mappings and customizations.
 ```
 
-```warning::
-  Layouts (Sections or Rows) containing instanceable Widgets cannot be duplicated. In this case, a message appears indicating the Widget preventing the duplication.
+```{warning}
+Layouts (Sections or Rows) containing instanceable Widgets cannot be duplicated. In this case, a message appears indicating the Widget preventing the duplication.
 ```
 
 ## Mapping Content

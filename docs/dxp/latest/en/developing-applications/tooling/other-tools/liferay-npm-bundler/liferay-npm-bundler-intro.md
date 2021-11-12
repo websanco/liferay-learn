@@ -4,8 +4,8 @@ The liferay-npm-bundler is a bundler (like [Webpack](https://webpack.github.io/)
 
 The workflow for running npm packages inside widgets is slightly different from standard bundlers. Instead of bundling the JavaScript in a single file, you must *link* all packages together in the browser when the full web page is assembled. Widgets can then share common versions of modules rather than each loading its own copy. The liferay-npm-bundler handles this for you.
 
-```note::
-   You can also find information for the liferay-npm-bundler in the `project's Wiki <https://github.com/liferay/liferay-npm-build-tools/wiki>`_.
+```{note}
+You can also find information for the liferay-npm-bundler in the [project's Wiki](https://github.com/liferay/liferay-npm-build-tools/wiki).
 ```
 
 ## How the Liferay npm Bundler Works Internally
@@ -40,8 +40,8 @@ The liferay-npm-bundler uses the process below to create the OSGi bundle:
 
 The only difference between the pre-process and post-process steps are when they are run (before or after Babel is run, respectively). During this workflow, liferay-npm-bundler calls all the configured plugins so they can perform transformations on the npm packages (for instance, modifying their `package.json` files or deleting or moving files).
 
-```note::
-   The pre, post, and Babel phases were designed for the old mode of operation (See the `Migrating Your Project to Use the New Mode <./bundler-migration-guide/migrating-to-the-new-mode.md>`_ for more information) and they will gradually be replaced with rules for the new mode.
+```{note}
+The pre, post, and Babel phases were designed for the old mode of operation (See the [Migrating Your Project to Use the New Mode](./bundler-migration-guide/migrating-to-the-new-mode.md) for more information) and they will gradually be replaced with rules for the new mode.
 ```
 
 This reference covers the liferay-npm-bundler's configuration, default presets, format, and more.

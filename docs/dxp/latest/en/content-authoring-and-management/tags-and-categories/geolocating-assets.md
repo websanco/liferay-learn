@@ -21,8 +21,8 @@ To set your location for the web content, you can share your location with the b
 
 ![You can enter your location in the address bar, move the indicator to a location, or share your location with the browser.](./geolocating-assets/images/15.png)
 
-```note::
-   Depending on your browser settings, you may need to configure it to share your location.
+```{note}
+Depending on your browser settings, you may need to configure it to share your location.
 ```
 
 ## Geolocating Data Lists

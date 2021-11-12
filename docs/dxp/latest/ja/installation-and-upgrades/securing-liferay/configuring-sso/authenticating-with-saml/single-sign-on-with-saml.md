@@ -11,8 +11,8 @@
 
 Liferay DXP instances can serve as either Service Provider (SP) or Identity Provider (IdP).
 
-```note::
-   A single Liferay DXP instance is *either* the SP or the IdP in your SSO setup; it can't be both. You can, however, use separate instances for both purposes (for example, one instance is the SP and another is the IdP).
+```{note}
+A single Liferay DXP instance is *either* the SP or the IdP in your SSO setup; it can't be both. You can, however, use separate instances for both purposes (for example, one instance is the SP and another is the IdP).
 ```
 
 You can jump right to configuring SAML or learn how it works:
@@ -35,6 +35,6 @@ The `5.0.0` version of the application brings the following improvements:
 * Support for stronger Signature Algorithms (like `SHA-256`)
 * Signature method algorithm URLs can now be blacklisted from the metadata (for example, disabling `SHA-1`: `http://www.w3.org/2000/09/xmldsig#rsa-sha1`)
 
-```important::
-   If you're upgrading from a Liferay SAML adapter prior to version 3.1.0, your portal properties are automatically migrated to System Settings configurations. Please see the [Setting SAML Options](./06-configuring-saml.md) article for details on settings.
+```{important}
+If you're upgrading from a Liferay SAML adapter prior to version 3.1.0, your portal properties are automatically migrated to System Settings configurations. Please see the [Setting SAML Options](./06-configuring-saml.md) article for details on settings.
 ``` -->

@@ -8,8 +8,8 @@ Follow these steps to create a Structure:
 1. Enter the title of your new Structure and, optionally, choose its language.
 1. Drag and drop the [available fields](#structure-fields) onto the Structure and [configure their settings](./configuring-structure-fields.md#configurable-settings) to create the Structure.
 
-    ```tip::
-       When you create or `edit a Structure <./configuring-structure-fields.md>`_, the *View* tab is selected by default. You can switch to the *Source* tab to view the Structure's raw XML and modify it directly.
+    ```{tip}
+    When you create or [edit a Structure](./configuring-structure-fields.md), the *View* tab is selected by default. You can switch to the *Source* tab to view the Structure's raw XML and modify it directly.
     ```
 
 1. Optionally, add a *Description* for your Structure.
@@ -17,8 +17,8 @@ Follow these steps to create a Structure:
 
 ![When creating a new Structure, you can drag fields from the palette and drop them on the canvas.](./creating-structures/images/01.png)
 
-```warning::
-  Due to import/export operations, it's possible to have both a global and a Site-scoped Structure with the same ``structureKey``. If this happens, the Site-scoped Structure takes precedence, and you can't access the global Structure from that Site.
+```{warning}
+Due to import/export operations, it's possible to have both a global and a Site-scoped Structure with the same `structureKey`. If this happens, the Site-scoped Structure takes precedence, and you can't access the global Structure from that Site.
 ```
 
 ## Structure Fields
@@ -41,8 +41,8 @@ You can place these fields on a Structure:
 
 **Image:** An image selector to include an image from the Documents and Media library or your computer
 
-```note::
-  If you upload an image from your computer, the image is only available for that particular article.
+```{note}
+If you upload an image from your computer, the image is only available for that particular article.
 ```
 
 **Integer:** An input that accepts whole numbers

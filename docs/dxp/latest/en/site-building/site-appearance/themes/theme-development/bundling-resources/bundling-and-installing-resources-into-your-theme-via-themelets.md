@@ -57,8 +57,8 @@ This command globally installs the themelet so that you can select it when exten
 
 Once you have a themelet installed globally, you can add it to any theme.
 
-```note::
-   If you do not have a theme to add your themelet to, then see `Creating a Theme <../getting-started/setting-up-an-environment-and-creating-a-theme.md>`__ for steps to create one.
+```{note}
+If you do not have a theme to add your themelet to, then see [Creating a Theme](../getting-started/setting-up-an-environment-and-creating-a-theme.md)_ for steps to create one.
 ```
 
 Add your themelet to any theme with the `gulp extend` command:

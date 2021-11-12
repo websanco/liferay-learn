@@ -13,8 +13,8 @@ The [Fragments Toolkit](../../developing-page-fragments/using-the-fragments-tool
   7.2 SP1+ and Liferay Portal 7.2 GA2+. You must install the [OAuth 2](https://web.liferay.com/marketplace/-/mp/application/109571986) plugin in your portal instance for this command to work properly. |
 | `npm run compress` | Create a `.zip` file that can be manually imported into Portal |
 
-```note::
-  You can see all of the available tasks inside the ``scripts`` section in the Fragment Collection project's ``package.json``.
+```{note}
+You can see all of the available tasks inside the `scripts` section in the Fragment Collection project's `package.json`.
 ```
 
 With these tools at your disposal, you can efficiently manage creating and editing Page Fragments from the command line in your local environment.

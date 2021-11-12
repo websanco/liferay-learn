@@ -78,8 +78,8 @@ Please enter your database host (localhost):
 (etc.)
 ```
 
-```note::
-   Omitted values use the defaults displayed in the parentheses.
+```{note}
+Omitted values use the defaults displayed in the parentheses.
 ```
 
 ### Manual Configuration

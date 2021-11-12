@@ -19,8 +19,8 @@ Consider the following information when you assign permissions to Structures and
 
 Web Content Templates use the FreeMarker Template Language (FTL) by default. Users with permission to Create or Edit templates using FreeMarker may execute arbitrary code on your DXP instance and access sensitive information, including information about other users.
 
-```important::
-   Grant permission to Create or Edit templates in FreeMarker to trusted users only.
+```{important}
+Grant permission to Create or Edit templates in FreeMarker to trusted users only.
 ```
 
 You can disable template creation completely. Once disabled, Users can no longer access creation options for Web Content Templates. This action does not affect existing templates.

@@ -16,8 +16,8 @@ Once you confirm, you're directed to a process page where you can see the publis
 
 Similar to the standard process, single asset publishing includes associated dependencies: images, custom templates, or folders.
 
-```note::
-   Single asset publishing is not supported for page-scoped content.
+```{note}
+Single asset publishing is not supported for page-scoped content.
 ```
 
 ## Publishing Single Widgets

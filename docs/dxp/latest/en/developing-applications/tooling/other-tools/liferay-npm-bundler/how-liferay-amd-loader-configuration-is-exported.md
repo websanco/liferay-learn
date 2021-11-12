@@ -1,7 +1,7 @@
 # How AMD Loader Configuration is Exported
 
-```note::
-  If you don't understand how Liferay AMD Loader works under the hood, please read `Liferay AMD Module Loader <./understanding-bundler-loaders.md>`_ first.
+```{note}
+If you don't understand how Liferay AMD Loader works under the hood, please read [Liferay AMD Module Loader](./understanding-bundler-loaders.md) first.
 ```
 
 With [de-duplication](./how-portal-publishes-npm-packages.md#package-de-duplication) in place, JavaScript modules are made available to Liferay AMD Loader through the configuration returned by the `/o/js_loader_modules` URL.

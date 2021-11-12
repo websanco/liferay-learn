@@ -30,8 +30,8 @@ These rules apply to Site hierarchy:
 * If a Site Administrator creates a child Site, he or she has the same permissions in that child Site. This is because creating a Site makes you the owner of that Site (not inheritance).
 * A Site Administrator has no default Role in any child Sites created by other Site Administrators.
 
-```note::
-  If you want a User to have administrative access to all Sites in a Site/child Site hierarchy, you must create a Role based on the Site Administrator Role that has the permission *Manage Subsites*.
+```{note}
+If you want a User to have administrative access to all Sites in a Site/child Site hierarchy, you must create a Role based on the Site Administrator Role that has the permission *Manage Subsites*.
 ```
 
 ## Navigating Site Hierarchy with the Sites Directory Application

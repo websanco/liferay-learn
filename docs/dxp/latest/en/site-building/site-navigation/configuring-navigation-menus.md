@@ -2,8 +2,8 @@
 
 To display and configure a [Navigation Menu](./using-navigation-menus.md), you can use the [Menu Display Fragment](../creating-pages/building-and-managing-content-pages/page-fragments-user-interface-reference.md#menu-display) (available in Liferay DXP 7.4+) or Navigation Menu Widget. With any of these two options, you can define the menu display options and create different navigation levels for your Site.
 
-```note::
-   Configuring the Menu Display Fragment is easier than the Navigation Menu Widget, and you have preview options working with `Master Page Template <../creating-pages/defining-headers-and-footers/creating-a-master-page-template.md>`_ that Navigation Menu Widgets do not provide.
+```{note}
+Configuring the Menu Display Fragment is easier than the Navigation Menu Widget, and you have preview options working with [Master Page Template](../creating-pages/defining-headers-and-footers/creating-a-master-page-template.md) that Navigation Menu Widgets do not provide.
 ```
 
 ## Configuring the Menu Display Fragment

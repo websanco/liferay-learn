@@ -21,16 +21,16 @@ You can manage Tags under the Categorization panel in the Site Navigation menu. 
 
 ![Managing Tags is in the Site menu.](./tagging-content-and-managing-tags/images/03.png)
 
-```note::
-   Only Site administrators can manage Tags in the Tags panel.
+```{note}
+Only Site administrators can manage Tags in the Tags panel.
 ```
 
 1. Open the Product Menu and under the Site Menu, go to *Categorization* &rarr; *Tags*.
 1. To create a new tag, click *Add Tag* (![Add Tag](./../../images/icon-add.png)).
 1. Type your new tag and click *Save*.
 
-    ```note::
-       Tags are all-lowercase.
+    ```{note}
+    Tags are all-lowercase.
     ```
 
 1. To edit an existing tag, click the *Actions* (![Actions](./../../images/icon-actions.png)) menu next to the tag's name and select *Edit*.
