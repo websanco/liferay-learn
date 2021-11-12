@@ -1,14 +1,14 @@
 # What's New in Search for 7.4?
 
-This article enumerates the highlights and new features added to Liferay's search infrastructure for the 7.4 release. New features include those added to the product for Liferay CE 7.4 GA4 and Liferay DXP 7.4 GA1.
+There are several highlights and new features added to Liferay's search infrastructure for the 7.4 release. New features include those added to the product for Liferay CE 7.4 GA4 and Liferay DXP 7.4 GA1.
 
 ## Elasticsearch 7 Integration
 
 Elasticsearch 7 is supported in Liferay 7.4. Check the [Search Engine Compatibility Matrix](https://help.liferay.com/hc/en-us/articles/360016511651) for the latest information, including the minimum supported version, the client version, and the latest supported Elasticsearch version.
 
 ![Elasticsearch 7.15 is supported to run with Liferay DXP 7.4 GA1.](./whats-new-in-search-for-74/images/03.png)
-```{important}
 
+```{important}
 Elasticsearch 6.x is not supported on Liferay CE/DXP 7.4.
 ```
 
@@ -29,7 +29,7 @@ Beginning in Liferay 7.4, Server Administrators can limit the scope of the re-in
 
 To support searching for [Liferay Objects](../../developing-applications/developing-low-code-applications/objects.md), some search widgets have been enhanced:
 
-* The Type Facet automatically includes published Objects: 
+* The Type Facet automatically includes published Objects:
 
    ![Published Objects are added to the Type Facet widget.](./whats-new-in-search-for-74/images/05.png)
 
@@ -45,7 +45,7 @@ To support searching for [Liferay Objects](../../developing-applications/develop
 
 > **DXP Subscribers**
 
-### Search Tuning Data is Stored in the Database 
+### Search Tuning Data is Stored in the Database
 
 Beginning in DXP Liferay 7.4, the Result Rankings and Synonym Sets data is stored in the Liferay database, and a re-index action from the Search Administration panel can be used to populate each application's index with the proper data. In prior versions the indexes were used as primary data storage for these applications.
 
@@ -65,7 +65,7 @@ Starting with Liferay DXP 7.4, the [Liferay Enterprise Search (LES)](../liferay_
 
 ## Upgrading to DXP 7.4
 
-Upgrading from a previous DXP version to 7.4 requires no special considerations for most setups. If using Liferay Enterprise Search or Search Tuning, however, make sure you consider these points: 
+Upgrading from a previous DXP version to 7.4 requires no special considerations for most setups. If using Liferay Enterprise Search or Search Tuning, however, make sure you consider these points:
 
 1. The Search Tuning applications are now backed by database tables, whereas previous versions used Elasticsearch indexes for their data storage. See [Upgrading Search Infrastructure](../installing-and-upgrading-a-search-engine/elasticsearch/upgrading-elasticsearch/upgrading-search-infrastructure.md) for more information.
 1. The Liferay Enterprise Search applications are bundled with Liferay DXP. When upgrading to 7.4 no additional installation steps are required.
