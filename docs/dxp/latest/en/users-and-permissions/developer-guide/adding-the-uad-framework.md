@@ -67,20 +67,19 @@ This task is made easier with the use of [Service Builder](../../developing-appl
 
 ## Modify the Service Model Definition
 
-The H6D2 Portlet is based on the same code found in [Invoking a Service Locally](../../developing-applications/data-frameworks/service-builder/service-builder-basics/invoking-a-service-locally.md) but has been enabled with UAD. This tutorial assumes you have a working application that you created using Service Builder.
+This tutorial assumes that you have a working application that you created using Service Builder. To enable UAD, first make the following changes,
 
 1. Open your `service.xml` file in the `-service` folder.
 
     ```{literalinclude} ./adding-the-uad-framework/resources/liferay-h6d2.zip/h6d2-service/service.xml
     ```
 
-1. There are a few `entity` elements that are needed to enable UAD.
+1. There are two `entity` elements that are needed to enable UAD.
 
     | `entity` attributes | Description |
     | :------------------ | :---------- |
     | `uad-application-name` | Specifies the name of the application the entity type belongs to. |
     | `uad-package-path` | Specifies the package path for the generated UAD classes. |
-    | `uuid` | When set to `true`, a separate UUID column is generated for the service. |
 
 1. Add the following data fields if you don't already have them defined.
 
@@ -100,17 +99,27 @@ The H6D2 Portlet is based on the same code found in [Invoking a Service Locally]
 
 1. Next, specify the which data fields to anonymize. This is done with the use of two attributes:
 
-   * The `uad-anonymize-field-name=[fieldName]` attribute indicates a field whose value is replaced by that of the anonymous user in the UAD auto-anonymization process. For example, setting `uad-anonymize-field-name=fullName` would replace the value of that field with the full name of the anonymous user. See [Configuring the Anonymous User](../managing-user-data/configuring-the-anonymous-user.md) to learn more about the anonymous user.
+   * `uad-anonymize-field-name=[fieldName]` attribute indicates a field whose value is replaced by that of the anonymous user in the UAD auto-anonymization process. For example, setting `uad-anonymize-field-name=fullName` would replace the value of that field with the full name of the anonymous user. See [Configuring the Anonymous User](../managing-user-data/configuring-the-anonymous-user.md) to learn more about the anonymous user.
 
-   * The `uad-nonanonymizable="true"` attribute indicates data that cannot be automatically anonymized but must be reviewed by an administrator.
+   * The `uad-nonanonymizable="true"` attribute indicates data that is not automatically anonymized but must be reviewed by an administrator.
 
 ## Generate the UAD module
 
-1. Navigate to the module's `-service` folder and run Service Builder to generate the UAD module.
+1. Navigate out of the `-service` folder and create a new `-uad` folder.
 
-    ```bash
-    cd h6d2-service
+1. Create a `bnd.bnd` file for the module.
+
+    ```{literalinclude} ./adding-the-uad-framework/resources/liferay-h6d2.zip/h6d2-uad/bnd.bnd
     ```
+
+1. Create a `build.gradle` file for the module.
+
+    ```{literalinclude} ./adding-the-uad-framework/resources/liferay-h6d2.zip/h6d2-uad/build.gradle
+    ```
+
+    Make sure to add any dependencies you need, including the `-api` module to the file.
+
+1. Navigate back to the module's `-service` folder and run Service Builder to generate the UAD module.
 
     ```bash
     ../gradlew buildService
@@ -128,14 +137,15 @@ The H6D2 Portlet is based on the same code found in [Invoking a Service Locally]
     Writing ../h6d2-uad/src/main/java/com/acme/h6d2/uad/display/BaseH6D2EntryUADDisplay.java
     Writing ../h6d2-uad/src/main/java/com/acme/h6d2/uad/display/H6D2EntryUADDisplay.java
     Writing src/main/resources/service.properties
-    Writing ../h6d2-uad/bnd.bnd
     Writing ../h6d2-uad/src/main/java/com/acme/h6d2/uad/constants/H6D2UADConstants.java
     ```
 
-1.  Create a `build.gradle` file for the `-uad` module. 
+## Modify the Portlet
 
-    ```{literalinclude} ./adding-the-uad-framework/resources/liferay-h6d2.zip/h6d2-uad/build.gradle
-    ```
+In addition to the data fields that are specific to your application, you must pass along the additional user related data fields defined in the `service.xml` file.
 
-    Make sure to add any dependencies you need, including the `-api` module to the `build.gradle` file.
+```{literalinclude} ./adding-the-uad-framework/resources/liferay-h6d2.zip/h6d2-web/src/main/java/com/acme/h6d2/web/internal/portlet/H6D2Portlet.java
+:language: java
+:lines: 30-66
+```
 
