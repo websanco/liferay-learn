@@ -2,8 +2,8 @@
 
 You can import contact profile data from CSV files to enrich customer profiles with additional data related to a user’s industry, job title, annual income, or whatever metrics are important to your business. If you have customer profile data in databases or collect it through web forms, you can export the data into CSV files.
 
-```important::
-   The CSV files must have an email column.
+```{important}
+The CSV files must have an email column.
 ```
 
 Here’s how to integrate contact data from a CSV file:
@@ -32,8 +32,8 @@ Analytics Cloud provides several contact data mapping options:
 * Add a new custom data model field and map source data to it.
 * Map source fields from multiple data sources to the same data model field.
 
-```note::
-   If you map source fields from multiple data sources to the same model field, the latest modified value is used.
+```{note}
+If you map source fields from multiple data sources to the same model field, the latest modified value is used.
 ```
 
 As you map source fields to the data model, you can search for and select from the data model fields, use a suggested field, or create a new custom field.

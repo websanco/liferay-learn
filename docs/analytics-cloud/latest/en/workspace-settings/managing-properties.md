@@ -22,16 +22,16 @@ To clear Property data, click the *Clear Data* button. A new form appears to con
 
 ![Copy the sentence to enable the Clear Data button](./managing-properties/images/03.png)
 
-```warning::
-   This results in the complete removal of this property's historical events. You cannot undo this operation.
+```{warning}
+This results in the complete removal of this property's historical events. You cannot undo this operation.
 ```
 
 ## Deleting a Property
 
 To delete the Property click the *Delete* button. A new form appears to confirm your action. Copy and paste the verification sentence into the text box. This enables the *Delete* button. Click the button and the Property is deleted.
 
-```warning::
-   This results in the complete removal of this property and it's historical events. You cannot undo this operation.
+```{warning}
+This results in the complete removal of this property and it's historical events. You cannot undo this operation.
 ```
 
 ## Adding and Removing Users to a Property

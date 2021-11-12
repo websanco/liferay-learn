@@ -21,8 +21,8 @@ The dashboard contains the following data panels:
 
 Each panel in the dashboard has a time period selector that recalculates the metrics for the selected time period. The following time periods are available:
 
-```note::
-   Some metrics such as bounce rate, time on page, exits, etc. rely on a visitor’s session end (30 minutes of inactivity or signing out) to be calculated. Therefore analytics data within the last 24 hours is displayed after the end of a session.
+```{note}
+Some metrics such as bounce rate, time on page, exits, etc. rely on a visitor’s session end (30 minutes of inactivity or signing out) to be calculated. Therefore analytics data within the last 24 hours is displayed after the end of a session.
 ```
 
 **Last 24 hours:** Displays data generated over the last 24 hours. 
@@ -91,8 +91,8 @@ The Visitors by Day and Time panel visualizes the days and times when visitors c
 
 The panel contains a grid with the days of the week on one axis and the time of day on the other axis. Darker cells in the grid indicate heavier Site traffic at the corresponding day and time. Tooltips for each cell show the number of visitors for that day and time.
 
-```note::
-   This panel is not affected by the timezone setting but is based on the Analytics Cloud user's timezone.
+```{note}
+This panel is not affected by the timezone setting but is based on the Analytics Cloud user's timezone.
 ```
 
 ## Search Terms and Interests

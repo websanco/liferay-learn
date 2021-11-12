@@ -2,12 +2,12 @@
 
 After connecting your [Liferay DXP instance to Analytics Cloud](connecting-liferay-dxp-to-analytics-cloud.md), you can begin syncing contact data. The latest releases of Liferay DXP gives you fine grained control over what fields to sync from your contact data into Analytics Cloud.
 
-```note::
-   Selecting contact fields to sync is available in the following releases or higher:
-     * Liferay 7.3 Fix Pack 1
-     * Liferay 7.2 Fix Pack 9
-     * Liferay 7.1 Fix Pack 20
-     * Liferay 7.0 Fix Pack 97
+```{note}
+Selecting contact fields to sync is available in the following releases or higher:
+* Liferay 7.3 Fix Pack 1
+* Liferay 7.2 Fix Pack 9
+* Liferay 7.1 Fix Pack 20
+* Liferay 7.0 Fix Pack 97
 ```
 
 ## Initial Sync of Contact Data

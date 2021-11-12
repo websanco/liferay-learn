@@ -67,8 +67,8 @@ To track this poll’s events, add the above attributes to the div:
 </div>
 ```
 
-```note::
-   You must add these attributes to each individual asset that you want Analytics Cloud to track. However, you can populate the attributes’ values via a script, therefore automating this process for each asset.
+```{note}
+You must add these attributes to each individual asset that you want Analytics Cloud to track. However, you can populate the attributes’ values via a script, therefore automating this process for each asset.
 ```
 
 ### Tracking Downloads

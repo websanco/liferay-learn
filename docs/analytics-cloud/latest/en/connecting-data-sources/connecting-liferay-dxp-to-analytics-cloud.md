@@ -21,14 +21,14 @@ Analytics Cloud connects with Liferay DXP with the use of an Access Token. Your 
 
       ![Adding the Analytics Cloud token to a Liferay DXP installations Instance Settings configuration.](connecting-liferay-dxp-to-analytics-cloud/images/03.png)
 
-```note::
-   For Liferay DXP 7.0, Analytics Cloud Admin is under *Configuration* > *Analytics Cloud*.
+```{note}
+For Liferay DXP 7.0, Analytics Cloud Admin is under *Configuration* > *Analytics Cloud*.
 ```
 
 When the connection is successful, the message, `Your DXP instance is connected to Analytics Cloud.` is shown.
 
-```note::
-   See `Do Not Track Feature <../../workspace-data/data-control-and-privacy.md#do-not-track-feature>`_ to learn more about suppressing analytics data.
+```{note}
+See [Do Not Track Feature](../../workspace-data/data-control-and-privacy.md#do-not-track-feature) to learn more about suppressing analytics data.
 ```
 
 ![A success message confirms correctly configuring a connection between DXP and Analytics Cloud.](connecting-liferay-dxp-to-analytics-cloud/images/04.png)

@@ -21,9 +21,9 @@
 
     ![By default anonymous users are not included in Segments.](creating-segments/images/02.png)
 
-    ```note::
-       Anonymous users are excluded from Segments by default. To include them, enable the Include Anonymous toggle. Note, however, that criteria with individual and/or account attributes excludes anonymous users regardless of your setting here. Such attributes only apply to known users.
-       
+    ```{note}
+    Anonymous users are excluded from Segments by default. To include them, enable the Include Anonymous toggle. Note, however, that criteria with individual and/or account attributes excludes anonymous users regardless of your setting here. Such attributes only apply to known users.
+
     ```
 
 ### Creating Criteria
