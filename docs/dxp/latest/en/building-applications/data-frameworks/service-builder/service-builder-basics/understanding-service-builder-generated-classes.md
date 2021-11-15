@@ -60,6 +60,7 @@ w9b7-service/src/main/java/com/acme/w9b7
         └── impl
             ├── constants
             │   └── W9B7EntryPersistenceConstants.java
+            ├── W9B7EntryModelArgumentsResolver.java
             └── W9B7EntryPersistenceImpl.java
 ```
 
@@ -88,17 +89,18 @@ The API classes define the public interface, utilities, and constants.
 | `W9B7EntryLocalServiceUtil` | Local service utility class which wraps `W9B7EntryLocalServiceImpl`. |
 | `W9B7EntryLocalServiceWrapper` | Local service wrapper which implements `W9B7EntryLocalService`. This class is there to be extended to [customize the entity's local services](../../../liferay-internals/extending-liferay/creating-service-wrappers.md). |
 
-## Service Implementation Classes
+## Implementation Classes
 
 These classes implement the model, persistence, and service layer.
 
-| Service Impl Class | Description |
-| :-------- | :---------- |
+| Implementation Class | Description |
+| :------------------- | :---------- |
 | `W9B7EntryBaseImpl` | Extends the `W9B7EntryModelImpl` to represents a row in the `W9B7_W9B7Entry` database table, with each column mapped to a `W9B7EntryModel` property. |
 | `W9B7EntryCacheModel` | Represents the `W9B7Entry` entity in cache. |
 | `W9B7EntryImpl` (**MODIFIABLE**) | Model implementation. You can use this class to add helper methods and application logic to your model. If you don't add any helper methods or application logic, only the auto-generated field getters and setters are available. Whenever you add or modify methods in this class, Service Builder propagates the changes to the `W9B7Entry` interface the next time you run it. |
 | `W9B7EntryLocalServiceBaseImpl` | Local service base implementation. This is an abstract class. Service Builder injects a number of instances of various service and persistence classes into this class. |
 | `W9B7EntryLocalServiceImpl` (**MODIFIABLE**) | Local service implementation. This is the only class in the local service that you should modify. It's where you add your business logic. For any methods added or modified here, Service Builder propagates the changes to the `W9B7EntryLocalService` interface the next time you run it. |
+| `W9B7EntryModelArgumentsResolver` | Processes parameters for retrieving entity values. |
 | `W9B7EntryModelImpl` | Base model implementation. |
 | `W9B7EntryPersistenceImpl` | Persistence implementation class that implements `W9B7EntryPersistence`. |
 

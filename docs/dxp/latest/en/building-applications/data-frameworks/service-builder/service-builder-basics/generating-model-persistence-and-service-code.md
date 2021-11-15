@@ -85,11 +85,11 @@ Here's the `service.xml` file:
 ```{literalinclude} ./generating-model-persistence-and-service-code/resources/liferay-y7g4.zip/y7g4-service/service.xml
 ```
 
-The `service-builder` element and its `entity` elements define a `Y7G4Entry` model that has an ID (the primary key), name, and description.
+This file defines a `Y7G4Entry` model that has an ID (the primary key), name, and description.
 
-### Global Elements
+### `service-builder` Element
 
-The `service-builder` and `namespace` elements affect all model entities in the `service.xml` file.
+The `service-builder` element attributes affect all model entities in the `service.xml` file.
 
 | `service-builder` attribute | Description |
 | :-------------------------- | :---------- |
@@ -97,11 +97,13 @@ The `service-builder` and `namespace` elements affect all model entities in the 
 | `package-path` | Declares the leading package path for the generated classes. |
 | `short-no-such-exception-enabled` | If set to `true`, use a truncated version of the entity name in `NoSuchY7G4EntryException` messages; otherwise use the complete entity name. |
 
-The `namespace` element specifies the prefix for the model entity database tables.
+### `namespace` Element
 
-### Entity Elements
+The global `namespace` element specifies the prefix for all the model entity database tables.
 
-The `entity` elements define model database tables and service types.
+### `entity` Element
+
+`entity` elements define model database tables and service types.
 
 | `entity` attributes | Description |
 | :------------------ | :---------- |
@@ -109,13 +111,14 @@ The `entity` elements define model database tables and service types.
 | `local-service` | If `true`, generate service classes to call from within the JVM. |
 | `remote-service` | If `true`, generate service classes, including web services classes, to call from outside of the JVM. |
 
-Each `column` element in an entity defines a column in the entity's table. 
+### `column` Elements
+Each `column` element defines a column in the entity's table. Here are the `Y7G4Entry` entity column elements:
 
-The `Y7G4_Y7G4Entry` table has three columns.
-
-1. `y7g4EntryId` the model instance's ID (long integer) and primary key.
-1. `name` the instance's name (string)
-1. `description` the instance's description (string).
+| Column | Description |
+| :----- | :---------- |
+| `y7g4EntryId` | the model instance's ID (long integer) and primary key. |
+| `name` | the instance's name (string). |
+| `description` | the instance's description (string). |
 
 For more information on `service.xml` elements, see the [Liferay Service Builder DTD](https://learn.liferay.com/reference/latest/en/dxp/definitions/liferay-service-builder_7_4_0.dtd.html).
 
@@ -139,6 +142,7 @@ Building Y7G4Entry
 Writing src/main/java/com/acme/y7g4/service/persistence/impl/Y7G4EntryPersistenceImpl.java
 Writing ../y7g4-api/src/main/java/com/acme/y7g4/service/persistence/Y7G4EntryPersistence.java
 Writing ../y7g4-api/src/main/java/com/acme/y7g4/service/persistence/Y7G4EntryUtil.java
+Writing src/main/java/com/acme/y7g4/service/persistence/impl/Y7G4EntryModelArgumentsResolver.java
 Writing src/main/java/com/acme/y7g4/model/impl/Y7G4EntryModelImpl.java
 Writing src/main/java/com/acme/y7g4/model/impl/Y7G4EntryBaseImpl.java
 Writing src/main/java/com/acme/y7g4/model/impl/Y7G4EntryImpl.java
@@ -161,7 +165,7 @@ Writing src/main/resources/META-INF/sql/tables.sql
 Writing src/main/resources/META-INF/sql/tables.sql
 Writing src/main/resources/service.properties
 
-BUILD SUCCESSFUL in 2s
+BUILD SUCCESSFUL in 3s
 1 actionable task: 1 executed
 ```
 
