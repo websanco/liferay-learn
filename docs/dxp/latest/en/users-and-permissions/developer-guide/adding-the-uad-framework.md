@@ -1,6 +1,6 @@
 # Adding the UAD Framework
 
-Administrators can [manage and delete user data](../managing-user-data.md) with Liferay's User Associated Data (UAD) management tool. The tool is available out-of-the-box for many of Liferay's applications (e.g. Blogs, Documents and Media, Message Boards, etc.). This framework can also be implemented into your custom application.
+Administrators can [manage and delete user data](../managing-user-data.md) with Liferay's User Associated Data (UAD) management tool. The tool is available out-of-the-box for many of Liferay's applications (e.g. Blogs, Documents and Media, Message Boards, etc.). This framework can also be applied to your custom application.
 
 This task is made easier with the use of [Service Builder](../../developing-applications/data-frameworks/service-builder.md). See the example below to learn how Service Builder automatically generates the necessary code to enable UAD for your application.
 
@@ -55,13 +55,9 @@ This task is made easier with the use of [Service Builder](../../developing-appl
 
 1. Log back in as the administrator and navigate to *Control Panel* &rarr; *Users* &rarr; *Users and Organizations*. 
 
-1. Click the *Actions* icon (![Action](../../images/icon-actions.png)) of the new user and click *Deactivate*. 
+1. Click the *Actions* icon (![Action](../../images/icon-actions.png)) of the new user and click *Delete Personal Data*. Click *OK* to confirm that the user will first be deactivated.
 
-1. Click the *Filter and Order* menu next to the search bar. Click *Inactive* to filter out the deactivated user.
-
-1. Click the *Actions* icon (![Action](../../images/icon-actions.png)) of the new user and click *Delete Personal Data*. 
-
-1. The UAD management tool is displayed. You can view, anonymize, or delete the data that was added in the H6D2 Portlet.
+1. The UAD management tool is displayed. You can view, anonymize, or delete the data that was added by the new user in the H6D2 Portlet.
 
     ![View, anonymize or delete the user's data that was added to the H6D2 Portlet.](./adding-the-uad-framework/images/02.png)
 
@@ -112,14 +108,16 @@ This tutorial assumes that you have a working application that you created using
     ```{literalinclude} ./adding-the-uad-framework/resources/liferay-h6d2.zip/h6d2-uad/bnd.bnd
     ```
 
+    Make sure to include the `-dsannotations-options: inherit` annotation. OSGi service component classes inherit [OSGi declaratives services](../../liferay-internals/fundamentals/module-projects.md) annotations from their class hierarchy.
+
 1. Create a `build.gradle` file for the module.
 
     ```{literalinclude} ./adding-the-uad-framework/resources/liferay-h6d2.zip/h6d2-uad/build.gradle
     ```
 
-    Make sure to add any dependencies you need, including the `-api` module to the file.
+    Make sure to add any dependencies you need, including any `-api` module of your project.
 
-1. Navigate back to the module's `-service` folder and run Service Builder to generate the UAD module.
+2. Navigate back to the module's `-service` folder and run Service Builder to generate the UAD module.
 
     ```bash
     ../gradlew buildService
@@ -142,10 +140,26 @@ This tutorial assumes that you have a working application that you created using
 
 ## Modify the Portlet
 
-In addition to the data fields that are specific to your application, you must pass along the additional user related data fields defined in the `service.xml` file.
+In addition to the data fields that are specific to your application, you must pass along the user related data fields you added in the `service.xml` file.
 
 ```{literalinclude} ./adding-the-uad-framework/resources/liferay-h6d2.zip/h6d2-web/src/main/java/com/acme/h6d2/web/internal/portlet/H6D2Portlet.java
 :language: java
 :lines: 30-66
 ```
 
+The `H6D2 Portlet` has a `H6D2EntryLocalService` field called `_h6d2EntryLocalService` and an action-handling method called `addH6D2Entry`. The `addH6D2Entry` method calls `H6D2EntryLocalService`'s `addH6D2Entry` method, passing the different data fields received from the `ActionRequest`. 
+
+The portlet's `view.jsp` submits `ActionRequests` to `H6D2 Portlet`.
+
+```{literalinclude} ./adding-the-uad-framework/resources/liferay-h6d2.zip/h6d2-web/src/main/resources/META-INF/resources/view.jsp
+:language: jsp
+:lines: 18-26
+```
+
+Submitting an `ActionRequest` with the `actionURL` invokes the portlet's `addH6D2Entry` method. 
+
+## Additional Information
+
+* [Managing User Data](../managing-user-data.md)
+* [Service Builder](../../developing-applications/data-frameworks/service-builder.md)
+* [Using MVC](../../developing-applications/developing-a-java-web-application/using-mvc.md)
