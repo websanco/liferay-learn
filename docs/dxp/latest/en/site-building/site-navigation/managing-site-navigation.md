@@ -39,9 +39,6 @@ To access the page tree,
 
     ![View each Site's Page Tree.](./managing-site-navigation/images/03.png)
 
-<<<<<<< HEAD
-In the Page Tree view, you can add more pages in the hierarchy, configure a page, and toggle between Public and Private Pages.
-=======
 1. Change between your public and private Pages using the drop-down menu. You can also choose your Navigation Menus from this drop-down control.
 
 1. From here you can,
@@ -52,7 +49,6 @@ In the Page Tree view, you can add more pages in the hierarchy, configure a page
    - Modify the order of Pages in the navigation menu by dragging and dropping the Pages in the tree (C).
 
       ![You can add, preview, configure, or reorder Pages from the Page Tree menu.](./managing-site-navigation/images/04.png)
->>>>>>> 8b2217f8e (LRDOCS-9594 PR #45 review and udpates)
 
 ## Additional Information
 
