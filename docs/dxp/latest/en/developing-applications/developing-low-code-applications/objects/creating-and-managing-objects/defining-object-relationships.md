@@ -1,6 +1,6 @@
 # Defining Object Relationships
 
-Relationships are connections between Objects that can be used to relate their entities. You can add relationships to any published or unpublished custom Object.<!--TASK: Include system Objects once supported; "You can add relationships to any published or unpublished Object, including both system and custom Objects."-->
+Relationships are connections between Objects that link their entities. You can add relationships to any published or unpublished custom Object.<!--TASK: Include system Objects once supported; "You can add relationships to any published or unpublished Object, including both system and custom Objects."-->
 
 ## Relationship Types
 
@@ -8,9 +8,9 @@ Objects provides two types of relationships:
 
 <!--TASK: Add One to One after it's been implemented-->
 
-**One to Many**: This type enables users to relate one of the current Object's entities to multiple entities in another Object. When selected, a new field is added to entities on the child side of the relationship (i.e., the 'many' side), while a table is added to the 'parent' side (i.e., the 'one' side). On the child side, the new field can be added to a [Fields Tab](./designing-object-layouts.md#adding-fields-tabs) in the Object's custom layout and is used to relate its entities to a single entity on the parent side of the relationship. On the parent side, the new table can be added to a [Relationships Tab](./designing-object-layouts.md#adding-relationships-tabs) in the Object's custom layout and is used to list all entities related to the current parent entity. <!--REFINE-->
+**One to Many**: You can relate one of the current Object's entities to multiple entities of another Object. When selected, a new field is added to entities on the child side of the relationship (i.e., the 'many' side), while a table is added to the 'parent' side (i.e., the 'one' side). On the child side, the new field can be added to a [Fields Tab](./designing-object-layouts.md#adding-fields-tabs) in the Object's custom layout and relates its entities to a single entity on the parent side of the relationship. On the parent side, the new table can be added to a [Relationships Tab](./designing-object-layouts.md#adding-relationships-tabs) in the Object's custom layout and lists all entities related to the current parent entity. <!--REFINE-->
 
-**Many to Many**: This type enables users to relate multiple entities from the current Object to multiple entities in another Object. When selected, a new database table is created for both sides of the relationship. This table can be added to a [Relationships Tab](./designing-object-layouts.md#adding-relationships-tabs) in either Object's custom layout and is used to list all related entities. <!--REFINE-->
+**Many to Many**: You can relate multiple entities from the current Object to multiple entities in another Object. When selected, a new database table is created for both sides of the relationship. This table can be added to a [Relationships Tab](./designing-object-layouts.md#adding-relationships-tabs) in either Object's custom layout and is used to list all related entities. <!--REFINE-->
 
 ```{important}
 You must create a custom layout to display relationships for Object entries. See [Designing Object Layouts](./designing-object-layouts.md) for more information. 
@@ -22,17 +22,17 @@ Follow these steps to add relationships to an Object:
 
 1. Open the *Objects* portlet.
 
-1. Click on the desired Object.
+1. Select the desired Object.
 
-1. Click on the *Relationships* tab, and click on the *Add* button (![Add Button](../../../../images/icon-add.png)).
+1. Click the *Relationships* tab and select the *Add* button (![Add Button](../../../../images/icon-add.png)).
 
    ![Click on the Add button in the Relationships tab, then enter a label abd name, and select a relationship type and the desired Object.](./defining-object-relationships/images/01.png)
 
 1. Enter a *Label* and *Relationship Name*.
 
-   **Label**: This value identifies the relationship in the Objects UI and can be localized after the relationship is created.
+   **Label**: Identifies the relationship in the Objects UI and can be localized after the relationship is created.
 
-   **Relationship Name**: This value determines the relationship's name in the backend and uses camel case. Once the relationship is published, this value cannot be changed.
+   **Relationship Name**: Determines the relationship's name in the back-end and uses camel case. Once the relationship is published, this value cannot be changed.
 
 1. Select a relationship Type: *One to Many* or *Many to Many*. <!--TASK: Add One to One after it's been implemented-->
 
@@ -46,10 +46,10 @@ Follow these steps to add relationships to an Object:
 
    ![After clicking Save, the saved relationship is listed in the Relationships tab.](./defining-object-relationships/images/02.png)
 
-Once saved, the new relationship can be [added to custom layouts](designing-object-layouts.md) for the related Objects. Users can then use the relationship fields and tables to relate Object entries to one another.
+Once saved, the new relationship can be [added to custom layouts](designing-object-layouts.md) for the related Objects. You can then use the relationship fields and tables to relate Object entries to one another.
 
 ```{important}
-While the Object is a draft, you can edit and remove relationships from the parent side. However, once an Object is published, any existing or newly added relationships cannot be removed. Users can only configure a relationship's label and [deletion type](#configuring-deletion-type).
+While the Object is a draft, you can edit and remove relationships from the parent side. Once an Object is published, however, any existing or newly added relationships cannot be removed. Users can only configure a relationship's label and [deletion type](#configuring-deletion-type).
 ```
 
 ## Configuring Deletion Type

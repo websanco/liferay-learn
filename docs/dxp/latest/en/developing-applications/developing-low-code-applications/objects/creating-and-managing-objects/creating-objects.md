@@ -124,7 +124,7 @@ You can still edit and localize labels for Objects, fields, and relationships af
 
 ## Additional Information
 
-* [Introduction to Objects](../introduction-to-objects.md)
+* [Introduction to Objects](../../objects.md)
 * [Adding Fields to Objects](./adding-fields-to-objects.md)
 * [Defining Object Relationships](./defining-object-relationships.md)
 * [Designing Object Layouts](./designing-object-layouts.md)

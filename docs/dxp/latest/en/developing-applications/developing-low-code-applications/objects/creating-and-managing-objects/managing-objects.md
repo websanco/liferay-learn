@@ -22,7 +22,7 @@ You can add fields to any system or custom Object. Any field added to a system o
 
 ![Add and configure relationships for custom Objects](./managing-objects/images/03.png)
 
-You can add and configure relationships for custom Objects. After creation, users can only edit a relationship's Label and Deletion Type. Also, relationships can only be removed from an Object draft and cannot be removed from system and published Objects.  Depending on the relationship type, an Object's relationships are displayed in either the Fields or Relationships tab. See [Defining Object Relationships](./defining-object-relationships.md) for more information.
+You can add and configure relationships for custom Objects. After creation, users can only edit a relationship's Label and Deletion Type. Also, relationships can only be removed from an Object draft and cannot be removed from system and published Objects.  Depending on the relationship type, an Object's relationships appear in either the Fields or Relationships tab. See [Defining Object Relationships](./defining-object-relationships.md) for more information.
 <!--TASK: Replace with following text once system Objects are supported, "You can add relationships to both system and custom Objects. After creation, users can only edit a relationship's Label and Deletion Type. Also, relationships can only be removed from an Object draft and cannot be removed from system and published Objects.  Depending on the relationship type, an Object's relationships are displayed in either the Fields or Relationships tab. See [Defining Object Relationships](./defining-object-relationships.md) for more information."-->
 
 ### Layouts
@@ -34,17 +34,17 @@ You can add, edit, and remove layouts for custom Objects at any time. Custom lay
 
 ## Activating and Deactivating Objects
 
-By default, custom Objects are *Activated* when they're first [published](./creating-objects.md#publishing-object-drafts). This makes the application available for use as soon as it's created. While active, the Object and its entries can be accessed via the Liferay UI and Headless API calls. However, you can deactivate custom Objects at any time if desired.
+By default, custom Objects are *Activated* when they're first [published](./creating-objects.md#publishing-object-drafts). This makes the application available for use as soon as it's created. While active, the Object and its entries can be accessed via the Liferay UI and Headless API calls. You can, however, deactivate custom Objects at any time. 
 
-Deactivating an Object removes it from its Panel Category, integrated frameworks, and related Objects. While inactive, an Object can only be [edited and extended](#editing-and-extending-objects) in the Objects portlet. If an Object's entries are displayed in a Site or related Object at the time it's deactivated, those entries appear blank. Also, its fields are no longer displayed in any related Object layouts.
+Deactivating an Object removes it from its Panel Category, integrated frameworks, and related Objects. While inactive, an Object can only be [edited and extended](#editing-and-extending-objects) in the Objects portlet. If an Object's entries are displayed in a Site or related Object at the time it's deactivated, those entries are blank, and their fields no longer appear in any related Object layouts.
 
-When desired, you can reactivate any inactive Object to make it and its data available for use.
+You can reactivate any inactive Object to make it and its data available for use.
 
 ```{important}
 Deactivating an Object does not affect its data; it only prevents users from accessing it until the Object is reactivated.
 ```
 
-Follow these steps to deactivate or activate a custom Object via the Objects portlet.
+Follow these steps to deactivate or activate a custom Object.
 
 1. From the *Objects* portlet, click on the desired *Object*.
 
@@ -60,9 +60,9 @@ Follow these steps to deactivate or activate a custom Object via the Objects por
 
 ## Removing Objects
 
-In the Objects portlet, you can remove Object drafts. However, once an Object has been published, it cannot be removed. Published Objects can only be [activated or deactivated](#activating-and-deactivating-objects).
+You can remove Object drafts. However, once an Object has been published, it cannot be removed. Published Objects can only be [activated or deactivated](#activating-and-deactivating-objects).
 
-To remove an Object draft, click on its *Actions* button (![Actions Button](../../../../images/icon-actions.png)), and select *Delete*.
+To remove an Object draft, click its *Actions* button (![Actions Button](../../../../images/icon-actions.png)) and select *Delete*.
 
 ![Click on the Actions button for an Object draft, and select Delete.](./managing-objects/images/06.png)
 

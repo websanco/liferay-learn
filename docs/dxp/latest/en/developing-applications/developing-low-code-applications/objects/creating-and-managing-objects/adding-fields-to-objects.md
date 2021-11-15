@@ -1,20 +1,20 @@
 # Adding Fields to Objects
 
-Fields are data definitions that represent a database column and are used to store different [types of values](#field-type-reference) for Liferay Objects. You can add fields to any published or unpublished Object, including both system and custom Objects.
+Fields are data definitions that represent database columns. They store different [types of values](#field-type-reference) for Liferay Objects. You can add fields to any published or unpublished Object, including both system and custom Objects.
 
 When an Object is [published](./creating-objects.md#publishing-object-drafts), an initial database table is created with the draft's data definitions. This table includes all Object fields and relationships that exist at the time of publishing. Fields and relationships added to an Object after publishing are added to a side table (i.e., `[Initial_Table_Name]_x`).
 
 ```{important}
 If a field is saved to an Object draft, you can edit any of its settings and values. However, once fields are published or saved to a published Object, only its Label can be edited. All other values and settings cannot be changed. 
 
-Also, fields included in an Object when it is published cannot be removed. However, you can remove fields in Object drafts or those added to an Object after it's been published. In other words, no fields included in the Object's initial database table can be removed.
+Fields in Object drafts can be removed. After initial publication, however, fields cannot be removed, with the exception of fields added _after_ initial publication, because those fields were added to a side table.
 ```
 
 Follow these steps to add a new field to an Object:
 
 1. Open the *Objects* portlet.
 
-1. Click on the desired Object.
+1. Select the desired Object.
 
 1. Click on the *Fields* tab, and click on the *Add* button (![Add Button](../../../../images/icon-add.png)).
 
@@ -24,7 +24,7 @@ Follow these steps to add a new field to an Object:
 
    **Label**: This value identifies the field in the Objects UI and can be localized after the field is created.
 
-   **Field Name**: This value determines the field's name in the backend and uses camel case. Once a field is published, this value cannot be changed.
+   **Field Name**: This value determines the field's name in the back-end and uses camel case. Once a field is published, this value cannot be changed.
 
    ```{important}
    The following field names are reserved by Liferay and cannot be used for custom fields: `companyId`, `createDate`, `groupId`, `id`, `lastPublishDate`, `modifiedDate`, `status`, `statusByUserId`, `statusByUserName`, `statusDate`, `userId`, `userName`. If users attempt to create a field using one of these field names, Liferay displays an error message.
@@ -36,7 +36,7 @@ Follow these steps to add a new field to an Object:
 
 1. Click on *Save*.
 
-After saving a field to an Object draft, you can click on the field to determine whether or not it is searchable. All fields are searchable by default.
+After saving fields to an Object draft, you can select them to define whether they are searchable. All fields are searchable by default.
 
 ![After saving the field, determine whether or not it is searchable.](./adding-fields-to-objects/images/02.png)
 

@@ -8,21 +8,21 @@ See [Defining Role Permissions](../../../users-and-permissions/roles-and-permiss
 
 ## Application Permissions
 
-Application permissions grant the ability to perform general application-related operations and do not include [resource-related permissions](#object-resource-permissions).
+Application permissions grant permission to perform general application-related operations and do not include [resource-related permissions](#object-resource-permissions).
 
-The Objects portlet has the following application permissions
+The Objects portlet has the following application permissions:
 
 | Permission | Description |
 | --- | --- |
-| Access in Control Panel | Ability to access Objects in the Global Menu |
-| Configuration | Ability to view and modify configuration options for the Objects portlet |
-| Permissions | Ability to view and modify Objects permissions |
-| Preferences | Ability to view and modify preferences for the Objects portlet |
-| View | Ability to view the Objects portlet |
+| Access in Control Panel | Access Objects in the Global Menu |
+| Configuration | View and modify configuration options for the Objects portlet |
+| Permissions | View and modify Objects permissions |
+| Preferences | View and modify preferences for the Objects portlet |
+| View | View the Objects portlet |
 
 ## Resource Permissions
 
-Resource permissions grant specific abilities related to application resources. Some of these permissions grant the ability to perform [operations on database entities](#object-definition-actions) (i.e., model resources). Others grant the ability to perform [resource-related operations](#object-related-actions) in an application context (e.g., the ability to create a new resource entity).
+Resource permissions grant specific permissions on application resources. Some of these permissions enable performing [operations on database entities](#object-definition-actions) (i.e., model resources). Others grant permission to perform [resource-related operations](#object-related-actions) in an application context (e.g., create a new resource entity).
 
 The Object's portlet has the following resource permissions.
 
@@ -30,19 +30,19 @@ The Object's portlet has the following resource permissions.
 
 | Permission | Description |
 | --- | --- |
-| Add Object Definition | Ability to create an Object draft |
-| Extend System Object Definition | Ability to add fields, relationships, and layouts to system Objects |
-| Permissions | Ability to view and manage permissions related to Objects |
-| Publish Object Definition | Ability to publish an Object draft |
+| Add Object Definition | Create an Object draft |
+| Extend System Object Definition | Add fields, relationships, and layouts to system Objects |
+| Permissions | View and manage permissions related to Objects |
+| Publish Object Definition | Publish an Object draft |
 
 ### Object Definition Actions
 
 | Permission | Description |
 | --- | --- |
-| Delete | Ability to delete an Object draft |
-| Permissions | Ability to view and modify permissions for an Object |
-| Update | Ability to update an Object |
-| View | Ability to view an Object |
+| Delete | Delete an Object draft |
+| Permissions | View and modify permissions for an Object |
+| Update | Update an Object |
+| View | View an Object |
 
 ## Additional Information
 
