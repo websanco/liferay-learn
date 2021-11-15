@@ -10,7 +10,7 @@ Contents
    starting_a_store
    managing_a_catalog
    creating_store_content
-   promoting_products
+   promoting-products.md
    users-and-accounts.md
    orders_and_fulfillment
    store_administration
