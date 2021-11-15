@@ -9,7 +9,8 @@ Elasticsearch 7 is supported in Liferay 7.4. Check the [Search Engine Compatibil
 ![Elasticsearch 7.15 is supported to run with Liferay DXP 7.4 GA1.](./whats-new-in-search-for-74/images/03.png)
 
 ```{important}
-Elasticsearch 6.x and Solr integration are not supported on Liferay CE/DXP 7.4.
+* Elasticsearch 6.x is not supported on Liferay CE/DXP 7.4.
+* Solr is not supported on Liferay CE/DXP 7.4.
 ```
 
 ## Search Infrastructure & Administration
@@ -39,7 +40,7 @@ To support searching for [Liferay Objects](../../developing-applications/develop
 
 <!-- * If configured in the Object, a display page can be shown when the Object Entry is clicked in Search Results. -->
 
-<!-- TODO: To learn more about Liferay Objects and search, read [Searching for Object](LINK). -->
+To learn more about Liferay Objects and search, read [Searching for Liferay Objects](./searching-for-content.md#searching-for-liferay-objects).
 
 ## Search Tuning
 
