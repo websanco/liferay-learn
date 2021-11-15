@@ -38,8 +38,8 @@
     ./gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)
     ```
 
-    ``` note::
-       このコマンドは、デプロイされたjarをDockerコンテナの ``/opt/liferay/osgi/modules``にコピーするのと同じです。
+    ```{note}
+    このコマンドは、デプロイされたjarをDockerコンテナの `/opt/liferay/osgi/modules`にコピーするのと同じです。
     ```
 
 4.  Dockerコンテナコンソールでデプロイを確認します。
@@ -52,8 +52,8 @@
 
 <!-- end list -->
 
-``` note::
-   Liferay Commerce 2.1以前のバージョンでは、*Site Administration* → *Commerce* → *Settings* → *Payment Methods*に移動します。
+```{note}
+Liferay Commerce 2.1以前のバージョンでは、*Site Administration* → *Commerce* → *Settings* → *Payment Methods*に移動します。
 ```
 
 ![新しい支払方法](./implementing-a-new-payment-method/images/02.png "新しい支払方法")

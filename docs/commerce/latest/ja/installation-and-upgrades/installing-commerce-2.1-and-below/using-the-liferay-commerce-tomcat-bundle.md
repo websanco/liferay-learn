@@ -20,8 +20,8 @@ Liferay Commerceバンドルを使用するには、次の手順を実行しま�
     
     <!-- end list -->
     
-    ``` tip::
-       Wait until you see ``org.apache.catalina.startup.Catalina.start Server startup in [x] milliseconds``
+    ```{tip}
+    Wait until you see `org.apache.catalina.startup.Catalina.start Server startup in [x] milliseconds`
     ```
 
 4.  ブラウザで`https://localhost:8080`を開きます。

@@ -31,8 +31,8 @@
 
 <!-- end list -->
 
-``` note::
-  Site members can't change a non-instanceable app's configuration inside a customizable region since those apps are tied to the site they've been added to.
+```{note}
+Site members can't change a non-instanceable app's configuration inside a customizable region since those apps are tied to the site they've been added to.
 ```
 
 サイトメンバーは、コントロールメニューのページの[ *オプション* ]メニュー（![Options](../../../images/icon-options.png)）からこれらのコンテキストオプションにアクセスできます。
@@ -63,6 +63,6 @@
 
 <!-- end list -->
 
-``` note::
-  The *Customize* permission also lets users customize the look and feel of apps and import or export app settings.
+```{note}
+The *Customize* permission also lets users customize the look and feel of apps and import or export app settings.
 ```

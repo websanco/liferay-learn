@@ -50,6 +50,6 @@ DXPのインストールには、アプリケーションサーバーに関係�
   - `tools`：データベースアップグレードツールおよびターゲットプラットフォームインデクサー用。
   - `work`：モジュールJasper作業ファイル。
 
-``` note::
-   DXPがLiferay Homeフォルダにリソースを作成できない場合、またはDXPが特定のアプリケーションサーバーで実行されている場合は、DXPを実行しているオペレーティングシステムユーザーのホームフォルダに「liferay」と呼ばれるフォルダが作成されます。 この場合、その``liferay``フォルダがLiferay Homeになります。 たとえば、オペレーティングシステムのユーザー名が*jbloggs*の場合、`liferay`フォルダのパスは``/home/jbloggs/liferay``または``C:\Users\jbloggs\liferay``になります。
+```{note}
+DXPがLiferay Homeフォルダにリソースを作成できない場合、またはDXPが特定のアプリケーションサーバーで実行されている場合は、DXPを実行しているオペレーティングシステムユーザーのホームフォルダに「liferay」と呼ばれるフォルダが作成されます。 この場合、その`liferay`フォルダがLiferay Homeになります。 たとえば、オペレーティングシステムのユーザー名が*jbloggs*の場合、`liferay`フォルダのパスは`/home/jbloggs/liferay`または`C:\Users\jbloggs\liferay`になります。
 ```

@@ -2,12 +2,12 @@
 
 [LiferayDXPインスタンスをAnalyticsCloud](connecting-liferay-dxp-to-analytics-cloud.md)に接続した後、連絡先データの同期を開始できます。 Liferay DXPの最新リリースでは、コンタクトデータからAnalytics Cloudに同期するフィールドを細かくコントロールすることができます。
 
-``` note::
-   Selecting contact fields to sync is available in the following releases or higher:
-     * Liferay 7.3 Fix Pack 1
-     * Liferay 7.2 Fix Pack 9
-     * Liferay 7.1 Fix Pack 20
-     * Liferay 7.0 Fix Pack 97
+```{note}
+Selecting contact fields to sync is available in the following releases or higher:
+* Liferay 7.3 Fix Pack 1
+* Liferay 7.2 Fix Pack 9
+* Liferay 7.1 Fix Pack 20
+* Liferay 7.0 Fix Pack 97
 ```
 
 ## コンタクトデータの初期同期

@@ -2,12 +2,12 @@
 
 Liferayデータベースアップグレードツールは、Liferay DXPデータベースおよびLiferay Portal CEデータベースをオフラインでアップグレードするためのクライアントプログラムです。
 
-``` important::
-   アップグレードする前に、**必ず** データベースとインストールを `バックアップ <../../maintaining-a-liferay-dxp-installation/backing-up.md>`_ してください。 バックアップコピーでアップグレードプロセスをテストすることをお勧めします。
+```{important}
+アップグレードする前に、**必ず** データベースとインストールを [バックアップ](../../maintaining-a-liferay-dxp-installation/backing-up.md) してください。 バックアップコピーでアップグレードプロセスをテストすることをお勧めします。
 ```
 
-``` important::
-   6.2以前からアップグレードする場合は、ファイルストアの構成を更新します。 詳細は、 `Updating the File Store <../configuration-and-infrastructure/updating-the-file-store.md>`_ を参照してください。
+```{important}
+6.2以前からアップグレードする場合は、ファイルストアの構成を更新します。 詳細は、 [Updating the File Store](../configuration-and-infrastructure/updating-the-file-store.md) を参照してください。
 ```
 
 Liferayインスタンスから切り離された状態でデータベースを変更すると、[データベースをアップグレード操作用に調整](../upgrade-stability-and-performance/database-tuning-for-upgrades.md)し、[不要なデータ（Webコンテンツ、ドキュメントなどの不要なバージョンなど）を削除](../upgrade-stability-and-performance/database-tuning-for-upgrades.md)して、アップグレードのパフォーマンスを向上させ、アップグレードの問題を解決できます。  これらのアクティビティは、DXPをはじめとする大規模で重要なポータルCE環境を安全かつ迅速にアップグレードするために特に重要です。 データベースの調整と削除を考慮し、[Upgrade Overview](./upgrade-overview.md)で説明されている関連タスクを完了すると、新しいインストールをセットアップし、アップグレードツールを使用してデータベースをアップグレードする準備が整います。
@@ -22,12 +22,12 @@ Liferayインスタンスから切り離された状態でデータベースを�
 
 3.  [高度なファイルシステムストア](../../../system-administration/file-storage/configuring-file-storage.md)または[簡易ファイルシステムストア](../../../system-administration/file-storage/other-file-store-types/simple-file-system-store.md)を使用していて、保存場所を変更している場合は、ファイルストアの設定を[`.config`ファイル](../../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md#creating-configuration-files)にエクスポートして、新しい`[Liferay Home]/osgi/configs/`フォルダにコピーします。
 
-    ``` important::
-       `高度なファイルシステムストア <../../../system-administration/file-storage/configuring-file-storage.md>`_ を使用している場合は、データベースをアップグレードする前に、新しいインストールで ``.config`` ファイルを使って設定する必要があります。
+    ```{important}
+    [高度なファイルシステムストア](../../../system-administration/file-storage/configuring-file-storage.md) を使用している場合は、データベースをアップグレードする前に、新しいインストールで `.config` ファイルを使って設定する必要があります。
 
-       以下に例を示します。``com.liferay.portal.store.file.system.configuration.AdvancedFileSystemStoreConfiguration.config`` file with the required ``rootDir`` parameter:
+    以下に例を示します。`com.liferay.portal.store.file.system.configuration.AdvancedFileSystemStoreConfiguration.config` file with the required `rootDir` parameter:
 
-       ``rootDir="data/document_library"``
+    `rootDir="data/document_library"`
     ```
 
 4.  DXPのアクティベーションキー（サブスクリプション）とOSGiの設定ファイルを、 [バックアップ](../../maintaining-a-liferay-dxp-installation/backing-up.md#liferay-home) から新しいインストールにコピーします。

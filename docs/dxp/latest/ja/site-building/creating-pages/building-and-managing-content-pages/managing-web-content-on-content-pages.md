@@ -8,8 +8,8 @@
 
     ![[コンテンツ]パネルからコンテンツページのWebコンテンツを管理できます。](./managing-content-on-content-pages/images/01.png)
 
-    ``` note::
-      Web content that's displayed in an Asset Publisher with dynamic selection isn't listed in the Contents panel. You must manage this content directly from the Web Content admin app in the Control Panel.
+    ```{note}
+    Web content that's displayed in an Asset Publisher with dynamic selection isn't listed in the Contents panel. You must manage this content directly from the Web Content admin app in the Control Panel.
     ```
 
 2.  リストされたコンテンツの横にあるアクションメニューを開いて管理します。 次のアクションを使用できます。
@@ -20,6 +20,6 @@
 
 <!-- end list -->
 
-``` note::
-  To edit inline content, you must have the "Edit Inline Content" permission assigned to your Role. However, if you don't have permission to edit the page, you can still edit content (web content, blog, etc.) that you have permission to edit that's displayed through one of these methods: mapped content, web content display, or an Asset Publisher (with manual selection).
+```{note}
+To edit inline content, you must have the "Edit Inline Content" permission assigned to your Role. However, if you don't have permission to edit the page, you can still edit content (web content, blog, etc.) that you have permission to edit that's displayed through one of these methods: mapped content, web content display, or an Asset Publisher (with manual selection).
 ```

@@ -46,8 +46,8 @@ DXP CloudのVPN機能を使って、DXP Cloudのサービスをプライベー�
 
     ![VPN接続を行う前に、1つ以上のポートフォワーディングルートを追加してください。](./connecting-a-vpn-server-to-dxp-cloud/images/03.png)
 
-    ``` tip::
-       右側のアイコンをクリックして、さらにポートフォワーディングのルートを追加します。 Remove added routes by clicking the Trash icon to the side of the existing route.
+    ```{tip}
+    右側のアイコンをクリックして、さらにポートフォワーディングのルートを追加します。 Remove added routes by clicking the Trash icon to the side of the existing route.
     ```
 
 6.  *VPNの作成*をクリックします。
@@ -64,8 +64,8 @@ VPN設定を作成した後は、詳細ページで接続状況や設定の詳�
 
 ![設定されたVPN接続をクリックすると、VPNの詳細ページが表示されます。](./connecting-a-vpn-server-to-dxp-cloud/images/05.png)
 
-``` note::
-   VPNの状態（接続されているか、されていないか）は、VPNの詳細ページと、あなたの環境の`設定`ページのVPNセクションの両方から見ることができます。
+```{note}
+VPNの状態（接続されているか、されていないか）は、VPNの詳細ページと、あなたの環境の`設定`ページのVPNセクションの両方から見ることができます。
 ```
 
 ### VPNの接続と切断
@@ -76,14 +76,14 @@ VPNの詳細ページでは、右上にVPNがすでに接続されているか�
 
 ボタンをクリックすると、VPNが接続を試みます。 接続に失敗した場合は、詳細ページの *関連アクティビティ* セクションに失敗した試みが表示されます。
 
-``` tip::
-   サービスの `shell <../../troubleshooting/shell-access.md>`__ を使って、以下のようなコマンドを実行することで、VPNを介したIPアドレスへの接続性を手動でテストすることができます。``curl -v [address]``.
+```{tip}
+サービスの [shell](../../troubleshooting/shell-access.md)_ を使って、以下のようなコマンドを実行することで、VPNを介したIPアドレスへの接続性を手動でテストすることができます。`curl -v [address]`.
 ```
 
 VPNを切断するには、右上の[アクション]メニューから[*切断*]をクリックします。 これにより、 *VPNの切断* のページが表示されます。
 
-``` warning::
-   VPNを切断すると、DXPクラウドとの外部サービスとの通信が遮断されます。
+```{warning}
+VPNを切断すると、DXPクラウドとの外部サービスとの通信が遮断されます。
 ```
 
 ![「VPNの切断」ページでは、先に進む前に切断の影響を確認するよう求められます。](./connecting-a-vpn-server-to-dxp-cloud/images/07.png)

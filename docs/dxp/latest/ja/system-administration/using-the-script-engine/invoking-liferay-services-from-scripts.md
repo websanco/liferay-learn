@@ -42,8 +42,8 @@ for (user in users){
 
 スクリプトコンソールで使用できるため、`com.liferay.portal.kernel.model.User`と`java.util.List`をインポートする必要はありません。 また、Groovy構文はJava構文よりも単純です。
 
-``` note::
-   サービスに `` * ServiceUtil``クラスがない場合は、 サービスにアクセスするために、次を使用します。`Service Tracker <../../liferay-internals/dependency-injection/using-a-service-tracker.md`_
+```{note}
+サービスに ` * ServiceUtil`クラスがない場合は、 サービスにアクセスするために、次を使用します。`Service Tracker <../../liferay-internals/dependency-injection/using-a-service-tracker.md`_
 ```
 
 ## 次のステップ

@@ -5,10 +5,10 @@ Liferayをアップグレードした後、検索エクスペリエンスをア�
 
 
 
-``` important::
-   Always consult Liferay's `Breaking Changes <../../../../liferay-internals/reference/7-3-breaking-changes.md>`__ before upgrading. One such breaking change that impacts the upgraded search experience: `Dynamic Data Mapping fields in Elasticsearch have changed to a nested document <../../../../liferay-internals/reference/7-3-breaking-changes.md#dynamic-data-mapping-fields-in-elasticsearch-have-changed-to-a-nested-document>`__. 
+```{important}
+Always consult Liferay's [Breaking Changes](../../../../liferay-internals/reference/7-3-breaking-changes.md)_ before upgrading. One such breaking change that impacts the upgraded search experience: [Dynamic Data Mapping fields in Elasticsearch have changed to a nested document](../../../../liferay-internals/reference/7-3-breaking-changes.md#dynamic-data-mapping-fields-in-elasticsearch-have-changed-to-a-nested-document)_. 
 
-   This change affects custom code that executes queries in the Elasticsearch index using ``ddm__keyword__*`` and ``ddm__text__*`` fields, as well as Search Widget configurations (e.g., Custom Filter or Custom Facet widgets) that make use of those fields. Manual updates to code and configurations are required to account for the change.
+This change affects custom code that executes queries in the Elasticsearch index using `ddm__keyword__*` and `ddm__text__*` fields, as well as Search Widget configurations (e.g., Custom Filter or Custom Facet widgets) that make use of those fields. Manual updates to code and configurations are required to account for the change.
 ```
 
 
@@ -40,8 +40,8 @@ Liferayをアップグレードした後、検索エクスペリエンスをア�
 
 
 
-``` important::
-   `Back up the search indexes <./backing-up-elasticsearch.md>`__ before proceeding with these steps.
+```{important}
+[Back up the search indexes](./backing-up-elasticsearch.md)_ before proceeding with these steps.
 ```
 
 
@@ -67,8 +67,8 @@ LESアプリを含まないシステムのアップグレードシナリオに�
 
 
 
-``` important::
-   `Back up the search indexes <./backing-up-elasticsearch.md>`__ before proceeding with these steps.
+```{important}
+[Back up the search indexes](./backing-up-elasticsearch.md)_ before proceeding with these steps.
 ```
 
 

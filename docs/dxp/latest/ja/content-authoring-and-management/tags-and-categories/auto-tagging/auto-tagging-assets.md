@@ -12,8 +12,8 @@
 
 <!-- end list -->
 
-``` tip::
-   精度が制限される可能性があるため、このプロバイダーの使用には注意が必要です。
+```{tip}
+精度が制限される可能性があるため、このプロバイダーの使用には注意が必要です。
 ```
 
 ## Google Cloud Natural Language Text Auto Taggingの設定

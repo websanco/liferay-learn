@@ -27,14 +27,14 @@ DXPインスタンスのローカル現行環境ステージングを設定す�
 
     ![ステージングするデータとコンテンツのタイプを選択します。](./configuring-local-live-staging/images/04.png)
 
-    ``` warning::
-       When applications are checked, their data is copied to Staging, and it may not be possible to edit them directly in Live. When unchecking an application, first make sure that any changes in Staging are published, since they may be lost. See `Managing Data and Content Types in Staging <./managing-data-and-content-types-in-staging.md>`_ for more information.
+    ```{warning}
+    When applications are checked, their data is copied to Staging, and it may not be possible to edit them directly in Live. When unchecking an application, first make sure that any changes in Staging are published, since they may be lost. See [Managing Data and Content Types in Staging](./managing-data-and-content-types-in-staging.md) for more information.
     ```
 
 5.  *[保存]* をクリックして、クローン作成プロセスを開始します。 このプロセスの期間は、サイトのサイズによって異なります。
 
-    ``` tip::
-       Stage your Site early on to reduce cloning time and record a more complete history of your Site's update history, since updates are only recorded once you enable Page Versioning.
+    ```{tip}
+    Stage your Site early on to reduce cloning time and record a more complete history of your Site's update history, since updates are only recorded once you enable Page Versioning.
     ```
 
 プロセスが完了すると、ローカル現行環境ステージングを使用する準備が整います。 ステージング環境の公開機能のナビゲートについては、[Staging UI Reference](./staging-ui-reference.md)を参照してください。

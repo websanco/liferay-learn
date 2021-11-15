@@ -44,8 +44,8 @@
     ./gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)
     ```
 
-    ``` note::
-       このコマンドは、デプロイされたjarをDockerコンテナの ``/opt/liferay/osgi/modules``にコピーするのと同じです。
+    ```{note}
+    このコマンドは、デプロイされたjarをDockerコンテナの `/opt/liferay/osgi/modules`にコピーするのと同じです。
     ```
 
 5.  Dockerコンテナコンソールでデプロイを確認します。
@@ -58,8 +58,8 @@
 
 <!-- end list -->
 
-``` note::
-   Liferay Commerce 2.1以前のバージョンでは、*Control Panel* → *Commerce* → *Settings* → *Currencies* → *Exchange Rate*に移動して為替レートを検索します。 新しい為替レートプロバイダー（"f2y1"）が、[Exchange Rate Provider]ドロップダウンの下に表示されます。
+```{note}
+Liferay Commerce 2.1以前のバージョンでは、*Control Panel* → *Commerce* → *Settings* → *Currencies* → *Exchange Rate*に移動して為替レートを検索します。 新しい為替レートプロバイダー（"f2y1"）が、[Exchange Rate Provider]ドロップダウンの下に表示されます。
 ```
 
 ![新しい為替レートプロバイダー](./implementing-an-exchange-rate-provider/images/02.png "新しい為替レートプロバイダー")

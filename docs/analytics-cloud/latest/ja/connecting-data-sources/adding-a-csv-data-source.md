@@ -2,8 +2,8 @@
 
 CSVファイルから連絡先のプロフィールデータをインポートして、ユーザーの業界、職種、年収など、ビジネスにとって重要なメトリクスに関連した追加データで顧客プロフィールを充実させることができます。 データベースに顧客プロフィールデータがある場合や、Webフォームで収集した場合は、CSVファイルにエクスポートすることができます。
 
-``` important::
-   The CSV files must have an email column.
+```{important}
+The CSV files must have an email column.
 ```
 
 CSVファイルから連絡先データを統合する方法をご紹介します。
@@ -38,8 +38,8 @@ Analytics Cloudでは、いくつかのコンタクト データ マッピング
 
 <!-- end list -->
 
-``` note::
-   If you map source fields from multiple data sources to the same model field, the latest modified value is used.
+```{note}
+If you map source fields from multiple data sources to the same model field, the latest modified value is used.
 ```
 
 ソース・フィールドをデータ・モデルにマッピングすると、データ・モデルのフィールドを検索して選択したり、提案されたフィールドを使用したり、新しいカスタム・フィールドを作成したりすることができます。

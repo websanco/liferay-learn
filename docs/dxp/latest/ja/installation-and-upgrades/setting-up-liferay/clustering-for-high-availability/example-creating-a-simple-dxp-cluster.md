@@ -12,8 +12,8 @@ DXPクラスタリングを学習する簡単な方法は、 [Dockerコンテナ
 | DXPサーバー | Tomcat        | `dxp-1`         |
 | DXPサーバー | Tomcat        | `dxp-2`         |
 
-``` warning::
-   この例は学習を目的としたものであり、本番環境のユースケースには適していません。 本番環境では、DXPサーバーへのリクエストの負荷分散用にHTTPサーバーを含め、読み取り専用操作と読み取り/書き込み操作に別々のデータベースサーバーを使用し、データベースサーバー、ファイルストアサーバー、および検索エンジンサーバーのクラスタリングと負荷分散を検討する必要があります。 詳細は、 `Clustering for High Availability <./clustering-for-high-availability.md>`_ のすべての記事をお読みください。
+```{warning}
+この例は学習を目的としたものであり、本番環境のユースケースには適していません。 本番環境では、DXPサーバーへのリクエストの負荷分散用にHTTPサーバーを含め、読み取り専用操作と読み取り/書き込み操作に別々のデータベースサーバーを使用し、データベースサーバー、ファイルストアサーバー、および検索エンジンサーバーのクラスタリングと負荷分散を検討する必要があります。 詳細は、 [Clustering for High Availability](./clustering-for-high-availability.md) のすべての記事をお読みください。
 ```
 
 
@@ -92,8 +92,8 @@ Elasticsearchサーバーを作成して設定します。
     docker run -it --name elasticsearch -p 9200:9200 -p 9300:9300 -e cluster.name=LiferayElasticsearchCluster -e ES_JAVA_OPTS="-Xms512m -Xmx512m" -v $(pwd)/elasticsearch/es_data_volume:/usr/share/elasticsearch/data elasticsearch:6.8.7
     ```
 
-    ``` note::
-       コンテナが``max virtual memory areas vm.max_map_count [xxxxx] is too low, increase to at least [xxxxxx]``と報告してきたら、``sudo sysctl -w vm.max_map_count=[xxxxxx]``のようなコマンドを使って ``vm.max_map_count``を十分な値に設定してください。 次に、コンテナを起動します。
+    ```{note}
+    コンテナが`max virtual memory areas vm.max_map_count [xxxxx] is too low, increase to at least [xxxxxx]`と報告してきたら、`sudo sysctl -w vm.max_map_count=[xxxxxx]`のようなコマンドを使って `vm.max_map_count`を十分な値に設定してください。 次に、コンテナを起動します。
     ```
 
 3.  必要なElasticsearchプラグインをインストールします。
@@ -136,8 +136,8 @@ Elasticsearchサーバーを作成して設定します。
 
 これらの設定ファイルを、DXPサーバーコンテナのバインドマウントを介してクラスターノードからアクセスできるようにします。
 
-``` note::
-   後でDXPサーバーに使用される``docker run --add-host elasticsearch:[ip] ...``コマンドは、名前_elasticsearch_をElasticsearchサーバーのホストIPアドレスにマップする``/etc/hosts/``エントリを追加します。
+```{note}
+後でDXPサーバーに使用される`docker run --add-host elasticsearch:[ip] ...`コマンドは、名前_elasticsearch_をElasticsearchサーバーのホストIPアドレスにマップする`/etc/hosts/`エントリを追加します。
 ```
 
 ## DXPクラスターを開始する
@@ -157,8 +157,8 @@ DXPコンテナを起動します。
 
 1.  [`docker network inspect bridge`](https://docs.docker.com/engine/reference/commandline/network_inspect/)コマンドを実行して、`elasticsearch`および`some-mariadb`コンテナのコンテナIPアドレスを取得します。 `bridge`ネットワークがデフォルトネットワークです。
 
-    ``` important::
-       次の``docker run``コマンドでは、`[IP address]`を``elasticsearch``および``some-mariadb``コンテナのIPアドレスに置き換えます。
+    ```{important}
+    次の`docker run`コマンドでは、`[IP address]`を`elasticsearch`および`some-mariadb`コンテナのIPアドレスに置き換えます。
     ```
 
 2.  `dxp-1`を開始します。

@@ -66,8 +66,8 @@
 
     ![コレクションが利用可能です。](./adding-configuration-options-to-fragments/images/01.png)
 
-    ``` note::
-       Liferay DXP 7.1および7.2では、代わりにプロダクトメニューの*サイト* → *サイトビルダー* → *ページ フラグメント*に移動して、[フラグメント]ページを表示します。
+    ```{note}
+    Liferay DXP 7.1および7.2では、代わりにプロダクトメニューの*サイト* → *サイトビルダー* → *ページ フラグメント*に移動して、[フラグメント]ページを表示します。
     ```
 
 6.  ホームページに移動し、(![Edit icon](../../../images/icon-edit-pencil.png)) アイコンをクリックしてコンテンツページを編集します。
@@ -146,8 +146,8 @@
 
 ![これが C7F8 カード フラグメントのセレクタです。](./adding-configuration-options-to-fragments/images/03.png)
 
-``` warning::
-   フラグメントエディタは、有効になるまで構成を保存しません。 プレビューする前に、JSON構成が有効であることを確認してください。
+```{warning}
+フラグメントエディタは、有効になるまで構成を保存しません。 プレビューする前に、JSON構成が有効であることを確認してください。
 ```
 
 ユーザーが選択した構成値は、FreeMarkerコンテキストを介してHTMLで使用できるようになります。 これらは、HTMLの中で `${configuration.fieldName}`という表記で参照されます。 このサンプル（`${configuration.textAppliedStyle}`）は、ユーザーが選択した構成値に応じて `dark` または `light` を返し、CSS クラスを `text-light` または `text-dark`に設定します。
@@ -220,8 +220,8 @@ function (fragmentElement, configuration) {
 
 1.  画面左側のサイトメニューから、*[デザイン]* → *[フラグメント]* に移動します。 コレクションがコレクションリストに表示されます。
 
-    ``` note::
-       Liferay DXP 7.1および7.2では、代わりにプロダクトメニューの*サイト* → *サイトビルダー* → *ページ フラグメント*に移動して、[フラグメント]ページを表示します。
+    ```{note}
+    Liferay DXP 7.1および7.2では、代わりにプロダクトメニューの*サイト* → *サイトビルダー* → *ページ フラグメント*に移動して、[フラグメント]ページを表示します。
     ```
 
 2.  *[C7F8コレクション]* を選択し、C7F8 カードの*アクション* (![Actions Icon](../../../images/icon-actions.png)）をクリックして、*[編集する]* を選択します。 フラグメント エディタが表示されます。
@@ -251,8 +251,8 @@ function (fragmentElement, configuration) {
 
 <!-- end list -->
 
-``` note::
-  また、``const configurationValue = configuration.textAppliedStyle;``という構文でJavaScriptから構成値にアクセスすることもできます。
+```{note}
+また、`const configurationValue = configuration.textAppliedStyle;`という構文でJavaScriptから構成値にアクセスすることもできます。
 ```
 
 ## 変更のプロパゲートとテスト

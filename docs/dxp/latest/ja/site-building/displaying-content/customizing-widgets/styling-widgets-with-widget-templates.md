@@ -20,8 +20,8 @@
 
 5.  *フィールド* メニューのフィールドのひとつをクリックして、そのフィールドをエディターに挿入します。 ウィジェットテンプレートを使用すると、フィールドの値が表示されます。
 
-    ``` note::
-       Clicking any of the fields in the menu will insert the field name wherever the cursor is. You can also begin typing a field name yourself (starting with "${") to show suggestions for auto-completion.
+    ```{note}
+    Clicking any of the fields in the menu will insert the field name wherever the cursor is. You can also begin typing a field name yourself (starting with "${") to show suggestions for auto-completion.
     ```
 
 6.  [ *保存* ]をクリックして、テンプレートを完成させます。
@@ -36,8 +36,8 @@
 
     ![Asset Publisher構成の[表示テンプレート]ドロップダウンボックス。](../additional-content-display-options/styling-widgets-with-widget-templates/images/03.png)
 
-    ``` note::
-       This drop-down menu is on the default tab, Setup, for most widgets. For the Asset Publisher widget, this setting is found under the Display Settings tab.
+    ```{note}
+    This drop-down menu is on the default tab, Setup, for most widgets. For the Asset Publisher widget, this setting is found under the Display Settings tab.
     ```
 
 3.  [ *保存*]をクリックします。

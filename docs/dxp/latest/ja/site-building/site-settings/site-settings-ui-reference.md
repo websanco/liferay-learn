@@ -9,8 +9,8 @@
 
 ![サイト設定は4つのタブで構成されています。](./site-settings-ui-reference/images/01.png)
 
-``` note::
-   Many of these settings can be localized to provide translations based on a user's locale. See `Introduction to Localization <https://help.liferay.com/hc/en-us/articles/360028746672-Introduction-to-Localization>`_ and `Modifying Localizable Site Fields <./site-localization.md#modifying-localizable-site-fields>`_ or more information.
+```{note}
+Many of these settings can be localized to provide translations based on a user's locale. See [Introduction to Localization](https://help.liferay.com/hc/en-us/articles/360028746672-Introduction-to-Localization) and [Modifying Localizable Site Fields](./site-localization.md#modifying-localizable-site-fields) or more information.
 ```
 
 ## 一般

@@ -28,8 +28,8 @@ liferay-npm-bundlerには、デフォルトの構成プリセット[`liferay-npm
 
 上記の構成は、すべてのnpmパッケージ（`*`）について、前処理フェーズ（`プラグイン`）が `replace-browser-modules` プラグインを実行する必要があることを示しています。 これを `post-plugins` に設定すると、代わりにポストフェーズで実行されます。
 
-``` note::
-  プロジェクトの `` .npmbundlerrc``ファイルに独自の設定を追加することで、設定のプリセット値を上書きできます。 たとえば、上記の設定プリセットの例を使用して、独自の「.babelrc」値を「.npmbundlerrc」ファイルに定義して、定義された「liferay-standard」babelrcプリセットを上書きできます。
+```{note}
+プロジェクトの ` .npmbundlerrc`ファイルに独自の設定を追加することで、設定のプリセット値を上書きできます。 たとえば、上記の設定プリセットの例を使用して、独自の「.babelrc」値を「.npmbundlerrc」ファイルに定義して、定義された「liferay-standard」babelrcプリセットを上書きできます。
 ```
 
 ## Liferay標準プリセット

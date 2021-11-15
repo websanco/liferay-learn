@@ -2,8 +2,8 @@
 
 バンドルブラックリストは、複数のアプリ、OSGiバンドル（モジュール）、WARプラグインを一度にアンインストールまたは再インストールする便利な方法です。 [アプリケーションマネージャー](./using-the-app-manager.md)または[Gogoシェル](https://help.liferay.com/hc/articles/360029070351-Using-the-Felix-Gogo-Shell)を使用して、アプリ、モジュール、プラグインのインストールを個別に管理する手間を省きます。
 
-``` important::
-   The blacklist is an `OSGi configuration <../../system-settings/using-configuration-files.md#creating-configuration-files>`_ that DXP uses to uninstall apps. これを使用すると、リストされているアプリは削除されるまでインストールされなくなります。
+```{important}
+The blacklist is an [OSGi configuration](../../system-settings/using-configuration-files.md#creating-configuration-files) that DXP uses to uninstall apps. これを使用すると、リストされているアプリは削除されるまでインストールされなくなります。
 ```
 
 リスト [は、コントロールパネル](#blacklisting-via-the-control-panel) で設定するか、 [コントロールパネルから](../../system-settings/using-configuration-files.md#creating-configuration-files) エクスポートすることでOSGi構成</a> （`.config`）ファイルを使用して
@@ -17,8 +17,8 @@ DXPは、ブラックリストにあるインストール済みのアプリ、�
 
 
 
-``` note::
-   LPKGをブラックリストに登録すると、その内部モジュールがすべてアンインストールされます。
+```{note}
+LPKGをブラックリストに登録すると、その内部モジュールがすべてアンインストールされます。
 ```
 
 
@@ -58,8 +58,8 @@ DXPは、ブラックリストにあるインストール済みのアプリ、�
    
    
 
-    ``` warning::
-       構成値に余分なスペースを含めることはできません。 余分なスペースがあると、リストが短絡したり、構成エントリが無効になったりする可能性があります。
+    ```{warning}
+    構成値に余分なスペースを含めることはできません。 余分なスペースがあると、リストが短絡したり、構成エントリが無効になったりする可能性があります。
     ```
 
 
@@ -93,8 +93,8 @@ DXPは、ブラックリストにあるインストール済みのアプリ、�
 
 <!-- end list -->
 
-``` tip::
-   ブラックリストに登録されているアイテムを一時的に再インストールするには、[*System Settings*]のバンドルブラックリストモジュールからそのシンボリック名を削除し、[*Update*]ボタンをクリックします。 If you're using a blacklist config file (in the ``[Liferay Home]/osgi/configs`` folder) and want the item to install on subsequent server startup, make sure to remove the item's symbolic name from the file.
+```{tip}
+ブラックリストに登録されているアイテムを一時的に再インストールするには、[*System Settings*]のバンドルブラックリストモジュールからそのシンボリック名を削除し、[*Update*]ボタンをクリックします。 If you're using a blacklist config file (in the `[Liferay Home]/osgi/configs` folder) and want the item to install on subsequent server startup, make sure to remove the item's symbolic name from the file.
 ```
 
 

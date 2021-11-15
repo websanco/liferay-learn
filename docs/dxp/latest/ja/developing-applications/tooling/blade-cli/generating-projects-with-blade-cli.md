@@ -29,7 +29,7 @@ blade create -t mvc-portlet -p com.liferay.docs.portlet -c GuestbookPortlet -v 7
 
 これにより、MVCポートレットプロジェクトが作成されます。 スタンドアロンプロジェクトは任意のIDEにインポートできます。 Liferayワークスペースは、Liferay IntelliJプラグインを使用してIntelliJに、またはLiferay Developer Studioを使用してEclipseにインポートできます。
 
-``` tip::
+```{tip}
 If you run this command from inside a Liferay Workspace, your project is created in the Workspace, and can take advantage of all the infrastructure and automation that Workspace offers.
 ```
 

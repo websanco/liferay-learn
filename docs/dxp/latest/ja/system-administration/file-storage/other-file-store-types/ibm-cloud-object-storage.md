@@ -16,8 +16,8 @@ Liferay DXPは、IBMの[Cloud Object Storage](https://cloud.ibm.com/docs/cloud-o
     
     <!-- end list -->
     
-    ``` important::
-       Currently, the store only supports *HMAC credentials*. See official `IBM Cloud Object Storage documentation <https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-uhc-hmac-credentials-main>`_ for more information.
+    ```{important}
+    Currently, the store only supports *HMAC credentials*. See official [IBM Cloud Object Storage documentation](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-uhc-hmac-credentials-main) for more information.
     ```
 
 3.  完了したら、*[保存]* をクリックします。

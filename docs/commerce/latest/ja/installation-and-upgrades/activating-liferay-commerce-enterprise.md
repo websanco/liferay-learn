@@ -42,14 +42,14 @@ Liferay Commerce Enterpriseを使用する準備ができました。
     <expiration-date>2019年9月23日土曜日2:05:47 PM GMT</expiration-date>
     ```
 
-    ``` warning::
-       期限切れのキーを確認して削除する際は、有効な* DXP *固有のアクティベーションキーを含む有効なキーを削除しないように注意してください。
+    ```{warning}
+    期限切れのキーを確認して削除する際は、有効な* DXP *固有のアクティベーションキーを含む有効なキーを削除しないように注意してください。
     ```
 
 3.  新しいアクティベーションキーを [`${liferay.home}/ deploy`](https://learn.liferay.com/dxp/7.x/en/installation-and-upgrades/reference/liferay-home.html) フォルダーに展開します。
 
-    ``` tip::
-      アクティベーションキーを展開または削除するためにアプリケーションサーバーをシャットダウンする必要はありません。
+    ```{tip}
+    アクティベーションキーを展開または削除するためにアプリケーションサーバーをシャットダウンする必要はありません。
     ```
 
 ## 追加情報

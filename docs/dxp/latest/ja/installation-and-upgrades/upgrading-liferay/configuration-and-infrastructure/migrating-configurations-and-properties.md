@@ -34,8 +34,8 @@ DXPアップグレードプロセスに必要な設定の更新は次のとお�
 
 <!-- end list -->
 
-``` important::
-   マーケットプレイスアプリとカスタムコードで、必要な設定の更新を確認してください。
+```{important}
+マーケットプレイスアプリとカスタムコードで、必要な設定の更新を確認してください。
 ```
 
 ### データベースドライバー
@@ -125,8 +125,8 @@ rootDir="{document_library_path}"
 
 `.config`ファイルを`[Liferay Home]/osgi/configs`というフォルダに配置します。
 
-``` tip::
-   コントロールパネルの*システム設定*画面（*設定*の下）は、OSGi構成管理の値を管理します。 これらの画面は ``.config`` ファイルを作成する最も正確な方法です。 構成する機能の構成画面を見つけて *保存* をクリックし、オプションボタンを使用して `画面の構成 <../../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md>`_ を ``.config`` ファイルにエクスポートします。
+```{tip}
+コントロールパネルの*システム設定*画面（*設定*の下）は、OSGi構成管理の値を管理します。 これらの画面は `.config` ファイルを作成する最も正確な方法です。 構成する機能の構成画面を見つけて *保存* をクリックし、オプションボタンを使用して [画面の構成](../../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md) を `.config` ファイルにエクスポートします。
 ```
 
 ### プロパティの移行に関する特別な考慮事項
@@ -147,8 +147,8 @@ rootDir="{document_library_path}"
     sprite.enabled=true
     ```
 
-    ``` note::
-       好きなフレームワークを使用して画像スプライトを作成し、プラグインにデプロイできます。
+    ```{note}
+    好きなフレームワークを使用して画像スプライトを作成し、プラグインにデプロイできます。
     ```
 
 6.  7.3以降、キャッシュはEhcache XMLファイルを使用してのみ構成されます。 ポータルプロパティでキャッシュを有効にしたり設定したりすることができなくなりました。 ポータルプロパティを使用してキャッシュを構成した場合は、モジュール内のEhcache XMLファイルを使用してキャッシュを構成してください。 詳細は、[キャッシュ構成](https://help.liferay.com/hc/en-us/articles/360035581451-Introduction-to-Cache-Configuration)を参照してください。

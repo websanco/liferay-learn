@@ -32,8 +32,8 @@ Webコンテンツテンプレートへのウィジェットの埋め込みを�
 
 <!-- end list -->
 
-``` important::
-   `` theme``変数はFreeMarkerコンテキストに挿入されなくなりました。 DXP 7.0でtheme変数が削除された理由や、コードを更新するための提案については、 `Taglibs Are No Longer Accessible via the theme Variable in FreeMarker <https://help.liferay.com/hc/articles/360017892092-Introduction-to-Breaking-Changes-#taglibs-are-no-longer-accessible-via-the-theme-variable-in-freemarker>`_ の破壊的変更のエントリーを参照してください。
+```{important}
+` theme`変数はFreeMarkerコンテキストに挿入されなくなりました。 DXP 7.0でtheme変数が削除された理由や、コードを更新するための提案については、 [Taglibs Are No Longer Accessible via the theme Variable in FreeMarker](https://help.liferay.com/hc/articles/360017892092-Introduction-to-Breaking-Changes-#taglibs-are-no-longer-accessible-via-the-theme-variable-in-freemarker) の破壊的変更のエントリーを参照してください。
 ```
 
 ## 他のテンプレートの埋め込み

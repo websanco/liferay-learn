@@ -48,8 +48,8 @@
 
 スタイルブックを編集しているとき、ドロップダウンボックスから利用できるカテゴリには、ページのスタイルを設定するためのさまざまなオプションが表示されます。
 
-``` tip::
-   You can place the ``Style Guide Sample`` widget on your pages to help test out the various options in your Style Book categories. This sample widget contains many different UI elements that leverage most of the features in the Classic theme, so you can use it to test your page styles. 
+```{tip}
+You can place the `Style Guide Sample` widget on your pages to help test out the various options in your Style Book categories. This sample widget contains many different UI elements that leverage most of the features in the Classic theme, so you can use it to test your page styles. 
 ```
 
 ここにリストされているカテゴリは、標準テーマのオプションとして利用できます。
@@ -60,8 +60,8 @@
 
 ![[色体系]カテゴリのオプションを使用して、ディスプレイまたはUI要素に使用される色を変更します。](./style-books/using-a-style-book-to-standardize-site-appearance/images/03.png)
 
-``` note::
-   Changing the colors for alert-related elements (such as *Success* or *Warning*) may not affect the color of incoming alerts on your Site because each type of alert may use one of many colors. In order to fully customize the color of alerts, you must define a variety of customizable colors and use them in your own theme's categories.
+```{note}
+Changing the colors for alert-related elements (such as *Success* or *Warning*) may not affect the color of incoming alerts on your Site because each type of alert may use one of many colors. In order to fully customize the color of alerts, you must define a variety of customizable colors and use them in your own theme's categories.
 ```
 
 ### 間隔

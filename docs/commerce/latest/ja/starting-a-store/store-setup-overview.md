@@ -13,8 +13,8 @@
 
 ## ストア設定
 
-``` note::
-   `Accelerator <../starting-a-store/accelerators.md>`_ は店のサイトを作成するために使用することができます。 アクセラレータを使用してストアサイトを作成すると、このセクションで説明されている多くの設定が構成されます。詳細については、`MiniumAcceleratorを使用してB2Bストアをジャンプスタートする <../starting-a-store/using-the-minium-accelerator-to-jump-start-your-b2b-store.md>`_ を参照してください。
+```{note}
+[Accelerator](../starting-a-store/accelerators.md) は店のサイトを作成するために使用することができます。 アクセラレータを使用してストアサイトを作成すると、このセクションで説明されている多くの設定が構成されます。詳細については、[MiniumAcceleratorを使用してB2Bストアをジャンプスタートする](../starting-a-store/using-the-minium-accelerator-to-jump-start-your-b2b-store.md) を参照してください。
 ```
 
 最初のストア設定は、[管理者アカウント](./introduction-to-the-admin-account.md)を使用して行います 。 Liferay Commerceの設定レイアウトと使用可能なオプションについては、[Liferay Commerce Configuration Overview](../store-administration/liferay-commerce-configuration-overview.md)をご覧ください。

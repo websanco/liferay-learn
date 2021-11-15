@@ -13,8 +13,8 @@
 
 <!-- end list -->
 
-``` note::
-   Result Rankings affect only searches using the newer search widgets (Search Bar, Search Results, etc.). The rankings you customize do not apply to the legacy Search portlet results or to the individual application search bars.
+```{note}
+Result Rankings affect only searches using the newer search widgets (Search Bar, Search Results, etc.). The rankings you customize do not apply to the legacy Search portlet results or to the individual application search bars.
 ```
 
 ## 要件と制限事項

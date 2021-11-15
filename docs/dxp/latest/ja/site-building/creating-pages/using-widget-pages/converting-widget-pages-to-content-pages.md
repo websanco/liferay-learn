@@ -30,12 +30,12 @@
 
 <!-- end list -->
 
-``` note::
-  If you've already confirmed that a custom layout template can be converted, You can disable the layout template conversion warning for the layout template so you don't keep seeing it each time you convert a Widget Page that uses the layout. Open the Product Menu and go to *Control Panel* -> *Configuration* -> *System Settings*. Select *Pages* under Content and Data and add the layout template ID to the list of "Verified Layout Template IDs" under the System Scope.
+```{note}
+If you've already confirmed that a custom layout template can be converted, You can disable the layout template conversion warning for the layout template so you don't keep seeing it each time you convert a Widget Page that uses the layout. Open the Product Menu and go to *Control Panel* -> *Configuration* -> *System Settings*. Select *Pages* under Content and Data and add the layout template ID to the list of "Verified Layout Template IDs" under the System Scope.
 ```
 
-``` note::
-  While portlets are rendered according to `render-weight <https://docs.liferay.com/ce/portal/7.3-latest/definitions/liferay-portlet-app_7_3_0.dtd.html#render-weight>`_ on Widget Pages, that is not true for Content Pages. Portlets are rendered in the order they appear on the page on Content Pages (i.e. left to right, top to bottom), so you may notice some portlets are rendered sooner or later, depending on their placement on the Content Page.
+```{note}
+While portlets are rendered according to [render-weight](https://docs.liferay.com/ce/portal/7.3-latest/definitions/liferay-portlet-app_7_3_0.dtd.html#render-weight) on Widget Pages, that is not true for Content Pages. Portlets are rendered in the order they appear on the page on Content Pages (i.e. left to right, top to bottom), so you may notice some portlets are rendered sooner or later, depending on their placement on the Content Page.
 ```
 
 ## ウィジェットページをコンテンツページに直接変換する

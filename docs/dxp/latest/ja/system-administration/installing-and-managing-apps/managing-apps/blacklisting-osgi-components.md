@@ -27,8 +27,8 @@ OSGiコンポーネントを無効にするには、次の手順に従います�
 
 4.  まだリストにない有効にしたくないコンポーネント（たとえば、まだインストールされていないモジュールのコンポーネント）の名前を追加します。
 
-    ``` important::
-       構成値に余分なスペースを含めることはできません。 余分なスペースがあると、リストが短絡したり、構成エントリが無効になったりする可能性があります。
+    ```{important}
+    構成値に余分なスペースを含めることはできません。 余分なスペースがあると、リストが短絡したり、構成エントリが無効になったりする可能性があります。
     ```
 
 5.  構成ファイルをデプロイするには、フォルダ`[Liferay Home]/osgi/configs`にコピーします。 Liferay Homeフォルダは通常、アプリケーションサーバーの親フォルダです。
@@ -43,8 +43,8 @@ OSGiコンポーネントを無効にするには、次の手順に従います�
 
 ブラックリストに登録されている*すべての*コンポーネントを有効にするには、構成ファイルを削除します。
 
-``` note::
-   ブラックリストに登録されているコンポーネントを一時的に再度有効にするには、システム設定でコンポーネントブラックリスト設定モジュールからその名前を削除し、[*Update*]をクリックします。 If you're using a component blacklist config file (in the ``[Liferay Home]/osgi/configs`` folder) and want the component to enable on subsequent server startup, make sure to remove the component's name from the file.
+```{note}
+ブラックリストに登録されているコンポーネントを一時的に再度有効にするには、システム設定でコンポーネントブラックリスト設定モジュールからその名前を削除し、[*Update*]をクリックします。 If you're using a component blacklist config file (in the `[Liferay Home]/osgi/configs` folder) and want the component to enable on subsequent server startup, make sure to remove the component's name from the file.
 ```
 
 これで、単純なリストを使用して複数のコンポーネントを管理できるようになりました。

@@ -6,8 +6,8 @@
 
 ![クラスター横断レプリケーションを使用すると、異なるデータセンターがLiferay DXPインデックスを使用して同期されたElasticsearchクラスターを保持できます。](./configuring-an-example-ccr-installation-replicating-between-data-centers/images/01.png)
 
-``` important::
-   Differences in the configurations and procedure between Liferay DXP 7.2 and 7.3 are noted inline throughout these instructions.
+```{important}
+Differences in the configurations and procedure between Liferay DXP 7.2 and 7.3 are noted inline throughout these instructions.
 ```
 
 `localhost`で2つのシングルノードElasticsearchクラスターを使用し、それぞれに同じインデックスのコピーを設定します。 これは、クラスター横断レプリケーションのデータの局所性とディザスタリカバリのメリットを享受するために構成できる最も単純なシナリオです。
@@ -16,8 +16,8 @@
 
 ここで提供されるElasticsearch API呼び出しは、Kibanaの開発ツールコンソールにコピーして貼り付けることができ、別のKibanaインストールまたは[LES モニタリングウィジェット](../monitoring-elasticsearch.md)からアクセスできます。
 
-``` note::
-   To use Kibana, remember that you have multiple Elasticsearch clusters (two single-node clusters in this example) running. The ``elasticsearch.hosts: [ "http://localhost:<port>" ]`` setting in Kibana's ``kibana.yml`` file must point to the correct port when managing the indexes and other configurations described below to avoid mixing the leader and the follower clusters. Here, it's assumed that your leader Elasticserach cluster node uses port ``9200`` and the follower uses port ``9202``. 
+```{note}
+To use Kibana, remember that you have multiple Elasticsearch clusters (two single-node clusters in this example) running. The `elasticsearch.hosts: [ "http://localhost:<port>" ]` setting in Kibana's `kibana.yml` file must point to the correct port when managing the indexes and other configurations described below to avoid mixing the leader and the follower clusters. Here, it's assumed that your leader Elasticserach cluster node uses port `9200` and the follower uses port `9202`. 
 ```
 
 ## クラスターLiferay DXP
@@ -45,8 +45,8 @@ cluster.link.enabled=true
 
 1.  ElasticsearchクラスターでX-Pack Securityを構成します。 ノード証明書が同じCAによって署名されており、リーダークラスターとフォロワークラスターのセキュリティ設定が一致していることを確認してください。
 
-    ``` note::
-       TLS/SSL must be enabled for the HTTP and Transport layers on the follower Elasticsearch cluster nodes. Liferay DXP connects to the follower cluster over HTTP to re-follow the company indexes after a full reindex is performed.
+    ```{note}
+    TLS/SSL must be enabled for the HTTP and Transport layers on the follower Elasticsearch cluster nodes. Liferay DXP connects to the follower cluster over HTTP to re-follow the company indexes after a full reindex is performed.
     ```
 
 2.  DXPノードを設定します。
@@ -67,8 +67,8 @@ cluster.link.enabled=true
 
 <!-- end list -->
 
-``` tip::
-   Because you only use multiple Elasticsearch connections on Liferay DXP 7.2 with Cross-Cluster Replication, the Connections UI is only visible in the Search administration panel (Control Panel > Configuration > Search---under the Connections tab) if the Cross-Cluster Replication LPKG is deployed. On Liferay DXP 7.3, the Connections UI is always present.
+```{tip}
+Because you only use multiple Elasticsearch connections on Liferay DXP 7.2 with Cross-Cluster Replication, the Connections UI is only visible in the Search administration panel (Control Panel > Configuration > Search---under the Connections tab) if the Cross-Cluster Replication LPKG is deployed. On Liferay DXP 7.3, the Connections UI is always present.
 ```
 
 前提条件のタスクがすべて完了し、クラスター横断レプリケーションモジュールがインストールされている場合は、[リモートデータセンターでサーバーを構成して](./configuring-ccr-in-a-remote-leader-data-center.md)続行します。

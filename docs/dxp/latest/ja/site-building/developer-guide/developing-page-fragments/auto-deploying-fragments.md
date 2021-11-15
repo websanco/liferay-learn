@@ -52,8 +52,8 @@
 
 <!-- end list -->
 
-``` note::
-   インポートされたフラグメントに無効なルールがある場合、ドラフトとして自動的に保存されます。
+```{note}
+インポートされたフラグメントに無効なルールがある場合、ドラフトとして自動的に保存されます。
 ```
 
 ![コレクションが利用可能です。](./auto-deploying-fragments/images/01.png)
@@ -95,8 +95,8 @@
 }
 ```
 
-``` note::
-   フラグメントツールキット `npm run compress command <./using-the-fragments-toolkit.md>`_ を使用すると、フラグメント ZIP ファイルとそのデプロイメント記述子の作成が容易になります。
+```{note}
+フラグメントツールキット [npm run compress command](./using-the-fragments-toolkit.md) を使用すると、フラグメント ZIP ファイルとそのデプロイメント記述子の作成が容易になります。
 ```
 
 ## フラグメントコレクションを変更して再デプロイする

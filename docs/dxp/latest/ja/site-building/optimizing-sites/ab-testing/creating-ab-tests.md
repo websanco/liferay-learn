@@ -10,8 +10,8 @@ A/Bテストを作成する前に、次の点に留意してください。
 
 A/Bテストを作成するには、最初に[テストを作成](#creating-the-test)してから、1つ以上の[テストバリアント](#creating-the-test-variant)を作成します。
 
-``` important::
-   Verify that your environment `meets the requirements <./verifying-ab-test-requirements.md>`_ for A/B Testing before creating the test.
+```{important}
+Verify that your environment [meets the requirements](./verifying-ab-test-requirements.md) for A/B Testing before creating the test.
 ```
 
 ## テストの作成
@@ -33,8 +33,8 @@ A/Bテストを作成するには、最初に[テストを作成](#creating-the-
 
 7.  *[保存]* をクリックして、テストを*下書き*として保存します（訪問者にはまだ表示されません）。
 
-    ``` note::
-      You can always edit or delete the new A/B test by clicking the *Actions* button in the top right of the A/B Test menu. Deleted tests are not recoverable (i.e., not sent to the Recycle Bin). These options are not available for an active running test.
+    ```{note}
+    You can always edit or delete the new A/B test by clicking the *Actions* button in the top right of the A/B Test menu. Deleted tests are not recoverable (i.e., not sent to the Recycle Bin). These options are not available for an active running test.
     ```
 
 ## テストバリアントの作成
@@ -57,8 +57,8 @@ A/Bテストを作成するには、最初に[テストを作成](#creating-the-
     
     <!-- end list -->
     
-    ``` note::
-       Only links and buttons with an ID attribute can be selected as a target for the click goal. The click target element applies to the whole A/B Test, and must be present in all variants.
+    ```{note}
+    Only links and buttons with an ID attribute can be selected as a target for the click goal. The click target element applies to the whole A/B Test, and must be present in all variants.
     ```
 
 3.  *[有効なテスト]* タブの*[バリアント]* セクションで、*[バリエーションを作成]* をクリックします。

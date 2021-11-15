@@ -2,8 +2,8 @@
 
 デフォルトでは、Liferay DXPは*[Sign In]* ウィジェットを使用してユーザーを認証します。
 
-``` note::
-   [Sign In]ウィジェットは、``http[s]://[server-name:port]/web/guest/home``のデフォルトのホームページに表示されます。 [Sign In]ウィジェットがどのページでも使用できない場合は、URL``http[s]://[server-name:port]/c/portal/login``から直接アクセスできます。
+```{note}
+[Sign In]ウィジェットは、`http[s]://[server-name:port]/web/guest/home`のデフォルトのホームページに表示されます。 [Sign In]ウィジェットがどのページでも使用できない場合は、URL`http[s]://[server-name:port]/c/portal/login`から直接アクセスできます。
 ```
 
 ![デフォルトのLiferayホームページ](./authentication-basics/images/01.png)
@@ -29,8 +29,8 @@
 | 電子メールアドレス | アカウント作成時に管理者またはユーザーが決定します | はい             |
 | ユーザID     | アカウントの作成時に自動的に生成されます      | いいえ            |
 
-``` note::
-   一度に使用できる認証タイプは1つだけです。
+```{note}
+一度に使用できる認証タイプは1つだけです。
 ```
 
 認証タイプに関係なく、ユーザーは常にパスワードを入力する必要があります。 パスワードポリシーを作成して、パスワードの長さ、パスワードの形式、有効期限などを定義できます。
@@ -89,8 +89,8 @@ CAPTCHAまたはreCAPTCHAを有効にして、ボットによるアカウント�
 
     ![CAPTCHAの構成画面。](./authentication-basics/images/02.png)
 
-    ``` note::
-       デフォルトでは、[*Create Account CAPTCHA*]および[*Send Password CAPTCHA*]が有効になっています。 必要に応じて、[Message Boards CAPTCHA]を有効にします。
+    ```{note}
+    デフォルトでは、[*Create Account CAPTCHA*]および[*Send Password CAPTCHA*]が有効になっています。 必要に応じて、[Message Boards CAPTCHA]を有効にします。
     ```
 
 2.  CAPTCHAエンジンを選択します。 デフォルトでは、[Simple CAPTCHA]が有効になっています。 GoogleのreCAPTCHAを選択することもできます。そのためには、外部サービスを個別に設定する必要があります。 reCAPTCHAを選択した場合は、Googleから公開鍵と秘密鍵を提供します。

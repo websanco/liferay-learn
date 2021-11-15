@@ -42,8 +42,8 @@
     ./gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)
     ```
 
-    ``` tip::
-       このコマンドは、デプロイされたjarをDockerコンテナの/opt/liferay/osgi/modulesにコピーするのと同じです。
+    ```{tip}
+    このコマンドは、デプロイされたjarをDockerコンテナの/opt/liferay/osgi/modulesにコピーするのと同じです。
     ```
 
 4.  Liferay Dockerコンテナコンソールでデプロイを確認します。
@@ -94,8 +94,8 @@
 public class R2F1DDMStorageAdapter implements DDMStorageAdapter {
 ```
 
-``` note::
-   ``r2f1-ddm-storage-adapter``キーは、``src/main/resources/content/Language.properties``ファイルと、``bnd.bnd``ファイル内の``Provide-Capability``ヘッダーによって、`R2F1 Dynamic Data Mapping Storage Adapter`という値にローカライズされます。
+```{note}
+`r2f1-ddm-storage-adapter`キーは、`src/main/resources/content/Language.properties`ファイルと、`bnd.bnd`ファイル内の`Provide-Capability`ヘッダーによって、`R2F1 Dynamic Data Mapping Storage Adapter`という値にローカライズされます。
 ```
 
 `service`コンポーネントプロパティは、実装を`DDMStorageAdapter`サービスとして登録します。

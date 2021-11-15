@@ -24,8 +24,8 @@
 
 <!-- end list -->
 
-``` note::
-   After changes are made and published, they are propagated to all pages that use the Master Page Template.
+```{note}
+After changes are made and published, they are propagated to all pages that use the Master Page Template.
 ```
 
 ## ページのマスターページテンプレートの変更

@@ -2,12 +2,12 @@
 
 Tomcatバンドルには、Liferay DXPが事前にデプロイされたApache Tomcatアプリケーションサーバーが含まれています。 これは、Liferay DXPをオンプレミスにインストールする最も簡単で最速の方法です。
 
-``` note::
-   If you're using one of the following application servers already, click the name of the one you're using to see instructions for deploying DXP to it: `Tomcat <./installing-liferay-on-an-application-server/installing-on-tomcat.md>`_, `WildFly <./installing-liferay-on-an-application-server/installing-on-wildfly.md>`_, `JBoss EAP <./installing-liferay-on-an-application-server/installing-on-jboss-eap.md>`_, `WebLogic <./installing-liferay-on-an-application-server/installing-on-weblogic.md>`_, or `WebSphere <./installing-liferay-on-an-application-server/installing-on-websphere.md>`_.
+```{note}
+If you're using one of the following application servers already, click the name of the one you're using to see instructions for deploying DXP to it: [Tomcat](./installing-liferay-on-an-application-server/installing-on-tomcat.md), [WildFly](./installing-liferay-on-an-application-server/installing-on-wildfly.md), [JBoss EAP](./installing-liferay-on-an-application-server/installing-on-jboss-eap.md), [WebLogic](./installing-liferay-on-an-application-server/installing-on-weblogic.md), or [WebSphere](./installing-liferay-on-an-application-server/installing-on-websphere.md).
 ```
 
-``` note::
-   To start a Liferay DXP instance fast for touring or demonstration purposes, see `Starting With a Docker Image <../../getting-started/starting-with-a-docker-image.md>`_.
+```{note}
+To start a Liferay DXP instance fast for touring or demonstration purposes, see [Starting With a Docker Image](../../getting-started/starting-with-a-docker-image.md).
 ```
 
 ## 前提条件

@@ -16,8 +16,8 @@
 
 標準のプロセスと同様に、単一アセットの公開には、関連する依存関係（画像、カスタムテンプレート、またはフォルダ）が含まれます。
 
-``` note::
-   Single asset publishing is not supported for page-scoped content.
+```{note}
+Single asset publishing is not supported for page-scoped content.
 ```
 
 ## 単一のウィジェットの公開

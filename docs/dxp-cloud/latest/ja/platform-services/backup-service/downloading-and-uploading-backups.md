@@ -21,8 +21,8 @@ DXP Cloudのバックアップサービスでは、環境のデータベース�
    
    
 
-    ``` note::
-       バックアップサービスがまだバージョン4.2以上にアップデートされていない場合、データベースボリュームは ``.gz`` ではなく ``.tgz`` アーカイブとしてダウンロードされます。
+    ```{note}
+    バックアップサービスがまだバージョン4.2以上にアップデートされていない場合、データベースボリュームは `.gz` ではなく `.tgz` アーカイブとしてダウンロードされます。
     ```
 
 
@@ -30,8 +30,8 @@ DXP Cloudのバックアップサービスでは、環境のデータベース�
 
 <!-- end list -->
 
-``` note::
-   本番環境の管理者のみが、「バックアップ」ページからバックアップをダウンロードできます。
+```{note}
+本番環境の管理者のみが、「バックアップ」ページからバックアップをダウンロードできます。
 ```
 
 
@@ -45,8 +45,8 @@ DXP Cloudにバックアップをアップロードする前に、データベ�
 
 
 
-``` warning::
-   アップロードが開始されると、アップロードが完了するまで、バックアップサービスは他のバックアップの生成やリストアに利用できません。
+```{warning}
+アップロードが開始されると、アップロードが完了するまで、バックアップサービスは他のバックアップの生成やリストアに利用できません。
 ```
 
 
@@ -113,8 +113,8 @@ curl -X POST \
 
 
 
-``` note::
-   注：ヘッダー dxpcloud-authorization にユーザートークンを渡すことは、バックアップサービスのバージョン 3.2.0 以降でのみ機能します。 Previous versions should be upgraded to at least ``3.2.0``. Requests to earlier versions must use the header ``Authorization: Bearer <PROJECT_MASTER_TOKEN>``. You can find the project master token by running the command ``env | grep LCP_PROJECT_MASTER_TOKEN`` in any shell in the Liferay DXP Cloud console.
+```{note}
+注：ヘッダー dxpcloud-authorization にユーザートークンを渡すことは、バックアップサービスのバージョン 3.2.0 以降でのみ機能します。 Previous versions should be upgraded to at least `3.2.0`. Requests to earlier versions must use the header `Authorization: Bearer <PROJECT_MASTER_TOKEN>`. You can find the project master token by running the command `env | grep LCP_PROJECT_MASTER_TOKEN` in any shell in the Liferay DXP Cloud console.
 ```
 
 
@@ -149,8 +149,8 @@ curl -X GET \
 
 
 
-``` note::
-   バックアップサービスがまだバージョン4.2以上にアップデートされていない場合、データベースボリュームは ``.gz`` ではなく ``.tgz`` アーカイブとしてダウンロードされます。
+```{note}
+バックアップサービスがまだバージョン4.2以上にアップデートされていない場合、データベースボリュームは `.gz` ではなく `.tgz` アーカイブとしてダウンロードされます。
 ```
 
 
@@ -244,8 +244,8 @@ mysqldump -uroot -ppassword --add-drop-database --databases lportal | gzip -c | 
 
 
 
-``` note::
-   お使いのBackupサービスが少なくともバージョン ``4.2`` にアップデートされていない場合には、以下のコマンドを実行して、アーカイブを ``.tgz`` ファイルに変換する必要があります。tar zcvf database.tgz database.gz``. Then use the resulting ``.tgz`` archive to upload.
+```{note}
+お使いのBackupサービスが少なくともバージョン `4.2` にアップデートされていない場合には、以下のコマンドを実行して、アーカイブを `.tgz` ファイルに変換する必要があります。tar zcvf database.tgz database.gz`. Then use the resulting `.tgz` archive to upload.
 ```
 
 

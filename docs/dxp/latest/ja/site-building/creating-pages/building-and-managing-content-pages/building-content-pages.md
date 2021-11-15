@@ -10,8 +10,8 @@
 
     ![コンテンツページは、最初は空白です。 ページを作成するには、フラグメントを追加する必要があります。](./building-content-pages/images/02.png)
 
-    ``` note::
-       新しいコンテンツページは空で始まり、*下書き*ステータスになります。 ページは公開されるまで表示されません。
+    ```{note}
+    新しいコンテンツページは空で始まり、*下書き*ステータスになります。 ページは公開されるまで表示されません。
     ```
 
 2.  コンテンツページのサイドバーを開き、ページフラグメント要素の追加を開始します。
@@ -34,8 +34,8 @@
 
     ![フラグメントを変更して、必要なコンテンツを表示します。](./building-content-pages/images/04.png)
 
-    ``` tip::
-       コンテンツページで進行中の作業は自動的に保存されます。
+    ```{tip}
+    コンテンツページで進行中の作業は自動的に保存されます。
     ```
 
 4.  右上の*[Publish]* ボタンをクリックして、更新をライブページで利用できるようにします。
@@ -53,8 +53,8 @@
 
 ![レイアウトの背景色を設定できます。](./building-content-pages/images/05.png)
 
-``` note::
-   使用可能なカラーパレットは、フラグメント開発者が設定できます。 詳細については、Fragment Configuration Typesを参照してください。
+```{note}
+使用可能なカラーパレットは、フラグメント開発者が設定できます。 詳細については、Fragment Configuration Typesを参照してください。
 ```
 
 ### 背景画像の使用
@@ -67,8 +67,8 @@
 
     ![レイアウトには、背景色、背景画像、間隔のオプションがあります。](./building-content-pages/images/06.png)
 
-    ``` note::
-       レイアウトの背景画像のマッピングは、Liferay DXP 7.2 SP1+およびLiferay Portal 7.2 GA2+で使用できます。
+    ```{note}
+    レイアウトの背景画像のマッピングは、Liferay DXP 7.2 SP1+およびLiferay Portal 7.2 GA2+で使用できます。
     ```
 
 ### テキストの編集
@@ -133,18 +133,18 @@
 
 ![ページ上でフラグメントを複製できます。](./building-content-pages/images/10.png)
 
-``` note::
-  Duplicated Sections and Rows appear directly below the Section or Row that is duplicated. The Fragments, mappings, and customizations are duplicated as well.
+```{note}
+Duplicated Sections and Rows appear directly below the Section or Row that is duplicated. The Fragments, mappings, and customizations are duplicated as well.
 ```
 
-``` warning::
-  Layouts (Sections or Rows) containing instanceable Widgets cannot be duplicated. In this case, a message will appear, indicating the Widget preventing the duplication.
+```{warning}
+Layouts (Sections or Rows) containing instanceable Widgets cannot be duplicated. In this case, a message will appear, indicating the Widget preventing the duplication.
 ```
 
 ### フラグメント構成の保存
 
-``` note::
-  利用可能：Liferayポータル7.3 GA3以降
+```{note}
+利用可能：Liferayポータル7.3 GA3以降
 ```
 
 カスタマイズされたフラグメント構成（セクションまたは行レイアウトフラグメント）を新しいフラグメントとして保存できるため、それらを他のフラグメントベースのページで再利用できます。
@@ -158,8 +158,8 @@
 
 ![表示されるダイアログにフラグメント構成の情報を入力します。](./building-content-pages/images/12.png)
 
-``` note::
-   サイト固有のフラグメントコレクションが存在しない場合、保存されたフラグメント構成は、保存されたフラグメントと呼ばれる新しいフラグメントコレクションに自動的に保存されます。
+```{note}
+サイト固有のフラグメントコレクションが存在しない場合、保存されたフラグメント構成は、保存されたフラグメントと呼ばれる新しいフラグメントコレクションに自動的に保存されます。
 ```
 
 保存されたFragmentコンポジションは、Fragmentsサイドバーですぐに使用でき、Page Fragments管理アプリケーションを通じて使用できます。
@@ -168,8 +168,8 @@
 
 他のフラグメントと同様に、コンポジションはサイト間でエクスポート/インポートできます。
 
-``` note::
-  `Liferayのフラグメントツールキットの最新バージョン <../developer-guide/developing-fragments/developing-page-fragments/developing-page-fragments-with-the-fragments-toolkit.md>` _サポートの作成、エクスポート/インポート、およびフラグメント構成のプレビュー。
+```{note}
+`Liferayのフラグメントツールキットの最新バージョン <../developer-guide/developing-fragments/developing-page-fragments/developing-page-fragments-with-the-fragments-toolkit.md>` _サポートの作成、エクスポート/インポート、およびフラグメント構成のプレビュー。
 ```
 
 ### セクションの幅とパディングの構成
@@ -205,8 +205,8 @@
 
 これらの要素をコンテンツにマップすることもできます。 要素に*コンテンツ*（Webコンテンツの記事、ドキュメント、またはブログ）を設定し、表示する適切な*フィールド*（タイトル、作成者名、タグなど）を選択できます。 これは、要素の*マップ*ボタン（![Map](../../../images/icon-map.png)）を選択して設定できます。
 
-``` note::
-   多くのマッピングの改善が Liferay DXP 7.2 SP1+およびLiferay Portal 7.2 GA2+でリリースされました。 たとえば、編集可能な要素を既存のコンテンツのテキスト/URLフィールドにマッピングしたり、フラグメントの背景画像を既存のコンテンツの画像フィールドにマッピングしたりできます。 カスタムフィールドをマップすることもできます。
+```{note}
+多くのマッピングの改善が Liferay DXP 7.2 SP1+およびLiferay Portal 7.2 GA2+でリリースされました。 たとえば、編集可能な要素を既存のコンテンツのテキスト/URLフィールドにマッピングしたり、フラグメントの背景画像を既存のコンテンツの画像フィールドにマッピングしたりできます。 カスタムフィールドをマップすることもできます。
 ```
 
 コンテンツページを作成するときに、ユーザーセグメントに基づいてユーザー向けにさまざまな**エクスペリエンス**を作成できます。 既存のユーザーセグメントのコンテンツページに、独自のエクスペリエンスを作成できます。 詳細については、[Content Page Personalization guide](../../personalizing-site-experience/personalizing-site-experience.md)を参照してください。

@@ -6,8 +6,8 @@
   - [スクリプトコンソールで使用可能な定義済み変数](#predefined-variables)
   - [スクリプトコンソールでスクリプトを実行するためのヒント](#tips)
 
-``` important::
-   スクリプトコンソールは、システムの操作とメンテナンス用です。エンドユーザー用ではありません。 スクリプトコンソールへのアクセスをポータル管理者に制限してください。
+```{important}
+スクリプトコンソールは、システムの操作とメンテナンス用です。エンドユーザー用ではありません。 スクリプトコンソールへのアクセスをポータル管理者に制限してください。
 ```
 
 まず、スクリプトコンソールのサンプルスクリプトを実行します。
@@ -36,8 +36,8 @@
 
 Groovyのサンプルは、Liferayサービスユーティリティ[`UserLocalServiceUtil`](https://docs.liferay.com/dxp/portal/7.2-latest/javadocs/portal-kernel/com/liferay/portal/kernel/service/UserLocalServiceUtil.html)を呼び出して、ユーザー数を取得します。 次に、`out`（組み込みの`PrintWriter`）を使用して、スクリプトコンソールに数を書き込みます。
 
-``` note::
-   *out.println*ではなく*System.out.println*を使用すると、出力はスクリプトコンソールではなくLiferayのログファイルに出力されます。
+```{note}
+*out.println*ではなく*System.out.println*を使用すると、出力はスクリプトコンソールではなくLiferayのログファイルに出力されます。
 ```
 
 ## 定義済みのスクリプトコンソール変数

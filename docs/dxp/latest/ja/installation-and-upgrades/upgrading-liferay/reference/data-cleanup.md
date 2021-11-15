@@ -10,8 +10,8 @@
 
 2.  クリーンアップするモジュールを選択し、*[保存]* をクリックします。
 
-    ``` note::
-       `設定ファイル <../../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md>`_ にクリーンアップ設定を保存するには、*アクション*メニューをクリックして、*エクスポート*を選択します。
+    ```{note}
+    [設定ファイル](../../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md) にクリーンアップ設定を保存するには、*アクション*メニューをクリックして、*エクスポート*を選択します。
     ```
 
     データのクリーンアップが実行されます。
@@ -20,8 +20,8 @@
 
 サーバーから廃止されたデータが削除されました。
 
-``` note::
-   ``com.liferay.data.cleanup.internal.configuration.DataCleanupConfiguration.config`` `設定ファイル <../../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md>`_ を使用して、 `Liferay Dockerコンテナ <../upgrade-basics/upgrading-via-docker.md>`_ またはローカルマシンで）サーバーの起動時にモジュールデータをクリーンアップすることもできます。 クリーンアップ後、 `osgi`フォルダから設定ファイルを削除します。
+```{note}
+`com.liferay.data.cleanup.internal.configuration.DataCleanupConfiguration.config` [設定ファイル](../../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md) を使用して、 [Liferay Dockerコンテナ](../upgrade-basics/upgrading-via-docker.md) またはローカルマシンで）サーバーの起動時にモジュールデータをクリーンアップすることもできます。 クリーンアップ後、 `osgi`フォルダから設定ファイルを削除します。
 ```
 
 ## 追加情報

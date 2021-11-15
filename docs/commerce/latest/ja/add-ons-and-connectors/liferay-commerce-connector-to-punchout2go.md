@@ -4,8 +4,8 @@
 
 Liferayは、ユーザーの既存のPunchOut2GoインフラとCommerceを統合できるPunchOut2Goコネクターを備えています。 このコネクターは、LPKGファイルとして [Liferayヘルプセンタ](http://customer.liferay.com/downloads)からダウンロードできます。 <!--!\[Punch Out Flow Diagram\](./liferay-commerce-connector-to-punchout2go/images/01.png) -->
 
-``` important::
-   PunchOut2Goコネクターを使用するには、Liferay Commerce 2.1.2およびLiferay DXP 7.1 FP18、または7.2 FP6が必要です。
+```{important}
+PunchOut2Goコネクターを使用するには、Liferay Commerce 2.1.2およびLiferay DXP 7.1 FP18、または7.2 FP6が必要です。
 ```
 
 ## PunchOut2Goコネクターのデプロイ

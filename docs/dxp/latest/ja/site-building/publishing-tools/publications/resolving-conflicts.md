@@ -24,8 +24,8 @@
 
   - **破棄**：破棄するすべての変更が表示されます。 *[破棄]* をクリックして、パブリケーションから完全に削除できます。
 
-    ``` warning::
-       Discarding is permanent and cannot be reversed. Ensure you've saved any changes you want to keep before using discarding them from your publication.
+    ```{warning}
+    Discarding is permanent and cannot be reversed. Ensure you've saved any changes you want to keep before using discarding them from your publication.
     ```
 
 ## 変更の競合の解決

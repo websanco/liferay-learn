@@ -30,8 +30,8 @@ Liferay DXPのステージングツールは、初期構成と公開プロセス
 
 \* *ページが公開されたときにのみ公開されます*
 
-``` important::
-   After configuration, users can't change whether or not an application data or content type is staged. This is because staging and unstaging this data and content could cause inconsistencies between Staging and Live environments. To change these settings, you must turn staging off and re-enable it with your new configuration.
+```{important}
+After configuration, users can't change whether or not an application data or content type is staged. This is because staging and unstaging this data and content could cause inconsistencies between Staging and Live environments. To change these settings, you must turn staging off and re-enable it with your new configuration.
 ```
 
 ## データとコンテンツタイプの公開
@@ -60,8 +60,8 @@ Webコンテンツは頻繁に更新される傾向があるため、バージ�
 
 グローバルボキャブラリとローカルボキャブラリの両方を使用する環境では、グローバルボキャブラリをグローバルサイトのステージングを通じて本番環境サイトに公開する必要があることに注意してください。 ボキャブラリの混乱を避ける1つの方法は、すべてのボキャブラリをローカルまたはグローバルに保つことです。 両方を使用しなければならない場合は、依存関係がローカルであるかグローバルであるかにかかわらず、依存関係（カテゴリやボキャブラリなど）を確実に公開してから、それらに依存しているサイトを公開することで、問題を解決できます。
 
-``` note::
-   Assets like tags, categories, structures, templates, widget templates, document types, and dynamic data lists can also be shared by a parent to its child Sites. In this case, ensure that the parent's dependencies are published before the Site in question.
+```{note}
+Assets like tags, categories, structures, templates, widget templates, document types, and dynamic data lists can also be shared by a parent to its child Sites. In this case, ensure that the parent's dependencies are published before the Site in question.
 ```
 
 ### 削除

@@ -14,8 +14,8 @@ OpenAMは、Liferay DXPと同じサーバーまたは別のサーバーにイン
 
 OpenAMをLiferay DXPと同じサーバーにインストールする場合は、[ここ](https://backstage.forgerock.com/downloads/browse/am/archive/productId:openam)からダウンロード可能なOpenAM `.war`をデプロイする必要があります。 それ以外の場合は、[OpenAM 13サイト](https://backstage.forgerock.com/docs/openam/13/install-guide/)の指示に従ってOpenAMをインストールします。
 
-``` note::
-   OpenAM 12以下はLiferay DXPで動作しますが、サポートは終了しています。 このため、本番環境での使用にはOpenAM 13のみをお勧めします。
+```{note}
+OpenAM 12以下はLiferay DXPで動作しますが、サポートは終了しています。 このため、本番環境での使用にはOpenAM 13のみをお勧めします。
 ```
 
 ## OpenAMの構成

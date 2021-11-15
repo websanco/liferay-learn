@@ -30,8 +30,8 @@
 
 <!-- end list -->
 
-``` note::
-  Since Liferay Portal CE 7.3 GA2, you also configure permissions for the widget by selecting *Permissions* from the widget's Options Menu.
+```{note}
+Since Liferay Portal CE 7.3 GA2, you also configure permissions for the widget by selecting *Permissions* from the widget's Options Menu.
 ```
 
 
@@ -50,8 +50,8 @@ LiferayポータルCE 7.3 GA2以降、コンテンツページからウィジェ
 
 
 
-``` note::
-  When you create a page based on a `page template <../adding-pages/creating-a-page-template.md>`_, the permissions are copied too. Permissions for a Master Page are set in the `Master Page <../defining-headers-and-footers/managing-master-pages.md>`_, not in the pages.
+```{note}
+When you create a page based on a [page template](../adding-pages/creating-a-page-template.md), the permissions are copied too. Permissions for a Master Page are set in the [Master Page](../defining-headers-and-footers/managing-master-pages.md), not in the pages.
 ```
 
 

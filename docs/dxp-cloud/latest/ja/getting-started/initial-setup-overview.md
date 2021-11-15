@@ -48,8 +48,8 @@ Liferay DXP Cloudのサブスクリプションに関連付けられたEメー�
 
 詳しい手順は、 [Configuring Your GitHub Repository](./configuring-your-github-repository.md) をご覧ください。
 
-``` note::
-   他のホスティングサービスを利用していますか？ Bitbucket <./configuring-your-bitbucket-repository.md>`_ または `GitLab <./configuring-your-gitlab-repository.md>`_ のリポジトリを設定する方法を参照してください。
+```{note}
+[他のホスティングサービスを利用していますか？ Bitbucket](./configuring-your-bitbucket-repository.md) または [GitLab](./configuring-your-gitlab-repository.md) のリポジトリを設定する方法を参照してください。
 ```
 
 ## お客様のCIとDXPサービスにログインする

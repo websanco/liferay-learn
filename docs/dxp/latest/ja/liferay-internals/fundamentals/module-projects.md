@@ -215,8 +215,8 @@ liferay.workspace.product=portal-7.3-ga3
 
 最後に、依存性のあるバージョンはありません。 これは、ワークスペースがリリースに関連するLiferay製品のAPIバージョンを適用するためです。
 
-``` note::
-   詳しくは、 `Configuring Dependencies <./configuring-dependencies.md>`_ を参照してください。
+```{note}
+詳しくは、 [Configuring Dependencies](./configuring-dependencies.md) を参照してください。
 ```
 
 ### メタデータの指定

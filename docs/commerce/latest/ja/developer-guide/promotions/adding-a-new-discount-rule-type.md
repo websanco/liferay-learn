@@ -38,8 +38,8 @@
     ./gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)
     ```
 
-    ``` note::
-       このコマンドは、デプロイされたjarをDockerコンテナの ``/opt/liferay/osgi/modules``にコピーするのと同じです。
+    ```{note}
+    このコマンドは、デプロイされたjarをDockerコンテナの `/opt/liferay/osgi/modules`にコピーするのと同じです。
     ```
 
 4.  Liferay Dockerコンテナコンソールでデプロイを確認します。
@@ -52,8 +52,8 @@
 
 <!-- end list -->
 
-``` note::
-   Liferay Commerce 2.1以前のバージョンでは、*Control Panel* → *Commerce* → *Discounts*に移動して割引を検索します。 メニュー内の*Edit*をクリックして割引を適用し、画面上部の*Rules*に移動します。
+```{note}
+Liferay Commerce 2.1以前のバージョンでは、*Control Panel* → *Commerce* → *Discounts*に移動して割引を検索します。 メニュー内の*Edit*をクリックして割引を適用し、画面上部の*Rules*に移動します。
 ```
 
 ![新しい割引ルールタイプ](./adding-a-new-discount-rule-type/images/02.png "新しい割引ルールタイプ")

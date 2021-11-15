@@ -2,8 +2,8 @@
 
 liferay-npm-bundlerのメカニズムは、webpackに似ています。 webpackと同様に、liferay-npm-bundlerは、最終出力を生成する前にプロジェクトのソースファイルを変換するローダーを含む一連のルールを使用してファイルを処理します。
 
-``` note::
-  webpackは単一のJSバンドルファイルを作成しますが、liferay-npm-bundlerはAMDローダーを対象としているため、webpackとliferay-npm-bundlerローダーは互換性がありません。
+```{note}
+webpackは単一のJSバンドルファイルを作成しますが、liferay-npm-bundlerはAMDローダーを対象としているため、webpackとliferay-npm-bundlerローダーは互換性がありません。
 ```
 
 ローダーはnpmパッケージで、メインモジュールで、ローダーの構成に基づいてソースファイルを受信し、新しいファイルまたは変更されたファイルを返す関数をエクスポートします。 たとえば、 [babel-loader](https://github.com/liferay/liferay-js-toolkit/tree/master/packages/liferay-npm-bundler-loader-babel-loader) はES6 + JavaScriptファイルを受信し、それらでBabelを実行し、生成されたソースマップとともに変換されたES5ファイルを返します。 あなたはこのパターンを使用することができます [カスタムローダーの作成](../developer/creating-custom-loaders-for-the-bundler.md)。 ローダー関数の例をいくつか示します。

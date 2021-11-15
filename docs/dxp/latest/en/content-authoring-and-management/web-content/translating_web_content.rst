@@ -15,5 +15,5 @@ Liferay includes three methods for translating web content:
 - `Exporting web content in XLIFF format and importing translations <./translating-web-content/exporting-and-importing-translations.md>`_
 - `Using Google Cloud Translation to automatically translate web content <./translating-web-content/automatically-translating-web-content.md>`_
 
-.. note::
+..note::
    Users who are just starting out with localizing their installation of Liferay can learn more by reviewing `Initial Instance Localization <../../installation-and-upgrades/setting-up-liferay/initial-instance-localization.md>`_ 

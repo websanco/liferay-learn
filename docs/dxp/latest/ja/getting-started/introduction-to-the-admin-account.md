@@ -10,8 +10,8 @@
 
     ![サインインリンク](./introduction-to-the-admin-account/images/01.png "サインインリンク")
 
-    ``` note::
-       If a Liferay DXP bundle is being used, you may be presented with the `Setup Wizard <../installation-and-upgrades/installing-liferay/running-liferay-for-the-first-time.md>`_. 画面上の指示に従って、管理者ユーザーを設定してください。
+    ```{note}
+    If a Liferay DXP bundle is being used, you may be presented with the [Setup Wizard](../installation-and-upgrades/installing-liferay/running-liferay-for-the-first-time.md). 画面上の指示に従って、管理者ユーザーを設定してください。
     ```
 
 3.  ログインするデフォルトの管理者資格情報を入力します。
@@ -21,8 +21,8 @@
     
     <!-- end list -->
 
-    ``` warning::
-       Liferay DXPの新規インストールを開始するときに、デフォルトのログイン資格情報を更新することを**強く**推奨します。
+    ```{warning}
+    Liferay DXPの新規インストールを開始するときに、デフォルトのログイン資格情報を更新することを**強く**推奨します。
     ```
 
 ## 管理者ユーザーの設定

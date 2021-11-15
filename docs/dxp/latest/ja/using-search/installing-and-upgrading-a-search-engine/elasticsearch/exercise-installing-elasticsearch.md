@@ -14,8 +14,8 @@ Elasticsearch接続で認証と暗号化を有効にするには、[Securing Ela
 mkdir -p test-es-install/dxp/files/osgi/configs && mkdir -p test-es-install/elasticsearch && cd test-es-install
 ```
 
-``` tip::
-   The ``cd test-es-install`` command at the end puts you in the ``test-es-install`` folder. Make sure you run the remaining commands for both Elasticsearch and Liferay DXP from this folder.
+```{tip}
+The `cd test-es-install` command at the end puts you in the `test-es-install` folder. Make sure you run the remaining commands for both Elasticsearch and Liferay DXP from this folder.
 ```
 
 ## Elasticsearchのインストール

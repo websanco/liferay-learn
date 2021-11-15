@@ -19,8 +19,8 @@ Gogoシェルは、モジュールフレームワークと対話するための�
 
     ![コントロールパネルのGogoシェル](./using-the-gogo-shell/images/02.png)
 
-    ``` note::
-       DXP 7.2では、コントロールパネルを開き、*設定* &rarr; *Gogo シェル* に移動します。
+    ```{note}
+    DXP 7.2では、コントロールパネルを開き、*設定* &rarr; *Gogo シェル* に移動します。
     ```
 
 4.  *g\!*テキストフィールドにGogoシェルコマンドを入力します。 たとえば、`lb | grep "Liferay Announcements API"`と入力すると、お知らせAPIバンドルの情報が一覧表示されます。
@@ -33,8 +33,8 @@ Gogoシェルは、モジュールフレームワークと対話するための�
 
 <!-- end list -->
 
-``` warning::
-   Gogoシェルは非常に強力で、プラットフォームのコア機能を操作することができます。 Gogoシェルへのアクセスは、信頼できる管理者にのみ許可してください。 詳細は、 `ロールと権限について <../../../users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.md>`_ を参照してください。
+```{warning}
+Gogoシェルは非常に強力で、プラットフォームのコア機能を操作することができます。 Gogoシェルへのアクセスは、信頼できる管理者にのみ許可してください。 詳細は、 [ロールと権限について](../../../users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.md) を参照してください。
 ```
 
 ## まとめ

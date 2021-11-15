@@ -24,8 +24,8 @@
 
 3.  [ウィジェットページ](../creating-pages/using-widget-pages/adding-widgets-to-a-page.md)と同じようにページを管理します。
 
-    ``` tip::
-       [Public Pages]メニューと[Private Pages]メニューを切り替え、ページの[アクション]メニューから*View*オプションを選択することで、[ページ]ページから[ダッシュボード]ページと[Profile]ページを切り替えることができます。
+    ```{tip}
+    [Public Pages]メニューと[Private Pages]メニューを切り替え、ページの[アクション]メニューから*View*オプションを選択することで、[ページ]ページから[ダッシュボード]ページと[Profile]ページを切り替えることができます。
     ```
 
 ユーザーグループを介して、ユーザーの個人サイトのページを追加および定義することもできます。 詳細は、[ユーザーグループサイト](../../users-and-permissions/user-groups/user-group-sites.md)を参照してください。

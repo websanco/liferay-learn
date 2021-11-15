@@ -6,8 +6,8 @@ Amazonのシンプルストレージサービス（S3）は、DXPのS3ストア�
 
 S3はファイルストレージに*バケット*の概念を使用しています。 AmazonのUIで、DXPファイルの[バケット](https://docs.aws.amazon.com/AmazonS3/latest/user-guide/create-bucket.html)を作成します。 バケットは、DXPサーバーホストにできるだけ近い[地理的地域](https://docs.aws.amazon.com/general/latest/gr/s3.html)に設定してください。
 
-``` note::
-   AWS署名バージョン4リクエストの承認をサポートするためのアクションは必要ありません。
+```{note}
+AWS署名バージョン4リクエストの承認をサポートするためのアクションは必要ありません。
 ```
 
 ## ストアの構成

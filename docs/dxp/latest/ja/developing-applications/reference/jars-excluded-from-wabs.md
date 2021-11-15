@@ -14,8 +14,8 @@ module.framework.web.generator.excluded.paths=\
     ...
 ```
 
-``` note::
-    WABが`liferay-plugin-package.properties <https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/liferay-plugin-package_7_3_0.properties.html>`_ ファイル内の``portal-dependency-jars``プロパティにJARを一覧表示していても、LiferayはこれらのJARをWABから除外します。
+```{note}
+WABが[liferay-plugin-package.properties](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/liferay-plugin-package_7_3_0.properties.html) ファイル内の`portal-dependency-jars`プロパティにJARを一覧表示していても、LiferayはこれらのJARをWABから除外します。
 ```
 
 ## 異なるバージョンのサードパーティーパッケージを含める
@@ -58,8 +58,8 @@ WARで[エクスポートされたサードパーティーパッケージ](../..
 
 4.  必要なアーティファクトの名前が除外されたアーティファクトと同じである場合（前の手順を参照）、必要なアーティファクトの名前を変更します。 たとえば、Spring Frameworkバージョン3.0.7のSpring AOP JARを、プロジェクトの`WEB-INF/lib`フォルダに含め、名前を`spring-aop.jar`（除外されたJAR）以外に変更することで使用できます。
 
-    ``` tip::
-       JAR名にバージョンを追加すると（つまり`spring-aop-3.0.7.RELEASE.jar`）、除外されたJARと区別され、WAB（バンドルされたWAB）から削除されなくなります。
+    ```{tip}
+    JAR名にバージョンを追加すると（つまり`spring-aop-3.0.7.RELEASE.jar`）、除外されたJARと区別され、WAB（バンドルされたWAB）から削除されなくなります。
     ```
 
 これで、WABに必要なJARのバージョンが含まれました。

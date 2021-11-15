@@ -28,6 +28,6 @@
 
 <!-- end list -->
 
-``` note::
-  If a custom Master Page Template is used for a page, the Theme for the page is defined through the Master Page Template and can't be changed through the page's settings. See `Changing a Master Page Template's Theme <./managing-master-pages.md#changing-a-master-page-template-s-theme>`_ for more information.
+```{note}
+If a custom Master Page Template is used for a page, the Theme for the page is defined through the Master Page Template and can't be changed through the page's settings. See [Changing a Master Page Template's Theme](./managing-master-pages.md#changing-a-master-page-template-s-theme) for more information.
 ```

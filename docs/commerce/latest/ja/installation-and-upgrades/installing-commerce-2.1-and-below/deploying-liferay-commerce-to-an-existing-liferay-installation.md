@@ -12,8 +12,8 @@ Liferay Commerceの使用を開始するには：
 
 2.  `LPKG`を`${liferay.home}/deploy`フォルダにデプロイします。
 
-    ``` note::
-       アプリケーションのLiferay DXPへのデプロイについては、 <https://learn.liferay.com/dxp/7.x/en/installation-and-upgrades/reference/liferay-home.html>Liferay Home</0> を参照してください。
+    ```{note}
+    アプリケーションのLiferay DXPへのデプロイについては、 <https://learn.liferay.com/dxp/7.x/en/installation-and-upgrades/reference/liferay-home.html>Liferay Home</0> を参照してください。
     ```
 
 3.  （*サブスクライバー*） `${liferay.home}/ deploy` フォルダーにアクティベーションキーを展開します。

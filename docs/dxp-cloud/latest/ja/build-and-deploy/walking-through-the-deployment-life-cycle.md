@@ -32,16 +32,16 @@ GitHubリポジトリを設定する必要があります。 DXP Cloudリポジ�
 cp path-to-module/my-module my-repository-path/lcp/liferay/deploy/dev
 ```
 
-``` note::
-   このチュートリアルでは、あなたの開発環境はデフォルトでは ``dev``` という名前になっていると仮定しています。 もし開発環境の名前が違う場合は、``dev``を正しい名前に置き換えてください。
+```{note}
+このチュートリアルでは、あなたの開発環境はデフォルトでは `dev`` という名前になっていると仮定しています。 もし開発環境の名前が違う場合は、`dev`を正しい名前に置き換えてください。
 ```
 
 ## サンプルを開発環境にデプロイする
 
 DXP Cloudへのデプロイは通常、Gitの変更をプッシュし、GitHub WebhookがDXP CloudCIサービスでビルドをトリガーし、最後に成功したビルドをデプロイすることで設定されます。 ただし、必要に応じてCLIを使用して、GitHubへの変更のプッシュをスキップすることもできます。
 
-``` tip::
-   一般的にはGitHubにプッシュしてDXP Cloud Management Consoleを使用することがデプロイには推奨されています。
+```{tip}
+一般的にはGitHubにプッシュしてDXP Cloud Management Consoleを使用することがデプロイには推奨されています。
 ```
 
 ### Gitでサンプルをコミットする
@@ -70,8 +70,8 @@ git push origin testing-branch
 
 ![CIでのPRトリガービルド](./walking-through-the-deployment-life-cycle/images/09.png)
 
-``` tip::
-   Jenkins `CI サービス <../platform-services/continuous-integration.md>`https://ci-<project>-<environment>.lfr.cloud`` にアクセスすることで、トリガーされたビルドを見ることができます。
+```{tip}
+Jenkins `CI サービス <../platform-services/continuous-integration.md>`https://ci-<project>-<environment>.lfr.cloud` にアクセスすることで、トリガーされたビルドを見ることができます。
 ```
 
 ### DXP Cloud管理コンソールからビルドを開発環境にデプロイする
@@ -115,8 +115,8 @@ liferay.workspace.lcp.jenkins.image=liferaycloud/jenkins:2.176.1-3.1.1.1
 
 これらの各プロパティについて、値をコピーし、それを使用して、対応するサービスの `LCP.json` ファイルの `image` プロパティのプレースホルダー値を置き換えます。 これにより、CLIは `lcp` ディレクトリ内を検索するときに正しいDockerイメージを使用できます。
 
-``` note::
-   ``liferay.workspace.lcp.jenkins.image`` プロパティは ``ci`` サービスに対応しています。
+```{note}
+`liferay.workspace.lcp.jenkins.image` プロパティは `ci` サービスに対応しています。
 ```
 
 たとえば、この行の `lcp/search/LCP.json` の新しい値として、 `liferay.workspace.lcp.search.image` プロパティの値を使用します。
@@ -161,8 +161,8 @@ DXP Cloud管理コンソールから、 `インフラ` 環境→CIサービス�
 
 ![ウェブサーバーサービスからのリンク](./walking-through-the-deployment-life-cycle/images/07.png)
 
-``` tip::
-   また、``https://webserver-<project-name>-<environment>.lfr.cloud/```に直接行っても同じ場所に行けます。
+```{tip}
+また、`https://webserver-<project-name>-<environment>.lfr.cloud/``に直接行っても同じ場所に行けます。
 ```
 
 Gogoシェルを使用すると、モジュールがデプロイされたかどうかを簡単に確認できます。 コントロールパネル→設定→Gogo Shellに移動します。 ここから、次のコマンドを使用して、モジュールがデプロイされているかどうかを確認します。

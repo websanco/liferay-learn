@@ -26,8 +26,8 @@
 
 <!-- end list -->
 
-``` important::
-   FreeMarkerでテンプレートを作成または編集する権限は信頼できるユーザーにのみ付与してください。 Webコンテンツテンプレートのセキュリティについては、 `Assigning Permissions to Web Content Structures and Templates <../../../content-authoring-and-management/web-content/web-content-structures/assigning-permissions-to-structures-and-templates.md#security-considerations-for-web-content-templates>`_ を参照してください。
+```{important}
+FreeMarkerでテンプレートを作成または編集する権限は信頼できるユーザーにのみ付与してください。 Webコンテンツテンプレートのセキュリティについては、 [Assigning Permissions to Web Content Structures and Templates](../../../content-authoring-and-management/web-content/web-content-structures/assigning-permissions-to-structures-and-templates.md#security-considerations-for-web-content-templates) を参照してください。
 ```
 
 ## ベストプラクティス

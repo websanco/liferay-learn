@@ -12,8 +12,8 @@ Liferay DXPで作業を行うには、 [ユーザー](./../users/understanding-u
 
 <!-- end list -->
 
-``` note::
-   `Site Teams <./../site-building/building-sites/creating-teams-for-sites.md>`_ has a dedicated permissions management User Interface.
+```{note}
+[Site Teams](./../site-building/building-sites/creating-teams-for-sites.md) has a dedicated permissions management User Interface.
 ```
 
 ## ロールと範囲

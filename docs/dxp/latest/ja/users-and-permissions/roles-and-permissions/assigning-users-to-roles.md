@@ -54,8 +54,8 @@
 
 
 
-``` note::
-   Liferay CE 7.3.1 GA2 および Liferay DXP 7.2 SP3+ の時点で、サイトロールを `User Segments <../../site-building/personalizing-site-experience/segmentation/creating-and-managing-user-segments.md>`__ に割り当てることができます。 詳細については、`ユーザーセグメントにロールを割り当てる <./assigning-roles-to-user-segments.md>`_ を参照してください。
+```{note}
+Liferay CE 7.3.1 GA2 および Liferay DXP 7.2 SP3+ の時点で、サイトロールを [User Segments](../../site-building/personalizing-site-experience/segmentation/creating-and-managing-user-segments.md)_ に割り当てることができます。 詳細については、[ユーザーセグメントにロールを割り当てる](./assigning-roles-to-user-segments.md) を参照してください。
 ```
 
 

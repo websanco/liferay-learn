@@ -79,8 +79,8 @@ DXPは、スタンドアロンモードで実行する場合はJBoss EAPをサ�
 
 コマンドラインインターフェイスは、ドメインモードの展開に推奨されます。
 
-``` note::
-   This does not prevent DXP from running in a clustered environment on multiple JBoss servers. You can set up a cluster of DXP instances running on JBoss EAP servers running in standalone mode. Please refer to the `DXP clustering articles <../../setting-up-liferay/clustering-for-high-availability.md>`_ for more information.
+```{note}
+This does not prevent DXP from running in a clustered environment on multiple JBoss servers. You can set up a cluster of DXP instances running on JBoss EAP servers running in standalone mode. Please refer to the [DXP clustering articles](../../setting-up-liferay/clustering-for-high-availability.md) for more information.
 ```
 
 ## JBossの構成
@@ -159,8 +159,8 @@ DXPを実行するためのJBossの設定には、次のものが含まれます
 
 <!-- end list -->
 
-``` important::
-   DXPが適切に機能するには、アプリケーションサーバーJVMがGMTタイムゾーンとUTF-8ファイルエンコーディングを使用する必要があります。
+```{important}
+DXPが適切に機能するには、アプリケーションサーバーJVMがGMTタイムゾーンとUTF-8ファイルエンコーディングを使用する必要があります。
 ```
 
 それぞれのオペレーティングシステムに応じて、次の編集を行います。
@@ -205,8 +205,8 @@ DXPを実行するためのJBossの設定には、次のものが含まれます
     -Djava.locale.providers=JRE,COMPAT,CLDR
     ```
 
-    ``` note::
-       JBossサーバーでIBM JDKを使用する場合は、以下の追加手順を実行します。
+    ```{note}
+    JBossサーバーでIBM JDKを使用する場合は、以下の追加手順を実行します。
     ```
 
 3.  `$JBOSS_HOME/modules/com/liferay/portal/main/module.xml` ファイルに移動し、 `<dependencies>` 要素内に次の依存関係を挿入します。
@@ -256,8 +256,8 @@ JBossを使用してデータソースを管理する場合は、次の手順に
 
     データベースのURL、ユーザー名、パスワードを適切な値に置き換えてください。
 
-    ``` note::
-       If the data source ``jndi-name`` must be changed, edit the ``datasource`` element in the ``<default-bindings>`` tag.
+    ```{note}
+    If the data source `jndi-name` must be changed, edit the `datasource` element in the `<default-bindings>` tag.
     ```
 
 2.  `<datasources>` 要素内にもある `standalone.xml` ファイルの `<drivers>` 要素にドライバーを追加します。

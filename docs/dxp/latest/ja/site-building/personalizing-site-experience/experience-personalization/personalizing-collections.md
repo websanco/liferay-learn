@@ -4,16 +4,16 @@
 
 デフォルトでは、すべてのユーザーがコレクションのすべてのコンテンツを表示でき、*Anyone* グループに属しています。 [セグメント](../segmentation/creating-and-managing-user-segments.md)を使用して、コレクションのアイテムの*個人用バリエーション*を作成できます。 個人用バリエーションを使用する場合、コレクションの一部であるアイテムは変更されませんが、コレクションページまたはコレクション表示フラグメントには、セグメントに対してフィルタリングされたアイテムが表示されます。
 
-``` note::
-   To customize a Collection using Segments, you must define the Segments first. For more information, see `Creating and Managing User Segments <../segmentation/creating-and-managing-user-segments.md>`_.
+```{note}
+To customize a Collection using Segments, you must define the Segments first. For more information, see [Creating and Managing User Segments](../segmentation/creating-and-managing-user-segments.md).
 ```
 
 ![コレクションは、デフォルトで誰でも利用できます](./personalizing-collections/images/02.png)
 
 次の例を考えてみましょう。 あなたは、登録ユーザーに限定プロモーションを提供することで、オンラインのキッチン用品ストアでの売り上げを伸ばしたいと考えています。 登録ユーザー向けのプロモーションや商品に関するニュースを含むコレクションを作成します。 商品に関するニュースはすべての人に表示したいが、プロモーションは登録ユーザーのみに限定したいと考えています。 この例では、登録ユーザー用の新しいセグメントを作成し、そのセグメントを、プロモーションコンテンツをフィルタリングする新しい個人用バリエーションにリンクすることができます。
 
-``` tip::
-   You can create multiple Personalized Variations for a Collection, and edit or delete them as needed. You can also edit the *Anyone* Personalized Variation, but you cannot delete it.
+```{tip}
+You can create multiple Personalized Variations for a Collection, and edit or delete them as needed. You can also edit the *Anyone* Personalized Variation, but you cannot delete it.
 ```
 
 ## 個人用バリエーションの作成

@@ -2,8 +2,8 @@
 
 自動アップグレードを有効にしてLiferayのDockerイメージを実行すると、Liferayの起動時にデータベースがアップグレードされます。 アップグレードが完了した後、[そのDockerコンテナを介してLiferayの使用](../../../installation-and-upgrades/installing-liferay/using-liferay-docker-images/docker-container-basics.md)を継続するか、またはアップグレードされたデータベースに新しいLiferayオンプレミスインストールを指定できます。
 
-``` important::
-   Dockerをお持ちではありませんか？ まずは `Linux <https://docs.docker.com/install/linux/docker-ce/ubuntu/>`_ | `Windows <https://docs.docker.com/docker-for-windows/install/>`_ | `OSX <https://docs.docker.com/docker-for-mac/install/>`_ に移動してください。
+```{important}
+Dockerをお持ちではありませんか？ まずは [Linux](https://docs.docker.com/install/linux/docker-ce/ubuntu/) | [Windows](https://docs.docker.com/docker-for-windows/install/) | [OSX](https://docs.docker.com/docker-for-mac/install/) に移動してください。
 ```
 
 | DXP版                   | イメージ                                                | タグ                                                  |
@@ -11,12 +11,12 @@
 | Liferay DXP（サブスクリプション） | [`dxp`](https://hub.docker.com/r/liferay/dxp)       | [こちら](https://hub.docker.com/r/liferay/dxp/tags)    |
 | LiferayポータルCE          | [`portal`](https://hub.docker.com/r/liferay/portal) | [こちら](https://hub.docker.com/r/liferay/portal/tags) |
 
-``` important::
-   エンタープライズサブスクライバーのインストールおよびクリティカルインストールへのアップグレードは、データベースアップグレードツールを使用して行う必要があります。 詳細は、`Using the Database Upgrade Tool <./using-the-database-upgrade-tool.md>`_ を参照してください。
+```{important}
+エンタープライズサブスクライバーのインストールおよびクリティカルインストールへのアップグレードは、データベースアップグレードツールを使用して行う必要があります。 詳細は、[Using the Database Upgrade Tool](./using-the-database-upgrade-tool.md) を参照してください。
 ```
 
-``` important::
-   アップグレードする前に、**必ず** データベースと既存のインストールを `バックアップ <../../maintaining-a-liferay-dxp-installation/backing-up.md>`_ してください。 バックアップコピーでアップグレードプロセスをテストすることをお勧めします。
+```{important}
+アップグレードする前に、**必ず** データベースと既存のインストールを [バックアップ](../../maintaining-a-liferay-dxp-installation/backing-up.md) してください。 バックアップコピーでアップグレードプロセスをテストすることをお勧めします。
 ```
 
 ## 最新のDockerイメージによるアップグレード
@@ -51,12 +51,12 @@ Dockerイメージを使用してアップグレードする手順は次のと�
 
 4.  [高度なファイルシステムストア](../../../system-administration/file-storage/configuring-file-storage.md)または[簡易ファイルシステムストア](../../../system-administration/file-storage/other-file-store-types/simple-file-system-store.md)を使用していて、保存場所を変更している場合は、ファイルストアの設定を[`.config`ファイル](../../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md#creating-configuration-files)にエクスポートして、`new-version/osgi/configs`フォルダにコピーします。
 
-    ``` important::
-       `高度なファイルシステムストア <../../../system-administration/file-storage/configuring-file-storage.md>`_ を使用している場合は、データベースをアップグレードする前に、新しいインストールで ``.config`` ファイルを使って設定する必要があります。
+    ```{important}
+    [高度なファイルシステムストア](../../../system-administration/file-storage/configuring-file-storage.md) を使用している場合は、データベースをアップグレードする前に、新しいインストールで `.config` ファイルを使って設定する必要があります。
 
-       以下に例を示します。``com.liferay.portal.store.file.system.configuration.AdvancedFileSystemStoreConfiguration.config`` file with the required ``rootDir`` parameter:
+    以下に例を示します。`com.liferay.portal.store.file.system.configuration.AdvancedFileSystemStoreConfiguration.config` file with the required `rootDir` parameter:
 
-       ``rootDir="data/document_library"``
+    `rootDir="data/document_library"`
     ```
 
 5.  データベースベンダーが推奨するJDBCデータベースドライバーを使用していることを確認してください。 たとえば、MySQLを使用している場合は、[`new-version/files/portal-ext.properties`](../../reference/portal-properties.md)で<0>jdbc.default.driverClassName=com.mysql.cj.jdbc.Driver</0>を設定し、アプリケーションサーバーが使用するMySQL JDBCドライバーのJARを置き換えます。 詳細は、[データベースドライバー](../configuration-and-infrastructure/migrating-configurations-and-properties.md#database-drivers)を参照してください。
@@ -94,8 +94,8 @@ Dockerイメージを使用してアップグレードする手順は次のと�
 
 新しいLiferayバージョンをDocker経由で使い続けたい場合は、 `-e LIFERAY_UPGRADE_PERIOD_DATABASE_PERIOD_AUTO_PERIOD_RUN=true`環境設定を、新しいコンテナの作成に使用する`docker run ...`コマンドから外してください。
 
-``` note::
-   `Docker Container Basics <../../../installation-and-upgrades/installing-liferay/using-liferay-docker-images/docker-container-basics.md>`_ では、Dockerコンテナの作成、停止、再起動について説明しています。
+```{note}
+[Docker Container Basics](../../../installation-and-upgrades/installing-liferay/using-liferay-docker-images/docker-container-basics.md) では、Dockerコンテナの作成、停止、再起動について説明しています。
 ```
 
 ## まとめ

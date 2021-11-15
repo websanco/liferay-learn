@@ -20,8 +20,8 @@
 
 設定が保存されます。
 
-``` warning::
-   When the Recycle Bin is disabled for a site, content and assets that are removed are permanently deleted.
+```{warning}
+When the Recycle Bin is disabled for a site, content and assets that are removed are permanently deleted.
 ```
 
 ## 追加情報

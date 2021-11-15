@@ -6,8 +6,8 @@ MySQLのユーザー名は `lcp-secret-database-user` のシークレットに�
 
 ユーザー名を変更すると、データベースに接続されている他のサービス（ `liferay` や `backup` サービスなど）に影響を与える可能性があることに留意してください。 これらのサービスは、データベースのユーザー名が変更されたときにも再起動しなければ、継続して動作しません。
 
-``` note::
-   If no database username secret exists, then your Project service uses the ``LCP_MASTER_USER_NAME`` variable. This variable is defined in the ``LCP.json`` file and uses ``dxpcloud`` as its default value.
+```{note}
+If no database username secret exists, then your Project service uses the `LCP_MASTER_USER_NAME` variable. This variable is defined in the `LCP.json` file and uses `dxpcloud` as its default value.
 ```
 
 ## データベースのユーザー名の保持

@@ -84,8 +84,8 @@ WildFlyは、 *スタンドアロン* モードまたは *ドメイン* モー�
 
 コマンドラインインターフェイスは、ドメインモードの展開に推奨されます。
 
-``` note::
-   This does not prevent DXP from running in a clustered environment on multiple WildFly servers. Administrators can set up a cluster of DXP instances running on WildFly servers running in standalone mode. Please refer to the `DXP clustering articles <../../setting-up-liferay/clustering-for-high-availability.md>`_ for more information.
+```{note}
+This does not prevent DXP from running in a clustered environment on multiple WildFly servers. Administrators can set up a cluster of DXP instances running on WildFly servers running in standalone mode. Please refer to the [DXP clustering articles](../../setting-up-liferay/clustering-for-high-availability.md) for more information.
 ```
 
 ## WildFlyの構成
@@ -164,8 +164,8 @@ WildFlyがDXPを実行するように構成するには、次のものが含ま�
 
 <!-- end list -->
 
-``` important::
-   DXPが適切に機能するには、アプリケーションサーバーJVMがGMTタイムゾーンとUTF-8ファイルエンコーディングを使用する必要があります。
+```{important}
+DXPが適切に機能するには、アプリケーションサーバーJVMがGMTタイムゾーンとUTF-8ファイルエンコーディングを使用する必要があります。
 ```
 
 それぞれのオペレーティングシステムに応じて、次の編集を行います。
@@ -261,8 +261,8 @@ WildFlyを使用してデータソースを管理する場合は、次の手順�
 
     データベースのURL、ユーザー名、パスワードを適切な値に置き換えてください。
 
-    ``` note::
-       If the data source ``jndi-name`` must be changed, edit the ``datasource`` element in the ``<default-bindings>`` tag.
+    ```{note}
+    If the data source `jndi-name` must be changed, edit the `datasource` element in the `<default-bindings>` tag.
     ```
 
 2.  `<datasources>` 要素内にもある `standalone.xml` ファイルの `<drivers>` 要素にドライバーを追加します。
@@ -343,8 +343,8 @@ WildFlyでメールセッションを管理する場合は、次の手順に従�
 
 <!-- end list -->
 
-``` note::
-   After deploying DXP, you may see excessive warnings and log messages, such as the ones below, involving ``PhaseOptimizer``. これらは良性なので無視することができます。 Make sure to adjust your app server's logging level or log filters to avoid excessive benign log messages.
+```{note}
+After deploying DXP, you may see excessive warnings and log messages, such as the ones below, involving `PhaseOptimizer`. これらは良性なので無視することができます。 Make sure to adjust your app server's logging level or log filters to avoid excessive benign log messages.
 ```
 
 

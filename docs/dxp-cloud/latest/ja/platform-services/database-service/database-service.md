@@ -20,8 +20,8 @@
 
 MySQLのフラグを環境変数として渡すことができます。 利用可能なフラグは、 [Google Cloudのドキュメント](https://cloud.google.com/sql/docs/mysql/flags)に記載されています。 各フラグは、Liferay DXP Cloudで動作させるためには、 `LCP_GCP_DATABASE_FLAG_` を前置する必要があります。 以下は、開発環境でのデバッグに役立つ一般的なフラグですが、本番環境ではパフォーマンスに大きな影響を与えるため、使用しないでください。
 
-``` warning::
-   As noted in Google's documentation, some database flag settings can affect instance availability or stability. Be very careful when using these flags and follow Google's `Operational Guidelines <https://cloud.google.com/sql/docs/mysql/operational-guidelines>`_.
+```{warning}
+As noted in Google's documentation, some database flag settings can affect instance availability or stability. Be very careful when using these flags and follow Google's [Operational Guidelines](https://cloud.google.com/sql/docs/mysql/operational-guidelines).
 ```
 
 | 名前                                     | 許容値       | デフォルト値 |

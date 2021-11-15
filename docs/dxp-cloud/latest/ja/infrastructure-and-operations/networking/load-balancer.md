@@ -69,8 +69,8 @@ Liferayのコンテンツ配信ネットワーク（CDN）は、DXP Cloudで提�
 }
 ```
 
-``` warning::
-   DXP Cloudでは、カプセル化の境界線を含む、適切にフォーマットされたPEM証明書と鍵のみを受け付けています。 詳細は `spec <https://tools.ietf.org/html/rfc4648#section-4>`_ を参照してください。
+```{warning}
+DXP Cloudでは、カプセル化の境界線を含む、適切にフォーマットされたPEM証明書と鍵のみを受け付けています。 詳細は [spec](https://tools.ietf.org/html/rfc4648#section-4) を参照してください。
 ```
 
 ``` xml

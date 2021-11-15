@@ -2,8 +2,8 @@
 
 [サーバー管理]パネルの[ログレベル]タブでは、Liferay DXPのクラス階層でクラスとパッケージのログレベルを設定し、サーバー管理ログUIを使用して同様に管理するカスタムオブジェクトを追加できます。 クラス階層の最上位近くのログレベル（ `com.liferay`）を変更すると、その階層の下にあるすべてのクラスのログレベルも変更されます。 階層内で不必要に高い変更を行うと、生成されるメッセージが多すぎて役に立たなくなります。
 
-``` tip::
-   If your changes produce more log messages, make them as specific as possible.
+```{tip}
+If your changes produce more log messages, make them as specific as possible.
 ```
 
 各ロギング構成は、カテゴリーと呼ばれます。

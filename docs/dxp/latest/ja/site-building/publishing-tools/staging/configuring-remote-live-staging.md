@@ -35,8 +35,8 @@
 
     サーバーに複数のIPアドレスがある場合は、各IPアドレスも追加する必要があります。
 
-    ``` important::
-       If you're validating IPv6 addresses, you must configure the app server's JVM to not force the usage of IPv4 addresses. For example, if you're using Tomcat, add the ``-Djava.net.preferIPv4Stack=false`` attribute in the ``$TOMCAT_HOME\bin\setenv.[bat|sh]`` file.
+    ```{important}
+    If you're validating IPv6 addresses, you must configure the app server's JVM to not force the usage of IPv4 addresses. For example, if you're using Tomcat, add the `-Djava.net.preferIPv4Stack=false` attribute in the `$TOMCAT_HOME\bin\setenv.[bat|sh]` file.
     ```
 
 3.  リモートインスタンスの*トンネル認証検証設定*を更新します。
@@ -47,8 +47,8 @@
 
     ![コントロールパネルからリモートインスタンスのトンネル認証検証設定を更新します。](./configuring-remote-live-staging/images/06.png)
 
-    ``` note::
-       While it is enabled by default, ensure each Liferay server's tunneling servlet `authentication verifier <../../installation-and-upgrades/securing-liferay/securing-web-services/using-authentication-verifiers.md>`_ is enabled.
+    ```{note}
+    While it is enabled by default, ensure each Liferay server's tunneling servlet [authentication verifier](../../installation-and-upgrades/securing-liferay/securing-web-services/using-authentication-verifiers.md) is enabled.
     ```
 
     または、次の構成をLiferayインスタンスのOSGiファイルに書き込むこともできます（例 ：`osgi/configs/com.liferay.portal.security.auth.verifier.tunnel.module.configuration.TunnelAuthVerifierConfiguration-default.config`）。
@@ -62,8 +62,8 @@
 
 再起動すると、両方のサーバーでステージング設定の準備が整います。
 
-``` important::
-   When applying patches to a remote Staging environment, you must apply them to all your servers. Having servers on different patch levels is not a good practice and can lead to import failures and data corruption. It is essential that all servers are updated to the same patch level to ensure remote staging works correctly.
+```{important}
+When applying patches to a remote Staging environment, you must apply them to all your servers. Having servers on different patch levels is not a good practice and can lead to import failures and data corruption. It is essential that all servers are updated to the same patch level to ensure remote staging works correctly.
 ```
 
 ## リモート本番環境ステージングの設定
@@ -90,10 +90,10 @@ Liferayサーバーの準備ができたら、次の手順に従ってDXPイン�
 
     ![[リモート本番環境への接続設定]フィールドを使用して、リモートDXPインスタンスの情報を入力します](./configuring-remote-live-staging/images/03.png)
 
-    ``` note::
-       If you're configuring an IPv6 address, it must contain brackets when entered into the *Remote Host/IP* field (e.g., [0:0:0:0:0:0:0:1]).
+    ```{note}
+    If you're configuring an IPv6 address, it must contain brackets when entered into the *Remote Host/IP* field (e.g., [0:0:0:0:0:0:0:1]).
 
-       If the Remote server is a cluster, you can set the Remote Host/IP to the cluster's load balanced IP address to increase the availability of the publishing process. See the `Configuring Remote Staging in a Clustered Environment <https://help.liferay.com/hc/en-us/articles/360018175251-Configuring-Remote-Staging-in-a-Clustered-Environment>`_ for details.
+    If the Remote server is a cluster, you can set the Remote Host/IP to the cluster's load balanced IP address to increase the availability of the publishing process. See the [Configuring Remote Staging in a Clustered Environment](https://help.liferay.com/hc/en-us/articles/360018175251-Configuring-Remote-Staging-in-a-Clustered-Environment) for details.
     ```
 
 4.  ステージングから本番環境にページを公開するために安全なネットワーク接続（つまりHTTPS）を使用するかどうかを選択します。
@@ -108,20 +108,20 @@ Liferayサーバーの準備ができたら、次の手順に従ってDXPイン�
 
     ![ステージングするデータとコンテンツのタイプを選択します。](./configuring-remote-live-staging/images/05.png)
 
-    ``` warning::
-        When applications are checked, their data is copied, and it may not be possible to edit them directly on the live Site. When unchecking an application, first make sure that any changes in Staging are published, since they may be lost. See `Managing Data and Content Types in Staging <./managing-data-and-content-types-in-staging.md>`_ for more information.
+    ```{warning}
+    When applications are checked, their data is copied, and it may not be possible to edit them directly on the live Site. When unchecking an application, first make sure that any changes in Staging are published, since they may be lost. See [Managing Data and Content Types in Staging](./managing-data-and-content-types-in-staging.md) for more information.
     ```
 
 8.  *[保存]* をクリックして、ステージングプロセスを開始します。 このプロセスの期間は、サイトのサイズによって異なります。
 
-    ``` note::
-       If your attempt to enable Remote Live Staging fails, please verify that you've properly prepared your servers.
+    ```{note}
+    If your attempt to enable Remote Live Staging fails, please verify that you've properly prepared your servers.
     ```
 
 プロセスが完了すると、リモート本番環境ステージングを使用する準備が整います。 ステージング環境の公開機能のナビゲートについては、[Staging UI Reference](./staging-ui-reference.md)を参照してください。
 
-``` warning::
-   Never clone your Liferay DXP database. Doing this can duplicate important data used by Staging (e.g., UUID), causing the remote publishing process to fail.
+```{warning}
+Never clone your Liferay DXP database. Doing this can duplicate important data used by Staging (e.g., UUID), causing the remote publishing process to fail.
 ```
 
 ## リモート本番環境ステージングの権限設定

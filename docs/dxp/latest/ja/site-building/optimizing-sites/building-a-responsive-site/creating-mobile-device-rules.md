@@ -85,8 +85,8 @@
 
 いくつかのモバイルデバイスファミリーを作成し、それらにいくつかのルールを追加したら、モバイルデバイスアクションを追加します。 種別に定義されたこれらのアクションは、デバイスが検出され、種別が適用されることが判明したときに、リクエストに何が起こるかを決定します。
 
-``` tip::
-   Segmentation and Personalization has a *Device* rule that evaluates whether a User is accessing content using a particular device family. This rule is integrated with the Mobile Device Families app.
+```{tip}
+Segmentation and Personalization has a *Device* rule that evaluates whether a User is accessing content using a particular device family. This rule is integrated with the Mobile Device Families app.
 ```
 
 モバイルデバイスアクションをページセットまたは特定のページに追加できます。
@@ -136,8 +136,8 @@
 | **URLリダイレクト**      | モバイルユーザーを任意のURLに送信します。 これは、モバイルユーザーをモバイルアプリのダウンロードまたはページのモバイルバージョンに誘導するために使用できます。                                                           |
 | **サイトリダイレクト**      | モバイルユーザーをポータル上の別のサイトに送信します。 場合によっては、モバイルコンテンツをサイトのミラーリング上に作成することもできます。                                                                      |
 
-``` tip::
-   Liferay was designed from the ground up to be responsive and adapt to any device that might be accessing it. Before creating new themes or forcing a layout template change, you should test how the Site behaves out-of-the-box. Certain features, like URL Redirects, can be disruptive and frustrating if used improperly.
+```{tip}
+Liferay was designed from the ground up to be responsive and adapt to any device that might be accessing it. Before creating new themes or forcing a layout template change, you should test how the Site behaves out-of-the-box. Certain features, like URL Redirects, can be disruptive and frustrating if used improperly.
 ```
 
 ## 追加情報

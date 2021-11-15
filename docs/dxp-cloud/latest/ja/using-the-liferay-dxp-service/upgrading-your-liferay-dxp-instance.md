@@ -2,12 +2,12 @@
 
 Liferayは定期的にLiferay DXPの新しいマイナーバージョンとメジャーバージョンをリリースします。 このバージョンには、セキュリティとバグ修正、および拡張機能が含まれています。 Liferay DXPの新しいメジャーバージョンの増分にアップグレードするには、DXPデータベースをアップグレードする必要があります。
 
-``` note::
-   本番環境で大規模なデータセットを使用する場合、スムーズなアップグレードを行うためには、いくつかの考慮すべき点があります。 コアアップグレードの包括的な概要については、`Liferay DXPのアップグレードガイド <https://learn.liferay.com/dxp/7.x/en/installation-and-upgrades/upgrading-liferay-dxp/upgrade-basics/upgrade-overview.html>`__を参照してください。
+```{note}
+本番環境で大規模なデータセットを使用する場合、スムーズなアップグレードを行うためには、いくつかの考慮すべき点があります。 コアアップグレードの包括的な概要については、[Liferay DXPのアップグレードガイド](https://learn.liferay.com/dxp/7.x/en/installation-and-upgrades/upgrading-liferay-dxp/upgrade-basics/upgrade-overview.html)_を参照してください。
 ```
 
-``` important::
-   DXP Cloudの環境をアップグレードするには、アップグレードしたデータベースを復元する必要があるため、Liferayサービスの再起動にダウンタイムが発生します。 本番環境のダウンタイムに備えて、事前に計画を立てておきましょう。
+```{important}
+DXP Cloudの環境をアップグレードするには、アップグレードしたデータベースを復元する必要があるため、Liferayサービスの再起動にダウンタイムが発生します。 本番環境のダウンタイムに備えて、事前に計画を立てておきましょう。
 ```
 
 次の手順を確認して、データベースのアップグレードを実行します。
@@ -29,8 +29,8 @@ Liferayは定期的にLiferay DXPの新しいマイナーバージョンとメ�
 
 <!-- end list -->
 
-``` important::
-   古いものを再利用するのではなく、アップグレード用の新しいバンドルをダウンロードしてください。 そうしないと、以前にバンドルを使用していたときのデータが、データのアップグレードに支障をきたす可能性があります。
+```{important}
+古いものを再利用するのではなく、アップグレード用の新しいバンドルをダウンロードしてください。 そうしないと、以前にバンドルを使用していたときのデータが、データのアップグレードに支障をきたす可能性があります。
 ```
 
 ## バックアップをダウンロード
@@ -99,8 +99,8 @@ Liferayは定期的にLiferay DXPの新しいマイナーバージョンとメ�
 
 DXPバンドルは、データのアップグレードに使用されるアップグレードツールを提供します。 このツールは、バンドルに含まれるスクリプト `db_upgrade.sh`を介して呼び出されます。
 
-``` note::
-   データベースのアップグレードツールを事前に設定しておくことで、実行時の柔軟性を高めることができます。 高度な使い方については、`データベースアップグレードツールを使用する <https://learn.liferay.com/dxp/7.x/en/installation-and-upgrades/upgrading-liferay-dxp/upgrade-basics/using-the-database-upgrade-tool.html>`__ を参照してください。
+```{note}
+データベースのアップグレードツールを事前に設定しておくことで、実行時の柔軟性を高めることができます。 高度な使い方については、[データベースアップグレードツールを使用する](https://learn.liferay.com/dxp/7.x/en/installation-and-upgrades/upgrading-liferay-dxp/upgrade-basics/using-the-database-upgrade-tool.html)_ を参照してください。
 ```
 
 `LIFERAY_HOME/tools/portal-tools-db-upgrade-client` フォルダー内のコマンドプロンプトを開きます。 次に、次のコマンドを実行します。
@@ -158,8 +158,8 @@ db_upgrade.sh -j "-Dfile.encoding=UTF-8 -Duser.timezone=GMT -Xmx2048m" -l "outpu
     tar -czvf volume.tgz document_library
     ```
 
-    ``` important::
-       もしダウンロードしたデータボリュームにさらに多くのフォルダ（例えば ``license/`` フォルダ）が含まれていた場合は、``document_library`` の後に追加の引数として追加してください。
+    ```{important}
+    もしダウンロードしたデータボリュームにさらに多くのフォルダ（例えば `license/` フォルダ）が含まれていた場合は、`document_library` の後に追加の引数として追加してください。
     ```
 
 ### データベースアップグレードツールの使用
@@ -212,8 +212,8 @@ db_upgrade.sh -j "-Dfile.encoding=UTF-8 -Duser.timezone=GMT -Xmx2048m" -l "outpu
 
 5.  [ *環境に復元*]をクリックします。
 
-    ``` note::
-       選択した環境は、バックアップが展開されている間は利用できなくなります。
+    ```{note}
+    選択した環境は、バックアップが展開されている間は利用できなくなります。
     ```
 
 <!-- I'd also want to know if there is a zero downtime way to do an upgrade - because that's one of the next questions I would ask if I put myself in the shoes of someone trying to run a prod and business critical env. We may not be ready to say anything about that - but just a thought to put in your mind as potentially a future iteration of this - or let's say if we find out that you CAN do a zero downtime upgrade using a DR environment, then we should update this article to say so. An example:

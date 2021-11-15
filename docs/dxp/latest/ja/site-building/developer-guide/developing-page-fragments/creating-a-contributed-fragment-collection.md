@@ -4,8 +4,8 @@
 
 次の例は、Liferay 7.3以降で動作します。
 
-``` note::
-  提供されたフラグメントコレクションを通じて追加されたすべてのフラグメントは、すべてのサイトでグローバルに使用できます。
+```{note}
+提供されたフラグメントコレクションを通じて追加されたすべてのフラグメントは、すべてのサイトでグローバルに使用できます。
 ```
 
 提供されたフラグメントコレクションを追加するには、それ自体が[`FragmentCollectionContributor`インターフェイス](https://docs.liferay.com/dxp/apps/fragment/latest/javadocs/com/liferay/fragment/contributor/FragmentCollectionContributor.html)を実装している[`BaseFragmentCollectionContributor`クラス](https://docs.liferay.com/dxp/apps/fragment/latest/javadocs/com/liferay/fragment/contributor/BaseFragmentCollectionContributor.html)を展開します。
@@ -46,8 +46,8 @@
     ./gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)
     ```
 
-    ``` note::
-      Windows でテストする場合は、最初に `./gradlew build` でモジュールをビルドし、デプロイメントが失敗した場合は JAR を手動で `docker cp docker-container-name:/opt/liferay/osgi/modules` に直接コピーする必要があります。
+    ```{note}
+    Windows でテストする場合は、最初に `./gradlew build` でモジュールをビルドし、デプロイメントが失敗した場合は JAR を手動で `docker cp docker-container-name:/opt/liferay/osgi/modules` に直接コピーする必要があります。
     ```
 
 4.  Liferay Dockerコンテナコンソールへのデプロイを確認します。 以下のログ メッセージが Docker コンソールに表示されます。
@@ -117,12 +117,12 @@ private ServletContext _servletContext;
 
     フラグメントの作成の詳細は、[Developing Page Fragments with the Fragments Toolkit](./using-the-fragments-toolkit.md)を参照してください。
 
-    ``` note::
-      パッケージ化されたフラグメントは `dependencies` フォルダに置かれ、クラスのパッケージ名とリソースのパッケージ名が一致しなければなりません（例： ``[class.package.path].dependencies``）。
+    ```{note}
+    パッケージ化されたフラグメントは `dependencies` フォルダに置かれ、クラスのパッケージ名とリソースのパッケージ名が一致しなければなりません（例： `[class.package.path].dependencies`）。
     ```
 
-    ``` note::
-      提供されたフラグメントコレクションは、`含まれているリソース <./including-default-resources-with-fragments.md>`_ をサポートしていません。
+    ```{note}
+    提供されたフラグメントコレクションは、[含まれているリソース](./including-default-resources-with-fragments.md) をサポートしていません。
     ```
 
 ## デプロイとテスト
@@ -139,8 +139,8 @@ private ServletContext _servletContext;
     ./gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)
     ```
 
-    ``` note::
-      Windows での展開に失敗した場合は、必要に応じて、コンテナで `Liferay をバインドマウント <../../../installation-and-upgrades/installing-liferay/using-liferay-docker-images/providing-files-to-the-container.md>`_ し、``.\gradlew jar`` を使用してモジュール JAR をビルドし、バインドマウントされた適切なフォルダに JAR をコピーする必要があります。
+    ```{note}
+    Windows での展開に失敗した場合は、必要に応じて、コンテナで [Liferay をバインドマウント](../../../installation-and-upgrades/installing-liferay/using-liferay-docker-images/providing-files-to-the-container.md) し、`.\gradlew jar` を使用してモジュール JAR をビルドし、バインドマウントされた適切なフォルダに JAR をコピーする必要があります。
     ```
 
 2.  更新されたフラグメントが提供されたコレクションに含まれていることを確認します。 ブラウザで`https://localhost:8080`にアクセスし、画面左側のサイトメニューで、*[デザイン]* → *[フラグメント]* に移動します。 L3M9 ジャンボトロンフラグメントが L3M9 コレクションに表示されます。

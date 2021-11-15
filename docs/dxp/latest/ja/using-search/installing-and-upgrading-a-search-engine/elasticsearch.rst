@@ -18,7 +18,7 @@ Elasticsearchは、Liferayがデフォルトで使用する、拡張性の高い
    Liferayのバージョンと互換性のあるElasticsearchのバージョンとサーバー構成は、`互換性マトリクス <https://help.liferay.com/hc/en-us/sections/360002103292-Compatibility-Matrix>`__ を確認してください。
 
 
-.. important::
+..important::
    Liferay 7.2および7.3では、Elasticsearch 7をサポートし、認証および暗号化されたElasticsearch接続を保護します。 Elasticsearch 6コネクタ（Liferay 7.2で利用可能）のセキュリティを確保するには、 `Liferay Enterprise Searchサブスクリプション <../liferay_enterprise_search.md>`__ でのみ利用可能な追加モジュールが必要です。
 
 インストール

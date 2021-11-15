@@ -26,8 +26,8 @@
 
 ## ナレッジベースのセクションウィジェット
 
-``` note::
-   ナレッジベース3.0.0以降、ナレッジベースのセクションウィジェットは廃止され、 `カテゴリ <../../../content-authoring-and-management/tags-and-categories/organizing-content-with-categories-and-tags.md>`_ に置き換えられました。
+```{note}
+ナレッジベース3.0.0以降、ナレッジベースのセクションウィジェットは廃止され、 [カテゴリ](../../../content-authoring-and-management/tags-and-categories/organizing-content-with-categories-and-tags.md) に置き換えられました。
 ```
 
 ナレッジベースのセクションウィジェットは、特定のトピック（セクション）に関連する記事を公開できます。 たとえば、夏季オリンピックに関するサイトには、チームスポーツ、ウォータースポーツ、格闘技などのセクションが考えられます。

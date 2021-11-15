@@ -17,8 +17,8 @@ A/Bテストが終了したら、テスト結果を確認して、優先テス�
 
 ## A/Bテストの実行
 
-``` note::
-   Before running the test, you must create the A/B Test and test Variant. For more information, read `Creating A/B Tests <./creating-ab-tests.md>`_.
+```{note}
+Before running the test, you must create the A/B Test and test Variant. For more information, read [Creating A/B Tests](./creating-ab-tests.md).
 ```
 
 1.  A/Bテストを実行するコンテンツページに移動します

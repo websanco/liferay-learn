@@ -13,8 +13,8 @@ jdbc.default.password=
 
 ## MySQL
 
-``` important::
-   MySQLコネクタ/J 8.0は、MySQL Server 8.0および5.7で使用することを強くお勧めします。
+```{important}
+MySQLコネクタ/J 8.0は、MySQL Server 8.0および5.7で使用することを強くお勧めします。
 ```
 
 ``` properties

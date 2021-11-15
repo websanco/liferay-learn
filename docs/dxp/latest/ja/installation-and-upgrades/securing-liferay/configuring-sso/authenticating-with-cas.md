@@ -2,8 +2,8 @@
 
 CASは広く使用されているオープンソースのシングルサインオンソリューションであり、Liferay DXPでサポートされる最初のSSO製品でした。 Liferay DXPのCASモジュールにはCASクライアントが含まれているため、個別にインストールする必要はありません。
 
-``` note::
-   Liferay DXPはCAS 3.3.xをサポートしています。新しいバージョンのCASを使用する場合は、OpenID ConnectやSAMLなどの規格に対するCASのサポートを使用してLiferay DXPと連携させることをお勧めします。
+```{note}
+Liferay DXPはCAS 3.3.xをサポートしています。新しいバージョンのCASを使用する場合は、OpenID ConnectやSAMLなどの規格に対するCASのサポートを使用してLiferay DXPと連携させることをお勧めします。
 ```
 
 CASでLiferayを実行するには、3つのステップがあります。

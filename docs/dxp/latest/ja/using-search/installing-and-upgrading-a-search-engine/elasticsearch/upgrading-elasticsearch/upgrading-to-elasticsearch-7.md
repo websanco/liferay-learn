@@ -4,8 +4,8 @@ Elasticsearch 7は、Liferay7.3では標準サポートされています。 特
 
 Liferay 7.2では、Elasticsearch 7は[Liferay Connector to Elasticsearch 7](https://web.liferay.com/marketplace/-/mp/application/170390307)  (バージョン`3.x`) を介してサポートされています。 Liferay 7.3にアップグレードする場合、または既存の7.2検索エンジンをElasticsearch 7に移行する場合は、Elasticsearchサーバーもアップグレードする必要があります。 新しいLiferay7.2システムをセットアップするには、Elasticsearch 7をインストールし、[インストールガイド](../getting-started-with-elasticsearch.md)に従います。
 
-``` important::
-   Before upgrading Elasticsearch, back up your existing data. If something goes wrong during or after the upgrade, roll back to the previous version using the uncorrupted index snapshots. Follow the steps in `Backing up Elasticsearch <./backing-up-elasticsearch.md>`__.
+```{important}
+Before upgrading Elasticsearch, back up your existing data. If something goes wrong during or after the upgrade, roll back to the previous version using the uncorrupted index snapshots. Follow the steps in [Backing up Elasticsearch](./backing-up-elasticsearch.md)_.
 ```
 
 既存のElasticsearchサーバー（またはクラスター）をElasticsearch 7にアップグレードするには、

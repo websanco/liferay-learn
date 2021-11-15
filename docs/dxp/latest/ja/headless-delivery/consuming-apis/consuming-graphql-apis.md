@@ -43,13 +43,13 @@ Liferay DXPの初期化後、必要なサービスを見つけることができ
 
 <!-- end list -->
 
-``` note::
-   You can also discover your local installation's APIs by requesting the schema directly:
+```{note}
+You can also discover your local installation's APIs by requesting the schema directly:
 
-   ``curl 'http://localhost:8080/o/graphql'  -H 'Content-Type: application/json' --data '{"query":"query{ __schema{ queryType{ name fields{ name args{ name } description } } } }","variables":{}}'``
+`curl 'http://localhost:8080/o/graphql'  -H 'Content-Type: application/json' --data '{"query":"query{ __schema{ queryType{ name fields{ name args{ name } description } } } }","variables":{}}'`
 
 
-   This URL does not require authentication, but it's quite cumbersome to manage the returned schema. For this reason, it's better to use the included GraphQL client.
+This URL does not require authentication, but it's quite cumbersome to manage the returned schema. For this reason, it's better to use the included GraphQL client.
 ```
 
 ![含まれているGraphQLクライアントには、スキーマドキュメントブラウザがあります。](./consuming-graphql-apis/images/01.png)
@@ -171,10 +171,10 @@ Liferay DXPは、ミューテーションでリクエストされたフィール
 }
 ```
 
-``` note::
+```{note}
 You can make these requests with any web client, such as Curl:
 
-   ``curl --request POST --url http://localhost:8080/o/graphql -u test@liferay.com:test --header 'content-type: application/json' --data '{"query":"mutation CreateBlog($blog: InputBlogPosting){   createSiteBlogPosting(blogPosting: $blog, siteKey: \"20122\" ) {    headline    articleBody    id    friendlyUrlPath  }    } ","variables":{"blog":{"articleBody":"This Blog entry was created by using Curl to call the GraphQL service!","headline":"Curl GraphQL Blog Entry"}},"operationName":"CreateBlog"}'``
+`curl --request POST --url http://localhost:8080/o/graphql -u test@liferay.com:test --header 'content-type: application/json' --data '{"query":"mutation CreateBlog($blog: InputBlogPosting){   createSiteBlogPosting(blogPosting: $blog, siteKey: \"20122\" ) {    headline    articleBody    id    friendlyUrlPath  }    } ","variables":{"blog":{"articleBody":"This Blog entry was created by using Curl to call the GraphQL service!","headline":"Curl GraphQL Blog Entry"}},"operationName":"CreateBlog"}'`
 ```
 
 ### すべてのブログエントリを取得する

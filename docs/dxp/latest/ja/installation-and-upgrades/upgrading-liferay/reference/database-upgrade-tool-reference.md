@@ -76,8 +76,8 @@ db_upgrade.sh -j "-Xmx8000m -Dfile.encoding=UTF-8 -Duser.timezone=GMT"
     
     (etc.)
 
-``` note::
-   Omitted values use the defaults displayed in the parentheses.
+```{note}
+Omitted values use the defaults displayed in the parentheses.
 ```
 
 ### 手動設定

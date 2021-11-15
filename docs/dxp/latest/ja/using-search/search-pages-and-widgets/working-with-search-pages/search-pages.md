@@ -6,8 +6,8 @@
 
 ユーザーは、新しい検索ページを作成し、さまざまな検索ウィジェットを追加し、利用可能なさまざまなウィジェット構成を調整して、サイトのユーザーに正確で調整された検索エクスペリエンスを提供することにより、検索エクスペリエンスをカスタマイズすることを選択できます。 [デフォルト](#default-search-pages)検索ページを使用して、独自のカスタム検索ページを作成するのに良い出発点にすることができます。
 
-``` note::
-   Newly created sites do not get a Search Page created by default. You'll need to create one. You can use an existing Search Page Template or create a new Search Page yourself.
+```{note}
+Newly created sites do not get a Search Page created by default. You'll need to create one. You can use an existing Search Page Template or create a new Search Page yourself.
 ```
 
 ![新しい空白サイトには、検索ページを作成して構成する必要があります。](./search-pages/images/01.png)

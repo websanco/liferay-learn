@@ -20,8 +20,8 @@
 
 コンテンツを作成するには、最初に目的のアセットライブラリのダッシュボードに移動し、次にコンテンツを作成するアプリケーションをクリックします。 ここから、コンテンツの作成プロセスはサイトコンテンツの場合と同じです。 各タイプのコンテンツの作成の詳細は、[コンテンツの作成と管理](../../content_authoring_and_management.html)を参照してください。
 
-``` note::
-   ライブラリのダッシュボードには、アクティブなアプリケーションのみが表示されます。 アプリケーションを有効にしたり無効にしたりするには、 `Configuring Asset Libraries <./creating-and-managing-asset-libraries.md#configuring-asset-libraries>`_ を参照してください。
+```{note}
+ライブラリのダッシュボードには、アクティブなアプリケーションのみが表示されます。 アプリケーションを有効にしたり無効にしたりするには、 [Configuring Asset Libraries](./creating-and-managing-asset-libraries.md#configuring-asset-libraries) を参照してください。
 ```
 
 ## サイトでコンテンツを使用する

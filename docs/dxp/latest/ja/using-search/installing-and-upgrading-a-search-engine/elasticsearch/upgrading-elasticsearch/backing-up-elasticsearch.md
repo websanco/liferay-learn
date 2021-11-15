@@ -4,8 +4,8 @@
 
 Elasticsearchインデックスをバックアップして復元のテストを行う適切な機会は、[アップグレード](./upgrading-search-for-liferay-73.md)前です。 実際、[検索の調整インデックス](#backing-up-and-restoring-search-tuning-indexes)のスナップショットを使用して、新しいElasticsearchサーバーをセットアップするときに、以前の同義語セットと結果ランキングのインデックスを再作成できます。 このアプローチを試みる前に、[スナップショットとバージョンの復元の互換性](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/snapshot-restore.html#snapshot-restore-version-compatibility)に関するElasticsearchのドキュメントを読んでください。
 
-``` tip::
-   It's convenient to create and manage snapshots via the `Kibana 7.x UI <https://www.elastic.co/guide/en/kibana/7.x/snapshot-repositories.html>`__.
+```{tip}
+It's convenient to create and manage snapshots via the [Kibana 7.x UI](https://www.elastic.co/guide/en/kibana/7.x/snapshot-repositories.html)_.
 ```
 
 次の3つの手順でElasticsearchクラスターをバックアップし、バックアップの復元をテストします。
@@ -18,8 +18,8 @@ Elasticsearchインデックスをバックアップして復元のテストを�
 
 <!-- end list -->
 
-``` note::
-   For more detailed information, refer to Elastic's `Elasticsearch administration guide <https://www.elastic.co/guide/en/elasticsearch/guide/master/administration.html>`_, and in particular to the `Snapshot and Restore module <https://www.elastic.co/guide/en/elasticsearch/reference/7.x/snapshot-restore.html>`_.
+```{note}
+For more detailed information, refer to Elastic's [Elasticsearch administration guide](https://www.elastic.co/guide/en/elasticsearch/guide/master/administration.html), and in particular to the [Snapshot and Restore module](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/snapshot-restore.html).
 ```
 
 ## リポジトリの作成
@@ -102,8 +102,8 @@ green  open   liferay-0                                          jPIEOfZhSCKZSWn
 green  open   liferay-20101-search-tuning-synonyms               pAUN8st1RmaV1NxXtj-Sig   1   0          1            0      4.1kb          4.1kb
 ```
 
-``` note::
-   Elasticsearch uses a *smart snapshots* approach. To understand what that means, consider a single index. The first snapshot includes a copy of the entire index, while subsequent snapshots only include the delta between the first, complete index snapshot and the current state of the index.
+```{note}
+Elasticsearch uses a *smart snapshots* approach. To understand what that means, consider a single index. The first snapshot includes a copy of the entire index, while subsequent snapshots only include the delta between the first, complete index snapshot and the current state of the index.
 ```
 
 最終的には、リポジトリに多数のスナップショットが作成されることになります。スナップショットに名前を付けたとしても、スナップショットに含まれているものを忘れてしまう可能性があります。 Elasticsearch APIを使用して説明を取得できます。 例:

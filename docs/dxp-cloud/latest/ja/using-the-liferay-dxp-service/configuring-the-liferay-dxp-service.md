@@ -32,8 +32,8 @@ Liferay DXPを設定するには、[DXPシステム設定](https://learn.liferay
 
 <!-- end list -->
 
-``` note::
-   ポータルプロパティは、環境変数として定義することもできます。 詳細は `環境変数リファレンス <./introduction-to-the-liferay-dxp-service.md#environment-variables-reference>`_ を参照してください。
+```{note}
+ポータルプロパティは、環境変数として定義することもできます。 詳細は [環境変数リファレンス](./introduction-to-the-liferay-dxp-service.md#environment-variables-reference) を参照してください。
 ```
 
 ## OSGiの設定

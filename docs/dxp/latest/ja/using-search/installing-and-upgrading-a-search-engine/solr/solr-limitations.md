@@ -1,9 +1,9 @@
 # Solrの制限事項
 
-``` important::
-   Liferay's Solr support will receive one more update (to support Solr 8) before being deprecated. Please plan to migrate to `Elasticsearch <../elasticsearch/getting-started-with-elasticsearch.md>`_.
+```{important}
+Liferay's Solr support will receive one more update (to support Solr 8) before being deprecated. Please plan to migrate to [Elasticsearch](../elasticsearch/getting-started-with-elasticsearch.md).
 
-   See `LPS-111013 <https://issues.liferay.com/browse/LPS-111013>`__ to follow the progress of Liferay's Solr 8 integration.
+See [LPS-111013](https://issues.liferay.com/browse/LPS-111013)_ to follow the progress of Liferay's Solr 8 integration.
 ```
 
 ## エンドユーザー機能の制限
@@ -50,6 +50,6 @@ LiferayのSolr統合には、Liferay Commerceおよび以下の機能の使用�
 
 <!-- end list -->
 
-``` note::
-   Liferay Commerce requires the ``TermsSetFilter`` implementation which is only available in the Elasticsearch connector.
+```{note}
+Liferay Commerce requires the `TermsSetFilter` implementation which is only available in the Elasticsearch connector.
 ```

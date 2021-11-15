@@ -4,8 +4,8 @@ CLIツールを使用すると、Jenkinsのビルドをトリガーしたり、D
 
 はじめに、まず [のCLIツール](../reference/command-line-tool.md) をインストールして使用できる状態にし、プロジェクトのGitリポジトリのローカルコピー（例, [GitHub](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository-from-github), [Bitbucket](https://confluence.atlassian.com/bitbucketserver/clone-a-repository-790632786.html), [GitLab](https://docs.gitlab.com/ee/university/training/topics/getting_started.html#instantiate-workflow-with-clone)など）が必要です。)
 
-``` note::
-   CLIツールは、プロジェクトへの変更を迅速にデプロイする方法を提供しますが、大部分のデプロイにはCIサービスとDXP Cloudコンソールを使用することがベストプラクティスです。 方法については、`Deploying Changes via DXP Cloud Console <./deploying-changes-via-the-dxp-cloud-console.md>`__ を参照してください。
+```{note}
+CLIツールは、プロジェクトへの変更を迅速にデプロイする方法を提供しますが、大部分のデプロイにはCIサービスとDXP Cloudコンソールを使用することがベストプラクティスです。 方法については、[Deploying Changes via DXP Cloud Console](./deploying-changes-via-the-dxp-cloud-console.md)_ を参照してください。
 ```
 
 プロジェクトでバージョン3.x.xのサービスを使用している場合、CLIツールで変更をデプロイする前に、まずそれらの`LCP.json`ファイルを[準備](#preparing-lcpjson-files-in-project-version-3)する必要があります。
@@ -37,8 +37,8 @@ liferay.workspace.lcp.jenkins.image=liferaycloud/jenkins:2.176.1-3.1.1
 "image": "@liferay.workspace.lcp.search.image@",
 ```
 
-``` note::
-   liferay.workspace.lcp.jenkins.image``プロパティは、``ci``サービスに対応しています。
+```{note}
+liferay.workspace.lcp.jenkins.image`プロパティは、`ci`サービスに対応しています。
 ```
 
 ## Liferayサービスへのポータル・プロパティの追加
@@ -59,8 +59,8 @@ liferay.workspace.lcp.jenkins.image=liferaycloud/jenkins:2.176.1-3.1.1
     web.server.display.node=true
     ```
 
-    ``` note::
-       バージョン3.x.xのサービスを使用している場合は、適切なフォルダパスは ``lcp/liferay/deploy/dev`` となります。 See `DXP Cloud Project Changes in Version 4 <../reference/dxp-cloud-project-changes-in-version-4.md>`__ for more information on the differences in the directory structure, and `Understanding Service Stack Versions <../reference/understanding-service-stack-versions.md>`__ for how to check the version of your services.
+    ```{note}
+    バージョン3.x.xのサービスを使用している場合は、適切なフォルダパスは `lcp/liferay/deploy/dev` となります。 See [DXP Cloud Project Changes in Version 4](../reference/dxp-cloud-project-changes-in-version-4.md)_ for more information on the differences in the directory structure, and [Understanding Service Stack Versions](../reference/understanding-service-stack-versions.md)_ for how to check the version of your services.
     ```
 
 4.  以下のコマンドで変更内容を追加し、コミットします。
@@ -83,8 +83,8 @@ liferay.workspace.lcp.jenkins.image=liferaycloud/jenkins:2.176.1-3.1.1
     cd <project-folder>/liferay
     ```
 
-    ``` important::
-    バージョン3.x.xのサービスを使用している場合は、CLIツールを実行する前に、リポジトリの ``lcp`` ディレクトリに移動して、ディレクトリを走査し、サービスの ``LCP.json`` ファイルを見つけられるようにする必要があります。
+    ```{important}
+    バージョン3.x.xのサービスを使用している場合は、CLIツールを実行する前に、リポジトリの `lcp` ディレクトリに移動して、ディレクトリを走査し、サービスの `LCP.json` ファイルを見つけられるようにする必要があります。
     ```
 
 2.  `lcp login`を実行 まだログインしていない場合は、ブラウザで認証を行うよう促されます。
@@ -103,8 +103,8 @@ liferay.workspace.lcp.jenkins.image=liferaycloud/jenkins:2.176.1-3.1.1
     cd build/docker
     ```
 
-    ``` important::
-       lcp deploy``コマンドを実行する前に、まずLiferayサービスのGradleビルドを作成する必要があります。 No local build process is required for other services, so you can directly deploy backup, CI, database, search, and webserver services.
+    ```{important}
+    lcp deploy`コマンドを実行する前に、まずLiferayサービスのGradleビルドを作成する必要があります。 No local build process is required for other services, so you can directly deploy backup, CI, database, search, and webserver services.
     ```
 
 4.  以下のコマンドを実行して、ビルドを `dev` の環境にデプロイします。

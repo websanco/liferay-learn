@@ -4,10 +4,10 @@
 
 ![サイトファセットの結果の例。](site-facet/images/01.png)
 
-``` important::
-   For the Site Facet to display multiple sites, the Search Bar must be configured to search *Everything*. If not searching for Everything, only the current Site is searched, and the Site Facet has nothing to display. When this occurs, the Site Facet is hidden on the page.
+```{important}
+For the Site Facet to display multiple sites, the Search Bar must be configured to search *Everything*. If not searching for Everything, only the current Site is searched, and the Site Facet has nothing to display. When this occurs, the Site Facet is hidden on the page.
 
-   Configuring the globally embedded page-top Search Bar to search for Everything not only configures the embedded Search Bar on all pages. It also ensures that the Search Page’s Search Bar searches Everything, because the page-top Search Bar's configuration overrides the Search Page's Search Bar configuration. The same does not apply to other Search Bar widgets in the Site. Each of these must be configured as desired.
+Configuring the globally embedded page-top Search Bar to search for Everything not only configures the embedded Search Bar on all pages. It also ensures that the Search Page’s Search Bar searches Everything, because the page-top Search Bar's configuration overrides the Search Page's Search Bar configuration. The same does not apply to other Search Bar widgets in the Site. Each of these must be configured as desired.
 ```
 
 グローバル検索バーが無効になっている場合は、すべてを検索するように検索ページの検索バーウィジェットを設定します。

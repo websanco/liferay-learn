@@ -2,8 +2,8 @@
 
 サイトで同じ一連のタスク（サイトのWikiコンテンツのモデレート、掲示板スレッドの管理、ブログの作成、サイト内の特定のページの編集など）を実行するユーザーの</em>アドホック*グループがある場合は、それらをサイトチームに編成してから、さまざまなサイト固有の機能に対するチームの権限を割り当てることができます。 サイトチームは、単一のサイト内で権限を管理するための推奨される方法です。 サイトチームに割り当てられた権限は、そのサイトにのみ適用されます。</p>
 
-``` note::
-  Liferay Portalインスタンス内の複数のサイトや組織で使用するユーザーグループの権限を作成して適用するには、 `ユーザーをユーザーグループ <../../../users-and-permissions/user-groups/creating-and-managing-user-groups.md>`_ に集約し、 `ロール <../../../users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.md>`_ を介してユーザーグループの権限を割り当てることを検討してください。 
+```{note}
+Liferay Portalインスタンス内の複数のサイトや組織で使用するユーザーグループの権限を作成して適用するには、 [ユーザーをユーザーグループ](../../../users-and-permissions/user-groups/creating-and-managing-user-groups.md) に集約し、 [ロール](../../../users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.md) を介してユーザーグループの権限を割り当てることを検討してください。 
 ```
 
 以下の手順では、これらのトピックについて説明します。
@@ -21,8 +21,8 @@
 
     ![プロダクトメニューの[メンバー]見出しからチームを作成します。](./creating-teams-for-sites/images/01.png)
 
-    ``` note::
-      *サイトメンバーシップ*アプリ（*メンバー*タブにもある）で、*ユーザー*、*組織*、*ユーザーグループ*などの他のサイトメンバーシップグループを設定できます。 サイトメンバーシップの仕組みの詳細は、 `Changing Site Membership Type <../../site-settings/site-users/changing-site-membership-type.md>`_ を参照してください。
+    ```{note}
+    *サイトメンバーシップ*アプリ（*メンバー*タブにもある）で、*ユーザー*、*組織*、*ユーザーグループ*などの他のサイトメンバーシップグループを設定できます。 サイトメンバーシップの仕組みの詳細は、 [Changing Site Membership Type](../../site-settings/site-users/changing-site-membership-type.md) を参照してください。
     ```
 
 3.  *[チームを追加]* アイコン（![Add Team](../../../images/icon-add.png)）をクリックします。
@@ -43,8 +43,8 @@
 
 1.  [チーム]の横にある*アクション*アイコン（![アクション](../../../images/icon-actions.png)）をクリックし、 *[権限設定]* を選択します。
 
-    ``` note::
-      チームに権限を設定すると、それらの権限がチームのすべてのメンバーに割り当てられます。 チームを編集/管理できる管理者のみがチームの権限を管理できます。
+    ```{note}
+    チームに権限を設定すると、それらの権限がチームのすべてのメンバーに割り当てられます。 チームを編集/管理できる管理者のみがチームの権限を管理できます。
     ```
 
 2.  権限をオン/オフにして、*[保存]* をクリックします。

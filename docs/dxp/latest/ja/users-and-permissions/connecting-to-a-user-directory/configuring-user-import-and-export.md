@@ -24,8 +24,8 @@
   - *First Name*（例：`name`または`givenName`）
   - *Last Name*（例：`sn`）
 
-``` note::
-   メールアドレスのないユーザーを作成またはインポートする場合は、 ::portal-ext.properties::に::users.email.address.required=false::を設定する必要があります。 このセットを使用すると、Liferayは、ユーザーIDとプロパティ::users.email.address.auto.suffix=::で定義されたサフィックスを組み合わせた電子メールアドレスを自動生成します。 最後に、LiferayおよびLDAP認証を電子メールアドレス以外のものに設定してください。
+```{note}
+メールアドレスのないユーザーを作成またはインポートする場合は、 ::portal-ext.properties::に::users.email.address.required=false::を設定する必要があります。 このセットを使用すると、Liferayは、ユーザーIDとプロパティ::users.email.address.auto.suffix=::で定義されたサフィックスを組み合わせた電子メールアドレスを自動生成します。 最後に、LiferayおよびLDAP認証を電子メールアドレス以外のものに設定してください。
 ```
 
 LDAPグループをLiferayユーザーグループとしてインポートする場合は、メンバーシップ情報が保持されるように、Liferayグループフィールドのマッピングを定義してください。
@@ -70,8 +70,8 @@ LDAPグループをLiferayユーザーグループとしてインポートする
 
 すべてのオプションを設定して接続をテストしたら、*[保存]* をクリックします。
 
-``` note::
-   ユーザーがLiferayのパスワードのような値を変更した場合、Liferayが変更を行うのに十分なスキーマアクセスを持っている限り、その変更はLDAPサーバーに渡されます。
+```{note}
+ユーザーがLiferayのパスワードのような値を変更した場合、Liferayが変更を行うのに十分なスキーマアクセスを持っている限り、その変更はLDAPサーバーに渡されます。
 ```
 
 LDAPサーバーをLiferayに接続する方法と、ユーザーのインポート動作、エクスポート動作、およびその他のLDAP設定を構成する方法を理解しました。 他にも設定可能なオプションがあります。 それらについては[Configuring LDAP](./ldap-configuration-reference.md)で説明しています。

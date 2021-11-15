@@ -71,8 +71,8 @@
 
 <!-- end list -->
 
-``` note::
-   ``nameCurrentValue`` の前の ``$..`` は、JSONデータストラクチャーをナビゲートし、出力へのパスを指定するJsonPath構文です。 詳しくは `JsonPath <https://github.com/json-path/JsonPath>`_ と `こちら <http://goessner.net/articles/JsonPath/>`_ を参照してください。
+```{note}
+`nameCurrentValue` の前の `$..` は、JSONデータストラクチャーをナビゲートし、出力へのパスを指定するJsonPath構文です。 詳しくは [JsonPath](https://github.com/json-path/JsonPath) と [こちら](http://goessner.net/articles/JsonPath/) を参照してください。
 ```
 
 ## 入力をフィルターとして使う

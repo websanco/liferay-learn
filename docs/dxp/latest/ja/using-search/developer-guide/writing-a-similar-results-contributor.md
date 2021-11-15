@@ -48,8 +48,8 @@ Liferay DXPのインスタンスで例 `SimilarResultsContributor` 起動して�
     ./gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)
     ```
 
-    ``` note::
-       This command is the same as copying the deployed jars to /opt/liferay/osgi/modules on the Docker container.
+    ```{note}
+    This command is the same as copying the deployed jars to /opt/liferay/osgi/modules on the Docker container.
     ```
 
 3.  Liferay Dockerコンテナコンソールでデプロイを確認します。
@@ -114,8 +114,8 @@ public void detectRoute(RouteBuilder routeBuilder, RouteHelper routeHelper);
 
 エンティティのURLパターンの特徴的な部分を提供するために `detectRoute` を実装して、類似結果ウィジェットがコントリビューターを呼び出す必要があるかどうかを検出できるようにします。 URLパターンは、 `RouteBuilder` オブジェクトの属性として追加されます。 `RouteHelper` は、解析のためにURL文字列全体を取得するのに役立ちます。
 
-``` note::
-   Only one `SimilarResultsContributor` is supported for each display portlet.
+```{note}
+Only one `SimilarResultsContributor` is supported for each display portlet.
 ```
 
 ``` java
@@ -198,8 +198,8 @@ public void resolveCriteria(CriteriaBuilder criteriaBuilder, CriteriaHelper crit
 
 ページに表示されているエンティティに対応する検索エンジンドキュメントを検索します。 `criteriaBuilder.uid` メソッドに適切な検索エンジンドキュメントの `uid` フィールドの値を指定する必要があります（これは通常、ドキュメントのElasticsearchで指定された `_id` フィールドと同じです）。 Liferay DXPインデックスでは、このフィールドはエントリクラス名とクラス主キーの構成です。 両方を文字列として `Field.getUID` に渡して値を取得します。 この例では、最初に `detectRoute` メソッド（ `urlTitle`）で属性に追加したIDを使用してモデルエンティティをフェッチし、それを使用してアセットエントリを取得します。
 
-``` important::
-   There's a difference between Liferay DXP 7.2 and Liferay DXP 7.3, so a condition to check the version, with logic for each, is provided here. In Liferay DXP 7.3, `getPrimaryKeyObj` is used in conjunction with the class name, whereas in Liferay DXP 7.2, `getResourcePrimKey` is needed.
+```{important}
+There's a difference between Liferay DXP 7.2 and Liferay DXP 7.3, so a condition to check the version, with logic for each, is provided here. In Liferay DXP 7.3, `getPrimaryKeyObj` is used in conjunction with the class name, whereas in Liferay DXP 7.2, `getResourcePrimKey` is needed.
 ```
 
 一致するドキュメントが見つかったので、同様の結果が更新されるようにリンク先URLを記述します。

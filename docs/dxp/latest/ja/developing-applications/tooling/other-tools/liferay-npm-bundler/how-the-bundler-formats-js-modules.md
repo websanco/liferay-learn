@@ -73,8 +73,8 @@ define(
 );
 ```
 
-``` note::
-  モジュールの名前は、そのパッケージ、バージョン、およびファイルパスに基づいている必要があります（たとえば、「my-bundle-package$isobject@ 2.1.0/index」）。そうでない場合、Liferay AMD Loaderはそれを見つけることができません。
+```{note}
+モジュールの名前は、そのパッケージ、バージョン、およびファイルパスに基づいている必要があります（たとえば、「my-bundle-package$isobject@ 2.1.0/index」）。そうでない場合、Liferay AMD Loaderはそれを見つけることができません。
 ```
 
 モジュールの依存関係に注意してください： `['module'、 'require'、 'my-bundle-package$isarray']`。

@@ -24,12 +24,12 @@
 
     ![この機能を有効にするには、[変更の継承]をクリックします。](./using-a-search-page-template/images/02.png)
 
-    ``` tip::
-       For new pages, you can enable this when the page is first created. For an existing page based on the search template, navigate to the Site menu → *Site Builder* → *Pages*, and then click *Configure* within the Actions menu.
+    ```{tip}
+    For new pages, you can enable this when the page is first created. For an existing page based on the search template, navigate to the Site menu → *Site Builder* → *Pages*, and then click *Configure* within the Actions menu.
     ```
 
-    ``` warning::
-       Some settings within the page configuration will become unavailable if the page is set to inherit changes from the page template.
+    ```{warning}
+    Some settings within the page configuration will become unavailable if the page is set to inherit changes from the page template.
     ```
 
 ページテンプレートが更新されるたびに、検索ページが更新されます。

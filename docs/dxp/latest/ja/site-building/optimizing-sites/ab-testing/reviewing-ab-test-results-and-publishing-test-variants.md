@@ -2,8 +2,8 @@
 
 A/Bテストが終了すると、Analytics CloudとLiferay DXPでテスト結果を確認できます。 Analytics Cloudは、テスト期間中に*必要信頼度*が達成されたときに、勝利のバリアントを宣言します。 テストに*必要信頼度*を設定する方法については、[Creating A/B Tests](./creating-ab-tests.md)を参照してください。
 
-``` note::
-   When you publish one of the A/B Test Variants, the Variant becomes active for all users visiting the Content Page.
+```{note}
+When you publish one of the A/B Test Variants, the Variant becomes active for all users visiting the Content Page.
 ```
 
 A/Bテストの結果を確認し、バリアントを公開するには、

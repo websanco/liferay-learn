@@ -25,8 +25,8 @@ DXP Cloudオンボーディングメールを受信すると、 `dxpcloud` 組�
 
 <!-- end list -->
 
-``` note::
-    Jenkinsfile をカスタマイズしている場合は、以下のガイドに従って `デフォルトの Jenkinsfile <../platform-services/continuous-integration.md#extending-the-default-jenkinsfile>`__.
+```{note}
+Jenkinsfile をカスタマイズしている場合は、以下のガイドに従って [デフォルトの Jenkinsfile](../platform-services/continuous-integration.md#extending-the-default-jenkinsfile)_.
 ```
 
 ## GitLabリポジトリの作成
@@ -57,8 +57,8 @@ DXP Cloudオンボーディングメールを受信すると、 `dxpcloud` 組�
 
     `git clone git@github.com:dxpcloud/example.git`
 
-    ``` note::
-       すでに他のプロバイダで作業するためにリポジトリをクローンしている場合は、このステップをスキップして、同じクローン内で作業することができます。
+    ```{note}
+    すでに他のプロバイダで作業するためにリポジトリをクローンしている場合は、このステップをスキップして、同じクローン内で作業することができます。
     ```
 
 2.  新しいGitリモートを追加し、GitLabをポイントします。

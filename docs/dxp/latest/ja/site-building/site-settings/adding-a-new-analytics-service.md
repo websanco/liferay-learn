@@ -16,8 +16,8 @@ Liferay DXPには、サイトのトラフィックを分析するためのGoogle
 
 1.  名前を入力したら、サイトメニューを開き、アナリティクスを追加するサイトの*[設定]* → *[Settings]* → *[詳細設定]* → *[アナリティクス]* ページに移動します。
 
-    ``` note::
-       In Liferay DXP 7.1 and 7.2, instead navigate to *Configuration* → *Site Settings* → *Advanced* → *Analytics* in the Site Menu.
+    ```{note}
+    In Liferay DXP 7.1 and 7.2, instead navigate to *Configuration* → *Site Settings* → *Advanced* → *Analytics* in the Site Menu.
     ```
 
 2.  アナリティクスプラットフォームによって提供されるJavaScript追跡コードをサービスの対応するフィールドにコピーします。

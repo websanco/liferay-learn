@@ -38,8 +38,8 @@
     ./gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)
     ```
 
-    ``` note::
-       このコマンドは、デプロイされたjarをDockerコンテナの ``/opt/liferay/osgi/modules``にコピーするのと同じです。
+    ```{note}
+    このコマンドは、デプロイされたjarをDockerコンテナの `/opt/liferay/osgi/modules`にコピーするのと同じです。
     ```
 
 4.  Dockerコンテナコンソールでデプロイを確認します。
@@ -52,8 +52,8 @@
 
 <!-- end list -->
 
-``` note::
-   Commerce 2.1以前のバージョンでは、 *Site Administration* → *Commerce* → *Settings* → *Taxes* → *Tax Calculations*に移動して、税エンジンを確認します。
+```{note}
+Commerce 2.1以前のバージョンでは、 *Site Administration* → *Commerce* → *Settings* → *Taxes* → *Tax Calculations*に移動して、税エンジンを確認します。
 ```
 
 ![新しい税エンジン](./implementing-a-new-tax-engine/images/02.png "新しい税エンジン")

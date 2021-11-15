@@ -2,8 +2,8 @@
 
 Liferay DXPのすべてのワークフロー定義は、XML形式で記述されています。 独自のワークフロー定義を作成するためには、実際の承認プロセスを反映した定義が必要です。
 
-``` tip::
-   DXPを使用しているサブスクライバーは、 `グラフィカルデザイナー <../user-guide/workflow-designer/workflow-designer-overview.md>`_ を使用してワークフローを作成できます。 すでにXMLでワークフローを作成している場合は、それをアップロードしてGUIで続行できます。 
+```{tip}
+DXPを使用しているサブスクライバーは、 [グラフィカルデザイナー](../user-guide/workflow-designer/workflow-designer-overview.md) を使用してワークフローを作成できます。 すでにXMLでワークフローを作成している場合は、それをアップロードしてGUIで続行できます。 
 ```
 
 1.  グローバルメニュー（![Global Menu](../../../images/icon-applications-menu.png)）を開きます。 [ワークフロー]で、*[Process Builder]* を選択します。

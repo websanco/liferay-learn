@@ -49,8 +49,8 @@ liferay.workspace.lcp.jenkins.image=liferaycloud/jenkins:2.176.1-3.1.1
 
 この例では、 `image` プロパティの値は、 `4.0.0`で終わる名前を持っており、サービススタックのバージョンが 4.x.x であることを示しています。
 
-``` tip::
-   最新の機能を利用するには、お使いのサービススタックをバージョン ``4.x.x`` にアップグレードすることをお勧めします。 See `Upgrading Your DXP Cloud Stack <./upgrading-your-dxp-cloud-stack.md>`__ for steps on performing the upgrade.
+```{tip}
+最新の機能を利用するには、お使いのサービススタックをバージョン `4.x.x` にアップグレードすることをお勧めします。 See [Upgrading Your DXP Cloud Stack](./upgrading-your-dxp-cloud-stack.md)_ for steps on performing the upgrade.
 ```
 
 ## 追加情報

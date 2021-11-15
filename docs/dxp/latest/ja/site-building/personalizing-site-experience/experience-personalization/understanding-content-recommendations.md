@@ -2,24 +2,24 @@
 
 ユーザーはWebサイトにアクセスすると、コンテンツと対話し、興味に応じてさまざまな行動を示します。 Liferay DXPは、[Liferay Analytics Cloud](https://learn.liferay.com/analytics-cloud/latest/en/index.html)と組み合わせて、この閲覧動作を分析し、ユーザーに関連するコンテンツを表示できます。 これは、ユーザーが購入または消費する可能性が高い特定の製品またはコンテンツを宣伝するのに役立ちます。 たとえば、ユーザーがオンラインストアにアクセスして特定の種類の商品に関心を示した場合、コンテンツリコメンデーションを使用して、類似商品や関連商品のプロモーションをユーザーに表示できます。
 
-``` important::
-    You must `connect Analytics Cloud to your Liferay DXP instance <https://learn.liferay.com/analytics-cloud/latest/en/getting-started/connecting-data-sources/connecting-liferay-dxp-to-analytics-cloud.html>`_ to provide content recommendations to your users.
+```{important}
+You must [connect Analytics Cloud to your Liferay DXP instance](https://learn.liferay.com/analytics-cloud/latest/en/getting-started/connecting-data-sources/connecting-liferay-dxp-to-analytics-cloud.html) to provide content recommendations to your users.
 ```
 
 ## コンテンツリコメンデーションの仕組み
 
 コンテンツリコメンデーションの構成は、2段階のプロセスです。 まず、ユーザーの行動を追跡し、関心のあるトピックを定義します。 この手順では、[Analytics CloudがDXPインスタンスに接続されている](https://learn.liferay.com/analytics-cloud/latest/en/getting-started/connecting-data-sources/connecting-liferay-dxp-to-analytics-cloud.html)必要があります。 Analytics Cloudは、サイトでの以前のユーザーの行動に基づいて、関心のあるトピックを定義およびランク付けし、これらの関心をサイトのユーザーIDに関連付けます。 次に、ユーザーの興味に基づいて、ユーザーに推奨するコンテンツを表示します。 この手順では、[動的コレクション](../../../content-authoring-and-management/collections-and-collection-pages/about-collections-and-collection-pages.md)を作成し、このコレクションをWebサイトに表示する必要があります。 Analytics Cloudは、ユーザーの関心に基づいて一連のキーワードをDXPに送信し、これらのキーワードはコレクション内のフィルターとして機能します。 ユーザーに表示するコンテンツの種類を定義するには、コレクションが必要です。
 
-``` note::
-    For more information on how to work with Interests in Analytics Cloud, see the `Analytics Cloud documentation <https://learn.liferay.com/analytics-cloud/latest/en/individuals-and-segments/interests.html>`_.
+```{note}
+For more information on how to work with Interests in Analytics Cloud, see the [Analytics Cloud documentation](https://learn.liferay.com/analytics-cloud/latest/en/individuals-and-segments/interests.html).
 ```
 
 ![Liferay Analytics Cloudの関心事のビュー](./understanding-content-recommendations/images/01.png)
 
 Analytics Cloudは、タイル、説明、[カテゴリ](../../../content-authoring-and-management/tags-and-categories/defining-categories-and-vocabularies-for-content.md)、[タグ](../../../content-authoring-and-management/tags-and-categories/tagging-content-and-managing-tags.md)などのさまざまなコンテンツ要素に基づいて関心事項を作成します。 コンテンツリコメンデーションを生成するために、コンテンツにカテゴリとタグを追加する必要は厳密にはありません。 ただし、コンテンツを分類してタグ付けすると、Analytics Cloudはユーザーの興味を定義するためのより多くの情報を入手でき、より適切な推奨事項を提供できます。 また、 [カテゴリやタグを使用](../../../content-authoring-and-management/tags-and-categories/organizing-content-with-categories-and-tags.md)することで、おすすめしたいコンテンツを詳細に制御することができます。
 
-``` note::
-    Analytics Cloud currently only considers titles and descriptions in English for creating users' interests.
+```{note}
+Analytics Cloud currently only considers titles and descriptions in English for creating users' interests.
 ```
 
 ## コンテンツのリコメンデーションの設定
@@ -34,8 +34,8 @@ Analytics Cloudは、タイル、説明、[カテゴリ](../../../content-author
 
 <!-- end list -->
 
-``` note::
-    Collections are named Content Sets in Liferay DXP 7.2.
+```{note}
+Collections are named Content Sets in Liferay DXP 7.2.
 ```
 
 

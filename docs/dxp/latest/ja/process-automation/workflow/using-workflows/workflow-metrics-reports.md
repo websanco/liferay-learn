@@ -14,8 +14,8 @@
 
 [Performance]ビューには、ワークフローでの処理が完了した項目のメトリクスが表示されます。
 
-``` note::
-   ** Elasticsearchが必要です：**ワークフロー統計情報を使用するには、Elasticsearchを使用してLiferay DXPデータにインデックスを付ける必要があります。 Elasticsearch のインストールについては、`こちら <../../../using-search/installing-and-upgrading-a-search-engine/introduction-to-installing-a-search-engine.md>`_ を参照してください。
+```{note}
+** Elasticsearchが必要です：**ワークフロー統計情報を使用するには、Elasticsearchを使用してLiferay DXPデータにインデックスを付ける必要があります。 Elasticsearch のインストールについては、[こちら](../../../using-search/installing-and-upgrading-a-search-engine/introduction-to-installing-a-search-engine.md) を参照してください。
 ```
 
 ## ダッシュボードについて

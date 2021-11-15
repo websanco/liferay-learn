@@ -13,8 +13,8 @@
 | 可変  | ブラウザウィンドウのサイズが変更されると、コンテナの幅が変わります。左右のマージンは設定できます（以下を参照）。 |
 | 固定幅 | 左右のマージンは固定サイズです。                                         |
 
-``` tip::
-   スタイルの多くはCSSクラスに対応しています。 CSSの知識がある方は、以下の多くのフィールドに見覚えがあるでしょう。
+```{tip}
+スタイルの多くはCSSクラスに対応しています。 CSSの知識がある方は、以下の多くのフィールドに見覚えがあるでしょう。
 ```
 
 次のスタイルの多くにはトークンが定義されています。詳細は、[Creating a Style Book](../../site-appearance/using-a-style-book-to-standardize-site-appearance.md)および[Style Book Tokens](../../site-appearance/developer-guide/style-book-token-definitions.md)を参照してください。

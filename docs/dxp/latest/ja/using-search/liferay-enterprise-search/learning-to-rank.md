@@ -72,8 +72,8 @@ Learning to Rankを使用して、Elasticsearchに送信されたLiferayクエ�
 
 始める前に、Liferayと通信するリモート[Elasticsearch](../installing-and-upgrading-a-search-engine/elasticsearch.html)クラスターが必要です。 詳細については、[検索エンジンの互換性マトリックス](https://help.liferay.com/hc/en-us/articles/360016511651)を参照してください。
 
-``` tip::
-   Use `Suggestions <../search-pages-and-widgets/search-results/enabling-search-suggestions.md>`__ to discover the most common queries (this can be one way to decide which queries to create Learning to Rank models for).
+```{tip}
+Use [Suggestions](../search-pages-and-widgets/search-results/enabling-search-suggestions.md)_ to discover the most common queries (this can be one way to decide which queries to create Learning to Rank models for).
 ```
 
 ## ステップ1：ElasticsearchにLearning to Rankプラグインをインストールする
@@ -171,8 +171,8 @@ Learning to Rankプラグインのインストールについては、[Elasticse
 
 Liferay自体で行うことはあまりないため、この一連の指示は非常に高レベルです。 必要なものについての詳細は、[Learning to Rankプラグインのドキュメント](https://elasticsearch-learning-to-rank.readthedocs.io/en/latest/index.html)を参照してください。
 
-``` tip::
-   Keep reworking those judgment lists!
+```{tip}
+Keep reworking those judgment lists!
 ```
 
 ## ステップ4：Learning to Rankを有効にする

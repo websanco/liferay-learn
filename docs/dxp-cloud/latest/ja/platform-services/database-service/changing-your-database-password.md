@@ -2,8 +2,8 @@
 
 [`データベース` サービス](./database-service.md) の MySQL パスワードを変更すると、データベースに接続しなければならない他のサービスにも影響します。
 
-``` warning::
-   Updating your database password requires a period of downtime for you to restore a backup to your database service, and then restart all of your services. Plan ahead to make time for this before rotating your database password.
+```{warning}
+Updating your database password requires a period of downtime for you to restore a backup to your database service, and then restart all of your services. Plan ahead to make time for this before rotating your database password.
 ```
 
 ## バックアップの作成
@@ -48,8 +48,8 @@
 
 7.  *シークレットの公開*をクリックします。
 
-    ``` note::
-       The services attempt to restart when you click `Publish secret`. However, the database service can only update its password upon image creation, so the service must be deleted and redeployed to update it.
+    ```{note}
+    The services attempt to restart when you click `Publish secret`. However, the database service can only update its password upon image creation, so the service must be deleted and redeployed to update it.
     ```
 
 8.  お使いの環境の *サービス* のページに戻ります。

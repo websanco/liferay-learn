@@ -12,13 +12,13 @@ Analytics Cloudは、SalesforceのデータとLiferay DXPなどのデータを�
 
 3.  *権限* タブで、Salesforce インスタンスの名前と URL を入力します。 *CLIENT CREDENTIALS* セクションで、Salesforce で OAuth 接続されているアプリのクライアント ID とクライアントシークレットを入力します。
 
-    ``` note::
-       the Salesforce instance’s administrator must create this connected app with the following settings:
+    ```{note}
+    the Salesforce instance’s administrator must create this connected app with the following settings:
 
-       * Callback URL: https://analytics.liferay.com/oauth/receive
-       * OAuth Scopes: - Access your basic information (id, profile, email address, phone) - Access and manage your data (api) - Perform requests on your behalf at any time (refresh_token, offline_access)
+    * Callback URL: https://analytics.liferay.com/oauth/receive
+    * OAuth Scopes: - Access your basic information (id, profile, email address, phone) - Access and manage your data (api) - Perform requests on your behalf at any time (refresh_token, offline_access)
 
-       For instructions on creating an OAuth connected app in Salesforce and locating its client ID and client secret, see the `Salesforce documentation <https://help.salesforce.com/articleView?id=connected_app_overview.htm&type=5>`_.
+    For instructions on creating an OAuth connected app in Salesforce and locating its client ID and client secret, see the [Salesforce documentation](https://help.salesforce.com/articleView?id=connected_app_overview.htm&type=5).
     ```
 
 4.  *Authorize & Save*をクリックします。 これにより、Salesforceからリード、連絡先、アカウントのデータのインポートが開始されます。 このデータは、以下のようにAnalytics Cloudのデータと統合されています。

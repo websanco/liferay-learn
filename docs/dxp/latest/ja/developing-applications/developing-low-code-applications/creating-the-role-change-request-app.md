@@ -90,8 +90,8 @@
 
 タスクをユーザーに割り当てるには、*[割り当て先]* メニュー項目を使用します。 その後、*[編集する]* メニューオプションを選択して、適切なフォームにアクセスできます。
 
-``` note::
-   `マイワークフロータスク<../../process-automation/workflow/user-guide/reviewing-assets.md#assigning-the-review-task>`__アプリを使用してワークフロー対応アプリのステップを管理することはできません。
+```{note}
+[マイワークフロータスク](../../process-automation/workflow/user-guide/reviewing-assets.md#assigning-the-review-task)_アプリを使用してワークフロー対応アプリのステップを管理することはできません。
 ```
 
 ### ロール変更リクエストアプリをさらに進化させる

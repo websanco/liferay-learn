@@ -2,8 +2,8 @@
 
 Liferayの最新バージョンは、Dockerイメージとして入手できます。 以下の手順に従って、Liferay DXPの最新リリースをダウンロードして起動し、ツアーを開始してください。
 
-``` important::
-    Dockerをお持ちではありませんか？ まずは `Linux <https://docs.docker.com/install/linux/docker-ce/ubuntu/>`_ | `Windows <https://docs.docker.com/docker-for-windows/install/>`_ | `OSX <https://docs.docker.com/docker-for-mac/install/>`_ に移動してください。
+```{important}
+Dockerをお持ちではありませんか？ まずは [Linux](https://docs.docker.com/install/linux/docker-ce/ubuntu/) | [Windows](https://docs.docker.com/docker-for-windows/install/) | [OSX](https://docs.docker.com/docker-for-mac/install/) に移動してください。
 ```
 
 ## Liferayを使ってみる
@@ -22,8 +22,8 @@ Liferay Portal CEは、説得力のある柔軟なWebエクスペリエンスを
     docker run -it -p 8080:8080 liferay/portal:7.3.1-ga2
     ```
 
-    ``` tip::
-       Wait until you see ``org.apache.catalina.startup.Catalina.start Server startup in [x] milliseconds`` to indicate startup completion.
+    ```{tip}
+    Wait until you see `org.apache.catalina.startup.Catalina.start Server startup in [x] milliseconds` to indicate startup completion.
     ```
 
 3.  ブラウザで`https://localhost:8080`を開きます。

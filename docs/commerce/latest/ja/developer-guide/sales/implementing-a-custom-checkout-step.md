@@ -38,8 +38,8 @@
     ./gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)
     ```
 
-    ``` note::
-       このコマンドは、デプロイされたjarをDockerコンテナの ``/opt/liferay/osgi/modules``にコピーするのと同じです。
+    ```{note}
+    このコマンドは、デプロイされたjarをDockerコンテナの `/opt/liferay/osgi/modules`にコピーするのと同じです。
     ```
 
 4.  Dockerコンテナコンソールでデプロイを確認します。
@@ -60,8 +60,8 @@
 
 このセクションでは、デプロイした例について確認します。 最初に、OSGi登録用のクラスに注釈を付けます。 次に、 `CommerceCheckoutStep`インターフェイスを確認します。 最後に、`CommerceCheckoutStep`の実装を完了します。
 
-``` note::
-   `` CommerceCheckoutStep``の実装を簡略化するために、基本機能の `` BaseCommerceCheckoutStep``を拡張します。
+```{note}
+` CommerceCheckoutStep`の実装を簡略化するために、基本機能の ` BaseCommerceCheckoutStep`を拡張します。
 ```
 
 ### OSGi登録用のクラスに注釈を付ける

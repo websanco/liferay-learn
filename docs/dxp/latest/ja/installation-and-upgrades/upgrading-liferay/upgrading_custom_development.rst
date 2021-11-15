@@ -1,7 +1,7 @@
 カスタム開発のアップグレード
 ============================
 
-.. note::
+..note::
    この部分は現在作成中です。
 
 7.3へのカスタムコードのアップデートは、7.2へのアップデートと同じ方法で行われます。 Liferay Upgrade Planner <https://help.liferay.com/hc/en-us/articles/360029147451-Liferay-Upgrade-Planner>`__ は、カスタム開発をアップグレードする際に推奨される方法です。 7.3 Breaking Changes <../../liferay-internals/reference/7-3-breaking-changes.md>`__の影響を受けるコードを特定し、コードを多くの変更に自動的に適応させることを提案します。

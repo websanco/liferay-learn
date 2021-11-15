@@ -36,8 +36,8 @@ Analytics CloudをLiferay DXPに接続し、サイトのコンテンツを同期
     
     
 
-    ``` note::
-        The Content Recommendation option is available when you connect the DXP instance to Analytics Cloud and synchronize the content.
+    ```{note}
+    The Content Recommendation option is available when you connect the DXP instance to Analytics Cloud and synchronize the content.
     ```
 
 
@@ -59,8 +59,8 @@ Analytics CloudをLiferay DXPに接続し、サイトのコンテンツを同期
 
 
 
-``` note::
-    Collections are named Content Sets in Liferay DXP 7.2.
+```{note}
+Collections are named Content Sets in Liferay DXP 7.2.
 ```
 
 

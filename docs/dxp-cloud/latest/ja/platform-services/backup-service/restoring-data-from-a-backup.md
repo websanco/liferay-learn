@@ -6,8 +6,8 @@
 
 バックアップページの詳細は、 [バックアップサービス](./backup-service-overview.md) および [バックアップのダウンロードとアップロード](./downloading-and-uploading-backups.md) を参照してください。
 
-``` important::
-   バックアップ」のページは、プロダクション（``prd``）環境でのみ利用可能です。 prod環境のAdminロールを持つユーザーのみが、DXP Cloudコンソールを介して環境を手動でリストアできます。
+```{important}
+バックアップ」のページは、プロダクション（`prd`）環境でのみ利用可能です。 prod環境のAdminロールを持つユーザーのみが、DXP Cloudコンソールを介して環境を手動でリストアできます。
 ```
 
 ## バックアップから環境を復元するページ
@@ -28,8 +28,8 @@
 
     ![図2：復元したい環境を選択する。](./restoring-data-from-a-backup/images/02.png)
 
-    ``` note::
-       本番環境の管理者は、自分がアクセスできる環境のみを復元できます。
+    ```{note}
+    本番環境の管理者は、自分がアクセスできる環境のみを復元できます。
     ```
 
 6.  下に表示される *のチェックボックス* をすべてクリックします。 復元を開始するボタンを有効にするには、これらのボックスをチェックする必要があります。
@@ -46,8 +46,8 @@
 
 また、カスタム SQL スクリプトを使用して、通常のデータ復元でデータベースの追加更新を行うこともできます。 この方法では、別々に管理しているデータベースのバックアップにスクリプトを適用できるため、機密データのサニタイズに最適です。
 
-``` note::
-   この機能を使用するには、バックアップサービスのバージョン3.0.7以降が必要です。
+```{note}
+この機能を使用するには、バックアップサービスのバージョン3.0.7以降が必要です。
 ```
 
 ### SQLスクリプトの準備
@@ -61,8 +61,8 @@ SQLスクリプトでサポートされているフォーマットは以下の�
 
 SQLスクリプトを適切な、環境固有の `backup/configs/{ENV}/scripts/` フォルダに入れます。
 
-``` note::
-   バージョン3.x.xのサービスを使用している場合、SQLスクリプトは適切な ``lcp/backup/script/{ENV}/`` フォルダに置かれます。 See `Understanding Service Stack Versions <../../reference/understanding-service-stack-versions.md>`__ for more information on checking the version.
+```{note}
+バージョン3.x.xのサービスを使用している場合、SQLスクリプトは適切な `lcp/backup/script/{ENV}/` フォルダに置かれます。 See [Understanding Service Stack Versions](../../reference/understanding-service-stack-versions.md)_ for more information on checking the version.
 ```
 
 ### データリストアの実行

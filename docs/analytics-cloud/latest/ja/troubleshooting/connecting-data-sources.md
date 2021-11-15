@@ -11,12 +11,12 @@
 -   `https://osbasahbackend-{weDeployKey}.lfr.cloud`
 -   `https://analytics-js-cdn.liferay.com`
 
-``` note::
-   Please contact Liferay Analytics Cloud Support at help.liferay.com to obtain your ``{weDeployKey}`` value.
+```{note}
+Please contact Liferay Analytics Cloud Support at help.liferay.com to obtain your `{weDeployKey}` value.
 ```
 
-``` important::
-   企業のイントラネットの利用状況を分析するなど、いくつかのユースケースでは、訪問者のブラウザもファイアウォールの背後にあります。 このシナリオでは、企業のオフィスネットワークが上記のURLのアウトバウンドアクセスも許可していることを確認する必要があります。
+```{important}
+企業のイントラネットの利用状況を分析するなど、いくつかのユースケースでは、訪問者のブラウザもファイアウォールの背後にあります。 このシナリオでは、企業のオフィスネットワークが上記のURLのアウトバウンドアクセスも許可していることを確認する必要があります。
 ```
 
 ## アナリティクスクラウドへの接続を検証する

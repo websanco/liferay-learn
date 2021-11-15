@@ -21,8 +21,8 @@ Liferay DXPの*ステージング*ツールを使用して、*ステージング
 
 ステージングの一部として、*ページバージョニング*機能を有効にできます。 この機能を使用すると、あなたとあなたのチームは、プライベートページとパブリックページの両方のバリエーションを同時に開発して作業することができます。 ページバージョンの完全な履歴を確認し、必要に応じてページを以前のバージョンに戻すことができます。 バリエーションの作成と管理の方法については[Page Versioning](./page-versioning.md)を、各バリエーションの権限を管理する方法については[ステージング権限の管理](./managing-staging-permissions.md)を参照してください。
 
-``` note::
-   Page versioning is only supported for Widget Pages.
+```{note}
+Page versioning is only supported for Widget Pages.
 ```
 
 ### ステージングされたデータとコンテンツタイプ

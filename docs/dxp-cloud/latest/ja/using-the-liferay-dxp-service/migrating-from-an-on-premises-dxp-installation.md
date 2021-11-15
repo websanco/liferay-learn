@@ -21,8 +21,8 @@ DXP Cloudに移行するプロセスの最も重要な部分は、データベ�
 mysqldump -uroot -ppassword --databases --add-drop-database lportal | gzip -c | cat > database.gz
 ```
 
-``` important::
-   バックアップの復元が正しく機能するためには ``databases`` と ``add-drop-database`` オプションが必要です。
+```{important}
+バックアップの復元が正しく機能するためには `databases` と `add-drop-database` オプションが必要です。
 ```
 
 DXP Cloudにインポートされたデータベースダンプは、データベースサービスが使用するためにMySQL形式である必要があります。 必要に応じて、 [DBeaver](http://dbeaver.io) などのツールを使用して、インポートのために他のタイプのデータベースをMySQLに変換できます。
@@ -37,8 +37,8 @@ DXP Cloudにインポートされたデータベースダンプは、データ�
 cd $LIFERAY_HOME/data && tar -czvf volume.tgz document_library
 ```
 
-``` important::
-   現在 `Amazon S3 <https://help.liferay.com/hc/en-us/articles/360028810172-Using-Amazon-Simple-Storage-Service>`_, `CMIS <https://help.liferay.com/hc/en-us/articles/360018176171-Using-the-CMIS-Store>`_, `DBStore <https://help.liferay.com/hc/en-us/articles/360028810192-Using-the-DBStore>`_ のストレージメソッドを使用している場合は、まず `File System Store <https://help.liferay.com/hc/en-us/articles/360028810132-Using-the-Simple-File-System-Store>`_ に移行する必要があります。
+```{important}
+現在 [Amazon S3](https://help.liferay.com/hc/en-us/articles/360028810172-Using-Amazon-Simple-Storage-Service), [CMIS](https://help.liferay.com/hc/en-us/articles/360018176171-Using-the-CMIS-Store), [DBStore](https://help.liferay.com/hc/en-us/articles/360028810192-Using-the-DBStore) のストレージメソッドを使用している場合は、まず [File System Store](https://help.liferay.com/hc/en-us/articles/360028810132-Using-the-Simple-File-System-Store) に移行する必要があります。
 ```
 
 ### バックアップサービスAPIを呼び出す
@@ -60,8 +60,8 @@ curl -X POST \
 
 これらがアップロードされると、バックアップサービスはDXP Cloudバックアップを初期化します。
 
-``` note::
-   バックアップは `prd`` 環境の `Backups` ページに表示されますが、復元するまではどの環境にも適用されません。
+```{note}
+バックアップは `prd` 環境の `Backups` ページに表示されますが、復元するまではどの環境にも適用されません。
 ```
 
 ## Liferay DXP設定のコピー
@@ -110,8 +110,8 @@ Webサーバーの設定は、Nginxを使用して、webserverサービスを通
 
 <!-- end list -->
 
-``` note::
-   選択した環境は、バックアップが展開されている間は利用できなくなります。
+```{note}
+選択した環境は、バックアップが展開されている間は利用できなくなります。
 ```
 
 復元プロセスが完了すると、選択した環境でDXPの移行されたインスタンスが使用可能になります。 この時点で、DXP Cloudへの移行のほとんどは完了しています。

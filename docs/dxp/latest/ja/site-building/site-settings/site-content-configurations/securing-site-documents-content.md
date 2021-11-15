@@ -12,8 +12,8 @@
 
     ![サイトの一般設定を使用して、サイトのドキュメントとメディアを保護できます。](./securing-site-documents-content/images/01.png)
 
-    ``` important::
-      Once enabled, only Administrators and Users with view permission can browse your Site's Documents and Media files in the web server directory index.
+    ```{important}
+    Once enabled, only Administrators and Users with view permission can browse your Site's Documents and Media files in the web server directory index.
     ```
 
 4.  下にスクロールして、*[保存]* をクリックして変更を適用します。

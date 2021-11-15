@@ -38,8 +38,8 @@ A *User Group Site* isn't really a Site: it's a set of pages that gets added to 
 
 これにより、直接変更することなく、ユーザーの個人用サイトを柔軟に構成できます。 ユーザーがユーザーグループに割り当てられると、ユーザーは個人サイトからユーザーグループのサイトページにすぐにアクセスできます。
 
-``` note::
-   Site Templates have an option that propagates changes made to the Site Template. If you use a Site Template with this option enabled, the User Group Sites update automatically when that template changes. If you disable this option but enable it again later, the template's pages are copied to the Users' Sites, overwriting any changes they may have made.
+```{note}
+Site Templates have an option that propagates changes made to the Site Template. If you use a Site Template with this option enabled, the User Group Sites update automatically when that template changes. If you disable this option but enable it again later, the template's pages are copied to the Users' Sites, overwriting any changes they may have made.
 ```
 
 ## ユーザーグループサイトを手動で作成する

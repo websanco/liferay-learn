@@ -38,8 +38,8 @@
     ./gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)
     ```
 
-    ``` note::
-       このコマンドは、デプロイされたjarをDockerコンテナの ``/opt/liferay/osgi/modules``にコピーするのと同じです。
+    ```{note}
+    このコマンドは、デプロイされたjarをDockerコンテナの `/opt/liferay/osgi/modules`にコピーするのと同じです。
     ```
 
 4.  Liferay Dockerコンテナコンソールでデプロイを確認します。
@@ -52,8 +52,8 @@
 
 <!-- end list -->
 
-``` note::
-   Liferay Commerce 2.1以前のバージョンでは、*Control Panel* → *Commerce* → *Products*に移動して商品ページを検索します。
+```{note}
+Liferay Commerce 2.1以前のバージョンでは、*Control Panel* → *Commerce* → *Products*に移動して商品ページを検索します。
 ```
 
 ![新商品タイプ](./adding-a-new-product-type/images/02.png "新商品タイプ")

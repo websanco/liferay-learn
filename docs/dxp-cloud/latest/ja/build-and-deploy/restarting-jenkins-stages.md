@@ -15,8 +15,8 @@ CIサービスでは、Jenkinsのスタッシュを保存するように設定�
 
 デフォルトでは、 `LCP_CI_PRESERVE_STASHES_BUILD_COUNT` の値は `20`に設定されています。一方、 `LCP_CI_ARTIFACT_NUM_TO_KEEP` の値は `1`に設定されています。 ステージの再起動が重要でない場合は、それらの値を `0` に設定して、CIがstashやartifactを保持しないようにすることができます。
 
-``` important::
-   LCP_CI_PRESERVE_STASHES_BUILD_COUNT``変数に設定されているビルド数に関わらず、 ``LCP_CI_ARTIFACT_NUM_TO_KEEP`` 変数で許可されている以上のビルド数でスタッシュを保存することはできません。
+```{important}
+LCP_CI_PRESERVE_STASHES_BUILD_COUNT`変数に設定されているビルド数に関わらず、 `LCP_CI_ARTIFACT_NUM_TO_KEEP` 変数で許可されている以上のビルド数でスタッシュを保存することはできません。
 ```
 
 ## Jenkinsのステージを再起動する方法
@@ -25,8 +25,8 @@ CIサービスでは、Jenkinsのスタッシュを保存するように設定�
 
 1.  プロジェクトのCIサービスのページ（例： `ci-<project>-infra.lfr.cloud`）にアクセスし、 *Open Blue Ocean* プラグインをクリックして、プロジェクトのパイプラインを表示します。
 
-    ``` note::
-       パイプラインのステージは、Jenkinsの標準コンソールで再起動することができますが、Open Blue Oceanプラグインは、パイプラインのステージを表示または管理する際に、より明確で直感的なユーザーエクスペリエンスを提供します。
+    ```{note}
+    パイプラインのステージは、Jenkinsの標準コンソールで再起動することができますが、Open Blue Oceanプラグインは、パイプラインのステージを表示または管理する際に、より明確で直感的なユーザーエクスペリエンスを提供します。
     ```
 
     ![Open Blue Ocean」プラグインをクリックすると、プロジェクトのパイプラインが表示されます。](./restarting-jenkins-stages/images/02.png)

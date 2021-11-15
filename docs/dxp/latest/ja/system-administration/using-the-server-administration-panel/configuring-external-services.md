@@ -20,14 +20,14 @@ Liferay DXPユーザーは、Documents and Mediaライブラリを介して、�
 
 ![[外部サービス]タブからImageMagick、Ghostscript、およびXugglerを有効にします。](./configuring-external-services/images/01.png)
 
-``` note::
-   As of Liferay 7.1, OpenOffice/LibreOffice is configured in OSGi Configuration Admin instead of Server Administration or portal properties. To adjust these settings, go to System Settings and find the OpenOffice Integration entry. Alternatively, deploy a com.liferay.document.library.document.conversion.internal.configuration.OpenOfficeConfiguration.config file with the settings you need.
+```{note}
+As of Liferay 7.1, OpenOffice/LibreOffice is configured in OSGi Configuration Admin instead of Server Administration or portal properties. To adjust these settings, go to System Settings and find the OpenOffice Integration entry. Alternatively, deploy a com.liferay.document.library.document.conversion.internal.configuration.OpenOfficeConfiguration.config file with the settings you need.
 ```
 
 まずサーバーにImageMagickとXugglerをインストールしてから、サーバー管理アプリの[外部サービス]タブを使用して、Liferay DXPでの使用を構成します。 ご使用のオペレーティングシステムに対応するこれらのツールの正しいバージョンを選択してください。 古いバージョンはLiferay DXPで正しく動作しない可能性があるため、最新の安定バージョンをインストールしてください。 ImageMagickは手動でインストールする必要がありますが、コントロールパネルからXugglerをインストールできます。
 
-``` tip:::
-   Xuggler requires glibc version 2.6 or later on Linux.
+```{tip}
+Xuggler requires glibc version 2.6 or later on Linux.
 ```
 
 ### サーバー管理でのImageMagickの構成

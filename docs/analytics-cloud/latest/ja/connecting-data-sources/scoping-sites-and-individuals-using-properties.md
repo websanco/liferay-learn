@@ -24,8 +24,8 @@ Analytics Cloudでサイトのデータを見るためには、サイトをプ�
 
 1.  Liferay DXPインスタンスで *Instance Settings* -&gt; *Analytics Cloud* を表示して、Liferay DXPインスタンスがAnalytics Cloudと同期していることを確認します。 `あなたのDXPインスタンスはAnalytics Cloudに接続されています` というメッセージは、Liferay DXPインスタンスがAnalytics Cloudに正しく接続されていることを表しています。
 
-    ``` important::
-      If you do not see the message ``Your DXP instance is connected to Analytics Cloud.``, please review `Connecting Liferay DXP Sites to Analytics Cloud <./connecting-liferay-dxp-to-analytics-cloud.md>`_.
+    ```{important}
+    If you do not see the message `Your DXP instance is connected to Analytics Cloud.`, please review [Connecting Liferay DXP Sites to Analytics Cloud](./connecting-liferay-dxp-to-analytics-cloud.md).
     ```
 
 2.  Analytics Cloud ワークスペースで、 *Synced Sites*をクリックします。 Analytics Cloudで作成した利用可能なプロパティのリストが表示されます。 追跡したいサイトのために、ここに新しいプロパティを作成します。
@@ -36,8 +36,8 @@ Analytics Cloudでサイトのデータを見るためには、サイトをプ�
 
     ![プロパティと同期するサイトの選択](scoping-sites-and-individuals-using-properties/images/04.png)
 
-    ``` important::
-       You cannot sync a DXP site with multiple properties. If one of your sites is already synced to another property. It will be greyed out here, and not selectable.
+    ```{important}
+    You cannot sync a DXP site with multiple properties. If one of your sites is already synced to another property. It will be greyed out here, and not selectable.
     ```
 
 ## 連絡先をプロパティに同期する
@@ -62,8 +62,8 @@ Liferay DXPからコンタクトデータを同期する についての詳細�
 
 1.  Analytics Cloudのワークスペースで、 *設定* -&gt; *プロパティ*に移動し、パーミッションを管理したいプロパティを選択します。
 
-    ``` note::
-       By default, properties are accessible to all users of a workspace in Analytics Cloud. You can change that by clicking on the *Select Users* radio button.
+    ```{note}
+    By default, properties are accessible to all users of a workspace in Analytics Cloud. You can change that by clicking on the *Select Users* radio button.
     ```
 
 2.  *Add User*をクリックして、プロパティにユーザーを追加します。

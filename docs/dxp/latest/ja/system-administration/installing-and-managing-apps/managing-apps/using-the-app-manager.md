@@ -29,8 +29,8 @@
 
 アプリケーションマネージャは、[ダウンロードしたアプリ](../installing-apps/downloading-apps.md)をローカルマシンからローカルまたはリモートのDXPサーバーにインストールする便利な方法です。
 
-``` important::
-   For installing and uninstalling apps in production-grade environments, install apps `using server startup <../../../installation-and-upgrades/installing-liferay/running-liferay-for-the-first-time.md#startup>`_ instead of using the App Manager.
+```{important}
+For installing and uninstalling apps in production-grade environments, install apps [using server startup](../../../installation-and-upgrades/installing-liferay/running-liferay-for-the-first-time.md#startup) instead of using the App Manager.
 ```
 
 アプリケーションマネージャを使用してアプリをインストールする手順は次のとおりです。
@@ -47,8 +47,8 @@
 
 アプリをアンインストールすると、アプリが非アクティブ化され（アクティブな場合）、アクティブ化できなくなります。
 
-``` note::
-   アプリケーションマネージャのアンインストール、再インストール、および再アクティブ化機能には既知の問題があります（ `LPS-102506 <https://issues.liferay.com/browse/LPS-102506>`_ を参照）。 回避策として、 `ブラックリスト <./blacklisting-apps.md>`_ を使用してインストール済みアプリを無効にしてください。
+```{note}
+アプリケーションマネージャのアンインストール、再インストール、および再アクティブ化機能には既知の問題があります（ [LPS-102506](https://issues.liferay.com/browse/LPS-102506) を参照）。 回避策として、 [ブラックリスト](./blacklisting-apps.md) を使用してインストール済みアプリを無効にしてください。
 ```
 
 アプリケーションマネージャを使用して、アプリケーションのデプロイを検査および管理できます。

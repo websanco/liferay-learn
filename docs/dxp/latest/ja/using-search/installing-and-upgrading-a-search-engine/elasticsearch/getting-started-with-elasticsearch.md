@@ -11,8 +11,8 @@
 
 <!-- end list -->
 
-``` tip::
-   Additional features and intergrations are available with a `Liferay Enterprise Search <../../liferay_enterprise_search.rst>`__ subscription.
+```{tip}
+Additional features and intergrations are available with a [Liferay Enterprise Search](../../liferay_enterprise_search.rst)_ subscription.
 ```
 
 Liferayサーバーがすでに設置されていると仮定すると、残りの手順は次のとおりです。
@@ -29,8 +29,8 @@ Liferay CE/DXPの各バージョンには、特定のElasticsearchのメジャ�
 
 [Search Engine Compatibility Matrix](https://help.liferay.com/hc/en-us/articles/360016511651)には、Liferayの各バージョンでサポートされている最新のElasticsearchコンポーネントのバージョンが表示されています。 ElasticsearchサーバーとElasticsearchへのコネクタは必須コンポーネントです。
 
-``` warning::
-   The Liferay Connector to Elasticsearch that your Liferay installation includes may not be the latest connector. Make sure to use the latest connector for the Elasticsearch version you're using. The connectors are available on `Liferay Marketplace <https://web.liferay.com/marketplace>`_.
+```{warning}
+The Liferay Connector to Elasticsearch that your Liferay installation includes may not be the latest connector. Make sure to use the latest connector for the Elasticsearch version you're using. The connectors are available on [Liferay Marketplace](https://web.liferay.com/marketplace).
 ```
 
 ## Elasticsearchのインストール

@@ -12,8 +12,8 @@
 
     ![Analytics CloudのLiferay DXP構成でサイトを選択する](verifying-ab-test-requirements/images/01.png)
 
-    ``` note::
-       When setting up the connection to Analytics Cloud, you must select the Site containing the content you want to test. Click *Control Panel* → *Configuration* → *Instance Settings* → *Analytics Cloud* → *Analytics Cloud Connection*.
+    ```{note}
+    When setting up the connection to Analytics Cloud, you must select the Site containing the content you want to test. Click *Control Panel* → *Configuration* → *Instance Settings* → *Analytics Cloud* → *Analytics Cloud Connection*.
     ```
 
 *アップデート*権限を確認または設定するには、

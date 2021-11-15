@@ -7,8 +7,8 @@
   - Oracle
   - PostgreSQL
 
-``` note::
-   `Liferay DXP互換性マトリックス <https://web.liferay.com/documents/14/21598941/Liferay+DXP+7.2+Compatibility+Matrix/b6e0f064-db31-49b4-8317-a29d1d76abf7>`_ には、サポートされているデータベースとバージョンがリストされています。
+```{note}
+[Liferay DXP互換性マトリックス](https://web.liferay.com/documents/14/21598941/Liferay+DXP+7.2+Compatibility+Matrix/b6e0f064-db31-49b4-8317-a29d1d76abf7) には、サポートされているデータベースとバージョンがリストされています。
 ``` <!-- TODO Update the matrix link to the 7.3 matrix, when it's published - jhinkey -->Liferay DXPをデータベースに接続するには、次の手順が必要です。
 
   - [データベース設定](#database-configuration)
@@ -23,8 +23,8 @@
   - [データベースユーザーアクセスを設定する](#configure-database-user-access)
   - [クエリ結果の並べ替え順序を設定する（オプション）](#configure-the-query-result-sort-order-optional)
 
-``` important::
-   データベースを変更する前に、必ずデータベースベンダーのドキュメントを参照してください。
+```{important}
+データベースを変更する前に、必ずデータベースベンダーのドキュメントを参照してください。
 ```
 
 ### UTF-8に対応している空のデータベースを作成する
@@ -49,8 +49,8 @@ Liferay DXPがデータを保持するには、データベースユーザーの
 2.  Liferay DXPをインストールして起動し、データベースに自動的にデータが入力されるようにします。
 3.  データベースにLiferay DXPテーブルが挿入されたら、選択、挿入、更新、および削除操作を実行する権限を除き、Liferay DXPデータベースユーザーからすべての権限を削除します。
 
-``` warning::
-   これらの制約でLiferay DXPを実行する場合、いくつかの注意点があります。 多くのプラグインは、デプロイされると新しいテーブルを作成します。 さらに、Liferay DXPをアップグレードするには、データベースアップグレード機能を手動で実行する必要があります。 Liferay DXPデータベースユーザーがデータベース内のテーブルを作成、変更、削除するための適切な権限を持っていない場合は、これらのプラグインのいずれかをデプロイしたり、Liferay DXPのアップグレードを開始する前に、それらの権限をそのユーザーに付与する必要があります。 テーブルが作成されるか、アップグレードが完了すると、次のデプロイまたはアップグレードまでこれらの権限を削除できます。 チームが独自のテーブルを作成するプラグインを作成する場合は、プラグインをデプロイする前に、同様にLiferay DXPデータベースユーザーに一時的な権限を付与する必要があります。
+```{warning}
+これらの制約でLiferay DXPを実行する場合、いくつかの注意点があります。 多くのプラグインは、デプロイされると新しいテーブルを作成します。 さらに、Liferay DXPをアップグレードするには、データベースアップグレード機能を手動で実行する必要があります。 Liferay DXPデータベースユーザーがデータベース内のテーブルを作成、変更、削除するための適切な権限を持っていない場合は、これらのプラグインのいずれかをデプロイしたり、Liferay DXPのアップグレードを開始する前に、それらの権限をそのユーザーに付与する必要があります。 テーブルが作成されるか、アップグレードが完了すると、次のデプロイまたはアップグレードまでこれらの権限を削除できます。 チームが独自のテーブルを作成するプラグインを作成する場合は、プラグインをデプロイする前に、同様にLiferay DXPデータベースユーザーに一時的な権限を付与する必要があります。
 ```
 
 ### クエリ結果の並べ替え順序を設定する（オプション）
@@ -82,6 +82,6 @@ OracleやDB2などの専用データベースに接続している場合は、�
 
 ![セットアップウィザードのデータベースセクションでは、DXPの組み込みデータソースを構成できます。](./database-configurations/images/01.png)
 
-``` note::
-   アプリケーションサーバーで管理されているデータソースを使用している場合。 See the instructions for your application server: `Tomcat <../installing-liferay/installing-liferay-on-an-application-server/installing-on-tomcat.md>`_, `WildFly <../installing-liferay/installing-liferay-on-an-application-server/installing-on-wildfly.md>`_, `JBoss EAP <../installing-liferay/installing-liferay-on-an-application-server/installing-on-jboss-eap.md>`_, `WebLogic <../installing-liferay/installing-liferay-on-an-application-server/installing-liferay-on-weblogic.md>`_, or `WebSphere <../installing-liferay/installing-liferay-on-an-application-server/installing-on-websphere.md>`_.
+```{note}
+アプリケーションサーバーで管理されているデータソースを使用している場合。 See the instructions for your application server: [Tomcat](../installing-liferay/installing-liferay-on-an-application-server/installing-on-tomcat.md), [WildFly](../installing-liferay/installing-liferay-on-an-application-server/installing-on-wildfly.md), [JBoss EAP](../installing-liferay/installing-liferay-on-an-application-server/installing-on-jboss-eap.md), [WebLogic](../installing-liferay/installing-liferay-on-an-application-server/installing-liferay-on-weblogic.md), or [WebSphere](../installing-liferay/installing-liferay-on-an-application-server/installing-on-websphere.md).
 ```

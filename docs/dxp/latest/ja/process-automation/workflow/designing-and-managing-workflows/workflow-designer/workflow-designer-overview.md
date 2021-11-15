@@ -6,8 +6,8 @@ Process Builderのワークフローデザイナーは、ワークフローの�
 
 ![デザイナーのキャンバスにノードをドラッグアンドドロップします。](./workflow-designer-overview/images/01.png)
 
-``` tip::
-   また、[Process Builder]の[ソース]タブからXML定義を書き込んだり、アップロードしたりすることもできます。 `Managing Workflows <.../managing-workflows.md#uploading-a-new-workflow-definition>`_ を参照してください。
+```{tip}
+また、[Process Builder]の[ソース]タブからXML定義を書き込んだり、アップロードしたりすることもできます。 [Managing Workflows](.../managing-workflows.md#uploading-a-new-workflow-definition) を参照してください。
 ```
 
 ワークフローデザイナーは、すべての[ワークフローノード](./workflow-nodes.md)のタイプをサポートしています。

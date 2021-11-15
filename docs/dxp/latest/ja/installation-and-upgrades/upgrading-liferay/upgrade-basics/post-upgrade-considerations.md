@@ -16,16 +16,16 @@
 
 ![コントロールパネルでサーチインデックスのインデックスを再作成できます。](./post-upgrade-considerations/images/02.png)
 
-``` note::
-   古いバージョン（7.1以下）からアップグレードした場合は、検索インデックスを処理するために `Elasticsearchのインストール <../../../using-search/installing-and-upgrading-a-search-engine/introduction-to-installing-a-search-engine.md>`_ を検討してください。
+```{note}
+古いバージョン（7.1以下）からアップグレードした場合は、検索インデックスを処理するために [Elasticsearchのインストール](../../../using-search/installing-and-upgrading-a-search-engine/introduction-to-installing-a-search-engine.md) を検討してください。
 ```
 
 ### データベース設定
 
 データベースをアップグレードする前に、アップグレード用にデータベースを調整している場合があります（[アップグレードのためのデータベース調整](../upgrade-stability-and-performance/database-tuning-for-upgrades.md)を参照）。 アップグレードが完了したので、本番環境データベースの設定を復元します。
 
-``` note::
-   データのアップグレード中にシャード化された環境から移行した場合、仮想インスタンスへの移行を完了するには、構成をさらに調整する必要があります。 詳細は、「 `Upgrade and Update Properties <../other-upgrade-scenarios/upgrading-a-sharded-environment.md#Upgrade-and-Update-Properties>`_ 」のセクションを参照してください。
+```{note}
+データのアップグレード中にシャード化された環境から移行した場合、仮想インスタンスへの移行を完了するには、構成をさらに調整する必要があります。 詳細は、「 [Upgrade and Update Properties](../other-upgrade-scenarios/upgrading-a-sharded-environment.md#Upgrade-and-Update-Properties) 」のセクションを参照してください。
 ```
 
 ## 最新のマーケットプレイスアプリのインストール

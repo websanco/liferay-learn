@@ -61,8 +61,8 @@ WARスタイルのポートレットがLiferayにデプロイされ、WABジェ�
 
 主な違いは、`META-INF/MANIFEST.MF`ファイルの追加です。 WABジェネレータは、OSGi対応のマニフェストファイルを自動的に生成します。 マニフェストファイルの内容に影響を与えるようにしたい場合は、プラグインの`liferay-plugin-package.properties`ファイルにBndディレクティブとOSGiヘッダを直接配置することができます。
 
-``` note::
-   生成されたWABは、手動で追加された`` bnd.bnd``ファイルまたはビルド時プラグイン（例：`` bnd-maven-plugin``）を使用できません。
+```{note}
+生成されたWABは、手動で追加された` bnd.bnd`ファイルまたはビルド時プラグイン（例：` bnd-maven-plugin`）を使用できません。
 ```
 
 ## WARのデプロイ

@@ -18,8 +18,8 @@
 
     ![レビュー](./approving-or-rejecting-orders-in-order-workflows/images/03.png)
 
-    ``` note::
-       または、[割り当て...]をクリックして別のユーザーを選択し、Commerce Orderを確認します。
+    ```{note}
+    または、[割り当て...]をクリックして別のユーザーを選択し、Commerce Orderを確認します。
     ```
 
 4.  コメントを追加し（オプション）、*[Done]* をクリックします。

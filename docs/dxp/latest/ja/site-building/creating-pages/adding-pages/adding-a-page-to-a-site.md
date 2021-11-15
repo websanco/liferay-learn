@@ -14,8 +14,8 @@
 
     ![[Pages]画面では、サイトページ全体を編集できます。](./adding-a-page-to-a-site/images/01.png)
 
-    ``` tip::
-       または、Liferay DXP 7.3以降では、サイト名の横にあるページツリーアイコンをクリックして、ページツリーメニューを開くことができます。 ページツリーメニューを使用すると、検索バーでキーワードによってページをすばやく検索したり、ページを選択してそのページに移動したり、アクションメニューからページを追加したりすることもできます。
+    ```{tip}
+    または、Liferay DXP 7.3以降では、サイト名の横にあるページツリーアイコンをクリックして、ページツリーメニューを開くことができます。 ページツリーメニューを使用すると、検索バーでキーワードによってページをすばやく検索したり、ページを選択してそのページに移動したり、アクションメニューからページを追加したりすることもできます。
     ```
 
 4.  *ブランク* [マスターページテンプレート](../defining-headers-and-footers/master-page-templates.md)をクリックして、[コンテンツページ](../understanding-pages/understanding-pages.md#page-types)をゼロから開始し、[カスタムマスターページテンプレート](../defining-headers-and-footers/creating-a-master-page-template.md)を選択して、テンプレートに基づいてコンテンツページを作成します。または、*その他* の見出しで [別のページタイプ](../understanding-pages/other-page-types.md) を選択するか、[ウィジェットページ](../understanding-pages/understanding-pages.md#widget-pages) や *グローバルテンプレート* メニューにリストされているページテンプレートなどを選択します。
@@ -26,8 +26,8 @@
 
 6.  *[保存]* をクリックしてページを作成します。
 
-    ``` tip::
-       デフォルトでページを作成すると、新しいページが追加されるように設定されているナビゲーションメニューにもそのページが追加されます。 See `Configuring Site Navigation <../../04-site-navigation/README.md>`_ for more information.
+    ```{tip}
+    デフォルトでページを作成すると、新しいページが追加されるように設定されているナビゲーションメニューにもそのページが追加されます。 See [Configuring Site Navigation](../../04-site-navigation/README.md) for more information.
     ```
 
 ## 子ページを追加する

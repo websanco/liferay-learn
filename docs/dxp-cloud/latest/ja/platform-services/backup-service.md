@@ -102,8 +102,8 @@ curl -X POST \
   -F 'volume=@/my-folder/volume.tgz'
 ```
 
-``` note::
-   注：ヘッダー dxpcloud-authorization にユーザートークンを渡すことは、バックアップサービスのバージョン 3.2.0 以降でのみ機能します。 それ以前のバージョンは、少なくとも ``3.2.0`` にアップグレードする必要があります。 以前のバージョンへのリクエストには ``Authorization.Bearer <PROJECT_MASTER_TOKEN>``を使用します。 プロジェクトマスタートークンは、Liferay DXP Cloudコンソールの任意のシェルで ``env | grep LCP_PROJECT_MASTER_TOKEN`` コマンドを実行することで見つけることができます。
+```{note}
+注：ヘッダー dxpcloud-authorization にユーザートークンを渡すことは、バックアップサービスのバージョン 3.2.0 以降でのみ機能します。 それ以前のバージョンは、少なくとも `3.2.0` にアップグレードする必要があります。 以前のバージョンへのリクエストには `Authorization.Bearer <PROJECT_MASTER_TOKEN>`を使用します。 プロジェクトマスタートークンは、Liferay DXP Cloudコンソールの任意のシェルで `env | grep LCP_PROJECT_MASTER_TOKEN` コマンドを実行することで見つけることができます。
 ```
 
 ### データベースAPIのダウンロード

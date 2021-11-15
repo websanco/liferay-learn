@@ -10,8 +10,8 @@ Liferay DXPには、パーソナライズされたエクスペリエンスを理
 
 開始するには、[Creating and Managing a Segment](./segmentation/creating-and-managing-user-segments.md)を参照してください。
 
-``` note::
-   ユーザーセグメントは、ロールの割り当てにも使用できます。 詳細については、 `Assigning Roles to User Segments <../../users-and-permissions/roles-and-permissions/advanced-roles-and-permissions/assigning-roles-to-user-segments.md>`_ を参照してください。
+```{note}
+ユーザーセグメントは、ロールの割り当てにも使用できます。 詳細については、 [Assigning Roles to User Segments](../../users-and-permissions/roles-and-permissions/advanced-roles-and-permissions/assigning-roles-to-user-segments.md) を参照してください。
 ```
 
 ### Liferay Analytics Cloudを使用したユーザーセグメントの動作の追跡

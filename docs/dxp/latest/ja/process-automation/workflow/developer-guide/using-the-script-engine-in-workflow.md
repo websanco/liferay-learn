@@ -132,8 +132,8 @@ Liferayの[ワークフローエンジン](../introduction-to-workflow.md)は、
 <script-language>groovy</script-language>
 ```
 
-``` note::
-   スクリプトの戻り値は、次のタスクまたは状態を決定します。
+```{note}
+スクリプトの戻り値は、次のタスクまたは状態を決定します。
 ```
 
 その他のワークフロースクリプトの例については、[Embedded Workflows](https://help.liferay.com/hc/en-us/articles/360028721732-Introduction-to-Workflow#embedded-workflows)を参照してください。

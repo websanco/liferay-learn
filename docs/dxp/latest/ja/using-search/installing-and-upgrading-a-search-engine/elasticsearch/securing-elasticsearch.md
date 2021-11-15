@@ -2,8 +2,8 @@
 
 Elasticsearchを保護するために最初に行う必要があるのは、[X-Pack Securityを有効にする](#enable-x-pack-security)ことです。 その後、認証と暗号化通信の設定を開始できます。
 
-``` note::
-   **Elasticsearch 6.x:** If you're using Elasticsearch 6, you'll need a Liferay Enterprise Search (LES) subscription and the Liferay Enterprise Search Security application to use Elastic's X-Pack Security. Starting with the Liferay Connector to Elasticsearch 7 (available on `the Customer Downloads portal <https://customer.liferay.com/downloads>`_ and bundled in Liferay 7.3), support for Elastic's X-Pack security is included by default. To integrate with Elastic's X-Pack monitoring, LES is required.
+```{note}
+**Elasticsearch 6.x:** If you're using Elasticsearch 6, you'll need a Liferay Enterprise Search (LES) subscription and the Liferay Enterprise Search Security application to use Elastic's X-Pack Security. Starting with the Liferay Connector to Elasticsearch 7 (available on [the Customer Downloads portal](https://customer.liferay.com/downloads) and bundled in Liferay 7.3), support for Elastic's X-Pack security is included by default. To integrate with Elastic's X-Pack monitoring, LES is required.
 ```
 
 ## X-Pack Securityの有効化
@@ -29,12 +29,12 @@ Elasticsearchサーバーで、[`setup-passwords`コマンド](https://www.elast
 ./bin/elasticsearch-setup-passwords interactive
 ```
 
-``` note::
-  The configurations shown below assume all passwords are set to *liferay*. Use your own passwords for your installation.
+```{note}
+The configurations shown below assume all passwords are set to *liferay*. Use your own passwords for your installation.
 ```
 
-``` note::
-  To update a built-in user's password, use Kibana's UI or the `Change Password API <https://www.elastic.co/guide/en/elasticsearch/reference/7.x/security-api-change-password.html>`_.
+```{note}
+To update a built-in user's password, use Kibana's UI or the [Change Password API](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/security-api-change-password.html).
 ```
 
 ## Elasticsearch通信の暗号化
@@ -81,8 +81,8 @@ Elasticsearchサーバーで、[`setup-passwords`コマンド](https://www.elast
     ./bin/elasticsearch-certutil cert --pem --ca config/certs/elastic-stack-ca.p12 --ca-pass liferay --dns localhost --ip 127.0.0.1 --name elastic-nodes
     ```
 
-    ``` note::
-       On Liferay 7.3 only the following keystore types can be used in the Elasticsearch 7 connector configuration: https://docs.oracle.com/en/java/javase/11/docs/specs/security/standard-names.html#keystore-types
+    ```{note}
+    On Liferay 7.3 only the following keystore types can be used in the Elasticsearch 7 connector configuration: https://docs.oracle.com/en/java/javase/11/docs/specs/security/standard-names.html#keystore-types
     ```
 
 
@@ -95,8 +95,8 @@ Elasticsearchサーバーで、[`setup-passwords`コマンド](https://www.elast
 
     The `elasticsearch-certutil cert` command generates another file called `elastic-nodes.p12` (feel free to name it differently).
 
-    ``` note::
-       The ``certutil`` command defaults to using the *PKCS#12* format for certificate generation, which works with your Elastic Stack 7.x. Kibana 6.x does not work with PKCS#12 certificates, so the ``--pem`` option (generates the certificate in *PEM* format) is important if you're using Liferay 7.2 and Kibana 6.x with *Liferay Enterprise Search Monitoring*. The PEM command  for each case generates two ZIP files: ``ca.crt`` and ``ca.key``, ``elastic-nodes.crt`` and ``elastic-nodes.key``. Unzip the archive' contents in the *[Elasticsearch Home]/config/certs* folder.
+    ```{note}
+    The `certutil` command defaults to using the *PKCS#12* format for certificate generation, which works with your Elastic Stack 7.x. Kibana 6.x does not work with PKCS#12 certificates, so the `--pem` option (generates the certificate in *PEM* format) is important if you're using Liferay 7.2 and Kibana 6.x with *Liferay Enterprise Search Monitoring*. The PEM command  for each case generates two ZIP files: `ca.crt` and `ca.key`, `elastic-nodes.crt` and `elastic-nodes.key`. Unzip the archive' contents in the *[Elasticsearch Home]/config/certs* folder.
     ```
 
 4.  `elastic-nodes.p12`を`[Elasticsearch Home]/config/certs`フォルダに移動します。
@@ -210,8 +210,8 @@ TLSの設定に加えて、`authenticationEnabled`/`requiresAuthentication`を`t
 
 ### Liferay 7.3でElasticsearchへの安全な接続を設定する
 
-``` tip::
-   The `Installing Elasticsearch <./installing-elasticsearch.md>`__ and `Connecting to Elasticsearch <./connecting-to-elasticsearch.md>`__ articles default to enabling and configuring security, so you can also visit those articles for the 7.3 applicable security configurations.
+```{tip}
+The [Installing Elasticsearch](./installing-elasticsearch.md)_ and [Connecting to Elasticsearch](./connecting-to-elasticsearch.md)_ articles default to enabling and configuring security, so you can also visit those articles for the 7.3 applicable security configurations.
 ```
 
 Liferay 7.3にバンドルされているLiferay Connector to Elasticsearch 7には、X-Pack Securityのサポートが含まれています。 Elasticsearch 7コネクタの設定で使用できるサポートされているキーストアタイプの一覧については、[Java 11セキュリティのドキュメンテーション](https://docs.oracle.com/en/java/javase/11/docs/specs/security/standard-names.html#keystore-types)を参照してください。
@@ -241,8 +241,8 @@ truststoreType="pkcs12"
 
 Elasticsearch 7へのすべてのLiferayコネクタには、X-Pack Securityのサポートが含まれています。
 
-``` note::
-   If you are on Liferay 7.2 and Elasticsearch 6.x and have a Liferay Enterprise Search subscription, `download <https://customer.liferay.com/downloads/-/download/liferay-enterprise-search-for-liferay-dxp-7-2>`__ the `Liferay Enterprise Search Security` application. Install the LPKG file by copying it into the ``[Liferay Home]/deploy`` folder.
+```{note}
+If you are on Liferay 7.2 and Elasticsearch 6.x and have a Liferay Enterprise Search subscription, [download](https://customer.liferay.com/downloads/-/download/liferay-enterprise-search-for-liferay-dxp-7-2)_ the `Liferay Enterprise Search Security` application. Install the LPKG file by copying it into the `[Liferay Home]/deploy` folder.
 ```
 
 以下のようなファイルを作成します。

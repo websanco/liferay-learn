@@ -1,7 +1,7 @@
 # AMDローダー構成のエクスポート方法
 
-``` note::
-  Liferay AMD Loader の仕組みがわからない場合は、まず `Liferay AMD モジュールLoader <./understanding-bundler-loaders.md>`_ を読んでください。
+```{note}
+Liferay AMD Loader の仕組みがわからない場合は、まず [Liferay AMD モジュールLoader](./understanding-bundler-loaders.md) を読んでください。
 ```
 
 [重複除外](./how-portal-publishes-npm-packages.md#package-de-duplication) されている場合、JavaScriptモジュールは、 `/o/js_loader_modules` URLによって返される構成を通じてLiferay AMD Loaderで使用できるようになります。

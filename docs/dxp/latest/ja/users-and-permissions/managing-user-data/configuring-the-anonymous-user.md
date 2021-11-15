@@ -32,8 +32,8 @@
 com.liferay.user.associated.data.web.internal.configuration.AnonymousUserConfiguration.scoped-[uniqueId].config
 ```
 
-``` tip::
-   Using the Web ID or Instance ID (equivalent to the Company ID) for each Virtual Instance as its configuration file's `-subname` can help you differentiate between the files at a glance.
+```{tip}
+Using the Web ID or Instance ID (equivalent to the Company ID) for each Virtual Instance as its configuration file's `-subname` can help you differentiate between the files at a glance.
 ```
 
 次のような内容を指定します。
@@ -45,8 +45,8 @@ userId=36059
 
 [仮想インスタンス](../../system-administration/configuring-liferay/virtual_instances.rst)の`companyId`を見つけるには、[コントロールパネル] → [System] → [仮想インスタンス]に移動します。 表に表示されているインスタンスIDが、設定ファイルで使用する `companyId` です。
 
-``` note::
-   `Why is there an extra field in the configuration file?`
+```{note}
+`Why is there an extra field in the configuration file?`
 
-   When configuring the Anonymous User by configuration file, you must provide the Company ID of the instance. In Instance Settings the configuration is already associated to the instance where it's being configured, but the configuration file is deployed at the system scope, so it must contain the ID of the instance where it applies.
+When configuring the Anonymous User by configuration file, you must provide the Company ID of the instance. In Instance Settings the configuration is already associated to the instance where it's being configured, but the configuration file is deployed at the system scope, so it must contain the ID of the instance where it applies.
 ```

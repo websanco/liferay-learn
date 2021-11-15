@@ -68,8 +68,8 @@
 
 
 
-``` important::
-   Staging functionality is in `maintenance mode <../../installation-and-upgrades/upgrading-liferay-dxp/reference/features-in-maintenance-mode.md>`_ as of 7.3 GA1+.
+```{important}
+Staging functionality is in [maintenance mode](../../installation-and-upgrades/upgrading-liferay-dxp/reference/features-in-maintenance-mode.md) as of 7.3 GA1+.
 ```
 
 

@@ -2,8 +2,8 @@
 
 コードエディタでテンプレートを編集する方が簡単な場合があります。 [ページテンプレートを作成](./creating-a-page-template.md)したら、それを[エクスポート](../../building-sites/importing-exporting-pages-and-content.md)し、選択したエディターでローカルで編集してから、テンプレートをLiferayにインポートして戻すことができます。 テンプレートは、システム上の任意のサイトにインポートできます。
 
-``` tip::
-   ページテンプレートは、より大きなコレクションフレームワークの一部です。 詳細は、 `About Collections and Collection Pages <../../../content-authoring-and-management/collections-and-collection-pages/about-collections-and-collection-pages.md>`_ を参照してください。
+```{tip}
+ページテンプレートは、より大きなコレクションフレームワークの一部です。 詳細は、 [About Collections and Collection Pages](../../../content-authoring-and-management/collections-and-collection-pages/about-collections-and-collection-pages.md) を参照してください。
 ```
 
 エクスポート/インポートフレームワークのより一般的な情報については、 [Importing/ Exporting Sites and Content](../../building-sites/importing-exporting-pages-and-content.md)を参照してください。
@@ -30,8 +30,8 @@
 
 ページテンプレートは、ZIPファイルとしてローカルマシンにダウンロードされます。
 
-``` tip::
-   一度に複数のコンテンツテンプレートをエクスポートできます。 ただし、同じZIPファイルにコンテンツページを含むウィジェットテンプレートを含めることはできません。
+```{tip}
+一度に複数のコンテンツテンプレートをエクスポートできます。 ただし、同じZIPファイルにコンテンツページを含むウィジェットテンプレートを含めることはできません。
 ```
 
 ページテンプレートの最後に公開されたバージョンが常にエクスポートされます。 ページテンプレートが公開されたことがない場合、エクスポートすることはできません。

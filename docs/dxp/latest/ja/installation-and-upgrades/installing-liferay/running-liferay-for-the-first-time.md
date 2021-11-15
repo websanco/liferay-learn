@@ -10,8 +10,8 @@
     ./liferay-dxp-version/tomcat-version/bin/startup.sh
     ```
 
-    ``` note::
-       By default, DXP writes log files to ``[Liferay Home]/logs``
+    ```{note}
+    By default, DXP writes log files to `[Liferay Home]/logs`
     ```
 
 
@@ -25,8 +25,8 @@
 
 4.  *[Database]* セクションで、*[Change]* をクリックしてデータベースフォームを表示します。
 
-    ``` warning::
-       本番環境グレードのLiferay DXPインスタンスではHSQLを使用しないでください。
+    ```{warning}
+    本番環境グレードのLiferay DXPインスタンスではHSQLを使用しないでください。
     ```
 
     ![セットアップウィザードのデータベースフォームでは、DXP用に作成したデータベースを指定できます。](./running-liferay-for-the-first-time/images/02.png)

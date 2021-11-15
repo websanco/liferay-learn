@@ -39,8 +39,8 @@ DXP Cloud Stackバージョン4にアップグレードすると、すべての�
 | ホットフィックスとパッチツール            | lcp/liferay/hotfix/{ENV}/  | liferay/configs/{ENV}/patching/     |
 | ライセンス                      | lcp/liferay/license/{ENV}/ | lcp/configs/{ENV}/deploy/           |
 
-``` note::
-   configs/{ENV}/`` ディレクトリ内のファイルは、オーバーライドとして DXP Cloud の Liferay コンテナ内の ``LIFERAY_HOME`` ディレクトリにコピーされます。
+```{note}
+configs/{ENV}/` ディレクトリ内のファイルは、オーバーライドとして DXP Cloud の Liferay コンテナ内の `LIFERAY_HOME` ディレクトリにコピーされます。
 ```
 
 ### カスタムスクリプトの実行
@@ -57,8 +57,8 @@ DXP Cloud Stackバージョン4にアップグレードすると、すべての�
 | カスタムシェルスクリプト                  | lcp/search/script/{ENV}/  | search/configs/{ENV}/scripts/ |
 | Elasticsearchライセンス（.json）ファイル | lcp/search/license/{ENV}/ | search/configs/{ENV}/license/ |
 
-``` note::
-   検索コンテナ内の ``search/configs/{ENV}/`` にあるファイルは、DXP Cloud の検索コンテナ内の ``usr/shared/elasticsearch/`` にオーバーライドとしてコピーされます。 例えば、 ``search/configs/{ENV}/config/``` の設定、例えば ``elasticsearch.yml`` のような設定は ``usr/shared/elasticsearch/config/`` にコピーされ、既存のデフォルト値を上書きします。
+```{note}
+検索コンテナ内の `search/configs/{ENV}/` にあるファイルは、DXP Cloud の検索コンテナ内の `usr/shared/elasticsearch/` にオーバーライドとしてコピーされます。 例えば、 `search/configs/{ENV}/config/`` の設定、例えば `elasticsearch.yml` のような設定は `usr/shared/elasticsearch/config/` にコピーされ、既存のデフォルト値を上書きします。
 ```
 
 ### Elasticsearchプラグイン
@@ -88,18 +88,18 @@ bin/elasticsearch-plugin list
 | カスタムスクリプト | lcp/webserver/script/{ENV}/ | webserver/configs/{ENV}/scripts/ |
 | 静的コンテンツ   | lcp/webserver/deploy/{ENV}/ | webserver/configs/{ENV}/public/  |
 
-``` note::
-   webserver/configs/{ENV}/``内のファイルは、DXP Cloudのウェブサーバコンテナ内の ``/etc/nginx/``にオーバーライドとしてコピーされます。 ``/webserver/configs/{ENV}/public/``` のファイルはオーバーライドとして ``var/www/html/`` にコピーされます。
+```{note}
+webserver/configs/{ENV}/`内のファイルは、DXP Cloudのウェブサーバコンテナ内の `/etc/nginx/`にオーバーライドとしてコピーされます。 `/webserver/configs/{ENV}/public/`` のファイルはオーバーライドとして `var/www/html/` にコピーされます。
 ```
 
 ### Webサーバー設定の上書き
 
 `webserver/configs/{ENV}/conf.d/`に `liferay.conf` ファイルを追加することで、 `webserver` サービスのルートの場所をカスタマイズすることができます。 これにより、 `webserver` サービスイメージのコンテナで利用可能なデフォルトの `liferay.conf` が上書きされます。 ルートの場所をカスタマイズするときに、DXP Cloud Consoleのシェルにアクセスして、デフォルトとして `liferay.conf` ファイルを参照として表示します。
 
-``` warning::
-   ルートの場所を ``liferay.conf`` 以外のファイル名でカスタマイズしないでください。これにより、デフォルトの``liferay.conf``を上書きします。 そうでない場合は、両方のファイルがコンテナ内に一緒に存在していて、2つのルート位置が見つかってエラーになることがあります。
+```{warning}
+ルートの場所を `liferay.conf` 以外のファイル名でカスタマイズしないでください。これにより、デフォルトの`liferay.conf`を上書きします。 そうでない場合は、両方のファイルがコンテナ内に一緒に存在していて、2つのルート位置が見つかってエラーになることがあります。
 
-   他のファイル名は、代わりにウェブサーバの追加の場所を定義するために使用されます。
+他のファイル名は、代わりにウェブサーバの追加の場所を定義するために使用されます。
 ```
 
 また、 `webserver/configs/{ENV}/`に `nginx.conf` ファイルを追加することで、デフォルトの NGINX 設定を上書きすることもできます。 これを使用して、Webサーバーの動作をさらに定義できます。 詳細は、 [公式のNGINXドキュメント](https://docs.nginx.com/nginx/admin-guide/basic-functionality/managing-configuration-files/) を参照してください。

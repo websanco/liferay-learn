@@ -6,8 +6,8 @@
 
 構成ファイルは、 [Apache Felix構成管理フレームワーク](http://felix.apache.org/documentation/subprojects/apache-felix-config-admin.html)によって定義された `.config` プロパティ値の形式を使用します。
 
-``` note::
-   The ``.cfg`` file format is common in OSGi environments, and it's a supported format, but ``.config`` files are preferred because you can both specify a property value's type, and allow multi-valued properties. For this reason, ``.config`` files are used, recommended, and documented as a best practice.
+```{note}
+The `.cfg` file format is common in OSGi environments, and it's a supported format, but `.config` files are preferred because you can both specify a property value's type, and allow multi-valued properties. For this reason, `.config` files are used, recommended, and documented as a best practice.
 ```
 
 ## 構成ファイルの作成
@@ -98,6 +98,6 @@ addDefaultStructures="true"
 
 クラスター環境では、各ノードの各エントリーに同じ構成値が必要です。 たとえば、すべてのノードで同じブログ構成設定を使用する必要があります。 これを行うには、 `.config` ファイルをデプロイします。 透過性と保守性のために、 `.config` ファイルをクラスター内のすべてのノードにデプロイします。 ただし、構成ファイルが単一のノードにのみデプロイされている場合でも、内部システムはクラスター内のすべてのノードに変更を適用します。
 
-``` important::
-   If storing your Liferay DXP configuration (e.g., Liferay Home) in a source control system, make sure to include the OSGi configuration files (.config files).
+```{important}
+If storing your Liferay DXP configuration (e.g., Liferay Home) in a source control system, make sure to include the OSGi configuration files (.config files).
 ```

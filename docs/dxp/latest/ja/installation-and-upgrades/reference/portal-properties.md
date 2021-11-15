@@ -6,8 +6,8 @@
 
 慣例により、` portal-ext.properties ` ` [Liferay Home]（./ liferay-home.md）に作成する必要があります`フォルダまたは`[USER_HOME]`デフォルトのプロパティ値を上書きするフォルダ。 新規または変更されたプロパティファイルを適用するには、DXPを再起動する必要があります。
 
-``` warning::
-   ``portal-impl.jar/portal.properties`` ファイルを直接変更しないでください。変更したいプロパティを上書きするために別のファイルを作成してください。 `` portal-ext.properties``ファイルはこの目的のために定義されています。
+```{warning}
+`portal-impl.jar/portal.properties` ファイルを直接変更しないでください。変更したいプロパティを上書きするために別のファイルを作成してください。 ` portal-ext.properties`ファイルはこの目的のために定義されています。
 ```
 
 `portal-ext.properties`ファイルを使用してデフォルトのプロパティをオーバーライドすると、以下の利点があります。
@@ -22,16 +22,16 @@
   - [ポータルプロパティの優先度](#portal-property-priority)
   - [システム設定と構成ファイルの使用](#using-system-settings-and-configuration-files)
 
-``` note::
-   DXP 7.3以降、仮想インスタンスごとのポータルプロパティファイル機能は削除されました。 DXPは、「portal-[companyId].properties」形式のファイルのインスタンスごとのプロパティを会社IDと一致するインスタンスに適用しなくなりました。
+```{note}
+DXP 7.3以降、仮想インスタンスごとのポータルプロパティファイル機能は削除されました。 DXPは、「portal-[companyId].properties」形式のファイルのインスタンスごとのプロパティを会社IDと一致するインスタンスに適用しなくなりました。
 ```
 
 ## ポータルプロパティの使用
 
 `[Liferay Home] /portal-ext.properties`を作成する場合、ベストプラクティスは、関連するセクションを `portal-impl.jar/portal.properties` から `portal-ext.properties` ファイルにコピーし、次に変更することですあなたが望むものへの価値。
 
-``` note::
-   `Setup Wizard <../installing-liferay/running-liferay-dxp-for-the-first-time.md>`_ , DXPは、``[Liferay Home]`` の `portal-setup-wizard.properties` というファイルにこれらのプロパティを設定します。
+```{note}
+[Setup Wizard](../installing-liferay/running-liferay-dxp-for-the-first-time.md) , DXPは、`[Liferay Home]` の `portal-setup-wizard.properties` というファイルにこれらのプロパティを設定します。
 ```
 
 ここにいくつかの設定例があります。
@@ -132,8 +132,8 @@ Liferay Dockerコンテナは、Liferay環境変数を、リストに追加さ�
 
 
 
-``` important::
-   複数のファイルのプロパティをオーバーライドすると、**最後**に定義されたプロパティソースが優先されます。 他のすべては無視されます。
+```{important}
+複数のファイルのプロパティをオーバーライドすると、**最後**に定義されたプロパティソースが優先されます。 他のすべては無視されます。
 ```
 
 
@@ -219,8 +219,8 @@ mail.session.jndi.name=mail/DevMailSession
 
 
 
-``` tip::
-   プロパティファイルを必要なだけ使用すると、DXP構成の管理が簡単になります。
+```{tip}
+プロパティファイルを必要なだけ使用すると、DXP構成の管理が簡単になります。
 ```
 
 

@@ -2,8 +2,8 @@
 
 Liferay DXPにはJava JDK 8 または11が必要であり、特定のJVMオプション設定が必要です。 JDK 11に固有の推奨設定と推奨されるベースラインメモリ設定もあります。 ここでは、これらすべての設定について学習し、Tomcatスクリプトの例で説明します。
 
-``` note::
-   JDKを選択するには、`LiferayDXP互換性マトリックス <https://help.liferay.com/hc/en-us/articles/360049238151>`_ を参照してください。
+```{note}
+JDKを選択するには、[LiferayDXP互換性マトリックス](https://help.liferay.com/hc/en-us/articles/360049238151) を参照してください。
 ```
 
 ## 推奨されるJVM設定

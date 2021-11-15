@@ -17,8 +17,8 @@ Liferay Portalには、ページの作成に使用できるいくつかのレイ
 
 ## フラグメント
 
-``` note::
-   Liferay DXP 7.3以降で利用できます。 このセクションは、以前は[*Sections*]パネルと[*Section Builder*]パネルに分かれていました。
+```{note}
+Liferay DXP 7.3以降で利用できます。 このセクションは、以前は[*Sections*]パネルと[*Section Builder*]パネルに分かれていました。
 ```
 
 ページにフラグメントをドラッグアンドドロップできます。 フラグメントには、[テキスト](./building-content-pages.md#modify-editable-text)、[画像](./building-content-pages.md#modify-editable-images)、[リンク](./building-content-pages.md#modify-editable-links)などの編集可能な要素を含めることができ、カスタムコンテンツで置き換えることができます。 サイト自体ですでに利用可能なコンテンツに[これらの要素をマッピング](./building-content-pages.md#mapping-elements)することもできます。 これらの要素の開発の詳細については、[Fragment Specific Tags](./README.md#using-fragments)を参照してください。
@@ -45,24 +45,24 @@ Liferay Portalには、ページの作成に使用できるいくつかのレイ
 
 ### フッター
 
-``` note::
-   Liferay DXP 7.3以降で利用できます。 これらのフラグメントは、以前は[*Sections*]パネルに含まれていました。
+```{note}
+Liferay DXP 7.3以降で利用できます。 これらのフラグメントは、以前は[*Sections*]パネルに含まれていました。
 ```
 
 *[Footers]* パネルには、ページのフッターとして追加できるフラグメントが含まれています。 Liferay DXP 7.3での使用については、[Master Pages](./README.md#creating-pages)を参照してください。
 
 ### ナビゲーションバー
 
-``` note::
-   Liferay DXP 7.3以降で利用できます。 これらのフラグメントは、以前は[*Sections*]パネルに含まれていました。
+```{note}
+Liferay DXP 7.3以降で利用できます。 これらのフラグメントは、以前は[*Sections*]パネルに含まれていました。
 ```
 
 *[Navigation Bars]* パネルには、ページのヘッダーとして追加できるフラグメントが含まれています。 Liferay DXP 7.3での使用については、[Master Pages](./README.md#creating-pages)を参照してください。
 
 ### コンテンツ表示
 
-``` note::
-   Liferay DXP 7.3以降で利用できます。
+```{note}
+Liferay DXP 7.3以降で利用できます。
 ```
 *[Content Display]* セクションでは、コンテンツ表示フラグメントを追加して、単一の既存のWebコンテンツ、ブログエントリ、またはドキュメントを表示できます。 詳細については、[Using the Content Display Fragment](./README.md#using-fragments)を参照してください。 <!--Including this doc in the Page Fragments section-->
 
@@ -82,8 +82,8 @@ Rather than spend valuable real estate here comparing to how its different from 
 
 ## コンテンツ
 
-``` note::
-   Liferay DXP 7.3以降で利用できます。
+```{note}
+Liferay DXP 7.3以降で利用できます。
 ```
 
 [Contents]セクションには、ページで使用されているWebコンテンツのリストが表示されます。 ウィジェットに表示されるコンテンツやコンテンツフィールドにマップされたコンテンツなどがあります。 *コンテンツ*ボタン（![Contents](../../images/icon-contents.png)）をクリックして、[Contents]パネルを開きます。 このセクションから、さまざまなアクションを実行して、Webコンテンツを編集および管理できます。 詳細については、[Managing Web Content on Content Pages](./managing-web-content-on-content-pages.md)を参照してください。

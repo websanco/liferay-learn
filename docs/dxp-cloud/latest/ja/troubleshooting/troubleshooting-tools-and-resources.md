@@ -15,8 +15,8 @@
 
 これらのツールやリソースを使用することで、プロジェクト活動の追跡、サービスの設定、技術的な問題の解決などが可能になります。
 
-``` note::
-   詳細については、Liferayとの法的契約に従うものとします。 法的な契約やサービスに関する情報は、`Liferay Legal <https://www.liferay.com/legal>`_ページをご覧ください。
+```{note}
+詳細については、Liferayとの法的契約に従うものとします。 法的な契約やサービスに関する情報は、[Liferay Legal](https://www.liferay.com/legal)ページをご覧ください。
 ```
 
 ## アプリケーションメトリクス
@@ -136,8 +136,8 @@ DXP Cloud [Documentation](https://learn.liferay.com/dxp-cloud-latest/) で回答
 
 また、ユーザーは、DXP Cloudの最新の [ヘルプセンターの更新情報](https://www.liferay.com/web/l/subscribe-to-liferay-dxp-cloud-updates)のメール通知を受け取ることができます。 これらのアップデートには、新しいプラットフォームのリリース、サービスアップデート、セキュリティアラートやパッチなどが含まれます。
 
-``` note::
-   Liferay DXP Cloudの通知は、有効なLiferay Enterprise Subscriptionをお持ちのお客様にのみ配信されます。
+```{note}
+Liferay DXP Cloudの通知は、有効なLiferay Enterprise Subscriptionをお持ちのお客様にのみ配信されます。
 ```
 
 追加のサポートについては、ユーザーはLiferayのグローバルな [サポートセンター](https://help.liferay.com/hc/en-us/articles/360017784212?_ga=2.254167624.1908736764.1562000563-1350017715.1560788053) に電話で問い合わせるか、 [ヘルプセンター](https://help.liferay.com/) のページからチケットを提出することができます。

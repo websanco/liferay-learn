@@ -8,20 +8,20 @@ Liferayにアップロードされたファイルを自動的にスキャンし�
 
 Liferay DXP 7.2 Fix Pack 9+は、別のサーバーで動作する[ClamAV Daemon](https://www.clamav.net/documents/scanning#clamd)（Clamd）と統合します。
 
-``` note::
-   This integration is not yet available on DXP 7.3.
+```{note}
+This integration is not yet available on DXP 7.3.
 ```
 
-``` note::
-   Prior to DXP 7.2 Fix Pack 9+, the ClamAV antivirus scanner ran locally. Now DXP delegates antivirus scanning to a separate server.
+```{note}
+Prior to DXP 7.2 Fix Pack 9+, the ClamAV antivirus scanner ran locally. Now DXP delegates antivirus scanning to a separate server.
 ```
 
 Clamdウイルス対策スキャナーを有効にする方法は次のとおりです。
 
 1.  別のサーバーで、[Clamdを設定・起動します](https://www.clamav.net/documents/scanning#clamd)。
 
-    ``` important::
-       Load your ClamAV database before starting Clamd.
+    ```{important}
+    Load your ClamAV database before starting Clamd.
     ```
 
 2.  次の[ポータルプロパティ](configuring-file-storage.md)または[Docker環境変数](../../installation-and-upgrades/reference/portal-properties.md)を設定して、[ファイルストア](../../installation-and-upgrades/installing-liferay/using-liferay-docker-images/configuring-containers.md)（ドキュメントライブラリ）のウイルス対策を有効にします。
@@ -56,8 +56,8 @@ Clamdウイルス対策スキャナーを有効にする方法は次のとおり
 
 ![これがウイルス検出メッセージです。](./enabling-antivirus-scanning-for-uploaded-files/images/04.png)
 
-``` important::
-   Never save a virus-infected file. Reject the file by canceling the current operation.
+```{important}
+Never save a virus-infected file. Reject the file by canceling the current operation.
 ```
 
 ## 追加情報

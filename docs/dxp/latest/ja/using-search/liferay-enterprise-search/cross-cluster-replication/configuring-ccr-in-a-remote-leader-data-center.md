@@ -89,8 +89,8 @@
     logExceptionsOnly="false"
     ```
 
-    ``` tip::
-       During development and testing, it's useful to set ``logExceptionsOnly="false"`` in the configuration files. 
+    ```{tip}
+    During development and testing, it's useful to set `logExceptionsOnly="false"` in the configuration files. 
     ```
 
 3.  リモート接続を設定します。
@@ -110,8 +110,8 @@
     truststoreType="pkcs12"
     ```
 
-    ``` important::
-       The ``remoteClusterConnectionId`` value in the ``ElasticsearchConfiguration.config`` must match the ``connectionId`` in the ``ElasticsearchConnectionConfiguration-remote.config`` file. 
+    ```{important}
+    The `remoteClusterConnectionId` value in the `ElasticsearchConfiguration.config` must match the `connectionId` in the `ElasticsearchConnectionConfiguration-remote.config` file. 
     ```
 
 
@@ -134,8 +134,8 @@
 
 5.  Liferay DXPサーバーを起動します。
 
-    ``` important::
-       If you're configuring a new DXP installation, make sure to reindex the spell check indexes at Control Panel > Configuration > Search, in the *Index Actions* tab.
+    ```{important}
+    If you're configuring a new DXP installation, make sure to reindex the spell check indexes at Control Panel > Configuration > Search, in the *Index Actions* tab.
     ```
 
 Kibanaがリモート/リーダーのElasticsearchクラスターに接続されている場合は、[Management]→[Index Management]に移動して、使用可能なLiferayインデックスを確認します。

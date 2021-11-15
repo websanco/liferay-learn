@@ -22,8 +22,8 @@
 
     ![[General]セクションには、サイトの基本情報が示されます。](./adding-a-site/images/01.png)
 
-``` tip::
-   新しく作成された*空のサイト*を表示するには、まずそのサイトにページを作成する必要があります。 See `Adding a Page to a Site <../creating-pages/adding-pages/adding-a-page-to-a-site.md>`_ for more information.
+```{tip}
+新しく作成された*空のサイト*を表示するには、まずそのサイトにページを作成する必要があります。 See [Adding a Page to a Site](../creating-pages/adding-pages/adding-a-page-to-a-site.md) for more information.
 ```
 
 製品メニューを開くと、新しいサイトが選択されています。 利用可能なすべてのサイト設定の概要については、[Site Settings](../site-settings/README.rst)を参照してください。

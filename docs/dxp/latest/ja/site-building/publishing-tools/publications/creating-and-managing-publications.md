@@ -8,12 +8,12 @@
 
 このページにアクセスするには、*グローバルメニュー*（![Global Menu](../../../images/icon-applications-menu.png)）を開き、[Applications]タブの*[Publications]* に移動します。
 
-``` tip::
-   Quickly access the Global Menu anywhere in your DXP instance using the following shortcut:
+```{tip}
+Quickly access the Global Menu anywhere in your DXP instance using the following shortcut:
 
-   **Mac OS**: Cmd+Shift+M
+**Mac OS**: Cmd+Shift+M
 
-   **Windows/Linux**: Ctrl+Shift+M
+**Windows/Linux**: Ctrl+Shift+M
 ```
 
 ![グローバルメニューの[Applications]タブにある[Publications]概要ページにアクセスします。](./creating-and-managing-publications/images/01.png)
@@ -35,8 +35,8 @@
 
 2.  新しいパブリケーションの*名前*を入力します。
 
-    ``` tip::
-       Unique publication names aren't required, though using unique names can be helpful for organization.
+    ```{tip}
+    Unique publication names aren't required, though using unique names can be helpful for organization.
     ```
 
 3.  必要に応じて、新しいパブリケーションの*説明*を入力します。
@@ -71,8 +71,8 @@
 
 **削除：** インスタンスからパブリケーションを削除します。 選択すると、選択項目を確認するように求められます。
 
-``` important::
-   Deleting a publication permanently removes all of its changes from your database and cannot be undone. Before deleting a publication, ensure you've saved any data you want to preserve.
+```{important}
+Deleting a publication permanently removes all of its changes from your database and cannot be undone. Before deleting a publication, ensure you've saved any data you want to preserve.
 ```
 
 ## スケジュール設定されたパブリケーションの管理
@@ -91,8 +91,8 @@
 
 *[元に戻す]* をクリックすると、以前に公開された変更をインスタンスに元に戻すパブリケーションを簡単に作成できます。 [元に戻す]パブリケーションの一部として、DXPインスタンスに追加の変更を加えることもできます。 このプロセスの詳細は、[変更を元に戻す](./reverting-changes.md)を参照してください。
 
-``` tip::
-   Its recommended Users enable Publications early on in your development process to achieve a more complete audit of your instance's changes.
+```{tip}
+Its recommended Users enable Publications early on in your development process to achieve a more complete audit of your instance's changes.
 ```
 
 ## 追加情報

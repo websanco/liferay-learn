@@ -43,8 +43,8 @@ Liferay の [setup\_tutorial.sh](https://github.com/liferay/liferay-learn/blob/m
 
 フラグメントツールキットの `yo liferay-fragments` コマンドは、フラグメント プロジェクトを生成するためのインターフェイスを起動します。
 
-``` warning::
-   フラグメントプロジェクトをネストしないでください。 新しいフラグメントプロジェクトは、既存のフラグメントプロジェクトとは別の場所に作成してください。
+```{warning}
+フラグメントプロジェクトをネストしないでください。 新しいフラグメントプロジェクトは、既存のフラグメントプロジェクトとは別の場所に作成してください。
 ```
 
 `liferay-x2y6` プロジェクト フォルダにいる場合は、それを終了します (例: `cd ..`)。
@@ -135,8 +135,8 @@ Liferay の [setup\_tutorial.sh](https://github.com/liferay/liferay-learn/blob/m
 
     ![コレクションが利用可能です。](./using-the-fragments-toolkit/images/01.png)
 
-    ``` note::
-       Liferay DXP 7.1および7.2では、代わりにプロダクトメニューの*サイト* → *サイトビルダー* → *ページ フラグメント*に移動して、*フラグメント*ページを表示します。
+    ```{note}
+    Liferay DXP 7.1および7.2では、代わりにプロダクトメニューの*サイト* → *サイトビルダー* → *ページ フラグメント*に移動して、*フラグメント*ページを表示します。
     ```
 
 4.  フラグメントを選択して、フラグメント エディターで表示します。
@@ -246,12 +246,12 @@ yarn run add-collection
     ? Use new data-lfr editable syntax? Yes
     ```
 
-    ``` note::
-       フラグメントで React の使用を受け入れた場合、ツールキットは Liferay 7.3 以降を使用していると想定し、新しい編集可能な要素の構文を構成します。
+    ```{note}
+    フラグメントで React の使用を受け入れた場合、ツールキットは Liferay 7.3 以降を使用していると想定し、新しい編集可能な要素の構文を構成します。
     ```
 
-    ``` note::
-       Liferay の編集可能なデータ構文の詳細は、`Fragment-Specific Tags <../reference/fragments/fragment-specific-tags-reference.md>`_ を参照してください。
+    ```{note}
+    Liferay の編集可能なデータ構文の詳細は、[Fragment-Specific Tags](../reference/fragments/fragment-specific-tags-reference.md) を参照してください。
     ```
 
 5.  先ほど作成したコレクションを選択します (`My Collection`)。
@@ -265,8 +265,8 @@ yarn run add-collection
        create src/my-collection/my-jumbotron/configuration.json
     ```
 
-    ``` note::
-        ``fragment.json`` はフラグメントの CSS、HTML、JavaScript へのパスを定義します。 これらのファイル名のいずれかを変更した場合は、``fragment.json`` 内のパスを更新してください。
+    ```{note}
+    `fragment.json` はフラグメントの CSS、HTML、JavaScript へのパスを定義します。 これらのファイル名のいずれかを変更した場合は、`fragment.json` 内のパスを更新してください。
     ```
 
 フラグメントの `index.html` は次のとおりです。
@@ -332,14 +332,14 @@ yarn run add-collection
 </div>
 ```
 
-``` note::
-   Liferay 7.2 以下を使用している場合は、 `Fragment-Specific Tags <../reference/fragments/fragment-specific-tags-reference.md>`_ で説明されているように、``data-lfr-editable-[id|type]`` 属性を削除し、``lfr-editable`` 要素でコンテンツ要素をラップしてください。
+```{note}
+Liferay 7.2 以下を使用している場合は、 [Fragment-Specific Tags](../reference/fragments/fragment-specific-tags-reference.md) で説明されているように、`data-lfr-editable-[id|type]` 属性を削除し、`lfr-editable` 要素でコンテンツ要素をラップしてください。
 ```
 
 最初の `div` 要素の `class="component-my-jumbotron"` 属性は、ページ上のこのフラグメントを一意に識別しようとします。
 
-``` tip::
-  フラグメントの HTML ファイルで、メインのラッパー要素 (上記の例では ``<div>``) を使用してフラグメントを一意に識別し、ページ上の他のコンポーネントと競合しないようにします。
+```{tip}
+フラグメントの HTML ファイルで、メインのラッパー要素 (上記の例では `<div>`) を使用してフラグメントを一意に識別し、ページ上の他のコンポーネントと競合しないようにします。
 ```
 
 次に、 `<div class="jumbotron"/>` 要素がコンテンツをラップし、 [Bootstrap](https://getbootstrap.com/) のジャンボトロン コンポーネントを適用します。 このコンポーネントは、コンテンツを際立たせます。 コンテンツ要素は次のとおりです。
@@ -351,8 +351,8 @@ yarn run add-collection
 
 フラグメントにリソースを含めることもできます。 詳細は、[Including Default Resources in Fragments](./including-default-resources-with-fragments.md)を参照してください。
 
-``` note::
-  フラグメントと設定オブジェクトは JavaScript の引数として渡され、それぞれ ``fragmentElement`` と ``configuration`` パラメーターとして利用できます。
+```{note}
+フラグメントと設定オブジェクトは JavaScript の引数として渡され、それぞれ `fragmentElement` と `configuration` パラメーターとして利用できます。
 ```
 
 ## 新しいフラグメントをインポートする

@@ -25,8 +25,8 @@
 
 Liferay 7.3では、編集可能な構成のフィールド名が削除され、読み取り専用のフィールドIDが各フィールドの[詳細設定]タブに含まれるようになりました。 [フォームルール](../form-rules/form-rules-overview.md)から、またはプログラムでフィールドを参照する場合は、フィールドIDを使用します。
 
-``` note::
-   フィールドIDは自動生成され、読み取り専用であるため、プログラムで予測したり使用したりすることが難しい、読者にとって使い勝手の悪い値になっています。 サードパーティ開発者のフォームのコードを書く能力を高めるために、Liferayの次回のバージョンでは、従来のフィールド名と同様に機能する新しい設定フィールドを導入する予定です。 フィールド参照がフィールド設定のUIに追加され、編集可能になります。これにより、サードパーティのコードで人間が読み取れる名前を参照することができます。
+```{note}
+フィールドIDは自動生成され、読み取り専用であるため、プログラムで予測したり使用したりすることが難しい、読者にとって使い勝手の悪い値になっています。 サードパーティ開発者のフォームのコードを書く能力を高めるために、Liferayの次回のバージョンでは、従来のフィールド名と同様に機能する新しい設定フィールドを導入する予定です。 フィールド参照がフィールド設定のUIに追加され、編集可能になります。これにより、サードパーティのコードで人間が読み取れる名前を参照することができます。
 ```
 
 ## フォームのフィールドと要素
@@ -91,8 +91,8 @@ Liferay 7.3 (DXP FP1以降およびCE GA7以降 )では、認証されていな�
 
 コントロールパネル：[システム設定] → [フォーム（コンテンツとデータ）] → [フォーム]で、または、`com.liferay.dynamic.data.mapping.form.web.internal.configuration.DDMFormWebConfiguration.config`という名前の[設定ファイル](../../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md)を作成して、ゲストのアップロード動作を設定します。
 
-``` tip::
-   インスタンススコープ<../../../system-administration/configuring-liferay/understanding-configuration-scope.md#scope-definitions>`__でフォームアプリケーションを設定するには、[Instance Settings]のフォームエントリーを使用します。
+```{tip}
+[インスタンススコープ](../../../system-administration/configuring-liferay/understanding-configuration-scope.md#scope-definitions)_でフォームアプリケーションを設定するには、[Instance Settings]のフォームエントリーを使用します。
 ```
 
 **Guest Upload File Extensions（`guestUploadFileExtensions`）：** 受け入れられるファイル拡張子のコンマ区切りリストを入力します。  デフォルトでは以下のリストがサポートされています：`doc`、`docx`、`jpeg`、`jpg`、`pdf`、`png`、`ppt`、`pptx`、`tiff`、`txt`、`xls`、および`xlsx`。
@@ -109,8 +109,8 @@ Liferay 7.3 (DXP FP1以降およびCE GA7以降 )では、認証されていな�
 
 ![画像フィールドでは、ユーザーが画像をアップロードしたり、ドキュメントとメディア内にある画像やWebコンテンツ画像から選択することができます。](./forms-field-types-reference/images/11.png)
 
-``` important::
-   ゲストユーザーは、画像へのアクセスやアップロードができません。 認証されたユーザーのみがフォームにアクセスできる場合を除き、このフィールドは使用しないでください。
+```{important}
+ゲストユーザーは、画像へのアクセスやアップロードができません。 認証されたユーザーのみがフォームにアクセスできる場合を除き、このフィールドは使用しないでください。
 ```
 
 ### 色

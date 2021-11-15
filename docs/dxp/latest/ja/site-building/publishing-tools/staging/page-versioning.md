@@ -21,8 +21,8 @@
 
 ただし、ページの*レイアウトタイプ*または*フレンドリURL*を変更すると、すべてのサイトページバリエーションに影響します。 たとえば、ページのテンプレートが変更された場合、それらの変更は、テンプレートから変更を継承するように設定されたページにプロパゲートされます。
 
-``` note::
-   Page templates are not recognized by the Staging framework. This means that existing Page templates are not viewable or editable on a staged Site. If they're created on a staged Site, they are lost if staging is disabled.
+```{note}
+Page templates are not recognized by the Staging framework. This means that existing Page templates are not viewable or editable on a staged Site. If they're created on a staged Site, they are lost if staging is disabled.
 ```
 
 ## バリエーションの作成
@@ -51,8 +51,8 @@
 
     ![新しいページセットのバリエーションが既存のバリエーションからページをコピーするかどうかを決定します](./page-versioning/images/06.png)
 
-    ``` note::
-       If you decide to copy existing Page variations into your new Page set variation, only the latest version marked as ready for publishing is copied.
+    ```{note}
+    If you decide to copy existing Page variations into your new Page set variation, only the latest version marked as ready for publishing is copied.
     ```
 
 4.  *[Add]* をクリックして新しいバリエーションを作成します。

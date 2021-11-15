@@ -64,8 +64,8 @@ URLリダイレクトを正常に追加したら、*アクション*ボタン（
 
 ![リダイレクトはいつでも編集または削除できます。](./using-the-redirection-tool/images/09.png)
 
-``` note::
-   Changes made to a redirect may not immediately display in browsers that have cached the old redirect configuration.
+```{note}
+Changes made to a redirect may not immediately display in browsers that have cached the old redirect configuration.
 ```
 
 ## 404 URL

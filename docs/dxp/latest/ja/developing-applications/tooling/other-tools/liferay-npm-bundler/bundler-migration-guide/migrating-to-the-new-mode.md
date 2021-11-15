@@ -48,8 +48,8 @@
     }
     ```
 
-    ``` note::
-      liferay-npm-bundlerの新しいモードはwebpackと非常によく似ていますが、** webpackとは互換性がありません**。 Webrayは単一のJavaScriptバンドルファイルを作成し、liferay-npm-bundlerはAMDローダーをターゲットにします。
+    ```{note}
+    liferay-npm-bundlerの新しいモードはwebpackと非常によく似ていますが、** webpackとは互換性がありません**。 Webrayは単一のJavaScriptバンドルファイルを作成し、liferay-npm-bundlerはAMDローダーをターゲットにします。
     ```
 
 ## 関連情報

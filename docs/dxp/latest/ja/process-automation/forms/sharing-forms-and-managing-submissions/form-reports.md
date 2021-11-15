@@ -18,8 +18,8 @@
 
 <!-- end list -->
 
-``` tip::
-   フォームレポートには、集計されたフォームデータが表示されます。 各フォームエントリーを個別に表示するには、`Managing Form Entries <./managing-form-entries.md#viewing-form-entries>`__を参照してください。
+```{tip}
+フォームレポートには、集計されたフォームデータが表示されます。 各フォームエントリーを個別に表示するには、[Managing Form Entries](./managing-form-entries.md#viewing-form-entries)_を参照してください。
 ```
 
 ## フォームフィールドと表タイプ

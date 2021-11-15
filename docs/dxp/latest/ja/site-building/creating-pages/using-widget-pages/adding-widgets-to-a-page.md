@@ -12,6 +12,6 @@
 
 ウィジェットは、WikiディスプレイまたはAsset Publisherのような動的パブリッシングツールです。 ウィジェットを使用して表示するコンテンツは、長文のテキストや画像ギャラリーなど、その中間のものにすることができます。
 
-``` note::
-  Portlets are rendered according to `render-weight <https://docs.liferay.com/ce/portal/7.3-latest/definitions/liferay-portlet-app_7_3_0.dtd.html#render-weight>`_ on Widget Pages.
+```{note}
+Portlets are rendered according to [render-weight](https://docs.liferay.com/ce/portal/7.3-latest/definitions/liferay-portlet-app_7_3_0.dtd.html#render-weight) on Widget Pages.
 ```

@@ -58,11 +58,11 @@
     image.default.user.portrait=com/liferay/portal/dependencies/user_portrait.png
     ```
 
-    ``` tip::
-       バイナリの性別フィールドを使用してユーザーの性別に関する情報を収集する場合、オーバーライドするデフォルト画像が2つあります。 代わりに次のプロパティを設定します。
-       ::
-         image.default.user.female.portrait=image-filename.png
-         image.default.user.male.portrait=image-filename.png
+    ```{tip}
+    バイナリの性別フィールドを使用してユーザーの性別に関する情報を収集する場合、オーバーライドするデフォルト画像が2つあります。 代わりに次のプロパティを設定します。
+    ::
+    image.default.user.female.portrait=image-filename.png
+    image.default.user.male.portrait=image-filename.png
     ```
 
 4.  アプリケーションサーバーを再起動します。

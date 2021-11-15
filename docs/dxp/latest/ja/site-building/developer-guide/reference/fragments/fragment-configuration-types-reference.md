@@ -12,8 +12,8 @@
 
 <!-- end list -->
 
-``` note::
-  FreeMarker コンテキストに挿入された設定値は、JSON ファイルで指定された定義済みの ``datatype`` 値に従います。 たとえば、``dataType`` が String の場合、``configuration.[name-value]?is_string`` は ``true`` となります。
+```{note}
+FreeMarker コンテキストに挿入された設定値は、JSON ファイルで指定された定義済みの `datatype` 値に従います。 たとえば、`dataType` が String の場合、`configuration.[name-value]?is_string` は `true` となります。
 ```
 
 ## チェックボックスの設定

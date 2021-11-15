@@ -63,8 +63,8 @@ Analytics Cloud JavaScript プラグインには、追跡できる以下のイ�
 </div>
 ```
 
-``` note::
-   You must add these attributes to each individual asset that you want Analytics Cloud to track. However, you can populate the attributes’ values via a script, therefore automating this process for each asset.
+```{note}
+You must add these attributes to each individual asset that you want Analytics Cloud to track. However, you can populate the attributes’ values via a script, therefore automating this process for each asset.
 ```
 
 ### ダウンロードの追跡

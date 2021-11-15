@@ -1,9 +1,9 @@
 # Tomcatへのインストール
 
-``` important::
-   `Using a Tomcat bundle <../installing-a-liferay-tomcat-bundle.md>`_ or `Docker image <../../../getting-started/starting-with-a-docker-image.md>`_ is the fastest way to get started using Liferay DXP. この記事は、Tomcatアプリケーションサーバーの設定を完全に制御したいユーザーを対象としています。
+```{important}
+[Using a Tomcat bundle](../installing-a-liferay-tomcat-bundle.md) or [Docker image](../../../getting-started/starting-with-a-docker-image.md) is the fastest way to get started using Liferay DXP. この記事は、Tomcatアプリケーションサーバーの設定を完全に制御したいユーザーを対象としています。
 
-   Review the `Installing a Liferay-Tomcat Bundle <../installing-a-liferay-tomcat-bundle.md>`_ and `Configuring a Database <../configuring-a-database.md>`_ articles before continuing.
+Review the [Installing a Liferay-Tomcat Bundle](../installing-a-liferay-tomcat-bundle.md) and [Configuring a Database](../configuring-a-database.md) articles before continuing.
 ```
 
 TomcatにLiferay DXPをインストールするには、DXP WARファイルをデプロイし、DXPの依存関係をデプロイし、DXP用にTomcatを構成する必要があります。
@@ -18,8 +18,8 @@ TomcatにLiferay DXPをインストールするには、DXP WARファイルを�
 
 Liferay DXPにはJava JDK 8または11が必要です。
 
-``` note::
-   `互換性マトリックスを参照してください <https://web.liferay.com/documents/14/21598941/Liferay+DXP+7.2+Compatibility+Matrix/b6e0f064-db31-49b4-8317-a29d1d76abf7?>サポートのJDK、データベース、および環境に関する情報については、` _。
+```{note}
+`互換性マトリックスを参照してください <https://web.liferay.com/documents/14/21598941/Liferay+DXP+7.2+Compatibility+Matrix/b6e0f064-db31-49b4-8317-a29d1d76abf7?>サポートのJDK、データベース、および環境に関する情報については、` _。
 ```
 
 以下はTomcatにDXPをインストールするための基本的な手順です。
@@ -83,8 +83,8 @@ DXPを実行するためのTomcatの構成には、次のものが含まれま�
     
     <!-- end list -->
     
-    ``` important::
-       DXPでは、アプリケーションサーバーのJVMがGMTタイムゾーンとUTF-8ファイルエンコーディングを使用する必要があります。
+    ```{important}
+    DXPでは、アプリケーションサーバーのJVMがGMTタイムゾーンとUTF-8ファイルエンコーディングを使用する必要があります。
     ```
 
     ``` Note::

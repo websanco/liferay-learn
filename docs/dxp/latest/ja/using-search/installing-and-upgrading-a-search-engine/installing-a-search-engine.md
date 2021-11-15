@@ -6,8 +6,8 @@
 
 Liferayを起動すると、組み込みのElasticsearchサーバー（サイドカー）が同時に起動します。 このデフォルトの検索エンジンは、テスト用の便利な検索機能を提供しますが、本番環境での使用はサポートされていません。 [Getting Started with Elasticsearch](./elasticsearch/getting-started-with-elasticsearch.md)では本番環境レベルのElasticsearchのセットアップについて説明しています。 [Using the Sidecar or Embedded Elasticsearch](./elasticsearch/using-the-sidecar-or-embedded-elasticsearch.md)では、デフォルトのElasticsearchサーバー（7.3ではサイドカー、7.2ではEmbedded）の機能と制限について説明しています。
 
-``` note::
-   Liferay's `Solr <http://lucene.apache.org/solr>`_ support will receive one more update (to support Solr 8) before being deprecated. Though it can still be used, Solr is not bundled with Liferay and must be connected remotely, even for development and testing. To use Solr, see `Installing Solr <./solr/installing-solr.md>`_.
+```{note}
+Liferay's [Solr](http://lucene.apache.org/solr) support will receive one more update (to support Solr 8) before being deprecated. Though it can still be used, Solr is not bundled with Liferay and must be connected remotely, even for development and testing. To use Solr, see [Installing Solr](./solr/installing-solr.md).
 ```
 
 ## Java要件
@@ -36,8 +36,8 @@ SolrコネクターもHTTP経由で通信するため、同じ要件はSolrに�
 
 Elasticsearchは、Liferayでの検索とインデックス作成に推奨される検索エンジンです。 Solrは廃止予定で、[制限](./solr/solr-limitations.md)があります。
 
-``` important::
-   Always refer to the `Search Engine Compatibility Matrix <https://help.liferay.com/hc/en-us/articles/360016511651>`_ to find the exact versions supported.
+```{important}
+Always refer to the [Search Engine Compatibility Matrix](https://help.liferay.com/hc/en-us/articles/360016511651) to find the exact versions supported.
 ```
 
 ## 次のステップ

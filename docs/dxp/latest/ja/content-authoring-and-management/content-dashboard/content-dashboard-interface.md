@@ -15,8 +15,8 @@
 
 情報サイドバーまたはパフォーマンスサイドバーにアクセスするには、コンテンツのアクションメニュー（![Action Menu](../../images/icon-actions.png)）をクリックし、*[Info]* または*[統計情報を表示]* オプションを選択します。  または、記事にカーソルを合わせて、*[Info]*（![Info](../../images/icon-information.png)）または*[統計情報を表示]*（![Metrics](../../images/icon-analytics.png)）アイコンをクリックします。
 
-``` important::
-   パフォーマンスパネルでコンテンツのメトリクスにアクセスするには、Liferay DXPインスタンスをLiferayAnalytics Cloudに接続し、サイトを同期する必要があります。 詳しくは、`Connecting Liferay DXP to Analytics Cloud <https://learn.liferay.com/analytics-cloud/latest/en/getting-started/connecting-data-sources/connecting-liferay-dxp-to-analytics-cloud.html>`__を参照してください。
+```{important}
+パフォーマンスパネルでコンテンツのメトリクスにアクセスするには、Liferay DXPインスタンスをLiferayAnalytics Cloudに接続し、サイトを同期する必要があります。 詳しくは、[Connecting Liferay DXP to Analytics Cloud](https://learn.liferay.com/analytics-cloud/latest/en/getting-started/connecting-data-sources/connecting-liferay-dxp-to-analytics-cloud.html)_を参照してください。
 ```
 
 ## コンテンツダッシュボードへのアクセス
@@ -38,8 +38,8 @@
 
 ![コンテンツダッシュボードのコンテンツ監査ツールの概要](./content-dashboard-interface/images/10.png)
 
-``` tip::
-   コンテンツ監査ツールに期待される表が表示されない場合は、グローバルボキャブラリのカテゴリ<../tags-and-categories/defining-categories-and-vocabularies-for-content.md>`__を確認し、コンテンツが分類されている <../tags-and-categories/organizing-content-with-categories-and-tags.md>`__ことを確認してください。 
+```{tip}
+[コンテンツ監査ツールに期待される表が表示されない場合は、グローバルボキャブラリのカテゴリ](../tags-and-categories/defining-categories-and-vocabularies-for-content.md)[_を確認し、コンテンツが分類されている](../tags-and-categories/organizing-content-with-categories-and-tags.md)_ことを確認してください。 
 ```
 
 コンテンツ監査ツールのインターフェイスには、次のものがあります。
@@ -73,8 +73,8 @@
 
 <!-- end list -->
 
-``` note::
-   グローバルサイトレベルで定義された最大2つのボキャブラリを使用できます。
+```{note}
+グローバルサイトレベルで定義された最大2つのボキャブラリを使用できます。
 ```
 
 ## コンテンツ一覧
@@ -105,8 +105,8 @@
 
 （\*）*ページ*（![Page](../../images/icon-page.png) ）アイコンは、[ディスプレイページテンプレート](../../site-building/displaying-content/using-display-page-templates/displaying-content-with-display-page-templates.md)に基づく記事を示します。
 
-``` note::
-   [First Vocabulary]カラムと[第二ボキャブラリ]カラムは、選択したボキャブラリによって異なります。
+```{note}
+[First Vocabulary]カラムと[第二ボキャブラリ]カラムは、選択したボキャブラリによって異なります。
 ```
 
 コンテンツ一覧の各エントリについて、*アクション*メニュー（![Actions Menu](../../images/icon-actions.png)）を使用するか、記事にカーソルを合わせて対応するオプションをクリックすると、次のオプションにアクセスできます。
@@ -123,8 +123,8 @@
 
 <!-- end list -->
 
-``` note::
-   ディスプレイページテンプレートに基づくコンテンツには、[View]、[Info]、および[メトリクス]オプションを使用できます。 コンテンツの編集権限がある場合は、[編集する]オプションを使用できます。
+```{note}
+ディスプレイページテンプレートに基づくコンテンツには、[View]、[Info]、および[メトリクス]オプションを使用できます。 コンテンツの編集権限がある場合は、[編集する]オプションを使用できます。
 ```
 
 ### コンテンツ一覧内のコンテンツの絞り込みとソート
@@ -146,8 +146,8 @@
 
 <!-- end list -->
 
-``` note::
-   [コンテンツダッシュボード]ページを閉じると、デフォルトのフィルターと並べ替えオプションが再度設定されます。
+```{note}
+[コンテンツダッシュボード]ページを閉じると、デフォルトのフィルターと並べ替えオプションが再度設定されます。
 ```
 
 ## 情報サイドバー
@@ -156,8 +156,8 @@
 
 ![コンテンツ一覧のアセットから情報サイドバーにアクセスします](./content-dashboard-interface/images/07.png)
 
-``` note::
-   コンテンツディスプレイページが関連付けられているアセットの情報サイドバーを開くことができます。 これらのアセットは、アセット名の横にあるページアイコンによってコンテンツ一覧で識別できます。
+```{note}
+コンテンツディスプレイページが関連付けられているアセットの情報サイドバーを開くことができます。 これらのアセットは、アセット名の横にあるページアイコンによってコンテンツ一覧で識別できます。
 ```
 
 情報サイドバーパネルを開くには：
@@ -182,8 +182,8 @@
 
 <!-- end list -->
 
-``` note::
-   これらの条件が満たされると、コンテンツの[メトリクス]オプションが使用可能になります（2）。 [メトリクス]オプションが欠落している場合、1つ以上の条件が満たされていません（1）。
+```{note}
+これらの条件が満たされると、コンテンツの[メトリクス]オプションが使用可能になります（2）。 [メトリクス]オプションが欠落している場合、1つ以上の条件が満たされていません（1）。
 ```
 
 ![設定がコンテンツメトリクスを表示するための条件を満たしていることを確認してください](./content-dashboard-interface/images/13.png)

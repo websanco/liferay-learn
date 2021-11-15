@@ -8,12 +8,12 @@
 
 **廃止予定：** この機能は、次のマイナーバージョンのリリースでサポートされなくなります。 たとえば、7.3で廃止予定になった機能のサポートは、早ければ7.4で削除される可能性があります。
 
-``` important::
-   廃止予定の機能のサポートは、早ければ次のマイナーリリースで終了する可能性があるため、機能の使用を停止することを計画してください。
+```{important}
+廃止予定の機能のサポートは、早ければ次のマイナーリリースで終了する可能性があるため、機能の使用を停止することを計画してください。
 ```
 
-``` important::
-   詳細は、 `Maintenance Mode and Deprecation Policies <https://help.liferay.com/hc/en-us/articles/360015767952-Maintenance-Mode-and-Deprecation>`_ を参照してください。
+```{important}
+詳細は、 [Maintenance Mode and Deprecation Policies](https://help.liferay.com/hc/en-us/articles/360015767952-Maintenance-Mode-and-Deprecation) を参照してください。
 ```
 
 ## 廃止予定の機能の利用可能性

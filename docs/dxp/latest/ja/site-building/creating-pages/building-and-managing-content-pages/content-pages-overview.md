@@ -71,8 +71,8 @@ Liferay Portalには、ページの作成に使用できるいくつかのレイ
 ウィジェットパネルには、ページに追加できる、すぐに使用できるアプリケーションとツールが一覧表示されます。 コンテンツページでのウィジェットの使用にはいくつかの制限があります。 詳細については、「 [コンテンツページでのウィジェットの使用](./using-widgets-on-a-content-page.md) 」を参照してください。
 ![ウィジェットパネルは、レイアウト内に追加できるウィジェットのリストを提供します。](./content-pages-overview/images/06.png)
 
-``` note::
-  While portlets are rendered according to `render-weight <https://docs.liferay.com/ce/portal/7.3-latest/definitions/liferay-portlet-app_7_3_0.dtd.html#render-weight>`_ on Widget Pages, that is not true for Content Pages. Portlets are rendered in the order they appear on the page on Content Pages (i.e. left to right, top to bottom).
+```{note}
+While portlets are rendered according to [render-weight](https://docs.liferay.com/ce/portal/7.3-latest/definitions/liferay-portlet-app_7_3_0.dtd.html#render-weight) on Widget Pages, that is not true for Content Pages. Portlets are rendered in the order they appear on the page on Content Pages (i.e. left to right, top to bottom).
 ```
 
 ## コンテンツ

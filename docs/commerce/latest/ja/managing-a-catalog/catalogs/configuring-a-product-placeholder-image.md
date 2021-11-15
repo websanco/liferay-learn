@@ -24,8 +24,8 @@
 
 ## Liferay Commerce 2.0以前
 
-``` tip::
-   Liferay Commerce 2.0以下では、Liferay Commerceインスタンスで作成されたカタログ全体で同じプレースホルダー画像がグローバルに使用されます。
+```{tip}
+Liferay Commerce 2.0以下では、Liferay Commerceインスタンスで作成されたカタログ全体で同じプレースホルダー画像がグローバルに使用されます。
 ```
 
 プレースホルダー画像を設定するには：

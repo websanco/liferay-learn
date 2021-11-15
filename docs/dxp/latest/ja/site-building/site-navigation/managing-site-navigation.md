@@ -4,8 +4,8 @@ Liferayには、ページを作成・整理するための強力なツールが�
 
 デフォルトでは、ページを整理するための定義済みのページ階層があります。 しかし、ページ階層とは別の*ナビゲーションメニュー*を作成することもできます。 このナビゲーションメニューを使えば、単発のランディングページはもちろん、メインメニュー、セカンダリメニュー、フッタメニュー、カスタムメニューといった複数のナビゲーションメニューを作成することができます。
 
-``` note::
-   In DXP 7.3+, if you want to create a Navigation Menu to use across multiple Sites, you can use Navigation Menus created in the Global Site. Note that Global Navigation Menus cannot include menu items that require Site-specific information (such as the "page" type).
+```{note}
+In DXP 7.3+, if you want to create a Navigation Menu to use across multiple Sites, you can use Navigation Menus created in the Global Site. Note that Global Navigation Menus cannot include menu items that require Site-specific information (such as the "page" type).
 ```
 
 メニューはページごとに変えることができます。ランディングページには、頻繁にアクセスするページの簡単なリストを表示でき、残りのページにはセカンダリナビゲーションに表示できます。 さまざまなランディングページに特定のメニューを作成して、訪問者を関連するコンテンツに誘導することもできます。

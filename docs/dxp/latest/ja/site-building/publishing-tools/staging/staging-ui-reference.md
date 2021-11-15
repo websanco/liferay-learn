@@ -40,8 +40,8 @@
 
 **公開するページ**：現在の公開プロセスに含まれるページ数を表示します。
 
-``` note::
-   This displays the number of Page deletions tracked by the Staging framework. Keep in mind that this number counts the Page deletions on the Staging Site, not how many Pages will be deleted on the on the Live Site. There could be an inconsistency between the number of Page deletions to be published and the actual number of Pages present on either of the Staging and Live Sites.
+```{note}
+This displays the number of Page deletions tracked by the Staging framework. Keep in mind that this number counts the Page deletions on the Staging Site, not how many Pages will be deleted on the on the Live Site. There could be an inconsistency between the number of Page deletions to be published and the actual number of Pages present on either of the Staging and Live Sites.
 ```
 
 準備ができたら、*[本番環境に公開]* をクリックして公開を開始します。

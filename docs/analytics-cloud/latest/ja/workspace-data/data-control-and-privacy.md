@@ -16,8 +16,8 @@ Analytics Cloudは、個人のデータとプライバシーを管理するた�
 
 3.  *Change Period* をクリックして保存します。
 
-``` warning::
-   You will permanently lose analytics data that has been recorded over 7 months ago when you make this change.
+```{warning}
+You will permanently lose analytics data that has been recorded over 7 months ago when you make this change.
 ```
 
 ## リクエストログ
@@ -72,8 +72,8 @@ GDPRおよび多くのデータプライバシー法によると、企業は、�
 
     window['ac_client_disable_tracking'] = true
 
-``` important::
-   You must implement your own logic to persist user consent either by using a cookie or by saving and loading from your database. Please make sure that the window variable described above is set before the client page is fully loaded.
+```{important}
+You must implement your own logic to persist user consent either by using a cookie or by saving and loading from your database. Please make sure that the window variable described above is set before the client page is fully loaded.
 ```
 
 あなたのサイトの訪問者は、ブラウザから追跡しないを有効にすることもできます。 ブラウザの [do not track設定についての詳細はこちらです](https://allaboutdnt.com/)。 これを有効にすると、Analytics Cloudによってデータが送信または収集されることはありません。

@@ -2,8 +2,8 @@
 
 パブリケーションは、あなたとあなたのチームがDXPインスタンスへの変更を開発、追跡、および公開するための便利で柔軟な方法を提供します。 有効にすると、パブリケーションはグローバルにアクティブ化され、どこからでもアクセスしてインスタンスでサポートされているエンティティを編集できます。
 
-``` important::
-   Staging and Publications cannot be enabled at the same time. If Staging is enabled on any of your Sites, you must first disable Staging before enabling Publications. See `Disabling Local Live Staging <../staging/configuring-local-live-staging.html#disabling-local-live-staging>`_ and `Disabling Remote Live Staging <../staging/configuring-remote-live-staging.html#disabling-remote-live-staging>`_ for more information.
+```{important}
+Staging and Publications cannot be enabled at the same time. If Staging is enabled on any of your Sites, you must first disable Staging before enabling Publications. See [Disabling Local Live Staging](../staging/configuring-local-live-staging.html#disabling-local-live-staging) and [Disabling Remote Live Staging](../staging/configuring-remote-live-staging.html#disabling-remote-live-staging) for more information.
 ```
 
 ## パブリケーションを有効にする方法
@@ -26,8 +26,8 @@
 
 有効にしたパブリケーションは、[Publications]の*[設定]* ページからいつでも無効にすることができます。 トグルスイッチを*[No]* に設定してから、*[送信]* をクリックします。
 
-``` important::
-   Once disabled, all active publications are deactivated, scheduled publications are canceled, and you can no longer access your publication history. DXP, however, retains your instance's publication history, so you can access it again if you re-enable Publications.
+```{important}
+Once disabled, all active publications are deactivated, scheduled publications are canceled, and you can no longer access your publication history. DXP, however, retains your instance's publication history, so you can access it again if you re-enable Publications.
 ```
 
 ## 追加情報

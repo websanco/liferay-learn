@@ -11,10 +11,10 @@
 
 <!-- end list -->
 
-``` tip::
-   `Isn't User deactivation and deletion enough?`
+```{tip}
+`Isn't User deactivation and deletion enough?`
 
-   Deleting removes the User from the table of Users in the database. The User's information, however, is preserved in other locations. In a standard User deletion scenario, all of a User's personally created content is still assigned to the User by the system's identifiers (User ID and User Name) and still appears in the UI next to the content. This unintentional preservation of user-identifying data is inadequate for satisfying some of the GDPR requirements and is the primary reason why the data erasure functionality was added.
+Deleting removes the User from the table of Users in the database. The User's information, however, is preserved in other locations. In a standard User deletion scenario, all of a User's personally created content is still assigned to the User by the system's identifiers (User ID and User Name) and still appears in the UI next to the content. This unintentional preservation of user-identifying data is inadequate for satisfying some of the GDPR requirements and is the primary reason why the data erasure functionality was added.
 ```
 
 ## 個人データ抹消画面

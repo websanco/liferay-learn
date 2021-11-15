@@ -32,8 +32,8 @@ Elasticsearchを再起動してから、Kibanaをインストールします。
 
 KibanaのバージョンがElasticsearchのバージョンと一致していることを確認してください。 詳細については、[Liferay Enterprise Search互換性マトリックス](https://help.liferay.com/hc/en-us/articles/360016511651)を参照してください。
 
-``` note::
-   Elasticsearch 6.x has reached `end of life <https://www.elastic.co/support/eol#elasticsearch>`_. Liferay 7.2 systems still using Elasticsearch 6.x should be upgraded to Elasticsearch 7.x. See  `Upgrading to Elasticsearch 7 <./../installing-and-upgrading-a-search-engine/elasticsearch/upgrading-elasticsearch/upgrading-to-elasticsearch-7.md>`__ for details.
+```{note}
+Elasticsearch 6.x has reached [end of life](https://www.elastic.co/support/eol#elasticsearch). Liferay 7.2 systems still using Elasticsearch 6.x should be upgraded to Elasticsearch 7.x. See  [Upgrading to Elasticsearch 7](./../installing-and-upgrading-a-search-engine/elasticsearch/upgrading-elasticsearch/upgrading-to-elasticsearch-7.md)_ for details.
 ```
 
 1.  [Kibanaをダウンロード](https://www.elastic.co/downloads/kibana)して、解凍します。 ルートフォルダは*Kibanaホーム*と呼ばれます。

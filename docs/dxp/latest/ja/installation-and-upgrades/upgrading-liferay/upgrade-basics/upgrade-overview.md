@@ -2,12 +2,12 @@
 
 Liferayのツールや説明書は、DXPやポータルCE環境を安全かつ迅速にアップグレードするのに役立ちます。 小さなデータセットを持つ非クラスター環境などは、[Dockerイメージ](./upgrading-via-docker.md)を使ってアップグレードすることができます。 複雑で、より大きなデータセットを持つ、または多くのカスタマイズがあるDXP環境およびポータルCE環境は、[データベースアップグレードツール](./using-the-database-upgrade-tool.md)を使用してアップグレードします。
 
-``` warning::
-   アップグレードする前に、**必ず**データベースとインストールを `バックアップ <../../maintaining-a-liferay-dxp-installation/backing-up.md>`_ してください。 バックアップコピーでアップグレードプロセスをテストすることをお勧めします。
+```{warning}
+アップグレードする前に、**必ず**データベースとインストールを [バックアップ](../../maintaining-a-liferay-dxp-installation/backing-up.md) してください。 バックアップコピーでアップグレードプロセスをテストすることをお勧めします。
 ```
 
-``` note::
-   `Docker経由でのアップグレード <./upgrading-via-docker.md>`_ は、小規模でカジュアルなポータルCE環境でデータベースをアップグレードする最も簡単な方法です。
+```{note}
+[Docker経由でのアップグレード](./upgrading-via-docker.md) は、小規模でカジュアルなポータルCE環境でデータベースをアップグレードする最も簡単な方法です。
 ```
 
 アップグレードを始める前に、必要な項目を検討しましょう。 アップグレードに関するトピックは、次のカテゴリに分類されます。
@@ -51,8 +51,8 @@ Liferay DXPサブスクリプションをお持ちの場合は、最新のフィ
 
 Liferayデータベースをアップグレードする前に、マーケットプレイスアプリを現在使用しているLiferayバージョンの最新バージョンに更新する必要があります。 アプリの更新をスキップすると問題が発生し、アプリが新しいLiferayバージョンで有効にならない場合があります。
 
-``` important::
-   アップグレードする前に、現在のインストールでこれを行ってください。
+```{important}
+アップグレードする前に、現在のインストールでこれを行ってください。
 ```
 
 データベースをアップグレードした後、新しいLiferayインスタンスの最新のアプリバージョンをインストールします。
@@ -65,8 +65,8 @@ Liferayデータベースをアップグレードする前に、マーケット�
 
 構成と対応するインフラストラクチャを、以前のインストールから新しいインストールに移行して更新する必要があります。
 
-``` important::
-   6.2以前からアップグレードする場合は、ファイルストアの構成を更新します。 詳細は、 `Updating the File Store <../configuration-and-infrastructure/updating-the-file-store.md>`_ を参照してください。
+```{important}
+6.2以前からアップグレードする場合は、ファイルストアの構成を更新します。 詳細は、 [Updating the File Store](../configuration-and-infrastructure/updating-the-file-store.md) を参照してください。
 ```
 
 データベースのアップグレードが完了してから、他の設定を更新します。 詳細は、[構成とプロパティの移行](../configuration-and-infrastructure/migrating-configurations-and-properties.md)を参照してください。

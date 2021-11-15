@@ -14,8 +14,8 @@
 
 `prd` 環境の [バックアップ] ページでは、バックアップサービスの情報や保持されているバックアップの確認、手動バックアップの作成などを行うことができます。
 
-``` note::
-   バックアップページは本番環境でのみ利用可能です。
+```{note}
+バックアップページは本番環境でのみ利用可能です。
 ```
 
 以下の手順で、[バックアップ]ページにアクセスします。
@@ -34,8 +34,8 @@
 
 <!-- end list -->
 
-``` note::
-   バックアップのタイムスタンプはブラウザの位置情報に基づいて自動的に表示され、バックアップのスケジュールはUTC±00のタイムゾーンに基づいて表示されます。
+```{note}
+バックアップのタイムスタンプはブラウザの位置情報に基づいて自動的に表示され、バックアップのスケジュールはUTC±00のタイムゾーンに基づいて表示されます。
 ```
 
 環境管理者は、「バックアップ」ページから「アクション」ボタン（⋮）にアクセスし、保持しているバックアップのダウンロードや環境の復元を行うことができます。
@@ -62,8 +62,8 @@ DXP Cloudのコンソールや、バックアップサービスの `LCP.json` �
 
 バックアップサービスの設定に使用できる変数の一覧については、 [環境変数のリファレンス](#environment-variables-reference) を参照してください。
 
-``` important::
-   バックアップサービスを再設定するたびに、バックアップサービスが再起動し、数分間リクエストを受け取らなくなったり、設定によっては挙動が異なる場合があります。
+```{important}
+バックアップサービスを再設定するたびに、バックアップサービスが再起動し、数分間リクエストを受け取らなくなったり、設定によっては挙動が異なる場合があります。
 ```
 
 ### DXP Cloudコンソールによるバックアップサービスの設定
@@ -94,8 +94,8 @@ DXP Cloudのコンソールや、バックアップサービスの `LCP.json` �
 
 1.  テキストエディターを使って、以下のパスにあるバックアップの `LCP.json` ファイルを開きます。 `/{your_project_name}/backup/LCP.json`
 
-    ``` note::
-       バージョン3.x.xのサービスを利用している場合、バックアップ用の ``LCP.json`` ファイルは次のパスにあります。``/{your_project_name}/lcp/backup/LCP.json`` になります。  
+    ```{note}
+    バージョン3.x.xのサービスを利用している場合、バックアップ用の `LCP.json` ファイルは次のパスにあります。`/{your_project_name}/lcp/backup/LCP.json` になります。  
     ```
 
 2.  環境の項目までスクロールしてください。
@@ -126,9 +126,9 @@ DXP Cloudのコンソールや、バックアップサービスの `LCP.json` �
 
 <!-- end list -->
 
-``` note::
-   標準的な`cronのスケジューリング構文 <https://crontab.guru/>`_も非標準的な`cronのスケジューリング構文<https://crontab.guru/> `_もUTC±00のタイムゾーンに基づいています。 When using non-standard cron syntax, automated backups and cleanups run at the start of the specified value. For example, @daily runs backups every day at 00:00 UTC.
-```
+```{note}
+標準的な[cronのスケジューリング構文](https://crontab.guru/)も非標準的な[cronのスケジューリング構文](https://crontab.guru/> `_もUTC±00のタイムゾーンに基づいています。 When using non-standard cron syntax, automated backups and cleanups run at the start of the specified value. For example, @daily runs backups every day at 00:00 UTC.
+)```
 
 次の `LCP.json` の例では、12時間ごと（つまりUTCの00:00と12:00）にバックアップを作成し、30日以上前のバックアップを削除するクリーンアップを毎月行います。
 

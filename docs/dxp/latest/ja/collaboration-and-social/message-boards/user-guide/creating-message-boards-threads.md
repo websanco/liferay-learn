@@ -14,8 +14,8 @@
 
 3.  **[Body]**フィールドでスレッドのコンテンツを作成します。
 
-    ``` note::
-      このフィールドは、HTMLの代わりにBBCodeを使用することを除いて、ブログアプリと同じエディターを使用します。 詳細な手順については、[エディターの使用]（https://help.liferay.com/hc/articles/360018173051-Using-the-Blog-Entry-Editor-）のドキュメントを参照してください。
+    ```{note}
+    このフィールドは、HTMLの代わりにBBCodeを使用することを除いて、ブログアプリと同じエディターを使用します。 詳細な手順については、[エディターの使用]（https://help.liferay.com/hc/articles/360018173051-Using-the-Blog-Entry-Editor-）のドキュメントを参照してください。
     ```
 
     ![図1. 最初の投稿を作成する](./creating-message-boards-threads/images/01.png)
