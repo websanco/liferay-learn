@@ -4,7 +4,6 @@
 :maxdepth: 3
 
 architecture/liferay-classloader-hierarchy.md
-architecture/liferay-startup-phases.md
 architecture/the-benefits-of-modularity.md
 architecture/osgi-and-modularity.md
 architecture/module-lifecycle.md
