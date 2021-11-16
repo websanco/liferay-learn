@@ -19,7 +19,14 @@ Here are the classloader descriptions:
 
 * **Common**: Classes accessible globally to web applications on the application server.
 
-* **Web Application**: Classes in the application's `WEB-INF/classes` folder and `WEB-INF/lib/*.jar`.
+* **Web Application (e.g., DXP/Portal)**: Classes in the application's `WEB-INF/classes` folder and `WEB-INF/lib/*.jar`.
+
+    Note, the only Liferay classes that the DXP/Portal web application interacts with are in Liferay's *Shielded Container* JAR files:
+    
+    * `com.liferay.shielded.container.api.jar`
+    * `com.liferay.shielded.container.impl.jar`
+
+* **Shielded Container**: Classes in `WEB-INF/shielded-container-lib/*.jar`.
 
 * **Module Framework**: Liferay's OSGi module framework classloader provides controlled isolation for the module framework bundles.
 
