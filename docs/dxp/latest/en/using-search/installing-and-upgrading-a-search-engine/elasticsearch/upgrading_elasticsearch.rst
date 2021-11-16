@@ -10,8 +10,8 @@ Upgrading Elasticsearch
 
 Liferay supports Elasticsearch 7. The `compatibility matrix <https://help.liferay.com/hc/en-us/sections/360002103292-Compatibility-Matrix>`__ provides the latest support details.
 
-..important::
-   Solr integration is deprecated as of Liferay 7.3, replaced by Elasticsearch integration. Migrating to Elasticsearch requires `setting up Elasticsearch <./getting-started-with-elasticsearch.md>`_ and `connecting Liferay <./connecting-to-elasticsearch.md>`_ to it.
+.. important::
+   Solr integration is deprecated as of Liferay 7.3 and removed in 7.4, replaced by Elasticsearch integration. Migrating to Elasticsearch requires `setting up Elasticsearch <./getting-started-with-elasticsearch.md>`_ and `connecting Liferay <./connecting-to-elasticsearch.md>`_ to it.
 
 .. important::
    Elasticsearch 6.x is not supported on Liferay 7.3+.

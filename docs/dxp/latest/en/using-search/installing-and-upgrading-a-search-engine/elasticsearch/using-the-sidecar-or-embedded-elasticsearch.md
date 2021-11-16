@@ -13,15 +13,15 @@ Here's example sidecar server output:
 {
   "name" : "liferay",
   "cluster_name" : "LiferayElasticsearchCluster",
-  "cluster_uuid" : "DGRDj1_DS7Km2Y_kaaNqxg",
+  "cluster_uuid" : "Etr-YyyNQzOPfETH3_GU2A",
   "version" : {
-    "number" : "7.9.0",
+    "number" : "7.10.2",
     "build_flavor" : "unknown",
     "build_type" : "unknown",
-    "build_hash" : "a479a2a7fce0389512d6a9361301708b92dff667",
-    "build_date" : "2020-08-11T21:36:48.204330Z",
+    "build_hash" : "747e1cc71def077253878a59143c1f785afa92b9",
+    "build_date" : "2021-01-13T00:42:12.435326Z",
     "build_snapshot" : false,
-    "lucene_version" : "8.6.0",
+    "lucene_version" : "8.7.0",
     "minimum_wire_compatibility_version" : "6.8.0",
     "minimum_index_compatibility_version" : "6.0.0-beta1"
   },
@@ -54,16 +54,15 @@ Here are common uses for the default Elasticsearch server (sidecar and embedded)
 
 While an Elasticsearch sidecar server is bundled beginning with Liferay DXP 7.3 and Liferay Portal 7.3 GA4+ Tomcat bundles and Docker images, there are some key differences if you're installing the Liferay WAR onto any supported application server.
 
-<!-- We must update this. Ask Tibor if anything is different now in 7.4, particularly with the auto-downloaded information-->
 | Liferay DXP Flavor       | Default Elasticsearch | Pre-Installed | Requires Manual Intervention |
 | ------------------------ | ------------------- | ------------- | ---------------------------- |
-| Tomcat bundle: 7.3 GA4+  | Sidecar             | &#10004;      | &#10008;                     |
-| Tomcat: 7.3 GA4+         | Sidecar             | &#10008;      | &#10008; (auto-downloaded)   |
-| Docker tag:    7.3 GA4+  | Sidecar             | &#10004;      | &#10008;                     |
-| JBoss: 7.3 GA4+          | Sidecar             | &#10008;      | &#10008; (auto-downloaded)   |
-| Wildfly: 7.3 GA4+        | Sidecar             | &#10008;      | &#10008; (auto-downloaded)   |
-| WebSphere: 7.3 GA4+      | Sidecar             | &#10008;      | &#10004;                     |
-| Weblogic: 7.3 GA4+       | Sidecar             | &#10008;      | &#10004;                     |
+| Tomcat bundle: 7.3+  | Sidecar             | &#10004;      | &#10008;                     |
+| Tomcat: 7.3+         | Sidecar             | &#10008;      | &#10008; (auto-downloaded)   |
+| Docker: 7.3+         | Sidecar             | &#10004;      | &#10008;                     |
+| JBoss: 7.3+          | Sidecar             | &#10008;      | &#10008; (auto-downloaded)   |
+| Wildfly: 7.3+        | Sidecar             | &#10008;      | &#10008; (auto-downloaded)   |
+| WebSphere: 7.3+      | Sidecar             | &#10008;      | &#10004;                     |
+| Weblogic: 7.3+       | Sidecar             | &#10008;      | &#10004;                     |
 | _All flavors: 7.2/7.3 GA3-_ | _Embedded_       | &#10004;      | &#10008;                     |
 
 If you downloaded a bundle for an application server besides Tomcat, when you start the server an Elasticsearch distribution is downloaded on-the-fly and started as a sidecar server.
@@ -81,7 +80,7 @@ Here's a comparison between the embedded and sidecar Elasticsearch servers.
 | EMBEDDED           | SIDECAR           |
 | ------------------ | ----------------- |
 | Cannot configure a secure connection | Cannot configure a secure connection |
-| Uses the OSS version of Elasticsearch | Uses the OSS version of Elasticsearch |
+| Uses an OSS version of Elasticsearch | Uses an OSS version of Elasticsearch |
 | Runs at <http://localhost:9200> | Runs at <http://localhost:9201> |
 | Pre-Installed on all Liferay distributions  | Not Always Pre-Installed  |
 | Not supported for production  | Not supported for production |

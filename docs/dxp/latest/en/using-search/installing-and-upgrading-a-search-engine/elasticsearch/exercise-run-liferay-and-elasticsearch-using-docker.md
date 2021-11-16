@@ -19,22 +19,22 @@ The `cd test-es-install` command at the end puts you in the `test-es-install` fo
 ```
 ## Install Elasticsearch
 
-1. Configure and start an Elasticsearch `7.9.0` container named `elasticsearch790`:
+1. Configure and start an Elasticsearch `7.15.1` container named `elasticsearch715`:
 
    ```bash
-   docker run -it --name elasticsearch790 -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" -e "node.name=es-node1" -v $(pwd)/elasticsearch:/usr/share/elasticsearch/data docker.elastic.co/elasticsearch/elasticsearch:7.9.0
+   docker run -it --name elasticsearch715 -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" -e "node.name=es-node1" -v $(pwd)/elasticsearch:/usr/share/elasticsearch/data docker.elastic.co/elasticsearch/elasticsearch:7.15.1
    ```
 
 1. Install the required Elasticsearch plugins. Use `docker exec -it` to access an interactive bash shell:
 
    ```bash
-   docker exec -it elasticsearch790 bash -c '/usr/share/elasticsearch/bin/elasticsearch-plugin install analysis-icu && /usr/share/elasticsearch/bin/elasticsearch-plugin install analysis-kuromoji && /usr/share/elasticsearch/bin/elasticsearch-plugin install analysis-smartcn && /usr/share/elasticsearch/bin/elasticsearch-plugin install analysis-stempel'
+   docker exec -it elasticsearch715 bash -c '/usr/share/elasticsearch/bin/elasticsearch-plugin install analysis-icu && /usr/share/elasticsearch/bin/elasticsearch-plugin install analysis-kuromoji && /usr/share/elasticsearch/bin/elasticsearch-plugin install analysis-smartcn && /usr/share/elasticsearch/bin/elasticsearch-plugin install analysis-stempel'
    ```
 
 1. Restart the Elasticsearch container to register the plugins. CTRL+C stops the container, then start it again by running 
 
    ```bash
-   docker start -i elasticsearch790
+   docker start -i elasticsearch715
    ```
 
 1. Get the IPv4 address of the running Elasticsearch container:
@@ -43,12 +43,12 @@ The `cd test-es-install` command at the end puts you in the `test-es-install` fo
    docker network inspect bridge
    ```
 
-   In this example it's `172.17.0.2`. If your system provides a different IP address, you must use it in the `docker run --add-host elasticsearch790:[IP]...` command when running Liferay DXP.
+   In this example it's `172.17.0.2`. If your system provides a different IP address, you must use it in the `docker run --add-host elasticsearch715:[IP]...` command when running Liferay DXP.
 
    ```bash
    "Containers": {
                "2d4614fdcce2159322fa7922bfc5f866b79bd7f609a65cc888f9a260f80731f4": {
-                   "Name": "elasticsearch790",
+                   "Name": "elasticsearch715",
                    "EndpointID": "e89c3d0a87cc528753470eb359cee3b85fea9f9a5df3b249d54d203741a650a8",
                    "MacAddress": "02:42:ac:11:00:02",
                    "IPv4Address": "172.17.0.2/16",
@@ -68,14 +68,14 @@ Specify the properties Liferay DXP needs to connect with Elasticsearch, then run
    
    operationMode="REMOTE"
    productionModeEnabled=B"true"
-   networkHostAddresses="http://elasticsearch790:9200"
+   networkHostAddresses="http://elasticsearch715:9200"
    EOT
    ```
 
 1. Once the configuration files are in place, start the DXP container with 
 
    ```bash
-   docker run -it --name dxp73  --add-host elasticsearch790:172.17.0.2 -p 8080:8080 -v $(pwd)/dxp:/mnt/liferay [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
+   docker run -it --name dxp74  --add-host elasticsearch715:172.17.0.2 -p 8080:8080 -v $(pwd)/dxp:/mnt/liferay [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
    ```
 
 1. **Checkpoint:** Verify that the Elasticsearch connection is active in Control Panel &rarr; Configuration &rarr; Search.
@@ -87,7 +87,7 @@ Re-index your search and spell check indexes. Both re-index actions are carried 
 ## Additional Information
 
 * [Securing Elasticsearch](./securing-elasticsearch.md)
-* Liferay Enterprise Search (Coming soon)
+* [Liferay Enterprise Search](../../liferay_enterprise_search.md)
 * [Search Pages](../../search-pages-and-widgets/working-with-search-pages/search-pages.md)
-* Administering and Tuning Search (Coming soon)
+* [Administering and Tuning Search](../../search_administration_and_tuning.rst)
 * [Elasticsearch Connector Settings](./elasticsearch-connector-configuration-reference.md)

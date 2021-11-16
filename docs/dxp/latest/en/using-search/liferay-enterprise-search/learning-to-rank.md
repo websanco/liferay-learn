@@ -84,7 +84,7 @@ See [the Elasticsearch Learning to Rank plugin documentation](https://elasticsea
 You'll be running a command like this one, depending on the plugin version you're installing:
 
 ```bash
-./bin/elasticsearch-plugin install http://es-learn-to-rank.labs.o19s.com/ltr-plugin-v1.5.3-es7.9.3.zip
+./bin/elasticsearch-plugin install https://github.com/o19s/elasticsearch-learning-to-rank/releases/download/v1.5.7-es7.13.4/ltr-plugin-v1.5.7-es7.13.4.zip
 ```
 
 If using [X-Pack security in your Elasticsearch cluster](../installing-and-upgrading-a-search-engine/elasticsearch/securing-elasticsearch.md), there [may be additional steps.](https://elasticsearch-learning-to-rank.readthedocs.io/en/latest/x-pack.html)

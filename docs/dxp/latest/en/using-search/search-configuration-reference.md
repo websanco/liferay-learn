@@ -239,6 +239,31 @@ In *Control Panel* &rarr; *Configuration* &rarr; *Search* there are three admini
 
 See the dedicated [Search Administration](search-administration.md) documentation for more details.
 
+#### Connections
+
+Information about the search engine connection(s) is displayed here. For example,
+
+* Search Engine Vendor: Elasticsearch
+* Client Version: 7.14.1
+* Active Connections: 1
+* Health: Green
+* Connection ID: \_REMOTE\_
+* Connection Type: Read/Write
+* Cluster Name: LiferayElasticsearchCluster
+* Nodes: 1
+* Node Name: lr-es
+* Node Version: 7.15.1
+
+#### Index Actions
+
+In Index Actions, re-index at one of these levels:
+
+   * All indexable assets
+   * An individual indexable asset
+   * All spell check indexes
+
+#### Field Mappings
+
 ### Portal Properties
 
 Portal properties are system scoped as well. The [Lucene Search](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#Lucene%20Search) portal properties configure low level search behavior. Review the properties and their descriptions and determine if they apply to your search requirements.
