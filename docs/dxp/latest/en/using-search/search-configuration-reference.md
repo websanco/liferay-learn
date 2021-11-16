@@ -255,6 +255,17 @@ In Index Actions, re-index at one of these levels:
    * An individual indexable asset
    * All spell check indexes
 
+Beginning in Liferay 7.4, Server Administrators can also limit the scope of the re-index actions to specific [Virtual Instances](../../system-administration/configuring-liferay/virtual-instances/understanding-virtual-instances.md). To choose which instances the index actions apply to,
+
+1. Open Global Menu &rarr; Control Panel &rarr; Search and click the Index Actions tab.
+1. Use the Execution Scope tab to choose the instances to re-index.
+
+   ![Select the instances to re-index.](./search-configuration-reference/images/05.png)
+
+```{note}
+[Workflow Metrics](../process-automation/workflow/using-workflows/using-workflow-metrics.md) are re-indexed via the application's dedicated settings menu. In the Global Menu, click _Metrics_ in the Applications &rarr; Workflow section, then open the Settings window (![Options](../images/icon-actions.png)). See [Re-Indexing Workflow Metrics](../process-automation/workflow/using-workflows/using-workflow-metrics.md#re-indexing-workflow-metrics) for more information.
+```
+
 #### Field Mappings
 
 The Field Mappings tab shows you all field mappings that are effective in the system, by index. Currently, you can view the mappings, copy them, zoom in or out, and view them with a dark theme.
