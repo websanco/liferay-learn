@@ -8,7 +8,7 @@ import aQute.bnd.annotation.metatype.Meta;
 )
 public interface B7R2WebConfiguration {
 
-	@Meta.AD(deflt = "blue", required = false)
+	@Meta.AD(deflt = "blue", name = "b7r2-color", required = false)
 	public String b7r2Color();
 
 }
