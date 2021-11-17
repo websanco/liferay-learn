@@ -1,4 +1,4 @@
-package com.acme.b7r2.web.internal.configuration.admin.util;
+package com.acme.b7r2.web.internal.util;
 
 import com.acme.b7r2.web.internal.configuration.B7R2WebConfiguration;
 
@@ -48,13 +48,13 @@ public class B7R2ConfigurationFormRenderer
 		throws IOException {
 
 		try {
-			RequestDispatcher requestDispatcher =
-				_servletContext.getRequestDispatcher("/b7r2.jsp");
-
 			httpServletRequest.setAttribute(
 				B7R2WebConfiguration.class.getName(),
 				_configurationProvider.getSystemConfiguration(
 					B7R2WebConfiguration.class));
+
+			RequestDispatcher requestDispatcher =
+				_servletContext.getRequestDispatcher("/b7r2.jsp");
 
 			requestDispatcher.include(httpServletRequest, httpServletResponse);
 		}
