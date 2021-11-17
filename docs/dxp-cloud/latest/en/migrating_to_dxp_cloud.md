@@ -15,11 +15,11 @@ migrating-to-dxp-cloud/next-steps-after-migration.md
 ```
 
 - [Getting Started with Migration to DXP Cloud](./migrating-to-dxp-cloud/getting-started-with-migration-to-dxp-cloud.md)
-- [Matching DXP Versions](./migrating-to-dxp-cloud/matching-dxp-versions.md)
-- [Creating Data Backup Files](./migrating-to-dxp-cloud/creating-data-backup-files.md)
-- [Uploading and Restoring the Data Backup](./migrating-to-dxp-cloud/uploading-and-restoring-the-data-backup.md)
-- [Migrating DXP Configurations and Customizations](./migrating-to-dxp-cloud/migrating-dxp-configurations-and-customizations.md)
-- [Migrating Web Server Configurations](./migrating-to-dxp-cloud/migrating-web-server-configurations.md)
-- [Migrating Search Configurations](./migrating-to-dxp-cloud/migrating-search-configurations.md)
-- [Connecting the VPN](./migrating-to-dxp-cloud/connecting-the-vpn.md)
+- [Step 1: Matching DXP Versions](./migrating-to-dxp-cloud/matching-dxp-versions.md)
+- [Step 2: Creating Data Backup Files](./migrating-to-dxp-cloud/creating-data-backup-files.md)
+- [Step 3: Uploading and Restoring the Data Backup](./migrating-to-dxp-cloud/uploading-and-restoring-the-data-backup.md)
+- [Step 4: Migrating DXP Configurations and Customizations](./migrating-to-dxp-cloud/migrating-dxp-configurations-and-customizations.md)
+- [Step 5: Migrating Web Server Configurations](./migrating-to-dxp-cloud/migrating-web-server-configurations.md)
+- [Step 6: Migrating Search Configurations](./migrating-to-dxp-cloud/migrating-search-configurations.md)
+- [Step 7: Connecting the VPN](./migrating-to-dxp-cloud/connecting-the-vpn.md)
 - [Next Steps after Migration](./migrating-to-dxp-cloud/next-steps-after-migration.md)
