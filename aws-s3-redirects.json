@@ -25,7 +25,23 @@
 	},
 	{
 		"Condition": {
-			"KeyPrefixEquals": "dxp/"
+			"KeyPrefixEquals": "dxp/apps"
+		},
+		"Redirect": {
+			"ReplaceKeyPrefixWith": "reference/latest/en/"
+		}
+	},
+	{
+		"Condition": {
+			"KeyPrefixEquals": "dxp/digital-enterprise"
+		},
+		"Redirect": {
+			"ReplaceKeyPrefixWith": "reference/latest/en/"
+		}
+	},
+	{
+		"Condition": {
+			"KeyPrefixEquals": "dxp/portal"
 		},
 		"Redirect": {
 			"ReplaceKeyPrefixWith": "reference/latest/en/"
