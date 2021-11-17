@@ -1,7 +1,6 @@
 # Step 1: Matching DXP Versions
 
-
-For a Liferay DXP migration to work seamlessly, both systems involved need to run the same version of Liferay. The first step of migration is to configure the Liferay service running on DXP Cloud to run the same version of the installation you want to migrate.
+For migration to work seamlessly, your on-premises system and your DXP Cloud environment both need to run the same version of Liferay. The first step of migration is to configure the Liferay service running on DXP Cloud to run the same version of the installation you want to migrate.
 
 This involves cloning the DXP Cloud repository, making some version updates to it, and then applying such updates back to DXP Cloud by deploying a build.
 
@@ -37,9 +36,9 @@ DXP Cloud provides a repository on [GitHub](https://github.com/) together with y
 
 If you have not already cloned the repository, then use any terminal with [Git installed](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) to clone it locally:
 
-    ```bash
-    git clone https://github.com/dxpcloud/acme
-    ```
+```bash
+git clone https://github.com/dxpcloud/acme
+```
 
 ## Update the Liferay DXP Image in the Repository 
 
@@ -48,6 +47,8 @@ Next, you must update the Liferay DXP image in the repository you [cloned previo
 1. Go to the [Liferay DXP images](https://hub.docker.com/r/liferay/dxp/tags) page on Docker Hub.
 
 1. Using the *Filter Tags* field, filter the list of images using the major version and fix pack number you [found previously](#find-liferay-version-information) (for example, with the form `7.2.10-dxp-5`). Copy this Docker image name.
+
+    ![Use the Filter Tags field to narrow down the list of Liferay DXP images to the major version you are looking for.](./matching-dxp-versions/images/02.png)
 
     ```{tip}
     If you find multiple Docker images, then copy the latest match. With the list sorted by latest, the latest Liferay DXP image is listed at the top even if its name has a timestamp appended.
@@ -73,11 +74,11 @@ Next, update the Liferay service image in the Liferay service's `LCP.json` file 
 
 1. Click on the most recent services update at the top of the list.
 
-    ![Click on the most recent services update link to ensure your environment is up-to-date.](./matching-dxp-versions/images/02.png)
+    ![Click on the most recent services update link to ensure your environment is up-to-date.](./matching-dxp-versions/images/03.png)
 
 1. Look for the **Liferay** service images listed on the page. Copy the image name that matches the *major version* of your on-premises Liferay installation.
 
-    ![From the Liferay service images listed, pick the one that matches your Liferay installation's major version.](./matching-dxp-versions/images/03.png)
+    ![From the Liferay service images listed, pick the one that matches your Liferay installation's major version.](./matching-dxp-versions/images/04.png)
 
 1. In your repository, open the `liferay/LCP.json` file.
 
@@ -97,7 +98,7 @@ You must also add hotfix information for the [patches installed in your on-premi
 
 1. To check the list of installed patches, run the `./patching-tool.sh info` command again from the `$LIFERAY_HOME/patching-tool` folder.
 
-    ![You must update your LCP.json with the latest hotfix from your currently installed patches.](./matching-dxp-versions/images/04.png)
+    ![You must update your LCP.json with the latest hotfix from your currently installed patches.](./matching-dxp-versions/images/05.png)
 
     Copy the name of the currently installed hotfix (or "patch") in your installation. If multiple hotfix names appear, then copy the name of the latest available hotfix.
 
@@ -151,13 +152,13 @@ Finally, use the [DXP Cloud Console](https://console.liferay.cloud/) to deploy t
 
 1. Find the build you created previously in the list, and from the Actions menu, click *Deploy build to*.
 
-    ![Use the build's Actions menu to deploy it.](./matching-dxp-versions/images/05.png)
+    ![Use the build's Actions menu to deploy it.](./matching-dxp-versions/images/06.png)
 
 1. Select the environment to deploy the build to (e.g., `acme-dev`).
 
 1. Read the information below and select the confirmation boxes to confirm the results of the deployment.
 
-    ![Check the checkboxes and deploy the build when ready.](./matching-dxp-versions/images/06.png)
+    ![Check the checkboxes and deploy the build when ready.](./matching-dxp-versions/images/07.png)
 
 1. Click *Deploy Build*.
 
