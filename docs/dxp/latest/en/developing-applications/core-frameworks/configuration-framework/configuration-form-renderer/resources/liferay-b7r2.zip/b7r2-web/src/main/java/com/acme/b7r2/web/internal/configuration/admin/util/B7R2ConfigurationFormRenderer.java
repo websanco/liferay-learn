@@ -32,13 +32,13 @@ public class B7R2ConfigurationFormRenderer
 	public Map<String, Object> getRequestParameters(
 		HttpServletRequest httpServletRequest) {
 
-		Map<String, Object> params = new HashMap<>();
-
 		String b7r2Color = ParamUtil.getString(httpServletRequest, "b7r2Color");
 
-		params.put("b7r2Color", b7r2Color);
-
-		return params;
+		return new HashMap<String, Object>() {
+			{
+				put("b7r2Color", b7r2Color);
+			}
+		};
 	}
 
 	@Override
