@@ -7,6 +7,7 @@ liferay-enterprise-search/activating-liferay-enterprise-search.md
 liferay-enterprise-search/cross-cluster-replication.md
 liferay-enterprise-search/learning-to-rank.md
 liferay-enterprise-search/monitoring-elasticsearch.md
+liferay-enterprise-search/search_experiences.md
 ```
 
 A Liferay Enterprise Search (LES) subscription provides access to additional search features beyond what's available out of the box with your Liferay DXP subscription. To see a detailed description of the services and features included with LES on your version of Liferay DXP, refer to the official description of LES in the [Liferay DXP Components resource](https://help.liferay.com/hc/en-us/articles/360014400932). While LES is installed out of the box, a license is required to use its features. The activation article has more details:
@@ -22,6 +23,7 @@ Detailed installation and usage instructions are available in the article for ea
 - [Cross Cluster Replication](liferay-enterprise-search/cross-cluster-replication.md)
 - [Learning to Rank](liferay-enterprise-search/learning-to-rank.md)
 - [Monitoring Elasticsearch](liferay-enterprise-search/monitoring-elasticsearch.md)
+- [Search Experiences](liferay-enterprise-search/search_experiences.md)
 - [Securing Elasticsearch](installing-and-upgrading-a-search-engine/elasticsearch/securing-elasticsearch.md) [Free without LES for Liferay CE and DXP with Elasticsearch 7] 
 
 ```{important}
