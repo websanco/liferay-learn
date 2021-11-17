@@ -40,7 +40,7 @@ Info badge:
 </div>
 ```
 
-![A info badge is dark blue and meant for numbers related to general information.](./03-clay-badges/images/03.png)
+![A info badge is dark blue and meant for numbers related to general information.](./clay-badges/images/03.png)
 
 Error badge:
 
