@@ -1,0 +1,4 @@
+Bundle-Name: Acme B7R2 Web
+Bundle-SymbolicName: com.acme.b7r2.web
+Bundle-Version: 1.0.0
+Web-ContextPath: /b7r2-web
