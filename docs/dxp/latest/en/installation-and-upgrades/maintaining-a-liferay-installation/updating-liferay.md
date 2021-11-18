@@ -20,7 +20,7 @@ Liferay DXP 7.3 and earlier use a patching model---it's different from the model
 
 Here's how to update your installation:
 
-1. Download the Update `.war` file.
+1. Download the Update's `.war` file and OSGi Dependencies ZIP file.
 
     * DXP: Help Center [Downloads](https://customer.liferay.com/downloads)
     * Portal: Liferay Community [Downloads](https://www.liferay.com/downloads-community)]
@@ -42,7 +42,9 @@ Here's how to update your installation:
     * [WebLogic](../installing-liferay/installing-liferay-on-an-application-server/installing-on-weblogic.md)
     * [WebSphere](../installing-liferay/installing-liferay-on-an-application-server/installing-on-websphere.md)
 
-1.  Clean up the Liferay cache.
+1. Merge the contents of the OSGi Dependencies ZIP file into your `[Liferay Home]/osgi` folder.
+
+1. Clean up the Liferay cache.
 
     Delete the `[Liferay Home]/osgi/state` folder.
 
@@ -63,9 +65,9 @@ Here's how to update your installation:
     If a module's changes are only internal, the changes are invisible to the OSGi framework, the module stays installed, and the module's state persists. Clearing the OSGi bundle state information before the next server startup ensures that such modules reinstall with the appropriate state.
     ```
 
-1.  If the release notes mention micro or minor schema/data changes, use the [Database Upgrade Tool](../upgrading-liferay/upgrade-basics/using-the-database-upgrade-tool.md) to apply minor changes (required) and any micro changes you want.
+1. If the release notes mention micro or minor schema/data changes, use the [Database Upgrade Tool](../upgrading-liferay/upgrade-basics/using-the-database-upgrade-tool.md) to apply minor changes (required) and any micro changes you want.
 
-1.  If the release notes mention index updates, configure Liferay to update the indexes on startup. Set the [`database.indexes.update.on.startup`](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#Database) Portal Property to `true` in a [`portal-ext.properties` file](../reference/portal-properties.md). For example,
+1. If the release notes mention index updates, configure Liferay to update the indexes on startup. Set the [`database.indexes.update.on.startup`](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#Database) Portal Property to `true` in a [`portal-ext.properties` file](../reference/portal-properties.md). For example,
 
     ```properties
     database.indexes.update.on.startup=true
@@ -73,7 +75,7 @@ Here's how to update your installation:
 
     Only indexes that start with `LIFERAY_` OR `IX_` are updated. Make sure any custom indexes you have do not use this naming convention.
 
-1.  Start the application server again.
+1. Start the application server again.
 
 Congratulations! Your Liferay instance is updated and running.
 
