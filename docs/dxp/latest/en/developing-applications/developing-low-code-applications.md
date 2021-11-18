@@ -4,7 +4,6 @@
 :maxdepth: 3
 
 developing-low-code-applications/objects.md
-developing-low-code-applications/app-builder.md
 ```
 
 Liferay CE/DXP 7.4 introduces Objects, which you can use to create business applications without writing any code or deploying modules. This dramatically simplifies and lowers the learning curve for customizing Liferay Portal/DXP to fit your business needs.

@@ -86,7 +86,7 @@ Here are some of the applications that can be managed from the _Applications Men
 
 * [Collections](../content-authoring-and-management/collections-and-collection-pages/about-collections-and-collection-pages.md) and the Content Dashboard
 * [Workflow](../process-automation/workflow/introduction-to-workflow.md)
-* [App Builder](../developing-applications/developing-low-code-applications/app-builder-overview.md)
+* [App Builder](../developing-applications/app-builder.md)
 
 ### Commerce Menu
 

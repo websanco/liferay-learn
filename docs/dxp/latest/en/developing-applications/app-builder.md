@@ -1,12 +1,21 @@
-# App Builder Overview
+# App Builder
 
-> Available: Liferay CE/DXP 7.3 ([deprecated and removed in 7.4](../../../installation-and-upgrades/upgrading-liferay/reference/maintenance-mode-and-deprecations-in-7-4.md#features-deprecated-in-7-4))
+```{toctree}
+:maxdepth: 3
+
+app-builder/creating-a-standard-application.md
+app-builder/creating-a-workflow-powered-application.md
+app-builder/creating-the-role-change-request-object.md
+app-builder/creating-the-role-change-request-app.md
+```
+
+> Available: Liferay CE/DXP 7.3 ([deprecated and removed in 7.4](../installation-and-upgrades/upgrading-liferay/reference/maintenance-mode-and-deprecations-in-7-4.md#features-deprecated-in-7-4))
 
 App Builder is a low-code application development solution for Liferay DXP. Build a data model, define the application's forms (for entering data) and tables (for viewing and managing data records), then deploy your application to a Site or as a completely standalone application. With App Builder, you can create functional business applications with dedicated user interfaces and data separation without a single line of code.
 
-![Two separate applications are deployed for this App Builder object.](./app-builder-overview/images/01.png)
+![Two separate applications are deployed for this App Builder object.](./app-builder/images/01.png)
 
-Why use App Builder when the [Liferay Forms](../../process-automation/forms/introduction-to-forms.md) application includes similar form-building capabilities? Here's an overview of the differences:
+Why use App Builder when the [Liferay Forms](../process-automation/forms/introduction-to-forms.md) application includes similar form-building capabilities? Here's an overview of the differences:
 
 | Capability | Liferay Forms | App Builder |
 |------------|:-------------:|:-----------:|
@@ -23,7 +32,7 @@ App Builder goes beyond forms by providing data display tables, flexible deploym
 
 ## Creating an App
 
-App Builder comes in two flavors: Standard and Workflow Powered. All apps made with App builder consist of three components defined in the app builder UI: objects, form views, and table views. To skip straight to building an application, see [Creating an Application with App Builder](./creating-a-standard-application.md).
+App Builder comes in two flavors: Standard and Workflow Powered. All apps made with App builder consist of three components defined in the app builder UI: objects, form views, and table views. To skip straight to building an application, see [Creating an Application with App Builder](./app-builder/creating-a-standard-application.md).
 
 ### App Builder Objects
 
@@ -55,19 +64,27 @@ Once an object is defined and at least one form and table view are created, you 
 | App Name [Form View]  |     &#10004;   |         |          |
 | App Name [Table View] |        |      &#10004;   |      &#10004;       |
 
-![App Builder widgets are placed on pages.](./app-builder-overview/images/03.png)
+![App Builder widgets are placed on pages.](./app-builder/images/03.png)
 
 **Standalone:** Deploy the application to a dedicated page that's not part of a site and not visible to any navigation menu. This limits access to only those with the link.
 
-![Standalone App Builder applications are accessible only by direct link](./app-builder-overview/images/04.png)
+![Standalone App Builder applications are accessible only by direct link](./app-builder/images/04.png)
 
 **Product Menu:** Deploy the application to the Control Panel, the Site Menu, or both. This gives you flexibility in deciding which administrative Users can access the application.
 
-![App Builder applications can be added to the Product Menu.](./app-builder-overview/images/02.png)
+![App Builder applications can be added to the Product Menu.](./app-builder/images/02.png)
 
 A Standalone or Product Menu application always includes both the form and table view. The table view is the default view, while an add button provides access to the form view.
 
 ## Next Steps
 
-* [Creating an Application with App Builder](./creating-a-standard-application.md)
-* [Creating a Workflow Powered Application](./creating-a-workflow-powered-application.md)
+* [Creating an Application with App Builder](./app-builder/creating-a-standard-application.md)
+* [Creating a Workflow Powered Application](./app-builder/creating-a-workflow-powered-application.md)
+
+```{raw} html
+:file: ../landingpage_template.html
+```
+
+```{raw} html
+:file: app-builder/landing.html
+```

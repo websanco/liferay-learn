@@ -24,7 +24,7 @@ Each step has configuration options depending on its stage in the workflow:
 
 ## App Versions
 
-Workflow Powered Apps are versioned, because [workflow processes are versioned](../../../process-automation/workflow/designing-and-managing-workflows/managing-workflows.md#viewing-and-restoring-workflow-revisions). A new version of the app is created when you
+Workflow Powered Apps are versioned, because [workflow processes are versioned](../../process-automation/workflow/designing-and-managing-workflows/managing-workflows.md#viewing-and-restoring-workflow-revisions). A new version of the app is created when you
 
 - Add, edit, or remove steps or transitions in the workflow process (actions that generate a new version of the workflow process).
 - Add, update, or remove a form view in one of the workflow steps.
@@ -34,7 +34,7 @@ A new version of the Workflow Powered App only applies to new submissions. The a
 
 ## Related Information
 
-* [App Builder Overview](./app-builder-overview.md)
+* [App Builder Overview](../app-builder.md)
 * [Creating a Standard Application](./creating-a-standard-application.md)
-* [Workflow](../../../process-automation/workflow/introduction-to-workflow.md)
-* [Roles and Permissions](../../../users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.md)
+* [Workflow](../../process-automation/workflow/introduction-to-workflow.md)
+* [Roles and Permissions](../../users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.md)

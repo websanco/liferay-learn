@@ -12,6 +12,7 @@ Developing Applications
    developing-applications/data-frameworks.md
    developing-applications/tooling.rst
    developing-applications/reference.md
+   developing-applications/app-builder.md
 
 .. raw:: html
    :file: landingpage_template.html

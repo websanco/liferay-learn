@@ -138,7 +138,7 @@ If you use your site to support products, the new [Questions app](../collaborati
 
 ![App Builder provides an in-browser development environment for low-code applications.](./whats-new-73/images/19.png)
 
-[App Builder](../developing-applications/developing-low-code-applications/app-builder-overview.md) is a new low-code application development solution for Liferay DXP backed by the Data Engine. It empowers business users with an intuitive GUI to define forms and table views and leverage workflows to build applications with the goal of digitizing and automating business processes. Applications can be deployed in standalone fashion or added to pages as a widget or through the product menu.
+[App Builder](../developing-applications/app-builder.md) is a new low-code application development solution for Liferay DXP backed by the Data Engine. It empowers business users with an intuitive GUI to define forms and table views and leverage workflows to build applications with the goal of digitizing and automating business processes. Applications can be deployed in standalone fashion or added to pages as a widget or through the product menu.
 
 ### Form View Rules and Field Sets
 
