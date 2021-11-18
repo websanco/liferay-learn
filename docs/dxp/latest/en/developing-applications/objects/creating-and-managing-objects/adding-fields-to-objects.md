@@ -16,7 +16,7 @@ Follow these steps to add a new field to an Object:
 
 1. Select the desired Object.
 
-1. Click on the *Fields* tab, and click on the *Add* button (![Add Button](../../../../images/icon-add.png)).
+1. Click on the *Fields* tab, and click on the *Add* button (![Add Button](../../../images/icon-add.png)).
 
    ![In the Fields tab, click on the Add button and enter the required details.](./adding-fields-to-objects/images/01.png)
 

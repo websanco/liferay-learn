@@ -24,7 +24,7 @@ Follow these steps to add relationships to an Object:
 
 1. Select the desired Object.
 
-1. Click the *Relationships* tab and select the *Add* button (![Add Button](../../../../images/icon-add.png)).
+1. Click the *Relationships* tab and select the *Add* button (![Add Button](../../images/icon-add.png)).
 
    ![Click on the Add button in the Relationships tab, then enter a label abd name, and select a relationship type and the desired Object.](./defining-object-relationships/images/01.png)
 
@@ -46,7 +46,7 @@ Follow these steps to add relationships to an Object:
 
    ![After clicking Save, the saved relationship is listed in the Relationships tab.](./defining-object-relationships/images/02.png)
 
-Once saved, the new relationship can be [added to custom layouts](designing-object-layouts.md) for the related Objects. You can then use the relationship fields and tables to relate Object entries to one another.
+Once saved, the new relationship can be [added to custom layouts](./designing-object-layouts.md) for the related Objects. You can then use the relationship fields and tables to relate Object entries to one another.
 
 ```{important}
 While the Object is a draft, you can edit and remove relationships from the parent side. Once an Object is published, however, any existing or newly added relationships cannot be removed. Users can only configure a relationship's label and [deletion type](#configuring-deletion-type).

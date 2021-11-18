@@ -10,7 +10,7 @@ The automatically generated layout does not display Object relationships. To dis
 
 1. Open the *Objects* portlet and click on the desired *Object*.
 
-1. Click the *Layouts* tab and select the *Add* button (![Add Button](../../../../images/icon-add.png)).
+1. Click the *Layouts* tab and select the *Add* button (![Add Button](../../../images/icon-add.png)).
 
    ![Click on the Add button in the Layouts tab, enter a Name for the new layout, and click on Save.](./designing-object-layouts/images/01.png)
 

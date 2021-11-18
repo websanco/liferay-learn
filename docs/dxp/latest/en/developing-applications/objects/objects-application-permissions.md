@@ -4,11 +4,11 @@ Like other Liferay applications, the Objects portlet is integrated with the perm
 
 ![Assign Objects permissions when defining role permissions.](./objects-application-permissions/images/01.png)
 
-See [Defining Role Permissions](../../../users-and-permissions/roles-and-permissions/defining-role-permissions.md) for more information about assigning permissions to user roles.
+See [Defining Role Permissions](../../users-and-permissions/roles-and-permissions/defining-role-permissions.md) for more information about assigning permissions to user roles.
 
 ## Application Permissions
 
-Application permissions grant permission to perform general application-related operations and do not include [resource-related permissions](#object-resource-permissions).
+Application permissions grant permission to perform general application-related operations and do not include [resource-related permissions](#resource-permissions).
 
 The Objects portlet has the following application permissions:
 
@@ -46,6 +46,6 @@ The Object's portlet has the following resource permissions.
 
 ## Additional Information
 
-* [Introduction to Objects](../objects.md)
+* [Objects Overview](../objects.md)
 * [Creating Objects](./creating-and-managing-objects/creating-objects.md)
 * [Managing Objects](./creating-and-managing-objects/managing-objects.md)

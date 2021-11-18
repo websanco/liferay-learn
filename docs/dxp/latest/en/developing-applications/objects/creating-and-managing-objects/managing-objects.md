@@ -5,7 +5,7 @@ The Objects portlet provides a powerful way to manage both system and custom Obj
 ![Use the Objects portlet to view and manage both system and custom Objects.](./managing-objects/images/01.png)
 
 ```{note}
-See [Objects Application Permissions](../objects-admin-permission.md) to learn more about the permissions necessary for performing these management actions.
+See [Objects Application Permissions](../objects-application-permissions.md) to learn more about the permissions necessary for performing these management actions.
 ```
 
 ## Editing and Extending Objects
@@ -62,12 +62,12 @@ Follow these steps to deactivate or activate a custom Object.
 
 You can remove Object drafts. However, once an Object has been published, it cannot be removed. Published Objects can only be [activated or deactivated](#activating-and-deactivating-objects).
 
-To remove an Object draft, click its *Actions* button (![Actions Button](../../../../images/icon-actions.png)) and select *Delete*.
+To remove an Object draft, click its *Actions* button (![Actions Button](../../../images/icon-actions.png)) and select *Delete*.
 
 ![Click on the Actions button for an Object draft, and select Delete.](./managing-objects/images/06.png)
 
 ## Additional Information
 
-* [Introduction to Objects](../../objects.md)
+* [Objects Overview](../../objects.md)
 * [Creating Objects](./creating-objects.md)
 <!--TASK: Add once article is finished * [Objects UI Reference](../objects-ui-reference.md) -->

@@ -4,6 +4,7 @@ Developing Applications
 .. toctree::
    :maxdepth: 4
 
+   developing-applications/objects.md
    developing-applications/developing-low-code-applications.md
    developing-applications/developing-a-javascript-application.md
    developing-applications/developing_a_rest_web_api.rst

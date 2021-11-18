@@ -8,9 +8,9 @@ Object drafts are application templates stored in the Objects portlet. The data 
 
 Follow these steps to create an Object draft:
 
-1. Open the *Global Menu* (![Global Menu](../../../../images/icon-applications-menu.png)), go to the *Control Panel* tab, and click on *Objects*.
+1. Open the *Global Menu* (![Global Menu](../../../images/icon-applications-menu.png)), go to the *Control Panel* tab, and click on *Objects*.
 
-1. Click the *Add* button (![Add Button](../../../../images/icon-add.png)).
+1. Click the *Add* button (![Add Button](../../../images/icon-add.png)).
 
 1. Provide these details for your new Object.
 
@@ -100,7 +100,7 @@ The publishing process includes the following operations:
 
 * A Collection Provider is created for displaying the Object's entries.
 
-* The Object is integrated with Info framework, so you can select the Object as a content type for a [Display Page Template](../../../../site-building/displaying-content/using-display-page-templates/about-display-page-templates-and-display-pages.md)
+* The Object is integrated with Info framework, so you can select the Object as a content type for a [Display Page Template](../../../site-building/displaying-content/using-display-page-templates/about-display-page-templates-and-display-pages.md)
 
 * The Object is integrated with the [Permissions framework](../understanding-object-integrations/permissions-framework-integration.md), so you can manage permissions for the new application and its resources.
 
@@ -124,7 +124,7 @@ You can still edit and localize labels for Objects, fields, and relationships af
 
 ## Additional Information
 
-* [Introduction to Objects](../../objects.md)
+* [Objects Overview](../../objects.md)
 * [Adding Fields to Objects](./adding-fields-to-objects.md)
 * [Defining Object Relationships](./defining-object-relationships.md)
 * [Designing Object Layouts](./designing-object-layouts.md)
