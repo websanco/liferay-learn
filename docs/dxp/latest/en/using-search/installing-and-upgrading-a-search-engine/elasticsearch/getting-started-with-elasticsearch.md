@@ -9,7 +9,7 @@ A typical Liferay system's search infrastructure comprises
 * An Elasticsearch connector application deployed onto Liferay and configured to fit your deployment.
 
 ```{tip}
-Additional features and intergrations are available with a [Liferay Enterprise Search](../../liferay_enterprise_search.rst)_ subscription.
+Additional features and intergrations are available with a [Liferay Enterprise Search](../../liferay_enterprise_search.md)_ subscription.
 ```
 
 Assuming your Liferay servers are in place already, the remaining steps include

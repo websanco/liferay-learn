@@ -4,7 +4,7 @@
 :maxdepth: 4
 
 liferay-enterprise-search/activating-liferay-enterprise-search.md
-liferay-enterprise-search/cross_cluster_replication.rst
+liferay-enterprise-search/cross_cluster_replication.md
 liferay-enterprise-search/learning-to-rank.md
 liferay-enterprise-search/monitoring-elasticsearch.md
 ```

@@ -13,5 +13,5 @@ Search Results
    search-results/understanding-low-level-search-options.md
    search-results/custom-filter-examples.md
 
-.. include:: /using-search/search-pages-and-widgets/search-results/README.rst
+.. include:: /using-search/search-pages-and-widgets/search-results/README.md
    :start-line: 2

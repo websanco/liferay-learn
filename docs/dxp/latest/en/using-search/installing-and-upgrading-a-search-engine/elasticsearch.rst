@@ -11,7 +11,7 @@ Elasticsearch
    elasticsearch/exercise-run-liferay-and-elasticsearch-using-docker.md
    elasticsearch/troubleshooting-elasticsearch-installation.md
    elasticsearch/using-the-sidecar-or-embedded-elasticsearch.md
-   elasticsearch/upgrading_elasticsearch.rst
+   elasticsearch/upgrading_elasticsearch.md
    elasticsearch/elasticsearch-connector-configuration-reference.md
    elasticsearch/advanced-configuration-of-the-liferay-elasticsearch-connector.md
    

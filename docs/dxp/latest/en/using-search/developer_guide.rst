@@ -1,13 +1,13 @@
-Developer Guide
-===============
+# Developer Guide
 
-.. toctree::
-   :maxdepth: 2
+```{toctree}
+:maxdepth: 2
 
-   developer-guide/writing-a-similar-results-contributor.md
-   developer-guide/apis.rst
+developer-guide/writing-a-similar-results-contributor.md
+developer-guide/apis.md
+```
 
--  :doc:`/using-search/developer-guide/writing-a-similar-results-contributor`
+- [Contributing Custom Content to the Similar Results Widget](developer-guide/writing-a-similar-results-contributor.md)
 * Aggregations
 * Model Entity Indexing
 * Search Queries and Filters
