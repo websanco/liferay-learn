@@ -24,11 +24,8 @@ All Objects are integrated with Liferay's [Permissions framework](./understandin
 
 See [Creating Objects](./objects/creating-and-managing-objects/creating-objects.md) to get started building custom applications or [Understanding Object Integrations](./objects/understanding-object-integrations.md) to learn more about how Objects leverages Liferay's core frameworks.
 
-## Additional Information
-
-* [Creating Objects](./objects/creating-and-managing-objects/creating-objects.md)
-* [Understanding Object Integrations](./objects/understanding-object-integrations.md)
 <!--TASK: * [Objects UI Reference](./objects-ui-reference.md) -->
+
 ```{raw} html
 :file: ../../landingpage_template.html
 ```

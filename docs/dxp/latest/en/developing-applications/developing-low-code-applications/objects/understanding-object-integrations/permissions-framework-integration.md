@@ -48,6 +48,6 @@ Each Object also has the following resource permissions.
 ## Additional Information
 
 * [Understanding Object Integrations](../understanding-object-integrations.md)
-* [Introduction to Objects](../introduction-to-objects.md)
+* [Introduction to Objects](../../objects.md)
 * [Creating Objects](../creating-and-managing-objects/creating-objects.md)
 * [Managing Objects](../creating-and-managing-objects/managing-objects.md)

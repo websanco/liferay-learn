@@ -68,6 +68,6 @@ To remove an Object draft, click its *Actions* button (![Actions Button](../../.
 
 ## Additional Information
 
-* [Introduction to Objects](../introduction-to-objects.md)
+* [Introduction to Objects](../../objects.md)
 * [Creating Objects](./creating-objects.md)
 <!--TASK: Add once article is finished * [Objects UI Reference](../objects-ui-reference.md) -->
