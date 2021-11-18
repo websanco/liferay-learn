@@ -66,7 +66,7 @@ See [Configuring the Search Bar](../getting-started/searching-for-content.md#con
 
 ## Instance Scoped Search Configuration
 
-Search does not have any Instance scoped entries in the [Instance Settings](../../system-administration/configuring-liferay/understanding-configuration-scope.md#system-settings-and-instance-settings) panel in Liferay 7.3 and below. However, there are entries for configuring the instance-wide default [widget template](../../site-building/displaying-content/additional-content-display-options/styling-widgets-with-widget-templates.md) for many search widgets. Just enter the Site ID where the template is defined (often this will be the Global site's ID, found in its Site Settings panel) and the Widget Template ID, found in the Site Menu &rarr; Design &rarr; Widget Templates.
+Search does not have any Instance scoped entries in the [Instance Settings](../../system-administration/configuring-liferay/understanding-configuration-scope.md#system-settings-and-instance-settings) panel. However, there are entries for configuring the instance-wide default [widget template](../../site-building/displaying-content/additional-content-display-options/styling-widgets-with-widget-templates.md) for many search widgets. Just enter the Site ID where the template is defined (often this will be the Global site's ID, found in its Site Settings panel) and the Widget Template ID, found in the Site Menu &rarr; Design &rarr; Widget Templates.
 
 The only instance scoped configurations for search are the entries in the Global Menu &rarr; Applications &rarr; Search Tuning:
 
@@ -237,39 +237,14 @@ This entry has one repeatable property (use array syntax if you're defining via 
 
 In *Control Panel* &rarr; *Configuration* &rarr; *Search* there are three administrative UIs: Connections, Index Actions, and Field Mappings.
 
-![The Search Administration panel contains three management screens.](./search-configuration-reference/images/02.png)
-
-#### Connections
-
-Information about the search engine connection(s) is displayed here. For example,
-
-```bash
-Search Engine Vendor: Elasticsearch (Embedded), Client Version: 6.5.0, Nodes: A0D6GlN (6.5.0)
-```
-
-#### Index Actions
-
-In Index Actions, re-index at one of these levels:
-
-   * All indexable assets
-   * An individual indexable asset
-   * All spell check indexes
-
-Beginning in Liferay 7.4, Server Administrators can also limit the scope of the re-index actions to specific [Virtual Instances](../../system-administration/configuring-liferay/virtual-instances/understanding-virtual-instances.md). To choose which instances the index actions apply to,
-
-1. Open Global Menu &rarr; Control Panel &rarr; Search and click the Index Actions tab.
-1. Use the Execution Scope tab to choose the instances to re-index.
-
-   ![Select the instances to re-index.](./search-configuration-reference/images/05.png)
-
-```{note}
-[Workflow Metrics](../process-automation/workflow/using-workflows/using-workflow-metrics.md) are re-indexed via the application's dedicated settings menu. In the Global Menu, click _Metrics_ in the Applications &rarr; Workflow section, then open the Settings window (![Options](../images/icon-actions.png)). See [Re-Indexing Workflow Metrics](../process-automation/workflow/using-workflows/using-workflow-metrics.md#re-indexing-workflow-metrics) for more information.
-```
-
-#### Field Mappings
-
-The Field Mappings tab shows you all field mappings that are effective in the system, by index. Currently, you can view the mappings, copy them, zoom in or out, and view them with a dark theme.
+See the dedicated [Search Administration](search-administration.md) documentation for more details.
 
 ### Portal Properties
 
-Portal properties are system scoped as well. The [Lucene Search](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#Lucene%20Search) portal properties configure low level search behavior. Review the properties and their descriptions and determine if they apply to your search requirements. -->
+Portal properties are system scoped as well. The [Lucene Search](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#Lucene%20Search) portal properties configure low level search behavior. Review the properties and their descriptions and determine if they apply to your search requirements.
+
+## Related Content
+
+* [Search Administration](search-administration.md)
+* [Elasticsearch Connector Configuration Reference](../installing-and-upgrading-a-search-engine/elasticsearch/elasticsearch-connector-configuration-reference.md)
+* [Getting Started with Elasticsearch](../installing-and-upgrading-a-search-engine/elasticsearch/getting-started-with-elasticsearch.md)
