@@ -8,11 +8,10 @@ developer-guide/apis.md
 ```
 
 - [Contributing Custom Content to the Similar Results Widget](developer-guide/writing-a-similar-results-contributor.md)
-* Aggregations
-* Model Entity Indexing
-* Search Queries and Filters
+- Aggregations
+- Model Entity Indexing
+- Search Queries and Filters
 
-APIs
-----
+## APIs
 
--  :doc:`/using-search/developer-guide/apis`
+- [Search APIs](./developer-guide/apis.md)
