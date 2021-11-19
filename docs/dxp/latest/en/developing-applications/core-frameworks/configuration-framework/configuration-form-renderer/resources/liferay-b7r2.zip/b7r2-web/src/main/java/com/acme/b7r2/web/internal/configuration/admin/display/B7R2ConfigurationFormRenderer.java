@@ -1,4 +1,4 @@
-package com.acme.b7r2.web.internal.util;
+package com.acme.b7r2.web.internal.configuration.admin.display;
 
 import com.acme.b7r2.web.internal.configuration.B7R2WebConfiguration;
 
