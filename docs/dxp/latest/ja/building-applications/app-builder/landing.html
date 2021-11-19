@@ -1,0 +1,31 @@
+<script type="module">
+	import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.esm.browser.min.js'
+
+	const page = new Vue({
+		el: '#landingPage',
+		data: {
+			cards: [
+				{
+					sectionName: 'アプリビルダーの概要',
+					sectionURL: 'app-builder.html',
+				},
+				{
+					sectionName: '標準アプリケーションの作成',
+					sectionURL: 'app-builder/creating-a-standard-application.html',
+				},
+				{
+					sectionName: 'ワークフローを活用したアプリケーションの作成',
+					sectionURL: 'app-builder/creating-a-workflow-powered-application.html',
+				},
+				{
+					sectionName: '役割変更要求オブジェクトの作成',
+					sectionURL: 'app-builder/creating-the-role-change-request-object.html',
+				},
+				{
+					sectionName: '役割変更リクエストアプリの作成',
+					sectionURL: 'app-builder/creating-the-role-change-request-app.html',
+				},
+            ]
+		}
+	})
+</script>
