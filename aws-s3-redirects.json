@@ -1,26 +1,26 @@
 [
-    {
-        "Condition": {
-            "KeyPrefixEquals": "commerce/2.x/"
-        },
-        "Redirect": {
-            "ReplaceKeyPrefixWith": "commerce/latest/"
-        }
-    },
-		{
-			"Condition": {
-				"KeyPrefixEquals": "dxp/latest/developing-applications/"
-			},
-			"Redirect": {
-				"ReplaceKeyPrefixWith": "dxp/latest/building-applications/"
-			}
+	{
+		"Condition": {
+			"KeyPrefixEquals": "commerce/2.x/"
 		},
-		{
-        "Condition": {
-            "KeyPrefixEquals": "dxp/7.x/"
-        },
-        "Redirect": {
-            "ReplaceKeyPrefixWith": "dxp/latest/"
-        }
-    }
+		"Redirect": {
+			"ReplaceKeyPrefixWith": "commerce/latest/"
+		}
+	},
+	{
+		"Condition": {
+			"KeyPrefixEquals": "dxp/7.x/"
+		},
+		"Redirect": {
+			"ReplaceKeyPrefixWith": "dxp/latest/"
+		}
+	},
+	{
+		"Condition": {
+			"KeyPrefixEquals": "dxp/latest/developing-applications/"
+		},
+		"Redirect": {
+			"ReplaceKeyPrefixWith": "dxp/latest/building-applications/"
+		}
+	}
 ]
