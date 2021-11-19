@@ -12,8 +12,8 @@ Liferayインストールで構成可能なものはすべて、Liferay Docker�
 
 <!-- end list -->
 
-``` note::
-   ここでは、コンテナにファイルを提供する設定のユースケースを、 `bind mounts <https://docs.docker.com/storage/bind-mounts/>`_ を使用して示しています。 また、 `volumes <https://docs.docker.com/storage/volumes/>`_ を使ったり、場合によっては ``docker cp`` コマンドを使うこともできます。 詳細は、 `Providing File to the Container <./providing-files-to-the-container.md>`_ を参照してください。
+```{note}
+ここでは、コンテナにファイルを提供する設定のユースケースを、 [bind mounts](https://docs.docker.com/storage/bind-mounts/) を使用して示しています。 また、 [volumes](https://docs.docker.com/storage/volumes/) を使ったり、場合によっては `docker cp` コマンドを使うこともできます。 詳細は、 [Providing File to the Container](./providing-files-to-the-container.md) を参照してください。
 ```
 
 ## JVMオプション
@@ -28,8 +28,8 @@ JVM オプションは Tomcat の `CATALINA_OPTS` 変数に追加することが
 docker run -it --name [container] -p 8080:8080 -e LIFERAY_JVM_OPTS=[value\ with\ space] liferay/dxp:[tag]
 ```
 
-``` warning::
-   `` LIFERAY_JVM_OPTS``値では、バックスラッシュを使用してスペース文字をエスケープします。 引用符は使用しないでください。
+```{warning}
+` LIFERAY_JVM_OPTS`値では、バックスラッシュを使用してスペース文字をエスケープします。 引用符は使用しないでください。
 ```
 
 コンテナは Tomcat の `CATALINA_OPTS` に追加された `LIFERAY_JVM_OPTS` で実行されます。
@@ -69,12 +69,12 @@ JVMオプションを設定する別の方法には、Tomcatの `setenv.sh` ス�
 
 コンテナは `setenv.sh` スクリプトの JVM オプションを使用します。
 
-``` note::
-   コンテナの``/mnt/liferay``フォルダへのバインドマウントについては、 `Providing Files to the Container <./providing-files-to-the-container.md#bind-mounting-a-host-folder-to-mnt-liferay>`_ を参照してください。
+```{note}
+コンテナの`/mnt/liferay`フォルダへのバインドマウントについては、 [Providing Files to the Container](./providing-files-to-the-container.md#bind-mounting-a-host-folder-to-mnt-liferay) を参照してください。
 ```
 
-``` note::
-   Liferayコンテナの起動と動作に関する詳細は、 `Docker Container Basics <./docker-container-basics.md>`_ を参照してください。
+```{note}
+Liferayコンテナの起動と動作に関する詳細は、 [Docker Container Basics](./docker-container-basics.md) を参照してください。
 ```
 
 ## ポータルプロパティ
@@ -100,12 +100,12 @@ JVMオプションを設定する別の方法には、Tomcatの `setenv.sh` ス�
    
         docker run -it --name [container] -p 8080:8080 -e LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_JNDI_PERIOD_NAME=jdbc/MyPool liferay/dxp:[tag]
 
-    ``` warning::
-       ``Env``変数値では、バックスラッシュを使用してスペース文字をエスケープします。 引用符は使用しないでください。
+    ```{warning}
+    `Env`変数値では、バックスラッシュを使用してスペース文字をエスケープします。 引用符は使用しないでください。
     ```
 
-    ``` note::
-       コンテナの起動と動作に関する詳細は、 `Docker Container Basics <./docker-container-basics.md>`_ を参照してください。
+    ```{note}
+    コンテナの起動と動作に関する詳細は、 [Docker Container Basics](./docker-container-basics.md) を参照してください。
     ```
 
 プロパティは、コントロールパネルの *[設定]* → *[サーバー管理]* → *[プロパティ]* → *[ポータルプロパティ]* で表示されます。
@@ -220,8 +220,8 @@ LIFERAY_TERMS_PERIOD_OF_PERIOD_USE_PERIOD_REQUIRED=false
     docker run -it --name [container] -p 8080:8080 -v [host folder path]:/mnt/liferay liferay/dxp:[tag]
     ```
 
-    ``` note::
-       コンテナの``/mnt/liferay``フォルダへのバインドマウントについては、 `Providing Files to the Container <./providing-files-to-the-container.md#bind-mounting-a-host-folder-to-mnt-liferay>`_ を参照してください。
+    ```{note}
+    コンテナの`/mnt/liferay`フォルダへのバインドマウントについては、 [Providing Files to the Container](./providing-files-to-the-container.md#bind-mounting-a-host-folder-to-mnt-liferay) を参照してください。
     ```
 
 プロパティは、コントロールパネルの *構成* → *サーバー管理* → *プロパティ* → *システムプロパティ*で表示されます。
@@ -256,8 +256,8 @@ Liferayシステム設定は、 [コントロールパネル](../../../system-ad
     docker run -it --name [container] -p 8080:8080 -v [host folder path]:/mnt/liferay liferay/dxp:[tag]
     ```
 
-    ``` note::
-       コンテナの``/mnt/liferay``フォルダへのバインドマウントについては、 `Providing Files to the Container <./providing-files-to-the-container.md#bind-mounting-a-host-folder-to-mnt-liferay>`_ を参照してください。
+    ```{note}
+    コンテナの`/mnt/liferay`フォルダへのバインドマウントについては、 [Providing Files to the Container](./providing-files-to-the-container.md#bind-mounting-a-host-folder-to-mnt-liferay) を参照してください。
     ```
 
 システムコンポーネントの構成は、そのコンポーネントの画面のコントロールパネルで、*[設定]* → *[システム設定]* に表示されます。

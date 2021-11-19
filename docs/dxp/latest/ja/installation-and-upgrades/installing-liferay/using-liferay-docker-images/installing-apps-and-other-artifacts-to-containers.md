@@ -9,8 +9,8 @@
 
 <!-- end list -->
 
-``` note::
-   `Docker ボリューム <https://docs.docker.com/storage/volumes/>`_ を使用して、コンテナにアーティファクトをインストールすることもできます。
+```{note}
+[Docker ボリューム](https://docs.docker.com/storage/volumes/) を使用して、コンテナにアーティファクトをインストールすることもできます。
 ```
 
 ## バインドマウントを使用したアーティファクトのインストール
@@ -41,8 +41,8 @@ Liferayが起動してアーティファクトをインストールします。 
 [LIFERAY] ディレクトリ/mnt/liferay/deployの準備ができました。 ファイルをホストオペレーティングシステムの[host folder]/deployにコピーして、ランタイム時にモジュールをLiferayポータルにデプロイします。
 ```
 
-``` note::
-   Liferayの起動後、追加のアーティファクトを``[host folder]/deployフォルダにコピーすることでLiferayにインストールできます。
+```{note}
+Liferayの起動後、追加のアーティファクトを`[host folder]/deployフォルダにコピーすることでLiferayにインストールできます。
 ```
 
 ## `docker cp`を使用したアーティファクトのインストール

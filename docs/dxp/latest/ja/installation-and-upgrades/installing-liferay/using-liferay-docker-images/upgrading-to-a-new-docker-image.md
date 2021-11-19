@@ -2,8 +2,8 @@
 
 新しいLiferayバージョンがDockerイメージとしてリリースされると、それらにアップグレードできます。 [Upgrade Overview](../../upgrading-liferay/upgrade-basics/upgrade-overview.md)では、プロセスについて説明しています。
 
-``` important::
-   アップグレードする前に、**必ず**データベースとインストールをバックアップ<../../maintaining-a-liferay-installation/backing-up.md>してください。 バックアップコピーでアップグレードプロセスをテストすることをお勧めします。
+```{important}
+アップグレードする前に、**必ず**データベースとインストールをバックアップ<../../maintaining-a-liferay-installation/backing-up.md>してください。 バックアップコピーでアップグレードプロセスをテストすることをお勧めします。
 ```
 
 アップグレードには、設定、マーケットプレイスアプリケーション、およびカスタムコードの更新が含まれます。 おそらく、アップグレードの最大の部分は、Liferayデータベースのアップグレードです。 データベースをアップグレードするには、2つの方法があります。

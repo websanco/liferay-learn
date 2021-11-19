@@ -24,8 +24,8 @@ Docker Hub ホスト [Liferay DXP](https://hub.docker.com/r/liferay/dxp) と [Li
     docker run -it --name [some name] -p 8080:8080 [$LIFERAY_LEARN_DXP_DOCKER_IMAGE$]
     ```
 
-    ``` note::
-       コンテナの命名はオプションですが、コンテナの管理が容易になります。
+    ```{note}
+    コンテナの命名はオプションですが、コンテナの管理が容易になります。
     ```
 
 
@@ -43,8 +43,8 @@ Liferayを使用する準備が整いました。
 
 Liferayログメッセージとログファイルは、ライブで表示したり、ホストにコピーしたりできます。
 
-``` tip::
-   ``[container]``値は、 `` run``コマンドで `` --name [some name] ``を介して入力した名前です。
+```{tip}
+`[container]`値は、 ` run`コマンドで ` --name [some name] `を介して入力した名前です。
 ```
 
 ### `Dockerログ` コマンド
@@ -82,8 +82,8 @@ docker cp [container]:/opt/liferay/logs/liferay.[timestamp].log .
 docker start [container]
 ```
 
-``` warning::
-   コンテナが再起動すると、そのエントリーポイントが再度実行されます（「 `Container Lifecycle and API <./container-lifecycle-and-api.md#lifecycle>`_ 」を参照してください）。 `エントリーポイントを介して実行している <./running-scripts-in-containers.md>`_ スクリプトが安全に再実行できることを確認してください。
+```{warning}
+コンテナが再起動すると、そのエントリーポイントが再度実行されます（「 [Container Lifecycle and API](./container-lifecycle-and-api.md#lifecycle) 」を参照してください）。 [エントリーポイントを介して実行している](./running-scripts-in-containers.md) スクリプトが安全に再実行できることを確認してください。
 ```
 
 これで、Liferayコンテナの開始、停止、監視の基本を理解できました。

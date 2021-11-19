@@ -87,8 +87,8 @@ DXPを実行するためのTomcatの構成には、次のものが含まれま�
     DXPでは、アプリケーションサーバーのJVMがGMTタイムゾーンとUTF-8ファイルエンコーディングを使用する必要があります。
     ```
 
-    ``` Note::
-       JDK 11では、次のJVM引数を追加して4桁の年を表示することをお勧めします：``-Djava.locale.providers=JRE,COMPAT,CLDR``
+    ```{note}
+    JDK 11では、次のJVM引数を追加して4桁の年を表示することをお勧めします：`-Djava.locale.providers=JRE,COMPAT,CLDR`
     ```
 
 

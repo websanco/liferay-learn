@@ -4,8 +4,8 @@ Liferayの[パッチ](../../maintaining-a-liferay-installation/patching-dxp-7-3-
 
 > エンタープライズサブスクリプション
 
-``` important::
-   パッチを適用する前に、**必ず** データベースとインストールを `バックアップ <../../maintaining-a-liferay-installation/backing-up.md>`_ してください。
+```{important}
+パッチを適用する前に、**必ず** データベースとインストールを [バックアップ](../../maintaining-a-liferay-installation/backing-up.md) してください。
 ```
 
 DXPコンテナのパッチに関するトピックは次のとおりです。
@@ -110,14 +110,14 @@ DXPは、アーティファクトとファイルを使用して新しいコン�
     docker run ... -v [host folder path]:/mnt/liferay liferay/dxp:[tag]
     ```
 
-    ``` note::
-       バインドマウントを指定する方法については、 `Providing Files to the Container <./providing-files-to-the-container.md>`_ を参照してください。
+    ```{note}
+    バインドマウントを指定する方法については、 [Providing Files to the Container](./providing-files-to-the-container.md) を参照してください。
     ```
 
 パッチツールがパッチをインストールし、DXPが起動します。
 
-``` important::
-   パッチツールでメッセージ``[patch file] is incompatible with Patching Tool version [x.y.z]``が報告された場合は、最新のパッチツールをインストールしてください。 詳細は、 `Installing the Patching Tool <#installing-the-patching-tool>`_ を参照してください。
+```{important}
+パッチツールでメッセージ`[patch file] is incompatible with Patching Tool version [x.y.z]`が報告された場合は、最新のパッチツールをインストールしてください。 詳細は、 [Installing the Patching Tool](#installing-the-patching-tool) を参照してください。
 ```
 
 ## パッチを元に戻す

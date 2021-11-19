@@ -23,8 +23,8 @@ TomcatとLiferayを構成する方法が、構成フェーズが提供する方�
     mkdir scripts
     ```
 
-    ``` tip::
-       `コンテナの /mnt/liferay フォルダ <./providing-files-to-the-container.md#bind-mounting-a-host-folder-to-mnt-liferay>`_ をすでにマウントする予定の場合は、構成フェーズスクリプトをローカルマウントフォルダ内の``scripts``というフォルダに配置して、構成フェーズに含めることができます。 ``[local-folder]/scripts``フォルダは、コンテナの``/mnt/liferay/scripts``フォルダにマップされます。
+    ```{tip}
+    [コンテナの /mnt/liferay フォルダ](./providing-files-to-the-container.md#bind-mounting-a-host-folder-to-mnt-liferay) をすでにマウントする予定の場合は、構成フェーズスクリプトをローカルマウントフォルダ内の`scripts`というフォルダに配置して、構成フェーズに含めることができます。 `[local-folder]/scripts`フォルダは、コンテナの`/mnt/liferay/scripts`フォルダにマップされます。
     ```
 
 2.  事前設定アクションを実行するためのスクリプトを作成します。

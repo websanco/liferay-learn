@@ -2,8 +2,8 @@
 
 Liferay DXPフィックスパックおよびサービスパックは、Tomcatアプリケーションサーバーにバンドルされて提供されています。 従来のバンドルと *スリムバンドル*として利用できます。 従来のバンドルには、 *パッチファイル*含まれています。パッチツールが特定のパッチをインストールするために必要なすべてのソースコードとバックアップファイル。 スリムバンドルにはパッチファイルが含まれていないため、従来のバンドルの約3分の1のサイズです。 スリムバンドルは、ディスク容量が限られている、またはコストがかかるデモまたはインストールを目的としています。 クラウドやコンテナ環境に最適です。
 
-``` warning::
-   Most Patching Tool commands (such as `install`) cannot be run on a Slim Bundle until the patching files for the Fix Pack or Service Pack are installed to the Slim Bundle.
+```{warning}
+Most Patching Tool commands (such as `install`) cannot be run on a Slim Bundle until the patching files for the Fix Pack or Service Pack are installed to the Slim Bundle.
 ```
 
 スリムバンドルのそれぞれのフィックスパック/サービスパックのパッチファイルがない場合、スリムバンドルはこれらのパッチツールコマンドに限定されます。
