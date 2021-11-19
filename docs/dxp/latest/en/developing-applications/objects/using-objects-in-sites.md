@@ -10,7 +10,7 @@ using-objects-in-sites/displaying-object-entries.md
 Coming Soon!
 
 ```{raw} html
-:file: ../../../landingpage_template.html
+:file: ../../landingpage_template.html
 ```
 
 ```{raw} html
