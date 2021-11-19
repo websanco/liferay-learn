@@ -1,12 +1,21 @@
 # アプリビルダーの概要
 
+```{toctree}
+:maxdepth: 3
+
+developing-low-code-applications/creating-a-standard-application.md
+developing-low-code-applications/creating-a-workflow-powered-application.md
+developing-low-code-applications/creating-the-role-change-request-object.md
+developing-low-code-applications/creating-the-role-change-request-app.md
+```
+
 > 対応可能：Liferay DXP 7.3以降
 
 アプリビルダーは、Liferay DXP用のローコードアプリケーション開発ソリューションです。 データモデルを構築し、アプリケーションのフォーム（データ入力用）とテーブル（データレコードの表示および管理用）を定義し、アプリケーションをLiferay DXPサイトにデプロイしたり、または完全にスタンドアロンのアプリケーションとしてデプロイします。 アプリビルダーを使用すると、専用のユーザーインターフェイスとデータ分離を備えた機能的なビジネスアプリケーションの作成を、コードを1行も記述せずに実行できます。
 
-![このアプリビルダーオブジェクトには、2つの個別のアプリケーションがデプロイされています。](./app-builder-overview/images/01.png)
+![このアプリビルダーオブジェクトには、2つの個別のアプリケーションがデプロイされています。](./app-builder/images/01.png)
 
-[Liferayフォーム](../../process-automation/forms/introduction-to-forms.md)アプリケーションに同様のフォーム構築機能が含まれているのに、アプリビルダーを使用する理由は何でしょうか。 それらの違いの要約を次に示します。
+[Liferayフォーム](../process-automation/forms/introduction-to-forms.md)アプリケーションに同様のフォーム構築機能が含まれているのに、アプリビルダーを使用する理由は何でしょうか。 それらの違いの要約を次に示します。
 
 | 機能                                | Liferayフォーム | アプリビルダー |
 | --------------------------------- |:-----------:|:-------:|
@@ -62,18 +71,26 @@
 | アプリ名\[フォームビュー\] |      ✔       |          |             |
 | アプリ名\[テーブルビュー\] |              |    ✔     |      ✔      |
 
-![アプリビルダーのウィジェットはLiferay DXPページに配置されます。](./app-builder-overview/images/03.png)
+![アプリビルダーのウィジェットはLiferay DXPページに配置されます。](./app-builder/images/03.png)
 
 **スタンドアロン：**アプリケーションを、サイトの一部ではなく、どのナビゲーションメニューにも表示されない専用ページにデプロイします。 これにより、リンクを知っている人だけにアクセスが制限されます。
 
-![スタンドアロンのアプリビルダーアプリケーションは直接リンクによってのみアクセスできます](./app-builder-overview/images/04.png)
+![スタンドアロンのアプリビルダーアプリケーションは直接リンクによってのみアクセスできます](./app-builder/images/04.png)
 
 **製品メニュー：**アプリケーションをコントロールパネル、サイトメニュー、またはその両方にデプロイします。 これにより、管理ユーザーがアプリケーションにアクセスする場所を柔軟に決定できます。
 
-![アプリビルダーアプリケーションを製品メニューに追加できます。](./app-builder-overview/images/02.png)
+![アプリビルダーアプリケーションを製品メニューに追加できます。](./app-builder/images/02.png)
 
 スタンドアロンまたは製品メニューアプリケーションには、常にフォームビューとテーブルビューの両方が含まれています。 テーブルビューがデフォルトのビューですが、追加ボタンでフォームビューへのアクセスを提供できます。
 
 ## 次のステップ
 
   - [Creating an Application with App Builder](./creating-a-standard-application.md)
+
+```{raw} html
+:file: ../landingpage_template.html
+```
+
+```{raw} html
+:file: app-builder/landing.html
+```

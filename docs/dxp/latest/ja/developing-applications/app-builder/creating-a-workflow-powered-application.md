@@ -34,7 +34,7 @@
 
 ## 関連情報
 
-  - [App Builder Overview](./app-builder-overview.md)
+  - [App Builder Overview](../app-builder.md)
   - [Creating a Standard Application](./creating-a-standard-application.md)
   - [Workflow](../../process-automation/workflow/introduction-to-workflow.md)
   - [ロールと権限](../../users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.md)

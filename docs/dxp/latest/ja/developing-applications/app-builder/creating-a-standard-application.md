@@ -11,9 +11,9 @@
 
 ## カスタムオブジェクトの作成
 
-1.  グローバルメニュー（![Applications Menu](../../images/icon-applications-menu.png)）を開き、[コントロールパネル] → [アプリビルダー] → [カスタムオブジェクト]に移動します。
+1.  グローバルメニュー（![Applications Menu](../images/icon-applications-menu.png)）を開き、[コントロールパネル] → [アプリビルダー] → [カスタムオブジェクト]に移動します。
 
-2.  追加ボタン（![Add](../../images/icon-add.png)）をクリックします。
+2.  追加ボタン（![Add](../images/icon-add.png)）をクリックします。
 
 3.  名前を入力します：*Time Off Request* 。
 
@@ -72,13 +72,13 @@
 
 ## アプリケーションのデプロイ
 
-アプリケーションをデプロイすると、ユーザーがアプリケーションにアクセスできるようになります。 いくつかのデプロイオプションがあります。 デプロイオプションについては、[App Builder Overview](./app-builder-overview.md#deployment)を参照してください。
+アプリケーションをデプロイすると、ユーザーがアプリケーションにアクセスできるようになります。 いくつかのデプロイオプションがあります。 デプロイオプションについては、[App Builder Overview](./app-builder.md#deployment)を参照してください。
 
-Time Off Requestには、デプロイする2つのアプリがあります。1つはページに追加するためのウィジェットアプリケーションで、もう1つは [プロダクトメニュー](../../getting-started/navigating-dxp.md#product-menu)の管理アプリケーションです。ここでは、追加の権限を持つユーザーがリクエストを管理できます。
+Time Off Requestには、デプロイする2つのアプリがあります。1つはページに追加するためのウィジェットアプリケーションで、もう1つは [プロダクトメニュー](../getting-started/navigating-dxp.md#product-menu)の管理アプリケーションです。ここでは、追加の権限を持つユーザーがリクエストを管理できます。
 
 1.  Time Off Requestを開きます（[コントロールパネル] → [アプリビルダー] → [カスタムオブジェクト]）。
 
-2.  *[Apps]* タブで、追加ボタンをクリックします（![追加](../../images/icon-add.png)）。
+2.  *[Apps]* タブで、追加ボタンをクリックします（![追加](../images/icon-add.png)）。
 
     ```{note}
     オブジェクト（DXPサブスクライバーが利用可能）の「ワークフロー対応」アプリを作成する場合は、グローバルメニューのアプリエントリからアプリを作成してデプロイする必要があります。 詳細は、[Creating a Workflow Powered Application](./creating-a-workflow-powered-application.md)_を参照してください。
@@ -86,7 +86,7 @@ Time Off Requestには、デプロイする2つのアプリがあります。1�
 
 3.  アプリに*Time Off Requester*という名前を付けます 。
 
-4.  フォームビューとテーブルビューを選択し、アプリの[デプロイオプション](./app-builder-overview.md#deployment)を設定します。
+4.  フォームビューとテーブルビューを選択し、アプリの[デプロイオプション](./app-builder.md#deployment)を設定します。
 
     Time Off Requesterアプリケーションの場合、*[ウィジェット]* を選択して、*[デプロイする]* をクリックします。 Time Off Requesterウィジェットアプリケーションをページにデプロイし、サイトのユーザーがすぐに利用できるようになりました。
 
@@ -132,5 +132,5 @@ Time Off Requestには、デプロイする2つのアプリがあります。1�
 
 ## 関連情報
 
-  - [App Builder Overview](./app-builder-overview.md)
+  - [App Builder Overview](../app-builder.md)
   - [Creating a Workflow Powered App](./creating-a-workflow-powered-application.md)
