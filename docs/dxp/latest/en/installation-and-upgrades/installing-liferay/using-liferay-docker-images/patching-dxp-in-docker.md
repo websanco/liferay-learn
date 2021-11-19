@@ -4,8 +4,8 @@ Liferay [patches](../../maintaining-a-liferay-installation/patching-dxp-7-3-and-
 
 > Enterprise Subscription
 
-```important::
-   **Always** `back up <../../maintaining-a-liferay-installation/backing-up.md>`_ your database and installation before patching.
+```{important}
+**Always** [back up](../../maintaining-a-liferay-installation/backing-up.md) your database and installation before patching.
 ```
 
 Here are the DXP container patching topics:
@@ -112,14 +112,14 @@ Here are steps for installing a patch to a new container:
     docker run ... -v [host folder path]:/mnt/liferay liferay/dxp:[tag]
     ```
 
-    ```note::
-       Please see `Providing Files to the Container <./providing-files-to-the-container.md>`_ for more information on specifying bind mounts.
+    ```{note}
+    Please see [Providing Files to the Container](./providing-files-to-the-container.md) for more information on specifying bind mounts.
     ```
 
 The Patching Tool installs the patch and DXP launches.
 
-```important::
-   If the Patching Tool reports this message: ``[patch file] is incompatible with Patching Tool version [x.y.z]``, install the latest Patching Tool. See `Installing the Patching Tool <#installing-the-patching-tool>`_ for details.
+```{important}
+If the Patching Tool reports this message: `[patch file] is incompatible with Patching Tool version [x.y.z]`, install the latest Patching Tool. See [Installing the Patching Tool](#installing-the-patching-tool) for details.
 ```
 
 ## Reverting a Patch

@@ -2,8 +2,8 @@
 
 As new Liferay versions are released as Docker images, you can upgrade to them. The [Upgrade Overview](../../upgrading-liferay/upgrade-basics/upgrade-overview.md) describes the process.
 
-```important::
-   **Always** `back up <../../maintaining-a-liferay-installation/backing-up.md>`_ your data and installation before upgrading. Testing the upgrade process on backup copies is advised.
+```{important}
+**Always** [back up](../../maintaining-a-liferay-installation/backing-up.md) your data and installation before upgrading. Testing the upgrade process on backup copies is advised.
 ```
 
 Upgrading involves updating configurations, Marketplace applications, and custom code. Perhaps the biggest part of the upgrade is upgrading the Liferay database. There are two ways to upgrade the database:

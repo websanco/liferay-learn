@@ -78,8 +78,8 @@ The most general way to provide files to the container's [configuration phase](.
 
 If you want to centralize files for configuring, patching, and deploying to Liferay, consider bind mounting a host folder to the container's `/mnt/liferay` folder.
 
-```note::
-   Most of the examples in the use case articles use this bind mount strategy.
+```{note}
+Most of the examples in the use case articles use this bind mount strategy.
 ```
 
 Hre are the steps:
@@ -103,8 +103,8 @@ Hre are the steps:
     └───scripts
     ```
 
-    ```note::
-       You don't have to create all of the subfolders, just the ones you're populating.
+    ```{note}
+    You don't have to create all of the subfolders, just the ones you're populating.
     ```
 1. Populate the subfolders with files for the container to act on.
 

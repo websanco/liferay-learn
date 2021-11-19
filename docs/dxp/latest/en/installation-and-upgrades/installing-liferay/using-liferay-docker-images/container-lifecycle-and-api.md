@@ -33,8 +33,8 @@ The container entry point scans the following container folders for files and us
 * `/mnt/liferay`
 * `/user/local/liferay/scripts`
 
-```note::
-   You can pass files to these container folders in several different ways, including using `bind mounts <https://docs.docker.com/storage/bind-mounts/>`_, `volumes <https://docs.docker.com/storage/volumes/>`_, and ``docker cp``. See `Providing Files to the Container <./providing-files-to-the-container.md>`_ for more information.
+```{note}
+You can pass files to these container folders in several different ways, including using [bind mounts](https://docs.docker.com/storage/bind-mounts/), [volumes](https://docs.docker.com/storage/volumes/), and `docker cp`. See [Providing Files to the Container](./providing-files-to-the-container.md) for more information.
 ```
 
 The key folders above have subfolders that are designated for specific actions. The subfolders, the actions taken on their files, and associated use cases are listed in lifecycle phase order in the following sections.

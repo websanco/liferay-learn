@@ -10,8 +10,8 @@ Here are the most common things to configure:
 * [System Properties](#system-properties)
 * [System Settings](#system-settings)
 
-```note::
-   The configuration use cases that involve providing a file to the container are demonstrated here using `bind mounts <https://docs.docker.com/storage/bind-mounts/>`_. You can also use `volumes <https://docs.docker.com/storage/volumes/>`_ and in some cases, use a ``docker cp`` command. See `Providing File to the Container <./providing-files-to-the-container.md>`_ for more information.
+```{note}
+The configuration use cases that involve providing a file to the container are demonstrated here using [bind mounts](https://docs.docker.com/storage/bind-mounts/). You can also use [volumes](https://docs.docker.com/storage/volumes/) and in some cases, use a `docker cp` command. See [Providing File to the Container](./providing-files-to-the-container.md) for more information.
 ```
 
 ## JVM Options
@@ -26,8 +26,8 @@ JVM options can be appended to Tomcat's `CATALINA_OPTS` variable by specifying t
 docker run -it -m 8g -p 8080:8080 -e LIFERAY_JVM_OPTS=[value\ with\ space] liferay/dxp:[tag]
 ```
 
-```warning::
-   In the ``LIFERAY_JVM_OPTS`` value, use backslashes to escape space characters. Don't use quotes.
+```{warning}
+In the `LIFERAY_JVM_OPTS` value, use backslashes to escape space characters. Don't use quotes.
 ```
 
 The container runs with the `LIFERAY_JVM_OPTS` value appended to Tomcat's `CATALINA_OPTS`.
@@ -67,12 +67,12 @@ Another method of configuring JVM options involves overriding Tomcat's `setenv.s
 
 The container uses your `setenv.sh` script's JVM options.
 
-```note::
-   Please see `Providing Files to the Container <./providing-files-to-the-container.md#bind-mounting-a-host-folder-to-mnt-liferay>`_ for more information on bind mounting to to the container's ``/mnt/liferay`` folder.
+```{note}
+Please see [Providing Files to the Container](./providing-files-to-the-container.md#bind-mounting-a-host-folder-to-mnt-liferay) for more information on bind mounting to to the container's `/mnt/liferay` folder.
 ```
 
-```note::
-   See `Docker Container Basics <./docker-container-basics.md>`_ for details on starting and operating Liferay containers.
+```{note}
+See [Docker Container Basics](./docker-container-basics.md) for details on starting and operating Liferay containers.
 ```
 
 ## Portal Properties
@@ -100,16 +100,16 @@ There's an *Env* variable for each [Portal Property](../../reference/portal-prop
     docker run -it -m 8g -p 8080:8080 -e LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_JNDI_PERIOD_NAME=jdbc/MyPool liferay/dxp:[tag]
     ```
 
-    ```warning::
-       In the ``Env`` variable value, use backslashes to escape space characters. Don't use quotes.
+    ```{warning}
+    In the `Env` variable value, use backslashes to escape space characters. Don't use quotes.
     ```
 
     ```{note}
     See [Database Templates](../../reference/database-templates.md) for database environment variable examples.
     ```
 
-    ```note::
-       See `Docker Container Basics <./docker-container-basics.md>`_ for details on starting and operating the containers.
+    ```{note}
+    See [Docker Container Basics](./docker-container-basics.md) for details on starting and operating the containers.
     ```
 
 The properties are visible in the Control Panel at _Configuration_ &rarr; _Server Administration_ &rarr; _Properties_ &rarr; _Portal Properties_.
@@ -228,8 +228,8 @@ The container uses your property setting.
     docker run -it -m 8g -p 8080:8080 -v [host folder path]:/mnt/liferay liferay/dxp:[tag]
     ```
 
-    ```note::
-       Please see `Providing Files to the Container <./providing-files-to-the-container.md#bind-mounting-a-host-folder-to-mnt-liferay>`_ for more information on bind mounting to to the container's ``/mnt/liferay`` folder.
+    ```{note}
+    Please see [Providing Files to the Container](./providing-files-to-the-container.md#bind-mounting-a-host-folder-to-mnt-liferay) for more information on bind mounting to to the container's `/mnt/liferay` folder.
     ```
 
 The properties are visible in the Control Panel at _Configuration_ &rarr; _Server Administration_ &rarr; _Properties_ &rarr; _System Properties_.
@@ -266,8 +266,8 @@ If you have not yet created a container, follow these steps to provide a `.confi
     docker run -it -m 8g -p 8080:8080 -v [host folder path]:/mnt/liferay liferay/dxp:[tag]
     ```
 
-    ```note::
-       Please see `Providing Files to the Container <./providing-files-to-the-container.md#bind-mounting-a-host-folder-to-mnt-liferay>`_ for more information on bind mounting to to the container's ``/mnt/liferay`` folder.
+    ```{note}
+    Please see [Providing Files to the Container](./providing-files-to-the-container.md#bind-mounting-a-host-folder-to-mnt-liferay) for more information on bind mounting to to the container's `/mnt/liferay` folder.
     ```
 
 The system component configurations are visible in the Control Panel at _Configuration_ &rarr; _System Settings_, in the screen for that component.

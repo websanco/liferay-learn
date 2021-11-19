@@ -7,8 +7,8 @@ Here are two ways to install artifacts:
 * [Installing Artifacts Using a Bind Mount](#installing-artifacts-using-a-bind-mount)
 * [Installing Artifacts Using `docker cp`](#installing-artifacts-using-docker-cp)
 
-```note::
-   A `Docker volume <https://docs.docker.com/storage/volumes/>`_ can also be used to install artifacts to a container.
+```{note}
+A [Docker volume](https://docs.docker.com/storage/volumes/) can also be used to install artifacts to a container.
 ```
 
 ## Installing Artifacts Using a Bind Mount
@@ -39,8 +39,8 @@ Liferay launches and installs the artifact. The container reports a message like
 [LIFERAY] The directory /mnt/liferay/deploy is ready. Copy files to [host folder]/deploy on the host operating system to deploy modules to Liferay Portal at runtime.
 ```
 
-```note::
-   After Liferay launches, you can install additional artifacts to Liferay by copying them to your ``[host folder]/deploy`` folder.
+```{note}
+After Liferay launches, you can install additional artifacts to Liferay by copying them to your `[host folder]/deploy` folder.
 ```
 
 ## Installing Artifacts Using `docker cp`
