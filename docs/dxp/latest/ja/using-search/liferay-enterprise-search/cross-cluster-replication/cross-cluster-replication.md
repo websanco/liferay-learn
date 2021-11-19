@@ -50,7 +50,7 @@ Liferay 7.2 index names are more complex, as patches have introduced changes to 
 ```
 
 ```{note}
-Liferay DXP provides APIs for creating and using (writing to and reading from) custom Elasticsearch indexes that remain completely under your control. See the [Developer Guide](../../developer_guide.html)_ for information on using these APIs.
+Liferay DXP provides APIs for creating and using (writing to and reading from) custom Elasticsearch indexes that remain completely under your control. See the [Developer Guide](../../developer-guide.html)_ for information on using these APIs.
 ```
 
 [Liferay Commerce](https://www.liferay.com/products/commerce)サブスクリプションがあり、インストールでアクティブ化されている場合は、次のようなインデックスもあります。
@@ -69,7 +69,7 @@ Liferay DXP provides APIs for creating and using (writing to and reading from) c
 
 [Liferay DXPが必要とするElasticsearchプラグインをインストールし、フォロワークラスターとリーダークラスターを区別するためのクラスター名](../../installing-and-upgrading-a-search-engine/elasticsearch/installing-elasticsearch.html#configure-elasticsearch)を指定してください。
 
-CCRにはElasticsearch Platinumレベルのライセンスが必要ですが、[LESのお客様](../../liferay_enterprise_search.html)はすでに所有しています。 ローカルでテストしている場合は、各クラスターで[トライアルライセンス](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/start-trial.html)を開始してください。
+CCRにはElasticsearch Platinumレベルのライセンスが必要ですが、[LESのお客様](../../liferay-enterprise-search.html)はすでに所有しています。 ローカルでテストしている場合は、各クラスターで[トライアルライセンス](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/start-trial.html)を開始してください。
 
 ## Liferay DXPをElasticsearchに接続する
 
