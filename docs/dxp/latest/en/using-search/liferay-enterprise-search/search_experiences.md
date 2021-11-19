@@ -4,6 +4,7 @@
 :maxdepth: 1
 
 search-experiences/understanding-blueprints.md
+search-experiences/creating-and-managing-blueprints.md
 ```
 
 The Liferay Enterprise Search Experiences app includes a suite of features granting fine-grained control over the end user's search experience. As the search administrator you can use Search Experiences for search customizations varying in complexity:
@@ -17,4 +18,4 @@ The Liferay Enterprise Search Experiences app includes a suite of features grant
 Search Blueprints is the first Search Experiences configuration framework. To learn about it's capabilities and fundamental components, see
 
 - [Understanding Blueprints](search-experiences/understanding-blueprints.md)
-
+- [Creating and Managing Blueprints](search-experiences/creating-and-managing-blueprints.md)
