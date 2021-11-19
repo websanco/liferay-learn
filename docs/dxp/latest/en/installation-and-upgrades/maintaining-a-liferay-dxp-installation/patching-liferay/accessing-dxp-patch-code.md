@@ -101,7 +101,7 @@ Even though all approved subscribers access the same repository, your GitHub use
 
 **(1) For Issues and Comments:** We close issues raised in the source code repository and leave them unanswered. If there is a Liferay software issue, please notify the Liferay Support team by [creating a support ticket](https://help.liferay.com/hc/en-us/requests/new) in the Help Center. 
 
-**(2) For Code Contributions:** You can contribute code in the public Liferay Portal repository <https://github.com/liferay/liferay-portal>. Approved contributions are included in the next Liferay DXP release. For more information, please see [Contributing to Liferay Development](../../../liferay-internals/contributing_to_liferay_development.html) (Coming soon).
+**(2) For Code Contributions:** You can contribute code in the public Liferay Portal repository <https://github.com/liferay/liferay-portal>. Approved contributions are included in the next Liferay DXP release. For more information, please see [Contributing to Liferay Development](../../../liferay-internals/contributing-to-liferay-development.md) (Coming soon).
 
 **(3) For Wikis:** The official Liferay DXP documentation is on <https://learn.liferay.com> and the support Knowledge Base is on the [Help Center](https://help.liferay.com/hc/en-us/). We don't use the `liferay-dxp` repository wiki. If you want to suggest article changes or request documentation on a topic, please notify the Liferay Support team by [creating a support ticket](https://help.liferay.com/hc/en-us/requests/new) in the Help Center.
 

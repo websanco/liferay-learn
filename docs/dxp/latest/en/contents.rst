@@ -15,7 +15,7 @@ Contents
    users-and-permissions
    system_administration
    building-applications
-   liferay_internals
+   liferay-internals
    headless_delivery
    installation_and_upgrades
 

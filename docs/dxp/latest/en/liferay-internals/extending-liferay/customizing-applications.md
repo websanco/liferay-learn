@@ -1,3 +1,0 @@
-# Customizing Applications
-
-Coming soon!
