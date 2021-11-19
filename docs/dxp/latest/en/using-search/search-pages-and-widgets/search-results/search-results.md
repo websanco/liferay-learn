@@ -12,7 +12,7 @@ Multiple factors affect search results:
 
 Developers of content types (_assets_ in Liferay DXP) control much about how the asset's information is indexed and how its information is searched and returned in the search results. For further control, an *Indexer Post Processor* can modify an asset's indexing behavior and how search queries are constructed to look up the assets.
 
-Keep in mind though, almost everything you do when [configuring search](../../search_administration_and_tuning.md) has an impact on search results, particularly [Synonym Sets](../../search_administration_and_tuning.md) and [Result Rankings](../../search_administration_and_tuning.md).
+Keep in mind though, almost everything you do when [configuring search](../../search-administration-and-tuning.md) has an impact on search results, particularly [Synonym Sets](../../search-administration-and-tuning.md) and [Result Rankings](../../search-administration-and-tuning.md).
 
 The concepts below are essential to understand before you begin changing any settings.
 
@@ -30,9 +30,9 @@ The search engine processes and orders results by *relevance*. Relevance is a sc
 
 Results relevance is configurable:
 
-* [Search Tuning is a brute-force way to customize rankings](../../search_administration_and_tuning.md).
+* [Search Tuning is a brute-force way to customize rankings](../../search-administration-and-tuning.md).
 * [Liferay Enterprise Search's Learning to Rank feature is a machine learning model you can train to return more relevant results.](./../../liferay-enterprise-search.md)
-* [The Search Insights widget displays the relevance scoring to reveal why a result appears in a certain position.](../../search_administration_and_tuning.md)
+* [The Search Insights widget displays the relevance scoring to reveal why a result appears in a certain position.](../../search-administration-and-tuning.md)
 * [Sort the results by an indexed field to override relevance scoring](./sorting-search-results.md).
 
 ## Permissions and Search Results

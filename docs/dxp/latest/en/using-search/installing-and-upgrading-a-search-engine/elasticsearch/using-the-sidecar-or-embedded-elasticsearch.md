@@ -47,7 +47,7 @@ Here are common uses for the default Elasticsearch server (sidecar and embedded)
 
 * Testing your custom [search and indexing code](../../developer_guide.html)
 * Developing search queries by running queries directly on Elasticsearch through Kibana
-* Testing the [search tuning](../../search_administration_and_tuning.md) functionality
+* Testing the [search tuning](../../search-administration-and-tuning.md) functionality
 * Exploring and configuring the [search widgets](../../search-pages-and-widgets.md)
 
 ## App Server Differences

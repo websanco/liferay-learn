@@ -39,7 +39,7 @@ You can examine search connections and field mappings, and execute indexes in th
 
 ![The search admin screens are informative and useful.](./search-overview/images/08.png)
 
-Learn more at [Search Administration and Tuning](../search_administration_and_tuning.md).
+Learn more at [Search Administration and Tuning](../search-administration-and-tuning.md).
 
 ## Custom Development in Search
 

@@ -295,4 +295,4 @@ If you are [upgrading Elasticsearch](./upgrading-to-elasticsearch-7.md), you can
 
 ## Additional Information
 
-[Search Administration and Tuning](../../../search_administration_and_tuning.md)
+[Search Administration and Tuning](../../../search-administration-and-tuning.md)
