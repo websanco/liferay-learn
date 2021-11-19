@@ -7,7 +7,15 @@
             "ReplaceKeyPrefixWith": "commerce/latest/"
         }
     },
-    {
+		{
+			"Condition": {
+				"KeyPrefixEquals": "dxp/latest/developing-applications/"
+			},
+			"Redirect": {
+				"ReplaceKeyPrefixWith": "dxp/latest/building-applications/"
+			}
+		},
+		{
         "Condition": {
             "KeyPrefixEquals": "dxp/7.x/"
         },
