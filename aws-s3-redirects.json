@@ -1,66 +1,18 @@
 [
-	{
-		"Condition": {
-			"KeyPrefixEquals": "commerce/2.x/"
-		},
-		"Redirect": {
-			"ReplaceKeyPrefixWith": "commerce/latest/"
-		}
-	},
-	{
-		"Condition": {
-			"KeyPrefixEquals": "dxp/7.x/"
-		},
-		"Redirect": {
-			"ReplaceKeyPrefixWith": "dxp/latest/"
-		}
-	},
-	{
-		"Condition": {
-			"KeyPrefixEquals": "ce/"
-		},
-		"Redirect": {
-			"ReplaceKeyPrefixWith": "reference/latest/en/"
-		}
-	},
-	{
-		"Condition": {
-			"KeyPrefixEquals": "dxp/"
-		},
-		"Redirect": {
-			"ReplaceKeyPrefixWith": "reference/latest/en/"
-		}
-	},
-	{
-		"Condition": {
-			"KeyPrefixEquals": "faces/"
-		},
-		"Redirect": {
-			"ReplaceKeyPrefixWith": "https://faces.liferay.dev"
-		}
-	},
-	{
-		"Condition": {
-			"KeyPrefixEquals": "portal/"
-		},
-		"Redirect": {
-			"ReplaceKeyPrefixWith": "reference/latest/en/"
-		}
-	},
-	{
-		"Condition": {
-			"KeyPrefixEquals": "portlet-api/"
-		},
-		"Redirect": {
-			"ReplaceKeyPrefixWith": "reference/latest/en/portlet-api/"
-		}
-	},
-	{
-		"Condition": {
-			"KeyPrefixEquals": "social-office/"
-		},
-		"Redirect": {
-			"ReplaceKeyPrefixWith": "reference/latest/en/"
-		}
-	}
+    {
+        "Condition": {
+            "KeyPrefixEquals": "commerce/2.x/"
+        },
+        "Redirect": {
+            "ReplaceKeyPrefixWith": "commerce/latest/"
+        }
+    },
+    {
+        "Condition": {
+            "KeyPrefixEquals": "dxp/7.x/"
+        },
+        "Redirect": {
+            "ReplaceKeyPrefixWith": "dxp/latest/"
+        }
+    }
 ]
