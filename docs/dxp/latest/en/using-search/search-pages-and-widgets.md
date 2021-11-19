@@ -5,7 +5,7 @@
 
 search-pages-and-widgets/working_with_search_pages.md
 search-pages-and-widgets/search_results.md
-search-pages-and-widgets/search_facets.md
+search-pages-and-widgets/search-facets.md
 search-pages-and-widgets/similar-results.md
 search-pages-and-widgets/search-insights.md
 ```
