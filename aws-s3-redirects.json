@@ -4,7 +4,7 @@
 			"KeyPrefixEquals": "ce/apps/"
 		},
 		"Redirect": {
-			"ReplaceKeyPrefixWith": "reference/latest/en/"
+			"ReplaceKeyWith": "reference/latest/en/"
 		}
 	},
 	{
@@ -12,7 +12,7 @@
 			"KeyPrefixEquals": "ce/portal/"
 		},
 		"Redirect": {
-			"ReplaceKeyPrefixWith": "reference/latest/en/"
+			"ReplaceKeyWith": "reference/latest/en/"
 		}
 	},
 	{
@@ -36,7 +36,7 @@
 			"KeyPrefixEquals": "dxp/apps/"
 		},
 		"Redirect": {
-			"ReplaceKeyPrefixWith": "reference/latest/en/"
+			"ReplaceKeyWith": "reference/latest/en/"
 		}
 	},
 	{
@@ -44,7 +44,7 @@
 			"KeyPrefixEquals": "dxp/digital-enterprise/"
 		},
 		"Redirect": {
-			"ReplaceKeyPrefixWith": "reference/latest/en/"
+			"ReplaceKeyWith": "reference/latest/en/"
 		}
 	},
 	{
@@ -52,7 +52,7 @@
 			"KeyPrefixEquals": "dxp/portal/"
 		},
 		"Redirect": {
-			"ReplaceKeyPrefixWith": "reference/latest/en/"
+			"ReplaceKeyWith": "reference/latest/en/"
 		}
 	},
 	{
@@ -60,7 +60,7 @@
 			"KeyPrefixEquals": "faces/"
 		},
 		"Redirect": {
-			"ReplaceKeyPrefixWith": "https://faces.liferay.dev"
+			"ReplaceKeyWith": "https://faces.liferay.dev"
 		}
 	},
 	{
@@ -68,7 +68,7 @@
 			"KeyPrefixEquals": "portal/"
 		},
 		"Redirect": {
-			"ReplaceKeyPrefixWith": "reference/latest/en/"
+			"ReplaceKeyWith": "reference/latest/en/"
 		}
 	},
 	{
@@ -76,7 +76,7 @@
 			"KeyPrefixEquals": "portlet-api/1.0/"
 		},
 		"Redirect": {
-			"ReplaceKeyPrefixWith": "reference/latest/en/portlet-api/"
+			"ReplaceKeyWith": "reference/latest/en/portlet-api/"
 		}
 	},
 	{
@@ -84,7 +84,7 @@
 			"KeyPrefixEquals": "portlet-api/2.0/"
 		},
 		"Redirect": {
-			"ReplaceKeyPrefixWith": "reference/latest/en/portlet-api/"
+			"ReplaceKeyWith": "reference/latest/en/portlet-api/"
 		}
 	},
 	{
@@ -92,7 +92,7 @@
 			"KeyPrefixEquals": "portlet-api/3.0/"
 		},
 		"Redirect": {
-			"ReplaceKeyPrefixWith": "reference/latest/en/portlet-api/"
+			"ReplaceKeyWith": "reference/latest/en/portlet-api/"
 		}
 	},
 	{
@@ -100,7 +100,7 @@
 			"KeyPrefixEquals": "social-office/1.0/"
 		},
 		"Redirect": {
-			"ReplaceKeyPrefixWith": "reference/latest/en/"
+			"ReplaceKeyWith": "reference/latest/en/"
 		}
 	},
 	{
@@ -108,7 +108,7 @@
 			"KeyPrefixEquals": "social-office/1.5/"
 		},
 		"Redirect": {
-			"ReplaceKeyPrefixWith": "reference/latest/en/"
+			"ReplaceKeyWith": "reference/latest/en/"
 		}
 	}
 ]
