@@ -45,7 +45,7 @@ Synonym Sets and Result Rankings are applications that use the search index for 
 
 Here are common uses for the default Elasticsearch server (sidecar and embedded):
 
-* Testing your custom [search and indexing code](../../developer_guide.html)
+* Testing your custom [search and indexing code](../../developer-guide.html)
 * Developing search queries by running queries directly on Elasticsearch through Kibana
 * Testing the [search tuning](../../search-administration-and-tuning.md) functionality
 * Exploring and configuring the [search widgets](../../search-pages-and-widgets.md)

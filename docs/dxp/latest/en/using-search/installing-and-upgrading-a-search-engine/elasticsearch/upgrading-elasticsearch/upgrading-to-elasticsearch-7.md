@@ -93,4 +93,4 @@ Since your Elasticsearch 6 and 7 are currently two separate installations, this 
 
 1.  Start the Elasticsearch server and then restart the Liferay Connector to Elasticsearch 6.
 
-Once your upgrade is completed, see the [new search features available in your Liferay version.](../../../getting_started.html). 
+Once your upgrade is completed, see the [new search features available in your Liferay version.](../../../getting-started.html). 

@@ -51,7 +51,7 @@ Liferay 7.1 installations contain just company and system indexes.
 ```
 
 ```{note}
-Liferay DXP provides APIs for creating and using (writing to and reading from) custom Elasticsearch indexes that remain completely under your control. See the [Developer Guide](../../developer_guide.html)_ for information on using these APIs.
+Liferay DXP provides APIs for creating and using (writing to and reading from) custom Elasticsearch indexes that remain completely under your control. See the [Developer Guide](../../developer-guide.html)_ for information on using these APIs.
 ```
 
 If you have a [Liferay Commerce](https://www.liferay.com/products/commerce) subscription and it is activated in your installation, you also have indexes like these:
@@ -70,7 +70,7 @@ Set up the Elasticsearch clusters, using versions supported with Liferay DXP tha
 
 Make sure you [install the Elasticsearch plugins Liferay DXP needs and provide cluster names](../../installing-and-upgrading-a-search-engine/elasticsearch/installing-elasticsearch.html#configure-elasticsearch) to differentiate your follower and leader clusters.
 
-CCR requires an Elasticsearch Platinum level license, but [LES customers](../../liferay_enterprise_search.html) already have this. If you're testing locally, start a [trial license](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/start-trial.html) on each cluster.
+CCR requires an Elasticsearch Platinum level license, but [LES customers](../../liferay-enterprise-search.html) already have this. If you're testing locally, start a [trial license](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/start-trial.html) on each cluster.
 
 ## Connect Liferay DXP to Elasticsearch
 
