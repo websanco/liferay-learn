@@ -56,7 +56,7 @@ http://localhost:8080/web/guest/search?q=test&delta=10
 
 Never use this option in production environments. 
 
-**Display Results in Document Form:** Display results as search [documents](../../developer_guide.md). Use this feature while developing your site to view search responses in their indexed, document-based format. Part of writing search indexers is to convert search engine documents (the objects that get indexed) to the actual Java object and back again. To use this setting, enable it and then click the *Details...* link below a Search Results summary: the result's document view is expanded for your inspection.
+**Display Results in Document Form:** Display results as search [documents](../../developer-guide.md). Use this feature while developing your site to view search responses in their indexed, document-based format. Part of writing search indexers is to convert search engine documents (the objects that get indexed) to the actual Java object and back again. To use this setting, enable it and then click the *Details...* link below a Search Results summary: the result's document view is expanded for your inspection.
 
 ![Viewing a results document lets you inspect exactly what's being indexed for a particular asset. This is just a small portion of one document.](./configuring-the-search-results-widget/images/05.png)
 

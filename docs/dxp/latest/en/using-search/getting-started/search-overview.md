@@ -55,7 +55,7 @@ Search functionality can be extended and invoked using the Service Provider Inte
 
 * APIs contain methods you can call in your own code. In the source code, these are found in modules ending in `-api` (for example, the [`portal-search-api` module](https://github.com/liferay/liferay-portal/tree/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/portal-search/portal-search-api)).
 
-See the [Developer Guide](../developer_guide.md) for details.
+See the [Developer Guide](../developer-guide.md) for details.
 
 ## What's Next 
 
