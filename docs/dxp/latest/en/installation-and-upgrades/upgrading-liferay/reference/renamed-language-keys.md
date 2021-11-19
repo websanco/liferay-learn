@@ -123,4 +123,4 @@ Here are the new language key names and the affected modules:
 ## Related Information
 
 * [Overriding Global Language Keys](../../../liferay-internals/extending-liferay/overriding-global-language-keys.md)
-* [Using Localized Messages in an MVC Portlet](../../../developing-applications/developing-a-java-web-application/using-mvc/using-localized-messages-in-an-mvc-portlet.md)
+* [Using Localized Messages in an MVC Portlet](../../../building-applications/developing-a-java-web-application/using-mvc/using-localized-messages-in-an-mvc-portlet.md)

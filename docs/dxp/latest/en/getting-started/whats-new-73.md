@@ -138,7 +138,7 @@ If you use your site to support products, the new [Questions app](../collaborati
 
 ![App Builder provides an in-browser development environment for low-code applications.](./whats-new-73/images/19.png)
 
-[App Builder](../developing-applications/app-builder.md) is a new low-code application development solution for Liferay DXP backed by the Data Engine. It empowers business users with an intuitive GUI to define forms and table views and leverage workflows to build applications with the goal of digitizing and automating business processes. Applications can be deployed in standalone fashion or added to pages as a widget or through the product menu.
+[App Builder](../building-applications/app-builder.md) is a new low-code application development solution for Liferay DXP backed by the Data Engine. It empowers business users with an intuitive GUI to define forms and table views and leverage workflows to build applications with the goal of digitizing and automating business processes. Applications can be deployed in standalone fashion or added to pages as a widget or through the product menu.
 
 ### Form View Rules and Field Sets
 
@@ -154,7 +154,7 @@ Fieldsets are fields grouped together, and App Builder's fieldsets make it easy 
 
 > Subscription Required
 
-App Builder contains a [workflow process for approvals](../developing-applications/developing-low-code-applications/creating-a-workflow-powered-application.md). You can define the stages of the process and specify what information should be requested and/or displayed in each step of the application. You can also make use of [Workflow Metrics](#workflow-metrics-improvements) to understand the performance and health of the App's processes. 
+App Builder contains a [workflow process for approvals](../building-applications/app-builder/creating-a-workflow-powered-application.md). You can define the stages of the process and specify what information should be requested and/or displayed in each step of the application. You can also make use of [Workflow Metrics](#workflow-metrics-improvements) to understand the performance and health of the App's processes. 
 
 ![Process-Driven Apps](./whats-new-73/images/22.png)
 

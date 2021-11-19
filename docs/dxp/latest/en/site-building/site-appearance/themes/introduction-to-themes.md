@@ -71,6 +71,6 @@ The first step to upgrade your theme is to use the Liferay Theme Generator to ru
 A variety of tools are used in developing or extending themes. See these topics for more information:
 
 * Liferay Theme Generator<!--Add link when available-->
-* [Blade](../../../developing-applications/tooling/blade-cli/generating-projects-with-blade-cli.md)
-* [Developer Tools Overview](../../../developing-applications/tooling/developer-tools-overview.md)
+* [Blade](../../../building-applications/tooling/blade-cli/generating-projects-with-blade-cli.md)
+* [Developer Tools Overview](../../../building-applications/tooling/developer-tools-overview.md)
 <!-- this may just be a single link to all the tooling section. This section is the result of https://issues.liferay.com/browse/IFI-2289 -->

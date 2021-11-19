@@ -178,7 +178,7 @@ That's all there is to an implementation module.
 
 ## Client
 
-The consumer or client uses the API that the API module defines and the implementation module implements. Liferay has many different kinds of consumer modules. [Portlets](../../developing-applications/developing-a-java-web-application/reference/portlets.md) are the most common consumer module type, but since they are a topic all by themselves, this example stays simple by creating an command for the Apache Felix Gogo shell. Note that consumers can, of course, consume many different APIs to provide functionality. 
+The consumer or client uses the API that the API module defines and the implementation module implements. Liferay has many different kinds of consumer modules. [Portlets](../../building-applications/developing-a-java-web-application/reference/portlets.md) are the most common consumer module type, but since they are a topic all by themselves, this example stays simple by creating an command for the Apache Felix Gogo shell. Note that consumers can, of course, consume many different APIs to provide functionality. 
 
 A consumer module has the same structure as the other module types:
 
@@ -241,6 +241,6 @@ Are you excited yet? Are you ready to start developing? Here are some resources 
 
 * [OSGi Alliance](https://www.osgi.org/)
 * [Getting started with OSGi at OSGi EnRoute](https://enroute.osgi.org/)
-* [Developing Applications](../../developing-applications/developing-a-java-web-application.md)
-* [Developer Tools Overview](../../developing-applications/tooling/developer-tools-overview.md)
+* [Building Applications](../../building-applications/developing-a-java-web-application.md)
+* [Developer Tools Overview](../../building-applications/tooling/developer-tools-overview.md)
 * [Starting with a Docker Image](../../getting-started/starting-with-a-docker-image.md)

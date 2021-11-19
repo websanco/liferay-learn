@@ -36,14 +36,14 @@ Here are the features deprecated in 7.4:
 
 | Feature | Availability | Notes |
 | :------ | :----------- | :---- |
-| App Builder, App Builder Workflow | Removed | Replaced by [Liferay Objects](../../../developing-applications/developing-low-code-applications/objects.md). |
+| App Builder, App Builder Workflow | Removed | Replaced by [Liferay Objects](../../../building-applications/objects.md). |
 | Bill of Materials (BOM) | Removed | To be replaced by Shop By Diagram. |
 | Bootstrap 3 & Bootstrap 4 compatibility layer | Removed | Opt in to adding a compatibility layer during [Theme upgrade](../../../site-building/site-appearance/themes/upgrading-a-theme.md) or manually add the layer.  |
 | Central Authentication Service (CAS) | Archived | Deprecated in 7.2. It is replaced by other solutions, including SAML, OpenID Connect, and Token-based SSO. |
 | Commerce Categories Navigation widget | Bundled | Replaced by [Display Page Templates](../../../site-building/displaying-content/using-display-page-templates/about-display-page-templates-and-display-pages.md) [Navigation Menu](../../../site-building/site-navigation/configuring-navigation-menus.md) support. |
 | Commerce Category Content widget | Bundled | Replaced by [Display Page Templates](../../../site-building/displaying-content/using-display-page-templates/about-display-page-templates-and-display-pages.md). |
 | Digest Authentication | Bundled | Digest Authentication  requires weak password hash storage, which is a vulnerability. |
-| Dynamic Data Lists | Bundled | Deprecated in 7.3. It is replaced by [Liferay Objects](../../../developing-applications/developing-low-code-applications/objects.md). |
+| Dynamic Data Lists | Bundled | Deprecated in 7.3. It is replaced by [Liferay Objects](../../../building-applications/objects.md). |
 | EXT Plugins support | Removed | Replaced by configuration settings and standard extension points. |
 | Image Editor (Soy-based) | Removed | Replaced by a React-based image editor. |
 | Google Login/SSO | Archived | Deprecated in 7.2. It is replaced by other solutions, including SAML, OpenID Connect, and Token-based SSO. |
@@ -76,7 +76,7 @@ Here are the features moved to Maintenance Mode in 7.4:
 | Feature | Notes |
 | :------ | :---- |
 | Export/Import | To be replaced replaced by [Publications](../../../site-building/publishing-tools/publications/publications-overview.md). |
-| Kaleo Forms | To be replaced replaced by business processes for [Liferay Objects](../../../developing-applications/developing-low-code-applications/objects.md). |
+| Kaleo Forms | To be replaced replaced by business processes for [Liferay Objects](../../../building-applications/objects.md). |
 | Staging | To be replaced replaced by [Publications](../../../site-building/publishing-tools/publications/publications-overview.md). |
 
 ## Additional Information

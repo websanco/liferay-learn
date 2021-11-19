@@ -28,7 +28,7 @@ Beginning in Liferay 7.4, Server Administrators can limit the scope of the re-in
 
 ### Searching for Liferay Objects
 
-To support searching for [Liferay Objects](../../developing-applications/developing-low-code-applications/objects.md), some search widgets have been enhanced:
+To support searching for [Liferay Objects](../../building-applications/objects.md), some search widgets have been enhanced:
 
 * The Type Facet automatically includes published Objects:
 

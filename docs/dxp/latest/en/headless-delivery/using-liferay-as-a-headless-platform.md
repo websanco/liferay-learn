@@ -25,7 +25,7 @@ You can find detailed information by exploring the API or its documentation thro
 
 Liferay's Web Services are part of an older framework, still supported by DXP but no longer recommended for complex headless operations. These APIs are closely tied to Liferay DXP's internal workings and thus lack the power and flexibility that the newer headless options provide.
 
-However, Web Services may provide a simpler way to execute certain tasks. See [Service Builder Web Services](../developing-applications/data-frameworks/service-builder.md) for how to use them.
+However, Web Services may provide a simpler way to execute certain tasks. See [Service Builder Web Services](../building-applications/data-frameworks/service-builder.md) for how to use them.
 
 ## Features
 

@@ -90,7 +90,7 @@ In the Fragments and Widgets sidebar panel (![Fragments and Widgets icon](../../
       For a description of the different Page Fragments in the Content Page editor, see [Page Fragments User Interface Reference](./page-fragments-user-interface-reference.md).
    ```
 
-- **Widgets**: As in other DXP contexts, widgets are [applications](../../../developing_applications.html) that add dynamic functionality to a Page. Examples include blogs, message boards, and calendars. See [Using Widgets on Content Pages](./using-widgets-on-a-content-page.md) for more information.
+- **Widgets**: As in other DXP contexts, widgets are [applications](../../../building-applications.html) that add dynamic functionality to a Page. Examples include blogs, message boards, and calendars. See [Using Widgets on Content Pages](./using-widgets-on-a-content-page.md) for more information.
 
 ### Browser
 

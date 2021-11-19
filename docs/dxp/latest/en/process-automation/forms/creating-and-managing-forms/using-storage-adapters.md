@@ -7,7 +7,7 @@ When a User adds a form record, Liferay routes the processing of the request thr
 The default _JSON_ storage adapter was renamed in Liferay 7.4 to _Default_. In addition to the default adapter, there's an _Object_ storage adapter, beginning in Liferay 7.4. If your system contains any [custom storage adapters](../developer-guide/writing-a-form-storage-adapter.md) there may be even more.
 
 ```{note}
-An [upgrade process](../../../developing-applications/data-frameworks/upgrade-processes.md) is in place that moves existing forms to the Liferay 7.4 Default storage adapter.
+An [upgrade process](../../../building-applications/data-frameworks/upgrade-processes.md) is in place that moves existing forms to the Liferay 7.4 Default storage adapter.
 ```
 
 To see the storage adapters in your system,

@@ -1,6 +1,6 @@
 # Semantic Versioning
 
-[Semantic Versioning](https://semver.org) is a three tiered versioning system for incrementing version numbers based on the degree of API change made in a releasable software component. It's a standard for communicating programmatic compatibility of a package or module for dependent consumers and API implementations. If a package is programmatically (i.e., semantically) incompatible with a project, [Bnd](http://bnd.bndtools.org) (used when building [Liferay generated module projects](../../developing-applications/tooling/blade-cli/generating-projects-with-blade-cli.md)) fails that project's build immediately.
+[Semantic Versioning](https://semver.org) is a three tiered versioning system for incrementing version numbers based on the degree of API change made in a releasable software component. It's a standard for communicating programmatic compatibility of a package or module for dependent consumers and API implementations. If a package is programmatically (i.e., semantically) incompatible with a project, [Bnd](http://bnd.bndtools.org) (used when building [Liferay generated module projects](../../building-applications/tooling/blade-cli/generating-projects-with-blade-cli.md)) fails that project's build immediately.
 
 The semantic version format looks like this:
 
@@ -18,7 +18,7 @@ For more details on semantic versioning, see the official [Semantic Versioning](
 
 All of Liferay's modules use Semantic Versioning.
 
-Following Semantic Versioning is especially important because DXP is a modular platform containing hundreds of independent OSGi modules. With many independent modules that depend on each other, releasing new package versions can become terrifying without a way of declaring their compatibility. Semantic Versioning's straightforward system and [Liferay tooling](../../developing-applications/tooling/developer-tools-overview.md) help you mange the compatibility of your modules.
+Following Semantic Versioning is especially important because DXP is a modular platform containing hundreds of independent OSGi modules. With many independent modules that depend on each other, releasing new package versions can become terrifying without a way of declaring their compatibility. Semantic Versioning's straightforward system and [Liferay tooling](../../building-applications/tooling/developer-tools-overview.md) help you mange the compatibility of your modules.
 
 ## Baselining Your Project
 
@@ -29,7 +29,7 @@ You can use Liferay's Baseline Gradle plugin to provide baselining capabilities.
 ./gradlew baseline
 ```
 
-See [Baseline Gradle Plugin](../../developing-applications/tooling/other-tools/gradle-plugins.md) for configuration details. This plugin is not provided in [Liferay Workspace](../../developing-applications/tooling/liferay-workspace/what-is-liferay-workspace.md) by default.
+See [Baseline Gradle Plugin](../../building-applications/tooling/other-tools/gradle-plugins.md) for configuration details. This plugin is not provided in [Liferay Workspace](../../building-applications/tooling/liferay-workspace/what-is-liferay-workspace.md) by default.
 
 When you run the `baseline` command, the plugin compares the public exported API of your new module with the latest released non-snapshot module. If there are any changes, it uses the OSGi Semantic Versioning rules to calculate the minimum new version. If your new module has a lower version, it throws errors.
 

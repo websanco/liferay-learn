@@ -1,7 +1,7 @@
 # Getting Started with Dynamic Data Lists
 
 ```{important}
-Dynamic Data Lists is deprecated as of Liferay DXP 7.3. It is replaced by [App Builder](../../../developing-applications/app-builder.md) and [Forms Reports](../sharing-forms-and-managing-submissions/form-reports.md).
+Dynamic Data Lists is deprecated as of Liferay DXP 7.3. It is replaced by [App Builder](../../../building-applications/app-builder.md) and [Forms Reports](../sharing-forms-and-managing-submissions/form-reports.md).
 ```
 
 Dynamic data lists display forms created from field sets called data definitions. Data definitions consist of a form’s field types (e.g., text, boolean, date, radio buttons, selector menus, etc.) and those fields’ labels and settings. Data definitions effectively serve as data models for a dynamic data list. For example, you could create a data definition with three fields for conference registration: one for a user’s name, one for their email address, and a dropdown list for t-shirt size. This data definition could then be used for every conference registration form you create.

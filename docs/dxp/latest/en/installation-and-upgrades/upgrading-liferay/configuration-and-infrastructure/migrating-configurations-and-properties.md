@@ -57,13 +57,13 @@ If you've overridden the `locales` [Portal Property](../../../installation-and-u
 The properties discussed here can be updated after database upgrade. Migrating properties involves these actions:
 
 * Updating your `liferay.home` property, if you changed it
-* Using [Blade CLI](../../../developing-applications/tooling/blade-cli/installing-and-updating-blade-cli.md) to report property changes
+* Using [Blade CLI](../../../building-applications/tooling/blade-cli/installing-and-updating-blade-cli.md) to report property changes
 * Converting properties to OSGi configurations
 * Special property migration considerations
 
 ### Using Blade CLI to Report Incompatible Properties
 
-The [Blade CLI](../../../developing-applications/tooling/blade-cli/installing-and-updating-blade-cli.md) tool's `upgradeProps` command reports changes between portal properties files. The tool reports these types of changes.
+The [Blade CLI](../../../building-applications/tooling/blade-cli/installing-and-updating-blade-cli.md) tool's `upgradeProps` command reports changes between portal properties files. The tool reports these types of changes.
 
 * Properties that cause exceptions, if not updated.
 * Properties moved to a module `portal.properties` file.

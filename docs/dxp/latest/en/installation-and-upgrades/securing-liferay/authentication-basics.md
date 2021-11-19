@@ -17,7 +17,7 @@ You can configure other methods of authenticating users and/or applications:
 * [Token-Based solutions](./configuring-sso/token-based-authentication.md)
 * [OAuth 2.0](../../headless-delivery/using-oauth2/using-oauth2.md)
 
-[Authentication Verifiers](./securing-web-services/using-authentication-verifiers.md) can manage authentication for remote applications, and [Authentication Pipelines](../../developing-applications/README.md) define the ways users are validated by one or several systems.
+[Authentication Verifiers](./securing-web-services/using-authentication-verifiers.md) can manage authentication for remote applications, and [Authentication Pipelines](../../building-applications/README.md) define the ways users are validated by one or several systems.
 
 ## Authentication Types
 

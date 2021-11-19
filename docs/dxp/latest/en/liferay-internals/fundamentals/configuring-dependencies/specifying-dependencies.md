@@ -46,4 +46,4 @@ Nice! Specifying dependencies is a skill you can depend on!
 * [Importing Packages](../importing-packages.md)
 * [Exporting Packages](../exporting-packages.md)
 * [Resolving Third Party Library Package Dependencies](./resolving-third-party-library-package-dependencies.md)
-* [Deploying WARs \(WAB Generator\)](../../../developing-applications/reference/deploying-wars-wab-generator.md)
+* [Deploying WARs \(WAB Generator\)](../../../building-applications/reference/deploying-wars-wab-generator.md)

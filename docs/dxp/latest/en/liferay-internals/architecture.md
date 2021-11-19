@@ -13,7 +13,7 @@ architecture/ui-architecture.md
 
 The Liferay DXP/Portal architecture has three parts: 
 
-1. **Core:** Bootstraps DXP and its [frameworks](../../developing-applications/core-frameworks.md). The Core provides a runtime environment for managing services, UI components, and customizations.
+1. **Core:** Bootstraps DXP and its [frameworks](../../building-applications/core-frameworks.md). The Core provides a runtime environment for managing services, UI components, and customizations.
 
 1. **Services:** Expose DXP functionality and custom functionality via Java APIs and web APIs.
 
@@ -35,7 +35,7 @@ The Core supports UI and service deployments and orchestrates wiring them togeth
 
 ## Core
 
-DXP is a web application that runs on your application server. The Core bootstraps the application and its [frameworks](../../developing-applications/core-frameworks.md).
+DXP is a web application that runs on your application server. The Core bootstraps the application and its [frameworks](../../building-applications/core-frameworks.md).
 
 There are frameworks for these things and more:
 
@@ -64,10 +64,10 @@ The Core provides the component runtime environment for the frameworks, services
 
 * [Services](../fundamentals/apis-as-osgi-services.md)
 * [Service customizations](../extending-liferay/overriding-osgi-services.md)
-* [Language Keys \(localized messages\)](../../developing-applications/developing-a-java-web-application/using-mvc/sharing-localized-messages.md)
-* [JavaScript applications \(templates, routers, and resources\)](../../developing-applications/developing-a-javascript-application/using-react.md)
+* [Language Keys \(localized messages\)](../../building-applications/developing-a-java-web-application/using-mvc/sharing-localized-messages.md)
+* [JavaScript applications \(templates, routers, and resources\)](../../building-applications/developing-a-javascript-application/using-react.md)
 * [JSP customizations](../extending-liferay/customizing-jsps.md)
-* [Portlets \(templates, controllers, and resources\)](../../developing-applications/developing-a-java-web-application/reference/portlets.md)
+* [Portlets \(templates, controllers, and resources\)](../../building-applications/developing-a-java-web-application/reference/portlets.md)
 * [Portlet filters](../extending-liferay/portlet-filters/auditing-portlet-activity-with-a-portlet-filter.md)
 * [Themes](../../site-building/site-appearance/themes/introduction-to-themes.md)
 
@@ -93,7 +93,7 @@ Front-end applications invoke the services to do work. You can deploy Java-based
 
 ![Local and remote applications can invoke services via REST web APIs. Java-based portlets can also invoke services via Java APIs.](./architecture/images/03.png)
 
-Liferay services are built using [Service Builder](../../developing-applications/data-frameworks/service-builder.md) and made REST-ful using [REST Builder](../../headless-delivery/producing-apis-with-rest-builder/producing-apis-with-rest-builder.md). The services are easy to [override and extend](../extending-liferay/overriding-osgi-services.md) too.
+Liferay services are built using [Service Builder](../../building-applications/data-frameworks/service-builder.md) and made REST-ful using [REST Builder](../../headless-delivery/producing-apis-with-rest-builder/producing-apis-with-rest-builder.md). The services are easy to [override and extend](../extending-liferay/overriding-osgi-services.md) too.
 
 The web-based UI makes content and service functionality available in browsers.
 
@@ -103,7 +103,7 @@ The UI helps people do work, [collaborate](../../collaboration-and-social/collab
 
 * [DXP application](../../site-building/introduction-to-site-building.md): The web application for managing Portals, Sites, Users, Pages, Widgets, and more. 
 
-* [Applications](../../developing-applications/developing-a-java-web-application.md): Widgets that provide a user interface for services already deployed. 
+* [Applications](../../building-applications/developing-a-java-web-application.md): Widgets that provide a user interface for services already deployed. 
 
 * [Themes](../../site-building/site-appearance/themes/introduction-to-themes.md): Plugins for styling Sites with a unique look and feel.
 

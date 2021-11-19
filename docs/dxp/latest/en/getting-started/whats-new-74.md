@@ -75,7 +75,7 @@ The Org Chart widget is now the Organization Management widget, and it makes it 
 
 ## Business Users Can Build Applications Without Writing Code
 
-With [Liferay Objects](../developing-applications/developing-low-code-applications/objects.md), you can build and deliver applications without having to write code or deploy modules, yet these applications are built on and integrated with Liferay's core frameworks. Quickly develop and manage flexible solutions that adapt Liferay DXP to your business needs while maintaining a seamless user experience.
+With [Liferay Objects](../building-applications/objects.md), you can build and deliver applications without having to write code or deploy modules, yet these applications are built on and integrated with Liferay's core frameworks. Quickly develop and manage flexible solutions that adapt Liferay DXP to your business needs while maintaining a seamless user experience.
 
 ### Manage Custom Objects Though the UI
 
@@ -91,7 +91,7 @@ All the capabilities from Forms can be leveraged to insert data into specific ob
 
 ### Objects Relationships
 
-You can solve complex use cases with [object relationships](../developing-applications/developing-low-code-applications/objects/creating-and-managing-objects/defining-object-relationships.md), easy way to relate objects with not only custom objects, but also native objects shipped with Liferay, such as Blog entries or web content.
+You can solve complex use cases with [object relationships](../building-applications/objects/creating-and-managing-objects/defining-object-relationships.md), easy way to relate objects with not only custom objects, but also native objects shipped with Liferay, such as Blog entries or web content.
 
 ### Objects Integration with DXP Frameworks
 

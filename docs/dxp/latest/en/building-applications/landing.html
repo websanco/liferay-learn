@@ -1,0 +1,204 @@
+<script type="module">
+	import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.esm.browser.min.js'
+
+	const page = new Vue({
+		el: '#landingPage',
+		data: {
+			cards: [
+				{
+					sectionName: 'Building Applications with Objects',
+					sectionURL: 'building-applications/objects.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'Objects Overview',
+							url: 'building-applications/objects.html'
+						},
+						{
+							name: 'Creating and Managing Objects',
+							url: 'building-applications/objects/creating-and-managing-objects.html'
+						},
+						{
+							name: 'Understanding Object Integrations',
+							url: 'building-applications/objects/understanding-object-integrations.html'
+						},
+					]
+				},
+				{
+					sectionName: 'Building Solutions with Objects (Coming Soon)',
+					sectionURL: 'building-applications/objects/building-solutions-with-objects.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'Using Object Data with React Charts (Coming Soon)',
+							url: 'building-applications/objects/building-solutions-with-objects/using-object-data-with-react-charts.html'
+						},
+						{
+							name: 'Using Objects to Create Kanban Boards (Coming Soon)',
+							url: 'building-applications/objects/building-solutions-with-objects/using-objects-to-create-kanban-boards.html'
+						}
+					]
+				},
+				{
+					sectionName: 'Developing a JavaScript Application',
+					sectionURL: 'building-applications/developing-a-javascript-application.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'Using React (Coming Soon)',
+							url: 'building-applications/developing-a-javascript-application/using-react.html'
+						},
+						{
+							name: 'Using Angular (Coming Soon)',
+							url: 'building-applications/developing-a-javascript-application/using-angular.html'
+						},
+						{
+							name: 'Using Vue.JS (Coming Soon)',
+							url: 'building-applications/developing-a-javascript-application/using-vuejs.html'
+						}
+					]
+				},
+				{
+					sectionName: 'Developing a Java Web Application',
+					sectionURL: 'building-applications/developing-a-java-web-application.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'Using MVC',
+							url: 'building-applications/developing-a-java-web-application/using-mvc.html'
+						},
+						{
+							name: 'Using Spring',
+							url: 'building-applications/developing-a-java-web-application/using-spring.html'
+						},
+						{
+							name: 'Using JSF',
+							url: 'building-applications/developing-a-java-web-application/using-jsf.html'
+						},
+						{
+							name: 'Using Bean Portlet',
+							url: 'building-applications/developing-a-java-web-application/using-bean-portlet.html'
+						},
+					]
+				},
+				{
+					sectionName: 'Developing a REST Web API',
+					showAll: false,
+					subsections: [
+						{
+							name: 'Producing GraphQL APIs (Coming Soon)',
+							url: 'building-applications/developing-a-rest-web-api/producing-graphql-apis.html'
+						},
+					]
+				},
+				{
+					sectionName: 'Core Frameworks',
+					sectionURL: 'building-applications/core-frameworks.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'Configuration Framework',
+							url: 'building-applications/core-frameworks/configuration-framework.html'
+						},
+						{
+							name: 'Dependency Injection',
+							url: 'building-applications/core-frameworks/dependency-injection.html'
+						},
+						{
+							name: 'Dispatch Framework',
+							url: 'building-applications/core-frameworks/dispatch-framework/using-dispatch.html'
+						},
+						{
+							name: 'Message Bus',
+							url: 'building-applications/core-frameworks/message-bus.html'
+						},
+						{
+							name: 'Portlet Providers',
+							url: 'building-applications/core-frameworks/portlet-providers.html'
+						},
+						{
+							name: 'Servlets',
+							url: 'building-applications/core-frameworks/servlets.html'
+						},
+						{
+							name: 'Reference',
+							url: 'building-applications/core-frameworks/reference.html'
+						},
+					]
+				},
+				{
+					sectionName: 'Data Frameworks',
+					sectionURL: 'building-applications/data-frameworks.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'Service Builder',
+							url: 'building-applications/data-frameworks/service-builder.html'
+						},
+						{
+							name: 'Document Library / File Store',
+							url: 'content-authoring-and-management/documents-and-media/developer_guide.html'
+						},
+						{
+							name: 'Search',
+							url: 'using-search/developer_guide.html'
+						},
+					]
+				},
+				{
+					sectionName: 'Tooling',
+					sectionURL: 'building-applications/tooling.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'Developer Tools Overview',
+							url: 'building-applications/tooling/developer-tools-overview.html'
+						},
+						{
+							name: 'Installing and Updating Blade CLI',
+							url: 'building-applications/tooling/blade-cli/installing-and-updating-blade-cli.html'
+						},
+						{
+							name: 'What is Liferay Workspace?',
+							url: 'building-applications/tooling/liferay-workspace/what-is-liferay-workspace.html'
+						},
+					]
+				},
+				{
+					sectionName: 'Reference',
+					sectionURL: 'building-applications/reference.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'Deploying WARs (WAB Generator)',
+							url: 'building-applications/reference/deploying-wars-wab-generator.html'
+						},
+						{
+							name: 'JARs Excluded from WABs',
+							url: 'building-applications/reference/jars-excluded-from-wabs.html'
+						},
+					]
+				},
+				{
+					sectionName: 'App Builder (Deprecated)',
+					sectionURL: 'building-applications/app-builder.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'App Builder Overview',
+							url: 'building-applications/app-builder.html'
+						},
+						{
+							name: 'Creating a Standard Application',
+							url: 'building-applications/app-builder/creating-a-standard-application.html'
+						},
+						{
+							name: 'Creating a Workflow Powered Application',
+							url: 'building-applications/app-builder/creating-a-workflow-powered-application.html'
+						}
+					]
+				}
+			]
+		}
+	})
+</script>

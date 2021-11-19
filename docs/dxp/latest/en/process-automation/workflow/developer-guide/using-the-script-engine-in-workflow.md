@@ -79,7 +79,7 @@ At virtually any point in a workflow, you can use Liferay's script engine to acc
 * Sending an email to the designated content approver with a list of people to contact if he is unable to review the content
 * Creating an alert to be displayed in the Alerts portlet for any User assigned to approve content
 
-The following workflow script is written using Groovy and is used with a `Condition` Node. The script uses Liferay's [asset framework](../../../developing-applications/data-frameworks/assets.md) to determine an asset's category and uses the category to determine the correct approval process automatically. If the asset is in the `legal` category, it is sent to the `Legal Review` task upon submission. Otherwise, the asset is sent to the `Default Review` task.
+The following workflow script is written using Groovy and is used with a `Condition` Node. The script uses Liferay's [asset framework](../../../building-applications/data-frameworks/assets.md) to determine an asset's category and uses the category to determine the correct approval process automatically. If the asset is in the `legal` category, it is sent to the `Legal Review` task upon submission. Otherwise, the asset is sent to the `Default Review` task.
 
 ```xml
 <script>

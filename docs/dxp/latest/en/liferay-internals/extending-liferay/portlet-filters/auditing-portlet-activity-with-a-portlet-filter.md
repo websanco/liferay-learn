@@ -1,6 +1,6 @@
 # Auditing Portlet Activity with Portlet Filters
 
-Portlet filters intercept requests and responses at the start of each [portlet request processing phase](../../../developing-applications/developing-a-java-web-application/reference/portlets.md#portlet-phases) so you can add functionality there. This makes them useful for auditing portlet activities during their render, action, event, and resource serving phases.
+Portlet filters intercept requests and responses at the start of each [portlet request processing phase](../../../building-applications/developing-a-java-web-application/reference/portlets.md#portlet-phases) so you can add functionality there. This makes them useful for auditing portlet activities during their render, action, event, and resource serving phases.
 
 Follow these steps to create portlet filters for auditing portlet activities:
 
@@ -13,7 +13,7 @@ Follow these steps to create portlet filters for auditing portlet activities:
    * Render Phase - [`RenderFilter`](http://docs.liferay.com/portlet-api/3.0/javadocs/javax/portlet/filter/RenderFilter.html)
    * Resource Serving Phase - [`ResourceFilter`](http://docs.liferay.com/portlet-api/3.0/javadocs/javax/portlet/filter/ResourceFilter.html)
 
-   See [Portlets](../../../developing-applications/developing-a-java-web-application/reference/portlets.md#portlet-phases) for more information about each portlet phase.
+   See [Portlets](../../../building-applications/developing-a-java-web-application/reference/portlets.md#portlet-phases) for more information about each portlet phase.
 
 1. Declare the portlet filter a Component within the OSGi framework using the `@Component` annotation and identify it as a `PortletFilter.class` service.
 
@@ -194,5 +194,5 @@ The portlet filter proceeds to implement the [`RenderFilter`](http://docs.lifera
 
 ## Additional Information
 
-* [Portlets](../../../developing-applications/developing-a-java-web-application/reference/portlets.md)
+* [Portlets](../../../building-applications/developing-a-java-web-application/reference/portlets.md)
 <!--TASK: Add link to Using Portlet Filters article when finished -->
