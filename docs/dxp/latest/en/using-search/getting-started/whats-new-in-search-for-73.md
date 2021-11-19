@@ -24,7 +24,7 @@ The Elasticsearch 7 connector bundled with DXP 7.3 uses [Elastic's Java REST Cli
 
 The functionality of the _Liferay Enterprise Search Security_ (formerly _Liferay Connector to X-Pack Security_)  module is included in the _Liferay Connector to Elasticsearch 7_. All customers on CE/DXP 7.3 can connect securely to their Elasticsearch cluster without a [Liferay Enterprise Search (LES)](https://www.liferay.com/products/dxp/enterprise-search) subscription.
 
-The [upgrade](../installing-and-upgrading-a-search-engine/elasticsearch/upgrading_elasticsearch.md) guide contains information on moving the encryption configuration into the Elasticsearch 7 connector.
+The [upgrade](../installing-and-upgrading-a-search-engine/elasticsearch/upgrading-elasticsearch.md) guide contains information on moving the encryption configuration into the Elasticsearch 7 connector.
 
 ### Multiple Elasticsearch Connections
 
@@ -172,7 +172,7 @@ The Elasticsearch 7.9.0 OSS version is auto-downloaded at first startup. Please 
 
 ## Upgrading to DXP 7.3
 
-Upgrading from a previous DXP version to 7.3 requires some special steps due to the switch to the [REST client](#the-elasticsearch-7-connector-is-based-on-the-rest-client). Please consult the [upgrade documentation](../installing-and-upgrading-a-search-engine/elasticsearch/upgrading_elasticsearch.md) for important information to assist your upgrade journey.
+Upgrading from a previous DXP version to 7.3 requires some special steps due to the switch to the [REST client](#the-elasticsearch-7-connector-is-based-on-the-rest-client). Please consult the [upgrade documentation](../installing-and-upgrading-a-search-engine/elasticsearch/upgrading-elasticsearch.md) for important information to assist your upgrade journey.
 
 ## Related Topics
 
