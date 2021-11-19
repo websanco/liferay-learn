@@ -3,7 +3,7 @@
 Liferayのツールや説明書は、DXPやポータルCE環境を安全かつ迅速にアップグレードするのに役立ちます。 小さなデータセットを持つ非クラスター環境などは、[Dockerイメージ](./upgrading-via-docker.md)を使ってアップグレードすることができます。 複雑で、より大きなデータセットを持つ、または多くのカスタマイズがあるDXP環境およびポータルCE環境は、[データベースアップグレードツール](./using-the-database-upgrade-tool.md)を使用してアップグレードします。
 
 ```{warning}
-アップグレードする前に、**必ず**データベースとインストールを [バックアップ](../../maintaining-a-liferay-dxp-installation/backing-up.md) してください。 バックアップコピーでアップグレードプロセスをテストすることをお勧めします。
+アップグレードする前に、**必ず**データベースとインストールを [バックアップ](../../maintaining-a-liferay-installation/backing-up.md) してください。 バックアップコピーでアップグレードプロセスをテストすることをお勧めします。
 ```
 
 ```{note}
@@ -103,4 +103,4 @@ Liferayデータベースをアップグレードするには、2つの方法が
 さらに、アップグレードに関連する以下のアップグレードシナリオを参照してください。
 
   - [Upgrading a Sharded Environment](../other-upgrade-scenarios/upgrading-a-sharded-environment.md)
-  - [Maintaining Clustered Installations](../../maintaining-a-liferay-dxp-installation/maintaining-clustered-installations/maintaining-clustered-installations.md)
+  - [Maintaining Clustered Installations](../../maintaining-a-liferay-installation/maintaining-clustered-installations.md)

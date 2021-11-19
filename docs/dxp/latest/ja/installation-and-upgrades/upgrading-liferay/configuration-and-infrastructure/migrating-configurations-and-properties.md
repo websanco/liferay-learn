@@ -10,7 +10,7 @@
 
 ## Liferayホームおよびアプリケーションサーバーファイルの移行
 
-1.  [バックアップ](../../maintaining-a-liferay-dxp-installation/backing-up.md)からインストールに追加および編集した[Liferayホームファイル](../../maintaining-a-liferay-dxp-installation/backing-up.md#liferay-home)および[アプリケーションサーバーファイル](../../maintaining-a-liferay-dxp-installation/backing-up.md#application-server)をマージします。 ファイルには次のものが含まれる場合がありますが、これらに限定されません。
+1.  [バックアップ](../../maintaining-a-liferay-installation/backing-up.md)からインストールに追加および編集した[Liferayホームファイル](../../maintaining-a-liferay-installation/backing-up.md#liferay-home)および[アプリケーションサーバーファイル](../../maintaining-a-liferay-installation/backing-up.md#application-server)をマージします。 ファイルには次のものが含まれる場合がありますが、これらに限定されません。
 
       - `/license/*`：アクティベーションキー。 (サブスクリプション)
       - `/log/*`：ログファイル。
@@ -21,7 +21,7 @@
 
 2.  新しいインストールの`[Liferay Home]/data`フォルダを、バックアップの`[Liferay Home]/data`フォルダと置き換えます。
 
-3.  [ファイル ストア (ドキュメント ライブラリ)](../../../system-administration/file-storage/configuring-file-storage.md)を、[バックアップ](../../maintaining-a-liferay-dxp-installation/backing-up.md)から新しいインストールにコピーするか、または[`.config`ファイル](../../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md#creating-configuration-files)を介して使用するように新しいインストールを設定してセットアップします。
+3.  [ファイル ストア (ドキュメント ライブラリ)](../../../system-administration/file-storage/configuring-file-storage.md)を、[バックアップ](../../maintaining-a-liferay-installation/backing-up.md)から新しいインストールにコピーするか、または[`.config`ファイル](../../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md#creating-configuration-files)を介して使用するように新しいインストールを設定してセットアップします。
 
 ## データベースアップグレードの設定の更新
 

@@ -133,7 +133,7 @@ server.detector.server.id=tomcat
 
 #### portal-upgrade-ext.propertiesの構成
 
-[バックアップ](../../reference/portal-properties.md)から、`portal-ext.properties`ファイルプロパティなどのすべての[ポータルプロパティ](../../maintaining-a-liferay-dxp-installation/backing-up.md)を追加します。 次のプロパティは、アップグレードを構成するために特に重要です。
+[バックアップ](../../reference/portal-properties.md)から、`portal-ext.properties`ファイルプロパティなどのすべての[ポータルプロパティ](../../maintaining-a-liferay-installation/backing-up.md)を追加します。 次のプロパティは、アップグレードを構成するために特に重要です。
 
   - `liferay.home`：[LIFERAY\_HOMEフォルダ](../../reference/liferay-home.md)
 

@@ -17,7 +17,7 @@ Liferayのセットアップ
    ../../system-administration/file-storage/enabling-antivirus-scanning-for-uploaded-files.md
    ../../using-search/installing-and-upgrading-a-search-engine/installing-a-search-engine.md
    securing-liferay/securing-liferay.md
-   maintaining-a-liferay-dxp-installation/backing-up.md
+   maintaining-a-liferay-installation/backing-up.md
    ../../system-administration/installing_and_managing_apps.rst
    setting-up-liferay/using-a-cdn.md
    setting-up-liferay/clustering_for_high_availability.rst
@@ -110,7 +110,7 @@ Liferayを保護することはとても重要です。 詳しくは `Securing L
 バックアップの設定
 ~~~~~~~~~~~~~~~~~
 
-仮想インスタンスを開発する際には、必ずバックアップを取ってください。 ガイダンスについては、 `Backing Up <./maintaining-a-liferay-dxp-installation/backing-up.md>`_ を参照してください。
+仮想インスタンスを開発する際には、必ずバックアップを取ってください。 ガイダンスについては、 `Backing Up <./maintaining-a-liferay-installation/backing-up.md>`_ を参照してください。
 
 その他のセットアップ作業
 ~~~~~~~~~~~~~~~~~
@@ -163,4 +163,4 @@ LiferayのJVM、接続プールなどを最適なパフォーマンスに調整�
 Liferay DXPを使用していて、まだ `アクティブ化 <./setting-up-liferay/activating-liferay-dxp.md>`_ していない場合は、最初にアクティブ化してください。 次に、 `インスタンス設定 <../system-administration/configuring-liferay/virtual-instances/instance-configuration.md>`_ と上記の他のセットアップタスクに進みます。
 
 ..important::
-  本番環境に入る前に、インストールとデータをバックアップするためのプロセスを設定します。 詳しくは、 `Backing Up <./maintaining-a-liferay-dxp-installation/backing-up.md>`_ を参照してください。
+  本番環境に入る前に、インストールとデータをバックアップするためのプロセスを設定します。 詳しくは、 `Backing Up <./maintaining-a-liferay-installation/backing-up.md>`_ を参照してください。

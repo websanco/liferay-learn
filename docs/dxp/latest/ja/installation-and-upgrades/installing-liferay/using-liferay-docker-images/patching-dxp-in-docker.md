@@ -5,7 +5,7 @@ Liferayの[パッチ](../../maintaining-a-liferay-installation/patching-dxp-7-3-
 > エンタープライズサブスクリプション
 
 ``` important::
-   パッチを適用する前に、**必ず** データベースとインストールを `バックアップ <../../maintaining-a-liferay-dxp-installation/backing-up.md>`_ してください。
+   パッチを適用する前に、**必ず** データベースとインストールを `バックアップ <../../maintaining-a-liferay-installation/backing-up.md>`_ してください。
 ```
 
 DXPコンテナのパッチに関するトピックは次のとおりです。
@@ -18,7 +18,7 @@ DXPコンテナのパッチに関するトピックは次のとおりです。
 
 ## フィックスパック、セキュリティフィックスパック、およびサービスパックイメージの使用
 
-フィックスパック、セキュリティフィックスパック、およびサービスパックのイメージは、[スリムバンドル](../../maintaining-a-liferay-dxp-installation/patching-liferay/advanced-patching-for-dxp-7-2/using-slim-bundles.md)基づいています。 スリムバンドルは、通常の[Liferay Tomcatバンドル](../installing-a-liferay-tomcat-bundle.md)よりも起動が速く、フットプリントが小さくなります。 ただし、スリムバンドルに適用できるパッチは1つだけです。 したがって、これらのイメージには、次のパッチ適用の制限があります。
+フィックスパック、セキュリティフィックスパック、およびサービスパックのイメージは、[スリムバンドル](../../maintaining-a-liferay-installation/patching-dxp-7-3-and-earlier/advanced-patching-for-dxp-7-2/using-slim-bundles.md)基づいています。 スリムバンドルは、通常の[Liferay Tomcatバンドル](../installing-a-liferay-tomcat-bundle.md)よりも起動が速く、フットプリントが小さくなります。 ただし、スリムバンドルに適用できるパッチは1つだけです。 したがって、これらのイメージには、次のパッチ適用の制限があります。
 
   - フィックスパックおよびサービスパックイメージは、ホットフィックスやセキュリティフィックスパックなどの追加パッチを1つだけ受け取ることができます。
 
@@ -28,7 +28,7 @@ DXPコンテナのパッチに関するトピックは次のとおりです。
 
 1.  [現在のDXPコンテナを停止します](./docker-container-basics.md#stopping-a-container)。
 
-2.  DXPコンテナのカスタマイズに使用したファイルを[バックアップ](../../maintaining-a-liferay-dxp-installation/backing-up.md)します。
+2.  DXPコンテナのカスタマイズに使用したファイルを[バックアップ](../../maintaining-a-liferay-installation/backing-up.md)します。
 
     ``` bash
     git commit -a
@@ -130,7 +130,7 @@ DXPは、アーティファクトとファイルを使用して新しいコン�
     docker stop [container]
     ```
 
-2.  コンテナのアーティファクトとファイルを[バックアップ](../../maintaining-a-liferay-dxp-installation/backing-up.md)します。
+2.  コンテナのアーティファクトとファイルを[バックアップ](../../maintaining-a-liferay-installation/backing-up.md)します。
 
 3.  コンテナを削除します。
 
@@ -144,7 +144,7 @@ DXPは、アーティファクトとファイルを使用して新しいコン�
 
 現在のパッチツールがインストールするパッチと互換性がない場合、パッチツールには次のメッセージが報告されます：  `[patch file] is incompatible with Patching Tool version [x.y.z]`（`x.y.z`はツールのメジャー、マイナー、およびマクロのバージョン番号です）。
 
-ここでは、新しい[パッチツール](../../maintaining-a-liferay-dxp-installation/patching-liferay/installing-the-patching-tool.md)のバージョンをインストールする方法を説明します。
+ここでは、新しい[パッチツール](../../maintaining-a-liferay-installation/reference/installing-the-patching-tool.md)のバージョンをインストールする方法を説明します。
 
 1.  [カスタマーポータル](https://customer.liferay.com/downloads?p_p_id=com_liferay_osb_customer_downloads_display_web_DownloadsDisplayPortlet&_com_liferay_osb_customer_downloads_display_web_DownloadsDisplayPortlet_productAssetCategoryId=118191019&_com_liferay_osb_customer_downloads_display_web_DownloadsDisplayPortlet_fileTypeAssetCategoryId=118191066)から最新のパッチツールをダウンロードします。
 
@@ -164,7 +164,7 @@ DXPは、アーティファクトとファイルを使用して新しいコン�
 
 1.  使用しているLiferayのバージョンの[Liferay Tomcat Bundleのインストール](../installing-a-liferay-tomcat-bundle.md)をインストールします。
 
-2.  インストールにパッチを適用します。 詳細は、[Patching Liferay](../../maintaining-a-liferay-dxp-installation/patching-liferay/patching-liferay.md)を参照してください。
+2.  インストールにパッチを適用します。 詳細は、[Patching Liferay](../../maintaining-a-liferay-installation/patching-dxp-7-3-and-earlier.md)を参照してください。
 
 3.  データベースアップグレードツールを使用してデータベースをアップグレードします。 詳細は、 [データベースアップグレードツールの使用](../../upgrading-liferay/upgrade-basics/using-the-database-upgrade-tool.md)を参照してください。
 

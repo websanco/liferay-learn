@@ -16,7 +16,7 @@ Dockerをお持ちではありませんか？ まずは [Linux](https://docs.doc
 ```
 
 ```{important}
-アップグレードする前に、**必ず** データベースと既存のインストールを [バックアップ](../../maintaining-a-liferay-dxp-installation/backing-up.md) してください。 バックアップコピーでアップグレードプロセスをテストすることをお勧めします。
+アップグレードする前に、**必ず** データベースと既存のインストールを [バックアップ](../../maintaining-a-liferay-installation/backing-up.md) してください。 バックアップコピーでアップグレードプロセスをテストすることをお勧めします。
 ```
 
 ## 最新のDockerイメージによるアップグレード
@@ -35,7 +35,7 @@ Dockerイメージを使用してアップグレードする手順は次のと�
 
 2.  組み込みの[Elasticsearch](../../../using-search/installing-and-upgrading-a-search-engine/elasticsearch/getting-started-with-elasticsearch.md)エンジンまたはローカルの[ファイルストア（ドキュメントライブラリ）](../../../system-administration/file-storage/configuring-file-storage.md)を使用している場合は、`[Liferay Home]/data`フォルダを新しい`files`フォルダにコピーして`new-version/files/data`を作成します。
 
-3.  [Liferay Homeのファイル](../../maintaining-a-liferay-dxp-installation/backing-up.md#liferay-home)と[アプリケーションサーバーファイル](../../maintaining-a-liferay-dxp-installation/backing-up.md#application-server)をバックアップから`files`フォルダ内の対応する場所（新しい`[Liferay Home]`）にコピーしてマージします。 例えば、アクティベーションキーを`new-version/files/license/`にコピーします。 ファイルには次のものが含まれる場合がありますが、これらに限定されません。
+3.  [Liferay Homeのファイル](../../maintaining-a-liferay-installation/backing-up.md#liferay-home)と[アプリケーションサーバーファイル](../../maintaining-a-liferay-installation/backing-up.md#application-server)をバックアップから`files`フォルダ内の対応する場所（新しい`[Liferay Home]`）にコピーしてマージします。 例えば、アクティベーションキーを`new-version/files/license/`にコピーします。 ファイルには次のものが含まれる場合がありますが、これらに限定されません。
 
       - `/license/*`：アクティベーションキー。 (サブスクリプション)
 
@@ -108,4 +108,4 @@ Dockerイメージを使用してアップグレードする手順は次のと�
 
   - [Upgrading Custom Development](../upgrading_custom_development.html)では、カスタムプラグインコードを新しいLiferayバージョンに適応させる方法を示しています。
 
-  - [Maintaining Clustered Installations](../../maintaining-a-liferay-dxp-installation/maintaining-clustered-installations/maintaining-clustered-installations.md)では、クラスター環境でアップグレードする方法について説明しています。
+  - [Maintaining Clustered Installations](../../maintaining-a-liferay-installation/maintaining-clustered-installations.md)では、クラスター環境でアップグレードする方法について説明しています。
