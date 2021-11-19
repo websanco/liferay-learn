@@ -1,11 +1,11 @@
 # Upgrading Search Infrastructure
 
-While upgrading Liferay, there are additional considerations to account for with the search experience when using Elasticsearch. The exact steps depend on your existing search engine installation and Liferay version, but you'll always want to start by [backing up your existing indexes](./backing-up-elasticsearch.md).
+While upgrading Liferay, there are additional considerations to account for with the search experience when using Elasticsearch. The exact steps depend on your existing search engine installation and Liferay version, but you should start by [backing up your existing indexes](./backing-up-elasticsearch.md).
 
 * See the [Search Engine Compatibility Matrix](https://help.liferay.com/hc/en-us/articles/360016511651): it's always recommended to run the latest supported Elasticsearch version.
 * Liferay Enterprise Search applications are now bundled with Liferay DXP. No additional installation steps are required. See [Activating Liferay Enterprise Search](../../../liferay-enterprise-search/activating-liferay-enterprise-search.md) for more information.
-* If you're already on a supported Elasticsearch version, you may opt to continue using the existing Elasticsearch instance, without updating it.
-* Beginning in Liferay 7.4, the Search Tuning (Synonym Sets and Result Rankings) indexes are backed by database tables. If the search engine is connected to Liferay during Liferay's upgrade, the data will be propagated to the database for you. If you are setting up a new Elasticsearch instance, you'll need to [backup and restore the search tuning indexes](./backing-up-elasticsearch.md), then run a [Groovy script](#importing-the-search-tuning-indexes-in-7-4) to manually import the index data into the new database tables.
+* If you're already on a supported Elasticsearch version, you may opt to continue using the existing Elasticsearch instance without updating it.
+* Beginning in Liferay 7.4, the Search Tuning (Synonym Sets and Result Rankings) indexes are backed by database tables. If the search engine is connected to Liferay during Liferay's upgrade, the data is propagated to the database for you. If you are setting up a new Elasticsearch instance, you must [backup and restore the search tuning indexes](./backing-up-elasticsearch.md), then run a [Groovy script](#importing-the-search-tuning-indexes-in-7-4) to manually import the index data into the new database tables.
 
 ## Upgrade Steps
 
@@ -35,12 +35,11 @@ If you're on Liferay 7.4 and using the Liferay Enterprise Search applications, n
 
 ## Upgrading Liferay Enterprise Search on Liferay 7.2 and 7.3
 
-Because LES and its apps are bundled with Liferay 7.4, these steps are only required if upgrading to Liferay 7.2 or 7.3. Follow the [basic upgrade steps](#upgrading-a-liferay-system-using-elasticsearch-7), then consider the following:
+Because LES and its apps are bundled with Liferay 7.4, these steps are only required if upgrading to Liferay 7.2 or 7.3. Follow the [basic upgrade steps](#upgrading-a-liferay-system-using-elasticsearch-7), then these optional steps: 
 
 1. Install a Kibana version that matches the Elasticsearch version, if you are currently using [Kibana and Monitoring](../../../liferay-enterprise-search/monitoring-elasticsearch.md).
 
 1. Install and configure the LES applications applicable to your setup and version. See the [LES Compatibility Matrix](https://help.liferay.com/hc/en-us/articles/360016511651#Liferay-Enterprise-Search) for details.
-
 
 ## Test the Upgraded Search Experience
 
@@ -54,17 +53,17 @@ Manually test the upgraded search experience to ensure the features you depend o
 
 > **LES Subscribers**
 
-These LES apps were renamed in the 7.3 lifecycle to better reflect their functionality and to emphasize their identity as LES apps:
+These LES apps were renamed in the 7.3 life cycle to better reflect their functionality and to emphasize their identity as LES apps:
 
 | Functionality | Old App Name | New App Name | 7.2 Configuration File | 7.3/7.4 Configuration File |
 | ------------- | ------------ | ------------ |------------ | ------------ |
 | Monitoring the Elasticsearch cluster | Liferay Connector to X-Pack Monitoring [Elastic Stack 6.x] | Liferay Enterprise Search Monitoring | `com.liferay.portal.search.elasticsearch6.xpack.monitoring.web.internal.configuration.XPackMonitoringConfiguration.config` | `com.liferay.portal.search.elasticsearch.monitoring.web.internal.configuration.MonitoringConfiguration.config` |
-| Securing the Elasticsearch cluster | Liferay Connector to X-Pack Security [Elastic Stack 6.x] | Liferay Enterprise Search Security | No action required, this app is not available for DXP 7.4; features are integrated into the Elasticsearch 7 connector. |
+| Securing the Elasticsearch cluster | Liferay Connector to X-Pack Security [Elastic Stack 6.x] | Liferay Enterprise Search Security | No action required; this app is not available for DXP 7.4. Its features are integrated into the Elasticsearch 7 connector. |
 | Using machine learning to optimize the search algorithm | Liferay Connector to Elasticsearch Learning to Rank | Liferay Enterprise Search Learning to Rank | No changes. |
 
 The Liferay 7.3 and 7.4 widget and configuration names are identical.
 
-If you're upgrading from Liferay 7.2, the renaming of apps and configurations has the following upgrade impacts:
+If you're upgrading from Liferay 7.2, the renaming of apps and configurations has these upgrade impacts:
 1. The LES Monitoring widget is now named *Elasticsearch Monitoring*. During startup, a module upgrade step runs, renaming the app when _Liferay Enterprise Search Monitoring_ is deployed. No action is required.
 1. The configuration file name changed from `com.liferay.portal.search.elasticsearch6.xpack.monitoring.web.internal.configuration.XPackMonitoringConfiguration.config` to `com.liferay.portal.search.elasticsearch.monitoring.web.internal.configuration.MonitoringConfiguration`. The properties are the same as before. During portal startup, a module upgrade step runs, renaming the configuration. No action is required.
 1. The Kibana base path to the monitoring widget changed. You must change the original setting in `kibana.yml`:

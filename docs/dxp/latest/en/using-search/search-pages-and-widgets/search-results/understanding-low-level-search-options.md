@@ -97,7 +97,7 @@ If you’re following the example here to search *liferay-0*, search for *dynami
 
 ## Example 2: Searching the Liferay Company Index and an Additional Index
 
-To set up a [Search Page](../working-with-search-pages/search-pages.md) that displays one set of results from Liferay's company index (e.g, `liferay-20098`) and another from some alternate index of interest in [Liferay's Elasticsearch cluster](../../installing-and-upgrading-a-search-engine/elasticsearch.md) (this example uses `liferay-0` for demonstration purposes):
+Set up a [Search Page](../working-with-search-pages/search-pages.md) that displays one set of results from Liferay's company index (e.g, `liferay-20098`) and another from some alternate index of interest in [Liferay's Elasticsearch cluster](../../installing-and-upgrading-a-search-engine/elasticsearch.md) (this example uses `liferay-0` for demonstration purposes):
 
 1. Add these widgets to a [new page called _Low Level Search_]( ./../../../site-building/creating-pages/using-widget-pages/adding-widgets-to-a-page.md): 
 
