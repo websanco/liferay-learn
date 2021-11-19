@@ -55,13 +55,13 @@ jdbc.default.driverClassName=com.mysql.cj.jdbc.Driver
 ここで説明するプロパティは、データベースのアップグレード後に更新できます。 プロパティの移行には、次のアクションが含まれます。
 
   - `liferay.home`プロパティを更新する（変更している場合）
-  - [ブレードCLI](../../../developing-applications/tooling/blade-cli/installing-and-updating-blade-cli.md)を使用してプロパティの変更を報告する
+  - [ブレードCLI](../../../building-applications/tooling/blade-cli/installing-and-updating-blade-cli.md)を使用してプロパティの変更を報告する
   - プロパティをOSGi構成に変換する
   - プロパティの移行に関する特別な考慮事項
 
 ### ブレードCLIを使用して互換性のないプロパティを報告する
 
-[ブレードCLI](../../../developing-applications/tooling/blade-cli/installing-and-updating-blade-cli.md)ツールの`upgradeProps`コマンドは、ポータルプロパティファイル間の変更を報告します。 このツールは、次のタイプの変更を報告します。
+[ブレードCLI](../../../building-applications/tooling/blade-cli/installing-and-updating-blade-cli.md)ツールの`upgradeProps`コマンドは、ポータルプロパティファイル間の変更を報告します。 このツールは、次のタイプの変更を報告します。
 
   - 更新されていない場合に例外を発生させるプロパティ。
   - モジュールの`portal.properties`ファイルに移動されたプロパティ。

@@ -154,9 +154,9 @@ Liferayのモジュールは、Gradleのビルドインフラストラクチャ�
 | `gradle/`           | Gradleのラッパーが含まれています。                                                                                        |
 | `gradlew[.bat]`     | タスクを実行するためにGradleラッパーを呼び出します                                                                                |
 | `gradle.properties` | Liferayの製品バージョンを指定します                                                                                       |
-| `settings.gradle`   | [Liferay Workspace](../../developing-applications/tooling.rst) のプラグインを含むGradleプラグインを適用します。 |
+| `settings.gradle`   | [Liferay Workspace](../../building-applications/tooling.rst) のプラグインを含むGradleプラグインを適用します。 |
 
-サンプルプロジェクトの `k8s2-api` フォルダのように、新しいサブフォルダにモジュールを追加したり、新しい [Liferay Workspace](../../developing-applications/tooling/liferay-workspace.md) にモジュールを作成することができます。
+サンプルプロジェクトの `k8s2-api` フォルダのように、新しいサブフォルダにモジュールを追加したり、新しい [Liferay Workspace](../../building-applications/tooling/liferay-workspace.md) にモジュールを作成することができます。
 
 以下は、`k8s2-api` モジュールの構造を、プロジェクトルートのコンテキストで示したものです。
 

@@ -63,7 +63,7 @@
 
 ## モデルクラスとイベントを特定する
 
-Liferay DXPのモデルクラスは、 [Service Builder](../../developing-applications/data-frameworks/service-builder.md)によって生成されます 。 モデルインターフェイスは、任意のアプリケーションの `-api` モジュールにあります。 例えば、メッセージボードメッセージのモデルインターフェースを見つけるには、Liferay DXPのソースコードの`modules/apps/messageboards/messageboards-api`プロジェクトを探してください。
+Liferay DXPのモデルクラスは、 [Service Builder](../../building-applications/data-frameworks/service-builder.md)によって生成されます 。 モデルインターフェイスは、任意のアプリケーションの `-api` モジュールにあります。 例えば、メッセージボードメッセージのモデルインターフェースを見つけるには、Liferay DXPのソースコードの`modules/apps/messageboards/messageboards-api`プロジェクトを探してください。
 
 このルールの例外はコアモデルです。 `User`などのコアクラスのモデルリスナーを作成する場合、そのインターフェイスはLiferay DXPのソースコードの `portal-kernel` フォルダーにあります。
 
@@ -169,4 +169,4 @@ Liferay DXPのモデルクラスは、 [Service Builder](../../developing-applic
 
 [ModelListener Javadoc](https://docs.liferay.com/portal/7.3-latest/javadocs/portal-kernel/com/liferay/portal/kernel/model/BaseModelListener.html)
 
-[Service Builder](../../developing-applications/data-frameworks/service-builder.md)
+[Service Builder](../../building-applications/data-frameworks/service-builder.md)

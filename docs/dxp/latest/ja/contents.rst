@@ -15,7 +15,7 @@
    collaboration_and_social
    users-and-permissions
    system_administration
-   developing_applications
+   building-applications
    liferay_internals
    headless_delivery
    installation_and_upgrades

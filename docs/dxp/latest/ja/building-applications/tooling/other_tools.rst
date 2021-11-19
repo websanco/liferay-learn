@@ -16,5 +16,5 @@
    other-tools/push.md
    other-tools/sync.md
 
-.. include:: /developing-applications/tooling/other-tools/README.rst
+.. include:: /building-applications/tooling/other-tools/README.rst
    :start-line: 2

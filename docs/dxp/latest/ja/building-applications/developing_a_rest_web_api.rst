@@ -6,5 +6,5 @@ REST Web APIの開発
 
    developing-a-rest-web-api/producing-graphql-apis.md
 
-.. include:: /developing-applications/developing-a-rest-web-api/README.rst
+.. include:: /building-applications/developing-a-rest-web-api/README.rst
    :start-line: 2

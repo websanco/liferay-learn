@@ -59,7 +59,7 @@ Liferay DXP 7.3以降。 以前のLiferay DXPのバージョンについては�
 
   - **フラグメント**：フラグメントは、コンテンツページの主要な構成要素として機能する、拡張可能で再利用可能なドラッグアンドドロップ要素です。 例としては、レイアウト要素、ビデオ、テキストオーバーレイ付きのバナー画像などがあります。 DXPのすぐに使えるフラグメントの詳細は[フラグメントの使用](./using-fragments.md) を、独自のフラグメントを作成する方法については[Developing Fragments](../../developer-guide/developing-page-fragments/developing-fragments-intro.md)を参照してください。
 
-  - **ウィジェット**：他のDXPコンテキストと同様に、ウィジェットはページに動的機能を追加する[アプリケーション](../../../developing_applications.html)です。 例としては、ブログ、掲示板、カレンダーなどがあります。 詳細は、[Using Widgets on Content Pages](./using-widgets-on-a-content-page.md)を参照してください。
+  - **ウィジェット**：他のDXPコンテキストと同様に、ウィジェットはページに動的機能を追加する[アプリケーション](../../../building-applications.html)です。 例としては、ブログ、掲示板、カレンダーなどがあります。 詳細は、[Using Widgets on Content Pages](./using-widgets-on-a-content-page.md)を参照してください。
 
 ### 選択
 

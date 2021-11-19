@@ -26,7 +26,7 @@ LiferayのヘッドレスAPIは、Liferay DXPリソースとの[RESTful](https:/
 
 LiferayのWebサービスは古いフレームワークの一部であり、DXPで引き続きサポートされていますが、複雑なヘッドレス操作には推奨されなくなりました。 これらのAPIは、Liferay DXPの内部動作と密接に関連しているため、新しいヘッドレスオプションが提供するパワーと柔軟性に欠けています。
 
-ただし、Webサービスは、特定のタスクを実行するためのより簡単な方法を提供する場合があります。 使用方法については、[Service Builder Web Services](../developing-applications/data-frameworks/service-builder.md)を参照してください。
+ただし、Webサービスは、特定のタスクを実行するためのより簡単な方法を提供する場合があります。 使用方法については、[Service Builder Web Services](../building-applications/data-frameworks/service-builder.md)を参照してください。
 
 ## 機能一覧
 

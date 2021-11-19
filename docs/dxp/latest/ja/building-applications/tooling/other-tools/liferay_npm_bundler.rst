@@ -16,5 +16,5 @@ Liferay npm Bundler
    liferay-npm-bundler/the-structure-of-osgi-bundles-containing-npm-packages.md
    liferay-npm-bundler/bundler_migration_guide.rst
 
-.. include:: /developing-applications/tooling/other-tools/liferay-npm-bundler/README.rst
+.. include:: /building-applications/tooling/other-tools/liferay-npm-bundler/README.rst
    :start-line: 2

@@ -8,5 +8,5 @@ Blade CLI
    blade-cli/generating-projects-with-blade-cli.md
    blade-cli/troubleshooting-blade-cli.md
 
-.. include:: /developing-applications/tooling/blade-cli/README.rst
+.. include:: /building-applications/tooling/blade-cli/README.rst
    :start-line: 2

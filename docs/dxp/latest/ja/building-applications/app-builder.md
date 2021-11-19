@@ -3,10 +3,10 @@
 ```{toctree}
 :maxdepth: 3
 
-developing-low-code-applications/creating-a-standard-application.md
-developing-low-code-applications/creating-a-workflow-powered-application.md
-developing-low-code-applications/creating-the-role-change-request-object.md
-developing-low-code-applications/creating-the-role-change-request-app.md
+app-builder/creating-a-standard-application.md
+app-builder/creating-a-workflow-powered-application.md
+app-builder/creating-the-role-change-request-object.md
+app-builder/creating-the-role-change-request-app.md
 ```
 
 > 対応可能：Liferay DXP 7.3以降
