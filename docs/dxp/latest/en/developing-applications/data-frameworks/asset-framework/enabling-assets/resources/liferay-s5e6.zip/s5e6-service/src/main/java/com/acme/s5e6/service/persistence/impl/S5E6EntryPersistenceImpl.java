@@ -20,6 +20,7 @@ import com.acme.s5e6.model.S5E6EntryTable;
 import com.acme.s5e6.model.impl.S5E6EntryImpl;
 import com.acme.s5e6.model.impl.S5E6EntryModelImpl;
 import com.acme.s5e6.service.persistence.S5E6EntryPersistence;
+import com.acme.s5e6.service.persistence.S5E6EntryUtil;
 import com.acme.s5e6.service.persistence.impl.constants.S5E6PersistenceConstants;
 
 import com.liferay.petra.string.StringBundler;
@@ -50,6 +51,7 @@ import com.liferay.portal.kernel.uuid.PortalUUIDUtil;
 
 import java.io.Serializable;
 
+import java.lang.reflect.Field;
 import java.lang.reflect.InvocationHandler;
 
 import java.util.Date;
@@ -2071,11 +2073,30 @@ public class S5E6EntryPersistenceImpl
 			FINDER_CLASS_NAME_LIST_WITHOUT_PAGINATION, "countByUuid_C",
 			new String[] {String.class.getName(), Long.class.getName()},
 			new String[] {"uuid_", "companyId"}, false);
+
+		_setS5E6EntryUtilPersistence(this);
 	}
 
 	@Deactivate
 	public void deactivate() {
+		_setS5E6EntryUtilPersistence(null);
+
 		entityCache.removeCache(S5E6EntryImpl.class.getName());
+	}
+
+	private void _setS5E6EntryUtilPersistence(
+		S5E6EntryPersistence s5e6EntryPersistence) {
+
+		try {
+			Field field = S5E6EntryUtil.class.getDeclaredField("_persistence");
+
+			field.setAccessible(true);
+
+			field.set(null, s5e6EntryPersistence);
+		}
+		catch (ReflectiveOperationException reflectiveOperationException) {
+			throw new RuntimeException(reflectiveOperationException);
+		}
 	}
 
 	@Override
