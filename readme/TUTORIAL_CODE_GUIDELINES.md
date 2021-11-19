@@ -178,9 +178,8 @@ Here are some examples that demonstrate example project types.
 | :----------- | :-------- |
 | API Implementation | [writing-a-similar-results-contributor/resources/liferay-r1s1.zip](../docs/dxp/latest/en/using-search/developer-guide/writing-a-similar-results-contributor/resources/liferay-r1s1.zip) |
 | API & OSGi Services | [using-an-osgi-service/resources/liferay-j1h1.zip](../docs/dxp/latest/en/liferay-internals/fundamentals/using-an-osgi-service/resources/liferay-j1h1.zip) |
-| Portlet | [using-mvc/using-a-jsp-and-mvc-portlet/resources/liferay-w3e7.zip](../docs/dxp/latest/en/developing-applications/developing-a-java-web-application/using-mvc/using-a-jsp-and-mvc-portlet/resources/liferay-w3e7.zip) |
+| Portlet | [using-mvc/using-a-jsp-and-mvc-portlet/resources/liferay-w3e7.zip](../docs/dxp/latest/en/building-applications/developing-a-java-web-application/using-mvc/using-a-jsp-and-mvc-portlet/resources/liferay-w3e7.zip) |
 | Fragment (JS project) | [adding-configuration-options-to-fragments/resources/liferay-c7f8.zip](../docs/dxp/latest/en/site-building/developer-guide/developing-page-fragments/adding-configuration-options-to-fragments/resources/liferay-c7f8.zip) |
-
 
 ### Module Structure
 

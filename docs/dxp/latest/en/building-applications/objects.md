@@ -4,11 +4,11 @@
 :maxdepth: 3
 
 objects/creating-and-managing-objects.md
+objects/building-solutions-with-objects.md
 objects/using-objects-in-sites.md
 objects/understanding-object-integrations.md
 objects/using-picklists.md
 objects/objects-application-permissions.md
-objects/building-solutions-with-objects.md
 ```
 
 With Liferay Objects, you can build and deliver applications without having to write code or deploy modules, yet these applications are built on and integrated with Liferay's core frameworks. Quickly develop and manage flexible solutions that adapt Liferay DXP to your business needs while maintaining a seamless user experience.
