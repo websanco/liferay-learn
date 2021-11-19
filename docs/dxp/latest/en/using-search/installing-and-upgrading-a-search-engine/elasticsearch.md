@@ -22,7 +22,7 @@ Always check the [compatibility matrix](https://help.liferay.com/hc/en-us/sectio
 ```
 
 ```{important}
-Liferay 7.2 and 7.3 include support for Elasticsearch 7 and securing authenticated, encrypted Elasticsearch connections. Securing the Elasticsearch 6 connector (available on Liferay 7.2) requires an additional module only available with a [Liferay Enterprise Search subscription](../liferay_enterprise_search.md).
+Liferay 7.2 and 7.3 include support for Elasticsearch 7 and securing authenticated, encrypted Elasticsearch connections. Securing the Elasticsearch 6 connector (available on Liferay 7.2) requires an additional module only available with a [Liferay Enterprise Search subscription](../liferay-enterprise-search.md).
 ```
 
 ## Installing

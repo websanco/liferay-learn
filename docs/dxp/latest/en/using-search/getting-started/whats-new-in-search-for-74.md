@@ -60,7 +60,7 @@ To learn about how this impacts the upgrade process, read [Upgrading Search Infr
 
 ### LES Installation is Simplified
 
-Starting with Liferay DXP 7.4, the [Liferay Enterprise Search (LES)](../liferay_enterprise_search.md) applications are included with all Liferay DXP bundles and Docker containers. LES is enabled by default and requires no additional installation steps. However, a LES add-on subscription must be purchased to receive official Liferay Support and additional benefits. Maintenance and updates to LES applications are delivered with Liferay DXP updates.
+Starting with Liferay DXP 7.4, the [Liferay Enterprise Search (LES)](../liferay-enterprise-search.md) applications are included with all Liferay DXP bundles and Docker containers. LES is enabled by default and requires no additional installation steps. However, a LES add-on subscription must be purchased to receive official Liferay Support and additional benefits. Maintenance and updates to LES applications are delivered with Liferay DXP updates.
 
 ![The LES apps, like Cross-Cluster Replication, are installed with Liferay DXP 7.4.](./whats-new-in-search-for-74/images/04.png)
 

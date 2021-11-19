@@ -87,7 +87,7 @@ Re-index your search and spell check indexes. Both re-index actions are carried 
 ## Additional Information
 
 * [Securing Elasticsearch](./securing-elasticsearch.md)
-* [Liferay Enterprise Search](../../liferay_enterprise_search.md)
+* [Liferay Enterprise Search](../../liferay-enterprise-search.md)
 * [Search Pages](../../search-pages-and-widgets/working-with-search-pages/search-pages.md)
 * [Administering and Tuning Search](../../search_administration_and_tuning.md)
 * [Elasticsearch Connector Settings](./elasticsearch-connector-configuration-reference.md)
