@@ -1,6 +1,22 @@
 [
 	{
 		"Condition": {
+			"KeyPrefixEquals": "ce/apps/"
+		},
+		"Redirect": {
+			"ReplaceKeyPrefixWith": "reference/latest/en/"
+		}
+	},
+	{
+		"Condition": {
+			"KeyPrefixEquals": "ce/portal/"
+		},
+		"Redirect": {
+			"ReplaceKeyPrefixWith": "reference/latest/en/"
+		}
+	},
+	{
+		"Condition": {
 			"KeyPrefixEquals": "commerce/2.x/"
 		},
 		"Redirect": {
@@ -17,7 +33,7 @@
 	},
 	{
 		"Condition": {
-			"KeyPrefixEquals": "ce/"
+			"KeyPrefixEquals": "dxp/apps/"
 		},
 		"Redirect": {
 			"ReplaceKeyPrefixWith": "reference/latest/en/"
@@ -25,7 +41,7 @@
 	},
 	{
 		"Condition": {
-			"KeyPrefixEquals": "dxp/apps"
+			"KeyPrefixEquals": "dxp/digital-enterprise/"
 		},
 		"Redirect": {
 			"ReplaceKeyPrefixWith": "reference/latest/en/"
@@ -33,15 +49,7 @@
 	},
 	{
 		"Condition": {
-			"KeyPrefixEquals": "dxp/digital-enterprise"
-		},
-		"Redirect": {
-			"ReplaceKeyPrefixWith": "reference/latest/en/"
-		}
-	},
-	{
-		"Condition": {
-			"KeyPrefixEquals": "dxp/portal"
+			"KeyPrefixEquals": "dxp/portal/"
 		},
 		"Redirect": {
 			"ReplaceKeyPrefixWith": "reference/latest/en/"
@@ -65,7 +73,7 @@
 	},
 	{
 		"Condition": {
-			"KeyPrefixEquals": "portlet-api/"
+			"KeyPrefixEquals": "portlet-api/1.0/"
 		},
 		"Redirect": {
 			"ReplaceKeyPrefixWith": "reference/latest/en/portlet-api/"
@@ -73,7 +81,31 @@
 	},
 	{
 		"Condition": {
-			"KeyPrefixEquals": "social-office/"
+			"KeyPrefixEquals": "portlet-api/2.0/"
+		},
+		"Redirect": {
+			"ReplaceKeyPrefixWith": "reference/latest/en/portlet-api/"
+		}
+	},
+	{
+		"Condition": {
+			"KeyPrefixEquals": "portlet-api/3.0/"
+		},
+		"Redirect": {
+			"ReplaceKeyPrefixWith": "reference/latest/en/portlet-api/"
+		}
+	},
+	{
+		"Condition": {
+			"KeyPrefixEquals": "social-office/1.0/"
+		},
+		"Redirect": {
+			"ReplaceKeyPrefixWith": "reference/latest/en/"
+		}
+	},
+	{
+		"Condition": {
+			"KeyPrefixEquals": "social-office/1.5/"
 		},
 		"Redirect": {
 			"ReplaceKeyPrefixWith": "reference/latest/en/"
