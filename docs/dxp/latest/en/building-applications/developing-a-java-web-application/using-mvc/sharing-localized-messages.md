@@ -93,4 +93,4 @@ Note that you can still choose to place some language keys in an individual modu
 
 ## Related Topics
 
-* [Aggregating Resource Bundles](../../core-frameworks/reference/localization/aggregating-resource-bundles.md)
+* [Aggregating Resource Bundles](../../core-frameworks/localization/reference/aggregating-resource-bundles.md)
