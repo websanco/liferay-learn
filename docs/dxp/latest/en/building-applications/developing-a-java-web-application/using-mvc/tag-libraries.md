@@ -8,6 +8,7 @@ tag-libraries/liferay-portlet-objects-for-Jsps.md
 tag-libraries/alloy-ui-aui-tag-library.md
 tag-libraries/clay-tag-library.md
 tag-libraries/liferay-ui-tag-library.md
+tag-libraries/liferay-frontend-tag-library.md
 ```
 You have access to a powerful set of taglibs for creating commonly used UI components in your apps, themes, and web content. The following taglibs are covered in this section:
 
