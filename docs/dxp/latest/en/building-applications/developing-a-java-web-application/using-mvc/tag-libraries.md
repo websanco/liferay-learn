@@ -9,6 +9,7 @@ tag-libraries/alloy-ui-aui-tag-library.md
 tag-libraries/clay-tag-library.md
 tag-libraries/liferay-ui-tag-library.md
 tag-libraries/liferay-frontend-tag-library.md
+tag-libraries/liferay-util-tag-library.md
 ```
 You have access to a powerful set of taglibs for creating commonly used UI components in your apps, themes, and web content. The following taglibs are covered in this section:
 
@@ -23,11 +24,10 @@ You have access to a powerful set of taglibs for creating commonly used UI compo
 
 - Liferay UI: create common UI components such as icons, tabs, and more.
   
-- Liferay Util: load additional resources, define parameters, buffer content, 
-  and more.
+- Liferay Util: load additional resources, define parameters, buffer content, and more.
 
 ```{note} 
  Each taglib is available as a FreeMarker macro, except for the Chart taglib. The Chart taglib is **not** available as a FreeMarker macro. The articles in this section provide the proper syntax to use for each macro. See the [FreeMarker Taglib Mappings reference](https://help.liferay.com/hc/en-us/articles/360029145851-FreeMarker-Taglib-Macros) for a complete list of the available FreeMarker taglib macros.
 ```
 
-In this section, you'll learn how to use taglibs to build awesome user interfaces for your apps! 
+In this section, you'll learn how to use taglibs to build awesome user interfaces for your apps!

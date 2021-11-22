@@ -36,17 +36,17 @@ The Liferay Clay taglib is also available via a macro for your FreeMarker theme 
 
 Clay taglibs provide the following UI components for your apps:
 
-* [Alerts](/docs/7-2/reference/-/knowledge_base/r/clay-alerts)
-* [Badges](/docs/7-2/reference/-/knowledge_base/r/clay-badges)
-* [Buttons](/docs/7-2/reference/-/knowledge_base/r/clay-buttons)
-* [Cards](/docs/7-2/reference/-/knowledge_base/r/clay-cards)
-* [Dropdown Menus and Action Menus](/docs/7-2/reference/-/knowledge_base/r/clay-dropdown-menus-and-action-menus)
-* [Form Elements](/docs/7-2/reference/-/knowledge_base/r/clay-form-elements)
-* [Icons](/docs/7-2/reference/-/knowledge_base/r/clay-icons)
-* [Labels and links](/docs/7-2/reference/-/knowledge_base/r/clay-labels-and-links)
-* [Management Toolbar](/docs/7-2/reference/-/knowledge_base/r/clay-management-toolbar)
-* [Navigation Bars](/docs/7-2/reference/-/knowledge_base/r/clay-navigation-bars)
-* [Progress Bars](/docs/7-2/reference/-/knowledge_base/r/clay-progress-bars)
-* [Stickers](/docs/7-2/reference/-/knowledge_base/r/clay-stickers)
+- [Alerts](clay-tag-library/clay-alerts.md)
+- [Badges](clay-tag-library/clay-badges.md)
+- [Buttons](clay-tag-library/clay-buttons.md)
+- [Cards](clay-tag-library/clay-cards.md)
+- [Dropdown Menus and Action Menus](clay-tag-library/clay-dropdown-and-action-menus.md)
+- [Form Elements](clay-tag-library/clay-form-elements.md)
+- [Icons](clay-tag-library/clay-icons.md)
+- [Labels and links](clay-tag-library/clay-links-and-labels.md)
+- [Management Toolbar](clay-tag-library/clay-management-toolbar.md)
+- [Navigation Bars](clay-tag-library/clay-navigation-bars.md)
+- [Progress Bars](clay-tag-library/clay-progress-bars.md)
+- [Stickers](clay-tag-library/clay-stickers.md  )
 
 This section covers how to create these components with the Clay taglibs. Each article contains a set of clay component examples along with a screenshot of the resulting UI.
