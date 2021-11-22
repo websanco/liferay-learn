@@ -36,20 +36,16 @@ The Tomcat server parent folder is [*Liferay Home*](../../reference/liferay-home
 DXP depends on many JARs included in Liferay-Tomcat bundle. Some of the bundle's JARs are not strictly required but can still be useful. If you're not using a Tomcat bundle, you'll use the *OSGi Dependencies* archive you downloaded and any third-party JAR dependencies as described below.
 
 1. Unzip the OSGi Dependencies ZIP file contents in the `[Liferay Home]/osgi` folder (create this folder if it doesn't exist). Liferay's OSGi runtime depends on these modules.
-1. The DXP 7.4+ WAR file includes drivers for MariaDB and PostgreSQL. Earlier WARs don't have them. If your WAR doesn't have the driver you want, download your database vendor's JDBC JAR file and place it on the global class path at this location (create the folder if it doesn't exist):
+1. The DXP 7.4+ WAR file includes drivers for MariaDB and PostgreSQL. Earlier WARs don't have them. If the 7.4+ WAR doesn't have the driver for the supported database you're using, download your database vendor's JDBC JAR file and place it in the `$CATALINA_BASE/webapps/ROOT/WEB-INF/shielded-container-lib` folder.
 
-    ```bash
-    $TOMCAT_HOME/lib/ext 
-    ```
-
-Please see the [compatibility matrix](https://help.liferay.com/hc/en-us/articles/360049238151) for a list of supported databases.
+    Please see the [compatibility matrix](https://help.liferay.com/hc/en-us/articles/360049238151) for a list of supported databases.
 
 ```{note}
 A Hypersonic database is bundled with DXP and is useful for testing purposes. **Do not** use HSQL for production instances.
 ```
 
 ```{note}
-For DXP 7.3 and earlier, unzip the Dependencies ZIP file to the `$TOMCAT_HOME/lib/ext` folder (create this folder if it doesn't exist).
+For DXP 7.3 and earlier, unzip the Dependencies ZIP file to the `$TOMCAT_HOME/lib/ext` folder (create this folder if it doesn't exist). Place your database vendor's JDBC JAR file in that folder too.
 ```
 
 ## Configuring Tomcat

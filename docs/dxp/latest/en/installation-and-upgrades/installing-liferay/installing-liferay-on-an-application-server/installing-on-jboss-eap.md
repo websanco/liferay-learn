@@ -26,32 +26,9 @@ The installation steps use these terms:
 ## Installing Dependencies
 
 1. Unzip the OSGi Dependencies ZIP file into the `[Liferay Home]/osgi` folder (create this folder if it doesn't exist). Liferay's OSGi runtime depends on these modules.
-1. The DXP 7.4+ WAR file includes drivers for MariaDB and PostgreSQL. Earlier WARs don't have them. If your WAR doesn't have the driver you want, download your database vendor's JDBC JAR file and place it on the global class path at this location (create the folder if it doesn't exist):
-
-    ```bash
-    $JBOSS_HOME/modules/com/liferay/portal/main
-    ```
+1. The DXP 7.4+ WAR file includes drivers for MariaDB and PostgreSQL. Earlier WARs don't have them. If the 7.4+ WAR doesn't have the driver for the supported database you're using, download your database vendor's JDBC JAR file and place it in the `$JBOSS_HOME/standalone/deployments/ROOT.war/WEB-INF/shielded-container-lib` folder.
 
     Please see the [compatibility matrix](https://help.liferay.com/hc/en-us/articles/360049238151) for a list of supported databases.
-
-1. Create a file called `module.xml` in the `$JBOSS_HOME/modules/com/liferay/portal/main`. In the file, add this content and enter your database vendor's JAR file name in `path` value for the <resource-root> element.
-
-    ```xml
-    <?xml version="1.0"?>
-
-    <module xmlns="urn:jboss:module:1.0" name="com.liferay.portal">
-        <resources>
-            <resource-root path="[place your database vendor's JAR file name here]" />
-        </resources>
-        <dependencies>
-            <module name="javax.api" />
-            <module name="javax.mail.api" />
-            <module name="javax.servlet.api" />
-            <module name="javax.servlet.jsp.api" />
-            <module name="javax.transaction.api" />
-        </dependencies>
-    </module>
-    ```
 
 ```{note}
 DXP includes a Hypersonic database that is useful for testing purposes. **Do not** use HSQL for production instances.
@@ -62,7 +39,7 @@ DXP includes a Hypersonic database that is useful for testing purposes. **Do not
 For DXP 7.3 and earlier, follow these additional steps:
 
 1. Unzip the Dependencies ZIP file to a folder called `$JBOSS_HOME/modules/com/liferay/portal/main` (create this folder if it doesn't exist).
-1. Create the file `module.xml` in the `$JBOSS_HOME/modules/com/liferay/portal/main` folder. In the file, declare the portal module and all of its required resources and dependencies:
+1. Create a file called `module.xml` in the `$JBOSS_HOME/modules/com/liferay/portal/main` folder. In the file, declare the portal module and all of its required resources and dependencies:
 
     ```xml
     <?xml version="1.0"?>

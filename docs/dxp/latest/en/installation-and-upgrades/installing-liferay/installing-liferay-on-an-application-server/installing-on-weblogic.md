@@ -128,14 +128,16 @@ After installing DXP, these configurations (including these JVM options) can be 
 DXP depends on OSGi modules (OSGi Dependencies ZIP) and a database driver.
 
 1. Unzip the OSGi Dependencies ZIP file into the `[Liferay Home]/osgi` folder (create this folder if it doesn't exist). Liferay's OSGi runtime depends on these modules.
-1. The DXP 7.4+ WAR file includes drivers for MariaDB and PostgreSQL. Earlier DXP WARs don't have them. If your DXP WAR doesn't have the driver you want, download your database vendor's JDBC JAR file to the domain's `lib` folder. Please see the [compatibility matrix](https://help.liferay.com/hc/en-us/articles/360049238151) for a list of supported databases.
+1. The DXP 7.4+ WAR file includes drivers for MariaDB and PostgreSQL. Earlier DXP WARs don't have them. If the 7.4+ WAR doesn't have the driver for the supported database you're using, download your database vendor's JDBC JAR file and place it in the exploded DXP WAR's `WEB-INF/shielded-container-lib` folder.
+
+    Please see the [compatibility matrix](https://help.liferay.com/hc/en-us/articles/360049238151) for a list of supported databases.
 
 ```{note}
 A Hypersonic database is bundled with DXP and is useful for testing purposes. **Do not** use HSQL for production instances.
 ```
 
 ```{note}
-For DXP 7.3 and earlier, unzip the Dependencies ZIP file to the WebLogic domain's `lib` folder.
+For DXP 7.3 and earlier, unzip the Dependencies ZIP file to the WebLogic domain's `lib` folder. Place your database vendor's JDBC JAR file in that folder too.
 ```
 
 ## Installing Elasticsearch

@@ -152,24 +152,16 @@ By this point, the following steps should be completed:
 ## Installing Dependencies
 
 1. Unzip the OSGi Dependencies ZIP file and place its contents in the `[Liferay Home]/osgi` folder (create this folder if it doesn't already exist). Liferay's OSGi runtime depends on these modules.
-1. The DXP 7.4+ WAR file includes drivers for MariaDB and PostgreSQL. Earlier DXP WARs don't have them. If your DXP WAR doesn't have the driver you want, download your database vendor's JDBC JAR file and place it on the global class path at this location (create the folder if it doesn't exist):
+1. The DXP 7.4+ WAR file includes drivers for MariaDB and PostgreSQL. Earlier DXP WARs don't have them. If the 7.4+ WAR doesn't have the driver for the supported database you're using, unzip the DXP WAR to an arbitrary location, place your database vendor's JDBC JAR file in the exploded DXP WAR's `WEB-INF/shielded-container-lib` folder, and ZIP up the DXP WAR again.
 
-    ```bash
-    [Install Location]/WebSphere/AppServer/lib/ext
-    ```
-
-Please see the [compatibility matrix](https://help.liferay.com/hc/en-us/articles/360049238151) for a list of supported databases.
+    Please see the [compatibility matrix](https://help.liferay.com/hc/en-us/articles/360049238151) for a list of supported databases.
 
 ```{note}
 A Hypersonic database is bundled with DXP and is useful for testing purposes. **Do not** use HSQL for production instances.
 ```
 
 ```{note}
-For DXP 7.3 and earlier, Unzip the Dependencies ZIP file and place its contents in the WebSphere application server's `[Install Location]/WebSphere/AppServer/lib/ext` folder.
-```
-
-```{note}
-For DXP/Portal 7.3 and earlier, Unzip the Dependencies ZIP file and place its contents in the WebSphere application server's `[Install Location]/WebSphere/AppServer/lib/ext` folder.
+For DXP 7.3 and earlier, Unzip the Dependencies ZIP file and place its contents in the WebSphere application server's `[Install Location]/WebSphere/AppServer/lib/ext` folder. Place your database vendor's JDBC JAR file in that folder too.
 ```
 
 ## Installing Elasticsearch Archives
