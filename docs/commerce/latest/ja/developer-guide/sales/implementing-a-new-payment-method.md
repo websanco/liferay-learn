@@ -25,7 +25,7 @@
 2.  [Acme Commerce Payment Method](./liferay-b1c3.zip)をダウンロードして解凍します。
 
     ``` bash
-    curl https://learn.liferay.com/commerce/2.x/en/developer-guide/liferay-b1c3.zip -O
+    curl https://learn.liferay.com/commerce/2.x/en/developer-guide/sales/liferay-b1c3.zip -O
     ```
 
     ``` bash

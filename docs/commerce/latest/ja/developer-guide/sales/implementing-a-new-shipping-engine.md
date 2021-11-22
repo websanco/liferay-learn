@@ -27,7 +27,7 @@
 2.  [Acme Commerce Shipping Engine](./liferay-j6x8.zip)をダウンロードして解凍します。
 
     ``` bash
-    curl https://learn.liferay.com/commerce/2.x/en/developer-guide/liferay-j6x8.zip -O
+    curl https://learn.liferay.com/commerce/2.x/en/developer-guide/sales/liferay-j6x8.zip -O
     ```
 
     ``` bash

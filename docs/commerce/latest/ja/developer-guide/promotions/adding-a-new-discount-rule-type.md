@@ -25,7 +25,7 @@
 2.  [Acme Commerce Discount Rule Type](./liferay-m6a8.zip)をダウンロードして解凍します。
 
     ``` bash
-    curl https://learn.liferay.com/commerce/2.x/en/developer-guide/liferay-m6a8.zip -O
+    curl https://learn.liferay.com/commerce/2.x/en/developer-guide/promotions/liferay-m6a8.zip -O
     ```
 
     ``` bash

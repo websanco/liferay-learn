@@ -25,7 +25,7 @@
 2.  [Acme Commerce Product Type](./liferay-c1n4.zip)をダウンロードして解凍します。
 
     ``` bash
-    curl https://learn.liferay.com/commerce/2.x/en/developer-guide/liferay-c1n4.zip -O
+    curl https://learn.liferay.com/commerce/2.x/en/developer-guide/catalog/liferay-c1n4.zip -O
     ```
 
     ``` bash

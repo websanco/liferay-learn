@@ -15,7 +15,7 @@ Contents
    orders_and_fulfillment
    store_administration
    add_ons_and_connectors
-   developer_guide
+   developer-guide.md
    get_help
 
 Indices and tables

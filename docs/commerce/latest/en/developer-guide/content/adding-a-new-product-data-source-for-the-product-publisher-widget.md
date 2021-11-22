@@ -25,7 +25,7 @@ In this section, we will get an example product data source up and running on yo
 1. Download and unzip the [Acme Commerce Product Data Source](./liferay-m5x7.zip).
 
     ```bash
-    curl https://learn.liferay.com/commerce/latest/en/developer-guide/liferay-m5x7.zip -O
+    curl https://learn.liferay.com/commerce/latest/en/developer-guide/content/liferay-m5x7.zip -O
     ```
 
     ```bash

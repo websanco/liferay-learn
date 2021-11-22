@@ -14,7 +14,7 @@
    account_management
    orders_and_fulfillment
    store_administration
-   developer_guide
+   developer-guide.md
    get_help
 
 

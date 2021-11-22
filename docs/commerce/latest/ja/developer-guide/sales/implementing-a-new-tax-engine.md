@@ -25,7 +25,7 @@
 2.  [Acme Commerce Tax Engine](./liferay-q4b9.zip)をダウンロードして解凍します。
 
     ``` bash
-    curl https://learn.liferay.com/commerce/2.x/en/developer-guide/liferay-q4b9.zip -O
+    curl https://learn.liferay.com/commerce/2.x/en/developer-guide/sales/liferay-q4b9.zip -O
     ```
 
     ``` bash

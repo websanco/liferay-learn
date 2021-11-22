@@ -25,7 +25,7 @@ In this section, we will get an example product type up and running on your inst
 1. Download and unzip the [Acme Commerce Product Type](./liferay-c1n4.zip).
 
     ```bash
-    curl https://learn.liferay.com/commerce/latest/en/developer-guide/liferay-c1n4.zip -O
+    curl https://learn.liferay.com/commerce/latest/en/developer-guide/catalog/liferay-c1n4.zip -O
     ```
 
     ```bash

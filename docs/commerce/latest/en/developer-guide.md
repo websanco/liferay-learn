@@ -6,7 +6,7 @@
 developer-guide/catalog.md
 developer-guide/content.md
 developer-guide/managing-inventory.md
-developer-guide/marketing.md
+developer-guide/order-management.md
 developer-guide/promotions.md
 developer-guide/sales.md
 ```

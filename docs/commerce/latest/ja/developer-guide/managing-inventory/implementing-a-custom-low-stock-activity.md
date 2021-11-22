@@ -25,7 +25,7 @@
 2.  [Acme Commerce Low Stock Activity](./liferay-j1e4.zip)をダウンロードして解凍します。
 
     ``` bash
-    curl https://learn.liferay.com/commerce/2.x/en/developer-guide/liferay-j1e4.zip -O
+    curl https://learn.liferay.com/commerce/2.x/en/developer-guide/managing-inventory/liferay-j1e4.zip -O
     ```
 
     ``` bash

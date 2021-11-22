@@ -25,7 +25,7 @@
 2.  [Acme Commerce Exchange Rate Provider](./liferay-f2y1.zip)をダウンロードして解凍します。
 
     ``` bash
-    curl https://learn.liferay.com/commerce/2.x/en/developer-guide/liferay-f2y1.zip -O
+    curl https://learn.liferay.com/commerce/2.x/en/developer-guide/sales/liferay-f2y1.zip -O
     ```
 
     ``` bash
