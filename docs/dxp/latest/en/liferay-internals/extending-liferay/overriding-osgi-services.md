@@ -32,7 +32,7 @@ To override an OSGi service, you'll follow these steps:
 
 1. (Optional) If necessary, reference and invoke the service you're overriding in your service.
 
-The [sample modules](./liferay-s1j6.zip) demonstrate how to override an OSGi service. These modules include an API for defining a new OSGi service type, an initial implementation of that type, and a generic portlet that references the initial implementation. Also included are alternate implementations of the API to demonstrate how to override the initial implementation.
+The sample modules demonstrate how to override an OSGi service. These modules include an API for defining a new OSGi service type, an initial implementation of that type, and a generic portlet that references the initial implementation. Also included are alternate implementations of the API to demonstrate how to override the initial implementation.
 
 ## Deploy Sample Modules for Overriding
 

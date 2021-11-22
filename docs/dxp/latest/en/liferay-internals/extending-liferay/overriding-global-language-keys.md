@@ -61,7 +61,7 @@ Here's how to deploy the example:
 
     If you're running a different DXP/Portal version, adjust the above command accordingly. 
 
-1. Download and unzip [the latest example](./liferay-i2f4.zip).
+1. Download and unzip the `liferay-i2f4.zip` example project.
 
     ```bash
     curl https://learn.liferay.com/dxp/latest/en/liferay-internals/extending-liferay/liferay-i2f4.zip -O
@@ -168,7 +168,7 @@ This example changes the `publish` language key setting to this:
 
 Here's how to deploy the example:
 
-1. Download and unzip [Overriding Global Language Keys](./liferay-x8f3.zip).
+1. Download and unzip the `liferay-x8f3.zip` example project.
 
     ```bash
     curl https://learn.liferay.com/dxp/latest/en/liferay-internals/extending-liferay/liferay-x8f3.zip -O

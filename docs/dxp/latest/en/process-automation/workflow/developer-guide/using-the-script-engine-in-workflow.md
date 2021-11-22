@@ -141,7 +141,7 @@ See [Crafting Workflow Definitions](./crafting-xml-workflow-definitions.md) for 
 
 ## Calling OSGi Services
 
-[Service Trackers](../../../liferay-internals/service-trackers.md) retrieve OSGi services that are available. If the Service Tracker returns null for the service, that service is unavailable and you can do something appropriate in response.
+[Service Trackers](../../../developing-applications/core-frameworks/dependency-injection.md) retrieve OSGi services that are available. If the Service Tracker returns null for the service, that service is unavailable and you can do something appropriate in response.
 
 Here's a workflow script written in Groovy that uses a `JournalArticleLocalService` to get an article count:
 
