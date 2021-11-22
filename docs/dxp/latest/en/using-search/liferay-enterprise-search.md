@@ -4,7 +4,7 @@
 :maxdepth: 4
 
 liferay-enterprise-search/activating-liferay-enterprise-search.md
-liferay-enterprise-search/cross_cluster_replication.md
+liferay-enterprise-search/cross-cluster-replication.md
 liferay-enterprise-search/learning-to-rank.md
 liferay-enterprise-search/monitoring-elasticsearch.md
 ```
@@ -19,7 +19,7 @@ LES customers receive a [platinum Elasticsearch license](https://www.elastic.co/
 
 Detailed installation and usage instructions are available in the article for each LES feature, including
 
-- [Cross Cluster Replication](liferay-enterprise-search/cross_cluster_replication.md)
+- [Cross Cluster Replication](liferay-enterprise-search/cross-cluster-replication.md)
 - [Learning to Rank](liferay-enterprise-search/learning-to-rank.md)
 - [Monitoring Elasticsearch](liferay-enterprise-search/monitoring-elasticsearch.md)
 - [Securing Elasticsearch](installing-and-upgrading-a-search-engine/elasticsearch/securing-elasticsearch.md) [Free without LES for Liferay CE and DXP with Elasticsearch 7] 

@@ -331,6 +331,6 @@ Here's the complete list of settings for the X-Pack Security configuration on Li
 ## Related Topics
 
 * [Monitoring Elasticsearch](../../liferay-enterprise-search/monitoring-elasticsearch.md)
-* [Cross-Cluster Replication](./../../liferay-enterprise-search/cross_cluster_replication.md)
+* [Cross-Cluster Replication](./../../liferay-enterprise-search/cross-cluster-replication.md)
 * [Search Tuning](../../search-administration-and-tuning.md)
 * [Liferay Installation and Upgrades](../../installing-and-upgrading-a-search-engine.md)

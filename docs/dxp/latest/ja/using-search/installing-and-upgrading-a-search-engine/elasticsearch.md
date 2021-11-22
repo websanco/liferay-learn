@@ -14,16 +14,16 @@ elasticsearch/upgrading-elasticsearch.md
 elasticsearch/elasticsearch-connector-configuration-reference.md
 elasticsearch/advanced-configuration-of-the-liferay-elasticsearch-connector.md
 ```
-   
+
 Elasticsearchは、Liferayがデフォルトで使用する、拡張性の高いフルテキスト検索エンジンです。 ElasticsearchはLiferayにバンドルされており、本番環境以外の目的で使用されます。 本番環境では、Liferayは別のリモートサーバーで動作するElasticsearchを必要とします。
 
 ```{important}
-Liferayのバージョンと互換性のあるElasticsearchのバージョンとサーバー構成は、`互換性マトリクス <https://help.liferay.com/hc/en-us/sections/360002103292-Compatibility-Matrix>`__ を確認してください。
+Liferayのバージョンと互換性のあるElasticsearchのバージョンとサーバー構成は、[互換性マトリクス](https://help.liferay.com/hc/en-us/sections/360002103292-Compatibility-Matrix) を確認してください。
 ```
 
 
 ```{important}
-Liferay 7.2および7.3では、Elasticsearch 7をサポートし、認証および暗号化されたElasticsearch接続を保護します。 Elasticsearch 6コネクタ（Liferay 7.2で利用可能）のセキュリティを確保するには、 `Liferay Enterprise Searchサブスクリプション <../liferay_enterprise_search.md>`__ でのみ利用可能な追加モジュールが必要です。
+Liferay 7.2および7.3では、Elasticsearch 7をサポートし、認証および暗号化されたElasticsearch接続を保護します。 Elasticsearch 6コネクタ（Liferay 7.2で利用可能）のセキュリティを確保するには、 [Liferay Enterprise Searchサブスクリプション](../liferay-enterprise-search.md) でのみ利用可能な追加モジュールが必要です。
 ```
 
 ## インストール
