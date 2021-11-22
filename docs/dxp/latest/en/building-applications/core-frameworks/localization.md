@@ -9,6 +9,6 @@ localization/reference.md
 
 - [Adding A Language](./localization/adding-a-language.md)
 
-### Reference
+## Reference
 
 - [Aggregating Resource Bundles](./localization/reference/aggregating-resource-bundles.md)
