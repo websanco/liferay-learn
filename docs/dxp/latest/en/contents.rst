@@ -10,7 +10,7 @@ Contents
    site_building
    content_authoring_and_management
    process_automation
-   using_search
+   using-search
    collaboration_and_social
    users-and-permissions
    system_administration

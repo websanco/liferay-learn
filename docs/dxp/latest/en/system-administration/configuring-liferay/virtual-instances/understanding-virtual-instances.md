@@ -35,5 +35,5 @@ This section of articles focuses on the *Platform* settings.
 ## Related Topics
 
 - [Security](../../../installation-and-upgrades/securing-liferay.md)
-- [Search](./../../using_search.rst)
+- [Search](./../../using-search.md)
 - [System Settings](../system-settings.md)

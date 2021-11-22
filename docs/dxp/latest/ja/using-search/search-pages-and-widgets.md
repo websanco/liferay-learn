@@ -1,4 +1,4 @@
-# Search Pages and Widgets
+# 検索ページとウィジェット
 
 ```{toctree}
 :maxdepth: 2

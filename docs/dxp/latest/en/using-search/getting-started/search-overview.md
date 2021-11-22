@@ -25,7 +25,7 @@ To add search widgets to a page, click the Add button on the page, select _Widge
 
 ![There are plenty of search widgets.](./search-overview/images/07.png)
 
-To learn more, visit [Configuring Search Pages](../search-pages-and-widgets/working-with-search-pages/search-pages.md) or [Search Pages and Widgets](../search-pages-and-widgets/working_with_search_pages.md).
+To learn more, visit [Configuring Search Pages](../search-pages-and-widgets/working-with-search-pages/search-pages.md) or [Search Pages and Widgets](../search-pages-and-widgets/working-with-search-pages.md).
 
 ## Search Configuration and Administration
 

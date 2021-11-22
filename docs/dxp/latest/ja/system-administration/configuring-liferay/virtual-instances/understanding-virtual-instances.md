@@ -35,5 +35,5 @@ Liferay DXPのインストールとデータベースをホストするサーバ
 ## 関連トピック
 
   - [セキュリティ](../../../installation-and-upgrades/securing-liferay.md)
-  - [検索機能](../../../using_search.rst)
+  - [検索機能](../../../using-search.md)
   - [システム設定](../system-settings.md)
