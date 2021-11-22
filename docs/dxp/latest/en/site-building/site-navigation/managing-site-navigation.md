@@ -41,14 +41,14 @@ To access the page tree,
 
 1. Change between your public and private Pages using the drop-down menu. You can also choose your Navigation Menus from this drop-down control.
 
-1. From here you can,
+1. From here you can
 
    - Find pages in the tree by using the search bar (A).
    - Click on any Page for a Page preview.
    - Add Pages or configure Pages using the Add (![Add](../../images/icon-plus.png)) and Configure (![Configure](../../images/icon-settings.png)) buttons, and the Actions menu (![Actions Menu](../../images/icon-actions.png)) next to each Page's name (B).
    - Modify the order of Pages in the navigation menu by dragging and dropping the Pages in the tree (C).
 
-      ![You can add, preview, configure, or reorder Pages from the Page Tree menu.](./managing-site-navigation/images/04.png)
+   ![You can add, preview, configure, or reorder Pages from the Page Tree menu.](./managing-site-navigation/images/04.png)
 
 ## Additional Information
 
