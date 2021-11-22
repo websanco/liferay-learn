@@ -12,6 +12,10 @@ The Inventory Management system allows users to track all their inventory in a s
 
 See [Using Inventory Management](./using-the-inventory-management-system.md) for more information.
 
+```{important}
+Each product in the inventory must be associated to at least one SKU.
+```
+
 ## Warehouses
 
 Warehouses represent the physical locations where product inventory is managed and sourced for order fulfillment. Products inventory quantities are managed on a per warehouse basis.

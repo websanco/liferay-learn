@@ -30,6 +30,10 @@ Follow these steps to generate and activate multiple SKUs for a Product:
 
 1. When finished, click on *Publish*.
 
+```{important}
+Each product in the inventory must be associated to at least one SKU.
+```
+
 ## Manually Adding an SKU to a Product
 
 Follow these steps to manually create a Product SKU for individual Option values:

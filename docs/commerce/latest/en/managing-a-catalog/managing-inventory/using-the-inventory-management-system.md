@@ -32,6 +32,10 @@ To add an inventory item:
 
 The new inventory item has been added.
 
+```{important}
+Each product in the inventory must be associated to at least one SKU.
+```
+
 ## Setting Inventory Safety Stock
 
 Safety Stock is product inventory that is physically located in a warehouse but has been to set aside and made unavailable for sale. This could be for a prospective order or the items are to be sold on a different channel. Once set, available stock for the item is reduced for the configured warehouse.
