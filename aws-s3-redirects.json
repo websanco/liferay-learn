@@ -17,10 +17,18 @@
 	},
 	{
 		"Condition": {
-			"KeyPrefixEquals": "dxp/latest/developing-applications/"
+			"KeyPrefixEquals": "dxp/latest/en/developing-applications/"
 		},
 		"Redirect": {
-			"ReplaceKeyPrefixWith": "dxp/latest/building-applications/"
+			"ReplaceKeyPrefixWith": "dxp/latest/en/building-applications/"
+		}
+	},
+	{
+		"Condition": {
+			"KeyPrefixEquals": "dxp/latest/ja/developing-applications/"
+		},
+		"Redirect": {
+			"ReplaceKeyPrefixWith": "dxp/latest/ja/building-applications/"
 		}
 	}
 ]
