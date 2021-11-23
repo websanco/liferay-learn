@@ -1,6 +1,20 @@
 # Database Upgrade Options
 
-When database schema changes are included in a release, update, or fix pack, it's helpful to know the options for applying those changes. Here the database upgrade options are listed for each level of schema change and the upgrade processes are summarized for each combination of DXP/Portal installation type and upgrade method.
+When a release, update, or fix pack has database schema changes, it's helpful to know the options for applying them. Here you'll find the database upgrade options for each schema change level and learn the basic process for pairing an upgrade option with your DXP/Portal installation type.
+
+Here are the database upgrade options:
+
+* [Docker image](./upgrading-via-docker.md): Running the new DXP/Portal Docker image with the following environment variable auto-runs the core and module database upgrades on the configured database.
+
+    ```bash
+    -e LIFERAY_UPGRADE_PERIOD_DATABASE_PERIOD_AUTO_PERIOD_RUN=true
+    ```
+
+* [Gogo Shell](./upgrading-modules-using-gogo-shell.md): While the server is running, you can execute Gogo Shell commands to list and invoke module upgrades. Note, core database upgrades require using a Docker image or the Database Upgrade Tool.
+
+* [Database Upgrade Tool](./using-the-database-upgrade-tool.md): While the server is offline, you can execute core and module database upgrades using the Database Upgrade Tool.
+
+**Important:** This is supplemental information for upgrading DXP/Portal databases. Please see [Upgrade Overview](./upgrade-overview.md) as a starting point for complete DXP/Portal upgrade instructions and see *Maintaining a Liferay Installation* for complete instructions on updating and patching DXP/Portal.
 
 ## Upgrade Options for Applying Schema Changes
 
@@ -8,13 +22,21 @@ Here are the types of database schema changes a release, update, or fix pack may
 
 | Database Schema Changes | Database Upgrade Options |
 | :---------------------- | :----------------------- |
-| Module micro version<br>(Upgrades optional) | * Docker image<br>* Gogo Shell<br>* Database Upgrade Tool |
-| Module major/minor version<br>(Upgrades required) | * Docker image<br>* Gogo Shell<br>* Database Upgrade Tool |
-| Core data schema<br>(Upgrades required) | * Docker image<br>* Database Upgrade Tool |
+| Module micro version<br>(optional upgrades) | * Docker image<br>* Gogo Shell<br>* Database Upgrade Tool |
+| Module major/minor version<br>(required upgrades) | * Docker image<br>* Gogo Shell<br>* Database Upgrade Tool |
+| Core data schema<br>(required upgrades) | * Docker image<br>* Database Upgrade Tool |
 
 ## Upgrade Process Summary for Installation Types
 
-Here is an overview of using the database upgrade options with your current installation type.
+Database upgrades can be performed from the new installation you're setting up or in a different installation type separate from the new installation. For example, if you're using an app server + Liferay WAR, you can upgrade the database using the new Liferay Docker image, install the new Liferay WAR to your app server, and restart your app server to run the new Liferay version.
+
+There are three types of DXP/Portal installations:
+
+1. [Liferay Docker image](../../installing-liferay/using-liferay-docker-images/docker-container-basics.md)
+1. [Liferay Tomcat Bundle](../../installing-liferay/installing-a-liferay-tomcat-bundle.md)
+1. [Application server (app server) + Liferay WAR](../../installing-liferay/installing-liferay-on-an-application-server/installing-on-tomcat.md)
+
+Here are the general steps for using the database upgrade options with each installation type.
 
 | Current Installation Type | Docker<br>image<br>option | Tomccat<br>bundle<br>option | Lifery<br>WAR<br>option | Upgrade Process Summary |
 | :--- | :--- | :--- | :--- | :--- |
@@ -25,3 +47,8 @@ Here is an overview of using the database upgrade options with your current inst
 | App server + Liferay WAR | x |  |  | 1. Configure the new Docker image.<br>2. Run it with the upgrade environment variable enabled.<br>3. When the upgrades complete successfully, install the new Liferay WAR and OSGi dependencies on the application server. |
 | App server + Liferay WAR |  | x |  | 1. Configure the new Liferay Tomcat Bundle.<br>2. Run the Database Upgrade Tool.<br>3. When the upgrades complete successfully, install the new Liferay WAR and OSGi dependencies on the application server. |
 | App server + Liferay WAR |  |  | x | 1. Run the Database Upgrade Tool.<br>2. When the upgrades complete successfully, install the new Liferay WAR and OSGi dependencies on the application server. |
+
+## Additional Information
+
+* [Upgrade Overview](./upgrade-overview.md)
+* Maintaining a Liferay Installation
