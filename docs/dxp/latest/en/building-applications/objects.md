@@ -5,7 +5,9 @@
 
 objects/creating-and-managing-objects.md
 objects/building-solutions-with-objects.md
-objects/using-objects-in-sites.md
+objects/using-forms-with-objects.md
+objects/displaying-object-entries.md
+objects/enabling-workflows-for-objects.md
 objects/understanding-object-integrations.md
 objects/using-picklists.md
 objects/objects-application-permissions.md
