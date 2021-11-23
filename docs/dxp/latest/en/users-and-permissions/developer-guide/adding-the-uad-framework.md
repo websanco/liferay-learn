@@ -1,6 +1,6 @@
 # Adding the UAD Framework
 
-Administrators can [manage and delete user data](../managing-user-data.md) with Liferay's User Associated Data (UAD) management tool. The tool is available out-of-the-box for many of Liferay's applications (e.g. Blogs, Documents and Media, Message Boards, etc.). This framework can also be applied to your custom application.
+You can [manage and delete user data](../managing-user-data.md) with Liferay's User Associated Data (UAD) management tool. The tool is available out-of-the-box for many of Liferay's applications (e.g. Blogs, Documents and Media, Message Boards, etc.). This framework can also be applied to your custom application.
 
 This task is made easier with the use of [Service Builder](../../developing-applications/data-frameworks/service-builder.md). See the example below to learn how Service Builder automatically generates the necessary code to enable UAD for your application.
 
@@ -47,58 +47,66 @@ This task is made easier with the use of [Service Builder](../../developing-appl
 
 1. Add the H6D2 Portlet to a page. You can find the example portlet under Sample Widgets.
 
-    ![Add the H6D2 Portlet to a page.](./adding-the-uad-framework/images/01.png)
+   ![Add the H6D2 Portlet to a page.](./adding-the-uad-framework/images/01.png)
 
-1. [Create a new user](../users/adding-and-managing-users.md) that can used for testing.
+1. [Create a new user](../users/adding-and-managing-users.md) for testing.
 
 1. Log in as the new user and add some content on the H6D2 Portlet.
 
 1. Log back in as the administrator and navigate to *Control Panel* &rarr; *Users* &rarr; *Users and Organizations*. 
 
-1. Click the *Actions* icon (![Action](../../images/icon-actions.png)) of the new user and click *Delete Personal Data*. Click *OK* to confirm that the user will first be deactivated.
+1. Click the new user's *Actions* icon (![Action](../../images/icon-actions.png)) &rarr; *Delete Personal Data*. Click *OK* to confirm deactivation of the user.
 
-1. The UAD management tool is displayed. You can view, anonymize, or delete the data that was added by the new user in the H6D2 Portlet.
+1. The UAD management tool appears. You can view, anonymize, or delete the data the new user added in the H6D2 Portlet.
 
-    ![View, anonymize or delete the user's data that was added to the H6D2 Portlet.](./adding-the-uad-framework/images/02.png)
+   ![View, anonymize or delete the user's data that was added to the H6D2 Portlet.](./adding-the-uad-framework/images/02.png)
 
 ## Modify the Service Model Definition
 
-This tutorial assumes that you have a working application that you created using Service Builder. To enable UAD, first make the following changes,
+This tutorial assumes that you have a working application that you created using Service Builder. To enable UAD, first make the following changes to your entity:
 
 1. Open your `service.xml` file in the `-service` folder.
 
-    ```{literalinclude} ./adding-the-uad-framework/resources/liferay-h6d2.zip/h6d2-service/service.xml
-    ```
+1. There are two `entity` parameters to enable UAD:
 
-1. There are two `entity` elements that are needed to enable UAD.
+   | `entity` attributes | Description |
+   | :------------------ | :---------- |
+   | `uad-application-name` | Specifies the name of the application the entity type belongs to. |
+   | `uad-package-path` | Specifies the package path for the generated UAD classes. |
 
-    | `entity` attributes | Description |
-    | :------------------ | :---------- |
-    | `uad-application-name` | Specifies the name of the application the entity type belongs to. |
-    | `uad-package-path` | Specifies the package path for the generated UAD classes. |
+   ```{literalinclude} ./adding-the-uad-framework/resources/liferay-h6d2.zip/h6d2-service/service.xml
+   :language: xml
+   :lines: 6
+   ```
 
-1. Add the following data fields if you don't already have them defined.
+1. Add the following data fields if you don't already have them defined:
 
-    	<!-- Group instance -->
+   ```xml
+   <!-- Group instance -->
 
-		<column name="groupId" type="long" />
+   <column name="groupId" type="long" />
 
-		<!-- Audit fields -->
+   <!-- Audit fields -->
 
-		<column name="companyId" type="long" />
-		<column name="userId" type="long" />
-		<column name="userName" type="String" />
-		<column name="createDate" type="Date" />
-		<column name="modifiedDate" type="Date" />
+   <column name="companyId" type="long" />
+   <column name="userId" type="long" />
+   <column name="userName" type="String" />
+   <column name="createDate" type="Date" />
+   <column name="modifiedDate" type="Date" />
+   ```
 
-    Theses fields are necessary for the UAD Framework to be able to track and anonymize user data.
+   The UAD Framework requires these fields to track and anonymize user data.
 
-1. Next, specify the which data fields to anonymize. This is done with the use of two attributes:
+1. Next, specify the data fields to anonymize. This is done with the use of two attributes:
 
-   * `uad-anonymize-field-name=[fieldName]` attribute indicates a field whose value is replaced by that of the anonymous user in the UAD auto-anonymization process. For example, setting `uad-anonymize-field-name=fullName` would replace the value of that field with the full name of the anonymous user. See [Configuring the Anonymous User](../managing-user-data/configuring-the-anonymous-user.md) to learn more about the anonymous user.
+   * The `uad-anonymize-field-name=[fieldName]` attribute indicates a field whose value is replaced by that of the anonymous user in the UAD auto-anonymization process. For example, setting `uad-anonymize-field-name=fullName` would replace the value of that field with the full name of the anonymous user. See [Configuring the Anonymous User](../managing-user-data/configuring-the-anonymous-user.md) to learn more about the anonymous user.
 
    * The `uad-nonanonymizable="true"` attribute indicates data that is not automatically anonymized but must be reviewed by an administrator.
 
+   ```{literalinclude} ./adding-the-uad-framework/resources/liferay-h6d2.zip/h6d2-service/service.xml
+   :language: xml
+   :lines: 20
+   ```
 ## Generate the UAD module
 
 1. Navigate out of the `-service` folder and create a new `-uad` folder.
@@ -108,14 +116,14 @@ This tutorial assumes that you have a working application that you created using
     ```{literalinclude} ./adding-the-uad-framework/resources/liferay-h6d2.zip/h6d2-uad/bnd.bnd
     ```
 
-    Make sure to include the `-dsannotations-options: inherit` annotation. OSGi service component classes inherit [OSGi declaratives services](../../liferay-internals/fundamentals/module-projects.md) annotations from their class hierarchy.
+   Make sure to include the `-dsannotations-options: inherit` annotation. OSGi service component classes inherit [OSGi declarative services](../../liferay-internals/fundamentals/module-projects.md) annotations from their class hierarchy.
 
 1. Create a `build.gradle` file for the module.
 
     ```{literalinclude} ./adding-the-uad-framework/resources/liferay-h6d2.zip/h6d2-uad/build.gradle
     ```
 
-    Make sure to add any dependencies you need, including any `-api` module of your project.
+   Make sure to add any dependencies you need, including any `-api` module of your project.
 
 2. Navigate back to the module's `-service` folder and run Service Builder to generate the UAD module.
 
@@ -140,23 +148,23 @@ This tutorial assumes that you have a working application that you created using
 
 ## Modify the Portlet
 
-In addition to the data fields that are specific to your application, you must pass along the user related data fields you added in the `service.xml` file.
+When you pass the specific to your application from the form, you must also pass the user-related data fields you added in the `service.xml` file.
 
 ```{literalinclude} ./adding-the-uad-framework/resources/liferay-h6d2.zip/h6d2-web/src/main/java/com/acme/h6d2/web/internal/portlet/H6D2Portlet.java
 :language: java
 :lines: 30-66
 ```
 
-The `H6D2 Portlet` has a `H6D2EntryLocalService` field called `_h6d2EntryLocalService` and an action-handling method called `addH6D2Entry`. The `addH6D2Entry` method calls `H6D2EntryLocalService`'s `addH6D2Entry` method, passing the different data fields received from the `ActionRequest`. 
+The `H6D2 Portlet` has an `H6D2EntryLocalService` field called `_h6d2EntryLocalService` and an action-handling method called `addH6D2Entry`. The `addH6D2Entry` method calls `H6D2EntryLocalService`'s `addH6D2Entry` method, passing the data fields received from the `ActionRequest`. 
 
-The portlet's `view.jsp` submits `ActionRequests` to `H6D2 Portlet`.
+The portlet's `view.jsp` contains a form users can submit in an `ActionRequest` to `H6D2 Portlet`.
 
 ```{literalinclude} ./adding-the-uad-framework/resources/liferay-h6d2.zip/h6d2-web/src/main/resources/META-INF/resources/view.jsp
 :language: jsp
 :lines: 18-26
 ```
 
-Submitting an `ActionRequest` with the `actionURL` invokes the portlet's `addH6D2Entry` method. 
+Submitting the `ActionRequest` with the `actionURL` invokes the portlet's `addH6D2Entry` method. 
 
 ## Additional Information
 
