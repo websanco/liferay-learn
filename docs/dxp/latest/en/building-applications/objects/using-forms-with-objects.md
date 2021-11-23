@@ -10,11 +10,11 @@ All Forms features are supported for Objects, including rules and validations. H
 
 Follow these steps to add a form for creating Object entries:
 
-1. Navigate to the desired Site, open the *Site Menu* (![Site Menu](../../../images/icon-menu.png)), and go to *Content & Data* &rarr; *Forms*.
+1. Navigate to the desired Site, open the *Site Menu* (![Site Menu](../../images/icon-menu.png)), and go to *Content & Data* &rarr; *Forms*.
 
-1. Click on the *Add* button (![Add Button](../../../images/icon-add.png)).
+1. Click the *Add* button (![Add Button](../../images/icon-add.png)).
 
-1. Click on the *Configuration* button (![Configuration Button](../../../images/icon-cog.png)) for the new form.
+1. Click the *Configuration* button (![Configuration Button](../../images/icon-cog.png)) for the new form.
 
 1. Select both the *Object* storage type and the specific Object you want to connect with the form.
 
@@ -26,7 +26,7 @@ Follow these steps to add a form for creating Object entries:
    Only published, active Objects are listed. Also, a form can only be connected to one Object at a time, while Objects can be connected to multiple forms.
    ```
 
-1. Click on *Done*.
+1. Click *Done*.
 
 Once linked to the desired Object, you can add field elements to the form and map them to the Object's fields.
 
@@ -56,9 +56,9 @@ Follow these steps to map a form field to an Object field.
 
    ![Map all necessary and desired Object fields to the form fields.](./using-forms-with-objects/images/03.png)
 
-1. Design the desired form layout. See [Forms](../../../process-automation/forms.html) documentation to learn more about designing forms.
+1. Design the desired form layout. See [Forms](../../process-automation/forms.html) documentation to learn more about designing forms.
 
-1. Once you've finished designing the form, click on *Publish* to finish form creation.
+1. Once you've finished designing the form, click *Publish* to finish form creation.
 
    ```{important}
    Before you can publish an Object form, it must fulfill all [mapping requirements](#mapping-requirements).
@@ -95,6 +95,6 @@ Attempting to publish a form with invalid mappings displays an error message tha
 
 ## Additional Information
 
-* [Introduction to Objects](./introduction-to-objects.md)
+* [Objects Overview](../objects.md)
 * [Creating Objects](./creating-and-managing-objects/creating-objects.md)
 * [Designing Object Layouts](./creating-and-managing-objects/designing-object-layouts.md)

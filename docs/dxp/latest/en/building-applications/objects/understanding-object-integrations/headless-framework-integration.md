@@ -14,7 +14,7 @@ With the REST APIs, you can perform both single and batch CRUD operations for Ob
 
 All endpoints and Java methods use the Object's name. In the following examples, replace `ObjectName`/`objectName` with the name of your Object.
 
-See [Consuming REST Services](../../../../headless-delivery/consuming-apis/consuming-rest-services.md) for more information.
+See [Consuming REST Services](../../../headless-delivery/consuming-apis/consuming-rest-services.md) for more information.
 
 ### Company Scoped Objects
 
@@ -38,30 +38,9 @@ With the GraphQL APIs, you can both query and mutate Object data. Use Liferay's 
 
 ![Use Liferay's GraphiQL explorer to search Object schemas and run your requests.](./headless-framework-integration/images/04.png)
 
-See [Consuming GraphQL APIs](../../../../headless-delivery/consuming-apis/consuming-graphql-apis.md) for more information.
+See [Consuming GraphQL APIs](../../../headless-delivery/consuming-apis/consuming-graphql-apis.md) for more information.
 
 ## Additional Information
 
-* [Consuming REST Services](../../../../headless-delivery/consuming-apis/consuming-rest-services.md)
-* [Consuming GraphQL APIs](../../../../headless-delivery/consuming-apis/consuming-graphql-apis.md)
-
-<!-- | HTTP Method | HTTP Endpoint | Java Method | Description |
-| --- | --- | --- | --- |
-| GET | `/` | `getObjectNamePage` | Returns a complete list of Object entries in a Liferay instance; results can be paginated, filtered, searched, and sorted |
-| POST | `/` | `postObjectNamePage` | Creates a new Object entry using the details provided in the API call |
-| DELETE | `/batch` | `deleteObjectNameBatch` | Deletes multiple Object entries |
-| POST | `/batch` | `postObjectNameBatch` | Creates multiple Object entries using the details provided in the API call |
-| PUT | `/batch` | `putObjectNameBatch` | Replaces multiple Object entries using the details provided in the API call |
-| DELETE | `/{objectNameId}` | `deleteObjectName` | Deletes the specified Object entry and returns a 204 if the operation succeeds |
-| GET | `/{objectNameId}` | `getObjectName` | Returns details for the specified Object entry |
-| PATCH | `/{objectNameId}` | `patchObjectName` | Updates the fields specified in the API call for the specified Object entry; other fields remain unchanged |
-| PUT | `/{objectNameId}` | `putObjectName` | Replaces the specified Object entry's details with those provided in the API call | -->
-
-<!-- | HTTP Method | HTTP Endpoint | Java Method | Description |
-| --- | --- | --- | --- |
-| GET | `/scopes/{scopesKey}` | `getScopeScopeKeyPage` | Returns a complete list of Object entries in a Site; results can be paginated, filtered, searched, and sorted |
-| POST | `/scopes/{scopesKey}` | `postScopeScopeKey` | Creates a new Object entry in the specified Site using the details provided in the API call |
-| DELETE | `/{objectNameId}` | `deleteObjectName` | Deletes the specified Object entry |
-| GET | `/{objectNameId}` | `getObjectName` | Returns details for the specified Object entry |
-| PATCH | `/{objectNameId}` | `patchObjectName` | Updates the fields specified in the API call for the specified Object entry; other fields remain unchanged |
-| PUT | `/{objectNameId}` | `putObjectName` | Replaces the specified Object entry's details with those provided in the API call | -->
+* [Consuming REST Services](../../../headless-delivery/consuming-apis/consuming-rest-services.md)
+* [Consuming GraphQL APIs](../../../headless-delivery/consuming-apis/consuming-graphql-apis.md)
