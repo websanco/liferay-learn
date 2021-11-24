@@ -4,18 +4,18 @@ When a release, update, or fix pack has database schema changes, it's helpful to
 
 Here are the database upgrade options:
 
-* [Docker image](./upgrading-via-docker.md): Running the new DXP/Portal Docker image with the following environment variable auto-runs the core and module database upgrades on the configured database.
+* [Docker image](../upgrade-basics/upgrading-via-docker.md): Running the new DXP/Portal Docker image with the following environment variable auto-runs the core and module database upgrades on the configured database.
 
     ```bash
     -e LIFERAY_UPGRADE_PERIOD_DATABASE_PERIOD_AUTO_PERIOD_RUN=true
     ```
 
-* [Gogo Shell](./upgrading-modules-using-gogo-shell.md): While the server is running, you can execute Gogo Shell commands to list and invoke module upgrades. Note, core database upgrades require using a Docker image or the Database Upgrade Tool.
+* [Gogo Shell](../upgrade-stability-and-performance/upgrading-modules-using-gogo-shell.md): While the server is running, you can execute Gogo Shell commands to list and invoke module upgrades. Note, core database upgrades require using a Docker image or the Database Upgrade Tool.
 
-* [Database Upgrade Tool](./using-the-database-upgrade-tool.md): While the server is offline, you can execute core and module database upgrades using the Database Upgrade Tool.
+* [Database Upgrade Tool](../upgrade-basics/using-the-database-upgrade-tool.md): While the server is offline, you can execute core and module database upgrades using the Database Upgrade Tool.
 
 ```{important}
-This is supplemental information for upgrading DXP/Portal databases. Please see [Upgrade Overview](./upgrade-overview.md) as a starting point for complete DXP/Portal upgrade instructions and see *Maintaining a Liferay Installation* for complete instructions on applying DXP/Portal updates and fix packs.
+This is supplemental information for upgrading DXP/Portal databases. Please see [Upgrade Overview](../upgrade-basics/upgrade-overview.md) as a starting point for complete DXP/Portal upgrade instructions and see [Maintaining a Liferay Installation](../../maintaining-a-liferay-installation.md) for complete instructions on applying DXP/Portal updates and fix packs.
 ```
 
 ## Upgrade Options for Applying Schema Changes
@@ -52,5 +52,5 @@ Here are the general steps for using the database upgrade options with each inst
 
 ## Additional Information
 
-* [Upgrade Overview](./upgrade-overview.md)
-* Maintaining a Liferay Installation
+* [Upgrade Overview](../upgrade-basics/upgrade-overview.md)
+* [Maintaining a Liferay Installation](../../maintaining-a-liferay-installation.md)
