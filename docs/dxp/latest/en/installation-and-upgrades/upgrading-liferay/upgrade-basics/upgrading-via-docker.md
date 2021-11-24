@@ -122,6 +122,8 @@ If the upgraded database is all you need, then enjoy using your new Liferay inst
 
 * [Upgrade Overview](./upgrade-overview.md) describes all of the upgrade topics. Maybe there's a topic you still need to address.
 
+* [Database Upgrade Options](../reference/database-upgrade-options.md) describes all the ways of upgrading the database in the context of the various DXP/Portal installation types.
+
 * [Using the Database Upgrade Tool](./using-the-database-upgrade-tool.md) demonstrates upgrading the database while the Liferay server is offline. If the upgrade took too long, consider [tuning the database](../upgrade-stability-and-performance/database-tuning-for-upgrades.md), [pruning unneeded data](../upgrade-stability-and-performance/database-pruning-for-faster-upgrades.md), and [using Database Upgrade Tool](./using-the-database-upgrade-tool.md).
 
 * [Upgrading Custom Development](../upgrading-custom-development.md) demonstrates adapting custom plugin code to a new Liferay version.

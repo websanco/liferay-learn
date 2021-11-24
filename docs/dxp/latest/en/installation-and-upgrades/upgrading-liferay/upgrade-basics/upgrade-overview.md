@@ -103,11 +103,15 @@ Adjusting your database for upgrade operations (more data writes than in product
 
 ## Executing the Database Upgrade
 
-There are two ways to upgrade your Liferay database:
+Here are two ways to upgrade your Liferay database:
 
 * [Upgrade via Docker](./upgrading-via-docker.md) involves passing an auto upgrade parameter to the command for starting a Docker image. The image updates the database and then starts up using the upgraded database.
 
 * [Using the Database Upgrade Tool](./using-the-database-upgrade-tool.md). The Upgrade Tool is a client program for updating the Liferay database while it's detached from any Liferay instance. It facilitates focusing on the upgrade process, [tuning the database](../upgrade-stability-and-performance/database-tuning-for-upgrades.md) for upgrade operations, and [pruning unnecessary data](../upgrade-stability-and-performance/database-pruning-for-faster-upgrades.md) to quicken the database upgrade.
+
+```{note}
+[Database Upgrade Options](../reference/database-upgrade-options.md) describes upgrading the database in the above ways (and upgrading modules using Gogo Shell) with various DXP/Portal installation types.
+```
 
 ## Conclusion
 
