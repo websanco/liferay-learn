@@ -150,6 +150,32 @@ To sort the content,
 When you close the Content Dashboard page, the default filter and sorting option are set again.
 ```
 
+### Filter Options Reference
+
+> Some filter options are only available starting with Liferay 7.4+
+
+From the *Filter and Order* drop-down menu, you can choose,
+
+| Filter | Description |
+| :--- | :--- |
+| Categories | Filters using one or more [Categories](../tags-and-categories/organizing-content-with-categories-and-tags.md) from your Vocabularies. |
+| Site or Asset Library | Selects the assets' Site or Asset Library.  |
+| Type | Using this filter you can choose the Web Content Articles or Documents to include. From here, you can choose from,</br><ul><li>**Web Content Articles**: Includes all the [Basic Web Content Articles](../web-content/web-content-articles/adding-a-basic-web-content-article.md) and the custom [Structures](../web-content/web-content-structures/understanding-web-content-structures.md) from all the Sites.</li><li>**Documents**: Includes the out of the box Document types and all the [custom Document types](../documents-and-media/uploading-and-managing/managing-metadata/defining-document-types.md).</li></ul> |
+| Extension | Provides a way to filter by the Document or Media type. You can choose from the following types:</br><ul><li>`audio`</li><li>`code`</li><li>`compressed`</li><li>`image`</li><li>`presentation`</li><li>`spreadsheet`</li><li>`text`</li><li>`vectorial`</li><li>`video`</li><li>`other`</li></ul> |
+| Tags | Selects from the list of [keywords](../tags-and-categories/tagging-content-and-managing-tags.md) you use to organize your assets. |
+| Filter by Author | Filters by the Web Content or Document's author. |
+| Filter by Status | Filters by the Web Content or Document's [workflow status](../../process-automation/workflow/introduction-to-workflow.md). |
+
+When using the Type or Extension filter, you can define your search criteria from a new Filter dialog. Consider this information:
+
+- Selecting a top-level node selects all the elements inside.
+- The top-level nodes show the total number of elements inside.
+- Search is case insensitive.
+- You can add, remove, or edit the available extensions from the Global menu (![Global menu](../../images/icon-applications-menu.png)) &rarr; *Control Panel* &rarr; *System Settings* &rarr; *Content and Data* &rarr; *Documents and Media* &rarr; *Service*.
+- The filter in the Content lists reflects the filter criteria you choose in the Filter dialog.
+
+    ![The search criteria you use in the Type or Extension filters is included in the Content List.](./content-dashboard-interface/images/13.png)
+
 ### Understanding How Filtering Works in the Contents List
 
 - When you use the Categories or Tags filters with more than one criteria, the results correspond to content that meets all the criteria (see example A.)
