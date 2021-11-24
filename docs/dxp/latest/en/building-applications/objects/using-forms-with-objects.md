@@ -1,6 +1,6 @@
 # Using Forms with Objects
 
-All Liferay Objects are integrated with the Forms application, so you can design forms for receiving user input and creating Object entries. To do this, first add a new form and configure it to use the Objects storage type. Then, select the desired Object, design your form, and map its fields to the selected Object's fields.
+Liferay Objects are integrated with the Forms application, so you can design forms for receiving user input and creating Object entries. To do this, first add a new form and configure it to use the Objects storage type. Then select the desired Object, design your form, and map its fields to the selected Object's fields.
 
 ```{note}
 All Forms features are supported for Objects, including rules and validations. However, users cannot map Object relationships to form fields. See [Designing Object Layouts](./creating-and-managing-objects/designing-object-layouts.md) for how to create custom layouts that include Object relationships.
@@ -23,7 +23,7 @@ Follow these steps to add a form for creating Object entries:
    ![Select both the Object storage type and the desired Object.](./using-forms-with-objects/images/01.png)
 
    ```{note}
-   Only published, active Objects are listed. Also, a form can only be connected to one Object at a time, while Objects can be connected to multiple forms.
+   Only published, active Objects appear. Also, a form can only be connected to one Object at a time, while Objects can be connected to multiple forms.
    ```
 
 1. Click *Done*.
@@ -37,9 +37,9 @@ Follow these steps to map a form field to an Object field.
 1. Add a field element to the form.
 
    ```{important}
-   Each Object field can only be mapped to [compatible field types](#field-compatibility-reference).
+   Object fields can only be mapped to [compatible field types](#field-compatibility-reference).
 
-   Also, when mapped to a required Object field, the form field is automatically set as required.
+   When mapped to a required Object field, the form field type is automatically set. 
    ```
 
 1. Click on the *Advanced* tab.
@@ -48,15 +48,15 @@ Follow these steps to map a form field to an Object field.
 
    ![In the Advanced tab, select the desired Object field.](./using-forms-with-objects/images/02.png)
 
-1. Repeat the above process until all necessary and desired Object fields are mapped to a form field.
+1. Repeat the above process until all desired Object fields are mapped to a form field.
 
    ```{note}
    An Object field can only be mapped to one form field.
    ```
 
-   ![Map all necessary and desired Object fields to the form fields.](./using-forms-with-objects/images/03.png)
+   ![Map all desired Object fields to the form fields.](./using-forms-with-objects/images/03.png)
 
-1. Design the desired form layout. See [Forms](../../process-automation/forms.html) documentation to learn more about designing forms.
+1. Design the form layout. See [Forms](../../process-automation/forms.md) documentation to learn more about designing forms.
 
 1. Once you've finished designing the form, click *Publish* to finish form creation.
 
