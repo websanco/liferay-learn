@@ -65,7 +65,7 @@ Here's how to update your installation:
     If a module's changes are only internal, the changes are invisible to the OSGi framework, the module stays installed, and the module's state persists. Clearing the OSGi bundle state information before the next server startup ensures that such modules reinstall with the appropriate state.
     ```
 
-1. If the release notes mention micro or minor schema/data changes, use the [Database Upgrade Tool](../upgrading-liferay/upgrade-basics/using-the-database-upgrade-tool.md) to apply minor changes (required) and any micro changes you want.
+1. If the release notes mention database changes, use a compatible [database upgrade option](../upgrading-liferay/reference/database-upgrade-options.md) to apply all required changes and any optional changes you want.
 
 1. If the release notes mention index updates, configure Liferay to update the indexes on startup. Set the [`database.indexes.update.on.startup`](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#Database) Portal Property to `true` in a [`portal-ext.properties` file](../reference/portal-properties.md). For example,
 
@@ -83,4 +83,4 @@ Congratulations! Your Liferay instance is updated and running.
 
 * [Backing Up](./backing-up.md)
 * [Applying a Hotfix](./applying-a-hotfix.md)
-* [Database Upgrade Tool](../upgrading-liferay/upgrade-basics/using-the-database-upgrade-tool.md)
+* [Database Upgrade Options](../upgrading-liferay/reference/database-upgrade-options.md)
