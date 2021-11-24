@@ -1,18 +1,18 @@
 # Implementing a Custom Order Status
 
-This tutorial shows you how to add a custom order status by implementing the `CommerceOrderStatus` interface. The Commerce Order Engine provides a standard order flow out-of-the-box but you can customize it to fit your needs.
+You can add a custom order status by implementing the `CommerceOrderStatus` interface. The Commerce Order Engine provides a standard order flow out-of-the-box but you can customize it to fit your needs.
 
-A custom order status is a new stage added to the existing order flow. The need for a custom order status can arise when you want a custom order fulfillment process that cannot be realized with the standard order flow. To get started, we will take a look at an overview of the order statuses available in Liferay Commerce and then deploy and walk through an example implementation.
+A custom order status is a new stage added to the existing order flow. You might need a custom order status when you want an order fulfillment process the standard order flow doesn't handle. First, you'll learn now the shipped order statuses work, and then you'll deploy an example new implementation. 
 
 ## Overview of Order Statuses
 
-The Liferay Order Engine comes with a standard order flow off the shelf. A pictorial representation of the order flow and corresponding statuses are shown below.
+The Liferay Order Engine has six main statuses: 1) Open, 2) In Progress, 3) Pending, 4) Processing, 5) Shipped, 6) Completed. 
 
-![Order statuses available off the shelf in Liferay Commerce.](./implementing-a-custom-order-status/images/01.png)
+![Liferay Commerce contains six order statuses by default.](./implementing-a-custom-order-status/images/01.png)
 
-The order engine performs checks against each order status to ensure correct order processing and to determine the new status to be applied to the order. In addition to the ones mentioned above, there are also other statuses that the order can transition to.
+The order engine performs checks against each order status to ensure correct order processing and to determine the next status to be applied to the order. Besides the main statuses mentioned above, orders can be transitioned to three alternate statuses. 
 
-![Other order statuses that the order can transition to.](./implementing-a-custom-order-status/images/02.png)
+![Orders can be transitioned to three alternate statuses.](./implementing-a-custom-order-status/images/02.png)
 
 1. _On Hold_ - An order can be put on hold when it is in any of the non-final order statuses (Pending, Processing, Shipped).
 
@@ -20,13 +20,11 @@ The order engine performs checks against each order status to ensure correct ord
 
 1. _Partially Shipped_ - When there are multiple items in the order and not every item has been shipped, it transitions to the _Partially Shipped_ status.
 
-![A new order status added to the order flow.](./implementing-a-custom-order-status/images/03.png)
+![You can add a new order status to the order flow.](./implementing-a-custom-order-status/images/03.png)
 
-A custom order status can be used to alter the out-of-the-box order flow. This is useful when your use cases have stages in their lifecycle that don’t conform to the existing statuses.  The new status we are going to implement in this tutorial is called Scheduling and it is placed between the existing Pending and Processing statuses. This custom stage represents orders which are waiting to be scheduled before they can be accepted. The scheduling status is kept track of using a _Custom Field_ on the Order. You can read [Commerce Order Engine Overview](./commerce-order-engine-overview.md) for more detailed information about each order status and their transitions.
+You can add a custom order status to alter the out-of-the-box order flow. Below, you'll add an order status called Scheduling and place it between the existing Pending and Processing statuses. This custom stage represents orders waiting to be scheduled before they can be accepted. A custom field on the order tracks the scheduling status. See [Commerce Order Engine Overview](./commerce-order-engine-overview.md) for detailed information about each order status and their transitions.
 
-## Deploy an example
-
-In this section, we are going to set up an example order status on your instance of Liferay Commerce. Follow these steps:
+## Deploy the Order Status
 
 1. Start Liferay Commerce.
 
@@ -58,23 +56,25 @@ In this section, we are going to set up an example order status on your instance
     STARTED com.acme.m4v7.impl_1.0.0
     ```
 
-1. We must create a custom field to keep track of scheduling the order. To create this, click the _Applications Menu_ (![Applications Menu](../../images/icon-applications-menu.png)), navigate to _Control Panel_ → _Custom Fields_.
+1. You must create a custom field to keep track of scheduling the order. Click the _Applications Menu_ (![Applications Menu](../../images/icon-applications-menu.png)) and navigate to _Control Panel_ → _Custom Fields_.
 
-1. Select Commerce Order from the list of items and click the _Add_ (![Add](../../images/icon-add.png)) button to add a new field. Select the _Dropdown_ option from the available fields and enter the following information. Click _Save_ when done.
+1. Select Commerce Order from the list of items and click the _Add_ (![Add](../../images/icon-add.png)) button to add a new field. Select the _Dropdown_ option from the available fields and enter the information below. Click _Save_ when done.
 
-    ![Configuring the custom field.](./implementing-a-custom-order-status/images/04.png)
+   ![Add a custom field to keep track of scheduling the order.](./implementing-a-custom-order-status/images/04.png)
 
-    __Field Name__: m4v7Scheduling
+   __Field Name__: m4v7Scheduling
 
-    __Data Type__: Text
+   __Data Type__: Text
 
-    __Values__: Pending, Confirmed (in two separate lines)  
+   __Values__: Pending, Confirmed (in two separate lines)
 
-1. Now, verify that the example order status was added. Open your browser to `https://localhost:8080`. Then click the Applications Menu (![Applications Menu](../../images/icon-applications-menu.png)), navigate to your site and place an order.
+1. Verify the example order status was added by opening your browser to `https://localhost:8080` and from the Applications Menu (![Applications Menu](../../images/icon-applications-menu.png)), navigate to your site and place an order.
 
 1. Click the Applications Menu again, navigate to _Commerce_ → _Orders_, and select the order that you placed. You should see a new status _Scheduling_ in the order lifecycle and a button called Scheduling that sets the new order flow in motion. The new custom field is present under the _Custom Fields_ section of the order.
 
-    ![The new order status in action.](./implementing-a-custom-order-status/images/04.png)
+   ![The new order status in action.](./implementing-a-custom-order-status/images/04.png)
+
+   <!-- I stopped here because the image above seems to be missing. I'll send feedback in a separate file; please go over this entire article with the feedback in mind. Thanks! -Rich --> 
 
 ## Walk through the example
 
