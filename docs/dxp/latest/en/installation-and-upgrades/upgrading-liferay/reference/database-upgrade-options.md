@@ -18,15 +18,15 @@ Here are the database upgrade options:
 This is supplemental information for upgrading DXP/Portal databases. Please see [Upgrade Overview](../upgrade-basics/upgrade-overview.md) as a starting point for complete DXP/Portal upgrade instructions and see [Maintaining a Liferay Installation](../../maintaining-a-liferay-installation.md) for complete instructions on applying DXP/Portal updates and fix packs.
 ```
 
-## Upgrade Options for Applying Schema Changes
+## Database Upgrade Options for Schema Change Levels
 
 Here are the types of database schema changes a release, update, or fix pack may have and the database upgrade options for applying those changes.
 
 | Database Schema Changes | Database Upgrade Options |
 | :---------------------- | :----------------------- |
-| Module micro version<br>(optional upgrades) | * Docker image<br>* Gogo Shell<br>* Database Upgrade Tool |
-| Module major/minor version<br>(required upgrades) | * Docker image<br>* Gogo Shell<br>* Database Upgrade Tool |
-| Core data schema<br>(required upgrades) | * Docker image<br>* Database Upgrade Tool |
+| Module micro version<br>(optional upgrades) | * Docker image<br> * Gogo Shell<br> * Database Upgrade Tool |
+| Module major/minor version<br>(required upgrades) | * Docker image<br> * Gogo Shell<br> * Database Upgrade Tool |
+| Core data schema<br>(required upgrades) | * Docker image<br> * Database Upgrade Tool |
 
 ## Upgrade Process Summary for Installation Types
 
