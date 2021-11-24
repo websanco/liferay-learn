@@ -10,6 +10,7 @@ tag-libraries/clay-tag-library.md
 tag-libraries/liferay-ui-tag-library.md
 tag-libraries/liferay-frontend-tag-library.md
 tag-libraries/liferay-util-tag-library.md
+tag-libraries/chart-tag-library.md
 ```
 You have access to a powerful set of taglibs for creating commonly used UI components in your apps, themes, and web content. The following taglibs are covered in this section:
 
