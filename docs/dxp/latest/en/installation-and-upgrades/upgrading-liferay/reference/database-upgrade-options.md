@@ -28,9 +28,7 @@ Here are the types of database schema changes a release, update, or fix pack may
 | Module major/minor version<br>(required upgrades) | * Docker image<br> * Gogo Shell<br> * Database Upgrade Tool |
 | Core data schema<br>(required upgrades) | * Docker image<br> * Database Upgrade Tool |
 
-## Upgrade Process Summary for Installation Types
-
-Database upgrades can be performed from the new installation you're targeting or in a separate installation that's more convenient for upgrading the database. For example, if you're using an app server + Liferay WAR + dependencies, you can upgrade the database using the new Liferay Docker image, install the new Liferay WAR and dependencies to your app server, and restart your app server to run the new Liferay version.
+Database upgrades can be performed from the new installation you're targeting or in a separate installation that's more convenient for upgrading the database. for example, if you're using an app server + Liferay WAR + dependencies, you can upgrade the database using the new Liferay Docker image, install the new Liferay WAR and dependencies to your app server, and restart your app server to run the new Liferay version.
 
 There are three types of DXP/Portal installations:
 
@@ -40,15 +38,32 @@ There are three types of DXP/Portal installations:
 
 Here are the general steps for using the database upgrade options with each installation type.
 
-| Current Installation Type | Docker<br>image<br>option | Tomcat<br>bundle<br>option | WAR +<br>dependencies<br>option | Upgrade Process Summary |
-| :--- | :--- | :--- | :--- | :--- |
-| Liferay Docker image | x |  |  | 1. Configure the new image.<br>2. Run it with the upgrade environment variable enabled.<br>3. When the upgrades complete successfully, configure the database on a new container of the new image (do not enable upgrades). |
-| Liferay Docker image |  | x |  | 1. Configure the Liferay Tomcat Bundle.<br>2. Run the Database Upgrade Tool from the bundle.<br>3. When the upgrades complete successfully, configure the database on the new Docker image. |
-| Liferay Tomcat Bundle | x |  |  | 1. Configure the new Docker image.<br>2. Run it with the upgrade environment variable enabled.<br>3. When the upgrades complete successfully, configure the database on the new Liferay Tomcat Bundle. |
-| Liferay Tomcat Bundle |  | x |  | 1. Configure the new Liferay Tomcat Bundle.<br>2. Run the Database Upgrade Tool. |
-| App server +<br>WAR +<br>dependencies | x |  |  | 1. Configure the new Docker image.<br>2. Run it with the upgrade environment variable enabled.<br>3. When the upgrades complete successfully, install the new Liferay WAR and OSGi dependencies on the application server. |
-| App server +<br>WAR +<br>dependencies |  | x |  | 1. Configure the new Liferay Tomcat Bundle.<br>2. Run the Database Upgrade Tool from the bundle.<br>3. When the upgrades complete successfully, install the new Liferay WAR and OSGi dependencies on the application server. |
-| App server +<br>WAR +<br>dependencies |  |  | x | 1. Install the new Liferay WAR and OSGi dependencies on the application server.<br>2. Download and run the latest Database Upgrade Tool. |
+## Database Upgrade for Liferay Docker Images
+
+Here are process summaries for using a Docker image or Tomcat Bundle to perform database upgrade for a new Liferay Docker image.
+
+| Docker image option | Tomcat bundle option | Upgrade Process Summary |
+| :--- | :--- | :--- |
+| x |  | 1. Configure the new image.<br>2. Run it with the upgrade environment variable enabled.<br>3. When the upgrades complete successfully, configure the database on a new container of the new image (do not enable upgrades). |
+|  | x | 1. Configure the Liferay Tomcat Bundle.<br>2. Run the Database Upgrade Tool from the bundle.<br>3. When the upgrades complete successfully, configure the database on the new Docker image. |
+
+## Database Upgrade for Liferay Tomcat Bundles
+
+Here are process summaries for using a Docker image or Tomcat Bundle to perform database upgrade for a new Liferay Tomcat Bundle.
+
+| Docker image option | Tomcat bundle option | Upgrade Process Summary |
+| :--- | :--- | :--- |
+| x |  | 1. Configure the new Docker image.<br>2. Run it with the upgrade environment variable enabled.<br>3. When the upgrades complete successfully, configure the database on the new Liferay Tomcat Bundle. |
+|  | x | 1. Configure the new Liferay Tomcat Bundle.<br>2. Run the Database Upgrade Tool. |
+
+## Database Upgrade for Application Server Installations
+
+Here are process summaries for using a Docker image or Tomcat Bundle to perform database upgrade for a new Liferay DXP/Portal installation on an application server.
+
+| Docker image option | Tomcat bundle option | Upgrade Process Summary |
+| :--- | :--- | :--- |
+| x |  | 1. Configure the new Docker image.<br>2. Run it with the upgrade environment variable enabled.<br>3. When the upgrades complete successfully, install the new Liferay WAR and OSGi dependencies on the application server. |
+|  | x | 1. Configure the new Liferay Tomcat Bundle.<br>2. Run the Database Upgrade Tool from the bundle.<br>3. When the upgrades complete successfully, install the new Liferay WAR and OSGi dependencies on the application server. |
 
 ## Additional Information
 
