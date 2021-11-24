@@ -6,6 +6,7 @@ Reference
 
    reference/data-cleanup.md
    reference/data-removal.md
+   reference/database-upgrade-options.md
    reference/database-upgrade-tool-reference.md
    reference/default-setting-changes-in-7-4.md
    reference/default-setting-changes-in-7-3.md
@@ -19,6 +20,7 @@ Reference
 
 -  :doc:`/installation-and-upgrades/upgrading-liferay/reference/data-cleanup`
 -  :doc:`/installation-and-upgrades/upgrading-liferay/reference/data-removal`
+-  :doc:`/installation-and-upgrades/upgrading-liferay/reference/database-upgrade-options`
 -  :doc:`/installation-and-upgrades/upgrading-liferay/reference/database-upgrade-tool-reference`
 -  :doc:`/installation-and-upgrades/upgrading-liferay/reference/default-setting-changes-in-7-4`
 -  :doc:`/installation-and-upgrades/upgrading-liferay/reference/default-setting-changes-in-7-3`
