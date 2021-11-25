@@ -20,17 +20,36 @@ See [Consuming REST Services](../../../headless-delivery/consuming-apis/consumin
 
 The following REST APIs are available for all company scoped Objects.
 
-<!-- Please convert the information in the graphic below to text so that screen readers can process it. -Rich -->
-
-![These APIs are available for all company scoped Objects.](./headless-framework-integration/images/02.png)
+| HTTP Method | HTTP Endpoint | Java Method | Description |
+| --- | --- | --- | --- |
+| GET | `/` | `getObjectNamePage` | Returns a complete list of Object entries in a Liferay instance; results can be paginated, filtered, searched, and sorted |
+| POST | `/` | `postObjectNamePage` | Creates a new Object entry using the details provided in the API call |
+| DELETE | `/by-external-reference-code/{externalReferenceCode}` | `deleteByExternalReferenceCode` | Deletes the specified Object entry using its external reference code |
+| GET | `/by-external-reference-code/{externalReferenceCode}` | `getByExternalReferenceCode`| Returns details for the specified Object entry using its external reference code |
+| PUT | `/by-external-reference-code/{externalReferenceCode}` | `putByExternalReferenceCode` | Replaces the specified Object entry's details with those provided in the API call using its external reference code |
+| DELETE | `/batch` | `deleteObjectNameBatch` | Deletes multiple Object entries |
+| POST | `/batch` | `postObjectNameBatch` | Creates multiple Object entries using the details provided in the API call |
+| PUT | `/batch` | `putObjectNameBatch` | Replaces multiple Object entries using the details provided in the API call |
+| DELETE | `/{objectNameId}` | `deleteObjectName` | Deletes the specified Object entry and returns a 204 if the operation succeeds |
+| GET | `/{objectNameId}` | `getObjectName` | Returns details for the specified Object entry |
+| PATCH | `/{objectNameId}` | `patchObjectName` | Updates the fields specified in the API call for the specified Object entry; other fields remain unchanged |
+| PUT | `/{objectNameId}` | `putObjectName` | Replaces the specified Object entry's details with those provided in the API call |
 
 ### Site Scoped Objects
 
 The following REST APIs are available for all Site scoped Objects.
 
-<!-- Please convert the information in the graphic below to text so that screen readers can process it. -Rich -->
-
-![These APIs are available for all Site scoped Objects.](./headless-framework-integration/images/03.png)
+| HTTP Method | HTTP Endpoint | Java Method | Description |
+| --- | --- | --- | --- |
+| DELETE | `/scopes/{scopeKey}/by-external-reference-code/{externalReferenceCode}` | `deleteScopeScopeKeyByExternalReferenceCode` | Deletes the specified Object entry using its scope key and external reference code |
+| GET | `/scopes/{scopeKey}/by-external-reference-code/{externalReferenceCode}` | `getScopeScopeKeyByExternalReferenceCode` | Returns details for the specified Object entry using its scope key and external reference code |
+| PUT | `/scopes/{scopeKey}/by-external-reference-code/{externalReferenceCode}` | `putScopeScopeKeyByExternalReferenceCode` | Replaces the specified Object entry's details with those provided in the API call using its scope key and external reference code |
+| GET | `/scopes/{scopesKey}` | `getScopeScopeKeyPage` | Returns a complete list of Object entries in a Site; results can be paginated, filtered, searched, and sorted |
+| POST | `/scopes/{scopesKey}` | `postScopeScopeKey` | Creates a new Object entry in the specified Site using the details provided in the API call |
+| DELETE | `/{objectNameId}` | `deleteObjectName` | Deletes the specified Object entry |
+| GET | `/{objectNameId}` | `getObjectName` | Returns details for the specified Object entry |
+| PATCH | `/{objectNameId}` | `patchObjectName` | Updates the fields specified in the API call for the specified Object entry; other fields remain unchanged |
+| PUT | `/{objectNameId}` | `putObjectName` | Replaces the specified Object entry's details with those provided in the API call |
 
 ```{note}
 For the API's `scopesKey` parameter, use the proper identifier for the desired data scope (e.g., Site ID, user role).
@@ -40,7 +59,7 @@ For the API's `scopesKey` parameter, use the proper identifier for the desired d
 
 With the GraphQL APIs, you can both query and mutate Object data. Use Liferay's Graph*i*QL IDE  to search Object schemas, draft queries, run requests, and more.
 
-![Use Liferay's GraphiQL explorer to search Object schemas and run your requests.](./headless-framework-integration/images/04.png)
+![Use Liferay's GraphiQL explorer to search Object schemas and run your requests.](./headless-framework-integration/images/02.png)
 
 See [Consuming GraphQL APIs](../../../headless-delivery/consuming-apis/consuming-graphql-apis.md) for more information.
 
