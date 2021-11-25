@@ -16,6 +16,10 @@ Each web content article is based on a structure that defines its available fiel
 
     ![The edit screen for a new web content article.](./adding-a-basic-web-content-article/images/02.png)
 
+1. (Optional) Click on _Preview_ (![Preview](../../../images/icon-preview.png)) to verify your content from Default Template and Display Page Template.
+
+     ![Preview content from Default Template and Display Page Template.](./adding-a-basic-web-content-article/images/03.png)
+
 1. When finished, click _Publish_.
 
 Congratulations! You have added a basic web content article to your Site. See [Using the Web Content Display Widget](../../../site-building/displaying-content/additional-content-display-options/using-the-web-content-display-widget.md) for more information on displaying this article on a page.
