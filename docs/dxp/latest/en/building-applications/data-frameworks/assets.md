@@ -1,3 +1,0 @@
-# Assets
-
-Coming soon!

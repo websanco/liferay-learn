@@ -3,7 +3,7 @@
 ```{toctree}
 :maxdepth: 3
 
-data-frameworks/assets.md
+data-frameworks/asset-framework.md
 data-frameworks/cache.md
 data-frameworks/data-scopes.md
 data-frameworks/expando.md
