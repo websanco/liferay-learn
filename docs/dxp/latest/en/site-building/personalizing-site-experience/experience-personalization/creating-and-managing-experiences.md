@@ -42,10 +42,10 @@ When you edit a Content Page, you can click on the Experience to manage the opti
 
 1. Go to *Site Administration* &rarr; *Site Builder* &rarr; *Pages*.
 2. Click the Actions (![Actions](../../../images/icon-actions.png)) menu and select *Edit*.
-3. Click on the Experience you want to manage. From here you can:
+3. Click on the Experience you want to manage. From here you can
 
    - Set the Experience Priority, using the Up (![Up](../../../images/icon-angle-up.png)) and Down (![Down](../../../images/icon-angle-down.png)) controls.
-   - Edit (![Edit](../../../images/icon-edit.png)) the Experience's name, selected Segment or Language.
+   - Edit (![Edit](../../../images/icon-edit.png)) the Experience's name or the selected Segment.
    - Duplicate (![Duplicate](../../../images/icon-copy.png)) the Experience (available in Liferay DXP 7.4+, 7.3 Fix Pack 1+, and 7.2 Fix Pack 11+.).
    - Delete (![Delete](../../../images/icon-delete.png)) the Experience.
 
