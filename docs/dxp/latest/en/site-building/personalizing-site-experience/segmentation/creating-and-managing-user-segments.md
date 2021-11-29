@@ -69,3 +69,4 @@ You can't delete a User Segment if it's used in an experience.
 - [Getting Analytics for User Segments](./getting-analytics-for-user-segments.md)
 - [Content Page Personalization](../experience-personalization/content-page-personalization.md)
 - [Session Property Vocabularies](../../../content-authoring-and-management/tags-and-categories/session-property-vocabularies.md)
+
