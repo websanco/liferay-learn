@@ -44,26 +44,6 @@ In this example:
 - Authenticated users don't see the *Authenticated user* Experience, because the *No customization* Experience applies to the *Anyone* Segment and it's listed first.
 - Anyone not in the *Anonymous User* or *Authenticated User* Segments sees the *No customization* Experience because it targets *Anyone*.
 
-## Managing Experience Localization
-
-> Available: Liferay 7.4+.
-
-When you create a new Experience, you define its target language(s), along with a default. By selecting additional languages and [translating the Page content](../../../content-authoring-and-management/web-content/translating-web-content/manually-translating-web-content.md), you provide Experiences in users' own languages. For example, if the user language is configured as es-ES and users visit a Content Page with an Experience targeted to the user's Segment and localized to es-ES, the language they see is es-ES.
-
-```{note}
-Liferay DXP uses the user-configured language for authenticated users and, by default, the default Portal language for anonymous users.
-```
-
-![In addition to the default language, you can define additional languages for the Experience.](./content-page-personalization/images/02.png)
-
-```{note}
-When a user visits a Page and there is an Experience targeted to the user's Segment but not localized into the user's language, the user sees the Experience in the default language.
-```
-
-You can add or remove languages from the Experience using the [Edit Experience](./creating-and-managing-experiences.md#managing-content-page-experiences) (![Edit Experience](../../../images/icon-edit.png)) button, except for the default language that is always selected. The language selector button for the Experience only shows the languages configured for that particular Experience.
-
-  ![The language selector button only shows the languages selected for the Experience.](./content-page-personalization/images/03.png)
-
 ## Content Page Experiences and A/B Testing
 
 When you [create an A/B Test](../../optimizing-sites/ab-testing/creating-ab-tests.md) in Liferay DXP, you choose an Experience for the test. This Experience can be the Default one or any other you have created.
