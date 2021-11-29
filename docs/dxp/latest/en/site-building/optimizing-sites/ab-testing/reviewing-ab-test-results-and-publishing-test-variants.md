@@ -20,9 +20,9 @@ To review the A/B Test results and publish your Variant,
 
 1. From the Variants section, you can
 
-    - *Publish* the winning Variant, which is highlighted with the check mark.
-    - *Publish* a non-winning variant.
-    - *Discard Test*, to ignore the A/B Test recommendations and keep the current Content Page.
+    * *Publish* the winning Variant, which is highlighted with the check mark.
+    * *Publish* a non-winning variant.
+    * *Discard Test*, to ignore the A/B Test recommendations and keep the current Content Page.
 
         ![You can publish the winning Variant or discard the A/B Test results.](reviewing-ab-test-results-and-publishing-test-variants/images/02.png)
 
@@ -34,7 +34,7 @@ You can click the *View Data in Analytics Cloud* button from the A/B Tests panel
 
 ## Related Information
 
-- [A/B Testing](./ab-testing.md)
-- [Creating A/B Tests](./creating-ab-tests.md)
-- [Verifying A/B Test Requirements](./verifying-ab-test-requirements.md)
-- [Running and Monitoring A/B Tests](./running-and-monitoring-ab-tests)
+* [A/B Testing](./ab-testing.md)
+* [Creating A/B Tests](./creating-ab-tests.md)
+* [Verifying A/B Test Requirements](./verifying-ab-test-requirements.md)
+* [Running and Monitoring A/B Tests](./running-and-monitoring-ab-tests)
