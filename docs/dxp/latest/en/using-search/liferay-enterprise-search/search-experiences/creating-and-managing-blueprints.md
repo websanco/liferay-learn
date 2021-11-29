@@ -13,7 +13,7 @@ To create Search Blueprints,
 
 1. Decide whether to start by including all the clauses from Liferay's search framework, or to start with a minimal baseline of clauses to use as the foundation for a more fully customized search experience. Click _Create_.
 
-1. Depending on your [blueprint plan](#planning-a-blueprint), next you'll use these menus to continue building the [Blueprint](./understanding-blueprints.md#what-is-a-blueprint):
+1. Depending on your [blueprint plan](#planning-a-blueprint), next you'll use these menus to continue building the [Blueprint](./understanding-search-blueprints.md#what-is-a-blueprint):
 
    - [Query Builder](#using-the-query-builder): add new query clauses to the search by choosing or composing Elements for the Blueprint.
    - [Clause Contributors](#configuring-default-clauses): Further refine which clauses are included from Liferay's Indexers and Keyword Query Contributors. 
