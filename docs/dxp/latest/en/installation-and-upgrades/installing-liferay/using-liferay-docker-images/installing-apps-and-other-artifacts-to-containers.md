@@ -55,7 +55,7 @@ Now you know how to install apps and other artifacts to Liferay.
 
 ## Additional Information
 
-* [Docker Container Basics](./docker-container-basics.md)
+* [Using Liferay Docker Images](../using-liferay-docker-images.md)
 * [Providing Files to the Container](./providing-files-to-the-container.md)
 * [Container Lifecycle and API](./container-lifecycle-and-api.md)
 * [Configuring Containers](./configuring-containers.md)

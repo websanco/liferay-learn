@@ -1,6 +1,6 @@
 # Dockerによるアップグレード
 
-自動アップグレードを有効にしてLiferayのDockerイメージを実行すると、Liferayの起動時にデータベースがアップグレードされます。 アップグレードが完了した後、[そのDockerコンテナを介してLiferayの使用](../../../installation-and-upgrades/installing-liferay/using-liferay-docker-images/docker-container-basics.md)を継続するか、またはアップグレードされたデータベースに新しいLiferayオンプレミスインストールを指定できます。
+自動アップグレードを有効にしてLiferayのDockerイメージを実行すると、Liferayの起動時にデータベースがアップグレードされます。 アップグレードが完了した後、[そのDockerコンテナを介してLiferayの使用](../../../installation-and-upgrades/installing-liferay/using-liferay-docker-images.md)を継続するか、またはアップグレードされたデータベースに新しいLiferayオンプレミスインストールを指定できます。
 
 ```{important}
 Dockerをお持ちではありませんか？ まずは [Linux](https://docs.docker.com/install/linux/docker-ce/ubuntu/) | [Windows](https://docs.docker.com/docker-for-windows/install/) | [OSX](https://docs.docker.com/docker-for-mac/install/) に移動してください。
@@ -95,17 +95,17 @@ Dockerイメージを使用してアップグレードする手順は次のと�
 新しいLiferayバージョンをDocker経由で使い続けたい場合は、 `-e LIFERAY_UPGRADE_PERIOD_DATABASE_PERIOD_AUTO_PERIOD_RUN=true`環境設定を、新しいコンテナの作成に使用する`docker run ...`コマンドから外してください。
 
 ```{note}
-[Docker Container Basics](../../../installation-and-upgrades/installing-liferay/using-liferay-docker-images/docker-container-basics.md) では、Dockerコンテナの作成、停止、再起動について説明しています。
+[Using Liferay Docker Images](../../../installation-and-upgrades/installing-liferay/using-liferay-docker-images.md) では、Dockerコンテナの作成、停止、再起動について説明しています。
 ```
 
 ## まとめ
 
 アップグレードされたデータベースで十分な場合は、新しいLiferayインスタンスを使用してください。 アップグレードの完了の他に作業が必要な場合は、以下の記事を参考にしてください。
 
-  - [Upgrade Overview](./upgrade-overview.md)では、アップグレードに関するすべてのトピックについて説明しています。 まだ対処しなければならないトピックが見つかるかもしれません。
+  - [Upgrade Overview](../upgrade-basics.md)では、アップグレードに関するすべてのトピックについて説明しています。 まだ対処しなければならないトピックが見つかるかもしれません。
 
   - [データベースアップグレードツールの使用](./using-the-database-upgrade-tool.md)では、Liferayサーバーのオフライン時にデータベースをアップグレードする方法を示しています。 アップグレードに時間がかかりすぎる場合は、[データベースの調整](../upgrade-stability-and-performance/database-tuning-for-upgrades.md)、 [不要なデータの削除](../upgrade-stability-and-performance/database-pruning-for-faster-upgrades.md)、[データベース アップグレード ツールの使用](./using-the-database-upgrade-tool.md)を検討してください。
 
-  - [Upgrading Custom Development](../upgrading_custom_development.html)では、カスタムプラグインコードを新しいLiferayバージョンに適応させる方法を示しています。
+  - [Upgrading Custom Development](../upgrading-custom-development.md)では、カスタムプラグインコードを新しいLiferayバージョンに適応させる方法を示しています。
 
   - [Maintaining Clustered Installations](../../maintaining-a-liferay-installation/maintaining-clustered-installations.md)では、クラスター環境でアップグレードする方法について説明しています。

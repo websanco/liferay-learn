@@ -183,7 +183,7 @@ Otherwise, you can configure the data source in WebLogic.
 
 ## Connect to Mail Server
 
-You can connect Liferay DXP [to a mail server](../../setting-up-liferay/configuring-mail/connecting-to-a-mail-server.md) using its built-in mail session. Otherwise, you can use WebLogic's mail session:
+You can connect Liferay DXP [to a mail server](../../setting-up-liferay/configuring-mail.md) using its built-in mail session. Otherwise, you can use WebLogic's mail session:
 
 1. Start WebLogic and log in to the Admin Server's console.
 1. Select *Services* &rarr; *Mail Sessions* from the *Domain Structure* box on the left hand side of the Admin Server's console UI.
@@ -238,10 +238,10 @@ Congratulations! You're running DXP on WebLogic.
 
 ## Next Steps
 
-You can [sign in as your administrator user](../../../getting-started/introduction-to-the-admin-account.md) and start [building a solution on DXP](../../../building-solutions-on-dxp/README.md). Or you can explore [additional Liferay DXP setup](../../setting-up-liferay.md) topics:
+You can [sign in as your administrator user](../../../getting-started/introduction-to-the-admin-account.md) and start building a solution on DXP/Portal. Or you can explore [additional etup](../../setting-up-liferay.md) topics:
 
 * [Installing the Marketplace Plugin](../../../system-administration/installing-and-managing-apps/getting-started/using-marketplace.md#appendix-installing-the-marketplace-plugin)
 * [Accessing EE Plugins During a Trial Period](../../../system-administration/installing-and-managing-apps/installing-apps/accessing-ee-plugins-during-a-trial-period.md)
 * [Installing a Search Engine](../../../using-search/installing-and-upgrading-a-search-engine/installing-a-search-engine.md)
-* [Securing Liferay DXP](../../securing-liferay.md)
+* [Securing Liferay](../../securing-liferay.md)
 * [Clustering for High Availability](../../setting-up-liferay/clustering-for-high-availability.md)

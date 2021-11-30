@@ -273,7 +273,7 @@ Liferay uses HSQL by default for demo purposes. HSQL should *not* be used in pro
 
 ## Mail Configuration
 
-If using DXP's built-in mail sessions, skip this section. See the [Configuring Mail](../../setting-up-liferay/configuring-mail/connecting-to-a-mail-server.md) article on how to use DXP's built-in mail sessions.
+If using DXP's built-in mail sessions, skip this section. See the [Configuring Mail](../../setting-up-liferay/configuring-mail.md) article on how to use DXP's built-in mail sessions.
 
 If you want to use WebSphere to manage the mail session, follow these steps:
 

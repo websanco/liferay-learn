@@ -1,6 +1,6 @@
 # Upgrading Via Docker
 
-Running a Liferay Docker image with auto-upgrade enabled upgrades your database on Liferay startup. After the upgrade completes, you can continue [using Liferay via that Docker container](../../../installation-and-upgrades/installing-liferay/using-liferay-docker-images/docker-container-basics.md) or point a new Liferay on-premises installation to the upgraded database.
+Running a Liferay Docker image with auto-upgrade enabled upgrades your database on Liferay startup. After the upgrade completes, you can continue [using Liferay via that Docker container](../../../installation-and-upgrades/installing-liferay/using-liferay-docker-images.md) or point a new Liferay on-premises installation to the upgraded database.
 
 ```{important}
 Don't have Docker? Go here first:
@@ -77,7 +77,7 @@ Here are the steps for upgrading with a Docker image:
     `rootDir="data/document_library"`
     ```
 
-1. Make sure you're using the JDBC database driver your database vendor recommends. If you're using MySQL, for example, set `jdbc.default.driverClassName=com.mysql.cj.jdbc.Driver` in [`new-version/files/portal-ext.properties`](../../reference/portal-properties.md) and replace the MySQL JDBC driver JAR your app server uses. See [Database Drivers](../configuration-and-infrastructure/migrating-configurations-and-properties.md#database-drivers) for more details.
+1. Make sure you're using the JDBC database driver your database vendor recommends. If you're using MySQL, for example, set `jdbc.default.driverClassName=com.mysql.cj.jdbc.Driver` in [`new-version/files/portal-ext.properties`](../../reference/portal-properties.md) and replace the MySQL JDBC driver JAR your app server uses. See [Database Drivers](../migrating-configurations-and-properties.md#database-drivers) for more details.
 
 1. Run the Docker image [mounted](../../installing-liferay/using-liferay-docker-images/providing-files-to-the-container.md) to your new version folder using the following command. Substitute the image name, tag, and environment values as needed.
 
@@ -102,7 +102,7 @@ Here are the steps for upgrading with a Docker image:
 
 1. After you have resolved any failures or errors, examine the [Post Upgrade Considerations](./post-upgrade-considerations.md).
 
-1. [Update the Portal properties](../configuration-and-infrastructure/migrating-configurations-and-properties.md#migrating-portal-properties) in your new installation.
+1. [Update the Portal properties](../migrating-configurations-and-properties.md#migrating-portal-properties) in your new installation.
 
 1. Validate your upgraded database.
 
@@ -113,14 +113,14 @@ Your database upgrade is now complete!
 If you want to continue using the new Liferay version via Docker, leave off the ``-e LIFERAY_UPGRADE_PERIOD_DATABASE_PERIOD_AUTO_PERIOD_RUN=true`` environment setting from the ``docker run ...`` command you use to create the new container.
 
 ```{note}
-[Docker Container Basics](../../../installation-and-upgrades/installing-liferay/using-liferay-docker-images/docker-container-basics.md) demonstrates creating, stopping, and restarting Docker containers.
+[Using Liferay Docker Images](../../../installation-and-upgrades/installing-liferay/using-liferay-docker-images.md) demonstrates creating, stopping, and restarting Docker containers.
 ```
 
 ## Conclusion
 
 If the upgraded database is all you need, then enjoy using your new Liferay instance! If there's more to completing your upgrade, these articles can help you finish:
 
-* [Upgrade Overview](./upgrade-overview.md) describes all of the upgrade topics. Maybe there's a topic you still need to address.
+* [Upgrade Overview](../upgrade-basics.md) describes all of the upgrade topics. Maybe there's a topic you still need to address.
 
 * [Database Upgrade Options](../reference/database-upgrade-options.md) describes all the ways of upgrading the database in the context of the various DXP/Portal installation types.
 

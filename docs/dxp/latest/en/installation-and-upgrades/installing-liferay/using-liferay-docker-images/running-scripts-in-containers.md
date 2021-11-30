@@ -126,6 +126,6 @@ Now you know how to execute scripts in all parts of the container's lifecycle.
 
 ## Additional Information
 
-* [Docker Container Basics](./docker-container-basics.md)
+* [Using Liferay Docker Images](../using-liferay-docker-images.md)
 * [Container Lifecycle and API](./container-lifecycle-and-api.md)
 * [Providing Files to the Container](./providing-files-to-the-container.md)

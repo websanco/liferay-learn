@@ -3,7 +3,6 @@
 ```{toctree}
 :maxdepth: 3
 
-clustering-for-high-availability/clustering-for-high-availability.md
 clustering-for-high-availability/example-creating-a-simple-dxp-cluster.md
 clustering-for-high-availability/database-configuration-for-cluster-nodes.md
 clustering-for-high-availability/configuring-cluster-link.md
@@ -19,7 +18,7 @@ Liferay DXPは、複数のマシンのクラスター（水平クラスター）
 
 これは、効果的に機能するDXPクラスターを作成するために必要なものです。
 
-1.  Liferay DXP [は個別のアプリケーションサーバーノードに](../installing_liferay.rst) をインストール
+1.  Liferay DXP [は個別のアプリケーションサーバーノードに](../installing-liferay.md) をインストール
 
 2.  すべてのノードにアクセスできる [データベースまたはデータベースクラスター](./clustering-for-high-availability/database-configuration-for-cluster-nodes.md)
 

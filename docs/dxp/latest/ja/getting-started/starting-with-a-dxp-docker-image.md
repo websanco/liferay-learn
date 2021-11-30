@@ -32,4 +32,4 @@ Liferay DXPの最新バージョンは、Dockerイメージとして入手でき
 
 状況をチェックする以上のことをしますか？ 詳細については、[Installing a Liferay DXP Tomcat Bundle](../installation-and-upgrades/installing-liferay/installing-a-liferay-dxp-tomcat-bundle.md)を参照してください。
 
-Liferay DXPで構築できるものについて詳しく知りたいですか？ [Build Solutions on DXP](../installation-and-upgrades/installing-liferay/using-liferay-docker-images/docker-container-basics.md)を参照してください。
+Liferay DXPで構築できるものについて詳しく知りたいですか？ [Build Solutions on DXP](../installation-and-upgrades/installing-liferay/using-liferay-docker-images.md)を参照してください。

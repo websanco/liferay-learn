@@ -26,7 +26,7 @@ Fix Pack, Security Fix Pack, and Service Pack images are based on [Slim Bundles]
 
 Using a new Fix Pack, Security Fix Pack, or Service Pack image requires migrating to a container based on that image. Here is how to migrate from a DXP container to a new patch image.
 
-1. [Stop your current DXP container](./docker-container-basics.md#stopping-a-container).
+1. [Stop your current DXP container](../using-liferay-docker-images.md#stopping-a-container).
 
 1. [Back up](../../maintaining-a-liferay-installation/backing-up.md) files you've used to customize your DXP container.
 
@@ -82,11 +82,11 @@ There are two methods for installing patches to containers:
 
 Here are the steps for installing a patch to your existing container:
 
-1. [Stop your current container](./docker-container-basics.md#stopping-a-container).
+1. [Stop your current container](../using-liferay-docker-images.md#stopping-a-container).
 
 1. [Download](https://customer.liferay.com/downloads) the patch and copy it to a folder in a volume or [bind mount](./providing-files-to-the-container.md) that maps to the container's `/mnt/liferay/patching` folder.
 
-1. [Restart your container](./docker-container-basics.md#restartings-a-container).
+1. [Restart your container](../using-liferay-docker-images.md#restartings-a-container).
 
 ### Installing to a New Container
 
@@ -104,7 +104,7 @@ Here are steps for installing a patch to a new container:
    cp ~/[patch file] [host folder]/patching
    ```
 
-1. [Stop your current DXP container](./docker-container-basics.md#stopping-a-container), if it's running.
+1. [Stop your current DXP container](../using-liferay-docker-images.md#stopping-a-container), if it's running.
 
 1. Create a container with a bind mount that maps the patch file's folder to the container's `/mnt/liferay/patching` folder. Since this example's patch file is in a folder called `patching`, you can [bind mount](./providing-files-to-the-container.md#bind-mounting-a-host-folder-to-mnt-liferay) its parent folder (`[host folder]`) to the container's `/mnt/liferay` folder. This makes the patch accessible for applying to DXP.
 
@@ -126,7 +126,7 @@ If the Patching Tool reports this message: `[patch file] is incompatible with Pa
 
 If you want to revert a patch from a container or install a different patch to a patched container, you must remove the container and create a new one.
 
-1. [Stop the container](./docker-container-basics.md#stopping-a-container).
+1. [Stop the container](../using-liferay-docker-images.md#stopping-a-container).
 
     ```bash
     docker stop [container]
@@ -175,7 +175,7 @@ After the database is upgraded, run your container that uses that database.
 ## Additional Information
 
 * [Installing Apps and Other Artifacts to Containers](./installing-apps-and-other-artifacts-to-containers.md)
-* [Docker Container Basics](./docker-container-basics.md)
+* [Using Liferay Docker Images](../using-liferay-docker-images.md)
 * [Providing Files to the Container](./providing-files-to-the-container.md)
 * [Container Lifecycle and API](./container-lifecycle-and-api.md)
 * [Using the Database Upgrade Tool](../../upgrading-liferay/upgrade-basics/using-the-database-upgrade-tool.md)

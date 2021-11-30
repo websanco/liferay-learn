@@ -233,6 +233,6 @@ The error is caused by Kibana 7.11+'s reliance on TLS version 1.3. The recommend
 ## Related Topics
 
 * [Securing Elasticsearch](../installing-and-upgrading-a-search-engine/elasticsearch/securing-elasticsearch.md)
-* [Cross-Cluster Replication](./cross-cluster-replication.html)
-* [Search Tuning](../search-administration-and-tuning.html)
-* [Liferay Installation and Upgrades](../../installation-and-upgrades.html)
+* [Cross-Cluster Replication](./cross-cluster-replication.md)
+* [Search Tuning](../search-administration-and-tuning.md)
+* [Liferay Installation and Upgrades](../../installation-and-upgrades.md)

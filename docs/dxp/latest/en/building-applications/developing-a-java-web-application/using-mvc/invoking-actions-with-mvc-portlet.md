@@ -8,7 +8,7 @@ Here you'll learn how to invoke and examine an example portlet that uses action 
 
 The example MVC Portlet has three portlet action URLs that map to separate portlet methods. Here's how to deploy the portlet and trigger its actions.
 
-1. Start a [Liferay Docker container](../../../installation-and-upgrades/installing-liferay/using-liferay-docker-images/docker-container-basics.md).
+1. Start a [Liferay Docker container](../../../installation-and-upgrades/installing-liferay/using-liferay-docker-images.md).
 
    ```bash
    docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]

@@ -1,6 +1,6 @@
 # 新しいDockerイメージへのアップグレード
 
-新しいLiferayバージョンがDockerイメージとしてリリースされると、それらにアップグレードできます。 [Upgrade Overview](../../upgrading-liferay/upgrade-basics/upgrade-overview.md)では、プロセスについて説明しています。
+新しいLiferayバージョンがDockerイメージとしてリリースされると、それらにアップグレードできます。 [Upgrade Overview](../../upgrading-liferay/upgrade-basics.md)では、プロセスについて説明しています。
 
 ```{important}
 アップグレードする前に、**必ず**データベースとインストールをバックアップ<../../maintaining-a-liferay-installation/backing-up.md>してください。 バックアップコピーでアップグレードプロセスをテストすることをお勧めします。
@@ -14,4 +14,4 @@
 
 ## 次のステップ
 
-まず、[Upgrade Overview](../../upgrading-liferay/upgrade-basics/upgrade-overview.md)をお読みください。 その後、新しいコンテナで自動アップグレードを使用したい場合は、[Upgrading via Docker](../../upgrading-liferay/upgrade-basics/upgrading-via-docker.md)を参照してください。 ご使用の環境でデータベースアップグレードツールの使用が必要な場合は、[データベースアップグレードツール](../../upgrading-liferay/upgrade-basics/using-the-database-upgrade-tool.md)を参照してください。
+まず、[Upgrade Overview](../../upgrading-liferay/upgrade-basics.md)をお読みください。 その後、新しいコンテナで自動アップグレードを使用したい場合は、[Upgrading via Docker](../../upgrading-liferay/upgrade-basics/upgrading-via-docker.md)を参照してください。 ご使用の環境でデータベースアップグレードツールの使用が必要な場合は、[データベースアップグレードツール](../../upgrading-liferay/upgrade-basics/using-the-database-upgrade-tool.md)を参照してください。

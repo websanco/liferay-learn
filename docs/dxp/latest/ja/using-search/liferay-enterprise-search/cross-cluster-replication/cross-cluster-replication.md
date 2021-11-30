@@ -74,7 +74,7 @@ CCRにはElasticsearch Platinumレベルのライセンスが必要ですが、[
 ## Liferay DXPをElasticsearchに接続する
 
 ```{important}
-Configure the Liferay Clustering behavior first. In the example provided in the tutorial, some configuration is provided for testing purposes. See the [clustering documentation](../../../installation-and-upgrades/setting-up-liferay/clustering-for-high-availability/clustering-for-high-availability.md)_ for more information on setting up a production cluster.
+Configure the Liferay Clustering behavior first. In the example provided in the tutorial, some configuration is provided for testing purposes. See the [clustering documentation](../../../installation-and-upgrades/setting-up-liferay/clustering-for-high-availability.md)_ for more information on setting up a production cluster.
 ```
 
 すべてのLiferay DXPノードには、2つのElasticsearch構成が必要です。本番モードを有効にし、リモートElasticsearch接続を宣言します。 これに対応するために、リモートElasticsearch接続をElasticsearch接続で設定する必要があります。 フォロワーのElasticsearchクラスターから読み取りを行うノードにも、追加の接続を定義する必要があります。 （`.config`ファイルまたはシステム設定で）適切な構成値を指定してから、DXPノードを起動（または再起動）します。 リーダーインデックスの読み取りと書き込みを行うノードが正しく機能していることを確認します。

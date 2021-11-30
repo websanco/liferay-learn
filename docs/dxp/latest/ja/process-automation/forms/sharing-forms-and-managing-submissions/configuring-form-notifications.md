@@ -35,4 +35,4 @@
 ## 追加情報
 
   - [Using Forms with a Workflow](./using-forms-with-a-workflow.md)
-  - [Connecting to a Mail Server](../../../installation-and-upgrades/setting-up-liferay/configuring-mail/connecting-to-a-mail-server.md)
+  - [Configuring Mail](../../../installation-and-upgrades/setting-up-liferay/configuring-mail.md)

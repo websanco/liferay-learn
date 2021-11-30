@@ -298,7 +298,7 @@ The data source is now configured and ready to connect to the database.
 
 ## Connect to a Mail Server
 
-As with database configuration, the easiest mail session to configure is DXP's. If you want to use DXP's built-in mail session, skip this section and [connect to a mail server](../../setting-up-liferay/configuring-mail/connecting-to-a-mail-server.md) in the Control Panel.
+As with database configuration, the easiest mail session to configure is DXP's. If you want to use DXP's built-in mail session, skip this section and [connect to a mail server](../../setting-up-liferay/configuring-mail.md) in the Control Panel.
 
 If you want to configure the mail session in JBoss, follow these steps:
 

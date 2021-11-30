@@ -58,7 +58,7 @@ Service Builder uses the Hibernate persistence framework for object-relational m
 
 ## Caching 
 
-Service Builder caches objects at three levels: *entity*, *finder*, and *Hibernate*. By default, Liferay uses Ehcache as an underlying cache provider for each of these cache levels. However, this is configurable via [portal properties](dxp/latest/en/installation-and-upgrades/reference/portal-properties.md). All you must do to enable entity and finder caching in your project is to set the `cache-enabled=true` attribute of your entity's `<entity>` element in your `service.xml` file. [Liferay Clustering](dxp/latest/en/installation-and-upgrades/setting-up-liferay/clustering-for-high-availability.md) describes Liferay caching in a cluster. 
+Service Builder caches objects at three levels: *entity*, *finder*, and *Hibernate*. By default, Liferay uses Ehcache as an underlying cache provider for each of these cache levels. However, this is configurable via [portal properties](../../installation-and-upgrades/reference/portal-properties.md). All you must do to enable entity and finder caching in your project is to set the `cache-enabled=true` attribute of your entity's `<entity>` element in your `service.xml` file. [Liferay Clustering](../../installation-and-upgrades/setting-up-liferay/clustering-for-high-availability.md) describes Liferay caching in a cluster. 
 
 ## Dynamic Query and Custom SQL Query
 

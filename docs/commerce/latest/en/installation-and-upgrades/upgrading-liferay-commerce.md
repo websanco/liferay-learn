@@ -10,7 +10,7 @@ Starting with Liferay Commerce 3.0, Commerce is now bundled with Liferay DXP. To
 After upgrading to 7.4, do *not* deploy the Commerce `LPKG` again. The Commerce 4.0 modules are bundled with 7.4. Deploying the `LPKG` causes conflicts.
 ```
 
-To learn more about the DXP upgrade process, see [Upgrade Overview](https://learn.liferay.com/dxp/latest/en/installation-and-upgrades/upgrading-liferay/upgrade-basics/upgrade-overview.html). Once DXP is upgraded to 7.4, execute a re-index.
+To learn more about the DXP upgrade process, see [Upgrade Overview](https://learn.liferay.com/dxp/latest/en/installation-and-upgrades/upgrading-liferay/upgrade-basics.html). Once DXP is upgraded to 7.4, execute a re-index.
 
 ### Prerequisite for Upgrading to Liferay Commerce 4.0
 
@@ -60,7 +60,7 @@ Liferay Commerce provides a seamless upgrade process to Commerce 2.1.x, whether 
 Upgrading from 1.1.x to 2.1.x does **not** require an incremental upgrade to 2.0.x.
 ```
 
-Before upgrading to Commerce 2.1.x, you must first be running the latest fix pack of Liferay DXP 7.2. For example, if upgrading to Liferay Commerce Enterprise 2.0.6 - upgrading Liferay DXP to Fix Pack 14 is required. To learn about upgrading to DXP 7.2, see [Upgrade Overview](https://learn.liferay.com/dxp/latest/en/installation-and-upgrades/upgrading-liferay/upgrade-basics/upgrade-overview.html).
+Before upgrading to Commerce 2.1.x, you must first be running the latest fix pack of Liferay DXP 7.2. For example, if upgrading to Liferay Commerce Enterprise 2.0.6 - upgrading Liferay DXP to Fix Pack 14 is required. To learn about upgrading to DXP 7.2, see [Upgrade Overview](https://learn.liferay.com/dxp/latest/en/installation-and-upgrades/upgrading-liferay/upgrade-basics.html).
 
 ### Apply the Latest Fix Pack
 

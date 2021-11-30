@@ -18,11 +18,11 @@ Once you've [installed Liferay DXP](./installing-a-liferay-tomcat-bundle.md#inst
 
     ![On completing startup, DXP launches a web browser that displays the Basic Configuration page.](./running-liferay-for-the-first-time/images/01.png)
 
-2. Set your portal's *Name*, *Default Language* and *Time Zone*.
+1. Set your portal's *Name*, *Default Language* and *Time Zone*.
 
-3. Set the *Administrator User* first name, last name, and email address.
+1. Set the *Administrator User* first name, last name, and email address.
 
-4. In the *Database* section, click *Change* to display the database form.
+1. In the *Database* section, click *Change* to display the database form.
 
     ```{warning}
     DO NOT use HSQL in production-grade Liferay DXP instances.
@@ -30,7 +30,7 @@ Once you've [installed Liferay DXP](./installing-a-liferay-tomcat-bundle.md#inst
 
     ![The Setup Wizard's database form lets you specify the database you created for DXP.](./running-liferay-for-the-first-time/images/02.png)
 
-5. Specify your database.
+1. Specify your database.
 
 | Field | Description |
 | --- | --- |
@@ -73,10 +73,10 @@ Congratulations! You have launched your on premises Liferay DXP instance.
 
 ## Next Steps
 
-You can [sign in as your administrator user](../../getting-started/introduction-to-the-admin-account.md) and start [building a solution on DXP](../../building-solutions-on-dxp/README.md). Or you can explore [additional Liferay DXP setup](../setting-up-liferay.md) topics:
+You can [sign in as your administrator user](../../getting-started/introduction-to-the-admin-account.md) and start building a solution on DXP/Portal. Or you can explore [additional setup](../setting-up-liferay.md) topics:
 
 * [Installing and Managing Apps](../../system-administration/installing-and-managing-apps/getting-started/installing-and-managing-apps.md)
 * [Accessing Plugins During a Trial Period](../../system-administration/installing-and-managing-apps/installing-apps/accessing-ee-plugins-during-a-trial-period.md)
 * [Installing a Search Engine](../../using-search/installing-and-upgrading-a-search-engine/installing-a-search-engine.md)
-* [Securing Liferay DXP](../securing-liferay.md)
+* [Securing Liferay](../securing-liferay.md)
 * [Clustering for High Availability](../setting-up-liferay/clustering-for-high-availability.md)

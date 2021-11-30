@@ -161,7 +161,7 @@ Liferay DXPは、DXPの組み込みデータソース（推奨）またはアプ
 
 ## メールサーバーに接続
 
-組み込みのメールセッションを使用して、Liferay DXP [をメールサーバー](../../setting-up-liferay/configuring-mail/connecting-to-a-mail-server.md) 接続できます。 WebLogicのメールセッションを使用することもできます。
+組み込みのメールセッションを使用して、Liferay DXP [をメールサーバー](../../setting-up-liferay/configuring-mail.md) 接続できます。 WebLogicのメールセッションを使用することもできます。
 
 1.  WebLogicを起動し、管理サーバーのコンソールにログインします。
 
@@ -224,7 +224,7 @@ May 02, 2018 9:12:27 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass pr
 
 ## 次のステップ
 
-[管理者ユーザーとしてサインイン](../../../getting-started/introduction-to-the-admin-account.md)して、[DXPでソリューションの構築](../../../building-solutions-on-dxp/README.rst)を開始できます。 または、[Liferay DXPのその他のセットアップ](../../setting_up_liferay.rst)トピックを参照できます。
+[管理者ユーザーとしてサインイン](../../../getting-started/introduction-to-the-admin-account.md)して、[DXPでソリューションの構築](../../../building-solutions-on-dxp/README.rst)を開始できます。 または、[Liferay DXPのその他のセットアップ](../../setting-up-liferay.md)トピックを参照できます。
 
   - [Installing the Marketplace Plugin](../../../system-administration/installing-and-managing-apps/getting-started/using-marketplace.md#appendix-installing-the-marketplace-plugin)
   - [試用期間中のEEプラグインへのアクセス](../../../system-administration/installing-and-managing-apps/installing-apps/accessing-ee-plugins-during-a-trial-period.md)

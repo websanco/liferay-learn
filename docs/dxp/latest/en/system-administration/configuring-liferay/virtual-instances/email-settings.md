@@ -12,7 +12,7 @@ The Email configuration is where you configure email notifications at the Virtua
 | Password Reset Notification | Notify Users when a request to reset their password is received |
 
 ```{note}
-Your installation must have a [configured connection to a mail server](../../../installation-and-upgrades/setting-up-liferay/configuring-mail/connecting-to-a-mail-server.md) in order to send email notifications.
+Your installation must have a [configured connection to a mail server](../../../installation-and-upgrades/setting-up-liferay/configuring-mail.md) in order to send email notifications.
 ```
 
 ## Account Created Notification

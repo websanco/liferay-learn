@@ -17,7 +17,7 @@
 ![コントロールパネルでサーチインデックスのインデックスを再作成できます。](./post-upgrade-considerations/images/02.png)
 
 ```{note}
-古いバージョン（7.1以下）からアップグレードした場合は、検索インデックスを処理するために [Elasticsearchのインストール](../../../using-search/installing-and-upgrading-a-search-engine/introduction-to-installing-a-search-engine.md) を検討してください。
+古いバージョン（7.1以下）からアップグレードした場合は、検索インデックスを処理するために [Elasticsearchのインストール](../../../using-search/installing-and-upgrading-a-search-engine/installing-a-search-engine.md) を検討してください。
 ```
 
 ### データベース設定

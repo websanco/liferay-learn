@@ -79,7 +79,7 @@ Liferayでは、一般的に3種類のモジュールを使用します。
     
         k8s2-api/build/libs/com.acme.k8s2.api-1.0.0.jar
 
-3.  [Liferay Dockerコンテナ](../../installation-and-upgrades/installing-liferay/using-liferay-docker-images/docker-container-basics.md)を起動します。
+3.  [Liferay Dockerコンテナ](../../installation-and-upgrades/installing-liferay/using-liferay-docker-images.md)を起動します。
 
     ``` bash
     docker run -it -p 8080:8080 [$LIFERAY_LEARN_DXP_DOCKER_IMAGE$]

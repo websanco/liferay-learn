@@ -6,7 +6,7 @@ Direct synchronous messaging is the easiest way to block processing until all li
 
 In an example project, you'll use a `SynchronousMessageSender` to send a message directly to two listeners.
 
-1. Start a [Liferay Docker container](../../../installation-and-upgrades/installing-liferay/using-liferay-docker-images/docker-container-basics.md).
+1. Start a [Liferay Docker container](../../../installation-and-upgrades/installing-liferay/using-liferay-docker-images.md).
 
     ```bash
     docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]

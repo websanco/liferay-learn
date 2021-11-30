@@ -3,7 +3,7 @@
 通知は、ユーザーに送信される自動メールです。 電子メール通知を送信するには、最初に*通知テンプレート*を作成します。 通知テンプレートは、電子メール通知の通知送信者、トリガー、およびコンテンツを定義します。 利用可能な通知テンプレートの完全なリストについては、 [Store Emails](./store-emails.md#notification-templates) 記事を参照してください。
 
 ```{note}
-Liferay Commerceの通知機能を使用するには、最初にLiferay Digital Experience Platform（DXP）のメール設定を構成します。 詳細については、 [メールサーバー への接続](https://learn.liferay.com/dxp/7.x/en/installation-and-upgrades/setting-up-liferay/configuring-mail/connecting-to-a-mail-server.html) を参照してください。
+Liferay Commerceの通知機能を使用するには、最初にLiferay Digital Experience Platform（DXP）のメール設定を構成します。 詳細については、 [メールサーバー への接続](https://learn.liferay.com/dxp/7.x/en/installation-and-upgrades/setting-up-liferay/configuring-mail.html) を参照してください。
 ```
 
 ## 通知を作成する

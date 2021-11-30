@@ -348,4 +348,4 @@ Liferay has begun transitioning big portions of its internal UI to React. As a s
 
 ### Upgrade Improvements 
 
-Many reliability improvements have been added to the [upgrade process](../installation-and-upgrades/upgrading-liferay/upgrade-basics/upgrade-overview.md). The upgrade process has been unified between Core and Modules. Auto upgrade behavior can be controlled by a new portal property: `upgrade.database.auto.run`. 
+Many reliability improvements have been added to the [upgrade process](../installation-and-upgrades/upgrading-liferay/upgrade-basics.md). The upgrade process has been unified between Core and Modules. Auto upgrade behavior can be controlled by a new portal property: `upgrade.database.auto.run`. 

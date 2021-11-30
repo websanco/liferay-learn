@@ -6,7 +6,7 @@
 
 管理者がDXPとコマースの両方をアップグレードする場合は、最初にDXP 7.1を7.2にアップグレードしてください。 DXPアップグレードプロセスの詳細については：
 
-  - [アップグレードの概要](https://learn.liferay.com/dxp/7.x/en/installation-and-upgrades/upgrading-liferay-dxp/upgrade-basics/upgrade-overview.html)
+  - [アップグレードの概要](https://learn.liferay.com/dxp/7.x/en/installation-and-upgrades/upgrading-liferay-dxp/upgrade-basics.html)
 
 DXPが7.1から7.2に正常にアップグレードされたら、以下の手順に従ってLiferay Commerceをアップグレードします。
 

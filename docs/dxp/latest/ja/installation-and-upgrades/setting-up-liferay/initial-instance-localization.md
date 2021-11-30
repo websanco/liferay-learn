@@ -30,7 +30,7 @@ company.default.time.zone=Europe/Lisbon
 
 ![セットアップウィザードを使用して、DXPインスタンスのデフォルトの言語とタイムゾーンを設定する](./initial-instance-localization/images/01.png)
 
-セットアップウィザードがデフォルトで有効になって [のLiferay-Tomcatのバンドル](../installing-liferay/installing-a-liferay-tomcat-bundle.md) と [のアプリケーション・サーバーのインストール](../installing-liferay/installing_liferay_on_an_application_server.html)。
+セットアップウィザードがデフォルトで有効になって [のLiferay-Tomcatのバンドル](../installing-liferay/installing-a-liferay-tomcat-bundle.md) と [のアプリケーション・サーバーのインストール](../installing-liferay/installing-liferay-on-an-application-server.md)。
 
 すでにDXPを起動している場合は、コントロールパネルでインスタンスのデフォルトの言語とタイムゾーンを変更します。
 
@@ -40,7 +40,7 @@ company.default.time.zone=Europe/Lisbon
 
 ## まとめ
 
-DXPインスタンスのデフォルトの言語とタイムゾーンを構成しました。 ロケールの選択を容易にする方法など、DXPのローカライズに関する詳細は、 [Sサイトローカリゼーション](../../site-building/site-settings/configuring_site_languages.html)を参照してください。
+DXPインスタンスのデフォルトの言語とタイムゾーンを構成しました。 ロケールの選択を容易にする方法など、DXPのローカライズに関する詳細は、 [Sサイトローカリゼーション](../../site-building/site-settings/site-localization.md)を参照してください。
 
 ## 追加情報
 

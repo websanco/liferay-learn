@@ -33,7 +33,7 @@ To access the Settings menu, choose the desired form (for example, _Guest Survey
 
 ### Email Notifications
 
-Here you can configure the Forms app to send a notification email each time a form entry is submitted. You should set up a mail server first; see [Connecting to a Mail Server](../../../installation-and-upgrades/setting-up-liferay/configuring-mail/connecting-to-a-mail-server.md) to learn more.
+Here you can configure the Forms app to send a notification email each time a form entry is submitted. You should set up a mail server first; see [Configuring Mail](../../../installation-and-upgrades/setting-up-liferay/configuring-mail.md) to learn more.
 
 ![You can add notifications to a form.](./forms-configuration-reference/images/03.png)
 

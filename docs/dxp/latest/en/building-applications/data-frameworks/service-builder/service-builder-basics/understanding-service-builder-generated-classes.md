@@ -168,7 +168,7 @@ The new method is available to publish with your modules.
 
 It's time to deploy your modules and test your new service.
 
-1. Start a [Liferay Docker container](../../installation-and-upgrades/installing-liferay/using-liferay-dxp-docker-images/dxp-docker-container-basics.md).
+1. Start a [Liferay Docker container](../../../../installation-and-upgrades/installing-liferay/using-liferay-docker-images.md).
 
    ```bash
    docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]

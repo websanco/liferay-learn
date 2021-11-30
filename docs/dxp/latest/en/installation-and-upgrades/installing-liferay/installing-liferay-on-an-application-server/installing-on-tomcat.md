@@ -261,7 +261,7 @@ The data source is configured.
 
 ## Mail Configuration
 
-The easiest way to configure mail is to use the DXP [built-in mail session](../../setting-up-liferay/configuring-mail/connecting-to-a-mail-server.md). If you use the built-in mail session, you may skip this section.
+The easiest way to configure mail is to use the DXP [built-in mail session](../../setting-up-liferay/configuring-mail.md). If you use the built-in mail session, you may skip this section.
 
 If you want to use Tomcat to manage the mail session, follow these steps:
 
@@ -309,7 +309,7 @@ Congratulations! You're running DXP on Tomcat.
 
 ## Next Steps
 
-You can [sign in as your administrator user](../../../getting-started/introduction-to-the-admin-account.md) and start [building a solution on DXP](../../../building_solutions_on_dxp.html). Or you can explore [additional Liferay DXP setup](../../setting-up-liferay.md) topics:
+You can [sign in as your administrator user](../../../getting-started/introduction-to-the-admin-account.md) and start building a solution on DXP. Or you can explore [additional Liferay DXP setup](../../setting-up-liferay.md) topics:
 
 * [Installing the Marketplace Plugin](../../../system-administration/installing-and-managing-apps/getting-started/using-marketplace.md#appendix-installing-the-marketplace-plugin)
 * [Accessing Plugins During a Trial Period](../../../system-administration/installing-and-managing-apps/installing-apps/accessing-ee-plugins-during-a-trial-period.md)

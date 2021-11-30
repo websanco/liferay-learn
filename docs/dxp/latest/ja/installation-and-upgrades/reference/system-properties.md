@@ -63,7 +63,7 @@ DXPの `system.properties` ファイルを使用し、システムプロパテ�
 
 4.  アプリケーションサーバーを起動します。
 
-5.  DXP Webアプリケーションを展開します。 詳細については、するための手順を参照してください [アプリケーションサーバーへのインストールを](../installing-liferay/installing_liferay_on_an_application_server.html)。
+5.  DXP Webアプリケーションを展開します。 詳細については、するための手順を参照してください [アプリケーションサーバーへのインストールを](../installing-liferay/installing-liferay-on-an-application-server.md)。
 
 Liferay DXPはシステムプロパティを柔軟に処理するので、システムを自由に構成できます。
 

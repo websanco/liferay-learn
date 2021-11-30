@@ -8,20 +8,21 @@ setting-up-liferay/activating-liferay-dxp.md
 setting-up-liferay/initial-instance-localization.md
 setting-up-liferay/configuring-mail.md
 ../system-administration/configuring-liferay/virtual-instances/users.md
-../system-administration/file_storage.rst
+../system-administration/file-storage.md
 ../system-administration/file-storage/enabling-antivirus-scanning-for-uploaded-files.md
 ../using-search/installing-and-upgrading-a-search-engine/installing-a-search-engine.md
-securing_liferay.rst
-../system-administration/installing_and_managing_apps.rst
+securing-liferay.md
+maintaining-a-liferay-installation/backing-up.md
+../system-administration/installing-and-managing-apps.md
 setting-up-liferay/using-a-cdn.md
 setting-up-liferay/clustering-for-high-availability.md
 setting-up-liferay/tuning-liferay.md
 setting-up-liferay/tuning-your-jvm.md
 ```
 
-After [installing Liferay](./installing_liferay.html), configure it to meet your needs. Here are common setup tasks.
+After [installing Liferay](./installing-liferay.md), configure it to meet your needs. Here are common setup tasks.
 
-## Setup Tasks
+**Setup Tasks**
 
 * [Activate Liferay](#activate-liferay) (Subscription Required)
 * [Configure Your Instance](#configure-your-instance)
@@ -62,7 +63,7 @@ Configure your instance's locale and time zone. See [Initial Instance Localizati
 
 ## Configure Mail
 
-[Set up a mail server](./setting-up-liferay/configuring-mail/connecting-to-a-mail-server.md) to communicate with Users. Then configure your [email settings](../system-administration/configuring-liferay/virtual-instances/email-settings.md), including your email sender and message templates for email verifications, password resets, and password changes.
+[Set up a mail server](./setting-up-liferay/configuring-mail.md) to communicate with Users. Then configure your [email settings](../system-administration/configuring-liferay/virtual-instances/email-settings.md), including your email sender and message templates for email verifications, password resets, and password changes.
 
 ## Configure Users
 
@@ -78,7 +79,7 @@ Visit [Users](../system-administration/configuring-liferay/virtual-instances/use
 
 ## Configure File Storage
 
-Using [Documents and Media](../content-authoring-and-management/documents-and-media/documents-and-media-overview.md), file attachments, and embedding images in content requires file storage. Visit [File Storage](../system-administration/file-storage/configuring-file-storage.md) to configure it.
+Using [Documents and Media](../content-authoring-and-management/documents-and-media/documents-and-media-overview.md), file attachments, and embedding images in content requires file storage. Visit [File Storage](../system-administration/file-storage.md) to configure it.
 
 After setting up file storage, consider enabling antivirus file scanning. See [Enabling Antivirus Scanning for Uploaded Files](../system-administration/file-storage/enabling-antivirus-scanning-for-uploaded-files.md) to learn how.
 
@@ -88,7 +89,7 @@ Empower Users to search your site. Search engines such as Liferay Enterprise Sea
 
 ## Secure Liferay
 
-It's really important to secure Liferay too. Go to [Securing Liferay](./securing-liferay/securing-liferay.md) to learn more.
+It's really important to secure Liferay too. Go to [Securing Liferay](./securing-liferay.md) to learn more.
 
 ## Configure Backups
 

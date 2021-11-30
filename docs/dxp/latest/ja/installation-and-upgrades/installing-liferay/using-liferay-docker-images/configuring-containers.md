@@ -50,7 +50,7 @@ JVMオプションを設定する別の方法には、Tomcatの `setenv.sh` ス�
     docker cp tmp-dxp:/opt/liferay/tomcat/bin/setenv.sh .
     ```
 
-3.  [コンテナを停止します](./docker-container-basics.md#stopping-a-container)。
+3.  [コンテナを停止します](../using-liferay-docker-images.md#stopping-a-container)。
 
 4.  `setenv.sh` のコピーで JVM オプションを設定します。
 
@@ -74,7 +74,7 @@ JVMオプションを設定する別の方法には、Tomcatの `setenv.sh` ス�
 ```
 
 ```{note}
-Liferayコンテナの起動と動作に関する詳細は、 [Docker Container Basics](./docker-container-basics.md) を参照してください。
+Liferayコンテナの起動と動作に関する詳細は、 [Using Liferay Docker Images](../using-liferay-docker-images.md) を参照してください。
 ```
 
 ## ポータルプロパティ
@@ -105,7 +105,7 @@ Liferayコンテナの起動と動作に関する詳細は、 [Docker Container 
     ```
 
     ```{note}
-    コンテナの起動と動作に関する詳細は、 [Docker Container Basics](./docker-container-basics.md) を参照してください。
+      コンテナの起動と動作に関する詳細は、 [Using Liferay Docker Images](../using-liferay-docker-images.md) を参照してください。
     ```
 
 プロパティは、コントロールパネルの *[設定]* → *[サーバー管理]* → *[プロパティ]* → *[ポータルプロパティ]* で表示されます。
@@ -276,7 +276,7 @@ LiferayコンテナのJVMオプション、ポータルプロパティ、イメ�
 
 ## 追加情報
 
-  - [Docker Container Basics](./docker-container-basics.md)
+  - [Using Liferay Docker Images](../using-liferay-docker-images.md)
   - [コンテナのライフサイクルとAPI](./container-lifecycle-and-api.md)
   - [コンテナへのファイルの提供](./providing-files-to-the-container.md)
   - [Installing Apps and Other Artifacts to Containers](./installing-apps-and-other-artifacts-to-containers.md)

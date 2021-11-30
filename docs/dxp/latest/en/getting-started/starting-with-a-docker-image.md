@@ -54,4 +54,4 @@ Continue our Getting Started walkthrough and learn about logging in for the firs
 
 Doing more than just checking things out? See the [Installing a Liferay-Tomcat Bundle](../installation-and-upgrades/installing-liferay/installing-a-liferay-tomcat-bundle.md) to learn more.
 
-Learn more about [using Docker images](../installation-and-upgrades/installing-liferay/using-liferay-docker-images/docker-container-basics.md).
+Learn more about [using Docker images](../installation-and-upgrades/installing-liferay/using-liferay-docker-images.md).

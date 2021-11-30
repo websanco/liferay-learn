@@ -67,7 +67,7 @@ If you want to use DXP's `system.properties` file and you want to extend/overrid
 
 1. Start the application server.
 
-1. Deploy the DXP web application. For more information, please see the instructions for [installing on your application server](../installing-liferay/installing_liferay_on_an_application_server.html).
+1. Deploy the DXP web application. For more information, please see the instructions for [installing on your application server](../installing-liferay/installing-liferay-on-an-application-server.md).
 
 Liferay DXP handles system properties in a flexible way, leaving you free to configure your system as best suits you.
 

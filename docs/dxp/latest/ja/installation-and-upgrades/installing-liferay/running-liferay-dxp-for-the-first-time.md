@@ -74,7 +74,7 @@ DXPは、セットアップウィザードで指定したデータベースと�
 
 ## 次のステップ
 
-[管理者ユーザーとしてサインイン](../../getting-started/introduction-to-the-admin-account.md)して、[DXPでソリューションの構築](../../building-solutions-on-dxp/README.rst)を開始できます。 または、[Liferay DXPのその他のセットアップ](../setting_up_liferay.rst)トピックを参照できます。
+[管理者ユーザーとしてサインイン](../../getting-started/introduction-to-the-admin-account.md)して、[DXPでソリューションの構築](../../building-solutions-on-dxp/README.rst)を開始できます。 または、[Liferay DXPのその他のセットアップ](../setting-up-liferay.md)トピックを参照できます。
 
   - [Introduction to Managing Apps](../../system-administration/installing-and-managing-apps/introduction-to-managing-apps.md)
   - [Introduction to Managing Apps](../../system-administration/installing-and-managing-apps/getting-started/installing-and-managing-apps.md)

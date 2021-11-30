@@ -1,6 +1,6 @@
 # Alternative Email Configuration Methods
 
-There are several methods of configuring Liferay DXP to connect to a mail server. The simplest way to get started is to [configure mail using through the Server Administration UI](./connecting-to-a-mail-server.md). This article covers alternative methods for configuring mail; Using Portal Properties or using an application server's mail session.
+There are several methods of configuring Liferay DXP to connect to a mail server. The simplest way to get started is to [configure mail using through the Server Administration UI](../configuring-mail.md). This article covers alternative methods for configuring mail; Using Portal Properties or using an application server's mail session.
 
 ## Configuring the Built-in Mail Session Using Portal Properties
 

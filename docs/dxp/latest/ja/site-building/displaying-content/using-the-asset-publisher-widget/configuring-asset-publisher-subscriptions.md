@@ -59,4 +59,4 @@ RSSフィードはLiferay Portal 7.2以降では廃止予定であり、デフ�
 
 ## 関連情報
 
-  - [Setting up Email](../../../installation-and-upgrades/setting-up-liferay/configuring-mail/connecting-to-a-mail-server.md)
+  - [Setting up Email](../../../installation-and-upgrades/setting-up-liferay/configuring-mail.md)

@@ -48,7 +48,7 @@ Another method of configuring JVM options involves overriding Tomcat's `setenv.s
     docker cp tmp-dxp:/opt/liferay/tomcat/bin/setenv.sh .
     ```
 
-1. [Stop the container](./docker-container-basics.md#stopping-a-container).
+1. [Stop the container](../using-liferay-docker-images.md#stopping-a-container).
 
 1. Set the JVM options in your copy of `setenv.sh`.
 
@@ -72,7 +72,7 @@ Please see [Providing Files to the Container](./providing-files-to-the-container
 ```
 
 ```{note}
-See [Docker Container Basics](./docker-container-basics.md) for details on starting and operating Liferay containers.
+See [Using Liferay Docker Images](../using-liferay-docker-images.md) for details on starting and operating Liferay containers.
 ```
 
 ## Portal Properties
@@ -109,7 +109,7 @@ There's an *Env* variable for each [Portal Property](../../reference/portal-prop
     ```
 
     ```{note}
-    See [Docker Container Basics](./docker-container-basics.md) for details on starting and operating the containers.
+    See [Using Liferay Docker Images](../using-liferay-docker-images.md) for details on starting and operating the containers.
     ```
 
 The properties are visible in the Control Panel at _Configuration_ &rarr; _Server Administration_ &rarr; _Properties_ &rarr; _Portal Properties_.
@@ -286,7 +286,7 @@ Now you know how to configure a Liferay container's JVM options, Portal Properti
 
 ## Additional Information
 
-* [Docker Container Basics](./docker-container-basics.md)
+* [Using Liferay Docker Images](../using-liferay-docker-images.md)
 * [Container Lifecycle and API](./container-lifecycle-and-api.md)
 * [Providing Files to the Container](./providing-files-to-the-container.md)
 * [Installing Apps and Other Artifacts to Containers](./installing-apps-and-other-artifacts-to-containers.md)

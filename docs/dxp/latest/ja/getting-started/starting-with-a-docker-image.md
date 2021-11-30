@@ -54,4 +54,4 @@ Liferay DXPは、世界中で使用されている商用サポート済みのエ
 
 状況をチェックする以上のことをしますか？ 詳細については、[Installing a Liferay DXP Tomcat Bundle](../installation-and-upgrades/installing-liferay/installing-a-liferay-tomcat-bundle.md)を参照してください。
 
-Liferay DXPで構築できるものについて詳しく知りたいですか？ [Build Solutions on DXP](../installation-and-upgrades/installing-liferay/using-liferay-docker-images/docker-container-basics.md)を参照してください。
+Liferay DXPで構築できるものについて詳しく知りたいですか？ [Build Solutions on DXP](../installation-and-upgrades/installing-liferay/using-liferay-docker-images.md)を参照してください。

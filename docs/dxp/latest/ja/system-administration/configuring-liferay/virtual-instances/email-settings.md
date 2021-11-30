@@ -12,7 +12,7 @@
 | パスワードリセットの通知 | パスワードのリセットリクエストを受け取ったときにユーザーに通知              |
 
 ```{note}
-Your installation must have a [configured connection to a mail server](../../../installation-and-upgrades/setting-up-liferay/configuring-mail/connecting-to-a-mail-server.md) in order to send email notifications.
+Your installation must have a [configured connection to a mail server](../../../installation-and-upgrades/setting-up-liferay/configuring-mail.md) in order to send email notifications.
 ```
 
 ## アカウント作成通知

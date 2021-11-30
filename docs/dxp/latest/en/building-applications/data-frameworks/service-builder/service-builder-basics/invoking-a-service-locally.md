@@ -10,7 +10,7 @@ Here you'll invoke a Service Builder service from a [portlet](../../../developin
 
 ## Call a Service from a Portlet
 
-1. Start a [Liferay Docker container](../../../installation-and-upgrades/installing-liferay/using-liferay-docker-images/docker-container-basics.md).
+1. Start a [Liferay Docker container](../../../../installation-and-upgrades/installing-liferay/using-liferay-docker-images.md).
 
    ```bash
    docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_DXP_DOCKER_IMAGE$]

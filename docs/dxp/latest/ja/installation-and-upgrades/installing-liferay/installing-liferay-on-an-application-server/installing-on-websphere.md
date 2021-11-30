@@ -243,7 +243,7 @@ Liferayは、デモ目的でデフォルトでHSQLを使用しています。 HS
 
 ## メール設定
 
-DXPの組み込みメールセッションを使用する場合は、このセクションをスキップしてください。 DXPの組み込みメールセッションの使用方法については、[Configuring Mail](../../setting-up-liferay/configuring-mail/connecting-to-a-mail-server.md)の記事をご覧ください。
+DXPの組み込みメールセッションを使用する場合は、このセクションをスキップしてください。 DXPの組み込みメールセッションの使用方法については、[Configuring Mail](../../setting-up-liferay/configuring-mail.md)の記事をご覧ください。
 
 WebSphereを使用してメールセッションを管理する場合は、次の手順に従います。
 

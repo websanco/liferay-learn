@@ -269,7 +269,7 @@ Liferay DXPは、DXPに組み込まれているデータソースを使用する
 
 ## メール設定
 
-メールを設定する最も簡単な方法は、DXPに[組み込みのメールセッション](../../setting-up-liferay/configuring-mail/connecting-to-a-mail-server.md)を使用することです。 組み込みのメールセッションを使用する場合は、このセクションをスキップできます。
+メールを設定する最も簡単な方法は、DXPに[組み込みのメールセッション](../../setting-up-liferay/configuring-mail.md)を使用することです。 組み込みのメールセッションを使用する場合は、このセクションをスキップできます。
 
 Tomcatを使用してメールセッションを管理する場合は、次の手順に従います。
 
@@ -317,7 +317,7 @@ DXPはTomcatで実行されています。
 
 ## 次のステップ
 
-[管理者ユーザーとしてサインイン](../../../getting-started/introduction-to-the-admin-account.md)して、[DXPでソリューションの構築](../../../building-solutions-on-dxp/README.rst)を開始できます。 または、[Liferay DXPのその他のセットアップ](../../setting_up_liferay.rst)トピックを参照できます。
+[管理者ユーザーとしてサインイン](../../../getting-started/introduction-to-the-admin-account.md)して、[DXPでソリューションの構築](../../../building-solutions-on-dxp/README.rst)を開始できます。 または、[Liferay DXPのその他のセットアップ](../../setting-up-liferay.md)トピックを参照できます。
 
   - [Installing the Marketplace Plugin](../../../system-administration/installing-and-managing-apps/getting-started/using-marketplace.md#appendix-installing-the-marketplace-plugin)
   - [試用期間中のプラグインへのアクセス](../../../system-administration/installing-and-managing-apps/installing-apps/accessing-ee-plugins-during-a-trial-period.md)

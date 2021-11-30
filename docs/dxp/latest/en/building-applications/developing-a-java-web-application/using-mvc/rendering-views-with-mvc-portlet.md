@@ -12,7 +12,7 @@ The example portlet has two views: *View 1* displays its name and a link to *Vie
 
 Here's how to deploy the example portlet and navigate between its views. For learning purposes, the portlet logs the `mvcPath` parameter value.
 
-1. Start a [Liferay Docker container](../../../installation-and-upgrades/installing-liferay/using-liferay-docker-images/docker-container-basics.md).
+1. Start a [Liferay Docker container](../../../installation-and-upgrades/installing-liferay/using-liferay-docker-images.md).
 
    ```bash
    docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]

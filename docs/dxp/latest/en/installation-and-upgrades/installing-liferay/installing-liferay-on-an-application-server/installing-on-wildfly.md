@@ -312,7 +312,7 @@ The data source is now configured and ready to go.
 
 ## Connect to a Mail Server
 
-As with database configuration, the easiest way to configure mail is to let DXP handle the mail session. If you want to use DXP's built-in mail session, skip this section and [configure the mail session](../../setting-up-liferay/configuring-mail/connecting-to-a-mail-server.md) in the Control Panel.
+As with database configuration, the easiest way to configure mail is to let DXP handle the mail session. If you want to use DXP's built-in mail session, skip this section and [configure the mail session](../../setting-up-liferay/configuring-mail.md) in the Control Panel.
 
 If you want to manage your mail session with WildFly, follow these steps:
 

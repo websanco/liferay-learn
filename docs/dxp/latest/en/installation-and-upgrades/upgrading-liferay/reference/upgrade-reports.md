@@ -32,7 +32,7 @@ The [Database Upgrade Tool](../upgrade-basics/using-the-database-upgrade-tool.md
 
 ## Additional Information
 
-* [Upgrade Overview](../upgrade-basics/upgrade-overview.md)
+* [Upgrade Overview](../upgrade-basics.md)
 
 * [Running the Database Upgrade Tool](../upgrade-basics/using-the-database-upgrade-tool.md)
 

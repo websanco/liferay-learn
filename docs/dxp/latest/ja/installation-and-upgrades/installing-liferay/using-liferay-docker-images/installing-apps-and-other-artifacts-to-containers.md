@@ -57,7 +57,7 @@ docker cp ~/my-apps/some-app.lpkg [container]:/opt/liferay/deploy
 
 ## 追加情報
 
-  - [Docker Container Basics](./docker-container-basics.md)
+  - [Using Liferay Docker Images](../using-liferay-docker-images.md)
   - [コンテナへのファイルの提供](./providing-files-to-the-container.md)
   - [コンテナのライフサイクルとAPI](./container-lifecycle-and-api.md)
   - [Configuring Containers](./configuring-containers.md)

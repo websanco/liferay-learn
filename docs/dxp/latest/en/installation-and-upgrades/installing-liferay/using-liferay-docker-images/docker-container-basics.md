@@ -1,4 +1,4 @@
-# Docker Container Basics
+# Using Liferay Docker Images
 
 Docker Hub hosts [Liferay DXP](https://hub.docker.com/r/liferay/dxp) and [Liferay Portal Community Edition (CE)](https://hub.docker.com/r/liferay/portal) Docker images, bundled with Tomcat on Linux. The Liferay Docker Hub pages provide image details and tags for the different releases.
 
@@ -36,7 +36,7 @@ The containers listens on port `8080` and starts like all Docker containers.
 
 1. Open the Liferay UI in your browser at `https://localhost:8080`.
 
-    ![Hre is Liferay's landing page.](./docker-container-basics/images/01.png)
+    ![Hre is Liferay's landing page.](./using-liferay-docker-images/images/01.png)
 
 Liferay is ready to use.
 

@@ -8,7 +8,7 @@ You'll deploy an example portlet that uses MVC Action Commands and then examine 
 
 The example portlet's two actions log messages that indicate the MVC Action Command class and method being invoked. Here's how to deploy the portlet and trigger its actions.
 
-1. Start a [Liferay Docker container](../../../installation-and-upgrades/installing-liferay/using-liferay-docker-images/docker-container-basics.md).
+1. Start a [Liferay Docker container](../../../installation-and-upgrades/installing-liferay/using-liferay-docker-images.md).
 
    ```bash
    docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]

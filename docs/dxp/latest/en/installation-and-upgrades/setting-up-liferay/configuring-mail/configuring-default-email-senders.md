@@ -57,6 +57,6 @@ Email xxx will be ignored because it is included in mail.send.blacklist
 ```
 ## Additional Information
 
-* [Connecting to a Mail Server](./connecting-to-a-mail-server.md)
+* [Configuring Mail](../configuring-mail.md)
 * [Alternative Email Configuration Methods](./alternative-email-configuration-methods.md)
 * [Portal Properties](../../reference/portal-properties.md)

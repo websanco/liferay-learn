@@ -348,4 +348,4 @@ Liferayでは、内部UIの大部分をReactに移行することを開始して
 
 ### アップグレードの向上
 
-[アップグレードプロセス](../installation-and-upgrades/upgrading-liferay/upgrade-basics/upgrade-overview.md)の信頼性が大幅に向上しました。 アップグレードプロセスは、コアとモジュール間で統一されています。 自動アップグレードの動作は、新しいポータルプロパティ`upgrade.database.auto.run`で制御できます。
+[アップグレードプロセス](../installation-and-upgrades/upgrading-liferay/upgrade-basics.md)の信頼性が大幅に向上しました。 アップグレードプロセスは、コアとモジュール間で統一されています。 自動アップグレードの動作は、新しいポータルプロパティ`upgrade.database.auto.run`で制御できます。

@@ -95,4 +95,4 @@ Liferayは、論理パーティション機能（仮想インスタンスとも�
 
 これらのすべての手順を完了すると、DXPのアップグレードとともに、シャード化された環境から別のLiferay DXPサーバー上の仮想インスタンスに移行されます。
 
-アップグレードを完了するためのガイダンスについては、[Upgrade Overview](../upgrade-basics/upgrade-overview.md)を参照してください。
+アップグレードを完了するためのガイダンスについては、[Upgrade Overview](../upgrade-basics.md)を参照してください。

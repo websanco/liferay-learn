@@ -8,7 +8,7 @@ There are three steps in this migration:
 1. Migrate custom rules and display properties.
 1. Migrate behavior-based features.
 
-First, upgrade to the latest version of Liferay DXP following the [upgrade guide](../../../installation-and-upgrades/upgrading-liferay/upgrade-basics/upgrade-overview.md). Most of your Audience Targeting configuration is automatically transferred into Liferay Segmentation during the upgrade.
+First, upgrade to the latest version of Liferay DXP following the [upgrade guide](../../../installation-and-upgrades/upgrading-liferay/upgrade-basics.md). Most of your Audience Targeting configuration is automatically transferred into Liferay Segmentation during the upgrade.
 
 Next, migrate the Audience Targeting custom rules considering the following information:
 

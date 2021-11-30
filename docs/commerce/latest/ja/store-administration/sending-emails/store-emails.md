@@ -3,7 +3,7 @@
 Liferay Commerceは、さまざまな店舗イベントによってトリガーされるメール通知を送信するように構成できます。 テンプレートはカスタマイズ可能で、メールの内容を定義します。 単一のイベントを設定して、さまざまな対象者（顧客、販売代理店、管理者）にメールを送信し、各当事者に固有のテンプレートを使用できます。
 
 ```{note}
-Liferay Commerceの通知機能を使用するには、最初にLiferay Digital Experience Platform（DXP）のメール設定を構成します。 詳細については、 [メールサーバーへの接続](https://learn.liferay.com/dxp/7.x/en/installation-and-upgrades/setting-up-liferay/configuring-mail/connecting-to-a-mail-server.html) を参照してください。
+Liferay Commerceの通知機能を使用するには、最初にLiferay Digital Experience Platform（DXP）のメール設定を構成します。 詳細については、 [メールサーバーへの接続](https://learn.liferay.com/dxp/7.x/en/installation-and-upgrades/setting-up-liferay/configuring-mail.html) を参照してください。
 ```
 
 ## ストアメール通知の構成

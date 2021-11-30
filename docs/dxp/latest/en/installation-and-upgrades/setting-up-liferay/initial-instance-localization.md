@@ -30,7 +30,7 @@ The [Setup Wizard](../installing-liferay/running-liferay-for-the-first-time.md) 
 
 ![Use the Setup Wizard to set the DXP instance's default language and time zone](./initial-instance-localization/images/01.png)
 
-The Setup Wizard is enabled by default for [Liferay-Tomcat Bundles](../installing-liferay/installing-a-liferay-tomcat-bundle.md) and [application server installations](../installing-liferay/installing_liferay_on_an_application_server.html).
+The Setup Wizard is enabled by default for [Liferay-Tomcat Bundles](../installing-liferay/installing-a-liferay-tomcat-bundle.md) and [application server installations](../installing-liferay/installing-liferay-on-an-application-server.md).
 
 If you have already launched DXP, change the instance's default language and time zone in the Control Panel.
 
@@ -40,7 +40,7 @@ A virtual instance's default language and time zone can be modified using the in
 
 ## Conclusion
 
-You have configured your DXP instance's default language and time zone. If want to explore more information on localizing DXP, including how to facilitate choosing locales, please see [Site Localization](../../site-building/site-settings/configuring_site_languages.html).
+You have configured your DXP instance's default language and time zone. If want to explore more information on localizing DXP, including how to facilitate choosing locales, please see [Site Localization](../../site-building/site-settings/site-localization.md).
 
 ## Additional Information
 

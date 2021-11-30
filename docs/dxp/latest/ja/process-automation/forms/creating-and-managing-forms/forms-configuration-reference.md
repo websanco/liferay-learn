@@ -31,7 +31,7 @@
 
 ### メール通知設定
 
-ここでは、フォームエントリーが送信されるたびに通知メールを送信するようにフォームアプリを設定できます。 まずはメールサーバーを設定する必要があります。詳しくは[Connecting to a Mail Server](../../../installation-and-upgrades/setting-up-liferay/configuring-mail/connecting-to-a-mail-server.md)を参照してください。
+ここでは、フォームエントリーが送信されるたびに通知メールを送信するようにフォームアプリを設定できます。 まずはメールサーバーを設定する必要があります。詳しくは[Configuring Mail](../../../installation-and-upgrades/setting-up-liferay/configuring-mail.md)を参照してください。
 
 ![フォームに通知機能を追加することができます。](./forms-configuration-reference/images/03.png)
 

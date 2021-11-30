@@ -4,7 +4,7 @@ Liferay DXP/Portal implements headings, labels, and messages for the default loc
 
 ## Examining the Global Language Keys
 
-The global language keys are in the source code and the [DXP/Portal bundle](../../installation-and-upgrades/installing-liferay/hosting-liferay.md).
+The global language keys are in the source code and the [DXP/Portal bundle](../../installation-and-upgrades/installing-liferay.md).
 
 In the source:
 

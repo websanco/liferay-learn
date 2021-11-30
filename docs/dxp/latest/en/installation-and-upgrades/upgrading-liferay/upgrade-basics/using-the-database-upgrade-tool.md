@@ -7,10 +7,10 @@ The Liferay Database Upgrade Tool is a client program for upgrading Liferay DXP 
 ```
 
 ```{important}
-If you're upgrading from 6.2 or earlier, update your file store configuration. See the [Updating the File Store](../configuration-and-infrastructure/updating-the-file-store.md) for more information.
+If you're upgrading from 6.2 or earlier, update your file store configuration. See the [Updating the File Store](../reference/file-store-updates.md) for more information.
 ```
 
-Modifying a database while it's detached from your Liferay instance allows you to [tune the database for upgrade operations](../upgrade-stability-and-performance/database-tuning-for-upgrades.md), [prune unnecessary data](../upgrade-stability-and-performance/database-tuning-for-upgrades.md) (e.g., unneeded versions of Web Content, Documents, and more) to improve upgrade performance, and resolve upgrade issues. These activities are especially important for upgrading DXP and any large, critical Portal environments safely and as quickly as possible. After you've accounted for tuning and pruning the database and completing relevant tasks described in the [Upgrade Overview](./upgrade-overview.md), you're ready to setup up the new installation and upgrade the database using the upgrade tool.
+Modifying a database while it's detached from your Liferay instance allows you to [tune the database for upgrade operations](../upgrade-stability-and-performance/database-tuning-for-upgrades.md), [prune unnecessary data](../upgrade-stability-and-performance/database-tuning-for-upgrades.md) (e.g., unneeded versions of Web Content, Documents, and more) to improve upgrade performance, and resolve upgrade issues. These activities are especially important for upgrading DXP and any large, critical Portal environments safely and as quickly as possible. After you've accounted for tuning and pruning the database and completing relevant tasks described in the [Upgrade Overview](../upgrade-basics.md), you're ready to setup up the new installation and upgrade the database using the upgrade tool.
 
 If you're [upgrading to a new Liferay Docker image](../../installing-liferay/using-liferay-docker-images/upgrading-to-a-new-docker-image.md) and want to use the upgrade tool, use it from a [Liferay Tomcat Bundle](../../installing-liferay/installing-a-liferay-tomcat-bundle.md) of the new Liferay version. The tool is in the bundle's `tools/portal-tools-db-upgrade-client` folder.
 
@@ -61,7 +61,7 @@ If you installed the new Liferay release on an application server, create a `[Li
 
 1. Copy your DXP activation key (Subscription) and your OSGi configuration files from your [backup](../../maintaining-a-liferay-installation/backing-up.md#liferay-home) to the new installation.
 
-1. Use your database vendor's recommended JDBC database driver. If you're using MySQL, for example, set `jdbc.default.driverClassName=com.mysql.cj.jdbc.Driver` in your [`portal-ext.properties`](../../reference/portal-properties.md) file and replace the MySQL JDBC driver JAR your app server uses. See [Database Drivers](../configuration-and-infrastructure/migrating-configurations-and-properties.md#database-drivers) for more details.
+1. Use your database vendor's recommended JDBC database driver. If you're using MySQL, for example, set `jdbc.default.driverClassName=com.mysql.cj.jdbc.Driver` in your [`portal-ext.properties`](../../reference/portal-properties.md) file and replace the MySQL JDBC driver JAR your app server uses. See [Database Drivers](../migrating-configurations-and-properties.md#database-drivers) for more details.
 
     You can configure the upgrade by answering the upgrade tool prompts or by [using upgrade properties files](../reference/database-upgrade-tool-reference.md#manual-configuration). 
 
@@ -147,7 +147,7 @@ Now that the database upgrade is complete, test it.
     * Application server files: Modified scripts and configuration files.
     * `web.xml`: Portal web application descriptor.
 
-1. [Update the Portal properties](../configuration-and-infrastructure/migrating-configurations-and-properties.md#migrating-portal-properties) in your new installation.
+1. [Update the Portal properties](../migrating-configurations-and-properties.md#migrating-portal-properties) in your new installation.
 
 1. Start your server and validate Liferay with its upgraded database.
 
@@ -161,4 +161,4 @@ If you run into issues, check the [upgrade report](../reference/upgrade-reports.
 
 ## Next Steps
 
-Revisit the [Upgrade Overview](./upgrade-overview.md) to see what's left to upgrade.
+Revisit the [Upgrade Overview](../upgrade-basics.md) to see what's left to upgrade.

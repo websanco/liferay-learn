@@ -22,7 +22,7 @@ Users for Accounts can only be created within this *Account Users* interface. A 
 
 ### Setting a Password for an Account User
 
-When you create an Account User, Liferay DXP generates a password for the User, using the [mail server](../../installation-and-upgrades/setting-up-liferay/configuring-mail/connecting-to-a-mail-server.md) to send an email message with the User's new password.
+When you create an Account User, Liferay DXP generates a password for the User, using the [mail server](../../installation-and-upgrades/setting-up-liferay/configuring-mail.md) to send an email message with the User's new password.
 
 If you haven't set up a mail server, set a password manually for the User.
 
