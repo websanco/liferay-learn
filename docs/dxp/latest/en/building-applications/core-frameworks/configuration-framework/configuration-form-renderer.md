@@ -48,7 +48,7 @@ When you [create a configuration interface](./setting-and-accessing-configuratio
 
 ## Create the Configuration Interface
 
-Define the configurable attributes in the configuration interface. The sample project has one configurable attributes: `b7r2Color`.
+Define the configurable attributes in the configuration interface. The sample project has one configurable attribute: `b7r2Color`.
 
 ```{literalinclude} ./configuration-form-renderer/resources/liferay-b7r2.zip/b7r2-web/src/main/java/com/acme/b7r2/web/internal/configuration/B7R2WebConfiguration.java
 :language: java
@@ -59,7 +59,7 @@ Note that when using `ConfigurationFormRenderer`, the `generateUI` annotation is
 
 ## Add the Configuration Bean Declaration
 
-Register the configuration class with a `ConfigurationBeanDeclaration`. This enables the system to keep track of configuration changes as they happen.
+Register the configuration class with a `ConfigurationBeanDeclaration` class. This enables the system to keep track of configuration changes as they happen.
 
 ```{literalinclude} ./configuration-form-renderer/resources/liferay-b7r2.zip/b7r2-web/src/main/java/com/acme/b7r2/web/internal/settings/definition/B7R2WebConfigurationBeanDeclaration.java
 :language: java
@@ -68,7 +68,7 @@ Register the configuration class with a `ConfigurationBeanDeclaration`. This ena
 
 ## Implement the Configuration Form Renderer
 
-1. Declare the class as an implementation of `ConfigurationFormRenderer` with the `@Component` annotation.
+1. Create an implementation of `ConfigurationFormRenderer`. In the `@Component` annotation, declare the service as a `ConfigurationScreen.class`.
 
    ```java
    @Component(service = ConfigurationScreen.class)
@@ -82,7 +82,7 @@ Register the configuration class with a `ConfigurationBeanDeclaration`. This ena
    :lines: 26-29
    ```
 
-1. Override the `getRequestParameters()` method. In the method, read the parameters sent by the custom UI and put them in a map whose keys should match the fields found in the configuration interface.
+1. Override the `getRequestParameters()` method. In the method, read the parameters sent by the custom UI and put them in a map where the keys match the fields found in the configuration interface.
 
    ```{literalinclude} ./configuration-form-renderer/resources/liferay-b7r2.zip/b7r2-web/src/main/java/com/acme/b7r2/web/internal/configuration/admin/display/B7R2ConfigurationFormRenderer.java
    :dedent: 1
@@ -90,7 +90,7 @@ Register the configuration class with a `ConfigurationBeanDeclaration`. This ena
    :lines: 31-42
    ```
 
-1. Override the `render()` method. In the example, `ConfigurationProvider` is used to access the configuration object. The servlet context provides access to the request dispatcher, which allows the custom JSP to read the configuration.
+1. Override the `render()` method. In the example, `ConfigurationProvider` accesses the configuration object. The servlet context provides access to the request dispatcher, which allows the custom JSP to read the configuration.
 
 1. Make sure to use the `@Reference` annotation to define the module's symbolic name.
 
@@ -102,7 +102,7 @@ Register the configuration class with a `ConfigurationBeanDeclaration`. This ena
 
 ## Add the Web-ContextPath
 
-Specify your bundle's `Web-ContextPath` in the `bnd.bnd` file. For example, the sample project has `Web-ContextPath: /b7r2-web` in the Bnd file. This is what registers the `ServletContext` object in the configuration form renderer file. Note that a servlet context is created automatically for portlets, but since this sample doesn't have a portlet, you must add this line to the Bnd file.
+Specify your bundle's `Web-ContextPath` in the `bnd.bnd` file. For example, the sample project has `Web-ContextPath: /b7r2-web` in the Bnd file. This is what registers the `ServletContext` object in the configuration form renderer file. Note that a servlet context is created automatically for portlets, but since this sample doesn't have a portlet, you must add a servlet context to the `bnd.bnd` file.
 
 ## Create a Custom JSP
 
@@ -120,7 +120,7 @@ Specify your bundle's `Web-ContextPath` in the `bnd.bnd` file. For example, the 
    %>
    ```
 
-1. Use a `<aui:input>` tag to read any new configuration inputs a user submits on the JSP file.
+1. Use an `<aui:input>` tag to read any new configuration inputs a user submits on the JSP file.
 
    ```jsp
    <aui:input name="b7r2Color" value="<%= b7r2WebConfiguration.b7r2Color() %>" />
