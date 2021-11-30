@@ -2,24 +2,24 @@
 
 Many of Liferay's assets and resources can be extended with custom fields. Adding custom fields can give you greater control and flexibility over your Site. Here are all the different places custom fields can be used:
 
-* Blogs Entry
-* Calendar Event
-* Document
-* Documents Folder
-* Knowledge Base Article
-* Knowledge Base Folder
-* Message Boards Category
-* Message Boards Message
-* Organization
-* Page
-* Role
-* Site
-* Site Navigation Menu Item
-* User
-* User Group
-* Web Content Article
-* Web Content Folder
-* Wiki Page
+- Blogs Entry
+- Calendar Event
+- Document
+- Documents Folder
+- Knowledge Base Article
+- Knowledge Base Folder
+- Message Boards Category
+- Message Boards Message
+- Organization
+- Page
+- Role
+- Site
+- Site Navigation Menu Item
+- User
+- User Group
+- Web Content Article
+- Web Content Folder
+- Wiki Page
 
 There are many reasons for using custom fields. Here's one example. 
 
@@ -61,7 +61,9 @@ Follow these steps to see how a custom field can be created for the example use 
 
     Click the *Save* button to save your changes.
 
-    **Note**: The Field Name is the identifier stored in your database and the name that is used by the developer to access the custom field. 
+    ```{note} 
+    The Field Name is the identifier stored in your database and the name that is used by the developer to access the custom field.
+    ``` 
 
 Once you have created a custom field, you can find it in the UI of the resource you created it for. Navigate to the resource, and the custom field is displayed in the UI.
 
@@ -93,4 +95,4 @@ The configuration options you have will also depend on the field type you choose
 
 ## Additional Information
 
-* [Adding Custom Fields for Users](../../users-and-permissions/users/adding-custom-fields-to-users.md)
+- [Adding Custom Fields for Users](../../users-and-permissions/users/adding-custom-fields-to-users.md)

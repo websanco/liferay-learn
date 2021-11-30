@@ -14,7 +14,7 @@ You can use either of the following methods to install a new app to your instanc
 - [Install via the File System](#installing-apps-via-the-file-system)
 - [Installing Apps via the UI](#installing-apps-via-the-ui)
 
-```important::
+```{important}
    Installing an app to your instance requires a server restart. Test new apps in a sandbox environment, and then if necessary, plan the installation in advance for other servers.
 ```
 
@@ -22,11 +22,11 @@ You can use either of the following methods to install a new app to your instanc
 
 Follow these steps to install an app via the file system with a server restart:
 
-1. [Stop your DXP server](../../../installation-and-upgrades/installing-liferay/running-liferay-for-the-first-time.md#shutdown).
+1. [Stop your DXP server](../../installation-and-upgrades/installing-liferay/running-liferay-for-the-first-time.md#shutdown).
 
-1. Copy your app file (LPKG, module JAR, or plugin WAR) to your `[Liferay Home]/deploy` folder. The [Liferay Home](../../../installation-and-upgrades/reference/liferay-home.md) folder is typically the app server's parent folder. DXP deploys apps from the `[Liferay Home]/deploy` folder.
+1. Copy your app file (LPKG, module JAR, or plugin WAR) to your `[Liferay Home]/deploy` folder. The [Liferay Home](../../installation-and-upgrades/reference/liferay-home.md) folder is typically the app server's parent folder. DXP deploys apps from the `[Liferay Home]/deploy` folder.
 
-1. [Start your DXP server](../../../installation-and-upgrades/installing-liferay/running-liferay-for-the-first-time.md#startup).
+1. [Start your DXP server](../../installation-and-upgrades/installing-liferay/running-liferay-for-the-first-time.md#startup).
 
 The app file is copied from the `[Liferay Home]/deploy` folder to one an appropriate subfolder under `[Liferay Home]/osgi`:
 
@@ -36,8 +36,8 @@ The app file is copied from the `[Liferay Home]/deploy` folder to one an appropr
 
 DXP listens on those subfolders, processes the file (converting it to an OSGi bundle if it is a WAR or contains a WAR), and installs the OSGi bundle(s) to the OSGi container.
 
-```note::
-   Using a source control repository (such as Git or BitBucket) and an orchestration tool (such as `Jenkins <https://jenkins.io>`_) is recommended for promoting DXP environments through `DevOps <https://en.wikipedia.org/wiki/DevOps>`_ pipelines.
+```{note}
+   Using a source control repository (such as Git or BitBucket) and an orchestration tool (such as [Jenkins](https://jenkins.io)_) is recommended for promoting DXP environments through [DevOps](https://en.wikipedia.org/wiki/DevOps) pipelines.
 
    You should commit your app file to the deploy folder within your DevOps pipeline for production-grade environments.
 ```
@@ -52,7 +52,7 @@ The sections below describe the interfaces you can  use to install apps via the 
 
 The DXP Control Panel accesses the Marketplace. You browse the Marketplace the same way you would from the Marketplace website. Purchasing an app in the Control Panel downloads the app and installs it to the DXP instance automatically. See [Purchasing Apps on Liferay Marpletace](../getting-started/using-marketplace.md) for more information.
 
-``` note::
+```{note}
    If you are using the Marketplace screen to install your apps, the easiest way to uninstall them is through the Purchased Apps screen in the Control Panel.
 ```
 
@@ -64,4 +64,4 @@ The Purchased page in the Control Panel at _Apps_ &rarr; _Purchased_ lists apps 
 
 ### Application Manager
 
-In DXP's App Manager, you can upload and install Marketplace apps. See [Using the App Manager](../managing-apps/using-the-app-manager.md) for more information.
+In DXP's App Manager, you can upload and install Marketplace apps. See [Using the App Manager](./managing-apps/using-the-app-manager.md) for more information.

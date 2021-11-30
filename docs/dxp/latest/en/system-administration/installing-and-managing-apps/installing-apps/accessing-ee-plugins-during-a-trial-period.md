@@ -8,23 +8,23 @@ Here are the steps:
 
 1. Sign in with your liferay.com account.
 
-    ```important::
-       Purchasing apps requires that you have a `liferay.com <https://www.liferay.com>`_ account and agree to the Marketplace Terms of Use.
+    ```{important}
+       Purchasing apps requires that you have a [liferay.com](https://www.liferay.com) account and agree to the Marketplace Terms of Use.
     ```
 
 1. Once signed into the Store, click on the _Purchased_ link, and then click on the _EE_ tab.
 
 A list of EE plugins appears. During your trial period, you can access and use these DXP EE plugins.
 
-```note::
+```{note}
    During your trial period, plugin management for EE plugins is only available in the *Control Panel*; the *Purchased* -> *EE* tab on the Marketplace website becomes available only after you've purchased an enterprise subscription.
 ```
 
-```important::
+```{important}
    EE plugin source code is only available to you after you get an official enterprise subscription.
 ```
 
 ## Additional Information
 
-* [Installing Apps](../installing-apps.md)
-* [Renewing Apps](../managing-apps/renewing-apps.md)
+- [Installing Apps](../installing-apps.md)
+- [Renewing Apps](../managing-apps/renewing-apps.md)

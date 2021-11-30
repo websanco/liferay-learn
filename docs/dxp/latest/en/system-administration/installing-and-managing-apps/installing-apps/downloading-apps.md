@@ -18,7 +18,7 @@ Here's how to download the app from its receipt:
 
 The LPKG file downloads to your machine.
 
-```note::
+```{note}
    The receipt Liferay emails you also links to the Purchased App page.
 ```
 
@@ -54,4 +54,4 @@ The app downloads as an LPKG file. You can [install the app](../installing-apps.
 
 ## Next Steps
 
-* [Installing Apps](../installing-apps.md)
+- [Installing Apps](../installing-apps.md)

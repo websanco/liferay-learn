@@ -6,7 +6,7 @@ When you create an [AWS account](https://aws.amazon.com/s3/), Amazon assigns you
 
 S3 uses the concept of _buckets_ for file storage. In Amazon's UI, create a [bucket](https://docs.aws.amazon.com/AmazonS3/latest/user-guide/create-bucket.html) for your DXP files. Make sure to configure the bucket in a [geographical region](https://docs.aws.amazon.com/general/latest/gr/s3.html) that is as close as possible to your DXP server host.
 
-```note::
+```{note}
    No action is required to support AWS Signature Version 4 request authorization.
 ```
 
@@ -34,10 +34,10 @@ Configure the store following these steps:
 1. In the Control Panel, navigate to *Configuration* &rarr; *System Settings* &rarr; *File Storage*.
 1. In the *S3 Store* screen, configure the store:
 
-    * **Bucket Name**: Your bucket's name.
-    * **Access Key**: Your AWS access key.
-    * **Secret Key**: Your secret key.
-    * **S3 Region**: The [geographic region](https://docs.aws.amazon.com/general/latest/gr/s3.html); the default is `us-east-1`.
+    - **Bucket Name**: Your bucket's name.
+    - **Access Key**: Your AWS access key.
+    - **Secret Key**: Your secret key.
+    - **S3 Region**: The [geographic region](https://docs.aws.amazon.com/general/latest/gr/s3.html); the default is `us-east-1`.
 
     ![Amazon S3 Store Configurations](./amazon-s3-store/images/01.png)
 
@@ -46,8 +46,8 @@ Configure the store following these steps:
 
 Your DXP instance is now using the Amazon S3 store.
 
-```important::
-   Consider `enabling antivirus scanning for uploaded files <./enabling-antivirus-scanning-for-uploaded-files.md>`_.
+```{important}
+   Consider [enabling antivirus scanning for uploaded files](../enabling-antivirus-scanning-for-uploaded-files.md).
 ```
 
 ## Using the Store in a Clustered Environment
@@ -62,13 +62,15 @@ DXP is using the Amazon S3 store throughout your cluster.
 
 ## Database Rollback Limitation
 
-**Warning:** If a database transaction rollback occurs in a Document Library, the transaction's file system changes are **not** reversed. Inconsistencies between Document Library files and those in the file system store can occur and may require manual synchronization. All of the DXP stores except [DBStore](./dbstore.md) are vulnerable to this limitation.
+```{warning}
+If a database transaction rollback occurs in a Document Library, the transaction's file system changes are **not** reversed. Inconsistencies between Document Library files and those in the file system store can occur and may require manual synchronization. All of the DXP stores except [DBStore](./dbstore.md) are vulnerable to this limitation.
+```
 
 Consult the Amazon Simple Storage documentation for additional details on using Amazon's service.
 
 ## Additional Information
 
-* [Configuring File Storage](../configuring-file-storage.md)
-* [Bucket Restrictions and Limitations](https://docs.aws.amazon.com/AmazonS3/latest/dev//BucketRestrictions.html#bucketnamingrules)
-* [DBStore](./dbstore.md)
-* [File Store Migration](../file-store-migration.md)
+- [Configuring File Storage](../configuring-file-storage.md)
+- [Bucket Restrictions and Limitations](https://docs.aws.amazon.com/AmazonS3/latest/dev//BucketRestrictions.html#bucketnamingrules)
+- [DBStore](./dbstore.md)
+- [File Store Migration](../file-store-migration.md)

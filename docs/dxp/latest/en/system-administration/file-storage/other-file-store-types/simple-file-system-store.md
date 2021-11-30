@@ -22,12 +22,12 @@ Here's an explanation of the file hierarchy in the `[Liferay Home]/data/document
 
 **Note:** A document's numeric file entry name and document ID differ in these ways:
 
-* They have independent counters.
-* The numeric file entry name is used in the storage file path but the document ID is not.
-* They're stored in different `DLFileEntry` table columns. The numeric file entry name is stored in the `name` column and the document ID is stored in the `fileEntryId` column.
+- They have independent counters.
+- The numeric file entry name is used in the storage file path but the document ID is not.
+- They're stored in different `DLFileEntry` table columns. The numeric file entry name is stored in the `name` column and the document ID is stored in the `fileEntryId` column.
 
-```warning::
-   If a database transaction rollback occurs in a Document Library, the transaction's file system changes are **not** reversed. Inconsistencies between Document Library files and those in the file system store can occur and may require manual synchronization. All of the DXP stores except `DBStore <./dbstore.md>`_ are vulnerable to this limitation.
+```{warning}
+   If a database transaction rollback occurs in a Document Library, the transaction's file system changes are **not** reversed. Inconsistencies between Document Library files and those in the file system store can occur and may require manual synchronization. All of the DXP stores except [DBStore](./dbstore.md) are vulnerable to this limitation.
 ```
 
 ## Configuring the Store
@@ -51,8 +51,8 @@ If you switch from a another store type to Simple File System Store, configure [
 dl.store.impl=com.liferay.portal.store.file.system.FileSystemStore
 ```
 
-```important::
-   Consider `enabling antivirus scanning for uploaded files <./enabling-antivirus-scanning-for-uploaded-files.md>`_.
+```{important}
+   Consider [enabling antivirus scanning for uploaded files](../enabling-antivirus-scanning-for-uploaded-files.md).
 ```
 
 ## Using the Store in a Clustered Environment
@@ -61,7 +61,7 @@ In a [clustered environment](../../../installation-and-upgrades/setting-up-lifer
 
 ## Additional Information
 
-* [Configuring File Storage](../configuring-file-storage.md)
-* [Amazon S3 Store](./amazon-s3-store.md)
-* [DBStore](./dbstore.md)
-* [File Store Migration](../file-store-migration.md)
+- [Configuring File Storage](../configuring-file-storage.md)
+- [Amazon S3 Store](./amazon-s3-store.md)
+- [DBStore](./dbstore.md)
+- [File Store Migration](../file-store-migration.md)

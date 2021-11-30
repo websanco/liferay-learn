@@ -60,7 +60,7 @@ Follow these steps to use GCS as the default Store for the Liferay instance:
    dl.store.impl=com.liferay.portal.store.gcs.GCSStore
    ```
 
-   If a `portal-ext.properties` file doesn't exist, create a new one with the above value and add it to the instance's [`[LIFERAY_HOME]`](../../../installation-and-upgrades/reference/liferay-home.md) or `[USER_HOME]` folder.
+   If a `portal-ext.properties` file doesn't exist, create a new one with the above value and add it to the instance's [LIFERAY_HOME](../../../installation-and-upgrades/reference/liferay-home.md) or `[USER_HOME]` folder.
 
    This overrides the default value for `dl.store.impl` in the `portal.properties` file.
 
@@ -68,5 +68,5 @@ Follow these steps to use GCS as the default Store for the Liferay instance:
 
 ## Additional Information
 
-* [Portal Properties](../../../installation-and-upgrades/reference/portal-properties.md)
-* [Configuring File Storage](../configuring-file-storage.md)
+- [Portal Properties](../../../installation-and-upgrades/reference/portal-properties.md)
+- [Configuring File Storage](../configuring-file-storage.md)

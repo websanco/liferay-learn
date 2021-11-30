@@ -4,8 +4,8 @@ The Component Blacklist is a convenient way to manage multiple [OSGi Declarative
 
 The blacklist can be exported from the Control Panel to an OSGi configuration (`.config`) file. Modifying the file and deploying it to DXP has these additional effects:
 
-* Persists the changes across DXP server startups
-* Propagates the changes from a local cluster node to all the other nodes.
+- Persists the changes across DXP server startups
+- Propagates the changes from a local cluster node to all the other nodes.
 
 Blacklisting components using the UI and a config file is demonstrated.
 
@@ -27,7 +27,7 @@ Follow these steps to disable OSGi components:
 
 1. Add the names of any components not already listed (e.g., components of modules not yet installed) that you want to prevent from enabling.
 
-    ```important::
+    ```{important}
        Configuration values can't contain extra spaces. Extra spaces can short-circuit lists or invalidate the configuration entry.
     ```
 
@@ -43,7 +43,7 @@ To re-enable and permit enabling of blacklisted OSGi components, follow these st
 
 To enable *all* the blacklisted components, remove the configuration file.
 
-```note::
+```{note}
    To temporarily re-enable a blacklisted component, remove its name from the Component Blacklist Configuration module in System Settings and click *Update*. If you're using a component blacklist config file (in the ``[Liferay Home]/osgi/configs`` folder) and want the component to enable on subsequent server startup, make sure to remove the component's name from the file.
 ```
 
@@ -51,6 +51,6 @@ Congratulations! Now you can manage multiple components using a simple list.
 
 ## Additional Information
 
-* [Blacklisting Apps](./blacklisting-apps.md)
-* [Managing Apps](./using-the-app-manager.md)
-* [Using the Felix Gogo shell](../../../liferay-internals/fundamentals/using-the-gogo-shell.md)
+- [Blacklisting Apps](./blacklisting-apps.md)
+- [Managing Apps](./using-the-app-manager.md)
+- [Using the Felix Gogo shell](../../../liferay-internals/fundamentals/using-the-gogo-shell.md)

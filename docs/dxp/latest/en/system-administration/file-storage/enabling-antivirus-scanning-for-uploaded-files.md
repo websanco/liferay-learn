@@ -58,6 +58,6 @@ Never save a virus-infected file. Reject the file by canceling the current opera
 
 ## Additional Information
 
-* [Configuring File Storage](./configuring-file-storage.md)
-* [Configuring Liferay](../configuring_liferay.html)
-* [System Settings](../configuring-liferay/system-settings.md)
+- [Configuring File Storage](./configuring-file-storage.md)
+- [Configuring Liferay](../configuring_liferay.rst)
+- [System Settings](../configuring-liferay/system-settings.md)

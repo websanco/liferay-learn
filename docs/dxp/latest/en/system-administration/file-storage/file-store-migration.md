@@ -2,14 +2,14 @@
 
 Files can be migrated from one file store type to another. Here are some migration scenarios:
 
-* Migrating from Simple File System Store to Advanced File System Store for improved performance and scalability.
-* Migrating from Simple, Advanced, or S3 to DBStore to avoid transaction rollback vulnerabilities.
-* Migrating from DBStore to Advanced File System Store to accommodate files larger than 1 gigabyte.
+- Migrating from Simple File System Store to Advanced File System Store for improved performance and scalability.
+- Migrating from Simple, Advanced, or S3 to DBStore to avoid transaction rollback vulnerabilities.
+- Migrating from DBStore to Advanced File System Store to accommodate files larger than 1 gigabyte.
 
 The Data Migration utility in [Server Administration](../using-the-server-administration-panel.md) facilitates the migration.
 
-```warning::
-   **Always** `back up <../../installation-and-upgrades/maintaining-a-liferay-installation/backing-up.md>`_ your file store and database before migrating. Testing the migration process on backup copies is advised.
+```{warning}
+   **Always** [back up](../../installation-and-upgrades/maintaining-a-liferay-dxp-installation/backing-up.md) your file store and database before migrating. Testing the migration process on backup copies is advised.
 ```
 
 ## Migrating Files
@@ -36,12 +36,12 @@ Here are the migration steps:
 
 Your DXP instance is using the migrated files on the newly configured file store.
 
-```warning::
+```{warning}
    Make sure to save your new store configuration in System Settings. Otherwise, you can't use the new store and following exception occurs: `java.lang.IllegalStateException: Store is not available`
 ```
 
 ## Additional Information
 
-* [Configuring File Storage](./configuring-file-storage.md)
-* [Amazon S3 Store](./other-file-store-types/amazon-s3-store.md)
-* [DBStore](./other-file-store-types/dbstore.md)
+- [Configuring File Storage](./configuring-file-storage.md)
+- [Amazon S3 Store](./other-file-store-types/amazon-s3-store.md)
+- [DBStore](./other-file-store-types/dbstore.md)

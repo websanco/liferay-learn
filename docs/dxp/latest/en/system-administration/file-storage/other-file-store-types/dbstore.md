@@ -16,11 +16,11 @@ DBStore's file size limit is 1 gigabyte. To store files larger than 1 gigabyte, 
 
 DXP is now saving files to DBStore.
 
-```important::
-   Consider `enabling antivirus scanning for uploaded files <./enabling-antivirus-scanning-for-uploaded-files.md>`_.
+```{important}
+   Consider [enabling antivirus scanning for uploaded files](../enabling-antivirus-scanning-for-uploaded-files.md).
 ```
 
 ## Additional Information
 
-* [Configuring File Storage](../configuring-file-storage.md)
-* [File Store Migration](../file-store-migration.md)
+- [Configuring File Storage](../configuring-file-storage.md)
+- [File Store Migration](../file-store-migration.md)

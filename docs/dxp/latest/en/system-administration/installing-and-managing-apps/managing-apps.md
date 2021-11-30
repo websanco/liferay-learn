@@ -10,7 +10,6 @@ managing-apps/renewing-apps.md
 managing-apps/using-the-app-manager.md
 ```
 
-
 ```{raw} html
 :file:  ../../landingpage_template.html
 ```
