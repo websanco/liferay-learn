@@ -6,15 +6,15 @@ Liferay DXPにはJava JDK 8または11が必要です。 参照 [互換性マト
 
 [ヘルプセンター](https://customer.liferay.com/downloads)(サブスクリプション)または[Liferayコミュニティのダウンロード](https://www.liferay.com/downloads-community)から、これらのファイルをダウンロードしてください。 管理者は以下をダウンロードする必要があります。
 
-  - DXP WARファイル
-  - 依存関係のZIPファイル
-  - OSGi依存関係のZIPファイル
+* DXP WARファイル
+* 依存関係のZIPファイル
+* OSGi依存関係のZIPファイル
 
 次に進む前に、[*Liferay Home*](../../reference/liferay-home.md)と`$WILDFLY_HOME`の違いを理解する必要があります。
 
-  - `Liferay.home` は、WildFlyサーバーフォルダーを含むフォルダーです。 DXPのインストールとデプロイ後、Liferay HomeフォルダにはWildFlyサーバーフォルダと`データ`、`デプロイ`、`ログ`フォルダ、`osgi`フォルダが含まれます。
+* `Liferay.home` は、WildFlyサーバーフォルダーを含むフォルダーです。 DXPのインストールとデプロイ後、Liferay HomeフォルダにはWildFlyサーバーフォルダと`データ`、`デプロイ`、`ログ`フォルダ、`osgi`フォルダが含まれます。
 
-  - `$WILDFLY_HOME` は、WildFlyサーバーフォルダーを指します。 通常、`wildfly-[version]`という名前です。
+* `$WILDFLY_HOME` は、WildFlyサーバーフォルダーを指します。 通常、`wildfly-[version]`という名前です。
 
 WildFlyにLiferay DXPをインストールするには、次の手順が必要です。
 
@@ -92,9 +92,9 @@ This does not prevent DXP from running in a clustered environment on multiple Wi
 
 WildFlyがDXPを実行するように構成するには、次のものが含まれます。
 
-  - 環境変数を設定する
-  - プロパティと記述子の設定
-  - 不要な構成を削除する
+* 環境変数を設定する
+* プロパティと記述子の設定
+* 不要な構成を削除する
 
 `$WILDFLY_HOME/standalone/configuration/standalone.xml`に以下の変更を加えます。
 
@@ -157,10 +157,10 @@ WildFlyがDXPを実行するように構成するには、次のものが含ま�
 
 `$WILDFLY_HOME/bin/`フォルダで、スタンドアロンドメインの設定スクリプトファイル`standalone.conf`(`standalone.conf.bat`Windowsの場合):
 
-  - ファイルエンコーディングを `UTF-8` に設定します。
-  - ユーザーのタイムゾーンを`GMT`に設定します
-  - 優先プロトコルスタックを設定
-  - 利用可能なデフォルトのメモリ容量を増やします。
+* ファイルエンコーディングを `UTF-8` に設定します。
+* ユーザーのタイムゾーンを`GMT`に設定します
+* 優先プロトコルスタックを設定
+* 利用可能なデフォルトのメモリ容量を増やします。
 
 <!-- end list -->
 
@@ -347,21 +347,22 @@ WildFlyでメールセッションを管理する場合は、次の手順に従�
 After deploying DXP, you may see excessive warnings and log messages, such as the ones below, involving `PhaseOptimizer`. これらは良性なので無視することができます。 Make sure to adjust your app server's logging level or log filters to avoid excessive benign log messages.
 ```
 
-
-    May 02, 2018 9:12:27 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
-    WARNING: Skipping pass gatherExternProperties
-    May 02, 2018 9:12:27 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
-    WARNING: Skipping pass checkControlFlow
-    May 02, 2018 9:12:27 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
-    INFO: pass supports: [ES3 keywords as identifiers, getters, reserved words as properties, setters, string continuation, trailing comma, array pattern rest, arrow function, binary literal, block-scoped function declaration, class, computed property, const declaration, default parameter, destructuring, extended object literal, for-of loop, generator, let declaration, member declaration, new.target, octal literal, RegExp flag 'u', RegExp flag 'y', rest parameter, spread expression, super, template literal, modules, exponent operator (**), async function, trailing comma in param list]
-    current AST contains: [ES3 keywords as identifiers, getters, reserved words as properties, setters, string continuation, trailing comma, array pattern rest, arrow function, binary literal, block-scoped function declaration, class, computed property, const declaration, default parameter, destructuring, extended object literal, for-of loop, generator, let declaration, member declaration, new.target, octal literal, RegExp flag 'u', RegExp flag 'y', rest parameter, spread expression, super, template literal, exponent operator (**), async function, trailing comma in param list, object literals with spread, object pattern rest
+```
+May 02, 2018 9:12:27 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+WARNING: Skipping pass gatherExternProperties
+May 02, 2018 9:12:27 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+WARNING: Skipping pass checkControlFlow
+May 02, 2018 9:12:27 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+INFO: pass supports: [ES3 keywords as identifiers, getters, reserved words as properties, setters, string continuation, trailing comma, array pattern rest, arrow function, binary literal, block-scoped function declaration, class, computed property, const declaration, default parameter, destructuring, extended object literal, for-of loop, generator, let declaration, member declaration, new.target, octal literal, RegExp flag 'u', RegExp flag 'y', rest parameter, spread expression, super, template literal, modules, exponent operator (**), async function, trailing comma in param list]
+current AST contains: [ES3 keywords as identifiers, getters, reserved words as properties, setters, string continuation, trailing comma, array pattern rest, arrow function, binary literal, block-scoped function declaration, class, computed property, const declaration, default parameter, destructuring, extended object literal, for-of loop, generator, let declaration, member declaration, new.target, octal literal, RegExp flag 'u', RegExp flag 'y', rest parameter, spread expression, super, template literal, exponent operator (**), async function, trailing comma in param list, object literals with spread, object pattern rest
+```
 
 ## 次のステップ
 
 [管理者ユーザーとしてサインイン](../../../getting-started/introduction-to-the-admin-account.md)して、[DXPでソリューションの構築](../../../building-solutions-on-dxp/README.rst)を開始できます。 または、[Liferay DXPのその他のセットアップ](../../setting-up-liferay.md)トピックを参照できます。
 
-  - [マーケットプレイスプラグインのインストール](../../../system-administration/installing-and-managing-apps/getting-started/using-marketplace.md#appendix-installing-the-marketplace-plugin)
-  - [試用期間中のEEプラグインへのアクセス](../../../system-administration/installing-and-managing-apps/installing-apps/accessing-ee-plugins-during-a-trial-period.md)
-  - [検索エンジンのインストール](../../../using-search/installing-and-upgrading-a-search-engine/installing-a-search-engine.md)
-  - [Securing Liferay DXP](../../securing-liferay.md)
-  - [高可用性のクラスタリング](../../setting-up-liferay/clustering-for-high-availability.md)
+* [マーケットプレイスプラグインのインストール](../../../system-administration/installing-and-managing-apps/getting-started/using-marketplace.md#appendix-installing-the-marketplace-plugin)
+* [試用期間中のEEプラグインへのアクセス](../../../system-administration/installing-and-managing-apps/installing-apps/accessing-ee-plugins-during-a-trial-period.md)
+* [検索エンジンのインストール](../../../using-search/installing-and-upgrading-a-search-engine/installing-a-search-engine.md)
+* [Securing Liferay DXP](../../securing-liferay.md)
+* [高可用性のクラスタリング](../../setting-up-liferay/clustering-for-high-availability.md)

@@ -2,19 +2,19 @@
 
 Liferayコンテナは、提供されたファイルを使用して、次のユースケースを実行します。
 
-  - `.properties` ファイルと `.config` ファイルでLiferayを構成する
-  - Tomcatを構成する
-  - アプリとその他のアーティファクトをデプロイする
-  - パッチツールを更新する
-  - パッチDXP
-  - スクリプトを実行する
+* `.properties` ファイルと `.config` ファイルでLiferayを構成する
+* Tomcatを構成する
+* アプリとその他のアーティファクトをデプロイする
+* パッチツールを更新する
+* パッチDXP
+* スクリプトを実行する
 
 コンテナが主要なコンテナフォルダー内の特定のフォルダーでファイルを見つけた場合、すべてのユースケースはコンテナの作成時にトリガーできます。
 
 **主要なコンテナフォルダ：**
 
-  - `/mnt/liferay`
-  - `/user/local/liferay/scripts`
+* `/mnt/liferay`
+* `/user/local/liferay/scripts`
 
 [コンテナライフサイクルおよびAPI](./container-lifecycle-and-api.md) は、スキャンされたサブフォルダ、コンテナがそれらをスキャンするフェーズ、およびそれらのファイルに対して実行されるアクションを指定します。
 
@@ -22,9 +22,9 @@ Liferayコンテナは、提供されたファイルを使用して、次のユ�
 
 **ファイルを提供する方法：**
 
-  - [バインドをバインド](https://docs.docker.com/storage/bind-mounts/)
-  - [ボリューム](https://docs.docker.com/storage/volumes/)
-  - [`docker cp`を使用する](https://docs.docker.com/engine/reference/commandline/cp/)
+* [バインドをバインド](https://docs.docker.com/storage/bind-mounts/)
+* [ボリューム](https://docs.docker.com/storage/volumes/)
+* [`docker cp`を使用する](https://docs.docker.com/engine/reference/commandline/cp/)
 
 アーティファクトのデプロイと `.config` ファイルの使用を除いて、すべての使用例では、コンテナの作成時にファイルを使用できるようにする必要があります。 バインドマウントとボリュームはこれを実現します。 アーティファクトのデプロイと `.config` ファイルの適用は、バインドマウントとボリュームを使用してコンテナを作成するか、実行時に `docker cp`を使用して実行できます。
 
@@ -34,7 +34,7 @@ Liferayコンテナは、提供されたファイルを使用して、次のユ�
 
 `docker run` コマンドにバインドマウントをいくつでも指定できます。 各バインドマウントは次の形式に従います。
 
-    -v [source path in host]:[destination path in container]
+  *v [source path in host]:[destination path in container]
 
 バインドマウントソースは、ホスト内の任意のフォルダパスまたはファイルパスにすることができます。 バインドマウント先は、コンテナ内の任意のフォルダパスまたはファイルパスにすることができます。
 
@@ -42,13 +42,13 @@ Liferayコンテナは、提供されたファイルを使用して、次のユ�
 
 コンテナはこれらのフォルダをスキャンします。
 
-  - `/mnt/liferay/deploy`
-  - `/mnt/liferay/files` (すべてのファイルとサブフォルダはスキャンされます)
-  - `/mnt/liferay/patching`
-  - `/mnt/liferay/scripts`
-  - `/usr/local/liferay/scripts/post-shutdown`
-  - `/usr/local/liferay/scripts/pre-configure`
-  - `/usr/local/liferay/scripts/pre-startup`
+* `/mnt/liferay/deploy`
+* `/mnt/liferay/files` (すべてのファイルとサブフォルダはスキャンされます)
+* `/mnt/liferay/patching`
+* `/mnt/liferay/scripts`
+* `/usr/local/liferay/scripts/post-shutdown`
+* `/usr/local/liferay/scripts/pre-configure`
+* `/usr/local/liferay/scripts/pre-startup`
 
 各フォルダに関連付けられているアクションと使用例については、 [API](./container-lifecycle-and-api.md#api) を参照してください。
 
@@ -56,9 +56,9 @@ Liferayコンテナは、提供されたファイルを使用して、次のユ�
 
 Liferayコンテナのバインドマウントは、いくつかの方法で整理できます。
 
-  - キーフォルダの 1 つまたは両方にバインドします: `/mnt/liferay` 、 `/usr/local/liferay/scripts`
-  - サブフォルダーにバインドする
-  - サブフォルダーとファイルの組み合わせにバインドする
+* キーフォルダの 1 つまたは両方にバインドします: `/mnt/liferay` 、 `/usr/local/liferay/scripts`
+* サブフォルダーにバインドする
+* サブフォルダーとファイルの組み合わせにバインドする
 
 次の表に、バインドマウントメソッドの例をいくつか示し、それらの長所と短所を説明します。
 
@@ -149,6 +149,6 @@ docker cp com.liferay.journal.configuration.JournalServiceConfiguration.config m
 
 バインドマウントと `docker cp` コマンドを使用してコンテナにファイルを提供する方法をマスターしました。 詳細は、 [コンテナのライフサイクルとAPI](./container-lifecycle-and-api.md) を参照してください。 ユースケースの詳細は、次の記事を参照してください。
 
-  - [Configuring Containers](./configuring-containers.md)
-  - [Installing Apps and Other Artifacts to Containers](./installing-apps-and-other-artifacts-to-containers.md)
-  - [Patching DXP in Docker](./patching-dxp-in-docker.md)
+* [コンテナの設定](./configuring-containers.md)
+* [アプリやその他のアーティファクトをコンテナにインストールする](./installing-apps-and-other-artifacts-to-containers.md)
+* [DockerでDXPにパッチを適用する](./patching-dxp-in-docker.md)

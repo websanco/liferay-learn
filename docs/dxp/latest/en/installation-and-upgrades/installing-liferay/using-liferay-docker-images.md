@@ -13,7 +13,7 @@ using-liferay-docker-images/providing-files-to-the-container.md
 using-liferay-docker-images/upgrading-to-a-new-docker-image.md
 ```
 
-Docker Hub hosts [Liferay DXP](https://hub.docker.com/r/liferay/dxp) and [Liferay Portal Community Edition (CE)](https://hub.docker.com/r/liferay/portal) Docker images, bundled with Tomcat on Linux. The Liferay Docker Hub pages provide image details and tags for the different releases.
+Docker Hub hosts [Liferay DXP](https://hub.docker.com/r/liferay/dxp) and [Liferay Portal](https://hub.docker.com/r/liferay/portal) Docker images, bundled with Tomcat on Linux. The Liferay Docker Hub pages provide image details and tags for the different releases.
 
 * [Liferay DXP Images](https://hub.docker.com/r/liferay/dxp)
 * [Liferay Portal Images](https://hub.docker.com/r/liferay/portal)

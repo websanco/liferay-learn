@@ -4,11 +4,11 @@ Liferayインストールで構成可能なものはすべて、Liferay Docker�
 
 設定する最も一般的なものは次のとおりです。
 
-  - [JVMオプション](#jvm-options)
-  - [ポータルプロパティ](#portal-properties)
-  - [画像定義の環境変数](#image-defined-environment-variables)
-  - [システムプロパティ](#system-properties)
-  - [システム設定](#system-settings)
+* [JVMオプション](#jvm-options)
+* [ポータルプロパティ](#portal-properties)
+* [画像定義の環境変数](#image-defined-environment-variables)
+* [システムプロパティ](#system-properties)
+* [システム設定](#system-settings)
 
 <!-- end list -->
 
@@ -74,15 +74,15 @@ JVMオプションを設定する別の方法には、Tomcatの `setenv.sh` ス�
 ```
 
 ```{note}
-Liferayコンテナの起動と動作に関する詳細は、 [Using Liferay Docker Images](../using-liferay-docker-images.md) を参照してください。
+Liferayコンテナの起動と動作に関する詳細は、 [Liferay Dockerイメージの使用](../using-liferay-docker-images.md) を参照してください。
 ```
 
 ## ポータルプロパティ
 
 コンテナの[ポータルプロパティ](../../reference/portal-properties.md) は、以下の2つの方法でオーバーライドできます：
 
-  - [Liferay環境変数の使用](#using-liferay-env-variables)
-  - [ポータルプロパティファイルの使用](#using-a-portal-properties-file)
+* [Liferay環境変数の使用](#using-liferay-env-variables)
+* [ポータルプロパティファイルの使用](#using-a-portal-properties-file)
 
 ### Liferay環境変数の使用
 
@@ -97,15 +97,17 @@ Liferayコンテナの起動と動作に関する詳細は、 [Using Liferay Doc
     ```
 
 3.  コンテナを作成し、 `-e` オプションを使用して新しいポータルプロパティ値を渡します。
-   
-        docker run -it --name [container] -p 8080:8080 -e LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_JNDI_PERIOD_NAME=jdbc/MyPool liferay/dxp:[tag]
+
+    ```bash
+    docker run -it --name [container] -p 8080:8080 -e LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_JNDI_PERIOD_NAME=jdbc/MyPool liferay/dxp:[tag]
+    ```
 
     ```{warning}
     `Env`変数値では、バックスラッシュを使用してスペース文字をエスケープします。 引用符は使用しないでください。
     ```
 
     ```{note}
-      コンテナの起動と動作に関する詳細は、 [Using Liferay Docker Images](../using-liferay-docker-images.md) を参照してください。
+    コンテナの起動と動作に関する詳細は、 [Liferay Dockerイメージの使用](../using-liferay-docker-images.md) を参照してください。
     ```
 
 プロパティは、コントロールパネルの *[設定]* → *[サーバー管理]* → *[プロパティ]* → *[ポータルプロパティ]* で表示されます。
@@ -221,7 +223,7 @@ LIFERAY_TERMS_PERIOD_OF_PERIOD_USE_PERIOD_REQUIRED=false
     ```
 
     ```{note}
-    コンテナの`/mnt/liferay`フォルダへのバインドマウントについては、 [Providing Files to the Container](./providing-files-to-the-container.md#bind-mounting-a-host-folder-to-mnt-liferay) を参照してください。
+    コンテナの`/mnt/liferay`フォルダへのバインドマウントについては、 [コンテナへのファイルの提供](./providing-files-to-the-container.md#bind-mounting-a-host-folder-to-mnt-liferay) を参照してください。
     ```
 
 プロパティは、コントロールパネルの *構成* → *サーバー管理* → *プロパティ* → *システムプロパティ*で表示されます。
@@ -232,9 +234,9 @@ Liferayシステム設定は、 [コントロールパネル](../../../system-ad
 
 次のいずれかの方法を使用して、システム設定を変更します。
 
-  - [新しいコンテナへの構成の適用](#applying-configurations-to-a-new-container)
-  - [実行時の構成ファイルの適用](#applying-configuration-files-at-run-time)
-  - [コントロールパネルの使用](../../../system-administration/configuring-liferay/system-settings.md)
+* [新しいコンテナへの構成の適用](#applying-configurations-to-a-new-container)
+* [実行時の構成ファイルの適用](#applying-configuration-files-at-run-time)
+* [コントロールパネルの使用](../../../system-administration/configuring-liferay/system-settings.md)
 
 ### 新しいコンテナへの構成の適用
 
@@ -257,7 +259,7 @@ Liferayシステム設定は、 [コントロールパネル](../../../system-ad
     ```
 
     ```{note}
-    コンテナの`/mnt/liferay`フォルダへのバインドマウントについては、 [Providing Files to the Container](./providing-files-to-the-container.md#bind-mounting-a-host-folder-to-mnt-liferay) を参照してください。
+    コンテナの`/mnt/liferay`フォルダへのバインドマウントについては、 [コンテナへのファイルの提供](./providing-files-to-the-container.md#bind-mounting-a-host-folder-to-mnt-liferay) を参照してください。
     ```
 
 システムコンポーネントの構成は、そのコンポーネントの画面のコントロールパネルで、*[設定]* → *[システム設定]* に表示されます。
@@ -276,8 +278,8 @@ LiferayコンテナのJVMオプション、ポータルプロパティ、イメ�
 
 ## 追加情報
 
-  - [Using Liferay Docker Images](../using-liferay-docker-images.md)
-  - [コンテナのライフサイクルとAPI](./container-lifecycle-and-api.md)
-  - [コンテナへのファイルの提供](./providing-files-to-the-container.md)
-  - [Installing Apps and Other Artifacts to Containers](./installing-apps-and-other-artifacts-to-containers.md)
-  - [Patching DXP in Docker](./patching-dxp-in-docker.md)
+* [Liferay Dockerイメージの使用](../using-liferay-docker-images.md)
+* [コンテナのライフサイクルとAPI](./container-lifecycle-and-api.md)
+* [コンテナへのファイルの提供](./providing-files-to-the-container.md)
+* [アプリやその他のアーティファクトをコンテナにインストールする](./installing-apps-and-other-artifacts-to-containers.md)
+* [DockerでDXPにパッチを適用する](./patching-dxp-in-docker.md)

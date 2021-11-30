@@ -12,9 +12,9 @@ TomcatにLiferay DXPをインストールするには、DXP WARファイルを�
 
 依存関係、スクリプト、および構成をLiferay Tomcatバンドルファイルからコピーする（または手動でダウンロードして構成する）ことに加えて、[ヘルプセンター](https://customer.liferay.com/downloads)（サブスクリプション）またはLiferayLiferayコミュニティダウンロード</a>から次のファイルをダウンロードする必要があります。
 
-  - DXP WARファイル
-  - 依存関係のZIPファイル
-  - OSGi依存関係のZIPファイル
+* DXP WARファイル
+* 依存関係のZIPファイル
+* OSGi依存関係のZIPファイル
 
 Liferay DXPには**Java JDK 8または11**が必要です。 JDKをインストールするには、[www.java.com](https://www.java.com/)を参照してください。
 
@@ -41,9 +41,9 @@ DXPは、DXP Tomcatバンドルに含まれている多くのJARに依存して�
 
 DXPはJDBCを介してデータベースと通信します。 データベースJDBCドライバーのJARファイルをユーザードメインの`lib`フォルダに追加します。 次のデータベース用のJDBCドライバーのJARをダウンロードできます。
 
-  - [MariaDB](https://downloads.mariadb.org/)
-  - [MySQL](http://dev.mysql.com/downloads/connector/j)
-  - [PostgreSQL](https://jdbc.postgresql.org/download/postgresql-42.0.0.jar)
+* [MariaDB](https://downloads.mariadb.org/)
+* [MySQL](http://dev.mysql.com/downloads/connector/j)
+* [PostgreSQL](https://jdbc.postgresql.org/download/postgresql-42.0.0.jar)
 
 HypersonicデータベースはDXPにバンドルされており、テスト目的で役立ちます。 本番環境用のDXPインスタンスにはHSQLを使用**しない**でください。
 
@@ -51,9 +51,9 @@ HypersonicデータベースはDXPにバンドルされており、テスト目�
 
 DXPを実行するためのTomcatの構成には、次のものが含まれます。
 
-  - 環境変数を設定する
-  - DXPのWebアプリケーションコンテキストを指定する
-  - プロパティと記述子を設定する
+* 環境変数を設定する
+* DXPのWebアプリケーションコンテキストを指定する
+* プロパティと記述子を設定する
 
 手順は次のとおりです。
 
@@ -321,7 +321,7 @@ DXPはTomcatで実行されています。
 
 [管理者ユーザーとしてサインイン](../../../getting-started/introduction-to-the-admin-account.md)して、[DXPでソリューションの構築](../../../building-solutions-on-dxp/README.rst)を開始できます。 または、[Liferay DXPのその他のセットアップ](../../setting-up-liferay.md)トピックを参照できます。
 
-  - [Installing the Marketplace Plugin](../../../system-administration/installing-and-managing-apps/installing-the-marketplace-plugin.md)
-  - Installing and Configuring a Search Engine
-  - [Securing Liferay DXP](../../securing-liferay.md)
-  - [Introduction to Clustering Liferay DXP](../../setting-up-liferay/clustering-for-high-availability.md)
+* [Installing the Marketplace Plugin](../../../system-administration/installing-and-managing-apps/installing-the-marketplace-plugin.md)
+* Installing and Configuring a Search Engine
+* [Securing Liferay DXP](../../securing-liferay.md)
+* [Introduction to Clustering Liferay DXP](../../setting-up-liferay/clustering-for-high-availability.md)

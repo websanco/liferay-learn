@@ -1,8 +1,8 @@
 # Running Liferay for the First Time
 
-Once you've [installed Liferay DXP](./installing-a-liferay-tomcat-bundle.md#installing) and [configured a database](./configuring-a-database.md) for it, Liferay DXP is ready to run.
+Once you've [installed Liferay DXP/Portal](./installing-a-liferay-tomcat-bundle.md#installing) and [configured a database](./configuring-a-database.md) for it, it is ready to run.
 
-## Start Liferay DXP
+## Start the Server
 
 1. Run the startup script bundled with your application server. Tomcat bundle example:
 

@@ -18,9 +18,9 @@ Before installing DXP, please review the [Installing a Liferay-Tomcat Bundle](..
 
 次のファイルは、WebSphereアプリケーションサーバーにLiferay DXPをインストールするために必要であり、[ヘルプセンター](https://customer.liferay.com/downloads)（サブスクリプション）または[Liferayコミュニティのダウンロード](https://www.liferay.com/downloads-community)から入手できます。
 
-  - DXP WARファイル
-  - 依存関係のZIPファイル
-  - OSGi依存関係のZIPファイル
+* DXP WARファイル
+* 依存関係のZIPファイル
+* OSGi依存関係のZIPファイル
 
 利用可能なLiferay DXPダウンロードの詳細については、「 [Liferay-Tomcatバンドル](../installing-a-liferay-tomcat-bundle.md) インストール」を参照してください。
 
@@ -127,8 +127,10 @@ DXPが適切に機能するには、アプリケーションサーバーJVMがGM
 
 このタグを削除しないと、次のようなエラーが発生する可能性があります。
 
-    WSVR0501E: Error creating component com.ibm.ws.runtime.component.CompositionUnitMgrImpl@d74fa901
-    com.ibm.ws.exception.RuntimeWarning: com.ibm.ws.webcontainer.exception.WebAppNotLoadedException: Failed to load webapp: Failed to load webapp: SRVE8111E: The application, LiferayEAR, is trying to modify a cookie which matches a pattern in the restricted programmatic session cookies list [domain=*, name=JSESSIONID, path=/].
+```
+WSVR0501E: Error creating component com.ibm.ws.runtime.component.CompositionUnitMgrImpl@d74fa901
+com.ibm.ws.exception.RuntimeWarning: com.ibm.ws.webcontainer.exception.WebAppNotLoadedException: Failed to load webapp: Failed to load webapp: SRVE8111E: The application, LiferayEAR, is trying to modify a cookie which matches a pattern in the restricted programmatic session cookies list [domain=*, name=JSESSIONID, path=/].
+```
 
 ### 構成チェックポイント
 
@@ -149,9 +151,9 @@ DXPが適切に機能するには、アプリケーションサーバーJVMがGM
 
 DXPはJDBCを介してデータベースと通信します。 データベースJDBCドライバーのJARファイルをユーザードメインのlibフォルダに追加します。 次のデータベース用のJDBCドライバーのJARをダウンロードできます。
 
-  - [MariaDB](https://downloads.mariadb.org/)
-  - [MySQL](http://dev.mysql.com/downloads/connector/j)
-  - [PostgreSQL](https://jdbc.postgresql.org/download/postgresql-42.0.0.jar)
+* [MariaDB](https://downloads.mariadb.org/)
+* [MySQL](http://dev.mysql.com/downloads/connector/j)
+* [PostgreSQL](https://jdbc.postgresql.org/download/postgresql-42.0.0.jar)
 
 HypersonicデータベースはDXPにバンドルされており、テスト目的には問題ありませんが、本番環境のDXPインスタンスには使用しないでください。
 
@@ -234,7 +236,6 @@ Liferayは、デモ目的でデフォルトでHSQLを使用しています。 HS
     URLの例については、 [Database Templates](../../reference/database-templates.md) の`jdbc.default.url`の値を参照してください。
     ```
 
-
     [*OK*]をクリックして、マスター構成に保存します。
 
 19. *password*プロパティに対して別のフィルター検索を実行します。 このプロパティの値として、前に追加したユーザーIDのパスワードを入力します。 *[OK]* をクリックして、マスター構成に保存します。
@@ -275,8 +276,10 @@ WebSphereを使用してメールセッションを管理する場合は、次�
 
 WebSphereでは、デフォルトでCookieをHTTPSセッションに制限しています。 HTTPを使用している場合、ユーザーはDXPにサインインできなくなり、コンソールに次のエラーが表示されます。
 
-    20:07:14,021 WARN  [WebContainer : 1][SecurityPortletContainerWrapper:341]
-    User 0 is not allowed to access URL http://localhost:9081/web/guest/home and portlet com_liferay_login_web_portlet_LoginPortlet
+```
+20:07:14,021 WARN  [WebContainer : 1][SecurityPortletContainerWrapper:341]
+User 0 is not allowed to access URL http://localhost:9081/web/guest/home and portlet com_liferay_login_web_portlet_LoginPortlet
+```
 
 これは、HTTPの使用時にDXPがHTTPS Cookieを使用できないために発生します。 その結果、ページが更新されるたびに新しいセッションが作成されます。 WebSphereでこの問題を解決するには、以下の手順に従ってください。
 
@@ -354,18 +357,20 @@ DXP `.war`は、`ibm-web-ext.xmi`ファイルにあらかじめパッケージ�
 
 DXPをデプロイした後、`PhaseOptimizer`に関連する以下のような警告やログメッセージが過剰になることがあります。 これらは良性なので無視することができます。 このようなログメッセージを回避するために、必ずアプリケーションサーバーのログレベルまたはログフィルターを調整してください。
 
-    |     May 02, 2018 9:12:27 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
-    |     WARNING: Skipping pass gatherExternProperties
-    |     May 02, 2018 9:12:27 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
-    |     WARNING: Skipping pass checkControlFlow
-    |     May 02, 2018 9:12:27 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
-    |     INFO: pass supports: [ES3 keywords as identifiers, getters, reserved words as properties, setters, string continuation, trailing comma, array pattern rest, arrow function, binary literal, block-scoped function declaration, class, computed property, const declaration, default parameter, destructuring, extended object literal, for-of loop, generator, let declaration, member declaration, new.target, octal literal, RegExp flag 'u', RegExp flag 'y', rest parameter, spread expression, super, template literal, modules, exponent operator (**), async function, trailing comma in param list]
-    |     current AST contains: [ES3 keywords as identifiers, getters, reserved words as properties, setters, string continuation, trailing comma, array pattern rest, arrow function, binary literal, block-scoped function declaration, class, computed property, const declaration, default parameter, destructuring, extended object literal, for-of loop, generator, let declaration, member declaration, new.target, octal literal, RegExp flag 'u', RegExp flag 'y', rest parameter, spread expression, super, template literal, exponent operator (**), async function, trailing comma in param list, object literals with spread, object pattern rest]
+```
+|     May 02, 2018 9:12:27 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+|     WARNING: Skipping pass gatherExternProperties
+|     May 02, 2018 9:12:27 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+|     WARNING: Skipping pass checkControlFlow
+|     May 02, 2018 9:12:27 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass process
+|     INFO: pass supports: [ES3 keywords as identifiers, getters, reserved words as properties, setters, string continuation, trailing comma, array pattern rest, arrow function, binary literal, block-scoped function declaration, class, computed property, const declaration, default parameter, destructuring, extended object literal, for-of loop, generator, let declaration, member declaration, new.target, octal literal, RegExp flag 'u', RegExp flag 'y', rest parameter, spread expression, super, template literal, modules, exponent operator (**), async function, trailing comma in param list]
+|     current AST contains: [ES3 keywords as identifiers, getters, reserved words as properties, setters, string continuation, trailing comma, array pattern rest, arrow function, binary literal, block-scoped function declaration, class, computed property, const declaration, default parameter, destructuring, extended object literal, for-of loop, generator, let declaration, member declaration, new.target, octal literal, RegExp flag 'u', RegExp flag 'y', rest parameter, spread expression, super, template literal, exponent operator (**), async function, trailing comma in param list, object literals with spread, object pattern rest]
+```
 
 ## 次のステップ
 
-  - [Liferay-Tomcatバンドルのインストール](../installing-a-liferay-tomcat-bundle.md)
-  - [Activating Liferay DXP](../../setting-up-liferay/activating-liferay-dxp.md)
-  - [検索エンジンのインストール](../../../using-search/installing-and-upgrading-a-search-engine/installing-a-search-engine.md)
-  - [Securing Liferay DXP](../../securing-liferay.md)
-  - [高可用性のクラスタリング](../../setting-up-liferay/clustering-for-high-availability.md)
+* [Liferay-Tomcatバンドルのインストール](../installing-a-liferay-tomcat-bundle.md)
+* [Activating Liferay DXP](../../setting-up-liferay/activating-liferay-dxp.md)
+* [検索エンジンのインストール](../../../using-search/installing-and-upgrading-a-search-engine/installing-a-search-engine.md)
+* [Securing Liferay DXP](../../securing-liferay.md)
+* [高可用性のクラスタリング](../../setting-up-liferay/clustering-for-high-availability.md)

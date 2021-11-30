@@ -18,9 +18,9 @@ DXPをインストールする前に、 [Installing a Liferay DXP Tomcat Bundle]
 
 次のファイルは、WebSphereアプリケーションサーバーにLiferay DXPをインストールするために必要であり、[ヘルプセンター](https://customer.liferay.com/downloads)（サブスクリプション）または[Liferayコミュニティのダウンロード](https://www.liferay.com/downloads-community)から入手できます。
 
-  - DXP WARファイル
-  - 依存関係のZIPファイル
-  - OSGi依存関係のZIPファイル
+* DXP WARファイル
+* 依存関係のZIPファイル
+* OSGi依存関係のZIPファイル
 
 利用可能なLiferay DXPのダウンロードについて詳しくは、[Installing a Liferay DXP Tomcat Bundle](../installing-a-liferay-dxp-tomcat-bundle.md)を参照してください。
 
@@ -153,9 +153,9 @@ com.ibm.ws.exception.RuntimeWarning: com.ibm.ws.webcontainer.exception.WebAppNot
 
 DXPはJDBCを介してデータベースと通信します。 データベースJDBCドライバーのJARファイルをユーザードメインのlibフォルダに追加します。 次のデータベース用のJDBCドライバーのJARをダウンロードできます。
 
-  - [MariaDB](https://downloads.mariadb.org/)
-  - [MySQL](http://dev.mysql.com/downloads/connector/j)
-  - [PostgreSQL](https://jdbc.postgresql.org/download/postgresql-42.0.0.jar)
+* [MariaDB](https://downloads.mariadb.org/)
+* [MySQL](http://dev.mysql.com/downloads/connector/j)
+* [PostgreSQL](https://jdbc.postgresql.org/download/postgresql-42.0.0.jar)
 
 HypersonicデータベースはDXPにバンドルされており、テスト目的には問題ありませんが、本番環境のDXPインスタンスには使用しないでください。
 
@@ -372,9 +372,9 @@ DXPをデプロイした後、`PhaseOptimizer`に関連する以下のような�
 
 ## 次のステップ
 
-  - [Installing a Liferay DXP Tomcat Bundle](../installing-a-liferay-dxp-tomcat-bundle.md)
-  - [Activating Liferay DXP](../../setting-up-liferay/activating-liferay-dxp.md)
-  - Installing and Configuring a Search Engine
-  - [Securing Liferay DXP](../../securing-liferay.md)
-  - [Introduction to Clustering Liferay DXP](../../setting-up-liferay/clustering-for-high-availability.md)
-  - Maintaining Liferay DXP
+* [Installing a Liferay DXP Tomcat Bundle](../installing-a-liferay-dxp-tomcat-bundle.md)
+* [Activating Liferay DXP](../../setting-up-liferay/activating-liferay-dxp.md)
+* Installing and Configuring a Search Engine
+* [Securing Liferay DXP](../../securing-liferay.md)
+* [Introduction to Clustering Liferay DXP](../../setting-up-liferay/clustering-for-high-availability.md)
+* Maintaining Liferay DXP

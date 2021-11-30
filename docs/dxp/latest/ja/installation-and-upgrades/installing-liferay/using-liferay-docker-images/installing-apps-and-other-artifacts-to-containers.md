@@ -4,8 +4,8 @@
 
 アーティファクトをインストールするには、次の2つの方法があります。
 
-  - [バインドマウントを使用したアーティファクトのインストール](#installing-artifacts-using-a-bind-mount)
-  - [`docker cp`を使用したアーティファクトのインストール](#installing-artifacts-using-docker-cp)
+* [バインドマウントを使用したアーティファクトのインストール](#installing-artifacts-using-a-bind-mount)
+* [`docker cp`を使用したアーティファクトのインストール](#installing-artifacts-using-docker-cp)
 
 <!-- end list -->
 
@@ -57,8 +57,8 @@ docker cp ~/my-apps/some-app.lpkg [container]:/opt/liferay/deploy
 
 ## 追加情報
 
-  - [Using Liferay Docker Images](../using-liferay-docker-images.md)
-  - [コンテナへのファイルの提供](./providing-files-to-the-container.md)
-  - [コンテナのライフサイクルとAPI](./container-lifecycle-and-api.md)
-  - [Configuring Containers](./configuring-containers.md)
-  - [Patching DXP in Docker](./patching-dxp-in-docker.md)
+* [Liferay Dockerイメージの使用](../using-liferay-docker-images.md)
+* [コンテナへのファイルの提供](./providing-files-to-the-container.md)
+* [コンテナのライフサイクルとAPI](./container-lifecycle-and-api.md)
+* [コンテナの設定](./configuring-containers.md)
+* [DockerでDXPにパッチを適用する](./patching-dxp-in-docker.md)

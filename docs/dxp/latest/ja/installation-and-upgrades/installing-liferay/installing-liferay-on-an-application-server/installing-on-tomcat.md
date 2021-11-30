@@ -12,9 +12,9 @@ TomcatにLiferay DXPをインストールするには、DXP WARファイルを�
 
 依存関係、スクリプト、および構成をLiferay Tomcatバンドルファイルからコピーする（または手動でダウンロードして構成する）ことに加えて、[ヘルプセンター](https://customer.liferay.com/downloads)（サブスクリプション）またはLiferayLiferayコミュニティダウンロード</a>から次のファイルをダウンロードする必要があります。
 
-  - DXP WARファイル
-  - 依存関係のZIPファイル
-  - OSGi依存関係のZIPファイル
+* DXP WARファイル
+* 依存関係のZIPファイル
+* OSGi依存関係のZIPファイル
 
 Liferay DXPにはJava JDK 8または11が必要です。
 
@@ -41,9 +41,9 @@ DXPは、DXP Tomcatバンドルに含まれている多くのJARに依存して�
 
 DXPはJDBCを介してデータベースと通信します。 データベースJDBCドライバーのJARファイルをユーザードメインの`lib`フォルダに追加します。 次のデータベース用のJDBCドライバーのJARをダウンロードできます。
 
-  - [MariaDB](https://downloads.mariadb.org/)
-  - [MySQL](http://dev.mysql.com/downloads/connector/j)
-  - [PostgreSQL](https://jdbc.postgresql.org/download/postgresql-42.0.0.jar)
+* [MariaDB](https://downloads.mariadb.org/)
+* [MySQL](http://dev.mysql.com/downloads/connector/j)
+* [PostgreSQL](https://jdbc.postgresql.org/download/postgresql-42.0.0.jar)
 
 HypersonicデータベースはDXPにバンドルされており、テスト目的で役立ちます。 本番環境用のDXPインスタンスにはHSQLを使用**しない**でください。
 
@@ -51,9 +51,9 @@ HypersonicデータベースはDXPにバンドルされており、テスト目�
 
 DXPを実行するためのTomcatの構成には、次のものが含まれます。
 
-  - 環境変数を設定する
-  - DXPのWebアプリケーションコンテキストを指定する
-  - プロパティと記述子を設定する
+* 環境変数を設定する
+* DXPのWebアプリケーションコンテキストを指定する
+* プロパティと記述子を設定する
 
 手順は次のとおりです。
 
@@ -90,7 +90,6 @@ DXPを実行するためのTomcatの構成には、次のものが含まれま�
     ```{note}
     JDK 11では、次のJVM引数を追加して4桁の年を表示することをお勧めします：`-Djava.locale.providers=JRE,COMPAT,CLDR`
     ```
-
 
     インストール後、これらの構成（これらのJVMオプションを含む）をさらに調整して、パフォーマンスを向上させることができます。
 
@@ -136,8 +135,10 @@ DXPを実行するためのTomcatの構成には、次のものが含まれま�
     `crossContext="true"`を設定すると、複数のWebアプリケーションで同じクラスローダーを使用できます。 この設定には、JAAS領域の設定、永続するセッションの無効化、セッションの完全な無効化のためのコメント付きの説明とタグが含まれています。
 
 3.  `$CATALINA_BASE/conf/catalina.properties`ファイルを開いて、次の値を`common.loader`プロパティに追加することで、`$CATALINA_BASE/lib/ext`内のJARへのCatalinaによるアクセスを提供します。
-   
-        ,"${catalina.home}/lib/ext/global","${catalina.home}/lib/ext/global/*.jar","${catalina.home}/lib/ext","${catalina.home}/lib/ext/*.jar"
+
+    ```properties
+    ,"${catalina.home}/lib/ext/global","${catalina.home}/lib/ext/global/*.jar","${catalina.home}/lib/ext","${catalina.home}/lib/ext/*.jar"
+    ```
 
 4.  必ずUTF-8 URIエンコードを使用してください。 `$CATALINA_BASE/conf/server.xml`ファイルをTomcatバンドルからサーバーにコピーします。 それ以外の場合は、`$CATALINA_BASE/conf/server.xml`ファイルを開き、属性`URIEncoding="UTF-8"`をHTTPおよび`redirectPort=8443`を使用するAJPコネクタに追加します。 以下は例です:
 
@@ -319,8 +320,8 @@ DXPはTomcatで実行されています。
 
 [管理者ユーザーとしてサインイン](../../../getting-started/introduction-to-the-admin-account.md)して、[DXPでソリューションの構築](../../../building-solutions-on-dxp/README.rst)を開始できます。 または、[Liferay DXPのその他のセットアップ](../../setting-up-liferay.md)トピックを参照できます。
 
-  - [Installing the Marketplace Plugin](../../../system-administration/installing-and-managing-apps/getting-started/using-marketplace.md#appendix-installing-the-marketplace-plugin)
-  - [試用期間中のプラグインへのアクセス](../../../system-administration/installing-and-managing-apps/installing-apps/accessing-ee-plugins-during-a-trial-period.md)
-  - [検索エンジンのインストール](../../../using-search/installing-and-upgrading-a-search-engine/installing-a-search-engine.md)
-  - [Securing Liferay DXP](../../securing-liferay.md)
-  - [高可用性のクラスタリング](../../setting-up-liferay/clustering-for-high-availability.md)
+* [Installing the Marketplace Plugin](../../../system-administration/installing-and-managing-apps/getting-started/using-marketplace.md#appendix-installing-the-marketplace-plugin)
+* [試用期間中のプラグインへのアクセス](../../../system-administration/installing-and-managing-apps/installing-apps/accessing-ee-plugins-during-a-trial-period.md)
+* [検索エンジンのインストール](../../../using-search/installing-and-upgrading-a-search-engine/installing-a-search-engine.md)
+* [Securing Liferay DXP](../../securing-liferay.md)
+* [高可用性のクラスタリング](../../setting-up-liferay/clustering-for-high-availability.md)

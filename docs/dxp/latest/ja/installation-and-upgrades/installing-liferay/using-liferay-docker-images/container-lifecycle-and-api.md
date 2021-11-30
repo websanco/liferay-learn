@@ -2,11 +2,11 @@
 
 高レベルでは、コンテナはLiferayがデプロイされた状態でTomcatを開始します。 ただし、さらに、コンテナエントリポイントは、以下のユースケースを実行するためのAPIを提供します。
 
-  - スクリプトの呼び出し
-  - TomcatおよびLiferayの設定
-  - アーティファクトのデプロイ
-  - パッチのインストール
-  - パッチツールの更新
+* スクリプトの呼び出し
+* TomcatおよびLiferayの設定
+* アーティファクトのデプロイ
+* パッチのインストール
+* パッチツールの更新
 
 コンテナは、これらのユースケースをトリガーおよび構成するためのAPIを提供します。 ライフサイクルのさまざまなフェーズでユースケースを実行します。
 
@@ -30,8 +30,8 @@
 
 コンテナエントリポイントは、次のコンテナフォルダでファイルをスキャンし、それらのファイルを使用して、コンテナ、Tomcat、Liferayを設定し、Liferayで動作します。
 
-  - `/mnt/liferay`
-  - `/user/local/liferay/scripts`
+* `/mnt/liferay`
+* `/user/local/liferay/scripts`
 
 <!-- end list -->
 
@@ -43,10 +43,10 @@
 
 次のライフサイクルの段階は、ユーザーが提供したファイルに作用します。
 
-  - [事前設定段階のAPI](#pre-configure-phase-api)
-  - [事前設定段階のAPI](#configure-phase-api)
-  - [起動前段階のAPI](#pre-startup-phase-api)
-  - [シャットダウン後段階のAPI](#post-shutdown-phase-api)
+* [事前設定段階のAPI](#pre-configure-phase-api)
+* [事前設定段階のAPI](#configure-phase-api)
+* [起動前段階のAPI](#pre-startup-phase-api)
+* [シャットダウン後段階のAPI](#post-shutdown-phase-api)
 
 ### 事前設定フェーズAPI
 
@@ -79,6 +79,6 @@
 
 コンテナのライフサイクルと API いついて学習できました。これで、 [コンテナに](./providing-files-to-the-container.md) ファイルを提供する最良の方法を決定できます。 または、上記の表に記載されているユースケースの実行を開始できます。 それらはあなたの便宜のためにここにリストされています：
 
-  - [Configuring Containers](./configuring-containers.md)
-  - [Installing Apps and Other Artifacts to Containers](./installing-apps-and-other-artifacts-to-containers.md)
-  - [Patching DXP in Docker](./patching-dxp-in-docker.md)
+* [コンテナの設定](./configuring-containers.md)
+* [アプリやその他のアーティファクトをコンテナにインストールする](./installing-apps-and-other-artifacts-to-containers.md)
+* [DockerでDXPにパッチを適用する](./patching-dxp-in-docker.md)

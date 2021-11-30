@@ -6,9 +6,9 @@ Liferay DXPにはJava JDK 8または11が必要です。 参照 [互換性マト
 
 これらのファイルを [ヘルプセンター](https://customer.liferay.com/downloads) （サブスクリプション）または [Liferayコミュニティダウンロード](https://www.liferay.com/downloads-community)からダウンロードします。
 
-  - DXP WARファイル
-  - 依存関係のZIPファイル
-  - OSGi依存関係のZIPファイル
+* DXP WARファイル
+* 依存関係のZIPファイル
+* OSGi依存関係のZIPファイル
 
 [*Liferay Home*](../../reference/liferay-home.md) は、JBossサーバーフォルダーを含むフォルダーです。 DXPをインストールして展開した後、Liferayのホームフォルダは、JBossサーバのフォルダと同様に含ま `データ`、 `配布`、 `ログ`、及び `のOSGi` フォルダを。 `$JBOSS_HOME` はJBossサーバーフォルダーを参照します。 このフォルダーの名前は通常 `jboss-eap-[version]`です。
 
@@ -87,9 +87,9 @@ This does not prevent DXP from running in a clustered environment on multiple JB
 
 DXPを実行するためのJBossの設定には、次のものが含まれます。
 
-  - 環境変数を設定する
-  - プロパティと記述子の設定
-  - 不要な構成を削除する
+* 環境変数を設定する
+* プロパティと記述子の設定
+* 不要な構成を削除する
 
 `$JBOSS_HOME/standalone/configuration/standalone.xml`次の変更を加えます。
 
@@ -152,10 +152,10 @@ DXPを実行するためのJBossの設定には、次のものが含まれます
 
 `$JBOSS_HOME/ bin /` フォルダーで、スタンドアロンドメインの構成スクリプトファイル `standalone.conf` （Windowsでは`standalone.conf.bat` します。
 
-  - ファイルのエンコーディングを `設定UTF-8`
-  - ユーザーのタイムゾーンを `GMT`設定します
-  - 優先プロトコルスタックを設定する
-  - 利用可能なデフォルトのメモリ容量を増やします。
+* ファイルのエンコーディングを `設定UTF-8`
+* ユーザーのタイムゾーンを `GMT`設定します
+* 優先プロトコルスタックを設定する
+* 利用可能なデフォルトのメモリ容量を増やします。
 
 <!-- end list -->
 

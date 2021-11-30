@@ -96,7 +96,7 @@ There's an *Env* variable for each [Portal Property](../../reference/portal-prop
 
 1. Create a container, passing in your Env variable assignments using `-e` options following the pattern `-e VARIABLE_A=value -e VARIABLE_B=value ...`. For example,
 
-    ```
+    ```bash
     docker run -it -m 8g -p 8080:8080 -e LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_JNDI_PERIOD_NAME=jdbc/MyPool liferay/dxp:[tag]
     ```
 

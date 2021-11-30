@@ -8,14 +8,6 @@ Liferay [patches](../../maintaining-a-liferay-installation/patching-dxp-7-3-and-
 **Always** [back up](../../maintaining-a-liferay-installation/backing-up.md) your database and installation before patching.
 ```
 
-Here are the DXP container patching topics:
-
-* [Using Fix Pack, Security Fix Pack, and Service Pack Images](#using-fix-pack-security-fix-pack-and-service-pack-images)
-* [Installing a Patch](#installing-a-patch)
-* [Reverting a Patch](#reverting-a-patch)
-* [Updating the Patching Tool](#updating-the-patching-tool)
-* [Upgrading the Database for a Patch](#upgrading-the-database-for-a-patch)
-
 ## Using Fix Pack, Security Fix Pack, and Service Pack Images
 
 Fix Pack, Security Fix Pack, and Service Pack images are based on [Slim Bundles](../../maintaining-a-liferay-installation/patching-dxp-7-3-and-earlier/advanced-patching-for-dxp-7-2/using-slim-bundles.md). Slim Bundles start up faster and have a smaller footprint than regular [Liferay Tomcat bundles](../installing-a-liferay-tomcat-bundle.md). Only one patch, however, can be applied to a Slim Bundle. These images, therefore, have these patching limitations:

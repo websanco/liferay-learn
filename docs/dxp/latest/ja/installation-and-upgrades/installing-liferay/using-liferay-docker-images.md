@@ -14,15 +14,15 @@ using-liferay-docker-images/upgrading-to-a-new-docker-image.md
 
 Docker Hub ホスト [Liferay DXP](https://hub.docker.com/r/liferay/dxp) と [Liferay Portal Community Edition (CE)](https://hub.docker.com/r/liferay/portal) Linux 上の Tomcat にバンドルされたDockerイメージ。 Liferay Docker Hubページには、さまざまなリリースのイメージの詳細とタグが表示されます。
 
-  - [Liferay DXPイメージ](https://hub.docker.com/r/liferay/dxp)
-  - [LiferayポータルCE画像](https://hub.docker.com/r/liferay/portal)
+* [Liferay DXPイメージ](https://hub.docker.com/r/liferay/dxp)
+* [LiferayポータルCE画像](https://hub.docker.com/r/liferay/portal)
 
 コンテナを使用するための基本は次のとおりです。
 
-  - [コンテナを初めて起動する](#starting-a-container-for-the-first-time)
-  - [ログファイルの表示](#viewing-log-files)
-  - [コンテナの停止](#stopping-a-container)
-  - [コンテナの再起動](#restarting-a-container)
+* [コンテナを初めて起動する](#starting-a-container-for-the-first-time)
+* [ログファイルの表示](#viewing-log-files)
+* [コンテナの停止](#stopping-a-container)
+* [コンテナの再起動](#restarting-a-container)
 
 これらのコンテナは、標準のDockerコンテナであり、そのまま起動および停止できます。 次の例では、 [Docker CLI（`docker`）](https://docs.docker.com/engine/reference/commandline/docker/)を使用していますが、任意のDockerコンテナツールを使用できます。
 
@@ -39,7 +39,6 @@ Docker Hub ホスト [Liferay DXP](https://hub.docker.com/r/liferay/dxp) と [Li
     ```{note}
     コンテナの命名はオプションですが、コンテナの管理が容易になります。
     ```
-
 
     コンテナが実行され、次のTomcatの起動完了メッセージを含むログメッセージが記録されます。
     
@@ -104,8 +103,8 @@ docker start [container]
 
 コンテナのエントリーポイントが何をするのか知りたい、コンテナのAPIを知りたい場合は、[Container Lifecycle and API](./using-liferay-docker-images/container-lifecycle-and-api.md)を参照してください。 コンテナの使用を開始する場合は、次のいずれかの使用例を実行してください。
 
-  - [Configuring Containers](./using-liferay-docker-images/configuring-containers.md)
-  - [Installing Apps and Other Artifacts to Containers](./using-liferay-docker-images/installing-apps-and-other-artifacts-to-containers.md)
-  - [Patching DXP in Docker](./using-liferay-docker-images/patching-dxp-in-docker.md)
-  - [コンテナへのファイルの提供](./using-liferay-docker-images/providing-files-to-the-container.md)
-  - [Upgrading to a New Docker Image](./using-liferay-docker-images/upgrading-to-a-new-docker-image.md)
+* [Configuring Containers](./using-liferay-docker-images/configuring-containers.md)
+* [Installing Apps and Other Artifacts to Containers](./using-liferay-docker-images/installing-apps-and-other-artifacts-to-containers.md)
+* [Patching DXP in Docker](./using-liferay-docker-images/patching-dxp-in-docker.md)
+* [コンテナへのファイルの提供](./using-liferay-docker-images/providing-files-to-the-container.md)
+* [Upgrading to a New Docker Image](./using-liferay-docker-images/upgrading-to-a-new-docker-image.md)

@@ -122,6 +122,6 @@ inside some-pre-configure-script.sh
 
 ## 追加情報
 
-  - [Using Liferay Docker Images](../using-liferay-docker-images.md)
-  - [コンテナのライフサイクルとAPI](./container-lifecycle-and-api.md)
-  - [コンテナへのファイルの提供](./providing-files-to-the-container.md)
+* [Liferay Dockerイメージの使用](../using-liferay-docker-images.md)
+* [コンテナのライフサイクルとAPI](./container-lifecycle-and-api.md)
+* [コンテナへのファイルの提供](./providing-files-to-the-container.md)
