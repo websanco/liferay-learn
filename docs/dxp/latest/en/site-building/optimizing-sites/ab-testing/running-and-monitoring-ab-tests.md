@@ -30,7 +30,6 @@ Before running the test, you must create the A/B Test and test Variant. For more
 
 You can cancel a running test at any time by clicking *Terminate Test*. A record of the tests completed or canceled is available under the History tab. To delete an A/B Test, you must terminate the test first.
 
-
 ## Related Information
 
 - [A/B Testing](./ab-testing.md)

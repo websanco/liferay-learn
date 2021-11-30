@@ -23,13 +23,9 @@ You can customize your Content Page to different groups of users using *Experien
     New Experiences are assigned to the *Anyone* Segment by default and target all website visitors.
     ```
 
-1. On the *New Experience* dialog, under the *Languages* section, select any additional language you want to target with your experience. For example, if your default Content Page language is en-US and you want to create an Experience for es-ES speakers, select this language as well.
-
-    ![Select an existing Segment for the Experience and, opitonally, an additional language](./creating-and-managing-experiences/images/02.png)
-
 1. Edit your Content Page with the information and layout you want to show to the selected Segment.
 
-1. Using the Up (![Up](../../../images/icon-angle-up.png)) and Down (![Down](../../../images/icon-angle-down.png)) controls, move the Experience in the list to set its precedence (see [Understanding How Experiences Work](#understanding-how-experiences-work) for more information).
+1. Using the Up (![Up](../../../images/icon-angle-up.png)) and Down (![Down](../../../images/icon-angle-down.png)) controls, move the Experience in the list to set its precedence (see [Understanding How Experiences Work](./content-page-personalization.md#understanding-how-experiences-work) for more information).
 1. Click *Publish*.
 
 The Default version of the page appears for everyone except for members of the selected Segment, who see a version of the site for their defined Segment.
