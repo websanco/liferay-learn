@@ -162,7 +162,7 @@ Finally, use the [DXP Cloud Console](https://console.liferay.cloud/) to deploy t
 
 1. Click *Deploy Build*.
 
-The build is deployed to your chosen environment, and 
+The build is deployed to your chosen environment, and the correct versions are applied when the services start up.
 
 ```{note}
 The deployment takes some time to complete and for your services to be ready. The process may take longer than usual if it is the first deployment to that environment.
