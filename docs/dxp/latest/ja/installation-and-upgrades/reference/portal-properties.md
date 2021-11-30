@@ -12,15 +12,15 @@
 
 `portal-ext.properties`ファイルを使用してデフォルトのプロパティをオーバーライドすると、以下の利点があります。
 
-  - ファイルを他のLiferay DXP環境およびサーバーノードにコピーできます。
-  - 構成をバージョン管理システムに保存して、構成管理を簡素化できます。
-  - 最初の起動前にファイルにプロパティを設定することは、DXPを構成する最も簡単な方法です。
+* ファイルを他のLiferay DXP環境およびサーバーノードにコピーできます。
+* 構成をバージョン管理システムに保存して、構成管理を簡素化できます。
+* 最初の起動前にファイルにプロパティを設定することは、DXPを構成する最も簡単な方法です。
 
 **内容：**
 
-  - [ポータルプロパティの使用](#using-portal-properties)
-  - [ポータルプロパティの優先度](#portal-property-priority)
-  - [システム設定と構成ファイルの使用](#using-system-settings-and-configuration-files)
+* [ポータルプロパティの使用](#using-portal-properties)
+* [ポータルプロパティの優先度](#portal-property-priority)
+* [システム設定と構成ファイルの使用](#using-system-settings-and-configuration-files)
 
 ```{note}
 DXP 7.3以降、仮想インスタンスごとのポータルプロパティファイル機能は削除されました。 DXPは、「portal-[companyId].properties」形式のファイルのインスタンスごとのプロパティを会社IDと一致するインスタンスに適用しなくなりました。
@@ -57,34 +57,21 @@ Liferay Homeの場所をカスタマイズする必要があります。 一部�
 <pre><code class="properties">liferay.home=/home/jbloggs/liferay
 `</pre> 
 
-
-
 ### ユーザーの認証方法の変更
 
 ユーザの認証方法を変更するには、次の `company.security.auth.type` プロパティ値のいずれかを追加してください。
-
-
 
 ``` properties
 company.security.auth.type=emailAddress
 ```
 
-
-
-
 ``` properties
 company.security.auth.type=screenName
 ```
 
-
-
-
 ``` properties
 company.security.auth.type=userId
 ```
-
-
-
 
 ## ポータルプロパティの優先度
 
@@ -92,20 +79,16 @@ company.security.auth.type=userId
 
 1.  プロパティソースは3つあります。
    
-         - `portal-impl.jar/portal.properties`ファイル
-      - 拡張プロパティファイル
-      - Liferay Docker Env変数
+    * `portal-impl.jar/portal.properties`ファイル
+    * 拡張プロパティファイル
+    * Liferay Docker Env変数
 2.  *共有プロパティ* （複数回定義されたプロパティ）に定義された最後の値が優先されます。
 
 3.  プロパティソースは[決定論的順序](#configuration-processing)で読み込まれます。
 
-
-
 ### 構成処理
 
 プロパティは次の順序で定義されます。
-
-
 
 ``` properties
 portal-impl.jar/portal.properties
@@ -121,7 +104,6 @@ include-and-override=${liferay.home}/${external-properties}
 [Liferay Docker Env variables]
 ```
 
-
 `portal-impl.jar/portal.properties`ファイルは上記`include-and-override`定義を指定します。 DXPは各ファイルをチェックして、追加の `インクルードアンドオーバーライド` 定義がないか確認します。つまり、独自に定義できます。
 
 ![DXPサーバーが使用しているインクルード拡張ファイルのリストは、コントロールパネルの[構成]セクションの[サーバー管理]ページにあります。](./portal-properties/images/01.png)
@@ -130,22 +112,15 @@ include-and-override=${liferay.home}/${external-properties}
 
 Liferay Dockerコンテナは、Liferay環境変数を、リストに追加されたポータルプロパティソースに集約します。
 
-
-
 ```{important}
 複数のファイルのプロパティをオーバーライドすると、**最後**に定義されたプロパティソースが優先されます。 他のすべては無視されます。
 ```
 
-
 ![DXPサーバーのすべてのポータルプロパティは、コントロールパネルの[構成]セクションの[サーバー管理]ページに表示できます。](./portal-properties/images/02.png)
-
-
 
 ### ポータルプロパティの優先度の例
 
 次の例は、プロパティソースと特定のプロパティがDXPを構成する方法を示しています。
-
-
 
 #### 例1： `portal-ext.properties` を使用してプロパティをオーバーライドする
 
@@ -153,12 +128,9 @@ Liferay Dockerコンテナは、Liferay環境変数を、リストに追加さ�
 
 `portal-ext.properties`新しい値：
 
-
-
 ``` properties
 mail.session.jndi.name=mail/SomeMailSession
 ```
-
 
 結果のプロパティソースの順序：
 
@@ -169,36 +141,25 @@ mail.session.jndi.name=mail/SomeMailSession
 
 結果の構成：
 
-
-
 ``` properties
 mail.session.jndi.name=mail/SomeMailSession
 ```
-
-
-
 
 #### 例2：プロパティファイルの追加
 
 開発環境など、特定の環境のプロパティファイルを追加できます。 その後、共通のプロパティには単一の `portal-ext.properties` を、他には環境固有の設定を使用することができます。
 
 1.  任意の拡張子ファイルを作成します(例: `portal-development.properties`)。環境に環境特有のプロパティを追加します。 
-   
-   
 
     ``` properties
     mail.session.jndi.name=mail/DevMailSession
     ```
 
-
 2.  この`include-and-override`プロパティを`portal-ext.properties`ファイルの先頭に追加することで、新しい拡張子ファイルをプロパティソースとして含めます: 
-   
-   
 
     ``` properties
     include-and-override=portal-development.properties
     ```
-
 
 結果のプロパティソースの順序：
 
@@ -210,21 +171,13 @@ mail.session.jndi.name=mail/SomeMailSession
 
 結果の構成：
 
-
-
 ``` properties
 mail.session.jndi.name=mail/DevMailSession
 ```
 
-
-
-
 ```{tip}
 プロパティファイルを必要なだけ使用すると、DXP構成の管理が簡単になります。
 ```
-
-
-
 
 ## システム設定と構成ファイルの使用
 
@@ -238,8 +191,6 @@ DXPデータベースに格納されているプロパティは、ポータル�
 
 ## 追加情報
 
-  - [ポータルプロパティ](https://docs.liferay.com/ce/portal/7.3-latest/propertiesdoc/portal.properties.html)
-
-  - [システム設定](../../system-administration/configuring-liferay/system-settings.md)
-
-  - [構成ファイルについて](../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md)
+* [ポータルプロパティ](https://docs.liferay.com/ce/portal/7.3-latest/propertiesdoc/portal.properties.html)
+* [システム設定](../../system-administration/configuring-liferay/system-settings.md)
+* [構成ファイルについて](../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md)d

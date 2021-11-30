@@ -31,17 +31,19 @@ WARNING: All illegal access operations will be denied in a future release
 
 これらの警告は既知の問題（[LPS-87421](https://issues.liferay.com/browse/LPS-87421)）が原因で発生し、次のJVMオプションを追加することで解決できます。
 
-    --add-opens=java.base/java.awt.font=ALL-UNNAMED
-    --add-opens=java.base/java.io=ALL-UNNAMED
-    --add-opens=java.base/java.lang=ALL-UNNAMED
-    --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
-    --add-opens=java.base/java.net=ALL-UNNAMED
-    --add-opens=java.base/java.nio=ALL-UNNAMED
-    --add-opens=java.base/java.text=ALL-UNNAMED
-    --add-opens=java.base/java.util=ALL-UNNAMED
-    --add-opens=java.base/sun.nio.ch=ALL-UNNAMED
-    --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
-    --add-opens=java.xml/com.sun.org.apache.xerces.internal.parsers=ALL-UNNAMED
+```
+--add-opens=java.base/java.awt.font=ALL-UNNAMED
+--add-opens=java.base/java.io=ALL-UNNAMED
+--add-opens=java.base/java.lang=ALL-UNNAMED
+--add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+--add-opens=java.base/java.net=ALL-UNNAMED
+--add-opens=java.base/java.nio=ALL-UNNAMED
+--add-opens=java.base/java.text=ALL-UNNAMED
+--add-opens=java.base/java.util=ALL-UNNAMED
+--add-opens=java.base/sun.nio.ch=ALL-UNNAMED
+--add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+--add-opens=java.xml/com.sun.org.apache.xerces.internal.parsers=ALL-UNNAMED
+```
 
 ### サーバー機能を判別できない
 

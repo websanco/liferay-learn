@@ -1,6 +1,6 @@
 # System Properties
 
-DXP runs in the application server's JVM. System properties can be passed directly to the JVM as arguments to `java` in the format `-D[name1]=[value1]` or can be loaded using DXP System Properties files. System properties differ from [Portal Properties](./portal-properties.md) because they're available to the application server and all of its applications.
+Liferay DXP/Portal runs in the application server's JVM. System properties can be passed directly to the JVM as arguments to `java` in the format `-D[name1]=[value1]` or can be loaded using DXP System Properties files. System properties differ from [Portal Properties](./portal-properties.md) because they're available to the application server and all of its applications.
 
 Your application server's prescribed script is the safest place to add/modify system properties. It can be used to centralize the system properties. Passing all properties in as JVM arguments eliminates timing issues by setting all properties at application server startup. The application server, DXP, and all other web applications can use the properties immediately.
 

@@ -2,26 +2,26 @@
 
 デモンストレーション用のデフォルトでは、Liferay DXPは組み込みHSQLデータベースを使用するように構成されています。 デモの目的以外では、次のようなフル機能のサポートされているRDBMSを使用することをお勧めします。
 
-  - MySQL
-  - MariaDB
-  - Oracle
-  - PostgreSQL
+* MariaDB
+* MySQL
+* Oracle
+* PostgreSQL
 
 ```{note}
 [Liferay DXP互換性マトリックス](https://web.liferay.com/documents/14/21598941/Liferay+DXP+7.2+Compatibility+Matrix/b6e0f064-db31-49b4-8317-a29d1d76abf7) には、サポートされているデータベースとバージョンがリストされています。
 ``` <!-- TODO Update the matrix link to the 7.3 matrix, when it's published - jhinkey -->Liferay DXPをデータベースに接続するには、次の手順が必要です。
 
-  - [データベース設定](#database-configuration)
-  - [JDBCコネクタのインストール](#installing-a-jdbc-connector)
-  - [データソースの構成](#configure-a-data-source)
+* [データベース設定](#database-configuration)
+* [JDBCコネクタのインストール](#installing-a-jdbc-connector)
+* [データソースの構成](#configure-a-data-source)
 
 ## データベース設定
 
 データベースを選択したら、次の手順に従って構成します。
 
-  - [UTF-8に対応している空のデータベースを作成する](#creatre-a-blank-database-with-utf-8-support)
-  - [データベースユーザーアクセスを設定する](#configure-database-user-access)
-  - [クエリ結果の並べ替え順序を設定する（オプション）](#configure-the-query-result-sort-order-optional)
+* [UTF-8に対応している空のデータベースを作成する](#creatre-a-blank-database-with-utf-8-support)
+* [データベースユーザーアクセスを設定する](#configure-database-user-access)
+* [クエリ結果の並べ替え順序を設定する（オプション）](#configure-the-query-result-sort-order-optional)
 
 ```{important}
 データベースを変更する前に、必ずデータベースベンダーのドキュメントを参照してください。

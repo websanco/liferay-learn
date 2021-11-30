@@ -6,16 +6,16 @@ DXPは、アプリケーションサーバーのJVMで実行されます。 シ�
 
 ただし、DXPは、必要なプロパティを設定するための便宜として、 [`portal-impl.jar/system.properties`](https://docs.liferay.com/ce/portal/7.3-latest/propertiesdoc/system.properties.html) ファイルを使用します。 `system.properties` ファイルは、 `system-ext.properties` ファイルを使用して拡張またはオーバーライドできます。 システムプロパティファイルは、アプリケーションサーバーの起動後にポータルアプリケーションクラスローダーによって読み込まれます。 DXPがシステムプロパティを使用して構成するいくつかの機能を次に示します。
 
-  - ファイルのエンコーディング
-  - ロギング
-  - デフォルトのXMLパーサー構成
-  - JAXBコンテキストファクトリ
-  - JRubyネイティブ拡張を有効にする
+* ファイルのエンコーディング
+* ロギング
+* デフォルトのXMLパーサー構成
+* JAXBコンテキストファクトリ
+* JRubyネイティブ拡張を有効にする
 
 DXPは、次の方法でシステムプロパティファイルを使用します。
 
-  - DXP *は、システムプロパティ `system.properties.set` が `false`でない限り、 `system.properties` （および `system-ext.properties`）の新しいプロパティを使用して* プロパティを拡張します
-  - DXP *は、システムプロパティ `system.properties.set.override` が `false`でない限り、 `system.properties` （および `system-ext.properties`）の新しい値を使用して* プロパティをオーバーライドします。
+* DXP *は、システムプロパティ `system.properties.set` が `false`でない限り、 `system.properties` （および `system-ext.properties`）の新しいプロパティを使用して* プロパティを拡張します
+* DXP *は、システムプロパティ `system.properties.set.override` が `false`でない限り、 `system.properties` （および `system-ext.properties`）の新しい値を使用して* プロパティをオーバーライドします。
 
 ```{warning}
 アプリケーションサーバーの起動後のシステムプロパティの設定またはリセットにはリスクがあります
@@ -26,20 +26,24 @@ DXPは、次の方法でシステムプロパティファイルを使用しま�
 
 ここでは、システムプロパティを指定する両方の方法を示します。
 
-  - [システムプロパティを直接設定する](#setting-system-properties-directly)
-  - [`system-ext.properties` ファイルの使用](#using-a-system-ext-properties-file)
+* [システムプロパティを直接設定する](#setting-system-properties-directly)
+* [`system-ext.properties` ファイルの使用](#using-a-system-ext-properties-file)
 
 ## システムプロパティを直接設定する
 
 システムプロパティを設定するためのアプリケーションサーバーの規定のスクリプトは、プロパティを追加および変更するための推奨場所です。
 
 1.  次のシステムプロパティをアプリケーションサーバースクリプトのJVM引数として設定することにより、 `system.properties` および `system-ext.properties` ファイルの使用を無効にします。
-   
-        -Dsystem.properties.set=false -Dsystem.properties.set.override=false
+
+    ```bash
+    -Dsystem.properties.set=false -Dsystem.properties.set.override=false
+    ```
 
 2.  次の形式を使用して、新しい各プロパティをJVM引数として追加します。
-   
-        -D[name]=[value]
+
+    ```
+    -D[name]=[value]
+    ```
 
 3.  既存のプロパティを変更します。
 
@@ -69,4 +73,4 @@ Liferay DXPはシステムプロパティを柔軟に処理するので、シス
 
 ## 追加情報
 
-  - [ポータルプロパティ](./portal-properties.md)
+* [ポータルプロパティ](./portal-properties.md)

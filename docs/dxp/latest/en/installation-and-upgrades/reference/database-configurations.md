@@ -1,9 +1,9 @@
 # Database Configuration
 
-By default for demonstration purposes, Liferay DXP is configured to use an embedded HSQL database. Beyond demonstration purposes, we recommend using a full-featured, supported RDBMS, such as:
+By default for demonstration purposes, Liferay DXP/Portal is configured to use an embedded HSQL database. Beyond demonstration purposes, we recommend using a full-featured, supported RDBMS, such as:
 
-* MySQL
 * MariaDB
+* MySQL
 * Oracle
 * PostgreSQL
 
@@ -11,7 +11,7 @@ By default for demonstration purposes, Liferay DXP is configured to use an embed
 The [Liferay DXP Compatibility Matrix](https://help.liferay.com/hc/en-us/articles/360049238151) lists the supported databases and versions.
 ```
 
-Connecting Liferay DXP to a database requires:
+Connecting to a database requires:
 
 * [Database Configuration](#database-configuration)
 * [Installing a JDBC Connector](#installing-a-jdbc-connector)

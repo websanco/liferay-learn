@@ -91,4 +91,4 @@ After the database upgrade has been completed, make the following configuration 
 
 Once you have completed all of these steps, you have migrated off of a sharded environment to virtual instances on separate Liferay DXP servers together with your DXP upgrade.
 
-See the [Upgrade Overview](../upgrade-basics.md) for guidance on completing your upgrade.
+See [Upgrade Basics](../upgrade-basics.md) for guidance on completing your upgrade.

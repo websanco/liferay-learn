@@ -10,7 +10,7 @@ The Liferay Database Upgrade Tool is a client program for upgrading Liferay DXP 
 If you're upgrading from 6.2 or earlier, update your file store configuration. See the [Updating the File Store](../reference/file-store-updates.md) for more information.
 ```
 
-Modifying a database while it's detached from your Liferay instance allows you to [tune the database for upgrade operations](../upgrade-stability-and-performance/database-tuning-for-upgrades.md), [prune unnecessary data](../upgrade-stability-and-performance/database-tuning-for-upgrades.md) (e.g., unneeded versions of Web Content, Documents, and more) to improve upgrade performance, and resolve upgrade issues. These activities are especially important for upgrading DXP and any large, critical Portal environments safely and as quickly as possible. After you've accounted for tuning and pruning the database and completing relevant tasks described in the [Upgrade Overview](../upgrade-basics.md), you're ready to setup up the new installation and upgrade the database using the upgrade tool.
+Modifying a database while it's detached from your Liferay instance allows you to [tune the database for upgrade operations](../upgrade-stability-and-performance/database-tuning-for-upgrades.md), [prune unnecessary data](../upgrade-stability-and-performance/database-tuning-for-upgrades.md) (e.g., unneeded versions of Web Content, Documents, and more) to improve upgrade performance, and resolve upgrade issues. These activities are especially important for upgrading DXP and any large, critical Portal environments safely and as quickly as possible. After you've accounted for tuning and pruning the database and completing relevant tasks described in [Upgrade Basics](../upgrade-basics.md), you're ready to setup up the new installation and upgrade the database using the upgrade tool.
 
 If you're [upgrading to a new Liferay Docker image](../../installing-liferay/using-liferay-docker-images/upgrading-to-a-new-docker-image.md) and want to use the upgrade tool, use it from a [Liferay Tomcat Bundle](../../installing-liferay/installing-a-liferay-tomcat-bundle.md) of the new Liferay version. The tool is in the bundle's `tools/portal-tools-db-upgrade-client` folder.
 
@@ -161,4 +161,4 @@ If you run into issues, check the [upgrade report](../reference/upgrade-reports.
 
 ## Next Steps
 
-Revisit the [Upgrade Overview](../upgrade-basics.md) to see what's left to upgrade.
+Revisit [Upgrade Basics](../upgrade-basics.md) to see what's left to upgrade.
