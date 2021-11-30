@@ -40,7 +40,9 @@ JVMヒープに32gを超える割り当てをしないでください。 ヒー�
 
 **サバイバーの設定例**
 
-    -XX:SurvivorRatio=16 -XX:TargetSurvivorRatio=50 -XX:MaxTenuringThreshold=15
+```bash
+-XX:SurvivorRatio=16 -XX:TargetSurvivorRatio=50 -XX:MaxTenuringThreshold=15
+```
 
 **サバイバーの設定の説明**
 
@@ -56,10 +58,12 @@ JVMヒープに32gを超える割り当てをしないでください。 ヒー�
 
 **GC設定の例**
 
-    -XX:+UseParNewGC -XX:ParallelGCThreads=16
-    -XX:+UseConcMarkSweepGC
-    -XX:+CMSParallelRemarkEnabled -XX:+CMSCompactWhenClearAllSoftRefs
-    -XX:CMSInitiatingOccupancyFraction=85 -XX:+CMSScavengeBeforeRemark
+```bash
+-XX:+UseParNewGC -XX:ParallelGCThreads=16
+-XX:+UseConcMarkSweepGC
+-XX:+CMSParallelRemarkEnabled -XX:+CMSCompactWhenClearAllSoftRefs
+-XX:CMSInitiatingOccupancyFraction=85 -XX:+CMSScavengeBeforeRemark
+```
 
 **GC設定の説明**
 

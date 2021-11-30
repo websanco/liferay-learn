@@ -71,7 +71,7 @@ Your database server is ready for DXP.
 
 ## Start a File Store Server
 
-A DXP cluster requires a File Store accessible to all of the DXP cluster nodes. For convenience, this example uses a [DBStore File Store](../../../system-administration/file-storage/other-file-store-types/dbstore.md) configured on the DXP database. The database server already started in this example includes the File Store. Please see [Configuring File Storage](../../../system-administration/file-storage/configuring-file-storage.md) for information on configuring all File Store types.
+A DXP cluster requires a File Store accessible to all of the DXP cluster nodes. For convenience, this example uses a [DBStore File Store](../../../system-administration/file-storage/other-file-store-types/dbstore.md) configured on the DXP database. The database server already started in this example includes the File Store. Please see [Configuring File Storage](../../../system-administration/file-storage.md) for information on configuring all File Store types.
 
 ## Start a Search Engine Server
 

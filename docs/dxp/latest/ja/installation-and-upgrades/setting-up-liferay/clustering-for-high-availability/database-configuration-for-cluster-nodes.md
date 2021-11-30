@@ -38,7 +38,7 @@
     jdbc.write.password=[place your password here]
     ```
 
-    JDBC接続値の例については、[Database Templates](../../reference/database-templates.md)を参照してください。
+    JDBC接続値の例については、[データベーステンプレート](../../reference/database-templates.md)を参照してください。
 
 3.  書き込みデータソース(プレフィックスが`jdbc.write.`のデータソース)を使用して[カウンタ](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html#Counter)データソースを作成するようにDXPを設定します。 別のデータソースは常にカウンター専用です。
 

@@ -2,9 +2,9 @@
 
 Liferay DXPは、言語、タイムゾーンなどによるローカリゼーションをサポートしています。 英語（米国）の翻訳とGMTタイムゾーンがデフォルトですが、DXPには40以上の翻訳があり、任意のタイムゾーンに設定できます。 ローカリゼーションは、仮想インスタンス、各インスタンスのウィジェット、および個々のユーザーを対象としています。 DXPを設定すると、次のインターフェイスを使用して仮想インスタンスのデフォルトの言語とタイムゾーンを設定できます。
 
-  - [ポータルプロパティ](#portal-properties)：アプリケーションサーバーを起動する前に、プロパティファイルでデフォルトを指定します。
-  - [セットアップウィザード](#setup-wizard)：DXPの起動の一環として、UIを介してデフォルトを設定します。
-  - [コントロールパネル](#control-panel)：DXPインスタンスを起動した後、UIを介してデフォルトを変更します。
+* [ポータルプロパティ](#portal-properties)：アプリケーションサーバーを起動する前に、プロパティファイルでデフォルトを指定します。
+* [セットアップウィザード](#setup-wizard)：DXPの起動の一環として、UIを介してデフォルトを設定します。
+* [コントロールパネル](#control-panel)：DXPインスタンスを起動した後、UIを介してデフォルトを変更します。
 
 ## ポータルプロパティ
 
@@ -36,7 +36,7 @@ company.default.time.zone=Europe/Lisbon
 
 ## コントロールパネル
 
-仮想インスタンスのデフォルトの言語とタイムゾーンは、インスタンスの *Localization* ページを使用して変更できます。 手順については、[Configuring a Virtual Instance Localization](../../system-administration/configuring-liferay/virtual-instances/localization.md)を参照してください。
+仮想インスタンスのデフォルトの言語とタイムゾーンは、インスタンスの *Localization* ページを使用して変更できます。 手順については、[ローカリゼーション](../../system-administration/configuring-liferay/virtual-instances/localization.md)を参照してください。
 
 ## まとめ
 
@@ -44,6 +44,6 @@ DXPインスタンスのデフォルトの言語とタイムゾーンを構成�
 
 ## 追加情報
 
-  - [Configuring a Virtual Instance Localization](../../system-administration/configuring-liferay/virtual-instances/localization.md)
-  - [Overriding Global Language Keys](https://help.liferay.com/hc/en-us/articles/360029122551-Overriding-Global-Language-Keys)
-  - [Localizing Your Application](https://help.liferay.com/hc/en-us/articles/360028746692-Localizing-Your-Application)
+* [ローカリゼーション](../../system-administration/configuring-liferay/virtual-instances/localization.md)
+* [Overriding Global Language Keys](../../../en/liferay-internals/extending-liferay/overriding-global-language-keys.md)
+* [Localizing Your Application](https://help.liferay.com/hc/en-us/articles/360028746692-Localizing-Your-Application)

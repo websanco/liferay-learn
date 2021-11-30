@@ -6,13 +6,7 @@ By default Liferay does not copy cached entities between nodes. If an entity is 
 
 ![Liferay DXP's cache algorithm is extremely efficient.](./configuring-cluster-link/images/01.png)
 
-Clustering in DXP may be configured in different ways depending on your network and the location of your cluster nodes. The following topics concerning cluster link are covered in this article:
-
-**Contents:**
-
-* [Enabling Cluster Link](#enabling-cluster-link)
-* [Configuring Cluster Link](#configuring-cluster-link)
-* [Conclusion](#conclusion)
+Clustering in DXP may be configured in different ways depending on your network and the location of your cluster nodes. Start with enabling Cluster Link.
 
 ## Enabling Cluster Link
 

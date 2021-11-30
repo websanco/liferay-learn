@@ -1,4 +1,4 @@
-メールの構成
+# メールの構成
 
 ```{toctree}
 :maxdepth: 3
@@ -23,29 +23,17 @@ Liferay DXPは、メールサーバーを使用して、ユーザー登録とパ
 
 3.  [次のフィールド](#mail-configuration-reference)に値を入力します。
 
-      - **Incoming POP Server：**pop.gmail.com
-
-      - **Incoming Port：** 110
-
-      - **Use a Secure Network Connection：**Flagged
-
-      - **User Name：**joe.bloggs
-
-      - **Password：**\*\*\*\*\*
-
-      - **Outgoing SMTP Server：**smtp.gmail.com
-
-      - **Outgoing Port：**465
-
-      - **Use a Secure Network Connection：**Flagged
-
-      - **User Name：**joe.bloggs
-
-      - **Password：**\*\*\*\*\*
-
-      - **Manually specify additional JavaMail properties to override the above configuration：**指定する必要のある追加のプロパティがある場合は、ここで指定します。
-
-        ![メールサーバーの構成](./configuring-mail/images/01.png)
+    * **Incoming POP Server：** pop.gmail.com
+    * **Incoming Port：** 110
+    * **Use a Secure Network Connection：** Flagged
+    * **User Name：** joe.bloggs
+    * **Password：** \*\*\*\*\*
+    * **Outgoing SMTP Server：** smtp.gmail.com
+    * **Outgoing Port：** 465
+    * **Use a Secure Network Connection：** Flagged
+    * **User Name：** joe.bloggs
+    * **Password：** \*\*\*\*\*
+    * **Manually specify additional JavaMail properties to override the above configuration：** 指定する必要のある追加のプロパティがある場合は、ここで指定します。
 
 4.  *[Save]* をクリックします。
 
@@ -69,5 +57,5 @@ DXPがすぐにメールセッションに接続します。
 
 ## 追加情報
 
-  - [Configuring Default Email Senders](./configuring-mail/configuring-default-email-senders.md)
-  - [Alternative Email Configuration Methods](./configuring-mail/alternative-email-configuration-methods.md)
+* [Configuring Default Email Senders](./configuring-mail/configuring-default-email-senders.md)
+* [Alternative Email Configuration Methods](./configuring-mail/alternative-email-configuration-methods.md)

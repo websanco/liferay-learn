@@ -10,16 +10,18 @@ Liferay DXPは、XML（`.xml` ） アクティベーションキーを使用し�
 
 アクティベーションキーをお持ちの場合は、[Liferay Home](../reference/liferay-home.md)の`deploy`フォルダにコピーします。
 
-    [LIFERAY_HOME]
-        ├── data
-        ├── deploy
-        │   └── my-license.xml
-        ├── license
-        ├── logs
-        ├── osgi
-        ├── patching-tool
-        ├── tools
-        └── work
+```
+[LIFERAY_HOME]
+    ├── data
+    ├── deploy
+    │   └── my-license.xml
+    ├── license
+    ├── logs
+    ├── osgi
+    ├── patching-tool
+    ├── tools
+    └── work
+```
 
 登録を確認するメッセージがDXPコンソールに表示されます。
 

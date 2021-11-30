@@ -16,8 +16,8 @@
 
 4.  次のフィールドに値を入力します。
 
-      - 名前
-      - アドレス
+    * 名前
+    * アドレス
 
     ![デフォルトのメール送信者名とメールアドレスを変更する。](./configuring-default-email-senders/images/02.png)
 
@@ -45,11 +45,10 @@ announcements.email.to.address=noreply@domain.invalid
 
 次のメールはデフォルトでブラックリストに登録されており、DXPのインストールでは使用できません。
 
-  - `noreply@liferay.com
-`
-  - `test@liferay.com`
-  - `noreply@domain.invalid`
-  - `test@domain.invalid`
+* `noreply@liferay.com`
+* `test@liferay.com`
+* `noreply@domain.invalid`
+* `test@domain.invalid`
 
 上記のメールを使用しようとすると、`WARN`トレースが記録されます。
 
@@ -59,6 +58,6 @@ announcements.email.to.address=noreply@domain.invalid
 
 ## 追加情報
 
-* [Configuring Mail](../configuring-mail.md)
-* [Alternative Email Configuration Methods](./alternative-email-configuration-methods.md)
-* [Portal Properties](../../reference/portal-properties.md)
+* [メールの構成](../configuring-mail.md)
+* [代替の電子メールの設定方法](./alternative-email-configuration-methods.md)
+* [ポータルプロパティ](../../reference/portal-properties.md)

@@ -55,7 +55,7 @@ Edit your `portal-ext.properties` file following these steps to connect directly
     Add to `spring.configs`:
 
     ```
-        META-INF/dynamic-data-source-spring.xml
+    META-INF/dynamic-data-source-spring.xml
     ```
 
     Add to `spring.infrastructure.configs`:
@@ -118,4 +118,4 @@ Using a database cluster improves fault tolerance and DXP performance. Database 
 
 ## What's Next
 
-Now that you've configured the database for your cluster, you can continue addressing the [DXP clustering requirements](./clustering-for-high-availability.md#clustering-requirements). The next requirement is to make your [File Store](../../../system-administration/file-storage/configuring-file-storage.md) accessible to all nodes and configure each node with that File Store.
+Now that you've configured the database for your cluster, you can continue addressing the [DXP clustering requirements](./clustering-for-high-availability.md#clustering-requirements). The next requirement is to make your [File Store](../../../system-administration/file-storage.md) accessible to all nodes and configure each node with that File Store.

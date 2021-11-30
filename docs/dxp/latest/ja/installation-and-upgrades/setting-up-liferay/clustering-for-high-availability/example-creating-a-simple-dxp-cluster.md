@@ -16,7 +16,6 @@ DXPクラスタリングを学習する簡単な方法は、 [Dockerコンテナ
 この例は学習を目的としたものであり、本番環境のユースケースには適していません。 本番環境では、DXPサーバーへのリクエストの負荷分散用にHTTPサーバーを含め、読み取り専用操作と読み取り/書き込み操作に別々のデータベースサーバーを使用し、データベースサーバー、ファイルストアサーバー、および検索エンジンサーバーのクラスタリングと負荷分散を検討する必要があります。 詳細は、 [Clustering for High Availability](../clustering-for-high-availability.md) のすべての記事をお読みください。
 ```
 
-
 <!--
 ![DXP cluster environment.](./example-creating-a-simple-dxp-cluster/images/01.png)
 Should we remove this diagram since it includes a load balancer? -->
@@ -235,8 +234,8 @@ DXPコンテナを起動します。
 
 DXPクラスターノードは、次のURLで入手できます。
 
-  - DXP-1：<http://localhost:8080>
-  - DXP-2：<http://localhost:9080>
+* DXP-1：<http://localhost:8080>
+* DXP-2：<http://localhost:9080>
 
 次の図は、クラスターノードのホームページを示しています。
 
@@ -252,8 +251,8 @@ DXPコンテンツのインデックス作成を開始します。
 
 2.  [アクションをインデックスする]タブで、次のオプションをクリックします。
 
-      - *Reindex all search indexes*
-      - *Reindex all spell check indexes*
+    * *Reindex all search indexes*
+    * *Reindex all spell check indexes*
 
 コンテンツは検索エンジンにインデックス付けされます。 詳細は、 [Search Overview](../../../using-search/getting-started/search-overview.md)を参照してください。
 
@@ -299,5 +298,5 @@ DXPクラスター用に[データベース](./database-configuration-for-cluste
 
 ## 追加情報
 
-  - [クラスタノードのデータベース構成](./database-configuration-for-cluster-nodes.md)
-  - [Configuring Cluster Link](./configuring-cluster-link.md)
+* [クラスタノードのデータベース構成](./database-configuration-for-cluster-nodes.md)
+* [クラスタリンクの構成](./configuring-cluster-link.md)

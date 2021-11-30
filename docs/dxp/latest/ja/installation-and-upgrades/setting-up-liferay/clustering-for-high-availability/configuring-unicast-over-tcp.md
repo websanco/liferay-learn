@@ -4,9 +4,9 @@
 
 **内容：**
 
-  - [ユニキャスト構成](#unicast-configurations)
-  - [代替発見プロトコル](#alternative-discovery-protocols)
-  - [異なる制御およびトランスポートチャネルポートの使用](#using-different-control-and-transport-channel-ports)
+* [ユニキャスト構成](#unicast-configurations)
+* [代替発見プロトコル](#alternative-discovery-protocols)
+* [異なる制御およびトランスポートチャネルポートの使用](#using-different-control-and-transport-channel-ports)
 
 ## ユニキャスト構成
 
@@ -22,10 +22,10 @@
 
 2.  ノードが互いを見つけるために使用する検出プロトコルを選択します。 プロトコルの選択肢は次のとおりです。
 
-      - `TCPPing`
-      - `JDBCPing`
-      - `S3_Ping`
-      - `Rackspace_Ping`
+    * `TCPPing`
+    * `JDBCPing`
+    * `S3_Ping`
+    * `Rackspace_Ping`
 
     どれを選択すればよいかわからない場合は、TCPPingを使用してください。 これらの残りのステップでは、TCPPingを使用します。 他の詳細は、 [代替発見プロトコル](#alternative-discovery-protocols) を参照してください。
     
@@ -51,11 +51,13 @@
 
     **初期ホストについて：**
 
-      - 最初のホスト値がすべてのノードに対応していることを確認してください。 TCP XMLファイルまたはJVM引数で `initial_hosts` が指定されていない場合、 `localhost` が初期ホストです。
+    * 最初のホスト値がすべてのノードに対応していることを確認してください。 TCP XMLファイルまたはJVM引数で `initial_hosts` が指定されていない場合、 `localhost` が初期ホストです。
 
-      - TCP XMLファイルで初期ホストを指定する代わりに、次のようなJVM引数を使用してアプリサーバーにそれらを指定することもできます。
+    * TCP XMLファイルで初期ホストを指定する代わりに、次のようなJVM引数を使用してアプリサーバーにそれらを指定することもできます。
         
-            -Djgroups.tcpping.initial_hosts=192.168.224.154[7800],192.168.224.155[7800]
+        ```
+        -Djgroups.tcpping.initial_hosts=192.168.224.154[7800],192.168.224.155[7800]
+        ```
 
 6.  `tcp.xml` ファイルを各ノードの同じ場所にコピーして、TCPバインドポートが各ノードの未使用のポートに設定されていることを確認します。 たとえば、IPアドレス `192.168.224.155`のノードで、次のようにTCPPingを構成します。
 
@@ -134,8 +136,8 @@ JGroupsは、Rackspace Ping、BPing、File Pingなど、クラスターメンバ
 2.  `$LIFERAY.HOME/osgi/marketplace/Liferay Foundation - Liferay Portal - Impl.lpkg/com.liferay.Portal.cluster.multiple-[version].jar/lib/jgroups-[version].Final.jar/tcp.xml`から`tcp.xml`ファイルをDXPにアクセスできる場所に展開します。 jar/lib/jgroups-[version].Final.jar/tcp.xml</code>を、DXPウェブアプリケーションの`WEB-INF/classes`フォルダ内の`jgroups</0>というフォルダなど、DXPでアクセス可能な場所に移動します。</p></li>
 <li><p spaces-before="0"> 同じ場所に <code>tcp.xml` コピーを作成し、両方のファイルの名前を変更して、1つを制御チャネル用に、もう1つをトランスポートチャネル用に指定します。 たとえば、次のファイル名を使用できます。
 
-      - `tcp-control.xml`
-      - `tcp-transport.xml`
+    * `tcp-control.xml`
+    * `tcp-transport.xml`
 
 4.  ノードの [`portal-ext.properties` ファイル](../../reference/portal-properties.md) の [Cluster Linkプロパティ](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html#Cluster%20Link) を変更してCluster Linkを有効にし、各Cluster LinkチャネルのTCP XMLファイルをポイントします。
 
@@ -200,5 +202,5 @@ JGroupsは、Rackspace Ping、BPing、File Pingなど、クラスターメンバ
 
 ## 追加情報
 
-  - [Configuring Cluster Link](./configuring-cluster-link.md)
-  - [Clustering for High Availability](../clustering-for-high-availability.md)
+* [クラスタリンクの構成](./configuring-cluster-link.md)
+* [高可用性のクラスタリング](../clustering-for-high-availability.md)

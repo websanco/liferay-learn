@@ -53,6 +53,6 @@ DXPは次回の起動時にメールセッションに接続します。
 
 ## 追加情報
 
-  - [Configuring a Tomcat-Managed Mail Session](../../installing-liferay/installing-liferay-on-an-application-server/installing-on-tomcat.md#mail-configuration)
-  - [Configuring a WebSphere-Managed Mail Session](../../installing-liferay/installing-liferay-on-an-application-server/installing-on-websphere.md#mail-configuration)
-  - [Apache Tomcat 9 JavaMail Sessions](https://tomcat.apache.org/tomcat-9.0-doc/jndi-resources-howto.html#JavaMail_Sessions)
+* [Tomcatへのインストール](../../installing-liferay/installing-liferay-on-an-application-server/installing-on-tomcat.md#mail-configuration)
+* [WebSphereへのインストール](../../installing-liferay/installing-liferay-on-an-application-server/installing-on-websphere.md#mail-configuration)
+* [Apache Tomcat 9 JavaMail Sessions](https://tomcat.apache.org/tomcat-9.0-doc/jndi-resources-howto.html#JavaMail_Sessions)
