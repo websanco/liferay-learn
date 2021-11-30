@@ -7,7 +7,7 @@ Upgrading to a new major version (such as Liferay DXP 7.3) requires a different 
 ```
 
 ```{note}
-If you want to install a [hotfix](https://learn.liferay.com/dxp/latest/en/installation-and-upgrades/maintaining-a-liferay-installation/patching-dxp-7-3-and-earlier/understanding-patch-types-for-dxp-7-3-and-earlier.html#hotfixes), then follow [these steps](./deploying-to-the-liferay-service.md#deploying-hotfixes) instead.
+If you want to install a [hotfix](../../../../dxp/latest/en/installation-and-upgrades/maintaining-a-liferay-installation/patching-dxp-7-3-and-earlier/understanding-patch-types-for-dxp-7-3-and-earlier.md#hotfixes), then follow [these steps](./deploying-to-the-liferay-service.md#deploying-hotfixes) instead.
 ```
 
 ## Enabling Module Upgrades for DXP 7.3+
@@ -29,7 +29,7 @@ This allows your modules to perform the necessary upgrades for the new minor ver
 Minor version updates to Liferay DXP also require a change to your project's repository.
 
 ```{important}
-If you are using [clustered services](./setting-up-clustering-in-dxp-cloud.md) and updating to any version that changes the Liferay database schema (such as a [service pack](https://learn.liferay.com/dxp/latest/en/installation-and-upgrades/maintaining-a-liferay-installation/patching-dxp-7-3-and-earlier/understanding-patch-types-for-dxp-7-3-and-earlier.html#service-packs)), then follow [these steps](#updating-to-a-new-service-pack-with-clustering-enabled).
+If you are using [clustered services](./setting-up-clustering-in-dxp-cloud.md) and updating to any version that changes the Liferay database schema (such as a [service pack](../../../../dxp/latest/en/installation-and-upgrades/maintaining-a-liferay-installation/patching-dxp-7-3-and-earlier/understanding-patch-types-for-dxp-7-3-and-earlier.html#service-packs)), then follow [these steps](#updating-to-a-new-service-pack-with-clustering-enabled).
 ```
 
 Perform these steps to update and deploy changes in your project repository:
