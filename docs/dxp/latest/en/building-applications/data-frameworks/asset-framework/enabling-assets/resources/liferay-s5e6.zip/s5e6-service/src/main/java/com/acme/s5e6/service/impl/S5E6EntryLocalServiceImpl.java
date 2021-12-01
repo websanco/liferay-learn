@@ -44,16 +44,18 @@ public class S5E6EntryLocalServiceImpl extends S5E6EntryLocalServiceBaseImpl {
 			ServiceContext serviceContext)
 		throws PortalException {
 
-		User user = _userLocalService.getUser(userId);
-
 		S5E6Entry s5e6Entry = s5e6EntryPersistence.create(
 			counterLocalService.increment());
 
 		s5e6Entry.setUuid(serviceContext.getUuid());
 		s5e6Entry.setGroupId(groupId);
+
+		User user = _userLocalService.getUser(userId);
+
 		s5e6Entry.setCompanyId(user.getCompanyId());
 		s5e6Entry.setUserId(user.getUserId());
 		s5e6Entry.setUserName(user.getFullName());
+
 		s5e6Entry.setDescription(description);
 		s5e6Entry.setName(item);
 
