@@ -14,20 +14,19 @@ export const getLiferayAuthenticationToken = () => {
 };
 
 const baseFetch = async (url, {body, method = 'GET'} = {}) => {
-
-    let headers = new Headers({
+	let headers = new Headers({
 		'Content-Type': 'application/json',
-		'x-csrf-token': getLiferayAuthenticationToken()
-	})
+		'x-csrf-token': getLiferayAuthenticationToken(),
+	});
 
 	let apiPath = REACT_APP_LIFERAY_API;
 
-	if (getLiferayAuthenticationToken()===""){
+	if (getLiferayAuthenticationToken() === '') {
 		headers = new Headers({
-	    	'Authorization': 'Basic ' + btoa('test@liferay.com:test'), 
-			'Content-Type': 'application/json'
-	    });
-	    apiPath = "http://localhost:8080";
+			Authorization: 'Basic ' + btoa('test@liferay.com:test'),
+			'Content-Type': 'application/json',
+		});
+		apiPath = 'http://localhost:8080';
 	}
 
 	const response = await fetch(apiPath + '/' + url, {

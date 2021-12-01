@@ -7,11 +7,7 @@ import './common/styles/index.scss';
 
 class WebComponent extends HTMLElement {
 	connectedCallback() {
-
-		ReactDOM.render(
-			<Chart  />,
-			this
-		);
+		ReactDOM.render(<Chart />, this);
 	}
 }
 
