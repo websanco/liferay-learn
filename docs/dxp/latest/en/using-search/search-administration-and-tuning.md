@@ -6,9 +6,10 @@
 search-administration-and-tuning/synonym-sets.md
 search-administration-and-tuning/result-rankings.md
 search-administration-and-tuning/elasticsearch-indexes-reference.md
+search-administration-and-tuning/search-administration.md
 ```
 
-- Search Administration Panel Overview (Coming Soon)
+- [Search Administration Panel Overview](./search-administration-and-tuning/search-administration.md)
 - Understanding Localized Search (Coming Soon)
 
 ## Search Tuning
