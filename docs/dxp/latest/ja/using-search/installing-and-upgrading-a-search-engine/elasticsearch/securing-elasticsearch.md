@@ -335,4 +335,4 @@ Liferay 7.2のX-Pack Security構成の設定の完全な一覧は次のとおり
   - [Monitoring Elasticsearch](../../liferay-enterprise-search/monitoring-elasticsearch.md)
   - [Cross-Cluster Replication](../../liferay-enterprise-search/cross_cluster_replication.rst)
   - [Search Tuning](../../search_administration_and_tuning.rst)
-  - [Liferay Installation and Upgrades](../../../installation_and_upgrades.rst)
+  - [Liferay Installation and Upgrades](../../../installation-and-upgrades.md)

@@ -17,7 +17,7 @@ Contents
    building-applications
    liferay-internals
    headless_delivery
-   installation_and_upgrades
+   installation-and-upgrades
 
 Indices and tables
 ==================
