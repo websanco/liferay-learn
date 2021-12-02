@@ -15,7 +15,7 @@ The Liferay Enterprise Search Experiences app includes a suite of features grant
 
 ## Search Blueprints
 
-Search Blueprints is the first Search Experiences configuration framework. To learn about it's capabilities and fundamental components, see
+Search Blueprints is the first feature in the Search Experiences application. To learn about it's capabilities and fundamental components, see
 
 - [Understanding Blueprints](search-experiences/understanding-search-blueprints.md)
 - [Creating and Managing Blueprints](search-experiences/creating-and-managing-blueprints.md)
