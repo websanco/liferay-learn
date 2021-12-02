@@ -48,6 +48,6 @@ If the service doesn't have a `*ServiceUtil` class, use a [Service Tracker](../.
 
 ## Next Steps
 
-- [Running Scripts From the Script Console](./running-scripts-from-the-script-console.md)
-- [Using the Script Engine in Workflow](../../process-automation/workflow/developer-guide/using-the-script-engine-in-workflow.md)
-- [Script Examples](./script-examples.md)
+* [Running Scripts From the Script Console](./running-scripts-from-the-script-console.md)
+* [Using the Script Engine in Workflow](../../process-automation/workflow/developer-guide/using-the-script-engine-in-workflow.md)
+* [Script Examples](./script-examples.md)

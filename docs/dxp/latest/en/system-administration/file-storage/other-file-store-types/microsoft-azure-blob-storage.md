@@ -57,5 +57,5 @@ If you're using Azure Blob Storage store in a clustered environment, the configu
 
 ## Additional Information
 
-- [Azure Blob Storage Documentation](https://docs.microsoft.com/en-us/azure/storage/blobs/)
-- [Configuring File Storage](../configuring-file-storage.md)
+* [Azure Blob Storage Documentation](https://docs.microsoft.com/en-us/azure/storage/blobs/)
+* [Configuring File Storage](../configuring-file-storage.md)

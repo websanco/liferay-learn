@@ -15,4 +15,3 @@ To access these settings, open the Control Panel and navigate to *Configuration*
 | Delete temporary LAR during a failed staging publication process. | Uncheck to avoid deleting the temporary LAR during a failed staging publication process. In remote staging contexts, this only applies to the staging environment. |
 | Delete temporary LAR during a successful staging publication process. | Uncheck to avoid deleting the temporary LAR during a successful staging publication process. In remote staging contexts, this only applies to the staging environment. |
 | Use the virtual host of the remote site. | The remote environment's virtual host is used when accessing the remote live site from the staged site. |
-

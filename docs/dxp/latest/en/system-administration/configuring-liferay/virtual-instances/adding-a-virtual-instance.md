@@ -28,4 +28,4 @@ Click *Save* when you're done filling out the form.
 
 Now you can navigate to the instance using its domain name. You're brought to what looks like a clean install of Liferay DXP. This is your new Virtual Instance! You can configure it any way you like. 
 
-What follows is a description of all Virtual Instance options. 
+What follows is a description of all Virtual Instance options.

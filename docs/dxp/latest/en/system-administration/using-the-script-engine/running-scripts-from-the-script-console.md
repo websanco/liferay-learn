@@ -2,12 +2,12 @@
 
 The Script Console provides a single view for executing Groovy scripts and printing their output. It has predefined variables that facilitate working with widgets and users. The following topics get you started with the Script Console:
 
-- [Running a Sample Script in the Script Console](#running-a-sample-script-in-the-script-console)
-- [Predefined variables available in the Script Console](#predefined-variables)
-- [Tips for running scripts in the Script Console](#tips)
+* [Running a Sample Script in the Script Console](#running-a-sample-script-in-the-script-console)
+* [Predefined variables available in the Script Console](#predefined-variables)
+* [Tips for running scripts in the Script Console](#tips)
 
 ```{important}
-   The Script Console is for system operations and maintenance---it's not for end users. Limit Script Console access to portal administrators.
+The Script Console is for system operations and maintenance---it's not for end users. Limit Script Console access to portal administrators.
 ```
 
 Start with running the Script Console's sample script.
@@ -35,7 +35,7 @@ Here's how to run the sample script in the Script Console:
 The Groovy sample invokes the Liferay service utility [`UserLocalServiceUtil`](https://learn.liferay.com/reference/latest/en/dxp/javadocs/portal-kernel/com/liferay/portal/kernel/service/UserLocalServiceUtil.html) to get the user count. Then it uses `out` (a built-in `PrintWriter`) to write the count to the Script Console.
 
 ```{note}
-   If you use *System.out.println* instead of *out.println*, your output is printed to Liferay's log file rather than to the Script Console.
+If you use *System.out.println* instead of *out.println*, your output is printed to Liferay's log file rather than to the Script Console.
 ```
 
 ## Predefined Script Console Variables
@@ -74,10 +74,10 @@ userInfo.each {
 
 Keep these things in mind when using the Script Console:
 
-- There is no undo.
-- There is no preview.
-- Permissions checking is not enforced for local services.
-- Scripts are executed synchronously. Avoid executing scripts that might take a long time.
+* There is no undo.
+* There is no preview.
+* Permissions checking is not enforced for local services.
+* Scripts are executed synchronously. Avoid executing scripts that might take a long time.
 
 Use the Script Console cautiously and test your scripts on non-production systems before running them on production.
 
@@ -85,6 +85,6 @@ The script engine can be used outside of the Script Console, such as in a Kaleo 
 
 ## Additional Information
 
-- [Invoking Liferay services](./invoking-liferay-services-from-scripts.md)
-- [Using the Script Engine in Workflow](../../process-automation/workflow/developer-guide/using-the-script-engine-in-workflow.md)
-- [Script Examples](./script-examples.md)
+* [Invoking Liferay services](./invoking-liferay-services-from-scripts.md)
+* [Using the Script Engine in Workflow](../../process-automation/workflow/developer-guide/using-the-script-engine-in-workflow.md)
+* [Script Examples](./script-examples.md)

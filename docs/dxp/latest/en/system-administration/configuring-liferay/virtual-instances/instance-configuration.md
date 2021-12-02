@@ -41,10 +41,10 @@ The General entry specifies the Virtual Instance's configuration information, la
 
 **Main Configuration:** Configure this information for the Virtual Instance:
 
-- Set the name of the entity responsible for running the Virtual Instance.
-- Set the mail domain.
-- Set the virtual host.
-- Set the URLs to a CDN configured to serve static resources.
+* Set the name of the entity responsible for running the Virtual Instance.
+* Set the mail domain.
+* Set the virtual host.
+* Set the URLs to a CDN configured to serve static resources.
 
 **Navigation:** Set a home page for your virtual instance as well as default landing and logout pages. To set these pages, use the page's relative URL that follows the domain. For example, to set the default landing page to `http://localhost:8080/web/guest/login`, use `/web/guest/login`. You can use the variable `${liferay:screenName}` as part of the address to redirect Users to their personal pages upon login. For example, the User `marvin` has this default URL to his personal page:
 

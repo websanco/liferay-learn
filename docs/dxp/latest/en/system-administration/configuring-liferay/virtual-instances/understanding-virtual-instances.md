@@ -14,9 +14,9 @@ Perhaps you already have a server hosting a Liferay DXP installation and a datab
 
 Because of the unique domain name, visitors are directed to the correct Virtual Instance. Because Virtual Instances share an application server and OSGi container, they also share these customizations: 
 
--  All custom code you've deployed
--  [System-scoped configurations](../system-settings.md) (e.g., `.config` files and changes made in *Control Panel* &rarr; *Configuration* &rarr; *System Settings*). 
--  Application server configuration.
+*  All custom code you've deployed
+*  [System-scoped configurations](../system-settings.md) (e.g., `.config` files and changes made in *Control Panel* &rarr; *Configuration* &rarr; *System Settings*). 
+*  Application server configuration.
 
 You can add and manage Virtual Instances in *Control Panel* &rarr; *Configuration* &rarr; *Virtual Instances*.
 
@@ -24,9 +24,9 @@ You can add and manage Virtual Instances in *Control Panel* &rarr; *Configuratio
 
 You can configure an instance in *Control Panel* &rarr; *Configuration* &rarr; *Instance Settings*. The Instance Settings are organized into three sections: 
 
-- Platform
-- Security 
-- Content and Data
+* Platform
+* Security 
+* Content and Data
 
 This section of articles focuses on the *Platform* settings. 
 
@@ -34,6 +34,6 @@ This section of articles focuses on the *Platform* settings.
 
 ## Related Topics
 
-- [Security](../../../installation-and-upgrades/securing-liferay.md)
-- [Search](./../../using-search.md)
-- [System Settings](../system-settings.md)
+* [Security](../../../installation-and-upgrades/securing-liferay.md)
+* [Search](./../../using-search.md)
+* [System Settings](../system-settings.md)
