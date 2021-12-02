@@ -62,7 +62,7 @@ Your Site's theme has been updated.
 
 For a full length overview of how you can manage your Site's appearance, see [Managing Your Site's Appearance](../site-building/site-appearance/site-appearance.md).
 
-There are many themes available on the [Liferay Marketplace](../system-administration/installing-and-managing-apps/getting-started/using-marketplace.md) that can be used to quickly achieve a professional look and feel.
+There are many themes available on the [Liferay Marketplace](../system-administration/installing-and-managing-apps/using-marketplace.md) that can be used to quickly achieve a professional look and feel.
 
 You can also learn how to [create your own theme](../site-building/site-appearance/themes/introduction-to-themes.md).
 

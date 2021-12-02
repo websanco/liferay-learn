@@ -75,7 +75,7 @@ Congratulations! You have launched your on premises Liferay DXP instance.
 
 You can [sign in as your administrator user](../../getting-started/introduction-to-the-admin-account.md) and start building a solution on DXP/Portal. Or you can explore [additional setup](../setting-up-liferay.md) topics:
 
-* [Installing and Managing Apps](../../system-administration/installing-and-managing-apps/getting-started/installing-and-managing-apps.md)
+* [Installing and Managing Apps](../../system-administration/installing-and-managing-apps/installing-apps.md)
 * [Accessing Plugins During a Trial Period](../../system-administration/installing-and-managing-apps/installing-apps/accessing-ee-plugins-during-a-trial-period.md)
 * [Installing a Search Engine](../../using-search/installing-and-upgrading-a-search-engine/installing-a-search-engine.md)
 * [Securing Liferay](../securing-liferay.md)

@@ -34,7 +34,7 @@ You must satisfy all dependencies to compile and deploy a module successfully. A
 
 1. If you have unsatisfied dependencies, resolve them:
 
-    **For module dependencies,** deploy the needed modules. Please see [Installing and Managing Apps](../../../system-administration/installing-and-managing-apps/getting-started/installing-and-managing-apps.md) for more information.
+    **For module dependencies,** deploy the needed modules. Please see [Installing and Managing Apps](../../../system-administration/installing-and-managing-apps/installing-apps.md) for more information.
 
     **For library dependencies,** follow the instructions at [Resolving Third Party Library Dependencies](./resolving-third-party-library-package-dependencies.md).
 

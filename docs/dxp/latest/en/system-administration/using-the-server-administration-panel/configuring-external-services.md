@@ -3,7 +3,7 @@
 Liferay provides integration with external services for converting files and generating file previews. Three of these services can be enabled in the Server Administration settings: [ImageMagick](https://www.imagemagick.org/script/index.php), [Ghostscript](https://www.ghostscript.com/), and [Xuggler](http://www.xuggle.com/xuggler/).
 
 ```{important}
-As of Liferay 7.3.x, the Xuggler integration is deprecated. Users are advised to use Liferay's FFmpeg integration as an alternative. See [Enabling FFmpeg for Audio and Video Previews](../../content-authoring-and-management/documents-and-media/devops/configuring-document-previews.md) for more information.
+As of Liferay 7.3.x, the Xuggler integration is deprecated. Users are advised to use Liferay's FFmpeg integration as an alternative. See [Enabling FFmpeg for Audio and Video Previews](../../content-authoring-and-management/documents-and-media/devops/configuring-documents-and-media-previews.md) for more information.
 ```
 
 ![Enable ImageMagick, Ghostscript, and Xuggler from the External Services tab.](./configuring-external-services/images/01.png)

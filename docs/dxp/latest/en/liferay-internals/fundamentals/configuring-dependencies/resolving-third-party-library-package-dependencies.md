@@ -7,7 +7,7 @@ An application can rely on multiple OSGi modules. Resolving their Java package d
     * [Eclipse Orbit downloads \(select a build\)](https://download.eclipse.org/tools/orbit/downloads/)
     * [ServiceMix Bundles](https://mvnrepository.com/artifact/org.apache.servicemix.bundles)
 
-    If you find a module with the packages, [deploy](../../../system-administration/installing-and-managing-apps/getting-started/installing-and-managing-apps.md) it and [add a `compileOnly` dependency](./specifying-dependencies.md) on it. If there is no module for the packages, continue to the next step.
+    If you find a module with the packages, [deploy](../../../system-administration/installing-and-managing-apps/installing-apps.md) it and [add a `compileOnly` dependency](./specifying-dependencies.md) on it. If there is no module for the packages, continue to the next step.
 
 1. Check if Liferay already exports library packages you're using. If Liferay exports them, adjust your dependency per the instructions in [Exported Third Party Packages](../../reference/exported-third-party-packages.md).
 

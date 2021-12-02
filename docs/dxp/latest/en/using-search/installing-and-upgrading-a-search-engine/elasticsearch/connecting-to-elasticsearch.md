@@ -2,8 +2,8 @@
 
 After [setting up Elasticsearch](./installing-elasticsearch.md), you must connect Liferay to it using the Liferay Connector to Elasticsearch. Connection steps depend on the [connector](#available-liferay-elasticsearch-connectors) you're configuring:
 
-* Liferay 7.3+: Liferay Connector to Elasticsearch is included in Liferay 7.3 and 7.4.
-* Liferay 7.2: Liferay Connector to Elasticsearch is available on [Liferay Marketplace](../../../system-administration/installing-and-managing-apps/getting-started/using-marketplace.md).
+* Liferay 7.3: Liferay Connector to Elasticsearch is included in the Liferay DXP 7.3 and CE 7.3 GA4+. It's also available on [Liferay Marketplace](../../../system-administration/installing-and-managing-apps/using-marketplace.md).
+* Liferay 7.2: Liferay Connector to Elasticsearch is available on [Liferay Marketplace](../../../system-administration/installing-and-managing-apps/using-marketplace.md).
 
 Notable installation and configuration procedure differences are presented here. 
 
@@ -116,7 +116,7 @@ On Liferay 7.2, the bundled connector application and APIs are for Elasticsearch
    * CE: [Liferay CE Connector to Elasticsearch 7](https://web.liferay.com/en/marketplace/-/mp/application/170642090)
    * DXP: [Liferay Connector to Elasticsearch 7](https://web.liferay.com/en/marketplace/-/mp/application/170390307)
 
-1. [Install the LPKG](../../../system-administration/installing-and-managing-apps/installing-apps/installing-apps.md) by placing it in the folder
+1. [Install the LPKG](../../../system-administration/installing-and-managing-apps/installing-apps.md) by placing it in the folder
 
    ```bash
    [Liferay Home]/deploy

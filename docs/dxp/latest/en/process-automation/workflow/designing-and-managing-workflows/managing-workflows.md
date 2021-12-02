@@ -4,7 +4,7 @@ With the workflow framework, Users manage asset publication in custom-built work
 
 ## Workflow Definition Publication Permissions
 
-Users with permission to edit or publish workflow definitions can add [Groovy scripts](../../../system-administration/using-the-script-engine/using-the-script-engine.md) to the workflow. Access to the scripting engine means access to the server's Java Virtual Machine (JVM). Users with permission to publish (or edit) can therefore access any data within the reach of the JVM, such as data contained in a separate [Virtual Instance](../../../system-administration/configuring-liferay/virtual-instances/understanding-virtual-instances.md) of Liferay DXP.
+Users with permission to edit or publish workflow definitions can add [Groovy scripts](../../../system-administration/using-the-script-engine.md) to the workflow. Access to the scripting engine means access to the server's Java Virtual Machine (JVM). Users with permission to publish (or edit) can therefore access any data within the reach of the JVM, such as data contained in a separate [Virtual Instance](../../../system-administration/configuring-liferay/virtual-instances/understanding-virtual-instances.md) of Liferay DXP.
 
 Because of this far-reaching access, permission to create or edit workflow definitions is limited to Regular Administrators of the Default Virtual Instance. For Liferay DXP customers, Users (e.g., Site Administrators) can also edit and publish workflows with their access to the Kaleo Designer and Kaleo Forms Admin applications.
 

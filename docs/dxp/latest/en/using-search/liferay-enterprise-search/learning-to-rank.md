@@ -30,7 +30,7 @@ Now the Learning to Rank re-scoring process is skipped for queries entered into 
 
 There are some prerequisites for using Learning to Rank to re-score Liferay queries sent to Elasticsearch:
 
-- A [Liferay Enterprise Search](https://www.liferay.com/products/dxp/enterprise-search) (LES) subscription is required for Learning to Rank. Once you have a subscription, [download the Liferay Enterprise Search Learning to Rank](https://customer.liferay.com/en/downloads?p_p_id=com_liferay_osb_customer_downloads_display_web_DownloadsDisplayPortlet&_com_liferay_osb_customer_downloads_display_web_DownloadsDisplayPortlet_productAssetCategoryId=118191013&_com_liferay_osb_customer_downloads_display_web_DownloadsDisplayPortlet_fileTypeAssetCategoryId=118191060) LPKG file and [install it](../../system-administration/installing-and-managing-apps/installing-apps/installing-apps.md).
+- A [Liferay Enterprise Search](https://www.liferay.com/products/dxp/enterprise-search) (LES) subscription is required for Learning to Rank. Once you have a subscription, [download the Liferay Enterprise Search Learning to Rank](https://customer.liferay.com/en/downloads?p_p_id=com_liferay_osb_customer_downloads_display_web_DownloadsDisplayPortlet&_com_liferay_osb_customer_downloads_display_web_DownloadsDisplayPortlet_productAssetCategoryId=118191013&_com_liferay_osb_customer_downloads_display_web_DownloadsDisplayPortlet_fileTypeAssetCategoryId=118191060) LPKG file and [install it](../../system-administration/installing-and-managing-apps/installing-apps.md).
 
 - A remote Elasticsearch server with your data indexed into it.
 

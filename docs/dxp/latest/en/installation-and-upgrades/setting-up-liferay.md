@@ -101,7 +101,7 @@ The tasks described above are typically (but not always) completed first. In any
 
 ## Install Apps From Marketplace
 
-Improve your sites with [themes](../getting-started/changing-your-sites-appearance.md), connectors, and all kinds applications available on [Liferay Marketplace](https://web.liferay.com/marketplace). [Installing and managing apps](../system-administration/installing-and-managing-apps/getting-started/installing-and-managing-apps.md) has never been easier.
+Improve your sites with [themes](../getting-started/changing-your-sites-appearance.md), connectors, and all kinds applications available on [Liferay Marketplace](https://web.liferay.com/marketplace). [Installing and managing apps](../system-administration/installing-and-managing-apps/installing-apps.md) has never been easier.
 
 ## Configure Roles and Permissions
 

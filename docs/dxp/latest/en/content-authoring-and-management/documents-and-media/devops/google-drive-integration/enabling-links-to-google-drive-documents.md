@@ -1,6 +1,6 @@
 # Enabling Links to Google Drive Documents
 
-Liferay provides a Marketplace plugin for integrating Documents and Media with Google Drive. When enabled, you can create shortcuts to your Google Drive files that enable you to view and manage them via Documents and Media. This plugin is available for both [Liferay Portal CE](https://web.liferay.com/marketplace/-/mp/application/105847499) and [Liferay DXP](https://web.liferay.com/marketplace/-/mp/application/98011653) systems. See [Installing Apps](../../../../system-administration/installing-and-managing-apps/installing-apps/installing-apps.md) for how to install the Liferay Plugin for Google Drive.
+Liferay provides a Marketplace plugin for integrating Documents and Media with Google Drive. When enabled, you can create shortcuts to your Google Drive files that enable you to view and manage them via Documents and Media. This plugin is available for both [Liferay Portal CE](https://web.liferay.com/marketplace/-/mp/application/105847499) and [Liferay DXP](https://web.liferay.com/marketplace/-/mp/application/98011653) systems. See [Installing Apps](../../../../system-administration/installing-and-managing-apps/installing-apps.md) for how to install the Liferay Plugin for Google Drive.
 
 After installing it, you must set up your Google project and configure Liferay's Documents and Media application.
 
