@@ -33,7 +33,7 @@ Follow these steps to configure the mail session from the Control Panel:
     * **Password:** *****
     * **Manually specify additional JavaMail properties to override the above configuration:** If there are additional properties you need to specify, supply them here.
 
-      ![Configuring a Mail Server](./configuring-mail/images/01.png)
+    ![Configuring a Mail Server](./configuring-mail/images/01.png)
 
 1. Click *Save*.
 
