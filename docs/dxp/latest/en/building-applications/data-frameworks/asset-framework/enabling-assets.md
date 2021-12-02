@@ -1,6 +1,6 @@
 # Enabling Assets
 
-Many of Liferay's applications (e.g. Blogs, Documents and Media, Message Boards, etc.) are asset enabled out-of-the-box. You can publish your assets with the [Asset Publisher widget](../../../site-building/displaying-content/using-the-asset-publisher-widget/displaying-assets-using-the-asset-publisher-widget.md) or even create [Asset Libraries](../../../content-authoring-and-management/asset-libraries/asset-libraries-overview.md). With the help of Service Builder, you can asset enable your custom application. See the sample project below to learn how.
+Many of Liferay's applications (e.g. Blogs, Documents and Media, Message Boards, etc.) are asset enabled out-of-the-box. You can publish your assets with the [Asset Publisher widget](../../../site-building/displaying-content/using-the-asset-publisher-widget/displaying-assets-using-the-asset-publisher-widget.md) or even create [Asset Libraries](../../../content-authoring-and-management/asset-libraries/asset-libraries-overview.md). With the help of [Service Builder](../service-builder.md), you can asset enable your custom application. See the sample project below to learn how.
 
 ## Get the Sample Code
 
@@ -51,4 +51,32 @@ Many of Liferay's applications (e.g. Blogs, Documents and Media, Message Boards,
 1. The S5E6 Portlet is asset enabled and therefore the added entry automatically shows up in the Asset Publisher widget.
 
    ![The added entry automatically shows up in the Asset Publisher widget](./enabling-assets/images/01.png)
+
+## Modify the Service Model Definition
+
+This tutorial assumes that you have a working application that you created using Service Builder. To enable assets, make the following changes to your entity:
+
+1. Add the following data fields if you don't already have them defined:
+
+   ```xml
+   <!-- Group instance -->
+
+   <column name="groupId" type="long" />
+
+   <!-- Audit fields -->
+
+   <column name="companyId" type="long" />
+   <column name="userId" type="long" />
+   <column name="userName" type="String" />
+   <column name="createDate" type="Date" />
+   <column name="modifiedDate" type="Date" />
+   ```
+
+   The Asset Framework requires these fields to keep track of your application's data.
+
+1. Add an asset entry entity reference right before the closing `</entity>` tag. When a new entry is added with your application, a corresponding entry is added to Liferay's `AssetEntry` table.
+
+   ```xml
+   <reference entity="AssetEntry" package-path="com.liferay.portlet.asset" />
+   ```
 
