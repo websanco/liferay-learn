@@ -120,7 +120,7 @@ If you want to continue using the new Liferay version via Docker, leave off the 
 
 If the upgraded database is all you need, then enjoy using your new Liferay instance! If there's more to completing your upgrade, these articles can help you finish:
 
-* [Upgrade Overview](../upgrade-basics.md) describes all of the upgrade topics. Maybe there's a topic you still need to address.
+* [Upgrade Basics](../upgrade-basics.md) describes all of the upgrade topics. Maybe there's a topic you still need to address.
 
 * [Database Upgrade Options](../reference/database-upgrade-options.md) describes all the ways of upgrading the database in the context of the various DXP/Portal installation types.
 

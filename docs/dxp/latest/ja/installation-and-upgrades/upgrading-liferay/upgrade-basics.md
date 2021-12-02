@@ -110,5 +110,5 @@ Liferayデータベースをアップグレードするには、2つの方法が
 
 さらに、アップグレードに関連する以下のアップグレードシナリオを参照してください。
 
-  - [Upgrading a Sharded Environment](.other-upgrade-scenarios/upgrading-a-sharded-environment.md)
+  - [Upgrading a Sharded Environment](./other-upgrade-scenarios/upgrading-a-sharded-environment.md)
   - [Maintaining Clustered Installations](../maintaining-a-liferay-installation/maintaining-clustered-installations.md)

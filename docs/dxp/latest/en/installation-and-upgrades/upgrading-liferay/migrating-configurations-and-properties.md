@@ -10,7 +10,7 @@ Your current DXP installation's OSGi configurations (7.0+) and properties (such 
 
 ## Migrating Liferay Home and Application Server Files
 
-1. Merge the [Liferay Home files](../../maintaining-a-liferay-installation/backing-up.md#liferay-home) and [application server files](../../maintaining-a-liferay-installation/backing-up.md#application-server) that you have added and edited from your [backup](../../maintaining-a-liferay-installation/backing-up.md) to your installation. The files may include but are not limited to these:
+1. Merge the [Liferay Home files](../maintaining-a-liferay-installation/backing-up.md#liferay-home) and [application server files](../maintaining-a-liferay-installation/backing-up.md#application-server) that you have added and edited from your [backup](../maintaining-a-liferay-installation/backing-up.md) to your installation. The files may include but are not limited to these:
 
     * `/license/*`: Activation keys. (Subscription)
     * `/log/*`: Log files.
@@ -21,7 +21,7 @@ Your current DXP installation's OSGi configurations (7.0+) and properties (such 
 
 1. Replace the new installation's `[Liferay Home]/data` folder with the `[Liferay Home]/data` folder from your backup.
 
-1. Set up the [File Store (Document Library)](../../../system-administration/file-storage/configuring-file-storage.md) by copying it from your [backup](../../maintaining-a-liferay-installation/backing-up.md) to the new installation and or configuring the new installation to use it via a [`.config` file](../../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md#creating-configuration-files).
+1. Set up the [File Store (Document Library)](../../../system-administration/file-storage/configuring-file-storage.md) by copying it from your [backup](../maintaining-a-liferay-installation/backing-up.md) to the new installation and or configuring the new installation to use it via a [`.config` file](../../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md#creating-configuration-files).
 
 ## Updating Settings For the Database Upgrade
 

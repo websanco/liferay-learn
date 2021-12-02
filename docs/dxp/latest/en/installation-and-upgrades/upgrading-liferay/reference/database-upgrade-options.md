@@ -15,7 +15,7 @@ Here are the database upgrade options:
 * [Database Upgrade Tool](../upgrade-basics/using-the-database-upgrade-tool.md): While the server is offline, you can execute core and module database upgrades using the Database Upgrade Tool.
 
 ```{important}
-This is supplemental information for upgrading DXP/Portal databases. Please see [Upgrade Overview](../upgrade-basics/upgrade-overview.md) as a starting point for complete DXP/Portal upgrade instructions and see [Maintaining a Liferay Installation](../../maintaining-a-liferay-installation.md) for complete instructions on applying DXP/Portal updates and fix packs.
+This is supplemental information for upgrading DXP/Portal databases. Please see [Upgrade Basics](../upgrade-basics.md) as a starting point for complete DXP/Portal upgrade instructions and see [Maintaining a Liferay Installation](../../maintaining-a-liferay-installation.md) for complete instructions on applying DXP/Portal updates and fix packs.
 ```
 
 ## Database Upgrade Options for Schema Change Levels
@@ -32,7 +32,7 @@ Database upgrades can be performed from the new installation you're targeting or
 
 There are three types of DXP/Portal installations:
 
-1. [Liferay Docker image](../../installing-liferay/using-liferay-docker-images/docker-container-basics.md)
+1. [Liferay Docker image](../../installing-liferay/using-liferay-docker-images.md)
 1. [Liferay Tomcat Bundle](../../installing-liferay/installing-a-liferay-tomcat-bundle.md)
 1. [Application server (app server) + Liferay WAR (WAR) + dependencies](../../installing-liferay/installing-liferay-on-an-application-server/installing-on-tomcat.md)
 
@@ -67,5 +67,5 @@ Here are process summaries for using a Docker image or Tomcat Bundle to perform 
 
 ## Additional Information
 
-* [Upgrade Overview](../upgrade-basics/upgrade-overview.md)
+* [Upgrade Basics](../upgrade-basics.md)
 * [Maintaining a Liferay Installation](../../maintaining-a-liferay-installation.md)

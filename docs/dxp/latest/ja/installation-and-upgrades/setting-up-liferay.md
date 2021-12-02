@@ -8,11 +8,11 @@ setting-up-liferay/activating-liferay-dxp.md
 setting-up-liferay/initial-instance-localization.md
 setting-up-liferay/configuring_mail.md
 ../../system-administration/configuring-liferay/virtual-instances/users.md
-../../system-administration/file-storage.md
+../../system-administration/file-storage/configuring-file-storage.md
 ../../system-administration/file-storage/enabling-antivirus-scanning-for-uploaded-files.md
 ../../using-search/installing-and-upgrading-a-search-engine/installing-a-search-engine.md
 securing-liferay.md
-maintaining-a-liferay-dxp-installation/backing-up.md
+maintaining-a-liferay-installation/backing-up.md
 ../../system-administration/installing-and-managing-apps.md
 setting-up-liferay/using-a-cdn.md
 setting-up-liferay/clustering-for-high-availability.md
@@ -79,7 +79,7 @@ Liferay DXPを使用している場合は、 [アクティベーションキー�
 
 ## ファイルストレージの設定
 
-[ドキュメントとメディア](../content-authoring-and-management/documents-and-media/publishing-and-sharing/publishing-documents.md) 、添付ファイルおよびコンテンツへの画像の埋め込みを使用するには、ファイルストレージが必要です。  設定方法につては、[ファイル ストレージ](../system-administration/file-storage.md) を参照してください。
+[ドキュメントとメディア](../content-authoring-and-management/documents-and-media/publishing-and-sharing/publishing-documents.md) 、添付ファイルおよびコンテンツへの画像の埋め込みを使用するには、ファイルストレージが必要です。  設定方法につては、[ファイル ストレージ](../system-administration/file-storage/configuring-file-storage.md) を参照してください。
 
 ファイルストレージを設定した後、ウイルス対策のファイルスキャンを有効にすることを検討してください。 方法については、 [アップロードされたファイルのウイルス対策スキャンを有効にする](../system-administration/file-storage/enabling-antivirus-scanning-for-uploaded-files.md) を参照してください。
 
@@ -93,7 +93,7 @@ Liferayを保護することはとても重要です。 詳しくは [Liferayの
 
 ## バックアップの設定
 
-仮想インスタンスを開発する際には、必ずバックアップを取ってください。 ガイダンスについては、 [バックアップ](./maintaining-a-liferay-dxp-installation/backing-up.md) を参照してください。
+仮想インスタンスを開発する際には、必ずバックアップを取ってください。 ガイダンスについては、 [バックアップ](./maintaining-a-liferay-installation/backing-up.md) を参照してください。
 
 ## その他のセットアップ作業
 
@@ -136,5 +136,5 @@ LiferayのJVM、接続プールなどを最適なパフォーマンスに調整�
 Liferay DXPを使用していて、まだ [アクティブ化](./setting-up-liferay/activating-liferay-dxp.md) していない場合は、最初にアクティブ化してください。 次に、 [インスタンス設定](../system-administration/configuring-liferay/virtual-instances/instance-configuration.md) と上記の他のセットアップタスクに進みます。
 
 ```{important}
-本番環境に入る前に、インストールとデータをバックアップするためのプロセスを設定します。 詳しくは、 [バックアップ](./maintaining-a-liferay-dxp-installation/backing-up.md) を参照してください。
+本番環境に入る前に、インストールとデータをバックアップするためのプロセスを設定します。 詳しくは、 [バックアップ](./maintaining-a-liferay-installation/backing-up.md) を参照してください。
 ```

@@ -45,5 +45,5 @@ DXPインスタンスのデフォルトの言語とタイムゾーンを構成�
 ## 追加情報
 
 * [ローカリゼーション](../../system-administration/configuring-liferay/virtual-instances/localization.md)
-* [Overriding Global Language Keys](../../../en/liferay-internals/extending-liferay/overriding-global-language-keys.md)
+* [Overriding Global Language Keys](https://learn.liferay.com/dxp/latest/en/liferay-internals/extending-liferay/overriding-global-language-keys.html)
 * [Localizing Your Application](https://help.liferay.com/hc/en-us/articles/360028746692-Localizing-Your-Application)

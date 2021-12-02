@@ -1,11 +1,11 @@
 # DockerでDXPにパッチを適用する
 
-Liferayの[パッチ](../../maintaining-a-liferay-installation/patching-dxp-7-3-and-earlier.md) とパッチを適用するためのパッチツールを提供しています。 移行先の新しい DXPイメージ( [Docker Hub](https://hub.docker.com/r/liferay/dxp))として、フィックスパックとサービスパックを提供します。 Liferayは、コンテナにインストールするセキュリティフィックスパック、ホットフィックス、および新しいパッチツールバージョンも提供します。
+Liferayの[パッチ](../../maintaining-a-liferay-installation/patching-	7-3-and-earlier.md) とパッチを適用するためのパッチツールを提供しています。 移行先の新しい DXPイメージ( [Docker Hub](https://hub.docker.com/r/liferay/dxp))として、フィックスパックとサービスパックを提供します。 Liferayは、コンテナにインストールするセキュリティフィックスパック、ホットフィックス、および新しいパッチツールバージョンも提供します。
 
 > エンタープライズサブスクリプション
 
 ```{important}
-パッチを適用する前に、**必ず** データベースとインストールを [バックアップ](../../maintaining-a-liferay-dxp-installation/backing-up.md) してください。
+パッチを適用する前に、**必ず** データベースとインストールを [バックアップ](../../maintaining-a-liferay-installation/backing-up.md) してください。
 ```
 
 DXPコンテナのパッチに関するトピックは次のとおりです。

@@ -133,7 +133,7 @@ If you're patching a DXP bundle, continue with the basic patching steps below. I
 
     Only indexes that start with `LIFERAY_` OR `IX_` are updated. Make sure that your custom indexes do not use this naming convention.
 
-1. If you are installing DXP 7.3 back onto an application server, ZIP the patched DXP application from its [temporary location](#preparing-to-patch-dxp-on-an-application-server) back into a `.war` file and copy the file into your application server. Refer to the [DXP installation instructions](../../installing-liferay/installing_liferay_on_an_application_server.html) for your application server.
+1. If you are installing DXP 7.3 back onto an application server, ZIP the patched DXP application from its [temporary location](#preparing-to-patch-dxp-on-an-application-server) back into a `.war` file and copy the file into your application server. Refer to the [DXP installation instructions](../../installing-liferay/installing-liferay-on-an-application-server.md) for your application server.
 
 1. Start the application server again.
 

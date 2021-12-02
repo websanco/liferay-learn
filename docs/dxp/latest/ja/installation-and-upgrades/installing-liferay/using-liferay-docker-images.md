@@ -94,7 +94,7 @@ docker start [container]
 ```
 
 ```{warning}
-コンテナが再起動すると、そのエントリーポイントが再度実行されます（「 [Container Lifecycle and API](./container-lifecycle-and-api.md#lifecycle) 」を参照してください）。 [エントリーポイントを介して実行している](./running-scripts-in-containers.md) スクリプトが安全に再実行できることを確認してください。
+コンテナが再起動すると、そのエントリーポイントが再度実行されます（「 [Container Lifecycle and API](./container-lifecycle-and-api.md#lifecycle) 」を参照してください）。 [エントリーポイントを介して実行している](./using-liferay-docker-images/running-scripts-in-containers.md) スクリプトが安全に再実行できることを確認してください。
 ```
 
 これで、Liferayコンテナの開始、停止、監視の基本を理解できました。

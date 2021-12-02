@@ -23,7 +23,7 @@ While upgrading Liferay, you must account for the search experience when using E
 
    Don't forget to re-index the [Workflow Metrics indexes.](../../../../process-automation/workflow/using-workflows/using-workflow-metrics.md#re-indexing-workflow-metrics)
 
-1. [Upgrade Liferay.](../../../../installation-and-upgrades/upgrading-liferay/upgrade-basics/upgrade-overview.md)
+1. [Upgrade Liferay.](../../../../installation-and-upgrades/upgrading-liferay/upgrade-basics.md)
 
 1. [Re-index the search indexes and spell check dictionaries.](../../../../installation-and-upgrades/upgrading-liferay/upgrade-basics/post-upgrade-considerations.md)
 
@@ -136,4 +136,4 @@ To run the Groovy import script,
 * [Installing Elasticsearch](../installing-elasticsearch.md)
 * [Connecting to Elasticsearch](../connecting-to-elasticsearch.md)
 * [Securing Elasticsearch](../securing-elasticsearch.md)
-* [Upgrading Liferay](../../../../installation-and-upgrades/upgrading-liferay/upgrade-basics/upgrade-overview.md)
+* [Upgrading Liferay](../../../../installation-and-upgrades/upgrading-liferay/upgrade-basics.md)

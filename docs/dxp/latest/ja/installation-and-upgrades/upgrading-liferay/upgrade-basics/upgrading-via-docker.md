@@ -102,7 +102,7 @@ Dockerイメージを使用してアップグレードする手順は次のと�
 
 アップグレードされたデータベースで十分な場合は、新しいLiferayインスタンスを使用してください。 アップグレードの完了の他に作業が必要な場合は、以下の記事を参考にしてください。
 
-  - [Upgrade Overview](../upgrade-basics.md)では、アップグレードに関するすべてのトピックについて説明しています。 まだ対処しなければならないトピックが見つかるかもしれません。
+  - [Upgrade Basics](../upgrade-basics.md)では、アップグレードに関するすべてのトピックについて説明しています。 まだ対処しなければならないトピックが見つかるかもしれません。
 
   - [データベースアップグレードツールの使用](./using-the-database-upgrade-tool.md)では、Liferayサーバーのオフライン時にデータベースをアップグレードする方法を示しています。 アップグレードに時間がかかりすぎる場合は、[データベースの調整](../upgrade-stability-and-performance/database-tuning-for-upgrades.md)、 [不要なデータの削除](../upgrade-stability-and-performance/database-pruning-for-faster-upgrades.md)、[データベース アップグレード ツールの使用](./using-the-database-upgrade-tool.md)を検討してください。
 

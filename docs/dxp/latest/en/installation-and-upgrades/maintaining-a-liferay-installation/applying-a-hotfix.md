@@ -85,7 +85,7 @@ The Patching Tool applies Hotfixes. Here's how to configure it:
     If a module's changes are only internal, the changes are invisible to the OSGi framework, the module stays installed, and the module's state persists. Clearing the OSGi bundle state information before the next DXP startup ensures that such modules reinstall with the appropriate state.
     ```
 
-1. If you are installing DXP back onto an application server, ZIP the patched DXP application from its [temporary location](#preparing-to-patch-dxp-on-an-application-server) back into a `.war` file and copy the file into your application server. Refer to the [DXP installation instructions](../installing-liferay/installing_liferay_on_an_application_server.html) for your application server.
+1. If you are installing DXP back onto an application server, ZIP the patched DXP application from its [temporary location](#preparing-to-patch-dxp-on-an-application-server) back into a `.war` file and copy the file into your application server. Refer to the [DXP installation instructions](../installing-liferay/installing-liferay-on-an-application-server.md) for your application server.
 1. Start the application server again.
 
 Congratulations! You applied a Hotfix to your DXP installation.
