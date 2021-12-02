@@ -12,7 +12,7 @@ Contents
    creating_store_content
    promoting-products.md
    users-and-accounts.md
-   orders_and_fulfillment
+   orders-and-fulfillment.md
    store_administration
    add_ons_and_connectors
    developer-guide.md

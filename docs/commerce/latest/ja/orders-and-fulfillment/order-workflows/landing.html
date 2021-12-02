@@ -1,0 +1,23 @@
+<script type="module">
+	import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.esm.browser.min.js'
+
+	const page = new Vue({
+		el: '#landingPage',
+		data: {
+			cards: [
+				{
+					sectionName: '注文ワークフローの概要',
+					sectionURL: 'order-workflows/introduction-to-order-workflows.html',
+				},
+				{
+					sectionName: '注文ワークフローでの注文の承認または拒否',
+					sectionURL: 'order-workflows/approving-or-rejecting-orders-in-order-workflows.html',
+				},
+				{
+					sectionName: '注文ワークフローの有効化または無効化',
+					sectionURL: 'order-workflows/enabling-or-disabling-order-workflows.html',
+				}
+			]
+		}
+	})
+</script>

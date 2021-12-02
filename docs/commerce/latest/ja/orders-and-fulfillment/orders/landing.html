@@ -1,0 +1,31 @@
+<script type="module">
+	import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.esm.browser.min.js'
+
+	const page = new Vue({
+		el: '#landingPage',
+		data: {
+			cards: [
+				{
+					sectionName: '注文の処理',
+					sectionURL: 'orders/processing-an-order.html',
+				},
+				{
+					sectionName: '注文情報',
+					sectionURL: 'orders/order-information.html',
+				},
+				{
+					sectionName: '注文メニューリファレンスガイド',
+					sectionURL: 'orders/orders-menu-reference-guide.html',
+				},
+				{
+					sectionName: '注文ライフサイクル',
+					sectionURL: 'orders/order-life-cycle.html',
+				},
+				{
+					sectionName: '注文管理ステータスリファレンスガイド',
+					sectionURL: 'orders/order-management-statuses-reference-guide.html',
+				}
+			]
+		}
+	})
+</script>

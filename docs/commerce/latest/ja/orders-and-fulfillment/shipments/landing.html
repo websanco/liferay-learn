@@ -1,0 +1,27 @@
+<script type="module">
+	import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.esm.browser.min.js'
+
+	const page = new Vue({
+		el: '#landingPage',
+		data: {
+			cards: [
+				{
+					sectionName: '発送の概要',
+					sectionURL: 'shipments/introduction-to-shipments.html',
+				},
+				{
+					sectionName: '発送の作成',
+					sectionURL: 'shipments/creating-a-shipment.html',
+				},
+				{
+					sectionName: '発送のキャンセル',
+					sectionURL: 'shipments/cancelling-a-shipment.html',
+				},
+				{
+					sectionName: '発送管理リファレンスガイド',
+					sectionURL: 'shipments/shipments-management-reference-guide.html',
+				}
+			]
+		}
+	})
+</script>
