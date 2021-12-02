@@ -45,6 +45,7 @@ Here are the features deprecated in 7.3:
 | JQuery default global Liferay variables | Bundled (disabled) | You can bring back the old behaviour by setting the `Enable jQuery` property to `true` in the jQuery third-party [System Settings](../../../system-administration/configuring-liferay/system-settings.md). |
 | Liferay Bookmarks | Archived | No direct replacement. |
 | Liferay Mobile Device Detection Lite | Archived | No direct replacement. |
+| Liferay Push | Marketplace | Replaced by [Headless Delivery](../../../headless-delivery/using-liferay-as-a-headless-platform.md). |
 | Liferay Sync Connector and Sync Client | Marketplace and [downloads](https://web.liferay.com/downloads/liferay-sync) | No direct replacement. |
 | OpenAM / OpenSSO | Bundled | Deprecated in 7.2. Migrate to [SAML-based authentication](../../securing-liferay/configuring-sso/authenticating-with-saml.md). |
 | OpenID | Marketplace | Replaced by [OpenID Connect](../../securing-liferay/configuring-sso/using-openid-connect.md). Deprecated in 7.2. |
@@ -74,7 +75,7 @@ Here are the features moved to Maintenance Mode in 7.3:
 
 * Export/Import
 * Liferay Drools
-* Liferay Mobile Experience: Mobile SDK, Push
+* Liferay Mobile Experience: Mobile SDK
 * Liferay Reports
 * Site Templates
 

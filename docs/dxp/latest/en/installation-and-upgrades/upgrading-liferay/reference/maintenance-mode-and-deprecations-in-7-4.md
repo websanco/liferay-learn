@@ -1,6 +1,6 @@
 # Maintenance Mode and Deprecations in 7.4
 
-With each new DXP release, a feature may not warrant continued enhancements or may become obsolete. Stopping enhancements for a feature puts it in *Maintenance Mode*.
+With each new Liferay DXP and Liferay Portal release, a feature may not warrant continued enhancements or may become obsolete. Stopping enhancements for a feature puts it in *Maintenance Mode*.
 
 **Maintenance Mode:** The feature is supported but no longer being enhanced.
 
@@ -37,10 +37,11 @@ Here are the features deprecated in 7.4:
 | Feature | Availability | Notes |
 | :------ | :----------- | :---- |
 | App Builder, App Builder Workflow | Removed | Replaced by [Liferay Objects](../../../building-applications/objects.md). |
-| Bill of Materials (BOM) | Removed | To be replaced by Shop By Diagram. |
 | Bootstrap 3 & Bootstrap 4 compatibility layer | Removed | Opt in to adding a compatibility layer during [Theme upgrade](../../../site-building/site-appearance/themes/upgrading-a-theme.md) or manually add the layer.  |
+| Commerce Account Widget | Removed | Replaced by the DXP/Portal Accounts Widget |
 | Central Authentication Service (CAS) | Archived | Deprecated in 7.2. It is replaced by other solutions, including SAML, OpenID Connect, and Token-based SSO. |
 | Commerce Categories Navigation widget | Bundled | Replaced by [Display Page Templates](../../../site-building/displaying-content/using-display-page-templates/about-display-page-templates-and-display-pages.md) [Navigation Menu](../../../site-building/site-navigation/configuring-navigation-menus.md) support. |
+| Commerce Bill of Materials (BOM) | Removed | To be replaced by Shop By Diagram. |
 | Commerce Category Content widget | Bundled | Replaced by [Display Page Templates](../../../site-building/displaying-content/using-display-page-templates/about-display-page-templates-and-display-pages.md). |
 | Digest Authentication | Bundled | Digest Authentication  requires weak password hash storage, which is a vulnerability. |
 | Dynamic Data Lists | Bundled | Deprecated in 7.3. It is replaced by [Liferay Objects](../../../building-applications/objects.md). |
@@ -49,8 +50,7 @@ Here are the features deprecated in 7.4:
 | Google Login/SSO | Archived | Deprecated in 7.2. It is replaced by other solutions, including SAML, OpenID Connect, and Token-based SSO. |
 | JAAS support code | Bundled | No replacement. |
 | Liferay Mobile Device Detection Enterprise | Archived | Deprecated in 7.2. Contact 51Degrees for up-to-date definitions. |
-| Liferay Mobile Device Detection Enterprise | Archived | Deprecated in 7.2. It has no direct replacement. |
-| Liferay Push | Final | Replaced by [Headless Delivery](../../../headless-delivery/using-liferay-as-a-headless-platform.md). |
+| Liferay Screens | Removed. Final version released in 7.3. | No direct replacement; however, the Mobile SDK and Headless API support mobile application development. |
 | Liferay Sync Connector and Sync Client | Archived | Deprecated in 7.3. It has no direct replacement. |
 | Live Users | Bundled | Deprecated in 7.2. It is replaced by [Analytics Cloud](https://learn.liferay.com/analytics-cloud/latest/en/index.html) |
 | Mobile SDK | Removed | Replaced by [Headless Delivery](../../../headless-delivery/using-liferay-as-a-headless-platform.md). |
@@ -60,7 +60,7 @@ Here are the features deprecated in 7.4:
 | SOAP Web Services | Bundled (disabled by default) | Replaced by JSON web services, REST services, and GraphQL services. |
 | Solr Connector | Removed | Deprecated in 7.3. It is replaced by Elasticsearch. |
 | Theme: Hello World | Archived | Deprecated in 7.3. There is no direct replacement. |
-| Web Contnt Search widget | Archived |  |
+| Web Content Search widget | Archived |  |
 
 Features deprecated in earlier Liferay versions may also need to be considered, if you are upgrading from an earlier version.
 
