@@ -50,11 +50,11 @@ In a [clustered environment](../../../installation-and-upgrades/setting-up-lifer
 
 There are other built-in file storage methods available.
 
-- [Simple File System Store](./other-file-store-types/simple-file-system-store.md) uses the file system (local or a mounted share) to store files. This is the *default* file store.
+* [Simple File System Store](./other-file-store-types/simple-file-system-store.md) uses the file system (local or a mounted share) to store files. This is the *default* file store.
 
-- [S3 Store (Amazon Simple Storage Service)](./other-file-store-types/amazon-s3-store.md) uses Amazon's cloud-based storage.
+* [S3 Store (Amazon Simple Storage Service)](./other-file-store-types/amazon-s3-store.md) uses Amazon's cloud-based storage.
 
-- [DBStore (Database Storage)](./other-file-store-types/dbstore.md) stores files to the DXP database as `blobs`. DBStore's file size limit is 1 gigabyte. To store files larger than 1 gigabyte, use the Simple File System Store or the Advanced File System Store.
+* [DBStore (Database Storage)](./other-file-store-types/dbstore.md) stores files to the DXP database as `blobs`. DBStore's file size limit is 1 gigabyte. To store files larger than 1 gigabyte, use the Simple File System Store or the Advanced File System Store.
 
 ```{warning}
 File system based stores (Simple, Advanced, S3) do not have transaction rollback capability. If a database transaction rollback occurs in a Document Library, the transaction's file system changes are not reversed. Inconsistencies between Document Library files and those in the file system store can occur and may require manual synchronization. All stores except [DBStore](./other-file-store-types/dbstore.md) are vulnerable to this limitation.

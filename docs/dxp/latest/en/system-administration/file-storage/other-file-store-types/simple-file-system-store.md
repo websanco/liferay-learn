@@ -22,9 +22,9 @@ Here's an explanation of the file hierarchy in the `[Liferay Home]/data/document
 
 **Note:** A document's numeric file entry name and document ID differ in these ways:
 
-- They have independent counters.
-- The numeric file entry name is used in the storage file path but the document ID is not.
-- They're stored in different `DLFileEntry` table columns. The numeric file entry name is stored in the `name` column and the document ID is stored in the `fileEntryId` column.
+* They have independent counters.
+* The numeric file entry name is used in the storage file path but the document ID is not.
+* They're stored in different `DLFileEntry` table columns. The numeric file entry name is stored in the `name` column and the document ID is stored in the `fileEntryId` column.
 
 ```{warning}
 If a database transaction rollback occurs in a Document Library, the transaction's file system changes are **not** reversed. Inconsistencies between Document Library files and those in the file system store can occur and may require manual synchronization. All of the DXP stores except [DBStore](./dbstore.md) are vulnerable to this limitation.
