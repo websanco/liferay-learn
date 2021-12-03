@@ -154,7 +154,7 @@ When you close the Content Dashboard page, the default filter and sorting option
 
 > Some filter options are only available starting with Liferay 7.4+
 
-From the *Filter and Order* drop-down menu, you can choose these options: 
+From the *Filter and Order* drop-down menu, you can choose these options:
 
 | Filter | Description |
 | :--- | :--- |
