@@ -11,10 +11,9 @@ other-file-store-types/google-cloud-storage.md
 other-file-store-types/microsoft-azure-blob-storage.md
 ```
 
-```{raw} html
-:file: ../../landingpage_template.html
-```
-
-```{raw} html
-:file: other-file-store-types/landing.html
-```
+* [Simple Fie System Store](./other-file-store-types/simple-file-system-store.md)
+* [Amazon S3 Store](./other-file-store-types/amazon-s3-store.md)
+* [DBStore](./other-file-store-types/dbstore.md)
+* [IBM Cloud Object Storage](./other-file-store-types/ibm-cloud-object-storage.md)
+* [Google Cloud Storage](./other-file-store-types/google-cloud-storage.md)
+* [Microsoft Azure Blog Storage Service](./other-file-store-types/microsoft-azure-blob-storage.md)
