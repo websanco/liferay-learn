@@ -74,8 +74,6 @@ You can add a custom order status to alter the out-of-the-box order flow. Below,
 
  ![The new order status in action.](./implementing-a-custom-order-status/images/05.gif)
 
- <!-- I stopped here because the image above seems to be missing. I'll send feedback in a separate file; please go over this entire article with the feedback in mind. Thanks! -Rich --> 
-
 ## Order Status Walk Through
 
 Let's look at the example implementation in 3 steps. First, you must annotate the class for OSGi registration. Next, review the [`CommerceOrderStatus`](https://github.com/liferay/liferay-portal/blob/master/modules/apps/commerce/commerce-api/src/main/java/com/liferay/commerce/order/status/CommerceOrderStatus.java) interface. Finally, finish the implementation of the custom CommerceOrderStatus.
