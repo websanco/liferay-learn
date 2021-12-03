@@ -9,7 +9,7 @@ Files can be migrated from one file store type to another. Here are some migrati
 The Data Migration utility in [Server Administration](../using-the-server-administration-panel.md) facilitates the migration.
 
 ```{warning}
-**Always** [back up](../../installation-and-upgrades/maintaining-a-liferay-dxp-installation/backing-up.md) your file store and database before migrating. Testing the migration process on backup copies is advised.
+**Always** [back up](../../installation-and-upgrades/maintaining-a-liferay-installation/backing-up.md) your file store and database before migrating. Testing the migration process on backup copies is advised.
 ```
 
 ## Migrating Files
