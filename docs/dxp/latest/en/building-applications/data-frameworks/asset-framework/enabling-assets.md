@@ -80,3 +80,83 @@ This tutorial assumes that you have a working application that you created using
    <reference entity="AssetEntry" package-path="com.liferay.portlet.asset" />
    ```
 
+1. Re-run Service Builder. 
+
+   ```bash
+   ./gradlew s5e6-service:buildService
+   ```
+
+## Update the Service Layer
+
+To add your custom entity as a Liferay asset, you must invoke the `assetEntryLocalService`'s `updateEntry()` method in your project's `-LocalServiceImpl` Java class. Calling `assetEntryLocalService.updateEntry()` adds a new row (corresponding to the application's entry) to the `AssetEntry` table. The `updateEntry()` method both adds and updates asset entries because it checks to see whether the asset entry exists and then takes appropriate action.
+
+
+Here's what it looks like in the example project:
+
+```{literalinclude} ./enabling-assets/resources/liferay-s5e6.zip/s5e6-service/src/main/java/com/acme/s5e6/service/impl/S5E6EntryLocalServiceImpl.java
+:dedent: 1
+:language: java
+:lines: 64-73
+```
+
+If you check the Javadocs for the [`AssetEntryLocalServiceImpl` class](https://learn.liferay.com/reference/latest/en/dxp/javadocs/portal-impl/com/liferay/portlet/asset/service/impl/AssetEntryLocalServiceImpl.html#updateEntry-long-long-java.util.Date-java.util.Date-java.lang.String-long-java.lang.String-long-long:A-java.lang.String:A-boolean-boolean-java.util.Date-java.util.Date-java.util.Date-java.util.Date-java.lang.String-java.lang.String-java.lang.String-java.lang.String-java.lang.String-java.lang.String-int-int-java.lang.Double-), you'll see that the method is overloaded. We use the version of `updateEntry()` that takes a `title` parameter to set the asset entry's title. 
+
+Re-run Service Builder after making the change.
+
+## Create an Asset Renderer
+
+Assets are display versions of entities, so they contain fields such as `title`, `description`, and `summary`. Liferay uses these fields to display assets. Asset renderers translate an entity into an asset via these fields. You must therefore create an Asset renderer class for your application.
+
+1. In you application, create a `-AssetRender` class that extends Liferay's `BaseJSPAssetRenderer` class. For example,
+
+   ```java
+   public class S5E6EntryAssetRenderer extends BaseJSPAssetRenderer<S5E6Entry> {
+
+   }
+   ```
+
+1. Define the asset renderer class's constructor:
+
+   ```java
+   	public S5E6EntryAssetRenderer(S5E6Entry s5e6Entry) {
+		_s5e6Entry = s5e6Entry;
+	}
+   ```
+
+1. Connect your asset renderer to your asset by using the following getter methods:
+
+   ```{literalinclude} ./enabling-assets/resources/liferay-s5e6.zip/s5e6-web/src/main/java/com/acme/s5e6/web/internal/asset/model/S5E6EntryAssetRenderer.java
+   :dedent: 1
+   :language: java
+   :lines: 20-72
+   ```
+
+   Note that in this example the `getTitle()` method is set to the `name` attribute and `getSummary()` method is set to the `description` attribute of the application.
+
+## Create an Asset Renderer Factory
+
+After creating an asset renderer, you need to create a factory class to generate asset renderers for each asset instance. 
+
+1. In the same folder as above, create an `-AssetRendererFactory` class that extends Liferay's `BaseAssetRendererFactory` class. For example,
+
+   ```java
+   public class S5E6EntryAssetRendererFactory extends BaseAssetRendererFactory<S5E6Entry> {
+
+   }
+   ```
+
+1. Create an `@Component` annotation above the class declaration. This annotation registers the factory instance for the asset. The `service` element should point to the `AssetRenderFactory.class` interface.
+
+   ```java
+   @Component(service = AssetRendererFactory.class)
+   ```
+
+1. Create a constructor for the factory class that presets attributes of the factory.
+
+   ```{literalinclude} ./enabling-assets/resources/liferay-s5e6.zip/s5e6-web/src/main/java/com/acme/s5e6/web/internal/asset/model/S5E6EntryAssetRendererFactory.java
+   :dedent: 1
+   :language: java
+   :lines: 24-29
+   ```
+
+## Modify the Portlet
