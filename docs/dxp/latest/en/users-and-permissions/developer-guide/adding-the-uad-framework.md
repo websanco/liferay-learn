@@ -148,7 +148,7 @@ This tutorial assumes that you have a working application that you created using
 
 ## Modify the Portlet
 
-When you pass the specific to your application from the form, you must also pass the user-related data fields you added in the `service.xml` file.
+When you pass the data fields specific to your application from the form, you must also pass the user-related data fields you added in the `service.xml` file.
 
 ```{literalinclude} ./adding-the-uad-framework/resources/liferay-h6d2.zip/h6d2-web/src/main/java/com/acme/h6d2/web/internal/portlet/H6D2Portlet.java
 :language: java
