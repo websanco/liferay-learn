@@ -169,5 +169,5 @@ Submitting the `ActionRequest` with the `actionURL` invokes the portlet's `addH6
 ## Additional Information
 
 * [Managing User Data](../managing-user-data.md)
-* [Service Builder](../../developing-applications/data-frameworks/service-builder.md)
-* [Using MVC](../../developing-applications/developing-a-java-web-application/using-mvc.md)
+* [Service Builder](../../building-applications/data-frameworks/service-builder.md)
+* [Using MVC](../../building-applications/developing-a-java-web-application/using-mvc.md)
