@@ -7,6 +7,8 @@ search-experiences/understanding-search-blueprints.md
 search-experiences/creating-and-managing-blueprints.md
 ```
 
+> **Liferay Enterprise Search (LES) Subscribers**
+
 The Liferay Enterprise Search Experiences app includes a suite of features granting fine-grained control over the end user's search experience. As the search administrator you can use Search Experiences for search customizations varying in complexity:
 
 - Make minor tweaks to Liferay's default search page behavior
@@ -26,4 +28,4 @@ Liferay Search Experiences is available to Liferay DXP customers with a [Liferay
 
 * In Liferay DXP 7.4 Search Experiences is a bundled bundled application, like all the LES apps.
     <!-- starting with DXP 7.4 UpdateX. (X to be specified). There will also be a Feature Flag to enable the feature. (https://issues.liferay.com/browse/LPS-142956) -->
-* In Liferay DXP 7.3 Search Experiences is available to LES subscribers through the Customer Portal. See [Liferay Enterprise Search for Liferay DXP 7.3](https://customer.liferay.com/downloads/-/download/liferay-enterprise-search-for-liferay-dxp-7-3).
+* In Liferay DXP 7.3 Search Experiences is available to LES subscribers through the Customer Portal as an add-on application. See [Liferay Enterprise Search for Liferay DXP 7.3](https://customer.liferay.com/downloads/-/download/liferay-enterprise-search-for-liferay-dxp-7-3).

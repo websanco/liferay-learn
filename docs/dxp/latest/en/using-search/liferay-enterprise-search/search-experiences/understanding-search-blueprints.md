@@ -23,9 +23,9 @@ Simply put, Blueprints are comprised of Elements, with some additional configura
 
 To create a Blueprint, start with the use case you have in mind. What do you need to change about the default search page experience? Then look at the provided Elements and see if they can be used to start building your customization. Once you've planned the Blueprint, it's time to create it.
 
-For more details see [Creating and Managing Blueprints](./creating-and-managing-blueprints.md).
+For more details see [Creating and Managing Blueprints](./creating-and-managing-blueprints.md) and [Planning a Blueprint](./planning-a-blueprint.md) (not yet written).
 
-## What can I do in the Blueprints UI?
+## What Can I Do in the Blueprints UI?
 
 To produce a search solution using Blueprints, compose Elements into a Blueprint and apply it to the page. The features available for doing so include:
 
@@ -39,10 +39,26 @@ To produce a search solution using Blueprints, compose Elements into a Blueprint
 | Create advanced Blueprints settings by editing the JSON directly | &#10004; |
 | Choose which Liferay Entities are searchable when the Blueprint is applied | &#10004; |
 | Choose whether to include clauses from Liferay's Indexers and Keyword Query Contributors | &#10004; |
-| Using JSON, configure advanced settings: Facets, Sorts, Highlights, etc. | &#10004; |
+| Using JSON, configure advanced settings: Aggregations, Sorts, Highlights, etc. | &#10004; |
 
 In addition to the functionality of the Search Blueprints UI, the search widgets were enhanced to support applying Blueprints to the search page.
 
+## Understanding the Search Query
+
+Since Blueprints affect the default Liferay search query, you should understand what a query is and what the default query looks like, with some of its main components.
+
+Let's dive right in by looking at a small section of Liferay's default search query.
+
+
+
+we have to provide more details on what a "clause" means. 
+dissect an Elasticsearch query, naming the main sections and pointing out what a blueprint can effect/contribute.
+this could be supported with visual aide like a query JSON with pointers to the main sections. I remember seeing somewhere a picture in petteri's docs.
+
+There also additional terms we should introduce to the reader besides elements and blueprints: search query, filter, clause.
+
+
+
 ## What's Next?
 
-See [Creating and Managing Blueprints](./creating-and-managing-blueprints.md).
+- [Creating and Managing Blueprints](./creating-and-managing-blueprints.md).
