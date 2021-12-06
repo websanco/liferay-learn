@@ -73,6 +73,6 @@ Liferay Portalのインスタンスで[OpenOffice/LibreOfficeの統合を有効]
 
 ## 関連情報
 
-  - [Content Authoring and Management](../../content_authoring_and_management.html)
+  - [Content Authoring and Management](../../content-authoring-and-management.html)
   - [Displaying Content on Display Pages Templates](./using-display-page-templates/displaying-content-with-display-page-templates.md)
   - [Displaying Assets](./using-the-asset-publisher-widget/displaying-assets-intro.md)

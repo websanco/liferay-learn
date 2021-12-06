@@ -15,7 +15,7 @@ The *Site Menu* indicates the selected Site. In the above example, the Site is `
 The following common site building and management activities can be done in the _Site Menu_:
 
 * [Adding Pages](../site-building/creating-pages/adding-pages/adding-a-page-to-a-site.md)
-* [Creating Content](../content_authoring_and_management.html)
+* [Creating Content](../content-authoring-and-management.html)
 * [Managing Site Memberships](../site-building/building-sites/site-membership/adding-members-to-sites.md)
 * [Configuring and Optimizing Site Behavior and Functionality](../site_building.html)
 * And more...

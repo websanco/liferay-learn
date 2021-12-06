@@ -21,7 +21,7 @@ This leads to the Library's menu page. From here, you can access the Library's a
 
 To create content in an Asset Library, first go to the Library's menu page, and click on the desired application. From here, creating content is essentially the same as creating it in a Site. The only differences are its scope and default theme settings.
 
-See [Content Authoring and Management](../../content_authoring_and_management.html) articles for more information about creating each type of content.
+See [Content Authoring and Management](../../content-authoring-and-management.html) articles for more information about creating each type of content.
 
 ```{note}
 Only active applications appear on a Library's menu page. To activate or deactivate an application, see [Configuring Asset Libraries](./creating-and-managing-asset-libraries.md#configuring-asset-libraries) for more information.

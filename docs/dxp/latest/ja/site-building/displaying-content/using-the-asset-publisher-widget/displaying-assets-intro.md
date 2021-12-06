@@ -1,6 +1,6 @@
 # アセットの表示
 
-Web コンテンツを作成するときは、メッセージ ボードのエントリやブログ投稿と同じように、[コンテンツ](../../../content_authoring_and_management.rst)の構成要素がアセットであることに留意してください。 アセットの最も一般的なタイプは[Webコンテンツ](../../../content-authoring-and-management/web-content/web-content-articles/adding-a-basic-web-content-article.md)です。 アセットパブリッシャーは、デフォルトで次のアセット タイプをサポートしています。
+Web コンテンツを作成するときは、メッセージ ボードのエントリやブログ投稿と同じように、[コンテンツ](../../../content-authoring-and-management.md)の構成要素がアセットであることに留意してください。 アセットの最も一般的なタイプは[Webコンテンツ](../../../content-authoring-and-management/web-content/web-content-articles/adding-a-basic-web-content-article.md)です。 アセットパブリッシャーは、デフォルトで次のアセット タイプをサポートしています。
 
   - ブログのエントリ
   - ブックマークエントリー
