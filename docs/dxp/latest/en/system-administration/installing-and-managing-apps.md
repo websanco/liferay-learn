@@ -6,7 +6,6 @@
 installing-and-managing-apps/using-marketplace.md
 installing-and-managing-apps/installing-apps.md
 installing-and-managing-apps/managing-apps.md
-
 ```
 
 You can add all kinds of functionality to your DXP installation by purchasing and installing apps. Apps are available in the [Liferay Marketplace](./installing-and-managing-apps/using-marketplace.md), and tools such as the [App Manager](./installing-and-managing-apps/managing-apps/using-the-app-manager.md) are also available to help you manage apps in your installation.
