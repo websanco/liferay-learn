@@ -43,6 +43,6 @@ DXPインスタンスが、新しく設定されたファイルストア上に�
 
 ## 追加情報
 
-  - [ファイルストレージの構成](./configuring-file-storage.md)
+  - [ファイルストレージの構成](../file-storage.md)
   - [Amazon S3 Store](./other-file-store-types/amazon-s3-store.md)
   - [DBStore](./other-file-store-types/dbstore.md)

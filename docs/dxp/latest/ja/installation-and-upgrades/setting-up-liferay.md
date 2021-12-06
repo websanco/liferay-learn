@@ -6,7 +6,7 @@
 setting-up-liferay/activating-liferay-dxp.md
 ../../system-administration/configuring-liferay/virtual-instances/instance-configuration.md
 setting-up-liferay/initial-instance-localization.md
-setting-up-liferay/configuring_mail.md
+setting-up-liferay/configuring-mail.md
 ../../system-administration/configuring-liferay/virtual-instances/users.md
 ../../system-administration/file-storage.md
 ../../system-administration/file-storage/enabling-antivirus-scanning-for-uploaded-files.md

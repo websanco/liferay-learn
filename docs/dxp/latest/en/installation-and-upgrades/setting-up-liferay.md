@@ -8,7 +8,7 @@ setting-up-liferay/activating-liferay-dxp.md
 setting-up-liferay/initial-instance-localization.md
 setting-up-liferay/configuring-mail.md
 ../system-administration/configuring-liferay/virtual-instances/users.md
-../system-administration/file-storage/configuring-file-storage.md
+../system-administration/file-storage.md
 ../system-administration/file-storage/enabling-antivirus-scanning-for-uploaded-files.md
 ../using-search/installing-and-upgrading-a-search-engine/installing-a-search-engine.md
 securing-liferay.md
@@ -79,7 +79,7 @@ Visit [Users](../system-administration/configuring-liferay/virtual-instances/use
 
 ## Configure File Storage
 
-Using [Documents and Media](../content-authoring-and-management/documents-and-media/documents-and-media-overview.md), file attachments, and embedding images in content requires file storage. Visit [File Storage](../system-administration/file-storage/configuring-file-storage.md) to configure it.
+Using [Documents and Media](../content-authoring-and-management/documents-and-media/documents-and-media-overview.md), file attachments, and embedding images in content requires file storage. Visit [File Storage](../system-administration/file-storage.md) to configure it.
 
 After setting up file storage, consider enabling antivirus file scanning. See [Enabling Antivirus Scanning for Uploaded Files](../system-administration/file-storage/enabling-antivirus-scanning-for-uploaded-files.md) to learn how.
 

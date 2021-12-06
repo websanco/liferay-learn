@@ -20,7 +20,7 @@ The Liferay Home folder is important to back up because it contains the followin
 
 * **Portal properties and system properties:** The Liferay Home folder stores DXP [portal properties files](../reference/portal-properties.md) (e.g., `portal-ext.properties`, `portal-setup-wizard.properties`, etc.) and DXP [system properties files](../reference/system-properties.md) (e.g., `system-ext.properties`).
 
-* **`/data` folder:** DXP stores configuration files, search indexes, and cache information in Liferay Home's `/data` folder. Note, the `/data/document_library` folder is the default storage configuration location for the [Simple File System Store](../../system-administration/file-storage/other-file-store-types/simple-file-system-store.md). The [Advanced File System Store](../../system-administration/file-storage/configuring-file-storage.md) requires setting the storage location explicitly.
+* **`/data` folder:** DXP stores configuration files, search indexes, and cache information in Liferay Home's `/data` folder. Note, the `/data/document_library` folder is the default storage configuration location for the [Simple File System Store](../../system-administration/file-storage/other-file-store-types/simple-file-system-store.md). The [Advanced File System Store](../../system-administration/file-storage.md) requires setting the storage location explicitly.
 
 * **`/license` folder (Subscription):** Holds the activation key for the Liferay Enterprise Subscription.
 
@@ -56,7 +56,7 @@ This file can then be backed up. On restoring the database you can import this f
 
 ## File Store
 
-Back up your [file store (Document Library)](../../system-administration/file-storage/configuring-file-storage.md). When you upgrade to a new version of DXP, you must either refer to your existing Document Library or copy the Document Library to your new DXP environment.
+Back up your [file store (Document Library)](../../system-administration/file-storage.md). When you upgrade to a new version of DXP, you must either refer to your existing Document Library or copy the Document Library to your new DXP environment.
 
 ## Search Indexes
 

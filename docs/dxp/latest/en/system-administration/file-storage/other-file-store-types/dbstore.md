@@ -2,7 +2,7 @@
 
 DBStore stores files to the DXP database as blobs. DBStore doesn't have the transaction rollback vulnerabilities that the file-based store types (Simple, Advanced, S3) have.
 
-DBStore's file size limit is 1 gigabyte. To store files larger than 1 gigabyte, use the [Simple File System Store](./simple-file-system-store.md) or [Advanced File System Store](../configuring-file-storage.md#configuring-advanced-file-system-store).
+DBStore's file size limit is 1 gigabyte. To store files larger than 1 gigabyte, use the [Simple File System Store](./simple-file-system-store.md) or [Advanced File System Store](../file-storage.md#configuring-advanced-file-system-store).
 
 ## Configuring the Store
 
@@ -22,5 +22,5 @@ Consider [enabling antivirus scanning for uploaded files](../enabling-antivirus-
 
 ## Additional Information
 
-* [Configuring File Storage](../configuring-file-storage.md)
+* [File Storage](../../file-storage.md)
 * [File Store Migration](../file-store-migration.md)

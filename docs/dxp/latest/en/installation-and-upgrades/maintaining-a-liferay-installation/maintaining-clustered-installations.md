@@ -3,7 +3,6 @@
 ```{toctree}
 :maxdepth: 3
 
-maintaining-clustered-installations/maintaining-clustered-installations.md
 maintaining-clustered-installations/rolling-restarts.md
 maintaining-clustered-installations/blue-green-deployments.md
 ```

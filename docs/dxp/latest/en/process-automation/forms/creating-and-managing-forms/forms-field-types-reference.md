@@ -146,7 +146,7 @@ Beginning with Liferay 7.3 (DXP FP1+ and CE GA7+), you can allow unauthenticated
 
 ![You can choose whether Guests are allowed to upload files.](./forms-field-types-reference/images/16.png)
 
-Uploaded documents are stored in a hidden folder in the [Documents and Media repository]( ./../../../system-administration/file-storage/configuring-file-storage.md). To display them in the Documents and Media application, set the following [portal property](../../../installation-and-upgrades/reference/portal-properties.md ) in a `portal-ext.properties` file:
+Uploaded documents are stored in a hidden folder in the [Documents and Media repository]( ./../../../system-administration/file-storage.md). To display them in the Documents and Media application, set the following [portal property](../../../installation-and-upgrades/reference/portal-properties.md ) in a `portal-ext.properties` file:
 
 ```properties
 dl.show.hidden.mount.folders=true

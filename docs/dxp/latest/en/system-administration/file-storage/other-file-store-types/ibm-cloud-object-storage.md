@@ -38,6 +38,6 @@ Please consult official IBM Cloud Object Storage documentation for additional de
 
 ## Additional Information
 
-* [Configuring File Storage](../configuring-file-storage.md)
+* [File Storage](../../file-storage.md)
 * [Amazon S3 Store](./amazon-s3-store.md)
 * [DBStore](./dbstore.md)

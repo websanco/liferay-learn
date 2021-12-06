@@ -10,7 +10,7 @@ Files have different scopes depending on whether they're uploaded to Documents a
 
 ![Use Documents and Media to store, view, and manage files for a Liferay instance.](./documents-and-media-overview/images/01.png)
 
-All uploaded files are stored in your designated [file store](../../system-administration/file-storage/configuring-file-storage.md). By default, Documents and Media uses the [Simple File System Store](../../system-administration/file-storage/other-file-store-types/simple-file-system-store.md), but you can configure your instance to use an alternate file store (e.g., [DBStore](../../system-administration/file-storage/other-file-store-types/dbstore.md), [Google Cloud Store](../../system-administration/file-storage/other-file-store-types/google-cloud-storage.md), or [Amazon S3 Store](../../system-administration/file-storage/other-file-store-types/amazon-s3-store.md)).
+All uploaded files are stored in your designated [file store](../../system-administration/file-storage.md). By default, Documents and Media uses the [Simple File System Store](../../system-administration/file-storage/other-file-store-types/simple-file-system-store.md), but you can configure your instance to use an alternate file store (e.g., [DBStore](../../system-administration/file-storage/other-file-store-types/dbstore.md), [Google Cloud Store](../../system-administration/file-storage/other-file-store-types/google-cloud-storage.md), or [Amazon S3 Store](../../system-administration/file-storage/other-file-store-types/amazon-s3-store.md)).
 
 Once uploaded, you can search, filter, and organize digital assets via the Liferay UI or use [WebDAV](./publishing-and-sharing/accessing-documents-with-webdav.md) to access your documents via your system's file manager. You can also integrate Documents and Media with [Microsoft Office 365](./devops/enabling-document-creation-and-editing-with-microsoft-office-365.md), [OpenOffice](./devops/enabling-openoffice-libreoffice-integration.md), [Google Drive](./devops/google-drive-integration/enabling-links-to-google-drive-documents.md), and other applications to provide additional functionality in the Liferay UI.
 
@@ -29,4 +29,4 @@ If desired, you can [export](../../site-building/building-sites/importing-export
 * [Documents and Media UI Reference](./documents-and-media-ui-reference.md)
 * [Creating Folders](./uploading-and-managing/creating-folders.md)
 * [Uploading Files](./uploading-and-managing/uploading-files.md)
-* [Configuring File Storage](../../system-administration/file-storage/configuring-file-storage.md)
+* [Configuring File Storage](../../system-administration/file-storage.md)

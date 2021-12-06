@@ -7,7 +7,7 @@ When you upgrade data, it's important to know the changes made and any issues th
 * Database vendor and version
 * Upgrade-related Portal property settings
 * Document Library Store and `rootDir` configuration settings
-* Document Library size (for [File System Store](../../../system-administration/file-storage/other-file-store-types/simple-file-system-store.md) and [Advanced File System Store](../../../system-administration/file-storage/configuring-file-storage.md))
+* Document Library size (for [File System Store](../../../system-administration/file-storage/other-file-store-types/simple-file-system-store.md) and [Advanced File System Store](../../../system-administration/file-storage.md))
 * 20 longest-running upgrade processes
 * Errors and each type's frequency
 * Warnings and each type's frequency

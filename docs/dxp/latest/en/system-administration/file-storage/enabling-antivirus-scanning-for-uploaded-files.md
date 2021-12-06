@@ -22,7 +22,7 @@ Here's how to enable the antivirus scanning:
     Load your ClamAV database before starting Clamd.
     ```
 
-1. Enable antivirus for your [File Store](../../system-administration/file-storage/configuring-file-storage.md) (Document Library) by setting the following [portal property](../../installation-and-upgrades/reference/portal-properties.md) or [Docker environment variable](../../installation-and-upgrades/installing-liferay/using-liferay-docker-images/configuring-containers.md).
+1. Enable antivirus for your [File Store](../../system-administration/file-storage.md) (Document Library) by setting the following [portal property](../../installation-and-upgrades/reference/portal-properties.md) or [Docker environment variable](../../installation-and-upgrades/installing-liferay/using-liferay-docker-images/configuring-containers.md).
 
     Portal property:
 
@@ -58,6 +58,6 @@ Never save a virus-infected file. Reject the file by canceling the current opera
 
 ## Additional Information
 
-* [Configuring File Storage](./configuring-file-storage.md)
+* [File Storage](../file-storage.md)
 * [Configuring Liferay](../configuring_liferay.rst)
 * [System Settings](../configuring-liferay/system-settings.md)

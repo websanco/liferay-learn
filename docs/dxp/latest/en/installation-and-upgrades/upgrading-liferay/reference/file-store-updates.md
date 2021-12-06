@@ -24,14 +24,14 @@ dl.store.impl=com.liferay.portal.store.s3.S3Store
 
 ## Migrating from JCR Store
 
-JCR Store was deprecated in DXP 7.0. The [file storage](../../../system-administration/file-storage/configuring-file-storage.md) documentation describes other store options. [Migrate to a supported file store](../../../system-administration/file-storage/file-store-migration.md) before upgrading your database.
+JCR Store was deprecated in DXP 7.0. The [file storage](../../../system-administration/file-storage.md) documentation describes other store options. [Migrate to a supported file store](../../../system-administration/file-storage/file-store-migration.md) before upgrading your database.
 
 ## Migrating from CMIS Store
 
-CMIS Store was deprecated in 7.0.10 Fix Pack 14 and was removed in DXP 7.2. The [file storage](../../../system-administration/file-storage/configuring-file-storage.md) documentation describes other store options. [Migrate to a supported file store](../../../system-administration/file-storage/file-store-migration.md) before upgrading your database.
+CMIS Store was deprecated in 7.0.10 Fix Pack 14 and was removed in DXP 7.2. The [file storage](../../../system-administration/file-storage.md) documentation describes other store options. [Migrate to a supported file store](../../../system-administration/file-storage/file-store-migration.md) before upgrading your database.
 
 ## Configuring the File Store in System Settings
 
-Since DXP 7.0, document store type-specific configuration (e.g., specific to Simple File Store, Advanced File Store, S3, etc.) is done in the Control Panel at _Configuration_ → _System Settings_ → _File Storage_, or using OSGi configuration files (`.config` files). Type-specific configuration is no longer done using `portal-ext.properties`. After upgrading your database, configure your file store in [System Settings](../../../system-administration/file-storage/configuring-file-storage.md).
+Since DXP 7.0, document store type-specific configuration (e.g., specific to Simple File Store, Advanced File Store, S3, etc.) is done in the Control Panel at _Configuration_ → _System Settings_ → _File Storage_, or using OSGi configuration files (`.config` files). Type-specific configuration is no longer done using `portal-ext.properties`. After upgrading your database, configure your file store in [System Settings](../../../system-administration/file-storage.md).
 
-See [Configuring File Storage](../../../system-administration/file-storage/configuring-file-storage.md) for more store configuration details.
+See [Configuring File Storage](../../../system-administration/file-storage.md) for more store configuration details.

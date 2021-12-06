@@ -42,6 +42,6 @@ Make sure to save your new store configuration in System Settings. Otherwise, yo
 
 ## Additional Information
 
-* [Configuring File Storage](./configuring-file-storage.md)
+* [File Storage](../file-storage.md)
 * [Amazon S3 Store](./other-file-store-types/amazon-s3-store.md)
 * [DBStore](./other-file-store-types/dbstore.md)

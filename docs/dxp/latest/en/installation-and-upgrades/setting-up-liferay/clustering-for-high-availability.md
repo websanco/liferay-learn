@@ -23,7 +23,7 @@ Here is what's required to create an effectively functional DXP cluster.
 
 1. A [database or database cluster](./clustering-for-high-availability/database-configuration-for-cluster-nodes.md) that's accessible to all nodes
 
-1. A [File Store](../../../system-administration/file-storage/configuring-file-storage.md) that's accessible to all nodes
+1. A [File Store](../../../system-administration/file-storage.md) that's accessible to all nodes
 
 1. A [search engine (running outside of DXP) that is optionally clustered](../../using-search/installing-and-upgrading-a-search-engine/installing-a-search-engine.md)
 
