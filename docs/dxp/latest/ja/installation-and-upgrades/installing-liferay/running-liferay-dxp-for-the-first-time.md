@@ -76,8 +76,7 @@ DXPは、セットアップウィザードで指定したデータベースと�
 
 [管理者ユーザーとしてサインイン](../../getting-started/introduction-to-the-admin-account.md)して、[DXPでソリューションの構築](../../building-solutions-on-dxp/README.rst)を開始できます。 または、[Liferay DXPのその他のセットアップ](../setting-up-liferay.md)トピックを参照できます。
 
-  - [Introduction to Managing Apps](../../system-administration/installing-and-managing-apps/introduction-to-managing-apps.md)
-  - [Introduction to Managing Apps](../../system-administration/installing-and-managing-apps/getting-started/installing-and-managing-apps.md)
+  - [アプリのインストールと管理](../../system-administration/installing-and-managing-apps.md)
   - Installing and Configuring a Search Engine
-  - [Securing Liferay DXP](../securing-liferay.md)
-  - [Introduction to Clustering Liferay DXP](../setting-up-liferay/clustering-for-high-availability.md)
+  - [Liferayの保護](../securing-liferay.md)
+  - [高可用性のクラスタリング](../../installation-and-upgrades/setting-up-liferay/clustering-for-high-availability.md)

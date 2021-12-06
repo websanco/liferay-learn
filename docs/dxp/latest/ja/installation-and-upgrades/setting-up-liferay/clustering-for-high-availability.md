@@ -22,7 +22,7 @@ Liferay DXPは、複数のマシンのクラスター（水平クラスター）
 
 2.  すべてのノードにアクセスできる [データベースまたはデータベースクラスター](./clustering-for-high-availability/database-configuration-for-cluster-nodes.md)
 
-3.  すべてのノードにアクセス可能な [ファイルストア](../../system-administration/file-storage/configuring-file-storage.md)
+3.  すべてのノードにアクセス可能な [ファイルストア](../../system-administration/file-storage.md)
 
 4.  オプションでクラスター化されている [検索エンジン（DXPの外部で実行）](../../using-search/installing-and-upgrading-a-search-engine/installing-a-search-engine.md)
 

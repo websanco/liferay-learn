@@ -30,7 +30,7 @@ LES Learning to Rankがデプロイされているが、（おそらくはソー
 
 Learning to Rankを使用して、Elasticsearchに送信されたLiferayクエリを再スコアリングするには、いくつかの前提条件があります。
 
-  - Learning to Rankには、[Liferay Enterprise Search](https://www.liferay.com/products/dxp/enterprise-search)（LES）サブスクリプションが必要です。 サブスクリプションを取得したら、[Liferay Enterprise Search Learning to RankのLPKGファイルをダウンロード](https://customer.liferay.com/en/downloads?p_p_id=com_liferay_osb_customer_downloads_display_web_DownloadsDisplayPortlet&_com_liferay_osb_customer_downloads_display_web_DownloadsDisplayPortlet_productAssetCategoryId=118191013&_com_liferay_osb_customer_downloads_display_web_DownloadsDisplayPortlet_fileTypeAssetCategoryId=118191060)して[インストール](../../system-administration/installing-and-managing-apps/installing-apps/installing-apps.md)します。
+  - Learning to Rankには、[Liferay Enterprise Search](https://www.liferay.com/products/dxp/enterprise-search)（LES）サブスクリプションが必要です。 サブスクリプションを取得したら、[Liferay Enterprise Search Learning to RankのLPKGファイルをダウンロード](https://customer.liferay.com/en/downloads?p_p_id=com_liferay_osb_customer_downloads_display_web_DownloadsDisplayPortlet&_com_liferay_osb_customer_downloads_display_web_DownloadsDisplayPortlet_productAssetCategoryId=118191013&_com_liferay_osb_customer_downloads_display_web_DownloadsDisplayPortlet_fileTypeAssetCategoryId=118191060)して[インストール](../../system-administration/installing-and-managing-apps/installing-apps.md)します。
 
   - データがインデックス化されているリモートのElasticsearchサーバー。
 

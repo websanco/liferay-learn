@@ -58,7 +58,7 @@ commit -a -m "New version of xyz app"
 
 ### Webコンテンツの画像を確認する
 
-7.2にアップグレードすると、Webコンテンツの画像は[ファイル ストア](../../../system-administration/file-storage/configuring-file-storage.md)（ドキュメントライブラリともいう）に移動し、以前のテーブル`JournalArticleImage`は削除されます。 画像を移行できない場合、Liferayは失敗を報告します。
+7.2にアップグレードすると、Webコンテンツの画像は[ファイル ストア](../../../system-administration/file-storage.md)（ドキュメントライブラリともいう）に移動し、以前のテーブル`JournalArticleImage`は削除されます。 画像を移行できない場合、Liferayは失敗を報告します。
 
     Unable to add the journal article image {filename} into the file repository
 

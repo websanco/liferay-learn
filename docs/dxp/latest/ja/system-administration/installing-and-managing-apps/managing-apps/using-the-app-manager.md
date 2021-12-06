@@ -25,7 +25,7 @@
 
 コンポーネント/ポートレットのレベルは、ソースコードにアクセスすることなく実行できる最も遠いレベルです。 アプリケーションマネージャのどのレベルでも、リストの上にアイテムの階層コンテキストを示すリンクトレイルがあります。
 
-## Installing Apps
+## アプリのインストール
 
 アプリケーションマネージャは、[ダウンロードしたアプリ](../installing-apps/downloading-apps.md)をローカルマシンからローカルまたはリモートのDXPサーバーにインストールする便利な方法です。
 
@@ -41,7 +41,7 @@ For installing and uninstalling apps in production-grade environments, install a
 
 3.  *[Install]* をクリックします。
 
-アプリは[自動デプロイ](../installing-apps/installing-apps.md#installing-apps-via-the-file-system)を介してインストールされます。 インストールが完了したら、ダイアログを閉じます。これで使用する準備が整いました。
+アプリは[自動デプロイ](../installing-apps.md#installing-apps-via-the-file-system)を介してインストールされます。 インストールが完了したら、ダイアログを閉じます。これで使用する準備が整いました。
 
 ## アプリのアンインストール
 
@@ -57,4 +57,4 @@ For installing and uninstalling apps in production-grade environments, install a
 
   - [アプリのブラックリスト登録](./blacklisting-apps.md)
   - [OSGiコンポーネントのブラックリスト登録](./blacklisting-osgi-components.md)
-  - [Maintaining a Clustered Installation](../../../installation-and-upgrades/maintaining-a-liferay-installation/maintaining-clustered-installations.md)
+  - [クラスター化されたインストールの維持](../../../installation-and-upgrades/maintaining-a-liferay-installation/maintaining-clustered-installations.md)

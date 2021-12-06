@@ -58,7 +58,7 @@ dl.store.impl=com.liferay.portal.store.file.system.FileSystemStore
 
 ## 追加情報
 
-  - [ファイルストレージの構成](../configuring-file-storage.md)
+  - [ファイル ストレージ](../../file-storage.md)
   - [Amazon S3 Store](./amazon-s3-store.md)
   - [DBStore](./dbstore.md)
-  - [File Store Migration](../file-store-migration.md)
+  - [ファイルストアの移行](../file-store-migration.md)

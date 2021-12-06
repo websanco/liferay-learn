@@ -18,5 +18,5 @@ DXPがファイルをDBStoreに保存するようになりました。
 
 ## 追加情報
 
-  - [Configuring File Storage](../configuring-file-storage.md)
-  - [File Store Migration](../file-store-migration.md)
+  - [ファイル ストレージ](../../file-storage.md)
+  - [ファイルストアの移行](../file-store-migration.md)

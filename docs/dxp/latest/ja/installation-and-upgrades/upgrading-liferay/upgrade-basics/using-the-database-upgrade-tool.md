@@ -20,10 +20,10 @@ Liferayインスタンスから切り離された状態でデータベースを�
 
 2.  新しいインストールの`[Liferay Home]/data`フォルダを[バックアップ](../../maintaining-a-liferay-installation/backing-up.md)の`[Liferay Home]/data`フォルダに置き換えます。
 
-3.  [高度なファイルシステムストア](../../../system-administration/file-storage/configuring-file-storage.md)または[簡易ファイルシステムストア](../../../system-administration/file-storage/other-file-store-types/simple-file-system-store.md)を使用していて、保存場所を変更している場合は、ファイルストアの設定を[`.config`ファイル](../../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md#creating-configuration-files)にエクスポートして、新しい`[Liferay Home]/osgi/configs/`フォルダにコピーします。
+3.  [高度なファイルシステムストア](../../../system-administration/file-storage.md)または[簡易ファイルシステムストア](../../../system-administration/file-storage/other-file-store-types/simple-file-system-store.md)を使用していて、保存場所を変更している場合は、ファイルストアの設定を[`.config`ファイル](../../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md#creating-configuration-files)にエクスポートして、新しい`[Liferay Home]/osgi/configs/`フォルダにコピーします。
 
     ```{important}
-    [高度なファイルシステムストア](../../../system-administration/file-storage/configuring-file-storage.md) を使用している場合は、データベースをアップグレードする前に、新しいインストールで `.config` ファイルを使って設定する必要があります。
+    [高度なファイルシステムストア](../../../system-administration/file-storage.md) を使用している場合は、データベースをアップグレードする前に、新しいインストールで `.config` ファイルを使って設定する必要があります。
 
     以下に例を示します。`com.liferay.portal.store.file.system.configuration.AdvancedFileSystemStoreConfiguration.config` file with the required `rootDir` parameter:
 

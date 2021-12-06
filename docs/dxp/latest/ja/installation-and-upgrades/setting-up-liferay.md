@@ -8,7 +8,7 @@ setting-up-liferay/activating-liferay-dxp.md
 setting-up-liferay/initial-instance-localization.md
 setting-up-liferay/configuring_mail.md
 ../../system-administration/configuring-liferay/virtual-instances/users.md
-../../system-administration/file-storage/configuring-file-storage.md
+../../system-administration/file-storage.md
 ../../system-administration/file-storage/enabling-antivirus-scanning-for-uploaded-files.md
 ../../using-search/installing-and-upgrading-a-search-engine/installing-a-search-engine.md
 securing-liferay.md
@@ -79,7 +79,7 @@ Liferay DXPを使用している場合は、 [アクティベーションキー�
 
 ## ファイルストレージの設定
 
-[ドキュメントとメディア](../content-authoring-and-management/documents-and-media/publishing-and-sharing/publishing-documents.md) 、添付ファイルおよびコンテンツへの画像の埋め込みを使用するには、ファイルストレージが必要です。  設定方法につては、[ファイル ストレージ](../system-administration/file-storage/configuring-file-storage.md) を参照してください。
+[ドキュメントとメディア](../content-authoring-and-management/documents-and-media/publishing-and-sharing/publishing-documents.md) 、添付ファイルおよびコンテンツへの画像の埋め込みを使用するには、ファイルストレージが必要です。  設定方法につては、[ファイル ストレージ](../system-administration/file-storage.md) を参照してください。
 
 ファイルストレージを設定した後、ウイルス対策のファイルスキャンを有効にすることを検討してください。 方法については、 [アップロードされたファイルのウイルス対策スキャンを有効にする](../system-administration/file-storage/enabling-antivirus-scanning-for-uploaded-files.md) を参照してください。
 
@@ -101,7 +101,7 @@ Liferayを保護することはとても重要です。 詳しくは [Liferayの
 
 ## マーケットプレイスからアプリをインストールする
 
-[Liferayマーケットプレイス](https://web.liferay.com/marketplace) で [利用可能なテーマ](../getting-started/changing-your-sites-appearance.md)、コネクタ、およびあらゆる種類のアプリケーションを使用してサイトを改善します。 [アプリのインストールと管理](../system-administration/installing-and-managing-apps/getting-started/installing-and-managing-apps.md) がこれまで以上に簡単になりました。
+[Liferayマーケットプレイス](https://web.liferay.com/marketplace) で [利用可能なテーマ](../getting-started/changing-your-sites-appearance.md)、コネクタ、およびあらゆる種類のアプリケーションを使用してサイトを改善します。 [アプリのインストールと管理](../system-administration/installing-and-managing-apps.md) がこれまで以上に簡単になりました。
 
 ## ロールと権限の設定
 

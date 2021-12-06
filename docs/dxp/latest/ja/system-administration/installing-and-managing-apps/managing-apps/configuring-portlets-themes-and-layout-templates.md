@@ -20,5 +20,5 @@
 
 ## 追加情報
 
-  - [Maintaining Clustered Installations](../../../installation-and-upgrades/maintaining-a-liferay-installation/maintaining-clustered-installations.md)
+  - [クラスター化されたインストールの維持](../../../installation-and-upgrades/maintaining-a-liferay-installation/maintaining-clustered-installations.md)
   - [アプリをブラックリストにする](./blacklisting-apps.md)

@@ -50,7 +50,11 @@ LPKGをブラックリストに登録すると、その内部モジュールが�
    
 
     ``` properties
-    blacklistBundleSymbolicNames=["com.liferay.docs.greeting.api","Liferay\ Marketplace","classic-theme"]
+    blacklistBundleSymbolicNames=[ \
+      "classic-theme", \
+      "Liferay\ Collaboration\ -\ Liferay\ Blogs\ -\ API", \
+      "com.acme.greeter", \
+    ]
     ```
 
 
@@ -106,7 +110,7 @@ LPKGをブラックリストに登録すると、その内部モジュールが�
 
 ## 追加情報
 
-  - [Managing Apps](./using-the-app-manager.md)
-  - [Using the Felix Gogo shell](https://help.liferay.com/hc/articles/360029070351-Using-the-Felix-Gogo-Shell)
-  - [Blacklisting OSGi Components](./blacklisting-osgi-components.md)
-  - [Configuring Portlets, Themes, and Layout Templates](./configuring-portlets-themes-and-layout-templates.md)
+  - [アプリケーションマネージャを使用する](./using-the-app-manager.md)
+  - [Gogo シェルの使用](../../../liferay-internals/fundamentals/using-the-gogo-shell.md)
+  - [OSGiコンポーネントのブラックリスト登録](./blacklisting-osgi-components.md)
+  - [ポートレット、テーマ、およびレイアウトテンプレートの構成](./configuring-portlets-themes-and-layout-templates.md)

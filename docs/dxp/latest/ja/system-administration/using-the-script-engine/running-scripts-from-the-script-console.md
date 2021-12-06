@@ -87,6 +87,6 @@ userInfo.each {
 
 ## 追加情報
 
-  - [Invoking Liferay services](./invoking-liferay-services-from-scripts.md)
-  - [Using the Script Engine in Workflow](../../process-automation/workflow/developer-guide/using-the-script-engine-in-workflow.md)
+  - [スクリプトからLiferayサービスを呼び出す](./invoking-liferay-services-from-scripts.md)
+  - [ワークフローでのスクリプトエンジンの使用](../../process-automation/workflow/developer-guide/using-the-script-engine-in-workflow.md)
   - [スクリプトの例](./script-examples.md)

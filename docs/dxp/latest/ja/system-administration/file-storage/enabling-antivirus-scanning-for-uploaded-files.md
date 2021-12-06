@@ -24,7 +24,7 @@ Clamdウイルス対策スキャナーを有効にする方法は次のとおり
     Load your ClamAV database before starting Clamd.
     ```
 
-2.  次の[ポータルプロパティ](configuring-file-storage.md)または[Docker環境変数](../../installation-and-upgrades/reference/portal-properties.md)を設定して、[ファイルストア](../../installation-and-upgrades/installing-liferay/using-liferay-docker-images/configuring-containers.md)（ドキュメントライブラリ）のウイルス対策を有効にします。
+2.  次の[ポータルプロパティ](../file-storage.md)または[Docker環境変数](../../installation-and-upgrades/reference/portal-properties.md)を設定して、[ファイルストア](../../installation-and-upgrades/installing-liferay/using-liferay-docker-images/configuring-containers.md)（ドキュメントライブラリ）のウイルス対策を有効にします。
 
     ポータルプロパティ：
 
@@ -62,6 +62,5 @@ Never save a virus-infected file. Reject the file by canceling the current opera
 
 ## 追加情報
 
-  - [ファイルストレージの構成](./configuring-file-storage.md)
-  - [Configuring Liferay](../configuring_liferay.html)
-  - [System Settings](../configuring-liferay/system-settings.md)
+  - [ファイル ストレージ](../file-storage.md)
+  - [システム設定](../configuring-liferay/system-settings.md)

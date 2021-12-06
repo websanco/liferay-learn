@@ -130,5 +130,5 @@ out.println(outputFile.text)
 ## 追加情報
 
   - [スクリプトコンソールからのスクリプトの実行](./running-scripts-from-the-script-console.md)
-  - [Using the Script Engine in Workflow](../../process-automation/workflow/developer-guide/using-the-script-engine-in-workflow.md)
-  - [Using the Script Engine](./using-the-script-engine.md)
+  - [ワークフローでのスクリプトエンジンの使用](../../process-automation/workflow/developer-guide/using-the-script-engine-in-workflow.md)
+  - [スクリプトエンジンの使用](../using-the-script-engine.md)

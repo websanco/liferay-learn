@@ -43,4 +43,4 @@ DXPの[ワークフロー](../../../../process-automation/workflow/introduction-
   - [Documents and Media UI Reference](../../documents-and-media-ui-reference.md)
   - [Creating Folders](../../uploading-and-managing/creating-folders.md)
   - [Uploading Files](../../uploading-and-managing/uploading-files.md)
-  - [ファイルストレージの構成](../../../../system-administration/file-storage/configuring-file-storage.md)
+  - [ファイルストレージの構成](../../../../system-administration/file-storage.md)

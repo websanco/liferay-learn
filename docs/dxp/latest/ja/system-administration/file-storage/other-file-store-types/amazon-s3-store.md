@@ -67,7 +67,7 @@ Amazonのサービスの使用に関する詳細については、Amazon Simple 
 
 ## 追加情報
 
-  - [Configuring File Storage](../configuring-file-storage.md)
+  - [ファイル ストレージ](../../file-storage.md)
   - [Bucket Restrictions and Limitations](https://docs.aws.amazon.com/AmazonS3/latest/dev//BucketRestrictions.html#bucketnamingrules)
   - [DBStore](./dbstore.md)
-  - [File Store Migration](../file-store-migration.md)
+  - [ファイルストアの移行](../file-store-migration.md)

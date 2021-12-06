@@ -4,7 +4,7 @@
 
 ## ワークフロー定義の公開権限
 
-ワークフロー定義を編集または公開する権限を持つユーザーは、ワークフローに [Groovyスクリプト](../../../system-administration/using-the-script-engine/using-the-script-engine.md) を追加できます。 スクリプトエンジンへのアクセスとは、サーバーのJava仮想マシン（JVM）へのアクセスを意味します。 したがって、公開（または編集）の権限を持つユーザーは、Liferay DXPの個別の [仮想インスタンス](../../../system-administration/configuring-liferay/virtual-instances/understanding-virtual-instances.md) に含まれているデータなど、JVMの到達範囲内の任意のデータにアクセスできます。
+ワークフロー定義を編集または公開する権限を持つユーザーは、ワークフローに [Groovyスクリプト](../../../system-administration/using-the-script-engine.md) を追加できます。 スクリプトエンジンへのアクセスとは、サーバーのJava仮想マシン（JVM）へのアクセスを意味します。 したがって、公開（または編集）の権限を持つユーザーは、Liferay DXPの個別の [仮想インスタンス](../../../system-administration/configuring-liferay/virtual-instances/understanding-virtual-instances.md) に含まれているデータなど、JVMの到達範囲内の任意のデータにアクセスできます。
 
 この広範囲にわたるアクセスのため、ワークフロー定義を作成または編集する権限は、デフォルトの仮想インスタンスの通常の管理者に制限されています。 Liferay DXPのお客様の場合、ユーザー（サイト管理者など）はKaleo DesignerおよびKaleo Form管理アプリケーションにアクセスしてワークフローを編集および公開することもできます。
 

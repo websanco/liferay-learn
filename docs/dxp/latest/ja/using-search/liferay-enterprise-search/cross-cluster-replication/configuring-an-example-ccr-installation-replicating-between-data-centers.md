@@ -63,7 +63,7 @@ cluster.link.enabled=true
 
 1.  [LESダウンロードページ](https://customer.liferay.com/downloads)から、Elasticsearch LPKGのLiferay DXPクラスター横断レプリケーションをダウンロードします。
 
-2.  すべてのDXPノードに[LPKGをインストール](../../../system-administration/installing-and-managing-apps/installing-apps/installing-apps.md)します。
+2.  すべてのDXPノードに[LPKGをインストール](../../../system-administration/installing-and-managing-apps/installing-apps.md)します。
 
 <!-- end list -->
 

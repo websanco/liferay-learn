@@ -33,7 +33,7 @@ Dockerイメージを使用してアップグレードする手順は次のと�
 
       - `deploy`: Dockerコンテナは、このフォルダからコンテナの自動デプロイ用フォルダにアーティファクトをコピーします。
 
-2.  組み込みの[Elasticsearch](../../../using-search/installing-and-upgrading-a-search-engine/elasticsearch/getting-started-with-elasticsearch.md)エンジンまたはローカルの[ファイルストア（ドキュメントライブラリ）](../../../system-administration/file-storage/configuring-file-storage.md)を使用している場合は、`[Liferay Home]/data`フォルダを新しい`files`フォルダにコピーして`new-version/files/data`を作成します。
+2.  組み込みの[Elasticsearch](../../../using-search/installing-and-upgrading-a-search-engine/elasticsearch/getting-started-with-elasticsearch.md)エンジンまたはローカルの[ファイルストア（ドキュメントライブラリ）](../../../system-administration/file-storage.md)を使用している場合は、`[Liferay Home]/data`フォルダを新しい`files`フォルダにコピーして`new-version/files/data`を作成します。
 
 3.  [Liferay Homeのファイル](../../maintaining-a-liferay-installation/backing-up.md#liferay-home)と[アプリケーションサーバーファイル](../../maintaining-a-liferay-installation/backing-up.md#application-server)をバックアップから`files`フォルダ内の対応する場所（新しい`[Liferay Home]`）にコピーしてマージします。 例えば、アクティベーションキーを`new-version/files/license/`にコピーします。 ファイルには次のものが含まれる場合がありますが、これらに限定されません。
 
@@ -49,10 +49,10 @@ Dockerイメージを使用してアップグレードする手順は次のと�
 
       - `web.xml`：ポータルWebアプリケーション記述子。
 
-4.  [高度なファイルシステムストア](../../../system-administration/file-storage/configuring-file-storage.md)または[簡易ファイルシステムストア](../../../system-administration/file-storage/other-file-store-types/simple-file-system-store.md)を使用していて、保存場所を変更している場合は、ファイルストアの設定を[`.config`ファイル](../../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md#creating-configuration-files)にエクスポートして、`new-version/osgi/configs`フォルダにコピーします。
+4.  [高度なファイルシステムストア](../../../system-administration/file-storage.md)または[簡易ファイルシステムストア](../../../system-administration/file-storage/other-file-store-types/simple-file-system-store.md)を使用していて、保存場所を変更している場合は、ファイルストアの設定を[`.config`ファイル](../../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md#creating-configuration-files)にエクスポートして、`new-version/osgi/configs`フォルダにコピーします。
 
     ```{important}
-    [高度なファイルシステムストア](../../../system-administration/file-storage/configuring-file-storage.md) を使用している場合は、データベースをアップグレードする前に、新しいインストールで `.config` ファイルを使って設定する必要があります。
+    [高度なファイルシステムストア](../../../system-administration/file-storage.md) を使用している場合は、データベースをアップグレードする前に、新しいインストールで `.config` ファイルを使って設定する必要があります。
 
     以下に例を示します。`com.liferay.portal.store.file.system.configuration.AdvancedFileSystemStoreConfiguration.config` file with the required `rootDir` parameter:
 

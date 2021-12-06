@@ -2,8 +2,8 @@
 
 [Elasticsearchを設定](./installing-elasticsearch.md)した後、Liferay Connector to Elasticsearchを使用してLiferayをElasticsearchに接続する必要があります。 接続の手順は、設定している[コネクタ](#available-liferay-connector-applications)によって異なります。
 
-  - Liferay 7.3：Liferay Connector to Elasticsearchは、Liferay DXP 7.3およびCE 7.3 GA4以降に含まれています。 また、[Liferay マーケットプレイス](../../../system-administration/installing-and-managing-apps/getting-started/using-marketplace.md)でも入手可能です。
-  - Liferay 7.2：Liferay Connector to Elasticsearchは[Liferay マーケットプレイス](../../../system-administration/installing-and-managing-apps/getting-started/using-marketplace.md)で入手できます。
+  - Liferay 7.3：Liferay Connector to Elasticsearchは、Liferay DXP 7.3およびCE 7.3 GA4以降に含まれています。 また、[Liferay マーケットプレイス](../../../system-administration/installing-and-managing-apps/using-marketplace.md)でも入手可能です。
+  - Liferay 7.2：Liferay Connector to Elasticsearchは[Liferay マーケットプレイス](../../../system-administration/installing-and-managing-apps/using-marketplace.md)で入手できます。
 
 ここでは、インストールや設定手順の主な違いについて説明します。
 
@@ -115,7 +115,7 @@ Liferay 7.2では、バンドルされているコネクタアプリケーショ
       - CE：[Liferay CE Connector to Elasticsearch](https://web.liferay.com/en/marketplace/-/mp/application/170642090)
       - DXP：[Liferay Connector to Elasticsearch](https://web.liferay.com/en/marketplace/-/mp/application/170390307)
 
-2.  [LPKGをフォルダに配置してインストール](../../../system-administration/installing-and-managing-apps/installing-apps/installing-apps.md)します。
+2.  [LPKGをフォルダに配置してインストール](../../../system-administration/installing-and-managing-apps/installing-apps.md)します。
 
     ``` bash
     [Liferay Home]/deploy

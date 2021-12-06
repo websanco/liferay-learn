@@ -321,7 +321,7 @@ DXPはTomcatで実行されています。
 
 [管理者ユーザーとしてサインイン](../../../getting-started/introduction-to-the-admin-account.md)して、[DXPでソリューションの構築](../../../building-solutions-on-dxp/README.rst)を開始できます。 または、[Liferay DXPのその他のセットアップ](../../setting-up-liferay.md)トピックを参照できます。
 
-* [Installing the Marketplace Plugin](../../../system-administration/installing-and-managing-apps/installing-the-marketplace-plugin.md)
+* [マーケットプレイスプラグインのインストール](../../../system-administration/installing-and-managing-apps/using-marketplace.md#appendix-installing-the-marketplace-plugin)
 * Installing and Configuring a Search Engine
 * [Securing Liferay DXP](../../securing-liferay.md)
 * [Introduction to Clustering Liferay DXP](../../setting-up-liferay/clustering-for-high-availability.md)

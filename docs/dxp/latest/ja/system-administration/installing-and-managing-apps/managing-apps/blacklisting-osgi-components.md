@@ -51,6 +51,6 @@ OSGiコンポーネントを無効にするには、次の手順に従います�
 
 ## 追加情報
 
-  - [Blacklisting Apps](./blacklisting-apps.md)
+  - [アプリのブラックリスト登録](./blacklisting-apps.md)
   - [アプリの管理](./using-the-app-manager.md)
-  - [Felix Gogoシェルを使用](https://help.liferay.com/hc/articles/360029070351-Using-the-Felix-Gogo-Shell)
+  - [Gogo シェルの使用](../../../liferay-internals/fundamentals/using-the-gogo-shell.md)

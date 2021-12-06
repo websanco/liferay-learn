@@ -114,4 +114,4 @@ DXPは、次回の起動時に、読み取りデータソース、書き込み�
 
 ## 次のステップ
 
-クラスターのデータベースを構成したので、引き続き [DXPクラスター要件](./clustering-for-high-availability.md#clustering-requirements)対処できます。 次の要件は、すべてのノードが [ファイルストア](../../../system-administration/file-storage/configuring-file-storage.md) アクセスできるようにし、そのファイルストアで各ノードを構成することです。
+クラスターのデータベースを構成したので、引き続き [DXPクラスター要件](./clustering-for-high-availability.md#clustering-requirements)対処できます。 次の要件は、すべてのノードが [ファイルストア](../../../system-administration/file-storage.md) アクセスできるようにし、そのファイルストアで各ノードを構成することです。

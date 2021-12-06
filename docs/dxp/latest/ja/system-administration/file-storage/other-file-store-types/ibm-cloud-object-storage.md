@@ -40,6 +40,6 @@ IBMのサービスの使用に関する追加の詳細については、IBM Clou
 
 ## 追加情報
 
-  - [ファイルストレージの構成](../configuring-file-storage.md)
+  - [ファイル ストレージ](../../file-storage.md)
   - [Amazon S3 Store](./amazon-s3-store.md)
   - [DBStore](./dbstore.md)

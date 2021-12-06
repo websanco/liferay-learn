@@ -26,5 +26,5 @@ EEプラグインのソースコードは、正式なエンタープライズサ
 
 ## 追加情報
 
-  - [Installing Apps](./installing-apps.md)
-  - [Renewing Apps](../managing-apps/renewing-apps.md)
+  - [アプリのインストール](../installing-apps.md)
+  - [アプリの更新](../managing-apps/renewing-apps.md)
