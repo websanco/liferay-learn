@@ -99,13 +99,13 @@ Here's what it looks like in the example project:
 :lines: 64-73
 ```
 
-If you check the Javadocs for the [`AssetEntryLocalServiceImpl` class](https://learn.liferay.com/reference/latest/en/dxp/javadocs/portal-impl/com/liferay/portlet/asset/service/impl/AssetEntryLocalServiceImpl.html#updateEntry-long-long-java.util.Date-java.util.Date-java.lang.String-long-java.lang.String-long-long:A-java.lang.String:A-boolean-boolean-java.util.Date-java.util.Date-java.util.Date-java.util.Date-java.lang.String-java.lang.String-java.lang.String-java.lang.String-java.lang.String-java.lang.String-int-int-java.lang.Double-), you'll see that the method is overloaded. We use the version of `updateEntry()` that takes a `title` parameter to set the asset entry's title. 
+If you check the Javadocs for the [`AssetEntryLocalServiceImpl` class](https://learn.liferay.com/reference/latest/en/dxp/javadocs/portal-impl/com/liferay/portlet/asset/service/impl/AssetEntryLocalServiceImpl.html#updateEntry-long-long-java.util.Date-java.util.Date-java.lang.String-long-java.lang.String-long-long:A-java.lang.String:A-boolean-boolean-java.util.Date-java.util.Date-java.util.Date-java.util.Date-java.lang.String-java.lang.String-java.lang.String-java.lang.String-java.lang.String-java.lang.String-int-int-java.lang.Double-), you'll see that the method is overloaded. We use the version of `updateEntry()` that takes a `title` parameter so that we can set the asset entry's title. 
 
 Re-run Service Builder after making the change.
 
 ## Create an Asset Renderer
 
-Assets are display versions of entities, so they contain fields such as `title`, `description`, and `summary`. Liferay uses these fields to display assets. Asset renderers translate an entity into an asset via these fields. You must therefore create an Asset renderer class for your application.
+Assets are display versions of entities, so they contain fields such as `title`, `description`, and `summary`. Liferay uses these fields to display assets. Asset renderers translate an entity into an asset via these fields.
 
 1. In you application, create a `-AssetRender` class that extends Liferay's `BaseJSPAssetRenderer` class. For example,
 
@@ -115,7 +115,7 @@ Assets are display versions of entities, so they contain fields such as `title`,
    }
    ```
 
-1. Define the asset renderer class's constructor:
+2. Define the asset renderer class's constructor:
 
    ```java
    	public S5E6EntryAssetRenderer(S5E6Entry s5e6Entry) {
@@ -123,7 +123,7 @@ Assets are display versions of entities, so they contain fields such as `title`,
 	}
    ```
 
-1. Connect your asset renderer to your asset by using the following getter methods:
+3. Connect your asset renderer to your asset by using the different getter methods:
 
    ```{literalinclude} ./enabling-assets/resources/liferay-s5e6.zip/s5e6-web/src/main/java/com/acme/s5e6/web/internal/asset/model/S5E6EntryAssetRenderer.java
    :dedent: 1
@@ -158,5 +158,17 @@ After creating an asset renderer, you need to create a factory class to generate
    :language: java
    :lines: 24-29
    ```
+
+   Set `setLinkable` to `true` so that other assets can select your asset as a related asset. Set `setSearchable` to `true` so that your assets can be found when searching.
+
+1. Create the asset renderer for your asset. This is done by calling its constructor.
+
+   ```{literalinclude} ./enabling-assets/resources/liferay-s5e6.zip/s5e6-web/src/main/java/com/acme/s5e6/web/internal/asset/model/S5E6EntryAssetRendererFactory.java
+   :dedent: 1
+   :language: java
+   :lines: 31-43
+   ```
+
+1. 
 
 ## Modify the Portlet
