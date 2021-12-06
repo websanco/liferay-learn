@@ -179,7 +179,7 @@ Publishing Pages in Staging can now be streamlined by publishing only the Page n
 
 ### Elasticsearch 7.15.x Compatibility Out-of-the-Box
 
-Liferay DXP 7.4 comes with Elasticsearch 7.15.x; Elasticsearch Sidecar (for development and testing only, not supported) version is 7.10.2 in the open source product.
+Liferay DXP 7.4 comes with support for Elasticsearch 7.15.x; the [Elasticsearch Sidecar](../using-search/installing-and-upgrading-a-search-engine/elasticsearch/using-the-sidecar-or-embedded-elasticsearch.md) (for development and testing only, not supported) server is version 7.10.2 of the open source Elasticserch distribution.
 
 ### Liferay Enterprise Search (LES) Applications Are Now Bundled
 
