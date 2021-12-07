@@ -1,7 +1,8 @@
 # Web Content Articles
 
 ```{toctree}
-:maxdepth: 3
+:maxdepth: 2
+
 web-content-articles/adding-a-basic-web-content-article.md
 web-content-articles/filtering-and-sorting-web-content-articles.md
 ```
