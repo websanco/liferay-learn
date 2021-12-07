@@ -169,6 +169,29 @@ After creating an asset renderer, you need to create a factory class to generate
    :lines: 31-43
    ```
 
-1. 
+1. Make sure to use the `@Reference` annotation to define the module's symbolic name.
+
+   ```java
+   @Reference(
+   	target = "(osgi.web.symbolicname=com.acme.s5e6.web)"
+   )
+   ```
 
 ## Modify the Portlet
+
+The `S5E6Portlet`'s `addS5E6Entry` method handles requests to add `S5E6Entry` instances.
+
+```{literalinclude} ./enabling-assets/resources/liferay-s5e6.zip/s5e6-web/src/main/java/com/acme/s5e6/web/internal/portlet/S5E6Portlet.java
+:dedent: 1
+:language: java
+:lines: 32-46
+```
+
+Since `addS5E6Entry` is a portlet action method, it takes `ActionRequest` and `ActionResponse` parameters. To make the service call to add a new entry, the `title` and `description` must be retrieved from the request. The `serviceContext` must also be retrieved from the request and passed as an argument in the service call.
+
+The portlet's `view.jsp` contains a form with an `actionURL` that invokes the portlet's `addS5E6Entry` method.
+
+```{literalinclude} ./adding-the-uad-framework/resources/liferay-s5e6.zip/s5e6-web/src/main/resources/META-INF/resources/view.jsp
+:language: jsp
+:lines: 18-28
+```
