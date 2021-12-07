@@ -93,6 +93,11 @@ Here are generic steps for creating scripts in the subfolders mentioned above:
 
 1. Implement your actions in arbitrary scripts in the phase folders.
 
+    ```{warning}
+    Don't use `exit` keyword in your scripts as it will break the whole `entrypoint` startup process.
+    The reason is the `source` keyword which is used for invoking these custom scripts.
+    ```
+
     ```bash
     echo "inside pre-configure-script.sh" > pre-configure/some-pre-configure-script.sh
     ```
