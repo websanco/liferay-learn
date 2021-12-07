@@ -161,7 +161,7 @@ After creating an asset renderer, you need to create a factory class to generate
 
    Set `setLinkable` to `true` so that other assets can select your asset as a related asset. Set `setSearchable` to `true` so that your assets can be found when searching.
 
-1. Create the asset renderer for your asset. This is done by calling its constructor.
+1. Implement the `getAssetRenderer` method, which constructs a new `S5E6AssetRenderer` instance. 
 
    ```{literalinclude} ./enabling-assets/resources/liferay-s5e6.zip/s5e6-web/src/main/java/com/acme/s5e6/web/internal/asset/model/S5E6EntryAssetRendererFactory.java
    :dedent: 1
