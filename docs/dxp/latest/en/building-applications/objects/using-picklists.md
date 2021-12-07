@@ -2,6 +2,8 @@
 
 Picklists is an application for creating standard lists of values that are understood across the Liferay Portal. The process of creating a Picklist includes creating the initial list and adding items to it. Once these values are defined, they can be used in supported applications.
 
+## Creating a Picklist
+
 Follow these steps to create a Picklist:
 
 1. Open the *Global Menu* (![Global Menu](../../images/icon-applications-menu.png)), go to the *Control Panel* tab, and click on *Picklists*.
@@ -36,7 +38,9 @@ Follow these steps to create a Picklist:
 
    ![Add multiple items to a Picklist.](./using-picklists/images/04.png)
 
-Once a list is created, you can select it when creating Object fields with the Picklist type.
+## Adding Picklist Fields to Objects
+
+Once a list is created, you can select it when creating Object fields. Simply select the *Picklist* field type and then select the desired pick list. See [Adding Fields to Objects](./creating-and-managing-objects/adding-fields-to-objects.md) for more information.
 
 ![Users can select the Picklist when creating new Object fields.](./using-picklists/images/05.png)
 
@@ -48,6 +52,24 @@ When users access this field in an Object's layout, it appears as a drop-down me
 A list cannot be deleted if it is used by an Object field, though list items can be edited and removed at any time.
 
 Updating or deleting a Picklist item automatically updates all Object entries using the item value.
+```
+
+## Picklist Fields in API Calls
+
+### In Liferay DXP 7.4 GA1
+
+When making POST, PATCH, and PUT API calls that include Picklist fields, each Picklist field must use this format:
+
+```json
+"samplePicklist": "string"
+```
+
+### In Liferay DXP 7.4 U1
+
+When making POST, PATCH, and PUT API calls that include Picklist fields, each Picklist field must use this format:
+
+```json
+"samplePicklist": {"key": "string"}
 ```
 
 ## Additional Information
