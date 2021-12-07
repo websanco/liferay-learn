@@ -2,7 +2,7 @@
 
 You can [manage and delete user data](../managing-user-data.md) with Liferay's User Associated Data (UAD) management tool. The tool is available out-of-the-box for many of Liferay's applications (e.g. Blogs, Documents and Media, Message Boards, etc.). This framework can also be applied to your custom application.
 
-This task is made easier with the use of [Service Builder](../../developing-applications/data-frameworks/service-builder.md). See the example below to learn how Service Builder automatically generates the necessary code to enable UAD for your application.
+This task is made easier with the use of [Service Builder](../../building-applications/data-frameworks/service-builder.md). See the example below to learn how Service Builder automatically generates the necessary code to enable UAD for your application.
 
 ## Download the Example Code
 

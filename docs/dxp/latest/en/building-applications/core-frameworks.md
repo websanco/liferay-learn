@@ -10,7 +10,6 @@ core-frameworks/localization.md
 core-frameworks/message-bus.md
 core-frameworks/portlet-providers.md
 core-frameworks/servlets.md
-core-frameworks/reference.md
 ```
 
 ```{raw} html

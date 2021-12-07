@@ -1,6 +1,6 @@
 # Understanding and Extending Generated Classes
 
-Service Builder generates both [tables for your entity](./generating-a-persistence-layer.md) and model, persistence, and service classes for it. Here you'll examine generated classes for an entity called `W9B7Entry`. Then you'll extend the local service with a new method and invoke it.
+Service Builder generates both [tables for your entity](./generating-model-persistence-and-service-code.md) and model, persistence, and service classes for it. Here you'll examine generated classes for an entity called `W9B7Entry`. Then you'll extend the local service with a new method and invoke it.
 
 Get started by downloading and unzipping the example project:
 
@@ -227,4 +227,4 @@ Congratulations! You've successfully added a new service method.
 
 ## What's Next
 
-Now that you understand the Service Builder generated classes and how to add a local service method, you can learn how to [invoke a service from a portlet](./invoking-a-service-from-a-portlet.md).
+Now that you understand the Service Builder generated classes and how to add a local service method, you can learn how to [invoke a service from a portlet](./invoking-a-service-locally.md).

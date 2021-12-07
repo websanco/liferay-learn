@@ -21,7 +21,7 @@ When you need additional fields in your application, you can always add them in 
 1. Download and unzip [Accessing Expando](./liferay-f5a3.zip).
 
    ```bash
-   curl https://learn.liferay.com/dxp/latest/en/developing-applications/data-frameworks/expando-framework/liferay-f5a3.zip -O
+   curl https://learn.liferay.com/dxp/latest/en/building-applications/data-frameworks/expando-framework/liferay-f5a3.zip -O
    ```
 
    ```bash

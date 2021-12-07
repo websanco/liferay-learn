@@ -8,7 +8,7 @@ reference/portal-properties.md
 reference/system-properties.md
 reference/database-templates.md
 reference/database-configurations.md
-reference/jvm-configurations.md
+reference/jvm-configuration.md
 ```
 
 * [データベース設定](./reference/database-configurations.md)

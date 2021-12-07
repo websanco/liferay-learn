@@ -32,7 +32,7 @@
 
 ### デフォルトのユーザープロフィール画像のイニシャルの順序を変更する
 
-デフォルトのユーザーアイコン（ユーザーのイニシャル付き）は、ユーザーのロケールで機能するように設定できます。 これらの設定は、[言語設定モジュール](../../building-applications/core-frameworks/reference/localization/adding-a-language.md)で設定します。
+デフォルトのユーザーアイコン（ユーザーのイニシャル付き）は、ユーザーのロケールで機能するように設定できます。 これらの設定は、言語設定モジュール<!-- TODO link to article when it is ready (../../building-applications/core-frameworks/reference/localization/adding-a-language.md)-->で設定します。
 
 `lang.user.default.portrait=initials`は、アバターに使用するアイコンのタイプを設定します。 デフォルト値は*initials*です。 initialsに設定した場合、次のプロパティでは、表示するイニシャルとその順序を設定します。 または、*画像*を指定します。これにより、上記と同じイニシャルなしのデフォルト画像が表示されます。
 
