@@ -1,4 +1,0 @@
-Liferay Sync
-============
-
-Coming soon!
