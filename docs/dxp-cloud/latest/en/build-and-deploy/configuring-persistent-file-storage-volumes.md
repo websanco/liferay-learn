@@ -3,7 +3,7 @@
 Administrators can configure the volumes for their services in DXP Cloud depending on their deployment type (`Deployment` or `StatefulSet`). Volumes can be stored either with persistent shared storage (NFS) or with dedicated storage (SSD), depending on the deployment type. This article documents how to configure volumes via a service's `LCP.json` file. See [Understanding Deployment Types](./understanding-deployment-types.md) for more information on deplyoment types.
 
 ```{note}
-The `data` volume (which uses the `/opt/liferay/data` directory) is reserved for the document library in the `liferay` and `backup` services. The volume's configuration does not require anything in `LCP.json` files and it cannot be changed.
+The `/opt/liferay/data` directory (named `data` by default) is reserved for the document library in the `liferay` and `backup` services. This volume does not need to be configured in `LCP.json` files and the path cannot be changed. If this configuration is present, then it can be safely removed without causing issues.
 ```
 
 Follow these steps to configure a new volume for a service.
