@@ -1,4 +1,4 @@
-# Understanding Patch Types for DXP 7.3 and Earlier
+# Understanding Patch Types for DXP 7.3 SP2 and Earlier
 
 > Subscribers
 
@@ -16,9 +16,9 @@ Here's a summary of the DXP patch types and the Portal fix delivery method.
 
 ## Fix Packs
 
-> Liferay DXP 7.3 and earlier
+> Liferay DXP 7.3 SP2 and earlier
 
-A Fix Pack is a bundled collection of the latest fixes for DXP 7.3 and earlier for subscribers. They address issues in the DXP core and Marketplace applications that ship with DXP. Fix Packs are cumulative: each one contains all the fixes from previous Fix Pack and the latest Security Fix Packs.
+A Fix Pack is a bundled collection of the latest fixes for DXP 7.3 SP2 and earlier for subscribers. They address issues in the DXP core and Marketplace applications that ship with DXP. Fix Packs are cumulative: each one contains all the fixes from previous Fix Pack and the latest Security Fix Packs.
 
 Fix Packs are available on the Help Center's [Downloads](https://customer.liferay.com/downloads) page and are installed using the [Patching Tool](./installing-patches-for-dxp-7-3-and-earlier.md). Release notes and change logs accompany each Fix Pack. Release notes highlight key information, such as important changes and security fixes. Change logs provide detailed information about each fix.
 
@@ -30,7 +30,7 @@ In DXP 7.2, the Patching Tool uninstalls the old fix pack, replacing it with the
 
 ## Security Fix Packs
 
-> Liferay DXP 7.3 and earlier
+> Liferay DXP 7.3 SP2 and earlier
 
 [DXP Security Fix Packs](https://help.liferay.com/hc/en-us/articles/360035038331) address the latest critical security issues. They are available on the Help Center's [Downloads](https://customer.liferay.com/downloads) page and are installed using the [Patching Tool](./installing-patches-for-dxp-7-3-and-earlier.md).
 
@@ -61,7 +61,7 @@ In DXP 7.2, if you already have a Hotfix installed and a Fix Pack that contains 
 
 ## Service Packs
 
-> Liferay DXP 7.3 and earlier
+> Liferay DXP 7.3 SP2 and earlier
 
 A Service Pack is built on top of the original DXP GA major release and includes the latest Fix Pack, Patching Tool, and bundled Marketplace applications. Fixes that require more time to implement and test can be reserved for Service Packs.
 
@@ -103,7 +103,7 @@ The following table describes the testing applied to each patch type.
     * Patching Tool
     * and more
 
-* [Security page](https://help.liferay.com/hc/en-us/categories/360000892792-Security): Links to security-related overviews, advisories, Security Updates (7.4) and Security Fix Packs (7.3 and earlier).
+* [Security page](https://help.liferay.com/hc/en-us/categories/360000892792-Security): Links to security-related overviews, advisories, Security Updates (7.3 SP3+) and Security Fix Packs (7.3 SP2 and earlier).
 
 The Help Center is also a launching point for account support, support FAQs and more. Liferay is here to help!
 

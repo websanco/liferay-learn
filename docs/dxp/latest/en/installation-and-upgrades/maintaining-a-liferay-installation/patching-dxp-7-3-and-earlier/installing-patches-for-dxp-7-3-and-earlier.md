@@ -1,11 +1,11 @@
-# Installing Patches for DXP 7.3 and Earlier
+# Installing Patches for DXP 7.3 SP2 and Earlier
 
 > Subscribers
 
-The [Patching Tool](../reference/installing-the-patching-tool.md) applies Fix Packs (including Security Fix Packs and Service Packs) for Liferay DXP 7.3 and earlier only. It also applies Hotfixes for any DXP version.
+The [Patching Tool](../reference/installing-the-patching-tool.md) applies Fix Packs (including Security Fix Packs and Service Packs) for Liferay DXP 7.3 SP2 and earlier only. It also applies Hotfixes for any DXP version.
 
 ```{note}
-If you're on Liferay DXP 7.4+ and applying an Update (or Security Update), please see [Updating Liferay](../updating-liferay.md).
+If you're applying an Update (or Security Update) on Liferay DXP 7.3 SP3+, please see [Updating Liferay](../updating-liferay.md).
 ```
 
 The patching steps for DXP bundles and DXP application server installations are similar. Since DXP bundles include the preconfigured Patching Tool, you can apply patches right away. DXP application server installations, however, require installing and configuring the Patching Tool before patching.
