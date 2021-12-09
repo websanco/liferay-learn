@@ -46,6 +46,8 @@ Here's how to replace a license:
 
     Alternatively, if you have associated a [bind mount](./providing-files-to-the-container.md) with the container, you can copy the license/key file to the folder mapped to `/mnt/liferay/deploy`.
 
+    See [Providing Files to the Container](./providing-files-to-the-container.md) for more information.
+
 DXP logs the license installation. For example,
 
 ```
