@@ -1,24 +1,7 @@
-buildscript {
-	dependencies {
-		classpath group: "com.liferay", name: "com.liferay.gradle.plugins.lang.builder", version: "latest.release"
-	}
-
-	repositories {
-		maven {
-			url "https://repository-cdn.liferay.com/nexus/content/repositories/liferay-public-releases/"
-		}
-	}
+dependencies {
+	compileOnly group: "com.liferay.portal", name: "release.portal.api"
 }
-
-apply plugin: "com.liferay.lang.builder"
 
 buildLang {
 	excludedLanguageIds = []
-	translateSubscriptionKey = project.properties["microsoft.translator.subscription.key"]
-}
-
-repositories {
-	maven {
-		url "https://repository-cdn.liferay.com/nexus/content/repositories/liferay-public-releases/"
-	}
 }

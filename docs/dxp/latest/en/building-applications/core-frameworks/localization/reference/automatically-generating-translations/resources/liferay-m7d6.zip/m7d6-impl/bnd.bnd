@@ -1,6 +1,3 @@
 Bundle-Name: Acme M7D6 Implementation
 Bundle-SymbolicName: com.acme.m7d6.impl
 Bundle-Version: 1.0.0
-Provide-Capability:\
-	liferay.language.resources;\
-		resource.bundle.base.name="content.Language"
