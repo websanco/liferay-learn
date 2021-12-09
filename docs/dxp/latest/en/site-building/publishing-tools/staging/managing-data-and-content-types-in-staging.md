@@ -71,6 +71,6 @@ The Staging framework gathers deletions (including trashed entities) in a Site. 
 
 ## Additional Information
 
-* [Staging Overview](./staging-overview.md)
+* [Staging Overview](../staging.md)
 * [Understanding the Publishing Process](./understanding-the-publishing-process.md)
 * [Site Staging UI Reference](./site-staging-ui-reference)

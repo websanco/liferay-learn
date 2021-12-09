@@ -30,7 +30,7 @@ After changing a widget, you can publish the widget by clicking on the *Actions*
 
 ## Additional Information
 
-* [Staging Overview](./staging-overview.md)
+* [Staging Overview](../staging.md)
 * [Managing Staging Permissions](./managing-staging-permissions.md)
 * [Page Versioning](./page-versioning.md)
 * [Site Staging UI Reference](./site-staging-ui-reference.md)

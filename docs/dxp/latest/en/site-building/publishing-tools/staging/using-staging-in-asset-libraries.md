@@ -22,7 +22,7 @@ When changes are made in the Staging environment, they can then be published all
 
 ## Additional Information
 
-* [Staging Overview](./staging-overview.md)
+* [Staging Overview](../staging.md)
 * [Asset Libraries Overview](../../../content-authoring-and-management/asset-libraries/asset-libraries-overview.md)
 * [Configuring Local Live Staging](./configuring-local-live-staging.md)
 * [Configuring Remote Live Staging](./configuring-remote-live-staging.md)

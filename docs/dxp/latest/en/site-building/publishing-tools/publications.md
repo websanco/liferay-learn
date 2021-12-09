@@ -2,13 +2,14 @@
 
 ```{toctree}
 :maxdepth: 3
-   publications.md
-   publications/enabling-publications.md
-   publications/creating-and-managing-publications.md
-   publications/making-and-publishing-changes.md
-   publications/collaborating-on-publications.md
-   publications/resolving-conflicts.md
-   publications/reverting-changes.md
+
+publications.md
+publications/enabling-publications.md
+publications/creating-and-managing-publications.md
+publications/making-and-publishing-changes.md
+publications/collaborating-on-publications.md
+publications/resolving-conflicts.md
+publications/reverting-changes.md
 ```
 
 You can use *Publications* to develop, track, and publish changes across your DXP instance. It works by creating a database column to determine which version of your content is displayed on your live Sites. With it, Users create separate *publications* to group their changes into publishable blocks.

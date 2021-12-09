@@ -170,7 +170,7 @@ Follow these steps to disable Remote Live Staging:
 
 ## Additional Information
 
-* [Staging Overview](./staging-overview.md)
+* [Staging Overview](../staging.md)
 * [Site Staging UI Reference](./site-staging-ui-reference.md)
 * [Managing Staging Permissions](./managing-staging-permissions.md)
 * [Managing Data and Content Types in Staging](./managing-data-and-content-types-in-staging.md)

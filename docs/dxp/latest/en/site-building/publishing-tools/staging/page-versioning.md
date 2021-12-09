@@ -95,7 +95,7 @@ You can also set permissions for each variation, so certain users have access to
 
 ## Additional Information
 
-* [Staging Overview](./staging-overview.md)
+* [Staging Overview](../staging.md)
 * [Configuring Local Live Staging](./configuring-local-live-staging.md)
 * [Configuring Remote Live Staging](./configuring-remote-live-staging.md)
 * [Site Staging UI Reference](./site-staging-ui-reference.md)

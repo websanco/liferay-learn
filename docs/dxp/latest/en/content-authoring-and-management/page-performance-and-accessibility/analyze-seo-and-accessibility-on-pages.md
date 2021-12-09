@@ -119,7 +119,7 @@ Consider this information when using the Page Audit tool:
 
   ![You can change the Page language you want to audit using the flag button in the Page Audit tool.](./analyze-seo-and-accessibility-on-pages/images/06.gif)
 
-- If you're publishing your Pages using [Remote Live Staging](../../site-building/publishing-tools/staging/staging-overview.md) and your Staging environment is not connected to the internet, you can use the Page Audit tool in the Live environment, but you can only fix the issues in the Staging environment.
+- If you're publishing your Pages using [Remote Live Staging](../../site-building/publishing-tools/staging.md) and your Staging environment is not connected to the internet, you can use the Page Audit tool in the Live environment, but you can only fix the issues in the Staging environment.
 
 ## Troubleshooting Page Audit Panel Errors
 

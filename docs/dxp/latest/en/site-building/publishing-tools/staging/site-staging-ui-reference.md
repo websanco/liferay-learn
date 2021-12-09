@@ -154,7 +154,7 @@ From here, you can disable Staging for your Site, or modify your [Page versionin
 
 ## Additional Information
 
-* [Staging Overview](./staging-overview.md)
+* [Staging Overview](../staging.md)
 * [Understanding the Publishing Process](./understanding-the-publishing-process.md)
 * [Page Versioning](./page-versioning.md)
 * [Managing Data and Content Types in Staging](./managing-data-and-content-types-in-staging.md)

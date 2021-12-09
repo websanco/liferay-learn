@@ -6,7 +6,7 @@ Asset Libraries are virtual spaces where you can create and store reusable asset
 
 By organizing content into smaller, focused buckets, you can more easily access and manage content in different Site contexts. [Tags and Categories](../tags-and-categories/organizing-content-with-categories-and-tags.md) can also be used to categorize Library assets, further improving organization.
 
-Implement a custom [workflow](../../process-automation/workflow/introduction-to-workflow.md) to direct the publishing process lowering the risk of editing conflicts and content duplication. You can also enable [Staging](../../site-building/publishing-tools/staging/staging-overview.md) for a Library to manage content publishing while maintaining data isolation.
+Implement a custom [workflow](../../process-automation/workflow/introduction-to-workflow.md) to direct the publishing process lowering the risk of editing conflicts and content duplication. You can also enable [Staging](../../site-building/publishing-tools/staging.md) for a Library to manage content publishing while maintaining data isolation.
 
 Once you've connected your Library to a Site, you can display its content in fragments and widgets. You can also display Asset Library content in Sites using each Site's default Display Page Template for the respective content type.
 
