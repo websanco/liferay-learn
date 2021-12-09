@@ -3,7 +3,6 @@
 ```{toctree}
 :maxdepth: 3
 
-publications.md
 publications/enabling-publications.md
 publications/creating-and-managing-publications.md
 publications/making-and-publishing-changes.md
@@ -25,14 +24,8 @@ publications/reverting-changes.md
 
 開始するには、[Enabling Publications](./publications/enabling-publications.md)を参照してください。
 
-## 追加情報
-
-  - [Enabling Publications](./publications/enabling-publications.md)
-  - [パブリケーションの作成と管理](./publications/creating-and-managing-publications.md)
-  - [変更の作成と公開](./publications/making-and-publishing-changes.md)
-
 ```{raw} html
-:file: ../../landingpage_template.html
+:file: ../../../landingpage_template.html
 ```
 
 ```{raw} html

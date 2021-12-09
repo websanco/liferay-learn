@@ -3,7 +3,6 @@
 ```{toctree}
 :maxdepth: 3
 
-staging.md
 staging/understanding-the-publishing-process.md
 staging/configuring-local-live-staging.md
 staging/configuring-remote-live-staging.md
@@ -18,9 +17,6 @@ staging/site-staging-ui-reference.md
 Liferay DXPの*ステージング*ツールを使用して、*ステージング環境*の背後でサイトに変更を加えてから、ローカルまたはリモートの*本番環境*に変更を公開し、本番環境でユーザーの着信トラフィックを処理できます。
 
 ステージング設定の一部として、環境を同じサーバーでホストするか、ネットワークで接続された別々のサーバーでホストするかを決定します。 また、ページバージョニングを有効にして、ステージングするサイトコンテンツとアプリケーションデータをカスタマイズすることもできます。
-
-  - [設定オプション](#staging-configuration-options)
-  - [公開プロセスを理解する](#understanding-the-publishing-process)
 
 ## 設定オプション
 
@@ -50,15 +46,8 @@ Page versioning is only supported for Widget Pages.
 
 このプロセスを理解すると、効率が向上し、シームレスな公開エクスペリエンスを実現するための事前の計画に役立ちます。 詳細は、[公開プロセスを理解する](./staging/understanding-the-publishing-process.md)を参照してください。
 
-## 追加情報
-
-  - [公開プロセスを理解する](./staging/understanding-the-publishing-process.md)
-  - [Configuring Local Live Staging](./staging/configuring-local-live-staging.md)
-  - [Configuring Remote Live Staging](./staging/configuring-remote-live-staging.md)
-  - [Staging UI Reference](./staging/staging-ui-reference.md)
-
 ```{raw} html
-:file: ../../landingpage_template.html
+:file: ../../../landingpage_template.html
 ```
 
 ```{raw} html
