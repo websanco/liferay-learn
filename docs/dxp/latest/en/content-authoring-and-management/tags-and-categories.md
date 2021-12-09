@@ -1,13 +1,15 @@
 # Tags and Categories
 
 ```{toctree}
-:maxdepth: 2
+:maxdepth: 3
 
 tags-and-categories/organizing-content-with-categories-and-tags.md
 tags-and-categories/tagging-content-and-managing-tags.md
 tags-and-categories/defining-categories-and-vocabularies-for-content.md
 tags-and-categories/geolocating-assets.md
 tags-and-categories/session-property-vocabularies.md
+tags-and-categories/auto-tagging.md
+tags-and-categories/developer-guide.md
 ```
 
 - [Organizing Content with Categories and Tags](./tags-and-categories/organizing-content-with-categories-and-tags.md)
@@ -24,5 +26,5 @@ tags-and-categories/session-property-vocabularies.md
 
 ## Developer Guide
 
-- [Categories and Vocabulary API Basics](./developer-guide/categories-and-vocabulary-api-basics.md)
-- [Tags API Basics](./developer-guide/tags-api-basics.md)
+- [Categories and Vocabulary API Basics](./tags-and-categories/developer-guide/categories-and-vocabulary-api-basics.md)
+- [Tags API Basics](./tags-and-categories/developer-guide/tags-api-basics.md)
