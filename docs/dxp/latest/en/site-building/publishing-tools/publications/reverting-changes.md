@@ -1,28 +1,38 @@
 # Reverting Changes
 
-Liferay DXP's Publication tool maintains a history of all published changes. You can use this publishing history to create publications that revert earlier changes to your instance. While reverting changes, you can also make additional changes to your DXP instance as part of your Revert publication.
+Liferay Publications maintains a history of all published changes. You can use this publishing history to easily create publications that revert earlier changes to production. While reverting changes, you can also make additional changes.
+
+```{note}
+Users cannot revert the same publication twice. Attempting this results in an *Addition Conflict*.
+```
+
+Follow these steps to revert published changes.
 
 1. Go to the *Publications* overview page and click on the *History* tab.
 
    ![Go to the Publications overview page and click on History.](./reverting-changes/images/01.png)
 
-1. Click on *Revert* for the publication or reversion you would like to revert.
+1. Click on *Revert* for the desired publication.
 
-1. Use the *Name* field to determine the name of your reversion. The default name for revert publications is `Revert "[Publication Name]"`.
+1. Set a *name* and *description* for the new publication. The default name is `Revert "[Publication Name]"`.
 
-1. Optionally, enter a description for your reversion.
+   ![Enter a name and description for the publication, and determine when you want to publish it.](./reverting-changes/images/02.png)
 
-1. Determine when you want to publish your reversion, whether *Now* or *Later*.
+1. Determine when to publish the publication: *Now* or *Later*.
 
-   ![From the Revert page, you can determine when you want to publish your revision.](./reverting-changes/images/02.png)
+   **Now**: This publishes the reversion immediately.
+
+   **Later**: This creates the publication and allows users to make additional changes to the publication before publishing.
 
 1. Click on *Revert and Create Publication*.
 
-This creates a new publication with changes that undo all the changes made by your selected publication across your instance, but it does not immediately apply those changes to production.
+This creates a new publication that includes all necessary changes for reverting the selected publication.
 
-If you selected to publish the reverting changes *Now*, you are redirected to the Publish page. If there are no conflicts, you can click *Publish* to publish your reverting changes.
+![A new revert publication is created.](./reverting-changes/images/03.png)
 
-If you selected to publish the reverting changes *Later*, you are redirected to the Review Changes page for your new publication. At this point, you can make further changes to your publication, and then publish both your reverting and new changes when ready.
+If you've selected to publish *Now*, you are redirected to the publishing page. If there are no conflicts, you can click *Publish* to revert the original publication's changes to production.
+
+If you've selected to publish *Later*, you are redirected to the Review Changes page for your new publication. At this point, you can make further changes to your publication, and then publish when ready.
 
 ## Additional Information
 
