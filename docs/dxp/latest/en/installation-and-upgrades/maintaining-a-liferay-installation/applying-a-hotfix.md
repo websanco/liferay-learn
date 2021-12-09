@@ -2,7 +2,7 @@
 
 > Subscribers
 
-A Hotfix is a fix or collection of fixes delivered between Updates (or between Fix Packs for DXP 7.3 SP2 and earlier) to address a customer's confirmed critical DXP issues. You can request at Hotfix via a [Help Center ticket](https://help.liferay.com/hc). After receiving a Hotfix, you can install it using the Patching Tool.
+A Hotfix is a fix or collection of fixes delivered between Updates (or between Fix Packs for versions before DXP 7.3 SP3) to address a customer's confirmed critical DXP issues. You can request at Hotfix via a [Help Center ticket](https://help.liferay.com/hc). After receiving a Hotfix, you can install it using the Patching Tool.
 
 ```{warning}
 **Always** [back up](./backing-up.md) your database and installation before applying a Hotfix.

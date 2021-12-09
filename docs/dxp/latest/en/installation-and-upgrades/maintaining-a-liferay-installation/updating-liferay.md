@@ -13,7 +13,7 @@ Here you'll learn how to update to a new Liferay Docker image, update to a new L
 ```
 
 ```{important}
-Liferay DXP 7.3 SP2 and earlier use a patching model---it's different from the model described here. If you're on 7.3 SP2 and earlier, please see [Patching DXP](./patching-dxp-7-3-and-earlier.md).
+Versions before Liferay DXP 7.3 SP3 use a patching model---it's different from the model described here. If you're on a version before Liferay DXP 7.3 SP3, please see [Patching DXP](./patching-dxp-7-3-and-earlier.md).
 ```
 
 ```{note}
