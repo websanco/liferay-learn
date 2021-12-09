@@ -82,7 +82,15 @@ You're running on the new Liferay update Docker image.
 
 If you're running a Liferay DXP/Portal Tomcat Bundle, here's how to update:
 
-1. Download the Liferay DXP/Portal Tomcat Bundle update you want from [Help Center](https://help.liferay.com/hc) (subscription) or [Community Downloads](https://www.liferay.com/downloads-community).
+1. Export your modified System Settings (including your [File Storage](../../system-administration/file-storage/configuring-file-storage.md) and [Elasticsearch](../../using-search/installing-and-upgrading-a-search-engine/elasticsearch/connecting-to-elasticsearch.md) settings) to [`.config` files](../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md#creating-configuration-files) and copy them to your `[Liferay Home]/osgi/configs/` folder.
+
+    For example, if you're using [Advanced File System Store](../../system-administration/file-storage/configuring-file-storage.md) or [Simple File System Store](../../system-administration/file-storage/other-file-store-types/simple-file-system-store.md), export your file store settings to a [`.config` file](../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md#creating-configuration-files) and copy it to your `[Liferay Home]/osgi/configs/` folder. Here's an example `com.liferay.portal.store.file.system.configuration.AdvancedFileSystemStoreConfiguration.config` file with the required `rootDir` parameter:
+
+    ```properties
+    rootDir="data/document_library"
+    ```
+
+1. If you're using [Commerce](https://learn.liferay.com/commerce/latest/en/index.html) and the release notes mention database upgrades for Commerce, prepare to upgrade it. See [Upgrading Liferay Commerce](https://learn.liferay.com/commerce/latest/en/installation-and-upgrades/upgrading-liferay-commerce.html) for details.
 
 1. Shut down your application server.
 
@@ -91,19 +99,26 @@ If you're running a Liferay DXP/Portal Tomcat Bundle, here's how to update:
     * On Unix-style systems, you can usually replace files that are running, but the old ones reside in memory.
     * On Windows systems, files in use are locked and can't be patched.
 
+1. [Back up](./backing-up.md) your installation.
+
+1. Download the Liferay DXP/Portal Tomcat Bundle update you want from [Help Center](https://help.liferay.com/hc) (subscribers) or [Community Downloads](https://www.liferay.com/downloads-community).
+
+1. Unzip the bundle to an arbitrary location.
+
 1. Replace the new bundle's `[Liferay Home]/data` folder with the `[Liferay Home]/data` folder from your [backup](./backing-up.md).
 
-1. Copy your DXP activation key (Subscription) and your [OSGi configuration files](../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md) from your [backup](./backing-up.md#liferay-home) to the new installation.
+1. Copy these files from your [backup](./backing-up.md) to the new installation:
+
+    * Configuration files (`.config` files)
+    * DXP activation key (subscribers)
+    * [Portal Properties](../reference/portal-properties.md) (e.g., `portal-ext.properties`)
+    * Tomcat descriptors
+
+    See [Migrating Configurations and Properties](../upgrading-liferay/migrating-configurations-and-properties.md) for additional information.
+
+1. Copy your custom widgets and modules to the new installation.
 
 1. If the release notes mention database changes, use a compatible [database upgrade option](../upgrading-liferay/reference/database-upgrade-options.md) to apply all required changes and any optional changes you want.
-
-1. If the release notes mention index updates, configure Liferay to update the indexes on startup. Set the [`database.indexes.update.on.startup`](../../../../../reference/latest/en/dxp/propertiesdoc/portal.properties.html#Database) Portal Property to `true` in a [`portal-ext.properties` file](../reference/portal-properties.md). For example,
-
-    ```properties
-    database.indexes.update.on.startup=true
-    ```
-
-    Only indexes that start with `LIFERAY_` OR `IX_` are updated. Make sure any custom indexes you have do not use this naming convention.
 
 1. Start the application server.
 
@@ -159,14 +174,6 @@ If you're running Liferay DXP/Portal on an existing application server, here's h
     ```
 
 1. If the release notes mention database changes, use a compatible [database upgrade option](../upgrading-liferay/reference/database-upgrade-options.md) to apply all required changes and any optional changes you want.
-
-1. If the release notes mention index updates, configure Liferay to update the indexes on startup. Set the [`database.indexes.update.on.startup`](../../../../../reference/latest/en/dxp/propertiesdoc/portal.properties.html#Database) Portal Property to `true` in a [`portal-ext.properties` file](../reference/portal-properties.md). For example,
-
-    ```properties
-    database.indexes.update.on.startup=true
-    ```
-
-    Only indexes that start with `LIFERAY_` OR `IX_` are updated. Make sure any custom indexes you have do not use this naming convention.
 
 1. Start the application server again.
 
