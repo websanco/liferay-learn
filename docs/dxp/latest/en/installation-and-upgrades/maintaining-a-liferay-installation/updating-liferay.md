@@ -112,9 +112,10 @@ If you're running a Liferay DXP/Portal Tomcat Bundle, here's how to update:
     * Configuration files (`.config` files)
     * DXP activation key (subscribers)
     * [Portal Properties](../reference/portal-properties.md) (e.g., `portal-ext.properties`)
-    * Tomcat descriptors
 
     See [Migrating Configurations and Properties](../upgrading-liferay/migrating-configurations-and-properties.md) for additional information.
+
+1. Replicate your Tomcat customizations (e.g., `[tomcat version]/conf` folder contents and added libraries) from your [backup](./backing-up.md) to the new installation.
 
 1. Copy your custom widgets and modules to the new installation.
 
