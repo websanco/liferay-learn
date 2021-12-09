@@ -30,7 +30,7 @@ Single asset publishing is not supported for page-scoped content.
 
 ## 追加情報
 
-  - [Staging Overview](./staging-overview.md)
+  - [Staging Overview](../staging.md)
   - [ステージング権限の管理](./managing-staging-permissions.md)
   - [Page Versioning](./page-versioning.md)
   - [Staging UI Reference](./staging-ui-reference.md)

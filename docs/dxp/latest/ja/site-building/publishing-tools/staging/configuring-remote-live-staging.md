@@ -156,7 +156,7 @@ Never clone your Liferay DXP database. Doing this can duplicate important data u
 
 ## 追加情報
 
-  - [Staging Overview](./staging-overview.md)
+  - [Staging Overview](../staging.md)
   - [Staging UI Reference](./staging-ui-reference.md)
   - [ステージング権限の管理](./managing-staging-permissions.md)
   - [ステージングでのデータとコンテンツタイプの管理](./managing-data-and-content-types-in-staging.md)

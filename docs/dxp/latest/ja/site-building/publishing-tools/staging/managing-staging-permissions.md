@@ -62,6 +62,6 @@
 
 ## 追加情報
 
-  - [Staging Overview](./staging-overview.md)
+  - [Staging Overview](../staging.md)
   - [Page Versioning](./page-versioning.md)
   - [Staging UI Reference](./staging-ui-reference.md)

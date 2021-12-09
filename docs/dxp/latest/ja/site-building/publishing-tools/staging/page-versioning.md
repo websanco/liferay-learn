@@ -85,7 +85,7 @@ Page templates are not recognized by the Staging framework. This means that exis
 
 ## 追加情報
 
-  - [Staging Overview](./staging-overview.md)
+  - [Staging Overview](../staging.md)
   - [Configuring Local Live Staging](./configuring-local-live-staging.md)
   - [Configuring Remote Live Staging](./configuring-remote-live-staging.md)
   - [Staging UI Reference](./staging-ui-reference.md)

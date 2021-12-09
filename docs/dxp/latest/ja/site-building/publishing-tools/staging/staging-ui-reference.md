@@ -128,7 +128,7 @@ This displays the number of Page deletions tracked by the Staging framework. Kee
 
 ## 追加情報
 
-  - [Staging Overview](./staging-overview.md)
+  - [Staging Overview](../staging.md)
   - [公開プロセスを理解する](./understanding-the-publishing-process.md)
   - [Page Versioning](./page-versioning.md)
   - [ステージングでのデータとコンテンツタイプの管理](./managing-data-and-content-types-in-staging.md)

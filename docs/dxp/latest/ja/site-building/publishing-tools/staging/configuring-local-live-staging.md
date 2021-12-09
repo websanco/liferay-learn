@@ -53,7 +53,7 @@ DXPインスタンスのローカル現行環境ステージングを設定す�
 
 ## 追加情報
 
-  - [Staging Overview](./staging-overview.md)
+  - [Staging Overview](../staging.md)
   - [Staging UI Reference](./staging-ui-reference.md)
   - [ステージングでのデータとコンテンツタイプの管理](./managing-data-and-content-types-in-staging.md)
   - [ステージング権限の管理](./managing-staging-permissions.md)
