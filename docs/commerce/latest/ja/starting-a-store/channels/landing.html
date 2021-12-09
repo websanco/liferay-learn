@@ -1,0 +1,27 @@
+<script type="module">
+	import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.esm.browser.min.js'
+
+	const page = new Vue({
+		el: '#landingPage',
+		data: {
+			cards: [
+				{
+					sectionName: 'チャネルについて',
+					sectionURL: 'channels/introduction-to-channels.html',
+				},
+				{
+					sectionName: 'チャネル管理',
+					sectionURL: 'channels/managing-channels.html',
+				},
+				{
+					sectionName: 'チャネルを使用した商品の可視性の構成',
+					sectionURL: 'channels/configuring-product-visibility-using-channels.html',
+				},
+				{
+					sectionName: 'チャンネルリファレンスガイド',
+					sectionURL: 'channels/channels-reference-guide.html',
+				}
+			]
+		}
+	})
+</script>

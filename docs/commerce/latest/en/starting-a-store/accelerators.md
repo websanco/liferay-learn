@@ -11,7 +11,7 @@ Liferay Commerce comes with Minium, a B2B site accelerator, out-of-the-box.
 To use an Accelerator:
 
 1. Go to _Control Panel_ → _Sites_ → _Sites_.
-1. Click the (+) button to add a new site.
+1. Click the Add (![Add](../images/icon-add.png)) button to add a new site.
 1. Choose an Accelerator (Minium).
 
     ![Selecting a Site Template](./accelerators/images/01.png)

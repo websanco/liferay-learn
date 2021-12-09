@@ -7,7 +7,7 @@ Contents
    :maxdepth: 4
 
    installation_and_upgrades
-   starting_a_store
+   starting-a-store.md
    managing_a_catalog
    creating_store_content
    promoting-products.md

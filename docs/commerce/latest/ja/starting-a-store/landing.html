@@ -1,0 +1,57 @@
+<script type="module">
+	import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.esm.browser.min.js'
+
+	const page = new Vue({
+		el: '#landingPage',
+		data: {
+			cards: [
+				{
+					sectionName: 'Liferay Commerceの概要',
+					sectionURL: 'starting-a-store/introduction-to-liferay-commerce.html',
+				},
+				{
+					sectionName: 'ストア設定の概要',
+					sectionURL: 'starting-a-store/store-setup-overview.html',
+				},
+				{
+					sectionName: '管理者アカウントの概要',
+					sectionURL: 'starting-a-store/introduction-to-the-admin-account.html',
+				},
+				{
+					sectionName: 'アクセラレータ',
+					sectionURL: 'starting-a-store/accelerators.html',
+				},
+				{
+					sectionName: 'Minium Acceleratorを使用してB2Bストアをすぐに開始する',
+					sectionURL: 'starting-a-store/using-the-minium-accelerator-to-jump-start-your-b2b-store.html',
+				},
+				{
+					sectionName: 'サイト管理',
+					sectionURL: 'starting-a-store/sites-and-site-types.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'サイトとサイトのタイプ',
+							url: 'starting-a-store/sites-and-site-types.html'
+						}
+					]
+				},
+				{
+					sectionName: 'チャンネル',
+					sectionURL: 'starting-a-store/channels.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'チャネルについて',
+							url: 'starting-a-store/channels/introduction-to-channels.html'
+						},
+						{
+							name: 'チャネル管理',
+							url: 'starting-a-store/channels/managing-channels.html'
+						}
+					]
+				}
+			]
+		}
+	})
+</script>
