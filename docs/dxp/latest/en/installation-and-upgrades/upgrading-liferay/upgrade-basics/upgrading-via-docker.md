@@ -1,6 +1,6 @@
 # Upgrading Via Docker
 
-Running a Liferay Docker image with auto-upgrade enabled upgrades your database on Liferay startup. After the upgrade completes, you can continue [using Liferay via that Docker container](../../../installation-and-upgrades/installing-liferay/using-liferay-docker-images.md) or point a new Liferay on-premises installation to the upgraded database.
+Running a Liferay Docker image with auto-upgrade enabled uses the Database Upgrade Tool transparently to upgrade your database on Liferay startup. After the upgrade completes, you can continue [using Liferay via that Docker container](../../../installation-and-upgrades/installing-liferay/using-liferay-docker-images.md) or point a new Liferay on-premises installation to the upgraded database.
 
 ```{important}
 Don't have Docker? Go here first:

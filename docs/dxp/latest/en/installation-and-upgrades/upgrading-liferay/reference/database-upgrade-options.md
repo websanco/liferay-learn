@@ -4,7 +4,7 @@ When a release, update, or fix pack has database schema changes, it's helpful to
 
 Here are the database upgrade options:
 
-* [Docker image](../upgrade-basics/upgrading-via-docker.md): Running the new DXP/Portal Docker image with the following environment variable auto-runs the core and module database upgrades on the configured database.
+* [Docker image](../upgrade-basics/upgrading-via-docker.md): Running the new DXP/Portal Docker image with the following environment variable auto-runs the Database Upgrade Tool on core and module database upgrades on the configured database.
 
     ```bash
     -e LIFERAY_UPGRADE_PERIOD_DATABASE_PERIOD_AUTO_PERIOD_RUN=true
