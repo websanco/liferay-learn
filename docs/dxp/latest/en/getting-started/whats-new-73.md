@@ -78,7 +78,7 @@ In 7.3 we've added a new configuration to vocabularies in order to [set visibili
 
 ## Publication Management
 
-[Publications](../site-building/publishing-tools/publications/publications-overview.md) is a new feature that enables content creators to prepare changes and publish them on a schedule. If you must roll out a special, seasonal promotion that involves updating images, copy, and adding new pages, you can create a Publication and invite the necessary users to make their changes before publishing them. Multiple Publications can be worked on at a time, giving you the freedom to create many updates at once and roll them out on your schedule.
+[Publications](../site-building/publishing-tools/publications.md) is a new feature that enables content creators to prepare changes and publish them on a schedule. If you must roll out a special, seasonal promotion that involves updating images, copy, and adding new pages, you can create a Publication and invite the necessary users to make their changes before publishing them. Multiple Publications can be worked on at a time, giving you the freedom to create many updates at once and roll them out on your schedule.
 
 ![Publications provide a way to update your Site on a schedule of your choosing.](./whats-new-73/images/09.gif)
 

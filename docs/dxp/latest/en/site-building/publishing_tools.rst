@@ -26,7 +26,7 @@ Staging
 Publications
 ~~~~~~~~~~~~
 
--  :doc:`/site-building/publishing-tools/publications/publications-overview`
+-  :doc:`/site-building/publishing-tools/publications`
 -  :doc:`/site-building/publishing-tools/publications/enabling-publications`
 -  :doc:`/site-building/publishing-tools/publications/creating-and-managing-publications`
 -  :doc:`/site-building/publishing-tools/publications/making-and-publishing-changes`

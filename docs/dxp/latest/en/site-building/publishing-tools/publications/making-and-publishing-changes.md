@@ -130,6 +130,6 @@ This redirects you to the *Scheduled* tab where you can view and [manage schedul
 
 ## Additional Information
 
-* [Publications Overview](./publications-overview.md)
+* [Publications Overview](../publications.md)
 * [Enabling Publications](./enabling-publications.md)
 * [Creating and Managing Publications](./creating-and-managing-publications.md)

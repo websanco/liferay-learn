@@ -10,7 +10,7 @@ Liferay DXP includes all the tools you need to [build your Site](./building-site
 
 Configuring Pages and Site [Navigation](./site-navigation/using-navigation-menus.md) behavior is intuitive and flexible. Pages are automatically added to the navigation when they're created. You can hide pages if you prefer, or simply make them private, so only [members of the Site](./building-sites/site-membership/adding-members-to-sites.md) can view them with the proper permissions.
 
-Liferay DXP also provides tools to enable you to make changes to your site without disrupting user experience. Liferay Sites can be staged, allowing changes to be made and tested on a site before being published to users. Liferay DXP's [Publications](./publishing-tools/publications/publications-overview.md) feature handles this for you. You can use Publications to develop, track, and update your Site in a safe environment, without affecting the live site that your users see.
+Liferay DXP also provides tools to enable you to make changes to your site without disrupting user experience. Liferay Sites can be staged, allowing changes to be made and tested on a site before being published to users. Liferay DXP's [Publications](./publishing-tools/publications.md) feature handles this for you. You can use Publications to develop, track, and update your Site in a safe environment, without affecting the live site that your users see.
 
 ## Displaying Content
 

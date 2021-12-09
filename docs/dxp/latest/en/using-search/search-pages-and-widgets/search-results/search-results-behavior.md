@@ -63,7 +63,7 @@ With [staging](../../../site-building/publishing-tools/staging/managing-data-and
 
 ## Search and Publications
 
-With [Publications](../../../site-building/publishing-tools/publications/publications-overview.md) enabled, content is associated with a specific Publication. Content added to a Publication is marked so that the search API can decipher whether an item is in production or not. In the production version of the Site, only content that's been [published](../../../site-building/publishing-tools/publications/making-and-publishing-changes.md#publishing-your-changes) can be returned in search results. In an ongoing Publication, production content and content for that specific Publication can be returned.
+With [Publications](../../../site-building/publishing-tools/publications.md) enabled, content is associated with a specific Publication. Content added to a Publication is marked so that the search API can decipher whether an item is in production or not. In the production version of the Site, only content that's been [published](../../../site-building/publishing-tools/publications/making-and-publishing-changes.md#publishing-your-changes) can be returned in search results. In an ongoing Publication, production content and content for that specific Publication can be returned.
 
 ## Result Summaries
 

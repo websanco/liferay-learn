@@ -86,6 +86,6 @@ While all published publications on an instance are listed in the History tab, o
 
 ## Additional Information
 
-* [Publications Overview](./publications-overview.md)
+* [Publications Overview](../publications.md)
 * [Enabling Publications](./enabling-publications.md)
 * [Making and Publishing Changes](./making-and-publishing-changes.md)

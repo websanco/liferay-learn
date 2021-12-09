@@ -74,6 +74,6 @@ Once disabled, all active publications are deactivated, scheduled publications a
 
 ## Additional Information
 
-* [Publications Overview](./publications-overview.md)
+* [Publications Overview](../publications.md)
 * [Creating and Managing Publications](./creating-and-managing-publications.md)
 * [Making and Publishing Changes](./making-and-publishing-changes.md)
