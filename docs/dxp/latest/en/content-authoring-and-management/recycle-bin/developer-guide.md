@@ -1,8 +1,10 @@
-Developer Guide
-===============
+# Developer Guide
 
-.. toctree::
-   :maxdepth: 2
+```{toctree}
+:maxdepth: 3
+```
+
+Coming Soon!
 
 * Enabling Recycle Bin in Service Builder
 * Restoring Entries
