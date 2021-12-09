@@ -1,23 +1,23 @@
 buildscript {
-    dependencies {
-        classpath 'com.liferay:com.liferay.gradle.plugins.lang.builder:latest.release'
-    }
+	dependencies {
+		classpath group: "com.liferay", name: "com.liferay.gradle.plugins.lang.builder", version: "latest.release"
+	}
 
-    repositories {
-        maven {
-            url "https://repository.liferay.com/nexus/content/repositories/liferay-public-releases/"
-        }
-    }
+	repositories {
+		maven {
+			url "https://repository-cdn.liferay.com/nexus/content/repositories/liferay-public-releases/"
+		}
+	}
 }
 
 apply plugin: "com.liferay.lang.builder"
 
 buildLang {
-   translateSubscriptionKey = project.properties["microsoft.translator.subscription.key"]
+	translateSubscriptionKey = project.properties["microsoft.translator.subscription.key"]
 }
 
 repositories {
-    maven {
-        url "https://repository.liferay.com/nexus/content/repositories/liferay-public-releases/"
-    }
+	maven {
+		url "https://repository-cdn.liferay.com/nexus/content/repositories/liferay-public-releases/"
+	}
 }
