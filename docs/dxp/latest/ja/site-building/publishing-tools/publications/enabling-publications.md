@@ -32,6 +32,6 @@ Once disabled, all active publications are deactivated, scheduled publications a
 
 ## 追加情報
 
-  - [Publications Overview](./publications-overview.md)
+  - [Publications Overview](../publications.md)
   - [パブリケーションの作成と管理](./creating-and-managing-publications.md)
   - [変更の作成と公開](./making-and-publishing-changes.md)

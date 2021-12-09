@@ -116,6 +116,6 @@ DXPは予備的な競合検出を実行して、既存の競合があるかど�
 
 ## 追加情報
 
-  - [Publications Overview](./publications-overview.md)
+  - [Publications Overview](../publications.md)
   - [Enabling Publications](./enabling-publications.md)
   - [パブリケーションの作成と管理](./creating-and-managing-publications.md)

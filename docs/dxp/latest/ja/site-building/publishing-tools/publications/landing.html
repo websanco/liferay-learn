@@ -1,0 +1,35 @@
+<script type="module">
+	import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.esm.browser.min.js'
+
+	const page = new Vue({
+		el: '#landingPage',
+		data: {
+			cards: [
+				{
+					sectionName: 'Publications Overview',
+					sectionURL: 'publications.html',
+				},
+				{
+					sectionName: 'Enabling Publications',
+					sectionURL: 'publications/enabling-publications.html',
+				},
+				{
+					sectionName: 'Creating and Managing Publications',
+					sectionURL: 'publications/creating-and-managing-publications.html',
+				},
+				{
+					sectionName: 'Making and Publishing Changes',
+					sectionURL: 'publications/making-and-publishing-changes.html',
+				},
+				{
+					sectionName: 'Resolving Conflicts',
+					sectionURL: 'publications/resolving-conflicts.html',
+				},
+				{
+					sectionName: 'Reverting Changes',
+					sectionURL: 'publications/reverting-changes.html',
+				}
+            ]
+		}
+	})
+</script>

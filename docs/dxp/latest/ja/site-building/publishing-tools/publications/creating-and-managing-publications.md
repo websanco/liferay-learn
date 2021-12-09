@@ -97,6 +97,6 @@ Its recommended Users enable Publications early on in your development process t
 
 ## 追加情報
 
-  - [Publications Overview](./publications-overview.md)
+  - [Publications Overview](../publications.md)
   - [Enabling Publications](./enabling-publications.md)
   - [変更の作成と公開](./making-and-publishing-changes.md)
