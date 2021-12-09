@@ -13,6 +13,7 @@ buildscript {
 apply plugin: "com.liferay.lang.builder"
 
 buildLang {
+	excludedLanguageIds = ["-"]
 	translateSubscriptionKey = project.properties["microsoft.translator.subscription.key"]
 }
 
