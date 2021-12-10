@@ -2,7 +2,7 @@
 
 > Available for Liferay DXP 7.4+
 
-By default, a publication can only be accessed by its creator. However, publication owners/creators can invite other users/teammates to view, edit, and publish their publications. Users can be added to any ongoing, scheduled, and published publications.
+By default, a publication can only be accessed by its creator. However, publication creators can invite other users to view, edit, and publish their publications. Users can be added to any ongoing, scheduled, and published publications.
 
 Once users are invited to a publication, you can use the integrated comments feature to facilitate collaboration between contributors.
 
@@ -24,7 +24,7 @@ Follow these steps to invite user to collaborate on a publication.
    This is the only way to invite users to a published publication.
    ```
 
-1. Use the drop-down menu to determine if the user is granted *view*, *edit*, *publish*, and *invite* permissions.
+1. Use the drop-down menu grant *view*, *edit*, *publish*, and *invite* permissions.
 
    ![Use the drop-down menu to determine the users permissions for the publication.](./collaborating-on-publications/images/03.png)
 
@@ -36,7 +36,7 @@ Follow these steps to invite user to collaborate on a publication.
 
 1. Click on *Send* to add the users to the publication.
 
-Invited users are immediately notified and can begin collaborating on the publication.
+Invited users are notified and can begin collaborating on the publication.
 
 ## Commenting on a Publication
 
@@ -68,6 +68,6 @@ Follow these steps to remove a collaborator from a publication.
 
 ## Additional Information
 
-* [Creating and Managing Publications](./creating-and-managing-publications.md))
+* [Creating and Managing Publications](./creating-and-managing-publications.md)
 * [Making and Publishing Changes](./making-and-publishing-changes.md)
 * [Resolving Conflicts](./resolving-conflicts.md)

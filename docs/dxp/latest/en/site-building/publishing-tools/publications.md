@@ -26,7 +26,7 @@ Additionally, Publications provides a high level of process transparency, so you
 To get started, see [Enabling Publications](./publications/enabling-publications.md).
 
 ```{raw} html
-:file: ../../../landingpage_template.html
+:file: ../../landingpage_template.html
 ```
 
 ```{raw} html
