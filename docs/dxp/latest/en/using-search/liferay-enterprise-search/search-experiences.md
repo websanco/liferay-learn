@@ -26,6 +26,6 @@ Search Blueprints is the first feature in the Search Experiences application. To
 
 Liferay Search Experiences is available to Liferay DXP customers with a [Liferay Enterprise Search](../liferay-enterprise-search.md) subscription in Liferay DXP 7.3 and 7.4:
 
-* In Liferay DXP 7.4 Search Experiences is a bundled bundled application, like all the LES apps.
+* In Liferay DXP 7.4 Search Experiences is a bundled application, like all the LES apps.
     <!-- starting with DXP 7.4 UpdateX. (X to be specified). There will also be a Feature Flag to enable the feature. (https://issues.liferay.com/browse/LPS-142956) -->
 * In Liferay DXP 7.3 Search Experiences is available to LES subscribers through the Customer Portal as an add-on application. See [Liferay Enterprise Search for Liferay DXP 7.3](https://customer.liferay.com/downloads/-/download/liferay-enterprise-search-for-liferay-dxp-7-3).

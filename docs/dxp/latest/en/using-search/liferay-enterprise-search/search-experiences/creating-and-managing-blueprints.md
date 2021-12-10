@@ -20,11 +20,13 @@ To create Search Blueprints,
 
    - [Query Builder](#using-the-query-builder): add new query clauses to the search by choosing or composing Elements for the Blueprint.
    - [Clause Contributors](#configuring-default-clauses): Further refine which clauses are included from Liferay's backend contributors. 
-   - [Settings](#adding-settings): Configure advanced settings (e.g., Sorts or Facets) in the search.
+   - [Settings](#adding-settings): Configure advanced settings (e.g., Sorts or Aggregations) in the search.
 
 1. Preview the Blueprint. Click _Preview_ and enter a search keyword.
 
    ![Preview a Blueprint before putting it in action.](./creating-and-managing-blueprints/images/01.png)
+
+   <!-- cover the search context attributes accessible in the preview sidebar, gear icon -->
 
 1. Once you're finished with the initial Blueprint creation, Click _Save_.
 
@@ -79,13 +81,17 @@ Decide which Liferay Asset Types to include in the Blueprint's query. Use the Qu
 <!-- SME Question: What are the repercussions of choosing all, or none? Do I need to add information based on https://docs.google.com/document/d/1i3TI3F2ieswmyukKduDLPsYtaTUfbLAOBYQ-ru1yFDI/edit ? -->
 <!-- It's important to understand the interplay between indexers, asset types selection, and the clause contributors configuration this can be done in the next section --> 
 
-Always save the Blueprint after editing its Asset Types configuration.
+Always save the Blueprint after editing its Searchable Types configuration.
 
-## Configuring Asset Types and Query Clauses
+Disabling an asset type in the Searchable Types configuration means that the query clauses usually contributed by its indexing code are excluded. Therefore, the type will not be searchable and the end user will not see results of the excluded type when the Blueprint is applied to a search.
+
+More information is included in the next section, as the Searchable Types configuration has important implications for the Clause Contributors configuration options.
+
+## Configuring Query Clause Contributors
 <!-- possibly a confusing heading, particularly as it follows ### Choosing which Liferay Assets to Search -->
 <!-- Andre suggests it is not a good idea for most blueprints users to edit the clause contributors. we could move this content into a separate article and link to it from this article -->
 
-Query clauses are contributed to the ongoing search by Liferay's backend code (and potentially any custom applications you've deployed to Liferay).
+Query clauses are contributed to the ongoing search by Liferay's backend code (and potentially any custom applications deployed in your Liferay instance).
 
 Search Blueprints provides configurability for these backend-contributed query clauses. However, most Users should never touch the settings in the Clause Contributors tab. The initial setting you chose when creating the Blueprint, choosing to start with All Clauses or with just the Baseline Clauses, is usually enough. Further tweaking is safely accomplished with the Searchable Types setting, where you can turn off individual indexers entirely, ensuring their default clauses aren't contributed to the search query. If you're sure you must tweak this behavior further, you must understand the way the backend contributors work:
 
