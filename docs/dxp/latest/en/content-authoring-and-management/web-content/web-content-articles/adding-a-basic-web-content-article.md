@@ -19,7 +19,7 @@ Each web content article is based on a structure that defines its available fiel
 1. When finished, click _Publish_.
 
     ```{tip}
-    You can use the _Preview_ (![Preview](../../../images/icon-preview.png)) button to verify how your content looks using the Default Template and Display Page Template.
+    Use the _Preview_ (![Preview](../../../images/icon-preview.png)) button to verify how your content looks when using the Default Template and Display Page Template.
 
     ![Preview content from Default Template and Display Page Template.](./adding-a-basic-web-content-article/images/03.png)
     ```
