@@ -40,7 +40,7 @@ Follow these steps to create a Picklist:
 
 ## Adding Picklist Fields to Objects
 
-Once a list is created, you can select it when creating Object fields. Simply select the *Picklist* field type and then select the desired pick list. See [Adding Fields to Objects](./creating-and-managing-objects/adding-fields-to-objects.md) for more information.
+Once a list is created, you can select it when creating Object fields. Simply select the *Picklist* field type and choose the desired list. See [Adding Fields to Objects](./creating-and-managing-objects/adding-fields-to-objects.md) for more information.
 
 ![Users can select the Picklist when creating new Object fields.](./using-picklists/images/05.png)
 
@@ -56,20 +56,18 @@ Updating or deleting a Picklist item automatically updates all Object entries us
 
 ## Picklist Fields in API Calls
 
-### In Liferay DXP 7.4 GA1
+When making POST, PATCH, and PUT API calls for Objects that include a Picklist field, you must use the following formats.
 
-When making POST, PATCH, and PUT API calls that include Picklist fields, each Picklist field must use this format:
-
-```json
-"samplePicklist": "string"
-```
-
-### In Liferay DXP 7.4 U1
-
-When making POST, PATCH, and PUT API calls that include Picklist fields, each Picklist field must use this format:
+### For Liferay DXP 7.4 U1/Portal 7.4 GA5
 
 ```json
 "samplePicklist": {"key": "string"}
+```
+
+### For Liferay DXP 7.4 GA1/Portal 7.4 GA4
+
+```json
+"samplePicklist": "string"
 ```
 
 ## Additional Information
