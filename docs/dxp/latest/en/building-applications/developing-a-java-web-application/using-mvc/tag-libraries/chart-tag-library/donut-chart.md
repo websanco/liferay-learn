@@ -38,6 +38,6 @@ Awesome! Now you know how to create donut charts for your apps.
 
 ## Related Topics
 
-- [Donut Charts](./donut-chart.md)
-- [Gauge Charts](./line-chart.md)
-- [Pie Charts](./scatter-chart.md)
+* [Donut Charts](./donut-chart.md)
+* [Gauge Charts](./line-chart.md)
+* [Pie Charts](./scatter-chart.md)

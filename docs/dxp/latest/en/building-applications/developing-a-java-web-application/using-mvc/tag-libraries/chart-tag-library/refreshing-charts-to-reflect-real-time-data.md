@@ -30,6 +30,6 @@ Now you know how to reflect real time data in your charts!
 
 ## Related Topics
 
-- [Combination Charts](./combination-chart.md)
-- [Geomap Charts](./geomap-chart.md)
-- [Scatter Charts](./scatter-chart.md)
+* [Combination Charts](./combination-chart.md)
+* [Geomap Charts](./geomap-chart.md)
+* [Scatter Charts](./scatter-chart.md)

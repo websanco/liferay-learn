@@ -37,6 +37,6 @@ Awesome! Now you know how to create gauge charts for your apps.
 
 ## Related Topics
 
-- [Gauge Charts](./gauge-chart.md)
-- [Geomap Charts](./geomap-chart.md)
-- [Pie Charts](./pie-chart.md)
+* [Gauge Charts](./gauge-chart.md)
+* [Geomap Charts](./geomap-chart.md)
+* [Pie Charts](./pie-chart.md)

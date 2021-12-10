@@ -28,6 +28,6 @@ Now you know how to use the `<liferay-util:get-url>` tag to scrape URLs.
 
 ## Related Topics
 
-- [Using the Liferay Util Param Tag](./liferay-util-param.md)
-- [Using the Liferay Util Include Tag](https://help.liferay.com/hc/en-us/articles/360029145351-Using-Liferay-Util-Include)
-- [Using the AUI Taglib](https://help.liferay.com/hc/en-us/articles/360028832812-Using-AUI-Taglibs)
+* [Using the Liferay Util Param Tag](./liferay-util-param.md)
+* [Using the Liferay Util Include Tag](https://help.liferay.com/hc/en-us/articles/360029145351-Using-Liferay-Util-Include)
+* [Using the AUI Taglib](https://help.liferay.com/hc/en-us/articles/360028832812-Using-AUI-Taglibs)

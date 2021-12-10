@@ -27,5 +27,5 @@ You can also disable individual components by adding the `disabled` attribute to
 
 ## Related Topics
 
-- [Including Actions in the Management Bar](./including-actions-in-the-management-bar.md)
-- [Clay Management Toolbar](../clay-tag-library/clay-management-toolbar.md)
+* [Including Actions in the Management Bar](./including-actions-in-the-management-bar.md)
+* [Clay Management Toolbar](../clay-tag-library/clay-management-toolbar.md)

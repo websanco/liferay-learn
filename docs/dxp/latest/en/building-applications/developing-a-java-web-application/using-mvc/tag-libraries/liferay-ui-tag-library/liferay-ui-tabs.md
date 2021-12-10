@@ -39,8 +39,6 @@ The example above uses some of the tab's available attributes. See the [Tabs tag
 
 ## Related Topics
 
-- [Clay Navigation Bars](../clay-tag-library/clay-navigation-bars.md)
-- [Clay Dropdown Menus and Action Menus](../clay-tag-library/clay-dropdown-and-action-menus.md)
-- [Liferay UI Icon Help](./liferay-ui-icon-help.md)
-
-<!--[Tabs taglibdocs](https://docs.liferay.com/dxp/portal/7.2-latest/taglibs/util-taglib/liferay-ui/tabs.html) Perguntar a Jim sobre isso-->
+* [Clay Navigation Bars](../clay-tag-library/clay-navigation-bars.md)
+* [Clay Dropdown Menus and Action Menus](../clay-tag-library/clay-dropdown-and-action-menus.md)
+* [Liferay UI Icon Help](./liferay-ui-icon-help.md)

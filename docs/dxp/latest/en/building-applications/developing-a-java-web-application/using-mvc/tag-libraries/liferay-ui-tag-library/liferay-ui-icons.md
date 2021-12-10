@@ -75,6 +75,6 @@ The examples above use some of the icon's available attributes. See the [Icon ta
 
 ## Related Topics
 
-- [Clay Icons](../clay-tag-library/clay-icons.md)
-- [Liferay UI Icon Lists](./liferay-ui-icon-lists.md)
-- [Liferay UI Icon Menus](./liferay-ui-icon-menus.md)
+* [Clay Icons](../clay-tag-library/clay-icons.md)
+* [Liferay UI Icon Lists](./liferay-ui-icon-lists.md)
+* [Liferay UI Icon Menus](./liferay-ui-icon-menus.md)

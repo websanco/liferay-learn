@@ -16,7 +16,7 @@ If you're using a Display Context---a separate class to configure your display o
 />
 ```
 
-You can see an example use case of a Display Context in [Filtering and Sorting Items with the Management Toolbar](/docs/7-2/frameworks/-/knowledge_base/ffiltering-and-sorting-items-with-the-management-toolbar). A Display Context is not required for a management toolbar's configuration. You  can provide as much or as little of the configuration options for your management toolbar through the Display Context as you like.  
+You can see an example use case of a Display Context in [Filtering and Sorting Items with the Management Toolbar](https://help.liferay.com/hc/en-us/articles/360029526932-Filtering-and-Sorting-Items-with-the-Management-Toolbar). A Display Context is not required for a management toolbar's configuration. You  can provide as much or as little of the configuration options for your management toolbar through the Display Context as you like.  
 
 ## Checkbox and Actions
 

@@ -1,6 +1,6 @@
 # Building Forms with AUI Tags
 
-The [AUI tag library](https://docs.liferay.com/portal/7.2-latest/taglibs/util-taglib/aui/tld-summary.html) provides all the components you need to build forms for your applications. AUI tags provide many benefits to standard form elements, such as custom namespacing, localization, and even validation. They provide multiple attributes that let you create the experience you want for your users. 
+The [AUI tag library](https://learn.liferay.com/reference/latest/en/dxp/taglibs/util-taglib/aui/tld-frame.html) provides all the components you need to build forms for your applications. AUI tags provide many benefits to standard form elements, such as custom namespacing, localization, and even validation. They provide multiple attributes that let you create the experience you want for your users. 
 
 Follow these steps to build a form using AUI tags:
 
@@ -106,6 +106,6 @@ Now you know how to build user-friendly forms for your applications.
 
 ## Related Topics
 
-* [Using the Chart Taglib in Your Portlets](/docs/7-2/reference/-/knowledge_base/r/using-the-chart-taglib-in-your-portlets) <!--should I put a http link ? couldn't find it in Liferay learn >
-* [Using Liferay Front-end Taglibs in Your Portlet](/docs/7-2/reference/-/knowledge_base/r/using-liferay-front-end-taglibs-in-your-portlet)
-* [Using the Clay Taglib in Your portlets](/docs/7-2/reference/-/knowledge_base/r/using-the-clay-taglib-in-your-portlets)
+* [Chart Tag library](../chart-tag-library.md) 
+* [Frontend Tag Library](../liferay-frontend-tag-library.md)
+* [Clay Tag Library](../clay-tag-library.md)

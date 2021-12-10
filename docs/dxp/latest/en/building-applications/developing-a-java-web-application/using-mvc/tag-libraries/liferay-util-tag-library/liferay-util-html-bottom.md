@@ -19,6 +19,6 @@ Now you know how to use the `<liferay-util:html-bottom>` tag to include addition
 
 ## Related Topics
 
-- [Using the Liferay Util HTML Body Bottom Tag](./liferay-util-body-bottom.md)
-- [Using the Liferay Util HTML Top Tag](./liferay-util-html-top.md)
-- [Using the Liferay UI Taglib](https://help.liferay.com/hc/en-us/articles/360028832812-Using-AUI-Taglibs)
+* [Using the Liferay Util HTML Body Bottom Tag](./liferay-util-body-bottom.md)
+* [Using the Liferay Util HTML Top Tag](./liferay-util-html-top.md)
+* [Using the Liferay UI Taglib](https://help.liferay.com/hc/en-us/articles/360028832812-Using-AUI-Taglibs)

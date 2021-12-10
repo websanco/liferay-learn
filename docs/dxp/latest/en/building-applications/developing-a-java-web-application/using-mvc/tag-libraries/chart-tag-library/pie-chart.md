@@ -37,6 +37,6 @@ Awesome! Now you know how to create pie charts for your apps.
 
 ## Related Topics
 
-- [Donut Charts](./donut-chart.md)
-- [Pie Charts](./pie-chart.md)
-- [Using Clay Taglibs in Your Portlet](../clay-tag-library.md)
+* [Donut Charts](./donut-chart.md)
+* [Pie Charts](./pie-chart.md)
+* [Using Clay Taglibs in Your Portlet](../clay-tag-library.md)

@@ -36,6 +36,6 @@ Now you know how to use the `<liferay-util:param>` tag to set parameters for inc
 
 ## Related Topics
 
-- [Using the Liferay Util Include Tag](./liferay-util-include.md)
-- [Using the Liferay Util Body Top Tag](./liferay-util-body-top.md)
-- [Using the Chart Taglib](../clay-tag-library.md)
+* [Using the Liferay Util Include Tag](./liferay-util-include.md)
+* [Using the Liferay Util Body Top Tag](./liferay-util-body-top.md)
+* [Using the Chart Taglib](../clay-tag-library.md)

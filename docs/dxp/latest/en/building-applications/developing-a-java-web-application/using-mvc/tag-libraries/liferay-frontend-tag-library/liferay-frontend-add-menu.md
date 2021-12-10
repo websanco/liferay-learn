@@ -3,7 +3,7 @@
 The add menu tag creates an add menu button for one or multiple items. It's used for actions that add entities (e.g. a new blog entry), and is part of the Management Bar. Use the `<liferay-frontend:add-menu>` tag to create the add menu and nest a `<liferay-frontend:add-menu-item>` tag for each item. 
 
 ```{note}
-   This pattern is deprecated as of @product-ver@. We recommend that you use the Clay Management Toolbar's [creation menu pattern](/docs/7-2/reference/-/knowledge_base/r/clay-management-toolbar#creation-menu) instead.
+This pattern is deprecated as of @product-ver@. We recommend that you use the Clay Management Toolbar's [creation menu pattern](/docs/7-2/reference/-/knowledge_base/r/clay-management-toolbar#creation-menu) instead.
 ```
 
 When the menu has one item, the button triggers the item's action as shown in the example below for the Blogs Admin App:
@@ -49,6 +49,6 @@ The examples above use some of the available attributes. See the [add menu](http
 
 ## Related Topics
 
-- [Liferay Frontend Cards](./liferay-frontend-cards.md)
-- [Liferay Frontend Info Bar](./liferay-frontend-info-bar.md)
-- [Liferay Frontend Management Bar](./liferay-frontend-management-bar.md)
+* [Liferay Frontend Cards](./liferay-frontend-cards.md)
+* [Liferay Frontend Info Bar](./liferay-frontend-info-bar.md)
+* [Liferay Frontend Management Bar](./liferay-frontend-management-bar.md)

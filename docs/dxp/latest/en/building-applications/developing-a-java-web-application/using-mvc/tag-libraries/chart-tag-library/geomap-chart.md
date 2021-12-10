@@ -86,6 +86,6 @@ Awesome! Now you know how to create geomap charts for your apps.
 
 ## Related Topics
 
-- [Bar Charts](./bar-chart.md)
-- [Gauge Charts](./gauge-chart.md)
-- [Geomap Charts](./geomap-chart.md)
+* [Bar Charts](./bar-chart.md)
+* [Gauge Charts](./gauge-chart.md)
+* [Geomap Charts](./geomap-chart.md)

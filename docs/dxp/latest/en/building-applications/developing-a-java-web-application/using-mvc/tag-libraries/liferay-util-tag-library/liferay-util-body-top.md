@@ -18,6 +18,6 @@ Now you know how to use the `<liferay-util:body-top>` tag to include additional 
 
 ## Related Topics
 
-- [Using the Liferay Util HTML Body Bottom Tag](./liferay-util-body-bottom.md)
-- [Using the Liferay Util HTML Bottom Tag](./liferay-util-html-bottom.md)
-- [Using the Clay Taglib](../clay-tag-library.md)
+* [Using the Liferay Util HTML Body Bottom Tag](./liferay-util-body-bottom.md)
+* [Using the Liferay Util HTML Bottom Tag](./liferay-util-html-bottom.md)
+* [Using the Clay Taglib](../clay-tag-library.md)

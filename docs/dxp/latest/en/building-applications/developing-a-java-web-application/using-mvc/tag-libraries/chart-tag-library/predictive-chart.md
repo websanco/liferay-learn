@@ -85,6 +85,6 @@ Awesome! Now you know how to create predictive charts for your apps.
 
 ## Related Topics
 
-- [Combination Charts](./combination-chart.md)
-- [Geomap Charts](./geomap-chart.md)
-- [Scatter Charts](./scatter-chart.md)
+* [Combination Charts](./combination-chart.md)
+* [Geomap Charts](./geomap-chart.md)
+* [Scatter Charts](./scatter-chart.md)

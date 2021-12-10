@@ -42,6 +42,6 @@ The examples above use some of the available attributes. See the [info bar](http
 
 ## Related Topics
 
-- [Liferay Front-end Add Menu](./liferay-frontend-add-menu.md)
-- [Liferay Front-end Cards](./liferay-frontend-cards.md)
-- [Liferay Front-end Management Bar](./liferay-frontend-management-bar.md)
+* [Liferay Front-end Add Menu](./liferay-frontend-add-menu.md)
+* [Liferay Front-end Cards](./liferay-frontend-cards.md)
+* [Liferay Front-end Management Bar](./liferay-frontend-management-bar.md)

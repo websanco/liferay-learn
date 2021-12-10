@@ -47,6 +47,6 @@ Awesome! Now you know how to create step charts for your apps.
 
 ## Related Topics
 
-- [Line Charts](./line-chart.md)
-- [Scatter Charts](./scatter-chart.md)
-- [Spline Charts](./spline-chart.md)
+* [Line Charts](./line-chart.md)
+* [Scatter Charts](./scatter-chart.md)
+* [Spline Charts](./spline-chart.md)

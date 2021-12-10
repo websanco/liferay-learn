@@ -5,7 +5,7 @@ The Management Bar gives administrators control over search container results. I
 ![The Management Bar lets the user customize how the app displays content.](./liferay-frontend-management-bar/images/01.png)
 
 ```{note}
-   The Liferay Front-end Management Bar is deprecated as of @product-ver@. We recommend that you use the [Clay Management Toolbar](../clay-tag-library/clay-management-toolbar.md) instead.
+The Liferay Front-end Management Bar is deprecated as of @product-ver@. We recommend that you use the [Clay Management Toolbar](../clay-tag-library/clay-management-toolbar.md) instead.
 ```
 
 The Management Bar has a few key sections. Each section is grouped and configured using different taglibs:

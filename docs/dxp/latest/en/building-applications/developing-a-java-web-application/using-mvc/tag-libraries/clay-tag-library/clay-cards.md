@@ -147,7 +147,7 @@ The example below specifies a list `icon` instead of the default file icon:
 ```
 
 ```{note}
-   The full list of available Liferay icons can be found on the [Clay CSS website](https://claycss.com/docs/components/icons-lexicon.html#clay-lexicon-icons).
+The full list of available Liferay icons can be found on the [Clay CSS website](https://claycss.com/docs/components/icons-lexicon.html#clay-lexicon-icons).
 ```
 
 ## User Cards

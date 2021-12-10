@@ -20,4 +20,4 @@ The Liferay Clay taglibs also provide a set of language flag icons that you can 
 
 * [Clay Badges](./clay-badges.md)
 * [Clay Stickers](./clay-stickers.md)
-* [Using Clay Icons in a Theme](/docs/7-2/frameworks/-/knowledge_base/f/using-clay-icons-in-a-theme)
+* [Using Clay Icons in a Theme](https://help.liferay.com/hc/en-us/articles/360034474532-Using-Clay-Icons-in-a-Theme)

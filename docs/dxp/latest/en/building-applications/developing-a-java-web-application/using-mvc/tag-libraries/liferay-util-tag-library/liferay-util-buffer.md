@@ -27,6 +27,6 @@ Now you know how to use the `<liferay-util:buffer>` tag to save content to a buf
     
 ## Related Topics
 
-- [JSP Overrides Using OSGi Fragments](https://help.liferay.com/hc/en-us/articles/360029122451-JSP-Overrides-Using-OSGi-Fragments)
-- [Using the Liferay Util Param Tag](./liferay-util-param.md)
-- [Using the Liferay Front-End Taglibs](../liferay-frontend-tag-library.md)
+* [JSP Overrides Using OSGi Fragments](https://help.liferay.com/hc/en-us/articles/360029122451-JSP-Overrides-Using-OSGi-Fragments)
+* [Using the Liferay Util Param Tag](./liferay-util-param.md)
+* [Using the Liferay Front-End Taglibs](../liferay-frontend-tag-library.md)

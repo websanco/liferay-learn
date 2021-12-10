@@ -29,4 +29,4 @@ The Liferay-UI taglib is also available via a macro for your FreeMarker theme an
 This section covers how to create UI components with the Liferay UI taglibs. Each article contains code examples along with a screenshot of the resulting UI.
 
 
-<!--[Liferay UI taglibdocs](https://docs.liferay.com/dxp/portal/7.2-latest/taglibs/util-taglib/liferay-ui/tld-summary.html) perguntar a jim sobre isso -->
+<!--[Liferay UI taglibdocs](https://docs.liferay.com/dxp/portal/7.2-latest/taglibs/util-taglib/liferay-ui/tld-summary.html) ask Jim-->

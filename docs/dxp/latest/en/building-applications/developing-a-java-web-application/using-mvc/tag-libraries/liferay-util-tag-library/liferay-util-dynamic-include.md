@@ -20,6 +20,6 @@ Now you know how to use the `<liferay-util:dynamic-include>` tag to add extensio
     
 ## Related Topics
 
-- [Dynamic Includes](https://help.liferay.com/hc/en-us/articles/360018165711-Dynamic-Includes)
-- [Using the Liferay Util Body Top Tag](./liferay-util-body-top.md)
-- [Using the Chart Taglib](https://help.liferay.com/hc/en-us/articles/360028832592-Using-the-Chart-Taglib-in-Your-Portlets)
+* [Dynamic Includes](https://help.liferay.com/hc/en-us/articles/360018165711-Dynamic-Includes)
+* [Using the Liferay Util Body Top Tag](./liferay-util-body-top.md)
+* [Using the Chart Taglib](https://help.liferay.com/hc/en-us/articles/360028832592-Using-the-Chart-Taglib-in-Your-Portlets)

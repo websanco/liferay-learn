@@ -51,6 +51,6 @@ Awesome! Now you know how to create combination charts for your apps.
 
 ## Related Topics
 
-- [Bar Charts](./bar-chart.md)
-- [Donut Charts](./donut-chart.md)
-- [Pie Charts](./pie-chart.md)
+* [Bar Charts](./bar-chart.md)
+* [Donut Charts](./donut-chart.md)
+* [Pie Charts](./pie-chart.md)
