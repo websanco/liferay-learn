@@ -14,6 +14,15 @@ See [the Liferay DXP compatibility matrix](https://help.liferay.com/hc/en-us/art
 | Timezone | `-Duser.timezone=GMT` | Yes | DXP uses the GMT timezone for all dates. |
 | Four-digit Years | `-Djava.locale.providers=JRE,COMPAT,CLDR` | No | On JDK 11, this setting displays four-digit years. Since JDK 9, the Unicode Common Locale Data Repository (CLDR) is the default locales provider. CLDR does not provide years in a four-digit format (see [LPS-87191](https://issues.liferay.com/browse/LPS-87191)). This setting works around the issue by using JDK 8's default locales provider. |
 | Heap Size | `-Xms2560m -Xmx2560m` | No | The recommended maximum heap size is 2GB. Setting the minimum heap size to the maximum heap size value minimizes garbage collections. |
+| Log4j | `-Dlog4j2.formatMsgNoLookups=true` | Yes* | Log4j versions prior to 2.15.0 are subject to a remote code execution (RCE) vulnerability via the LDAP JNDI parser. See [LPS-143663](https://issues.liferay.com/browse/LPS-143663) for details. \*Liferay DXP 7.4 GA1 and Liferay PORTAL 7.4 GA1 - GA3 require this setting to resolve the security vulnerability. |
+
+The Liferay installation articles for supported application servers explain where to apply these settings. Here are the article links:
+
+* [Tomcat](../installing-liferay/installing-liferay-on-an-application-server/installing-on-tomcat.md)
+* [WildFly](../installing-liferay/installing-liferay-on-an-application-server/installing-on-wildfly.md)
+* [JBoss EAP](../installing-liferay/installing-liferay-on-an-application-server/installing-on-jboss-eap.md)
+* [WebLogic](../installing-liferay/installing-liferay-on-an-application-server/installing-on-weblogic.md)
+* [WebSphere](../installing-liferay/installing-liferay-on-an-application-server/installing-on-websphere.md)
 
 ## Known Issue: Illegal Access Warnings
 

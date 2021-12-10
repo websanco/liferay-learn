@@ -68,7 +68,7 @@ Configuring Tomcat to run DXP includes these tasks:
 1. Then configure Catalina's JVM options to support DXP.
 
     ```bash
-    CATALINA_OPTS="$CATALINA_OPTS -Dfile.encoding=UTF-8 -Djava.locale.providers=JRE,COMPAT,CLDR -Djava.net.preferIPv4Stack=true -Duser.timezone=GMT -Xms2560m -Xmx2560m -XX:MaxNewSize=1536m -XX:MaxMetaspaceSize=768m -XX:MetaspaceSize=768m -XX:NewSize=1536m -XX:SurvivorRatio=7"
+    CATALINA_OPTS="$CATALINA_OPTS -Dfile.encoding=UTF-8 -Djava.locale.providers=JRE,COMPAT,CLDR -Djava.net.preferIPv4Stack=true -Dlog4j2.formatMsgNoLookups=true -Duser.timezone=GMT -Xms2560m -Xmx2560m -XX:MaxNewSize=1536m -XX:MaxMetaspaceSize=768m -XX:MetaspaceSize=768m -XX:NewSize=1536m -XX:SurvivorRatio=7"
     ```
 
 **JVM Options Explained**
@@ -78,6 +78,7 @@ Configuring Tomcat to run DXP includes these tasks:
 | `-Dfile.encoding=UTF-8` | DXP requires UTF-8 file encoding. |
 | `-Djava.locale.providers=JRE,COMPAT,CLDR` | This is required for displaying four-digit dates on JDK 11. |
 | `-Djava.net.preferIPv4Stack=true` | Prefers an IPv4 stack over IPv6. |
+| `-Dlog4j2.formatMsgNoLookups=true` | Resolves a remote code execution (RCE) vulnerability. See [LPS-143663](https://issues.liferay.com/browse/LPS-143663) for details. |
 | `-Duser.timezone=GMT` | DXP requires the application server JVM to use the GMT time zone. |
 
 **Memory Arguments Explained**
