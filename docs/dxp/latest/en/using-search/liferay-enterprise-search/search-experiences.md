@@ -4,7 +4,7 @@
 :maxdepth: 1
 
 search-experiences/understanding-search-blueprints.md
-search-experiences/creating-and-managing-blueprints.md
+search-experiences/creating-and-managing-search-blueprints.md
 ```
 
 > **Liferay Enterprise Search (LES) Subscribers**
@@ -20,7 +20,7 @@ The Liferay Enterprise Search Experiences app includes a suite of features grant
 Search Blueprints is the first feature in the Search Experiences application. To learn about it's capabilities and fundamental components, see
 
 - [Understanding Blueprints](search-experiences/understanding-search-blueprints.md)
-- [Creating and Managing Blueprints](search-experiences/creating-and-managing-blueprints.md)
+- [Creating and Managing Search Blueprints](search-experiences/creating-and-managing-search-blueprints.md)
 
 ## Getting Liferay Search Experiences
 

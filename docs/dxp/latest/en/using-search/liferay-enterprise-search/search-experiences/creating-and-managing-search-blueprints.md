@@ -1,4 +1,4 @@
-# Creating and Managing Blueprints
+# Creating and Managing Search Blueprints
 
 [Search Blueprints](./understanding-search-blueprints.md) are created, updated, and deleted using an administrative application in the Global Menu. Open the Global menu's Applications section and find the Search Experiences category.
 
@@ -8,7 +8,7 @@ To create Search Blueprints,
 
 1. Add a Blueprint by clicking the Add (![Add](../../../images/icon-add.png)) button.
 
-   ![Start creating a Blueprint from the Add Blueprint modal window.](./creating-and-managing-blueprints/images/02.png)
+   ![Start creating a Blueprint from the Add Blueprint modal window.](./creating-and-managing-search-blueprints/images/02.png)
 
 1. In the New Search Blueprint window, give the Blueprint a name (required) and a description (optional).
 
@@ -24,7 +24,7 @@ To create Search Blueprints,
 
 1. Preview the Blueprint. Click _Preview_ and enter a search keyword.
 
-   ![Preview a Blueprint before putting it in action.](./creating-and-managing-blueprints/images/01.png)
+   ![Preview a Blueprint before putting it in action.](./creating-and-managing-search-blueprints/images/01.png)
 
    <!-- cover the search context attributes accessible in the preview sidebar, gear icon -->
 
@@ -32,7 +32,7 @@ To create Search Blueprints,
 
 Edit or delete a Blueprint from its Actions menu (![Actions](../../../images/icon-actions.png)).
 
-![Edit or delete a Blueprint from its Actions menu.](./creating-and-managing-blueprints/images/03.png)
+![Edit or delete a Blueprint from its Actions menu.](./creating-and-managing-search-blueprints/images/03.png)
 
 <!-- SME Question: what about editing or deleting a blueprint while in use? do we have any safety mechanism for this? maybe a warning to the user? should we say something about it here? -->
 
@@ -54,7 +54,7 @@ Add Elements to begin adding query clauses to the Blueprint:
 1. In the Query Builder's sidebar, Add Query Elements, expand the Element category you'd like to explore.
 1. Hover over the Element, then click the _Add_ button.
 1. The Element is added to the Query Builder, ready to configure:
-   ![This Element gives a boost of ten to content found on sites the searching user is a member of.](./creating-and-managing-blueprints/images/04.png)
+   ![This Element gives a boost of ten to content found on sites the searching user is a member of.](./creating-and-managing-search-blueprints/images/04.png)
 1. Add as many Elements as needed to configure the search query as desired.
 
    See [Search Blueprints Elements Reference](./search-blueprints-elements-reference.md) (not yet written) for a description of each out of the box Element.
@@ -71,12 +71,12 @@ After adding Elements, make sure you save the Blueprint.
 
 Decide which Liferay Asset Types to include in the Blueprint's query. Use the Query Settings &rarr; Searchable Types dropdown:
 
-![Expand the Searchable Types dropdown to begin removing assets from the Search Blueprint.](./creating-and-managing-blueprints/images/05.png)
+![Expand the Searchable Types dropdown to begin removing assets from the Search Blueprint.](./creating-and-managing-search-blueprints/images/05.png)
 
 - All assets are selected by default.
 - To remove specific assets, click each one's ![Times](./../../../images/icon-times.png).
 - To manage the types in bulk (e.g., deselect all assets) open the Select Types modal by clicking the Select Types button.
-    ![The Select Types modal is used for bulk management of the assets to be searched.](./creating-and-managing-blueprints/images/06.png)
+    ![The Select Types modal is used for bulk management of the assets to be searched.](./creating-and-managing-search-blueprints/images/06.png)
 
 <!-- SME Question: What are the repercussions of choosing all, or none? Do I need to add information based on https://docs.google.com/document/d/1i3TI3F2ieswmyukKduDLPsYtaTUfbLAOBYQ-ru1yFDI/edit ? -->
 <!-- It's important to understand the interplay between indexers, asset types selection, and the clause contributors configuration this can be done in the next section --> 
@@ -105,7 +105,7 @@ Search Blueprints provides configurability for these backend-contributed query c
 Liferay's Indexer framework was refactored in Liferay 7.2. Some of Lifery's core assets, like Web Content Articles and Folders, have not been updated to the new pattern. This has an impact on Search Blueprints because there are no Clause Contributors for these assets. Therefore, the standard clauses for the assets will always be added to the search query when Liferay Indexer Clauses is enabled. Therefore, a complete override of the Web Content Article's clauses is not possible. You can, hoswever, tweak the search behavior of these assets by layering more clauses on top (boosting certain clause matches, for example).
 ```
 
-![Disable certain clause contributors or all indexers from contributing clauses to the search query.](./creating-and-managing-blueprints/images/07.png)
+![Disable certain clause contributors or all indexers from contributing clauses to the search query.](./creating-and-managing-search-blueprints/images/07.png)
 
 ```{note}
 Due to internal limitations, you must choose to enable or disable all of Liferay's `Indexer`s. The other clause contributors can be managed more flexibly: choose to include all, none, or any subset of contributors you wish.
@@ -125,7 +125,7 @@ In addition to micromanaging the search query, add Search Blueprint settings add
 - Parameters
 - Advanced Configurations
 
-![Additional settings can be configured using JSON.](./creating-and-managing-blueprints/images/08.png)
+![Additional settings can be configured using JSON.](./creating-and-managing-search-blueprints/images/08.png)
 
 To add these, click the Settings tab, then find the text entry box for the desired configuration. Enter your JSON, then save the Blueprint.
 
