@@ -18,7 +18,7 @@ Next, move your Nginx configurations into your repository, where you can deploy 
 Skip this step if you do not have any specific Nginx configurations to organize.
 ```
 
-In the project repository you [cloned previously](./matching-dxp-versions.md#clone-the-dxp-cloud-repository), navigate to the `webserver/configs/{ENV}` folders (which correspond to your DXP Cloud environments), and put all of your Nginx configuration files into the appropriate environment folders, following this pattern: 
+In the project repository you [cloned previously](./matching-dxp-versions.md#clone-the-dxp-cloud-repository), navigate to the `webserver/configs/{ENV}/` folders (which correspond to your DXP Cloud environments), and put all of your Nginx configuration files into the appropriate environment folders, following this pattern: 
 
 * Put Nginx configuration (`.conf`) files into `webserver/configs/{ENV}/conf.d/`
 * Put overrides for the `var/www/html/` directory into `webserver/configs/{ENV}/public/`
@@ -40,7 +40,7 @@ As an example Nginx configuration, download this [sample Nginx .conf file](https
 Skip this step if you do not have these custom shell scripts or static content for your web server.
 ```
 
-In your DXP Cloud project repository, put all of your custom shell scripts into each appropriate `webserer/configs/{ENV}/scripts/` environment folder.
+In your DXP Cloud project repository, put all of your custom shell scripts into each appropriate `webserver/configs/{ENV}/scripts/` environment folder.
 
 Put all of your static content into each appropriate `webserver/configs/{ENV}/public/` environment folder.
 
