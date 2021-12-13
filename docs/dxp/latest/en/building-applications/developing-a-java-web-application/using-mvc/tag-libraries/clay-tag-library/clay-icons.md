@@ -6,7 +6,7 @@ The Liferay Clay taglibs provide several icons that you can use in your apps. Us
 <clay:icon symbol="folder" />
 ```
 
-![You can include icons in your app with the Clay taglib.](./clay-icons/images/.png)
+![You can include icons in your app with the Clay taglib.](./clay-icons/images/01.png)
 
 The full list of icons is shown below:
 
