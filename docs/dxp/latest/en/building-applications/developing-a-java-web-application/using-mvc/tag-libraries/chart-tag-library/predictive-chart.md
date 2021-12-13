@@ -61,13 +61,14 @@ Follow these steps to use predictive charts.
 
     %>
     ```
+
     Predictive charts have these properties:
     
-    --axisXTickFormat:-- An optional string which specfies the time formatting on the X axis. For more information on which formats can be specified please refer to [d3's time format README](https://github.com/d3/d3-time-format/blob/master/README.md#locale_format). This value is set using the `setAxisXTickFormat()` method. 
+    **axisXTickFormat:** An optional string which specfies the time formatting on the X axis. For more information on which formats can be specified please refer to [d3's time format README](https://github.com/d3/d3-time-format/blob/master/README.md#locale_format). This value is set using the `setAxisXTickFormat()` method. 
     
-    --Prediction Date:-- A date as a string that represents the point in the timeline from when the forecast/prediction is shown. This value is parsed as a Date object in JavaScript and set using the `setPredictionDate()` method. 
+    **Prediction Date:** A date as a string that represents the point in the timeline from when the forecast/prediction is shown. This value is parsed as a Date object in JavaScript and set using the `setPredictionDate()` method. 
     
-    --Time Series:-- A timeline for the data which is displayed on the X axis of the chart. This value is set as an array of dates (`2018-01-01` for example). 
+    **Time Series:** A timeline for the data which is displayed on the X axis of the chart. This value is set as an array of dates (`2018-01-01` for example). 
 
 1. Add the `<chart>` taglib to the `view.jsp`, passing the `_predictiveChartConfig` as the `config` attribute's value:
 
