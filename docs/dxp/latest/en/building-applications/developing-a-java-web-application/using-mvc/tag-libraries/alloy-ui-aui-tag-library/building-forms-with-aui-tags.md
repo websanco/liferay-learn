@@ -81,26 +81,26 @@ Follow these steps to build a form using AUI tags:
 
     ![The AUI tags also provide validation for form fields.](./building-forms-with-aui-tags/images/02.png)
 
-    The full list of available validation rules is shown in the table below:
+The full list of available validation rules is shown in the table below:
 
-    | Rule | Description | Default Error Message |
-    | --- | --- | --- |
-    | `acceptFiles` | Specifies that the field can only contain the file types given. Each file extension must be separated by a comma. For example </br> `<aui:validator name="acceptFiles">'jpg,png,tif,gif'</aui:validator>` | 'Please enter a file with a valid extension ([supported extensions]).' |
-    | `alpha` | Permits alphabetic characters | 'Please enter only alpha characters.' |
-    | `alphanum` | Permits alphanumeric characters | 'Please enter only alphanumeric characters.' |
-    | `date` | Permits dates | 'Please enter a valid date.' |
-    | `digits` | Permits digits | 'Please enter only digits.' |
-    | `email` | Permits an email address | 'Please enter a valid email address.' |
-    | `equalTo` | Permits contents equal to another field with the specified field ID. For example, </br> `<aui:validator name="equalTo">'#<portlet:namespace/>password'</aui:validator>` | 'Please enter the same value again.' |
-    | `max` | Permits an integer value less than the specified value. For example, a max value of 20 is specified with </br> `<aui:validator name="max">20</aui:validator>` | 'Please enter a value less than or equal to [max value].' |
-    | `maxLength` | Permits a maximum field length of the specified size (follows the same syntax as `max`) | 'Please enter no more than [max] characters.' |
-    | `min` | Permits an integer value greater than the specified minimum value (follows the same syntax as `max`) | 'Please enter a value greater than or equal to [min value].' |
-    | `minLength` | Permits a field length longer than the specified size (follows the same syntax as `max`). | 'Please enter at least [min] characters.' |
-    | `number` | Permits numerical values | 'Please enter a valid number.' |
-    | `range` | Permits a number between the specified range. For example, a range between 1.23 and 10 is specified here </br> `<aui:validator name="range">[1.23,10]</aui:validator>` | 'Please enter a value between [0] and [1].' |
-    | `rangeLength` | Permits a field length between the specified range (follows the same syntax as `range`)  | 'Please enter a value between [0] and [1] characters long.' |
-    | `required` | Prevents a blank field  | 'This field is required.' |
-    | `url` | Permits a URL value | 'Please enter a valid URL.' |
+| Rule | Description | Default Error Message |
+| --- | --- | --- |
+| `acceptFiles` | Specifies that the field can only contain the file types given. Each file extension must be separated by a comma. For example </br> `<aui:validator name="acceptFiles">'jpg,png,tif,gif'</aui:validator>` | 'Please enter a file with a valid extension ([supported extensions]).' |
+| `alpha` | Permits alphabetic characters | 'Please enter only alpha characters.' |
+| `alphanum` | Permits alphanumeric characters | 'Please enter only alphanumeric characters.' |
+| `date` | Permits dates | 'Please enter a valid date.' |
+| `digits` | Permits digits | 'Please enter only digits.' |
+| `email` | Permits an email address | 'Please enter a valid email address.' |
+| `equalTo` | Permits contents equal to another field with the specified field ID. For example, </br> `<aui:validator name="equalTo">'#<portlet:namespace/>password'</aui:validator>` | 'Please enter the same value again.' |
+| `max` | Permits an integer value less than the specified value. For example, a max value of 20 is specified with </br> `<aui:validator name="max">20</aui:validator>` | 'Please enter a value less than or equal to [max value].' |
+| `maxLength` | Permits a maximum field length of the specified size (follows the same syntax as `max`) | 'Please enter no more than [max] characters.' |
+| `min` | Permits an integer value greater than the specified minimum value (follows the same syntax as `max`) | 'Please enter a value greater than or equal to [min value].' |
+| `minLength` | Permits a field length longer than the specified size (follows the same syntax as `max`). | 'Please enter at least [min] characters.' |
+| `number` | Permits numerical values | 'Please enter a valid number.' |
+| `range` | Permits a number between the specified range. For example, a range between 1.23 and 10 is specified here </br> `<aui:validator name="range">[1.23,10]</aui:validator>` | 'Please enter a value between [0] and [1].' |
+| `rangeLength` | Permits a field length between the specified range (follows the same syntax as `range`)  | 'Please enter a value between [0] and [1] characters long.' |
+| `required` | Prevents a blank field  | 'This field is required.' |
+| `url` | Permits a URL value | 'Please enter a valid URL.' |
 
 Now you know how to build user-friendly forms for your applications.
 
