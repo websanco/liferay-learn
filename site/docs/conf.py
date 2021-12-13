@@ -79,6 +79,19 @@ class WithRootSiteHTMLBuilder(StandaloneHTMLBuilder):
         return doc_context
 
 
+def read_redirects(redirects, redirects_file_name, app, exception):
+    redirects_file = os.path.join(app.srcdir, redirects_file_name)
+
+    file = open(redirects_file)
+    lines = file.readlines()
+    file.close()
+
+    for line in lines:
+        redirect_from, redirect_to = line.split("=", 1)
+        redirects[redirect_from.strip()] = redirect_to.strip()
+    
+    return redirects
+
 def setup(app):
     app.add_builder(WithRootSiteHTMLBuilder, True)
 
@@ -96,13 +109,9 @@ def setup(app):
 
     app.connect("build-finished", write_redirects)
 
-
 def write_redirects(app, exception):
     # inspired by https://gitlab.com/documatt/sphinx-reredirects and
     #   https://github.com/sphinx-contrib/redirects
-    redirects_file = os.path.join(app.srcdir, "redirects.properties")
-    redirects = {}
-    template = "<html><head><meta content=\"0; url={}\" http-equiv=\"refresh\"></head></html>"
 
     if not isinstance(app.builder, StandaloneHTMLBuilder):
         log.error(
@@ -111,17 +120,19 @@ def write_redirects(app, exception):
             )
         )
         return
+    
+    redirects = {}
+
+    redirects = read_redirects(redirects, "redirects_old.properties", app, exception)
+    redirects = read_redirects(redirects, "redirects_new.properties", app, exception)
+    redirects = read_redirects(redirects, "redirects_keep.properties", app, exception)
+
+    template = "<html><head><meta content=\"0; url={}\" http-equiv=\"refresh\"></head></html>"
 
     product = os.path.basename(product_path)
     version = os.path.basename(version_path)
 
-    file = open(redirects_file)
-    lines = file.readlines()
-    file.close()
-
-    for line in lines:
-        redirect_from, redirect_to = line.split("=", 1)
-
+    for redirect_from, redirect_to in redirects.items():
         cur_product, cur_version, cur_language, dummy_relpath = redirect_from.split("/", 3)
 
         if (cur_product, cur_version, cur_language) != (product, version, language):
