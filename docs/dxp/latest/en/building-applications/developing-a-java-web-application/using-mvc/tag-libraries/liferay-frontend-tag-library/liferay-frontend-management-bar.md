@@ -10,21 +10,21 @@ The Liferay Front-end Management Bar is deprecated as of @product-ver@. We recom
 
 The Management Bar has a few key sections. Each section is grouped and configured using different taglibs:
 
-The [`<liferay-frontend:management-bar-buttons>` tag](https://docs.liferay.com/dxp/apps/foundation/latest/taglibdocs/liferay-frontend/management-bar-buttons.html) wraps the Management Bar's button elements:
+The [`<liferay-frontend:management-bar-buttons>` tag](https://docs.liferay.com/ce/apps/frontend-taglib/latest/taglibdocs/liferay-frontend/management-bar-buttons.html) wraps the Management Bar's button elements:
 
 ![The `management-bar-buttons` tag contains the Management Bar's main buttons.](./liferay-frontend-management-bar/images/02.png)
 
-The [`<liferay-frontend:management-bar-sidenav-toggler-button>` tag](https://docs.liferay.com/dxp/apps/foundation/latest/taglibdocs/liferay-frontend/management-bar-sidenav-toggler-button.html)  implements slide-out navigation for the info button.
+The [`<liferay-frontend:management-bar-sidenav-toggler-button>` tag](https://docs.liferay.com/ce/apps/frontend-taglib/latest/taglibdocs/liferay-frontend/management-bar-sidenav-toggler-button.html)  implements slide-out navigation for the info button.
 
-The [`<liferay-frontend:management-bar-display-buttons>` tag](https://docs.liferay.com/dxp/apps/foundation/latest/taglibdocs/liferay-frontend/management-bar-display-buttons.html) renders the app's display style options.
+The [`<liferay-frontend:management-bar-display-buttons>` tag](https://docs.liferay.com/ce/apps/frontend-taglib/latest/taglibdocs/liferay-frontend/management-bar-display-buttons.html) renders the app's display style options.
 
 ![The `management-bar-display-buttons` tag contains the content's display options.](./liferay-frontend-management-bar/images/03.png)
 
-The [`<liferay-frontend:management-bar-filters>` tag](https://docs.liferay.com/dxp/apps/foundation/latest/taglibdocs/liferay-frontend/management-bar-filters.html) wraps the app's filtering options. This filter should be included in all control  panel applications. Filtering options can include sort criteria, sort ordering, and more. 
+The [`<liferay-frontend:management-bar-filters>` tag](https://docs.liferay.com/ce/apps/frontend-taglib/latest/taglibdocs/liferay-frontend/management-bar-filters.html) wraps the app's filtering options. This filter should be included in all control  panel applications. Filtering options can include sort criteria, sort ordering, and more. 
 
 ![The `management-bar-filters` tag contains the content filtering options.](./liferay-frontend-management-bar/images/04.png)
 
-Finally, the [`<liferay-frontend:management-bar-action-buttons>` tag](https://docs.liferay.com/dxp/apps/foundation/latest/taglibdocs/liferay-frontend/management-bar-action-buttons.html) wraps the actions that you can execute over selected items. You can select multiple items between pages. The management bar keeps track of the number of selected items for you. 
+Finally, the [`<liferay-frontend:management-bar-action-buttons>` tag](https://docs.liferay.com/ce/apps/frontend-taglib/latest/taglibdocs/liferay-frontend/management-bar-action-buttons.html) wraps the actions that you can execute over selected items. You can select multiple items between pages. The management bar keeps track of the number of selected items for you. 
 
 ![The management bar keeps track of the items selected and displays the actions to execute on them.](./liferay-frontend-management-bar/images/05.png)
 

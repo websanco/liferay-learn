@@ -45,7 +45,7 @@ When the menu has multiple items, they display in a pop-up menu. For example, th
 
 ![The add button pattern consists of an `add-menu` tag and at least one `add-menu-item` tag.](./liferay-frontend-add-menu/images/02.png)
 
-The examples above use some of the available attributes. See the [add menu](https://docs.liferay.com/dxp/apps/foundation/latest/taglibdocs/liferay-frontend/add-menu.html) and [add menu item](https://docs.liferay.com/dxp/apps/foundation/latest/taglibdocs/liferay-frontend/add-menu-item.html) taglibdocs for the full list of available attributes for the tags. 
+The examples above use some of the available attributes. See the [add menu](https://docs.liferay.com/ce/apps/frontend-taglib/latest/taglibdocs/liferay-frontend/add-menu.html) and [add menu item](https://docs.liferay.com/ce/apps/frontend-taglib/latest/taglibdocs/liferay-frontend/add-menu-item.html) taglibdocs for the full list of available attributes for the tags. 
 
 ## Related Topics
 

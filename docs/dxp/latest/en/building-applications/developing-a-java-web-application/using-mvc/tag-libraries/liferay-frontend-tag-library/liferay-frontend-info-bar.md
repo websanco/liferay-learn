@@ -38,7 +38,7 @@ Note that the sidebar panel's wrapper `<div>` has the classes `closed` and `side
 
 ![The info bar tags create a sidebar panel toggler that reveals additional info.](./liferay-frontend-info-bar-intro/images/02.png)
 
-The examples above use some of the available attributes. See the [info bar](https://docs.liferay.com/dxp/apps/foundation/latest/taglibdocs/liferay-frontend/info-bar.html), [info bar buttons](https://docs.liferay.com/dxp/apps/foundation/latest/taglibdocs/liferay-frontend/info-bar-buttons.html), [info bar sidenav toggler button](https://docs.liferay.com/dxp/apps/foundation/latest/taglibdocs/liferay-frontend/info-bar-sidenav-toggler-button.html), and [sidebar panel](https://docs.liferay.com/dxp/apps/foundation/latest/taglibdocs/liferay-frontend/sidebar-panel.html)  taglibdocs for the full list of available attributes for the tags. 
+The examples above use some of the available attributes. See the [info bar](https://docs.liferay.com/ce/apps/frontend-taglib/latest/taglibdocs/liferay-frontend/info-bar.html), [info bar buttons](https://docs.liferay.com/ce/apps/frontend-taglib/latest/taglibdocs/liferay-frontend/info-bar-buttons.html), [info bar sidenav toggler button](https://docs.liferay.com/ce/apps/frontend-taglib/latest/taglibdocs/liferay-frontend/info-bar-sidenav-toggler-button.html), and [sidebar panel](https://docs.liferay.com/ce/apps/frontend-taglib/latest/taglibdocs/liferay-frontend/sidebar-panel.html)  taglibdocs for the full list of available attributes for the tags. 
 
 ## Related Topics
 
