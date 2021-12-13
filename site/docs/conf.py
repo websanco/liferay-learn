@@ -100,19 +100,9 @@ def setup(app):
 def write_redirects(app, exception):
     # inspired by https://gitlab.com/documatt/sphinx-reredirects and
     #   https://github.com/sphinx-contrib/redirects
-    redirects_file = os.path.join(app.srcdir, "redirects.json")
+    redirects_file = os.path.join(app.srcdir, "redirects.properties")
     redirects = {}
     template = "<html><head><meta content=\"0; url={}\" http-equiv=\"refresh\"></head></html>"
-
-    if os.path.isfile(redirects_file):
-        with open(redirects_file) as file:
-            redirects = json.loads(file.read())
-
-    if not redirects:
-        log.info(
-            "No redirect info found at {}. No redirects will be written.".format(redirects_file)
-        )
-        return
 
     if not isinstance(app.builder, StandaloneHTMLBuilder):
         log.error(
@@ -125,7 +115,13 @@ def write_redirects(app, exception):
     product = os.path.basename(product_path)
     version = os.path.basename(version_path)
 
-    for redirect_from, redirect_to in redirects.items():
+    file = open(redirects_file)
+    lines = file.readlines()
+    file.close()
+
+    for line in lines:
+        redirect_from, redirect_to = line.split("=", 1)
+
         cur_product, cur_version, cur_language, dummy_relpath = redirect_from.split("/", 3)
 
         if (cur_product, cur_version, cur_language) != (product, version, language):
@@ -143,4 +139,3 @@ def write_redirects(app, exception):
 
         with open(dummy_abspath, 'w') as f:
             f.write(template.format(target_relpath))
-
