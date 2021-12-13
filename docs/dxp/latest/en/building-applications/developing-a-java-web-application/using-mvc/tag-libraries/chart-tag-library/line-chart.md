@@ -1,6 +1,6 @@
 # Line Charts
 
-Line charts contain multiple sets of data. A Line chart displays the data linearly. Each data series (created with the `addColumns()` method) is defined with a new instance of the  `MultiValueColumn` object <!--[`MultiValueColumn` object](https://docs.liferay.com/dxp/apps/foundation/latest/javadocs/com/liferay/frontend/taglib/chart/model/MultiValueColumn.html)-->, which takes an ID and a set of values. Follow these steps to configure your portlet to use line charts. 
+Line charts contain multiple sets of data. A Line chart displays the data linearly. Each data series (created with the `addColumns()` method) is defined with a new instance of the  [`MultiValueColumn` object](https://docs.liferay.com/ce/apps/frontend-taglib/latest/javadocs/com/liferay/frontend/taglib/chart/model/MultiValueColumn.html), which takes an ID and a set of values. Follow these steps to configure your portlet to use line charts. 
 
 1. Import the chart taglib along with the `LineChartConfig` and `MultiValueColumn` classes into your bundle's `init.jsp` file:
 

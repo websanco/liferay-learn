@@ -14,8 +14,7 @@ Follow these steps to use predictive charts.
     <%@ page import="com.liferay.frontend.taglib.chart.model.MixedDataColumn" %>
     ```
 
-1. Add the following Java scriptlet to the top of your `view.jsp`. Add a `MixedDataColumn` object <!--[`MixedDataColumn` object](https://docs.liferay.com/dxp/apps/foundation/latest/javadocs/com/liferay/frontend/taglib/chart/model/MixedDataColumn.html)-->
-    - --a column that supports both single number values and arrays of three numbers---for each data series. Single number values define existing data. Arrays of numbers are used as the prediction/forecast data and contain three  numbers: a minimum value, an estimated value, and a maximum value. The estimated value is rendered solid and surrounded by a highlighted area with borders specified by the minimum and maximum values. This lets you visualize  your estimated values, while also giving you an idea of the possible value ranges. Use the `addDataColumn()` method to add each data series:
+1. Add the following Java scriptlet to the top of your `view.jsp`. Add a [`MixedDataColumn` object](https://docs.liferay.com/ce/apps/frontend-taglib/latest/javadocs/com/liferay/frontend/taglib/chart/model/MixedDataColumn.html)---a column that supports both single number values and arrays of three numbers---for each data series. Single number values define existing data. Arrays of numbers are used as the prediction/forecast data and contain three  numbers: a minimum value, an estimated value, and a maximum value. The estimated value is rendered solid and surrounded by a highlighted area with borders specified by the minimum and maximum values. This lets you visualize  your estimated values, while also giving you an idea of the possible value ranges. Use the `addDataColumn()` method to add each data series:
 
     ```java
     <%
