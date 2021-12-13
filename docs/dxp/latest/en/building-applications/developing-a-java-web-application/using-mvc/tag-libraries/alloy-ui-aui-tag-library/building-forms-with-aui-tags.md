@@ -11,19 +11,18 @@ Follow these steps to build a form using AUI tags:
     ```
 
 1. Build your form using the tags shown below. Each tag links to the corresponding taglibdoc that list the available attributes:
-
-    * [`<aui:input>`](https://docs.liferay.com/ce/portal/7.2-latest/taglibs/util-taglib/aui/input.html)
-    * [`<aui:button>`](https://docs.liferay.com/ce/portal/7.2-latest/taglibs/util-taglib/aui/button.html)
-    * [`<aui:button-row>`](https://docs.liferay.com/ce/portal/7.2-latest/taglibs/util-taglib/aui/button-row.html)
-    * [`<aui:container>`](https://docs.liferay.com/ce/portal/7.2-latest/taglibs/util-taglib/aui/container.html)
-    * [`<aui:col>`](https://docs.liferay.com/ce/portal/7.2-latest/taglibs/util-taglib/aui/col.html)
-    * [`<aui:row>`](https://docs.liferay.com/ce/portal/7.2-latest/taglibs/util-taglib/aui/row.html)
-    * [`<aui:field-wrapper>`](https://docs.liferay.com/ce/portal/7.2-latest/taglibs/util-taglib/aui/field-wrapper.html)
-    * [`<aui:fieldset>`](https://docs.liferay.com/ce/portal/7.2-latest/taglibs/util-taglib/aui/fieldset.html)
-    * [`<aui:fieldset-group>`](https://docs.liferay.com/ce/portal/7.2-latest/taglibs/util-taglib/aui/fieldset-group.html)
-    * [`<aui:form>`](https://docs.liferay.com/ce/portal/7.2-latest/taglibs/util-taglib/aui/form.html)
-    * [`<aui:select>`](https://docs.liferay.com/ce/portal/7.2-latest/taglibs/util-taglib/aui/select.html)
-    * [`<aui:option>`](https://docs.liferay.com/ce/portal/7.2-latest/taglibs/util-taglib/aui/option.html)
+    * [`<aui:input>`](https://learn.liferay.com/reference/latest/en/dxp/taglibs/util-taglib/aui/input.html)
+    * [`<aui:button>`](https://learn.liferay.com/reference/latest/en/dxp/taglibs/util-taglib/aui/button.html)
+    * [`<aui:button-row>`](https://learn.liferay.com/reference/latest/en/dxp/taglibs/util-taglib/aui/button-row.html)
+    * [`<aui:container>`](https://learn.liferay.com/reference/latest/en/dxp/taglibs/util-taglib/aui/container.html)
+    * [`<aui:col>`](https://learn.liferay.com/reference/latest/en/dxp/taglibs/util-taglib/aui/col.html)
+    * [`<aui:row>`](https://learn.liferay.com/reference/latest/en/dxp/taglibs/util-taglib/aui/row.html)
+    * [`<aui:field-wrapper>`](https://learn.liferay.com/reference/latest/en/dxp/taglibs/util-taglib/aui/field-wrapper.html)
+    * [`<aui:fieldset>`](https://learn.liferay.com/reference/latest/en/dxp/taglibs/util-taglib/aui/fieldset.html)
+    * [`<aui:fieldset-group>`](https://learn.liferay.com/reference/latest/en/dxp/taglibs/util-taglib/aui/fieldset-group.html)
+    * [`<aui:form>`](https://learn.liferay.com/reference/latest/en/dxp/taglibs/util-taglib/aui/form.html)
+    * [`<aui:select>`](https://learn.liferay.com/reference/latest/en/dxp/taglibs/util-taglib/aui/select.html)
+    * [`<aui:option>`](https://learn.liferay.com/reference/latest/en/dxp/taglibs/util-taglib/aui/option.html)
 
     An example form is shown below:
 

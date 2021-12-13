@@ -71,7 +71,7 @@ The `iconCssClass` attribute specifies a [glyphicon](http://marcoceppi.github.io
 
 ![You can use Font Awesome icons in your app.](./liferay-ui-icons/images/05.png)
 
-The examples above use some of the icon's available attributes. See the [Icon taglibdocs](https://docs.liferay.com/dxp/portal/7.2-latest/taglibs/util-taglib/liferay-ui/icon.html) for the full list. 
+The examples above use some of the icon's available attributes. See the [Icon taglibdocs](https://learn.liferay.com/reference/latest/en/dxp/taglibs/util-taglib/liferay-ui/icon.html) for the full list. 
 
 ## Related Topics
 

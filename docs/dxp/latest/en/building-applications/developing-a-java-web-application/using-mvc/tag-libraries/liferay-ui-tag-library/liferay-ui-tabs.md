@@ -35,7 +35,7 @@ Each tab requires a corresponding section to display content. Nest `liferay-ui:s
 
 ![Tabs are a useful way to organize configuration options into individual sections within the same UI.](./liferay-ui-tabs/images/01.png)
 
-The example above uses some of the tab's available attributes. See the [Tabs taglibdocs](https://docs.liferay.com/dxp/portal/7.2-latest/taglibs/util-taglib/liferay-ui/tabs.html) for the full list of attributes. 
+The example above uses some of the tab's available attributes. See the [Tabs taglibdocs](https://learn.liferay.com/reference/latest/en/dxp/taglibs/util-taglib/liferay-ui/tabs.html) for the full list of attributes. 
 
 ## Related Topics
 

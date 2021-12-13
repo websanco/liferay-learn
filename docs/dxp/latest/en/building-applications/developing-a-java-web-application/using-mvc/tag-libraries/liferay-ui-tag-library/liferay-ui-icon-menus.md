@@ -29,7 +29,7 @@ Example JSP configuration:
 </liferay-ui:icon-menu>
 ```
 
-Note that the `url` attribute is required for icons to render properly. See the [Icon Menu taglibdocs](https://docs.liferay.com/dxp/portal/7.2-latest/taglibs/util-taglib/liferay-ui/icon-menu.html) for the full list of attributes. 
+Note that the `url` attribute is required for icons to render properly. See the [Icon Menu taglibdocs](https://learn.liferay.com/reference/latest/en/dxp/taglibs/util-taglib/liferay-ui/icon-menu.html) for the full list of attributes. 
 
 ## Related Topics
 
