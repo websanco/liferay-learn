@@ -4,7 +4,7 @@ Pie charts are percentage-based. A pie chart models percentage-based data as ind
 
 1. Import the chart taglib along with the `PieChartConfig` and `SingleValueColumn` classes into your bundle's `init.jsp` file:
 
-    ```markup
+    ```jsp
     <%@ taglib prefix="chart" uri="http://liferay.com/tld/chart" %>
     <%@ page import="com.liferay.frontend.taglib.chart.model.percentage.pie.PieChartConfig" %>
     <%@ page import="com.liferay.frontend.taglib.chart.model.SingleValueColumn" %>
@@ -25,7 +25,7 @@ Pie charts are percentage-based. A pie chart models percentage-based data as ind
 
 1. Add the `<chart>` taglib to the `view.jsp`, passing the `_pieChartConfig` as the `config` attribute's value:
 
-    ```markup
+    ```jsp
     <chart:pie
       config="<%= _pieChartConfig %>"
     />

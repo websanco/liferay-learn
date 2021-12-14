@@ -8,7 +8,7 @@ Embedded alerts are usually used inside forms. The element that contains it dete
 
 Danger alert (embedded):
 
-```markup
+```jsp
 <clay:alert
 	message="This is an error message."
 	style="danger"
@@ -20,7 +20,7 @@ Danger alert (embedded):
 
 Success alert (embedded):
 
-```markup
+```jsp
 <clay:alert
 	message="This is a success message."
 	style="success"
@@ -32,7 +32,7 @@ Success alert (embedded):
 
 Info alert (embedded):
 
-```markup
+```jsp
 <clay:alert
 	message="This is an info message."
 	title="Info"
@@ -43,7 +43,7 @@ Info alert (embedded):
 
 Warning alert (embedded):
 
-```markup
+```jsp
 <clay:alert
 	message="This is a warning message."
 	style="warning"
@@ -59,7 +59,7 @@ Stripe alerts are placed below the last navigation element (either the header or
 
 Danger alert (stripe):
 
-```markup
+```jsp
 <clay:stripe
 	message="This is an error message."
 	style="danger"
@@ -71,7 +71,7 @@ Danger alert (stripe):
 
 Success alert (stripe):
 
-```markup
+```jsp
 <clay:stripe
 	message="This is a success message."
 	style="success"
@@ -83,7 +83,7 @@ Success alert (stripe):
 
 Info alert (stripe):
 
-```markup
+```jsp
 <clay:stripe
 	message="This is an info message."
 	title="Info"
@@ -94,7 +94,7 @@ Info alert (stripe):
 
 Warning alert (stripe):
 
-```markup
+```jsp
 <clay:stripe
 	message="This is a warning message."
 	style="warning"

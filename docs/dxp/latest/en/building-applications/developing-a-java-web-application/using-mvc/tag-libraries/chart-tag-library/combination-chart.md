@@ -4,7 +4,7 @@ Combination charts have minor differences from other charts. In a combination ch
 
 1. Import the chart taglib along with the `CombinationChartConfig`, `MultiValueColumn`, and `MultiValueColumn.Type` classes into your bundle's `init.jsp` file:
 
-    ```markup
+    ```jsp
     <%@ taglib prefix="chart" uri="http://liferay.com/tld/chart" %>
     <%@ page import="com.liferay.frontend.taglib.chart.model.combination.CombinationChartConfig" %>
     <%@ page import="com.liferay.frontend.taglib.chart.model.MultiValueColumn" %>
@@ -39,7 +39,7 @@ Combination charts have minor differences from other charts. In a combination ch
 
 1. Add the `<chart>` taglib to the `view.jsp`, passing the `_combinationChartConfig` as the `config` attribute's value:
 
-    ```markup
+    ```jsp
     <chart:combination
       config="<%= _combinationChartConfig %>"
     />

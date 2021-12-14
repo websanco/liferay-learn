@@ -4,7 +4,6 @@
 :maxdepth: 3
 
 alloy-ui-aui-tag-library/building-forms-with-aui-tags.md
-
 ```
 
 The AUI tag library provides tags that implement commonly used UI components.  These tags make your markup consistent, responsive, and accessible. 
@@ -13,13 +12,13 @@ You can find a list of the available `<aui>` taglibs in the  [AUI taglibdocs](ht
 
 To use the AUI taglib library in your apps, you must add the following  declaration to your JSP:
 
-```markup
+```jsp
 <%@ taglib prefix="aui" uri="http://liferay.com/tld/aui" %>
 ```
 
 The AUI taglib is also available via a macro for your FreeMarker theme templates  and web content templates. Follow this syntax:
 
-```markup
+```
 <@liferay_aui["tag-name"] attribute="string value" attribute=10 />
 ```
 

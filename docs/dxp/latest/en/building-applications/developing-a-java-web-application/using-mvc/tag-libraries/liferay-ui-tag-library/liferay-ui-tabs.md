@@ -4,7 +4,7 @@ Tabs create dividers that organize content into individual sections. Content can
 
 To add tabs to your app, use the `<liferay-ui:tabs>` tag and specify each tab's name as a comma-separated list for the `names` attribute. For example, three tabs named `tab1`, `tab2`, and `tab3`, look like this in the JSP:
 
-```markup
+```jsp
 <liferay-ui:tabs names="tab1,tab2,tab3">
 
 </liferay-ui:tabs>
@@ -12,7 +12,7 @@ To add tabs to your app, use the `<liferay-ui:tabs>` tag and specify each tab's 
 
 Each tab requires a corresponding section to display content. Nest `liferay-ui:section` tags for each of the tabs. Within each section, you can add HTML content or add content indirectly by including content from another JSP (via the `<%@ includefile="filepath"%>` directive). The example snippet below is from the Calendar portlet's `configuration.jsp`:
 
-```markup
+```jsp
 <liferay-ui:tabs
     names='<%= "user-settings,display-settings,rss" %>'
     param="tabs2"

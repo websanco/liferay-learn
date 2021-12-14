@@ -6,7 +6,7 @@ The Liferay Clay tag library provides several tags for creating form elements. A
 
 Checkboxes give the user a true or false input.
 
-```markup	
+```jsp	
 <clay:checkbox 
 		checked="<%= true %>" 
 		hideLabel="<%= true %>" 
@@ -35,7 +35,7 @@ Attributes:
 
 A radio button lets the user select one choice from a set of options in a form.
 
-```markup
+```jsp
 <clay:radio 
 		checked="<%= true %>" 
 		hideLabel="<%= true %>" 
@@ -79,7 +79,7 @@ for (int i = 0; i < 8; i++) {
 %>
 ```
 
-```markup
+```jsp
 <clay:select 
 		label="Regular Select Element" 
 		name="name" 
@@ -91,7 +91,7 @@ for (int i = 0; i < 8; i++) {
 
 If you want let users select multiple options at once, set the `multiple`  attribute to `true`:
 
-```markup
+```jsp
 <clay:select 
 		label="Multiple Select Element" 
 		multiple="<%= true %>" 

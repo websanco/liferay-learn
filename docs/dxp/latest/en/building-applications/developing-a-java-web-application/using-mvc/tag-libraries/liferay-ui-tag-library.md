@@ -16,13 +16,13 @@ You can find a list of the available Liferay UI taglibs in the [Liferay UI tagli
 
 To use the Liferay-UI taglib library in your apps, you must add the following declaration to your JSP:
 
-```markup
+```jsp
 <%@ taglib prefix="liferay-ui" uri="http://liferay.com/tld/ui" %>
 ```
     
 The Liferay-UI taglib is also available via a macro for your FreeMarker theme and web content templates. Follow this syntax:
 
-```markup
+```
 <@liferay_ui["tag-name"] attribute="string value" attribute=10 />
 ```
 

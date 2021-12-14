@@ -12,7 +12,7 @@ If you have installed a custom theme you may also need to add the following impo
 
 Add the `<liferay-ui:icon-help/>` tag next to the UI that needs tooltip  information. Define the informational text with the required `message`  attribute. Below is an example snippet for one of the Server Administration's  clean up actions:
 
-```markup
+```jsp
 <h5>
     <liferay-ui:message key="clean-up-permissions" />
     <liferay-ui:icon-help message="clean-up-permissions-help" />

@@ -8,7 +8,7 @@ Follow these steps to configure your portlet to use geomap charts.
 
 1. Import the chart taglib along with the `GeomapConfig`, `GeomapColor`, and `GeomapColorRange` classes into your bundle's `init.jsp` file:
 
-    ```markup
+    ```jsp
     <%@ taglib prefix="chart" uri="http://liferay.com/tld/chart" %>
     <%@ page import="com.liferay.frontend.taglib.chart.model.geomap.GeomapConfig" %>
     <%@ page import="com.liferay.frontend.taglib.chart.model.geomap.GeomapColor" %>

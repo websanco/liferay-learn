@@ -4,7 +4,7 @@ Bar charts contain multiple sets of data. A bar chart models the data in bars. E
 
 1. Import the chart taglib along with the `BarChartConfig` and `MultiValueColumn` classes into your bundle's `init.jsp` file:
 
-    ```markup
+    ```jsp
     <%@ taglib prefix="chart" uri="http://liferay.com/tld/chart" %>
     <%@ page import="com.liferay.frontend.taglib.chart.model.point.bar.BarChartConfig" %>
     <%@ page import="com.liferay.frontend.taglib.chart.model.MultiValueColumn" %>
@@ -26,7 +26,7 @@ Bar charts contain multiple sets of data. A bar chart models the data in bars. E
 
 1. Add the `<chart>` taglib to the `view.jsp`, passing the `_barChartConfig` as the `config` attribute's value:
 
-    ```markup
+    ```jsp
     <chart:bar
       config="<%= _barChartConfig %>"
     />

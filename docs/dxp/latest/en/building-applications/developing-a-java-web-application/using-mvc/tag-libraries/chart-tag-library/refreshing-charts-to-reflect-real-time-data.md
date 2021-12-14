@@ -17,7 +17,7 @@ The polling interval property is an optional property for all charts. It specifi
 
 1. Set the chart taglib's `config` attribute to the updated configuration object that you created in the last step, as shown in the example below:
 
-		```markup
+		```jsp
 		<chart:line
 			componentId="polling-interval-line-chart"
 			config="<%= _pollingIntervalLineChartConfig %>"

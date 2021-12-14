@@ -6,7 +6,7 @@ This tag also has an optional `outputKey` attribute. If several portlets on the 
 
 The example configuration below uses the `<liferay-util:body-top>` tag to include JavaScript provided by the portlet's bundle:
 
-```markup
+```jsp
 <liferay-util:body-top outputKey="bodytop" >
 	<script 
   src="/o/my-liferay-util-portlet/js/my_custom_javascript_body_top.js" 

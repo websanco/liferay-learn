@@ -4,13 +4,13 @@ The get URL tag scrapes the URL provided by the `url` attribute. If a value is p
 
 A basic configuration for the `<liferay-util:get-url>` tag is shown below:
 
-```markup
+```jsp
 <liferay-util:get-url url="https://www.liferay.com/" />
 ```
 
 Here is an example that uses the `var` attribute:
 
-```markup
+```jsp
 <liferay-util:get-url url="https://www.liferay.com/" var="Liferay" />
 
 <div>

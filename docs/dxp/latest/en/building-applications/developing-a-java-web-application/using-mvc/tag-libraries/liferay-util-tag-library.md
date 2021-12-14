@@ -19,13 +19,13 @@ The Liferay Util taglib is used to pull other resources into a portlet or theme.
 
 To use the Liferay-Util taglib, add the following declaration to your JSP:
 
-```markup
+```jsp
 <%@ taglib prefix="liferay-util" uri="http://liferay.com/tld/util" %>
 ```
 
 The Liferay-Util taglib is also available via a macro for your FreeMarker theme templates and web content templates. Follow this syntax:
 
-```markup
+```
 <@liferay_util["tag-name"] attribute="string value" attribute=10 />
 ```
 

@@ -8,7 +8,7 @@ The configuration has two key parts: the info bar---and buttons---and the sideba
 
 Info bar:
 
-```markup
+```jsp
 <liferay-frontend:info-bar>
   <liferay-frontend:info-bar-buttons>
     <liferay-frontend:info-bar-sidenav-toggler-button
@@ -23,7 +23,7 @@ The `<liferay-frontend:info-bar-sidenav-toggler-button>` tag uses [Clay Icons](.
 
 Sidebar panel:
 
-```markup
+```jsp
 <div class="closed container-fluid-1280 sidenav-container sidenav-right" id="<portlet:namespace />infoPanelId">
     <liferay-frontend:sidebar-panel>
       <div>

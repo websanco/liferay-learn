@@ -6,7 +6,7 @@ The `page` attribute is required and specifies the path to the JSP or JSPF to in
 
 Below is an example configuration for the `<liferay-util:include>` tag:
 
-```markup
+```jsp
 <liferay-util:include 
   page="/relative/path/to/file.jsp" 
   servletContext="<%= application %>"

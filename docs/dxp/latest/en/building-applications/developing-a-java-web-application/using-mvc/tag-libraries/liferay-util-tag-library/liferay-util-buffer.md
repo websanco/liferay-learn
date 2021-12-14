@@ -4,7 +4,7 @@ The buffer tag is not a self-closing tag. The content placed between the opening
 
 The example below saves the link's generated markup to a buffer and then uses the returned string as the argument for a `liferay-ui:message` key:
 
-```markup
+```jsp
 <liferay-util:buffer
 		var="linkContent"
 >

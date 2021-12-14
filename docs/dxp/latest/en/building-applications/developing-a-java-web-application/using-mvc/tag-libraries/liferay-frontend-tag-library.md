@@ -15,13 +15,13 @@ The Liferay Front-end tag library provides a set of tags for creating common fro
 
 To use the Front-end taglib in you apps, add the following declaration to your JSP:
 
-```markup
+```jsp
 <%@ taglib prefix="liferay-frontend" uri="http://liferay.com/tld/frontend" %>
 ```
 
 The Liferay Front-end taglib is also available via a macro for your FreeMarker theme templates and web content templates. Follow this syntax:
 
-```markup
+```
 <@liferay_frontend["tag-name"] attribute="string value" attribute=10 />
 ```
 

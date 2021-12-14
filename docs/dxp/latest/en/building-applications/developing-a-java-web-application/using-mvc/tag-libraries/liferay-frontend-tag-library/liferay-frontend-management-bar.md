@@ -30,7 +30,7 @@ Finally, the [`<liferay-frontend:management-bar-action-buttons>` tag](https://do
 
 For example, here's the Management Bar configuration in the Trash app:
 
-```markup
+```jsp
 <liferay-frontend:management-bar
    includeCheckBox="<%= true %>"
    searchContainerId="trash"

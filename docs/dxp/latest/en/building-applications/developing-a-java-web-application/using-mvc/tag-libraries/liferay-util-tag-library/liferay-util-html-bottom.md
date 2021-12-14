@@ -6,7 +6,7 @@ This tag also has an optional `outputKey` attribute. If several portlets on the 
 
 The example configuration below uses the `<liferay-util:html-bottom>` tag to include JavaScript (a common use case) provided by the portlet's bundle:
 
-```markup
+```jsp
 <liferay-util:html-bottom outputKey="htmlbottom">
 
     <script src="/o/my-liferay-util-portlet/js/my_custom_javascript.js" 

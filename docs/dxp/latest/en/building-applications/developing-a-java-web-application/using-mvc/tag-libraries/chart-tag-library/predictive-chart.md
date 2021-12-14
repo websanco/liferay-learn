@@ -8,7 +8,7 @@ Follow these steps to use predictive charts.
 
 1. Import the chart taglib along with the `PredictiveChartConfig` and `MixedDataColumn` classes into your bundle's `init.jsp` file:
 
-    ```markup
+    ```jsp
     <%@ taglib prefix="chart" uri="http://liferay.com/tld/chart" %>
     <%@ page import="com.liferay.frontend.taglib.chart.model.predictive.PredictiveChartConfig" %>
     <%@ page import="com.liferay.frontend.taglib.chart.model.MixedDataColumn" %>
@@ -71,7 +71,7 @@ Follow these steps to use predictive charts.
 
 1. Add the `<chart>` taglib to the `view.jsp`, passing the `_predictiveChartConfig` as the `config` attribute's value:
 
-    ```markup
+    ```jsp
     <chart:predictive
       config="<%= _predictiveChartConfig %>"
     />

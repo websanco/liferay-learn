@@ -6,7 +6,7 @@ Follow these steps to build a form using AUI tags:
 
 1. Add the `aui` taglib declaration to your portlet's `view.jsp` if you haven't  already:
 
-    ```markup
+    ```jsp
     <%@ taglib prefix="aui" uri="http://liferay.com/tld/aui" %>
     ```
 
@@ -26,7 +26,7 @@ Follow these steps to build a form using AUI tags:
 
     An example form is shown below:
 
-    ```markup
+    ```jsp
     <aui:form name="fm">
     	<aui:fieldset-group markupView="lexicon">
     		<aui:fieldset label="Personal Information">
@@ -64,7 +64,7 @@ Follow these steps to build a form using AUI tags:
 
 1. Optionally add validation to your form fields. Nest a `<aui:validator>` tag inside each form field that you want to validate. Specify the validation rule with the `<aui:validator>` tag's `name` attribute (The available validation rules are shown in the table below). You can override a field's default validation error message with the `errorMessage` attribute. An  example configuration is shown below:
 
-    ```markup
+    ```jsp
     <aui:form name="myForm">
         <aui:input name="password" id="password" label="Password" 
         required="true" />

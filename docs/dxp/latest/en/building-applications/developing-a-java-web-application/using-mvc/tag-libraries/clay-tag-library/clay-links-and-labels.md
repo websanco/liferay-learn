@@ -12,7 +12,7 @@ The Liferay Clay labels come in four different colors: dark-blue for info, light
 
 Info labels are dark-blue, and since they stand out a bit more than status labels, they are best for conveying general information. To use an info label, set the `style` attribute to `info`:
 
-```markup
+```jsp
 <clay:label label="Label text" style="info" />
 ```
 
@@ -20,7 +20,7 @@ Info labels are dark-blue, and since they stand out a bit more than status label
 
 Status labels are light-gray, and due to their neutral color, they are best for conveying basic information. Status labels are the default label and therefore require no `style` attribute:
 
-```markup
+```jsp
 <clay:label label="Status" />
 ```
 
@@ -28,7 +28,7 @@ Status labels are light-gray, and due to their neutral color, they are best for 
 
 Warning labels are orange, and due to their color, they are best for conveying a warning message. To use a warning label, set the `style` attribute to `warning`:
 
-```markup
+```jsp
 <clay:label label="Pending" style="warning" />
 ```
 
@@ -36,7 +36,7 @@ Warning labels are orange, and due to their color, they are best for conveying a
 
 Danger labels are red and indicate that something is wrong or has failed. To use a danger label, set the `style` attribute to `danger`:
 
-```markup
+```jsp
 <clay:label label="Rejected" style="danger" />
 ```
 
@@ -44,7 +44,7 @@ Danger labels are red and indicate that something is wrong or has failed. To use
 
 Success labels are green and indicate that something has completed successfully. To use a success label, set the `style` attribute to `success`:
 
-```markup
+```jsp
 <clay:label label="Approved" style="success" />
 ```
 
@@ -52,7 +52,7 @@ Success labels are green and indicate that something has completed successfully.
 
 Labels can also be bigger. Set the `size` attribute to `lg` to display large labels:
 
-```markup
+```jsp
 <clay:label label="Approved" size="lg" style="success" />
 ```
 
@@ -60,7 +60,7 @@ Labels can also be bigger. Set the `size` attribute to `lg` to display large lab
 
 If you want to let a user close a label (e.g. a temporary notification), you can  make the label removable by setting the `closeable` attribute to `true`.
 
-```markup
+```jsp
 <clay:label closeable="<%= true %>" label="Normal Label" />
 ```
 
@@ -70,7 +70,7 @@ If you want to let a user close a label (e.g. a temporary notification), you can
 
 You can make a label a link by adding the `href` attribute to it just as you would an anchor tag:
 
-```markup
+```jsp
 <clay:label href="#" label="Label Text" />
 ```
 
@@ -80,7 +80,7 @@ You can make a label a link by adding the `href` attribute to it just as you wou
 
 You can add traditional hyperlinks to your app with the `<clay:link>` tag:
 
-```markup
+```jsp
 <clay:link href="#" label="link text" />
 ```
 

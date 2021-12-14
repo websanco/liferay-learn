@@ -4,7 +4,7 @@ Scatter charts contain multiple sets of data. A scatter chart models the data as
 
 1. Import the chart taglib along with the `ScatterChartConfig` and `MultiValueColumn` classes into your bundle's `init.jsp` file:
 
-    ```markup
+    ```jsp
     <%@ taglib prefix="chart" uri="http://liferay.com/tld/chart" %>
     <%@ page import="com.liferay.frontend.taglib.chart.model.point.scatter.ScatterChartConfig" %>
     <%@ page import="com.liferay.frontend.taglib.chart.model.MultiValueColumn" %>
@@ -25,7 +25,7 @@ Scatter charts contain multiple sets of data. A scatter chart models the data as
 
 1. Add the `<chart>` taglib to the `view.jsp`, passing the `_scatterChartConfig` as the `config` attribute's value:
 
-    ```markup
+    ```jsp
     <chart:scatter
       config="<%= _scatterChartConfig %>"
     />

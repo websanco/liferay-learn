@@ -6,7 +6,7 @@ You can add dropdown menus to your app via the `clay:dropdown-menu` and  `clay:a
 
 Basic dropdown menu:
 
-```markup
+```jsp
 <clay:dropdown-menu
 	items="<%= dropdownsDisplayContext.getDefaultDropdownItems() %>"
 	label="Default"
@@ -53,7 +53,7 @@ group1NavigationItem.setType(NavigationItem.TYPE_GROUP);
 
 Corresponding taglib:
 
-```markup
+```jsp
 <clay:dropdown-menu
 	items="<%= dropdownsDisplayContext.getGroupDropdownItems() %>"
 	label="Dividers"
@@ -73,7 +73,7 @@ navigationItem.setType(NavigationItem.TYPE_CHECKBOX);
 
 Corresponding taglib:
 
-```markup
+```jsp
 <clay:dropdown-menu
 	buttonLabel="Done"
 	items="<%= dropdownsDisplayContext.getInputDropdownItems() %>"
@@ -92,7 +92,7 @@ navigationItem.setIcon("check-circle-full")
 
 Corresponding taglib:
 
-```markup
+```jsp
 <clay:dropdown-menu
 	items="<%= dropdownsDisplayContext.getIconDropdownItems() %>"
 	itemsIconAlignment="left"
@@ -106,7 +106,7 @@ Corresponding taglib:
 
 Basic actions menu:
 
-```markup
+```jsp
 <clay:dropdown-actions
 	items="<%= dropdownsDisplayContext.getDefaultDropdownItems() %>"
 />
@@ -116,7 +116,7 @@ Basic actions menu:
 
 An actions menu can also display help text to the user:
 
-```markup
+```
 <clay:dropdown-actions
 	buttonLabel="More"
 	buttonStyle="secondary"

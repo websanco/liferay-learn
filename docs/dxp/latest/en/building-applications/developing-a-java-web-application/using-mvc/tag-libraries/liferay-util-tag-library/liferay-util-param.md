@@ -6,7 +6,7 @@ For example, say you have your main functionality in `my-app.jsp`, and you have 
 
 `more-content.jsp`:
 
-```markup
+```jsp
 <%@ page import="com.liferay.portal.kernel.util.ParamUtil" %>
 
 <%
@@ -20,7 +20,7 @@ String answer = ParamUtil.getString(request, "answer");
 
 Then in `my-app.jsp`, you can include `more-content.jsp` and set the value of the `answer` parameter:
 
-```markup
+```jsp
 <liferay-util:include page="/path/to/more-content.jsp" servletContext="<%= application %>">
   <liferay-util:param name="answer" value="42" />
 </liferay-util:include>

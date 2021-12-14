@@ -4,7 +4,7 @@ You can add progress bars to your app with the `clay:progressbar` tag. These ind
 
 Default progress bar:
 
-```markup
+```jsp
 <clay:progressbar 
     maxValue="<%= 100 %>" 
     minValue="<%= 0 %>" 
@@ -16,7 +16,7 @@ Default progress bar:
 
 Warning progress bar:
 
-```markup
+```jsp
 <clay:progressbar 
     maxValue="<%= 100 %>" 
     minValue="<%= 0 %>" 
@@ -29,7 +29,7 @@ Warning progress bar:
 
 Complete progress bar:
 
-```markup
+```jsp
 <clay:progressbar 
     status="complete" 
 />

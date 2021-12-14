@@ -21,7 +21,7 @@ Lines, splines, bars, pies and more, the Chart tag Library provides everything y
 
 To use the Chart taglib in your apps, add the following declaration to your JSP:
 
-```markup
+```jsp
 <%@ taglib prefix="chart" uri="http://liferay.com/tld/chart" %>
 ```
 

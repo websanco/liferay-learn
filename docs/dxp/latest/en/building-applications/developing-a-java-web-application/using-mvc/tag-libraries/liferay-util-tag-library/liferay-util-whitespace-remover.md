@@ -4,7 +4,7 @@ The whitespace remover tag removes line breaks and tabs from code blocks include
 
 with remover:
 
-```markup
+```jsp
 <liferay-util:whitespace-remover>
 	<p>Here is some text with        tabs.</p>
 </liferay-util:whitespace-remover>

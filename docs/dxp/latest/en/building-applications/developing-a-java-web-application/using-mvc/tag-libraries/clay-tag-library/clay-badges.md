@@ -8,7 +8,7 @@ The following badge styles are available:
 
 Primary badge:
 
-```markup
+```jsp
 <div class="col-md-1">
     <clay:badge label="8" />
 
@@ -20,7 +20,7 @@ Primary badge:
 
 Secondary badge:
 
-```markup
+```jsp
 <div class="col-md-1">
     <clay:badge label="87" style="secondary" />
 
@@ -32,7 +32,7 @@ Secondary badge:
 
 Info badge:
 
-```markup
+```jsp
 <div class="col-md-1">
     <clay:badge label="91" style="info" />
 
@@ -44,7 +44,7 @@ Info badge:
 
 Error badge:
 
-```markup
+```jsp
 <div class="col-md-1">
     <clay:badge label="130" style="danger" />
 
@@ -56,7 +56,7 @@ Error badge:
 
 Success badge:
 
-```markup
+```jsp
 <div class="col-md-1">
     <clay:badge label="1111" style="success" />
 
@@ -68,7 +68,7 @@ Success badge:
 
 Warning badge:
 
-```markup
+```jsp
 <div class="col-md-1">
     <clay:badge label="21" style="warning" />
 

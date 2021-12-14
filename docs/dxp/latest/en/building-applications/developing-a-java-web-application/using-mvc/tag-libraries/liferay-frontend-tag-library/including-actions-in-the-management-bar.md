@@ -8,7 +8,7 @@ Follow these steps to include actions in your management bar:
 
 1. Update the `<liferay-frontend:management-bar>` tag to include the checkbox and provide the search container's ID:
 
-    ```markup
+    ```jsp
     <liferay-frontend:management-bar
     	includeCheckBox="<%= true %>"
     	searchContainerId="mySearchContainerId"
@@ -17,7 +17,7 @@ Follow these steps to include actions in your management bar:
 
 1. After the closing `</liferay-frontend:management-bar-filters>` tag, add the `<liferay-frontend:management-bar-action-buttons>` tags:
 
-    ```markup
+    ```jsp
     <liferay-frontend:management-bar-action-buttons>
 
     </liferay-frontend:management-bar-action-buttons>
@@ -25,7 +25,7 @@ Follow these steps to include actions in your management bar:
 
 1. Use the available management bar button taglibs (e.g. `management-bar-button`) to build the action buttons for your app's management bar. A code snippet from the Site admin portlet is shown below: 
 
-    ```markup
+    ```jsp
     <liferay-frontend:management-bar-action-buttons>
     	<liferay-frontend:management-bar-sidenav-toggler-button
     		icon="info-circle"

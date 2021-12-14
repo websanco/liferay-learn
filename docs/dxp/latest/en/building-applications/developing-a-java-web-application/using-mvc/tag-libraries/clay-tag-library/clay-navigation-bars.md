@@ -4,7 +4,7 @@ Similar to dropdown menus, navigation bars display a list of navigation items. T
 
 Default navigation bar:
 
-```markup
+```jsp
 <clay:navigation-bar 
     navigationItems="<%= navigationBarsDisplayContext.getNavigationItems() %>" 
 />
@@ -14,7 +14,7 @@ Default navigation bar:
 
 Inverted navigation bar (set `inverted` attribute to `true`):
 
-```markup
+```jsp
 <clay:navigation-bar 
     inverted="<%= true %>" 
     navigationItems="<%= navigationBarsDisplayContext.getNavigationItems() %>" 

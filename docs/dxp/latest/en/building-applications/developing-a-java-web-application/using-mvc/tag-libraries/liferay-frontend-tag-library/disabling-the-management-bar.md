@@ -4,7 +4,7 @@ When there are no search results to display, you should disable all the Manageme
 
 You can disable the Management Bar by adding the `disabled` attribute to the `liferay-frontend:management-bar` tag:
 
-```markup
+```jsp
 <liferay-frontend:management-bar
         disabled="<%= total == 0 %>"
         includeCheckBox="<%= true %>"
@@ -14,7 +14,7 @@ You can disable the Management Bar by adding the `disabled` attribute to the `li
 
 You can also disable individual components by adding the `disabled` attribute to the corresponding tag. The example below disables the display buttons when the search container displays 0 results, since changing the display style has no  effect when there aren't any results to view:
 
-```markup
+```jsp
 <liferay-frontend:management-bar-display-buttons
         disabled="<%= total == 0 %>"
         displayViews='<%= new String[] {"descriptive", "icon", "list"} %>'

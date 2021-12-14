@@ -6,7 +6,7 @@ An icon list displays icons in a horizontal list, instead of in a pop-up navigat
 
 Create the list menu with the `liferay-ui:icon-list` tag and nest [icons](https://help.liferay.com/hc/en-us/articles/360028832232-Liferay-UI-Icons) for each list item, as shown below:
 
-```markup
+```jsp
 <div class="thread-actions">
     <liferay-ui:icon-list>
 

@@ -4,7 +4,7 @@ Step charts contain multiple sets of data. A step chart steps between the points
 
 1. Import the chart taglib along with the `StepChartConfig` and `MultiValueColumn` classes into your bundle's `init.jsp` file:
 
-    ```markup
+    ```jsp
     <%@ taglib prefix="chart" uri="http://liferay.com/tld/chart" %>
     <%@ page import="com.liferay.frontend.taglib.chart.model.point.step.StepChartConfig" %>
     <%@ page import="com.liferay.frontend.taglib.chart.model.MultiValueColumn" %>
@@ -25,7 +25,7 @@ Step charts contain multiple sets of data. A step chart steps between the points
 
 1. Add the `<chart>` taglib to the `view.jsp`, passing the `_stepChartConfig` as the `config` attribute's value:
 
-    ```markup
+    ```jsp
     <chart:step
       config="<%= _stepChartConfig %>"
     />
@@ -35,7 +35,7 @@ Step charts contain multiple sets of data. A step chart steps between the points
 
 You can also use an area step chart if you prefer. An area step chart highlights the area covered by a step graph. 
 
-```markup
+```jsp
 <chart:area-step 
   config="<%= _stepChartConfig %>" 
 />

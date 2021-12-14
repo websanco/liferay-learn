@@ -8,7 +8,7 @@ This pattern is deprecated as of @product-ver@. We recommend that you use the Cl
 
 When the menu has one item, the button triggers the item's action as shown in the example below for the Blogs Admin App:
 
-```markup
+```jsp
 <liferay-frontend:management-bar>
   <liferay-frontend:management-bar-buttons>
       ...
@@ -29,7 +29,7 @@ When the menu has one item, the button triggers the item's action as shown in th
 
 When the menu has multiple items, they display in a pop-up menu. For example, the Message Boards Admin application has the configuration below:
 
-```markup
+```jsp
 <liferay-frontend:add-menu>
     ...
     <liferay-frontend:add-menu-item title='<%= LanguageUtil.get(request,

@@ -6,7 +6,7 @@ This tag also has an optional `outputKey` attribute. If several portlets on the 
 
 The example configuration below uses the `<liferay-util:html-top>` tag to  include additional CSS styles provided by the portlet's bundle:
 
-```markup
+```jsp
 <liferay-util:html-top outputKey="htmltop">
 				<link data-senna-track="permanent" 
         href="/o/my-liferay-util-portlet/css/my-custom-styles.css" 

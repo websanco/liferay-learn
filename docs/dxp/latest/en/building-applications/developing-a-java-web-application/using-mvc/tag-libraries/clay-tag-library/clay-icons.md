@@ -2,7 +2,7 @@
 
 The Liferay Clay taglibs provide several icons that you can use in your apps. Use the `clay:icon` tag and specify the icon with the `symbol` attribute:
 
-```markup
+```jsp
 <clay:icon symbol="folder" />
 ```
 

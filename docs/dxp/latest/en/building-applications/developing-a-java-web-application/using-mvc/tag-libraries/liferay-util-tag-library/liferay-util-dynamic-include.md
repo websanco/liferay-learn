@@ -4,7 +4,7 @@ The dynamic include tag lets you specify a point or points in a JSP or theme whe
 
 The example configuration below uses the `<liferay-util:dynamic-include>` tag to include an extension point before the primary code and an extension point after the primary code:
 
-```markup
+```jsp
 <%@ taglib uri="http://liferay.com/tld/util" prefix="liferay-util" %>
 
 <liferay-util:dynamic-include key="/path/to/jsp#pre" />

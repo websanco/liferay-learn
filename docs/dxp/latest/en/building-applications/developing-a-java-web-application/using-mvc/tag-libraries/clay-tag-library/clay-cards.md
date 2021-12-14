@@ -15,7 +15,7 @@ Image Cards are used for image/document galleries.
 
 Image Card:
 
-```markup
+```jsp
 <clay:image-card
 	actionItems="<%= cardsDisplayContext.getDefaultActionItems() %>"
 	href="#1"
@@ -30,7 +30,7 @@ Image Card:
 
 Image Card with icon:
 
-```markup
+```jsp
 <clay:image-card
 	actionItems="<%= cardsDisplayContext.getDefaultActionItems() %>"
 	icon="camera"
@@ -43,7 +43,7 @@ Image Card with icon:
 
 Image Card empty:
 
-```markup
+```jsp
 <clay:image-card 
   actionItems="<%= cardsDisplayContext.getDefaultActionItems() %>"
 	subtitle="Author Action"
@@ -55,7 +55,7 @@ Image Card empty:
 
 Cards can also contain file types. Specify the file type with the `filetype` attribute:
 
-```markup
+```jsp
 <clay:image-card
 	actionItems="<%= cardsDisplayContext.getDefaultActionItems() %>"
 	fileType="JPG"
@@ -72,7 +72,7 @@ Cards can also contain file types. Specify the file type with the `filetype` att
 
 Include the `labels` attribute to add a label to a Card:
 
-```markup
+```jsp
 <clay:image-card
 	actionItems="<%= cardsDisplayContext.getDefaultActionItems() %>"
 	fileType="JPG"
@@ -90,7 +90,7 @@ Include the `labels` attribute to add a label to a Card:
 
 Include the `selectable` attribute to make cards selectable (include a checkbox):
 
-```markup
+```jsp
 <clay:image-card
 	actionItems="<%= cardsDisplayContext.getDefaultActionItems() %>"
 	fileType="JPG"
@@ -112,7 +112,7 @@ Include the `selectable` attribute to make cards selectable (include a checkbox)
 
 File Cards display an icon of the file's type. They represent file types other than image files (i.e. PDF, MP3, DOC, etc.).
 
-```markup
+```jsp
 <clay:file-card
 	actionItems="<%= cardsDisplayContext.getDefaultActionItems() %>"
 	fileType="MP3"
@@ -132,7 +132,7 @@ You can optionally use the `labelStylesMap` attribute to pass a `HashMap` of  mu
 
 The example below specifies a list `icon` instead of the default file icon:
 
-```markup
+```jsp
 <clay:file-card
 	actionItems="<%= cardsDisplayContext.getDefaultActionItems() %>"
 	fileType="DOC"
@@ -156,7 +156,7 @@ User Cards display user profile images or the initials of the user's name or nam
 
 User Card with initials:
 
-```markup
+```jsp
 <clay:user-card
 	actionItems="<%= cardsDisplayContext.getDefaultActionItems() %>"
 	initials="HS"
@@ -170,7 +170,7 @@ User Card with initials:
 
 User Card with profile image:
 
-```markup
+```jsp
 <clay:user-card
 	actionItems="<%= cardsDisplayContext.getDefaultActionItems() %>"
 	disabled="<%= true %>"
@@ -189,7 +189,7 @@ User Card with profile image:
 
 Horizontal Cards represent folders and can have the same amount of information as other Cards. The key difference is that horizontal Cards let you remove the image portion of the Card, since only the folder icon is required.
 
-```markup
+```jsp
 <clay:horizontal-card
 	actionItems="<%= cardsDisplayContext.getDefaultActionItems() %>"
 	selectable="<%= true %>"

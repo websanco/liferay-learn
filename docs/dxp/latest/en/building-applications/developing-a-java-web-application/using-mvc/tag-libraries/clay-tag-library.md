@@ -25,12 +25,12 @@ AUI taglibs are deprecated as of @product-ver@. We recommend that you use Clay t
 
 To use the Clay taglib in your apps, add the following declaration to your JSP:
 
-```markup
+```jsp
 <%@ taglib prefix="clay" uri="http://liferay.com/tld/clay" %>
 ```
 The Liferay Clay taglib is also available via a macro for your FreeMarker theme templates and web content templates. Follow this syntax:
 
-```markup
+```
 <@clay["tag-name"] attribute="string value" attribute=10 />
 ```
 

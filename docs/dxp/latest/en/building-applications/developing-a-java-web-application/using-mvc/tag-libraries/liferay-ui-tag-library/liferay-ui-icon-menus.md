@@ -6,7 +6,7 @@ You can add a pop-up navigation menu to your app with the `liferay-ui:icon-menu`
 
 Example JSP configuration:
 
-```markup
+```jsp
 <liferay-ui:icon-menu
     direction="left-side"
     icon="<%= StringPool.BLANK %>"

@@ -4,7 +4,7 @@ Donut charts are percentage-based. A donut chart is similar to a pie chart, but 
 
 1. Import the chart taglib along with the `DonutChartConfig` and `SingleValueColumn` classes into your bundle's `init.jsp` file:
 
-    ```markup
+    ```jsp
     <%@ taglib prefix="chart" uri="http://liferay.com/tld/chart" %>
     <%@ page import="com.liferay.frontend.taglib.chart.model.percentage.donut.DonutChartConfig" %>
     <%@ page import="com.liferay.frontend.taglib.chart.model.SingleValueColumn" %>
@@ -26,7 +26,7 @@ Donut charts are percentage-based. A donut chart is similar to a pie chart, but 
 
 1. Add the `<chart>` taglib to the `view.jsp`, passing the `_donutChartConfig` as the `config` attribute's value:
 
-    ```markup
+    ```jsp
     <chart:donut
       config="<%= _donutChartConfig %>"
     />

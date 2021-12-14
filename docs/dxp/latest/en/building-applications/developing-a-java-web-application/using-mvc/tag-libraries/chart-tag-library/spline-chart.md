@@ -4,7 +4,7 @@ Spline charts contain multiple sets of data. A spline chart connects points of d
 
 1. Import the chart taglib along with the `SplineChartConfig` and `MultiValueColumn` classes into your bundle's `init.jsp` file:
 
-    ```markup
+    ```jsp
     <%@ taglib prefix="chart" uri="http://liferay.com/tld/chart" %>
     <%@ page import="com.liferay.frontend.taglib.chart.model.point.spline.SplineChartConfig" %>
     <%@ page import="com.liferay.frontend.taglib.chart.model.MultiValueColumn" %>
@@ -25,7 +25,7 @@ Spline charts contain multiple sets of data. A spline chart connects points of d
 
 1. Add the `<chart>` taglib to the `view.jsp`, passing the `_splineChartConfig` as the `config` attribute's value:
 
-    ```markup
+    ```jsp
     <chart:spline
       config="<%= _splineChartConfig %>"
     />
@@ -35,7 +35,7 @@ Spline charts contain multiple sets of data. A spline chart connects points of d
 
 You can also use an area spline chart if you prefer. An area spline chart highlights the area under the spline curve.
 
-```markup
+```jsp
 <chart:area-spline 
   config="<%= _splineChartConfig %>" 
 />

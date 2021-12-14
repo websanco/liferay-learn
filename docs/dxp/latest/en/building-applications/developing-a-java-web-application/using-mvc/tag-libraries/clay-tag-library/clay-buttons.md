@@ -8,7 +8,7 @@ Buttons come in several types and variations. This tutorial covers the different
 
 Primary button with label:
 
-```markup
+```jsp
 <clay:button label="Primary" />
 ```
 
@@ -16,7 +16,7 @@ Primary button with label:
 
 **Secondary button:** Used for secondary actions. There can be multiple secondary buttons together or near each other.
 
-```markup
+```jsp
 <div class="col">
     <clay:button label="Secondary" style="secondary" />
 </div>
@@ -29,7 +29,7 @@ Primary button with label:
 
 **Borderless button:** Used in cases such as toolbars where the secondary button would be too heavy for the design. This keeps the design clean.
 
-```markup
+```jsp
 <div class="col">
     <clay:button label="Borderless" style="borderless" />
 </div>
@@ -42,7 +42,7 @@ Primary button with label:
 
 **Link button:** Used for Cancel actions.
 
-```markup
+```jsp
 <div class="col">
     <clay:button label="Link" style="link" />
 </div>
@@ -55,7 +55,7 @@ Primary button with label:
 
 You can use labels or icons for your buttons. Below is an example of a Primary button with an icon:
 
-```markup
+```jsp
 <clay:button ariaLabel="Workflow" icon="workflow" />
 ```
 
@@ -63,7 +63,7 @@ You can use labels or icons for your buttons. Below is an example of a Primary b
 
 You can disable a button by adding the `disabled` attribute:
 
-```markup
+```jsp
 <div class="col">
     <clay:button disabled="<%= true %>" label="Primary" />
 </div>
@@ -78,7 +78,7 @@ You can disable a button by adding the `disabled` attribute:
 
 Button with icon and text:
 
-```markup
+```jsp
 <clay:button icon="share" label="Share" />
 ```
 
@@ -86,7 +86,7 @@ Button with icon and text:
 
 Button with monospaced text:
 
-```markup
+```jsp
 <clay:button icon="indent-less" monospaced="<%= true %>" style="secondary" />
 ```
 
@@ -94,7 +94,7 @@ Button with monospaced text:
 
 Block level button:
 
-```markup
+```jsp
 <clay:button block="<%= true %>" label="Button" />
  ```
  
@@ -102,7 +102,7 @@ Block level button:
 
 Plus button:
 
-```markup
+```jsp
 <clay:button icon="plus" monospaced="<%= true %>" style="secondary" />
 ```
 
@@ -110,7 +110,7 @@ Plus button:
 
 Action button:
 
-```markup
+```jsp
 <clay:button icon="ellipsis-v" monospaced="<%= true %>" style="borderless" />
  ```
  
