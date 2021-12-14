@@ -1,7 +1,7 @@
-API
-====
+# APIs
 
-.. toctree::
-   :maxdepth: 2
+```{toctree}
+:maxdepth: 2
+```
 
 近日公開！
