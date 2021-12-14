@@ -86,7 +86,7 @@ To enable assets, make the following changes to your entity:
 
    The Asset Framework requires these fields to keep track of your application's data.
 
-2. Add an asset entry entity reference right before the closing `</entity>` tag. Later, you'll make a change so that when a new application entry is added, a corresponding entry is added to Liferay's `AssetEntry` table.
+1. Add an asset entry entity reference right before the closing `</entity>` tag. Later, you'll make a change so that when a new application entry is added, a corresponding entry is added to Liferay's `AssetEntry` table.
 
    ```xml
    <reference entity="AssetEntry" package-path="com.liferay.portlet.asset" />
@@ -207,5 +207,4 @@ The portlet's `view.jsp` contains a form with an `actionURL` that invokes the po
 :language: jsp
 :lines: 18-28
 ```
-
-Now the portlet is asset enabled. Your application's entries can now be found and displayed as assets.
+The portlet is asset enabled. Your application's entries can now be found and displayed as assets.
