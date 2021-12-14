@@ -8,7 +8,7 @@
 
    installation_and_upgrades
    starting-a-store.md
-   managing_a_catalog
+   managing-a-catalog.md
    creating_store_content
    promoting_products
    account_management

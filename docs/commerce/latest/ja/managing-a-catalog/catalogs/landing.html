@@ -1,0 +1,23 @@
+<script type="module">
+	import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.esm.browser.min.js'
+
+	const page = new Vue({
+		el: '#landingPage',
+		data: {
+			cards: [
+				{
+					sectionName: '新しいカタログを作成する',
+					sectionURL: 'catalogs/creating-a-new-catalog.html',
+				},
+                {
+					sectionName: '商品プレースホルダー画像の構成',
+					sectionURL: 'catalogs/configuring-a-product-placeholder-image.html',
+				},
+                {
+					sectionName: 'カタログ権限設定の構成',
+					sectionURL: 'catalogs/configuring-catalog-permissions.html',
+				}
+			]
+		}
+	})
+</script>

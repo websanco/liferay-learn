@@ -1,0 +1,51 @@
+<script type="module">
+	import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.esm.browser.min.js'
+
+	const page = new Vue({
+		el: '#landingPage',
+		data: {
+			cards: [
+				{
+					sectionName: '在庫管理の概要',
+					sectionURL: 'managing-inventory/introduction-to-managing-inventory.html',
+				},
+                {
+					sectionName: '新しい倉庫の追加',
+					sectionURL: 'managing-inventory/adding-a-new-warehouse.html',
+				},
+                {
+					sectionName: '倉庫ごとに在庫を設定する',
+					sectionURL: 'managing-inventory/setting-inventory-by-warehouse.html',
+				},
+                {
+					sectionName: '在庫不足アクション',
+					sectionURL: 'managing-inventory/low-stock-action.html',
+				},
+                {
+					sectionName: '入荷見積り',
+					sectionURL: 'managing-inventory/availability-estimates.html',
+				},
+                {
+					sectionName: '商品公開の管理',
+					sectionURL: 'managing-inventory/managing-product-publication.html',
+				},
+                {
+					sectionName: '在庫管理システムの活用',
+					sectionURL: 'managing-inventory/using-the-inventory-management-system.html',
+				},
+				{
+					sectionName: '在庫管理リファレンスガイド',
+					sectionURL: 'managing-inventory/inventory-management-reference-guide.html',
+				},
+				{
+					sectionName: '倉庫リファレンスガイド',
+					sectionURL: 'managing-inventory/warehouse-reference-guide.html',
+				},
+				{
+					sectionName: '商品在庫設定リファレンス',
+					sectionURL: 'managing-inventory/product-inventory-configuration-reference.html',
+				}
+			]
+		}
+	})
+</script>

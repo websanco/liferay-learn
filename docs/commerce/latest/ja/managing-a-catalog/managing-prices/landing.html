@@ -1,0 +1,35 @@
+<script type="module">
+	import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.esm.browser.min.js'
+
+	const page = new Vue({
+		el: '#landingPage',
+		data: {
+			cards: [
+				{
+					sectionName: '商品の価格設定方法の概要',
+					sectionURL: 'managing-prices/introduction-to-product-pricing-methods.html',
+				},
+                {
+					sectionName: '商品の基本価格の設定',
+					sectionURL: 'managing-prices/setting-a-products-base-price.html',
+				},
+                {
+					sectionName: '価格表の作成',
+					sectionURL: 'managing-prices/creating-a-price-list.html',
+				},
+                {
+					sectionName: '商品を価格表に追加する',
+					sectionURL: 'managing-prices/adding-products-to-a-price-list.html',
+				},
+                {
+					sectionName: '階層型価格設定の追加',
+					sectionURL: 'managing-prices/adding-tiered-pricing.html',
+				},
+                {
+					sectionName: 'グロス価格とネット価格タイプの使用',
+					sectionURL: 'managing-prices/using-gross-and-net-price-types.html',
+				}
+			]
+		}
+	})
+</script>

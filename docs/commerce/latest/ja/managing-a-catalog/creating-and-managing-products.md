@@ -2,6 +2,7 @@
 
 ```{toctree}
 :maxdepth: 3
+
 creating-and-managing-products/product-types.md
 creating-and-managing-products/products.rst
 ```

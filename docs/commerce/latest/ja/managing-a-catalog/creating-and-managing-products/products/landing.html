@@ -1,0 +1,63 @@
+<script type="module">
+	import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.esm.browser.min.js'
+
+	const page = new Vue({
+		el: '#landingPage',
+		data: {
+			cards: [
+				{
+					sectionName: '商品の概要',
+					sectionURL: 'products/products-overview.html',
+				},
+                {
+					sectionName: '商品オプションを使用して商品をカスタマイズする',
+					sectionURL: 'products/customizing-your-product-with-product-options.html',
+				},
+                {
+					sectionName: 'SKUを商品に追加する',
+					sectionURL: 'products/adding-skus-to-your-products.html',
+				},
+                {
+					sectionName: '商品画像',
+					sectionURL: 'products/product-images.html',
+				},
+                {
+					sectionName: '仕様',
+					sectionURL: 'products/specifications.html',
+				},
+                {
+					sectionName: '商品添付',
+					sectionURL: 'products/product-attachments.html',
+				},
+                {
+					sectionName: '新しい商品カテゴリの作成',
+					sectionURL: 'products/creating-a-new-product-category.html',
+				},
+				{
+					sectionName: '商品のサブスクリプションを有効にする',
+					sectionURL: 'products/enabling-subscriptions-for-a-product.html',
+				},
+				{
+					sectionName: '商品カテゴリを使用してカタログを整理する',
+					sectionURL: 'products/organizing-your-catalog-with-product-categories.html',
+				},
+				{
+					sectionName: '関連商品、アップセル、クロスセル',
+					sectionURL: 'products/related-products-up-sells-and-cross-sells.html',
+				},
+				{
+					sectionName: 'BOMの管理',
+					sectionURL: 'products/managing-boms.html',
+				},
+				{
+					sectionName: '商品レベルの情報を上書きする',
+					sectionURL: 'products/overriding-product-level-information.html',
+				},
+				{
+					sectionName: 'アカウントグループを使用した商品の可視性の構成',
+					sectionURL: 'products/configuring-product-visibility-using-account-groups.html',
+				}
+			]
+		}
+	})
+</script>
