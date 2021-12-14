@@ -1,6 +1,6 @@
 # Enabling Assets
 
-Many of Liferay's applications (e.g. Blogs, Documents and Media, Message Boards, etc.) are asset enabled out-of-the-box. You can publish your assets with the [Asset Publisher widget](../../../site-building/displaying-content/using-the-asset-publisher-widget/displaying-assets-using-the-asset-publisher-widget.md) or even create [Asset Libraries](../../../content-authoring-and-management/asset-libraries/asset-libraries-overview.md). With the help of [Service Builder](../service-builder.md), you can asset enable your custom application. See the sample project below to learn how.
+Many of Liferay's applications (e.g. Blogs, Documents and Media, Message Boards, etc.) are asset-enabled out of the box. You can publish assets with the [Asset Publisher widget](../../../site-building/displaying-content/using-the-asset-publisher-widget/displaying-assets-using-the-asset-publisher-widget.md) or even create [Asset Libraries](../../../content-authoring-and-management/asset-libraries/asset-libraries-overview.md). With the help of [Service Builder](../service-builder.md), you can asset-enable your custom application. See the sample project below to learn how.
 
 ## Get the Sample Code
 
@@ -29,7 +29,7 @@ Many of Liferay's applications (e.g. Blogs, Documents and Media, Message Boards,
    ```
 
    ```note::
-   This command is the same as copying the deployed jars to /opt/liferay/osgi/modules on the Docker container.
+   This command is the same as copying the deployed jars to `/opt/liferay/osgi/modules` on the Docker container.
    ```
 
 1. Confirm the deployment in the Liferay Docker container console.
@@ -48,11 +48,13 @@ Many of Liferay's applications (e.g. Blogs, Documents and Media, Message Boards,
 
 1. Add an entry with the S5E6 Portlet (e.g. `s5e6_name1` and `s5e6_description1`) and click `Submit`.
 
-1. The S5E6 Portlet is asset enabled and therefore the added entry automatically shows up in the Asset Publisher widget.
+1. The S5E6 Portlet is asset-enabled and therefore the added entry appears automatically in the Asset Publisher widget.
 
-   ![The added entry automatically shows up in the Asset Publisher widget](./enabling-assets/images/01.png)
+   ![The added entry appears automatically in the Asset Publisher widget](./enabling-assets/images/01.png)
 
 ## Modify the Service Model Definition
+
+<!-- Somewhere in here we have to mention that a prerequisite for assets is an implemented indexer, because the asset framework uses the search index to find asset entries. I don't think we as yet have an indexer tutorial; would you work with Russ to create one we can link to here? -Rich -->
 
 This tutorial assumes that you have a working application that you created using Service Builder. To enable assets, make the following changes to your entity:
 
@@ -74,7 +76,7 @@ This tutorial assumes that you have a working application that you created using
 
    The Asset Framework requires these fields to keep track of your application's data.
 
-1. Add an asset entry entity reference right before the closing `</entity>` tag. When a new entry is added with your application, a corresponding entry is added to Liferay's `AssetEntry` table.
+1. Add an asset entry entity reference right before the closing `</entity>` tag. Later, you'll make a change so that when a new application entry is added, a corresponding entry is added to Liferay's `AssetEntry` table.
 
    ```xml
    <reference entity="AssetEntry" package-path="com.liferay.portlet.asset" />
