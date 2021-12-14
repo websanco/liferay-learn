@@ -1,6 +1,6 @@
 # Liferay Portlet Objects For JSPs
 
-You may have noticed the `<liferay-portlet:defineObjects>` tag in your JSPs.  Similar to the [theme:defineObjects](/docs/7-2/reference/-/knowledge_base/r/liferay-theme-objects-available-in-jsps)  tag, when you include this tag in your JSP, you gain access to several variables  that, in this case, return useful information about your portlet. Note that the  JSR-286 specification defines four lifecycle methods for a portlet:  processAction, processEvent, render, and serveResource. Some of the variables  defined by the `<portlet:defineObjects/>` tag are only available to a JSP if the  JSP was included during the appropriate phase of the portlet lifecycle. These  objects are described in the table below:
+You may have noticed the `<liferay-portlet:defineObjects>` tag in your JSPs.  Similar to the [theme:defineObjects](./liferay-theme-objects-for-Jsps.md)  tag, when you include this tag in your JSP, you gain access to several variables  that, in this case, return useful information about your portlet. Note that the  JSR-286 specification defines four lifecycle methods for a portlet:  processAction, processEvent, render, and serveResource. Some of the variables  defined by the `<portlet:defineObjects/>` tag are only available to a JSP if the  JSP was included during the appropriate phase of the portlet lifecycle. These  objects are described in the table below:
 
 | Object | Description |
 | ------ | ----------- |

@@ -4,7 +4,7 @@ The Liferay UI taglibs provide several icons you can include in your apps. To ad
 
 The `image` attribute specifies [Liferay UI icons](https://github.com/liferay/liferay-portal/tree/7.2.x/modules/apps/frontend-theme/frontend-theme-unstyled/src/main/resources/META-INF/resources/_unstyled/images) to use (as defined in the Unstyled theme's `images/common` folder). Here's an example configuration for a JSP:
 
-```markup
+```jsp
 <div class="col-md-3">
 	<liferay-ui:icon image="subscribe" />
 
@@ -16,7 +16,7 @@ The `image` attribute specifies [Liferay UI icons](https://github.com/liferay/li
 
 The Liferay UI taglib also exposes language flag icons. To use a language flag icon, provide the `../language/` relative path before the icon's name. Below is an example snippet from the Web Content Search portlet that displays the current language's flag along with a localized message:
 
-```markup
+```jsp
 <liferay-ui:icon
     image='<%= "../language/" + languageId %>'
     message='<%= LanguageUtil.format(
@@ -28,9 +28,9 @@ The Liferay UI taglib also exposes language flag icons. To use a language flag i
 />
 ```
 
-You can achieve the same result in FreeMarker with the following code that uses the available [`init.ftl` variables](https://github.com/liferay/liferay-portal/blob/7.2.x/modules/appsfrontend-theme/frontend-theme-unstyled/src/main/resources/META-INF/resources/_unstyled/templates/init.ftl) and [Liferay DXP macros](/docs/7-2/reference/-/knowledge_base/r/product-freemarker-macros):
+You can achieve the same result in FreeMarker with the following code that uses the available [`init.ftl` variables](https://github.com/liferay/liferay-portal/blob/7.2.x/modules/appsfrontend-theme/frontend-theme-unstyled/src/main/resources/META-INF/resources/_unstyled/templates/init.ftl) and [Liferay DXP macros](https://help.liferay.com/hc/en-us/articles/360029145851-FreeMarker-Taglib-Macros):
 
-```markup
+```
 <#assign flag_message>
     <@liferay.language_format 
         arguments=language 
@@ -52,7 +52,7 @@ The full list of available icons is shown in the figures below:
 
 The `icon` attribute specifies  [Font Awesome icons](https://fontawesome.com/v3.2.1/icons/)  to use:
 
-```markup
+```jsp
 <liferay-ui:icon icon="angle-down" />
 ```
 
@@ -60,7 +60,7 @@ The `icon` attribute specifies  [Font Awesome icons](https://fontawesome.com/v3.
 
 The `iconCssClass` attribute specifies a [glyphicon](http://marcoceppi.github.io/bootstrap-glyphicons/) to use:
 
-```markup
+```jsp
 <liferay-ui:icon
     iconCssClass="icon-remove-sign"
     label="<%= true %>"

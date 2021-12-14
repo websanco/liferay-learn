@@ -10,7 +10,7 @@ To create a management toolbar, use the `clay:management-toolbar` taglib. The  t
 
 If you're using a Display Context---a separate class to configure your display options for your management toolbar---to define all or some of the configuration options for the toolbar, you can specify the Display Context with the `displayContext` attribute. An example is shown below:
 
-```markup
+```jsp
 <clay:management-toolbar 
     displayContext="<%= viewUADEntitiesManagementToolbarDisplayContext %>" 
 />
@@ -32,7 +32,7 @@ The `actionItems`, `searchContainerId`, `selectable`, and `totalItems` attribute
 
 An example configuration is shown below:
 
-```java
+```jsp
 actionItems="<%=
     new JSPDropdownItemList(pageContext) {
         {
@@ -84,7 +84,7 @@ The `filterItems`, `sortingOrder`, and `sortingURL` attributes let you filter an
 
 The example below adds two filter options and two sorting options:
 
-```java
+```jsp
 filterItems="<%=
     new DropdownItemList(_request) {
         {
@@ -136,7 +136,7 @@ filterItems="<%=
 %>"
 ```
 
-```java
+```jsp
 filterLabelItems="<%=
   new LabelItemList() {
     {
@@ -174,7 +174,7 @@ The `clearResultsURL`, `searchActionURL`, `searchFormName`, `searchInputName`, a
 
 An example configuration is shown below:
 
-```markup
+```jsp
 <clay:management-toolbar
     clearResultsURL="<%= searchURL %>"
     disabled="<%= isDisabled %>"
@@ -200,7 +200,7 @@ The `infoPanelId` and `showInfoButton` attributes let you add a retractable side
 
 In the example configuration below, the `showInfoButton` attribute is provided in the Display Context---specified with the `displayContext` attribute---and the `infoPanelId` is explicitly set in the JSP:
 
-```markup
+```jsp
 <clay:management-toolbar
     displayContext="<%= journalDisplayContext %>"
     infoPanelId="infoPanelId"
@@ -229,7 +229,7 @@ The `viewTypes` attribute specifies the display options for the search container
 
 An example configuration is shown below:
 
-```java
+```jsp
 viewTypes="<%=
     new JSPViewTypeItemList(pageContext, baseURL, selectedType) {
         {
@@ -253,7 +253,7 @@ viewTypes="<%=
 %>"
 ```
 
-While the example above shows how to configure the view types in the JSP, you must also [specify when to use each view type](/docs/7-2/frameworks/-/knowledge_base/f/implementing-the-view-types).
+While the example above shows how to configure the view types in the JSP, you must also [specify when to use each view type](https://help.liferay.com/hc/en-us/articles/360029848351-Implementing-the-View-Types).
 
 ![The Management Toolbar offers three view type options.](./clay-management-toolbar/images/11.png)
 
@@ -265,7 +265,7 @@ Use the `addPrimaryDropdownItem()` method to add the top level items to the drop
 
 The example configuration below adds two primary creation menu items and two secondary creation menu items:
 
-```java
+```jsp
 creationMenu="<%= 
     new JSPCreationMenu(pageContext) {
   			{
