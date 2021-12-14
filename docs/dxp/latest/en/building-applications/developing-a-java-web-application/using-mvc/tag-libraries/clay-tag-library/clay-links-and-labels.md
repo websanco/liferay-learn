@@ -32,7 +32,7 @@ Warning labels are orange, and due to their color, they are best for conveying a
 <clay:label label="Pending" style="warning" />
 ```
 
-![Warning labels notify the user of issues, but nothing app breaking.](./clay-links-and-labels/images/03png)
+![Warning labels notify the user of issues, but nothing app breaking.](./clay-links-and-labels/images/03.png)
 
 Danger labels are red and indicate that something is wrong or has failed. To use a danger label, set the `style` attribute to `danger`:
 
