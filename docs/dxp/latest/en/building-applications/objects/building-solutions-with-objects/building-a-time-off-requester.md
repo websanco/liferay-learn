@@ -251,6 +251,6 @@ Once requests are added and related to employee entries, you can view them in th
 
 ## Additional Information
 
-* []()
-* []()
-* []()
+* [Objects Overview](../../objects.md)
+* [Creating Objects](../creating-and-managing-objects/creating-objects.md)
+* [Using Picklists](../using-picklists.md)
