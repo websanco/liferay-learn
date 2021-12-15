@@ -178,6 +178,7 @@ cluster.name: LiferayElasticsearchCluster
 xpack.security.enabled: true
 
 ## TLS/SSL settings for Transport layer (PKCS#12)
+xpack.security.transport.ssl.enabled: true
 xpack.security.transport.ssl.keystore.path: certs/elastic-nodes.p12
 xpack.security.transport.ssl.keystore.password: liferay
 xpack.security.transport.ssl.truststore.path: certs/elastic-nodes.p12
@@ -185,6 +186,7 @@ xpack.security.transport.ssl.truststore.password: liferay
 xpack.security.transport.ssl.verification_mode: certificate
 
 # TLS/SSL settings for HTTP layer (PKCS#12)
+xpack.security.http.ssl.enabled: true
 xpack.security.http.ssl.keystore.path: certs/elastic-nodes.p12
 xpack.security.http.ssl.keystore.password: liferay
 xpack.security.http.ssl.truststore.path: certs/elastic-nodes.p12
