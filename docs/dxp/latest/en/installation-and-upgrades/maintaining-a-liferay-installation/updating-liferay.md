@@ -4,7 +4,7 @@ Staying current with updates gives you the best security and quality.
 
 * **Security Updates** are releases that address the latest security issues immediately.
 
-* **Updates** are releases that have the latest security updates, fix confirmed bugs, and include new features. The features are disabled by default---you can opt-in to them in the UI when you want.
+* **Updates** are releases that have the latest security updates, fix confirmed bugs, and include new features. The features are disabled by default, but you can opt-in to them in the UI when you want.
 
 Here you'll learn how to update to a new Liferay Docker image, update to a new Liferay Tomcat Bundle, and update an application server Liferay installation.
 
@@ -13,7 +13,7 @@ Here you'll learn how to update to a new Liferay Docker image, update to a new L
 ```
 
 ```{important}
-Versions before Liferay DXP 7.3 SP3 use a patching model---it's different from the model described here. If you're on a version before Liferay DXP 7.3 SP3, please see [Patching DXP](./patching-dxp-7-3-and-earlier.md).
+Versions before Liferay DXP 7.3 SP3 use a patching model instead. If you're on a version before Liferay DXP 7.3 SP3, please see [Patching DXP](./patching-dxp-7-3-and-earlier.md).
 ```
 
 ```{note}
@@ -21,8 +21,6 @@ Liferay DXP/Portal general availability (GA) releases are built from the source 
 ```
 
 ## Updating to a New Docker Image
-
-If you're running Liferay DXP/Portal on Docker, here's how to update:
 
 1. Shutdown your current Docker container.
 
@@ -41,32 +39,32 @@ If you're running Liferay DXP/Portal on Docker, here's how to update:
     rm -rf work/*
     ```
 
-    Delete the application server cache. Please consult the application server vendor's documentation on where where to find the cache.
+    Delete the application server cache. Please consult the application server vendor's documentation for where where to find the cache.
 
     ```{note}
-    If a module's changes are only internal, the changes are invisible to the OSGi framework, the module stays installed, and the module's state persists. Clearing the OSGi bundle state information before the next server startup ensures that such modules reinstall with the appropriate state.
+    If a module's changes are only internal, the changes are invisible to the OSGi framework, the module stays installed, and the module's state persists. Clearing the OSGi bundle state information before the next server start ensures that such modules reinstall with the appropriate state.
     ```
 
 1. Find the Liferay Docker image and tag information on Docker Hub:
 
-    * [Liferay DXP Images](https://hub.docker.com/r/liferay/dxp)
-    * [Liferay Portal Images](https://hub.docker.com/r/liferay/portal)
+   * [Liferay DXP Images](https://hub.docker.com/r/liferay/dxp)
+   * [Liferay Portal Images](https://hub.docker.com/r/liferay/portal)
 
 1. Check the release notes for any database changes or index changes.
 
-    If there are database changes, enable database upgrades to run automatically using this environment setting, later in your `docker run` command:
+    If there are database changes, enable database upgrades to run automatically using this environment setting in your `docker run` command:
 
     ```bash
     -e LIFERAY_UPGRADE_PERIOD_DATABASE_PERIOD_AUTO_PERIOD_RUN=true
     ```
 
-    If there are index changes, enable index updates using this environment setting, later in your `docker run` command:
+    If there are index changes, enable index updates using this environment setting in your `docker run` command:
 
     ```bash
     -e LIFERAY_DATABASE_PERIOD_INDEXES_PERIOD_UPDATE_PERIOD_ON_PERIOD_STARTUP=true
     ```
 
-1. Run the new Docker image with your current environment and parameters, and with any required database/index environment settings (from previous step). For example, here's a command for running an image that [bind mounts](../installing-liferay/using-liferay-docker-images/providing-files-to-the-container.md) a local folder called `liferay` to the new image.
+1. Run the new Docker image with your current environment and parameters, and with any required database/index environment settings (from the previous step). For example, here's a command for running an image that [bind mounts](../installing-liferay/using-liferay-docker-images/providing-files-to-the-container.md) a local folder called `liferay` to the new image.
 
     ```bash
     docker run -it -m 8g -p 8080:8080 \
@@ -79,8 +77,6 @@ If you're running Liferay DXP/Portal on Docker, here's how to update:
 You're running on the new Liferay update Docker image.
 
 ## Updating to a New Liferay Tomcat Bundle
-
-If you're running a Liferay DXP/Portal Tomcat Bundle, here's how to update:
 
 1. Export your modified System Settings (including your [File Storage](../../system-administration/file-storage/configuring-file-storage.md) and [Elasticsearch](../../using-search/installing-and-upgrading-a-search-engine/elasticsearch/connecting-to-elasticsearch.md) settings) to [`.config` files](../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md#creating-configuration-files) and copy them to your `[Liferay Home]/osgi/configs/` folder.
 
@@ -126,8 +122,6 @@ If you're running a Liferay DXP/Portal Tomcat Bundle, here's how to update:
 You're running on the Liferay update Tomcat Bundle.
 
 ## Updating an Application Server Installation
-
-If you're running Liferay DXP/Portal on an existing application server, here's how to update:
 
 1. Download the Update's `.war` file and OSGi Dependencies ZIP file.
 

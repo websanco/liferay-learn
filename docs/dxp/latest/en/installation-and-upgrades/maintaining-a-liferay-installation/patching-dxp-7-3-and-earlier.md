@@ -21,14 +21,14 @@ There are several different kinds of patches, and they serve different purposes.
 * **Fix Packs:** Resolve the most recent issues.
 * **Security Fix Packs:** Address the latest security issues immediately.
 
-For all DXP versions:
+**For all DXP versions**
 
 * **Hotfixes:** Requested by customers to fix business critical DXP issues fast.
 
-For versions before DXP 7.3 SP3:
+**For versions before DXP 7.3 SP3**
 
 * **Fix Packs:** Resolve the most recent issues.
-* **Security Fix Packs:** Address the latest security issues immediately. Note, Liferay DXP 7.3 SP3+ uses Security Updates---please see [Updating Liferay](./updating-liferay.md) for details.
+* **Security Fix Packs:** Address the latest security issues immediately. Note, Liferay DXP 7.3 SP3+ uses Security Updates. Please see [Updating Liferay](./updating-liferay.md) for details.
 * **Service Packs:** Incorporate larger fixes that require more testing. Service Pack releases also include full DXP Service Pack Tomcat bundles.
 
 [Understanding Patch Types](./patching-dxp-7-3-and-earlier/understanding-patch-types-for-dxp-7-3-and-earlier.md) explains the patch options above.
