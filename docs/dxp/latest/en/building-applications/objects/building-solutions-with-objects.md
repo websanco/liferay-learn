@@ -5,6 +5,7 @@
 
 building-solutions-with-objects/using-object-data-with-react-charts.md
 building-solutions-with-objects/using-objects-to-create-kanban-boards.md
+building-solutions-with-objects/building-a-time-off-requester.md
 ```
 
 ```{raw} html
