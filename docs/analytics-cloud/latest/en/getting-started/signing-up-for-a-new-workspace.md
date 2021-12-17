@@ -6,8 +6,8 @@ To start using Liferay Analytics Cloud, visit [analytics.liferay.com](https://an
 Your Liferay DXP installation must meet the following fix pack minimum requirements:
 * 7.3 Fix Pack 1
 * 7.2 Fix Pack 11
-* 7.1 Fix Pack 21
-* 7.0 Fix Pack 97
+* 7.1 Fix Pack 22
+* 7.0 Fix Pack 98
 ```
 
 Once logged in, you can either sign up for a **free trial** workspace or purchase a **paid tier** workspace by contacting sales. If you already have a workspace, you will also see your workspace listed after login.

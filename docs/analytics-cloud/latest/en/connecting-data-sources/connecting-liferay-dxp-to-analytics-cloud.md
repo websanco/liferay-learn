@@ -6,8 +6,8 @@ Analytics Cloud connects with Liferay DXP with the use of an Access Token. Your 
 
 * 7.3 Fix Pack 1
 * 7.2 Fix Pack 11
-* 7.1 Fix Pack 21
-* 7.0 Fix Pack 97
+* 7.1 Fix Pack 22
+* 7.0 Fix Pack 98
 
 ## Adding a Data Source
 
