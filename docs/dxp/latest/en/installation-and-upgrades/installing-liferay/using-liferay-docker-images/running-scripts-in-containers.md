@@ -93,6 +93,10 @@ Here are generic steps for creating scripts in the subfolders mentioned above:
 
 1. Implement your actions in arbitrary scripts in the phase folders.
 
+    ```{warning}
+    Don't use the `exit` keyword in your scripts. Executing `exit` in a script breaks the entry point startup process.
+    ```
+
     ```bash
     echo "inside pre-configure-script.sh" > pre-configure/some-pre-configure-script.sh
     ```

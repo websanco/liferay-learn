@@ -51,6 +51,8 @@ Use a `docker cp` command like this one to copy your artifact to your running co
 docker cp ~/my-apps/some-app.lpkg [container]:/opt/liferay/deploy
 ```
 
+See [Providing Files to the Container](./providing-files-to-the-container.md) for more information.
+
 Now you know how to install apps and other artifacts to Liferay.
 
 ## Additional Information

@@ -11,7 +11,7 @@ Here are the most common things to configure:
 * [System Settings](#system-settings)
 
 ```{note}
-The configuration use cases that involve providing a file to the container are demonstrated here using [bind mounts](https://docs.docker.com/storage/bind-mounts/). You can also use [volumes](https://docs.docker.com/storage/volumes/) and in some cases, use a `docker cp` command. See [Providing File to the Container](./providing-files-to-the-container.md) for more information.
+The configuration use cases that involve providing a file to the container are demonstrated here using [bind mounts](https://docs.docker.com/storage/bind-mounts/). You can also use [volumes](https://docs.docker.com/storage/volumes/) and in some cases, use a `docker cp` command. See [Providing Files to the Container](./providing-files-to-the-container.md) for more information.
 ```
 
 ## JVM Options

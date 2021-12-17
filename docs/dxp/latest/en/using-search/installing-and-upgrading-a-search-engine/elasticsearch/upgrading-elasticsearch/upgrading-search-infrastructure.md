@@ -3,7 +3,7 @@
 While upgrading Liferay, you must account for the search experience when using Elasticsearch. The exact steps depend on your existing search engine installation and Liferay version, but you should start by [backing up your existing indexes](./backing-up-elasticsearch.md).
 
 * See the [Search Engine Compatibility Matrix](https://help.liferay.com/hc/en-us/articles/360016511651): it's always recommended to run the latest supported Elasticsearch version.
-* Liferay Enterprise Search applications are now bundled with Liferay DXP. No additional installation steps are required. See [Activating Liferay Enterprise Search](../../../liferay-enterprise-search/activating-liferay-enterprise-search.md) for more information.
+* Beginning in Liferay 7.4, the Liferay Enterprise Search (LES) applications are bundled with Liferay DXP. No additional installation steps are required. See [Activating Liferay Enterprise Search](../../../liferay-enterprise-search/activating-liferay-enterprise-search.md) for more information.
 * If you're already on a supported Elasticsearch version, you may opt to continue using the existing Elasticsearch instance without updating it.
 * Beginning in Liferay 7.4, the Search Tuning (Synonym Sets and Result Rankings) indexes are backed by database tables. If the search engine is connected to Liferay during Liferay's upgrade, the data is propagated to the database for you. If you are setting up a new Elasticsearch instance, you must [backup and restore the search tuning indexes](./backing-up-elasticsearch.md), then run a [Groovy script](#importing-the-search-tuning-indexes-in-7-4) to import the index data manually into the new database tables.
 
@@ -15,13 +15,7 @@ While upgrading Liferay, you must account for the search experience when using E
 
 1. Make sure your system is at least on the minimum supported Elasticsearch 7 version. If it's not, move to the [latest supported Elasticsearch](https://help.liferay.com/hc/en-us/articles/360016511651) by [upgrading.](upgrading-to-elasticsearch-7.md). It's possible to install a new Elasticsearch cluster and connect to the upgraded Liferay, but some data can be lost if the Elasticsearch cluster contained indexes used as primary storage, like the indexes for Liferay's Search Tuning features in Liferay DXP 7.2 and 7.3. See [Backing Up and Restoring Indexes Used for Primary Storage](backing-up-elasticsearch.md#backing-up-and-restoring-indexes-used-for-primary-storage) and [Importing the Search Tuning Indexes in 7.4.](#importing-the-search-tuning-indexes-in-7-4)
 
-1. [Connect Liferay to Elasticsearch.](../connecting-to-elasticsearch.md)
-
-1. [Configure security.](../securing-elasticsearch.md)
-
-1. [Re-index the search indexes and spell check dictionaries.](../../../../installation-and-upgrades/upgrading-liferay/upgrade-basics/post-upgrade-considerations.md)
-
-   Don't forget to re-index the [Workflow Metrics indexes.](../../../../process-automation/workflow/using-workflows/using-workflow-metrics.md#re-indexing-workflow-metrics)
+1. [Connect Liferay to Elasticsearch.](../connecting-to-elasticsearch.md) and configure [Security](../securing-elasticsearch.md)
 
 1. [Upgrade Liferay.](../../../../installation-and-upgrades/upgrading-liferay/upgrade-basics.md)
 

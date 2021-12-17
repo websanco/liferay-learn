@@ -59,8 +59,6 @@ If you installed the new Liferay release on an application server, create a `[Li
     `rootDir="data/document_library"`
     ```
 
-1. Copy your DXP activation key (Subscription) and your OSGi configuration files from your [backup](../../maintaining-a-liferay-installation/backing-up.md#liferay-home) to the new installation.
-
 1. Use your database vendor's recommended JDBC database driver. If you're using MySQL, for example, set `jdbc.default.driverClassName=com.mysql.cj.jdbc.Driver` in your [`portal-ext.properties`](../../reference/portal-properties.md) file and replace the MySQL JDBC driver JAR your app server uses. See [Database Drivers](../migrating-configurations-and-properties.md#database-drivers) for more details.
 
     You can configure the upgrade by answering the upgrade tool prompts or by [using upgrade properties files](../reference/database-upgrade-tool-reference.md#manual-configuration). 

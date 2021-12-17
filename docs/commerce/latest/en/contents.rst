@@ -9,7 +9,7 @@ Contents
    installation_and_upgrades
    starting-a-store.md
    managing_a_catalog
-   creating-store-content.md
+   creating_store_content
    promoting-products.md
    users-and-accounts.md
    orders-and-fulfillment.md
