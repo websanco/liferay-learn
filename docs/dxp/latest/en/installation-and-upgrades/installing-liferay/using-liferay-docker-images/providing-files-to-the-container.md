@@ -148,23 +148,7 @@ Deploying a [configuration file](../../../system-administration/configuring-life
 docker cp com.liferay.journal.configuration.JournalServiceConfiguration.config my_container:/opt/liferay/osgi/configs
 ```
 
-If you use `docker cp` on macOS, however, the file's ownership is preserved, instead of changing to user/group `liferay`. Here are a couple workarounds:
-
-* Set the file ownership and permissions using `tar` as input to the `docker cp` command. Here's an example:
-
-    ```bash
-    tar -cf - command.sh --mode u=+rwx,g=-wx,o=-wx --owner liferay --group liferay | docker cp - my_container:/usr/local/liferay/scripts/pre-startup
-    ```
-
-* Open a Bash session in the container after using `docker cp` and change the file's ownership.
-
-    ```bash
-    docker exec -it my_container bash
-    ```
-
-    ```bash
-    chown -R liferay:liferay /usr/local/liferay/scripts/pre-startup/command.sh
-    ```
+Operating systems such a macOS, however, can have file permission issues using ``docker cp``. In such cases, use bind mounts (discussed above this section) or volumes.
 
 ## Conclusion
 

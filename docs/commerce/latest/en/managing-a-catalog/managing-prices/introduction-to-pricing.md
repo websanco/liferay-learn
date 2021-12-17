@@ -77,7 +77,7 @@ After calculating the SKU's unit Price, Commerce calculates the SKU's promo pric
 
 * If an applicable Promotion List does not have a price entry for the SKU, any existing price modifiers are applied to the unit price, and the total is used for the promo price.
 
-* If there is no applicable Promotion List and the Base Promotion List is set to 0, the promo price is set to 0.
+* If there is not applicable Promotion List and the Base Promotion List is set to 0, the promo price
 
 ### Calculating an SKU's Final Price
 
