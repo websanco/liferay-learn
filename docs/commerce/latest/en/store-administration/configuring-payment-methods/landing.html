@@ -1,0 +1,31 @@
+<script type="module">
+	import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.esm.browser.min.js'
+
+	const page = new Vue({
+		el: '#landingPage',
+		data: {
+			cards: [
+				{
+					sectionName: 'Managing Payment Methods',
+					sectionURL: 'configuring-payment-methods/managing-payment-methods.html',
+				},
+				{
+					sectionName: 'Authorize.net',
+					sectionURL: 'configuring-payment-methods/authorize.net.html',
+				},
+				{
+					sectionName: 'Mercanet',
+					sectionURL: 'configuring-payment-methods/mercanet.html',
+				},
+				{
+					sectionName: 'Money Orders',
+					sectionURL: 'configuring-payment-methods/money-orders.html',
+				},
+				{
+					sectionName: 'PayPal',
+					sectionURL: 'configuring-payment-methods/paypal.html',
+				}
+			]
+		}
+	})
+</script>

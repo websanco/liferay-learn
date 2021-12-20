@@ -1,4 +1,15 @@
-# Payments
+# Configuring Payment Methods
+
+```{toctree}
+:maxdepth: 1
+
+configuring-payment-methods/payments.md
+configuring-payment-methods/managing-payment-methods.md
+configuring-payment-methods/authorize.net.md
+configuring-payment-methods/mercanet.md
+configuring-payment-methods/money-orders.md
+configuring-payment-methods/paypal.md
+```
 
 Payments are processed through a Payment Method. There are three types of payment methods:
 
@@ -11,6 +22,16 @@ Payments are processed through a Payment Method. There are three types of paymen
 Liferay Commerce ships with four payment methods. Money Order is an offline method. Authorize.net, Mercanet, and PayPal redirect buyers to a third-party website. Additional methods can be added using the Payment Method extension point.
 
 By default, Liferay Commerce does **not** store customer payment information. Stores with requirements to allow for recurring payments or a faster checkout experience are recommended to use a third-party payment processor to manage sensitive customer payment information. If store administrators are required to store customer payment information, it is **highly recommended** that they implement [PCI DSS](https://www.pcisecuritystandards.org/) compliant practices and policies.
+
+```{raw} html
+:file: ../landingpage_template.html
+```
+
+```{raw} html
+:file: configuring-payment-methods/landing.html
+```
+
+<br>
 
 ## Additional Information
 
