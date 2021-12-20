@@ -31,7 +31,7 @@ function main {
 		exit
 	fi
 
-	if  [ ! -d "${npm_modules_dir_name}/generator-liferay-fragments" ] ||
+	if [ ! -d "${npm_modules_dir_name}/generator-liferay-fragments" ] ||
 		[ ! -d "${npm_modules_dir_name}/generator-liferay-js" ] ||
 		[ ! -d "${npm_modules_dir_name}/generator-liferay-theme" ] ||
 		[ ! -d "${npm_modules_dir_name}/yarn" ] ||
