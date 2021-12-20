@@ -32,10 +32,10 @@ function main {
 	fi
 
 	if [ ! -d "${npm_modules_dir_name}/generator-liferay-fragments" ] ||
-		[ ! -d "${npm_modules_dir_name}/generator-liferay-js" ] ||
-		[ ! -d "${npm_modules_dir_name}/generator-liferay-theme" ] ||
-		[ ! -d "${npm_modules_dir_name}/yarn" ] ||
-		[ ! -d "${npm_modules_dir_name}/yo" ]
+	   [ ! -d "${npm_modules_dir_name}/generator-liferay-js" ] ||
+	   [ ! -d "${npm_modules_dir_name}/generator-liferay-theme" ] ||
+	   [ ! -d "${npm_modules_dir_name}/yarn" ] ||
+	   [ ! -d "${npm_modules_dir_name}/yo" ]
 	then
 		echo "A tutorial dependency is missing. Run this command:
 
