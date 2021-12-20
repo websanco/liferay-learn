@@ -81,7 +81,7 @@ You only need to create two module files:
 1. `bnd.bnd`
 1. `build.gradle`
 
-Our `update_tutorials.sh` script creates the rest. Create your own project next.
+Our `update_examples.sh` script creates the rest. Create the project next.
 
 ### Create an Example Project
 
@@ -91,7 +91,7 @@ Our `update_tutorials.sh` script creates the rest. Create your own project next.
    ```
    [a-z][2-9][a-z][2-9]
    ```
-   
+
    Example: `c3p5`
 
     For convenience, these guidelines use `xxxx` as an ID placeholder--replace it with your unique ID.
@@ -127,7 +127,7 @@ Our `update_tutorials.sh` script creates the rest. Create your own project next.
     | xxxx-api | Contains an API. |
     | xxxx-impl | Contains an implementation. |
     | xxxx-web | Contains a web application, such as a portlet. |
-    
+
     > **Note:** You can develop modules any way you like (e.g., manually, using [Liferay Dev Studio](https://liferay.dev/-/ide), using [Blade CLI](https://help.liferay.com/hc/en-us/articles/360029147071-Blade-CLI), and more), but refrain from committing any extranious files (e.g., a `.project` file) by adding such files to the repository's `.gitignore` file. 
 
 1. In each module folder, create a `bnd.bnd` file. Please see [Initial Bnd Content](#initial-bnd-content) for example Bnd starting content for some different modules types.
@@ -147,9 +147,9 @@ Our `update_tutorials.sh` script creates the rest. Create your own project next.
     ```bash
     ./update_examples.sh c3p5
     ```
-    
+
     Here's the file structure with the files added by `update_examples.sh`.
-    
+
 
 ```
 [tutorial path]
