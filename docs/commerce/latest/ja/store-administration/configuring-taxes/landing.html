@@ -1,0 +1,23 @@
+<script type="module">
+	import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.esm.browser.min.js'
+
+	const page = new Vue({
+		el: '#landingPage',
+		data: {
+			cards: [
+				{
+					sectionName: 'Creating Tax Categories',
+					sectionURL: 'configuring-taxes/creating-tax-categories.html',
+				},
+				{
+					sectionName: '住所別の税率の設定',
+					sectionURL: 'configuring-taxes/setting-tax-rate-by-address.html',
+				},
+				{
+					sectionName: '固定税率の設定',
+					sectionURL: 'configuring-taxes/setting-tax-rate-by-fixed-rate.html',
+				}
+			]
+		}
+	})
+</script>

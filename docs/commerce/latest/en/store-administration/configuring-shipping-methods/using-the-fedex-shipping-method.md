@@ -46,7 +46,7 @@ To activate FedEx as a shipping method for your chosen channel:
 
 The store is now configured to use FedEx as the shipping method.
 
-### Commerce 2.0
+## Commerce 2.0
 
 To activate FedEx as a shipping method for your site:
 

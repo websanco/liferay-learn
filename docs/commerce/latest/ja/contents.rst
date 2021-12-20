@@ -8,13 +8,12 @@
 
    installation-and-upgrades.md
    starting-a-store.md
-   creating-store-content.md
-   managing-a-catalog.md
+   managing_a_catalog
+   creating_store_content
    promoting-products.md
-   users-and-accounts.md
+   account_management
    orders-and-fulfillment.md
-   store_administration
-   add_ons_and_connectors
+   store-administration.md
    developer-guide.md
    get_help
 

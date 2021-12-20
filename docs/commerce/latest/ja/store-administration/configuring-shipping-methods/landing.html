@@ -1,0 +1,35 @@
+<script type="module">
+	import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.esm.browser.min.js'
+
+	const page = new Vue({
+		el: '#landingPage',
+		data: {
+			cards: [
+				{
+					sectionName: 'FedEx配送方法の使用',
+					sectionURL: 'configuring-shipping-methods/using-the-fedex-shipping-method.html',
+				},
+				{
+					sectionName: '定額配送方法の使用',
+					sectionURL: 'configuring-shipping-methods/using-the-flat-rate-shipping-method.html',
+				},
+				{
+					sectionName: '変動レート配送方法の使用',
+					sectionURL: 'configuring-shipping-methods/using-the-variable-rate-shipping-method.html',
+				},
+				{
+					sectionName: '配送方法の制限の適用',
+					sectionURL: 'configuring-shipping-methods/applying-shipping-method-restrictions.html',
+				},
+				{
+					sectionName: '測定単位',
+					sectionURL: 'configuring-shipping-methods/measurement-units.html',
+				},
+				{
+					sectionName: '配送方法リファレンス',
+					sectionURL: 'configuring-shipping-methods/shipping-method-reference.html',
+				}
+			]
+		}
+	})
+</script>

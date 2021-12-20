@@ -126,6 +126,6 @@ PunchOut2Goへのコネクターが有効な状態でのチェックアウトプ
 
 ## 追加情報
 
-* [Liferay Commerceを既存のLiferayインストールにデプロイする](../installation-and-upgrades/installing-commerce-2.1-and-below/deploying-liferay-commerce-to-an-existing-liferay-installation.md)
-* [Liferay Commerce Enterpriseのアクティベーション](../installation-and-upgrades/activating-liferay-commerce-enterprise.md)
-* [Liferay Commerce Connector to PunchOut2Goリファレンスガイド](./liferay-commerce-connector-to-punchout2go-reference-guide.md)
+  - [Liferay Commerceを既存のLiferayインストールにデプロイする](../../installation-and-upgrades/installing-commerce-2.1-and-below/deploying-liferay-commerce-to-an-existing-liferay-installation.md)
+  - [Liferay Commerce Enterpriseのアクティベーション](../../installation-and-upgrades/activating-liferay-commerce-enterprise.md)
+  - [Liferay Commerce Connector to PunchOut2Goリファレンスガイド](./liferay-commerce-connector-to-punchout2go-reference-guide.md)

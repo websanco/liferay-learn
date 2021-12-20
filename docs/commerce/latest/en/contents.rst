@@ -14,7 +14,7 @@ Contents
    users-and-accounts.md
    orders-and-fulfillment.md
    store-administration.md
-   add_ons_and_connectors
+   add-ons-and-connectors.md
    developer-guide.md
    get_help
 

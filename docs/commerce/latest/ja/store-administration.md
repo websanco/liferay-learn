@@ -1,4 +1,4 @@
-# Store Administration
+# ストアサイトの管理
 
 ```{toctree}
 :maxdepth: 2

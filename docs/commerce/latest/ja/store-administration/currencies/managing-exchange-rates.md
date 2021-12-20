@@ -57,4 +57,4 @@
 
 ## 追加情報
 
-* [為替レートプロバイダーの実装](../../developer-guide/implementing-an-exchange-rate-provider.md)
+  - [Implementing an Exchange Rate Provider](../../developer-guide/sales/implementing-an-exchange-rate-provider.md)

@@ -23,6 +23,8 @@ You will be able to quickly delve into deploying sample modules for each of the 
 :file: developer-guide/landing.html
 ```
 
+<br></br>
+
 ## Reference Materials
 
 * [Admin APIs](https://app.swaggerhub.com/search?owner=liferayinc&query=%20commerce)

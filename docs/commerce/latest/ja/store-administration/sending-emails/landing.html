@@ -1,0 +1,27 @@
+<script type="module">
+	import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.esm.browser.min.js'
+
+	const page = new Vue({
+		el: '#landingPage',
+		data: {
+			cards: [
+				{
+					sectionName: 'ストアメール',
+					sectionURL: 'sending-emails/store-emails.html',
+				},
+				{
+					sectionName: '通知テンプレートの使用',
+					sectionURL: 'sending-emails/using-notification-templates.html',
+				},
+				{
+					sectionName: 'Commerce 通知キューの設定',
+					sectionURL: 'sending-emails/configuring-the-commerce-notification-queue.html',
+				},
+				{
+					sectionName: '通知テンプレート変数リファレンスガイド',
+					sectionURL: 'sending-emails/notification-template-variables-reference-guide.html',
+				}
+			]
+		}
+	})
+</script>

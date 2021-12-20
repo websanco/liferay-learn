@@ -51,4 +51,4 @@ Currency exchange rates can be configured manually by the store administrator.
 
 ## Additional Information
 
-* [Implementing an Exchange Rate Provider](../../developer-guide/implementing-an-exchange-rate-provider.md)
+* [Implementing an Exchange Rate Provider](../../developer-guide/sales/implementing-an-exchange-rate-provider.md)

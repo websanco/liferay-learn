@@ -1,4 +1,14 @@
-# 支払い
+# 支払方法の設定
+
+```{toctree}
+:maxdepth: 1
+
+configuring-payment-methods/managing-payment-methods.md
+configuring-payment-methods/authorize.net.md
+configuring-payment-methods/mercanet.md
+configuring-payment-methods/money-orders.md
+configuring-payment-methods/paypal.md
+```
 
 支払いは支払い方法を介して処理されます。 支払い方法には3つのタイプがあります。
 
@@ -14,6 +24,10 @@ Liferay Commerceには4つの支払い方法が付属しています。 郵便�
 
 <a name="additional-information" />
 
-## 追加情報
+```{raw} html
+:file: ../landingpage_template.html
+```
 
-* [支払い方法の管理](../configuring-payment-methods/managing-payment-methods.md)
+```{raw} html
+:file: configuring-payment-methods/landing.html
+```

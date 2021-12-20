@@ -1,0 +1,23 @@
+<script type="module">
+	import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.esm.browser.min.js'
+
+	const page = new Vue({
+		el: '#landingPage',
+		data: {
+			cards: [
+				{
+					sectionName: 'Adding a New Currency',
+					sectionURL: 'currencies/adding-a-new-currency.html',
+				},
+				{
+					sectionName: '為替レートの管理',
+					sectionURL: 'currencies/managing-exchange-rates.html',
+				},
+				{
+					sectionName: '通貨リファレンス',
+					sectionURL: 'currencies/currencies-reference.html',
+				}
+			]
+		}
+	})
+</script>

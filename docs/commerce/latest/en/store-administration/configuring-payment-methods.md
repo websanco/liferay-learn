@@ -3,7 +3,6 @@
 ```{toctree}
 :maxdepth: 1
 
-configuring-payment-methods/payments.md
 configuring-payment-methods/managing-payment-methods.md
 configuring-payment-methods/authorize.net.md
 configuring-payment-methods/mercanet.md
@@ -30,9 +29,3 @@ By default, Liferay Commerce does **not** store customer payment information. St
 ```{raw} html
 :file: configuring-payment-methods/landing.html
 ```
-
-<br>
-
-## Additional Information
-
-* [Managing Payment Methods](../configuring-payment-methods/managing-payment-methods.md)

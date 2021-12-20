@@ -1,4 +1,15 @@
-# 配送方法
+# 配送方法の設定
+
+```{toctree}
+:maxdepth: 1
+
+configuring-shipping-methods/using-the-fedex-shipping-method.md
+configuring-shipping-methods/using-the-flat-rate-shipping-method.md
+configuring-shipping-methods/using-the-variable-rate-shipping-method.md
+configuring-shipping-methods/applying-shipping-method-restrictions.md
+configuring-shipping-methods/measurement-units.md
+configuring-shipping-methods/shipping-method-reference.md
+```
 
 Liferay Commerceは、いくつかの配送方法と運送業者をサポートしています。 配送方法を選択する前に、ストアが使用する [測定単位](./measurement-units.md) を確認してください。
 
@@ -14,6 +25,10 @@ Liferay Commerceは、いくつかの配送方法と運送業者をサポート�
 
 <a name="additional-information" />
 
-## 追加情報
+```{raw} html
+:file: ../landingpage_template.html
+```
 
-* [発想の概要](../../orders-and-fulfillment/shipments/introduction-to-shipments.md)
+```{raw} html
+:file: configuring-shipping-methods/landing.html
+```

@@ -3,7 +3,6 @@
 ```{toctree}
 :maxdepth: 1
 
-configuring-shipping-methods/shipping-methods.md
 configuring-shipping-methods/using-the-fedex-shipping-method.md
 configuring-shipping-methods/using-the-flat-rate-shipping-method.md
 configuring-shipping-methods/using-the-variable-rate-shipping-method.md
@@ -31,6 +30,8 @@ Shipping methods may be restricted by country or region. To learn more, see [App
 ```{raw} html
 :file: configuring-shipping-methods/landing.html
 ```
+
+<br></br>
 
 ## Additional Information
 
