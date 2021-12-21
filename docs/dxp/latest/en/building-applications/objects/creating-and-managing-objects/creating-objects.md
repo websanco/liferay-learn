@@ -58,19 +58,29 @@ Follow these steps to edit the Object draft:
 
 1. Select a *Panel Category Key* to determine where the Object appears in the Liferay UI.
 
-   If the Object is scoped by Company, you can place it in the *Global Menu*.
+   If the Object is scoped by Company, you can place it in the *Global Menu* (![Global Menu](../../../images/icon-applications-menu.png)).
 
-   If the Object is scoped by Site, you can place it in the *Site Menu*.
+   If the Object is scoped by Site, you can place it in the *Site Menu* (![Site Menu](../../../images/icon-menu.png)).
+
+1. Determine whether to show or hide the Object's widget in Sites.
+
+   When enabled, users can deploy the Object to a Page as a widget. See [Deploying Object Widgets in Sites](../deploying-object-widgets-in-sites.md) for more information.
+
+   ```{note}
+   This feature is available for Liferay DXP 7.4 U1+ and Liferay Portal 7.4 GA5+.
+   ```
+
+   ![Determine whether to show or hide the Object's widget.](./creating-objects/images/05.png)
 
 1. Click *Save* before moving on to the next steps. Any unsaved changes in the *Details* tab are lost when you navigate to the other tabs.
 
 1. (Optional) Go to the *Fields* tab and add fields to the Object. Fields are Object data definitions for storing specific types of values and represent database columns. See [Adding Fields to Objects](./adding-fields-to-objects.md) for more information.
 
-   ![Add fields to the Object from the Fields tab.](./creating-objects/images/05.png)
+   ![Add fields to the Object from the Fields tab.](./creating-objects/images/06.png)
 
 1. (Optional) Go to the *Relationships* tab and add relationships to the Object. Relationships are defined connections between Objects that link different Object entries to each other. See [Defining Object Relationships](./defining-object-relationships.md) for more information.
 
-   ![Add relationships to the Object from the Relationships tab.](./creating-objects/images/06.png)
+   ![Add relationships to the Object from the Relationships tab.](./creating-objects/images/07.png)
 
 1. (Optional) Go to the *Layouts* tab and add a custom layout to the Object. Object layouts define how fields and relationships appear when creating or editing an Object entry. See [Designing Object Layouts](./designing-object-layouts.md) for more information.
 
@@ -78,11 +88,11 @@ Follow these steps to edit the Object draft:
    If you do not design a custom layout and set it as default, the Object uses an automatically generated layout for its entries. This layout has a single tab that displays all Object fields in alphabetical order and does not display relationships. To display relationships, you must create a custom layout with a dedicated relationships tab.
    ```
 
-   ![If desired, add a custom layout to the Object from the Layouts tab.](./creating-objects/images/07.png)
+   ![If desired, add a custom layout to the Object from the Layouts tab.](./creating-objects/images/08.png)
 
 1. (Optional) Once you've added a field to an Object, you can go to the *Details* tab and select an Entry Title. This determines the field used as the title for an Object's entries.
 
-   ![Once a field is added to an Object, you can go to the Details tab and select an Entry Title.](./creating-objects/images/08.png)
+   ![Once a field is added to an Object, you can go to the Details tab and select an Entry Title.](./creating-objects/images/09.png)
 
 Whenever you add a field, relationship, or layout, the Object draft is saved automatically. Once you've finished configuring and editing the draft, you can [publish](#publishing-object-drafts) it in the *Details* tab to create the application.
 
@@ -99,6 +109,8 @@ The publishing process includes the following operations:
 * A new Headless API is automatically created for CRUD operations.
 
 * A Collection Provider is created for displaying the Object's entries.
+
+* A Page widget is created for the Object.
 
 * The Object is integrated with Info framework, so you can select the Object as a content type for a [Display Page Template](../../../site-building/displaying-content/using-display-page-templates/about-display-page-templates-and-display-pages.md)
 
