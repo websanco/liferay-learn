@@ -59,6 +59,8 @@ Determine whether to include a Display Page in your `sitemap.xml` file, as well 
 
 ## Configuring Open Graph Settings
 
+> Available: Liferay DXP 7.3+.
+
 [Open Graph](https://ogp.me) is an Internet protocol that standardizes how a Site's metadata appears on social networks. With Liferay DXP, you can create Display Page templates that dynamically configure a Page's Open Graph `<meta>` tags.
 
 For your displayed content, values defined here override default values defined elsewhere in your Liferay instance.
