@@ -1,65 +1,62 @@
 # カタログページの作成
 
-[[Catalog]](./commerce-storefront-pages/catalog.md) ページは、ユーザーがストアで提供されている商品を閲覧するための最初のエントリーポイントです。 このページには、次のウィジェットが含まれています：*[Search Bar]*、*[Options Facets]*、*[Specification Facet]*、*[Category Facet]* および *[Search Results]*。 Commerceウィジェットの詳細は、[Widget Reference](./widget-reference.md)を参照してください。
+[カタログ](./commerce-storefront-pages/catalog.md) ページは、お客様がチャネル商品を閲覧、検索、そして選択するための主要な手段です。 カタログページには、以下のウィジェットを推奨します。 _検索バー_、 _オプション・ファセット_、 _仕様・ファセット_。 _カテゴリー・ファセット_、 _ソート_、 _検索結果_となっています。 これらのウィジェットやその他のCommerceウィジェットの詳細は、 [Widget Reference](./liferay-commerce-widgets/widget-reference.md)を参照してください。
 
 この記事では、 [アクセラレータ](../starting-a-store/accelerators.md)を使用せずにカタログページを作成する方法の例を説明します。
 
 ## 前提条件
 
-サイトおよびページ作成の詳細は、次のリンクを参照してください。
+サイトやページの作成については、以下のリンクを参照してください：
 
-  - [Creating Page Fragments](https://help.liferay.com/hc/en-us/articles/360018171331-Creating-Page-Fragments)
-  - [Building Content Pages from Fragments](https://help.liferay.com/hc/en-us/articles/360018171351-Building-Content-Pages-from-Fragments-)
-  - [Creating and Managing Navigation Menus](https://help.liferay.com/hc/en-us/articles/360018171531-Creating-and-Managing-Navigation-Menus)
-  - [Using Application Display Templates](https://help.liferay.com/hc/en-us/articles/360017892632-Styling-Widgets-with-Application-Display-Templates)
+* [ページフラグメントの作成](https://help.liferay.com/hc/en-us/articles/360018171331-Creating-Page-Fragments)
+* [フラグメントからのコンテンツページの構築](https://help.liferay.com/hc/en-us/articles/360018171351-Building-Content-Pages-from-Fragments-)
+* [ナビゲーションメニューの作成と管理](https://help.liferay.com/hc/en-us/articles/360018171531-Creating-and-Managing-Navigation-Menus)
+* [アプリケーション表示テンプレートの使用](https://help.liferay.com/hc/en-us/articles/360017892632-Styling-Widgets-with-Application-Display-Templates)
 
-## ページを追加して構成する
+## ページの追加と設定
 
-1.  *ウィジェット* テンプレートを使用してページを作成します。
-2.  *30-70カラム*レイアウトがデフォルトの選択です。 このレイアウトでは、検索を絞り込むウィジェットの左側の列が狭くなり、*[Search Results]* ウィジェットの右側の列が広くなります。 ストアデザイナーは、さまざまなスタイルに合わせてさまざまなレイアウトを選択できます。
+1. _ウィジェット_ のテンプレートを使ってページを作成します。
+1. _30-70カラム_レイアウトがデフォルトの選択です。 このレイアウトでは、検索を絞り込むウィジェットの左側の列が狭くなり、_［検索結果］_ ウィジェットの右側の列が広くなります。 ストアデザイナーは、さまざまなスタイルに合わせてさまざまなレイアウトを選択できます。
 
 ## ウィジェットをページに追加する
 
-1.  ウィジェットを目的の位置にドラッグアンドドロップします。
-2.  *3ドットアイコン* をクリックしてから *[Look and Feel Configurations]* をクリックして、ウィジェットタイトルを追加または削除します。
+1. ウィジェットを目的の位置にドラッグアンドドロップします。
+1. _3ドットアイコン_ をクリックしてから _［ルック＆フィール設定］_ をクリックして、ウィジェットタイトルを追加または削除します。
 
 ウィジェットを含むページを作成および構成すると、基本的なカタログページは次のようになります。
 
 ![空白のカタログページ](./creating-a-catalog-page/images/02.png)
 
-## *[Search Bar]* ウィジェットを構成する
+## _［検索バー］_ ウィジェットを構成する
 
-*[Search Bar]* ウィジェットは、グローバルサイトスコープからのデータを表示するように構成する必要があります。 これは、すべての商品がサイトレベルではなくグローバルレベルで保存されるためです。
+_［検索バー］_ ウィジェットは、グローバルサイトスコープからのデータを表示するように構成する必要があります。 これは、すべての商品がサイトレベルではなくグローバルレベルで保存されるためです。
 
-1.  *[Search Bar]* ウィジェットで*3ドットアイコン*をクリックしてから *[Configuration]* をクリックします。
+1. 検索バーウィジェットの _Actions_ button (![Actions Button](../images/icon-actions.png))をクリックし、 _Configuration_を選択します。
 
-    ![検索バーの構成](./creating-a-catalog-page/images/03.png)
+    ![検索バーウィジェットのActionsボタンをクリックし、Configurationを選択します。](./creating-a-catalog-page/images/03.png)
 
-2.  *[Scope]* ドロップダウンメニューから *[Everything]* を選択します。
+1. ウィジェットのスコープを _Everything_に設定します。
 
-    ![すべてのスコープ](./creating-a-catalog-page/images/04.png)
+    ![ウィジェットのスコープを Everythingに設定します。](./creating-a-catalog-page/images/04.png)
 
-3.  *[Save]* をクリックします。
+1. _［保存］_ をクリックします。
 
-4.  *[Configuration]* ウィンドウを閉じます。
+これで_検索バー_ ウィジェットは、すべてのチャネルのコンテンツを表示するように設定されました。
 
-*[Search Bar]* ウィジェットが、インスタンス全体のコンテンツを表示するように構成されました。
+## 検索せずにフルカタログを表示する（オプショナル）
 
-## 検索なしで完全なカタログを表示する（オプション）
+_検索オプション_ ウィジェットを使用すると、  _検索結果_ウィジェットで、検索クエリを必要とせずにすべてのチャネル商品を表示するように設定できます。 これにより、お客様はチャネルに表示されているすべての商品を簡単に閲覧し、フィルタリングすることができます。
 
-Liferay Commerceでは、ストアマネージャーは、購入者に最初に検索クエリを入力してもらわなくても、カタログ内のすべての商品を *[Search Results]* ウィジェットに表示できます。 これを行うには、 *[Search Options]* ウィジェットを構成します。
+1. _［検索オプション］_ ウィジェットで _［Configure additional search options in this page］_ をクリックします。
 
-1.  *[Search Options]* ウィジェットで *[Configure additional search options in this page]* をクリックします。
-2.  *[Allow Empty Searches]* チェックボックスをオンにします。
-3.  *[Save]* をクリックします。
-4.  *[Configuration]* ウィンドウを閉じます。
+1. _［空の検索を許可する］_ チェックボックスをオンにします。
 
-このオプションを有効にすると、このカタログ内のすべての商品が *[Search Results]* ウィジェットに表示されます。
+1. _［保存］_ をクリックします。
 
-![空の検索](./creating-a-catalog-page/images/01.png)
+1. _［設定］_ ウィンドウを閉じます。
 
-## 商品チャネルフィルターの構成（オプション）
+このオプションを有効にすると、すべてのチャネル商品が _検索結果_ウィジェットに表示されます。
 
-Liferay Commerceインスタンスに格納されているストアサイトが複数ある場合、カタログ全体がすべてのストアサイトで検索可能になります。
+![有効にすると、すべてのチャネル商品が 検索結果ウィジェットに表示されます。](./creating-a-catalog-page/images/01.png)
 
-商品の範囲を特定のサイトに限定するには、 [チャネルを使用した商品の表示設定](../starting-a-store/channels/configuring-product-visibility-using-channels.md)を参照してください。
+デフォルトでは、商品はすべてのチャネルで表示されるようになっています。 ただし、表示するかどうかを特定のチャネルに限定することができます。 詳細は、[Configuring Product Visibility Using Channels](../starting-a-store/channels/configuring-product-visibility-using-channels.md)を参照してください。

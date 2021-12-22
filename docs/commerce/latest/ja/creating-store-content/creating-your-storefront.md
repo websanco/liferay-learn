@@ -6,22 +6,22 @@ Miniumなどの[アクセラレータ](../starting-a-store/accelerators.md)を�
 
 次のタイプのページを作成できます。
 
-| ページ名                                                                  | 目的                               | 使用されているウィジェット                                                                                 |
-| --------------------------------------------------------------------- | -------------------------------- | --------------------------------------------------------------------------------------------- |
-| [Account Management](../creating-store-content/account-management.md) | ストア管理者がユーザーとアカウントを管理できるページ       | *[Accounts]*                                                                                  |
-| [Catalog](../creating-store-content/catalog.md)                       | 顧客が商品を検索して検索結果を絞り込むことができるメインページ。 | *[Search]*、*[Option Facet]*、*[Specification Facet]*、*[Category Facet]* および *[Search Results]* |
-| [カート](../creating-store-content/cart.md)                              | ショッピングカート内のすべてのアイテムを表示します        | *[Cart]*、*[Cart Summary]*、*[Mini Cart]*                                                       |
-| [Checkout](../creating-store-content/checkout.md)                     | 選択したすべての購入品の概要を表示します             | *[Checkout]*                                                                                  |
-| [Compare](../creating-store-content/compare.md)                       | 選択したさまざまな商品の比較を並べて表示します          | *[Cart]*                                                                                      |
-| [List](../creating-store-content/list.md)                             | 顧客のウィッシュリストを表示します                | *[Wish Lists]* および *[Wish List Contents]*                                                     |
-| [保留中の注文](../creating-store-content/pending-orders.md)                 | すべての保留中の注文のリストを表示します             | *[Open Carts]*                                                                                |
-| [Placed Orders](../creating-store-content/placed-orders.md)           | すべてのステータスのすべての注文のリストを表示します       | *[Orders]*                                                                                    |
-| [Product Details](../creating-store-content/product-details.md)       | 商品および関連商品に関する情報を表示します            | *[Product Details]* および *[Product Publisher]*                                                 |
-| [Search](../creating-store-content/search.md)                         | ユーザーが検索できます                      | *[Search]*、*[Tag]*、*[Category Facet]*、*[Option Facet]*、*[Specification Facet]*                |
-| Spare Parts Finder / BOM                                              | 特定の商品を構成する材料のリストを表示します           | *コマースBOM*                                                                                     |
+| ページ名                                                         | 目的                               | 使用ウィジェット                                                            |
+| ------------------------------------------------------------ | -------------------------------- | ------------------------------------------------------------------- |
+| [アカウント管理](./commerce-storefront-pages/account-management.md) | ストア管理者がユーザーとアカウントを管理するページ        | _［Accounts］_                                                        |
+| [カタログ](./commerce-storefront-pages/catalog.md)               | 顧客が商品を検索して検索結果を絞り込むことができるメインページ。 | _［Search］_、_［Option Facet］_、_［仕様ファセット］_、_［カテゴリーファセット］_ および _［検索結果］_ |
+| [カート](./commerce-storefront-pages/cart.md)                   | ショッピングカート内の全商品を表示                | _［Cart］_、_［Cart Summary］_、_［Mini Cart］_                             |
+| [Checkout](./commerce-storefront-pages/checkout.md)          | 選択されたすべての購入対象商品の概要を表示            | _［チェックアウト］_                                                         |
+| [比較](./commerce-storefront-pages/compare.md)                 | 選択したさまざまな商品の比較を並べて表示します          | _［Cart］_                                                            |
+| [リスト](./commerce-storefront-pages/lists.md)                  | 顧客の「ほしい物リスト」の表示                  | _［Wish Lists］_ および _［ウィッシュリストの内容］_                                  |
+| [保留中の注文](./commerce-storefront-pages/pending-orders.md)      | 保留中のすべての注文のリストを表示します             | _［Open Carts］_                                                      |
+| [発注済み注文](./commerce-storefront-pages/placed-orders.md)       | 全ステータスのすべての注文のリストを表示する           | _［注文］_                                                              |
+| [商品の詳細](./commerce-storefront-pages/product-details.md)      | 商品および関連商品に関する情報を表示します            | _［商品の詳細］_ および _［商品パブリッシャー］_                                         |
+| [検索](./commerce-storefront-pages/search.md)                  | ユーザーが検索できます                      | _［Search］_、_［Tag］_、_［カテゴリーファセット］_、_［Option Facet］_、_［仕様ファセット］_      |
+| Spare Parts Finder/BOM                                       | 特定の商品を構成する材料のリストを表示します           | _コマースBOM_                                                           |
 
 ## 追加情報
 
-  - [Widget Reference Guide](../creating-store-content/widget-reference.md)
-  - [Creating Pages](https://help.liferay.com/hc/en-us/articles/360018171291-Creating-Pages)
-  - [Creating a Catalog Page](./creating-a-catalog-page.md)
+* [Widget Reference Guide](./liferay-commerce-widgets/widget-reference.md)
+* [Creating Pages](https://help.liferay.com/hc/en-us/articles/360018171291-Creating-Pages)
+* [Creating a Catalog Page](./creating-a-catalog-page.md)

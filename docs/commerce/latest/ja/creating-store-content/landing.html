@@ -5,61 +5,68 @@
 		el: '#landingPage',
 		data: {
 			cards: [
-        {
-					sectionName: 'ストアフロントの作成',
+				{
+					sectionName: 'Creating Your Storefront',
 					sectionURL: 'creating-store-content/creating-your-storefront.html',
 				},
 				{
-					sectionName: 'カタログページの作成',
+					sectionName: 'Creating a Catalog Page',
 					sectionURL: 'creating-store-content/creating-a-catalog-page.html',
 				},
 				{
-					sectionName: 'Liferay Commerceウィジェットリファレンスリスト',
-					sectionURL: 'creating-store-content/widget-reference.html',
+					sectionName: 'Creating Product Display Pages',
+					sectionURL: 'creating-store-content/creating-product-display-pages.html',
 				},
 				{
-					sectionName: 'Commerce ストアフロントページ',
-					sectionURL: 'creating-store-content/commerce_storefront_pages.html',
+					sectionName: 'Creating Category Display Pages',
+					sectionURL: 'creating-store-content/creating-category-display-pages.html',
+				},
+				{
+					sectionName: 'Using Wish Lists',
+					sectionURL: 'creating-store-content/using-wish-lists.html',
+				},
+				{
+					sectionName: 'Commerce Storefront Pages',
+					sectionURL: 'creating-store-content/commerce-storefront-pages.html',
+					showAll: false,
 					subsections: [
 						{
 							name: 'Catalog',
 							url: 'creating-store-content/commerce-storefront-pages/catalog.html'
 						},
 						{
-							name: '清算',
+							name: 'Checkout',
 							url: 'creating-store-content/commerce-storefront-pages/checkout.html'
 						},
 						{
-							name: 'アカウント管理',
+							name: 'Account Management',
 							url: 'creating-store-content/commerce-storefront-pages/account-management.html'
 						},
 					]
 				},
 				{
-					sectionName: 'Web Experience Managementの使用',
+					sectionName: 'Using Web Experience Management',
 					sectionURL: 'creating-store-content/using_web_experience_management.html',
+					showAll: false,
 					subsections: [
 						{
-							name: 'Creating Page Fragments',
-							url: 'https://help.liferay.com/hc/en-us/articles/360018171331-Creating-Page-Fragments'
+							name: 'Developing Fragments',
+							url: 'https://learn.liferay.com/dxp/latest/en/site-building/developer-guide/developing-page-fragments/developing-fragments-intro.html'
 						},
 						{
-							name: 'Building Content Pages from Fragments',
-							url: 'https://help.liferay.com/hc/en-us/articles/360018171351-Building-Content-Pages-from-Fragments-'
+							name: 'Using Fragments',
+							url: 'https://learn.liferay.com/dxp/latest/en/site-building/creating-pages/building-and-managing-content-pages/using-fragments.html'
 						},
 						{
-							name: 'Creating and Managing Navigation Menus',
-							url: 'https://help.liferay.com/hc/en-us/articles/360018171531-Creating-and-Managing-Navigation-Menus'
-						},
-						{
-							name: 'Using Application Display Templates',
-							url: 'https://help.liferay.com/hc/en-us/articles/360017892632-Styling-Widgets-with-Application-Display-Templates'
-						},
+							name: 'Navigation Menus',
+							url: 'https://learn.liferay.com/dxp/latest/en/site-building/site_navigation.html'
+						}
 					]
 				},
 				{
-					sectionName: 'デザインとテーマ',
+					sectionName: 'Design and Theme',
 					sectionURL: 'creating-store-content/design_and_theme.html',
+					showAll: false,
 					subsections: [
 						{
 							name: 'Understanding the Page Layout',
@@ -69,8 +76,28 @@
 							name: 'Theme Reference Guide',
 							url: 'https://help.liferay.com/hc/en-us/articles/360017901512-Theme-Reference-Guide'
 						},
+						
 					]
-				}
+				},
+				{
+					sectionName: 'Liferay Commerce Widgets',
+					sectionURL: 'creating-store-content/liferay-commerce-widgets.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'Using the Mini Cart Widget',
+							url: 'creating-store-content/liferay-commerce-widgets/using-the-mini-cart-widget.html'
+						},
+						{
+							name: 'Using the Price Range Facet Widget',
+							url: 'creating-store-content/liferay-commerce-widgets/using-the-price-range-facet-widget.html'
+						},
+						{
+							name: 'Using the Product Downloads Widget',
+							url: 'creating-store-content/liferay-commerce-widgets/using-the-product-downloads-widget.html'
+						}
+					]
+				},
 			]
 		}
 	})
