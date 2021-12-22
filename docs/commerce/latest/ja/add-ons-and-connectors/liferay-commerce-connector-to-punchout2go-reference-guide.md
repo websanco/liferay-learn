@@ -8,7 +8,7 @@
 | -------------- | --------------------------------------------------------------------------- |
 | パンチアウトセッション    | ユーザーが、Liferay Commerceプラットフォームに正常にログインしてから、カートがパンチアウトシステムに転送されるまでの一連のアクション。 |
 | HttpSession    | Liferayに組み込まれた既存のセッションストレージ。パンチアウトセッションに関連するデータを保存するために使用します。               |
-| パンチアウトの開始URL   | ユーザーがパンチアウトセッションを開始し、指定されたLiferay Commerceチャンネルのカタログページに移動するためのURL。         |
+| パンチアウトの開始URL   | ユーザーがパンチアウトセッションを開始し、指定されたLiferay Commerceチャネルのカタログページに移動するためのURL。          |
 | パンチアウトのリターンURL | ユーザーが調達システムに戻るためのURL。                                                       |
 | パンチアウトカート      | 購入者が選択した商品が入っているカート。                                                        |
 | 発注書            | 購入者が提出した注文の最終承認案                                                            |
@@ -17,4 +17,4 @@
 
 ## 追加情報
 
-  - [Liferay Commerce Connector to PunchOut2Go](./liferay-commerce-connector-to-punchout2go.md)
+* [Liferay Commerce Connector to PunchOut2Go](./liferay-commerce-connector-to-punchout2go.md)
