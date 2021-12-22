@@ -1,15 +1,19 @@
-# Catalog
+# カタログ
 
-[Catalog] ページは、ユーザーがストアで提供されている商品を閲覧したり検索したりするための主要なエントリポイントです。 このページには、次のウィジェットが必要です：*[Search Bar]*、*[Options Facets]*、*[Specification Facet]*、*[Category Facet]* および *[Search Results]*。 利用可能なウィジェットの詳細は、 [Widget Reference](../widget-reference.md)を参照してください。
+カタログページは、ユーザーがチャネル商品を閲覧、検索、そして選択するための主要な手段です。 MiniumとSpeedwellの両アクセラレータは、それぞれのカタログページに以下のウィジェットが含まれています：
 
-Minium Acceleratorを使用してサンプルデータを作成する場合は、すべてのウィジェットがページに追加されています。
+* 検索バー
+* オプションファセット
+* 仕様ファセット
+* カテゴリーファセット
+* ソート
+* 検索結果
 
 ![Miniumデモカタログ](./catalog/images/01.png)
 
-それ以外の場合、サンプルデータはないが同じレイアウトを使用しているページは次のようになります。
-
-![空のカタログ](./catalog/images/02.png)
+これらのウィジェットの詳細は、[Widget Reference](../liferay-commerce-widgets/widget-reference.md)を参照してください。
 
 ## 追加情報
 
-  - [Widget Reference](../widget-reference.md)
+* [Creating a Catalog Page](../creating-a-catalog-page.md)
+* [Widget Reference](../liferay-commerce-widgets/widget-reference.md)
