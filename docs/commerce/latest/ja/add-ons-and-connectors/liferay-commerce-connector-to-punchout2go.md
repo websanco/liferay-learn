@@ -2,7 +2,11 @@
 
 > サブスクリプションが必要です
 
-Liferayは、ユーザーの既存のPunchOut2GoインフラとCommerceを統合できるPunchOut2Goコネクターを備えています。 このコネクターは、LPKGファイルとして [Liferayヘルプセンタ](http://customer.liferay.com/downloads)からダウンロードできます。<!--!\[Punch Out Flow Diagram\](./liferay-commerce-connector-to-punchout2go/images/01.png) -->```important::
+Liferayは、ユーザーの既存のPunchOut2GoインフラとCommerceを統合できるPunchOut2Goコネクターを備えています。 このコネクターは、LPKGファイルとして [Liferayヘルプセンタ](http://customer.liferay.com/downloads)からダウンロードできます。
+
+<!--!\[Punch Out Flow Diagram\](./liferay-commerce-connector-to-punchout2go/images/01.png) -->
+
+```important::
    PunchOut2Goコネクターを使用するには、Liferay Commerce 2.1.2およびLiferay DXP 7.1 FP18、または7.2 FP6が必要です。
 ```
 
@@ -21,12 +25,16 @@ Liferayは、ユーザーの既存のPunchOut2GoインフラとCommerceを統合
     2020-07-24 22:10:01.926 INFO  [fileinstall-../../liferay-portal-7.1.10.1-sp1/osgi/marketplace][LPKGArtifactInstaller:209] The portal instance needs to be restarted to complete the installation of file:/../../liferay-portal-7.1.10.1-sp1/osgi/marketplace/Liferay%20Commerce%20Connector%20to%20PunchOut2Go%20-%20Impl.lpkg`
     ```
 
-1. アプリケーションサーバーを再起動します。<!-- 1. Verify that the following message displays in the application server console:
+1. アプリケーションサーバーを再起動します。
+
+<!-- 1. Verify that the following message displays in the application server console:
 
     ```
      [Success message]
     ```
--->サーバーの再起動が完了すると、コネクターがアクティブになり、設定できるようになります。
+-->
+
+サーバーの再起動が完了すると、コネクターがアクティブになり、設定できるようになります。
 
 ## コネクターの設定
 
@@ -34,10 +42,10 @@ PunchOut2Goコネクターは、[チャネル](../starting-a-store/channels/intr
 
 ユーザーはストアのカタログページのURLを所有していなければなりません。この例では、以下になります。 `http://localhost:8080/web/everest.com/catalog`
 
-1. _［コントロールパネル］_ → _［Commerce］_ → _［チャネル］_に移動します。
+1. ［_コントロールパネル_］ → ［_Commerce_］ → ［_チャネル_］に移動します。
 1. 目的のチャネルをクリックします。
 1. ［_パンチアウト_ ］タブをクリックします。
-1. トグルを _［Enabled］_に切り替えます。
+1. トグルを ［_Enabled_］に切り替えます。
 1. パンチアウトの開始URLを入力します。
 1. 完了したら、［_保存_］をクリックします。
 
@@ -45,25 +53,25 @@ PunchOut2Goコネクターは、[チャネル](../starting-a-store/channels/intr
 
 ユーザーは、購入者の調達システムのパンチアウトアクセストークンを有効にし、Liferay Commerceインスタンスにアクセスできるようにします。 トークンを有効にするには、
 
-1. _［コントロールパネル］_ → _［設定］_ → _［システム設定］_に移動します。
+1. ［_コントロールパネル_］ → ［_設定_］ → ［_システム設定_］に移動します。
 1. ［ _セキュリティ_］の下にある［_API 認証_］をクリックします。
 
     ![認証](./liferay-commerce-connector-to-punchout2go/images/02.png)
 
-1. 左メニューの _［ Auto Login Punch Out Access Token ］ _ をクリックします。
-1. _［Enabled］_のチェックボックスをオンにします。
+1. 左メニューの ［_Auto Login Punch Out Access Token_］ をクリックします。
+1. ［_Enabled_］のチェックボックスをオンにします。
 
     ![自動ログインアクセストークンを有効にします。](./liferay-commerce-connector-to-punchout2go/images/03.png)
 
-1. _［Update］ _ボタンをクリックします。
+1. ［_Update_］ボタンをクリックします。
 
-自動ログイン_Punch Out_トークンが有効になり、購入者の調達システムがログインできるようになります。
+自動ログイン _Punch Out_ トークンが有効になり、購入者の調達システムがログインできるようになります。
 
 ### パンチアウトアクセストークンプロバイダーの設定
 
 パンチアウトアクセストークンを有効にすると、ユーザーはパンチアウトアクセストークンプロバイダーを設定できます。 具体的には、トークンの持続時間やサイズを設定できます。 以下の手順に従ってください。
 
-1. _［コントロールパネル］_ → _［設定］_ → _［システム設定］_に移動します。
+1. ［_コントロールパネル_］ → ［_設定_］ → ［_システム設定_］に移動します。
 1. ［_OAuth2_］の下にある［ _セキュリティ_］をクリックします。
 1. 次のように入力します：
 
@@ -74,7 +82,7 @@ PunchOut2Goコネクターは、[チャネル](../starting-a-store/channels/intr
 
 1. 完了したら、［_保存_］をクリックします。
 
-自動ログイン_パンチアウト_トークンが設定されます。
+自動ログイン _パンチアウト_ トークンが設定されます。
 
 ## パンチアウト購入者ロールの作成
 
@@ -85,9 +93,9 @@ PunchOut2Goコネクターは、[チャネル](../starting-a-store/channels/intr
 1. ［_Add Site Role_］ボタンをクリックします。
 1. 次のように入力します：
     * **Name**：パンチアウトベンダー
-1. _［保存］_ をクリックします。
+1. ［_保存_］ をクリックします。
 1. ［_Define Permissions_］をクリックします。
-1. 左メニューの_［サイト管理］_を展開します。
+1. 左メニューの［_サイト管理_］を展開します。
 1. ［_Applications_］ &rarr; ［_Open Carts_］に移動します。
 1. （少なくとも）以下の項目にチェックを入れてください。：
 
@@ -102,7 +110,7 @@ PunchOut2Goコネクターは、[チャネル](../starting-a-store/channels/intr
 
 ## 購入者の調達システムへのリダイレクトを確認する
 
-PunchOut2Goへのコネクターが有効な状態でのチェックアウトプロセスも同様に行われます。 ユーザーが_Submit_をクリックすると、適切な調達システムにリダイレクトされます。
+PunchOut2Goへのコネクターが有効な状態でのチェックアウトプロセスも同様に行われます。 ユーザーが _Submit_ をクリックすると、適切な調達システムにリダイレクトされます。
 
 ![注文が送信された後のリダイレクトをパンチアウトする。](./liferay-commerce-connector-to-punchout2go/images/06.png)
 

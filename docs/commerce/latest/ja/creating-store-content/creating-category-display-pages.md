@@ -8,7 +8,7 @@
 
 ストアのデフォルトのカテゴリページを作成するには、以下の手順に従ってください：
 
-1. ストアに新しい_ウィジェットページ_を作成し、 _カテゴリーコンテンツ_ ウィジェットとその他の必要なページ要素を一緒に追加します。
+1. ストアに新しい _ウィジェットページ_ を作成し、 _カテゴリーコンテンツ_ ウィジェットとその他の必要なページ要素を一緒に追加します。
 
 1. ［_グローバルメニュー_ (![Global Menu](../images/icon-applications-menu.png))］&rarr; Commerce タブ&rarr; ［_Store Management_ ］&rarr; ［_チャネル_］をクリックします。</0>
 
@@ -26,7 +26,7 @@ Liferay DXP 7.3以前のバージョンでは、「チャネル設定」の「�
 
 場合によっては、特定のカテゴリーの商品をあるページに表示させたいことがあるかもしれません。 これは、プロモーションやオファーのある商品を表示するのに便利です。 特定のカテゴリーをページにマッピングするには、以下の手順に従います：
 
-1. 新しい[_ウィジェットページ_](https://learn.liferay.com/dxp/latest/en/site-building/creating-pages/understanding-pages/understanding-pages.html#widget-pages)を作成し、_カテゴリーコンテンツ_ウィジェットとその他の必要なページ要素をそこに追加します。
+1. 新しい[_ウィジェットページ_](https://learn.liferay.com/dxp/latest/en/site-building/creating-pages/understanding-pages/understanding-pages.html#widget-pages)を作成し、_カテゴリーコンテンツ_ ウィジェットとその他の必要なページ要素をそこに追加します。
 
 1. ［_グローバルメニュー_ (![Global Menu](../images/icon-applications-menu.png))］&rarr; Commerce タブ&rarr; ［_Store Management_ ］&rarr; ［_チャネル_］をクリックします。</0>
 
@@ -40,7 +40,7 @@ Liferay DXP 7.3以前のバージョンでは、「チャネル設定」の「�
 
 1. ［ _カテゴリー表示ページ_］の［_選択_］をクリックし、新規タイトルのページを選択し、［_[保存]_］をクリックします。
 
-1. 完了したら、_［保存］_をクリックします。
+1. 完了したら、［_保存_］をクリックします。
 
 ```{note}
 デフォルトのカテゴリー表示ページには、各カテゴリーを異なる形で表示するためのカテゴリーコンテンツウィジェットが必要です。 カテゴリー コンテンツウィジェットを含むページが複数ある場合、Liferay はレイアウトリストの最初のページをデフォルトとして使います。 

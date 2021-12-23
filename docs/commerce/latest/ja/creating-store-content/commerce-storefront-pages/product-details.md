@@ -4,7 +4,7 @@
 
 通常、［商品の詳細］ ページには、商品に関する簡単な説明、その仕様、商品画像などの情報が含まれています。 ［商品の詳細］ページには、[関連商品](../../managing-a-catalog/creating-and-managing-products/products/related-products-up-sells-and-cross-sells.md)へのリンクも含まれている場合があります 。
 
-以下の強調表示されているサンプルページはMinium Acceleratorを使用して構築されており、_［商品の詳細］_、_［商品パブリッシャー］_、および _［Product Comparison Bar］_ ウィジェットが含まれています。
+以下の強調表示されているサンプルページはMinium Acceleratorを使用して構築されており、［_商品の詳細_］、［_商品パブリッシャー_］、および ［_Product Comparison Bar_］ ウィジェットが含まれています。
 
 ![商品詳細ウィジェット](./product-details/images/01.png)
 
@@ -12,7 +12,7 @@
    *商品比較バー*ウィジェットは、1つ以上の商品が選択されている場合にのみ入力されます。
 ```
 
-この例では、 _［商品パブリッシャー］_ ウィジェットは、同じカテゴリとタグを持つ同様のアイテムを表示するように構成されています。 ストア管理者は、このウィジェットのコンテンツを変更して、他のタイプの関連商品を表示できます。 詳細は、[Related Products, Upsells, and Cross-Sells](../../managing-a-catalog/creating-and-managing-products/products/related-products-up-sells-and-cross-sells.md)の記事を参照してください。
+この例では、 ［_商品パブリッシャー_］ ウィジェットは、同じカテゴリとタグを持つ同様のアイテムを表示するように構成されています。 ストア管理者は、このウィジェットのコンテンツを変更して、他のタイプの関連商品を表示できます。 詳細は、[Related Products, Upsells, and Cross-Sells](../../managing-a-catalog/creating-and-managing-products/products/related-products-up-sells-and-cross-sells.md)の記事を参照してください。
 
 ![商品発行者の設定](./product-details/images/02.png)
 
