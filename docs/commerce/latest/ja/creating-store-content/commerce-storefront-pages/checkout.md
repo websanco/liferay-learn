@@ -1,6 +1,6 @@
 # チェックアウト
 
-［チェックアウト］ ページは、 ［_チェックアウト_］ ウィジェットを含む必須ページです。 購入者が ［_チェックアウト_］ をクリックして注文を送信すると、このウィジェットが読み込まれます。 カスタムの清算手順は、拡張ポイントを使用して実装することもできます。 詳細は、[カスタム清算ステップの実装](../../developer-guide/implementing-a-custom-checkout-step.md)を参照してください。
+［チェックアウト］ ページは、 ［_チェックアウト_］ ウィジェットを含む必須ページです。 購入者が ［_チェックアウト_］ をクリックして注文を送信すると、このウィジェットが読み込まれます。 カスタムの清算手順は、拡張ポイントを使用して実装することもできます。 詳細は、[カスタム清算ステップの実装](../../developer-guide/sales/implementing-a-custom-checkout-step.md)を参照してください。
 
 ![［チェックアウト］ ウィジェット](./checkout/images/01.png)
 
@@ -38,5 +38,5 @@
 
 * [Widget Reference Guide](../liferay-commerce-widgets/widget-reference.md)
 * [Creating Pages](https://help.liferay.com/hc/en-us/articles/360018171291-Creating-Pages)
-* [カスタム清算ステップの実装](../../developer-guide/implementing-a-custom-checkout-step.md)
+* [カスタム清算ステップの実装](../../developer-guide/sales/implementing-a-custom-checkout-step.md)
 * [定額配送方法の使用](../../store-administration/configuring-shipping-methods/using-the-flat-rate-shipping-method.md)
