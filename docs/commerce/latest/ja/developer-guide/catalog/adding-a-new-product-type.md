@@ -1,8 +1,8 @@
 # 新しい商品タイプの追加
 
-このチュートリアルでは、次の3つのインターフェースを実装することで、新商品のタイプを追加する方法を説明します。：[CPType](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-product-api/src/main/java/com/liferay/commerce/product/type/CPType.java)、[ScreenNavigationCategory](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/frontend-taglib/frontend-taglib/src/main/java/com/liferay/frontend/taglib/servlet/taglib/ScreenNavigationCategory.java)、および[ScreenNavigationEntry](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/frontend-taglib/frontend-taglib/src/main/java/com/liferay/frontend/taglib/servlet/taglib/ScreenNavigationEntry.java)
+このチュートリアルでは、次の3つのインターフェースを実装することで、新商品のタイプを追加する方法を説明します：[CPType](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-product-api/src/main/java/com/liferay/commerce/product/type/CPType.java)、[ScreenNavigationCategory](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/frontend-taglib/frontend-taglib/src/main/java/com/liferay/frontend/taglib/servlet/taglib/ScreenNavigationCategory.java)、および[ScreenNavigationEntry](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/frontend-taglib/frontend-taglib/src/main/java/com/liferay/frontend/taglib/servlet/taglib/ScreenNavigationEntry.java)
 
-商品タイプを使用して、類似の特性を共有する商品をグループ化できます。 Liferay Commerceには標準で次の3つの商品タイプが組み込まれています。：[Simple](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-product-type-simple/src/main/java/com/liferay/commerce/product/type/simple/internal/SimpleCPType.java)、[Grouped](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-product-type-grouped-web/src/main/java/com/liferay/commerce/product/type/grouped/web/internal/GroupedCPType.java)、および[Virtual](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-product-type-virtual-web/src/main/java/com/liferay/commerce/product/type/virtual/web/internal/VirtualCPType.java)
+商品タイプを使用して、類似の特性を共有する商品をグループ化できます。 Liferay Commerceには標準で次の3つの商品タイプが組み込まれています：[Simple](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-product-type-simple/src/main/java/com/liferay/commerce/product/type/simple/internal/SimpleCPType.java)、[Grouped](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-product-type-grouped-web/src/main/java/com/liferay/commerce/product/type/grouped/web/internal/GroupedCPType.java)、および [Virtual](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-product-type-virtual-web/src/main/java/com/liferay/commerce/product/type/virtual/web/internal/VirtualCPType.java)
 
 ![すぐに使える商品タイプ](./adding-a-new-product-type/images/01.png "すぐに使える商品タイプ")
 
@@ -48,9 +48,9 @@
     STARTED com.acme.c1n4.web_1.0.0
     ```
 
-1. サンプルの商品タイプが追加されたことを確認します。 ブラウザで`https://localhost:8080`を開きます。 アプリケーションメニュー（![Applications Menu](../images/icon-applications-menu.png)）をクリックし、_［コマース］_→_［商品］_に移動します。 次に、（+）アイコンをクリックして、新しい商品を追加します。 新しい商品タイプ（「Example」）が、選択するタイプのリストに表示されます。
+1. サンプルの商品タイプが追加されたことを確認します。 ブラウザで`https://localhost:8080`を開きます。 アプリケーションメニュー（![Applications Menu](../../images/icon-applications-menu.png)）をクリックし、_［コマース］_→_［商品］_に移動します。 次に、（+）アイコンをクリックして、新しい商品を追加します。 新しい商品タイプ（「Example」）が、選択するタイプのリストに表示されます。
 
-```note::
+```{note}
    Liferay Commerce 2.1以前のバージョンでは、*コントロールパネル* → *Commerce* → *商品*に移動して商品ページを検索します。
 ```
 

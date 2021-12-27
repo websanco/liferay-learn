@@ -2,7 +2,7 @@
 
 このチュートリアルでは、[CommercePaymentMethod](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-api/src/main/java/com/liferay/commerce/payment/method/CommercePaymentMethod.java) インターフェイスを実装して、新しい支払い方法を追加する方法を示します。
 
-支払方法とは、顧客が注文に対して支払う様々な方法を表します。 Liferay Commerceは以下のような支払方法を標準で備えています。：[Authorize.Net](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-payment-method-authorize-net/src/main/java/com/liferay/commerce/payment/method/authorize/net/internal/AuthorizeNetCommercePaymentMethod.java)、[Mercanet](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-payment-method-mercanet/src/main/java/com/liferay/commerce/payment/method/mercanet/internal/MercanetCommercePaymentMethod.java), [Money Order](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-payment-method-money-order/src/main/java/com/liferay/commerce/payment/method/money/order/internal/MoneyOrderCommercePaymentMethod.java)、[PayPal](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-payment-method-paypal/src/main/java/com/liferay/commerce/payment/method/paypal/internal/PayPalCommercePaymentMethod.java)
+支払方法とは、顧客が注文に対して支払う様々な方法を表します。 Liferay Commerceは以下のような支払方法を標準で備えています：[Authorize.Net](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-payment-method-authorize-net/src/main/java/com/liferay/commerce/payment/method/authorize/net/internal/AuthorizeNetCommercePaymentMethod.java)、[Mercanet](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-payment-method-mercanet/src/main/java/com/liferay/commerce/payment/method/mercanet/internal/MercanetCommercePaymentMethod.java), [Money Order](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-payment-method-money-order/src/main/java/com/liferay/commerce/payment/method/money/order/internal/MoneyOrderCommercePaymentMethod.java)、[PayPal](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-payment-method-paypal/src/main/java/com/liferay/commerce/payment/method/paypal/internal/PayPalCommercePaymentMethod.java)
 
 ![すぐに使える支払方法](./implementing-a-new-payment-method/images/01.png "すぐに使える支払方法")
 
@@ -48,9 +48,9 @@
     STARTED com.acme.b1c3.impl_1.0.0
     ```
 
-1. サンプルの支払方法が追加されたことを確認します。 ブラウザで`https://localhost:8080`を開きます。 次にアプリケーションメニュー (![Applications Menu](../images/icon-applications-menu.png))をクリックし、_Commerce_ → _チャネル_に移動します。その後、_支払い方法_セクションまでスクロールします。
+1. サンプルの支払方法が追加されたことを確認します。 ブラウザで`https://localhost:8080`を開きます。 次にアプリケーションメニュー (![Applications Menu](../../images/icon-applications-menu.png)) をクリックし、_Commerce_ → _チャネル_に移動します。その後、_支払い方法_セクションまでスクロールします。
 
-```note::
+```{note}
    Liferay Commerce 2.1以前のバージョンでは、*サイト管理* → *Commerce* → *設定* → *支払い方法*に移動します。
 ```
 

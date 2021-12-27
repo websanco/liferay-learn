@@ -1,8 +1,8 @@
 # 新しい割引ルールタイプの追加
 
-以下、2つのインターフェースを実装して、新しい割引ルールタイプを追加できます。： [CommerceDiscountRuleType](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-discount-api/src/main/java/com/liferay/commerce/discount/rule/type/CommerceDiscountRuleType.java)および [CommerceDiscountRuleTypeJSPContributor](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-discount-api/src/main/java/com/liferay/commerce/discount/rule/type/CommerceDiscountRuleTypeJSPContributor.java)
+以下、2つのインターフェースを実装して、新しい割引ルールタイプを追加できます： [CommerceDiscountRuleType](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-discount-api/src/main/java/com/liferay/commerce/discount/rule/type/CommerceDiscountRuleType.java)および [CommerceDiscountRuleTypeJSPContributor](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-discount-api/src/main/java/com/liferay/commerce/discount/rule/type/CommerceDiscountRuleTypeJSPContributor.java)
 
-割引ルールタイプは、割引が注文に適用される時期を評価するための条件を定義します。 Liferay Commerceには、以下3つの割引ルールタイプが標準で組み込まれています。：[AddedAllCommerceDiscountRuleTypeImpl](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-discount-service/src/main/java/com/liferay/commerce/discount/internal/rule/type/AddedAllCommerceDiscountRuleTypeImpl.java)、[AddedAnyCommerceDiscountRuleTypeImpl](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-discount-service/src/main/java/com/liferay/commerce/discount/internal/rule/type/AddedAnyCommerceDiscountRuleTypeImpl.java)および [CartTotalCommerceDiscountRuleTypeImpl](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-discount-service/src/main/java/com/liferay/commerce/discount/internal/rule/type/CartTotalCommerceDiscountRuleTypeImpl.java)
+割引ルールタイプは、割引が注文に適用される時期を評価するための条件を定義します。 Liferay Commerceには、以下3つの割引ルールタイプが標準で組み込まれています：[AddedAllCommerceDiscountRuleTypeImpl](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-discount-service/src/main/java/com/liferay/commerce/discount/internal/rule/type/AddedAllCommerceDiscountRuleTypeImpl.java)、[AddedAnyCommerceDiscountRuleTypeImpl](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-discount-service/src/main/java/com/liferay/commerce/discount/internal/rule/type/AddedAnyCommerceDiscountRuleTypeImpl.java)および [CartTotalCommerceDiscountRuleTypeImpl](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-discount-service/src/main/java/com/liferay/commerce/discount/internal/rule/type/CartTotalCommerceDiscountRuleTypeImpl.java)
 
 ![標準の割引ルールタイプ](./adding-a-new-discount-rule-type/images/01.png "標準の割引ルールタイプ")
 
@@ -48,9 +48,9 @@
     STARTED com.acme.m6a8.web_1.0.0
     ```
 
-1. サンプルの割引ルールタイプが追加されたことを確認します。 ブラウザで`https://localhost:8080`を開きます。 次に、アプリケーションメニュー（![Applications Menu](../images/icon-applications-menu.png)）をクリックし、_［コマース］_→_［割引］_に移動します。 メニュー内の_［編集］_をクリックして、割引を適用します。 _［ルール］_セクションまでスクロールし、(+)アイコンをクリックして、新しい割引ルールを追加します。 _［タイプ］_ ドロップダウンの下に、新しい割引ルールタイプ（「Has a minimum number of products」）が表示されます。
+1. サンプルの割引ルールタイプが追加されたことを確認します。 ブラウザで`https://localhost:8080`を開きます。 次に、アプリケーションメニュー（![Applications Menu](../../images/icon-applications-menu.png)）をクリックし、_［コマース］_→_［割引］_に移動します。 メニュー内の_［編集］_をクリックして、割引を適用します。 _［ルール］_セクションまでスクロールし、(+)アイコンをクリックして、新しい割引ルールを追加します。 _［タイプ］_ ドロップダウンの下に、新しい割引ルールタイプ（「Has a minimum number of products」）が表示されます。
 
-```note::
+```{note}
    Liferay Commerce 2.1以前のバージョンでは、*コントロールパネル* → *Commerce* → *Discounts*に移動して割引を検索します。 メニュー内の*Edit*をクリックして割引を適用し、画面上部の*Rules*に移動します。
 ```
 
