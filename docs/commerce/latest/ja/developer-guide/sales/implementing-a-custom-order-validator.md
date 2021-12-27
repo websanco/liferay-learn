@@ -6,55 +6,55 @@
 
 ## 概要
 
-1.  [**サンプルをデプロイする**](#deploy-an-example)
-2.  [**例の説明**](#walk-through-the-example)
-3.  [**追加情報**](#additional-information)
+1. [**サンプルをデプロイする**](#deploy-an-example)
+1. [**例の説明**](#walk-through-the-example)
+1. [**追加情報**](#additional-information)
 
 ## サンプルをデプロイする
 
 このセクションでは、注文バリデーターをLiferay Commerceのインスタンスで実行する例を示します。 次の手順を実行します：
 
-1.  Liferay Commerceを開始します。
+1. Liferay Commerceを開始します。
 
-    ``` bash
-    docker run -it -p 8080:8080 [$LIFERAY_LEARN_DXP_DOCKER_IMAGE$]
+    ```bash
+    docker run -it -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
     ```
 
-2.  [Acme Commerce Order Validator](./liferay-n9b2.zip)をダウンロードして解凍します。
+1. [Acme Commerce Order Validator](./liferay-n9b2.zip)をダウンロードして解凍します。
 
-    ``` bash
-    curl https://learn.liferay.com/commerce/2.x/en/developer-guide/sales/liferay-n9b2.zip -O
+    ```bash
+    curl https://learn.liferay.com/commerce/latest/en/developer-guide/liferay-n9b2.zip -O
     ```
 
-    ``` bash
+    ```bash
     unzip liferay-n9b2.zip
     ```
 
-3.  サンプルをビルドしてデプロイします。
+1. サンプルをビルドしてデプロイします。
 
-    ``` bash
+    ```bash
     ./gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)
     ```
 
-    ```{note}
-    このコマンドは、デプロイされたjarをDockerコンテナの `/opt/liferay/osgi/modules`にコピーするのと同じです。
+    ```note::
+       このコマンドは、デプロイされたjarをDockerコンテナの ``/opt/liferay/osgi/modules``にコピーするのと同じです。
     ```
 
-4.  Dockerコンテナコンソールでデプロイを確認します。
+1. Dockerコンテナコンソールでデプロイを確認します。
 
-    ``` bash
+    ```bash
     STARTED com.acme.n9b2.impl_1.0.0
     ```
 
-5.  失敗メッセージを表示して、サンプルの注文バリデーターが追加されたことを確認します。 ブラウザで`https://localhost:8080`を開き、100ドル以上の価格のアイテムが少なくとも1つあるカタログに移動します。 そのような商品がまだ存在しない場合は、自分で追加してください。詳細は、[シンプル商品の作成](../../managing-a-catalog/creating-and-managing-products/product-types/creating-a-simple-product.md)を参照してください。
+1. 失敗メッセージを表示して、サンプルの注文バリデーターが追加されたことを確認します。 ブラウザで`https://localhost:8080`を開き、100ドル以上の価格のアイテムが少なくとも1つあるカタログに移動します。 そのような商品がまだ存在しない場合は、自分で追加してください。詳細は、[シンプル商品の作成](../../managing-a-catalog/creating-and-managing-products/product-types/creating-a-simple-product.md)を参照してください。
 
-    カタログからこの価格の商品を見つけて、[Add to Cart]をクリックします。 数量を11以上に増やし、矢印をクリックして続行します。 表示されるエラーメッセージは、カスタム注文バリデーターがアイテムの追加を正常に拒否したことを示しています。
+    カタログからこの価格の商品を見つけて、［カートへ追加］をクリックします。 数量を11以上に増やし、矢印をクリックして続行します。 表示されるエラーメッセージは、カスタム注文バリデーターがアイテムの追加を正常に拒否したことを示しています。
 
     ![新しい注文検証エラーメッセージ](./implementing-a-custom-order-validator/images/01.png "新しい注文検証エラーメッセージ")
 
 これで、`CommerceOrderValidator`を実装する新しい注文バリデーターを正常に構築およびデプロイできました。
 
-さらに詳しく見ていきましょう。
+次に、詳細をさらに詳しく見ていきましょう。
 
 ## 例の説明
 
@@ -62,7 +62,7 @@
 
 ### OSGi登録用のクラスに注釈を付ける
 
-``` java
+```java
 @Component(
     property = {
     "commerce.order.validator.key=n9b2",
@@ -81,37 +81,36 @@ public class N9B2CommerceOrderValidator implements CommerceOrderValidator {
 
 次のメソッドを実装します。
 
-``` java
+```java
 public String getKey();
 ```
 
 > このメソッドは、注文バリデーターレジストリに注文バリデーター用の一意の識別子を提供します。 このキーを使用して、レジストリからバリデーターを取得できます。 すでに使用されているキーを再利用すると、既存の関連付けられているバリデーターが上書きされます。
 
-``` java
+```java
 public CommerceOrderValidatorResult validate(Locale locale, CommerceOrder commerceOrder, CPInstance cpInstance, int quantity) throws PortalException;
 ```
 
 > これは、カスタム検証ロジックを追加する2つの検証メソッドの1つです。 このメソッドは、顧客がカートにアイテムを追加するたびに呼び出されます。 これは`CommerceOrderValidatorResult`を返し、booleanを使用して結果が検証に合格したかどうかを示します。[CommerceOrderValidatorResult.java](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-api/src/main/java/com/liferay/commerce/order/CommerceOrderValidatorResult.java)を参照してください。
 
-``` java
+```java
 public CommerceOrderValidatorResult validate(Locale locale, CommerceOrderItem commerceOrderItem) throws PortalException;
 ```
-
 > これは、カスタム検証ロジックを追加できる2番目の検証方法です。 このメソッドは、顧客が清算の新しいステップに進むと、カートにすでにあるアイテムに対して呼び出されます。
 
 ### 注文バリデーターを完了する
 
 注文バリデーターは、カートに商品を追加し、新しい清算手順に進むための検証ロジックで構成されています。 以下を行います。
 
-  - [商品をカートに追加するための検証ロジックを追加する。](#add-validation-logic-for-adding-a-product-to-cart)
-  - [清算に進むための検証ロジックを追加する。](#add-validation-logic-for-proceeding-in-checkout)
-  - [言語キーを `Language.properties`追加します。](#add-the-language-keys-to-languageproperties)
+* [商品をカートに追加するための検証ロジックを追加する。](#add-validation-logic-for-adding-a-product-to-cart)
+* [清算に進むための検証ロジックを追加する。](#add-validation-logic-for-proceeding-in-checkout)
+* [言語キーを `Language.properties`追加します。](#add-the-language-keys-to-languageproperties)
 
 2つの`検証`メソッドでは、注文バリデーター用のカスタム検証ロジックを定義します。 この例では、特定の価格で商品が11個以上ある注文を拒否するロジックを追加します。
 
 #### 商品をカートに追加するための検証ロジックを追加する
 
-``` java
+```java
 @Override
 public CommerceOrderValidatorResult validate(
         Locale locale, CommerceOrder commerceOrder, CPInstance cpInstance,
@@ -152,7 +151,7 @@ private static final int _MAX_ITEM_QUANTITY = 10;
 
 #### 清算に進むための検証ロジックを追加する
 
-``` java
+```java
 @Override
 public CommerceOrderValidatorResult validate(
         Locale locale, CommerceOrderItem commerceOrderItem)
@@ -182,9 +181,9 @@ public CommerceOrderValidatorResult validate(
 
 #### 言語キーを追加します `Language.properties`
 
-モジュール内の[Language.properties](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/2.x/en/developer-guide/implementing-a-custom-order-validator/resources/liferay-n9b2.zip/n9b2-impl/src/main/resources/content/Language.properties)ファイルに言語キーとその値を追加します。
+モジュール内の[Language.properties](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/latest/en/developer-guide/implementing-a-custom-order-validator/resources/liferay-n9b2.zip/n9b2-impl/src/main/resources/content/Language.properties)ファイルに言語キーとその値を追加します。
 
-``` properties
+```properties
 expensive-items-have-a-maximum-order-quantity-of-x=Expensive items have a maximum order quantity of {0}.
 this-expensive-item-has-a-maximum-quantity-of-x=This expensive item has a maximum order quantity of {0}.
 ```
@@ -197,5 +196,5 @@ this-expensive-item-has-a-maximum-quantity-of-x=This expensive item has a maximu
 
 ## 追加情報
 
-  - [シンプル商品の作成](../../managing-a-catalog/creating-and-managing-products/product-types/creating-a-simple-product.md)
-  - [アプリケーションのローカライズ](https://help.liferay.com/hc/en-us/articles/360018168251-Localizing-Your-Application)
+* [シンプル商品を作成する](../../managing-a-catalog/creating-and-managing-products/product-types/creating-a-simple-product.md)
+* [アプリケーションのローカライズ](https://help.liferay.com/hc/en-us/articles/360018168251-Localizing-Your-Application)

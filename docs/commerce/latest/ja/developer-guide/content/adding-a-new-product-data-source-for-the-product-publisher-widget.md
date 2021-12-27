@@ -1,60 +1,60 @@
-# [Product Publisher]ウィジェット用の新しい商品データソースの追加
+# ［商品パブリッシャー］ウィジェット用の新しい商品データソースの追加
 
 このチュートリアルでは、`CPDataSource`インターフェイスを実装して、新しい商品データソースを追加する方法を示します。
 
 商品データソースは、関連する商品を検索する独自の方法を提供します。 Liferay Commerceでは、[商品の関係別](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-product-service/src/main/java/com/liferay/commerce/product/internal/data/source/CPDataSourceDefinitionLinkTypeImpl.java)および[カテゴリ別に](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-product-service/src/main/java/com/liferay/commerce/product/internal/data/source/CPDataSourceAssetCategoriesImpl.java)検索するものなど、標準でいくつかの商品データソースを提供しています。
 
-![標準の商品データソース](./adding-a-new-product-data-source-for-the-product-publisher-widget/images/01.png "標準の商品データソース")
+![すぐに使える商品データソース](./adding-a-new-product-data-source-for-the-product-publisher-widget/images/01.png "すぐに使える商品データソース")
 
 ## 概要
 
-1.  [**サンプルをデプロイする**](#deploy-an-example)
-2.  [**例の説明**](#walk-through-the-example)
-3.  [**追加情報**](#additional-information)
+1. [**サンプルをデプロイする**](#deploy-an-example)
+1. [**例の説明**](#walk-through-the-example)
+1. [**追加情報**](#additional-information)
 
 ## サンプルをデプロイする
 
 このセクションでは、商品データソースをLiferay Commerceのインスタンスで実行する例を示します。 次の手順を実行します：
 
-1.  Liferay Commerceを起動します。
+1. Liferay Commerceを開始します。
 
-    ``` bash
-    docker run -it -p 8080:8080 [$LIFERAY_LEARN_DXP_DOCKER_IMAGE$]
+    ```bash
+    docker run -it -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
     ```
 
-2.  [Acme Commerce Product Data Source](./liferay-m5x7.zip)をダウンロードして解凍します。
+1. [Acme Commerce Product Data Source](./liferay-m5x7.zip)をダウンロードして解凍します。
 
-    ``` bash
-    curl https://learn.liferay.com/commerce/2.x/en/developer-guide/content/liferay-m5x7.zip -O
+    ```bash
+    curl https://learn.liferay.com/commerce/latest/en/developer-guide/liferay-m5x7.zip -O
     ```
 
-    ``` bash
+    ```bash
     unzip liferay-m5x7.zip
     ```
 
-3.  サンプルをビルドしてデプロイします。
+1. サンプルをビルドしてデプロイします。
 
-    ``` bash
+    ```bash
     ./gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)
     ```
 
-    ```{note}
-    このコマンドは、デプロイされたjarをDockerコンテナの `/opt/liferay/osgi/modules`にコピーするのと同じです。
+    ```note::
+       このコマンドは、デプロイされたjarをDockerコンテナの ``/opt/liferay/osgi/modules``にコピーするのと同じです。
     ```
 
-4.  Liferay Dockerコンテナコンソールでデプロイを確認します。
+1. Liferay Dockerコンテナコンソールでデプロイを確認します。
 
-    ``` bash
+    ```bash
     STARTED com.acme.m5x7.impl_1.0.0
     ```
 
-5.  サンプルの商品データソースが追加されたことを確認します。 ブラウザーで  `https://localhost:8080`  を開き、Product Publisherウィジェットのあるページに移動します。 Product Publisherの[ *Configuration* ]をクリックし、[ *Product Selection* ]セクションで[ *Data Source* ]を選択します。 新しい商品データソース（「Products Ending in the Same Word」）が、*[Data Source]* ドロップダウンの下に表示されます。
+1. サンプルの商品データソースが追加されたことを確認します。 ブラウザーで  `https://localhost:8080`  を開き、商品パブリッシャーウィジェットのあるページに移動します。 商品パブリッシャーの［ _設定_ ］をクリックし、［ _製品の選択_ ］セクションで［ _データソース_ ］を選択します。 新しい商品データソース（「Products Ending in the Same Word」）が、_［データソース］_ ドロップダウンの下に表示されます。
 
-![新しい商品データソース](./adding-a-new-product-data-source-for-the-product-publisher-widget/images/02.png "新しい製品データソース")
+![新しい商品データソース](./adding-a-new-product-data-source-for-the-product-publisher-widget/images/02.png "新しい商品データソース")
 
 これで、`CPDataSource`を実装する新しい商品データソースのビルドとデプロイが完了しました。
 
-さらに詳しく見ていきましょう。
+次に、詳細をさらに詳しく見ていきましょう。
 
 ## 例の説明
 
@@ -62,7 +62,7 @@
 
 ### OSGi登録用のクラスに注釈を付ける
 
-``` java
+```java
 @Component(
     property = "commerce.product.data.source.name=m5x7",
     service = CPDataSource.class
@@ -76,19 +76,19 @@ public class M5X7CPDataSource implements CPDataSource {
 
 次のメソッドを実装します。
 
-``` java
+```java
 public String getLabel(Locale locale);
 ```
 
-> このメソッドは、商品データソースが関連商品を検索する方法を説明するテキストラベルを返します。 言語キーでラベルを取得する際のリファレンスについては、 [M5X7CPDataSource.java](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/2.x/en/developer-guide/adding-a-new-product-data-source-for-the-product-publisher-widget/resources/liferay-m5x7.zip/m5x7-impl/src/main/java/com/acme/m5x7/internal/commerce/product/data/source/M5X7CPDataSource.java)の実装を参照してください。
+> このメソッドは、商品データソースが関連商品を検索する方法を説明するテキストラベルを返します。 言語キーでラベルを取得する際のリファレンスについては、 [M5X7CPDataSource.java](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/latest/en/developer-guide/adding-a-new-product-data-source-for-the-product-publisher-widget/resources/liferay-m5x7.zip/m5x7-impl/src/main/java/com/acme/m5x7/internal/commerce/product/data/source/M5X7CPDataSource.java)の実装を参照してください。
 
-``` java
+```java
 public String getName();
 ```
 
 > これは、商品データソースの名前を返します。
 
-``` java
+```java
 public CPDataSourceResult getResult(
         HttpServletRequest httpServletRequest, int start, int end)
     throws Exception;
@@ -102,12 +102,12 @@ public CPDataSourceResult getResult(
 
 商品データソースは、関連商品の検索を実行するロジックで構成されています。 以下を行います。
 
-  - [`getResult`に検索ロジックを追加する。](#add-the-search-logic-to-getresult)
-  - [言語キーを`Language.properties`に追加する。](#add-the-language-key-to-languageproperties)
+* [`getResult`に検索ロジックを追加する。](#add-the-search-logic-to-getresult)
+* [言語キーを`Language.properties`に追加する。](#add-the-language-key-to-languageproperties)
 
 #### `getResult`に検索ロジックを追加する。
 
-``` java
+```java
 @Override
 public CPDataSourceResult getResult(
         HttpServletRequest httpServletRequest, int start, int end)
@@ -147,9 +147,9 @@ public CPDataSourceResult getResult(
 
 #### 言語キーを`Language.properties`に追加する
 
-モジュール内の[Language.properties](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/2.x/en/developer-guide/adding-a-new-product-data-source-for-the-product-publisher-widget/resources/liferay-m5x7.zip/m5x7-impl/src/main/resources/content/Language.properties)ファイルに言語キーとその値を追加します。
+モジュール内の[Language.properties](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/latest/en/developer-guide/adding-a-new-product-data-source-for-the-product-publisher-widget/resources/liferay-m5x7.zip/m5x7-impl/src/main/resources/content/Language.properties)ファイルに言語キーとその値を追加します。
 
-``` properties
+```properties
 products-ending-in-the-same-word=Products Ending in the Same Word
 ```
 
@@ -161,5 +161,5 @@ products-ending-in-the-same-word=Products Ending in the Same Word
 
 ## 追加情報
 
-  - [アプリケーションのローカライズ](https://help.liferay.com/hc/en-us/articles/360018168251-Localizing-Your-Application)
-  - [関連商品、アップセル、クロスセル](../../managing-a-catalog/creating-and-managing-products/products/related-products-up-sells-and-cross-sells.md)
+* [アプリケーションのローカライズ](https://help.liferay.com/hc/en-us/articles/360018168251-Localizing-Your-Application)
+* [関連商品、アップセル、クロスセル](../../managing-a-catalog/creating-and-managing-products/products/related-products-up-sells-and-cross-sells.md)
