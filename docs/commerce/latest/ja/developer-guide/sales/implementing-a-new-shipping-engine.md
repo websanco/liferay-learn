@@ -39,7 +39,7 @@
     ./gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)
     ```
 
-    ```note::
+    ```{note}
        このコマンドは、デプロイされたjarをDockerコンテナの ``/opt/liferay/osgi/modules``にコピーするのと同じです。
     ```
 
@@ -51,7 +51,7 @@
 
 1. サンプルの配送エンジンが追加されたことを確認します。 ブラウザで`https://localhost:8080`を開きます。 次に、アプリケーションメニュー（![Applications Menu](../images/icon-applications-menu.png)）をクリックし、_［コマース］_→_［チャネル］_に移動します。 配送方法のセクションには、当社の配送エンジンを代表する新しい配送方法（「割引レート」）が表示されます。
 
-```note::
+```{note}
    Commerce 2.1以前のバージョンでは、*サイト管理* → *Commerce* → *設定* → *配送方法*に移動して、配送方法を確認します。
 ```
 

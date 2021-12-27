@@ -38,7 +38,7 @@
     ./gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)
     ```
 
-    ```note::
+    ```{note}
        このコマンドは、デプロイされたjarをDockerコンテナの ``/opt/liferay/osgi/modules``にコピーするのと同じです。
     ```
 
@@ -52,7 +52,7 @@
 
    そこから、_［設定］_に移動します。 新しいアクティビティ（"Log a warning message"）が_［在庫数低下時のアクション］_ドロップダウンの下に表示されます。
 
-```note::
+```{note}
   Liferay Commerce 2.1以前のバージョンでは、*コントロールパネル* → *Commerce* → *商品*に移動して商品ページを検索します。 
 ```
 
