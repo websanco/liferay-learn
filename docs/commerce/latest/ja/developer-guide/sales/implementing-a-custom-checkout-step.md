@@ -28,8 +28,8 @@
 
 1. [Acme Commerce Checkout Step](./liferay-n8n6.zip) をダウンロードして解凍します。
 
-    ```bash
-    curl https://learn.liferay.com/commerce/latest/en/developer-guide/liferay-n8n6.zip -O
+    ``` bash
+    curl https://learn.liferay.com/commerce/latest/en/developer-guide/sales/liferay-n8n6.zip -O
     ```
 
     ```bash
