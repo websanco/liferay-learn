@@ -53,7 +53,7 @@ In this section, we will get an example low stock activity up and running on you
    From there, navigate to _Configuration_. The new activity ("Log a warning message") will be present under the _Low Stock Action_ dropdown.
 
 ```{note}
-In Liferay Commerce 2.1 and earlier, find the products page by navigating to *Control Panel* → *Commerce* → *Products*. 
+In Liferay Commerce 2.1 and earlier, find the products page by navigating to *Control Panel* → *Commerce* → *Products*.
 ```
 
 ![New low stock activity](./implementing-a-custom-low-stock-activity/images/02.png "New low stock activity")
@@ -103,7 +103,7 @@ public String getKey();
 public String getLabel(Locale locale);
 ```
 
-> This returns a text label that describes the low stock activity. See the implementation in [J1E4CommerceLowStockActivity.java](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/latest/en/developer-guide/implementing-a-custom-low-stock-activity/resources/liferay-j1e4.zip/j1e4-impl/src/main/java/com/acme/j1e4/internal/commerce/stock/activity/J1E4CommerceLowStockActivity.java) for a reference in retrieving the label with a language key.
+> This returns a text label that describes the low stock activity. See the implementation in [J1E4CommerceLowStockActivity.java](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/latest/en/developer-guide/managing-inventory/implementing-a-custom-low-stock-activity/resources/liferay-j1e4.zip/j1e4-impl/src/main/java/com/acme/j1e4/internal/commerce/stock/activity/J1E4CommerceLowStockActivity.java) for a reference in retrieving the label with a language key.
 
 ### Complete the Low Stock Activity
 
@@ -129,7 +129,7 @@ public void execute(CPInstance cpInstance) throws PortalException {
 
 #### Add the Language Key to `Language.properties`
 
-Add the language key and its value to a [Language.properties](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/latest/en/developer-guide/implementing-a-custom-low-stock-activity/resources/liferay-j1e4.zip/j1e4-impl/src/main/resources/content/Language.properties) file within our module:
+Add the language key and its value to a [Language.properties](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/latest/en/developer-guide/managing-inventory/implementing-a-custom-low-stock-activity/resources/liferay-j1e4.zip/j1e4-impl/src/main/resources/content/Language.properties) file within our module:
 
 ```properties
 j1e4-commerce-low-stock-activity=J1E4 Commerce Low Stock Activity
