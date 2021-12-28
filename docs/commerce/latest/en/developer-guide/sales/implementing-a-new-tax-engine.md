@@ -90,7 +90,7 @@ public CommerceTaxValue getCommerceTaxValue(
 public String getDescription(Locale locale);
 ```
 
-> This returns a brief description of our tax engine. See the implementation in [Q4B9CommerceTaxEngine.java](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/latest/en/developer-guide/implementing-a-new-tax-engine/resources/liferay-q4b9.zip/q4b9-impl/src/main/java/com/acme/q4b9/internal/commerce/tax/Q4B9CommerceTaxEngine.java) for a reference in retrieving the description with a language key.
+> This returns a brief description of our tax engine. See the implementation in [Q4B9CommerceTaxEngine.java](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/latest/en/developer-guide/sales/implementing-a-new-tax-engine/resources/liferay-q4b9.zip/q4b9-impl/src/main/java/com/acme/q4b9/internal/commerce/tax/Q4B9CommerceTaxEngine.java) for a reference in retrieving the description with a language key.
 
 ```java
 public String getName(Locale locale);
@@ -134,7 +134,7 @@ private static final BigDecimal _ONE_POINT_FIVE_ZERO = new BigDecimal(
 
 #### Add the Language Keys to `Language.properties`
 
-Add the language keys and their values to a [Language.properties](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/latest/en/developer-guide/implementing-a-new-tax-engine/resources/liferay-q4b9.zip/q4b9-impl/src/main/resources/content/Language.properties) file within our module:
+Add the language keys and their values to a [Language.properties](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/latest/en/developer-guide/sales/implementing-a-new-tax-engine/resources/liferay-q4b9.zip/q4b9-impl/src/main/resources/content/Language.properties) file within our module:
 
 ```properties
 q4b9-commerce-tax-engine=Q4B9 Commerce Tax Engine
@@ -150,4 +150,4 @@ Congratulations! You now know the basics for implementing the `CommerceTaxEngine
 ## Additional Information
 
 * [Localizing Your Application](https://help.liferay.com/hc/en-us/articles/360018168251-Localizing-Your-Application)
-* [Setting Rates for Tax Calculations](../store-administration/configuring-taxes/setting-rates-for-tax-calculations.md)
+* [Setting Rates for Tax Calculations](../../store-administration/configuring-taxes/setting-rates-for-tax-calculations.md)
