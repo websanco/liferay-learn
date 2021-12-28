@@ -62,7 +62,7 @@ Next, you'll dive deeper to learn more.
 
 ## Walk Through the Example
 
-Now it's time to review the example you deployed. There are two classes: a discount rule type class and a JSP contributor for a custom UI input. Follow these steps: 
+Now it's time to review the example you deployed. There are two classes: a discount rule type class and a JSP contributor for a custom UI input. Follow these steps:
 
 * [Annotate the Discount Rule Type Class for OSGi Registration](#annotate-the-discount-rule-type-class-for-osgi-registration)
 * [Review the `CommerceDiscountRuleType` Interface](#review-the-commercediscountruletype-interface)
@@ -111,7 +111,7 @@ public String getKey();
 public String getLabel(Locale locale);
 ```
 
-> This returns a text label that describes how the discount rule is applied. See the implementation in [M6A8CommerceDiscountRuleTypeImpl.java](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/latest/en/developer-guide/adding-a-new-discount-rule-type/resources/liferay-m6a8.zip/m6a8-web/src/main/java/com/acme/m6a8/web/internal/commerce/discount/rule/type/M6A8CommerceDiscountRuleTypeImpl.java) for a reference in retrieving the label with a language key.
+> This returns a text label that describes how the discount rule is applied. See the implementation in [M6A8CommerceDiscountRuleTypeImpl.java](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/latest/en/developer-guide/promotions/adding-a-new-discount-rule-type/resources/liferay-m6a8.zip/m6a8-web/src/main/java/com/acme/m6a8/web/internal/commerce/discount/rule/type/M6A8CommerceDiscountRuleTypeImpl.java) for a reference in retrieving the label with a language key.
 
 ### Annotate the JSP Contributor Class for OSGi Registration
 
@@ -141,7 +141,7 @@ public void render(
 
 ### Complete the Discount Rule Type
 
-The discount rule type is comprised of back-end logic for evaluating when to apply a discount rule to an order, logic to render UI inputs for the discount rule type, and the custom UI inputs themselves. Follow these steps: 
+The discount rule type is comprised of back-end logic for evaluating when to apply a discount rule to an order, logic to render UI inputs for the discount rule type, and the custom UI inputs themselves. Follow these steps:
 
 * [Configure the `ServletContext` for the module.](#configure-the-servletcontext-for-the-module)
 * [Implement the `CommerceDiscountRuleTypeJSPContributor`'s `render` method.](#implement-the-commercediscountruletypejspcontributors-render-method)
@@ -151,16 +151,16 @@ The discount rule type is comprised of back-end logic for evaluating when to app
 
 #### Configure the `ServletContext` for the Module
 
-Define the `ServletContext` in the JSP contributor class using the bundle's symbolic name so it can find the JSP: 
+Define the `ServletContext` in the JSP contributor class using the bundle's symbolic name so it can find the JSP:
 
 ```java
 @Reference(target = "(osgi.web.symbolicname=com.acme.m6a8.web)")
 private ServletContext _servletContext;
 ```
 
-> The value set for `osgi.web.symbolicname` matches the value for `Bundle-SymbolicName` in the [bnd.bnd file](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/latest/en/developer-guide/adding-a-new-discount-rule-type/resources/liferay-m6a8.zip/m6a8-web/bnd.bnd). These values must match for the `ServletContext` to locate the JSP.
+> The value set for `osgi.web.symbolicname` matches the value for `Bundle-SymbolicName` in the [bnd.bnd file](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/latest/en/developer-guide/promotions/adding-a-new-discount-rule-type/resources/liferay-m6a8.zip/m6a8-web/bnd.bnd). These values must match for the `ServletContext` to locate the JSP.
 >
-> Declare a unique value for `Web-ContextPath` in the bnd.bnd file so the `ServletContext` is correctly generated. In this example, `Web-ContextPath` is set to `/m6a8-web`. See the [bnd.bnd file](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/latest/en/developer-guide/adding-a-new-discount-rule-type/resources/liferay-m6a8.zip/m6a8-web/bnd.bnd) for a reference on these values.
+> Declare a unique value for `Web-ContextPath` in the bnd.bnd file so the `ServletContext` is correctly generated. In this example, `Web-ContextPath` is set to `/m6a8-web`. See the [bnd.bnd file](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/latest/en/developer-guide/promotions/adding-a-new-discount-rule-type/resources/liferay-m6a8.zip/m6a8-web/bnd.bnd) for a reference on these values.
 
 #### Implement the `CommerceDiscountRuleTypeJSPContributor`'s `render` Method
 
@@ -178,7 +178,7 @@ public void render(
 }
 ```
 
-> Use a `JSPRenderer` to render the JSP for the discount rule type's custom UI input (in our example, [view.jsp](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/latest/en/developer-guide/adding-a-new-discount-rule-type/resources/liferay-m6a8.zip/m6a8-web/src/main/resources/META-INF/resources/view.jsp)). Provide the `ServletContext` as a parameter to find the JSP.
+> Use a `JSPRenderer` to render the JSP for the discount rule type's custom UI input (in our example, [view.jsp](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/latest/en/developer-guide/promotions/adding-a-new-discount-rule-type/resources/liferay-m6a8.zip/m6a8-web/src/main/resources/META-INF/resources/view.jsp)). Provide the `ServletContext` as a parameter to find the JSP.
 
 #### Add the Evaluation Logic to `evaluate`
 
@@ -212,7 +212,7 @@ public boolean evaluate(
 
 > Implement any conditions here that must be true for a discount rule to be applied. This example checks that the order contains at least a minimum number of items, using a minimum value defined by a custom UI input (stored as a String within the [CommerceDiscountRule](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-discount-service/src/main/java/com/liferay/commerce/discount/model/impl/CommerceDiscountRuleImpl.java)).
 >
-> The `CommerceOrder` object represents information about the order being evaluated. See [CommerceOrder.java](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/cmodules/apps/commerce/commerce-api/src/main/java/com/liferay/commerce/model/CommerceOrder.java) and [CommerceOrderModel.java](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-api/src/main/java/com/liferay/commerce/model/CommerceOrderModel.java) to find more information you can get from a `CommerceOrder`.
+> The `CommerceOrder` object represents information about the order being evaluated. See [CommerceOrder.java](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-api/src/main/java/com/liferay/commerce/model/CommerceOrder.java) and [CommerceOrderModel.java](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-api/src/main/java/com/liferay/commerce/model/CommerceOrderModel.java) to find more information you can get from a `CommerceOrder`.
 
 #### Add a JSP to Render the Custom UI Input
 
@@ -233,7 +233,7 @@ The example uses a JSP called `view.jsp` with a numeric input for a minimum numb
 
 #### Add the Language Keys to `Language.properties`
 
-Add the language keys and their values to a [Language.properties](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/latest/en/developer-guide/adding-a-new-discount-rule-type/resources/liferay-m6a8.zip/m6a8-web/src/main/resources/content/Language.properties) file:
+Add the language keys and their values to a [Language.properties](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/latest/en/developer-guide/promotions/adding-a-new-discount-rule-type/resources/liferay-m6a8.zip/m6a8-web/src/main/resources/content/Language.properties) file:
 
 ```properties
 has-a-minimum-number-of-items=Has a Minimum Number of Items

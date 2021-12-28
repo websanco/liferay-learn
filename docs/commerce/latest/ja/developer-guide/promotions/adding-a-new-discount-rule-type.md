@@ -28,8 +28,8 @@
 
 1. [Acme Commerce Discount Rule Type](./liferay-m6a8.zip) をダウンロードして解凍します。
 
-    ```bash
-    curl https://learn.liferay.com/commerce/latest/en/developer-guide/liferay-m6a8.zip -O
+    ``` bash
+    curl https://learn.liferay.com/commerce/latest/en/developer-guide/promotions/liferay-m6a8.zip -O
     ```
 
     ```bash
@@ -117,7 +117,7 @@ public String getKey();
 public String getLabel(Locale locale);
 ```
 
-> これは、割引ルールの適用方法を説明するテキストラベルを返します。 言語キーでラベルを取得する際のリファレンスについては、 [M6A8CommerceDiscountRuleTypeImpl.java](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/latest/en/developer-guide/adding-a-new-discount-rule-type/resources/liferay-m6a8.zip/m6a8-web/src/main/java/com/acme/m6a8/web/internal/commerce/discount/rule/type/M6A8CommerceDiscountRuleTypeImpl.java) の実装を参照してください。
+> これは、割引ルールの適用方法を説明するテキストラベルを返します。 言語キーでラベルを取得する際のリファレンスについては、 [M6A8CommerceDiscountRuleTypeImpl.java](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/latest/en/developer-guide/promotions/adding-a-new-discount-rule-type/resources/liferay-m6a8.zip/m6a8-web/src/main/java/com/acme/m6a8/web/internal/commerce/discount/rule/type/M6A8CommerceDiscountRuleTypeImpl.java)の実装を参照してください。
 
 ### OSGi登録用のJSPコントリビューターのクラスに注釈を付ける
 
@@ -164,9 +164,9 @@ public void render(
 private ServletContext _servletContext;
 ```
 
-> `osgi.web.symbolicname`に設定した値は、 [bnd.bndファイル](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/latest/en/developer-guide/adding-a-new-discount-rule-type/resources/liferay-m6a8.zip/m6a8-web/bnd.bnd) の`Bundle-SymbolicName`の値と一致します。 これらの値は、JSPを見つけるために`ServletContext`と一致する必要があります。
+> `osgi.web.symbolicname`に設定した値は、 [bnd.bndファイル](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/latest/en/developer-guide/promotions/adding-a-new-discount-rule-type/resources/liferay-m6a8.zip/m6a8-web/bnd.bnd)の`Bundle-SymbolicName`の値と一致します。 これらの値は、JSPを見つけるために`ServletContext`と一致する必要があります。
 > 
-> `ServletContext`が正しく生成されるように、bnd.bndファイルで`Web-ContextPath`の一意の値を宣言します。 この例では、`Web-ContextPath`を`/m6a8-web`に設定しています。 これらの値のリファレンスについては、 [bnd.bndファイル](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/latest/en/developer-guide/adding-a-new-discount-rule-type/resources/liferay-m6a8.zip/m6a8-web/bnd.bnd) を参照してください。
+> `ServletContext`が正しく生成されるように、bnd.bndファイルで`Web-ContextPath`の一意の値を宣言します。 この例では、`Web-ContextPath`を`/m6a8-web`に設定しています。 これらの値のリファレンスについては、[bnd.bndファイル](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/latest/en/developer-guide/promotions/adding-a-new-discount-rule-type/resources/liferay-m6a8.zip/m6a8-web/bnd.bnd)を参照してください。
 
 #### `CommerceDiscountRuleTypeJSPContributor`の`レンダリング`方法を実装する。
 
@@ -184,7 +184,7 @@ public void render(
 }
 ```
 
-> `JSPRenderer`を使用して、割引ルールタイプのカスタムUI入力のJSPをレンダリングします（この例では [view.jsp](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/latest/en/developer-guide/adding-a-new-discount-rule-type/resources/liferay-m6a8.zip/m6a8-web/src/main/resources/META-INF/resources/view.jsp) ）。 JSPを見つけるためのパラメーターとして`ServletContext`を提供します。
+> `JSPRenderer`を使用して、割引ルールタイプのカスタムUI入力のJSPをレンダリングします（この例では [view.jsp](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/latest/en/developer-guide/promotions/adding-a-new-discount-rule-type/resources/liferay-m6a8.zip/m6a8-web/src/main/resources/META-INF/resources/view.jsp)）。 JSPを見つけるためのパラメーターとして`ServletContext`を提供します。
 
 #### 評価ロジックを追加して、`評価`する。
 
@@ -218,7 +218,7 @@ public boolean evaluate(
 
 > ここでは、割引ルールを適用するためにTRUEでなければならない条件を設定します。 この例では、カスタムUI入力で定義された最小値（ [CommerceDiscountRule](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-discount-service/src/main/java/com/liferay/commerce/discount/model/impl/CommerceDiscountRuleImpl.java) 内に文字列として保存されます）を使用して、注文に少なくとも最小数のアイテムが含まれていることを確認します。
 > 
-> `CommerceOrder`オブジェクトは、評価される注文に関する情報を表します。 `CommerceOrder`から得られる情報については、 [CommerceOrder.java](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/cmodules/apps/commerce/commerce-api/src/main/java/com/liferay/commerce/model/CommerceOrder.java) と [CommerceOrderModel.java](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-api/src/main/java/com/liferay/commerce/model/CommerceOrderModel.java) を参照してください。
+> `CommerceOrder`オブジェクトは、評価される注文に関する情報を表します。 `CommerceOrder`から得られる情報については、[CommerceOrder.java](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-api/src/main/java/com/liferay/commerce/model/CommerceOrder.java)と [CommerceOrderModel.java](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-api/src/main/java/com/liferay/commerce/model/CommerceOrderModel.java)を参照してください。
 
 #### JSPを追加して、カスタムUI入力をレンダリングする。
 
@@ -239,7 +239,7 @@ public boolean evaluate(
 
 #### 言語キーを `Language.properties`に追加します。
 
-[Language.properties](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/latest/en/developer-guide/adding-a-new-discount-rule-type/resources/liferay-m6a8.zip/m6a8-web/src/main/resources/content/Language.properties) ファイルに言語キーとその値を追加します。
+[Language.properties](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/latest/en/developer-guide/promotions/adding-a-new-discount-rule-type/resources/liferay-m6a8.zip/m6a8-web/src/main/resources/content/Language.properties)ファイルに言語キーとその値を追加します。
 
 ```properties
 has-a-minimum-number-of-items=Has a Minimum Number of Items
