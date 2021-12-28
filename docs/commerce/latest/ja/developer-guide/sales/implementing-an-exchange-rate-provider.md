@@ -28,8 +28,8 @@
 
 1. [Acme Commerce Exchange Rate Provider](./liferay-f2y1.zip) をダウンロードして解凍します。
 
-    ```bash
-    curl https://learn.liferay.com/commerce/latest/en/developer-guide/liferay-f2y1.zip -O
+    ``` bash
+    curl https://learn.liferay.com/commerce/latest/en/developer-guide/sales/liferay-f2y1.zip -O
     ```
 
     ```bash
@@ -164,7 +164,7 @@ private Map<String, Double> _exchangeRates = new HashMap<String, Double>() {
 };
 ```
 
-> この例では、為替レートのマップを使用しています。 より実用的な使用事例については、 [ECBExchangeRateProvider](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-currency-service/src/main/java/com/liferay/commerce/currency/internal/util/ECBExchangeRateProvider.java) を参照してください。 [F2Y1ExchangeRateProvider.java](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/latest/en/developer-guide/implementing-an-exchange-rate-provider/resources/liferay-f2y1.zip/f2y1-impl/src/main/java/com/acme/f2y1/internal/commerce/currency/util/F2Y1ExchangeRateProvider.java) にアクセスして、` _getStaticExchangeRates`および`_ getRateForCode`を参照してください。
+> この例では、為替レートのマップを使用しています。 より実用的な使用事例については、[ECBExchangeRateProvider](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-currency-service/src/main/java/com/liferay/commerce/currency/internal/util/ECBExchangeRateProvider.java)を参照してください。 [F2Y1ExchangeRateProvider.java](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/latest/en/developer-guide/sales/implementing-an-exchange-rate-provider/resources/liferay-f2y1.zip/f2y1-impl/src/main/java/com/acme/f2y1/internal/commerce/currency/util/F2Y1ExchangeRateProvider.java)にアクセスして、`_getStaticExchangeRates`および`_getRateForCode`を参照してください。
 > 
 > 2つの通貨に対し`CommerceCurrency`オブジェクトを使用して、通貨コードなどの必要な情報を取得します。  `CommerceCurrency`オブジェクトで使用できる他のメソッドについては、 [CommerceCurrency.java](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-currency-api/src/main/java/com/liferay/commerce/currency/model/CommerceCurrency.java) と [CommerceCurrencyModel.java](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-currency-api/src/main/java/com/liferay/commerce/currency/model/CommerceCurrencyModel.java) を参照してください。
 
