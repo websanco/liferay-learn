@@ -28,8 +28,8 @@
 
 1. [Acme Commerce Payment Method](./liferay-b1c3.zip) をダウンロードして解凍します。
 
-    ```bash
-    curl https://learn.liferay.com/commerce/latest/en/developer-guide/liferay-b1c3.zip -O
+    ``` bash
+    curl https://learn.liferay.com/commerce/latest/en/developer-guide/sales/liferay-b1c3.zip -O
     ```
 
     ```bash
@@ -89,7 +89,7 @@ public class B1C3CommercePaymentMethod implements CommercePaymentMethod {
     public String getDescription(Locale locale);
 ```
 
-> これにより、［**支払い方法**］管理ページの「説明」列にデータが入力されます。 言語キーで説明を取得する際のリファレンスについては、 [B1C3CommercePaymentMethod.java](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/latest/en/developer-guide/implementing-a-new-payment-method/resources/liferay-b1c3.zip/b1c3-impl/src/main/java/com/acme/b1c3/internal/commerce/payment/method/B1C3CommercePaymentMethod.java) の実装を参照してください。
+> これにより、*[Payment Methods]* 管理ページの「Description」列にデータが入力されます。 言語キーで説明を取得する際のリファレンスについては、[B1C3CommercePaymentMethod.java](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/latest/en/developer-guide/sales/implementing-a-new-payment-method/resources/liferay-b1c3.zip/b1c3-impl/src/main/java/com/acme/b1c3/internal/commerce/payment/method/B1C3CommercePaymentMethod.java)の実装を参照してください。
 
 ```java
     public String getKey();
@@ -182,7 +182,7 @@ public CommercePaymentResult completePayment(
 
 #### 言語キーを `Language.properties`に追加します。
 
-モジュール内の [Language.properties](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/latest/en/developer-guide/implementing-a-new-payment-method/resources/liferay-b1c3.zip/b1c3-impl/src/main/resources/content/Language.properties) ファイルに言語キーとその値を追加します。
+モジュール内の[Language.properties](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/latest/en/developer-guide/sales/implementing-a-new-payment-method/resources/liferay-b1c3.zip/b1c3-impl/src/main/resources/content/Language.properties)ファイルに言語キーとその値を追加します。
 
 ```properties
 b1c3-commerce-payment-method=B1C3 Commerce Payment Method
