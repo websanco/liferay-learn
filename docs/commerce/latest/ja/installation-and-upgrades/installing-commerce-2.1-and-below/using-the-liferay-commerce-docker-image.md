@@ -18,7 +18,7 @@ Liferay Commerceの最新バージョンは、Dockerイメージとして利用�
     docker run -it -p 8080:8080 [$LIFERAY_LEARN_COMMERCE_DOCKER_IMAGE$]
     ```
 
-    ```important::
+    ```{important}
        「org.apache.catalina.startup.Catalina.startサーバーの起動が ［x］ ミリ秒以内」と表示されるまで待ちます
     ```
 
