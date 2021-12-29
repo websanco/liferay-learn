@@ -48,7 +48,7 @@
     STARTED com.acme.b1c3.impl_1.0.0
     ```
 
-1. サンプルの支払方法が追加されたことを確認します。 ブラウザで`https://localhost:8080`を開きます。 次にアプリケーションメニュー (![Applications Menu](../../images/icon-applications-menu.png)) をクリックし、_Commerce_ → _チャネル_に移動します。その後、_支払い方法_セクションまでスクロールします。
+1. サンプルの支払方法が追加されたことを確認します。 ブラウザで`https://localhost:8080`を開きます。 次にアプリケーションメニュー (![Applications Menu](../../images/icon-applications-menu.png)) をクリックし、_Commerce_ → _チャネル_ に移動します。その後、_支払い方法_ セクションまでスクロールします。
 
 ```{note}
    Liferay Commerce 2.1以前のバージョンでは、*サイト管理* → *Commerce* → *設定* → *支払い方法*に移動します。
@@ -83,7 +83,7 @@ public class B1C3CommercePaymentMethod implements CommercePaymentMethod {
     public String getDescription(Locale locale);
 ```
 
-> これにより、_［支払い方法］_管理ページの「説明」列にデータが入力されます。 言語キーで説明を取得する際のリファレンスについては、[B1C3CommercePaymentMethod.java](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/latest/en/developer-guide/implementing-a-new-payment-method/resources/liferay-b1c3.zip/b1c3-impl/src/main/java/com/acme/b1c3/internal/commerce/payment/method/B1C3CommercePaymentMethod.java)の実装を参照してください。
+> これにより、［_支払い方法_］管理ページの「説明」列にデータが入力されます。 言語キーで説明を取得する際のリファレンスについては、[B1C3CommercePaymentMethod.java](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/latest/en/developer-guide/implementing-a-new-payment-method/resources/liferay-b1c3.zip/b1c3-impl/src/main/java/com/acme/b1c3/internal/commerce/payment/method/B1C3CommercePaymentMethod.java)の実装を参照してください。
 
 ```java
     public String getKey();
@@ -94,7 +94,7 @@ public class B1C3CommercePaymentMethod implements CommercePaymentMethod {
     public String getName(Locale locale);
 ```
 
-> これにより、_［支払い方法］_管理ページの「Name」列にデータが入力されます。 このメソッドは、`getDescription`メソッドと同様に動作します。
+> これにより、［_支払い方法_］管理ページの「Name」列にデータが入力されます。 このメソッドは、`getDescription`メソッドと同様に動作します。
 
 ```java
     public int getPaymentType();

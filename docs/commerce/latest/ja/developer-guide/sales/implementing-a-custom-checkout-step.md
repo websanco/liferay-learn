@@ -152,7 +152,7 @@ private JSPRenderer _jspRenderer;
 private ServletContext _servletContext;
 ```
 
-> `JSPRenderer`を使用して、清算ステップのJSPをレンダリングします（この場合は、 [terms_and_conditions.jsp](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/latest/en/developer-guide/implementing-a-custom-checkout-step/resources/liferay-n8n6.zip/n8n6-web/src/main/resources/META-INF/resources/terms_and_conditions.jsp)）。 作成したJSPを見つけるためのパラメーターとして`ServletContext`を提供します。
+> `JSPRenderer`を使用して、清算ステップのJSPをレンダリングします（この場合は、 [terms_and_conditions.jsp](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/latest/en/developer-guide/implementing-a-custom-checkout-step/resources/liferay-n8n6.zip/n8n6-web/src/main/resources/META-INF/resources/terms_and_conditions.jsp)) 。 作成したJSPを見つけるためのパラメーターとして`ServletContext`を提供します。
 
 #### ビジネスロジックを`processAction`に追加する 。
 
@@ -160,7 +160,7 @@ private ServletContext _servletContext;
 
 #### JSPを追加して、カスタム画面をレンダリングする
 
-この例では、プレースホルダーテキストを追加しています。 [terms_and_conditions.jsp](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/latest/en/developer-guide/implementing-a-custom-checkout-step/resources/liferay-n8n6.zip/n8n6-web/src/main/resources/META-INF/resources/terms_and_conditions.jsp)で実装を確認できます。
+この例では、プレースホルダーテキストを追加しています。 [terms_and_conditions.jsp](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/latest/en/developer-guide/implementing-a-custom-checkout-step/resources/liferay-n8n6.zip/n8n6-web/src/main/resources/META-INF/resources/terms_and_conditions.jsp) で実装を確認できます。
 
 #### 言語キーを`Language.properties`に追加する
 
