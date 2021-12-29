@@ -2,27 +2,27 @@
 
 Liferay Commerceの最新バージョンは、Dockerイメージとして利用できます。 Liferay Commerceの最新のDockerイメージリリースをダウンロードして開始するには、次の手順に従ってください。
 
-1.  Liferay Commerceを入手します
+1. Liferay Commerceを入手します
 
-    ```{tip}
-    Don't have Docker? Go here first: [Linux](https://docs.docker.com/install/linux/docker-ce/ubuntu/) | [Windows](https://docs.docker.com/docker-for-windows/install/) | [OSX](https://docs.docker.com/docker-for-mac/install/)
+    ```tip::
+       Dockerをお持ちではありませんか？ まずは `Linux <https://docs.docker.com/install/linux/docker-ce/ubuntu/>`_ | `Windows <https://docs.docker.com/docker-for-windows/install/>`_ | `OSX <https://docs.docker.com/docker-for-mac/install/>`_ に移動してください。
     ```
 
-    ``` bash
+    ```bash
     docker pull [$LIFERAY_LEARN_COMMERCE_DOCKER_IMAGE$]
     ```
 
-2.  Liferay Commerceを開始します
+1. Liferay Commerceを開始します
 
-    ``` bash
+    ```bash
     docker run -it -p 8080:8080 [$LIFERAY_LEARN_COMMERCE_DOCKER_IMAGE$]
     ```
 
-    ```{important}
-    Wait until you see `org.apache.catalina.startup.Catalina.start Server startup in [x] milliseconds`
+    ```important::
+       「org.apache.catalina.startup.Catalina.startサーバーの起動が ［x］ ミリ秒以内」と表示されるまで待ちます
     ```
 
-3.  ブラウザで`https://localhost:8080`を開きます。
+1. ブラウザで`https://localhost:8080`を開きます。
 
 ## 次のステップ
 
