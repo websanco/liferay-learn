@@ -21,7 +21,7 @@ public class StructuredContentFolder_PUT_ById {
 				new StructuredContentFolder() {
 					{
 						description = "Goo";
-						name = "Baker Folder";
+						name = "Dog Folder";
 					}
 				});
 

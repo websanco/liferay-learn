@@ -21,7 +21,7 @@ public class StructuredContentFolder_POST_ToSite {
 				new StructuredContentFolder() {
 					{
 						description = "Foo";
-						name = "Baker Folder";
+						name = "Charlie Folder";
 					}
 				});
 
