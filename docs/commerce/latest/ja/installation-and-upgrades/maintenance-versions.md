@@ -76,6 +76,6 @@ Liferay Commerceインスタンスが更新されました。 インデックス
 
 Liferay Commerceは、Liferay Digital Experience Platform上に構築されています。 場合によっては、コアのLiferay DXPプラットフォームをアップデートする必要があります。これは、最新のメジャー、マイナー、またはメンテナンスのバージョンにアップデートするための要件です。 Liferay Commerceの修正は、Liferayから独立しています。
 
-* [Liferay Commerce修正プログラム配信方法](../../get-help/commerce-enterprise-support/liferay-commerce-fix-delivery-method.md)
+* [Liferay Commerce修正プログラム配信方法](../get-help/commerce-enterprise-support/liferay-commerce-fix-delivery-method.md)
 * [Liferay Commerceのアップグレード](./upgrading-liferay-commerce.md)
 * [サポート終了](https://www.liferay.com/subscription-services/end-of-life/commerce)
