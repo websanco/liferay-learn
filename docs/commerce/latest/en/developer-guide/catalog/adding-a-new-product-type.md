@@ -104,7 +104,7 @@ public void deleteCPDefinition(long cpDefinitionId) throws PortalException;
 public String getLabel(Locale locale);
 ```
 
-> This returns a text label that describes the product type. See the implementation in [C1N4CPType.java](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/latest/en/developer-guide/adding-a-new-product-type/resources/liferay-c1n4.zip/c1n4-web/src/main/java/com/acme/c1n4/web/internal/commerce/product/type/C1N4CPType.java) for a reference in retrieving the label with a language key.
+> This returns a text label that describes the product type. See the implementation in [C1N4CPType.java](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/latest/en/developer-guide/catalog/adding-a-new-product-type/resources/liferay-c1n4.zip/c1n4-web/src/main/java/com/acme/c1n4/web/internal/commerce/product/type/C1N4CPType.java) for a reference in retrieving the label with a language key.
 
 ```java
 public String getName();
@@ -130,7 +130,7 @@ public class C1N4ScreenNavigationEntry
 
 > It is important to provide a distinct key for the navigation screen class so that Liferay Commerce can distinguish it as a separate screen from the existing screens. Reusing a key that is already in use will override the existing associated navigation screen.
 >
-> The `screen.navigation.category.order` and `screen.navigation.entry.order` values determine what position in the product type screens this screen will appear. For example, [the Details screen class](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-product-definitions-web/src/main/java/com/liferay/commerce/product/definitions/web/internal/servlet/taglib/ui/CPDefinitionDetailsScreenNavigationEntry.java) has these values set to 10; setting them to 11 will ensure that our custom screen appears after it in the list.
+> The `screen.navigation.category.order` and `screen.navigation.entry.order` values determine what position in the product type screens this screen will appear. For example, [the Details screen class](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-product-definitions-web/src/main/java/com/liferay/commerce/product/definitions/web/internal/frontend/taglib/servlet/taglib/CPDefinitionDetailsScreenNavigationCategory.java) has these values set to 10; setting them to 11 will ensure that our custom screen appears after it in the list.
 
 ### Review the `ScreenNavigationCategory` Interface
 

@@ -110,7 +110,7 @@ public void deleteCPDefinition(long cpDefinitionId) throws PortalException;
 public String getLabel(Locale locale);
 ```
 
-> これは、商品タイプを説明するテキストラベルを返します。 言語キーでラベルを取得する際のリファレンスについては、 [C1N4CPType.java](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/latest/en/developer-guide/adding-a-new-product-type/resources/liferay-c1n4.zip/c1n4-web/src/main/java/com/acme/c1n4/web/internal/commerce/product/type/C1N4CPType.java) の実装を参照してください。
+> これは、商品タイプを説明するテキストラベルを返します。 言語キーでラベルを取得する際のリファレンスについては、[C1N4CPType.java](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/latest/en/developer-guide/catalog/adding-a-new-product-type/resources/liferay-c1n4.zip/c1n4-web/src/main/java/com/acme/c1n4/web/internal/commerce/product/type/C1N4CPType.java)の実装を参照してください。
 
 ```java
 public String getName();
@@ -136,7 +136,7 @@ public class C1N4ScreenNavigationEntry
 
 > Liferay Commerceがこの画面を既存の画面とは別の画面として区別できるように、ナビゲーション画面クラスに個別のキーを提供することが重要です。 すでに使用されているキーを再利用すると、既存の関連付けられているナビゲーション画面が上書きされます。
 > 
-> `screen.navigation.category.order`および`screen.navigation.entry.order`値は、この画面が表示される商品タイプ画面の位置を決定します。 たとえば、 [［詳細］画面クラス](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-product-definitions-web/src/main/java/com/liferay/commerce/product/definitions/web/internal/servlet/taglib/ui/CPDefinitionDetailsScreenNavigationEntry.java) の値は10に設定されています。値を11に設定すると、カスタム画面がリストでその後に表示されるようになります。
+> `screen.navigation.category.order`および`screen.navigation.entry.order`値は、この画面が表示される商品タイプ画面の位置を決定します。 たとえば、[[Details]画面クラス](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-product-definitions-web/src/main/java/com/liferay/commerce/product/definitions/web/internal/frontend/taglib/servlet/taglib/CPDefinitionDetailsScreenNavigationCategory.java)の値は10に設定されています。値を11に設定すると、カスタム画面がリストでその後に表示されるようになります。
 
 ### `ScreenNavigationCategory`インターフェイスを確認する
 
