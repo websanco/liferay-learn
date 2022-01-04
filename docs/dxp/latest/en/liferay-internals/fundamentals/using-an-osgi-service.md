@@ -42,7 +42,7 @@ Start using the example.
 1. Download and unzip `liferay-j1h1.zip`.
 
     ```bash
-    curl hhttps://learn.liferay.com/dxp/latest/en/liferay-internals/fundamentals/liferay-j1h1.zip -O
+    curl https://learn.liferay.com/dxp/latest/en/liferay-internals/fundamentals/liferay-j1h1.zip -O
     ```
 
     ```bash
