@@ -891,3 +891,26 @@ This requires no code changes. When you run the `buildService` task, you must ta
 This was done to clarify the folder that `buildService` should target.
 
 ---------------------------------------
+
+## Updated addFragmentEntry methods in FragmentEntryLocalService and FragmentEntryService
+
+- **Date:** 2021-Dec-16
+- **JIRA Ticket:** [LPS-125034](https://issues.liferay.com/browse/LPS-125034)
+
+### What changed?
+
+The `addFragmentEntry` methods in `FragmentEntryLocalService` and `FragmentEntryService` have been updated.
+
+### Who is affected?
+
+This affects anyone using `FragmentEntryLocalService` and `FragmentEntryService` to add fragment entries.
+
+### How should I update my code?
+
+Use the new `addFragmentEntry` methods in `FragmentEntryLocalService` and `FragmentEntryService`. Note, that they include a new `String` parameter for the `icon` of a `FragmentEntry`.
+
+### Why was this change made?
+
+This change was made so that a new icon can be used when importing a fragment.
+
+---------------------------------------
