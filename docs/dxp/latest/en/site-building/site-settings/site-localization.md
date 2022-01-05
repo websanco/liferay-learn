@@ -6,7 +6,7 @@ If you are setting up your Liferay installation for the first time, we recommend
 
 ## Configuring Site Languages
 
-You can set your site's default language. If you You can also define a Site's enabled languages:
+You can set your Site's default language. You can also define a Site's enabled languages:
 
 1. In the [Site Settings UI](./site-settings-ui-reference.md#language), click on the Languages tab.
 
