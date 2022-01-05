@@ -846,47 +846,47 @@ The Web Content field Document Type was an accidental feature included in Docume
 
 ---------------------------------------
 
-### OpenID Connect Provider Signing Algorithm Must Be Configured If Different From RS256
+## OpenID Connect Provider Signing Algorithm Must Be Configured If Different From RS256
 
 - **Date:** 2021-Sep-30
 - **JIRA Ticket:** [LPS-138756](https://issues.liferay.com/browse/LPS-138756)
 
-#### What changed?
+### What changed?
 
 The portal's OpenID Connect client now requires explicitly stating the ID Token signing algorithm agreed with the provider.
 
-#### Who is affected?
+### Who is affected?
 
 This affects anyone integrating OpenID Connect providers that sign ID Tokens using a signing algorithm other than the **first** supported signing algorithm listed in the UI. The list is served by the provider's Discovery Endpoint, or configured offline in the UI.
 
-#### How should I update my code?
+### How should I update my code?
 
 In the UI, review the OpenID Connect Provider Connection configuration(s). Specify the agreed algorithm as the Registered ID Token Signing Algorithm.
 
-#### Why was this change made?
+### Why was this change made?
 
 This improves using all signing algorithms supported by OpenID Connect providers.
 
 ---------------------------------------
 
-### Restricted the Service Builder Task to Service Module Folders that have a Service XML File
+## Restricted the Service Builder Task to Service Module Folders that have a Service XML File
 
 - **Date:** 2021-Nov-02
 - **JIRA Ticket:** [LPS-129696](https://issues.liferay.com/browse/LPS-129696)
 
-#### What changed?
+### What changed?
 
 Automatically applied the Service Builder plugin to all OSGi projects but restricted the `buildService` task target to `*-service` module folders that contain a `service.xml` file.
 
-#### Who is affected?
+### Who is affected?
 
 This affects you if you are running the `buildService` task in a the Liferay Workspace.
 
-#### How should I update my code?
+### How should I update my code?
 
 This requires no code changes. When you run the `buildService` task, you must target a `*-service` module folder that contains a `service.xml` file.
 
-#### Why was this change made?
+### Why was this change made?
 
 This was done to clarify the folder that `buildService` should target.
 
