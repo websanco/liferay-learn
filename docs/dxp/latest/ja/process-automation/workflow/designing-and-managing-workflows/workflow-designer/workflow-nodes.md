@@ -56,6 +56,6 @@ WorkflowStatusManagerUtil.updateStatus(WorkflowConstants.getLabelStatus("expired
 
   - [Creating Workflow Tasks](./creating-workflow-tasks.md)
   - [Using Task Nodes](./assigning-task-nodes.md)
-  - [Kaleo Forms](../../../forms/kaleo_forms.rst)
+  - [Kaleo Forms](../../../forms/kaleo-forms.md)
   - [ワークフローフレームワークの概要](https://help.liferay.com/hc/en-us/articles/360028727112-Introduction-to-The-Workflow-Framework)
   - [Dynamic Data Lists](../../../forms/dynamic-data-lists/getting-started-with-dynamic-data-lists.md)

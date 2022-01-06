@@ -56,6 +56,6 @@ _Task_ nodes represent where all the work is done. See [Creating Workflow Tasks]
 
 * [Creating Workflow Tasks](./creating-workflow-tasks.md)
 * [Using Task Nodes](./assigning-task-nodes.md)
-* [Kaleo Forms](../../../forms/kaleo_forms.md)
+* [Kaleo Forms](../../../forms/kaleo-forms.md)
 * [Introduction to the Workflow Framework](https://help.liferay.com/hc/en-us/articles/360028727112-Introduction-to-The-Workflow-Framework)
 * [Dynamic Data Lists](../../../forms/dynamic-data-lists/getting-started-with-dynamic-data-lists.md)

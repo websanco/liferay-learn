@@ -4,8 +4,8 @@
 .. toctree::
    :maxdepth: 4
 
-   process-automation/forms.rst
-   process-automation/workflow.rst
+   process-automation/forms.md
+   process-automation/workflow.md
 
 .. raw:: html
    :file: landingpage_template.html
