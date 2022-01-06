@@ -17,7 +17,7 @@ A vanilla Liferay DXP installation contains the indexes presented in [Cross Clus
 Elasticsearch API calls provided here can be copied and pasted into Kibana's Dev Tools console, accessible via a separate Kibana installation or through the [LES Monitoring widget](../monitoring-elasticsearch.md).
 
 ```{note}
-To use Kibana, remember that you have multiple Elasticsearch clusters (two single-node clusters in this example) running. The `elasticsearch.hosts: [ "http://localhost:<port>" ]` setting in Kibana's `kibana.yml` file must point to the correct port when managing the indexes and other configurations described below to avoid mixing the leader and the follower clusters. Here, it's assumed that your leader Elasticserach cluster node uses port `9200` and the follower uses port `9202`. 
+To use Kibana, remember that you have multiple Elasticsearch clusters (two single-node clusters in this example) running. The `elasticsearch.hosts: [ "http://localhost:<port>" ]` setting in Kibana's `kibana.yml` file must point to the correct port when managing the indexes and other configurations described below to avoid mixing the leader and the follower clusters. Here, it's assumed that your leader Elasticsearch cluster node uses port `9200` and the follower uses port `9202`. 
 ```
 
 ## Cluster Liferay DXP 
