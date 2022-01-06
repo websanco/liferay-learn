@@ -24,7 +24,7 @@ developer-guide/apis.md
 - [Workflow Notification Template Variables](./developer-guide/workflow-notification-template-variables.md)
 - [Workflow Task Node Reference](./developer-guide/workflow-task-node-reference.md)
 - [Creating a Condition Evaluator](./developer-guide/creating-a-condition-evaluator.md)
-- [Creating an Action Executor](/developer-guide/creating-an-action-executor.md)
+- [Creating an Action Executor](./developer-guide/creating-an-action-executor.md)
 - [Working with Workflow Context](./developer-guide/working-with-workflow-context.md)
 
 ## APIs
