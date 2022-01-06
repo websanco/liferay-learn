@@ -1,10 +1,6 @@
 # サブスクリプション管理リファレンスガイド
 
-サブスクリプションは*コントロールパネル*の*サブスクリプションメニュー*で[管理](./managing-subscriptions.md)されています。 この記事では、 *サブスクリプション* メニューで使用できるさまざまな機能とフィールドについて説明します。
-
-*コントロールパネル* → *Commerce* → *サブスクリプション*へ行きます。
-
-![サブスクリプション管理](./subscription-administration-reference-guide/images/01.png)
+サブスクリプションは_グローバルアプリケーション_の_サブスクリプション_メニューで[管理](./managing-subscriptions.md)されています。 この記事では、 _サブスクリプション_ メニューで使用できるさまざまな機能とフィールドについて説明します。
 
 5つのフィールドがあります。
 
@@ -16,17 +12,37 @@
 | アカウントID | アカウントIDは、サブスクリプションを作成したアカウントに対応しています。 |
 | アカウント名  | アカウント名はアカウント名に対応します。                  |
 
-サブスクリプションの *ID* をクリックして、サブスクリプション注文の詳細を表示します。
+## Commerce 2.1以前
 
-*全般*、*発送*、*支払い*の3つのタブがあります 。
+サブスクリプションは_コントロールパネル_の_サブスクリプションメニュー_で[管理](./managing-subscriptions.md)されています。
 
-## [General]タブ
+_［コントロールパネル］_ → _［コマース］_ → _［サブスクリプション］_に移動します。
 
-*全般* タブには、サブスクリプション [注文](../orders/processing-an-order.md)基本的な詳細が含まれています。
+![サブスクリプション管理](./subscription-administration-reference-guide/images/01.png)
+
+5つのフィールドがあります。
+
+| フィールド   | 説明                                    |
+| ------- | ------------------------------------- |
+| ID      | これはサブスクリプションのIDです。                    |
+| 状態      | ステータスは注文のステータスを表示します                  |
+| オーダーID  | これは、サブスクリプションに基づく注文IDです。              |
+| アカウントID | アカウントIDは、サブスクリプションを作成したアカウントに対応しています。 |
+| アカウント名  | アカウント名はアカウント名に対応します。                  |
+
+サブスクリプションの _ID_ をクリックして、サブスクリプション注文の詳細を表示します。
+
+<!--Need to finish this for Commerce 3.0; blocked by https://issues.liferay.com/browse/COMMERCE-4813 -->
+
+_全般_、_発送_、_支払い_の3つのタブがあります 。
+
+## ［一般］タブ
+
+_全般_ タブには、サブスクリプション [注文](../orders/processing-an-order.md)基本的な詳細が含まれています。
 
 ### 参照順序
 
-*Reference Order* セクションには、</a>注文に関する
+_Reference Order_ セクションには、</a>注文に関する
 情報が表示されます。</p> 
 
 ![支払いセクション](./subscription-administration-reference-guide/images/02.png)
@@ -44,32 +60,32 @@ Payment Subscriptionセクションでは、次の情報を追跡します。
 | 状態           | これはサブスクリプションのワークフローステータスです。                                          |
 | 次の反復日        | これは翌日の支払い期限です。                                                       |
 | サブスクリプションタイプ | これは、サブスクリプションのタイプです。                                                 |
-| サブスクリプションの長さ | これは、出荷の間隔の長さを指します。                                                   |
-| モード          | これは、間隔がマークされた日付を指します。 ユーザーは、オプションとして月の正確な日または *月の最後の日* を選択することもできます。 |
+| サブスクリプション期間  | これは、出荷の間隔を指します。                                                      |
+| モード          | これは、間隔がマークされた日付を指します。 ユーザーは、オプションとして月の正確な日または _月の最後の日_ を選択することもできます。 |
 
 
 
 
 ### 配送サブスクリプション
 
-*配送サブスクリプション* セクションは、次の情報を追跡します。
+_配送サブスクリプション_ セクションは、次の情報を追跡します。
 
 ![配送](./subscription-administration-reference-guide/images/04.png)
 
 | フィールド        | 説明                                                                   |
 | ------------ | -------------------------------------------------------------------- |
 | 状態           | これはサブスクリプションのワークフローステータスです。                                          |
-| 次の反復日        | これは、 [発送](./shipments/introduction-to-shipments.md) が発送された翌日です。      |
+| 次の繰り返し日      | これは、 [発送](./shipments/introduction-to-shipments.md) が発送された翌日です。      |
 | サブスクリプションタイプ | これは、サブスクリプションのタイプです。                                                 |
 | サブスクリプション期間  | これは、出荷の間隔を指します。                                                      |
-| モード          | これは、間隔がマークされた日付を指します。 ユーザーは、オプションとして月の正確な日または *月の最後の日* を選択することもできます。 |
+| モード          | これは、間隔がマークされた日付を指します。 ユーザーは、オプションとして月の正確な日または _月の最後の日_ を選択することもできます。 |
 
 
 
 
 ### アイテム
 
-*アイテム* セクションには、サブスクリプション内の [商品](../../managing-a-catalog/creating-and-managing-products/products/products-overview.md) がすべてリストされます。
+_アイテム_ セクションには、サブスクリプション内の [商品](../../managing-a-catalog/creating-and-managing-products/products/products-overview.md) がすべてリストされます。
 
 ![アイテム](./subscription-administration-reference-guide/images/05.png)
 
@@ -77,19 +93,25 @@ Payment Subscriptionセクションでは、次の情報を追跡します。
 
 ## 発送タブ
 
-[ *発送* ]タブには、次の情報が表示されます。
+［ _発送_ ］タブには、次の情報が表示されます。
 
-![配送](./subscription-administration-reference-guide/images/06.png)
+![出荷](./subscription-administration-reference-guide/images/06.png)
 
-これは、注文が作成された</a>です 。</td> </tr> 
+| フィールド    | 説明                                                               |
+| -------- | ---------------------------------------------------------------- |
+| 日付を作成します | これは、注文が[作成された日です ](../orders/processing-an-order.md)。            |
+| 出荷ID     | この番号は [発送](./shipments/introduction-to-shipments.md) IDとして生成されます |
+| 状態       | これは [注文](../orders/orders-menu-reference-guide.md)のステータスです。      |
+| オーダーID   | これは、サブスクリプションの基になる注文を指します。                                       |
+| 送信先      | これはアカウントの配達先住所です。                                                |
+| 追跡       | これは、運送業者の追跡番号です。                                                 |
 
-</tbody> </table> 
 
 
 
 ## 支払いタブ
 
-*支払い* タブは、注文の支払い履歴を追跡します。
+_支払い_ タブは、注文の支払い履歴を追跡します。
 
 ![アイテム](./subscription-administration-reference-guide/images/07.png)
 
@@ -105,8 +127,8 @@ Payment Subscriptionセクションでは、次の情報を追跡します。
 
 ## 追加情報
 
-  - [サブスクリプションを有効にする](../../managing-a-catalog/creating-and-managing-products/products/enabling-subscriptions-for-a-product.md)
-  - [サブスクリプションの管理](./managing-subscriptions.md)
-  - [注文の処理](../orders/processing-an-order.md)
-  - [Introduction to Shipments](../shipments/introduction-to-shipments.md)
-  - [注文情報](../orders/order-information.md)
+* [サブスクリプションを有効にする](../../managing-a-catalog/creating-and-managing-products/products/enabling-subscriptions-for-a-product.md)
+* [サブスクリプションの管理](./managing-subscriptions.md)
+* [注文の処理](../orders/processing-an-order.md)
+* [出荷の概要](../shipments/introduction-to-shipments.md)
+* [注文情報](../orders/order-information.md)

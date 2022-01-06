@@ -1,18 +1,13 @@
-# 配送
+発送
+=========
 
-```{toctree}
-:maxdepth: 1
+.. toctree::
+   :maxdepth: 1
 
-shipments/introduction-to-shipments.md
-shipments/creating-a-shipment.md
-shipments/cancelling-a-shipment.md
-shipments/shipments-management-reference-guide.md
-```
+   shipments/introduction-to-shipments.md
+   shipments/creating-a-shipment.md
+   shipments/cancelling-a-shipment.md
+   shipments/shipments-management-reference-guide.md
 
-```{raw} html
-:file: ../landingpage_template.html
-```
-
-```{raw} html
-:file: shipments/landing.html
-```
+.. include:: /orders-and-fulfillment/shipments/README.rst
+   :start-line: 2
