@@ -1,6 +1,6 @@
 # Google Cloud Storage
 
-> Available for 7.4+
+> Available for Liferay DXP 7.3 SP3+ and 7.4+
 
 Liferay DXP provides integration with Google's Cloud Storage (GCS) service. With GCS integration, you can seamlessly store and access your Liferay instance files in the cloud.
 
