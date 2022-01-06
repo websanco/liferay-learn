@@ -8,11 +8,11 @@ Liferay Commerceでは、仮想商品とは、顧客がダウンロードでき�
 
 1. ［*グローバルメニュー*］(![Global Menu](../../../images/icon-applications-menu.png))を開き、［ *Commerce*］タブをクリックして、［*商品管理* ］&rarr; ［*商品*］に移動します。
 
-1. ［*追加*］ボタン（![Add icon](../../../images/icon-add.png)）をクリックし、*[仮想]*を選択します。
+1. ［*追加*］ボタン（![Add icon](../../../images/icon-add.png)）をクリックし、*[仮想]* を選択します。
 
 1. ［*name*］ を入力し、目的の［ *カタログ*］を選択します。
 
-1. 完了したら、*[送信]*をクリックします。
+1. 完了したら、*[送信]* をクリックします。
 
 仮想商品が作成されたら、顧客が購入できるようにする前に、希望するデジタルアセットと関連付けさせ、SKUの［[基本価格](./../../managing-prices/setting-a-products-base-price.md)］を設定し、［[在庫を割り当てる](../../managing-inventory/setting-inventory-by-warehouse.md) ］必要があります。
 
@@ -50,7 +50,7 @@ Liferay Commerceでは、仮想商品とは、顧客がダウンロードでき�
 
 ## Commerce 2.1以前
 
-1. _［コントロールパネル］_ → _［コマース］_ → _［商品］_に移動します。
+1. ［_コントロールパネル_］ → ［_コマース_］ → ［_商品_］に移動します。
 1. 追加（![Add icon](../../../images/icon-add.png)）ボタンをクリックしてから、 ［_仮想_ ］をクリックします。
 1. 次のように入力します：
     * **Catalog**：Sahara.com
@@ -61,13 +61,13 @@ Liferay Commerceでは、仮想商品とは、顧客がダウンロードでき�
     * **Meta Title**: 3年保証
     * **Meta Description**: すべての商品の3年保証
     * **Meta Keywords**: 保証、商品、年
-1. _［公開］_をクリックします。
+1. ［_公開_］をクリックします。
 
 この仮想商品を作成したら、ストア管理者はデジタルアセットと利用規約を商品に関連付ける必要があります。
 
 ### 仮想商品の詳細を設定する
 
-1. _［Virtual］_サブタブをクリックして続行します。
+1. ［_Virtual_］サブタブをクリックして続行します。
 
    ![仮想サブタブでは、仮想商品の設定を行います。](./creating-a-virtual-product/images/01.png)
 
@@ -81,7 +81,7 @@ Liferay Commerceでは、仮想商品とは、顧客がダウンロードでき�
 
    ![仮想商品の詳細を入力します。](./creating-a-virtual-product/images/02.png)
 
-1. _［保存］_ をクリックします。
+1. ［_保存_］ をクリックします。
 
 各フィールドの詳細は、記事[Virtual Product Reference](./virtual-product-reference.md)を参照してください。
 
@@ -89,15 +89,15 @@ Liferay Commerceでは、仮想商品とは、顧客がダウンロードでき�
 
 商品の価格と数量を設定するには：
 
-1. _［SKU］_タブをクリックします。
+1. ［_SKU_］タブをクリックします。
 1. ［_default_］SKUの［_3-dot_］ アイコン &rarr; ［_Edit_］をクリックします。
-1. 左側のメニューで _［Pricing］_ をクリックします。
+1. 左側のメニューで ［_Pricing_］ をクリックします。
 1. 次のように入力します：
     * **Price**: 12.00
     * **Promo Price**: 0.00
     * **Cost**: 0.00
-1. _［保存］_ をクリックします。 （［Promo Price］および［Cost］フィールドが0.00のままの場合、この時点では割引やプロモーションは適用されません。）
-1. _［Price List］_をクリックして、この商品を既存の[［価格表］](../../managing-prices/adding-products-to-a-price-list.md)に適用します。
+1. ［_保存_］ をクリックします。 （［Promo Price］および［Cost］フィールドが0.00のままの場合、この時点では割引やプロモーションは適用されません。）
+1. ［_Price List_］をクリックして、この商品を既存の[［価格表］](../../managing-prices/adding-products-to-a-price-list.md)に適用します。
 1. 在庫を設定するには、 ［_在庫_］ サブタブをクリックし、各倉庫に適切な数量を設定します。 更新されたすべての倉庫の ［_保存_ ]ボタンをクリックします。
 
 価格設定の詳細は、[Introduction to Pricing](../../managing-prices/introduction-to-pricing.md)を参照してください。

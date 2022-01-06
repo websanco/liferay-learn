@@ -4,11 +4,11 @@ Liferay Commerceでは、複数のSKUを商品に追加して商品バリアン�
 
 ![商品バリアントは、商品詳細ウィジェットに表示されます。](./creating-skus-for-product-variants/images/01.png)
 
-```note::
+```{note}
    商品オプションがない場合、1つの商品に対して同時に1つのSKUしか有効にできません。
 ```
 
-```tip::
+```{tip}
    商品オプションの値は、SKUの作成に使用する前に確定することを強くお勧めします。 詳しくは、`Using Product Options <./using-product-options.md`>_ を参照してください。
 ```
 
@@ -20,7 +20,7 @@ Liferay Commerceでは、複数のSKUを商品に追加して商品バリアン�
 
 1. SKUコントリビューターが有効になっているオプションが1つ以上ある商品をクリックし、 ［*SKUs*］タブに移動します。
 
-1. ［*追加*］ボタン（![Add Button](../../../images/icon-add.png)）をクリックし、*[SKU のすべての組み合わせを生成]*を選択します。
+1. ［*追加*］ボタン（![Add Button](../../../images/icon-add.png)）をクリックし、*[SKU のすべての組み合わせを生成]* を選択します。
 
    ![「SKU のすべての組み合わせを生成」を選択します。](./creating-skus-for-product-variants/images/02.png)
 
@@ -28,13 +28,13 @@ Liferay Commerceでは、複数のSKUを商品に追加して商品バリアン�
 
    ![生成されたSKUを編集します。](./creating-skus-for-product-variants/images/03.png)
 
-1. 完了したら、* [公開]*をクリックします。
+1. 完了したら、* [公開]* をクリックします。
 
 ## 商品にSKUを手動で追加する
 
 以下の手順に従って、個々のオプション値の商品SKUを手動で作成します：
 
-   ```important::
+   ```{important}
       SKUコントリビューターが有効になっている間は、手動で作成された各SKUをオプション値にマップする必要があります。
    ```
 
@@ -42,7 +42,7 @@ Liferay Commerceでは、複数のSKUを商品に追加して商品バリアン�
 
 1. SKUコントリビューターが有効になっているオプションが1つ以上ある商品をクリックして、［ *SKUs*］タブに移動します。
 
-1. ［*追加*］ボタン（![Add Button](../../../images/icon-add.png)）をクリックして、*[SKUを追加]*を選択します。
+1. ［*追加*］ボタン（![Add Button](../../../images/icon-add.png)）をクリックして、*[SKUを追加]* を選択します。
 
    ![「SKUを追加」を選択します。](./creating-skus-for-product-variants/images/04.png)
 
@@ -50,7 +50,7 @@ Liferay Commerceでは、複数のSKUを商品に追加して商品バリアン�
 
    ![SKUの設定を行います。](./creating-skus-for-product-variants/images/05.png)
 
-1. 完了したら、* [公開]*をクリックします。
+1. 完了したら、* [公開]* をクリックします。
 
 ## SKU在庫の追加
 
@@ -58,7 +58,7 @@ Liferay Commerceでは、複数のSKUを商品に追加して商品バリアン�
 
 ![商品のSKUごとに在庫を追加します。](./creating-skus-for-product-variants/images/06.png)
 
-```note::
+```{note}
    すべてのSKUの在庫が0で、「バックオーダーを許可」が無効になっている場合、商品詳細ウィジェットに商品のバリアントが表示されません。 ただし、1つのSKUのみが0になった場合は、すべてのバリアントが表示されます。 
 
    「バックオーダーを許可」が有効になっている場合、在庫に関係なく、すべてのオプションが商品詳細ウィジェットに表示されます。 

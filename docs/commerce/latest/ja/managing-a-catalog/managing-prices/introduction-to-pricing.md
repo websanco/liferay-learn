@@ -8,7 +8,7 @@ Liferay Commerceでは、商品の価格を微調整するための価格設定�
 * [Commerceが商品価格を計算する方法](#how-commerce-calculates-product-prices)
 * [Commerceが注文価格を計算する方法](#how-commerce-calculates-order-prices)
 
-```note::
+```{note}
    以下の概要では、Commerce Pricing Engine v2.0について説明しています。 このエンジンバージョンは、Commerce 3.0およびPortal/DXP 7.3で使用されているデフォルトのアルゴリズムです。 Commerce 2.1.x以前のバージョンでは、デフォルトでCommerceの`Pricing Engine v1.0 <#pricing-engine-v1-0-reference>`_を使用しています。 必要に応じて、インスタンスで使用されているPricing Engineのバージョン <#enabling-pricing-engine-v2-0-in-commerce-2-1-x>`_を変更することができます。
 ```
 
@@ -67,7 +67,7 @@ SKUの単価を計算する際、Commerceはまず、チャネルと顧客に適
 
 * 該当する価格表がない場合、SKUの単価にはSKUの基本価格表のエントリが使用されます。
 
-```note::
+```{note}
    このプロセスの間に、Commerceは該当するティア価格もチェックします。 ティア価格がある場合は、その価格が特定の数量のデフォルトの価格の代わりに使用されます。
 ```
 
@@ -101,7 +101,7 @@ SKUの単価を計算した後、CommerceはSKUのプロモ価格を計算しま
 | 階層型価格表（階層型価格、階層型プロモーション） | _バルク数量での_商品および購入者ごとの特別価格（または通貨）          |        有        | 価格表   | 選択した購入者（アカウント & アカウントグループ）              |       個々の商品SKU       |
 | 割引                       | 商品または購入者のグループの価格の変更（数量を制限でき、クーポンコードも使用可） |        無        | 割引    | 選択した購入者（アカウント & アカウントグループまたは特定の資格を満たす人） | 商品のグループ（または個々の商品SKU） |
 
-```note::
+```{note}
    Commerce Pricing Engine v1.0では、価格エントリには、SKU、標準価格、プロモ価格の3つのコンポーネントが含まれています。 v2.0では、それぞれが個別のエンティティとなっています。
 ```
 
