@@ -2,8 +2,9 @@
 
 Liferay DXP's Staging tool provides ways to manage available application data and content types both during initial configuration and the publishing process. Because there can be so many relationships between applications and types of content, be sure to consider how they reference each other in your database before deciding to stage or unstage any categories.
 
-* [Staging Data and Content Types](#staging-data-and-content-types)
-* [Publishing Data and Content Types](#publishing-data-and-content-types)
+```{important}
+Liferay Commerce does not support Staging. During the publishing process, entities from Commerce are not staged. 
+```
 
 ## Staging Data and Content Types
 

@@ -4,12 +4,6 @@ With *Remote Live Staging*, your Staging and Live environments are hosted on sep
 
 Before enabling Remote Live Staging, you must configure the Liferay servers you want to use for your Staging and Live environments. You must also create a new blank Site or Asset Library on your Remote server and use its ID during Staging configuration.
 
-* [Preparing Your Liferay Servers](#preparing-your-liferay-servers)
-* [Setting Up Remote Live Staging](#setting-up-remote-live-staging)
-* [Remote Live Staging Permissions](#remote-live-staging-permissions)
-* [Configuring Remote Staging's Buffer Size](#configuring-remote-stagings-buffer-size)
-* [Disabling Remote Live Staging](#disabling-remote-live-staging)
-
 ## Preparing Your Liferay Servers
 
 If you haven't already, follow these steps to configure your Liferay servers for Remote Live Staging:
