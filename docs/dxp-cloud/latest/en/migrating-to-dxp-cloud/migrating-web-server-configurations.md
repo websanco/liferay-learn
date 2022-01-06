@@ -25,7 +25,7 @@ In the project repository you [cloned previously](./matching-dxp-versions.md#clo
 * Put any other overrides (for the `/etc/nginx/` directory) into `webserver/configs/{ENV}/`
 
 ```{tip}
-Any files put into the `liferay/configs/common/` folder applies to all environments when deployed.
+Any files put into the `webserver/configs/common/` folder applies to all environments when deployed.
 ```
 
 See [Web Server Service Configurations](../platform-services/web-server-service.md#configurations) for more information.
