@@ -2,6 +2,12 @@
 
 [Search Blueprints](./understanding-search-blueprints.md) are created, updated, and deleted using an administrative application in the Global Menu. Open the Global menu's Applications section and find the Search Experiences category.
 
+```{note}
+Out of the box, elements are available to use in creating your Blueprints. However, if you've installed the Search Experiences application into an existing Liferay installation, you must reindex the SXPElement entity for the elements to appear in the Blueprints UI. Navigate to Control Panel &rarr; Search &rarr; Index Actions, then find the `com.liferay.search.experiences.model.SXPElement` entry and click _Execute_.
+
+![Reindex the SXPElement model to see all the out of the box elements.](./creating-and-managing-search-blueprints/images/09.png)
+```
+
 To create Search Blueprints,
 
 1. Open the Blueprints application by clicking _Blueprints_ from Global Menu &rarr; Applications (Search Experiences).
