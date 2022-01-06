@@ -1,0 +1,4 @@
+Bundle-Name: Acme N3Q9 Able Web
+Bundle-SymbolicName: com.acme.n3q9.able.web
+Bundle-Version: 1.0.0
+Export-Package: com.acme.n3q9.able.web
