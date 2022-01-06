@@ -47,7 +47,7 @@ Follow these steps to add a Web Contexts CORS policy:
 
 Follow these steps to update the *Default Portal CORS Configuration* to enable CORS for Object APIs:
 
-1. Open the *Global Menu* (![Global Menu ](../../../images/icon-applications-menu.png)), click on the *Control Panel* tab, and go to *System Settings* &rarr; *Security Tools*.
+1. Open the *Global Menu* (![Global Menu](../../../images/icon-applications-menu.png)), click on the *Control Panel* tab, and go to *System Settings* &rarr; *Security Tools*.
 
 1. Go to the *Portal Cross-Origin Resource Sharing (CORS)* tab and click *Default Portal CORS Configuration*.
 
@@ -130,11 +130,20 @@ Follow these steps to download, install, and start the React server:
 1. Download and unzip the [React project](./liferay-x3j8.zip).
 
    ```bash
-   curl https://learn.liferay.com/dxp/latest/en/building-applications/building-solutions-with-objects/liferay-x3j8.zip -O
+   curl https://learn.liferay.com/dxp/latest/en/building-applications/objects/building-solutions-with-objects/liferay-x3j8.zip -O
    ```
 
    ```bash
    unzip liferay-x3j8.zip -d liferay-x3j8
+   ```
+
+   ```bash
+   cd liferay-x3j8
+   ```
+
+   ```{note}
+   To continue, you must have `node` and `yarn` installed. If you don't, run this command and follow the prompts:
+   `./setup_tutorial.sh`
    ```
 
 1. Install the React project.
