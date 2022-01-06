@@ -7,7 +7,7 @@ Starting with Liferay DXP 7.4, you can use the Page Audit tool to examine your P
 - Use actionable information to correct the SEO and Accessibility issues affecting the Page.
 
 ```{important}
-The Page Audit tool works on pubic Pages only.
+The Page Audit tool works on Public Pages only.
 ```
 
 ## SEO and Accessibility Checks
