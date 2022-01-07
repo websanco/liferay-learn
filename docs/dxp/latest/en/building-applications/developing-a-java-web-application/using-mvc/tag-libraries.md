@@ -16,14 +16,14 @@ You have access to a powerful set of taglibs for creating commonly used UI compo
 
 * AUI: create common UI components such as forms, buttons, and more.
 
-* Chart: visualize data. Create bar charts, line charts, scatter charts, spline charts, and much more. 
+* Chart: visualize data. Create bar charts, line charts, scatter charts, spline charts, and much more.
 
-* Clay: create [Clay components](https://clayui.com/docs/components/alerts.html), such as alerts, buttons, drop-down menus, form elements, and more for your apps. 
+* Clay: create [Clay components](https://clayui.com/docs/components/alerts.html), such as alerts, buttons, drop-down menus, form elements, and more for your apps.
 
 * Frontend: create UI components commonly used throughout Portal's apps, such as add menus, cards, management bars, and more.
 
 * Liferay UI: create common UI components such as icons, tabs, and more.
-  
+
 * Liferay Util: load additional resources, define parameters, buffer content, and more.
 
 ```{note} 
