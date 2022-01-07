@@ -16,7 +16,7 @@ As Liferay renders your form fields, it customizes the form's input fields based
 If you chose Spring as the dependency injector, Service Builder generates a number of XML configuration files in your service module's ``src/main/resources/META-INF`` folder. Service Builder uses most of these files to manage Spring and Hibernate configurations. Don't modify the Spring or Hibernate configuration files; changes to them are overwritten when Service Builder runs. You can however, safely edit the ``portlet-model-hints.xml`` file.
 ```
 
-Since the Guestbook doesn't have much of a model hints file, as an example, consider the [Bookmarks app service module's](https://repository.liferay.com/nexus/content/repositories/liferay-public-releases/com/liferay/com.liferay.bookmarks.service/) model hints file:
+As an example, consider the [Bookmarks app service module's](https://repository.liferay.com/nexus/content/repositories/liferay-public-releases/com/liferay/com.liferay.bookmarks.service/) model hints file:
 
 ```xml
 <?xml version="1.0"?>
@@ -66,7 +66,7 @@ The root-level element is `model-hints`. Model entities are represented by `mode
 
 To add hints to a field, add a `hint` child element. For example, you can add a `display-width hint` to specify the pixel width to use in displaying the field. The default pixel width is `350`. To show a `String` field with 50 pixels, you could nest a `hint` element named `display-width` and give it a value of `50`. 
 
-To see the effect of a hint on a field, [run Service Builder](https://help.liferay.com/hc/en-us/articles/360030958811-Running-Service-Builder) again and [redeploy your module](https://help.liferay.com/hc/en-us/articles/360028833832-Deploying-a-Project). Note that changing `display-width` doesn't limit the number of characters a user can enter into the `name` field; it only controls the field's width in the AlloyUI input form. 
+To see the effect of a hint on a field, [run Service Builder](../service-builder-basics/generating-model-persistence-and-service-code.html#generate-the-persistence-code) again and [redeploy your module](../../../liferay-internals/fundamentals/module-projects.html#deploy-a-simple-module). Note that changing `display-width` doesn't limit the number of characters a user can enter into the `name` field; it only controls the field's width in the AlloyUI input form. 
 
 To configure the maximum size of a model field's database column (i.e., the maximum number of characters that can be saved for the field), use the `max-length` hint. The default `max-length` value is `75` characters. If you want the `name` field to persist up to 100 characters, add a `max-length` hint  to that field: 
 
@@ -103,13 +103,6 @@ So far, you've seen a few different hints. The following table describes the por
 | `year-range-delta`  | integer | specifies the number of years to display from today's date in a date field rendered with the aui taglib | 5 |
 | `year-range-future` | boolean | sets whether to include future dates | true |
 | `year-range-past`   | boolean | sets whether to include past dates | true |
-
-<!--
-I wanted to get a complete list of model hints used in portal. I found the ModelHints interface and then searched for where (*.java, *.js, *.jsp) it was referenced. It led me to portal-web/docroot/html/taglib/ui/input_field/page.jsp. I found some more hints and added them to the table above.
-
-I'm not sure what the `check-tab` hint does. Would be worth asking the UI team.
-
-* Jim -->
 
 ```{note}
 The aui taglib is fully supported and not related to AlloyUI (the JavaScript library) that's deprecated.
