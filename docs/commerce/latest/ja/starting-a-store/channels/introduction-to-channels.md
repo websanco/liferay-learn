@@ -8,19 +8,19 @@
 
 商品と割引は、すべてのチャネルまたは特定のチャネルで利用できるように構成できます。 同様に、多くの構成をチャネルレベルで設定できます。 これには以下が含まれます。
 
-  - カテゴリ表示ページ
-  - 通知
-  - 注文ワークフロー
-  - 注文フィールド
-  - 支払い方法
-  - 商品表示ページ
-  - 配送方法
-  - 関連税金
-  - 国
-  - 倉庫
+* カテゴリ表示ページ
+* 通知
+* 注文ワークフロー
+* 注文フィールド
+* 支払い方法
+* 商品表示ページ
+* 配送方法
+* 関連税金
+* 国
+* 倉庫
 
 ## 追加情報
 
-  - [チャンネルの管理](./managing-channels.md)
-  - [チャネルを使用した商品の可視性の構成](./configuring-product-visibility-using-channels.md)
-  - [チャンネルリファレンスガイド](./channels-reference-guide.md)
+* [チャネルの管理](./managing-channels.md)
+* [チャネルを使用した商品の可視性の構成](./configuring-product-visibility-using-channels.md)
+* [チャネルリファレンスガイド](./channels-reference-guide.md)

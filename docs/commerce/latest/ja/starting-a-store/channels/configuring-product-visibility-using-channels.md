@@ -6,29 +6,25 @@
 
 ![同じカタログ内の複数の商品をフィルタリングして、複数のチャネルで販売することができます。](./configuring-product-visibility-using-channels/images/01.png)
 
-Liferay Commerceでのチャネルの使用の詳細は、[チャネルについて](./introduction-to-channels.md)を参照してください。
+Liferay Commerceでのチャネルの使用の詳細は、[Introduction to Channels](./introduction-to-channels.md)を参照してください。
 
 ## 前提条件
 
-1.  1つ以上のサイトが作成されました。
-2.  各サイトにチャネルが関連付けられている。
-3.  商品がカタログに追加されている。
+1. 1つ以上のサイトが作成されました。
+1. 各サイトにチャネルが関連付けられている。
+1. 商品がカタログに追加されている。
 
 ## 商品フィルターチャネルの構成
 
-1.  *[Global Applications]* → *[Commerce]* & *[Products]* をクリックします。
-
-2.  商品をクリックします。
-
-3.  *Visibility* タブをクリックします。
+1. _［グローバルアプリケーション］_ &rarr; _［コマース］_ & _［商品］_をクリックします。
+1. 商品をクリックします。
+1. _Visibility_ タブをクリックします。
 
     ![2.1での商品の可視性](./configuring-product-visibility-using-channels/images/03.png)
 
-4.  追加ボタンをクリックします。
-
-5.  目的のチャネル（たとえば、 *Test Channel One*）をクリックします。
-
-6.  *[Add]* をクリックします。
+1. 追加ボタンをクリックします。
+1. 目的のチャネル（たとえば、 _Test Channel One_）をクリックします。
+1. _［追加］_をクリックします。
 
 これで、チャネルが商品に関連付けられました。
 
@@ -36,19 +32,15 @@ Liferay Commerceでのチャネルの使用の詳細は、[チャネルについ
 
 特定のチャネルで利用できるように商品を構成するには、次の手順に従います。
 
-1.  *[コントロールパネル]* → *[Commerce]* → *[Products]* に移動します。
-
-2.  商品をクリックします。
-
-3.  *Visibility* タブをクリックします。
+1. _［コントロールパネル］_ → _［コマース］_ → _［商品］_に移動します。
+1. 商品をクリックします。
+1. _Visibility_ タブをクリックします。
 
     ![2.1での商品の可視性](./configuring-product-visibility-using-channels/images/03.png)
 
-4.  追加ボタンをクリックします。
-
-5.  目的のチャネル（たとえば、 *Test Channel One*）をクリックします。
-
-6.  *[Add]* をクリックします。
+1. 追加ボタンをクリックします。
+1. 目的のチャネル（たとえば、 _Test Channel One_）をクリックします。
+1. _［追加］_をクリックします。
 
 これで、チャネルが商品に関連付けられました。
 
@@ -56,25 +48,20 @@ Liferay Commerceでのチャネルの使用の詳細は、[チャネルについ
 
 特定のチャネルで利用できるように商品を構成するには、次の手順に従います。
 
-1.  *[コントロールパネル]* → *[Commerce]* → *[Products]* に移動します。
-
-2.  商品をクリックします（この例では*Torque Converters*）。
-
-3.  *[Configuration]* サブタブをクリックします。
-
-4.  *[Channels]* サイドバーオプションをクリックします。
-
-5.  *[Enable filter channels]* トグルを*[Yes]* に切り替えます。
-
-6.  商品を表示する各チャネルのボックスをオンにします（この場合は*NA Minium Store* ）。
+1. _［コントロールパネル］_ → _［コマース］_ → _［商品］_に移動します。
+1. 商品をクリックします（この例では_Torque Converters_）。
+1. _［設定］_ サブタブをクリックします。
+1. _［チャネル］_サイドバーオプションをクリックします。
+1. _［チャネルのフィルターを有効にする］_トグルを_［はい］_に切り替えます。
+1. 商品を表示する各チャネルのボックスをオンにします（この場合は_NA Minium Store_ ）。
 
     ![商品構成](./configuring-product-visibility-using-channels/images/02.png)
 
-7.  *[保存]* をクリックします。
+1. _［保存］_ をクリックします。
 
 商品は、選択したチャネルでのみ表示されます。
 
 ## 追加情報
 
-  - [チャネルについて](./introduction-to-channels.md)
-  - [チャネル管理](./managing-channels.md)
+* [チャネルについて](./introduction-to-channels.md)
+* [チャネル管理](./managing-channels.md)
