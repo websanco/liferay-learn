@@ -52,11 +52,21 @@ Many of Liferay's applications (e.g. Blogs, Documents and Media, Message Boards,
 
    ![The added entry appears automatically in the Asset Publisher widget](./enabling-assets/images/01.png)
 
+## Search Enabled Prerequisite
+
+This tutorial assumes that you have a Service Builder application that is already search enabled. At minimum, your application needs:
+
+`*SearchRegistrar.java` - registers the search services to the search framework for the application's entities (e.g. [S5E6SearchRegistrar.java](https://github.com/liferay/liferay-learn/blob/master/docs/dxp/latest/en/building-applications/data-frameworks/asset-framework/enabling-assets/resources/liferay-s5e6.zip/s5e6-service/src/main/java/com/acme/s5e6/search/S5E6EntrySearchRegistrar.java)).
+
+`*ModelIndexerWriterContributor.java` - configures the re-indexing and batch re-indexing behavior of entries (e.g. [S5E6EntryModelIndexerWriterContributor.java](https://github.com/liferay/liferay-learn/blob/master/docs/dxp/latest/en/building-applications/data-frameworks/asset-framework/enabling-assets/resources/liferay-s5e6.zip/s5e6-service/src/main/java/com/acme/s5e6/search/S5E6EntryModelIndexerWriterContributor.java)).
+
+`*ModelSummaryContributor.java` - constructs the result summary for entries (e.g. [S5E6EntryModelSummaryContributor.java](https://github.com/liferay/liferay-learn/blob/master/docs/dxp/latest/en/building-applications/data-frameworks/asset-framework/enabling-assets/resources/liferay-s5e6.zip/s5e6-service/src/main/java/com/acme/s5e6/search/S5E6EntryModelSummaryContributor.java)).
+
+See the [Developer Guide](../../../using-search/developer-guide.md) in Using Search to learn more about enabling search.
+
 ## Modify the Service Model Definition
 
-<!-- Somewhere in here we have to mention that a prerequisite for assets is an implemented indexer, because the asset framework uses the search index to find asset entries. I don't think we as yet have an indexer tutorial; would you work with Russ to create one we can link to here? -Rich -->
-
-This tutorial assumes that you have a working application that you created using Service Builder. To enable assets, make the following changes to your entity:
+To enable assets, make the following changes to your entity:
 
 1. Add the following data fields if you don't already have them defined:
 
@@ -76,13 +86,13 @@ This tutorial assumes that you have a working application that you created using
 
    The Asset Framework requires these fields to keep track of your application's data.
 
-1. Add an asset entry entity reference right before the closing `</entity>` tag. Later, you'll make a change so that when a new application entry is added, a corresponding entry is added to Liferay's `AssetEntry` table.
+2. Add an asset entry entity reference right before the closing `</entity>` tag. Later, you'll make a change so that when a new application entry is added, a corresponding entry is added to Liferay's `AssetEntry` table.
 
    ```xml
    <reference entity="AssetEntry" package-path="com.liferay.portlet.asset" />
    ```
 
-1. Re-run Service Builder. 
+3. Re-run Service Builder. 
 
    ```bash
    ./gradlew s5e6-service:buildService
@@ -197,3 +207,5 @@ The portlet's `view.jsp` contains a form with an `actionURL` that invokes the po
 :language: jsp
 :lines: 18-28
 ```
+
+Now the portlet is asset enabled. Your application's entries can now be found and displayed as assets.
