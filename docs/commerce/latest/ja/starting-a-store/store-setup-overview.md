@@ -13,7 +13,7 @@
 
 ## ストア設定
 
-```note::
+```{note}
    `Accelerator <../starting-a-store/accelerators.md>`_ は店のサイトを作成するために使用することができます。 アクセラレータを使用してストアサイトを作成すると、このセクションで説明されている多くの設定が構成されます。詳細は、`MiniumAcceleratorを使用してB2Bストアをジャンプスタートする <../starting-a-store/using-the-minium-accelerator-to-jump-start-your-b2b-store.md>`_ を参照してください。
 ```
 
