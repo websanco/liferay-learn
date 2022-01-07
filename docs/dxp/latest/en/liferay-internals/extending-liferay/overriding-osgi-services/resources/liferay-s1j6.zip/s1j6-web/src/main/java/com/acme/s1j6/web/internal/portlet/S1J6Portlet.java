@@ -12,6 +12,7 @@ import javax.portlet.RenderResponse;
 
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
+import org.osgi.service.component.annotations.ReferencePolicyOption;
 
 @Component(
 	property = {
@@ -33,7 +34,7 @@ public class S1J6Portlet extends GenericPortlet {
 		printWriter.println(_s1j6.doSomething());
 	}
 
-	@Reference
+	@Reference (policyOption = ReferencePolicyOption.GREEDY)
 	private S1J6 _s1j6;
 
 }

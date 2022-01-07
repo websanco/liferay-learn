@@ -136,7 +136,7 @@ Component Configuration Id: 8338
 --------------------------------
 [...]
 References:   (total 1)
-  - _s1j6: com.acme.s1j6.S1J6 SATISFIED 1..1 static
+  - _s1j6: com.acme.s1j6.S1J6 SATISFIED 1..1 static+greedy
     target=(*) scope=bundle (1 binding):
     * Bound to [17776] from bundle 1357 (com.acme.s1j6.able.impl:1.0.0)
 ```
@@ -145,13 +145,13 @@ This abbreviated output lists the following reference configuration details:
 
 **Reference Name**: The name of the field that references the `S1J6AbleImpl` service is `_s1j6`.
 
-**Reference Policy**: The component's reference policy is `static` (default).
+**Reference Policy**: The component's policy is `static` (default).
 
-**Reference Policy-Option**: Since no `policy-option` is explicitly defined, it uses the default configuration, `reluctant`.
+**Reference Policy-Option**: The component's policy option is `greedy`.
 
 **Cardinality**: Its Cardinality is both mandatory and unary (i.e., `1..1`).
 
-While some reference configurations automatically bind to a new or higher ranking service, some require a server restart. Since `S1J6Portlet`'s reference configuration is static, reluctant, mandatory, and unary, a server restart is required before it binds to a new, higher ranking service. See [OSGi documentation](http://docs.osgi.org/specification/osgi.cmpn/7.0.0/service.component.html#service.component-policy.option.action) for more information about how different reference configurations affect a component's behavior when new or higher ranking services become available.
+While some reference configurations automatically bind to a new or higher ranking service, some require a server restart. Since `S1J6Portlet`'s reference configuration is static, greedy, mandatory, and unary, no server restart is required before it binds to a new, higher ranking service. See [OSGi documentation](http://docs.osgi.org/specification/osgi.cmpn/7.0.0/service.component.html#service.component-policy.option.action) for more information about how different reference configurations affect a component's behavior when new or higher ranking services become available.
 
 ## Creating an OSGi Service with the Gathered Details
 
@@ -183,7 +183,7 @@ In total, the included implementations have the following rankings:
 * `S1J6CharlieImpl`: 101
 * `S1J6DogImpl`: 101
 
-When deployed, the highest ranking service takes priority and is bound to `S1J6Portlet` after a Liferay server restart. If more than one service has the same ranking, the first service registered takes priority. Lower ranking services are ignored.
+When deployed, the highest ranking service takes priority and is bound to `S1J6Portlet`. If more than one service has the same ranking, the first service registered takes priority. Lower ranking services are ignored.
 
 ## Deploy the Overriding Module and Config File
 
@@ -202,8 +202,6 @@ Follow these steps to deploy `S1J6BakerImpl`, `S1J6CharlieImpl`, and `S1J6DogImp
    ```
    STARTED com.acme.s1j6.baker_1.0.0 [1359]
    ```
-
-1. Since `S1J6Portlet`'s reference configuration is static, reluctant, mandatory, and unary, restart the Liferay server to ensure `S1J6Portlet` binds to `S1J6BakerImpl`.
 
 1. Confirm `S1J6BakerImpl` has successfully deployed and bound to your instance via the Gogo Shell.
 
@@ -226,8 +224,6 @@ Follow these steps to deploy `S1J6BakerImpl`, `S1J6CharlieImpl`, and `S1J6DogImp
    STARTED com.acme.s1j6.charlie_1.0.0 [1360]
    STARTED com.acme.s1j6.dog_1.0.0 [1361]
    ```
-
-1. Restart the Liferay server.
 
 1. Confirm both `S1J6CharlieImpl` and `S1J6DogImpl` have successfully deployed to your instance via the Gogo Shell.
 
