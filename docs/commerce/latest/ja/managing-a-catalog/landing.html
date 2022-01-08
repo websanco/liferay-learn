@@ -5,9 +5,10 @@
 		el: '#landingPage',
 		data: {
 			cards: [
-        {
+				{
 					sectionName: 'カタログ',
 					sectionURL: 'managing-a-catalog/catalogs.html',
+					showAll: false,
 					subsections: [
 						{
 							name: '新しいカタログを作成する',
@@ -17,11 +18,16 @@
 							name: '商品プレースホルダー画像の構成',
 							url: 'managing-a-catalog/catalogs/configuring-a-product-placeholder-image.html'
 						},
+						{
+							name: 'カタログ権限設定の構成',
+							url: 'managing-a-catalog/catalogs/configuring-catalog-permissions.html'
+						},
 					]
 				},
 				{
 					sectionName: '商品の作成と管理',
 					sectionURL: 'managing-a-catalog/creating-and-managing-products.html',
+					showAll: false,
 					subsections: [
 						{
 							name: 'シンプル商品の作成',
@@ -31,18 +37,23 @@
 							name: '商品カテゴリを使用してカタログを整理する',
 							url: 'managing-a-catalog/creating-and-managing-products/products/organizing-your-catalog-with-product-categories.html'
 						},
+						{
+							name: '商品オプションの使用',
+							url: 'managing-a-catalog/creating-and-managing-products/products/using-product-options.html'
+						},
 					]
 				},
 				{
-					sectionName: '在庫管理の概要',
+					sectionName: '在庫管理',
 					sectionURL: 'managing-a-catalog/managing-inventory.html',
+					showAll: false,
 					subsections: [
-            {
-							name: '新しい倉庫の追加',
-							url: 'managing-a-catalog/managing-inventory/adding-a-new-warehouse.html'
+						{
+							name: 'Commerce倉庫のセットアップ',
+							url: 'managing-a-catalog/managing-inventory/setting-up-commerce-warehouses.html'
 						},
 						{
-							name: '在庫不足アクション',
+							name: '在庫数低下時のアクション',
 							url: 'managing-a-catalog/managing-inventory/low-stock-action.html'
 						},
 						{
@@ -54,18 +65,19 @@
 				{
 					sectionName: '価格の管理',
 					sectionURL: 'managing-a-catalog/managing-prices.html',
+					showAll: false,
 					subsections: [
 						{
-							name: '商品の価格設定方法の概要',
-							url: 'managing-a-catalog/managing-prices/introduction-to-product-pricing-methods.html'
+							name: 'プライシングの概要',
+							url: 'managing-a-catalog/managing-prices/introduction-to-pricing.html'
 						},
 						{
 							name: '価格表の作成',
 							url: 'managing-a-catalog/managing-prices/creating-a-price-list.html'
 						},
 						{
-							name: '階層型価格設定の追加',
-							url: 'managing-a-catalog/managing-prices/adding-tiered-pricing.html'
+							name: '価格層を使う',
+							url: 'managing-a-catalog/managing-prices/using-price-tiers.html'
 						}
 					]
 				}
