@@ -33,8 +33,8 @@
 
 ## 商品間の関係の作成
 
-1. ［ _グローバルアプリケーション_］メニュー →［ _Commerce_ ］→ ［_商品_］に移動します。
-1. 商品を選択します（たとえば、_Brake Pads_）。
+1. ［_グローバルアプリケーション_］メニュー →［_Commerce_］→ ［_商品_］に移動します。
+1. 商品を選択します（たとえば、 _Brake Pads_）。
 1. ［_Product Relations_］サブタブをクリックします。
 1. 左側のメニューで、［_Related_］をクリックします。
 
@@ -45,7 +45,7 @@
 
     ![2つの商品を追加する](./related-products-up-sells-and-cross-sells/images/04.png)
 
-これらの2つの商品が_Brake Pads_に関連付けられました。 この関係は単方向であることに注意してください。 つまり、_Brake Pads_を表示すると、新しい商品関係が表示されますが、_Brake Rotors_または_Brake Fluid_の商品を表示すると、_Brake Pads_は関連商品としてリストされ_ません_。
+これらの2つの商品が _Brake Pads_ に関連付けられました。 この関係は単方向であることに注意してください。 つまり、 _Brake Pads_ を表示すると、新しい商品関係が表示されますが、 _Brake Rotors_ または _Brake Fluid_ の商品を表示すると、 _Brake Pads_ は関連商品としてリストされ _ません_ 。
 
 商品関係を作成したら、［Product Publisher］ウィジェットを設定して関係を表示します。
 
@@ -53,13 +53,13 @@
 
 ［商品パブリッシャー］ウィジェットを設定することにより、商品表示ページに商品関係を表示できます。 最初に[商品表示ページ](https://help.liferay.com/hc/en-us/articles/360017870292-Displaying-Product-Pages-)を用意する必要があります。
 
-1. 商品を検索します（たとえば、_Brake Pads_）。
+1. 商品を検索します（たとえば、 _Brake Pads_）。
 1. ［_Brake Pads_］をクリックして商品の詳細を表示します。
 1. ページの一番下までスクロールして、［_商品パブリッシャー_］ウィジェットにリストされている関連商品を表示します。
 
    ![設定メニュー](./related-products-up-sells-and-cross-sells/images/06.png)
 
-1. _3ドット_アイコン（［オプション］）→ ［_設定_］をクリックします。
+1. _3ドット_ アイコン（［オプション］）→ ［_設定_］をクリックします。
 1. ［_Data Source_］ドロップダウンメニューから［_Product Relations related_］を選択します。
 
     ![データソースを選択](./related-products-up-sells-and-cross-sells/images/03.png)
@@ -90,7 +90,7 @@
 ### 商品間の関係の作成
 
 1. ［_コントロールパネル_］ メニュー → ［_Commerce_］ → ［_商品_］に移動します。
-1. 商品を選択します（たとえば、_Brake Pads_）。
+1. 商品を選択します（たとえば、 _Brake Pads_）。
 1. ［_Product Relations_］サブタブをクリックします。
 1. 左側のメニューで、［_Related_］をクリックします。
 
@@ -101,7 +101,7 @@
 
     ![2つの商品を追加する](./related-products-up-sells-and-cross-sells/images/04.png)
 
-これらの2つの商品が_Brake Pads_に関連付けられました。 この関係は単方向であることに注意してください。 つまり、_Brake Pads_を表示すると、新しい商品関係が表示されますが、_Brake Rotors_または_Brake Fluid_の商品を表示すると、_Brake Pads_は関連商品としてリストされ_ません_。
+これらの2つの商品が _Brake Pads_ に関連付けられました。 この関係は単方向であることに注意してください。 つまり、 _Brake Pads_ を表示すると、新しい商品関係が表示されますが、 _Brake Rotors_ または _Brake Fluid_ の商品を表示すると、 _Brake Pads_ は関連商品としてリストされ _ません_ 。
 
 商品関係を作成したら、［商品パブリッシャー］ウィジェットを設定して関係を表示します。
 
@@ -109,13 +109,13 @@
 
 ［商品パブリッシャー］ウィジェットを設定することにより、商品表示ページに商品関係を表示できます。 最初に[商品表示ページ](https://help.liferay.com/hc/en-us/articles/360017870292-Displaying-Product-Pages-)を用意する必要があります。
 
-1. 商品を検索します（たとえば、_Brake Pads_）。
+1. 商品を検索します（たとえば、 _Brake Pads_）。
 1. ［_Brake Pads_］をクリックして商品の詳細を表示します。
 1. ページの一番下までスクロールして、［_商品パブリッシャー_］ウィジェットにリストされている関連商品を表示します。
 
    ![設定メニュー](./related-products-up-sells-and-cross-sells/images/06.png)
 
-1. _3ドット_アイコン（［オプション］）→ ［_設定_］をクリックします。
+1. _3ドット_ アイコン（［オプション］）→ ［_設定_］をクリックします。
 1. ［_Data Source_］ドロップダウンメニューから［_Product Relations related_］を選択します。
 
     ![データソースを選択](./related-products-up-sells-and-cross-sells/images/03.png)

@@ -15,7 +15,7 @@
 1. ［_コントロールパネル_］ → ［_コマース_］ → ［_商品_］に移動します。
 1. 商品をクリックします。
 1. _Visibility_ タブをクリックします。
-1. _アカウントグループ_フィルターをアクティブにスライドします。
+1. _アカウントグループ_ フィルターをアクティブにスライドします。
 
     ![アカウントグループフィルターを有効にします。](./configuring-product-visibility-using-account-groups/images/01.png)
 
@@ -49,7 +49,7 @@
 
     ![アカウントグループメニューに移動します。](./configuring-product-visibility-using-account-groups/images/04.png)
 
-1. _アカウントグループ_フィルターをアクティブにスライドします。
+1. _アカウントグループ_ フィルターをアクティブにスライドします。
 1. （![Add icon](../../../images/icon-add.png)）アイコンをクリックします。
 
     ![アカウントグループメニューに移動します。](./configuring-product-visibility-using-account-groups/images/05.png)
