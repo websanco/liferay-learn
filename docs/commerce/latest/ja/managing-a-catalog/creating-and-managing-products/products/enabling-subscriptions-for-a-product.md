@@ -1,77 +1,65 @@
 # 商品のサブスクリプションを有効にする
 
-Liferay Commerceでは、ストアユーザーが商品のサブスクリプションを作成および管理できます。 定期購入の例には、雑誌、更新オプション付きのサービス契約、定期的に消費されるアイテムが含まれます（これらに限定されません）。
+Liferay Commerceでは、［[ Simple ](../product-types/creating-a-simple-product.md)］、 ［[グループ化済み](../product-types/creating-a-grouped-product.md)］、 ［[仮想](../product-types/creating-a-virtual-product.md)］ 商品のサブスクリプションを作成、管理することができます。 サブスクリションの例としては、雑誌、更新可能なサービス契約、そして定期的に消費される商品の自動注文などがあります。 Commerceでは、 ［*支払*］ と ［*配送* ］のサブスクリプションを提供しています。
+
+## 支払と配達のサブスクリプション
+
+［_支払のサブスクリプション_ ］は、電気代やNetflixのサブスクリプションに類似しています。 ここでは、サービスを継続するために、定期的に銀行口座から特定の金額が引き落とされます。
+
+```{important}
+支払のサブスクリプションは、PayPalまたは定期的な支払をサポートするその他のカスタム支払方法を使用する場合にのみ有効にできます。
+```
+
+［_配送のサブスクリプション_］は、雑誌のサブスクリプションに類似しています。 ここでは、一括払が前払され、定期的に出荷が行われる仕組みになっています。
+
+支払のサブスクリプションと配送のサブスクリプションの両方を組み合わせることで、商品またはいくつかの商品を発送する必要があり、そのために顧客に定期的に支払いを請求するシナリオに対応できます。
 
 ## 前提条件
 
 商品のサブスクリプションを有効にするには、ストア管理者は定期的な支払いをサポートする支払い方法をアクティブにする必要があります。 デフォルトでは、Liferay Commerceは定期的な支払い方法として [Paypal](../../../store-administration/configuring-payment-methods/paypal.md) をサポートしています。
 
-## 支払いサブスクリプションを有効にする
+## 商品のサブスクリプションを有効にする
 
-サブスクリプションは、 [シンプルな](../product-types/creating-a-simple-product.md)、 [グループ化された](../product-types/creating-a-grouped-product.md)、または [仮想](../product-types/creating-a-virtual-product.md) 商品のために有効にすることができます。 この例では、シンプル商品を使用しています。
+以下の手順で、商品のサブスクリプションを有効にします：
 
-1.  まだ作成していない場合は、 [シンプル商品](../product-types/creating-a-simple-product.md)作成します。
+1. ［*グローバルメニュー*］(![Global Menu](../../../images/icon-applications-menu.png))を開き、［*Commerce*］タブをクリックして、［*商品管理*］ &rarr; ［*商品*］に移動します。
 
-2.  次のように入力します：
+1. [ *サブスクリプション* ]タブをクリックします。
 
-      - **カタログ**：Sahara.com
-      - **名前**：マルチビタミン
+    ![商品のサブスクリプションタブをクリックします。](./enabling-subscriptions-for-a-product/images/02.png)
 
-    ![シンプル商品の作成](./enabling-subscriptions-for-a-product/images/01.png)
+1. トグルスイッチを使用して、［*支払のサブスクリプション*］および/または ［*配送のサブスクリプション*］を有効にします。
 
-3.  商品の作成が完了したら、[ *サブスクリプション* ]タブをクリックします。
+1. ［*サブスクリプションタイプ*］のフィールドを使用して、サブスクリプションの時間単位を選択します。
 
-    ![シンプル商品の作成](./enabling-subscriptions-for-a-product/images/02.png)
+   * 日
+   * 週
+   * 月
+   * 年
 
-4.  支払いサブスクリプションにはトグルスイッチを *有効* にする。
+   「週」、「月」、または「年」を選択した場合は、各ユニットが開始する曜日も決定する必要があります。
 
-5.  *Subscription Type* ドロップダウンメニューから *Month* を選択します。
+1. サブスクリプション期間の長さを設定するには、 *サブスクリプション期間* フィールドを使用します。
 
-6.  *Mode* ドロップダウンメニューから *Order Date* を選択します。」
+1. サブスクリプションを自動的に終了させるかどうかは、トグルスイッチで設定します。
 
-7.  *Subscription Length* ドロップダウンメニューから *1* を入力します。
+    ![支払のサブスクリプションを構成します。](./enabling-subscriptions-for-a-product/images/03.png)
 
-8.  *Never Ends* から *YES*に切り替えます。
+1. 完了したら、*［公開］*をクリックします。
 
-    ![支払いサブスクリプションを構成する](./enabling-subscriptions-for-a-product/images/03.png)
-
-9.  *[Publish]* ボタンをクリックします。
-
-この商品で支払いサブスクリプションが有効になりました。
-
-支払いサブスクリプションを有効にしたら、引き続き配信サブスクリプションを有効にできます。
-
-## 配信サブスクリプションを有効にする
-
-配信サブスクリプションを有効にするには：
-
-1.  配信サブスクリプションでトグルを *有効* に切り替えます。
-
-2.  *Subscription Type* ドロップダウンメニューから *Month* を選択します。
-
-3.  *Mode* ドロップダウンメニューから *Order Date* 選択します。
-
-4.  *Subscription Length* ドロップダウンメニューから *1* を入力します。
-
-5.  *Never Ends* から *YES*に切り替えます。
-
-    ![配信サブスクリプションを構成する](./enabling-subscriptions-for-a-product/images/04.png)
-
-6.  *[Publish]* ボタンをクリックします。
-
-この商品の配信サブスクリプションが有効になりました。
+これで、選択した商品のサブスクリプションが有効になります。
 
 ```{tip}
-定期的な支払いをサポートするために、他の支払い方法を実装できます。 詳細については、 [新しい支払い方法の実装](../../../developer-guide/implementing-a-new-payment-method.md) を参照してください。
+定期的な支払いをサポートするために、他の支払い方法を実装できます。 詳細は[Implementing a New Payment Method](../../../developer-guide/implementing-a-new-payment-method.md) を参照してください。
 ```
 
 ## 商品の詳細でのサブスクリプションの表示
 
-商品でサブスクリプションが有効になっている場合、ユーザーはカタログの商品詳細ウィジェットで支払いとサブスクリプションの詳細を表示できます。
+サブスクリプションの詳細は、商品の詳細ウィジェットを介して商品の表示ページに表示されます。
 
 ![支払いと配信のサブスクリプションの詳細は、商品詳細ウィジェットに表示されます。](./enabling-subscriptions-for-a-product/images/05.png)
 
 ## 追加情報
 
-  - [サブスクリプションの管理](../../../orders-and-fulfillment/subscriptions/managing-subscriptions.md)
-  - [サブスクリプション管理リファレンスガイド](../../../orders-and-fulfillment/subscriptions/subscription-administration-reference-guide.md)
+* [サブスクリプションの管理](../../../orders-and-fulfillment/subscriptions/managing-subscriptions.md)
+* [サブスクリプション管理リファレンスガイド](../../../orders-and-fulfillment/subscriptions/subscription-administration-reference-guide.md)

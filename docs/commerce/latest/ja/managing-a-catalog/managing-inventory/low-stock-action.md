@@ -1,36 +1,50 @@
-# 在庫不足アクション
+# 在庫数低下時のアクション
 
-この記事では、商品の在庫が指定されたしきい値を下回った場合の自動アクションを設定する方法について説明します。 Liferay Commerceでは、商品が定義された在庫しきい値に達したときに、その商品を自動的に非公開に設できるように事前に設定されています。
+Liferay Commerceでは、商品の在庫が指定されたしきい値を下回った場合の自動アクションを設定することができます。 Commerceには、通常 *未公開として設定*されている 在庫数低下時のアクションのみが含まれていますが、必要に応じて [カスタムの在庫数低下時のアクション](../../developer-guide/implementing-a-custom-low-stock-activity.md) を作成することができます。
 
-在庫不足アクションを設定するには：
+以下の手順で、商品の在庫数低下時のアクションを設定します：
 
-1.  *[Control Panel]* → *[Commerce]* → *[Products]* に移動します。
+1. ［*グローバルメニュー*］ (![Global Menu](../../images/icon-applications-menu.png))を開き、［*Commerce*］タブをクリックして、［*商品*］に移動します。
 
-2.  商品をクリックします（たとえば、*U-Joint*）。
+1. 目的の商品をクリックします。
 
-3.  *[Configurations]* サブタブをクリックします。
+1. *［設定］*タブをクリックします。
 
-4.  次のように入力します：
+1. ドロップダウンメニューで、 *［在庫数低下時のアクション］* を選択します。
 
-      - **Inventory Engine**：デフォルト
-      - **Availability Estimate**：5～7日
-      - **Display Availability**：YES
-      - **Display Stock Quantity**：YES
-      - **Low Stock Threshold**：5
-      - **Low Stock Action**：[Unpublished]として設定
-      - **Allow Back Orders**：Yes
-      - **Minimum Order Quantity**：1
-      - **Maximum Order Quantity**：5
-      - **Allowed Order Quantities**：1
-      - **Multiple Order Quantity**：1
+1. *［在庫数低下しきい値］* を入力して、アクションが自動的にトリガーされるタイミングを決定します。
 
-    ![在庫不足アクションの商品設定](./low-stock-action/images/01.png)
+1. *[公開]*をクリックします。
 
-5.  *[Publish]* をクリックします。
+一度設定されると、商品の在庫が設定されたしきい値を下回るたびに、選択された在庫数低下時のアクションがトリガーされます。
 
-この商品の在庫不足アクションが設定されました。 今後、在庫数が*5*を下回ると、「U-Joint」商品は非公開になります。
+## Commerce 2.1以前
+
+商品へのアクセスは、 _［コントロールパネル］_からできます。 在庫数低下時のアクションを設定するには：
+
+1. _［コントロールパネル］_ → _［コマース］_ → _［商品］_に移動します。
+1. 商品をクリックします（たとえば、_U-Joint_）。
+1. _［設定］_ サブタブをクリックします。
+1. 次のように入力します：
+    * **在庫エンジン**：デフォルト
+    * **在庫数の見積もり**：5～7日
+    * **顧客への在庫状態を表示**：YES
+    * **在庫量を表示**：YES
+    * **在庫数低下しきい値**：5
+    * **在庫数低下時のアクション**：未公開として設定
+    * **バックオーダーを許可**：Yes
+    * **最小注文数**：1
+    * **最大注文数**：5
+    * **許可される最大注文数**：1
+    * **複数注文数**：1
+
+    ![在庫数低下時のアクションの商品設定](./low-stock-action/images/01.png)
+
+1. _［公開］_をクリックします。
+
+この商品の在庫数低下時のアクションが設定されました。 今後、在庫数が_5_を下回ると、「U-Joint」商品は非公開になります。
 
 ## 追加情報
 
-  - [Product Inventory Configuration Reference](./product-inventory-configuration-reference.md)
-  - [Implementing a Custom Low Stock Action](../../developer-guide/implementing-a-custom-low-stock-activity.md)
+* [商品の在庫設定のリファレンス](./product-inventory-configuration-reference.md)
+* [在庫数低下時のアクションの実装](../../developer-guide/implementing-a-custom-low-stock-activity.md)

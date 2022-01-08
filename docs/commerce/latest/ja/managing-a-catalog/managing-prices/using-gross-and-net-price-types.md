@@ -1,20 +1,20 @@
 # グロス価格とネット価格タイプの使用
 
-Liferay Commerceでは、プロモーションや[割引](../../promoting-products/introduction-to-discounts.md)の計算にグロスまたはネットNetの価格タイプを使用することができます。 この設定は、 [価格表](../managing-price/creating-a-price-list.md)と[チャネル](../../starting-a-store/channels/introduction-to-channels.md)に対して構成されています。
+Liferay Commerceでは、プロモーションと割引の計算にグロスまたはネット価格タイプのいずれかを使用できます。 この設定は、 [価格表](../managing-prices/creating-a-price-list.md)と[チャネル](../../starting-a-store/channels/introduction-to-channels.md)に対して構成されています。
 
 ## 価格表の価格の種類を設定する
 
 以下の手順で、価格表の価格の種類を設定します。
 
-1.  *[グローバルメニュー]*（![Applications Menu icon](../../images/icon-applications-menu.png)）を開き、*[Commerce]* タブをクリックし、 *[価格表]* に進みます。
+1. *[グローバルメニュー]*（![Applications Menu icon](../../images/icon-applications-menu.png)）を開き、*[Commerce]*タブをクリックし、 *[価格表]*に進みます。
 
-2.  設定したい価格表をクリックします。
+1. 設定したい価格表をクリックします。
 
-3.  *[Details]* タブでは、 *[価格の種類]* のドロップダウンメニューを使用して、 *[ネット価格]* または*[グロス価格]* のいずれかを選択します。
+1. *[Details]*タブでは、 *[価格の種類]*のドロップダウンメニューを使用して、 *[ネット価格]*または*[グロス価格]*のいずれかを選択します。
 
     ![グロス価格またはネット価格のいずれかを選択します。](./using-gross-and-net-price-types/images/01.png)
 
-4.  完了したら、*[Publish]* をクリックします。
+1. 完了したら、*［公開］*をクリックします。
 
 選択した価格タイプは、この価格表のプロモーションや割引を計算する際の基準として使用されます。
 
@@ -22,13 +22,13 @@ Liferay Commerceでは、プロモーションや[割引](../../promoting-produc
 
 チャネルの価格タイプを設定することもできます。 以下の手順で行います。
 
-1.  *グローバルメニュー*（![Applications Menu icon](../../images/icon-applications-menu.png)）を開き、*Commerce*タブをクリックし、 *チャネル*に進みます。
+1. *グローバルメニュー*（![Applications Menu icon](../../images/icon-applications-menu.png)）を開き、*Commerce*タブをクリックし、 *チャネル*に進みます。
 
-2.  目的のチャネルをクリックします。
+1. 目的のチャネルをクリックします。
 
-3.  *[一般]* タブの*[価格]* セクションにおいて、*[価格の種類]* および*[割引対象の価格の種類]* のドロップダウンメニューを使用して、 *ネット価格*か*グロス価格*のいずれかを選択します。
+1. *［一般］*タブの*［価格］*セクションにおいて、*［価格の種類］*および*［割引対象の価格の種類］*のドロップダウンメニューを使用して、 *ネット価格*か*グロス価格*のいずれかを選択します。
 
-4.  完了したら、*[保存]* をクリックします。
+1. 完了したら、*[保存]*をクリックします。
 
     ![希望する価格の種類を選択し、終了したら「保存」をクリックします。](./using-gross-and-net-price-types/images/03.png)
 
@@ -40,20 +40,20 @@ Liferay Commerceでは、プロモーションや[割引](../../promoting-produc
 
 注文の詳細画面ページには、注文商品ごとに以下の情報が表示されます。
 
-  - SKU
-  - 名前
-  - 価格（ネット）
-  - 価格（グロス）
-  - 割引率（ネットまたはグロス）
-  - 割引（グロス）
-  - Quantity
-  - 合計（ネット）
-  - 合計（グロス）
+* SKU
+* 名前
+* 価格（ネット）
+* 価格（グロス）
+* 割引率（ネットまたはグロス）
+* 割引（グロス）
+* 数量
+* 合計（ネット）
+* 合計（グロス）
 
 単価、プロモーション価格、最終価格がチャネルに表示されると、チャネルがグロス価格を表示するように設定されている場合、システムではネットと税金が追加されます。
 
 ## 追加情報
 
-  - [割引について](../../promoting-products/introduction-to-discounts.md)
-  - [Creating a Price List](./creating-a-price-list.md)
-  - [チャネル管理](../../starting-a-store/channels/managing-channels.md)
+* [割引について](../../promoting-products/introduction-to-discounts.md)
+* [価格表の作成](./creating-a-price-list.md)
+* [チャネル管理](../../starting-a-store/channels/managing-channels.md)

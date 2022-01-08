@@ -1,36 +1,27 @@
 # シンプル商品の作成
 
-シンプル商品とは、在庫が追跡される物理的な商品です。 この記事では、ストアカタログに商品を追加する方法について詳しく説明します。 この手順には、基本的な商品設定（名前と説明）、商品オプションの適用、SKUの生成、および商品イメージ、仕様、分類などの他の重要な考慮事項に関する包括的な説明が含まれています。
+シンプル商品とは、在庫が追跡される物理的な商品です。 商品はストアのカタログに追加され、名前と説明が表示されます。 商品オプションを適用し、SKU、画像、仕様、そしてカテゴリー設定を生成することで、商品をさらに定義することができます。
 
 ## シンプル商品の作成
 
-1.  *[Control Panel]* → *[Commerce]* → *[Products]* に移動します。
+新しいシンプル商品を追加するには：
 
-2.  追加（![Add icon](../../../images/icon-add.png)）ボタンをクリックしてから、 *シンプル* をクリックします。
-
-3.  次のように入力します：
-
-      - **Catalog**：Sahara.com
-
-      - **Name**: 水ボトル
-
-      - **Short Description**: ステンレス製の水ボトル20オンス。
-
-      - **Friendly URL**: （自動生成）
-
-        ![商品の追加](./creating-a-simple-product/images/01.png)
-
-4.  *[Publish]* をクリックします。
+1. ［_グローバルアプリケーション_］メニュー &rarr; ［_Commerce_ ］&rarr; ［_商品_］に移動します。
+1. 追加（![Add icon](../../../images/icon-add.png)）ボタンをクリックしてから、 _シンプル_ をクリックします。
+1. 次のように入力します：
+   * **Catalog**：Sahara.com
+   * **Name**: 水ボトル
+1. _Submit_クリックし* 。</li> </ol>
 
 最初の商品エントリが作成されました。 引き続き商品の設定について学習します。
 
 ## 商品オプションの適用
 
-[商品オプション](../products/customizing-your-product-with-product-options.md)は、サイズ、数量、色などのさまざまなオプションを持つ商品を提供するための簡単で柔軟な方法を提供します。 *[Options]* サブタブをクリックして、商品にさまざまなオプションを追加します。
+[商品オプション](../products/using-product-options.md)は、サイズ、数量、色などのさまざまなオプションを持つ商品を提供するための簡単で柔軟な方法を提供します。 _［オプション］_サブタブをクリックして、商品にさまざまなオプションを追加します。
 
 ## SKUを生成する
 
-商品に商品オプションを適用したら、SKUを生成する必要があります。 SKUの生成方法の詳細については、記事[「Adding SKUs to Your Products」](../products/adding-skus-to-your-products.md)を参照してください。 *[SKUs]* サブタブをクリックして、SKUを生成します。
+商品に商品オプションを適用したら、SKUを生成する必要があります。 SKUの生成方法の詳細は、[Creating SKUs for Product Variants](../products/creating-skus-for-product-variants.md)を参照してください。 _［SKU］_サブタブをクリックして、SKUを生成します。
 
 ## 在庫の価格と数量を設定する
 
@@ -38,46 +29,30 @@ SKUが生成されたら、在庫で各アイテムの基本価格と数量を�
 
 ![商品SKU](./creating-a-simple-product/images/02.png)
 
-1.  *3ドット* アイコン（![Actions icon](../../../images/icon-actions.png)）をクリックし、次に *6*横にある *編集* をクリックします。 （この時点で、*[Details]* メニューでSKUの名前を*「6パック」*などのよりわかりやすい名前に変更できます。）
-
-2.  次のように入力します：
-
-      - **Price**: 19.99
-      - **Promo Price**: 0.00
-      - **Cost**: 0.00
+1. _3ドット_ アイコン（![Actions icon](../../../images/icon-actions.png)）をクリックし、次に _6_横にある _編集_ をクリックします。 （この時点で、_［詳細］_メニューでSKUの名前を_「6パック」_などのよりわかりやすい名前に変更できます。）
+1. 次のように入力します：
+    * **Price**: 19.99
+    * **Promo Price**: 0.00
+    * **Cost**: 0.00
 
     ![SKUの価格の編集](./creating-a-simple-product/images/03.png)
 
-3.  *[Publish]* をクリックします。
+1. _［公開］_をクリックします。
+1. 設定を閉じます
 
-4.  設定を閉じます
+価格設定の詳細は、[Introduction to Pricing](../../managing-prices/introduction-to-pricing.md)を参照してください。
 
-価格設定の詳細については、[Introduction to Product Pricing Methods](../../managing-prices/introduction-to-product-pricing-methods.md)を参照してください。
-
-商品の在庫を設定する方法については、[Setting Inventory by Warehouse](../../managing-inventory/setting-inventory-by-warehouse.md)を参照してください。
-
-### Liferay Commerce 2.0以前の価格と数量の設定
-
-商品の価格と数量を設定するには：
-
-1.  *3ドット*アイコンをクリックして、*[6]* の隣にある*[Edit]* をクリックします。 （この時点で、*[Details]* メニューでSKUの名前を*「6パック」*などのよりわかりやすい名前に変更できます。）
-2.  左側のメニューで *[Pricing]* をクリックします。
-3.  次のように入力します：
-      - **Price**: 12.00
-      - **Promo Price**: 0.00
-      - **Cost**: 0.00
-4.  *[Save]* をクリックします。 （[Promo Price]および[Cost]フィールドが00のままの場合、この時点では割引やプロモーションは適用されません。）
-5.  *[Price List]* をクリックして、この商品を既存の[価格リスト](../../managing-prices/adding-products-to-a-price-list.md)に適用します。
+商品の在庫を設定する方法については、[倉庫ごとの在庫設定](../../managing-inventory/setting-inventory-by-warehouse.md)を参照してください。
 
 ## 商品の仕様を設定する
 
-[商品仕様](../products/specifications.md)には、寸法、色、重量、容量、またはその他の属性など、商品に関する有用な商品情報が含まれています。 仕様を追加するには、*[Specifications]* サブタブをクリックします。
+[商品仕様](../products/specifications.md)には、寸法、色、重量、容量、またはその他の属性など、商品に関する有用な商品情報が含まれています。 仕様を追加するには、_［仕様］_サブタブをクリックします。
 
 ## 商品の画像と添付ファイルをアップロードする
 
-[商品画像](../products/product-images.md)があると、お客様は購入しているものについて把握しやすくなります。 各商品バリアント（SKU）には、独自の商品画像を関連付けることができます。 すべての商品画像を追加するには、*[Images]* サブタブをクリックします。
+[商品画像](../products/product-images.md)があると、お客様は購入しているものについて把握しやすくなります。 各商品バリアント（SKU）には、独自の商品画像を関連付けることができます。 すべての商品画像を追加するには、_［Images］_サブタブをクリックします。
 
-ストア管理者は、特定の商品に関連付けられた添付ファイルを追加することもできます。 ドキュメントを追加するには、*[Attachments]* サブタブをクリックします。
+ストア管理者は、特定の商品に関連付けられた添付ファイルを追加することもできます。 ドキュメントを追加するには、_［Attachments］_サブタブをクリックします。
 
 ## カテゴリによる分類
 
@@ -87,9 +62,42 @@ SKUが生成されたら、在庫で各アイテムの基本価格と数量を�
 
 [商品関係](../products/related-products-up-sells-and-cross-sells.md)は、商品を結びつけるのに使用できます。 関連付けると、商品には他の商品へのリンクが表示されます。 すべての関連商品を商品関係タイプに割り当てる必要があります。
 
+## Commerce 2.1およびそれ以前のバージョン
+
+### シンプル商品の作成
+
+1. _［コントロールパネル］_ → _［コマース］_ → _［商品］_に移動します。
+1. 追加（![Add icon](../../../images/icon-add.png)）ボタンをクリックしてから、 _シンプル_ をクリックします。
+1. 次のように入力します：
+   * **Catalog**：Sahara.com
+   * **Name**: 水ボトル
+   * **Short Description**: ステンレス製の水ボトル20オンス。
+   * **Friendly URL**: （自動生成）
+
+      ![商品の追加](./creating-a-simple-product/images/01.png)
+
+1. _［公開］_をクリックします。
+
+最初の商品エントリが作成されました。 引き続き商品の設定について学習します。
+
+### 価格と数量の設定
+
+商品の価格と数量を設定するには：
+
+1. _3ドット_アイコンをクリックして、_［6］_の隣にある_［編集］_をクリックします。 （この時点で、_［詳細］_メニューでSKUの名前を_「6パック」_などのよりわかりやすい名前に変更できます。）
+1. 左側のメニューで _［価格］_ をクリックします。
+1. 次のように入力します：
+    * **Price**: 12.00
+    * **Promo Price**: 0.00
+    * **Cost**: 0.00
+1. _［保存］_ をクリックします。 （［Promo Price］および［Cost］フィールドが00のままの場合、この時点では割引やプロモーションは適用されません。）
+1. _［Price List］_をクリックして、この商品を既存の[価格リスト](../../managing-prices/adding-products-to-a-price-list.md)に適用します。
+
+商品の価格とSKUを設定したら、商品オプションや仕様を追加する方法、または商品画像をアップロードする方法について、上記のセクションを参照してください。
+
 ## 追加情報
 
-  - [商品タイプについて](./introduction-to-product-types.md)
-  - [グループ商品の作成](./creating-a-grouped-product.md)
-  - [Creating a Virtual Product](./creating-a-virtual-product.md)
-  - [Setting Inventory by Warehouse](../../managing-inventory/setting-inventory-by-warehouse.md)
+* [商品タイプについて](./introduction-to-product-types.md)
+* [グループ商品の作成](./creating-a-grouped-product.md)
+* [仮想商品の作成](./creating-a-virtual-product.md)
+* [倉庫ごとの在庫設定](../../managing-inventory/setting-inventory-by-warehouse.md)

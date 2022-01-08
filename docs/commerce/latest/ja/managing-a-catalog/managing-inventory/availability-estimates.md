@@ -1,30 +1,58 @@
 # 入荷見積り
 
-この記事では、入荷見積りの作成方法について説明します。 商品の在庫がなくなった場合、ストアの所有者は顧客に商品の再入荷時期の見積もりを提供できます。
+商品の在庫がなくなった場合、ストアの所有者は顧客に商品の再入荷時期の見積もりを提供できます。
+
+[Accelerator ](../../starting-a-store/accelerators.md) を使用して Commerce Site を作成する場合、3つのサンプル見積もりが作成されます。
+
+次の手順に従って、独自の入荷見積もりを作成します：
+
+1. *［グローバルメニュー］*（![Global Menu](../../images/icon-applications-menu.png)）を開き、*［コマース］*タブをクリックし、 *［在庫数の見積もり］*に進みます。
+
+1. *追加*ボタン（![Add Button](../../images/icon-add.png)）をクリックします。
+
+    ![追加ボタンをクリックして、新しい在庫数の見積もりを作成します。](./availability-estimates/images/01.png)
+
+1. * Title *を入力します。 この値は、商品が再入荷されるまでの推定期間（例：3〜5日、3〜4週間、2〜3か月）である必要があります。
+
+   商品の詳細ウィジェットに次のように表示されます：「商品は[タイトル値]に入手可能になります。」
+
+1. *［重要度］* を入力して、見積書の表示順を決定します。
+
+1. *［保存］*をクリックします。
+
+作成した後は、 *顧客への在庫状態を表示* を有効にして入荷見積もりを商品に追加することができます。 商品の *［設定］* タブに移動し、目的の *［在庫数の見積もり］*を選択し、完了したら *［公開］* をクリックするだけです。
+
+![希望する在庫数の見積もりを選択します。](./availability-estimates/images/02.png)
+
+商品の在庫が0になると、選択された見積書が顧客に表示されます。
+
+![商品の在庫が0になると、選択された見積書が顧客に表示されます。](./availability-estimates/images/03.png)
+
+## Commerce 2.1以前
 
 [アクセラレータ](../../starting-a-store/accelerators.md)を使用してストアフロントを作成すると、入荷見積りのセットが作成されます。
 
-![入荷見積りの管理](./availability-estimates/images/01.png)
+![入荷見積りの管理](./availability-estimates/images/04.png)
 
 入荷見積りを作成するには：
 
-1.  *[Control Panel]* → *[Commerce]* → *[Settings]* に移動します。
-2.  *[Availability Estimates]* タブをクリックします。
-3.  （+）ボタンをクリックして、新しい見積りを追加します。
-4.  次のように入力します：
-      - Title：15～21日
-      - Priority：4.0
-5.  *[Save]* をクリックします。
+1. _［コントロールパネル］_ → _［コマース］_ → _［設定］_に移動します。
+1. _［在庫数の見積もり］_タブをクリックします。
+1. （+）ボタンをクリックして、新しい見積りを追加します。
+1. 次のように入力します：
+    * Title：15～21日
+    * Priority：4.0
+1. _［保存］_ をクリックします。
 
-新しい入荷見積りが追加されました。 優先順位は*4.0*に設定されているため、この期間はメニューの最後に表示されることに注意してください。
+新しい入荷見積りが追加されました。 優先順位は_4.0_に設定されているため、この期間はメニューの最後に表示されることに注意してください。
 
-![新しい入荷見積り](./availability-estimates/images/02.png)
+![新しい入荷見積り](./availability-estimates/images/05.png)
 
-在庫不足しきい値を設定すると、この入荷見積りオプションが*[Product Configuration]* → *[Inventory]* メニューに表示されます。
+在庫不足しきい値を設定すると、この入荷見積りオプションが_［商品の設定］_ → _［在庫］_メニューに表示されます。
 
-![[Inventory]ドロップダウンの入荷見積り](./availability-estimates/images/03.png)
+![［在庫］ドロップダウンの入荷見積り](./availability-estimates/images/06.png)
 
 ## 追加情報
 
-  - [Introduction to Managing Inventory](./introduction-to-managing-inventory.md)
-  - [Product Inventory Configuration Reference](./product-inventory-configuration-reference.md)
+* [在庫管理の概要](./introduction-to-managing-inventory.md)
+* [商品の在庫設定のリファレンス](./product-inventory-configuration-reference.md)
