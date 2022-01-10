@@ -2,7 +2,7 @@
 
 B2B販売ネットワークの組織構造は、組織機能を使用してLiferay Commerceにミラーリングできます。 組織はユーザーの階層的な配置であり、現実世界の組織階層をモデル化して、ユーザー、ロール、権限、アカウントの分散管理を簡素化できます。
 
-組織を組織の役割への権限の割り当てとともに使用すると、組織に割り当てられたユーザーは、その組織に定義された役割ベースの権限を自動的に継承します。<!-- The following sentence is removed because I read it and I don't know what specifically it's telling someone - maybe: Organizations (and sub-organizations) can have accounts assigned to them - ensuring that members of an organization have access to the right accounts at the right time.
+組織を組織の役割への権限の割り当てとともに使用すると、組織に割り当てられたユーザーは、その組織に定義された役割ベースの権限を自動的に継承します。 <!-- The following sentence is removed because I read it and I don't know what specifically it's telling someone - maybe: Organizations (and sub-organizations) can have accounts assigned to them - ensuring that members of an organization have access to the right accounts at the right time.
 
 For example, a B2B company can give everyone in their sales network access to the right Account information through their organizational membership.
 
