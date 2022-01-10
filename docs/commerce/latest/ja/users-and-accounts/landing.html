@@ -1,0 +1,48 @@
+<script type="module">
+	import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.esm.browser.min.js'
+
+	const page = new Vue({
+		el: '#landingPage',
+		data: {
+			cards: [
+				{
+					sectionName: 'Roles and Permissions',
+					sectionURL: 'users-and-accounts/roles-and-permissions.html',
+					subsections: [
+						{
+							name: 'Commerce Roles Reference',
+							url: 'users-and-accounts/roles-and-permissions/commerce-roles-reference.html'
+						},
+						{
+							name: 'Order Management Permissions',
+							url: 'users-and-accounts/roles-and-permissions/order-management-permissions.html'
+						},
+						{
+							name: 'Inventory Management Permissions',
+							url: 'users-and-accounts/roles-and-permissions/inventory-management-permissions.html'
+						},
+					]
+				},
+				{
+					sectionName: 'Account Management',
+					sectionURL: 'users-and-accounts/account-management.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'Creating a New Account',
+							url: 'users-and-accounts/account-management/creating-a-new-account.html'
+						},
+						{
+							name: 'Inviting Users to an Account',
+							url: 'users-and-accounts/account-management/inviting-users-to-an-account.html'
+						},
+						{
+							name: 'Adding Addresses to an Account',
+							url: 'users-and-accounts/account-management/adding-addresses-to-an-account.html'
+						}
+					]
+				}
+			]
+		}
+	})
+</script>

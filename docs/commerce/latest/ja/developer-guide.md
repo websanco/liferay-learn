@@ -1,28 +1,52 @@
-# 開発者ガイド
+開発者ガイド
+===============
 
-```{toctree}
-:maxdepth: 3
+.. toctree:: :maxdepth: 1
 
-developer-guide/catalog.md
-developer-guide/content.md
-developer-guide/managing-inventory.md
-developer-guide/order-management.md
-developer-guide/promotions.md
-developer-guide/sales.md
-```
+   developer-guide/introduction-to-the-liferay-commerce-developer-guide.md developer-guide/adding-a-new-discount-rule-type.md developer-guide/adding-a-new-product-data-source-for-the-product-publisher-widget.md developer-guide/adding-a-new-product-type.md developer-guide/implementing-a-custom-checkout-step.md developer-guide/implementing-a-custom-low-stock-activity.md developer-guide/implementing-a-custom-order-validator.md developer-guide/implementing-a-custom-product-content-renderer.md developer-guide/implementing-a-new-payment-method.md developer-guide/implementing-a-new-shipping-engine.md developer-guide/implementing-a-new-tax-engine.md developer-guide/implementing-an-exchange-rate-provider.md
 
-Liferay Commerce開発者ガイドへようこそ。このチュートリアルは、Liferay Commerceの機能を拡張するカスタムモジュールの実用例を迅速に実演することを目的としています。 各チュートリアルは、次の要素で構成されています：サンプルのビルドとデプロイ、コードサンプルを使用した関連実装のレビュー、およびサンプル自体の最終実装。 ここでは、さまざまな拡張ポイントを活用して、基本機能に追加する方法を説明します。
 
-使用可能な拡張ポイントごとにサンプルモジュールのデプロイをすばやく掘り下げることができます。 これで、独自のカスタマイズを使用して自分で構築する手順を実行できるようになります。
+はじめに
+---------------
 
-```{raw} html
-:file: landingpage_template.html
-```
+-  :doc:`/developer-guide/introduction-to-the-liferay-commerce-developer-guide`
 
-```{raw} html
-:file: developer-guide/landing.html
-```
+Liferay Commerceの拡張とカスタマイズ
+------------------------------------------
 
-## 参考資料
+カタログ
+~~~~~~~
 
-* [管理者API](https://app.swaggerhub.com/search?owner=liferayinc&query=%20commerce)
+-  :doc:`/developer-guide/adding-a-new-product-type`
+
+Content
+~~~~~~~
+
+-  :doc:`/developer-guide/implementing-a-custom-product-content-renderer`
+
+在庫管理
+~~~~~~~~~~~~~~~~~~
+
+-  :doc:`/developer-guide/implementing-a-custom-low-stock-activity`
+
+Marketing
+~~~~~~~~~
+
+-  :doc:`/developer-guide/adding-a-new-product-data-source-for-the-product-publisher-widget`
+
+Promotions
+~~~~~~~~~~
+- :doc:`/developer-guide/adding-a-new-discount-rule-type`
+セールス ~~~~~
+
+-  :doc:`/developer-guide/implementing-a-custom-order-validator`
+-  :doc:`/developer-guide/implementing-a-custom-checkout-step`
+-  :doc:`/developer-guide/implementing-a-new-tax-engine`
+-  :doc:`/developer-guide/implementing-a-new-shipping-engine`
+-  :doc:`/developer-guide/implementing-an-exchange-rate-provider`
+-  :doc:`/developer-guide/implementing-a-new-payment-method`
+
+参考資料
+-------------------
+
+-  `Admin APIs <https://app.swaggerhub.com/search?owner=liferayinc&query=%20commerce>`__

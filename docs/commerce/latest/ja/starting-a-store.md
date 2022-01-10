@@ -1,20 +1,29 @@
-# 店舗を開始
+ストアサイトを作成する
+================
 
-```{toctree}
-:maxdepth: 2
-starting-a-store/introduction-to-liferay-commerce.md
-starting-a-store/store-setup-overview.md
-starting-a-store/introduction-to-the-admin-account.md
-starting-a-store/accelerators.md
-starting-a-store/using-the-minium-accelerator-to-jump-start-your-b2b-store.md
-starting-a-store/sites-and-site-types.md
-starting-a-store/channels.md
-```
+.. toctree:: :maxdepth: 2
 
-```{raw} html
-:file: landingpage_template.html
-```
+   starting-a-store/introduction-to-liferay-commerce.md starting-a-store/store-setup-overview.md starting-a-store/introduction-to-the-admin-account.md starting-a-store/accelerators.md starting-a-store/using-the-minium-accelerator-to-jump-start-your-b2b-store.md
 
-```{raw} html
-:file: starting-a-store/landing.html
-```
+   starting-a-store/sites-and-site-types.md
+
+   starting-a-store/channels.rst
+
+-  :doc:`/starting-a-store/introduction-to-liferay-commerce`
+-  :doc:`/starting-a-store/store-setup-overview`
+-  :doc:`/starting-a-store/introduction-to-the-admin-account`
+-  :doc:`/starting-a-store/accelerators`
+-  :doc:`/starting-a-store/using-the-minium-accelerator-to-jump-start-your-b2b-store`
+
+サイト管理
+~~~~~~~~~~~~~~~
+
+-  :doc:`/starting-a-store/sites-and-site-types`
+
+Channels
+~~~~~~~~
+
+-  :doc:`/starting-a-store/channels/introduction-to-channels`
+-  :doc:`/starting-a-store/channels/managing-channels`
+-  :doc:`/starting-a-store/channels/configuring-product-visibility-using-channels`
+-  :doc:`/starting-a-store/channels/channels-reference-guide`

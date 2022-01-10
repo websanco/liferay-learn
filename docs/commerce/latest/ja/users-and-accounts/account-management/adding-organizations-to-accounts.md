@@ -2,23 +2,21 @@
 
 組織をアカウントに追加して、アカウントの管理を簡素化できます。 アカウントと組織を使用する方法についての詳細を学ぶには、 [販売ネットワークを作成するために組織を使用する](./using-organizations-to-create-a-sales-network.md)を参照してください。
 
-アカウントに既存の組織を追加するには、1） *アカウント管理* ウィジェットを使用する方法と2） *コントロールパネル*を使用する方法の2つがあります。 *コントロールパネル* へのアクセスは、通常、ストアまたはインストールの管理者権限を持つユーザーに制限されています。
+アカウントに既存の組織を追加するには、1） _アカウント管理_ ウィジェットを使用する方法と2） _コントロールパネル_を使用する方法の2つがあります。 _コントロールパネル_ へのアクセスは、通常、ストアまたはインストールの管理者権限を持つユーザーに制限されています。
 
 ## アカウント管理ウィジェットを使用する
 
-1.  左側のナビゲーションメニュー→ *アカウント管理*クリックします。
-
-2.  アカウントをクリックします（例： *South Bay Auto Parts Distributors*）。
-
-3.  *組織の追加* ボタンをクリックします。
+1. 左側のナビゲーションメニュー→ _アカウント管理_クリックします。
+1. アカウントをクリックします（例： _South Bay Auto Parts Distributors_）。
+1. _組織の追加_ ボタンをクリックします。
 
     ![組織の追加ボタン](./adding-organizations-to-accounts/images/01.png)
 
-4.  有効な組織を入力するか、リストから選択してください（例： *イタリア-南*）。
+1. 有効な組織を入力するか、リストから選択してください（例： _イタリア-南_）。
 
     ![ウィジェットで組織を追加する](./adding-organizations-to-accounts/images/02.png)
 
-5.  *Add Organization*クリックし* 。</p></li> </ol>
+1. _［組織の追加］_をクリックします 。
 
 組織は、アカウント管理ウィジェットを使用してアカウントに追加されました。
 
@@ -26,17 +24,30 @@
 
 ストアまたはインストールの管理者権限を持つユーザーは、コントロールパネルでアカウント情報を作成および更新できます。
 
-1.  コントロールパネル→ユーザー→アカウントに移動します。
+1. _［グローバルメニュー］_（![Applications Menu icon](../../images/icon-applications-menu.png)）→ _[コントロールパネル]_に移動します。
+1. _［アカウント］_をクリックします。
 
-2.  アカウントをクリックします（例： *South Bay Auto Parts Distributors*）。
+    ![グローバルメニューに移動し、アカウントメニューにアクセスする](./adding-organizations-to-accounts/images/04.png)
 
-3.  左側の[ *組織* ]をクリックします 。
+1. 左側の［ _組織_ ］をクリックします 。
+1. （+）ボタンをクリックして、新しい組織を追加します。
+1. 追加するすべての組織のチェックボックスをオンにします（例： _イタリア-南_）。
+1. 追加をクリックします。
 
-4.  （+）ボタンをクリックして、新しい組織を追加します。
+    ![コントロールパネルでの組織の追加](./adding-organizations-to-accounts/images/03.png)
 
-5.  追加するすべての組織のチェックボックスをオンにします（例： *イタリア-南*）。
+コントロールパネルを使用して、組織がアカウントに追加されました。
 
-6.  追加をクリックします。
+## Liferay Commerce 2.1以前
+
+ストアまたはインストールの管理者権限を持つユーザーは、コントロールパネルでアカウント情報を作成および更新できます。
+
+1. _コントロールパネル_ → _ユーザー_ → _アカウント_へ移動します。
+1. アカウントをクリックします（例： _South Bay Auto Parts Distributors_）。
+1. 左側の［ _組織_ ］をクリックします 。
+1. （+）ボタンをクリックして、新しい組織を追加します。
+1. 追加するすべての組織のチェックボックスをオンにします（例： _イタリア-南_）。
+1. 追加をクリックします。
 
     ![コントロールパネルでの組織の追加](./adding-organizations-to-accounts/images/03.png)
 
@@ -44,13 +55,6 @@
 
 ## 追加情報
 
-  - [Account Roles](../account-management/account-roles.md)
-  - [コマースロールの権限リファレンス](../account-management/commerce-roles-permissions-reference.md)
-  - [アカウントのイントロダクション](../account-management/introduction-to-accounts.md)
-
-
-<!-- This link is broken please update to point to correct article:
-
-* [Adding Users to Organizations](../account-management/adding-users-to-organizations.md)
-
--->
+* [アカウント管理](../account-management.md)
+* [アカウントのロール](./account-roles.md)
+* [組織へのユーザーの追加](https://learn.liferay.com/dxp/latest/en/users-and-permissions/organizations/adding-users-to-organizations.html)
