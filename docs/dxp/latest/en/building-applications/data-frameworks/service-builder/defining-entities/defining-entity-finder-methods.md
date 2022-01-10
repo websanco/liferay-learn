@@ -1,4 +1,4 @@
-# Defining Service Entity Finder Methods
+# Defining Entity Finder Methods
 
 Finder methods retrieve entity objects from the database based on specified parameters. For each finder defined, Service Builder generates several methods to fetch, find, remove, and count entity instances based on the finder's parameters.
 
@@ -14,14 +14,14 @@ Finders are easy to create:
 </finder> 
 ```
 
-The example above is among the simplest of finders, and is one you should always add if you're supporting multi-tenancy. This finder returns a collection of objects that belong to the Site on which your application has been placed. Service Builder generates finder-related methods (e.g., `fetchByGroupId`, `findByGroupId`, `removeByGroupId`, `countByGroupId`) for the your entities in the `*Persistence` and `*PersistenceImpl` classes. The first of these classes is the interface; the second is its implementation. For example, the Guestbook application generates its entity finder methods in the `-Persistence` classes found in the `/guestbook-api/src/main/java/com/liferay/docs/guestbook/service/persistence` folder and the `-PersistenceImpl` classes in the `/guestbook/src/main/java/com/liferay/docs/service/persistence/impl` folder.
+The example above is among the simplest of finders, and is one you should always add if you're supporting multi-tenancy. This finder returns a collection of objects that belong to the Site on which your application has been placed. Service Builder generates finder-related methods (e.g., `fetchByGroupId`, `findByGroupId`, `removeByGroupId`, `countByGroupId`) for the your entities in the `*Persistence` and `*PersistenceImpl` classes. The first of these classes is the interface; the second is its implementation. For example, Liferay's Blogs application generates its entity finder methods in the `-Persistence` classes found in the [`blogs-api/src/main/java/com/liferay/blogs/service/persistence`](https://github.com/liferay/liferay-portal/tree/master/modules/apps/blogs/blogs-api/src/main/java/com/liferay/blogs/service/persistence) folder and the `-PersistenceImpl` classes in the [`blogs-service/src/main/java/com/liferay/blogs/service/persistence/impl`](https://github.com/liferay/liferay-portal/tree/master/modules/apps/blogs/blogs-service/src/main/java/com/liferay/blogs/service/persistence/impl) folder.
 
 You're not limited to finding by one column, however; you can create multi-column finders:
 
 ```xml
-<finder name="G_S" return-type="Collection">
+<finder name="G_UT" return-type="BlogsEntry" unique="true">
 	<finder-column name="groupId" />
-	<finder-column name="status" />
+	<finder-column name="urlTitle" />
 </finder>
 ```
 
@@ -30,5 +30,3 @@ DO NOT create finders that use entity primary key as parameters. They're unneces
 ```
 
 Now you know to configure Service Builder to create finder methods for your entity. Terrific!
-
-Now that you've specified the service for your project, you're ready to *build* the service by running Service Builder. It's time to [run Service Builder and examine the code it generates](https://help.liferay.com/hc/en-us/articles/360030958811-Running-Service-Builder).
