@@ -43,7 +43,7 @@ To suspend or cancel a subscription order:
 1. Switch the _Never Ends_ toggle to _NO_.
 1. Enter **1** in the _Ends After_ field.
 1. Next, scroll down to the _Delivery Subscription_ section.
-1. Select _Suspended_ or _Cancelled_ from the _Status dropdown menu.
+1. Select _Suspended_ or _Cancelled_ from the _Status_ dropdown menu.
 
     ![Suspending or Cancelling an order](./managing-subscriptions/images/08.png)
 
