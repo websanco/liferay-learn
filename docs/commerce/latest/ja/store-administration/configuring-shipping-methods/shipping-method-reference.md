@@ -16,8 +16,9 @@
 
 ## 追加情報
 
-  - [配送方法の制限の適用](./applying-shipping-method-restrictions.md)
-  - [測定単位](./measurement-units.md)
-  - [Using FedEx as a Carrier Method](./using-the-fedex-shipping-method.md)
-  - [Using the Flat Rate Shipping Method](./using-the-flat-rate-shipping-method.md)
-  - [Using a Variable Rate Shipping Method](./using-the-variable-rate-shipping-method.md)
+* [配送方法の制限の適用](./applying-shipping-method-restrictions.md)
+* [測定単位](./measurement-units.md)
+* [FedExを運送業者の方法として使用する](./using-the-fedex-shipping-method.md)
+* [定額配送方法の使用](./using-the-flat-rate-shipping-method.md)
+* [可変レート配送方法を使う](./using-the-variable-rate-shipping-method.md)
+  

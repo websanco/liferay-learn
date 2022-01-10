@@ -6,81 +6,104 @@
 		data: {
 			cards: [
 				{
-					sectionName: 'Liferay Commerce設定の概要',
+					sectionName: 'Liferay Commerce Configuration Overview',
 					sectionURL: 'store-administration/liferay-commerce-configuration-overview.html',
 				},
 				{
-					sectionName: 'ロケールオプション',
+					sectionName: 'Locale Options',
 					sectionURL: 'store-administration/locale-options.html',
 				},
 				{
-					sectionName: 'リージョンの追加',
+					sectionName: 'Adding Regions',
 					sectionURL: 'store-administration/adding-regions.html',
 				},
 				{
-					sectionName: 'ストアメール',
+					sectionName: 'Sending Emails',
 					sectionURL: 'store-administration/sending-emails/store-emails.html',
+					showAll: false,
 					subsections: [
-          {
-							name: '通知テンプレートの使用',
-              url: 'store-administration/sending-emails/using-notification-templates.html'
+						{
+							name: 'Using Notification Templates',
+							url: 'store-administration/sending-emails/using-notification-templates.html'
 						},
 						{
-							name: 'Commerce 通知キューの設定',
-              url: 'store-administration/sending-emails/configuring-the-commerce-notification-queue.html'
+							name: 'Configuring the Commerce Notification Queue',
+							url: 'store-administration/sending-emails/configuring-the-commerce-notification-queue.html'
 						},
 						{
-							name: '通知テンプレート変数リファレンスガイド',
-              url: 'store-administration/sending-emails/notification-template-variables-reference-guide.html'
+							name: 'Notification Template Variables Reference Guide',
+							url: 'store-administration/sending-emails/notification-template-variables-reference-guide.html'
 						}
 					]
 				},
 				{
-					sectionName: '請求先または配送先として国を無効にする',
+					sectionName: 'Guest Checkout',
+					sectionURL: 'store-administration/guest_checkout.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'Guest Checkout Overview',
+							url: 'store-administration/guest-checkout/guest-checkout-overview.html'
+						},
+						{
+							name: 'Enabling Guest Checkout',
+							url: 'store-administration/guest-checkout/enabling-guest-checkout.html'
+						},
+					]
+				},
+				{
+					sectionName: 'Deactivating a Country for Billing or Shipping',
 					sectionURL: 'store-administration/deactivating-a-country-for-billing-or-shipping.html',
 				},
 				{
-					sectionName: '通貨',
+					sectionName: 'Currencies',
 					sectionURL: 'store-administration/currencies.html',
+					showAll: false,
 					subsections: [
+						{
+							name: 'Understanding the Currencies Hierarchy',
+							url: 'store-administration/currencies/understanding-the-currency-hierarchy.html'
+						},
 						{
 							name: 'Adding a New Currency',
 							url: 'store-administration/currencies/adding-a-new-currency.html'
 						},
 						{
-							name: '通貨リファレンス',
-							url: 'store-administration/currencies/currencies-reference.html'
+							name: 'Managing Exchange Rates',
+							url: 'store-administration/currencies/managing-exchange-rates.html'
 						},
 						{
-							name: '為替レートの管理',
-							url: 'store-administration/currencies/managing-exchange-rates.html'
+							name: 'Currencies Reference',
+							url: 'store-administration/currencies/currencies-reference.html'
 						}
 					]
 				},
 				{
-					sectionName: '税率の設定',
+					sectionName: 'Configuring Taxes',
 					sectionURL: 'store-administration/configuring_taxes.html',
+					showAll: false,
 					subsections: [
 						{
 							name: 'Creating Tax Categories',
 							url: 'store-administration/configuring-taxes/creating-tax-categories.html'
 						},
 						{
-							name: '住所別の税率の設定',
-							url: 'store-administration/configuring-taxes/setting-tax-rate-by-address.html'
+							name: 'Setting Rates for Tax Calculations',
+							url: 'store-administration/configuring-taxes/setting-rates-for-tax-calculations.html'
 						},
 						{
-							name: '固定税率の設定',
-							url: 'store-administration/configuring-taxes/setting-tax-rate-by-fixed-rate.html'
+							name: 'Applying Tax Rates',
+							url: 'store-administration/configuring-taxes/applying-tax-rates.html'
 						}
 					]
 				},
 				{
-					sectionName: '支払い',
+					sectionName: 'Configuring Payment Methods',
 					sectionURL: 'store-administration/configuring-payment-methods/payments.html',
+					showAll: false,
 					subsections: [
-            {
-							name: '支払方法の管理',
+						{
+							name: 'Managing Payment Methods',
 							url: 'store-administration/configuring-payment-methods/managing-payment-methods.html'
 						},
 						{
@@ -94,19 +117,20 @@
 					]
 				},
 				{
-							name: '配送方法',
+					sectionName: 'Configuring Shipping Methods',
 					sectionURL: 'store-administration/configuring-shipping-methods/shipping-methods.html',
+					showAll: false,
 					subsections: [
 						{
 							name: 'Shipping Methods',
 							url: 'store-administration/configuring-shipping-methods/shipping-methods.html'
 						},
 						{
-							name: '測定単位',
+							name: 'Measurement Units',
 							url: 'store-administration/configuring-shipping-methods/measurement-units.html'
 						},
 						{
-							name: '配送方法の制限の適用',
+							name: 'Applying Shipping Method Restrictions',
 							url: 'store-administration/configuring-shipping-methods/applying-shipping-method-restrictions.html'
 						},
 					]

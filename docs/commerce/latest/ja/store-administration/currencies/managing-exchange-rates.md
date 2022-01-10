@@ -8,19 +8,15 @@
 
 自動為替レート更新を有効にするには：
 
-1.  *[Control Panel]* → *[Commerce]* → *[Settings]* に移動します。
-
-2.  *[Currencies]* タブをクリックします。
-
-3.  *[Exchange Rate]* 画面をクリックします。
-
-4.  *[Exchange Rate Provider]* ドロップダウンメニューから*[European Central Bank]* を選択します。
-
-5.  *[Enable Auto-Update]* ラジオボタンを*[Yes]* に切り替えます。
+1. _［コントロールパネル］_ → _［コマース］_ → _［設定］_に移動します。
+1. _［通貨］_ タブをクリックします。
+1. _［為替レート］_画面をクリックします。
+1. _［通貨レートプロバイダー］_ドロップダウンメニューから_［為替レートプロバイダー］_を選択します。
+1. _［自動アップデートを有効にする］_ラジオボタンを_［はい］_に切り替えます。
 
     ![欧州中央銀行の換算を有効にする](./managing-exchange-rates/images/01.png)
 
-6.  *[Save]* をクリックします。
+1. _［保存］_ をクリックします。
 
 自動為替レートの更新が有効になりました。
 
@@ -28,19 +24,15 @@
 
 デフォルトでは、為替レートは60分ごとに更新されます。 為替レートが更新される頻度を増やすには：
 
-1.  *[Control Panel]* → *[Configuration]* → *[System Settings]* に移動します。
-
-2.  *[Commerce]* セクションで*[Pricing]* をクリックします。
-
-3.  *[Exchange Rate Auto-Update]* をクリックします。
-
-4.  値を分単位で入力します：120（2時間ごと）。
-
-5.  *[Enable Auto-Update]* チェックボックスをオンにします。
+1. _［コントロールパネル］_ → _［設定］_ → _［システム設定］_に移動します。
+1. _［コマース］_セクションで_［価格］_をクリックします。
+1. _［為替レートの自動更新］_をクリックします。
+1. 値を分単位で入力します：120（2時間ごと）。
+1. _［自動アップデートを有効にする］_チェックボックスをオンにします。
 
     ![通貨更新間隔の変更](./managing-exchange-rates/images/02.png)
 
-6.  *[Save]* をクリックします。
+1. _［保存］_ をクリックします。
 
 為替レートの自動更新が有効になり、2時間ごとに為替レートが更新されます。
 
@@ -48,18 +40,15 @@
 
 為替レートは、ストア管理者が手動で設定できます。
 
-1.  *[Control Panel]* → *[Commerce]* → *[Settings]* に移動します。
-
-2.  *[Currencies]* タブをクリックします。
-
-3.  既存の通貨をクリックします（たとえば、*Chinese Yuan Renminbi* ）。
-
-4.  *[Exchange Rate with US Dollar]* フィールドに新しい値を入力します（例：*6.96*）。
+1. _［コントロールパネル］_ → _［コマース］_ → _［設定］_に移動します。
+1. _［通貨］_ タブをクリックします。
+1. 既存の通貨をクリックします（たとえば、_Chinese Yuan Renminbi_ ）。
+1. _［米ドルの為替レート］_フィールドに新しい値を入力します（例：_6.96_）。
 
     ![為替レートを手動で変更する](./managing-exchange-rates/images/03.png)
 
-5.  *[Save]* をクリックします。
+1. _［保存］_ をクリックします。
 
 ## 追加情報
 
-  - [Implementing an Exchange Rate Provider](../../developer-guide/implementing-an-exchange-rate-provider.md)
+* [為替レートプロバイダーの実装](../../developer-guide/implementing-an-exchange-rate-provider.md)

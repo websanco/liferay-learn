@@ -1,25 +1,41 @@
-# Creating Tax Categories
+# 税区分の作成
 
-税カテゴリは、ストア内の1つ以上の税計算のコンテナです。 税カテゴリは作成する必要が *最初の* 税のいずれかのタイプを適用する前に。 商品に異なる税カテゴリを割り当てることで、商品に異なる課税を行うことができます。
+Liferay Commerceは、税カテゴリーを使用して、チャネル商品と送料に税率を適用して、税率を保存します。 税務カテゴリーが作成されると、Tax Calculation Enginesを使用して、 [複数の税率](./setting-rates-for-tax-calculations.md) を追加することができます。 これらのレートは、作成されたチャネルに対して適用されます。 その後、チャネル商品や送料に税カテゴリーを割り当てることで、それらに[税率を適用](applying-tax-rates.md)することができます。
 
-新しい税カテゴリを作成するには：
+```{note}
+税カテゴリーは税率のコンテナとして機能し、商品または送料に税率を適用する前に作成する必要があります。
+```
 
-1.  *[Control Panel]* → *[Commerce]* → *[Settings]* に移動します。
+次の手順に従って、新しい税カテゴリーを作成します：
 
-2.  [ *Tax Categories* ]タブをクリックします。
+1. *グローバルメニュー* (![Global Menu](../../images/icon-applications-menu.png))を開き、*［コマース］* タブの*［税カテゴリー］*に移動します。
+
+1. *追加*ボタン（![Add icon](../../images/icon-add.png)）をクリックします。
+
+1. 税カテゴリーに *名前* を入力します。
+
+1. 必要に応じて、 *説明* および *外部参照コード*を入力します。
+
+1. *［保存］*をクリックしたら、新しい税カテゴリーの完成です。
+
+作成したら、各チャネルの税カテゴリーに税率を追加できます。 詳細は、 [Setting Rates for Tax Calculations](./setting-rates-for-tax-calculations.md) を参照してください。
+
+## Commerce 2.1以前
+
+1. _［コントロールパネル］_ → _［コマース］_ → _［設定］_に移動します。
+1. ［ _税カテゴリー_ ］タブをクリックします。
 
     ![税のカテゴリは、商取引の設定にあります。](./creating-tax-categories/images/03.png)
 
-3.  Add Tax Category（![Add icon](../../images/icon-add.png)）ボタンをクリックします。
+1. Add Tax Category（![Add icon](../../images/icon-add.png)）ボタンをクリックします。
+1. 次のように入力します：
 
-4.  次のように入力します：
-
-      - **名前**：ホリデースペシャル
-      - **説明**：休日の税金
+    * **名前**：ホリデースペシャル
+    * **説明**：休日の税金
 
     ![新しい税カテゴリを追加します。](./creating-tax-categories/images/04.png)
 
-5.  *[Save]* をクリックします。
+1. _［保存］_ をクリックします。
 
 新しい税カテゴリが作成されました。
 
@@ -27,23 +43,19 @@
 
 新しい税カテゴリを作成するには：
 
-1.  *[Site Administration]* → *[Commerce]* → *[Settings]* に進みます。
-
-2.  *消費税* タブをクリックします。
-
-3.  *消費税カテゴリー* サブタブをクリックします。
-
-4.  [Add Tax Category] ボタンをクリックします。
-
-5.  説明を入力してください。
+1. _［サイト管理］_ → _［コマース］_ → _［設定］_ に進みます。
+1. _消費税_ タブをクリックします。
+1. _消費税カテゴリー_ サブタブをクリックします。
+1. _[税種類を追加]_ ボタンをクリックします。
+1. 説明を入力してください。
 
     ![税カテゴリを追加する](./creating-tax-categories/images/01.png)
 
-6.  *[Save]* をクリックします。
+1. _［保存］_ をクリックします。
 
 税カテゴリがストアで使用できるようになりました。
 
 ## 追加情報
 
-  - [Setting Tax Rates by Address](../configuring-taxes/setting-tax-rate-by-address.md)
-  - [固定税率の設定](../configuring-taxes/setting-tax-rate-by-fixed-rate.md)
+* [税計算のためのレート設定](./setting-rates-for-tax-calculations.md)
+* [税率の適用](./applying-tax-rates.md)

@@ -14,4 +14,4 @@ Liferay Commerceには4つの支払い方法が付属しています。 郵便�
 
 ## 追加情報
 
-  - [Managing Payment Methods](../configuring-payment-methods/managing-payment-methods.md)
+* [支払い方法の管理](../configuring-payment-methods/managing-payment-methods.md)

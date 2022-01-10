@@ -14,23 +14,23 @@ Eメールの入力後、ゲストはログインするか、アカウントを�
 
 ゲストが注文を送信すると、他の注文と同じように処理されます。 詳細は、 [「注文の処理」](../../orders-and-fulfillment/orders/processing-an-order.md) を参照してください。
 
-```{note}
-ゲストは、たとえ同じメールアドレスを持っていても、認証された他のユーザーと注文履歴を共有することはありません。
+```note::
+   ゲストは、たとえ同じメールアドレスを持っていても、認証された他のユーザーと注文履歴を共有することはありません。
 ```
 
 ## ゲストのチェックアウト認証ページの作成
 
-ゲストチェックアウトには、[サイトページ](https://learn.liferay.com/dxp/7.x/en/site-building/creating_pages.html)に*ゲストのチェックアウト認証*ウィジェットを設置する必要があります。 このページとウィジェットを生成するには、 [チャネル設定](../../starting-a-store/channels/channels-reference-guide.md) のヘルスチェック機能を使用します。
+ゲストチェックアウトには、[サイトページ](https://learn.liferay.com/dxp/latest/en/site-building/creating_pages.html)に_ゲストのチェックアウト認証_ウィジェットを設置する必要があります。 このページとウィジェットを生成するには、 [チャネル設定](../../starting-a-store/channels/channels-reference-guide.md) のヘルスチェック機能を使用します。
 
-*[Continue as a Guest]* をクリックすると、顧客はログインしたりアカウントを作成したりすることなく、購入を完了することができます。
+_［ゲストとして続行］_をクリックすると、顧客はログインしたりアカウントを作成したりすることなく、購入を完了することができます。
 
 ![別のオプションは、ゲストのチェックアウト認証ウィジェットです。](./guest-checkout-overview/images/02.png)
 
-この認証ページが存在しない場合、ゲストは *チェックアウト*ウィジェットのあるページにリダイレクトされます。
+この認証ページが存在しない場合、ゲストは _チェックアウト_ウィジェットのあるページにリダイレクトされます。
 
 ## 追加情報
 
-  - [ゲストチェックアウトの有効化](./enabling-guest-checkout.md)
-  - [チャネルについて](../../starting-a-store/channels/introduction-to-channels.md)
-  - [チャネル管理](../../starting-a-store/channels/managing-channels.md)
-  - [チャンネルリファレンスガイド](../../starting-a-store/channels/channels-reference-guide.md)
+* [ゲストチェックアウトの有効化](./enabling-guest-checkout.md)
+* [チャネルについて](../../starting-a-store/channels/introduction-to-channels.md)
+* [チャネル管理](../../starting-a-store/channels/managing-channels.md)
+* [チャネルリファレンスガイド](../../starting-a-store/channels/channels-reference-guide.md)
