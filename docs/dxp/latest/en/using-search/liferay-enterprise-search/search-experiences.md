@@ -28,4 +28,4 @@ Liferay Search Experiences is available to Liferay DXP customers with a [Liferay
 
 * In Liferay DXP 7.4 Search Experiences is a bundled application, like all the LES apps.
     <!-- starting with DXP 7.4 UpdateX. (X to be specified). There will also be a Feature Flag to enable the feature. (https://issues.liferay.com/browse/LPS-142956) -->
-* In Liferay DXP 7.3 Search Experiences is available to LES subscribers through the Customer Portal as an add-on application. See [Liferay Enterprise Search for Liferay DXP 7.3](https://customer.liferay.com/downloads/-/download/liferay-enterprise-search-for-liferay-dxp-7-3).
+* In Liferay DXP 7.3 Search Experiences will be made available to LES subscribers through the Customer Portal as an add-on application. See [Liferay Enterprise Search for Liferay DXP 7.3](https://customer.liferay.com/downloads/-/download/liferay-enterprise-search-for-liferay-dxp-7-3).

@@ -22,7 +22,7 @@ To create Search Blueprints,
         ![Reindex the SXPElement model to see all the out of the box elements.](./creating-and-managing-search-blueprints/images/09.png)
         ```
 
-   - [Configurations](#adding-configurations): Configure advanced settings (e.g., Sorts or Aggregations) in the search.
+   - [Configuration](#adding-configurations): Configure advanced settings (e.g., Sorts or Aggregations) in the search.
 
 1. Test the Blueprint as you build and configure it. Click _Preview_ and enter a search keyword.
 
