@@ -23,7 +23,7 @@
     * **Description**：新規注文テンプレート
     * **Type**： Order Placed
     * **有効**：トグルを ［_YES_］ に切り替えます.
-    * **From Address**：ストアのメールアドレス（例： _<1>orders@yourstore.com_）
+    * **From Address**：ストアのメールアドレス（例： _orders@yourstore.com_）
     * **From Name**：ストアまたは顧客サービス担当者の名前
     * **Subject**：メールの件名（例： _ご注文を受け取りました_）
     * **本文**：メッセージを入力します。 `[%ORDER_CREATOR%]` や `[%ORDER_ID%]` などの変数を使用して、それぞれ顧客の名前と注文IDを表すことができます。 詳細は、 [通知テンプレート変数リファレンスガイド](./notification-template-variables-reference-guide.md) を参照してください。
@@ -86,7 +86,7 @@ Commerce 2.0以下でメール通知を作成するには：
     * **Name**：新規注文
     * **Description**：新規注文テンプレート
     * **Account Groups**：（空白のままにするか、**オプションの**アカウントグループを指定します）
-    * **From Address**：ストアのメールアドレス（例： _<1>orders@yourstore.com_）
+    * **From Address**：ストアのメールアドレス（例： _orders@yourstore.com_）
     * **From Name**：ストアまたは顧客サービス担当者の名前
     * **Type**： Order Placed
     * **有効**：トグルを ［_YES_］ に切り替えます

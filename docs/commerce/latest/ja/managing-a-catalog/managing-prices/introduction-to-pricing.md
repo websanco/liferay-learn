@@ -9,7 +9,7 @@ Liferay Commerceでは、商品の価格を微調整するための価格設定�
 * [Commerceが注文価格を計算する方法](#how-commerce-calculates-order-prices)
 
 ```{note}
-   以下の概要では、Commerce Pricing Engine v2.0について説明しています。 このエンジンバージョンは、Commerce 3.0およびPortal/DXP 7.3で使用されているデフォルトのアルゴリズムです。 Commerce 2.1.x以前のバージョンでは、デフォルトでCommerceの`Pricing Engine v1.0 <#pricing-engine-v1-0-reference>`_を使用しています。 必要に応じて、インスタンスで使用されているPricing Engineのバージョン <#enabling-pricing-engine-v2-0-in-commerce-2-1-x>`_を変更することができます。
+   以下の概要では、Commerce Pricing Engine v2.0について説明しています。 このエンジンバージョンは、Commerce 3.0およびPortal/DXP 7.3で使用されているデフォルトのアルゴリズムです。 Commerce 2.1.x以前のバージョンでは、デフォルトでCommerceの [Pricing Engine v1.0](#pricing-engine-v1-0-reference) を使用しています。 必要に応じて、インスタンスで使用されている [Pricing Engineのバージョン](#enabling-pricing-engine-v2-0-in-commerce-2-1-x) を変更することができます。
 ```
 
 ## Commerceの価格設定システムのコンポーネント

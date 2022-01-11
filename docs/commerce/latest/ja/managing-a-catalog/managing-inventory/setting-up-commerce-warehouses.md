@@ -5,7 +5,7 @@ Commerce倉庫は、商品の在庫が保管されている物理的な場所を
 [Accelerator ](../../starting-a-store/accelerators.md)を使用して Commerce Site を作成する場合、3つのサンプル倉庫が作成されます。
 
 ```{note}
-   Commerce倉庫を設定するとき、ユーザーは最初に倉庫の該当する国および地域の場所（州または県）を有効にする必要がある場合があります。 詳細は、 `リージョンの追加 <../../store-administration/adding-regions.md>`_ を参照してください。
+   Commerce倉庫を設定するとき、ユーザーは最初に倉庫の該当する国および地域の場所（州または県）を有効にする必要がある場合があります。 詳細は、 [リージョンの追加](../../store-administration/adding-regions.md) を参照してください。
 ```
 
 ## 倉庫の追加

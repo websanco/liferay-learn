@@ -3,7 +3,7 @@
 カタログ権限とは、カタログやその関連商品を表示および変更できるユーザーを決定する機能です。 システム管理ユーザーにはデフォルトでこの権限が付与されており、この権限をシステムに追加された新しいロールに追加することができます。
 
 ```{note}
-   個々の商品の表示権限は、その権限が使用できるチャネルを変更することで管理されます。 詳細は、`Configuring Product Visibility Using Channels <../../starting-a-store/channels/configuring-product-visibility-using-channels.md>`_を参照してください。
+   個々の商品の表示権限は、その権限が使用できるチャネルを変更することで管理されます。 詳細は、[Configuring Product Visibility Using Channels](../../starting-a-store/channels/configuring-product-visibility-using-channels.md) を参照してください。
 ```
 
 ## 既存ロールへのカタログ管理権限の追加
