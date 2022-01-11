@@ -1,7 +1,7 @@
 # 注文ワークフローの有効化または無効化
 
 [注文ワークフロー](./introduction-to-order-workflows.md) は、チャネル別に設定できるワークフローで、注文が [処理](../orders/processing-an-order.md)される前に、買い手または売り手が事前
-に承</1>認をできるようにします。 ワークフローを有効にする方法については、 [ワークフローのアクティブ化](https://learn.liferay.com/dxp/latest/en/process-automation/workflow/using-workflows/activating-workflow.html)。を参照してください。</p> 
+に [承認](./approving-or-rejecting-orders-in-order-workflows.md) をできるようにします。 ワークフローを有効にする方法については、 [ワークフローのアクティブ化](https://learn.liferay.com/dxp/latest/en/process-automation/workflow/using-workflows/activating-workflow.html)。を参照してください。
 
 この記事では、注文ワークフローを有効または無効にする方法について説明します。
 

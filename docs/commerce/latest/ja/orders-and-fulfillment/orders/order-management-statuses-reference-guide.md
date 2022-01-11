@@ -4,7 +4,7 @@
 
 Liferay Commerceのすべての注文には、 [注文情報](./order-information.md) とそれに関連付けられた注文管理ステータスがあります。
 
-この記事では、[*注文*メニュー](./orders-menu-reference-guide.md)にある、<1>*注文*、*支払いステータス*、および*ワークフローステータス*の3つの注文管理ステータスタイプについてレビューします。
+この記事では、[*注文*メニュー](./orders-menu-reference-guide.md)にある、*注文*、*支払いステータス*、および*ワークフローステータス*の3つの注文管理ステータスタイプについてレビューします。
 
 ![注文管理ステータス](./order-management-statuses-reference-guide/images/01.png)
 

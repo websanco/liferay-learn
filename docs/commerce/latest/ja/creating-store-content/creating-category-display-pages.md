@@ -10,7 +10,7 @@
 
 1. ストアに新しい _ウィジェットページ_ を作成し、 _カテゴリーコンテンツ_ ウィジェットとその他の必要なページ要素を一緒に追加します。
 
-1. ［_グローバルメニュー_ (![Global Menu](../images/icon-applications-menu.png))］&rarr; Commerce タブ&rarr; ［_Store Management_ ］&rarr; ［_チャネル_］をクリックします。</0>
+1. ［_グローバルメニュー_(![Global Menu](../images/icon-applications-menu.png))］&rarr; Commerce タブ&rarr; ［_Store Management_］&rarr; ［_チャネル_］をクリックします。
 
 1. ［_チャネル_ ］を選択し、 ［_Category Display Pages_ ］タブをクリックします。 デフォルトのカテゴリー表示ページのセクションで、［_Choose_ ］をクリックし、作成したページを選択します。
 
@@ -28,7 +28,7 @@ Liferay DXP 7.3以前のバージョンでは、「チャネル設定」の「�
 
 1. 新しい[_ウィジェットページ_](https://learn.liferay.com/dxp/latest/en/site-building/creating-pages/understanding-pages/understanding-pages.html#widget-pages)を作成し、_カテゴリーコンテンツ_ ウィジェットとその他の必要なページ要素をそこに追加します。
 
-1. ［_グローバルメニュー_ (![Global Menu](../images/icon-applications-menu.png))］&rarr; Commerce タブ&rarr; ［_Store Management_ ］&rarr; ［_チャネル_］をクリックします。</0>
+1. ［_グローバルメニュー_(![Global Menu](../images/icon-applications-menu.png))］&rarr; Commerce タブ&rarr; ［_Store Management_］&rarr; ［_チャネル_］をクリックします。
 
 1. 目的の ［_チャネル_］を選択し、 ［_カテゴリー表示ページタブ_］をクリックし、［ _追加_ ］ボタン（![Add Button](../images/icon-add.png)）をクリックします。
 
