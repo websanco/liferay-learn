@@ -1,6 +1,6 @@
-# Step 7: Connecting the VPN
+# Stage 7: Connecting the VPN
 
-Now that your Elasticsearch configurations are deployed to DXP Cloud, the last step to complete your migration is to connect your Cloud environment to your private network if necessary. This involves configuring (or updating) your VPN server and then setting up the connection on the DXP Cloud console.
+Now that your Elasticsearch configurations are deployed to DXP Cloud, the last stage of migration is to connect your Cloud environment to your private network if necessary. This involves configuring (or updating) your VPN server and then setting up the connection on the DXP Cloud console.
 
 You may need to connect your DXP Cloud environment to a VPN if:
 

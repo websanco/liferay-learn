@@ -1,6 +1,6 @@
-# Step 3: Uploading and Restoring the Data Backup
+# Stage 3: Uploading and Restoring the Data Backup
 
-With your Liferay DXP database and document library in a usable format, the next step is to upload them together as a single backup to DXP Cloud and restore them to your chosen environment.
+With your Liferay DXP database and document library in a usable format, the next stage is to upload them together as a single backup to DXP Cloud and restore them to your chosen environment.
 
 ## Upload the Backup
 

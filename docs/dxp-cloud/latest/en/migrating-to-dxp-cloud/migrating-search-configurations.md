@@ -1,6 +1,6 @@
-# Step 6: Migrating Search Configurations
+# Stage 6: Migrating Search Configurations
 
-Now that your web server configurations are deployed to DXP Cloud, the next step is to migrate your search configurations. This involves migrating your search engine to Elasticsearch (if needed), and deploying all of your Elasticsearch configuration files and plugins to your DXP Cloud environments.
+Now that your web server configurations are deployed to DXP Cloud, the next stage of migration is to migrate your search configurations. This involves migrating your search engine to Elasticsearch (if needed), and deploying all of your Elasticsearch configuration files and plugins to your DXP Cloud environments.
 
 ## Migrate Your Search Engine to Elasticsearch
 
@@ -84,7 +84,7 @@ Run Git commands to submit your changes using any terminal with Git installed.
 1. Make a commit with your changes and a message:
 
     ```bash
-    git commit -m "DXP Cloud Migration Step 6"
+    git commit -m "DXP Cloud Migration Stage 6"
     ```
 
 1. Push the changes to GitHub:

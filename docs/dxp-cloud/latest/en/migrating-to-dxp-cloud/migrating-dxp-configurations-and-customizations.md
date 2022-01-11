@@ -1,6 +1,6 @@
-# Step 4: Migrating DXP Configurations and Customizations
+# Stage 4: Migrating DXP Configurations and Customizations
 
-Now that your database and document library are applied to your DXP Cloud environment, the next step is to migrate your on-premises Liferay installation's configurations and custom code. This involves organizing property files, OSGi configurations, and custom modules, themes, and WAR files to the appropriate folders before deployment.
+Now that your database and document library are applied to your DXP Cloud environment, the next stage of migration is to migrate your on-premises Liferay installation's configurations and custom code. This involves organizing property files, OSGi configurations, and custom modules, themes, and WAR files to the appropriate folders before deployment.
 
 ## Organize Configuration Files
 
@@ -60,7 +60,7 @@ Run Git commands to submit your changes using any terminal with Git installed.
 1. Make a commit with your changes and a message:
 
     ```bash
-    git commit -m "DXP Cloud Migration Step 4"
+    git commit -m "DXP Cloud Migration Stage 4"
     ```
 
 1. Push the changes to GitHub:

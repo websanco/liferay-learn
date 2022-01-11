@@ -1,6 +1,6 @@
-# Step 1: Matching DXP Versions
+# Stage 1: Matching DXP Versions
 
-For migration to work seamlessly, your on-premises system and your DXP Cloud environment both need to run the same version of Liferay. The first step of migration is to configure the Liferay service running on DXP Cloud to run the same version of the installation you want to migrate.
+For migration to work seamlessly, your on-premises system and your DXP Cloud environment both need to run the same version of Liferay. The first stage of migration is to configure the Liferay service running on DXP Cloud to run the same version of the installation you want to migrate.
 
 This involves cloning the DXP Cloud repository, making some version updates to it, and then applying such updates back to DXP Cloud by deploying a build.
 
@@ -133,7 +133,7 @@ Run Git commands to submit your changes using any terminal with Git installed.
 1. Make a commit with your changes and a message:
 
     ```bash
-    git commit -m "DXP Cloud Migration Step 1"
+    git commit -m "DXP Cloud Migration Stage 1"
     ```
 
 1. Push the changes to GitHub:

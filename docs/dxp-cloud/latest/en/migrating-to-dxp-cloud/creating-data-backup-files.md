@@ -1,6 +1,6 @@
-# Step 2: Creating Data Backup Files
+# Stage 2: Creating Data Backup Files
 
-Now that the Liferay versions match between your on-premises and DXP Cloud environments, you must prepare the data from your installation for migration. This step involves creating a database dump, migrating the document library store, and compressing the document library into an archive.
+Now that the Liferay versions match between your on-premises and DXP Cloud environments, you must prepare the data from your installation for migration. This stage of migration involves creating a database dump, migrating the document library store, and compressing the document library into an archive.
 
 ```{warning}
 The combined size of your database dump and (compressed) document library archive must not exceed 2 TB for you to upload in the next step without contacting DXP Cloud Support.
@@ -71,7 +71,7 @@ Run Git commands to submit your changes using any terminal with Git installed.
 1. Make a commit with your changes and a message:
 
     ```bash
-    git commit -m "DXP Cloud Migration Step 2"
+    git commit -m "DXP Cloud Migration Stage 2"
     ```
 
 1. Push the changes to GitHub:

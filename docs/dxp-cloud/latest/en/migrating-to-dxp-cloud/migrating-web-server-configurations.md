@@ -1,6 +1,6 @@
-# Step 5: Migrating Web Server Configurations
+# Stage 5: Migrating Web Server Configurations
 
-Now that your Liferay configurations and customizations are deployed to DXP Cloud, the next step is to migrate your web server configurations. This involves migrating your web server to Nginx (if needed), and deploying all of your Nginx configuration files and customizations (shell scripts and static content) to your DXP Cloud environments.
+Now that your Liferay configurations and customizations are deployed to DXP Cloud, the next stage is to migrate your web server configurations. This involves migrating your web server to Nginx (if needed), and deploying all of your Nginx configuration files and customizations (shell scripts and static content) to your DXP Cloud environments.
 
 ## Migrate Your Web Server to Nginx
 
@@ -63,7 +63,7 @@ Run Git commands to submit your changes using any terminal with Git installed.
 1. Make a commit with your changes and a message:
 
     ```bash
-    git commit -m "DXP Cloud Migration Step 5"
+    git commit -m "DXP Cloud Migration Stage 5"
     ```
 
 1. Push the changes to GitHub:
