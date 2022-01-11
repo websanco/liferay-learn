@@ -1,7 +1,6 @@
 # What's New in Liferay DXP 7.3
 
-The latest release of Liferay DXP has been improved across the board. From page building to design, from content authoring and publication management to search engine optimization and content performance, from the new App Builder to the API Explorer, you'll find a wide range of improvements to help you build your site, analyze your traffic, manage documents, or create the applications you need to be successful. 
-
+The latest release of Liferay DXP has been extensively improved. You find a wide range of improvements to help you build your site, analyze your traffic, manage documents, and create the applications you need. Liferay DXP 7.3 includes the new App Builder, Master Pages, Asset Libraries and more.
 ## Page Building
 
 ### Master Pages
