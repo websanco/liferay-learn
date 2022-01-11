@@ -8,7 +8,7 @@
 * 一定期間プロモーションをスケジュールする
 
 ```tip::
-   割引は*価格表*とは異なります。 価格設定の詳細は、`Introduction to Pricing <../managing-a-catalog/managing-prices/introduction-to-pricing.md>`_, `Creating a Price List <../managing-a-catalog/managing-prices/creating-a-price-list.md>`_, and `Using Price Tiers <../managing-a-catalog/managing-prices/using-price-tiers.md>`_を参照してください。
+   割引は*価格表*とは異なります。 価格設定の詳細は、`Introduction to Pricing <../managing-a-catalog/managing-prices/introduction-to-pricing.md>`_, `Creating a Price List <../managing-a-catalog/managing-prices/creating-a-price-list.md>`_, and `Using Price Tiers <../managing-a-catalog/managing-prices/using-price-tiers.md>`_ を参照してください。
 ```
 
 ```note::
