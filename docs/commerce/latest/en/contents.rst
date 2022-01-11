@@ -6,7 +6,7 @@ Contents
    :includehidden:
    :maxdepth: 4
 
-   installation_and_upgrades
+   installation-and-upgrades.md
    starting-a-store.md
    creating-store-content.md
    managing-a-catalog.md
