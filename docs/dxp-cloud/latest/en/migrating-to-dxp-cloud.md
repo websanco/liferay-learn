@@ -15,7 +15,7 @@ migrating-to-dxp-cloud/next-steps-after-migration.md
 
 Liferay DXP Cloud is a secure and reliable enterprise platform built for high availablity, scalability, and performance. 
 
-Migrating to DXP Cloud from an on-premises Liferay DXP environment entails moving your entire instance and environment into an environment running on DXP Cloud, including all of your data (in documents or the database), configurations, and customizations (such as OSGi modules or plugins). This also involves working and deploying changes with a Git repository that directly integrates with your DXP Cloud environment(s).
+Migrating to DXP Cloud from an on-premises Liferay DXP environment entails moving your entire instance into an environment running on DXP Cloud, including all of your data (in documents or the database), configurations, and customizations (such as OSGi modules or plugins). This also involves working and deploying changes with a Git repository that directly integrates with your DXP Cloud environment(s).
 
 Here are the main stages of migration to DXP Cloud:
 
@@ -30,7 +30,7 @@ Here are the main stages of migration to DXP Cloud:
 
 ## Why Should I Migrate to DXP Cloud?
 
-Migrating to DXP Cloud allows you to take advantage of its [high availability and scalability](../getting-started/introduction-to-dxp-cloud.md#high-availability-scalability-and-performance) with quick-to-deploy features like [clustering](../using-the-liferay-dxp-service/setting-up-clustering-in-dxp-cloud.md), [load balancing](infrastructure-and-operations/networking/load-balancer.md), and [auto-scaling](../manage-and-optimize/auto-scaling.md) out-of-the-box. Built-in [integration with Git and Jenkins](../getting-started/introduction-to-dxp-cloud.md#accelerated-development-with-built-in-ci-cd) also streamlines your development process. This makes your production instance easier to deploy and develop with, more flexible for your needs, and more reliable for your Users.
+Migrating to DXP Cloud allows you to take advantage of its [high availability and scalability](./getting-started/introduction-to-dxp-cloud.md#high-availability-scalability-and-performance) with quick-to-deploy features like [clustering](./using-the-liferay-dxp-service/setting-up-clustering-in-dxp-cloud.md), [load balancing](infrastructure-and-operations/networking/load-balancer.md), and [auto-scaling](./manage-and-optimize/auto-scaling.md) out-of-the-box. Built-in [integration with Git and Jenkins](./getting-started/introduction-to-dxp-cloud.md#accelerated-development-with-built-in-ci-cd) also streamlines your development process. This makes your production instance easier to deploy and develop with, more flexible for your needs, and more reliable for your Users.
 
 ## What Do I Need to Prepare in Advance?
 
@@ -38,7 +38,7 @@ You can take several measures to prepare for the migration in advance, including
 
 ### Plan Ahead
 
-The first important task to perform to prepare for the migration is to plan ahead and reserve the time for it. Work with your database administrator to arrange a time to make the transition once the migration steps are complete, as well as a window to freeze your data for the [second stage of migration](./creating-data-backup-files.md#freeze-the-data) (creating backup files for your database and document library).
+The first important task to perform to prepare for the migration is to plan ahead and reserve the time for it. Work with your database administrator to arrange a time to make the transition once the migration steps are complete, as well as a window to freeze your data for the [second stage of migration](./migrating-to-dxp-cloud/creating-data-backup-files.md#freeze-the-data) (creating backup files for your database and document library).
 
 You may also want to review the steps of the migration ahead of time so that you have an idea of what to expect and how long the migration may take for you to complete.
 
@@ -61,10 +61,10 @@ Migrating to DXP Cloud also involves moving your own custom code, modules, and t
 
 Prepare your environment for the migration in advance to ensure the migration process starts smoothly.
 
-If you have not already done so, then complete the tasks in the [Initial Setup Overview](../getting-started/initial-setup-overview.md) to ensure that your DXP Cloud environment is up and running as expected. In case you run into problems during the migration, you may also want to enable [Support Access](../troubleshooting-support-access.md); enabling Support Access gives Liferay DXP Cloud Support staff more capacity to help if necessary by giving them access to your project's console, logs, and more.
+If you have not already done so, then complete the tasks in the [Initial Setup Overview](./getting-started/initial-setup-overview.md) to ensure that your DXP Cloud environment is up and running as expected. In case you run into problems during the migration, you may also want to enable [Support Access](./troubleshooting-support-access.md); enabling Support Access gives Liferay DXP Cloud Support staff more capacity to help if necessary by giving them access to your project's console, logs, and more.
 
-Additionally, set up your repository (using [GitHub](../getting-started/configuring-your-github-repository.md), [Bitbucket](../getting-started/configuring-your-bitbucket-repository.md), or [GitLab](../getting-started/configuring-your-gitlab-repository.md)) to confirm that you can make deployments. The migration requires deploying multiple changes throughout the process, so you must be able to deploy them to proceed with the migration.
+Additionally, set up your repository (using [GitHub](./getting-started/configuring-your-github-repository.md), [Bitbucket](./getting-started/configuring-your-bitbucket-repository.md), or [GitLab](./getting-started/configuring-your-gitlab-repository.md)) to confirm that you can make deployments. The migration requires deploying multiple changes throughout the process, so you must be able to deploy them to proceed with the migration.
 
 ## How Do I Begin the Migration?
 
-Make sure you have access to your local Liferay DXP instance and [your repository](#prepare-the-environment) for the migration. Then, when you are ready to start, begin with [Stage 1: Matching DXP Versions](./matching-dxp-versions.md).
+Make sure you have access to your local Liferay DXP instance and [your repository](#prepare-the-environment) for the migration. Then, when you are ready to start, begin with [Stage 1: Matching DXP Versions](./migrating-to-dxp-cloud/matching-dxp-versions.md).
