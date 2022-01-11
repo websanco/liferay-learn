@@ -66,8 +66,4 @@ Finally, you can add columns to help audit your entities. To track each entity i
 <column name="modifiedDate" type="Date" />
 ```
 
-Great! Your entities have columns that not only represent their attributes, but also support multi-tenancy, workflow, and auditing. Next, you'll learn how to specify the relationship service entities.
-
-## Additional Information
-
-* [Defining Entity Relationships](./defining-entity-relationships.md)
+Great! Your entities have columns that not only represent their attributes, but also support multi-tenancy, workflow, and auditing. 

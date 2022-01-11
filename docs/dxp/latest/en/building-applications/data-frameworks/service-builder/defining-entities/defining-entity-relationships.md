@@ -1,32 +1,37 @@
 # Defining Entity Relationships
 
-Relationships between database entities or Java objects are necessary for most applications. The Guestbook application, therefore, defines a relationship between a Guestbook and its entries.
+Relationships between database entities or Java objects are necessary for most applications. Take Liferay's Message Boards application as an example. Each Message Board message belongs to a specific Message Board thread. A Message Board thread might also belong to a specific Message Board category. 
 
-As mentioned earlier, each entry must belong to a particular Guestbook. Therefore, each `GuestbookEntry` entity must relate to a `Guestbook` entity. 
-
-Create the `GuestbookEntry` entity's fields: 
+We can see how the relationship is defined in the application's [`service.xml`](https://github.com/liferay/liferay-portal/blob/master/modules/apps/message-boards/message-boards-service/service.xml) file: 
 
 ```xml
-<entity name="GuestbookEntry" local-service="true" uuid="true" remote-service="true">
+<entity external-reference-code="group" human-name="message-boards message" local-service="true" name="MBMessage" remote-service="true" trash-enabled="true" uuid="true">
 
-	<column name="entryId" primary="true" type="long" />
-	<column name="name" type="String" />
-	<column name="email" type="String" />
-	<column name="message" type="String" />
-	<column name="guestbookId" type="long" />
+	<!-- PK fields -->
+
+	<column name="messageId" primary="true" type="long" />
+
+	<!-- Group instance -->
+
+	<column name="groupId" type="long" />
+
+	<!-- Audit fields -->
+
+	<column name="companyId" type="long" />
+	<column name="userId" type="long" />
+	<column name="userName" type="String" uad-anonymize-field-name="fullName" />
+	<column name="createDate" type="Date" />
+	<column name="modifiedDate" type="Date" />
+
+	<!-- Other fields -->
+
+	<column name="classNameId" type="long" />
+	<column name="classPK" type="long" />
+	<column name="categoryId" type="long" />
+	<column name="threadId" type="long" />
+	...
 ```
 
-Note the last field in the list is the `guestbookId` field. Since it's the same name as the `Guestbook` object's primary key, a relationship is created between the two objects. If you're using Liferay Dev Studio DXP, you can see this relationship in its diagram mode. 
+Note the `threadId` field referenced in this `MBMessage` object has the same name as the primary key in the `MBThread` object. This creates the relationship between the two objects. A similar relationship can be seen with `categoryId` and the `MBCategory` object. 
 
-![Relating entities is a snap in Liferay Dev Studio DXP's *Diagram* mode for `service.xml`.](./defining-entity-relationships/images/01.png)
-
-Congratulations! You've related two entities. 
-
-Next, add the instance, audit, and status fields mentioned from the previous step to enable Liferay's multi-tenancy, audit, and workflow features. 
-
-Now that your entity columns are in place and entity relationships are established, you can specify the default order in which the entity instances are retrieved from the database. 
-
-## Additional Information
-
-* [Using Multitenancy and Audit Fields](./using-multitenancy-and-audit-fields.md)
-* [Modifying Database Fields in Development](./modifying-database-fields-in-development.md)
+Congratulations, now you know how to relate two entities. 
