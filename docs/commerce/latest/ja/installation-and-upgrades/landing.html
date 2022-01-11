@@ -1,0 +1,39 @@
+<script type="module">
+	import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.esm.browser.min.js'
+
+	const page = new Vue({
+		el: '#landingPage',
+		data: {
+			cards: [
+				{
+					sectionName: 'Installation Overview',
+					sectionURL: 'installation-and-upgrades/installation-overview.html',
+				},
+                {
+					sectionName: 'Liferay Commerce Enterpriseのアクティベーション',
+					sectionURL: 'installation-and-upgrades/activating-liferay-commerce-enterprise.html',
+				},
+                {
+					sectionName: 'Liferay Commerceのアップグレード',
+					sectionURL: 'installation-and-upgrades/upgrading-liferay-commerce.html',
+				},
+                {
+					sectionName: 'メンテナンスバージョン',
+					sectionURL: 'installation-and-upgrades/maintenance-versions.html',
+				},
+                {
+					sectionName: '3.0 リリースノート',
+					sectionURL: 'installation-and-upgrades/3.0-release-notes.html',
+				},
+                {
+					sectionName: '3.0 旧バージョンと非互換の変更',
+					sectionURL: 'installation-and-upgrades/3-0-breaking-changes.html',
+				},
+				{
+					sectionName: 'Installing Commerce 2.1 and Below',
+					sectionURL: 'installation-and-upgrades/installing-commerce-2.1-and-below.html',
+				}
+			]
+		}
+	})
+</script>
