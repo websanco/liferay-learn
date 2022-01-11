@@ -1,7 +1,5 @@
 # Configuring SEO and Open Graph
 
-> Available 7.3+
-
 With Display Page Templates, you can create standard formats for displaying different content types, such as Web Content Articles, Documents, and Blog Entries. When configuring a template, you can define SEO and Open Graph fields that are dynamically filled for your displayed content.
 
 To create or configure these settings for an existing Display Page template, go to *Design* &rarr; *Page Templates* in the Site menu, and click on the *Display Page Templates* tab.
