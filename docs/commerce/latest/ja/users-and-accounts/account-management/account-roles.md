@@ -16,7 +16,7 @@ Commerceには、すぐに使用できる2つのアカウントロールが含�
 
   * **オーダーマネージャー**（サイトロール） ：オーダーマネージャーはバイヤーのすべての権限を持ち、注文の管理、削除、承認もできます。
 
-すぐに使えるロールや、自分のインスタンスに作成したい一般的なカスタムロールの一覧は、 [Commerce Roles Reference](../roles-and-permissions/commerce-roles-reference.md) を参照してください。
+すぐに使えるロールや、自分のインスタンスに作成したい一般的なカスタムロールの一覧は、 [Commerceロールのリファレンス](../roles-and-permissions/commerce-roles-reference.md) を参照してください。
 
 ## アカウントロールの作成
 
