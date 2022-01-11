@@ -1,11 +1,16 @@
-サブスクリプション契約
-=============
+# サブスクリプション契約
 
-.. toctree::
-   :maxdepth: 1
+```{toctree}
+:maxdepth: 1
 
-   subscriptions/managing-subscriptions.md
-   subscriptions/subscription-administration-reference-guide.md
+subscriptions/managing-subscriptions.md
+subscriptions/subscription-administration-reference-guide.md
+```
 
-.. include:: /orders-and-fulfillment/subscriptions/README.rst
-   :start-line: 2
+```{raw} html
+:file: ../landingpage_template.html
+```
+
+```{raw} html
+:file: subscriptions/landing.html
+```
