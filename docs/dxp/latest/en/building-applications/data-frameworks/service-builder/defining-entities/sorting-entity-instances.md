@@ -2,7 +2,7 @@
 
 Often, you want to retrieve multiple instances of a given entity and list them in a particular order. The `service.xml` file lets you specify the default order of your entities. 
 
-Suppose you want to return `GuestbookEntry` entities by their creation date. It's easy to specify these default orderings:
+Suppose you want to return entities by their creation date. It's easy to specify these default orderings:
 
 ```xml
 <order>
@@ -12,8 +12,4 @@ Suppose you want to return `GuestbookEntry` entities by their creation date. It'
 
 You can enter `asc` or `desc` for ascending or descending order. 
 
-Now that you know how to order your service entities, the last thing to do is to define the finder methods for retrieving entity instances from the database. 
-
-## Additional Information
-
-* [Defining Entity Finder Methods](./sorting-entity-instances.md)
+Now you know how to order your service entities. 
