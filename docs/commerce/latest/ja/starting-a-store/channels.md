@@ -1,15 +1,18 @@
-チャネル
-========
+# チャネル
 
-.. toctree::
-   :maxdepth: 1
+```{toctree}
+:maxdepth: 1
 
-   channels/introduction-to-channels.md
-   channels/managing-channels.md
-   channels/configuring-product-visibility-using-channels.md
-   channels/channels-reference-guide.md
+channels/introduction-to-channels.md
+channels/managing-channels.md
+channels/configuring-product-visibility-using-channels.md
+channels/channels-reference-guide.md
+```
 
--  :doc:`/starting-a-store/channels/introduction-to-channels`
--  :doc:`/starting-a-store/channels/managing-channels`
--  :doc:`/starting-a-store/channels/configuring-product-visibility-using-channels`
--  :doc:`/starting-a-store/channels/channels-reference-guide`
+```{raw} html
+:file: ../landingpage_template.html
+```
+
+```{raw} html
+:file: channels/landing.html
+```
