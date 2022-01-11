@@ -1,13 +1,13 @@
 # Commerceロールのリファレンス
 
-ユーザーロールは、Liferayのアプリケーションやリソースにアクセスして使用するために必要な権限をグループ化します。 各ロールは、インスタンス、サイト、組織、アセットライブラリ、またはアカウントにスコープすることができます。 このスコープにより、どの権限をロールに割り当てることができるかが決まります。 また、各権限には、どのアプリケーションやリソースにアクセスして使用できるかを決定する独自のスコープがあります。 詳細は、 [ロールと権限について](https://learn.liferay.com/dxp/latest/en/users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.html) を参照してください。
+ユーザーロールは、Liferayのアプリケーションやリソースにアクセスして使用するために必要な権限をグループ化します。 各ロールは、インスタンス、サイト、組織、アセットライブラリ、またはアカウントにスコープすることができます。 このスコープにより、どの権限をロールに割り当てることができるかが決まります。 また、各権限には、どのアプリケーションやリソースにアクセスして使用できるかを決定する独自のスコープがあります。 詳細は、 [ロールと権限について](https://learn.liferay.com/dxp/latest/ja/users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.html) を参照してください。
 
-Commerceには[すぐに使えるロール](#out-of-the-box-roles)が４つ含まれています：アカウント管理者、アカウントメンバー、バイヤー、そしてオーダーマネージャーです。
+Commerceには [すぐに使えるロール](#out-of-the-box-roles) が４つ含まれています：アカウント管理者、アカウントメンバー、バイヤー、そしてオーダーマネージャーです。
 
 これらのロールはお客様のニーズを満たすものではありますが、お客様の使用目的に合わせて追加のCommerceロールを作成することもできます。 いくつかの [common custom roles](#custom-roles) には カタログマネージャー、在庫マネージャー、出荷マネージャー、インスタンスオーダーマネージャー、および割引マネージャーが含まれています。
 
 ```{note}
-Liferay 7.3.xおよびそれ以前のCommerceバージョンでは、[Sales Agent](#sales-agent)もすぐに使用できるロールとして含まれています。
+Liferay 7.3.xおよびそれ以前のCommerceバージョンでは、 [Sales Agent](#sales-agent) もすぐに使用できるロールとして含まれています。
 ```
 
 ## 表示の権限
@@ -35,11 +35,11 @@ Liferay 7.3.xおよびそれ以前のCommerceバージョンでは、[Sales Agen
 
    権限を削除または追加することもできます。
 
-   ![[権限の定義]タブをクリックして、ロールの権限を表示および管理します。](./commerce-roles-reference/images/02.png)
+   ![ [権限の定義]タブをクリックして、ロールの権限を表示および管理します。](./commerce-roles-reference/images/02.png)
 
 ## すぐに使えるロール
 
-以下のロールは、Commerceの起動時にDXPインスタンスに自動的に追加されます。 これらは、DXPのデフォルトの役割と一緒に含まれており、必要に応じて変更することができます。 詳細は、[ロール権限の定義](https://learn.liferay.com/dxp/latest/en/users-and-permissions/roles-and-permissions/defining-role-permissions.html)を参照してください。
+以下のロールは、Commerceの起動時にDXPインスタンスに自動的に追加されます。 これらは、DXPのデフォルトの役割と一緒に含まれており、必要に応じて変更することができます。 詳細は、 [ロール権限の定義](https://learn.liferay.com/dxp/latest/ja/users-and-permissions/roles-and-permissions/defining-role-permissions.html) を参照してください。
 
 ### アカウント管理者
 
@@ -111,7 +111,7 @@ Liferay 7.3.xおよびそれ以前のCommerceバージョンでは、[Sales Agen
 
 ## カスタムロール
 
-以下のリストには、自身のCommerceインスタンス用に作成した方がいい一般的なカスタムロールが含まれています。 これらの役割は、他のDXPの役割と同じように作成できます。 詳細は、[ロールの作成と管理](https://learn.liferay.com/dxp/latest/en/users-and-permissions/roles-and-permissions/creating-and-managing-roles.html) と [ロール権限の定義](https://learn.liferay.com/dxp/latest/en/users-and-permissions/roles-and-permissions/defining-role-permissions.html)を参照してください。
+以下のリストには、自身のCommerceインスタンス用に作成した方がいい一般的なカスタムロールが含まれています。 これらの役割は、他のDXPの役割と同じように作成できます。 詳細は、 [ロールの作成と管理](https://learn.liferay.com/dxp/latest/ja/users-and-permissions/roles-and-permissions/creating-and-managing-roles.html) と [ロール権限の定義](https://learn.liferay.com/dxp/latest/ja/users-and-permissions/roles-and-permissions/defining-role-permissions.html) を参照してください。
 
 ### カタログマネージャー
 
@@ -226,7 +226,7 @@ Liferay 7.3.xおよびそれ以前のCommerceバージョンでは、[Sales Agen
 
 Sales AgentはLiferay Commerceの通常のロールであり、割り当てユーザーは管理権限を付与することなく、ロールに割り当てられたアカウントを管理することができます。 これは標準ロールであるため、 [*標準ロール* ]タブにあります。
 
-![[権限の定義]タブでデフォルトのSales Agentの権限を表示します。](./commerce-roles-reference/images/06.png)
+![ [権限の定義]タブでデフォルトのSales Agentの権限を表示します。](./commerce-roles-reference/images/06.png)
 
 | 権限の設定         | 説明                             |
 | ------------- | ------------------------------ |
@@ -235,7 +235,7 @@ Sales AgentはLiferay Commerceの通常のロールであり、割り当てユ�
 
 ## 追加情報
 
-* [ロールと権限について](https://learn.liferay.com/dxp/latest/en/users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.html)
+* [ロールと権限について](https://learn.liferay.com/dxp/latest/ja/users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.html)
 * [注文管理権限のリファレンス](./order-management-permissions.md)
 * [在庫管理権限のリファレンス](./inventory-management-permissions.md)
 * [価格設定権限のリファレンス](./pricing-permissions.md)

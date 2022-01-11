@@ -6,11 +6,11 @@ Liferay Commerceでは、グローバルメニュー（![Global Menu](../../imag
 
 ユーザーロールのストア管理権限は、[権限の定義]タブの *Commerce* &rarr; *Store Management* で管理することができます。  権限を個別に割り当てるか、 *Action* をチェックして、アプリケーションまたはリソースにすべての権限を割り当てます。
 
-![[権限の定義]タブで、ユーザーロールのストア管理権限を管理します。](./store-management-permissions/images/02.png)
+![ [権限の定義]タブで、ユーザーロールのストア管理権限を管理します。](./store-management-permissions/images/02.png)
 
 ## アプリケーションの権限
 
-アプリケーションの権限は、アプリケーション自体に権限の機能を付与しますが、 [関連するリソース権限](#resource-permissions)は含まれません。
+アプリケーションの権限は、アプリケーション自体に権限の機能を付与しますが、 [関連するリソース権限](#resource-permissions) は含まれません。
 
 ストア管理には、次のアプリケーションが含まれます：
 

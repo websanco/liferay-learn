@@ -57,4 +57,4 @@
 
 * [アカウント管理](../account-management.md)
 * [アカウントのロール](./account-roles.md)
-* [組織へのユーザーの追加](https://learn.liferay.com/dxp/latest/en/users-and-permissions/organizations/adding-users-to-organizations.html)
+* [組織へのユーザーの追加](https://learn.liferay.com/dxp/latest/ja/users-and-permissions/organizations/adding-users-to-organizations.html)
