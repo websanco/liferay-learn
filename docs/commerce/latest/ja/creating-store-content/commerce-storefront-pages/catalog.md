@@ -11,9 +11,9 @@
 
 ![Miniumデモカタログ](./catalog/images/01.png)
 
-これらのウィジェットの詳細は、[Widget Reference](../liferay-commerce-widgets/widget-reference.md)を参照してください。
+これらのウィジェットの詳細は、 [ウィジェットリファレンス](../liferay-commerce-widgets/widget-reference.md) を参照してください。
 
 ## 追加情報
 
-* [Creating a Catalog Page](../creating-a-catalog-page.md)
-* [Widget Reference](../liferay-commerce-widgets/widget-reference.md)
+* [カタログページの作成](../creating-a-catalog-page.md)
+* [ウィジェットリファレンス](../liferay-commerce-widgets/widget-reference.md)

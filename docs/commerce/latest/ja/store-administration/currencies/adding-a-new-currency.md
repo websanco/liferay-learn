@@ -29,6 +29,6 @@ Liferay Commerceでは、すぐに使用できる複数の通貨を事前設定�
 
 * ［_フォーマットのパターン_］ フィールドには、通貨記号、コンマの間にある桁数、および表示される桁数が必要です。 たとえば、USドルの場合、$###,##0.00 という形式では、 _0_ が保持する桁数は常に表示されますが（他の桁が存在しない場合は0）、 _#_ が保持する桁数は、占有されている場合にのみ表示されます。 上記の形式の0.01の値は、$0.01として表示されます。
 
-* ［_丸めモード_］ には、ドロップダウンメニューから[丸めモード](https://en.wikipedia.org/wiki/Rounding#Directed_rounding_to_an_integer)のタイプが必要です。
+* ［_丸めモード_］ には、ドロップダウンメニューから [丸めモード](https://en.wikipedia.org/wiki/Rounding#Directed_rounding_to_an_integer) のタイプが必要です。
 
-* 一部の支払い方法では、ストアが機能するために特定の主要通貨を設定する必要があります。 [Mercanet](../../store-administration/configuring-payment-methods/mercanet.md)では、主要通貨としてEURが必要です。
+* 一部の支払い方法では、ストアが機能するために特定の主要通貨を設定する必要があります。 [Mercanet](../../store-administration/configuring-payment-methods/mercanet.md) では、主要通貨としてEURが必要です。

@@ -32,7 +32,7 @@ Liferay Commerceのグローバル設定には、ストアのタイムゾーン�
 
 Liferay Commerceは、B2B、B2C、およびB2C-B2Bストアをサポートしています。 [サイトタイプ](../starting-a-store/sites-and-site-types.md)によって、ストアのビジネスモデルが指定され、ストアフロントがアカウントとどのように連携するかが決まります。
 
-Liferay CommerceはLiferay DXP上に構築されています。 Liferay DXPサイトの機能の詳細は、[Building a Site](https://learn.liferay.com/dxp/latest/en/site-building/building-sites/adding-a-site.html)を参照してください。
+Liferay CommerceはLiferay DXP上に構築されています。 Liferay DXPサイトの機能の詳細は、 [Building a Site](https://learn.liferay.com/dxp/latest/ja/site-building/building-sites/adding-a-site.html) を参照してください。
 
 ### ストアサイトのCommerce設定を構成する
 
@@ -102,7 +102,7 @@ Liferay Commerceカタログは、さまざまな商品情報の保存と管理�
 
 Liferay Commerceでストアを構築するには、完全なカタログが1つ以上必要です。 ストアフロントをゼロから構築するストア管理者は、商品を表示および販売するための一連のページを追加する必要があります。
 
-詳細は、[Creating Your Storefront](../creating-store-content/creating-your-storefront.md)を参照してください。
+詳細は、 [ストアフロントの作成](../creating-store-content/creating-your-storefront.md) を参照してください。
 
 ## 顧客アカウントの管理
 

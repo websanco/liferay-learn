@@ -1,8 +1,8 @@
 # カスタムの在庫不足アクティビティの実装
 
-このチュートリアルでは、[CommerceLowStockActivity](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-api/src/main/java/com/liferay/commerce/stock/activity/CommerceLowStockActivity.java) インターフェイスを実装して、カスタムの在庫不足アクティビティを追加する方法を示します。
+このチュートリアルでは、 [CommerceLowStockActivity](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-api/src/main/java/com/liferay/commerce/stock/activity/CommerceLowStockActivity.java) インターフェイスを実装して、カスタムの在庫不足アクティビティを追加する方法を示します。
 
-在庫不足アクティビティは、商品が設定された最小在庫数量を下回った場合に自動的に実行されるアクションです。 Liferay Commerceは、1つの[デフォルトの在庫不足アクティビティ](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-service/src/main/java/com/liferay/commerce/internal/stock/activity/CommerceLowStockActivityImpl.java)を提供しています。これは、商品を非公開にすることです。
+在庫不足アクティビティは、商品が設定された最小在庫数量を下回った場合に自動的に実行されるアクションです。 Liferay Commerceは、1つの [デフォルトの在庫不足アクティビティ](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-service/src/main/java/com/liferay/commerce/internal/stock/activity/CommerceLowStockActivityImpl.java) を提供しています。これは、商品を非公開にすることです。
 
 ![すぐに使える在庫不足アクティビティ](./implementing-a-custom-low-stock-activity/images/01.png "すぐに使える在庫不足アクティビティ")
 
@@ -22,7 +22,7 @@
     docker run -it -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
     ```
 
-1. [Acme Commerce Low Stock Activity](./liferay-j1e4.zip)をダウンロードして解凍します。
+1. [Acme Commerce Low Stock Activity](./liferay-j1e4.zip) をダウンロードして解凍します。
 
     ```bash
     curl https://learn.liferay.com/commerce/latest/en/developer-guide/liferay-j1e4.zip -O
@@ -81,7 +81,7 @@ public class J1E4CommerceLowStockActivity implements CommerceLowStockActivity {
 
 > Liferay Commerceが在庫不足アクティビティレジストリ</a>で新しいアクティビティを他のアクティビティと区別できるように、在庫数低下アクティビティ個別のキーを提供することが重要です。 すでに使用されているキーを再利用すると、既存の関連付けられているアクティビティが上書きされます。
 > 
-> `commerce.low.stock.activity.priority`値は、在庫不足アクティビティのリストでこのアクティビティがUIに表示される範囲を示します。 例えば、["set as unpublished" アクティビティ](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-service/src/main/java/com/liferay/commerce/internal/stock/activity/CommerceLowStockActivityImpl.java) の値は10です。 作成した在庫不足アクティビティの値を9にすると、"set as unpublished"アクティビティの直前に表示されます。
+> `commerce.low.stock.activity.priority`値は、在庫不足アクティビティのリストでこのアクティビティがUIに表示される範囲を示します。 例えば、 ["set as unpublished" アクティビティ](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-service/src/main/java/com/liferay/commerce/internal/stock/activity/CommerceLowStockActivityImpl.java) の値は10です。 作成した在庫不足アクティビティの値を9にすると、"set as unpublished"アクティビティの直前に表示されます。
 
 ### `CommerceLowStockActivity`インターフェイスを確認する
 
@@ -103,7 +103,7 @@ public String getKey();
 public String getLabel(Locale locale);
 ```
 
-> これは、在庫不足アクティビティを説明するテキストラベルを返します。 言語キーでラベルを取得する際のリファレンスについては、[J1E4CommerceLowStockActivity.java](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/latest/en/developer-guide/implementing-a-custom-low-stock-activity/resources/liferay-j1e4.zip/j1e4-impl/src/main/java/com/acme/j1e4/internal/commerce/stock/activity/J1E4CommerceLowStockActivity.java)の実装を参照してください。
+> これは、在庫不足アクティビティを説明するテキストラベルを返します。 言語キーでラベルを取得する際のリファレンスについては、 [J1E4CommerceLowStockActivity.java](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/latest/en/developer-guide/implementing-a-custom-low-stock-activity/resources/liferay-j1e4.zip/j1e4-impl/src/main/java/com/acme/j1e4/internal/commerce/stock/activity/J1E4CommerceLowStockActivity.java) の実装を参照してください。
 
 ### 在庫不足アクティビティを完了する
 
@@ -125,17 +125,17 @@ public void execute(CPInstance cpInstance) throws PortalException {
 
 > この例では、Liferayのログに追加される警告メッセージを追加します。
 > 
-> `cpInstance`オブジェクトには、在庫の少ないアイテムについて使用できる情報が含まれています。 この例では、警告メッセージに追加するアイテムのSKUを取得するために使用します。 `CPInstance`で使用できる他のメソッドについては、[CPInstance](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-product-api/src/main/java/com/liferay/commerce/product/model/CPInstance.java)と[CPInstanceModel](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-product-api/src/main/java/com/liferay/commerce/product/model/CPInstanceModel.java)を参照してください。
+> `cpInstance`オブジェクトには、在庫の少ないアイテムについて使用できる情報が含まれています。 この例では、警告メッセージに追加するアイテムのSKUを取得するために使用します。 `CPInstance`で使用できる他のメソッドについては、 [CPInstance](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-product-api/src/main/java/com/liferay/commerce/product/model/CPInstance.java) と [CPInstanceModel](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-product-api/src/main/java/com/liferay/commerce/product/model/CPInstanceModel.java) を参照してください。
 
 #### 言語キーを`Language.properties`に追加する
 
-モジュール内の[Language.properties](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/latest/en/developer-guide/implementing-a-custom-low-stock-activity/resources/liferay-j1e4.zip/j1e4-impl/src/main/resources/content/Language.properties)ファイルに言語キーとその値を追加します。
+モジュール内の [Language.properties](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/latest/en/developer-guide/implementing-a-custom-low-stock-activity/resources/liferay-j1e4.zip/j1e4-impl/src/main/resources/content/Language.properties) ファイルに言語キーとその値を追加します。
 
 ```properties
 j1e4-commerce-low-stock-activity=J1E4 Commerce Low Stock Activity
 ```
 
-> 詳細は、[アプリケーションのローカライズ](https://help.liferay.com/hc/en-us/articles/360018168251-Localizing-Your-Application)を参照してください。
+> 詳細は、 [アプリケーションのローカライズ](https://help.liferay.com/hc/en-us/articles/360018168251-Localizing-Your-Application) を参照してください。
 
 ## まとめ
 

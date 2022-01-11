@@ -16,7 +16,7 @@ Liferay Commerceは、単一の店先と倉庫を持つユーザーから、複�
 
 倉庫とは、商品在庫が管理され、注文処理のために調達される物理的な場所を表します。 商品の在庫数量は、倉庫ごとに管理されます。
 
-在庫管理についての詳細は、[Setting Up Commerce Warehouses](./setting-up-commerce-warehouses.md)と[Warehouse Reference Guide](./warehouse-reference-guide.md)を参照してください。
+在庫管理についての詳細は、 [Commerce倉庫のセットアップ](./setting-up-commerce-warehouses.md) と [倉庫リファレンスガイド](./warehouse-reference-guide.md) を参照してください。
 
 ストアが商品の注文を受け付けるには、関連するチャネルに関連付けられた倉庫が必要です。 チャネルの仕組みについては、記事[「Introduction to Channels」](../../starting-a-store/channels/introduction-to-channels.md)を参照してください。
 
@@ -24,7 +24,7 @@ Liferay Commerceは、単一の店先と倉庫を持つユーザーから、複�
 
 ストアの所有者は、在庫切れ商品が再び入荷したときに顧客に通知されるように入荷見積りを設定できます。
 
-詳細は、[Availability Estimates](./availability-estimates.md)を参照してください。
+詳細は、 [入荷見積り](./availability-estimates.md) を参照してください。
 
 ## 在庫数低下時のアクション
 

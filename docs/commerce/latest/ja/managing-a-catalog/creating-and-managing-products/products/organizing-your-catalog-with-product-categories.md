@@ -4,7 +4,7 @@
 
 カテゴリを階層的に編成して、カテゴリの分類を形成することもできます。 商品をカテゴリに整理するには、最初にカテゴリを作成してから商品を割り当てる必要があります。 さらに、すべてのLiferay Commerce商品はグローバルレベルで処理されるため、すべてのボキャブラリとカテゴリはグローバルスコープレベルである必要があります。
 
-グローバルスコープとサイト管理の詳細は、この記事で[データ範囲](https://help.liferay.com/hc/articles/360018168991-Data-Scopes)および[設定範囲](https://help.liferay.com/hc/articles/360017895452-Introduction-to-Setting-Up#configuration-scope)について参照してください。
+グローバルスコープとサイト管理の詳細は、この記事で [データ範囲](https://help.liferay.com/hc/articles/360018168991-Data-Scopes) および [設定範囲](https://help.liferay.com/hc/articles/360017895452-Introduction-to-Setting-Up#configuration-scope) について参照してください。
 
 ## 前提条件
 

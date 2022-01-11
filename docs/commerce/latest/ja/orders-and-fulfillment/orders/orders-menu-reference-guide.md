@@ -68,7 +68,7 @@ _保留中_ タブには、チェックアウトプロセスを完了したす�
 
 ![［注文］メニューの概要](./orders-menu-reference-guide/images/01.png "［注文］メニューの概要")
 
-*［注文］*メニューの注文情報は、*［カートを開く］*ウィジェット（*［Open］*タブにある注文の場合 ）および*［注文］*ウィジェット（*［Pending］*または*［送信済み］*タブにある注文の場合）を使用して、他のユーザー（特に購入者）に提示することもできます。 詳細は、[Pending Orders](../../creating-store-content/commerce-storefront-pages/pending-orders.md)および[発注済み注文](../../creating-store-content/commerce-storefront-pages/placed-orders.md)を参照してください。
+*［注文］*メニューの注文情報は、*［カートを開く］*ウィジェット（*［Open］*タブにある注文の場合 ）および*［注文］*ウィジェット（*［Pending］*または*［送信済み］*タブにある注文の場合）を使用して、他のユーザー（特に購入者）に提示することもできます。 詳細は、 [保留中の注文](../../creating-store-content/commerce-storefront-pages/pending-orders.md) および[発注済み注文](../../creating-store-content/commerce-storefront-pages/placed-orders.md)を参照してください。
 
 ### Open
 
@@ -82,7 +82,7 @@ _保留中_ タブには、チェックアウトプロセスを完了したす�
 
 ### 保留中
 
-［_Pending_］タブは注文の保留場所として機能します。これは、すべての注文をすぐに送信するわけではないビジネスコンテキストで役立ちます。 購入者が注文すると、注文は［_Pending_］タブに移動します。 ここで、売り手は、 [変更、キャンセル、または注文を送信することができます](./processing-an-order.md#commerce-20-and-below)。
+［_Pending_］タブは注文の保留場所として機能します。これは、すべての注文をすぐに送信するわけではないビジネスコンテキストで役立ちます。 購入者が注文すると、注文は［_Pending_］タブに移動します。 ここで、売り手は、 [変更、キャンセル、または注文を送信することができます](./processing-an-order.md#commerce-20-and-below) 。
 
 ```note::
    * Transmission Workflow *が有効になっている場合、売り手が注文を拒否して買い手に送り返す場合でも、注文はワークフロープロセス全体で* Pending *タブに残ります。

@@ -1,8 +1,8 @@
 # 新しい商品タイプの追加
 
-このチュートリアルでは、次の3つのインターフェースを実装することで、新商品のタイプを追加する方法を説明します：[CPType](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-product-api/src/main/java/com/liferay/commerce/product/type/CPType.java)、[ScreenNavigationCategory](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/frontend-taglib/frontend-taglib/src/main/java/com/liferay/frontend/taglib/servlet/taglib/ScreenNavigationCategory.java)、および[ScreenNavigationEntry](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/frontend-taglib/frontend-taglib/src/main/java/com/liferay/frontend/taglib/servlet/taglib/ScreenNavigationEntry.java)
+このチュートリアルでは、次の3つのインターフェースを実装することで、新商品のタイプを追加する方法を説明します： [CPType](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-product-api/src/main/java/com/liferay/commerce/product/type/CPType.java) 、 [ScreenNavigationCategory](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/frontend-taglib/frontend-taglib/src/main/java/com/liferay/frontend/taglib/servlet/taglib/ScreenNavigationCategory.java) 、および [ScreenNavigationEntry](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/frontend-taglib/frontend-taglib/src/main/java/com/liferay/frontend/taglib/servlet/taglib/ScreenNavigationEntry.java)
 
-商品タイプを使用して、類似の特性を共有する商品をグループ化できます。 Liferay Commerceには標準で次の3つの商品タイプが組み込まれています：[Simple](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-product-type-simple/src/main/java/com/liferay/commerce/product/type/simple/internal/SimpleCPType.java)、[Grouped](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-product-type-grouped-web/src/main/java/com/liferay/commerce/product/type/grouped/web/internal/GroupedCPType.java)、および [Virtual](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-product-type-virtual-web/src/main/java/com/liferay/commerce/product/type/virtual/web/internal/VirtualCPType.java)
+商品タイプを使用して、類似の特性を共有する商品をグループ化できます。 Liferay Commerceには標準で次の3つの商品タイプが組み込まれています： [Simple](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-product-type-simple/src/main/java/com/liferay/commerce/product/type/simple/internal/SimpleCPType.java) 、 [Grouped](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-product-type-grouped-web/src/main/java/com/liferay/commerce/product/type/grouped/web/internal/GroupedCPType.java) 、および [Virtual](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-product-type-virtual-web/src/main/java/com/liferay/commerce/product/type/virtual/web/internal/VirtualCPType.java)
 
 ![すぐに使える商品タイプ](./adding-a-new-product-type/images/01.png "すぐに使える商品タイプ")
 
@@ -22,7 +22,7 @@
     docker run -it -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
     ```
 
-1. [Acme Commerce Product Type](./liferay-c1n4.zip)をダウンロードして解凍します。
+1. [Acme Commerce Product Type](./liferay-c1n4.zip) をダウンロードして解凍します。
 
     ```bash
     curl https://learn.liferay.com/commerce/latest/en/developer-guide/liferay-c1n4.zip -O
@@ -88,7 +88,7 @@ public class C1N4CPType implements CPType {
 
 > Liferay Commerceがこの商品タイプを既存の商品タイプと区別できるように、商品タイプ名は一意の値である必要があります。
 > 
-> `commerce.product.type.display.order`値は、商品タイプのリストでこの商品タイプがUIに表示される範囲を示します。 例えば、[仮想商品タイプ](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-product-type-virtual-web/src/main/java/com/liferay/commerce/product/type/virtual/web/internal/VirtualCPType.java)の値は15です。 作成した商品タイプに値16を指定すると、仮想タイプの直後に表示されます。
+> `commerce.product.type.display.order`値は、商品タイプのリストでこの商品タイプがUIに表示される範囲を示します。 例えば、 [仮想商品タイプ](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-product-type-virtual-web/src/main/java/com/liferay/commerce/product/type/virtual/web/internal/VirtualCPType.java) の値は15です。 作成した商品タイプに値16を指定すると、仮想タイプの直後に表示されます。
 
 ### `CPType`インターフェイスを確認する
 
@@ -104,7 +104,7 @@ public void deleteCPDefinition(long cpDefinitionId) throws PortalException;
 public String getLabel(Locale locale);
 ```
 
-> これは、商品タイプを説明するテキストラベルを返します。 言語キーでラベルを取得する際のリファレンスについては、[C1N4CPType.java](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/latest/en/developer-guide/adding-a-new-product-type/resources/liferay-c1n4.zip/c1n4-web/src/main/java/com/acme/c1n4/web/internal/commerce/product/type/C1N4CPType.java)の実装を参照してください。
+> これは、商品タイプを説明するテキストラベルを返します。 言語キーでラベルを取得する際のリファレンスについては、 [C1N4CPType.java](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/latest/en/developer-guide/adding-a-new-product-type/resources/liferay-c1n4.zip/c1n4-web/src/main/java/com/acme/c1n4/web/internal/commerce/product/type/C1N4CPType.java) の実装を参照してください。
 
 ```java
 public String getName();
@@ -130,7 +130,7 @@ public class C1N4ScreenNavigationEntry
 
 > Liferay Commerceがこの画面を既存の画面とは別の画面として区別できるように、ナビゲーション画面クラスに個別のキーを提供することが重要です。 すでに使用されているキーを再利用すると、既存の関連付けられているナビゲーション画面が上書きされます。
 > 
-> `screen.navigation.category.order`および`screen.navigation.entry.order`値は、この画面が表示される商品タイプ画面の位置を決定します。 たとえば、[［詳細］画面クラス](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-product-definitions-web/src/main/java/com/liferay/commerce/product/definitions/web/internal/servlet/taglib/ui/CPDefinitionDetailsScreenNavigationEntry.java)の値は10に設定されています。値を11に設定すると、カスタム画面がリストでその後に表示されるようになります。
+> `screen.navigation.category.order`および`screen.navigation.entry.order`値は、この画面が表示される商品タイプ画面の位置を決定します。 たとえば、 [［詳細］画面クラス](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-product-definitions-web/src/main/java/com/liferay/commerce/product/definitions/web/internal/servlet/taglib/ui/CPDefinitionDetailsScreenNavigationEntry.java) の値は10に設定されています。値を11に設定すると、カスタム画面がリストでその後に表示されるようになります。
 
 ### `ScreenNavigationCategory`インターフェイスを確認する
 
@@ -146,7 +146,7 @@ public String getCategoryKey();
 public String getLabel(Locale locale);
 ```
 
-> これは、UIに表示される画面ナビゲーションエントリのテキストラベルを返します。 言語キーでラベルを取得する際のリファレンスについては、[C1N4ScreenNavigationEntry.java](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/latest/en/developer-guide/adding-a-new-product-type/resources/liferay-c1n4.zip/c1n4-web/src/main/java/com/acme/c1n4/web/internal/frontend/taglib/servlet/taglib/C1N4ScreenNavigationEntry.java)の実装を参照してください。
+> これは、UIに表示される画面ナビゲーションエントリのテキストラベルを返します。 言語キーでラベルを取得する際のリファレンスについては、 [C1N4ScreenNavigationEntry.java](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/latest/en/developer-guide/adding-a-new-product-type/resources/liferay-c1n4.zip/c1n4-web/src/main/java/com/acme/c1n4/web/internal/frontend/taglib/servlet/taglib/C1N4ScreenNavigationEntry.java) の実装を参照してください。
 
 ```java
 public String getScreenNavigationKey();
@@ -205,9 +205,9 @@ public void render(
 private ServletContext _servletContext
 ```
 
-> `osgi.web.symbolicname`に設定した値は、 [bnd.bndファイル](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/latest/en/developer-guide/adding-a-new-product-type/resources/liferay-c1n4.zip/c1n4-web/bnd.bnd)の`Bundle-SymbolicName`の値と一致します。 これらの値は、JSPを見つけるために`ServletContext`と一致する必要があります。
+> `osgi.web.symbolicname`に設定した値は、 [bnd.bndファイル](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/latest/en/developer-guide/adding-a-new-product-type/resources/liferay-c1n4.zip/c1n4-web/bnd.bnd) の`Bundle-SymbolicName`の値と一致します。 これらの値は、JSPを見つけるために`ServletContext`と一致する必要があります。
 > 
-> `ServletContext`が正しく生成されるように、bnd.bndファイルで`Web-ContextPath`の一意の値を宣言します。 この例では、`Web-ContextPath`は`/c1n4-web`に設定されています。 これらの値のリファレンスについては、[bnd.bnd](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/latest/en/developer-guide/adding-a-new-product-type/resources/liferay-c1n4.zip/c1n4-web/bnd.bnd)を参照してください。
+> `ServletContext`が正しく生成されるように、bnd.bndファイルで`Web-ContextPath`の一意の値を宣言します。 この例では、`Web-ContextPath`は`/c1n4-web`に設定されています。 これらの値のリファレンスについては、 [bnd.bnd](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/latest/en/developer-guide/adding-a-new-product-type/resources/liferay-c1n4.zip/c1n4-web/bnd.bnd) を参照してください。
 
 #### `ScreenNavigationEntry`の`render`メソッドを実行します。
 
@@ -224,7 +224,7 @@ public void render(
 }
 ```
 
-> `JSPRenderer`を使用して、商品タイプのカスタム画面のJSPをレンダリングします（この例では [c1n4.jsp](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/latest/en/developer-guide/adding-a-new-product-type/resources/liferay-c1n4.zip/c1n4-web/src/main/resources/META-INF/resources/c1n4.jsp)）。 作成したJSPを見つけるためのパラメーターとして`ServletContext`を提供します。
+> `JSPRenderer`を使用して、商品タイプのカスタム画面のJSPをレンダリングします（この例では [c1n4.jsp](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/latest/en/developer-guide/adding-a-new-product-type/resources/liferay-c1n4.zip/c1n4-web/src/main/resources/META-INF/resources/c1n4.jsp) ）。 作成したJSPを見つけるためのパラメーターとして`ServletContext`を提供します。
 
 #### `ScreenNavigationEntry`の`isVisible`メソッドを上書きします。
 
@@ -254,18 +254,18 @@ public boolean isVisible(User user, CPDefinition cpDefinition) {
 <h1>Hello C1N4.</h1>
 ```
 
-> フォームやMVCアクションコマンドなど、カスタム画面で必要な他の入力またはアクションをここに実装します。 JSPからアクセスできるMVCアクションコマンドを追加する方法については、[MVC Action Command](https://help.liferay.com/hc/en-us/articles/360018165091-MVC-Action-Command)を参照してください。
+> フォームやMVCアクションコマンドなど、カスタム画面で必要な他の入力またはアクションをここに実装します。 JSPからアクセスできるMVCアクションコマンドを追加する方法については、 [MVC Action Command](https://help.liferay.com/hc/en-us/articles/360018165091-MVC-Action-Command) を参照してください。
 
 #### 言語キーを`Language.properties`に追加する
 
-モジュール内の[Language.properties](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/latest/en/developer-guide/adding-a-new-product-type/resources/liferay-c1n4.zip/c1n4-web/src/main/resources/content/Language.properties)ファイルに言語キーとその値を追加します。
+モジュール内の [Language.properties](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/latest/en/developer-guide/adding-a-new-product-type/resources/liferay-c1n4.zip/c1n4-web/src/main/resources/content/Language.properties) ファイルに言語キーとその値を追加します。
 
 ```properties
 c1n4-commerce-product-type=C1N4 Commerce Product Type
 c1n4-screen-navigation-entry=C1N4 Screen Navigation Entry
 ```
 
-> 詳細は、[アプリケーションのローカライズ](https://help.liferay.com/hc/en-us/articles/360018168251-Localizing-Your-Application)を参照してください。
+> 詳細は、 [アプリケーションのローカライズ](https://help.liferay.com/hc/en-us/articles/360018168251-Localizing-Your-Application) を参照してください。
 
 ## まとめ
 

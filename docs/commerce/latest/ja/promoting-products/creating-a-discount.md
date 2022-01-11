@@ -16,7 +16,7 @@
 
 ## 割引の設定
 
-パーセント（パーセントベースの割引を使用する場合）、最大割引額、 [割引レベル](./introduction-to-discounts.md#tiered-discounts)などの割引の詳細を指定して、有効にすることができます。
+パーセント（パーセントベースの割引を使用する場合）、最大割引額、 [割引レベル](./introduction-to-discounts.md#tiered-discounts) などの割引の詳細を指定して、有効にすることができます。
 
 詳細セクションには：
 
@@ -118,7 +118,7 @@
 1. クーポンコードを使用する場合は、［_クーポンコードを使用_ を _はい_ に切り替えます。 次に、「_カップルコード_」フィールドにコードを入力します。 それ以外の場合は、 _NO_ ままにします 。
 1. パーセンテージを使用する場合は、 _Use Percentage_ トグルを _Yes_ に切り替えます。
 1. _最大割引額_ 入力：$ 20.00
-1. [_Level_](./introduction-to-discounts.md#tiered-discounts)：20.00と入力し
+1. [_Level_](./introduction-to-discounts.md#tiered-discounts) ：20.00と入力し
  。 これにより、小計から20％オフになります。</li> 
    
    1 ［_Active_］ トグルを ［_YES_］に切り替えます。

@@ -32,7 +32,7 @@ Commerceの税エンジンは、取引が行われる時に税率の計算を定
 
 1. *［一般］* タブの*［税の計算］*にスクロールダウンし、構成したい計算のタイプ（*［住所別］*または*［固定税率］*）を選択し*［編集］*をクリックします。
 
-    ![[税の計算]で、構成したい計算のタイプの[編集]をクリックします。](./setting-rates-for-tax-calculations/images/01.png)
+    ![[税の計算]で、構成したい計算のタイプの [編集]をクリックします。](./setting-rates-for-tax-calculations/images/01.png)
 
 1. *［詳細］* タブで、選択した税計算の以下の詳細を設定します：
 
@@ -50,7 +50,7 @@ Commerceの税エンジンは、取引が行われる時に税率の計算を定
    別のタブに移動する前に、変更を保存する必要があります。 保存しないと、変更した内容は消えてしまいます。
 ```
 
-![税計算を構成し、[保存]をクリックします。](./setting-rates-for-tax-calculations/images/02.png)
+![税計算を構成し、 [保存]をクリックします。](./setting-rates-for-tax-calculations/images/02.png)
 
 有効にすると、選択したタイプの税計算の追加設定にアクセスできます。
 
@@ -66,7 +66,7 @@ Commerceの税エンジンは、取引が行われる時に税率の計算を定
 
 1. モーダルウィンドウの *［税率］*/*［税率設定］* タブをクリックします。
 
-   ![[税率設定]タブをクリックします。](./setting-rates-for-tax-calculations/images/03.png)
+   ![ [税率設定]タブをクリックします。](./setting-rates-for-tax-calculations/images/03.png)
 
 1. (*住所別*) 購入者の *請求先* または *出荷先* の住所に税率を適用するかどうかは、ドロップダウンメニューで決定します。
 
@@ -82,7 +82,7 @@ Commerceの税エンジンは、取引が行われる時に税率の計算を定
 
 1. ［*送信*］をクリックします 。
 
-   ![税率を設定し、[送信]をクリックします。](./setting-rates-for-tax-calculations/images/04.png)
+   ![税率を設定し、 [送信]をクリックします。](./setting-rates-for-tax-calculations/images/04.png)
 
 ## Commerce 2.1以前
 

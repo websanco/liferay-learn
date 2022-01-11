@@ -52,7 +52,7 @@ Commerce 2.1は、［_コントロールパネル_］から［_注文_］ メニ
 
 ## Liferay Commerce 2.0以前
 
-［_発送_］メニューでは、 [が注文を受け取った後、店長が発送を作成および追跡できます](../orders/processing-an-order.md#commerce-2-0-and-below)。
+［_発送_］メニューでは、 [が注文を受け取った後、店長が発送を作成および追跡できます](../orders/processing-an-order.md#commerce-2-0-and-below) 。
 
 ［_コントロールパネル_］ → ［_コマース_］ → ［_出荷_］に移動します。
 

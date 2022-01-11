@@ -28,4 +28,4 @@ Liferay Commerceの最新バージョンは、Dockerイメージとして利用�
 
 状況をチェックする以上のことをしますか？ [インストールの概要](../installation-overview.md)で詳細をご覧ください。
 
-数分でストアを立ち上げて運営したいですか？ [Accelerators](../../starting-a-store/accelerators.md)に関する詳細情報
+数分でストアを立ち上げて運営したいですか？ [アクセラレータ](../../starting-a-store/accelerators.md) に関する詳細情報

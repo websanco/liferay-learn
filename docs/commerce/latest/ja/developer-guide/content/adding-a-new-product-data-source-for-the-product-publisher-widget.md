@@ -2,7 +2,7 @@
 
 このチュートリアルでは、`CPDataSource`インターフェイスを実装して、新しい商品データソースを追加する方法を示します。
 
-商品データソースは、関連する商品を検索する独自の方法を提供します。 Liferay Commerceでは、[商品の関係別](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-product-service/src/main/java/com/liferay/commerce/product/internal/data/source/CPDataSourceDefinitionLinkTypeImpl.java)および[カテゴリ別に](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-product-service/src/main/java/com/liferay/commerce/product/internal/data/source/CPDataSourceAssetCategoriesImpl.java)検索するものなど、標準でいくつかの商品データソースを提供しています。
+商品データソースは、関連する商品を検索する独自の方法を提供します。 Liferay Commerceでは、 [商品の関係別](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-product-service/src/main/java/com/liferay/commerce/product/internal/data/source/CPDataSourceDefinitionLinkTypeImpl.java) および [カテゴリ別に](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-product-service/src/main/java/com/liferay/commerce/product/internal/data/source/CPDataSourceAssetCategoriesImpl.java) 検索するものなど、標準でいくつかの商品データソースを提供しています。
 
 ![すぐに使える商品データソース](./adding-a-new-product-data-source-for-the-product-publisher-widget/images/01.png "すぐに使える商品データソース")
 
@@ -22,7 +22,7 @@
     docker run -it -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
     ```
 
-1. [Acme Commerce Product Data Source](./liferay-m5x7.zip)をダウンロードして解凍します。
+1. [Acme Commerce Product Data Source](./liferay-m5x7.zip) をダウンロードして解凍します。
 
     ```bash
     curl https://learn.liferay.com/commerce/latest/en/developer-guide/liferay-m5x7.zip -O
@@ -80,7 +80,7 @@ public class M5X7CPDataSource implements CPDataSource {
 public String getLabel(Locale locale);
 ```
 
-> このメソッドは、商品データソースが関連商品を検索する方法を説明するテキストラベルを返します。 言語キーでラベルを取得する際のリファレンスについては、 [M5X7CPDataSource.java](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/latest/en/developer-guide/adding-a-new-product-data-source-for-the-product-publisher-widget/resources/liferay-m5x7.zip/m5x7-impl/src/main/java/com/acme/m5x7/internal/commerce/product/data/source/M5X7CPDataSource.java)の実装を参照してください。
+> このメソッドは、商品データソースが関連商品を検索する方法を説明するテキストラベルを返します。 言語キーでラベルを取得する際のリファレンスについては、 [M5X7CPDataSource.java](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/latest/en/developer-guide/adding-a-new-product-data-source-for-the-product-publisher-widget/resources/liferay-m5x7.zip/m5x7-impl/src/main/java/com/acme/m5x7/internal/commerce/product/data/source/M5X7CPDataSource.java) の実装を参照してください。
 
 ```java
 public String getName();
@@ -96,7 +96,7 @@ public CPDataSourceResult getResult(
 
 > ここで、関連商品の検索を実行するビジネスロジックを追加します。 `HttpServletRequest`には、結果を何らかの方法で関連付ける必要がある特定の商品への参照が含まれています。
 > 
-> この方法では、検索結果の一覧を含む`CPDataSourceResult`を返します。実装については [CPDataSourceResult.java](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-product-api/src/main/java/com/liferay/commerce/product/data/source/CPDataSourceResult.java)を参照してください。
+> この方法では、検索結果の一覧を含む`CPDataSourceResult`を返します。実装については [CPDataSourceResult.java](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-product-api/src/main/java/com/liferay/commerce/product/data/source/CPDataSourceResult.java) を参照してください。
 
 ### 商品データソースを完成させる
 
@@ -141,19 +141,19 @@ public CPDataSourceResult getResult(
 }
 ```
 
-> [CPDefinitionHelper](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-product-service/src/main/java/com/liferay/commerce/product/internal/util/CPDefinitionHelperImpl.java)を使用して、検索を実行します。 `CPDefinitionHelper`は、商品定義に固有のロジックと`BaseIndexer`の検索機能を組み合わせたものです。詳細は、[BaseIndexer.java](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/search/BaseIndexer.java)を参照してください。
+> [CPDefinitionHelper](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-product-service/src/main/java/com/liferay/commerce/product/internal/util/CPDefinitionHelperImpl.java) を使用して、検索を実行します。 `CPDefinitionHelper`は、商品定義に固有のロジックと`BaseIndexer`の検索機能を組み合わせたものです。詳細は、 [BaseIndexer.java](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/search/BaseIndexer.java) を参照してください。
 > 
 > `"excludedCPDefinitionId"`属性の値として商品定義のIDを`SearchContext`に追加します。 これにより、結果から元の商品が除外されます。 この例では、検索する商品名の最後の単語も指定しています。 詳細は、この例では、`M5X7CPDataSource.java` ファイルの`_getLastWordOfName`メソッドの検索ロジックの実行を参照してください。
 
 #### 言語キーを`Language.properties`に追加する
 
-モジュール内の[Language.properties](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/latest/en/developer-guide/adding-a-new-product-data-source-for-the-product-publisher-widget/resources/liferay-m5x7.zip/m5x7-impl/src/main/resources/content/Language.properties)ファイルに言語キーとその値を追加します。
+モジュール内の [Language.properties](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/latest/en/developer-guide/adding-a-new-product-data-source-for-the-product-publisher-widget/resources/liferay-m5x7.zip/m5x7-impl/src/main/resources/content/Language.properties) ファイルに言語キーとその値を追加します。
 
 ```properties
 products-ending-in-the-same-word=Products Ending in the Same Word
 ```
 
-> 詳細は、[アプリケーションのローカライズ](https://help.liferay.com/hc/en-us/articles/360018168251-Localizing-Your-Application)を参照してください。
+> 詳細は、 [アプリケーションのローカライズ](https://help.liferay.com/hc/en-us/articles/360018168251-Localizing-Your-Application) を参照してください。
 
 ## まとめ
 

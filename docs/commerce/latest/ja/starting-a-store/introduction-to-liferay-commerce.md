@@ -1,6 +1,6 @@
 # Liferay Commerceの概要
 
-Liferay Commerce へようこそ！  Liferay Commerceは、あらゆるB2B組織の困難で複雑なニーズを満たすためにゼロから構築されたデジタルコマースプラットフォームです。 Liferay DXPのエンタープライズ基盤を使用して、Liferay Commerceは、完全に統合されたWebコンテンツ管理と業界をリードするポータル機能の能力と柔軟性を備えています。 LiferayのDXPの詳細は、この [記事](https://help.liferay.com/hc/en-us/articles/360028818552-Introduction-to-The-Liferay-Distinction)を参照してください。
+Liferay Commerce へようこそ！  Liferay Commerceは、あらゆるB2B組織の困難で複雑なニーズを満たすためにゼロから構築されたデジタルコマースプラットフォームです。 Liferay DXPのエンタープライズ基盤を使用して、Liferay Commerceは、完全に統合されたWebコンテンツ管理と業界をリードするポータル機能の能力と柔軟性を備えています。 LiferayのDXPの詳細は、この [記事](https://help.liferay.com/hc/en-us/articles/360028818552-Introduction-to-The-Liferay-Distinction) を参照してください。
 
 ## 概要
 

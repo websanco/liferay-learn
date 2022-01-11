@@ -2,9 +2,9 @@
 
 フィックスパックは定期的にリリースされ、バグやセキュリティの修正が含まれています。 カスタムコードがデプロイされているインストールにFix Packをインストールする場合は、本番環境にインストールする前に、テスト環境にカスタムコード付きのFix Packをデプロイしてテストすることをお勧めします。
 
-様々なパッチのタイプについては、[Patching Liferay](https://learn.liferay.com/dxp/latest/en/installation-and-upgrades/maintaining-a-liferay-dxp-installation/patching-liferay/patching-liferay.html)と[Understanding Patch Types](https://learn.liferay.com/dxp/latest/en/installation-and-upgrades/maintaining-a-liferay-dxp-installation/patching-liferay/understanding-patch-types.html)を参照してください。
+様々なパッチのタイプについては、 [Patching Liferay](https://learn.liferay.com/dxp/latest/ja/installation-and-upgrades/maintaining-a-liferay-dxp-installation/patching-liferay/patching-liferay.html) と [Understanding Patch Types](https://learn.liferay.com/dxp/latest/ja/installation-and-upgrades/maintaining-a-liferay-dxp-installation/patching-liferay/understanding-patch-types.html) を参照してください。
 
-パッチを適用する方法については、[パッチのインストール](https://learn.liferay.com/dxp/latest/en/installation-and-upgrades/maintaining-a-liferay-dxp-installation/patching-liferay/installing-patches.html)を参照してください。
+パッチを適用する方法については、 [パッチのインストール](https://learn.liferay.com/dxp/latest/ja/installation-and-upgrades/maintaining-a-liferay-dxp-installation/patching-liferay/installing-patches.html) を参照してください。
 
 Liferay Commerce 3.0（オープンソース）のユーザーは、Liferay Portal 7.3の新しいリリースを通じて、同じバグおよびセキュリティアップデートを利用できます。
 
@@ -23,9 +23,9 @@ Liferayは、定期的に、オープンソースとエンタープライズの�
 ### ダウンロードとデプロイ
 
 1. 最新のLiferay Commerce `LPKG`をダウンロードします。
-    * エンタープライズの加入者は、最新の`LPKG`を[ヘルプセンター](https://customer.liferay.com/downloads?p_p_id=com_liferay_osb_customer_downloads_display_web_DownloadsDisplayPortlet&_com_liferay_osb_customer_downloads_display_web_DownloadsDisplayPortlet_productAssetCategoryId=118190997&_com_liferay_osb_customer_downloads_display_web_DownloadsDisplayPortlet_fileTypeAssetCategoryId=118191001)からダウンロードできます。
-      * 加入者の方は、Liferay Commerceの注文番号またはアクティベーションキーも必要です。 [Activating a Marketplace App Through a Proxy Server](https://help.liferay.com/hc/en-us/articles/360018427391)を参照してください。
-    * 最新のオープンソース`LPKG`は、[Liferay Commerceのコミュニティサイト](https://commerce.liferay.dev/download)から取得できます。
+    * エンタープライズの加入者は、最新の`LPKG`を [ヘルプセンター](https://customer.liferay.com/downloads?p_p_id=com_liferay_osb_customer_downloads_display_web_DownloadsDisplayPortlet&_com_liferay_osb_customer_downloads_display_web_DownloadsDisplayPortlet_productAssetCategoryId=118190997&_com_liferay_osb_customer_downloads_display_web_DownloadsDisplayPortlet_fileTypeAssetCategoryId=118191001) からダウンロードできます。
+      * 加入者の方は、Liferay Commerceの注文番号またはアクティベーションキーも必要です。 [Activating a Marketplace App Through a Proxy Server](https://help.liferay.com/hc/en-us/articles/360018427391) を参照してください。
+    * 最新のオープンソース`LPKG`は、 [Liferay Commerceのコミュニティサイト](https://commerce.liferay.dev/download) から取得できます。
 
 1. `LPKG`を`${liferay.home}/deploy`フォルダにデプロイします。
 1. アプリケーションサーバーコンソールに次のメッセージが表示されることを確認します。
@@ -40,7 +40,7 @@ Liferayは、定期的に、オープンソースとエンタープライズの�
 
 ### 古いデータを消去してサーバーを再起動する
 
-1. `${liferay.home}/osgi/state`フォルダを削除します。 > OSGiフォルダの詳細は、[Installing Apps Manually](https://help.liferay.com/hc/en-us/articles/360017895412-Installing-Apps-Manually#using-your-file-system-to-install-apps)を参照してください。
+1. `${liferay.home}/osgi/state`フォルダを削除します。 > OSGiフォルダの詳細は、 [Installing Apps Manually](https://help.liferay.com/hc/en-us/articles/360017895412-Installing-Apps-Manually#using-your-file-system-to-install-apps) を参照してください。
 1. アプリケーションサーバーを起動します。
 1. アプリケーションサーバーのコンソールログで次のようなメッセージを探して、アップグレードプロセスが開始されたことを確認します。
 

@@ -26,4 +26,4 @@ Liferay Commerceには、商品の検索結果を価格によって素早く絞�
 
 1. *［保存］*をクリックします。
 
-他のCommerceウィジェットについては、 [Widget Reference](../liferay-commerce-widgets/widget-reference.md)を参照してください。
+他のCommerceウィジェットについては、 [ウィジェットリファレンス](../liferay-commerce-widgets/widget-reference.md) を参照してください。

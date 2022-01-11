@@ -2,7 +2,7 @@
 
 商品 *［オプション］* では、商品をカスタマイズするための便利で柔軟な方法を提供しています。 オプションを使用すると、チャネルで販売する商品にフィールドを追加して、顧客が商品のバリエーションやバンドルなどを選択できるようになります。
 
-オプションを使い始めるには、まず オプションテンプレートを[［create and configure］](#creating-an-option-template)します。 そして、テンプレートの構成に応じて、 [［値を追加］](#adding-values-to-option-templates) します。 作成したら、商品に [［テンプレートを適用］](#applying-an-option-template-to-a-product) し、グローバルテンプレートに影響を与えずに商品レベルごとに [設定と値を構成](#configuring-options-and-values-applied-to-products)します。
+オプションを使い始めるには、まず オプションテンプレートを [［create and configure］](#creating-an-option-template) します。 そして、テンプレートの構成に応じて、 [［値を追加］](#adding-values-to-option-templates) します。 作成したら、商品に [［テンプレートを適用］](#applying-an-option-template-to-a-product) し、グローバルテンプレートに影響を与えずに商品レベルごとに [設定と値を構成](#configuring-options-and-values-applied-to-products) します。
 
 ## オプションテンプレートの作成
 
@@ -42,7 +42,7 @@
 
    ![新しいオプションテンプレートを作成する](./using-product-options/images/02.png)
 
-作成したら、 [汎用値](#adding-values-to-option-templates) をオプションテンプレートに追加するか、この手順をスキップして 個々の商品に[オプションを適用](#applying-an-option-template-to-a-product)することができます。
+作成したら、 [汎用値](#adding-values-to-option-templates) をオプションテンプレートに追加するか、この手順をスキップして 個々の商品に [オプションを適用](#applying-an-option-template-to-a-product) することができます。
 
 ```{note}
    または、*商品*ページから基本的なオプションテンプレートを作成することもできます。 *グローバルメニュー* → *Commerce タブ* → *商品管理* → *商品* に移動します。 次に、目的の*商品*を選択して、*オプション*タブをクリックします。 *オプションを追加*フィールドに新しいオプションの名前を入力し、*新規作成*をクリックします。 オプションテンプレートが直ちに作成され、本商品に適用されます。 
@@ -84,7 +84,7 @@
 
 オプションはすぐに商品に適用され、顧客は商品詳細ウィジェットからオプションフィールドにアクセスできます。
 
-必要に応じて、同じ商品に複数のオプションを追加することができます。 詳しくは、 [Creating SKUs for Product Variants](./creating-skus-for-product-variants.md)を参照してください。
+必要に応じて、同じ商品に複数のオプションを追加することができます。 詳しくは、 [商品バリアントのSKU作成](./creating-skus-for-product-variants.md) を参照してください。
 
 ```{important}
    SKU コントリビューターが有効になっている場合は、Optionの値を作成した後に手動でSKUを生成する必要があります。 これを行うには、商品の*SKU*タブに移動し、*追加*ボタンをクリックして、*SKU のすべての組み合わせを生成*を選択します。 それぞれの値に対してユニークなSKUがすぐに生成されます。 SKUが生成されていない場合、オプションのフィールドには値が表示されません。

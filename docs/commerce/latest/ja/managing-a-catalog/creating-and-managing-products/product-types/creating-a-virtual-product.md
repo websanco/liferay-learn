@@ -46,7 +46,7 @@ Liferay Commerceでは、仮想商品とは、顧客がダウンロードでき�
 
 1. 完了したら、*［保存］*をクリックします。
 
-各フィールドの詳細は、記事[Virtual Product Reference](./virtual-product-reference.md)を参照してください。 また、その他の設定については、一般的な ［[商品](../products.html) ］の資料を参照してください。
+各フィールドの詳細は、記事 [仮想商品リファレンス](./virtual-product-reference.md) を参照してください。 また、その他の設定については、一般的な ［ [商品](../products.html) ］の資料を参照してください。
 
 ## Commerce 2.1以前
 
@@ -83,7 +83,7 @@ Liferay Commerceでは、仮想商品とは、顧客がダウンロードでき�
 
 1. ［_保存_］ をクリックします。
 
-各フィールドの詳細は、記事[Virtual Product Reference](./virtual-product-reference.md)を参照してください。
+各フィールドの詳細は、記事 [仮想商品リファレンス](./virtual-product-reference.md) を参照してください。
 
 ### 価格と数量を設定する
 
@@ -100,7 +100,7 @@ Liferay Commerceでは、仮想商品とは、顧客がダウンロードでき�
 1. ［_Price List_］をクリックして、この商品を既存の[［価格表］](../../managing-prices/adding-products-to-a-price-list.md)に適用します。
 1. 在庫を設定するには、 ［_在庫_］ サブタブをクリックし、各倉庫に適切な数量を設定します。 更新されたすべての倉庫の ［_保存_ ]ボタンをクリックします。
 
-価格設定の詳細は、[Introduction to Pricing](../../managing-prices/introduction-to-pricing.md)を参照してください。
+価格設定の詳細は、 [プライシングの概要](../../managing-prices/introduction-to-pricing.md) を参照してください。
 
 商品の在庫を設定する方法については、[倉庫ごとの在庫設定](../../managing-inventory/setting-inventory-by-warehouse.md)を参照してください。
 

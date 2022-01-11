@@ -10,7 +10,7 @@ FedEXを配送方法として使用するようにストアを構成する前に
 
 1. FedExビジネスアカウント番号
 1. FedExアカウントのパスワード
-1. FedEx Webサービス開発者キー（[FedEx Webサービス](https://www.fedex.com/en-us/developer/web-services.html)から入手可能）
+1. FedEx Webサービス開発者キー（ [FedEx Webサービス](https://www.fedex.com/en-us/developer/web-services.html) から入手可能）
 1. FedExメーター番号
 
 ## FedEx配送方法を有効にする

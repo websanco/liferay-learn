@@ -1,8 +1,8 @@
 # 新しい配送エンジンの実装
 
-このチュートリアルでは、[CommerceShippingEngine](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-api/src/main/java/com/liferay/commerce/model/CommerceShippingEngine.java) インターフェイスを実装して、カスタムの配送エンジンを追加する方法を示します。
+このチュートリアルでは、 [CommerceShippingEngine](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-api/src/main/java/com/liferay/commerce/model/CommerceShippingEngine.java) インターフェイスを実装して、カスタムの配送エンジンを追加する方法を示します。
 
-配送エンジンは配送オプションを処理して、ユーザーに表示されるオプション（価格など）を決定します。 Liferay Commerceには標準で次の3つの配送エンジンが組み込まれています：[flat rate engine](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-shipping-engine-fixed-web/src/main/java/com/liferay/commerce/shipping/engine/fixed/web/internal/FixedCommerceShippingEngine.java)、[variable rate engine](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-shipping-engine-fixed-web/src/main/java/com/liferay/commerce/shipping/engine/fixed/web/internal/ByWeightCommerceShippingEngine.java)、[FedEx engine](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-shipping-engine-fedex/src/main/java/com/liferay/commerce/shipping/engine/fedex/internal/FedExCommerceShippingEngine.java)
+配送エンジンは配送オプションを処理して、ユーザーに表示されるオプション（価格など）を決定します。 Liferay Commerceには標準で次の3つの配送エンジンが組み込まれています： [flat rate engine](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-shipping-engine-fixed-web/src/main/java/com/liferay/commerce/shipping/engine/fixed/web/internal/FixedCommerceShippingEngine.java) 、 [variable rate engine](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-shipping-engine-fixed-web/src/main/java/com/liferay/commerce/shipping/engine/fixed/web/internal/ByWeightCommerceShippingEngine.java) 、 [FedEx engine](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-shipping-engine-fedex/src/main/java/com/liferay/commerce/shipping/engine/fedex/internal/FedExCommerceShippingEngine.java)
 > FedEx配送エンジンは、Commerce Enterpriseの加入者のみが利用できます。
 
 ![すぐに使える配送方法](./implementing-a-new-shipping-engine/images/01.png "すぐに使える配送方法")
@@ -23,7 +23,7 @@
     docker run -it -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
     ```
 
-1. [Acme Commerce Shipping Engine](./liferay-j6x8.zip)をダウンロードして解凍します。
+1. [Acme Commerce Shipping Engine](./liferay-j6x8.zip) をダウンロードして解凍します。
 
     ```bash
     curl https://learn.liferay.com/commerce/latest/en/developer-guide/liferay-j6x8.zip -O
@@ -75,7 +75,7 @@
 public class J6X8CommerceShippingEngine implements CommerceShippingEngine {
 ```
 
-> Liferay Commerceが、[配送エンジンレジストリ](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-service/src/main/java/com/liferay/commerce/internal/util/CommerceShippingEngineRegistryImpl.java)で新しいエンジンを他のエンジンと区別できるように、配送エンジンに個別のキーを提供することが重要です。 すでに使用されているキーを再利用すると、既存の関連付けられているエンジンが上書きされます。
+> Liferay Commerceが、 [配送エンジンレジストリ](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-service/src/main/java/com/liferay/commerce/internal/util/CommerceShippingEngineRegistryImpl.java) で新しいエンジンを他のエンジンと区別できるように、配送エンジンに個別のキーを提供することが重要です。 すでに使用されているキーを再利用すると、既存の関連付けられているエンジンが上書きされます。
 
 ### `CommerceShippingEngine`インターフェイスを確認する
 
@@ -85,9 +85,9 @@ public class J6X8CommerceShippingEngine implements CommerceShippingEngine {
 public String getCommerceShippingOptionLabel(String name, Locale locale);
 ```
 
-> このメソッドは、配送オプションに使用されるテキストラベルを返します。 言語キーで説明を取得する際のリファレンスについては、[J6X8CommerceShippingEngine.java](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/latest/en/developer-guide/implementing-a-new-shipping-engine/resources/liferay-j6x8.zip/j6x8-impl/src/main/java/com/acme/j6x8/internal/commerce/model/J6X8CommerceShippingEngine.java)の実装を参照してください。
+> このメソッドは、配送オプションに使用されるテキストラベルを返します。 言語キーで説明を取得する際のリファレンスについては、 [J6X8CommerceShippingEngine.java](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/latest/en/developer-guide/implementing-a-new-shipping-engine/resources/liferay-j6x8.zip/j6x8-impl/src/main/java/com/acme/j6x8/internal/commerce/model/J6X8CommerceShippingEngine.java) の実装を参照してください。
 > 
-> 詳細は、[アプリケーションのローカライズ](https://help.liferay.com/hc/en-us/articles/360018168251-Localizing-Your-Application)を参照してください。
+> 詳細は、 [アプリケーションのローカライズ](https://help.liferay.com/hc/en-us/articles/360018168251-Localizing-Your-Application) を参照してください。
 
 ```java
 public List<CommerceShippingOption> getCommerceShippingOptions(
@@ -204,7 +204,7 @@ for (CommerceShippingFixedOption commerceShippingFixedOption :
     //The shipping option processing logic goes here.
 ```
 
-> まず、[CommerceShippingMethodLocalService](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-service/src/main/java/com/liferay/commerce/service/impl/CommerceShippingMethodLocalServiceImpl.java)を使用して「配送方法」（配送エンジンを表す）を取得し、次に[CommerceShippingFixedOptionLocalService](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-shipping-engine-fixed-service/src/main/java/com/liferay/commerce/shipping/engine/fixed/service/impl/CommerceShippingFixedOptionLocalServiceImpl.java)を使用して利用可能なオプションを取得します。
+> まず、 [CommerceShippingMethodLocalService](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-service/src/main/java/com/liferay/commerce/service/impl/CommerceShippingMethodLocalServiceImpl.java) を使用して「配送方法」（配送エンジンを表す）を取得し、次に [CommerceShippingFixedOptionLocalService](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-shipping-engine-fixed-service/src/main/java/com/liferay/commerce/shipping/engine/fixed/service/impl/CommerceShippingFixedOptionLocalServiceImpl.java) を使用して利用可能なオプションを取得します。
 
 > その後、配送方法をループさせて処理します。
 
@@ -215,7 +215,7 @@ for (CommerceShippingFixedOption commerceShippingFixedOption :
 * [カスタム配送オプションロジックを追加する。](#add-custom-shipping-option-logic)
 * [処理済みの配送オプションを追加する。](#add-the-processed-shipping-option)
 
-Liferay Commerceの[固定料金配送エンジン](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-shipping-engine-fixed-web/src/main/java/com/liferay/commerce/shipping/engine/fixed/web/internal/FixedCommerceShippingEngine.java)は、開始するのに適したベースラインとなる処理ステップを確認するのに適したリファレンスです。 この例では、同様の手順を採用しています。
+Liferay Commerceの [固定料金配送エンジン](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-shipping-engine-fixed-web/src/main/java/com/liferay/commerce/shipping/engine/fixed/web/internal/FixedCommerceShippingEngine.java) は、開始するのに適したベースラインとなる処理ステップを確認するのに適したリファレンスです。 この例では、同様の手順を採用しています。
 
 #### アドレス制限チェックを実装する
 
@@ -236,7 +236,7 @@ private boolean _shippingOptionIsAddressRestricted(
 
 > 次のステップでは、特定の配送オプションが注文の配送先住所に対して制限されているかどうかを判断します。 制限されたオプションは、選択するオプションとして表示されません。
 > 
-> [CommerceAddressRestrictionLocalService](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-service/src/main/java/com/liferay/commerce/service/impl/CommerceAddressRestrictionLocalServiceImpl.java)を使用して、オプションが注文の住所に制限されているかどうかを判断します。 アドレス情報を取得するには、`CommerceOrder`を使用します。`CommerceOrder`オブジェクトは、出荷される注文に関するすべての種類の情報を表します。 `CommerceOrder`で使用できる他のメソッドについては、[CommerceOrder.java](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-api/src/main/java/com/liferay/commerce/model/CommerceOrder.java)と[CommerceOrderModel.java](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-api/src/main/java/com/liferay/commerce/model/CommerceOrderModel.java)を参照してください。
+> [CommerceAddressRestrictionLocalService](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-service/src/main/java/com/liferay/commerce/service/impl/CommerceAddressRestrictionLocalServiceImpl.java) を使用して、オプションが注文の住所に制限されているかどうかを判断します。 アドレス情報を取得するには、`CommerceOrder`を使用します。`CommerceOrder`オブジェクトは、出荷される注文に関するすべての種類の情報を表します。 `CommerceOrder`で使用できる他のメソッドについては、 [CommerceOrder.java](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-api/src/main/java/com/liferay/commerce/model/CommerceOrder.java) と [CommerceOrderModel.java](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-api/src/main/java/com/liferay/commerce/model/CommerceOrderModel.java) を参照してください。
 
 #### 送料無料の有無を確認する。
 
@@ -250,7 +250,7 @@ if (_commerceShippingHelper.isFreeShipping(commerceOrder)) {
 }
 ```
 
-> [CommerceShippingHelper](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-service/src/main/java/com/liferay/commerce/internal/util/CommerceShippingHelperImpl.java)を使用して、注文を無料にする必要があるかどうかをより簡単に判断できます。
+> [CommerceShippingHelper](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-service/src/main/java/com/liferay/commerce/internal/util/CommerceShippingHelperImpl.java) を使用して、注文を無料にする必要があるかどうかをより簡単に判断できます。
 
 #### カスタム配送オプションロジックを追加する。
 
@@ -276,14 +276,14 @@ return commerceShippingOptions;
 
 ### 言語キーを `Language.properties`に追加します。
 
-モジュール内の[Language.properties](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/latest/en/developer-guide/implementing-a-new-shipping-engine/resources/liferay-j6x8.zip/j6x8-impl/src/main/resources/content/Language.properties)ファイルに言語キーとその値を追加します。
+モジュール内の [Language.properties](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/latest/en/developer-guide/implementing-a-new-shipping-engine/resources/liferay-j6x8.zip/j6x8-impl/src/main/resources/content/Language.properties) ファイルに言語キーとその値を追加します。
 
 ```properties
 discounted-rate=Discounted Rate
 ship-for-a-discounted-price=Ship for a discounted price.
 ```
 
-> 詳細は、[アプリケーションのローカライズ](https://help.liferay.com/hc/en-us/articles/360018168251-Localizing-Your-Application)を参照してください。
+> 詳細は、 [アプリケーションのローカライズ](https://help.liferay.com/hc/en-us/articles/360018168251-Localizing-Your-Application) を参照してください。
 
 ## まとめ
 

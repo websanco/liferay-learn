@@ -9,13 +9,13 @@ Liferay Commerceには、いくつかの通貨が事前設定されており、�
 | フィールド                        | 説明                                                                                                                                                             |
 | ---------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 名前                           | 通貨の名前                                                                                                                                                          |
-| Code                         | 通貨の3文字の[ISOコード](https://www.currency-iso.org/en/home/tables/table-a1.html)                                                                                     |
+| Code                         | 通貨の3文字の [ISOコード](https://www.currency-iso.org/en/home/tables/table-a1.html)                                                                                     |
 | Format Pattern               | 通貨記号、コンマの間にある桁数、および表示される桁数。 たとえば、USドルの場合、$###,##0.00 という形式では、 _0_ が保持する桁数は常に表示されますが（他の桁が存在しない場合は0）、 _#_ が保持する桁数は、占有されている場合にのみ表示されます。 上記の形式の0.01の値は、$0.01として表示されます。 |
 | Maximum Decimal Places       | 許容される小数点の右側の最大桁数                                                                                                                                               |
 | Minimum Decimal Places       | 許容される小数点の右側の最小桁数                                                                                                                                               |
-| Rounding Mode                | ドロップダウンメニューからの[丸めモード](https://en.wikipedia.org/wiki/Rounding#Directed_rounding_to_an_integer)のタイプ                                                              |
+| Rounding Mode                | ドロップダウンメニューからの [丸めモード](https://en.wikipedia.org/wiki/Rounding#Directed_rounding_to_an_integer) のタイプ                                                              |
 | Primary                      | この通貨をストアのデフォルトの通貨に指定するためのトグル                                                                                                                                   |
-| Exchange Rate with US Dollar | ストアの主要通貨と比較した通貨の為替レート。デフォルトでは、USDが主要通貨として指定されていますが、[UIで変更できます](../../orders-and-fulfillment/mercanet.md#set-eur-as-the-primary-store-currency) 。               |
+| Exchange Rate with US Dollar | ストアの主要通貨と比較した通貨の為替レート。デフォルトでは、USDが主要通貨として指定されていますが、 [UIで変更できます](../../orders-and-fulfillment/mercanet.md#set-eur-as-the-primary-store-currency) 。               |
 | Priority                     | 通貨が表に表示される順序。数字が大きいほど、下に表示されます                                                                                                                                 |
 | Active                       | この通貨を有効にするトグル                                                                                                                                                  |
 

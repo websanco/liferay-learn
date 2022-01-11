@@ -4,7 +4,7 @@
 
 Liferay Commerceのデプロイは、サイト、ページ、ウィジェット、およびアカウントの階層で構成されます。 Liferay Commerceでサイトを作成および設定することは、ストアを立ち上げるための最初のステップの1つです。 [アクセラレータ](../starting-a-store/accelerators.md)を使用してすぐにサイトを開始するか、または空白のサイトを作成して必要なCommerceウィジェットとページを追加できます。
 
-Liferay Commerceは、Liferay Digital Experience Platform上に構築されています。 Liferay DXPサイトの機能の詳細は、[サイトの構築](https://help.liferay.com/hc/en-us/articles/360018171231-Building-a-Site)を参照してください。
+Liferay Commerceは、Liferay Digital Experience Platform上に構築されています。 Liferay DXPサイトの機能の詳細は、 [サイトの構築](https://help.liferay.com/hc/en-us/articles/360018171231-Building-a-Site) を参照してください。
 
 ストアサイトの作成の詳細は、[ストアセットアップの概要](../starting-a-store/store-setup-overview.md)を参照してください。
 
@@ -39,5 +39,5 @@ Liferay Commerceは、Liferayのサイトをサイトのタイプと組み合わ
 ## 追加情報
 
 * [ストア設定の概要](../starting-a-store/store-setup-overview.md)
-* [サイトの構築](https://learn.liferay.com/dxp/latest/en/site_building.html)
+* [サイトの構築](https://learn.liferay.com/dxp/latest/ja/site_building.html)
 * [アカウント管理](../users-and-accounts/account-management.md)

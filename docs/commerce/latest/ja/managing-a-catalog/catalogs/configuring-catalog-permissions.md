@@ -8,7 +8,7 @@
 
 ## 既存ロールへのカタログ管理権限の追加
 
-カタログや商品を管理するために、新しいカスタムロールを作成するか、既存のロールを変更することから始めましょう。 この役割は、システム全体の機能に対する最小限のアクセス権を持つように設定することができます。 ユーザー権限の設定の定義については、[ロールの権限設定の定義](https://learn.liferay.com/dxp/latest/en/users-and-permissions/roles-and-permissions/defining-role-permissions.html)を参照してください。
+カタログや商品を管理するために、新しいカスタムロールを作成するか、既存のロールを変更することから始めましょう。 この役割は、システム全体の機能に対する最小限のアクセス権を持つように設定することができます。 ユーザー権限の設定の定義については、 [ロールの権限設定の定義](https://learn.liferay.com/dxp/latest/ja/users-and-permissions/roles-and-permissions/defining-role-permissions.html) を参照してください。
 
 既存ロールにカタログ管理権限を定義するには
 
@@ -57,5 +57,5 @@
 
 ## 追加情報
 
-* [ロールと権限について](https://learn.liferay.com/dxp/latest/en/users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.html)
+* [ロールと権限について](https://learn.liferay.com/dxp/latest/ja/users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.html)
 * [チャネルを使用した商品の可視性の構成](../../starting-a-store/channels/configuring-product-visibility-using-channels.md)

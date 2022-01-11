@@ -2,7 +2,7 @@
 
 Liferay Commerceでは、グループ商品は、顧客の利便性や特別価格を提供するために、カタログ内の２つ以上の商品が事前に定められたセットと販売されています。 グループ商品は在庫で管理されていて、あらゆるタイプの商品（例：シンプル、グループ化、仮想化）を含むことができます。 家具の卸売り業者の例を取り上げてみましょう。 家具は単品でも購入できますが、お客様の利便性を考慮したり特別割引を提供するために、関連商品をまとめて家具のセットにすることも可能です。
 
-はじめに、グループ商品を［[create](#create-a-grouped-product)］ し、そこに新しい商品のエントリーを［[追加](#adding-product-entries) ］します。 次に、グループ商品とSKUを設定します。
+はじめに、グループ商品を［ [create](#create-a-grouped-product) ］ し、そこに新しい商品のエントリーを［ [追加](#adding-product-entries) ］します。 次に、グループ商品とSKUを設定します。
 
 ```{note}
 グループ商品に加えて、Liferay Commerceは[商品オプション]（.../products/using-product-options.md）を使用した商品バンドルの作成をサポートしています。 オプションでは、現在の商品と他のSKUをリンクさせて一緒に購入するための値を定義することができます。 最終的な価格は、オプションの設定に基づいて計算されます。 詳細は、[Creating Product Bundles]（../ products / creating-product-bundles.md）および[Product Options]（../ products / using-product-options.md）を参照してください。
@@ -24,7 +24,7 @@ Liferay Commerceでは、グループ商品は、顧客の利便性や特別価�
 
 1. ［*Submit*］をクリックします 。
 
-これにより、選択されたカタログに、単一のSKU、 *default*の新しいグループ商品エンティティが作成されます。 グループ商品は、他の商品の種類と同じように設定することができます（例：SEO、オプション、在庫ルール）。 商品の一般的な設定については、［ [Product Configuration Reference](../products/product-configuration-reference.md)］ を参照してください。
+これにより、選択されたカタログに、単一のSKU、 *default*の新しいグループ商品エンティティが作成されます。 グループ商品は、他の商品の種類と同じように設定することができます（例：SEO、オプション、在庫ルール）。 商品の一般的な設定については、［ [商品構成リファレンス](../products/product-configuration-reference.md) ］ を参照してください。
 
 ![グループ商品を設定します。](./creating-a-grouped-product/images/01.png)
 

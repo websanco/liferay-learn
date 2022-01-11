@@ -2,7 +2,7 @@
 
 このチュートリアルでは、 [CommerceCheckoutStep](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-api/src/main/java/com/liferay/commerce/util/CommerceCheckoutStep.java) インターフェースを実装して、カスタム清算ステップを追加する方法を紹介します。
 
-清算ステップは、顧客の清算プロセスの1つの画面を表します。 Liferay Commerceには、[支払方法ステップ](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-checkout-web/src/main/java/com/liferay/commerce/checkout/web/internal/util/PaymentMethodCommerceCheckoutStep.java)や[注文確認ステップ](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-checkout-web/src/main/java/com/liferay/commerce/checkout/web/internal/util/OrderConfirmationCommerceCheckoutStep.java)などの基本的なステップを含む、いくつかの清算ステップが標準で組み込まれています。
+清算ステップは、顧客の清算プロセスの1つの画面を表します。 Liferay Commerceには、 [支払方法ステップ](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-checkout-web/src/main/java/com/liferay/commerce/checkout/web/internal/util/PaymentMethodCommerceCheckoutStep.java) や [注文確認ステップ](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-checkout-web/src/main/java/com/liferay/commerce/checkout/web/internal/util/OrderConfirmationCommerceCheckoutStep.java) などの基本的なステップを含む、いくつかの清算ステップが標準で組み込まれています。
 
 ![すぐに使える清算ステップ](./implementing-a-custom-checkout-step/images/01.png "すぐに使えるチェックアウトステップ")
 
@@ -22,7 +22,7 @@
     docker run -it -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
     ```
 
-1. [Acme Commerce Checkout Step](./liferay-n8n6.zip)をダウンロードして解凍します。
+1. [Acme Commerce Checkout Step](./liferay-n8n6.zip) をダウンロードして解凍します。
 
     ```bash
     curl https://learn.liferay.com/commerce/latest/en/developer-guide/liferay-n8n6.zip -O
@@ -79,7 +79,7 @@ public class N8N6CommerceCheckoutStep extends BaseCommerceCheckoutStep {
 
 > Liferay Commerceがこの清算ステップを既存の清算ステップと区別できるように、清算ステップ名は一意の値である必要があります。
 > 
-> `commerce.checkout.step.order` 値は、清算プロセスでこの清算ステップが表示される範囲を示します。 たとえば、[配送方法清算ステップ](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-checkout-web/src/main/java/com/liferay/commerce/checkout/web/internal/util/ShippingMethodCommerceCheckoutStep.java)の値は20です。 この清算ステップに値21を指定すると、配送方法のステップの直後に表示されます。
+> `commerce.checkout.step.order` 値は、清算プロセスでこの清算ステップが表示される範囲を示します。 たとえば、 [配送方法清算ステップ](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-checkout-web/src/main/java/com/liferay/commerce/checkout/web/internal/util/ShippingMethodCommerceCheckoutStep.java) の値は20です。 この清算ステップに値21を指定すると、配送方法のステップの直後に表示されます。
 
 ### `CommerceCheckoutStep` インターフェイスを確認する
 
@@ -127,9 +127,9 @@ public void render(
 private ServletContext _servletContext;
 ```
 
-> `osgi.web.symbolicname`に設定した値は、[bnd.bndファイル](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/latest/en/developer-guide/implementing-a-custom-checkout-step/resources/liferay-n8n6.zip/n8n6-web/bnd.bnd)の`Bundle-SymbolicName`の値と一致します。 これらの値は、JSPを見つけるために`ServletContext`と一致する必要があります。
+> `osgi.web.symbolicname`に設定した値は、 [bnd.bndファイル](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/latest/en/developer-guide/implementing-a-custom-checkout-step/resources/liferay-n8n6.zip/n8n6-web/bnd.bnd) の`Bundle-SymbolicName`の値と一致します。 これらの値は、JSPを見つけるために`ServletContext`と一致する必要があります。
 > 
-> また、 `ServletContext` が正しく生成されるように、bnd.bndファイルで `Web-ContextPath` 一意の値を宣言する必要があります。 この例では、 `Web-ContextPath` は `/ n8n6-web`設定されています。 これらの値のリファレンスについては、[bnd.bnd](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/latest/en/developer-guide/implementing-a-custom-checkout-step/resources/liferay-n8n6.zip/n8n6-web/bnd.bnd)を参照してください。
+> また、 `ServletContext` が正しく生成されるように、bnd.bndファイルで `Web-ContextPath` 一意の値を宣言する必要があります。 この例では、 `Web-ContextPath` は `/ n8n6-web`設定されています。 これらの値のリファレンスについては、 [bnd.bnd](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/latest/en/developer-guide/implementing-a-custom-checkout-step/resources/liferay-n8n6.zip/n8n6-web/bnd.bnd) を参照してください。
 
 #### `render`メソッドを実装する
 
@@ -152,7 +152,7 @@ private JSPRenderer _jspRenderer;
 private ServletContext _servletContext;
 ```
 
-> `JSPRenderer`を使用して、清算ステップのJSPをレンダリングします（この場合は、 [terms_and_conditions.jsp](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/latest/en/developer-guide/implementing-a-custom-checkout-step/resources/liferay-n8n6.zip/n8n6-web/src/main/resources/META-INF/resources/terms_and_conditions.jsp)) 。 作成したJSPを見つけるためのパラメーターとして`ServletContext`を提供します。
+> `JSPRenderer`を使用して、清算ステップのJSPをレンダリングします（この場合は、 [terms_and_conditions.jsp](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/latest/en/developer-guide/implementing-a-custom-checkout-step/resources/liferay-n8n6.zip/n8n6-web/src/main/resources/META-INF/resources/terms_and_conditions.jsp) ) 。 作成したJSPを見つけるためのパラメーターとして`ServletContext`を提供します。
 
 #### ビジネスロジックを`processAction`に追加する 。
 
@@ -164,13 +164,13 @@ private ServletContext _servletContext;
 
 #### 言語キーを`Language.properties`に追加する
 
-モジュール内の[Language.properties](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/latest/en/developer-guide/implementing-a-custom-checkout-step/resources/liferay-n8n6.zip/n8n6-web/src/main/resources/content/Language.properties)ファイルに言語キーとその値を追加します。
+モジュール内の [Language.properties](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/latest/en/developer-guide/implementing-a-custom-checkout-step/resources/liferay-n8n6.zip/n8n6-web/src/main/resources/content/Language.properties) ファイルに言語キーとその値を追加します。
 
 ```properties
 n8n6-commerce-checkout-step=N8N6 Commerce Checkout Step
 ```
 
-> 詳細は、[アプリケーションのローカライズ](https://help.liferay.com/hc/en-us/articles/360018168251-Localizing-Your-Application)を参照してください。
+> 詳細は、 [アプリケーションのローカライズ](https://help.liferay.com/hc/en-us/articles/360018168251-Localizing-Your-Application) を参照してください。
 
 ## まとめ
 

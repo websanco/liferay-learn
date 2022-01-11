@@ -22,7 +22,7 @@ Liferay Commerceでは、［[ Simple](../product-types/creating-a-simple-product
 
 ![画像や添付ファイルを商品に直接追加します。](./products-overview/images/03.png)
 
-[［images］ ](./product-images.md) と[［添付ファイル］](./product-attachments.md) を商品に直接アップロードして、表示画像や商品のリソースとして利用できます。 サブスクリプションユーザーは、商品を部品表（BOM）ダイアグラムにマッピングして、顧客に商品のコンテキストを提供することもできます。 詳細は、[Managing BOMs](./managing-boms.md)を参照してください。
+[［images］ ](./product-images.md) と[［添付ファイル］](./product-attachments.md) を商品に直接アップロードして、表示画像や商品のリソースとして利用できます。 サブスクリプションユーザーは、商品を部品表（BOM）ダイアグラムにマッピングして、顧客に商品のコンテキストを提供することもできます。 詳細は、 [BOMの管理](./managing-boms.md) を参照してください。
 
 ![BOMダイアグラムを作成します。](./products-overview/images/04.png)
 

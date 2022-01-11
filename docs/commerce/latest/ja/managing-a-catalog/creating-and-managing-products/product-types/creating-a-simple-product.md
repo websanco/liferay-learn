@@ -21,7 +21,7 @@
 
 ## SKUを生成する
 
-商品に商品オプションを適用したら、SKUを生成する必要があります。 SKUの生成方法の詳細は、[Creating SKUs for Product Variants](../products/creating-skus-for-product-variants.md)を参照してください。 ［_SKU_］サブタブをクリックして、SKUを生成します。
+商品に商品オプションを適用したら、SKUを生成する必要があります。 SKUの生成方法の詳細は、 [商品バリアントのSKU作成](../products/creating-skus-for-product-variants.md) を参照してください。 ［_SKU_］サブタブをクリックして、SKUを生成します。
 
 ## 在庫の価格と数量を設定する
 
@@ -40,7 +40,7 @@ SKUが生成されたら、在庫で各アイテムの基本価格と数量を�
 1. ［_公開_］をクリックします。
 1. 設定を閉じます
 
-価格設定の詳細は、[Introduction to Pricing](../../managing-prices/introduction-to-pricing.md)を参照してください。
+価格設定の詳細は、 [プライシングの概要](../../managing-prices/introduction-to-pricing.md) を参照してください。
 
 商品の在庫を設定する方法については、[倉庫ごとの在庫設定](../../managing-inventory/setting-inventory-by-warehouse.md)を参照してください。
 

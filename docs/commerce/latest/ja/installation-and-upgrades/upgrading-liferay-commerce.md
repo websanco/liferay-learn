@@ -10,13 +10,13 @@ Liferay Commerce 3.0より、CommerceはLiferay DXPにバンドルされてい�
 7.4にアップグレードした後は、Commerceの`LPKG`を再度デプロイしないでください。 Commerce 4.0のモジュールは7.4にバンドルされています。  'LPKG'をデプロイすると競合が発生します。
 ```
 
-DXPのアップグレードプロセスの詳細は、 [Upgrade Overview](https://learn.liferay.com/dxp/latest/en/installation-and-upgrades/upgrading-liferay/upgrade-basics/upgrade-overview.html)を参照してください。 DXPが7.4にアップグレードされたら、再インデックスを実行してください。
+DXPのアップグレードプロセスの詳細は、 [Upgrade Overview](https://learn.liferay.com/dxp/latest/ja/installation-and-upgrades/upgrading-liferay/upgrade-basics/upgrade-overview.html) を参照してください。 DXPが7.4にアップグレードされたら、再インデックスを実行してください。
 
 ### Liferay Commerce 4.0にアップグレードするための前提条件
 
 `CommerceCountry`テーブルはLiferay Commerce 4.0では廃止予定であるため、`Country`テーブルに置き換えられています。 `CommerceCountry`テーブルでは、国名だけが必要でしたが、Countryテーブルでは、国名とアルファ2(a2)、アルファ3(a3)のコードが必要です。
 
-`CommerceCountry`テーブルは、Minium Acceleratorを使用している場合や、独自の値を使用している場合に入力されることがあります。 Minium Acceleratorを使用していない場合、このテーブルは空の状態で結構です。 Liferay DXP 7.4にアップグレードする前に、前提条件として、 `CommerceCountry`テーブル内の各国にISOコードがあらかじめ入力されていることを確認する必要があります。 詳細は、 [Country Codes](https://www.iso.org/obp/ui/#search/code)を参照してください。
+`CommerceCountry`テーブルは、Minium Acceleratorを使用している場合や、独自の値を使用している場合に入力されることがあります。 Minium Acceleratorを使用していない場合、このテーブルは空の状態で結構です。 Liferay DXP 7.4にアップグレードする前に、前提条件として、 `CommerceCountry`テーブル内の各国にISOコードがあらかじめ入力されていることを確認する必要があります。 詳細は、 [Country Codes](https://www.iso.org/obp/ui/#search/code) を参照してください。
 
 ![CommerceCountryテーブルは、Countryテーブルよりも多くのフィールドを持っています。](./upgrading-liferay-commerce/images/01.png)
 
@@ -60,15 +60,15 @@ Liferay Commerceでは、バージョン1.1.x、2.0.xのどちらからでも、
 1.1.xから2.1.xへのアップグレードでは、2.0.xへの増分アップグレードは**必要ありません**。
 ```
 
-Commerce 2.1.xにアップグレードする前に、まずLiferay DXP 7.2の最新のフィックスパックを実行している必要があります。 たとえば、Liferay Commerce Enterprise 2.0.6にアップグレードする場合は、Liferay DXPをフィックスパック14にアップグレードする必要があります。 DXP 7.2へのアップグレードについては、 [アップグレードの概要](https://learn.liferay.com/dxp/latest/en/installation-and-upgrades/upgrading-liferay/upgrade-basics/upgrade-overview.html)を参照してください。
+Commerce 2.1.xにアップグレードする前に、まずLiferay DXP 7.2の最新のフィックスパックを実行している必要があります。 たとえば、Liferay Commerce Enterprise 2.0.6にアップグレードする場合は、Liferay DXPをフィックスパック14にアップグレードする必要があります。 DXP 7.2へのアップグレードについては、 [アップグレードの概要](https://learn.liferay.com/dxp/latest/ja/installation-and-upgrades/upgrading-liferay/upgrade-basics/upgrade-overview.html) を参照してください。
 
 ### 最新のフィックスパックを適用する
 
 > 変更通知を受け取り（購読）が必要
 
-Liferayは最新のフィックスパックリリースを[ヘルプセンター](https://customer.liferay.com/downloads)からダウンロードできるように提供しています。 ダウンロードが完了したら、 [Liferayパッチツール](https://help.liferay.com/hc/articles/360018176551-Using-the-Patching-Tool)を使ってフィックスパックを適用することができます。 詳細は、[Installing Patches](https://help.liferay.com/hc/en-us/articles/360028810512-Installing-Patches)を参照してください。
+Liferayは最新のフィックスパックリリースを [ヘルプセンター](https://customer.liferay.com/downloads) からダウンロードできるように提供しています。 ダウンロードが完了したら、 [Liferayパッチツール](https://help.liferay.com/hc/articles/360018176551-Using-the-Patching-Tool) を使ってフィックスパックを適用することができます。 詳細は、 [Installing Patches](https://help.liferay.com/hc/en-us/articles/360028810512-Installing-Patches) を参照してください。
 
-Liferay DXPを[手動でインストールした場合](https://help.liferay.com/hc/articles/360017896672-Installing-Liferay-DXP-Manually-)（WebLogicなどで）は、[Installing Patches on the Liferay DXP 7.1 WAR](https://help.liferay.com/hc/articles/360018176651-Installing-patches-on-the-Liferay-DXP-7-1-WAR)を参照してください。
+Liferay DXPを [手動でインストールした場合](https://help.liferay.com/hc/articles/360017896672-Installing-Liferay-DXP-Manually-) （WebLogicなどで）は、 [Installing Patches on the Liferay DXP 7.1 WAR](https://help.liferay.com/hc/articles/360018176651-Installing-patches-on-the-Liferay-DXP-7-1-WAR) を参照してください。
 
 その後、以下の手順に従ってフィックスパックが正常にインストールされたことを確認してください。
 
@@ -92,10 +92,10 @@ DXP 7.2の最新フィックスパックを実行したら、以下の手順に�
 
 1. 最新のLiferay Commerceをダウンロードしてください。
 
-    * Commerce Enterpriseは [ヘルプセンター](https://customer.liferay.com/downloads?p_p_id=com_liferay_osb_customer_downloads_display_web_DownloadsDisplayPortlet&_com_liferay_osb_customer_downloads_display_web_DownloadsDisplayPortlet_productAssetCategoryId=118190997&_com_liferay_osb_customer_downloads_display_web_DownloadsDisplayPortlet_fileTypeAssetCategoryId=118191001)から入手できます。
-    * Commerce Communityは、 [Liferay Commerce Communityダウンロードページ](https://www.liferay.com/downloads-community)から入手できます。
+    * Commerce Enterpriseは [ヘルプセンター](https://customer.liferay.com/downloads?p_p_id=com_liferay_osb_customer_downloads_display_web_DownloadsDisplayPortlet&_com_liferay_osb_customer_downloads_display_web_DownloadsDisplayPortlet_productAssetCategoryId=118190997&_com_liferay_osb_customer_downloads_display_web_DownloadsDisplayPortlet_fileTypeAssetCategoryId=118191001) から入手できます。
+    * Commerce Communityは、 [Liferay Commerce Communityダウンロードページ](https://www.liferay.com/downloads-community) から入手できます。
 
-1. `LPKG` を `${liferay.home}/ deploy` フォルダーに展開します。アプリケーションをLiferay DXPに展開する方法の詳細は、 [アプリのインストール](https://learn.liferay.com/dxp/latest/en/system-administration/installing-and-managing-apps/installing-apps.html)参照してください。
+1. `LPKG` を `${liferay.home}/ deploy` フォルダーに展開します。アプリケーションをLiferay DXPに展開する方法の詳細は、 [アプリのインストール](https://learn.liferay.com/dxp/latest/ja/system-administration/installing-and-managing-apps/installing-apps.html) 参照してください。
 
 1. 以下に示すようなメッセージがアプリケーションサーバーコンソールに表示されることを確認します。
 
@@ -115,7 +115,7 @@ DXP 7.2の最新フィックスパックを実行したら、以下の手順に�
 
 ### 古いデータを消去し、アップグレードプロセスを確認する
 
-1. `${liferay.home}/osgi/state`フォルダを削除します。 OSGiフォルダーの詳細は、 [アプリのインストール](https://learn.liferay.com/dxp/latest/en/system-administration/installing-and-managing-apps/installing-apps.html)参照してください。
+1. `${liferay.home}/osgi/state`フォルダを削除します。 OSGiフォルダーの詳細は、 [アプリのインストール](https://learn.liferay.com/dxp/latest/ja/system-administration/installing-and-managing-apps/installing-apps.html) 参照してください。
 1. アプリケーションサーバーを起動します。
 1. アプリケーションサーバーのコンソールログで次のようなメッセージを探して、アップグレードプロセスが開始されたことを確認します。
 
@@ -165,5 +165,5 @@ Liferay Commerceインスタンスがアップグレードされました。
 
 ## 追加情報
 
-* [アプリのインストール](https://learn.liferay.com/dxp/latest/en/system-administration/installing-and-managing-apps/installing-apps.html)
+* [アプリのインストール](https://learn.liferay.com/dxp/latest/ja/system-administration/installing-and-managing-apps/installing-apps.html)
 * [Liferay Commerce修正プログラム配信方法](../get-help/commerce-enterprise-support/liferay-commerce-fix-delivery-method.md)

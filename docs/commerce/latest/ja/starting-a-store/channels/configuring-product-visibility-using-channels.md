@@ -6,7 +6,7 @@
 
 ![同じカタログ内の複数の商品をフィルタリングして、複数のチャネルで販売することができます。](./configuring-product-visibility-using-channels/images/01.png)
 
-Liferay Commerceでのチャネルの使用の詳細は、[Introduction to Channels](./introduction-to-channels.md)を参照してください。
+Liferay Commerceでのチャネルの使用の詳細は、 [チャネルについて](./introduction-to-channels.md) を参照してください。
 
 ## 前提条件
 

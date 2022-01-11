@@ -24,7 +24,7 @@ Liferay Commerceでは、複数のSKUを商品に追加して商品バリアン�
 
    ![「SKU のすべての組み合わせを生成」を選択します。](./creating-skus-for-product-variants/images/02.png)
 
-   SKUはオプション値ごとに自動的に生成されます。 これらのSKUは、値の名前を使用し、基本価格や在庫なしで作成されます。 SKUを構成するには、SKUの［*Actions*］ボタン（![Actions Button](../../../images/icon-actions.png))をクリックし、［* Edit *］を選択します。 詳しくは［[SKU Fields Reference](#sku-fields-reference)］を参照してください。
+   SKUはオプション値ごとに自動的に生成されます。 これらのSKUは、値の名前を使用し、基本価格や在庫なしで作成されます。 SKUを構成するには、SKUの［*Actions*］ボタン（![Actions Button](../../../images/icon-actions.png))をクリックし、［* Edit *］を選択します。 詳しくは［ [SKU Fields Reference](#sku-fields-reference) ］を参照してください。
 
    ![生成されたSKUを編集します。](./creating-skus-for-product-variants/images/03.png)
 
@@ -46,7 +46,7 @@ Liferay Commerceでは、複数のSKUを商品に追加して商品バリアン�
 
    ![「SKUを追加」を選択します。](./creating-skus-for-product-variants/images/04.png)
 
-1. SKUのフィールドを設定します。 詳しくは［[SKU Fields Reference](#sku-fields-reference)を参照してください。
+1. SKUのフィールドを設定します。 詳しくは［ [SKU Fields Reference](#sku-fields-reference) を参照してください。
 
    ![SKUの設定を行います。](./creating-skus-for-product-variants/images/05.png)
 
@@ -54,7 +54,7 @@ Liferay Commerceでは、複数のSKUを商品に追加して商品バリアン�
 
 ## SKU在庫の追加
 
-商品の「バックオーダーを許可」が有効になっている場合、基本価格が設定された公開済みのすべてのSKUは、商品の詳細ウィジェットから顧客がすぐに購入できるようになります。 ただし、「バックオーダーを許可」が無効になっている場合は、最初にSKUに在庫を追加して、購入できるようにする必要があります。 詳しくは［ [Introduction to Managing Inventory](../../managing-inventory/introduction-to-managing-inventory.md)］ を参照してください。
+商品の「バックオーダーを許可」が有効になっている場合、基本価格が設定された公開済みのすべてのSKUは、商品の詳細ウィジェットから顧客がすぐに購入できるようになります。 ただし、「バックオーダーを許可」が無効になっている場合は、最初にSKUに在庫を追加して、購入できるようにする必要があります。 詳しくは［ [在庫管理の概要](../../managing-inventory/introduction-to-managing-inventory.md) ］ を参照してください。
 
 ![商品のSKUごとに在庫を追加します。](./creating-skus-for-product-variants/images/06.png)
 

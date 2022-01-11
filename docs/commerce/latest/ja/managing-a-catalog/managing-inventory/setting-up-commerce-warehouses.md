@@ -30,7 +30,7 @@ Commerce倉庫は、商品の在庫が保管されている物理的な場所を
 
 1. 倉庫の *［位置情報］* を入力します（有効化するために必要です）。
 
-   または、Bing ジオコーダを使用して、倉庫の位置情報を自動的に生成することもできます。 この機能を使用するには、倉庫に住所がある必要があります。 詳細は[下記](#using-bing-geocoder-to-set-a-warehouses-geolocation)を参照してください。
+   または、Bing ジオコーダを使用して、倉庫の位置情報を自動的に生成することもできます。 この機能を使用するには、倉庫に住所がある必要があります。 詳細は [下記](#using-bing-geocoder-to-set-a-warehouses-geolocation) を参照してください。
 
 1. *［保存］*をクリックします。
 
@@ -38,7 +38,7 @@ Commerce倉庫は、商品の在庫が保管されている物理的な場所を
 
 ## Bingジオコーダを使用して倉庫の位置情報を設定する
 
-Commerceでは、Bing Maps APIとの連携により、倉庫の位置情報を自動的に生成します。 この機能を利用するには、 [［Bing Maps アカウント］](https://docs.microsoft.com/en-us/bingmaps/getting-started/bing-maps-dev-center-help/creating-a-bing-maps-account) と [［Bing Maps Key］](https://docs.microsoft.com/en-us/bingmaps/getting-started/bing-maps-dev-center-help/getting-a-bing-maps-key)が必要です。
+Commerceでは、Bing Maps APIとの連携により、倉庫の位置情報を自動的に生成します。 この機能を利用するには、 [［Bing Maps アカウント］](https://docs.microsoft.com/en-us/bingmaps/getting-started/bing-maps-dev-center-help/creating-a-bing-maps-account) と [［Bing Maps Key］](https://docs.microsoft.com/en-us/bingmaps/getting-started/bing-maps-dev-center-help/getting-a-bing-maps-key) が必要です。
 
 その後、以下の手順に従ってインスタンスにBing ジオコーダを設定します:
 

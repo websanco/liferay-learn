@@ -11,7 +11,7 @@ Liferay Commerceでは、カタログ、価格表、およびチャネルで異�
 この例では、米ドルの価格がユーロの価格に変換され、EUチャネルに保存されます。 これらの保存された価格は、チャネルの接続されたサイトに使用されます。 これにより、ドイツの顧客はEUチャネルのサイトを閲覧するときにユーロの価格を確認でき、米国の顧客は米国のチャネルのサイトにアクセスするときに米ドルの価格を確認することができます 注文が作成されると、各チャネルは適切な通貨で保存された価格を使用します。
 
 ```{note}
-   利用可能な通貨は、*グローバルメニュー*の*Commerce*タブにある*通貨*ページで確認できます。 ここで、通貨の編集、優先順位付け、追加/削除、有効化/無効化を行うことができます。 詳しくは、 [Currencies Reference](./currencies-reference.md) と [Adding a New Currency](./adding-a-new-currency.md) を参照してください。
+   利用可能な通貨は、*グローバルメニュー*の*Commerce*タブにある*通貨*ページで確認できます。 ここで、通貨の編集、優先順位付け、追加/削除、有効化/無効化を行うことができます。 詳しくは、 [通貨リファレンス](./currencies-reference.md) と [新しい通貨の追加](./adding-a-new-currency.md) を参照してください。
 ```
 
 <!-- Update article once \[COMMERCE-5171\](https://issues.liferay.com/browse/COMMERCE-5171) is implemented. It removes Catalog Currency and uses the Base Price List currency alone as currency basis. --> 

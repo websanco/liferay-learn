@@ -2,7 +2,7 @@
 
 > サブスクリプションが必要です
 
-Liferayは、ユーザーの既存のPunchOut2GoインフラとCommerceを統合できるPunchOut2Goコネクターを備えています。 このコネクターは、LPKGファイルとして [Liferayヘルプセンタ](http://customer.liferay.com/downloads)からダウンロードできます。
+Liferayは、ユーザーの既存のPunchOut2GoインフラとCommerceを統合できるPunchOut2Goコネクターを備えています。 このコネクターは、LPKGファイルとして [Liferayヘルプセンタ](http://customer.liferay.com/downloads) からダウンロードできます。
 
 <!--!\[Punch Out Flow Diagram\](./liferay-commerce-connector-to-punchout2go/images/01.png) -->
 
@@ -14,9 +14,9 @@ Liferayは、ユーザーの既存のPunchOut2GoインフラとCommerceを統合
 
 競合を避けるため、PunchOut2Goコネクターをデプロイする前にLiferayサーバーにCommerceがデプロイ済みであることを確認してください。 次に、以下の手順でPunchOut2Go LPKGコネクターをデプロイします。
 
-1. *Commerce Connector to PunchOut2Go*を[Liferayヘルプセンター](http://customer.liferay.com/downloads)からダウンロードします。
+1. *Commerce Connector to PunchOut2Go*を [Liferayヘルプセンター](http://customer.liferay.com/downloads) からダウンロードします。
 
-1. *PunchOut2Goコネクター* `LPKG`を[`${liferay.home}/deploy`](https://learn.liferay.com/dxp/latest/en/installation-and-upgrades/reference/liferay-home.html)フォルダーにコピーします。
+1. *PunchOut2Goコネクター* `LPKG`を [`${liferay.home}/deploy`](https://learn.liferay.com/dxp/latest/ja/installation-and-upgrades/reference/liferay-home.html) フォルダーにコピーします。
 
 1. アプリケーションサーバーコンソールに次のメッセージが表示されることを確認します。
 
@@ -86,7 +86,7 @@ PunchOut2Goコネクターは、[チャネル](../starting-a-store/channels/intr
 
 ## パンチアウト購入者ロールの作成
 
-ベストプラクティスとして、ユーザーはパンチアウトを使用するベンダー向けにロールを作成する必要があります。 コマースロールの詳細は、 [Commerce Roles](../users-and-accounts/roles-and-permissions/commerce-roles-reference.md)を参照してください。 Liferay DXPのロールと権限の詳細は、[Understanding Roles and Permissions](https://learn.liferay.com/dxp/latest/en/users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.html)を参照してください。
+ベストプラクティスとして、ユーザーはパンチアウトを使用するベンダー向けにロールを作成する必要があります。 コマースロールの詳細は、 [Commerce Roles](../users-and-accounts/roles-and-permissions/commerce-roles-reference.md)を参照してください。 Liferay DXPのロールと権限の詳細は、 [Understanding Roles and Permissions](https://learn.liferay.com/dxp/latest/ja/users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.html) を参照してください。
 
 1. ［_コントロールパネル_］ → ［_ユーザー_］ → ［_ロール_］へ移動します。
 1. ［_Site Roles_］ タブをクリックします。

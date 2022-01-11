@@ -9,7 +9,7 @@
 
     ![サインインリンク](./introduction-to-the-admin-account/images/07.png "サインインリンク")
 
-    > Liferay Commerceバンドルが使用されている場合は、[_セットアップウィザード_](https://help.liferay.com/hc/en-us/articles/360017896652-Installing-Liferay-DXP-#using-the-setup-wizard)が表示されます 。 画面上の指示に従って、管理者ユーザーを設定します。
+    > Liferay Commerceバンドルが使用されている場合は、 [_セットアップウィザード_](https://help.liferay.com/hc/en-us/articles/360017896652-Installing-Liferay-DXP-#using-the-setup-wizard) が表示されます 。 画面上の指示に従って、管理者ユーザーを設定します。
 
 1. ログインするデフォルトの管理者資格情報を入力します。
 
@@ -53,7 +53,7 @@
 
     ![サインインリンク](./introduction-to-the-admin-account/images/01.png "サインインリンク")
 
-    > Liferay Commerceバンドルが使用されている場合は、[_セットアップウィザード_](https://help.liferay.com/hc/en-us/articles/360017896652-Installing-Liferay-DXP-#using-the-setup-wizard)が表示されます 。 画面上の指示に従って、管理者ユーザーを設定します。
+    > Liferay Commerceバンドルが使用されている場合は、 [_セットアップウィザード_](https://help.liferay.com/hc/en-us/articles/360017896652-Installing-Liferay-DXP-#using-the-setup-wizard) が表示されます 。 画面上の指示に従って、管理者ユーザーを設定します。
 
 1. ログインするデフォルトの管理者資格情報を入力します。
 

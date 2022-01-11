@@ -1,6 +1,6 @@
 # カタログページの作成
 
-[カタログ](./commerce-storefront-pages/catalog.md) ページは、お客様がチャネル商品を閲覧、検索、そして選択するための主要な手段です。 カタログページには、以下のウィジェットを推奨します。 _検索バー_、 _オプション・ファセット_、 _仕様・ファセット_。 _カテゴリー・ファセット_、 _ソート_、 _検索結果_ となっています。 これらのウィジェットやその他のCommerceウィジェットの詳細は、 [Widget Reference](./liferay-commerce-widgets/widget-reference.md)を参照してください。
+[カタログ](./commerce-storefront-pages/catalog.md) ページは、お客様がチャネル商品を閲覧、検索、そして選択するための主要な手段です。 カタログページには、以下のウィジェットを推奨します。 _検索バー_、 _オプション・ファセット_、 _仕様・ファセット_。 _カテゴリー・ファセット_、 _ソート_、 _検索結果_ となっています。 これらのウィジェットやその他のCommerceウィジェットの詳細は、 [ウィジェットリファレンス](./liferay-commerce-widgets/widget-reference.md) を参照してください。
 
 この記事では、 [アクセラレータ](../starting-a-store/accelerators.md)を使用せずにカタログページを作成する方法の例を説明します。
 
@@ -59,4 +59,4 @@ _検索オプション_ ウィジェットを使用すると、 _検索結果_ �
 
 ![有効にすると、すべてのチャネル商品が 検索結果ウィジェットに表示されます。](./creating-a-catalog-page/images/01.png)
 
-デフォルトでは、商品はすべてのチャネルで表示されるようになっています。 ただし、表示するかどうかを特定のチャネルに限定することができます。 詳細は、[Configuring Product Visibility Using Channels](../starting-a-store/channels/configuring-product-visibility-using-channels.md)を参照してください。
+デフォルトでは、商品はすべてのチャネルで表示されるようになっています。 ただし、表示するかどうかを特定のチャネルに限定することができます。 詳細は、 [チャネルを使用した商品の可視性の構成](../starting-a-store/channels/configuring-product-visibility-using-channels.md) を参照してください。

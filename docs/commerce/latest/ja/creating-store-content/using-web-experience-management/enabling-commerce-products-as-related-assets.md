@@ -1,6 +1,6 @@
 # コマース商品を関連するアセットとして利用可能に
 
-コマース商品は、 [関連するアセット](https://help.liferay.com/hc/articles/360028820532-Defining-Content-Relationships)の関係を使用して、Liferay Commerceの他のアセットに接続できます。
+コマース商品は、 [関連するアセット](https://help.liferay.com/hc/articles/360028820532-Defining-Content-Relationships) の関係を使用して、Liferay Commerceの他のアセットに接続できます。
 
 ```{note}
    コンテンツの編集時に、関連するアセットのオプションとしてコマース商品を表示するには、検索のインデックスの再構築が必要な場合があります。
@@ -8,7 +8,7 @@
 
 ## データベースの検索のためにアセットブラウザーを設定する
 
-1. ``［Liferay Home］\osgi\marketplace\`に移動します。 ``Liferay Home`フォルダーについての詳細は、[Liferay Home](https://learn.liferay.com/dxp/latest/en/installation-and-upgrades/reference/liferay-home.html)を参照してください。
+1. `［Liferay Home］\osgi\marketplace\`に移動します。 `Liferay Home`フォルダーについての詳細は、 [Liferay Home](https://learn.liferay.com/dxp/latest/ja/installation-and-upgrades/reference/liferay-home.html) を参照してください。
 1. `Liferay Web Experience - Liferay Asset - Impl.lpkg`を検索し、アーカイブマネージャーで開きます。
 1. アーカイブマネージャーウインドウで、`com.liferay.asset.browser.web.jar`を開きます。
 1. テキストエディターを使用して、`portlet.properties`ファイルを開きます。
@@ -45,4 +45,4 @@
 ## 追加情報
 
 * [コンテンツ関連の定義](https://help.liferay.com/hc/articles/360028820532-Defining-Content-Relationships)
-* [基本的なWebコンテンツの記事の追加](https://learn.liferay.com/dxp/latest/en/content-authoring-and-management/web-content/user-guide/web-content-articles/adding-a-basic-web-content-article.html)
+* [基本的なWebコンテンツの記事の追加](https://learn.liferay.com/dxp/latest/ja/content-authoring-and-management/web-content/web-content-articles/adding-a-basic-web-content-article.html)

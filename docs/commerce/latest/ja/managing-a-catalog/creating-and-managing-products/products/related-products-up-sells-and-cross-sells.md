@@ -51,7 +51,7 @@
 
 ## 商品関係の表示
 
-［商品パブリッシャー］ウィジェットを設定することにより、商品表示ページに商品関係を表示できます。 最初に[商品表示ページ](https://help.liferay.com/hc/en-us/articles/360017870292-Displaying-Product-Pages-)を用意する必要があります。
+［商品パブリッシャー］ウィジェットを設定することにより、商品表示ページに商品関係を表示できます。 最初に [商品表示ページ](https://help.liferay.com/hc/en-us/articles/360017870292-Displaying-Product-Pages-) を用意する必要があります。
 
 1. 商品を検索します（たとえば、 _Brake Pads_）。
 1. ［_Brake Pads_］をクリックして商品の詳細を表示します。
@@ -107,7 +107,7 @@
 
 ### 商品関係の表示
 
-［商品パブリッシャー］ウィジェットを設定することにより、商品表示ページに商品関係を表示できます。 最初に[商品表示ページ](https://help.liferay.com/hc/en-us/articles/360017870292-Displaying-Product-Pages-)を用意する必要があります。
+［商品パブリッシャー］ウィジェットを設定することにより、商品表示ページに商品関係を表示できます。 最初に [商品表示ページ](https://help.liferay.com/hc/en-us/articles/360017870292-Displaying-Product-Pages-) を用意する必要があります。
 
 1. 商品を検索します（たとえば、 _Brake Pads_）。
 1. ［_Brake Pads_］をクリックして商品の詳細を表示します。

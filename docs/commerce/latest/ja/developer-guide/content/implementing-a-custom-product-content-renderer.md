@@ -1,8 +1,8 @@
 # カスタム商品コンテンツレンダラーの実装
 
-このチュートリアルでは、[CPContentRenderer](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-product-content-api/src/main/java/com/liferay/commerce/product/content/render/CPContentRenderer.java)インターフェイスを実装して、カスタム商品コンテンツレンダラーを追加する方法を示します。
+このチュートリアルでは、 [CPContentRenderer](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-product-content-api/src/main/java/com/liferay/commerce/product/content/render/CPContentRenderer.java) インターフェイスを実装して、カスタム商品コンテンツレンダラーを追加する方法を示します。
 
-商品コンテンツレンダラーは、商品を表示できるさまざまなウィジェットで、特定の[商品タイプ](../../managing-a-catalog/creating-and-managing-products/product-types/introduction-to-product-types.md)の商品詳細を表示するスタイルを提供します。 Liferay Commerceは、シンプル商品用の[SimpleCPContentRenderer](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-product-type-simple/src/main/java/com/liferay/commerce/product/type/simple/internal/SimpleCPContentRenderer.java)など、すぐに使用できる商品タイプごとに商品コンテンツレンダラーを提供しています。
+商品コンテンツレンダラーは、商品を表示できるさまざまなウィジェットで、特定の[商品タイプ](../../managing-a-catalog/creating-and-managing-products/product-types/introduction-to-product-types.md)の商品詳細を表示するスタイルを提供します。 Liferay Commerceは、シンプル商品用の [SimpleCPContentRenderer](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-product-type-simple/src/main/java/com/liferay/commerce/product/type/simple/internal/SimpleCPContentRenderer.java) など、すぐに使用できる商品タイプごとに商品コンテンツレンダラーを提供しています。
 
 ![すぐに使える商品コンテンツレンダラー](./implementing-a-custom-product-content-renderer/images/01.png "すぐに使える商品コンテンツレンダラー")
 
@@ -22,7 +22,7 @@
     docker run -it -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
     ```
 
-1. [Acme Commerce Product Content Renderer](./liferay-q4f7.zip)をダウンロードして解凍します。
+1. [Acme Commerce Product Content Renderer](./liferay-q4f7.zip) をダウンロードして解凍します。
 
     ```bash
     curl https://learn.liferay.com/commerce/latest/en/developer-guide/liferay-q4f7.zip -O
@@ -83,7 +83,7 @@ public class Q4F7CPContentRenderer implements CPContentRenderer {
 
 > Liferay Commerceが商品コンテンツレンダラーレジストリ</a>で新しいレンダラーを他のレンダラーと区別できるように、商品コンテンツレンダラーに個別のキーを提供することが重要です。 すでに使用されているキーを再利用すると、既存の関連付けられているレンダラーが上書きされます。
 > 
-> `commerce.product.content.renderer.order`プロパティは、CommerceがUIにレンダラをリストアップするために使用する整数値です。 レンダラーは昇順で表示されます。 例えば、[SimpleCPContentRenderer](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-product-type-simple/src/main/java/com/liferay/commerce/product/type/simple/internal/SimpleCPContentRenderer.java)では、このプロパティが最小整数値に設定されているため、Simpleタイプの商品の他のレンダラーはリスト内でこの後に表示されます。
+> `commerce.product.content.renderer.order`プロパティは、CommerceがUIにレンダラをリストアップするために使用する整数値です。 レンダラーは昇順で表示されます。 例えば、 [SimpleCPContentRenderer](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-product-type-simple/src/main/java/com/liferay/commerce/product/type/simple/internal/SimpleCPContentRenderer.java) では、このプロパティが最小整数値に設定されているため、Simpleタイプの商品の他のレンダラーはリスト内でこの後に表示されます。
 > 
 > `commerce.product.content.renderer.type`プロパティは、このレンダラーを使用できる商品のタイプを決定します。 この例では、Simpleタイプを使用しているため、レンダラーはUIの［Simple］カテゴリの下に表示されます。
 
@@ -101,7 +101,7 @@ public String getKey();
 public String getLabel(Locale locale);
 ```
 
-> これは、商品コンテンツレンダラーを説明するテキストラベルを返します。 言語キーでラベルを取得する際のリファレンスについては、[Q4F7CPContentRenderer.java](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/latest/en/developer-guide/implementing-a-custom-product-content-renderer/resources/liferay-q4f7.zip/q4f7-web/src/main/java/com/acme/q4f7/web/internal/commerce/product/content/renderer/Q4F7CPContentRenderer.java)の実装を参照してください。
+> これは、商品コンテンツレンダラーを説明するテキストラベルを返します。 言語キーでラベルを取得する際のリファレンスについては、 [Q4F7CPContentRenderer.java](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/latest/en/developer-guide/implementing-a-custom-product-content-renderer/resources/liferay-q4f7.zip/q4f7-web/src/main/java/com/acme/q4f7/web/internal/commerce/product/content/renderer/Q4F7CPContentRenderer.java) の実装を参照してください。
 
 ```java
 public void render(
@@ -133,9 +133,9 @@ public void render(
 private ServletContext _servletContext;
 ```
 
-> `osgi.web.symbolicname`に設定した値は、[bnd.bndファイル](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/latest/en/developer-guide/implementing-a-custom-product-content-renderer/resources/liferay-q4f7.zip/q4f7-web/bnd.bnd)の`Bundle-SymbolicName`の値と一致します。 これらの値は、JSPを見つけるために`ServletContext`と一致する必要があります。
+> `osgi.web.symbolicname`に設定した値は、 [bnd.bndファイル](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/latest/en/developer-guide/implementing-a-custom-product-content-renderer/resources/liferay-q4f7.zip/q4f7-web/bnd.bnd) の`Bundle-SymbolicName`の値と一致します。 これらの値は、JSPを見つけるために`ServletContext`と一致する必要があります。
 > 
-> また、 `ServletContext` が正しく生成されるように、bnd.bndファイルで `Web-ContextPath` 一意の値を宣言する必要があります。 この例では、`Web-ContextPath`を`/q4f7-web`に設定しています。 これらの値のリファレンスについては、[bnd.bnd](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/latest/en/developer-guide/implementing-a-custom-product-content-renderer/resources/liferay-q4f7.zip/q4f7-web/bnd.bnd)を参照してください。
+> また、 `ServletContext` が正しく生成されるように、bnd.bndファイルで `Web-ContextPath` 一意の値を宣言する必要があります。 この例では、`Web-ContextPath`を`/q4f7-web`に設定しています。 これらの値のリファレンスについては、 [bnd.bnd](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/latest/en/developer-guide/implementing-a-custom-product-content-renderer/resources/liferay-q4f7.zip/q4f7-web/bnd.bnd) を参照してください。
 
 #### `render`メソッドを実装する
 
@@ -153,7 +153,7 @@ public void render(
 }
 ```
 
-> `JSPRenderer`を使用して、商品コンテンツレンダラーのJSPをレンダリングします（この場合は、 [view.jsp](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/latest/en/developer-guide/implementing-a-custom-product-content-renderer/resources/liferay-q4f7.zip/q4f7-web/src/main/resources/META-INF/resources/view.jsp)）。 作成したJSPを見つけるためのパラメーターとして`ServletContext`を提供します。
+> `JSPRenderer`を使用して、商品コンテンツレンダラーのJSPをレンダリングします（この場合は、 [view.jsp](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/latest/en/developer-guide/implementing-a-custom-product-content-renderer/resources/liferay-q4f7.zip/q4f7-web/src/main/resources/META-INF/resources/view.jsp) ）。 作成したJSPを見つけるためのパラメーターとして`ServletContext`を提供します。
 
 #### カスタムビューのJSPを追加する
 
@@ -167,7 +167,7 @@ CPSku cpSku = cpContentHelper.getDefaultCPSku(cpContentHelper.getCPCatalogEntry(
 
 > [CPContentHelper](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-product-content-web/src/main/java/com/liferay/commerce/product/content/web/internal/util/CPContentHelperImpl.java) は、特定の商品に関する情報を取得するクラスです。
 > 
-> [CPCatalogEntry](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-product-api/src/main/java/com/liferay/commerce/product/catalog/CPCatalogEntry.java)は、表示された商品自体を表します。 [CPSku](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-product-service/src/main/java/com/liferay/commerce/product/internal/catalog/CPSkuImpl.java)オブジェクトに含まれるデフォルトのSKUを持つ商品に関する詳細情報を取得します。
+> [CPCatalogEntry](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-product-api/src/main/java/com/liferay/commerce/product/catalog/CPCatalogEntry.java) は、表示された商品自体を表します。 [CPSku](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-product-service/src/main/java/com/liferay/commerce/product/internal/catalog/CPSkuImpl.java) オブジェクトに含まれるデフォルトのSKUを持つ商品に関する詳細情報を取得します。
 
 ```jsp
 <c:if test="<%= cpSku != null %>">
@@ -184,13 +184,13 @@ CPSku cpSku = cpContentHelper.getDefaultCPSku(cpContentHelper.getCPCatalogEntry(
 
 #### 言語キーを`Language.properties`に追加する
 
-モジュール内の[Language.properties](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/latest/en/developer-guide/implementing-a-custom-product-content-renderer/resources/liferay-q4f7.zip/q4f7-web/src/main/resources/content/Language.properties)ファイルに言語キーとその値を追加します。
+モジュール内の [Language.properties](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/latest/en/developer-guide/implementing-a-custom-product-content-renderer/resources/liferay-q4f7.zip/q4f7-web/src/main/resources/content/Language.properties) ファイルに言語キーとその値を追加します。
 
 ```properties
 q4f7-commerce-product-content-renderer=Q4F7 Commerce Product Content Renderer
 ```
 
-> 詳細は、[アプリケーションのローカライズ](https://help.liferay.com/hc/en-us/articles/360018168251-Localizing-Your-Application)を参照してください。
+> 詳細は、 [アプリケーションのローカライズ](https://help.liferay.com/hc/en-us/articles/360018168251-Localizing-Your-Application) を参照してください。
 
 ## まとめ
 
