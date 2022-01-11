@@ -1,10 +1,18 @@
-注文とフルフィルメント
-======================
+# 注文とフルフィルメント
 
-.. toctree:: :maxdepth: 2
+```{toctree}
+:maxdepth: 2
 
-   orders-and-fulfillment/orders.rst orders-and-fulfillment/order_workflows.rst orders-and-fulfillment/subscriptions.md orders-and-fulfillment/shipments.rst
+orders-and-fulfillment/orders.md
+orders-and-fulfillment/order-workflows.md
+orders-and-fulfillment/subscriptions.md
+orders-and-fulfillment/shipments.md
+```
 
-.. raw:: html :file: landingpage_template.html
+```{raw} html
+:file: landingpage_template.html
+```
 
-.. raw:: html :file: orders-and-fulfillment/landing.html
+```{raw} html
+:file: orders-and-fulfillment/landing.html
+```

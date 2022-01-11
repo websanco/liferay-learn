@@ -1,52 +1,28 @@
-開発者ガイド
-===============
+# 開発者ガイド
 
-.. toctree:: :maxdepth: 1
+```{toctree}
+:maxdepth: 3
 
-   developer-guide/introduction-to-the-liferay-commerce-developer-guide.md developer-guide/adding-a-new-discount-rule-type.md developer-guide/adding-a-new-product-data-source-for-the-product-publisher-widget.md developer-guide/adding-a-new-product-type.md developer-guide/implementing-a-custom-checkout-step.md developer-guide/implementing-a-custom-low-stock-activity.md developer-guide/implementing-a-custom-order-validator.md developer-guide/implementing-a-custom-product-content-renderer.md developer-guide/implementing-a-new-payment-method.md developer-guide/implementing-a-new-shipping-engine.md developer-guide/implementing-a-new-tax-engine.md developer-guide/implementing-an-exchange-rate-provider.md
+developer-guide/catalog.md
+developer-guide/content.md
+developer-guide/managing-inventory.md
+developer-guide/order-management.md
+developer-guide/promotions.md
+developer-guide/sales.md
+```
 
+Welcome to the Liferay Commerce Developer Guide. Our tutorials are meant to quickly demonstrate working examples of custom modules that extend the features of Liferay Commerce. Each tutorial is comprised of the following elements: Building and deploying the sample, a review of the relevant implementation with code samples, and the final implementation of the sample itself. This will show you how to leverage various extension points to add to the base functionality however you see fit.
 
-はじめに
----------------
+You will be able to quickly delve into deploying sample modules for each of the available extension points. You will then be able to walk through the steps to build it yourself with your own customizations.
 
--  :doc:`/developer-guide/introduction-to-the-liferay-commerce-developer-guide`
+```{raw} html
+:file: landingpage_template.html
+```
 
-Liferay Commerceの拡張とカスタマイズ
-------------------------------------------
+```{raw} html
+:file: developer-guide/landing.html
+```
 
-カタログ
-~~~~~~~
+## Reference Materials
 
--  :doc:`/developer-guide/adding-a-new-product-type`
-
-Content
-~~~~~~~
-
--  :doc:`/developer-guide/implementing-a-custom-product-content-renderer`
-
-在庫管理
-~~~~~~~~~~~~~~~~~~
-
--  :doc:`/developer-guide/implementing-a-custom-low-stock-activity`
-
-Marketing
-~~~~~~~~~
-
--  :doc:`/developer-guide/adding-a-new-product-data-source-for-the-product-publisher-widget`
-
-Promotions
-~~~~~~~~~~
-- :doc:`/developer-guide/adding-a-new-discount-rule-type`
-セールス ~~~~~
-
--  :doc:`/developer-guide/implementing-a-custom-order-validator`
--  :doc:`/developer-guide/implementing-a-custom-checkout-step`
--  :doc:`/developer-guide/implementing-a-new-tax-engine`
--  :doc:`/developer-guide/implementing-a-new-shipping-engine`
--  :doc:`/developer-guide/implementing-an-exchange-rate-provider`
--  :doc:`/developer-guide/implementing-a-new-payment-method`
-
-参考資料
--------------------
-
--  `Admin APIs <https://app.swaggerhub.com/search?owner=liferayinc&query=%20commerce>` __
+* [Admin APIs](https://app.swaggerhub.com/search?owner=liferayinc&query=%20commerce)
