@@ -23,7 +23,7 @@ Liferayは、定期的に、オープンソースとエンタープライズの�
 ### ダウンロードとデプロイ
 
 1. 最新のLiferay Commerce `LPKG`をダウンロードします。
-    * エンタープライズの加入者は、最新の`LPKG`を [ヘルプセンター](https://customer.liferay.com/downloads?p_p_id=com_liferay_osb_customer_downloads_display_web_DownloadsDisplayPortlet&_com_liferay_osb_customer_downloads_display_web_DownloadsDisplayPortlet_productAssetCategoryId=118190997&_com_liferay_osb_customer_downloads_display_web_DownloadsDisplayPortlet_fileTypeAssetCategoryId=118191001) からダウンロードできます。
+    * エンタープライズの加入者は、最新の`LPKG`を [ヘルプセンター](https://customer.liferay.com/downloads?p _p_ id=com _liferay_ osb _customer_ downloads _display_ web _DownloadsDisplayPortlet&_ com _liferay_ osb _customer_ downloads _display_ web _DownloadsDisplayPortlet_ productAssetCategoryId=118190997& _com_ liferay _osb_ customer _downloads_ display _web_ DownloadsDisplayPortlet_fileTypeAssetCategoryId=118191001) からダウンロードできます。
       * 加入者の方は、Liferay Commerceの注文番号またはアクティベーションキーも必要です。 [Activating a Marketplace App Through a Proxy Server](https://help.liferay.com/hc/en-us/articles/360018427391) を参照してください。
     * 最新のオープンソース`LPKG`は、 [Liferay Commerceのコミュニティサイト](https://commerce.liferay.dev/download) から取得できます。
 
@@ -45,16 +45,16 @@ Liferayは、定期的に、オープンソースとエンタープライズの�
 1. アプリケーションサーバーのコンソールログで次のようなメッセージを探して、アップグレードプロセスが開始されたことを確認します。
 
     ```
-    2019-08-13 18:26:26.082 INFO  [main][UpgradeProcess:93] Upgrading com.liferay.commerce.account.internal.upgrade.v1_2_0.CommerceAccountGroupCommerceAccountRelUpgradeProcess
-    2019-08-13 18:26:26.106 INFO  [main][UpgradeProcess:107] Completed upgrade process com.liferay.commerce.account.internal.upgrade.v1_2_0.CommerceAccountGroupCommerceAccountRelUpgradeProcess in 24 ms
-    2019-08-13 18:26:26.116 INFO  [main][UpgradeProcess:93] Upgrading com.liferay.commerce.account.internal.upgrade.v1_2_0.CommerceAccountGroupRelUpgradeProcess
-    2019-08-13 18:26:26.124 INFO  [main][UpgradeProcess:107] Completed upgrade process com.liferay.commerce.account.internal.upgrade.v1_2_0.CommerceAccountGroupRelUpgradeProcess in 8 ms
-    2019-08-13 18:26:26.130 INFO  [main][UpgradeProcess:93] Upgrading com.liferay.commerce.account.internal.upgrade.v1_2_0.CommerceAccountGroupUpgradeProcess
-    2019-08-13 18:26:26.142 INFO  [main][UpgradeProcess:107] Completed upgrade process com.liferay.commerce.account.internal.upgrade.v1_2_0.CommerceAccountGroupUpgradeProcess in 12 ms
-    2019-08-13 18:26:26.148 INFO  [main][UpgradeProcess:93] Upgrading com.liferay.commerce.account.internal.upgrade.v1_3_0.CommerceAccountNameUpgradeProcess
+    2019-08-13 18:26:26.082 INFO  [main][UpgradeProcess:93] Upgrading com.liferay.commerce.account.internal.upgrade.v1 _2_ 0.CommerceAccountGroupCommerceAccountRelUpgradeProcess
+    2019-08-13 18:26:26.106 INFO  [main][UpgradeProcess:107] Completed upgrade process com.liferay.commerce.account.internal.upgrade.v1 _2_ 0.CommerceAccountGroupCommerceAccountRelUpgradeProcess in 24 ms
+    2019-08-13 18:26:26.116 INFO  [main][UpgradeProcess:93] Upgrading com.liferay.commerce.account.internal.upgrade.v1 _2_ 0.CommerceAccountGroupRelUpgradeProcess
+    2019-08-13 18:26:26.124 INFO  [main][UpgradeProcess:107] Completed upgrade process com.liferay.commerce.account.internal.upgrade.v1 _2_ 0.CommerceAccountGroupRelUpgradeProcess in 8 ms
+    2019-08-13 18:26:26.130 INFO  [main][UpgradeProcess:93] Upgrading com.liferay.commerce.account.internal.upgrade.v1 _2_ 0.CommerceAccountGroupUpgradeProcess
+    2019-08-13 18:26:26.142 INFO  [main][UpgradeProcess:107] Completed upgrade process com.liferay.commerce.account.internal.upgrade.v1 _2_ 0.CommerceAccountGroupUpgradeProcess in 12 ms
+    2019-08-13 18:26:26.148 INFO  [main][UpgradeProcess:93] Upgrading com.liferay.commerce.account.internal.upgrade.v1 _3_ 0.CommerceAccountNameUpgradeProcess
     2019-08-13 18:26:26.160 INFO  [main][LoggingTimer:83] Starting com.liferay.portal.kernel.upgrade.UpgradeProcess#alter
     2019-08-13 18:26:26.200 INFO  [main][LoggingTimer:43] Completed com.liferay.portal.kernel.upgrade.UpgradeProcess#alter in 40 ms
-    2019-08-13 18:26:26.208 INFO  [main][UpgradeProcess:107] Completed upgrade process com.liferay.commerce.account.internal.upgrade.v1_3_0.CommerceAccountNameUpgradeProcess in 60 ms
+    2019-08-13 18:26:26.208 INFO  [main][UpgradeProcess:107] Completed upgrade process com.liferay.commerce.account.internal.upgrade.v1 _3_ 0.CommerceAccountNameUpgradeProcess in 60 ms
     2019-08-13 18:26:26.246 INFO  [main][LoggingTimer:83] Starting com.liferay.portal.upgrade.internal.index.updater.IndexUpdaterUtil#updateIndexes#Updating database indexes for com.liferay.commerce.account.service
     2019-08-13 18:26:26.346 INFO  [main][BaseDB:812] Dropping stale indexes
     2019-08-13 18:26:26.400 INFO  [main][BaseDB:84] Adding indexes

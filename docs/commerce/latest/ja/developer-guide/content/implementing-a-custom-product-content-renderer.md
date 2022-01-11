@@ -180,7 +180,7 @@ CPSku cpSku = cpContentHelper.getDefaultCPSku(cpContentHelper.getCPCatalogEntry(
 <liferay-util:dynamic-include key="com.liferay.commerce.product.content.web#/add_to_cart#" />
 ```
 
-> Liferay Commerceの [add_to_cart_button.jsp](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-cart-content-web/src/main/resources/META-INF/resources/dynamic_include/add_to_cart_button.jsp) を使用して、「カートへ追加t」機能をビューに挿入します。
+> Liferay Commerceの [add_to_cart_button.jsp](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-cart-content-web/src/main/resources/META-INF/resources/dynamic _include/add_ to _cart_ button.jsp) を使用して、「カートへ追加t」機能をビューに挿入します。
 
 #### 言語キーを`Language.properties`に追加する
 

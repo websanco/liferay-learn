@@ -5,7 +5,7 @@
 Liferay Commerceの使用を開始するには：
 
 1. 最新のLiferay Commerce `LPKG`をダウンロードします。
-    * エンタープライズの加入者は、最新の`LPKG`を [ヘルプセンター](https://customer.liferay.com/downloads?p_p_id=com_liferay_osb_customer_downloads_display_web_DownloadsDisplayPortlet&_com_liferay_osb_customer_downloads_display_web_DownloadsDisplayPortlet_productAssetCategoryId=118190997&_com_liferay_osb_customer_downloads_display_web_DownloadsDisplayPortlet_fileTypeAssetCategoryId=118191001) からダウンロードできます。
+    * エンタープライズの加入者は、最新の`LPKG`を [ヘルプセンター](https://customer.liferay.com/downloads?p _p_ id=com _liferay_ osb _customer_ downloads _display_ web _DownloadsDisplayPortlet&_ com _liferay_ osb _customer_ downloads _display_ web _DownloadsDisplayPortlet_ productAssetCategoryId=118190997& _com_ liferay _osb_ customer _downloads_ display _web_ DownloadsDisplayPortlet_fileTypeAssetCategoryId=118191001) からダウンロードできます。
       * 加入者の方は、Liferay Commerceの注文番号またはアクティベーションキーも必要です。 [Activating a Marketplace App Through a Proxy Server](https://help.liferay.com/hc/en-us/articles/360018427391) を参照してください。
     * 最新のオープンソース `LPKG` は、 [Liferay Commerce Communityダウンロードページ](https://www.liferay.com/downloads-community) から入手できます。
 

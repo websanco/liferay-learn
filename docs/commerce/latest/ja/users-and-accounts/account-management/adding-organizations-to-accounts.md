@@ -16,7 +16,7 @@
 
     ![ウィジェットで組織を追加する](./adding-organizations-to-accounts/images/02.png)
 
-1. _［組織の追加］_ をクリックします 。
+1. ［_組織の追加_］ をクリックします 。
 
 組織は、アカウント管理ウィジェットを使用してアカウントに追加されました。
 
@@ -24,8 +24,8 @@
 
 ストアまたはインストールの管理者権限を持つユーザーは、コントロールパネルでアカウント情報を作成および更新できます。
 
-1. _［グローバルメニュー］_（![Applications Menu icon](../../images/icon-applications-menu.png)）→ _[コントロールパネル]_ に移動します。
-1. _［アカウント］_ をクリックします。
+1. ［_グローバルメニュー_］（![Applications Menu icon](../../images/icon-applications-menu.png)）→ [_コントロールパネル_] に移動します。
+1. ［_アカウント_］ をクリックします。
 
     ![グローバルメニューに移動し、アカウントメニューにアクセスする](./adding-organizations-to-accounts/images/04.png)
 

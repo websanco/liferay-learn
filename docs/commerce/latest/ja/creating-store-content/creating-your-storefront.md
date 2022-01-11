@@ -18,7 +18,7 @@ Miniumなどの[アクセラレータ](../starting-a-store/accelerators.md)を�
 | [発注済み注文](./commerce-storefront-pages/placed-orders.md)       | 全ステータスのすべての注文のリストを表示する           | ［_注文_］                                                              |
 | [商品の詳細](./commerce-storefront-pages/product-details.md)      | 商品および関連商品に関する情報を表示します            | ［_商品の詳細_］ および ［_商品パブリッシャー_］                                         |
 | [検索](./commerce-storefront-pages/search.md)                  | ユーザーが検索できます                      | ［_Search_］、［_Tag_］、［_カテゴリーファセット_］、［_Option Facet_］、［_仕様ファセット_］      |
-| Spare Parts Finder/BOM                                       | 特定の商品を構成する材料のリストを表示します           | _コマースBOM_                                                           |
+| Spare Parts Finder/BOM                                       | 特定の商品を構成する材料のリストを表示します           | _コマースBOM_ |
 
 ## 追加情報
 

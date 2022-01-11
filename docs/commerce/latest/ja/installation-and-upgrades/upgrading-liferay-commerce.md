@@ -24,11 +24,11 @@ DXPのアップグレードプロセスの詳細は、 [Upgrade Overview](https:
 
 DXP 7.4にアップグレードした後、フルサーチの再インデックスを実行します。
 
-1. ［_グローバルメニュー_］を開き、［_コントロールパネル_ ］&rarr; ［_検索機能_］にいきます。
+1. ［_グローバルメニュー_］を開き、［_コントロールパネル_］&rarr; ［_検索機能_］にいきます。
 
    ![コントロールパネルタブの検索に進みます。](./upgrading-liferay-commerce/images/02.png)
 
-1. ［_アクションをインデックスする_］タブで、［_すべてインデックスを再構築_ ］の［ _実行_］をクリックします。
+1. ［_アクションをインデックスする_］タブで、［_すべてインデックスを再構築_］の［_実行_］をクリックします。
 
 インデックスの再構築が完了したら、グローバルメニューの [_Commerce_ &]rarr; [_Product_] に移動して、すべての商品が表示されていることを確認してください。
 
@@ -44,11 +44,11 @@ Commerce 3.0にアップグレードするには、まずベースとなるLifer
 
 DXP 7.3にアップグレードした後、フルサーチのインデックスの再構築を実行します。
 
-1. ［_グローバルメニュー_］を開き、［_コントロールパネル_ ］&rarr; ［_検索機能_］にいきます。
+1. ［_グローバルメニュー_］を開き、［_コントロールパネル_］&rarr; ［_検索機能_］にいきます。
 
    ![コントロールパネルタブの検索に進みます。](./upgrading-liferay-commerce/images/02.png)
 
-1. ［_アクションをインデックスする_］タブで、［_すべてインデックスを再構築_ ］の［ _実行_］をクリックします。
+1. ［_アクションをインデックスする_］タブで、［_すべてインデックスを再構築_］の［_実行_］をクリックします。
 
 インデックスの再構築が完了したら、グローバルメニューの [_Commerce_ &]rarr; [_Product_] に移動して、すべての商品が表示されていることを確認してください。
 
@@ -92,7 +92,7 @@ DXP 7.2の最新フィックスパックを実行したら、以下の手順に�
 
 1. 最新のLiferay Commerceをダウンロードしてください。
 
-    * Commerce Enterpriseは [ヘルプセンター](https://customer.liferay.com/downloads?p_p_id=com_liferay_osb_customer_downloads_display_web_DownloadsDisplayPortlet&_com_liferay_osb_customer_downloads_display_web_DownloadsDisplayPortlet_productAssetCategoryId=118190997&_com_liferay_osb_customer_downloads_display_web_DownloadsDisplayPortlet_fileTypeAssetCategoryId=118191001) から入手できます。
+    * Commerce Enterpriseは [ヘルプセンター](https://customer.liferay.com/downloads?p _p_ id=com _liferay_ osb _customer_ downloads _display_ web _DownloadsDisplayPortlet&_ com _liferay_ osb _customer_ downloads _display_ web _DownloadsDisplayPortlet_ productAssetCategoryId=118190997& _com_ liferay _osb_ customer _downloads_ display _web_ DownloadsDisplayPortlet_fileTypeAssetCategoryId=118191001) から入手できます。
     * Commerce Communityは、 [Liferay Commerce Communityダウンロードページ](https://www.liferay.com/downloads-community) から入手できます。
 
 1. `LPKG` を `${liferay.home}/ deploy` フォルダーに展開します。アプリケーションをLiferay DXPに展開する方法の詳細は、 [アプリのインストール](https://learn.liferay.com/dxp/latest/ja/system-administration/installing-and-managing-apps/installing-apps.html) 参照してください。
@@ -120,16 +120,16 @@ DXP 7.2の最新フィックスパックを実行したら、以下の手順に�
 1. アプリケーションサーバーのコンソールログで次のようなメッセージを探して、アップグレードプロセスが開始されたことを確認します。
 
     ```
-    Upgrading com.liferay.commerce.account.internal.upgrade.v1_2_0.CommerceAccountGroupCommerceAccountRelUpgradeProcess
-    Completed upgrade process com.liferay.commerce.account.internal.upgrade.v1_2_0.CommerceAccountGroupCommerceAccountRelUpgradeProcess in 24 ms
-    Upgrading com.liferay.commerce.account.internal.upgrade.v1_2_0.CommerceAccountGroupRelUpgradeProcess
-    Completed upgrade process com.liferay.commerce.account.internal.upgrade.v1_2_0.CommerceAccountGroupRelUpgradeProcess in 8 ms
-    Upgrading com.liferay.commerce.account.internal.upgrade.v1_2_0.CommerceAccountGroupUpgradeProcess
-    Completed upgrade process com.liferay.commerce.account.internal.upgrade.v1_2_0.CommerceAccountGroupUpgradeProcess in 12 ms
-    Upgrading com.liferay.commerce.account.internal.upgrade.v1_3_0.CommerceAccountNameUpgradeProcess
+    Upgrading com.liferay.commerce.account.internal.upgrade.v1 _2_ 0.CommerceAccountGroupCommerceAccountRelUpgradeProcess
+    Completed upgrade process com.liferay.commerce.account.internal.upgrade.v1 _2_ 0.CommerceAccountGroupCommerceAccountRelUpgradeProcess in 24 ms
+    Upgrading com.liferay.commerce.account.internal.upgrade.v1 _2_ 0.CommerceAccountGroupRelUpgradeProcess
+    Completed upgrade process com.liferay.commerce.account.internal.upgrade.v1 _2_ 0.CommerceAccountGroupRelUpgradeProcess in 8 ms
+    Upgrading com.liferay.commerce.account.internal.upgrade.v1 _2_ 0.CommerceAccountGroupUpgradeProcess
+    Completed upgrade process com.liferay.commerce.account.internal.upgrade.v1 _2_ 0.CommerceAccountGroupUpgradeProcess in 12 ms
+    Upgrading com.liferay.commerce.account.internal.upgrade.v1 _3_ 0.CommerceAccountNameUpgradeProcess
     Starting com.liferay.portal.kernel.upgrade.UpgradeProcess#alter
     Completed com.liferay.portal.kernel.upgrade.UpgradeProcess#alter in 40 ms
-    Completed upgrade process com.liferay.commerce.account.internal.upgrade.v1_3_0.CommerceAccountNameUpgradeProcess in 60 ms
+    Completed upgrade process com.liferay.commerce.account.internal.upgrade.v1 _3_ 0.CommerceAccountNameUpgradeProcess in 60 ms
     Starting com.liferay.portal.upgrade.internal.index.updater.IndexUpdaterUtil#updateIndexes#Updating database indexes for com.liferay.commerce.account.service
     Dropping stale indexes
     Adding indexes

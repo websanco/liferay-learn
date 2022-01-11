@@ -13,7 +13,7 @@
 1. 次のように入力します：
 
     * **Name**：医療用品
-    * **Default カタログ Language**：（ご使用の言語）（たとえば、_English (United States)_）
+    * **Default カタログ Language**：（ご使用の言語）（たとえば、 _English (United States_)）
     * **Currency**：（ストアの通貨）（_US Dollar_）
 
     ![空白のカタログを新規に追加します。](./creating-a-new-catalog/images/04.png)
@@ -31,7 +31,7 @@
 1. 次のように入力します：
 
     * **Name**：医療用品
-    * **Default Catalog Language**：（ご使用の言語）（たとえば、_English (United States)_）
+    * **Default Catalog Language**：（ご使用の言語）（たとえば、 _English (United States_)）
     * **Currency**：（ストアの通貨）（_US Dollar_）
 
     ![新しいカタログ](./creating-a-new-catalog/images/01.png)

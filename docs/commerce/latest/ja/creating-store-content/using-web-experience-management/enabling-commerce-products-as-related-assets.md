@@ -19,7 +19,7 @@
 
 インデックスの再構築を行い、関連するアセットがフィルターに入力されていることを確認します。
 
-1. Navigate to the _Control Panel_ &rarr; _Configuration_ &rarr; _Search_.
+1. Navigate to the _Control Panel_ &rarr; _Configuration_ &rarr; _Search_ .
 1. ［すべての検索インデックスを再構築］の横にある［_実行_］をクリックします。
 
 ## コマース商品の在庫状況の確認

@@ -84,15 +84,15 @@ Liferay DXP 7.3の規格に準拠しつつ、ナビゲーションスコープ�
 
 プレフィックス `commerce_` が `com.liferay.commerce.constants.CommerceDestinationNames`で定義された Commerceの宛先に追加されました。
 
-* `liferay/commerce_order_status`
+* `liferay/commerce _order_ status`
 
-* `liferay/commerce_payment_status`
+* `liferay/commerce _payment_ status`
 
-* `liferay/commerce_shipment_status`
+* `liferay/commerce _shipment_ status`
 
-* `liferay/commerce_stock_quantity`
+* `liferay/commerce _stock_ quantity`
 
-* `liferay/commerce_subscription_status`
+* `liferay/commerce _subscription_ status`
 
 ### 誰が影響を受けますか？
 

@@ -112,8 +112,8 @@ Each task includes the following fields for entering Liferay and Salesforce cred
 | Context Parameter | Description | Default Value |
 | --- | --- | --- |
 | `accountType` | The account type used when creating all accounts: 1 (personal) or 2 (business) | |
-| `countryMapping_null` | The country mapping used for Account addresses, must use the following syntax `countryMapping_NAME=COUNTRY_ISO_CODE` (e.g., `countryMapping_Croatia=HR`) | |
-| `regionMapping_null` | The region mapping used for Account addresses; must use the following syntax `regionMapping_NAME=REGION_ISO_CODE` (e.g., `regionMapping_Milan=MI`) | |
+| `countryMapping _null` | The country mapping used for Account addresses, must use the following syntax `countryMapping_ NAME=COUNTRY _ISO_ CODE` (e.g., `countryMapping_Croatia=HR`) | |
+| `regionMapping _null` | The region mapping used for Account addresses; must use the following syntax `regionMapping_ NAME=REGION _ISO_ CODE` (e.g., `regionMapping_Milan=MI`) | |
 
 ### Orders Reference
 

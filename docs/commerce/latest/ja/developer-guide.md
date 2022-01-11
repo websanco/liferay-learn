@@ -49,4 +49,4 @@ Promotions
 参考資料
 -------------------
 
--  `Admin APIs <https://app.swaggerhub.com/search?owner=liferayinc&query=%20commerce>`__
+-  `Admin APIs <https://app.swaggerhub.com/search?owner=liferayinc&query=%20commerce>` __

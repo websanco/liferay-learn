@@ -12,7 +12,7 @@ Liferay Commerce へようこそ！  Liferay Commerceは、あらゆるB2B組織
 * [APIと統合](#apis-and-integrations)
 * [次のステップ](#next-steps)
 
-開始する準備は整いましたか？ [ Liferay Commerce Dockerイメージの使用](../installation-and-upgrades/installing-commerce-2.1-and-below/using-the-liferay-commerce-docker-image.md) してLiferay Commerce _を迅速に起動します_。
+開始する準備は整いましたか？ [ Liferay Commerce Dockerイメージの使用](../installation-and-upgrades/installing-commerce-2.1-and-below/using-the-liferay-commerce-docker-image.md) してLiferay Commerce _を迅速に起動します_ 。
 
 ## 最新のストアフロントページとコンテンツ管理
 

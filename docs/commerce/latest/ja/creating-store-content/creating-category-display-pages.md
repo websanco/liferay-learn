@@ -12,7 +12,7 @@
 
 1. ［_グローバルメニュー_(![Global Menu](../images/icon-applications-menu.png))］&rarr; Commerce タブ&rarr; ［_Store Management_］&rarr; ［_チャネル_］をクリックします。
 
-1. ［_チャネル_ ］を選択し、 ［_Category Display Pages_ ］タブをクリックします。 デフォルトのカテゴリー表示ページのセクションで、［_Choose_ ］をクリックし、作成したページを選択します。
+1. ［_チャネル_］を選択し、 ［_Category Display Pages_］タブをクリックします。 デフォルトのカテゴリー表示ページのセクションで、［_Choose_］をクリックし、作成したページを選択します。
 
 このページは、ストア内のすべてのカテゴリーのデフォルトページとして使用されます。
 
@@ -26,19 +26,19 @@ Liferay DXP 7.3以前のバージョンでは、「チャネル設定」の「�
 
 場合によっては、特定のカテゴリーの商品をあるページに表示させたいことがあるかもしれません。 これは、プロモーションやオファーのある商品を表示するのに便利です。 特定のカテゴリーをページにマッピングするには、以下の手順に従います：
 
-1. 新しい [_ウィジェットページ_](https://learn.liferay.com/dxp/latest/ja/site-building/creating-pages/understanding-pages/understanding-pages.html#widget-pages) を作成し、_カテゴリーコンテンツ_ ウィジェットとその他の必要なページ要素をそこに追加します。
+1. 新しい [_ウィジェットページ_](https://learn.liferay.com/dxp/latest/ja/site-building/creating-pages/understanding-pages/understanding-pages.html#widget-pages) を作成し、 _カテゴリーコンテンツ_ ウィジェットとその他の必要なページ要素をそこに追加します。
 
 1. ［_グローバルメニュー_(![Global Menu](../images/icon-applications-menu.png))］&rarr; Commerce タブ&rarr; ［_Store Management_］&rarr; ［_チャネル_］をクリックします。
 
-1. 目的の ［_チャネル_］を選択し、 ［_カテゴリー表示ページタブ_］をクリックし、［ _追加_ ］ボタン（![Add Button](../images/icon-add.png)）をクリックします。
+1. 目的の ［_チャネル_］を選択し、 ［_カテゴリー表示ページタブ_］をクリックし、［_追加_］ボタン（![Add Button](../images/icon-add.png)）をクリックします。
 
    ![カテゴリーにリンクさせる新規ページを選択します。](./creating-category-display-pages/3.png)
 
-1. ［ _カテゴリーの選択_ ］の［_選択_］ をクリックし、新規タイトルのページにリンクさせたいカテゴリーを選択します。
+1. ［_カテゴリーの選択_］の［_選択_］ をクリックし、新規タイトルのページにリンクさせたいカテゴリーを選択します。
 
    ![作成したページのカテゴリーを選択します。](./creating-category-display-pages/4.png)
 
-1. ［ _カテゴリー表示ページ_］の［_選択_］をクリックし、新規タイトルのページを選択し、［_[保存]_］をクリックします。
+1. ［_カテゴリー表示ページ_］の［_選択_］をクリックし、新規タイトルのページを選択し、［[_保存_]］をクリックします。
 
 1. 完了したら、［_保存_］をクリックします。
 

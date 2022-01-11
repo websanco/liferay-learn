@@ -8,7 +8,7 @@ Liferay Commerceバンドルを使用するには、次の手順を実行しま�
 
 1. Liferay Commerce Tomcatバンドルを入手します。
 
-    * （サブスクライバー） [エンタープライズダウンロード](https://customer.liferay.com/downloads?p_p_id=com_liferay_osb_customer_downloads_display_web_DownloadsDisplayPortlet&_com_liferay_osb_customer_downloads_display_web_DownloadsDisplayPortlet_productAssetCategoryId=118190997&_com_liferay_osb_customer_downloads_display_web_DownloadsDisplayPortlet_fileTypeAssetCategoryId=118191001)
+    * （サブスクライバー） [エンタープライズダウンロード](https://customer.liferay.com/downloads?p _p_ id=com _liferay_ osb _customer_ downloads _display_ web _DownloadsDisplayPortlet&_ com _liferay_ osb _customer_ downloads _display_ web _DownloadsDisplayPortlet_ productAssetCategoryId=118190997& _com_ liferay _osb_ customer _downloads_ display _web_ DownloadsDisplayPortlet_fileTypeAssetCategoryId=118191001)
     * [コミュニティダウンロードページ](https://www.liferay.com/downloads-community)
 
 1. バンドルをターゲットの場所に解凍します。

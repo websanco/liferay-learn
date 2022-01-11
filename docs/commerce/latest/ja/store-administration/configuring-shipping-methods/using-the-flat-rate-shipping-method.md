@@ -13,7 +13,7 @@
     ![コントロールパネルのチャネルに移動します。](./using-the-flat-rate-shipping-method/images/02.png)
 
 1. 目的のチャネル（たとえば、Sahara.com）をクリックします。 （Miniumなどのアクセラレータを使用してサイトを作成した場合は、対応するチャネルがデフォルトですでに作成されています。）
-1. ［_発送方法 _］ までスクロールします。
+1. ［_発送方法_］ までスクロールします。
 
     ![配送方法はチャネルで設定されます。](./using-the-flat-rate-shipping-method/images/03.png)
 

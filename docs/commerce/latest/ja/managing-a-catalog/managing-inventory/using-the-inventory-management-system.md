@@ -39,7 +39,7 @@ Liferay Commerceの _在庫管理_ システムは、ユーザーがLiferay Comm
 安全在庫量を設定する：
 
 1. SKU（12 PACKMOCHA）をクリックします。
-1. 3点アイコン（![Actions](../../images/icon-actions.png)）をクリックし&rarr;倉庫の横にある _[編集]_ をクリックします。
+1. 3点アイコン（![Actions](../../images/icon-actions.png)）をクリックし&rarr;倉庫の横にある [_編集_] をクリックします。
 1. 次のように入力します：
 
    * **手持数量**: 40 (修正しない)
@@ -57,7 +57,7 @@ Liferay Commerceの _在庫管理_ システムは、ユーザーがLiferay Comm
 ## 「注文中」を確認する
 
 1. SKU (_MIN55681_)をクリックします。
-1. _[注文中]_ タブをクリックします。
+1. [_注文中_] タブをクリックします。
 
     ![安全在庫量を設定することで、その倉庫の利用可能な在庫を減らすことができます。](./using-the-inventory-management-system/images/06.png)
 

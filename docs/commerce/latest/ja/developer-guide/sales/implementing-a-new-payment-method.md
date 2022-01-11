@@ -48,7 +48,7 @@
     STARTED com.acme.b1c3.impl_1.0.0
     ```
 
-1. サンプルの支払方法が追加されたことを確認します。 ブラウザで`https://localhost:8080`を開きます。 次にアプリケーションメニュー (![Applications Menu](../../images/icon-applications-menu.png)) をクリックし、_Commerce_ → _チャネル_ に移動します。その後、_支払い方法_ セクションまでスクロールします。
+1. サンプルの支払方法が追加されたことを確認します。 ブラウザで`https://localhost:8080`を開きます。 次にアプリケーションメニュー (![Applications Menu](../../images/icon-applications-menu.png)) をクリックし、 _Commerce_ → _チャネル_ に移動します。その後、 _支払い方法_ セクションまでスクロールします。
 
 ```{note}
    Liferay Commerce 2.1以前のバージョンでは、*サイト管理* → *Commerce* → *設定* → *支払い方法*に移動します。
@@ -101,7 +101,7 @@ public class B1C3CommercePaymentMethod implements CommercePaymentMethod {
 ```
 > これにより、支払エンジンが特定の支払方法をどのように使用するかが識別されます。
 > 
-> 値`COMMERCE_PAYMENT_METHOD_TYPE_OFFLINE`を使用して、この支払方法にオンライン処理要件がないことを支払エンジンに通知します。 すぐに使用できる支払いタイプ定数は他に2つあります：`COMMERCE_PAYMENT_METHOD_TYPE_ONLINE_STANDARD`と`COMMERCE_PAYMENT_METHOD_TYPE_ONLINE_REDIRECT`です。
+> 値`COMMERCE _PAYMENT_ METHOD _TYPE_ OFFLINE`を使用して、この支払方法にオンライン処理要件がないことを支払エンジンに通知します。 すぐに使用できる支払いタイプ定数は他に2つあります：`COMMERCE _PAYMENT_ METHOD _TYPE_ ONLINE _STANDARD`と`COMMERCE_ PAYMENT _METHOD_ TYPE _ONLINE_ REDIRECT`です。
 
 ```java
     public String getServletPath();
