@@ -14,9 +14,9 @@ Liferayは、ユーザーの既存のPunchOut2GoインフラとCommerceを統合
 
 競合を避けるため、PunchOut2Goコネクターをデプロイする前にLiferayサーバーにCommerceがデプロイ済みであることを確認してください。 次に、以下の手順でPunchOut2Go LPKGコネクターをデプロイします。
 
-1. *Commerce Connector to PunchOut2Go*を [Liferayヘルプセンター](http://customer.liferay.com/downloads) からダウンロードします。
+1. **Commerce Connector to PunchOut2Go** を [Liferayヘルプセンター](http://customer.liferay.com/downloads) からダウンロードします。
 
-1. *PunchOut2Goコネクター* `LPKG`を [`${liferay.home}/deploy`](https://learn.liferay.com/dxp/latest/ja/installation-and-upgrades/reference/liferay-home.html) フォルダーにコピーします。
+1. **PunchOut2Goコネクター** `LPKG`を [`${liferay.home}/deploy`](https://learn.liferay.com/dxp/latest/ja/installation-and-upgrades/reference/liferay-home.html) フォルダーにコピーします。
 
 1. アプリケーションサーバーコンソールに次のメッセージが表示されることを確認します。
 
@@ -42,75 +42,75 @@ PunchOut2Goコネクターは、[チャネル](../starting-a-store/channels/intr
 
 ユーザーはストアのカタログページのURLを所有していなければなりません。この例では、以下になります。 `http://localhost:8080/web/everest.com/catalog`
 
-1. ［_コントロールパネル_］ → ［_Commerce_］ → ［_チャネル_］に移動します。
+1. ［**コントロールパネル**］ → ［**Commerce**］ → ［**チャネル**］に移動します。
 1. 目的のチャネルをクリックします。
-1. ［_パンチアウト_］タブをクリックします。
-1. トグルを ［_Enabled_］に切り替えます。
+1. ［**パンチアウト**］タブをクリックします。
+1. トグルを ［**Enabled**］に切り替えます。
 1. パンチアウトの開始URLを入力します。
-1. 完了したら、［_保存_］をクリックします。
+1. 完了したら、［**保存**］をクリックします。
 
 ### 自動ログインのパンチアウトアクセストークンを有効にします。
 
 ユーザーは、購入者の調達システムのパンチアウトアクセストークンを有効にし、Liferay Commerceインスタンスにアクセスできるようにします。 トークンを有効にするには、
 
-1. ［_コントロールパネル_］ → ［_設定_］ → ［_システム設定_］に移動します。
-1. ［_セキュリティ_］の下にある［_API 認証_］をクリックします。
+1. ［**コントロールパネル**］ → ［**設定**］ → ［**システム設定**］に移動します。
+1. ［**セキュリティ**］の下にある［**API 認証**］をクリックします。
 
     ![認証](./liferay-commerce-connector-to-punchout2go/images/02.png)
 
-1. 左メニューの ［_Auto Login Punch Out Access Token_］ をクリックします。
-1. ［_Enabled_］のチェックボックスをオンにします。
+1. 左メニューの ［**Auto Login Punch Out Access Token**］ をクリックします。
+1. ［**Enabled**］のチェックボックスをオンにします。
 
     ![自動ログインアクセストークンを有効にします。](./liferay-commerce-connector-to-punchout2go/images/03.png)
 
-1. ［_Update_］ボタンをクリックします。
+1. ［**Update**］ボタンをクリックします。
 
-自動ログイン _Punch Out_ トークンが有効になり、購入者の調達システムがログインできるようになります。
+自動ログイン **Punch Out** トークンが有効になり、購入者の調達システムがログインできるようになります。
 
 ### パンチアウトアクセストークンプロバイダーの設定
 
 パンチアウトアクセストークンを有効にすると、ユーザーはパンチアウトアクセストークンプロバイダーを設定できます。 具体的には、トークンの持続時間やサイズを設定できます。 以下の手順に従ってください。
 
-1. ［_コントロールパネル_］ → ［_設定_］ → ［_システム設定_］に移動します。
-1. ［_OAuth2_］の下にある［_セキュリティ_］をクリックします。
+1. ［**コントロールパネル**］ → ［**設定**］ → ［**システム設定**］に移動します。
+1. ［**OAuth2**］の下にある［**セキュリティ**］をクリックします。
 1. 次のように入力します：
 
-    * **アクセストークンの有効期間**：
-    * **アクセストークンのサイズ**：
+    ***アクセストークンの有効期間** ：
+    ***アクセストークンのサイズ** ：
 
     ![自動ログインアクセストークンを有効にします。](./liferay-commerce-connector-to-punchout2go/images/04.png)
 
-1. 完了したら、［_保存_］をクリックします。
+1. 完了したら、［**保存**］をクリックします。
 
-自動ログイン _パンチアウト_ トークンが設定されます。
+自動ログイン **パンチアウト** トークンが設定されます。
 
 ## パンチアウト購入者ロールの作成
 
 ベストプラクティスとして、ユーザーはパンチアウトを使用するベンダー向けにロールを作成する必要があります。 コマースロールの詳細は、 [Commerce Roles](../users-and-accounts/roles-and-permissions/commerce-roles-reference.md)を参照してください。 Liferay DXPのロールと権限の詳細は、 [Understanding Roles and Permissions](https://learn.liferay.com/dxp/latest/ja/users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.html) を参照してください。
 
-1. ［_コントロールパネル_］ → ［_ユーザー_］ → ［_ロール_］へ移動します。
-1. ［_Site Roles_］ タブをクリックします。
-1. ［_Add Site Role_］ボタンをクリックします。
+1. ［**コントロールパネル**］ → ［**ユーザー**］ → ［**ロール**］へ移動します。
+1. ［**Site Roles**］ タブをクリックします。
+1. ［**Add Site Role**］ボタンをクリックします。
 1. 次のように入力します：
-    * **Name**：パンチアウトベンダー
-1. ［_保存_］ をクリックします。
-1. ［_Define Permissions_］をクリックします。
-1. 左メニューの［_サイト管理_］を展開します。
-1. ［_Applications_］ &rarr; ［_Open Carts_］に移動します。
+    ***Name** ：パンチアウトベンダー
+1. ［**保存**］ をクリックします。
+1. ［**Define Permissions**］をクリックします。
+1. 左メニューの［**サイト管理**］を展開します。
+1. ［**Applications**］ &rarr; ［**Open Carts**］に移動します。
 1. （少なくとも）以下の項目にチェックを入れてください。：
 
-    * **未処理注文をチェックアウト**
-    * **未処理注文を表示**
+    ***未処理注文をチェックアウト**
+    ***未処理注文を表示**
 
     ![ロール権限のパンチアウト](./liferay-commerce-connector-to-punchout2go/images/05.png)
 
-1. 完了したら、［_保存_］をクリックします。
+1. 完了したら、［**保存**］をクリックします。
 
 必要最低限の権限でロールが作成されています。 パンチアウトを使用している購入者にこのロールを割り当てます。
 
 ## 購入者の調達システムへのリダイレクトを確認する
 
-PunchOut2Goへのコネクターが有効な状態でのチェックアウトプロセスも同様に行われます。 ユーザーが _Submit_ をクリックすると、適切な調達システムにリダイレクトされます。
+PunchOut2Goへのコネクターが有効な状態でのチェックアウトプロセスも同様に行われます。 ユーザーが **Submit** をクリックすると、適切な調達システムにリダイレクトされます。
 
 ![注文が送信された後のリダイレクトをパンチアウトする。](./liferay-commerce-connector-to-punchout2go/images/06.png)
 

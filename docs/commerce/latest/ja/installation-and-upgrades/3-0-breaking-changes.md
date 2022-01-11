@@ -22,13 +22,13 @@
 
 ## Commerceメニューの変更
 
-* **日付：** 2020年9月3日
+***日付：** 2020年9月3日
 
-* **JIRAチケット：** [COMMERCE-4565](https://issues.liferay.com/browse/COMMERCE-4565)
+***JIRAチケット：**[COMMERCE-4565](https://issues.liferay.com/browse/COMMERCE-4565)
 
 ### 何が変わりましたか？
 
-Liferay DXP 7.3では、Commerceのメニュー項目がコントロールパネルから新しいグローバルメニューに移動しました。 新しい _Commerce_ タブ（アプリケーションやコントロールパネルタブと同じレベル）には、これらのメニュー項目があります。
+Liferay DXP 7.3では、Commerceのメニュー項目がコントロールパネルから新しいグローバルメニューに移動しました。 新しい **Commerce** タブ（アプリケーションやコントロールパネルタブと同じレベル）には、これらのメニュー項目があります。
 
 `commerce-admin-api`および`commerce-admin-web`モジュールも削除されます。
 
@@ -44,9 +44,9 @@ Liferay DXP 7.3の規格に準拠しつつ、ナビゲーションスコープ�
 
 ## 移動したファイル
 
-* **日付：** 2020年8月20日
+***日付：** 2020年8月20日
 
-* **JIRAチケット：** [COMMERCE-4052](https://issues.liferay.com/browse/COMMERCE-4052)
+***JIRAチケット：**[COMMERCE-4052](https://issues.liferay.com/browse/COMMERCE-4052)
 
 ### 何が変わりましたか？
 
@@ -76,9 +76,9 @@ Liferay DXP 7.3の規格に準拠しつつ、ナビゲーションスコープ�
 
 ## 宛先名の変更
 
-* **日付：**2020年9月10日
+***日付：** 2020年9月10日
 
-* **JIRAチケット：** [COMMERCE-4762](https://issues.liferay.com/browse/COMMERCE-4762)
+***JIRAチケット：**[COMMERCE-4762](https://issues.liferay.com/browse/COMMERCE-4762)
 
 ### 何が変わりましたか？
 

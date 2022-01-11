@@ -48,9 +48,9 @@
     STARTED com.acme.j1e4.impl_1.0.0
     ```
 
-1. サンプルの在庫不足アクティビティが追加されたことを確認します。 ブラウザで`https://localhost:8080`を開きます。 アプリケーションメニュー（![Applications Menu](../images/icon-applications-menu.png)）をクリックし、［_コマース_］→［_商品_］に移動します。 次に、任意の商品のメニュー内の［_編集_］をクリックします。 必要に応じて、 [商品](../../managing-a-catalog/creating-and-managing-products/product-types/creating-a-simple-product.md)追加できます。
+1. サンプルの在庫不足アクティビティが追加されたことを確認します。 ブラウザで`https://localhost:8080`を開きます。 アプリケーションメニュー（![Applications Menu](../images/icon-applications-menu.png)）をクリックし、［**コマース**］→［**商品**］に移動します。 次に、任意の商品のメニュー内の［**編集**］をクリックします。 必要に応じて、 [商品](../../managing-a-catalog/creating-and-managing-products/product-types/creating-a-simple-product.md)追加できます。
 
-   そこから、［_設定_］に移動します。 新しいアクティビティ（"Log a warning message"）が［_在庫数低下時のアクション_］ドロップダウンの下に表示されます。
+   そこから、［**設定**］に移動します。 新しいアクティビティ（"Log a warning message"）が［**在庫数低下時のアクション**］ドロップダウンの下に表示されます。
 
 ```{note}
   Liferay Commerce 2.1以前のバージョンでは、*コントロールパネル* → *Commerce* → *商品*に移動して商品ページを検索します。 

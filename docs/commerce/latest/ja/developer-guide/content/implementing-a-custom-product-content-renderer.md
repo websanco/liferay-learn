@@ -48,9 +48,9 @@
     STARTED com.acme.q4f7.web_1.0.0
     ```
 
-1. サンプルの商品コンテンツレンダラーが追加されたことを確認します。 ブラウザで`https://localhost:8080`を開き、Liferay Commerceで商品を含む任意のカタログに移動します。 商品をクリックして［商品の詳細］ウィジェットを表示し、ウィジェットの ［_設定_］をクリックします。
+1. サンプルの商品コンテンツレンダラーが追加されたことを確認します。 ブラウザで`https://localhost:8080`を開き、Liferay Commerceで商品を含む任意のカタログに移動します。 商品をクリックして［商品の詳細］ウィジェットを表示し、ウィジェットの ［**設定**］をクリックします。
 
-    ［_カスタムレンダラー_］セクションで、［_Simple_］を選択します。 ［_シンプルなコマース商品タイプのレンダラーのキー_］ドロップダウンで、新しいレンダラー（"Q4F7 Commerce Product Content Renderer"）を選択します。
+    ［**カスタムレンダラー**］セクションで、［**Simple**］を選択します。 ［**シンプルなコマース商品タイプのレンダラーのキー**］ドロップダウンで、新しいレンダラー（"Q4F7 Commerce Product Content Renderer"）を選択します。
 
     ![新しい商品コンテンツレンダラー](./implementing-a-custom-product-content-renderer/images/02.png "新しい商品コンテンツレンダラー")
 
@@ -180,7 +180,7 @@ CPSku cpSku = cpContentHelper.getDefaultCPSku(cpContentHelper.getCPCatalogEntry(
 <liferay-util:dynamic-include key="com.liferay.commerce.product.content.web#/add_to_cart#" />
 ```
 
-> Liferay Commerceの [add_to_cart_button.jsp](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-cart-content-web/src/main/resources/META-INF/resources/dynamic _include/add_ to _cart_ button.jsp) を使用して、「カートへ追加t」機能をビューに挿入します。
+> Liferay Commerceの [add_to_cart_button.jsp](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-cart-content-web/src/main/resources/META-INF/resources/dynamic **include/add** to **cart** button.jsp) を使用して、「カートへ追加t」機能をビューに挿入します。
 
 #### 言語キーを`Language.properties`に追加する
 

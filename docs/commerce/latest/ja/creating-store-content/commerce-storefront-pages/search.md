@@ -2,7 +2,7 @@
 
 ［Search］ページを使用して、Liferay Commerceサイトで利用可能なコンテンツを検索できます。これには、Webコンテンツ、ナレッジベースの記事、ドキュメント、画像や商品が含まれますが、これらに限定されません。 ［Search］ ページには、検索バーと、ユーザーが検索を絞り込むことができるいくつかのファセットウィジェットが含まれています。
 
-［[Minium Accelerator](../../starting-a-store/using-the-minium-accelerator-to-jump-start-your-b2b-store.md)］を使用する場合は、検索 ページに［_検索バー_］、［_検索オプション_］、［_検索結果_］、 ［_タイプファセット_］、［_タグ_］、［_カテゴリー_］、［_Site_］、［_フォルダ_］、［_ユーザー_］、  そして ［_編集済みファセット_］ウィジェットが含まれています。
+［[Minium Accelerator](../../starting-a-store/using-the-minium-accelerator-to-jump-start-your-b2b-store.md)］を使用する場合は、検索 ページに［**検索バー**］、［**検索オプション**］、［**検索結果**］、 ［**タイプファセット**］、［**タグ**］、［**カテゴリー**］、［**Site**］、［**フォルダ**］、［**ユーザー**］、  そして ［**編集済みファセット**］ウィジェットが含まれています。
 
 ![［Minium Search］ ページ](./search/images/01.png)
 

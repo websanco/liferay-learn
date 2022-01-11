@@ -10,7 +10,7 @@ MiniumはLiferay Commerceの[アクセラレータ](./accelerators.md)であり�
 
 ### ページ
 
-Miniumは、サイトに複数のページとウィジェットを取り込み、購入者に完全なユーザーエクスペリエンスを提供します。 作成されたページの完全なリストを表示するには、*［サイトメニュー］ → ［ページ作成設定］ → ［ページ］*に移動します。
+Miniumは、サイトに複数のページとウィジェットを取り込み、購入者に完全なユーザーエクスペリエンスを提供します。 作成されたページの完全なリストを表示するには、 ［**サイトメニュー］ → ［ページ作成設定］ → ［ページ**］ に移動します。
 
 ![Miniumページ](./using-the-minium-accelerator-to-jump-start-your-b2b-store/images/01.png)
 
@@ -34,17 +34,17 @@ Miniumのカタログには、事前定義されたいくつかのカテゴリ�
 
 ![プリセットカテゴリ](./using-the-minium-accelerator-to-jump-start-your-b2b-store/images/04.png)
 
-> カテゴリは _グローバル_ スコープレベルで定義されていることに注意してください。 詳細は、[商品のカテゴリー](../managing-a-catalog/creating-and-managing-products/products/organizing-your-catalog-with-product-categories.md)を参照してください。
+> カテゴリは **グローバル** スコープレベルで定義されていることに注意してください。 詳細は、[商品のカテゴリー](../managing-a-catalog/creating-and-managing-products/products/organizing-your-catalog-with-product-categories.md)を参照してください。
 
 サンプル商品には、あらかじめ設定された[オプション](../managing-a-catalog/creating-and-managing-products/products/using-product-options.md) 、[仕様](../managing-a-catalog/creating-and-managing-products/products/specifications.md) 、および画像も付属しています。
 
 ![商品仕様](./using-the-minium-accelerator-to-jump-start-your-b2b-store/images/05.png)
 
-_サンプルデータはデモンストレーション用に追加されており、ストア管理者がストアサイトのベースとしてMiniumを使用する場合は、安全に削除できます。_
+**サンプルデータはデモンストレーション用に追加されており、ストア管理者がストアサイトのベースとしてMiniumを使用する場合は、安全に削除できます。**
 
 ## 検索
 
-Miniumを使用すると、購入者はカタログをすばやく簡単に検索できます。 omni検索バーに加えて、Miniumには検索バーを開くための特別なキーボードのショートカットがあります。 _カタログ_ のメインページでスラッシュ（/）を押すと、検索バーが開き、フォーカスが移動します。
+Miniumを使用すると、購入者はカタログをすばやく簡単に検索できます。 omni検索バーに加えて、Miniumには検索バーを開くための特別なキーボードのショートカットがあります。 **カタログ** のメインページでスラッシュ（/）を押すと、検索バーが開き、フォーカスが移動します。
 
 ![スラッシュを使用した検索](./using-the-minium-accelerator-to-jump-start-your-b2b-store/images/06.png)
 

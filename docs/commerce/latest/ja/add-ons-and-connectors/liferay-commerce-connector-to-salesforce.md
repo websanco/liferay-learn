@@ -39,7 +39,7 @@ The following chart lists supported Salesforce entities with their Liferay count
 
 Follow these steps to deploy the Salesforce connector to a DXP instance:
 
-1. Download the *Commerce Connector to Salesforce* from the [Liferay Help Center](http://customer.liferay.com/downloads).
+1. Download the **Commerce Connector to Salesforce** from the [Liferay Help Center](http://customer.liferay.com/downloads).
 
 1. Copy the `.lpkg` file to the DXP instance's [`${liferay.home}/deploy`](https://learn.liferay.com/dxp/latest/en/installation-and-upgrades/reference/liferay-home.html) folder.
 
@@ -50,7 +50,7 @@ Follow these steps to deploy the Salesforce connector to a DXP instance:
 
 1. Restart the DXP instance.
 
-1. Once the server finishes restarting, confirm the deployment was successful by going to the *Dispatch* page in the Control Panel.
+1. Once the server finishes restarting, confirm the deployment was successful by going to the **Dispatch** page in the Control Panel.
 
    If successful, four new Talend Dispatch Tasks were automatically created for each of the Talend Data Integration Jobs.
 
@@ -126,7 +126,7 @@ Each task includes the following fields for entering Liferay and Salesforce cred
 
 ## Running Each Talend Dispatch Task
 
-Once configured, you can run each task manually by clicking *Run Now*, or schedule them to run automatically. See [Using Dispatch]() for more information.
+Once configured, you can run each task manually by clicking **Run Now** , or schedule them to run automatically. See [Using Dispatch]() for more information.
 
 ```important::
    Running these Talend Dispatch Tasks can be resource intensive and degrade platform performance. To reduce performance impact, avoid running them during peak use hours.

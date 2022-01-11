@@ -8,14 +8,14 @@ Liferay Commerceバンドルを使用するには、次の手順を実行しま�
 
 1. Liferay Commerce Tomcatバンドルを入手します。
 
-    * （サブスクライバー） [エンタープライズダウンロード](https://customer.liferay.com/downloads?p _p_ id=com _liferay_ osb _customer_ downloads _display_ web _DownloadsDisplayPortlet&_ com _liferay_ osb _customer_ downloads _display_ web _DownloadsDisplayPortlet_ productAssetCategoryId=118190997& _com_ liferay _osb_ customer _downloads_ display _web_ DownloadsDisplayPortlet_fileTypeAssetCategoryId=118191001)
+    * （サブスクライバー） [エンタープライズダウンロード](https://customer.liferay.com/downloads?p **p** id=com **liferay** osb **customer** downloads **display** web **DownloadsDisplayPortlet&** com **liferay** osb **customer** downloads **display** web **DownloadsDisplayPortlet** productAssetCategoryId=118190997& **com** liferay **osb** customer **downloads** display **web** DownloadsDisplayPortlet_fileTypeAssetCategoryId=118191001)
     * [コミュニティダウンロードページ](https://www.liferay.com/downloads-community)
 
 1. バンドルをターゲットの場所に解凍します。
 
 1. Tomcatバンドルを開始します
     * `$CATALINA_HOME/bin`に移動します。
-    * `./catalina.sh run`を実行します。 以下のための *Windowsの* ユーザ、実行： `カタリナラン`
+    * `./catalina.sh run`を実行します。 以下のための **Windowsの** ユーザ、実行： `カタリナラン`
 
     ```tip::
        「org.apache.catalina.startup.Catalina.startサーバーの起動が ［x］ ミリ秒以内」と表示されるまで待ちます

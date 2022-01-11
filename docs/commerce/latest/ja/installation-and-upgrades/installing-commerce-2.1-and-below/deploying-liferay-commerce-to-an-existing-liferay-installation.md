@@ -5,7 +5,7 @@
 Liferay Commerceの使用を開始するには：
 
 1. 最新のLiferay Commerce `LPKG`をダウンロードします。
-    * エンタープライズの加入者は、最新の`LPKG`を [ヘルプセンター](https://customer.liferay.com/downloads?p _p_ id=com _liferay_ osb _customer_ downloads _display_ web _DownloadsDisplayPortlet&_ com _liferay_ osb _customer_ downloads _display_ web _DownloadsDisplayPortlet_ productAssetCategoryId=118190997& _com_ liferay _osb_ customer _downloads_ display _web_ DownloadsDisplayPortlet_fileTypeAssetCategoryId=118191001) からダウンロードできます。
+    * エンタープライズの加入者は、最新の`LPKG`を [ヘルプセンター](https://customer.liferay.com/downloads?p **p** id=com **liferay** osb **customer** downloads **display** web **DownloadsDisplayPortlet&** com **liferay** osb **customer** downloads **display** web **DownloadsDisplayPortlet** productAssetCategoryId=118190997& **com** liferay **osb** customer **downloads** display **web** DownloadsDisplayPortlet_fileTypeAssetCategoryId=118191001) からダウンロードできます。
       * 加入者の方は、Liferay Commerceの注文番号またはアクティベーションキーも必要です。 [Activating a Marketplace App Through a Proxy Server](https://help.liferay.com/hc/en-us/articles/360018427391) を参照してください。
     * 最新のオープンソース `LPKG` は、 [Liferay Commerce Communityダウンロードページ](https://www.liferay.com/downloads-community) から入手できます。
 
@@ -15,7 +15,7 @@ Liferay Commerceの使用を開始するには：
        LiferayのDXPへのアプリケーションの展開の詳細は、 `Liferayのホームページを参照 してください<https://learn.liferay.com/dxp/latest/en/installation-and-upgrades/reference/liferay-home.html>` _。
     ```
 
-1. （_サブスクライバー_） `${liferay.home}/ deploy` フォルダーにアクティベーションキーを展開します。
+1. （**サブスクライバー**） `${liferay.home}/ deploy` フォルダーにアクティベーションキーを展開します。
 1. アプリケーションサーバーコンソールに次のメッセージが表示されることを確認します。
 
     ```
@@ -31,14 +31,14 @@ Liferay Commerceの使用を開始するには：
     2019-08-09 00:32:48.850 INFO  [main][BaseDeployer:877] Deploying minium-theme.war
     ```
 
-1. **最初の**デプロイでは、一連のコマンドの後に次のメッセージが続きます。
+1. **最初の** デプロイでは、一連のコマンドの後に次のメッセージが続きます。
 
     ```
     2019-08-09 00:34:51.753 INFO  [main][ThemeHotDeployListener:108] 1 theme for minium-theme is available for use
     ```
 
-1. 初回立ち上げ時には、Liferay Commerceのデフォルトコンテンツを投入するためにインデックスの再構築を実行し、［_コントロールパネル_］ → ［_設定_］ → ［_検索機能_］に移動します。
-1. ［_全ての検索インデクスの再構築_］の隣にある［_実行_］をクリックします。
+1. 初回立ち上げ時には、Liferay Commerceのデフォルトコンテンツを投入するためにインデックスの再構築を実行し、［**コントロールパネル**］ → ［**設定**］ → ［**検索機能**］に移動します。
+1. ［**全ての検索インデクスの再構築**］の隣にある［**実行**］をクリックします。
 
 Liferay Commerceがデプロイされ、使用できる状態になりました。 ストア管理者は、ストアフロントの構築とカタログの作成を開始できます。
 

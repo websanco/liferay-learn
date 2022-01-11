@@ -80,7 +80,7 @@ LIFERAY_ENTERPRISE_PERIOD_PRODUCT_PERIOD_COMMERCE_PERIOD_ENABLED=true
 
 ### アクティベーションの成功の確認
 
-プロパティが正常に追加されたことを確認するためには、Liferay DXPを開き、 ［*グローバルメニュー*］ (![Global Menu](../images/icon-applications-menu.png)) をクリックします。 正常に追加されていると、［ *Commerce*］ タブでCommerceモジュールを表示し、アクセスすることができます。 または、 ［*グローバルメニュー*］を開いて［*コントロールパネル* ］&rarr;［ *サーバー管理*］&rarr; ［*プロパティ*］ &rarr; *ポータルプロパティ*にアクセスできます。 新規プロパティは、他のプロパティと一緒にリストアップされているはずです。
+プロパティが正常に追加されたことを確認するためには、Liferay DXPを開き、 ［**グローバルメニュー**］ (![Global Menu](../images/icon-applications-menu.png)) をクリックします。 正常に追加されていると、［**Commerce**］ タブでCommerceモジュールを表示し、アクセスすることができます。 または、 ［**グローバルメニュー**］を開いて［**コントロールパネル**］&rarr;［**サーバー管理**］&rarr; ［**プロパティ**］ &rarr; **ポータルプロパティ** にアクセスできます。 新規プロパティは、他のプロパティと一緒にリストアップされているはずです。
 
 ## Liferay DXP 7.1-7.3 FP2用のLiferay Commerce Enterpriseの有効化
 
@@ -104,7 +104,7 @@ DXPとCommerceのアクティベーションキーは，両方とも同じ`licen
 
 すでにCommerceサブスクリプションが [購入済](https://www.liferay.com/contact-sales) の場合は、以下のいずれかの方法でアクティベーションキーをダウンロードして入手できます。
 
-* [ヘルプセンター](https://liferay-support.zendesk.com/agent/) チケットを*アクティベーションキー/Project Administration* コンポーネントを使って開きます。
+* [ヘルプセンター](https://liferay-support.zendesk.com/agent/) チケットを **アクティベーションキー/Project Administration** コンポーネントを使って開きます。
 
 * 各地域のプロビジョニングチーム（例：provisioning-[region]@liferay.com）にメールでリクエストを送信してください。
 
