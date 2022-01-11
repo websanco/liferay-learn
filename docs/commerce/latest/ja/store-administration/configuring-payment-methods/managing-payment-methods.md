@@ -2,7 +2,7 @@
 
 Liferay Commerceの支払い方法は、[チャネル](../../starting-a-store/channels/introduction-to-channels.md)およびストア[サイト](../../starting-a-store/sites-and-site-types.md)に限定されます。 Liferay Commerceインスタンスの同じインスタンスで複数のストアフロントがホストされている場合、管理者は各サイトで異なる支払い方法を使用できます。
 
-支払い方法を管理するには、 _［コントロールパネル］_ &rarr; _［コマース］_ &rarr; _［チャネル］_ に移動します。
+支払い方法を管理するには、 ［_コントロールパネル_］ &rarr; ［_コマース_］ &rarr; ［_チャネル_］ に移動します。
 
 ![Commerce 2.1チャネル](./managing-payment-methods/images/06.png)
 
@@ -30,7 +30,7 @@ Liferay Commerceの支払い方法は、[チャネル](../../starting-a-store/ch
 
 ### ［設定］タブ
 
-支払い方法の _［設定］_ タブでは、ストア管理者が支払い方法をストアに統合します。
+支払い方法の ［_設定_］ タブでは、ストア管理者が支払い方法をストアに統合します。
 
 各支払い方法を有効にする方法については、対応する記事を参照してください。
 

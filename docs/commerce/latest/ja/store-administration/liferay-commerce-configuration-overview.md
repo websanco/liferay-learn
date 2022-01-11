@@ -1,10 +1,10 @@
 # Liferay Commerce設定の概要
 
-Liferay Commerce 3.0の設定は、 _［グローバルアプリケーション］_ メニューから行えます。
+Liferay Commerce 3.0の設定は、 ［_グローバルアプリケーション_］ メニューから行えます。
 
 ![グローバルアプリケーションメニューからCommerce 3.0にアクセスします。](./liferay-commerce-configuration-overview/images/06.png)
 
-_［グローバルアプリケーション］_ メニュー &rarr; _［コマース］_ に移動します。 管理者は以下を構成できます：
+［_グローバルアプリケーション_］ メニュー &rarr; ［_コマース_］ に移動します。 管理者は以下を構成できます：
 
 * [チャネル](../starting-a-store/channels/managing-channels.md)
 * [価格表](../managing-a-catalog/managing-prices/creating-a-price-list.md)
@@ -25,11 +25,11 @@ _［グローバルアプリケーション］_ メニュー &rarr; _［コマ�
 
 ## Liferay Commerce 2.1以前
 
-Liferay Commerce 2.1の設定は、Liferay _［商品メニュー］_ のいくつかの場所に分かれています。 Commerceの _［コントロールパネル］_ ドロップダウンには、Liferay Commerceのインストールに _グローバル_ に適用される構成と設定が含まれています。 Commerceの _［サイトメニュー］_ ドロップダウンには、特定のストアサイトを対象とする構成と設定が含まれています。
+Liferay Commerce 2.1の設定は、Liferay ［_商品メニュー_］ のいくつかの場所に分かれています。 Commerceの ［_コントロールパネル_］ ドロップダウンには、Liferay Commerceのインストールに _グローバル_ に適用される構成と設定が含まれています。 Commerceの ［_サイトメニュー_］ ドロップダウンには、特定のストアサイトを対象とする構成と設定が含まれています。
 
 ### Commerceのコントロールパネル
 
-_［コントロールパネル］_ → _［コマース］_ に移動します。 以下の設定のいずれかに変更を加えると、ストアサイト全体に適用されます。
+［_コントロールパネル_］ → ［_コマース_］ に移動します。 以下の設定のいずれかに変更を加えると、ストアサイト全体に適用されます。
 
 ![グローバルCommerce設定](./liferay-commerce-configuration-overview/images/01.png)
 
@@ -53,7 +53,7 @@ _［コントロールパネル］_ → _［コマース］_ に移動します�
 
 次の設定は、選択したストアサイトに限定されます。 ここで行った変更は、同じLiferay Commerceインスタンスでホストされている他のストアには適用されません。
 
-_［コントロールパネル］_ → _［Store Site］_ → _［コマース］_ に移動します。
+［_コントロールパネル_］ → ［_Store Site_］ → ［_コマース_］ に移動します。
 
 ![サイトの最小フル設定](./liferay-commerce-configuration-overview/images/03.png)
 

@@ -8,7 +8,7 @@ Liferay Commerceは、さまざまな店舗イベントによってトリガー�
 
 ## ストアメール通知の構成
 
-Liferay Commerceのメール設定が構成されたら、 _［コントロールパネル］_ &rarr; _［コマース］_ &rarr; _［チャネル］_ に移動して、ストアのメール通知設定を作成します。 メール通知は [チャネル](../../starting-a-store/channels/introduction-to-channels.md)ごとに構成されます。 使用 [加速器](../../starting-a-store/accelerators.md) あなたが開始するための店、カタログ、およびチャネルを作成します。
+Liferay Commerceのメール設定が構成されたら、 ［_コントロールパネル_］ &rarr; ［_コマース_］ &rarr; ［_チャネル_］ に移動して、ストアのメール通知設定を作成します。 メール通知は [チャネル](../../starting-a-store/channels/introduction-to-channels.md)ごとに構成されます。 使用 [加速器](../../starting-a-store/accelerators.md) あなたが開始するための店、カタログ、およびチャネルを作成します。
 
 ![利用可能な通知テンプレート](./store-emails/images/02.png)
 
@@ -57,7 +57,7 @@ Liferay Commerceのメール設定が構成されたら、 _［コントロー�
 
 ## 注文通信履歴の表示
 
-注文に関連するメール通知は追跡され、注文を表示するときに［ *Emails* ］タブで確認できます。 _［コントロールパネル］_ → _［コマース］_ → _［注文］_ に移動します。 注文IDをクリックし、次に［_Email_］タブをクリックします。 詳細は、 [注文情報](../../orders-and-fulfillment/orders/order-information.md) を参照してください。
+注文に関連するメール通知は追跡され、注文を表示するときに［ *Emails* ］タブで確認できます。 ［_コントロールパネル_］ → ［_コマース_］ → ［_注文_］ に移動します。 注文IDをクリックし、次に［_Email_］タブをクリックします。 詳細は、 [注文情報](../../orders-and-fulfillment/orders/order-information.md) を参照してください。
 
 ![メッセージログは注文情報にあります。](./store-emails/images/04.png)
 
