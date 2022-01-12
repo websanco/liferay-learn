@@ -14,6 +14,8 @@
 
 ![注文の概要](./placed-orders/images/03.png)
 
+<a name="additional-information" />
+
 ## 追加情報
 
 * [Widget Reference Guide](../liferay-commerce-widgets/widget-reference.md)

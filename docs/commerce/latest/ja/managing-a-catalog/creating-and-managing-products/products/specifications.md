@@ -14,6 +14,8 @@
 SKUレベルで定義された仕様は、商品レベルで定義された仕様よりも優先されます。 詳細は、[Overriding Product Level Information]（./ overrideing-product-level-information.md）を参照してください。
 ```
 
+<a name="specification-groups" />
+
 ## 仕様グループ
 
 1. ［**グローバルメニュー**］ (![Applications Menu icon](../../../images/icon-applications-menu.png)) →［**Commerce**］→［**商品**］に移動します。
@@ -32,6 +34,8 @@ SKUレベルで定義された仕様は、商品レベルで定義された仕�
 | キー       | このグループをプログラムで一意に識別します。        |
 
 ![仕様グループを作成するには、提供されたフォームにタイトル、説明、重要度、およびキーを入力します。](./specifications/images/02.png)
+
+<a name="specification-labels" />
 
 ## 仕様ラベル
 
@@ -57,6 +61,8 @@ SKUレベルで定義された仕様は、商品レベルで定義された仕�
 ![提供されたフォームを使用して、仕様ラベルを作成します。](./specifications/images/04.png)
 
 ラベルは作成されましたが、値の割り当ては商品レベルで行う必要があります。
+
+<a name="specification-values" />
 
 ## 仕様値
 

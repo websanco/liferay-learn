@@ -22,6 +22,8 @@
 
 新しいカタログが作成されました。
 
+<a name="liferay-commerce-21-and-below" />
+
 ## Liferay Commerce 2.1以前
 
 新しいカタログを作成するには：
@@ -41,6 +43,8 @@
 新しいカタログが作成され、新しい商品を追加するときに選択できるようになります。
 
 ![カタログと商品](./creating-a-new-catalog/images/02.png)
+
+<a name="additional-information" />
 
 ## 追加情報
 

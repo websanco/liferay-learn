@@ -26,6 +26,8 @@
 
 
 
+<a name="additional-information" />
+
 ## 追加情報
 
 * [発送の概要](./introduction-to-shipments.md)

@@ -28,6 +28,8 @@
 
 ![商品の在庫が0になると、選択された見積書が顧客に表示されます。](./availability-estimates/images/03.png)
 
+<a name="commerce-21-and-below" />
+
 ## Commerce 2.1以前
 
 [アクセラレータ](../../starting-a-store/accelerators.md)を使用してストアフロントを作成すると、入荷見積りのセットが作成されます。
@@ -51,6 +53,8 @@
 在庫不足しきい値を設定すると、この入荷見積りオプションが［**商品の設定**］ → ［**在庫**］メニューに表示されます。
 
 ![［在庫］ドロップダウンの入荷見積り](./availability-estimates/images/06.png)
+
+<a name="additional-information" />
 
 ## 追加情報
 

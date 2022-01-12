@@ -16,6 +16,8 @@
 
 ![商品発行者の設定](./product-details/images/02.png)
 
+<a name="additional-information" />
+
 ## 追加情報
 
 * [Related Products, Upsells, and Cross-Sells](../../managing-a-catalog/creating-and-managing-products/products/related-products-up-sells-and-cross-sells.md)

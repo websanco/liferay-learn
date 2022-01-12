@@ -2,6 +2,8 @@
 
 為替レートは、手動で管理するか、オンラインサービスによって自動的に更新できます。 ストアの為替レートが最新であることを確認するために、管理者は自動通貨換算を有効にできます。
 
+<a name="enabling-automatic-currency-conversion" />
+
 ## 自動通貨変換を有効にする
 
 デフォルトでは、Liferay Commerceは外国為替レートについて欧州中央銀行に依存しています。 ECBは約24時間ごとに為替レートを更新します。 代替の為替レートプロバイダを実装する方法については、[Implementing an Exchange Rate Provider](../../developer-guide/implementing-an-exchange-rate-provider.md)を参照してください。
@@ -36,6 +38,8 @@
 
 為替レートの自動更新が有効になり、2時間ごとに為替レートが更新されます。
 
+<a name="setting-exchange-rates-manually" />
+
 ## 為替レートの手動設定
 
 為替レートは、ストア管理者が手動で設定できます。
@@ -48,6 +52,8 @@
     ![為替レートを手動で変更する](./managing-exchange-rates/images/03.png)
 
 1. ［**保存**］ をクリックします。
+
+<a name="additional-information" />
 
 ## 追加情報
 

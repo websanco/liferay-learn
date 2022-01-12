@@ -8,9 +8,13 @@ Liferay Commerceでは、グループ商品は、顧客の利便性や特別価�
 グループ商品に加えて、Liferay Commerceは[商品オプション]（.../products/using-product-options.md）を使用した商品バンドルの作成をサポートしています。 オプションでは、現在の商品と他のSKUをリンクさせて一緒に購入するための値を定義することができます。 最終的な価格は、オプションの設定に基づいて計算されます。 詳細は、[Creating Product Bundles]（../ products / creating-product-bundles.md）および[Product Options]（../ products / using-product-options.md）を参照してください。
 ```
 
+<a name="prerequisites" />
+
 ## 前提条件
 
 グループ商品を作成する前に、グループ化させたいSKUがすべて生成されていることを確認してください。 少なくとも、各SKUには基本価格の設定と十分な在庫が必要です。
+
+<a name="create-a-grouped-product" />
 
 ## グループ商品の作成
 
@@ -28,6 +32,8 @@ Liferay Commerceでは、グループ商品は、顧客の利便性や特別価�
 
 ![グループ商品を設定します。](./creating-a-grouped-product/images/01.png)
 
+<a name="adding-product-entries" />
+
 ## 商品のエントリの追加
 
 以下の手順に従って、グループ商品にエントリを追加します：
@@ -43,6 +49,8 @@ Liferay Commerceでは、グループ商品は、顧客の利便性や特別価�
 ![グループ化済みタブで関連する商品エントリを表示し、その数量と優先順位を決定します。](./creating-a-grouped-product/images/02.png)
 
 グループ商品を作成し、他の商品を関連付けたら、デフォルトの [SKU](./../products/creating-skus-for-product-variants.md) に基本価格を設定し、購入できるようにします。 この価格は、各商品の個別の価格の代わりに使用されます。
+
+<a name="commerce-21-and-below" />
 
 ## Commerce 2.1以前
 
@@ -96,6 +104,8 @@ Liferay Commerceでは、グループ商品は、顧客の利便性や特別価�
 
 1. ［**保存**］ をクリックします。 （［Promo Price］および［Cost］フィールドが0.00のままの場合、この時点では割引やプロモーションは適用されません。）
 1. ［**Price List**］をクリックして、この商品を既存の[［価格表］](../../managing-prices/adding-products-to-a-price-list.md)に適用します。
+
+<a name="additional-information" />
 
 ## 追加情報
 

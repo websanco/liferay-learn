@@ -6,6 +6,8 @@ Liferay Commerceは、ストアマネージャーが商品を **期限切れに�
 
 商品を **非公開** にすると、その商品は **下書き** 状態に設定され、検索結果から削除されます。 商品の在庫が最小しきい値を下回った場合に商品が自動的に非公開になるように設定できます。詳細は、記事[「Low Stock Action」](./low-stock-action.md)を参照してください。
 
+<a name="scheduling-products-expiration" />
+
 ## 商品の有効期限のスケジューリング
 
 商品の有効期限をスケジュールするには：
@@ -25,6 +27,8 @@ Liferay Commerceは、ストアマネージャーが商品を **期限切れに�
 
 新しい有効期限を入力して商品を再公開することにより、商品を再び表示できます。
 
+<a name="unpublishing-a-product" />
+
 ## 商品を非公開にする
 
 1. ［**コントロールパネル**］ → ［**コマース**］ → ［**商品**］に移動します。
@@ -42,6 +46,8 @@ Liferay Commerceは、ストアマネージャーが商品を **期限切れに�
 商品はカタログで検索できません。 ［**コントロールパネル**］で、商品のステータスが［**下書き**］に設定されています。
 
 ![非公開になったU-Joint](./managing-product-publication/images/05.png)
+
+<a name="commerce-21-and-below" />
 
 ## Commerce 2.1以前
 
@@ -83,6 +89,8 @@ Commerce 2.1以前の設定は、 **コントロールパネル** にありま�
 商品はカタログで検索できません。 ［**コントロールパネル**］で、商品のステータスが［**下書き**］に設定されています。
 
 ![非公開になったU-Joint](./managing-product-publication/images/05.png)
+
+<a name="additional-information" />
 
 ## 追加情報
 

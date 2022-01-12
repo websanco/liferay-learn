@@ -14,6 +14,8 @@
 
 **変動レート** ：この配送方法では、式を使用して、重量、商品価格、またはユーザーが決定した他の要因ごとに各注文に一意のレートを計算します。
 
+<a name="additional-information" />
+
 ## 追加情報
 
 * [配送方法の制限の適用](./applying-shipping-method-restrictions.md)

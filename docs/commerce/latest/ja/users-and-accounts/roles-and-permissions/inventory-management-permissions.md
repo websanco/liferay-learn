@@ -8,6 +8,8 @@ Liferay Commerceでは、グローバルメニュー（![Global Menu](../../imag
 
 ![ [権限の定義]タブで、ユーザーロールの在庫管理権限を管理します。](./inventory-management-permissions/images/02.png)
 
+<a name="application-permissions" />
+
 ## アプリケーションの権限
 
 アプリケーションの権限は、アプリケーション自体に機能を付与しますが、 [関連するリソース権限](#resource-permissions) は含まれません。
@@ -27,6 +29,8 @@ Liferay Commerceでは、グローバルメニュー（![Global Menu](../../imag
 | 権限の設定           | アプリケーションの権限を表示および変更する機能      |
 | 詳細設定            | アプリケーションプリファレンスを表示および設定する機能  |
 | 表示              | アプリケーションを表示する機能              |
+
+<a name="resource-permissions" />
 
 ## リソース権限
 
@@ -50,6 +54,8 @@ Liferay Commerceでは、グローバルメニュー（![Global Menu](../../imag
 | 倉庫を追加 | 倉庫エンティティを作成する機能                  |
 | 在庫を管理 | 倉庫にリンクされた在庫エンティティにアクセスして変更する機能   |
 | 権限の設定 | 倉庫と在庫アプリケーションでリソース権限を表示および変更する機能 |
+
+<a name="additional-information" />
 
 ## 追加情報
 

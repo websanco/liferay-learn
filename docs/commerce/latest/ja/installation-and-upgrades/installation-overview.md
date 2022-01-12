@@ -2,6 +2,8 @@
 
 Liferay Commerceは、Liferay DXP上に構築されたデジタルコマースプラットフォームです。 この記事では、Liferay Commerceをインストール、展開、および保守するための前提条件と利用可能なオプションについて概説します。
 
+<a name="prerequisites" />
+
 ## 前提条件
 
 インストールをスムーズに行うために、事前に互換性マトリックスと関連するインストール資料を確認してください。
@@ -9,6 +11,8 @@ Liferay Commerceは、Liferay DXP上に構築されたデジタルコマース�
 * サポートされているテクノロジーのリストについては、[Liferay DXP 7.3 および Commerce 3.0 互換性マトリクス](https://help.liferay.com/hc/en-us/articles/360049238151) をご覧ください。
 
 <!-- * See the \[Liferay DXP 7.3 Deployment Checklist\]() for information about Liferay DXP architecture and performance tuning guidelines. -->
+
+<a name="starting-with-liferay-commerce" />
 
 ## Liferay Commerceから
 
@@ -23,12 +27,16 @@ Liferay Portalのバンドルとイメージには、コマース特有の追加
 
 一方、DXPのインストールでは、基本的なCommerceとエンタープライズCommerceの両方のモジュールがデフォルトで無効化されているため、使用するためには有効にする必要があります。 DXPとCommerceの両方のライセンスがデプロイされ、検証されると、すべてのCommerceモジュールが開始され、すぐに利用できるようになります。よって、サーバーを再起動させる必要はありません。 詳しくは [Liferay Commerce Enterpriseのアクティベーション](./activating-liferay-commerce-enterprise.md) を参照してください。
 
+<a name="maintaining-liferay-commerce" />
+
 ## Liferay Commerceの管理
 
 定期的なメンテナンスアップデートと商品アップグレードを利用して、Liferay Commerceのエクスペリエンスの品質を保証および強化できます。 詳しくは以下の記事を参照してください。
 
 * [メンテナンスバージョン](./maintenance-versions.md)
 * [Liferay Commerceのアップグレード](./upgrading-liferay-commerce.md)
+
+<a name="liferay-commerce-21-and-below" />
 
 ## Liferay Commerce 2.1以前
 
@@ -53,6 +61,8 @@ Dockerを使用してLiferay Commerceをインストールします。 詳細は
 ### 既存のLiferay DXPインストールを利用したインストール
 
 `LPKG` ファイルを既存のLiferay DXPインストールに展開して、Liferay Commerceをインストールします。 詳細は、[Deploying Liferay Commerce to an Existing Installation](./installing-commerce-2.1-and-below/deploying-liferay-commerce-to-an-existing-liferay-installation.md)を参照してください。
+
+<a name="additional-information" />
 
 ## 追加情報
 

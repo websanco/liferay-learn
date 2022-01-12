@@ -4,6 +4,8 @@
 
 この記事では、チャネル管理インターフェースの概要について説明します。 チャネルを作成するには、 [チャネルの管理](./managing-channels.md)参照してください。
 
+<a name="general" />
+
 ## 一般
 
 **General** タブには、通貨、注文ワークフロー、支払い、配送、税金など、多くの重要なチャネル設定があります。
@@ -61,6 +63,8 @@
 
 
 
+<a name="type" />
+
 ## タイプ
 
 チャネルはDXPサイトに接続できます。 または、チャネルは、Amazonマーケットプレイスなどの非DXPサイトに接続できます。 ここで、ユーザーはチャネルを関連付けるDXPサイトを選択できます。
@@ -69,6 +73,8 @@
 
 
 
+<a name="notification-queue" />
+
 ## 通知キュー
 
 Liferay Commerceは、さまざまなイベントによってトリガーされる電子メール通知を送信するように構成できます。 イベントによって通知がトリガーされると（注文など）、通知はチャネルの［**通知キュー**］タブに記録されます。 デフォルトでは、Liferay Commerceインスタンスは、通知が15分ごとに送信されたかどうかを確認し、43200分（30日）後に未送信の通知を削除します。
@@ -76,6 +82,8 @@ Liferay Commerceは、さまざまなイベントによってトリガーされ�
 詳細は、 [コマース通知キュー](../../../store-administration/sending-emails/configuring-the-commerce-notification-queue.md) 設定の記事を参照してください。
 
 
+
+<a name="notification-templates" />
 
 ## 通知テンプレート
 
@@ -89,6 +97,8 @@ Liferay Commerceは、さまざまなイベントによってトリガーされ�
 
 
 
+<a name="category-display-pages" />
+
 ## カテゴリ表示ページ
 
 ［カテゴリ表示ページ］タブには、ストアサイトで作成されたすべてのカテゴリ表示ページのリストが表示されます。 **カテゴリー表示ページ** 使用すると、ユーザーは、特定のカテゴリーでタグ付けされたすべての商品を表示する特定のDXPサイトページを置き換えることができます。 ユーザーは最初に [商品カテゴリ](../../managing-a-catalog/creating-and-managing-products/products/organizing-your-catalog-with-product-categories.md)を作成し、それらを目的の商品に関連付けてから、ページを作成する必要があります。
@@ -97,11 +107,15 @@ DXPサイトページの作成の詳細は、 [ページの作成](https://learn
 
 
 
+<a name="product-display-pages" />
+
 ## 商品表示ページ
 
 商品表示ページは、カテゴリ表示ページと同様の前提で動作します。ユーザーは特定のサイトページを作成して、デフォルトのカタログページの代わりに特定の商品を強調表示できます。 **商品表示ページ** タブで、ユーザーはサイトで作成されたすべての商品表示ページのリストを表示できます。 詳細は、[商品表示ページの作成](../../creating-store-content/creating-product-display-pages.md)を参照してください。
 
 
+
+<a name="payment-restrictions" />
 
 ## 支払い制限
 
@@ -110,6 +124,8 @@ DXPサイトページの作成の詳細は、 [ページの作成](https://learn
 ![支払い制限](./channels-reference-guide/images/08.png)
 
 
+
+<a name="shipping-restrictions" />
 
 ## 配送制限
 
@@ -125,6 +141,8 @@ Users can manage their Punch Out procurement systems from here. Purchasing the a
 -->
 
 
+
+<a name="additional-information" />
 
 ## 追加情報
 

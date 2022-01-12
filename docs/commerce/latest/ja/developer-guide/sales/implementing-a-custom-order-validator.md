@@ -4,11 +4,15 @@
 
 注文バリデーターは、清算を進めるときに顧客のカート内のアイテムを検証するクラスです。 Liferay Commerceでは、 [デフォルト](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-service/src/main/java/com/liferay/commerce/internal/order/DefaultCommerceOrderValidatorImpl.java) をはじめ、 [アイテムバージョン](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-service/src/main/java/com/liferay/commerce/internal/order/VersionCommerceOrderValidatorImpl.java) や [定期的なアイテム（サブスクリプション）](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-service/src/main/java/com/liferay/commerce/internal/order/SubscriptionCommerceOrderValidatorImpl.java) を確認するバリデーターなど複数の注文バリデーターをすぐに使うことができます。
 
+<a name="overview" />
+
 ## 概要
 
 1. [**サンプルをデプロイする**](#deploy-an-example)
 1. [**例の説明**](#walk-through-the-example)
 1. [**追加情報**](#additional-information)
+
+<a name="deploy-an-example" />
 
 ## サンプルをデプロイする
 
@@ -55,6 +59,8 @@
 これで、`CommerceOrderValidator`を実装する新しい注文バリデーターを正常に構築およびデプロイできました。
 
 次に、詳細をさらに詳しく見ていきましょう。
+
+<a name="walk-through-the-example" />
 
 ## 例の説明
 
@@ -190,9 +196,13 @@ this-expensive-item-has-a-maximum-quantity-of-x=This expensive item has a maximu
 
 > 詳細は、 [アプリケーションのローカライズ](https://help.liferay.com/hc/en-us/articles/360018168251-Localizing-Your-Application) を参照してください。
 
+<a name="conclusion" />
+
 ## まとめ
 
 　 `CommerceOrderValidator`インターフェイスを実装するための基本を理解し、Liferay Commerceに新しい注文バリデーターを追加しました。
+
+<a name="additional-information" />
 
 ## 追加情報
 

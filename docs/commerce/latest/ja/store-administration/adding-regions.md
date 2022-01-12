@@ -18,6 +18,8 @@
 
 フランスの地域 「**グラン・テスト地域圏**」 がリージョンのリストに追加されました。 ［**配送先住所**］ ページの ［**Country**］ フィールドでフランスを選択すると、リージョンリストに **グラン・テスト地域圏** が表示されます。 必要に応じてこれらの手順を繰り返します。
 
+<a name="additional-information" />
+
 ## 追加情報
 
 **注1：**［**Code**］ フィールドの値は、 [ ISO-3166-2 ](https://ipfs.io/ipfs/QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco/wiki/ISO_3166-2.html) 規格のフォーマットに従う必要があります。

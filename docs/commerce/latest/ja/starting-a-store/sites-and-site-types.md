@@ -1,5 +1,7 @@
 # サイトとサイトのタイプ
 
+<a name="sites" />
+
 ## サイト
 
 Liferay Commerceのデプロイは、サイト、ページ、ウィジェット、およびアカウントの階層で構成されます。 Liferay Commerceでサイトを作成および設定することは、ストアを立ち上げるための最初のステップの1つです。 [アクセラレータ](../starting-a-store/accelerators.md)を使用してすぐにサイトを開始するか、または空白のサイトを作成して必要なCommerceウィジェットとページを追加できます。
@@ -7,6 +9,8 @@ Liferay Commerceのデプロイは、サイト、ページ、ウィジェット�
 Liferay Commerceは、Liferay Digital Experience Platform上に構築されています。 Liferay DXPサイトの機能の詳細は、 [サイトの構築](https://help.liferay.com/hc/en-us/articles/360018171231-Building-a-Site) を参照してください。
 
 ストアサイトの作成の詳細は、[ストアセットアップの概要](../starting-a-store/store-setup-overview.md)を参照してください。
+
+<a name="site-types" />
 
 ## サイトのタイプ
 
@@ -19,6 +23,8 @@ Liferay Commerceは、Liferayのサイトをサイトのタイプと組み合わ
 ***B2C** ：個人アカウントを必要とする企業-消費者間取引サイト。 認証されたユーザーは誰でも購入できます。 **Speedwell** アクセラレータ（近日公開予定）を使用すると、B2Cサイトタイプを使用したサイトがすぐに開始されます。
 
 ***B2X** ：B2C-B2Bサイトは、個人アカウントおよびビジネスアカウントを認識します。 ユーザーはビジネスアカウントに関連付けることができますが、個別に購入することもできます。
+
+<a name="setting-a-site-type" />
 
 ## サイトのタイプの設定
 
@@ -35,6 +41,8 @@ Liferay Commerceは、Liferayのサイトをサイトのタイプと組み合わ
 ![［サイト管理設定］から［サイトタイプ］を選択します。](./sites-and-site-types/images/01.png)
 
 サイトのタイプを変更すると、［アカウント］ウィジェットに表示されるアカウントも変更されます。 インスタンスにビジネスアカウントが含まれているが、サイトのタイプがB2Cに設定されている場合、それらのアカウントはデータベースに存在しますが、［アカウント］ウィジェットには表示されず、ユーザーはアクセスできません。
+
+<a name="additional-information" />
 
 ## 追加情報
 

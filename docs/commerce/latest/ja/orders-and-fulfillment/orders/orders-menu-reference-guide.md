@@ -4,6 +4,8 @@
 
 ![グローバルアプリケーションの注文メニューに移動します。](./orders-menu-reference-guide/images/11.png)
 
+<a name="commerce-21-and-below" />
+
 ## Commerce 2.1以前
 
 **注文** メニューにアクセスするには、［**コントロールパネル**］&rarr; ［**コマース**］ &rarr; ［**注文**］からいきます。
@@ -12,9 +14,13 @@
 
 ![注文メニュー](./orders-menu-reference-guide/images/05.png)
 
+<a name="all" />
+
 ## All
 
 **全て** のタブには、注文状況に関係なくすべての注文が表示されます。
+
+<a name="open" />
 
 ## Open
 
@@ -32,6 +38,8 @@
 | 日付を作成します | 注文が作成された日付が表示されます。              |
 | 注文のステータス | これは注文のステータスです。                  |
 
+<a name="pending" />
+
 ## Pending
 
 **保留中** タブには、チェックアウトプロセスを完了したすべての注文が表示されます。
@@ -46,6 +54,8 @@
 | 注文のステータス       | これは注文のステータスです。                                                                                     |
 | 承認ワークフローのステータス | これにより、注文 [購入者の承認ワークフロー](../order-workflows/enabling-or-disabling-order-workflows.md) ステータスが表示されます。 |
 
+<a name="processing" />
+
 ## 処理中
 
 注文を **保留** から **処理** に進めるには、［**注文を受け入れる**］ボタンをクリックします。
@@ -56,11 +66,15 @@
 
 ![［注文］メニュー-［保留中］タブ](./orders-menu-reference-guide/images/09.png)
 
+<a name="completed" />
+
 ## Completed
 
 [配送が確認された場合](../shipments/introduction-to-shipments.md)、注文は **完了** タブに移動します。
 
 ![［注文］メニュー-［保留中］タブ](./orders-menu-reference-guide/images/08.png)
+
+<a name="liferay-commerce-20-and-below" />
 
 ## Liferay Commerce 2.0以下
 
@@ -95,6 +109,8 @@
 このタブでは、注文アクティビティは販売者側のみで行われます。 売り手は、 **保留中の** 注文を、 [注文ステータス](./processing-an-order.md#commerce-20-and-below) を（手動または自動で）" **To Transmit** "ステータスから他の注文ステータスに変更することで送信します。 この時点で、注文は［**送信済み**］タブに移動し、設定されている場合は、MicrosoftのDynamics GP、OracleのNetSuite、SAPなどの外部システムに送信されます。 その後、販売者は、購入者への注文された商品の配送を進めることができます。 追加情報はまた、更新されたように、順に添加することができる [注文状況](./order-management-statuses-reference-guide.md)、 [出荷情報](../shipments/introduction-to-shipments.md) と推定された到着時間。
 
 ![［送信済み］タブ](./orders-menu-reference-guide/images/04.png "［送信済み］タブ")
+
+<a name="additional-information" />
 
 ## 追加情報
 

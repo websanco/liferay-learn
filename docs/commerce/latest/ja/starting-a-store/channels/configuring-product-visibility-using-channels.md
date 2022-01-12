@@ -8,11 +8,15 @@
 
 Liferay Commerceでのチャネルの使用の詳細は、 [チャネルについて](./introduction-to-channels.md) を参照してください。
 
+<a name="prerequisites" />
+
 ## 前提条件
 
 1. 1つ以上のサイトが作成されました。
 1. 各サイトにチャネルが関連付けられている。
 1. 商品がカタログに追加されている。
+
+<a name="configuring-product-filter-channels" />
 
 ## 商品フィルターチャネルの構成
 
@@ -27,6 +31,8 @@ Liferay Commerceでのチャネルの使用の詳細は、 [チャネルにつ�
 1. ［**追加**］をクリックします。
 
 これで、チャネルが商品に関連付けられました。
+
+<a name="commerce-21-and-below" />
 
 ## Commerce 2.1以前
 
@@ -60,6 +66,8 @@ Liferay Commerceでのチャネルの使用の詳細は、 [チャネルにつ�
 1. ［**保存**］ をクリックします。
 
 商品は、選択したチャネルでのみ表示されます。
+
+<a name="additional-information" />
 
 ## 追加情報
 

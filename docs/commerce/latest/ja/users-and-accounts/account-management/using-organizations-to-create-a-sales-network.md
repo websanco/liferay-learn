@@ -10,6 +10,8 @@ For example, a B2B company can give everyone in their sales network access to th
 
 組織はユーザー管理を簡単にします。 組織内のユーザーが再割り当てされるか、別の組織に転送されると、ユーザーの役割と権限は、新しい組織のメンバーシップに基づいて自動的に更新されます。 販売ネットワークの場合、これは顧客アカウントへの合理化された安全なアクセス管理を意味します。
 
+<a name="mirror-real-world-organizational-hierarchies" />
+
 ## 現実世界の組織階層のミラーリング
 
 
@@ -17,6 +19,8 @@ For example, a B2B company can give everyone in their sales network access to th
 ![Image 01](./using-organizations-to-create-a-sales-network/images/01.png) -->
 
 現実の世界とまったく同じように販売ネットワークとアカウントを編成すると、販売チームのメンバーがLiferay Commerce内を簡単に移動できます。 組織の作成と構造化の詳細は、 [こちら](https://learn.liferay.com/dxp/latest/ja/users-and-permissions/organizations/creating-and-managing-organizations.html) を参照してください。
+
+<a name="define-account-management-and-access-with-organization-roles-and-permissions" />
 
 ## 組織の役割と権限でアカウント管理とアクセスを定義する
 
@@ -28,6 +32,8 @@ For example, a B2B company can give everyone in their sales network access to th
 
 ![各役割には、その役割に定義された権限を持たせることができます。](./using-organizations-to-create-a-sales-network/images/03.png)
 
+<a name="manage-long-term-access-with-organizational-membership" />
+
 ## 組織のメンバーシップで長期アクセスを管理する
 
 役割と権限の長期的な管理は、Liferay Commerce内で（組織、役割、権限がセットアップされ、割り当てられると）ユーザーの組織メンバーシップを更新することで簡単に実行できます。
@@ -38,6 +44,8 @@ For example, a B2B company can give everyone in their sales network access to th
 <!--
 (Double/Dual-Screenshot: Show User's permissions before the move and after the move)
 -->
+
+<a name="additional-information" />
 
 ## 追加情報
 

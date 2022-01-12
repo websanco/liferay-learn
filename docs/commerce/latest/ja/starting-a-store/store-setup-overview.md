@@ -1,8 +1,12 @@
 # ストア設定の概要
 
+<a name="introduction" />
+
 ## はじめに
 
 この記事は、Liferay Commerceでストアを構築するのが初めてのユーザー向けにウォークスルーを提供することを目的としています。 Liferay Commerce（およびLiferay DXP）が適切にインストールされ、設定されていることを前提としています。 インストールの詳細は、[インストールの概要](../../installation-and-upgrades/installation-overview.md)を参照してください。
+
+<a name="road-map" />
 
 ## ロードマップ
 
@@ -10,6 +14,8 @@
 * [ストアフロントの作成](#creating-the-storefront)
 * [顧客アカウントの管理](#managing-customer-accounts)
 * [注文と出荷の管理](#managing-orders-and-shipments)
+
+<a name="store-setup" />
 
 ## ストア設定
 
@@ -66,6 +72,8 @@ Liferay Commerceには、送料を計算するためのいくつかのオプシ�
 * [一律料金](../store-administration/configuring-shipping-methods/using-the-flat-rate-shipping-method.md)
 * [FedExを運送業者として使用する](../store-administration/configuring-shipping-methods/using-the-fedex-shipping-method.md)
 
+<a name="creating-the-catalog" />
+
 ## カタログの作成
 
 ストアをセットアップした後、[新しいカタログの作成](../managing-a-catalog/catalogs/creating-a-new-catalog.md) を開始します。
@@ -98,11 +106,15 @@ Liferay Commerceカタログは、さまざまな商品情報の保存と管理�
 
 * [在庫管理の概要](../managing-a-catalog/managing-inventory/introduction-to-managing-inventory.md)
 
+<a name="creating-the-storefront" />
+
 ## ストアフロントの作成
 
 Liferay Commerceでストアを構築するには、完全なカタログが1つ以上必要です。 ストアフロントをゼロから構築するストア管理者は、商品を表示および販売するための一連のページを追加する必要があります。
 
 詳細は、 [ストアフロントの作成](../creating-store-content/creating-your-storefront.md) を参照してください。
+
+<a name="managing-customer-accounts" />
 
 ## 顧客アカウントの管理
 
@@ -114,6 +126,8 @@ Liferay Commerceでストアを構築するには、完全なカタログが1つ
 * [アカウントへのアドレスの追加](../users-and-accounts/account-management/adding-addresses-to-an-account.md)
 * [アカウントロール](../users-and-accounts/account-management/account-roles.md)
 * [新規アカウントグループの作成](../users-and-accounts/account-management/creating-a-new-account-group.md)
+
+<a name="managing-orders-and-shipments" />
 
 ## 注文と出荷の管理
 

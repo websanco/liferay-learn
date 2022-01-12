@@ -18,6 +18,8 @@ PayPalを使用するようにストアを設定する前に、PayPalクライ�
 
 PayPalがストアで有効になりました。
 
+<a name="additional-information" />
+
 ## 追加情報
 
 他の支払い方法の追加に関する詳細は次のとおりです。

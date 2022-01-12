@@ -16,6 +16,8 @@
 
 上の画像では、2つの関連商品が下部の［商品パブリッシャー］ウィジェットに表示されています。 他のタイプの商品関係で設定された［商品パブリッシャー］ウィジェットをさらに追加するオプションがあります。
 
+<a name="adding-a-new-product-relation-type" />
+
 ## 新しい商品関係タイプの追加
 
 必要に応じて、商品関係タイプをさらに追加できます。 これには、保証などの無形商品が含まれます。 新しい商品関係を追加するには：
@@ -30,6 +32,8 @@
     ![新しい商品関係の作成](./related-products-up-sells-and-cross-sells/images/01.png)
 
 新しい商品関係タイプが追加されました。
+
+<a name="creating-relationships-between-products" />
 
 ## 商品間の関係の作成
 
@@ -48,6 +52,8 @@
 これらの2つの商品が **Brake Pads** に関連付けられました。 この関係は単方向であることに注意してください。 つまり、 **Brake Pads** を表示すると、新しい商品関係が表示されますが、 **Brake Rotors** または **Brake Fluid** の商品を表示すると、 **Brake Pads** は関連商品としてリストされ **ません** 。
 
 商品関係を作成したら、［Product Publisher］ウィジェットを設定して関係を表示します。
+
+<a name="displaying-product-relations" />
 
 ## 商品関係の表示
 
@@ -69,6 +75,8 @@
     ![商品関係：ブレーキローターとブレーキ液](./related-products-up-sells-and-cross-sells/images/05.png)
 
 上記の例は、さまざまな商品がどのように関連しているかを示しており、お客様は、有用な可能性のある全範囲商品を確認できます。
+
+<a name="commerce-21-and-below" />
 
 ## Commerce 2.1以前
 

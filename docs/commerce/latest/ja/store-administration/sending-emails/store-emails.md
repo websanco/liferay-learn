@@ -6,11 +6,15 @@ Liferay Commerceは、さまざまな店舗イベントによってトリガー�
    Liferay Commerceの通知機能を使用するには、最初にLiferay Digital Experience Platform（DXP）のメール設定を構成します。 詳細は、 [メールサーバーへの接続](https://learn.liferay.com/dxp/latest/ja/installation-and-upgrades/setting-up-liferay/configuring-mail/connecting-to-a-mail-server.html) を参照してください。
 ```
 
+<a name="configuring-store-email-notifications" />
+
 ## ストアメール通知の構成
 
 Liferay Commerceのメール設定が構成されたら、 ［**コントロールパネル**］ &rarr; ［**コマース**］ &rarr; ［**チャネル**］ に移動して、ストアのメール通知設定を作成します。 メール通知は [チャネル](../../starting-a-store/channels/introduction-to-channels.md)ごとに構成されます。 使用 [加速器](../../starting-a-store/accelerators.md) あなたが開始するための店、カタログ、およびチャネルを作成します。
 
 ![利用可能な通知テンプレート](./store-emails/images/02.png)
+
+<a name="event-triggers" />
 
 ## イベントトリガー
 
@@ -31,6 +35,8 @@ Liferay Commerceのメール設定が構成されたら、 ［**コントロー�
 
 ![利用可能な通知テンプレート](./store-emails/images/01.png)
 
+<a name="viewing-the-notification-queue" />
+
 ## 通知キューの表示
 
 チャネルの **通知キュー** ですべてのメール通知を表示できます。 ここでは、イベントによってトリガーされたメールのステータスを確認できます。
@@ -38,6 +44,8 @@ Liferay Commerceのメール設定が構成されたら、 ［**コントロー�
 ![メッセージキュー](./store-emails/images/03.png)
 
 デフォルトでは、システムは未送信の通知がないか15分間隔で通知キューをチェックします。 チェック間隔の変更の詳細は、 [コマース通知キュー](./configuring-the-commerce-notification-queue.md) 設定の記事を参照してください。
+
+<a name="customizing-an-email-notification-template" />
 
 ## メール通知テンプレートのカスタマイズ
 
@@ -55,11 +63,15 @@ Liferay Commerceのメール設定が構成されたら、 ［**コントロー�
 
 詳細は、 [通知テンプレート変数リファレンスガイド](./notification-template-variables-reference-guide.md) 記事を参照してください。
 
+<a name="viewing-order-communications-history" />
+
 ## 注文通信履歴の表示
 
 注文に関連するメール通知は追跡され、注文を表示するときに［**Emails**］タブで確認できます。 ［**コントロールパネル**］ → ［**コマース**］ → ［**注文**］ に移動します。 注文IDをクリックし、次に［**Email**］タブをクリックします。 詳細は、 [注文情報](../../orders-and-fulfillment/orders/order-information.md) を参照してください。
 
 ![メッセージログは注文情報にあります。](./store-emails/images/04.png)
+
+<a name="additional-information" />
 
 ## 追加情報
 

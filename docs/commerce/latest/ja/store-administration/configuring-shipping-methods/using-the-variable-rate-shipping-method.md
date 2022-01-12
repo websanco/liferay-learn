@@ -8,6 +8,8 @@
 
 `配送料= ［固定価格］ +（［注文の合計重量］ * ［レート単位の重量価格］）*（［注文の小計］ x ［レートのパーセンテージ］）`
 
+<a name="activating-the-variable-rate-shipping-method" />
+
 ## 変動料金配送方法のアクティブ化
 
 変動料金配送方法を有効にするには：
@@ -25,6 +27,8 @@
 1. **有効** トグルを **はい** に切り替えます。
 
 可変レートの配送方法がアクティブになりました。
+
+<a name="adding-a-variable-rate-shipping-option" />
 
 ## 変動料金配送オプションの追加
 
@@ -49,6 +53,8 @@
 
 新しい配送オプションが作成されました。 この配送オプションの設定を完了するには、変動送料を適用します。
 
+<a name="configuring-variable-shipping-costs" />
+
 ## 変動送料の設定
 
 1. ［**配送オプション設定**］ タブをクリックします。
@@ -72,6 +78,8 @@
 
 1. ［**保存**］ をクリックします。
 1. ［配送オプション設定の編集］ウィンドウを閉じます。
+
+<a name="commerce-20-and-below" />
 
 ## Commerce 2.0以前
 
@@ -126,6 +134,8 @@
       ![2 Day Ground設定](./using-the-variable-rate-shipping-method/images/02.png)
 
 1. ［**保存**］ をクリックします。
+
+<a name="additional-information" />
 
 ## 追加情報
 

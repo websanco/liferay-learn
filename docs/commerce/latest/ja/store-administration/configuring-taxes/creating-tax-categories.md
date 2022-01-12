@@ -20,6 +20,8 @@ Liferay Commerceは、税カテゴリーを使用して、チャネル商品と�
 
 作成したら、各チャネルの税カテゴリーに税率を追加できます。 詳細は、 [税計算のためのレート設定](./setting-rates-for-tax-calculations.md) を参照してください。
 
+<a name="commerce-21-and-below" />
+
 ## Commerce 2.1以前
 
 1. ［**コントロールパネル**］ → ［**コマース**］ → ［**設定**］ に移動します。
@@ -39,6 +41,8 @@ Liferay Commerceは、税カテゴリーを使用して、チャネル商品と�
 
 新しい税カテゴリが作成されました。
 
+<a name="commerce-20-and-below" />
+
 ## Commerce 2.0以前
 
 新しい税カテゴリを作成するには：
@@ -54,6 +58,8 @@ Liferay Commerceは、税カテゴリーを使用して、チャネル商品と�
 1. ［**保存**］ をクリックします。
 
 税カテゴリがストアで使用できるようになりました。
+
+<a name="additional-information" />
 
 ## 追加情報
 

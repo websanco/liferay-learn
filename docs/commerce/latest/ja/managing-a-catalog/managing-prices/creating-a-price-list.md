@@ -26,6 +26,8 @@
 
 ![新しく作成した価格表の設定をする。](./creating-a-price-list/images/02.png)
 
+<a name="commerce-21-and-below" />
+
 ## Commerce 2.1以前
 
 価格表を追加するには：
@@ -54,6 +56,8 @@
 1. ［**公開**］をクリックします。
 
 価格表（この例では **VIP Customers**）が作成され、選択したアカウントグループとアカウントに適用されました。 必要に応じて、手順を繰り返して他の価格表を作成します。
+
+<a name="additional-information" />
 
 ## 追加情報
 

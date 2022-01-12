@@ -2,6 +2,8 @@
 
 シップメントの作成は[［**注文**］ メニュー](../orders/orders-menu-reference-guide.md)と統合されています。 注文が[**処理** 段階](../orders/processing-an-order.md)になったら、［**発送**］メニューで[すべての発送を管理](./introduction-to-shipments.md)することもできます。
 
+<a name="creating-a-new-shipment" />
+
 ## 新規出荷の作成
 
 新しい発送を作成するには：
@@ -42,6 +44,8 @@
     ![注文メニュー](./creating-a-shipment/images/09.png)
 
 1. 準備ができたら **発送** クリックし ます。
+
+<a name="creating-a-new-shipment-on-liferay-commerce-20-and-below" />
 
 ## Liferay Commerce 2.0以前での新規出荷の作成
 
@@ -86,6 +90,8 @@ Liferay Commerceの以前のバージョンで発送を作成するには：
 オーダーマネージャーは、注文が完了するまで、必要に応じて発送のステータスを更新できます。
 
 ![発送商品](./creating-a-shipment/images/06.png)
+
+<a name="additional-information" />
 
 ## 追加情報
 

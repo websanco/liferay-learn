@@ -4,6 +4,8 @@
 
 この記事では、 [アクセラレータ](../starting-a-store/accelerators.md)を使用せずにカタログページを作成する方法の例を説明します。
 
+<a name="prerequisites" />
+
 ## 前提条件
 
 サイトやページの作成については、以下のリンクを参照してください：
@@ -13,10 +15,14 @@
 * [ナビゲーションメニューの作成と管理](https://help.liferay.com/hc/en-us/articles/360018171531-Creating-and-Managing-Navigation-Menus)
 * [アプリケーション表示テンプレートの使用](https://help.liferay.com/hc/en-us/articles/360017892632-Styling-Widgets-with-Application-Display-Templates)
 
+<a name="add-and-configure-the-page" />
+
 ## ページの追加と設定
 
 1. **ウィジェット** のテンプレートを使ってページを作成します。
 1. **30-70カラム** レイアウトがデフォルトの選択です。 このレイアウトでは、検索を絞り込むウィジェットの左側の列が狭くなり、［**検索結果**］ ウィジェットの右側の列が広くなります。 ストアデザイナーは、さまざまなスタイルに合わせてさまざまなレイアウトを選択できます。
+
+<a name="add-the-widgets-to-the-page" />
 
 ## ウィジェットをページに追加する
 
@@ -26,6 +32,8 @@
 ウィジェットを含むページを作成および構成すると、基本的なカタログページは次のようになります。
 
 ![空白のカタログページ](./creating-a-catalog-page/images/02.png)
+
+<a name="configure-the-search-bar-widget" />
 
 ## ［**検索バー**］ ウィジェットを構成する
 
@@ -42,6 +50,8 @@
 1. ［**保存**］ をクリックします。
 
 これで **検索バー** ウィジェットは、すべてのチャネルのコンテンツを表示するように設定されました。
+
+<a name="displaying-the-full-catalog-without-a-search-optional" />
 
 ## 検索せずにフルカタログを表示する（オプショナル）
 

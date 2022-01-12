@@ -12,6 +12,8 @@
    また、検索オプションウィジェットは、*空の検索を許可する*に設定されています。 これにより、お客様はチャネルに表示されているすべてのコンテンツを閲覧し、絞り込むことができます。
 ```
 
+<a name="additional-information" />
+
 ## 追加情報
 
 * [Widget Reference Guide](../liferay-commerce-widgets/widget-reference.md)

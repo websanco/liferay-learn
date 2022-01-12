@@ -16,6 +16,8 @@
 
 [注文ワークフロー](../../orders-and-fulfillment/order-workflows/introduction-to-order-workflows.md)が有効になっている場合、上記の手順は若干異なる場合があります。
 
+<a name="additional-information" />
+
 ## 追加情報
 
 * [Widget Reference Guide](../liferay-commerce-widgets/widget-reference.md)

@@ -6,11 +6,15 @@
 
 ![すぐに使える支払方法](./implementing-a-new-payment-method/images/01.png "すぐに使える支払方法")
 
+<a name="overview" />
+
 ## 概要
 
 1. [**サンプルをデプロイする**](#deploy-an-example)
 1. [**例の説明**](#walk-through-the-example)
 1. [**追加情報**](#additional-information)
+
+<a name="deploy-an-example" />
 
 ## サンプルをデプロイする
 
@@ -59,6 +63,8 @@
 これで、`CommercePaymentMethod`を実装する新しい支払方法を正常に構築およびデプロイできました。
 
 次に、詳細をさらに詳しく見ていきましょう。
+
+<a name="walk-through-the-example" />
 
 ## 例の説明
 
@@ -185,9 +191,13 @@ pay-via-b1c3-commerce-payment-method=Pay via B1C3 commerce payment method.
 
 > 詳細は、 [アプリケーションのローカライズ](https://help.liferay.com/hc/en-us/articles/360018168251-Localizing-Your-Application) を参照してください。
 
+<a name="conclusion" />
+
 ## まとめ
 
 　 `CommercePaymentMethod`インターフェイスを実装するための基本を理解し、Liferay Commerceに新しい支払方法を追加しました。
+
+<a name="additional-information" />
 
 ## 追加情報
 

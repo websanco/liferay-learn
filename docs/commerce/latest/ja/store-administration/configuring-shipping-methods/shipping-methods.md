@@ -12,6 +12,8 @@ Liferay Commerceは、いくつかの配送方法と運送業者をサポート�
 
 配送方法は、国または地域によって制限される場合があります。 詳細は、[配送方法の制限の適用](./applying-shipping-method-restrictions.md)を参照してください。
 
+<a name="additional-information" />
+
 ## 追加情報
 
 * [発想の概要](../../orders-and-fulfillment/shipments/introduction-to-shipments.md)

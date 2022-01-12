@@ -6,11 +6,15 @@
 
 ![すぐに使える商品タイプ](./adding-a-new-product-type/images/01.png "すぐに使える商品タイプ")
 
+<a name="overview" />
+
 ## 概要
 
 1. [**サンプルをデプロイする**](#deploy-an-example)
 1. [**例の説明**](#walk-through-the-example)
 1. [**追加情報**](#additional-information)
+
+<a name="deploy-an-example" />
 
 ## サンプルをデプロイする
 
@@ -59,6 +63,8 @@
 これで、`CPType`を実装する新しい商品タイプのビルドとデプロイが完了しました。
 
 次に、詳細をさらに詳しく見ていきましょう。
+
+<a name="walk-through-the-example" />
 
 ## 例の説明
 
@@ -267,9 +273,13 @@ c1n4-screen-navigation-entry=C1N4 Screen Navigation Entry
 
 > 詳細は、 [アプリケーションのローカライズ](https://help.liferay.com/hc/en-us/articles/360018168251-Localizing-Your-Application) を参照してください。
 
+<a name="conclusion" />
+
 ## まとめ
 
 　 これで、 `CPType`インターフェイスを実装するための基本を理解し、Liferay Commerceに新しい商品タイプとその独自のカスタム画面を追加しました。
+
+<a name="additional-information" />
 
 ## 追加情報
 

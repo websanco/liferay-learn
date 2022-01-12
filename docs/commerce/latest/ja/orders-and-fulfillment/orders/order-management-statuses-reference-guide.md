@@ -8,6 +8,8 @@ Liferay Commerceのすべての注文には、 [注文情報](./order-informatio
 
 ![注文管理ステータス](./order-management-statuses-reference-guide/images/01.png)
 
+<a name="order-status" />
+
 ## 注文のステータス
 
 **注文ステータス** は [注文ライフサイクル](./order-life-cycle.md)どこにあるかに関する情報を提供します。 各注文状況は、以下の [**注文** メニュー](./orders-menu-reference-guide.md) タブのいずれかに表示されます。 [**オープン**](./orders-menu-reference-guide.md#open) 、 [**保留**](./orders-menu-reference-guide.md#pending) 、または [**送信済み**](./orders-menu-reference-guide.md#transmitted) となります。
@@ -54,6 +56,8 @@ Liferay Commerceのすべての注文には、 [注文情報](./order-informatio
 | 却下済      | 注文は [出荷済み](../shipments/introduction-to-shipments.md)でしたが、バイヤーはそれを受け取ることを拒否しました。                                                               |
 | 係争中      | 購入者が、支払い取引の紛争解決を開始しました（PayPalなどで）。                                                                                                             |
 
+<a name="payment-status" />
+
 ## 支払い状況
 
 **支払いステータス** は、 [注文に対して支払いが行われ、受け取られたかどうかに関する情報を提供します](./processing-an-order.md)。 [［**注文**］ メニュー](./orders-menu-reference-guide.md)の ［**保留中**］ および ［**送信済み**］ タブでは、 ［**認証済み**］ 、 ［**支払済み**］ 、および ［**保留中**］ の3つの支払いステータスが使用可能です。 （［**オープン**］ タブでは、注文の支払いステータスは常に ［**保留中**］ です。 ）
@@ -65,6 +69,8 @@ Liferay Commerceのすべての注文には、 [注文情報](./order-informatio
 | 承認済み  | 支払いは関係する金融機関によって承認されており、販売者の口座に入金するためのステップが取られます。 （これは、PayPal、クレジットカード、デビットカードなどのオンラインの支払い方法の場合が考えられます。）                                                                                       |
 | 支払済み  | [注文](./processing-an-order.md) の支払いが販売者に支払われました。                                                                                                                                               |
 | 保留中   | [注文](./processing-an-order.md) の支払いが受領または承認されていません。 （これは、支払いがまだ受領または確認されていない場合、または支払いステータスが更新されていない場合に、郵便為替や発注書などのオフラインの支払い方法の場合が考えられます。 また、購入者が支払いプロセスを停止した場合は、PayPalなどのオンラインの支払い方法の場合もあります。） |
+
+<a name="workflow-status" />
 
 ## ワークフローステータス
 
@@ -92,6 +98,8 @@ Liferay Commerceのすべての注文には、 [注文情報](./order-informatio
 | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | 保留中         | 順序が置かれているが、それはまだされていない [承認された](../order-workflows/approving-or-rejecting-orders-in-order-workflows.md) 販売者。                                                                                                  |
 | 承認済         | 順序が見直されており、 [承認された](../order-workflows/approving-or-rejecting-orders-in-order-workflows.md) 販売者、および順序が今することができる [送信](./processing-an-order.md#commerce-20-and-below) 。 （注：このワークフローステータスは、 ［**送信済み**］ タブにも表示されます。） |
+
+<a name="additional-information" />
 
 ## 追加情報
 

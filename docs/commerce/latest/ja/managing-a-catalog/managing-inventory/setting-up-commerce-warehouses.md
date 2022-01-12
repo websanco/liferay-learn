@@ -8,6 +8,8 @@ Commerce倉庫は、商品の在庫が保管されている物理的な場所を
    Commerce倉庫を設定するとき、ユーザーは最初に倉庫の該当する国および地域の場所（州または県）を有効にする必要がある場合があります。 詳細は、 [リージョンの追加](../../store-administration/adding-regions.md) を参照してください。
 ```
 
+<a name="adding-a-warehouse" />
+
 ## 倉庫の追加
 
 次の手順に従って、新しい倉庫を追加します：
@@ -36,6 +38,8 @@ Commerce倉庫は、商品の在庫が保管されている物理的な場所を
 
 倉庫を有効にすると、 倉庫に[［商品在庫を追加する］](./setting-inventory-by-warehouse.md)ことができます。
 
+<a name="using-bing-geocoder-to-set-a-warehouses-geolocation" />
+
 ## Bingジオコーダを使用して倉庫の位置情報を設定する
 
 Commerceでは、Bing Maps APIとの連携により、倉庫の位置情報を自動的に生成します。 この機能を利用するには、 [［Bing Maps アカウント］](https://docs.microsoft.com/en-us/bingmaps/getting-started/bing-maps-dev-center-help/creating-a-bing-maps-account) と [［Bing Maps Key］](https://docs.microsoft.com/en-us/bingmaps/getting-started/bing-maps-dev-center-help/getting-a-bing-maps-key) が必要です。
@@ -53,6 +57,8 @@ Commerceでは、Bing Maps APIとの連携により、倉庫の位置情報を�
 ジオコーダを設定すると、住所が設定されている倉庫に対して倉庫の位置情報を生成することができます。 倉庫のページに移動し、目的の倉庫の ［**アクション**］ ボタン（![Actions Button](../../images/icon-actions.png)）をクリックし、 ［**ジオロケーション**］ を選択します。 ジオコーダは、住所を緯度と経度の座標に変換します。
 
 ![ジオロケーションを選択します](./setting-up-commerce-warehouses/images/03.png)
+
+<a name="commerce-21-and-below" />
 
 ## Commerce 2.1以前
 
@@ -76,6 +82,8 @@ Commerceでは、Bing Maps APIとの連携により、倉庫の位置情報を�
 1. 完了したら、［**保存**］をクリックします。
 
 新しい倉庫がアクティブになり、［**Shipment**］タブでオプションとして利用可能になりました。
+
+<a name="additional-information" />
 
 ## 追加情報
 

@@ -2,11 +2,15 @@
 
 この記事では、Mercanetを支払い方法として有効にする方法について詳しく説明します。 Mercanetは **EURのみ** 対応しているため、ストアの主要通貨がEURでなければなりません。
 
+<a name="mercanet-guide" />
+
 ## Mercanetガイド
 
 1. [前提条件を確認します。](#prerequisites)
 1. [EURをストアの主要通貨として設定します。](#set-eur-as-the-primary-store-currency)
 1. [支払い方法としてMercanetを有効にします。](#activate-mercanet-as-a-payment-method)
+
+<a name="prerequisites" />
 
 ## 前提条件
 
@@ -15,6 +19,8 @@
 1. Mercanetの販売者ID
 1. 秘密鍵
 1. 鍵バージョン
+
+<a name="set-eur-as-the-primary-store-currency" />
 
 ## EURをストアの主要通貨として設定する
 
@@ -28,6 +34,8 @@ Mercanetを使用する場合、ストアではユーロを主要通貨として
 **ユーロ** が主要通貨として設定されました。
 
 ![主要通貨を設定](./mercanet/images/01.png)
+
+<a name="activate-mercanet-as-a-payment-method" />
 
 ## 支払い方法としてMercanetを有効にする
 
@@ -44,6 +52,8 @@ Mercanetを使用する場合、ストアではユーロを主要通貨として
 1. ［**Mercanet**］ の隣にある **3ドットアイコン** をクリックし、次に ［**有効にする**］ をクリックします。
 
 Mercanetがストアで有効になりました。
+
+<a name="additional-information" />
 
 ## 追加情報
 

@@ -2,6 +2,8 @@
 
 Liferay DXP/Portal 7.3から、CommerceはすべてのLiferayバンドルとDockerコンテナに同梱されているため、別途インストールする必要はありません。 ただし、Commerceにアクセスして使用するには、お使いのDXPのバージョンによって手順が異なります。 Liferay DXP 7.4 GA1では、すべてのCommerceモジュールがデフォルトで有効になっており、すぐに使用できます。 DXP 7.3 FP3/SP2では、Commerceは [portal property](https://learn.liferay.com/dxp/latest/ja/installation-and-upgrades/reference/portal-properties.html) を使用して有効化されますが、それ以前のバージョンではCommerceライセンスファイルが使用されます。
 
+<a name="disabling-liferay-commerce-enterprise-for-liferay-dxp-74-ga1" />
+
 ## Liferay DXP 7.4 GA1のLiferay Commerce Enterpriseの無効化について
 
 > Liferay DXPおよびCommerceのサブスクリプションが必要
@@ -44,6 +46,8 @@ LIFERAY_ENTERPRISE_PERIOD_PRODUCT_PERIOD_COMMERCE_PERIOD_ENABLED=false
 
 正しく行われると、グローバルメニューにCommerceモジュールが表示されなくなります（![Global Menu](../images/icon-applications-menu.png)）。
 
+<a name="activating-liferay-commerce-enterprise-for-liferay-dxp-73-fp3sp3" />
+
 ## Liferay DXP 7.3 FP3/SP3+用のLiferay Commerce Enterpriseの有効化
 
 > Liferay DXPおよびCommerceのサブスクリプションが必要
@@ -81,6 +85,8 @@ LIFERAY_ENTERPRISE_PERIOD_PRODUCT_PERIOD_COMMERCE_PERIOD_ENABLED=true
 ### アクティベーションの成功の確認
 
 プロパティが正常に追加されたことを確認するためには、Liferay DXPを開き、 ［**グローバルメニュー**］ (![Global Menu](../images/icon-applications-menu.png)) をクリックします。 正常に追加されていると、［**Commerce**］ タブでCommerceモジュールを表示し、アクセスすることができます。 または、 ［**グローバルメニュー**］を開いて［**コントロールパネル**］&rarr;［**サーバー管理**］&rarr; ［**プロパティ**］ &rarr; **ポータルプロパティ** にアクセスできます。 新規プロパティは、他のプロパティと一緒にリストアップされているはずです。
+
+<a name="activating-liferay-commerce-enterprise-for-liferay-dxp-71-73-fp2" />
 
 ## Liferay DXP 7.1-7.3 FP2用のLiferay Commerce Enterpriseの有効化
 
@@ -174,6 +180,8 @@ Liferay Commerce Enterpriseを再起動するには、まずサーバーから�
 #### DXPクラウドプロジェクトでのLiferayサービスの更新
 
 DXPクラウドチームがDXPとCommerceの両方のライセンスを管理しているため、ユーザーが自分で更新する必要はありません。
+
+<a name="additional-information" />
 
 ## 追加情報
 

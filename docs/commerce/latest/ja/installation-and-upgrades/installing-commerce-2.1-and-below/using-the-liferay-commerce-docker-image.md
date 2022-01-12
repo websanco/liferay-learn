@@ -24,6 +24,8 @@ Liferay Commerceの最新バージョンは、Dockerイメージとして利用�
 
 1. ブラウザで`https://localhost:8080`を開きます。
 
+<a name="whats-next" />
+
 ## 次のステップ
 
 状況をチェックする以上のことをしますか？ [インストールの概要](../installation-overview.md)で詳細をご覧ください。

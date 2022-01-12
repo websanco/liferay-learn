@@ -12,6 +12,8 @@ Liferay Commerceの支払い方法は、[チャネル](../../starting-a-store/ch
 
 選択した支払い方法がアクティブになったら、値で支払い方法を構成します。
 
+<a name="configuring-a-payment-method" />
+
 ## 支払方法の設定
 
 ![支払方法の設定](./managing-payment-methods/images/05.png)
@@ -38,6 +40,8 @@ Liferay Commerceの支払い方法は、[チャネル](../../starting-a-store/ch
 * [Mercanet](./mercanet.md)
 * [郵便為替](./money-orders.md)
 * [PayPal](./paypal.md)
+
+<a name="commerce-20-and-below" />
 
 ## Commerce 2.0以前
 

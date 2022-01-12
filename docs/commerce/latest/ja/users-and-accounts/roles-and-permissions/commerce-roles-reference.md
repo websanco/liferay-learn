@@ -10,6 +10,8 @@ Commerceには [すぐに使えるロール](#out-of-the-box-roles) が４つ含
 Liferay 7.3.xおよびそれ以前のCommerceバージョンでは、 [Sales Agent](#sales-agent) もすぐに使用できるロールとして含まれています。
 ```
 
+<a name="viewing-permissions" />
+
 ## 表示の権限
 
 以下の手順で、Commerceロールに関連する権限を表示および管理します：
@@ -36,6 +38,8 @@ Liferay 7.3.xおよびそれ以前のCommerceバージョンでは、 [Sales Age
    権限を削除または追加することもできます。
 
    ![ [権限の定義]タブをクリックして、ロールの権限を表示および管理します。](./commerce-roles-reference/images/02.png)
+
+<a name="out-of-the-box-roles" />
 
 ## すぐに使えるロール
 
@@ -108,6 +112,8 @@ Liferay 7.3.xおよびそれ以前のCommerceバージョンでは、 [Sales Age
 | カートを開く > Commerce Order: Manage Orders         | 郵送先住所や請求先住所などの注文内容を変更する機能、および注文にメモを追加する機能 |
 | カートを開く > Commerce Order: View Open Orders      | すべての未処理注文を表示する機能                          |
 | カートを開く > Commerce Order: View Orders           | ステータスに関係なく注文を表示する機能                       |
+
+<a name="custom-roles" />
 
 ## カスタムロール
 
@@ -218,6 +224,8 @@ Liferay 7.3.xおよびそれ以前のCommerceバージョンでは、 [Sales Age
 | Shipments: View                                         | 出荷アプリケーションを表示する機能              |
 | Shipments > Commerce Warehouse: View                    | 倉庫エンティティを表示する機能                |
 
+<a name="liferay-73-and-earlier" />
+
 ## Liferay 7.3以前
 
 ### Sales Agent
@@ -232,6 +240,8 @@ Sales AgentはLiferay Commerceの通常のロールであり、割り当てユ�
 | ------------- | ------------------------------ |
 | 組織を管理         | 組織を追加または削除する機能                 |
 | 利用可能なアカウントを管理 | Sales Agentが加入しているアカウントを管理する機能 |
+
+<a name="additional-information" />
 
 ## 追加情報
 

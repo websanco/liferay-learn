@@ -23,6 +23,8 @@ Liferay Commerce 3.0の設定は、 ［**グローバルアプリケーション
 * [倉庫](../managing-a-catalog/managing-inventory/warehouse-reference-guide.md)
 * [在庫数の見積もり](../managing-a-catalog/managing-inventory/availability-estimates.md)
 
+<a name="liferay-commerce-21-and-below" />
+
 ## Liferay Commerce 2.1以前
 
 Liferay Commerce 2.1の設定は、Liferay ［**商品メニュー**］ のいくつかの場所に分かれています。 Commerceの ［**コントロールパネル**］ ドロップダウンには、Liferay Commerceのインストールに **グローバル** に適用される構成と設定が含まれています。 Commerceの ［**サイトメニュー**］ ドロップダウンには、特定のストアサイトを対象とする構成と設定が含まれています。

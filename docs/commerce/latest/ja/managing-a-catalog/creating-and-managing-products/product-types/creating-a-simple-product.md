@@ -2,6 +2,8 @@
 
 シンプル商品とは、在庫が追跡される物理的な商品です。 商品はストアのカタログに追加され、名前と説明が表示されます。 商品オプションを適用し、SKU、画像、仕様、そしてカテゴリー設定を生成することで、商品をさらに定義することができます。
 
+<a name="create-a-simple-product" />
+
 ## シンプル商品の作成
 
 新しいシンプル商品を追加するには：
@@ -15,13 +17,19 @@
 
 最初の商品エントリが作成されました。 引き続き商品の設定について学習します。
 
+<a name="apply-product-options" />
+
 ## 商品オプションの適用
 
 [商品オプション](../products/using-product-options.md)は、サイズ、数量、色などのさまざまなオプションを持つ商品を提供するための簡単で柔軟な方法を提供します。 ［**オプション**］サブタブをクリックして、商品にさまざまなオプションを追加します。
 
+<a name="generate-skus" />
+
 ## SKUを生成する
 
 商品に商品オプションを適用したら、SKUを生成する必要があります。 SKUの生成方法の詳細は、 [商品バリアントのSKU作成](../products/creating-skus-for-product-variants.md) を参照してください。 ［**SKU**］サブタブをクリックして、SKUを生成します。
+
+<a name="set-prices-and-quantities-in-the-inventory" />
 
 ## 在庫の価格と数量を設定する
 
@@ -44,9 +52,13 @@ SKUが生成されたら、在庫で各アイテムの基本価格と数量を�
 
 商品の在庫を設定する方法については、[倉庫ごとの在庫設定](../../managing-inventory/setting-inventory-by-warehouse.md)を参照してください。
 
+<a name="configure-product-specifications" />
+
 ## 商品の仕様を設定する
 
 [商品仕様](../products/specifications.md)には、寸法、色、重量、容量、またはその他の属性など、商品に関する有用な商品情報が含まれています。 仕様を追加するには、［**仕様**］サブタブをクリックします。
+
+<a name="upload-product-images-and-attachments" />
 
 ## 商品の画像と添付ファイルをアップロードする
 
@@ -54,13 +66,19 @@ SKUが生成されたら、在庫で各アイテムの基本価格と数量を�
 
 ストア管理者は、特定の商品に関連付けられた添付ファイルを追加することもできます。 ドキュメントを追加するには、［**Attachments**］サブタブをクリックします。
 
+<a name="organize-with-categories" />
+
 ## カテゴリによる分類
 
 [商品カテゴリ](../products/creating-a-new-product-category.md)は、商品を整理するために使用されます。 商品カテゴリを使用して、商品のセットに割引やその他のオファーを適用したり、購入者が商品を見つけやすくしたり、特定の商品を特定のアカウントまたはアカウントグループにプロモートしたりできます。
 
+<a name="associate-with-related-products" />
+
 ## 関連商品と関連付ける
 
 [商品関係](../products/related-products-up-sells-and-cross-sells.md)は、商品を結びつけるのに使用できます。 関連付けると、商品には他の商品へのリンクが表示されます。 すべての関連商品を商品関係タイプに割り当てる必要があります。
+
+<a name="commerce-21-and-earlier-versions" />
 
 ## Commerce 2.1およびそれ以前のバージョン
 
@@ -94,6 +112,8 @@ SKUが生成されたら、在庫で各アイテムの基本価格と数量を�
 1. ［**Price List**］をクリックして、この商品を既存の[価格リスト](../../managing-prices/adding-products-to-a-price-list.md)に適用します。
 
 商品の価格とSKUを設定したら、商品オプションや仕様を追加する方法、または商品画像をアップロードする方法について、上記のセクションを参照してください。
+
+<a name="additional-information" />
 
 ## 追加情報
 

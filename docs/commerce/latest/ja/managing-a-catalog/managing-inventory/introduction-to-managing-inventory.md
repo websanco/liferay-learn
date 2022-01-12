@@ -4,6 +4,8 @@ Liferay Commerceは、単一の店先と倉庫を持つユーザーから、複�
 
 在庫管理機能には、在庫の管理、倉庫、入荷見積り、在庫数低下時のアクション、倉庫ごとに在庫を設定する機能など、いくつかの重要な機能があります。
 
+<a name="inventory-management" />
+
 ## 在庫管理
 
 > 可用性：Commerce 2.1以降
@@ -11,6 +13,8 @@ Liferay Commerceは、単一の店先と倉庫を持つユーザーから、複�
 在庫管理システムでは、ユーザーはすべての在庫を一箇所で追跡することができます。 在庫管理では、SKUごとに在庫を追跡します。同じSKUを持つすべてのアイテムは、商品カタログでどのように作成されたかにかかわらず、同じ在庫を共有します。
 
 詳細は、[Using Inventory Management](./using-the-inventory-management-system.md)を参照してください。
+
+<a name="warehouses" />
 
 ## 倉庫
 
@@ -20,11 +24,15 @@ Liferay Commerceは、単一の店先と倉庫を持つユーザーから、複�
 
 ストアが商品の注文を受け付けるには、関連するチャネルに関連付けられた倉庫が必要です。 チャネルの仕組みについては、記事[「Introduction to Channels」](../../starting-a-store/channels/introduction-to-channels.md)を参照してください。
 
+<a name="availability-estimates" />
+
 ## 在庫数の見積もり
 
 ストアの所有者は、在庫切れ商品が再び入荷したときに顧客に通知されるように入荷見積りを設定できます。
 
 詳細は、 [入荷見積り](./availability-estimates.md) を参照してください。
+
+<a name="low-stock-actions" />
 
 ## 在庫数低下時のアクション
 
@@ -32,11 +40,15 @@ Liferay Commerceは、単一の店先と倉庫を持つユーザーから、複�
 
 独自のカスタムの在庫数低下時のアクションの作成に興味のある開発者は、[カスタムの在庫不足アクティビティの実装](../../developer-guide/implementing-a-custom-low-stock-activity.md)を参照してください。
 
+<a name="setting-inventory-by-warehouse" />
+
 ## 倉庫ごとの在庫設定
 
 Liferay Commerceでは、在庫管理は商品SKUごとに行われます。 詳細は、記事[倉庫ごとに在庫を設定する](./setting-inventory-by-warehouse.md)を参照してください。
 
 ![在庫ライフサイクル](./introduction-to-managing-inventory/images/01.png)
+
+<a name="additional-information" />
 
 ## 追加情報
 

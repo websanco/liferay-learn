@@ -18,6 +18,8 @@
 
 各倉庫に、現在販売可能な正しい数量が設定されました。
 
+<a name="transferring-stock-between-warehouses" />
+
 ## 倉庫間での在庫の移動
 
 ストアに複数の [倉庫](./setting-up-commerce-warehouses.md)場合、ユーザーは1つの倉庫から別の倉庫に在庫を転送できます。 在庫はSKUレベルで追跡され、 **在庫** 管理に反映され* 。</p>
@@ -41,6 +43,8 @@
 1. **Submit** クリックし* 。</li> </ol>
 
 各倉庫の在庫数が更新されました。
+
+<a name="commerce-21-and-below" />
 
 ## Commerce 2.1以前
 
@@ -85,6 +89,8 @@
 1. **Submit** クリックし* 。</li> </ol>
 
 各倉庫の在庫数が更新されました。
+
+<a name="additional-information" />
 
 ## 追加情報
 

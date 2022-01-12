@@ -8,6 +8,8 @@ Liferay Commerceでは、グローバルメニュー（![Global Menu](../../imag
 
 ![ [権限の定義]タブで、ユーザーロールの価格権限を管理します。](./pricing-permissions/images/02.png)
 
+<a name="application-permissions" />
+
 ## アプリケーションの権限
 
 アプリケーションの権限は、アプリケーション自体に権限の機能を付与しますが、 [関連するリソース権限](#resource-permissions) は含まれません。
@@ -33,6 +35,8 @@ Liferay Commerceでは、グローバルメニュー（![Global Menu](../../imag
 | 権限の設定           | アプリケーションの権限を表示および変更する機能      |
 | 詳細設定            | アプリケーションプリファレンスを表示および設定する機能  |
 | 表示              | アプリケーションを表示する機能              |
+
+<a name="resource-permissions" />
 
 ## リソース権限
 
@@ -95,6 +99,8 @@ Liferay Commerceでは、グローバルメニュー（![Global Menu](../../imag
 | -------- | ---------------------------------- |
 | 税カテゴリー管理 | 税カテゴリーアプリケーションで税カテゴリーエンティティを管理する機能 |
 | 権限の設定    | 税カテゴリーアプリケーションでリソース権限を表示および変更する機能  |
+
+<a name="additional-information" />
 
 ## 追加情報
 

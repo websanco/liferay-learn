@@ -4,6 +4,8 @@
 
 ![商品の比較](./compare/images/01.png)
 
+<a name="additional-information" />
+
 ## 追加情報
 
 * [Widget Reference Guide](../liferay-commerce-widgets/widget-reference.md)

@@ -6,11 +6,15 @@
 
 ![すぐに使える商品コンテンツレンダラー](./implementing-a-custom-product-content-renderer/images/01.png "すぐに使える商品コンテンツレンダラー")
 
+<a name="overview" />
+
 ## 概要
 
 1. [**サンプルをデプロイする**](#deploy-an-example)
 1. [**例の説明**](#walk-through-the-example)
 1. [**追加情報**](#additional-information)
+
+<a name="deploy-an-example" />
 
 ## サンプルをデプロイする
 
@@ -61,6 +65,8 @@
 これで、`CPContentRenderer`を実装する新しいカスタム商品コンテンツレンダラーを正常に構築およびデプロイできました。
 
 次に、詳細をさらに詳しく見ていきましょう。
+
+<a name="walk-through-the-example" />
 
 ## 例の説明
 
@@ -192,9 +198,13 @@ q4f7-commerce-product-content-renderer=Q4F7 Commerce Product Content Renderer
 
 > 詳細は、 [アプリケーションのローカライズ](https://help.liferay.com/hc/en-us/articles/360018168251-Localizing-Your-Application) を参照してください。
 
+<a name="conclusion" />
+
 ## まとめ
 
 　 `CPContentRenderer`インターフェイスを実装するための基本を理解し、Liferay Commerceに新しい商品コンテンツレンダラーを追加しました。
+
+<a name="additional-information" />
 
 ## 追加情報
 

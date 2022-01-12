@@ -18,11 +18,15 @@ Commerceには、すぐに使用できる2つのアカウントロールが含�
 
 すぐに使えるロールや、自分のインスタンスに作成したい一般的なカスタムロールの一覧は、 [Commerceロールのリファレンス](../roles-and-permissions/commerce-roles-reference.md) を参照してください。
 
+<a name="creating-account-roles" />
+
 ## アカウントロールの作成
 
 既存のアカウントロールだけではビジネスニーズを満たせない場合、アカウントロールを追加で作成することができます。 また、既存のアカウントロールに権限を追加することもできます。 これは、他のタイプのDXPロールの作成・編集と同じプロセスです。
 
 詳細は、 [ロールの作成と管理](https://learn.liferay.com/dxp/latest/ja/users-and-permissions/roles-and-permissions/creating-and-managing-roles.html) と [ロール権限の定義](https://learn.liferay.com/dxp/latest/ja/users-and-permissions/roles-and-permissions/defining-role-permissions.html) を参照してください。
+
+<a name="liferay-73-and-earlier" />
 
 ## Liferay 7.3以前
 
@@ -38,6 +42,8 @@ Commerceには、すぐに使用できる2つのアカウントロールが含�
 ![販売代理店の役割を持つユーザーのリスト](./account-roles/images/01.png)
 
 販売代理店は、関連する組織内のアカウントにアクセスできます。
+
+<a name="additional-information" />
 
 ## 追加情報
 

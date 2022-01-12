@@ -25,6 +25,8 @@ Liferay Commerceバンドルを使用するには、次の手順を実行しま�
 
 ![ウェルカムイメージ](./using-the-liferay-commerce-tomcat-bundle/images/01.png)
 
+<a name="additional-information" />
+
 ## 追加情報
 
 * [インストールの概要](../installation-overview.md)

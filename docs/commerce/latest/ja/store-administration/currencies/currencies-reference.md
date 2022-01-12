@@ -19,6 +19,8 @@ Liferay Commerceには、いくつかの通貨が事前設定されており、�
 | Priority                     | 通貨が表に表示される順序。数字が大きいほど、下に表示されます                                                                                                                                 |
 | Active                       | この通貨を有効にするトグル                                                                                                                                                  |
 
+<a name="additional-information" />
+
 ## 追加情報
 
 * [新しい通貨の追加](./adding-a-new-currency.md)

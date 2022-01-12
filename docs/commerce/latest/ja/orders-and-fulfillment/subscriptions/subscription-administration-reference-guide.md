@@ -12,6 +12,8 @@
 | アカウントID | アカウントIDは、サブスクリプションを作成したアカウントに対応しています。 |
 | アカウント名  | アカウント名はアカウント名に対応します。                  |
 
+<a name="commerce-21-and-below" />
+
 ## Commerce 2.1以前
 
 サブスクリプションは **コントロールパネル** の **サブスクリプションメニュー** で[管理](./managing-subscriptions.md)されています。
@@ -35,6 +37,8 @@
 <!--Need to finish this for Commerce 3.0; blocked by https://issues.liferay.com/browse/COMMERCE-4813 -->
 
 **全般** 、 **発送** 、 **支払い** の3つのタブがあります 。
+
+<a name="general-tab" />
 
 ## ［一般］タブ
 
@@ -91,6 +95,8 @@ Payment Subscriptionセクションでは、次の情報を追跡します。
 
 
 
+<a name="shipments-tab" />
+
 ## 発送タブ
 
 ［**発送**］タブには、次の情報が表示されます。
@@ -109,6 +115,8 @@ Payment Subscriptionセクションでは、次の情報を追跡します。
 
 
 
+<a name="payments-tab" />
+
 ## 支払いタブ
 
 **支払い** タブは、注文の支払い履歴を追跡します。
@@ -124,6 +132,8 @@ Payment Subscriptionセクションでは、次の情報を追跡します。
 
 
 
+
+<a name="additional-information" />
 
 ## 追加情報
 

@@ -6,6 +6,8 @@ Liferay Commerceには、商品や送料に税率を定義して適用するた�
 * [税計算の構成](#configuring-tax-calculations)
 * [税率の設定](#setting-tax-rates)
 
+<a name="understanding-tax-engines" />
+
 ## 税エンジンの理解
 
 Commerceの税エンジンは、取引が行われる時に税率の計算を定義します。 Liferayは、すぐに使用できる2つのエンジン（**固定税率** と **住所別**）を提供していますが、 [カスタムエンジン](../../developer-guide/implementing-a-new-tax-engine.md)を設計・実装することもできます。
@@ -21,6 +23,8 @@ Commerceの税エンジンは、取引が行われる時に税率の計算を定
 ### 住所別
 
 **住所別** エンジンは、購入者の所在地に基づいて特定のレートを適用し、購入者の請求先住所または配送先住所を使用します。 1つの税カテゴリーに複数の住所別レートが設定されている場合は、購入者の所在地に適したレートのみが適用されます。
+
+<a name="configuring-tax-calculations" />
 
 ## 税計算の構成
 
@@ -54,6 +58,8 @@ Commerceの税エンジンは、取引が行われる時に税率の計算を定
 
 有効にすると、選択したタイプの税計算の追加設定にアクセスできます。
 
+<a name="setting-tax-rates" />
+
 ## 税率の設定
 
 以下の手順に従って、税カテゴリーに税率を追加します：
@@ -84,6 +90,8 @@ Commerceの税エンジンは、取引が行われる時に税率の計算を定
 
    ![税率を設定し、 [送信]をクリックします。](./setting-rates-for-tax-calculations/images/04.png)
 
+<a name="commerce-21-and-below" />
+
 ## Commerce 2.1以前
 
 1. ［**コントロールパネル**］ → ［**コマース**］ → ［**チャネル**］ に移動します。
@@ -110,6 +118,8 @@ Commerceの税エンジンは、取引が行われる時に税率の計算を定
 
 住所固有の税率が設定されました。
 
+<a name="commerce-20-and-below" />
+
 ## Commerce 2.0以前
 
 住所別に税率を設定するには：
@@ -130,6 +140,8 @@ Commerceの税エンジンは、取引が行われる時に税率の計算を定
 1. ［**保存**］ をクリックします。
 
 住所固有の税率が設定されました。
+
+<a name="additional-information" />
 
 ## 追加情報
 

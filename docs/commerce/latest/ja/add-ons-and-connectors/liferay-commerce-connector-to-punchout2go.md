@@ -10,6 +10,8 @@ Liferayは、ユーザーの既存のPunchOut2GoインフラとCommerceを統合
    PunchOut2Goコネクターを使用するには、Liferay Commerce 2.1.2およびLiferay DXP 7.1 FP18、または7.2 FP6が必要です。
 ```
 
+<a name="deploy-the-punchout2go-connector" />
+
 ## PunchOut2Goコネクターのデプロイ
 
 競合を避けるため、PunchOut2Goコネクターをデプロイする前にLiferayサーバーにCommerceがデプロイ済みであることを確認してください。 次に、以下の手順でPunchOut2Go LPKGコネクターをデプロイします。
@@ -35,6 +37,8 @@ Liferayは、ユーザーの既存のPunchOut2GoインフラとCommerceを統合
 -->
 
 サーバーの再起動が完了すると、コネクターがアクティブになり、設定できるようになります。
+
+<a name="configure-the-connector" />
 
 ## コネクターの設定
 
@@ -84,6 +88,8 @@ PunchOut2Goコネクターは、[チャネル](../starting-a-store/channels/intr
 
 自動ログイン **パンチアウト** トークンが設定されます。
 
+<a name="create-a-punch-out-buyer-role" />
+
 ## パンチアウト購入者ロールの作成
 
 ベストプラクティスとして、ユーザーはパンチアウトを使用するベンダー向けにロールを作成する必要があります。 コマースロールの詳細は、 [Commerce Roles](../users-and-accounts/roles-and-permissions/commerce-roles-reference.md)を参照してください。 Liferay DXPのロールと権限の詳細は、 [Understanding Roles and Permissions](https://learn.liferay.com/dxp/latest/ja/users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.html) を参照してください。
@@ -108,11 +114,15 @@ PunchOut2Goコネクターは、[チャネル](../starting-a-store/channels/intr
 
 必要最低限の権限でロールが作成されています。 パンチアウトを使用している購入者にこのロールを割り当てます。
 
+<a name="verify-redirect-to-buyers-procurement-system" />
+
 ## 購入者の調達システムへのリダイレクトを確認する
 
 PunchOut2Goへのコネクターが有効な状態でのチェックアウトプロセスも同様に行われます。 ユーザーが **Submit** をクリックすると、適切な調達システムにリダイレクトされます。
 
 ![注文が送信された後のリダイレクトをパンチアウトする。](./liferay-commerce-connector-to-punchout2go/images/06.png)
+
+<a name="additional-information" />
 
 ## 追加情報
 

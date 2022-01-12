@@ -7,11 +7,15 @@
 
 ![すぐに使える配送方法](./implementing-a-new-shipping-engine/images/01.png "すぐに使える配送方法")
 
+<a name="overview" />
+
 ## 概要
 
 1. [**サンプルをデプロイする**](#deploy-an-example)
 1. [**例の説明**](#walk-through-the-example)
 1. [**追加情報**](#additional-information)
+
+<a name="deploy-an-example" />
 
 ## サンプルをデプロイする
 
@@ -60,6 +64,8 @@
 これで、`CommerceShippingEngine`を実装する新しい配送エンジンを正常に構築およびデプロイできました。
 
 次に、詳細をさらに詳しく見ていきましょう。
+
+<a name="walk-through-the-example" />
 
 ## 例の説明
 
@@ -285,9 +291,13 @@ ship-for-a-discounted-price=Ship for a discounted price.
 
 > 詳細は、 [アプリケーションのローカライズ](https://help.liferay.com/hc/en-us/articles/360018168251-Localizing-Your-Application) を参照してください。
 
+<a name="conclusion" />
+
 ## まとめ
 
 　 `CommerceShippingEngine`インターフェイスを実装するための基本を理解し、Liferay Commerceに新しい配送エンジンを追加しました。
+
+<a name="additional-information" />
 
 ## 追加情報
 

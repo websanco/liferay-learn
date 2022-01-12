@@ -2,6 +2,8 @@
 
 価格修飾子は、価格表レベルで定義され、設定された条件に従ってリストエンティティの価格を変更します。 <!--TASK: Improve introduction-->
 
+<a name="adding-price-modifiers-to-a-price-list" />
+
 ## 価格表への価格修飾子の追加
 
 以下の手順で、価格表に新しい価格修飾子を追加します：
@@ -35,6 +37,8 @@
    利用可能な設定オプションは、修飾子に選択されたターゲットによって異なります。
 ```
 
+<a name="configuring-a-modifiers-general-information" />
+
 ## 修飾子の一般情報の設定
 
 以下の手順で、価格修飾子の一般的な詳細を設定します：
@@ -53,6 +57,8 @@
 
    ![価格修飾子を設定します。](./using-price-modifiers/images/01.png)
 
+<a name="configuring-a-modifiers-target" />
+
 ## 修飾子のターゲットの設定
 
 価格修飾子の一般的な詳細を決定したら、修飾子のターゲットに基づいて追加の設定オプションを利用できます。 各修飾子は、商品、商品グループ、またはカテゴリーをターゲットにすることができます。
@@ -68,6 +74,8 @@
    ![選択をクリックして、価格修飾子に追加します。](./using-price-modifiers/images/02.png)
 
 1. 希望のターゲットを選択したら、 ［**情報**］ タブに戻り、 ［**保存**］]をクリックします。
+
+<a name="additional-information" />
 
 ## 追加情報
 

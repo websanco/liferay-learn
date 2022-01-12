@@ -6,6 +6,8 @@
 
 Liferay Commerceは、Liferay Digital Experience Platform（DXP）上に構築されています。 そのため、Liferay Commerceのアップデートには、Liferay Commerceが指定するコアプラットフォームのアップデートが必要になる場合があります。
 
+<a name="development-phase-maintenance-updates" />
+
 ## 開発フェーズ：メンテナンスアップデート
 
 Liferay Commerceのメンテナンスアップデートは定期的にリリースされます。 これらのアップデートには、慎重に選択され、既知の問題を解決して商品の品質と安定性を維持する修正プログラムのコレクションが含まれています。 メンテナンスアップデートでは広範なQAテストが実施され、緊急アップデートよりもリスクが大幅に軽減されます。 これらは最新のコードベースを表します。Liferayは現在のコードベースの既知の問題の解決に重点を置いているため、プロジェクトの開発段階では最新のメンテナンスアップデートを常に入手することをお勧めします。
@@ -16,6 +18,8 @@ Liferay Digital Experience Platformの一部であるコアモジュールおよ
 | ---------------- | -------- | -------- |
 | Liferay DXP *    | &#10003; | &#10003; |
 | Liferay Commerce | &#10003; | &#10003; |
+
+<a name="production-phase-emergency-updates" />
 
 ## 生産段階：緊急アップデート
 

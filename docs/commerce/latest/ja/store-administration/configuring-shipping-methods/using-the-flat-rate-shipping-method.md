@@ -37,6 +37,8 @@
 
 ![新しい配送方法オプションが利用可能であることを確認します。](./using-the-flat-rate-shipping-method/images/06.png)
 
+<a name="commerce-20-and-below" />
+
 ## Commerce 2.0以前
 
 新しい定額配送オプションを追加するには：
@@ -53,6 +55,8 @@
 1. ［**保存**］ をクリックします。
 
 新しい配送オプションが追加され、精算プロセスで利用可能になりました。
+
+<a name="additional-information" />
 
 ## 追加情報
 

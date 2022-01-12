@@ -2,12 +2,16 @@
 
 この記事では、Authorize.Netを支払い方法として有効にする方法について詳しく説明します。 [ Authorize.Net ](https://www.authorize.net/about-us/) はVisaの子会社であり、加盟店顧客に代わって処理ネットワークへの数十億件の取引の送信を管理する支払いゲートウェイサービスのプロバイダーです。
 
+<a name="prerequisites" />
+
 ## 前提条件
 
 Authorize.Netを使用するようにストアを設定する前に、 [以下を生成する](https://support.authorize.net/s/article/How-do-I-obtain-my-API-Login-ID-and-Transaction-Key) 必要があります。
 
 * APIログインID
 * トランザクションキー
+
+<a name="activating-authorizenet-as-a-payment-method" />
 
 ## 支払い方法としてAuthorize.netを有効にする
 
@@ -67,6 +71,8 @@ Authorize.netを支払い方法としてアクティブ化するには：
 
 1. ［**保存**］ をクリックします。
 1. ［**Authorize.Net**］ の隣にある **3ドットアイコン** をクリックし、次に ［**有効にする**］ をクリックします。
+
+<a name="additional-information" />
 
 ## 追加情報
 

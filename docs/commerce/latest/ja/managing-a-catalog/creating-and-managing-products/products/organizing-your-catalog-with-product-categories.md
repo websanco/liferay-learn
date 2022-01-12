@@ -6,6 +6,8 @@
 
 グローバルスコープとサイト管理の詳細は、この記事で [データ範囲](https://help.liferay.com/hc/articles/360018168991-Data-Scopes) および [設定範囲](https://help.liferay.com/hc/articles/360017895452-Introduction-to-Setting-Up#configuration-scope) について参照してください。
 
+<a name="prerequisites" />
+
 ## 前提条件
 
 カタログを整理する前に、カテゴリを入力する必要があります。 [新しい商品カテゴリ](./creating-a-new-product-category.md) 作成の記事を参照してください。
@@ -13,6 +15,8 @@
 ```{note}
 Miniumなどのアクセラレータを使用してサンプルデータでサイトを作成した場合、VocabularyとCategoriesはGlobalスコープに入力されます。 これは、すべてのサンプルカテゴリがすべてのサイトで利用できることを意味します。
 ```
+
+<a name="managing-product-categories" />
 
 ## 商品カテゴリを管理
 
@@ -29,6 +33,8 @@ Miniumなどのアクセラレータを使用してサンプルデータでサ�
     ![カテゴリーの選択](./organizing-your-catalog-with-product-categories/images/02.png)
 
 1. ［**完了**］ をクリックします。
+
+<a name="commerce-21-and-below" />
 
 ## Commerce 2.1以前
 
@@ -59,6 +65,8 @@ Miniumなどのアクセラレータを使用してサンプルデータでサ�
 ![カテゴリを選択](./organizing-your-catalog-with-product-categories/images/04.png)
 
 このカテゴリに該当する可能性のある他のすべての商品について、必要に応じて繰り返します。
+
+<a name="additional-information" />
 
 ## 追加情報
 

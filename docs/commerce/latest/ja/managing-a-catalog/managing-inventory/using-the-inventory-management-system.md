@@ -12,6 +12,8 @@ Liferay Commerceの **在庫管理** システムは、ユーザーがLiferay Co
    在庫管理は、Commerce 2.0または2.1を使用している場合、*コントロールパネル*にあります。
 ```
 
+<a name="adding-an-inventory-item" />
+
 ## 在庫商品の追加
 
 各在庫商品は、SKUによって追跡されます。 ユーザーは、 **在庫管理** に複数のSKUを追加し、各SKUに十分な数量があることを確認することができます。
@@ -31,6 +33,8 @@ Liferay Commerceの **在庫管理** システムは、ユーザーがLiferay Co
 1. 完了したら、［**送信**］をクリックします。
 
 新しい在庫商品が追加されました。
+
+<a name="setting-inventory-safety-stock" />
 
 ## 安全在庫の設定
 
@@ -54,6 +58,8 @@ Liferay Commerceの **在庫管理** システムは、ユーザーがLiferay Co
 
 ![安全在庫量を設定することで、その倉庫の利用可能な在庫を減らすことができます。](./using-the-inventory-management-system/images/03.png)
 
+<a name="viewing-on-orders" />
+
 ## 「注文中」を確認する
 
 1. SKU (_MIN55681_)をクリックします。
@@ -62,6 +68,8 @@ Liferay Commerceの **在庫管理** システムは、ユーザーがLiferay Co
     ![安全在庫量を設定することで、その倉庫の利用可能な在庫を減らすことができます。](./using-the-inventory-management-system/images/06.png)
 
 ユーザーは、このSKUを含むすべての注文を見ることができます。
+
+<a name="adding-incoming-stock" />
 
 ## 入荷在庫の追加
 
@@ -84,6 +92,8 @@ Liferay Commerceの **在庫管理** システムは、ユーザーがLiferay Co
 
 ![入荷量は、SKUの［概要］タブで更新されます。](./using-the-inventory-management-system/images/05.png)
 
+<a name="viewing-inventory-changes" />
+
 ## 在庫変更の確認
 
 変更ログは次のイベントを追跡します。
@@ -96,6 +106,8 @@ Liferay Commerceの **在庫管理** システムは、ユーザーがLiferay Co
 * インベントリアイテムに対する更新アクション。
 
 ![変更ログは変更を追跡します。](./using-the-inventory-management-system/images/07.png)
+
+<a name="additional-information" />
 
 ## 追加情報
 

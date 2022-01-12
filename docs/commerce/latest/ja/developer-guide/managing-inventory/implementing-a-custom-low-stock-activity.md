@@ -6,11 +6,15 @@
 
 ![すぐに使える在庫不足アクティビティ](./implementing-a-custom-low-stock-activity/images/01.png "すぐに使える在庫不足アクティビティ")
 
+<a name="overview" />
+
 ## 概要
 
 1. [**サンプルをデプロイする**](#deploy-an-example)
 1. [**例の説明**](#walk-through-the-example)
 1. [**追加情報**](#additional-information)
+
+<a name="deploy-an-example" />
 
 ## サンプルをデプロイする
 
@@ -61,6 +65,8 @@
 これで、`CommerceLowStockActivity`を実装する新しい在庫不足アクティビティを正常に構築およびデプロイできました。
 
 次に、詳細をさらに詳しく見ていきましょう。
+
+<a name="walk-through-the-example" />
 
 ## 例の説明
 
@@ -137,9 +143,13 @@ j1e4-commerce-low-stock-activity=J1E4 Commerce Low Stock Activity
 
 > 詳細は、 [アプリケーションのローカライズ](https://help.liferay.com/hc/en-us/articles/360018168251-Localizing-Your-Application) を参照してください。
 
+<a name="conclusion" />
+
 ## まとめ
 
 　 `CommerceLowStockActivity`インターフェイスを実装するための基本を理解し、Liferay Commerceに新しい在庫不足アクティビティを追加しました。
+
+<a name="additional-information" />
 
 ## 追加情報
 

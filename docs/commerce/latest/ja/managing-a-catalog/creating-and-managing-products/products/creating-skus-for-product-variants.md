@@ -12,6 +12,8 @@ Liferay Commerceでは、複数のSKUを商品に追加して商品バリアン�
    商品オプションの値は、SKUの作成に使用する前に確定することを強くお勧めします。 詳しくは、`Using Product Options <./using-product-options.md`>_ を参照してください。
 ```
 
+<a name="automatically-generating-multiple-skus" />
+
 ## 複数のSKUを自動的に生成
 
 1つの商品に複数のSKUを生成して有効にするには、以下の手順に従ってください：
@@ -29,6 +31,8 @@ Liferay Commerceでは、複数のSKUを商品に追加して商品バリアン�
    ![生成されたSKUを編集します。](./creating-skus-for-product-variants/images/03.png)
 
 1. 完了したら、 [**公開**] をクリックします。
+
+<a name="manually-adding-an-sku-to-a-product" />
 
 ## 商品にSKUを手動で追加する
 
@@ -52,6 +56,8 @@ Liferay Commerceでは、複数のSKUを商品に追加して商品バリアン�
 
 1. 完了したら、 [**公開**] をクリックします。
 
+<a name="adding-sku-inventory" />
+
 ## SKU在庫の追加
 
 商品の「バックオーダーを許可」が有効になっている場合、基本価格が設定された公開済みのすべてのSKUは、商品の詳細ウィジェットから顧客がすぐに購入できるようになります。 ただし、「バックオーダーを許可」が無効になっている場合は、最初にSKUに在庫を追加して、購入できるようにする必要があります。 詳しくは［ [在庫管理の概要](../../managing-inventory/introduction-to-managing-inventory.md) ］ を参照してください。
@@ -63,6 +69,8 @@ Liferay Commerceでは、複数のSKUを商品に追加して商品バリアン�
 
    「バックオーダーを許可」が有効になっている場合、在庫に関係なく、すべてのオプションが商品詳細ウィジェットに表示されます。 
 ```
+
+<a name="sku-fields-reference" />
 
 ## SKUフィールドリファレンス
 
@@ -104,6 +112,8 @@ Liferay Commerceでは、複数のSKUを商品に追加して商品バリアン�
 | Display Date    | SKUがサイト内に表示され、購入できるようになる時期を決めます。 |
 | Expiration Date | SKUが購入できなくなる時期を決めます。             |
 | Never Expire    | SKUが自動的に公開終了になるようにできるかどうかを決定します。 |
+
+<a name="additional-information" />
 
 ## 追加情報
 

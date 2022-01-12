@@ -12,6 +12,8 @@ Liferay Commerceでは、商品の価格を微調整するための価格設定�
    以下の概要では、Commerce Pricing Engine v2.0について説明しています。 このエンジンバージョンは、Commerce 3.0およびPortal/DXP 7.3で使用されているデフォルトのアルゴリズムです。 Commerce 2.1.x以前のバージョンでは、デフォルトでCommerceの [Pricing Engine v1.0](#pricing-engine-v1-0-reference) を使用しています。 必要に応じて、インスタンスで使用されている [Pricing Engineのバージョン](#enabling-pricing-engine-v2-0-in-commerce-2-1-x) を変更することができます。
 ```
 
+<a name="components-of-commerces-pricing-system" />
+
 ## Commerceの価格設定システムのコンポーネント
 
 Commerceでは、すべての商品はカタログに保存されており、各カタログには、デフォルトの [［基本価格表］](#base-price-list) と［ [基本プロモーションリスト］](#base-promotion-list) があります。 これらのリストは、カタログに含まれるすべての商品SKUの基本価格エントリを保存するために使用され、すべての顧客が利用できるようになっています。 [［価格表］](#price-lists) および [［プロモーションリスト］](#promotion-lists) を作成して、よりターゲットを絞った構成可能な価格エンティティを定義することもできます。 また、各エントリの一部として、数量に応じて商品の特別価格を設定する [［価格レート］](#price-tiers) を定義することができます。 最後に、価格エントリを上書きせずに適用される [［割引］](#discounts) を作成することができます。
@@ -50,6 +52,8 @@ Commerceでは、すべての商品はカタログに保存されており、各
 
    ![作成された割引は、価格の上に適用され、価格を上書きせずに変更するものです。](./introduction-to-pricing/images/06.png)
 
+<a name="how-commerce-calculates-product-prices" />
+
 ## Commerceが商品価格を計算する方法
 
 Commerceの価格設定アルゴリズムは、各価格設定コンポーネントがチャネル内のSKUの価格にどのように影響するかを決定します。 アルゴリズムが価格リクエストを受信すると、Commerceはまず、商品の ［**単価**］ と ［**プロモ価格**］ を計算します。 これらの価格は、チャネルの顧客に提供される ［**最終価格**］ を決定するために使用されます。
@@ -83,6 +87,8 @@ SKUの単価を計算した後、CommerceはSKUのプロモ価格を計算しま
 
 単価とプロモ価格が算出されると、Commerceは2つの価格を比較し、より良い方を選択します。 そして、価格アルゴリズムは、適用可能なすべての割引を検索し、最適なSKU価格に適用します。 合計は、SKUの最終価格、つまり顧客が商品を購入するために使用される価格です。
 
+<a name="how-commerce-calculates-order-prices" />
+
 ## Commerceが注文価格を計算する方法
 
 注文価格を計算する際、Commerceはまず送料を取得し、送料を対象とした割引を適用します。
@@ -90,6 +96,8 @@ SKUの単価を計算した後、CommerceはSKUのプロモ価格を計算しま
 次にCommerceは、注文に含まれるすべてのSKUの最終価格を加算し、小計を決定します。 小計を対象とした割引が適用されます。
 
 最後に、Commerceは割引後の送料と割引後の小計を合計し、注文の合計金額を算出します。 合計を対象とした割引が適用されます。
+
+<a name="pricing-engine-v10-reference" />
 
 ## Pricing Engine v1.0 リファレンス
 
@@ -107,6 +115,8 @@ SKUの単価を計算した後、CommerceはSKUのプロモ価格を計算しま
 
 ![価格階層図](./introduction-to-pricing/images/01.png)
 
+<a name="enabling-pricing-engine-v20-in-commerce-21x" />
+
 ## Commerce2.1.xでのPricingEnginev2.0の有効化
 
 デフォルトでは、Commerce 2.1.x以前のバージョンではCommerce Pricing Engine v1.0が使用されています。 以下の手順に従って、Commerce Pricing Engine v2.0を有効にします：
@@ -120,6 +130,8 @@ SKUの単価を計算した後、CommerceはSKUのプロモ価格を計算しま
 1. ［**保存**］ をクリックします。
 
 Commerceは、Liferayインスタンス内のすべての価格計算にPricing Engine v2.0を使用するように更新されています。
+
+<a name="additional-information" />
 
 ## 追加情報
 

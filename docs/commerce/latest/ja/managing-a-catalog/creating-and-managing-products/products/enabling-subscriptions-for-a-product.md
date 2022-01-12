@@ -2,6 +2,8 @@
 
 Liferay Commerceでは、［[ Simple ](../product-types/creating-a-simple-product.md)］、 ［[グループ化済み](../product-types/creating-a-grouped-product.md)］、 ［[仮想](../product-types/creating-a-virtual-product.md)］ 商品のサブスクリプションを作成、管理することができます。 サブスクリションの例としては、雑誌、更新可能なサービス契約、そして定期的に消費される商品の自動注文などがあります。 Commerceでは、 ［**支払**］ と ［**配送**］のサブスクリプションを提供しています。
 
+<a name="payment-and-delivery-subscriptions" />
+
 ## 支払と配達のサブスクリプション
 
 ［**支払のサブスクリプション**］は、電気代やNetflixのサブスクリプションに類似しています。 ここでは、サービスを継続するために、定期的に銀行口座から特定の金額が引き落とされます。
@@ -14,9 +16,13 @@ Liferay Commerceでは、［[ Simple ](../product-types/creating-a-simple-produc
 
 支払のサブスクリプションと配送のサブスクリプションの両方を組み合わせることで、商品またはいくつかの商品を発送する必要があり、そのために顧客に定期的に支払いを請求するシナリオに対応できます。
 
+<a name="prerequisites" />
+
 ## 前提条件
 
 商品のサブスクリプションを有効にするには、ストア管理者は定期的な支払いをサポートする支払い方法をアクティブにする必要があります。 デフォルトでは、Liferay Commerceは定期的な支払い方法として [Paypal](../../../store-administration/configuring-payment-methods/paypal.md) をサポートしています。
+
+<a name="enabling-product-subscriptions" />
 
 ## 商品のサブスクリプションを有効にする
 
@@ -53,11 +59,15 @@ Liferay Commerceでは、［[ Simple ](../product-types/creating-a-simple-produc
 定期的な支払いをサポートするために、他の支払い方法を実装できます。 詳細は[Implementing a New Payment Method](../../../developer-guide/implementing-a-new-payment-method.md) を参照してください。
 ```
 
+<a name="viewing-subscriptions-in-product-details" />
+
 ## 商品の詳細でのサブスクリプションの表示
 
 サブスクリプションの詳細は、商品の詳細ウィジェットを介して商品の表示ページに表示されます。
 
 ![支払いと配信のサブスクリプションの詳細は、商品詳細ウィジェットに表示されます。](./enabling-subscriptions-for-a-product/images/05.png)
+
+<a name="additional-information" />
 
 ## 追加情報
 

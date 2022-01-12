@@ -12,6 +12,8 @@
 
 ![ミニカート](./cart/images/02.png)
 
+<a name="additional-information" />
+
 ## 追加情報
 
 * [Widget Reference Guide](../liferay-commerce-widgets/widget-reference.md)

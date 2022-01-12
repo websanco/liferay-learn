@@ -10,6 +10,8 @@ Eメールの入力後、ゲストはログインするか、アカウントを�
 
 ![ユーザーはサインインするか、アカウントを作成するか、またはゲストとして続行することができます。](./guest-checkout-overview/images/03.png)
 
+<a name="processing-a-guest-order" />
+
 ## ゲストによる注文の処理
 
 ゲストが注文を送信すると、他の注文と同じように処理されます。 詳細は、 [「注文の処理」](../../orders-and-fulfillment/orders/processing-an-order.md) を参照してください。
@@ -17,6 +19,8 @@ Eメールの入力後、ゲストはログインするか、アカウントを�
 ```[note}
    ゲストは、たとえ同じメールアドレスを持っていても、認証された他のユーザーと注文履歴を共有することはありません。
 ```
+
+<a name="creating-a-guest-checkout-authentication-page" />
 
 ## ゲストのチェックアウト認証ページの作成
 
@@ -27,6 +31,8 @@ Eメールの入力後、ゲストはログインするか、アカウントを�
 ![別のオプションは、ゲストのチェックアウト認証ウィジェットです。](./guest-checkout-overview/images/02.png)
 
 この認証ページが存在しない場合、ゲストは **チェックアウト** ウィジェットのあるページにリダイレクトされます。
+
+<a name="additional-information" />
 
 ## 追加情報
 

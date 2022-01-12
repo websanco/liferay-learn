@@ -2,6 +2,8 @@
 
 この記事は、 ［**アカウント管理**］ ウィジェットまたは ［**コントロールパネル**］ のいずれかを使用して、アカウントの請求先住所と出荷先住所を更新する方法について説明します。
 
+<a name="using-the-account-management-widget" />
+
 ## アカウント管理ウィジェットを使用する
 
 1. 左側の ［**ナビゲーションメニュー**］ → ［**アカウント管理**］ をクリックします。
@@ -22,6 +24,8 @@
 
 ![新しいアドレスの表示](./adding-addresses-to-an-account/images/03.png)
 
+<a name="using-the-control-panel" />
+
 ## コントロールパネルの使用
 
 ユーザーは、 ［**コントロールパネル**］ で、アカウントにアドレスを追加することができます。
@@ -39,6 +43,8 @@
    ![コントロールパネルでの新しいアドレスの追加](./adding-addresses-to-an-account/images/04.png)
 
 1. ［**保存**］ をクリックします。
+
+<a name="liferay-commerce-21-and-below" />
 
 ## Liferay Commerce 2.1以下
 

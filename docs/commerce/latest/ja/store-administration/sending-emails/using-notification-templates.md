@@ -6,6 +6,8 @@
    Liferay Commerceの通知機能を使用するには、最初にLiferay Digital Experience Platform（DXP）のメール設定を構成します。 詳細は、 [メールサーバーへの接続](https://learn.liferay.com/dxp/latest/ja/installation-and-upgrades/setting-up-liferay/configuring-mail/connecting-to-a-mail-server.html) を参照してください。
 ```
 
+<a name="creating-a-notification" />
+
 ## 通知を作成する
 
 次の手順に従って、受信した注文の通知を作成します。
@@ -35,6 +37,8 @@
 新しい通知テンプレートが保存され、ストアは注文を受信すると、バイヤーに自動メールを送信します。
 
 ![通知キューですべての送信メールを確認してください。](./using-notification-templates/images/05.png)
+
+<a name="example-using-placeholder-values" />
 
 ## 例：プレースホルダー値の使用
 
@@ -71,6 +75,8 @@
   `[%ACCOUNT_ROLE_ORDER_MANAGER%]`
   ```
 
+<a name="commerce-20-and-below" />
+
 ## Commerce 2.0以前
 
 Commerce 2.0以下でメール通知を作成するには：
@@ -98,6 +104,8 @@ Commerce 2.0以下でメール通知を作成するには：
 1. ［**保存**］ をクリックします。
 
 新しい通知テンプレートが保存され、ストアが注文を受け取ると、ストアから購入者に自動メールが送信されます。 テンプレートが作成されると、注文が行われるたびに新しい通知が通知キューに追加されます。 注文が行われたときは、 ［**通知キュー**］ サブタブを確認してください。 デフォルトでは、Liferay Commerceは15分ごとにキューをチェックして、未送信の通知を送信します。 間隔を変更する方法については、 [コマース通知キューの構成](./configuring-the-commerce-notification-queue.md)参照してください。
+
+<a name="additional-information" />
 
 ## 追加情報
 

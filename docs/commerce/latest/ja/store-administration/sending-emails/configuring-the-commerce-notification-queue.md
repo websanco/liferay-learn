@@ -11,6 +11,8 @@
 
 1. 完了したら、 ［**保存**］ をクリックします。
 
+<a name="additional-information" />
+
 ## 追加情報
 
 * [通知テンプレートの使用](./using-notification-templates.md)

@@ -42,6 +42,8 @@ Liferay Commerceの使用を開始するには：
 
 Liferay Commerceがデプロイされ、使用できる状態になりました。 ストア管理者は、ストアフロントの構築とカタログの作成を開始できます。
 
+<a name="additional-information" />
+
 ## 追加情報
 
 アプリケーションサーバーを再起動した場合、Liferay Commerceは`VerifyProcess`コマンドを再度実行しないことに注意してください。

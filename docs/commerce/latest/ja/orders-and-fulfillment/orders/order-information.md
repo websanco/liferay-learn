@@ -4,11 +4,15 @@
 
 5つのタブがあります： **一般** 、 **支払い** 、 **出荷** 、 **ノート** 、及び **メール** 。
 
+<a name="general" />
+
 ## 一般
 
 **一般** タブで、注文のステータスを最初から最後まで管理および追跡できます。
 
 ![注文メニュー](./order-information/images/01.png)
+
+<a name="payments" />
 
 ## 支払い
 
@@ -16,11 +20,15 @@
 
 ![注文メニュー-［支払い］タブ](./order-information/images/02.png)
 
+<a name="shipments" />
+
 ## 配送
 
 **出荷** タブは、注文の [出荷](../shipments/introduction-to-shipments.md) 履歴を追跡します。
 
 ![注文メニュー-［出荷］タブ](./order-information/images/03.png)
+
+<a name="notes" />
 
 ## メモ
 
@@ -28,11 +36,15 @@
 
 ![［Notes］タブ](./order-information/images/04.png)
 
+<a name="emails" />
+
 ## メール
 
 ［**メール**］タブには、Liferay Commerceインスタンスによって送信された [トランザクションメール](../../store-administration/sending-emails/store-emails.md) がすべて含まれています。
 
 ![メールタブ](./order-information/images/05.png)
+
+<a name="additional-information" />
 
 ## 追加情報
 

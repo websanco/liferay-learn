@@ -2,6 +2,8 @@
 
 <!--TASK: Add Intro-->
 
+<a name="product-details" />
+
 ## 商品の詳細
 
 商品詳細のタブでは、商品のSEO、適用カテゴリー、仕様などを設定できます。
@@ -52,6 +54,8 @@
 | Expiration Date | [**Never Expire**] がオフになっている場合、商品の販売終了日を決定する |
 | Never Expire    | 商品の有効期限をスケジュールできるかどうかを決定する                |
 
+<a name="options" />
+
 ## オプション
 
 商品オプションは、商品にカスタムフィールドを追加する便利な方法です。 オプションを利用して、属性（サイズ、数量、色、素材など）やバンドルなどに基づいた商品バリアントを作成することができます。 詳細は、 [商品オプションの使用](./using-product-options.md) を参照してください。
@@ -63,6 +67,8 @@
 | オプションを追加 | 商品に既存のオプションを作成・適用するためのフィールド                      |
 | オプション    | 商品に追加されたオプションの一覧。オプションをクリックすると、その設定や値を編集することができる |
 
+<a name="skus" />
+
 ## SKU
 
 SKUは、商品のバリアントを表します。 詳しくは、 ［ [商品バリアントのSKU作成](./creating-skus-for-product-variants.md) ］を参照してください。
@@ -71,11 +77,15 @@ SKUは、商品のバリアントを表します。 詳しくは、 ［ [商品�
 
 ![商品バリアントに対して複数のSKUを生成します。](./product-configuration-reference/images/03.png)
 
+<a name="media" />
+
 ## メディア
 
 ユーザーは商品画像と添付ファイルをアップロードできます。 詳細は、 [商品イメージ](./product-images.md) および [商品添付](./product-attachments.md) を参照してください。
 
 ![画像と添付ファイルをアップロードします。](./product-configuration-reference/images/04.png)
+
+<a name="product-relations" />
 
 ## 関連商品
 
@@ -87,11 +97,15 @@ SKUは、商品のバリアントを表します。 詳しくは、 ［ [商品�
 
 ![](./product-configuration-reference/images/06.png) -->
 
+<a name="subscription" />
+
 ## サブスクリプション
 
 商品のサブスクリプションオプションを作成および管理します。 例えば、雑誌、更新オプションのあるサービス契約、定期的に消費される商品などがあります。 詳細は、 [商品](./enabling-subscriptions-for-a-product.md) サブスクリプションの有効化を参照してください。
 
 ![サブスクリプションを有効にします。](./product-configuration-reference/images/07.png)
+
+<a name="visibility" />
 
 ## 可視性
 
@@ -112,6 +126,8 @@ SKUは、商品のバリアントを表します。 詳しくは、 ［ [商品�
 > For Virtual Products Only 
 
 See [Virtual Product Reference](./../product-types/virtual-product-reference.md) -->
+
+<a name="additional-information" />
 
 ## 追加情報
 

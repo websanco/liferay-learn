@@ -6,6 +6,8 @@
    個々の商品の表示権限は、その権限が使用できるチャネルを変更することで管理されます。 詳細は、 [チャネルを使用した商品の可視性の構成](../../starting-a-store/channels/configuring-product-visibility-using-channels.md) を参照してください。
 ```
 
+<a name="adding-catalog-management-permissions-to-an-existing-role" />
+
 ## 既存ロールへのカタログ管理権限の追加
 
 カタログや商品を管理するために、新しいカスタムロールを作成するか、既存のロールを変更することから始めましょう。 この役割は、システム全体の機能に対する最小限のアクセス権を持つように設定することができます。 ユーザー権限の設定の定義については、 [ロールの権限設定の定義](https://learn.liferay.com/dxp/latest/ja/users-and-permissions/roles-and-permissions/defining-role-permissions.html) を参照してください。
@@ -38,6 +40,8 @@
 
 新しいカタログマネージャーロールには、カタログおよび商品メニューを表示するための最低限の権限が与えられます。 これにより、このロールを持つユーザーは、［**コントロールパネル**］&rarr; ［**Commerce**］&rarr; ［**カタログ**］および［**商品**］メニューにアクセスできるようになります。
 
+<a name="configuring-a-catalogs-permissions" />
+
 ## カタログ権限設定の構成
 
 以下の手順に従って、カタログ権限を設定します。
@@ -54,6 +58,8 @@
 1. 完了したら、［**保存**］をクリックします。
 
 これで、カタログの権限が設定されました。
+
+<a name="additional-information" />
 
 ## 追加情報
 

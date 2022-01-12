@@ -8,6 +8,8 @@
    倉庫の設定は、Commerce 2.0または2.1を使用している場合は、_コントロールパネル_にあります。
 ```
 
+<a name="warehouse-name" />
+
 ## 倉庫名
 
 ![倉庫の追加](./warehouse-reference-guide/images/01.png)
@@ -18,6 +20,8 @@
 | 説明    | 追加情報             |
 | 有効    | 倉庫をアクティブに指定するトグル |
 
+<a name="channels" />
+
 ## チャネル
 
 ![チャネルの選択](./warehouse-reference-guide/images/02.png)
@@ -25,6 +29,8 @@
 | フィールド | 説明                             |
 | ----- | ------------------------------ |
 | チャネル  | この倉庫が提供するすべてのチャネルのチェックボックスのリスト |
+
+<a name="address-fields" />
 
 ## 住所フィールド
 
@@ -40,6 +46,8 @@
 | 郵便番号      | 郵便番号を入力するフィールド           |
 | 市区町村      | 倉庫がある都市                  |
 
+<a name="geolocation" />
+
 ## Geolocation
 
 ![倉庫の位置情報の設定](./warehouse-reference-guide/images/04.png)
@@ -50,6 +58,8 @@
 | 経度    | 倉庫の経度 |
 
 倉庫の位置情報は、Fedexの配送方法でチェックアウト時の送料計算に使用されます。 Commerceでは、顧客にとって最もレートの良い倉庫を利用します。
+
+<a name="additional-information" />
 
 ## 追加情報
 

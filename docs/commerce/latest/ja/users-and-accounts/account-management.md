@@ -14,6 +14,8 @@ account-management/adding-organizations-to-accounts.md
 
 Liferay Commerceでは、アカウントは、請求先住所や配送先住所、注文の詳細、VAT番号などの顧客情報を保存するために使用されます。 一度作成したアカウントは、共通の基準（例：地理的地域）に基づいてグループに分類することができます。 これらのアカウントグループは、特定の価格表、プロモーション、および割引を対象とする顧客をターゲットするために使用できます。
 
+<a name="account-types" />
+
 ## アカウント タイプ
 
 コマースでは、ビジネスとパーソナルタイプの2種類のアカウントタイプを提供しています。 それぞれ異なる [サイトの種類](../starting-a-store/sites-and-site-types.md) （B2B、B2Cなど）に使用されます。
@@ -26,6 +28,9 @@ Liferay Commerceでは、アカウントは、請求先住所や配送先住所�
   Liferayユーザーアカウントのプロフィール情報は、作成時にパーソナルアカウントにインポートされます。 Liferayユーザーアカウントプロフィールの追加更新は、パーソナルアカウントには自動的にプロパゲートされません。
   ```
 <!-- TASK: Add the Guest Account type; also note that B2X Sites recognize both Business and Personal Accounts-->
+
+<a name="common-account-management-actions" />
+
 ## 一般的なアカウント管理アクション
 
 一般的なアカウント管理アクションの詳細は、以下の記事を参照してください：
@@ -34,6 +39,8 @@ Liferay Commerceでは、アカウントは、請求先住所や配送先住所�
 * [アカウントへのユーザーの招待](./account-management/inviting-users-to-an-account.md)
 * [アカウントへのアドレスの追加](./account-management/adding-addresses-to-an-account.md)
 * [新規アカウントグループの作成](./account-management/creating-a-new-account-group.md)
+
+<a name="additional-information" />
 
 ## 追加情報
 

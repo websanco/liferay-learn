@@ -10,6 +10,8 @@
 
 テンプレートタイプを選択したら、［**用語の定義**］ドロップダウンメニューを展開します。
 
+<a name="email-settings" />
+
 ## メール設定
 
 ![これらの変数を「Eメール設定」フィールドで使用します。](./notification-template-variables-reference-guide/images/03.png)
@@ -22,6 +24,8 @@
 | [%ORDER_CREATOR%]                | 注文を作成したユーザー     |
 | [%ACCOUNT_ROLE_ADMINISTRATOR%] | アカウント管理者        |
 | [%USER_GROUP_NAME%]            | ユーザーグループ名       |
+
+<a name="orders" />
 
 ## ［注文］
 
@@ -36,6 +40,8 @@
 | [%ORDER_BILLING_ADDRESS%]  | 注文の請求先住所          |
 | [%ORDER_ID%]                 | 注文ID              |
 
+<a name="subscription" />
+
 ## サブスクリプション
 
 ![この変数をサブスクリプションに使用します。](./notification-template-variables-reference-guide/images/04.png)
@@ -45,6 +51,8 @@
 | 変数               | 説明  |
 | ---------------- | --- |
 | [%PRODUCT_NAME%] | 商品名 |
+
+<a name="additional-information" />
 
 ## 追加情報
 

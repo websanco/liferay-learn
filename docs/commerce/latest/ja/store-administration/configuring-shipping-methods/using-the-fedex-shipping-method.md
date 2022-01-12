@@ -4,6 +4,8 @@
 
 この記事では、配送方法としてFedExを設定して有効にする方法について詳しく説明します。
 
+<a name="prerequisites" />
+
 ## 前提条件
 
 FedEXを配送方法として使用するようにストアを構成する前に、以下を用意してください。
@@ -12,6 +14,8 @@ FedEXを配送方法として使用するようにストアを構成する前に
 1. FedExアカウントのパスワード
 1. FedEx Webサービス開発者キー（ [FedEx Webサービス](https://www.fedex.com/en-us/developer/web-services.html) から入手可能）
 1. FedExメーター番号
+
+<a name="activate-the-fedex-shipping-method" />
 
 ## FedEx配送方法を有効にする
 
@@ -70,6 +74,8 @@ FedEXを配送方法として使用するようにストアを構成する前に
 1. **有効** トグルを **はい** に切り替えます。
 
 配送方法としてFedExを使用するようにストアが設定されました。 ストアでは複数の配送方法を有効にすることができ、資格情報が有効である限り、販売者はFedEx固有の配送オプションを選択できるようになりました。
+
+<a name="additional-information" />
 
 ## 追加情報
 

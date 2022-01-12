@@ -2,6 +2,8 @@
 
 定期購入は特別な種類の定期的な注文であり、[通常の注文](../orders/processing-an-order.md)とは別に管理され。 サブスクリプションを含むすべての注文が受け付けられ、 [Orders Menu](../orders/orders-menu-reference-guide.md)処理されます。 ただし、 **サブスクリプション** 注文が受理されると、 [サブスクリプションメニュー](./subscription-administration-reference-guide.md)表示されます。
 
+<a name="fulfilling-a-subscription-order" />
+
 ## サブスクリプション注文の履行
 
 Commerce 3.0では、 **注文** および **サブスクリプション** は **グローバルアプリケーション** メニューで管理されています。
@@ -21,6 +23,8 @@ Commerce 3.0では、 **注文** および **サブスクリプション** は *
 1. サブスクリプションの注文が受け入れられたら、手順に従って出荷を作成します。 詳細は、 [シップメントの作成](../shipments/creating-a-shipment.md) を参照してください。
 
 注文が受理されると、 [サブスクリプションメニュー](./subscription-administration-reference-guide.md)表示されます。
+
+<a name="managing-a-subscription-order" />
 
 ## サブスクリプション注文の管理
 
@@ -63,6 +67,8 @@ Commerce 3.0では、 **注文** および **サブスクリプション** は *
 
     ![支払い履歴を追跡できます。](managing-subscriptions/images/06.png)
 
+<a name="configuring-subscriptions" />
+
 ## サブスクリプションの構成
 
 サブスクリプションを構成するには：
@@ -82,6 +88,8 @@ Commerce 3.0では、 **注文** および **サブスクリプション** は *
       ***サブスクリプションの一時停止を許可** チェックした場合、ユーザーはサブスクリプションを一時停止できます。
 
 1. **保存** ボタンをクリックして変更を適用します。
+
+<a name="commerce-21-and-below" />
 
 ## Commerce 2.1以前
 
@@ -104,6 +112,8 @@ Commerce 3.0では、 **注文** および **サブスクリプション** は *
 1. サブスクリプションの注文が受け入れられたら、手順に従って出荷を作成します。 詳細は、 [シップメントの作成](../shipments/creating-a-shipment.md) を参照してください。
 
 注文が受理されると、 [サブスクリプションメニュー](./subscription-administration-reference-guide.md)表示されます。
+
+<a name="additional-information" />
 
 ## 追加情報
 

@@ -30,6 +30,8 @@ Liferay Commerceを使用すると、ストア商品を個別のサイトペー�
    商品詳細やカテゴリーコンテンツのウィジェットが配置されたレイアウトが2つある場合、Liferayはレイアウトリストに記載された最初のレイアウトをデフォルトとします。
 ```
 
+<a name="additional-information" />
+
 ## 追加情報
 
 * [ストアフロントの作成](./creating-your-storefront.md)

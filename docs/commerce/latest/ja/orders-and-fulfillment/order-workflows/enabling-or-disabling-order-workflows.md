@@ -7,6 +7,8 @@
 
 
 
+<a name="enabling-workflow" />
+
 ## ワークフローを有効にする
 
 承認ワークフローを有効にするには：
@@ -70,11 +72,15 @@
 
 
 
+<a name="disabling-an-order-workflow" />
+
 ## 注文ワークフローを無効にする
 
 注文ワークフローを無効にするには、［**ワークフロー** なし］オプションを選択し、［**保存**］をクリックします。
 
 
+
+<a name="additional-information" />
 
 ## 追加情報
 

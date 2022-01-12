@@ -19,6 +19,8 @@
 * 国
 * 倉庫
 
+<a name="additional-information" />
+
 ## 追加情報
 
 * [チャネルの管理](./managing-channels.md)

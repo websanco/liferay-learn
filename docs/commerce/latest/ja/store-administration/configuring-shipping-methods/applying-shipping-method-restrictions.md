@@ -16,6 +16,8 @@
 
 ストアでは、これらの国への配送が制限されました。 **変動レート** や **FedEx** など、他のすべての配送方法に対してこれらの手順を繰り返します。 拡張ポイントを介して他の運送業者による配送方法（UPS、DHLなど）を追加してLiferay Commerceをカスタマイズする場合、地域ごとに配送を制限する同じ機能を含めることができます。
 
+<a name="additional-information" />
+
 ## 追加情報
 
 * [定額配送方法の使用](./using-the-flat-rate-shipping-method.md)

@@ -2,6 +2,8 @@
 
 Liferay Commerceでは、仮想商品とは、顧客がダウンロードできる非有形の商品です。 例としては、ビデオ、電子出版物、保証、サービス契約などがあります。 他の商品タイプと同様に、在庫が割り当てられ、個別に販売することも、 ［[Product bundle](../products/creating-product-bundles.md) ］または ［[Grouped Product](./creating-a-grouped-product.md)］の一部として販売することもできます。 仮想商品の場合は、ダウンロードの利用規約、利用期間、顧客のダウンロード数の上限、ダウンロードサンプルの有無なども確認できます。
 
+<a name="creating-virtual-products" />
+
 ## 仮想商品の作成
 
 以下の手順に従って、仮想商品を作成します：
@@ -15,6 +17,8 @@ Liferay Commerceでは、仮想商品とは、顧客がダウンロードでき�
 1. 完了したら、 [**送信**] をクリックします。
 
 仮想商品が作成されたら、顧客が購入できるようにする前に、希望するデジタルアセットと関連付けさせ、SKUの［[基本価格](./../../managing-prices/setting-a-products-base-price.md)］を設定し、［[在庫を割り当てる](../../managing-inventory/setting-inventory-by-warehouse.md) ］必要があります。
+
+<a name="configuring-virtual-products" />
 
 ## 仮想商品の設定
 
@@ -47,6 +51,8 @@ Liferay Commerceでは、仮想商品とは、顧客がダウンロードでき�
 1. 完了したら、 ［**保存**］ をクリックします。
 
 各フィールドの詳細は、記事 [仮想商品リファレンス](./virtual-product-reference.md) を参照してください。 また、その他の設定については、一般的な ［ [商品](../products.html) ］の資料を参照してください。
+
+<a name="commerce-21-and-below" />
 
 ## Commerce 2.1以前
 
@@ -105,6 +111,8 @@ Liferay Commerceでは、仮想商品とは、顧客がダウンロードでき�
 商品の在庫を設定する方法については、[倉庫ごとの在庫設定](../../managing-inventory/setting-inventory-by-warehouse.md)を参照してください。
 
 商品の価格とSKUを設定したら、上記の、商品オプションや仕様の追加、または商品画像をアップロードする方法を参照してください。
+
+<a name="additional-information" />
 
 ## 追加情報
 

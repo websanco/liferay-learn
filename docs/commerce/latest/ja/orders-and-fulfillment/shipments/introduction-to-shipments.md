@@ -12,11 +12,15 @@
 
 これにより、ユーザーは自動的に［発送］メニューに移動して、注文の処理を完了します。 処理、発送準備、発送、発送の4つの段階があります。
 
+<a name="processing" />
+
 ## 処理
 
 すべてのアイテムと調達倉庫が選択されると、注文の発送準備が整います。 ここでは、発送業者、追跡番号、配達予定日などの詳細を表示できます。
 
 ![発送メニュー-処理を完了](./introduction-to-shipments/images/05.png)
+
+<a name="ready-to-ship" />
 
 ## 発送準備完了
 
@@ -24,17 +28,23 @@
 
 ![発送メニュー-発送準備](./introduction-to-shipments/images/06.png)
 
+<a name="shipped" />
+
 ## 出荷済み
 
 注文が発送され、配達の確認を待つと、注文は発送フェーズになります。 配信が完了したら、［**発送**］ クリックします。
 
 ![発送メニュー-発送済み](./introduction-to-shipments/images/08.png)
 
+<a name="delivered" />
+
 ## 配達済み
 
 配信が確認されると、「**配達済み**」タブは各フェーズを緑色で完了としてマークします。
 
 ![発送メニュー-発送済み](./introduction-to-shipments/images/09.png)
+
+<a name="completed" />
 
 ## 完了
 
@@ -44,11 +54,15 @@
 
 特定の機能とフィールドの詳細は、 [発送管理リファレンスガイド ](./shipments-management-reference-guide.md) を参照してください。
 
+<a name="liferay-commerce-21-and-below" />
+
 ## Liferay Commerce 2.1以前
 
 Commerce 2.1は、［**コントロールパネル**］から［**注文**］ メニューに アクセスすることを除いては、最新バージョンとほぼ同じです。 発送の準備ができている注文を選択し、［**発送を作成**］ボタンをクリックします。
 
 特定の機能とフィールドの詳細は、 [発送管理リファレンスガイド ](./shipments-management-reference-guide.md) を参照してください。
+
+<a name="liferay-commerce-20-and-below" />
 
 ## Liferay Commerce 2.0以前
 
@@ -99,6 +113,8 @@ Commerce 2.1は、［**コントロールパネル**］から［**注文**］ �
 | 倉庫    | 発送元の倉庫の名前  |
 
 さらに、［(+) Add Shipment］ボタンをクリックすると、注文にさらにアイテムを追加するためのウィンドウが開きます。
+
+<a name="additional-information" />
 
 ## 追加情報
 

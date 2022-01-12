@@ -16,6 +16,8 @@
 
 1. ［**公開**］ をクリックすると、価格表が表示されます。
 
+<a name="commerce-21-and-below" />
+
 ## Commerce 2.1以前
 
 [価格表](./creating-a-price-list.md)を作成したら、商品を追加できます。 この記事では、価格表に商品を追加する2つの方法について説明します。 価格表を介して設定された価格は、関連ユーザーの特定のSKUに対して直接設定されている価格よりも優先されます。
@@ -62,6 +64,8 @@
 ![2.1での価格表への商品の追加](./adding-products-to-a-price-list/images/03.png)
 
 商品（**Premium Brake Fluid**）が価格表（**VIP Customers**）に追加されました。 この価格表または別の価格表に他の商品を追加するには、上記の手順を繰り返します。
+
+<a name="additional-information" />
 
 ## 追加情報
 

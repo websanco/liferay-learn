@@ -6,6 +6,8 @@
    コンテンツの編集時に、関連するアセットのオプションとしてコマース商品を表示するには、検索のインデックスの再構築が必要な場合があります。
 ```
 
+<a name="configure-the-asset-browser-to-search-the-database" />
+
 ## データベースの検索のためにアセットブラウザーを設定する
 
 1. `［Liferay Home］\osgi\marketplace\`に移動します。 `Liferay Home`フォルダーについての詳細は、 [Liferay Home](https://learn.liferay.com/dxp/latest/ja/installation-and-upgrades/reference/liferay-home.html) を参照してください。
@@ -15,12 +17,16 @@
 1. `search.with.database=true`を設定し、jarを更新します。
 1. アプリケーションサーバーを再起動します。
 
+<a name="execute-a-reindex" />
+
 ## インデックスの再構築
 
 インデックスの再構築を行い、関連するアセットがフィルターに入力されていることを確認します。
 
 1. Navigate to the **Control Panel** &rarr; **Configuration** &rarr; **Search** .
 1. ［すべての検索インデックスを再構築］の横にある［**実行**］をクリックします。
+
+<a name="verify-the-availability-of-commerce-products" />
 
 ## コマース商品の在庫状況の確認
 
@@ -41,6 +47,8 @@
 1. 商品をクリックします。
 
 これで、コマース商品を関連するアセットとして利用できるようになります。
+
+<a name="additional-information" />
 
 ## 追加情報
 
