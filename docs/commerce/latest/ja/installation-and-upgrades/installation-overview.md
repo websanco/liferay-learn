@@ -6,7 +6,11 @@ Liferay Commerceは、Liferay DXP上に構築されたデジタルコマース�
 
 インストールをスムーズに行うために、事前に互換性マトリックスと関連するインストール資料を確認してください。
 
-* サポートされているテクノロジーのリストについては、[Liferay DXP 7.3 および Commerce 3.0 互換性マトリクス](https://help.liferay.com/hc/en-us/articles/360049238151) をご覧ください。 <!-- * See the \[Liferay DXP 7.3 Deployment Checklist\]() for information about Liferay DXP architecture and performance tuning guidelines. --> ## Liferay Commerceから
+* サポートされているテクノロジーのリストについては、[Liferay DXP 7.3 および Commerce 3.0 互換性マトリクス](https://help.liferay.com/hc/en-us/articles/360049238151) をご覧ください。
+
+<!-- * See the \[Liferay DXP 7.3 Deployment Checklist\]() for information about Liferay DXP architecture and performance tuning guidelines. -->
+
+## Liferay Commerceから
 
 Liferay Commerce 3.0は、Liferay Portal 7.3 CE GA6とLiferay DXP 7.3 GA1がバンドルされています。 コミュニティー版には、基本的なバージョンのCommerceがバンドルされており、エンタープライズ版には、フル機能のエンタープライズ Commerceがバンドルされています。 CE版、エンタープライズ版ともに、Dockerイメージやダウンロード可能なバンドルとして提供されています。
 
