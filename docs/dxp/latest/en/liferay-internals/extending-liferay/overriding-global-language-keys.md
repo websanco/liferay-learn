@@ -39,11 +39,63 @@ category.cms=Content Management
 ...
 ```
 
+## Language Override UI
+
+```{note}
+Using this UI is the recommended approach for overriding language keys. This tool is available in Liferay DXP U4 (Update 4) and above. See [Overriding Language Keys Programmatically](#overriding-language-keys-programmatically) for the previous way.
+```
+
+Use the Language Override tool to override existing language keys or add new language keys. Note that these override changes take place at the Instance level of [Configuration Scope](../../system-administration/configuring-liferay/understanding-configuration-scope.md).
+
+### Overriding a Language Key
+
+To override a language key,
+
+1. Open the Global Menu (![Global Menu](../../images/icon-applications-menu.png)). Navigate to *Control Panel* &rarr; *Configuration* &rarr; *Language Override*.
+
+2. Use the search bar to find the key you wish to change. For example, maybe you want to change the `home` key found at the top of the Product Menu. Search for the term `home`.
+
+    ![Search for the term `home` in the Language Override UI.](./overriding-global-language-keys/images/01.png)
+
+    Note, the search bar only searches within the selected locale. Use the locale drop-down menu to change languages. For example, select `en-US` to search for a language key within US English language keys. 
+
+3. Locate and click on the language key. A new window will open. Input a new language key for the locale you want to override. Note, the maximum length is 1,000 characters. Click *Save* at the bottom of the page. 
+
+    ![Input a new language key for the locale you want to override.](./overriding-global-language-keys/images/02.png)
+
+4. The `home` language key is now overriden.
+
+    ![The `home` language key is now overriden.](./overriding-global-language-keys/images/03.png)
+
+### Modifying a Language Override
+
+To modify an existing language override,
+
+1. Open the Global Menu (![Global Menu](../../images/icon-applications-menu.png)). Navigate to *Control Panel* &rarr; *Configuration* &rarr; *Language Override*.
+
+1. Click *Filter and Order* and select *Override*. A list of overriden language keys is displayed.
+
+1. Click on the language key you wish to modify. A new window will open.
+
+1. Input your changes and click *Save* at the bottom of the page. Or click *Clear All Overrides* if you wish to remove all overrides and revert back to the original language keys.
+
+### Adding a Language Key
+
+To add a language key,
+
+1. Open the Global Menu (![Global Menu](../../images/icon-applications-menu.png)). Navigate to *Control Panel* &rarr; *Configuration* &rarr; *Language Override*.
+
+1. Click the *Add* button (![Add button](../../images/icon-add.png)) and a new window will open.
+
+1. Give an input for the key and at least one language translation. Click *Save* when finished.
+
+## Overriding Language Keys Programmatically
+
 In Liferay DXP/Portal 7.4+, you can declare overrides using metadata. In earlier versions, Java classes declare the overrides.
 
 If your version is earlier than 7.4, skip ahead to [Overriding in Earlier Versions](#overriding-in-earlier-versions). Otherwise, read on.
 
-## Deploy the Example for 7.4+
+### Deploy the Example for 7.4+
 
 This example changes the `home` language key setting to this:
 
@@ -95,15 +147,15 @@ Here's how to deploy the example:
 
 1. Click the menu icon (![Menu](../../images/icon-menu.png)). The home icon label uses the custom language key value.
 
-    ![The home icon now uses the custom language key value.](./overriding-global-language-keys/images/01.png)
+    ![The home icon now uses the custom language key value.](./overriding-global-language-keys/images/04.png)
 
 1. The example includes custom language key values for multiple locales. For example, use the language selector to select Brazilian Portuguese or Japanese to see the customization in that locale. The module overrides language keys for these locales too.
 
-    ![A custom language key is also used for Brazilian Portuguese and Japanese.](./overriding-global-language-keys/images/02.png)
+    ![A custom language key is also used for Brazilian Portuguese and Japanese.](./overriding-global-language-keys/images/05.png)
 
 Now that you've seen the example, here's how it works. 
 
-## Create a Language Properties File
+### Create a Language Properties File
 
 Select the keys you want to override. The example module overrides the `home` language key.
 
@@ -123,7 +175,7 @@ Language[_xx_XX].properties
 
 For example, if you're overriding Japanese, use `Language_ja.properties`.
 
-## Declare the Override in the Bnd File
+### Declare the Override in the Bnd File
 
 In your module's `bnd.bnd` file, specify your language resource provider capability. Here is the example's `Provide-Capability` header:
 
@@ -150,7 +202,7 @@ Provide-Capability:\
 
 Deploy the module to see your new language key values.
 
-## Overriding in Earlier Versions
+### Overriding in Earlier Versions
 
 On Liferay DXP/Portal versions earlier than 7.4, overriding global language keys requires a [language properties file](#create-a-language-properties-file) and a `java.util.ResourceBundle` for each translation being customized. Learn more by deploying the following example and examining its code.
 
@@ -158,7 +210,7 @@ On Liferay DXP/Portal versions earlier than 7.4, overriding global language keys
 Many of the language keys are in the global language key files, but some may be located in specific application modules. The process of [overriding module language keys in earlier versions](./overriding-module-language-keys.md) is different from overriding the global keys.
 ```
 
-### Deploy the Example for Earlier Versions
+#### Deploy the Example for Earlier Versions
 
 This example changes the `publish` language key setting to this:
 
@@ -204,15 +256,15 @@ Here's how to deploy the example:
 
 1. Navigate to a Site page and click the edit icon (![Edit](../../images/icon-edit.png)). The publish button shows the custom language key.
 
-    ![The publish button now uses the custom language key.](./overriding-global-language-keys/images/03.png)
+    ![The publish button now uses the custom language key.](./overriding-global-language-keys/images/06.png)
 
 1. Use the language selector to select Brazilian Portuguese or Japanese to see the custom language key. The module overrides language keys for each locale you include in the module.
 
-    ![A custom language key is also used for Brazilian Portuguese and Japanese.](./overriding-global-language-keys/images/04.png)
+    ![A custom language key is also used for Brazilian Portuguese and Japanese.](./overriding-global-language-keys/images/07.png)
 
 Like the 7.4+ example, this module specifies custom values in language key files. Instead of using metadata (a `bnd.bnd` file header) to declare the override, however, the module uses `ResourceBundle` classes.
 
-### Create Resource Bundle Classes
+#### Create Resource Bundle Classes
 
 Each locale you're overriding requires a class that extends `java.util.ResourceBundle`. Here's the example resource bundle class for the `en_US` locale:
 
