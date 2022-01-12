@@ -9,6 +9,7 @@ However, in order to take full advantage of DXP Cloud's capabilities, there are 
 * [Set up teams](#set-up-teams) to manage membership and permissions
 * [Set up Single Sign-On](#set-up-sso) to streamline authentication
 * [Add custom domains](#add-custom-domains) to meet your needs
+* [Set Up a Disaster Recovery Environment](#set-up-a-disaster-recovery-environment)
 * [Configure Your Services](#configure-your-services) to behave the way that works best for you
 * [Optimize and tune application performance](#optimize-and-tune-application-performance)
 * [Get started developing on DXP Cloud](#get-started-developing-on-dxp-cloud)
@@ -27,7 +28,7 @@ DXP Cloud supports Signle Sign-On Identity Providers that are compliant with SAM
 
 ## Add Custom Domains
 
-Ensure that your environment on DXP Cloud hosts your own custom domains as needed. DXP Cloud manages your custom domains, allowing you to define certified domains for each environment.
+Ensure that your environment on DXP Cloud hosts your own custom domains as needed. DXP Cloud integrates with your custom domains, allowing you to define certified domains for each environment.
 
 See [Custom Domains](../infrastructure-and-operations/networking/custom-domains.md) for more information.
 
@@ -36,6 +37,10 @@ See [Custom Domains](../infrastructure-and-operations/networking/custom-domains.
 By default, DXP Cloud mitigates downtime from service outages by providing [automatic disaster recovery](../troubleshooting/disaster-recovery-overview.md#automatic-disaster-recovery-strategy) within the same region. However, in the event of a disaster causing an outage in the area servicing your DXP Cloud environments, you should also consider using a fall-back environment (or Disaster Recovery environment) to minimize downtime for Users on your production instance.
 
 [Configure a Diaster Recovery environment](../troubleshooting/configuring-cross-region-disaster-recovery.md) to maintain the most robust possible protection from unplanned downtime. Learn more about automatic and cross-region Disaster Recovery [here](../troubleshooting/disaster-recovery-overview.md).
+
+```{important}
+To set up a Disaster Recovery environment, you must have purchased a separate environment for it as part of your subscription.
+```
 
 ## Configure Your Services
 
@@ -59,7 +64,9 @@ As you begin using Liferay in DXP Cloud, familiarize yourself with the available
 
 * View the [**service popover**](../manage-and-optimize/application-metrics.md#service-popover) and [**Monitoring screen**](../manage-and-optimize/application-metrics.md#extended-application-metrics) to view details about your services and their resource usage. See [Application Metrics](../manage-and-optimize/application-metrics.md) for more information about monitoring your services' performance.
 
-* For production environments, you can also use [Dynatrace integration](../manage-and-optimize/application-metrics.md#advanced-application-metrics-production-only) to use more advanced performance metrics. *Note that this requires your own [Dynatrace account](https://www.dynatrace.com/) to integrate with DXP Cloud.*
+* For production environments, you can also use [Dynatrace integration](../manage-and-optimize/application-metrics.md#advanced-application-metrics-production-only) to use more advanced performance metrics. *Note that this requires a specific Dynatrace add-on to your Liferay Cloud subscription to use.*
+
+You should perform your own performance testing and optimization with your instance on DXP Cloud, the same way as you would tune an on-premises instance. The service data, metrics, and [logging](../troubleshooting/reading-dxp-cloud-service-logs.md) available are all there to help you with your testing.
 
 ## Get Started Developing on DXP Cloud
 
