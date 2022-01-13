@@ -11,7 +11,7 @@ class WebComponent extends HTMLElement {
 	}
 }
 
-const ELEMENT_ID = 'react-headless-chart';
+const ELEMENT_ID = 'x3j8-remote-app';
 
 if (!customElements.get(ELEMENT_ID)) {
 	customElements.define(ELEMENT_ID, WebComponent);
