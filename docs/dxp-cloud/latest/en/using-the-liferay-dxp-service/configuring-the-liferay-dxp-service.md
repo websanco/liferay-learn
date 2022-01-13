@@ -68,7 +68,7 @@ liferay
 The `portal-ext.properties` and `portal-all.properties` files are shared across all environments. You can add any shared properties there and add environment specific properties in each respective `portal-env.properties` file. For more information, see [Portal Property Priority](https://learn.liferay.com/dxp/latest/en/installation-and-upgrades/reference/portal-properties.html#portal-property-priority).
 
 ```{note}
-Portal properties may also be defined as environment variables. See [the environment variables reference](./introduction-to-the-liferay-dxp-service.md#environment-variables-reference) for more information.
+Portal properties may also be defined as environment variables. See [the environment variables reference](./liferay-service-environment-variables.md#environment-variables-reference) for more information.
 ```
 
 ## OSGi Configurations
