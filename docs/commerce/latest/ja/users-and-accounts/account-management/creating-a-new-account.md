@@ -61,7 +61,7 @@
 
 1. ［**保存**］ をクリックします。
 
-新規アカウントは、コントロールパネルを使用して作成されました。 アカウントのアドレスを更新するには、 ［**住所**］ をクリックします。 詳しくは、 [住所をアカウントに追加する](../adding-addresses-to-an-account/README.md#using-the-control-panel) の記事を参照してください。
+新規アカウントは、コントロールパネルを使用して作成されました。 アカウントのアドレスを更新するには、 ［**住所**］ をクリックします。 詳しくは、 [住所をアカウントに追加する](../account-management/adding-addresses-to-an-account.md#using-the-control-panel) の記事を参照してください。
 
 <a name="additional-information" />
 
