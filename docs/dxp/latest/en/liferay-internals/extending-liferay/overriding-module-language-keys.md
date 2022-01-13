@@ -1,7 +1,7 @@
 # Overriding Module Language Keys in Earlier Versions
 
 ```{important}
-For Liferay DXP 7.4 U4 (Update 4) and above, see [Language Override UI](./overriding-global-language-keys.html#Language-Override-UI). If you're working with Liferay DXP/Portal 7.4+, please follow the instructions for [Overriding Global Language Keys](./overriding-global-language-keys.md).
+For Liferay DXP 7.4 U4 (Update 4) and above, the [Language Override tool](../../system-administration/configuring-liferay/changing-language-keys.md) is the recommended approach. If you're working with Liferay DXP/Portal 7.4+, please follow the instructions for [Overriding Global Language Keys](./overriding-global-language-keys.md).
 ```
 
 Overriding Liferay application specific language keys in earlier versions is similar to overriding global language keys in earlier versions but there are additional steps. 
