@@ -15,6 +15,6 @@ Your module is ready to deploy.
 
 ## Additional Information
 
-* [Overriding Global Language Keys](../../../liferay-internals/extending-liferay/overriding-global-language-keys.md)
+* [Overriding Global Language Translations](../../../liferay-internals/extending-liferay/overriding-global-language-translations.md)
 * [Renamed Language Keys](../reference/renamed-language-keys.md)
 * [Upgrading Custom Development](../upgrading-custom-development.md)

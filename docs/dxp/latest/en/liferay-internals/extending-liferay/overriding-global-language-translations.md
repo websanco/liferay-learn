@@ -270,3 +270,4 @@ When you're ready to upgrade to DXP 7.4+, you can continue to use your language 
 ## Related Information
 
 * [Overriding Module Language Translations in Earlier Versions](./overriding-module-language-translations.md)
+* [Changing Language Translations](../../system-administration/configuring-liferay/changing-language-translations.md)

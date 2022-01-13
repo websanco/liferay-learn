@@ -214,3 +214,4 @@ Search the results for resource bundle aggregate services whose ranking is highe
 ## Related Information
 
 * [Overriding Global Language Translations](./overriding-global-language-translations.md)
+* [Changing Language Translations](../../system-administration/configuring-liferay/changing-language-translations.md)

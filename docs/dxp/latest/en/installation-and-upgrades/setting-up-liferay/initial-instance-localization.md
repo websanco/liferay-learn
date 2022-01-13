@@ -45,5 +45,5 @@ You have configured your DXP instance's default language and time zone. If want 
 ## Additional Information
 
 * [Configuring a Virtual Instance Localization](../../system-administration/configuring-liferay/virtual-instances/localization.md)
-* [Overriding Global Language Keys](https://help.liferay.com/hc/en-us/articles/360029122551-Overriding-Global-Language-Keys)
+* [Overriding Global Language Translations](../../liferay-internals/extending-liferay/overriding-global-language-translations.md)
 * [Localizing Your Application](https://help.liferay.com/hc/en-us/articles/360028746692-Localizing-Your-Application)

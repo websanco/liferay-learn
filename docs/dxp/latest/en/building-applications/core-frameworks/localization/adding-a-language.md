@@ -49,7 +49,7 @@ By default, the [`portal.properties`](https://github.com/liferay/liferay-portal/
     sign-in=ስግን እን
     ```
 
-1. Create a language module with the `language.properties` file you created and deploy the module to your Liferay installation. See [Overriding Global Language Keys](../../../../liferay-internals/extending-liferay/overriding-global-language-keys.md) to see a sample project and specific instructions on creating this module.
+1. Create a language module with the `language.properties` file you created and deploy the module to your Liferay installation. See [Overriding Global Language Translations](../../../../liferay-internals/extending-liferay/overriding-global-language-translations.md) to see a sample project and specific instructions on creating this module.
 
 1. Create or modify your `portal-ext.properties` file in your installation's [Liferay Home](../../../../installation-and-upgrades/reference/liferay-home.md) folder. Note, this file overrides the enabled default locales defined in the `portal.properties` file. Therefore list all the languages you plan to use in the `portal-ext.properties` file. Define both `locales` and `locales.enabled`. For example:
 
