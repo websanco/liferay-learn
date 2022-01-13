@@ -117,7 +117,21 @@
                                 </label>
                             </div>
 
-							<div class="custom-control custom-radio">
+                            <div class="custom-control custom-radio">
+                                <label>
+                                    <input
+                                        aria-label="{{ getLanguageLabel(language_code) }}"
+                                        class="custom-control-input"
+                                        name="productName"
+                                        type="radio"
+                                        value="learning-paths"
+                                    />
+
+                                    <span class="custom-control-label">{% trans %}Learning Paths{% endtrans %}</span>
+                                </label>
+                            </div>
+
+                            <div class="custom-control custom-radio">
                                 <label>
                                     <input
                                         aria-label="{{ getLanguageLabel(language_code) }}"
@@ -203,6 +217,10 @@
             pathname: '/dxp-cloud/latest/en/search.html'
         },
         {
+            name: 'learning-paths',
+            pathname: '/learning-paths/latest/en/search.html'
+        },
+        {
             name: 'reference',
             pathname: '/reference/latest/en/search.html'
         }
@@ -210,12 +228,14 @@
 
     let currentDocProduct = 'dxp'
 
-    if (pathname.includes('commerce')) {
-        currentDocProduct = 'commerce';
+    if (pathname.includes('analytics-cloud')) {
+        currentDocProduct = 'analytics-cloud';
+    } else if (pathname.includes('commerce')) {
+        currentDocProduct = 'commerce'
     } else if (pathname.includes('dxp-cloud')) {
         currentDocProduct = 'dxp-cloud'
-    } else if (pathname.includes('analytics-cloud')) {
-        currentDocProduct = 'analytics-cloud'
+    } else if (pathname.includes('learning-paths')) {
+        currentDocProduct = 'learning-paths'
     } else if (pathname.includes('reference')) {
         currentDocProduct = 'reference'
     }
