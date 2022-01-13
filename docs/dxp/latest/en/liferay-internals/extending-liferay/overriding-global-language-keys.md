@@ -3,7 +3,7 @@
 Liferay DXP/Portal implements headings, labels, and messages for the default locale and many other locales using language keys. You can override these keys for any of the locales using new language key values in a module.
 
 ```{note}
-The [Language Override tool](../../system-administration/configuring-liferay/changing-language-keys.md) is the recommended approach for overriding language keys. This tool is available in Liferay DXP U4 (Update 4) and above. Continue reading for the previous way.
+The [Language Override tool](../../system-administration/configuring-liferay/changing-language-translations.md) is the recommended approach for overriding language keys. This tool is available in Liferay DXP U4 (Update 4) and above. Continue reading for the previous way.
 ```
 
 ## Examining the Global Language Keys
