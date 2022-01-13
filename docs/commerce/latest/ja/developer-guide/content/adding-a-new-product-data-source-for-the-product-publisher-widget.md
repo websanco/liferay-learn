@@ -29,7 +29,7 @@
 1. [Acme Commerce Product Data Source](./liferay-m5x7.zip) をダウンロードして解凍します。
 
     ```bash
-    curl https://learn.liferay.com/commerce/latest/en/developer-guide/liferay-m5x7.zip -O
+    curl https://learn.liferay.com/commerce/latest/en/developer-guide/content/liferay-m5x7.zip -O
     ```
 
     ```bash
@@ -86,7 +86,7 @@ public class M5X7CPDataSource implements CPDataSource {
 public String getLabel(Locale locale);
 ```
 
-> このメソッドは、商品データソースが関連商品を検索する方法を説明するテキストラベルを返します。 言語キーでラベルを取得する際のリファレンスについては、 [M5X7CPDataSource.java](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/latest/en/developer-guide/adding-a-new-product-data-source-for-the-product-publisher-widget/resources/liferay-m5x7.zip/m5x7-impl/src/main/java/com/acme/m5x7/internal/commerce/product/data/source/M5X7CPDataSource.java) の実装を参照してください。
+> このメソッドは、商品データソースが関連商品を検索する方法を説明するテキストラベルを返します。 言語キーでラベルを取得する際のリファレンスについては、 [M5X7CPDataSource.java](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/latest/en/developer-guide/content/adding-a-new-product-data-source-for-the-product-publisher-widget/resources/liferay-m5x7.zip/m5x7-impl/src/main/java/com/acme/m5x7/internal/commerce/product/data/source/M5X7CPDataSource.java) の実装を参照してください。
 
 ```java
 public String getName();
@@ -153,7 +153,7 @@ public CPDataSourceResult getResult(
 
 #### 言語キーを`Language.properties`に追加する
 
-モジュール内の [Language.properties](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/latest/en/developer-guide/adding-a-new-product-data-source-for-the-product-publisher-widget/resources/liferay-m5x7.zip/m5x7-impl/src/main/resources/content/Language.properties) ファイルに言語キーとその値を追加します。
+モジュール内の [Language.properties](https://github.com/liferay/liferay-learn/blob/master/docs/commerce/latest/en/developer-guide/content/adding-a-new-product-data-source-for-the-product-publisher-widget/resources/liferay-m5x7.zip/m5x7-impl/src/main/resources/content/Language.properties) ファイルに言語キーとその値を追加します。
 
 ```properties
 products-ending-in-the-same-word=Products Ending in the Same Word
