@@ -15,7 +15,7 @@
    orders-and-fulfillment.md
    store-administration.md
    developer-guide.md
-   get_help
+   get-help.md
 
 
 索引と表

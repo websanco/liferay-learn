@@ -16,7 +16,7 @@ Contents
    store-administration.md
    add-ons-and-connectors.md
    developer-guide.md
-   get_help
+   get-help.md
 
 Indices and tables
 ==================
