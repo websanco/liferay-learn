@@ -1,6 +1,6 @@
 # Changing Language Translations
 
-Use the Language Override tool to override existing language translations or add new language keys and translations. This tool is available in Liferay DXP U4 (Update 4) and above. Note that these override changes take place at the Instance level of [Configuration Scope](./understanding-configuration-scope.md). See [Overriding Global Language Keys](../../liferay-internals/extending-liferay/overriding-global-language-keys.md) for previous Liferay versions.
+Use the Language Override tool to override existing language translations or add new language keys and translations. This tool is available in Liferay DXP U4 (Update 4) and above. Note that these override changes take place at the Instance level of [Configuration Scope](./understanding-configuration-scope.md). See [Overriding Global Language Translations](../../liferay-internals/extending-liferay/overriding-global-language-translations.md) for previous Liferay versions.
 
 ## Overriding a Language Translation
 

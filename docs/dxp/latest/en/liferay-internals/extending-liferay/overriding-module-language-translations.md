@@ -1,14 +1,14 @@
-# Overriding Module Language Keys in Earlier Versions
+# Overriding Module Language Translations in Earlier Versions
 
 ```{important}
-For Liferay DXP 7.4 U4 (Update 4) and above, the [Language Override tool](../../system-administration/configuring-liferay/changing-language-tranlations.md) is the recommended approach. If you're working with Liferay DXP/Portal 7.4+, please follow the instructions for [Overriding Global Language Keys](./overriding-global-language-keys.md).
+For Liferay DXP 7.4 U4 (Update 4) and above, the [Language Override tool](../../system-administration/configuring-liferay/changing-language-tranlations.md) is the recommended approach. If you're working with Liferay DXP/Portal 7.4+, please follow the instructions for [Overriding Global Language Translations](./overriding-global-language-translations.md).
 ```
 
-Overriding Liferay application specific language keys in earlier versions is similar to overriding global language keys in earlier versions but there are additional steps. 
+Overriding Liferay application specific language translations in earlier versions is similar to overriding global language translations in earlier versions but there are additional steps. 
 
-## Examining Module Language Keys
+## Examining Module Language Translations
 
-To override a module's language key, you must first gather information about the module in [Gogo shell](../fundamentals/using-the-gogo-shell.md). For example if you wish to override a language key in the blogs module, `grep` for the keyword "blogs". The Gogo command and output might look like this: 
+To override a module's language translation, you must first gather information about the module in [Gogo shell](../fundamentals/using-the-gogo-shell.md). For example if you wish to override a language translation in the blogs module, `grep` for the keyword "blogs". The Gogo command and output might look like this: 
 
  ```
  g! lb | grep Blogs
@@ -52,7 +52,7 @@ Take note of the module's ID number. Use the `headers` command to get a list of 
 
 Note the `Bundle-SymbolicName`, `Bundle-Version`, and the `Web-ContextPath`. The `Web-ContextPath` value following the `/` is the module's context name.
 
-Use the bundle symbolic name or context name to find the language keys specific to the module. Find the module's JAR file and examine its language keys. Liferay follows this module JAR file naming convention:
+Use the bundle symbolic name or context name to find the language translations specific to the module. Find the module's JAR file and examine its language translations. Liferay follows this module JAR file naming convention:
 
 ```
 [bundle symbolic name]-[version].jar
@@ -66,11 +66,11 @@ Here's where to find the module:
 * `[Liferay Home]/osgi/modules`
 * Source code at [`liferay-[dxp|portal]/modules/apps`](https://github.com/liferay/liferay-portal/tree/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps).
 
-The language property files are in the module's `src/main/resources/content` folder. Identify the language keys you want to override in the `Language[xx_XX].properties` files.
+The language property files are in the module's `src/main/resources/content` folder. Identify the language translations you want to override in the `Language[xx_XX].properties` files.
 
-Note that the language keys for different languages and locales can be identified by the filename ending. For example, `Language_ja.properties` is for Japanese.
+Note that the language translations for different languages and locales can be identified by the filename ending. For example, `Language_ja.properties` is for Japanese.
 
-The example changes the default `Add Blog Entry` language key to a custom key. Now it's time to deploy it. 
+The example changes the default `Add Blog Entry` language translation to a custom translation. Now it's time to deploy it. 
 
 1. Start Liferay DXP. If you don't already have a docker container, use
 
@@ -116,23 +116,23 @@ The example changes the default `Add Blog Entry` language key to a custom key. N
 
     **Password:** `test`
 
-1. Navigate to *Content & Data* &rarr; *Blogs*. Move your cursor over the add icon (![Add](../../images/icon-add.png)). The message now shows the custom language key.
+1. Navigate to *Content & Data* &rarr; *Blogs*. Move your cursor over the add icon (![Add](../../images/icon-add.png)). The message now shows the custom language translation.
 
-    ![The custom language key is now being used.](./overriding-module-language-keys/images/01.png)
+    ![The custom language translation is now being used.](./overriding-module-language-translations/images/01.png)
 
-1. The tutorial code also includes examples for other locales. For example, use the language selector to select Brazilian Portuguese or Japanese to see the custom language key. The module overrides language keys for each locale you include in the module.
+1. The tutorial code also includes examples for other locales. For example, use the language selector to select Brazilian Portuguese or Japanese to see the custom language translation. The module overrides language translations for each locale you include in the module.
 
-    ![A custom language key is also used for Portuguese and Japanese](./overriding-module-language-keys/images/02.png)
+    ![A custom language translation is also used for Portuguese and Japanese](./overriding-module-language-translations/images/02.png)
 
 Now you can see how the code works.
 
 ## Create the Language Properties File
 
-First select the keys you wish to override. For example, the tutorial code overrides the `Add Blog Entry` language key.
+First select the translations you wish to override. For example, the tutorial code overrides the `Add Blog Entry` language translation.
 
-Once you've decided which keys to override, create a language properties file in your module's `src/main/resources/content` folder. In your file define the keys your way. Make sure the filename matches the locale you wish to override. For example, if Japanese, use `Language_ja.properties`.
+Once you've decided which translations to override, create a language properties file in your module's `src/main/resources/content` folder. In your file define the translations your way. Make sure the filename matches the locale you wish to override. For example, if Japanese, use `Language_ja.properties`.
 
-```{literalinclude} ./overriding-module-language-keys/resources/liferay-e6u7.zip/e6u7-impl/src/main/resources/content/Language_ja.properties
+```{literalinclude} ./overriding-module-language-translations/resources/liferay-e6u7.zip/e6u7-impl/src/main/resources/content/Language_ja.properties
 :language: properties
 ```
 
@@ -140,7 +140,7 @@ Once you've decided which keys to override, create a language properties file in
 
 In your module, create a class that extends `java.util.ResourceBundle` for the locale you're overriding. Here's an example resource bundle class for the `en_US` locale:
 
-```{literalinclude} ./overriding-module-language-keys/resources/liferay-e6u7.zip/e6u7-impl/src/main/java/com/acme/e6u7/internal/language/E6U7EnglishResourceBundle.java
+```{literalinclude} ./overriding-module-language-translations/resources/liferay-e6u7.zip/e6u7-impl/src/main/java/com/acme/e6u7/internal/language/E6U7EnglishResourceBundle.java
 :language: java
 :lines: 10-26
 ```
@@ -149,31 +149,31 @@ The class's `_resourceBundle` field is assigned a `ResourceBundle`. The call to 
 
 The class's `@Component` annotation declares it an OSGi `ResourceBundle` service component. Its `language.id` property designates it for the `en_US` locale. 
 
-```{literalinclude} ./overriding-module-language-keys/resources/liferay-e6u7.zip/e6u7-impl/src/main/java/com/acme/e6u7/internal/language/E6U7EnglishResourceBundle.java
+```{literalinclude} ./overriding-module-language-translations/resources/liferay-e6u7.zip/e6u7-impl/src/main/java/com/acme/e6u7/internal/language/E6U7EnglishResourceBundle.java
 :language: java
 :lines: 10
 ```
 
 The class overrides these methods:
 
-**`handleGetObject`:** Looks up the key in the module's resource bundle (which is based on the module's language properties file) and returns the key's value as an `Object`. 
+**`handleGetObject`:** Looks up the translation in the module's resource bundle (which is based on the module's language properties file) and returns the key's value as an `Object`. 
 
 **`getKeys`:** Returns an `Enumeration` of the resource bundle's keys. 
 
-Your resource bundle service component redirects the default language keys to your module's language key overrides.
+Your resource bundle service component redirects the default language translations to your module's language translatio overrides.
 
-**Note:** Module language key overrides for multiple locales require a separate resource bundle class for each locale. For example, the tutorial code has one for English, Japanese, and Portuguese. Each resource bundle must specify its locale in the `language.id` component property definition and in the language file qualified name parameter. For example, here is what they look like for the Japanese locale.
+**Note:** Module language translation overrides for multiple locales require a separate resource bundle class for each locale. For example, the tutorial code has one for English, Japanese, and Portuguese. Each resource bundle must specify its locale in the `language.id` component property definition and in the language file qualified name parameter. For example, here is what they look like for the Japanese locale.
 
 Component definition:
 
-```{literalinclude} ./overriding-module-language-keys/resources/liferay-e6u7.zip/e6u7-impl/src/main/java/com/acme/e6u7/internal/language/E6U7JapaneseResourceBundle.java
+```{literalinclude} ./overriding-module-language-translations/resources/liferay-e6u7.zip/e6u7-impl/src/main/java/com/acme/e6u7/internal/language/E6U7JapaneseResourceBundle.java
 :language: java
 :lines: 10
 ```
 
 Resource bundle assignment:
 
-```{literalinclude} ./overriding-module-language-keys/resources/liferay-e6u7.zip/e6u7-impl/src/main/java/com/acme/e6u7/internal/language/E6U7JapaneseResourceBundle.java
+```{literalinclude} ./overriding-module-language-translations/resources/liferay-e6u7.zip/e6u7-impl/src/main/java/com/acme/e6u7/internal/language/E6U7JapaneseResourceBundle.java
 :dedent: 1
 :language: java
 :lines: 23-24
@@ -181,9 +181,9 @@ Resource bundle assignment:
 
 ## Prioritize Your Module's Resource Bundle
 
-For the target module to use your custom language keys, you must specify your resource bundle in the OSGI manifest header. List your module first to prioritize its resource bundle over the target module resource bundle. This aggregates the two resources together. Here's an example of our tutorial module `com.acme.e6u7.impl` prioritizing its resource bundle over the target module `com.liferay.blogs.web`'s resource bundle:
+For the target module to use your custom language translations, you must specify your resource bundle in the OSGI manifest header. List your module first to prioritize its resource bundle over the target module resource bundle. This aggregates the two resources together. Here's an example of our tutorial module `com.acme.e6u7.impl` prioritizing its resource bundle over the target module `com.liferay.blogs.web`'s resource bundle:
 
-```{literalinclude} ./overriding-module-language-keys/resources/liferay-e6u7.zip/e6u7-impl/bnd.bnd
+```{literalinclude} ./overriding-module-language-translations/resources/liferay-e6u7.zip/e6u7-impl/bnd.bnd
 :language: properties
 :lines: 4-12
 ```
@@ -206,11 +206,11 @@ If your override isn't showing, use [Gogo shell](../fundamentals/using-the-gogo-
 ```
 
 ```{note}
-You can continue to use your language key override in DXP 7.4+ if the language key name is the same---check the [`/modules/apps/portal-language/portal-language-lang/src/main/resources/content/Language[_xx_XX].properties`](https://github.com/liferay/liferay-portal/tree/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/portal-language/portal-language-lang/src/main/resources/content) file. Optionally, you can simplify your module by removing the `ResourceBundle` class and replacing the `Provide-Capability` header in your `bnd.bnd` file with the header demonstrated in the [Overriding Global Language Keys](./overriding-global-language-keys.md#declare-the-oOverride-in-the-bnd-file).
+You can continue to use your language translation override in DXP 7.4+ if the language key name is the same---check the [`/modules/apps/portal-language/portal-language-lang/src/main/resources/content/Language[_xx_XX].properties`](https://github.com/liferay/liferay-portal/tree/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/portal-language/portal-language-lang/src/main/resources/content) file. Optionally, you can simplify your module by removing the `ResourceBundle` class and replacing the `Provide-Capability` header in your `bnd.bnd` file with the header demonstrated in the [Overriding Global Language Translations](./overriding-global-language-translations.md#declare-the-oOverride-in-the-bnd-file).
 ```
 
 Search the results for resource bundle aggregate services whose ranking is higher.
 
 ## Related Information
 
-* [Overriding Global Language Keys](./overriding-global-language-keys.md)
+* [Overriding Global Language Translations](./overriding-global-language-translations.md)
