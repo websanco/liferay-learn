@@ -90,9 +90,6 @@ Disabling an asset type in the Searchable Types configuration means that the que
 More information is included in the next section, as the Searchable Types configuration has important implications for the other clause contributors configuration options.
 
 ### Advanced: Configuring Query Clause Contributors
-<!-- possibly a confusing heading, particularly as it follows ### Choosing which Liferay Assets to Search -->
-<!-- Andre suggests it is not a good idea for most blueprints users to edit the clause contributors. we could move this content into a separate article and link to it from this article -->
-<!-- this must be reworked pending the result of https://issues.liferay.com/browse/LPS-143640 -->
 
 Query clauses are contributed to the ongoing search by Liferay's backend code (and potentially any custom applications deployed in your Liferay instance).
 
@@ -188,5 +185,23 @@ There's more functionality in this screen than first meets the eye:
 
    ![Inspect the document's fields.](./creating-and-managing-search-blueprints/images/13.png)
 
-<!-- TODO: cover the search context attributes accessible in the preview sidebar, gear icon -->
-<!-- SME Question: how much should we say about the search context attributes accessible in the preview sidebar, gear icon. If possible, please provide a list of things we should talk about. -->
+[Some Elements](./search-blueprints-elements-reference.md) read search context attributes that you can provide or override manually. To test Blueprints with these Elements, add search context attributes to the Blueprint preview search by clicking the gear icon (![Gear](../../../images/icon-cog3.png)). Enter the key/value pair for the attribute, then click _Done_. Just keep in mind this attribute is only set for the Blueprint preview and isn't saved with the Blueprint itself. You can configure these attributes on a Search Page using the [Blueprints Search Options](./setting-a-blueprint-on-a-search-page.md) widget.
+
+For example, 
+
+1. Add a new [Vocabulary with a Category](../../../content-authoring-and-management/tags-and-categories.md) called _administrative_.
+1. Add two new [Web Content Articles](../../../content-authoring-and-management/web-content/web-content-articles.md); make sure both have _test_ in the title field. Associate one of them to the category you created.
+1. Create a new Blueprint and add the Conditional Element _Hide Contents in a Category for Guest Users_. You need the Asset Category ID for the Category you created, but you can find that in the Preview window.
+1. Search for _administrative_ in the preview. Expand the document of the Web Content Article with the category, then find the `assetCategoryId` (e.g., 43013).
+1. Use the ID in the Element's configuration.
+1. Open the Preview sidebar's Attributes modal, and enter
+
+   Key: `user.is_signed_in`
+
+   Value: `false`
+
+1. Click _Done_ then enter a search for _test_.
+
+Now only the uncategorized Web Content Article is returned. The other one has been hidden because of the search context attribute that causes the search to behave as if the search User is a Guest.
+
+This example uses an Element that reads the context variable `user.is_signed_in`: by setting a value manually, you're overriding the existing value so that the Blueprint can demonstrate a certain behavior. Because a value already exists in the search context, setting it manually is optional. Other Elements have required custom parameters that do not exist within a normal search request's context. These must be passed manually into the search context for the Element/Blueprint to function properly, whether testing the Blueprint from the preview sidebar or setting the Blueprint for use on a search page.
