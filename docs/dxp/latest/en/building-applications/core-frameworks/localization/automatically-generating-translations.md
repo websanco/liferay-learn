@@ -1,8 +1,8 @@
 # Automatically Generating Translations
 
-Liferay DXP supports about 50 languages out-of-the-box. Each locale has its own [language properties file](https://github.com/liferay/liferay-portal/tree/master/modules/apps/portal-language/portal-language-lang/src/main/resources/content) containing keys for its language.
+Liferay DXP supports 50 languages out-of-the-box. Each locale has its own [language properties file](https://github.com/liferay/liferay-portal/tree/master/modules/apps/portal-language/portal-language-lang/src/main/resources/content) containing keys for its language.
 
-If you have custom language keys in your application, it would be tedious and difficult to create keys for all these different languages. Fortunately, you can use Liferay's Language Builder tool to automatically generate translations. Language Builder leverages Microsoft's Translator API to give you a jump start on creating translations.
+When you create an application with custom language keys, it's tedious and difficult to translate them for all these different languages. Fortunately, you can use Liferay's Language Builder tool to generate translations automatically. Language Builder generates translations using Microsoft's Translator API. 
 
 ```{note}
 The accuracy and correctness of machine translation can vary from language to language. It is up to you on how to make use of these generated translations.
@@ -42,19 +42,19 @@ The accuracy and correctness of machine translation can vary from language to la
    ./gradlew buildLang
    ```
 
-   In your terminal window, you will see Language Builder generate the different language properties files. Note, if you see the error `Translation is disabled because credentials are not specified`, double-check that your subscription key is correct.
+   In your terminal window, Language Builder generates the different language properties files. Note, if you see the error `Translation is disabled because credentials are not specified`, double-check that your subscription key is correct.
 
-2. Navigate to the module's `src/main/resources/content` folder to view each of the translated properties files.
+2. Navigate to the module's `src/main/resources/content` folder to view the translated properties files.
 
-   ![The properties files are found in the src/main/resources/content folder.](./automatically-generating-translations/images/01.png)
+  ![The properties files are found in the src/main/resources/content folder.](./automatically-generating-translations/images/01.png)
 
 ## Adding Your Language Keys
 
 The sample project has one language key in the `Language.properties` file. Add as many language keys as you need for your application, then run Language Builder.
 
-To deploy the language keys to Liferay, see [Overriding Global Language Keys](../../../liferay-internals/extending-liferay/overriding-global-language-keys.md). The instructions are the same whether overriding existing keys or adding new keys to Liferay.
+To deploy the language keys to Liferay, see [Overriding Global Language Keys](../../../liferay-internals/extending-liferay/overriding-global-language-keys.md). The instructions are the same whether overriding existing keys or adding new keys. 
 
-If you want to exclude some languages from being automatically translated, use the `excludedLanguageIds` property in your project's `build.gradle` file. For example, if you wanted to exclude French:
+If you want to exclude some languages from being translated automatically, use the `excludedLanguageIds` property in your project's `build.gradle` file. For example, to include French, 
 
 ```properties
 buildLang {
