@@ -17,7 +17,7 @@ All endpoints and Java methods use the Object's name. In the following examples,
 See [Consuming REST Services](../../../headless-delivery/consuming-apis/consuming-rest-services.md) for more information.
 
 ```{important}
-In Liferay DXP 7.4 GA1, Picklist field values must use the following format in Object API calls: `"samplePicklist": "string"`. However, as of Liferay DXP 7.4 U1, these values must use the following format: `"samplePicklist": {"key": "string"}`.
+In Liferay DXP 7.4 GA1, Picklist field values must use the following format in Object API calls: `"samplePicklist": "string"`. As of Liferay DXP 7.4 U1, the format changes, and values must use this format: `"samplePicklist": {"key": "string"}`.
 ```
 
 ### Company Scoped Objects

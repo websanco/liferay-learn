@@ -40,7 +40,7 @@ Follow these steps to create a Picklist:
 
 ## Adding Picklist Fields to Objects
 
-Once a list is created, you can select it when creating Object fields. Simply select the *Picklist* field type and choose the desired list. See [Adding Fields to Objects](./creating-and-managing-objects/adding-fields-to-objects.md) for more information.
+Once a list is created, you can select it when creating Object fields. Select the *Picklist* field type and choose the desired list. See [Adding Fields to Objects](./creating-and-managing-objects/adding-fields-to-objects.md) for more information.
 
 ![Users can select the Picklist when creating new Object fields.](./using-picklists/images/05.png)
 
