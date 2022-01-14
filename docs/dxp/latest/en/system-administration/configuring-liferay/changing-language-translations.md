@@ -4,48 +4,42 @@ Use the Language Override tool to override existing translations or add new lang
 
 ## Overriding a Translation
 
-To override a translation,
-
 1. Open the Global Menu (![Global Menu](../../images/icon-applications-menu.png)). Navigate to *Control Panel* &rarr; *Configuration* &rarr; *Language Override*.
 
-2. Use the search bar to find the translation you wish to override. For example, maybe you want to override `home` found at the top of the Product Menu. Search for the term `home`.
+2. Use the search bar to find the translation you wish to override. For example, if you want to override `home` found at the top of the Product Menu, search for the term `home`.
 
-    ![Search for the term `home` in the Language Override UI.](./changing-language-translations/images/01.png)
+    ![Search for the term home in the Language Override UI.](./changing-language-translations/images/01.png)
 
-    Note, the search bar searches language keys and only the translations of the selected locale. Use the locale drop-down menu to switch between languages. For example, select `en-US` if you want to search within US English translations. 
+   Note, the search bar searches language keys for the selected locale's translations. Use the locale selector to switch between languages. For example, select `en-US` to search within US English translations. 
 
-3. Locate and click on the translation. A new window will open. You can also click the *Actions* icon (![Actions icon](../../images/icon-actions.png)) to the right of the translation and click *Edit*.
+3. Locate and click on the translation. A new window opens. You can also click the *Actions* (![Actions icon](../../images/icon-actions.png)) &rarr; _Edit_ to the right of the translation. 
 
-4. Input a new translation for the locale you want to override. Click *Save* at the bottom of the page. 
+4. Enter a new translation for the locale you want to override. Click *Save* at the bottom of the page. 
 
-    ![Input a new translation for the locale you want to override.](./changing-language-translations/images/02.png)
+   ![Enter a new translation for the locale you want to override.](./changing-language-translations/images/02.png)
 
-5. The translation for `home` is now overriden.
+5. The translation for `home` is now overridden.
 
-    ![The translation for `home` is now overriden..](./changing-language-translations/images/03.png)
+   ![The translation for home is now overridden.](./changing-language-translations/images/03.png)
 
 ## Modifying a Translation Override
 
-To modify a translation override,
-
 1. Open the Global Menu (![Global Menu](../../images/icon-applications-menu.png)). Navigate to *Control Panel* &rarr; *Configuration* &rarr; *Language Override*.
 
-2. Click *Filter and Order* and select *Override*. A list of overriden translations are displayed.
+2. Click *Filter and Order* and select *Override*. A list of overridden translations are displayed.
 
-3. Click on the translation you wish to modify. A new window will open. You can also click the *Actions* icon (![Actions icon](../../images/icon-actions.png)) to the right of the translation and click *Edit*. 
+3. Select the translation you wish to modify. A new window opens. You can also click the *Actions* (![Actions icon](../../images/icon-actions.png)) &rarr; _Edit_ to the right of the translation. 
 
-    If overrides exists, the *Actions* icon (![Actions icon](../../images/icon-actions.png)) also presents an option to remove translation overrides. Click *Remove all translation overrides* and click *OK* in the pop-up window to remove all overrides. If an override exists in the locale you have selected, you will see an additional option to remove just that locale's translation (e.g. *Remove translation override for en_US* if US English is selected).
+   If overrides exist, the *Actions* icon (![Actions icon](../../images/icon-actions.png)) also has an option to remove translation overrides. Click *Remove all translation overrides* and click *OK* in the pop-up window to remove all overrides. If an override exists in the locale you have selected, there's an additional option to remove just that locale's translation (e.g. *Remove translation override for en_US* if US English is selected).
 
-    ![The Actions icon presents the option to remove translation overrides.](./changing-language-translations/images/04.png)
+   ![The Actions icon has an option to remove translation overrides.](./changing-language-translations/images/04.png)
 
-4. Input your changes and click *Save* at the bottom of the page. If you wish to remove all overrides and revert back to the original translations, click *Clear All Overrides*.
+4. Enter your changes and click *Save* at the bottom of the page. If you wish to remove all overrides and revert back to the original translations, click *Clear All Overrides*.
 
 ## Adding a Language Key and Translation
 
-To add a language key and translation,
-
 1. Open the Global Menu (![Global Menu](../../images/icon-applications-menu.png)). Navigate to *Control Panel* &rarr; *Configuration* &rarr; *Language Override*.
 
-1. Click the *Add* button (![Add button](../../images/icon-add.png)) and a new window will open.
+1. Click *Add* (![Add button](../../images/icon-add.png)) and a new window opens.
 
-1. Give an input for the key and at least one language translation. Note, the maximum length is 1,000 characters for the key. Click *Save* when finished.
+1. Enter a key and at least one language translation. Note, the maximum length is 1,000 characters for the key. Click *Save* when finished.
