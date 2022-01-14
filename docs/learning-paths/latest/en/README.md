@@ -1,5 +1,7 @@
 # Learning Paths
 
+Coming soon!
+
 ```{toctree}
 :maxdepth: 6
 ```
