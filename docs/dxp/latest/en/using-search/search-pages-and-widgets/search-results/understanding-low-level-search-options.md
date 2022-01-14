@@ -40,7 +40,7 @@ These *Contributors* are components implementing the `com.liferay.portal.search.
 
 **Federated Search Key:** Enter the key of an alternate search this widget is participating in. If not set, this widget participates in the default search. This value is usually the name of an application-defined index.
 
-**[Liferay 7.4+] Attributes:** This section is useful only for development and testing purposes. Use it to add key/value attributes to the search context that can be read in your custom code (e.g., `searchContext.getAttribute("key")`).
+**[Liferay 7.4+] Attributes:** Add key/value attributes to the search context. This section is most useful for [applying a Search Blueprint](../../liferay-enterprise-search/search-experiences/using-a-search-blueprint-on-a-search-page.md) to a Search Page. It can also be used for development and testing purposes: add attributes to the page's search context that can be read in your custom code (e.g., `searchContext.getAttribute("key")`).
 
 ## Displaying Low Level Search Results
 
