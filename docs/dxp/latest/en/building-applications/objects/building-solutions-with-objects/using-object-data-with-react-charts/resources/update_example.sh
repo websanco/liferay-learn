@@ -7,15 +7,20 @@ function generate_app {
 
 	curl -Ls https://github.com/liferay/liferay-portal/raw/master/tools/create_remote_app.sh | bash -s x3j8-remote-app react
 
+	rm -R ../x3j8-remote-app/src
+
 	cd x3j8-overlay
 
-	cp package.json -R ../x3j8-remote-app
-
-	cp src -R ../x3j8-remote-app
-
-	cp public -R ../x3j8-remote-app
+	cp -R src ../x3j8-remote-app
 
 	cd ../x3j8-remote-app
+	
+	rm -R ../x3j8-overlay
+
+	sed -i '5 a \
+	  "fusioncharts": "^3.18.0", \
+	  "react-fusioncharts": "^3.1.2",' \
+	  package.json
 
 	yarn install
 }
