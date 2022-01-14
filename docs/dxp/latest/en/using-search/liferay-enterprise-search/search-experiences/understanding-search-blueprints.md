@@ -9,7 +9,7 @@ Search Blueprints is the first feature of the Search Experiences toolset. Use Bl
 
 If you need control over what should be searched or how the search should work, Search Blueprints is the feature you need.
 
-The configurability of the default Liferay search experience has evolved over time. In the latest Liferay DXP release, out of the box you can tune the search results (Synonym Sets and Result Rankings), add Custom Facets, and use Custom Filters to perform complex search customizations. These configurations have limits, though, and many search-heavy sites will require customizations of the search infrastructure's backend code. This requires deploying Java-based modules to Liferay's OSGi runtime.
+The configurability of the default Liferay search experience has evolved over time. In the latest Liferay DXP release, out-of-the-box you can tune the search results ([Synonym Sets](../../search-administration-and-tuning/synonym-sets.md) and [Result Rankings](../../search-administration-and-tuning/result-rankings.md)), add [Custom Facets](../../search-pages-and-widgets/search-facets/custom-facet.md), and use [Custom Filters](../../search-pages-and-widgets/search-results/custom-filter-examples.md) to perform complex search customizations. These configurations have limits, though, and many search-heavy sites will require customizations of the search infrastructure's backend code. This requires deploying Java-based modules to Liferay's OSGi runtime.
 
 Instead of building on this code-heavy feature set, Blueprints takes a different approach, for the user who needs near-complete control over the search page's query without deploying custom code. Blueprints offers a UI-based configuration experience that can satisfy almost every use case (if not in the earliest iteration of the feature, in subsequent versions where the feature set is even more robust).
 
@@ -23,7 +23,7 @@ Simply put, Blueprints are comprised of Elements, with some additional configura
 
 To create a Blueprint, start with the use case you have in mind. What do you need to change about the default search page experience? Then look at the provided Elements and see if they can be used to start building your customization. Once you've planned the Blueprint, it's time to create it.
 
-For more details see [Creating and Managing Blueprints](./creating-and-managing-search-blueprints.md) and [Planning a Blueprint](./planning-a-blueprint.md) (not yet written).
+For more details see [Creating and Managing Blueprints](./creating-and-managing-search-blueprints.md) and [Planning a Blueprint](./planning-a-blueprint.md).
 
 ## What Can I Do in the Blueprints UI?
 

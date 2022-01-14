@@ -59,11 +59,11 @@ Add Elements to begin adding query clauses to the Blueprint:
    ![This Element gives a boost of ten to content found on sites the searching user is a member of.](./creating-and-managing-search-blueprints/images/04.png)
 1. Add as many Elements as needed to configure the search query as desired.
 
-   See [Search Blueprints Elements Reference](./search-blueprints-elements-reference.md) (not yet written) for a description of each out of the box Element.
+   See [Search Blueprints Elements Reference](./search-blueprints-elements-reference.md) for a description of each out of the box Element.
 
 1. If any custom Elements are required, add the Custom JSON Element to the Query Builder and write the query clause you need.
 
-   See [Creating Elements](./creating-elements.md) (not yet written) to learn about building Custom JSON Elements.
+   See [Creating Elements](./creating-elements.md) to learn about building Custom JSON Elements.
 
 <!-- TODO: Remove not yet written statements when written -->
 
@@ -185,7 +185,7 @@ There's more functionality in this screen than first meets the eye:
 
    ![Inspect the document's fields.](./creating-and-managing-search-blueprints/images/13.png)
 
-[Some Elements](./search-blueprints-elements-reference.md) read search context attributes that you can provide or override manually. To test Blueprints with these Elements, add search context attributes to the Blueprint preview search by clicking the gear icon (![Gear](../../../images/icon-cog3.png)). Enter the key/value pair for the attribute, then click _Done_. Just keep in mind this attribute is only set for the Blueprint preview and isn't saved with the Blueprint itself. You can configure these attributes on a Search Page using the [Blueprints Search Options](./setting-a-blueprint-on-a-search-page.md) widget.
+[Some Elements](./search-blueprints-elements-reference.md) read search context attributes that you can provide or override manually. To test Blueprints with these Elements, add search context attributes to the Blueprint preview search by clicking the gear icon (![Gear](../../../images/icon-cog.png)). Enter the key/value pair for the attribute, then click _Done_. Just keep in mind this attribute is only set for the Blueprint preview and isn't saved with the Blueprint itself. You can configure these attributes on a Search Page using the [Blueprints Search Options](./setting-a-blueprint-on-a-search-page.md) widget.
 
 For example, 
 
