@@ -7,7 +7,7 @@ function generate_app {
 
 	curl -Ls https://github.com/liferay/liferay-portal/raw/master/tools/create_remote_app.sh | bash -s x3j8-remote-app react
 
-	rm -R ../x3j8-remote-app/src
+	rm -R x3j8-remote-app/src
 
 	cd x3j8-overlay
 
