@@ -1,9 +1,9 @@
 # Using a Search Blueprint on a Search Page
 
-<!--
-If this section is all that's needed in this article (steps for setting the blueprint ID in the LLSO widget), we could maybe add them to Creating and Managing Blueprints, and extract one of the other long sections into its own article. 
-If we need the other sections  (Applying Search Context Attributes) they'll need fleshing out, but I need to know what we expect these use cases to look like.
-If there's additional information we'd like to include here, let me know. -->
+<!-- SME Questions:
+Do we need sections on Applying Search Context Attributes, as I've stubbed out below? If so they'll need fleshing out and examples, but I need to know what we expect these use cases to look like.
+
+Also, are there details I am missing? -->
 
 By default, a [Search Page](../../search-pages-and-widgets/working-with-search-pages.md) does not have a [Search Blueprint](./understanding-search-blueprints.md) associated with it. To make the Search Page react to your Search Blueprint,
 
@@ -31,6 +31,8 @@ Blueprints are applied to the page using search context attributes, as described
 
 1. [Create a Blueprint](./creating-and-managing-search-blueprints.md) with the following Element:
    - Element Name: 
+
+<!-- So far I haven't found a reasonable use case for this -->
 
 ## Applying Search Context Attributes Programmatically
 
