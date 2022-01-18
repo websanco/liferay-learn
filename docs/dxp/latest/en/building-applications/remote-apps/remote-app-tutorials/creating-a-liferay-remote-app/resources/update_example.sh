@@ -8,6 +8,10 @@ function generate_app {
 	cd liferay-h5v7.zip
 
 	curl -Ls https://github.com/liferay/liferay-portal/raw/master/tools/create_remote_app.sh | bash -s liferay-hello-world react
+
+	cd liferay-hello-world
+
+	rm -R node_modules
 }
 
 function main {
