@@ -13,7 +13,7 @@ migrating-to-dxp-cloud/connecting-the-vpn.md
 migrating-to-dxp-cloud/next-steps-after-migration.md
 ```
 
-Liferay DXP Cloud is a secure and reliable enterprise platform built for high availablity, scalability, and performance. 
+Liferay DXP Cloud is a secure and reliable enterprise platform built for high availablity, scalability, and performance. Running a Liferay DXP instance on DXP Cloud allows you to take advantage of [its features](./getting-started/introduction-to-dxp-cloud.md) to ensure a safe, reliable, and smooth experience for your users.
 
 Migrating to DXP Cloud from an on-premises Liferay DXP environment entails moving your entire instance into an environment running on DXP Cloud, including all of your data (in documents or the database), configurations, and customizations (such as OSGi modules or plugins). This also involves working and deploying changes with a Git repository that directly integrates with your DXP Cloud environment(s).
 
