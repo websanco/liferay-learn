@@ -1,7 +1,7 @@
 # Overriding Module Language Translations in Earlier Versions
 
 ```{important}
-For Liferay DXP 7.4 U4 (Update 4) and above, the [Language Override tool](../../system-administration/configuring-liferay/changing-language-tranlations.md) is the recommended approach. If you're working with Liferay DXP/Portal 7.4+, please follow the instructions for [Overriding Global Language Translations](./overriding-global-language-translations.md).
+For Liferay DXP 7.4 U4 (Update 4) and above or Liferay Portal 7.4 GA8 and above, the [Language Override tool](../../system-administration/configuring-liferay/changing-language-tranlations.md) is the recommended approach. If you're working with Liferay DXP/Portal 7.4+, please follow the instructions for [Overriding Global Language Translations](./overriding-global-language-translations.md).
 ```
 
 Overriding Liferay application specific language translations in earlier versions is similar to overriding global language translations in earlier versions but there are additional steps. 
