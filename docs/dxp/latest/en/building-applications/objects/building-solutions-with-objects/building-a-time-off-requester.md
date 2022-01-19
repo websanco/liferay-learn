@@ -1,11 +1,11 @@
 # Building a Time Off Requester
 
-With Liferay Objects, you can build and extend applications without needing to develop code or deploy modules. The following tutorial creates a basic Time Off Request application using Liferay [Objects](../../objects.md) and [Picklists](../using-picklists.md).
+Liferay Objects empowers you to build entire applications without writing code or deploying modules. Here, you'll create a Time Off Request application using Liferay [Objects](../../objects.md) and [Picklists](../using-picklists.md).
 
-First, you'll [add a Picklist](#adding-a-department-picklist) for defining department values. Then, you'll create two Objects, one for [Time Off Requests](#adding-a-time-off-request-object) and another for [Employees](#adding-an-employee-object). During this process, you'll relate these Objects to one another and add a webhook to the Time Off Request Object. Finally, you'll [design custom layouts](#designing-custom-object-layouts) for display the relationship fields.
+First, you'll [add a Picklist](#adding-a-department-picklist) for defining department values. Then, you'll create two Objects, one for [Time Off Requests](#adding-a-time-off-request-object) and another for [Employees](#adding-an-employee-object). During this process, you'll relate these Objects to one another and add a webhook to the Time Off Request Object. Finally, you'll [design custom layouts](#designing-custom-object-layouts) to display the relationship fields.
 
 ```{note}
-Due to limitations with extending system Objects, creating an Employee Object is necessary for relating requests with user profiles. 
+Because of limitations with extending system Objects, you must create an Employee Object to relate requests with user profiles. 
 ```
 
 ![Build a Time Off Request application.](./building-a-time-off-requester/images/01.png)
@@ -18,7 +18,7 @@ docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_DXP_DOCKER_IMAGE$]
 
 ## Adding a Department Picklist
 
-Follow these steps to create a Picklist to represent company departments:
+Your Picklist represents company departments:
 
 1. Open the *Global Menu* (![Global Menu](../../../images/icon-applications-menu.png)), click on the *Control Panel* tab, and go to *Picklists*.
 
@@ -31,8 +31,6 @@ Follow these steps to create a Picklist to represent company departments:
 You can now use the Picklist as a field in the Time Off Request Object.
 
 ## Adding a Time Off Request Object
-
-Follow these steps to create an Object for time off requests:
 
 1. Open the *Global Menu* (![Global Menu](../../../images/icon-applications-menu.png)), click on the *Control Panel* tab, and go to *Objects*.
 
@@ -55,7 +53,7 @@ Follow these steps to create an Object for time off requests:
 
    ![Add the Start Date, End Date, Department, and Comments fields to the Object.](./building-a-time-off-requester/images/03.png)
 
-1. Click on the *Actions* tab and add this action.
+1. Click the *Actions* tab and add this action.
 
    | Field | Value |
    | --- | --- |
@@ -64,11 +62,11 @@ Follow these steps to create an Object for time off requests:
    | Then | Webhook |
    | URL | Enter a test webhook URL from either your app or a site like, https://webhook.site. |
 
-   This action sends data to an eternal system whenever Time Off Request entries are added. See [Defining Actions](../creating-and-managing-objects/defining-actions.md) for more information.
+   This action sends data to an external system whenever Time Off Request entries are added. See [Defining Actions](../creating-and-managing-objects/defining-actions.md) for more information.
 
    ![Create a webhook action that's triggered after requests are added.](./building-a-time-off-requester/images/04.png)
 
-1. Click on the *Details* tab and set the following Entry Display and Scope settings.
+1. Click the *Details* tab and set the following Entry Display and Scope settings.
 
    | Field | Value |
    | --- | --- |
@@ -81,8 +79,6 @@ Follow these steps to create an Object for time off requests:
 Next, you'll create an Employee Object and relate it to the Time Off Request Object, so you can associate request entries with individual users.
 
 ## Adding an Employee Object
-
-Follow these steps to create an Object for employee entities:
 
 1. Open the *Global Menu* (![Global Menu](../../../images/icon-applications-menu.png)), click on the *Control Panel* tab, and go to *Objects*.
 
@@ -103,7 +99,7 @@ Follow these steps to create an Object for employee entities:
 
    ![Add the Name and Email fields to the Object.](./building-a-time-off-requester/images/05.png)
 
-1. Click on the *Relationships* tab and add this relationship.
+1. Click the *Relationships* tab and add this relationship.
 
    | Field | Value |
    | --- | --- |
@@ -113,12 +109,12 @@ Follow these steps to create an Object for employee entities:
    | Object | TimeOffRequest |
 
    ```{note}
-   When you create this relationship, a field is automatically added to the Time Off Request Object.
+   When you create this relationship, you add a foreign key field automatically to the Time Off Request Object.
    ```
 
    ![Add a One to Many Relationship with the Time Off Request Object.](./building-a-time-off-requester/images/06.png)
 
-1. Click on the *Details* tab and set the following Entry Display and Scope settings.
+1. Click the *Details* tab and set the following Entry Display and Scope settings.
 
    | Field | Value |
    | --- | --- |
@@ -132,21 +128,19 @@ Once published, you can create entries via the Liferay UI or Headless APIs. Howe
 
 ## Designing Custom Object Layouts
 
-Object layouts determine how fields are organized when creating and editing Object entries. Since relationships are not displayed in default Object layouts, you'll need to design custom layouts for both Objects to display their relationship fields.
-
-Follow these steps to design custom layouts.
+Object layouts determine how fields are organized when creating and editing Object entries. Since relationships are not displayed in default Object layouts, you must design custom layouts for both Objects to display their relationship fields.
 
 ### For Time Off Requests
 
 1. Navigate to the *Objects* application and select the *Time Off Request* Object.
 
-1. Click on the *Layouts* tab, click the *Add* button ( ![Add Button](../../../images/icon-actions.png) ), enter *Request* for name, and click *Save*.
+1. Click the *Layouts* tab, click the *Add* button ( ![Add Button](../../../images/icon-actions.png) ), enter *Request* for name, and click *Save*.
 
-1. Select the new *Layout* and check the *Mark as Default* box.
+1. Select the new Layout and check the *Mark as Default* box.
 
    ![Add a new Layout and mark it as the Object's default layout.](./building-a-time-off-requester/images/07.png)
 
-1. Click on the *Layout* tab and add a *tab* with two *blocks*.
+1. Click the *Layout* tab and add a *tab* with two *blocks*.
 
    | Element | Label | Type |
    | --- | --- | --- |
@@ -165,7 +159,7 @@ Follow these steps to design custom layouts.
 
 1. Click *Save*.
 
-Once saved, the new layout is used in the Liferay UI for creating and editing Time Off Request entries. If employee entries exist, you can relate them to individual requests.  
+Once saved, the new layout is used in the Liferay UI for creating and editing Time Off Request entries. If employee entries exist, you can relate them to individual requests.
 
 ![The layout is used for creating and editing Time Off Request entries.](./building-a-time-off-requester/images/09.png)
 
@@ -173,11 +167,11 @@ Once saved, the new layout is used in the Liferay UI for creating and editing Ti
 
 1. Navigate to the *Objects* application and select the *Employee* Object.
 
-1. Click on the *Layouts* tab, click the *Add* button ( ![Add Button](../../../images/icon-actions.png) ), enter *Employee Info* for name, and click *Save*.
+1. Click the *Layouts* tab, click the *Add* button ( ![Add Button](../../../images/icon-actions.png) ), enter *Employee Info* for name, and click *Save*.
 
-1. Select the new *Layout* and check the *Mark as Default* box.
+1. Select the new Layout and check the *Mark as Default* box.
 
-1. Click on the *Layout* tab and add a Fields tab with one block.
+1. Click the *Layout* tab and add a Fields tab with one block.
 
    | Element | Label | Type |
    | --- | --- | --- |
@@ -198,11 +192,11 @@ Once saved, the new layout is used in the Liferay UI for creating and editing Ti
 
 Once saved, the new layout is used in the Liferay UI for creating and editing employee entries. If request entries exist, you can relate them to employee entries in the *Time Off Requests* tab. Here, you can also view all requests related to the select employee entry.
 
-![The layout is used for creating and editing employee entries.](./building-a-time-off-requester/images/11.png)
+![The layout is used to create and edit employee entries.](./building-a-time-off-requester/images/11.png)
 
 ## Adding Object Entries
 
-Now that everything's set up, you can use the Liferay UI and Headless APIs to add data to the Time Off Request and Employee Objects.
+Now that your app is complete, you can use the Liferay UI and Headless APIs to add data to the Time Off Request and Employee Objects.
 
 ### Adding Employees
 
@@ -243,11 +237,11 @@ Follow these steps to add request entries via the Liferay UI:
 
 1. Click *Save*.
 
-After saving an entry, you remain are redirected to the entry's edit screen. To add more entries, return to the Time Off Requests main page. When time requests are added, the Object's webhook is triggered and posts the entry's data to the set URL.
+After saving an entry, you see the entry's edit screen. To add more entries, return to the Time Off Requests main page. When time requests are added, the Object's webhook is triggered and posts the entry's data to the set URL.
 
-Once requests are added and related to employee entries, you can view them in the Employees application. Simply open the *Global Menu* (![Global Menu](../../../images/icon-applications-menu.png)), click on the *Control Panel* tab, and select *Employees*. Select the related *entry* and click on the *Time Off Requests* tab.
+Once requests are added and related to employee entries, you can view them in the Employees application. Open the *Global Menu* (![Global Menu](../../../images/icon-applications-menu.png)), click on the *Control Panel* tab, and select *Employees*. Select the related *entry* and click the *Time Off Requests* tab.
 
-![View an employ's related requests in the Time Off Requests tab.](./building-a-time-off-requester/images/12.png)
+![View an employee's related requests in the Time Off Requests tab.](./building-a-time-off-requester/images/12.png)
 
 ## Additional Information
 
