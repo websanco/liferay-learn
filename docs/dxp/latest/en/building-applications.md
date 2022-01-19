@@ -9,6 +9,7 @@ building-applications/developing_a_rest_web_api.rst
 building-applications/developing-a-java-web-application.md
 building-applications/core-frameworks.md
 building-applications/data-frameworks.md
+building-applications/remote-apps.md
 building-applications/tooling.rst
 building-applications/reference.md
 building-applications/app-builder.md
