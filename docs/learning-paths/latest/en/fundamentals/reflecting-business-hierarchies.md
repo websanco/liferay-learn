@@ -1,3 +1,3 @@
-# Course 7: Reflecting Business Hierarchies
+# Module 7: Reflecting Business Hierarchies
 
 Coming soon!

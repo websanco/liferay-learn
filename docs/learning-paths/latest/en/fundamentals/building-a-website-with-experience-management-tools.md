@@ -1,3 +1,3 @@
-# Course 9: Building a Website with Experience Management Tools
+# Module 9: Building a Website with Experience Management Tools
 
 Coming soon!

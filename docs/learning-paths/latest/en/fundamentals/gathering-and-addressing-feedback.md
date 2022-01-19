@@ -1,3 +1,3 @@
-# Course 6: Gathering and Addressing Feedback
+# Module 6: Gathering and Addressing Feedback
 
 Coming soon!
