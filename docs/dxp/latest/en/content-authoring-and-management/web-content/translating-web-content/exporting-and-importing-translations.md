@@ -1,50 +1,58 @@
 # Exporting and Importing Translations
 
-Exporting your web content to the XLIFF format is an alternative to manual translation in Liferay. XLIFF (1.2 or 2.0) is the main interchange format used for dedicated translation software. Exported translations can be sent to professional translators and imported to provide translations for your content.
+> Available for Liferay DXP 7.3+ and Liferay Portal 7.3+
 
-```{note}
-To export web content for translation or import content translations, you must have *View* and *Update* permissions for the selected content. See [Managing Permissions for Translation](./manually-translating-web-content.md#managing-permissions-for-translation).
+With Liferay, you can export Web Content for translation as `.xliff` or `.xlf` files. These files can then be sent to professional translators to produce your desired translations. Once translated, you can import the translations together as a `.zip` file or individually as `.xliff` or `.xlf` files.
+
+```{important}
+Liferay supports both XLIFF 1.2 and 2.0 files. However, it may not support all features and capabilities those formats provide.
 ```
+
+To export content for translation or import translations, you must have *View* and *Update* permissions for the selected content. See [Managing Permissions for Translation](./manually-translating-web-content.md#managing-permissions-for-translation).
 
 ## Exporting Content for Translation
 
-1. Open the Product menu, and go to *Content & Data* &rarr; *Web Content*.
+Follow these steps to export Web Content for translation:
 
-1. Click the *Actions* menu ( ![Actions button](../../../images/icon-actions.png) ) for the web content you want to translate and select *Export for Translation*. This opens a modal window that you can use to configure your export.
+1. Open the *Site Menu* (![Site Menu](../../../images/icon-product-menu.png)) and go to *Content & Data* &rarr; *Web Content*.
 
-   ![Click on the Actions menu for the web content you want to translate, and select Export for Translation.](./exporting-and-importing-translations/images/01.png)
+1. Click the *Actions* menu ( ![Actions button](../../../images/icon-actions.png) ) for the Web Content you want to translate and select *Export for Translation*. This opens a modal window that you can use to configure your export.
 
-1. Select the Export format (XLIFF 1.2 or XLIFF 2.0)
+   ![Click on the Actions menu for the Web Content you want to translate, and select Export for Translation.](./exporting-and-importing-translations/images/01.png)
 
-1. Specify the web content's original language. This is used as a reference for the translation.
+1. Select an Export format: *XLIFF 1.2* or *XLIFF 2.0*.
 
-1. Select the languages for translation using the checkboxes. 
+1. Specify the Web Content's original language. This is used as a reference for the translation.
 
-   ![Select the languages to which you want to translate the web content.](./exporting-and-importing-translations/images/02.png)
+1. Use the checkboxes to select the languages you want to translate the content into.
+
+   ![Select the languages you want to translate the content into.](./exporting-and-importing-translations/images/02.png)
 
 1. When finished, click *Export* to begin exporting for translation.
 
-Liferay generates a Zip archive for download that contains as many XLIFF files as languages you've selected for translation. These files can be used with compatible translation software to translate your web content.
+Liferay generates a Zip archive for download that contains as many XLIFF files as languages you've selected for translation. These files can be used with compatible translation software to translate your Web Content.
 
 ## Importing Content Translations
 
-Once your translations are ready, follow these steps to import them to your web content.
+Once your translations are ready, follow these steps to import them:
 
 1. Open the Product menu and go to *Content & Data* &rarr; *Web Content*.
 
-1. Click the *Actions* menu ( ![Actions button](../../../images/icon-actions.png) ) for the translated web content and select *Import Translation*.
+1. Click the *Actions* menu ( ![Actions button](../../../images/icon-actions.png) ) for the translated Web Content and select *Import Translation*.
 
-   ![Click on the Actions menu for the translated web content, and select import translation.](./exporting-and-importing-translations/images/03.png)
+   ![Click on the Actions menu for the translated Web Content, and select import translation.](./exporting-and-importing-translations/images/03.png)
 
-1. Select the translation file you want to import and then publish your changes.
+1. Select the `.xliff` or `.xlf` file you want to import, or import multiple translation files as a `.zip` file.
 
    ![Select the translation file you want to import.](./exporting-and-importing-translations/images/04.png)
 
-When the import completes, the web content is updated with all changes included in the XLIFF file. If workflow is enabled, this change must be approved as with other content updates.
+   ```{important}
+   While Liferay supports importing XLIFF files created using the *Export for Translation* action, it cannot guarantee the successful import of files generated by other means.
+   ```
 
-```{note}
-Although Liferay supports both XLIFF 1.2 and 2.0, it may not support all features and capabilities those formats provide. Also, while Liferay supports importing XLIFF files created using the *Export for Translation* action, it cannot guarantee the successful import of files generated by other means.
-```
+1. Click *Publish*.
+
+When the import completes, the Web Content is updated with all changes included in the translation files. If workflow is enabled, this change must be approved as with other content updates.
 
 ## Additional Information
 
