@@ -28,7 +28,7 @@ For Liferay DXP 7.0, Analytics Cloud Admin is under *Configuration* > *Analytics
 When the connection is successful, the message, `Your DXP instance is connected to Analytics Cloud.` is shown.
 
 ```{note}
-See [Do Not Track Feature](../../workspace-data/data-control-and-privacy.md#do-not-track-feature) to learn more about suppressing analytics data.
+See [Do Not Track Feature](../workspace-data/data-control-and-privacy.md#do-not-track-feature) to learn more about suppressing analytics data.
 ```
 
 ![A success message confirms correctly configuring a connection between DXP and Analytics Cloud.](connecting-liferay-dxp-to-analytics-cloud/images/04.png)

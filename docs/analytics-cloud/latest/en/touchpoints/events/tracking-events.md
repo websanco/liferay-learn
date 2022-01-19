@@ -27,7 +27,7 @@ The following data typecasts can be set for attributes: Boolean, Date, Duration,
 | Attribute Type | Description |
 | -------------- | ----------- |
 | `Boolean` | `true` or `false`, case insensitive |
-| `Date` | ISO-8061 format ((yyyy-MM-dd'T'HH:mm:ss.SSSX) |
+| `Date` | ISO-8061 format (yyyy-MM-dd'T'HH:mm:ss.SSSX) |
 | `Duration` | In milliseconds, non-negative |
 | `Number` | Without thousands separator, decimal separator is okay |
 | `String` | If no other format matches, Analytics Cloud will assume string |
