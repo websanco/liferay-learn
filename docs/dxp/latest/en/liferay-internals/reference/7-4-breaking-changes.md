@@ -899,7 +899,7 @@ This was done to clarify the folder that `buildService` should target.
 
 ### What changed?
 
-The `addFragmentEntry` methods in `FragmentEntryLocalService` and `FragmentEntryService` have been updated.
+The `addFragmentEntry` methods in `FragmentEntryLocalService` and `FragmentEntryService` have a new parameter for the icon of a `FragmentEntry`. 
 
 ### Who is affected?
 
@@ -907,7 +907,7 @@ This affects anyone using `FragmentEntryLocalService` and `FragmentEntryService`
 
 ### How should I update my code?
 
-Use the new `addFragmentEntry` methods in `FragmentEntryLocalService` and `FragmentEntryService`. Note, that they include a new `String` parameter for the `icon` of a `FragmentEntry`.
+When you use the new `addFragmentEntry` methods in `FragmentEntryLocalService` and `FragmentEntryService`, you must include a new `String` parameter for the `icon` of a `FragmentEntry`.
 
 ### Why was this change made?
 
