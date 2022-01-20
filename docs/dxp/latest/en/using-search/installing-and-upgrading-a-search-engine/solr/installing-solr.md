@@ -7,7 +7,7 @@ These instructions describe installing Solr 8 for Liferay 7.1 through 7.3. They 
 ```{important}
 -  Liferay's Solr support is deprecated; Solr 8 is the last supported Solr version. Please plan to migrate to [Elasticsearch](../elasticsearch/getting-started-with-elasticsearch.md).
 
--  There are important limitations to be aware of when installing Solr. Read [Solr Limitations](./solr-limitations.md)_ before proceeding with the installation.
+-  There are important limitations to be aware of when installing Solr. Read [Solr Limitations](./solr-limitations.md) before proceeding with the installation.
 ```
 
 As you proceed, remember these terms: 

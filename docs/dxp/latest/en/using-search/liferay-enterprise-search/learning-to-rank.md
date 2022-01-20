@@ -74,7 +74,7 @@ A useful trained model is produced when a good judgment list and a good feature 
 Before beginning, you must have a remote [Elasticsearch](../installing-and-upgrading-a-search-engine/elasticsearch.html) cluster communicating with Liferay. See the [Search Engine Compatibility Matrix for more information](https://help.liferay.com/hc/en-us/articles/360016511651).
 
 ```{tip}
-Use [Suggestions](../search-pages-and-widgets/search-results/enabling-search-suggestions.md)_ to discover the most common queries (this can be one way to decide which queries to create Learning to Rank models for).
+Use [Suggestions](../search-pages-and-widgets/search-results/enabling-search-suggestions.md) to discover the most common queries (this can be one way to decide which queries to create Learning to Rank models for).
 ```
 
 ## Step 1: Install the Learning to Rank Plugin on Elasticsearch

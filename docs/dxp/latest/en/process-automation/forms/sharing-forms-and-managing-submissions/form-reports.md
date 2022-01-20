@@ -17,7 +17,7 @@ Once users begin submitting form entries, you can access a field-by-field report
    ![This Rate It Select from List field has received mostly "Good" selections.](./form-reports/images/01.png)
 
 ```{tip}
-Form Reports shows you aggregated form data. To see each form entry individually, see [Managing Form Entries](./managing-form-entries.md#viewing-form-entries)_.
+Form Reports shows you aggregated form data. To see each form entry individually, see [Managing Form Entries](./managing-form-entries.md#viewing-form-entries).
 ```
 
 ## Form Fields and Chart Types

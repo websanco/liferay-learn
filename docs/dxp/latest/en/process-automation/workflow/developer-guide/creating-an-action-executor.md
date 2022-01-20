@@ -60,7 +60,7 @@ First deploy and observe a working `ActionExecutor`.
    ```
 
 ```{note}
-For convenience, the `activate` method of the `ActionExecutor` autoloaded a E5C9 Single Approver workflow definition. This code achieved the same thing as navigating to the Workflow Process Builder and uploading a workflow definition. See [Uploading a New Workflow Definition](../designing-and-managing-workflows/managing-workflows.md#uploading-a-new-workflow-definition)_.
+For convenience, the `activate` method of the `ActionExecutor` autoloaded a E5C9 Single Approver workflow definition. This code achieved the same thing as navigating to the Workflow Process Builder and uploading a workflow definition. See [Uploading a New Workflow Definition](../designing-and-managing-workflows/managing-workflows.md#uploading-a-new-workflow-definition).
 ```
 
 ## Test the Action Executor
