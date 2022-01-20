@@ -13,8 +13,6 @@ reference/defining-environment-variables.md
 reference/platform-limitations.md
 ```
 
-**Contents:**
-
 - [DXP Cloud Infrastructure](./reference/dxp-cloud-infrastructure.md)
 - [Configuration via LCP.json](./reference/configuration-via-lcp-json.md)
 - [Understanding Service Stack Versions](./reference/understanding-service-stack-versions.md)

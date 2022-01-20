@@ -13,18 +13,6 @@ getting-started/logging-into-your-dxp-cloud-services.md
 getting-started/understanding-dxp-cloud-environments.md
 ```
 
-**Section Contents:**
-
-- [Initial Setup Overview](./getting-started/initial-setup-overview)
-- [Development Requirements](./getting-started/development-requirements)
-- [Configuring Your GitHub Repository](./getting-started/configuring-your-github-repository)
-- [Configuring Your Bitbucket Repository](./getting-started/configuring-your-bitbucket-repository)
-- [Configuring Your GitLab Repository](./getting-started/configuring-your-gitlab-repository)
-- [Logging into Your DXP Cloud Services](./getting-started/logging-into-your-dxp-cloud-services)
-- [Understanding DXP Cloud Environments](./getting-started/understanding-dxp-cloud-environments)
-
-## Introduction to DXP Cloud
-
 Liferay DXP Cloud is a secure and reliable enterprise cloud platform that provides the infrastructure and tooling necessary to simplify, secure, and deliver amazing applications on Liferay DXP.
 
 Worry less and build more with a platform that provides:

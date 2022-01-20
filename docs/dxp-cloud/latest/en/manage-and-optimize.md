@@ -11,8 +11,6 @@ manage-and-optimize/environment-teams-and-roles.md
 manage-and-optimize/team-activities.md
 ```
 
-**Contents:**
-
 ## Performance and Monitoring
 
 - [Auto-Scaling](./manage-and-optimize/auto-scaling.md)

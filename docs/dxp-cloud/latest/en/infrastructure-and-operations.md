@@ -7,8 +7,6 @@ infrastructure-and-operations/networking.md
 infrastructure-and-operations/security.md
 ```
 
-**Contents:**
-
 ## Networking
 
 - [Custom Domains](./infrastructure-and-operations/networking/custom-domains.md)

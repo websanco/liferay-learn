@@ -11,8 +11,6 @@ networking/custom-domains.md
 networking/load-balancer.md
 ```
 
-**Contents:**
-
 - [Private Network](./networking/private-network.md)
 - [VPN Integration Overview](./networking/vpn-integration-overview.md)
 - [Configuring a VPN Server](./networking/configuring-a-vpn-server.md)

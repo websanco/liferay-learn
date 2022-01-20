@@ -13,8 +13,6 @@ platform-services/backup-service.rst
 platform-services/database_service.rst
 ```
 
-**Contents:**
-
 - [Continuous Integration](./platform-services/continuous-integration.md)
 - [Search Service](./platform-services/search-service.md)
 - [Web Server Service](./platform-services/web-server-service.md)

@@ -14,8 +14,6 @@ build-and-deploy/configuring-persistent-file-storage-volumes.md
 build-and-deploy/ignoring-files-and-folders.md
 ```
 
-**Contents:**
-
 - [Overview of the DXP Cloud Deployment Workflow](./build-and-deploy/overview-of-the-dxp-cloud-deployment-workflow.md)
 
 ## Deploying to DXP Cloud

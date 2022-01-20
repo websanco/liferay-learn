@@ -10,8 +10,6 @@ security/web-application-firewall.md
 security/managing-secure-environment-variables-with-secrets.md
 ```
 
-**Contents:**
-
 - [Information Security and DXP Cloud](./security/information-security-and-dxp-cloud.md)
 - [Authentication](./security/authentication.md)
 - [Using SSO with DXP Cloud](./security/using-sso-with-dxp-cloud.md)
