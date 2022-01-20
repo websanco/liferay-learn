@@ -2,7 +2,7 @@
 
 readonly CURRENT_DIR_NAME=$(dirname "$0")
 
-function generate_app {
+function generate_remote_app {
 	mkdir liferay-h5v7.zip
 
 	cd liferay-h5v7.zip
@@ -17,7 +17,7 @@ function generate_app {
 function main {
 	pushd "${CURRENT_DIR_NAME}" || exit 1
 
-	generate_app
+	generate_remote_app
 }
 
 main "${@}"
