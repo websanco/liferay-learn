@@ -7,7 +7,7 @@ If you create a Role with permission to access something in the Control Panel, t
 To determine the permissions to carry out an action within Liferay DXP, iteration is necessary. Add one or two permissions, then test the Role to ensure the behavior you see is what you expected. As you create more Roles, you'll better understand how to combine permissions to accomplish a given task.
 
 ```{tip}
-Assigning a User to the Role and then [Impersonating the User](./../users/adding-and-managing-users.md#impersonating-users)_ is a good way to see what permissions the User has inherited from the Role.
+Assigning a User to the Role and then [Impersonating the User](./../users/adding-and-managing-users.md#impersonating-users) is a good way to see what permissions the User has inherited from the Role.
 ```
 
 To define permissions for any Role in Liferay DXP,

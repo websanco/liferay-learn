@@ -31,7 +31,7 @@ Themes are also a complement to [Page Templates](../../creating-pages/adding-pag
 For example, you can [embed widgets in your theme](./theme-development/working-with-templates/embedding-widgets-via-templates.md) to make them a permanent fixture of your Site's pages.
 
 ```{note}
-You can also create templates for your pages using [Master Pages](../../creating-pages/defining-headers-and-footers/master-page-templates.md)_ or [Page Templates](../../creating-pages/adding-pages/creating-a-page-template.md)_.
+You can also create templates for your pages using [Master Pages](../../creating-pages/defining-headers-and-footers/master-page-templates.md) or [Page Templates](../../creating-pages/adding-pages/creating-a-page-template.md).
 ```
 
 ### Bundling Resources
