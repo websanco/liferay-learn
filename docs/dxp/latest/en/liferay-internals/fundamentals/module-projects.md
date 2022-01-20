@@ -212,7 +212,7 @@ It depends on one artifact: the Liferay release API JAR. It is a large JAR packe
 In the `[project root]/gradle.properties` file, the `liferay.workspace.product` property specifies the product release:
 
 ```properties
-liferay.workspace.product=portal-7.3-ga3
+liferay.workspace.product=portal-7.4-ga4
 ```
 
 Lastly, there's no dependency version. That's because Workspace applies the Liferay product API version associated with the release.
