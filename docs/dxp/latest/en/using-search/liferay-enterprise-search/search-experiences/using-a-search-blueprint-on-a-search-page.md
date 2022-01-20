@@ -9,21 +9,26 @@ By default, a [Search Page](../../search-pages-and-widgets/working-with-search-p
 
 1. [Create a Blueprint](./creating-and-managing-search-blueprints.md).
 1. Create or navigate to the [Search Page](../../search-pages-and-widgets/working-with-search-pages.md).
-1. Add the [Low Level Search Options](../../search-pages-and-widgets/search-results/understanding-low-level-search-options.md) widget to the page.
+1. Add the Blueprint Options widget to the page. 
 1. Click the widget's Options icon (![Options](../../../images/icon-app-options.png)) and click *Configuration*.
-1. In the Attributes section, add
-   - Key: `search.experiences.blueprint.id`
-   - Value: `[the Blueprint ID]`
+1. To choose a Blueprint for the page, click _Select_.
 
-   You can find the Blueprint ID from the Blueprints application (Global Menu &rarr; Applications &rarr; Blueprints (Search Experiences).
+   ![Select a Blueprint for use on the page.](./using-a-search-blueprint-on-a-search-page/images/02.png)
 
-   ![The Blueprint ID is listed in the Blueprints application.](./using-a-search-blueprint-on-a-search-page/images/01.png)
-
-1. Save the configuration.
+1. Once the Blueprint is selected, click _Save_ on the Configuration screen.
 
 Now the Blueprint's functionality is applied to the page.
 
-<!-- SME Question: A search Page can only use one Blueprint at a time, correct? -->
+Administrative Users can instead use the [Low Level Search Options](../../search-pages-and-widgets/search-results/understanding-low-level-search-options.md) widget to apply a Blueprint to a Search Page. Open the widget's configuration. In the Attributes section, add
+
+- Key: `search.experiences.blueprint.id`
+- Value: `[the Blueprint ID]`
+
+You can find the Blueprint ID from the Blueprints application (Global Menu &rarr; Applications &rarr; Blueprints (Search Experiences).
+
+![The Blueprint ID is listed in the Blueprints application.](./using-a-search-blueprint-on-a-search-page/images/01.png)
+
+This can be useful if you're already using the Low Level Search Options widget. If you need to set other Search Context Attributes, perhaps for testing a Blueprint, use the Low Level Search Options widget.
 
 ## Applying Additional Search Context Attributes
 
