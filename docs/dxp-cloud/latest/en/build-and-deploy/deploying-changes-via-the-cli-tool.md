@@ -8,7 +8,7 @@ To get started, you first need the [CLI tool](../reference/command-line-tool.md)
 Although the CLI tool provides a quick way to deploy changes to your project, it's best practice to use the CI service and DXP Cloud console for the majority of deployments. See [Deploying Changes via the DXP Cloud Console](./deploying-changes-via-the-dxp-cloud-console.md) to learn how.
 ```
 
-If you are using version 3.x.x services in your project, you must first [prepare](#preparing-lcpjson-files-in-project-version-3) their `LCP.json` files before deploying changes with the CLI tool.
+If you are using version `3.x.x` services in your project, you must first [prepare](#preparing-lcpjson-files-in-project-version-3) their `LCP.json` files before deploying changes with the CLI tool.
 
 Otherwise, you can skip this step and begin the deployment process:
 
@@ -18,7 +18,9 @@ Otherwise, you can skip this step and begin the deployment process:
 
 ## Preparing LCP.json Files in Project Version 3
 
-Open the `gradle.properties` at the root of your repository, and find properties for the Docker image versions for each of your services, like the following:
+If you are not using version `3.x.x` services in your project, then skip this step and begin [making your change](#adding-a-portal-property-to-the-liferay-service).
+
+Otherwise, open the `gradle.properties` at the root of your repository, and find properties for the Docker image versions for each of your services, like the following properties:
 
 ```properties
 liferay.workspace.lcp.backup.image=liferaycloud/backup:3.2.1
@@ -95,9 +97,11 @@ Once you've committed your changes, follow these steps to create a build of your
    ./gradlew clean deploy createDockerfile
    ```
 
-   ```{important}
-   You must first create a Gradle build of the Liferay service before running the `lcp deploy` command. No local build process is required for other services, so you can directly deploy backup, CI, database, search, and webserver services.
+   ```{note}
+   If you are using version `3.x.x` services in your project, then you must instead run `./gradlew distLiferayCloud` from the `lcp/liferay` directory.
    ```
+
+   You must first create a Gradle build of the Liferay service before running the `lcp deploy` command. No local build process is required for other services, so you can directly deploy backup, CI, database, search, and webserver services.
 
 1. Copy the `LCP.json` file into the Docker directory before deploying the build.
 
