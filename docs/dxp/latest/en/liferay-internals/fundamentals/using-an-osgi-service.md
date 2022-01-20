@@ -52,7 +52,7 @@ Start using the example.
 1. Deploy the example modules.
 
     ```bash
-    cd liferay-j1h1.zip
+    cd liferay-j1h1
     ```
 
     ```bash
