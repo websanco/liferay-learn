@@ -5,6 +5,8 @@ Do we need sections on Applying Search Context Attributes, as I've stubbed out b
 
 Also, are there details I am missing? -->
 
+A Blueprint must be applied to a Search Page to affect the Liferay search experience. If a Site has multiple Search Pages, follow the steps below on each page that should use a Blueprint, as each must be configured separately. You can use different Blueprints on each page, if desired.
+
 By default, a [Search Page](../../search-pages-and-widgets/working-with-search-pages.md) does not have a [Search Blueprint](./understanding-search-blueprints.md) associated with it. To make the Search Page react to your Search Blueprint,
 
 1. [Create a Blueprint](./creating-and-managing-search-blueprints.md).
