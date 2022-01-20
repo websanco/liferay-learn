@@ -69,7 +69,7 @@ function configure_env {
 
 	activate_venv
 
-	check_utils 7z pip3
+	check_utils 7z jq pip3
 
 	pip install pipenv==2021.5.29
 
