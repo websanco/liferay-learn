@@ -1,13 +1,8 @@
 # Using a Search Blueprint on a Search Page
 
-<!-- SME Questions:
-Do we need sections on Applying Search Context Attributes, as I've stubbed out below? If so they'll need fleshing out and examples, but I need to know what we expect these use cases to look like.
+By default, a  does not have a [Search Blueprint](./understanding-search-blueprints.md) associated with it. A Blueprint must be applied to a [Search Page](../../search-pages-and-widgets/working-with-search-pages.md) to affect the Liferay search experience. If a Site has multiple Search Pages, follow the steps below on each page that should use a Blueprint, as each must be configured separately. You can use different Blueprints on each page, if desired.
 
-Also, are there details I am missing? -->
-
-A Blueprint must be applied to a Search Page to affect the Liferay search experience. If a Site has multiple Search Pages, follow the steps below on each page that should use a Blueprint, as each must be configured separately. You can use different Blueprints on each page, if desired.
-
-By default, a [Search Page](../../search-pages-and-widgets/working-with-search-pages.md) does not have a [Search Blueprint](./understanding-search-blueprints.md) associated with it. To make the Search Page react to your Search Blueprint,
+To make the Search Page react to your Search Blueprint,
 
 1. [Create a Blueprint](./creating-and-managing-search-blueprints.md).
 1. Create or navigate to the [Search Page](../../search-pages-and-widgets/working-with-search-pages.md).
@@ -41,13 +36,43 @@ Blueprints are applied to the page using the Blueprints Options widget, or using
 
    See [the Elements reference for more information](./search-blueprints-elements-reference.md) about the parameters used by the out of the box elements.
 
+<!--
 Follow this example to set search context attributes into a Blueprint-driven search page:
 
+1. Create two Users: name them _Acme User_ and _Other User_.
+   - Acme User
+      - Screen Name: `acmeuser`
+      - Email Address: `acme@liferay.com`
+      - First Name: `Acme`
+      - Last Name: `User`
+   - Other User
+      - Screen Name: `otheruser`
+      - Email Address: `other@liferay.com`
+      - First Name: `Other`
+      - Last Name: `User`
+1. Create a [User Segment](../../../site-building/personalizing-site-experience/segmentation/creating-and-managing-user-segments.md) called _Acme Users_. Drag the User attribute and add Acme User to it. Record the segment's ID. It's in the URL as the parameter `segmentsEntryId`.
+1. Create an [Asset Category](../../../content-authoring-and-management/tags-and-categories.md). Name the Vocabulary and the Category _Business_. Record the Category's ID. It's in the URL as part of the path: `category/[ID]`.
+1. Create two pieces of Basic Web Content:
+   - Web Content 1
+      - Title: Has Business Category
+      - Content: Test
+      - Category: Business
+   - Web Content 2
+      - Title: Without Business Category
+      - Content: Test
 1. [Create a Blueprint](./creating-and-managing-search-blueprints.md) with the following Element:
-   - Element Name: 
+   - Element Name: Boost Contents in a Category for a User Segment
+      - Asset Category ID: The _Business_ Category's ID. 
+      - User Segment IDs: The ID of the _Acme Users_ User Segment.
+      - Boost: 100
+1. Navigate to the Site's Search Page.
+1. Add the Low Level Search Options widget to the page, and open it's configuration screen.
+1. In the Attributes section, add
 
-<!-- So far I haven't found a reasonable use case for this -->
+   - Key: `search.experiences.scope.group.id`
+   - Value: `[the site ID]`
 
-## Applying Search Context Attributes Programmatically
+You can find the Blueprint ID from the Blueprints application (Global Menu &rarr; Applications &rarr; Blueprints (Search Experiences).
+-->
+<!-- Example is unfinished--uncomment when finalized. -->
 
-<!-- Should we say something about this? -->

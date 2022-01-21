@@ -1,6 +1,6 @@
 # Creating and Managing Search Blueprints
 
-[Search Blueprints](./understanding-search-blueprints.md) are created, updated, and deleted using an administrative application in the Global Menu. Open the Global menu's Applications section and find the Search Experiences category.
+[Search Blueprints](./understanding-search-blueprints.md) are created, updated, and deleted using an administrative application in the Global Menu. Open the Global menu's Applications section and find the Search Experiences category. If you already have a Blueprint and want to apply it's functionality in a Liferay [Search Page](../../search-pages-and-widgets/working-with-search-pages.md), see [Using a Search Blueprint on a Search Page](using-a-search-blueprint-on-a-search-page.md).
 
 To create Search Blueprints,
 
@@ -218,3 +218,7 @@ For example,
 Now only the uncategorized Web Content Article is returned. The other one has been hidden because of the search context attribute that causes the search to behave as if the search User is a Guest.
 
 This example uses an Element that reads the context variable `user.is_signed_in`: by setting a value manually, you're overriding the existing value so that the Blueprint can demonstrate a certain behavior. Because a value already exists in the search context, setting it manually is optional. Other Elements have required custom parameters that do not exist within a normal search request's context. These must be passed manually into the search context for the Element/Blueprint to function properly, whether testing the Blueprint from the preview sidebar or setting the Blueprint for use on a search page.
+
+## What's Next
+
+- [Using a Search Blueprint on a Search Page](using-a-search-blueprint-on-a-search-page.md)
