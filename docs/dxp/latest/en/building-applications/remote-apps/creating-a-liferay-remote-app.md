@@ -4,7 +4,7 @@
 
 Remote Apps is an application for integrating single-page applications into your Liferay solutions. It uses Liferay's front-end infrastructure to register external applications with the Liferay platform and render them as widgets. To simplify remote app creation, Liferay provides the [`create_remote_app.sh`](https://raw.githubusercontent.com/liferay/liferay-portal/master/tools/create_remote_app.sh) script. This script can be used to automatically generate React and Vue applications compatible with Liferay Remote Apps.
 
-In this tutorial, you'll use the `create_remote_app.sh` script to create a simple "Hello World" React application. You'll call the script using a [cURL command](https://github.com/liferay/liferay-portal/blob/master/tools/create_remote_app.sh.README.markdown) that determines the application's HTML element name and JS framework (e.g., `react`, `vue2`, `vue3`). After the application is generated, you'll compile its code, host its `.js` and `.css` files, and then register it with Liferay Remote Apps using the Custom Element type. Once registered, you can deploy it to Site Pages as a widget.
+In this tutorial, you'll use the `create_remote_app.sh` script to create a simple React application. After the application is generated, you'll compile its code and host its `.js` and `.css` files in the Liferay Document Library. Once hosted, you'll copy each file's WebDAV URLs and use them to create a Liferay Remote App. Finally, you can deploy the application to Site Pages as a widget.
 
 ```{important}
 Running `create_remote_app.sh` requires the latest versions of [Node.JS](https://nodejs.org/), [NPM](https://www.npmjs.com/), and [YARN](https://classic.yarnpkg.com/). Before proceeding, ensure these tools are installed.
