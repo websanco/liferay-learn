@@ -2,10 +2,14 @@
 
 readonly CURRENT_DIR_NAME=$(dirname "$0")
 
-function generate_app {
+function generate_remote_app {
 	cd liferay-x3j8.zip
 
 	curl -Ls https://github.com/liferay/liferay-portal/raw/master/tools/create_remote_app.sh | bash -s x3j8-remote-app react
+
+	jq -s 'reduce .[] as $d ({}; . *= $d)' ./x3j8-overlay/package.json ./x3j8-remote-app/package.json > package.json
+
+	mv package.json ./x3j8-remote-app/package.json
 
 	rm -R x3j8-remote-app/src
 
@@ -17,18 +21,13 @@ function generate_app {
 	
 	rm -R ../x3j8-overlay
 
-	sed -i '5 a \
-	  "fusioncharts": "^3.18.0", \
-	  "react-fusioncharts": "^3.1.2",' \
-	  package.json
-
 	yarn install
 }
 
 function main {
 	pushd "${CURRENT_DIR_NAME}" || exit 1
 
-	generate_app
+	generate_remote_app
 }
 
 main "${@}"
