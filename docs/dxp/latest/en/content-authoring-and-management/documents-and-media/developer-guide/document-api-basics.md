@@ -141,7 +141,7 @@ This class invokes the REST service using only three lines of code:
 | `DocumentResource documentResource = builder.authentication(...).build();` | Specifies basic authentication and generates a `DocumentResource` service instance. |
 | `Document document = documentResource.postSiteDocument(...);` | Calls the `DocumentResource.postSiteDocument` method, passing in a site ID, a `Document` object to represent the uploaded file, and a hash map that specifies the file to upload. The file is arbitrary--this example uses the local file `Document_POST_ToSite.java` for convenience. |
 
-Note that the example project's `/java/` folder includes the `com.liferay.headless.admin.user.client.jar` REST application client JAR file. For your project, make sure to include this dependency file for your application to work. You can download the latest JAR file from [Liferay's Nexus repository](https://repository.liferay.com/nexus/content/repositories/liferay-public-releases/com/liferay/com.liferay.headless.admin.user.client/). 
+Note that the example project's `/java/` folder includes the `com.liferay.headless.delivery.client.jar` REST application client JAR file. For your project, make sure to include the correct Headless dependency file for the service you want to consume. You can download the latest JAR files from [Liferay's Nexus repository](https://repository.liferay.com/nexus/content/repositories/liferay-public-releases/com/liferay/). 
 
 ```{note}
 The `main` method's comment demonstrates running the class.

@@ -108,6 +108,8 @@ This class invokes the REST service using only three lines of code:
 | `TaxonomyVocabularyResource taxonomyVocabularyResource = builder.authentication(...).build();` | Specifies basic authentication and generates a `TaxonomyVocabularyResource` service instance. |
 | `TaxonomyVocabulary taxonomyVocabulary = taxonomyVocabularyResource.postSiteTaxonomyVocabulary(...);` | Calls the `postSiteTaxonomyVocabulary` method and passes the data to post. |
 
+Note that the example project's `/java/` folder includes the `com.liferay.headless.admin.taxonomy.client.jar` REST application client JAR file. For your project, make sure to include the correct Headless dependency file for the service you want to consume. You can download the latest JAR files from [Liferay's Nexus repository](https://repository.liferay.com/nexus/content/repositories/liferay-public-releases/com/liferay/). 
+
 ```{note}
 The `main` method's comment demonstrates running the class.
 ```

@@ -44,6 +44,8 @@ cd liferay-q8u2/java
 javac -classpath .:* *.java
 ```
 
+Note that the example project's `/java/` folder includes the `com.liferay.headless.delivery.client.jar` REST application client JAR file. For your project, make sure to include the correct Headless dependency file for the service you want to consume. You can download the latest JAR files from [Liferay's Nexus repository](https://repository.liferay.com/nexus/content/repositories/liferay-public-releases/com/liferay/). 
+
 ## Using WikiNode and WikiPage Headless APIs
 
 The sample code includes cURL scripts and Java classes that call the following APIs.
