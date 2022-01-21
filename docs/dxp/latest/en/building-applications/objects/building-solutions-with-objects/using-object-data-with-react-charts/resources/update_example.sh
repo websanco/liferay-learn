@@ -7,7 +7,7 @@ function generate_remote_app {
 
 	curl -Ls https://github.com/liferay/liferay-portal/raw/master/tools/create_remote_app.sh | bash -s x3j8-remote-app react
 
-	jq -s 'reduce .[] as $d ({}; . *= $d)' ./x3j8-overlay/package.json ./x3j8-remote-app/package.json > package.json
+	jq -s '.[0] * .[1]' ./x3j8-overlay/package.json ./x3j8-remote-app/package.json > package.json
 
 	mv package.json ./x3j8-remote-app/package.json
 
