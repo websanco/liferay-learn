@@ -17,15 +17,15 @@ When calling `create_remote_app.sh`, you must provide a valid HTML element name 
 Run this command to generate the React application's code:
 
 ```bash
-curl -Ls https://github.com/liferay/liferay-portal/raw/master/tools/create_remote_app.sh | bash -s liferay-hello-world react
+curl -Ls https://github.com/liferay/liferay-portal/raw/master/tools/create_remote_app.sh | bash -s h5v7-remote-app react
 ```
 
-This calls the script with two arguments: a custom HTML element name (`liferay-hello-world`) and the desired JS framework (`react`).
+This calls the script with two arguments: a custom HTML element name (`h5v7-remote-app`) and the desired JS framework (`react`).
 
-When finished running, the script automatically creates a new React application in a folder named `liferay-hello-world`, which includes these elements:
+When finished running, the script automatically creates a new React application in a folder named `h5v7-remote-app`, which includes these elements:
 
 ```bash
-liferay-hello-world
+h5v7-remote-app
 ├── node_modules
 ├── README.md
 ├── package.json
@@ -60,14 +60,14 @@ liferay-hello-world
 
 ### Understanding the `index.js` File
 
-   ```{literalinclude} ./creating-a-liferay-remote-app/resources/liferay-h5v7.zip/liferay-hello-world/src/index.js
+   ```{literalinclude} ./creating-a-liferay-remote-app/resources/liferay-h5v7.zip/h5v7-remote-app/src/index.js
        :language: js
    ```
 
 The generated `index.js` file includes two customizations necessary for using the application as a Liferay Remote App.
 
 * WebComponent: In line 21, the application is declared a `WebComponent` so that it can connect to Remote Apps.
-* ELEMENT_ID: In line 30, `ELEMENT_ID` is set to `liferay-hello-world`, instead of the conventional `<div id="root" />`. This is because a Remote App's HTML Element Name must match the application's `ELEMENT_ID`, and `<div id="root" />` does not work for this purpose.
+* ELEMENT_ID: In line 30, `ELEMENT_ID` is set to `h5v7-remote-app`, instead of the conventional `<div id="root" />`. This is because a Remote App's HTML Element Name must match the application's `ELEMENT_ID`, and `<div id="root" />` does not work for this purpose.
 
 ### Understanding the React Routes
 
@@ -75,10 +75,10 @@ The generated code includes three routes: `hello-world` (default), `hello-foo`, 
 
 ## Building the React Application
 
-After running `create_remote_app.sh`, navigate to the new `liferay-hello-world` folder and build the application:
+After running `create_remote_app.sh`, navigate to the new `h5v7-remote-app` folder and build the application:
 
 ```bash
-cd liferay-hello-world
+cd h5v7-remote-app
 ```
 
 ```bash
@@ -152,7 +152,7 @@ Follow these steps to create a Remote App for the React application:
    | --- | --- |
    | Name | Liferay Hello World |
    | Type | Custom Element |
-   | HTML Element Name | `liferay-hello-world` |
+   | HTML Element Name | `h5v7-remote-app` |
    | URL | WebDAV URL for the `.js` file |
    | CSS URL | WebDAV URL for the `.css` file |
    | Portlet Category Name | Remote Apps |
