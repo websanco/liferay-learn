@@ -30,11 +30,18 @@ You can find the Blueprint ID from the Blueprints application (Global Menu &rarr
 
 ![The Blueprint ID is listed in the Blueprints application.](./using-a-search-blueprint-on-a-search-page/images/01.png)
 
-This can be useful if you're already using the Low Level Search Options widget. If you need to set other Search Context Attributes, perhaps for testing a Blueprint, use the Low Level Search Options widget.
+Unless you're already using the Low Level Search Options widget on your Search Page, the Blueprints Options widget is more convenient for setting a Blueprint. If you need to set other Search Context Attributes, perhaps for testing a Blueprint, use the Low Level Search Options widget.
 
 ## Applying Additional Search Context Attributes
 
-Blueprints are applied to the page using search context attributes, as described above. However, some Elements require parameters that aren't present in the search request by default; these must be applied as search context attributes on the search page or programmatically. See [the Elements reference for more information](./search-blueprints-elements-reference.md). Follow this example to set search context attributes into a Blueprint-driven search page:
+Blueprints are applied to the page using the Blueprints Options widget, or using a search context attribute in the Low Level Search Options widget, as described above. Additional search context attributes can be set in the Low Level Search Options widget. There are two primary reasons you might need to set search context attributes into the search page:
+
+1. A Blueprint can define and respond to a custom parameter (one that won't be set by Liferay's search framework), and these can be manually set in the Low Level Search Options widget.
+1. It can be useful to test the behavior of the Blueprint on the Search Page by setting search context attributes and executing a search request.
+
+   See [the Elements reference for more information](./search-blueprints-elements-reference.md) about the parameters used by the out of the box elements.
+
+Follow this example to set search context attributes into a Blueprint-driven search page:
 
 1. [Create a Blueprint](./creating-and-managing-search-blueprints.md) with the following Element:
    - Element Name: 
