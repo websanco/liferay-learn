@@ -4,6 +4,10 @@ With Liferay DXP Cloud, you can connect custom domains to environment services w
 
 To do this, first register your custom domain with your environment's Load Balancer IP address. Then add the domain to the desired service via the DXP Cloud console or the service's LCP.json file.
 
+```{warning}
+Changes or additions to custom domains can take up to 60 minutes to propagate.
+```
+
 * [Registering a Custom Domain with an Environment IP](#registering-a-custom-domain-with-an-environment-ip)
 * [Adding a Custom Domain to a DXP Cloud Service](#adding-a-custom-domain-to-a-dxp-cloud-service)
 * [Verifying the Status of a Custom Domain](#verifying-the-status-of-a-custom-domain)
@@ -51,7 +55,7 @@ Follow these steps to add custom domains to environment services via the DXP Clo
 1. Click *Update Custom Domains* to finalize the addition.
 
 ```{note}
-Adding custom domains via the DXP Cloud console automatically uses a certificate provided by [Let's Encrypt](https://letsencrypt.org/)_ for all of them. If you want to use [custom SSL certificates](./load-balancer.md#custom-ssl)_ for your custom domains, then you must add them via the web server's `LCP.json` file instead.
+Adding custom domains via the DXP Cloud console automatically uses a certificate provided by [Let's Encrypt](https://letsencrypt.org/) for all of them. If you want to use [custom SSL certificates](./load-balancer.md#custom-ssl) for your custom domains, then you must add them via the web server's `LCP.json` file instead.
 ```
 
 ### Adding a Custom Domain via LCP.json
@@ -75,7 +79,7 @@ Alternatively, you can replace the domains that an environment's service uses by
 ```
 
 ```{important}
-You must define a specific environment for each added custom domain, and you cannot use the same custom domain for multiple environments (except for [Disaster Recovery environments](../../troubleshooting/configuring-cross-region-disaster-recovery.md)_ in different regions). This is necessary for DXP Cloud to properly generate certificates and route Users to the correct domain.
+You must define a specific environment for each added custom domain, and you cannot use the same custom domain for multiple environments (except for [Disaster Recovery environments](../../troubleshooting/configuring-cross-region-disaster-recovery.md) in different regions). This is necessary for DXP Cloud to properly generate certificates and route Users to the correct domain.
 ```
 
 Once a custom domain is added to your service and your changes are deployed, DXP Cloud handles the routing.

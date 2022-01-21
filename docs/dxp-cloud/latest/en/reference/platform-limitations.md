@@ -173,9 +173,13 @@ These limitations apply to file storage for multiple services:
 
 These limitations apply to the network configuration of your services in a DXP Cloud environment:
 
-* **Maximum Custom Domains**: There is a limit of 50 [custom domains](../infrastructure-and-operations/networking/custom-domains.md) if you have multiple services exposed outside of the environment (in addition to the default web server). However, the web server can use a limit of 1500 custom domains if it is the only point of entry.
+* **Changes to Custom Domains**: There may be a delay (up to 60 minutes) for changes or additions to custom domains to propagate.
+
+* **Maximum Custom Domains**: There is a limit of 50 [custom domains](../infrastructure-and-operations/networking/custom-domains.md) if you have multiple services exposed outside of the environment (in addition to the default web server). However, the web server can use a limit of 1500 custom domains if it is the only point of entry. You must [open a Support ticket](https://help.liferay.com/) if you change your web server service to increase the usage beyond this limit.
 
 * **Maximum SSL Certificates**: A maximum of 14 custom SSL certificates are allowed. The provider issuing the certificates may also impose its own limitations to make this less.
+
+* **Outbound Connections**: Connections from the project environment to external endpoints use an NAT solution with a 120-second timeout per connection. New connections created successively in a short period of time can lead to port exhaustion and dropped outbound traffic. Connection pooling can prevent this problem.
 
 * **Public IP Addresses**: By default, every environment has one public IP address, and services within the environment have internal IP addresses. However, you can configure a service's ports to be external, assigning a public IP address to the service. Exposing a service's endpoints to the internet is *not recommended*, because it bypasses DDoS protection from the [HTTPS load balancer](../infrastructure-and-operations/networking/load-balancer.md).
 
