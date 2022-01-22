@@ -3,6 +3,8 @@
 readonly CURRENT_DIR_NAME=$(dirname "$0")
 
 function generate_remote_app {
+	rm -fr liferay-h5v7.zip
+
 	mkdir liferay-h5v7.zip
 
 	cd liferay-h5v7.zip
