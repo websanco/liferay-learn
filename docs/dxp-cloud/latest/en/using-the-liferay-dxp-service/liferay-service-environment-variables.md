@@ -53,6 +53,8 @@ Name                                  | Default Value | Description  |
 If you are still using version `3.x.x` services, then the `LIFERAY_JVM_OPTS` environment variable is instead named `LIFERAY_JAVA_OPTS`. See [Understanding Service Stack Versions](../reference/understanding-service-stack-versions.md) for more information on checking the version.
 ```
 
+### Secrets
+
 These variables must instead be [defined as Secrets](../infrastructure-and-operations/security/managing-secure-environment-variables-with-secrets.md) for the Liferay service:
 
 Name                                  | Default Value | Description  |
