@@ -1,6 +1,6 @@
 # Configuring the Liferay DXP Service
 
-There are several methods available to configure Liferay DXP: through the in [DXP System Settings](https://learn.liferay.com/dxp/latest/en/system-administration/configuring-liferay/system-settings.html) and through the use of [config](https://learn.liferay.com/dxp/latest/en/system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.html) and [property files](https://learn.liferay.com/dxp/latest/en/installation-and-upgrades/reference/portal-properties.html).  DXP property and configuration files for your Liferay DXP instance in DXP Cloud are deployed by being placed inside of one of the `configs/` folders in the Liferay DXP service directory in your repository.
+There are several methods available to configure Liferay DXP: through the in [DXP System Settings](https://learn.liferay.com/dxp/latest/en/system-administration/configuring-liferay/system-settings.html) and through the use of [config](https://learn.liferay.com/dxp/latest/en/system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.html) and [property files](https://learn.liferay.com/dxp/latest/en/installation-and-upgrades/reference/portal-properties.html). DXP property and configuration files for your Liferay DXP instance in DXP Cloud are deployed by being placed inside of one of the `configs/` folders in the Liferay DXP service directory in your repository.
 
 ```
 liferay
@@ -28,7 +28,7 @@ For an on-premises Liferay DXP instance, this file belongs inside of `$LIFERAY_H
 For example, the properties in a dev environment will result from the property files in the `configs/common` directory and the properties in the `configs/dev` directory. If any files have the same name, the file in the environment specific directory will overwrite the file from the `common` directory.
 
 ```{note}
-If you are using version 3.x.x services, then these configuration files instead belong in the appropriate `lcp/liferay/config/{ENV}/` folder. See [Understanding Service Stack Versions](../reference/understanding-service-stack-versions.md)_ for more information on checking the version.
+If you are using version 3.x.x services, then these configuration files instead belong in the appropriate `lcp/liferay/config/{ENV}/` folder. See [Understanding Service Stack Versions](../reference/understanding-service-stack-versions.md) for more information on checking the version.
 ```
 
 ### Splitting Portal Properties into Multiple Files
@@ -78,7 +78,7 @@ OSGi configurations (`.cfg` or `.config` files) are used to configure OSGi compo
 These configuration files belong in the `osgi/configs/` folder inside of `$LIFERAY_HOME`. When using Liferay DXP Cloud, place these files into the appropriate `configs/{ENV}/osgi/` folder(s) for them to be copied into `/osgi/configs` for the Liferay DXP instance on deployment.
 
 ```{note}
-If you are using version 3.x.x services, then OSGi configuration files instead belong in the appropriate `config/{ENV}/` folder within the Liferay service directory. See [Understanding Service Stack Versions](../reference/understanding-service-stack-versions.md)_ for more information on checking the version.
+If you are using version 3.x.x services, then OSGi configuration files instead belong in the appropriate `config/{ENV}/` folder within the Liferay service directory. See [Understanding Service Stack Versions](../reference/understanding-service-stack-versions.md) for more information on checking the version.
 ```
 
 ## Tomcat Configurations
@@ -93,8 +93,15 @@ Two tomcat folders exist in the Liferay container in DXP Cloud: a generic `tomca
 Keep in mind when overriding the default Tomcat configuration that the Liferay service in DXP Cloud exists in a closed network on the Cloud platform. Some network configurations that can be changed in an on-premises Liferay installation cannot be changed from the default values in a Cloud environment, or it may cause issues in your environment.
 ```
 
+## Environment Variables
+
+The Liferay service in DXP Cloud uses [environment variables](../reference/defining-environment-variables.md) (or [secrets](../infrastructure-and-operations/security/managing-secure-environment-variables-with-secrets.md)) in place of some configurations that are done differently with an on-premises instance, such as JVM memory settings or database connection settings. Environment variables can also be used to [override or replace portal properties](./liferay-service-environment-variables.md#overriding-portal-properties).
+
+See [Liferay Service Environment Variables](./liferay-service-environment-variables.md) for more information.
+
 ## Additional Information
 
 * [Introduction to the Liferay DXP Service](./introduction-to-the-liferay-dxp-service.md)
 * [Enabling Clustering in DXP Cloud](./setting-up-clustering-in-dxp-cloud.md)
 * [Portal Properties](https://learn.liferay.com/dxp/latest/en/installation-and-upgrades/reference/portal-properties.html)
+* [Liferay Service Environment Variables](./liferay-service-environment-variables.md)
