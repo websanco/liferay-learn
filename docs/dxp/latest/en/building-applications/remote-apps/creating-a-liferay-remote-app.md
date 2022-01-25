@@ -2,7 +2,7 @@
 
 > Available for Liferay DXP 7.4+
 
-Remote Apps is an application for integrating single-page applications into your Liferay solutions. It uses Liferay's front-end infrastructure to register external applications with the Liferay platform and render them as widgets. To simplify remote app creation, Liferay provides the [`create_remote_app.sh`](https://raw.githubusercontent.com/liferay/liferay-portal/master/tools/create_remote_app.sh) script. This script can be used to automatically generate React and Vue applications compatible with Liferay Remote Apps.
+Remote Apps uses Liferay's front-end infrastructure to register external applications with the Liferay platform and render them as widgets. To simplify remote app creation, Liferay provides the [`create_remote_app.sh`](https://raw.githubusercontent.com/liferay/liferay-portal/master/tools/create_remote_app.sh) script. This script can be used to automatically generate React and Vue applications compatible with Liferay Remote Apps.
 
 In this tutorial, you'll use the `create_remote_app.sh` script to create a simple React application. After the application is generated, you'll compile its code and host its `.js` and `.css` files in the Liferay Document Library. Once hosted, you'll copy each file's WebDAV URLs and use them to create a Liferay Remote App. Finally, you can deploy the application to Site Pages as a widget.
 
@@ -150,20 +150,18 @@ Follow these steps to create a Remote App for the React application:
 
    | Field | Value |
    | --- | --- |
-   | Name | Liferay Hello World |
+   | Name | H5V7-Remote-App |
    | Type | Custom Element |
    | HTML Element Name | `h5v7-remote-app` |
    | URL | WebDAV URL for the `.js` file |
    | CSS URL | WebDAV URL for the `.css` file |
    | Portlet Category Name | Remote Apps |
 
-   ![Create a Custom Element Remote App for the React application.](./creating-a-liferay-remote-app/images/03.png)
-
 1. Click *Save*.
 
-Once saved, Liferay creates a widget that you can deploy to Site Pages. The widget is listed under the selected Portlet Category Name, and you can use it like any other Page widget.
+Once saved, Liferay creates a widget named H5V7-Remote-App, which you can deploy to Site Pages like other Page widgets. This widget is listed under the selected Portlet Category Name.
 
-![Deploy the Remote App to Site Pages as a widget.](./creating-a-liferay-remote-app/images/04.png)
+![Deploy the H5V7-Remote-App widget to Site Pages.](./creating-a-liferay-remote-app/images/03.png)
 
 ## Additional Information
 
