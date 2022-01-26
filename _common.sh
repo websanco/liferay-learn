@@ -19,3 +19,35 @@ readonly LIFERAY_LEARN_PORTAL_WORKSPACE_TOKEN_VALUE=portal-7.4-ga8
 function download_nexus_jar {
 	curl -L "https://repository-cdn.liferay.com/nexus/service/local/artifact/maven/redirect?a=${1}&g=com.liferay&r=liferay-public-releases&v=LATEST" -o $(ls -d liferay*.zip | head -n1)/java/${1}.jar
 }
+
+function generate_remote_app {
+	git clean -dfx .
+
+	mkdir liferay-${1}.zip
+
+	cd liferay-${1}.zip
+
+	curl -Ls https://github.com/liferay/liferay-portal/raw/master/tools/create_remote_app.sh | bash -s ${1}-remote-app react
+
+	if [ -e ../liferay-${1}-overlay ]
+	then
+		if [ -e ../liferay-${1}-overlay/package.json ]
+		then
+			jq -s '.[0] * .[1]' ../liferay-${1}-overlay/package.json ./${1}-remote-app/package.json > package.json
+
+			echo mv package.json ./${1}-remote-app/package.json
+		fi
+
+		rm -fr ./${1}-remote-app/src
+
+		cp -r ../liferay-${1}-overlay/src ${1}-remote-app
+
+		cd ${1}-remote-app
+
+		yarn install
+
+		cd ..
+	fi
+
+	cd ..
+}
