@@ -179,7 +179,7 @@ These limitations apply to the network configuration of your services in a DXP C
 
 * **Maximum SSL Certificates**: A maximum of 14 custom SSL certificates are allowed. The provider issuing the certificates may also impose its own limitations to make this less.
 
-* **Outbound Connections**: Connections from the project environment to external endpoints use an NAT solution with a 120-second timeout per connection. New connections created successively in a short period of time can lead to port exhaustion and dropped outbound traffic. Connection pooling can prevent this problem.
+* **Outbound Connections**: Connections from the project environment to external endpoints use a NAT solution with a 120-second timeout per connection. New connections created successively in a short period of time can lead to port exhaustion and dropped outbound traffic. Connection pooling can prevent this problem.
 
 * **Public IP Addresses**: By default, every environment has one public IP address, and services within the environment have internal IP addresses. However, you can configure a service's ports to be external, assigning a public IP address to the service. Exposing a service's endpoints to the internet is *not recommended*, because it bypasses DDoS protection from the [HTTPS load balancer](../infrastructure-and-operations/networking/load-balancer.md).
 
