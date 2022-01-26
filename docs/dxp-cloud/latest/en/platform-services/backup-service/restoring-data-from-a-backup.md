@@ -1,6 +1,6 @@
 # Restoring Data from a Backup
 
-During project development, there may be times when you need to restore data or roll back the project to an earlier state.
+During project development, there may be times when you need to restore data or roll back the project to an earlier state. Restoring a backup to an environment restores the data for each service, but it does *not* change the build the environment is using.
 
 You can also use custom SQL scripts to perform additional updates to a database as part of the data restore.
 
@@ -12,11 +12,17 @@ Only users with the Admin role for the chosen environment can manually restore e
 
 ## Restoring an Environment from the Backups Page
 
+The *Backups* page of each environment has a list of all recent backups taken (automatically and manually). Restoring a backup to an environment from this page restores the data used by each service, but it does *not* change the build or Docker image that each service is using.
+
+```{warning}
+The `backup` service version of the backup you're restoring should match the target environment before the restore to ensure it completes successfully. The Liferay [fix pack level](https://learn.liferay.com/dxp/latest/en/installation-and-upgrades/maintaining-a-liferay-installation/patching-dxp-7-3-and-earlier.html) should also match to avoid causing errors with a mismatched database schema. If you restore a backup that requires a different build from what is currently deployed in the environment, then [deploy an appropriate build](../../build-and-deploy/overview-of-the-dxp-cloud-deployment-workflow.md) *before* beginning the restore.
+```
+
 Follow these steps to restore an environment from a backup:
 
 1. Navigate to your project's chosen environment.
 
-1. Click on *Backups* in the environment menu.
+1. Click on Backups in the environment menu on the left side of the screen.
 
 1. Click on the *Actions* button ( ⋮ ) for the backup you want to use to restore a project environment.
 
