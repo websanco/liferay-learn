@@ -13,7 +13,7 @@ function generate_remote_app {
 
 	cd h5v7-remote-app
 
-	rm -R node_modules
+	rm -r node_modules
 }
 
 function main {
