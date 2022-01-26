@@ -32,7 +32,7 @@ function generate_remote_app {
 	if [ -e ../liferay-${1}-overlay ]
 	then
 
-		// TODO Prettify package.json (overlay and merged)
+		# TODO Prettify package.json (overlay and merged)
 
 		if [ -e ../liferay-${1}-overlay/package.json ]
 		then
