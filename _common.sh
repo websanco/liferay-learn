@@ -31,6 +31,9 @@ function generate_remote_app {
 
 	if [ -e ../liferay-${1}-overlay ]
 	then
+
+		// TODO Prettify package.json (overlay and merged)
+
 		if [ -e ../liferay-${1}-overlay/package.json ]
 		then
 			jq -s '.[0] * .[1]' ../liferay-${1}-overlay/package.json ./${1}-remote-app/package.json > package.json
