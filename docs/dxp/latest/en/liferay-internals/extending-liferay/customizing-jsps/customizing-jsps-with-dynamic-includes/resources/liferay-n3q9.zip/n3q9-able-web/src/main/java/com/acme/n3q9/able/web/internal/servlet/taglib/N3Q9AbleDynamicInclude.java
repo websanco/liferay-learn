@@ -21,7 +21,7 @@ public class N3Q9AbleDynamicInclude implements DynamicInclude {
 
 		PrintWriter printWriter = response.getWriter();
 
-		printWriter.println("<h3>Added by N3Q9 Able Dynamic Include!</h3>");
+		printWriter.println("<h3>Added by N3Q9 Able dynamic include.</h3>");
 	}
 
 	@Override
