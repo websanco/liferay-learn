@@ -1,6 +1,6 @@
 # Upgrading to a High Availability Subscription
 
-In many cases, the standard subscription plan for Liferay DXP Cloud is already enough to ensure quality performance for a live project. However, as your needs change, you may need to upgrade your subscription plan to increase the resources allocated to your environments.
+In many cases, the standard subscription plan for Liferay DXP Cloud is sufficient to ensure quality performance for a live project. As your needs change, you may need to upgrade your subscription plan to increase the resources allocated to your environments.
 
 ![A production environment with a standard DXP Cloud subscription.](./upgrading-to-a-high-availability-subscription/images/01.png)
 
@@ -8,17 +8,17 @@ When you upgrade to a High Availability subscription, you increase the amount of
 
 ![A production environment with a High Availability subscription.](./upgrading-to-a-high-availability-subscription/images/02.png)
 
-In addition to finalizing this with the Liferay DXP Cloud team, you must also take some additional steps to take advantage of these resources once you upgrade.
+In order to take advantage of this additional infrastructure, you must take the following steps.
 
 ## Communicate with Your Account Manager
 
-The first step in upgrading your DXP Cloud subscription is to officially make the change. Once you upgrade your account, the Liferay DXP Cloud team increases the resources available to your project for you to use.
+The first step in upgrading your DXP Cloud subscription is to communicate with your Account Manager. Once you upgrade your account, the Liferay DXP Cloud team increases the resources available to your project for you to use.
 
-In order to take advantage of the new resources available to you, you must also individually configure your services. This entails updating the configuration for your `liferay`, `webserver`, and `search` services.
+Once the additional resources have been provisioned for you, you must update the configuration for your services. This requires configuration updates for the `liferay`, `webserver`, and `search` services.
 
 ## Liferay Service Configuration
 
-First, you must configure the `liferay` service to increase the number of instances your environment uses. In your DXP Cloud [project repository](../getting-started/configuring-your-github-repository.md)'s `liferay/LCP.json` file, increment the value of the `scale` property by 1 (generally from `1` to `2` when upgrading to the High Availability subscription):
+First, configure the `liferay` service to increase the number of instances your environment uses. In your DXP Cloud [project repository](../getting-started/configuring-your-github-repository.md)'s `liferay/LCP.json` file, increment the value of the `scale` property by 1 (generally from `1` to `2` when upgrading to the High Availability subscription):
 
 ```
 {
@@ -40,7 +40,7 @@ The Liferay Cloud team provides a `tenant` value to use for this configuration w
 
 ## Web Server Service Configuration
 
-Next, you must configure the `webserver` service to increase the number of instances your environment uses. Increase the `scale` property in your project repository's `webserver/LCP.json` file to match the number of instances used for your `liferay` service:
+Next, configure the `webserver` service to increase the number of instances your environment uses. Increase the `scale` property in your project repository's `webserver/LCP.json` file to match the number of instances used for your `liferay` service:
 
 ```
 {
@@ -56,7 +56,7 @@ Next, you must configure the `webserver` service to increase the number of insta
 
 ## Search Service Configuration
 
-Finally, you must update the `search` service to increase its number of instances it uses by increasing the number of instances in your project repository's `search/LCP.json` file. Increment the value to the next odd number of instances to prevent issues with the service starting (generally from `1` to `3` when upgrading to the High Availability subscription):
+Finally, update the `search` service to increase its number of instances it uses by increasing the `scale` property in your project repository's `search/LCP.json` file. Increment the value to the next odd number of instances to prevent issues with the service starting (generally from `1` to `3` when upgrading to the High Availability subscription):
 
 ```
 {
@@ -77,7 +77,7 @@ In order to ensure your `search` service's instances can connect to each other p
 
 ## Deploy the Changes
 
-Once you have configured all of your services, you must [deploy the new configurations](../build-and-deploy/overview-of-the-dxp-cloud-deployment-workflow.md#deploy) to your production and UAT environments.
+Once you have configured all of your services, [deploy the new configurations](../build-and-deploy/overview-of-the-dxp-cloud-deployment-workflow.md#deploy) to your production and UAT environments. If you are unfamiliar with deploying changes to DXP Cloud, the following steps can be reviewed as an example.
 
 ### Create a Jenkins Build with Your Changes
 
@@ -125,4 +125,4 @@ The build is deployed to the environment, and the services restart with the addi
 
 ## Conclusion
 
-Congratulations! After completing these steps, the environments with these changes deployed are fully upgraded to the High Availability model. These environments have more resources and functionality to meet the needs of your users.
+Congratulations! After completing these steps, your environments are fully upgraded to the High Availability model. These environments have more resources and functionality to meet the needs of your users.
