@@ -10,7 +10,6 @@ using-the-liferay-dxp-service/configuring-the-liferay-dxp-service.md
 using-the-liferay-dxp-service/liferay-service-environment-variables.md
 using-the-liferay-dxp-service/setting-up-clustering-in-dxp-cloud.md
 using-the-liferay-dxp-service/using-the-mysql-client.md
-using-the-liferay-dxp-service/migrating-from-an-on-premises-dxp-installation.md
 using-the-liferay-dxp-service/upgrading-your-liferay-dxp-instance.md
 ```
 
