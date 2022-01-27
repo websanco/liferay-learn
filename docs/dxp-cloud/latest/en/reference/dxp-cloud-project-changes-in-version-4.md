@@ -147,7 +147,7 @@ All configurations within the `backup` service now belong in an environment-spec
 
 The new stack does not contain a docker-compose file to spin up a local environment. Because of this, a DXP bundle is needed for local testing.
 
-You can test changes in a local environment, and then migrate them to DXP Cloud. See [Migrating from an On-Premises DXP Installation](../using-the-liferay-dxp-service/migrating-from-an-on-premises-dxp-installation.md) for more help.
+You can test changes in a local environment, and then migrate them to DXP Cloud. See [Migrating to DXP Cloud](../migrating-to-dxp-cloud.md) for more help.
 
 ## Additional Information
 
