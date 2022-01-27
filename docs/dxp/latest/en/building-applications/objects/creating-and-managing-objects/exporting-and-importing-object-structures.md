@@ -16,7 +16,7 @@ Follow these steps to export an Object structure:
 
 1. Click on the *Actions* button (![Action Button](../../../images/icon-actions.png)) for the desired Object and select *Export as JSON*.
 
-   ![Click the Actions button for the desired Object and select Export as JSON.](./exporting-and-importing-object-structures/images/03.png)
+   ![Click the Actions button for the desired Object and select Export as JSON.](./exporting-and-importing-object-structures/images/01.png)
 
 1. Click *Save* in the dialog window to begin downloading the Object's definition as a JSON file.
 
@@ -32,7 +32,7 @@ Follow these steps to import an Object structure:
 
 1. Click the *Actions* button (![Actions Button](../../../images/icon-actions.png)) in the Application Bar and select *Import Object*.
 
-   ![Click the Actions button in the Application Bar and select Import Object.](./exporting-and-importing-object-structures/images/01.png)
+   ![Click the Actions button in the Application Bar and select Import Object.](./exporting-and-importing-object-structures/images/02.png)
 
 1. Enter a *name* for the new Object and select the *JSON file* you want to import.
 
@@ -40,7 +40,7 @@ Follow these steps to import an Object structure:
    Object names must be unique and use PascalCase.
    ```
 
-   ![Enter a name and select the desired JSON file.](./exporting-and-importing-object-structures/images/02.png)
+   ![Enter a name and select the desired JSON file.](./exporting-and-importing-object-structures/images/03.png)
 
 1. Click *Import*.
 
