@@ -5,7 +5,7 @@
 With Liferay Objects, you can import and export Object structures as `.json` files. This provides greater flexibility during application development, enabling users to easily migrate Object definitions between Liferay environments.
 
 ```{important}
-At this time, Objects does not support importing or exporting relationships. All other Object structure elements are supported (e.g., scope, fields, layouts).
+At this time, Objects does not support importing or exporting Relationships. All other Object configurations and structure elements are supported (e.g., scope, Fields, Layouts).
 ```
 
 ## Exporting Structures
