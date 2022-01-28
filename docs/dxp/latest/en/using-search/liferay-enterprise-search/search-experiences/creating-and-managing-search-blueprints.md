@@ -71,11 +71,11 @@ Add Elements to begin adding query clauses to the Blueprint:
 Some Elements require more action than simply adding them to the Blueprint in the Query Builder. For example, to use either the Boost Longer Contents element or the Boost Contents with More Versions element, you must re-index the following entries in Control Panel &rarr; Search &rarr; Index Actions:
 
 
-* com.liferay.blogs.model.BlogsEntry
-* com.liferay.document.library.kernel.model.DLFileEntry
-* com.liferay.journal.model.JournalArticle
-* com.liferay.knowledge.base.model.KBArticle
-* com.liferay.wiki.model.WikiPage
+* `com.liferay.blogs.model.BlogsEntry`
+* `com.liferay.document.library.kernel.model.DLFileEntry`
+* `com.liferay.journal.model.JournalArticle`
+* `com.liferay.knowledge.base.model.KBArticle`
+* `com.liferay.wiki.model.WikiPage`
 
 Other Elements require additional setup, like the Elements that provide geolocation features  (e.g., Boost Proximity). For details, see the [Elements Reference](./search-blueprints-elements-reference.md).
 ```
