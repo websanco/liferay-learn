@@ -35,8 +35,6 @@ Next, put the source code for all of your [custom themes](https://learn.liferay.
 
 When the changes are deployed, custom themes are automatically build and deployed to the `liferay` service container's `$LIFERAY_HOME/deploy/` folder.
 
-As an example, download [this sample](https://drive.google.com/file/d/1scS29urm2C5zRGGDIHdoVmXjim6QsQKe/view?usp=sharing) of a Liferay DXP 7.3 theme.
-
 ## Organize WAR Files
 
 Next, put all of your Liferay installation's [WAR files](https://learn.liferay.com/dxp/latest/en/building-applications/reference/deploying-wars-wab-generator.html) into the appropriate environment's `liferay/wars/{ENV}/` folder.

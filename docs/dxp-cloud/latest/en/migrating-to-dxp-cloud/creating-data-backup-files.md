@@ -14,10 +14,6 @@ Before you create your data backup files, you must arrange a window to freeze th
 
 Make sure your database is compatible with MySQL 5.7. You can use a tool like [DBeaver](https://dbeaver.io/) to convert other database formats to MySQL.
 
-```{tip}
-As an example, download this [sample database backup dump](https://drive.google.com/file/d/1rBteB_QorIHmfAwvdGflbbeSSWCuqHrc/view) from a 7.3 instance in the correct format.
-```
-
 Coordinate with your database administrator before and after the conversion to ensure data integrity. Test the converted database by [connecting it to a local Liferay installation](https://learn.liferay.com/dxp/latest/en/installation-and-upgrades/installing-liferay/configuring-a-database.html) before proceeding.
 
 ## Create a Database Dump
