@@ -2,10 +2,10 @@
 
 > Available for Liferay DXP 7.4 U5+ and Portal 7.4 GA9+
 
-With Liferay Objects, you can import and export Object structures as `.json` files. This provides greater flexibility during application development, enabling users to easily migrate Object definitions between Liferay environments.
+With Liferay Objects, you can import and export Object structures as `.json` files. This provides flexibility during application development, enabling users to easily migrate Object definitions between Liferay environments.
 
 ```{important}
-At this time, Objects does not support importing or exporting Relationships. All other Object configurations and structure elements are supported (e.g., scope, Fields, Layouts).
+As of Liferay DXP 7.4 U5 and Portal 7.4 GA9, Objects does not support importing or exporting Relationships. All other Object configurations and structure elements are supported (e.g., scope, Fields, Layouts).
 ```
 
 ## Exporting Structures
@@ -44,7 +44,7 @@ Follow these steps to import an Object structure:
 
 1. Click *Import*.
 
-This beings importing the Object structure in the background and can take a few minutes.
+The Object structure imports in the background and can take a few minutes.
 
 ## Additional Information
 
