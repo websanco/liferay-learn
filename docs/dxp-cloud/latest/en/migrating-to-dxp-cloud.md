@@ -13,7 +13,7 @@ migrating-to-dxp-cloud/connecting-the-vpn.md
 migrating-to-dxp-cloud/next-steps-after-migration.md
 ```
 
-Liferay DXP Cloud is a secure and reliable enterprise platform built for high availablity, scalability, and performance. Running a Liferay DXP instance on DXP Cloud provides you with [features](./getting-started/introduction-to-dxp-cloud.md) to ensure a safe, reliable, and smooth experience for your users.
+Liferay DXP Cloud is a secure and reliable enterprise platform built for high availablity, scalability, and performance. Running a Liferay DXP instance on DXP Cloud provides you with [features](./getting-started.md) to ensure a safe, reliable, and smooth experience for your users.
 
 Migrating to DXP Cloud from an on-premises Liferay DXP environment requires moving your entire instance into an environment running on DXP Cloud, including all of your data (in documents or the database), configurations, and customizations (such as OSGi modules or plugins). This also involves working with and deploying changes with a Git repository that integrates with your DXP Cloud environment(s).
 
@@ -30,7 +30,7 @@ Here are the main stages of migration to DXP Cloud:
 
 ## Why Should I Migrate to DXP Cloud?
 
-Migrating to DXP Cloud allows you to take advantage of its [high availability and scalability](./getting-started/introduction-to-dxp-cloud.md#high-availability-scalability-and-performance) with quick-to-deploy features like [clustering](./using-the-liferay-dxp-service/setting-up-clustering-in-dxp-cloud.md), [load balancing](infrastructure-and-operations/networking/load-balancer.md), and [auto-scaling](./manage-and-optimize/auto-scaling.md) out-of-the-box. Built-in [integration with Git and Jenkins](./getting-started/introduction-to-dxp-cloud.md#accelerated-development-with-built-in-ci-cd) also streamlines your development process. This makes your production instance easier to deploy and develop with, more flexible for your needs, and more reliable for your users.
+Migrating to DXP Cloud allows you to take advantage of its [high availability and scalability](./getting-started.md#high-availability-scalability-and-performance) with quick-to-deploy features like [clustering](./using-the-liferay-dxp-service/setting-up-clustering-in-dxp-cloud.md), [load balancing](infrastructure-and-operations/networking/load-balancer.md), and [auto-scaling](./manage-and-optimize/auto-scaling.md) out-of-the-box. Built-in [integration with Git and Jenkins](./getting-started.md#accelerated-development-with-built-in-ci-cd) also streamlines your development process. This makes your production instance easier to deploy and develop with, more flexible for your needs, and more reliable for your users.
 
 ## What Do I Need to Prepare in Advance?
 
