@@ -1,8 +1,8 @@
 # Stage 1: Matching DXP Versions
 
-For migration to work seamlessly, your on-premises system and your DXP Cloud environment both need to run the same version of Liferay. The first stage of migration is to configure the Liferay service running on DXP Cloud to run the same version of the installation you want to migrate.
+The first stage of migration is to configure the Liferay service running on DXP Cloud to run the same version of the installation you want to migrate.
 
-This involves cloning the DXP Cloud repository, making some version updates to it, and then applying such updates back to DXP Cloud by deploying a build.
+This requires cloning the DXP Cloud repository, configuring version changes to it, and then applying such updates back to DXP Cloud by deploying a build.
 
 ## Find Liferay Version Information
 
@@ -10,7 +10,7 @@ First, find the version number and installed patches for the Liferay DXP install
 
 To find these values, use the patching tool:
 
-1. Follow the instructions [here](../installation-and-upgrades/maintaining-a-liferay-dxp-installation/patching-liferay/installing-the-patching-tool.html) to install the patching tool to the installation you want to migrate.
+1. Follow the instructions [here](https://learn.liferay.com/dxp/latest/en/installation-and-upgrades/maintaining-a-liferay-installation/reference/installing-the-patching-tool.html) to install the patching tool to the installation you want to migrate.
 
 1. Navigate with any command line tool to the patching tool folder:
 
@@ -42,7 +42,7 @@ git clone https://github.com/dxpcloud/acme
 
 ## Update the Liferay DXP Image in the Repository 
 
-Next, you must update the Liferay DXP image in the repository you [cloned previously](#clone-the-dxp-cloud-repository). This requires you to find the Docker image that is compatible with your Liferay installation's version information.
+Next, update the Liferay DXP image in the repository you [cloned previously](#clone-the-dxp-cloud-repository). This requires you to find the Docker image that is compatible with your Liferay installation's version information.
 
 1. Go to the [Liferay DXP images](https://hub.docker.com/r/liferay/dxp/tags) page on Docker Hub.
 
