@@ -53,7 +53,7 @@ First, review the list of plugins that are already installed on DXP Cloud by def
 
 The shell lists all pre-installed Elasticsearch plugins when you run the command.
 
-If you have extra search plugins that are not listed, then add them to your DXP Cloud project's repository:
+If you have extra search plugins that are not listed, add them to your DXP Cloud project's repository:
 
 1. In your repository, open the `search/LCP.json` file.
 
@@ -69,7 +69,7 @@ If you have extra search plugins that are not listed, then add them to your DXP 
 
 ## Create and Deploy a Build
 
-Next, you must create and deploy a build with these changes to apply them to your DXP Cloud environments.
+Next, create and deploy a build with these changes to apply them to your DXP Cloud environments.
 
 ### Create a Jenkins Build with the Change
 
