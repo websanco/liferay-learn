@@ -1,6 +1,6 @@
 # Stage 3: Uploading and Restoring the Data Backup
 
-With your Liferay DXP database and document library in a usable format, the next stage is to upload them together as a single backup to DXP Cloud and restore them to your chosen environment.
+With your Liferay DXP database and document library in a compatible format, the next stage is to upload them together as a single backup to DXP Cloud and restore them to your chosen environment.
 
 ## Upload the Backup
 
@@ -43,7 +43,7 @@ Restore the backup created from your upload on the Backups page.
     ![Select the correct environment to restore the backup to.](./uploading-and-restoring-the-data-backup/images/04.png)
 
     ```{warning}
-    When you restore the backup, the target environment's database and Liferay data storage are overwritten with data from the backup, and the overwrite is not reversible. Make sure you select the correct target environment.
+     Make sure you select the correct target environment. When you restore the backup, the target environment's database and Liferay data storage are overwritten with data from the backup, and the overwrite is not reversible.
     ```
 
 1. Click *Restore to Environment* and wait for the backup restoration to complete.
