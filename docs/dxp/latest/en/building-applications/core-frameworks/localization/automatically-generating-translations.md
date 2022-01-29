@@ -52,7 +52,7 @@ The accuracy and correctness of machine translation can vary from language to la
 
 The sample project has one language key in the `Language.properties` file. Add as many language keys as you need for your application, then run Language Builder.
 
-To deploy the language keys to Liferay, see [Overriding Global Language Keys](../../../liferay-internals/extending-liferay/overriding-global-language-keys.md). The instructions are the same whether overriding existing keys or adding new keys. 
+To deploy the language keys to Liferay, see [Overriding Global Language Keys](../../../liferay-internals/extending-liferay/overriding-global-language-translations.md). The instructions are the same whether overriding existing keys or adding new keys. 
 
 If you want to exclude some languages from being translated automatically, use the `excludedLanguageIds` property in your project's `build.gradle` file. For example, to include French, 
 

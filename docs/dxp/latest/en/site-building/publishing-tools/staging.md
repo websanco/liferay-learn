@@ -55,7 +55,7 @@ From a low level perspective, staging is an equivalence relation where entities 
 Understanding this process can improve efficiency and help you plan ahead to achieve a seamless publishing experience. See [Understanding the Publishing Process](./staging/understanding-the-publishing-process.md) for more information.
 
 ```{raw} html
-:file: ../../../landingpage_template.html
+:file: ../../landingpage_template.html
 ```
 
 ```{raw} html

@@ -352,7 +352,7 @@ What's left is to describe your application package.
 
 This file specifies the application's name, version, Java package imports/exports, and OSGi metadata. Here's an example package properties file:
 
-```{properties} 
+```properties
 author=N/A
 change-log=
 licenses=N/A
@@ -370,7 +370,7 @@ Import-Package: com.liferay.portal.webserver,com.liferay.portal.kernel.servlet.f
 
 It uses this OSGi metadata header to [import required Java packages](../../../..//liferay-internals/fundamentals/importing-packages.md):
 
-```{properties}
+```properties
 Import-Package: com.liferay.portal.webserver,\
 com.liferay.portal.kernel.servlet.filters.invoker
 ```

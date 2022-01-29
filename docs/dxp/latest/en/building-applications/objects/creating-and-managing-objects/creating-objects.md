@@ -64,7 +64,7 @@ Follow these steps to edit the Object draft:
 
 1. Determine whether to show or hide the Object's widget in Sites.
 
-   When enabled, users can deploy the Object to a Page as a widget. See [Deploying Object Widgets in Sites](../deploying-object-widgets-in-sites.md) for more information.
+   When enabled, users can deploy the Object to a Page as a widget. See [Deploying Object Widgets in Sites](../deploying-object-widgets-to-sites.md) for more information.
 
    ```{note}
    This feature is available for Liferay DXP 7.4 U1+ and Liferay Portal 7.4 GA5+.

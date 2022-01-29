@@ -203,7 +203,7 @@ Since `addS5E6Entry` is a portlet action method, it takes `ActionRequest` and `A
 
 The portlet's `view.jsp` contains a form with an `actionURL` that invokes the portlet's `addS5E6Entry` method.
 
-```{literalinclude} ./adding-the-uad-framework/resources/liferay-s5e6.zip/s5e6-web/src/main/resources/META-INF/resources/view.jsp
+```{literalinclude} ./enabling-assets/resources/liferay-s5e6.zip/s5e6-web/src/main/resources/META-INF/resources/view.jsp
 :language: jsp
 :lines: 18-28
 ```

@@ -24,7 +24,7 @@ Follow these steps to add relationships to an Object:
 
 1. Select the desired Object.
 
-1. Click the *Relationships* tab and select the *Add* button (![Add Button](../../images/icon-add.png)).
+1. Click the *Relationships* tab and select the *Add* button (![Add Button](../../../images/icon-add.png)).
 
    ![Click on the Add button in the Relationships tab, then enter a label abd name, and select a relationship type and the desired Object.](./defining-object-relationships/images/01.png)
 

@@ -3,7 +3,7 @@
 ```{toctree}
 :maxdepth: 2
 
-developer-guide/implementing-workflow.md 
+developer-guide/implementing-workflow.md
 developer-guide/implementing-a-custom-sla-calendar.md
 developer-guide/crafting-xml-workflow-definitions.md
 developer-guide/using-the-script-engine-in-workflow.md

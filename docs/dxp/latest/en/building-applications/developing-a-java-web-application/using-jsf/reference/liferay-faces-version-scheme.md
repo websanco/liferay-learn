@@ -70,6 +70,6 @@ Library that contains general purpose JSF utilities to support many of the sub-p
 
 The the following image refers to the Liferay Faces dependency diagram, which helps to visualize how components interact and depend on each other.
 
-![Liferay Faces dependency diagram helps visualize how components interact and depend on each other.](./images/01.png)
+![Liferay Faces dependency diagram helps visualize how components interact and depend on each other.](./liferay-faces-version-scheme/images/01.png)
 
 Next, you can see some example configurations to see the new versioning scheme in action.

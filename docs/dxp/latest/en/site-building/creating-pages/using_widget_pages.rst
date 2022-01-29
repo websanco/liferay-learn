@@ -4,6 +4,7 @@ Using Widget Pages
 .. toctree::
    :maxdepth: 3
 
+   using-widget-pages/adding-widgets-to-a-page.md
    using-widget-pages/configuring-widgets.md
    using-widget-pages/styling-widgets.md
 

@@ -62,7 +62,7 @@ You can now use the Picklist as a field in the Time Off Request Object.
    | Then | Webhook |
    | URL | Enter a test webhook URL from either your app or a site like, https://webhook.site. |
 
-   This action sends data to an external system whenever Time Off Request entries are added. See [Defining Actions](../creating-and-managing-objects/defining-actions.md) for more information.
+   This action sends data to an external system whenever Time Off Request entries are added. See [Defining Actions](../creating-and-managing-objects/defining-object-actions.md) for more information.
 
    ![Create a webhook action that's triggered after requests are added.](./building-a-time-off-requester/images/04.png)
 
