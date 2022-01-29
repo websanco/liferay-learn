@@ -2,7 +2,7 @@
 
 Congratulations! If you have completed all of the previous stages in this section, then you have successfully migrated your on-premises Liferay DXP installation to DXP Cloud!
 
-Now that you have Liferay DXP running on DXP Cloud, you are ready to begin taking advantage of its features, including [automated backups](../platform-services/backup-service/backup-service-overview.md), [built-in continuous integration](../platform-services/continuous-integration.md), automatic [service logging](../troubleshooting/reading-dxp-cloud-service-logs.md), and built-in [security features](../infrastructure-and-operations/information-security-and-dxp-cloud.md).
+Now that you have Liferay DXP running on DXP Cloud, you are ready to begin taking advantage of its features, including [automated backups](../platform-services/backup-service/backup-service-overview.md), [built-in continuous integration](../platform-services/continuous-integration.md), automatic [service logging](../troubleshooting/reading-dxp-cloud-service-logs.md), and built-in [security features](../infrastructure-and-operations/security/information-security-and-dxp-cloud.md).
 
 However, in order to take full advantage of DXP Cloud's capabilities, there are some additional steps you can perform while getting started:
 

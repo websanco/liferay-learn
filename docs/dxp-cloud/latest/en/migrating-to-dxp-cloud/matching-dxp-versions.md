@@ -104,7 +104,7 @@ You must also add hotfix information for the [patches installed in your on-premi
 
 1. In your repository, open the `ci/LCP.json` file.
 
-1. Add the hotfix name you copied previously as a new [environment variable](../reference/defining-environment-variables.html) named `LCP_CI_LIFERAY_DXP_HOTFIXES_COMMON`:
+1. Add the hotfix name you copied previously as a new [environment variable](../reference/defining-environment-variables.md) named `LCP_CI_LIFERAY_DXP_HOTFIXES_COMMON`:
 
     ```
     "env": {
@@ -112,7 +112,7 @@ You must also add hotfix information for the [patches installed in your on-premi
     }
     ```
 
-```{info}
+```{important}
 The hotfix defined in `LCP_CI_LIFERAY_DXP_HOTFIXES_COMMON` and its dependencies are downloaded and integrated as part of the Jenkins build process.
 ```
 

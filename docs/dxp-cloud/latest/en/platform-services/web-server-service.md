@@ -65,5 +65,5 @@ place it in this directory structure:
     └── LCP.json
 
 ```{note}
-If you are using version 3.x.x services, then webserver scripts instead belong in the appropriate `lcp/webserver/script/{ENV}/` directory. See [Understanding Service Stack Versions](*../reference/understanding-service-stack-versions.md) for more information on checking the version.
+If you are using version 3.x.x services, then webserver scripts instead belong in the appropriate `lcp/webserver/script/{ENV}/` directory. See [Understanding Service Stack Versions](../reference/understanding-service-stack-versions.md) for more information on checking the version.
 ```
