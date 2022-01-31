@@ -31,7 +31,7 @@ Any files put into the `webserver/configs/common/` folder applies to all environ
 See [Web Server Service Configurations](../platform-services/web-server-service.md#configurations) for more information.
 
 ```{tip}
-As an example Nginx configuration, download this [sample Nginx .conf file](https://drive.google.com/file/d/10nt2ys4GWh-M40NOljrQsWlbOIjuYnf8/view).
+To see what an Nginx configuration file looks like, see the example configuration [here](../reference/example-configuration-files.md#web-server-service-configuration-nginx-conf).
 ```
 
 ## Organize Web Server Customizations

@@ -26,7 +26,7 @@ In the project repository you [cloned previously](./matching-dxp-versions.md#clo
 All custom shell scripts in the appropriate folder run each time the `search` service is redeployed.
 
 ```{tip}
-As an example Elasticsearch configuration, download this [sample Elasticsearch .yml file](https://drive.google.com/file/d/1rhfH2E0tvLgyoIjd6x2191yrNW2Y7ekD/view).
+To see what an Elasticsearch configuration file looks like, see the example configuration [here](../reference/example-configuration-files.md#search-service-configuration-elasticsearch-yml).
 ```
 
 ## Add Extra Search Plugins

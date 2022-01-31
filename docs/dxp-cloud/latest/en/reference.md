@@ -12,6 +12,7 @@ reference/upgrading-to-a-high-availability-subscription.md
 reference/command-line-tool.md
 reference/defining-environment-variables.md
 reference/platform-limitations.md
+reference/example-configuration-files.md
 ```
 
 - [DXP Cloud Infrastructure](./reference/dxp-cloud-infrastructure.md)
@@ -23,3 +24,4 @@ reference/platform-limitations.md
 - [Command-Line Tool](./reference/command-line-tool.md)
 - [Defining Environment Variables](./reference/defining-environment-variables.md)
 - [Platform Limitations](./reference/platform-limitations.md)
+- [Example Configuration Files](./reference/example-configuration-files.md)
