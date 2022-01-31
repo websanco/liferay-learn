@@ -3,13 +3,10 @@ import com.liferay.headless.delivery.client.dto.v1_0.ContentFieldValue;
 import com.liferay.headless.delivery.client.dto.v1_0.StructuredContent;
 import com.liferay.headless.delivery.client.resource.v1_0.StructuredContentResource;
 
-import java.util.Collections;
-import java.util.List;
-
 public class StructuredContent_PATCH_ById {
 
 	/**
-	 * java -classpath .:* -DstructuredContentId=1234 StructuredContent_PATCH_ById
+	 * java -classpath .:* -DcontentStructureId=1234 -DstructuredContentId=5678 StructuredContent_PATCH_ById
 	 */
 	public static void main(String[] args) throws Exception {
 		StructuredContentResource.Builder builder =
@@ -20,25 +17,26 @@ public class StructuredContent_PATCH_ById {
 				"test@liferay.com", "test"
 			).build();
 
-		List<ContentField> contentList = Collections.singletonList(
-			new ContentField() {
-				{
-					contentFieldValue = new ContentFieldValue() {
-						{
-							data = "<p>Bar</p>";
-						}
-					};
-					name = "content";
-				}
-			});
-
 		StructuredContent structuredContent =
 			structuredContentResource.patchStructuredContent(
 				Long.valueOf(System.getProperty("structuredContentId")),
 				new StructuredContent() {
 					{
-						contentFields = contentList.toArray(
-							new ContentField[0]);
+						contentFields = new ContentField[] {
+							new ContentField() {
+								{
+									contentFieldValue =
+										new ContentFieldValue() {
+											{
+												data = "<p>Bar</p>";
+											}
+										};
+									name = "content";
+								}
+							}
+						};
+						contentStructureId = Long.valueOf(
+							System.getProperty("contentStructureId"));
 					}
 				});
 

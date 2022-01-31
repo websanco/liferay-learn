@@ -3,9 +3,6 @@ import com.liferay.headless.delivery.client.dto.v1_0.ContentFieldValue;
 import com.liferay.headless.delivery.client.dto.v1_0.StructuredContent;
 import com.liferay.headless.delivery.client.resource.v1_0.StructuredContentResource;
 
-import java.util.Collections;
-import java.util.List;
-
 public class StructuredContent_POST_ToSite {
 
 	/**
@@ -20,25 +17,24 @@ public class StructuredContent_POST_ToSite {
 				"test@liferay.com", "test"
 			).build();
 
-		List<ContentField> contentList = Collections.singletonList(
-			new ContentField() {
-				{
-					contentFieldValue = new ContentFieldValue() {
-						{
-							data = "<p>Foo</p>";
-						}
-					};
-					name = "content";
-				}
-			});
-
 		StructuredContent structuredContent =
 			structuredContentResource.postSiteStructuredContent(
 				Long.valueOf(System.getProperty("siteId")),
 				new StructuredContent() {
 					{
-						contentFields = contentList.toArray(
-							new ContentField[0]);
+						contentFields = new ContentField[] {
+							new ContentField() {
+								{
+									contentFieldValue =
+										new ContentFieldValue() {
+											{
+												data = "<p>Foo</p>";
+											}
+										};
+									name = "content";
+								}
+							}
+						};
 						contentStructureId = Long.valueOf(
 							System.getProperty("contentStructureId"));
 						title = "Charlie Article";
