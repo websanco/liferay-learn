@@ -8,6 +8,7 @@ The web server service uses an [Nginx](link) server to manage web traffic. Here 
 
 ```{literalinclude} ./example-configuration-files/resources/nginx.conf
 :lines: 1-81
+:language: nginx
 ```
 
 The `nginx.conf` file belongs in the `webserver/configs/{ENV}/conf.d/` directory in your project repository.
@@ -18,6 +19,7 @@ The search service uses an [Elasticsearch](https://www.elastic.co/guide/index.ht
 
 ```{literalinclude} ./example-configuration-files/resources/elasticsearch.yml
 :lines: 1-27
+:language: yaml
 ```
 
 The `elasticsearch.yml` file belongs in the `search/configs/{ENV}/config/` directory in your project repository.
