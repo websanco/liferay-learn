@@ -117,4 +117,4 @@ The build is deployed to your chosen environment, and your Elasticsearch configu
 
 ## Next Steps
 
-Now you have finished migrating your Elasticsearch configurations to your DXP Cloud environments. Next, you will [configure and connect a VPN server](./migrating-search-configurations.md).
+Now you have finished migrating your Elasticsearch configurations to your DXP Cloud environments. Next, you will [configure and connect a VPN server](./connecting-the-vpn.md).
