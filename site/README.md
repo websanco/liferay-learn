@@ -1,12 +1,13 @@
 # Generating the Site
 
-The Liferay Learn documentation site is built using [Sphinx](http://www.sphinx-doc.org/en/master/). The templates and styles are in the `site/homepage/` directory and propagated to the `site/docs/` directory via the [build script](#build-resources). The final project is compiled into static html pages using the `build_site.sh` script.
+The Liferay Learn documentation site is built using [Sphinx](http://www.sphinx-doc.org/en/master/). The templates and styles are in the `site/homepage/` directory and propagated to the `site/docs/` directory via the [build script](#minify-and-build-resources). The final project is compiled into static html pages using the `build_site.sh` script.
 
 ## Getting Started
 
-1. [Install node](https://nodejs.org/en/).
+1. [Install node, version 10](https://nodejs.org/en/).
 2. Install all dependencies with `npm install` in the `site/homepage/` directory.
-3. If you would like to take advantage of live update, install autobuild with `pip install sphinx-autobuild`.
+3. [Install Python, version 3.8](https://www.python.org/downloads/)
+4. If you would like to take advantage of live update, install autobuild with `pip install sphinx-autobuild`.
 
 ## Minify and Build Resources
 
