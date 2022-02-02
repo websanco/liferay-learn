@@ -1,5 +1,7 @@
 # About Display Page Templates and Display Pages
 
+> Available: Liferay DXP 7.3+
+
 Display Pages are paired with Display Page Templates to present your content in a pre-defined layout. Similarly to [Content Pages](../../creating-pages/building-and-managing-content-pages/content-pages-overview.md), you organize the Display Page content in [Fragments](../using-fragments/using-page-fragments.md) and [Widgets](../../creating-pages/building-and-managing-content-pages/using-widgets-on-a-content-page.md) and use a Display Page Template to organize how that content appears. Using a single Display Page Template, you can apply the same layout multiple times to different content of the same type.
 
 ```{tip}

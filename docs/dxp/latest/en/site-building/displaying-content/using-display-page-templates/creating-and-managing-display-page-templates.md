@@ -1,5 +1,7 @@
 # Creating and Managing Display Page Templates
 
+> Available: Liferay DXP 7.3+
+
 A Display Page Template specifies the layout and formatting for your content and displays it at a unique friendly URL. To learn more about Display Page Templates and Display Pages, read [Displaying Content with Display Page Templates](./about-display-page-templates-and-display-pages.md).
 
 ```{note}

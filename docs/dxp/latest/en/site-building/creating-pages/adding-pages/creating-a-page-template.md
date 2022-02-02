@@ -1,5 +1,7 @@
 # Creating a Page Template
 
+> Available: Liferay DXP 7.3+
+
 Page Templates help you efficiently create pages based on predefined layouts and content. There are several basic page templates available out-of-the-box.
 
 ![Basic Page Templates are available.](./creating-a-page-template/images/01.png)
