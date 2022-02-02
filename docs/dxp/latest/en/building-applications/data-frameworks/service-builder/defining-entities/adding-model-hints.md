@@ -1,6 +1,6 @@
 # Adding Model Hints
 
-Once you've used Service Builder to define model entities, you may want to further refine how users enter that data. For example, model hints can define a calendar field with selectable dates only in the future. Model hints specify entity data restrictions and other formatting. 
+Once you've used Service Builder to define model entities, you may want to refine how users enter that data. Model hints specify entity data restrictions and other formatting. For example, model hints can define a calendar field with selectable dates only in the future. 
 
 You define model hints in a file called `portlet-model-hints.xml`. The `portlet-model-hints.xml` file goes in the service module's `src/main/resources/META-INF` folder. 
 
@@ -62,7 +62,7 @@ As an example, consider the [Bookmarks app service module's](https://repository.
 </model-hints>
 ```
 
-The root-level element is `model-hints`. Model entities are represented by `model` sub-elements of the `model-hints` element. Each `model` element must have a `name` attribute specifying the fully-qualified class name. Models have `field` elements representing their entity's columns. Lastly, `field` elements must have a name and a type. Each `field` element's name and type maps to the name and type specified for the entity's column in the service module's `service.xml` file. Service Builder generates all these elements for you, based on the `service.xml`. 
+The root-level element is `model-hints`. Model entities are represented by `model` sub-elements of the `model-hints` element. Each `model` element must have a `name` attribute specifying the fully-qualified class name. Models have `field` elements representing their entity's columns. Finally, `field` elements must have a name and a type. Each `field` element's name and type maps to the name and type specified for the entity's column in the service module's `service.xml` file. Service Builder generates all these elements for you, based on the `service.xml`. 
 
 To add hints to a field, add a `hint` child element. For example, you can add a `display-width hint` to specify the pixel width to use in displaying the field. The default pixel width is `350`. To show a `String` field with 50 pixels, you could nest a `hint` element named `display-width` and give it a value of `50`. 
 
