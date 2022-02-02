@@ -204,6 +204,12 @@ USE `lportal`;
 
 ### Creating the Volume File
 
+The document library must also be compressed to a format that you can upload.
+
+```{tip}
+If permissions are not already configured for DXP Cloud when you upload a backup, then restoring the backup to your environments afterward can take longer to complete. To avoid long restore times, navigate to your `LIFERAY_HOME` folder and run this command before compressing the document library: `chown -R 1000:1000 data/document_library/`.
+```
+
 Run this command to compress the data volume:
 
 ```bash
