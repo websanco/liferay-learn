@@ -34,7 +34,7 @@ public class S1J6Portlet extends GenericPortlet {
 		printWriter.println(_s1j6.doSomething());
 	}
 
-	@Reference (policyOption = ReferencePolicyOption.GREEDY)
+	@Reference(policyOption = ReferencePolicyOption.GREEDY)
 	private S1J6 _s1j6;
 
 }
