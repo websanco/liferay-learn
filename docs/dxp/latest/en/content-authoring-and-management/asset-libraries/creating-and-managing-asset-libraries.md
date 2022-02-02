@@ -6,15 +6,10 @@ You can manage Asset Libraries via the Asset Libraries link in the *Applications
 
 ![Create and manage Asset Libraries via the Asset Libraries Page in the Applications tab of the Global Menu.](./creating-and-managing-asset-libraries/images/01.png)
 
-- [Creating and Managing Asset Libraries](#creating-and-managing-asset-libraries)
   - [Creating an Asset Library](#creating-an-asset-library)
   - [Configuring Asset Libraries](#configuring-asset-libraries)
-    - [General Settings](#general-settings)
-    - [Sites](#sites)
-    - [Languages](#languages)
   - [Managing Asset Library Memberships](#managing-asset-library-memberships)
   - [Deleting an Asset Library](#deleting-an-asset-library)
-  - [Additional Information](#additional-information)
 
 ## Creating an Asset Library
 

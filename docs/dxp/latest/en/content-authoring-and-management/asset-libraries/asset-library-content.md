@@ -12,7 +12,6 @@ This leads to the Library's menu page. From here, you can access the Library's a
 
 ![Click on the desired Asset Library's name to access its dashboard.](./asset-library-content/images/01.png)
 
-- [Asset Library Content](#asset-library-content)
   - [Creating Content](#creating-content)
   - [Using Content in Sites](#using-content-in-sites)
   - [Staging Content](#staging-content)
