@@ -1,5 +1,7 @@
 # Using a Style Book to Standardize Site Appearance
 
+> Available: Liferay DXP 7.3+
+
 A *Style Book* is a set of visual rules that apply to a Site to provide a consistent experience across its pages. They determine various visual settings on the Site, including spacing between elements (such as widgets), colors, and fonts. Each of these settings applies equally to every page using the Style Book.
 
 The theme you assign to your Site's Public Pages determines the categories of settings available to the Style Books for your Site. Developers can customize the categories with new options for configuring Style Books. See [Style Book Token Definitions](./developer-guide/style-book-token-definitions.md) for more information.
