@@ -178,9 +178,10 @@ Follow these steps to define a route property via *widget configuration*:
 
 ```{literalinclude} ./using-routes-with-remote-apps/resources/liferay-j1v3.zip/j1v3-remote-app/src/index.js
     :language: js
+    :lines: 1-34
 ```
 
-The index file creates the `WebComponent` class, which extends the `HTMLElement` interface. This class implements the interface's [`connectedCallback()`](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements#using_the_lifecycle_callbacks) function, which calls [`ReactDOM.render`](https://reactjs.org/docs/react-dom.html#render) with `App` as a parameter. When `App` is called, it checks for any defined `"route"` attribute and compares that value with any of the available routes. If it matches either `hello-foo` or `hello-bar`, then it returns and renders the corresponding route. Otherwise, it returns and renders `hello-world`.
+This `index.js` file creates the `WebComponent` class, which extends the `HTMLElement` interface. This class implements the interface's [`connectedCallback()`](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements#using_the_lifecycle_callbacks) function, which calls [`ReactDOM.render`](https://reactjs.org/docs/react-dom.html#render) with `App` as a parameter. When `App` is called, it checks for any defined `"route"` attribute and compares that value with any of the available routes. If it matches either `hello-foo` or `hello-bar`, then it returns and renders the corresponding route. Otherwise, it returns and renders `hello-world`.
 
 Each of the routes is imported into the `index.js` file from the `routes` folder:
 
@@ -197,22 +198,25 @@ routes
         └── HelloWorld.js
 ```
 
-### `HelloWorld.js`
+### HelloWorld.js
 
 ```{literalinclude} ./using-routes-with-remote-apps/resources/liferay-j1v3.zip/j1v3-remote-app/src/routes/hello-world/pages/HelloWorld.js
     :language: js
+    :lines: 1-9
 ```
 
-### `HelloFoo.js`
+### HelloFoo.js
 
 ```{literalinclude} ./using-routes-with-remote-apps/resources/liferay-j1v3.zip/j1v3-remote-app/src/routes/hello-foo/pages/HelloFoo.js
     :language: js
+    :lines: 1-9
 ```
 
-### `HelloBar.js`
+### HelloBar.js
 
 ```{literalinclude} ./using-routes-with-remote-apps/resources/liferay-j1v3.zip/j1v3-remote-app/src/routes/hello-bar/pages/HelloBar.js
     :language: js
+    :lines: 1-9
 ```
 
 ## Additional Information
