@@ -1,5 +1,7 @@
 # Asset Library Content
 
+> Available: Liferay DXP 7.3+
+
 Asset Libraries provide a convenient way to share content across Liferay Sites while streamlining content collaboration and reducing the risk of data duplication. To add, view, and manage an Asset Library's content, first navigate to the Library's menu page.
 
 1. Open the *Global Menu* (![Global Menu](../../images/icon-applications-menu.png)), click on the *Applications* tab, and click on *Asset Libraries*.
@@ -10,12 +12,14 @@ This leads to the Library's menu page. From here, you can access the Library's a
 
 ![Click on the desired Asset Library's name to access its dashboard.](./asset-library-content/images/01.png)
 
-* [Creating Content](#creating-content)
-* [Using Content in Sites](#using-content-in-sites)
-* [Staging Content](#staging-content)
-* [Categorizing Content](#categorizing-content)
-* [Importing and Exporting Content](#importing-and-exporting-content)
-* [Removing Content](#removing-content)
+- [Asset Library Content](#asset-library-content)
+  - [Creating Content](#creating-content)
+  - [Using Content in Sites](#using-content-in-sites)
+  - [Staging Content](#staging-content)
+  - [Categorizing Content](#categorizing-content)
+  - [Exporting and Importing Content](#exporting-and-importing-content)
+  - [Removing Content](#removing-content)
+  - [Additional Information](#additional-information)
 
 ## Creating Content
 

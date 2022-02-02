@@ -1,5 +1,7 @@
 # Asset Libraries Overview
 
+> Available: Liferay DXP 7.3+
+
 Asset Libraries are virtual spaces where you can create and store reusable assets. You can create as many of these spaces as needed to group together content for departments, teams, or even individual products and campaigns. Each Library is created at the instance level and can be connected to multiple Sites, so your Users can develop and manage assets in each Library instead of within individual Sites. Supported applications include Web Content, Documents and Media, and Collections.
 
 ![Asset Libraries are virtual spaces where you can create and store reusable assets for your DXP instance.](./asset-libraries-overview/images/01.png)
