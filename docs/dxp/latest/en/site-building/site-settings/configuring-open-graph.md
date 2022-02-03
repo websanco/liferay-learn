@@ -1,5 +1,7 @@
 # Configuring Open Graph
 
+> Available: Liferay DXP 7.3+
+
 [Open Graph](https://ogp.me/) meta tags are embedded on every page, so you can share content on applications that support it, such as Facebook, Twitter, Slack, etc. You can disable this behavior from your Site's General settings.
 <!-- It'd be great to have a screenshot here of the practical application of this feature. -->
 1. Open the Site Menu and go to *Configuration* &rarr; *Settings* (previously *Site Settings*)

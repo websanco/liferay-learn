@@ -142,6 +142,8 @@ Use the drop-down menu to inform tools crawling and indexing your Site how frequ
 
 ## Open Graph
 
+> Available: Liferay DXP 7.3+
+
 [Open Graph](https://ogp.me/) is an Internet protocol that standardizes link summaries in application contexts that support this protocol, such as Facebook, Slack, and Twitter. In the *Open Graph* tab, you can use Open Graph `<meta property>` tags to define a Page's metadata and create engaging representations of your content. See [Configuring Open Graph](../../site-settings/configuring-open-graph.md) for more information about the following settings.
 
 ```{note}
