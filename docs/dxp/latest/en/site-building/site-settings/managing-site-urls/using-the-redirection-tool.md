@@ -1,6 +1,6 @@
 # Using the Redirection Tool
 
-> Available: Liferay DXP 7.3+
+> Available: Liferay DXP/Portal 7.3+
 
 Maintaining URL integrity is important for any Site. Liferay DXP's *Redirection* tool provides a convenient and integrated way to manage HTTP redirects and track 404 errors. With this tool, you can easily avoid and fix broken links, improving both user experience and SEO.
 

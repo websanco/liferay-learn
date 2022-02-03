@@ -1,6 +1,6 @@
 # Displaying Categories using Display Pages
 
-> Available: Liferay DXP 7.4+.
+> Available: Liferay DXP/Portal 7.4+.
 
 Using a [Display Page Template](./about-display-page-templates-and-display-pages.md) you can render Web Content, Documents, and Blog Entries in a [Display Page](../../../site-building/displaying-content/using-display-page-templates/publishing-content-with-display-pages.md). Starting with Liferay DXP 7.4, you can also render Categories on a Display Page. This can be useful if you want to showcase multiple products or services that you [organize using Categories](../../../content-authoring-and-management/tags-and-categories/organizing-content-with-categories-and-tags.md). Because Display Pages are ideal for showing a catalog of elements in a consistent way, you can use Category-based Display Pages to provide users a consistent experience when browsing your products or services catalog.
 

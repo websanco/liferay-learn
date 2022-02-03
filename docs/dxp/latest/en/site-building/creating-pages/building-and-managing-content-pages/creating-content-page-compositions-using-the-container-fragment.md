@@ -128,7 +128,7 @@ To avoid breaking your Site layout configuration, use a test environment when wo
 
 ## Creating Advanced Compositions with the Container Fragment
 
-> Available: Liferay DXP 7.4+.
+> Available: Liferay DXP/Portal 7.4+.
 
 When you configure one or more Containers inside another Container Fragment, you can define advanced display options using a *Flex* display.
 

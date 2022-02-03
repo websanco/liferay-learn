@@ -8,7 +8,7 @@ Configuring the Menu Display Fragment is easier than the Navigation Menu Widget,
 
 ## Configuring the Menu Display Fragment
 
-> Available: Liferay DXP 7.4+.
+> Available: Liferay DXP/Portal 7.4+.
 
 Using the Menu Display Fragment, you can create a navigation menu anywhere in your Content Page. This navigation menu is based on your Site's Public or Private Pages hierarchy, or any other hierarchy you define using Liferay DXP [Navigation Menus](./configuring-navigation-menus.md). You can also define the menu display style options and the number of sub-levels to include in the navigation.
 

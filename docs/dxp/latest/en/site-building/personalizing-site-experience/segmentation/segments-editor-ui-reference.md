@@ -123,6 +123,6 @@ Since Liferay DXP 7.2 SP2+, these properties are also available for Organization
 
 ## Segments Property
 
-> Available: Liferay 7.3+.
+> Available: Liferay DXP/Portal 7.3+.
 
 The Segments Property provides a way to combine existing Segments into a new Compound Segment. The Compound Segment inherits the properties from the Segments it is based on, and updates the members automatically. For more information, see [Compound Segments](./creating-and-managing-user-segments.md#compound-segments).

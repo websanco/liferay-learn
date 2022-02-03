@@ -1,6 +1,6 @@
 # Localizing the Fragment Configuration
 
-> Available: Liferay DXP 7.4+
+> Available: Liferay DXP/Portal 7.4+
 
 You can localize the following Fragment settings for the target audience's language:
 

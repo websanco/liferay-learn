@@ -1,6 +1,6 @@
 # Using the Questions App
 
-> Available: Liferay DXP 7.3+
+> Available: Liferay DXP/Portal 7.3+
 
 The Questions app is a new UI of the Message Boards application, focused on presenting a question and answer format. The Questions app allows the creation of,
 

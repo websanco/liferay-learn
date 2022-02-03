@@ -1,6 +1,6 @@
 # Content Dashboard Interface
 
-> Available: Liferay 7.3+
+> Available: Liferay DXP/Portal 7.3+
 
 The Content Dashboard interface has the following areas:
 

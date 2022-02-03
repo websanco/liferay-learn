@@ -241,7 +241,7 @@ This JSON configuration creates an input text field you can implement for cases 
 
 ## Video Selector
 
-> Available: Liferay 7.4+.
+> Available: Liferay DXP/Portal 7.4+.
 
 Using the `videoSelector` type, you can create a video selector to incorporate a [External Video](../../../creating-pages/building-and-managing-content-pages/page-fragments-user-interface-reference.md#external-video) Fragment in another Fragment.
 
@@ -311,7 +311,7 @@ The `videoSelector` type is compatible with the [External Video](../../../creati
 
 ## Collection Selector
 
-> Available: Liferay DXP 7.3+.
+> Available: Liferay DXP/Portal 7.3+.
 
 Using the `collectionSelector` configuration type, you can develop a Fragment that includes a [Collection](../../../../content-authoring-and-management/collections-and-collection-pages/about-collections-and-collection-pages.md) or Collection Provider. You can use the `collectionSelector` with both Manual and Dynamic Collections.
 

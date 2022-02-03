@@ -1,6 +1,6 @@
 # Account Roles
 
-> Available: Liferay DXP 7.4+
+> Available: Liferay DXP/Portal 7.4+
 
 You can create different Account Roles and define specific permissions for each one. Then assign these Roles to different [Account Users](./accounts/account-users.md) to grant appropriate access to their [Accounts](../accounts.md). 
 

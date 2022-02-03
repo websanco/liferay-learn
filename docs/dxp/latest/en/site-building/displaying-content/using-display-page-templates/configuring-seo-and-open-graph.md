@@ -1,6 +1,6 @@
 # Configuring SEO and Open Graph
 
-> Available 7.3+
+> Available DXP/Portal 7.3+
 
 With Display Page Templates, you can create standard formats for displaying different content types, such as Web Content Articles, Documents, and Blog Entries. When configuring a template, you can define SEO and Open Graph fields that are dynamically filled for your displayed content.
 
@@ -59,7 +59,7 @@ Determine whether to include a Display Page in your `sitemap.xml` file, as well 
 
 ## Configuring Open Graph Settings
 
-> Available: Liferay DXP 7.3+.
+> Available: Liferay DXP/Portal 7.3+.
 
 [Open Graph](https://ogp.me) is an Internet protocol that standardizes how a Site's metadata appears on social networks. With Liferay DXP, you can create Display Page templates that dynamically configure a Page's Open Graph `<meta>` tags.
 

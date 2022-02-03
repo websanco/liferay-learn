@@ -1,6 +1,6 @@
 # Account Users
 
-> Available: Liferay DXP 7.4+
+> Available: Liferay DXP/Portal 7.4+
 
 Account Users are User accounts that are associated with a Business Account or a Person Account.
 

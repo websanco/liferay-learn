@@ -1,6 +1,6 @@
 # Configuring the Questions App
 
-> Available: Liferay DXP 7.3+
+> Available: Liferay DXP/Portal 7.3+
 
 There are two primary methods for configuring the Questions app: directly through the app configuration and through the System Settings configuration.
 

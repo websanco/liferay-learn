@@ -117,7 +117,7 @@ Depending on the option you have chosen for a Collection Display Fragment's List
 
 ## Paginating Display Items
 
-> Available: Liferay DXP 7.4+
+> Available: Liferay DXP/Portal 7.4+
 
 Starting with Liferay DXP 7.4, you can paginate the Collection items using the Pagination configuration. This option provides two important advantages:
 

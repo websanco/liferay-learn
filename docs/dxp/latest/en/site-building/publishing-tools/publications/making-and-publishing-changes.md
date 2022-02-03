@@ -1,6 +1,6 @@
 # Making and Publishing Changes
 
-> Available: Liferay DXP 7.3+
+> Available: Liferay DXP/Portal 7.3+
 
 Publications provides a convenient way to manage changes to your Liferay instance. With it, you and your team can create and collaborate on blocks of changes called 'publications'. You can then publish those changes to production when ready.
 

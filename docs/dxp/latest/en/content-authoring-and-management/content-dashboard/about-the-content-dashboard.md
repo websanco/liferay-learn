@@ -1,6 +1,6 @@
 # About the Content Dashboard
 
-> Available: Liferay 7.3+.
+> Available: Liferay DXP/Portal 7.3+.
 
 The *Content Dashboard* is a global application for managing your content. From the Content Dashboard page, content authors and marketers can access and audit all content generated across Sites and Asset Libraries.
 

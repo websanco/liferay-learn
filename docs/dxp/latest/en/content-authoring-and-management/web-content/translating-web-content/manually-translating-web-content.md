@@ -48,7 +48,7 @@ Users with the configured Role can now manually translate any web content into t
 
 ## Translating Web Content
 
-> Available: Liferay DXP 7.3+
+> Available: Liferay DXP/Portal 7.3+
 
 1. Open the *Product* menu, and go to *Content & Data* &rarr; *Web Content*.
 

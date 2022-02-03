@@ -1,6 +1,6 @@
 # Fast IDentity Online 2
 
-> Available: Liferay DXP 7.4+
+> Available: Liferay DXP/Portal 7.4+
 
 The Fast IDentity Online 2 or FIDO2 standard allows for the use of biometrics (i.e., fingerprint readers), mobile devices, or other security keys for password-less authentication. Administrators need only enable FIDO2 for their instance, and then users can register and use their FIDO2-compliant devices. 
 

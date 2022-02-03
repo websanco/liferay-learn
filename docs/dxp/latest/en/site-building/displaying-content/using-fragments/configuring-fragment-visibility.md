@@ -1,6 +1,6 @@
 # Configuring Fragment Visibility
 
-> Available: Liferay DXP 7.4+
+> Available: Liferay DXP/Portal 7.4+
 
 [Fragments](../using-fragments/using-page-fragments.md) can be used to assemble your [Content Pages](../../creating-pages/building-and-managing-content-pages/content-pages-overview.md) with a variety of layouts and information. Starting with Liferay DXP 7.4, you can configure the Fragments' visibility based on a user's screen size. For instance, a Fragment can be hidden for a page rendered from a computer while visible from the same Page on a smartphone.
 

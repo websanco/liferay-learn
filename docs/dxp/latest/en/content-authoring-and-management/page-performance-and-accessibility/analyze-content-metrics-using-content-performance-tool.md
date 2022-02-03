@@ -1,6 +1,6 @@
 # Analyze Content Metrics Using the Content Performance Tool
 
-> Available: Liferay 7.3+. Some Content Performance options are only available starting with Liferay DXP 7.4.
+> Available: Liferay DXP/Portal 7.3+. Some Content Performance options are only available starting with Liferay DXP/Portal 7.4.
 
 You can use the Content Performance tool to analyze content metrics, like the number of views, traffic acquisition channels, or keywords driving people to your Page. In the Content Performance tool, you can view metrics for the URL of the Content Page, Widget Page, or Web Content associated with a [Display Page Template](../../site-building/displaying-content/using-display-page-templates/publishing-content-with-display-pages.md).
 

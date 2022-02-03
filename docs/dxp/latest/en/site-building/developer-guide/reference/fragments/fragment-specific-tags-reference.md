@@ -216,7 +216,7 @@ According to the W3C HTML standards, custom elements can't be self-closing. Ther
 
 ## Localizing Fragment Configuration Fields
 
-> Available: Liferay DXP 7.4+
+> Available: Liferay DXP/Portal 7.4+
 
 You can change the Fragment configuration fields depending on the Page's target language. For example, on a Button Fragment you can define one button type when the page language is en-US, and a different button type when the page language is es-ES. To localize a Fragment configuration field, use the `localizable` attribute.
 

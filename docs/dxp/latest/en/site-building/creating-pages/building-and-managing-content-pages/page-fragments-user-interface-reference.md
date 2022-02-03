@@ -82,7 +82,7 @@ Use *card* Fragments to add an image with title, paragraph, and link elements to
 
 ### Dropdown
 
-> Available: Liferay DXP 7.4+.
+> Available: Liferay DXP/Portal 7.4+.
 
 This Fragment defines a drop zone where you can add other Fragments and create advanced drop-down menus (A). For example, you can drag-and-drop a Card Fragment on the Dropdown Fragment's drop zone so the Card content appears when the user clicks or hovers over the Dropdown.
 
@@ -106,7 +106,7 @@ Place the Dropdown Fragment inside a Grid Fragment to observe the differences be
 
 ### External Video
 
-> Available: Liferay DXP 7.4+.
+> Available: Liferay DXP/Portal 7.4+.
 
 Use the *External Video* Fragment to embed additional video sources in your Content Page. You can use a valid URL or videos in [Documents and Media](../../../content-authoring-and-management/documents-and-media.html). The supported sources include YouTube, Facebook, Twitch, Vimeo, and videos stored in Documents and Media.
 
@@ -172,7 +172,7 @@ Use the *Video URL* Fragment to embed videos in your Content Page. To select a v
 
 ## Content Display
 
-> Available: Liferay DXP 7.3+
+> Available: Liferay DXP/Portal 7.3+
 
 Use *Content Display* Fragments to display Site content individually or as part of a collection. Examples include web content, blog entries, and documents. You can also add page elements for rating or flagging page content. DXP includes the following Content Display Fragments.
 
@@ -232,7 +232,7 @@ Use *Navigation Bar* Fragments to add a custom header to [Master Page Templates]
 
 ## Menu Display
 
-> Available: Liferay DXP 7.4+.
+> Available: Liferay DXP/Portal 7.4+.
 
 Using the Menu Display Fragment, you can create a navigation menu anywhere in your Content Page. This navigation menu is based on your Site's Public or Private Pages hierarchy, or any other hierarchy you define using Liferay DXP  [Navigation Menus](../../site-navigation/using-navigation-menus.md). To learn more about how to configure the Menu Display Fragment for your Site navigation, read [Managing Site Navigation](../../site-navigation/managing-site-navigation.md).
 

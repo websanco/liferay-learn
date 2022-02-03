@@ -1,6 +1,6 @@
 # Exporting and Importing Translations
 
-> Available: Liferay DXP 7.3+ and Liferay Portal 7.3+
+> Available: Liferay DXP/Portal 7.3+
 
 With Liferay, you can export Web Content for translation as `.xliff` or `.xlf` files. These files can then be sent to translators to produce your translations for your content. Once translated, you can import the translations together as a `.zip` file or individually as `.xliff` or `.xlf` files.
 

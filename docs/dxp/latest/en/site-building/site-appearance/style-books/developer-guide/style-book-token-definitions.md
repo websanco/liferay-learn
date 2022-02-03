@@ -1,6 +1,6 @@
 # Style Book Token Definitions
 
-> Available: Liferay DXP 7.3+
+> Available: Liferay DXP/Portal 7.3+
 
 Style Books have options grouped into various categories that are defined per theme. Each option is defined with a *token*. The collection of all tokens defined for a theme is a *token definition*.
 

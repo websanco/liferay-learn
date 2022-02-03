@@ -1,6 +1,6 @@
 # Creating and Managing Asset Libraries
 
-> Available: Liferay DXP 7.3+
+> Available: Liferay DXP/Portal 7.3+
 
 You can manage Asset Libraries via the Asset Libraries link in the *Applications* tab of the Global Menu. Here, you can create and configure as many Libraries as needed and determine how each Library is connected to your Sites.
 

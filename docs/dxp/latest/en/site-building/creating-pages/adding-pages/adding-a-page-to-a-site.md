@@ -32,7 +32,7 @@ By default, new pages are included in the Navigation Menu for the Site. To confi
 
 ### Adding a New Page from the Page Tree Menu
 
-> Available: Liferay DXP 7.3+.
+> Available: Liferay DXP/Portal 7.3+.
 
 1. Click the *Product Menu* (![Product Menu](../../../images/icon-menu.png)) and then, click *Page Tree* (![Page Tree](../../../images/icon-page-tree.png)) on the left side of the screen.
 
@@ -66,7 +66,7 @@ Using the Actions Menu (![Actions Menu](../../../images/icon-actions.png)) next 
 
 ### Adding a Child Page from the Pages Tree
 
-> Available: Liferay DXP 7.3+.
+> Available: Liferay DXP/Portal 7.3+.
 
 1. Click the *Product Menu* (![Product Menu](../../../images/icon-menu.png)) and then, click *Page Tree* (![Page Tree](../../../images/icon-page-tree.png)) on the left side of the screen.
 

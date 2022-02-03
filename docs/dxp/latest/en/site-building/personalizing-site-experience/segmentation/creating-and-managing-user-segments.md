@@ -4,7 +4,7 @@ Using *Segments* you can create different groups of users based on a common set 
 
 ## Compound Segments
 
-> Available: Liferay 7.3+.
+> Available: Liferay DXP/Portal 7.3+.
 
 You can combine existing Segments to create a new _Compound Segment_. The Compound Segment inherits the properties from the Segments it's based on and updates the members automatically. You can add additional properties to further customize the Compound Segment. 
 

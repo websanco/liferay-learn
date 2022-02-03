@@ -96,7 +96,7 @@ You can also specify a background image for a layout by [setting the layout styl
 
 ### Configuring Image Resolution with Adaptive Media
 
-> Available: Liferay DXP 7.4+.
+> Available: Liferay DXP/Portal 7.4+.
 
 Starting with Liferay DXP 7.4, you can use [Adaptive Media](../../../content-authoring-and-management/documents-and-media/publishing-and-sharing/serving-device-and-screen-optimized-media/how-adaptive-media-works.md) to adjust the image resolution dynamically, based on the target screen size.
 

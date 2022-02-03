@@ -1,6 +1,6 @@
 # Managing Web Content on Content Pages
 
-> Available: Liferay DXP 7.3+
+> Available: Liferay DXP/Portal 7.3+
 
 From the [Contents panel](./content-page-editor-user-interface-reference.md#contents) on a Content Page, you can manage and edit web content that's used on the page ([mapped](./configuring-elements-on-content-pages.md#mapping-content)) or displayed in a widget. To Manage the web content that's used on a Content Page, follow these steps:
 

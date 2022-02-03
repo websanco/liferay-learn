@@ -1,6 +1,6 @@
 # Creating and Managing Display Page Templates
 
-> Available: Liferay DXP 7.3+
+> Available: Liferay DXP/Portal 7.3+
 
 A Display Page Template specifies the layout and formatting for your content and displays it at a unique friendly URL. To learn more about Display Page Templates and Display Pages, read [Displaying Content with Display Page Templates](./about-display-page-templates-and-display-pages.md).
 
@@ -44,7 +44,7 @@ You can now [publish your content](./publishing-content-with-display-pages.md) w
 
 ### Preview the Display Page Template Content Mappings
 
-> Available: Liferay DXP 7.4+.
+> Available: Liferay DXP/Portal 7.4+.
 
 1. From the Product Menu, click the *Preview With* drop-down menu and choose *Select Other Item*.
 
@@ -57,7 +57,7 @@ You can now [publish your content](./publishing-content-with-display-pages.md) w
 
 ## Viewing Display Page Template Usage
 
-> Available: Liferay DXP 7.4+
+> Available: Liferay DXP/Portal 7.4+
 
 You can manage the different Display Page Templates using the *Actions* menu (![Actions](../../../images/icon-actions.png)). From here, the *View Usages* option provides a list of content that uses a specific Display Page Template.
 

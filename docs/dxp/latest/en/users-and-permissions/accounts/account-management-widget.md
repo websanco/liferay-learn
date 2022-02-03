@@ -1,6 +1,6 @@
 # Account Management Widget
 
-> Available: Liferay DXP 7.4+
+> Available: Liferay DXP/Portal 7.4+
 
 The Account Management widget makes it easy to manage and access account information. Deploy the widget to any Page. This is a useful way to provide access for those without permission to view the Applications Menu.
 

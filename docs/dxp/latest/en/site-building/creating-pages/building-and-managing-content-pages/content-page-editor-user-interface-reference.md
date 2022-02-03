@@ -94,7 +94,7 @@ In the Fragments and Widgets sidebar panel (![Fragments and Widgets icon](../../
 
 ### Browser
 
-> Available: Liferay DXP 7.4+
+> Available: Liferay DXP/Portal 7.4+
 
 The *Browser* sidebar panel (![Browser](../../../images/icon-browser.png)) allows you to view, edit, and manage all web content on the Page. The mapped content on a Page can be from different types of assets: documents and media, web content articles, etc. This includes content displayed in widgets and mapped to content fields. See [Managing Web Content on Content Pages](./managing-web-content-on-content-pages.md) for more information. 
 
@@ -131,7 +131,7 @@ Use Page Fragment comments to collaborate with team members while developing you
 
 ### Selection
 
-> Available: Liferay DXP 7.3.
+> Available: Liferay DXP/Portal 7.3.
 
 In the Selection sidebar panel (![Selection](../../../images/icon-pages-tree.png)), you can view a hierarchical outline of all Page elements, as well as select, configure, or remove those elements. Similarly, clicking any element on the Page while in the Design mode opens the Selection panel and highlights the selected Page element in the hierarchy. When an element is selected, you can access its General, Styles, and Link options, if it has any. See [Using Page Fragments](../../displaying-content/using-fragments/using-page-fragments.md) for more information.
 
@@ -143,7 +143,7 @@ In the Selection sidebar panel (![Selection](../../../images/icon-pages-tree.png
 
 ### Contents
 
-> Available: Liferay DXP 7.3.
+> Available: Liferay DXP/Portal 7.3.
 
 Here you can view, edit, and manage all web content on the Page. This includes content displayed in widgets and mapped to content fields. See [Managing Web Content on Content Pages](./managing-web-content-on-content-pages.md) for more information.
 
