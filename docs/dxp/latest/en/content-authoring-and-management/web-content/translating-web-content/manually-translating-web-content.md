@@ -48,6 +48,8 @@ Users with the configured Role can now manually translate any web content into t
 
 ## Translating Web Content
 
+> Available: Liferay DXP 7.3+
+
 1. Open the *Product* menu, and go to *Content & Data* &rarr; *Web Content*.
 
 1. Click the *Actions* menu ( ![Actions Button ](../../../images/icon-actions.png) ) for the content you want to translate and select *Translate*.
