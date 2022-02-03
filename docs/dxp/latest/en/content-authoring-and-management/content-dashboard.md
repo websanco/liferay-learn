@@ -1,4 +1,4 @@
-# Asset Libraries
+# Content Dashboard
 
 ```{toctree}
 :maxdepth: 3
