@@ -24,7 +24,11 @@ Follow these steps to configure SEO and Open Graph settings for a Display Page T
    Unsaved changes are lost when navigating between the SEO and Open Graph tabs.
    ```
 
-When configuring SEO and Open Graph settings, you can enter values directly and use field mapping to add values dynamically. Available mapping options depend on the template's content type and subtype. To map a field, simply click on the *field selector* button (![Mapping Button](../../../images/icon-map.png)) and select from available fields. Fields added in this way are represented as `${}` placeholders with two parts: a field reference ID and field label (`${fieldReferenceID:Field Label}`).
+When configuring SEO and Open Graph settings, you can enter values directly and use field mapping to add values dynamically. Available mapping options depend on the template's content type and subtype. To map a field, simply click on the *field selector* button (![Mapping Button](../../../images/icon-map.png)) and select from available fields. As of Liferay DXP 7.4 U1 and Portal 7.4 GA5, fields added in this way are represented as `${}` placeholders with two parts: a field reference ID and field label (`${fieldReferenceID:Field Label}`).
+
+```{note}
+For earlier versions, mapping placeholders only include the field reference ID (e.g., `${title}`, `${authorName}`, `${Text84981642}`).
+```
 
 Liferay provides the field label value for clarity on the administrative side, since field reference IDs in custom Web Content and Document structures are not human-readable (e.g., `${Text84981642:Contributors}`). The label is not displayed to end users and does not affect mapping, so users can edit it as desired. Mapping only depends on the placeholder's field reference ID.
 
