@@ -1,5 +1,7 @@
 # Objects Application Permissions
 
+> Available: Liferay DXP/Portal 7.4+
+
 Like other Liferay applications, the Objects portlet is integrated with the permissions framework. This means you can assign [application](#application-permissions) and [resource](#resource-permissions) permissions to user roles to determine which users have access to the Objects portlet and its data.
 
 ![Assign Objects permissions when defining role permissions.](./objects-application-permissions/images/01.png)

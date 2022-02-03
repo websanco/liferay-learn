@@ -1,5 +1,7 @@
 # Defining Object Relationships
 
+> Available: Liferay DXP/Portal 7.4+
+
 Relationships are connections between Objects that link their entities. You can add relationships to any published or unpublished custom Object.<!--TASK: Include system Objects once supported; "You can add relationships to any published or unpublished Object, including both system and custom Objects."-->
 
 ## Relationship Types

@@ -1,5 +1,7 @@
 # Defining Object Actions
 
+> Available: Liferay DXP/Portal 7.4+
+
 With Liferay Objects, you can define actions that are triggered under specified conditions. When an action is active, Liferay listens for when an Object's data is added, deleted, or removed and then performs the set action.
 
 ```{important}

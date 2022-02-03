@@ -1,5 +1,7 @@
 # Using Picklists
 
+> Available: Liferay DXP/Portal 7.4+
+
 Picklists is an application for creating standard lists of values that are understood across the Liferay Portal. The process of creating a Picklist includes creating the initial list and adding items to it. Once these values are defined, they can be used in supported applications.
 
 ## Creating a Picklist

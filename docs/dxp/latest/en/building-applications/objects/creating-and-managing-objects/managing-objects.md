@@ -1,5 +1,7 @@
 # Managing Objects
 
+> Available: Liferay DXP/Portal 7.4+
+
 The Objects portlet provides a powerful way to manage both system and custom Objects. System Objects include any Liferay applications that have been integrated with the Objects framework, while custom Objects are applications created using the Objects portlet. Though both types of Objects are supported, some management options are only available for custom Objects.
 
 ![Use the Objects portlet to view and manage both system and custom Objects.](./managing-objects/images/01.png)

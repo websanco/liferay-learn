@@ -1,5 +1,7 @@
 # Creating Objects
 
+> Available: Liferay DXP/Portal 7.4+
+
 Liferay Objects provides development capabilities in the Liferay UI. Using the Objects portlet, you can build fully integrated Liferay applications without writing any code or manually deploying modules. This process includes [creating](#creating-object-drafts) an initial draft of the Object, [editing](#editing-object-drafts) the Object draft, and finally [publishing](#publishing-object-drafts) the draft to create the new application. Publishing an Object draft creates a fully integrated Liferay application that can be [managed and extended](./managing-objects.md) at any time via the Objects portlet.
 
 ## Creating Object Drafts

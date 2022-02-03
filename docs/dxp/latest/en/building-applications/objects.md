@@ -14,6 +14,8 @@ objects/using-picklists.md
 objects/objects-application-permissions.md
 ```
 
+> Available: Liferay DXP/Portal 7.4+
+
 With Liferay Objects, you can build and deliver applications without having to write code or deploy modules, yet these applications are built on and integrated with Liferay's core frameworks. Quickly develop and manage flexible solutions that adapt Liferay DXP to your business needs while maintaining a seamless user experience.
 
 When creating Objects, you can add data [fields](./objects/creating-and-managing-objects/adding-fields-to-objects.md) and define complex [relationships](./objects/creating-and-managing-objects/defining-object-relationships.md) between Object entries. You can then design [layouts](./objects/creating-and-managing-objects/designing-object-layouts.md) to determine how fields and relationships are displayed when creating or editing entries. Before publishing, you can scope each Object's data to Company or Site and determine where it's displayed in the Liferay UI. <!--TASK: Add in Views once implemented-->

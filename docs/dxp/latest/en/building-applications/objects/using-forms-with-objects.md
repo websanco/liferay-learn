@@ -1,5 +1,7 @@
 # Using Forms with Objects
 
+> Available: Liferay DXP/Portal 7.4+
+
 Liferay Objects are integrated with the Forms application, so you can design forms for receiving user input and creating Object entries. To do this, first add a new form and configure it to use the Objects storage type. Then select the desired Object, design your form, and map its fields to the selected Object's fields.
 
 ```{note}
