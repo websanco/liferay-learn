@@ -2,9 +2,11 @@
 
 > Available for Liferay DXP 7.4+
 
-Remote Apps uses Liferay's front-end infrastructure to register external applications with the Liferay platform and render them as widgets. To simplify remote app creation, Liferay provides the [`create_remote_app.sh`](https://raw.githubusercontent.com/liferay/liferay-portal/master/tools/create_remote_app.sh) script. This script can be used to automatically generate React and Vue applications compatible with Liferay Remote Apps.
+Remote Apps use Liferay's front-end infrastructure to register external applications with the Liferay platform and render them as widgets. To simplify remote app creation, Liferay provides the [`create_remote_app.sh`](https://raw.githubusercontent.com/liferay/liferay-portal/master/tools/create_remote_app.sh) script. This script can be used to generate React and Vue applications compatible with Liferay Remote Apps.
 
 In this tutorial, you'll use the `create_remote_app.sh` script to create a simple React application. After the application is generated, you'll compile its code and host its `.js` and `.css` files in the Liferay Document Library. Once hosted, you'll copy each file's WebDAV URLs and use them to create a Liferay Remote App. Finally, you can deploy the application to Site Pages as a widget.
+
+<!-- It would be helpful to include a screenshot of the completed application here. -Rich -->
 
 ```{important}
 Running `create_remote_app.sh` requires the latest versions of [Node.JS](https://nodejs.org/), [NPM](https://www.npmjs.com/), and [YARN](https://classic.yarnpkg.com/). Before proceeding, ensure these tools are installed.
@@ -12,7 +14,7 @@ Running `create_remote_app.sh` requires the latest versions of [Node.JS](https:/
 
 ## Run the `create_remote_app.sh` Script
 
-When calling `create_remote_app.sh`, you must provide a valid HTML element name and specify the desired JS framework.
+When calling `create_remote_app.sh`, you must provide a valid HTML element name and specify the desired JavaScript framework.
 
 Run this command to generate the React application's code:
 
@@ -20,7 +22,7 @@ Run this command to generate the React application's code:
 curl -Ls https://github.com/liferay/liferay-portal/raw/master/tools/create_remote_app.sh | bash -s h5v7-remote-app react
 ```
 
-This calls the script with two arguments: a custom HTML element name (`h5v7-remote-app`) and the desired JS framework (`react`).
+This calls the script with two arguments: a custom HTML element name (`h5v7-remote-app`) and the desired JavaScript framework (`react`).
 
 When finished running, the script automatically creates a new React application in a folder named `h5v7-remote-app`, which includes these elements:
 
@@ -60,14 +62,16 @@ h5v7-remote-app
 
 ### Understanding the `index.js` File
 
+<!-- The below literalinclude doesn't work, because the file isn't there. If the file is created by running the script, it won't be available to include. I think you have to paste this code in directly. -Rich -->
+
    ```{literalinclude} ./creating-a-liferay-remote-app/resources/liferay-h5v7.zip/h5v7-remote-app/src/index.js
        :language: js
    ```
 
 The generated `index.js` file includes two customizations necessary for using the application as a Liferay Remote App.
 
-* WebComponent: In line 21, the application is declared a `WebComponent` so that it can connect to Remote Apps.
-* ELEMENT_ID: In line 30, `ELEMENT_ID` is set to `h5v7-remote-app`, instead of the conventional `<div id="root" />`. This is because a Remote App's HTML Element Name must match the application's `ELEMENT_ID`, and `<div id="root" />` does not work for this purpose.
+* WebComponent: On line 21, the application is declared a `WebComponent` so it can connect to Remote Apps.
+* ELEMENT_ID: On line 30, `ELEMENT_ID` is set to `h5v7-remote-app`, instead of the conventional `<div id="root" />`. This is because a Remote App's HTML Element Name must match the application's `ELEMENT_ID`, and `<div id="root" />` does not work for this purpose.
 
 ### Understanding the React Routes
 
@@ -89,7 +93,7 @@ This command creates an optimized production build, which includes the `.js` and
 
 Before proceeding, confirm the code has compiled successfully and take note of the application's `.js` and `.css` files.
 
-```bash
+```
 Creating an optimized production build...
 Compiled successfully.
 
@@ -99,15 +103,13 @@ File sizes after gzip:
   121 B     build/static/css/main.9877909d.css
 ```
 
-These files must be [hosted](#hosting-the-application-files) in a location accessible to Liferay Remote Apps. They can be hosted in a remote server or a data storage system. For our purposes, we'll upload them to Liferay's Document Library and host them using their WebDAV URLs.
+These files must be [hosted](#hosting-the-application-files) in a location accessible to Liferay Remote Apps. They can be hosted on a remote server or a data storage system. This example uploads them to Liferay's Document Library and hosts them using WebDAV URLs.
 
 ```{tip}
 Unique file names are generated for every build. When testing your custom applications, remember to update your `.js` and `.css` files after builds.
 ```
 
 ## Hosting the Application Files
-
-Follow these steps to host the React application's `.js` and `.css` files:
 
 1. Start up a new Liferay DXP 7.4+ container and log in.
 
@@ -140,9 +142,7 @@ For example,
 
 ## Registering the Application with Remote Apps
 
-Follow these steps to create a Remote App for the React application:
-
-1. Open the *Global Menu* (![Global Menu](../../images/icon-applications-menu.png)), click on the *Applications* tab, and go to *Remote Apps*.
+1. Open the *Global Menu* (![Global Menu](../../images/icon-applications-menu.png)), click the *Applications* tab, and go to *Remote Apps*.
 
 1. Click the *Add* button (![Add Button](../../images/icon-add.png)).
 
@@ -159,7 +159,7 @@ Follow these steps to create a Remote App for the React application:
 
 1. Click *Save*.
 
-Once saved, Liferay creates a widget named H5V7-Remote-App, which you can deploy to Site Pages like other Page widgets. This widget is listed under the selected Portlet Category Name.
+Once saved, Liferay creates a widget named H5V7-Remote-App, which you can deploy to Site Pages like other Page widgets. This widget appears under the selected Portlet Category Name.
 
 ![Deploy the H5V7-Remote-App widget to Site Pages.](./creating-a-liferay-remote-app/images/03.png)
 
