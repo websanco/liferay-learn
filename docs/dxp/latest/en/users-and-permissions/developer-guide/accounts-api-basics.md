@@ -1,5 +1,7 @@
 # Accounts API Basics
 
+> Available: Liferay DXP 7.4+
+
 You can manage [Accounts](../accounts.md) from the Applications menu, but you can also use Liferay's REST APIs. Call these services to create and manage accounts.
 
 ## Adding an Account
