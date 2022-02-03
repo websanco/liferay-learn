@@ -24,6 +24,8 @@ When setting a custom URL, you don't have to maintain the Site's Page hierarchy.
 
 ## Managing a Page's URL History
 
+> Available: Liferay DXP 7.3+
+
 Liferay DXP maintains a list of all friendly URLs used for a Page. This means that when you change a friendly URL, old URLs remain associated with your Page to prevent broken links, unless manually removed. For Page requests using an old URL, Liferay provides a redirect to the browser (or other consumer) pointing to the active friendly URL.
 
 To view and manage the full list of URLs associated with a Page, click on the *History* icon (![Friendly URL History icon](../../../images/icon-history.png)). This opens a modal window that displays the Page's active and old URLs for the selected language. You can also click on the *Language Flag* button to view set URLs for other languages.
