@@ -86,6 +86,10 @@ Determine whether to include a Display Page in your `sitemap.xml` file, as well 
 
 For your displayed content, values defined here override default values defined elsewhere in your Liferay instance.
 
+```{note}
+Open Graph `<meta>` tags are only included in public pages to unauthenticated users. They are not included in private pages, or in public pages when the user is logged in.
+```
+
 ### Title
 
 The *Title* field defines a Display Page's `og:title` property, which defines the title displayed for your content in rich previews. By default, this field is mapped to `${title}`. If desired, you can edit this value directly and use the field selector to include additional mappings (e.g., `${title} - ${authorName:Author Name}`).
@@ -126,7 +130,7 @@ By default, this field is unmapped in Display Page templates. This means the tem
 
 The *Image Alt Description* field defines a Display Page's `og:image:alt` property, which determines the alt text read by screen readers for your displayed content's `og:image` property.
 
-```
+```html
 <meta property="og:image:alt" content="This is an example." />
 ```
 

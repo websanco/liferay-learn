@@ -2,29 +2,37 @@
 
 > Available: Liferay DXP/Portal 7.3+
 
-[Open Graph](https://ogp.me/) meta tags are embedded on every page, so you can share content on applications that support it, such as Facebook, Twitter, Slack, etc. You can disable this behavior from your Site's General settings.
-<!-- It'd be great to have a screenshot here of the practical application of this feature. -->
-1. Open the Site Menu and go to *Configuration* &rarr; *Settings* (previously *Site Settings*)
+[Open Graph](https://ogp.me/) is a protocol used to create rich previews of Site content when shared on applications supporting it, such as Facebook, Twitter, and Slack. It does this using `<meta>` tags embedded in Site Pages. By default, Open Graph `<meta>` tags are embedded in all public Liferay Pages, but you can disable this behavior if desired. You can also set default `og:image` properties used for Pages unless overridden.
+
+```{note}
+Open Graph `<meta>` tags are only included in public pages to unauthenticated users. They are not included in private pages, or in public pages when the user is logged in.
+```
+
+Follow these steps to configure Open Graph for your Site:
+
+1. Open the *Site Menu* (![Site Menu](../../images/icon-product-menu.png)) and go to *Configuration* &rarr; *Settings* (previously *Site Settings*).
 
 1. Scroll down to the *Open Graph* sub-heading and expand it.
 
-1. Check/uncheck the *Enable Open Graph* setting to enable/disable this feature, and optionally set an Open Graph image to act as the default for the Open Graph tags.
+1. Check/uncheck the *Enable Open Graph* setting to enable/disable Open Graph for your Site.
 
-![Configure Site-wide Open Graph settings in the General tab of your Site's settings.](./configuring-open-graph/images/01.png)
+   ![Enable or disable embedded Open Graph tags in your Site's Pages.](./configuring-open-graph/images/01.png)
 
-From here, you can enable/disable Open Graph and define default `og:image` properties used for your Site's Pages.
+1. (Optional) Use the *Image* and *Image Alt Description* fields to set default `og:image` properties for the Site's Pages.
 
-## Enabling and Disabling Open Graph
+   These values are overridden by [Page](../creating-pages/page-settings/configuring-individual-pages.md#open-graph) and [Display Page](../displaying-content/using-display-page-templates/configuring-seo-and-open-graph.md) configurations.
 
-By default, Open Graph `<meta>` tags are embedded in every Page. You can customize how your content appears when shared in applications supporting Open Graph. To disable this behavior, simply uncheck *Enable Open Graph*.
+   ![Define the default og:image and og:image:alt properties used for your Site.](./configuring-open-graph/images/02.png)
 
-![Enable or disable embedded Open Graph tags in your Site's Pages.](./configuring-open-graph/images/02.png)
+1. Preview your default `og:image` configuration.
 
-## Configuring Open Graph Image
+   Keep in mind the image's ratio may change depending on where its shared.
 
-You can use the *Image* and *Image Alt Description* fields to define `og:image` properties for your Site.
+   ![Preview your default Open Graph configuration.](./configuring-open-graph/images/03.png)
 
-![Define the default og:image and og:image:alt properties used for your Site.](./configuring-open-graph/images/03.png)
+1. Click *Save*.
+
+## Analyzing the `og:image` Properties
 
 When you select an image, DXP automatically adds a number of structured properties that determine how your selected image is displayed. The Image field defines the following `<meta>` tags.
 
@@ -36,17 +44,13 @@ When you select an image, DXP automatically adds a number of structured properti
 <meta property="og:image:height" content="300" />
 ```
 
-When you enter text into the Image Alt Description field, you determine the default text read by screen readers for your selected image. To create localized alt descriptions for your Open Graph image, click on the *Language Flag* button and select the language you want to set. Values entered here define the default `og:image:alt` tag.
+When you enter text into the Image Alt Description field, you determine the default text read by screen readers for your selected image.
+
+To create localized alt descriptions for your Open Graph image, click on the *Language Flag* button and select the language you want to set. Values entered here define the default `og:image:alt` tag.
 
 ```html
 <meta property="og:image:alt" content="This is an example." />
 ```
-
-Here, you can also preview how your Open Graph image appears in supported contexts. However, the image ratio may change depending on where your Page's URL is shared.
-
-![Preview your default Open Graph configuration.](./configuring-open-graph/images/05.png)
-
-When finished, click on *Save* to apply your changes.
 
 ## Additional Information
 
