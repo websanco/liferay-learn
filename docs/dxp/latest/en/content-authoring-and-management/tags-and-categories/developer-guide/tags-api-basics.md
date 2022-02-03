@@ -106,7 +106,7 @@ This class invokes the REST service using only three lines of code:
 | `KeywordResource keywordResource = builder.authentication(...).build();` | Specifies basic authentication and generates a `KeywordResource` service instance. |
 | `Keyword keyword = keywordResource.postSiteKeyword(...);` | Calls the `keywordResource.postSiteKeyword` method and passes the data to post. |
 
-Note that the example project's `/java/` folder includes the `com.liferay.headless.admin.taxonomy.client.jar` REST application client JAR file. For your project, make sure to include the correct Headless dependency file for the service you want to consume. You can download the latest JAR files from [Liferay's Nexus repository](https://repository.liferay.com/nexus/content/repositories/liferay-public-releases/com/liferay/). 
+Note that the project includes the `com.liferay.headless.admin.taxonomy.client.jar` file as a dependency. You can find client JAR dependency information for all REST applications in the API explorer in your installation at `/o/api`.
 
 ```{note}
 The `main` method's comment demonstrates running the class.

@@ -44,7 +44,7 @@ cd liferay-q8u2/java
 javac -classpath .:* *.java
 ```
 
-Note that the project includes the `com.liferay.headless.delivery.client.jar` file as a dependency. You can find client JAR dependency information for all REST applications in the API explorer in your installation at `/o/api`. 
+Note that the project includes the `com.liferay.headless.delivery.client.jar` file as a dependency. You can find client JAR dependency information for all REST applications in the API explorer in your installation at `/o/api`.
 
 ## Using WikiNode and WikiPage Headless APIs
 
