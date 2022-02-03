@@ -11,6 +11,8 @@ publications/resolving-conflicts.md
 publications/reverting-changes.md
 ```
 
+> Available: Liferay DXP 7.3+
+
 You can use *Publications* to develop, track, and publish changes across your DXP instance. It works by creating a database column to determine which version of your content is displayed on your live Sites. With it, Users create separate *publications* to group their changes into publishable blocks.
 
 When making your changes, you can switch between *edit* and *production* modes. This frees you up to work on minor or major changes to your instance in an editing environment before they go live. You can then review and publish your changes immediately, or schedule them to be published at a later time.
