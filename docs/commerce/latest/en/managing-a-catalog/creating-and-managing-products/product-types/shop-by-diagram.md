@@ -2,32 +2,30 @@
 
 > Subscription Required
 
-With Shop by Diagram you can easily find parts from larger equipment visually through diagrams. This can be an automotive spare part, electronic component, or spares of heavy machinery.
+With Shop by Diagram you can easily find parts for larger equipment visually through diagrams. This can be an automotive spare part, electronic component, or spares of heavy machinery.
  
-You can browse through an exploded view of the product, select the part and its quantity and add it to your cart. With Shop by Diagram it is easy to find the right component when you don’t have the product name or model number.
+You can browse through an exploded view of the product, select the part and its quantity, and add it to your cart. With Shop by Diagram it's easy to find the right component when you don’t have the product name or model number.
 
 ```{note}
-Shop by Diagram is available in Liferay DXP 7.4+/Commerce 4.0+ and is a more robust replacement to the *Bill of Materials (BOM)* feature.
+Shop by Diagram is available in Liferay DXP 7.4+/Commerce 4.0+ and is a more robust replacement for the *Bill of Materials (BOM)* feature.
 ```
 
 ## Creating a Diagram product
 
-A Diagram is like any other Product type in Liferay Commerce ([Simple](./creating-a-simple-product.md), [Grouped](./creating-a-grouped-product.md), [Virtual](./creating-a-virtual-product.md)) with some key differences. A Diagram by itself is not shippable, does not have any inventory, pricing, tax, and does not allow subscriptions or [Product Options](../products/using-product-options.md). But the steps to create it remain the same as other product types.
+A Diagram is like any other Product type in Liferay Commerce ([Simple](./creating-a-simple-product.md), [Grouped](./creating-a-grouped-product.md), [Virtual](./creating-a-virtual-product.md)) with some key differences. A Diagram by itself cannot be shipped, does not have inventory, pricing, or tax, and does not allow subscriptions or [Product Options](../products/using-product-options.md). But the steps to create it are the same as other product types.
 
 1. Open the *Global Menu*, click on *Commerce* &rarr; *Products*.
-2. Click the *Add* (![Add](../../../images/icon-add.png)) button and select *Diagram*.
+1. Click the *Add* (![Add](../../../images/icon-add.png)) button and select *Diagram*.
 
-    ![Select Diagram from the list of options.](./shop-by-diagram/images/01.png)
+   ![Select Diagram from the list of options.](./shop-by-diagram/images/01.png)
 
-3. Enter the following information.
+1. Enter the following information.
 
-    **Name:** Engine Diagram
+   **Name:** Engine Diagram
 
-    **Catalog:** Minium
+   **Catalog:** Minium
 
-    ![Enter details for creating the diagram.](./shop-by-diagram/images/02.png)
-
-4. Click *Submit*.
+1. Click *Submit*.
 
 ## Configuring a Diagram product
 
@@ -35,11 +33,11 @@ This creates a new Diagram product and opens a Configuration view. Now, you must
 
 1. Click the *Diagram* tab
 
-    ![Click the Diagram tab to upload a diagram and configure it.](./shop-by-diagram/images/03.png)
+   ![Click the Diagram tab to upload a diagram and configure it.](./shop-by-diagram/images/03.png)
 
 1. Under *Diagram Settings*, select *SVG* if you are uploading an SVG image, otherwise set it to *Default*.
 1. Under *Diagram File*, you can drag and drop an image or upload an image of your choice.
-2. Click *Select File* and upload the image.
+1. Click *Select File* and upload the image.
 
 The *Diagram Mapping* section becomes active after the upload is complete.
 
@@ -48,12 +46,12 @@ The *Diagram Mapping* section becomes active after the upload is complete.
 | | <div style="margin-left:35px"><b>Diagram Mapping Reference</b> |
 | ----- | -------------------------------------------------------------------------- |
 | **Field** | <div style="width:400px"><b>Purpose</b> |
-| Position | The value of position denotes the label given to a pin. It can be numbers or letters. For non-exploded diagrams, the pins can be used as labels. There can be more than one component with the same position. For instance, an equipment might use the same gear in different areas. In a Diagram, all the gears use the same position to denote that they are the same component but at different places in the equipment. |
-| Type | The *Type* field can be *Linked to a SKU*, *Linked to a Diagram* or *Not Linked to a Catalog*.<ul><li>Linked to a SKU - Link the pin on the Diagram to an SKU in the Catalog.</li><li>Linked to a Diagram - Link the pin on the Diagram to another Diagram in the Catalog.</li><li>Not Linked to a Catalog - Link the pin on the Diagram to a label.  A seller might want to show the name of a part or component in the Diagram that they don't sell in their online catalog for informational purposes. These products use labels.</li></ul>|
-| SKU | This option becomes active if Type is Linked to a SKU. You can type the SKU in the search bar and select the appropriate one. |
-| Diagram | This option becomes active if Type is Linked to a Diagram. You can search for the Diagram using the search bar and select the appropriate one. |
-| Label | This option becomes active if Type is Not Linked to a Catalog. A label is used when a seller wants to show the name of a part or component in the Diagram that they don't sell in their online catalog for informational purposes.  |
-| Quantity | This denotes the quantity of the component necessary to complete the equipment. |
+| Position | Denotes the label given to a pin. It can be numbers or letters. For non-exploded diagrams, the pins can be used as labels. There can be more than one component with the same position. For instance, equipment might use the same gear in different areas. In a Diagram, all the gears use the same position to denote that they are the same component but at different places in the equipment. |
+| Type | Choose *Linked to a SKU*, *Linked to a Diagram* or *Not Linked to a Catalog*.<ul><li>Linked to a SKU - Link the pin on the Diagram to an SKU in the Catalog.</li><li>Linked to a Diagram - Link the pin on the Diagram to another Diagram in the Catalog.</li><li>Not Linked to a Catalog - Link the pin on the Diagram to a label. Sellers might want to show the name of a part or component in the Diagram that they don't sell in their online catalog for informational purposes. These products use labels.</li></ul>|
+| SKU | Becomes active if Type is *Linked to a SKU*. You can type the SKU in the search bar and select the appropriate one. |
+| Diagram | Becomes active if Type is *Linked to a Diagram*. You can search for the Diagram using the search bar and select the appropriate one. |
+| Label | Becomes active if Type is *Not Linked to a Catalog*. A label is used when sellers want to show the name of a part or component in the Diagram that they don't sell in their online catalog for informational purposes.  |
+| Quantity | Denotes the quantity of the component necessary to complete the equipment. |
 
 ## Mapping SKUs to the Diagram
 
@@ -72,7 +70,7 @@ You can view the SKUs with their positions and quantities on the right side. Aft
 ![The diagram is visible in the storefront with interactive pins.](./shop-by-diagram/images/06.gif)
 
 ```{note}
-Diagrams show up the same way as any other products in Liferay Commerce in the Product Details widget, Product Publisher widget, and Search Results. You can also use tags and categories with Diagrams, the same way as with other products.
+Diagrams appear the same way as other products in Liferay Commerce in the Product Details widget, Product Publisher widget, and Search Results. You can also use tags and categories with Diagrams, the same way as with other products.
 ```
 
 ```{note}
