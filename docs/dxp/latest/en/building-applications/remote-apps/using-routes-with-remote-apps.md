@@ -4,6 +4,8 @@ Remote Apps uses Liferay's front-end infrastructure to register external applica
 
 In this tutorial, you'll create a React application using the `create_remote_app.sh` script, which generates an app with three routes: `hello-world`, `hello-foo`, `hello-bar`. After compiling the application and hosting it's `.js` and `.css` files, you'll register the application with Remote Apps and deploy it as a Page widget. Finally, you'll configure it to use each of the alternative routes.
 
+![Create a simple Remote App with alternate routes and use the route property to configure which is rendered.](./using-routes-with-remote-apps/images/01.png)
+
 ```{important}
 Running `create_remote_app.sh` requires the latest versions of [Node.JS](https://nodejs.org/), [NPM](https://www.npmjs.com/), and [YARN](https://classic.yarnpkg.com/). Before proceeding, ensure these tools are installed.
 ```
@@ -87,7 +89,7 @@ Follow these steps to create, build, and host the React application:
 
 1. Drag and drop the `.js` and `.css` files into the upload area.
 
-   ![Upload the .js and .css files to the Liferay Document Library.](./using-routes-with-remote-apps/images/01.png)
+   ![Upload the .js and .css files to the Liferay Document Library.](./using-routes-with-remote-apps/images/02.png)
 
 1. Click *Publish*.
 
@@ -95,7 +97,7 @@ This adds the files to the Liferay Document Library and assigns them unique WebD
 
 To view each file's URL, click the *Info* icon (![Info Icon](../../images/icon-information.png)) and select one of the files at a time. Copy each file's *WebDAV URL* and save them for use in the next step.
 
-![Copy each file's WebDAV URL.](./using-routes-with-remote-apps/images/02.png)
+![Copy each file's WebDAV URL.](./using-routes-with-remote-apps/images/03.png)
 
 For example,
 
@@ -128,7 +130,7 @@ Once saved, Liferay creates a widget named J1V3-Remote-App, which you can deploy
 
 Since J1V3-Remote-App is instanceable, you can add multiple instances of the widget to a page, each with its own independent configuration. For this tutorial, add the widget to a page twice.
 
-![Deploy two instances of the J1V3-Remote-App widget.](./using-routes-with-remote-apps/images/03.png)
+![Deploy two instances of the J1V3-Remote-App widget.](./using-routes-with-remote-apps/images/04.png)
 
 ## Using the `route` Property
 
@@ -142,17 +144,17 @@ Follow these steps to define a route property via *Remote Apps*:
 
 1. Select *J1V3-Remote-App*.
 
-   ![Select J1V3-Remote-App.](./using-routes-with-remote-apps/images/04.png)
+   ![Select J1V3-Remote-App.](./using-routes-with-remote-apps/images/05.png)
 
 1. Enter `route=hello-foo` into the Properties field.
 
-   ![Enter route=hello-foo into the Properties field.](./using-routes-with-remote-apps/images/05.png)
+   ![Enter route=hello-foo into the Properties field.](./using-routes-with-remote-apps/images/06.png)
 
 1. Click *Publish*.
 
 1. Verify both deployed widgets use the `HelloFoo` route.
 
-   ![Verify both widgets use the HelloFoo route.](./using-routes-with-remote-apps/images/06.png)
+   ![Verify both widgets use the HelloFoo route.](./using-routes-with-remote-apps/images/07.png)
 
 ### Defining a Route Property via Widget Configuration
 
@@ -162,17 +164,17 @@ Follow these steps to define a route property via *widget configuration*:
 
 1. Click the *Options* button (![Options Button](../../images/icon-actions.png)) for one of the widgets and select *Configuration*.
 
-   ![Click the Options button and select Configuration.](./using-routes-with-remote-apps/images/07.png)
+   ![Click the Options button and select Configuration.](./using-routes-with-remote-apps/images/08.png)
 
 1. Enter `route=hello-bar` into the Properties field.
 
-   ![Enter route=hello-bar into the Properties field.](./using-routes-with-remote-apps/images/08.png)
+   ![Enter route=hello-bar into the Properties field.](./using-routes-with-remote-apps/images/09.png)
 
 1. Click *Save*.
 
 1. Verify the configured widget uses the `hello-bar` route, while the other widget still uses the `hello-foo` route.
 
-   ![Verify the configured widget uses the HelloBar route.](./using-routes-with-remote-apps/images/09.png)
+   ![Verify the configured widget uses the HelloBar route.](./using-routes-with-remote-apps/images/10.png)
 
 ## Analyzing the Route Code
 
