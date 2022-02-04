@@ -19,6 +19,7 @@ Search Engine Optimization
 -  :doc:`/site-building/site-settings/managing-site-urls/using-the-redirection-tool`
 -  :doc:`/site-building/displaying-content/using-display-page-templates/configuring-seo-and-open-graph`
 -  :doc:`/site-building/site-settings/configuring-open-graph`
+-  :doc:`/site-building/site-settings/configuring-hreflang-meta-data`
 
 Page Performance and Accessibility
 ----------------------------------
