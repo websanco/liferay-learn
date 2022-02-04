@@ -6,7 +6,7 @@ Remote Apps use Liferay's front-end infrastructure to register external applicat
 
 In this tutorial, you'll use the `create_remote_app.sh` script to create a simple React application. After the application is generated, you'll compile its code and host its `.js` and `.css` files in the Liferay Document Library. Once hosted, you'll copy each file's WebDAV URLs and use them to create a Liferay Remote App. Finally, you can deploy the application to Site Pages as a widget.
 
-<!-- It would be helpful to include a screenshot of the completed application here. -Rich -->
+![Use the create_remote_app.sh script to create a simple React application.](./creating-a-liferay-remote-app/images/01.png)
 
 ```{important}
 Running `create_remote_app.sh` requires the latest versions of [Node.JS](https://nodejs.org/), [NPM](https://www.npmjs.com/), and [YARN](https://classic.yarnpkg.com/). Before proceeding, ensure these tools are installed.
@@ -61,8 +61,6 @@ h5v7-remote-app
 ```
 
 ### Understanding the `index.js` File
-
-<!-- The below literalinclude doesn't work, because the file isn't there. If the file is created by running the script, it won't be available to include. I think you have to paste this code in directly. -Rich -->
 
    ```{literalinclude} ./creating-a-liferay-remote-app/resources/liferay-h5v7.zip/h5v7-remote-app/src/index.js
        :language: js
@@ -125,7 +123,7 @@ Unique file names are generated for every build. When testing your custom applic
 
    Alternatively, use *Select Files* to upload them.
 
-   ![Upload the .js and .css files to the Liferay Document Library.](./creating-a-liferay-remote-app/images/01.png)
+   ![Upload the .js and .css files to the Liferay Document Library.](./creating-a-liferay-remote-app/images/02.png)
 
 1. Click *Publish*.
 
@@ -133,7 +131,7 @@ This adds the files to the Document Library and assigns them unique URLs, which 
 
 To view each file's URL, click the *Info* icon (![Info Icon](../../images/icon-information.png)) and select a file. Copy each file's *WebDAV URL* and save them for use in the next step.
 
-![Copy each file's WebDAV URL.](./creating-a-liferay-remote-app/images/02.png)
+![Copy each file's WebDAV URL.](./creating-a-liferay-remote-app/images/03.png)
 
 For example,
 
@@ -161,7 +159,7 @@ For example,
 
 Once saved, Liferay creates a widget named H5V7-Remote-App, which you can deploy to Site Pages like other Page widgets. This widget appears under the selected Portlet Category Name.
 
-![Deploy the H5V7-Remote-App widget to Site Pages.](./creating-a-liferay-remote-app/images/03.png)
+![Deploy the H5V7-Remote-App widget to Site Pages.](./creating-a-liferay-remote-app/images/04.png)
 
 ## Additional Information
 
