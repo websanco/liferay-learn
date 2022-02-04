@@ -149,7 +149,7 @@ Use the drop-down menu to inform tools crawling and indexing your Site how frequ
 Open Graph properties defined here override values defined elsewhere in your DXP instance.
 
 ```{note}
-Open Graph `<meta>` tags are only included in public pages to unauthenticated users. They are not included in private pages, or in public pages when the user is logged in.
+Open Graph `<meta>` tags are only included in public page headers to unauthenticated users. They are not included in private pages, or in public pages when the user is logged in.
 ```
 
 ### Image
