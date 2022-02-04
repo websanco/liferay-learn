@@ -6,7 +6,7 @@ Using the Liferay DXP REST services, you can create and manage structured conten
 You can use a Structure with a [Web Content Template](../web-content-templates/creating-web-content-templates.md) to render the Structure content, but a Template is not required to create structured content.
 ```
 
-Here, you'll use a pre-built Liferay DXP Docker image with several [cURL](https://curl.haxx.se/) code samples to learn about Structures and structured content. For more advanced examples managing structured content using the REST API, see [Advanced Web Content API](./advanced-web-content-api.md). For an overview of using the REST API in Liferay DXP, see [Consuming REST Services](../../../headless-delivery/consuming-apis/consuming-rest-services.md).
+See the cURL and Java samples for Structures and structured content below. For more advanced examples managing structured content, see [Advanced Web Content API](./advanced-web-content-api.md).For more advanced examples managing structured content using the REST API, see [Advanced Web Content API](./advanced-web-content-api.md). For an overview of using the REST API in Liferay DXP, see [Consuming REST Services](../../../headless-delivery/consuming-apis/consuming-rest-services.md).
 
 ## Setting Up Your Environment
 
@@ -32,7 +32,7 @@ Here, you'll use a pre-built Liferay DXP Docker image with several [cURL](https:
    - These scripts use basic authentication and are designed for testing. Do not use basic authentication in a production Liferay DXP environment.
    ```
 
-1. Download and unzip the [sample project](https://learn.liferay.com/dxp/latest/en/content-authoring-and-management/web-content/developer-guide/liferay-r4h9.zip) files:
+1. Download and unzip the [Web Content API Basics](./liferay-r4h9.zip) files:
 
     ```bash
     curl https://learn.liferay.com/dxp/latest/en/content-authoring-and-management/web-content/developer-guide/liferay-r4h9.zip -O
@@ -82,7 +82,11 @@ These examples use a basic Web Content Article with a single Text field and the 
 
 For more information, see [Adding a Basic Web Content Article](../web-content-articles/adding-a-basic-web-content-article.md).
 
-## Get Web Content Articles
+## Get Web Content Articles from Site
+
+You can list a site's Web Content articles by executing the following cURL or Java command. Replace `1234` with your site's ID.
+
+### StructuredContents_GET_FromSite.sh
 
 The `StructuredContents_GET_FromSite.sh` cURL script lists all the Site's Web Content Articles. This script uses the `StructuredContent` service with a `GET` HTTP method, with the Site ID as the only parameter.
 
@@ -91,7 +95,7 @@ The `StructuredContents_GET_FromSite.sh` cURL script lists all the Site's Web Co
 | `GET` | `StructuredContent` | `/v1.0/sites/{siteID}/structured-contents` |
 
 ```bash
-   ./StructuredContents_GET_FromSite.sh 20125
+   ./StructuredContents_GET_FromSite.sh 1234
 ```
 
 | Parameter # | Description |
@@ -170,27 +174,121 @@ Review the following information in the JSON output:
 
    ![The JSON key property corresponds to the structured content identifier in the user interface.](./web-content-api-basics/images/03.png)
 
-### Get Web Content Article by Id
+### StructuredContents_GET_FromSite.java
 
-The script in [the previous step](#getting-the-web-content-article) returns all the Site's Web Content Articles. To check a specific article, use the article `id` as a reference. The `StructuredContent_GET_ById.sh` script lists a Web Content by `id`. This script uses the `StructuredContent` service with the `GET` HTTP method and the structured content `id` parameter.
+The `StructuredContents_GET_FromSite.java` class gets a list of Web Content articles by calling the Structured Content related services.
 
-| Method | Service | Endpoint |
-| :--- | :--- | :--- |
-| `GET` | `StructuredContent` | `/v1.0/structured-contents/{structuredContentId}` |
-
-```bash
-   ./StructuredContent_GET_ById.sh 41539
+```{literalinclude} ./web-content-api-basics/resources/liferay-r4h9.zip/java/StructuredContents_GET_FromSite.java
+   :dedent: 1
+   :language: java
+   :lines: 11-26
 ```
 
-| Parameter # | Description |
-| :--- | :--- |
-| $1 | structured content `id` |
+This class invokes the REST service using only three lines of code: 
+
+| Line (abbreviated) | Description |
+| :----------------- | :---------- |
+| `StructuredContentResource.Builder builder = ...` | Gets a `Builder` for generating a `StructuredContentResource` service instance. |
+| `StructuredContentResource structuredContentResource = builder.authentication(...).build();` | Specifies basic authentication and generates a `StructuredContentResource` service instance. |
+| `Page<StructuredContent> page = structuredContentResource.getSiteStructuredContentsPage(...);` | Calls the `structuredContentResource.getSiteStructuredContentsPage` method and retrieves the data. |
+
+Note that the project includes the `com.liferay.headless.delivery.client.jar` file as a dependency. You can find client JAR dependency information for all REST applications in the API explorer in your installation at `/o/api`.
+
+```{note}
+The `main` method's comment demonstrates running the class.
+```
+
+The other example Java classes are similar to this one, but call different `StructuredContentResource` methods.
+
+```{important}
+See [StructuredContentResource](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/headless/headless-delivery/headless-delivery-client/src/main/java/com/liferay/headless/delivery/client/resource/v1_0/StructuredContentResource.java) for service details.
+```
+
+Below are examples of calling other REST services using cURL and Java.
+
+## Get a Web Content Article
+
+The script in [the previous step](#get-web-content-articles-from-site) returns all the Site's Web Content Articles. To check a specific article, use the article `id` as a reference. The `StructuredContent_GET_ById.[java|sh]` script lists a Web Content by `id`. 
+
+### StructuredContent_GET_ById.sh
+
+Command:
+
+```bash
+./StructuredContent_GET_ById.sh 1234
+```
+
+Code:
+
+```{literalinclude} ./web-content-api-basics/resources/liferay-r4h9.zip/curl/StructuredContent_GET_ById.sh
+   :language: bash
+```
+
+### StructuredContent_GET_ById.java
+
+Command: 
+
+```bash
+java -classpath .:* -DstructuredContentId=1234 StructuredContent_GET_ById
+```
+
+Code:
+
+```{literalinclude} ./web-content-api-basics/resources/liferay-r4h9.zip/java/StructuredContent_GET_ById.java
+   :dedent: 1
+   :language: java
+   :lines: 9-23
+```
+
+The `StructuredContent` fields are listed in JSON.
+
+## Get Web Content Structures
+
+You can list a site's Content Structures by executing the following cURL or Java command. Replace `1234` with your site's ID.
+
+```{note}
+The default Basic Web Content Structure is not visible using this endpoint.
+```
+
+### ContentStructures_GET_FromSite.sh
+
+Command:
+
+```bash
+./ContentStructures_GET_FromSite.sh 1234
+```
+
+Code:
+
+```{literalinclude} ./web-content-api-basics/resources/liferay-r4h9.zip/curl/ContentStructures_GET_FromSite.sh
+   :language: bash
+```
+
+### ContentStructures_GET_FromSite.java
+
+Command:
+
+```bash 
+java -classpath .:* -DsiteId=1234 ContentStructures_GET_FromSite
+```
+
+Code:
+
+```{literalinclude} ./web-content-api-basics/resources/liferay-r4h9.zip/java/ContentStructures_GET_FromSite.java
+   :dedent: 1
+   :language: java
+   :lines: 11-26
+```
+
+The site's `ContentStructure` objects are listed in JSON.
 
 ## Get Web Content Structure by Id
 
 The default Web Content Structure in the sample Web Content Article is not visible in the Liferay DXP user interface. However, you can use the `ContentStructure` service to gather the Structure's description.
 
-The `ContentStructure_GET_ById.sh` cURL script returns a Web Content Structure description using the `ContentStructure` service with the `GET` HTTP method and the Structure `id` parameter.
+The `ContentStructure_GET_ById.[java|sh]` script returns a Web Content Structure description.
+
+### ContentStructure_GET_ById.sh
 
 | Method | Service | Endpoint |
 | :--- | :--- | :--- |
@@ -204,7 +302,7 @@ The `ContentStructure_GET_ById.sh` cURL script returns a Web Content Structure d
 | :--- | :--- |
 | $1 | `contentStructureId`|
 
-Below is the JSON output, where you can identify the default Web Content Structure in Liferay DXP by its `id` and `name`. The `contentStructureFields` section contains a description of the Structure fields. Notice that this Structure contains a single content field of type `string` and name `content`. In [Posting a Basic Web Content ](#posting-a-basic-web-content-article), you create a new Web Content Article adding information to this content field.
+Below is the JSON output, where you can identify the default Web Content Structure in Liferay DXP by its `id` and `name`. The `contentStructureFields` section contains a description of the Structure fields. Notice that this Structure contains a single content field of type `string` and name `content`. In [Post a Basic Web Content Article](#post-a-basic-web-content-article), you create a new Web Content Article adding information to this content field.
 
 ```json
 {
@@ -230,27 +328,29 @@ Below is the JSON output, where you can identify the default Web Content Structu
 }
 ```
 
-### Get Web Content Structures
+### ContentStructure_GET_ById.sh.java
 
-The script in [the previous step](#getting-the-web-content-structure-by-id) returns a specific Web Content Structure. To return all the existing Site Structures, use the `ContentStructures_GET_FromSite.sh` script. This script uses the `ContentStructure` service with a `GET` HTTP method and the [Site Id](#identify-the-site-id) parameter.
-
-| Method | Service | Endpoint |
-| :--- | :--- | :--- |
-| `GET` | `ContentStructure` | `/v1.0/sites/${1}/content-structures` |
+Command: 
 
 ```bash
-   ./ContentStructures_GET_FromSite.sh 20125
+java -classpath .:* -DcontentStructureId=1234 ContentStructure_GET_ById
 ```
 
-| Parameter # | Description |
-| :--- | :--- |
-| $1 | `siteId` |
+Code:
 
-```{note}
-The default Basic Web Content Structure is not visible using this endpoint.
+```{literalinclude} ./web-content-api-basics/resources/liferay-r4h9.zip/java/ContentStructure_GET_ById.java
+   :dedent: 1
+   :language: java
+   :lines: 9-23
 ```
+
+The `ContentStructure` fields are listed in JSON.
 
 ## Post a Basic Web Content Article
+
+Use the `StructuredContent_POST_ToSite[java|sh]` script to create a new Web Content article. Replace `1234` with a Web Content Structure ID. Replace `5678` with your site's ID.
+
+### StructuredContent_POST_ToSite.sh
 
 The `StructuredContent_POST_ToSite.sh` cURL script example creates a new Web Content article using the `POST` HTTP method and the default Web Content Structure. The script uses the [Site Id](#identifying-the-site-id) and Structure `id` as parameters.
 
@@ -324,78 +424,145 @@ Below is the partial JSON output generated by the script. The script posts a sim
 }
 ```
 
-## Patch Web Content Article
+### StructuredContent_POST_ToSite.java
 
-Use the `PATCH` HTTP method with the `StructuredContent` service to update the Web Content Article. The `StructuredContent_PATCH_ById` script uses the structured content identifier `id` to update the article's content from 'Foo' to 'Bar':
+The `StructuredContent_POST_ToSite.java` class adds a Web Content article by calling the Structured Content related service.
 
-| Method | Service | Endpoint |
-| :--- | :--- | :--- |
-| `PATCH` | `StructuredContent` | `/v1.0/structured-contents/{structuredContentId}` |
+Command: 
 
 ```bash
-   ./StructuredContent_PATCH_ById.sh 41571
+java -classpath .:* -DcontentStructureId=1234 -DsiteId=5678 StructuredContent_POST_ToSite
 ```
 
-cURL script parameters:
+Code:
 
-| Parameter # | Description |
-| :--- | :--- |
-| $1 | structured content `id` |
+```{literalinclude} ./web-content-api-basics/resources/liferay-r4h9.zip/java/StructuredContent_POST_ToSite.java
+   :dedent: 1
+   :language: java
+   :lines: 11-45
+```
+
+The `StructuredContent` fields are listed in JSON.
+
+## Patch Web Content Article
+
+Use the `PATCH` method with the `StructuredContent` service to update the Web Content Article. The `StructuredContent_PATCH_ById.[java|sh]` script uses the structured content identifier `id` to update the article's content from 'Foo' to 'Bar'.
+
+### StructuredContent_PATCH_ById.sh
+
+Command:
+
+```bash
+./StructuredContent_PATCH_ById.sh 1234
+```
+
+Code:
+
+```{literalinclude} ./web-content-api-basics/resources/liferay-r4h9.zip/curl/StructuredContent_PATCH_ById.sh
+   :language: bash
+```
+
+### StructuredContent_PATCH_ById.java
+
+Command: 
+
+```bash 
+java -classpath .:* -DcontentStructureId=1234 -DstructuredContentId=5678 StructuredContent_PATCH_ById
+``` 
+
+Code:
+
+```{literalinclude} ./web-content-api-basics/resources/liferay-r4h9.zip/java/StructuredContent_PATCH_ById.java
+   :dedent: 1
+   :language: java
+   :lines: 11-44
+```
 
 ## Put Web Content Article
 
-Use the `PUT` HTTP method with the `StructuredContent` service to replace the original Web Content information. The `StructuredContent_PUT_ById` script uses the Web Content and Structure identifiers to replace the article's name to `Baker Article` and the article's content from `Bar` to `Goo`:
+Use the `PUT` method with the `StructuredContent` service to replace the original Web Content information. The `StructuredContent_PUT_ById.[java|sh]` script uses the Web Content and Structure identifiers to replace the article's name and the article's content from `Bar` to `Goo`.
 
-| Method | Service | Endpoint |
-| :--- | :--- | :--- |
-| `PUT` | `StructuredContent` | `/v1.0/structured-contents/{structuredContentId}` |
+### StructuredContent_PUT_ById.sh
+
+Command:
 
 ```bash
-   ./StructuredContent_PUT_ById.sh 41571 40697
+./StructuredContent_PUT_ById.sh 1234
 ```
 
-cURL script parameters:
+Code:
 
-| Parameter # | Description |
-| :--- | :--- |
-| $1 | structured content `id` |
-| $2 | `contentStructureId` |
+```{literalinclude} ./web-content-api-basics/resources/liferay-r4h9.zip/curl/StructuredContent_PUT_ById.sh
+   :language: bash
+```
+
+### StructuredContent_PUT_ById.java
+
+Command:
+
+```bash
+java -classpath .:* -DcontentStructureId=1234 -DstructuredContentId=5678 StructuredContent_PUT_ById
+```
+
+Code:
+
+```{literalinclude} ./web-content-api-basics/resources/liferay-r4h9.zip/java/StructuredContent_PUT_ById.java
+   :dedent: 1
+   :language: java
+   :lines: 9-26
+```
 
 ## Delete Web Content Article
 
-Use the `DELETE` HTTP method with the `StructuredContent` service to delete a Web Content Article. The `StructuredContent_DELETE_ById` script example uses the Web Content `id` to delete the Web Content:
+Use the `DELETE` method with the `StructuredContent` service to delete a Web Content Article. The `StructuredContent_DELETE_ById.[java|sh]` script example uses the Web Content `id` to delete the Web Content.
 
 ```{important}
 When you delete Web Content using the REST API, it's deleted permanently, without using the [Liferay DXP Recycle Bin](../../../content-authoring-and-management/recycle-bin/recycle-bin-overview.md).
 ```
 
-| Method | Service | Endpoint |
-| :--- | :--- | :--- |
-| `DELETE` | `structured-contents` | `/v1.0/structured-contents/{structuredContentId}` |
+### StructuredContent_DELETE_ById.sh
+
+Command:
 
 ```bash
-   ./StructuredContent_DELETE_ById.sh 41571
+./StructuredContent_DELETE_ById.sh 1234
 ```
 
-cURL script parameters:
+Code:
 
-| Parameter # | Description |
-| :--- | :--- |
-| $1 | structured content `id` |
+```{literalinclude} ./web-content-api-basics/resources/liferay-r4h9.zip/curl/StructuredContent_DELETE_ById.sh
+   :language: bash
+```
+
+### StructuredContent_DELETE_ById.java
+
+Command
+
+```bash 
+java -classpath .:* -DstructuredContentId=1234 StructuredContent_DELETE_ById
+```
+
+Code:
+
+```{literalinclude} ./web-content-api-basics/resources/liferay-r4h9.zip/java/StructuredContent_DELETE_ById.java
+   :dedent: 1
+   :language: java
+   :lines: 8-19
+```
 
 ## More Web Content and Web Content Folder Services
 
-The following cURL commands demonstrate more `StructuredContent` and `StructuredContentFolder` services. You can find these scripts in the [sample project folder](https://learn.liferay.com/dxp/latest/en/content-authoring-and-management/web-content/developer-guide/liferay-r4h9.zip).
+The cURL commands and Java classes demonstrate more `StructuredContent` and `StructuredContentFolder` services. You can find these in [Web Content API Basics](./liferay-r4h9.zip).
 
 | File | Description |
 | :--- | :--- |
-| `StructuredContentFolder_GET_ById.sh` | Lists a Web Content folder's fields. |
-| `StructuredContentFolders_GET_FromSite.sh` | Lists all Web Content folders in the Site. |
-| `StructuredContentFolder_POST_ToSite.sh` | Posts a Web Content folder to a Site. |
-| `StructuredContentFolder_PATCH_ById.sh` | Updates a Web Content Folder. |
-| `StructuredContentFolder_PUT_ById.sh` | Replaces a Web Content Folder. |
-| `StructuredContentFolder_DELETE_ById.sh` | Deletes a Web Content Folder. |
-| `StructuredContent_POST_ToStructuredContentFolder.sh` | Posts a Web Content Article to a folder. |
+| `StructuredContentFolder_GET_ById.[java|sh]` | Lists a Web Content folder's fields. |
+| `StructuredContentFolders_GET_FromSite.[java|sh]` | Lists all Web Content folders in the Site. |
+| `StructuredContentFolder_POST_ToSite.[java|sh]` | Posts a Web Content folder to a Site. |
+| `StructuredContentFolder_PATCH_ById.[java|sh]` | Updates a Web Content Folder. |
+| `StructuredContentFolder_PUT_ById.[java|sh]` | Replaces a Web Content Folder. |
+| `StructuredContentFolder_DELETE_ById.[java|sh]` | Deletes a Web Content Folder. |
+| `StructuredContent_POST_ToStructuredContentFolder.[java|sh]` | Posts a Web Content Article to a folder. |
 
 ```{important}
 When you delete a Web Content Folder using the REST API, the folder and its content are deleted permanently, without using the [Liferay DXP Recycle Bin](../../../content-authoring-and-management/recycle-bin/recycle-bin-overview.md).
