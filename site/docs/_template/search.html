@@ -6,7 +6,7 @@
 
 {% block extrahead %}
 <script type="text/javascript">
-    jQuery(function () { Search.loadIndex("{{ pathto('searchindex.js', 1) }}"); });
+  jQuery(function () { Search.loadIndex("{{ pathto('searchindex.js', 1) }}"); });
 </script>
 <script type="text/javascript" src="{{ pathto('_static/language_data.js', 1) }}"></script>
 {# this is used when loading the search index using $.ajax fails,
@@ -116,7 +116,8 @@
                                     <span class="custom-control-label">{% trans %}DXP Cloud{% endtrans %}</span>
                                 </label>
                             </div>
-                            <div class="custom-control custom-radio">
+
+							<div class="custom-control custom-radio">
                                 <label>
                                     <input
                                         aria-label="{{ getLanguageLabel(language_code) }}"
