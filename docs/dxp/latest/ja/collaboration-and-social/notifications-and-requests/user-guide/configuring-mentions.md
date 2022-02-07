@@ -1,47 +1,50 @@
 # メンションの設定
 
-メンションは*メンション*アプリによって有効になります。デフォルトでは、*メンション*アプリはグローバルに有効になっています。 ただし、このアプリはグローバルに、またはサイトごとに有効または無効にできます。
+メンションは、_Mentions_アプリで有効にします。 デフォルトでは、_Mentions_アプリがグローバルに有効になっています。 ただし、このアプリはグローバルに、またはサイトごとに有効または無効にできます。
 
 ## グローバルスコープでのメンションの設定
 
 仮想インスタンスのグローバルメンション設定にアクセスするには：
 
-1.  *メニュー*（![Menu](../../../images/icon-product-menu.png)）を開きます。
+1. *Global Menu*（![Global Menu](../../../images/icon-applications-menu.png)）をクリックし、*［コントロールパネル］*をクリックします。
+1. ［設定］で、*［インスタンス設定］*をクリックします。
+1. ［CONTENT AND DATA］で、*［Comunity Tools］*をクリックします。
 
-2.  *[Control Panel]* → *[Configuration]* に移動します。
+   ![コミュニティツール](./configuring-mentions/images/01.png)
 
-3.  *[Instance Settings]* をクリックします。
-
-4.  *[Community Tools]* をクリックします。
-
-    ![コミュニティツール](./configuring-mentions/images/01.png)
-
-5.  左側のメニューで *[Mentions]* をクリックします。
-
-6.  デフォルトでは、すべてのユーザーが他のサイトのメンバーや友達にメンションすることが許可されています。 これらのオプションを微調整するには、*[Define Mentions Capability for Users]* を選択し、必要な設定を指定します。
+1. ［ Virtual Instance Scope］セクションで、*［Mentions］*をクリックします。
+1. デフォルトでは、すべてのユーザーが他のサイトのメンバーや友達にメンションできます。 このオプションを設定するには、*［Define Mentions Capability for Users］*を選択し、必要な設定を指定します。
 
     ![仮想インスタンスのすべてのサイトに対しメンション機能を有効または無効にできます。](./configuring-mentions/images/02.png)
 
-7.  *[保存]* をクリックします。
+1. *［Save］*をクリックします。
 
-*メンション*アプリがグローバルに設定されました。
-
-## サイトでのメンションの設定
+## サイトスコープでのメンションの設定
 
 サイト管理者は、サイトへの*メンション*を有効または無効にできます。
 
-1.  *製品メニュー*（![Product Menu](../../../images/icon-product-menu.png)）を開き、サイト管理メニューのコンパスアイコン（![Compass](../../../images/icon-compass.png)）をクリックします。 [Select Site]ダイアログが開きます。
+1. ［Mentions］オプションにアクセスします。
 
-2.  *\[your site name\]* → *[Configuration]* の順にクリックします。
+    - Liferay DXP 7.4+の場合
 
-3.  *[Settings]* をクリックします。
+      1. サイトのメニューから、*［Configuration］* &rarr; *［Site Settings］*に移動します。
+      1. ［コンテンツとデータ］セクションで、*［Community Tools］*をクリックしてから、*［Mentions］*をクリックします。
 
-4.  *[Social]* タブで、*[Mentions]* セクションを展開します。
+            ![Liferay DXP 7.4以降では、［サイト設定］セクションからメンション設定を変更します。](./configuring-mentions/images/04.png)
 
-5.  *[Allow Users to Mention Other Users]* で、トグルを*[YES]* または*[NO]* に切り替えます。
+   - 以前のLiferay DXPバージョンの場合
 
-    ![メンションはサイトごとに有効または無効にすることもできます。](./configuring-mentions/images/03.png)
+      1. サイトメニューから、*［Configuration］* &rarr; *［Settings］*に移動します。
+      1. ［Social］エリアで、*［Mentions］*オプションを展開します。
 
-6.  完了したら、*[保存]* をクリックします。
+            ![以前のLiferay DXPバージョンでは、［Settings］セクションからメンション設定を変更します。](./configuring-mentions/images/03.png)
 
-*メンション*がサイトスコープで設定されました。
+1. *［Allow Users to Mention Other Users］*オプションで、スイッチを切り替えて優先する設定にします。
+
+1. *［Save］* をクリックします。
+
+## 関連情報
+
+- [Site Settings UI Reference](../../../site-building/site-settings/site-settings-ui-reference.md)
+- [Managing Notifications and Requests](./managing-notifications-and-requests.md)
+- [Mentioning Users](./mentioning-users.md)

@@ -1,4 +1,4 @@
-開発者ガイド
+Developer Guide
 ===============
 
-近日公開！
+Coming soon!

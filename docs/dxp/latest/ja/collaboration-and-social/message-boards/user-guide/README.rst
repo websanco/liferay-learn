@@ -1,4 +1,4 @@
-ユーザーガイド
+User Guide
 ==========
 
 -  :doc:`/collaboration-and-social/message-boards/user-guide/getting-started-with-message-boards`

@@ -1,4 +1,4 @@
-ユーザーガイド
+User Guide
 ==========
 
 -  :doc:`/collaboration-and-social/social-tools/user-guide/using-the-activities-widget`

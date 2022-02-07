@@ -1,20 +1,20 @@
-通知とリクエスト
+Notifications and Requests
 ==========================
 
-ユーザーガイド
+User Guide
 ----------
 
-通知とリクエスト
+Notifications and Requests
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  :doc:`/collaboration-and-social/notifications-and-requests/user-guide/mentioning-users`
 -  :doc:`/collaboration-and-social/notifications-and-requests/user-guide/managing-notifications-and-requests`
 -  :doc:`/collaboration-and-social/notifications-and-requests/user-guide/configuring-mentions`
 
-開発者ガイド
+Developer Guide
 ---------------
-近日公開！
+Coming soon!
 
-API
+APIs
 ----
-近日公開！
+Coming soon!

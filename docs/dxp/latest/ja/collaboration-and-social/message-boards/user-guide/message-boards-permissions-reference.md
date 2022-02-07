@@ -1,16 +1,14 @@
-# メッセージボードの権限リファレンス
+# 掲示板の権限リファレンス
 
-この記事では、*[Message Boards]* ウィジェットでの権限について説明し、ユーザーおよびロールに権限を割り当てる際のリファレンスとして機能します。 DXPのロールと権限の詳細については、[Roles and Permissions](https://help.liferay.com/hc/articles/360017895212-Roles-and-Permissions)をご覧ください 。
+この記事では、_［掲示板］_ウィジェットでの権限について説明し、ユーザーおよびロールに権限を割り当てる際のリファレンスとして機能します。 DXPのロールと権限の詳細は、[Roles and Permissions](https://help.liferay.com/hc/articles/360017895212-Roles-and-Permissions)をご覧ください 。
 
 ## ホームカテゴリの権限
 
-メッセージボードの権限画面は、メッセージボードの機能へのアクセスを許可および取り消すためのものです。
+_掲示板_の権限画面は、_掲示板_の機能へのアクセスを許可および取り消すためのものです。
 
-1.  ホストサイトの*サイト管理*に移動します（たとえば、Liferay DXPのゲストサイト）。
-
-2.  *[Content & Data]* → *[Message Boards]* の順にクリックします。
-
-3.  *オプション*アイコン（![Options](./message-boards-permissions-reference/images/01.png)）、*[Home Category Permissions]* の順にクリックします。
+1. ホストサイトの_サイト管理_に移動します（たとえば、Liferay DXPのゲストサイト）。
+1. _［コンテンツ & データ］_ &rarr; _［掲示板］_の順にクリックします。
+1. *オプション*アイコン（![Options](./message-boards-permissions-reference/images/01.png)）、*［Home Category Permissions］*の順にクリックします。
 
     ![権限をサイトロールに割り当てる](./message-boards-permissions-reference/images/03.png)
 
@@ -32,7 +30,7 @@
 
 ## ウィジェットの権限
 
-[Message Boards]ウィジェットをページに追加した後、管理者はそのウィジェットインスタンスの一般的な権限にアクセスできます。 これを行うには、ウィジェットの*オプション*メニュー（![Options](./message-boards-permissions-reference/images/02.png)）を選択し、*[Permissions]* を選択します。
+［掲示板］ウィジェットをページに追加した後、管理者はそのウィジェットインスタンスの通常権限にアクセスできます。 これを行うには、ウィジェットの*オプション*メニュー（![Options](./message-boards-permissions-reference/images/02.png)）を選択し、*［Permissions］*を選択します。
 
 ![ウィジェット権限を割り当てる](./message-boards-permissions-reference/images/04.png)
 
@@ -67,12 +65,12 @@
 
 ## スレッドの権限
 
-この一連の権限は、ユーザーがスレッドに対して行える変更を決定します。
+ この一連の権限は、ユーザーがスレッドに対して行える変更を決定します。
 
 | 権限名              | 説明                     |
 | :--- | :--- |
 | **Delete：**      | スレッドを削除します。            |
-| **Permissions：** | スレッドの権限を付与/取り消します。     |
+| **Permissions：** | スレッドの権限の付与や取り消しを行います。  |
 | **Update：**      | スレッドを編集します。            |
 | **Subscribe：**   | スレッドアクティビティの通知を受け取ります。 |
 | **View：**        | スレッドを表示します。            |

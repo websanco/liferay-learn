@@ -1,10 +1,9 @@
 開発者ガイド
 ===============
 
-.. toctree::
-   :maxdepth: 2
+.. toctree:: :maxdepth: 2
 
-   02-developer-guide/apis.rst
+   developer-guide/apis.rst
 
 API
 ----

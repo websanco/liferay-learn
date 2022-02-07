@@ -1,4 +1,4 @@
-ユーザーガイド
+User Guide
 ==========
 
 -  :doc:`/collaboration-and-social/notifications-and-requests/user-guide/mentioning-users`
