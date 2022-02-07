@@ -8,7 +8,7 @@ For more information, see [Building Liferay Source](./building-liferay-source.md
 
 Once Liferay Portal is built, see if the bug can be reproduced using the latest revision of the platform. Often times the bug is already addressed in development builds of Liferay Portal. Also be sure to issue any pull requests against the master branch. Pull requests against other branches will not be accepted.
 
-Learn the basic code structure of Liferay Portal to see if you can find where the bug might be. Liferay Portal is a very large product and finding where the code resides for a particular feature can be daunting at first. However, the code follows well defined patterns and once that pattern learned it can be very easy to locate an area of code. For more information, see [How the Source is Organized](./how-the-source-is-organized.md).
+Learn the basic code structure of Liferay Portal to see if you can find where the bug might be. Liferay Portal is a very large product and finding where the code resides for a particular feature can be daunting at first. However, the code follows well defined patterns and once that pattern learned it can be very easy to locate an area of code. For more information, see [How the Source is Organized](./organizing-the-source.md).
 
 Try to fix the bug, rebuild and restart Liferay, and see if you've fixed it! If not, keep iterating until you've fixed it. Try not to touch more code than is absolutely necessary.
 
