@@ -70,7 +70,7 @@ When adding a page, you also have the option to choose a Page Template. Page Tem
 | :--- | :--- |
 | Blog | Creates a Widget Page with a Blogs widget, a Tag Cloud widget, and a Recent Bloggers widget. |
 | Search | Creates a Widget Page with a Search Bar widget, a Search Results widget, and a Search Options widget. |
-| Wiki | Creates a Widget Page with a Wiki widget, a Categories Navigation widget, and a Tags Navigation widget. |
+| Wiki | Creates a Widget Page with a Wiki widget, a Category Filter widget, and a Tag Filter widget. |
 
 Learn more about Page Templates:
 

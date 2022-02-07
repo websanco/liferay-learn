@@ -31,7 +31,7 @@
 
 ［Name］フィールドを使用して、ブラウザのタイトルバーに表示される、サイトナビゲーションのページタイトルを設定します。 また、［Friendly URL］フィールドを使用してページの新しいURLを設定するか、 **復元** アイコン ( ![Friendly URL Restore icon](./../../../images/icon-restore.png) ) をクリックして、以前に使用したURLを表示して復元します。 詳細については、 [ページのフレンドリURLの設定](./configuring-your-pages-friendly-url.md) を参照してください。
 
-![ページのタイトルを設定するには、名前フィールドを使用します。](./configuring-individual-pages/images/02.png) ![フレンドリURLフィールドを使用して、ページのカスタムURLを設定します。](./configuring-individual-pages/images/03.png)
+**Hidden from Menu Display Widget:** Whether to include the page in the navigation.
 
 ```{tip}
 ページの名前とフレンドリーURLは、ページ作成時に一緒に定義されますが、その後は別々に設定されます。 両者が一致するように、一緒に更新するのがベストプラクティスです。

@@ -165,7 +165,7 @@ For Liferay Portal 7.3 GA2 and below, use this syntax:
 
 ## Including Widgets Within A Fragment
 
-To include a widget, you must know its registered name. For example, the Site Navigation Menu portlet is registered as `nav`. Each registered portlet has an `lfr-widget-[name]` tag that's used to embed it. For example: the Navigation Menu tag is `<lfr-widget-nav />`. You could embed it in a block like this:
+To include a widget, you must know its registered name. For example, the Menu Display Widget is registered as `nav`. Each registered portlet has an `lfr-widget-[name]` tag that's used to embed it. For example: the Menu Display tag is `<lfr-widget-nav />`. You could embed it in a block like this:
 
 ```html
 <div class="nav-widget">
@@ -182,15 +182,15 @@ These are the widgets that can be embedded and their accompanying tags:
 | Form                       | `<lfr-widget-form>`              |
 | Asset Publisher            | `<lfr-widget-asset-list>`        |
 | Breadcrumb                 | `<lfr-widget-breadcrumb>`        |
-| Categories Navigation      | `<lfr-widget-categories-nav>`    |
+| Category Filter            | `<lfr-widget-categories-nav>`    |
 | Flash                      | `<lfr-widget-flash>`             |
 | Media Gallery              | `<lfr-widget-media-gallery>`     |
-| Navigation Menu            | `<lfr-widget-nav>`               |
+| Menu Display               | `<lfr-widget-nav>`               |
 | Polls Display              | `<lfr-widget-polls>`             |
 | Related Assets             | `<lfr-widget-related-assets>`    |
 | Site Map                   | `<lfr-widget-site-map>`          |
 | Tag Cloud                  | `<lfr-widget-tag-cloud>`         |
-| Tags Navigation            | `<lfr-widget-tags-nav>`          |
+| Tag Filter                 | `<lfr-widget-tags-nav>`          |
 | Web Content Display        | `<lfr-widget-web-content>`       |
 | RSS Publisher (Deprecated) | `<lfr-widget-rss>`               |
 | Iframe                     | `<lfr-widget-iframe>`            |

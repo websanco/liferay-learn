@@ -36,7 +36,7 @@ While a Page's name and friendly URL are initially defined together at Page crea
 
 ### Navigation Menu Widget
 
-You can hide a Page from Navigation Menu widgets that show the Public Pages Hierarchy. When enabled, a hidden Page can still appear in other navigation menus if added to them. See [Configuring Site Navigation](./../../site-navigation/managing-site-navigation.md) for more information.
+You can hide a Page from Menu Display widgets that show the Public Pages Hierarchy. When enabled, a hidden Page can still appear in other navigation menus if added to them. See [Configuring Site Navigation](./../../site-navigation/managing-site-navigation.md) for more information.
 
 ### Page Layout
 

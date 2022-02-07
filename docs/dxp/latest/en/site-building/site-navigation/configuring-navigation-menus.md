@@ -1,9 +1,9 @@
 # Configuring Navigation Menus
 
-To display and configure a [Navigation Menu](./using-navigation-menus.md), you can use the [Menu Display Fragment](../creating-pages/page-fragments-and-widgets/using-fragments/default-fragments-reference.md) (available in Liferay DXP 7.4+) or Navigation Menu Widget. With any of these two options, you can define the menu display options and create different navigation levels for your Site.
+To display and configure a [Navigation Menu](./using-navigation-menus.md), you can use the [Menu Display Fragment](../creating-pages/building-and-managing-content-pages/page-fragments-user-interface-reference.md#menu-display) (available in Liferay DXP 7.4+) or Menu Display Widget. With any of these two options, you can define the menu display options and create different navigation levels for your Site.
 
 ```{note}
-Configuring the Menu Display Fragment is easier than the Navigation Menu Widget, and you have preview options working with [Master Page Template](../creating-pages/defining-headers-and-footers/creating-a-master-page-template.md) that Navigation Menu Widgets do not provide.
+Configuring the Menu Display Fragment is easier than the Menu Display Widget, and you have preview options working with [Master Page Template](../creating-pages/defining-headers-and-footers/creating-a-master-page-template.md) that Menu Display Widgets do not provide.
 ```
 
 ## Configuring the Menu Display Fragment
@@ -23,9 +23,9 @@ You can build the hierarchy of pages and subpages in the Menu Display Fragment u
 
 ![You can define the hierarchy of the Menu Display Fragment from your Site Menus or from Contextual Menus.](./configuring-navigation-menus/images/05.png)
 
-## Configuring the Navigation Menu Widget
+## Configuring the Menu Display Widget
 
-Below are all the options possible in the Navigation Menu widget. To access the Configuration menu, click ![Options icon](../../images/icon-widget-options.png) at the top of the navigation menu widget.
+Below are all the options possible in the Menu Display widget. To access the Configuration menu, click ![Options icon](../../images/icon-widget-options.png) at the top of the Menu Display widget.
 
 ![Navigate to the Configuration menu.](./configuring-navigation-menus/images/01.png)
 
@@ -80,5 +80,6 @@ You can configure which pages at what level from the menu appear in the widget. 
 
 - [Using Navigation Menus](./using-navigation-menus.md)
 - [Managing Site Navigation](./managing-site-navigation.md)
-- [Adding Elements to Content Pages](../creating-pages/using-content-pages/adding-elements-to-content-pages.md)
-- [Content Page Editor UI Reference](../creating-pages/using-content-pages/content-page-editor-ui-reference.md)
+- [Adding Elements to Content Pages](../creating-pages/building-and-managing-content-pages/adding-elements-to-content-pages.md)
+- [Content Page Editor User Interface Reference](../creating-pages/building-and-managing-content-pages/content-page-editor-user-interface-reference.md)
+

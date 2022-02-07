@@ -30,7 +30,7 @@ Below is a listing of the portlet IDs for the default portlets in Liferay DXP. Y
 | :--- | :--- |
 | Asset Publisher | `com_liferay_asset_publisher_web_portlet_AssetPublisherPortlet` |
 | Breadcrumb | `com_liferay_site_navigation_breadcrumb_web_portlet_SiteNavigationBreadcrumbPortlet` |
-| Categories Navigation | `com_liferay_asset_categories_navigation_web_portlet_AssetCategoriesNavigationPortlet` |
+| Category Filter| `com_liferay_asset_categories_navigation_web_portlet_AssetCategoriesNavigationPortlet` |
 | Documents and Media | `com_liferay_document_library_web_portlet_DLPortlet` |
 | Highest Rated Assets | `com_liferay_asset_publisher_web_portlet_HighestRatedAssetsPortlet` |
 | Knowledge Base Article | `com_liferay_knowledge_base_web_portlet_ArticlePortlet` |
@@ -46,7 +46,7 @@ Below is a listing of the portlet IDs for the default portlets in Liferay DXP. Y
 | Site Map | `com_liferay_site_navigation_site_map_web_portlet_SiteNavigationSiteMapPortlet` |
 | Sites Directory | `com_liferay_site_navigation_directory_web_portlet_SitesDirectoryPortlet` |
 | Tag Cloud | `com_liferay_asset_tags_navigation_web_portlet_AssetTagsCloudPortlet` |
-| Tags Navigation | `com_liferay_asset_tags_navigation_web_portlet_AssetTagsNavigationPortlet` |
+|  Tag Filter | `com_liferay_asset_tags_navigation_web_portlet_AssetTagsNavigationPortlet` |
 | Web Content Display | `com_liferay_journal_content_web_portlet_JournalContentPortlet` |
 
 **News**

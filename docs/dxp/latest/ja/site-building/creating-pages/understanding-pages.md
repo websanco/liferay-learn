@@ -70,7 +70,7 @@ Liferay DXPのページは、主にサイトのユーザーにコンテンツと
 | :--- | :--- |
 | Blog           | [Blogs]ウィジェット、[Tag Cloud]ウィジェット、[Recent Bloggers]ウィジェットを含むウィジェットページを作成します。             |
 | Search         | [Search Bar]ウィジェット、[Search Results]ウィジェット、および[Search Options]ウィジェットを含むウィジェットページを作成します。 |
-| Wiki           | [Wiki]ウィジェット、[Categories Navigation]ウィジェット、[Tags Navigation]ウィジェットを含むウィジェットページを作成します。  |
+| Wiki           | [Wiki]ウィジェット、[Category Filter]ウィジェット、[Tag Filter]ウィジェットを含むウィジェットページを作成します。  |
 
 ページテンプレートの詳細：
 
