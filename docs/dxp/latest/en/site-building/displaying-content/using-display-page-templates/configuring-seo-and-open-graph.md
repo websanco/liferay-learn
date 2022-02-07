@@ -2,7 +2,7 @@
 
 > Available DXP/Portal 7.3+
 
-Display Page Templates are custom layouts used to display individual content items at a dedicated URL. These layouts are built using both Fragments and Widgets and can be created for Web Content Articles, Documents, Blog Entries, and more. Each template has its own SEO and Open Graph settings that can be filled manually and dynamically.
+Display Page Templates are custom layouts used to display individual content items at a dedicated URL. These layouts are built using both Fragments and Widgets and can be created for Web Content Articles, Documents, Blog Entries, and more. Each template has its own SEO and Open Graph settings that can be filled both manually and dynamically.
 
 Follow these steps to configure SEO and Open Graph settings for a Display Page Template:
 
@@ -82,7 +82,7 @@ Determine whether to include a Display Page in your `sitemap.xml` file, as well 
 
 > Available: Liferay DXP/Portal 7.3+.
 
-[Open Graph](https://ogp.me) is an Internet protocol that standardizes how a Site's metadata appears on social networks. With Liferay DXP, you can create Display Page templates that dynamically configure a Page's Open Graph `<meta>` tags.
+[Open Graph](https://ogp.me) is an Internet protocol that standardizes how a Site's metadata appears on social networks. With Liferay DXP, you can create Display Page templates that dynamically configure a Page's Open Graph `<meta>` tags. In Liferay, these tags use the RDFa syntax for defining Open Graph structured data.
 
 For your displayed content, values defined here override default values defined elsewhere in your Liferay instance.
 

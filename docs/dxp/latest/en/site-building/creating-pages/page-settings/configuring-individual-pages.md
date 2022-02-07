@@ -144,9 +144,9 @@ Use the drop-down menu to inform tools crawling and indexing your Site how frequ
 
 > Available: Liferay DXP/Portal 7.3+
 
-[Open Graph](https://ogp.me/) is an Internet protocol that standardizes link summaries in application contexts that support this protocol, such as Facebook, Slack, and Twitter. In the *Open Graph* tab, you can use Open Graph `<meta property>` tags to define a Page's metadata and create engaging representations of your content. See [Configuring Open Graph](../../site-settings/configuring-open-graph.md) for more information about the following settings.
+[Open Graph](https://ogp.me/) is an Internet protocol that standardizes link summaries in application contexts that support this protocol, such as Facebook, Slack, and Twitter. In Liferay, these tags use the RDFa syntax for defining Open Graph structured data.
 
-Open Graph properties defined here override values defined elsewhere in your DXP instance.
+In the *Open Graph* tab, you can use Open Graph `<meta property>` tags to define a Page's metadata and create engaging representations of your content.Open Graph properties defined here override values defined elsewhere in your DXP instance. See [Configuring Open Graph](../../site-settings/configuring-open-graph.md) for more information about the following settings.
 
 ```{note}
 Open Graph `<meta>` tags are only included in public page headers to unauthenticated users. They are not included in private pages, or in public pages when the user is logged in.
