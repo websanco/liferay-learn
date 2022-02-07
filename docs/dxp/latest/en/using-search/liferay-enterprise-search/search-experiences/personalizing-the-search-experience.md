@@ -3,7 +3,7 @@
 One of the premier use cases for Search Experiences and Search Blueprints in particular is to personalize Liferay's [search results](../../search-pages-and-widgets/search-results.md). With a personalized search experience, each User sees results depending on the particular details of his or her context. There are currently Elements for making your Blueprint react to the answers of contextual questions like
 
 * Where is the User?
-* What Roles does this User have?
+* What Roles does the User have?
 * What Sites is the User a member of?
 * What content does the User own?
 * Is the User a Guest?
@@ -22,7 +22,7 @@ Personalizing search results increases the chance that the User will find what's
 
 There are several Elements that are especially useful for personalization efforts:
 
-*Boost Proximity* is an Element that uses the [Ipstack](https://ipstack.com) service to boost search results closer to a User's location, as marked by a [geopoint](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/geo-point.html) field in the document. The [example below](#building-a-blueprint-to-personalize-search-results) shows you how to set up the service before using the Boost Proximity Element.
+*Boost Proximity* is an Element that uses the [Ipstack](https://ipstack.com) service to boost search results closer to a User's location, as marked by a [geopoint](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/geo-point.html) field in the document. The [example below](#building-a-blueprint-to-personalize-search-results) shows you how to set up the service and use the Boost Proximity Element.
 
 *Boost Contents for the Current Language* is an Element that boosts search results with a `defaultLanguageId` field matching the current session's language.
 
@@ -49,7 +49,6 @@ To demonstrate this use case, multiple configuration exercises must be completed
 - [Configure the service that geolocates the User's IP address, <https://ipstack.com>.](#configure-the-ipstack-service)
 - [Geolocate a Liferay Asset.](#configure-a-geolocated-asset)
 - [Create the Blueprint with the Element that communicates with the geolocation service.](#configure-a-geolocation-aware-blueprint)
-
 
 ### Configure the Ipstack Service
 
@@ -104,11 +103,11 @@ Now that you have the Ipstack service configured and search documents with geopo
 
 1. Use the [Query Builder](#using-the-query-builder) to add the Boost Proximity Element.
    - Set the field as `expando__keyword__custom_fields__location_geolocation`.
-   - Set the Decay to 0.99.
+   - Set the Decay to 0.8.
    - Set the Scale to 10 km.
    - Set the Boost value to 100.
 
-![Configure the Boost Proximity Element.](./personalizing-the-search-experience/images/02.png)
+   ![Configure the Boost Proximity Element.](./personalizing-the-search-experience/images/02.png)
 
 1. Test the Blueprint as you build and configure it. Click _Preview_.
 
