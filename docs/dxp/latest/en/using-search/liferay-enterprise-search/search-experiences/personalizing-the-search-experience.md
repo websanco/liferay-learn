@@ -1,6 +1,6 @@
 # Personalizing the Search Experience
 
-One of the premier use cases for Search Experiences and Search Blueprints in particular is to personalize Liferay's [search results](../../search-pages-and-widgets/search-results.md). With a personalized search search experience, each User sees results depending on the particular details of his or her context. There are currently Elements and attributes for reacting to the answers of these contextual questions:
+One of the premier use cases for Search Experiences and Search Blueprints in particular is to personalize Liferay's [search results](../../search-pages-and-widgets/search-results.md). With a personalized search experience, each User sees results depending on the particular details of his or her context. There are currently Elements for making your Blueprint react to the answers of contextual questions like
 
 * Where is the User?
 * What Roles does this User have?
@@ -8,7 +8,7 @@ One of the premier use cases for Search Experiences and Search Blueprints in par
 * What content does the User own?
 * Is the User a Guest?
 * Is the User a new User?
-* What User Segments is the User part of?
+* What [User Segment](../../../site-building/personalizing-site-experience/segmentation/creating-and-managing-user-segments.md)s is the User part of?
 
 Without a Blueprint tailored for each User's context, the default results are scored based on a query that calculates relevance by how well the text of the searched keywords matches the [tokenized](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/analysis-tokenizers.html) values of indexed documents.
 
@@ -22,54 +22,23 @@ Personalizing search results increases the chance that the User will find what's
 
 There are several Elements that are especially useful for personalization efforts:
 
-* Boost Proximity
-* Boost Contents for the Current Language
-* Hide Contents in a Category for Guest Users
-* Limit Search to My Contents
-* Limit Search to My Sites
-* Boost Contents on My Sites
-* Boost Contents in a Category for New User Accounts
-* Boost Contents in a Category for a User Segment
+*Boost Proximity* is an Element that uses the [Ipstack](https://ipstack.com) service to boost search results closer to a User's location, as marked by a [geopoint](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/geo-point.html) field in the document. The [example below](#building-a-blueprint-to-personalize-search-results) shows you how to set up the service before using the Boost Proximity Element.
+
+*Boost Contents for the Current Language* is an Element that boosts search results with a `defaultLanguageId` field matching the current session's language.
+
+*Hide Contents in a Category for Guest Users* is an Element that hides search results matching with a [certain category](../../../content-authoring-and-management/tags-and-categories/defining-categories-and-vocabularies-for-content.md) field, if the search User is unauthenticated.
+
+*Limit Search to My Contents* is an Element that only returns search results if the document's `userId` field matches the search User.
+
+*Limit Search to My Sites* is an Element that only returns search results scoped to a [Site that the User is a member of](../../../site-building/building-sites/site-membership/adding-members-to-sites.md).
+
+*Boost Contents on My Sites* is an Element that boosts search results if the search User is a member of the Site the results are scoped to.
+
+*Boost Contents in a Category for New User Accounts* is an Element that boosts search results with a [certain category](../../../content-authoring-and-management/tags-and-categories/defining-categories-and-vocabularies-for-content.md) if the search User's account was created in a certain time range.
+
+*Boost Contents in a Category for a User Segment* is an Element that boosts search results with a [certain category](../../../content-authoring-and-management/tags-and-categories/defining-categories-and-vocabularies-for-content.md) if the user belongs to a certain [User Segment](../../../site-building/personalizing-site-experience/segmentation/creating-and-managing-user-segments.md).
 
 <!-- TODO: Move these descriptions to the Elements Reference guide when written, and link to them. Since we don't currently have the Elements Reference guide written, we must describe them here. -->
-
-Within those Elements are some important context-aware parameters that drive the personalization functionality:
-
-* User
-* Session
-* IPStack
-* Open Weather Map
-
-<!-- List and describe these and other available context-aware parameters, with any special instructions and considerations -->
-
-from the LRDOCS-10134 ticket (Petteri's geolocaton details) 
-
-IPStack:
-<!--only lat and long are use in an ootb element: boost proximity -->
-
-ipstack.city
-ipstack.continent_code
-ipstack.continent_name
-ipstack.country_code
-ipstack.country_name
-ipstack.latitude
-ipstack.longitude
-ipstack.region_code
-ipstack.region_name
-ipstack.zip
-
-OpenWeatherMap:
-<!-- none of these are used in the ootb elements -->
-
-openweathermap.temp
-openweathermap.weather_description
-openweathermap.weather_id
-openweathermap.weather_main
-openweathermap.wind_speed
-
-Additional Notes:
- * Using the information Petteri provided in LRDOCS-10134 for this effort may be enough to close both tickets
- * Also see [slack|https://liferay.slack.com/archives/C0154CEGR3Q/p1642617864109400]{quote}
 
 ## Building a Blueprint to Personalize Search Results
 
