@@ -1,5 +1,4 @@
 // Overrides for sphinx-copybutton
-
 a.copybtn {
 	cursor: pointer;
 	height: 26px;
@@ -25,6 +24,11 @@ a.copybtn {
 
 li .copybtn img {
 	margin: 0;
+}
+
+button.copybtn,
+.highlight button.copybtn:hover {
+	background-color: $dark;
 }
 
 // Converts position from left to bottom
