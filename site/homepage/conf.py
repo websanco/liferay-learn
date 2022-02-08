@@ -6,9 +6,7 @@ author = "Liferay"
 copyright = "2022, Liferay"
 exclude_patterns = ["node_modules"]
 extensions = [
-    "myst_parser",
     "notfound.extension",
-    "sphinx_copybutton",
     "sphinxext.opengraph",
 ]
 html_additional_pages = {"index": "index.html"}
