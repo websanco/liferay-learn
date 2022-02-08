@@ -2,9 +2,9 @@
 
 The
 [`liferay-util:dynamic-include` tag](https://learn.liferay.com/reference/latest/en/dxp/taglibs/util-taglib/liferay-util/dynamic-include.html) 
-is placeholder into which you can inject content. Every JSP's dynamic include 
+is a placeholder into which you can inject content. Every JSP's dynamic include 
 tag is an extension point for inserting content (e.g., JavaScript code, HTML, 
-and more). The example project demonstrates how to insert content in a module.
+and more). The example project demonstrates how to inject content with a dynamic include.
 
 ## Deploy the Example Project
 
@@ -49,7 +49,7 @@ and more). The example project demonstrates how to insert content in a module.
 
    ![Add the N3Q3 Baker Portlet to a Site page.](./customizing-jsps-with-dynamic-includes/images/01.png)
 
-   Note, the first two lines come from the N3Q3 Baker Portlet but the third line comes from the N3Q3 Able module's dynamic include.
+   Note, the first two lines come from the N3Q3 Baker Portlet but the third line is injected from N3Q3 Able module's dynamic include.
 
 ## Implement the Dynamic Include
 
@@ -78,10 +78,12 @@ and more). The example project demonstrates how to insert content in a module.
 
 ## Insert the Dynamic Include
 
-Add the `liferay-util:dynamic-include` tag where you want the dynamic include to appear. In the sample, the tag is added to the `view.jsp` of the N3Q3 Baker Portlet.
+Add the `liferay-util:dynamic-include` tag where you want the dynamic include to be injected. In the sample, the tag is added to the bottom of N3Q3 Baker Portlet's `view.jsp`.
 
 ```{literalinclude} ./customizing-jsps-with-dynamic-includes/resources/liferay-n3q9.zip/n3q9-baker-web/src/main/resources/META-INF/resources/view.jsp
    :language: jsp
 ```
 
-Make sure the dynamic include `key` matches the target set in the `register()` method above.
+Make sure the dynamic include `key` matches the target set in the `register()` method above. 
+
+See [Using a JSP and MVC Portlet](../../../building-applications/developing-a-java-web-application/using-mvc/using-a-jsp-and-mvc-portlet.md) to learn more about JSPs and portlets.
