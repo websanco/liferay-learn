@@ -12,19 +12,37 @@ When hreflangs are limited in this way, Liferay's behavior can vary depending on
 
 ## Instance Settings
 
-Follow these steps to configure hreflang settings for all Pages in an Instance:
+Follow these steps to configure hreflang behavior for your Liferay instances:
 
 1. Open the *Global Menu* (![Global Menu](../../images/icon-applications-menu.png)), click the *Control Panel* tab, and go to *Instance Settings* &rarr; *Pages* &rarr; *SEO* (Virtual Instance Scope).
 
 1. Check/Uncheck *Enable Only Translated Hreflangs*.
 
-   ![Use the check Box to enable or disable hreflang for all instance languages or only languages with translated content.](./configuring-hreflang-meta-data/images/01.png)
+   ![Enable or disable the hreflang behavior for all instance Pages.](./configuring-hreflang-meta-data/images/01.png)
 
 1. Click *Save*.
 
-When enabled, hreflang meta data is only generated for languages with translated content in a Page. When disabled, Page hreflang tags are populated with all available languages in the Site.
+When enabled, hreflang meta data is only generated for languages with translated content in a Page. When disabled, Page hreflang tags are populated with all available languages in a Site.
 
-## Site Settings
+## Instance Site Scope Settings
+
+Follow these steps to configure hreflang behavior for all Sites in an instance using the Site Scope:
+
+1. Open the *Global Menu* (![Global Menu](../../images/icon-applications-menu.png)), click the *Control Panel* tab, and go to *Instance Settings* &rarr; *Pages* &rarr; *SEO* (Site Scope).
+
+1. Check/Uncheck *Enable Only Translated Hreflangs*.
+
+   ![Enable or disable the hreflang behavior for all Sites.](./configuring-hreflang-meta-data/images/02.png)
+
+1. Click *Save*.
+
+When enabled, hreflang meta data is only generated for languages with translated content in a Page. When disabled, Page hreflang tags are populated with all available languages in a Site.
+
+```{note}
+By default, Site Scope instance settings are applied to all instance Sites. However, [individual Site configurations](#individual-site-settings) override configurations in the Global Menu. To restore the default behavior and synchronize changes between both menus, you must restore the individual Site's settings to default. 
+```
+
+## Individual Site Settings
 
 Follow these steps to configure hreflang settings for individual Sites:
 
@@ -36,11 +54,15 @@ Follow these steps to configure hreflang settings for individual Sites:
 
    This configuration only affects Pages in the current Site.
 
-   ![Use the check Box to enable or disable hreflang for all Site languages or only languages with translated content.](./configuring-hreflang-meta-data/images/02.png)
+   ![Enable or disable the hreflang behavior for a Site's pages.](./configuring-hreflang-meta-data/images/03.png)
 
 1. Click *Save*.
 
-When enabled, hreflang meta data is only generated for languages with translated content in a Page. This configuration affects all Pages of a virtual Instance.
+When enabled, hreflang meta data is only generated for languages with translated content in a Page. This configuration affects all Pages in the current Site and overrides the instance configurations settings.
+
+```{note}
+By default, individual Site settings are inherited from [Site Scope instance settings](#instance-site-scope-settings). However, individual Site configurations override this behavior. To restore the default behavior and synchronize changes between both menus, you must restore the individual Site's settings to default. 
+```
 
 ## Additional Information
 
