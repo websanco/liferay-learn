@@ -28,7 +28,7 @@ Many of Liferay's applications (e.g. Blogs, Documents and Media, Message Boards,
    ./gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)
    ```
 
-   ```note::
+   ```{note}
    This command is the same as copying the deployed jars to `/opt/liferay/osgi/modules` on the Docker container.
    ```
 

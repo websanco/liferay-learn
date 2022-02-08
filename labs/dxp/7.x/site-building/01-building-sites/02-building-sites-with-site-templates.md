@@ -28,7 +28,7 @@ To create a site using a Site Template, follow these steps:
 1. Enter a name for the Site.
 1. Check the *Create default pages as private (available only to members).*
 
-    ```note::
+    ```{note}
        If unchecked, the Site Pages will be public (available to anyone).
     ```
 
@@ -38,7 +38,7 @@ To create a site using a Site Template, follow these steps:
   
     <!-- Screenshot -->
 
-    ```tip::
+    ```{tip}
        *Enable propagation of changes from the Site template* enables the Site to receive updates if the Site Template is modified. If changes are made directly to a Site created from a Site Template, the Site will no longer recieve updates from the Site Template. See `Merging Site Template Changes <./merging-site-template-changes.md>`_  for more information.
     ```
 

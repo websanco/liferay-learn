@@ -30,7 +30,7 @@ This task is made easier with the use of [Service Builder](../../building-applic
     ./gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)
     ```
 
-    ```note::
+    ```{note}
        This command is the same as copying the deployed jars to /opt/liferay/osgi/modules on the Docker container.
     ```
 
