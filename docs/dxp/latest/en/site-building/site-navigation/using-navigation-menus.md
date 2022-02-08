@@ -72,7 +72,7 @@ Once disabled, you're not prompted to add the page to a navigation menu.
 You can categorize a navigation menu in the following ways:
 
 | Navigation Menu Type | Usage |
-| --- | --- |
+| :--- | :--- |
 | **Primary Navigation** | Primary Navigation is the main navigation for a page. |
 | **Secondary Navigation** | Secondary Navigation is a second level of navigation, possibly a sidebar or a separate menu within a page. |
 | **Social Navigation** | Social Navigation is for menus that contain links for sharing content on social media or similar tasks. |

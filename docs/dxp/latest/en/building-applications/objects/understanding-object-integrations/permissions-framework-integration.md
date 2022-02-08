@@ -13,7 +13,7 @@ Application permissions grant permission to perform general application-related 
 Custom Objects include the following standard application permissions according to their defined scope.
 
 | Permission | Description |
-| --- | --- |
+| :--- | :--- |
 | Access in Control Panel (Company Scope Only) | Access the Object in the Global Menu |
 | Access in Site and Asset Library Administration (Site Scope Only) | Access the Object in the Site Menu or Asset Library |
 | Configuration | View and set the Object's configuration options |
@@ -34,14 +34,14 @@ Each Object also has the following resource permissions.
 ### Resource-Related Actions
 
 | Permission | Description |
-| --- | --- |
+| :--- | :--- |
 | Add Object Entry | Create an Object entry |
 | Permissions | View and manage permissions related to Object entries |
 
 ### Actions on Database Entities
 
 | Permission | Description |
-| --- | --- |
+| :--- | :--- |
 | Delete | Delete an Object entry |
 | Permissions | View and modify permissions for individual Object entries |
 | Update | Update an Object entry |

@@ -37,7 +37,7 @@ In this example, the Fragment is hidden on a computer, but visible when using a 
 This table summarizes each viewport's behavior:
 
 | Viewport | Description |
-| --- | --- |
+| :--- | :--- |
 | Desktop | The default viewport. The Fragment styles and visibility you define here apply to all other viewports, unless you specify another style or visibility in another viewport. |
 | Tablet | The viewport for tablet-size screens. The Fragment styles and visibility you define here apply to the phone viewports, unless you specify a style or visibility in the landscape or portrait phone viewports. |
 | Landscape Phone | The Fragment styles and visibility you define on this viewport apply to portrait phone viewport as well, unless you specify another style or visibility in the portrait phone viewport. |

@@ -5,7 +5,7 @@
 This article describes configuration terms for Liferay Commerce Connector to PunchOut2Go.
 
 | Term | Description |
-| --- | --- |
+| :--- | :--- |
 | Punch out session | The set of actions between when the user is successfully logged into the Liferay Commerce platform and the cart is transferred back to the Punch Out system |
 | HttpSession | The existing session storage built into Liferay that is used to store data related to the Punch out session |
 | Punch out Start URL | The URL for the user to start the Punch out session and go to the catalog page for the specified Liferay Commerce channel |

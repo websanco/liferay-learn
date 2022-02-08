@@ -5,7 +5,7 @@ Below is a listing of the portlet IDs for the default portlets in Liferay DXP. Y
 **Collaboration**
 
 | Portlet | ID |
-| --- | --- |
+| :--- | :--- |
 | Blogs | `com_liferay_blogs_web_portlet_BlogsPortlet` |
 | Blogs Aggregator | `com_liferay_blogs_web_portlet_BlogsAgreggatorPortlet` |
 | Calendar | `com_liferay_calendar_web_portlet_CalendarPortlet` |
@@ -18,7 +18,7 @@ Below is a listing of the portlet IDs for the default portlets in Liferay DXP. Y
 **Community**
 
 | Portlet | ID |
-| --- | --- |
+| :--- | :--- |
 | My Sites | `com_liferay_site_my_sites_web_portlet_MySitesPortlet` |
 | Page Comments | `com_liferay_comment_page_comments_web_portlet_PageCommentsPortlet` |
 | Page Flags | `com_liferay_flags_web_portlet_PageFlagsPortlet` |
@@ -27,7 +27,7 @@ Below is a listing of the portlet IDs for the default portlets in Liferay DXP. Y
 **Content Management**
 
 | Portlet | ID |
-| --- | --- |
+| :--- | :--- |
 | Asset Publisher | `com_liferay_asset_publisher_web_portlet_AssetPublisherPortlet` |
 | Breadcrumb | `com_liferay_site_navigation_breadcrumb_web_portlet_SiteNavigationBreadcrumbPortlet` |
 | Categories Navigation | `com_liferay_asset_categories_navigation_web_portlet_AssetCategoriesNavigationPortlet` |
@@ -52,7 +52,7 @@ Below is a listing of the portlet IDs for the default portlets in Liferay DXP. Y
 **News**
 
 | Portlet | ID |
-| --- | --- |
+| :--- | :--- |
 | Alerts | `com_liferay_announcements_web_portlet_AlertsPortlet` |
 | Announcements | `com_liferay_announcements_web_portlet_AnnouncementsPortlet` |
 | Recent Content Portlet | `com_liferay_asset_publisher_web_portlet_RecentContentPortlet` |
@@ -60,14 +60,14 @@ Below is a listing of the portlet IDs for the default portlets in Liferay DXP. Y
 **Sample**
 
 | Portlet | ID |
-| --- | --- |
+| :--- | :--- |
 | Hello World | `com_liferay_hello_world_web_portlet_HelloWorldPortlet` |
 | IFrame | `com_liferay_iframe_web_portlet_IFramePortlet` |
 
 **Search**
 
 | Portlet | ID |
-| --- | --- |
+| :--- | :--- |
 | Category Facet | `com_liferay_portal_search_web_category_facet_portlet_CategoryFacetPortlet` |
 | Custom Facet | `com_liferay_portal_search_web_custom_facet_portlet_CustomFacetPortlet` |
 | Folder Facet | `com_liferay_portal_search_web_folder_facet_portlet_FolderFacetPortlet` |
@@ -85,7 +85,7 @@ Below is a listing of the portlet IDs for the default portlets in Liferay DXP. Y
 **Social**
 
 | Portlet | ID |
-| --- | --- |
+| :--- | :--- |
 | Activities | `com_liferay_social_activities_web_portlet_SocialActivitiesPortlet` |
 | Contacts Center | `com_liferay_contacts_web_portlet_ContactsCenterPortlet` |
 | Members | `com_liferay_social_networking_web_members_portlet_MembersPortlet` |
@@ -95,7 +95,7 @@ Below is a listing of the portlet IDs for the default portlets in Liferay DXP. Y
 **Tools**
 
 | Portlet | ID |
-| --- | --- |
+| :--- | :--- |
 | Language Selector | `com_liferay_site_navigation_language_web_portlet_SiteNavigationLanguagePortlet` |
 | Search | `com_liferay_portal_search_web_portlet_SearchPortlet` |
 | Sign In | `com_liferay_login_web_portlet_LoginPortlet` |
@@ -103,7 +103,7 @@ Below is a listing of the portlet IDs for the default portlets in Liferay DXP. Y
 **Wiki**
 
 | Portlet | ID |
-| --- | --- |
+| :--- | :--- |
 | Page Menu | `com_liferay_wiki_navigation_web_portlet_WikiNavigationPageMenuPortlet` |
 | Tree Menu | `com_liferay_wiki_navigation_web_portlet_WikiNavigationTreeMenuPortlet` |
 | Wiki | `com_liferay_wiki_web_portlet_WikiPortlet` |

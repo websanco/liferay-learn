@@ -24,7 +24,7 @@ You can configure other methods of authenticating users and/or applications:
 Users can be configured to log in using one of three authentication types:
 
 | Authentication Type | Description | Used by Default? |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | Screen Name | Determined by administrator or user at account creation | No |
 | Email Address | Determined by administrator or user at account creation  | Yes |
 | User ID | Automatically generated when the account is created | No |

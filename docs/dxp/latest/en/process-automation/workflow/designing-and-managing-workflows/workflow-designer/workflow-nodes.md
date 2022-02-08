@@ -9,7 +9,7 @@ Below are the different types of nodes and the possible actions associated with 
 ## Types of Nodes
 
 | Node | Description |
-| --- | --- |
+| :--- | :--- |
 | Task |_Task_ nodes indicate the workflow task and its assignee. |
 | Fork and Join | _Fork_ and _Join_ are paired nodes for splitting the review process for multiple reviewers in parallel, and then rejoining when reviews are complete. |
 | Join XOR| The _Join XOR_ node allows the workflow to proceed as long as the transition from one of the parallel reviewers is invoked. |

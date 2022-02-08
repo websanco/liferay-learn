@@ -7,7 +7,7 @@ Note that like Analytics Cloud, Liferay DXP can contain Segments. Liferay DXP se
 Here's a comparison of Segments in Liferay DXP and Analytics Cloud.
 
 | Liferay DXP Segments | Analytics Cloud Segments |
-| --- | --- |
+| :--- | :--- |
 | Based only on user data in DXP | Based on user data from multiple sources (e.g., DXP, Salesforce, CSV files, etc.) |
 | Created from session attribute and cookies | Created from user interests and historical behavior |
 | User identity comes from only one DXP site | User identity is resolved from multiple DXP sites |

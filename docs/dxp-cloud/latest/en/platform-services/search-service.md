@@ -28,7 +28,7 @@ The search service's `LCP.json` file contains this value by default: `"podManage
 Your environment's [service stack version](../reference/understanding-service-stack-versions.md) affects which folder you must add your configuration file to if it is not yet upgraded to version `4.x.x`:
 
 | **Service Stack Version** | **Configuration Folder** |
-| --- | --- |
+| :--- | :--- |
 | **3.x.x** | `lcp/search/config/{ENV}/` |
 | **4.x.x** | `search/configs/{ENV}/config/` |
 
@@ -46,7 +46,7 @@ You can use scripts for more extensive customizations. However, use caution when
 Your environment's [service stack version](../reference/understanding-service-stack-versions.md) affects which folder you must add your scripts to if it is not yet upgraded to version `4.x.x`:
 
 | **Service Stack Version** | **Scripts Folder** |
-| --- | --- |
+| :--- | :--- |
 | **3.x.x** | `lcp/search/script/{ENV}/` |
 | **4.x.x** | `search/configs/{ENV}/scripts/` |
 
@@ -57,7 +57,7 @@ To deploy a license to the search service, you must create the path `search/conf
 Your environment's [service stack version](../reference/understanding-service-stack-versions.md) affects which folder you must add your license files to if it is not yet upgraded to version `4.x.x`:
 
 | **Service Stack Version** | **License Folder** |
-| --- | --- |
+| :--- | :--- |
 | **3.x.x** | `lcp/search/license/{ENV}/` |
 | **4.x.x** | `search/configs/{ENV}/license/` |
 
@@ -67,7 +67,7 @@ All environment variables and other forms of configuration for Elastisearch are 
 You can set such configurations and environment variables in the `configs/{ENV}/config/` directory and `LCP.json`, respectively. Examples include:
 
 | Name | Value | Description |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | `ES_JAVA_OPTS` | `-Xms4g -Xmx4g` | Java settings for the ES instance |
 
 ## Additional Information

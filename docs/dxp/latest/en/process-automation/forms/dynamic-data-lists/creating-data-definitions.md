@@ -43,7 +43,7 @@ To create a data definition:
 The following field types are available when creating a Data Definition:
 
 | Field Type | Description |
-| --- | --- |
+| :--- | :--- |
 | Boolean | A check box |
 | Color | Specifies a color |
 | Date | Enter a date. A valid date format is required for the date field, but you don't have to enter a date manually. When you select the date field a mini-calendar pops up which you can use to select a date. |
@@ -65,7 +65,7 @@ The following field types are available when creating a Data Definition:
  The following properties are available to modify. Note that some of these properties are only available for specific field types:
 
 | Property | Description |
-| --- | --- |
+| :--- | :--- |
 | Type | The field’s type (e.g., text, radio, etc.). This setting can’t be edited, but a display template can reference it |
 | Field Label | The field’s display name |
 | Show Label | Whether the field label is shown |

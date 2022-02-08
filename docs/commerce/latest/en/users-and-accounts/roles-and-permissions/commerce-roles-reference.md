@@ -50,7 +50,7 @@ Account Administrators can modify their Account, invite or add users to it, and 
 The following Accounts permissions pertain to the Account Administrator's ability to modify accounts in a B2B setting, while the Open Carts permissions pertain to the administrator's ability to modify Channel orders regardless of the store type.
 
 | Permissions | Description |
-| --- | --- |
+| :--- | :--- |
 | Accounts > Account: Add Account Entry | Ability to add Account entries |
 | Accounts > Account Entry: Manage Users | Ability to manage Account users |
 | Accounts > Account Entry: Update | Ability to modify Account entries |
@@ -77,7 +77,7 @@ The following Accounts permissions pertain to the Account Administrator's abilit
 This role is automatically assigned to all users within an account and grants basic view permissions.
 
 | Permission | Description |
-| --- | --- |
+| :--- | :--- |
 | Accounts > Account Entry: View | Ability to view an Account |
 
 ### Buyer
@@ -87,7 +87,7 @@ This role is automatically assigned to all users within an account and grants ba
 Users assigned this role can view, create, and check out orders.
 
 | Permissions | Description |
-| --- | --- |
+| :--- | :--- |
 | Open Carts > Commerce Order: Add Order | Ability to add an Order to a buyer's Account |
 | Open Carts > Commerce Order: Checkout Open Orders | Ability to complete the checkout process for Orders |
 | Open Carts > Commerce Order: View Open Orders | Ability to view open Orders |
@@ -100,7 +100,7 @@ Users assigned this role can view, create, and check out orders.
 This Order Manager role grants users all the permissions of Buyers and allows them to also manage, delete, and approve orders in a specific Channel Site.
 
 | Permissions | Description |
-| --- | --- |
+| :--- | :--- |
 | Open Carts > Commerce Order: Add Order | Ability to add an Order to a buyer's Account |
 | Open Carts > Commerce Order: Approve Open Orders | Ability to approve Orders when workflow is enabled |
 | Open Carts > Commerce Order: Check Out Open Orders | Ability to complete the checkout process for Orders |
@@ -120,7 +120,7 @@ The following list includes common custom roles you may want to create for your 
 The Catalog Manager role grants permissions to access, create, edit, and manage Products within a specific Catalog. This role is useful in multiple Catalog scenarios, where different vendors or company teams manage different Products in separate Catalogs. Catalog Managers cannot manage inventory. For this responsibility, see [Inventory Manager](#inventory-manager)
 
 | Permissions | Description |
-| --- | --- |
+| :--- | :--- |
 | Catalogs: Access in Control Panel | Ability to access the Catalogs application in the Global Menu |
 | Catalogs: View | Ability to view the Catalogs application |
 | Currencies > Commerce Currencies: Manage Currencies | Ability to manage currencies |
@@ -143,7 +143,7 @@ If you'd like your Catalog Manager to manage Products within a Catalog without t
 The Discount Manager role grants permissions to create, update, and delete Discounts in Liferay Commerce. Since Commerce Discounts can target different parts of an order and use different eligibility rules, there are a lot of possible permission configurations for a Discount Manager. The following configuration grants access to all Discount options.
 
 | Permissions | Description |
-| --- | --- |
+| :--- | :--- |
 | Account Groups: View | Ability to view the Account Groups application |
 | Account Groups > Commerce Accounts: Manage All Accounts | Necessary to access the Account Groups application |
 | Account Groups > Commerce Accounts: View Commerce Account Groups | Ability to view existing Account Groups |
@@ -172,7 +172,7 @@ The Discount Manager role grants permissions to create, update, and delete Disco
 The Inventory Manager role allows users to view and manage inventory in all Warehouses. Users with the role can add incoming shipments, update inventory levels, transfer between Warehouses, and view the changelog.
 
 | Permissions | Description |
-| --- | --- |
+| :--- | :--- |
 | Inventory: Access in Control Panel | Ability to access the Inventory application in the Control Panel |
 | Inventory: View | Ability to view the Inventory application |
 | Warehouses > Commerce Inventories: Manage Inventory | Ability to access and modify Inventory entities linked to a Warehouse |
@@ -185,7 +185,7 @@ The Inventory Manager role allows users to view and manage inventory in all Ware
 The Order Manager role grants users the necessary permissions for managing orders across multiple Channels and is not limited to a single Site.
 
 | Permissions | Description |
-| --- | --- |
+| :--- | :--- |
 | Open Carts > Commerce Order: Add Order | Ability to add an Order to a buyer's Account |
 | Open Carts > Commerce Order: Approve Open Orders | Ability to approve Orders when workflow is enabled |
 | Open Carts > Commerce Order: Check Out Open Orders | Ability to complete the checkout process for Orders |
@@ -208,7 +208,7 @@ The Order Manager role grants users the necessary permissions for managing order
 The Shipment Manager role allows a user to process shipments. This includes the ability to add shipping details, shipping dates, add items to the shipment and update shipment status. In Commerce 3.0+ and Liferay 7.3+, users create shipments via the Orders application. If you only want the Shipment Manager to fill and process the shipment, then the following permissions are sufficient. Otherwise, you may want to add additional [Order Manager](#order-manager-regular-role) permissions.
 
 | Permissions | Description |
-| --- | --- |
+| :--- | :--- |
 | Open Carts > Commerce Order: View Orders | Ability to view Orders regardless of status |
 | Account Groups > Commerce Accounts: Manage All Accounts | Necessary to access the Account Groups application |
 | Warehouses > Commerce Inventories: Manage Inventory | Ability to access and modify Inventory entities linked to a Warehouse |
@@ -229,7 +229,7 @@ The Sales Agent is a regular role in Liferay Commerce and assignees are able to 
 ![View default Sales Agent permissions in the Define Permissions tab.](./commerce-roles-reference/images/06.png)
 
 | Permissions | Description |
-| --- | --- |
+| :--- | :--- |
 | Manage Organizations | Ability to add or remove organizations |
 | Manage Available Accounts | Ability to manage Accounts that the sales agent is a member of |
 

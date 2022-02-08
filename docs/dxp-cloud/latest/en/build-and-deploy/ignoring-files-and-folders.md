@@ -14,7 +14,7 @@ DXP Cloud allows subscribers to determine which files and folders should be igno
 The `.lcpignore` file uses globbing patterns to match against file names. (These are the same patterns used in a `.gitignore` file.) Administrators can construct such patterns using various symbols:
 
 | Pattern | Example matches | Explanation* |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | `**/service` | `service/file.txt`, or, `service/monday/foo.bar`, or `build/service/file.txt` | Prepending a pattern with a double asterisk matches folders anywhere in the repository. |
 | `**/service/file.txt` | `service/file.txt`; or `build/service/file.txt` but not `service/build/file.txt` | Using a double asterisk matches files based on their name and the name of their parent folder. |
 | `*.txt` | `file.txt`, `foo.txt`, `.txt`, or, `service/file.txt` | An asterisk is a wildcard that matches zero or more characters. |

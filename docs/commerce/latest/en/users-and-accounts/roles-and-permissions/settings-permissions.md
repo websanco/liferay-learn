@@ -25,7 +25,7 @@ Settings includes the following applications:
 All Settings applications have the following permissions:
 
 | Permission | Description |
-| --- | --- |
+| :--- | :--- |
 | Access in Control Panel | Ability to access the application in the Global Menu |
 | Configuration | Ability to view and set the application's configuration options |
 | Permissions | Ability to view and modify the application's permissions |

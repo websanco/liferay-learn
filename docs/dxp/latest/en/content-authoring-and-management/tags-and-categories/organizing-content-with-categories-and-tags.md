@@ -11,7 +11,7 @@ Tags are keywords for organizing your assets. Tags tell visitors of your website
 The following table summarizes the main differences between Categories and Tags:
 
 | Categories | Tags |
-| --- | --- |
+| :--- | :--- |
 | Managed by administrators | Managed by administrators and non-administrators |
 | Grouped in Vocabularies | Cannot be grouped |
 | Hierarchical categorization | Non-hierarchical categorization |

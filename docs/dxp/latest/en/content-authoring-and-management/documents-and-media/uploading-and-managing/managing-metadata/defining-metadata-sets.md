@@ -56,7 +56,7 @@ Once saved, the new Metadata Set can be accessed and selected when creating or e
 The following metadata fields are available:
 
 | Metadata Field Type | Description |
-| --- | --- |
+| :--- | :--- |
 | Boolean | Check the check box |
 | Color | Specify a color. |
 | Date | Enter a date. |

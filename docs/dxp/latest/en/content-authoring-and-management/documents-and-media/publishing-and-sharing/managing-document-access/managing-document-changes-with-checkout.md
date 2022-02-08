@@ -31,7 +31,7 @@ Follow these steps to access a file's version history:
 Each file version has an Actions menu (![Actions](../../../../images/icon-actions.png)) that you can use to perform the following actions on that file version:
 
 | Action | Description |
-| --- | --- |
+| :--- | :--- |
 | **Download** | Download the selected version of the file to your machine. |
 | **View** | View the file entry screen for the selected version of the file. |
 | **Revert** | Restores the selected file version as a new major file version. Note that this option isn't available for the newest file version. |

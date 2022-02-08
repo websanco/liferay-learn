@@ -37,7 +37,7 @@ Follow these steps:
 1. Use the information you received from the provider to fill out the form.
 
    | Field | Description |
-   | --- | --- |
+   | :--- | :--- |
    | **Provider Name** | This name appears in the Sign-In Portlet when users use OpenID Connect to log in. |
    | **OpenID Client ID** | Provide the OAuth 2.0 Client ID you received from your provider. |
    | **OpenID Connect Client Secret** | Provide the OAuth 2.0 Client Secret you received from your provider. |

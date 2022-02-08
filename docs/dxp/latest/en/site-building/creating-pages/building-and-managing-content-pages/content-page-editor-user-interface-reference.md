@@ -53,7 +53,7 @@ Click History (![Time](./../../../images/icon-time.png)) to view changes you've 
 The editing options available in the Content Page sidebar depend on the editing mode you choose.
 
 | Edit Mode | Description | Available Options |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | Page Design | You can design pages when you have permission to update the page and the page content. | <ul><li>[Selection](#selection)</li><li>[Contents](#contents)</li><li>[Comments](#comments)</li></ul> |
 | Content Editing | You can edit content when you have permission to update the page but not the page content. | All options in Page Design mode plus: <ul><li>[Fragments and Widgets](#fragments-and-widgets)</li><li>[Page Design Options](#page-design-options)</li></ul> |
 

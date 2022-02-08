@@ -5,7 +5,7 @@ The [Fragments Toolkit](../../developing-page-fragments/using-the-fragments-tool
 <!-- TODO: The description for `npm run preview` is probably too long, it's overrunning the column width into a new table cell when the site is built. Probably should consider adding an asterisk and adding the version specific info separately after the table. -->
 
 | Command | Description |
-| --- | --- |
+| :--- | :--- |
 | `npm run export` | Get collections and fragments from a running server |
 | `npm run import` | Send the collections and fragments from your current project to a running server. If your Fragment's configuration JSON (if available) is invalid, the import fails and provides an error message. |
 | `npm run import:watch` | Automatically import Collections and Fragments into Portal as they are created or modified |

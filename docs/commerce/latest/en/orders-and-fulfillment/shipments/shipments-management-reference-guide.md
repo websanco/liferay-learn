@@ -5,7 +5,7 @@ This guide documents all the features in _Shipments Management_ menu. To access 
 ![Shipments Management Overview page](./shipments-management-reference-guide/images/01.png)
 
 | Field | Description |
-| --- | --- |
+| :--- | :--- |
 | Shipment ID | The shipment ID is auto-generated and is distinct from the Order ID. |
 | Account | This is the account that placed the order. |
 | Channel | This is the channel (store site) where the order was placed. |
@@ -30,7 +30,7 @@ The _Products_ section tracks all the products to be included in this shipment.
 ![Products section](./shipments-management-reference-guide/images/02.png)
 
 | Field | Description |
-| --- | --- |
+| :--- | :--- |
 | SKU | This is the product SKU. |
 | Order ID | This is the Order ID associated with this shipment. You can fulfill multiple orders in the same shipment as long as these are all from the same account.  |
 | Warehouse | This is the warehouse where the order will be drawn from. |
@@ -66,7 +66,7 @@ The _Shipped_ tab is where users can view the current status of the shipment. Us
 ![Shipped](./shipments-management-reference-guide/images/07.png)
 
 | Field | Description |
-| --- | --- |
+| :--- | :--- |
 | SKU | This is the product SKU |
 | Order ID | This is the Order ID associated with this shipment. |
 | Shipped | This is the quantity included in the shipment. |

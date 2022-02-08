@@ -34,7 +34,7 @@ All configurations within the `liferay` service now belong in an environment-spe
 The following table summarizes the new organization of your `liferay` service configurations:
 
 | **Files** | **Location in 3.x** | **Location in 4.x** |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | Files for deployment | lcp/liferay/deploy/{ENV}/ | liferay/configs/{ENV}/deploy/ |
 | OSGi configuration files (.cfg or .config) | lcp/liferay/config/{ENV}/ | liferay/configs/{ENV}/osgi/configs/ |
 | Other configuration overrides | lcp/liferay/config/{ENV}/ | liferay/configs/{ENV}/ |
@@ -57,7 +57,7 @@ Scripts placed in `liferay/configs/{ENV}/scripts/` will now be run as the `lifer
 All configurations within the `search` service now belong in an environment-specific `configs` directory. See the following table for the new organization of your `search` service configuration:
 
 | **Files** | **Location in 3.x** | **Location in 4.x** |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | Elasticsearch configurations | lcp/search/config/{ENV}/ | search/configs/{ENV}/config/ |
 | Custom shell scripts | lcp/search/script/{ENV}/ | search/configs/{ENV}/scripts/ |
 | Elasticsearch license (.json) files | lcp/search/license/{ENV}/ | search/configs/{ENV}/license/ |
@@ -102,7 +102,7 @@ All configurations within the `webserver` service now belong in an environment-s
 See the following table for the new organization of your `webserver` service configuration:
 
 | **File** | **Location in 3.x** | **Location in 4.x** |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | Webserver configurations | lcp/webserver/config/{ENV}/ | webserver/configs/{ENV}/conf.d/ |
 | Custom scripts | lcp/webserver/script/{ENV}/ | webserver/configs/{ENV}/scripts/ |
 | Static content | lcp/webserver/deploy/{ENV}/ | webserver/configs/{ENV}/public/ |
@@ -140,7 +140,7 @@ location /static/ {
 All configurations within the `backup` service now belong in an environment-specific `configs` directory. This mainly pertains to custom SQL scripts:
 
 | **File** | **Location in 3.x** | **Location in 4.x** |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | Custom SQL scripts | lcp/backup/script/{ENV}/ | backup/configs/{ENV}/scripts/ |
 
 ## Known Limitations

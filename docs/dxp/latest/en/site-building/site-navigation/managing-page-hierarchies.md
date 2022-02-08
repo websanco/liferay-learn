@@ -48,7 +48,7 @@ As noted above, private pages work just like public pages, except they can be vi
 Users can access page options by clicking the _Options_ (![Option](../../images/icon-options.png)) icon.
 
 | Function | Description |
-| --- | --- |
+| :--- | :--- |
 | **View** | View the selected page on the Site. |
 | **Configure** | View the Page Configuration screen. |
 | **Copy Page** | Create a new page in the current Site that duplicates the selected page. |

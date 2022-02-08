@@ -18,7 +18,7 @@ You'll find the settings in Configuration &rarr; System Settings &rarr; Security
 ### Portal CORS Configuration Reference
 
 | Configuration | Description |
-| --- | --- |
+| :--- | :--- |
 | **Enabled** | Check this box to enable the entry. |
 | **Name** | Give the configuration entry a name. |
 | **URL Pattern** | Use the Plus button to add as many patterns as you need. Define patterns that match URLs to the resources you want to share. For example, if you have many attachments in the Knowledge Base application, you could define this pattern: <br> `/knowledge_base/*` <br> This would define resources stored in the Knowledge Base as applicable to the policy you set in the response header below. |
@@ -38,7 +38,7 @@ You'll find the settings in Configuration &rarr; System Settings &rarr; Security
 ### JAX-RS CORS Configuration Reference
 
 | Configuration | Description |
-| --- | --- |
+| :--- | :--- |
 | **Dynamic Web Context OSGi Filter** | Define an LDAP-style [filter](https://osgi.org/specification/osgi.cmpn/7.0.0/service.http.whiteboard.html) to define which JAX-RS whiteboard applications the CORS headers in this entry apply to. This is the default filter: <br> `(&(!(liferay.cors=false))(osgi.jaxrs.name=*))` <br> It applies CORS headers to all deployed JAX-RS whiteboard applications without a `liferay.cors=false` property. This helps during development, but in production you should use the narrowest configuration possible. |
 | **URL Pattern** | Use the Plus button to add as many patterns as you need. Define patterns that match URLs to the web services you want to access. |
 | **CORS Response Headers** | Use the Plus button to add as many headers as you need. Define policies for any of the [CORS headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers#CORS) here. |

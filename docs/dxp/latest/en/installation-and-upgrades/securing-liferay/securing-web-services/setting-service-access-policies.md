@@ -13,7 +13,7 @@ To view and manage Service Access Policies, go to *Control Panel* &rarr; *Config
 There are 12 Service Access Policies enabled by default. Five of these have to do with the system:
 
 | Service Access Policy | Description | Enabled by Default |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | **ASSET_ENTRY_DEFAULT** | Allows the view counter for assets to be updated when an asset is retrieved. | &#10004; |
 | **AUTHORIZED_OAUTH2_SAP** | Allows all REST requests authorized by OAuth 2. | &#10004; |
 | **CALENDAR_DEFAULT** | Makes it possible to search public events in the calendar. | &#10004; |
@@ -27,7 +27,7 @@ There are 12 Service Access Policies enabled by default. Five of these have to d
 The other seven policies have to do with OAuth and JSON web services:
 
 | Service Access Policy | Description | Enabled by Default |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | **OAUTH2_analytics.read/write** | Integrates with [Liferay Analytics Cloud](https://www.liferay.com/products/analytics-cloud), allowing it access to JSON web services. | &#10004; |
 | **OAUTH2_everything/read/documents/userprofile/write** | The Everything policies grant access to all the JSON web services for various reasons. Everything is everything: all JSON web services (matches `*`). The others match method signatures appropriate to their description. For example, OAUTH2_everything.read matches all methods starting with `fetch`, `get`, `has`, `is`, or `search`. | &#10004; |
 

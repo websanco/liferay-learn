@@ -31,14 +31,14 @@ You can configure other options in the Web Content Display widget. To access the
 ### Template
 
 | Option | Description |
-| --- | --- |
+| :--- | :--- |
 | Use default template | Uses the default template to display the widget. You can see the default template's name in use here. |
 | Use a specified template | Select this option to display the widget using a different template. You must select the new template. |
 
 ### User Tools
 
 | Option | Description |
-| --- | --- |
+| :--- | :--- |
 | Translations | Shows additional translations for your content. If you have your content translated into different languages, use this option to show the desired translation. |
 | Print | Provides a print dialog with a print-friendly version of the content. |
 | Download as PDF, DOC, ODT, TXT | Downloads the selected widget content in the format of your choice. This option is only available after configuring the [OpenOffice or LibreOffice integration](#integrating-open-office-or-libre-office-with-the-web-content-display). |
@@ -46,7 +46,7 @@ You can configure other options in the Web Content Display widget. To access the
 ### Content Metadata
 
 | Option | Description |
-| --- | --- |
+| :--- | :--- |
 | Related Assets | Set this option to show links to other related content. You configure the related content in the *Related Assets* property for your content (see the image below for an example on a Basic Web Content asset.) |
 | Ratings | Shows a clickable option where users can rate the content in different ways (likes, stars, thumbs up). To configure this rating option for different content types, see [Configuring Content Rating Type](../../../site-building/site-settings/site-content-configurations/configuring-content-rating-type.md). |
 | Comments | Allows users to enter comments for the Web Content Display widget's content. By default, guests can't leave comments. See [Enabling Comments for Guest](#enabling-comments-for-guests) to change the default option. |

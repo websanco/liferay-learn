@@ -21,7 +21,7 @@ To access the Settings menu, choose the desired form (for example, _Guest Survey
 ![The Settings menu contains these options.](./forms-configuration-reference/images/02.png)
 
 | Section | Field | Description |
-| ------- | --- | --- |
+| ------- | :--- | :--- |
 | General | Require User Authentication | Requires sign in before submitting the form |
 | General | CAPTCHA | Requires answering CAPTCHA questions when submitting the form |
 | General | Save Answers Automatically | Saves answers to the form automatically |
@@ -38,7 +38,7 @@ Here you can configure the Forms app to send a notification email each time a fo
 ![You can add notifications to a form.](./forms-configuration-reference/images/03.png)
 
 | Field | Description |
-| --- | --- |
+| :--- | :--- |
 | From Name | The sender's name; this could be the Site name, the form name, or anything else informative to the recipient. |
 | From Address | The sender's email address; You can use `noreply@example.com` to prevent recipients from replying. |
 | To Address | The recipient's email address (e.g., `test@example.com`) |
@@ -93,7 +93,7 @@ com.liferay.dynamic.data.mapping.form.web.internal.configuration.DDMFormWebConfi
 Place the file in `Liferay Home/osgi/configs`. See [Using Configuration Files](../../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md) for more information.
 
 | Field | Description |
-| --- | --- |
+| :--- | :--- |
 | Autosave Interval (`autosaveInterval`)| Sets the value in minutes to auto-save a form; setting 0 disables auto-save. |
 | CSV Export (`csvExport`) | Determines whether administrators can download Form Entries as CSVs. |
 | Default Display View (`defaultDisplayView`) | Sets how the Forms are displayed in the search container. |

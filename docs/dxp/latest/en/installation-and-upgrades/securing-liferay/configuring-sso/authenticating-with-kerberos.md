@@ -134,7 +134,7 @@ The last line is commented out based on user preference. If you want the domain 
 1. Connect Liferay DXP to AD over LDAP by going to Configuration &rarr; Instance Settings &rarr; Authentication &rarr; LDAP and adding an LDAP server. Provide the information appropriate to your installation:
 
    | Configuration | Description |
-   | --- | --- |
+   | :--- | :--- |
    | **Base Provider URL** | Your AD server on the proper port. |
    | **Base DN** | Your domain configuration. The example above might be `DC=INTDOMAIN.DC=LOCAL`. |
    | **Principal/Credentials** | Supply the credentials for the user exported to the keytab file. |

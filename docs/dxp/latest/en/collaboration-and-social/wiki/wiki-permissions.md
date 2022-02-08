@@ -14,7 +14,7 @@ The available _wiki node_ permissions are:
 ![Viewing Wiki Node Permissions](./wiki-permissions/images/05.png)
 
 | Permission | Description |
-| --- | --- |
+| :--- | :--- |
 | Add Page | Grants users the ability to add a wiki page to the node |
 | Import | Grants users the ability to import wiki pages as a `.lar` file; see [Exporting and Importing a Wiki](./exporting-and-importing-a-wiki.md) |
 | Delete | Grants users the ability to delete a _Wiki Node_ |
@@ -34,7 +34,7 @@ To view a wiki page's permissions:
 ![Viewing Wiki Page Permissions](./wiki-permissions/images/04.png)
 
 | Permission | Description |
-| --- | --- |
+| :--- | :--- |
 | Update Discussion| Grants users the ability to update a comment to a _Wiki Page_ |
 | Delete | Grants users the ability to delete a _Wiki Page_ |
 | Permissions | Grants users the ability to view a page's permissions |
@@ -52,7 +52,7 @@ To view a wiki page's permissions:
 ![Viewing Wiki Widget Permissions](./wiki-permissions/images/03.png)
 
 | Permission | Description |
-| --- | --- |
+| :--- | :--- |
 | Add Display Template | Grants the ability to add a display template to the wiki page |
 | Permissions | Grants users the ability to view a _Wiki_ widget's permissions |
 | Preferences | Grants users the ability to view a _Wiki_ widget's preferences |
@@ -74,6 +74,6 @@ The available permissions are:
 ![Wikis Options Permissions](./wiki-permissions/images/02.png)
 
 | Permission | Description |
-| --- | --- |
+| :--- | :--- |
 | Permissions | Grants users the ability to view a page's permissions |
 | Add Node| Grants users the ability to add a wiki node |

@@ -10,7 +10,7 @@ This article documents configuration settings available in the _Message Boards_ 
 ![General Tab](./message-boards-configuration-reference/images/01.png)
 
 | Name | Description |
-| --- | --- |
+| :--- | :--- |
 | Allow Anonymous Posting | Allows guest (non-authenticated) users to post threads. |
 | Subscribe by Default | Subscribe users by default to threads they participate in. |
 | Message Format | Dropdown menu to select BBCode or HTML as the editor |
@@ -24,7 +24,7 @@ This article documents configuration settings available in the _Message Boards_ 
 ![Email From Tab](./message-boards-configuration-reference/images/02.png)
 
 | Name | Description |
-| --- | --- |
+| :--- | :--- |
 | Name | Name of the forum owner or moderator |
 | Address | Email address of forum owner or moderator |
 | HTML Format | Checkbox to select the email's format |
@@ -58,7 +58,7 @@ Expand the _Definition of Terms_ menu to learn more about how to create an autom
 ![Message Updated Email](./message-boards-configuration-reference/images/05.png)
 
 | Name | Description |
-| --- | --- |
+| :--- | :--- |
 | Default Language | The instance's default language is set to English and cannot be modified here. |
 | Localized Language | Dropdown menu for all supported languages; allows administrators to input different ranks in different languages. |
 | Name | Name of the priority level |
@@ -72,7 +72,7 @@ Expand the _Definition of Terms_ menu to learn more about how to create an autom
 Message Boards users can configured to have a visible rank based on the number of posts they contribute.
 
 | Name | Description |
-| --- | --- |
+| :--- | :--- |
 | Default Language | The instance's default language is set to English and cannot be modified here. |
 | Localized Language | Dropdown menu for all supported languages; allows administrators to input different ranks in different languages. |
 | User Ranks Text Area | Text area where the user-defined ranks are entered |
@@ -82,7 +82,7 @@ Message Boards users can configured to have a visible rank based on the number o
 ![RSS](./message-boards-configuration-reference/images/07.png)
 
 | Name | Description |
-| --- | --- |
+| :--- | :--- |
 | Enable RSS Subscription | Toggle to enable or disable RSS subscriptions |
 | Maximum Items to Display | Dropdown menu to select maximum number of threads in the RSS feed |
 | Display Style | Dropdown menu to select how the threads are displayed as an abstract, full content, or title only |

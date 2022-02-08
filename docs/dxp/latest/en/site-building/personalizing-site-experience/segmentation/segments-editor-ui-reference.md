@@ -52,7 +52,7 @@ In between each criteria and each category, you can define an "and" or "or" conj
 User Properties are user attributes you want to capture. This is made up of user metadata as defined in their accounts, but also contains certain group memberships (like Roles and User Groups) as well as information like the date the user profile was last modified. These User properties are available:
 
 | Property | Description |
-| --- | --- |
+| :--- | :--- |
 | Date Modified | Provides a date picker and a relationship selector to select the date that user information was last changed |
 | Email Address | Provides a text box to enter the email provided in the user's profile |
 | First Name | Enter the first name provided in the user's profile. |
@@ -69,7 +69,7 @@ User Properties are user attributes you want to capture. This is made up of user
 Since Liferay DXP 7.2 SP2+, these properties are also available for Users:
 
 | Property | Description |
-| --- | --- |
+| :--- | :--- |
 | Date of Birth | Provides a date picker and a relationship selector to select the date of birth of the User |
 | Tag | Enter the tags that apply to the Users. |
 
@@ -78,7 +78,7 @@ Since Liferay DXP 7.2 SP2+, these properties are also available for Users:
 Organization Properties is a selectable list of Organizations to include in your Segment. They contain similar criteria as the User selection, like *Name* and *Date Modified*. These Organization properties are available:
 
 | Property | Description |
-| --- | --- |
+| :--- | :--- |
 | Date Modified | Enter the date that the organization information was last modified. |
 | Name | Enter the name of the Organization. |
 | Hierarchy Path | Enter the name of an ancestor Organization. |
@@ -89,7 +89,7 @@ Organization Properties is a selectable list of Organizations to include in your
 Since Liferay DXP 7.2 SP2+, these properties are also available for Organizations:
 
 | Property | Description |
-| --- | --- |
+| :--- | :--- |
 | Country | Select a specific country that the Organization is connected to. |
 | Region | Select a specific region that the Organization is connected to. |
 | Tag | Enter the tags that apply to the Organization. |
@@ -99,7 +99,7 @@ Since Liferay DXP 7.2 SP2+, these properties are also available for Organization
 Session Properties contains criteria based on the user's activity, browser, and system information. You can use this to target the user's device or OS, or for activity-based criteria like if a user entered the website through a specific campaign driven landing page. These Session properties are available:
 
 | Property | Description |
-| --- | --- |
+| :--- | :--- |
 | Browser | Enter a property from the browser. |
 | Cookies | Enter the name of a browser cookie. |
 | Device Brand | Enter the brand name of the device being used. |
@@ -117,7 +117,7 @@ Session Properties contains criteria based on the user's activity, browser, and 
 Since Liferay DXP 7.2 SP2+, these properties are also available for Organizations:
 
 | Property | Description |
-| --- | --- |
+| :--- | :--- |
 | Hostname | Enter a virtual host name. |
 | Request Parameters | Enter the name and value of a request parameter. |
 

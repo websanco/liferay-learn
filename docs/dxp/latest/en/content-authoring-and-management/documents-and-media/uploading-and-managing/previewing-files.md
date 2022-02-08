@@ -19,7 +19,7 @@ You can also manage a file from its preview. The bar above the preview contains 
 ![Here are the options on the Actions menu.](./previewing-files/images/02.png)
 
 | Action | Description |
-| --- | --- |
+| :--- | :--- |
 | **Download** | Download the file into the local machine. |
 | **Share** | Share the file with other collaborators. |
 | **Edit** | This option is only for editable documents (that is, `doc`, `docx`, `txt`). Modify the file's name, description, document type, categorization, and [related assets](https://help.liferay.com/hc/articles/360028820532-Defining-Content-Relationships). You can even upload a new file to replace it. Note that modifying the file increments its version. |
@@ -40,7 +40,7 @@ As mentioned above, clicking the *Info* icon (![Info](../../../images/icon-infor
 There are two tabs in the info panel: Details, and Versions. Details is selected by default and shows the following:
 
 | Detail | Description |
-| --- | --- |
+| :--- | :--- |
 | **Owner** | The file's owner. |
 | **Download** | A button to download the file. |
 | **Latest Version URL** | A URL to access the newest version of the file. |
@@ -64,7 +64,7 @@ Documents can be organized in [folders](./creating-folders.md). Clicking the top
 ![Here are the Folder Options.](./previewing-files/images/04.png)
 
 | Action | Description |
-| --- | --- |
+| :--- | :--- |
 | Download | Download the file onto the local machine. |
 | Access from Desktop | Generates the [WebDAV URL](../publishing-and-sharing/accessing-documents-with-webdav.md). |
 | Edit | Edit the Folder's name and description. |

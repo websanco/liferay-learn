@@ -7,7 +7,7 @@ The deployment strategy of a service determines how new versions will be initial
 Users expect applications to be available all the time and developers are expected to deploy new versions of them several times a day. In DXP Cloud this is done with the `RollingUpdate` strategy. Rolling updates allow deployments to take place with zero downtime by incrementally updating instances with new ones.
 
 | Deployment Strategy | Pros | Cons |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | `RollingUpdate` | New versions are released incrementally, maximizing uptime | Full roll outs can take additional time relative to number of instances |
 | `Recreate` | Application state entirely renewed at once | Downtime length that occurs is dependent on shutdown and boot up duration for the application |
 

@@ -36,7 +36,7 @@ Users can choose _OR_ or _AND_ to define the relationship between multiple condi
 When building a rule, you must specify a field (for example, _Are you over 18?_), a condition (_Is equal to_), and the Value (_Yes/ No_) to be compared against. If the condition's _if statement_ is _true_, the action is triggered. If it is _false_, nothing happens.
 
 | Condition | Description |
-| --- | --- |
+| :--- | :--- |
 | Is equal to | Checks whether the inputted value is equal to the condition. Example: if a language matches Spanish, then trigger the action.  |
 | Is not equal to | Checks whether the inputted value is not equal to the condition. |
 | Contains | Checks whether the inputted value contains the value. |
@@ -52,7 +52,7 @@ The following Actions are available:
 ![The following Actions are available.](./form-rules-overview/images/03.png)
 
 | Action | Description |
-| --- | --- |
+| :--- | :--- |
 | [Show](./using-the-show-hide-rule.md) | Sets the visibility of a form field based on a predefined condition. |
 | **Enable** | Use a predefined condition to enable or disable a field. |
 | **Require** | Use a predefined condition to make a field required. |

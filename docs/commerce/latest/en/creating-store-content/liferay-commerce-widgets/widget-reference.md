@@ -5,7 +5,7 @@ Widgets are building blocks you can use to add content and dynamic functionality
 The following article documents all the Liferay Commerce Widgets and their functions.
 
 | Type | Description |
-| --- | --- |
+| :--- | :--- |
 | Accounts | This widget provides in Site access to the Accounts application where users can view their Account information |
 | Cart | This widget lists all items selected for purchase. Users can view Product details (i.e., description, price, discount, quantity, and total), as well as update Product quantities or remove Products. |
 | Cart Summary | By default, this widget lists the current cart subtotal, taxes, and total along with a Checkout button. However, you can use the Basic template to simply display the cart total or create your own template using FTL. |

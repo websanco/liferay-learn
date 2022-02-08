@@ -15,7 +15,7 @@ Click _Filter and Order_ to sort entries using these criteria:
 ![Filter and Order menu](./managing-blog-entries/images/02.png)
 
 | Filter | Description |
-| --- | --- |
+| :--- | :--- |
 | All | Shows all of the site's entries.|
 | Mine | Shows only the current user's entries. |
 | Display Date | Orders the entries by display date. |
@@ -25,7 +25,7 @@ Click _Filter and Order_ to sort entries using these criteria:
 The _View Types_ button is to the left of the _Add_ button. Users can choose how to display the blog entries in the Blogs app. The_ View Types_ button's icon depends on the selected view type:
 
 | View Type | Description |
-| --- | --- |
+| :--- | :--- |
 | Cards | Shows a card-like rendering of the blog entry, with the author's profile picture. Each card also contains the entry's timestamp, title, [workflow](../../process-automation/workflow/introduction-to-workflow.md)) status (e.g., Approved, Draft, etc.), and an Actions menu. |
 | List | Shows the same information as the Cards view type, in a list with the author's profile picture instead of the blog entry's cover image. |
 | Table | Shows the same information as the other view types, in a list with no file renderings. |

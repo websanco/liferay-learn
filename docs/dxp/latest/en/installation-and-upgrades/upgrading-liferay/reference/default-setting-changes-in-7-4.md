@@ -7,7 +7,7 @@ The 7.4 [`portal.properties`](https://github.com/liferay/liferay-portal/blob/7.4
 Here are the changes from 7.3 to 7.4:
 
 | **Portal Property** | **7.3 Default** | **7.4 Default** |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | `access.control.sanitize.security.exception` | Not applicable | `true` |
 | `auth.login.prompt.enabled` | `true` | `false` |
 | `auto.login.hooks` | See [setting](https://github.com/liferay/liferay-portal/blob/7.4.x/portal-impl/src/portal.properties) | See [setting](https://github.com/liferay/liferay-portal/blob/7.4.x/portal-impl/src/portal.properties) |

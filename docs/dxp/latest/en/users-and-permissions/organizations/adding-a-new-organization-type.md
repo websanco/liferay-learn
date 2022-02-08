@@ -12,7 +12,7 @@ Check out the configuration options that configure the default *Organization* ty
 To add another Organization type called *League*, enter these options into the configuration form:
 
 | Org Name | Country Enabled | Country Required | Rootable | Children Types |
-| --- | --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- | :--- |
 | League | True | False | True | Division |
 | Division | True | False | False | Team |
 | Team | True | False | False | [blank: leaf node] |

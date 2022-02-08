@@ -52,7 +52,7 @@ Any workflow task can be used as a start or end parameter for the SLA.
 When the item makes it to the event defined here, the SLA timer begins counting. Choose between these options:
 
 | Start Event | Description |
-| --- | --- |
+| :--- | :--- |
 | The Start Node | The SLA timer starts when entering the _created_ node. |
 | Entry into a Task | The SLA clock begins when the workflow transitions to the task.
 | Exit from a Task | The SLA clock begins when the workflow transitions out of the task. For example, the SLA timer starts when leaving the _Review_ Task. |
@@ -60,7 +60,7 @@ When the item makes it to the event defined here, the SLA timer begins counting.
 If the item makes it to the Stop event before the defined SLA duration (the deadline), it's _On Time_ according to the SLA. If it fails to make it to the Stop event in the specified duration, it's _Overdue_. When defining the tasks to act as the SLA's Stop Events, choose between these options:
 
 | Stop Event | Description |
-| --- | --- |
+| :--- | :--- |
 | Entry into a Task | The SLA clock stops when the workflow transitions to the task (for example, an _Update_ Task). |
 | Exit from a Task | The SLA clock stops when the workflow transitions out of the task (for example, a _Review_ Task). |
 | The end node | The SLA timer stops when entering the _approved_ node. |
@@ -70,7 +70,7 @@ The Pause field defines an event in the workflow when time should stop counting.
 ### Durations
 
 | Unit of Time | Instruction |
-| --- | --- |
+| :--- | :--- |
 | Days | Enter a whole number for number of days. If there are partial days such as 36 hours, use in combination with the _Hours_ field; express it 1 Day and 12 Hours. |
 | Hours | Enter the number of hours and minutes. The values in the _Hours_ box must not exceed _23:59_; if the duration exceeds one day, use in combination with the _Days_ field. |
 

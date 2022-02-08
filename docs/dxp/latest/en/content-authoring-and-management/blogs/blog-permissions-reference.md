@@ -9,7 +9,7 @@ Navigate to the _Blogs_ widget. Next to a blog entry, click _Actions_ (![Actions
 ![Blog Entry Permissions](./blog-permissions-reference/images/01.png)
 
 | Permission | Description |
-| --- | --- |
+| :--- | :--- |
 | Update Discussion | Edit another user's comment on the blog entry. |
 | Delete | Move the blog entry to the [Recycle Bin](../recycle-bin/recycle-bin-overview.md). |
 | Permissions | View and modify the blog entry's permissions. |

@@ -41,18 +41,18 @@ If you haven't set up a mail server, set a password manually for the User.
 The following options are available in the Edit User page:
 
 | General Tab | Description |
-| --- | --- |
+| :--- | :--- |
 | Information | Edit or change the user's personal information. |
 | Accounts | View or modify the User's associated accounts. |
 | Password | Add or change the user's password. |
 
 | Contact Tab | Description |
-| --- | --- |
+| :--- | :--- |
 | Addresses | Add or change the user's addresses. |
 | Contact Information | Add or change the user's contact information |
 
 | Preferences Tab | Description |
-| --- | --- |
+| :--- | :--- |
 | Alert and Announcements Delivery | Change the user's notification settings. |
 | Display Settings | Change the user's time zone and greeting settings. |
 

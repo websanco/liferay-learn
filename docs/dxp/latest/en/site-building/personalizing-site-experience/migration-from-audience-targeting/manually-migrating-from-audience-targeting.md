@@ -25,7 +25,7 @@ If you need to re-implement a rule entirely, follow the information in [Introduc
 With Audience Targeting, you could display personalized content using the User Segment Content Display or an Asset Publisher personalization. The method you use to personalize content with Audience Targeting determines the way to personalize this content in Liferay Segmentation.
 
 | Audience Targeting Method | Liferay Segmentation Method |
-| --- | --- |
+| :--- | :--- |
 | User Segment Content Display | [Manual Content Sets or Collections](../../../content-authoring-and-management/collections-and-collection-pages/creating-collections.md#creating-a-manual-collection) |
 | Asset Publisher Personalization | [Dynamic Content Sets](../../../content-authoring-and-management/collections-and-collection-pages/creating-collections.md#creating-a-dynamic-collection) |
 

@@ -11,7 +11,7 @@ To style or format text in the _Content_ area, select the text. A toolbar appear
 ![Formatting elements](./blog-entry-editor-reference/images/01.png)
 
 | Function | Description |
-| --- | --- |
+| :--- | :--- |
 | Text Style | Choose the text’s style. Normal is typical body text, but you can also select from different heading styles, alert or error message styles, code style, and more. |
 | Typeface | Select bold, italic, or underline. |
 | List Style | Select a numbered or bulleted list. |
@@ -23,7 +23,7 @@ When the cursor hovers in the entry's content area, the Add icon (+) appears. Cl
 ![Add additional elements](./blog-entry-editor-reference/images/02.png)
 
 | Function | Description |
-| --- | --- |
+| :--- | :--- |
 | Image | Upload an image to the blog entry. |
 | Video | Insert a video link. |
 | Table | Insert a table. |
@@ -36,7 +36,7 @@ To switch to code view, click the the Source icon (</>) that appears when you pl
 ![Using the Code View](./blog-entry-editor-reference/images/03.png)
 
 | Function | Description |
-| --- | --- |
+| :--- | :--- |
 | Fullscreen | Work in a dual-pane view that shows your HTML code on the left and a preview pane on the right. |
 | Dark/Light Theme | Switch the code editor between dark and light theme. |
 | Text View | Switch back to text view. |

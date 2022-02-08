@@ -11,7 +11,7 @@ Click *Add* (![Add Button](../../../images/icon-add.png)) to create a Dispatch T
 Once created, the following fields are displayed for each Dispatch Task:
 
 | Field | Description |
-| --- | --- |
+| :--- | :--- |
 | Name | The name of the Dispatch Task |
 | Task Executor Type | The Dispatch Task Executor template used to create the Dispatch Task |
 | System | Indicates whether it is a system task |
@@ -27,7 +27,7 @@ From here, click a Dispatch task to access the following details and configurati
 ![View and edit general details for Dispatch Tasks](./dispatch-ui-reference/images/02.png)
 
 | Field | Description |
-| --- | --- |
+| :--- | :--- |
 | Name | View/Edit the Dispatch Task's name |
 | Settings Editor | Code editor for defining properties that are injected into the Dispatch Task at runtime |
 
@@ -45,7 +45,7 @@ View and remove *Logs* for the Dispatch Task.
 Includes *Start Date*, *Runtime*, *Trigger*, and *Status*.
 
 | Field | Description |
-| --- | --- |
+| :--- | :--- |
 | Start Date | Timestamp for when the execution started |
 | Runtime | The duration of the execution |
 | Trigger | The name of the Dispatch Task that was executed |
@@ -60,7 +60,7 @@ Click on a Log entry to also see any errors and output from the execution.
 Configure the Dispatch Trigger to schedule Dispatch Task executions.
 
 | Field | Description |
-| --- | --- |
+| :--- | :--- |
 | Active | Determines whether the configured schedule for execution is active or inactive |
 | Task Execution Cluster Mode | Determines whether the Dispatch Tasks is executed on a *Single Node* or *All Nodes* in a clustered environment |
 | Overlap Allowed | Determines whether concurrent execution of Dispatch Tasks is allowed |
@@ -76,7 +76,7 @@ Configure the Dispatch Trigger to schedule Dispatch Task executions.
 This page compiles a list of all jobs scheduled across the Liferay instance using the `MessageListener` interface.
 
 | Field | Description |
-| --- | --- |
+| :--- | :--- |
 | Name | The full name of the scheduled job |
 | System | Indicates whether it is a system job |
 | Next Run Date | The next time the job is scheduled to run |

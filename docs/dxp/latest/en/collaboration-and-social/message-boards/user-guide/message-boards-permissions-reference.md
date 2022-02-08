@@ -15,7 +15,7 @@ The _Message Boards_ permissions screen is for granting and revoking access to _
 The permissions enable users who have a particular Role to perform the following actions:
 
 | Permission Name | Description |
-| --- | --- |
+| :--- | :--- |
 | **Permissions:** | Grants the ability to view and modify permissions. |
 | **Add File:** | Grants the ability to attach a file to a message. |
 | **Ban User:** |Grants the ability to forbid a user from participating in the message board. |
@@ -35,7 +35,7 @@ After adding a Message Boards widget to a page, administrators can access that w
 ![Assigning Widget Permissions](./message-boards-permissions-reference/images/04.png)
 
 | Permission Name | Description |
-| --- | --- |
+| :--- | :--- |
 | **Permissions:** | Grants the ability to view and modify the widget's permissions. |
 | **Preferences:** | Grants the ability to view and modify widget's preferences. |
 | **Configuration:** | Grants the ability to view and modify the widget's configurations. |
@@ -49,7 +49,7 @@ This set of permissions determine what changes Guests and Site Members can make 
 ![General Category Permissions](./message-boards-permissions-reference/images/05.png)
 
 | Permission Name | Description |
-| --- | --- |
+| :--- | :--- |
 | **Delete:** | Remove the category. |
 | **Permissions:** | View and modify permissions. |
 | **Add File:** | Attach a file to any of your messages. |
@@ -68,7 +68,7 @@ This set of permissions determine what changes Guests and Site Members can make 
  This set of permissions determine what changes users can make to a Thread.
 
 | Permission Name | Description |
-| --- | --- |
+| :--- | :--- |
 | **Delete:** | Remove the thread. |
 | **Permissions:** | Grant/revoke thread permissions. |
 | **Update:** | Edit the thread. |

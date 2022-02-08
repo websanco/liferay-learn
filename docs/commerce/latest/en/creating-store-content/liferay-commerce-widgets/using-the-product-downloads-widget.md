@@ -17,7 +17,7 @@ Follow the steps below to use the Product Downloads widget.
 This automatically activates the widget. Once a Virtual Product is purchased, the asset appears here, based on its *Activation Status*:
 
 | Configuration | Effect on Visibility |
-| --- | --- |
+| :--- | :--- |
 | Activation Status | Determines the order stage at which the asset becomes available to download (i.e., Completed, Pending, or Processing). |
 | Duration | The number of days for which the asset is available to download. |
 | Max Number of Downloads | The number of times the asset can be downloaded for a single purchase. |

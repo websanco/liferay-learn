@@ -21,7 +21,7 @@ There are differences in the way you work with Widget Pages and Content Pages in
 The following table and pictures describe the staging bar options and editing tools:
 
 | Option | Widget Page | Content Page | # |
-| --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- |
 | _Site Pages Variation_ | <ul><li>Toggle between variations of Page sets in your staged Site using the drop-down menu.</li><li>Manage and create Page set variations by clicking on the *Actions* button in the Staging bar and selecting *Site Pages Variation*. See [Page Versioning](./page-versioning.md) for more information.</li></ul> | Same as Widget Pages | 1 |
 | _Page Variations_ | <ul><li>Toggle between variations of a single Page in your staged Site using the drop-down menu.</li><li>Manage and create Page variations by clicking on the *Actions* button in the Staging bar and selecting *Page Variations*. See [Page Versioning](./page-versioning.md) for more information.</li></ul> | Not available. To create different versions of a Content Page, use [Experiences](../../../site-building/personalizing-site-experience/experience-personalization/content-page-personalization.md). | 2 |
 | _Undo/Redo_ | <ul><li>Click on the *Actions* button  in the Staging bar and select *Undo*/*Redo*.</li><li>Once you've marked a Page as *Ready for Publish Process*, you can't undo or redo recent changes.</li></ul> | <ul><li>From the Content Page editor, revert any action using the *Undo* or *Redo* buttons.</li><li>Once you publish a Page, you can't undo or redo recent changes.</li></ul> | 3 |
@@ -90,7 +90,7 @@ If you want to publish pages with a custom theme, you must check the Theme Setti
 ![Select the content you want to include in your publish process.](./site-staging-ui-reference/images/09.png)
 
 | Option | Description |
-| --- | --- |
+| :--- | :--- |
 | *All* | Shows all the content available for publication. |
 | *From Last Publish Date* | Only shows the content updated since the last publication. |
 | *Date Range* | Shows the content updated during a specific period of time. |

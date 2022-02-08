@@ -19,7 +19,7 @@ There are two order statuses available on the *Open* tab: *Open* and *In Progres
    ![Order Status Open Tab](./order-management-statuses-reference-guide/images/02.png)
 
 | Order Status | Description |
-| --- | --- |
+| :--- | :--- |
 | Open | One or more products have been added to the cart. The order may be in the checkout process (up to the *Order Summary* page). |
 | In Progress | The order has advanced through the checkout process beyond the *Order Summary* page to the payment step. |
 
@@ -30,7 +30,7 @@ There is one order status available on the *Pending* tab: *To Transmit*.
    ![Order Status Pending Tab](./order-management-statuses-reference-guide/images/03.png)
 
 | Order Status | Description |
-| --- | --- |
+| :--- | :--- |
 | To Transmit | The order has been placed by the buyer, but not yet transmitted by the seller. |
 
 ### Transmitted
@@ -40,7 +40,7 @@ There are twelve order statuses available on the *Transmitted* tab, as listed be
    ![Order Status Transmitted Tab](./order-management-statuses-reference-guide/images/04.png)
 
 | Order Status | Description |
-| --- | --- |
+| :--- | :--- |
 | Transmitted | The order has been [transmitted](./processing-an-order.md#commerce-20-and-below), with no additional status update. (This is the default order status of transmitted orders.) |
 | Awaiting Fulfillment | The order has been [transmitted](./processing-an-order.md#commerce-20-and-below) and payment confirmed, but is not yet ready for [shipment](../shipments/introduction-to-shipments.md) by the carrier. |
 | Awaiting Pickup | The order has been prepared (and possibly [shipped](../shipments/introduction-to-shipments.md)) and is awaiting pickup by the buyer from a seller-specified location. |
@@ -61,7 +61,7 @@ The *Payment Status* gives information about whether payment has been made and r
    ![Payment Status](./order-management-statuses-reference-guide/images/05.png)
 
 | Payment Status | Description |
-| --- | --- |
+| :--- | :--- |
 | Authorized | Payment has been authorized by the financial institutions involved, and steps will be taken to deposit the funds into the seller's account. (This may be the case for online payment methods such as PayPal, or a credit card or debit card.) |
 | Paid | Payment for the [order](./processing-an-order.md) has been received by the seller. |
 | Pending | Payment for the [order](./processing-an-order.md) has not been received or authorized. (This may be the case for offline payment methods such as money orders and purchase orders, if the payment has not yet been received or checked, or the payment status has not been updated. It may also be the case for online payment methods such as PayPal, if the buyer stops the payment process.) |
@@ -77,7 +77,7 @@ The *Workflow Status* gives information about where an order is in one of the tw
    ![Workflow Status Open Tab](./order-management-statuses-reference-guide/images/06.png)
 
 | Workflow Status | Description |
-| --- | --- |
+| :--- | :--- |
 | Draft | Products have been added to the cart, but the cart has not yet been submitted for review and [approval](../order-workflows/approving-or-rejecting-orders-in-order-workflows.md) by the buyer. |
 | Pending | The cart (order) has been submitted for review and [approval](../order-workflows/approving-or-rejecting-orders-in-order-workflows.md), but it has not yet been approved by the buyer. |
 | Approved | The order has been reviewed and [approved](../order-workflows/approving-or-rejecting-orders-in-order-workflows.md) by the buyer, and the order may now proceed to checkout. |
@@ -89,7 +89,7 @@ The *Workflow Status* gives information about where an order is in one of the tw
    ![Workflow Status Pending and Transmitted Tab](./order-management-statuses-reference-guide/images/07.png)
 
 | Workflow Status | Description |
-| --- | --- |
+| :--- | :--- |
 | Pending | The order has been placed, but it has not yet been [approved](../order-workflows/approving-or-rejecting-orders-in-order-workflows.md) by the seller. |
 | Approved | The order has been reviewed and [approved](../order-workflows/approving-or-rejecting-orders-in-order-workflows.md) by the seller, and the order may now be [transmitted](./processing-an-order.md#commerce-20-and-below). (Note: This workflow status appears also on the *Transmitted* tab.) 
 

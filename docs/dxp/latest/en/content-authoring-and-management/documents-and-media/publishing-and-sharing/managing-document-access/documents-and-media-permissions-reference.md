@@ -3,7 +3,7 @@
 ## Folder Permissions
 
 | Permission | Description |
-| --- | --- |
+| :--- | :--- |
 | Delete | Move the folder to the Recycle Bin. |
 | Permissions | View and modify the folder's permissions. |
 | Add Subfolder | Create folders within the folder. |
@@ -17,7 +17,7 @@
 ## File Permissions
 
 | Permission | Description |
-| --- | --- |
+| :--- | :--- |
 | Update Discussion | Edit a file's comment.  |
 | Delete | Move the file to the Recycle Bin. |
 | Override Checkout | Grants the ability to make changes even when another user has checkout the file.  |

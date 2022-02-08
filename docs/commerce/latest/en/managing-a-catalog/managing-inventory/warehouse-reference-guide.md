@@ -13,7 +13,7 @@ Warehouse settings are located in the _Control Panel_ if using Commerce 2.0 or 2
 ![Adding a Warehouse](./warehouse-reference-guide/images/01.png)
 
 | Field | Description |
-| --- | --- |
+| :--- | :--- |
 | Name | Name of the Warehouse |
 | Description | Additional Information |
 | Active | Toggle to designate Warehouse as active |
@@ -23,7 +23,7 @@ Warehouse settings are located in the _Control Panel_ if using Commerce 2.0 or 2
 ![Selecting a Channel](./warehouse-reference-guide/images/02.png)
 
 | Field | Description |
-| --- | --- |
+| :--- | :--- |
 | Channels | List of checkboxes for all channels this Warehouse serves |
 
 ## Address Fields
@@ -31,7 +31,7 @@ Warehouse settings are located in the _Control Panel_ if using Commerce 2.0 or 2
 ![Adding the Warehouse's Address](./warehouse-reference-guide/images/03.png)
 
 | Field | Description |
-| --- | --- |
+| :--- | :--- |
 | Street 1 | Address's first line |
 | Street 2 | Address's second line |
 | Street 3 | Address's third line |
@@ -45,7 +45,7 @@ Warehouse settings are located in the _Control Panel_ if using Commerce 2.0 or 2
 ![Setting the Warehouse's geolocation](./warehouse-reference-guide/images/04.png)
 
 | Field | Description |
-| --- | --- |
+| :--- | :--- |
 | Latitude | Warehouse's Latitude |
 | Longitude | Warehouse's Longitude |
 

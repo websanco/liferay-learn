@@ -17,7 +17,7 @@ The techniques are compared below.
 ## Cluster Update Techniques
 
 | Update | Rolling Restart | Blue-Green |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | Activation keys [1](#one) |  &#10004; | &#10004; |
 | Application server updates | &#10004; | &#10004; |
 | Cluster code changes [2](#two) |  | &#10004; |

@@ -192,7 +192,7 @@ The Network page shows any custom certificates, with a maximum of one per servic
 ## Environment Variables Reference
 
 | Name | Value | Description |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | `cdn` | false | CDN is disabled by default; can be enabled by setting to `true` |
 | `customDomains` | ["example.com", "www.example.com"] | Name of the custom domain; can list more than one |
 | `targetPort` | 3000 | Port number for the load balancer |

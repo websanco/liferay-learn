@@ -34,7 +34,7 @@ Below are all the options possible in the Navigation Menu widget. To access the 
 Select the desired navigation menu type; the desired navigation menu type appears in the Preview box.
 
 | Navigation Menu Type | Description |
-| --- | --- |
+| :--- | :--- |
 | **Public Pages Hierarchy** | Public Pages Hierarchy is based on the default hierarchy in the Site Builder. |
 | **Primary Navigation** | Primary Navigation is the main navigation for a page. |
 | **Secondary Navigation** | Secondary Navigation is a second level of navigation, possibly a sidebar or a separate menu within a page. |
@@ -51,7 +51,7 @@ You can select a [Widget Template](../displaying-content/additional-content-disp
 ![Select the Display Template.](./configuring-navigation-menus/images/03.png)
 
 | Display Template | Description |
-| --- | --- |
+| :--- | :--- |
 | **List Menu** | Displays all the items in a vertical list. |
 | **Pills Horizontal** | Displays the items horizontally and uses a button style for highlighting. |
 | **Pills Justified** | Like Pills Horizontal, but pads the items to fill out the horizontal space. |
@@ -70,7 +70,7 @@ You can configure which pages at what level from the menu appear in the widget. 
 ![Select the Menu Items to Show.](./configuring-navigation-menus/images/04.png)
 
 | Field | Description |
-| --- | --- |
+| :--- | :--- |
 | **Start with Menu Items In** | Select the type of Level: _Level_, _Level Relative to the Current Menu Item_, or _Select Parent_.  |
 | **Number of Levels** | Select the level number to display, from 0 to 4. Level 0 represents the parent page, Level 1 represents the first level child page, and so forth. |
 | **Levels to Display:** | Select the number of levels to display in the navigation, from 1 down to Unlimited. |

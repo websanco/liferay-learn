@@ -65,7 +65,7 @@ By default, Site Configuration includes the Details and Site URL sections.
 #### Details
 
 | Setting | Description |
-| --- | --- |
+| :--- | :--- |
 | Site ID | A unique number automatically generated for a Site at its creation. This ID is permanent and cannot be changed. |
 | Description | Use the this field to explain a Site's purpose.|
 | Parent Site | Designate a Site as a child Site by selecting its parent Site. See [Site Hierarchies](../building-sites/site-hierarchies.md) for more information. |
@@ -75,7 +75,7 @@ By default, Site Configuration includes the Details and Site URL sections.
 #### Site URL
 
 | Setting | Description |
-| --- | --- |
+| :--- | :--- |
 | Friendly URL | Set a custom URL for both public and private Site pages. See [Configuring Your Site's Friendly URL](../site-settings/managing-site-urls/configuring-your-sites-friendly-url.md) for more information. |
 | Public and Private Pages | Set public and private Virtual Hosts to map to a Site's Public and Private Pages. See [Configuring Virtual Hosts Site URLs](../site-settings/managing-site-urls/configuring-virtual-hosts-site-urls.md) for more information. |
 
@@ -88,7 +88,7 @@ Configure the PunchOut2Go Site setting for Liferay Commerce. For more informatio
 By default, Third Party Application includes the Maps and Google Places sections.
 
 | Section | Description |
-| --- | --- |
+| :--- | :--- |
 | Asset Auto Tagging | When enabled, assets are auto tagged by the providers configured at the Instance scope. See [Configuring Asset Auto Tagging](../../content-authoring-and-management/tags-and-categories/auto-tagging/configuring-asset-auto-tagging.md) for more information. |
 | Categorization | Use this section to categorize your Site. This setting does not affect the Categories and Tags available for the Site. For more information on using Categories and Tags, see [Organizing Content with Categories and Tags](../../content-authoring-and-management/tags-and-categories/organizing-content-with-categories-and-tags.md). |
 
@@ -114,7 +114,7 @@ By default, the Content and Data area includes the following settings:
 ### Assets
 
 | Section | Description |
-| --- | --- |
+| :--- | :--- |
 | Maps | Select which maps API provider to use when displaying geo-localized assets in your Site. Geo-localized assets can be displayed for documents, web content articles, DDL records, and more. See [Geo-locating Assets](../../content-authoring-and-management/tags-and-categories/geolocating-assets.md) for more information. |
 | Google Places API Key | Set the Google Places API Key. |
 
@@ -135,7 +135,7 @@ Depending on your configuration at the Instance scope, you may not be able to up
 ### Community Tools
 
 | Section | Description |
-| --- | --- |
+| :--- | :--- |
 | Mentions | Determines whether to allow Users to mention other Users in Site applications. See [Configuring Mentions](../../collaboration-and-social/notifications-and-requests/user-guide/configuring-mentions.md) for more information. |
 | Ratings | Here you can select the type of ratings used for the different Site applications. See [Configuring Content Rating Types](../site-settings/site-content-configurations/configuring-content-rating-type.md) for more information. |
 
@@ -162,7 +162,7 @@ Using this option, you can enable automatic moderation of user messages on Messa
 ### Pages
 
 | Section | Description |
-| --- | --- |
+| :--- | :--- |
 | Google PageSpeed Insights (Liferay DXP 7.4+) | Enable the Google PageSpeed Insight integration in Liferay DXP. Using this option, you can audit your pages for accessibility issues and check suggestions for fixing them. See [Analyzing SEO and Accessibility on Pages](../../content-authoring-and-management/content-performance-tool/analyzing-seo-and-accessibility-on-pages.md) for more information. |
 | Open Graph | These tags define page metadata to create engaging representations of your Site's content when shared in applications that support the Open Graph protocol, such as Facebook, Slack, and Twitter. When enabled Open Graph `<meta>` tags are embedded in the `head` of the Site's pages. For more information, read [Configuring Open Graph](./configuring-open-graph.md). |
 | Pages | View the Site Public and Private pages. On this section, you can also configure the propagation of changes from a Site template, if one exists. For more information, read [Building Sites with Site Templates](../../../en/site-building/building-sites/building-sites-with-site-templates.md). |
@@ -178,7 +178,7 @@ Settings for the Reports Group Service functionality.
 ### Sharing
 
 | Section | Description |
-| --- | --- |
+| :--- | :--- |
 | Content Sharing | Enable this option to allow child Sites to display content from this Site, including structures, templates, categories, or widget templates. When you disable this option, you immediately revoke content sharing from all child Sites. See [Managing Content Sharing Across Sites](../site-settings/site-content-configurations/managing-content-sharing-across-sites.md) for more information. |
 | Sharing | When enabled, Users can share items with one another. See [Enabling and Configuring Sharing](../../content-authoring-and-management/documents-and-media/publishing-and-sharing/managing-document-access/enabling-and-configuring-sharing.md) for more information. |
 
@@ -187,7 +187,7 @@ Settings for the Reports Group Service functionality.
 By default, the Other area includes the following settings:
 
 | Section | Description |
-| --- | --- |
+| :--- | :--- |
 | Other | Includes custom Site settings you have defined for your Site, if any. For more information, read [Setting and Accessing Configurations](../../building-applications/core-frameworks/configuration-framework/setting-and-accessing-configurations.md). |
 | Tax | Configure the settings for the Remote Commerce Tax Configuration in Liferay Commerce. For more information, see the [Liferay Commerce](https://learn.liferay.com/commerce/latest/en/index.html) documentation. |
 | category.tax-rate | Configure the settings for the Liferay Commerce Avalara integration. For more information, see the [Liferay Commerce](https://learn.liferay.com/commerce/latest/en/index.html) documentation. |

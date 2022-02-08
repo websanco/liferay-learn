@@ -33,7 +33,7 @@ Once you've [installed Liferay DXP/Portal](./installing-a-liferay-tomcat-bundle.
 1. Specify your database.
 
 | Field | Description |
-| --- | --- |
+| :--- | :--- |
 | *Database Type* | Select the database type to connect to |
 | *JDBC URL* | Update the path to the database that you have created for Liferay DXP |
 | *User Name* | Database user name |

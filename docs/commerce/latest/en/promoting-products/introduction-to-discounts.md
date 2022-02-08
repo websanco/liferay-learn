@@ -20,7 +20,7 @@ For Commerce 2.1 and below, navigate to the *Control Panel* then *Commerce*. Man
 The following types of discounts are available:
 
 | Discount Type | Description |
-| --- | --- |
+| :--- | :--- |
 | Categories | The discount is applied to all products tagged with a specific [Category](../managing-a-catalog/creating-and-managing-products/products/organizing-your-catalog-with-product-categories.md). |
 | Products | The discount is applied to a specific product or list of products.  |
 | Shipments | The discount is applied to the shipment costs, either by a percentage or flat sum. |
@@ -61,7 +61,7 @@ All discounts can be configured to have expiration dates to coincide with promot
 You can define rules that specify requirements to qualify for a discount. There are three types of rules:
 
 | Rule | Description |
-| --- | --- |
+| :--- | :--- |
 | Cart Total | Cart subtotal must meet a minimum threshold to receive the discount. |
 | Has all of these products | Orders must include all specified products in order to receive the discount. |
 | Has one of these products | Orders must contain at least one product from a list of specified products to receive the discount. |

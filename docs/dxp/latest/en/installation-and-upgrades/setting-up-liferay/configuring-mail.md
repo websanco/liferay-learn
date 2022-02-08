@@ -42,7 +42,7 @@ DXP connects to the mail session immediately.
 ## Mail Configuration Reference
 
 | Field | Description |
-| --- | --- |
+| :--- | :--- |
 | Incoming POP Server | The hostname for a server running the Post Office Protocol. DXP checks this mailbox for incoming messages, such as message board replies. |
 | Incoming Port | The port on which the POP server is listening. |
 | Use a Secure Network Connection | The checkbox to enable whether to use an encrypted connection when connecting to the POP server. |

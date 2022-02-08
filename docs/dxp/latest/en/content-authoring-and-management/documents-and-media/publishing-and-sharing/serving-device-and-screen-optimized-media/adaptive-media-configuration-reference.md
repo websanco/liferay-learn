@@ -11,7 +11,7 @@ Users can adapt all images at once using all the existing Image Resolution rules
 The Home screen is where all existing Image Resolution settings are displayed.
 
 | Field | Description |
-| --- | --- |
+| :--- | :--- |
 | Name | This is the name of the Image Resolution. |
 | State | The _State_ field describes whether this setting is enabled or not. |
 | Adapted Images | This status bar tracks the migration progress. |
@@ -29,7 +29,7 @@ Clicking the (![Add icon](../../../../images/icon-add.png)) icon creates a new I
 ![Create a new Image Resolution.](./adaptive-media-configuration-reference/images/01.png)
 
 | Field | Description |
-| --- | --- |
+| :--- | :--- |
 | Name | Enter a name for the Image Resolution. |
 | Description | Enter a description for the Image Resolution. |
 | Max Width | Enter a numeric value in pixels for the maximum width. |
@@ -63,7 +63,7 @@ Normally, Adaptive Media choose the best image based on the closet dimensions. T
 ![Access the System Settings](./adaptive-media-configuration-reference/images/09.png)
 
 | Field | Description |
-| --- | --- |
+| :--- | :--- |
 | Preview Configuration | Enter the configuration ID to override the default adaptive media behavior for document library previews. |
 | Thumbnail Configuration | Enter the configuration ID to override the default adaptive media behavior for document library thumbnails. |
 | Custom Thumbnail Configuration 1 | Enter the configuration ID to override the default adaptive media behavior for document library custom thumbnail 1. |
@@ -74,13 +74,13 @@ Normally, Adaptive Media choose the best image based on the closet dimensions. T
 The _Images_ configuration contains the following options:
 
 | Field | Description |
-| --- | --- |
+| :--- | :--- |
 | Supported MIME Types | A list of the image MIME types that Adaptive Media supports. If an image is uploaded and its MIME type isn't in this list, Adaptive Media ignores the image. By default, this list contains many common MIME types. |
 
 ![You can also configure Adaptive Media's MIME Types.](./adaptive-media-configuration-reference/images/08.png)
 
 | Field | Description |
-| --- | --- |
+| :--- | :--- |
 | Gifsicle | To scale animated GIFs, Adaptive Media uses an external tool called [Gifsicle](https://www.lcdf.org/gifsicle/). See [Enabling Optimization of Animated GIFs](../../devops/enabling-optimization-of-animated-gifs.md) to learn more. |
 | Max Image Size | Maximum size of the source images that Adaptive Media can use to generate adapted images. Adaptive Media will not generate adapted images for source images larger than this setting. The default value is 10 MB. To generate adapted images for all source images regardless of size, set this to `-1`. Since generating adapted images from large source images requires significant amounts of memory, you can specify a lower *Max Image Size* to avoid out of memory errors. |
 
@@ -93,7 +93,7 @@ The _Processes_ configuration is related to Adaptive Media's asynchronous proces
 ![You can also configure Adaptive Media's image processing resources.](./adaptive-media-configuration-reference/images/07.png)
 
 | Field | Description |
-| --- | --- |
+| :--- | :--- |
 | Max Processes | The maximum number of processes for generating adapted media. The default value is `5`. |
 | Core Processes | The number of processes always available for generating adapted media. The default value is `2`. This setting can't exceed the _Max processes_ setting. |
 

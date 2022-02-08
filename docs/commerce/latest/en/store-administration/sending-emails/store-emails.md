@@ -17,7 +17,7 @@ Once the Liferay Commerce's mail settings have been configured, navigate to the 
 There are ten events that can trigger email notifications. Use one of the corresponding out-of-the-box Notification Templates to create a standardized email notification.
 
 | Notification Type | Event |
-| --- | ---|
+| :--- | :---|
 | Order Placed | The store has received an order. |
 | Order Processing | The store has begun processing an order. |
 | Order Awaiting Shipment | The order is ready to be shipped. |

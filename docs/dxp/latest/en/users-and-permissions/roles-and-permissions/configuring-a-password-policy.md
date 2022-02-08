@@ -97,7 +97,7 @@ Once you have your `portal-ext.properties` file, place it in the [`[Liferay Home
 ## Password Properties Reference
 
 | Property | Default Value | Description |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | `passwords.default.policy.allow.dictionary.words` | true | Common dictionary words are allowed as the user's passwords |
 | `passwords.default.policy.changeable` | true | The user can change their password |
 | `passwords.default.policy.change.required` | true | The user is required to change their password when they first log in |

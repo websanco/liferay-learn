@@ -51,7 +51,7 @@ Note that the project includes the `com.liferay.headless.delivery.client.jar` fi
 The sample code includes cURL scripts and Java classes that call the following APIs.
 
 | Service | HTTP Method | HTTP Endpoint | Java Method | Description |
-| --- | --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- | :--- |
 | WikiNode | `POST` | `/v1.0/sites/{siteId}/wiki-nodes` | `postSiteWikiNode` | Creates a new Wiki node in the specified Site using the details provided in the API call |
 | WikiNode | `GET` | `/v1.0/sites/{siteId}/wiki-nodes` | `getSiteWikiNodesPage` | Returns a complete list of all Wiki nodes in the specified Site; results can be paginated, filtered, searched, and sorted |
 | WikiNode | `GET` | `/v1.0/wiki-nodes/{wikiNodeId}` | `getWikiNode` | Returns details for the specified node entity |

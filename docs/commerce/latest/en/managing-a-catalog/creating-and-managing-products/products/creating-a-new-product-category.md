@@ -21,7 +21,7 @@ Product Categories are used to organize your products. These groupings allow mul
 The new Vocabulary has been created and Categories can now be added.
 
 | Field | Description |
-| --- | ---|
+| :--- | :---|
 | Name | Name of the Vocabulary |
 | Description | Description of the Vocabulary |
 | Allow Multiple Categories | Toggle to allow one-to-one or one-to-many relationship |
@@ -83,7 +83,7 @@ To configure the Product Category's Hierarchy:
 The new Vocabulary has been created and Categories can now be added.
 
 | Field | Description |
-| --- | ---|
+| :--- | :---|
 | Name | Name of the Vocabulary |
 | Description | Description of the Vocabulary |
 | Allow Multiple Categories | Toggle to allow one-to-one or one-to-many relationship |

@@ -7,7 +7,7 @@ To manage currencies, navigate to _Control Panel_ → _Commerce_ → _Settings_ 
 ![Adding a New Currency](./currencies-reference/images/01.png)
 
 | Field | Description |
-| --- | --- |
+| :--- | :--- |
 | Name | Name of the currency |
 | Code | Currency's 3 letter [ISO code](https://www.currency-iso.org/en/home/tables/table-a1.html) |
 | Format Pattern | Currency’s sign, the number of digits to come between commas, and which places are displayed. For example, in the format $###,##0.00 for US dollars, the places held by _0_ are always displayed (as 0 if no other digit is present) while the places held by _#_ are only displayed if occupied. A value of 0.01 in the above format would be displayed as $0.01. |

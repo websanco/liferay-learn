@@ -106,7 +106,7 @@ By default, there are four kinds of actions that can be configured for mobile fa
 ![Add a Mobile Device Action to a Site, Page Set, or Page.](./creating-mobile-device-rules/images/06.png)
 
 | Mobile Device Action | Description |
-| --- | --- |
+| :--- | :--- |
 | **Layout Template Modification** | Changes the way portlets are arranged on pages delivered to mobile devices. For example, you could have pages with more complex layouts automatically switch to a simpler template if it detects a mobile device---even if the resolution is theoretically high enough to support the standard layout. |
 | **Theme Modification** | Selects a specific theme for different mobile device families. You'd have to have a mobile version of your Site's theme that is automatically applied when a device hits your page. |
 | **URL Redirect** | Sends mobile users to any URL. This can be used to direct mobile users to a mobile app download or a mobile version of the page. |

@@ -21,7 +21,7 @@ Meanwhile, the **StatefulSet** type features the following:
 The following summarizes some distinguishing characteristics between the `Deployment` and `StatefulSet` types:
 
 | **Type** | **Purpose** | **Resource Usage and Startup Time** | **Dedicated SSD for Local Volumes** | **Access to NFS** | **Ordered Startup / Scaling** |
-| --- | --- | --- | :---: | :---: | :---: |
+| :--- | :--- | :--- | :---: | :---: | :---: |
 | **Deployment** | Stateless applications with the use of NFS | Consumes less resources and starts up faster than `StatefulSet` type | X | ✓ | X |
 | **StatefulSet** | Stateful applications | Consumes more resources and starts up slower than `Deployment` type | ✓ | X | ✓ |
 

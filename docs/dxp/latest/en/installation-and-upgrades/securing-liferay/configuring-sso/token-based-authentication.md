@@ -32,7 +32,7 @@ Token-based authentication is disabled by default. To manage token-based SSO aut
 Here are the configuration options for the Token-Based SSO module:
 
 | Configuration | Description |
-| --- | --- |
+| :--- | :--- |
 | **Enabled** | Check this box to enable token-based SSO authentication. |
 | **Import from LDAP** | Check this box to import users automatically from LDAP if they don't exist. |
 | **User token name** | Set equal to the name of the token. This is retrieved from the specified location. (Example: `SM_USER`) |

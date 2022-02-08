@@ -9,7 +9,7 @@ To manage the inventory for each product, navigate to a Product's _Configuration
 ![Product Configuration for Inventory](./product-inventory-configuration-reference/images/02.png)
 
 | Field | Description |
-| --- | --- |
+| :--- | :--- |
 | Inventory Engine | Dropdown menu to select a required Inventory Engine; can be customized using extension point |
 | Availability Estimate | Dropdown menu to select length of time for how long it should take to resupply the product if inventory is depleted |
 | Display Availability | Toggle to select whether to display a product is available for sale |

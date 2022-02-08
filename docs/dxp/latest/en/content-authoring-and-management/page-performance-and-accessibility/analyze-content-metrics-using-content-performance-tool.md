@@ -21,7 +21,7 @@ The Content Performance tool contains three different areas:
 The top area in the Content Performance tool provides general information about your content.
 
 | Label | Description |
-| --- | --- |
+| :--- | :--- |
 | Content Name | Content or Widget Page's name or name of the asset based on a Display Page Template. |
 | URL | Represent the URL of the Content Page, Widget Page, or Web Content associated with a Display Page Template. |
 | Author | Author's name. This information is only available for Web Content using a Display Page Template. |
@@ -52,7 +52,7 @@ If the Engagement chart shows a zero value for a certain period, it means that t
 This part of the Content Performance sidebar provides information about the sources driving web traffic to your content. The sources can be:
 
 | Traffic Channel | Source Description |
-| --- | --- |
+| :--- | :--- |
 | Social | Social networks |
 | Organic | Search engines |
 | Paid | Paid keywords from Google Ads |
@@ -68,7 +68,7 @@ When you click one of the traffic channels (A), you can see extended information
 The following table describes the metrics you can find in the Traffic Channels area:
 
 | Label | Description |
-| --- | --- |
+| :--- | :--- |
 | Traffic Volume | The estimated number of visitors to your Page. |
 | Traffic Share | Percentage of traffic your content receives from the traffic source. |
 | Best Keyword | Top five keywords driving traffic through organic search. |

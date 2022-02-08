@@ -39,7 +39,7 @@ You can now use the Picklist as a field in the Time Off Request Object.
 1. Click the *Add* button ( ![Add Button](../../../images/icon-actions.png) ) and enter these values.
 
    | Field | Value |
-   | --- | --- |
+   | :--- | :--- |
    | Label | Time Off Request |
    | Plural Label | Time Off Requests |
    | Object Name | TimeOffRequest |
@@ -47,7 +47,7 @@ You can now use the Picklist as a field in the Time Off Request Object.
 1. Select the *Object*, click on the *Fields* tab, and add these four *fields*.
 
    | Label | Field Name | Type | Picklist | Required |
-   | --- | --- | --- | --- | --- |
+   | :--- | :--- | :--- | :--- | :--- |
    | Start Date | `startDate` | Date | n/a | &#10004; |
    | End Date | `endDate` | Date | n/a |  |
    | Department | `department` | Picklist | Department | &#10004; |
@@ -58,7 +58,7 @@ You can now use the Picklist as a field in the Time Off Request Object.
 1. Click the *Actions* tab and add this action.
 
    | Field | Value |
-   | --- | --- |
+   | :--- | :--- |
    | Name | Creation Sync |
    | When | On After Add |
    | Then | Webhook |
@@ -71,7 +71,7 @@ You can now use the Picklist as a field in the Time Off Request Object.
 1. Click the *Details* tab and set the following Entry Display and Scope settings.
 
    | Field | Value |
-   | --- | --- |
+   | :--- | :--- |
    | Title Field | Start Date |
    | Scope | Company |
    | Panel Category Key | Applications > Communication |
@@ -87,7 +87,7 @@ Next, you'll create an Employee Object and relate it to the Time Off Request Obj
 1. Click the *Add* button ( ![Add Button](../../../images/icon-actions.png) ) and enter these values.
 
    | Field | Value |
-   | --- | --- |
+   | :--- | :--- |
    | Label | Employee |
    | Plural Label | Employees |
    | Object Name | Employee |
@@ -95,7 +95,7 @@ Next, you'll create an Employee Object and relate it to the Time Off Request Obj
 1. Select the *Object*, click on the *Fields* tab, and add these *fields*.
 
    | Label | Field Name | Type | Required |
-   | --- | --- | --- | --- |
+   | :--- | :--- | :--- | :--- |
    | Name | `name` | String | &#10004; |
    | Email | `email` | String | &#10004; |
 
@@ -104,7 +104,7 @@ Next, you'll create an Employee Object and relate it to the Time Off Request Obj
 1. Click the *Relationships* tab and add this relationship.
 
    | Field | Value |
-   | --- | --- |
+   | :--- | :--- |
    | Label | Requester |
    | Relationship Name | requester |
    | Type | One to Many |
@@ -119,7 +119,7 @@ Next, you'll create an Employee Object and relate it to the Time Off Request Obj
 1. Click the *Details* tab and set the following Entry Display and Scope settings.
 
    | Field | Value |
-   | --- | --- |
+   | :--- | :--- |
    | Title Field | Name |
    | Scope | Company |
    | Panel Category Key | Control Panel > Users |
@@ -145,7 +145,7 @@ Object layouts determine how fields are organized when creating and editing Obje
 1. Click the *Layout* tab and add a *tab* with two *blocks*.
 
    | Element | Label | Type |
-   | --- | --- | --- |
+   | :--- | :--- | :--- |
    | Tab | Request Info | Fields |
    | Block | Dates | n/a |
    | Block | Details | n/a |
@@ -153,7 +153,7 @@ Object layouts determine how fields are organized when creating and editing Obje
 1. Add fields to the blocks.
 
    | Block | Fields |
-   | --- | --- |
+   | :--- | :--- |
    | Dates | Start Date, End Date |
    | Details | Department, Employee, Comments |
 
@@ -176,7 +176,7 @@ Once saved, the new layout is used in the Liferay UI for creating and editing Ti
 1. Click the *Layout* tab and add a Fields tab with one block.
 
    | Element | Label | Type |
-   | --- | --- | --- |
+   | :--- | :--- | :--- |
    | Tab | Basic Details | Fields |
    | Block | Employee Info | n/a |
 
@@ -185,7 +185,7 @@ Once saved, the new layout is used in the Liferay UI for creating and editing Ti
 1. Add a Relationship tab for the Employee Object's Requester relationship.
 
    | Element | Label | Type | Relationship |
-   | --- | --- | --- | --- |
+   | :--- | :--- | :--- | :--- |
    | Tab | Time Off Requests | Relationships | Requester |
 
    ![Add a Relationships tab for the Object's Requester relationship.](./building-a-time-off-requester/images/10.png)

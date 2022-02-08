@@ -85,7 +85,7 @@ Attempting to publish a form with invalid mappings displays an error message tha
 ## Field Compatibility Reference
 
 | Object Field Types | Compatible Form Fields |
-| --- | --- |
+| :--- | :--- |
 | BigDecimal | Numeric |
 | Boolean | Boolean |
 | Date | Date |

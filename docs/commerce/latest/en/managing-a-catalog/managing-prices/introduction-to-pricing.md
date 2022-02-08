@@ -94,7 +94,7 @@ Finally, Commerce adds together the discounted shipping cost and discounted subt
 ## Pricing Engine v1.0 Reference
 
 | Pricing Method | Summary | Overrides the Base Price? | Where is it set? | Applies to who? | Applies to what? |
-| --- | --- | :---: | --- | --- | :---: |
+| :--- | :--- | :---: | :--- | :--- | :---: |
 | Base Price | The base price | n/a | Product SKU | All buyers | Product SKU |
 | Base Promo | Marked down price | Yes | Product SKU | All buyers | Product SKU |
 | Price List (List Price, List Promo) | Special pricing (or currencies) per Product and buyer | Yes | Price Lists | Selected buyers (Accounts & Account Groups) | Individual Product SKUs |

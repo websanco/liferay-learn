@@ -47,7 +47,7 @@ However, if you would like to define file details before uploading them, follow 
 ## Configuring File Upload Reference
 
 | Field | For Single File Upload | For Multiple File Upload | Description |
-| --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- |
 | File/Files | &#10004; | &#10004; | Select the file/files for upload. By default, individual file uploads cannot exceed 100MB. |
 | Title | &#10004; |  | Set a display title used for the file after upload. By default this field is populated with the selected file's original name, but you can change it during or after upload. |
 | File Name | &#10004; |  | Set a new name for the uploaded file. By default this field is populated with the selected file's original name, but you can change it during or after upload. |

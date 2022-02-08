@@ -7,7 +7,7 @@ Most new versions of Liferay include changes to the default settings. If you rel
 Here are the default Portal Property changes from 7.1 to 7.2:
 
 | **Portal Property** | **7.1 Default** | **7.2 Default** |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | hot.deploy.listeners | see [value](https://docs.liferay.com/dxp/portal/7.1-latest/propertiesdoc/portal.properties.html) | dropped com.liferay.portal.deploy.hot.SpringHotDeployListener |
 | spring.configs | see [value](https://docs.liferay.com/dxp/portal/7.1-latest/propertiesdoc/portal.properties.html) | dropped META-INF/cluster-spring.xml, META-INF/comment-spring.xml, META-INF/monitoring-spring.xml |
 | jdbc.default.driverClassName | com.mysql.jdbc.Driver | com.mysql.cj.jdbc.Driver |
@@ -35,7 +35,7 @@ Here are the default Portal Property changes from 7.1 to 7.2:
 ## Default Settings Changed in 7.1
 
 | **Portal Property** | **7.0 Default** | **7.1 Default** |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | portlet.add.default.resource.check.whitelist | see [value](https://docs.liferay.com/ce/portal/7.0-latest/propertiesdoc/portal.properties.html) | see [value](https://docs.liferay.com/dxp/portal/7.1-latest/propertiesdoc/portal.properties.html) |
 | spring.configs | see [value](https://docs.liferay.com/ce/portal/7.0-latest/propertiesdoc/portal.properties.html) | added META-INF/security-spring.xml; dropped META-INF/message-boards-spring.xml, META-INF/security-spring.xml, and META-INF/service-configurator-spring.xml |
 | javascript.barebone.files | see [value](https://docs.liferay.com/ce/portal/7.0-latest/propertiesdoc/portal.properties.html) | *blank* |
@@ -66,7 +66,7 @@ Here are the default Portal Property changes from 7.1 to 7.2:
 Here are some properties that have changed since version 6.2:
 
 | **Portal Property** | **6.2 Default** | **7.0 Default**|
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | verify.process.concurrency.threshold | 3 | 5 |
 | auto.deploy.listeners | see [value](https://docs.liferay.com/ce/portal/6.2-sp17/propertiesdoc/portal.properties.html) | dropped com.liferay.portal.deploy.auto.LiferayPackageAutoDeployListener, com.liferay.portal.deploy.auto.exploded.tomcat.HookExplodedTomcatListener, com.liferay.portal.deploy.auto.exploded.tomcat.LayoutTemplateExplodedTomcatListener, com.liferay.portal.deploy.auto.exploded.tomcat.PortletExplodedTomcatListener, com.liferay.portal.deploy.auto.exploded.tomcat.ThemeExplodedTomcatListener |
 | hot.deploy.listeners | see [value](https://docs.liferay.com/ce/portal/6.2-sp17/propertiesdoc/portal.properties.html) | added com.liferay.portal.deploy.hot.OSGiHotDeployListener |

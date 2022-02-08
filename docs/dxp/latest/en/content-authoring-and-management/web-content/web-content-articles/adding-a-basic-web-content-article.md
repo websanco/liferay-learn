@@ -31,7 +31,7 @@ Congratulations! You have added a basic web content article to your Site. See [U
 When creating or editing a _Basic Web Content_ article, you can access the following options via the _Properties_ tab in the sidebar menu:
 
 | **Property** | **Purpose** | **Additional Notes** |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | **Basic Information** | Displays the structure the web content is based on, and a Summary field where you can enter a short description. | The structure cannot be edited once the article is created. See [Web Content Structures](../web-content-structures/understanding-web-content-structures.md) for more information. |
 | **Default Template** | Used to select which template to use to display this web content, by default. | See [Adding Web Content Templates](../web-content-templates/creating-web-content-templates.md) for more information. |
 | **Display Page Template** | Used to select a Display Page Template for this article, if one is desired. | See [Creating and Managing Display Page Templates](../../../site-building/displaying-content/using-display-page-templates/creating-and-managing-display-page-templates.md) for more information. |

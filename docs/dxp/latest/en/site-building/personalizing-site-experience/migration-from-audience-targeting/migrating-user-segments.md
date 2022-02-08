@@ -7,7 +7,7 @@ A user segment represents a subset of users with a common set of properties. [Se
 Due to the similarities between Audience Targeting user segments and Liferay DXP 7.2+ Segments, most of your configuration is automatically transferred into Liferay Segmentation during the upgrade. The following table shows the upgrade path for Audience Targeting rules when migrating to Liferay Segments conditions:
 
 | Audience Targeting Rule | Segment Condition | Upgrade Path |
-| ---                     | ---                     | --- |
+| :---                    | :---                    | :--- |
 | Browser                 | Browser                 | Automated. Use user agent field with `contains` operation as an alternative |
 | Custom Field            | Custom Field            | Automated |
 | Language                | Language                | Automated |

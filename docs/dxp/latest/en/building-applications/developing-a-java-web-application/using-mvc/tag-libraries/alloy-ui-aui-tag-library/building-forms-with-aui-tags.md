@@ -83,7 +83,7 @@ Follow these steps to build a form using AUI tags:
 The full list of available validation rules is shown in the table below:
 
 | Rule | Description | Default Error Message |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | `acceptFiles` | Specifies that the field can only contain the file types given. Each file extension must be separated by a comma. For example </br> `<aui:validator name="acceptFiles">'jpg,png,tif,gif'</aui:validator>` | 'Please enter a file with a valid extension ([supported extensions]).' |
 | `alpha` | Permits alphabetic characters | 'Please enter only alpha characters.' |
 | `alphanum` | Permits alphanumeric characters | 'Please enter only alphanumeric characters.' |

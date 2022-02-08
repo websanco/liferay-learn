@@ -13,7 +13,7 @@ Maintenance Updates are periodically released for Liferay Commerce. Included in 
 For the core modules and suites that are part of Liferay Digital Experience Platform, Maintenance Updates will be released as a single [DXP 7.1](https://customer.liferay.com/group/customer/downloads?_com_liferay_osb_customer_downloads_display_web_DownloadsDisplayPortlet_formDate=1542377673692&p_p_id=com_liferay_osb_customer_downloads_display_web_DownloadsDisplayPortlet&p_p_lifecycle=0&p_p_state=normal&p_p_mode=view&_com_liferay_osb_customer_downloads_display_web_DownloadsDisplayPortlet_product=dxp_71&_com_liferay_osb_customer_downloads_display_web_DownloadsDisplayPortlet_fileType=fixPacks) fix pack through Liferay Connected Services and Customer Portal.
 
 | Estimated Release Targets | Regular | As Needed |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | Liferay DXP * | &#10003; | &#10003; |
 | Liferay Commerce | &#10003; |&#10003; |
 
@@ -22,7 +22,7 @@ For the core modules and suites that are part of Liferay Digital Experience Plat
 Emergency Updates are provided on a case-by-case basis for Liferay components that are deployed on production environments. If your Production deployment schedule limits the amount of changes you can make to your Production environments, or their frequency, we recommend that you request Emergency Updates from the Liferay Support Team. These updates are customer-specific temporary solutions that will be included in future Maintenance Updates. For Liferay Digital Experience Platform, Emergency Updates are also known as hotfixes which are short-term solutions that can patch the core modules and suites. If you have installed Emergency Updates, we highly recommend that you bring your Liferay DXP system up to date with the latest Maintenance Updates, as soon as you enter a new Development Phase.
 
 | Estimated Release Targets | Regular |
-| --- | --- |
+| :--- | :--- |
 | Liferay DXP * | &#10003; |
 | Liferay Commerce | &#10003; |
 

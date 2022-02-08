@@ -29,7 +29,7 @@ Product Management includes the following applications:
 All Product Management applications have the following permissions:
 
 | Permission | Description |
-| --- | --- |
+| :--- | :--- |
 | Access in Control Panel | Ability to access the application in the Global Menu |
 | Configuration | Ability to view and set the application's configuration options |
 | Permissions | Ability to view and modify the application's permissions |
@@ -114,14 +114,14 @@ In Liferay DXP 7.3 and earlier, the *Add Commerce Product Specification Option* 
 #### Commerce Pricing
 
 | Permission | Description |
-| --- | --- |
+| :--- | :--- |
 | Add Commerce Pricing Class | Ability to create Pricing Class entities in the Product Groups application |
 | Permissions | Ability to view and modify resource permissions in the Product Groups application |
 
 #### Commerce BOM
 
 | Permission | Description |
-| --- | --- |
+| :--- | :--- |
 | Add Commerce BOM Definition | Ability to create BOM Definition entities in the Shop by Diagram application |
 | Add Commerce BOM Folder | Ability to create BOM Folder entities in the Shop by Diagram application |
 | Permissions | Ability to view and modify resource permissions in the Shop by Diagram application |
@@ -129,7 +129,7 @@ In Liferay DXP 7.3 and earlier, the *Add Commerce Product Specification Option* 
 #### Commerce Applications
 
 | Permission | Description |
-| --- | --- |
+| :--- | :--- |
 | Add Commerce Brand | Ability to create Brand entities in the Application Admin |
 | Add Commerce Model | Ability to add Model entries to a Brand in the Application Admin |
 | Permissions | Ability to view and modify resource permissions in the Application Admin |

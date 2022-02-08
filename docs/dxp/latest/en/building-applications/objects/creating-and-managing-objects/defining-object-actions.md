@@ -21,7 +21,7 @@ Follow these steps to define actions for an Object:
 1. For When, determine the action's trigger.
 
    | Trigger | Description |
-   | --- | --- |
+   | :--- | :--- |
    | On After Add| When an Object entry is added |
    | On After Delete | When an Object entry is deleted |
    | On After Update | When an Object entry is updated |

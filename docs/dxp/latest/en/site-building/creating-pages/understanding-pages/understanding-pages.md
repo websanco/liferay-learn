@@ -7,7 +7,7 @@ Pages on Liferay DXP are primarily used to display content and applications to u
 When adding Pages to a site, the pages are created as part of a Site's [Page Set](../page-settings/configuring-page-sets.md): **Public Pages** or **Private Pages**. Public and Private Page Sets are compared below:
 
 | Behavior | Public Pages | Private Pages |
-| --- | --- |---|
+| :--- | :--- |---|
 | Visible to unauthenticated users | &#10004; |  |
 | Viewing requires Login and Site Membership |  | &#10004; |
 | Distinct URL pattern | &#10004; | &#10004; |
@@ -49,7 +49,7 @@ A Widget Page is a page with a set layout that allows *widgets* (applications) t
 This table compares some of the distinctions between a Content Page and a Widget Page:
 
 | Feature |  Content Pages | Widget Pages |
-| --- | --- |---|
+| :--- | :--- |---|
 | Ability to Add Widgets | &#10004; | &#10004; |
 | Personalized Site Experiences | &#10004; |  |
 | Access to A/B Testing | &#10004; |  |
@@ -67,7 +67,7 @@ There are several other page types that are available - each can help to satisfy
 When adding a page, you also have the option to choose a Page Template. Page Templates are pre-set pages with applications already deployed to the page. By default, only *Global Templates* are available, but additional collections you create appear as an option as well.
 
 | Global Page Template | Description |
-| --- | --- |
+| :--- | :--- |
 | Blog | Creates a Widget Page with a Blogs widget, a Tag Cloud widget, and a Recent Bloggers widget. |
 | Search | Creates a Widget Page with a Search Bar widget, a Search Results widget, and a Search Options widget. |
 | Wiki | Creates a Widget Page with a Wiki widget, a Categories Navigation widget, and a Tags Navigation widget. |

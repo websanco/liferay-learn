@@ -23,7 +23,7 @@ Once you've [selected your assets](./selecting-assets-in-the-asset-publisher-wid
 These templates are in every site by default:
 
 | Display Template | Scope | Description |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | Abstracts | instance | Displays the first 200-500 characters of the content, defined by the **Abstract Length** field. This is the default display template. |
 | Table | instance | Displays the content in an HTML table which can be styled by a theme developer |
 | Title List | instance | Displays the content's title as defined by the user who entered it |
@@ -34,7 +34,7 @@ These templates are in every site by default:
 These are the remaining settings for the *Display Settings* section:
 
 | Setting | Description |
-| --- | --- |
+| :--- | :--- |
 | Abstract Length | Select the number of characters to display for abstracts. The default is `200`. Note this option is only available for the Abstracts display template. |
 | Asset Link Behavior | The default value is *Show Full Content*, which displays the full asset in the current Asset Publisher. *View in Context* displays the asset in the application that it belongs to. For example, a blog entry is displayed in Blogs where it was created. See the section below on display pages for more information. |
 | Number of Items to Display | the maximum number of assets that can be displayed. If pagination is enabled, this number represents the maximum number of assets that can be displayed per page. |
@@ -51,7 +51,7 @@ Many of these, such as printing, flags, ratings, comments, comment ratings, and 
 These options are available:
 
 | Setting | Description |
-| --- | --- |
+| :--- | :--- |
 | Show Add Content Button | When selected, an *Add New* button appears that lets users add new assets directly from the Asset Publisher application. This is checked by default. |
 | Show Metadata Descriptions | Enables Metadata descriptions such as *Content Related to...* or *Content with tag...* to display with the published assets. |
 | Show Available Locales | Since content can be localized, you can have different versions of it based on locale. Enabling this option shows the available locales, so users can view the content in their languages. |

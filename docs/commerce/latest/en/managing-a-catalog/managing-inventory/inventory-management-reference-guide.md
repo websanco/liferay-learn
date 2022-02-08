@@ -13,7 +13,7 @@ The first screen displays product variants identified by their SKU code (instead
 ![The Inventory section's initial screen tracks all the SKUs in the catalog.](./inventory-management-reference-guide/images/02.png)
 
 | Field | Description |
-| --- | --- |
+| :--- | :--- |
 | SKU | The main identifier inside the inventory system. |
 | On Hand | Represents the total number of items for a given SKU by aggregating all the quantities available from the different warehouses. |
 | Available | Represents the quantity of items for a given SKU that are available to the storefront. Commerce uses this calculation: [Quantity Available] = [Quantity on Hand] - [Quantity on Order] - [Safety Stock Quantity]. |
@@ -31,7 +31,7 @@ The _Overview_ tab displays a short summary of the inventory of a given SKU by w
 ![Manage your inventory by SKU.](./inventory-management-reference-guide/images/03.png)
 
 | Field | Description |
-| --- | --- |
+| :--- | :--- |
 | Warehouse | List of warehouses where a particular SKU is located. |
 | On Hand | Count of physical inventory in possession at a warehouse. |
 | Safety Stock | Represents a quantity of items reserved for in-store sale at a particular site. Example: if there are 100 units in a warehouse, 20 units can be designated as Safety Stock. |
@@ -59,7 +59,7 @@ Click Add (![Add Icon](../../images/icon-add.png)) to enter your values.
 ![Add a quantity for a particular warehouse.](./inventory-management-reference-guide/images/05.png)
 
 |Field | Description |
-| --- | --- |
+| :--- | :--- |
 | Quantity | This is the number of items to be added. |
 | Destination | This represents the warehouse where the items will be arriving in. |
 | Expected Delivery Date | This is the scheduled date of delivery. |

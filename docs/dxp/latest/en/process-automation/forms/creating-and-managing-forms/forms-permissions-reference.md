@@ -9,7 +9,7 @@ Navigate to the site page where the _Form_ widget has been deployed. Click the O
 ![View the Form Widget Permissions](./forms-permissions-reference/images/01.png)
 
 | Permission | Description |
-| --- | --- |
+| :--- | :--- |
 | Permissions | Grants the ability to view and widget permissions for other users |
 | Preferences | Grants the ability to view and set widget preferences |
 | Configuration | Grants the ability to configure the widget; can select which form is displayed  |
@@ -29,7 +29,7 @@ Navigate to the site page where the _Form_ widget has been deployed. Click the O
 ![View the Form's Permissions](./forms-permissions-reference/images/03.png)
 
 | Permission | Description |
-| --- | --- |
+| :--- | :--- |
 | Delete | Grants the ability to delete the form |
 | Permissions | Grants the ability to view and set the form's permissions |
 | Update | Grants permission to make changes to the form, and to edit form entries. |

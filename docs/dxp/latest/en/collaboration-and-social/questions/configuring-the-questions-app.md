@@ -95,7 +95,7 @@ To create a new policy,
 ## System Configuration Reference
 
 | Setting | Description |
-| --- | --- |
+| :--- | :--- |
 | Show Cards for Topic Navigation | If this is checked, the app will display separate cards for each question topic. If it is not checked, the app will display a list of all the questions. |
 | Use Topic Names in URL | If this is checked, each topic name will be used in a more friendly URL instead of a topic ID number. |
 | Root Topic ID | This setting is ignored. |

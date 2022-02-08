@@ -35,7 +35,7 @@ If you are using version 3.x.x services, then Nginx configurations instead belon
 These environment variables are available for the web server service:
 
 | Name | Default value | Description |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | `LCP_HAPROXY_RESOLVER_HOLD_TIME` | `10` | Configures the [`hold` configuration](https://cbonte.github.io/haproxy-dconv/2.0/configuration.html#5.3.2-hold) for the HAProxy load balancer. This configuration is for the `valid` status.|
 | `LCP_HAPROXY_RESOLVER_RETRIES` | `3` | Configures the [`resolve_retries` configuration](https://cbonte.github.io/haproxy-dconv/2.0/configuration.html#5.3.2-resolve_retries) for the HAProxy load balancer (the number of retries the session will attempt to connect to the server before giving up).|
 | `LCP_HAPROXY_RESOLVER_TIMEOUT_RESOLVE` | `1` | Configures the [`timeout` configuration](https://cbonte.github.io/haproxy-dconv/2.0/configuration.html#5.3.2-timeout) for the HAProxy load balancer (the number of seconds for an event timeout). This configuration is for the `resolve` event.|

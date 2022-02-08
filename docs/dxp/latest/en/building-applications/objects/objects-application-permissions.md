@@ -15,7 +15,7 @@ Application permissions grant permission to perform general application-related 
 The Objects portlet has the following application permissions:
 
 | Permission | Description |
-| --- | --- |
+| :--- | :--- |
 | Access in Control Panel | Access Objects in the Global Menu |
 | Configuration | View and modify configuration options for the Objects portlet |
 | Permissions | View and modify Objects permissions |
@@ -31,7 +31,7 @@ The Object's portlet has the following resource permissions.
 ### Object Related Actions
 
 | Permission | Description |
-| --- | --- |
+| :--- | :--- |
 | Add Object Definition | Create an Object draft |
 | Extend System Object Definition | Add fields, relationships, and layouts to system Objects |
 | Permissions | View and manage permissions related to Objects |
@@ -40,7 +40,7 @@ The Object's portlet has the following resource permissions.
 ### Object Definition Actions
 
 | Permission | Description |
-| --- | --- |
+| :--- | :--- |
 | Delete | Delete an Object draft |
 | Permissions | View and modify permissions for an Object |
 | Update | Update an Object |

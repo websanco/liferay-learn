@@ -23,7 +23,7 @@ The _Open_ tab displays all the orders that have not completed the checkout proc
 ![Orders menu - Open tab](./orders-menu-reference-guide/images/07.png)
 
 | Field | Description|
-| --- | --- |
+| :--- | :--- |
 | Order ID | This is the Order ID. |
 | Account | This is the name of the account. |
 | Account Number | This is the generated account number. |
@@ -41,7 +41,7 @@ The _Pending_ tab displays all orders that have completed the checkout process.
 There are three particular fields to note:
 
 | Field | Description|
-| --- | --- |
+| :--- | :--- |
 | Order Date | This is the date the order was created. |
 | Order Status | This is the status of the order. |
 | Acceptance Workflow Status | This displays the order's [buyer's acceptance workflow](../order-workflows/enabling-or-disabling-order-workflows.md) status. |

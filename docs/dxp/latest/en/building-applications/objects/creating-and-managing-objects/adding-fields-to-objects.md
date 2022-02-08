@@ -45,7 +45,7 @@ After saving fields to an Object draft, you can select them to define whether th
 ## Field Type Reference
 
 | Type | Description |
-| --- | --- |
+| :--- | :--- |
 | BigDecimal | A high precision numerical value with a decimal point that is used for calculations |
 | Boolean | A logical, binary value of either *true* or *false* |
 | Date | A value indicating a specific day, month, and year |

@@ -97,7 +97,7 @@ In the Contents list you can find the following elements:
 In the list of contents, you can find the following columns:
 
 | Column | Description |
-| --- | --- |
+| :--- | :--- |
 | Title | Article title(*). |
 | Author | Author's name. |
 | Type | Specifies a [Web Content Article](../web-content/web-content-articles/adding-a-basic-web-content-article.md) or [Documents](../documents-and-media/documents-and-media-overview.md) asset type (available in Liferay DXP 7.4+.) |
@@ -183,7 +183,7 @@ When using the Type or Extension filter, you can define your search criteria fro
 - The criteria from different filters is combined using the `and` operator (see example C.)
 
 | Example| Filter By | Filter Example | Contents List Results |
-| --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- |
 | A | Categories | Categories: *Entrepreneur* and *Family* | Only assets that belong to both the *Entrepreneur* `and` Family Categories. |
 | B | Authors | Authors: *Peter* and *Linda* | Assets authored by *Peter* `or` _Linda_ `or` both. |
 | C | Categories, Authors | Category is _Entrepreneur_ and Author is _Linda_ | Only assets under the *Entrepreneur* Category `and` authored by Linda. |

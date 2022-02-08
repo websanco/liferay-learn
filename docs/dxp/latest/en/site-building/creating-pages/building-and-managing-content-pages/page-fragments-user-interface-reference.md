@@ -91,7 +91,7 @@ This Fragment defines a drop zone where you can add other Fragments and create a
 In this table you can see a description of the Dropdown Fragment General options (B):
 
 | Option | Description |
-| --- | --- |
+| :--- | :--- |
 | *Type* | Controls the Dropdown Fragment style. |
 | *Size* | Sets the Dropdown Fragment size. |
 | *Panel Type* | Defines the drop zone size:</br><ul><li>*Regular:* Standard drop zone size.</li><li>*Full Width:* The drop zone size corresponds to the Module's width containing the Fragment.</li><li>*Mega Menu:* The drop zone size corresponds to the Page's width.</li></ul> |

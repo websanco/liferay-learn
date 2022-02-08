@@ -5,7 +5,7 @@ There are several out-of-the-box validation conditions that can be used to valid
 ## Text Field Validation Conditions
 
 | Condition | Description |
-| --- | --- |
+| :--- | :--- |
 | Contains | This condition checks against a specified value permitted; if the entry contains this value, then validation fails. |
 | Does not Contain | This is the opposite of "Contains"; if an entry does _not_ contain the value, validation fails. |
 | Is not URL | This condition ensures URLs are valid. |
@@ -15,7 +15,7 @@ There are several out-of-the-box validation conditions that can be used to valid
 ## Numeric Field Validation Conditions
 
 | Condition | Description |
-| --- | --- |
+| :--- | :--- |
 | Is greater than or equal to | This condition checks whether the value is greater than or equal to the specified value. |
 | Is greater than | This condition checks whether the value is greater than the specified value. |
 | Is not equal to | This condition checks whether the value is equal to the specified value. |

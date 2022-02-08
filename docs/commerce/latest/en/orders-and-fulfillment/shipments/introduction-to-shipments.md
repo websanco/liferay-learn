@@ -69,7 +69,7 @@ The _Shipment Details_ tab contains the following information:
 ![Shipment Details Menu](./introduction-to-shipments/images/02.png)
 
 | Field | Description |
-| --- | --- |
+| :--- | :--- |
 | Name | Name of the Buyer |
 | Description | Description field |
 | Street 1 | Shipping address' first line |
@@ -92,7 +92,7 @@ The _Shipment Items_ Tab contains the following information:
 ![Shipment Items Tab](./introduction-to-shipments/images/03.png)
 
 | Field | Description |
-| --- | --- |
+| :--- | :--- |
 | SKU | SKU Number |
 | Name | Name of the item |
 | Quantity | Number of items in the shipment |

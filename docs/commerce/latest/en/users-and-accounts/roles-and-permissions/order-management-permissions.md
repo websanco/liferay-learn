@@ -23,7 +23,7 @@ Order Management includes the following applications:
 All Order Management applications have the following permissions:
 
 | Permission | Description |
-| --- | --- |
+| :--- | :--- |
 | Access in Control Panel | Ability to access the application in the Global Menu |
 | Configuration | Ability to view and set the application's configuration options |
 | Permissions | Ability to view and modify the application's permissions |
@@ -60,7 +60,7 @@ In Liferay DXP 7.3 and earlier, Manage All Accounts and Manage Order Prices were
 **Commerce Shipments** (listed under Shipments; previously listed under Control Panel > General Permissions): These permissions grant the ability to perform operations for Shipping entities used to track Product deliveries.
 
 | Permission | Description |
-| --- | --- |
+| :--- | :--- |
 | Manage All Accounts | Necessary to access the portlet that manages Shipments |
 | Manage Shipments | Ability to access and modify Shipment entities |
 | Permissions | Ability to view and manage permissions for Shipment entities |
@@ -77,7 +77,7 @@ In Liferay DXP 7.3 and earlier, Manage All Accounts and Manage Order Prices were
 **Commerce Subscription** (listed under Subscriptions; previously listed under Control Panel > General Permissions): These permissions grant the ability to perform operations for Subscription entities.
 
 | Permission | Description |
-| --- | --- |
+| :--- | :--- |
 | Manage Subscriptions | Ability to access and modify Subscription entities |
 | Permissions | Ability to view and modify permissions for Subscription entities |
 

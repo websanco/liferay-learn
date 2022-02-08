@@ -12,7 +12,7 @@ DXP Cloud offers two probes used in conjunction to manage applications:
 Each probe can be configured with the following options:
 
 | Property Name | Description |
-| --- | --- |
+| :--- | :--- |
 | `initialDelaySeconds`| Number of seconds after the container has started before the probe is initiated. |
 | `periodSeconds` | How often (in seconds) to perform the probe. The default is 10; the minimum is 1. |
 | `timeoutSeconds` | Number of seconds after which the probe times out. The default and minimum is 1. |

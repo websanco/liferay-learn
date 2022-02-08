@@ -5,7 +5,7 @@ Each service in your DXP Cloud environments has an `LCP.json` file that you can 
 This table lists and describes the properties you can add in `LCP.json`:
 
 | Field | Type | Default Value | Description |
-| --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- |
 | `id` | String | random | The service ID |
 | `image` | String | `""` | The service image from Docker Hub |
 | `env` | Object | undefined | Environment variables |

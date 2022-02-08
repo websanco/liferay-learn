@@ -73,7 +73,7 @@ If *Allow Back Orders* is enabled, then all Options are listed in the Product De
 ### Details
 
 | Field | Description |
-| --- | --- |
+| :--- | :--- |
 | SKU (Required) | Enter an SKU for the Product variant |
 | [Option Field] (Required) | Used to map the SKU to an Option value when SKU Contributor is enabled |
 | Purchaseable | Determines whether the SKU can be purchased |
@@ -84,7 +84,7 @@ If *Allow Back Orders* is enabled, then all Options are listed in the Product De
 ### Pricing
 
 | Field | Description |
-| --- | --- |
+| :--- | :--- |
 | Base Price | Sets a Base Price entry for the SKU |
 | Sale Price | Sets a sale price for the SKU's Base Price entry |
 | Cost | Sets the SKU cost used for net calculations |
@@ -94,7 +94,7 @@ If *Allow Back Orders* is enabled, then all Options are listed in the Product De
 These fields override Product-level specifications for individual SKUs and are used for shipping.
 
 | Field | Description |
-| --- | --- |
+| :--- | :--- |
 | Width | Overrides Product width |
 | Height | Overrides Product height |
 | Depth | Overrides Product depth |
@@ -103,7 +103,7 @@ These fields override Product-level specifications for individual SKUs and are u
 ### Schedule
 
 | Field | Description |
-| --- | --- |
+| :--- | :--- |
 | Published | Makes the SKU visible and available for purchase |
 | Display Date | Determines when the SKU is first displayed in Site for purchase. |
 | Expiration Date | Determines when the SKU is no longer available for purchase |

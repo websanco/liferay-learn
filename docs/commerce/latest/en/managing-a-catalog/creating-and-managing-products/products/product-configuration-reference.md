@@ -11,7 +11,7 @@ In the Product Detail's tab, you can configure the Product's SEO settings, appli
 ### General Product Details
 
 | Field | Description |
-| --- | --- |
+| :--- | :--- |
 | Catalog | Catalog associated with the Product; this association is permanent |
 | Name | Product Name |
 | Short Description | Short summary of the Product |
@@ -20,7 +20,7 @@ In the Product Detail's tab, you can configure the Product's SEO settings, appli
 ### SEO
 
 | Field | Description |
-| --- | --- |
+| :--- | :--- |
 | Friendly URL | The URL for the Product page |
 | Meta Title |  Product title to help search engines locate your products |
 | Meta Description | Product description used by search engines |
@@ -29,7 +29,7 @@ In the Product Detail's tab, you can configure the Product's SEO settings, appli
 ### Specifications
 
 | Field | Description |
-| --- | --- |
+| :--- | :--- |
 | Label | The specification's name |
 | Value | The specification's value |
 | Group | Links the specification to another Specification Group |
@@ -38,7 +38,7 @@ In the Product Detail's tab, you can configure the Product's SEO settings, appli
 <!--TASK: ### Categorization
 
 | Field | Description |
-| --- | --- |
+| :--- | :--- |
 | [Catalog Name] | Determines which Catalog categories are applied to the Product |
 | Topic |  |
 | Tags |  | -->
@@ -46,7 +46,7 @@ In the Product Detail's tab, you can configure the Product's SEO settings, appli
 ### Schedule
 
 | Field | Description |
-| --- | --- |
+| :--- | :--- |
 | Published | Enables the Product's visibility and availability for sale in the Catalog |
 | Display Date | Date the Product is first made available for sale in the Catalog |
 | Expiration Date | Determines when the Product will no longer be available, if *Never Expire* is unchecked |
@@ -59,7 +59,7 @@ Product Options provide a convenient way to add custom fields to your Products. 
 ![Create Product Options.](./product-configuration-reference/images/02.png)
 
 | Field | Description |
-| --- | --- |
+| :--- | :--- |
 | Add Options | Field for Creating or applying existing Options to the Product|
 | Options | List of Options added to the Product; click on an Option to edit its settings and values |
 

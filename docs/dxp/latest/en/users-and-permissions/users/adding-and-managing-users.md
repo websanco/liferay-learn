@@ -36,7 +36,7 @@ If you haven't set up a mail server, click the *Password* item from the General 
 1. The following options are available:
 
 | Option | Description |
-| --- | --- |
+| :--- | :--- |
 | Edit | Modify any aspect of the User account. |
 | Permissions | Define which Roles have permissions to edit the User. |
 | Manage Pages | Configure the personal pages of a User. |

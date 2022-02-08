@@ -27,7 +27,7 @@ In Liferay DXP 7.4 GA1, Picklist field values must use the following format in O
 The following REST APIs are available for all company scoped Objects.
 
 | HTTP Method | HTTP Endpoint | Java Method | Description |
-| --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- |
 | GET | `/` | `getObjectNamePage` | Returns a complete list of Object entries in a Liferay instance; results can be paginated, filtered, searched, and sorted |
 | POST | `/` | `postObjectNamePage` | Creates a new Object entry using the details provided in the API call |
 | DELETE | `/by-external-reference-code/{externalReferenceCode}` | `deleteByExternalReferenceCode` | Deletes the specified Object entry using its external reference code |
@@ -46,7 +46,7 @@ The following REST APIs are available for all company scoped Objects.
 The following REST APIs are available for all Site scoped Objects.
 
 | HTTP Method | HTTP Endpoint | Java Method | Description |
-| --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- |
 | DELETE | `/scopes/{scopeKey}/by-external-reference-code/{externalReferenceCode}` | `deleteScopeScopeKeyByExternalReferenceCode` | Deletes the specified Object entry using its scope key and external reference code |
 | GET | `/scopes/{scopeKey}/by-external-reference-code/{externalReferenceCode}` | `getScopeScopeKeyByExternalReferenceCode` | Returns details for the specified Object entry using its scope key and external reference code |
 | PUT | `/scopes/{scopeKey}/by-external-reference-code/{externalReferenceCode}` | `putScopeScopeKeyByExternalReferenceCode` | Replaces the specified Object entry's details with those provided in the API call using its scope key and external reference code |

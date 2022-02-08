@@ -7,7 +7,7 @@ The latest [portal properties reference](https://docs.liferay.com/dxp/portal/7.3
 Here are the changes from 7.2 to 7.3:
 
 | **Portal Property** | **7.2 Default** | **7.3 Default** |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | admin.email.from.address | test@liferay.com | test@domain.invalid |
 | admin.email.user.added.reset.password.body | *NA* | com/liferay/portlet/admin/dependencies/email_user_added_reset_password_body.tmpl |
 | admin.email.password.changed.subject | *NA* | com/liferay/portlet/admin/dependencies/email_password_changed_subject.tmpl |

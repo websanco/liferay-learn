@@ -25,7 +25,7 @@ Set the `liferay` service's `LIFERAY_JAVA_OPTS` environment variable to allocate
 The recommended configuration is to set the `-Xms` flag using 25% of the available memory, and to set the `-Xmx` flag using 75% of the available memory. See the following table for reference on recommended values, for different levels of memory available to your `liferay` service:
 
 | **Available Memory** | **Recommended LIFERAY_JAVA_OPTS** |
-| --- | --- |
+| :--- | :--- |
 | 8 GB | -Xms2048m -Xmx6144m |
 | 16 GB | -Xms4096m -Xmx12288m |
 | 24 GB | -Xms6144m -Xmx18432m |

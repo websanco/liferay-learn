@@ -5,7 +5,7 @@ A specification stores a single piece of Product information. This can be the Pr
 Specification data is ordered into groups, labels, and values to make them easy to display and maintain. 
 
 | Name | Description |
-| --- | --- |
+| :--- | :--- |
 | [Specification Group](#specification-groups) | Entity for grouping and organizing similar Specification Labels (e.g., `dimensions`) |
 | [Specification Label](#specification-labels) | Entity for storing a Specification Value (e.g., `height`) |
 | [Specification Value](#specification-values) | Product-specific data added to a Specification Label (e.g., `100 cm`) |
@@ -25,7 +25,7 @@ Specifications defined at the SKU level override Specifications defined at the P
 To add a new Specification Group, click the *Add* button (![Add Button](../../../images/icon-add.png)).
 
 | Field | Description |
-| --- | --- |
+| :--- | :--- |
 | Title | Shows the display name of the Specification Group. |
 | Description | Explains what the specifications have in common |
 | Priority | Establishes the order to display the specification groups with smaller numbers going first. |
@@ -47,7 +47,7 @@ To create a specification label:
 To add a new Specification Group, click the *Add* button (![Add Button](../../../images/icon-add.png)).
 
 | Field | Description |
-| --- | --- |
+| :--- | :--- |
 | Label | Shows the display name of the Label. |
 | Description | Gives a description of the label. |
 | Use in Faceted Navigation | Toggle this label to use in faceted navigation. |

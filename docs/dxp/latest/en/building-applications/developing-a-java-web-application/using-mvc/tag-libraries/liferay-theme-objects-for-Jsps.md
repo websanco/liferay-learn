@@ -3,7 +3,7 @@
 When you include the `<liferay-theme:defineObjects>` tag in your JSP, you gain  access to several Liferay theme objects via variables. These objects are  described in the table below:
 
 | Object | Description |
-| --- | --- |
+| :--- | :--- |
 | `account` | The user's Account object. This object maps to the Account table in the Liferay database. |
 | `colorScheme` | An object representing the current color scheme in the theme that is being rendered by the portal |
 | `company` | The current Company object. This represents the portal instance on which the user is currently navigating. |

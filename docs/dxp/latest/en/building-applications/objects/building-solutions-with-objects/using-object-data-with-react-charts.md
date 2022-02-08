@@ -35,7 +35,7 @@ Once started, follow these steps to add the `/o/c/*` URL pattern to the *Default
 1. Click the *Add* button (![Add Button](../../../images/icon-add.png)) and enter these values:
 
    | Field | Value |
-   | --- | --- |
+   | :--- | :--- |
    | Label | X3J8-Object |
    | Plural Label | X3J8-Objects |
    | Name | X3J8Object |
@@ -47,7 +47,7 @@ Once started, follow these steps to add the `/o/c/*` URL pattern to the *Default
 1. Select the new *Object* draft, click on the *Field* tab, and add these *fields*:
 
    | Label | Field Name | Type | Required |
-   | --- | --- | --- | --- |
+   | :--- | :--- | :--- | :--- |
    | Label | label | String | &#10004; |
    | Value | value | Integer | &#10004; |
 
@@ -177,7 +177,7 @@ Once the code is compiled, you can host the application's `.js` file in the Life
 1. Enter these values:
 
    | Field | Value |
-   | --- | --- |
+   | :--- | :--- |
    | Name | X3J8-Remote-App |
    | Type | Custom Element |
    | HTML Element Name | `x3j8-remote-app` |

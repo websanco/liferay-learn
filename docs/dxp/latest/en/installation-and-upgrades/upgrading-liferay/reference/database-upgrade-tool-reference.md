@@ -95,7 +95,7 @@ You can also pre-configure the upgrade tool to set more values than the tool gen
 Specify the following information to configure DXP's application server:
 
 | Property Name | Meaning | Notes |
-| --- | ---------- | --- |
+| :--- | ---------- | :--- |
 | `dir` | The absolute path of the application server folder. | |
 | `extra.lib.dirs` | A comma-delimited list of extra directories containing any binaries or resources to add to the class path. | Use paths relative to `dir`. |
 | `global.lib.dir` | The application server's global library directory. | Use a path relative to `dir`. |

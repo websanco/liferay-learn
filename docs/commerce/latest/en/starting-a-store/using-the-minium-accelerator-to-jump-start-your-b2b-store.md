@@ -53,7 +53,7 @@ Minium makes it easy for buyers to search the catalog quickly. In addition to th
 Minium applies a number of other site configurations that are not set out-of-the-box for a blank site. The following table provides a list of notable additions or configurations that Minium makes to jump-start a B2B store:
 
 | Feature | Details |
-| --- | --- |
+| :--- | :--- |
 | [Warehouses](../managing-a-catalog/managing-inventory/setting-up-commerce-warehouses.md) | Italy, United States Northeast, United States Southwest |
 | [Site Type](../starting-a-store/sites-and-site-types.md) | B2B |
 | [Shipping Method Options](../store-administration/configuring-shipping-methods/using-the-flat-rate-shipping-method.md) | Standard Delivery, Expedited Delivery |

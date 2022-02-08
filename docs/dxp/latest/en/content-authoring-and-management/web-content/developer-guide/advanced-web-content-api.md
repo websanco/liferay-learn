@@ -73,7 +73,7 @@ curl \
 This example posts the `foo.png` image, using the relative image file path and Site id as parameters:
 
 | Method | Service | Endpoint |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | GET | `Document` | `/v1.0/sites/${2}/documents` |
 
 ```bash
@@ -81,7 +81,7 @@ This example posts the `foo.png` image, using the relative image file path and S
 ```
 
 | Parameter # | Description |
-| --- | --- |
+| :--- | :--- |
 | $1 | Relative path to file |
 | $2 | `siteId` |
 
@@ -184,7 +184,7 @@ Create a second Web Content Template without the Structure's `image` field:
 To return all existing Site Structures, use the `ContentStructures_GET_FromSite.sh` script. This script uses the `ContentStructure` service with a `GET` HTTP method and the [Site Id](#identify-the-site-id) parameter.
 
 | Method | Service | Endpoint |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | GET | `ContentStructure` | `/v1.0/sites/${1}/content-structures` |
 
 ```bash
@@ -192,7 +192,7 @@ To return all existing Site Structures, use the `ContentStructures_GET_FromSite.
 ```
 
 | Parameter # | Description |
-| --- | --- |
+| :--- | :--- |
 | $1 | `siteId` |
 
 This code shows the script's JSON output, where you can identify the Web Content Structure `id` (`"id" : 43563`) and `name` (`"name" : "Foo"`). The `contentStructureFields` section describes the Structure fields. This Structure contains four different fields named `TextReference`, `ImageReference`, `DateReference`, and `SingleSelectionReference`.
@@ -287,7 +287,7 @@ This code shows the script's JSON output, where you can identify the Web Content
 To obtain the Ids of the images you [posted before](#adding-the-images-to-liferay-dxp), use the `Documents_GET_FromSite.sh` script. This script uses the `Document` service with a `GET` HTTP method and the [Site Id](#identify-the-site-id) parameter.
 
 | Method | Service | Endpoint |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | GET | `Document` | `/v1.0/sites/${1}/documents` |
 
 ```bash
@@ -295,7 +295,7 @@ To obtain the Ids of the images you [posted before](#adding-the-images-to-lifera
 ```
 
 | Parameter # | Description |
-| --- | --- |
+| :--- | :--- |
 | $1 | `siteId` |
 
 ## Get the Web Content Templates
@@ -303,7 +303,7 @@ To obtain the Ids of the images you [posted before](#adding-the-images-to-lifera
 Use the `ContentTemplates_GET_FromSite` script to obtain all the Site's Templates. This script uses the `ContentTemplate` service with a `GET` HTTP method and the [Site Id](#identify-the-site-id) parameter.
 
 | Method | Service | Endpoint |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | GET | `ContentTemplate` | `/v1.0/sites/${1}/content-templates` |
 
 ```bash
@@ -311,7 +311,7 @@ Use the `ContentTemplates_GET_FromSite` script to obtain all the Site's Template
 ```
 
 | Parameter # | Description |
-| --- | --- |
+| :--- | :--- |
 | $1 | `siteId` |
 
 Below is the JSON output from the script. Notice this information:
@@ -393,7 +393,7 @@ Below is the JSON output from the script. Notice this information:
 The script [above](#getting-the-web-content-templates) gathers all the Site's Web Content Templates, but you can get information about a particular Template by referencing its Id. Use the `ContentTemplate_GET_ById.sh` cURL script for this purpose. This script uses the Site Id and Template Id parameters.
 
 | Method | Service | Endpoint |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | GET | `ContentTemplate` | `/v1.0/sites/${1}/content-templates/${2}` |
 
 ```bash
@@ -401,7 +401,7 @@ The script [above](#getting-the-web-content-templates) gathers all the Site's We
 ```
 
 | Parameter # | Description |
-| --- | --- |
+| :--- | :--- |
 | $1 | `siteId` |
 | $2 | Template `id` |
 
@@ -410,7 +410,7 @@ The script [above](#getting-the-web-content-templates) gathers all the Site's We
 The `StructuredContent_POST_ToSite.sh` cURL script creates a new Web Content article using the `POST` HTTP method and the sample Structure you [created before](#create-the-sample-structure). The script uses the [Site Id](#identifying-the-site-id), Structure Id, and foo.png's [image Id](#getting-the-images-ids) as parameters.
 
 | Method | Service | Endpoint |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | PUT | `StructuredContent` | `/v1.0/sites/{siteId}/structured-contents` |
 
 ```bash
@@ -420,7 +420,7 @@ The `StructuredContent_POST_ToSite.sh` cURL script creates a new Web Content art
 cURL script parameters:
 
 | Parameter # | Description |
-| --- | --- |
+| :--- | :--- |
 | $1 | `siteId` |
 | $2 | `contentStructureId` |
 | $3 | image `id` |
@@ -549,7 +549,7 @@ Because a Web Content article is not linked to a particular Template, you cannot
 The script `./StructuredContentRendered_GET_ById.sh` renders the Web Content using the Web Content and Template of your choice. This script uses the `GET` HTTP method in the `StructuredContent` service.
 
 | Method | Service | Endpoint |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | PUT | `StructuredContent` | `/v1.0/structured-contents/${1}/rendered-content/${2}` |
 
 ```bash
@@ -575,7 +575,7 @@ Foo30 Aug 2021 - 00:00:00Option13142925
 cURL scripts parameters:
 
 | Parameter # | Description |
-| --- | --- |
+| :--- | :--- |
 | $1 | Structured Content `id` |
 | $2 | `contentTemplateId` |
 
@@ -584,7 +584,7 @@ cURL scripts parameters:
 Use the `PUT` HTTP method with the `StructuredContent` service to replace the original Web Content information. The `StructuredContent_PUT_ById` script uses the Web Content and Structure identifiers to replace the article's name with `Baker` and the article's content from `Bar` to `Goo`.
 
 | Method | Service | Endpoint |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | PUT | `StructuredContent` | `/v1.0/structured-contents/{structuredContentId}` |
 
 ```bash
@@ -594,7 +594,7 @@ Use the `PUT` HTTP method with the `StructuredContent` service to replace the or
 cURL script parameters:
 
 | Parameter # | Description |
-| --- | --- |
+| :--- | :--- |
 | $1 | Structured Content `id` |
 | $2 | `contentStructureId` |
 | $3 | Image `id` |
