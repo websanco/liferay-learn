@@ -56,7 +56,7 @@ and more). The example project demonstrates how to insert content in a module.
 1. Declare the class as an implementation of `DynamicInclude` with the `@Component` annotation.
 
    ```java
-   @Component(service = ConfigurationScreen.class)
+   @Component(service = DynamicInclude.class)
    ```
 
 1. In the `include` method, add your custom content. The sample project uses a simple `PrintWriter` example.
@@ -67,7 +67,7 @@ and more). The example project demonstrates how to insert content in a module.
    :lines: 16-25
    ```
 
-1. In the `register` method, specify the dynamic include tag to use. The sample register method targets the dynamic include of Baker module's `view.jsp`.
+2. In the `register` method, specify the dynamic include tag to use. In the sample, the register method targets the dynamic include of Baker module's `view.jsp`.
 
    ```java
 	@Override
@@ -77,3 +77,11 @@ and more). The example project demonstrates how to insert content in a module.
    ```
 
 ## Insert the Dynamic Include
+
+Add the `liferay-util:dynamic-include` tag where you want the dynamic include to appear. In the sample, the tag is added to the `view.jsp` of the N3Q3 Baker Portlet.
+
+```{literalinclude} ./customizing-jsps-with-dynamic-includes/resources/liferay-n3q9.zip/n3q9-baker-web/src/main/resources/META-INF/resources/view.jsp
+   :language: jsp
+```
+
+Make sure the dynamic include `key` matches the target set in the `register()` method above.
