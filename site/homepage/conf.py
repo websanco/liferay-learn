@@ -3,8 +3,8 @@
 #
 
 author = "Liferay"
-copybutton_image_path = "img/paste.svg"
-copyright = "2020, Liferay"
+copybutton_image_svg = "img/paste.svg"
+copyright = "2022, Liferay"
 exclude_patterns = ["node_modules"]
 extensions = [
     "myst_parser",

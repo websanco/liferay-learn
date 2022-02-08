@@ -1,12 +1,8 @@
 from pathlib import Path
 
-import json
 import os
 from sphinx.builders.html import StandaloneHTMLBuilder
 from sphinx.util import logging
-
-import recommonmark
-from recommonmark.transform import AutoStructify
 
 # Variables to set product name, version, and language using directory paths
 language_path = Path(os.path.dirname(__file__))
@@ -20,8 +16,8 @@ product_path = version_path.parent
 #
 
 author = "Liferay"
-copybutton_image_path = "img/paste.svg"
-copyright = "2020, Liferay"
+copybutton_image_svg = "img/paste.svg"
+copyright = "2022, Liferay"
 extensions = [
     "myst_parser",
     "notfound.extension",
@@ -94,18 +90,6 @@ def read_redirects(redirects, redirects_file_name, app, exception):
 
 def setup(app):
     app.add_builder(WithRootSiteHTMLBuilder, True)
-
-    app.add_config_value(
-        "recommonmark_config",
-        {
-            "enable_auto_toc_tree": False,
-            "enable_math": False,
-            "enable_inline_math": False,
-        },
-        True,
-    )
-
-    app.add_transform(AutoStructify)
 
     app.connect("build-finished", write_redirects)
 
