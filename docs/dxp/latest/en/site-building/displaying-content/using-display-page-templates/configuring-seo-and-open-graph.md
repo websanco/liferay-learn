@@ -82,9 +82,9 @@ Determine whether to include a Display Page in your `sitemap.xml` file, as well 
 
 > Available: Liferay DXP/Portal 7.3+.
 
-[Open Graph](https://ogp.me) is an Internet protocol that standardizes how a Site's metadata appears on social networks. With Liferay DXP, you can create Display Page templates that dynamically configure a Page's Open Graph `<meta>` tags. In Liferay, these tags use the RDFa syntax for defining Open Graph structured data.
+[Open Graph](https://ogp.me/) is an Internet protocol that standardizes previews of Site content when shared in application contexts that support it, such as Facebook, Slack, and Twitter. It does this by embedding structured data in page headers as `<meta>` tags, similar to [RDFa](https://en.wikipedia.org/wiki/RDFa).
 
-For your displayed content, values defined here override default values defined elsewhere in your Liferay instance.
+With Liferay DXP, you can create Display Page templates that dynamically configure a Page's Open Graph `<meta>` tags. Values defined here override default values defined at the [Site](../../site-settings/configuring-open-graph.md) level.
 
 ```{note}
 Open Graph `<meta>` tags are only included in public page headers to unauthenticated users. They are not included in private pages, or in public pages when the user is logged in.

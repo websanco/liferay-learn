@@ -2,9 +2,9 @@
 
 > Available: Liferay DXP/Portal 7.3+
 
-[Open Graph](https://ogp.me/) is a protocol used to create rich previews of Site content when shared on applications supporting it, such as Facebook, Twitter, and Slack. It does this using `<meta>` tags embedded in Site Pages. Liferay uses the RDFa syntax for Open Graph structured data.
+[Open Graph](https://ogp.me/) is an Internet protocol that standardizes previews of Site content when shared in application contexts that support it, such as Facebook, Slack, and Twitter. It does this by embedding structured data in page headers as `<meta>` tags, similar to [RDFa](https://en.wikipedia.org/wiki/RDFa).
 
-By default, Open Graph `<meta>` tags are embedded in all public Liferay Pages, but you can disable this behavior if desired. You can also set default `og:image` properties used for Pages unless overridden.
+By default, Open Graph `<meta>` tags are embedded in all public Liferay Pages, but you can disable this behavior at the Site level if desired. In Site settings, you can also set default `og:image` properties. These values are used for all Pages, unless they're overridden at the [Page](../creating-pages/page-settings/configuring-individual-pages.md#open-graph) or [Display Page](../displaying-content/using-display-page-templates/configuring-seo-and-open-graph.md) level.
 
 ```{note}
 Open Graph `<meta>` tags are only included in public page headers to unauthenticated users. They are not included in private pages, or in public pages when the user is logged in.
