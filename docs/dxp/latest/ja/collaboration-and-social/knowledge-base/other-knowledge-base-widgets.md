@@ -26,7 +26,7 @@
 
 ## ナレッジベースセクションウィジェット
 
-```note::
+```{note}
    ナレッジベース3.0.0以降、ナレッジベースのセクションウィジェットは廃止され、 `カテゴリ<../../../content-authoring-and-management/tags-and-categories/organizing-content-with-categories-and-tags.md>`_ に置き換えられました。
 ```
 
@@ -58,7 +58,7 @@
 
 ## ナレッジベース検索ウィジェット
 
-```note::
+```{note}
    ナレッジベース3.0.0以降、ナレッジベース検索ウィジェットは廃止され、Liferay検索に置き換えられました。
 ```
 

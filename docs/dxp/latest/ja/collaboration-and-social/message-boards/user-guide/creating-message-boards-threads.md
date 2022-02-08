@@ -12,7 +12,7 @@
 1. **［Subject］**フィールドにタイトルを入力します。
 1. **［Body］**フィールドでスレッドのコンテンツを作成します。
 
-    ```note::
+    ```{note}
       This field uses the same editor as the Blogs app, except that it uses BBCode instead of HTML. For further instructions, see the documentation on `using the editor <https://help.liferay.com/hc/articles/360018173051-Using-the-Blog-Entry-Editor->`_.
     ```
 
@@ -27,7 +27,7 @@
 
     ![図2. 添付ファイルをアップロードする](./creating-message-boards-threads/images/03.png)
 
-```important::
+```{important}
    You can enable automatic antivirus scanning to scan files on upload. For details, please see `Enabling Antivirus Scanning for Uploaded Files <../../../system-administration/file-storage/enabling-antivirus-scanning-for-uploaded-files.md>`_.
 ```
 

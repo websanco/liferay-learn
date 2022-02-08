@@ -48,7 +48,7 @@ LiferayDXPのアセットフレームワーク<!-- TODO: 利用可能な場合�
 
 ![管理者は、複数のサイトにわたるウィジェットの評価を有効または無効にすることもできます。](./using-the-ratings-system/images/06.png)
 
-```note::
+```{note}
    コンテンツの評価をサポートするすべてのウィジェットで、コントロールパネルから評価を有効または無効にできるわけではありません。
 ```<!-- TODO: (When developer-oriented article available) You can also enable ratings for your own applications by adding just a few lines of code. See the article on \[adding support for ratings\](link) to your content widgets for more information. -->## 追加情報
 
