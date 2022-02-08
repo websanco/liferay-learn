@@ -8,13 +8,12 @@ verify_ssl = true
 [packages]
 docutils = "==0.16"
 jinja2 = "==2.11.3"
-myst-parser = "*"
+myst-parser = "~=0.16.1"
 nodeenv = "*"
 sphinxext-opengraph = "*"
 sphinx = "==4.4.0"
 sphinx-copybutton = "*"
 sphinx-intl = "*"
-sphinx-markdown-tables = "*"
 sphinx-notfound-page = "*"
 wheel = "*"
 

@@ -11,7 +11,6 @@ extensions = [
     "notfound.extension",
     "sphinx_copybutton",
     "sphinxext.opengraph",
-    "sphinx_markdown_tables",
 ]
 html_additional_pages = {"index": "index.html"}
 html_css_files = ["main.min.css"]

@@ -23,7 +23,6 @@ extensions = [
     "notfound.extension",
     "sphinx_copybutton",
     "sphinxext.opengraph",
-    "sphinx_markdown_tables",
 ]
 html_context = {
     "available_languages": os.listdir(".."),
