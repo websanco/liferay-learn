@@ -3,6 +3,7 @@
 .project
 .settings
 .vscode
+docs/**/bin/
 docs/**/build/
 docs/**/bundles/
 docs/**/liferay-????-theme.war
@@ -22,4 +23,7 @@ docs/**/liferay-????.zip/gradlew.bat
 docs/**/liferay-????.zip/settings.gradle
 docs/**/liferay-????.zip/setup_tutorial.sh
 docs/**/liferay-????.zip/source-formatter-suppressions.xml
+docs/**/liferay-????.zip/.yarnrc
+docs/**/liferay-????.zip/yarn.lock
 node_modules
+node_modules_cache
