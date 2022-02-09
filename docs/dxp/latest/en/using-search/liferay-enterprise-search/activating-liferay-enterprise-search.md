@@ -4,6 +4,10 @@ Starting with Liferay DXP 7.4, the Liferay Enterprise Search (LES) applications 
 
 LES is enabled by default and requires no additional installation steps. However, a LES add-on subscription must be purchased to receive official Liferay Support and additional benefits. Maintenance and updates to LES applications are delivered through Fix Pack and Service Pack releases. If you do not have a subscription to LES, access can be disabled completely by following these steps described below.
 
+```{note}
+[LES Search Experiences](./search-experiences.md) was added to the DXP bundle in Liferay DXP 7.4 Update 5. Search Experiences will be made available on Liferay DXP 7.3 via the Customer Portal as an add-on application.
+```
+
 ## Local Bundle: Deactivating LES
 
 LES applications are enabled by default in all Liferay DXP 7.4+ bundles. If you don't have a subscription and the accompanying license to use LES, deactivate it by setting the `enterprise.product.enterprise.search.enabled` [portal property](../../installation-and-upgrades/reference/portal-properties.md) to `false`:
