@@ -38,3 +38,7 @@ Liferay Search Experiences will be made available to Liferay DXP customers with 
 
 * Starting with Liferay DPX 7.4 Update 5 (see more about updates [here](../../../installation-and-upgrades/maintaining-a-liferay-installation/updating-liferay.md)), Search Experiences is a bundled application, like all the LES apps.
 * In Liferay DXP 7.3, Search Experiences will be made available to LES subscribers through the Customer Portal as an add-on application. Check [Liferay Enterprise Search for Liferay DXP 7.3](https://customer.liferay.com/downloads/-/download/liferay-enterprise-search-for-liferay-dxp-7-3) for availability.
+
+## Search Experiences REST API
+
+The Search Experiences applications publish and consume REST API endpoints (under the path `search-experiences-rest`) to remain consistent with Liferay's other native applications. It is not advisable for third party code to consume the Search Experiences APIs as they are volatile: this includes the `/search` endpoint which is only intended to be used by the [Blueprints preview feature](./search-experiences/creating-and-managing-search-blueprints.md#testing-a-blueprint-with-the-preview-sidebar). Schema changes are expected to happen as the features evolve, and Liferay will not support custom code that uses the Search Experiences APIs. This decision may change in the future as the APIs become more stable.
