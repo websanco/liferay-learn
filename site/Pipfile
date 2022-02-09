@@ -15,6 +15,7 @@ sphinx = "==4.4.0"
 sphinx-copybutton = "*"
 sphinx-intl = "*"
 sphinx-notfound-page = "*"
+sphinx-sitemap = "~=2.2.0"
 wheel = "*"
 
 [requires]

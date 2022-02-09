@@ -24,8 +24,10 @@ extensions = [
     "myst_parser",
     "notfound.extension",
     "sphinx_copybutton",
+    "sphinx_sitemap",
     "sphinxext.opengraph",
 ]
+html_baseurl = "https://learn.liferay.com/"
 html_context = {
     "available_languages": os.listdir(".."),
     "product_name": os.path.basename(product_path),
@@ -51,6 +53,7 @@ ogp_site_name = "Liferay Learn"
 ogp_site_url = "https://learn.liferay.com/"
 project = "Liferay Learn"
 release = "1.0"
+sitemap_url_scheme = os.path.basename(product_path) + "/latest/{lang}{link}"
 source_suffix = [".md", ".rst"]
 templates_path = ["_template"]
 version = "1.0"
@@ -74,7 +77,6 @@ class WithRootSiteHTMLBuilder(StandaloneHTMLBuilder):
             doc_context["parents"].insert(0, {"link": site_parent, "title": site_title})
 
         return doc_context
-
 
 def read_redirects(redirects, redirects_file_name, app, exception):
     redirects_file = os.path.join(app.srcdir, redirects_file_name)
