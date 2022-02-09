@@ -1,0 +1,8 @@
+Bundle-Name: Acme P5D2 API
+Bundle-SymbolicName: com.acme.p5d2.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.acme.p5d2.exception,\
+	com.acme.p5d2.model,\
+	com.acme.p5d2.service,\
+	com.acme.p5d2.service.persistence
