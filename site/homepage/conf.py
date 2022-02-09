@@ -11,6 +11,7 @@ extensions = [
 ]
 html_additional_pages = {"index": "index.html"}
 html_css_files = ["main.min.css"]
+html_extra_path = ["robots.txt", "sitemapindex.xml"]
 html_favicon = "_static/img/favicon.ico"
 # html_js_files = ["main.js"]
 html_logo = "_static/img/liferay-waffle.svg"
