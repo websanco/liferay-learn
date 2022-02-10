@@ -1,6 +1,8 @@
 # Wiki権限リファレンス
 
-この記事では、_［Wiki］_ウィジェットでの権限について説明し、ユーザーおよびロールに権限を割り当てる際のリファレンスとして機能します。 DXPのロールと権限の詳細は、[Roles and Permissions](https://help.liferay.com/hc/articles/360017895212-Roles-and-Permissions)をご覧ください 。
+この記事では、_［Wiki］_ウィジェットでの権限について説明し、ユーザーおよびロールに権限を割り当てる際のリファレンスとして機能します。 DXPのロールと権限の詳細は、 [Roles and Permissions](https://help.liferay.com/hc/articles/360017895212-Roles-and-Permissions) をご覧ください 。
+
+<a name="wikiノードの権限" />
 
 ## Wikiノードの権限
 
@@ -24,6 +26,8 @@
 | Subscribe      | ノードにサブスクライブする機能をユーザーに付与します                                                                                           |
 | View           | ユーザーが_ Wikiノード_を表示できるようにします                                                                                          |
 
+<a name="wikiページの権限" />
+
 ## Wikiページの権限
 
 Wikiページの権限を表示するには：
@@ -43,6 +47,8 @@ Wikiページの権限を表示するには：
 | View              | ユーザーが_ Wikiページ_を表示できるようにします        |
 | Add Discussion    | ユーザーが_ Wikiページ_にコメントできるようにします      |
 
+<a name="wikiウィジェットの権限" />
+
 ## Wikiウィジェットの権限
 
 1. _［Wiki］_ウィジェットがデプロイされているサイトページに移動します。
@@ -59,6 +65,8 @@ Wikiページの権限を表示するには：
 | Configuration        | _［Wiki］_ウィジェットの［設定］メニューにアクセスする機能をユーザーに付与します |
 | View                 | ユーザーが_［Wiki］_ウィジェットを表示できるようにします             |
 | Add to Page          | _［Wiki］_ウィジェットをサイトページに追加する機能を付与します          |
+
+<a name="wikiの権限" />
 
 ## Wikiの権限
 

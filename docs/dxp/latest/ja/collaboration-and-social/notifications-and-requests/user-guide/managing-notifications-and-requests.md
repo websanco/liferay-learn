@@ -12,6 +12,8 @@
 
     ![ユーザーのアバターと通知](./managing-notifications-and-requests/images/02.png)
 
+<a name="通知の管理" />
+
 ## 通知の管理
 
 蓄積された通知を管理およびソートするには：
@@ -49,11 +51,15 @@
 
     ![複数の通知ステータスの管理](./managing-notifications-and-requests/images/05.png)
 
+<a name="サイトへの参加リクエストの管理" />
+
 ## サイトへの参加リクエストの管理
 
 ユーザーがサイトへの参加リクエストを受け取ると、そのリクエストが*［Requests List］*タブに表示されます。 ユーザーは_［Confirm］_をクリックしてサイトに参加するか、_［Ignore］_をクリックして辞退することができます。
 
 ![複数の通知ステータスの管理](./managing-notifications-and-requests/images/06.png)
+
+<a name="追加情報" />
 
 ## 追加情報
 

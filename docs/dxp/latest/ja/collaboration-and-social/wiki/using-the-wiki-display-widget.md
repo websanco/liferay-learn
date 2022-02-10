@@ -24,6 +24,8 @@
 
 _［Wiki Display］_ウィジェットに選択した_Wikiページ_が表示されます。
 
+<a name="追加情報" />
+
 ## 追加情報
 
 * [Page Menu Widget](./using-the-page-menu-widget.md)

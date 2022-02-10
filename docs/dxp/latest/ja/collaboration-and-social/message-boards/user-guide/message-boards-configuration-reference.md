@@ -5,6 +5,8 @@
 1. _［サイト管理］_ &rarr; _［Content & Data］_ &rarr; _［掲示板］_に移動します。
 1. _［オプション］_メニュー &rarr; _［Configuration］_の順にクリックします。
 
+<a name="generalタブ" />
+
 ## ［General］タブ
 
 ![［General］タブ](./message-boards-configuration-reference/images/01.png)
@@ -18,6 +20,8 @@
 | Enable Ratings                      | ユーザーがスレッドを評価できるようにします                                                                    |
 | Thread as Question by Default       | 有効にすると、最初のスレッドは常に質問になり、後続のスレッドを回答としてマークできます。デフォルトでは無効になっています                             |
 | Show Recent Posts from Last         | 時間に基づいて以前の投稿の表示数を選択するためのドロップダウンメニュー（_［24 Hours］_、_［7 Days］_、_［30 Days］_、または_［365 Days］_） |
+
+<a name="email-from" />
 
 ## Email From
 
@@ -33,6 +37,8 @@
 
 ![［Email From］の用語の定義](./message-boards-configuration-reference/images/08.png)
 
+<a name="message-added-email" />
+
 ## Message Added Email
 
 _［Message Added Email］_タブには、メッセージボードのスレッドが作成されるたびに送信される電子メールのテンプレートが含まれています。
@@ -43,6 +49,8 @@ _［Message Added Email］_タブには、メッセージボードのスレッ�
 
 ![［Message Added Email］の用語の定義](./message-boards-configuration-reference/images/09.png)
 
+<a name="message-updated-email" />
+
 ## Message Updated Email
 
 _［Message Added Email］_タブには、メッセージボードのスレッドがアップデートされるたびに送信される電子メールのテンプレートが含まれています。
@@ -52,6 +60,8 @@ _［Message Added Email］_タブには、メッセージボードのスレッ�
 各スレッドからデータとメタデータをインポートする自動メールを作成する方法の詳細は、_［Definition of Terms］_メニューを展開してください。
 
 ![［Message Added Email］の用語の定義](./message-boards-configuration-reference/images/09.png)
+
+<a name="thread-priorities" />
 
 ## Thread Priorities
 
@@ -65,6 +75,8 @@ _［Message Added Email］_タブには、メッセージボードのスレッ�
 | Image              | 優先度レベルに関連付けられたアイコンの名前。完全なURLまたはテーマに関連するパスを指定できます     |
 | Priority           | スレッドの優先度レベル。番号が大きいスレッドほど重要です。降順で入力してください。            |
 
+<a name="user-ranks" />
+
 ## User Ranks
 
 ![User Ranks](./message-boards-configuration-reference/images/06.png)
@@ -76,6 +88,8 @@ _［Message Added Email］_タブには、メッセージボードのスレッ�
 | Default Language     | インスタンスのデフォルト言語は英語に設定されており、ここでは変更できません。               |
 | Localized Language   | サポートされているすべての言語のドロップダウンメニュー。管理者は異なる言語で異なるランクを入力できます。 |
 | User Ranks Text Area | ユーザー定義のランクが入力されるテキスト領域                               |
+
+<a name="rss" />
 
 ## RSS
 

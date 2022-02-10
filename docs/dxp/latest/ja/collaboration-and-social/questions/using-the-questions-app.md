@@ -6,6 +6,8 @@
 
 質問が作成されると、タグを使って他の人が関連するコンテンツを見つけやすくすることもできます。
 
+<a name="質問アプリをサイトに追加する" />
+
 ## 質問アプリをサイトに追加する
 
 質問アプリをサイトに追加するには、
@@ -25,6 +27,8 @@
 Note that only users with the requisite permissions have the ability to create topics.
 -->
 
+<a name="トピックの作成" />
+
 ## トピックの作成
 
 1. *［New Topic］*ボタンをクリックします。
@@ -37,6 +41,8 @@ Note that only users with the requisite permissions have the ability to create t
 
    トピックは何種類でも作ることができます。
 
+<a name="質問をする" />
+
 ## 質問をする
 
 1. トピックを作成したら、質問を始めることができます。 *［Ask Question］* ボタンをクリックして、新しい質問を作成します。
@@ -48,6 +54,8 @@ Note that only users with the requisite permissions have the ability to create t
    ![フォームにタイトルと本文を記入します。](using-the-questions-app/images/04.png)
 
    最後に、*［Post Your Question］*ボタンをクリックします。
+
+<a name="質問に答える" />
 
 ## 質問に答える
 
@@ -79,6 +87,8 @@ Note that only users with the requisite permissions have the ability to create t
 
 **編集する:** ユーザーは自分の回答を編集できます。
 
+<a name="質問を探す" />
+
 ## 質問を探す
 
 質問を検索するには、いくつかの方法があります。
@@ -92,6 +102,8 @@ Note that only users with the requisite permissions have the ability to create t
 **タグ:** タグに基づいて質問を絞り込みます。 *［Tags］*タブをクリックすると、使用可能なタグとそれに関連する質問が表示されます。
 
 ![［タグ］タブをクリックすると、すべてのタグが表示されます。](using-the-questions-app/images/09.png)
+
+<a name="トピックと質問のサブスクリプション" />
 
 ## トピックと質問のサブスクリプション
 
@@ -109,6 +121,8 @@ Note that only users with the requisite permissions have the ability to create t
 
 ![［通知スレッド］タブをクリックすると、購読しているすべての内容が表示されます。](using-the-questions-app/images/12.png)
 
+<a name="my-activity" />
+
 ## My Activity
 
 *［My Activity］*タブをクリックすると、質問アプリの使用状況を追跡できます。
@@ -116,6 +130,8 @@ Note that only users with the requisite permissions have the ability to create t
 ![［マイアクティビティ］タブをクリックして、質問アプリの使用状況を追跡します。](using-the-questions-app/images/13.png)
 
 ここには、あなたの順位、投稿された質問の数、各質問の一覧が表示されます。
+
+<a name="次のステップ" />
 
 ## 次のステップ
 

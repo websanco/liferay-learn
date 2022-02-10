@@ -1,5 +1,7 @@
 # WikiウィジェットUIリファレンス
 
+<a name="frontpage" />
+
 ## FrontPage
 
 _［FrontPage］_タブは、_［Wiki］_ウィジェットのランディングページです。 ここから、コンテンツ作成者は、子ページの追加、既存の_FrontPage_ページの編集、_FrontPage_ページの詳細の表示、ページの印刷、評価の追加、Wikiへのコメントの追加を行うことができます。
@@ -46,11 +48,15 @@ _［Attachments］_タブには、Wikiページのすべての添付ファイル
 
 ![Attachments](./wiki-widget-ui-reference/images/10.png)
 
+<a name="recent-changes" />
+
 ## Recent Changes
 
 _［Recent Changes］_タブには、選択したノードのすべてのページが最新のものから表示されます。
 
 ![Recent Changes](./wiki-widget-ui-reference/images/02.png)
+
+<a name="all-pages" />
 
 ## All Pages
 
@@ -58,11 +64,15 @@ _［All Pages］_タブには、選択したWikiノードで作成されたす�
 
 ![All Pages](./wiki-widget-ui-reference/images/03.png)
 
+<a name="orphan-pages" />
+
 ## Orphan Pages
 
 孤立ページは、DXPサイトに存在するWikiページで、他のページはリンクされていません。
 
 ![Orphan Pages](./wiki-widget-ui-reference/images/04.png)
+
+<a name="draft-pages" />
 
 ## Draft Pages
 

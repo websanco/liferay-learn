@@ -7,6 +7,8 @@ developer-guide/wiki-api-basics.md
 
 近日公開!
 
+<a name="wiki-api" />
+
 ## Wiki API
 
 * [Wiki APIの基本](./developer-guide/wiki-api-basics.md)

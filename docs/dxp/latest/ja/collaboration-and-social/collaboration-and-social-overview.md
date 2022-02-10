@@ -10,6 +10,8 @@ Liferay DXPは、ユーザーが柔軟で社会的で拡張可能なコラボレ
   - [招待](#invitations)
   - [ナレッジベース](#knowledge-base)
 
+<a name="メッセージボード" />
+
 ## メッセージボード
 
 メッセージボードアプリは、コンテンツが豊富なディスカッションのためのプラットフォームであり、モデレート、サブスクリプション、およびスレッド管理のためのツールを提供します。
@@ -18,13 +20,17 @@ Liferay DXPは、ユーザーが柔軟で社会的で拡張可能なコラボレ
 
 メッセージボードアプリを使用してフォーラムを構築するには、[メッセージボード入門](./message-boards/user-guide/getting-started-with-message-boards.md)を参照してください。
 
+<a name="wiki" />
+
 ## Wiki
 
-DXPには、豊富なライティング環境、記事のバージョン管理、および複数のwikiノードのサポートを提供するフル機能のWikiアプリケーションが含まれています。 DXPのWikiは、ポータルの[ユーザー管理](https://help.liferay.com/hc/articles/360029131931-Introduction-to-Managing-Users) 、[タグ付け](https://help.liferay.com/hc/articles/360028820472-Tagging-Content) 、[セキュリティ](https://help.liferay.com/hc/articles/360028711192-Introduction-to-Securing-Liferay-DXP)機能と完全に統合されています。
+DXPには、豊富なライティング環境、記事のバージョン管理、および複数のwikiノードのサポートを提供するフル機能のWikiアプリケーションが含まれています。 DXPのWikiは、ポータルの [ユーザー管理](https://help.liferay.com/hc/articles/360029131931-Introduction-to-Managing-Users) 、 [タグ付け](https://help.liferay.com/hc/articles/360028820472-Tagging-Content) 、 [セキュリティ](https://help.liferay.com/hc/articles/360028711192-Introduction-to-Securing-Liferay-DXP) 機能と完全に統合されています。
 
 ![図2：Wikiウィジェットは、サイトページにWikiを表示します。](./collaboration-and-social-overview/images/02.png)
 
 Wikiの作成を開始するには、[ Wiki入門](./wiki/user-guide/getting-started-with-wikis.md)を参照してください。
+
+<a name="ソーシャルツール" />
 
 ## ソーシャルツール
 
@@ -37,6 +43,8 @@ Wikiの作成を開始するには、[ Wiki入門](./wiki/user-guide/getting-sta
 
 ![図3：アクティビティウィジェットはユーザーアクティビティを追跡します。](./collaboration-and-social-overview/images/03.png)
 
+<a name="招待" />
+
 ## 招待
 
 *メンバーを招待*ウィジェットを使用すると、サイト管理者はサイトに参加するための招待状を送信できます。 ユーザーはこのような招待を確認すると、サイト管理者が定義したロールに割り当てられたサイトメンバーになります。 クリックして[サイトメンバーシップ](../site-building/building-sites/adding-members-to-sites.md)の詳細をご覧ください。
@@ -46,6 +54,8 @@ Wikiの作成を開始するには、[ Wiki入門](./wiki/user-guide/getting-sta
 ユーザーが招待されると、要求を確認または無視できます。
 
 ![図5：サイトへの参加リクエストの確認](./collaboration-and-social-overview/images/05.png)
+
+<a name="ナレッジベース" />
 
 ## ナレッジベース
 

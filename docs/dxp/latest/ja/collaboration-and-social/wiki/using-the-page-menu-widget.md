@@ -16,6 +16,8 @@
 
     ![モーダルウィンドウが閉じ、設定されたページメニューが表示されます。](./using-the-page-menu-widget/images/03.png)
 
+<a name="追加情報" />
+
 ## 追加情報
 
 - [Wikiの概要](./getting-started-with-wikis.md)

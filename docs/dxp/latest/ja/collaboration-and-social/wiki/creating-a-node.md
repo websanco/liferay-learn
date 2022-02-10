@@ -2,7 +2,9 @@
 
 1つのDXPサイトに複数のWikiページが作成されるときは、追加のwikiノードを作成すると、それに応じてwikiページを整理するための緩い構造を提供できます。 ユーザーはノードを作成して、さまざまなトピックをカバーする記事をセグメント化できます。
 
-[必要な権限](./wiki-permissions.md)（少なくとも_ノードの追加_と_アクセス許可_）を持つ認証されたユーザーのみがノードを作成できます。 DXPのロールと権限の詳細は、[Roles and Permissions](https://help.liferay.com/hc/articles/360017895212-Roles-and-Permissions)をご覧ください 。
+[必要な権限](./wiki-permissions.md)（少なくとも_ノードの追加_と_アクセス許可_）を持つ認証されたユーザーのみがノードを作成できます。 DXPのロールと権限の詳細は、 [Roles and Permissions](https://help.liferay.com/hc/articles/360017895212-Roles-and-Permissions) をご覧ください 。
+
+<a name="新しいノードを作成する" />
 
 ## 新しいノードを作成する
 
@@ -19,6 +21,8 @@
 
 ![新しいノードを作成する](./creating-a-node/images/01.png)
 
+<a name="新しいノードを選択する" />
+
 ## 新しいノードを選択する
 
 新しいノードに新しいWikiページを作成するには：
@@ -31,6 +35,8 @@
 ![新しいノードを選択する](./creating-a-node/images/02.png)
 
 新しいノードで、_［This page is empty. Edit it to add some text.］_をクリックして、現在のノードの_［FrontPage］_ページを編集します。
+
+<a name="追加情報" />
 
 ## 追加情報
 

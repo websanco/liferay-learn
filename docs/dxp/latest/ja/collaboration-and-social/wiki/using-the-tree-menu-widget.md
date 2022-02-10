@@ -25,6 +25,8 @@ _［Tree Menu］_ウィジェットがページに追加されると、デフォ
 
 ![［Tree Menu］ウィジェットの設定](./using-the-tree-menu-widget/images/04.png)
 
+<a name="追加情報" />
+
 ## 追加情報
 
 * [Page Menu Widget](./using-the-page-menu-widget.md)

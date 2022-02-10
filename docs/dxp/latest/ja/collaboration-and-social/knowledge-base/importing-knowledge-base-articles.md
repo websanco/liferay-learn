@@ -1,10 +1,10 @@
 # ナレッジベース記事のインポート
 
-ナレッジベースアプリは、記事をまとめてインポートできます。 これにより、記事を公開する前に記事を事前に準備できるようになります。 記事は[Markdown](http://commonmark.org/)ファイルとしてナレッジベースに取り込まれます。 Markdownは、読みやすいテキストのみのファイル形式ですが、記事をフォーマットするために必要なすべての機能をサポートしています。
+ナレッジベースアプリは、記事をまとめてインポートできます。 これにより、記事を公開する前に記事を事前に準備できるようになります。 記事は [Markdown](http://commonmark.org/) ファイルとしてナレッジベースに取り込まれます。 Markdownは、読みやすいテキストのみのファイル形式ですが、記事をフォーマットするために必要なすべての機能をサポートしています。
 
 注：記事をインポートするには、ロールに*［ナレッジ・ベース］* &rarr; *［リソース権限：記事をインポートする］*へのアクセス許可が付与されている必要があります。
 
-ナレッジベースでは、[Multi-Markdown](http://fletcher.github.io/MultiMarkdown-4/)として知られるMarkdown言語をサポートしています。 この言語は、オリジナルのMarkdownに、テーブルの書式設定、画像キャプション、脚注などの機能を追加したものです。
+ナレッジベースでは、 [Multi-Markdown](http://fletcher.github.io/MultiMarkdown-4/) として知られるMarkdown言語をサポートしています。 この言語は、オリジナルのMarkdownに、テーブルの書式設定、画像キャプション、脚注などの機能を追加したものです。
 
 ナレッジベースがMarkdown記事をインポートするには、次の要件に準拠する必要があります。
 
@@ -24,7 +24,7 @@
 
 上の最初の行で、ヘッダーのID割り当て`id=modern-pentathlon`に注目してください。 インポート時に、ID値はナレッジベース記事のURLタイトルになります。
 
-Markdownはフレーバーを備えた規格です。[Github Flavored Markdown](https://help.github.com/articles/github-flavored-markdown)、提案されている[一般的なMarkdown構文](http://www.commonmark.org/)、Markdownをサポートするフォーラム（reddit、StackExchangeなど）、Markdownエディター、および公式のインターネットメディアタイプ（テキスト/markdown）にするための[IETFドラフト](https://tools.ietf.org/html/rfc7763)があります。 ）。 Markdownが好まれる理由は以下のとおりです。
+Markdownはフレーバーを備えた規格です。 [Github Flavored Markdown](https://help.github.com/articles/github-flavored-markdown) 、提案されている [一般的なMarkdown構文](http://www.commonmark.org/) 、Markdownをサポートするフォーラム（reddit、StackExchangeなど）、Markdownエディター、および公式のインターネットメディアタイプ（テキスト/markdown）にするための [IETFドラフト](https://tools.ietf.org/html/rfc7763) があります。 ）。 Markdownが好まれる理由は以下のとおりです。
 
 * 読みやすい。 Markdownを知らなくても、構文を除外せずに読むことができます。
 

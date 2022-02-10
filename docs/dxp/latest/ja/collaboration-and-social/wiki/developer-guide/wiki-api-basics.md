@@ -2,6 +2,8 @@
 
 LiferayのHeadless Deliveryアプリケーションは、[Wiki](../getting-started-with-wikis.md)アプリケーションにRESTサービスを提供します。 これらのサービスを使用すると、Wikiノードとページを追加したり、それらの情報を一覧表示したり、コンテンツを変更したり、完全に削除したりできます。 ここでは、cURLコマンドとJavaクラスを使用してこれらのサービスを呼び出します。
 
+<a name="チュートリアルリソースの準備" />
+
 ## チュートリアルリソースの準備
 
 チュートリアルに進む前に、まずクリーンなLiferay Dockerコンテナをセットアップし、提供されたチュートリアルコードを使用できるように準備します。
@@ -24,7 +26,7 @@ docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
 
 このチュートリアルでは、Headless APIを示すサンプルコードを提供します。 このコードには、チュートリアル全体で使用するためのサンプルのcURLファイルとJavaファイルの両方が含まれています。
 
-次のコマンドを実行して、[サンプルコード](https://learn.liferay.com/dxp/latest/en/collaboration-and-social/wiki/developer-guide/liferay-q8u2.zip)をダウンロードして解凍します。
+次のコマンドを実行して、 [サンプルコード](https://learn.liferay.com/dxp/latest/ja/collaboration-and-social/wiki/developer-guide/liferay-q8u2.zip) をダウンロードして解凍します。
 
 ```bash
 curl https://learn.liferay.com/dxp/latest/en/collaboration-and-social/wiki/developer-guide/liferay-q8u2.zip -O
@@ -43,6 +45,8 @@ cd liferay-q8u2/java
 ```bash
 javac -classpath .:* *.java
 ```
+
+<a name="wikinodeおよびwikipage-headless-apiの使用" />
 
 ## WikiNodeおよびWikiPage Headless APIの使用
 
@@ -390,6 +394,8 @@ cURLコマンドまたはJavaクラスのいずれかを使用して、WikiPage 
    }
    ```
 
+<a name="サンプルのcurlスクリプトの検証" />
+
 ## サンプルのcURLスクリプトの検証
 
 以下は、チュートリアルのcURLコマンドの代表的な例です。
@@ -411,6 +417,8 @@ cURLコマンドまたはJavaクラスのいずれかを使用して、WikiPage 
 ```{literalinclude} ./wiki-api-basics/resources/liferay-q8u2.zip/curl/WikiPages_GET_FromNode.sh
    :language: bash
 ```
+
+<a name="サンプルのjavaクラスの検証" />
 
 ## サンプルのJavaクラスの検証
 
@@ -439,6 +447,8 @@ cURLコマンドまたはJavaクラスのいずれかを使用して、WikiPage 
    :language: java
    :lines: 6-25
 ```
+
+<a name="追加情報" />
 
 ## 追加情報
 

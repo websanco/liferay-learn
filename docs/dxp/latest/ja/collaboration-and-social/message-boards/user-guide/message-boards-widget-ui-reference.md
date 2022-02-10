@@ -1,10 +1,14 @@
 # ［掲示板］ウィジェットのUIリファレンス
 
+<a name="categories" />
+
 ## Categories
 
 _［Categories］_タブは、_［Message Boards］_ウィジェットに移動したときのデフォルトのランディングページです。 すべてのカテゴリがこのタブに表示されます。 さらに、ルートレベルで作成されたすべてのスレッドがここに表示されます。
 
 ![［Categories］タブ](./message-boards-widget-ui-reference/images/04.png)
+
+<a name="recent-postsタブ" />
 
 ## ［Recent Posts］タブ
 
@@ -12,11 +16,15 @@ _［Recent Posts］_タブには、スレッドが投稿されたカテゴリに
 
 ![［Recent Posts］タブ](./message-boards-widget-ui-reference/images/03.png)
 
+<a name="my-posts" />
+
 ## My Posts
 
 _［My Posts］_タブは、現在のユーザー（たとえば、_Jane Doe_）によって作成されたすべての投稿を追跡します。
 
 ![［My Posts］タブ](./message-boards-widget-ui-reference/images/02.png)
+
+<a name="my-subscriptions" />
 
 ## My Subscriptions
 
@@ -25,6 +33,8 @@ _［My Posts］_タブは、現在のユーザー（たとえば、_Jane Doe_）
 _［My Subscriptions］_タブには、現在のユーザーがサブスクライブしているすべてのカテゴリとスレッドが表示されます。
 
 ![［My Subscriptions］タブ](./message-boards-widget-ui-reference/images/05.png)
+
+<a name="statistics" />
 
 ## Statistics
 
