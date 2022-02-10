@@ -1,0 +1,8 @@
+Bundle-Name: Acme J7Z3 API
+Bundle-SymbolicName: com.acme.j7z3.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.acme.j7z3.exception,\
+	com.acme.j7z3.model,\
+	com.acme.j7z3.service,\
+	com.acme.j7z3.service.persistence
