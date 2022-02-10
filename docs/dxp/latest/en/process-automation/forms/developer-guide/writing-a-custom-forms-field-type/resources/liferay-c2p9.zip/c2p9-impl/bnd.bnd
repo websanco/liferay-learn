@@ -1,3 +1,4 @@
 Bundle-Name: Acme C2P9 Form Field Implementation
 Bundle-SymbolicName: com.acme.c2p9.impl
 Bundle-Version: 1.0.0
+Web-ContextPath: /dynamic-data-mapping-form-field-type-c2p9-slider
