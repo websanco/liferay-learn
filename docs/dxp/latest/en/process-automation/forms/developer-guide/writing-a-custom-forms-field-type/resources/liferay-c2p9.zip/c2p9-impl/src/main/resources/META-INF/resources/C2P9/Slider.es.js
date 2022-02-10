@@ -5,12 +5,12 @@ import React from 'react';
 const Slider = ({readOnly, name, onChange, predefinedValue, value}) => 
 	<input 
 		className="ddm-field-slider form-control slider"
-		onInput={onChange}
 		disabled={readOnly}
 		id="myRange"
 		max={100}
 		min={1}
 		name={name}
+		onInput={onChange}
 		type="range"
 		value={value ? value : predefinedValue}/>
 
