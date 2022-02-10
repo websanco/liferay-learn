@@ -7,9 +7,6 @@ import com.liferay.frontend.js.loader.modules.extender.npm.NPMResolver;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
 
-/**
- * @author renato
- */
 @Component(
 	immediate = true,
 	property = {

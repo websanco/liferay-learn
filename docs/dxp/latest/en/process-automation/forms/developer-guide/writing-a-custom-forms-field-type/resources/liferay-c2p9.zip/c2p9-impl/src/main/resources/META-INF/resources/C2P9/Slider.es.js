@@ -2,10 +2,6 @@ import {FieldBase} from 'dynamic-data-mapping-form-field-type/FieldBase/ReactFie
 import {useSyncValue} from 'dynamic-data-mapping-form-field-type/hooks/useSyncValue.es';
 import React from 'react';
 
-/**
- * Slider React Component
- */
-
 const Slider = ({readOnly, name, onChange, predefinedValue, value}) => 
 	<input 
 		className="ddm-field-slider form-control slider"
