@@ -28,7 +28,7 @@ public class P5D2EntryUpgradeProcess extends UpgradeProcess {
 		alter(
 			P5D2EntryTable.class,
 			new AlterColumnName("foo", "bar VARCHAR(75) null"),
-			new AlterColumnType("able","DATE"),
+			new AlterColumnType("able", "DATE"),
 			new AlterTableAddColumn("charlie", "VARCHAR(75) null"),
 			new AlterTableDropColumn("baker"));
 	}
