@@ -1,0 +1,8 @@
+buildService {
+	apiDir = "../../1.0.0/p5d2-api/src/main/java"
+}
+
+dependencies {
+	compileOnly group: "com.liferay.portal", name: "release.portal.api"
+	compileOnly project(":1.0.0:p5d2-api")
+}
