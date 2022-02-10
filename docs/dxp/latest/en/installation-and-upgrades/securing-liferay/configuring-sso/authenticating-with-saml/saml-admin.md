@@ -65,16 +65,16 @@ Your key is now imported.
 
 1. You can also generate an encryption certificate. This is a separate key for encrypting assertions. If you want assertions encrypted, you must generate a key for this. The procedure is exactly the same as generating your certificate in step 2 above.
 
-1. Next, you must configure an Identity Provider connection. Click on the *Identity Provider Connections* tab. Enter a name for the Identity Provider, enter its entity ID, and enter its metadata URL. If you have already followed the previous instructions and configured a separate Liferay DXP installation as an Identify provider, you'd enter the following information:
+1. Next, you must configure an Identity Provider connection. Click on the *Identity Provider Connections* tab. Enter a name for the Identity Provider, enter its entity ID, and enter its metadata URL. If you have already configured a separate Liferay DXP installation as an Identify provider, you'd enter the following information:
 
     * Name: *Liferay IdP*
     * Entity ID: [ID of IdP]
     * Clock Skew: Set the tolerance in milliseconds between SP and IdP.
     * Force Authn: Whether the IdP should force re-authentication regardless of context.
     * Metadata URL: `http://localhost:8080/c/portal/saml/metadata` (test this URL first)
-    * Name Identifier Format: See settings.
-    * Attribute Mapping: See settings.
-    * Keep Alive URL: See settings.
+    * Name Identifier Format: See [settings](./saml-settings.md).
+    * Attribute Mapping: See [settings](./saml-settings.md).
+    * Keep Alive URL: See [settings](./saml-settings.md).
 
     ```{important}
     The Liferay Connector to SAML 2.0 app supports using *either* a URL to a SAML IdP metadata file *or* an actual (uploaded) SAML metadata XML file. The value entered in the *Metadata URL* field is persisted to the database only when there a metadata URL and there is no specified metadata XML file. Otherwise, Liferay DXP keeps the original metadata URL in its database. This behavior ensures that once a metadata URL has been specified, there is always a metadata URL saved in the database. This way, if you forget the previously entered metadata URL or its format, you can look at the displayed metadata URL and choose to modify the displayed metadata URL or overwrite the previously saved metadata URL by specifying a metadata XML file.

@@ -7,7 +7,7 @@ authenticating-with-saml/saml-authentication-process-overview.md
 authenticating-with-saml/configuring-saml-at-the-system-level.md
 authenticating-with-saml/saml-admin.md
 authenticating-with-saml/configuring-saml-at-the-instance-level.md
-authenticating-with-saml/saml-configuration-reference.md
+authenticating-with-saml/saml-settings.md
 ```
 
 The SAML (Security Assertion Markup Language) adapter provides Single Sign On (SSO) and Single Log Off (SLO) in your deployment. SAML works by using Identity Providers (IdP) and Service Providers (SP):
@@ -28,4 +28,4 @@ You can jump right to configuring SAML or learn how it works:
 * [Configuring SAML at the System Level](./authenticating-with-saml/configuring-saml-at-the-system-level.md)
 * [SAML Admin](./authenticating-with-saml/saml-admin.md)
 * [Configuring SAML at the Instance Level](./authenticating-with-saml/configuring-saml-at-the-instance-level.md)
-* [SAML Configuration Reference](./authenticating-with-saml/saml-configuration-reference.md)
+* [SAML Configuration Reference](./authenticating-with-saml/saml-settings.md)
