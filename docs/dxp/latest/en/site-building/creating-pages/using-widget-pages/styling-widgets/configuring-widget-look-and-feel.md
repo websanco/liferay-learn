@@ -17,7 +17,7 @@ To access the look and feel configuration menu of any widget, follow these steps
 1. After making customizations, click *Save* and refresh your page to apply your changes.
 
 ```{note}
-Look and feel configuring options are not available for widgets in content pages for Display Pages Templates.
+Look and Feel configuration options are not available for widgets on Content Pages for Display Pages Templates.
 ```
 
 ## General Settings
