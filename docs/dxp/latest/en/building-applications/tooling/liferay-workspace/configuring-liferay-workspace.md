@@ -1,6 +1,8 @@
 # Configuring Liferay Workspace
 
-STOP! Liferay Workspace is simple to use, and you can learn the basics by starting [at the beginning](./what-is-liferay-workspace.md). If you're happily [creating projects](./creating-code-with-liferay-workspace.md), [deploying code](./creating-code-with-liferay-workspace.md#deploying-code-via-liferay-workspace), or [using a Docker container](./configuring-a-liferay-docker-container.md), you may not need the information here. If, however, you want to do a deep dive and learn about all the things Workspace can do, this is the place for you. 
+```{warning}
+Liferay Workspace is simple to use, and you can learn the basics by starting [at the beginning](./what-is-liferay-workspace.md). If you're happily [creating projects](./creating-code-with-liferay-workspace.md), [deploying code](./creating-code-with-liferay-workspace.md#deploying-code-via-liferay-workspace), or [using a Docker container](./configuring-a-liferay-docker-container.md), you may not need the information here. If, however, you want to do a deep dive and learn about all the things Workspace can do, this is the place for you. 
+```
 
 Here are the topics covered: 
 
