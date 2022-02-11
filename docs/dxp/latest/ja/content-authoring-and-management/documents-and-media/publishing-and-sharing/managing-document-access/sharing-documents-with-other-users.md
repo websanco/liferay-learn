@@ -1,46 +1,104 @@
-# ドキュメントとメディアの共有
+# 他のユーザーとのドキュメントの共有
 
-ドキュメントとメディアライブラリは、サーバー上のファイルを保存および整理します。 あらゆる種類のファイルを受け入れ、仮想共有ドライブとして機能できます。 これらのファイルは、Liferayのインストール時に</a>設定されたファイル ストレージ方式</0>で保存されます。
+DXPの_ドキュメントとメディア_アプリを使用すると、ユーザーはファイルを相互に直接共有できます。
 
-```{tip}
-各DXPサイトには、独自のドキュメントとメディアライブラリがあります。 したがって、ドキュメントはそのサイトに限定され、サイト間で共有されません。
-```
+共有を無効にすることができます。 手順については、[Enabling and Configuring Sharing](./enabling-and-configuring-sharing.md)を参照してください。
 
-[フォルダ](../../uploading-and-managing/creating-folders.md)を作成し、[ドキュメントをドキュメントとメディアライブラリにアップロード](../../uploading-and-managing/uploading-files.md)できます（ドラッグアンドドロップで一度に複数のドキュメントをアップロード可能）。
+共有するときは、そのファイルに対する自分自身の権限の一部を受信ユーザーに付与します。 重要な注意事項がいくつかあります。
 
-ユーザーは、カスタマイズ可能なドキュメントタイプとメタデータセットを使用してドキュメントを整理し、自動ドキュメントプレビュー生成で表示できます。 カスタマイズ可能なドキュメントタイプを作成するには、[ドキュメントタイプの定義](../../uploading-and-managing/managing-metadata/defining-document-types.md)を参照してください。 新しいメタデータセットを作成するには、[メタデータセットの使用](../../uploading-and-managing/managing-metadata/using-metadata-sets.md)を参照してください。
+* 付与できるのは、表示、コメント、またはアップデート権限のみです。 たとえば、ファイルに削除権限やチェックアウトを無効にする権限がある場合でも、それらの権限を付与することはできません。
+* ファイルに対して自分が持っている権限のみを付与できます。 たとえば、ファイルに対する表示権限とコメント権限しかない場合は、アップデート権限を付与することはできません。
+* 少なくとも表示権限を付与する必要があります。
+* 従来の[ロールベースの権限](../../../../users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.md)は、共有権限よりも常に優先されます。 したがって、共有によって権限を拡張することはできますが、ポータルのロールを介して付与された権限を削除することはできません。
+* デフォルトでは、ゲストロールにはディスカッションの追加権限があります。 これは、共有のコメント権限と重複しています。 したがって、コメント権限が共有によって付与されたかどうかに関係なく、すべてのユーザーがファイルにコメントできます。 これを変更するには、ゲストロールからディスカッションの追加権限を削除します。
 
-![カスタマイズ可能なドキュメントタイプまたはメタデータセットを作成できます。](./sharing-documents-with-other-users/images/01.png)
+また、受信ユーザーは同じインスタンスの一部である必要がありますが、同じサイトのメンバーである必要はないことに注意してください。
 
-<!-- Stopped reviewing here. -Rich --> 
+## ドキュメントとメディアでファイルを共有する
 
-## 統合
+ファイルを共有するには、そのファイルを所有しているか、管理者である必要があります。 ファイルを共有するには、ページの_［ドキュメントとメディア］_ウィジェットを使用する方法と、_［サイト管理］_を使用する方法の2つがあります。 後者の方法を使用する場合は、_［サイト管理］_にアクセスできることを確認してください。
 
-ドキュメントとメディアライブラリをMicrosoftOffice365™またはGoogleドライブと統合できます。 詳細は、[Enabling Document Creation and Editing with Microsoft Office 365](../../devops/enabling-document-creation-and-editing-with-microsoft-office-365.md)、[Enabling Links to Google Drive Documents](../../devops/google-drive-integration/enabling-links-to-google-drive-documents.md)、および[Enabling Document Creation and Editing with Google Drive](../../devops/google-drive-integration/enabling-document-creation-and-editing-with-google-drive.md)を参照してください。
+### サイトページでファイルを共有する
 
-最後に、WebDAVを使用して、ファイルマネージャーからドキュメントにアクセスできます。 詳細は、[Accessing Documents with WebDAV](../accessing-documents-with-webdav.md)を参照してください
+1. _［ドキュメントとメディア］_ウィジェットがデプロイされているページに移動します。
 
-## ドキュメントとメディアでのワークフローの使用
+    ![DMウィジェットのあるページに移動します。](./sharing-documents-with-other-users/images/01.png)
 
-DXPの[ワークフロー](../../../../process-automation/workflow/introduction-to-workflow.md)を使用して公開設定を管理できます。ドキュメントとメディアに対してワークフローが有効になっている場合、ドキュメントは公開される前にレビューされる必要があります。 ドキュメントとメディアに対しワークフローを有効化する詳細は、[ワークフローのアクティブ化](../../../../process-automation/workflow/using-workflows/activating-workflow.md#activating-workflow-for-specific-applications)を参照してください。
+1. 共有するファイルをクリックします（例：`speech.txt`）。
+1. _情報_ボタンをクリックして、情報パネルを展開します。
 
-![DMドキュメントのワークフローを有効にできます。](./sharing-documents-with-other-users/images/04.png)
+    ![情報ボタンをクリックすると、［共有］ボタンがある情報パネルが展開されます。](./sharing-documents-with-other-users/images/02.png)
 
-## バックアップとインポート / エクスポート
+1. _［共有］_ をクリックします。
+1. コラボレーターのメールアドレスを入力します。 複数のアドレスを入力できます。
+1. 受信ユーザーにファイルを共有させるには、_［Allow the document to be shared with other users］_ボックスをオンにします。
+1. 受信ユーザーに付与するファイルの権限を選択します。 受信ユーザーに付与する次のファイル権限のいずれかを選択します。
 
-サイトのドキュメントとメディアライブラリのコンテンツをバックアップまたは[エクスポート](../../../../site-building/building-sites/importing-exporting-pages-and-content.md)できます。 エクスポートされたドキュメントとメディアの`LAR`（Liferayのアーカイブ）ファイルをバックアップとして保存することができます。 必要に応じてそれらを別のサイトにインポートしたり、元のサイトに戻します。
+    * **アップデート：** 表示、コメント、およびアップデート。
+    * **コメント：** 表示およびコメント。
+    * **View：** 閲覧のみ。
 
-## メディアギャラリー
+    ![受信ユーザーに付与する権限を選択します。](./sharing-documents-with-other-users/images/03.png)
 
-コンパニオンのメディアギャラリーウィジェットには、ドキュメントとメディアライブラリから選択したコンテンツが表示されます。 このウィジェットは、画像、音声、およびビデオファイルをレンダリングできます。
+1. ウィンドウペインの_［共有］_ボタンをクリックします。
 
-![メディアギャラリーウィジェットを使用して、画像、音声、およびビデオファイルをレンダリングできます。](./sharing-documents-with-other-users/images/02.png)
+ファイルが共有されました。
 
-詳細は、[メディアギャラリーウィジェットの使用](../publishing-documents.md)を参照してください。
+### サイト管理の使用
+
+次の手順に従って、ファイルを共有します。
+
+1. _サイト管理_にアクセスするには、_メニュー_（![Product Menu](../../../../images/icon-menu.png)）を開き、サイトの名前をクリックします。
+1. _［Content & Data］_ &rarr; *［ドキュメントとメディア］*の順にクリックします。
+1. 共有するファイルが配置されているフォルダ（たとえば、_HR_フォルダ）に移動します。
+1. ファイルの*アクション*ボタン（![Actions](../../../../images/icon-actions.png)）をクリックし、_［共有］_を選択します。 ［共有］ダイアログが開きます。
+
+    ![アクション &rarr; ［共有］をクリックします。](./sharing-documents-with-other-users/images/04.png)
+
+1. ファイルを共有するユーザーの名前またはメールアドレスを入力します。 ファイルを複数のユーザーと共有するには、各ユーザーの電子メールアドレスをカンマ区切りリストに入力します。
+1. 受信ユーザーにもファイルを共有させるには、_［Allow the document to be shared with other users］_を選択します。
+1. 受信ユーザーに付与するファイルの権限を選択します。
+
+    * **アップデート：** 表示、コメント、およびアップデート。
+    * **コメント：** 表示およびコメント。
+    * **View：** 閲覧のみ。
+
+1. _［共有］_ をクリックします。
+
+## 共有ファイルの操作
+
+共有されているファイルには、次の3か所でアクセスできます。
+
+* **ドキュメントとメディアライブラリ：** 共有されているファイルは、既存のドキュメントとメディアの場所に表示されます。 たとえば、誰かがドキュメントとメディアライブラリのホームフォルダにあるファイルをあなたと共有している場合、そのフォルダ内のファイルにアクセスできます。
+
+    ![共有ファイルは、ファイルが最初にアップロードされたフォルダと同じフォルダにあります。](./sharing-documents-with-other-users/images/05.png)
+
+* **通知アプリ：** ファイルがあなたと共有されると、通知が届きます。 通知をクリックすると、ドキュメントとメディアのファイルに移動します。 通知の詳細は、[Managing Notifications and Requests](../../../../collaboration-and-social/notifications-and-requests/user-guide/managing-notifications-and-requests.md)を参照してください。
+
+    ![通知アプリには、ユーザーがファイルをあなたと共有したときに送信される通知が含まれています。](./sharing-documents-with-other-users/images/06.png)
+
+* **共有コンテンツアプリ：** ユーザーメニューからこのアプリにアクセスできます。 あなたと共有されたすべてのコンテンツと、あなたが共有したコンテンツが一覧表示されます。 各ファイルには、ファイルに対して許可されたアクション（表示、コメント、アップデートなど）を実行するためのアクションボタン（![Actions](../../../../images/icon-actions.png)）があります。
+
+    ![共有コンテンツアプリには、あなたと共有されているファイルと、あなたが共有したファイルが一覧表示されます。](./sharing-documents-with-other-users/images/07.png)
+
+## 共有ファイルの管理
+
+ファイルを共有した後、ユーザーごとにファイルの共有を解除したり、権限を変更したりできます。 これは、管理者、ファイルの所有者、またはアップデート権限とファイルを共有する権限を持つユーザーのみが実行できます。 これらのアクションは、ドキュメントとメディアのファイルの情報パネルから実行できます。 次の手順を実行します：
+
+1. ドキュメントとメディアでファイルをクリックしてから、右上の情報ボタン（![Info](../../../../images/icon-information.png)）をクリックします。 ファイルの情報パネルが右からスライドします。
+
+1. _［コラボレーター管理］_リンクをクリックします。 ファイルを共有したユーザーと彼らのファイル権限のリストが表示されます。
+
+   ![［コラボレーター管理］をクリックして、ファイルを共有したユーザーのリストを開きます。](./sharing-documents-with-other-users/images/08.png)
+
+1. コラボレーターのリストに必要な変更を加えます。 あるユーザーとの共有を解除するには、そのユーザーの横にある `×` アイコンをクリックします。 各ユーザーのセレクターメニューからファイルの権限を変更することもできます。
+
+   ![コラボレーターを削除するか、彼らの権限を変更します。](./sharing-documents-with-other-users/images/09.png)
+
+1. *［保存］*をクリックしてダイアログを閉じます。
 
 ## 追加情報
 
-  - [Documents and Media UI Reference](../../documents-and-media-ui-reference.md)
-  - [Creating Folders](../../uploading-and-managing/creating-folders.md)
-  - [Uploading Files](../../uploading-and-managing/uploading-files.md)
-  - [ファイルストレージの構成](../../../../system-administration/file-storage.md)
+* [共有の有効化と構成](./enabling-and-configuring-sharing.md)
+* [ドキュメントとメディアの権限リファレンス](./documents-and-media-permissions-reference.md)
+* [Understanding Role and Permissions](../../../../users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.md)
