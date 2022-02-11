@@ -2,7 +2,7 @@
 
 Hreflang tags are HTML attributes used to identify the language and geographic region targeted by alternative versions of a Site Page. In some cases, these attributes can help search engines serve the correct version of a Page to users and contribute to SEO. By default, Liferay DXP populates Page hreflang meta data with all available languages in the Site.
 
-Beginning with Liferay 7.4, you can configure this behavior to only generate hreflang meta data for languages with translated content in a Page. This can be configured at both the instance and Site levels.
+Beginning with Liferay 7.4+ DXP/Portal, you can configure this behavior to only generate hreflang meta data for languages with translated content in a Page. This can be [configured at both the instance and Site levels](../../system-administration/configuring-liferay/understanding-configuration-scope.md).
 
 When hreflangs are limited in this way, Liferay's behavior can vary depending on Page type.
 
