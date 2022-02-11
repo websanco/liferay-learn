@@ -41,4 +41,8 @@ Liferay Search Experiences will be made available to Liferay DXP customers with 
 
 ## Search Experiences REST API
 
-The Search Experiences applications publish and consume REST API endpoints (under the path `search-experiences-rest`) to remain consistent with Liferay's other native applications. It is not advisable for third party code to consume the Search Experiences APIs as they are volatile: this includes the `/search` endpoint which is only intended to be used by the [Blueprints preview feature](./search-experiences/creating-and-managing-search-blueprints.md#testing-a-blueprint-with-the-preview-sidebar). Schema changes are expected to happen as the features evolve, and Liferay will not support custom code that uses the Search Experiences APIs. This decision may change in the future as the APIs become more stable.
+The Search Experiences applications publish and consume REST API endpoints (under the path `search-experiences-rest`) to remain consistent with Liferay's other native applications.
+
+```{warning}
+It is not advisable for third party code to consume the Search Experiences APIs as they are volatile: this includes the `/search` endpoint which is only intended to be used by the [Blueprints preview feature](./search-experiences/creating-and-managing-search-blueprints.md#testing-a-blueprint-with-the-preview-sidebar). Schema changes are expected to happen as the features evolve, and Liferay will not support custom code that uses the Search Experiences APIs. This decision may change in the future as the APIs become more stable.
+```

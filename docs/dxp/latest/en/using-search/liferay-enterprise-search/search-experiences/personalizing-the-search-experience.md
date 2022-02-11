@@ -42,7 +42,7 @@ There are several Elements that are especially useful for personalization effort
 
 ## Building a Blueprint to Personalize Search Results
 
-One important usage of Search Experiences' personalization features is presenting result based on the search User's location. 
+One important usage of Search Experiences' personalization features is presenting results based on the search User's location. 
 
 To demonstrate this use case, multiple configuration exercises must be completed:
 
