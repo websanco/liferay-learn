@@ -4,6 +4,8 @@ As individuals visit and interact with your site, Analytics Cloud tracks these e
 
 1. Navigate to *Touchpoints* &rarr; *Events*. 
 
+1. Click the *Create Analysis* button to start a new event analysis. Or view an existing analysis by clicking on its name. Use the search bar to find a specific analysis.
+
 1. In the Analyze row, click the _Add_ icon (![Add](../../images/icon-add.png)) and select an event to analyze. Or use the search bar to find a specific event.
 
    ![Select an event to analyze.](./events-analysis/images/01.png)
@@ -32,7 +34,9 @@ As individuals visit and interact with your site, Analytics Cloud tracks these e
 
     Note that there are three tabs (Total, Unique, and Average) to view the breakdown of the event. The Total tab shows the total number of events triggered by all users. The Unique tab shows the total number of unique users who triggered the event. The Average tab shows the average number of events per user.
 
-1. To analyze a different event or see a different breakdown click the close icon (![Close](../../images/icon-close.png)) and close the event or breakdown. Make a new selection to see a new event analysis.
+1. To remove a filter, breakdown, or analysis, click the close icon (![Close](../../images/icon-close.png)) and make new selections.
+
+1. To save the event analysis for future viewing, give the analysis a name and click the *Save Analysis* button. The analysis will be available in the event analysis tool for future viewing.
 
 ## Additional Information
 
