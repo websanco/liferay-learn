@@ -2,9 +2,11 @@
 
 <!-- Really missing an introductory statement here -->
 
+<a name="ブログエントリの権限" />
+
 ## ブログエントリの権限
 
-_［ブログ］_ウィジェットに移動します。 ブログエントリの横にある_アクション_（![Actions](../../images/icon-actions.png)）をクリックし、次に_［Permissions］_をクリックします。
+［**ブログ**］ ウィジェットに移動します。 ブログエントリの横にある **アクション**（![Actions](../../images/icon-actions.png)）をクリックし、次に ［**Permissions**］ をクリックします。
 
 ![ブログエントリの権限](./blog-permissions-reference/images/01.png)
 

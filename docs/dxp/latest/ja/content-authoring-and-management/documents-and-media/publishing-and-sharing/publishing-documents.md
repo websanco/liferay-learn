@@ -2,9 +2,11 @@
 
 Liferayでは、ドキュメントやその他の種類のメディアファイルを簡単に公開し、紹介することができます。 [メディアファイルをアップロード](../uploading-and-managing/uploading-files.md)し始めると、サイトでそれらを共有したくなると思います。
 
-使用可能なウィジェットは、ドキュメントとメディアファイル（*メディアギャラリー*、*ドキュメントとメディア*、および*アセットパブリッシャー*）を強調表示できます。 ユースケースに基づいて適切なウィジェットを選択できます。
+使用可能なウィジェットは、ドキュメントとメディアファイル（**メディアギャラリー** 、 **ドキュメントとメディア** 、および **アセットパブリッシャー**）を強調表示できます。 ユースケースに基づいて適切なウィジェットを選択できます。
 
 ドキュメントとメディアファイルは、Webコンテンツ、ブログ、Wikiページなどの他のアセットに埋め込んで表示できます。
+
+<a name="メディアギャラリーウィジェットの使用" />
 
 ## メディアギャラリーウィジェットの使用
 
@@ -18,7 +20,7 @@ Liferayでは、ドキュメントやその他の種類のメディアファイ�
 
 1. ウィジェットが表示されると、以前にアップロードされたメディアファイルがすでに表示されているはずです。 [メディアファイルを追加](../uploading-and-managing/uploading-files.md)したい場合は、［ドキュメントとメディア］からアップロードできます。
 
-［メディアギャラリー］ウィジェットには、 *オプション* (![Options icon](../../../images/icon-options.png)) &rarr; _［設定］_をクリックして設定できるいくつかのオプションがあります。
+［メディアギャラリー］ウィジェットには、 **オプション**(![Options icon](../../../images/icon-options.png)) &rarr; ［**設定**］ をクリックして設定できるいくつかのオプションがあります。
 
 ![設定ウィンドウには、4つの異なるタブがあります。](publishing-documents-on-a-dxp-site/images/02.png)
 
@@ -30,7 +32,7 @@ Liferayでは、ドキュメントやその他の種類のメディアファイ�
 
 ![メディアファイルをクリックすると、スライドショーが開始されます](publishing-documents-on-a-dxp-site/images/03.png)
 
-各ファイルには、*オプション*（![Options icon](../../../images/icon-options.png)）アイコンがあります。
+各ファイルには、 **オプション**（![Options icon](../../../images/icon-options.png)）アイコンがあります。
 
 ![オプションアイコンをクリックすると、さまざまなオプションが表示されます。](publishing-documents-on-a-dxp-site/images/04.png)
 
@@ -40,17 +42,19 @@ Liferayでは、ドキュメントやその他の種類のメディアファイ�
  * ごみ箱へ移動
  * 画像エディタで編集（画像ファイル用）
 
+<a name="ドキュメントとメディアウィジェットの使用" />
+
 ## ［ドキュメントとメディア］ウィジェットの使用
 
 このウィジェットは、すべてのタイプのファイルを公開する方法を提供します。 ［メディアギャラリー］ウィジェットとは異なり、ドキュメントやその他の種類のメディアを公開できます。
 
-1. ［コンテンツ管理］セクションから、 *［ドキュメントとメディア］*ウィジェットをページに追加します。
+1. ［コンテンツ管理］セクションから、 ［**ドキュメントとメディア**］ ウィジェットをページに追加します。
 
     ![ウィジェットの［コンテンツ管理］セクションの下にリストされている［ドキュメントとメディア］ウィジェットを見つけます。](publishing-documents-on-a-dxp-site/images/05.png)
 
 1. [メディアファイルを追加](../uploading-and-managing/uploading-files.md)したい場合は、［ドキュメントとメディア］アプリケーションからアップロードできます。
 
-*オプション*ボタン（![Options button](../../../images/icon-options.png)）を使用して、ドキュメントとメディアを設定できます。
+**オプション** ボタン（![Options button](../../../images/icon-options.png)）を使用して、ドキュメントとメディアを設定できます。
 
 ![設定ウィンドウには、4つの異なるタブがあります。](publishing-documents-on-a-dxp-site/images/06.png)
 
@@ -60,7 +64,7 @@ Liferayでは、ドキュメントやその他の種類のメディアファイ�
 
 **テーブル表示スタイル用のエントリーリスト:** ユーザーがテーブルビューを選択したときに表示するファイル情報のタイプを設定します。
 
-**評価:** [評価システム](../../../collaboration-and-social/social-tools/user-guide/using-the-ratings-system.md)を有効または無効にします。
+**評価:**[評価システム](../../../collaboration-and-social/social-tools/user-guide/using-the-ratings-system.md)を有効または無効にします。
 
 ドキュメントとメディアの上部にあるツールバーは、次の機能を提供します。
 
@@ -72,13 +76,13 @@ Liferayでは、ドキュメントやその他の種類のメディアファイ�
 
 ![［フィルターと並び替え］をクリックして、ファイルを整理およびソートするさまざまな方法を選択します。](publishing-documents-on-a-dxp-site/images/08.png)
 
-**リバース:** *リバース*アイコン（![Reverse icon](../../../images/icon-sort.png)）は、ソートの方向を反転します。
+**リバース:****リバース** アイコン（![Reverse icon](../../../images/icon-sort.png)）は、ソートの方向を反転します。
 
 **検索:** キーワードでメディアファイルを検索します。
 
-**情報:** *情報* アイコン（![Click on the information icon to display file info.](../../../images/icon-information.png)）は、フォルダ内のメディアファイルに関する詳細を提供します。
+**情報:****情報** アイコン（![Click on the information icon to display file info.](../../../images/icon-information.png)）は、フォルダ内のメディアファイルに関する詳細を提供します。
 
-**表示スタイル:** *表示スタイル* アイコン（![Click on the display style icon to choose your display option.](../../../images/icon-view-type-cards.png)）は、カード、リスト、およびテーブルビューの3つの表示タイプを切り替えます。
+**表示スタイル:****表示スタイル** アイコン（![Click on the display style icon to choose your display option.](../../../images/icon-view-type-cards.png)）は、カード、リスト、およびテーブルビューの3つの表示タイプを切り替えます。
 
 ![カード、リスト、またはテーブルビューから選択して、ファイルを表示します。](publishing-documents-on-a-dxp-site/images/09.png)
 
@@ -90,21 +94,25 @@ Liferayでは、ドキュメントやその他の種類のメディアファイ�
 
 **クリア:** 現在の選択をクリアします。
 
-**情報:** *情報*アイコン（![Information icon](../../../images/icon-information.png)）は、ファイルに関する詳細情報を示します。
+**情報:****情報** アイコン（![Information icon](../../../images/icon-information.png)）は、ファイルに関する詳細情報を示します。
 
-**ダウンロード:** *ダウンロード*アイコン（![Download icon](../../../images/icon-download.png)）はファイルをダウンロードします。
+**ダウンロード:****ダウンロード** アイコン（![Download icon](../../../images/icon-download.png)）はファイルをダウンロードします。
 
-**移動:** *移動*アイコン（![Move icon](../../../images/icon-move.png)）をクリックして、ファイルを別のフォルダに移動します。
+**移動:****移動** アイコン（![Move icon](../../../images/icon-move.png)）をクリックして、ファイルを別のフォルダに移動します。
 
-**タグを編集:** *タグを編集*アイコン（![Edit icon](../../../images/icon-edit.png)）をクリックして、ファイルの既存のタグを編集します。
+**タグを編集:****タグを編集** アイコン（![Edit icon](../../../images/icon-edit.png)）をクリックして、ファイルの既存のタグを編集します。
 
-**ごみ箱へ移動:** *ゴミ箱*アイコン（![Recycle icon](../../../images/icon-trash.png)）をクリックして、ファイルを削除します。
+**ごみ箱へ移動:****ゴミ箱** アイコン（![Recycle icon](../../../images/icon-trash.png)）をクリックして、ファイルを削除します。
 
-**アクション:** *アクション*アイコン（![Actions icon](../../../images/icon-actions.png)）には、*［チェックイン］*および*［チェックアウト］*などのオプションがあります。 [Google Drive Integration](../devops/google-drive-integration/enabling-document-creation-and-editing-with-google-drive.md)、[Office 365 Integration](../devops/enabling-document-creation-and-editing-with-microsoft-office-365.md)、および[LibreOffice Integration](../devops/enabling-openoffice-libreoffice-integration.md)を参照してください。
+**アクション:****アクション** アイコン（![Actions icon](../../../images/icon-actions.png)）には、 ［**チェックイン**］ および ［**チェックアウト**］ などのオプションがあります。 [Google Drive Integration](../devops/google-drive-integration/enabling-document-creation-and-editing-with-google-drive.md)、[Office 365 Integration](../devops/enabling-document-creation-and-editing-with-microsoft-office-365.md)、および[LibreOffice Integration](../devops/enabling-openoffice-libreoffice-integration.md)を参照してください。
+
+<a name="アセットパブリッシャーウィジェットの使用" />
 
 ## ［アセットパブリッシャー］ウィジェットの使用
 
 [［アセットパブリッシャー］](../../../site-building/displaying-content/using-the-asset-publisher-widget/displaying-assets-using-the-asset-publisher-widget.md)ウィジェットは、基準に基づいてさまざまなアセットとコレクションを公開できます。 このウィジェットを使用して、ドキュメントとメディアライブラリのコンテンツを表示できます。
+
+<a name="他のアセットでのドキュメントの使用" />
 
 ## 他のアセットでのドキュメントの使用
 
@@ -130,7 +138,7 @@ Liferayでは、ドキュメントやその他の種類のメディアファイ�
 
 1. 追加アイコン（![Add icon](../../../images/icon-add.png)）をクリックして、新規ブログを追加します。
 
-1. ［関連アセット］で、*［Select］*ボタンをクリックして、ブログ投稿に追加するドキュメントとメディアを選択します。
+1. ［関連アセット］で、 ［**Select**］ ボタンをクリックして、ブログ投稿に追加するドキュメントとメディアを選択します。
 
    ![［関連するアセット］で、選択ボタンをクリックして、ドキュメントまたはメディアファイルを追加します。](publishing-documents-on-a-dxp-site/images/17.png)
 
@@ -138,6 +146,6 @@ Liferayでは、ドキュメントやその他の種類のメディアファイ�
 
 1. Wikiノードに移動します。
 
-1. ［関連アセット］で、*［Select］*ボタンをクリックして、Wikiページに追加するドキュメントとメディアを選択します。
+1. ［関連アセット］で、 ［**Select**］ ボタンをクリックして、Wikiページに追加するドキュメントとメディアを選択します。
 
    ![［関連するアセット］で、選択ボタンをクリックして、ドキュメントまたはメディアファイルを追加します。](publishing-documents-on-a-dxp-site/images/17.png)

@@ -8,19 +8,19 @@
 
 Webコンテンツテンプレートへのウィジェットの埋め込みを開始するには、次の手順に従います。
 
-1.  サイト（この例ではデフォルトのDXPサイト）の*サイト管理*に移動します。
+1.  サイト（この例ではデフォルトのDXPサイト）の **サイト管理** に移動します。
 
-2.  *[Content & Data]* → *[Webコンテンツ]* の順にクリックします。
+2. [**Content & Data**] → [**Webコンテンツ**] の順にクリックします。
 
-3.  *[テンプレート]* タブをクリックします。
+3. [**テンプレート**] タブをクリックします。
 
-    ![[テンプレート]タブには、サイトのテンプレートが表示されます。](./embedding-widgets-in-templates/images/01.png)
+    ![ [テンプレート]タブには、サイトのテンプレートが表示されます。](./embedding-widgets-in-templates/images/01.png)
 
 4.  追加（![Add Icon](../../../images/icon-add.png)）アイコンをクリックします。
 
-5.  テンプレートの名前を入力します（たとえば、*テンプレート1*）
+5.  テンプレートの名前を入力します（たとえば、 **テンプレート1**）
 
-6.  *[Properties]* セクションから*[Select]* をクリックして、ストラクチャーを選択します（たとえば、*ストラクチャー1*）。
+6. [**Properties**] セクションから [**Select**] をクリックして、ストラクチャーを選択します（たとえば、 **ストラクチャー1**）。
 
     ![ストラクチャーを選択します。](./embedding-widgets-in-templates/images/02.png)
 
@@ -28,13 +28,15 @@ Webコンテンツテンプレートへのウィジェットの埋め込みを�
 
     ![ポートレットマクロを入力します。](./embedding-widgets-in-templates/images/03.png)
 
-8.  完了したら、*[保存]* をクリックします。
+8.  完了したら、 [**保存**] をクリックします。
 
 <!-- end list -->
 
 ```{important}
 ` theme`変数はFreeMarkerコンテキストに挿入されなくなりました。 DXP 7.0でtheme変数が削除された理由や、コードを更新するための提案については、 [Taglibs Are No Longer Accessible via the theme Variable in FreeMarker](https://help.liferay.com/hc/articles/360017892092-Introduction-to-Breaking-Changes-#taglibs-are-no-longer-accessible-via-the-theme-variable-in-freemarker) の破壊的変更のエントリーを参照してください。
 ```
+
+<a name="他のテンプレートの埋め込み" />
 
 ## 他のテンプレートの埋め込み
 
@@ -46,9 +48,11 @@ Webコンテンツテンプレートへのウィジェットの埋め込みを�
 <#include "${templatesPath}/[template-key]" />
 ```
 
-以前に公開されたテンプレートを編集するときに、*テンプレートキー*を確認できます。
+以前に公開されたテンプレートを編集するときに、 **テンプレートキー** を確認できます。
 
 ![テンプレートの編集ページを表示すると、テンプレートキーを確認できます。](./embedding-widgets-in-templates/images/04.png)
+
+<a name="追加情報" />
 
 ## 追加情報
 

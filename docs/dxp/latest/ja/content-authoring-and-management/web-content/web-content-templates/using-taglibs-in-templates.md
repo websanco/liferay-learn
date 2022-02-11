@@ -4,9 +4,9 @@ FreeMarkerでテンプレートを開発するときに、Liferayのtaglibにア
 
 DXPのテンプレートエディタを使用している場合、テンプレートエディタの左側に変数があります。 変数の1つをテンプレートエディタに配置する方法は次のとおりです。
 
-1.  サイト（この例ではデフォルトのDXPサイト）の*サイト管理*に移動します。
-2.  *[Content & Data]* → *[Webコンテンツ]* の順にクリックします。
-3.  *[テンプレート]* タブをクリックします。
+1.  サイト（この例ではデフォルトのDXPサイト）の **サイト管理** に移動します。
+2. [**Content & Data**] → [**Webコンテンツ**] の順にクリックします。
+3. [**テンプレート**] タブをクリックします。
 4.  変数を配置する場所にカーソルを置きます。
 5.  変数名をクリックします。
 
@@ -20,7 +20,9 @@ DXPのテンプレートエディタを使用している場合、テンプレ�
 FreeMarkerの` utilLocator`、` objectUtil`、および` staticUtil`変数はデフォルトで無効になっています。 これらの変数は、リモートでコードが実行されたり特権が昇格されたりする脆弱性があるため、信頼できるテンプレート開発者に対してのみ有効にする必要があります。 
 ```
 
-テンプレートを保存すると、DXPはWebDAV URLと静的URLを提供します。 これらの値は、ストラクチャーのXMLソースにアクセスします。 保存後にテンプレートに戻り、*[Details]* セクションを展開すると、これらのURLを見つけることができます。 WebDAVとWebDAV URLの使用の詳細は、[WebDAV Access](../../documents-and-media/publishing-and-sharing/accessing-documents-with-webdav.md)セクションを参照してください。
+テンプレートを保存すると、DXPはWebDAV URLと静的URLを提供します。 これらの値は、ストラクチャーのXMLソースにアクセスします。 保存後にテンプレートに戻り、 [**Details**] セクションを展開すると、これらのURLを見つけることができます。 WebDAVとWebDAV URLの使用の詳細は、[WebDAV Access](../../documents-and-media/publishing-and-sharing/accessing-documents-with-webdav.md)セクションを参照してください。
+
+<a name="追加情報" />
 
 ## 追加情報
 
