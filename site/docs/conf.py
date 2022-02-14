@@ -24,6 +24,7 @@ extensions = [
     "myst_parser",
     "notfound.extension",
     "sphinx_copybutton",
+    "sphinx_design",
     "sphinx_sitemap",
     "sphinxext.opengraph",
 ]
@@ -46,6 +47,7 @@ language = os.path.basename(language_path)
 locale_dirs = ["_locale"]
 log = logging.getLogger(__name__)
 master_doc = "contents"
+myst_enable_extensions = ["colon_fence"]
 notfound_no_urls_prefix = True
 notfound_template = "404.html"
 ogp_image = "https://learn.liferay.com/_static/liferay-waffle.svg"
