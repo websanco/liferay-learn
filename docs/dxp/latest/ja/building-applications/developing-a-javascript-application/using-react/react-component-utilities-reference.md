@@ -2,14 +2,14 @@
 
 Reactを使用してLiferay DXPで高性能コンポーネントとアプリケーションを構築するのに役立ついくつかの便利なツールが利用可能です。
 
-  - [`frontend-js-react-web`モジュール](#frontend-js-react-web-module)
-  - [Reactコンポーネントタグ](#react-component-tag)
+* [`frontend-js-react-web`モジュール](#frontend-js-react-web-module)
+* [Reactコンポーネントタグ](#react-component-tag)
 
 ## `frontend-js-react-web`モジュール
 
 `frontend-js-react-web`共有モジュールは、Liferay DXP全体でReactのすべてのコンシューマで使用できるReactの単一の共通バージョンを提供します。 このモジュールには、Liferay DXPのコンテキストでReactコンポーネントをマウント（つまりレンダリング）する標準的な方法が含まれており、対応するポートレットが破棄されたときにコンポーネントをアンマウント（クリーンに破棄）する場合などの詳細に対応しています。 例を以下に示します。
 
-``` javascript
+```javascript
 import {render} from 'frontend-js-react-web';
 render(
 renderable,
@@ -34,7 +34,7 @@ container
 
 `useIsMounted`フックは、コンポーネントがまだマウントされているかどうかを判別するために使用できます。 例を以下に示します。
 
-``` javascript
+```javascript
 import {useIsMounted} from 'frontend-js-react-web';
 
 const InlineConfirm = props => {
@@ -55,7 +55,7 @@ const InlineConfirm = props => {
 
 `useEventListener`フックは、マウント時にイベントリスナーを追加し、アンマウント時にそれを削除するために使用できます。 以下に例を示します。
 
-``` javascript
+```javascript
 import {useEventListener} from 'frontend-js-react-web';
 
 function OverlayContainer({root, allowEdit}) {
@@ -70,7 +70,7 @@ function OverlayContainer({root, allowEdit}) {
 
 `<react:component>`タグは、JSPにReactビューを追加します。 例を以下に示します。
 
-``` jsp
+```jsp
 <react:component
     data="<%= data %>"
     module="js/pages/form-view/EditFormViewApp.es"

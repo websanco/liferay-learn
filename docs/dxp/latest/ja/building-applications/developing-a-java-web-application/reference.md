@@ -1,4 +1,4 @@
-# Reference
+# リファレンス
 
 ```{toctree}
 :maxdepth: 3

@@ -1,4 +1,4 @@
-# 単一ページアプリケーションの開発
+# JavaScriptアプリケーションの開発
 
 ```{toctree}
 :maxdepth: 3

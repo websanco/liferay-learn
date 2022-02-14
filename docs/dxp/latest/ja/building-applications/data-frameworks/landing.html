@@ -6,86 +6,172 @@
 		data: {
 			cards: [
 				{
-					sectionName: 'アセット (近日公開！)',
-					sectionURL: 'data-frameworks/assets.html',
+					sectionName: 'Asset Framework',
+					sectionURL: 'data-frameworks/asset-framework.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'Enabling Assets',
+							url: 'data-frameworks/asset-framework/enabling-assets.html',
+						},
+						{
+							name: 'Enhancing Assets',
+							url: 'data-frameworks/asset-framework/enhancing-assets.html',
+						},
+					]
 				},
 				{
-					sectionName: 'キャッシュ (近日公開！)',
+					sectionName: 'Cache',
 					sectionURL: 'data-frameworks/cache.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'Introduction to Cache Configuration (Help Center)',
+							url: 'https://help.liferay.com/hc/en-us/articles/360035581451-Introduction-to-Cache-Configuration',
+						},
+						{
+							name: 'Overriding Cache (Help Center)',
+							url: 'https://help.liferay.com/hc/en-us/articles/360035581471-Overriding-Cache'
+						},
+						{
+							name: 'Catching Data (Help Center)',
+							url: 'https://help.liferay.com/hc/en-us/articles/360035581491-Caching-Data'
+						},
+					]
 				},
 				{
-					sectionName: '開発者ガイド',
+					sectionName: 'Data Scopes',
+					sectionURL: 'data-frameworks/data-scopes.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'Introduction to Data Scopes (Help Center)',
+							url: 'https://help.liferay.com/hc/en-us/articles/360030416052-Introduction-to-Back-end-Frameworks#data-scopes'
+						},
+						{
+							name: 'Enabling and Accessing Data Scopes (Help Center)',
+							url: 'https://help.liferay.com/hc/en-us/articles/360030416152-Enabling-and-Accessing-Data-Scopes'
+						},
+						]
+				},
+				{
+					sectionName: 'DDM',
 					sectionURL: '../process-automation/forms/developer-guide.html',
 					showAll: false,
 					subsections: [
 						{
-							name: 'フォームストレージアダプターについて',
+							name: 'Writing a Custom Data Provider',
+							url: '../process-automation/forms/developer-guide/writing-a-custom-data-provider.html'
+						},
+						{
+							name: 'Understanding Form Storage Adapters',
 							url: '../process-automation/forms/developer-guide/understanding-form-storage-adapters.html'
 						},
 						{
-							name: 'フォームストレージアダプターの書き込み',
+							name: 'Writing a Form Storage Adapter',
 							url: '../process-automation/forms/developer-guide/writing-a-form-storage-adapter.html'
 						},
 					]
 				},
 				{
-					sectionName: '開発者ガイド',
-					sectionURL: '../content-authoring-and-management/documents-and-media/developer_guide.html',
-				},
-				{
-					sectionName: 'Expando (近日公開！)',
-					sectionURL: 'data-frameworks/expando.html',
-				},
-				{
-					sectionName: 'エクスポート/インポート (近日公開！)',
-					sectionURL: 'data-frameworks/export-import.html',
-				},
-				{
-					sectionName: 'Info Framework (近日公開！)',
-					sectionURL: 'data-frameworks/info-framework.html',
-				},
-				{
-					sectionName: 'アイテムセレクター (近日公開！)',
-					sectionURL: 'data-frameworks/item-selector.html',
-				},
-				{
-					sectionName: '開発者ガイド',
-					sectionURL: '../content-authoring-and-management/recycle-bin/developer_guide.html',
-				},
-				{
-					sectionName: '開発者ガイド',
-					sectionURL: '../using-search/developer_guide.html',
+					sectionName: 'Document Library / File Store',
+					sectionURL: '../content-authoring-and-management/documents-and-media/developer-guide.html',
 					showAll: false,
 					subsections: [
 						{
-							name: '同様の結果ウィジェットへのカスタムコンテンツの提供',
+							name: 'Document API Basics',
+							url: '../content-authoring-and-management/documents-and-media/developer-guide/document-api-basics.html'
+						},
+						{
+							name: 'Creating Video Shortcut Providers',
+							url: '../content-authoring-and-management/documents-and-media/developer-guide/creating-video-shortcut-providers.html'
+						},
+						{
+							name: 'Setting Storage Quotas for Documents and Media',
+							url: '../content-authoring-and-management/documents-and-media/devops/setting-storage-quotas-for-documents-and-media.html'
+						},
+					]
+				},
+				{
+					sectionName: 'Expando Framework',
+					sectionURL: 'data-frameworks/expando-framework.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'Accessing Custom Fields with Expando',
+							url: 'data-frameworks/accessing-custom-fields-with-expando.html'
+						},
+					]
+				},
+				{
+					sectionName: 'Export / Import (Coming soon!)',
+					sectionURL: 'data-frameworks/export-import.html',
+				},
+				{
+					sectionName: 'Info Framework (Coming soon!)',
+					sectionURL: 'data-frameworks/info-framework.html',
+				},
+				{
+					sectionName: 'Item Selector',
+					sectionURL: 'data-frameworks/implementing-an-item-selector.html',
+				},
+				{
+					sectionName: 'Recycle Bin',
+					sectionURL: '../content-authoring-and-management/recycle-bin/developer_guide.html',
+				},
+				{
+					sectionName: 'Search',
+					sectionURL: '../using-search/developer-guide.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'Contributing Custom Content to the Similar Results Widget',
 							url: '../using-search/developer-guide/writing-a-similar-results-contributor.html'
 						},
 					]
 				},
 				{
-					sectionName: 'サービスビルダー (近日公開！)',
+					sectionName: 'Service Builder',
 					sectionURL: 'data-frameworks/service-builder.html',
 				},
 				{
-					sectionName: 'アップグレード (近日公開！)',
+					sectionName: 'Upgrade Processes',
 					sectionURL: 'data-frameworks/upgrade-processes.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'Introduction to Upgrade Processes (Help Center)',
+							url: 'https://help.liferay.com/hc/en-us/articles/360031165731-Introduction-to-Upgrade-Processes'
+						},
+						{
+							name: 'Creating Upgrade Processes for Modules (Help Center)',
+							url: 'https://help.liferay.com/hc/en-us/articles/360031165751-Creating-Upgrade-Processes-for-Modules'
+						},
+						{
+							name: 'Upgrade Processes for Former Service Builder Plugins (Help Center)',
+							url: 'https://help.liferay.com/hc/en-us/articles/360030826132-Upgrade-Processes-for-Former-Service-Builder-Plugins'
+						},
+						{
+							name: 'Upgrading Data Schemas in Development (Help Center)',
+							url: 'https://help.liferay.com/hc/en-us/articles/360031165791-Upgrading-Data-Schemas-in-Development'
+						},
+					]
 				},
 				{
-					sectionName: '開発者ガイド',
+					sectionName: 'Workflow',
 					sectionURL: '../process-automation/workflow/developer-guide.html',
 					showAll: false,
 					subsections: [
 						{
-							name: 'XMLワークフロー定義の作成',
+							name: 'Crafting XML Workflow Definitions',
 							url: '../process-automation/workflow/developer-guide/crafting-xml-workflow-definitions.html'
 						},
 						{
-							name: 'ワークフローでのスクリプトエンジンの使用',
+							name: 'Using the Script Engine in Workflow',
 							url: '../process-automation/workflow/developer-guide/using-the-script-engine-in-workflow.html'
 						},
 						{
-							name: 'ワークフロー定義ノードリファレンス',
+							name: 'Workflow Definition Node Reference',
 							url: '../process-automation/workflow/developer-guide/workflow-definition-node-reference.html'
 						},
 					]

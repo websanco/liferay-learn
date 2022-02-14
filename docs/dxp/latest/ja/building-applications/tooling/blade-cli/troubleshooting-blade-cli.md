@@ -1,4 +1,4 @@
-# ブレードCLIのトラブルシューティング
+# Blade CLIのトラブルシューティング
 
 Blade CLIが期待どおりに動作しない場合は、ここで回答を見つけることができます。
 
@@ -8,13 +8,13 @@ Blade CLIが期待どおりに動作しない場合は、ここで回答を見�
 
 **macOS**
 
-``` bash
+```bash
 echo 'export PATH="$PATH:$HOME/Library/PackageManager/bin"' >> ~/.bash_profile
 ```
 
 **Linux**
 
-``` bash
+```bash
 echo 'export PATH="$PATH:$HOME/jpm/bin"' >> ~/.bash_profile
 ```
 
@@ -24,9 +24,9 @@ echo 'export PATH="$PATH:$HOME/jpm/bin"' >> ~/.bash_profile
 
 新しいインストーラーをダウンロードし、それを既存のバージョンの上にインストールして、Blade CLIを更新しようとした可能性があります。 これはサポートされておらず、マシンに2つの個別のインストールがある可能性があります。 存在する場合は、グローバルフォルダー内のレガシーブレードファイルを削除する必要があります。
 
-管理アカウントを使用して、 `[グローバルフォルダー]/jpm4j` フォルダーに移動し、次の2つのファイルを削除します。
+管理アカウントを使用して、 `［グローバルフォルダー］/jpm4j` フォルダーに移動し、次の2つのファイルを削除します。
 
-  - `/bin/blade`
-  - `/commands/blade`
+- `/bin/blade`
+- `/commands/blade`
 
 これで、ユーザーのホームフォルダーの新しいインストールが認識され、CLIで使用できるようになりました。

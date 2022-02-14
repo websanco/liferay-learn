@@ -1,3 +1,8 @@
-# アップグレード
+# アップグレードのプロセス
 
-近日公開！
+```{raw} html
+:file: ../../landingpage_template.html
+```
+```{raw} html
+:file: upgrade-processes/landing.html
+```

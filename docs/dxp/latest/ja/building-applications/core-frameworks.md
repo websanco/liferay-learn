@@ -3,7 +3,10 @@
 ```{toctree}
 :maxdepth: 3
 
+core-frameworks/configuration-framework.md
+core-frameworks/dispatch-framework.md
 core-frameworks/message-bus.md
+core-frameworks/reference.md
 ```
 
 ```{raw} html

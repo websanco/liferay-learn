@@ -1,4 +1,4 @@
-その他のツール
+Other Tools
 ===========
 
 -  :doc:`/building-applications/tooling/other-tools/fragments-cli`
@@ -12,7 +12,7 @@
 -  :doc:`/building-applications/tooling/other-tools/push`
 -  :doc:`/building-applications/tooling/other-tools/sync`
 
-Liferay npmバンドラー
+Liferay npm Bundler
 -------------------
 
 -  :doc:`/building-applications/tooling/other-tools/liferay-npm-bundler/liferay-npm-bundler-intro`
@@ -26,7 +26,7 @@ Liferay npmバンドラー
 -  :doc:`/building-applications/tooling/other-tools/liferay-npm-bundler/npmbundlerrc-structure`
 -  :doc:`/building-applications/tooling/other-tools/liferay-npm-bundler/the-structure-of-osgi-bundles-containing-npm-packages`
 
-バンドラー移行ガイド
+Bundler Migration Guide
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 -  :doc:`/building-applications/tooling/other-tools/liferay-npm-bundler/bundler-migration-guide/migrating-bundler-projects-intro`

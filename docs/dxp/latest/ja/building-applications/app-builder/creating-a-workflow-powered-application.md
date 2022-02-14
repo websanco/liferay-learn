@@ -6,8 +6,8 @@
 
 サンプルアプリケーションを作成するには、以下をお読みください。
 
-  - [ロール変更リクエストオブジェクトの作成](./creating-the-role-change-request-object.md)
-  - [Creating the Role Change Request App](./creating-the-role-change-request-app.md)
+* [ロール変更リクエストオブジェクトの作成](./creating-the-role-change-request-object.md)
+* [Creating the Role Change Request App](./creating-the-role-change-request-app.md)
 
 ワークフロー対応アプリは、オブジェクトのフォームが完了したと見なされる前に通過する必要のある手順を考慮して設計されています。
 
@@ -19,22 +19,22 @@
 | :--- | :--- | :--- |
 | 開始（最初のステップ）                | ステップ名 <br /> メインデータオブジェクト <br /> フォームビュー <br /> テーブルビュー <br /> アクション | 少なくとも、オブジェクト、フォームビュー、およびテーブルビューを選択して、データオブジェクトの入力を開始できるようにします。 レコードを追加できる人は誰でも処理を開始するため、担当者は存在しません。 アクションの名前は変更できますが、常に次のステップに進みます。                                                 |
 | 1（ステップ1）                   | ステップ名 <br /> 担当者 <br /> フォームビュー <br /> アクション                               | ステップに名前を付けて、[ロール](../../users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.md)に割り当てます。 次に、フォームビューを選択または作成し（読み取り専用または編集可能に設定）、次のステップに移行するアクションに名前を付けます。 |
-| 追加の番号付きステップ（例：ステップ2、3、4など） | ステップ1と同じ、追加で*新規アクションの追加*オプション                                                                | 追加のステップでは、ステップ1で実行できるすべてのことを実行できます。さらに、必要に応じて、前のワークフローステップに戻る新しいアクションを作成できます。                                                                                                       |
+| 追加の番号付きステップ（例：ステップ2、3、4など） | ステップ1と同じ、追加で_新規アクションの追加_オプション                                                                | 追加のステップでは、ステップ1で実行できるすべてのことを実行できます。さらに、必要に応じて、前のワークフローステップに戻る新しいアクションを作成できます。                                                                                                       |
 | 終了（最後のステップ）                | ステップ名                                                                                        | ワークフロープロセスの最後のステップに名前を付けます                                                                                                                                                          |
 
 ## アプリバージョン
 
-[ワークフロープロセスがバージョン管理されている](../../process-automation/workflow/designing-and-managing-workflows/managing-workflows.md#viewing-and-restoring-workflow-revisions)ため、ワークフロー対応アプリはバージョン管理されています。 新しいバージョンのアプリは、以下のような場合に作成されます。
+[ワークフロープロセスがバージョン管理されている](../../../process-automation/workflow/designing-and-managing-workflows/managing-workflows.md#viewing-and-restoring-workflow-revisions)ため、ワークフロー対応アプリはバージョン管理されています。 新しいバージョンのアプリは、以下のような場合に作成されます。
 
-  - ワークフロープロセス（ワークフロープロセスの新しいバージョンを生成するアクション）のステップまたは遷移を追加、編集、または削除する。
-  - ワークフローステップの1つでフォームビューを追加、更新、または削除する。
-  - ワークフローステップの担当者を追加、更新、または削除する。
+- ワークフロープロセス（ワークフロープロセスの新しいバージョンを生成するアクション）のステップまたは遷移を追加、編集、または削除する。
+- ワークフローステップの1つでフォームビューを追加、更新、または削除する。
+- ワークフローステップの担当者を追加、更新、または削除する。
 
 ワークフロー対応アプリの新しいバージョンは、新しい送信にのみ適用されます。 アプリのマネージャーは、詳細ビューから各送信のバージョンを確認できます（テーブルビューでレコードをクリックして、レコードの詳細を表示します）。
 
 ## 関連情報
 
-  - [App Builder Overview](../app-builder.md)
-  - [Creating a Standard Application](./creating-a-standard-application.md)
-  - [Workflow](../../process-automation/workflow/introduction-to-workflow.md)
-  - [ロールと権限](../../users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.md)
+* [App Builder Overview](./app-builder-overview.md)
+* [Creating a Standard Application](./creating-a-standard-application.md)
+* [Workflow](../../../process-automation/workflow/introduction-to-workflow.md)
+* [ロールと権限](../../../users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.md)

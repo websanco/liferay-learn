@@ -1,0 +1,39 @@
+<script type="module">
+	import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.esm.browser.min.js'
+
+	const page = new Vue({
+		el: '#landingPage',
+		data: {
+			cards: [
+				{
+					sectionName: 'Message Bus',
+					sectionURL: 'message-bus/message-bus.html',
+				},
+				{
+					sectionName: 'Listening for Messages',
+					sectionURL: 'message-bus/listening-for-messages.html',
+				},
+				{
+					sectionName: 'Using Asynchronous Messaging',
+					sectionURL: 'message-bus/using-asynchronous-messaging.html',
+				},
+				{
+					sectionName: 'Using Default Synchronous Messaging',
+					sectionURL: 'message-bus/using-default-synchronous-messaging.html',
+				},
+				{
+					sectionName: 'Using Direct Synchronous Messaging',
+					sectionURL: 'message-bus/using-direct-synchronous-messaging.html',
+				},
+				{
+					sectionName: `Listening for Registration Events`,
+					sectionURL: `listening-for-registration-events.html`,
+				},
+				{
+					sectionName: 'Tuning Messaging Performance',
+					sectionURL: `tuning-messaging-performance.html`,
+				},
+			]
+		}
+	})
+</script>
