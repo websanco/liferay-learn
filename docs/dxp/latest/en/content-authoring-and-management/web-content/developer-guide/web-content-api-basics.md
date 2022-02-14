@@ -6,7 +6,7 @@ Using the Liferay DXP REST services, you can create and manage structured conten
 You can use a Structure with a [Web Content Template](../web-content-templates/creating-web-content-templates.md) to render the structured content, but a Template is not required to create structured content.
 ```
 
-See the cURL and Java samples for Structures and structured content below. For more advanced examples managing structured content, see [Advanced Web Content API](./advanced-web-content-api.md). For an overview of using the REST API in Liferay DXP, see [Consuming REST Services](../../../headless-delivery/consuming-apis/consuming-rest-services.md).
+See the cURL and Java samples for Structures and structured content below. For more advanced examples of managing structured content, see [Advanced Web Content API](./advanced-web-content-api.md). For an overview of using the REST API in Liferay DXP, see [Consuming REST Services](../../../headless-delivery/consuming-apis/consuming-rest-services.md).
 
 ## Setting Up Your Environment
 
@@ -84,7 +84,7 @@ For more information, see [Adding a Basic Web Content Article](../web-content-ar
 
 ## Get Web Content Articles from Site
 
-You can list a site's Web Content articles by executing the following cURL or Java command. Replace `1234` with your site's ID.
+You can retrieve a site's Web Content articles by executing the following cURL or Java command. Replace `1234` with your site's ID.
 
 ### StructuredContents_GET_FromSite.sh
 
@@ -240,11 +240,11 @@ Code:
    :lines: 9-23
 ```
 
-The `StructuredContent` fields are listed in JSON.
+The `StructuredContent` fields appear in JSON.
 
 ## Get Web Content Structures
 
-You can list a site's Content Structures by executing the following cURL or Java command. Replace `1234` with your site's ID.
+You can retrieve a site's Content Structures by executing the following cURL or Java command. Replace `1234` with your site's ID.
 
 ```{note}
 The default Basic Web Content Structure is not visible using this endpoint.
@@ -280,7 +280,7 @@ Code:
    :lines: 11-26
 ```
 
-The site's `ContentStructure` objects are listed in JSON.
+The site's `ContentStructure` objects appear in JSON.
 
 ## Get Web Content Structure by Id
 
@@ -302,7 +302,7 @@ The `ContentStructure_GET_ById.[java|sh]` script returns a Web Content Structure
 | :--- | :--- |
 | $1 | `contentStructureId`|
 
-Below is the JSON output, where you can identify the default Web Content Structure in Liferay DXP by its `id` and `name`. The `contentStructureFields` section contains a description of the Structure fields. Notice that this Structure contains a single content field of type `string` and name `content`. In [Post a Basic Web Content Article](#post-a-basic-web-content-article), you create a new Web Content Article adding information to this content field.
+Below is the JSON output. You can identify the default Web Content Structure in Liferay DXP by its `id` and `name`. The `contentStructureFields` section contains a description of the Structure fields. Notice that this Structure contains a single content field of type `string` and name `content`. In [Post a Basic Web Content Article](#post-a-basic-web-content-article), you create a new Web Content Article adding information to this content field.
 
 ```json
 {
@@ -344,7 +344,7 @@ Code:
    :lines: 9-23
 ```
 
-The `ContentStructure` fields are listed in JSON.
+The `ContentStructure` fields appear in JSON.
 
 ## Post a Basic Web Content Article
 
@@ -442,7 +442,7 @@ Code:
    :lines: 11-45
 ```
 
-The `StructuredContent` fields are listed in JSON.
+The `StructuredContent` fields appear in JSON.
 
 ## Patch Web Content Article
 
