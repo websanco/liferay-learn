@@ -2,9 +2,8 @@
 
 The
 [`liferay-util:dynamic-include` tag](https://learn.liferay.com/reference/latest/en/dxp/taglibs/util-taglib/liferay-util/dynamic-include.html) 
-is a placeholder into which you can inject content. Every JSP's dynamic include 
-tag is an extension point for inserting content (e.g., JavaScript code, HTML, 
-and more). The example project demonstrates how to inject content with a dynamic include.
+is a placeholder into which you can inject content---JavaScript code, HTML, 
+and more. The example project demonstrates how to inject content with a dynamic include.
 
 ## Deploy the Example Project
 
@@ -43,7 +42,7 @@ and more). The example project demonstrates how to inject content with a dynamic
    STARTED com.acme.n3q9.baker.web_1.0.0 [1460]
    ```
 
-1. Verify that the example module is working. Open your browser to `https://localhost:8080`.
+1. Verify that the example module works. Open your browser to `https://localhost:8080`.
 
 1. Navigate to a Site page and click the Edit icon (![Edit icon](../../../images/icon-edit.png)). Add the N3Q3 Baker Portlet to the page. The widget can be found under Sample widgets.
 
