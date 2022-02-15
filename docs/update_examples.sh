@@ -29,6 +29,8 @@ function copy_template {
 
 			pushd ${zip_dir_name}
 
+			#./gradlew buildService
+
 			./gradlew classes formatSource
 
 			if [ "${1}" == "prod" ]
