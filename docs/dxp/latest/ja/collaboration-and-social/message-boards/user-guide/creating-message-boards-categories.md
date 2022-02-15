@@ -2,7 +2,7 @@
 
 掲示板カテゴリは、トピックごとにスレッドを整理します。 [必要な権限](./message-boards-permissions-reference.md)（少なくとも、 **カテゴリの追加** 、 **サブカテゴリの追加**）を持つ認証されたユーザーのみが、カテゴリを作成できます。 DXPのロールと権限の詳細は、 [Roles and Permissions](https://help.liferay.com/hc/articles/360017895212-Roles-and-Permissions) をご覧ください 。
 
-<a name="カテゴリを追加する" />
+<a name="adding-categories" />
 
 ## カテゴリを追加する
 
@@ -33,7 +33,7 @@
 
 新しいカテゴリが掲示板のホーム画面に表示されます。 リストには、カテゴリ名と、それぞれのサブカテゴリ、スレッド、投稿の数が表示されます。
 
-<a name="権限の変更" />
+<a name="modifying-permissions" />
 
 ## 権限の変更
 
@@ -49,7 +49,7 @@
 
 1. 完了したら、 ［**Save**］ をクリックします。
 
-<a name="サブカテゴリを追加する" />
+<a name="adding-subcategories" />
 
 ## サブカテゴリを追加する
 
@@ -68,7 +68,7 @@
 
 ![サブカテゴリを追加する](./creating-message-boards-categories/images/07.png)
 
-<a name="カテゴリの移動とマージ" />
+<a name="moving-and-merging-categories" />
 
 ## カテゴリの移動とマージ
 
@@ -85,13 +85,13 @@
 
 カテゴリ（およびサブカテゴリ）の数に関係なく、カテゴリは掲示板のスレッドを整理するための単なるコンテナです。 スレッドの作成を開始するには、[Creating Threads](./creating-message-boards-threads.md)の記事を参照してください。
 
-<a name="次のステップ" />
+<a name="whats-next" />
 
 ## 次のステップ
 
 カテゴリといくつかのサブカテゴリを作成したら、[掲示板スレッド](./creating-message-boards-threads.md)の作成方法について学習します。
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 

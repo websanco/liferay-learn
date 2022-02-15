@@ -4,7 +4,7 @@
 
 [必要な権限](./wiki-permissions.md)（少なくとも **ノードの追加** と **アクセス許可**）を持つ認証されたユーザーのみがノードを作成できます。 DXPのロールと権限の詳細は、 [Roles and Permissions](https://help.liferay.com/hc/articles/360017895212-Roles-and-Permissions) をご覧ください 。
 
-<a name="新しいノードを作成する" />
+<a name="creating-a-new-node" />
 
 ## 新しいノードを作成する
 
@@ -21,7 +21,7 @@
 
 ![新しいノードを作成する](./creating-a-node/images/01.png)
 
-<a name="新しいノードを選択する" />
+<a name="selecting-the-new-node" />
 
 ## 新しいノードを選択する
 
@@ -36,7 +36,7 @@
 
 新しいノードで、 ［**This page is empty. Edit it to add some text.**］ をクリックして、現在のノードの ［**FrontPage**］ ページを編集します。
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 

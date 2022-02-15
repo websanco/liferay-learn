@@ -12,7 +12,7 @@
 
     ![ユーザーのアバターと通知](./managing-notifications-and-requests/images/02.png)
 
-<a name="通知の管理" />
+<a name="managing-notifications" />
 
 ## 通知の管理
 
@@ -51,7 +51,7 @@
 
     ![複数の通知ステータスの管理](./managing-notifications-and-requests/images/05.png)
 
-<a name="サイトへの参加リクエストの管理" />
+<a name="managing-requests-to-join-a-site" />
 
 ## サイトへの参加リクエストの管理
 
@@ -59,7 +59,7 @@
 
 ![複数の通知ステータスの管理](./managing-notifications-and-requests/images/06.png)
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 

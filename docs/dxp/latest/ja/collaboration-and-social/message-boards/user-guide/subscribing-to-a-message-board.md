@@ -2,7 +2,7 @@
 
 ユーザーは、掲示板にサブスクライブすることにより、電子メールによるアップデートと製品内の通知を受け取ることができます。 デフォルトでは、ユーザーは自分が作成したスレッドに自動的にサブスクライブされ、電子メールまたはRSSフィードを介してカテゴリまたは特定のスレッドにサブスクライブするようにオプトインできます。
 
-<a name="カテゴリまたはスレッドのサブスクライブ" />
+<a name="subscribing-to-a-category-or-thread" />
 
 ## カテゴリまたはスレッドのサブスクライブ
 
@@ -21,13 +21,13 @@
 
     ![サブスクリプションの管理](./subscribing-to-a-message-board/images/03.png)
 
-<a name="rssフィードを使用したサブスクライブ" />
+<a name="subscribing-using-rss-feeds" />
 
 ## RSSフィードを使用したサブスクライブ
 
 掲示板は [RSS](https://en.wikipedia.org/wiki/RSS) フィードとして公開できます。 **掲示板** のRSSはデフォルトで有効になっており、Liferay DXPはRSS 1.0、RSS 2.0、またはAtom 1.0をサポートしています。
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 

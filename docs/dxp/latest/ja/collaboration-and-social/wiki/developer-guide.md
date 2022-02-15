@@ -7,7 +7,7 @@ developer-guide/wiki-api-basics.md
 
 近日公開!
 
-<a name="wiki-api" />
+<a name="wiki-apis" />
 
 ## Wiki API
 

@@ -2,7 +2,7 @@
 
 **掲示板** には、フォーラムを効果的にモデレートできる機能が含まれています。 これには、スレッドのロック、スレッドの移動とマージ、ユーザーの禁止、スレッドのフラグ付けが含まれます。 適切に指定された権限を持つユーザーは、これらのツールを使用できます。 **掲示板** 権限をロールに割り当てる詳細は、 [掲示板の権限リファレンス](./message-boards-permissions-reference.md) を参照してください。 一般的なロールと権限の詳細は、 [Roles and Permissions](https://help.liferay.com/hc/articles/360017895212-Roles-and-Permissions) を参照してください 。
 
-<a name="スレッドのロック" />
+<a name="locking-threads" />
 
 ## スレッドのロック
 
@@ -22,7 +22,7 @@
 
 スレッドのロックが解除されました。
 
-<a name="スレッドの移動" />
+<a name="moving-threads" />
 
 ## スレッドの移動
 
@@ -38,7 +38,7 @@
 
 これでスレッドは新しいカテゴリに分類されました。
 
-<a name="ユーザーの禁止" />
+<a name="banning-users" />
 
 ## ユーザーの禁止
 
@@ -60,7 +60,7 @@
 
 このユーザーが元に戻されました。
 
-<a name="フラグが付いたスレッドの確認" />
+<a name="reviewing-flagged-threads" />
 
 ## フラグが付いたスレッドの確認
 
@@ -89,7 +89,7 @@
 
 これで返信が削除されました。
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 

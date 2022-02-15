@@ -16,7 +16,7 @@
 
 ![ナレッジベースアプリには、タブからアクセスできるさまざまなセクションがあります。](./creating-knowledge-base-articles/images/01.png)
 
-<a name="エディターでの記事の作成" />
+<a name="authoring-articles-in-the-editor" />
 
 ## エディターでの記事の作成
 
@@ -32,7 +32,7 @@
 
 記事が保存されると、ナレッジベースのHTMLに自動的に変換されます。 記事は［記事］タブのテーブルに表示されます。
 
-<a name="ナレッジベース記事のインポート" />
+<a name="importing-knowledge-base-articles" />
 
 ## ナレッジベース記事のインポート
 

@@ -7,7 +7,7 @@
 
 ウィジェットがユーザーのプライベートダッシュボードにデプロイされた後、ユーザーは独自のソーシャルコネクションを形成できます。
 
-<a name="コンタクトセンターをユーザーダッシュボードに追加する" />
+<a name="adding-the-contacts-center-to-a-user-dashboard" />
 
 ## コンタクトセンターをユーザーダッシュボードに追加する
 
@@ -21,7 +21,7 @@
 
     ![コンタクトセンターウィジェット](./using-the-contacts-center-widget/images/02.png)
 
-<a name="ユーザーとの接続" />
+<a name="connecting-with-a-user" />
 
 ## ユーザーとの接続
 
@@ -40,7 +40,7 @@
 
 その人が接続要求を受け入れると、その人は接続のリストに表示されます。 切断するには、ユーザーのアバターをクリックしてから **切断** クリックします。
 
-<a name="ユーザーのフォロー" />
+<a name="following-a-user" />
 
 ## ユーザーのフォロー
 
@@ -55,7 +55,7 @@
 
 ユーザーのフォローを解除するには、ユーザーのアバターをクリックしてから **フォローを解除** クリックします。
 
-<a name="ユーザーをブロックする" />
+<a name="blocking-a-user" />
 
 ## ユーザーをブロックする
 
@@ -68,7 +68,7 @@
 
     ![フォローしているユーザーの表示](./using-the-contacts-center-widget/images/10.png)
 
-<a name="vcardのダウンロード" />
+<a name="downloading-a-vcard" />
 
 ## vCardのダウンロード
 
@@ -82,7 +82,7 @@
 
 ユーザーは、選択した電子メールおよびSMSシステムに `.vcf` ファイルをアップロードできます。
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 

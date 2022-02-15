@@ -5,7 +5,7 @@
 1. ［**サイト管理**］ &rarr; ［**Content & Data**］ &rarr; ［**掲示板**］ に移動します。
 1. ［**オプション**］ メニュー &rarr; ［**Configuration**］ の順にクリックします。
 
-<a name="generalタブ" />
+<a name="general-tab" />
 
 ## ［General］タブ
 

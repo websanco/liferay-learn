@@ -6,7 +6,7 @@
 
 質問が作成されると、タグを使って他の人が関連するコンテンツを見つけやすくすることもできます。
 
-<a name="質問アプリをサイトに追加する" />
+<a name="adding-a-questions-app-to-a-site" />
 
 ## 質問アプリをサイトに追加する
 
@@ -27,7 +27,7 @@
 Note that only users with the requisite permissions have the ability to create topics.
 -->
 
-<a name="トピックの作成" />
+<a name="creating-topics" />
 
 ## トピックの作成
 
@@ -41,7 +41,7 @@ Note that only users with the requisite permissions have the ability to create t
 
    トピックは何種類でも作ることができます。
 
-<a name="質問をする" />
+<a name="asking-questions" />
 
 ## 質問をする
 
@@ -55,7 +55,7 @@ Note that only users with the requisite permissions have the ability to create t
 
    最後に、 ［**Post Your Question**］ ボタンをクリックします。
 
-<a name="質問に答える" />
+<a name="answering-questions" />
 
 ## 質問に答える
 
@@ -87,7 +87,7 @@ Note that only users with the requisite permissions have the ability to create t
 
 **編集する:** ユーザーは自分の回答を編集できます。
 
-<a name="質問を探す" />
+<a name="searching-questions" />
 
 ## 質問を探す
 
@@ -103,7 +103,7 @@ Note that only users with the requisite permissions have the ability to create t
 
 ![［タグ］タブをクリックすると、すべてのタグが表示されます。](using-the-questions-app/images/09.png)
 
-<a name="トピックと質問のサブスクリプション" />
+<a name="subscriptions-to-topics-and-questions" />
 
 ## トピックと質問のサブスクリプション
 
@@ -131,7 +131,7 @@ Note that only users with the requisite permissions have the ability to create t
 
 ここには、あなたの順位、投稿された質問の数、各質問の一覧が表示されます。
 
-<a name="次のステップ" />
+<a name="whats-next" />
 
 ## 次のステップ
 

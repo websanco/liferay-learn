@@ -2,7 +2,7 @@
 
 この記事では、 ［**掲示板**］ ウィジェットでの権限について説明し、ユーザーおよびロールに権限を割り当てる際のリファレンスとして機能します。 DXPのロールと権限の詳細は、 [Roles and Permissions](https://help.liferay.com/hc/articles/360017895212-Roles-and-Permissions) をご覧ください 。
 
-<a name="ホームカテゴリの権限" />
+<a name="home-category-permissions" />
 
 ## ホームカテゴリの権限
 
@@ -30,7 +30,7 @@
 | **Move Thread：** | スレッドを別のカテゴリまたはサブカテゴリに移動します。        |
 | **Update Thread Priority：** | スレッドの優先順位を変更します。                   |
 
-<a name="ウィジェットの権限" />
+<a name="widget-permissions" />
 
 ## ウィジェットの権限
 
@@ -46,7 +46,7 @@
 | **View：** | ウィジェットを表示する機能を付与します。         |
 | **Add to Page：** | サイトページにウィジェットを追加する機能を付与します。  |
 
-<a name="一般的なカテゴリの権限" />
+<a name="general-category-permissions" />
 
 ## 一般的なカテゴリの権限
 
@@ -69,7 +69,7 @@
 | **Add Subcategory：** | このカテゴリ内に新しいカテゴリを追加します。       |
 | **Update Thread Priority：** | スレッドの優先順位を変更します。             |
 
-<a name="スレッドの権限" />
+<a name="thread-permissions" />
 
 ## スレッドの権限
 

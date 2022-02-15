@@ -8,7 +8,7 @@
 
 ![［Categories］タブ](./message-boards-widget-ui-reference/images/04.png)
 
-<a name="recent-postsタブ" />
+<a name="recent-posts-tabs" />
 
 ## ［Recent Posts］タブ
 

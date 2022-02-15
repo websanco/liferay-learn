@@ -2,7 +2,7 @@
 
 **Wiki** アプリケーションには、リッチテキストのWYSIWYGエディター、バージョン追跡、および複数のWikiノードを作成する機能が含まれています。 WikiはLiferay DXPのユーザーおよび権限と統合されています。
 
-<a name="サイトにwikiウィジェットを追加する" />
+<a name="adding-a-wiki-widget-to-a-site" />
 
 ## サイトに［Wiki］ウィジェットを追加する
 
@@ -20,7 +20,7 @@
 
 サイトのメンバーは、Wikiページを作成および編集できるようになりました。 1ページあたりに設定できる ［**Wiki**］ ウィジェットの数は1つだけであることに注意してください。
 
-<a name="補足的なwikiウィジェット" />
+<a name="complementary-wiki-widgets" />
 
 ## 補足的なWikiウィジェット
 
@@ -30,7 +30,7 @@ Liferay DXPは、 ［**Wiki**］ ウィジェットと組み合わせて使用�
 * [ツリーメニュー](./using-the-tree-menu-widget.md)
 * [Wiki表示](./using-the-wiki-display-widget.md)
 
-<a name="次のステップ" />
+<a name="whats-next" />
 
 ## 次のステップ
 

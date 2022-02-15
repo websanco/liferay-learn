@@ -24,7 +24,7 @@ _Activitiesウィジェットの使用を開始するには：
 
 最後に、［**RSS**］をクリックして、ユーザーアクティビティをサブスクライブします。
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 

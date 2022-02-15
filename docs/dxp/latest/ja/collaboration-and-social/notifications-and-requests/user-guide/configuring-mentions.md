@@ -2,7 +2,7 @@
 
 メンションは、 **Mentions** アプリで有効にします。 デフォルトでは、 **Mentions** アプリがグローバルに有効になっています。 ただし、このアプリはグローバルに、またはサイトごとに有効または無効にできます。
 
-<a name="グローバルスコープでのメンションの設定" />
+<a name="configuring-mentions-on-a-global-scope" />
 
 ## グローバルスコープでのメンションの設定
 
@@ -21,7 +21,7 @@
 
 1. ［**Save**］ をクリックします。
 
-<a name="サイトスコープでのメンションの設定" />
+<a name="configuring-mentions-on-a-site-scope" />
 
 ## サイトスコープでのメンションの設定
 
@@ -47,7 +47,7 @@
 
 1. ［**Save**］ をクリックします。
 
-<a name="関連情報" />
+<a name="related-information" />
 
 ## 関連情報
 

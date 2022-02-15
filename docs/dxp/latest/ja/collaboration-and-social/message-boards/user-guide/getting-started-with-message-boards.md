@@ -2,7 +2,7 @@
 
 Liferay DXPの掲示板アプリは、任意のDXPサイトページに追加できるフォーラムアプリケーションです。 DXPの掲示板は、標準サイト、組織のサイト、ユーザーのプロファイルサイトやダッシュボードサイトなどの [サイトに範囲設定](https://help.liferay.com/hc/articles/360028819992-Widget-Scope) できます。
 
-<a name="サイトに掲示板を追加する" />
+<a name="adding-message-boards-to-a-site" />
 
 ## サイトに掲示板を追加する
 
@@ -23,7 +23,7 @@ Liferay DXPの掲示板アプリは、任意のDXPサイトページに追加で
 
 サイトメンバーは、 ［**Message Boards**］ ウィジェットを使用してフォーラム投稿を作成できます。 1ページあたりに設定できる ［**Message Boards**］ ウィジェットの数は1つだけであることに注意してください。
 
-<a name="次のステップ" />
+<a name="whats-next" />
 
 ## 次のステップ
 

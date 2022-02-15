@@ -25,7 +25,7 @@
 
 ![［Tree Menu］ウィジェットの設定](./using-the-tree-menu-widget/images/04.png)
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 

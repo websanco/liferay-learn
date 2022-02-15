@@ -2,7 +2,7 @@
 
 LiferayのHeadless Deliveryアプリケーションは、[Wiki](../getting-started-with-wikis.md)アプリケーションにRESTサービスを提供します。 これらのサービスを使用すると、Wikiノードとページを追加したり、それらの情報を一覧表示したり、コンテンツを変更したり、完全に削除したりできます。 ここでは、cURLコマンドとJavaクラスを使用してこれらのサービスを呼び出します。
 
-<a name="チュートリアルリソースの準備" />
+<a name="preparing-tutorial-resources" />
 
 ## チュートリアルリソースの準備
 
@@ -46,7 +46,7 @@ cd liferay-q8u2/java
 javac -classpath .:* *.java
 ```
 
-<a name="wikinodeおよびwikipage-headless-apiの使用" />
+<a name="using-wikinode-and-wikipage-headless-apis" />
 
 ## WikiNodeおよびWikiPage Headless APIの使用
 
@@ -394,7 +394,7 @@ cURLコマンドまたはJavaクラスのいずれかを使用して、WikiPage 
    }
    ```
 
-<a name="サンプルのcurlスクリプトの検証" />
+<a name="examining-the-sample-curl-scripts" />
 
 ## サンプルのcURLスクリプトの検証
 
@@ -418,7 +418,7 @@ cURLコマンドまたはJavaクラスのいずれかを使用して、WikiPage 
    :language: bash
 ```
 
-<a name="サンプルのjavaクラスの検証" />
+<a name="examining-the-sample-java-classes" />
 
 ## サンプルのJavaクラスの検証
 
@@ -448,7 +448,7 @@ cURLコマンドまたはJavaクラスのいずれかを使用して、WikiPage 
    :lines: 6-25
 ```
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 

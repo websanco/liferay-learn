@@ -4,7 +4,7 @@
 
 ![アプリから、ナレッジベースの記事、テンプレート、候補を管理できます](./managing-the-knowledge-base/images/01.png)
 
-<a name="ナレッジベースのオプションの設定" />
+<a name="setting-the-knowledge-bases-options" />
 
 ## ナレッジベースのオプションの設定
 
@@ -23,7 +23,7 @@
 
 **設定:** 記事の購読リストと候補のメール通知を設定します。 また、ナレッジベースアプリの記事をRSS経由で公開したり（デフォルトで有効）、RSSフィードのオプションを設定することもできます。
 
-<a name="ナレッジベース記事の管理" />
+<a name="managing-knowledge-base-articles" />
 
 ## ナレッジベース記事の管理
 

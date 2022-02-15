@@ -4,7 +4,7 @@
 
 デフォルトでは、認証されたユーザーのみが **Wiki** の記事を作成できます。ゲストは、最初にサインインする必要があります。
 
-<a name=" **frontpage** でコンテンツを作成する" />
+<a name="creating-content-on-the-frontpage" />
 
 ## **FrontPage** でコンテンツを作成する
 
@@ -46,7 +46,7 @@ You can enable automatic antivirus scanning to scan files on upload. For details
 
 **FrontPage** の記事が作成されました。
 
-<a name="子ページを作成する" />
+<a name="creating-child-pages" />
 
 ## 子ページを作成する
 
@@ -58,7 +58,7 @@ You can enable automatic antivirus scanning to scan files on upload. For details
 
 ![Wikiページエディターは、すべてのレベルのすべてのページで同じです。](./creating-wiki-pages/images/07.png)
 
-<a name="他のトップレベルページを作成する" />
+<a name="creating-other-top-level-pages" />
 
 ## 他のトップレベルページを作成する
 
@@ -75,7 +75,7 @@ You can enable automatic antivirus scanning to scan files on upload. For details
 
 ![［Wiki Display］ウィジェットを使用して他のトップレベルページを表示する](./creating-wiki-pages/images/08.png)
 
-<a name="次のステップ" />
+<a name="whats-next" />
 
 ## 次のステップ
 

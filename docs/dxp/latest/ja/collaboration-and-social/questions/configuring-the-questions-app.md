@@ -15,7 +15,7 @@
 
     ![システム設定で質問アプリの設定に移動します。](./configuring-the-questions-app/images/05.png)
 
-<a name="トピックの表示スタイル" />
+<a name="topic-display-style" />
 
 ## トピックの表示スタイル
 
@@ -31,7 +31,7 @@
 
   ![設定ウィンドウが開き、さまざまなオプションが表示されます。](./configuring-the-questions-app/images/02.png)
 
-<a name="トピック表示の制限" />
+<a name="limiting-topic-display" />
 
 ## トピック表示の制限
 
@@ -47,7 +47,7 @@
 
 1. トピックを選択し、 ［**保存**］ をクリックします。 アプリは、選択したトピックのサブトピックと質問のみを表示するようになりました。
 
-<a name="アプリの権限の管理" />
+<a name="managing-app-permissions" />
 
 ## アプリの権限の管理
 
@@ -63,7 +63,7 @@
 
 1. さまざまなロールに権限を割り当てます。 ［**Save**］ をクリックします。
 
-<a name="ゲストユーザーをログインにリダイレクトする" />
+<a name="redirecting-guest-users-to-login" />
 
 ## ゲストユーザーをログインにリダイレクトする
 
@@ -98,7 +98,7 @@
 
 1. ［**Save**］ をクリックして新しいポリシーを保存します。
 
-<a name="システム設定リファレンス" />
+<a name="system-configuration-reference" />
 
 ## システム設定リファレンス
 

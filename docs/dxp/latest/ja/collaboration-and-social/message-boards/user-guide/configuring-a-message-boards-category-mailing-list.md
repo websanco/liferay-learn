@@ -2,13 +2,13 @@
 
 この記事では、 **サイトスコープ** または **ページスコープの掲示板** で掲示板のカテゴリのメーリングリストを設定する方法について説明します。 スコープの使用方法については、 [メッセージボードのスコープ](./scoping-your-message-boards.md) の記事を参照してください。 グローバルスコープの掲示板は、サブスクリプションとメーリングリストをサポートしていません。 掲示板の全てのカテゴリに独自のメーリングリストを作成できます。
 
-<a name="前提条件" />
+<a name="prerequisites" />
 
 ## 前提条件
 
 掲示板アプリのメーリングリストを設定する前に、[Connecting to a Mail Server](../../../installation-and-upgrades/setting-up-liferay/configuring-mail/connecting-to-a-mail-server.md)の記事を参照し、Liferay DXPインスタンス全体にメールサーバーを設定する一般的な手順について確認してください。
 
-<a name="掲示板カテゴリにメーリングリストを追加する" />
+<a name="adding-a-mailing-list-to-a-message-boards-category" />
 
 ## 掲示板カテゴリにメーリングリストを追加する
 
@@ -46,7 +46,7 @@
    カテゴリのメーリングリストにIMAP <https://support.google.com/mail/answer/7126229?hl=en>プロトコルを使用している場合は、メッセージをメーリングリストのユーザーに送信する電子メールクライアントによってメッセージがプルされたときにメッセージ<https://support.google.com/mail/answer/78892?hl=en>が削除されるようにIMAP受信トレイを設定してください。 そうしないと、サーバーに保持されている各電子メールメッセージは、カテゴリに新しい投稿や更新があるたびにメーリングリストに送信されます。
 ```
 
-<a name="関連情報" />
+<a name="related-information" />
 
 ## 関連情報
 

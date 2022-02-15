@@ -24,7 +24,7 @@
 
 ［**Wiki Display**］ ウィジェットに選択した **Wikiページ** が表示されます。
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 

@@ -2,7 +2,7 @@
 
 [Wikiノード](./creating-a-node.md)を使用してコンテンツを整理する以外に、Wikiのスコープを [グローバル、サイト、またはページのスコープ](https://help.liferay.com/hc/articles/360028819992-Widget-Scope) に設定できます。
 
-<a name="グローバル" />
+<a name="global" />
 
 ## グローバル
 
@@ -39,13 +39,13 @@
 
 ここで行った変更はグローバルスコープに適用されます。
 
-<a name="サイト" />
+<a name="site" />
 
 ## サイト
 
 デフォルトでは、 **Wiki** アプリは現在選択されているサイトにスコープ指定されています。 同じインスタンスの別のサイトに作成されている可能性のあるWikiを表示すると、特定のサイトにスコープ指定されているWikiは表示されません。
 
-<a name="ページ" />
+<a name="page" />
 
 ## ページ
 
@@ -84,7 +84,7 @@
 
 ![新しいページスコープのWikiの選択](./scoping-your-wikis/images/09.png)
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 

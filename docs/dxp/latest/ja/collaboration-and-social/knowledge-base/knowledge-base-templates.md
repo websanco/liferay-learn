@@ -6,7 +6,7 @@
 
 ![アプリの［テンプレート］タブでテンプレートにアクセスします。](./knowledge-base-templates/images/01.png)
 
-<a name="テンプレートの作成" />
+<a name="creating-templates" />
 
 ## テンプレートの作成
 
@@ -22,7 +22,7 @@
 
 1. ［**Publish**］ をクリックして、テンプレートの作成を終了します。
 
-<a name="テンプレートの管理" />
+<a name="managing-templates" />
 
 ## テンプレートの管理
 
