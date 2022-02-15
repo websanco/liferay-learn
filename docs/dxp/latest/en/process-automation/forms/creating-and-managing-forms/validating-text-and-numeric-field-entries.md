@@ -1,4 +1,10 @@
-# Validating Text and Numeric Field Entries
+# Validation and Masking
+
+Certain Forms fields can be validated (Text, Date, and Numeric fields) and masked (Numeric fields) to ensure User input is valid.
+
+```{note}
+Date Fields can be validated beginning in Liferay 7.4.
+```
 
 Enable input validation to ensure that only certain values are accepted in a Text or Numeric field.
 
@@ -10,17 +16,19 @@ Enable input validation to ensure that only certain values are accepted in a Tex
 
 To enable validation:
 
-1. While viewing a form, click on a Text or Numeric field to open the field configuration menu.
+1. While viewing a form, click on a Text, Numeric, or date field to open the field configuration menu.
 1. Click the _Advanced_ tab.
 1. Switch the _Validation_ toggle to the right to enable validation.
 
-    ![Figure 1: Validate data to ensure you're collecting only useful information.](./validating-text-and-numeric-field-entries/images/01.png)
+    ![Validate data to ensure you're collecting only useful information.](./validating-text-and-numeric-field-entries/images/01.png)
 
-Once validation has been enabled, specify the _If Input_ condition and enter the _Show Error Message_ which indicate how validation failed.
+Once validation has been enabled, configure the settings. For example, the Text field can specify the _If Input_ condition and the _Show Error Message_ to indicate how validation failed.
 
-<!-- When are the validation rules active? Does a person need to "Save" the form for the validation to be active? If yes, then we should explicitly say so. -->
+The Field validation rule is triggered as soon as a User navigates away from a validated form field (by clicking into another field, for example). 
 
-## Text Fields
+![Validation is triggered when the User leaves a validated field.](./validating-text-and-numeric-field-entries/images/06.png)
+
+## Validating Text Fields
 
 See the [Validation Conditions Reference](./validation-conditions-reference.md) for more information about the other validation conditions.
 
@@ -86,6 +94,33 @@ To configure the Numeric field to accept only integers:
     ![Specify whether numbers can be decimals or integers only.](./validating-text-and-numeric-field-entries/images/03.png)
 
 1. Click _Save Form_ to apply the changes.
+
+## Validating Date Fields
+
+As of Liferay 7.4, the Advanced configuration of the Date Field includes Validation.
+
+![Enter validation rules for date fields.](./validating-text-and-numeric-field-entries/images/07.png)
+
+Validation options include
+
+**Accepted Date:** Require that the selected date be a future date, a past date, or a specified range.
+
+**Starts From/Ends On:** In the case of future dates, define the date picker Start From date. For past dates, define the Ends On date. Configure whether the date picker should use the Response Date (the date that the user is filling out the form) or a custom date for this value. Both Starts From and Ends On must be configured for a date range validation.
+
+**Error Message:** The error message can be customized to better suit the specific validation rule.
+
+## Masking Numeric Fields
+
+The Input Mask configuration lets you you display the correct number format as the user enters numeric data. The configuration behavior differs between integer fields and decimal fields:
+
+   - Integer field masks: configure the Format. A second entry, Character Options, is a read-only field setting that provides additional guidance on the character behavior used to define the format.
+
+     ![Create an input mask for integer fields.](./validating-text-and-numeric-field-entries/images/08.png)
+
+   - Decimal field masks: Configure the Thousands Separator, the Decimal Separator, the Decimal Places, and the Prefix or Suffix settings. The thousands separator style can be `None`, `1,000`, `1.000`, or `1 000`. The decimal separator style can be `0.00` or `0,00`. Prefix or Suffix. Use the Decimal Places setting to specify a limit to the number of decimal digits. The prefix or suffix is usually used to define the units of the decimal number. For example, use `$` as a prefix for a field that expects the user to enter a dollar amount.
+
+     ![Create an input mask for decimal fields.](./validating-text-and-numeric-field-entries/images/09.png)
+
 
 ## Additional Information
 

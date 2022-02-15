@@ -91,17 +91,9 @@ Users select a date using a date picker.
 
 ![A date picker offers  handy way to select a date.](./forms-field-types-reference/images/06.png)
 
-As of Liferay 7.4, the Advanced configuration of the Date Field includes Validation.
+As of Liferay 7.4, the Advanced configuration of the Date Field includes Validation. You can put limits on the dates users can enter (e.g., numbers from 1-10, email addresses, etc.) by using the [validation options in the field's Advanced configuration](./validating-text-and-numeric-field-entries.md).
 
 ![Enter validation rules for date fields.](./forms-field-types-reference/images/26.png)
-
-Validation options include
-
-**Accepted Date:** Require that the selected date be a future date, a past date, or a specified range.
-
-**Starts From/Ends On:** In the case of future dates, define the date picker Start From date. For past dates, define the Ends On date. Configure whether the date picker should use the Response Date (the date that the user is filling out the form) or a custom date for this value. Both Starts From and Ends On must be configured for a date range validation.
-
-**Error Message:** The error message can be customized to better suit the specific validation rule.
 
 ### Multiple Selection
 
@@ -126,13 +118,10 @@ There are some interesting advanced field settings for numeric fields:
 - [**Require Confirmation**](#field-confirmation) ensures the user enters data correctly.
 - **[Validation](./validating-text-and-numeric-field-entries.md)** constrains the user input to your pre-configured requirements.
       ![Validate numeric input.](./forms-field-types-reference/images/25.png)
-- **Input Mask** allows you to display the correct format as the user enters numeric data. The configuration behavior differs between integer fields and decimal fields:
-   - Integer field masks: configure the Format. A second entry, Character Options, is a read-only field setting that provides additional guidance on the character behavior used to define the format.
-      ![Create an input mask for integer fields.](./forms-field-types-reference/images/24.png)
-   - Decimal field masks: Configure the Thousands Separator, the Decimal Separator, and the Prefix or Suffix settings. The thousands separator style can be `None`, `1,000`, `1.000`, or `1 000`. The decimal separator style can be `0.00` or `0,00`. Prefix or Suffix. The prefix or suffix is usually used to define the units of the decimal number. For example, use `$` as a prefix for a field that expects the user to enter a dollar amount.
-      ![Create an input mask for decimal fields.](./forms-field-types-reference/images/23.png)
+- An **[Input Mask](./validating-text-and-numeric-field-entries.md#masking-numeric-fields)** allows you to display the correct format as the user enters numeric data. 
 
 ### Upload
+
 
 Upload fields let users upload a file from the local file system. Logged in Users can choose from files they have previously uploaded or upload a new one.
 
