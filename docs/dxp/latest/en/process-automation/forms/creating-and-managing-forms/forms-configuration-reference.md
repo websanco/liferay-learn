@@ -30,6 +30,7 @@ To access the Settings menu, choose the desired form (for example, _Guest Survey
 | Personalization | Redirect URL on Success | Specifies a redirect URL once the form is submitted successfully. |
 | Personalization | Submit Button Label | Changes the label of the Submit button to something more appropriate for your specific use case (e.g, _Vote_ or _Register_). |
 | Notifications | Send an Email Notification for Each Entry | Specifies whether an [email notification](../sharing-forms-and-managing-submissions/configuring-form-notifications.md) sent to the form creator each time a form record is submitted. |
+| Submissions | Limit to one Submission per User | Do not allow multiple form submissions to logged in Users. This also requires that Users are authenticated to fill out the form. |
 
 ### Email Notifications
 
