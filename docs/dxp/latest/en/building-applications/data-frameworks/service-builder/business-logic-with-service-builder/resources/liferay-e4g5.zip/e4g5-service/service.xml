@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 7.4.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_7_4_0.dtd">
+
+<service-builder dependency-injector="ds" package-path="com.acme.e4g5" short-no-such-exception-enabled="false">
+	<namespace>E4G5</namespace>
+	<entity local-service="true" name="E4G5Entry" remote-service="false">
+
+		<!-- PK fields -->
+
+		<column name="e4g5EntryId" primary="true" type="long" />
+
+		<!-- Other fields -->
+
+		<column name="description" type="String" />
+		<column name="name" type="String" />
+	</entity>
+</service-builder>

@@ -1,0 +1,8 @@
+Bundle-Name: Acme E4G5 API
+Bundle-SymbolicName: com.acme.e4g5.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.acme.e4g5.exception,\
+	com.acme.e4g5.model,\
+	com.acme.e4g5.service,\
+	com.acme.e4g5.service.persistence

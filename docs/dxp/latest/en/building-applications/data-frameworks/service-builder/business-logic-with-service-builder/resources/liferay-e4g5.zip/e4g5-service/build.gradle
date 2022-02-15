@@ -1,0 +1,8 @@
+buildService {
+	apiDir = "../e4g5-api/src/main/java"
+}
+
+dependencies {
+	compileOnly group: "com.liferay.portal", name: "release.portal.api"
+	compileOnly project(":e4g5-api")
+}
