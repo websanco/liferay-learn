@@ -1,12 +1,12 @@
 # Using Navigation Menus
 
-Liferay provides the Navigation Menus application for creating custom menus and filters for Site Pages and content. With it, you can determine which elements are included and how they're organized. Once created, you can display your custom menus and filters using Page fragments and widgets.
-<!--REMOVE? All Liferay Sites include a default menu that's configured to display the Site's [Public Pages](../creating-pages/understanding-pages/understanding-pages.md) hierarchy -->
+Liferay provides the Navigation Menus application for creating custom menus for Site Pages and content. With it, you can determine which elements are included and how they're organized. Once created, you can display your custom menus using Page fragments and widgets.
+
 ```{note}
 For Liferay 7.3 and earlier, Navigation Menus can only include Pages. As of Liferay DXP 7.4 U1+, Navigation Menus supports additional entities.
 ```
 
-![](./using-navigation-menus/images/01.png)
+![Creating Custom Menus for Site Pages and Content](./using-navigation-menus/images/01.png)
 
 ```{tip}
 In DXP 7.3+, you can use Custom Fields to add more information to items in Navigation Menus (under `Site Navigation Menu Item` in the `Custom Fields` menu). You can then use Application Display Templates to use this information to further customize your navigation menus.
@@ -53,7 +53,7 @@ Follow these steps to add elements to a Navigation Menu:
    When organizing menu elements, you can structure them into hierarchies. You can also use _Submenu_ type to add subsections to a menu.
    ```
 
-   ![](./using-navigation-menus/images/05.png)
+   ![Adding Elements to Navigation Menus](./using-navigation-menus/images/05.png)
 
 All changes to the menu are saved automatically.
 
@@ -73,13 +73,12 @@ Follow these steps to disable or enable this behavior for a Navigation Menu:
 
 1. Uncheck/Check the setting.
 
-   ![](./using-navigation-menus/images/07.png)
+   ![You can select from existing Navigation Menus when creating Site Pages](./using-navigation-menus/images/07.png)
 
 1. Click _Save_.
 
 ## Configuring Navigation Menu Type
 
-<!--TASK: Clarify what this does-->
 Follow these steps to configure a Navigation Menu's type:
 
 1. Open the _Site Menu_ (![Site Menu](../../images/icon-product-menu.png)) and go to _Site Builder_ &rarr; _Navigation Menus_.
