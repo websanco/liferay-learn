@@ -5,7 +5,7 @@ Follow these steps to create a Structure:
 1. Open the Product Menu and go to the Site Menu heading &rarr; *Content & Data* &rarr; *Web Content*.
 1. Select the *Structures* tab.
 1. Click the *Add button* (![Add Structure](../../../images/icon-add.png)) to create a new Structure.
-1. Enter the title of your new Structure and, optionally, choose its language.
+1. Enter the title of your new Structure.
 1. Drag and drop the [available fields](#structure-fields) onto the Structure and [configure their settings](./configuring-structure-fields.md#configurable-settings) to create the Structure.
 
     ```{tip}
@@ -64,6 +64,22 @@ If you upload an image from your computer, the image is only available for that 
 **Web Content:** A selector to include an existing Web Content Article
 
 See [Editing and Configuring Structure Fields](./configuring-structure-fields.md) for more information on configuring and editing Structure fields.
+
+## Translating a Structure
+
+You can add a translation for the Structure, either while creating it or later.
+
+![Manage the translations of a Web Content Structure.](./creating-structures/images/02.png)
+
+1. From the Add or Edit Structure screen, open the Language Selector by clicking the locale (e.g.,`en-us`), and then select *Manage Translations*.
+1. Click the *Add button* (![Add](../../../images/icon-add.png)) in the Manage Translations modal and choose the language.
+1. Click _Done_.
+1. Click the default locale again and select the new locale to begin translating.
+1. Translate as much of the Structure's text as you'd like, then click _Save_.
+
+To delete a translation, go back to the Manage Translations modal and click the Trash Icon ![Trash](../../../images/icon-trash.png).
+
+To edit a translation, select the translation using the Language Selector, make any changes, and click _Save_.
 
 ## Related Information
 
