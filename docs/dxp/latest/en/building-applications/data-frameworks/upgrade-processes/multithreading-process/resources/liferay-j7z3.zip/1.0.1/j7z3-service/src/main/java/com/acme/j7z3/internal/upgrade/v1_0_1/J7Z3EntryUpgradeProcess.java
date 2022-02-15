@@ -33,19 +33,18 @@ public class J7Z3EntryUpgradeProcess extends UpgradeProcess {
 			columns -> {
 				long j7z3EntryId = (Long)columns[0];
 
-				String sql =
-					"update J7Z3_J7Z3Entry set name = ? where j7z3EntryId = ?";
+				try (PreparedStatement preparedStatement =
+						connection.prepareStatement(
+							"update J7Z3_J7Z3Entry set name = ? where " +
+								"j7z3EntryId = ?")) {
 
-				try (PreparedStatement updatePreparedStatement =
-						connection.prepareStatement(sql)) {
+					preparedStatement.setString(1, "baker");
+					preparedStatement.setLong(2, j7z3EntryId);
 
-					updatePreparedStatement.setString(1, "baker");
-					updatePreparedStatement.setLong(2, j7z3EntryId);
-
-					updatePreparedStatement.executeUpdate();
+					preparedStatement.executeUpdate();
 				}
 			},
-			"Unable to update table");
+			null);
 	}
 
 }
