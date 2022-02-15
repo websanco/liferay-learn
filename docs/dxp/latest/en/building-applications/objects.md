@@ -4,13 +4,13 @@
 :maxdepth: 3
 
 objects/creating-and-managing-objects.md
-objects/building-solutions-with-objects.md
+objects/objects-tutorials.md
 objects/using-forms-with-objects.md
 objects/deploying-object-widgets-to-sites.md
 objects/displaying-object-entries.md
 objects/enabling-workflows-for-objects.md
-objects/understanding-object-integrations.md
 objects/using-picklists.md
+objects/understanding-object-integrations.md
 objects/objects-application-permissions.md
 ```
 

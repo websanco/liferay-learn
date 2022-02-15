@@ -97,7 +97,7 @@ Follow these steps to download and build the React application:
 1. Download and unzip the [React project](./liferay-x3j8.zip).
 
    ```bash
-   curl https://learn.liferay.com/dxp/latest/en/building-applications/objects/building-solutions-with-objects/liferay-x3j8.zip -O
+   curl https://learn.liferay.com/dxp/latest/en/building-applications/objects/objects-tutorials/liferay-x3j8.zip -O
    ```
 
    ```bash
