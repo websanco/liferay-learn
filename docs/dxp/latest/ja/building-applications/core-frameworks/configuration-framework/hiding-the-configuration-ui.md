@@ -1,9 +1,11 @@
 # 構成UIを非表示にする
 
-Liferayは、[構成インターフェイスがデプロイ](./setting-and-accessing-configurations.html#creating-the-configuration-interface)された後、構成UIを自動的に生成します。 ただし、UIを非表示にしたい特定のユースケースがある場合があります。 たとえば、管理者に特定の構成へのアクセスを許可したくない場合や、特定の基準に基づいて構成を非表示にしたい場合です。 構成UIを非表示にするには、2つの異なるオプションがあります。
+Liferayは、 [構成インターフェイスがデプロイ](./setting-and-accessing-configurations.html#creating-the-configuration-interface) された後、構成UIを自動的に生成します。 ただし、UIを非表示にしたい特定のユースケースがある場合があります。 たとえば、管理者に特定の構成へのアクセスを許可したくない場合や、特定の基準に基づいて構成を非表示にしたい場合です。 構成UIを非表示にするには、2つの異なるオプションがあります。
 
 * `generateUI`アノテーションプロパティを使用する
 * 構成の可視性インターフェイスを使用する
+
+<a name="generateuiを使用する" />
 
 ## `generateUI`を使用する
 
@@ -12,6 +14,8 @@ Liferayは、[構成インターフェイスがデプロイ](./setting-and-acces
 ```java
 @ExtendedObjectClassDefinition(generateUI=false)
 ```
+
+<a name="構成の可視性インターフェイスを使用する" />
 
 ## 構成の可視性インターフェイスを使用する
 
@@ -25,7 +29,7 @@ Liferayは、[構成インターフェイスがデプロイ](./setting-and-acces
     docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
     ```
 
-1. [構成UIの非表示](./liferay-g8v3.zip)をダウンロードして解凍します。
+1. [構成UIの非表示](./liferay-g8v3.zip) をダウンロードして解凍します。
 
     ```bash
     curl https://learn.liferay.com/dxp/latest/en/developing-applications/core-frameworks/configuration-framework/liferay-g8v3.zip -O
@@ -51,7 +55,7 @@ Liferayは、[構成インターフェイスがデプロイ](./setting-and-acces
     STARTED com.acme.g8v3.impl_1.0.0 [1650]
     ```
 
-1. ブラウザで`https://localhost:8080` を開き、*［コントロールパネル］* &rarr; *［設定］* &rarr; *［システム設定］*に移動します。 ［プラットフォーム］で*［サードパーティー］*をクリックします。 左側の*［G8V3 Able Configuration］*をクリックします 。 ［Enable G8V3 Baker Configuration］のチェックボックスをオンにします。 *[アップデート]*ボタンをクリックします。
+1. ブラウザで`https://localhost:8080` を開き、 ［**コントロールパネル**］ &rarr; ［**設定**］ &rarr; ［**システム設定**］ に移動します。 ［プラットフォーム］で ［**サードパーティー**］ をクリックします。 左側の ［**G8V3 Able Configuration**］ をクリックします 。 ［Enable G8V3 Baker Configuration］のチェックボックスをオンにします。 [**アップデート**] ボタンをクリックします。
 
     ![チェックボックスをクリックすると、他の構成UIが表示されます](./hiding-the-configuration-ui/images/01.png)
 

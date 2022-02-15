@@ -11,13 +11,13 @@ message-bus/listening-for-registration-events.md
 message-bus/tuning-messaging-performance.md
 ```
 
-メッセージバスは、メッセージを交換するための疎結合された方法を提供します。 メッセージを送信するクラスはメッセージバスを呼び出してメッセージを宛先に送信し、その宛先に登録されている他のクラス（*リスナー*）がメッセージを受信します。 リスナーは送信者に対して透過的であり、その逆も同様です。
+メッセージバスは、メッセージを交換するための疎結合された方法を提供します。 メッセージを送信するクラスはメッセージバスを呼び出してメッセージを宛先に送信し、その宛先に登録されている他のクラス（**リスナー**）がメッセージを受信します。 リスナーは送信者に対して透過的であり、その逆も同様です。
 
 主なメッセージングコンポーネントは次のとおりです。
 
 **宛先：** メッセージが送信される論理的（物理的ではない）な指名された場所。
 
-**リスナー：** 特定の宛先に送信されたメッセージを*リッスンする*クラス。
+**リスナー：** 特定の宛先に送信されたメッセージを **リッスンする** クラス。
 
 **メッセージバス：** 宛先登録を処理し、リスナーにメッセージを送信するフレームワーク。
 
@@ -36,6 +36,8 @@ message-bus/tuning-messaging-performance.md
 
 メッセージ送信者は、メッセージバスを使用してメッセージを宛先に送信することにのみ関係していて、メッセージの受信者には関係ありません。 メッセージリスナーは、宛先でのメッセージの受信にのみ関係していて、メッセージの送信者には関係ありません。
 
+<a name="同期および非同期メッセージング" />
+
 ## 同期および非同期メッセージング
 
 メッセージバスは、同期および非同期でメッセージを送信します。
@@ -48,13 +50,17 @@ message-bus/tuning-messaging-performance.md
 
 * [Using Asynchronous Messaging](./message-bus/using-asynchronous-messaging.md)は、宛先を構成し、その宛先に非同期でメッセージを送信する方法を示しています。 これは、メッセージを送信する最も簡単な方法です。
 
-* [Using Default Synchronous Messaging](./message-bus/using-default-synchronous-messaging.md)は、1つのリスナーがメッセージに応答するまで、*または*リスナーが応答しない場合はメッセージがタイムアウトするまで、メッセージ送信者がブロックする方法を示しています。
+* [Using Default Synchronous Messaging](./message-bus/using-default-synchronous-messaging.md)は、1つのリスナーがメッセージに応答するまで、 **または** リスナーが応答しない場合はメッセージがタイムアウトするまで、メッセージ送信者がブロックする方法を示しています。
 
-* [Using Direct Synchronous Messaging](./message-bus/using-default-synchronous-messaging.md)は、*すべての*リスナーがメッセージを受信するまでメッセージ送信者がメッセージの送信をブロックする方法を示しています。
+* [Using Direct Synchronous Messaging](./message-bus/using-default-synchronous-messaging.md)は、 **すべての** リスナーがメッセージを受信するまでメッセージ送信者がメッセージの送信をブロックする方法を示しています。
+
+<a name="パフォーマンスの調整" />
 
 ## パフォーマンスの調整
 
 メッセージバスAPIを使用すると、登録イベント、宛先、宛先メッセージリスナー、およびメッセージキューの監視が容易になります。 宛先タイプ、メッセージキューパラメータ、およびスレッドパラメータを調整することにより、ニーズに合わせてメッセージバスコンポーネントを設定できます。 詳細については、[Tuning Messaging Performance](./message-bus/tuning-messaging-performance.md)を参照してください。
+
+<a name="次のステップ" />
 
 ## 次のステップ
 

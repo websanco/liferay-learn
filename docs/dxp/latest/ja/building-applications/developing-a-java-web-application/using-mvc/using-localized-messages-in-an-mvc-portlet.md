@@ -2,6 +2,8 @@
 
 Liferayのローカライズフレームワークは、MVCポートレットでローカライズされたメッセージを作成するためのものです。
 
+<a name="サンプルコードをデプロイする" />
+
 ## サンプルコードをデプロイする
 
 1. Liferay DXPを起動します。 まだDockerコンテナがない場合は、以下を使用します。
@@ -26,7 +28,7 @@ Liferayのローカライズフレームワークは、MVCポートレットで�
     ./gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)
     ```
 
-    ```note::
+    ```{note}
        このコマンドは、デプロイされたjarをDockerコンテナの/opt/liferay/osgi/modulesにコピーするのと同じです。
     ```
 
@@ -50,11 +52,15 @@ Liferayのローカライズフレームワークは、MVCポートレットで�
 
 次に、どのように機能するかを確認します。
 
+<a name="言語プロパティファイルを作成する" />
+
 ## 言語プロパティファイルを作成する
 
 `Language.properties`ファイルを作成し、モジュールの`src/main/resources/content`フォルダに追加します。 ファイルで、MVCポートレットで使用するキーを定義します。
 
 他のロケールの言語プロパティファイルもフォルダに含めることができます。 たとえば、日本語の言語キーを含めるには、`Language_ja.properties`ファイルをフォルダに追加します。
+
+<a name="jspファイルを作成する" />
 
 ## JSPファイルを作成する
 
@@ -78,7 +84,9 @@ JSPファイルを作成し、モジュールの`/src/main/resources/META-INF/re
 
 これは、`Language.properties`ファイルにそのようなキーが見つからない場合、代わりにラベルが表示されることを示しています。
 
-タグライブラリの詳細については、[Liferay Tag Library Reference](https://docs.liferay.com/portal/7.3-latest/taglibs/util-taglib/)をご覧ください。 各タグライブラリには、タグに渡すことができる属性のリストがあります。
+タグライブラリの詳細については、 [Liferay Tag Library Reference](https://docs.liferay.com/portal/7.3-latest/taglibs/util-taglib/) をご覧ください。 各タグライブラリには、タグに渡すことができる属性のリストがあります。
+
+<a name="コンポーネント定義を追加する" />
 
 ## コンポーネント定義を追加する
 

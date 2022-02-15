@@ -18,7 +18,7 @@ using-mvc/sharing-localized-messages.md
 
 * 他の多くのJava MVCフレームワークとは対照的に、軽量です。
 * コードとの同期を維持する必要のある特別な構成ファイルはありません。
-* これは[`GenericPortlet`](https://learn.liferay.com/reference/latest/en/portlet-api/javax/portlet/GenericPortlet.html)の拡張です。
+* これは [`GenericPortlet`](https://learn.liferay.com/reference/latest/en/portlet-api/javax/portlet/GenericPortlet.html) の拡張です。
 * LiferayのMVCポートレットフレームワークは、`init()`メソッドが呼び出されたときにいくつかの事前定義されたパラメーターのみを検索するため、大量の定型コードの記述を回避できます。
 * コントローラーは、MVCコマンドクラスに分類できます。各クラスは、特定のポートレットポートレットフェーズ</a>（レンダリング、アクション、およびリソース提供フェーズ）のコントローラーコードを処理します。
 * MVCコマンドクラスは複数のポートレットにサービスを提供できます。
@@ -35,6 +35,8 @@ Liferay MVCポートレットフレームワークは軽量で使いやすいで
 
 Liferay MVCポートレットフレームワークの各レイヤーがアプリケーションの懸念事項の分離にどのように役立つかを検討してください。
 
+<a name="mvcレイヤーとモジュール性" />
+
 ## MVCレイヤーとモジュール性
 
 MVCには、3つのレイヤーがあります。
@@ -49,19 +51,23 @@ Liferay DXPのアプリケーションは、複数の個別の[モジュール](
 
 [Workspace](../tooling/liferay-workspace/creating-code-with-liferay-workspace.md) を使用してマルチモジュールのService Builder駆動型MVCアプリケーション[プロジェクト](../../liferay-internals/fundamentals/module-projects.md)のスケルトンを生成すると、時間を大幅に節約でき、より重要な（そして興味深い）開発作業を開始できます。
 
+<a name="liferay-mvcコマンドクラス" />
+
 ## Liferay MVCコマンドクラス
 
 大規模なアプリケーションでは、すべてのコントローラーロジックを保持している場合、 `-Portlet` クラスは巨大で扱いにくいものになります。 Liferayは、コントローラー機能を分割するMVCコマンドクラスを提供します。
 
-* **[`MVCActionCommand`](https://learn.liferay.com/reference/latest/en/dxp/javadocs/portal-kernel/com/liferay/portal/kernel/portlet/bridges/mvc/MVCActionCommand.html)：** `-ActionCommand` クラスを使用して、アクションURLによって呼び出される各ポートレットアクションを保持します。
-* **[`MVCRenderCommand`](https://learn.liferay.com/reference/latest/en/dxp/javadocs/portal-kernel/com/liferay/portal/kernel/portlet/bridges/mvc/MVCRenderCommand.html)：** `-RenderCommand` クラスを使用して、レンダリングURLに応答することにより、適切なJSPにディスパッチする `render` メソッドを保持します。
-* **[`MVCResourceCommand`](https://learn.liferay.com/reference/latest/en/dxp/javadocs/portal-kernel/com/liferay/portal/kernel/portlet/bridges/mvc/MVCResourceCommand.html)：** `-ResourceCommand` クラスを使用して、リソースURLに基づいてリソースを提供します。
+*** [`MVCActionCommand`](https://learn.liferay.com/reference/latest/en/dxp/javadocs/portal-kernel/com/liferay/portal/kernel/portlet/bridges/mvc/MVCActionCommand.html) ：** `-ActionCommand` クラスを使用して、アクションURLによって呼び出される各ポートレットアクションを保持します。
+*** [`MVCRenderCommand`](https://learn.liferay.com/reference/latest/en/dxp/javadocs/portal-kernel/com/liferay/portal/kernel/portlet/bridges/mvc/MVCRenderCommand.html) ：** `-RenderCommand` クラスを使用して、レンダリングURLに応答することにより、適切なJSPにディスパッチする `render` メソッドを保持します。
+*** [`MVCResourceCommand`](https://learn.liferay.com/reference/latest/en/dxp/javadocs/portal-kernel/com/liferay/portal/kernel/portlet/bridges/mvc/MVCResourceCommand.html) ：** `-ResourceCommand` クラスを使用して、リソースURLに基づいてリソースを提供します。
 
 すべてをつなぎ合わせて適切に機能させるには、混乱を招く構成ファイルが必要です。 いいえ、そうではありません。`-Portlet`クラスの`@Component`アノテーションですべて簡単に管理できます。
 
+<a name="liferay-mvcポートレットコンポーネント" />
+
 ## Liferay MVCポートレットコンポーネント
 
-コントローラーをMVCコマンドクラスに分割する予定があるかどうかに関係なく、ポートレットの[`@Component`](https://docs.osgi.org/javadoc/osgi.cmpn/7.0.0/org/osgi/service/component/annotations/Component.html)アノテーションはポートレットを構成します。 例として、簡単なポートレットコンポーネントを次に示します。
+コントローラーをMVCコマンドクラスに分割する予定があるかどうかに関係なく、ポートレットの [`@Component`](https://docs.osgi.org/javadoc/osgi.cmpn/7.0.0/org/osgi/service/component/annotations/Component.html) アノテーションはポートレットを構成します。 例として、簡単なポートレットコンポーネントを次に示します。
 
 ```java
 @Component(
@@ -82,15 +88,17 @@ public class HelloWorldPortlet extends MVCPortlet {
 [Liferay DXPがその名前を使用して[ポートレットのID]を作成する方法(../reference/portlet-descriptor-to-osgi-service-property-map.md#ten)を考慮して、ポートレット名を一意にします。
 ```
 
-コンポーネントを使用して公開している `Portlet.class` 実装の種類について、混乱が生じる可能性があります。 サービスレジストリは、これが[`javax.portlet.Portlet`](https://learn.liferay.com/reference/latest/en/portlet-api/javax/portlet/Portlet.html)インターフェイスであると想定しています。 たとえば、 `com.liferay.portal.kernel.model.Portlet`ではなく、それをインポートします。
+コンポーネントを使用して公開している `Portlet.class` 実装の種類について、混乱が生じる可能性があります。 サービスレジストリは、これが [`javax.portlet.Portlet`](https://learn.liferay.com/reference/latest/en/portlet-api/javax/portlet/Portlet.html) インターフェイスであると想定しています。 たとえば、 `com.liferay.portal.kernel.model.Portlet`ではなく、それをインポートします。
 
 ```{note}
-DTD [liferay-portlet-app_7_3_0.dtd](https://learn.liferay.com/reference/latest/en/dxp/definitions/liferay-portlet-app_7_3_0.dtd.html)は、ポートレットコンポーネントのプロパティとして指定できるすべてのLiferay固有の属性を定義します。 `javax.portlet.`で名前空間が設定されたプロパティは、[`portlet.xml` descriptor](https://docs.liferay.com/portlet-api/3.0/portlet-app_3_0.xsd)の要素です。
+DTD [liferay-portlet-app_7_3_0.dtd](https://learn.liferay.com/reference/latest/en/dxp/definitions/liferay-portlet-app_7_3_0.dtd.html) は、ポートレットコンポーネントのプロパティとして指定できるすべてのLiferay固有の属性を定義します。 `javax.portlet.`で名前空間が設定されたプロパティは、 [`portlet.xml` descriptor](https://docs.liferay.com/portlet-api/3.0/portlet-app_3_0.xsd) の要素です。
 ```
+
+<a name="よりシンプルなmvcポートレット" />
 
 ## よりシンプルなMVCポートレット
 
-より単純なアプリケーションでは、MVCコマンドを使用しません。 ポートレットのレンダーURLは`mvcPath`パラメーターでJSPパスを指定し、[`MVCPortlet`](https://learn.liferay.com/reference/latest/en/dxp/javadocs/portal-kernel/com/liferay/portal/kernel/portlet/bridges/mvc/MVCPortlet.html)メソッドは実装制御ロジックをオーバーライドします。 次のJSPコードには、JSPパス`/view_2.jsp`を指定するポートレットレンダーURLが含まれています。
+より単純なアプリケーションでは、MVCコマンドを使用しません。 ポートレットのレンダーURLは`mvcPath`パラメーターでJSPパスを指定し、 [`MVCPortlet`](https://learn.liferay.com/reference/latest/en/dxp/javadocs/portal-kernel/com/liferay/portal/kernel/portlet/bridges/mvc/MVCPortlet.html) メソッドは実装制御ロジックをオーバーライドします。 次のJSPコードには、JSPパス`/view_2.jsp`を指定するポートレットレンダーURLが含まれています。
 
 ```jsp
 <%@ taglib uri="http://java.sun.com/portlet_2_0" prefix="portlet" %>
@@ -103,6 +111,8 @@ DTD [liferay-portlet-app_7_3_0.dtd](https://learn.liferay.com/reference/latest/e
 ```
 
 ユーザーがリンクをクリックすると、ポートレットは`mvcPath`リクエストパラメータを受け取り、その`render`メソッドで制御ロジックを処理します。 詳細については、[Rendering Views with MVC Portlet](./using-mvc/rendering-views-with-mvc-portlet.md)を参照してください。
+
+<a name="次のステップ" />
 
 ## 次のステップ
 
@@ -119,6 +129,8 @@ DTD [liferay-portlet-app_7_3_0.dtd](https://learn.liferay.com/reference/latest/e
 * [MVC Resource Command](./using-mvc/mvc-resource-command.md)
 
 モデルレイヤーを開発する準備ができている場合は、[Service Builder](../data-frameworks/service-builder.md)をご覧ください。
+
+<a name="追加情報" />
 
 ## 追加情報
 

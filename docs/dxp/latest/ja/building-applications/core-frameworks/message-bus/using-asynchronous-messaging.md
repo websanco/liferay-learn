@@ -2,13 +2,15 @@
 
 メッセージバスの非同期オプションは、「ファイア・アンド・フォーゲット」動作を提供します。メッセージを送信し、応答を待たずに処理を続行します。
 
-非同期メッセージは、*シリアル*または*パラレル*宛先に送信されます。
+非同期メッセージは、 **シリアル** または **パラレル** 宛先に送信されます。
 
-* *シリアル*宛先の場合、メッセージバスはメッセージをキューに入れ、メッセージごとに1つのワーカースレッドを委任します。 スレッドはメッセージリスナーを順番に処理します。
+****シリアル** 宛先の場合、メッセージバスはメッセージをキューに入れ、メッセージごとに1つのワーカースレッドを委任します。 スレッドはメッセージリスナーを順番に処理します。
 
-* *パラレル*宛先の場合、メッセージバスはメッセージをキューに入れ、1つのメッセージリスナーにつきメッセージごとに1つのワーカースレッドを委任します。 スレッドはメッセージリスナーを同時に処理します。
+****パラレル** 宛先の場合、メッセージバスはメッセージをキューに入れ、1つのメッセージリスナーにつきメッセージごとに1つのワーカースレッドを委任します。 スレッドはメッセージリスナーを同時に処理します。
 
 別のクラス（メッセージリスナー）がリッスンしているシリアル宛先にメッセージを送信することから始めます。
+
+<a name="メッセージを送る" />
 
 ## メッセージを送る
 
@@ -89,6 +91,8 @@
 
 `N8K5Baker`は、宛先`acme/n8k5_able`にメッセージを送信したことを報告しました。 `N8K5CharlieMessageListener`は、宛先`acme/n8k5_able`でペイロード`N8K5Baker#_activate`を含むメッセージを受信しました。 これで、サンプルコードを調べることができます。
 
+<a name="プロジェクト概要" />
+
 ## プロジェクト概要
 
 この例の3つのモジュールには、それぞれ1つのクラスがあります。 各クラスは、メッセージングコンポーネントの1つ（宛先、送信者、リスナー）を表します。
@@ -109,6 +113,8 @@
 
 宛先構成と送信者クラスを調べます。 リスナークラス`N8K5CharlieMessageListener`は、[Listening for Messages](./listening-for-messages.md)に示す方法と同じ方法で登録します。
 
+<a name="宛先構成を調べる" />
+
 ## 宛先構成を調べる
 
 `n8k5-able-impl`モジュールの`N8K5AbleMessagingConfigurator`クラスは、宛先を作成して構成します。 コードは次のとおりです。
@@ -118,9 +124,11 @@
 :lines: 15-42
 ```
 
-どのクラスでも宛先を作成および構成できますが、[`Component`](https://docs.osgi.org/javadoc/osgi.cmpn/7.0.0/org/osgi/service/component/annotations/Component.html)には`DestinationFactory`のように依存関係を挿入できます。 `_destinationFactory`フィールドの[`@Reference`](https://docs.osgi.org/javadoc/osgi.cmpn/7.0.0/org/osgi/service/component/annotations/Reference.html)アノテーションは、LiferayのOSGiフレームワークに`DestinationFactory`インスタンスを挿入するようにシグナルを送信します。
+どのクラスでも宛先を作成および構成できますが、 [`Component`](https://docs.osgi.org/javadoc/osgi.cmpn/7.0.0/org/osgi/service/component/annotations/Component.html) には`DestinationFactory`のように依存関係を挿入できます。 `_destinationFactory`フィールドの [`@Reference`](https://docs.osgi.org/javadoc/osgi.cmpn/7.0.0/org/osgi/service/component/annotations/Reference.html) アノテーションは、LiferayのOSGiフレームワークに`DestinationFactory`インスタンスを挿入するようにシグナルを送信します。
 
-`_activate`メソッドでは、`N8K5AbleMessagingConfigurator`は[`DestinationFactory`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/DestinationFactory.java)と[`DestinationConfiguration`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/DestinationConfiguration.java)を使用して、`acme/n8k5_able`という名前の*シリアル*宛先を作成します。 次に、OSGiフレームワーク`BundleContext`を使用して、`Destination`に対するサービスを登録します。 `N8K5AbleMessagingConfigurator`が無効化されると、`_deactivate`メソッドはサービスの登録を解除します。
+`_activate`メソッドでは、`N8K5AbleMessagingConfigurator`は [`DestinationFactory`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/DestinationFactory.java) と [`DestinationConfiguration`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/DestinationConfiguration.java) を使用して、`acme/n8k5_able`という名前の **シリアル** 宛先を作成します。 次に、OSGiフレームワーク`BundleContext`を使用して、`Destination`に対するサービスを登録します。 `N8K5AbleMessagingConfigurator`が無効化されると、`_deactivate`メソッドはサービスの登録を解除します。
+
+<a name="送信者を調べる" />
 
 ## 送信者を調べる
 
@@ -133,7 +141,7 @@
 
 コンポーネントとして、`N8K5Baker`は`@Reference`アノテーションを使用して`MessageBus`インスタンスを挿入します。
 
-コンポーネントのアクティブ化時に、`N8K5Baker`は、アクティブ化メソッド`_activate()`を介してメッセージを作成して送信します。 [`Message`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/Message.java)インスタンスを構築し、それにペイロードを追加します。 ペイロードは、`Message`に入力できるもののうちの1つです。
+コンポーネントのアクティブ化時に、`N8K5Baker`は、アクティブ化メソッド`_activate()`を介してメッセージを作成して送信します。 [`Message`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/Message.java) インスタンスを構築し、それにペイロードを追加します。 ペイロードは、`Message`に入力できるもののうちの1つです。
 
 主なメッセージ入力方法は次のとおりです。
 
@@ -143,11 +151,13 @@
 | `setResponseDestinationName(String)`  | 応答を受信するための`Destination`を参照します。 |
 | `setValues(Map<String,Object>)` | `Map`から追加データを提供します。            |
 
-`N8K5Baker`は、[`MessageBus`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/MessageBus.java)の`sendMessage(String, Message)`メソッドを呼び出して、`acme/n8k5_able`という名前の[`Destination`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/Destination.java)にメッセージを送信します。 `MessageBus`は新しいスレッドを開始し、`acme/n8k5_able` `Destination`に登録されている[`MessageListener`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/MessageListener.java)インスタンスに`Message`を送信します。 `N8K5Baker`のスレッドが継続します。
+`N8K5Baker`は、 [`MessageBus`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/MessageBus.java) の`sendMessage(String, Message)`メソッドを呼び出して、`acme/n8k5_able`という名前の [`Destination`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/Destination.java) にメッセージを送信します。 `MessageBus`は新しいスレッドを開始し、`acme/n8k5_able` `Destination`に登録されている [`MessageListener`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/MessageListener.java) インスタンスに`Message`を送信します。 `N8K5Baker`のスレッドが継続します。
 
 ```{note}
 `Message`への応答を受信したい場合は、` Message`に応答先を設定し、 `N8K5Baker`などのクラスを` MessageListener`としてその宛先に登録します。 詳細については、[Listening for Messages](./listening-for-messages.md)を参照してください。
 ```
+
+<a name="応答処理の追加" />
 
 ## 応答処理の追加
 
@@ -199,7 +209,7 @@ private ServiceRegistration<Destination> _serviceRegistration;
 送信者`N8K5Baker`の変更点は次のとおりです。
 
 1. `@Component`アノテーションを更新し、`N8K5Baker`を`MessageListener.class`タイプのサービスとして宣言し、プロパティ`"destination.name=acme/n8k5_baker"`を介して`N8K5Baker`を応答先にマッピングします。
-1. [`MessageListener`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/MessageListener.java)インターフェイスを実装します。
+1. [`MessageListener`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/MessageListener.java) インターフェイスを実装します。
 1. `receive(Message)`メソッドをメッセージ処理ロジックでオーバーライドします。
 
 送信者の変更は次のようになります。
@@ -297,18 +307,22 @@ INFO  [acme/n8k5_baker-2][N8K5Baker:30] Received message payload N8K5CharlieMess
 ```
 
 ```{note}
-OSGiコンポーネントではないクラスでは、[MessageBusUtil](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/MessageBusUtil.java)と、`Destination`、`DestinationConfiguration`、`Message`、および`MessageListener`インスタンスを使用してメッセージを送信できます。
+OSGiコンポーネントではないクラスでは、 [MessageBusUtil](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/MessageBusUtil.java) と、`Destination`、`DestinationConfiguration`、`Message`、および`MessageListener`インスタンスを使用してメッセージを送信できます。
 
 示されているように`Destination`サービスを登録できますが、`BundleContext`を別の方法で取得する必要があります（たとえば、`Bundle bundle = FrameworkUtil.getBundle(YourClass.class); BundleContext bundleContext = bundle.getBundleContext()`を呼び出しを行うことによって）。
 ```
 
 　 2つのクラス間で非同期的にメッセージを交換しました。
 
+<a name="次のステップ" />
+
 ## 次のステップ
 
 非同期メッセージングに慣れてきたので、最適なパフォーマンスになるように調整できます。 [Tuning Messaging Performance](./tuning-messaging-performance.md)でその方法を学びましょう。
 
-*デフォルト*モードと*ダイレクト*モードを使用した同期メッセージングを検討する場合は、詳細について[Using Direct Synchronous Messaging](./using-direct-synchronous-messaging.md)および[Using Default Synchronous Messaging](./using-default-synchronous-messaging.md)を参照してください。
+**デフォルト** モードと **ダイレクト** モードを使用した同期メッセージングを検討する場合は、詳細について[Using Direct Synchronous Messaging](./using-direct-synchronous-messaging.md)および[Using Default Synchronous Messaging](./using-default-synchronous-messaging.md)を参照してください。
+
+<a name="追加情報" />
 
 ## 追加情報
 

@@ -2,6 +2,8 @@
 
 Liferay Workspaceは、Liferay開発プロジェクトを作成および管理するための開発者向けツールです。
 
+<a name="プロジェクトの作成" />
+
 ## プロジェクトの作成
 
 [Blade CLI](../blade-cli/installing-and-updating-blade-cli.md)を使用すると、事前に作成されたプロジェクトテンプレートを提供することで、Liferay Workspaceでプロジェクトを簡単に作成できます。 または、プロジェクトを手動で作成することもできます。
@@ -44,6 +46,8 @@ Liferay Workspaceは、Liferay開発プロジェクトを作成および管理�
 
 Liferay DXPで実行するコードを作成するには、それをデプロイするLiferayランタイムが必要です。 したがって、Liferay Workspaceをインストールした後の最初のタスクは、Liferayバンドルをワークスペースに追加することです。
 
+<a name="liferay-workspaceでthemes-generatorを使用する" />
+
 ## Liferay WorkspaceでThemes Generatorを使用する
 
 [Liferay Themes Generator](../other-tools/theme-generator.md)は、サイトのルックアンドフィールを変更するテーマを作成するためのnode.jsベースのツールです。 これらのプロジェクトは、Liferay Workspaceで管理することもできます。 テーマプロジェクトは、Bladeを使用するか手動で作成できます。
@@ -78,15 +82,17 @@ Workspaceがプロジェクトを認識していることを確認するには�
 ./gradlew projects
 ```
 
+<a name="liferayバンドルをワークスペースに追加する" />
+
 ## Liferayバンドルをワークスペースに追加する
 
 ワークスペースは、コードのランタイムのダウンロードとセットアップを自動化します。 サーバーでコードを実行する準備ができたら、ほんの数ステップでダウンロードできます。
 
 1. 対象となるLiferayリリースを見つけます。
 
-   **DXP：**[［Liferay Workspace Target Versions］](https://help.liferay.com/hc/en-us/articles/360041818312)ページに移動し、バンドルURLをクリップボードにコピーします。
+   **DXP：** [［Liferay Workspace Target Versions］](https://help.liferay.com/hc/en-us/articles/360041818312) ページに移動し、バンドルURLをクリップボードにコピーします。
 
-   **CE：**[releases-cdn.liferay.com/portal](https://releases-cdn.liferay.com/portal)を閲覧し、必要なバンドルを見つけて、そのURLをクリップボードにコピーします。
+   **CE：** [releases-cdn.liferay.com/portal](https://releases-cdn.liferay.com/portal) を閲覧し、必要なバンドルを見つけて、そのURLをクリップボードにコピーします。
 
 1. ワークスペースのルートフォルダから`gradle.properties`を開き、バンドルURLプロパティを設定します。
 
@@ -118,6 +124,8 @@ Workspaceがプロジェクトを認識していることを確認するには�
 
 DXPの場合、セキュリティ上の理由から、バンドルのダウンロード後にプロパティファイルからパスワードを削除する必要があります。
 
+<a name="liferay-workspaceを介したコードのデプロイ" />
+
 ## Liferay Workspaceを介したコードのデプロイ
 
 上記の手順で追加したLiferayバンドル、またはLiferayを実行しているDockerコンテナにコードをデプロイできます。
@@ -139,6 +147,8 @@ Liferay Workspaceに追加されたバンドルにコードをデプロイする
 ```bash
 ../gradlew deploy
 ```
+
+<a name="関連トピック" />
 
 ## 関連トピック
 

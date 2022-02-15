@@ -1,6 +1,8 @@
 # 完全なカスタム構成
 
-[インターフェイスを作成](./setting-and-accessing-configurations.html#creating-the-configuration-interface)すると、構成UIが自動的に生成されます。 ただし、構成に完全にカスタムのUIが必要な場合もあります。 たとえば、Liferayの構成管理を使用する代わりに、プログラムで構成を処理するよう計画している場合などです。 または、完全にカスタムのUIを作成する柔軟性が必要な場合もあります。 その方法は以下の通りです。
+[インターフェイスを作成](./setting-and-accessing-configurations.html#creating-the-configuration-interface) すると、構成UIが自動的に生成されます。 ただし、構成に完全にカスタムのUIが必要な場合もあります。 たとえば、Liferayの構成管理を使用する代わりに、プログラムで構成を処理するよう計画している場合などです。 または、完全にカスタムのUIを作成する柔軟性が必要な場合もあります。 その方法は以下の通りです。
+
+<a name="サンプルプロジェクトを参照する" />
 
 ## サンプルプロジェクトを参照する
 
@@ -12,7 +14,7 @@
 
     別のLiferay PortalバージョンまたはLiferay DXPを実行している場合は、上記のコマンドを適宜調整してください。
 
-1. [完全なカスタム構成](./liferay-u2g5.zip)をダウンロードして解凍します。
+1. [完全なカスタム構成](./liferay-u2g5.zip) をダウンロードして解凍します。
 
     ```bash
     curl https://learn.liferay.com/dxp/latest/en/developing-applications/core-frameworks/configuration-framework/liferay-u2g5.zip -O
@@ -28,7 +30,7 @@
     ./gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)
     ```
 
-    ```note::
+    ```{note}
        このコマンドは、デプロイされたjarをDockerコンテナの/opt/liferay/osgi/modulesにコピーするのと同じです。
     ```
 
@@ -40,11 +42,13 @@
 
 1. サンプルのモジュールが機能していることを確認します。 ブラウザで`https://localhost:8080`を開きます。
 
-1. *［コントロールパネル］* &rarr; *［設定］* &rarr; *［システム設定］* &rarr; *［サードパーティー］*に移動します。 *［U2G5 Configuration］*をクリックします。
+1. ［**コントロールパネル**］ &rarr; ［**設定**］ &rarr; ［**システム設定**］ &rarr; ［**サードパーティー**］ に移動します。 ［**U2G5 Configuration**］ をクリックします。
 
    ![システム設定でU2G5構成に移動します。](./completely-custom-configuration/images/01.png)
 
    このビューはカスタムJSPファイルによって提供されることに注意してください。
+
+<a name="構成インターフェイスを作成する" />
 
 ## 構成インターフェイスを作成する
 
@@ -57,6 +61,8 @@
 
 `@ExtendedObjectClassDefinition`アノテーションでは、`generateUI`が`false`に設定されていることに注意してください。 これにより、構成UIが自動生成されなくなります。
 
+<a name="構成bean宣言を追加する" />
+
 ## 構成Bean宣言を追加する
 
 構成クラスを`ConfigurationBeanDeclaration`に登録します。 これにより、システムは構成の変更が発生したときにそれを追跡できます。
@@ -65,6 +71,8 @@
 :language: java
 :lines: 9-18
 ```
+
+<a name="設定画面を実装する" />
 
 ## 設定画面を実装する
 
@@ -106,9 +114,13 @@
     )
     ```
 
+<a name="web-contextpathを追加する" />
+
 ## Web-ContextPathを追加する
 
 `bnd.bnd`ファイルでバンドルの`Web-ContextPath`を指定します。 たとえば、サンプルプロジェクトのBndファイルには`Web-ContextPath: /u2g5-web`があります。 これは、構成画面ファイルに`ServletContext`オブジェクトを登録するものです。 サーブレットコンテキストはポートレット用に自動的に作成されますが、このサンプルにはポートレットがないため、この行をBndファイルに追加する必要があることに注意してください。
+
+<a name="カスタムjspを作成する" />
 
 ## カスタムJSPを作成する
 

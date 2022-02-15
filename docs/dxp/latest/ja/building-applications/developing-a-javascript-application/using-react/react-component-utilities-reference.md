@@ -5,6 +5,8 @@ Reactを使用してLiferay DXPで高性能コンポーネントとアプリケ�
 * [`frontend-js-react-web`モジュール](#frontend-js-react-web-module)
 * [Reactコンポーネントタグ](#react-component-tag)
 
+<a name="frontend-js-react-webモジュール" />
+
 ## `frontend-js-react-web`モジュール
 
 `frontend-js-react-web`共有モジュールは、Liferay DXP全体でReactのすべてのコンシューマで使用できるReactの単一の共通バージョンを提供します。 このモジュールには、Liferay DXPのコンテキストでReactコンポーネントをマウント（つまりレンダリング）する標準的な方法が含まれており、対応するポートレットが破棄されたときにコンポーネントをアンマウント（クリーンに破棄）する場合などの詳細に対応しています。 例を以下に示します。
@@ -30,7 +32,7 @@ container
 
 `frontend-js-react-web`モジュールには、コードを複製することなく、コンポーネントに便利な動作を取り入れるために使用できる一連の共通フックも含まれています。
 
-[`usePrevious`フック](https://reactjs.org/docs/hooks-faq.html#how-to-get-the-previous-props-or-state)は、現在の値と以前の値（状態、プロップ、または任意の値）を比較するために使用できます。
+[`usePrevious`フック](https://reactjs.org/docs/hooks-faq.html#how-to-get-the-previous-props-or-state) は、現在の値と以前の値（状態、プロップ、または任意の値）を比較するために使用できます。
 
 `useIsMounted`フックは、コンポーネントがまだマウントされているかどうかを判別するために使用できます。 例を以下に示します。
 
@@ -66,6 +68,8 @@ function OverlayContainer({root, allowEdit}) {
 }
 ```
 
+<a name="reactコンポーネントタグ" />
+
 ## Reactコンポーネントタグ
 
 `<react:component>`タグは、JSPにReactビューを追加します。 例を以下に示します。
@@ -77,4 +81,4 @@ function OverlayContainer({root, allowEdit}) {
 />
 ```
 
-これは、[上記](#frontend-js-react-web-module)に示す`frontend-js-react-web`モジュールの`render()`関数をラップしています。 ここで渡された`data`は`renderData`として渡され、`module`が`renderable`（[上記](#frontend-js-react-web-module)に示すコンポーネント機能またはReact要素）をエクスポートします。
+これは、 [上記](#frontend-js-react-web-module) に示す`frontend-js-react-web`モジュールの`render()`関数をラップしています。 ここで渡された`data`は`renderData`として渡され、`module`が`renderable`（ [上記](#frontend-js-react-web-module) に示すコンポーネント機能またはReact要素）をエクスポートします。

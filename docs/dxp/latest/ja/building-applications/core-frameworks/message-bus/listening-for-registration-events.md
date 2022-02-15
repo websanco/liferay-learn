@@ -9,6 +9,8 @@
 
 サンプルプロジェクトは、これらの登録イベントをリッスンする方法を示しています。 サンプルを実行することから始めます。 次に、イベントリスナーの実装を調べます。 最後に、登録解除イベントをトリガーします。
 
+<a name="サンプルでイベントをトリガーする" />
+
 ## サンプルでイベントをトリガーする
 
 これらは、宛先の登録リスナー、メッセージリスナーの登録リスナー、そしてそれらがリッスンするイベントをトリガーするクラスをデプロイします。
@@ -87,30 +89,34 @@
 
 モジュールの概要は次のとおりです。
 
-1. `s3z9-able-impl`の[`MessageBusEventListener`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/MessageBusEventListener.java)実装は、宛先の追加と削除をリッスンします。
+1. `s3z9-able-impl`の [`MessageBusEventListener`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/MessageBusEventListener.java) 実装は、宛先の追加と削除をリッスンします。
 1. `s3z9-baker-impl`のメッセージングコンフィギュレータクラスは宛先を追加します。`s3z9-able-impl`の`MessageBusEventListener`実装は、追加された宛先通知を受信し、イベントをログに記録します。
-1. `s3z9-charlie-impl`の[`DestinationEventListener`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/DestinationEventListener.java)実装は、宛先に登録するメッセージリスナー、または宛先から登録解除するメッセージリスナーをリッスンします。
-1. `s3z9-dog-impl`の[`MessageListener`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/MessageListener.java)実装は宛先に登録されます。 `s3z9-charlie-impl`の`DestinationEventListener`実装は、メッセージリスナー登録通知を受信し、イベントをログに記録します。
+1. `s3z9-charlie-impl`の [`DestinationEventListener`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/DestinationEventListener.java) 実装は、宛先に登録するメッセージリスナー、または宛先から登録解除するメッセージリスナーをリッスンします。
+1. `s3z9-dog-impl`の [`MessageListener`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/MessageListener.java) 実装は宛先に登録されます。 `s3z9-charlie-impl`の`DestinationEventListener`実装は、メッセージリスナー登録通知を受信し、イベントをログに記録します。
+
+<a name="messagebuseventlistenerを調べる" />
 
 ## `MessageBusEventListener`を調べる
 
-[`Destination`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/Destination.java)が追加または削除されると、メッセージバスは[`MessageBusEventListeners`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/MessageBusEventListener.java)に通知します。 以下に、`MessageBusEventListener`の実装例を示します。
+[`Destination`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/Destination.java) が追加または削除されると、メッセージバスは [`MessageBusEventListeners`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/MessageBusEventListener.java) に通知します。 以下に、`MessageBusEventListener`の実装例を示します。
 
 ```{literalinclude} ./listening-for-registration-events/resources/liferay-s3z9.zip/s3z9-able-impl/src/main/java/com/acme/s3z9/able/internal/messaging/S3Z9AbleMessageBusEventListener.java
 :language: java
 :lines: 10-31
 ```
 
-[`@Component`](https://docs.osgi.org/javadoc/osgi.cmpn/7.0.0/org/osgi/service/component/annotations/Component.html)アノテーションとその`service = MessageBusEventListener.class` 属性は、`S3Z9AbleMessageBusEventListener`を`MessageBusEventListener`として登録するようにランタイムフレームワークにシグナルを送信します。 実装は、`MessageBusEventListener`の次の2つのメソッドをオーバーライドします。
+[`@Component`](https://docs.osgi.org/javadoc/osgi.cmpn/7.0.0/org/osgi/service/component/annotations/Component.html) アノテーションとその`service = MessageBusEventListener.class` 属性は、`S3Z9AbleMessageBusEventListener`を`MessageBusEventListener`として登録するようにランタイムフレームワークにシグナルを送信します。 実装は、`MessageBusEventListener`の次の2つのメソッドをオーバーライドします。
 
 * `destinationAdded(Destination destination)`は、新しく追加された`Destination`に応答します。
 * `destinationRemoved(Destination destination)`は、新しく削除された`Destination`に応答します。
 
 `S3Z9AbleMessageBusEventListener`のメソッド実装は、宛先イベントをログに記録します。
 
+<a name="destinationeventlistenerを調べる" />
+
 ## `DestinationEventListener`を調べる
 
-メッセージバスは、[`MessageListener`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/MessageListener.java)が`DestinationEventListener`の指定された宛先に対し登録または登録解除を行うと、[`DestinationEventListener`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/DestinationEventListener.java)に通知します。 以下に、`DestinationEventListener`の実装例を示します。
+メッセージバスは、 [`MessageListener`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/MessageListener.java) が`DestinationEventListener`の指定された宛先に対し登録または登録解除を行うと、 [`DestinationEventListener`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/DestinationEventListener.java) に通知します。 以下に、`DestinationEventListener`の実装例を示します。
 
 ```{literalinclude} ./listening-for-registration-events/resources/liferay-s3z9.zip/s3z9-charlie-impl/src/main/java/com/acme/s3z9/charlie/internal/messaging/S3Z9CharlieDestinationEventListener.java
 :language: java
@@ -125,6 +131,8 @@
 `S3Z9CharlieDestinationEventListener`のメソッド実装は、メッセージリスナー登録イベントをログに記録します。
 
 メッセージバスリスナーの登録解除と宛先の削除に応答する`MessageBusEventListener`と`DestinationEventListener`のサンプルを確認してください。
+
+<a name="他のイベントをトリガーする" />
 
 ## 他のイベントをトリガーする
 
@@ -169,9 +177,13 @@
 
 　 すべてのメッセージバスイベントリスナーのイベントと宛先イベントリスナーのイベントをトリガーしました。
 
+<a name="次のステップ" />
+
 ## 次のステップ
 
 これらのメッセージバスイベントをリッスンする方法がわかったので、新しい宛先でメッセージをリッスンしたり、新しい登録関連のアクティビティに応じて[メッセージング環境を調整](./tuning-messaging-performance.md)したりできます。
+
+<a name="追加情報" />
 
 ## 追加情報
 

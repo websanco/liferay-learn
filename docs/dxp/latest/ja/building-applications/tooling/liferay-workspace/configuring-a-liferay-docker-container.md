@@ -10,11 +10,13 @@
 
 以下の手順を実行する前に、Dockerをインストールして実行する必要があります。
 
+<a name="liferay-dockerイメージの選択" />
+
 ## Liferay Dockerイメージの選択
 
 イメージのバージョンはワークスペースのバージョンから継承されるため、ほとんどの場合、Liferay Dockerイメージを選択する必要はありません。 ただし、ワークスペースで指定されているバージョン以外のイメージバージョンをインストールする必要がある場合は、バージョンを明示的に設定できます。 これを行う必要がない場合は、次のセクションにスキップしてください。
 
-LiferayのDockerイメージは[Docker Hub](https://hub.docker.com/r/liferay/portal/tags)にあります。 それらは2つのカテゴリーに分類されます。
+LiferayのDockerイメージは [Docker Hub](https://hub.docker.com/r/liferay/portal/tags) にあります。 それらは2つのカテゴリーに分類されます。
 
 - [Liferay/Portal](https://hub.docker.com/r/liferay/portal)
 - [Liferay/DXP](https://hub.docker.com/r/liferay/dxp)
@@ -34,6 +36,8 @@ LiferayのDockerイメージは[Docker Hub](https://hub.docker.com/r/liferay/por
 
 1. ファイルを保存します。 これで、Dockerイメージを作成する準備が整いました。
 
+<a name="liferay-dockerイメージを作成する" />
+
 ## Liferay Dockerイメージを作成する
 
 ワークスペースのルートフォルダから次のコマンドを実行します。
@@ -44,9 +48,11 @@ LiferayのDockerイメージは[Docker Hub](https://hub.docker.com/r/liferay/por
 
 ワークスペースの名前に`-liferay`が追加されたDockerイメージが作成されます。 たとえば、ワークスペースフォルダが`my-project`の場合、Dockerコンテナは`my-project-liferay`と呼ばれます。 他のDockerイメージと同じようにコンテナを開始/停止できますが、最初にコンテナを構成することをお勧めします。
 
+<a name="dockerイメージの構成" />
+
 ## Dockerイメージの構成
 
-コンテナを構成するための通常のDockerツールに加えて、Gradleタスクからコンテナを構築すると、[Liferay Home](../../../installation-and-upgrades/reference/liferay-home.md)を指すフォルダがセットアップされるため、必要なLiferay構成を作成できます。 このフォルダは`configs/docker`にあります。
+コンテナを構成するための通常のDockerツールに加えて、Gradleタスクからコンテナを構築すると、 [Liferay Home](../../../installation-and-upgrades/reference/liferay-home.md) を指すフォルダがセットアップされるため、必要なLiferay構成を作成できます。 このフォルダは`configs/docker`にあります。
 
 たとえば、コンテナのGogoシェルへのtelnetアクセスを有効にすることができます。 その方法は以下の通りです。
 
@@ -64,4 +70,4 @@ LiferayのDockerイメージは[Docker Hub](https://hub.docker.com/r/liferay/por
 telnet localhost 11311
 ```
 
-Docker構成は、複数の環境を処理できるより大きな[ワークスペース構成](configuring-liferay-workspace.md)の一部です。 これを使用している場合、`configs/common`に格納されている構成は、`configs/docker`フォルダに配置されている構成とマージされます。 
+Docker構成は、複数の環境を処理できるより大きな [ワークスペース構成](configuring-liferay-workspace.md) の一部です。 これを使用している場合、`configs/common`に格納されている構成は、`configs/docker`フォルダに配置されている構成とマージされます。 

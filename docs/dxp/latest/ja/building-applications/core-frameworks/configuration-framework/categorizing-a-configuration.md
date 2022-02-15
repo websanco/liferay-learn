@@ -1,6 +1,8 @@
 # 構成の分類
 
-構成インターフェースを登録すると、アプリケーションのUIが*［システム設定］* &rarr; *［プラットフォーム］* &rarr; *［サードパーティー］*で生成されます。 アプリケーションの設定UIが表示される場所に別のセクションとカテゴリーが必要な場合は、これを簡単に変更できます。
+構成インターフェースを登録すると、アプリケーションのUIが ［**システム設定**］ &rarr; ［**プラットフォーム**］ &rarr; ［**サードパーティー**］ で生成されます。 アプリケーションの設定UIが表示される場所に別のセクションとカテゴリーが必要な場合は、これを簡単に変更できます。
+
+<a name="既存のカテゴリーの指定" />
 
 ## 既存のカテゴリーの指定
 
@@ -24,13 +26,15 @@
 import com.liferay.portal.configuration.metatype.annotations.ExtendedObjectClassDefinition
 ```
 
-アプリケーションを再デプロイすると、構成UIが*［Content and Data］* &rarr; *［Blogs］*の下に配置されます。
+アプリケーションを再デプロイすると、構成UIが ［**Content and Data**］ &rarr; ［**Blogs**］ の下に配置されます。
+
+<a name="新しいセクションとカテゴリーの作成" />
 
 ## 新しいセクションとカテゴリーの作成
 
 独自のセクションとカテゴリーが必要な場合は、`ConfigurationCategory`インターフェイスを実装して作成できます。
 
-[Setting and Accessing Configurations](./setting-and-accessing-configurations)のプロジェクト例に従った場合、このコードをアプリケーションの`configuration`フォルダに追加できます。 これは、構成インターフェイスのJavaファイルを保持しているフォルダと同じです。 以下のコードは、foobarセクションとfoobarカテゴリーを作成します。
+[Setting and Accessing Configurations](./setting-and-accessing-configurations) のプロジェクト例に従った場合、このコードをアプリケーションの`configuration`フォルダに追加できます。 これは、構成インターフェイスのJavaファイルを保持しているフォルダと同じです。 以下のコードは、foobarセクションとfoobarカテゴリーを作成します。
 
 ```java
 package com.acme.n2f3.web.internal.configuration;

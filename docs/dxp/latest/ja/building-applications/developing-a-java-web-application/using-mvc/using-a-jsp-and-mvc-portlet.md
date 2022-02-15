@@ -8,6 +8,8 @@ Webアプリケーションの開発を開始する簡単な方法は、JSPフ�
 
 アプリケーションには、マークアップコンテンツを含むJSPと、JSPをレンダリングする`MVCPortlet`クラスがあります。 サンプルをデプロイして、MVCポートレットを含むJSPを使用してアプリケーションを作成する方法を学習します。
 
+<a name="シンプルなmvcポートレットモジュールをデプロイする" />
+
 ## シンプルなMVCポートレットモジュールをデプロイする
 
 サンプルをデプロイすることから始めます。
@@ -52,11 +54,11 @@ Webアプリケーションの開発を開始する簡単な方法は、JSPフ�
 
 1. デフォルトの認証情報を使用してサインインします。
 
-    **ユーザー名**: `test@liferay.com`
+    **ユーザー名** : `test@liferay.com`
 
     **パスワード：** `test`
 
-1. *［Samples］*カテゴリからウィジェットページに*［W3E7ポートレット］*ウィジェットを追加して、アプリケーションの可用性を確認します。
+1. ［**Samples**］ カテゴリからウィジェットページに ［**W3E7ポートレット**］ ウィジェットを追加して、アプリケーションの可用性を確認します。
 
 ![これは、ポートレットWebアプリケーションの例です。](./using-a-jsp-and-mvc-portlet/images/02.png)
 
@@ -64,12 +66,14 @@ Webアプリケーションの開発を開始する簡単な方法は、JSPフ�
 
 次に、このポートレットアプリケーションを作成する方法を学習します。
 
+<a name="mvcポートレットを使用してアプリケーションを作成する方法" />
+
 ## MVCポートレットを使用してアプリケーションを作成する方法
 
 サンプルポートレットを構築するには、次の2つの手順があります。
 
 1. JSPを使用してビューを作成する。
-2. [`MVCPortlet`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/portlet/bridges/mvc/MVCPortlet.java)を作成して、アプリケーションを登録し、レンダリングする。
+2. [`MVCPortlet`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/portlet/bridges/mvc/MVCPortlet.java) を作成して、アプリケーションを登録し、レンダリングする。
 
 ### ビューテンプレートを作成する
 
@@ -83,7 +87,7 @@ Webアプリケーションの開発を開始する簡単な方法は、JSPフ�
 
 ### MVCPortletを作成する
 
-モジュールの`src/main/java`フォルダに、`com.acme.w3e7.web.internal.portlet`というパッケージを作成します。 そのパッケージに、[`MVCPortlet`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/portlet/bridges/mvc/MVCPortlet.java)を拡張する`W3E7Portlet`というクラスを追加します。
+モジュールの`src/main/java`フォルダに、`com.acme.w3e7.web.internal.portlet`というパッケージを作成します。 そのパッケージに、 [`MVCPortlet`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/portlet/bridges/mvc/MVCPortlet.java) を拡張する`W3E7Portlet`というクラスを追加します。
 
 ```{literalinclude} ./using-a-jsp-and-mvc-portlet/resources/liferay-w3e7.zip/w3e7-web/src/main/java/com/acme/w3e7/web/internal/portlet/W3E7Portlet.java
    :language: java
@@ -98,7 +102,7 @@ Webアプリケーションの開発を開始する簡単な方法は、JSPフ�
 
 ### アノテーションを使用してポートレットを構成する
 
-[`@Component`](https://docs.osgi.org/javadoc/osgi.cmpn/7.0.0/org/osgi/service/component/annotations/Component.html)アノテーションは、ポートレットを構成します。
+[`@Component`](https://docs.osgi.org/javadoc/osgi.cmpn/7.0.0/org/osgi/service/component/annotations/Component.html) アノテーションは、ポートレットを構成します。
 
 ```{literalinclude} ./using-a-jsp-and-mvc-portlet/resources/liferay-w3e7.zip/w3e7-web/src/main/java/com/acme/w3e7/web/internal/portlet/W3E7Portlet.java
    :language: java
@@ -115,9 +119,13 @@ Webアプリケーションの開発を開始する簡単な方法は、JSPフ�
 [Portlet Descriptor to OSGi Service Property Map](../../reference/portlet-descriptor-to-osgi-service-property-map.md)では、OSGiコンポーネントのプロパティ値を従来のポートレット記述子にマップする方法を指定します。
 ```
 
+<a name="次のステップ" />
+
 ## 次のステップ
 
 　 JSPと1つの単純なJavaクラスを使用してWebアプリケーションを作成しました。 ここから先は、いろいろな選択があります。 ビューをさらに追加するには、[Rendering Views with MVC Portlet](./rendering-views-with-mvc-portlet.md)を参照してください。 アプリケーションにアクションを追加するには、[MVC Action Command](./mvc-action-command.md)を参照してください。 バックエンドのデータモデルを実装するには、[Service Builder](../../data-frameworks/service-builder.md)を参照してください。
+
+<a name="追加情報" />
 
 ## 追加情報
 

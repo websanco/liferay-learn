@@ -26,9 +26,11 @@
 |:-------- |:---------- |:--------------- |:----------- |
 | **パラレル** | はい         | はい              | 無           |
 | **シリアル** | はい         | はい              | 無           |
-| **同期**   | 無          | 無               | はい          |
+| **同期** | 無          | 無               | はい          |
 
 ここでは、サンプルプロジェクトのメッセージングパフォーマンスを調べることから始めます。 次に、APIを使用して宛先統計を取得し、宛先を設定します。 最後に、サンプルの宛先設定を再構成し、サンプルを再実行して、統計を調べます。
+
+<a name="サンプルプロジェクトでメッセージングを監視する" />
 
 ## サンプルプロジェクトでメッセージングを監視する
 
@@ -60,7 +62,7 @@
     ./gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)
     ```
 
-    ```note::
+    ```{note}
        このコマンドは、モジュールJARをDockerコンテナの``/opt/liferay/osgi/modules``にコピーするのと同じです。
     ```
 
@@ -69,9 +71,9 @@
     ```
     STARTED com.acme.w3r2.charlie.impl_1.0.0 [1390]
     STARTED com.acme.w3r2.able.impl_1.0.0 [1388]
-    [W3R2AbleMessagingConfigurator:27] {_destinationName=acme/w3r2_able,
-    _destinationType=serial, _maximumQueueSize=2147483647,
-    _rejectedExecutionHandler=null, _workersCoreSize=2, _workersMaxSize=5}
+    [W3R2AbleMessagingConfigurator:27] { **destinationName=acme/w3r2** able,
+**destinationType=serial,** maximumQueueSize=2147483647,
+**rejectedExecutionHandler=null,** workersCoreSize=2, _workersMaxSize=5}
     STARTED com.acme.w3r2.baker.impl_1.0.0 [1389]
     ```
 
@@ -150,6 +152,8 @@
 
 これと同じAPIを使用してメッセージの宛先を監視できます。
 
+<a name="メッセージングの監視" />
+
 ## メッセージングの監視
 
 メッセージングAPIでは、宛先でのメッセージングパフォーマンスをその設定に応じて監視することができます。 次の表に、宛先設定とメッセージング統計にアクセスするためのAPIメソッドを示します。
@@ -178,16 +182,20 @@
 
 宛先統計を調べた後、宛先を再構成することでパフォーマンスの向上を試みることができます。
 
+<a name="宛先タイプの変更" />
+
 ## 宛先タイプの変更
 
 シリアル宛先を使用していて、メッセージが一部のメッセージリスナーに十分な速度で到達しない場合は、最大スレッドプールサイズを増やすか（以下で説明します）、パラレル宛先タイプに切り替えてみてください。 メッセージバスは、スレッドプールのスレッドを使用して、パラレル宛先メッセージリスナーを同時に処理します。
 
-現在の[`DestinationConfiguration`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/DestinationConfiguration.java)を必要なタイプの1つに置き換えることで、宛先タイプを切り替えることができます。 該当する`DestinationConfiguration`メソッドを使用して、新しいパラレルまたはシリアルの`DestinationConfiguration`を作成します。
+現在の [`DestinationConfiguration`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/DestinationConfiguration.java) を必要なタイプの1つに置き換えることで、宛先タイプを切り替えることができます。 該当する`DestinationConfiguration`メソッドを使用して、新しいパラレルまたはシリアルの`DestinationConfiguration`を作成します。
 
 * `createParallelDestinationConfiguration(String)`
 * `createSerialDestinationConfiguration(String)`
 
-詳細については、[Reconfigure the Example Destination](#reconfigure-the-example-destination)を参照してください。
+詳細については、 [Reconfigure the Example Destination](#reconfigure-the-example-destination) を参照してください。
+
+<a name="メッセージキューとスレッドプールの構成" />
 
 ## メッセージキューとスレッドプールの構成
 
@@ -197,7 +205,7 @@
 
 メッセージバスは、宛先のスレッドプールからメッセージリスナー処理スレッドを引き出します。 プールには、開始サイズと最大サイズがあります。
 
-次の[`DestinationConfiguration`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/DestinationConfiguration.java)メソッドを使用して、メッセージキューの最大サイズ、拒否された実行ハンドラー、スレッドプールの開始サイズ（コアサイズ）、およびスレッドプールの最大サイズを変更できます。
+次の [`DestinationConfiguration`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/DestinationConfiguration.java) メソッドを使用して、メッセージキューの最大サイズ、拒否された実行ハンドラー、スレッドプールの開始サイズ（コアサイズ）、およびスレッドプールの最大サイズを変更できます。
 
 * `setMaximumQueueSize(int maximumQueueSize)`
 * `setRejectedExecutionHandler(RejectedExecutionHandler rejectedExecutionHandler)`
@@ -205,6 +213,8 @@
 * `setWorkersMaxSize(int workersMaxSize)`
 
 次に、サンプルの宛先を再構成します。
+
+<a name="サンプルの宛先を再構成します" />
 
 ## サンプルの宛先を再構成します
 
@@ -252,9 +262,9 @@
 
     ```
     STARTED com.acme.w3r2.able.impl_1.0.0 [1388]
-    [W3R2AbleMessagingConfigurator:27] {_destinationName=acme/w3r2_able,
-    _destinationType=parallel, _maximumQueueSize=2147483647,
-    _rejectedExecutionHandler=null, _workersCoreSize=10, _workersMaxSize=20}
+    [W3R2AbleMessagingConfigurator:27] { **destinationName=acme/w3r2** able,
+**destinationType=parallel,** maximumQueueSize=2147483647,
+**rejectedExecutionHandler=null,** workersCoreSize=10, _workersMaxSize=20}
     ```
 
 1. 次のGogoシェルコマンドを実行して、メッセージリスナーモジュール（Acme W3R2 Baker実装）のIDを取得します。
@@ -311,6 +321,8 @@ pending message count 0, sent message count 2
 ```
 
 これで、宛先でメッセージングを監視し、宛先設定を調整する方法がわかりました。 さまざまな設定をテストして、パフォーマンスを最適化できます。
+
+<a name="追加情報" />
 
 ## 追加情報
 
