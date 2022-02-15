@@ -4,14 +4,14 @@
 
 アプリケーションを介して設定するには、
 
-1. アプリの［オプション］アイコン（![Options icon](../../images/icon-options.png)）をクリックし、*［Configuration］*をクリックします。
+1. アプリの［オプション］アイコン（![Options icon](../../images/icon-options.png)）をクリックし、 ［**Configuration**］ をクリックします。
 
     ![アプリの設定リンクをクリックします。](./configuring-the-questions-app/images/01.png)
 
 システム設定から設定するには、
 
-1. *［コントロールパネル］* &rarr; *［System Settings］* &rarr; *［Third Party］*に移動します。
-1. ［Widget Scope］の下の *［Questions］*をクリックします。
+1. ［**コントロールパネル**］ &rarr; ［**System Settings**］ &rarr; ［**Third Party**］ に移動します。
+1. ［Widget Scope］の下の ［**Questions**］ をクリックします。
 
     ![システム設定で質問アプリの設定に移動します。](./configuring-the-questions-app/images/05.png)
 
@@ -21,7 +21,7 @@
 
 トピックは、カードまたは一覧として表示できます。
 
-1. アプリの［オプション］アイコン（![Options icon](../../images/icon-options.png)）をクリックし、*［Configuration］*をクリックします。
+1. アプリの［オプション］アイコン（![Options icon](../../images/icon-options.png)）をクリックし、 ［**Configuration**］ をクリックします。
 
     ![アプリの設定リンクをクリックします。](./configuring-the-questions-app/images/01.png)
 
@@ -37,15 +37,15 @@
 
 質問のデフォルトの表示動作は、すべてのトピックを表示することです。 ルートトピックを設定することにより、特定のトピックのみを表示するように選択できます。 特定のサブトピックまたは質問のみを表示するには、次の手順を実行します。
 
-1. アプリの［オプション］アイコン（![Options icon](../../images/icon-options.png)）をクリックし、*［Configuration］*をクリックします。
+1. アプリの［オプション］アイコン（![Options icon](../../images/icon-options.png)）をクリックし、 ［**Configuration**］ をクリックします。
 
     ![アプリの設定リンクをクリックします。](./configuring-the-questions-app/images/01.png)
 
-1. ［ルートトピックID］の下の*［Select］*ボタンをクリックします。
+1. ［ルートトピックID］の下の ［**Select**］ ボタンをクリックします。
 
     ![ルートトピックとして個々のトピックを選択します。](./configuring-the-questions-app/images/03.png)
 
-1. トピックを選択し、*［保存］*をクリックします。 アプリは、選択したトピックのサブトピックと質問のみを表示するようになりました。
+1. トピックを選択し、 ［**保存**］ をクリックします。 アプリは、選択したトピックのサブトピックと質問のみを表示するようになりました。
 
 <a name="アプリの権限の管理" />
 
@@ -53,7 +53,7 @@
 
 アプリの権限を変更するには、
 
-1. アプリの［オプション］アイコン（![Options icon](../../images/icon-options.png)）をクリックし、*［Permissions］*をクリックします。
+1. アプリの［オプション］アイコン（![Options icon](../../images/icon-options.png)）をクリックし、 ［**Permissions**］ をクリックします。
 
     ![アプリの設定リンクをクリックします。](./configuring-the-questions-app/images/01.png)
 
@@ -61,7 +61,7 @@
 
     ![このページでさまざまなロールに権限を割り当てます。](./configuring-the-questions-app/images/04.png)
 
-1. さまざまなロールに権限を割り当てます。 *［Save］* をクリックします。
+1. さまざまなロールに権限を割り当てます。 ［**Save**］ をクリックします。
 
 <a name="ゲストユーザーをログインにリダイレクトする" />
 
@@ -69,13 +69,13 @@
 
 この機能を有効にするには、システム設定から構成する必要があります。
 
-1. *［コントロールパネル］* &rarr; *［System Settings］* &rarr; *［Third Party］*に移動します。
-1. ウィジェットスコープの下の *［Questions］*をクリックします。
+1. ［**コントロールパネル**］ &rarr; ［**System Settings**］ &rarr; ［**Third Party**］ に移動します。
+1. ウィジェットスコープの下の ［**Questions**］ をクリックします。
 
     ![システム設定で質問アプリの設定に移動します。](./configuring-the-questions-app/images/05.png)
 
-1. *［Enable Redirect to Login］*をオンにします。
-1. ゲストユーザーが*［質問する］*をクリックしようとすると、ログインページにリダイレクトされるようになりました。
+1. ［**Enable Redirect to Login**］ をオンにします。
+1. ゲストユーザーが ［**質問する**］ をクリックしようとすると、ログインページにリダイレクトされるようになりました。
 
 ```{note}
    ゲストユーザーがアプリを表示できるようにするには、サービス・アクセス・ポリシーを作成する必要があります。
@@ -85,9 +85,9 @@
 
 新しいポリシーを作成するには、
 
-1. *［コントロールパネル］* &rarr; *［サービス・アクセス・ポリシー］*に移動します。 *追加*アイコン（![Add icon](../../images/icon-add.png)）をクリックします。
+1. ［**コントロールパネル**］ &rarr; ［**サービス・アクセス・ポリシー**］ に移動します。 **追加** アイコン（![Add icon](../../images/icon-add.png)）をクリックします。
 
-1. ポリシーに名前とタイトルを付けます。 下部にある*［詳細モードに切り替え］*ボタンをクリックします。 ［ Allowed Service Signatures］の下に次の2つの署名を追加します。
+1. ポリシーに名前とタイトルを付けます。 下部にある ［**詳細モードに切り替え**］ ボタンをクリックします。 ［ Allowed Service Signatures］の下に次の2つの署名を追加します。
 
     ```java
     com.liferay.message.boards.service.MBCategoryService#getCategoriesCount
@@ -96,7 +96,7 @@
 
     ![新しいポリシーを作成し、署名を追加します。](./configuring-the-questions-app/images/06.png)
 
-1. *［Save］*をクリックして新しいポリシーを保存します。
+1. ［**Save**］ をクリックして新しいポリシーを保存します。
 
 <a name="システム設定リファレンス" />
 

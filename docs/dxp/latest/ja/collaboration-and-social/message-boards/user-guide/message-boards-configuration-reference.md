@@ -1,9 +1,9 @@
 # メッセージボード設定リファレンス
 
-この記事では、_掲示板_アプリで使用できる設定について説明します。 _掲示板_アプリの設定画面を表示するには：
+この記事では、 **掲示板** アプリで使用できる設定について説明します。 **掲示板** アプリの設定画面を表示するには：
 
-1. _［サイト管理］_ &rarr; _［Content & Data］_ &rarr; _［掲示板］_に移動します。
-1. _［オプション］_メニュー &rarr; _［Configuration］_の順にクリックします。
+1. ［**サイト管理**］ &rarr; ［**Content & Data**］ &rarr; ［**掲示板**］ に移動します。
+1. ［**オプション**］ メニュー &rarr; ［**Configuration**］ の順にクリックします。
 
 <a name="generalタブ" />
 
@@ -16,10 +16,10 @@
 | Allow Anonymous Posting             | ゲスト（認証されていない）ユーザーがスレッドを投稿できるようにします。                                                      |
 | Subscribe by Default                | デフォルトで、ユーザーが参加しているスレッドにユーザーをサブスクライブします。                                                  |
 | Message Format                      | エディターとしてBBCodeまたはHTMLを選択するためのドロップダウンメニュー                                                 |
-| Enable Report Inappropriate Content | ユーザーが利用規約違反のスレッドを報告できるようにします<!-- ここにサイトのToSを定義する方法についての記事へのリンクを作成すると便利です-->|
+| Enable Report Inappropriate Content | ユーザーが利用規約違反のスレッドを報告できるようにします <!-- ここにサイトのToSを定義する方法についての記事へのリンクを作成すると便利です--> |
 | Enable Ratings                      | ユーザーがスレッドを評価できるようにします                                                                    |
 | Thread as Question by Default       | 有効にすると、最初のスレッドは常に質問になり、後続のスレッドを回答としてマークできます。デフォルトでは無効になっています                             |
-| Show Recent Posts from Last         | 時間に基づいて以前の投稿の表示数を選択するためのドロップダウンメニュー（_［24 Hours］_、_［7 Days］_、_［30 Days］_、または_［365 Days］_） |
+| Show Recent Posts from Last         | 時間に基づいて以前の投稿の表示数を選択するためのドロップダウンメニュー（［**24 Hours**］ 、 ［**7 Days**］ 、 ［**30 Days**］ 、または ［**365 Days**］） |
 
 <a name="email-from" />
 
@@ -33,7 +33,7 @@
 | Address     | フォーラムの所有者またはモデレーターのメールアドレス |
 | HTML Format | メールの形式を選択するためのチェックボックス     |
 
-各スレッドからデータとメタデータをインポートする自動メールを作成する方法の詳細は、_［Definition of Terms］_メニューを展開してください。
+各スレッドからデータとメタデータをインポートする自動メールを作成する方法の詳細は、 ［**Definition of Terms**］ メニューを展開してください。
 
 ![［Email From］の用語の定義](./message-boards-configuration-reference/images/08.png)
 
@@ -41,11 +41,11 @@
 
 ## Message Added Email
 
-_［Message Added Email］_タブには、メッセージボードのスレッドが作成されるたびに送信される電子メールのテンプレートが含まれています。
+［**Message Added Email**］ タブには、メッセージボードのスレッドが作成されるたびに送信される電子メールのテンプレートが含まれています。
 
 ![Message Added Email](./message-boards-configuration-reference/images/03.png)
 
-変数を使用して各スレッドからデータとメタデータをインポートする自動メールを作成する方法の詳細は、_［Definition of Terms］_メニューを展開してください。
+変数を使用して各スレッドからデータとメタデータをインポートする自動メールを作成する方法の詳細は、 ［**Definition of Terms**］ メニューを展開してください。
 
 ![［Message Added Email］の用語の定義](./message-boards-configuration-reference/images/09.png)
 
@@ -53,11 +53,11 @@ _［Message Added Email］_タブには、メッセージボードのスレッ�
 
 ## Message Updated Email
 
-_［Message Added Email］_タブには、メッセージボードのスレッドがアップデートされるたびに送信される電子メールのテンプレートが含まれています。
+［**Message Added Email**］ タブには、メッセージボードのスレッドがアップデートされるたびに送信される電子メールのテンプレートが含まれています。
 
 ![Message Updated Email](./message-boards-configuration-reference/images/04.png)
 
-各スレッドからデータとメタデータをインポートする自動メールを作成する方法の詳細は、_［Definition of Terms］_メニューを展開してください。
+各スレッドからデータとメタデータをインポートする自動メールを作成する方法の詳細は、 ［**Definition of Terms**］ メニューを展開してください。
 
 ![［Message Added Email］の用語の定義](./message-boards-configuration-reference/images/09.png)
 

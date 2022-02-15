@@ -4,11 +4,11 @@
 
 通知とリクエストにアクセスするには：
 
-1. アバターをクリックして、*［Notifications］*を選択します 。
+1. アバターをクリックして、 ［**Notifications**］ を選択します 。
 
     ![ユーザーのアバターと通知](./managing-notifications-and-requests/images/01.png)
 
-1. _［Notifications List］_タブには、未読の通知がすべて表示されます。 ここで、ユーザーは掲示板のコメントにメンションされました。
+1. ［**Notifications List**］ タブには、未読の通知がすべて表示されます。 ここで、ユーザーは掲示板のコメントにメンションされました。
 
     ![ユーザーのアバターと通知](./managing-notifications-and-requests/images/02.png)
 
@@ -18,13 +18,13 @@
 
 蓄積された通知を管理およびソートするには：
 
-1. _［Filter and Order］_ドロップダウンメニューをクリックします。
+1. ［**Filter and Order**］ ドロップダウンメニューをクリックします。
 1. 以下から選択します。
 
-    * **All**：デフォルトのオプション。 既読と未読の両方の通知を表示します。
-    * **Unread**：既読としてマークされていない通知を表示します。 未読の通知は、通知の左側にある青い境界線で示されます。
-    * **Read**：既読としてマークされた通知を表示します。
-    * **Date**：通知を日付順に並べ替えます。
+    ***All** ：デフォルトのオプション。 既読と未読の両方の通知を表示します。
+    ***Unread** ：既読としてマークされていない通知を表示します。 未読の通知は、通知の左側にある青い境界線で示されます。
+    ***Read** ：既読としてマークされた通知を表示します。
+    ***Date** ：通知を日付順に並べ替えます。
 
       ![［Filter and Order］メニュー](./managing-notifications-and-requests/images/03.png)
 
@@ -32,22 +32,22 @@
 
 通知のステータスを変更するには：
 
-1. 通知の横にある*アクション*メニュー（![Actions](../../../images/icon-actions.png)）をクリックします。
+1. 通知の横にある **アクション** メニュー（![Actions](../../../images/icon-actions.png)）をクリックします。
 
     ![通知ステータス](./managing-notifications-and-requests/images/04.png)
 
-1. _［Mark as Read］_または_［Mark as Unread］_をクリックして、通知を最新の状態に保ちます。
-1. または、_［Delete］_をクリックして通知を完全に削除します。
+1. ［**Mark as Read**］ または ［**Mark as Unread**］ をクリックして、通知を最新の状態に保ちます。
+1. または、 ［**Delete**］ をクリックして通知を完全に削除します。
 
 ### 複数の通知の管理
 
 複数の通知を一度に管理することもできます。
 
-1. _［Filter and Order］_ドロップダウンメニューの横にあるチェックボックスを選択します。 これにより、すべての通知メッセージが選択されます。
+1. ［**Filter and Order**］ ドロップダウンメニューの横にあるチェックボックスを選択します。 これにより、すべての通知メッセージが選択されます。
 1. いくつかのアイコンが表示されます：
-    * **既読としてマーク**（![Open Envelope](./managing-notifications-and-requests/images/icon-envelope-open.png)）
-    * ** 	未読としてマーク**（![Closed Envelope](./managing-notifications-and-requests/images/icon-envelope-closed.png)）
-    * **削除**（![Delete Button](./managing-notifications-and-requests/images/icon-delete.png)）
+    ***既読としてマーク**（![Open Envelope](./managing-notifications-and-requests/images/icon-envelope-open.png)）
+    ***未読としてマーク**（![Closed Envelope](./managing-notifications-and-requests/images/icon-envelope-closed.png)）
+    ***削除**（![Delete Button](./managing-notifications-and-requests/images/icon-delete.png)）
 
     ![複数の通知ステータスの管理](./managing-notifications-and-requests/images/05.png)
 
@@ -55,7 +55,7 @@
 
 ## サイトへの参加リクエストの管理
 
-ユーザーがサイトへの参加リクエストを受け取ると、そのリクエストが*［Requests List］*タブに表示されます。 ユーザーは_［Confirm］_をクリックしてサイトに参加するか、_［Ignore］_をクリックして辞退することができます。
+ユーザーがサイトへの参加リクエストを受け取ると、そのリクエストが ［**Requests List**］ タブに表示されます。 ユーザーは ［**Confirm**］ をクリックしてサイトに参加するか、 ［**Ignore**］ をクリックして辞退することができます。
 
 ![複数の通知ステータスの管理](./managing-notifications-and-requests/images/06.png)
 
@@ -63,4 +63,4 @@
 
 ## 追加情報
 
-* [Mentioning Users](./mentioning-users.md)
+* [ユーザーにメンションする](./mentioning-users.md)

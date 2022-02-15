@@ -31,11 +31,11 @@ Note that only users with the requisite permissions have the ability to create t
 
 ## トピックの作成
 
-1. *［New Topic］*ボタンをクリックします。
+1. ［**New Topic**］ ボタンをクリックします。
 
    ![新しいトピックボタンをクリックして、新しいトピックを作成します。](using-the-questions-app/images/01.png)
 
-1. 新しいトピックにタイトルと説明を付けて、*［Create］*ボタンをクリックします。
+1. 新しいトピックにタイトルと説明を付けて、 ［**Create**］ ボタンをクリックします。
 
    ![この新しいトピックのタイトルと説明を入力します。](using-the-questions-app/images/02.png)
 
@@ -45,7 +45,7 @@ Note that only users with the requisite permissions have the ability to create t
 
 ## 質問をする
 
-1. トピックを作成したら、質問を始めることができます。 *［Ask Question］* ボタンをクリックして、新しい質問を作成します。
+1. トピックを作成したら、質問を始めることができます。 ［**Ask Question**］ ボタンをクリックして、新しい質問を作成します。
 
    ![［質問する］ ボタンをクリックして、新しい質問を作成します。](using-the-questions-app/images/03.png)
 
@@ -53,7 +53,7 @@ Note that only users with the requisite permissions have the ability to create t
 
    ![フォームにタイトルと本文を記入します。](using-the-questions-app/images/04.png)
 
-   最後に、*［Post Your Question］*ボタンをクリックします。
+   最後に、 ［**Post Your Question**］ ボタンをクリックします。
 
 <a name="質問に答える" />
 
@@ -61,7 +61,7 @@ Note that only users with the requisite permissions have the ability to create t
 
 1. ユーザーは既存の質問を表示して返信することができます。 回答するには、既存の質問をクリックします。
 
-1. ［Your Answer］ボックスに回答を入力し、*［Post Answer］*ボタンをクリックします。
+1. ［Your Answer］ボックスに回答を入力し、 ［**Post Answer**］ ボタンをクリックします。
 
     ![回答を入力して、［回答を投稿］ボタンをクリックします](using-the-questions-app/images/05.png)
 
@@ -99,7 +99,7 @@ Note that only users with the requisite permissions have the ability to create t
 
 **検索:** 検索バーにキーワードを入力して、さまざまな質問を検索します。
 
-**タグ:** タグに基づいて質問を絞り込みます。 *［Tags］*タブをクリックすると、使用可能なタグとそれに関連する質問が表示されます。
+**タグ:** タグに基づいて質問を絞り込みます。 ［**Tags**］ タブをクリックすると、使用可能なタグとそれに関連する質問が表示されます。
 
 ![［タグ］タブをクリックすると、すべてのタグが表示されます。](using-the-questions-app/images/09.png)
 
@@ -109,7 +109,7 @@ Note that only users with the requisite permissions have the ability to create t
 
 トピックと質問の両方を購読して、更新に関するインサイト通知と電子メール通知を受け取ることができます。
 
-トピックを購読するには、トピックのタイトルバーの下にある*［Subscribe］*をクリックします。
+トピックを購読するには、トピックのタイトルバーの下にある ［**Subscribe**］ をクリックします。
 
 ![トピックを購読するには、［変更通知を受け取る（購読する）］ボタンをクリックします。](using-the-questions-app/images/10.png)
 
@@ -117,7 +117,7 @@ Note that only users with the requisite permissions have the ability to create t
 
 ![質問を購読するには、サブスクライブベルボタンをクリックします](using-the-questions-app/images/11.png)
 
-自分の購読リストを表示するには、*［My Subscriptions］*タブをクリックします。 購読しているすべてのトピックと質問の一覧が表示されます。
+自分の購読リストを表示するには、 ［**My Subscriptions**］ タブをクリックします。 購読しているすべてのトピックと質問の一覧が表示されます。
 
 ![［通知スレッド］タブをクリックすると、購読しているすべての内容が表示されます。](using-the-questions-app/images/12.png)
 
@@ -125,7 +125,7 @@ Note that only users with the requisite permissions have the ability to create t
 
 ## My Activity
 
-*［My Activity］*タブをクリックすると、質問アプリの使用状況を追跡できます。
+［**My Activity**］ タブをクリックすると、質問アプリの使用状況を追跡できます。
 
 ![［マイアクティビティ］タブをクリックして、質問アプリの使用状況を追跡します。](using-the-questions-app/images/13.png)
 
@@ -135,4 +135,4 @@ Note that only users with the requisite permissions have the ability to create t
 
 ## 次のステップ
 
-* [Configuring the Questions App](./configuring-the-questions-app.md)
+* [質問アプリの設定](./configuring-the-questions-app.md)

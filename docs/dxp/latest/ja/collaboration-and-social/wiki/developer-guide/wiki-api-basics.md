@@ -18,7 +18,7 @@ LiferayのHeadless Deliveryアプリケーションは、[Wiki](../getting-start
 docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
 ```
 
-開始したら、Site IDを取得します。 サイトIDを見つけるには、*サイトメニュー*（![Site Menu](../../../images/icon-menu.png)）を開き、*［Configuration］*&rarr; *［Site Settings］*&rarr; *［Site Configuration］*に移動します。
+開始したら、Site IDを取得します。 サイトIDを見つけるには、 **サイトメニュー**（![Site Menu](../../../images/icon-menu.png)）を開き、 ［**Configuration**］ &rarr; ［**Site Settings**］ &rarr; ［**Site Configuration**］ に移動します。
 
 ![サイトの構成設定でサイトIDを見つけます。](./wiki-api-basics/images/01.png)
 
@@ -29,7 +29,7 @@ docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
 次のコマンドを実行して、 [サンプルコード](https://learn.liferay.com/dxp/latest/ja/collaboration-and-social/wiki/developer-guide/liferay-q8u2.zip) をダウンロードして解凍します。
 
 ```bash
-curl https://learn.liferay.com/dxp/latest/en/collaboration-and-social/wiki/developer-guide/liferay-q8u2.zip -O
+curl https://learn.liferay.com/dxp/latest/ja/collaboration-and-social/wiki/developer-guide/liferay-q8u2.zip -O
 ```
 
 ```bash
@@ -94,13 +94,13 @@ WikiページにPOSTメソッドとPUTメソッドを使用する場合は、 `h
    **cURLの場合：**
 
    ```bash
-   ./WikiNode_POST_ToSite.sh {site-id}
+   ./WikiNode **POST** ToSite.sh {site-id}
    ```
 
    **Javaの場合：**
 
    ```bash
-   java -classpath .:* -DsiteId={site-id} WikiNode_POST_ToSite
+   java -classpath .: **-DsiteId={site-id} WikiNode***POST** ToSite
    ```
 
    ターミナルには、新しく作成されたWikiノードの完全なスキーマが表示されます。 提供されているAPI呼び出しでは、新規ノードの`description`および`name`フィールドのみを定義していますが、以下のGET、PUT、DELETEメソッドで使用するためにノードのIDをコピーする必要があります。
@@ -121,13 +121,13 @@ WikiページにPOSTメソッドとPUTメソッドを使用する場合は、 `h
    **cURLの場合：**
 
    ```bash
-   ./WikiNodes_GET_FromSite.sh {site-id}
+   ./WikiNodes **GET** FromSite.sh {site-id}
    ```
 
    **Javaの場合：**
 
    ```bash
-   java -classpath .:* -DsiteId={site-id} WikiNodes_GET_FromSite
+   java -classpath .: **-DsiteId={site-id} WikiNodes***GET** FromSite
    ```
 
    ```{note}
@@ -139,13 +139,13 @@ WikiページにPOSTメソッドとPUTメソッドを使用する場合は、 `h
    **cURLの場合：**
 
    ```bash
-   ./WikiNode_PUT_ById.sh {wiki-node-id}
+   ./WikiNode **PUT** ById.sh {wiki-node-id}
    ```
 
    **Javaの場合：**
 
    ```bash
-   java -classpath .:* -DwikiNodeId={wiki-node-id} WikiNode_PUT_ById
+   java -classpath .: **-DwikiNodeId={wiki-node-id} WikiNode***PUT** ById
    ```
 
    ```bash
@@ -164,13 +164,13 @@ WikiページにPOSTメソッドとPUTメソッドを使用する場合は、 `h
    **cURLの場合：**
 
    ```bash
-   ./WikiNode_DELETE_ById.sh {wiki-node-id}
+   ./WikiNode **DELETE** ById.sh {wiki-node-id}
    ```
 
    **Javaの場合：**
 
    ```bash
-   java -classpath .:* -DwikiNodeId={wiki-node-id} WikiNode_DELETE_ById
+   java -classpath .: **-DwikiNodeId={wiki-node-id} WikiNode***DELETE** ById
    ```
 
 1. 以前のWikiのノードIDをパラメーターとして使用して、`WikiNode_GET_ById`シェルスクリプトまたはJavaクラスを実行します。 これにより、指定されたノードが存在する場合はその詳細が返されます。
@@ -178,13 +178,13 @@ WikiページにPOSTメソッドとPUTメソッドを使用する場合は、 `h
    **cURLの場合：**
 
    ```bash
-   ./WikiNode_GET_ById.sh {wiki-node-id}
+   ./WikiNode **GET** ById.sh {wiki-node-id}
    ```
 
    **Javaの場合：**
 
    ```bash
-   java -classpath .:* -DwikiNodeId={wiki-node-id} WikiNode_GET_ById
+   java -classpath .: **-DwikiNodeId={wiki-node-id} WikiNode***GET** ById
    ```
 
    前の手順でノードを削除したため、次のメッセージが返されます。
@@ -219,13 +219,13 @@ cURLコマンドまたはJavaクラスのいずれかを使用して、WikiPage 
    **cURLの場合：**
 
    ```bash
-   ./WikiNode_POST_ToSite.sh {site-id}
+   ./WikiNode **POST** ToSite.sh {site-id}
    ```
 
    **Javaの場合：**
 
    ```bash
-   java -classpath .:* -DsiteId={site-id} WikiNode_POST_ToSite
+   java -classpath .: **-DsiteId={site-id} WikiNode***POST** ToSite
    ```
 
    ```{note}
@@ -250,13 +250,13 @@ cURLコマンドまたはJavaクラスのいずれかを使用して、WikiPage 
    **cURLの場合：**
 
    ```bash
-   ./WikiPage_POST_ToNode.sh {wiki-node-id}
+   ./WikiPage **POST** ToNode.sh {wiki-node-id}
    ```
 
    **Javaの場合：**
 
    ```bash
-   java -classpath .:* -DwikiNodeId={wiki-node-id} WikiPage_POST_ToNode
+   java -classpath .: **-DwikiNodeId={wiki-node-id} WikiPage***POST** ToNode
    ```
 
 1. `WikiPage_POST_ToParent`呼び出しで使用するためにページのIDをコピーします。
@@ -280,13 +280,13 @@ cURLコマンドまたはJavaクラスのいずれかを使用して、WikiPage 
    **cURLの場合：**
 
    ```bash
-   ./WikiPage_POST_ToNode.sh {wiki-page-id}
+   ./WikiPage **POST** ToNode.sh {wiki-page-id}
    ```
 
    **Javaの場合：**
 
    ```bash
-   java -classpath .:* -DparentWikiPageId={wiki-page-id} WikiPage_POST_ToParent
+   java -classpath .: **-DparentWikiPageId={wiki-page-id} WikiPage***POST** ToParent
    ```
 
    ```bash
@@ -308,13 +308,13 @@ cURLコマンドまたはJavaクラスのいずれかを使用して、WikiPage 
    **cURLの場合：**
 
    ```bash
-   ./WikiPages_GET_FromNode.sh {wiki-node-id}
+   ./WikiPages **GET** FromNode.sh {wiki-node-id}
    ```
 
    **Javaの場合：**
 
    ```bash
-   java -classpath .:* -DwikiNodeId={wiki-node-id} WikiPages_GET_FromNode
+   java -classpath .: **-DwikiNodeId={wiki-node-id} WikiPages***GET** FromNode
    ```
 
 1. Wikiの親ページIDをパラメーターとして使用して、`WikiPages_GET_FromParent`シェルスクリプトまたはJavaクラスを実行します。 これにより、指定したWikiページの既存の子ページが返されます。
@@ -322,13 +322,13 @@ cURLコマンドまたはJavaクラスのいずれかを使用して、WikiPage 
    **cURLの場合：**
 
    ```bash
-   ./WikiPages_GET_FromParent.sh {wiki-page-id}
+   ./WikiPages **GET** FromParent.sh {wiki-page-id}
    ```
 
    **Javaの場合：**
 
    ```bash
-   java -classpath .:* -DparentWikiPageId={wiki-page-id} WikiPages_GET_FromParent
+   java -classpath .: **-DparentWikiPageId={wiki-page-id} WikiPages***GET** FromParent
    ```
 
 1. 上記のWikiページIDのいずれかをパラメーターとして使用して、`WikiPage_PUT_ById`シェルスクリプトまたはJavaクラスを実行します。 これにより、元のページのコンテンツがAPI呼び出しで定義されたコンテンツに置き換えられます。
@@ -336,13 +336,13 @@ cURLコマンドまたはJavaクラスのいずれかを使用して、WikiPage 
    **cURLの場合：**
 
    ```bash
-   ./WikiPage_PUT_ById.sh {wiki-page-id}
+   ./WikiPage **PUT** ById.sh {wiki-page-id}
    ```
 
    **Javaの場合：**
 
    ```bash
-   java -classpath .:* -DwikiPageId={wiki-page-id} WikiPage_PUT_ById
+   java -classpath .: **-DwikiPageId={wiki-page-id} WikiPage***PUT** ById
    ```
 
    ```bash
@@ -362,13 +362,13 @@ cURLコマンドまたはJavaクラスのいずれかを使用して、WikiPage 
    **cURLの場合：**
 
    ```bash
-   ./WikiPage_DELETE_ById.sh {wiki-page-id}
+   ./WikiPage **DELETE** ById.sh {wiki-page-id}
    ```
 
    **Javaの場合：**
 
    ```bash
-   java -classpath .:* -DwikiPageId={wiki-page-id} WikiPage_DELETE_ById
+   java -classpath .: **-DwikiPageId={wiki-page-id} WikiPage***DELETE** ById
    ```
 
 1. 削除されたWikiページのIDをパラメーターとして使用して、`WikiPage_GET_ById`シェルスクリプトまたはJavaクラスを実行します。 これにより、指定されたページが存在する場合はその詳細が返されます。
@@ -376,13 +376,13 @@ cURLコマンドまたはJavaクラスのいずれかを使用して、WikiPage 
    **cURLの場合：**
 
    ```bash
-   ./WikiPage_GET_ById.sh {wiki-page-id}
+   ./WikiPage **GET** ById.sh {wiki-page-id}
    ```
 
    **Javaの場合：**
 
    ```bash
-   java -classpath .:* -DwikiPageId={wiki-page-id} WikiPage_GET_ById
+   java -classpath .: **-DwikiPageId={wiki-page-id} WikiPage***GET** ById
    ```
 
    前の手順でページが削除されたため、次のメッセージが表示されます。

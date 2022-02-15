@@ -1,12 +1,23 @@
-Wiki
-====
+# Wiki
 
-.. toctree::
-   :maxdepth: 2
+```{toctree}
+./wiki/getting-started-with-wikis.md
+./wiki/creating-wiki-pages.md
+./wiki/creating-a-node.md
+./wiki/exporting-and-importing-a-wiki.md
+./wiki/using-the-page-menu-widget.md
+./wiki/using-the-tree-menu-widget.md
+./wiki/using-the-wiki-display-widget.md
+./wiki/scoping-your-wikis.md
+./wiki/wiki-permissions.md
+./wiki/wiki-widget-ui-reference.md
+./wiki/developer-guide.md
+```
 
-   wiki/user_guide.rst
-   wiki/developer_guide.rst
-   wiki/apis.rst
+```{raw} html
+:file: ../landingpage_template.html
+```
 
-.. include:: /collaboration-and-social/wiki/README.rst
-   :start-line: 2
+```{raw} html
+:file: wiki/landing.html
+```
