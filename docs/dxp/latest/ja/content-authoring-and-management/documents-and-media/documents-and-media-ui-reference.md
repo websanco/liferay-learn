@@ -101,7 +101,7 @@
 ドキュメントとメディアのメール通知を設定します。 メール通知を設定する場合、情報の解析にデフォルトのプレースホルダーを使用できます（`[$COMPANY_ID$]`、`[$DOCUMENT_TYPE$]`、`[$TO_NAME$]`など）。 使用可能なプレースホルダーは、 ［**項目の定義**］ の下の各タブに表示されます。
 
 ```{note}
-メール通知を使用するには、接続されたメールサーバーが必要です。 詳細については、 `Connecting to a Mail Server <../../installation-and-upgrades/setting-up-liferay/configuring-mail/connecting-to-a-mail-server.md>`_ を参照してください。
+メール通知を使用するには、接続されたメールサーバーが必要です。 詳細については、 [Connecting to a Mail Server](../../installation-and-upgrades/setting-up-liferay/configuring-mail/connecting-to-a-mail-server.md) を参照してください。
 ```
 
 ［**送信者］タブ** ：メールの送信者に使用する名前とメールアドレスを入力します。

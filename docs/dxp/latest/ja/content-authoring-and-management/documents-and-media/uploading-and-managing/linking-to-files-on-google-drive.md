@@ -22,7 +22,7 @@
 リンクしたGoogleドキュメントの新しいファイルエントリーが表示されます。 他のファイルエントリーと同じように、ファイルエントリーを表示できます。 Googleドキュメントのコンテンツは、ファイルエントリーのプレビューペインに表示されます。 他のファイルエントリーと同様に、 **オプション** ボタン（![Options](../../../images/icon-options.png)）を使用すると、［Download］、［編集］、［移動］、［権限設定］、［Move to Recycle Bin］、および［チェックイン/チェックアウト/チェックアウトのキャンセル］オプションにアクセスできます。
 
 ```{tip}
-   オンラインファイルの作成と編集にGoogle Docs&trade;を使用することもできます。 `Creating and Editing Documents with Google Drive <./creating-documents/creating-and-editing-documents-with-google-drive.md>`_ を参照してください。
+   オンラインファイルの作成と編集にGoogle Docs&trade;を使用することもできます。 [Creating and Editing Documents with Google Drive](./creating-documents/creating-and-editing-documents-with-google-drive.md) を参照してください。
 ```
 
 <a name="追加情報" />

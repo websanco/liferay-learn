@@ -98,7 +98,7 @@ LiferayのREST APIは、ブログの投稿や画像を追加、変更、削除�
 | `-u "test@liferay.com:test"`                                                | 基本認証の資格情報                       |
 
 ```{note}
-   ここでは、デモンストレーションの目的で基本認証を使用しています。 本番環境では、 `OAuth2 <../../../installation-and-upgrades/securing-liferay/configuring-sso/using-oauth2/introduction-to-using-oauth2.md>`_ を介してユーザーを認証する必要があります。
+   ここでは、デモンストレーションの目的で基本認証を使用しています。 本番環境では、 [OAuth2](../../../installation-and-upgrades/securing-liferay/configuring-sso/using-oauth2/introduction-to-using-oauth2.md) を介してユーザーを認証する必要があります。
 ```
 
 他のcURLコマンドも同様のJSON引数を使用します。

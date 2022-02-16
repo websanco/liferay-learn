@@ -120,7 +120,7 @@ cURLコマンドとJavaクラスの仕組みをご覧ください。
 | `-u "test@liferay.com:test"`                                            | 基本認証の資格情報。                                                           |
 
 ```{note}
-   ここでは、デモンストレーションの目的で基本認証を使用しています。 本番環境の場合は、 `OAuth 2.0 <../../../headless-delivery/using-oauth2/using-oauth2.md>`_ 経由でユーザーを認証する必要があります。
+   ここでは、デモンストレーションの目的で基本認証を使用しています。 本番環境の場合は、 [OAuth 2.0](../../../headless-delivery/using-oauth2/using-oauth2.md) 経由でユーザーを認証する必要があります。
 ```
 
 `Document`および`DocumentFolder` RESTサービスの他のcURLコマンドは、同様の引数を使用します。
@@ -154,7 +154,7 @@ cURLコマンドとJavaクラスの仕組みをご覧ください。
 他の例のJavaクラスはこれと類似していますが、異なる`DocumentResource`メソッドを呼び出します。
 
 ```{important}
-   サービスの詳細は、 `DocumentResource <https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/headless/headless-delivery/headless-delivery-client/src/main/java/com/liferay/headless/delivery/client/resource/v1_0/DocumentResource.java>`_ を参照してください。
+   サービスの詳細は、 [DocumentResource](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/headless/headless-delivery/headless-delivery-client/src/main/java/com/liferay/headless/delivery/client/resource/v1_0/DocumentResource.java) を参照してください。
 ```
 
 以下は、cURLとJavaを使って、他の`Document` RESTサービスを呼び出す例です。
