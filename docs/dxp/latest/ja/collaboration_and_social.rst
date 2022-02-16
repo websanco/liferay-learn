@@ -14,7 +14,7 @@
    collaboration-and-social/invitations.rst
    collaboration-and-social/knowledge_base.rst
 
-Liferay DXPには、コラボレーションとコミュニケーションを促進するサイトやコミュニティを構築するために使用できる柔軟なアプリケーションの幅広いスイートが付属しています。 これらの機能の概要については、「コラボレーションとソーシャルの概要<./ collaboration-and-social/collaboration-and-social-overview.md> `_」を参照してください。
+Liferay DXPには、コラボレーションとコミュニケーションを促進するサイトやコミュニティを構築するために使用できる柔軟なアプリケーションの幅広いスイートが付属しています。 これらの機能の概要については、「 `コラボレーションとソーシャルの概要 <./ collaboration-and-social/collaboration-and-social-overview.md>`_ 」を参照してください。
 
 .. raw:: html
    :file: landingpage_template.html
