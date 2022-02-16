@@ -67,8 +67,8 @@ public class P5D2EntryModelImpl
 	public static final String TABLE_NAME = "P5D2_P5D2Entry";
 
 	public static final Object[][] TABLE_COLUMNS = {
-		{"p5d2EntryId", Types.BIGINT}, {"foo", Types.VARCHAR},
-		{"able", Types.BIGINT}, {"baker", Types.BOOLEAN}
+		{"p5d2EntryId", Types.BIGINT}, {"able", Types.BIGINT},
+		{"baker", Types.BOOLEAN}, {"foo", Types.VARCHAR}
 	};
 
 	public static final Map<String, Integer> TABLE_COLUMNS_MAP =
@@ -76,13 +76,13 @@ public class P5D2EntryModelImpl
 
 	static {
 		TABLE_COLUMNS_MAP.put("p5d2EntryId", Types.BIGINT);
-		TABLE_COLUMNS_MAP.put("foo", Types.VARCHAR);
 		TABLE_COLUMNS_MAP.put("able", Types.BIGINT);
 		TABLE_COLUMNS_MAP.put("baker", Types.BOOLEAN);
+		TABLE_COLUMNS_MAP.put("foo", Types.VARCHAR);
 	}
 
 	public static final String TABLE_SQL_CREATE =
-		"create table P5D2_P5D2Entry (p5d2EntryId LONG not null primary key,foo VARCHAR(75) null,able LONG,baker BOOLEAN)";
+		"create table P5D2_P5D2Entry (p5d2EntryId LONG not null primary key,able LONG,baker BOOLEAN,foo VARCHAR(75) null)";
 
 	public static final String TABLE_SQL_DROP = "drop table P5D2_P5D2Entry";
 
@@ -246,15 +246,15 @@ public class P5D2EntryModelImpl
 		attributeSetterBiConsumers.put(
 			"p5d2EntryId",
 			(BiConsumer<P5D2Entry, Long>)P5D2Entry::setP5d2EntryId);
-		attributeGetterFunctions.put("foo", P5D2Entry::getFoo);
-		attributeSetterBiConsumers.put(
-			"foo", (BiConsumer<P5D2Entry, String>)P5D2Entry::setFoo);
 		attributeGetterFunctions.put("able", P5D2Entry::getAble);
 		attributeSetterBiConsumers.put(
 			"able", (BiConsumer<P5D2Entry, Long>)P5D2Entry::setAble);
 		attributeGetterFunctions.put("baker", P5D2Entry::getBaker);
 		attributeSetterBiConsumers.put(
 			"baker", (BiConsumer<P5D2Entry, Boolean>)P5D2Entry::setBaker);
+		attributeGetterFunctions.put("foo", P5D2Entry::getFoo);
+		attributeSetterBiConsumers.put(
+			"foo", (BiConsumer<P5D2Entry, String>)P5D2Entry::setFoo);
 
 		_attributeGetterFunctions = Collections.unmodifiableMap(
 			attributeGetterFunctions);
@@ -274,25 +274,6 @@ public class P5D2EntryModelImpl
 		}
 
 		_p5d2EntryId = p5d2EntryId;
-	}
-
-	@Override
-	public String getFoo() {
-		if (_foo == null) {
-			return "";
-		}
-		else {
-			return _foo;
-		}
-	}
-
-	@Override
-	public void setFoo(String foo) {
-		if (_columnOriginalValues == Collections.EMPTY_MAP) {
-			_setColumnOriginalValues();
-		}
-
-		_foo = foo;
 	}
 
 	@Override
@@ -326,6 +307,25 @@ public class P5D2EntryModelImpl
 		}
 
 		_baker = baker;
+	}
+
+	@Override
+	public String getFoo() {
+		if (_foo == null) {
+			return "";
+		}
+		else {
+			return _foo;
+		}
+	}
+
+	@Override
+	public void setFoo(String foo) {
+		if (_columnOriginalValues == Collections.EMPTY_MAP) {
+			_setColumnOriginalValues();
+		}
+
+		_foo = foo;
 	}
 
 	public long getColumnBitmask() {
@@ -385,9 +385,9 @@ public class P5D2EntryModelImpl
 		P5D2EntryImpl p5d2EntryImpl = new P5D2EntryImpl();
 
 		p5d2EntryImpl.setP5d2EntryId(getP5d2EntryId());
-		p5d2EntryImpl.setFoo(getFoo());
 		p5d2EntryImpl.setAble(getAble());
 		p5d2EntryImpl.setBaker(isBaker());
+		p5d2EntryImpl.setFoo(getFoo());
 
 		p5d2EntryImpl.resetOriginalValues();
 
@@ -400,9 +400,9 @@ public class P5D2EntryModelImpl
 
 		p5d2EntryImpl.setP5d2EntryId(
 			this.<Long>getColumnOriginalValue("p5d2EntryId"));
-		p5d2EntryImpl.setFoo(this.<String>getColumnOriginalValue("foo"));
 		p5d2EntryImpl.setAble(this.<Long>getColumnOriginalValue("able"));
 		p5d2EntryImpl.setBaker(this.<Boolean>getColumnOriginalValue("baker"));
+		p5d2EntryImpl.setFoo(this.<String>getColumnOriginalValue("foo"));
 
 		return p5d2EntryImpl;
 	}
@@ -480,6 +480,10 @@ public class P5D2EntryModelImpl
 
 		p5d2EntryCacheModel.p5d2EntryId = getP5d2EntryId();
 
+		p5d2EntryCacheModel.able = getAble();
+
+		p5d2EntryCacheModel.baker = isBaker();
+
 		p5d2EntryCacheModel.foo = getFoo();
 
 		String foo = p5d2EntryCacheModel.foo;
@@ -487,10 +491,6 @@ public class P5D2EntryModelImpl
 		if ((foo != null) && (foo.length() == 0)) {
 			p5d2EntryCacheModel.foo = null;
 		}
-
-		p5d2EntryCacheModel.able = getAble();
-
-		p5d2EntryCacheModel.baker = isBaker();
 
 		return p5d2EntryCacheModel;
 	}
@@ -583,9 +583,9 @@ public class P5D2EntryModelImpl
 	}
 
 	private long _p5d2EntryId;
-	private String _foo;
 	private long _able;
 	private boolean _baker;
+	private String _foo;
 
 	public <T> T getColumnValue(String columnName) {
 		Function<P5D2Entry, Object> function = _attributeGetterFunctions.get(
@@ -615,9 +615,9 @@ public class P5D2EntryModelImpl
 		_columnOriginalValues = new HashMap<String, Object>();
 
 		_columnOriginalValues.put("p5d2EntryId", _p5d2EntryId);
-		_columnOriginalValues.put("foo", _foo);
 		_columnOriginalValues.put("able", _able);
 		_columnOriginalValues.put("baker", _baker);
+		_columnOriginalValues.put("foo", _foo);
 	}
 
 	private transient Map<String, Object> _columnOriginalValues;
@@ -633,11 +633,11 @@ public class P5D2EntryModelImpl
 
 		columnBitmasks.put("p5d2EntryId", 1L);
 
-		columnBitmasks.put("foo", 2L);
+		columnBitmasks.put("able", 2L);
 
-		columnBitmasks.put("able", 4L);
+		columnBitmasks.put("baker", 4L);
 
-		columnBitmasks.put("baker", 8L);
+		columnBitmasks.put("foo", 8L);
 
 		_columnBitmasks = Collections.unmodifiableMap(columnBitmasks);
 	}

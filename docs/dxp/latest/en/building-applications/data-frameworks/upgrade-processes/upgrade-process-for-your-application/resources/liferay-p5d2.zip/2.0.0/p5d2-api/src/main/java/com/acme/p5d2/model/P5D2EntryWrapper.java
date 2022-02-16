@@ -43,8 +43,8 @@ public class P5D2EntryWrapper
 		Map<String, Object> attributes = new HashMap<String, Object>();
 
 		attributes.put("p5d2EntryId", getP5d2EntryId());
-		attributes.put("bar", getBar());
 		attributes.put("able", getAble());
+		attributes.put("bar", getBar());
 		attributes.put("charlie", getCharlie());
 
 		return attributes;
@@ -58,16 +58,16 @@ public class P5D2EntryWrapper
 			setP5d2EntryId(p5d2EntryId);
 		}
 
-		String bar = (String)attributes.get("bar");
-
-		if (bar != null) {
-			setBar(bar);
-		}
-
 		Date able = (Date)attributes.get("able");
 
 		if (able != null) {
 			setAble(able);
+		}
+
+		String bar = (String)attributes.get("bar");
+
+		if (bar != null) {
+			setBar(bar);
 		}
 
 		String charlie = (String)attributes.get("charlie");

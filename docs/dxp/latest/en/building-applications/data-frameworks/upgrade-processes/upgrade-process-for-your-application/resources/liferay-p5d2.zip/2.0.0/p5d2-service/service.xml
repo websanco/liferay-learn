@@ -11,8 +11,8 @@
 
 		<!-- Other fields -->
 
-		<column name="bar" type="String" />
 		<column name="able" type="Date" />
+		<column name="bar" type="String" />
 		<column name="charlie" type="String" />
 	</entity>
 </service-builder>

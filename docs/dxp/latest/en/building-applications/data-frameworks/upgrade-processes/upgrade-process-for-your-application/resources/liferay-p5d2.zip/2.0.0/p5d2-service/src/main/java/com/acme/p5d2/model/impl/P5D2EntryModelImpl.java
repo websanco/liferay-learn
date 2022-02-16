@@ -67,8 +67,8 @@ public class P5D2EntryModelImpl
 	public static final String TABLE_NAME = "P5D2_P5D2Entry";
 
 	public static final Object[][] TABLE_COLUMNS = {
-		{"p5d2EntryId", Types.BIGINT}, {"bar", Types.VARCHAR},
-		{"able", Types.TIMESTAMP}, {"charlie", Types.VARCHAR}
+		{"p5d2EntryId", Types.BIGINT}, {"able", Types.TIMESTAMP},
+		{"bar", Types.VARCHAR}, {"charlie", Types.VARCHAR}
 	};
 
 	public static final Map<String, Integer> TABLE_COLUMNS_MAP =
@@ -76,13 +76,13 @@ public class P5D2EntryModelImpl
 
 	static {
 		TABLE_COLUMNS_MAP.put("p5d2EntryId", Types.BIGINT);
-		TABLE_COLUMNS_MAP.put("bar", Types.VARCHAR);
 		TABLE_COLUMNS_MAP.put("able", Types.TIMESTAMP);
+		TABLE_COLUMNS_MAP.put("bar", Types.VARCHAR);
 		TABLE_COLUMNS_MAP.put("charlie", Types.VARCHAR);
 	}
 
 	public static final String TABLE_SQL_CREATE =
-		"create table P5D2_P5D2Entry (p5d2EntryId LONG not null primary key,bar VARCHAR(75) null,able DATE null,charlie VARCHAR(75) null)";
+		"create table P5D2_P5D2Entry (p5d2EntryId LONG not null primary key,able DATE null,bar VARCHAR(75) null,charlie VARCHAR(75) null)";
 
 	public static final String TABLE_SQL_DROP = "drop table P5D2_P5D2Entry";
 
@@ -246,12 +246,12 @@ public class P5D2EntryModelImpl
 		attributeSetterBiConsumers.put(
 			"p5d2EntryId",
 			(BiConsumer<P5D2Entry, Long>)P5D2Entry::setP5d2EntryId);
-		attributeGetterFunctions.put("bar", P5D2Entry::getBar);
-		attributeSetterBiConsumers.put(
-			"bar", (BiConsumer<P5D2Entry, String>)P5D2Entry::setBar);
 		attributeGetterFunctions.put("able", P5D2Entry::getAble);
 		attributeSetterBiConsumers.put(
 			"able", (BiConsumer<P5D2Entry, Date>)P5D2Entry::setAble);
+		attributeGetterFunctions.put("bar", P5D2Entry::getBar);
+		attributeSetterBiConsumers.put(
+			"bar", (BiConsumer<P5D2Entry, String>)P5D2Entry::setBar);
 		attributeGetterFunctions.put("charlie", P5D2Entry::getCharlie);
 		attributeSetterBiConsumers.put(
 			"charlie", (BiConsumer<P5D2Entry, String>)P5D2Entry::setCharlie);
@@ -277,6 +277,20 @@ public class P5D2EntryModelImpl
 	}
 
 	@Override
+	public Date getAble() {
+		return _able;
+	}
+
+	@Override
+	public void setAble(Date able) {
+		if (_columnOriginalValues == Collections.EMPTY_MAP) {
+			_setColumnOriginalValues();
+		}
+
+		_able = able;
+	}
+
+	@Override
 	public String getBar() {
 		if (_bar == null) {
 			return "";
@@ -293,20 +307,6 @@ public class P5D2EntryModelImpl
 		}
 
 		_bar = bar;
-	}
-
-	@Override
-	public Date getAble() {
-		return _able;
-	}
-
-	@Override
-	public void setAble(Date able) {
-		if (_columnOriginalValues == Collections.EMPTY_MAP) {
-			_setColumnOriginalValues();
-		}
-
-		_able = able;
 	}
 
 	@Override
@@ -385,8 +385,8 @@ public class P5D2EntryModelImpl
 		P5D2EntryImpl p5d2EntryImpl = new P5D2EntryImpl();
 
 		p5d2EntryImpl.setP5d2EntryId(getP5d2EntryId());
-		p5d2EntryImpl.setBar(getBar());
 		p5d2EntryImpl.setAble(getAble());
+		p5d2EntryImpl.setBar(getBar());
 		p5d2EntryImpl.setCharlie(getCharlie());
 
 		p5d2EntryImpl.resetOriginalValues();
@@ -400,8 +400,8 @@ public class P5D2EntryModelImpl
 
 		p5d2EntryImpl.setP5d2EntryId(
 			this.<Long>getColumnOriginalValue("p5d2EntryId"));
-		p5d2EntryImpl.setBar(this.<String>getColumnOriginalValue("bar"));
 		p5d2EntryImpl.setAble(this.<Date>getColumnOriginalValue("able"));
+		p5d2EntryImpl.setBar(this.<String>getColumnOriginalValue("bar"));
 		p5d2EntryImpl.setCharlie(
 			this.<String>getColumnOriginalValue("charlie"));
 
@@ -481,14 +481,6 @@ public class P5D2EntryModelImpl
 
 		p5d2EntryCacheModel.p5d2EntryId = getP5d2EntryId();
 
-		p5d2EntryCacheModel.bar = getBar();
-
-		String bar = p5d2EntryCacheModel.bar;
-
-		if ((bar != null) && (bar.length() == 0)) {
-			p5d2EntryCacheModel.bar = null;
-		}
-
 		Date able = getAble();
 
 		if (able != null) {
@@ -496,6 +488,14 @@ public class P5D2EntryModelImpl
 		}
 		else {
 			p5d2EntryCacheModel.able = Long.MIN_VALUE;
+		}
+
+		p5d2EntryCacheModel.bar = getBar();
+
+		String bar = p5d2EntryCacheModel.bar;
+
+		if ((bar != null) && (bar.length() == 0)) {
+			p5d2EntryCacheModel.bar = null;
 		}
 
 		p5d2EntryCacheModel.charlie = getCharlie();
@@ -597,8 +597,8 @@ public class P5D2EntryModelImpl
 	}
 
 	private long _p5d2EntryId;
-	private String _bar;
 	private Date _able;
+	private String _bar;
 	private String _charlie;
 
 	public <T> T getColumnValue(String columnName) {
@@ -629,8 +629,8 @@ public class P5D2EntryModelImpl
 		_columnOriginalValues = new HashMap<String, Object>();
 
 		_columnOriginalValues.put("p5d2EntryId", _p5d2EntryId);
-		_columnOriginalValues.put("bar", _bar);
 		_columnOriginalValues.put("able", _able);
+		_columnOriginalValues.put("bar", _bar);
 		_columnOriginalValues.put("charlie", _charlie);
 	}
 
@@ -647,9 +647,9 @@ public class P5D2EntryModelImpl
 
 		columnBitmasks.put("p5d2EntryId", 1L);
 
-		columnBitmasks.put("bar", 2L);
+		columnBitmasks.put("able", 2L);
 
-		columnBitmasks.put("able", 4L);
+		columnBitmasks.put("bar", 4L);
 
 		columnBitmasks.put("charlie", 8L);
 

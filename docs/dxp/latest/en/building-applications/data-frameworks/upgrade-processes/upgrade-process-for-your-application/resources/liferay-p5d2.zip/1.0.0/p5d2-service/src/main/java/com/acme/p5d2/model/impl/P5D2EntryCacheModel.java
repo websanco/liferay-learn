@@ -64,12 +64,12 @@ public class P5D2EntryCacheModel
 
 		sb.append("{p5d2EntryId=");
 		sb.append(p5d2EntryId);
-		sb.append(", foo=");
-		sb.append(foo);
 		sb.append(", able=");
 		sb.append(able);
 		sb.append(", baker=");
 		sb.append(baker);
+		sb.append(", foo=");
+		sb.append(foo);
 		sb.append("}");
 
 		return sb.toString();
@@ -80,6 +80,8 @@ public class P5D2EntryCacheModel
 		P5D2EntryImpl p5d2EntryImpl = new P5D2EntryImpl();
 
 		p5d2EntryImpl.setP5d2EntryId(p5d2EntryId);
+		p5d2EntryImpl.setAble(able);
+		p5d2EntryImpl.setBaker(baker);
 
 		if (foo == null) {
 			p5d2EntryImpl.setFoo("");
@@ -87,9 +89,6 @@ public class P5D2EntryCacheModel
 		else {
 			p5d2EntryImpl.setFoo(foo);
 		}
-
-		p5d2EntryImpl.setAble(able);
-		p5d2EntryImpl.setBaker(baker);
 
 		p5d2EntryImpl.resetOriginalValues();
 
@@ -99,16 +98,20 @@ public class P5D2EntryCacheModel
 	@Override
 	public void readExternal(ObjectInput objectInput) throws IOException {
 		p5d2EntryId = objectInput.readLong();
-		foo = objectInput.readUTF();
 
 		able = objectInput.readLong();
 
 		baker = objectInput.readBoolean();
+		foo = objectInput.readUTF();
 	}
 
 	@Override
 	public void writeExternal(ObjectOutput objectOutput) throws IOException {
 		objectOutput.writeLong(p5d2EntryId);
+
+		objectOutput.writeLong(able);
+
+		objectOutput.writeBoolean(baker);
 
 		if (foo == null) {
 			objectOutput.writeUTF("");
@@ -116,15 +119,11 @@ public class P5D2EntryCacheModel
 		else {
 			objectOutput.writeUTF(foo);
 		}
-
-		objectOutput.writeLong(able);
-
-		objectOutput.writeBoolean(baker);
 	}
 
 	public long p5d2EntryId;
-	public String foo;
 	public long able;
 	public boolean baker;
+	public String foo;
 
 }

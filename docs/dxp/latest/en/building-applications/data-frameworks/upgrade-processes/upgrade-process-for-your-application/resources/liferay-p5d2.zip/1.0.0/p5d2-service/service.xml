@@ -11,8 +11,8 @@
 
 		<!-- Other fields -->
 
-		<column name="foo" type="String" />
 		<column name="able" type="long" />
 		<column name="baker" type="boolean" />
+		<column name="foo" type="String" />
 	</entity>
 </service-builder>

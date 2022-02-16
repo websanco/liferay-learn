@@ -3,8 +3,8 @@
 <model-hints>
 	<model name="com.acme.p5d2.model.P5D2Entry">
 		<field name="p5d2EntryId" type="long" />
-		<field name="bar" type="String" />
 		<field name="able" type="Date" />
+		<field name="bar" type="String" />
 		<field name="charlie" type="String" />
 	</model>
 </model-hints>

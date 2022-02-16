@@ -32,12 +32,12 @@ public class P5D2EntryTable extends BaseTable<P5D2EntryTable> {
 
 	public final Column<P5D2EntryTable, Long> p5d2EntryId = createColumn(
 		"p5d2EntryId", Long.class, Types.BIGINT, Column.FLAG_PRIMARY);
-	public final Column<P5D2EntryTable, String> foo = createColumn(
-		"foo", String.class, Types.VARCHAR, Column.FLAG_DEFAULT);
 	public final Column<P5D2EntryTable, Long> able = createColumn(
 		"able", Long.class, Types.BIGINT, Column.FLAG_DEFAULT);
 	public final Column<P5D2EntryTable, Boolean> baker = createColumn(
 		"baker", Boolean.class, Types.BOOLEAN, Column.FLAG_DEFAULT);
+	public final Column<P5D2EntryTable, String> foo = createColumn(
+		"foo", String.class, Types.VARCHAR, Column.FLAG_DEFAULT);
 
 	private P5D2EntryTable() {
 		super("P5D2_P5D2Entry", P5D2EntryTable::new);

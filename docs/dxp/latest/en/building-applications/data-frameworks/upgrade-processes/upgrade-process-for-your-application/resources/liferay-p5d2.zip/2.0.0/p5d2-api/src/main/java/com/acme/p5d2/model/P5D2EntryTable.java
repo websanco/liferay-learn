@@ -34,10 +34,10 @@ public class P5D2EntryTable extends BaseTable<P5D2EntryTable> {
 
 	public final Column<P5D2EntryTable, Long> p5d2EntryId = createColumn(
 		"p5d2EntryId", Long.class, Types.BIGINT, Column.FLAG_PRIMARY);
-	public final Column<P5D2EntryTable, String> bar = createColumn(
-		"bar", String.class, Types.VARCHAR, Column.FLAG_DEFAULT);
 	public final Column<P5D2EntryTable, Date> able = createColumn(
 		"able", Date.class, Types.TIMESTAMP, Column.FLAG_DEFAULT);
+	public final Column<P5D2EntryTable, String> bar = createColumn(
+		"bar", String.class, Types.VARCHAR, Column.FLAG_DEFAULT);
 	public final Column<P5D2EntryTable, String> charlie = createColumn(
 		"charlie", String.class, Types.VARCHAR, Column.FLAG_DEFAULT);
 

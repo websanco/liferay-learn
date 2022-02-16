@@ -70,6 +70,20 @@ public interface P5D2EntryModel extends BaseModel<P5D2Entry> {
 	public void setP5d2EntryId(long p5d2EntryId);
 
 	/**
+	 * Returns the able of this p5d2 entry.
+	 *
+	 * @return the able of this p5d2 entry
+	 */
+	public Date getAble();
+
+	/**
+	 * Sets the able of this p5d2 entry.
+	 *
+	 * @param able the able of this p5d2 entry
+	 */
+	public void setAble(Date able);
+
+	/**
 	 * Returns the bar of this p5d2 entry.
 	 *
 	 * @return the bar of this p5d2 entry
@@ -83,20 +97,6 @@ public interface P5D2EntryModel extends BaseModel<P5D2Entry> {
 	 * @param bar the bar of this p5d2 entry
 	 */
 	public void setBar(String bar);
-
-	/**
-	 * Returns the able of this p5d2 entry.
-	 *
-	 * @return the able of this p5d2 entry
-	 */
-	public Date getAble();
-
-	/**
-	 * Sets the able of this p5d2 entry.
-	 *
-	 * @param able the able of this p5d2 entry
-	 */
-	public void setAble(Date able);
 
 	/**
 	 * Returns the charlie of this p5d2 entry.

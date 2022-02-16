@@ -66,10 +66,10 @@ public class P5D2EntryCacheModel
 
 		sb.append("{p5d2EntryId=");
 		sb.append(p5d2EntryId);
-		sb.append(", bar=");
-		sb.append(bar);
 		sb.append(", able=");
 		sb.append(able);
+		sb.append(", bar=");
+		sb.append(bar);
 		sb.append(", charlie=");
 		sb.append(charlie);
 		sb.append("}");
@@ -83,18 +83,18 @@ public class P5D2EntryCacheModel
 
 		p5d2EntryImpl.setP5d2EntryId(p5d2EntryId);
 
-		if (bar == null) {
-			p5d2EntryImpl.setBar("");
-		}
-		else {
-			p5d2EntryImpl.setBar(bar);
-		}
-
 		if (able == Long.MIN_VALUE) {
 			p5d2EntryImpl.setAble(null);
 		}
 		else {
 			p5d2EntryImpl.setAble(new Date(able));
+		}
+
+		if (bar == null) {
+			p5d2EntryImpl.setBar("");
+		}
+		else {
+			p5d2EntryImpl.setBar(bar);
 		}
 
 		if (charlie == null) {
@@ -112,14 +112,15 @@ public class P5D2EntryCacheModel
 	@Override
 	public void readExternal(ObjectInput objectInput) throws IOException {
 		p5d2EntryId = objectInput.readLong();
-		bar = objectInput.readUTF();
 		able = objectInput.readLong();
+		bar = objectInput.readUTF();
 		charlie = objectInput.readUTF();
 	}
 
 	@Override
 	public void writeExternal(ObjectOutput objectOutput) throws IOException {
 		objectOutput.writeLong(p5d2EntryId);
+		objectOutput.writeLong(able);
 
 		if (bar == null) {
 			objectOutput.writeUTF("");
@@ -127,8 +128,6 @@ public class P5D2EntryCacheModel
 		else {
 			objectOutput.writeUTF(bar);
 		}
-
-		objectOutput.writeLong(able);
 
 		if (charlie == null) {
 			objectOutput.writeUTF("");
@@ -139,8 +138,8 @@ public class P5D2EntryCacheModel
 	}
 
 	public long p5d2EntryId;
-	public String bar;
 	public long able;
+	public String bar;
 	public String charlie;
 
 }

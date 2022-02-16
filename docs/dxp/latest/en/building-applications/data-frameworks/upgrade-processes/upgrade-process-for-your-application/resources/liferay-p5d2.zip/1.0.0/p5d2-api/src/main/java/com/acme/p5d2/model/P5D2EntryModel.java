@@ -68,21 +68,6 @@ public interface P5D2EntryModel extends BaseModel<P5D2Entry> {
 	public void setP5d2EntryId(long p5d2EntryId);
 
 	/**
-	 * Returns the foo of this p5d2 entry.
-	 *
-	 * @return the foo of this p5d2 entry
-	 */
-	@AutoEscape
-	public String getFoo();
-
-	/**
-	 * Sets the foo of this p5d2 entry.
-	 *
-	 * @param foo the foo of this p5d2 entry
-	 */
-	public void setFoo(String foo);
-
-	/**
 	 * Returns the able of this p5d2 entry.
 	 *
 	 * @return the able of this p5d2 entry
@@ -116,6 +101,21 @@ public interface P5D2EntryModel extends BaseModel<P5D2Entry> {
 	 * @param baker the baker of this p5d2 entry
 	 */
 	public void setBaker(boolean baker);
+
+	/**
+	 * Returns the foo of this p5d2 entry.
+	 *
+	 * @return the foo of this p5d2 entry
+	 */
+	@AutoEscape
+	public String getFoo();
+
+	/**
+	 * Sets the foo of this p5d2 entry.
+	 *
+	 * @param foo the foo of this p5d2 entry
+	 */
+	public void setFoo(String foo);
 
 	@Override
 	public P5D2Entry cloneWithOriginalValues();

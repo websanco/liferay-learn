@@ -42,9 +42,9 @@ public class P5D2EntryWrapper
 		Map<String, Object> attributes = new HashMap<String, Object>();
 
 		attributes.put("p5d2EntryId", getP5d2EntryId());
-		attributes.put("foo", getFoo());
 		attributes.put("able", getAble());
 		attributes.put("baker", isBaker());
+		attributes.put("foo", getFoo());
 
 		return attributes;
 	}
@@ -57,12 +57,6 @@ public class P5D2EntryWrapper
 			setP5d2EntryId(p5d2EntryId);
 		}
 
-		String foo = (String)attributes.get("foo");
-
-		if (foo != null) {
-			setFoo(foo);
-		}
-
 		Long able = (Long)attributes.get("able");
 
 		if (able != null) {
@@ -73,6 +67,12 @@ public class P5D2EntryWrapper
 
 		if (baker != null) {
 			setBaker(baker);
+		}
+
+		String foo = (String)attributes.get("foo");
+
+		if (foo != null) {
+			setFoo(foo);
 		}
 	}
 

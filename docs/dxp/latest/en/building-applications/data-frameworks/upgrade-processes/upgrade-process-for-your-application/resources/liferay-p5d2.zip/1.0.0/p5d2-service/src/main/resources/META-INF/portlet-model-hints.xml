@@ -3,8 +3,8 @@
 <model-hints>
 	<model name="com.acme.p5d2.model.P5D2Entry">
 		<field name="p5d2EntryId" type="long" />
-		<field name="foo" type="String" />
 		<field name="able" type="long" />
 		<field name="baker" type="boolean" />
+		<field name="foo" type="String" />
 	</model>
 </model-hints>
