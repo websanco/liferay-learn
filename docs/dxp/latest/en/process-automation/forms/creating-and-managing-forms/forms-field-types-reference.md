@@ -95,6 +95,14 @@ As of Liferay 7.4, the Advanced configuration of the Date Field includes Validat
 
 ![Enter validation rules for date fields.](./forms-field-types-reference/images/26.png)
 
+### Date and Time
+
+Added in Liferay 7.4, Users fill in both the date and a time of day in one field.
+
+![The Date and Time field combines a valid date with the time of day.](./forms-field-types-reference/images/28.png)
+
+The Date and Time field accepts input following the format `DD/MM/YYYY HH:MM [AM/PM]`. For example, `01/06/1981 12:15 PM` is January 6, 1981 at fifteen minutes past midday. A date and time picker can be used, or the User can enter the date directly into the field.
+
 ### Multiple Selection
 
 Users select one or more options from check boxes (or toggles, if configured).
