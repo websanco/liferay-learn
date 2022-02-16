@@ -27,4 +27,4 @@
 ## 追加情報
 
 * [ファイルのプレビュー](../uploading-and-managing/previewing-files.md)
-* [Configuring Documents and Media Previews](./configuring-documents-and-media-previews.md)
+* [ドキュメントとメディアプレビューの設定](./configuring-documents-and-media-previews.md)

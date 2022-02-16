@@ -3,11 +3,11 @@
 ドキュメントとメディアを使用すると、Liferayインスタンスの[ファイルストア](../../../system-administration/file-storage/configuring-file-storage.md)または接続されたリポジトリに任意のタイプのファイルをアップロードできます。 アップロードされると、必要な[権限](../publishing-and-sharing/managing-document-access/documents-and-media-permissions-reference.md)を持つユーザーは、アップロードされたファイルを表示、編集、ダウンロード、または共有できます。
 
 ```{note}
-ユーザーは、アップロード時にサポートされているアセットに自動的にタグを付けるようにLiferayを構成できます。 詳細については、[Configuring Asset Auto Tagging](../../tags-and-categories/auto-tagging/configuring-asset-auto-tagging.md)を参照してください。 
+ユーザーは、アップロード時にサポートされているアセットに自動的にタグを付けるようにLiferayを構成できます。 詳細については、 [アセットの自動タグ付けの設定](../../tags-and-categories/auto-tagging/configuring-asset-auto-tagging.md) を参照してください。 
 ```
 
 ```{important}
-自動アンチウイルススキャンを有効にして、アップロード時にファイルをスキャンできます。 詳細については、[Enabling Antivirus Scanning for Uploaded Files](../../../system-administration/file-storage/enabling-antivirus-scanning-for-uploaded-files.md)を参照してください。
+自動アンチウイルススキャンを有効にして、アップロード時にファイルをスキャンできます。 詳細については、 [アップロードされたファイルのウイルス対策スキャンを有効にする](../../../system-administration/file-storage/enabling-antivirus-scanning-for-uploaded-files.md) を参照してください。
 ```
 
 ファイルをアップロードするには、最初にサイトまたはアセットライブラリのドキュメントとメディアアプリケーションに移動します。
@@ -56,7 +56,7 @@
 | 説明              | &#10004;         | &#10004;         | アップロードしたファイルのファイル説明を追加します。                                                                                                                                                                                                              |
 | 表示ページ           | &#10004;         | &#10004;         | アップロードされたファイルに対して[ディスプレイページテンプレート](../../../site-building/displaying-content/using-display-page-templates/about-display-page-templates-and-display-pages.md)を選択します。                                                                     |
 | カテゴリの設定         | &#10004;         | &#10004;         | アップロードされたファイルにタグとパブリックカテゴリーまたは内部カテゴリーを適用します。                                                                                                                                                                                            |
-| Expiration Date | &#10004;         | &#10004;         | ファイルの有効期限が切れるか、またはレビューする必要があるかを判断します。 デフォルトでは、ファイルは期限を設定しないか、レビューが必要になるように設定されています。 有効にすると、ファイルの有効期限が切れる、またはレビューする必要がある日付になります。 詳細については、[Using File Expiration and Review Dates](./using-file-expiration-and-review-dates.md)を参照してください。 |
+| Expiration Date | &#10004;         | &#10004;         | ファイルの有効期限が切れるか、またはレビューする必要があるかを判断します。 デフォルトでは、ファイルは期限を設定しないか、レビューが必要になるように設定されています。 有効にすると、ファイルの有効期限が切れる、またはレビューする必要がある日付になります。 詳細については、 [ファイルの有効期限とレビュー日時の使用](./using-file-expiration-and-review-dates.md) を参照してください。 |
 | Related Assets  | &#10004;         |                  | サイトまたは接続されたアセットライブラリから関連アセットまたはファイルを選択します。                                                                                                                                                                                              |
 | 権限設定            | &#10004;         | &#10004;         | アップロードされたファイルの権限を設定します。 これらの設定により、ファイルを表示し、ファイルに関連する他のアクション（更新、削除など）を実行できるユーザーロールが決まります。                                                                                                                                                |
 
@@ -64,6 +64,6 @@
 
 ## 追加情報
 
-* [Creating Folders](./creating-folders.md)
+* [フォルダの作成](./creating-folders.md)
 * [Media Galleryの使用](../publishing-and-sharing/publishing-documents.md#using-the-media-gallery-widget)
 * [Enabling Xuggler and ImageMagick for Previews](../../../system-administration/using-the-server-administration-panel/configuring-external-services.md#enabling-document-previews)

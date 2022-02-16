@@ -121,4 +121,4 @@ SharePointを使用すると、カスタムソースIDを定義して、検索�
 ## 追加情報
 
 * [アプリのインストール](../../../../system-administration/installing-and-managing-apps/installing-apps/installing-apps.md)
-* [Creating SharePoint Repositories in Documents and Media](./creating-sharepoint-repositories-in-documents-and-media.md)
+* [ドキュメントとメディアでのSharePointリポジトリの作成](./creating-sharepoint-repositories-in-documents-and-media.md)

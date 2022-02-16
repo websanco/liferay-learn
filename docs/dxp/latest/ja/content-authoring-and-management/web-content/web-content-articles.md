@@ -1,9 +1,9 @@
-Webコンテンツの記事
-====================
+# Webコンテンツの記事
 
-.. toctree::
-   :maxdepth: 2
+```{toctree}
+:maxdepth: 2
 
-   web-content-articles/adding-a-basic-web-content-article.md
+web-content-articles/adding-a-basic-web-content-article.md
+```
 
--  :doc:`/content-authoring-and-management/web-content/web-content-articles/adding-a-basic-web-content-article`
+- [基本的なWebコンテンツの記事の追加](./web-content-articles/adding-a-basic-web-content-article.md)

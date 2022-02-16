@@ -28,4 +28,4 @@
 
 ## 追加情報
 
-* [Enabling Liferay's REST Connector to SharePoint](./enabling-liferays-rest-connector-to-sharepoint.md)
+* [LiferayのREST Connector to SharePointの有効化](./enabling-liferays-rest-connector-to-sharepoint.md)

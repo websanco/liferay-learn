@@ -458,7 +458,7 @@ Code:
 
 ## 追加情報
 
-* [Documents and Media Overview](../documents-and-media-overview.md)
+* [「ドキュメントとメディア」の概要](../documents-and-media-overview.md)
 * [RESTサービスの使用](../../../headless-delivery/consuming-apis/consuming-rest-services.md)
 * [APIヘッダーリファレンス](../../../headless-delivery/consuming-apis/api-headers-reference.md)
 * [GraphQL APIの使用](../../../headless-delivery/consuming-apis/consuming-graphql-apis.md)

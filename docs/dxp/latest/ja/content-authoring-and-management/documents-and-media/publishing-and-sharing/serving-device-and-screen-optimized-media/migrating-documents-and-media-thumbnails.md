@@ -65,5 +65,5 @@ DXPは、アダプティブメディアを使用して、ドキュメントと�
 
 ## 追加情報
 
-* [Managing Image Resolutions](./managing-image-resolutions.md)
-* [Adaptive Media Configuration Reference](./adaptive-media-configuration-reference.md)
+* [画像解像度の管理](./managing-image-resolutions.md)
+* [アダプティブメディア構成リファレンス](./adaptive-media-configuration-reference.md)

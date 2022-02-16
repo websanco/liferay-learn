@@ -1,18 +1,20 @@
-ドキュメントとメディア
-===================
+# ドキュメントとメディア
 
-.. toctree::
-   :maxdepth: 3
+```{toctree}
+:maxdepth: 4
 
-   documents-and-media/introduction-to-documents-and-media.md
-   documents-and-media/uploading_and_managing.rst
-   documents-and-media/publishing_and_sharing.rst
-   documents-and-media/developer_guide.rst
-   documents-and-media/devops.rst
-   documents-and-media/documents-and-media-ui-reference.md
+documents-and-media/documents-and-media.md
+documents-and-media/uploading-and-managing.md
+documents-and-media/publishing-and-sharing.md
+documents-and-media/videos.md
+documents-and-media/developer-guide.md
+documents-and-media/devops.md
+```
 
-.. raw:: html
-   :file: ../landingpage_template.html
+```{raw} html
+:file: ../landingpage_template.html
+```
 
-.. raw:: html
-   :file: documents-and-media/landing.html
+```{raw} html
+:file: documents-and-media/landing.html
+```

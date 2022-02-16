@@ -2,7 +2,7 @@
 
 DXPの **ドキュメントとメディア** アプリを使用すると、ユーザーはファイルを相互に直接共有できます。
 
-共有を無効にすることができます。 手順については、[Enabling and Configuring Sharing](./enabling-and-configuring-sharing.md)を参照してください。
+共有を無効にすることができます。 手順については、 [共有の有効化と構成](./enabling-and-configuring-sharing.md) を参照してください。
 
 共有するときは、そのファイルに対する自分自身の権限の一部を受信ユーザーに付与します。 重要な注意事項がいくつかあります。
 
@@ -77,7 +77,7 @@ DXPの **ドキュメントとメディア** アプリを使用すると、ユ�
 
     ![共有ファイルは、ファイルが最初にアップロードされたフォルダと同じフォルダにあります。](./sharing-documents-with-other-users/images/05.png)
 
-***通知アプリ：** ファイルがあなたと共有されると、通知が届きます。 通知をクリックすると、ドキュメントとメディアのファイルに移動します。 通知の詳細は、[Managing Notifications and Requests](../../../../collaboration-and-social/notifications-and-requests/user-guide/managing-notifications-and-requests.md)を参照してください。
+***通知アプリ：** ファイルがあなたと共有されると、通知が届きます。 通知をクリックすると、ドキュメントとメディアのファイルに移動します。 通知の詳細は、 [通知とリクエストの管理](../../../../collaboration-and-social/notifications-and-requests/user-guide/managing-notifications-and-requests.md) を参照してください。
 
     ![通知アプリには、ユーザーがファイルをあなたと共有したときに送信される通知が含まれています。](./sharing-documents-with-other-users/images/06.png)
 

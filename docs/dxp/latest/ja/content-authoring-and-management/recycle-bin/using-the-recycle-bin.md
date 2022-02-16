@@ -88,5 +88,5 @@ Wikiおよび掲示板エントリに追加された添付ファイルは、削�
 
 ## 追加情報
 
-  - [Recycle Bin Overview](./recycle-bin-overview.md)
-  - [Configuring the Recycle Bin](./configuring-the-recycle-bin.md)
+  - [ゴミ箱の概要](./recycle-bin-overview.md)
+  - [ごみ箱の設定](./configuring-the-recycle-bin.md)

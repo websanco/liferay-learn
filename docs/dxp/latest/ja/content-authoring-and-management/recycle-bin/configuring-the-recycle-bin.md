@@ -34,4 +34,4 @@
 
 ## 追加情報
 
-  - [Using the Recycle Bin](./using-the-recycle-bin.md)
+  - [ごみ箱の使用](./using-the-recycle-bin.md)

@@ -83,4 +83,4 @@ OpenNLPプロバイダーが設定されました。
 
 ## 追加情報
 
-  - [Auto Tagging Images](./auto-tagging-images.md)
+  - [画像の自動タグ付け](./auto-tagging-images.md)

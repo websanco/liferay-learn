@@ -154,7 +154,7 @@ Webコンテンツの場所を設定するには、ブラウザと現在地を�
 
 ## 追加情報
 
-  - [Configuring Asset Auto Tagging](./auto-tagging/configuring-asset-auto-tagging.md)
+  - [アセットの自動タグ付けの設定](./auto-tagging/configuring-asset-auto-tagging.md)
   - [コンテンツのタグ付けとタグの管理](./tagging-content-and-managing-tags.md)
   - [ドキュメントタイプの定義](../documents-and-media/uploading-and-managing/managing-metadata/defining-document-types.md)
   - [メタデータセットの使用](../documents-and-media/uploading-and-managing/managing-metadata/using-metadata-sets.md)

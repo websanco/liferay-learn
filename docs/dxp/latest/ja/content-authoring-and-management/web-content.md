@@ -1,17 +1,19 @@
-Webコンテンツ
-===========
+# Webコンテンツ
 
-.. toctree::
-   :maxdepth: 3
+```{toctree}
+:maxdepth: 4
 
-   web-content/web_content_articles.rst
-   web-content/web_content_structures.rst
-   web-content/web_content_templates.rst
-   web-content/translating_web_content.rst
-   web-content/developer_guide.rst
+web-content/web-content-articles.md
+web-content/web-content-structures.md
+web-content/web-content-templates.md
+web-content/translating-web-content.md
+web-content/developer-guide.md
+```
 
-.. raw:: html
-   :file: ../landingpage_template.html
+```{raw} html
+:file: ../landingpage_template.html
+```
 
-.. raw:: html
-   :file: web-content/landing.html
+```{raw} html
+:file: web-content/landing.html
+```

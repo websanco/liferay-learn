@@ -24,7 +24,7 @@ Liferayインスタンスのドキュメントとメディアのグローバル�
 
    負の数を割り当てるか、`0`を割り当てると、プロパティが無効になります。
 
-1. `portal-ext.properties`ファイルを [Liferay Home](../../../installation-and-upgrades/reference/liferay-home.md) フォルダまたは`［USER_HOME]`フォルダにデプロイします。 詳細は、[Portal Properties](../../../installation-and-upgrades/reference/portal-properties.md)を参照してください。
+1. `portal-ext.properties`ファイルを [Liferay Home](../../../installation-and-upgrades/reference/liferay-home.md) フォルダまたは`［USER_HOME]`フォルダにデプロイします。 詳細は、 [ポータルプロパティ](../../../installation-and-upgrades/reference/portal-properties.md) を参照してください。
 
 1. Liferayサーバーを再起動して、新しいプロパティファイルを適用します。
 
@@ -38,5 +38,5 @@ Liferayインスタンスのドキュメントとメディアのグローバル�
 
 ## 追加情報
 
-* [Documents and Media Overview](../documents-and-media-overview.md)
+* [「ドキュメントとメディア」の概要](../documents-and-media-overview.md)
 * [ポータルプロパティ](../../../installation-and-upgrades/reference/portal-properties.md)

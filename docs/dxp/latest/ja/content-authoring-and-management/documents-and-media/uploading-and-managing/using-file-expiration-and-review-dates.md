@@ -68,6 +68,6 @@ Liferayのシステムは、設定された [チェック間隔](#configuring-th
 
 ## 追加情報
 
-* [Uploading Files](./uploading-files.md)
-* [Documents and Media Overview](../documents-and-media-overview.md)
+* [ファイルのアップロード](./uploading-files.md)
+* [「ドキュメントとメディア」の概要](../documents-and-media-overview.md)
 * [ドキュメントとメディアUIリファレンス](../documents-and-media-ui-reference.md)

@@ -54,5 +54,5 @@ LiferayはXLIFF1.2と2.0の両方をサポートしていますが、これら�
 
 ## 追加情報
 
-  - [Manually Translating Web Content](./manually-translating-web-content.md)
-  - [Adding a Basic Web Content Article](../web-content-articles/adding-a-basic-web-content-article.md)
+  - [Webコンテンツの手動翻訳](./manually-translating-web-content.md)
+  - [基本的なWebコンテンツの記事の追加](../web-content-articles/adding-a-basic-web-content-article.md)

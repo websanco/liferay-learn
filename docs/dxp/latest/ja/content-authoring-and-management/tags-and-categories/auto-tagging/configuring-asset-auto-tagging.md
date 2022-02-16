@@ -8,8 +8,8 @@
 
 特定のアセットタイプの自動タグ付けの設定については、別途説明します。
 
-  - [Auto Tagging Images](./auto-tagging-images.md)
-  - [Auto Tagging Assets](./auto-tagging-assets.md)
+  - [画像の自動タグ付け](./auto-tagging-images.md)
+  - [アセットの自動タグ付け](./auto-tagging-assets.md)
 
 自動タグ付けはデフォルトで有効になっています。 次の3つのレベルで設定できます。
 

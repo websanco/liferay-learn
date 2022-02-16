@@ -80,4 +80,4 @@
 
   - [コンテンツのカテゴリとボキャブラリの定義](./defining-categories-and-vocabularies-for-content.md)
   - [ユーザーセグメントの作成と管理](../../site-building/personalizing-site-experience/segmentation/creating-and-managing-user-segments.md#creating-user-segments)
-  - [Segments Editor UI Reference](../../site-building/personalizing-site-experience/segmentation/segments-editor-ui-reference.md)
+  - [セグメントエディターUIリファレンス](../../site-building/personalizing-site-experience/segmentation/segments-editor-ui-reference.md)

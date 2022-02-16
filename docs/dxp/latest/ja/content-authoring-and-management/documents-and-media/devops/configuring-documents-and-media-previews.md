@@ -14,7 +14,7 @@ Liferay DXPは現在、以下のプログラムとの統合をサポートして
 
 * [ImageMagick](http://www.imagemagick.org) （ [Ghostscript](http://www.ghostscript.com) も必要です）：これらのプログラムは、画像ファイルの高速で高品質のプレビューと変換を提供します。 詳細は、 [Enabling ImageMagick and Ghostscript](../../../system-administration/using-the-server-administration-panel/configuring-external-services.md#enabling-imagemagick-and-ghostscript) を参照してください。
 
-* [FFmpeg](http://ffmpeg.org/) ：このプログラムは、音声ファイルとビデオファイルのサポートを提供します。 ファイルプレビューの生成に加えて、ブラウザのネイティブHTML 5プレーヤーでマルチメディアを再生できます。 詳細は、[Enabling FFmpeg for Audio and Video Previews](./enabling-ffmpeg-for-audio-and-video-previews.md)を参照してください。
+* [FFmpeg](http://ffmpeg.org/) ：このプログラムは、音声ファイルとビデオファイルのサポートを提供します。 ファイルプレビューの生成に加えて、ブラウザのネイティブHTML 5プレーヤーでマルチメディアを再生できます。 詳細は、 [音声とビデオのプレビュー用にFFmpegを有効にする](./enabling-ffmpeg-for-audio-and-video-previews.md) を参照してください。
 
    ```{note}
    Liferay 7.3.x以前のバージョンでは、音声とビデオのプレビューの生成に［Xuggler］(http://www.xuggle.com/xuggler)を使用しています。 詳細は、[Enabling Xuggler］(../../../system-administration/using-the-server-administration-panel/configuring-external-services.md#enabling-xuggler)を参照してください。

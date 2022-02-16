@@ -54,7 +54,7 @@ Liferayでは、ドキュメントタイプは、ファイルをアップロー�
 
 ![ドキュメントタイプを使用して、新しいアップロードを開始します。](./defining-document-types/images/09.png)
 
-ドキュメントタイプを選択すると、設定済みのメタデータフィールドがユーザーに表示されます。 詳細については、[Uploading Files](../uploading-files.md)を参照してください。
+ドキュメントタイプを選択すると、設定済みのメタデータフィールドがユーザーに表示されます。 詳細については、 [ファイルのアップロード](../uploading-files.md) を参照してください。
 
 <a name="liferay-73x以前のバージョンの場合" />
 
@@ -73,7 +73,7 @@ Liferayでは、ドキュメントタイプは、ファイルをアップロー�
     ![メインのメタデータフィールドをドラッグアンドドロップする](./defining-document-types/images/10.png)
 
 1. ［**Additional Metadata Fields**］ を展開します。
-1. ドキュメントタイプに関連付けるメタデータセットを選択します。 詳細については、[Defining Metadata Sets](./defining-metadata-sets.md)を参照してください。
+1. ドキュメントタイプに関連付けるメタデータセットを選択します。 詳細については、 [メタデータセットの定義](./defining-metadata-sets.md) を参照してください。
 
     ![追加のメタデータセットを関連付けます。](./defining-document-types/images/11.png)
 
@@ -91,5 +91,5 @@ Liferayでは、ドキュメントタイプは、ファイルをアップロー�
 
 ## 追加情報
 
-* [Documents and Media Overview](../../documents-and-media-overview.md)
-* [Defining Metadata Sets](./defining-metadata-sets.md)
+* [「ドキュメントとメディア」の概要](../../documents-and-media-overview.md)
+* [メタデータセットの定義](./defining-metadata-sets.md)

@@ -102,4 +102,4 @@
 
 ## 追加情報
 
-* [Creating External Video Shortcuts](../videos/creating-external-video-shortcuts.md)
+* [外部ビデオショートカットの作成](../videos/creating-external-video-shortcuts.md)

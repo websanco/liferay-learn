@@ -6,11 +6,11 @@
 
 ここでは、アダプティブメディアについてと、画像を処理するための準備方法について学習します。
 
-アダプティブメディアを使用するには、最初にユーザーのデバイスに配信される画像の解像度を定義する必要があります。 次に、アダプティブメディアは、元のアスペクト比を維持しながら、これらの解像度に合うようにスケーリングされた新しい画像を生成します。 新しい画像解像度の作成の詳細は、[Adding Image Resolutions](./adding-image-resolutions.md)を参照してください。
+アダプティブメディアを使用するには、最初にユーザーのデバイスに配信される画像の解像度を定義する必要があります。 次に、アダプティブメディアは、元のアスペクト比を維持しながら、これらの解像度に合うようにスケーリングされた新しい画像を生成します。 新しい画像解像度の作成の詳細は、 [画像解像度の追加](./adding-image-resolutions.md) を参照してください。
 
-上記のように、さまざまなタイプのコンテンツで適用された画像を使用できます（[Using Adapted Images in Site Content](./using-adapted-images-in-site-content.md)を参照）。
+上記のように、さまざまなタイプのコンテンツで適用された画像を使用できます（ [サイトコンテンツでの適応画像の使用](./using-adapted-images-in-site-content.md) を参照）。
 
-アダプティブメディアの画像解像度を管理するには、[Managing Image Resolutions](./managing-image-resolutions.md)を参照してください。
+アダプティブメディアの画像解像度を管理するには、 [画像解像度の管理](./managing-image-resolutions.md) を参照してください。
 
 最新のDXPバージョンにアップグレードし、アダプティブメディアをサポートしていないレガシーバージョンを使用していた場合は、既存のドキュメントとメディアのサムネイルを新しいアダプティブメディアで定義された画像解像度に移行できます。[Migrating Documents and Media Thumbnails](./migrating-documents-and-media-thumbnails.md)を参照してください。
 

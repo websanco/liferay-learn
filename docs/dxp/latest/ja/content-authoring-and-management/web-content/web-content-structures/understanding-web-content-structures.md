@@ -20,6 +20,6 @@ Web コンテンツストラクチャーは、Webコンテンツ記事の構成�
 
 ## 関連情報
 
-  - [Creating Structures](./creating-structures.md)
+  - [ストラクチャーの作成](./creating-structures.md)
   - [ストラクチャーの管理](./managing-structures.md)
   - [ストラクチャー項目の設定](./configuring-structure-fields.md)

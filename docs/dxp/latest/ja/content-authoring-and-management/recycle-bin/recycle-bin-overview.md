@@ -36,5 +36,5 @@
 
 ## 追加情報
 
-  - [Using the Recycle Bin](./using-the-recycle-bin.md)
-  - [Configuring the Recycle Bin](./configuring-the-recycle-bin.md)
+  - [ごみ箱の使用](./using-the-recycle-bin.md)
+  - [ごみ箱の設定](./configuring-the-recycle-bin.md)

@@ -82,4 +82,4 @@
 ## 関連情報
 
 - [他のユーザーとのドキュメントの共有](./sharing-documents-with-other-users.md)
-- [Site Settings UI Reference](../../../../site-building/site-settings/site-settings-ui-reference.md)
+- [サイト設定UIリファレンス](../../../../site-building/site-settings/site-settings-ui-reference.md)

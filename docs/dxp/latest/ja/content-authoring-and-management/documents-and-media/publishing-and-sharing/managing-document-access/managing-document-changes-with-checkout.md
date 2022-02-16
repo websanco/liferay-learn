@@ -43,7 +43,7 @@
 
 ## WebDAVの使用
 
-WebDAVを使用してファイルを管理し、バージョン履歴を継続して追跡することができます。 詳しくは、[Accessing Documents with WebDAV](../accessing-documents-with-webdav.md)をご覧ください。
+WebDAVを使用してファイルを管理し、バージョン履歴を継続して追跡することができます。 詳しくは、 [WebDAVを使用したドキュメントへのアクセス](../accessing-documents-with-webdav.md) をご覧ください。
 
 <a name="liferay-syncの使用" />
 

@@ -1,6 +1,6 @@
 # ドキュメントとメディアでのワークフローの使用
 
-ユーザーは、 **ドキュメントとメディア** ファイルの[ワークフローを実装](../../../process-automation/workflow/using-workflows/activating-workflow.md)できます。  （一般的なワークフローの詳細については、[Introduction to Workflow](../../../process-automation/workflow/introduction-to-workflow.md)を参照してください。）
+ユーザーは、 **ドキュメントとメディア** ファイルの[ワークフローを実装](../../../process-automation/workflow/using-workflows/activating-workflow.md)できます。  （一般的なワークフローの詳細については、 [ワークフローの概要](../../../process-automation/workflow/introduction-to-workflow.md) を参照してください。）
 
 **ドキュメントとメディア** アプリケーションには、独自の個別のワークフロー設定があります。 たとえば、特定の[フォルダ](../uploading-and-managing/creating-folders.md)のワークフローを有効にして、そのフォルダにアップロードされたすべてのファイルが最初に確認されるようにすることができます。
 
@@ -52,5 +52,5 @@
 
 ## 追加情報
 
-* [Activating Workflow](../../../process-automation/workflow/using-workflows/activating-workflow.md)
+* [ワークフローのアクティブ化](../../../process-automation/workflow/using-workflows/activating-workflow.md)
 * [ドキュメントとメディアUIリファレンス](../documents-and-media-ui-reference.md)

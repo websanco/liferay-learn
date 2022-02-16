@@ -19,4 +19,4 @@
 ## 追加情報
 
 * [アセットライブラリの作成と管理](./creating-and-managing-asset-libraries.md)
-* [Asset Library Content](./asset-library-content.md)
+* [アセットライブラリコンテンツ](./asset-library-content.md)

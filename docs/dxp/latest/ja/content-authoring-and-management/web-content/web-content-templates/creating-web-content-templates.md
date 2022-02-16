@@ -62,6 +62,6 @@ FreeMarkerでテンプレートを作成または編集する権限は信頼で�
 
 ## 追加情報
 
-  - [Creating Structures](../web-content-structures/creating-structures.md)
-  - [Adding a Basic Web Content Article](../web-content-articles/adding-a-basic-web-content-article.md)
-  - [Embedding Widgets in Templates](./embedding-widgets-in-templates.md)
+  - [ストラクチャーの作成](../web-content-structures/creating-structures.md)
+  - [基本的なWebコンテンツの記事の追加](../web-content-articles/adding-a-basic-web-content-article.md)
+  - [テンプレートへのウィジェットの埋め込み](./embedding-widgets-in-templates.md)

@@ -107,7 +107,7 @@ TensorFlowプロバイダーが設定されました。
 
 **APIキー:** Computer Vision API V2の [APIキー](https://azure.microsoft.com/en-us/try/cognitive-services/my-apis/?apiSlug=computer-services) 。
 
-**APIエンドポイント:**[Computer Vision API V2](https://westcentralus.api.cognitive.microsoft.com/vision/v2.0) のエンドポイント。
+**APIエンドポイント:** [Computer Vision API V2](https://westcentralus.api.cognitive.microsoft.com/vision/v2.0) のエンドポイント。
 
 Microsoft CognitiveServicesプロバイダーが設定されました。 詳細は、 [Microsoft Cognitive Servicesのドキュメンテーション](https://docs.microsoft.com/en-us/azure/cognitive-services/) を参照してください。
 
@@ -117,5 +117,5 @@ Microsoft CognitiveServicesプロバイダーが設定されました。 詳細�
 
 ## 追加情報
 
-  - [Configuring Asset Auto Tagging](./configuring-asset-auto-tagging.md)
-  - [Auto Tagging Assets](./auto-tagging-assets.md)
+  - [アセットの自動タグ付けの設定](./configuring-asset-auto-tagging.md)
+  - [アセットの自動タグ付け](./auto-tagging-assets.md)

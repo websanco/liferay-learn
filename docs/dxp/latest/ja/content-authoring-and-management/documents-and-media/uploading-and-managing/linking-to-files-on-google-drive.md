@@ -1,6 +1,6 @@
 # Googleドライブ上のファイルへのリンク
 
-ドキュメントライブラリに、Google Drive&trade;のファイルまたはGoogle Photos&trade;の画像にリンクするファイルを作成できます。 この機能を有効にするには、[Enabling Links to Google Drive Documents](../devops/google-drive-integration/enabling-links-to-google-drive-documents.md)を参照してください。
+ドキュメントライブラリに、Google Drive&trade;のファイルまたはGoogle Photos&trade;の画像にリンクするファイルを作成できます。 この機能を有効にするには、 [Googleドライブドキュメントへのリンクを有効にする](../devops/google-drive-integration/enabling-links-to-google-drive-documents.md) を参照してください。
 
 <a name="リンクファイルの作成" />
 
@@ -22,7 +22,7 @@
 リンクしたGoogleドキュメントの新しいファイルエントリーが表示されます。 他のファイルエントリーと同じように、ファイルエントリーを表示できます。 Googleドキュメントのコンテンツは、ファイルエントリーのプレビューペインに表示されます。 他のファイルエントリーと同様に、 **オプション** ボタン（![Options](../../../images/icon-options.png)）を使用すると、［Download］、［編集］、［移動］、［権限設定］、［Move to Recycle Bin］、および［チェックイン/チェックアウト/チェックアウトのキャンセル］オプションにアクセスできます。
 
 ```{tip}
-   オンラインファイルの作成と編集にGoogle Docs&trade;を使用することもできます。 [Creating and Editing Documents with Google Drive](./creating-documents/creating-and-editing-documents-with-google-drive.md) を参照してください。
+   オンラインファイルの作成と編集にGoogle Docs&trade;を使用することもできます。 [Googleドライブでのドキュメントの作成と編集](./creating-documents/creating-and-editing-documents-with-google-drive.md) を参照してください。
 ```
 
 <a name="追加情報" />

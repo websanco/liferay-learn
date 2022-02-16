@@ -1,9 +1,11 @@
-ビデオ
-============
+# ビデオ
 
-.. toctree:: :maxdepth: 2
+```{toctree}
+:maxdepth: 2
 
-   videos/creating-external-video-shortcuts.md videos/embedding-videos-into-liferay-assets-and-pages.md
+videos/creating-external-video-shortcuts.md
+videos/embedding-videos-into-liferay-assets-and-pages.md
+```
 
--  :doc:`/content-authoring-and-management/documents-and-media/videos/creating-external-video-shortcuts`
--  :doc:`/content-authoring-and-management/documents-and-media/videos/embedding-videos-into-liferay-assets-and-pages`
+- [外部ビデオショートカットの作成](./videos/creating-external-video-shortcuts.md)
+- [Liferayアセットとページへのビデオの埋め込み](./videos/embedding-videos-into-liferay-assets-and-pages.md)

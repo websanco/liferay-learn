@@ -32,5 +32,5 @@ OpenOfficeとLibreOfficeはどちらも統合可能ですが、一部の機能�
 
 ## 追加情報
 
-* [Configuring Documents and Media Previews](./configuring-documents-and-media-previews.md)
-* [Documents and Media Overview](../documents-and-media-overview.md)
+* [ドキュメントとメディアプレビューの設定](./configuring-documents-and-media-previews.md)
+* [「ドキュメントとメディア」の概要](../documents-and-media-overview.md)

@@ -98,6 +98,6 @@ Webコンテンツを手動で翻訳するには、ユーザーは特定のコ�
 
 ## 追加情報
 
-  - [Adding a Basic Web Content Article](../web-content-articles/adding-a-basic-web-content-article.md)
-  - [Exporting and Importing Translations](./exporting-and-importing-translations.md)
+  - [基本的なWebコンテンツの記事の追加](../web-content-articles/adding-a-basic-web-content-article.md)
+  - [翻訳のエクスポートとインポート](./exporting-and-importing-translations.md)
   - [ワークフローの概要](../../../process-automation/workflow/introduction-to-workflow.md)

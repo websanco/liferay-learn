@@ -1,13 +1,13 @@
-コンテンツ テンプレート
-=====================
+# コンテンツ テンプレート
 
-.. toctree::
-   :maxdepth: 2
+```{toctree}
+:maxdepth: 2
 
-   web-content-templates/creating-web-content-templates.md
-   web-content-templates/embedding-widgets-in-templates.md
-   web-content-templates/using-taglibs-in-templates.md
+web-content-templates/creating-web-content-templates.md
+web-content-templates/embedding-widgets-in-templates.md
+web-content-templates/using-taglibs-in-templates.md
+```
 
--  :doc:`/content-authoring-and-management/web-content/web-content-templates/creating-web-content-templates`
--  :doc:`/content-authoring-and-management/web-content/web-content-templates/embedding-widgets-in-templates`
--  :doc:`/content-authoring-and-management/web-content/web-content-templates/using-taglibs-in-templates`
+- [Webコンテンツテンプレートの作成](./web-content-templates/creating-web-content-templates.md)
+- [テンプレートへのウィジェットの埋め込み](./web-content-templates/embedding-widgets-in-templates.md)
+- [テンプレートでのTaglibの使用](./web-content-templates/using-taglibs-in-templates.md)

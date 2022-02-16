@@ -181,6 +181,6 @@
 
 ## 関連情報
 
-- [About the Content Dashboard](./about-the-content-dashboard.md)
+- [コンテンツダッシュボードについて](./about-the-content-dashboard.md)
 - [About the Content Performance Panel](../content-performance-tool/about-the-content-performance-tool.md)
 - [コンテンツのカテゴリとボキャブラリの定義](../tags-and-categories/defining-categories-and-vocabularies-for-content.md)

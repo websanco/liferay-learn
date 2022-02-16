@@ -1,6 +1,6 @@
 # 権限とドキュメント
 
-個々のファイル、フォルダ全体、または特定のファイル形式に権限を与えることができます。 Liferayインストールでロールと権限がどのように機能するかについては、[Understanding Roles and Permissions](../../../../users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.md)を参照してください。
+個々のファイル、フォルダ全体、または特定のファイル形式に権限を与えることができます。 Liferayインストールでロールと権限がどのように機能するかについては、 [ロールと権限について](../../../../users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.md) を参照してください。
 
 <a name="個々のファイルの権限" />
 
@@ -20,7 +20,7 @@
 
 1. **ドキュメントとメディア** アプリケーションに移動します。
 
-1. 権限を変更する必要があるフォルダのオプションアイコン（![Options icon](../../../../images/icon-options.png)）をクリックし、［権限設定］を選択します。 フォルダの詳細は、[Creating Folders](../../uploading-and-managing/creating-folders.md)を参照してください。
+1. 権限を変更する必要があるフォルダのオプションアイコン（![Options icon](../../../../images/icon-options.png)）をクリックし、［権限設定］を選択します。 フォルダの詳細は、 [フォルダの作成](../../uploading-and-managing/creating-folders.md) を参照してください。
 
    ![オプションで、［権限設定］をクリックします。](permissions-and-documents/images/01.png)
 
@@ -34,7 +34,7 @@
 
    ![［Document Types］タブをクリックします。](permissions-and-documents/images/03.png)
 
-1. 権限を変更する必要があるドキュメントタイプのオプションアイコン（![Options icon](../../../../images/icon-options.png)）をクリックし、［権限設定］を選択します。 ドキュメントタイプの詳細は、[Defining Document Types](../../uploading-and-managing/managing-metadata/defining-document-types.md)を参照してください。
+1. 権限を変更する必要があるドキュメントタイプのオプションアイコン（![Options icon](../../../../images/icon-options.png)）をクリックし、［権限設定］を選択します。 ドキュメントタイプの詳細は、 [ドキュメントタイプの定義](../../uploading-and-managing/managing-metadata/defining-document-types.md) を参照してください。
 
    ![オプションで、［権限設定］をクリックします。](permissions-and-documents/images/04.png)
 

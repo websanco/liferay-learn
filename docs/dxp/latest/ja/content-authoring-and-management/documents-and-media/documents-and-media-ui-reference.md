@@ -30,7 +30,7 @@
 ホームフォルダは、ドキュメントとメディアアプリケーションのルートフォルダとして機能します。
 ```
 
-**追加** ボタン（![Add Button](../../images/icon-add.png)）をクリックして、次のアクションにアクセスします：［ファイルアップロード］、［複数ファイルのアップロード］、［フォルダ］、［リポジトリ］、［ドキュメントとメディアのショートカット］、［External Video Shortcut］。 詳細については、[Creating Folders](./uploading-and-managing/creating-folders.md)および[Uploading Files](./uploading-and-managing/uploading-files.md)を参照してください。
+**追加** ボタン（![Add Button](../../images/icon-add.png)）をクリックして、次のアクションにアクセスします：［ファイルアップロード］、［複数ファイルのアップロード］、［フォルダ］、［リポジトリ］、［ドキュメントとメディアのショートカット］、［External Video Shortcut］。 詳細については、 [フォルダの作成](./uploading-and-managing/creating-folders.md) および [ファイルのアップロード](./uploading-and-managing/uploading-files.md) を参照してください。
 
 ![追加ボタンをクリックして、新しいフォルダまたはデジタルアセットを作成します。](./documents-and-media-ui-reference/images/04.png)
 
@@ -50,7 +50,7 @@
 
 ![カスタムドキュメントタイプを作成および構成します。](./documents-and-media-ui-reference/images/06.png)
 
-作成したら、テンプレートを使用して、［ドキュメントとメディア］タブで新しいデジタルアセットを追加できます。 詳細は、[Defining Document Types](./uploading-and-managing/managing-metadata/defining-document-types.md)を参照してください。
+作成したら、テンプレートを使用して、［ドキュメントとメディア］タブで新しいデジタルアセットを追加できます。 詳細は、 [ドキュメントタイプの定義](./uploading-and-managing/managing-metadata/defining-document-types.md) を参照してください。
 
 <a name="メタデータセットタブ" />
 
@@ -62,7 +62,7 @@
 
 ![フィールドを使用して、再利用可能なメタデータセットを作成します。](./documents-and-media-ui-reference/images/08.png)
 
-作成したメタデータセットは、カスタムドキュメントタイプに追加できます。 詳細は、[Defining Metadata Sets](./uploading-and-managing/managing-metadata/defining-metadata-sets.md)を参照してください。
+作成したメタデータセットは、カスタムドキュメントタイプに追加できます。 詳細は、 [メタデータセットの定義](./uploading-and-managing/managing-metadata/defining-metadata-sets.md) を参照してください。
 
 <a name="アプリケーションバーの設定" />
 
@@ -80,13 +80,13 @@
 
 ### Edit
 
-すべてのドキュメントタイプの[ワークフロー](../../process-automation/workflow/using-workflows/activating-workflow.md)を有効または無効にします。 一般的なワークフローの詳細については、[Introduction to Workflow](../../process-automation/workflow/introduction-to-workflow.md)を参照してください。
+すべてのドキュメントタイプの[ワークフロー](../../process-automation/workflow/using-workflows/activating-workflow.md)を有効または無効にします。 一般的なワークフローの詳細については、 [ワークフローの概要](../../process-automation/workflow/introduction-to-workflow.md) を参照してください。
 
 ![ワークフローの定義を選択します。](./documents-and-media-ui-reference/images/11.png)
 
 ### ホームフォルダー権限
 
-ドキュメントとメディアの **フォームフォルダ** の権限を管理します。 一般的な権限の詳細については、[Understanding Roles and Permissions](../../users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.md)を参照してください。
+ドキュメントとメディアの **フォームフォルダ** の権限を管理します。 一般的な権限の詳細については、 [ロールと権限について](../../users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.md) を参照してください。
 
 ![ドキュメントとメディアのホームフォルダの権限を管理します。](./documents-and-media-ui-reference/images/12.png)
 
@@ -120,5 +120,5 @@
 
 ## 追加情報
 
-* [Documents and Media Overview](./documents-and-media-overview.md)
+* [「ドキュメントとメディア」の概要](./documents-and-media-overview.md)
 * [Importing/Exporting Sites and Contents](../../site-building/building-sites/importing-exporting-pages-and-content.md)

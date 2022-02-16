@@ -26,4 +26,4 @@ FreeMarkerの` utilLocator`、` objectUtil`、および` staticUtil`変数はデ
 
 ## 追加情報
 
-  - [Embedding Widgets in Templates](./embedding-widgets-in-templates.md)
+  - [テンプレートへのウィジェットの埋め込み](./embedding-widgets-in-templates.md)

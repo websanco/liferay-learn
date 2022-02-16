@@ -70,6 +70,6 @@ Liferayのドキュメントとメディアには、コンテキストを切り�
 
 ## 追加情報
 
-* [Documents and Media Overview](../documents-and-media-overview.md)
-* [Uploading Files](./uploading-files.md)
+* [「ドキュメントとメディア」の概要](../documents-and-media-overview.md)
+* [ファイルのアップロード](./uploading-files.md)
 * [ファイルのプレビュー](./previewing-files.md)

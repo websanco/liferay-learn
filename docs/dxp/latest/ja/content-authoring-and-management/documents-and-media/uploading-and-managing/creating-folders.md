@@ -1,6 +1,6 @@
 # フォルダの作成
 
-ドキュメントとメディアアプリケーションでは、デジタルアセットを整理するためのフォルダを作成できます。 必要な権限を持つ認証されたユーザーのみがフォルダを管理できます。 詳細については、[Documents and Media Permissions Reference](../publishing-and-sharing/managing-document-access/documents-and-media-permissions-reference.md)および[Roles and Permissions](../../../users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.md)を参照してください。
+ドキュメントとメディアアプリケーションでは、デジタルアセットを整理するためのフォルダを作成できます。 必要な権限を持つ認証されたユーザーのみがフォルダを管理できます。 詳細については、 [ドキュメントとメディアの権限リファレンス](../publishing-and-sharing/managing-document-access/documents-and-media-permissions-reference.md) および[Roles and Permissions](../../../users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.md)を参照してください。
 
 <a name="フォルダを追加する" />
 
@@ -49,6 +49,6 @@
 ## 追加情報
 
 * [ワークフローのアクティブ化](../../../process-automation/workflow/using-workflows/activating-workflow.md)
-* [Uploading Files](./uploading-files.md)
+* [ファイルのアップロード](./uploading-files.md)
 * [ドキュメントの公開](../publishing-and-sharing/publishing-documents.md)
 * [Enabling Xuggler and ImageMagick for previews](../../../system-administration/using-the-server-administration-panel/configuring-external-services.md)

@@ -97,7 +97,7 @@
 デフォルトでは、アセットライブラリメンバーの権限は、サイトの対応するメンバーの権限よりも制限されています。 つまり、メンバーにコンテンツの管理を任せる場合は、アプリケーションへのアクセス権を手動で付与したり、コンテンツのアクセス許可を更新/削除したりする必要があります。
 ```
 
-アセットライブラリのロールを作成またはカスタマイズするプロセスは、他の種類のロールの場合と同じです。 ロールを作成、カスタマイズ、管理、および割り当てる方法については、[Roles and Permissions](../../users-and-permissions/roles-and-permissions.md)を参照してください。
+アセットライブラリのロールを作成またはカスタマイズするプロセスは、他の種類のロールの場合と同じです。 ロールを作成、カスタマイズ、管理、および割り当てる方法については、 [ロールと権限](../../users-and-permissions/roles-and-permissions.md) を参照してください。
 
 <a name="アセットライブラリの削除" />
 
@@ -113,5 +113,5 @@
 
 ## 追加情報
 
-* [Asset Libraries Overview](./asset-libraries-overview.md)
-* [Asset Library Content](./asset-library-content.md)
+* [アセットライブラリの概要](./asset-libraries-overview.md)
+* [アセットライブラリコンテンツ](./asset-library-content.md)

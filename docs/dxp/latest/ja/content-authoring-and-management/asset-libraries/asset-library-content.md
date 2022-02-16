@@ -97,5 +97,5 @@
 
 ## 追加情報
 
-* [Asset Libraries Overview](./asset-libraries-overview.md)
+* [アセットライブラリの概要](./asset-libraries-overview.md)
 * [アセットライブラリの作成と管理](./creating-and-managing-asset-libraries.md)

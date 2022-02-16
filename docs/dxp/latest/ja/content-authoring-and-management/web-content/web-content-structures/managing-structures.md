@@ -68,6 +68,6 @@ Liferay DXPは、コピーされたストラクチャーの一意のIDを生成�
 
 ## 関連情報
 
-  - [Creating Structures](./creating-structures.md)
+  - [ストラクチャーの作成](./creating-structures.md)
   - [ストラクチャーの管理](./managing-structures.md)
   - [Web コンテンツストラクチャーを理解する](./understanding-web-content-structures.md)
