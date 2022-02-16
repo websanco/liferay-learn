@@ -1,3 +1,3 @@
-# Module 1: Creating Digital Experiences with Sites
+# Lesson 1: Creating Digital Experiences with Sites
 
 Coming soon!

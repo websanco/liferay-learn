@@ -1,3 +1,3 @@
-# Module 2: Digital Asset Management
+# Lesson 2: Digital Asset Management
 
 Coming soon!

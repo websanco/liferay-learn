@@ -1,3 +1,3 @@
-# Module 3: Import and Manage User Accounts
+# Lesson 3: Import and Manage User Accounts
 
 Coming soon!
