@@ -209,16 +209,16 @@
             pathname: '/commerce/latest/en/search.html'
         },
         {
+            name: 'courses',
+            pathname: '/courses/latest/en/search.html'
+        },
+        {
             name: 'dxp',
             pathname: '/dxp/latest/en/search.html'
         },
         {
             name: 'dxp-cloud',
             pathname: '/dxp-cloud/latest/en/search.html'
-        },
-        {
-            name: 'courses',
-            pathname: '/courses/latest/en/search.html'
         },
         {
             name: 'reference',
@@ -232,10 +232,10 @@
         currentDocProduct = 'analytics-cloud';
     } else if (pathname.includes('commerce')) {
         currentDocProduct = 'commerce'
-    } else if (pathname.includes('dxp-cloud')) {
-        currentDocProduct = 'dxp-cloud'
     } else if (pathname.includes('courses')) {
         currentDocProduct = 'courses'
+    } else if (pathname.includes('dxp-cloud')) {
+        currentDocProduct = 'dxp-cloud'
     } else if (pathname.includes('reference')) {
         currentDocProduct = 'reference'
     }

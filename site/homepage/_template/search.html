@@ -96,6 +96,20 @@
                                         class="custom-control-input"
                                         name="productName"
                                         type="radio"
+                                        value="courses"
+                                    />
+
+                                    <span class="custom-control-label">{% trans %}Courses{% endtrans %}</span>
+                                </label>
+                            </div>
+
+                            <div class="custom-control custom-radio">
+                                <label>
+                                    <input
+                                        aria-label="{{ getLanguageLabel(language_code) }}"
+                                        class="custom-control-input"
+                                        name="productName"
+                                        type="radio"
                                         value="dxp"
                                     />
 
@@ -114,20 +128,6 @@
                                     />
 
                                     <span class="custom-control-label">{% trans %}DXP Cloud{% endtrans %}</span>
-                                </label>
-                            </div>
-
-                            <div class="custom-control custom-radio">
-                                <label>
-                                    <input
-                                        aria-label="{{ getLanguageLabel(language_code) }}"
-                                        class="custom-control-input"
-                                        name="productName"
-                                        type="radio"
-                                        value="courses"
-                                    />
-
-                                    <span class="custom-control-label">{% trans %}Courses{% endtrans %}</span>
                                 </label>
                             </div>
 
@@ -209,16 +209,16 @@
             pathname: '/commerce/latest/en/search.html'
         },
         {
+            name: 'courses',
+            pathname: '/courses/latest/en/search.html'
+        },
+        {
             name: 'dxp',
             pathname: '/dxp/latest/en/search.html'
         },
         {
             name: 'dxp-cloud',
             pathname: '/dxp-cloud/latest/en/search.html'
-        },
-        {
-            name: 'courses',
-            pathname: '/courses/latest/en/search.html'
         },
         {
             name: 'reference',
@@ -232,10 +232,10 @@
         currentDocProduct = 'analytics-cloud';
     } else if (pathname.includes('commerce')) {
         currentDocProduct = 'commerce'
-    } else if (pathname.includes('dxp-cloud')) {
-        currentDocProduct = 'dxp-cloud'
     } else if (pathname.includes('courses')) {
         currentDocProduct = 'courses'
+    } else if (pathname.includes('dxp-cloud')) {
+        currentDocProduct = 'dxp-cloud'
     } else if (pathname.includes('reference')) {
         currentDocProduct = 'reference'
     }
