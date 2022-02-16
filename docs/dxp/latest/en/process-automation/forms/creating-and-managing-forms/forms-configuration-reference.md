@@ -22,15 +22,16 @@ To access the Settings menu, choose the desired form (for example, _Guest Survey
 
 | Section | Field | Description |
 | :--- | :--- | :--- |
-| General | Require User Authentication | Requires sign in before submitting the form |
-| General | CAPTCHA | Requires answering CAPTCHA questions when submitting the form |
-| General | Save Answers Automatically | Saves answers to the form automatically |
-| General | Select a Storage Type | Sets the [storage adapter](../developer-guide/understanding-form-storage-adapters.md) for managing submitted records; not editable after the form is saved. |
+| General | Require User Authentication | Require respondents to sign in before submitting the form. |
+| General | CAPTCHA | Require answering CAPTCHA questions when submitting the form. |
+| General | Save Answers Automatically | Autosave the form periodically as the respondent fills it out. |
+| General | Select a Storage Type | Set the [storage adapter](../developer-guide/understanding-form-storage-adapters.md) for managing submitted records; not editable after the form is saved. |
 | General | Select a [Workflow](./advanced-forms-usage/using-forms-with-a-workflow.md) | Select a workflow definition to review the form submission; workflow is deactivated by default. |
-| Personalization | Redirect URL on Success | Specifies a redirect URL once the form is submitted successfully. |
-| Personalization | Submit Button Label | Changes the label of the Submit button to something more appropriate for your specific use case (e.g, _Vote_ or _Register_). |
-| Notifications | Send an Email Notification for Each Entry | Specifies whether an [email notification](../sharing-forms-and-managing-submissions/configuring-form-notifications.md) sent to the form creator each time a form record is submitted. |
-| Submissions | Limit to one Submission per User | Do not allow multiple form submissions to logged in Users. This also requires that Users are authenticated to fill out the form. |
+| Personalization | Redirect URL on Success | Specify a redirect URL once the form is submitted successfully. |
+| Personalization | Submit Button Label | Change the label of the Submit button to something more appropriate for your specific use case (e.g, _Vote_ or _Register_). |
+| Notifications | Send an Email Notification for Each Entry | Specify whether an [email notification](../sharing-forms-and-managing-submissions/configuring-form-notifications.md) sent to the form creator each time a form record is submitted. |
+| [Liferay 7.4 Only] Submissions | Limit to one Submission per User | Do not allow multiple form submissions to logged in Users. This also requires that Users are authenticated to fill out the form. |
+| [Liferay 7.4 Only] Submissions | Show Partial Results to Respondents | Allow respondents to view the current [Forms Report](../sharing-forms-and-managing-submissions/form-reports.md) data for the form. Enabling this warns the user against submitting sensitive information. |
 
 ### Email Notifications
 
