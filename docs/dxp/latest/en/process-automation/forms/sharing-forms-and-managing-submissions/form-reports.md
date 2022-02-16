@@ -53,6 +53,18 @@ The Grid field accepts a single entry for each of multiple related questions (e.
 
 ![Grid entries are displayed in a vertical bar graph.](./form-reports/images/05.png)
 
+### Show Partial Results to Form Respondents
+
+> Liferay 7.4 Only
+
+The Submissions tab of a [Form's Settings modal](../creating-and-managing-forms/forms-configuration-reference.md#form-settings) has a checkbox for _Show Partial Results to Respondents_. Enabling this setting allows respondents to view the current [Forms Report](../sharing-forms-and-managing-submissions/form-reports.md) data for the form.
+
+![Show in-progress form metrics to form respondents.](./form-reports/images/10.png)
+
+Enabling this setting triggers an _Info_ message to the form respondent: _Your responses will be visible to all form respondents. Avoid entering personal or sensitive data._ The respondent can also check the box to submit that they understand the danger of submitting private information.
+
+![Warn respondents against submitting sensitive information.](./form-reports/images/08.png)
+
 ## Related Topics
 
 * [Viewing Form Entries](./managing-form-entries.md#viewing-form-entries)
