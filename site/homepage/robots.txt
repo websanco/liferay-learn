@@ -1,5 +1,4 @@
-User-agent: *
 Disallow: /*/latest/*/404.html
 Disallow: /*/latest/*/README.html
-
 Sitemap: https://learn.liferay.com/sitemapindex.xml
+User-agent: *
