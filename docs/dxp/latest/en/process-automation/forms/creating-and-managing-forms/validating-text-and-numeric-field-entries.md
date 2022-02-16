@@ -8,15 +8,11 @@ Date Fields can be validated beginning in Liferay 7.4.
 
 Enable input validation to ensure that only certain values are accepted in a Text or Numeric field.
 
-<!-- Update this. Rename to "Text and Numeric Fields: Validation and Masking" and then add a seciton on "Masking Numeric Fields". Make the section example-oriented with a few useful examples.-->
-
-<!-- Also consider updating because date fields can be validated in 7.4 -->
-
 ## Enabling Field Validation
 
 To enable validation:
 
-1. While viewing a form, click on a Text, Numeric, or date field to open the field configuration menu.
+1. While viewing a form, click on a Text, Numeric, or Date field to open the field configuration menu.
 1. Click the _Advanced_ tab.
 1. Switch the _Validation_ toggle to the right to enable validation.
 
