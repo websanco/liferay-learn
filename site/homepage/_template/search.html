@@ -124,10 +124,10 @@
                                         class="custom-control-input"
                                         name="productName"
                                         type="radio"
-                                        value="learning-paths"
+                                        value="courses"
                                     />
 
-                                    <span class="custom-control-label">{% trans %}Learning Paths{% endtrans %}</span>
+                                    <span class="custom-control-label">{% trans %}Courses{% endtrans %}</span>
                                 </label>
                             </div>
 
@@ -217,8 +217,8 @@
             pathname: '/dxp-cloud/latest/en/search.html'
         },
         {
-            name: 'learning-paths',
-            pathname: '/learning-paths/latest/en/search.html'
+            name: 'courses',
+            pathname: '/courses/latest/en/search.html'
         },
         {
             name: 'reference',
@@ -234,8 +234,8 @@
         currentDocProduct = 'commerce'
     } else if (pathname.includes('dxp-cloud')) {
         currentDocProduct = 'dxp-cloud'
-    } else if (pathname.includes('learning-paths')) {
-        currentDocProduct = 'learning-paths'
+    } else if (pathname.includes('courses')) {
+        currentDocProduct = 'courses'
     } else if (pathname.includes('reference')) {
         currentDocProduct = 'reference'
     }
