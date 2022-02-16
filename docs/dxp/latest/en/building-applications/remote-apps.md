@@ -4,6 +4,7 @@
 :maxdepth: 3
 
 remote-apps/creating-a-liferay-remote-app.md
+remote-apps/using-routes-with-remote-app.md
 ```
 
 ```{raw} html
