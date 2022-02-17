@@ -18,7 +18,7 @@ After the install completes a `Blade installed successfully` message appears. Op
 
 ### Installing from the Graphical Installer
 
-If you're more comfortable with an installer, download the latest [Liferay Project SDK Installer](https://sourceforge.net/projects/lportal/files/Liferay%20IDE/) and run it.
+If you're more comfortable with an installer, download the latest [Liferay Project SDK Installer](https://github.com/liferay/liferay-ide/releases/) and run it.
 
 1. Select your Java runtime. This should be auto-detected.
 
