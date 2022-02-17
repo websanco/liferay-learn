@@ -2,7 +2,7 @@
 
 Liferayの構成フレームワークを使用して、MVCポートレットの設定UIを追加できます。
 
-<a name="サンプルポートレットを参照する" />
+<a name="see-the-example-portlet" />
 
 ## サンプルポートレットを参照する
 
@@ -54,7 +54,7 @@ Liferayの構成フレームワークを使用して、MVCポートレットの�
 
 構成フレームワークの仕組みは次のとおりです。
 
-<a name="構成インターフェイスを作成する" />
+<a name="creating-the-configuration-interface" />
 
 ## 構成インターフェイスを作成する
 
@@ -81,7 +81,7 @@ IDには、構成インターフェイスの完全修飾クラス名（FQCN）�
 
 次に、MVCポートレットによって構成がどのように読み取られるかを確認します。
 
-<a name="アプリケーションから構成を読み取る" />
+<a name="reading-the-configuration-from-the-application" />
 
 ## アプリケーションから構成を読み取る
 
@@ -101,7 +101,7 @@ IDには、構成インターフェイスの完全修飾クラス名（FQCN）�
 
     構成オブジェクトがリクエストオブジェクトに追加され、アプリケーションのJSPのリクエストから読み取ることができるようになりました。
 
-<a name="構成bean宣言を作成する" />
+<a name="create-a-configuration-bean-declaration" />
 
 ## 構成Bean宣言を作成する
 
@@ -114,7 +114,7 @@ IDには、構成インターフェイスの完全修飾クラス名（FQCN）�
 
 このクラスには、アプリケーションの構成インターフェイスのクラスを返すメソッドが1つあります。
 
-<a name="jspから構成にアクセスする" />
+<a name="accessing-the-configuration-from-a-jsp" />
 
 ## JSPから構成にアクセスする
 
@@ -134,7 +134,7 @@ IDには、構成インターフェイスの完全修飾クラス名（FQCN）�
 
 1. 属性`fontColor()`、`fontFamily()`、`fontSize()`をJSPで使用できるようになりました。
 
-<a name="ドロップダウン選択uiを実装する" />
+<a name="implementing-a-dropdown-selection-ui" />
 
 ## ドロップダウン選択UIを実装する
 
@@ -155,7 +155,7 @@ required = false)
 
 これで、フォントファミリー属性はドロップダウン選択になります。
 
-<a name="さらなるカスタマイゼーション" />
+<a name="further-customization" />
 
 ## さらなるカスタマイゼーション
 

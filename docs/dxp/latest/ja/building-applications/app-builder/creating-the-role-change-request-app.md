@@ -70,7 +70,7 @@
 
    - アクションの名前は「**送信**」のままにします。
 
-<a name="アプリのデプロイ" />
+<a name="deploying-the-app" />
 
 ## アプリのデプロイ
 
@@ -78,7 +78,7 @@
 
 ロール変更リクエストアプリは、専用リンクを備えたスタンドアロンアプリとしてデプロイできます。 このタイプのアプリを使用するには、事前に [Wiki](../../../collaboration-and-social/collaboration-and-social-overview.md#wiki) または会社の従業員ハンドブック[ドキュメント](../../../content-authoring-and-management/documents-and-media/documents-and-media-overview.md)でいくつかの手順について確認しておく必要があります。 そこにリンクを保持することで、従業員はロール変更リクエストを開始する前に適切なドキュメントを読むことができます。
 
-<a name="アプリの使用" />
+<a name="using-the-app" />
 
 ## アプリの使用
 
@@ -98,7 +98,7 @@
 [マイワークフロータスク](../../../process-automation/workflow/user-guide/reviewing-assets.md#assigning-the-review-task) アプリを使用してワークフロー対応アプリのステップを管理することはできません。
 ```
 
-<a name="ロール変更リクエストアプリをさらに進化させる" />
+<a name="going-further-with-the-role-change-request-app" />
 
 ## ロール変更リクエストアプリをさらに進化させる
 
@@ -108,7 +108,7 @@
 
 2. 標準アプリを作成して、適切な権限を持つユーザーがロール変更リクエストオブジェクトからマスターリストテーブルを表示できるようにします。 管理者は、最初のフォームである **従業員リクエスト** にアクセスできるので、従業員用のフォームを開始することもできます。
 
-<a name="関連情報" />
+<a name="related-information" />
 
 ## 関連情報
 

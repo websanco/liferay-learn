@@ -2,7 +2,7 @@
 
 Liferay Workspaceは手動または[Blade CLI](../blade-cli/installing-and-updating-blade-cli.md)を使用して作成できます。
 
-<a name="liferay-workspaceを手動で作成する" />
+<a name="creating-a-liferay-workspace-manually" />
 
 ## Liferay Workspaceを手動で作成する
 
@@ -44,7 +44,7 @@ Liferay Workspaceを手動で作成するには、 [Gradle](https://gradle.org) 
 
     これは、Liferay Portalの最新のGAを定義します。 `blade init -l`と入力すると、Blade CLIを使用して常に現在のリストを取得できます。
 
-<a name="blade-cliを使用してliferay-workspaceを作成する" />
+<a name="creating-a-liferay-workspace-with-blade-cli" />
 
 ## Blade CLIを使用してLiferay Workspaceを作成する
 
@@ -76,7 +76,7 @@ blade init -v portal-7.0-ga7 [workspace name]
 
 ワークスペースのバージョンは、`liferay.version.default`プロパティを使用して、ワークスペースのルートフォルダにある非表示の`.blade.properties`ファイルに保存されます。 テンプレートに基づいてプロジェクトを作成する場合、ここに保存されているバージョンによって、使用されるテンプレートのバージョンが決まります。
 
-<a name="プロキシの構成" />
+<a name="configuring-a-proxy" />
 
 ## プロキシの構成
 

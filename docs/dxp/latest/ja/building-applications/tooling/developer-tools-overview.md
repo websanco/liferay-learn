@@ -2,7 +2,7 @@
 
 Liferayの開発者ツールは、標準的なビルドスクリプトから、軽量のCLIユーティリティやEclipseベースの本格的なIDEまで、あらゆる範囲で動作します。 これは、開発を始めたばかりの場合でも、長年コードを作成してきた場合でも、すべての開発者に役立つものです。 Liferayの開発ツールはすべて、Linux、Mac、およびWindowsプラットフォームで動作します。
 
-<a name="軽量ツール" />
+<a name="lightweight-tools" />
 
 ## 軽量ツール
 
@@ -12,7 +12,7 @@ Liferayの開発者ツールは、標準的なビルドスクリプトから、�
 
 [**Blade CLI**](./blade-cli/installing-and-updating-blade-cli.md) を使用すると、コマンドラインインターフェイスからプロジェクトとLiferayワークスペースを簡単に作成およびビルドできます。 経験豊富な開発者は、この小さくてシンプルなCLIツールを使用して、Liferayプロジェクトを既存のワークフローに統合できます。
 
-<a name="フロントエンド開発者向けのツール" />
+<a name="tools-for-front-end-developers" />
 
 ## フロントエンド開発者向けのツール
 
@@ -22,7 +22,7 @@ Liferayの開発者ツールは、標準的なビルドスクリプトから、�
 
 **Liferay JS Generator** は、Liferay DXPに展開可能なJavaScriptベースのウィジェットのプロジェクトを作成します。
 
-<a name="ideとプラグイン" />
+<a name="ides-and-plugins" />
 
 ## IDEとプラグイン
 

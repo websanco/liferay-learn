@@ -2,7 +2,7 @@
 
 自動生成された [configuration interface](./setting-and-accessing-configurations.html#creating-the-configuration-interface) UIは、構成によっては単純すぎる場合があります。  動的データマッピング（DDM）フォームのアノテーションを使用して、レイアウトのUIをカスタマイズできます。
 
-<a name="サンプルの構成uiを参照する" />
+<a name="see-a-sample-configuration-ui" />
 
 ## サンプルの構成UIを参照する
 
@@ -44,7 +44,7 @@
 
 DDMフォームのアノテーションの仕組みを以下に示します。
 
-<a name="構成フォームを作成する" />
+<a name="write-the-configuration-form" />
 
 ## 構成フォームを作成する
 
@@ -67,7 +67,7 @@ DDMフォームのアノテーションの仕組みを以下に示します。
 
 `DDMFormLayoutRow`アノテーションと`DDMFormLayoutColumn`を使用して、UIに必要な行と列にフォーム項目を配置します。
 
-<a name="フォーム宣言を書く" />
+<a name="write-the-form-declaration" />
 
 ## フォーム宣言を書く
 

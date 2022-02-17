@@ -2,7 +2,7 @@
 
 ダイレクト同期メッセージングは、すべてのリスナーがメッセージを受信するまで処理をブロックする最も簡単な方法です。 `SynchronousMessageSender`の`send(String, Message)`メソッドを呼び出し、宛先名とメッセージインスタンスを渡します。 `SynchronousMessageSender`は、現在のスレッドを使用して、宛先に登録されている各メッセージリスナーで直接メッセージ受信を処理します。 リスナーの処理が完了すると、`send(String, Message)`メソッドを呼び出したクラスで実行が続行されます。 この例は、ダイレクト同期メッセージングの使用をデモしています。
 
-<a name="ダイレクト同期メッセージを送信する" />
+<a name="send-a-direct-synchronous-message" />
 
 ## ダイレクト同期メッセージを送信する
 
@@ -67,7 +67,7 @@
 
 スレッドは、メッセージを送信するときにメッセージ送信者（つまり、`X6N5BakerOSGiCommands`）でブロックされます。  `X6N5CharlieMessageListener`および`X6N5DogMessageListener`でメッセージを処理した後、スレッドはメッセージ送信者で続行されます。
 
-<a name="プロジェクト概要" />
+<a name="project-overview" />
 
 ## プロジェクト概要
 
@@ -90,7 +90,7 @@
 
 これで、宛先コンフィギュレーターから順に、各クラスを調べることができます
 
-<a name="宛先コンフィグレーターを調べる" />
+<a name="examine-the-destination-configurator" />
 
 ## 宛先コンフィグレーターを調べる
 
@@ -107,7 +107,7 @@
 
 `X6N5AbleMessagingConfigurator`が無効化されると、その`_deactivate()`メソッドは宛先サービスの登録を解除します。
 
-<a name="送信者を調べる" />
+<a name="examine-the-sender" />
 
 ## 送信者を調べる
 
@@ -128,7 +128,7 @@
 
 `sendMessage(String)`メソッドは、Gogoシェルコマンドの`String`をペイロードとして使用して [`Message`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/Message.java) を作成します。 `SynchronousMessageSender` `send(String, Message)`メソッドは、現在のスレッドを使用して、`acme/x6n5_able` [`Destination`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/Destination.java) メッセージリスナーにメッセージを配信します。 スレッドがすべての [`MessageListener`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/MessageListener.java) でメッセージを処理するまで、実行は`X6N5BakerOSGiCommands`でブロックされます。 その後、`X6N5BakerOSGiCommands` `sendMessage(String)`メソッドで実行が続行され、メッセージ応答がログに記録されます。
 
-<a name="リスナーを調べる" />
+<a name="examine-the-listeners" />
 
 ## リスナーを調べる
 
@@ -152,7 +152,7 @@
 
 　 ダイレクト同期メッセージングの使用方法が分かりました。
 
-<a name="次のステップ" />
+<a name="whats-next" />
 
 ## 次のステップ
 
@@ -160,7 +160,7 @@
 
 メッセージを送信した直後に処理を続行する場合は、 [非同期メッセージングの使用](./using-asynchronous-messaging.md) を参照してください。
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 

@@ -2,7 +2,7 @@
 
 MVCレンダーコマンドは、レンダリングするページを処理するクラスです。 これらは、`MVCPortlet`レンダーURLとリクエストによって呼び出されます。 レンダーロジックが単純な場合は、[すべてをポートレットクラスに実装](./rendering-views-with-mvc-portlet.md)できます。 レンダーロジックが複雑な場合、またはレンダーパスを明確に分離したい場合は、MVCレンダーコマンドを使用してください。
 
-<a name="mvcレンダーコマンドを呼び出す" />
+<a name="invoke-an-mvc-render-command" />
 
 ## MVCレンダーコマンドを呼び出す
 
@@ -73,7 +73,7 @@ MVCレンダーコマンドは、レンダリングするページを処理す�
 MVCレンダーコマンドの動作を見てきました。 次に、それらがどのように機能するかを確認します。
 
 
-<a name="ポートレットを調べる" />
+<a name="examine-the-portlet" />
 
 ## ポートレットを調べる
 
@@ -100,7 +100,7 @@ MVCレンダーコマンドの動作を見てきました。 次に、それら�
 
 次に、ポートレットのMVCレンダーコマンドクラスを調べます。
 
-<a name="mvcrendercommandクラスを調べる" />
+<a name="examine-the-mvcrendercommand-classes" />
 
 ## MVCRenderCommandクラスを調べる
 
@@ -135,7 +135,7 @@ MVCレンダーコマンドのクラスは、 [`MVCRenderCommand`](https://githu
 
 サンプルURLは、MVCレンダーコマンドをトリガーします。
 
-<a name="ポートレットレンダーurlを調べる" />
+<a name="examine-the-portlet-render-urls" />
 
 ## ポートレットレンダーURLを調べる
 
@@ -159,13 +159,13 @@ MVCレンダーコマンドのクラスは、 [`MVCRenderCommand`](https://githu
 | ------------------------------------------------------------------------ | -------------------------------------- |
 | `<portlet:param name="mvcRenderCommandName" value="/a4p1/able" />` | `mvc.command.name=/a4p1/able`          |
 
-<a name="次のステップ" />
+<a name="whats-next" />
 
 ## 次のステップ
 
 これで、MVCレンダーコマンドクラスにレンダーロジックを実装する方法がわかりました。 次に、 [MVCリソースコマンド](./mvc-resource-command.md) クラスを使用してファイルなどのリソースを操作できます。
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 

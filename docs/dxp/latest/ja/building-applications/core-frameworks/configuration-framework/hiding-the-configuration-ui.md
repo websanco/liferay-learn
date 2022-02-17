@@ -5,7 +5,7 @@ Liferayは、 [構成インターフェイスがデプロイ](./setting-and-acce
 * `generateUI`アノテーションプロパティを使用する
 * 構成の可視性インターフェイスを使用する
 
-<a name="generateuiを使用する" />
+<a name="using-generateui" />
 
 ## `generateUI`を使用する
 
@@ -15,7 +15,7 @@ Liferayは、 [構成インターフェイスがデプロイ](./setting-and-acce
 @ExtendedObjectClassDefinition(generateUI=false)
 ```
 
-<a name="構成の可視性インターフェイスを使用する" />
+<a name="using-the-configuration-visibility-interface" />
 
 ## 構成の可視性インターフェイスを使用する
 

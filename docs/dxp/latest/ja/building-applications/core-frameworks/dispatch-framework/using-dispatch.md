@@ -12,7 +12,7 @@
    ディスパッチUIは、各ディスパッチタスクの実行プロパティ（Cron式、開始/終了日、クラスターモードなど）と実行履歴のより詳細な概要も提供します。 この情報は、 `` MessageListener``ジョブのUIでは提供されません。
 ```
 
-<a name="新しいディスパッチタスクの追加" />
+<a name="adding-a-new-dispatch-task" />
 
 ## 新しいディスパッチタスクの追加
 
@@ -50,7 +50,7 @@
 
 ![［Dispatch］ページからすべてのインスタンスのディスパッチタスクを表示、管理、および構成します。](./using-dispatch/images/04.png)
 
-<a name="ディスパッチタスクのスケジュール" />
+<a name="scheduling-the-dispatch-task" />
 
 ## ディスパッチタスクのスケジュール
 
@@ -78,7 +78,7 @@
 
 ディスパッチタスクは、指定した日時にCron間隔に従って自動的に開始および停止するようになりました。
 
-<a name="talendディスパッチタスクの設定" />
+<a name="setting-up-a-talend-dispatch-task" />
 
 ## Talendディスパッチタスクの設定
 
@@ -98,7 +98,7 @@ Talendは、カスタムデータ統合ジョブを定義するためのオー�
 
 1. ［**保存**］ をクリックします。
 
-<a name="スケジュールされたジョブの表示と管理" />
+<a name="viewing-and-managing-scheduled-jobs" />
 
 ## スケジュールされたジョブの表示と管理
 
@@ -106,7 +106,7 @@ Talendは、カスタムデータ統合ジョブを定義するためのオー�
 
 ![MessageListenerインターフェイスを使用してスケジュールされたすべてのジョブを表示します。](./using-dispatch/images/07.png)
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 

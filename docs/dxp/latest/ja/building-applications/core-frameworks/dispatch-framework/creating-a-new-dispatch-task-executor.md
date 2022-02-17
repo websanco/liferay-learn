@@ -42,7 +42,7 @@
 
 次のサンプルモジュールは、カスタムのディスパッチタスクエグゼキュータを作成してLiferayインスタンスにデプロイする方法を示しています。
 
-<a name="サンプルのディスパッチタスクエグゼキュータのデプロイ" />
+<a name="deploying-the-sample-dispatch-task-executor" />
 
 ## サンプルのディスパッチタスクエグゼキュータのデプロイ
 
@@ -97,7 +97,7 @@
 
    ![ディスパッチタスクのログを表示および管理します。](./creating-a-new-dispatch-task-executor/images/03.png)
 
-<a name="サンプルのディスパッチタスクエグゼキュータのコード" />
+<a name="code-for-the-sample-dispatch-task-executor" />
 
 ## サンプルのディスパッチタスクエグゼキュータのコード
 
@@ -110,7 +110,7 @@
 
 `@Component`アノテーションに続いて、モジュールは`BaseDispatchTaskExecutor`抽象クラスを拡張し、`doExecute`メソッドをオーバーライドします。 このメソッドは、`LogFactoryUtil`を使用して、コンソールのログに通知メッセージを表示します。
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 

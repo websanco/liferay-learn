@@ -8,7 +8,7 @@ Webアプリケーションの開発を開始する簡単な方法は、JSPフ�
 
 アプリケーションには、マークアップコンテンツを含むJSPと、JSPをレンダリングする`MVCPortlet`クラスがあります。 サンプルをデプロイして、MVCポートレットを含むJSPを使用してアプリケーションを作成する方法を学習します。
 
-<a name="シンプルなmvcポートレットモジュールをデプロイする" />
+<a name="deploy-a-simple-mvc-portlet-module" />
 
 ## シンプルなMVCポートレットモジュールをデプロイする
 
@@ -66,7 +66,7 @@ Webアプリケーションの開発を開始する簡単な方法は、JSPフ�
 
 次に、このポートレットアプリケーションを作成する方法を学習します。
 
-<a name="mvcポートレットを使用してアプリケーションを作成する方法" />
+<a name="how-to-create-an-application-using-mvc-portlet" />
 
 ## MVCポートレットを使用してアプリケーションを作成する方法
 
@@ -119,13 +119,13 @@ Webアプリケーションの開発を開始する簡単な方法は、JSPフ�
 [Portlet Descriptor to OSGi Service Property Map](../../reference/portlet-descriptor-to-osgi-service-property-map.md)では、OSGiコンポーネントのプロパティ値を従来のポートレット記述子にマップする方法を指定します。
 ```
 
-<a name="次のステップ" />
+<a name="whats-next" />
 
 ## 次のステップ
 
 　 JSPと1つの単純なJavaクラスを使用してWebアプリケーションを作成しました。 ここから先は、いろいろな選択があります。 ビューをさらに追加するには、 [MVCポートレットを使用したビューのレンダリング](./rendering-views-with-mvc-portlet.md) を参照してください。 アプリケーションにアクションを追加するには、 [MVCアクションコマンド](./mvc-action-command.md) を参照してください。 バックエンドのデータモデルを実装するには、 [サービスビルダー](../../data-frameworks/service-builder.md) を参照してください。
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 

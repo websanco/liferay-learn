@@ -4,7 +4,7 @@
 
 ポートレットのルック&フィールは、アプリケーションの構成とは別に保存されるプロパティであることに注意してください。 詳細については、 [ポートレットレベルの設定](../../core-frameworks/configuration-framework/portlet-level-configuration.md) を参照してください。
 
-<a name="サンプル実装を参照する" />
+<a name="see-a-sample-implementation" />
 
 ## サンプル実装を参照する
 
@@ -54,7 +54,7 @@
 
 次に設定の仕組みを確認します。
 
-<a name="設定jspを作成する" />
+<a name="create-the-configuration-jsp" />
 
 ## 設定JSPを作成する
 
@@ -71,7 +71,7 @@ JSPファイルは、`<liferay-portlet:actionURL />`および`<liferay-portlet:r
 
 リクエストの目的を示す`cmd`という名前のURLパラメーターが提供されます。 `cmd`パラメーターの値は`update`です。
 
-<a name="設定アクションを作成する" />
+<a name="create-the-configuration-action" />
 
 ## 設定アクションを作成する
 
@@ -86,7 +86,7 @@ JSPファイルは、`<liferay-portlet:actionURL />`および`<liferay-portlet:r
 
 構成フォームからポートレットのルック&フィールを読み取り、それらをデータベースに保管する`processAction()`メソッドを追加します。  サンプルのポートレットでは、メソッドは`color` URLパラメーターを読み取り、その値をポートレット設定として設定します。
 
-<a name="プリファレンスロジックを追加する" />
+<a name="add-the-preference-logic" />
 
 ## プリファレンスロジックを追加する
 
@@ -101,7 +101,7 @@ JSPファイルは、選択されたポートレット設定をチェックし�
 
 `<portlet:defineObjects />`タグを使用すると、`portletPreferences`が使用可能になります。これを使用して、JSPで`color`の設定を取得します。
 
-<a name="ポートレットのパスパラメータを追加する" />
+<a name="add-the-portlets-path-parameters" />
 
 ## ポートレットのパスパラメータを追加する
 
@@ -112,7 +112,7 @@ JSPファイルは、選択されたポートレット設定をチェックし�
 :lines: 9-18
 ```
 
-<a name="関連情報" />
+<a name="related-information" />
 
 ## 関連情報
 

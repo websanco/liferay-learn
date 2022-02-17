@@ -8,7 +8,7 @@
 
 サンプルプロジェクトを使用して、デフォルトの同期メッセージを送信します。 次に、例を変更してメッセージをタイムアウトにします。
 
-<a name="デフォルトの同期メッセージを送信する" />
+<a name="send-a-default-synchronous-message" />
 
 ## デフォルトの同期メッセージを送信する
 
@@ -72,7 +72,7 @@
 
 `acme/m4q7_able`宛先で、`M4Q7CharlieMessageListener`がGogoシェルメッセージを受信しました。 `acme/m4q7_baker`宛先で、`M4Q7BakerMessageListener`が`M4Q7CharlieMessageListener`から応答メッセージを受信しました。 最後に、`M4Q7BakerOSGiCommands`の`sendMessage`メソッドが、メッセージ送信者から返された応答オブジェクトをログに記録しました。
 
-<a name="プロジェクト概要" />
+<a name="project-overview" />
 
 ## プロジェクト概要
 
@@ -99,7 +99,7 @@
 
 次に、宛先コンフィギュレーターから順に、各クラスを調べます。
 
-<a name="宛先コンフィグレーターを調べる" />
+<a name="examine-the-destination-configurators" />
 
 ## 宛先コンフィグレーターを調べる
 
@@ -131,7 +131,7 @@
 
 コンフィギュレーターが無効になると、それらの`_deactivate()`メソッドは宛先サービスの登録を解除します。
 
-<a name="リスナーを調べる" />
+<a name="examine-the-listeners" />
 
 ## リスナーを調べる
 
@@ -161,7 +161,7 @@
 
 `M4Q7BakerMessageListener`がメッセージを受信すると、その`receive(Message)`メソッドはメッセージペイロードをログに記録します。
 
-<a name="送信者を調べる" />
+<a name="examine-the-sender" />
 
 ## 送信者を調べる
 
@@ -190,7 +190,7 @@
 
 メッセージリスナーが応答メッセージを返すのを確認したので、応答のタイムアウトをテストできます。
 
-<a name="応答タイムアウトのデモを実行する" />
+<a name="demonstrate-the-response-timeout" />
 
 ## 応答タイムアウトのデモを実行する
 
@@ -244,7 +244,7 @@
 
 タイムアウトと同期してメッセージを送信しました。
 
-<a name="次のステップ" />
+<a name="whats-next" />
 
 ## 次のステップ
 
@@ -252,7 +252,7 @@
 
 メッセージを送信した直後に処理を続行する場合は、 [非同期メッセージングの使用](./using-asynchronous-messaging.md) を参照してください。
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 

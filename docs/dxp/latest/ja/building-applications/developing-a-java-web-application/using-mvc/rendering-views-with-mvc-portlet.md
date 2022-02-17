@@ -8,7 +8,7 @@
 
 ![これがビュー1です。](./rendering-views-with-mvc-portlet/images/01.png)
 
-<a name="複数のビューを持つmvcポートレットをデプロイする" />
+<a name="deploy-an-mvc-portlet-with-multiple-views" />
 
 ## 複数のビューを持つMVCポートレットをデプロイする
 
@@ -92,7 +92,7 @@
 
 ポートレットビュー間を往復しました。 次に、ポートレットがデフォルトのビューを設定し、レンダーURLとMVCパスリクエストパラメータを使用してビューへのパスを設定する方法を学習します。
 
-<a name="デフォルトビューの設定" />
+<a name="setting-the-default-view" />
 
 ## デフォルトビューの設定
 
@@ -107,7 +107,7 @@
 
 次に、ビュー1がビュー2にリンクする方法を学習します。
 
-<a name="ポートレットレンダーurlを使用したビューへのリンク" />
+<a name="linking-to-a-view-using-a-portlet-render-url" />
 
 ## ポートレットレンダーURLを使用したビューへのリンク
 
@@ -123,7 +123,7 @@
 
 ユーザーが ［**Go to View 2**］ ハイパーリンクをクリックすると、`mvcPath`パラメーターを含むポートレットリクエストがポートレットクラスに送信されます。
 
-<a name="mvcpathポートレットパラメーターの処理" />
+<a name="handling-the-mvcpath-portlet-parameter" />
 
 ## mvcPathポートレットパラメーターの処理
 
@@ -149,13 +149,13 @@
 
 ビュー1に戻るラウンドトリップを実装します。
 
-<a name="次のステップ" />
+<a name="whats-next" />
 
 ## 次のステップ
 
 これで、ポートレットビューをレンダリングする方法がわかりました。 次に、個別の`RenderCommand`クラスを使用して、ポートレットでアクションを実行したり、ビューをレンダリングしたりできます。
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 

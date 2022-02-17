@@ -36,7 +36,7 @@ message-bus/tuning-messaging-performance.md
 
 メッセージ送信者は、メッセージバスを使用してメッセージを宛先に送信することにのみ関係していて、メッセージの受信者には関係ありません。 メッセージリスナーは、宛先でのメッセージの受信にのみ関係していて、メッセージの送信者には関係ありません。
 
-<a name="同期および非同期メッセージング" />
+<a name="synchronous-and-asynchronous-messaging" />
 
 ## 同期および非同期メッセージング
 
@@ -54,13 +54,13 @@ message-bus/tuning-messaging-performance.md
 
 * [Using Direct Synchronous Messaging](./message-bus/using-default-synchronous-messaging.md)は、 **すべての** リスナーがメッセージを受信するまでメッセージ送信者がメッセージの送信をブロックする方法を示しています。
 
-<a name="パフォーマンスの調整" />
+<a name="tuning-performance" />
 
 ## パフォーマンスの調整
 
 メッセージバスAPIを使用すると、登録イベント、宛先、宛先メッセージリスナー、およびメッセージキューの監視が容易になります。 宛先タイプ、メッセージキューパラメータ、およびスレッドパラメータを調整することにより、ニーズに合わせてメッセージバスコンポーネントを設定できます。 詳細については、 [メッセージングパフォーマンスのチューニング](./message-bus/tuning-messaging-performance.md) を参照してください。
 
-<a name="次のステップ" />
+<a name="whats-next" />
 
 ## 次のステップ
 

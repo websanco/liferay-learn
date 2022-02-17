@@ -15,7 +15,7 @@
 
 標準のポートレット記述子マッピングが最初です。
 
-<a name="ポートレット記述子のマッピング" />
+<a name="portlet-descriptor-mappings" />
 
 ## ポートレット記述子のマッピング
 
@@ -65,7 +65,7 @@
 | `/portlet-app/portlet/supports/portlet-mode`                                                                  | `javax.portlet.portlet-mode=<mime-type>;<portlet-mode>［,<portlet-mode>］*`                                                                         |
 | `/portlet-app/portlet/supports/window-state`                                                                  | `javax.portlet.window-state=<mime-type>;<window-state>［,<window-state>］*`                                                                         |
 
-<a name="liferay記述子のマッピング" />
+<a name="liferay-descriptor-mappings" />
 
 ## Liferay記述子のマッピング
 

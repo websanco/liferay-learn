@@ -7,13 +7,13 @@ Liferay Workspaceは、開発ライフサイクル全体を処理するLiferay�
 - [プロジェクトのデプロイ](#deploying-projects)
 - [プロジェクトのテスト](#testing-projects)
 
-<a name="プロジェクトの作成" />
+<a name="creating-projects" />
 
 ## プロジェクトの作成
 
 Liferay Workspaceは、Gradleスクリプトとプラグインを使用して実装されます。 そのため、IDEまたは開発ツールに統合できます。 また、LiferayのCLIユーティリティと連携して動作します。 標準ツールまたは[Blade CLI](../blade-cli/generating-projects-with-blade-cli.md)を使用してプロジェクトを作成できます。
 
-<a name="プロジェクトの構築" />
+<a name="building-projects" />
 
 ## プロジェクトの構築
 
@@ -21,13 +21,13 @@ Liferay Workspaceには、LiferayのGradleプラグインがシームレスに�
 
 ワークスペースはLiferayアプリケーションをビルドするように事前構成されているため、ビルド構成を作成するためにリポジトリーと依存関係を探す時間を節約できます。
 
-<a name="プロジェクトのデプロイ" />
+<a name="deploying-projects" />
 
 ## プロジェクトのデプロイ
 
 GradleまたはBlade CLIを使用してLiferay Workspaceからプロジェクトを簡単にデプロイできます。つまり、これらのCLIツールをサポートするIDEからも簡単にデプロイできます。 また、ワークスペースには、コードをデバッグするためのLiferayランタイムを自動ダウンロードするメカニズムもあるため、デプロイとテストは簡単です。
 
-<a name="プロジェクトのテスト" />
+<a name="testing-projects" />
 
 ## プロジェクトのテスト
 

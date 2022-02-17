@@ -8,7 +8,7 @@ Liferay Workspaceは使い方が簡単で、[最初から](./what-is-liferay-wor
 - 開発、UAT、および本番環境の使用
 - ターゲットプラットフォームの管理
 
-<a name="liferay-workspaceとバンドルされたプラグインの更新" />
+<a name="updating-liferay-workspace-and-bundled-plugins" />
 
 ## Liferay Workspaceとバンドルされたプラグインの更新
 
@@ -32,7 +32,7 @@ Liferay Workspaceは、開発者の生産性を高めるために常に更新さ
 
 　 これで、ワークスペースがアップグレードされました。
 
-<a name="liferayバージョンの更新" />
+<a name="updating-your-liferay-version" />
 
 ## Liferayバージョンの更新
 
@@ -44,7 +44,7 @@ liferay.workspace.product=[$LIFERAY_LEARN_PORTAL_WORKSPACE$]
 
 プロパティの値を、コードを開発しているLiferayのバージョンに更新します。 その後、ワークスペースの依存関係が自動的に新しいバージョンに更新されます。
 
-<a name="jdk11の使用" />
+<a name="using-jdk-11" />
 
 ## JDK11の使用
 
@@ -100,7 +100,7 @@ JAX-WSプロジェクトがある場合は、JDK 11から削除された`javax.x
 compile 'com.sun.xml.ws:jaxws-ri:2.3.2'
 ```
 
-<a name="デプロイメント環境の構築" />
+<a name="creating-deployment-environments" />
 
 ## デプロイメント環境の構築
 
@@ -227,7 +227,7 @@ Liferay Workspaceを使用すると、コンテナーベースであろうと従
 
 上記の手順に従って、各環境をテストおよび構築します。
 
-<a name="ターゲットプラットフォームの管理" />
+<a name="managing-the-target-platform" />
 
 ## ターゲットプラットフォームの管理
 

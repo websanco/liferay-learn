@@ -18,7 +18,7 @@ module.framework.web.generator.excluded.paths=\
     WABが [liferay-plugin-package.properties](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/liferay-plugin-package_7_3_0.properties.html) ファイル内の``portal-dependency-jars``プロパティにJARを一覧表示していても、LiferayはこれらのJARをWABから除外します。
 ```
 
-<a name="異なるバージョンのサードパーティーパッケージを含める" />
+<a name="including-a-different-version-of-a-third-party-package" />
 
 ## 異なるバージョンのサードパーティーパッケージを含める
 
@@ -68,7 +68,7 @@ WARで[エクスポートされたサードパーティーパッケージ](../..
 
 これで、WABに必要なJARのバージョンが含まれました。
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 

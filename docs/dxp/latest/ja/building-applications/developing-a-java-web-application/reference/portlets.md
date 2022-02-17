@@ -6,7 +6,7 @@ Liferay DXPは、 **ポートレット** と呼ばれるJavaベースのWebア�
 
 ![複数のポートレットを1つのページに配置できます。](./portlets/images/01.png)
 
-<a name="ポートレットのフェーズ" />
+<a name="portlet-phases" />
 
 ## ポートレットのフェーズ
 
@@ -22,7 +22,7 @@ Liferay DXPは、 **ポートレット** と呼ばれるJavaベースのWebア�
 
 **ヘッダ:** レンダリングフェーズの前に、CSSなどのリソースの依存関係を指定できます。
 
-<a name="ポートレットモード" />
+<a name="portlet-modes" />
 
 ## ポートレットモード
 
@@ -42,7 +42,7 @@ Liferay DXPは、 **ポートレット** と呼ばれるJavaベースのWebア�
 
 **最小化:** ポートレットのタイトルバーのみが表示されます。
 
-<a name="サーブレットとのその他の違い" />
+<a name="more-differences-from-servlets" />
 
 ## サーブレットとのその他の違い
 

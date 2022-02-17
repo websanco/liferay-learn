@@ -6,7 +6,7 @@
 
 ユーザーロールへの権限の割り当ての詳細については、[Defining Role Permissions](../../../users-and-permissions/roles-and-permissions/defining-role-permissions.md)を参照してください。
 
-<a name="アプリケーションの権限" />
+<a name="application-permissions" />
 
 ## アプリケーションの権限
 
@@ -22,7 +22,7 @@
 | Preferences     | オブジェクトポートレットの設定を表示および変更する機能      |
 | View            | オブジェクトポートレットを表示する機能              |
 
-<a name="リソース権限" />
+<a name="resource-permissions" />
 
 ## リソース権限
 
@@ -48,7 +48,7 @@
 | Update      | オブジェクトを更新する機能         |
 | View        | オブジェクトを表示する機能         |
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 

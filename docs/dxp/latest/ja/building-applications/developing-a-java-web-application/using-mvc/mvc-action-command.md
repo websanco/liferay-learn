@@ -4,7 +4,7 @@ MVCアクションコマンドは、アクションを個別のクラスとし�
 
 MVCアクションコマンドを使用するサンプルポートレットをデプロイしてから、それを調べます。
 
-<a name="ポートレットのmvcアクションコマンドを呼び出す" />
+<a name="invoke-a-portlets-mvc-action-commands" />
 
 ## ポートレットのMVCアクションコマンドを呼び出す
 
@@ -74,7 +74,7 @@ MVCアクションコマンドを使用するサンプルポートレットを�
 
 MVCアクションコマンドの動作を見てきました。 次に、それらがどのように機能するかを確認します。
 
-<a name="ポートレットを調べる" />
+<a name="examine-the-portlet" />
 
 ## ポートレットを調べる
 
@@ -101,7 +101,7 @@ MVCアクションコマンドの動作を見てきました。 次に、それ�
 
 サンプルポートレットは、デフォルトで`view.jsp`をレンダリングします。 次に、JSPがMVCアクションコマンドクラスを呼び出す方法を確認します。
 
-<a name="ポートレットアクションのurlを調べる" />
+<a name="examine-the-portlet-action-urls" />
 
 ## ポートレットアクションのURLを調べる
 
@@ -123,7 +123,7 @@ MVCアクションコマンドの動作を見てきました。 次に、それ�
 
 たとえば、 **Do L6Y9 Able** リンクをクリックすると、`DoL6Y9AbleMVCActionCommand`の`doProcessAction`メソッドが呼び出されます。
 
-<a name="mvcactioncommandクラスを調べる" />
+<a name="examine-the-mvcactioncommand-classes" />
 
 ## MVCActionCommandクラスを調べる
 
@@ -153,13 +153,13 @@ MVCアクションコマンドクラスは、 [`MVCActionCommand`](https://githu
 
 次に、ポートレットのJSPがUIコンポーネントのアクションをコマンドにマップする方法を確認します。
 
-<a name="次のステップ" />
+<a name="whats-next" />
 
 ## 次のステップ
 
 MVCアクションコマンドの使用方法がわかったので、[MVC Render Commands](./mvc-render-command.md)と[MVC Resource Commands](./mvc-resource-command.md)を確認することをお勧めします。 アプリのコンテンツのローカライズを開始する場合は、[Using Localized Messages](./using-localized-messages-in-an-mvc-portlet.md)を参照してください。 モデルレイヤー、永続レイヤー、およびサービスレイヤーの開発を開始する準備ができている場合は、 [サービスビルダー](../../data-frameworks/service-builder.md) をご覧ください。
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 

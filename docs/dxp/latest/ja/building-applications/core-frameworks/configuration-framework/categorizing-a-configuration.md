@@ -2,7 +2,7 @@
 
 構成インターフェースを登録すると、アプリケーションのUIが ［**システム設定**］ &rarr; ［**プラットフォーム**］ &rarr; ［**サードパーティー**］ で生成されます。 アプリケーションの設定UIが表示される場所に別のセクションとカテゴリーが必要な場合は、これを簡単に変更できます。
 
-<a name="既存のカテゴリーの指定" />
+<a name="specifying-an-existing-category" />
 
 ## 既存のカテゴリーの指定
 
@@ -28,7 +28,7 @@ import com.liferay.portal.configuration.metatype.annotations.ExtendedObjectClass
 
 アプリケーションを再デプロイすると、構成UIが ［**Content and Data**］ &rarr; ［**Blogs**］ の下に配置されます。
 
-<a name="新しいセクションとカテゴリーの作成" />
+<a name="creating-new-sections-and-categories" />
 
 ## 新しいセクションとカテゴリーの作成
 

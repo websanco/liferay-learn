@@ -9,7 +9,7 @@
 
 サンプルプロジェクトは、これらの登録イベントをリッスンする方法を示しています。 サンプルを実行することから始めます。 次に、イベントリスナーの実装を調べます。 最後に、登録解除イベントをトリガーします。
 
-<a name="サンプルでイベントをトリガーする" />
+<a name="trigger-the-events-in-an-example" />
 
 ## サンプルでイベントをトリガーする
 
@@ -94,7 +94,7 @@
 1. `s3z9-charlie-impl`の [`DestinationEventListener`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/DestinationEventListener.java) 実装は、宛先に登録するメッセージリスナー、または宛先から登録解除するメッセージリスナーをリッスンします。
 1. `s3z9-dog-impl`の [`MessageListener`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/MessageListener.java) 実装は宛先に登録されます。 `s3z9-charlie-impl`の`DestinationEventListener`実装は、メッセージリスナー登録通知を受信し、イベントをログに記録します。
 
-<a name="messagebuseventlistenerを調べる" />
+<a name="examine-the-messagebuseventlistener" />
 
 ## `MessageBusEventListener`を調べる
 
@@ -112,7 +112,7 @@
 
 `S3Z9AbleMessageBusEventListener`のメソッド実装は、宛先イベントをログに記録します。
 
-<a name="destinationeventlistenerを調べる" />
+<a name="examine-the-destinationeventlistener" />
 
 ## `DestinationEventListener`を調べる
 
@@ -132,7 +132,7 @@
 
 メッセージバスリスナーの登録解除と宛先の削除に応答する`MessageBusEventListener`と`DestinationEventListener`のサンプルを確認してください。
 
-<a name="他のイベントをトリガーする" />
+<a name="trigger-the-other-events" />
 
 ## 他のイベントをトリガーする
 
@@ -177,13 +177,13 @@
 
 　 すべてのメッセージバスイベントリスナーのイベントと宛先イベントリスナーのイベントをトリガーしました。
 
-<a name="次のステップ" />
+<a name="whats-next" />
 
 ## 次のステップ
 
 これらのメッセージバスイベントをリッスンする方法がわかったので、新しい宛先でメッセージをリッスンしたり、新しい登録関連のアクティビティに応じて[メッセージング環境を調整](./tuning-messaging-performance.md)したりできます。
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 

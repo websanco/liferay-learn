@@ -11,7 +11,7 @@ Liferay Dispatchは、Liferayのスケジューラーエンジンの上に構築
 * [`DispatchLog`](#dispatchlog)
 * [`DispatchConfigurator`](#dispatchconfigurator)
 
-<a name="ベースのdispatchtaskexecutor" />
+<a name="base-dispatchtaskexecutor" />
 
 ## ベースの`DispatchTaskExecutor`
 
@@ -47,7 +47,7 @@ Liferay Dispatchは、Liferayのスケジューラーエンジンの上に構築
 
 [`DispatchConfigurator`](https://github.com/liferay/liferay-portal/blob/master/modules/apps/dispatch/dispatch-service/src/main/java/com/liferay/dispatch/internal/messaging/DispatchConfigurator.java) クラスは、`DispatchMessageListener`の宛先、`executorService`キューサイズとスレッドプール、`RejectedExecutionHandler`などのディスパッチフレームワークのプロパティを定義します。
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 

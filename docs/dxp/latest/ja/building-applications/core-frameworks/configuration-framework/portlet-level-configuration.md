@@ -6,7 +6,7 @@
 
 ポートレットのルック&フィールがユーザーによって実装および設定されている場合、アプリケーションの構成はオーバーライドされることに注意してください。 詳細については、 [ポートレットのルック&フィール](../../developing-a-java-web-application/using-mvc/portlet-preferences.md) を参照してください。
 
-<a name="サンプルコードを参照する" />
+<a name="see-the-example-code" />
 
 ## サンプルコードを参照する
 
@@ -62,7 +62,7 @@
 
 アプリケーションの構成がポートレット設定とどのように連携するかを調べてみましょう。
 
-<a name="構成インターフェイスを作成する" />
+<a name="create-the-configuration-interface" />
 
 ## 構成インターフェイスを作成する
 
@@ -79,13 +79,13 @@
 
 詳細については、 [Creating the Configuration Interface](./setting-and-accessing-configurations.html#Creating-the-Configuration-Interface) を参照してください。
 
-<a name="構成bean宣言を追加する" />
+<a name="add-the-configuration-bean-declaration" />
 
 ## 構成Bean宣言を追加する
 
 `ConfigurationProvider`と同様に、`PortletDisplay`は、構成クラスを登録するために構成Bean宣言ファイルを必要とします。 詳細については、 [構成Bean宣言](./setting-and-accessing-configurations.html#Create-a-Configuration-Bean-Declaration) を参照してください。
 
-<a name="portletdisplayで構成を読み取る" />
+<a name="read-the-configuration-with-portletdisplay" />
 
 ## PortletDisplayで構成を読み取る
 
@@ -98,13 +98,13 @@
 
 `X7Y2PortletInstanceConfiguration`メソッドは、`PortletDisplay`を使用してポートレットインスタンス設定を取得します。 `render()`メソッドは、JSPファイルの要求から読み取ることができるように、構成をリクエストオブジェクトに追加します。
 
-<a name="ポートレットのルックフィールを設定する" />
+<a name="set-up-portlet-preferences" />
 
 ## ポートレットのルック&フィールを設定する
 
 ポートレットにポートレットのルック&フィールを設定するには、構成JSPファイルと構成アクションもアプリケーションに追加する必要があります。 これらのファイルがポートレットでどのように機能するかについて詳しくは、 [ポートレットのルック&フィール](../../developing-a-java-web-application/using-mvc/portlet-preferences.md) を参照してください。
 
-<a name="関連情報" />
+<a name="related-information" />
 
 ## 関連情報
 

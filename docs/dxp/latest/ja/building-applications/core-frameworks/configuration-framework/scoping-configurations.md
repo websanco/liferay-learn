@@ -8,7 +8,7 @@ Liferay DXPでは、アプリケーションの構成をさまざまなレベル
 
 ポートレットスコープの構成は異なるアプローチを取ることに注意してください。 詳細については、 [ポートレットレベルの設定](./portlet-level-configuration.md) を参照してください。
 
-<a name="構成インターフェイスでスコープを指定する" />
+<a name="specify-scope-in-the-configuration-interface" />
 
 ## 構成インターフェイスでスコープを指定する
 
@@ -19,7 +19,7 @@ Liferay DXPでは、アプリケーションの構成をさまざまなレベル
 :lines: 7-9
 ```
 
-<a name="構成プロバイダーを使用する" />
+<a name="use-the-configuration-provider" />
 
 ## 構成プロバイダーを使用する
 

@@ -4,7 +4,7 @@ MVCリソースコマンドのクラスは、アクションやレンダーを�
 
 MVCリソースコマンドを使用するサンプルポートレットをデプロイしてから、それを調べます。
 
-<a name="mvcリソースコマンドを呼び出す" />
+<a name="invoke-an-mvc-resource-command" />
 
 ## MVCリソースコマンドを呼び出す
 
@@ -70,7 +70,7 @@ MVCリソースコマンドを使用するサンプルポートレットをデ�
 
 MVCリソースコマンドを使用してファイルをダウンロードしました。 次に、それらがどのように機能するかを確認します。
 
-<a name="ポートレットを調べる" />
+<a name="examine-the-portlet" />
 
 ## ポートレットを調べる
 
@@ -95,7 +95,7 @@ MVCリソースコマンドを使用してファイルをダウンロードし�
 
 次に、ポートレットのMVCリソースコマンドクラスを調べます。
 
-<a name="mvcresourcecommandクラスを調べる" />
+<a name="examine-the-mvcresourcecommand-class" />
 
 ## MVCResourceCommandクラスを調べる
 
@@ -125,7 +125,7 @@ MVCリソースコマンドクラスは、 [`MVCResourceCommand`](https://github
 
 次に、ポートレットのJSPがUIコンポーネントアクションをコマンドにマップする方法を学習します。
 
-<a name="ポートレットリソースurlを調べる" />
+<a name="examine-the-portlet-resource-url" />
 
 ## ポートレットリソースURLを調べる
 
@@ -143,13 +143,13 @@ MVCリソースコマンドクラスは、 [`MVCResourceCommand`](https://github
 
 ビューの **ダウンロード** リンクをクリックすると、`P8V5DownloadMVCResourceCommand`の`serveResource`メソッドが呼び出されます。
 
-<a name="次のステップ" />
+<a name="whats-next" />
 
 ## 次のステップ
 
 これで、MVCリソースコマンドの使用方法がわかりました。 ポートレットのコンテンツをローカライズする場合は、[Using Localized Messages](./using-localized-messages-in-an-mvc-portlet.md)を参照してください。 モデルレイヤー、永続レイヤー、およびサービスレイヤーを開発する準備ができている場合は、 [サービスビルダー](../../data-frameworks/service-builder.md) をご覧ください。
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 

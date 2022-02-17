@@ -2,7 +2,7 @@
 
 Liferayのローカライズフレームワークは、MVCポートレットでローカライズされたメッセージを作成するためのものです。
 
-<a name="サンプルコードをデプロイする" />
+<a name="deploy-the-sample-code" />
 
 ## サンプルコードをデプロイする
 
@@ -52,7 +52,7 @@ Liferayのローカライズフレームワークは、MVCポートレットで�
 
 次に、どのように機能するかを確認します。
 
-<a name="言語プロパティファイルを作成する" />
+<a name="create-the-language-properties-file" />
 
 ## 言語プロパティファイルを作成する
 
@@ -60,7 +60,7 @@ Liferayのローカライズフレームワークは、MVCポートレットで�
 
 他のロケールの言語プロパティファイルもフォルダに含めることができます。 たとえば、日本語の言語キーを含めるには、`Language_ja.properties`ファイルをフォルダに追加します。
 
-<a name="jspファイルを作成する" />
+<a name="create-the-jsp-file" />
 
 ## JSPファイルを作成する
 
@@ -86,7 +86,7 @@ JSPファイルを作成し、モジュールの`/src/main/resources/META-INF/re
 
 タグライブラリの詳細については、 [Liferay Tag Library Reference](https://docs.liferay.com/portal/7.3-latest/taglibs/util-taglib/) をご覧ください。 各タグライブラリには、タグに渡すことができる属性のリストがあります。
 
-<a name="コンポーネント定義を追加する" />
+<a name="add-the-component-definition" />
 
 ## コンポーネント定義を追加する
 

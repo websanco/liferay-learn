@@ -2,7 +2,7 @@
 
 Liferay Workspaceは、Liferay開発プロジェクトを作成および管理するための開発者向けツールです。
 
-<a name="プロジェクトの作成" />
+<a name="creating-projects" />
 
 ## プロジェクトの作成
 
@@ -46,7 +46,7 @@ Liferay Workspaceは、Liferay開発プロジェクトを作成および管理�
 
 Liferay DXPで実行するコードを作成するには、それをデプロイするLiferayランタイムが必要です。 したがって、Liferay Workspaceをインストールした後の最初のタスクは、Liferayバンドルをワークスペースに追加することです。
 
-<a name="liferay-workspaceでthemes-generatorを使用する" />
+<a name="using-the-themes-generator-with-liferay-workspace" />
 
 ## Liferay WorkspaceでThemes Generatorを使用する
 
@@ -82,7 +82,7 @@ Workspaceがプロジェクトを認識していることを確認するには�
 ./gradlew projects
 ```
 
-<a name="liferayバンドルをワークスペースに追加する" />
+<a name="adding-a-liferay-bundle-to-workspace" />
 
 ## Liferayバンドルをワークスペースに追加する
 
@@ -124,7 +124,7 @@ Workspaceがプロジェクトを認識していることを確認するには�
 
 DXPの場合、セキュリティ上の理由から、バンドルのダウンロード後にプロパティファイルからパスワードを削除する必要があります。
 
-<a name="liferay-workspaceを介したコードのデプロイ" />
+<a name="deploying-code-via-liferay-workspace" />
 
 ## Liferay Workspaceを介したコードのデプロイ
 
@@ -148,7 +148,7 @@ Liferay Workspaceに追加されたバンドルにコードをデプロイする
 ../gradlew deploy
 ```
 
-<a name="関連トピック" />
+<a name="related-topics" />
 
 ## 関連トピック
 

@@ -2,7 +2,7 @@
 
 Blade CLIが期待どおりに動作しない場合は、ここで回答を見つけることができます。
 
-<a name="ブレードコマンドがcliで使用できない" />
+<a name="the-blade-command-is-not-available-in-my-cli" />
 
 ## ブレードコマンドがCLIで使用できない
 
@@ -22,7 +22,7 @@ echo 'export PATH="$PATH:$HOME/jpm/bin"' >> ~/.bash_profile
 
 `bash`以外のシェルを使用している場合は、手動で ` blade ` 実行可能ファイルへのパスを追加する必要があります。
 
-<a name="ブレードを更新できません" />
+<a name="i-cant-update-blade" />
 
 ## ブレードを更新できません
 

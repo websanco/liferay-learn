@@ -5,7 +5,7 @@ Reactを使用してLiferay DXPで高性能コンポーネントとアプリケ�
 * [`frontend-js-react-web`モジュール](#frontend-js-react-web-module)
 * [Reactコンポーネントタグ](#react-component-tag)
 
-<a name="frontend-js-react-webモジュール" />
+<a name="frontend-js-react-web-module" />
 
 ## `frontend-js-react-web`モジュール
 
@@ -68,7 +68,7 @@ function OverlayContainer({root, allowEdit}) {
 }
 ```
 
-<a name="reactコンポーネントタグ" />
+<a name="react-component-tag" />
 
 ## Reactコンポーネントタグ
 

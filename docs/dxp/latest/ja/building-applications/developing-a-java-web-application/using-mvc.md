@@ -35,7 +35,7 @@ Liferay MVCポートレットフレームワークは軽量で使いやすいで
 
 Liferay MVCポートレットフレームワークの各レイヤーがアプリケーションの懸念事項の分離にどのように役立つかを検討してください。
 
-<a name="mvcレイヤーとモジュール性" />
+<a name="mvc-layers-and-modularity" />
 
 ## MVCレイヤーとモジュール性
 
@@ -51,7 +51,7 @@ Liferay DXPのアプリケーションは、複数の個別の[モジュール](
 
 [Workspace](../tooling/liferay-workspace/creating-code-with-liferay-workspace.md) を使用してマルチモジュールのService Builder駆動型MVCアプリケーション[プロジェクト](../../liferay-internals/fundamentals/module-projects.md)のスケルトンを生成すると、時間を大幅に節約でき、より重要な（そして興味深い）開発作業を開始できます。
 
-<a name="liferay-mvcコマンドクラス" />
+<a name="liferay-mvc-command-classes" />
 
 ## Liferay MVCコマンドクラス
 
@@ -63,7 +63,7 @@ Liferay DXPのアプリケーションは、複数の個別の[モジュール](
 
 すべてをつなぎ合わせて適切に機能させるには、混乱を招く構成ファイルが必要です。 いいえ、そうではありません。`-Portlet`クラスの`@Component`アノテーションですべて簡単に管理できます。
 
-<a name="liferay-mvcポートレットコンポーネント" />
+<a name="liferay-mvc-portlet-component" />
 
 ## Liferay MVCポートレットコンポーネント
 
@@ -94,7 +94,7 @@ public class HelloWorldPortlet extends MVCPortlet {
 DTD [liferay-portlet-app_7_3_0.dtd](https://learn.liferay.com/reference/latest/en/dxp/definitions/liferay-portlet-app_7_3_0.dtd.html) は、ポートレットコンポーネントのプロパティとして指定できるすべてのLiferay固有の属性を定義します。 `javax.portlet.`で名前空間が設定されたプロパティは、 [`portlet.xml` descriptor](https://docs.liferay.com/portlet-api/3.0/portlet-app_3_0.xsd) の要素です。
 ```
 
-<a name="よりシンプルなmvcポートレット" />
+<a name="a-simpler-mvc-portlet" />
 
 ## よりシンプルなMVCポートレット
 
@@ -112,7 +112,7 @@ DTD [liferay-portlet-app_7_3_0.dtd](https://learn.liferay.com/reference/latest/e
 
 ユーザーがリンクをクリックすると、ポートレットは`mvcPath`リクエストパラメータを受け取り、その`render`メソッドで制御ロジックを処理します。 詳細については、 [MVCポートレットを使用したビューのレンダリング](./using-mvc/rendering-views-with-mvc-portlet.md) を参照してください。
 
-<a name="次のステップ" />
+<a name="whats-next" />
 
 ## 次のステップ
 
@@ -130,7 +130,7 @@ DTD [liferay-portlet-app_7_3_0.dtd](https://learn.liferay.com/reference/latest/e
 
 モデルレイヤーを開発する準備ができている場合は、 [サービスビルダー](../data-frameworks/service-builder.md) をご覧ください。
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 

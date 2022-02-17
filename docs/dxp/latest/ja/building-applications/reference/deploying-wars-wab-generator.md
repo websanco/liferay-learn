@@ -6,7 +6,7 @@ Liferayは、これらのWARスタイルのプラグインをLiferayのOSGiラ�
 
 Liferay DXPは、Java EEスタイルWARの展開のためのOSGi Web Application Bundle（WAB）標準をサポートしています。 WABは、WARレイアウトを持ち、`Bundle-SymbolicName` OSGiディレクティブを含む`META-INF/MANIFEST.MF`ファイルを含むアーカイブです。 WABはOSGiバンドルです。 プロジェクトソースにはWARレイアウトがありますが、アーティファクトファイル名は拡張子`.jar`または`.war`で終わる場合があります。
 
-<a name="wabジェネレータがwarを変換する方法" />
+<a name="how-the-wab-generator-transforms-wars" />
 
 ## WABジェネレータがWARを変換する方法
 
@@ -21,7 +21,7 @@ WABジェネレータは、プラグインWARのJSP、記述子ファイル、�
 * リフレクションコード
 * クラスローダーコード
 
-<a name="warとwabのストラクチャー比較" />
+<a name="war-versus-wab-structure" />
 
 ## WARとWABのストラクチャー比較
 
@@ -69,13 +69,13 @@ WARスタイルのポートレットがLiferayにデプロイされ、WABジェ�
    生成されたWABは、手動で追加された`` bnd.bnd``ファイルまたはビルド時プラグイン（例：`` bnd-maven-plugin``）を使用できません。
 ```
 
-<a name="warのデプロイ" />
+<a name="deploying-a-war" />
 
 ## WARのデプロイ
 
 WARプラグインに基づいてWABをデプロイするには、WARプラグインを`[Liferay Home]`内のLiferayインスタンスの `deploy/` フォルダにコピーします。
 
-<a name="wabのコピーを保存する" />
+<a name="saving-a-copy-of-the-wab" />
 
 ## WABのコピーを保存する
 
@@ -90,7 +90,7 @@ module.framework.web.generator.generated.wabs.store.dir=${module.framework.base.
 
 WARプラグインをWABとしてデプロイでき、WABのコピーを保存して調べる方法が分かりました。
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 

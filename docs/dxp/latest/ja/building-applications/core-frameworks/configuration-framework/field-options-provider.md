@@ -2,7 +2,7 @@
 
 [ドロップダウンリスト](./setting-and-accessing-configurations.html#implementing-a-dropdown-selection-ui) は、構成インターフェイスの`@Meta.AD`アノテーションに手動で入力できます。 ただし、`ConfigurationFieldOptionsProvider`クラスを使用して、オプションのラベルと値を自動的に入力することもできます。 これは、ドロップダウンリストに動的にデータを入力する場合に役立ちます。 たとえば、Webサービスからオブジェクトのリストをフェッチしたり、データベースを反復処理してドロップダウンリストに動的にデータを入力したりできます。
 
-<a name="チュートリアルコードをデプロイする" />
+<a name="deploy-the-tutorial-code" />
 
 ## チュートリアルコードをデプロイする
 
@@ -44,7 +44,7 @@
 
 最初のドロップダウンリストには、`@Meta.AD`アノテーションが手動で入力されます。 2番目のドロップダウンリストには、フィールドオプションプロバイダーが表示されます。
 
-<a name="構成インターフェイスを設定する" />
+<a name="setting-the-configuration-interface" />
 
 ## 構成インターフェイスを設定する
 
@@ -58,7 +58,7 @@
 
 サンプルプロジェクトでは、`providerPopulatedColors`は入力される構成フィールド名です。
 
-<a name="フィールドオプションプロバイダーを実装する" />
+<a name="implement-the-field-options-provider" />
 
 ## フィールドオプションプロバイダーを実装する
 
