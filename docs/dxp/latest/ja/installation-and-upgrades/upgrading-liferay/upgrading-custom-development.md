@@ -16,4 +16,4 @@ upgrading-custom-development/upgrading-language-key-overrides.md
 言語キーオーバーライドを7.4以降にアップグレードする場合は、最初に[言語キーオーバーライドのアップグレード手順](./upgrading-custom-development/upgrading-language-key-overrides.md)に従ってください。
 ```
 
-[Liferay Upgrade Planner](https://help.liferay.com/hc/en-us/articles/360029147451-Liferay-Upgrade-Planner)を使用して、現在のカスタム開発をアップグレードしてください。詳細は、[Upgrading Code to Liferay 7.2](https://help.liferay.com/hc/en-us/articles/360029316391-Introduction-to-Upgrading-Code-to-Liferay-DXP-7-2)を参照してください。
+[Liferay Upgrade Planner](https://help.liferay.com/hc/en-us/articles/360029147451-Liferay-Upgrade-Planner) を使用して、現在のカスタム開発をアップグレードしてください。詳細は、 [Upgrading Code to Liferay 7.2](https://help.liferay.com/hc/en-us/articles/360029316391-Introduction-to-Upgrading-Code-to-Liferay-DXP-7-2) を参照してください。

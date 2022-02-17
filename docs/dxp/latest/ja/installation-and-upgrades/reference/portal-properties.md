@@ -1,8 +1,8 @@
 # ポータルプロパティ
 
-構成オプションは、サーバーの起動時に*ポータルプロパティ*、プロパティファイルから読み取られた名前と値のペアのセット、およびDocker環境変数を使用して指定されます。 [デフォルト値](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html)は`portal-impl.jar/portal.properties`ファイルで指定されます。
+構成オプションは、サーバーの起動時に **ポータルプロパティ** 、プロパティファイルから読み取られた名前と値のペアのセット、およびDocker環境変数を使用して指定されます。 [デフォルト値](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html) は`portal-impl.jar/portal.properties`ファイルで指定されます。
 
-一部のプロパティはユーザーインターフェイス（UI）を介して変更できますが、その他のプロパティはプロパティファイルまたはDocker環境変数でのみ変更できます。 これらには、[Liferay Home](./liferay-home.md)フォルダの場所を宣言するデータベースへの接続が含まれます。 そして [ユーザーがどのように認証するかを変更する](../securing-liferay/authentication-basics.md#configuring-authentication-type-using-properties) (メールアドレスではなくスクリーン名で)。
+一部のプロパティはユーザーインターフェイス（UI）を介して変更できますが、その他のプロパティはプロパティファイルまたはDocker環境変数でのみ変更できます。 これらには、 [Liferay Home](./liferay-home.md) フォルダの場所を宣言するデータベースへの接続が含まれます。 そして [ユーザーがどのように認証するかを変更する](../securing-liferay/authentication-basics.md#configuring-authentication-type-using-properties) (メールアドレスではなくスクリーン名で)。
 
 Liferayのインストールでは、プロパティファイルを使用します。 慣例により、`portal-ext.properties`は、デフォルトのプロパティ値を上書きするために、[`[Liferay Home]`](./liferay-home.md)フォルダまたは`[USER_HOME]`フォルダに作成する必要があります。  新規または変更されたプロパティファイルを適用するには、DXPを再起動する必要があります。
 
@@ -16,7 +16,7 @@ Liferayのインストールでは、プロパティファイルを使用しま�
 * 構成をバージョン管理システムに保存して、構成管理を簡素化できます。
 * 最初の起動前にファイルにプロパティを設定することは、Liferayを構成する最も簡単な方法です。
 
-ポータルプロパティは、環境変数（Env変数）とプロパティファイルとともにLiferay Dockerコンテナに適用されます。 ポータルプロパティを使用してDockerコンテナを構成するには、[Configuring Containers](../installing-liferay/using-liferay-docker-images/configuring-containers.md#using-liferay-env-variables)を参照してください。
+ポータルプロパティは、環境変数（Env変数）とプロパティファイルとともにLiferay Dockerコンテナに適用されます。 ポータルプロパティを使用してDockerコンテナを構成するには、 [Configuring Containers](../installing-liferay/using-liferay-docker-images/configuring-containers.md#using-liferay-env-variables) を参照してください。
 
 **コンテンツ：**
 
@@ -27,6 +27,8 @@ Liferayのインストールでは、プロパティファイルを使用しま�
 ```{note}
 DXP 7.3以降、仮想インスタンスごとのポータルプロパティファイル機能は削除されました。 DXPは、`portal-[companyId].properties`形式のファイルから取得したインスタンスごとのプロパティを会社IDと一致するインスタンスに適用しなくなりました。
 ```
+
+<a name="ポータルプロパティの使用" />
 
 ## ポータルプロパティの使用
 
@@ -54,7 +56,7 @@ jdbc.default.password=123456
 ### Liferayホームの場所の設定
 
 一部のアプリケーションサーバー(WebLogicなど)では、DXP WARファイルをデプロイする前に
-Liferay Homeの場所をカスタマイズする必要があります。  [`liferay.home`](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#Liferay%20Home)プロパティは場所を設定します。</p> 
+Liferay Homeの場所をカスタマイズする必要があります。  [`liferay.home`](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#Liferay%20Home) プロパティは場所を設定します。</p> 
 
 
 
@@ -92,6 +94,8 @@ company.security.auth.type=userId
 
 
 
+<a name="ポータルプロパティの優先度" />
+
 ## ポータルプロパティの優先度
 
 ポータルプロパティは、次の3つのソースから設定されます。
@@ -100,7 +104,7 @@ company.security.auth.type=userId
 * 拡張プロパティファイル（例： `portal-ext.properties`）
 * [環境変数](../installing-liferay/using-liferay-docker-images/configuring-containers.md#using-liferay-env-variables)
 
-特定のプロパティでは、最後に読み取られた値が優先されます。 プロパティソースは、`include-and-override`と呼ばれるプロパティを介して構成可能な[決定論的な順序](#configuration-processing)で読み取られます。 
+特定のプロパティでは、最後に読み取られた値が優先されます。 プロパティソースは、`include-and-override`と呼ばれるプロパティを介して構成可能な [決定論的な順序](#configuration-processing) で読み取られます。 
 
 
 
@@ -227,15 +231,19 @@ mail.session.jndi.name=mail/DevMailSession
 
 
 
+<a name="システム設定と構成ファイルの使用" />
+
 ## システム設定と構成ファイルの使用
 
-一部のプロパティは[システム設定](../../system-administration/configuring-liferay/system-settings.md)と[設定ファイル](../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md)を使用して設定できます。 たとえば、SAML認証プロパティは、システム設定で使用できるプロパティです。
+一部のプロパティは [システム設定](../../system-administration/configuring-liferay/system-settings.md) と[設定ファイル](../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md)を使用して設定できます。 たとえば、SAML認証プロパティは、システム設定で使用できるプロパティです。
 
 DXPデータベースに格納されているプロパティは、ポータルプロパティファイルで設定されているプロパティよりも優先されます。
 
-*［設定］* &rarr; *［システム設定］*の*［コントロールパネル］*に移動して、［システム設定］を見つけます。 システム設定は`.config`ファイルとしてエクスポートし、ソースコントロールに保存し、分散DXPインストールで使用できます。 システム設定を介して設定されたポータルプロパティと構成ファイルは、データベースに保存されます。 すぐに適用されるプロパティもあれば、サーバーの再起動が必要なプロパティもあります。
+［**設定**］ &rarr; ［**システム設定**］ の ［**コントロールパネル**］ に移動して、［システム設定］を見つけます。 システム設定は`.config`ファイルとしてエクスポートし、ソースコントロールに保存し、分散DXPインストールで使用できます。 システム設定を介して設定されたポータルプロパティと構成ファイルは、データベースに保存されます。 すぐに適用されるプロパティもあれば、サーバーの再起動が必要なプロパティもあります。
 
 
+
+<a name="追加情報" />
 
 ## 追加情報
 

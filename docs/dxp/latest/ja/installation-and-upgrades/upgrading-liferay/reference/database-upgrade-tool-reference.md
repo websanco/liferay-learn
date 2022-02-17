@@ -4,10 +4,14 @@
 
 `［LIFERAY_HOME］/tools/portal-tools-db-upgrade-client`フォルダ（Windowsでは`db_upgrade.bat`）にある`db_upgrade.sh`スクリプトを使用して、アップグレードツールを起動します。
 
+<a name="概要" />
+
 ## 概要
 
 * [アップグレードツールの使用](#database-upgrade-tool-usage)
 * [アップグレードツールの設定](#configuring-the-upgrade-tool)
+
+<a name="データベースアップグレードツールの使用" />
 
 ## データベースアップグレードツールの使用
 
@@ -19,13 +23,13 @@ db_upgrade.sh --help
 
 次に、アップグレードツールのすべてのコマンドラインオプションを示します。
 
-**--help**または**-h**：ツールのヘルプメッセージを出力します。
+**--help** または **-h** ：ツールのヘルプメッセージを出力します。
 
-**--jvm-opts** or **-j** + **[arg]**：アップグレードプロセスのJVMオプションを設定します。
+**--jvm-opts** or **-j** + [**arg**] ：アップグレードプロセスのJVMオプションを設定します。
 
-**--log-file** or **-l** + **[arg]**：ツールのログファイル名を指定します。デフォルト名は`upgrade.log`です。
+**--log-file** or **-l** + [**arg**] ：ツールのログファイル名を指定します。デフォルト名は`upgrade.log`です。
 
-**--shell** または **-s**：アップグレード作業終了後、[Gogoシェル](../../../liferay-internals/fundamentals/using-the-gogo-shell.md)に自動的に接続します。
+**--shell** または **-s** ：アップグレード作業終了後、[Gogoシェル](../../../liferay-internals/fundamentals/using-the-gogo-shell.md)に自動的に接続します。
 
 ### ログ出力
 
@@ -53,6 +57,8 @@ db_upgrade.sh -l "output.log"
 db_upgrade.sh -j "-Xmx8000m -Dfile.encoding=UTF-8 -Duser.timezone=GMT"
 ```
 
+<a name="アップグレードツールの設定" />
+
 ## アップグレードツールの設定
 
 コアのアップグレードには設定が必要です。 最も簡単な方法は、アップグレードツールを使用して構成ファイルをオンザフライで作成することです。 次に、アップグレードツールのコマンドラインインターフェイスとの対話の例を示します。
@@ -78,7 +84,7 @@ Please enter your database host (localhost):
 (etc.)
 ```
 
-```note::
+```{note}
    省略された値は、括弧内に表示されているデフォルトを使用します。
 ```
 
@@ -88,7 +94,7 @@ Please enter your database host (localhost):
 
 * `app-server.properties`：サーバーの場所とライブラリを指定します。
 * `portal-upgrade-database.properties`：データベース接続を構成します。
-* `portal-upgrade-ext.properties`：アップグレードに必要な残りのポータルプロパティを設定します。 現在のDXPサーバーを複製するには、現在のポータルプロパティ（データベースプロパティを除く）をこのファイルにコピーします。 現在のプロパティを使用する前に、必ず[現在のDXPバージョンに合わせて更新してください](./preparing-a-new-application-server.md#migrate-your-portal-properties)。
+* `portal-upgrade-ext.properties`：アップグレードに必要な残りのポータルプロパティを設定します。 現在のDXPサーバーを複製するには、現在のポータルプロパティ（データベースプロパティを除く）をこのファイルにコピーします。 現在のプロパティを使用する前に、必ず [現在のDXPバージョンに合わせて更新してください](./preparing-a-new-application-server.md#migrate-your-portal-properties) 。
 
 #### app-server.propertiesの構成
 
@@ -124,18 +130,18 @@ server.detector.server.id=tomcat
 
 #### portal-upgrade-database.propertiesの構成
 
-次の情報を指定して、アップグレードするデータベースを構成します。 これらのプロパティは、`portal-ext.properties`ファイルで使用する[JDBCポータルプロパティ](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#JDBC)に対応することに注意してください。
+次の情報を指定して、アップグレードするデータベースを構成します。 これらのプロパティは、`portal-ext.properties`ファイルで使用する [JDBCポータルプロパティ](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#JDBC) に対応することに注意してください。
 
 * `jdbc.default.driverClassName`
 * `jdbc.default.url`
 * `jdbc.default.username`
 * `jdbc.default.password`
 
-これらの値のリファレンスについては、最新の[ポータルプロパティリファレンス](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html)を参照してください。
+これらの値のリファレンスについては、最新の [ポータルプロパティリファレンス](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html) を参照してください。
 
 #### portal-upgrade-ext.propertiesの構成
 
-[バックアップ](../../maintaining-a-liferay-dxp-installation/backing-up.md)から、`portal-ext.properties`ファイルプロパティなどのすべての[ポータルプロパティ](../../reference/portal-properties.md)を追加します。 次のプロパティは、アップグレードを構成するために特に重要です。
+[バックアップ](../../maintaining-a-liferay-dxp-installation/backing-up.md)から、`portal-ext.properties`ファイルプロパティなどのすべての [ポータルプロパティ](../../reference/portal-properties.md) を追加します。 次のプロパティは、アップグレードを構成するために特に重要です。
 
 * `liferay.home`：[LIFERAY_HOMEフォルダ](../../reference/liferay-home.md)
 
@@ -148,7 +154,7 @@ server.detector.server.id=tomcat
     dl.store.impl=com.liferay.portal.store.s3.S3Store
     ```
 
-* `hibernate.jdbc.batch_size`：パフォーマンスを向上させるために使用されるJDBCバッチサイズ（デフォルトでは_250_に設定）。 _このプロパティを使用するとアップグレードのパフォーマンスが向上しますが、必須ではありません。_
+* `hibernate.jdbc.batch_size`：パフォーマンスを向上させるために使用されるJDBCバッチサイズ（デフォルトでは **250** に設定）。 **このプロパティを使用するとアップグレードのパフォーマンスが向上しますが、必須ではありません。**
 
 #### アップグレード構成の例
 

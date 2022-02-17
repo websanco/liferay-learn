@@ -13,9 +13,11 @@ Authentication Verifierは、一元化された拡張可能な方法でLiferay P
 認証検証レイヤの焦点は、資格情報の提供ではなく、認証の検証にあります。 トークンや資格情報を発行したり、サインインポートレットを表示したりすることはありません。 代わりに、このレイヤは既存の資格情報と認証済みセッションを検証し、認証エンドポイントを補完します。 下位互換性を確保するために、デフォルトの実装では、ユーザー名とパスワードの資格情報を提供するリクエストをサポートしています。 したがって、認証検証レイヤは、認証と承認の境界に位置しています。
 ```
 
+<a name="認証検証プロセス" />
+
 ## 認証検証プロセス
 
-Authentication Verifierを設定するには、*［コントロールパネル］* &rarr; *［設定］* &rarr; *［システム設定］* &rarr; *［セキュリティ］* &rarr; *［API 認証］*に移動します。
+Authentication Verifierを設定するには、 ［**コントロールパネル**］ &rarr; ［**設定**］ &rarr; ［**システム設定**］ &rarr; ［**セキュリティ**］ &rarr; ［**API 認証**］ に移動します。
 
 ![Authentication Verifierの設定画面](./using-authentication-verifiers/images/01.png)
 
@@ -33,15 +35,17 @@ Authentication Verifierを設定するには、*［コントロールパネル�
 
 解決されたユーザーは、`AuthVerifier`インスタンスのいずれかによって返されたユーザーか、または指定された資格情報を確認できたインスタンスがない場合はゲストユーザーになります。
 
+<a name="組み込みauthentication-verifierの構成" />
+
 ## 組み込みAuthentication Verifierの構成
 
 `AuthVerifier`は開発者によって作成され、OSGiランタイムに登録されている限り自動的に処理されます。 このレイヤと周囲のプロセスは、`javax.servlet.Filter`インターフェイスを実装する`AuthVerifierFilter`クラスによって提供されます。 製品に同梱されているAuth Verifierの構成は次のとおりです。
 
-* [基本認証ヘッダー](#basic-auth-header)*
+* [基本認証ヘッダー](#basic-auth-header) *
 * [ダイジェスト認証](#digest-auth-header)
 * [HTTPトンネルエクステンダー](#http-tunnel-extender)
 * [画像リクエスト](#image-request-authentication-verifier)
-* [ポータルセッション](#portal-sessions-auth-verifiers)*
+* [ポータルセッション](#portal-sessions-auth-verifiers) *
 * [リクエストパラメータ](#request-parameter)
 * [トンネル認証](#tunnel-auth)
 
@@ -49,13 +53,13 @@ Authentication Verifierを設定するには、*［コントロールパネル�
 
 ### 基本認証ヘッダー
 
-このAuth Verifierにより、リモートクライアントは[HTTP基本認証](https://en.wikipedia.org/wiki/Basic_access_authentication)を使用して認証できます。 この方法で認証する必要のあるURLパスを指定して設定します。 _［Force Basic Authentication］_フィールドがオンになっている場合は、HTTP基本認証が必要です。
+このAuth Verifierにより、リモートクライアントは [HTTP基本認証](https://en.wikipedia.org/wiki/Basic_access_authentication) を使用して認証できます。 この方法で認証する必要のあるURLパスを指定して設定します。 ［**Force Basic Authentication**］ フィールドがオンになっている場合は、HTTP基本認証が必要です。
 
 WebサービスのデフォルトのURLは`/api/*,/xmlrpc*`です。 このマッピングでは、`TunnelServlet`へのアクセスを防ぐために`/api/liferay*`を除外しています。 詳細については、「トンネルAuthentication Verifier」をご覧ください。
 
 ### ダイジェスト認証ヘッダー
 
-このAuth Verifierにより、リモートクライアントは[HTTPダイジェスト認証](https://en.wikipedia.org/wiki/Digest_access_authentication)を使用して認証できます。 この方法で認証する必要のあるURLパスを指定して設定します。 ［Force Digest Authentication］フィールドがオンになっている場合は、HTTP基本認証が必要です。
+このAuth Verifierにより、リモートクライアントは [HTTPダイジェスト認証](https://en.wikipedia.org/wiki/Digest_access_authentication) を使用して認証できます。 この方法で認証する必要のあるURLパスを指定して設定します。 ［Force Digest Authentication］フィールドがオンになっている場合は、HTTP基本認証が必要です。
 
 このAuth Verifierはデフォルトでは有効になっていません。
 
@@ -63,13 +67,13 @@ WebサービスのデフォルトのURLは`/api/*,/xmlrpc*`です。 このマ�
 
 Liferayではモジュール性を採用したため、このエクステンダーはモジュールを`TunnelServlet`の一部にすることができるように作成されました。 `TunnelServlet`および`TunnelingServletAuthVerifier`がモジュールサーブレットコンテキストにマップされます。 マニフェストに`Http-Tunnel`が含まれるモジュールは、トンネルサーブレットを利用でき、`/o/_module_/api/liferay/do`を介してAPIを公開できます。
 
-トンネリングを許可するクライアントIPアドレスを設定して構成します。 詳細については、[プロパティのドキュメント](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#HTTP%20Tunneling)および[リモートステージング](../../../site-building/publishing-tools/staging/configuring-remote-live-staging.md)を参照してください。
+トンネリングを許可するクライアントIPアドレスを設定して構成します。 詳細については、 [プロパティのドキュメント](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#HTTP%20Tunneling) および[リモートステージング](../../../site-building/publishing-tools/staging/configuring-remote-live-staging.md)を参照してください。
 
 これはリモートAPIをエクスポートする方法としてはお勧めできません。JAX-RSまたはLiferay JSON Web Serviceテクノロジーを使用してリモートサービスを公開する方がはるかに優れています。
 
 ### 画像リクエストAuthentication Verifier
 
-LibreOffice/OpenOfficeに接続している場合、Officeプロセスは、画像を含むドキュメントをレンダリングするためにLiferay Portalから画像をダウンロードする必要があります。 これを行うには、画像に安全にアクセスするための[JWTトークン](https://jwt.io)を作成します。
+LibreOffice/OpenOfficeに接続している場合、Officeプロセスは、画像を含むドキュメントをレンダリングするためにLiferay Portalから画像をダウンロードする必要があります。 これを行うには、画像に安全にアクセスするための [JWTトークン](https://jwt.io) を作成します。
 
 許可するホスト、含めるURL、必要に応じて除外するURLを設定して、これを構成します。
 
@@ -95,7 +99,9 @@ LibreOffice/OpenOfficeに接続している場合、Officeプロセスは、画�
 
 信頼されたリモートクライアントは、ポータルプロパティ`tunneling.servlet.shared.secret`に格納されている共有シークレットを使用して認証します。 初期値は空であり、すべてのアクセスが禁止されます。
 
-デフォルト設定はデフォルトで有効になっていますが、アクセスはローカルホストのみに制限されています。 トンネリングを許可するクライアントIPアドレスを設定して構成します。 詳細については、[プロパティのドキュメント](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#HTTP%20Tunneling)および[リモートステージング](../../../site-building/publishing-tools/staging/configuring-remote-live-staging.md)を参照してください。
+デフォルト設定はデフォルトで有効になっていますが、アクセスはローカルホストのみに制限されています。 トンネリングを許可するクライアントIPアドレスを設定して構成します。 詳細については、 [プロパティのドキュメント](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#HTTP%20Tunneling) および[リモートステージング](../../../site-building/publishing-tools/staging/configuring-remote-live-staging.md)を参照してください。
+
+<a name="関連トピック" />
 
 ## 関連トピック
 

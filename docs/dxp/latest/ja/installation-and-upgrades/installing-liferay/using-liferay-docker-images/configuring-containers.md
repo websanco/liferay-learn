@@ -10,9 +10,11 @@ Liferayインストールで構成可能なものはすべて、Liferay Docker�
 * [システムプロパティ](#system-properties)
 * [System Settings](#system-settings)
 
-```note::
+```{note}
    ここでは、コンテナにファイルを提供する設定のユースケースを、 `bind mounts <https://docs.docker.com/storage/bind-mounts/>`_を使用して示しています。 また、`volumes <https://docs.docker.com/storage/volumes/>`_ を使ったり、場合によっては ``docker cp`` コマンドを使うこともできます。 詳細は、`Providing File to the Container <./providing-files-to-the-container.md>`_を参照してください。
 ```
+
+<a name="jvmオプション" />
 
 ## JVMオプション
 
@@ -26,7 +28,7 @@ JVM オプションは Tomcat の `CATALINA_OPTS` 変数に追加することが
 docker run -it -m 8g -p 8080:8080 -e LIFERAY_JVM_OPTS=[value\ with\ space] liferay/dxp:[tag]
 ```
 
-```warning::
+```{warning}
    `` LIFERAY_JVM_OPTS``値では、バックスラッシュを使用してスペース文字をエスケープします。 引用符は使用しないでください。
 ```
 
@@ -48,7 +50,7 @@ JVMオプションを設定する別の方法には、Tomcatの `setenv.sh` ス�
     docker cp tmp-dxp:/opt/liferay/tomcat/bin/setenv.sh .
     ```
 
-1. [コンテナを停止します](./docker-container-basics.md#stopping-a-container)。
+1. [コンテナを停止します](./docker-container-basics.md#stopping-a-container) 。
 
 1. `setenv.sh` のコピーで JVM オプションを設定します。
 
@@ -67,40 +69,42 @@ JVMオプションを設定する別の方法には、Tomcatの `setenv.sh` ス�
 
 コンテナは `setenv.sh` スクリプトの JVM オプションを使用します。
 
-```note::
+```{note}
    コンテナの``/mnt/liferay``フォルダへのバインドマウントについては、`Providing Files to the Container <./providing-files-to-the-container.md#bind-mounting-a-host-folder-to-mnt-liferay>`_を参照してください。
 ```
 
-```note::
+```{note}
    Liferayコンテナの起動と動作に関する詳細は、`Docker Container Basics <./docker-container-basics.md>`_を参照してください。
 ```
 
+<a name="ポータルプロパティ" />
+
 ## ポータルプロパティ
 
-コンテナの[ポータルプロパティ](../../reference/portal-properties.md) は、以下の2つの方法でオーバーライドできます：
+コンテナの [ポータルプロパティ](../../reference/portal-properties.md) は、以下の2つの方法でオーバーライドできます：
 
 * [Liferay環境変数の使用](#using-liferay-env-variables)
 * [ポータルプロパティファイルの使用](#using-a-portal-properties-file)
 
 ### Liferay環境変数の使用
 
-*ポータルプロパティ* ごとに [Env](../../reference/portal-properties.md)変数があります。 環境変数は、Liferay Dockerコンテナのポータルプロパティをオーバーライドする[Docker環境変数](https://docs.docker.com/engine/reference/commandline/run/#set-environment-variables--e---env---env-file)です。
+**ポータルプロパティ** ごとに [Env](../../reference/portal-properties.md)変数があります。 環境変数は、Liferay Dockerコンテナのポータルプロパティをオーバーライドする [Docker環境変数](https://docs.docker.com/engine/reference/commandline/run/#set-environment-variables--e---env---env-file) です。
 
 1. [ポータル プロパティ](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html) のオンライン 説明で、オーバーライドするプロパティを見つけます。
 
 1. プロパティ説明のすぐ下に表示される `Env` 変数名をコピーします。 例えば、 [`jdbc.default.jndi.name`](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#JDBC) ポータルプロパティのEnv変数は次のとおりです。
 
     ```properties
-    Env: LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_JNDI_PERIOD_NAME
+    Env: LIFERAY **JDBC** PERIOD **DEFAULT** PERIOD **JNDI** PERIOD_NAME
     ```
 
 1. コンテナを作成し、パターン`-e VARIABLE_A=value -e VARIABLE_B=value ...`に従って`-e`オプションを使用して環境変数の割り当てを渡します。 例:
 
     ```
-    docker run -it -m 8g -p 8080:8080 -e LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_JNDI_PERIOD_NAME=jdbc/MyPool liferay/dxp:[tag]
+    docker run -it -m 8g -p 8080:8080 -e LIFERAY **JDBC** PERIOD **DEFAULT** PERIOD **JNDI** PERIOD_NAME=jdbc/MyPool liferay/dxp:[tag]
     ```
 
-    ```warning::
+    ```{warning}
        ``Env``変数値では、バックスラッシュを使用してスペース文字をエスケープします。 引用符は使用しないでください。
     ```
 
@@ -108,11 +112,11 @@ JVMオプションを設定する別の方法には、Tomcatの `setenv.sh` ス�
     データベース環境変数の例については、[Database Templates](../../reference/database-templates.md)を参照してください。
     ```
 
-    ```note::
+    ```{note}
        コンテナの起動と動作に関する詳細は、`Docker Container Basics <./docker-container-basics.md>`_を参照してください。
     ```
 
-プロパティは、コントロールパネルの _［設定］_ &rarr; _［サーバー管理］_ &rarr; _［プロパティ］_ &rarr; _［ポータルプロパティ］_で表示されます。
+プロパティは、コントロールパネルの ［**設定**］ &rarr; ［**サーバー管理**］ &rarr; ［**プロパティ**］ &rarr; ［**ポータルプロパティ**］ で表示されます。
 
 ### ポータルプロパティファイルの使用
 
@@ -130,21 +134,23 @@ JVMオプションを設定する別の方法には、Tomcatの `setenv.sh` ス�
     echo "jdbc.default.jndi.name=jdbc/MyPool" >> [host folder]/files/portal-ext.properties
     ```
 
-1. `portal-ext.properties` ファイルのフォルダをコンテナの `/mnt/liferay/files` フォルダにマッピングするバインドマウントを含むコンテナを作成します。 この例の `portal-ext.properties` は `ファイル`という名前のフォルダーにあるため、 [マウントをコンテナの `/mnt /liferay` フォルダーにバインドできます](./providing-files-to-the-container.md#bind-mounting-a-host-folder-to-mnt-liferay)。
+1. `portal-ext.properties` ファイルのフォルダをコンテナの `/mnt/liferay/files` フォルダにマッピングするバインドマウントを含むコンテナを作成します。 この例の `portal-ext.properties` は `ファイル`という名前のフォルダーにあるため、 [マウントをコンテナの `/mnt /liferay` フォルダーにバインドできます](./providing-files-to-the-container.md#bind-mounting-a-host-folder-to-mnt-liferay) 。
 
     ```bash
     docker run -it -m 8g -p 8080:8080 -v [host folder path]:/mnt/liferay liferay/dxp:[tag]
     ```
 
-プロパティは、コントロールパネルの _［設定］_ &rarr; _［サーバー管理］_ &rarr; _［プロパティ］_ &rarr; _［ポータルプロパティ］_で表示されます。
+プロパティは、コントロールパネルの ［**設定**］ &rarr; ［**サーバー管理**］ &rarr; ［**プロパティ**］ &rarr; ［**ポータルプロパティ**］ で表示されます。
 
 ```{note}
 データベースポータルプロパティの例については、[Database Templates](../../reference/database-templates.md)を参照してください。
 ```
 
+<a name="画像定義の環境変数" />
+
 ## 画像定義の環境変数
 
-Liferayイメージは、いくつかの環境変数を定義します。 いくつかの変数は、 [Liferay Home](../../reference/liferay-home.md) パスや、Tomcat をデバッグモードで起動するオプションなど、内部的な設定を行います。 その他の変数は [ポータルプロパティ](../../reference/portal-properties.md)を設定します。 以下は、ポータルプロパティを設定するイメージ定義の環境変数です。
+Liferayイメージは、いくつかの環境変数を定義します。 いくつかの変数は、 [Liferay Home](../../reference/liferay-home.md) パスや、Tomcat をデバッグモードで起動するオプションなど、内部的な設定を行います。 その他の変数は [ポータルプロパティ](../../reference/portal-properties.md) を設定します。 以下は、ポータルプロパティを設定するイメージ定義の環境変数です。
 
 ```properties
 LIFERAY_MODULE_PERIOD_FRAMEWORK_PERIOD_PROPERTIES_PERIOD_OSGI_PERIOD_CONSOLE=0.0.0.0:11311
@@ -187,7 +193,7 @@ LIFERAY_TERMS_PERIOD_OF_PERIOD_USE_PERIOD_REQUIRED=false
 1. 環境変数を無効にし、ポータルプロパティファイルのバインドマウントを設定します。
 
     ```bash
-    docker run -e LIFERAY_TERMS_PERIOD_OF_PERIOD_USE_PERIOD_REQUIRED -v $(pwd):/mnt/liferay ...
+    docker run -e LIFERAY **TERMS** PERIOD **OF** PERIOD **USE** PERIOD_REQUIRED -v $(pwd):/mnt/liferay ...
     ```
 
     利用規約の要件は、ポータルプロパティに基づいています。 [デフォルトのポータルプロパティ設定](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html) （ `LIFERAY_TERMS_PERIOD_OF_PERIOD_USE_PERIOD_REQUIRED`を検索）には、利用規約が必要です。
@@ -196,7 +202,7 @@ LIFERAY_TERMS_PERIOD_OF_PERIOD_USE_PERIOD_REQUIRED=false
     terms.of.use.required=true
     ```
 
-1. バインドマウントパスにある `portal-ext.properties` ファイルに必要な設定を指定します。 [ポータルプロパティファイル](#using-a-portal-properties-file)を使用するを参照してください。
+1. バインドマウントパスにある `portal-ext.properties` ファイルに必要な設定を指定します。 [ポータルプロパティファイル](#using-a-portal-properties-file) を使用するを参照してください。
 
     ```bash
     echo "terms.of.use.required=false" >> ./files/portal-ext.properties
@@ -205,6 +211,8 @@ LIFERAY_TERMS_PERIOD_OF_PERIOD_USE_PERIOD_REQUIRED=false
 1. コンテナを再起動します。
 
 コンテナはプロパティ設定を使用します。
+
+<a name="システムプロパティ" />
 
 ## システムプロパティ
 
@@ -228,11 +236,13 @@ LIFERAY_TERMS_PERIOD_OF_PERIOD_USE_PERIOD_REQUIRED=false
     docker run -it -m 8g -p 8080:8080 -v [host folder path]:/mnt/liferay liferay/dxp:[tag]
     ```
 
-    ```note::
+    ```{note}
        コンテナの``/mnt/liferay``フォルダへのバインドマウントについては、`Providing Files to the Container <./providing-files-to-the-container.md#bind-mounting-a-host-folder-to-mnt-liferay>`_を参照してください。
     ```
 
-プロパティは、コントロールパネルの _［設定］_ &rarr; _［サーバー管理］_ &rarr; _［プロパティ］_ &rarr; _［システムプロパティ］_で表示されます。
+プロパティは、コントロールパネルの ［**設定**］ &rarr; ［**サーバー管理**］ &rarr; ［**プロパティ**］ &rarr; ［**システムプロパティ**］ で表示されます。
+
+<a name="system-settings" />
 
 ## System Settings
 
@@ -266,11 +276,11 @@ Liferayシステム設定は、 [コントロールパネル](../../../system-ad
     docker run -it -m 8g -p 8080:8080 -v [host folder path]:/mnt/liferay liferay/dxp:[tag]
     ```
 
-    ```note::
+    ```{note}
        コンテナの``/mnt/liferay``フォルダへのバインドマウントについては、`Providing Files to the Container <./providing-files-to-the-container.md#bind-mounting-a-host-folder-to-mnt-liferay>`_を参照してください。
     ```
 
-システムコンポーネントの構成は、そのコンポーネントの画面のコントロールパネルで、_［設定］_ &rarr; _［システム設定］_に表示されます。
+システムコンポーネントの構成は、そのコンポーネントの画面のコントロールパネルで、 ［**設定**］ &rarr; ［**システム設定**］ に表示されます。
 
 ### 実行時の構成ファイルの適用
 
@@ -280,9 +290,13 @@ Liferayシステム設定は、 [コントロールパネル](../../../system-ad
 docker cp ［config file］ ［container］:/opt/liferay/osgi/configs
 ```
 
+<a name="まとめ" />
+
 ## まとめ
 
 LiferayコンテナのJVMオプション、ポータルプロパティ、イメージ環境変数、システムプロパティ、およびシステム設定を構成する方法をマスターしました。
+
+<a name="追加情報" />
 
 ## 追加情報
 

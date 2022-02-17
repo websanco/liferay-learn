@@ -2,11 +2,13 @@
 
 WildFlyにインストールするには、DXP WARのインストール、依存関係のインストール、WebSphereの設定、およびWildFlyへのDXPのデプロイが必要です。 データベースとメールサーバーの接続も設定する必要があります。
 
+<a name="前提条件" />
+
 ## 前提条件
 
-Liferay DXPにはJava JDK 8または11が必要です。 詳細は、[互換性マトリクス](https://help.liferay.com/hc/en-us/articles/360049238151)を参照してください。
+Liferay DXPにはJava JDK 8または11が必要です。 詳細は、 [互換性マトリクス](https://help.liferay.com/hc/en-us/articles/360049238151) を参照してください。
 
-[ヘルプセンター](https://customer.liferay.com/downloads)(サブスクリプション)または[Liferayコミュニティのダウンロード](https://www.liferay.com/downloads-community)から、これらのファイルをダウンロードしてください。 管理者は以下をダウンロードする必要があります。
+[ヘルプセンター](https://customer.liferay.com/downloads) (サブスクリプション)または [Liferayコミュニティのダウンロード](https://www.liferay.com/downloads-community) から、これらのファイルをダウンロードしてください。 管理者は以下をダウンロードする必要があります。
 
 * DXP WARファイル
 * OSGi依存関係のZIPファイル
@@ -14,10 +16,14 @@ Liferay DXPにはJava JDK 8または11が必要です。 詳細は、[互換性�
 
 [`[Liferay Home]`](../../reference/liferay-home.md)は、WildFlyサーバーフォルダを含むフォルダです。 DXPのインストールとデプロイ後、Liferay HomeフォルダにはWildFlyサーバーフォルダと`データ`、`デプロイ`、`ログ`フォルダ、`osgi`フォルダが含まれます。 `$WILDFLY_HOME` は、WildFlyサーバーフォルダーを指します。 通常、`wildfly-［version］`という名前です。
 
+<a name="dxp-warのインストール" />
+
 ## DXP WARのインストール
 
 1. クリーンなWildflyインストールを開始していて、`$WILDFLY_HOME/standalone/deployments/ROOT.war`フォルダが存在する場合は、そのすべてのサブフォルダとファイルを削除します。
 1. DXP WARファイルを`$WILDFLY_HOME/standalone/deployments/ROOT.war`フォルダに解凍します（このフォルダが存在しない場合は作成します）。
+
+<a name="依存関係をインストールする" />
 
 ## 依存関係をインストールする
 
@@ -71,7 +77,7 @@ DXP 7.3以前の場合は、次の追加手順に従います。
 
 ### WildFlyでのスタンドアロンモードとドメインモードのDXPの実行
 
-WildFlyは、 *スタンドアロン* モードまたは *ドメイン* モードのいずれかで起動できます。 ドメインモードでは、単一のコントロールポイントから複数のアプリケーションサーバーインスタンスを管理できます。 このようなアプリケーションサーバーのコレクションは、 *ドメイン*と呼ばれます。 スタンドアロンモードとドメインモードの詳細は、 [WildFly管理ガイド](https://docs.jboss.org/author/display/WFLY/Admin+Guide#AdminGuide-Operatingmodes)このトピックに関するセクションを参照してください。 DXPは、スタンドアロンモードではWildFlyを完全にサポートしますが、ドメインモードではサポートしません。
+WildFlyは、 **スタンドアロン** モードまたは **ドメイン** モードのいずれかで起動できます。 ドメインモードでは、単一のコントロールポイントから複数のアプリケーションサーバーインスタンスを管理できます。 このようなアプリケーションサーバーのコレクションは、 **ドメイン** と呼ばれます。 スタンドアロンモードとドメインモードの詳細は、 [WildFly管理ガイド](https://docs.jboss.org/author/display/WFLY/Admin+Guide#AdminGuide-Operatingmodes) このトピックに関するセクションを参照してください。 DXPは、スタンドアロンモードではWildFlyを完全にサポートしますが、ドメインモードではサポートしません。
 
 管理者はドメインモードのWildFlyでDXPを実行できますが、この方法は完全にはサポートされていません。 特に、WildFlyがファイル（展開または非展開）をコピーすることによって管理された展開のコンテンツを管理するため、DXPの自動展開は管理された展開では機能しません。 これにより、JSPフックとExtプラグインが意図したとおりに機能しなくなります。 たとえば、DXPのJSPオーバーライドメカニズムはアプリケーションサーバーに依存しているため、JSPフックは管理対象ドメインモードで実行されているWildFlyでは機能しません。 ただし、JSPフックとExtプラグインは非推奨であるため、使用していない可能性があります。
 
@@ -80,6 +86,8 @@ WildFlyは、 *スタンドアロン* モードまたは *ドメイン* モー�
 ```{note}
 これにより、DXPが複数のWildFlyサーバー上のクラスター環境で実行されるのを防ぐことはできません。 管理者は、スタンドアロンモードで実行されているWildFlyサーバーで実行されているDXPインスタンスのクラスターをセットアップできます。 詳細については、[DXPクラスタリングの記事](../../setting-up-liferay/clustering-for-high-availability.md) を参照してください。
 ```
+
+<a name="wildflyの構成" />
 
 ## WildFlyの構成
 
@@ -102,7 +110,7 @@ WildFlyがDXPを実行するように構成するには、次のものが含ま�
     ```xml
     <system-properties>
         <property name="org.apache.catalina.connector.URI_ENCODING" value="UTF-8" />
-        <property name="org.apache.catalina.connector.USE_BODY_ENCODING_FOR_QUERY_STRING" value="true" />
+        <property name="org.apache.catalina.connector.USE **BODY** ENCODING **FOR** QUERY_STRING" value="true" />
     </system-properties>
     ```
 
@@ -182,7 +190,7 @@ DXPが適切に機能するには、アプリケーションサーバーJVMが`G
 1. ファイルの最後に次のステートメントを追加します。
 
     ```bash
-    JAVA_OPTS="$JAVA_OPTS -Dfile.encoding=UTF-8 -Djava.locale.providers=JRE,COMPAT,CLDR -Djava.net.preferIPv4Stack=true -Duser.timezone=GMT -Djboss.as.management.blocking.timeout=480 -Xms2560m -Xmx2560m -XX:MaxNewSize=1536m -XX:MaxMetaspaceSize=768m -XX:MetaspaceSize=768m -XX:NewSize=1536m -XX:SurvivorRatio=7"
+    JAVA **OPTS="$JAVA** OPTS -Dfile.encoding=UTF-8 -Djava.locale.providers=JRE,COMPAT,CLDR -Djava.net.preferIPv4Stack=true -Duser.timezone=GMT -Djboss.as.management.blocking.timeout=480 -Xms2560m -Xmx2560m -XX:MaxNewSize=1536m -XX:MaxMetaspaceSize=768m -XX:MetaspaceSize=768m -XX:NewSize=1536m -XX:SurvivorRatio=7"
     ```
 
 Javaオプションとメモリ引数について以下に説明します。
@@ -236,6 +244,8 @@ WildFlyサーバーでIBM JDKを使用する場合は、以下の追加手順を
 
 これで、WildFlyにDXPをインストールするための規定のスクリプト変更が完了しました。
 
+<a name="データベースに接続する" />
+
 ## データベースに接続する
 
 データベース構成を処理する最も簡単な方法は、DXPにデータソースを管理させることです。 [セットアップウィザード](../running-liferay-for-the-first-time.md)を使用して、DXPの組み込みデータソースを構成します。 組み込みのデータソースを使用する場合は、このセクションをスキップしてください。
@@ -263,7 +273,7 @@ WildFlyを使用してデータソースを管理する場合は、次の手順�
     データソース`jndi-name`を変更する必要がある場合は、`<default-bindings>`タグ内の`datasource`要素を編集してください。
     ```
 
-1. `<drivers>`要素内にもある`standalone.xml`ファイルの<1>要素にドライバークラス名を追加します。
+1. `<drivers>`要素内にもある`standalone.xml`ファイルの要素にドライバークラス名を追加します。
 
     ```xml
     <drivers>
@@ -303,6 +313,8 @@ WildFlyを使用してデータソースを管理する場合は、次の手順�
 
 これでデータソースが構成され、準備が整いました。
 
+<a name="メールサーバーに接続する" />
+
 ## メールサーバーに接続する
 
 データベース構成と同様に、メールを構成する最も簡単な方法は、DXPにメールセッションを処理させることです。 あなたはDXPの内蔵メールセッションを使用したい場合は、このセクションと飛ばし [configureがメールセッション](../../setting-up-liferay/configuring-mail/connecting-to-a-mail-server.md) コントロールパネルの。
@@ -332,6 +344,8 @@ WildFlyでメールセッションを管理する場合は、次の手順に従�
     mail.session.jndi.name=java:jboss/mail/MailSession
     ```
 
+<a name="dxpのデプロイ" />
+
 ## DXPのデプロイ
 
 1. `ROOT.war`のデプロイをトリガーするには、`$WILDFLY_HOME/standalone/deployments/`フォルダに `ROOT.war.dodeploy`という名前の空のファイルを作成します。
@@ -353,9 +367,11 @@ Liferay DXP Enterpriseサブスクリプションをお持ちの場合、DXPは�
 
 　 DXPはWildFlyで実行されています。
 
+<a name="次のステップ" />
+
 ## 次のステップ
 
-[管理者ユーザーとしてサインイン](../../../getting-started/introduction-to-the-admin-account.md)して、\[DXPでのソリューションの構築\](../../../building_solutions_on_dxp.html)を開始できます。 または、[Liferay DXPのその他のセットアップ](../../setting-up-liferay.md)トピックを参照できます。
+[管理者ユーザーとしてサインイン](../../../getting-started/introduction-to-the-admin-account.md)して、\ [DXPでのソリューションの構築\](../../../building_solutions_on_dxp.html) を開始できます。 または、[Liferay DXPのその他のセットアップ](../../setting-up-liferay.md)トピックを参照できます。
 
 * [Installing the Marketplace Plugin](../../../system-administration/installing-and-managing-apps/getting-started/using-marketplace.md#appendix-installing-the-marketplace-plugin)
 * [試用期間中のプラグインへのアクセス](../../../system-administration/installing-and-managing-apps/installing-apps/accessing-ee-plugins-during-a-trial-period.md)

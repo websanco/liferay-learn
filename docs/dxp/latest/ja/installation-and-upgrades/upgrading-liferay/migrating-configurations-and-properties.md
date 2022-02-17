@@ -2,15 +2,19 @@
 
 現在のDXPインストールのOSGi構成（7.0以降）とプロパティ（[ポータルプロパティ](../../reference/portal-properties.md)や[システムプロパティ](../../reference/system-properties.md)など）によって、ニーズに合わせてDXPインスタンスがセットアップされます。 これらの設定を新しいDXPインスタンスで使用するには、それらを新しいLiferay Homeに移行して更新する必要があります。
 
+<a name="概要" />
+
 ## 概要
 
 * [Liferay Homeの移行](#migrating-liferay-home)
 * [データベースアップグレードの設定の更新](#updating-settings-used-by-the-database-upgrade)
 * [ポータルプロパティの移行](#migrating-portal-properties)
 
+<a name="liferayホームおよびアプリケーションサーバーファイルの移行" />
+
 ## Liferayホームおよびアプリケーションサーバーファイルの移行
 
-1. [バックアップ](../../maintaining-a-liferay-dxp-installation/backing-up.md)からインストールに追加および編集した[Liferayホームファイル](../../maintaining-a-liferay-dxp-installation/backing-up.md#liferay-home)および[アプリケーションサーバーファイル](../../maintaining-a-liferay-dxp-installation/backing-up.md#application-server)をマージします。 ファイルには次のものが含まれる場合がありますが、これらに限定されません。
+1. [バックアップ](../../maintaining-a-liferay-dxp-installation/backing-up.md)からインストールに追加および編集した [Liferayホームファイル](../../maintaining-a-liferay-dxp-installation/backing-up.md#liferay-home) および [アプリケーションサーバーファイル](../../maintaining-a-liferay-dxp-installation/backing-up.md#application-server) をマージします。 ファイルには次のものが含まれる場合がありますが、これらに限定されません。
 
     * `/license/*`：アクティベーションキー。 (サブスクリプション)
     * `/log/*`：ログファイル。
@@ -21,18 +25,20 @@
 
 1. 新しいインストールの`［Liferay Home］/data`フォルダを、バックアップの`［Liferay Home］/data`フォルダと置き換えます。
 
-1. [ファイル ストア (ドキュメント ライブラリ)](../../../system-administration/file-storage/configuring-file-storage.md)を、[バックアップ](../../maintaining-a-liferay-dxp-installation/backing-up.md)から新しいインストールにコピーするか、または[`.config`ファイル](../../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md#creating-configuration-files)を介して使用するように新しいインストールを設定してセットアップします。
+1. [ファイル ストア (ドキュメント ライブラリ)](../../../system-administration/file-storage/configuring-file-storage.md)を、[バックアップ](../../maintaining-a-liferay-dxp-installation/backing-up.md)から新しいインストールにコピーするか、または [`.config`ファイル](../../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md#creating-configuration-files) を介して使用するように新しいインストールを設定してセットアップします。
+
+<a name="データベースアップグレードの設定の更新" />
 
 ## データベースアップグレードの設定の更新
 
-DXPおよび一部のマーケットプレイスアプリのアップグレードプロセスでは、ポータルプロパティとOSGi構成を使用します。 カスタムコードのアップグレードプロセスでも、プロパティの更新と構成の更新が必要になる場合があります。 これらの設定と更新は、データベースのアップグレード_前_に行う必要があります。 その他の更新は、データベースのアップグレード後に行うことができます。
+DXPおよび一部のマーケットプレイスアプリのアップグレードプロセスでは、ポータルプロパティとOSGi構成を使用します。 カスタムコードのアップグレードプロセスでも、プロパティの更新と構成の更新が必要になる場合があります。 これらの設定と更新は、データベースのアップグレード **前** に行う必要があります。 その他の更新は、データベースのアップグレード後に行うことができます。
 
 DXPアップグレードプロセスに必要な設定の更新は次のとおりです。
 
 * [データベースドライバー](#database-drivers)
-* ドキュメントライブラリストアの実装名（[Updating the File Store](./updating-the-file-store.md#updating-the-store-implementation-class-name)を参照）
+* ドキュメントライブラリストアの実装名（ [Updating the File Store](./updating-the-file-store.md#updating-the-store-implementation-class-name) を参照）
 
-```important::
+```{important}
    マーケットプレイスアプリとカスタムコードで、必要な設定の更新を確認してください。
 ```
 
@@ -48,9 +54,11 @@ jdbc.default.driverClassName=com.mysql.cj.jdbc.Driver
 
 その他のドライバーの例については、[Database Templates](../../reference/database-templates.md)を参照してください。
 
+<a name="ポータルプロパティの移行" />
+
 ## ポータルプロパティの移行
 
-```important::
+```{important}
    `` locales```ポータルプロパティ<../../../installation-and-upgrades/reference/portal-properties.md>`_をオーバーライドした場合は、アップグレードする前に新しいインストールでそれをオーバーライドしてください。 これにより、すべてのロケールのデータが確実にアップグレードされます。
 ```
 
@@ -125,7 +133,7 @@ rootDir="{document_library_path}"
 
 1. ファイルストア設定の更新については、[Updating the File Store](./updating-the-file-store.md)で説明しています。
 
-1. Liferay Portal 6.1以前を使用している場合は、[Liferay Portal 6.2で導入された新しいデフォルトにプロパティを適合](https://help.liferay.com/hc/en-us/articles/360017903232-Upgrading-Liferay#review-the-liferay-62-properties-defaults)させてください。
+1. Liferay Portal 6.1以前を使用している場合は、 [Liferay Portal 6.2で導入された新しいデフォルトにプロパティを適合](https://help.liferay.com/hc/en-us/articles/360017903232-Upgrading-Liferay#review-the-liferay-62-properties-defaults) させてください。
 
 1. シャード化された環境がある場合は、[シャード化されていない環境を生成するようにアップグレードを構成](../other-upgrade-scenarios/upgrading-a-sharded-environment.md)します。
 
@@ -137,9 +145,11 @@ rootDir="{document_library_path}"
     sprite.enabled=true
     ```
 
-   ```note::
+   ```{note}
       好きなフレームワークを使用して画像スプライトを作成し、プラグインにデプロイできます。
    ```
+
+<a name="次のステップ" />
 
 ## 次のステップ
 

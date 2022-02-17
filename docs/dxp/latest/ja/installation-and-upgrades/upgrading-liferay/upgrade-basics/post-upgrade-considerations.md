@@ -2,6 +2,8 @@
 
 データベースをアップグレードした後、本番環境用にLiferayを再度構成し、Liferayインスタンスに影響を与える可能性のある機能の変更を確認する必要があります。
 
+<a name="本番環境設定を再度有効にする" />
+
 ## 本番環境設定を再度有効にする
 
 データベースのアップグレードが完了したら、本番環境設定を再度有効にします。
@@ -16,9 +18,9 @@ rm osgi/configs/com.liferay.portal.search.configuration.IndexStatusManagerConfig
 
 ほとんどのアップグレードでは検索インデックスの再インデックス化が必要ですが、通常、同じLiferayバージョン内でサービスパックを適用したり、新しいGA（ローリングリリース）にアップグレードしたりする場合は必要ありません。 インデックスを再構築する方法は次のとおりです。
 
-1. *グローバルメニュー* （![Global Menu icon](./post-upgrade-considerations/images/01.png)）をクリックし、*［コントロールパネル］*タブを選択します。 コントロールパネルが表示されます。
+1. **グローバルメニュー**（![Global Menu icon](./post-upgrade-considerations/images/01.png)）をクリックし、 ［**コントロールパネル**］ タブを選択します。 コントロールパネルが表示されます。
 
-1. ［設定］セクションで*［検索機能］*をクリックし、*［アクションをインデックスする］*タブを選択し、*［Reindex all search indexes］*に対し*［実行］*をクリックします。インデックスの再構築が実行され、完了すると成功メッセージが表示されます。
+1. ［設定］セクションで ［**検索機能**］ をクリックし、 ［**アクションをインデックスする**］ タブを選択し、 ［**Reindex all search indexes**］ に対し ［**実行**］ をクリックします。インデックスの再構築が実行され、完了すると成功メッセージが表示されます。
 
 ![コントロールパネルでサーチインデックスのインデックスを再作成できます。](./post-upgrade-considerations/images/02.png)
 
@@ -28,15 +30,19 @@ rm osgi/configs/com.liferay.portal.search.configuration.IndexStatusManagerConfig
 
 ### データベース設定
 
-データベースをアップグレードする前に、アップグレード用にデータベースを調整している場合があります（[アップグレードのためのデータベース調整](../upgrade-stability-and-performance/database-tuning-for-upgrades.md)を参照）。 アップグレードが完了したので、本番環境データベースの設定を復元します。
+データベースをアップグレードする前に、アップグレード用にデータベースを調整している場合があります（ [アップグレードのためのデータベース調整](../upgrade-stability-and-performance/database-tuning-for-upgrades.md) を参照）。 アップグレードが完了したので、本番環境データベースの設定を復元します。
 
 ```{note}
-データのアップグレード中にシャード化された環境から移行した場合、仮想インスタンスへの移行を完了するには、構成をさらに調整する必要があります。 詳細は、[Upgrade and Update Properties](../other-upgrade-scenarios/upgrading-a-sharded-environment.md#Upgrade-and-Update-Properties)のセクションを参照してください。
+データのアップグレード中にシャード化された環境から移行した場合、仮想インスタンスへの移行を完了するには、構成をさらに調整する必要があります。 詳細は、 [Upgrade and Update Properties](../other-upgrade-scenarios/upgrading-a-sharded-environment.md#Upgrade-and-Update-Properties) のセクションを参照してください。
 ```
+
+<a name="最新のマーケットプレイスアプリのインストール" />
 
 ## 最新のマーケットプレイスアプリのインストール
 
 新しいLiferayバージョンの[マーケットプレイスアプリ](../../../system-administration/installing-and-managing-apps/installing-apps/downloading-apps.md)の最新バージョンをまだインストールしていない場合は、それらをインストールし、[Gogoシェルコマンド](../upgrade-stability-and-performance/upgrading-modules-using-gogo-shell.md)を使用して、必要なデータベースのアップグレードを確認して実行します。
+
+<a name="機能変更の考慮" />
 
 ## 機能変更の考慮
 
@@ -46,7 +52,7 @@ rm osgi/configs/com.liferay.portal.search.configuration.IndexStatusManagerConfig
 
 7.1より前は、すべてのユーザーがデフォルトでWebコンテンツの記事を表示できました。 現在は、表示権限がデフォルトでオンになっています。 表示権限を開くための主なオプションは次のとおりです。
 
-**オプション1：**_［コントロールパネル］_ → _［設定］_ → _［System Settings］_ → _［Web Content］_ → _［Virtual Instance Scope］_ → _［Web Content］_に移動し、_［Article view permissions check enabled］_の選択を解除して、すべてのWebコンテンツの記事の表示権限を開きます。
+**オプション1：**［**コントロールパネル**］ → ［**設定**］ → ［**System Settings**］ → ［**Web Content**］ → ［**Virtual Instance Scope**］ → ［**Web Content**］ に移動し、 ［**Article view permissions check enabled**］ の選択を解除して、すべてのWebコンテンツの記事の表示権限を開きます。
 
 ![［システム設定］の［Webコンテンツ］メニューを下にスクロールして、Webコンテンツを表示するための権限チェックを無効にします。](./post-upgrade-considerations/images/03.png)
 
@@ -62,9 +68,13 @@ Unable to add the journal article image {filename} into the file repository
 
 そのようなメッセージがない場合は、すべての画像がファイルストアにあるはずです。 Webコンテンツの記事をプレビューして、画像を確認できます。
 
+<a name="メンテナンスモードでの非推奨項目と機能の考慮" />
+
 ## メンテナンスモードでの非推奨項目と機能の考慮
 
 [メンテナンスモードでの非推奨項目と機能](../reference/maintenance-mode-and-deprecations-in-7-3.md)を確認し、Liferayインスタンスへの影響に対応するための計画を立ててください（まだ行ってない場合）。
+
+<a name="廃止されたデータを削除する" />
 
 ## 廃止されたデータを削除する
 
@@ -72,7 +82,9 @@ Unable to add the journal article image {filename} into the file repository
 
 * 廃止されたLiferayアプリまたはモジュールからのデータ。 [データクリーンアップ](../reference/data-cleanup.md)ツールを使用して削除します。
 
-* 利用可能なLiferayアプリおよびモジュールからの廃止されたデータ。 [データ削除](../reference/data-removal.md)ツールを使用して削除します。
+* 利用可能なLiferayアプリおよびモジュールからの廃止されたデータ。 [データ削除](../reference/data-removal.md) ツールを使用して削除します。
+
+<a name="まとめ" />
 
 ## まとめ
 

@@ -4,13 +4,13 @@
 
 ジャーナル記事の中間バージョンを削除する手順の例を次に示します。
 
-1. **保持する最新バージョンの数を決定します。**元のバージョンと最新バージョンを保持する必要がありますが、追加の最新バージョンを保持することもできます。 たとえば、2つの最新バージョンを保持することも、最新バージョンのみを保持することもできます。
+1. **保持する最新バージョンの数を決定します。** 元のバージョンと最新バージョンを保持する必要がありますが、追加の最新バージョンを保持することもできます。 たとえば、2つの最新バージョンを保持することも、最新バージョンのみを保持することもできます。
 
-2. **エンティティのバージョンを削除する方法を見つけます。**Liferay DXPの[アプリAPI](https://docs.liferay.com/dxp/apps/)と[com.liferay.portal.kernel API](https://learn.liferay.com/reference/latest/en/dxp/javadocs/portal-kernel/)が使用可能なオプションです。
+2. **エンティティのバージョンを削除する方法を見つけます。** Liferay DXPの [アプリAPI](https://docs.liferay.com/dxp/apps/) と [com.liferay.portal.kernel API](https://learn.liferay.com/reference/latest/en/dxp/javadocs/portal-kernel/) が使用可能なオプションです。
 
-    [Service Builder](https://help.liferay.com/hc/en-us/articles/360030958811-Running-Service-Builder)エンティティの場合は、エンティティの`*LocalServiceUtil`クラスの`delete*`メソッドを調べます。
+    [Service Builder](https://help.liferay.com/hc/en-us/articles/360030958811-Running-Service-Builder) エンティティの場合は、エンティティの`*LocalServiceUtil`クラスの`delete*`メソッドを調べます。
 
-    たとえば、[`JournalArticleLocalServiceUtil`](https://docs.liferay.com/dxp/apps/web-experience/latest/javadocs/com/liferay/journal/service/JournalArticleLocalServiceUtil.html#deleteArticle-long-java.lang.String-double-java.lang.String-com.liferay.portal.kernel.service.ServiceContext-)の次の`deleteArticle`は、ジャーナル記事のバージョンを1つ削除します。
+    たとえば、 [`JournalArticleLocalServiceUtil`](https://docs.liferay.com/dxp/apps/web-experience/latest/javadocs/com/liferay/journal/service/JournalArticleLocalServiceUtil.html#deleteArticle-long-java.lang.String-double-java.lang.String-com.liferay.portal.kernel.service.ServiceContext-) の次の`deleteArticle`は、ジャーナル記事のバージョンを1つ削除します。
 
     ```java
     deleteArticle(long groupId, java.lang.String articleId, double version,
@@ -18,7 +18,7 @@
         com.liferay.portal.kernel.service.ServiceContext serviceContext)
     ```
 
-3. **削除するエンティティのバージョンとそれらを削除するために必要な情報を集約します。**たとえば、削除基準に一致する範囲内のすべての`JournalArticle`バージョンを取得し、それらのエンティティIDとグループIDをバージョンに関連付けます（上記の`deleteArticle`メソッドにはエンティティIDとグループIDが必要です）。
+3. **削除するエンティティのバージョンとそれらを削除するために必要な情報を集約します。** たとえば、削除基準に一致する範囲内のすべての`JournalArticle`バージョンを取得し、それらのエンティティIDとグループIDをバージョンに関連付けます（上記の`deleteArticle`メソッドにはエンティティIDとグループIDが必要です）。
 
     エンティティオブジェクト（`JournalArticle`など）には通常、バージョンフィールドがあります。 `JournalArticleResource`には、各`JournalArticle`の記事ID（エンティティのID）とグループIDがあります。 `JournalArticleResource`は各`JournalArticle`を取得するための鍵で、複数のバージョンを持つことができます。 削除する`JournalArticle`バージョンを特定する手順は次のとおりです。
 
@@ -29,7 +29,7 @@
             JournalArticleLocalServiceUtil.getJournalArticleResources(start, end);
         ```
 
-    1. 各`JournalArticleResource`に関連付けられた`JournalArticle`オブジェクトを介して、各`JournalArticle`バージョンのワークフローステータスを取得します。 [動的クエリ](https://help.liferay.com/hc/en-us/articles/360030614272-Dynamic-Query)は、各オブジェクトから必要なデータを正確に取得する効率的な方法です。
+    1. 各`JournalArticleResource`に関連付けられた`JournalArticle`オブジェクトを介して、各`JournalArticle`バージョンのワークフローステータスを取得します。 [動的クエリ](https://help.liferay.com/hc/en-us/articles/360030614272-Dynamic-Query) は、各オブジェクトから必要なデータを正確に取得する効率的な方法です。
 
         <!--Add back link for 'Dynamic Query' once dynamic-query article is available-->
 
@@ -59,7 +59,7 @@
         }
         ```
 
-    1. `JournalArticleResource`ごとに（`JournalArticle`エンティティごとに1つあります）、保持する最初のバージョンと最新バージョンの範囲内にあり、かつステータスが削除に適している中間バージョンのリストを作成します。 たとえば、承認済みまたは期限切れの中間記事バージョン（[WorkflowConstants.STATUS_APPROVEDまたはWorkflowConstants.STATUS_EXPIRED](https://learn.liferay.com/reference/latest/en/dxp/javadocs/portal-kernel/com/liferay/portal/kernel/workflow/WorkflowConstants.html)）を削除することができます。 `MIN_NUMBER_FIRST_VERSIONS_KEPT`および`MIN_NUMBER_LATEST_VERSIONS_KEPT`変数は、保持する最初の（最も古い）バージョンと最新の（最も新しい）バージョンの最小数と最大数をマークします。
+    1. `JournalArticleResource`ごとに（`JournalArticle`エンティティごとに1つあります）、保持する最初のバージョンと最新バージョンの範囲内にあり、かつステータスが削除に適している中間バージョンのリストを作成します。 たとえば、承認済みまたは期限切れの中間記事バージョン（ [WorkflowConstants.STATUS **APPROVEDまたはWorkflowConstants.STATUS** EXPIRED](https://learn.liferay.com/reference/latest/en/dxp/javadocs/portal-kernel/com/liferay/portal/kernel/workflow/WorkflowConstants.html) ）を削除することができます。 `MIN_NUMBER_FIRST_VERSIONS_KEPT`および`MIN_NUMBER_LATEST_VERSIONS_KEPT`変数は、保持する最初の（最も古い）バージョンと最新の（最も新しい）バージョンの最小数と最大数をマークします。
 
         ```java
         List<Double> journalArticlesVersionsToDelete =
@@ -70,14 +70,14 @@
             double version = (double) result.get(i)[1];
             int status = (int) result.get(i)[2];
 
-            if ((status == WorkflowConstants.STATUS_APPROVED) || (status == WorkflowConstants.STATUS_EXPIRED) {
+            if ((status == WorkflowConstants.STATUS **APPROVED) || (status == WorkflowConstants.STATUS** EXPIRED) {
 
-                if (i < MIN_NUMBER_FIRST_VERSIONS_KEPT) {
+                if (i < MIN **NUMBER** FIRST **VERSIONS** KEPT) {
                     continue;
                 }
 
                 if (i >= (result.size() -
-                    MIN_NUMBER_LATEST_VERSIONS_KEPT)) {
+                    MIN **NUMBER** LATEST **VERSIONS** KEPT)) {
                     continue;
                 }
 
@@ -104,6 +104,8 @@
 ```tip::
    削除する各オブジェクトのバージョン（およびその他の必要な情報）を印刷します。 削除をコミットする前に、オブジェクト削除呼び出しをコメントアウトし、テストとして削除するバージョンのプリントアウトを読み取ることもできます。
 ```
+
+<a name="追加情報" />
 
 ## 追加情報
 

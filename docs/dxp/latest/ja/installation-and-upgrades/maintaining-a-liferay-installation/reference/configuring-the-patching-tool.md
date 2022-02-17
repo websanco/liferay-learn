@@ -11,6 +11,8 @@
 * [手動設定](#manual-configuration)
 * [パッチプロファイルの使用](#using-patching-profiles)
 
+<a name="自動検出を使用した自動構成" />
+
 ## `自動検出を使用した自動構成`
 
 Patching Toolの `auto-discovery` コマンドは、DXPファイルをスキャンし、パッチに使用するプロパティファイルにそれらのパスを書き込みます。
@@ -58,6 +60,8 @@ The configuration hasn't been saved. Please save this to the default.properties 
 * Liferayホームがパッチツールのツリーにある場合は、Liferayホームフォルダーに `.liferay-home` ファイルを作成し、 `auto-discovery` コマンドを再実行します。
 * プロパティファイルの `liferay.home` プロパティでLiferayホームパスを指定します（例： `default.properties`）。
 
+<a name="構成のテスト" />
+
 ## 構成のテスト
 
 パッチツールが設定されている場合、 `info` コマンドを実行すると、次のようなすべての製品情報とパッチ情報が報告されます。
@@ -78,9 +82,11 @@ Product information:
 
 情報が正しくない場合は、構成を手動で編集します。
 
+<a name="手動設定" />
+
 ## 手動設定
 
-パッチツールプロパティファイルを編集します。 `auto-discovery` コマンドは、デフォルトで `default.properties` ファイルを作成するか、指定したファイル（例： [Patching Profile](#using-patching-profiles)）を作成します。
+パッチツールプロパティファイルを編集します。 `auto-discovery` コマンドは、デフォルトで `default.properties` ファイルを作成するか、指定したファイル（例： [Patching Profile](#using-patching-profiles) ）を作成します。
 
 ### 一般的なプロパティ
 
@@ -94,8 +100,8 @@ Product information:
 | `module.framework.portal.path`      | DXPの `osgi/portal` フォルダーへのパス。                                                                                                                                          |
 | `module.framework.static.path`      | DXPの `osgi/static` フォルダーへのパス。                                                                                                                                          |
 | `patches.folder`                    | パッチを保存する場所を指定します。 デフォルトの場所は `./patches`です。                                                                                                                             |
-| `patching.mode` **（DXP 2.0のみ）**     | パッチには、更新されたバイナリファイルとソースファイルが含まれています。 モードは、適用するファイルタイプを決定します。<br><br>* `binary`（デフォルト）：DXPインストールの更新用。<br>* `source`：DXPを拡張するソースツリーの更新用。               |
-| `source.path` **（DXP 2.0のみ）**       | DXPソースツリーの場所を指定します。 `source.path`は、`patching-mod`eが`source`の場合にのみ使用されます。                                                                                               |
+| `patching.mode` （**DXP 2.0のみ**） | パッチには、更新されたバイナリファイルとソースファイルが含まれています。 モードは、適用するファイルタイプを決定します。<br><br> **`binary`（デフォルト）：DXPインストールの更新用。<br>** `source`：DXPを拡張するソースツリーの更新用。               |
+| `source.path` （**DXP 2.0のみ**） | DXPソースツリーの場所を指定します。 `source.path`は、`patching-mod`eが`source`の場合にのみ使用されます。                                                                                               |
 | `war.path`                          | DXP Webアプリケーションへのパス（展開されたフォルダー構造または `.war` ファイルへのパス）を指定します。                                                                                                            |
 
 ### プロキシ設定
@@ -127,6 +133,8 @@ proxy.https.password=password
 #proxy.socks.password=password
 ```
 
+<a name="パッチプロファイルの使用" />
+
 ## パッチプロファイルの使用
 
 自動検出を実行するか、手動でプロファイルを作成することにより、複数のランタイムのプロファイルを作成できます。 DXPランタイムを自動検出するには、次のようなパラメータを使用してパッチツールを実行します。
@@ -142,6 +150,8 @@ proxy.https.password=password
 ```bash
 ./patching-tool.sh test-server install
 ```
+
+<a name="追加情報" />
 
 ## 追加情報
 

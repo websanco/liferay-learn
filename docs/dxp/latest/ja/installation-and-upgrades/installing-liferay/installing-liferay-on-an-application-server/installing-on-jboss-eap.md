@@ -2,22 +2,28 @@
 
 JBoss EAPにインストールするには、DXP WARのインストール、依存関係のインストール、JBossの設定、およびDXPのデプロイが必要です。 データベースとメールサーバーの接続も設定する必要があります。
 
+<a name="前提条件" />
+
 ## 前提条件
 
-Liferay DXPにはJava JDK 8または11が必要です。 詳細は、[互換性マトリクス](https://help.liferay.com/hc/en-us/articles/360049238151)を参照してください。
+Liferay DXPにはJava JDK 8または11が必要です。 詳細は、 [互換性マトリクス](https://help.liferay.com/hc/en-us/articles/360049238151) を参照してください。
 
-これらのファイルを [ヘルプセンター](https://customer.liferay.com/downloads) （サブスクリプション）または [Liferayコミュニティダウンロード](https://www.liferay.com/downloads-community)からダウンロードします。
+これらのファイルを [ヘルプセンター](https://customer.liferay.com/downloads) （サブスクリプション）または [Liferayコミュニティダウンロード](https://www.liferay.com/downloads-community) からダウンロードします。
 
 * DXP WARファイル
 * OSGi依存関係のZIPファイル
 * 依存関係のZIPファイル（DXP 7.3以前）
 
-[*Liferay Home*](../../reference/liferay-home.md) は、JBossサーバーフォルダーを含むフォルダーです。 DXPをインストールしてデプロイした後、`data`、`deploy`、および`logs`フォルダを生成します。 `$JBOSS_HOME` はJBossサーバーフォルダーを参照します。 このフォルダーの名前は通常 `jboss-eap-［version］`です。
+[**Liferay Home**](../../reference/liferay-home.md) は、JBossサーバーフォルダーを含むフォルダーです。 DXPをインストールしてデプロイした後、`data`、`deploy`、および`logs`フォルダを生成します。 `$JBOSS_HOME` はJBossサーバーフォルダーを参照します。 このフォルダーの名前は通常 `jboss-eap-［version］`です。
+
+<a name="dxp-warのインストール" />
 
 ## DXP WARのインストール
 
 1. フォルダー `$JBOSS_HOME/standalone/deployments/ROOT.war` がJBossインストールにすでに存在する場合は、そのサブフォルダーとファイルをすべて削除します。 それ以外の場合は、 `$JBOSS_HOME/standalone/deployments/ROOT.war`という名前の新しいフォルダーを作成します。
 1. DXP `.war` ファイルを `ROOT.war` フォルダーに解凍します。
+
+<a name="依存関係をインストールする" />
 
 ## 依存関係をインストールする
 
@@ -62,9 +68,11 @@ DXP 7.3以前の場合は、次の追加手順に従います。
     <resource-root path="com.liferay.petra.concurrent.jar" />
     ```
 
+<a name="スタンドアロンモードとドメインモードのjboss-eapでのdxpの実行" />
+
 ## スタンドアロンモードとドメインモードのJBoss EAPでのDXPの実行
 
-JBoss EAPは、 *スタンドアロン* モードまたは *ドメイン* モードのいずれかで起動できます。 ドメインモードでは、単一のコントロールポイントから複数のアプリケーションサーバーインスタンスを管理できます。 このようなアプリケーションサーバーのコレクションは、 *ドメイン*と呼ばれます。 ドメインモード対スタンドアロンモードの詳細は、このトピックに関するセクションを参照してください [のJBoss EAP製品ドキュメント](https://access.redhat.com/documentation/en-us/red_hat_jboss_enterprise_application_platform/7.1/html/introduction_to_jboss_eap/overview_of_jboss_eap#operating_modes)。
+JBoss EAPは、 **スタンドアロン** モードまたは **ドメイン** モードのいずれかで起動できます。 ドメインモードでは、単一のコントロールポイントから複数のアプリケーションサーバーインスタンスを管理できます。 このようなアプリケーションサーバーのコレクションは、 **ドメイン** と呼ばれます。 ドメインモード対スタンドアロンモードの詳細は、このトピックに関するセクションを参照してください [のJBoss EAP製品ドキュメント](https://access.redhat.com/documentation/en-us/red_hat_jboss_enterprise_application_platform/7.1/html/introduction_to_jboss_eap/overview_of_jboss_eap#operating_modes) 。
 
 DXPは、スタンドアロンモードで実行する場合はJBoss EAPをサポートしますが、ドメインモードで実行する場合はサポートしません。 JBossはファイル（展開または非展開）をコピーして管理対象デプロイメントのコンテンツを管理するため、DXPの自動展開は管理対象デプロイメントでは機能しません。 これにより、JSPフックとExtプラグインが意図したとおりに機能しなくなります。 たとえば、DXPのJSPオーバーライドメカニズムはアプリケーションサーバーに依存しているため、JSPフックは管理対象ドメインモードで実行されているJBoss EAPでは機能しません。 ただし、JSPフックとExtプラグインは非推奨であるため、使用していない可能性があります。
 
@@ -73,6 +81,8 @@ DXPは、スタンドアロンモードで実行する場合はJBoss EAPをサ�
 ```{note}
 これにより、DXPが複数のJBossサーバー上のクラスター環境で実行されるのを防ぐことはできません。 スタンドアロンモードで実行されているJBoss EAPサーバーで実行されているインスタンスのクラスターを設定できます。 詳細については、[クラスタリングの記事](../../setting-up-liferay/clustering-for-high-availability.md) を参照してください。
 ```
+
+<a name="jbossの構成" />
 
 ## JBossの構成
 
@@ -95,7 +105,7 @@ JBossの構成手順は次のとおりです。
     ```xml
     <system-properties>
         <property name="org.apache.catalina.connector.URI_ENCODING" value="UTF-8" />
-        <property name="org.apache.catalina.connector.USE_BODY_ENCODING_FOR_QUERY_STRING" value="true" />
+        <property name="org.apache.catalina.connector.USE **BODY** ENCODING **FOR** QUERY_STRING" value="true" />
     </system-properties>
     ```
 
@@ -179,7 +189,7 @@ DXPでは、アプリケーションサーバーのJVMが `GMT`タイムゾー�
 1. ファイルの最後に次のステートメントを追加します。
 
     ```bash
-    JAVA_OPTS="$JAVA_OPTS -Dfile.encoding=UTF-8 -Djava.locale.providers=JRE,COMPAT,CLDR -Djava.net.preferIPv4Stack=true -Duser.timezone=GMT -Djboss.as.management.blocking.timeout=480 -Xms2560m -Xmx2560m -XX:MaxNewSize=1536m -XX:MaxMetaspaceSize=768m -XX:MetaspaceSize=768m -XX:NewSize=1536m -XX:SurvivorRatio=7"
+    JAVA **OPTS="$JAVA** OPTS -Dfile.encoding=UTF-8 -Djava.locale.providers=JRE,COMPAT,CLDR -Djava.net.preferIPv4Stack=true -Duser.timezone=GMT -Djboss.as.management.blocking.timeout=480 -Xms2560m -Xmx2560m -XX:MaxNewSize=1536m -XX:MaxMetaspaceSize=768m -XX:MetaspaceSize=768m -XX:NewSize=1536m -XX:SurvivorRatio=7"
     ```
 
 Javaオプションとメモリ引数について以下に説明します。
@@ -230,6 +240,8 @@ JBossサーバーでIBM JDKを使用する場合は、以下の追加手順を�
 追加されたパスは、ポータルのデプロイメントの例外と画像のアップロードの問題を解決します。
 
 スクリプトの変更が完了しました。
+
+<a name="データベースに接続する" />
 
 ## データベースに接続する
 
@@ -296,6 +308,8 @@ JBossを使用してデータソースを管理する場合は、次の手順に
 
 これで、データソースが構成され、データベースに接続する準備ができました。
 
+<a name="メールサーバーに接続する" />
+
 ## メールサーバーに接続する
 
 データベース構成と同様に、構成するのが最も簡単なメールセッションはDXPです。 DXPの組み込みのメールセッションを使用する場合は、このセクションをスキップして、コントロールパネルの[メールサーバーに接続](../../setting-up-liferay/configuring-mail/connecting-to-a-mail-server.md)してください。
@@ -327,6 +341,8 @@ JBossでメールセッションを設定する場合は、以下の手順に従
     mail.session.jndi.name=java:jboss/mail/MailSession
     ```
 
+<a name="dxpのデプロイ" />
+
 ## DXPのデプロイ
 
 1. `ROOT.war`ファイルのデプロイをトリガーするには、`$JBOSS_HOME/standalone/deployments/`フォルダに`ROOT.war.dodeploy`という名前の空のファイルを作成します。 起動時に、JBossはこのファイルを検出し、Webアプリケーションとしてデプロイします。
@@ -348,9 +364,11 @@ Liferay DXP Enterpriseサブスクリプションをお持ちの場合、DXPは�
 
 　 DXPはJBoss EAPで実行されています。
 
+<a name="次のステップ" />
+
 ## 次のステップ
 
-[管理者ユーザーとしてサインイン](../../../getting-started/introduction-to-the-admin-account.md)して、\[DXPでのソリューションの構築\](../../../building_solutions_on_dxp.html)を開始できます。 または、[Liferay DXPのその他のセットアップ](../../setting-up-liferay.md)トピックを参照できます。
+[管理者ユーザーとしてサインイン](../../../getting-started/introduction-to-the-admin-account.md)して、\ [DXPでのソリューションの構築\](../../../building_solutions_on_dxp.html) を開始できます。 または、[Liferay DXPのその他のセットアップ](../../setting-up-liferay.md)トピックを参照できます。
 
 * [Installing the Marketplace Plugin](../../../system-administration/installing-and-managing-apps/getting-started/using-marketplace.md#appendix-installing-the-marketplace-plugin)
 * [試用期間中のプラグインへのアクセス](../../../system-administration/installing-and-managing-apps/installing-apps/accessing-ee-plugins-during-a-trial-period.md)

@@ -15,6 +15,8 @@ Liferay DXPは、最小から最大までのすべてのWebサイトに対応す
 
 Liferay DXPは、複数のマシンのクラスター（水平クラスター）または単一のマシン上の複数のVMのクラスター（垂直クラスター）、または任意の組み合わせでうまく機能します。
 
+<a name="クラスタリング要件" />
+
 ## クラスタリング要件
 
 これは、効果的に機能するDXPクラスターを作成するために必要なものです。
@@ -30,6 +32,8 @@ Liferay DXPは、複数のマシンのクラスター（水平クラスター）
 1. [すべてのノード間で通信とキャッシュレプリケーションを有効にするように構成されたクラスターリンク](./clustering-for-high-availability/configuring-cluster-link.md)
 
 DXPクラスターを構成したら、それにアプリケーションをデプロイし、ユーザーエクスペリエンスを引き続き改善できます。 詳細は、「 [クラスタ化インストールの維持](../maintaining-a-liferay-dxp-installation/maintaining-clustered-installations/maintaining-clustered-installations.md) 」を参照してください。
+
+<a name="次のステップ" />
 
 ## 次のステップ
 

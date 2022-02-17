@@ -10,7 +10,7 @@ securing-liferay/using-antisamy.md
 securing-liferay/securing-web-services.md
 ```
 
-Liferay DXPはセキュリティを考慮して構築されています。 これには、[OWASPトップ10](https://www.owasp.org/index.php/Top_10_2013-Top_10)および[CWE/SANSトップ25](https://www.sans.org/top25-software-errors/)で説明されているような一般的なセキュリティの脆弱性と悪用の緩和が含まれます。
+Liferay DXPはセキュリティを考慮して構築されています。 これには、 [OWASPトップ10](https://www.owasp.org/index.php/Top_10_2013-Top_10) および [CWE/SANSトップ25](https://www.sans.org/top25-software-errors/) で説明されているような一般的なセキュリティの脆弱性と悪用の緩和が含まれます。
 
 Liferayのインストールのセキュリティ保護には、ホスティング環境、データベース、検索プロバイダー、アプリケーションサーバー、およびLiferay DXP自体のベストセキュリティプラクティスに従う方法などがありますが、これらに限定されるものではありません。
 
@@ -24,20 +24,26 @@ Liferayのインストールのセキュリティ保護には、ホスティン�
 セキュリティパッチがリリースされたら、それらを展開することをお勧めします。 コミュニティとCEのインストールの場合は、以前のセキュリティパッチがすべて含まれている最新のコミュニティリリースを常に使用することをお勧めします。
 ```
 
+<a name="認証" />
+
 ## 認証
 
-LiferayDXP認証は柔軟です。 デフォルトでは、ユーザーは_［Sign In］_ウィジェットを使用してLiferay DXPにログインします。このウィジェットでは、データベースを使用してユーザーを認証します。 デフォルトでは、ゲストは［Sign In］ウィジェットを使用して、デフォルトの権限を持つアカウントを作成できます。 デフォルトの認証エクスペリエンスのほぼすべての要素は、管理者が変更できます。 例:
+LiferayDXP認証は柔軟です。 デフォルトでは、ユーザーは ［**Sign In**］ ウィジェットを使用してLiferay DXPにログインします。このウィジェットでは、データベースを使用してユーザーを認証します。 デフォルトでは、ゲストは［Sign In］ウィジェットを使用して、デフォルトの権限を持つアカウントを作成できます。 デフォルトの認証エクスペリエンスのほぼすべての要素は、管理者が変更できます。 例:
 
 * [多要素認証](./securing-liferay/multi-factor-authentication/using-multi-factor-authentication.md)を設定できます。
 * [SSOを使用して](./securing-liferay/configuring-sso.md)認証を管理できます。
 * Liferayは、ポータルデータベースを使用する代わりに、[LDAPと統合](../users-and-permissions/connecting-to-a-user-directory/connecting-to-an-ldap-directory.md)してユーザーを検証することもできます。
-* ゲストアカウントの作成を[オフ](./securing-liferay/authentication-basics.md#disabling-guest-account-creation)にすることができます。
+* ゲストアカウントの作成を [オフ](./securing-liferay/authentication-basics.md#disabling-guest-account-creation) にすることができます。
 
 詳細は、[Authentication Basics](./securing-liferay/authentication-basics.md)をご覧ください。
+
+<a name="権限" />
 
 ## 権限
 
 Liferay DXPには、堅牢なロールベースのアクセス制御（RBAC）システムがあります。 ユーザーは、サイト、チーム、ユーザーグループ、または組織に割り当てることができます。 カスタムのロールを作成し、権限をこれらのロールに割り当て、それらのロールをユーザーに割り当てることができます。 ロールは、サイト、組織、またはグローバルなどの特定のコンテキストでのみ適用されるようにスコープが設定されています。 詳細は、[ロールと権限](../users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.md)を参照してください。
+
+<a name="webサービスの保護" />
 
 ## Webサービスの保護
 
@@ -49,26 +55,32 @@ Liferay Webサービスには、セキュリティと承認に対する多層的
 
 詳細は、[Webサービスの保護の概要](./securing-liferay/securing-web-services.md)を参照してください。
 
+<a name="セキュリティの微調整" />
+
 ## セキュリティの微調整
 
 追加のセキュリティ機能を微調整または無効にする方法は複数あります。
 
-* Liferay PortalのHTTPS [Webサーバー](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#Web%20Server)アドレスを設定する。
-* ユーザーを[リダイレクト](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#Redirect)できる許可されているサーバーのリストを構成する。
-* 任意のページからアクセスできる[ポートレット](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#Portlet)のリストを構成する。
+* Liferay PortalのHTTPS [Webサーバー](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#Web%20Server) アドレスを設定する。
+* ユーザーを [リダイレクト](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#Redirect) できる許可されているサーバーのリストを構成する。
+* 任意のページからアクセスできる [ポートレット](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#Portlet) のリストを構成する。
 * アップロードおよびダウンロードを許可するファイルタイプを設定します。
 
-これらの機能は、[ポータルプロパティ](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html)を使用して構成できます。
+これらの機能は、 [ポータルプロパティ](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html) を使用して構成できます。
 
 ```{warning}
 Liferayポータルの理念は「デフォルトで安全」です。 セキュリティ固有のデフォルトまたはホワイトリストを変更する場合は、十分に注意してください。 このようなアクションは、セキュリティの設定ミスや安全でないデプロイにつながる可能性があります。
 ```
 
+<a name="追加情報" />
+
 ## 追加情報
 
-Liferay Portalのインストールのセキュリティ保護の詳細は、[当社のセキュリティステートメント](https://www.liferay.com/security)、[コミュニティセキュリティチーム](https://portal.liferay.dev/people/community-security-team)、およびこれらのページに記載されているリソースを参照してください。
+Liferay Portalのインストールのセキュリティ保護の詳細は、 [当社のセキュリティステートメント](https://www.liferay.com/security) 、 [コミュニティセキュリティチーム](https://portal.liferay.dev/people/community-security-team) 、およびこれらのページに記載されているリソースを参照してください。
 
-[Liferay マーケットプレイス](https://www.liferay.com/marketplace)から追加のセキュリティプラグインを入手できます。
+[Liferay マーケットプレイス](https://www.liferay.com/marketplace) から追加のセキュリティプラグインを入手できます。
+
+<a name="次のステップ" />
 
 ## 次のステップ
 

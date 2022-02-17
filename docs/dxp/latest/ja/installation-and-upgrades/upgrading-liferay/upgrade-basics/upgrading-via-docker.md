@@ -23,6 +23,8 @@ Dockerをお持ちではありませんか？ まずは以下をご確認くだ�
 アップグレードする前に、**必ず**データベースと既存のインストールを[バックアップ](../../maintaining-a-liferay-dxp-installation/backing-up.md)してください。 バックアップコピーでアップグレードプロセスをテストすることをお勧めします。
 ```
 
+<a name="最新のdockerイメージによるアップグレード" />
+
 ## 最新のDockerイメージによるアップグレード
 
 Dockerイメージを使用してアップグレードする手順は次のとおりです。
@@ -37,17 +39,17 @@ Dockerイメージを使用してアップグレードする手順は次のと�
     mkdir -p new-version/deploy
     ```
 
-    * `files`: Dockerコンテナはこのフォルダからコンテナの[Liferay Home](../../reference/liferay-home.md)フォルダにファイルをコピーします。
+    * `files`: Dockerコンテナはこのフォルダからコンテナの [Liferay Home](../../reference/liferay-home.md) フォルダにファイルをコピーします。
 
     * `deploy`: Dockerコンテナは、このフォルダからコンテナの自動デプロイ用フォルダにアーティファクトをコピーします。
 
-1. [コマース](https://learn.liferay.com/commerce/latest/en/index.html)を使用している場合は、コマースをアップグレードする準備をしてください。  詳細については、[Upgrading Liferay Commerce](https://learn.liferay.com/commerce/latest/en/installation-and-upgrades/upgrading-liferay-commerce.html)を参照してください。
+1. [コマース](https://learn.liferay.com/commerce/latest/ja/index.html) を使用している場合は、コマースをアップグレードする準備をしてください。  詳細については、 [Liferay Commerceのアップグレード](https://learn.liferay.com/commerce/latest/ja/installation-and-upgrades/upgrading-liferay-commerce.html) を参照してください。
 
 1. Liferayデータベースのアップグレードと一緒にマーケットプレイスアプリのデータをアップグレードする場合は、新しいLiferayバージョンの対象となる各アプリの最新バージョンを[ダウンロード](../../../system-administration/installing-and-managing-apps/installing-apps/downloading-apps.md)して、`new-version/deploy`フォルダにコピーします。 それ以外の場合は、[Post-Upgrade Considerations](./post-upgrade-considerations.md)で説明されているようにデータベースのアップグレード後にアプリをインストールし、データをアップグレードできます。
 
 1. 組み込みの[Elasticsearch](../../../using-search/installing-and-upgrading-a-search-engine/elasticsearch/getting-started-with-elasticsearch.md)エンジンまたはローカルの[ファイルストア\（ドキュメントライブラリ\）](../../../system-administration/file-storage/configuring-file-storage.md)を使用している場合は、`[Liferay Home]/data`フォルダを新しい`files`フォルダにコピーして`new-version/files/data`を作成します。
 
-1. [Liferay Homeのファイル](../../maintaining-a-liferay-dxp-installation/backing-up.md#liferay-home)と[アプリケーションサーバーファイル](../../maintaining-a-liferay-dxp-installation/backing-up.md#application-server)をバックアップから`files`フォルダ内の対応する場所（新しい`［Liferay Home］`）にコピーしてマージします。 例えば、アクティベーションキーを`new-version/files/license/`にコピーします。 ファイルには次のものが含まれる場合がありますが、これらに限定されません。
+1. [Liferay Homeのファイル](../../maintaining-a-liferay-dxp-installation/backing-up.md#liferay-home) と [アプリケーションサーバーファイル](../../maintaining-a-liferay-dxp-installation/backing-up.md#application-server) をバックアップから`files`フォルダ内の対応する場所（新しい`［Liferay Home］`）にコピーしてマージします。 例えば、アクティベーションキーを`new-version/files/license/`にコピーします。 ファイルには次のものが含まれる場合がありますが、これらに限定されません。
 
     * `/license/*`：アクティベーションキー。 (サブスクリプション)
 
@@ -55,7 +57,7 @@ Dockerイメージを使用してアップグレードする手順は次のと�
 
     * `/osgi/configs/*.config`：[OSGiの設定ファイル](../../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md)。
 
-    * `portal-*.properties`：[ポータルプロパティ](../../reference/portal-properties.md)ファイル（例：`portal-ext.properties`）。
+    * `portal-*.properties`： [ポータルプロパティ](../../reference/portal-properties.md) ファイル（例：`portal-ext.properties`）。
 
     * `setenv.sh`、`startup.sh`など：アプリケーションサーバーの設定スクリプト。
 
@@ -67,7 +69,7 @@ Dockerイメージを使用してアップグレードする手順は次のと�
     echo "indexReadOnly=\"true\"" >> new-version/files/osgi/config/com.liferay.portal.search.configuration.IndexStatusManagerConfiguration.config
     ```
 
-1. [高度なファイルシステムストア](../../../system-administration/file-storage/configuring-file-storage.md)または[簡易ファイルシステムストア](../../../system-administration/file-storage/other-file-store-types/simple-file-system-store.md)を使用していて、保存場所を変更している場合は、ファイルストアの設定を[`.config`ファイル](../../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md#creating-configuration-files)にエクスポートして、`new-version/osgi/configs`フォルダにコピーします。
+1. [高度なファイルシステムストア](../../../system-administration/file-storage/configuring-file-storage.md)または[簡易ファイルシステムストア](../../../system-administration/file-storage/other-file-store-types/simple-file-system-store.md)を使用していて、保存場所を変更している場合は、ファイルストアの設定を [`.config`ファイル](../../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md#creating-configuration-files) にエクスポートして、`new-version/osgi/configs`フォルダにコピーします。
 
     ```{important}
     [高度なファイルシステムストア](../../../system-administration/file-storage/configuring-file-storage.md)を使用している場合は、データベースをアップグレードする前に、新しいインストールで`.config`ファイルを使って設定する必要があります。
@@ -77,14 +79,14 @@ Dockerイメージを使用してアップグレードする手順は次のと�
     `rootDir="data/document_library"`
     ```
 
-1. データベースベンダーが推奨するJDBCデータベースドライバーを使用していることを確認してください。 たとえば、MySQLを使用している場合は、[`new-version/files/portal-ext.properties`](../../reference/portal-properties.md)で<0>jdbc.default.driverClassName=com.mysql.cj.jdbc.Driver</0>を設定し、アプリケーションサーバーが使用するMySQL JDBCドライバーのJARを置き換えます。 詳細は、[Database Drivers](../configuration-and-infrastructure/migrating-configurations-and-properties.md#database-drivers)を参照してください。
+1. データベースベンダーが推奨するJDBCデータベースドライバーを使用していることを確認してください。 たとえば、MySQLを使用している場合は、[`new-version/files/portal-ext.properties`](../../reference/portal-properties.md)でjdbc.default.driverClassName=com.mysql.cj.jdbc.Driverを設定し、アプリケーションサーバーが使用するMySQL JDBCドライバーのJARを置き換えます。 詳細は、 [Database Drivers](../configuration-and-infrastructure/migrating-configurations-and-properties.md#database-drivers) を参照してください。
 
 1. 新しいバージョンのフォルダにマウントされた[Dockerイメージ](../../installing-liferay/using-liferay-docker-images/providing-files-to-the-container.md)を、以下のコマンドで実行します。 必要に応じて、イメージ名、タグ、環境値を差し替えてください。
 
     ```bash
     docker run -it -m 8g -p 8080:8080 \
      -v $(pwd)/new-version:/mnt/liferay \
-     -e LIFERAY_UPGRADE_PERIOD_DATABASE_PERIOD_AUTO_PERIOD_RUN=true \
+     -e LIFERAY **UPGRADE** PERIOD **DATABASE** PERIOD **AUTO** PERIOD_RUN=true \
      liferay/[place image name here]:[place tag here]
     ```
 
@@ -102,7 +104,7 @@ Dockerイメージを使用してアップグレードする手順は次のと�
 
 1. 障害やエラーを解決した後、[アップグレード後の検討事項](./post-upgrade-considerations.md)を調べます。
 
-1. 新しいインストール先で[ポータルのプロパティを更新](../configuration-and-infrastructure/migrating-configurations-and-properties.md#migrating-portal-properties)します。
+1. 新しいインストール先で [ポータルのプロパティを更新](../configuration-and-infrastructure/migrating-configurations-and-properties.md#migrating-portal-properties) します。
 
 1. アップグレードしたデータベースを検証します。
 
@@ -116,13 +118,15 @@ Dockerイメージを使用してアップグレードする手順は次のと�
 [Docker Container Basics](../../../installation-and-upgrades/installing-liferay/using-liferay-docker-images/docker-container-basics.md)では、Dockerコンテナの作成、停止、再起動について説明しています。
 ```
 
+<a name="まとめ" />
+
 ## まとめ
 
 アップグレードされたデータベースで十分な場合は、新しいLiferayインスタンスを使用してください。 アップグレードの完了の他に作業が必要な場合は、以下の記事を参考にしてください。
 
 * [Upgrade Overview](./upgrade-overview.md)では、アップグレードに関するすべてのトピックについて説明しています。 まだ対処しなければならないトピックが見つかるかもしれません。
 
-* [データベースアップグレードツールの使用](./using-the-database-upgrade-tool.md)では、Liferayサーバーのオフライン時にデータベースをアップグレードする方法を示しています。 アップグレードに時間がかかりすぎる場合は、[データベースの調整](../upgrade-stability-and-performance/database-tuning-for-upgrades.md)、 [不要なデータの削除](../upgrade-stability-and-performance/database-pruning-for-faster-upgrades.md)、[データベース アップグレード ツールの使用](./using-the-database-upgrade-tool.md)を検討してください。
+* [データベースアップグレードツールの使用](./using-the-database-upgrade-tool.md) では、Liferayサーバーのオフライン時にデータベースをアップグレードする方法を示しています。 アップグレードに時間がかかりすぎる場合は、[データベースの調整](../upgrade-stability-and-performance/database-tuning-for-upgrades.md)、 [不要なデータの削除](../upgrade-stability-and-performance/database-pruning-for-faster-upgrades.md)、[データベース アップグレード ツールの使用](./using-the-database-upgrade-tool.md)を検討してください。
 
 * [Upgrading Custom Development](../upgrading-custom-development.md)では、カスタムプラグインコードを新しいLiferayバージョンに適応させる方法を示しています。
 

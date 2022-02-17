@@ -1,6 +1,6 @@
 # スリムバンドルの使用
 
-Liferay DXPフィックスパックおよびサービスパックは、Tomcatアプリケーションサーバーにバンドルされて提供されています。 従来のバンドルと *スリムバンドル*として利用できます。 従来のバンドルには、 *パッチファイル*含まれています。パッチツールが特定のパッチをインストールするために必要なすべてのソースコードとバックアップファイル。 スリムバンドルにはパッチファイルが含まれていないため、従来のバンドルの約3分の1のサイズです。 スリムバンドルは、ディスク容量が限られている、またはコストがかかるデモまたはインストールを目的としています。 クラウドやコンテナ環境に最適です。
+Liferay DXPフィックスパックおよびサービスパックは、Tomcatアプリケーションサーバーにバンドルされて提供されています。 従来のバンドルと **スリムバンドル** として利用できます。 従来のバンドルには、 **パッチファイル** 含まれています。パッチツールが特定のパッチをインストールするために必要なすべてのソースコードとバックアップファイル。 スリムバンドルにはパッチファイルが含まれていないため、従来のバンドルの約3分の1のサイズです。 スリムバンドルは、ディスク容量が限られている、またはコストがかかるデモまたはインストールを目的としています。 クラウドやコンテナ環境に最適です。
 
 ```{warning}
 Most Patching Tool commands (such as `install`) cannot be run on a Slim Bundle until the patching files for the Fix Pack or Service Pack are installed to the Slim Bundle.
@@ -12,7 +12,9 @@ Most Patching Tool commands (such as `install`) cannot be run on a Slim Bundle u
   - [`info`](../../reference/getting-patch-information.md)
   - `setup`
 
-スリムバンドルにはパッチを適用できますが、パッチファイルを復元する追加の手順が必要です。 各パッチの各パッチのパッチファイルは、 [ヘルプセンター](https://customer.liferay.com/downloads)入手できます。
+スリムバンドルにはパッチを適用できますが、パッチファイルを復元する追加の手順が必要です。 各パッチの各パッチのパッチファイルは、 [ヘルプセンター](https://customer.liferay.com/downloads) 入手できます。
+
+<a name="スリムバンドルのパッチ" />
 
 ## スリムバンドルのパッチ
 
@@ -24,7 +26,7 @@ Most Patching Tool commands (such as `install`) cannot be run on a Slim Bundle u
 
 パッチファイルのセットアップ手順は次のとおりです。
 
-1.  [ヘルプセンター](https://customer.liferay.com/downloads)からパッチファイルをダウンロードします。 Fix Pack または Service Pack に移動し、ドロップダウンから *パッチファイル* を選択し、*ダウンロード* をクリックして、パッチファイルをダウンロードします。
+1.  [ヘルプセンター](https://customer.liferay.com/downloads) からパッチファイルをダウンロードします。 Fix Pack または Service Pack に移動し、ドロップダウンから **パッチファイル** を選択し、 **ダウンロード** をクリックして、パッチファイルをダウンロードします。
 
 2.  パッチファイルをスリムバンドルの `patching-tool/patches` フォルダーに抽出します。
 
@@ -38,9 +40,11 @@ Most Patching Tool commands (such as `install`) cannot be run on a Slim Bundle u
 
     スリムバンドルにパッチファイルがあり、パッチを適用する準備ができています。
 
-5.  [パッチのインストール](../installing-patches-for-dxp-7-3-and-earlier.md)手順に従って、スリムバンドルにパッチを適用します。
+5.  [パッチのインストール](../installing-patches-for-dxp-7-3-and-earlier.md) 手順に従って、スリムバンドルにパッチを適用します。
 
 スリムバンドルを使用するメリットを学び、パッチを適用する方法を理解しました。
+
+<a name="追加情報" />
 
 ## 追加情報
 

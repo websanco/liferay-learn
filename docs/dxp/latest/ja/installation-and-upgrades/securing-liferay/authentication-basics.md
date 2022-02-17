@@ -1,6 +1,6 @@
 # 認証の基本
 
-デフォルトでは、Liferay DXPは*［Sign In］*ウィジェットを使用してユーザーを認証します。
+デフォルトでは、Liferay DXPは ［**Sign In**］ ウィジェットを使用してユーザーを認証します。
 
 ```{note}
 ［Sign In］ウィジェットは、`http[s]://[server-name:port]/web/guest/home`のデフォルトのホームページに表示されます。 ［Sign In］ウィジェットがどのページでも使用できない場合は、URL `http[s]://[server-name:port]/c/portal/login`から直接アクセスできます。
@@ -19,6 +19,8 @@
 
 [Authentication Verifier](./securing-web-services/using-authentication-verifiers.md)はリモートアプリケーションの認証を管理でき、[認証パイプライン](../../developing-applications/README.md)はユーザーが1つまたは複数のシステムによって検証される方法を定義します。
 
+<a name="認証タイプ" />
+
 ## 認証タイプ
 
 ユーザーは、次の3つの認証タイプのいずれかを使用してログインするように設定できます。
@@ -35,25 +37,27 @@
 
 認証タイプに関係なく、ユーザーは常にパスワードを入力する必要があります。 [パスワードポリシー](../../users-and-permissions/roles-and-permissions/configuring-a-password-policy.md)を作成して、パスワードの長さ、パスワードの形式、有効期限などを定義できます。
 
-_認証タイプ_は、コントロールパネルまたはプロパティファイルから設定できます。
+**認証タイプ** は、コントロールパネルまたはプロパティファイルから設定できます。
 
 ### コントロールパネルから認証タイプを設定する
 
 1. コントロールパネルに移動します。
-1. *［設定］* &rarr; *［Instance Settings］* &rarr; *［プラットフォーム］* &rarr; *［ユーザー認証］*の順にクリックします。
-1. *［How do users authenticate?］*セレクタでオプションを選択します。
+1. ［**設定**］ &rarr; ［**Instance Settings**］ &rarr; ［**プラットフォーム**］ &rarr; ［**ユーザー認証**］ の順にクリックします。
+1. ［**How do users authenticate?**］ セレクタでオプションを選択します。
 
     ![3種類の認証から選択できます。](./authentication-basics/images/03.png)
 
 ### プロパティを使用して認証タイプを設定する
 
-[`portal-ext.properties`](https://learn.liferay.com/dxp/latest/en/installation-and-upgrades/reference/portal-properties.html)ファイルを使用するには、以下のプロパティに貼り付け、目的の認証タイプのコメントを解除します。
+[`portal-ext.properties`](https://learn.liferay.com/dxp/latest/ja/installation-and-upgrades/reference/portal-properties.html) ファイルを使用するには、以下のプロパティに貼り付け、目的の認証タイプのコメントを解除します。
 
 ```properties
 company.security.auth.type=emailAddress
 #company.security.auth.type=screenName
 #company.security.auth.type=userId
 ```
+
+<a name="sign-inウィジェットの使用と設定" />
 
 ## ［Sign In］ウィジェットの使用と設定
 
@@ -63,9 +67,9 @@ company.security.auth.type=emailAddress
 
 ゲストユーザーが新しいユーザーアカウントを作成できないようにするには：
 
-1. ［コントロールパネル］ &rarr; *［設定］* &rarr; *［Instance Settings］* &rarr; *［プラットフォーム］* &rarr; *［ユーザー認証］*に移動します。
-1. *［Allow strangers to create accounts?］*をオフにします。
-1. *［保存］*をクリックします。
+1. ［コントロールパネル］ &rarr; ［**設定**］ &rarr; ［**Instance Settings**］ &rarr; ［**プラットフォーム**］ &rarr; ［**ユーザー認証**］ に移動します。
+1. ［**Allow strangers to create accounts?**］ をオフにします。
+1. ［**保存**］ をクリックします。
 
     ![このボックスがオフの場合、ゲストはアカウントを作成できません。](./authentication-basics/images/04.png)
 
@@ -73,25 +77,27 @@ company.security.auth.type=emailAddress
 
 ユーザーが自分のパスワードをリセットできないようにする必要がある場合は、同じ画面から設定できます。
 
-1. ［コントロールパネル］ &rarr; *［設定］* &rarr; *［Instance Settings］* &rarr; *［プラットフォーム］* &rarr; *［ユーザー認証］*に移動します。
-1. *［Allow users to request password reset links?］*をオフにします。
-1. *［保存］*をクリックします。
+1. ［コントロールパネル］ &rarr; ［**設定**］ &rarr; ［**Instance Settings**］ &rarr; ［**プラットフォーム**］ &rarr; ［**ユーザー認証**］ に移動します。
+1. ［**Allow users to request password reset links?**］ をオフにします。
+1. ［**保存**］ をクリックします。
 
 ### CAPTCHAまたはreCAPTCHAの構成
 
 CAPTCHAまたはreCAPTCHAを有効にして、ボットによるアカウントの作成およびログインを防止します。
 
-1. ［コントロールパネル］ &rarr; *［設定］* &rarr; *［システム設定］* &rarr; *［セキュリティツール］* &rarr; *［キャプチャ］*に移動します。
+1. ［コントロールパネル］ &rarr; ［**設定**］ &rarr; ［**システム設定**］ &rarr; ［**セキュリティツール**］ &rarr; ［**キャプチャ**］ に移動します。
 
     ![キャプチャはデフォルトで有効になっています。](./authentication-basics/images/02.png)
 
     ```{note}
-    デフォルトでは、［*Create Account CAPTCHA*］および［*Send Password CAPTCHA*］が有効になっています。 必要に応じて、［Message Boards CAPTCHA］を有効にします。
+    デフォルトでは、［**Create Account CAPTCHA**］および［**Send Password CAPTCHA**］が有効になっています。 必要に応じて、［Message Boards CAPTCHA］を有効にします。
     ```
 
 1. CAPTCHAエンジンを選択します。 デフォルトでは、［Simple CAPTCHA］が有効になっています。 GoogleのreCAPTCHAを選択することもできます。そのためには、外部サービスを個別に設定する必要があります。 reCAPTCHAを選択した場合は、Googleから公開鍵と秘密鍵を提供します。
 1. その他のオプションを使用すると、開発者はSimple CAPTCHAエンジンをカスタマイズできます。
-1. 完了したら、*［保存］*をクリックします。
+1. 完了したら、 ［**保存**］ をクリックします。
+
+<a name="追加情報" />
 
 ## 追加情報
 

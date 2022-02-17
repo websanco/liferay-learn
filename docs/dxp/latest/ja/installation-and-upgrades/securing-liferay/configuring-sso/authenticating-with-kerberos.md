@@ -2,13 +2,15 @@
 
 Kerberosを使用して、Liferay DXPでMicrosoft Windows&trade;アカウントを認証できます。 これは、Liferay DXPのLDAPサポートとKerberosプロトコルをサポートしているWebサーバーの組み合わせを使用して行われます。
 
-セキュリティの脆弱性が存続するため、この構成は[NTLM](https://portal.liferay.dev/docs/7-1/deploy/-/knowledge_base/d/ntlm-single-sign-on-authentication)よりも優先されます。
+セキュリティの脆弱性が存続するため、この構成は [NTLM](https://portal.liferay.dev/docs/7-1/deploy/-/knowledge_base/d/ntlm-single-sign-on-authentication) よりも優先されます。
+
+<a name="前提条件" />
 
 ## 前提条件
 
 Windows&trade;サーバーでKerberosとActive Directoryをセットアップする方法についてはこの記事では説明しませんが、Liferay認証を設定するための最低限の前提条件について説明します。
 
-1. ADサーバーとLiferay DXPがネットワーク上で相互に解決できるようにActive DirectoryとDNSがセットアップされたWindows&trade;サーバー。 つまり、*名前で*相互にpingできる必要があります。
+1. ADサーバーとLiferay DXPがネットワーク上で相互に解決できるようにActive DirectoryとDNSがセットアップされたWindows&trade;サーバー。 つまり、 **名前で** 相互にpingできる必要があります。
 
 1. AD Liferay DXPの管理ユーザーがADへのバインドに使用できる。
 
@@ -19,6 +21,8 @@ Windows&trade;サーバーでKerberosとActive Directoryをセットアップす
 1. 他のサーバーも名前で解決できるLiferay DXPのインストール。 Active Directoryサーバーと同じサーバー上で実行しないでください。
 
 これらの前提条件がすべて整ったら、Kerberos認証を構成する準備が整います。
+
+<a name="kerberos認証のしくみ" />
 
 ## Kerberos認証のしくみ
 
@@ -31,6 +35,8 @@ Windows&trade;サーバーでKerberosとActive Directoryをセットアップす
 選択するWebサーバーは、Kerberosプロトコルと、Liferay DXPが後で読み取ることができる要求へのカスタムヘッダーの挿入の両方をサポートしている必要があります。 Webサーバーが要求をLiferay DXPに転送すると、Liferay DXPはヘッダーを読み取ってユーザーデータを取得し、ユーザーを認証します。
 
 次に、これらすべてを機能させる方法を学習します。
+
+<a name="kerberos認証の構成" />
 
 ## Kerberos認証の構成
 
@@ -48,13 +54,13 @@ Windows&trade;サーバーでKerberosとActive Directoryをセットアップす
 1. `ktpass`を使用してKerberos keytabファイルを生成します。
 
     ```bash
-    ktpass -princ HTTP/[web server host name]@[domain] -mapuser [user name]@[domain] -crypto ALL -ptype KRB5_NT_PRINCIPAL -pass [password] -out c:\kerberos.keytab
+    ktpass -princ HTTP/[web server host name]@[domain] -mapuser [user name]@[domain] -crypto ALL -ptype KRB5 **NT** PRINCIPAL -pass [password] -out c:\kerberos.keytab
     ```
 
     例：
 
     ```bash
-    ktpass -princ HTTP/mywebserver.intdomain.local@INTDOMAIN.LOCAL -mapuser Marta@INTDOMAIN.LOCAL -crypto ALL -ptype KRB5_NT_PRINCIPAL -pass password-for-Marta -out c:\kerberos.keytab
+    ktpass -princ HTTP/mywebserver.intdomain.local@INTDOMAIN.LOCAL -mapuser Marta@INTDOMAIN.LOCAL -crypto ALL -ptype KRB5 **NT** PRINCIPAL -pass password-for-Marta -out c:\kerberos.keytab
     ```
 
 1. ADドメインコントローラーとWebサーバーがDNS構成または`hosts`ファイルを介してネットワーク上で相互に認識できることを確認します。
@@ -80,12 +86,12 @@ Windows&trade;サーバーでKerberosとActive Directoryをセットアップす
 1. Webサーバーを構成し、正しいサーバー名、Kerberosサービス名、Kerberos認証レルム、およびkeytabファイルへのパスを設定していることを確認します。 たとえば、Apache HTTPサーバーを使用している場合、構成は次のようになります。
 
     ```apache
-    LoadModule headers_module /usr/lib/apache2/modules/mod_headers.so
-    LoadModule rewrite_module /usr/lib/apache2/modules/mod_rewrite.so
-    LoadModule proxy_module /usr/lib/apache2/modules/mod_proxy.so
-    LoadModule proxy_http_module /usr/lib/apache2/modules/mod_proxy_http.so
-    LoadModule proxy_ajp_module /usr/lib/apache2/modules/mod_proxy_ajp.so
-    LoadModule auth_kerb_module /usr/lib/apache2/modules/mod_auth_kerb.so
+    LoadModule headers **module /usr/lib/apache2/modules/mod** headers.so
+    LoadModule rewrite **module /usr/lib/apache2/modules/mod** rewrite.so
+    LoadModule proxy **module /usr/lib/apache2/modules/mod** proxy.so
+    LoadModule proxy **http** module /usr/lib/apache2/modules/mod **proxy** http.so
+    LoadModule proxy **ajp** module /usr/lib/apache2/modules/mod **proxy** ajp.so
+    LoadModule auth **kerb** module /usr/lib/apache2/modules/mod **auth** kerb.so
 
     <VirtualHost *:10080>
         <Proxy *>
@@ -135,17 +141,17 @@ Windows&trade;サーバーでKerberosとActive Directoryをセットアップす
 
    | 構成                               | 説明                                                                                  |
    | :--- | :--- |
-   | **Base Provider URL**            | 適切なポート上のADサーバー。                                                                     |
-   | **Base DN**                      | ドメイン構成。 上記の例では `DC=INTDOMAIN.DC=LOCAL`。                                             |
-   | **Principal/Credentials**        | keytabファイルにエクスポートされたユーザーの資格情報を入力します。                                                |
+   | **Base Provider URL** | 適切なポート上のADサーバー。                                                                     |
+   | **Base DN** | ドメイン構成。 上記の例では `DC=INTDOMAIN.DC=LOCAL`。                                             |
+   | **Principal/Credentials** | keytabファイルにエクスポートされたユーザーの資格情報を入力します。                                                |
    | **Authentication Search Filter** | ユーザーオブジェクトを返す適切な検索フィルターを指定します。 例：`(&(objectCategory=person)(sAMAccountName=*))` |
-   | **UUID**                         | `sAMAccountName`など、ユーザーを一意に識別するものを指定します。                                            |
-   | **Screen Name**                  | `sAMAccountName`など、Liferay DXPの画面名フィールドにマップする必要があるフィールドを指定します。                      |
-   | **パスワード**                        | `userPassword`など、ユーザーのパスワードを含むフィールドを指定します。                                          |
+   | **UUID** | `sAMAccountName`など、ユーザーを一意に識別するものを指定します。                                            |
+   | **Screen Name** | `sAMAccountName`など、Liferay DXPの画面名フィールドにマップする必要があるフィールドを指定します。                      |
+   | **パスワード** | `userPassword`など、ユーザーのパスワードを含むフィールドを指定します。                                          |
 
 1. 接続をテストし、構成を保存して有効にします。
 
-1. 最後に、［設定］ &rarr; ［システム設定］ &rarr; ［セキュリティ］ &rarr; ［SSO］ &rarr; ［トークン方式SSO］で、シングルサインオン用のトークンを設定します。 ユーザートークン名が、Webサーバーで設定したトークンと*正確に*一致していることを確認します。 *［Enabled］*および*［Import from LDAP］*ボックスをクリックし、*［保存］*をクリックします。
+1. 最後に、［設定］ &rarr; ［システム設定］ &rarr; ［セキュリティ］ &rarr; ［SSO］ &rarr; ［トークン方式SSO］で、シングルサインオン用のトークンを設定します。 ユーザートークン名が、Webサーバーで設定したトークンと **正確に** 一致していることを確認します。 ［**Enabled**］ および ［**Import from LDAP**］ ボックスをクリックし、 ［**保存**］ をクリックします。
 
     ![［Instance Settings］メニューでSSOを有効にする。](authenticating-with-kerberos/images/02.png)
 

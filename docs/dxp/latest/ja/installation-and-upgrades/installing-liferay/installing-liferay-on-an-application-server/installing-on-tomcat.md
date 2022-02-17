@@ -10,9 +10,11 @@ Tomcatにインストールするには、DXP WARのインストール、依存�
 
 これを実現する最も単純で簡単な方法は、[Liferay Liferay-Tomcatバンドルをダウンロード](../installing-a-liferay-tomcat-bundle.md)し、依存関係、スクリプト、および`ROOT.xml`をそこから以下に説明する場所にコピーすることです。 それ以外の方法としては、依存関係をダウンロードして、Tomcatを手動で構成できます。
 
+<a name="前提条件" />
+
 ## 前提条件
 
-Tomcatの構成方法に関係なく、[ヘルプセンター](https://customer.liferay.com/downloads)（サブスクリプション）または[Liferayコミュニティのダウンロード](https://www.liferay.com/downloads-community)からこれらのファイルをダウンロードしてインストールする必要があります。
+Tomcatの構成方法に関係なく、 [ヘルプセンター](https://customer.liferay.com/downloads) （サブスクリプション）または [Liferayコミュニティのダウンロード](https://www.liferay.com/downloads-community) からこれらのファイルをダウンロードしてインストールする必要があります。
 
 * DXP WARファイル
 * OSGi依存関係のZIPファイル
@@ -21,19 +23,23 @@ Tomcatの構成方法に関係なく、[ヘルプセンター](https://customer.
 Java JDK 8または11が必要です。
 
 ```{note}
-サポートされているJDK、データベース、および環境については、[互換性マトリックス](https://help.liferay.com/hc/en-us/articles/360049238151) を参照してください。  推奨されるJVM設定については、[JVM Configuration](../../reference/jvm-configuration.md)を参照してください。
+サポートされているJDK、データベース、および環境については、 [互換性マトリックス](https://help.liferay.com/hc/en-us/articles/360049238151) を参照してください。  推奨されるJVM設定については、[JVM Configuration](../../reference/jvm-configuration.md)を参照してください。
 ```
 
-Tomcatサーバーの親フォルダは[*Liferay Home*](../../reference/liferay-home.md)です。 `$TOMCAT_HOME`はTomcatサーバーフォルダを参照します。 通常は、`tomcat-［version］`または`apache-tomcat-［version］`という名前です。
+Tomcatサーバーの親フォルダは[**Liferay Home**](../../reference/liferay-home.md)です。 `$TOMCAT_HOME`はTomcatサーバーフォルダを参照します。 通常は、`tomcat-［version］`または`apache-tomcat-［version］`という名前です。
+
+<a name="dxp-warのインストール" />
 
 ## DXP WARのインストール
 
 1. クリーンなTomcatのインストールを開始する場合は、`$CATALINA_BASE/webapps/ROOT`フォルダのコンテンツを削除します。 これにより、デフォルトのTomcatホームページが削除されます。
 1. DXP `.war`ファイルのコンテンツを`$CATALINA_BASE/webapps/ROOT`に展開します。
 
+<a name="依存関係をインストールする" />
+
 ## 依存関係をインストールする
 
-DXPは、Liferay-Tomcatバンドルに含まれている多くのJARに依存しています。 バンドル内のJARの中には必須ではないファイルもありますが、有用なJARもあります。 Tomcatバンドルを使用していない場合は、ダウンロードした*OSGi依存関係*アーカイブと、以下で説明するサードパーティのJAR依存関係を使用します。
+DXPは、Liferay-Tomcatバンドルに含まれている多くのJARに依存しています。 バンドル内のJARの中には必須ではないファイルもありますが、有用なJARもあります。 Tomcatバンドルを使用していない場合は、ダウンロードした **OSGi依存関係** アーカイブと、以下で説明するサードパーティのJAR依存関係を使用します。
 
 1. OSGi Dependencies ZIPファイルの内容を `［Liferay Home］/osgi` フォルダーに解凍します（このフォルダーが存在しない場合は作成します）。 LiferayのOSGiランタイムは、これらのモジュールに依存しています。
 1. DXP 7.4+ WARファイルには、MariaDB、MySQL、およびPostgreSQLのドライバーが含まれています。 以前のWARにはそれらがありません。 WARに必要なドライバーがない場合は、データベースベンダーのJDBC JARファイルを`$TOMCAT_HOME/lib/ext`フォルダにダウンロードします。 サポートされるデータベースのリストについては、 [互換性マトリックス](https://help.liferay.com/hc/en-us/articles/360049238151) を参照してください。
@@ -45,6 +51,8 @@ HypersonicデータベースはDXPにバンドルされており、テスト目�
 ```{note}
 DXP 7.3以前の場合は、依存関係ZIPファイルのコンテンツを$TOMCAT_HOME/lib/extフォルダに解凍します（このフォルダが存在しない場合は作成します）。
 ```
+
+<a name="tomcatを構成する" />
 
 ## Tomcatを構成する
 
@@ -66,7 +74,7 @@ DXPを実行するためのTomcatの構成には、次のタスクが含まれ�
 1. 次に、DXPをサポートするようにCatalinaのJVMオプションを設定します。
 
     ```bash
-    CATALINA_OPTS="$CATALINA_OPTS -Dfile.encoding=UTF-8 -Djava.locale.providers=JRE,COMPAT,CLDR -Djava.net.preferIPv4Stack=true -Duser.timezone=GMT -Xms2560m -Xmx2560m -XX:MaxNewSize=1536m -XX:MaxMetaspaceSize=768m -XX:MetaspaceSize=768m -XX:NewSize=1536m -XX:SurvivorRatio=7"
+    CATALINA **OPTS="$CATALINA** OPTS -Dfile.encoding=UTF-8 -Djava.locale.providers=JRE,COMPAT,CLDR -Djava.net.preferIPv4Stack=true -Duser.timezone=GMT -Xms2560m -Xmx2560m -XX:MaxNewSize=1536m -XX:MaxMetaspaceSize=768m -XX:MetaspaceSize=768m -XX:NewSize=1536m -XX:SurvivorRatio=7"
     ```
 
 **JVMオプションの説明**
@@ -146,7 +154,7 @@ DXPのインストール後、これらの構成（これらのJVMオプショ�
     ```xml
     <!-- <Valve className="org.apache.catalina.valves.AccessLogValve"
            directory="logs"
-           prefix="localhost_access_log" suffix=".txt"
+           prefix="localhost **access** log" suffix=".txt"
            pattern="%h %l %u %t &quot;%r&quot; %s %b" /> -->
     ```
 
@@ -202,18 +210,20 @@ DXP 7.3以前の場合、`common.loader`プロパティの値リストの先頭�
 1. デフォルトの使用可能メモリとメタスペース制限が設定されている。
 1. `$CATALINA_BASE/conf/Catalina/localhost/ROOT.xml`はWebアプリケーションコンテキストを宣言している。
 1. `$CATALINA_BASE/conf/server.xml`は、UTF-8エンコーディングを設定している。
-1. `$CATALINA_BASE/conf/server.xml`は、ホストアクセスログを書き込むための値を宣言していない。 *（オプション）*
+1. `$CATALINA_BASE/conf/server.xml`は、ホストアクセスログを書き込むための値を宣言していない。 （**オプション**）
 1. `$CATALINA_HOME/conf/logging.properties`は、必要なログレベルを設定している。
 1. `$CATALINA_HOME/conf/web.xml`は、タグハンドラープールを設定し、Java 8をJSPコンパイラとして設定している。
-1. `$CATALINA_HOME/conf/web.xml`は、アプリケーションサーバーが追加のメタデータを検索しないように指定している。 *（オプション）*
+1. `$CATALINA_HOME/conf/web.xml`は、アプリケーションサーバーが追加のメタデータを検索しないように指定している。 （**オプション**）
 1. Tomcatの`bin`フォルダ内のスクリプトは実行可能である。
 1. `$CATALINA_BASE/conf/catalina.properties`の`common.loader`プロパティは、Catalinaに必要なJARへのアクセスを許可している。
 
 アプリケーションサーバーは、DXPを実行するように設定されています。
 
+<a name="データベース設定" />
+
 ## データベース設定
 
-DXPには組み込みのHypersonicデータベースが含まれています。これはデモンストレーション目的には最適ですが、**本番環境では使用しないでください**。 本番環境では、フル機能のサポートされているRDBMSを使用してください。 データベースのセットアップについては、[Configure a Database](../configuring-a-database.md)を参照してください。
+DXPには組み込みのHypersonicデータベースが含まれています。これはデモンストレーション目的には最適ですが、 **本番環境では使用しないでください** 。 本番環境では、フル機能のサポートされているRDBMSを使用してください。 データベースのセットアップについては、[Configure a Database](../configuring-a-database.md)を参照してください。
 
 Liferay DXPは、DXPに組み込まれているデータソースを使用する（推奨）か、アプリケーションサーバー上に作成したデータソースを使用してデータベースに接続できます。
 
@@ -250,13 +260,15 @@ Liferay DXPは、DXPに組み込まれているデータソースを使用する
 
     データベースのURL、ユーザー名、パスワードを適切な値に置き換えてください。
 
-1. **[Liferay_Home]**の`portal-ext.properties`ファイルで、データソースを指定します。 例:
+1. [**Liferay_Home**] の`portal-ext.properties`ファイルで、データソースを指定します。 例:
 
     ```properties
     jdbc.default.jndi.name=jdbc/LiferayPool
     ```
 
 データソースが設定されました。
+
+<a name="メール設定" />
 
 ## メール設定
 
@@ -298,6 +310,8 @@ Tomcatを使用してメールセッションを管理する場合は、次の�
 
 メールセッションはTomcatで設定されます。
 
+<a name="dxpのデプロイ" />
+
 ## DXPのデプロイ
 
 `$CATALINA_HOME/bin`に移動して`./startup.sh`を実行し、Tomcatを起動します。 または、`./catalina.sh run`を実行して、DXPのログファイルを追跡します。 ログは起動アクティビティを監査し、デプロイのデバッグに役立ちます。
@@ -306,9 +320,11 @@ Liferay DXP Enterpriseサブスクリプションをお持ちの場合、DXPは�
 
 　 DXPはTomcatで実行されています。
 
+<a name="次のステップ" />
+
 ## 次のステップ
 
-[管理者ユーザーとしてサインイン](../../../getting-started/introduction-to-the-admin-account.md)して、\[DXPでのソリューションの構築\](../../../building_solutions_on_dxp.html)を開始できます。 または、[Liferay DXPのその他のセットアップ](../../setting-up-liferay.md)トピックを参照できます。
+[管理者ユーザーとしてサインイン](../../../getting-started/introduction-to-the-admin-account.md)して、\ [DXPでのソリューションの構築\](../../../building_solutions_on_dxp.html) を開始できます。 または、[Liferay DXPのその他のセットアップ](../../setting-up-liferay.md)トピックを参照できます。
 
 * [Installing the Marketplace Plugin](../../../system-administration/installing-and-managing-apps/getting-started/using-marketplace.md#appendix-installing-the-marketplace-plugin)
 * [試用期間中のプラグインへのアクセス](../../../system-administration/installing-and-managing-apps/installing-apps/accessing-ee-plugins-during-a-trial-period.md)

@@ -6,6 +6,8 @@
 Clustering will not work with the embedded HSQL database.
 ```
 
+<a name="読み書きデータベース構成" />
+
 ## 読み書きデータベース構成
 
 データベースのパフォーマンスを向上させるために、読み取り/書き込みデータベース構成を使用できます。 この戦略では、読み取り操作と読み取り/書き込み操作に同じデータソースを使用する代わりに、操作の種類ごとに個別のデータソースを使用します。 DXPのアスペクト指向プログラミング（AOP）トランザクションインフラストラクチャは、読み取りトランザクションを読み取りデータソースに送信し、読み取り/書き込みトランザクションを書き込みデータソースに送信します。
@@ -18,7 +20,7 @@ Clustering will not work with the embedded HSQL database.
 
 次の手順に従って `portal-ext.properties` ファイルを編集し、 [JDBC](../../installing-liferay/configuring-a-database.md)を使用して個別の読み取りおよび書き込みデータソースに直接接続します。
 
-1. デフォルトの接続プールプロバイダーを設定します。 プロバイダー情報については、 [JDBCプロパティリファレンス](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#JDBC)を参照してください。 デフォルト設定では、プールプロバイダーとして [HikariCP](https://github.com/brettwooldridge/HikariCP) 指定されています。
+1. デフォルトの接続プールプロバイダーを設定します。 プロバイダー情報については、 [JDBCプロパティリファレンス](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#JDBC) を参照してください。 デフォルト設定では、プールプロバイダーとして [HikariCP](https://github.com/brettwooldridge/HikariCP) 指定されています。
 
     ```properties
     jdbc.default.liferay.pool.provider=hikaricp
@@ -38,9 +40,9 @@ Clustering will not work with the embedded HSQL database.
     jdbc.write.password=[place your password here]
     ```
 
-    JDBC接続値の例については、 [データベーステンプレート](../../reference/database-templates.md)を参照してください。
+    JDBC接続値の例については、 [データベーステンプレート](../../reference/database-templates.md) を参照してください。
 
-1. 書き込みデータソース(プレフィックスが`jdbc.write.`のデータソース)を使用して[カウンタ](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#Counter)データソースを作成するようにDXPを設定します。 別のデータソースは常にカウンター専用です。
+1. 書き込みデータソース(プレフィックスが`jdbc.write.`のデータソース)を使用して [カウンタ](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#Counter) データソースを作成するようにDXPを設定します。 別のデータソースは常にカウンター専用です。
 
     ```properties
     counter.jdbc.prefix=jdbc.write.
@@ -64,7 +66,7 @@ Clustering will not work with the embedded HSQL database.
     META-INF/dynamic-data-source-infrastructure-spring.xml
     ```
 
-    詳細は、 [Spring構成のポータルプロパティ](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#Spring)参照してください。
+    詳細は、 [Spring構成のポータルプロパティ](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#Spring) 参照してください。
 
 ### JNDI
 
@@ -84,7 +86,7 @@ Clustering will not work with the embedded HSQL database.
     jdbc.write.password=[place your password here]
     ```
 
-1. 書き込みデータソース(プレフィックスが`jdbc.write.`のデータソース)を使用して[カウンタ](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#Counter)データソースを作成するようにDXPを設定します。 別のデータソースは常にカウンター専用です。
+1. 書き込みデータソース(プレフィックスが`jdbc.write.`のデータソース)を使用して [カウンタ](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#Counter) データソースを作成するようにDXPを設定します。 別のデータソースは常にカウンター専用です。
 
     ```properties
     counter.jdbc.prefix=jdbc.write.
@@ -108,14 +110,18 @@ Clustering will not work with the embedded HSQL database.
     META-INF/dynamic-data-source-infrastructure-spring.xml
     ```
 
-    詳細は、 [Spring構成のポータルプロパティ](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#Spring)参照してください。
+    詳細は、 [Spring構成のポータルプロパティ](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#Spring) 参照してください。
 
 DXPは、次回の起動時に、読み取りデータソース、書き込みデータソース、およびカウンターデータソースを使用します。
+
+<a name="データベースの複製" />
 
 ## データベースの複製
 
 データベースクラスタを使用すると、フォールトトレランスとDXPのパフォーマンスが向上します。 データベースクラスタインスタンスは常に同期している必要があります。 レプリケーションは、変更されたデータと変更されたスキーマを1つのデータベースインスタンスから別のデータベースインスタンスにコピーするプロセスです。 すべて [サポートされるデータベース](https://help.liferay.com/hc/en-us/articles/360049238151) のサポートレプリケーション。 データベースクラスターを使用している場合は、データベースベンダーの指示に従って、データベースをレプリケーション用に設定します。
 
+<a name="次のステップ" />
+
 ## 次のステップ
 
-クラスターのデータベースを構成したので、引き続き [DXPクラスター要件](./clustering-for-high-availability.md#clustering-requirements)対処できます。 次の要件は、すべてのノードが [ファイルストア](../../../system-administration/file-storage/configuring-file-storage.md) アクセスできるようにし、そのファイルストアで各ノードを構成することです。
+クラスターのデータベースを構成したので、引き続き [DXPクラスター要件](./clustering-for-high-availability.md#clustering-requirements) 対処できます。 次の要件は、すべてのノードが [ファイルストア](../../../system-administration/file-storage/configuring-file-storage.md) アクセスできるようにし、そのファイルストアで各ノードを構成することです。

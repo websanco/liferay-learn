@@ -6,7 +6,9 @@ DXPバンドルとDXPアプリケーションサーバーのインストール�
 **Always** [back up](../backing-up.md) your database and installation before patching.
 ```
 
-DXPバンドルにパッチを適用する場合は、以下の基本的なパッチ適用手順に進んでください。 あなたは、アプリケーション・サーバー上でDXPにパッチを適用している場合、 [アプリケーションサーバ上でDXPにパッチを適用するための準備](#preparing-to-patch-dxp-on-an-application-server) *前* パッチ適用手順以下。
+DXPバンドルにパッチを適用する場合は、以下の基本的なパッチ適用手順に進んでください。 あなたは、アプリケーション・サーバー上でDXPにパッチを適用している場合、 [アプリケーションサーバ上でDXPにパッチを適用するための準備](#preparing-to-patch-dxp-on-an-application-server) **前** パッチ適用手順以下。
+
+<a name="パッチ適用手順" />
 
 ## パッチ適用手順
 
@@ -60,7 +62,7 @@ DXPバンドルにパッチを適用する場合は、以下の基本的なパ�
      Currently installed patches:
      ...
 
-5.  Service Packをインストールし、そのリリースノートに [マイクロまたはマイナースキーマ/データの変更](https://help.liferay.com/hc/en-us/articles/360030959231-Meaningful-Schema-Versioning)が記載されている場合は、 [データベースアップグレードツール](../../upgrading-liferay/upgrade-basics/using-the-database-upgrade-tool.md) を使用して、マイナー変更（必須）および必要なマイクロ変更を適用します。
+5.  Service Packをインストールし、そのリリースノートに [マイクロまたはマイナースキーマ/データの変更](https://help.liferay.com/hc/en-us/articles/360030959231-Meaningful-Schema-Versioning) が記載されている場合は、 [データベースアップグレードツール](../../upgrading-liferay/upgrade-basics/using-the-database-upgrade-tool.md) を使用して、マイナー変更（必須）および必要なマイクロ変更を適用します。
 
     ```{important}
     If you're updating from Liferay DXP 7.2 GA1 or Fix Pack 1 to DXP 7.2 SP1 / Fix Pack 2 (or above), you must update the data and database using the Database Upgrade Tool.
@@ -102,7 +104,7 @@ DXPバンドルにパッチを適用する場合は、以下の基本的なパ�
     ./patching-tool.sh info
     ```
 
-    インデックスの更新がある場合は、 [`portal-ext.properties` ファイル](../../reference/portal-properties.md)[`database.indexes.update.on.startup`](https://docs.liferay.com/dxp/portal/7.2-latest/propertiesdoc/portal.properties.html#Database) Portal Propertyを `true` します。
+    インデックスの更新がある場合は、 [`portal-ext.properties` ファイル](../../reference/portal-properties.md) [`database.indexes.update.on.startup`](https://docs.liferay.com/dxp/portal/7.2-latest/propertiesdoc/portal.properties.html#Database) Portal Propertyを `true` します。
 
     ``` properties
     database.indexes.update.on.startup=true
@@ -117,6 +119,8 @@ DXPインスタンスにパッチが適用され、実行されています。
 ```{note}
 If the patch doesn't install or if you're unable to resolve errors that occur, please open a [Help Center ticket](https://help.liferay.com/hc/) and provide the full Patching Tool `info` output by running `./patching-tool.sh info > output.txt` and attaching the `output.txt` file to the ticket.
 ```
+
+<a name="アプリケーションサーバー上のdxpにパッチを適用する準備" />
 
 ## アプリケーションサーバー上のDXPにパッチを適用する準備
 
@@ -134,6 +138,8 @@ DXPをアプリケーションサーバーにインストールした場合、DX
 3.  前のセクションの [パッチ適用手順](#basic-patching-steps) に進みます。
 
 DXPバンドルとDXPアプリケーションサーバーのインストールにパッチを適用する方法をマスターしました。
+
+<a name="追加情報" />
 
 ## 追加情報
 

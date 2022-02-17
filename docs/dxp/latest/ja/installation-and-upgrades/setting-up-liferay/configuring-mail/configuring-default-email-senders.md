@@ -2,17 +2,19 @@
 
 デフォルトでは、Liferay DXPから送信される電子メールは、名前と電子メールアドレスをデフォルトの管理ユーザーとして使用します。 この動作は、さまざまな電子メールタイプごとに設定できます。
 
+<a name="デフォルトのメール送信者の変更" />
+
 ## デフォルトのメール送信者の変更
 
 デフォルトのメール送信者を変更するには、次の手順に従います。
 
-1. *プロダクトメニュー*を開き、*［コントロールパネル］* → *［設定］* → *［Instance Settings］*に移動します。
+1. **プロダクトメニュー** を開き、 ［**コントロールパネル**］ → ［**設定**］ → ［**Instance Settings**］ に移動します。
 
     ![［Instance Settings］メニューでメール設定オプションを見つける。](./configuring-default-email-senders/images/01.png)
 
-1. *［Email］*をクリックします。
+1. ［**Email**］ をクリックします。
 
-1. *［Email Sender］* をクリックします。
+1. ［**Email Sender**］ をクリックします。
 
 1. 次のフィールドに値を入力します。
 
@@ -21,7 +23,7 @@
 
     ![デフォルトのメール送信者名とメールアドレスを変更する。](./configuring-default-email-senders/images/02.png)
 
-1. *［保存］* をクリックします。
+1. ［**保存**］ をクリックします。
 
 ### ポータルプロパティを使用したデフォルトの電子メール送信者の設定
 
@@ -32,6 +34,8 @@ admin.email.from.name=Joe Bloggs
 admin.email.from.address=test@domain.invalid
 ```
 
+<a name="アナウンスのためのメール送信者の変更" />
+
 ## アナウンスのためのメール送信者の変更
 
 お知らせアプリケーションは、独自の送信者を使用します。 お知らせメールの送信者名とアドレスを設定するには、`portal-ext.properties`ファイルを使用する必要があります。 次のプロパティ値を独自の値に置き換えます。
@@ -40,6 +44,8 @@ admin.email.from.address=test@domain.invalid
 announcements.email.to.name=
 announcements.email.to.address=noreply@domain.invalid
 ```
+
+<a name="ブラックリストに登録されたメール" />
 
 ## ブラックリストに登録されたメール
 
@@ -55,6 +61,9 @@ announcements.email.to.address=noreply@domain.invalid
 ```bash
 Email xxx will be ignored because it is included in mail.send.blacklist
 ```
+
+<a name="追加情報" />
+
 ## 追加情報
 
 * [Connecting to a Mail Server](./connecting-to-a-mail-server.md)

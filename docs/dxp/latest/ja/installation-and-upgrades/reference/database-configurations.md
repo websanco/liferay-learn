@@ -8,7 +8,7 @@
 * PostgreSQL
 
 ```{note}
-[Liferay DXP Compatibility Matrix](https://help.liferay.com/hc/en-us/articles/360049238151)には、サポートされているデータベースとバージョンが一覧表示されています。
+[Liferay DXP Compatibility Matrix](https://help.liferay.com/hc/en-us/articles/360049238151) には、サポートされているデータベースとバージョンが一覧表示されています。
 ```
 
 Liferay DXPをデータベースに接続するには、次の手順が必要です。
@@ -16,6 +16,8 @@ Liferay DXPをデータベースに接続するには、次の手順が必要で
 * [データベース設定](#database-configuration)
 * [JDBCコネクタのインストール](#installing-a-jdbc-connector)
 * [データソースの構成](#configure-a-data-source)
+
+<a name="データベース設定-1" />
 
 ## データベース設定
 
@@ -57,9 +59,11 @@ Liferay DXPがデータを保持するには、データベースユーザーの
 
 ### クエリ結果の並べ替え順序を設定する（オプション）
 
-すべてのデータベースには、結果をソートするためのデフォルトの順序があります（[この記事](https://help.liferay.com/hc/en-us/articles/360029315971-Sort-Order-Changed-with-a-Different-Database)を参照）。 この順序が気になる場合は、データベースベンダーのドキュメントを参照して並べ替え順序を確認し、必要に応じて、Liferay DXPエンティティに適したデフォルトのクエリ結果順序を使用するようにデータベースを構成してください。
+すべてのデータベースには、結果をソートするためのデフォルトの順序があります（ [この記事](https://help.liferay.com/hc/en-us/articles/360029315971-Sort-Order-Changed-with-a-Different-Database) を参照）。 この順序が気になる場合は、データベースベンダーのドキュメントを参照して並べ替え順序を確認し、必要に応じて、Liferay DXPエンティティに適したデフォルトのクエリ結果順序を使用するようにデータベースを構成してください。
 
 データベースサーバー、データベース、およびデータベースユーザーを構成しました。 Liferay DXPがデータベースとの通信に使用するJDBCコネクタをインストールする準備が整いました。
+
+<a name="jdbcコネクタをインストールする" />
 
 ## JDBCコネクタをインストールする
 
@@ -76,7 +80,9 @@ OracleやDB2などの専用データベースに接続している場合は、�
 | データベース | コネクタ          | ベンダーサイト                                     | メモ                                                                                                                                                |
 |:------ |:------------- |:------------------------------------------- |:------------------------------------------------------------------------------------------------------------------------------------------------- |
 | DB2    | `db2jcc4.jar` | [IBM](https://www.ibm.com/)                 | ` dbc2jcc`コネクタは3.72以降廃止されました。                                                                                                                     |
-| Oracle | `ojdbc8.jar`  | [Oracle](https://www.oracle.com/index.html) | [データ切り捨ての問題](https://issues.liferay.com/browse/LPS-79229)がCLOB列からデータを読み取って検出されたため、少なくともOracle 12.2.0.1.0 JDBC 4.2バージョンを備えた`ojdbc8.jar`ライブラリが必要です。 |
+| Oracle | `ojdbc8.jar`  | [Oracle](https://www.oracle.com/index.html) | [データ切り捨ての問題](https://issues.liferay.com/browse/LPS-79229) がCLOB列からデータを読み取って検出されたため、少なくともOracle 12.2.0.1.0 JDBC 4.2バージョンを備えた`ojdbc8.jar`ライブラリが必要です。 |
+
+<a name="データソースの構成" />
 
 ## データソースの構成
 
@@ -94,7 +100,7 @@ DXP環境変数をDockerイメージに渡すことで、組み込みのデー�
 
 ### ポータルプロパティ
 
-[ポータルプロパティ](./portal-properties.md)ファイルを使用して、Liferay Tomcatバンドル、アプリケーションサーバーのインストール、またはDockerイメージでデータソース接続を構成できます。 例として、[Database Templates](./database-templates.md)を参照してください。
+[ポータルプロパティ](./portal-properties.md) ファイルを使用して、Liferay Tomcatバンドル、アプリケーションサーバーのインストール、またはDockerイメージでデータソース接続を構成できます。 例として、[Database Templates](./database-templates.md)を参照してください。
 
 ```{note}
 Dockerイメージでポータルプロパティファイルを使用するには、バインドマウントまたはボリュームを使用してファイルを渡す必要があります。 詳細については、[Providing Files to the Container](../installing-liferay/using-liferay-docker-images/providing-files-to-the-container.md)を参照してください。

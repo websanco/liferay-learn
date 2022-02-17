@@ -1,9 +1,9 @@
 # クラスタリンクの構成
 
 Cluster Linkを有効にすると、分散キャッシュがアクティブになります。 キャッシュは、同時に実行されている複数のLiferay DXPノードに分散されます。 Cluster Linkは [Ehcache](http://www.ehcache.org) レプリケーションを使用し
- 。 Ehcacheグローバル設定は [`portal.properties` ファイル](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#Ehcache)ます。</p> 
+ 。 Ehcacheグローバル設定は [`portal.properties` ファイル](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#Ehcache) ます。</p> 
 
-デフォルトでは、Liferayはノード間でキャッシュされたエンティティをコピーしません。 たとえば、エンティティが削除または変更された場合、クラスターリンクは他のノードに *削除* メッセージを送信して、ローカルキャッシュ内のこのエンティティを無効にします。 別のノードでそのエンティティを要求すると、キャッシュ *ミス*ます。次に、エンティティがデータベースから取得され、ローカルキャッシュに入れられます。 1つのノードのローカルキャッシュに追加されたエンティティは、他のノードのローカルキャッシュにはコピーされません。 エンティティがキャッシュされていないノードで新しいエンティティを取得しようとすると、キャッシュ *ミス* になります。 ミスにより、ノードがトリガーされてデータベースからエンティティが取得され、ローカルキャッシュに格納されます。
+デフォルトでは、Liferayはノード間でキャッシュされたエンティティをコピーしません。 たとえば、エンティティが削除または変更された場合、クラスターリンクは他のノードに **削除** メッセージを送信して、ローカルキャッシュ内のこのエンティティを無効にします。 別のノードでそのエンティティを要求すると、キャッシュ **ミス** ます。次に、エンティティがデータベースから取得され、ローカルキャッシュに入れられます。 1つのノードのローカルキャッシュに追加されたエンティティは、他のノードのローカルキャッシュにはコピーされません。 エンティティがキャッシュされていないノードで新しいエンティティを取得しようとすると、キャッシュ **ミス** になります。 ミスにより、ノードがトリガーされてデータベースからエンティティが取得され、ローカルキャッシュに格納されます。
 
 ![Liferay DXPのキャッシュアルゴリズムは非常に効率的です。](./configuring-cluster-link/images/01.png)
 
@@ -16,6 +16,8 @@ DXPのクラスタリングは、ネットワークとクラスタノードの�
 * [まとめ](#conclusion)
 
 
+
+<a name="クラスタリンクの有効化" />
 
 ## クラスタリンクの有効化
 
@@ -52,15 +54,17 @@ Cluster Linkには、ノード間の1対多タイプの通信を提供する拡�
 
 
 
+<a name="クラスタリンクの構成-1" />
+
 ## クラスタリンクの構成
 
-Cluster Linkを有効にすると、DXPのデフォルトのクラスタリング構成が有効になります。 この設定では、*UDP上のIPマルチキャスト*を定義します。 独自のノードでマルチキャストを使用できない場合（たとえば、地理的に離れている場合やファイアウォールによって分離されている場合）、代わりにユニキャスト実装を構成できます。 詳細は、 [TCPを介したユニキャストの設定](./configuring-unicast-over-tcp.md) を参照してください。
+Cluster Linkを有効にすると、DXPのデフォルトのクラスタリング構成が有効になります。 この設定では、 **UDP上のIPマルチキャスト** を定義します。 独自のノードでマルチキャストを使用できない場合（たとえば、地理的に離れている場合やファイアウォールによって分離されている場合）、代わりにユニキャスト実装を構成できます。 詳細は、 [TCPを介したユニキャストの設定](./configuring-unicast-over-tcp.md) を参照してください。
 
 
 
 ### UDPを介したマルチキャストの使用
 
-DXPは、JGroups</a> チャネルの2つのグループを使用して、UDPを介したマルチキャストを実装します。コントロールグループとトランスポートグループです。 [チャネルのプロパティ](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#Cluster%20Link)をカスタマイズする場合は、次のポータルプロパティを `portal-ext.properties`に追加することにより、カスタマイズできます。</p> 
+DXPは、JGroups</a> チャネルの2つのグループを使用して、UDPを介したマルチキャストを実装します。コントロールグループとトランスポートグループです。 [チャネルのプロパティ](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#Cluster%20Link) をカスタマイズする場合は、次のポータルプロパティを `portal-ext.properties`に追加することにより、カスタマイズできます。</p> 
 
 
 
@@ -72,7 +76,7 @@ cluster.link.channel.properties.control=［your control channel properties］
 
 チャネルのプロパティについては、 [JGroupsのドキュメント](http://www.jgroups.org/manual4/index.html#protlist) を参照してください。 デフォルトの構成では、そこで説明されている設定を持つ多くのプロパティが設定されます。
 
-マルチキャストは、ネットワーク上のすべてのデバイスにブロードキャストします。 同じネットワーク上のクラスター環境は、デフォルトで互いに通信します。 それらの間で送信されるメッセージと情報（たとえば、スケジュールされたタスク）は、意図しない結果につながる可能性があります。 ネットワーク上で論理的または物理的にそれらを分離するか、各クラスターの `portal-ext.properties` を構成して、 [マルチキャストグループアドレスとポート値の異なるセットを使用するようにして、そのようなクラスター環境を分離します](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#Multicast)。
+マルチキャストは、ネットワーク上のすべてのデバイスにブロードキャストします。 同じネットワーク上のクラスター環境は、デフォルトで互いに通信します。 それらの間で送信されるメッセージと情報（たとえば、スケジュールされたタスク）は、意図しない結果につながる可能性があります。 ネットワーク上で論理的または物理的にそれらを分離するか、各クラスターの `portal-ext.properties` を構成して、 [マルチキャストグループアドレスとポート値の異なるセットを使用するようにして、そのようなクラスター環境を分離します](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#Multicast) 。
 
 JGroupsはデフォルトで `localhost` を使用してバインドアドレスを自動的に設定します。 ただし、一部の構成では、 `localhost` は、ホストの実際のアドレスではなく、内部ループバックネットワーク（`127.0.0.1` または `:: 1`）にバインドされています。 DXPの `cluster.link.autodetect.address` ポータルプロパティが接続可能なサーバーを指している限り、DXPはそのサーバーを使用してホストの実際のアドレスを自動的に検出します。 デフォルトの設定は次のとおりです。
 
@@ -110,6 +114,8 @@ cluster.link.autodetect.address=www.google.com:80
 
 
 
+<a name="まとめ" />
+
 ## まとめ
 
 クラスターを構成したら、開始できます。 ログファイルメッセージにクラスターの名前が表示されます（例： `cluster=liferay-channel-control`）：
@@ -127,11 +133,15 @@ GMS: address=oz-52865, cluster=liferay-channel-control, physical address=192.168
 
 
 
+<a name="次のステップ" />
+
 ## 次のステップ
 
-負荷をかけた状態でDXPクラスタをテストし、システムの最適化を調査するのが最善です。 サイトで最も使用されているエンティティを検討し、キャッシュ設定を適切に調整します。 キャッシュの構成については、 [キャッシュ構成](https://help.liferay.com/hc/en-us/articles/360035581451-Introduction-to-Cache-Configuration)を参照してください。
+負荷をかけた状態でDXPクラスタをテストし、システムの最適化を調査するのが最善です。 サイトで最も使用されているエンティティを検討し、キャッシュ設定を適切に調整します。 キャッシュの構成については、 [キャッシュ構成](https://help.liferay.com/hc/en-us/articles/360035581451-Introduction-to-Cache-Configuration) を参照してください。
 
 
+
+<a name="追加情報" />
 
 ## 追加情報
 

@@ -2,6 +2,8 @@
 
 メールサーバーに接続するようにLiferay DXPを構成するには、いくつかの方法があります。 開始する最も簡単な方法は、[サーバー管理UIを使用してメールを設定する](./connecting-to-a-mail-server.md)ことです。 この記事では、ポータルプロパティまたはアプリケーションサーバーのメールセッションを使用した、メールを構成する代替方法について説明します。
 
+<a name="ポータルプロパティを使用した組み込みメールセッションの構成" />
+
 ## ポータルプロパティを使用した組み込みメールセッションの構成
 
 オフラインで、またはDXPをデプロイする前にメールセッションを構成するには：
@@ -13,12 +15,12 @@
     ```properties
     mail.session.mail=false
     mail.session.mail.pop3.host=pop.gmail.com
-    mail.session.mail.pop3.password=*******
+    mail.session.mail.pop3.password= *******
     mail.session.mail.pop3.port=110
     mail.session.mail.pop3.user=joe.bloggs
     mail.session.mail.smtp.auth=true
     mail.session.mail.smtp.host=smtp.gmail.com
-    mail.session.mail.smtp.password=*******
+    mail.session.mail.smtp.password= *******
     mail.session.mail.smtp.port=465
     mail.session.mail.smtp.user=joe.bloggs
     mail.session.mail.store.protocol=pop3
@@ -27,9 +29,11 @@
 
 1. デフォルトのメールセッション値を独自の値に置き換えます。
 
-1. `portal-ext.properties`ファイルを[Liferay Home](../../reference/liferay-home.md)に配置します。
+1. `portal-ext.properties`ファイルを [Liferay Home](../../reference/liferay-home.md) に配置します。
 
 DXPは次回の起動時にメールセッションに接続します。
+
+<a name="アプリケーションサーバー上のメールセッションへの接続" />
 
 ## アプリケーションサーバー上のメールセッションへの接続
 
@@ -37,19 +41,21 @@ DXPは次回の起動時にメールセッションに接続します。
 
 1. アプリケーションサーバーでメールセッションを作成します。アプリケーションサーバーのドキュメントを参照してください。
 
-1. _コントロールパネル_を使用している場合は、_［コントロールパネル］ &rarr; ［設定］ &rarr; ［サーバ管理］ &rarr; ［Mail］_に移動します。
+1. **コントロールパネル** を使用している場合は、 ［**コントロールパネル］ &rarr; ［設定］ &rarr; ［サーバ管理］ &rarr; ［Mail**］ に移動します。
 
-1. _［JavaMail Properties］_フィールドに値を入力します。
+1. ［**JavaMail Properties**］ フィールドに値を入力します。
 
     ![JavaMail](./alternative-email-configuration-methods/images/01.png)
 
-1. _［保存］_ をクリックします。 DXPがアプリケーションサーバー上のメールセッションを指すようになります。
+1. ［**保存**］ をクリックします。 DXPがアプリケーションサーバー上のメールセッションを指すようになります。
 
 メールサーバーがDXPに接続され、通知を送信する準備ができました。
 
 ```{note}
 [portal-ext.properties](../../reference/portal-properties.md)で以下のプロパティを設定し、サーバーを再起動すると、コントロールパネルの値を設定するのと同じ効果があります：`mail.session.jndi.name=mail/MailSession`
 ```
+
+<a name="追加情報" />
 
 ## 追加情報
 

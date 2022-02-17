@@ -29,7 +29,7 @@ ERROR [fileinstall-directory-watcher][LicenseManager:?] DXP Development license 
 1. OSGiモジュールフォルダからすべてのトライアルライセンスとアクティベーションキーファイルを削除します。
 
     ```bash
-    rm /opt/liferay/osgi/modules/*license*.xml /opt/liferay/osgi/modules/*activation*.xml
+    rm /opt/liferay/osgi/modules/ **license** .xml /opt/liferay/osgi/modules/ **activation** .xml
     ```
 
 1. Bashシェルを終了します。
@@ -56,6 +56,8 @@ INFO  [fileinstall-directory-watcher][LicenseManager:?] License registered for D
 ```
 
 DXPライセンスを更新しました。
+
+<a name="追加情報" />
 
 ## 追加情報
 

@@ -2,9 +2,9 @@
 
 特定のモジュールのアップグレードの問題をトラブルシューティングするには、モジュールごとに（まとめてではなく）アップグレードをテストして実行することが必要になる場合があります。 Liferayには、個々のモジュールをアップグレードおよび検証するためのGogoシェルコマンドがあります。
 
-たとえば、モジュールに新しい[データスキーママイクロバージョン](https://help.liferay.com/hc/en-us/articles/360030959231-Meaningful-Schema-Versioning)があるとします。 これは唯一の新しいマイクロバージョンであるため、モジュールデータを新しいスキーマにアップグレードすることはオプションです。 新しいモジュールバージョンをデプロイすると、アクティブになりますが、そのデータはアップグレードされません。 モジュールを新しいデータスキーマにアップグレードする場合は、Gogoシェルの`upgrade`コマンドを使用できます。
+たとえば、モジュールに新しい [データスキーママイクロバージョン](https://help.liferay.com/hc/en-us/articles/360030959231-Meaningful-Schema-Versioning) があるとします。 これは唯一の新しいマイクロバージョンであるため、モジュールデータを新しいスキーマにアップグレードすることはオプションです。 新しいモジュールバージョンをデプロイすると、アクティブになりますが、そのデータはアップグレードされません。 モジュールを新しいデータスキーマにアップグレードする場合は、Gogoシェルの`upgrade`コマンドを使用できます。
 
-ただし、新しい[データスキーマのマイナー/メジャーバージョン](https://help.liferay.com/hc/en-us/articles/360030959231-Meaningful-Schema-Versioning)を持つモジュールを、そのデータをアップグレードせずにデプロイすると、モジュールは非アクティブになります。 新しいモジュールバージョンをアクティブ化するには、モジュールのデータを新しいデータスキーマにアップグレードする必要があります。
+ただし、新しい [データスキーマのマイナー/メジャーバージョン](https://help.liferay.com/hc/en-us/articles/360030959231-Meaningful-Schema-Versioning) を持つモジュールを、そのデータをアップグレードせずにデプロイすると、モジュールは非アクティブになります。 新しいモジュールバージョンをアクティブ化するには、モジュールのデータを新しいデータスキーマにアップグレードする必要があります。
 
 モジュールのアップグレードに関するトピックは次のとおりです。
 
@@ -14,6 +14,8 @@
 * [モジュールのアップグレードの実行](#executing-module-upgrades)
 * [アップグレードステータスの確認](#checking-upgrade-status)
 * [検証プロセスの実行](#executing-verify-processes)
+
+<a name="コマンドの使用" />
 
 ## コマンドの使用
 
@@ -40,6 +42,8 @@
 
 次に、各モジュールのアップグレードの可用性を調べます。
 
+<a name="アップグレード可能なモジュールのリスト" />
+
 ## アップグレード可能なモジュールのリスト
 
 依存関係が満たされれば、モジュールはアップグレードの準備ができています。 準備ができているモジュールを一覧表示するGogoシェルコマンドと、モジュールの未解決の依存関係を一覧表示するコマンドがあります。
@@ -47,6 +51,8 @@
 `upgrade:list` Gogoシェルコマンドは、アップグレードの依存関係が満たされているモジュールを一覧表示します。 これらのモジュールはアップグレードできます。
 
 モジュールがアクティブだがリストにない場合は、その依存関係をアップグレードする必要があります。
+
+<a name="モジュールの依存関係のトラブルシューティング" />
 
 ## モジュールの依存関係のトラブルシューティング
 
@@ -80,6 +86,8 @@ Registered upgrade processes for com.liferay.bookmarks.service 1.0.0
 
 モジュールのアップグレードプロセスを理解することで、自信を持って実行できます。
 
+<a name="モジュールのアップグレードの実行" />
+
 ## モジュールのアップグレードの実行
 
 `upgrade:execute ［module_name］`を実行すると、モジュールがアップグレードされます。 解決する必要があるアップグレードエラーが発生する場合があります。 コマンドを再度実行すると、最後に成功したステップからアップグレードが開始されます。
@@ -104,6 +112,8 @@ Registered upgrade processes for com.liferay.iframe.web 1.0.0
 
 完了していないモジュールのアップグレードについては、そのステータスを確認して問題を解決できます。
 
+<a name="アップグレードステータスの確認" />
+
 ## アップグレードステータスの確認
 
 コマンド`upgrade:check`は、アップグレードが差し迫っているモジュールを一覧表示します。
@@ -117,7 +127,7 @@ Would upgrade com.liferay.dynamic.data.mapping.service from 1.0.0-step-2 to
 
 モジュールは、アップグレードを完了するために他のモジュールに依存することがよくあります。 `scr:info ［upgrade_step_class_qualified_name］`を実行すると、アップグレードステップクラスの依存関係が表示されます。 モジュールが最初に依存するモジュールをアップグレードする必要があります。
 
-モジュールを解決してアクティブ化するには、そのアップグレードを完了する必要があります。 [Apache Felix Dependency Manager](http://felix.apache.org/documentation/subprojects/apache-felix-dependency-manager/tutorials/leveraging-the-shell.html)のGogoシェルコマンド`dm wtf`は、未解決の依存関係を明らかにします。 モジュールで特定のデータスキーマバージョンが必要（たとえば、その`bnd.bnd`が`Liferay-Require-SchemaVersion: 1.0.2`を指定している）だが、モジュールがそのバージョンへのアップグレードを完了していない場合、`dm wtf`はスキーマバージョンが登録されていないことを示します。
+モジュールを解決してアクティブ化するには、そのアップグレードを完了する必要があります。 [Apache Felix Dependency Manager](http://felix.apache.org/documentation/subprojects/apache-felix-dependency-manager/tutorials/leveraging-the-shell.html) のGogoシェルコマンド`dm wtf`は、未解決の依存関係を明らかにします。 モジュールで特定のデータスキーマバージョンが必要（たとえば、その`bnd.bnd`が`Liferay-Require-SchemaVersion: 1.0.2`を指定している）だが、モジュールがそのバージョンへのアップグレードを完了していない場合、`dm wtf`はスキーマバージョンが登録されていないことを示します。
 
 ```
 1 missing dependencies found.
@@ -132,11 +142,15 @@ The following service(s) are missing:
 
 各モジュールには1つの`Release_`テーブルレコードがあり、その`schemaVersion`フィールドの値は`1.0.0`以上である必要があります。 `1.0.0`は、バージョン6.2以前を対象とした従来のプラグインであったものを除き、Liferay DXPモジュールの初期バージョンです。
 
+<a name="検証プロセスの実行" />
+
 ## 検証プロセスの実行
 
-一部のモジュールには検証プロセスがあります。 これらは、アップグレードが正常に実行されたことを確認します。 Liferay DXPのアップグレード後に、コアのプロセスが自動的に実行されることを確認します。 [`verify.*`ポータルプロパティ](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#Verify)を設定してサーバーを再起動することで、これらを実行することもできます。
+一部のモジュールには検証プロセスがあります。 これらは、アップグレードが正常に実行されたことを確認します。 Liferay DXPのアップグレード後に、コアのプロセスが自動的に実行されることを確認します。 [`verify.*`ポータルプロパティ](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#Verify) を設定してサーバーを再起動することで、これらを実行することもできます。
 
 使用可能な検証プロセスを確認するには、Gogoシェルコマンド`verify:list`を入力します。 検証プロセスを実行するには、`verify:execute ［verify_qualified_name］`と入力します。
+
+<a name="関連トピック" />
 
 ## 関連トピック
 

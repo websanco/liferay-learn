@@ -18,7 +18,7 @@
 アップグレードレポートは、Liferay DXP/Portal 7.4以降で利用できます。
 ```
 
-アップグレードレポートを有効にするには、`tools/portal-tools-db-upgrade-client/portal-upgrade-ext.properties`ファイルで`upgrade.report.enabled=true`[ポータルプロパティ](../../reference/portal-properties.md)を設定します。 例:
+アップグレードレポートを有効にするには、`tools/portal-tools-db-upgrade-client/portal-upgrade-ext.properties`ファイルで`upgrade.report.enabled=true` [ポータルプロパティ](../../reference/portal-properties.md) を設定します。 例:
 
 ```bash
 cd liferay-home
@@ -29,6 +29,8 @@ echo "upgrade.report.enabled=\"true\"" << tools/portal-tools-db-upgrade-client/p
 ```
 
 [データベースアップグレードツール](../upgrade-basics/using-the-database-upgrade-tool.md)は、次回の実行時にアップグレードレポートを生成します。
+
+<a name="追加情報" />
 
 ## 追加情報
 

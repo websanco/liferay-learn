@@ -9,7 +9,9 @@ patching-dxp-7-3-and-earlier/updating-liferay-portal-ce.md
 patching-dxp-7-3-and-earlier/advanced-patching-for-dxp-7-2.md
 ```
 
-DXPインスタンスを開発して保守するときは、最新の修正でインスタンスを更新する必要があります。 Liferayは修正を集約し、 *パッチ*と呼ばれるZIPファイルでエンタープライズサブスクライバーが利用できるようにします。
+DXPインスタンスを開発して保守するときは、最新の修正でインスタンスを更新する必要があります。 Liferayは修正を集約し、 **パッチ** と呼ばれるZIPファイルでエンタープライズサブスクライバーが利用できるようにします。
+
+<a name="パッチの種類" />
 
 ## パッチの種類
 
@@ -22,13 +24,19 @@ DXPインスタンスを開発して保守するときは、最新の修正で�
 
 [パッチタイプ](./patching-dxp-7-3-and-earlier/understanding-patch-types-for-dxp-7-3-and-earlier.md) は、すべてのパッチオプションを説明します。
 
+<a name="パッチのインストール" />
+
 ## パッチのインストール
 
 必要なパッチを入手したら、Liferayのパッチツールを使用してパッチを適用できます。 [パッチのインストール](./patching-dxp-7-3-and-earlier/installing-patches-for-dxp-7-3-and-earlier.md) では、DXPに安全かつ包括的にパッチを適用するための基本的な手順を説明しています。
 
+<a name="パッチツールの構成" />
+
 ## パッチツールの構成
 
 [`patching-tool.sh auto-discovery` コマンド](./reference/configuring-the-patching-tool.md) は、Tomcatバンドルおよび一般的なアプリサーバー構成に対してツールを自動的に構成します。 パッチツールを手動で設定して、DXPインストールのバリエーションを処理することもできます。
+
+<a name="高度なパッチ" />
 
 ## 高度なパッチ
 
@@ -40,4 +48,4 @@ DXPインスタンスを開発して保守するときは、最新の修正で�
   - [スリムバンドルの使用](./patching-dxp-7-3-and-earlier/advanced-patching-for-dxp-7-2/using-slim-bundles.md)
   - [パッチとカスタムプラグイン間の衝突の処理](./patching-dxp-7-3-and-earlier/advanced-patching-for-dxp-7-2/custom-code-and-patch-compatibility.md)
 
-パッチ適用の概要を理解したところで、使用可能な [パッチタイプ](./patching-dxp-7-3-and-earlier/understanding-patch-types-for-dxp-7-3-and-earlier.md) について学習します。 その後、 [パッチのインストール](./patching-dxp-7-3-and-earlier/installing-patches-for-dxp-7-3-and-earlier.md)続いて、パッチを適用する準備が整います。
+パッチ適用の概要を理解したところで、使用可能な [パッチタイプ](./patching-dxp-7-3-and-earlier/understanding-patch-types-for-dxp-7-3-and-earlier.md) について学習します。 その後、 [パッチのインストール](./patching-dxp-7-3-and-earlier/installing-patches-for-dxp-7-3-and-earlier.md) 続いて、パッチを適用する準備が整います。
