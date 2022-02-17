@@ -2,7 +2,7 @@
 
 When you need additional fields in your application, you can always add them in your [service model definition](../service-builder/service-builder-basics/generating-model-persistence-and-service-code.html#examine-the-service-model-definition) and re-run Service Builder. This adds new columns to your database table. This works, but can be a pain: now you have to write an upgrade process to migrate your users to the new schema. But with Liferay's Expando feature, you can add additional fields without having to modify your database. Expandos work by adding additional properties to an object in Java. The example project demonstrates accessing a custom field to Users.
 
-# See the Example Project
+## See the Example Project
 
 1. Start Liferay DXP. If you don't already have a docker container, use
 
