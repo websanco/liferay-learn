@@ -67,7 +67,7 @@ Liferayの構成フレームワークを使用して、MVCポートレットの�
 :lines: 5-17
 ```
 
-このサンプルインターフェイスでは、スコープが`Scope.COMPANY`に設定されていることに注意してください。 詳細については、 [Scoping Configurations](./scoping-configurations.md)を参照してください。
+このサンプルインターフェイスでは、スコープが`Scope.COMPANY`に設定されていることに注意してください。 詳細については、 [スコープ設定](./scoping-configurations.md) を参照してください。
 
 インターフェイスには、フォントの色、フォントファミリー、フォントサイズの3つの設定可能な属性があります。 色とファミリーは`string`型であり、サイズは`int`型であることに注意してください。
 
@@ -159,6 +159,6 @@ required = false)
 
 ## さらなるカスタマイゼーション
 
-* [Categorizing a Configuration](./categorizing-a-configuration.md)
+* [構成の分類](./categorizing-a-configuration.md)
 * [Scoping Configurations](./scoping-configurations)
-* [Field Options Provider](./field-options-provider.md)
+* [フィールドオプションプロバイダー](./field-options-provider.md)

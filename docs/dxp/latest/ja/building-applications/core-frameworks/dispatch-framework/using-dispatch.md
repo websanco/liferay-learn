@@ -20,12 +20,12 @@
 
 1. **追加** ボタン（![Add Button](../../../images/icon-add.png)）をクリックして、ディスパッチタスクに必要なテンプレートを選択します。 選択したテンプレートは、タスクの基本的なロジックを定義します。
 
-   各テンプレートは`DispatchTaskExecutor`インターフェイスの実装であり、各ディスパッチタスクは選択されたテンプレートのインスタンスです。 動作の詳細については、 [Understanding the Dispatch Framework](./understanding-the-dispatch-framework.md)を参照してください。
+   各テンプレートは`DispatchTaskExecutor`インターフェイスの実装であり、各ディスパッチタスクは選択されたテンプレートのインスタンスです。 動作の詳細については、 [ディスパッチフレームワークを理解する](./understanding-the-dispatch-framework.md) を参照してください。
 
    ```{note}
       Liferay DXPはさまざまなディスパッチタスクテンプレートを提供しますが、Liferay PortalにはTalendディスパッチタスクエグゼキュータのみが含まれています。
 
-      独自のテンプレートを作成することもできます。 その方法については、`Creating a New Dispatch Task Executor <./creating-a-new-dispatch-task-executor.md>`_を参照してください。
+      独自のテンプレートを作成することもできます。 その方法については、 [新しいディスパッチタスクエグゼキュータの作成](./creating-a-new-dispatch-task-executor.md) を参照してください。
    ```
 
    ![追加ボタンをクリックして、ディスパッチタスクのディスパッチタスクエグゼキュータテンプレートを選択します。](./using-dispatch/images/02.png)
@@ -110,6 +110,6 @@ Talendは、カスタムデータ統合ジョブを定義するためのオー�
 
 ## 追加情報
 
-* [Dispatch UI Reference](./dispatch-ui-reference.md)
-* [Understanding the Dispatch Framework](./understanding-the-dispatch-framework.md)
-* [Creating a New Dispatch Task Executor](./creating-a-new-dispatch-task-executor.md)
+* [ディスパッチUIリファレンス](./dispatch-ui-reference.md)
+* [ディスパッチフレームワークを理解する](./understanding-the-dispatch-framework.md)
+* [新しいディスパッチタスクエグゼキュータの作成](./creating-a-new-dispatch-task-executor.md)

@@ -111,7 +111,7 @@
 1. メッセージバスがメッセージを`N8K5CharlieMessageListener`に送信します。
 1. `N8K5CharlieMessageListener`がメッセージを受信します。
 
-宛先構成と送信者クラスを調べます。 リスナークラス`N8K5CharlieMessageListener`は、[Listening for Messages](./listening-for-messages.md)に示す方法と同じ方法で登録します。
+宛先構成と送信者クラスを調べます。 リスナークラス`N8K5CharlieMessageListener`は、 [メッセージを聞く](./listening-for-messages.md) に示す方法と同じ方法で登録します。
 
 <a name="宛先構成を調べる" />
 
@@ -154,7 +154,7 @@
 `N8K5Baker`は、 [`MessageBus`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/MessageBus.java) の`sendMessage(String, Message)`メソッドを呼び出して、`acme/n8k5_able`という名前の [`Destination`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/Destination.java) にメッセージを送信します。 `MessageBus`は新しいスレッドを開始し、`acme/n8k5_able` `Destination`に登録されている [`MessageListener`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/MessageListener.java) インスタンスに`Message`を送信します。 `N8K5Baker`のスレッドが継続します。
 
 ```{note}
-`Message`への応答を受信したい場合は、` Message`に応答先を設定し、 `N8K5Baker`などのクラスを` MessageListener`としてその宛先に登録します。 詳細については、[Listening for Messages](./listening-for-messages.md)を参照してください。
+`Message`への応答を受信したい場合は、` Message`に応答先を設定し、 `N8K5Baker`などのクラスを` MessageListener`としてその宛先に登録します。 詳細については、 [メッセージを聞く](./listening-for-messages.md) を参照してください。
 ```
 
 <a name="応答処理の追加" />
@@ -318,14 +318,14 @@ OSGiコンポーネントではないクラスでは、 [MessageBusUtil](https:/
 
 ## 次のステップ
 
-非同期メッセージングに慣れてきたので、最適なパフォーマンスになるように調整できます。 [Tuning Messaging Performance](./tuning-messaging-performance.md)でその方法を学びましょう。
+非同期メッセージングに慣れてきたので、最適なパフォーマンスになるように調整できます。 [メッセージングパフォーマンスのチューニング](./tuning-messaging-performance.md) でその方法を学びましょう。
 
-**デフォルト** モードと **ダイレクト** モードを使用した同期メッセージングを検討する場合は、詳細について[Using Direct Synchronous Messaging](./using-direct-synchronous-messaging.md)および[Using Default Synchronous Messaging](./using-default-synchronous-messaging.md)を参照してください。
+**デフォルト** モードと **ダイレクト** モードを使用した同期メッセージングを検討する場合は、詳細について [ダイレクト同期メッセージングの使用](./using-direct-synchronous-messaging.md) および [デフォルトの同期メッセージングの使用](./using-default-synchronous-messaging.md) を参照してください。
 
 <a name="追加情報" />
 
 ## 追加情報
 
-* [Message Bus](../message-bus.md)
-* [Listening for Messages](./listening-for-messages.md)
-* [Listening for Registration Events](./listening-for-registration-events.md)
+* [Message Busメッセージバス](../message-bus.md)
+* [メッセージを聞く](./listening-for-messages.md)
+* [登録イベントを聞く](./listening-for-registration-events.md)

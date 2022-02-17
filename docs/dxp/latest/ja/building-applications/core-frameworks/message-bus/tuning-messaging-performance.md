@@ -326,6 +326,6 @@ pending message count 0, sent message count 2
 
 ## 追加情報
 
-* [Using Asynchronous Messaging](./using-asynchronous-messaging.md)
-* [Using Default Synchronous Messaging](./using-default-synchronous-messaging.md)
-* [Using Direct Synchronous Messaging](./using-direct-synchronous-messaging.md)
+* [非同期メッセージングの使用](./using-asynchronous-messaging.md)
+* [デフォルトの同期メッセージングの使用](./using-default-synchronous-messaging.md)
+* [ダイレクト同期メッセージングの使用](./using-direct-synchronous-messaging.md)

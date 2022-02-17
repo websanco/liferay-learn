@@ -114,4 +114,4 @@ DestinationNames.DOCUMENT_LIBRARY_PDF_PROCESSOR
 
 ## 追加情報
 
-* [Message Bus](../message-bus.md)
+* [Message Busメッセージバス](../message-bus.md)

@@ -15,7 +15,7 @@ Liferay Dispatchは、Liferayのスケジューラーエンジンの上に構築
 
 ## ベースの`DispatchTaskExecutor`
 
-ベースの [`DispatchTaskExecutor`](https://github.com/liferay/liferay-portal/blob/master/modules/apps/dispatch/dispatch-api/src/main/java/com/liferay/dispatch/executor/DispatchTaskExecutor.java) インターフェイスを実装すると、Liferayインスタンスでディスパッチタスクのテンプレートが作成されます。 `DispatchTaskExecutor`の各実装は、OSGiコンポーネントとして登録され、ディスパッチタスクによって実行されるロジックが含まれています。 すべてのディスパッチタスクは、`DispatchTaskExecutor`インターフェイスを実装し、`dispatch.task.executor.name`および`dispatch.task.executor.type` OSGiコンポーネントプロパティを持つJavaクラスのインスタンスです。 詳しくは、[Creating a New Dispatch Task Executor](./creating-a-new-dispatch-task-executor.md)をご覧ください。
+ベースの [`DispatchTaskExecutor`](https://github.com/liferay/liferay-portal/blob/master/modules/apps/dispatch/dispatch-api/src/main/java/com/liferay/dispatch/executor/DispatchTaskExecutor.java) インターフェイスを実装すると、Liferayインスタンスでディスパッチタスクのテンプレートが作成されます。 `DispatchTaskExecutor`の各実装は、OSGiコンポーネントとして登録され、ディスパッチタスクによって実行されるロジックが含まれています。 すべてのディスパッチタスクは、`DispatchTaskExecutor`インターフェイスを実装し、`dispatch.task.executor.name`および`dispatch.task.executor.type` OSGiコンポーネントプロパティを持つJavaクラスのインスタンスです。 詳しくは、 [新しいディスパッチタスクエグゼキュータの作成](./creating-a-new-dispatch-task-executor.md) をご覧ください。
 
 <a name="dispatchtrigger" />
 
@@ -51,6 +51,6 @@ Liferay Dispatchは、Liferayのスケジューラーエンジンの上に構築
 
 ## 追加情報
 
-* [Using Dispatch](./using-dispatch.md)
-* [Dispatch UI Reference](./dispatch-ui-reference.md)
+* [ディスパッチの使用](./using-dispatch.md)
+* [ディスパッチUIリファレンス](./dispatch-ui-reference.md)
 * [Creating a New Dispatch Executor](./creating-a-new-dispatch-task-executor.md)

@@ -94,6 +94,6 @@ WARプラグインをWABとしてデプロイでき、WABのコピーを保存�
 
 ## 追加情報
 
-* [JARs Excluded from WABs](./jars-excluded-from-wabs.md)
-* [Resolving Third Party Library Package Dependencies](../../liferay-internals/fundamentals/configuring-dependencies/resolving-third-party-library-package-dependencies.md)
+* [WABから除外されたJAR](./jars-excluded-from-wabs.md)
+* [サードパーティライブラリパッケージの依存関係の解決](../../liferay-internals/fundamentals/configuring-dependencies/resolving-third-party-library-package-dependencies.md)
 * [モジュールのライフサイクル](../../liferay-internals/architecture/module-lifecycle.md)

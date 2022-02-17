@@ -147,13 +147,13 @@ MVCリソースコマンドクラスは、 [`MVCResourceCommand`](https://github
 
 ## 次のステップ
 
-これで、MVCリソースコマンドの使用方法がわかりました。 ポートレットのコンテンツをローカライズする場合は、[Using Localized Messages](./using-localized-messages-in-an-mvc-portlet.md)を参照してください。 モデルレイヤー、永続レイヤー、およびサービスレイヤーを開発する準備ができている場合は、[Service Builder](../../data-frameworks/service-builder.md)をご覧ください。
+これで、MVCリソースコマンドの使用方法がわかりました。 ポートレットのコンテンツをローカライズする場合は、[Using Localized Messages](./using-localized-messages-in-an-mvc-portlet.md)を参照してください。 モデルレイヤー、永続レイヤー、およびサービスレイヤーを開発する準備ができている場合は、 [サービスビルダー](../../data-frameworks/service-builder.md) をご覧ください。
 
 <a name="追加情報" />
 
 ## 追加情報
 
-* [Using MVC](../using-mvc.md)
-* [MVC Render Command](./mvc-render-command.md)
-* [MVC Action Command](./mvc-action-command.md)
+* [MVCの使用](../using-mvc.md)
+* [MVCレンダーコマンド](./mvc-render-command.md)
+* [MVCアクションコマンド](./mvc-action-command.md)
 * [MVCコマンドのオーバーライド](../../../liferay-internals/extending-liferay/overriding-mvc-commands.md)

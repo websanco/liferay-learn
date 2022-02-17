@@ -135,7 +135,7 @@
 
 ## リスナーを調べる
 
-`m4q7-charlie-impl`モジュールの`M4Q7CharlieMessageListener`クラスは、`acme/m4q7_able` [`Destination`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/Destination.java) に送信されたメッセージをリッスンします。 [Listening for Messages](./listening-for-messages.md)に示されている方法と同じ方法で登録されます。
+`m4q7-charlie-impl`モジュールの`M4Q7CharlieMessageListener`クラスは、`acme/m4q7_able` [`Destination`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/Destination.java) に送信されたメッセージをリッスンします。 [メッセージを聞く](./listening-for-messages.md) に示されている方法と同じ方法で登録されます。
 
 `M4Q7CharlieMessageListener`クラス：
 
@@ -248,15 +248,15 @@
 
 ## 次のステップ
 
-**ダイレクト** モードを使用した同期メッセージングを検討する場合は、[Using Direct Synchronous Messaging](./using-direct-synchronous-messaging.md)を参照してください。
+**ダイレクト** モードを使用した同期メッセージングを検討する場合は、 [ダイレクト同期メッセージングの使用](./using-direct-synchronous-messaging.md) を参照してください。
 
-メッセージを送信した直後に処理を続行する場合は、[Using Asynchronous Messaging](./using-asynchronous-messaging.md)を参照してください。
+メッセージを送信した直後に処理を続行する場合は、 [非同期メッセージングの使用](./using-asynchronous-messaging.md) を参照してください。
 
 <a name="追加情報" />
 
 ## 追加情報
 
-* [Message Bus](../message-bus.md)
-* [Listening for Messages](./listening-for-messages.md)
-* [Using Asynchronous Messaging](./using-asynchronous-messaging.md)
-* [Listening for Registration Events](./listening-for-registration-events.md)
+* [Message Busメッセージバス](../message-bus.md)
+* [メッセージを聞く](./listening-for-messages.md)
+* [非同期メッセージングの使用](./using-asynchronous-messaging.md)
+* [登録イベントを聞く](./listening-for-registration-events.md)

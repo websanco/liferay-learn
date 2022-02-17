@@ -15,7 +15,7 @@ module.framework.web.generator.excluded.paths=\
 ```
 
 ```{note}
-    WABが`liferay-plugin-package.properties <https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/liferay-plugin-package_7_3_0.properties.html>`_ ファイル内の``portal-dependency-jars``プロパティにJARを一覧表示していても、LiferayはこれらのJARをWABから除外します。
+    WABが [liferay-plugin-package.properties](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/liferay-plugin-package_7_3_0.properties.html) ファイル内の``portal-dependency-jars``プロパティにJARを一覧表示していても、LiferayはこれらのJARをWABから除外します。
 ```
 
 <a name="異なるバージョンのサードパーティーパッケージを含める" />
@@ -72,6 +72,6 @@ WARで[エクスポートされたサードパーティーパッケージ](../..
 
 ## 追加情報
 
-* [Exported Third Party Packages](../../liferay-internals/reference/exported-third-party-packages.md)
-* [Configuring Dependencies](../../liferay-internals/fundamentals/configuring-dependencies.md)
+* [エクスポートされたサードパーティパッケージ](../../liferay-internals/reference/exported-third-party-packages.md)
+* [依存関係の構成 (近日公開！)](../../liferay-internals/fundamentals/configuring-dependencies.md)
 * [Deploying WARs \(WAB Generator\)](./deploying-wars-wab-generator.md)

@@ -187,6 +187,6 @@
 
 ## 追加情報
 
-* [Tuning Messaging Performance](./tuning-messaging-performance.md)
-* [Listening for Messages](./listening-for-messages.md)
-* [Using Asynchronous Messaging](./using-asynchronous-messaging.md)
+* [メッセージングパフォーマンスのチューニング](./tuning-messaging-performance.md)
+* [メッセージを聞く](./listening-for-messages.md)
+* [非同期メッセージングの使用](./using-asynchronous-messaging.md)

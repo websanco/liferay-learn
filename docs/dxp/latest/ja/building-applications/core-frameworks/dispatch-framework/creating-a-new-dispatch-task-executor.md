@@ -114,6 +114,6 @@
 
 ## 追加情報
 
-* [Understanding the Dispatch Framework](./understanding-the-dispatch-framework.md)
-* [Using Dispatch](./using-dispatch.md)
-* [Dispatch UI Reference](./dispatch-ui-reference.md)
+* [ディスパッチフレームワークを理解する](./understanding-the-dispatch-framework.md)
+* [ディスパッチの使用](./using-dispatch.md)
+* [ディスパッチUIリファレンス](./dispatch-ui-reference.md)

@@ -187,4 +187,4 @@ JSPアクションURL：
 * [MVCActionCommand classes](./mvc-action-command.md)
 * [MVCRenderCommand](./mvc-render-command.md)
 * [MVCResourceCommand](./mvc-resource-command.md)
-* [Using Localized Messages in an MVC Portlet](./using-localized-messages-in-an-mvc-portlet.md)
+* [MVCポートレットでのローカライズされたメッセージの使用](./using-localized-messages-in-an-mvc-portlet.md)

@@ -152,5 +152,5 @@ Liferay Workspaceに追加されたバンドルにコードをデプロイする
 
 ## 関連トピック
 
-* [Configuring a Liferay Docker Container](./configuring-a-liferay-docker-container.md)
+* [LiferayのDockerコンテナの設定](./configuring-a-liferay-docker-container.md)
 * [Blade CLIを使用したプロジェクトの生成](../blade-cli/generating-projects-with-blade-cli.md)

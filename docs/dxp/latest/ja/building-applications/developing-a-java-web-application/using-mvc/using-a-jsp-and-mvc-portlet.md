@@ -123,7 +123,7 @@ Webアプリケーションの開発を開始する簡単な方法は、JSPフ�
 
 ## 次のステップ
 
-　 JSPと1つの単純なJavaクラスを使用してWebアプリケーションを作成しました。 ここから先は、いろいろな選択があります。 ビューをさらに追加するには、[Rendering Views with MVC Portlet](./rendering-views-with-mvc-portlet.md)を参照してください。 アプリケーションにアクションを追加するには、[MVC Action Command](./mvc-action-command.md)を参照してください。 バックエンドのデータモデルを実装するには、[Service Builder](../../data-frameworks/service-builder.md)を参照してください。
+　 JSPと1つの単純なJavaクラスを使用してWebアプリケーションを作成しました。 ここから先は、いろいろな選択があります。 ビューをさらに追加するには、 [MVCポートレットを使用したビューのレンダリング](./rendering-views-with-mvc-portlet.md) を参照してください。 アプリケーションにアクションを追加するには、 [MVCアクションコマンド](./mvc-action-command.md) を参照してください。 バックエンドのデータモデルを実装するには、 [サービスビルダー](../../data-frameworks/service-builder.md) を参照してください。
 
 <a name="追加情報" />
 

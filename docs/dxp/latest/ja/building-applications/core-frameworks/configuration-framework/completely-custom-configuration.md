@@ -90,7 +90,7 @@
     :lines: 24-40
     ```
 
-1. この例では、構成スコープは `system`に設定されています。 詳細については、[Scoping Configurations](./scoping-configurations.md)を参照してください。
+1. この例では、構成スコープは `system`に設定されています。 詳細については、 [スコープ設定](./scoping-configurations.md) を参照してください。
 
     ```{literalinclude} ./completely-custom-configuration/resources/liferay-u2g5.zip/u2g5-web/src/main/java/com/acme/u2g5/web/internal/configuration/admin/display/U2G5ConfigurationScreen.java
     :dedent: 1

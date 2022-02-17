@@ -157,12 +157,12 @@ MVCアクションコマンドクラスは、 [`MVCActionCommand`](https://githu
 
 ## 次のステップ
 
-MVCアクションコマンドの使用方法がわかったので、[MVC Render Commands](./mvc-render-command.md)と[MVC Resource Commands](./mvc-resource-command.md)を確認することをお勧めします。 アプリのコンテンツのローカライズを開始する場合は、[Using Localized Messages](./using-localized-messages-in-an-mvc-portlet.md)を参照してください。 モデルレイヤー、永続レイヤー、およびサービスレイヤーの開発を開始する準備ができている場合は、[Service Builder](../../data-frameworks/service-builder.md)をご覧ください。
+MVCアクションコマンドの使用方法がわかったので、[MVC Render Commands](./mvc-render-command.md)と[MVC Resource Commands](./mvc-resource-command.md)を確認することをお勧めします。 アプリのコンテンツのローカライズを開始する場合は、[Using Localized Messages](./using-localized-messages-in-an-mvc-portlet.md)を参照してください。 モデルレイヤー、永続レイヤー、およびサービスレイヤーの開発を開始する準備ができている場合は、 [サービスビルダー](../../data-frameworks/service-builder.md) をご覧ください。
 
 <a name="追加情報" />
 
 ## 追加情報
 
-* [MVC Render Command](./mvc-render-command.md)
-* [MVC Resource Command](./mvc-resource-command.md)
+* [MVCレンダーコマンド](./mvc-render-command.md)
+* [MVCリソースコマンド](./mvc-resource-command.md)
 * [MVCコマンドのオーバーライド](../../../liferay-internals/extending-liferay/overriding-mvc-commands.md)

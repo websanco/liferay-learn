@@ -47,7 +47,7 @@ MVCには、3つのレイヤーがあります。
 
 **コントローラー：** MVCパターンの中間者であるコントローラーは、ビューレイヤーとモデルレイヤーの間でデータをやり取りします。
 
-Liferay DXPのアプリケーションは、複数の個別の[モジュール](../../liferay-internals/architecture/osgi-and-modularity.md)に分割されています。  [Service Builder](../data-frameworks/service-builder.md)を使用すると、モデルレイヤーが`service`モジュールと`api` [モジュール](../../liferay-internals/fundamentals/module-projects.md)に生成されます。 ビューレイヤーとコントローラーレイヤーは、モジュールである`web`モジュールを共有します。
+Liferay DXPのアプリケーションは、複数の個別の[モジュール](../../liferay-internals/architecture/osgi-and-modularity.md)に分割されています。  [サービスビルダー](../data-frameworks/service-builder.md) を使用すると、モデルレイヤーが`service`モジュールと`api` [モジュール](../../liferay-internals/fundamentals/module-projects.md)に生成されます。 ビューレイヤーとコントローラーレイヤーは、モジュールである`web`モジュールを共有します。
 
 [Workspace](../tooling/liferay-workspace/creating-code-with-liferay-workspace.md) を使用してマルチモジュールのService Builder駆動型MVCアプリケーション[プロジェクト](../../liferay-internals/fundamentals/module-projects.md)のスケルトンを生成すると、時間を大幅に節約でき、より重要な（そして興味深い）開発作業を開始できます。
 
@@ -57,9 +57,9 @@ Liferay DXPのアプリケーションは、複数の個別の[モジュール](
 
 大規模なアプリケーションでは、すべてのコントローラーロジックを保持している場合、 `-Portlet` クラスは巨大で扱いにくいものになります。 Liferayは、コントローラー機能を分割するMVCコマンドクラスを提供します。
 
-* [`MVCActionCommand`](https://learn.liferay.com/reference/latest/en/dxp/javadocs/portal-kernel/com/liferay/portal/kernel/portlet/bridges/mvc/MVCActionCommand.html)： `-ActionCommand` クラスを使用して、アクションURLによって呼び出される各ポートレットアクションを保持します。
-* [`MVCRenderCommand`](https://learn.liferay.com/reference/latest/en/dxp/javadocs/portal-kernel/com/liferay/portal/kernel/portlet/bridges/mvc/MVCRenderCommand.html)： `-RenderCommand` クラスを使用して、レンダリングURLに応答することにより、適切なJSPにディスパッチする `render` メソッドを保持します。
-* [`MVCResourceCommand`](https://learn.liferay.com/reference/latest/en/dxp/javadocs/portal-kernel/com/liferay/portal/kernel/portlet/bridges/mvc/MVCResourceCommand.html)： `-ResourceCommand` クラスを使用して、リソースURLに基づいてリソースを提供します。
+* [`MVCActionCommand`](https://learn.liferay.com/reference/latest/en/dxp/javadocs/portal-kernel/com/liferay/portal/kernel/portlet/bridges/mvc/MVCActionCommand.html) ： `-ActionCommand` クラスを使用して、アクションURLによって呼び出される各ポートレットアクションを保持します。
+* [`MVCRenderCommand`](https://learn.liferay.com/reference/latest/en/dxp/javadocs/portal-kernel/com/liferay/portal/kernel/portlet/bridges/mvc/MVCRenderCommand.html) ： `-RenderCommand` クラスを使用して、レンダリングURLに応答することにより、適切なJSPにディスパッチする `render` メソッドを保持します。
+* [`MVCResourceCommand`](https://learn.liferay.com/reference/latest/en/dxp/javadocs/portal-kernel/com/liferay/portal/kernel/portlet/bridges/mvc/MVCResourceCommand.html) ： `-ResourceCommand` クラスを使用して、リソースURLに基づいてリソースを提供します。
 
 すべてをつなぎ合わせて適切に機能させるには、混乱を招く構成ファイルが必要です。 いいえ、そうではありません。`-Portlet`クラスの`@Component`アノテーションですべて簡単に管理できます。
 
@@ -110,7 +110,7 @@ DTD [liferay-portlet-app_7_3_0.dtd](https://learn.liferay.com/reference/latest/e
 <a href="<%= view2URL %>">Go to View 2</a>
 ```
 
-ユーザーがリンクをクリックすると、ポートレットは`mvcPath`リクエストパラメータを受け取り、その`render`メソッドで制御ロジックを処理します。 詳細については、[Rendering Views with MVC Portlet](./using-mvc/rendering-views-with-mvc-portlet.md)を参照してください。
+ユーザーがリンクをクリックすると、ポートレットは`mvcPath`リクエストパラメータを受け取り、その`render`メソッドで制御ロジックを処理します。 詳細については、 [MVCポートレットを使用したビューのレンダリング](./using-mvc/rendering-views-with-mvc-portlet.md) を参照してください。
 
 <a name="次のステップ" />
 
@@ -118,24 +118,24 @@ DTD [liferay-portlet-app_7_3_0.dtd](https://learn.liferay.com/reference/latest/e
 
 これまで見てきたように、LiferayのMVCポートレットフレームワークは、適切に構造化されたコントローラーレイヤーを提供します。 MVCポートレットの基本を学びたい場合は、次のチュートリアルから始めてください。
 
-* [Using a JSP and MVC Portlet](./using-mvc/using-a-jsp-and-mvc-portlet.md)
-* [Rendering Views with MVC Portlet](./using-mvc/rendering-views-with-mvc-portlet.md)
-* [Invoking Actions with MVC Portlet](./using-mvc/invoking-actions-with-mvc-portlet.md)
+* [JSPおよびMVCポートレットの使用](./using-mvc/using-a-jsp-and-mvc-portlet.md)
+* [MVCポートレットを使用したビューのレンダリング](./using-mvc/rendering-views-with-mvc-portlet.md)
+* [MVCポートレットを使用したアクションの呼び出し](./using-mvc/invoking-actions-with-mvc-portlet.md)
 
 個別のMVCコマンドクラスで制御ロジックを開発する場合は、次の記事をお読みください。
 
-* [MVC Action Command](./using-mvc/mvc-action-command.md)
-* [MVC Render Command](./using-mvc/mvc-render-command.md)
-* [MVC Resource Command](./using-mvc/mvc-resource-command.md)
+* [MVCアクションコマンド](./using-mvc/mvc-action-command.md)
+* [MVCレンダーコマンド](./using-mvc/mvc-render-command.md)
+* [MVCリソースコマンド](./using-mvc/mvc-resource-command.md)
 
-モデルレイヤーを開発する準備ができている場合は、[Service Builder](../data-frameworks/service-builder.md)をご覧ください。
+モデルレイヤーを開発する準備ができている場合は、 [サービスビルダー](../data-frameworks/service-builder.md) をご覧ください。
 
 <a name="追加情報" />
 
 ## 追加情報
 
 * [ポートレットのルック&フィール](./using-mvc/portlet-preferences.md)
-* [Using Localized Messages in an MVC Portlet](./using-mvc/using-localized-messages-in-an-mvc-portlet.md)
+* [MVCポートレットでのローカライズされたメッセージの使用](./using-mvc/using-localized-messages-in-an-mvc-portlet.md)
 * [モジュールプロジェクト](../../liferay-internals/fundamentals/module-projects.md)
 * [ワークスペース](../tooling/liferay-workspace/creating-code-with-liferay-workspace.md)
 * [基礎](../../liferay-internals/fundamentals.md)

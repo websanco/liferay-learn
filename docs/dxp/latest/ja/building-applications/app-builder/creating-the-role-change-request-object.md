@@ -6,9 +6,9 @@
 
 ![ロール変更リクエストオブジェクトは、このワークフロー対応アプリのいくつかのステップを通過します。](./creating-the-role-change-request-object/images/01.png)
 
-ここでは、バッキングオブジェクト、フォームビュー、およびテーブルビューを作成します。 ワークフロー対応アプリ自体を作成するには、[Creating the Role Change Request App](./creating-the-role-change-request-app.md)を参照してください。
+ここでは、バッキングオブジェクト、フォームビュー、およびテーブルビューを作成します。 ワークフロー対応アプリ自体を作成するには、 [ロール変更リクエストアプリの作成](./creating-the-role-change-request-app.md) を参照してください。
 
-アプリビルダーオブジェクト、フォームビュー、およびテーブルビューの作成の詳細な手順については、[Creating a Standard Application](./creating-a-standard-application.md)を参照してください。 同じオブジェクトで、標準アプリまたはワークフロー対応アプリに対応できます。 違いは、アプリビルダーフレームワークの要素からアプリを作成する方法にあります。 オブジェクト、フォームビュー、およびテーブルビューは、アプリケーションメニュー（![Applications Menu](../../../images/icon-applications-menu.png)）&rarr; ［アプリケーション］ &rarr; ［アプリビルダー］のオブジェクトエントリから作成できます。
+アプリビルダーオブジェクト、フォームビュー、およびテーブルビューの作成の詳細な手順については、 [標準アプリケーションの作成](./creating-a-standard-application.md) を参照してください。 同じオブジェクトで、標準アプリまたはワークフロー対応アプリに対応できます。 違いは、アプリビルダーフレームワークの要素からアプリを作成する方法にあります。 オブジェクト、フォームビュー、およびテーブルビューは、アプリケーションメニュー（![Applications Menu](../../../images/icon-applications-menu.png)）&rarr; ［アプリケーション］ &rarr; ［アプリビルダー］のオブジェクトエントリから作成できます。
 
 <a name="オブジェクトロール変更リクエスト-という名前のオブジェクトを作成します" />
 
@@ -71,6 +71,6 @@
 ## 関連情報
 
 * [App Builder Overview](./app-builder-overview.md)
-* [Creating a Standard Application](./creating-a-standard-application.md)
+* [標準アプリケーションの作成](./creating-a-standard-application.md)
 * [Workflow](../../../process-automation/workflow/introduction-to-workflow.md)
 * [ロールと権限](../../../users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.md)

@@ -159,7 +159,7 @@
 
 ## 追加情報
 
-* [MVC Render Command](./mvc-render-command.md)
-* [MVC Action Command](./mvc-action-command.md)
-* [Using Localized Messages in an MVC Portlet](./using-localized-messages-in-an-mvc-portlet.md)
+* [MVCレンダーコマンド](./mvc-render-command.md)
+* [MVCアクションコマンド](./mvc-action-command.md)
+* [MVCポートレットでのローカライズされたメッセージの使用](./using-localized-messages-in-an-mvc-portlet.md)
 * [ポートレット](../reference/portlets.md)
