@@ -24,7 +24,7 @@
 [ストラクチャーを作成または編集する場合、](./configuring-structure-fields.md), *View*タブがデフォルトで表示されます。 *ソース*タブに切り替えて、ストラクチャーの生のXMLを表示し、直接変更することができます。
 ```
 
-<a name="構成可能な設定" />
+<a name="configurable-settings" />
 
 ## 構成可能な設定
 
@@ -62,7 +62,7 @@ Liferay DXPは、ストラクチャー内の新しいフィールドごとにラ
 
 **スタイル:**[**セパレーター**] フィールドのオプションのCSSスタイル。
 
-<a name="ストラクチャー項目オプション" />
+<a name="structure-field-options" />
 
 ## ストラクチャー項目オプション
 
@@ -72,7 +72,7 @@ Liferay DXPは、ストラクチャー内の新しいフィールドごとにラ
   - **削除**（![Delete](../../../images/icon-app-trash.png)）: ストラクチャーからフィールドを削除します。
   - **複製**（![Duplicate](../../../images/icon-duplicate.png)）: フィールドとそのすべての設定を複製し、 **名前** を繰り返して競合を回避します。
 
-<a name="関連情報" />
+<a name="related-information" />
 
 ## 関連情報
 

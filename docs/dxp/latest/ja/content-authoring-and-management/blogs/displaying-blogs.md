@@ -10,7 +10,7 @@
 
 ![ブログウィジェットにはさまざまなセットアップオプションがあります](displaying-blogs/images/02.png)
 
-<a name="setupタブ" />
+<a name="setup-tab" />
 
 ## ［Setup］タブ
 
@@ -48,7 +48,7 @@
 
 **関連するアセットを表示する：** 他のウィジェットからの関連コンテンツの表示を有効にします。
 
-<a name="コミュニケーションsharingおよびスコープタブ" />
+<a name="communication-sharing-and-scope-tabs" />
 
 ## ［コミュニケーション］、［Sharing］、および［スコープ］タブ
 

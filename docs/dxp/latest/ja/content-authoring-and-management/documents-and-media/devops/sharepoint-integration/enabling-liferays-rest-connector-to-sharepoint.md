@@ -4,7 +4,7 @@
 
 LiferayのREST Connector to SharePointを使用すると、ドキュメントとメディアをSharePointライブラリと統合できます。 これを使用すると、SharePointライブラリをマウントするためのドキュメントとメディアリポジトリを作成できます。 その後、SharePointドキュメントとフォルダの読み取り/書き込み、ドキュメントのチェックイン/チェックアウトの実行、ドキュメントのダウンロードなどを行うことができます。 一方のコンテキストで実行された各アクションは、もう一方のコンテキストにプロパゲートされます。
 
-<a name="統合の制限" />
+<a name="integration-limitations" />
 
 ## 統合の制限
 
@@ -19,7 +19,7 @@ LiferayのREST Connector to SharePointを使用すると、ドキュメントと
 
 RESTコネクターの動作の詳細は、 [javadocs API reference](https://docs.liferay.com/dxp/apps/sharepoint-rest/latest/javadocs/) を参照してください。
 
-<a name="rest-コネクターのインストール" />
+<a name="installing-the-rest-connector" />
 
 ## REST コネクターのインストール
 
@@ -44,7 +44,7 @@ RESTコネクターの動作の詳細は、 [javadocs API reference](https://doc
    RESTコネクターはOAuth2によるSharePointサーバー認証を行うAzure ACSを使用するため、サーバーでHTTPSサポートが有効になっていることを確認してください。
 ```
 
-<a name="最新バージョンへの更新" />
+<a name="updating-to-the-latest-version" />
 
 ## 最新バージョンへの更新
 
@@ -60,7 +60,7 @@ RESTコネクターの動作の詳細は、 [javadocs API reference](https://doc
 
 サーバーの再起動が完了すると、アプリケーションを使用できるようになります。
 
-<a name="sharepoint-oauth2設定の追加" />
+<a name="adding-a-sharepoint-oauth2-configuration" />
 
 ## Sharepoint OAuth2設定の追加
 
@@ -96,7 +96,7 @@ RESTコネクターの動作の詳細は、 [javadocs API reference](https://doc
 
 保存すると、SharePoint設定を使用して、ドキュメントとメディアにSharePointライブラリにマウントされるリポジトリを作成できます。
 
-<a name="sharepoint検索設定の追加" />
+<a name="adding-a-sharepoint-search-configuration" />
 
 ## Sharepoint検索設定の追加
 
@@ -116,7 +116,7 @@ SharePointを使用すると、カスタムソースIDを定義して、検索�
 
 1. 完了したら、 ［**保存**］ をクリックします。
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 

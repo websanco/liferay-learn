@@ -15,7 +15,7 @@
   - **表示** 権限では、ユーザーはストラクチャーまたはWebコンテンツテンプレートを表示することしかできません。
   - 大半のユーザーは、ストラクチャーまたはWebコンテンツテンプレートを編集できないようにする必要があります。
 
-<a name="webコンテンツテンプレートのセキュリティに関する考慮事項" />
+<a name="security-considerations-for-web-content-templates" />
 
 ## Webコンテンツテンプレートのセキュリティに関する考慮事項
 
@@ -33,7 +33,7 @@ FreeMarkerでテンプレートを作成または編集する権限は信頼で�
 4. [**テンプレート作成を有効にする**] のチェックを外します。
 5. [**保存**] をクリックします。
 
-<a name="権限の割り当て" />
+<a name="assigning-permissions" />
 
 ## 権限の割り当て
 
@@ -47,7 +47,7 @@ FreeMarkerでテンプレートを作成または編集する権限は信頼で�
 
 権限の設定の詳細は、 [ロール権限の定義](../../../users-and-permissions/roles-and-permissions/defining-role-permissions.md) を参照してください。
 
-<a name="関連情報" />
+<a name="related-information" />
 
 ## 関連情報
 

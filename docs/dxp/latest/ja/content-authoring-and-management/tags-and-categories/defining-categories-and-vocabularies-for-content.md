@@ -8,7 +8,7 @@
 カテゴリパネルでカテゴリとボキャブラリを管理できるのは、サイト管理者だけです。
 ```
 
-<a name="ボキャブラリの定義" />
+<a name="defining-vocabularies" />
 
 ## ボキャブラリの定義
 
@@ -44,7 +44,7 @@
 
     ![アクションメニューを使用して、既存のボキャブラリを編集します。](./defining-categories-and-vocabularies-for-content/images/08.gif)
 
-<a name="カテゴリの定義" />
+<a name="defining-categories" />
 
 ## カテゴリの定義
 
@@ -104,7 +104,7 @@
 
 ![カテゴリを編集して、追加のオプションを定義します。](./defining-categories-and-vocabularies-for-content/images/10.png)
 
-<a name="関連情報" />
+<a name="related-information" />
 
 ## 関連情報
 

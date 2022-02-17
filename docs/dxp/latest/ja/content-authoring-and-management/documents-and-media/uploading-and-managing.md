@@ -24,10 +24,14 @@ uploading-and-managing/managing-metadata.md
 - [Googleドライブ上のファイルへのリンク](./uploading-and-managing/linking-to-files-on-google-drive.md)
 - [Enabling DocuSign Digital Signature](./uploading-and-managing/enabling-docusign-digital-signatures.md)
 
+<a name="creating-documents" />
+
 ## 文書の新規作成
 
 - [Googleドライブでのドキュメントの作成と編集](./uploading-and-managing/creating-documents/creating-and-editing-documents-with-google-drive.md)
 - [Microsoft Office 365を使用したドキュメントの作成と編集](./uploading-and-managing/creating-documents/creating-and-editing-documents-with-microsoft-office-365.md)
+
+<a name="managing-metadata" />
 
 ## メタデータの管理
 

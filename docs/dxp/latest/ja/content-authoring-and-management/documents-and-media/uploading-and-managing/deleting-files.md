@@ -2,7 +2,7 @@
 
 **ドキュメントとメディア** アプリケーションを使用すると、ファイルを簡単に削除できます。
 
-<a name="単一ファイルの削除" />
+<a name="deleting-a-single-file" />
 
 ## 単一ファイルの削除
 
@@ -11,7 +11,7 @@
 
 ![ファイルを削除するには、最初にごみ箱に移動する必要があります。](deleting-files/images/01.png)
 
-<a name="複数ファイルの削除" />
+<a name="deleting-multiple-files" />
 
 ## 複数ファイルの削除
 

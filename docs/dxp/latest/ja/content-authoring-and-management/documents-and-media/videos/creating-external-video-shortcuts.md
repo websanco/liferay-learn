@@ -44,7 +44,7 @@ Liferayのドキュメントとメディアアプリケーションを使用す�
 
 作成した外部ビデオショートカットは、ほとんどのLiferayアセットに埋め込むことができます。 See [Embedding Videos into Liferay Assets and Pages](./embedding-videos-into-liferay-assets-and-pages.md) for more information.
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 

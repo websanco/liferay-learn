@@ -2,7 +2,7 @@
 
 Google Docs&trade;使用して、ドキュメントとメディアライブラリに保存するテキストドキュメント、スプレッドシート、またはプレゼンテーションを作成および編集できます。  Google Docs&trade;の編集セッションが終了すると、変更内容はドキュメントとメディアライブラリに自動的に保存されます。
 
-<a name="認証" />
+<a name="authentication" />
 
 ## 認証
 
@@ -18,7 +18,7 @@ Google Docs&trade;を使用してドキュメントとメディアファイル�
 
 Google Drive&trade;へのアクセスはリンク解除されました。
 
-<a name="ファイルの作成" />
+<a name="creating-files" />
 
 ## ファイルの作成
 
@@ -51,7 +51,7 @@ Google Drive&trade;へのアクセスはリンク解除されました。
 
     ![エディタのツールバーを使用して、変更を保存または破棄します。](./creating-and-editing-documents-with-google-drive/images/03.png)
 
-<a name="ファイルの編集" />
+<a name="editing-files" />
 
 ## ファイルの編集
 
@@ -73,7 +73,7 @@ Google Docs&trade;を使用して、次のタイプのドキュメントとメ�
 
 1. Google Docs&trade;でファイルを編集します。 編集プロセスは、ファイルを作成するための上記のプロセスとまったく同じです。
 
-<a name="複数の編集セッション" />
+<a name="multiple-editing-sessions" />
 
 ## 複数の編集セッション
 
@@ -87,7 +87,7 @@ Google Docs&trade;でドキュメントとメディアファイルを作成ま�
 
 **チェックアウトのキャンセル：** Googleファイルを削除し、変更を破棄します。 これは、Google Docs&trade;の編集ウィンドウで ［**変更を破棄**］ をクリックするのと同じです。
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 

@@ -2,7 +2,7 @@
 
 <!-- Really missing an introductory statement here -->
 
-<a name="ブログエントリの権限" />
+<a name="blog-entry-permissions" />
 
 ## ブログエントリの権限
 

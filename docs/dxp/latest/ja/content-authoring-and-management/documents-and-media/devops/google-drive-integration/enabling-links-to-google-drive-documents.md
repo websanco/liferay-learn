@@ -8,7 +8,7 @@ Liferayは、ドキュメントとメディアをGoogleドライブと統合す�
 Googleドライブ用のLiferayプラグインは、Liferay CEポータルとLiferay DXPで利用できるLabsアプリケーションです。 Labsアプリは実験的なものであり、Liferayではサポートされていません。 これらは、便利な機能や最先端の機能の提供を加速するためにリリースされています。 この状態は予告なく変更されることがあります。 Labsアプリはご自身の判断でお使いください。
 ```
 
-<a name="googleプロジェクトの設定" />
+<a name="setting-up-your-google-project" />
 
 ## Googleプロジェクトの設定
 
@@ -22,7 +22,7 @@ Liferayプラグインを有効にするには、GoogleドライブAPIとGoogle 
 
 Googleプロジェクトの準備ができたら、Liferayコントロールパネルを介してドキュメントとメディアアプリケーションを設定する必要があります。 これには、Picker APIキー、およびOAuth2クライアントIDとクライアント・シークレットが必要です。
 
-<a name="ドキュメントとメディアの設定" />
+<a name="configuring-documents-and-media" />
 
 ## ドキュメントとメディアの設定
 
@@ -46,7 +46,7 @@ Googleプロジェクトの準備ができたら、Liferayコントロールパ�
 この機能を無効にするには、Googleドライブの*アクション*ボタンをクリックし、*デフォルト値をリセットする*を選択します。
 ```
 
-<a name="googleドライブのショートカットの作成" />
+<a name="creating-google-drive-shortcuts" />
 
 ## Googleドライブのショートカットの作成
 
@@ -74,7 +74,7 @@ Googleプロジェクトの準備ができたら、Liferayコントロールパ�
 
 公開されると、ドキュメントとメディアアプリケーションを介してGoogleドライブファイルにアクセスし、ファイルをLiferayで使用できるようになります。
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 

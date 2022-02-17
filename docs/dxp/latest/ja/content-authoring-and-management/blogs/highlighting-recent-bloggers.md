@@ -6,7 +6,7 @@
 
 ![最近参加したブロガーウィジェットにはさまざまなセットアップオプションがあります](highlighting-recent-bloggers/images/02.png)
 
-<a name="設定" />
+<a name="setup" />
 
 ## 設定
 
@@ -20,13 +20,13 @@
 
 **Maximum Items to Display：** ウィジェットが表示する最近参加したブロガーの最大数を選択します。
 
-<a name="共有" />
+<a name="sharing" />
 
 ## 共有
 
 ウィジェットインスタンスを任意のWebサイト、Facebook、Netvibesにウィジェットとして、またはOpenSocialガジェットとして埋め込みます。
 
-<a name="範囲" />
+<a name="scope" />
 
 ## 範囲
 

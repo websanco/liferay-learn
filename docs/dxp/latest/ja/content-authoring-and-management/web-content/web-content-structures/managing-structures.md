@@ -7,7 +7,7 @@
 3.  ストラクチャーの横にある **アクションメニュー**（![Action Menu](../../../images/icon-actions.png)）を開き、 [使用可能なアクション](#available-actions) の1つを選択します。
 4. [**保存**] をクリックして変更を適用します。
 
-<a name="使用可能なアクション" />
+<a name="available-actions" />
 
 ## 使用可能なアクション
 
@@ -25,7 +25,7 @@
 
 **削除:** ストラクチャーを削除します。
 
-<a name="デフォルト値の編集" />
+<a name="editing-default-values" />
 
 ## デフォルト値の編集
 
@@ -47,7 +47,7 @@
 ストラクチャー項目の*初期値*設定を使用して、デフォルト値を設定することもできます。 詳細は、Editing and [Configuring Structures' Content](./configuring-structure-fields.md)) を参照してください。
 ```
 
-<a name="既存のストラクチャーをコピーする" />
+<a name="copying-an-existing-structure" />
 
 ## 既存のストラクチャーをコピーする
 
@@ -64,7 +64,7 @@
 Liferay DXPは、コピーされたストラクチャーの一意のIDを生成します。 新しいコピーは、名前を含め、元のストラクチャーからすべての属性を継承します。 コピーと元のストラクチャーを混同しないように、コピーには別の名前を使用してください。
 ```
 
-<a name="関連情報" />
+<a name="related-information" />
 
 ## 関連情報
 

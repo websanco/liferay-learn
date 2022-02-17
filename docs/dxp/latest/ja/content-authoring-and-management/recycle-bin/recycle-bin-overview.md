@@ -14,7 +14,7 @@
 
 ![アセットを削除します。](./recycle-bin-overview/images/03.png)
 
-<a name="ごみ箱とステージング" />
+<a name="recycle-bin-and-staging" />
 
 ## ごみ箱とステージング
 
@@ -32,7 +32,7 @@
 ステージング環境を有効または無効にする前に、ゴミ箱を確認してください。 すでにゴミ箱にあるアセットを失う可能性があります。 
 ```
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 

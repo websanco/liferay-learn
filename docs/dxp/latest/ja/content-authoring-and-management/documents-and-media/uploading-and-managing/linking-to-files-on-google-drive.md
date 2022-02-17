@@ -2,7 +2,7 @@
 
 ドキュメントライブラリに、Google Drive&trade;のファイルまたはGoogle Photos&trade;の画像にリンクするファイルを作成できます。 この機能を有効にするには、 [Googleドライブドキュメントへのリンクを有効にする](../devops/google-drive-integration/enabling-links-to-google-drive-documents.md) を参照してください。
 
-<a name="リンクファイルの作成" />
+<a name="creating-linked-files" />
 
 ## リンクファイルの作成
 
@@ -25,7 +25,7 @@
    オンラインファイルの作成と編集にGoogle Docs&trade;を使用することもできます。 [Googleドライブでのドキュメントの作成と編集](./creating-documents/creating-and-editing-documents-with-google-drive.md) を参照してください。
 ```
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 

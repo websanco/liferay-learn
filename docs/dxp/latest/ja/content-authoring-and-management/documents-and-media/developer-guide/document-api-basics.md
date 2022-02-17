@@ -4,7 +4,7 @@ LiferayのHeadless Deliveryアプリケーションは、[ドキュメントと�
 
 サンプルのcURLコマンドとJavaクラスを使用してドキュメントをアップロードすることから始めます。
 
-<a name="ドキュメントを投稿する" />
+<a name="post-a-document" />
 
 ## ドキュメントを投稿する
 
@@ -99,7 +99,7 @@ cURLスクリプトを使用して、ファイルを[ドキュメントとメデ
 
 cURLコマンドとJavaクラスの仕組みをご覧ください。
 
-<a name="curlコマンドを調べる" />
+<a name="examine-the-curl-command" />
 
 ## cURLコマンドを調べる
 
@@ -127,7 +127,7 @@ cURLコマンドとJavaクラスの仕組みをご覧ください。
 
 次に、Javaの呼び出しがいかに似ているかを見てみましょう。
 
-<a name="javaクラスを調べる" />
+<a name="examine-the-java-class" />
 
 ## Javaクラスを調べる
 
@@ -159,7 +159,7 @@ cURLコマンドとJavaクラスの仕組みをご覧ください。
 
 以下は、cURLとJavaを使って、他の`Document` RESTサービスを呼び出す例です。
 
-<a name="サイトドキュメントを取得する" />
+<a name="get-site-documents" />
 
 ## サイトドキュメントを取得する
 
@@ -197,7 +197,7 @@ Code:
 
 サイトの`Document`オブジェクトがJSONに一覧表示されます。
 
-<a name="ドキュメントを取得する" />
+<a name="get-a-document" />
 
 ## ドキュメントを取得する
 
@@ -239,7 +239,7 @@ Code:
 
 `Document`フィールドがJSONに一覧表示されます。
 
-<a name="ドキュメントの内容を取得する" />
+<a name="get-document-content" />
 
 ## ドキュメントの内容を取得する
 
@@ -305,7 +305,7 @@ IDで`Document`を取得した後、`Base64.Decoder`は`Document`のコンテン
 Base64.Decoder decoder = Base64.getDecoder();
 ```
 
-<a name="ドキュメントにパッチを適用する" />
+<a name="patch-a-document" />
 
 ## ドキュメントにパッチを適用する
 
@@ -349,7 +349,7 @@ Code:
 
 ![cURLコマンドは、ドキュメントの説明を変更しました。](./document-api-basics/images/03.png)
 
-<a name="ドキュメントを置き換える" />
+<a name="put-a-document" />
 
 ## ドキュメントを置き換える
 
@@ -397,7 +397,7 @@ Code:
 
 ![cURLコマンドがドキュメントを置き換えました。](./document-api-basics/images/04.png)
 
-<a name="ドキュメントを削除する" />
+<a name="delete-a-document" />
 
 ## ドキュメントを削除する
 
@@ -435,7 +435,7 @@ Code:
 
 `Document`は、ドキュメントとメディアから削除されます。
 
-<a name="その他のドキュメントおよびドキュメントフォルダサービス" />
+<a name="more-document-and-document-folder-services" />
 
 ## その他のドキュメントおよびドキュメントフォルダサービス
 
@@ -454,7 +454,7 @@ Code:
 
 [DocumentResource](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/headless/headless-delivery/headless-delivery-client/src/main/java/com/liferay/headless/delivery/client/resource/v1 **0/DocumentResource.java) および [DocumentFolderResource](https://github.com/liferay/liferay-portal/blob/[$LIFERAY** LEARN_PORTAL_GIT_TAG$]/modules/apps/headless/headless-delivery/headless-delivery-client/src/main/java/com/liferay/headless/delivery/client/resource/v1_0/DocumentFolderResource.java) のJavaインターフェイスも参照してください。
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 

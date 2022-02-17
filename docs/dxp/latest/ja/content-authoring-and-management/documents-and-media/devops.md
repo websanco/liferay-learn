@@ -20,10 +20,14 @@ devops/sharepoint-integration.md
 - [OpenOffice / LibreOffice統合の有効化](./devops/enabling-openoffice-libreoffice-integration.md)
 - [Microsoft Office 365でドキュメントの作成と編集を有効にする](./devops/enabling-document-creation-and-editing-with-microsoft-office-365.md)
 
+<a name="google-drive-integration" />
+
 ## Google Drive Integration
 
 - [Googleドライブドキュメントへのリンクを有効にする](./devops/google-drive-integration/enabling-links-to-google-drive-documents.md)
 - [Googleドライブでドキュメントの作成と編集を有効にする](./devops/google-drive-integration/enabling-document-creation-and-editing-with-google-drive.md)
+
+<a name="sharepoint-integration" />
 
 ## SharePoint Integration
 

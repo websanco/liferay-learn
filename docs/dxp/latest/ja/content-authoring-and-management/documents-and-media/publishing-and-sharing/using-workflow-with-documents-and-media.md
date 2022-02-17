@@ -6,7 +6,7 @@
 
 次に、複数の[ドキュメントタイプ](../uploading-and-managing/managing-metadata/defining-document-types.md)を作成し、レビュープロセスの対象となるドキュメントタイプを指定できます。 たとえば、作成された2つのドキュメントタイプ（法律文書ドキュメントタイプとトレーニングビデオドキュメントタイプ）がある場合、法律文書ドキュメントタイプに対してのみワークフローを有効にできます。 これは、 **フォルダ** レベルで設定されます。
 
-<a name="すべてのドキュメントタイプのワークフローを有効にする" />
+<a name="enabling-workflow-for-all-document-types" />
 
 ## すべてのドキュメントタイプのワークフローを有効にする
 
@@ -24,7 +24,7 @@
 
 ![展開して、［Document Type Restrictions and Workflow］ラジオボタンを表示します。](./using-workflow-with-documents-and-media/images/04.png)
 
-<a name="フォルダのワークフローを有効にする" />
+<a name="enabling-workflow-for-folders" />
 
 ## フォルダのワークフローを有効にする
 
@@ -48,7 +48,7 @@
 
 親（**ホーム** など）フォルダでワークフローが有効になっている場合でも、ユーザーは特定のフォルダ（またはサブフォルダ）のワークフローを **無効** にすることもできます。  これを行うには、3番目のオプションである ［**Default Workflow for this Folder (Folder Name**)］ を選択してから、 ［**No Workflow**］ を選択します。 無効にすると、このフォルダにアップロードされたファイルはレビュープロセスを必要としません。
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 

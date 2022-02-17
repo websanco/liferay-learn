@@ -4,7 +4,7 @@
 
 ［**Entries**］ タブがデフォルトで選択されており、サイトのブログエントリが一覧表示されます。 管理バーを使用して、サイトのブログエントリを管理します。
 
-<a name="ブログエントリの検索と配置" />
+<a name="finding-and-arranging-blog-entries" />
 
 ## ブログエントリの検索と配置
 
@@ -33,7 +33,7 @@
 | Table | 他のビュータイプと同じ情報を、ファイルレンダリングなしでリストに表示します。                                                                                                                                          |
 ![サイト管理のブログメニューでさまざまなビュータイプを確認する](./managing-blog-entries/images/03.png)
 
-<a name="ブログエントリの削除" />
+<a name="deleting-blog-entries" />
 
 ## ブログエントリの削除
 
@@ -42,7 +42,7 @@
 
 ![ブログエントリを選択して削除する](./managing-blog-entries/images/01.png)
 
-<a name="ブログエントリの共有" />
+<a name="sharing-blog-entries" />
 
 ## ブログエントリの共有
 

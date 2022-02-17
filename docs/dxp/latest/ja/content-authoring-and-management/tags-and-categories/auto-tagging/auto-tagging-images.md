@@ -16,7 +16,7 @@
 
 ![この画像には、貨車と電気機関車のタグが自動的に付けられています。](./auto-tagging-images/images/01.png)
 
-<a name="tensorflow-画像の自動タグ付けを設定する" />
+<a name="configuring-tensorflow-image-auto-tagging" />
 
 ## TensorFlow 画像の自動タグ付けを設定する
 
@@ -63,7 +63,7 @@
 
 TensorFlowプロバイダーが設定されました。
 
-<a name="google-cloud-visionの設定" />
+<a name="configuring-google-cloud-vision" />
 
 ## Google Cloud Visionの設定
 
@@ -83,7 +83,7 @@ TensorFlowプロバイダーが設定されました。
 
 7.  完了したら、 [**保存**] をクリックします。
 
-<a name="microsoft-cognitive-servicesの設定" />
+<a name="configuring-microsoft-cognitive-services" />
 
 ## Microsoft Cognitive Servicesの設定
 
@@ -113,7 +113,7 @@ Microsoft CognitiveServicesプロバイダーが設定されました。 詳細�
 
 複数の仮想インスタンスがある場合は、各インスタンスを個別に設定できます。 [**コントロールパネル**] → [**Instance Settings**] に移動します。 [**アセット**] をクリックし、そこでプロバイダーを設定します。
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 

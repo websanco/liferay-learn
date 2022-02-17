@@ -6,7 +6,7 @@ DXPは、アダプティブメディアを使用して、ドキュメントと�
    ここで説明するアクションを実行するには、ポータル管理者である必要があります。
 ```
 
-<a name="置換用画像解像度の追加" />
+<a name="adding-the-replacement-image-resolutions" />
 
 ## 置換用画像解像度の追加
 
@@ -23,7 +23,7 @@ DXPは、アダプティブメディアを使用して、ドキュメントと�
 
 新しい画像解像度を作成するには、 [画像解像度の追加](./adding-image-resolutions.md) を参照してください。
 
-<a name="アダプティブメディア画像の作成" />
+<a name="creating-the-adaptive-media-images" />
 
 ## アダプティブメディア画像の作成
 
@@ -47,7 +47,7 @@ DXPは、アダプティブメディアを使用して、ドキュメントと�
 1. `thumbnails:migrate`コマンドを実行します。 これにより、移行プロセスが実行されます。画像の数によっては、完了するまでに時間がかかる場合があります。
 1. `thumbnails:cleanUp`コマンドを実行します。 これにより、オリジナルのドキュメントとメディアのサムネイルがすべて削除され、`thumbnails:check`で返される数が更新されます。 したがって、`thumbnails:cleanUp`は、migrateコマンドを実行し、移行が正常に実行され、移行が保留されている画像がないことを確認した後で **のみ** 実行する必要があります。
 
-<a name="トラブルシューティング" />
+<a name="troubleshooting" />
 
 ## トラブルシューティング
 
@@ -61,7 +61,7 @@ DXPは、アダプティブメディアを使用して、ドキュメントと�
 
    ![Gogo シェルに移動します。](./migrating-documents-and-media-thumbnails/images/02.png)
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 

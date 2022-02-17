@@ -18,7 +18,7 @@
 ドキュメントとメディアのUIは、アセットライブラリとサイトで同じです。
 ```
 
-<a name="ドキュメントとメディアタブ" />
+<a name="documents-and-media-tab" />
 
 ## ［ドキュメントとメディア］タブ
 
@@ -38,7 +38,7 @@
 
 ダウンロード、編集、移動、または削除するファイルまたはフォルダの **アクション** ボタン（![Actions Button](../../images/icon-actions.png)）をクリックします。 ファイルを **チェックアウト** または **チェックイン** して、ファイルバージョンを作成することもできます。
 
-<a name="ドキュメントタイプタブ" />
+<a name="document-types-tab" />
 
 ## ［ドキュメントタイプ］タブ
 
@@ -52,7 +52,7 @@
 
 作成したら、テンプレートを使用して、［ドキュメントとメディア］タブで新しいデジタルアセットを追加できます。 詳細は、 [ドキュメントタイプの定義](./uploading-and-managing/managing-metadata/defining-document-types.md) を参照してください。
 
-<a name="メタデータセットタブ" />
+<a name="metadata-sets-tab" />
 
 ## ［メタデータセット］タブ
 
@@ -64,7 +64,7 @@
 
 作成したメタデータセットは、カスタムドキュメントタイプに追加できます。 詳細は、 [メタデータセットの定義](./uploading-and-managing/managing-metadata/defining-metadata-sets.md) を参照してください。
 
-<a name="アプリケーションバーの設定" />
+<a name="application-bar-settings" />
 
 ## アプリケーションバーの設定
 
@@ -116,7 +116,7 @@
 
 ![既存のドキュメントが更新されたときに送信されるメールを作成します。](./documents-and-media-ui-reference/images/16.png)
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 

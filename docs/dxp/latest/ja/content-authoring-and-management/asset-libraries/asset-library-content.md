@@ -17,7 +17,7 @@
 * [コンテンツのインポートとエクスポート](#importing-and-exporting-content)
 * [コンテンツの削除](#removing-content)
 
-<a name="コンテンツを作成する" />
+<a name="creating-content" />
 
 ## コンテンツを作成する
 
@@ -29,7 +29,7 @@
 ライブラリのメニューページには、アクティブなアプリケーションのみが表示されます。 アプリケーションを有効にしたり無効にしたりするには、［Configuring Asset Libraries］(./creating-and-managing-asset-libraries.md#configuring-asset-libraries)を参照してください。
 ```
 
-<a name="サイトでコンテンツを使用する" />
+<a name="using-content-in-sites" />
 
 ## サイトでコンテンツを使用する
 
@@ -53,7 +53,7 @@
 
 サイトでのコンテンツの使用の詳細は、 [コンテンツの表示](../../site-building/displaying_content.html) を参照してください。
 
-<a name="コンテンツのステージング" />
+<a name="staging-content" />
 
 ## コンテンツのステージング
 
@@ -61,7 +61,7 @@
 
 詳細は、[Using Staging with Asset Libraries](../../site-building/publishing-tools/staging/using-staging-in-asset-libraries.md)を参照してください。
 
-<a name="コンテンツの分類" />
+<a name="categorizing-content" />
 
 ## コンテンツの分類
 
@@ -73,7 +73,7 @@
 
 これらのアプリケーションの使用の詳細は、 [Tags and Categories](../tags_and_categories.html) のドキュメンテーションを参照してください。
 
-<a name="コンテンツのエクスポートとインポート" />
+<a name="exporting-and-importing-content" />
 
 ## コンテンツのエクスポートとインポート
 
@@ -81,7 +81,7 @@
 
 ライブラリコンテンツのエクスポートとインポートのプロセスは、サイトアセットのプロセスと同じです。 また、アプリケーションバーの **アクション** ボタン（ ![Actions button](../../images/icon-actions.png) ）をクリックし、 ［**テンプレートのエクスポート**］ を選択することで、カスタムエクスポートテンプレートを作成して使用することができます。 詳細は、 [サイトとコンテンツのインポート/エクスポート](../../site-building/building-sites/importing-exporting-pages-and-content.md) を参照してください。
 
-<a name="コンテンツの削除" />
+<a name="removing-content" />
 
 ## コンテンツの削除
 
@@ -93,7 +93,7 @@
 
 詳細は、 [ゴミ箱の概要](../recycle-bin/recycle-bin-overview.md) を参照してください。
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 

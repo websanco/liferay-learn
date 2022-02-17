@@ -18,7 +18,7 @@
    チェックアウトせずにファイルを編集すると、ファイルの編集画面に*「バージョンナンバーインクリメント」と「自分の変更の説明」をカスタマイズする*のトグルが表示されます。 これを* YES *に設定すると、バージョンインクリメントのタイプと説明を指定できます。
 ```
 
-<a name="ファイルのバージョン履歴の表示" />
+<a name="viewing-the-files-version-history" />
 
 ## ファイルのバージョン履歴の表示
 
@@ -39,19 +39,19 @@
 | **元に戻す** | 選択したファイルバージョンを新しいメジャーファイルバージョンとして復元します。 このオプションは、最新のファイルバージョンでは使用できないことに注意してください。 |
 | **バージョンの削除** | ドキュメントライブラリからファイルバージョンを削除します。 他のすべてのファイルバージョンはそのまま残ります。                           |
 
-<a name="webdavの使用" />
+<a name="using-webdav" />
 
 ## WebDAVの使用
 
 WebDAVを使用してファイルを管理し、バージョン履歴を継続して追跡することができます。 詳しくは、 [WebDAVを使用したドキュメントへのアクセス](../accessing-documents-with-webdav.md) をご覧ください。
 
-<a name="liferay-syncの使用" />
+<a name="using-liferay-sync" />
 
 ## Liferay Syncの使用
 
 Liferay Syncを使用してファイルを管理し、バージョン履歴を継続して追跡することができます。 詳しくは、[Setting up on DXP](../liferay-sync/setting-up-on-dxp/installation.md)をご覧ください。
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 

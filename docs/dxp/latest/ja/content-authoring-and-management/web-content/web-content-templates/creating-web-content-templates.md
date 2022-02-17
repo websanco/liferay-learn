@@ -6,7 +6,7 @@ Webコンテンツテンプレートは、FreeMarkerテンプレート言語（F
 FreeMarkerでテンプレートを作成または編集する権限は信頼できるユーザーにのみ付与してください。 Webコンテンツテンプレートのセキュリティについては、 [Assigning Permissions to Web Content Structures and Templates](../web-content-structures/assigning-permissions-to-structures-and-templates.md#security-considerations-for-web-content-templates) を参照してください。
 ```
 
-<a name="webコンテンツテンプレートを作成する方法" />
+<a name="how-to-create-a-web-content-template" />
 
 ## Webコンテンツテンプレートを作成する方法
 
@@ -44,7 +44,7 @@ FreeMarkerでテンプレートを作成または編集する権限は信頼で�
 ストラクチャーの変更には、関連するテンプレートの変更が必要になる場合があります。 たとえば、テンプレートで参照されているストラクチャーフィールド名の名前が変更または削除された場合、テンプレートの参照を手動で更新する必要があります。
 ```
 
-<a name="設定可能なテンプレートのプロパティ" />
+<a name="configurable-template-properties" />
 
 ## 設定可能なテンプレートのプロパティ
 
@@ -58,7 +58,7 @@ FreeMarkerでテンプレートを作成または編集する権限は信頼で�
 
   - **メイン画像** : URLまたはデバイスからテンプレートのメイン画像を選択します。
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 

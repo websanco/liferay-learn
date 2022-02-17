@@ -29,7 +29,7 @@
 
 以下は、 [外部のビデオショートカットプロバイダーのサンプル](liferay-g9b6.zip) で、独自に実装するための最低限の要件を示しています。 より複雑な例については、 [既存のプロバイダー](https://github.com/liferay/liferay-portal/tree/master/modules/apps/document-library/document-library-video/src/main/java/com/liferay/document/library/video/internal/video/external/shortcut/provider) を参照してください。
 
-<a name="サンプルビデオプロバイダーのデプロイ" />
+<a name="deploying-the-sample-video-provider" />
 
 ## サンプルビデオプロバイダーのデプロイ
 
@@ -70,7 +70,7 @@
 
    ![LiferayはDailymotionをサポートされているプラットフォームとして認識します。](./creating-custom-video-shortcut-providers/images/01.png)
 
-<a name="サンプルビデオプロバイダーのコード" />
+<a name="code-for-the-sample-video-provider" />
 
 ## サンプルビデオプロバイダーのコード
 
@@ -98,7 +98,7 @@
 
 `getDescription()`、`getThumbnailURL()`、および`getTitle()`がオーバーライドされていないので、`null`が返されます。
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 

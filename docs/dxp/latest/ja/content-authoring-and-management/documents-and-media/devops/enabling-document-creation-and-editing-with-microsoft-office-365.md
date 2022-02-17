@@ -2,7 +2,7 @@
 
 Office 365&trade;を使用してドキュメントとメディアファイルを作成および編集する前に、 [Azureポータル](https://portal.azure.com) でアプリケーションに接続するようにDXPを設定する必要があります。 次の手順を実行するには、管理者権限が必要です。
 
-<a name="アプリケーションをmicrosoft-identity-platformに登録する" />
+<a name="register-an-application-with-the-microsoft-identity-platform" />
 
 ## アプリケーションをMicrosoft Identity Platformに登録する
 
@@ -17,7 +17,7 @@ Office 365&trade;を使用してドキュメントとメディアファイルを
 
 権限の詳細は、 [Microsoftのドキュメンテーション](https://docs.microsoft.com/graph/permissions-reference) を参照してください。
 
-<a name="dxpの設定" />
+<a name="configuring-dxp" />
 
 ## DXPの設定
 
@@ -56,7 +56,7 @@ Office 365&trade;を使用してドキュメントとメディアファイルを
 
  **注：** 有効にしたら、フォームからクライアントID、クライアント・シークレット、およびテナントの値を削除することで、この機能を無効にできます。
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 

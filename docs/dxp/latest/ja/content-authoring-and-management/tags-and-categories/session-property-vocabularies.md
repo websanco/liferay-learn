@@ -12,7 +12,7 @@
 2.  [セッションプロパティのボキャブラリを定義します](#defining-the-session-property-vocabulary) 。
 3.  [セッションベースのセグメントを作成します](#creating-the-session-based-segment) 。
 
-<a name="セッションベースセグメントのボキャブラリの設定" />
+<a name="configuring-the-vocabulary-for-the-session-based-segment" />
 
 ## セッションベースセグメントのボキャブラリの設定
 
@@ -28,7 +28,7 @@
 グローバルサイトでは、グローバルボキャブラリのみを作成および編集できます。
 ```
 
-<a name="セッションプロパティのボキャブラリの定義" />
+<a name="defining-the-session-property-vocabulary" />
 
 ## セッションプロパティのボキャブラリの定義
 
@@ -60,7 +60,7 @@
 
 ![セッションプロパティのボキャブラリを作成して保存します。](./session-property-vocabularies/images/05.gif)
 
-<a name="セッションベースのセグメントの作成" />
+<a name="creating-the-session-based-segment" />
 
 ## セッションベースのセグメントの作成
 
@@ -74,7 +74,7 @@
 
 ![セッションプロパティのボキャブラリ内のカテゴリの1つまたはそのボキャブラリが欠落している場合、警告メッセージが表示されます。](./session-property-vocabularies/images/08.png)
 
-<a name="関連情報" />
+<a name="related-information" />
 
 ## 関連情報
 

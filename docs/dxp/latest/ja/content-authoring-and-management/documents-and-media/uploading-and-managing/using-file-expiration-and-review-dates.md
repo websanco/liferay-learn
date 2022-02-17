@@ -10,7 +10,7 @@
 
 一方、ファイルにレビューが必要な場合は、引き続き使用できます。 ファイルのレビュー日時に達すると、ユーザー通知がトリガーされるだけで、ファイルにはまったく影響しません。
 
-<a name="有効期限とレビュー日時の有効化" />
+<a name="enabling-expiration-and-review-dates" />
 
 ## 有効期限とレビュー日時の有効化
 
@@ -30,7 +30,7 @@ Liferayのシステムは、設定された [チェック間隔](#configuring-th
 
 日付に達すると、関連するユーザーに自動的に [通知](#configuring-notification-emails) されます。 ファイルの有効期限が切れると、プラットフォームで使用できなくなります。
 
-<a name="チェック間隔の設定" />
+<a name="configuring-the-check-interval" />
 
 ## チェック間隔の設定
 
@@ -46,7 +46,7 @@ Liferayのシステムは、設定された [チェック間隔](#configuring-th
 
 保存されると、システムは設定された間隔に従って、有効期限またはレビュー日時に達したファイルを自動的にチェックします。
 
-<a name="通知メールの設定" />
+<a name="configuring-notification-emails" />
 
 ## 通知メールの設定
 
@@ -64,7 +64,7 @@ Liferayのシステムは、設定された [チェック間隔](#configuring-th
 
 1. 完了したら、 ［**保存**］ をクリックします。
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 

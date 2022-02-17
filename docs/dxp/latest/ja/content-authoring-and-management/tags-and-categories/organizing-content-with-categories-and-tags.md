@@ -29,7 +29,7 @@
 
 ![ [カテゴリ設定]セクションを使用して、コンテンツにタグを付けて分類します](./organizing-content-with-categories-and-tags/images/02.png)
 
-<a name="ボキャブラリの可視性" />
+<a name="vocabulary-visibility" />
 
 ## ボキャブラリの可視性
 
@@ -67,7 +67,7 @@
 
     ![コンテンツエディタの [カテゴリ設定]セクションから新しいカテゴリを追加します](./organizing-content-with-categories-and-tags/images/05.png)
 
-<a name="デフォルトのボキャブラリ" />
+<a name="default-vocabularies" />
 
 ## デフォルトのボキャブラリ
 
@@ -87,7 +87,7 @@
 以前のLiferayバージョンでは、*トピック*のボキャブラリは各サイトに存在しています。 7.3以降では、*トピック*のボキャブラリがグローバルサイトに存在します。
 ```
 
-<a name="関連情報" />
+<a name="related-information" />
 
 ## 関連情報
 

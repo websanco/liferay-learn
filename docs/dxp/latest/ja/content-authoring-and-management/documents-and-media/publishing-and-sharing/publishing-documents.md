@@ -6,7 +6,7 @@ Liferayでは、ドキュメントやその他の種類のメディアファイ�
 
 ドキュメントとメディアファイルは、Webコンテンツ、ブログ、Wikiページなどの他のアセットに埋め込んで表示できます。
 
-<a name="メディアギャラリーウィジェットの使用" />
+<a name="using-the-media-gallery-widget" />
 
 ## メディアギャラリーウィジェットの使用
 
@@ -42,7 +42,7 @@ Liferayでは、ドキュメントやその他の種類のメディアファイ�
  * ごみ箱へ移動
  * 画像エディタで編集（画像ファイル用）
 
-<a name="ドキュメントとメディアウィジェットの使用" />
+<a name="using-the-documents-and-media-widget" />
 
 ## ［ドキュメントとメディア］ウィジェットの使用
 
@@ -106,13 +106,13 @@ Liferayでは、ドキュメントやその他の種類のメディアファイ�
 
 **アクション:****アクション** アイコン（![Actions icon](../../../images/icon-actions.png)）には、 ［**チェックイン**］ および ［**チェックアウト**］ などのオプションがあります。 [Google Drive Integration](../devops/google-drive-integration/enabling-document-creation-and-editing-with-google-drive.md)、[Office 365 Integration](../devops/enabling-document-creation-and-editing-with-microsoft-office-365.md)、および[LibreOffice Integration](../devops/enabling-openoffice-libreoffice-integration.md)を参照してください。
 
-<a name="アセットパブリッシャーウィジェットの使用" />
+<a name="using-the-asset-publisher-widget" />
 
 ## ［アセットパブリッシャー］ウィジェットの使用
 
 [［アセットパブリッシャー］](../../../site-building/displaying-content/using-the-asset-publisher-widget/displaying-assets-using-the-asset-publisher-widget.md)ウィジェットは、基準に基づいてさまざまなアセットとコレクションを公開できます。 このウィジェットを使用して、ドキュメントとメディアライブラリのコンテンツを表示できます。
 
-<a name="他のアセットでのドキュメントの使用" />
+<a name="using-documents-in-other-assets" />
 
 ## 他のアセットでのドキュメントの使用
 

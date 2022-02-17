@@ -9,7 +9,7 @@
 * [アセットライブラリメンバーシップの管理](#managing-asset-library-memberships)
 * [アセットライブラリの削除](#deleting-an-asset-library)
 
-<a name="アセットライブラリの作成" />
+<a name="creating-an-asset-library" />
 
 ## アセットライブラリの作成
 
@@ -23,7 +23,7 @@
 
 今すぐライブラリを設定するか、デフォルト設定を受け入れてライブラリへのコンテンツの追加を開始できます。
 
-<a name="アセットライブラリの設定" />
+<a name="configuring-asset-libraries" />
 
 ## アセットライブラリの設定
 
@@ -73,7 +73,7 @@
 
 **ドラッグ** アイコン（ ![Drag icon](../../images/icon-drag.png) ）を使用して言語の相対的な優先度を調整するか、言語の **アクション** ボタン（ ![Actions button](../../images/icon-actions.png)）をクリックして、 ［**上に移動**］ または ［**下に移動**］ を選択します。
 
-<a name="アセットライブラリメンバーシップの管理" />
+<a name="managing-asset-library-memberships" />
 
 ## アセットライブラリメンバーシップの管理
 
@@ -99,7 +99,7 @@
 
 アセットライブラリのロールを作成またはカスタマイズするプロセスは、他の種類のロールの場合と同じです。 ロールを作成、カスタマイズ、管理、および割り当てる方法については、 [ロールと権限](../../users-and-permissions/roles-and-permissions.md) を参照してください。
 
-<a name="アセットライブラリの削除" />
+<a name="deleting-an-asset-library" />
 
 ## アセットライブラリの削除
 
@@ -109,7 +109,7 @@
 アセットライブラリの削除は元に戻せません。 正しいアセットライブラリを削除し、保持するアセットをバックアップしたことを確認してください。
 ```
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 

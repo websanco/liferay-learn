@@ -6,7 +6,7 @@ WebコンテンツをXLIFF形式にエクスポートすることで、Liferay�
 翻訳用にWebコンテンツをエクスポートしたり、コンテンツの翻訳をインポートしたりするには、選択したコンテンツの*表示*および*更新*権限が必要です。 [Managing Permissions for Translation](./manually-translating-web-content.md#managing-permissions-for-translation) を参照してください。
 ```
 
-<a name="翻訳用のコンテンツのエクスポート" />
+<a name="exporting-content-for-translation" />
 
 ## 翻訳用のコンテンツのエクスポート
 
@@ -28,7 +28,7 @@ WebコンテンツをXLIFF形式にエクスポートすることで、Liferay�
 
 Liferayは、翻訳用に選択した言語と同じ数のXLIFFファイルを含むダウンロード用のZipアーカイブを生成します。 これらのファイルを互換性のある翻訳ソフトウェアで使用して、Webコンテンツを翻訳できます。
 
-<a name="コンテンツ翻訳のインポート" />
+<a name="importing-content-translations" />
 
 ## コンテンツ翻訳のインポート
 
@@ -50,7 +50,7 @@ Liferayは、翻訳用に選択した言語と同じ数のXLIFFファイルを�
 LiferayはXLIFF1.2と2.0の両方をサポートしていますが、これらのフォーマットが提供するすべての機能をサポートしているわけではありません。 また、Liferayは*翻訳用にエクスポート*アクションを使用して作成されたXLIFFファイルのインポートをサポートしていますが、他の方法で生成されたファイルの正常なインポートは保証できません。
 ```
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 

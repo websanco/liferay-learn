@@ -2,7 +2,7 @@
 
 With Liferay, you can use URLs and [video shortcuts](./creating-external-video-shortcuts.md) to embed videos into Web Content, Knowledge Base articles, Forms, Blog entries, and Site Pages.
 
-<a name="アセットへのビデオの埋め込み" />
+<a name="embedding-videos-into-assets" />
 
 ## アセットへのビデオの埋め込み
 
@@ -26,7 +26,7 @@ With Liferay, you can use URLs and [video shortcuts](./creating-external-video-s
 
 1. 完了したら、 ［**公開**］ をクリックします。
 
-<a name="ページへのビデオの埋め込み" />
+<a name="embedding-videos-into-pages" />
 
 ## ページへのビデオの埋め込み
 
@@ -44,7 +44,7 @@ Liferayは、特にビデオをページに埋め込むための2つのすぐに
 
 **External Video** ：無期限のビデオショートカットを使用して、YouTube、Vimeo、Facebook、およびTwitchのビデオをページに埋め込みます。 ビデオを追加すると、ビデオURLを入力したり、ドキュメントとメディアでビデオと外部ビデオショートカットを選択したりするためのウィンドウが開きます。
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 

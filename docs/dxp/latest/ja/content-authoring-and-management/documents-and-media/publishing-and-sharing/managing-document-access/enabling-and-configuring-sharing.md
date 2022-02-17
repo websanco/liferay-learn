@@ -6,7 +6,7 @@
 共有はデフォルトではグローバルに有効になっています。
 ```
 
-<a name="グローバル共有設定" />
+<a name="global-sharing-configuration" />
 
 ## グローバル共有設定
 
@@ -34,7 +34,7 @@
 
 1. ［**保存**］ をクリックします。
 
-<a name="仮想インスタンス共有設定" />
+<a name="virtual-instance-sharing-configuration" />
 
 ## 仮想インスタンス共有設定
 
@@ -53,7 +53,7 @@
 
 1. ［保存］</em>をクリックします。
 
-<a name="サイト共有設定" />
+<a name="site-sharing-configuration" />
 
 ## サイト共有設定
 
@@ -77,7 +77,7 @@
 
 1. 完了したら、 ［**保存**］ をクリックします。
 
-<a name="関連情報" />
+<a name="related-information" />
 
 ## 関連情報
 

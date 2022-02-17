@@ -6,7 +6,7 @@ Liferayは翻訳機能をWebコンテンツと統合しているため、グロ�
   - [ウェブコンテンツの翻訳](#translating-web-content)
   - [翻訳とカスタムワークフローの統合](#integrating-translations-with-custom-workflows)
 
-<a name="翻訳の権限の管理" />
+<a name="managing-permissions-for-translation" />
 
 ## 翻訳の権限の管理
 
@@ -48,7 +48,7 @@ Webコンテンツを手動で翻訳するには、ユーザーは特定のコ�
 
 ロールが設定されたユーザーは、任意のWebコンテンツを指定された言語に手動で翻訳できるようになりました。
 
-<a name="ウェブコンテンツの翻訳" />
+<a name="translating-web-content" />
 
 ## ウェブコンテンツの翻訳
 
@@ -72,7 +72,7 @@ Webコンテンツを手動で翻訳するには、ユーザーは特定のコ�
 
     または、 [**下書きとして保存**] をクリックして、翻訳を保存して後で公開することもできます。
 
-<a name="翻訳とカスタムワークフローの統合" />
+<a name="integrating-translation-with-custom-workflows" />
 
 ## 翻訳とカスタムワークフローの統合
 
@@ -94,7 +94,7 @@ Webコンテンツを手動で翻訳するには、ユーザーは特定のコ�
 
 翻訳が承認されると、Webコンテンツの定期的な更新と同様に、変更がWebコンテンツに適用されます。 適用すると、変更を自動的に元に戻すことはできません。 ワークフローの構築と使用の詳細は、 [ワークフローの概要](../../../process-automation/workflow/introduction-to-workflow.md) を参照してください。
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 

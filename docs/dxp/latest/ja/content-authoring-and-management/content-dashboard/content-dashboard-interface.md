@@ -14,7 +14,7 @@
 
 コンテンツ情報サイドバーにアクセスするには、コンテンツの **アクションメニュー**（![Action Menu](../../images/icon-actions.png)）をクリックし、 ［**Info**］ オプションを選択します。 または、記事の上にカーソルを置き、 ［**Info**］（![Info](../../images/icon-information.png)）をクリックします。 **統計情報を表示**（![Metrics](../../images/icon-analytics.png)）オプションの詳細は、[About the Content Performance Panel](../content-performance-tool/about-the-content-performance-tool.md)を参照してください。
 
-<a name="コンテンツダッシュボードへのアクセス" />
+<a name="accessing-the-content-dashboard" />
 
 ## コンテンツダッシュボードへのアクセス
 
@@ -23,7 +23,7 @@
 
     ![グローバルメニューからコンテンツダッシュボードを開きます.](./content-dashboard-interface/images/03.png)
 
-<a name="コンテンツ監査ツール" />
+<a name="content-audit-tool" />
 
 ## コンテンツ監査ツール
 
@@ -80,7 +80,7 @@
 
 灰色のバーは、選択したボキャブラリの1つにカテゴリーがないコンテンツを示します。 このコンテンツの表ラベルは独特です。 たとえば、オーディエンスボキャブラリを選択すると、［オーディエンス］に分類されていないコンテンツには、 ［**No Audience Specified**］ ラベルが表示されます。
 
-<a name="コンテンツ一覧" />
+<a name="contents-list" />
 
 ## コンテンツ一覧
 
@@ -162,7 +162,7 @@
 | B | 作成者        | 作成者： **Peter** および **Linda** | **Peter** `または` **Linda** `または`両者が作成したアセット。         |
 | C | カテゴリー、作成者  | カテゴリーは **Entrepreneur** 、作成者は **Linda** | **Entrepreneur** カテゴリーにあり、`かつ`Lindaが作成したアセットのみ。    |
 
-<a name="コンテンツ情報サイドバー" />
+<a name="content-info-sidebar" />
 
 ## コンテンツ情報サイドバー
 
@@ -177,7 +177,7 @@
 
     ![情報サイドバーには、コンテンツのさまざまなメタデータが提供されます.](./content-dashboard-interface/images/09.png)
 
-<a name="関連情報" />
+<a name="related-information" />
 
 ## 関連情報
 

@@ -4,7 +4,7 @@ Office 365&trade;を使用して、ドキュメントとメディアライブラ
 
 開始する前に、まずDXPインストールを[有効](../../devops/enabling-document-creation-and-editing-with-microsoft-office-365.md)にしてMicrosoft Office 365&trade;に接続する必要があります。
 
-<a name="認証" />
+<a name="authentication" />
 
 ## 認証
 
@@ -20,7 +20,7 @@ Office 365&trade;を介してドキュメントとメディアファイルを初
 
 OneDrive&trade;のリンクが解除されました。
 
-<a name="ファイルの作成" />
+<a name="creating-files" />
 
 ## ファイルの作成
 
@@ -51,7 +51,7 @@ OneDrive&trade;のリンクが解除されました。
 
     **チェックアウトのキャンセル：** Office 365&trade;ファイルを削除し、変更を破棄します。
 
-<a name="ファイルの編集" />
+<a name="editing-files" />
 
 ## ファイルの編集
 
@@ -71,7 +71,7 @@ Office 365&trade;を使用して、次のタイプのドキュメントとメデ
 
     ![ドキュメントを変更するには、ファイルのアクションメニューから［Office 365で編集］を選択します。](./creating-and-editing-documents-with-microsoft-office-365/images/04.png)
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 

@@ -24,6 +24,8 @@ blogs/developer-guide.md
 * [最近のブログ作成者を強調表示する](./blogs/highlighting-recent-bloggers.md)
 * [ブログ権限リファレンス](./blogs/blog-permissions-reference.md)
 
+<a name="developer-guide" />
+
 ## Developer Guide
 
 * [ブログAPIの基本](./blogs/developer-guide/blog-api-basics.md)

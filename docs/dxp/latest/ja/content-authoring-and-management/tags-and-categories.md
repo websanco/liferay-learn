@@ -18,11 +18,15 @@ tags-and-categories/developer-guide.md
 - [アセットの地理位置情報](./tags-and-categories/geolocating-assets.md)
 - [セッションプロパティのボキャブラリ](./tags-and-categories/session-property-vocabularies.md)
 
+<a name="auto-tagging" />
+
 ## Auto Tagging
 
 - [アセットの自動タグ付けの設定](./tags-and-categories/auto-tagging/configuring-asset-auto-tagging.md)
 - [画像の自動タグ付け](./tags-and-categories/auto-tagging/auto-tagging-images.md)
 - [アセットの自動タグ付け](./tags-and-categories/auto-tagging/auto-tagging-assets.md)
+
+<a name="developer-guide" />
 
 ## Developer Guide
 

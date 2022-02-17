@@ -22,7 +22,7 @@
 
 1. 完了したら、 ［**保存**］ をクリックします。
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 

@@ -2,7 +2,7 @@
 
 ドキュメントとメディアアプリケーションでは、デジタルアセットを整理するためのフォルダを作成できます。 必要な権限を持つ認証されたユーザーのみがフォルダを管理できます。 詳細については、 [ドキュメントとメディアの権限リファレンス](../publishing-and-sharing/managing-document-access/documents-and-media-permissions-reference.md) および[Roles and Permissions](../../../users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.md)を参照してください。
 
-<a name="フォルダを追加する" />
+<a name="adding-a-folder" />
 
 ## フォルダを追加する
 
@@ -22,7 +22,7 @@
 
 作成すると、フォルダが **ドキュメントとメディア** アプリケーションに表示されます。 目的のフォルダを開き、上記のプロセスを繰り返すことで、サブフォルダを作成できます。
 
-<a name="ドキュメントタイプの制限とワークフロー" />
+<a name="document-type-restrictions-and-workflow" />
 
 ## ドキュメントタイプの制限とワークフロー
 
@@ -44,7 +44,7 @@
 
 1. 完了したら、 ［**保存**］ をクリックします。
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 

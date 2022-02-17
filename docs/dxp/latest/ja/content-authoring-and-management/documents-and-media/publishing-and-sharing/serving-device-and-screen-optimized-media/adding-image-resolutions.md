@@ -8,7 +8,7 @@
 
 ![アダプティブメディアの画像解像度が表に一覧表示されます。](./adding-image-resolutions/images/01.png)
 
-<a name="新しい画像解像度の追加" />
+<a name="adding-a-new-image-resolution" />
 
 ## 新しい画像解像度の追加
 
@@ -32,7 +32,7 @@
    画像の適用に解像度が使用されている場合、画像の解像度とその識別子を更新することはできません。 これにより、生成された画像の不整合が防止されます。
 ```
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 

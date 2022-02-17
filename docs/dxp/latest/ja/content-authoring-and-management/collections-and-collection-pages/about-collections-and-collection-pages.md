@@ -22,7 +22,7 @@ Liferayには2種類のコレクションがあります。
 
 手動コレクションまたは動的コレクションの作成方法については、 [コレクションの作成](./creating-collections.md) を参照してください。
 
-<a name="コレクションの表示" />
+<a name="displaying-collections" />
 
 ## コレクションの表示
 
@@ -38,7 +38,7 @@ Liferayには2種類のコレクションがあります。
 
 詳細は、[コレクションの表示](../../site-building/displaying-content/additional-content-display-options/displaying-collections.md)を参照してください。
 
-<a name="コレクションのカスタマイズ" />
+<a name="customizing-collections" />
 
 ## コレクションのカスタマイズ
 
@@ -48,7 +48,7 @@ Liferayセグメントをコレクションに関連付けて、[セグメント
 
 詳細は、 [コレクションのパーソナライズ](../../site-building/personalizing-site-experience/experience-personalization/personalizing-collections.md) を参照してください。
 
-<a name="アセットパブリッシャー設定をコレクションに変換する" />
+<a name="converting-asset-publisher-configurations-to-collections" />
 
 ## アセットパブリッシャー設定をコレクションに変換する
 
@@ -78,7 +78,7 @@ Liferayセグメントをコレクションに関連付けて、[セグメント
 
 あなたはすでにアセットパブリッシャーを使用して、完全で精選されたコンテンツの一覧を作成するためにすでに多くの作業を行ってきたかもしれませんが、今度は作業を複製せずにその一覧を他の場所に表示したいと考えています。 コンテンツセットでそれを行うことができます。 詳細は、 [Converting Asset Publisher Configuration to Content Sets guide](./creating-collections.md#converting-asset-publisher-configurations-to-content-sets) を参照してください。
 
-<a name="関連情報" />
+<a name="related-information" />
 
 ## 関連情報
 

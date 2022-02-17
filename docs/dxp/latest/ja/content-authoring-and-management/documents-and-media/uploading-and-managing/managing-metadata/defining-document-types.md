@@ -56,7 +56,7 @@ Liferayでは、ドキュメントタイプは、ファイルをアップロー�
 
 ドキュメントタイプを選択すると、設定済みのメタデータフィールドがユーザーに表示されます。 詳細については、 [ファイルのアップロード](../uploading-files.md) を参照してください。
 
-<a name="liferay-73x以前のバージョンの場合" />
+<a name="for-liferay-73x-and-earlier-versions" />
 
 ## Liferay 7.3.x以前のバージョンの場合
 
@@ -87,7 +87,7 @@ Liferayでは、ドキュメントタイプは、ファイルをアップロー�
 
 ![新しい画像ドキュメントの作成](./defining-document-types/images/13.png)
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 

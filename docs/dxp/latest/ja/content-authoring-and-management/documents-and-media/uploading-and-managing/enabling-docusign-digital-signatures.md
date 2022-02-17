@@ -6,7 +6,7 @@
 
 Liferayでデジタル署名を有効にする前に、ユーザーIDキー、APIアカウントキー、アカウントベースURI、統合キー、およびRSA秘密キーを生成して取得していることを確認してください。 この手順は、 [DocuSignのWebサイト](https://support.docusign.com/en/guides/ndse-admin-guide-api-and-keys) に記載されています。
 
-<a name="デジタル署名の有効化" />
+<a name="enabling-digital-signatures" />
 
 ## デジタル署名の有効化
 
@@ -36,7 +36,7 @@ Liferayでデジタル署名を有効にする前に、ユーザーIDキー、AP
 
 ここで、Liferayの適切なスコープでDocuSignからデジタルキーを追加する必要があります。
 
-<a name="デジタルキーの追加" />
+<a name="adding-digital-keys" />
 
 ## デジタルキーの追加
 
@@ -54,7 +54,7 @@ Liferayでデジタル署名を有効にする前に、ユーザーIDキー、AP
 
 1. ［**保存**］ をクリックして、デジタル署名を有効にします。
 
-<a name="ドキュメントとメディアでのドキュメント署名の収集" />
+<a name="collecting-document-signatures-in-documents-and-media" />
 
 ## ドキュメントとメディアでのドキュメント署名の収集
 
@@ -72,7 +72,7 @@ Liferayでデジタル署名を有効にする前に、ユーザーIDキー、AP
 
 1. エンベロープが送信されると、受信者は [DocuSignのプロセス](https://www.docusign.com/products/electronic-signature/how-docusign-works) を経てドキュメントに署名する必要があります。
 
-<a name="エンベロープのステータスの追跡" />
+<a name="tracking-an-envelopes-status" />
 
 ## エンベロープのステータスの追跡
 
@@ -90,7 +90,7 @@ DocuSignは、 **エンベロープ** という用語を使用して、署名す
 
     ![フィルターと並び替え、または検索バーを使用してドキュメントを整理します。](./enabling-docusign-digital-signatures/images/07.png)
 
-<a name="ドキュメントのダウンロード" />
+<a name="downloading-documents" />
 
 ## ドキュメントのダウンロード
 
@@ -106,7 +106,7 @@ DocuSignは、 **エンベロープ** という用語を使用して、署名す
 デジタル署名設定を無効にすると、コントロールパネルのデジタル署名モジュールを含むDocuSignへのすべての参照が削除されます。 Liferayでこの機能を無効にしても、すべてのエンベロープはDocuSignに引き続き表示されます。 デジタル署名を再度有効にすると、一覧が再び表示されます。
 ```
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 

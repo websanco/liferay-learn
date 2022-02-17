@@ -4,7 +4,7 @@ Webコンテンツは、サイトコンテンツを作成するための最も�
 
 各Webコンテンツの記事は、使用可能なフィールドを定義するストラクチャーに基づいています。 Liferayには、 すぐに使える **基本Webコンテンツ** ストラクチャーが含まれていますが、独自のストラクチャーを作成することもできます。 詳しくは [Web コンテンツストラクチャーを理解する](../web-content-structures/understanding-web-content-structures.md) を参照してください。
 
-<a name="基本的なwebコンテンツの記事の作成" />
+<a name="creating-a-basic-web-content-article" />
 
 ## 基本的なWebコンテンツの記事の作成
 
@@ -22,7 +22,7 @@ Webコンテンツは、サイトコンテンツを作成するための最も�
 
 サイトに基本的なWebコンテンツの記事を追加しました。 この記事をページに表示する方法の詳細は、 [Webコンテンツの表示ウィジェットの使用](../../../site-building/displaying-content/using-the-web-content-display-widget.md) を参照してください。
 
-<a name="プロパティタブ" />
+<a name="properties-tab" />
 
 ## [プロパティ]タブ
 
@@ -41,7 +41,7 @@ Webコンテンツは、サイトコンテンツを作成するための最も�
 | **関連するアセット** | 必要に応じて、関連するアセットを選択するために使用します。                         |                                                                                                                                                                        |
 | **権限設定** | 記事に固有のゲストまたはサイトメンバーの権限を設定するために使用します。                  | [More Options]をクリックすると、その記事を表示できるユーザー以外の権限が表示されます。 詳細は、[ロールと権限](../../../users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.md)を参照してください。 |
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 

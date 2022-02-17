@@ -2,7 +2,7 @@
 
 個々のファイル、フォルダ全体、または特定のファイル形式に権限を与えることができます。 Liferayインストールでロールと権限がどのように機能するかについては、 [ロールと権限について](../../../../users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.md) を参照してください。
 
-<a name="個々のファイルの権限" />
+<a name="permissions-for-an-individual-file" />
 
 ## 個々のファイルの権限
 
@@ -14,7 +14,7 @@
 
 1. 必要な権限を設定し、 ［**保存**］ をクリックします。
 
-<a name="フォルダ全体の権限" />
+<a name="permissions-for-an-entire-folder" />
 
 ## フォルダ全体の権限
 
@@ -26,7 +26,7 @@
 
 1. 必要な権限を設定し、 ［**保存**］ をクリックします。
 
-<a name="特定のファイル形式の権限" />
+<a name="permissions-for-a-specific-file-type" />
 
 ## 特定のファイル形式の権限
 

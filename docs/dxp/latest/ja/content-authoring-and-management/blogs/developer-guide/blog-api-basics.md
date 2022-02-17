@@ -4,7 +4,7 @@ LiferayのREST APIは、ブログの投稿や画像を追加、変更、削除�
 
 まずは、新しいブログ投稿を追加する例を見てみましょう。
 
-<a name="ブログ投稿の追加" />
+<a name="adding-a-blog-post" />
 
 ## ブログ投稿の追加
 
@@ -77,7 +77,7 @@ LiferayのREST APIは、ブログの投稿や画像を追加、変更、削除�
     java -classpath .: **-DsiteId=1234 BlogPosting****POST** ToSite
     ```
 
-<a name="curlコマンドを調べる" />
+<a name="examine-the-curl-command" />
 
 ## cURLコマンドを調べる
 
@@ -103,7 +103,7 @@ LiferayのREST APIは、ブログの投稿や画像を追加、変更、削除�
 
 他のcURLコマンドも同様のJSON引数を使用します。
 
-<a name="javaクラスを調べる" />
+<a name="examine-the-java-class" />
 
 ## Javaクラスを調べる
 
@@ -135,7 +135,7 @@ LiferayのREST APIは、ブログの投稿や画像を追加、変更、削除�
 
 以下は、cURLとJavaを使って、他の`BlogPosting` RESTサービスを呼び出す例です。
 
-<a name="サイトからブログ投稿を取得する" />
+<a name="get-blog-posts-from-site" />
 
 ## サイトからブログ投稿を取得する
 
@@ -173,7 +173,7 @@ java -classpath .:* -DsiteId=1234 BlogPostings_GET_FromSite
 
 サイトの`BlogPosting`オブジェクトがJSONに一覧表示されます。
 
-<a name="ブログ投稿を取得する" />
+<a name="get-a-blog-post" />
 
 ## ブログ投稿を取得する
 
@@ -215,7 +215,7 @@ java -classpath .:* -DblogPostingId=1234 BlogPosting_GET_ById
 
 `BlogPosting`フィールドがJSONに一覧表示されます。
 
-<a name="ブログ投稿にパッチを適用する" />
+<a name="patch-a-blog-post" />
 
 ## ブログ投稿にパッチを適用する
 
@@ -253,7 +253,7 @@ java -classpath .:* -DblogPostingId=1234 BlogPosting_PATCH_ById
 
 この例では、記事の本文の内容がFooからBarに変更されています。
 
-<a name="ブログ投稿をする" />
+<a name="put-a-blog-post" />
 
 ## ブログ投稿をする
 
@@ -289,7 +289,7 @@ java -classpath .:* -DblogPostingId=1234 BlogPosting_PUT_ById
    :lines: 9-26
 ```
 
-<a name="ブログ投稿を削除する" />
+<a name="delete-a-blog-post" />
 
 ## ブログ投稿を削除する
 
@@ -325,7 +325,7 @@ java -classpath .:* -DblogPostingId=1234 BlogPosting_DELETE_ById
    :lines: 8-17
 ```
 
-<a name="ブログ投稿画像サービス" />
+<a name="blog-post-image-services" />
 
 ## ブログ投稿画像サービス
 

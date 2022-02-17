@@ -1,6 +1,6 @@
 # ドキュメントとメディアの権限リファレンス
 
-<a name="フォルダ権限" />
+<a name="folder-permissions" />
 
 ## フォルダ権限
 
@@ -16,7 +16,7 @@
 | View          | フォルダを表示します。                                      |
 | Access        | フォルダのコンテンツにアクセスします。                              |
 
-<a name="ファイルの権限" />
+<a name="file-permissions" />
 
 ## ファイルの権限
 

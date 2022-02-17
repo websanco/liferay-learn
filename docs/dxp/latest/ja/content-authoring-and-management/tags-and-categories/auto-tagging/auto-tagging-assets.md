@@ -16,7 +16,7 @@
 精度が制限される可能性があるため、このプロバイダーの使用には注意が必要です。
 ```
 
-<a name="google-cloud-natural-language-text-auto-taggingの設定" />
+<a name="configuring-google-cloud-natural-language-text-auto-tagging" />
 
 ## Google Cloud Natural Language Text Auto Taggingの設定
 
@@ -56,7 +56,7 @@ Google Cloud Natural Languageプロバイダーが設定されました。
 
 サーバー上に複数の仮想インスタンスがある場合は、 [**コントロールパネル**] → [**Instance Settings**] → [**アセット**] から、インスタンスごとにこれらの設定を上書きできます。
 
-<a name="opennlp-text-auto-taggingの設定" />
+<a name="configuring-opennlp-text-auto-tagging" />
 
 ## OpenNLP Text Auto Taggingの設定
 
@@ -79,7 +79,7 @@ OpenNLPプロバイダーが設定されました。
 
 サーバー上に複数の仮想インスタンスがある場合は、 [**コントロールパネル**] → [**Instance Settings**] → [**アセット**] から、インスタンスごとにこれらの設定を上書きできます。
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 

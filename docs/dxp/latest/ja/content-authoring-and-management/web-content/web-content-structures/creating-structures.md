@@ -26,7 +26,7 @@
 インポート / エクスポート操作により、同じ` structureKey`を持つグローバルストラクチャーとサイトスコープのストラクチャーの両方を持つことができます。 これが発生した場合、サイトスコープのストラクチャーが優先され、そのサイトからグローバルストラクチャーにアクセスできなくなります。
 ```
 
-<a name="ストラクチャー項目" />
+<a name="structure-fields" />
 
 ## ストラクチャー項目
 
@@ -72,7 +72,7 @@
 
 ストラクチャー項目の設定と編集の詳細は、[Editing and Configuring Structure Fields](./configuring-structure-fields.md)を参照してください。
 
-<a name="関連情報" />
+<a name="related-information" />
 
 ## 関連情報
 

@@ -2,7 +2,7 @@
 
 位置情報は、アセットがメタデータとして作成された地理座標をアセットに追加します。 この機能は、[Web コンテンツストラクチャー](../web-content/web-content-structures/understanding-web-content-structures.md)、動的データリストフィールド、またはドキュメントとメディアの[ドキュメントタイプ](../documents-and-media/uploading-and-managing/managing-metadata/defining-document-types.md)または[メタデータセット](../documents-and-media/uploading-and-managing/managing-metadata/using-metadata-sets.md)に含めることができるオプションのフィールドとして提供されます。
 
-<a name="webコンテンツの地理位置情報" />
+<a name="geolocating-web-content" />
 
 ## Webコンテンツの地理位置情報
 
@@ -30,7 +30,7 @@ Webコンテンツの場所を設定するには、ブラウザと現在地を�
 ブラウザの設定によっては、現在地を共有するように設定する必要がある場合があります。
 ```
 
-<a name="データリストの地理位置情報" />
+<a name="geolocating-data-lists" />
 
 ## データリストの地理位置情報
 
@@ -78,7 +78,7 @@ Webコンテンツの場所を設定するには、ブラウザと現在地を�
 
 データリストが完成したので、 [データリスト表示ポートレット](../../process-automation/forms/dynamic-data-lists/getting-started-with-dynamic-data-lists.md)を使用してデータリストを表示できます。
 
-<a name="ドキュメントとメディアの地理位置情報" />
+<a name="geolocating-documents-and-media" />
 
 ## ドキュメントとメディアの地理位置情報
 
@@ -150,7 +150,7 @@ Webコンテンツの場所を設定するには、ブラウザと現在地を�
 
 ![アセットパブリッシャーは、位置情報が設定されたアセットを地図に表示できます。](./geolocating-assets/images/14.png)
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 

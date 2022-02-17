@@ -16,7 +16,7 @@
 
 コンテンツダッシュボードには、コンテンツアセットに割り当てたカテゴリに基づいた情報が表示されます。 Liferayでは、コンテンツダッシュボードで使用できるグローバルボキャブラリ、 ［**オーディエンス**］ と ［**ステージ**］ を提供しています。 ボキャブラリとカテゴリについては、 [カテゴリとタグを使用したコンテンツの整理](../tags-and-categories/organizing-content-with-categories-and-tags.md) を参照してください。 コンテンツに分類するには、 [コンテンツのカテゴリとボキャブラリの定義](../tags-and-categories/defining-categories-and-vocabularies-for-content.md) を参照してください。
 
-<a name="コンテンツダッシュボードのコンポーネント" />
+<a name="content-dashboard-components" />
 
 ## コンテンツダッシュボードのコンポーネント
 
@@ -40,7 +40,7 @@
 
 コンテンツダッシュボードインターフェイスの詳細と、ニーズに合わせて情報をカスタマイズする方法については、 [コンテンツダッシュボードインターフェイス](./content-dashboard-interface.md) のトピックを参照してください。
 
-<a name="関連情報" />
+<a name="related-information" />
 
 ## 関連情報
 

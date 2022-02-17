@@ -24,7 +24,7 @@
 
 必要に応じて、ドキュメントとメディアアセットをLiferayアーカイブ（`LAR`）ファイルとして[エクスポート](../../site-building/building-sites/importing-exporting-pages-and-content.md)できます。 これらのファイルは、バックアップとして使用したり、アセットを別のサイトまたはアセットライブラリにインポートするために使用できます。
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 
