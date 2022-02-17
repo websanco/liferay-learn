@@ -20,7 +20,7 @@ curl -L https://raw.githubusercontent.com/liferay/liferay-blade-cli/master/cli/i
 
 ### グラフィカルインストーラーからのインストール
 
-インストーラーに慣れている場合は、最新の [Liferay Project SDKインストーラー](https://sourceforge.net/projects/lportal/files/Liferay%20IDE/) をダウンロードして実行してください。
+インストーラーに慣れている場合は、最新の [Liferay Project SDKインストーラー](https://github.com/liferay/liferay-ide/releases/) をダウンロードして実行してください。
 
 1.  Javaランタイムを選択します。 これは自動検出されます。
 
