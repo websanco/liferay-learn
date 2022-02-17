@@ -9,6 +9,19 @@ const ALERT_ELEMENT_HEIGHT = 56;
 
 const ALERT_LOCAL_STORAGE_ID = 'pageAlertState';
 
+function displayPageAlert(node) {
+	if (window.scrollY <= ALERT_ELEMENT_HEIGHT) {
+		node.classList.remove('d-none');
+	}
+
+	if (
+		window.scrollY > ALERT_ELEMENT_HEIGHT &&
+		!node.classList.contains('d-none')
+	) {
+		node.classList.add('d-none');
+	}
+}
+
 function initPageAlert() {
 	const pageAlertState = localStorage.getItem(ALERT_LOCAL_STORAGE_ID);
 
@@ -24,18 +37,7 @@ function initPageAlert() {
 
 			if (pageAlertContainer) {
 				window.addEventListener('scroll', () =>
-					setTimeout(function () {
-						if (window.scrollY <= ALERT_ELEMENT_HEIGHT) {
-							pageAlertContainer.classList.remove('d-none');
-						}
-						else {
-							if (
-								!pageAlertContainer.classList.contains('d-none')
-							) {
-								pageAlertContainer.classList.add('d-none');
-							}
-						}
-					}, 300)
+					displayPageAlert(pageAlertContainer)
 				);
 			}
 		}
