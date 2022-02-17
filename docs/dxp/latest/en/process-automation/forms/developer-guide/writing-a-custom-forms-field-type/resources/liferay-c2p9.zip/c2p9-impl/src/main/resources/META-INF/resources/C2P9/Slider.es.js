@@ -2,8 +2,8 @@ import {FieldBase} from 'dynamic-data-mapping-form-field-type/FieldBase/ReactFie
 import {useSyncValue} from 'dynamic-data-mapping-form-field-type/hooks/useSyncValue.es';
 import React from 'react';
 
-const Slider = ({readOnly, name, onChange, predefinedValue, value}) => 
-	<input 
+const Slider = ({name, onChange, predefinedValue, readOnly, value}) => (
+	<input
 		className="ddm-field-slider form-control slider"
 		disabled={readOnly}
 		id="myRange"
@@ -12,32 +12,43 @@ const Slider = ({readOnly, name, onChange, predefinedValue, value}) =>
 		name={name}
 		onInput={onChange}
 		type="range"
-		value={value ? value : predefinedValue}/>
+		value={value ? value : predefinedValue}
+	/>
+);
 
-const Main = ({label, name, onChange, predefinedValue, readOnly, value, ...otherProps}) =>{
-
+const Main = ({
+	label,
+	name,
+	onChange,
+	predefinedValue,
+	readOnly,
+	value,
+	...otherProps
+}) => {
 	const [currentValue, setCurrentValue] = useSyncValue(
 		value ? value : predefinedValue
 	);
 
-	return <FieldBase
+	return (
+		<FieldBase
 			label={label}
 			name={name}
 			predefinedValue={predefinedValue}
 			{...otherProps}
 		>
-		<Slider 
-			name={name}
-			onChange={(event) => {
-				setCurrentValue(event.target.value);
-				onChange(event);
-			}}
-			predefinedValue={predefinedValue}
-			readOnly={readOnly}
-			value={currentValue}
-		/>
-	</FieldBase>
-}
+			<Slider
+				name={name}
+				onChange={(event) => {
+					setCurrentValue(event.target.value);
+					onChange(event);
+				}}
+				predefinedValue={predefinedValue}
+				readOnly={readOnly}
+				value={currentValue}
+			/>
+		</FieldBase>
+	);
+};
 
 Main.displayName = 'Slider';
 
