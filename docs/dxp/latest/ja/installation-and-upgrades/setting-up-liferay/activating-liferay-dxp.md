@@ -2,7 +2,7 @@
 
 > 変更通知を受け取り（購読）が必要
 
-Liferay DXPは、XML（`.xml` ） アクティベーションキーを使用してアクティブ化します。 アクティベーションキーは、DXPサブスクリプション契約期間または試用契約を指定します。 [Liferay DXPを初めて実行する](../installing-liferay/running-liferay-for-the-first-time.md)と、ライセンスページが表示され、アクティベーションキーが要求されます。
+Liferay DXPは、XML（`.xml` ） アクティベーションキーを使用してアクティブ化します。  アクティベーションキーは、DXPサブスクリプション契約期間または試用契約を指定します。 [Liferay DXPを初めて実行する](../installing-liferay/running-liferay-for-the-first-time.md)と、ライセンスページが表示され、アクティベーションキーが要求されます。
 
 ![DXPを初めて実行すると、ライセンスページが表示されます。](./activating-liferay-dxp/images/01.png)
 
@@ -25,7 +25,7 @@ Liferay DXPは、XML（`.xml` ） アクティベーションキーを使用し�
 
 登録を確認するメッセージがDXPコンソールに表示されます。
 
-``` bash
+```bash
 License registered ...
 ```
 
@@ -33,12 +33,12 @@ DXPを使用する準備が整いました。
 
 ## キーが必要ですか？
 
-エンタープライズサブスクリプションをお持ちの場合は、[アクティベーションキー](https://customer.liferay.com/activation-key)ページにアクセスしてアクティベーションキーをダウンロードするか、アクティベーションキーをリクエストしてください。
+エンタープライズサブスクリプションをお持ちの場合は、[［Activation Keys］](https://customer.liferay.com/activation-key)ページにアクセスしてアクティベーションキーをダウンロードするか、アクティベーションキーをリクエストしてください。
 
 DXPをお試し中ですか？ [30日間の試用アクティベーションキー](https://www.liferay.com/products/dxp/30-day-trial)を取得してください。
 
 ```{note}
-Liferay DXP 7.2以前でLiferay Connected Services（LCS）を使用している場合、LCSでDXPインスタンスをアクティブ化する手順については、LCSのドキュメント<https://help.liferay.com/hc/en-us/articles/360017897492-Introduction-to-Managing-Liferay-DXP-with-Liferay-Connected-Services->を参照してください。
+Liferay DXP 7.2以前でLiferay Connected Services（LCS）を使用している場合、LCSでDXPインスタンスをアクティブ化する手順については、[LCSのドキュメント](https://help.liferay.com/hc/en-us/articles/360017897492-Introduction-to-Managing-Liferay-DXP-with-Liferay-Connected-Services-)を参照してください。
 ```
 
 ## Liferay DXPの再アクティブ化
@@ -47,21 +47,21 @@ Liferay DXP 7.2以前でLiferay Connected Services（LCS）を使用している
 
 新しいキーでDXPを再アクティブ化する手順は次のとおりです。
 
-1.  アプリケーションサーバーを停止します。
+1. アプリケーションサーバーを停止します。
 
-2.  LCSを使用してDXPをアクティブ化している場合は、[Liferay Home](../reference/liferay-home.md)の`osgi/marketplace`フォルダからLiferay Connected ServicesクライアントのLPKGファイル（`.lpkg`）を削除します。
+1. LCSを使用してDXPをアクティブ化している場合は、[Liferay Home](../reference/liferay-home.md)の`osgi/marketplace`フォルダからLiferay Connected ServicesクライアントのLPKGファイル（`.lpkg`）を削除します。
 
-3.  `[Liferay Home]/data/license`フォルダの*コンテンツ*は削除しますが、フォルダは保持します。
+1. `［Liferay Home］/data/license`フォルダの_コンテンツ_は削除しますが、フォルダは保持します。
 
-4.  `[Liferay Home]/osgi/modules`フォルダからすべての`activation-key-[...].xml`ファイルを削除します。
+1. `［Liferay Home］/osgi/modules`フォルダからすべての`activation-key-［...］.xml`ファイルを削除します。
 
-5.  アプリケーションサーバーを起動します。
+1. アプリケーションサーバーを起動します。
 
-6.  新しいアクティベーションキーファイルを`[Liferay Home]/deploy`フォルダにコピーします。
+1. 新しいアクティベーションキーファイルを`［Liferay Home］/deploy`フォルダにコピーします。
 
 登録を確認するDXPコンソールメッセージが表示されます。
 
-``` bash
+```bash
 License registered ...
 ```
 

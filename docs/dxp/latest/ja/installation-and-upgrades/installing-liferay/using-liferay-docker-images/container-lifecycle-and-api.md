@@ -14,17 +14,17 @@
 
 環境でコンテナを作成した後、コンテナエントリポイントはその環境で次のライフサイクルフェーズを実行します。
 
-1.  **事前設定：** TomcatおよびLiferayを設定する前に、[ユーザー提供のスクリプトを実行します](./running-scripts-in-containers.md)。
-2.  **設定：** TomcatでDXPを実行する準備をします。
-    1.  [TomcatのJavaランタイム環境の設定](./configuring-containers.md#jvm-options)。
-    2.  [ユーザが提供したファイル](./configuring-containers.md) を [Liferay Home](../../reference/liferay-home.md) にコピー。
-    3.  [ユーザー提供のスクリプトの実行](./running-scripts-in-containers.md)。
-    4.  [ユーザー提供のアーティファクトのデプロイ](./installing-apps-and-other-artifacts-to-containers.md)。
-    5.  [パッチツール](./patching-dxp-in-docker.md#updating-the-patching-tool) をユーザー指定のバージョンで更新します。
-    6.  [ユーザー提供のパッチをインストールします](./patching-dxp-in-docker.md)。
-3.  **起動前：** [Tomcatを起動する前に、ユーザー提供のスクリプトを実行します](./running-scripts-in-containers.md)。
-4.  **Tomcat起動：** Catalinaスクリプトを使用してTomcatを起動します。
-5.  **シャットダウン後：** [Tomcatの停止後にユーザー指定のスクリプトを実行します](./running-scripts-in-containers.md)。
+1. **事前設定：** TomcatおよびLiferayを設定する前に、[ユーザー提供のスクリプトを実行します](./running-scripts-in-containers.md)。
+1. **設定：** TomcatでDXPを実行する準備をします。
+    1. [TomcatのJavaランタイム環境の設定](./configuring-containers.md#jvm-options)。
+    1. [ユーザが提供したファイル](./configuring-containers.md) を [Liferay Home](../../reference/liferay-home.md) にコピー。
+    1. [ユーザー提供のスクリプトの実行](./running-scripts-in-containers.md)。
+    1. [ユーザー提供のアーティファクトのデプロイ](./installing-apps-and-other-artifacts-to-containers.md)。
+    1. [パッチツール](./patching-dxp-in-docker.md#updating-the-patching-tool) をユーザー指定のバージョンで更新します。
+    1. [ユーザー提供のパッチをインストールします](./patching-dxp-in-docker.md)。
+1. **起動前：** [Tomcatを起動する前に、ユーザー提供のスクリプトを実行します](./running-scripts-in-containers.md)。
+1. **Tomcat起動：** Catalinaスクリプトを使用してTomcatを起動します。
+1. **シャットダウン後：** [Tomcatの停止後にユーザー指定のスクリプトを実行します](./running-scripts-in-containers.md)。
 
 ## API
 
@@ -33,10 +33,8 @@
 * `/mnt/liferay`
 * `/user/local/liferay/scripts`
 
-<!-- end list -->
-
-```{note}
-[bind mount](https://docs.docker.com/storage/bind-mounts/) 、[volumes](https://docs.docker.com/storage/volumes/) 、`docker cp` など、これらのコンテナフォルダにファイルを渡すことができます。 詳細は、 [Providing Files to the Container](./providing-files-to-the-container.md) を参照してください。
+```note::
+   You can pass files to these container folders in several different ways, including using `bind mounts <https://docs.docker.com/storage/bind-mounts/>`_, `volumes <https://docs.docker.com/storage/volumes/>`_, and ``docker cp``. See `Providing Files to the Container <./providing-files-to-the-container.md>`_ for more information.
 ```
 
 上記の主要なフォルダーには、特定のアクション用に指定されたサブフォルダーがあります。 次のセクションでは、サブフォルダー、それらのファイルで実行されるアクション、および関連するユースケースをライフサイクルの段階順に記述します。
@@ -50,13 +48,13 @@
 
 ### 事前設定フェーズAPI
 
-| ファイルのロケーション                                | 操作                  | ユースケース                                                |
+| ファイルの場所                                    | 操作                  | ユースケース                                                |
 |:------------------------------------------ |:------------------- |:----------------------------------------------------- |
 | `/usr/local/liferay/scripts/pre-configure` | スクリプトをアルファベット順に実行する | [設定段階前のスクリプト](./running-scripts-in-containers.md) の実行 |
 
 ### 設定段階のAPI
 
-| ファイルのロケーション             | 操作                                                                                                                                                                                                                                                                                                | ユースケース                                                                                                         |
+| ファイルの場所                 | 操作                                                                                                                                                                                                                                                                                                | ユースケース                                                                                                         |
 |:----------------------- |:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |:-------------------------------------------------------------------------------------------------------------- |
 | `/mnt/liferay/files`    | Liferay Home (`/opt/liferay` ) の下にあるフォルダにファイルをコピーする                                                                                                                                                                                                                                               | [コンテナの設定](./configuring-containers.md)<br><br>[Tomcatの設定](./configuring-containers.md#jvm-options) |
 | `/mnt/liferay/scripts`  | スクリプトをアルファベット順に実行する                                                                                                                                                                                                                                                                               | [構成中にスクリプトを実行](./running-scripts-in-containers.md)                                                             |
@@ -65,7 +63,7 @@
 
 ### 起動前フェーズAPI
 
-| ファイルのロケーション                              | 操作                  | ユースケース                                                      |
+| ファイルの場所                                  | 操作                  | ユースケース                                                      |
 |:---------------------------------------- |:------------------- |:----------------------------------------------------------- |
 | `/usr/local/liferay/scripts/pre-startup` | スクリプトをアルファベット順に実行する | [Tomcatを開始する前にスクリプトを実行](./running-scripts-in-containers.md) |
 
@@ -79,6 +77,6 @@
 
 コンテナのライフサイクルと API いついて学習できました。これで、 [コンテナに](./providing-files-to-the-container.md) ファイルを提供する最良の方法を決定できます。 または、上記の表に記載されているユースケースの実行を開始できます。 それらはあなたの便宜のためにここにリストされています：
 
-* [コンテナの設定](./configuring-containers.md)
-* [アプリやその他のアーティファクトをコンテナにインストールする](./installing-apps-and-other-artifacts-to-containers.md)
+* [Configuring Containers](./configuring-containers.md)
+* [コンテナへのアプリやその他のアーティファクトのインストール](./installing-apps-and-other-artifacts-to-containers.md)
 * [DockerでDXPにパッチを適用する](./patching-dxp-in-docker.md)

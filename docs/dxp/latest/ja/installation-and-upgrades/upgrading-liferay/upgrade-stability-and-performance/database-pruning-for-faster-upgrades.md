@@ -6,28 +6,34 @@
 
 データベースのプルーニングに関するトピックは次のとおりです。
 
-  - 重複するWeb コンテンツストラクチャーのフィールド名を削除する
-  - 未使用のオブジェクトを見つけて削除する
-  - プルーニングされたデータベースのコピーを使用してテストする
+* 重複するWeb コンテンツストラクチャーのフィールド名を削除する
+* 未使用のオブジェクトを見つけて削除する
+* プルーニングされたデータベースのコピーを使用してテストする
+
+## 廃止されたデータの削除
+
+データベースに、廃止されたデータや廃止された機能から残ったデータが含まれている可能性があります。 どちらも簡単に削除できます。
+
+1. 廃止されたモジュールのデータを削除するには、[データクリーンアップ](../reference/data-cleanup.md)ツールを使用します。
+
+1. 使用可能なモジュールから古いデータを削除するには、[データ削除](../reference/data-removal.md)ツールを使用します。
 
 ## 重複するWeb コンテンツストラクチャーのフィールド名を削除する
 
 Webコンテンツ管理を広範囲に使用している場合、固有のフィールド名のない構造が存在する可能性があります。 アップグレードする前に、重複するフィールド名を見つけて削除してください。 以前にLiferay Portal 6.2にアップグレードし、この作業をスキップした場合、次のエラーが発生します。
 
-    19:29:35,298 ERROR [main][VerifyProcessTrackerOSGiCommands:221] com.liferay.portal.verify.VerifyException: com.liferay.dynamic.data.mapping.validator.DDMFormValidationException$MustNotDuplicateFieldName: The field name page cannot be defined more than once
-    com.liferay.portal.verify.VerifyException: com.liferay.dynamic.data.mapping.validator.DDMFormValidationException$MustNotDuplicateFieldName: The field name page cannot be defined more than once
+```
+19:29:35,298 ERROR [main][VerifyProcessTrackerOSGiCommands:221] com.liferay.portal.verify.VerifyException: com.liferay.dynamic.data.mapping.validator.DDMFormValidationException$MustNotDuplicateFieldName: The field name page cannot be defined more than once
+com.liferay.portal.verify.VerifyException: com.liferay.dynamic.data.mapping.validator.DDMFormValidationException$MustNotDuplicateFieldName: The field name page cannot be defined more than once
+```
 
 このエラーが発生した場合は、Liferay Portal 6.2の以前のバックアップにロールバックし、重複するフィールド名を見つけて削除してください。
 
 ## 未使用のオブジェクトの削除
 
-データベースには、廃止された機能や使用されていないオブジェクトのデータが残っている場合があります。
+データベースには、使用されていないオブジェクトのデータが残っている場合があります。
 
-1.  廃止されたモジュールのデータを削除するには、[[Data Cleanup]](../reference/data-cleanup.md)画面を使用します。
-
-2.  UIや、データベースで`SELECT`クエリを使用して他の未使用オブジェクトを特定し、UI、 [スクリプト コンソール](../../../system-administration/using-the-script-engine/running-scripts-from-the-script-console.md)を介したAPI、または作成したポートレットのいずれかでオブジェクトを削除します。
-
-<!-- end list -->
+1. UIや、データベースで`SELECT`クエリを使用して他の未使用オブジェクトを特定し、UI、 [スクリプト コンソール](../../../system-administration/using-the-script-engine/running-scripts-from-the-script-console.md)を介したAPI、または作成したポートレットのいずれかでオブジェクトを削除します。
 
 ```{warning}
 LiferayのUIまたはAPIはLiferay DXPのオブジェクト間の関係を考慮しているため、データの操作にはLiferayのUIまたはAPIのみを使用してください。 データベースでSQLを直接使用してレコードを削除しないでください。 SQLがオブジェクトの関係を見失い、オブジェクトが孤立し、パフォーマンスの問題が発生する可能性があります。
@@ -41,31 +47,33 @@ LiferayのUIまたはAPIはLiferay DXPのオブジェクト間の関係を考慮
 
 このようなテーブルに関連付けられている未使用のオブジェクトを見つけて削除すると、アップグレード時間が短縮されます。 Liferayのバックアップからデータをインポートすると、貴重なテーブル情報が得られます。 データベースエンジンには、さまざまな形でこの情報が表示されます。 たとえば、データベースのインポートログは次のようになります。
 
-    Processing object type SCHEMA\_EXPORT/TABLE/TABLE\_DATA
-    
-    imported "LIFERAY"."JOURNALARTICLE" 13.33 GB 126687 rows
-    
-    imported "LIFERAY"."RESOURCEPERMISSION" 160.9 MB 1907698 rows
-    
-    imported "LIFERAY"."PORTLETPREFERENCES" 78.13 MB 432285 rows
-    
-    imported "LIFERAY"."LAYOUT" 52.05 MB 124507 rows
-    
-    imported "LIFERAY"."ASSETENTRY" 29.11 MB 198809 rows
-    
-    imported "LIFERAY"."MBMESSAGE" 24.80 MB 126185 rows
-    
-    imported "LIFERAY"."PORTALPREFERENCES" 4.091 MB 62202 rows
-    
-    imported "LIFERAY"."USER\_" 17.32 MB 62214 rows
-    
-    ...
+```
+Processing object type SCHEMA\_EXPORT/TABLE/TABLE\_DATA
+
+imported "LIFERAY"."JOURNALARTICLE" 13.33 GB 126687 rows
+
+imported "LIFERAY"."RESOURCEPERMISSION" 160.9 MB 1907698 rows
+
+imported "LIFERAY"."PORTLETPREFERENCES" 78.13 MB 432285 rows
+
+imported "LIFERAY"."LAYOUT" 52.05 MB 124507 rows
+
+imported "LIFERAY"."ASSETENTRY" 29.11 MB 198809 rows
+
+imported "LIFERAY"."MBMESSAGE" 24.80 MB 126185 rows
+
+imported "LIFERAY"."PORTALPREFERENCES" 4.091 MB 62202 rows
+
+imported "LIFERAY"."USER\_" 17.32 MB 62214 rows
+
+...
+```
 
 サンプルのデータベースインポートでは、いくつかの項目が際立っています。
 
-  - `JOURNALARTICLE`テーブルは、データベースサイズの98％を占めています。
-  - 多数の`RESOURCEPERMISSION`レコードがあります。
-  - 多数の`PORTLETPREFERENCES`レコードがあります。
+* `JOURNALARTICLE`テーブルは、データベースサイズの98％を占めています。
+* 多数の`RESOURCEPERMISSION`レコードがあります。
+* 多数の`PORTLETPREFERENCES`レコードがあります。
 
 目立つテーブルに関連付けられている未使用のオブジェクトを検索し、LiferayのAPI（例：[スクリプトコンソール](../../../system-administration/using-the-script-engine/running-scripts-from-the-script-console.md)を使用）を使用して不要なオブジェクトを削除します。
 
@@ -73,50 +81,47 @@ LiferayのUIまたはAPIはLiferay DXPのオブジェクト間の関係を考慮
 
 一部の特定のオブジェクトタイプでは、未使用のオブジェクトがないか確認する必要があります。 これらを確認する理由は次のとおりです。
 
-  - それらを削除すると、関連する未使用のオブジェクトが削除できるようになります
-  - 保持する必要のないバージョンのオブジェクトである可能性があります
+* それらを削除すると、関連する未使用のオブジェクトが削除できるようになります
+* 保持する必要のないバージョンのオブジェクトである可能性があります
 
 次のオブジェクトタイプを確認します。
 
-  - **サイト**：不要なサイトを削除します。 サイトを削除すると、次のような関連オブジェクトが削除されます。
+* **サイト**：不要なサイトを削除します。 サイトを削除すると、次のような関連オブジェクトが削除されます。
+  * レイアウト
+  * ポートレット設定
+  * ファイルエントリ（ドキュメントライブラリオブジェクト）
+  * アセットエントリ
+  * タグ
+  * ボキャブラリとカテゴリ
+  * Expandoフィールドとその値
+  * `ResourcePermission`オブジェクト
+  * サイトに固有のその他すべてのオブジェクト
 
-      - レイアウト
-      - ポートレット設定
-      - ファイルエントリ（ドキュメントライブラリオブジェクト）
-      - アセットエントリ
-      - タグ
-      - ボキャブラリとカテゴリ
-      - Expandoフィールドとその値
-      - `ResourcePermission`オブジェクト
-      - サイトに固有のその他すべてのオブジェクト
+* **インスタンス**：未使用のインスタンスはまれですが、それらは階層内の最上位のオブジェクトであるため、それらのオブジェクトを削除すると、アップグレードを大幅に最適化できます。 インスタンスを削除すると、それらに関連付けられている次のオブジェクトが削除されます。
+  * サイト（およびすべての関連コンテンツ）
+  * ユーザー
+  * ロール
+  * 組織
+  * グローバル`ResourcePermission`オブジェクト
 
-  - **インスタンス**：未使用のインスタンスはまれですが、それらは階層内の最上位のオブジェクトであるため、それらのオブジェクトを削除すると、アップグレードを大幅に最適化できます。 インスタンスを削除すると、それらに関連付けられている次のオブジェクトが削除されます。
+* **中間Webコンテンツバージョン：** Liferay DXPは、変更（翻訳を含む）後に新しいWebコンテンツバージョンを生成します。 不要なバージョンは削除することを検討してください。 特に、削除されたバージョンにそれらのバージョンに固有のイメージファイルなどのオブジェクトが含まれている場合、削除することでかなりの領域を解放できます。 詳細は、[Example: Removing Intermediate Journal Article Versions](./example-removing-intermediate-journal-article-versions.md)を参照してください。
 
-      - サイト（およびすべての関連コンテンツ）
-      - ユーザー
-      - ロール
-      - 組織
-      - グローバル`ResourcePermission`オブジェクト
+* **ドキュメントのバージョン**：ジャーナル記事と同様に、中間ドキュメントバージョンが不要な場合は削除してください。 これにより、データベースとファイルシステムの両方で領域が節約されます。
 
-  - **中間Webコンテンツバージョン：** Liferay DXPは、変更（翻訳を含む）後に新しいWebコンテンツバージョンを生成します。 不要なバージョンは削除することを検討してください。 特に、削除されたバージョンにそれらのバージョンに固有のイメージファイルなどのオブジェクトが含まれている場合、削除することでかなりの領域を解放できます。 詳細は、[例：ジャーナル記事の中間バージョンの削除](./example-removing-intermediate-journal-article-versions.md)を参照してください。
+* **レイアウト：**レイアウトはサイトページであり、ポートレットのルック&フィール、権限、アセット、評価などの他のエンティティに関連しているため、アップグレードのパフォーマンスに影響します。 不要なレイアウトは削除してください。
 
-  - **ドキュメントのバージョン**：ジャーナル記事と同様に、中間ドキュメントバージョンが不要な場合は削除してください。 これにより、データベースとファイルシステムの両方で領域が節約されます。
+* **ロール**：不要なロールを削除します。 それらを削除すると、関連する`ResourceBlockPermission`オブジェクトと`ResourcePermission`オブジェクトも削除されます。
 
-  - **レイアウト：**レイアウトはサイトページであり、ポートレットのルック&フィール、権限、アセット、評価などの他のエンティティに関連しているため、アップグレードのパフォーマンスに影響します。 不要なレイアウトは削除してください。
+* **ユーザー：**非アクティブで不要になったユーザーを削除します。
 
-  - **ロール**：不要なロールを削除します。 それらを削除すると、関連する`ResourceBlockPermission`オブジェクトと`ResourcePermission`オブジェクトも削除されます。
+* **ボキャブラリ**：未使用のボキャブラリを削除します。 ボキャブラリを削除すると、そのカテゴリも削除されることに注意してください。
 
-  - **ユーザー：**非アクティブで不要になったユーザーを削除します。
+* **孤立データ**：何にも接続されていない未使用のオブジェクトがないか確認します。 次にいくつかの例を示します。
+  * ファイルシステムデータのない`DLFileEntries`。
+  * 存在しないロール、レイアウト、ユーザー、ポートレットインスタンスなどに関連付けられている`ResourcePermission`オブジェクト。
+  * 存在しないポートレットまたはレイアウトに関連付けられている`PortletPreference`オブジェクト。 これは、多くの組み込みポートレットがある環境でよく見られます。 これらのポートレットインスタンスには異なるライフサイクルがあり、ポートレットがテンプレートから削除されても削除されません。
 
-  - **ボキャブラリ**：未使用のボキャブラリを削除します。 ボキャブラリを削除すると、そのカテゴリも削除されることに注意してください。
-
-  - **孤立データ**：何にも接続されていない未使用のオブジェクトがないか確認します。 次にいくつかの例を示します。
-
-      - ファイルシステムデータのない`DLFileEntries`。
-      - 存在しないロール、レイアウト、ユーザー、ポートレットインスタンスなどに関連付けられている`ResourcePermission`オブジェクト。
-      - 存在しないポートレットまたはレイアウトに関連付けられている`PortletPreference`オブジェクト。 これは、多くの組み込みポートレットがある環境でよく見られます。 これらのポートレットインスタンスには異なるライフサイクルがあり、ポートレットがテンプレートから削除されても削除されません。
-
-中間オブジェクトバージョンの削除例については、[例：ジャーナル記事の中間バージョンの削除](./example-removing-intermediate-journal-article-versions.md)を参照してください。
+中間オブジェクトバージョンの削除例については、[Example: Removing Intermediate Journal Article Versions](./example-removing-intermediate-journal-article-versions.md)をご覧ください。
 
 次に、プルーニングされたデータベースを使用してインスタンスをテストします。
 
@@ -126,4 +131,4 @@ LiferayのUIまたはAPIはLiferay DXPのオブジェクト間の関係を考慮
 
 ## 追加情報
 
-  - [例：ジャーナル記事の中間バージョンの削除](./example-removing-intermediate-journal-article-versions.md)
+* [Example: Removing Intermediate Journal Article Versions](./example-removing-intermediate-journal-article-versions.md)

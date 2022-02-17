@@ -2,8 +2,8 @@
 
 Authentication Verifierは、一元化された拡張可能な方法でLiferay PortalのAPIのリモート呼び出しを認証します。 2つの主な責任があります：
 
-1.  登録済みの`AuthVerifier`インスタンスを使用して、提供された資格情報を確認します
-2.  検証結果に基づいてポータル承認コンテキストを作成します
+1. 登録済みの`AuthVerifier`インスタンスを使用して、提供された資格情報を確認します
+1. 検証結果に基づいてポータル承認コンテキストを作成します
 
 提供された資格情報がユーザーアカウントと一致すると判断できる利用可能な`AuthVerifier`がない場合は、非認証アクセスをサポートする承認コンテキストがゲストユーザー用に作成されます。 これにより、各APIは単一のAPIエンドポイントのみを公開できます。 対照的に、Liferay Portalのレガシー（6.2より前）バージョンでは、各APIに対して2つのAPIエンドポイントを公開していました。`/api/endpoint` URIは非認証アクセス用で、URI `/api/secure/endpoint`は認証済みアクセス用でした。
 
@@ -15,7 +15,7 @@ Authentication Verifierは、一元化された拡張可能な方法でLiferay P
 
 ## 認証検証プロセス
 
-Authentication Verifierを設定するには、*[Control Panel]* → *[Configuration]* → *[System Settings]* → *[Security]* → *[API Authentication]* に移動します。
+Authentication Verifierを設定するには、*［コントロールパネル］* &rarr; *［設定］* &rarr; *［システム設定］* &rarr; *［セキュリティ］* &rarr; *［API 認証］*に移動します。
 
 ![Authentication Verifierの設定画面](./using-authentication-verifiers/images/01.png)
 
@@ -37,32 +37,33 @@ Authentication Verifierを設定するには、*[Control Panel]* → *[Configura
 
 `AuthVerifier`は開発者によって作成され、OSGiランタイムに登録されている限り自動的に処理されます。 このレイヤと周囲のプロセスは、`javax.servlet.Filter`インターフェイスを実装する`AuthVerifierFilter`クラスによって提供されます。 製品に同梱されているAuth Verifierの構成は次のとおりです。
 
-  - [基本認証ヘッダー](#basic-auth-header)\*
-  - [ダイジェスト認証](#digest-auth-header)
-  - [HTTPトンネルエクステンダー](#http-tunnel-extender)
-  - [画像リクエスト](#image-request-authentication-verifier)
-  - [ポータルセッション](#portal-sessions-auth-verifiers)\*
-  - [リクエストパラメータ](#request-parameter)
-  - [トンネル認証](#tunnel-auth)
+* [基本認証ヘッダー](#basic-auth-header)*
+* [ダイジェスト認証](#digest-auth-header)
+* [HTTPトンネルエクステンダー](#http-tunnel-extender)
+* [画像リクエスト](#image-request-authentication-verifier)
+* [ポータルセッション](#portal-sessions-auth-verifiers)*
+* [リクエストパラメータ](#request-parameter)
+* [トンネル認証](#tunnel-auth)
 
-> \*デフォルトで有効になっており、追加の設定不要でリモートAPIにアクセスするために使用できます。
+> *デフォルトで有効になっており、追加の設定不要でリモートAPIにアクセスするために使用できます。
 
 ### 基本認証ヘッダー
 
-このAuth Verifierにより、リモートクライアントは[HTTP基本認証](https://en.wikipedia.org/wiki/Basic_access_authentication)を使用して認証できます。 この方法で認証する必要のあるURLパスを指定して設定します。 *[Force Basic Authentication]* フィールドがオンになっている場合は、HTTP基本認証が必要です。
+このAuth Verifierにより、リモートクライアントは[HTTP基本認証](https://en.wikipedia.org/wiki/Basic_access_authentication)を使用して認証できます。 この方法で認証する必要のあるURLパスを指定して設定します。 _［Force Basic Authentication］_フィールドがオンになっている場合は、HTTP基本認証が必要です。
 
 WebサービスのデフォルトのURLは`/api/*,/xmlrpc*`です。 このマッピングでは、`TunnelServlet`へのアクセスを防ぐために`/api/liferay*`を除外しています。 詳細については、「トンネルAuthentication Verifier」をご覧ください。
 
 ### ダイジェスト認証ヘッダー
 
-このAuth Verifierにより、リモートクライアントは[HTTPダイジェスト認証](https://en.wikipedia.org/wiki/Digest_access_authentication)を使用して認証できます。 この方法で認証する必要のあるURLパスを指定して設定します。 [Force Digest Authentication]フィールドがオンになっている場合は、HTTP基本認証が必要です。
+このAuth Verifierにより、リモートクライアントは[HTTPダイジェスト認証](https://en.wikipedia.org/wiki/Digest_access_authentication)を使用して認証できます。 この方法で認証する必要のあるURLパスを指定して設定します。 ［Force Digest Authentication］フィールドがオンになっている場合は、HTTP基本認証が必要です。
 
 このAuth Verifierはデフォルトでは有効になっていません。
 
 ### HTTPトンネルエクステンダー
 
 Liferayではモジュール性を採用したため、このエクステンダーはモジュールを`TunnelServlet`の一部にすることができるように作成されました。 `TunnelServlet`および`TunnelingServletAuthVerifier`がモジュールサーブレットコンテキストにマップされます。 マニフェストに`Http-Tunnel`が含まれるモジュールは、トンネルサーブレットを利用でき、`/o/_module_/api/liferay/do`を介してAPIを公開できます。
-トンネリングを許可するクライアントIPアドレスを設定して構成します。 詳細については、以下を参照してください [プロパティ文書](https://docs.liferay.com/portal/7.2-latest/propertiesdoc/portal.properties.html#HTTP%20Tunneling) と同様にリモートのステージングを <!-- future link required --> 。
+
+トンネリングを許可するクライアントIPアドレスを設定して構成します。 詳細については、[プロパティのドキュメント](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#HTTP%20Tunneling)および[リモートステージング](../../../site-building/publishing-tools/staging/configuring-remote-live-staging.md)を参照してください。
 
 これはリモートAPIをエクスポートする方法としてはお勧めできません。JAX-RSまたはLiferay JSON Web Serviceテクノロジーを使用してリモートサービスを公開する方がはるかに優れています。
 
@@ -93,7 +94,8 @@ LibreOffice/OpenOfficeに接続している場合、Officeプロセスは、画�
 信頼されたリモートクライアントの例として、ステージングリモート発行機能があります。
 
 信頼されたリモートクライアントは、ポータルプロパティ`tunneling.servlet.shared.secret`に格納されている共有シークレットを使用して認証します。 初期値は空であり、すべてのアクセスが禁止されます。
-デフォルト設定はデフォルトで有効になっていますが、アクセスはローカルホストのみに制限されています。 トンネリングを許可するクライアントIPアドレスを設定して構成します。 詳細については、[プロパティのドキュメント](https://docs.liferay.com/portal/7.2-latest/propertiesdoc/portal.properties.html#HTTP%20Tunneling)とリモートステージングを参照してください。
+
+デフォルト設定はデフォルトで有効になっていますが、アクセスはローカルホストのみに制限されています。 トンネリングを許可するクライアントIPアドレスを設定して構成します。 詳細については、[プロパティのドキュメント](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#HTTP%20Tunneling)および[リモートステージング](../../../site-building/publishing-tools/staging/configuring-remote-live-staging.md)を参照してください。
 
 ## 関連トピック
 

@@ -8,28 +8,26 @@ Liferayインストールで構成可能なものはすべて、Liferay Docker�
 * [ポータルプロパティ](#portal-properties)
 * [画像定義の環境変数](#image-defined-environment-variables)
 * [システムプロパティ](#system-properties)
-* [システム設定](#system-settings)
+* [System Settings](#system-settings)
 
-<!-- end list -->
-
-```{note}
-ここでは、コンテナにファイルを提供する設定のユースケースを、 [bind mounts](https://docs.docker.com/storage/bind-mounts/) を使用して示しています。 また、 [volumes](https://docs.docker.com/storage/volumes/) を使ったり、場合によっては `docker cp` コマンドを使うこともできます。 詳細は、 [Providing File to the Container](./providing-files-to-the-container.md) を参照してください。
+```note::
+   ここでは、コンテナにファイルを提供する設定のユースケースを、 `bind mounts <https://docs.docker.com/storage/bind-mounts/>`_を使用して示しています。 また、`volumes <https://docs.docker.com/storage/volumes/>`_ を使ったり、場合によっては ``docker cp`` コマンドを使うこともできます。 詳細は、`Providing File to the Container <./providing-files-to-the-container.md>`_を参照してください。
 ```
 
 ## JVMオプション
 
 TomcatのJVMオプションは、追加または置換できます。
 
-### JVMオプションをCATALINA\_OPTSに追加する
+### JVMオプションをCATALINA_OPTSに追加する
 
 JVM オプションは Tomcat の `CATALINA_OPTS` 変数に追加することができます。この変数は、コンテナを作成する際に `LIFERAY_JVM_OPTS` 環境変数に指定します。
 
-``` bash
-docker run -it --name [container] -p 8080:8080 -e LIFERAY_JVM_OPTS=[value\ with\ space] liferay/dxp:[tag]
+```bash
+docker run -it -m 8g -p 8080:8080 -e LIFERAY_JVM_OPTS=[value\ with\ space] liferay/dxp:[tag]
 ```
 
-```{warning}
-` LIFERAY_JVM_OPTS`値では、バックスラッシュを使用してスペース文字をエスケープします。 引用符は使用しないでください。
+```warning::
+   `` LIFERAY_JVM_OPTS``値では、バックスラッシュを使用してスペース文字をエスケープします。 引用符は使用しないでください。
 ```
 
 コンテナは Tomcat の `CATALINA_OPTS` に追加された `LIFERAY_JVM_OPTS` で実行されます。
@@ -38,43 +36,43 @@ docker run -it --name [container] -p 8080:8080 -e LIFERAY_JVM_OPTS=[value\ with\
 
 JVMオプションを設定する別の方法には、Tomcatの `setenv.sh` スクリプトを上書きすることが含まれます。 `setenv.sh` スクリプトを素早く作成する方法は、Liferayコンテナからコピーすることです。 スクリプトのコピーを変更して新しいコンテナで使用する方法は次のとおりです。
 
-1.  既存のLiferayコンテナがある場合は、起動します。 それ以外の場合は、新しいものを実行します。
+1. 既存のLiferayコンテナがある場合は、起動します。 それ以外の場合は、新しいものを実行します。
 
-    ``` bash
+    ```bash
     docker run -it --name tmp-dxp -p 8080:8080 liferay/dxp:[tag]
     ```
 
-2.  `setenv.sh` ファイルをコンテナからコピーします。
+1. `setenv.sh` ファイルをコンテナからコピーします。
 
-    ``` bash
+    ```bash
     docker cp tmp-dxp:/opt/liferay/tomcat/bin/setenv.sh .
     ```
 
-3.  [コンテナを停止します](../using-liferay-docker-images.md#stopping-a-container)。
+1. [コンテナを停止します](./docker-container-basics.md#stopping-a-container)。
 
-4.  `setenv.sh` のコピーで JVM オプションを設定します。
+1. `setenv.sh` のコピーで JVM オプションを設定します。
 
-5.  `files/tomcat/bin` パスを作成するために、ホストフォルダとサブフォルダを作成します。
+1. `files/tomcat/bin` パスを作成するために、ホストフォルダとサブフォルダを作成します。
 
-    ``` bash
+    ```bash
     mkdir -p [host folder]/files/tomcat/bin
     cp setenv.sh [host folder]/files/tomcat/bin
     ```
 
-6.  バインドする `-v` オプションでコンテナをホストフォルダにマウントします。
+1. バインドする `-v` オプションでコンテナをホストフォルダにマウントします。
 
-    ``` bash
-    docker run -it --name [container] -p 8080:8080 -v [host folder path]:/mnt/liferay liferay/dxp:[tag]
+    ```bash
+    docker run -it -m 8g -p 8080:8080 -v [host folder path]:/mnt/liferay liferay/dxp:[tag]
     ```
 
 コンテナは `setenv.sh` スクリプトの JVM オプションを使用します。
 
-```{note}
-コンテナの`/mnt/liferay`フォルダへのバインドマウントについては、 [Providing Files to the Container](./providing-files-to-the-container.md#bind-mounting-a-host-folder-to-mnt-liferay) を参照してください。
+```note::
+   コンテナの``/mnt/liferay``フォルダへのバインドマウントについては、`Providing Files to the Container <./providing-files-to-the-container.md#bind-mounting-a-host-folder-to-mnt-liferay>`_を参照してください。
 ```
 
-```{note}
-Liferayコンテナの起動と動作に関する詳細は、 [Liferay Dockerイメージの使用](../using-liferay-docker-images.md) を参照してください。
+```note::
+   Liferayコンテナの起動と動作に関する詳細は、`Docker Container Basics <./docker-container-basics.md>`_を参照してください。
 ```
 
 ## ポータルプロパティ
@@ -86,61 +84,69 @@ Liferayコンテナの起動と動作に関する詳細は、 [Liferay Dockerイ
 
 ### Liferay環境変数の使用
 
-*ポータルプロパティ* ごとに [Env](../../reference/portal-properties.md)変数があります。 Envプロパティは、Liferay Dockerコンテナのポータルプロパティをオーバーライドします。
+*ポータルプロパティ* ごとに [Env](../../reference/portal-properties.md)変数があります。 環境変数は、Liferay Dockerコンテナのポータルプロパティをオーバーライドする[Docker環境変数](https://docs.docker.com/engine/reference/commandline/run/#set-environment-variables--e---env---env-file)です。
 
-1.  [ポータル プロパティ](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html) のオンライン 説明で、オーバーライドするプロパティを見つけます。
+1. [ポータル プロパティ](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html) のオンライン 説明で、オーバーライドするプロパティを見つけます。
 
-2.  プロパティ説明のすぐ下に表示される `Env` 変数名をコピーします。 例えば、 [`jdbc.default.jndi.name`](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html#JDBC) ポータルプロパティのEnv変数は次のとおりです。
+1. プロパティ説明のすぐ下に表示される `Env` 変数名をコピーします。 例えば、 [`jdbc.default.jndi.name`](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#JDBC) ポータルプロパティのEnv変数は次のとおりです。
 
-    ``` properties
+    ```properties
     Env: LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_JNDI_PERIOD_NAME
     ```
 
-3.  コンテナを作成し、 `-e` オプションを使用して新しいポータルプロパティ値を渡します。
+1. コンテナを作成し、パターン`-e VARIABLE_A=value -e VARIABLE_B=value ...`に従って`-e`オプションを使用して環境変数の割り当てを渡します。 例:
 
-    ```bash
-    docker run -it --name [container] -p 8080:8080 -e LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_JNDI_PERIOD_NAME=jdbc/MyPool liferay/dxp:[tag]
+    ```
+    docker run -it -m 8g -p 8080:8080 -e LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_JNDI_PERIOD_NAME=jdbc/MyPool liferay/dxp:[tag]
     ```
 
-    ```{warning}
-    `Env`変数値では、バックスラッシュを使用してスペース文字をエスケープします。 引用符は使用しないでください。
+    ```warning::
+       ``Env``変数値では、バックスラッシュを使用してスペース文字をエスケープします。 引用符は使用しないでください。
     ```
 
     ```{note}
-    コンテナの起動と動作に関する詳細は、 [Liferay Dockerイメージの使用](../using-liferay-docker-images.md) を参照してください。
+    データベース環境変数の例については、[Database Templates](../../reference/database-templates.md)を参照してください。
     ```
 
-プロパティは、コントロールパネルの *[設定]* → *[サーバー管理]* → *[プロパティ]* → *[ポータルプロパティ]* で表示されます。
+    ```note::
+       コンテナの起動と動作に関する詳細は、`Docker Container Basics <./docker-container-basics.md>`_を参照してください。
+    ```
+
+プロパティは、コントロールパネルの _［設定］_ &rarr; _［サーバー管理］_ &rarr; _［プロパティ］_ &rarr; _［ポータルプロパティ］_で表示されます。
 
 ### ポータルプロパティファイルの使用
 
 コンテナのポータルプロパティは、 `portal-ext.properties` ファイルを使用して上書きできます。 この例では、 [bind mount](./providing-files-to-the-container.md) を使用します。
 
-1.  ホストフォルダと `files` というサブフォルダを作成します。
+1. ホストフォルダと `files` というサブフォルダを作成します。
 
-    ``` bash
+    ```bash
     mkdir -p [host folder]/files
     ```
 
-2.  作成した `ファイル` サブフォルダ内の `portal-ext.properties` ファイルにプロパティの上書きを追加します。 例:
+1. 作成した `ファイル` サブフォルダ内の `portal-ext.properties` ファイルにプロパティの上書きを追加します。 例:
 
-    ``` bash
+    ```bash
     echo "jdbc.default.jndi.name=jdbc/MyPool" >> [host folder]/files/portal-ext.properties
     ```
 
-3.  `portal-ext.properties` ファイルのフォルダをコンテナの `/mnt/liferay/files` フォルダにマッピングするバインドマウントを含むコンテナを作成します。 この例の `portal-ext.properties` は `ファイル`という名前のフォルダーにあるため、 [マウントをコンテナの `/mnt /liferay` フォルダーにバインドできます](./providing-files-to-the-container.md#bind-mounting-a-host-folder-to-mnt-liferay)。
+1. `portal-ext.properties` ファイルのフォルダをコンテナの `/mnt/liferay/files` フォルダにマッピングするバインドマウントを含むコンテナを作成します。 この例の `portal-ext.properties` は `ファイル`という名前のフォルダーにあるため、 [マウントをコンテナの `/mnt /liferay` フォルダーにバインドできます](./providing-files-to-the-container.md#bind-mounting-a-host-folder-to-mnt-liferay)。
 
-    ``` bash
-    docker run -it --name [container] -p 8080:8080 -v [host folder path]:/mnt/liferay liferay/dxp:[tag]
+    ```bash
+    docker run -it -m 8g -p 8080:8080 -v [host folder path]:/mnt/liferay liferay/dxp:[tag]
     ```
 
-プロパティは *構成* → *サーバー管理* → *プロパティ* → *ポータルプロパティ* で表示されます。
+プロパティは、コントロールパネルの _［設定］_ &rarr; _［サーバー管理］_ &rarr; _［プロパティ］_ &rarr; _［ポータルプロパティ］_で表示されます。
+
+```{note}
+データベースポータルプロパティの例については、[Database Templates](../../reference/database-templates.md)を参照してください。
+```
 
 ## 画像定義の環境変数
 
 Liferayイメージは、いくつかの環境変数を定義します。 いくつかの変数は、 [Liferay Home](../../reference/liferay-home.md) パスや、Tomcat をデバッグモードで起動するオプションなど、内部的な設定を行います。 その他の変数は [ポータルプロパティ](../../reference/portal-properties.md)を設定します。 以下は、ポータルプロパティを設定するイメージ定義の環境変数です。
 
-``` properties
+```properties
 LIFERAY_MODULE_PERIOD_FRAMEWORK_PERIOD_PROPERTIES_PERIOD_OSGI_PERIOD_CONSOLE=0.0.0.0:11311
 LIFERAY_SETUP_PERIOD_WIZARD_PERIOD_ADD_PERIOD_SAMPLE_PERIOD_DATA=false
 LIFERAY_SETUP_PERIOD_WIZARD_PERIOD_ENABLED=false
@@ -156,15 +162,15 @@ LIFERAY_USERS_PERIOD_REMINDER_PERIOD_QUERIES_PERIOD_ENABLED=false
 
 次に、イメージ定義の環境変数を操作するためのオプションを示します。
 
-1.  画像で定義されたデフォルトを使用します。 自動的に設定されます。
+1. 画像で定義されたデフォルトを使用します。 自動的に設定されます。
 
-2.  コンテナの実行時に環境変数を設定して、デフォルト値を上書きします。 例えば、 `docker run -e [variable]=[value] ...`です。
+1. コンテナの実行時に環境変数を設定して、デフォルト値を上書きします。 例えば、 `docker run -e ［variable］=［value］ ...`です。
 
-3.  割り当てなしで宣言することにより、環境変数を無効にします (すなわち、 `=` 文字)。 形式は次のとおりです `e [varable]`
+1. 割り当てなしで宣言することにより、環境変数を無効にします (すなわち、 `=` 文字)。 形式は次のとおりです `e ［varable］`
 
     イメージ定義の Portal 環境変数を無効にすると、コンテナ起動時の [Portal プロパティ ファイル](#using-a-portal-properties-file) で必要な値を柔軟に指定できます。 例:
 
-    ``` bash
+    ```bash
     docker run -e [varable] -v [host folder path]:/mnt/liferay ...
     ```
 
@@ -172,63 +178,63 @@ LIFERAY_USERS_PERIOD_REMINDER_PERIOD_QUERIES_PERIOD_ENABLED=false
 
 次の画像で定義されているポータルプロパティ環境変数は、ユーザーが使用条件に同意する必要がないことを宣言しています。
 
-``` properties
+```properties
 LIFERAY_TERMS_PERIOD_OF_PERIOD_USE_PERIOD_REQUIRED=false
 ```
 
 これを無効にし、ポータルプロパティファイルを使用して操作する方法は次のとおりです。
 
-1.  環境変数を無効にし、ポータルプロパティファイルのバインドマウントを設定します。
+1. 環境変数を無効にし、ポータルプロパティファイルのバインドマウントを設定します。
 
-    ``` bash
+    ```bash
     docker run -e LIFERAY_TERMS_PERIOD_OF_PERIOD_USE_PERIOD_REQUIRED -v $(pwd):/mnt/liferay ...
     ```
 
-    利用規約の要件は、ポータルプロパティに基づいています。 [デフォルトのポータルプロパティ設定](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html) （ `LIFERAY_TERMS_PERIOD_OF_PERIOD_USE_PERIOD_REQUIRED`を検索）には、利用規約が必要です。
+    利用規約の要件は、ポータルプロパティに基づいています。 [デフォルトのポータルプロパティ設定](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html) （ `LIFERAY_TERMS_PERIOD_OF_PERIOD_USE_PERIOD_REQUIRED`を検索）には、利用規約が必要です。
 
-    ``` properties
+    ```properties
     terms.of.use.required=true
     ```
 
-2.  バインドマウントパスにある `portal-ext.properties` ファイルに必要な設定を指定します。 [ポータルプロパティファイル](#using-a-portal-properties-file)を使用するを参照してください。
+1. バインドマウントパスにある `portal-ext.properties` ファイルに必要な設定を指定します。 [ポータルプロパティファイル](#using-a-portal-properties-file)を使用するを参照してください。
 
-    ``` bash
+    ```bash
     echo "terms.of.use.required=false" >> ./files/portal-ext.properties
     ```
 
-3.  コンテナを再起動します。
+1. コンテナを再起動します。
 
 コンテナはプロパティ設定を使用します。
 
 ## システムプロパティ
 
-[システムプロパティ](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/system.properties.html) は `system-ext.properties` ファイルを使用して上書きできます。 この例では、 [bind mount](./providing-files-to-the-container.md) を使用します。
+[システムプロパティ](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/system.properties.html) は `system-ext.properties` ファイルを使用して上書きできます。 この例では、 [bind mount](./providing-files-to-the-container.md) を使用します。
 
-1.  `[host folder]/files/tomcat/webapps/ROOT/WEB-INF/classes` を作成します。
+1. `［host folder］/files/tomcat/webapps/ROOT/WEB-INF/classes` を作成します。
 
-    ``` bash
+    ```bash
     mkdir -p [host folder]/files/tomcat/webapps/ROOT/WEB-INF/classes
     ```
 
-2.  `[host folder]/files/tomcat/webapps/ROOT/WEB-INF/classes` フォルダ内の `system-ext.properties` ファイルにプロパティの上書きを追加します。 例:
+1. `［host folder］/files/tomcat/webapps/ROOT/WEB-INF/classes` フォルダ内の `system-ext.properties` ファイルにプロパティの上書きを追加します。 例:
 
-    ``` bash
+    ```bash
     echo "net.sf.ehcache.skipUpdateCheck=false" >> [host folder]/files/tomcat/webapps/ROOT/WEB-INF/classes/system-ext.properties
     ```
 
-3.  バインドする `-v` オプションでコンテナをホストフォルダにマウントします。
+1. バインドする `-v` オプションでコンテナをホストフォルダにマウントします。
 
-    ``` bash
-    docker run -it --name [container] -p 8080:8080 -v [host folder path]:/mnt/liferay liferay/dxp:[tag]
+    ```bash
+    docker run -it -m 8g -p 8080:8080 -v [host folder path]:/mnt/liferay liferay/dxp:[tag]
     ```
 
-    ```{note}
-    コンテナの`/mnt/liferay`フォルダへのバインドマウントについては、 [コンテナへのファイルの提供](./providing-files-to-the-container.md#bind-mounting-a-host-folder-to-mnt-liferay) を参照してください。
+    ```note::
+       コンテナの``/mnt/liferay``フォルダへのバインドマウントについては、`Providing Files to the Container <./providing-files-to-the-container.md#bind-mounting-a-host-folder-to-mnt-liferay>`_を参照してください。
     ```
 
-プロパティは、コントロールパネルの *構成* → *サーバー管理* → *プロパティ* → *システムプロパティ*で表示されます。
+プロパティは、コントロールパネルの _［設定］_ &rarr; _［サーバー管理］_ &rarr; _［プロパティ］_ &rarr; _［システムプロパティ］_で表示されます。
 
-## システム設定
+## System Settings
 
 Liferayシステム設定は、 [コントロールパネル](../../../system-administration/configuring-liferay/system-settings.md) または [構成ファイル](../../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md) （`.config` ファイル）をコンテナに提供することで構成できます。 最初から `.config` ファイルを作成するか、UIからコンポーネント設定値をエクスポートすることができます。
 
@@ -242,34 +248,36 @@ Liferayシステム設定は、 [コントロールパネル](../../../system-ad
 
 コンテナをまだ作成していない場合は、次の手順に従って、 [バインドマウント](./providing-files-to-the-container.md)を使用して `.config` ファイルを新しいコンテナに提供します。
 
-1.  `[host folder]/files/osgi/configs` を作成するために、ホストフォルダとサブフォルダを作成します。
+1. `［host folder］/files/osgi/configs` を作成するために、ホストフォルダとサブフォルダを作成します。
 
-    ``` bash
+    ```bash
     mkdir -p [host folder]/files/osgi/configs
     ```
 
-2.  `.config` ファイルをホストフォルダの `files/osgi/configs` サブフォルダにコピーします。 例:
-   
-        cp ~/*.config [host folder path]/files/osgi/configs
+1. `.config` ファイルをホストフォルダの `files/osgi/configs` サブフォルダにコピーします。 例:
 
-3.  バインドする `-v` オプションを使用してコンテナを実行すると、ホストフォルダがマウントされます。
-
-    ``` bash
-    docker run -it --name [container] -p 8080:8080 -v [host folder path]:/mnt/liferay liferay/dxp:[tag]
+    ```
+    cp ~/*.config [host folder path]/files/osgi/configs
     ```
 
-    ```{note}
-    コンテナの`/mnt/liferay`フォルダへのバインドマウントについては、 [コンテナへのファイルの提供](./providing-files-to-the-container.md#bind-mounting-a-host-folder-to-mnt-liferay) を参照してください。
+1. バインドする `-v` オプションを使用してコンテナを実行すると、ホストフォルダがマウントされます。
+
+    ```bash
+    docker run -it -m 8g -p 8080:8080 -v [host folder path]:/mnt/liferay liferay/dxp:[tag]
     ```
 
-システムコンポーネントの構成は、そのコンポーネントの画面のコントロールパネルで、*[設定]* → *[システム設定]* に表示されます。
+    ```note::
+       コンテナの``/mnt/liferay``フォルダへのバインドマウントについては、`Providing Files to the Container <./providing-files-to-the-container.md#bind-mounting-a-host-folder-to-mnt-liferay>`_を参照してください。
+    ```
+
+システムコンポーネントの構成は、そのコンポーネントの画面のコントロールパネルで、_［設定］_ &rarr; _［システム設定］_に表示されます。
 
 ### 実行時の構成ファイルの適用
 
 すでにコンテナがある場合は、次のような `docker cp` コマンドを使用して、実行時に `.config` ファイルをコンテナにコピーできます。
 
-``` bash
-docker cp [config file] [container]:/opt/liferay/osgi/configs
+```bash
+docker cp ［config file］ ［container］:/opt/liferay/osgi/configs
 ```
 
 ## まとめ
@@ -278,8 +286,8 @@ LiferayコンテナのJVMオプション、ポータルプロパティ、イメ�
 
 ## 追加情報
 
-* [Liferay Dockerイメージの使用](../using-liferay-docker-images.md)
+* [Docker Container Basics](./docker-container-basics.md)
 * [コンテナのライフサイクルとAPI](./container-lifecycle-and-api.md)
 * [コンテナへのファイルの提供](./providing-files-to-the-container.md)
-* [アプリやその他のアーティファクトをコンテナにインストールする](./installing-apps-and-other-artifacts-to-containers.md)
+* [コンテナへのアプリやその他のアーティファクトのインストール](./installing-apps-and-other-artifacts-to-containers.md)
 * [DockerでDXPにパッチを適用する](./patching-dxp-in-docker.md)

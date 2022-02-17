@@ -6,6 +6,7 @@
 securing-liferay/authentication-basics.md
 securing-liferay/configuring-sso.md
 securing-liferay/multi-factor-authentication.md
+securing-liferay/using-antisamy.md
 securing-liferay/securing-web-services.md
 ```
 
@@ -25,16 +26,16 @@ Liferayのインストールのセキュリティ保護には、ホスティン�
 
 ## 認証
 
-LiferayDXP認証は柔軟です。 デフォルトでは、ユーザーは*[Sign In]* ウィジェットを使用してLiferay DXPにログインします。このウィジェットでは、データベースを使用してユーザーを認証します。 デフォルトでは、ゲストは[Sign In]ウィジェットを使用して、デフォルトの権限を持つアカウントを作成できます。 デフォルトの認証エクスペリエンスのほぼすべての要素は、管理者が変更できます。 例:
+LiferayDXP認証は柔軟です。 デフォルトでは、ユーザーは_［Sign In］_ウィジェットを使用してLiferay DXPにログインします。このウィジェットでは、データベースを使用してユーザーを認証します。 デフォルトでは、ゲストは［Sign In］ウィジェットを使用して、デフォルトの権限を持つアカウントを作成できます。 デフォルトの認証エクスペリエンスのほぼすべての要素は、管理者が変更できます。 例:
 
-  - [多要素認証](./securing-liferay/multi-factor-authentication/using-multi-factor-authentication.md)を設定できます。
-  - [SSOを使用して](./securing-liferay/configuring-sso.md)認証を管理できます。
-  - Liferayは、ポータルデータベースを使用する代わりに、[LDAPと統合](../users-and-permissions/connecting-to-a-user-directory/connecting-to-an-ldap-directory.md)してユーザーを検証することもできます。
-  - ゲストアカウントの作成を[オフ](./securing-liferay/authentication-basics.md#disabling-guest-account-creation)にすることができます。
+* [多要素認証](./securing-liferay/multi-factor-authentication/using-multi-factor-authentication.md)を設定できます。
+* [SSOを使用して](./securing-liferay/configuring-sso.md)認証を管理できます。
+* Liferayは、ポータルデータベースを使用する代わりに、[LDAPと統合](../users-and-permissions/connecting-to-a-user-directory/connecting-to-an-ldap-directory.md)してユーザーを検証することもできます。
+* ゲストアカウントの作成を[オフ](./securing-liferay/authentication-basics.md#disabling-guest-account-creation)にすることができます。
 
-詳細は、[認証の基本](./securing-liferay/authentication-basics.md)を参照してください。
+詳細は、[Authentication Basics](./securing-liferay/authentication-basics.md)をご覧ください。
 
-## パーミッション
+## 権限
 
 Liferay DXPには、堅牢なロールベースのアクセス制御（RBAC）システムがあります。 ユーザーは、サイト、チーム、ユーザーグループ、または組織に割り当てることができます。 カスタムのロールを作成し、権限をこれらのロールに割り当て、それらのロールをユーザーに割り当てることができます。 ロールは、サイト、組織、またはグローバルなどの特定のコンテキストでのみ適用されるようにスコープが設定されています。 詳細は、[ロールと権限](../users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.md)を参照してください。
 
@@ -42,9 +43,9 @@ Liferay DXPには、堅牢なロールベースのアクセス制御（RBAC）�
 
 Liferay Webサービスには、セキュリティと承認に対する多層的で構成可能なアプローチがあります。
 
-  - [サービスアクセスポリシー](./securing-liferay/securing-web-services/setting-service-access-policies.md)は、リモートAPIへのアクセスを制御します。
-  - [Authentication Verifier](./securing-liferay/securing-web-services/using-authentication-verifiers.md)は、提供された資格情報を検証します。
-  - [クロスオリジンリソース共有](./securing-liferay/securing-web-services/setting-up-cors.md)設定では、信頼できるソースからのみリソースを取得できます。
+* [サービスアクセスポリシー](./securing-liferay/securing-web-services/setting-service-access-policies.md)は、リモートAPIへのアクセスを制御します。
+* [Authentication Verifier](./securing-liferay/securing-web-services/using-authentication-verifiers.md)は、提供された資格情報を検証します。
+* [クロスオリジンリソース共有](./securing-liferay/securing-web-services/setting-up-cors.md)設定では、信頼できるソースからのみリソースを取得できます。
 
 詳細は、[Webサービスの保護の概要](./securing-liferay/securing-web-services.md)を参照してください。
 
@@ -52,12 +53,12 @@ Liferay Webサービスには、セキュリティと承認に対する多層的
 
 追加のセキュリティ機能を微調整または無効にする方法は複数あります。
 
-  - LiferayポータルのHTTPS [Webサーバー](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html#Web%20Server)アドレスを設定する。
-  - ユーザーを[リダイレクト](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html#Redirect)できる許可されているサーバーのリストを構成する。
-  - 任意のページからアクセスできる[ポートレット](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html#Portlet)のリストを構成する。
-  - アップロードおよびダウンロードを許可するファイルタイプを設定する。
+* Liferay PortalのHTTPS [Webサーバー](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#Web%20Server)アドレスを設定する。
+* ユーザーを[リダイレクト](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#Redirect)できる許可されているサーバーのリストを構成する。
+* 任意のページからアクセスできる[ポートレット](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#Portlet)のリストを構成する。
+* アップロードおよびダウンロードを許可するファイルタイプを設定します。
 
-これらの機能は、[ポータルプロパティ](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html)を使用して構成できます。
+これらの機能は、[ポータルプロパティ](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html)を使用して構成できます。
 
 ```{warning}
 Liferayポータルの理念は「デフォルトで安全」です。 セキュリティ固有のデフォルトまたはホワイトリストを変更する場合は、十分に注意してください。 このようなアクションは、セキュリティの設定ミスや安全でないデプロイにつながる可能性があります。
@@ -71,5 +72,5 @@ Liferay Portalのインストールのセキュリティ保護の詳細は、[�
 
 ## 次のステップ
 
-  - [認証の基本](./securing-liferay/authentication-basics.md)
-  - [Webサービスの保護の概要](./securing-liferay/securing-web-services.md)
+* [認証の基本](./securing-liferay/authentication-basics.md)
+* [Webサービスの保護の概要](./securing-liferay/securing-web-services.md)

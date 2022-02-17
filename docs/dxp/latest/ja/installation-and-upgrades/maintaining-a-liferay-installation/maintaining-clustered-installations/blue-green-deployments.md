@@ -6,21 +6,21 @@
 
 データとスキーマの変更には、次の手順が必要です。
 
-1.  新しい列を作成します。
+1. 新しい列を作成します。
 
-2.  データを新しい列にコピーします。
+1. データを新しい列にコピーします。
 
-3.  古い列がクラスターノードで使用されなくなるまで、両方の列を維持します。
+1. 古い列がクラスターノードで使用されなくなるまで、両方の列を維持します。
 
-4.  次のリリースで古い列を削除します。
+1. 次のリリースで古い列を削除します。
 
-詳細については、以下のブルーグリーンのデプロイに関する記事を参照してください。
+詳細は、以下のブルーグリーンのデプロイに関する記事を参照してください。
 
-  - [BlueGreenDeployment](http://martinfowler.com/bliki/BlueGreenDeployment.html)
-  - [Implementing Blue-Green Deployments with AWS](https://www.thoughtworks.com/insights/blog/implementing-blue-green-deployments-aws)
+* [BlueGreenDeployment](http://martinfowler.com/bliki/BlueGreenDeployment.html)
+* [Implementing Blue-Green Deployments with AWS](https://www.thoughtworks.com/insights/blog/implementing-blue-green-deployments-aws)
 
 ## 関連トピック
 
-  - [Rolling Restarts](./rolling-restarts.md)
-  - [高可用性のクラスタリング](../../setting-up-liferay/clustering-for-high-availability.md)
-  - [パッチ](../patching-dxp-7-3-and-earlier.md)
+* [Rolling Restarts](./rolling-restarts.md)
+* [高可用性のクラスタリング](../../setting-up-liferay/clustering-for-high-availability.md)
+* [パッチ](../patching-liferay/patching-liferay.md)

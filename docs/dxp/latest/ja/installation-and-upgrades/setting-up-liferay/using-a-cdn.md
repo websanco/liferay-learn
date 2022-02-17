@@ -12,11 +12,11 @@ LiferayがCDN経由でのサービス提供をサポートしているリソー�
 
 * Liferayおよびカスタムプラグインに含まれるファイル
 * ドキュメントとメディアに保存されているアイテム
-* 動的に生成されたCSS \*
-* 動的に生成されたJavaScript \*
-* 動的に生成されたイメージ\*
+* 動的に生成されたCSS *
+* 動的に生成されたJavaScript *
+* 動的に生成されたイメージ*
 
-*\* CDN動的リソースを有効にする必要があります。*
+_\* CDN動的リソースを有効にする必要があります。_
 
 ```{note}
 CDNは、外部から動的に読み込まれたリソースを提供するものではありません。
@@ -36,17 +36,19 @@ CDNは、次の要件を満たす必要があります。
 
 CDNを設定するための方法には、次の2つがあります。
 
-1.  [portal properties](../reference/portal-properties.md)ファイルで[コンテンツ配信ネットワークプロパティ](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html#Content%20Delivery%20Network)を設定する。
+1. [ポータルプロパティ](../reference/portal-properties.md)ファイルで
 
-2.  コントロールパネルを使用する
+コンテンツ配信ネットワークプロパティ</1>を設定する。</p></li> 
+   
+   1 コントロールパネルを使用する</ol> 
 
 コントロールパネルでCDNを設定する方法は次のとおりです。
 
-1.  Liferayで、*グローバルメニュー* （![Global Menu](../../images/icon-applications-menu.png)）をクリックし、*[コントロールパネル]* タブを選択します。
+1. Liferayで、*グローバルメニュー* （![Global Menu](../../images/icon-applications-menu.png)）をクリックし、*［コントロールパネル］*タブを選択します。
 
-2.  [設定]カテゴリで、*[Instance Settings]* を選択します。 [Instance Settings]ページが表示されます。
+1. ［設定］カテゴリで、*［Instance Settings］*を選択します。 ［Instance Settings］ページが表示されます。
 
-3.  [仮想インスタンススコープ]ナビゲーションで、*[一般]* をクリックします。 [General Main Configuration]ページが表示され、次の3つのCDN関連フィールドが含まれています。
+1. ［仮想インスタンススコープ］ナビゲーションで、*［一般］*をクリックします。 ［General Main Configuration］ページが表示され、次の3つのCDN関連フィールドが含まれています。
 
     * *CDN ホスト HTTP*
     * *CDN ホスト HTTPS*
@@ -58,9 +60,11 @@ CDNホストのURLを指定するときは、必ずプロトコルとドメイ�
 
 *CDNホストHTTP：* `http://cdnhost1.liferay.com` *CDNホストHTTPS：* `https://cdnhost2.liferay.com`
 
-*[CDN Dynamic Resources]* が選択されている場合（デフォルト）、Liferayは動的に生成されたCSS、JavaScript、および画像をCDN経由で提供します。 これを無効にすると、リソースの遅延読み込みに対応していないCDNを使用できます。
+*［CDN Dynamic Resources］*が選択されている場合（デフォルト）、Liferayは動的に生成されたCSS、JavaScript、および画像をCDN経由で提供します。 これを無効にすると、リソースの遅延読み込みに対応していないCDNを使用できます。
 
 CDNホストを設定しました。 これでLiferayは、古いホストを新しいCDNホストに置き換えた静的リソースURLを生成し、そのURLをCDNによって自動的にキャッシュして、提供できるようになりました。
+
+
 
 ## カスタムプラグインでのCDNの使用
 
@@ -68,8 +72,11 @@ CDNにカスタムリソースを追加する場合は、プラグインにパ�
 
 CDN経由でリソースを使用するには、`themeDisplay.getCDNDynamicResourcesHost()`を使用して、リソース参照の前にCDNのホスト名を付けます。
 
+
+
 ```{important}
 権限チェックや複雑なポリシーアクセスを必要とするものをCDNに配置しないでください
 ```
+
 
 これで、CDNを使用してサイトの静的リソースをより高速に提供する方法がわかりました。

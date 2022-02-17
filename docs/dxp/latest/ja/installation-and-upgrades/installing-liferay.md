@@ -1,34 +1,36 @@
-# Liferayのインストール
+Liferayのインストール
+==================
 
-```{toctree}
-:maxdepth: 2
+.. toctree:: :maxdepth: 2
 
-installing-liferay/installing-a-liferay-tomcat-bundle.md
-installing-liferay/configuring-a-database.md
-installing-liferay/running-liferay-for-the-first-time.md
-installing-liferay/using-liferay-docker-images.md
-installing-liferay/installing-liferay-on-an-application-server.md
-```
+   installing-liferay/hosting-liferay.md installing-liferay/installing-a-liferay-tomcat-bundle.md installing-liferay/configuring-a-database.md installing-liferay/running-liferay-for-the-first-time.md
 
-**オンプレミスでのLiferay DXPのインストール**
+   installing-liferay/using_liferay_docker_images.rst
 
-* [Liferay-Tomcatバンドルのインストール](./installing-liferay/installing-a-liferay-tomcat-bundle.md)
-* [データベースの構成](./installing-liferay/configuring-a-database.md)
-* [Liferayを初めて実行する](./installing-liferay/running-liferay-for-the-first-time.md)
+   installing-liferay/installing_liferay_on_an_application_server.rst
 
-**[Liferay DXP Dockerイメージの使用](./installing-liferay/using-liferay-docker-images.md)**
+-  :doc:`/installation-and-upgrades/installing-liferay/hosting-liferay`
+-  :doc:`/installation-and-upgrades/installing-liferay/installing-a-liferay-tomcat-bundle`
+-  :doc:`/installation-and-upgrades/installing-liferay/configuring-a-database`
+-  :doc:`/installation-and-upgrades/installing-liferay/running-liferay-for-the-first-time`
 
-* [コンテナのライフサイクルとAPI](./installing-liferay/using-liferay-docker-images/container-lifecycle-and-api.md)
-* [コンテナの設定](./installing-liferay/using-liferay-docker-images/configuring-containers.md)
-* [アプリやその他のアーティファクトをコンテナにインストールする](./installing-liferay/using-liferay-docker-images/installing-apps-and-other-artifacts-to-containers.md)
-* [DockerでDXPにパッチを適用する](./installing-liferay/using-liferay-docker-images/patching-dxp-in-docker.md)
-* [コンテナへのファイルの提供](./installing-liferay/using-liferay-docker-images/providing-files-to-the-container.md)
-* [新しいDockerイメージへのアップグレード](./installing-liferay/using-liferay-docker-images/upgrading-to-a-new-docker-image.md)
+Liferay Dockerイメージの使用
+---------------------------
 
-**[アプリケーションサーバーへのLiferayのインストール](./installing-liferay/installing-liferay-on-an-application-server.md)**
+- :doc:`/installation-and-upgrades/installing-liferay/using-liferay-docker-images/docker-container-basics`
+- :doc:`/installation-and-upgrades/installing-liferay/using-liferay-docker-images/container-lifecycle-and-api`
+- :doc:`/installation-and-upgrades/installing-liferay/using-liferay-docker-images/configuring-containers`
+- :doc:`/installation-and-upgrades/installing-liferay/using-liferay-docker-images/installing-apps-and-other-artifacts-to-containers`
+- :doc:`/installation-and-upgrades/installing-liferay/using-liferay-docker-images/patching-dxp-in-docker`
+- :doc:`/installation-and-upgrades/installing-liferay/using-liferay-docker-images/running-scripts-in-containers`
+- :doc:`/installation-and-upgrades/installing-liferay/using-liferay-docker-images/providing-files-to-the-container`
+- :doc:`/installation-and-upgrades/installing-liferay/using-liferay-docker-images/upgrading-to-a-new-docker-image`
 
-* [Tomcatへのインストール](./installing-liferay/installing-liferay-on-an-application-server/installing-on-tomcat.md)
-* [WildFlyへのインストール](./installing-liferay/installing-liferay-on-an-application-server/installing-on-wildfly.md)
-* [JBoss EAPへのインストール](./installing-liferay/installing-liferay-on-an-application-server/installing-on-jboss-eap.md)
-* [WebLogicへのインストール](./installing-liferay/installing-liferay-on-an-application-server/installing-on-weblogic.md)
-* [WebSphereへのインストール](./installing-liferay/installing-liferay-on-an-application-server/installing-on-websphere.md)
+アプリケーションサーバーへのLiferayのインストール
+-------------------------------------------
+
+-  :doc:`/installation-and-upgrades/installing-liferay/installing-liferay-on-an-application-server/installing-on-tomcat`
+-  :doc:`/installation-and-upgrades/installing-liferay/installing-liferay-on-an-application-server/installing-on-wildfly`
+-  :doc:`/installation-and-upgrades/installing-liferay/installing-liferay-on-an-application-server/installing-on-jboss-eap`
+-  :doc:`/installation-and-upgrades/installing-liferay/installing-liferay-on-an-application-server/installing-on-weblogic`
+-  :doc:`/installation-and-upgrades/installing-liferay/installing-liferay-on-an-application-server/installing-on-websphere`

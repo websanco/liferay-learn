@@ -5,7 +5,7 @@ TomcatおよびLiferayファイルの設定、アーティファクトの展開�
 | ライフサイクルフェーズ | 説明                                 | ターゲットコンテナフォルダー                             |
 |:----------- |:---------------------------------- |:------------------------------------------ |
 | 事前構成        | 構成フェーズの前にスクリプトを実行する                | `/usr/local/liferay/scripts/pre-configure` |
-| 構成、設定       | ファイルを `[Liferay Home]`にコピーしてから実行する | `/mnt/liferay/scripts`                     |
+| 構成、設定       | ファイルを `［Liferay Home］`にコピーしてから実行する | `/mnt/liferay/scripts`                     |
 | スタートアップ前    | Tomcatを起動する前にスクリプトを実行します           | `/usr/local/liferay/scripts/pre-startup`   |
 | シャットダウン後    | Tomcatをシャットダウンした後にスクリプトを実行する       | `/usr/local/liferay/scripts/post-shutdown` |
 
@@ -17,34 +17,34 @@ TomcatとLiferayを構成する方法が、構成フェーズが提供する方�
 
 ここでは、バインドマウントを使用して構成フェーズスクリプトを設定する手順を示します。
 
-1.  ローカル構成スクリプト用の任意のフォルダーを作成します。
+1. ローカル構成スクリプト用の任意のフォルダーを作成します。
 
-    ``` bash
+    ```bash
     mkdir scripts
     ```
 
-    ```{tip}
-    [コンテナの /mnt/liferay フォルダ](./providing-files-to-the-container.md#bind-mounting-a-host-folder-to-mnt-liferay) をすでにマウントする予定の場合は、構成フェーズスクリプトをローカルマウントフォルダ内の`scripts`というフォルダに配置して、構成フェーズに含めることができます。 `[local-folder]/scripts`フォルダは、コンテナの`/mnt/liferay/scripts`フォルダにマップされます。
+    ```tip::
+       If you plan to `mount the container's /mnt/liferay folder <./providing-files-to-the-container.md#bind-mounting-a-host-folder-to-mnt-liferay>`_ already, you can put your Configure Phase scripts into a folder called ``scripts`` in your local mount folder to include in the Configure Phase. The ``[local-folder]/scripts`` folder would map to the container's ``/mnt/liferay/scripts`` folder.
     ```
 
-2.  事前設定アクションを実行するためのスクリプトを作成します。
+1. 事前設定アクションを実行するためのスクリプトを作成します。
 
-    ``` bash
+    ```bash
     echo "inside some-pre-configure.sh" > scripts/configure-phase-script.sh
     ```
 
-3.  スクリプトのフォルダーをコンテナの `/mnt/liferay/scripts` フォルダーにバインドマウントするDockerコンテナを実行します。
+1. スクリプトのフォルダーをコンテナの `/mnt/liferay/scripts` フォルダーにバインドマウントするDockerコンテナを実行します。
 
-    ``` bash
+    ```bash
     docker run -v $(pwd)/scripts:/opt/liferay/scripts ...
     ```
 
 エントリポイントは、ファイルを `/mnt/liferay/files` にコピーした後、構成フェーズでスクリプトを実行し、次のメッセージを出力します。
 
-``` messages
-[LIFERAY] Executing scripts in /mnt/liferay/scripts:
+```messages
+［LIFERAY］ Executing scripts in /mnt/liferay/scripts:
 
-[LIFERAY] Executing configure-phase-script.sh.
+［LIFERAY］ Executing configure-phase-script.sh.
 in configure-phase-script.sh
 ```
 
@@ -60,63 +60,63 @@ in configure-phase-script.sh
 
 コンテナの `/usr/local/liferay/scripts` フォルダーの構造は次のとおりです。
 
-    /usr/local/liferay/scripts
-    ├───pre-configure
-    ├───pre-startup
-    └───post-shutdown
+```
+/usr/local/liferay/scripts
+├───pre-configure
+├───pre-startup
+└───post-shutdown
+```
 
 同じ構造のホストフォルダーを作成し（以下を参照）、スクリプトを入力すると、ホストフォルダーを `/ usr/local/liferay/scripts` フォルダーにマッピングすることで、コンテナでスクリプトを使用できるようになります。
 
-    [host folder]
-    ├───pre-configure
-    ├───pre-startup
-    └───post-shutdown
+```
+［host folder］
+├───pre-configure
+├───pre-startup
+└───post-shutdown
+```
 
 上記のサブフォルダにスクリプトを作成する一般的な手順は次のとおりです。
 
-1.  スクリプトフェーズフォルダーの任意の親フォルダーを作成します。
+1. スクリプトフェーズフォルダーの任意の親フォルダーを作成します。
 
-    ``` bash
+    ```bash
     mkdir [host-folder]
     ```
 
-2.  スクリプトフェーズフォルダーを作成します。
+1. スクリプトフェーズフォルダーを作成します。
 
-    ``` bash
+    ```bash
     cd [host-folder]
     mkdir pre-configure pre-startup post-shutdown
     ```
 
-3.  アクションをフェーズフォルダーの任意のスクリプトに実装します。
+1. アクションをフェーズフォルダーの任意のスクリプトに実装します。
 
-    ```{warning}
-    Don't use the `exit` keyword in your scripts. Executing `exit` in a script breaks the entry point startup process.
-    ```
-
-    ``` bash
+    ```bash
     echo "inside pre-configure-script.sh" > pre-configure/some-pre-configure-script.sh
     ```
 
-    ``` bash
+    ```bash
     echo "inside pre-startup-script.sh" > pre-startup/some-pre-startup-script.sh
     ```
 
-    ``` bash
+    ```bash
     echo "inside some-post-shutdown-script.sh" > post-shutdown/some-post-shutdown-script.sh
     ```
 
-4.  ホストフォルダーをコンテナの `/usr/local/liferay/scripts /` フォルダーにバインドマウントするDockerコンテナを実行します。
+1. ホストフォルダーをコンテナの `/usr/local/liferay/scripts /` フォルダーにバインドマウントするDockerコンテナを実行します。
 
-    ``` bash
+    ```bash
     docker run -v $(pwd)/[host-folder]:/usr/local/liferay/scripts ...
     ```
 
 エントリポイントは、それぞれのフェーズ中にスクリプトを実行し、次のようなメッセージを出力します。
 
-``` messages
-[LIFERAY] Executing scripts in /usr/local/liferay/scripts/pre-configure:
+```messages
+［LIFERAY］ Executing scripts in /usr/local/liferay/scripts/pre-configure:
 
-[LIFERAY] Executing some-pre-configure-script.sh.
+［LIFERAY］ Executing some-pre-configure-script.sh.
 inside some-pre-configure-script.sh
 ```
 
@@ -126,6 +126,6 @@ inside some-pre-configure-script.sh
 
 ## 追加情報
 
-* [Liferay Dockerイメージの使用](../using-liferay-docker-images.md)
+* [Docker Container Basics](./docker-container-basics.md)
 * [コンテナのライフサイクルとAPI](./container-lifecycle-and-api.md)
 * [コンテナへのファイルの提供](./providing-files-to-the-container.md)
