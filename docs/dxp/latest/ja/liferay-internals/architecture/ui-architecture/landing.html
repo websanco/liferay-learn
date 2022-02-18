@@ -1,0 +1,29 @@
+<script type="module">
+	import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.esm.browser.min.js'
+
+	const page = new Vue({
+		el: '#landingPage',
+		data: {
+			cards: [
+				{
+					sectionName: 'UI Architecture (Help Center)',
+					sectionURL: 'https://help.liferay.com/hc/en-us/articles/360035581011-UI-Architecture',
+					showAll: false,
+					
+				},
+				{
+					sectionName: 'Theme Components (Help Center)',
+					sectionURL: 'https://help.liferay.com/hc/en-us/articles/360035219072-Theme-Components',
+					showAll: false,
+				
+				},
+				{
+					sectionName: 'Understanding The Page Layout (Help Center)',
+					sectionURL: 'https://help.liferay.com/hc/en-us/articles/360035581031-Understanding-the-Page-Structure',
+					showAll: false,
+					
+				},
+			]
+		}
+	})
+</script>

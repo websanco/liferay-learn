@@ -1,15 +1,12 @@
-# 参照
+リファレンス
+=========
 
-```{toctree}
-:maxdepth: 3
+.. toctree:: :maxdepth: 2
 
-reference/7-3-breaking-changes.md
-reference/7-2-breaking-changes.md
-reference/exported-third-party-packages.md
-reference/portal-developer-properties.md
-```
+   reference/7-4-breaking-changes.md reference/7-3-breaking-changes.md reference/7-2-breaking-changes.md reference/exported-third-party-packages.md reference/portal-developer-properties.md
 
-* [7.3破壊的な変更](./reference/7-3-breaking-changes.md)
-* [破壊的変更](./reference/7-2-breaking-changes.md)
-* [エクスポートされたサードパーティパッケージ](./reference/exported-third-party-packages.md)
-* [ポータル開発者プロパティ](./reference/portal-developer-properties.md)
+-  :doc:`/liferay-internals/reference/7-4-breaking-changes`
+-  :doc:`/liferay-internals/reference/7-3-breaking-changes`
+-  :doc:`/liferay-internals/reference/7-2-breaking-changes`
+-  :doc:`/liferay-internals/reference/exported-third-party-packages`
+-  :doc:`/liferay-internals/reference/portal-developer-properties`

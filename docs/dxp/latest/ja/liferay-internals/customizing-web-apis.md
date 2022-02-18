@@ -1,11 +1,8 @@
-# Web APIのカスタマイズ
+Web APIのカスタマイズ
+====================
 
-```{toctree}
-:maxdepth: 3
+.. toctree:: :maxdepth: 3
 
-customizing-web-apis/customizing-graphql-apis.md
-customizing-web-apis/customizing-rest-apis.md
-```
+   customizing-web-apis/customizing-graphql-apis.md customizing-web-apis/customizing-rest-apis.md
 
-* [GraphQL Apisのカスタマイズ](./customizing-web-apis/customizing-graphql-apis.md)
-* [REST Apisのカスタマイズ](./customizing-web-apis/customizing-rest-apis.md)
+.. include:: /liferay-internals/customizing-web-apis/README.rst :start-line: 2

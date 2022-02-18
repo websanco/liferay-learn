@@ -6,69 +6,84 @@
 		data: {
 			cards: [
 				{
-					sectionName: '基礎',
+					sectionName: 'Fundamentals',
 					sectionURL: 'liferay-internals/fundamentals.html',
 					showAll: false,
 					subsections: [
 						{
-							name: 'モジュールプロジェクト',
+							name: 'Module Projects',
 							url: 'liferay-internals/fundamentals/module-projects.html'
 						},
 						{
-							name: '依存関係の構成 (近日公開！)',
+							name: 'Configuring Dependencies',
 							url: 'liferay-internals/fundamentals/configuring-dependencies.html'
 						},
 						{
-							name: 'Gogo シェルの使用',
+							name: 'Using the Gogo Shell',
 							url: 'liferay-internals/fundamentals/using-the-gogo-shell.html'
 						},
 					]
 				},
 				{
-					sectionName: 'Liferayの拡張',
+					sectionName: 'Architecture',
+					sectionURL: 'liferay-internals/architecture/architecture.html',
+					showAll: false,
+					subsections: [
+					   {
+							name: 'Liferay Classloader Hierarchy',
+							url: 'liferay-internals/architecture/liferay-classloader-hierarchy.html'
+						},
+						{
+							name: 'The Benefits of Modularity',
+							url: 'liferay-internals/architecture/the-benefits-of-modularity.html'
+						},
+						{
+							name: 'OSGi and Modularity',
+							url: 'liferay-internals/architecture/osgi-and-modularity.html'
+						},
+						{
+							name: 'Module Life Cycle',
+							url: 'liferay-internals/architecture/module-lifecycle.html'
+						},
+						{
+							name: 'Bundle Classloading Flow',
+							url: 'liferay-internals/architecture/bundle-classloading-flow.html'
+						},
+						{
+							name: 'UI Architecture',
+							url: 'liferay-internals/architecture/ui-architecture.html'
+						},
+					]
+				},
+				{
+					sectionName: 'Extending Liferay',
 					sectionURL: 'liferay-internals/extending-liferay.html',
 					showAll: false,
 					subsections: [
 						{
-							name: 'モデルリスナーの作成',
+							name: 'Creating a Model Listener',
 							url: 'liferay-internals/extending-liferay/creating-a-model-listener.html'
 						},
 						{
-							name: 'サービスコンポーネントのオーバーライド (近日公開！)',
-							url: 'liferay-internals/extending-liferay/overriding-service-components.html'
+							name: 'Overriding OSGi Services',
+							url: 'liferay-internals/extending-liferay/overriding-osgi-services.html'
 						},
 						{
-							name: 'サービスラッパーの作成 (近日公開！)',
-							url: 'liferay-internals/extending-liferay/creating-service-wrappers.html'
-						},
-					]
-				},
-				{
-					sectionName: 'Liferayの拡張',
-					sectionURL: 'liferay-internals/extending-liferay.html',
-					showAll: false,
-					subsections: [
-						{
-							name: 'REST Apisのカスタマイズ (近日公開！)',
-							url: 'liferay-internals/customizing-web-apis/customizing-rest-apis.html'
-						},
-						{
-							name: 'GraphQL Apisのカスタマイズ (近日公開！)',
-							url: 'liferay-internals/customizing-web-apis/customizing-graphql-apis.html'
+							name: 'Overriding Global Language Translations',
+							url: 'liferay-internals/extending-liferay/overriding-global-language-translations.html'
 						},
 					]
 				},
 				{
-					sectionName: 'コアのカスタマイズ',
-					sectionURL: 'liferay-internals/customizing-web-apis.html',
+					sectionName: 'Customizing Web APIs',
 					showAll: false,
 					subsections: [
 						{
-							name: 'REST Apisのカスタマイズ (近日公開！)',
+							name: 'REST APIs (Coming Soon)',
 							url: 'liferay-internals/customizing-web-apis/customizing-rest-apis.html'
 						},
 						{
-							name: 'GraphQL Apisのカスタマイズ (近日公開！)',
+							name: 'GraphQL APIs (Coming Soon)',
 							url: 'liferay-internals/customizing-web-apis/customizing-graphql-apis.html'
 						},
 					]
@@ -79,34 +94,34 @@
 					showAll: false,
 					subsections: [
 						{
-							name: 'Liferay開発環境 (近日公開！)',
+							name: 'Liferay Development Environment (Coming Soon)',
 							url: 'liferay-internals/contributing-to-liferay-development/liferay-development-environment.html'
 						},
 						{
-							name: '*ソースフォーマットガイドライン (近日公開！)',
+							name: 'Source Formatting Guidelines (Coming Soon)',
 							url: 'liferay-internals/contributing-to-liferay-development/source-formatting-guidelines.html'
 						},
 						{
-							name: '*フィードバックの提供 (近日公開！)',
+							name: 'Providing Feedback (Coming Soon)',
 							url: 'liferay-internals/contributing-to-liferay-development/providing-feedback.html'
 						},
 					]
 				},
 				{
-					sectionName: '参照',
+					sectionName: 'Reference',
 					sectionURL: 'liferay-internals/reference.html',
 					showAll: false,
 					subsections: [
 						{
-							name: '7.3破壊的な変更',
-							url: 'liferay-internals/reference/7-3-breaking-changes.html'
+							name: '7.4 Breaking Changes',
+							url: 'liferay-internals/reference/7-4-breaking-changes.html'
 						},
 						{
-							name: 'エクスポートされたサードパーティパッケージ',
+							name: 'Exported Third Party Packages',
 							url: 'liferay-internals/reference/exported-third-party-packages.html'
 						},
 						{
-							name: 'ポータル開発者プロパティ',
+							name: 'Portal Developer Properties',
 							url: 'liferay-internals/reference/portal-developer-properties.html'
 						},
 					]
