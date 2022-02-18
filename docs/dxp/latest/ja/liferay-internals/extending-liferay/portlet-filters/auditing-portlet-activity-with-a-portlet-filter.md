@@ -1,23 +1,23 @@
 # ポートレットフィルタを使用したポートレットアクティビティの監査
 
-ポートレットフィルターは、各[ポートレットリクエスト処理フェーズ](../../../developing-applications/developing-a-java-web-application/reference/portlets.md#portlet-phases)の開始時にリクエストと応答をインターセプトするため、そこに機能を追加できます。 これにより、レンダリング、アクション、イベント、およびリソース提供の各フェーズでのポートレットアクティビティの監査に役立ちます。
+ポートレットフィルターは、各 [ポートレットリクエスト処理フェーズ](../../../developing-applications/developing-a-java-web-application/reference/portlets.md#portlet-phases) の開始時にリクエストと応答をインターセプトするため、そこに機能を追加できます。 これにより、レンダリング、アクション、イベント、およびリソース提供の各フェーズでのポートレットアクティビティの監査に役立ちます。
 
 次の手順に従って、ポートレットアクティビティを監査するためのポートレットフィルターを作成します。
 
 1. フルネーム（`com_liferay_blogs_web_portlet_BlogsPortlet`など）でターゲットポートレットを識別します。
 
-1. 監査するポートレットフェーズを決定し、[`javax.portlet.filter`](http://docs.liferay.com/portlet-api/3.0/javadocs/javax/portlet/filter/package-summary.html)パッケージから対応するポートレットフィルターインターフェイスを実装します。
+1. 監査するポートレットフェーズを決定し、 [`javax.portlet.filter`](http://docs.liferay.com/portlet-api/3.0/javadocs/javax/portlet/filter/package-summary.html) パッケージから対応するポートレットフィルターインターフェイスを実装します。
 
    * アクションフェイズ - [`ActionFilter`](http://docs.liferay.com/portlet-api/3.0/javadocs/javax/portlet/filter/ActionFilter.html)
    * イベントフェーズ - [`EventFilter`](http://docs.liferay.com/portlet-api/3.0/javadocs/javax/portlet/filter/EventFilter.html)
    * レンダリングフェーズ - [`RenderFilter`](http://docs.liferay.com/portlet-api/3.0/javadocs/javax/portlet/filter/RenderFilter.html)
    * リソース提供フェーズ - [`ResourceFilter`](http://docs.liferay.com/portlet-api/3.0/javadocs/javax/portlet/filter/ResourceFilter.html)
 
-   各ポートレットフェーズの詳細については、[Portlets](../../../developing-applications/developing-a-java-web-application/reference/portlets.md#portlet-phases)を参照してください。
+   各ポートレットフェーズの詳細については、 [Portlets](../../../developing-applications/developing-a-java-web-application/reference/portlets.md#portlet-phases) を参照してください。
 
 1. `@Component`アノテーションを使用して、OSGiフレームワーク内のコンポーネントをポートレットフィルターとして宣言し、それを`PortletFilter.class`サービスとして識別します。
 
-   ```note::
+   ```{note}
       ポートレットフィルターは`OSGi Declarative Service（DS）コンポーネント<https://enroute.osgi.org/FAQ/300-declarative-services.html>`_です。 フィルタは、`` portlet.xml``記述子または``@PortletLifecycleFilter``アノテーションを使用してポートレットに適用することもできます。 詳細については、ポートレット3.0仕様を参照してください。
    ```
 
@@ -29,6 +29,8 @@
 1. フィルターの`doFilter`メソッドをオーバーライドして、ポートレットフェーズの目的の側面を監査します。
 
 次の例では、`RenderFilter`を使用して、ブログポートレットのレンダリングフェーズを監査します。
+
+<a name="サンプルのポートレットフィルターをデプロイする" />
 
 ## サンプルのポートレットフィルターをデプロイする
 
@@ -73,6 +75,8 @@
    WARN [http-nio-8080-exec-2][B4K8PortletFilter:54] Blogs portlet rendered in 3 ms with an average of 3 ms out of 1 renders.
    WARN [http-nio-8080-exec-10][B4K8PortletFilter:54] Blogs portlet rendered in 0 ms with an average of 1 ms out of 2 renders.
    ```
+
+<a name="サンプルのレンダリングフィルターコード" />
 
 ## サンプルのレンダリングフィルターコード
 
@@ -135,7 +139,7 @@ public class B4K8PortletFilter implements RenderFilter {
 
 このコードでは、フィルターは最初にOSGi DSコンポーネントとして宣言され、`PortletFilter.class`サービスとして識別されます。  この宣言の一部として、2つのプロパティも設定します。最初のプロパティは`BlogsPortlet`を対象とし、2番目のプロパティは重要度を`100`に設定します。
 
-ポートレットフィルターは次に[`RenderFilter`](http://docs.liferay.com/portlet-api/3.0/javadocs/javax/portlet/filter/RenderFilter.html)インターフェイスを実装し、[`PortletFilter`](http://docs.liferay.com/portlet-api/3.0/javadocs/javax/portlet/filter/PortletFilter.html)インターフェイスを拡張します。 このインターフェイスには3つのメソッド（つまり、`init`、`destroy`、`doFilter`）が含まれており、ブログポートレットへの描画リクエストとその応答の両方でフィルタリングタスクを実行します。
+ポートレットフィルターは次に [`RenderFilter`](http://docs.liferay.com/portlet-api/3.0/javadocs/javax/portlet/filter/RenderFilter.html) インターフェイスを実装し、 [`PortletFilter`](http://docs.liferay.com/portlet-api/3.0/javadocs/javax/portlet/filter/PortletFilter.html) インターフェイスを拡張します。 このインターフェイスには3つのメソッド（つまり、`init`、`destroy`、`doFilter`）が含まれており、ブログポートレットへの描画リクエストとその応答の両方でフィルタリングタスクを実行します。
 
 * `init`：ポートレットフィルターが最初にLiferayにデプロイされ、ポートレットコンテナ内で初期化されたときに呼び出されます。
 
@@ -191,6 +195,8 @@ public class B4K8PortletFilter implements RenderFilter {
       ```
 
    描画リクエストが行われるたびに、この`doFilter`が呼び出されます。
+
+<a name="追加情報" />
 
 ## 追加情報
 

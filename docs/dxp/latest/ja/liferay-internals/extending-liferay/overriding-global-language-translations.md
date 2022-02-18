@@ -2,14 +2,16 @@
 
 Liferay DXP/Portalでは、言語キーを使用して、デフォルトロケールと他の多くのロケールの見出し、ラベル、およびメッセージを実装します。 モジュール内の新しい言語キー値を使用して、任意のロケールのこれらのキーをオーバーライドできます。
 
+<a name="グローバル言語キーを調べる" />
+
 ## グローバル言語キーを調べる
 
 グローバル言語キーは、ソースコードと[DXP/Portalバンドル](../../installation-and-upgrades/installing-liferay/hosting-liferay.md)に含まれています。
 
 ソースの場合：
 
-* [`liferay-[dxp|portal]/portal-impl/src/content/Language[_xx_XX].properties`](https://github.com/liferay/liferay-portal/tree/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-impl/src/content)
-* [`liferay-[dxp|portal]/modules/apps/portal-language/portal-language-lang/src/main/resources/content/Language[_xx_XX].properties`](https://github.com/liferay/liferay-portal/tree/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/portal-language/portal-language-lang/src/main/resources/content)
+* [`liferay-[dxp|portal]/portal-impl/src/content/Language [_xx_XX].properties`](https://github.com/liferay/liferay-portal/tree/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-impl/src/content)
+* [`liferay-[dxp|portal]/modules/apps/portal-language/portal-language-lang/src/main/resources/content/Language [_xx_XX].properties`](https://github.com/liferay/liferay-portal/tree/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/portal-language/portal-language-lang/src/main/resources/content)
 
 バンドルの場合：
 
@@ -41,7 +43,9 @@ category.cms=Content Management
 
 Liferay DXP/Portal 7.4以降では、メタデータを使用してオーバーライドを宣言できます。 以前のバージョンでは、Javaクラスがオーバーライドを宣言します。
 
-お使いのバージョンが7.4より前の場合は、[以前のバージョンでのオーバーライド](#overriding-in-earlier-versions)に進んでください。  それ以外の場合は、読み進めてください。
+お使いのバージョンが7.4より前の場合は、 [以前のバージョンでのオーバーライド](#overriding-in-earlier-versions) に進んでください。  それ以外の場合は、読み進めてください。
+
+<a name="サンプルをデプロイする74以降の場合" />
 
 ## サンプルをデプロイする（7.4以降の場合）
 
@@ -61,7 +65,7 @@ Liferay DXP/Portal 7.4以降では、メタデータを使用してオーバー�
 
     別のDXP/Portalバージョンを実行している場合は、上記のコマンドを適宜調整してください。
 
-1. [最新のサンプル](./liferay-i2f4.zip)をダウンロードして解凍します。
+1. [最新のサンプル](./liferay-i2f4.zip) をダウンロードして解凍します。
 
     ```bash
     curl https://learn.liferay.com/dxp/latest/en/liferay-internals/extending-liferay/liferay-i2f4.zip -O
@@ -103,6 +107,8 @@ Liferay DXP/Portal 7.4以降では、メタデータを使用してオーバー�
 
 例を見たところで、次にこれがどのように機能するかを確認していきます。
 
+<a name="言語プロパティファイルを作成する" />
+
 ## 言語プロパティファイルを作成する
 
 オーバーライドするキーを選択します。 サンプルモジュールは、`home`言語キーをオーバーライドします。
@@ -122,6 +128,8 @@ Language[_xx_XX].properties
 ```
 
 たとえば、日本語をオーバーライドする場合は、`Language_ja.properties`を使用します。
+
+<a name="bndファイルでオーバーライドを宣言する" />
 
 ## Bndファイルでオーバーライドを宣言する
 
@@ -150,9 +158,11 @@ Provide-Capability:\
 
 モジュールをデプロイして、新しい言語キー値を確認します。
 
+<a name="以前のバージョンでのオーバーライド" />
+
 ## 以前のバージョンでのオーバーライド
 
-7.4より前のLiferay DXP/Portalバージョンでは、グローバル言語キーをオーバーライドするには、カスタマイズする翻訳ごとに[言語プロパティファイル](#create-a-language-properties-file)と`java.util.ResourceBundle`が必要です。 次の例をデプロイしてそのコードを調べることにより、詳細を確認してください。
+7.4より前のLiferay DXP/Portalバージョンでは、グローバル言語キーをオーバーライドするには、カスタマイズする翻訳ごとに [言語プロパティファイル](#create-a-language-properties-file) と`java.util.ResourceBundle`が必要です。 次の例をデプロイしてそのコードを調べることにより、詳細を確認してください。
 
 ```{note}
 言語キーの多くはグローバル言語キーファイルにありますが、特定のアプリケーションモジュールにある場合もあります。 [以前のバージョンでモジュール言語キーをオーバーライドする](./overriding-module-language-keys.md)プロセスは、グローバルキーをオーバーライドするプロセスとは異なります。
@@ -168,7 +178,7 @@ Provide-Capability:\
 
 サンプルをデプロイする方法は次のとおりです。
 
-1. [グローバル言語キーのオーバーライド](./liferay-x8f3.zip)をダウンロードして解凍します。
+1. [グローバル言語キーのオーバーライド](./liferay-x8f3.zip) をダウンロードして解凍します。
 
     ```bash
     curl https://learn.liferay.com/dxp/latest/en/liferay-internals/extending-liferay/liferay-x8f3.zip -O
@@ -198,7 +208,7 @@ Provide-Capability:\
 
 1. デフォルトの認証情報を使用してサインインします。
 
-    **ユーザー名**: `test@liferay.com`
+    **ユーザー名** : `test@liferay.com`
 
     **パスワード：** `test`
 
@@ -232,9 +242,9 @@ Provide-Capability:\
 
 クラスは次のメソッドをオーバーライドします。
 
-**`handleGetObject`：**モジュールのリソースバンドル（モジュールの言語プロパティファイルに基づく）でキーを検索し、キーの値を`Object`として返します。
+**`handleGetObject`：** モジュールのリソースバンドル（モジュールの言語プロパティファイルに基づく）でキーを検索し、キーの値を`Object`として返します。
 
-**`getKeys`：**リソースバンドルのキーの`Enumeration`を返します。
+**`getKeys`：** リソースバンドルのキーの`Enumeration`を返します。
 
 リソースバンドルサービスコンポーネントは、デフォルトの言語キーをモジュールの言語キーオーバーライドにリダイレクトします。
 
@@ -258,8 +268,10 @@ Provide-Capability:\
 モジュールをデプロイして、新しい言語キー値を確認します。
 
 ```{note}
-DXP 7.4以降にアップグレードする準備ができたら、言語キーオーバーライドモジュールを引き続き使用できます。 オプションとして、[above](#declare-the-override-in-the-bnd-file)で示すように、`ResourceBundle` クラスを削除し、`Provide-Capability` ヘッダーを `bnd.bnd` ファイルで指定することで、モジュールを簡素化することができます。
+DXP 7.4以降にアップグレードする準備ができたら、言語キーオーバーライドモジュールを引き続き使用できます。 オプションとして、 [above](#declare-the-override-in-the-bnd-file) で示すように、`ResourceBundle` クラスを削除し、`Provide-Capability` ヘッダーを `bnd.bnd` ファイルで指定することで、モジュールを簡素化することができます。
 ```
+
+<a name="関連情報" />
 
 ## 関連情報
 

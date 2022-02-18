@@ -12,6 +12,8 @@
 * 実行要件：Javaバージョン、Java EEバージョン、ブラウザーバージョンなど
 * 非推奨またはサポート終了：たとえば、次のバージョンで特定の機能またはAPIが停止されると警告している
 
+<a name="破壊的変更の一覧" />
+
 ## 破壊的変更の一覧
 
 ### Liferay FontAwesomeはデフォルトで含まれなくなりました
@@ -126,7 +128,7 @@ else {
 }
 ```
 
-[7.3.0-ga1 - AssetCategoryLocalServiceImpl.java#L122-L128](https://github.com/liferay/liferay-portal/blob/7.3.0-ga1/portal-impl/src/com/liferay/portlet/asset/service/impl/AssetCategoryLocalServiceImpl.java#L122-L128)を参照してください。
+[7.3.0-ga1 - AssetCategoryLocalServiceImpl.java#L122-L128](https://github.com/liferay/liferay-portal/blob/7.3.0-ga1/portal-impl/src/com/liferay/portlet/asset/service/impl/AssetCategoryLocalServiceImpl.java#L122-L128) を参照してください。
 
 ##### AssetCategoryLocalService#rebuildTree(long, boolean)の場合
 
@@ -141,7 +143,7 @@ else {
 - 既存のコードを再評価する
 - 既存のサービスAPIが同じ目標を達成できるかどうかを検討する
 
-##### G_P_N_Vを含むFinderメソッドの場合
+##### G **P** N_Vを含むFinderメソッドの場合
 
 `G_P_N_V`で終わる`AssetCategory` Finderメソッドを使用する場合は、代わりに`P_N_V`で終わるメソッドを使用してください。
 
@@ -231,7 +233,7 @@ Auto Deployerを使用して（ `liferay-home/deploy folder`介して）EXTプ�
 
 #### コードを更新するにはどうすればよいですか？
 
-削除された機能を直接置き換えるものはありません。 EXTプラグインがある場合は、手動でデプロイするか、 [`ant direct-deploy`](https://github.com/liferay/liferay-plugins-ee/blob/7.0.x/ext/build-common-ext.xml#L211)使用する必要があります。
+削除された機能を直接置き換えるものはありません。 EXTプラグインがある場合は、手動でデプロイするか、 [`ant direct-deploy`](https://github.com/liferay/liferay-plugins-ee/blob/7.0.x/ext/build-common-ext.xml#L211) 使用する必要があります。
 
 #### なぜこの変更が行われたのですか？
 
@@ -438,7 +440,7 @@ Auto Deployerを使用して（ `liferay-home/deploy folder`介して）EXTプ�
 
 コードで使用する独自のバージョンのJQueryを提供するサードパーティライブラリを追加するための戦略のいずれかを使用します。
 
-さらに、一時的な対策として、*［システム設定］* &rarr; *［サードパーティー］* &rarr; *［jQuery］*の`［JQueryを有効にする］`プロパティを`［true］`に設定することで、以前の動作に戻すことができます。
+さらに、一時的な対策として、 ［**システム設定**］ &rarr; ［**サードパーティー**］ &rarr; ［**jQuery**］ の`［JQueryを有効にする］`プロパティを`［true］`に設定することで、以前の動作に戻すことができます。
 
 #### なぜこの変更が行われたのですか？
 
@@ -642,7 +644,7 @@ Simplerayを使用するようにLiferayポータルを構成している場合�
 
 #### コードを更新するにはどうすればよいですか？
 
-コードを更新する必要はありません。 それでも `ContentTransformerListener` を使用したい場合は、システム設定で *［Content & Data］* &rarr; *［Webコンテンツ］* &rarr; *［仮想インスタンススコープ］* &rarr; *［Webコンテンツ］*の*［Enable ContentTransformerListener］*プロパティを使用して有効にすることができます。
+コードを更新する必要はありません。 それでも `ContentTransformerListener` を使用したい場合は、システム設定で ［**Content & Data**］ &rarr; ［**Webコンテンツ**］ &rarr; ［**仮想インスタンススコープ**］ &rarr; ［**Webコンテンツ**］ の ［**Enable ContentTransformerListener**］ プロパティを使用して有効にすることができます。
 
 #### なぜこの変更が行われたのですか？
 
@@ -767,8 +769,8 @@ Simplerayを使用するようにLiferayポータルを構成している場合�
 
 ---------------------------------------
 
-### ポータルプロパティの名前を"module.framework.properties.felix.fileinstall.\*"から"module.framework.properties.file.install.\*"に変更
-- **日付：**2020年7月13日
+### ポータルプロパティの名前を"module.framework.properties.felix.fileinstall.\ **"から"module.framework.properties.file.install.\** "に変更
+- **日付：** 2020年7月13日
 - **JIRAチケット：** [LPS-115016](https://issues.liferay.com/browse/LPS-115016)
 
 #### 何が変わりましたか？
@@ -790,7 +792,7 @@ Simplerayを使用するようにLiferayポータルを構成している場合�
 ---------------------------------------
 
 ### Elasticsearchの動的データマッピングフィールドをネストされたドキュメントに変更
-- **日付：**2020年7月27日
+- **日付：** 2020年7月27日
 - **JIRAチケット：** [LPS-103224](https://issues.liferay.com/browse/LPS-103224)
 
 #### 何が変わりましたか？
@@ -813,22 +815,22 @@ Simplerayを使用するようにLiferayポータルを構成している場合�
 
 Elasticsearchクエリで新しいネストされたドキュメント`ddmFieldArray`を使用する必要があります。
 
-Liferayコードにはいくつかの例があります。 たとえば、[DDMIndexerImpl](https://github.com/liferay/liferay-portal/blob/7.3.x/modules/apps/dynamic-data-mapping/dynamic-data-mapping-service/src/main/java/com/liferay/dynamic/data/mapping/internal/util/DDMIndexerImpl.java)と[AssetHelperImpl](https://github.com/liferay/liferay-portal/blob/master/modules/apps/asset/asset-service/src/main/java/com/liferay/asset/internal/util/AssetHelperImpl.java)は`DDM_FIELD_ARRAY`定数を使用します。
+Liferayコードにはいくつかの例があります。 たとえば、 [DDMIndexerImpl](https://github.com/liferay/liferay-portal/blob/7.3.x/modules/apps/dynamic-data-mapping/dynamic-data-mapping-service/src/main/java/com/liferay/dynamic/data/mapping/internal/util/DDMIndexerImpl.java) と [AssetHelperImpl](https://github.com/liferay/liferay-portal/blob/master/modules/apps/asset/asset-service/src/main/java/com/liferay/asset/internal/util/AssetHelperImpl.java) は`DDM_FIELD_ARRAY`定数を使用します。
 
 システム設定からレガシー動作を復元し、`ddm__keyword__*`および`ddm__text__*`フィールドを引き続き使用することもできます。
 
-1. *［システム設定］* &rarr; *［動的データマッピング］* &rarr; *［動的データマッピング Web インデクサー］*に移動します。
-1. *［旧形式の動的データマッピングインデックスフィールドを有効にする］*を選択します。
+1. ［**システム設定**］ &rarr; ［**動的データマッピング**］ &rarr; ［**動的データマッピング Web インデクサー**］ に移動します。
+1. ［**旧形式の動的データマッピングインデックスフィールドを有効にする**］ を選択します。
 1. 完全なインデックスの再構築を実行します。
 
 #### なぜこの変更が行われたのですか？
 
-この変更は、動的データマッピング・ストラクチャーの数が多すぎる場合に発生するElasticsearchエラーで*合計フィールド数の制限を超えない*ようにするために行われました。
+この変更は、動的データマッピング・ストラクチャーの数が多すぎる場合に発生するElasticsearchエラーで **合計フィールド数の制限を超えない** ようにするために行われました。
 
 ---------------------------------------
 
 ### Lexiconアイコンパスの移動
-- **日付：**2020年8月17日
+- **日付：** 2020年8月17日
 - **JIRAチケット：** [LPS-115812](https://issues.liferay.com/browse/LPS-115812)
 
 ### 何が変わりましたか？
@@ -874,7 +876,7 @@ Lexiconアイコンのパスが`themeDisplay.getPathThemeImages() + "/lexicon/ic
 
 #### なぜこの変更が行われたのですか？
 
-これらのメソッドは、[LPS-108525](https://issues.liferay.com/browse/LPS-108525)のソリューションの一部として削除されました。
+これらのメソッドは、 [LPS-108525](https://issues.liferay.com/browse/LPS-108525) のソリューションの一部として削除されました。
 
 ---------------------------------------
 
@@ -906,7 +908,7 @@ Lexiconアイコンのパスが`themeDisplay.getPathThemeImages() + "/lexicon/ic
 
 #### 何が変わりましたか？
 
-ビューカウントをグローバルに、またはエンティティ専用に有効にしたり無効にしたりする機能は、ポータルプロパティから削除され、システム設定として構成されるようになりました。 ビューカウントは、UIの*［システム設定］* &rarr; *［Infrastructure］* &rarr; *［View Count］*で構成するか、`com.liferay.view.count.configuration.ViewCountConfiguration.config`という名前の構成ファイルを使用して構成できます。
+ビューカウントをグローバルに、またはエンティティ専用に有効にしたり無効にしたりする機能は、ポータルプロパティから削除され、システム設定として構成されるようになりました。 ビューカウントは、UIの ［**システム設定**］ &rarr; ［**Infrastructure**］ &rarr; ［**View Count**］ で構成するか、`com.liferay.view.count.configuration.ViewCountConfiguration.config`という名前の構成ファイルを使用して構成できます。
 
 ポータルプロパティの変更は次のとおりです。
 
@@ -926,7 +928,7 @@ Lexiconアイコンのパスが`themeDisplay.getPathThemeImages() + "/lexicon/ic
 
 システム設定または構成ファイルを使用して、ビューカウントの動作を構成します。
 
-*［システム設定］* &rarr; *［Infrastructure］* &rarr; *［View Count］*で、`enabled`を`false`に設定してグローバルにビューカウントを無効にするか、`enabled`を`true`に設定してグローバルにビューカウントを有効にし、エンティティクラス名を`Disabled Class Name`値リストに追加して特定のエンティティのビューカウントを無効にします。
+［**システム設定**］ &rarr; ［**Infrastructure**］ &rarr; ［**View Count**］ で、`enabled`を`false`に設定してグローバルにビューカウントを無効にするか、`enabled`を`true`に設定してグローバルにビューカウントを有効にし、エンティティクラス名を`Disabled Class Name`値リストに追加して特定のエンティティのビューカウントを無効にします。
 
 構成ファイルを使用するには、システム設定でビューカウントを構成し、設定を保存して、`com.liferay.view.count.configuration.ViewCountConfiguration.config`ファイルにエクスポートします。  次に、ファイルを`[Liferay Home]/osgi/configs`フォルダに配置して、構成をデプロイします。
 

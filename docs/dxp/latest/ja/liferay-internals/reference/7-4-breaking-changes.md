@@ -12,6 +12,8 @@
 * 実行要件：Javaバージョン、Java EEバージョン、ブラウザーバージョンなど
 * 非推奨またはサポート終了：たとえば、次のバージョンで特定の機能またはAPIが停止されると警告している
 
+<a name="liferay-uiflashタグを削除" />
+
 ## liferay-ui:flashタグを削除
 - **日付：** 2020年13月10日
 - **JIRAチケット：** [LPS-121732](https://issues.liferay.com/browse/LPS-121732)
@@ -30,9 +32,11 @@
 
 ### なぜこの変更が行われたのですか？
 
-この変更は、2020年12月31日に[AdobeがFlashのサポートを終了](https://www.adobe.com/products/flashplayer/end-of-life.html)し、今後のバージョンのブラウザでFlashのサポートが削除されることに対応したものです。
+この変更は、2020年12月31日に [AdobeがFlashのサポートを終了](https://www.adobe.com/products/flashplayer/end-of-life.html) し、今後のバージョンのブラウザでFlashのサポートが削除されることに対応したものです。
 
 ---------------------------------------
+
+<a name="portalflashパスの削除" />
 
 ## /portal/flashパスの削除
 - **日付：** 2020年13月10日
@@ -54,9 +58,11 @@
 
 ### なぜこの変更が行われたのですか？
 
-この変更は、2020年12月31日に[AdobeがFlashのサポートを終了](https://www.adobe.com/products/flashplayer/end-of-life.html)し、今後のバージョンのブラウザでFlashのサポートが削除されることに対応したものです。
+この変更は、2020年12月31日に [AdobeがFlashのサポートを終了](https://www.adobe.com/products/flashplayer/end-of-life.html) し、今後のバージョンのブラウザでFlashのサポートが削除されることに対応したものです。
 
 ---------------------------------------
+
+<a name="swfobject-auiモジュールの削除" />
 
 ## swfobject AUIモジュールの削除
 - **日付：** 2020年13月10日
@@ -76,9 +82,11 @@ AUIモジュールの`swfobject`は削除されました。 これは、Adobe Fl
 
 ### なぜこの変更が行われたのですか？
 
-この変更は、2020年12月31日に[AdobeがFlashのサポートを終了](https://www.adobe.com/products/flashplayer/end-of-life.html)し、今後のバージョンのブラウザでFlashのサポートが削除されることに対応したものです。
+この変更は、2020年12月31日に [AdobeがFlashのサポートを終了](https://www.adobe.com/products/flashplayer/end-of-life.html) し、今後のバージョンのブラウザでFlashのサポートが削除されることに対応したものです。
 
 ---------------------------------------
+
+<a name="assetentries_assetcategoriesテーブルと対応するコードを削除" />
 
 ## AssetEntries_AssetCategoriesテーブルと対応するコードを削除
 - **日付：** 2020年16月10日
@@ -100,12 +108,14 @@ AUIモジュールの`swfobject`は削除されました。 これは、Adobe Fl
 
 この変更により、不要なテーブルと対応するコードが削除されます。
 
-これは、7.2の旧バージョンと非互換の変更「[Liferay AssetEntries_AssetCategoriesは使用されなくなりました](https://learn.liferay.com/dxp/latest/en/liferay-internals/reference/7-2-breaking-changes.html#liferay-assetentries-assetcategories-is-no-longer-used)」に対するフォローアップ手順です。この変更では、テーブルが`AssetEntryAssetCategoryRel`テーブルに置き換えられ、`AssetEntryLocalService`および`AssetCategoryLocalService`の対応するインターフェイスが`AssetEntryAssetCategoryRelLocalService`に移動されました。
+これは、7.2の旧バージョンと非互換の変更「 [Liferay AssetEntries_AssetCategoriesは使用されなくなりました](https://learn.liferay.com/dxp/latest/ja/liferay-internals/reference/7-2-breaking-changes.html#liferay-assetentries-assetcategories-is-no-longer-used) 」に対するフォローアップ手順です。この変更では、テーブルが`AssetEntryAssetCategoryRel`テーブルに置き換えられ、`AssetEntryLocalService`および`AssetCategoryLocalService`の対応するインターフェイスが`AssetEntryAssetCategoryRelLocalService`に移動されました。
 
 ---------------------------------------
 
+<a name="antivirusscannerのサポートとclamdの統合をリファクタリング" />
+
 ## AntivirusScannerのサポートとClamdの統合をリファクタリング
-- **日付：**2020年10月21日
+- **日付：** 2020年10月21日
 - **JIRAチケット：** [LPS-122280](https://issues.liferay.com/browse/LPS-122280)
 
 ### 何が変わりましたか？
@@ -118,7 +128,7 @@ AUIモジュールの`swfobject`は削除されました。 これは、Adobe Fl
 
 ### コードを更新するにはどうすればよいですか？
 
-新しいClamd統合とAntivirusScannerサポートを有効にします。 [Enabling Antivirus Scanning for Uploaded Files](https://learn.liferay.com/dxp/latest/en/system-administration/file-storage/enabling-antivirus-scanning-for-uploaded-files.html)を参照してください。
+新しいClamd統合とAntivirusScannerサポートを有効にします。 [アップロードされたファイルのウイルス対策スキャンを有効にする](https://learn.liferay.com/dxp/latest/ja/system-administration/file-storage/enabling-antivirus-scanning-for-uploaded-files.html) を参照してください。
 
 フックを介して独自のAntivirusScanner実装を提供している場合は、それをゼロより大きいサービスランキングのOSGiサービスに変換します。 ClamdリモートサービスAntivirusScanner実装サービスのランキングはゼロです。
 
@@ -128,8 +138,10 @@ AUIモジュールの`swfobject`は削除されました。 これは、Adobe Fl
 
 ---------------------------------------
 
+<a name="エンティティ表示ページ登録追跡ロジックを変更" />
+
 ## エンティティ表示ページ登録追跡ロジックを変更
-- **日付：**2020年10月27日
+- **日付：** 2020年10月27日
 - **JIRAチケット：** [LPS-122275](https://issues.liferay.com/browse/LPS-122275)
 
 ### 何が変わりましたか？
@@ -156,8 +168,10 @@ AUIモジュールの`swfobject`は削除されました。 これは、Adobe Fl
 
 ---------------------------------------
 
+<a name="廃止予定および未使用のjspタグを削除" />
+
 ## 廃止予定および未使用のJSPタグを削除
-- **日付：**2020年11月24日
+- **日付：** 2020年11月24日
 - **JIRAチケット：** [LPS-112476](https://issues.liferay.com/browse/LPS-112476)
 
 ### 何が変わりましたか？
@@ -183,7 +197,7 @@ AUIモジュールの`swfobject`は削除されました。 これは、Adobe Fl
 
 ### コードを更新するにはどうすればよいですか？
 
-代替タグのある削除済みタグについては、7.3 [`liferay-ui.tld`](https://github.com/liferay/liferay-portal/blob/7.3.x/util-taglib/src/META-INF/liferay-ui.tld)を参照してください。 ただし、タグの多くには直接の置き換えはありません。 直接の置き換えがないタグを使用する必要がある場合は、古い実装をコピーして、プロジェクトから直接提供できます。
+代替タグのある削除済みタグについては、7.3 [`liferay-ui.tld`](https://github.com/liferay/liferay-portal/blob/7.3.x/util-taglib/src/META-INF/liferay-ui.tld) を参照してください。 ただし、タグの多くには直接の置き換えはありません。 直接の置き換えがないタグを使用する必要がある場合は、古い実装をコピーして、プロジェクトから直接提供できます。
 
 ### なぜこの変更が行われたのですか？
 
@@ -191,8 +205,10 @@ AUIモジュールの`swfobject`は削除されました。 これは、Adobe Fl
 
 ---------------------------------------
 
+<a name="container-fluid-1280-cssクラスを置き換え" />
+
 ## .container-fluid-1280 CSSクラスを置き換え
-- **日付：**2020年11月24日
+- **日付：** 2020年11月24日
 - **JIRAチケット：** [LPS-123894](https://issues.liferay.com/browse/LPS-123894)
 
 ### 何が変わりましたか？
@@ -205,7 +221,7 @@ AUIモジュールの`swfobject`は削除されました。 これは、Adobe Fl
 
 ### コードを更新するにはどうすればよいですか？
 
-`.container-fluid-1280`の代わりに、Clay `.container-fluid.container-fluid-max-xl`から更新されたCSSクラスを使用します。 または、ClayLayout[コンポーネント](https://clayui.com/docs/components/layout.html)と[TagLibs](https://clayui.com/docs/get-started/using-clay-in-jsps.html#clay-sidebar)を使用します。
+`.container-fluid-1280`の代わりに、Clay `.container-fluid.container-fluid-max-xl`から更新されたCSSクラスを使用します。 または、ClayLayout [コンポーネント](https://clayui.com/docs/components/layout.html) と [TagLibs](https://clayui.com/docs/get-started/using-clay-in-jsps.html#clay-sidebar) を使用します。
 
 ### なぜこの変更が行われたのですか？
 
@@ -213,8 +229,10 @@ AUIモジュールの`swfobject`は削除されました。 これは、Adobe Fl
 
 ---------------------------------------
 
+<a name="cssおよびjavascriptリソースのランタイム縮小化をデフォルトで無効化" />
+
 ## CSSおよびJavaScriptリソースのランタイム縮小化をデフォルトで無効化
-- **日付：**2020年11月27日
+- **日付：** 2020年11月27日
 - **JIRAチケット：** [LPS-123550](https://issues.liferay.com/browse/LPS-123550)
 
 ### 何が変わりましたか？
@@ -235,8 +253,10 @@ AUIモジュールの`swfobject`は削除されました。 これは、Adobe Fl
 
 ---------------------------------------
 
+<a name="soyportletクラスを削除" />
+
 ## SoyPortletクラスを削除
-- **日付：**2020年12月9日
+- **日付：** 2020年12月9日
 - **JIRAチケット：** [LPS-122955](https://issues.liferay.com/browse/LPS-122955)
 
 ### 何が変わりましたか？
@@ -255,14 +275,16 @@ JSPを使用する`MVCPortlet`などの確立されたアーキテクチャ、�
 
 これは、フロントエンドの技術提供を簡素化し、市場で需要の高い実績のあるテクノロジーにより焦点を当てる方法として行われました。
 
-利用可能なさまざまなフロントエンドオプションの詳細な調査と分析は、[The State of Frontend Infrastructure](https://liferay.dev/blogs/-/blogs/the-state-of-frontend-infrastructure)で確認できます。ここでは、Soyから移行する理由についても説明しています。
+利用可能なさまざまなフロントエンドオプションの詳細な調査と分析は、 [The State of Frontend Infrastructure](https://liferay.dev/blogs/-/blogs/the-state-of-frontend-infrastructure) で確認できます。ここでは、Soyから移行する理由についても説明しています。
 
 > Liferayは、Soyが「聖杯」であると信じて数年かけて投資してきました。 クロージャテンプレートをコンパイルする機能により、JSPに匹敵するパフォーマンスが提供され、他のJavaScriptフレームワークの再利用可能なコンポーネントに対応できると信じてきました。 Soyはいくつかの目標を達成することができましたが、当社が望んでいたパフォーマンスを得ることはできませんでしたし、何よりもこの技術を使っているのは当社ぐらいだと感じていました。
 
 ---------------------------------------
 
+<a name="サーバー側のclosure-templatessoyのサポートを削除" />
+
 ## サーバー側のClosure Templates（Soy）のサポートを削除
-- **日付：**2020年12月14日
+- **日付：** 2020年12月14日
 - **JIRAチケット：** [LPS-122956](https://issues.liferay.com/browse/LPS-122956)
 
 ### 何が変わりましたか？
@@ -292,14 +314,16 @@ JSPを使用する`MVCPortlet`などの確立されたアーキテクチャ、�
 
 これは、フロントエンドの技術提供を簡素化し、市場で需要の高い実績のあるテクノロジーにより焦点を当てる方法として行われます。
 
-利用可能なさまざまなフロントエンドオプションの詳細な調査と分析は、[The State of Frontend Infrastructure](https://liferay.dev/blogs/-/blogs/the-state-of-frontend-infrastructure)で確認できます。ここでは、Soyから移行する理由についても説明しています。
+利用可能なさまざまなフロントエンドオプションの詳細な調査と分析は、 [The State of Frontend Infrastructure](https://liferay.dev/blogs/-/blogs/the-state-of-frontend-infrastructure) で確認できます。ここでは、Soyから移行する理由についても説明しています。
 
 > Liferayは、Soyが「聖杯」であると信じて数年かけて投資してきました。 クロージャテンプレートをコンパイルする機能により、JSPに匹敵するパフォーマンスが提供され、他のJavaScriptフレームワークの再利用可能なコンポーネントに対応できると信じてきました。 Soyはいくつかの目標を達成することができましたが、当社が望んでいたパフォーマンスを得ることはできませんでしたし、何よりもこの技術を使っているのは当社ぐらいだと感じていました。
 
 ---------------------------------------
 
+<a name="comliferayportalkernelmodelportletpreferencesメソッドgetpreferencesおよびsetpreferencesを削除" />
+
 ## com.liferay.portal.kernel.model.PortletPreferencesメソッド、getPreferencesおよびsetPreferencesを削除
-- **日付：**2020年12月20日
+- **日付：** 2020年12月20日
 - **JIRAチケット：** [LPS-122562](https://issues.liferay.com/browse/LPS-122562)
 
 ### 何が変わりましたか？
@@ -320,6 +344,8 @@ JSPを使用する`MVCPortlet`などの確立されたアーキテクチャ、�
 
 ---------------------------------------
 
+<a name="css互換性レイヤーを削除" />
+
 ## CSS互換性レイヤーを削除
 - **日付：** 2021-Jan-02
 - **JIRAチケット：** [LPS-123359](https://issues.liferay.com/browse/LPS-123359)
@@ -334,13 +360,15 @@ Boostrap 3マークアップのサポートは削除され、使用できなく�
 
 ### コードを更新するにはどうすればよいですか？
 
-Clayマークアップを使用している場合は、最新の[Clayコンポーネント](https://clayui.com/docs/components/index.html)バージョンに従って更新できます。 マークアップがBoostrap 3に基づいている場合は、[Bootstrap移行ガイドライン](https://getbootstrap.com/docs/4.4/migration/)に従ってBoostrap 4マークアップを使用してマークアップを更新できます。
+Clayマークアップを使用している場合は、最新の [Clayコンポーネント](https://clayui.com/docs/components/index.html) バージョンに従って更新できます。 マークアップがBoostrap 3に基づいている場合は、 [Bootstrap移行ガイドライン](https://getbootstrap.com/docs/4.4/migration/) に従ってBoostrap 4マークアップを使用してマークアップを更新できます。
 
 ### なぜこの変更が行われたのですか？
 
 構成可能なCSS互換性レイヤーによってLiferay 7.0から7.1への移行が簡素化されていましたが、レイヤーを削除すると、新しいスタイルとの競合が解決され、一般的なCSSの重みが向上します。
 
 ---------------------------------------
+
+<a name="log4j-xml定義ファイルからspiidプロパティを削除" />
 
 ## Log4j XML定義ファイルからspi.idプロパティを削除
 - **日付：** 2021-Jan-19
@@ -360,9 +388,11 @@ Log4j XML定義ファイルから`@spi.id@`を削除します。
 
 ### なぜこの変更が行われたのですか？
 
-SPIが[LPS-110758](https://issues.liferay.com/browse/LPS-110758)によって削除されました。
+SPIが [LPS-110758](https://issues.liferay.com/browse/LPS-110758) によって削除されました。
 
 ---------------------------------------
+
+<a name="frontend-taglib-clayタグから廃止予定の属性を削除" />
 
 ## frontend-taglib-clayタグから廃止予定の属性を削除
 - **日付：** 2021-Jan-26
@@ -378,9 +408,11 @@ SPIが[LPS-110758](https://issues.liferay.com/browse/LPS-110758)によって削�
 
 ### なぜこの変更が行われたのですか？
 
-`frontend-taglib-clay`モジュールは、削除された属性をサポートしていない[`Clay v3`](https://github.com/liferay/clay)のコンポーネントを使用するようになりました。
+`frontend-taglib-clay`モジュールは、削除された属性をサポートしていない [`Clay v3`](https://github.com/liferay/clay) のコンポーネントを使用するようになりました。
 
 ---------------------------------------
+
+<a name="htmlタグのブール属性の処理を変更" />
 
 ## HTMLタグのブール属性の処理を変更
 - **日付：** 2021-Feb-18
@@ -428,9 +460,11 @@ DOMに存在させたいブール属性に`true`値を渡すようにしてく�
 
 ### なぜこの変更が行われたのですか？
 
-この変更は、[HTML規格](https://html.spec.whatwg.org/#boolean-attribute)への準拠を強化するために行われました。この規格には、「要素にブール属性が存在する場合はtrueの値を表し、属性が存在しない場合はfalseの値を表す。 属性が存在する場合、その値は 空の文字列か、属性の正規名とASCIIの大文字/小文字を区別せずに一致する値のいずれかでなければならない」とあります。
+この変更は、 [HTML規格](https://html.spec.whatwg.org/#boolean-attribute) への準拠を強化するために行われました。この規格には、「要素にブール属性が存在する場合はtrueの値を表し、属性が存在しない場合はfalseの値を表す。 属性が存在する場合、その値は 空の文字列か、属性の正規名とASCIIの大文字/小文字を区別せずに一致する値のいずれかでなければならない」とあります。
 
 ---------------------------------------
+
+<a name="comliferayportalkernelmodelportalpreferencesメソッドgetpreferencesおよびsetpreferencesを削除" />
 
 ## com.liferay.portal.kernel.model.PortalPreferencesメソッド、getPreferencesおよびsetPreferencesを削除
 - **日付：** 2020-Mar-31
@@ -454,6 +488,8 @@ DOMに存在させたいブール属性に`true`値を渡すようにしてく�
 
 ---------------------------------------
 
+<a name="item-selector-taglibはcoverimage関連のイベントを起動しなくなりました" />
+
 ## item-selector-taglibはcoverImage関連のイベントを起動しなくなりました
 - **日付：** 2021-Apr-15
 - **JIRAチケット：** [LPS-130359](https://issues.liferay.com/browse/LPS-130359)
@@ -475,6 +511,8 @@ DOMに存在させたいブール属性に`true`値を渡すようにしてく�
 `Liferay.fire()`と`Liferay.on()`は、共有チャネルでグローバルに表示されるイベントを公開します。 `Liferay.State` APIは、このように離れた場所で調整したいモジュールに適しています。これは、型安全な方法で行われます。
 
 ---------------------------------------
+
+<a name="oauth-20トークンインストロスペクション機能識別子を変更" />
 
 ## OAuth 2.0トークンインストロスペクション機能識別子を変更
 - **日付：** 2021年5月04日
@@ -501,6 +539,8 @@ OAuth 2.0トークンイントロスペクション機能識別子が`token_intr
 
 ---------------------------------------
 
+<a name="journalarticleのコンテンツ項目を削除" />
+
 ## JournalArticleのコンテンツ項目を削除
 - **日付：** 2021年5月21日
 - **JIRAチケット：** [LPS-129058](https://issues.liferay.com/browse/LPS-129058)
@@ -522,6 +562,8 @@ OAuth 2.0トークンイントロスペクション機能識別子が`token_intr
 この変更により、コンテンツをフェッチおよび解析せずに、データベース内のファイル、ページ、およびWebコンテンツのDDMフィールドを参照しやすくなります。
 
 ---------------------------------------
+
+<a name="comliferayportalkernelutilstringbundlerをcomliferaypetrastringstringbundlerに置き換え" />
 
 ## com.liferay.portal.kernel.util.StringBundlerをcom.liferay.petra.string.StringBundlerに置き換え
 - **日付：** 2021-Jun-25
@@ -564,8 +606,10 @@ OAuth 2.0トークンイントロスペクション機能識別子が`token_intr
 
 ---------------------------------------
 
+<a name="userlocalservice関連のクラスがパブリックapiを変更しました" />
+
 ## UserLocalService関連のクラスがパブリックAPIを変更しました
-- **日付：**2021年7月7日
+- **日付：** 2021年7月7日
 - **JIRAチケット：** [LPS-134096](https://issues.liferay.com/browse/LPS-134096)
 
 ### 何が変わりましたか？
@@ -598,6 +642,8 @@ OAuth 2.0トークンイントロスペクション機能識別子が`token_intr
 この変更は、デフォルトのグループ、ロール、またはユーザーグループが特定のユーザーに追加されたかどうか、またはユーザーがすでにこれらの関連付けを持っているかどうかを確認するために行われました。
 
 ---------------------------------------
+
+<a name="frontend-css-web-cssモジュールを削除" />
 
 ## frontend-css-web CSSモジュールを削除
 - **日付：** 2021-Aug-02
@@ -651,7 +697,9 @@ OAuth 2.0トークンイントロスペクション機能識別子が`token_intr
 
 ---------------------------------------
 
-## 一部のSanitizedServletResponse静的メソッド、HttpHeaders X_XSS_PROTECTION定数、およびhttp.header.secure.x.xss.protectionポータルプロパティを削除
+<a name="一部のsanitizedservletresponse静的メソッドhttpheaders-x-xss-protection定数およびhttpheadersecurexxssprotectionポータルプロパティを削除" />
+
+## 一部のSanitizedServletResponse静的メソッド、HttpHeaders X **XSS** PROTECTION定数、およびhttp.header.secure.x.xss.protectionポータルプロパティを削除
 - **日付：** 2021-Aug-05
 - **JIRAチケット：** [LPS-134188](https://issues.liferay.com/browse/LPS-134188)
 
@@ -689,6 +737,8 @@ OAuth 2.0トークンイントロスペクション機能識別子が`token_intr
 X-Xss-Protectionヘッダーは、最新のブラウザではサポートされなくなりました。 これらの静的メソッド、定数、およびポータルプロパティは、X-Xss-Protectionヘッダーに関連しています。
 
 ---------------------------------------
+
+<a name="openidconnectservicehandlerインターフェイスをopenidconnectauthenticationhandlerに置き換え" />
 
 ## OpenIdConnectServiceHandlerインターフェイスをOpenIdConnectAuthenticationHandlerに置き換え
 - **日付：** 2021-Aug-09
@@ -730,6 +780,8 @@ portal.security.sso.openid.connect.OpenIdConnectAuthenticationHandler
 
 ---------------------------------------
 
+<a name="言語キーの名称変更" />
+
 ## 言語キーの名称変更
 
 - **日付：** 2021-Sep-09
@@ -741,17 +793,19 @@ portal.security.sso.openid.connect.OpenIdConnectAuthenticationHandler
 
 ### 誰が影響を受けますか？
 
-これは、名前が変更された言語キーを使用またはオーバーライドしている場合に影響します。 [名前が変更された言語キー](https://learn.liferay.com/dxp/latest/en/installation-and-upgrades/upgrading-liferay/reference/renamed-language-keys.html)は、古い言語キー名を新しい名前にマップします。
+これは、名前が変更された言語キーを使用またはオーバーライドしている場合に影響します。 [名前が変更された言語キー](https://learn.liferay.com/dxp/latest/en/installation-and-upgrades/upgrading-liferay/reference/renamed-language-keys.html) は、古い言語キー名を新しい名前にマップします。
 
 ### コードを更新するにはどうすればよいですか？
 
-[名前が変更された言語キー](https://learn.liferay.com/dxp/latest/en/installation-and-upgrades/upgrading-liferay/reference/renamed-language-keys.html)のマッピングに基づいて、名前が変更された言語キーのすべてのインスタンスの名前を新しい名前に変更します。
+[名前が変更された言語キー](https://learn.liferay.com/dxp/latest/en/installation-and-upgrades/upgrading-liferay/reference/renamed-language-keys.html) のマッピングに基づいて、名前が変更された言語キーのすべてのインスタンスの名前を新しい名前に変更します。
 
 ### なぜこの変更が行われたのですか？
 
 一元化された言語キーは管理が簡単です。
 
 ---------------------------------------
+
+<a name="cas-ssoモジュールをportal-security-sso-casプロジェクトに移動" />
 
 ## CAS SSOモジュールをportal-security-sso-casプロジェクトに移動
 - **日付：** 2021-Sep-15
@@ -774,6 +828,8 @@ CAS SSOモジュールは、`portal-security-sso`プロジェクトから`portal
 これは、SSOサポートを統合し、オープンスタンダードへの注目を高めるための継続的な取り組みの一環です。
 
 ---------------------------------------
+
+<a name="clayselectタグの名前に印刷用の属性のネームスペースを指定" />
 
 ## clay:selectタグの名前に印刷用の属性のネームスペースを指定
 - **日付：** 2021-Sep-15
@@ -798,6 +854,8 @@ CAS SSOモジュールは、`portal-security-sso`プロジェクトから`portal
 この変更は、現在の`aui:select`タグの動作により適合するように、また、今後`clay:select`タグへの移行を容易にし、現在の`clay:select`タグの使用を簡略化するために行われました。
 
 ---------------------------------------
+
+<a name="コアレジストリapiおよびレジストリ実装モジュールを削除" />
 
 ## コアレジストリAPIおよびレジストリ実装モジュールを削除
 - **日付：** 2021-Sep-28

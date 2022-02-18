@@ -6,13 +6,17 @@
 Gogoシェルは、開発環境のコマンドラインからのみ実行してください。 本番環境では、[Using the Gogo Shell](../using-the-gogo-shell.md)で説明されているように、コントロールパネルでGogoシェルを実行してください。
 ```
 
+<a name="前提条件" />
+
 ## 前提条件
 
-コマンドラインでGogoシェルを使用するには、サーバーが開発者モードで動作している必要があります。 サーバーの開発者モードを有効にするには、[デベロッパー・スタジオ](../../../developing-applications/tooling/developer-studio.md)で有効にするか、または以下の[ポータルプロパティ](../../../installation-and-upgrades/reference/portal-properties.md)を設定します。
+コマンドラインでGogoシェルを使用するには、サーバーが開発者モードで動作している必要があります。 サーバーの開発者モードを有効にするには、[デベロッパー・スタジオ](../../../developing-applications/tooling/developer-studio.md)で有効にするか、または以下の [ポータルプロパティ](../../../installation-and-upgrades/reference/portal-properties.md) を設定します。
 
 ```properties
 include-and-override=portal-developer.properties
 ```
+
+<a name="コマンドの実行" />
 
 ## コマンドの実行
 
@@ -51,6 +55,8 @@ blade sh ［another Gogo shell command］
 
 `shutdown`
 ```
+
+<a name="まとめ" />
 
 ## まとめ
 

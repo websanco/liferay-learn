@@ -13,6 +13,8 @@
 * 非推奨またはサポート終了：たとえば、次のバージョンで特定の機能またはAPIが停止されると警告している
 * 推奨事項：たとえば、後方互換性のためにLiferay Portalに古いAPIが保持されているにもかかわらず、古いAPIに代わる、新しく導入されたAPIを使用することを推奨している
 
+<a name="破壊的変更の一覧" />
+
 ## 破壊的変更の一覧
 
 ### テーマでのJSPテンプレートのサポートの削除
@@ -55,7 +57,7 @@ JSPテンプレートが削除されたことで、既存および新規のテ�
 
 カスタム開発用に独自のLodashバージョンを提供して、サードパーティのライブラリを追加するための可能な戦略のいずれかを使用する必要があります。
 
-一時的な対策として、Liferayポータルのコントロールパネルの*［コントロールパネル］* &rarr; *［設定］* &rarr; *［システム設定］* &rarr; *［サードパーティー］* &rarr; *［Lodash］*で*［Lodashを有効にする］*プロパティを`true`に設定することで、以前の動作に戻すことができます。
+一時的な対策として、Liferayポータルのコントロールパネルの ［**コントロールパネル**］ &rarr; ［**設定**］ &rarr; ［**システム設定**］ &rarr; ［**サードパーティー**］ &rarr; ［**Lodash**］ で ［**Lodashを有効にする**］ プロパティを`true`に設定することで、以前の動作に戻すことができます。
 
 #### なぜこの変更が行われたのですか？
 
@@ -80,9 +82,9 @@ JSPテンプレートが削除されたことで、既存および新規のテ�
 
 #### コードを更新するにはどうすればよいですか？
 
-`portal.properties` ファイルを上書きする代わりに、ポータルの構成管理者からプロパティを管理できます。 これにアクセスするには、Liferayポータルの*［コントロールパネル］* &rarr; *［設定］* &rarr; *［システム設定］* &rarr; *［Infrastructure］* &rarr; *［エクスポート / インポート］*に移動し、そこで設定を編集します。
+`portal.properties` ファイルを上書きする代わりに、ポータルの構成管理者からプロパティを管理できます。 これにアクセスするには、Liferayポータルの ［**コントロールパネル**］ &rarr; ［**設定**］ &rarr; ［**システム設定**］ &rarr; ［**Infrastructure**］ &rarr; ［**エクスポート / インポート**］ に移動し、そこで設定を編集します。
 
-アプリケーションに新しい構成を含める場合は、 [の手順に従って、アプリケーションを構成可能にします](https://dev.liferay.com/develop/tutorials/-/knowledge_base/7-1/making-applications-configurable)。
+アプリケーションに新しい構成を含める場合は、 [の手順に従って、アプリケーションを構成可能にします](https://dev.liferay.com/develop/tutorials/-/knowledge_base/7-1/making-applications-configurable) 。
 
 #### なぜこの変更が行われたのですか？
 
@@ -96,7 +98,7 @@ JSPテンプレートが削除されたことで、既存および新規のテ�
 
 #### 何が変わりましたか？
 
-ルックアンドフィールポートレットの *Link Portlet URLs to Page* オプションは、Liferay Portal 7.1で非推奨としてマークされ、ユーザーは構成プロパティを介してオプションを表示および非表示にできます。 Liferay Portal 7.2では、これは削除され、構成できなくなりました。
+ルックアンドフィールポートレットの **Link Portlet URLs to Page** オプションは、Liferay Portal 7.1で非推奨としてマークされ、ユーザーは構成プロパティを介してオプションを表示および非表示にできます。 Liferay Portal 7.2では、これは削除され、構成できなくなりました。
 
 #### 誰が影響を受けますか？
 
@@ -374,9 +376,9 @@ React.createClass</code> の `は、React v15.5.0</a> （2017年4月）で <a hr
 
 次の2つの方法のいずれかでコードを更新する必要があります。
 
-- ポートカスタムボタン `React.createClass` APIはES6使用する `クラス` で説明したように、APIを [ドキュメント反応させ、](https://reactjs.org/docs/react-component.html)。 たとえば、以前の `createClass`ベースの実装</a>からから [ES6クラスベースのボタン](https://github.com/liferay/alloy-editor/blob/b082c312179ae6626cb2ddcc04ad3ebc5b355e1b/src/components/buttons/button-ol.jsx) に移動したときに加えられた変更を確認してください。</p></li> 
+- ポートカスタムボタン `React.createClass` APIはES6使用する `クラス` で説明したように、APIを [ドキュメント反応させ、](https://reactjs.org/docs/react-component.html) 。 たとえば、以前の `createClass`ベースの実装</a>からから [ES6クラスベースのボタン](https://github.com/liferay/alloy-editor/blob/b082c312179ae6626cb2ddcc04ad3ebc5b355e1b/src/components/buttons/button-ol.jsx) に移動したときに加えられた変更を確認してください。</p></li> 
   
-  - 互換性アダプタを提供します。 [create-react-classパッケージ](https://www.npmjs.com/package/create-react-class) （ここでは [について説明](https://reactjs.org/docs/react-without-es6.html)）をページに挿入して、 `createClass` APIを復元できます。</ul> 
+  - 互換性アダプタを提供します。 [create-react-classパッケージ](https://www.npmjs.com/package/create-react-class) （ここでは [について説明](https://reactjs.org/docs/react-without-es6.html) ）をページに挿入して、 `createClass` APIを復元できます。</ul> 
 
 
 
@@ -533,7 +535,7 @@ JGroupsがバージョン3.6.16から4.1.1にアップグレードされまし�
 ### Liferay AssetEntries_AssetCategories は使用されなくなりました
 
 - **日付：** 2019-Sep-11
-- **JIRAのチケット：** [LPS-99973](https://issues.liferay.com/browse/LPS-99973)、 [LPS-76488](https://issues.liferay.com/browse/LPS-76488)
+- **JIRAのチケット：** [LPS-99973](https://issues.liferay.com/browse/LPS-99973) 、 [LPS-76488](https://issues.liferay.com/browse/LPS-76488)
 
 
 
@@ -596,7 +598,7 @@ _assetEntryAssetCategoryRelLocalService.getAssetEntryPrimaryKeys（assetCategory
 
 #### なぜこの変更が行われたのですか？
 
-この変更は、 [LPS-76488](https://issues.liferay.com/browse/LPS-76488)に起因する変更が原因で行われました。これにより、開発者は特定のカテゴリのアセットのリストの順序を制御できます。
+この変更は、 [LPS-76488](https://issues.liferay.com/browse/LPS-76488) に起因する変更が原因で行われました。これにより、開発者は特定のカテゴリのアセットのリストの順序を制御できます。
 
 
 
@@ -660,7 +662,7 @@ _assetEntryAssetCategoryRelLocalService.getAssetEntryPrimaryKeys（assetCategory
 
 #### コードを更新するにはどうすればよいですか？
 
-カスタムブログ画像のプロパティ値を保持する場合は、*［設定］* &rarr; *［ブログ］* &rarr; *［ファイルアップロード］*の［システム設定］で再構成する必要があります。 新しいプロパティを使用するには、古いプロパティを参照するコードを更新する必要があります。
+カスタムブログ画像のプロパティ値を保持する場合は、 ［**設定**］ &rarr; ［**ブログ**］ &rarr; ［**ファイルアップロード**］ の［システム設定］で再構成する必要があります。 新しいプロパティを使用するには、古いプロパティを参照するコードを更新する必要があります。
 
 
 
@@ -748,7 +750,7 @@ _assetEntryAssetCategoryRelLocalService.getAssetEntryPrimaryKeys（assetCategory
 
 ### DDMDataProviderのメソッドを置き換え
 
-- **日付：**2020年7月14日
+- **日付：** 2020年7月14日
 - **JIRAチケット：** [LPS-81563](https://issues.liferay.com/browse/LPS-81563)
 
 
@@ -773,7 +775,7 @@ _assetEntryAssetCategoryRelLocalService.getAssetEntryPrimaryKeys（assetCategory
 
 #### なぜこの変更が行われたのですか？
 
-この変更は、[LPS-81563](https://issues.liferay.com/browse/LPS-81563)でのデータプロバイダーAPIリファクタリングの一部です。
+この変更は、 [LPS-81563](https://issues.liferay.com/browse/LPS-81563) でのデータプロバイダーAPIリファクタリングの一部です。
 
 
 
@@ -783,7 +785,7 @@ _assetEntryAssetCategoryRelLocalService.getAssetEntryPrimaryKeys（assetCategory
 
 ### DDMDataProviderRequestのコンストラクターを削除
 
-- **日付：**2020年7月14日
+- **日付：** 2020年7月14日
 - **JIRAチケット：** [LPS-81563](https://issues.liferay.com/browse/LPS-81563)
 
 
@@ -808,7 +810,7 @@ _assetEntryAssetCategoryRelLocalService.getAssetEntryPrimaryKeys（assetCategory
 
 #### なぜこの変更が行われたのですか？
 
-この変更は、[LPS-81563](https://issues.liferay.com/browse/LPS-81563)でのデータプロバイダーAPIリファクタリングの一部です。
+この変更は、 [LPS-81563](https://issues.liferay.com/browse/LPS-81563) でのデータプロバイダーAPIリファクタリングの一部です。
 
 
 
@@ -818,7 +820,7 @@ _assetEntryAssetCategoryRelLocalService.getAssetEntryPrimaryKeys（assetCategory
 
 ### DDMDataProviderRequestのメソッドを削除
 
-- **日付：**2020年7月14日
+- **日付：** 2020年7月14日
 - **JIRAチケット：** [LPS-81563](https://issues.liferay.com/browse/LPS-81563)
 
 
@@ -853,7 +855,7 @@ _assetEntryAssetCategoryRelLocalService.getAssetEntryPrimaryKeys（assetCategory
 
 #### なぜこの変更が行われたのですか？
 
-この変更は、[LPS-81563](https://issues.liferay.com/browse/LPS-81563)でのデータプロバイダーAPIリファクタリングの一部です。
+この変更は、 [LPS-81563](https://issues.liferay.com/browse/LPS-81563) でのデータプロバイダーAPIリファクタリングの一部です。
 
 
 
@@ -863,7 +865,7 @@ _assetEntryAssetCategoryRelLocalService.getAssetEntryPrimaryKeys（assetCategory
 
 ### DDMDataProviderRequestのメソッドを置き換え
 
-- **日付：**2020年7月14日
+- **日付：** 2020年7月14日
 - **JIRAチケット：** [LPS-81563](https://issues.liferay.com/browse/LPS-81563)
 
 
@@ -888,7 +890,7 @@ _assetEntryAssetCategoryRelLocalService.getAssetEntryPrimaryKeys（assetCategory
 
 #### なぜこの変更が行われたのですか？
 
-この変更は、[LPS-81563](https://issues.liferay.com/browse/LPS-81563)でのデータプロバイダーAPIリファクタリングの一部です。
+この変更は、 [LPS-81563](https://issues.liferay.com/browse/LPS-81563) でのデータプロバイダーAPIリファクタリングの一部です。
 
 
 
@@ -898,7 +900,7 @@ _assetEntryAssetCategoryRelLocalService.getAssetEntryPrimaryKeys（assetCategory
 
 ### DDMDataProviderResponseのメソッドを削除
 
-- **日付：**2020年7月14日
+- **日付：** 2020年7月14日
 - **JIRAチケット：** [LPS-81563](https://issues.liferay.com/browse/LPS-81563)
 
 
@@ -929,7 +931,7 @@ _assetEntryAssetCategoryRelLocalService.getAssetEntryPrimaryKeys（assetCategory
 
 #### なぜこの変更が行われたのですか？
 
-この変更は、[LPS-81563](https://issues.liferay.com/browse/LPS-81563)でのデータプロバイダーAPIリファクタリングの一部です。
+この変更は、 [LPS-81563](https://issues.liferay.com/browse/LPS-81563) でのデータプロバイダーAPIリファクタリングの一部です。
 
 
 
@@ -939,7 +941,7 @@ _assetEntryAssetCategoryRelLocalService.getAssetEntryPrimaryKeys（assetCategory
 
 ### DDMDataProviderResponseのメソッドを置き換え
 
-- **日付：**2020年7月14日
+- **日付：** 2020年7月14日
 - **JIRAチケット：** [LPS-81563](https://issues.liferay.com/browse/LPS-81563)
 
 
@@ -964,7 +966,7 @@ _assetEntryAssetCategoryRelLocalService.getAssetEntryPrimaryKeys（assetCategory
 
 #### なぜこの変更が行われたのですか？
 
-この変更は、[LPS-81563](https://issues.liferay.com/browse/LPS-81563)でのデータプロバイダーAPIリファクタリングの一部です。
+この変更は、 [LPS-81563](https://issues.liferay.com/browse/LPS-81563) でのデータプロバイダーAPIリファクタリングの一部です。
 
 
 
@@ -974,7 +976,7 @@ _assetEntryAssetCategoryRelLocalService.getAssetEntryPrimaryKeys（assetCategory
 
 ### DDMDataProviderResponseのEnumを置き換え
 
-- **日付：**2020年7月14日
+- **日付：** 2020年7月14日
 - **JIRAチケット：** [LPS-81563](https://issues.liferay.com/browse/LPS-81563)
 
 
@@ -999,7 +1001,7 @@ _assetEntryAssetCategoryRelLocalService.getAssetEntryPrimaryKeys（assetCategory
 
 #### なぜこの変更が行われたのですか？
 
-この変更は、[LPS-81563](https://issues.liferay.com/browse/LPS-81563)でのデータプロバイダーAPIリファクタリングの一部です。
+この変更は、 [LPS-81563](https://issues.liferay.com/browse/LPS-81563) でのデータプロバイダーAPIリファクタリングの一部です。
 
 
 
@@ -1009,7 +1011,7 @@ _assetEntryAssetCategoryRelLocalService.getAssetEntryPrimaryKeys（assetCategory
 
 ### DDMDataProviderResponseOutputを削除
 
-- **日付：**2020年7月14日
+- **日付：** 2020年7月14日
 - **JIRAチケット：** [LPS-81563](https://issues.liferay.com/browse/LPS-81563)
 
 
@@ -1034,7 +1036,7 @@ _assetEntryAssetCategoryRelLocalService.getAssetEntryPrimaryKeys（assetCategory
 
 #### なぜこの変更が行われたのですか？
 
-クラス`com.liferay.dynamic.data.mapping.data.provider.DDMDataProviderResponseOutput`は、[LPS-81563](https://issues.liferay.com/browse/LPS-81563)のデータプロバイダーコードに改善が実装された後に使用されなくなったため、廃止予定の警告なしに削除されました。
+クラス`com.liferay.dynamic.data.mapping.data.provider.DDMDataProviderResponseOutput`は、 [LPS-81563](https://issues.liferay.com/browse/LPS-81563) のデータプロバイダーコードに改善が実装された後に使用されなくなったため、廃止予定の警告なしに削除されました。
 
 
 
@@ -1044,7 +1046,7 @@ _assetEntryAssetCategoryRelLocalService.getAssetEntryPrimaryKeys（assetCategory
 
 ### DDMDataProviderTrackerのメソッドを削除
 
-- **日付：**2020年7月14日
+- **日付：** 2020年7月14日
 - **JIRAチケット：** [LPS-81563](https://issues.liferay.com/browse/LPS-81563)
 
 
@@ -1079,7 +1081,7 @@ _assetEntryAssetCategoryRelLocalService.getAssetEntryPrimaryKeys（assetCategory
 
 ### DDMFormInstanceRecordLocalServiceのメソッドを置き換え
 
-- **日付：**2020年7月14日
+- **日付：** 2020年7月14日
 - **JIRAチケット：** [LPS-81564](https://issues.liferay.com/browse/LPS-81564)
 
 
@@ -1106,7 +1108,7 @@ _assetEntryAssetCategoryRelLocalService.getAssetEntryPrimaryKeys（assetCategory
 
 #### なぜこの変更が行われたのですか？
 
-この変更は、[LPS-81564](https://issues.liferay.com/browse/LPS-81564)でのストレージアダプタAPIリファクタリングの一部です。
+この変更は、 [LPS-81564](https://issues.liferay.com/browse/LPS-81564) でのストレージアダプタAPIリファクタリングの一部です。
 
 
 
@@ -1116,7 +1118,7 @@ _assetEntryAssetCategoryRelLocalService.getAssetEntryPrimaryKeys（assetCategory
 
 ### DDMStructureServiceのメソッドを削除
 
-- **日付：**2020年7月14日
+- **日付：** 2020年7月14日
 - **JIRAチケット：** [LPS-91760](https://issues.liferay.com/browse/LPS-91760)
 
 
@@ -1165,7 +1167,7 @@ _assetEntryAssetCategoryRelLocalService.getAssetEntryPrimaryKeys（assetCategory
 
 ### 動的データマッピング永続性クラスのメソッドを削除
 
-- **日付：**2020年7月14日
+- **日付：** 2020年7月14日
 - **JIRAチケット：** [LPS-91760](https://issues.liferay.com/browse/LPS-91760)
 
 
@@ -1218,7 +1220,7 @@ _assetEntryAssetCategoryRelLocalService.getAssetEntryPrimaryKeys（assetCategory
 
 ### 動的データマッピングユーティリティクラスのメソッドを削除
 
-- **日付：**2020年7月14日
+- **日付：** 2020年7月14日
 - **JIRAチケット：** [LPS-91760](https://issues.liferay.com/browse/LPS-91760)
 
 
@@ -1262,9 +1264,9 @@ _assetEntryAssetCategoryRelLocalService.getAssetEntryPrimaryKeys（assetCategory
 
 
 
-### module.framework.properties.felix.fileinstall.\*ポータルプロパティの名前をmodule.framework.properties.file.install.\*に変更
+### module.framework.properties.felix.fileinstall.\ **ポータルプロパティの名前をmodule.framework.properties.file.install.\** に変更
 
-- **日付：**2020年8月8日
+- **日付：** 2020年8月8日
 - **JIRAチケット：** [LPS-115016](https://issues.liferay.com/browse/LPS-115016)
 
 
@@ -1299,7 +1301,7 @@ _assetEntryAssetCategoryRelLocalService.getAssetEntryPrimaryKeys（assetCategory
 
 ### buffered.increment.enabledポータルプロパティの置き換え
 
-- **日付：**2020年10月21日
+- **日付：** 2020年10月21日
 - **JIRAチケット：** [LPS-122159](https://issues.liferay.com/browse/LPS-122159)
 
 
@@ -1342,7 +1344,7 @@ _assetEntryAssetCategoryRelLocalService.getAssetEntryPrimaryKeys（assetCategory
 
 ### module.framework.properties.file.install.optionalImportRefreshScopeポータルプロパティの削除
 
-- **日付：**2021年2月3日
+- **日付：** 2021年2月3日
 - **JIRAチケット：** [LPS-122008](https://issues.liferay.com/browse/LPS-122008)
 
 
@@ -1377,14 +1379,14 @@ _assetEntryAssetCategoryRelLocalService.getAssetEntryPrimaryKeys（assetCategory
 
 ### .cfgファイルに.cfg形式を使用
 
-- **日付：**2021年2月21日
+- **日付：** 2021年2月21日
 - **JIRAチケット：** [LPS-128031](https://issues.liferay.com/browse/LPS-128031)
 
 
 
 #### 何が変わりましたか？
 
-この変更の前は、`.cfg`ファイルは`.cfg`または`.config`形式を使用できました。 現在、`.cfg`構成ファイルは[ここ](https://sling.apache.org/documentation/bundles/configuration-installer-factory.html#property-files-cfg)で定義されている`.cfg`形式を使用する必要があります。 
+この変更の前は、`.cfg`ファイルは`.cfg`または`.config`形式を使用できました。 現在、`.cfg`構成ファイルは [ここ](https://sling.apache.org/documentation/bundles/configuration-installer-factory.html#property-files-cfg) で定義されている`.cfg`形式を使用する必要があります。 
 
 
 

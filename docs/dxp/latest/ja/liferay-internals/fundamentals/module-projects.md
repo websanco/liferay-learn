@@ -1,12 +1,12 @@
 # モジュールプロジェクト
 
-Liferayのアプリケーションやカスタマイズは、[OSGi モジュール](https://www.osgi.org/resources/what-is-osgi/): `.jar`ファイルで、Javaコードと、APIを公開・消費するための追加設定が含まれています。
+Liferayのアプリケーションやカスタマイズは、 [OSGi モジュール](https://www.osgi.org/resources/what-is-osgi/) : `.jar`ファイルで、Javaコードと、APIを公開・消費するための追加設定が含まれています。
 
 モジュールプロジェクトは、次の3つから構成されています。
 
-1. **コード：**Javaクラスと、画像、テンプレート、追加の記述子などのリソース。 Javaパッケージはデフォルトではプライベートですが、他のモジュールが使用できるように[エクスポート](./exporting-packages.md)することができます。
+1. **コード：** Javaクラスと、画像、テンプレート、追加の記述子などのリソース。 Javaパッケージはデフォルトではプライベートですが、他のモジュールが使用できるように[エクスポート](./exporting-packages.md)することができます。
 
-1. **ビルドスクリプト：** モジュールをビルドしてデプロイするための[Gradle](https://gradle.org/)ファイル。
+1. **ビルドスクリプト：** モジュールをビルドしてデプロイするための [Gradle](https://gradle.org/) ファイル。
 
 1. **メタデータ：** [Bnd](https://bnd.bndtools.org/) ファイルは、モジュールのアーティファクトを定義し、モジュールが提供するまたは必要とするパッケージや機能を指定します。
 
@@ -40,9 +40,9 @@ Liferayでは、一般的に3種類のモジュールを使用します。
 
 1. **API** モジュールはインターフェイスを定義します。
 
-1. **実装**モジュールは、インターフェイスを実装する具象クラスを提供します。
+1. **実装** モジュールは、インターフェイスを実装する具象クラスを提供します。
 
-1. **クライアント**モジュールはAPIを消費します。
+1. **クライアント** モジュールはAPIを消費します。
 
 [Gogo シェル](./using-the-gogo-shell.md)でユーザーが名前を入力したときにあいさつ文を表示する簡単なコマンドを開発することで、それぞれを作成する方法を学習します。
 
@@ -51,6 +51,8 @@ Liferayでは、一般的に3種類のモジュールを使用します。
 ここでは、APIを作成し、モジュールプロジェクトの各部分について学習し、モジュールをデプロイして、ランタイム時にモジュールを検査します。 次の2つのチュートリアルでは、実装モジュールとクライアントモジュールを作成します。
 
 まず、サンプルのAPIモジュールプロジェクトをデプロイします。
+
+<a name="シンプルなモジュールのデプロイ" />
 
 ## シンプルなモジュールのデプロイ
 
@@ -148,6 +150,8 @@ Liferayでは、一般的に3種類のモジュールを使用します。
 
 モジュールのインストールとアクティベーションが完了したので、その機能について見ていきます。
 
+<a name="モジュールの設定方法" />
+
 ## モジュールの設定方法
 
 * [ビルドインフラストラクチャーの構築](#set-up-the-build-infrastructure)
@@ -195,7 +199,7 @@ Liferayのモジュールは、Gradleのビルドインフラストラクチャ�
 :lines: 5-10
 ```
 
-[`@ProviderType`](https://docs.osgi.org/javadoc/osgi.annotation/7.0.0/org/osgi/annotation/versioning/ProviderType.html)アノテーションは、そのインターフェイスを実装しているものがそれを提供することをサービスレジストリに伝えます（すなわち`Greeter`）。 インターフェイスの `greet` という1つのメソッドは、 `String` を要求し、何も返しません。
+[`@ProviderType`](https://docs.osgi.org/javadoc/osgi.annotation/7.0.0/org/osgi/annotation/versioning/ProviderType.html) アノテーションは、そのインターフェイスを実装しているものがそれを提供することをサービスレジストリに伝えます（すなわち`Greeter`）。 インターフェイスの `greet` という1つのメソッドは、 `String` を要求し、何も返しません。
 
 モジュールの `src/main/java` フォルダと `src/main/resources` フォルダに、それぞれ独自のJavaコードとリソースを追加します。
 
@@ -231,7 +235,7 @@ liferay.workspace.product=portal-7.3-ga3
 ```{literalinclude} ./module-projects/resources/liferay-k8s2.zip/k8s2-api/bnd.bnd
 ```
 
-The module's name is *Acme K8S2 API*. Its symbolic name---a name that ensures uniqueness---is `com.acme.k8s2.api`. Its [semantic version](./semantic-versioning.md) is declared next. Lastly, the module [*exports*](./exporting-packages.md) the Java package `com.acme.k8s2`, making the package available to other modules. You confirmed the package export above when you executed the `b [bundle ID]` Gogo Shell command.
+The module's name is **Acme K8S2 API** . Its symbolic name---a name that ensures uniqueness---is `com.acme.k8s2.api`. Its [semantic version](./semantic-versioning.md) is declared next. Lastly, the module [**exports**](./exporting-packages.md) the Java package `com.acme.k8s2`, making the package available to other modules. You confirmed the package export above when you executed the `b [bundle ID]` Gogo Shell command.
 
 #### Generated Metadata
 
@@ -257,17 +261,21 @@ Tool: Bnd-4.3.0.201909301554
 
 Bndは`bnd.bnd`ファイルからすべてのヘッダーをプロパゲートし、さらにヘッダーと詳細を追加しました。 例えば、エクスポートされた`com.acme.k8s2`パッケージには、デフォルトのパッケージバージョン`1.0.0`があります。
 
+<a name="まとめ" />
+
 ## まとめ
 
 これで完了です。 ご覧の通り、モジュールプロジェクトは他のJavaプロジェクトと同じですが、いくつかの設定が追加されています。
 
 これで、モジュールプロジェクトがどのようなものか、ビルドしてデプロイする方法、そしてランタイム時にモジュールを検査する方法をマスターしました。
 
-モジュールは、`Greeter` APIのようなAPIを介して、互いの機能を活用します。 LiferayはOSGiサービスを使用して、APISを定義、実装、消費します。 次に、[APIs as OSGi Services](./apis-as-osgi-services.md)で、OSGiサービスを使用した`Greeter` APIの*実装*について説明します。
+モジュールは、`Greeter` APIのようなAPIを介して、互いの機能を活用します。 LiferayはOSGiサービスを使用して、APISを定義、実装、消費します。 次に、[APIs as OSGi Services](./apis-as-osgi-services.md)で、OSGiサービスを使用した`Greeter` APIの **実装** について説明します。
 
 ```{note}
 モジュールのライフサイクルの詳細については、[Module Lifecycle](../architecture/module-lifecycle.md)を参照してください。
 ```
+
+<a name="追加情報" />
 
 ## 追加情報
 

@@ -1,19 +1,21 @@
 # OSGiサービスとしてのAPI
 
-[モジュール](./module-projects.md)とは何か、モジュールをデプロイする方法を学習したら、モジュールを使用してAPIを定義し、それらを実装できます。 Liferay APIは[OSGiサービス](https://enroute.osgi.org/)であり、Javaインターフェイスによって定義され、具体的なJavaクラスによって実装されます。
+[モジュール](./module-projects.md)とは何か、モジュールをデプロイする方法を学習したら、モジュールを使用してAPIを定義し、それらを実装できます。 Liferay APIは [OSGiサービス](https://enroute.osgi.org/) であり、Javaインターフェイスによって定義され、具体的なJavaクラスによって実装されます。
 
-Liferayは、API、実装、およびクライアントをコンポーネントとして公開します。 [OSGi Declarative Service](https://enroute.osgi.org/FAQ/300-declarative-services.html)（DS）アノテーションは、コンポーネントとそれらの関係を定義します。
+Liferayは、API、実装、およびクライアントをコンポーネントとして公開します。 [OSGi Declarative Service](https://enroute.osgi.org/FAQ/300-declarative-services.html) （DS）アノテーションは、コンポーネントとそれらの関係を定義します。
 
-* [`@ProviderType`](https://docs.osgi.org/javadoc/osgi.annotation/7.0.0/org/osgi/annotation/versioning/ProviderType.html)は、コンポーネントが提供（実装）または消費できるインターフェイスを定義します。
-* [`@Component`](https://docs.osgi.org/javadoc/osgi.cmpn/7.0.0/org/osgi/service/component/annotations/Component.html)は、クラスをコンポーネントとして宣言し、特定の機能を提供します。
-* [`@Reference`](https://docs.osgi.org/javadoc/osgi.cmpn/7.0.0/org/osgi/service/component/annotations/Reference.html)は、別のコンポーネントをクラスメンバー（通常はフィールド）に関連付けます。
+* [`@ProviderType`](https://docs.osgi.org/javadoc/osgi.annotation/7.0.0/org/osgi/annotation/versioning/ProviderType.html) は、コンポーネントが提供（実装）または消費できるインターフェイスを定義します。
+* [`@Component`](https://docs.osgi.org/javadoc/osgi.cmpn/7.0.0/org/osgi/service/component/annotations/Component.html) は、クラスをコンポーネントとして宣言し、特定の機能を提供します。
+* [`@Reference`](https://docs.osgi.org/javadoc/osgi.cmpn/7.0.0/org/osgi/service/component/annotations/Reference.html) は、別のコンポーネントをクラスメンバー（通常はフィールド）に関連付けます。
 
 APIと実装に関する懸念事項を異なるモジュールに分離することができます。
 
-* **API**モジュールは、Javaインターフェイスを使用して機能を*定義*します。 モジュールはインターフェイスパッケージをエクスポートします。
-* **実装**モジュールは、具体的なJavaクラスを使用して機能を*提供*します。
+***API** モジュールは、Javaインターフェイスを使用して機能を **定義** します。 モジュールはインターフェイスパッケージをエクスポートします。
+***実装** モジュールは、具体的なJavaクラスを使用して機能を **提供** します。
 
 ここでは、単純なgreeter OSGiサービスを作成するAPIと実装モジュールをデプロイします。 また、実装モジュールとそのJARを調べて、実装することでgreeterサービス機能がどのように提供されるかを学習します。 次のチュートリアルでは、クライアント--- UIで呼び出すことができる部分を作成します。
+
+<a name="シンプルなapiと実装をデプロイする" />
 
 ## シンプルなAPIと実装をデプロイする
 
@@ -94,6 +96,8 @@ Acme P9G2実装モジュールは、`com.acme.p9g2.Greeter`という1つのサ�
 
 次に、APIモジュールがどのようにgreeter機能を定義し、実装モジュールがどのようにgreeter機能をOSGiサービスとして提供するかを学習します。 まずはAPIの作成から始めます。
 
+<a name="apiを作成する" />
+
 ## APIを作成する
 
 APIは、次の2つのステップで作成します。
@@ -110,7 +114,7 @@ APIは、次の2つのステップで作成します。
 :lines: 5-6
 ```
 
-[`@ProviderType`](https://docs.osgi.org/javadoc/osgi.annotation/7.0.0/org/osgi/annotation/versioning/ProviderType.html)アノテーションは、`Greeter`をコンポーネントが実装または消費できるタイプとして登録します。
+[`@ProviderType`](https://docs.osgi.org/javadoc/osgi.annotation/7.0.0/org/osgi/annotation/versioning/ProviderType.html) アノテーションは、`Greeter`をコンポーネントが実装または消費できるタイプとして登録します。
 
 `greet`メソッドは、入力として`String`という名前を取ります。
 
@@ -132,6 +136,8 @@ The [package export](./exporting-packages.md) shares the `Greeter` interface wit
 
 The `Greeter` service type is available to implement and use.
 
+<a name="create-the-implementation" />
+
 ## Create the Implementation
 
 The example implementation module contains a concrete Java class that provides the `Greeter` capability. Here are the implementation steps.
@@ -150,7 +156,7 @@ The `P9G2Greeter` class implements the `Greeter` interface:
 :lines: 7-8
 ```
 
-[`@Component`](https://docs.osgi.org/javadoc/osgi.cmpn/7.0.0/org/osgi/service/component/annotations/Component.html)アノテーションとその`service = Greeter.class`属性により、`P9G2Greeter`クラスは`Greeter`サービス・プロバイダーになります。
+[`@Component`](https://docs.osgi.org/javadoc/osgi.cmpn/7.0.0/org/osgi/service/component/annotations/Component.html) アノテーションとその`service = Greeter.class`属性により、`P9G2Greeter`クラスは`Greeter`サービス・プロバイダーになります。
 
 ### インターフェイスを実装する
 
@@ -176,7 +182,7 @@ The `P9G2Greeter` class implements the `Greeter` interface:
 
 ### モジュールのJARを調べる
 
-`p9g2-impl/build/libs/com.acme.p9g2.impl-1.0.0.jar`実装モジュールJARをビルドしたとき、[Bnd](http://bnd.bndtools.org/)はJARの`/META-INF/MANIFEST.MF`ファイルを生成しました。
+`p9g2-impl/build/libs/com.acme.p9g2.impl-1.0.0.jar`実装モジュールJARをビルドしたとき、 [Bnd](http://bnd.bndtools.org/) はJARの`/META-INF/MANIFEST.MF`ファイルを生成しました。
 
 Bndがマニフェストで生成する主要なサービス関連のヘッダは次のとおりです。
 
@@ -201,9 +207,13 @@ Service-Component: OSGI-INF/com.acme.p9g2.internal.P9G2Greeter.xml
 
 モジュールをデプロイしたとき、サービスコンポーネントランタイムは`P9G2Greeter`サービスコンポーネントを`Greeter`サービスを提供するものとして登録しました。
 
+<a name="まとめ" />
+
 ## まとめ
 
-`Greeter`というサービス機能を*定義*し、`P9G2Greeter`というサービスコンポーネントで提供しました。 `Greeter`サービスが配置されました。 クライアントはどのようにサービスにアクセスして使用するのでしょうか。 これについては、[Using an OSGi Service](./using-an-osgi-service.md)で説明しています。
+`Greeter`というサービス機能を **定義** し、`P9G2Greeter`というサービスコンポーネントで提供しました。 `Greeter`サービスが配置されました。 クライアントはどのようにサービスにアクセスして使用するのでしょうか。 これについては、[Using an OSGi Service](./using-an-osgi-service.md)で説明しています。
+
+<a name="追加情報" />
 
 ## 追加情報
 

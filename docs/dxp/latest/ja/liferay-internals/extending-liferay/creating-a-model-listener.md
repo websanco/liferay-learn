@@ -1,8 +1,8 @@
 # モデルリスナーの作成
 
-モデルリスナーは、指定されたモデルへの変更を通知する永続メソッドの呼び出しをリッスンします（ `update` または `add` メソッドなど）。 モデルリスナーが使用するメソッドのほとんどは、DXPの[`BasePersistenceImpl`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/service/persistence/impl/BasePersistenceImpl.java)クラスから呼び出されます。 すぐに使えるエンティティ（ `JournalArticle` または `AssetEntry`）、または独自のエンティティのモデルリスナーを定義できます。
+モデルリスナーは、指定されたモデルへの変更を通知する永続メソッドの呼び出しをリッスンします（ `update` または `add` メソッドなど）。 モデルリスナーが使用するメソッドのほとんどは、DXPの [`BasePersistenceImpl`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/service/persistence/impl/BasePersistenceImpl.java) クラスから呼び出されます。 すぐに使えるエンティティ（ `JournalArticle` または `AssetEntry`）、または独自のエンティティのモデルリスナーを定義できます。
 
-モデルリスナーを追加するには、 [`ModelListener`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/model/ModelListener.java)インターフェイスを実装します。
+モデルリスナーを追加するには、 [`ModelListener`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/model/ModelListener.java) インターフェイスを実装します。
 
 ここでは、モデルリスナーの作成方法を学習します。
 
@@ -12,6 +12,8 @@
 1. [イベントを宣言する](#declare-the-event)
 1. [ビジネスロジックを実装する](#implement-your-business-logic)
 1. [展開とテスト](#deploy-and-test)
+
+<a name="実行中のモデルリスナーを調べる" />
 
 ## 実行中のモデルリスナーを調べる
 
@@ -39,7 +41,7 @@
     ./gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)
     ```
 
-    ```note::
+    ```{note}
       このコマンドは、デプロイされたjarをDockerコンテナの/opt/liferay/osgi/modulesにコピーするのと同じです。
     ```
 
@@ -49,11 +51,11 @@
     STARTED com.acme.n4g6.impl_1.0.0
     ```
 
-1. 追加されたログメッセージを表示して、サンプルモデルリスナーが追加されたことを確認します。 ブラウザーで `http://localhost/8080` を開き、［サイト］メニュー→ _コンテンツ & データ_ → _Webコンテンツ_へ行きます。
+1. 追加されたログメッセージを表示して、サンプルモデルリスナーが追加されたことを確認します。 ブラウザーで `http://localhost/8080` を開き、［サイト］メニュー→ **コンテンツ & データ** → **Webコンテンツ** へ行きます。
 
    ![Webコンテンツ管理ページは、Webコンテンツを作成するためのインターフェースです。](./creating-a-model-listener/images/01.png)
 
-   追加ボタンをクリックして、 ![追加](../../images/icon-add.png) _［基本Webコンテンツ］_をクリックして新しい記事を追加します。 タイトルとコンテンツを入力してください。次に、［ _Publish_］をクリックします。 コンソールに警告メッセージが表示されます。
+   追加ボタンをクリックして、 ![追加](../../images/icon-add.png)［**基本Webコンテンツ**］ をクリックして新しい記事を追加します。 タイトルとコンテンツを入力してください。次に、［**Publish**］をクリックします。 コンソールに警告メッセージが表示されます。
 
    ```
    2020-03-17 23:14:56.301 WARN  [http-nio-8080-exec-5][N4G6ModelListener:23] Added journal article 20478.
@@ -61,25 +63,31 @@
 
 　 `ModelListener`を実装する新しいモデルリスナーが正常に構築され、デプロイされました。
 
-ご覧のとおり、モデルリスナーは特定の *モデル**イベント* をリッスンします。 このリスナーの場合、イベントは `onAfterCreate`です。 コンテンツが作成されると、リスナーがイベントを「聞き取り」、イベントが発生するとアクションが発生します。
+ご覧のとおり、モデルリスナーは特定の **モデル***イベント** をリッスンします。 このリスナーの場合、イベントは `onAfterCreate`です。 コンテンツが作成されると、リスナーがイベントを「聞き取り」、イベントが発生するとアクションが発生します。
 
 次に、別のイベントをリッスンするようにサンプルを変更します。
 
+<a name="モデルクラスとイベントを特定する" />
+
 ## モデルクラスとイベントを特定する
 
-Liferay DXPのモデルクラスは、 [Service Builder](../../developing-applications/data-frameworks/service-builder.md)によって生成されます 。 モデルインターフェイスは、任意のアプリケーションの `-api` モジュールにあります。 例えば、掲示板メッセージのモデルインターフェイスを見つけるには、Liferay DXPのソースコードで[`modules/apps/message-boards/message-boards-api`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/message-boards/message-boards-api)プロジェクトを探してください。
+Liferay DXPのモデルクラスは、 [Service Builder](../../developing-applications/data-frameworks/service-builder.md)によって生成されます 。 モデルインターフェイスは、任意のアプリケーションの `-api` モジュールにあります。 例えば、掲示板メッセージのモデルインターフェイスを見つけるには、Liferay DXPのソースコードで [`modules/apps/message-boards/message-boards-api`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/message-boards/message-boards-api) プロジェクトを探してください。
 
-このルールの例外はコアモデルです。 `User`などのコアクラスのモデルリスナーを作成する場合、そのインターフェイスはLiferay DXPのソースコードの[`portal-kernel`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel)フォルダにあります。
+このルールの例外はコアモデルです。 `User`などのコアクラスのモデルリスナーを作成する場合、そのインターフェイスはLiferay DXPのソースコードの [`portal-kernel`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel) フォルダにあります。
 
-作成するモデルリスナーは、メッセージボードメッセージ用です。 メッセージが削除されると、レポートをログに出力するメッセージをトリガーします。 可能なイベントのリストについては、 [のJavadocを参照してくださいBaseModelListener](https://learn.liferay.com/reference/latest/en/dxp/javadocs/portal-kernel/com/liferay/portal/kernel/model/BaseModelListener.html)。
+作成するモデルリスナーは、メッセージボードメッセージ用です。 メッセージが削除されると、レポートをログに出力するメッセージをトリガーします。 可能なイベントのリストについては、 [のJavadocを参照してくださいBaseModelListener](https://learn.liferay.com/reference/latest/en/dxp/javadocs/portal-kernel/com/liferay/portal/kernel/model/BaseModelListener.html) 。
+
+<a name="モデルリスナーの動作" />
 
 ## モデルリスナーの動作
 
-モデルリスナーは、特定のエンティティに対して[`ModelListener`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/model/ModelListener.java)インターフェイスを実装します。 モデルリスナーには、エンティティが作成、更新、または削除される前または後に実行するコードを含めることができます。 これらのメソッドはすべて、 `BasePersistenceImpl` クラスから呼び出されます。作成または更新されたエンティティのコードは `BasePersistenceImpl`の `update` メソッドから呼び出され、削除されたエンティティのコードは `BasePersistenceImpl``remove` メソッドから呼び出されます。
+モデルリスナーは、特定のエンティティに対して [`ModelListener`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/model/ModelListener.java) インターフェイスを実装します。 モデルリスナーには、エンティティが作成、更新、または削除される前または後に実行するコードを含めることができます。 これらのメソッドはすべて、 `BasePersistenceImpl` クラスから呼び出されます。作成または更新されたエンティティのコードは `BasePersistenceImpl`の `update` メソッドから呼び出され、削除されたエンティティのコードは `BasePersistenceImpl``remove` メソッドから呼び出されます。
 
-モデルリスナーには、他の種類の関連エンティティが追加または削除される前または後に実行するコードを含めることもできます。 これらのメソッドは、 [`TableMapperImpl`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/internal/service/persistence/TableMapperImpl.java)の`_addTableMapping`メソッドから呼び出されます。
+モデルリスナーには、他の種類の関連エンティティが追加または削除される前または後に実行するコードを含めることもできます。 これらのメソッドは、 [`TableMapperImpl`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/internal/service/persistence/TableMapperImpl.java) の`_addTableMapping`メソッドから呼び出されます。
 
 次に、プロジェクトを変更して、プロジェクトが `MBMessage` クラスと `onBeforeRemove` イベントで動作するようにします。
+
+<a name="モデルを宣言する" />
 
 ## モデルを宣言する
 
@@ -102,6 +110,8 @@ Liferay DXPのモデルクラスは、 [Service Builder](../../developing-applic
 
    このモデルリスナーは登録されると、定義されたモデルのイベントをリッスンします。 モデルは、標準のエンティティまたはカスタムエンティティにすることができます。 `BaseModelListener` クラスを拡張すると、 `ModelListener`のメソッドごとにデフォルトの空の実装が提供されるため、コードはクリーンなままで、必要なイベントのみのオーバーライドが含まれます。
 
+<a name="イベントを宣言する" />
+
 ## イベントを宣言する
 
 次に、必要なイベントの実装をオーバーライドします。
@@ -117,6 +127,8 @@ Liferay DXPのモデルクラスは、 [Service Builder](../../developing-applic
    ```java
    public void onBeforeRemove(MBMessage model)
    ```
+
+<a name="ビジネスロジックを実装する" />
 
 ## ビジネスロジックを実装する
 
@@ -140,6 +152,8 @@ Liferay DXPのモデルクラスは、 [Service Builder](../../developing-applic
 
 1. 新しいモデルリスナーを保存します。
 
+<a name="デプロイとテスト" />
+
 ## デプロイとテスト
 
 上記と同じように、モデルリスナーをビルドしてデプロイできます。
@@ -150,15 +164,15 @@ Liferay DXPのモデルクラスは、 [Service Builder](../../developing-applic
 
 メッセージボードメッセージを追加してから削除して、リスナーをテストします。
 
-1. *［プロダクトメニュー］* &rarr; *［Content & Data］* &rarr; *［掲示板］*に移動します。
+1. ［**プロダクトメニュー**］ &rarr; ［**Content & Data**］ &rarr; ［**掲示板**］ に移動します。
 
-1. ［追加 ![Add](../../images/icon-add.png) ］ボタンをクリックし、件名と本文を入力して、［ *公開*］をクリックします。
+1. ［追加 ![Add](../../images/icon-add.png) ］ボタンをクリックし、件名と本文を入力して、［**公開**］をクリックします。
 
-1. メニューから［ *Message Boards* ］をもう一度クリックして、メッセージを表示します。 ［Action ![Action](../../images/icon-actions.png) ］ボタンをクリックし、［ *Move to Recycle Bin*］を選択します。 メッセージはリサイクルされただけなので、まだログにメッセージが表示されていないことに注意してください。
+1. メニューから［**Message Boards**］をもう一度クリックして、メッセージを表示します。 ［Action ![Action](../../images/icon-actions.png) ］ボタンをクリックし、［**Move to Recycle Bin**］を選択します。 メッセージはリサイクルされただけなので、まだログにメッセージが表示されていないことに注意してください。
 
-1. プロダクトメニューから［ *ごみ箱* ］をクリックすると、メッセージが表示されます。
+1. プロダクトメニューから［**ごみ箱**］をクリックすると、メッセージが表示されます。
 
-1. ［Action ![Action](../../images/icon-actions.png) ］ボタンをクリックし、［ *Delete*］を選択します。 削除を確認します。
+1. ［Action ![Action](../../images/icon-actions.png) ］ボタンをクリックし、［**Delete**］を選択します。 削除を確認します。
 
 1. ログを確認してください。 メッセージが表示されます：
 
@@ -166,9 +180,13 @@ Liferay DXPのモデルクラスは、 [Service Builder](../../developing-applic
    2020-04-17 21:10:31.080 WARN  [http-nio-8080-exec-5][N4G6ModelListener:19] Warning! Message This is a Test Message was just removed.
    ```
 
+<a name="まとめ" />
+
 ## まとめ
 
 　 `ModelListener` インターフェースを実装する方法を理解し、Liferay DXPに新しいモデルリスナーを追加しました。
+
+<a name="関連トピック" />
 
 ## 関連トピック
 
