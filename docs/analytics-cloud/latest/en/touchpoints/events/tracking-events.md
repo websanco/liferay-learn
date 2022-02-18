@@ -5,7 +5,7 @@ You can track events for analysis by adding JavaScript code to your Liferay DXP 
 To do this, use `Analytics.track` in your JavaScript code and define your event name and attributes.
 
 | Field | Description |
-| ----- | ----------- |
+| :--- | :--- |
 | `event` | The name of your event. We recommend using a human-readable name that can be easily understood for when doing events analysis (e.g. "Add to Cart Click") |
 | `attributes` | The different attributes of the event you wish to track (e.g. price, product name, quantity, etc.) |
 
@@ -25,7 +25,7 @@ Analytics.track("Add to Cart Click",{
 The following data typecasts can be set for attributes: Boolean, Date, Duration, Number, and String. Analytics Cloud automatically tries to detect and cast the datatype based on the first data collected for that attribute. Make changes to the typecast if necessary in [Definitions for Event Attributes](../../workspace-data/definitions/definitions-for-event-attributes.md) found in the settings page of Analytics Cloud.
 
 | Attribute Type | Description |
-| -------------- | ----------- |
+| :--- | :--- |
 | `Boolean` | `true` or `false`, case insensitive |
 | `Date` | ISO-8061 format (yyyy-MM-dd'T'HH:mm:ss.SSSX) |
 | `Duration` | In milliseconds, non-negative |
