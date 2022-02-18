@@ -53,11 +53,11 @@ LiferayのWebインターフェイスと同様に、ヘッドレスAPIを介し�
 
 `flatten`パラメーターは、階層APIの場合、階層コンテキストからリクエストを実行します。 これにより、たとえば、関連する組織を見つけるために組織図をトラバースする必要がなく、「マーケティング」と呼ばれる組織で検索を実行できます。
 
-これらのパラメーターのいずれかを使用する方法の詳細は、[API Headers Reference](./consuming-apis/api-headers-reference.md)を参照してください。
+これらのパラメーターのいずれかを使用する方法の詳細は、[APIヘッダーリファレンス](./consuming-apis/api-headers-reference.md)を参照してください。
 
 <a name="関連情報" />
 
 ## 関連情報
 
-- [Consuming Rest Services](../headless-delivery/consuming-apis/consuming-rest-services.md)
+- [RESTサービスの使用](../headless-delivery/consuming-apis/consuming-rest-services.md)
 - [GraphQL APIの使用](../headless-delivery/consuming-apis/consuming-graphql-apis.md)
