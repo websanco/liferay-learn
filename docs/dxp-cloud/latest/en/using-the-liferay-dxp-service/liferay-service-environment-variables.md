@@ -41,7 +41,7 @@ For example, taking the portal property name `setup.wizard.enabled`, then using 
 The following environment variables may be set through the environment variables UI or the Liferay service's `LCP.json` file:
 
 Name                                  | Default Value | Description  |
-------------------------------------- | ------------- | ------------ |
+:--- | :--- | :--- |
 `LCP_DATABASE_PORT` | `3306` | Sets the database port configuration used by the readOnly user. Overrides the `DATABASE_SERVICE_PORT` infra environment variable if it is defined. |
 `LCP_LIFERAY_JDBC_CONNECTION_URL` |  | The URL used to make the database connection. This may be used to directly set the database name and host. The value should start with `jdbc:mysql://`. |
 `LCP_LIFERAY_JDBC_DRIVER` |  | Allows for specifying the MySQL driver the Liferay service uses. In DXP versions 7.0 and 7.1, this is also used for the cluster configuration. |
@@ -58,7 +58,7 @@ If you are still using version `3.x.x` services, then use `LIFERAY_JAVA_OPTS` in
 These variables must instead be [defined as Secrets](../infrastructure-and-operations/security/managing-secure-environment-variables-with-secrets.md) for the Liferay service:
 
 Name                                  | Default Value | Description  |
-------------------------------------- | ------------- | ------------ |
+:--- | :--- | :--- |
 `LCP_PROJECT_MONITOR_DYNATRACE_TOKEN` |  | A string of characters that you can find in your Dynatrace account at *Deploy Dynatrace* &rarr; *Start installation* &rarr; *Set up PaaS monitoring* &rarr; *Installer Download*. |
 `LCP_SECRET_DATABASE_NAME` |   | The database name used for database connections (jdbc, jdbc ping, and read-only user connections). |
 `LCP_SECRET_DATABASE_PASSWORD` |  |  The database password used only for the jdbc (and jdbc ping) configurations. |

@@ -132,7 +132,7 @@ DXP CloudでのLiferay DXPのクラスタリングは、Liferay DXPでのクラ�
 ## 環境変数リファレンス
 
 | 名前                                     | デフォルト値 | 説明                                                                                                 |
-| -------------------------------------- | ------ | -------------------------------------------------------------------------------------------------- |
+| :--- | :--- | :--- |
 | `LCP_PROJECT_LIFERAY_CLUSTER_ENABLED`  | `true` | ノード間のクラスタリングと通信を有効にするかどうか。                                                                         |
 | `LCP_PROJECT_MONITOR_DYNATRACE_TENANT` |        | 8文字の文字列。 Dynatrace SaaSアカウントのURL（プレフィックス）の一部です。                                                    |
 | `LCP_PROJECT_MONITOR_DYNATRACE_TOKEN`  |        | Dynatraceアカウントの *22文字の文字列Dynatrace* 導入</em> → *インストールの開始* → *PaaSモニタリングのセットアップ* → *インストーラーのダウンロード* |

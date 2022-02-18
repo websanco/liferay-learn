@@ -123,7 +123,7 @@ Lastly, set environment variables in the Jenkins service's to point to your new 
 1. Configure the following environment variables:
 
 | Name | Value |
-| ---  | ---   |
+| :--- | :--- |
 | `LCP_CI_SCM_PROVIDER` | bitbucket  |
 | `LCP_CI_SCM_REPOSITORY_OWNER` | [repo owner] |
 | `LCP_CI_SCM_REPOSITORY_NAME` | [repo name] |
@@ -140,7 +140,7 @@ After updating these environment variables, the Jenkins service will restart. An
 To use a private Bitbucket server, you must set an additional environment variable in your Jenkins service:
 
 | Name | Value |
-| ---  | ---   |
+| :--- | :--- |
 | `LCP_CI_SCM_SERVER_HOST` | [private host URL] |
 
 Set the `LCP_CI_SCM_SERVER_HOST` variable to the base URL of your private Bitbucket server (for example, `http://private.bitbucket.org/`). This sets the server URL that CI uses to retrieve your code base when generating builds and linking to your repository's branches. By default, CI uses `https://bitbucket.org/` as the base URL for Bitbucket.

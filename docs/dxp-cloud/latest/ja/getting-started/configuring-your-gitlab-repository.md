@@ -102,7 +102,7 @@ GitHub リポジトリの作成、クローン、プッシュについてのヘ�
 3.  以下の環境変数を設定します。
 
 | 名前                            | 値                     |
-| ----------------------------- | --------------------- |
+| :--- | :--- |
 | `LCP_CI_SCM_PROVIDER`         | gitlab                |
 | `LCP_CI_SCM_REPOSITORY_OWNER` | \[repo\_owner\]   |
 | `LCP_CI_SCM_REPOSITORY_NAME`  | \ [リポジトリ\ _name \] |

@@ -116,7 +116,7 @@ If you are using version 3.x.x services, then these files instead belong in the 
 The following environment variables are only used in the default Jenkinsfile. To see what they do please refer to [Jenkins documentation regarding pipeline options](https://jenkins.io/doc/book/pipeline/syntax/#options).
 
 Name                                          | Default Value   | Description |
---------------------------------------------- | --------------- | ----------- |
+:--- | :--- | :--- |
 `LCP_CI_ARTIFACT_DAYS_TO_KEEP`        | `-1`            | Number of days that artifacts are stored |
 `LCP_CI_ARTIFACT_NUM_TO_KEEP`         | `1`             | Set the number of recent builds for which *artifacts* and *stashes* are preserved. |
 `LCP_CI_BUILD_DAYS_TO_KEEP`           | `14`            | Number of days that builds are stored |

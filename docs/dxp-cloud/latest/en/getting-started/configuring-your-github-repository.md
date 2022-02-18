@@ -61,7 +61,7 @@ Set these environment variables in the Jenkins service to point to your new repo
 1. Configure the following environment variables:
 
 | Name | Value |
-| ---  | ---   |
+| :--- | :--- |
 | `LCP_CI_SCM_PROVIDER` | github  |
 | `LCP_CI_SCM_REPOSITORY_OWNER` | [repo_owner] |
 | `LCP_CI_SCM_REPOSITORY_NAME` | [repo_name] |

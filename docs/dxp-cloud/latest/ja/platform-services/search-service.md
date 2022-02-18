@@ -33,7 +33,7 @@ DXP Cloudのサービスはデフォルトで適切に機能するように微�
 Elastisearchのすべての環境変数とその他の設定形式は、 [公式Elastisearchドキュメント](https://www.elastic.co/guide/index.html)ます。 このような設定と環境変数は、それぞれ `config` ディレクトリと `LCP.json`で設定できます。 例は次のとおりです。
 
 | 名前             | Value           | 説明              |
-| -------------- | --------------- | --------------- |
+| :--- | :--- | :--- |
 | `ES_JAVA_OPTS` | `-Xms4g -Xmx4g` | ESインスタンスのJava設定 |
 
 ## 追加情報

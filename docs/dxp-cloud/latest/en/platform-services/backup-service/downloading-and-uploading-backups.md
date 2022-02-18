@@ -103,7 +103,7 @@ The API for downloading a database contains an endpoint that returns a `.gz` fil
 #### Parameters
 
 Name | Type     | Required |
----- | -------- | -------- |
+:--- | :--- | :--- |
 `id` | `String` | Yes      |
 
 #### curl Example
@@ -126,7 +126,7 @@ The API for downloading a data volume contains an endpoint that returns a `.tgz`
 #### Parameters
 
 Name | Type     | Required |
----- | -------- | -------- |
+:--- | :--- | :--- |
 `id` | `String` | Yes      |
 
 #### curl Example
@@ -155,7 +155,7 @@ Before you can use the upload API, you must compress the database dump and docum
 **Parameters**
 
 Name       | Type   | Required |
----------- | ------ | -------- |
+:--- | :--- | :--- |
 `database` | `File` | Yes      |
 `volume`   | `File` | Yes      |
 

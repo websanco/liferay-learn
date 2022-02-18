@@ -11,7 +11,7 @@ See the [Database service limitations](../../reference/platform-limitations.md#d
 You can set these environment variables to configure the database service. When setting `LCP_MASTER_USER_NAME`, `LCP_MASTER_USER_PASSWORD`, and `LCP_DBNAME`, make sure to use the same values for other services that depend on the database service (e.g., the backup and Liferay DXP services). You should set these variables before the first deployment. If a build is generated with new values for these variables, subsequent deployments will fail. It may be viable in a development environment to delete services and update the `LCP.json` file with new values for these variables, but this isn't viable in a production environment.
 
 Name                       | Default Value              | Description      |
--------------------------- | -------------------------- | ---------------- |
+:--- | :--- | :--- |
 `LCP_DBNAME`               | `lportal`                  | Database name.   |
 `LCP_MASTER_USER_NAME`     | `dxpcloud`                 | Master username. |
 `LCP_MASTER_USER_PASSWORD` | `LCP_PROJECT_MASTER_TOKEN` | Master password. |
@@ -21,7 +21,7 @@ Name                       | Default Value              | Description      |
 Your DXP Cloud environment's database service occasionally requires downtime for scheduled maintenance, typically for about two minutes. You can configure a preferred window for this maintenance to take place to reduce the downtime's impact. By default, no specific time preference is defined.
 
 Name                      | Acceptable Values  | Description                                                             |
-------------------------- | ------------------ | ----------------------------------------------------------------------- |
+:--- | :--- | :--- |
 `LCP_GCP_MW_DAY`          | `1` through `7`    | Preferred day of the week (Monday (1) through Sunday (7), in UTC time). |
 `LCP_GCP_MW_HOUR`         | `0` through `23`   | Preferred hour of the day (in UTC time).                                |
 `LCP_GCP_MW_UPDATE_TRACK` | `canary`, `stable` | Set `canary` to update earlier, up to a week before other environments. | 
@@ -36,7 +36,7 @@ As noted in Google's documentation, some database flag settings can affect insta
 ```
 
 Name                                   | Acceptable Values | Default Value |
--------------------------------------- | ----------------- | ------------- |
+:--- | :--- | :--- |
 `LCP_GCP_DATABASE_FLAG_GENERAL_LOG`    | `on, off`         | `off`         |
 `LCP_GCP_DATABASE_FLAG_SLOW_QUERY_LOG` | `on, off`         | `off`         |
 

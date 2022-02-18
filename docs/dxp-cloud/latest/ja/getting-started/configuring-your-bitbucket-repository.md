@@ -115,7 +115,7 @@ Jenkinsfile をカスタマイズしている場合は、以下のガイドに�
 3.  次の環境変数を設定します。
 
 | 名前                            | 値                      |
-| ----------------------------- | ---------------------- |
+| :--- | :--- |
 | `LCP_CI_SCM_PROVIDER`         | bitbucket              |
 | `LCP_CI_SCM_REPOSITORY_OWNER` | \[repo\_owner\]    |
 | `LCP_CI_SCM_REPOSITORY_NAME`  | \[repo\_name\]     |
