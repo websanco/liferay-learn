@@ -222,7 +222,7 @@ liferay.workspace.product=portal-7.3-ga3
 最後に、依存性のあるバージョンはありません。 これは、ワークスペースがリリースに関連するLiferay製品のAPIバージョンを適用するためです。
 
 ```{note}
-詳細については、[Configuring Dependencies](./configuring-dependencies.md)を参照してください。
+詳細については、[依存関係の構成](./configuring-dependencies.md)を参照してください。
 ```
 
 ### メタデータの指定
@@ -269,10 +269,10 @@ Bndは`bnd.bnd`ファイルからすべてのヘッダーをプロパゲート�
 
 これで、モジュールプロジェクトがどのようなものか、ビルドしてデプロイする方法、そしてランタイム時にモジュールを検査する方法をマスターしました。
 
-モジュールは、`Greeter` APIのようなAPIを介して、互いの機能を活用します。 LiferayはOSGiサービスを使用して、APISを定義、実装、消費します。 次に、[APIs as OSGi Services](./apis-as-osgi-services.md)で、OSGiサービスを使用した`Greeter` APIの **実装** について説明します。
+モジュールは、`Greeter` APIのようなAPIを介して、互いの機能を活用します。 LiferayはOSGiサービスを使用して、APISを定義、実装、消費します。 次に、[依存関係の構成](./apis-as-osgi-services.md)で、OSGiサービスを使用した`Greeter` APIの **実装** について説明します。
 
 ```{note}
-モジュールのライフサイクルの詳細については、[Module Lifecycle](../architecture/module-lifecycle.md)を参照してください。
+モジュールのライフサイクルの詳細については、[モジュールのライフサイクル](../architecture/module-lifecycle.md)を参照してください。
 ```
 
 <a name="追加情報" />

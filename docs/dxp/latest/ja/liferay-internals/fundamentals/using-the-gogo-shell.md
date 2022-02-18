@@ -46,4 +46,4 @@ Gogoシェルは非常に強力で、プラットフォームのコア機能を�
 
 ## まとめ
 
-Gogoシェルを実行する方法がわかったので、使用可能な[Gogoシェルコマンド](./using-the-gogo-shell/gogo-shell-commands.md)を調べます。 開発者環境で作業をしている場合は、コマンドラインからGogoシェルを使用することを検討してください。 詳しくは、[Command Line Gogo Shell](./using-the-gogo-shell/command-line-gogo-shell.md)を参照してください。
+Gogoシェルを実行する方法がわかったので、使用可能な[Gogoシェルコマンド](./using-the-gogo-shell/gogo-shell-commands.md)を調べます。 開発者環境で作業をしている場合は、コマンドラインからGogoシェルを使用することを検討してください。 詳しくは、[コマンドラインGogo シェル](./using-the-gogo-shell/command-line-gogo-shell.md)を参照してください。
