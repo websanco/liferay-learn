@@ -54,8 +54,50 @@ Once you've [generated model, persistence, and service code](./service-builder-b
 
 ## Update the Service Layer
 
+Extend the local service by adding methods that can add, update and delete `E4G5Entry` entries.
+
 ### Implement the Add Method
+
+1. Declare an `add*` method with parameters for creating an entity.
+
+```{literalinclude} ./business-logic-with-service-builder/resources/liferay-e4g5.zip/e4g5-service/src/main/java/com/acme/e4g5/service/impl/E4G5EntryLocalServiceImpl.java
+:language: java
+:lines: 34-44
+```
+
+1. The `*Persistence` class associated with your entity has a `create()` method that constructs an entity instance with the given ID. Every `*BaseLocalServiceImpl` has a `counterLocalService` object for the entity. Invoke the counter service's `increment()` method to generate a primary ket for your entity instance.
+
+1. Use the entity's setter methods to populate your entity's attributes. The sample sets the two attributes `name` and `description`.
+
+1. Invoke the `update()` method of the `*Persistence` class, passing in the entity object.
 
 ### Implement the Update Method
 
+1. Declare an `update*` method with parameters for updating an entity. The sample receives the two attributes `name` and `description` and also receives `e4g5EntryId`.
+
+```{literalinclude} ./business-logic-with-service-builder/resources/liferay-e4g5.zip/e4g5-service/src/main/java/com/acme/e4g5/service/impl/E4G5EntryLocalServiceImpl.java
+:language: java
+:lines: 54-65
+```
+
+1. Use the `findByPrimaryKey()` method of the `*Persistence` class to retrieve the entity instance by entry ID.
+
+1. Use the entity's setter methods to populate your entity's attributes.
+
+1. Invoke the `update()` method of the `*Persistence` class, passing in the entity object.
+
 ### Implement the Delete Method
+
+1. Declare a `delete*` method that receives the entry ID of the entity.
+
+```{literalinclude} ./business-logic-with-service-builder/resources/liferay-e4g5.zip/e4g5-service/src/main/java/com/acme/e4g5/service/impl/E4G5EntryLocalServiceImpl.java
+:language: java
+:lines: 46-52
+```
+
+1. Invoke the `delete()` method of the `*Persistence` class, passing in the entity object.
+
+After implementing your `add*`, `update*`, and `delete*` methods, run Service Builder to propagate your new service methods to the `*LocalService` interface.
+
+## Add Actions to Your Portlet
+
