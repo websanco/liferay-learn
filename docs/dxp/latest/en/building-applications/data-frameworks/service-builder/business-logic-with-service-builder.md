@@ -99,5 +99,30 @@ Extend the local service by adding methods that can add, update and delete `E4G5
 
 After implementing your `add*`, `update*`, and `delete*` methods, run Service Builder to propagate your new service methods to the `*LocalService` interface.
 
-## Add Actions to Your Portlet
+## Integrate the Backend
 
+Now implement the service methods you created into your web module with [portlet actions](../../developing-a-java-web-application/using-mvc/invoking-actions-with-mvc-portlet.md). 
+
+### Portlet Actions
+
+You can use an [MVC Portlet](../../developing-a-java-web-application/using-mvc.md) for your web module. The sample project's Portlet has entry actions for `add`, `update`, and `delete`.
+
+```{literalinclude} ./business-logic-with-service-builder/resources/liferay-e4g5.zip/e4g5-web/src/main/java/com/acme/e4g5/web/internal/portlet/E4G5Portlet.java
+:language: java
+:lines: 26-51
+```
+
+Each method takes an `ActionRequest` and `ActionResponse` parameter. The `ActionRequest` receives information from the view layer and the `ActionResponse` can be used to pass information back to the view layer.
+
+The `addE4G5Entry()` method receives a name and description and calls the service to add the entry. The `updateE4G5Entry()` method receives an entry ID, name, and description and calls the service to updated a specific entry. The `deleteE4G5Entry()` method receives an entry ID and calls the service to delete the entry.
+
+### Map the Actions in the JSP
+
+Now map the action methods you created into your JSP. 
+
+```{literalinclude} ./business-logic-with-service-builder/resources/liferay-e4g5.zip/e4g5-web/src/main/resources/META-INF/resources/view.jsp
+:language: jsp
+:lines: 43-77
+```
+
+The JSP binds actions to UI components using the tag library's `portlet:actionURL` tag. Note that the `portlet:actionURL`'s `name` attribute must match each of the action methods created in the portlet. The `var` attribute assigns the portlet action URL to an arbitrary variable. The `<aui:form>` renders text fields for user input. On submitting the form, its values are passed along with the `ActionRequest` to the portlet method.
