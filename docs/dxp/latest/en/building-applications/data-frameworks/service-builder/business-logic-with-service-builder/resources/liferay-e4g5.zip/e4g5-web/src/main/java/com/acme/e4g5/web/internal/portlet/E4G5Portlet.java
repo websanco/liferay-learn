@@ -32,11 +32,12 @@ public class E4G5Portlet extends MVCPortlet {
 			ParamUtil.getString(actionRequest, "name"));
 	}
 
-	public void deleteE4G5Entry(ActionRequest request, ActionResponse response)
+	public void deleteE4G5Entry(
+			ActionRequest actionRequest, ActionResponse actionResponse)
 		throws PortalException {
 
 		_e4g5EntryLocalService.deleteE4G5Entry(
-			ParamUtil.getLong(request, "e4g5EntryId"));
+			ParamUtil.getLong(actionRequest, "e4g5EntryId"));
 	}
 
 	public void updateE4G5Entry(
