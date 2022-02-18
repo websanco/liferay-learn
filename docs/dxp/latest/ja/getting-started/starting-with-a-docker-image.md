@@ -6,52 +6,58 @@ Liferayの最新バージョンは、Dockerイメージとして入手できま�
 Dockerをお持ちではありませんか？ まずは [Linux](https://docs.docker.com/install/linux/docker-ce/ubuntu/) | [Windows](https://docs.docker.com/docker-for-windows/install/) | [OSX](https://docs.docker.com/docker-for-mac/install/) に移動してください。
 ```
 
-## Liferayを使ってみる
+<a name="get-started-with-liferay-portal" />
 
-Liferay Portal CEは、説得力のある柔軟なWebエクスペリエンスを構築するための、オープンソースでコミュニティがサポートするプラットフォームです。
+## Liferay Portalを始める
 
-1.  Dockerイメージを取得します。
+Liferay Portalは、説得力のある柔軟なWebエクスペリエンスを構築するための、オープンソースでコミュニティがサポートするプラットフォームです。
 
-    ``` bash
-    docker pull liferay/portal:7.3.1-ga2
+1. Dockerイメージを取得します。
+
+    ```bash
+    docker pull [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
     ```
 
-2.  Dockerイメージを取得します。
+1. Dockerイメージを取得します。
 
-    ``` bash
-    docker run -it -p 8080:8080 liferay/portal:7.3.1-ga2
+    ```bash
+    docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
     ```
 
     ```{tip}
-    Wait until you see `org.apache.catalina.startup.Catalina.start Server startup in [x] milliseconds` to indicate startup completion.
+    起動の完了を示す「org.apache.catalina.startup.Catalina.start Server startup in ［x］ milliseconds」が表示されるまで待ちます。
     ```
 
-3.  ブラウザで`https://localhost:8080`を開きます。
+1. ブラウザで`https://localhost:8080`を開きます。
 
     ![Liferay ポータルの最初のランディングページ。](./starting-with-a-docker-image/images/01.png)
 
-### Liferayを使ってみる
+<a name="get-started-with-liferay-dxp" />
+
+## Liferayを使ってみる
 
 Liferay DXPは、世界中で使用されている商用サポート済みのエンタープライズ対応プラットフォームであり、Liferayポータルの基盤の上に構築されています。 Dockerイメージから始めるのは簡単で、トライアルライセンスが含まれています。
 
-1.  Dockerイメージを取得します。
+1. Dockerイメージを取得します。
 
-    ``` bash
-    docker pull liferay/dxp:7.2.10-dxp-4
+    ```bash
+    docker pull [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
     ```
 
-2.  Dockerイメージを取得します。
+1. Dockerイメージを取得します。
 
-    ``` bash
-    docker run -it -p 8080:8080 liferay/dxp:7.2.10-dxp-4
+    ```bash
+    docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
     ```
 
-3.  ブラウザで`https://localhost:8080`を開きます。
+1. ブラウザで`https://localhost:8080`を開きます。
+
+<a name="whats-next" />
 
 ## 次のステップ
 
 引き続きスタートガイドを進め、[管理者アカウント](./introduction-to-the-admin-account.md)を使用して初めてログインする方法を学習します。
 
-状況をチェックする以上のことをしますか？ 詳細については、[Installing a Liferay DXP Tomcat Bundle](../installation-and-upgrades/installing-liferay/installing-a-liferay-tomcat-bundle.md)を参照してください。
+状況をチェックする以上のことをしますか？ 詳細は、[Liferay-Tomcatバンドルのインストール](../installation-and-upgrades/installing-liferay/installing-a-liferay-tomcat-bundle.md)を参照してください。
 
-Liferay DXPで構築できるものについて詳しく知りたいですか？ [Build Solutions on DXP](../installation-and-upgrades/installing-liferay/using-liferay-docker-images.md)を参照してください。
+[Dockerイメージの使用](../installation-and-upgrades/installing-liferay/using-liferay-docker-images/docker-container-basics.md)に関する詳細をご覧ください。

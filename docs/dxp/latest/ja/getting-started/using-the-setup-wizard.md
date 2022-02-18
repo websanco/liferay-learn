@@ -1,3 +1,3 @@
-# Using the Setup Wizard
+# セットアップウィザードの使用
 
 近日公開！
