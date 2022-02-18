@@ -3,8 +3,10 @@
 ```{toctree}
 :maxdepth: 3
 
+remote-apps/understanding-remote-app-types.md
 remote-apps/creating-a-liferay-remote-app.md
 remote-apps/using-routes-with-remote-apps.md
+remote-apps/remote-apps-ui-reference.md
 ```
 
 Remote Apps is an application for extending Liferay DXP without developing and deploying OSGi modules to the Liferay server. It uses Liferay's front-end infrastructure to integrate external JS applications with the platform and render them as Page widgets. Use Remote Apps to integrate applications from any domain.
