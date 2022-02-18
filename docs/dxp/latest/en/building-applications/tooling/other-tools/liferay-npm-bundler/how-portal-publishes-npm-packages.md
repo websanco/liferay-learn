@@ -64,11 +64,11 @@ Using the example above, for each group of canonical URLs referring to the same 
 
 * [http://localhost/o/js/resolved-module/my-bundle-package@1.0.0/lib/index.js](http://localhost/o/js/resolved-module/my-bundle-package@1.0.0/lib/index.js)
 
-* [http://localhost/o/js/resolved-module/my-bundle-package$isobject@2.1.0/index.js](http://localhost/o/js/resolved-module/my-bundle-package$isobject@2.1.0/index.js)
+* [http://localhost/o/js/resolved-module/my-bundle-package\$isobject@2.1.0/index.js](http://localhost/o/js/resolved-module/my-bundle-package\$isobject@2.1.0/index.js)
 
-* [http://localhost/o/js/resolved-module/my-bundle-package$isarray@1.0.0/index.js](http://localhost/o/js/resolved-module/my-bundle-package$isarray@1.0.0/index.js)
+* [http://localhost/o/js/resolved-module/my-bundle-package\$isarray@1.0.0/index.js](http://localhost/o/js/resolved-module/my-bundle-package\$isarray@1.0.0/index.js)
 
-* [http://localhost/o/js/resolved-module/my-bundle-package$isarray@2.0.0/index.js](http://localhost/o/js/resolved-module/my-bundle-package$isarray@2.0.0/index.js)
+* [http://localhost/o/js/resolved-module/my-bundle-package\$isarray@2.0.0/index.js](http://localhost/o/js/resolved-module/my-bundle-package\$isarray@2.0.0/index.js)
 
 ```{note}
 The OSGi bundle ID (598 in the example) is removed and module is replaced by `resolved-module`.
