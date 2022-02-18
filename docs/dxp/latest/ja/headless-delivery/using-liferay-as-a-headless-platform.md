@@ -2,24 +2,26 @@
 
 Liferayでは、Webインターフェイスで利用可能なアクションと同じ種類のアクションを実行する一連のAPIを提供しています。 これは、モバイルアプリケーション、カスタムWebアプリケーション、自動化されたプロセスの作成など、機械可読形式でデータを取得する必要がある場合に不可欠です。 すぐに使用できるインターフェイスよりも多くの労力を要しますが、仕事を進める上でさらに強力な機能が備わっています。
 
+<a name="接続する方法" />
+
 ## 接続する方法
 
 クライアントがWeb APIを介してLiferay DXPに接続するには、3つの異なるアプローチがあります。
-* OpenAPIの仕様に準拠した[__ヘッドレスREST API__](#headless-rest-apis)
-* GraphQLの仕様に準拠した[__GraphQL API__](#graphql-api)
-* サービスビルダによって生成された、[__プレーンWeb / RESTサービス__](#plain-webrest-services)
+* OpenAPIの仕様に準拠した [**_** ヘッドレスREST API **_**](#headless-rest-apis)
+* GraphQLの仕様に準拠した [**_** GraphQL API **_**](#graphql-api)
+* サービスビルダによって生成された、 [**_** プレーンWeb / RESTサービス **_**](#plain-webrest-services)
 
 ### ヘッドレスREST API
 
-LiferayのヘッドレスAPIは、Liferay DXPリソースとの[RESTful](https://www.w3.org/TR/2004/NOTE-ws-arch-20040211/#relwwwrest)インタラクションを可能にします。 これらのAPIは、RESTインターフェイスの標準を定義する[OpenAPI仕様](https://swagger.io/docs/specification/about/)に準拠しているため、より簡単な実装と使用が可能です。
+LiferayのヘッドレスAPIは、Liferay DXPリソースとの [RESTful](https://www.w3.org/TR/2004/NOTE-ws-arch-20040211/#relwwwrest) インタラクションを可能にします。 これらのAPIは、RESTインターフェイスの標準を定義する [OpenAPI仕様](https://swagger.io/docs/specification/about/) に準拠しているため、より簡単な実装と使用が可能です。
 
-`［server］［:port］/o/api`で実行中のLiferay DXPインスタンスの定義にアクセスすると、これらのAPIの詳細情報を確認できます。 最も関連性の高いドキュメントは、`［server］［:port］/o/［api-name］/［api-version］/openapi.［yaml or json］`でraw形式でも入手できます。 ドキュメントは[SwaggerHub](https://app.swaggerhub.com/apis/liferayinc/)で入手できますが、実行中のバージョンと一致しない場合があります。
+`［server］［:port］/o/api`で実行中のLiferay DXPインスタンスの定義にアクセスすると、これらのAPIの詳細情報を確認できます。 最も関連性の高いドキュメントは、`［server］［:port］/o/［api-name］/［api-version］/openapi.［yaml or json］`でraw形式でも入手できます。 ドキュメントは [SwaggerHub](https://app.swaggerhub.com/apis/liferayinc/) で入手できますが、実行中のバージョンと一致しない場合があります。
 
 ### GraphQL API
 
 [GraphQL](https://graphql.org/) APIは、ヘッドレスREST APIと同様のインタラクションをサポートするクエリ言語ですが、若干柔軟性が高いものです。 Liferay DXPは`[server][:port]/o/graphql`でこのAPIを公開しています。
 
-[GraphQLクライアント](https://graphql.org/graphql-js/graphql-clients/)を介してAPIまたはそのドキュメントを調べることにより、詳細情報を確認できます。 Liferayには組み込みクライアントが含まれており、`[server][:port]/o/api`（右上の_GraphQL_を選択）で実行中のインスタンスで確認できます。
+[GraphQLクライアント](https://graphql.org/graphql-js/graphql-clients/) を介してAPIまたはそのドキュメントを調べることにより、詳細情報を確認できます。 Liferayには組み込みクライアントが含まれており、`[server][:port]/o/api`（右上の **GraphQL** を選択）で実行中のインスタンスで確認できます。
 
 ### プレーンWeb / RESTサービス
 
@@ -27,15 +29,17 @@ LiferayのWebサービスは古いフレームワークの一部であり、DXP�
 
 ただし、Webサービスは、特定のタスクを実行するためのより簡単な方法を提供する場合があります。 使用方法については、[Service Builder Web Services](../developing-applications/data-frameworks/service-builder.md)を参照してください。
 
+<a name="機能一覧" />
+
 ## 機能一覧
 
 ### 任意のクライアントと連携する
 
-LiferayのヘッドレスAPIはWeb経由でデータを提供するため、Web呼び出しを行うことができるすべてのアプリケーションがクライアントとして機能できます。 これらのAPIは、デフォルトでJSONコンテンツで応答しますが、XMLもネイティブでサポートしています。 拡張機能によって、必要に応じて他の方法でコンテンツを提供できます。 詳細は、[APIヘッダーリファレンス](./consuming-apis/api-headers-reference.md#accept)を参照してください。
+LiferayのヘッドレスAPIはWeb経由でデータを提供するため、Web呼び出しを行うことができるすべてのアプリケーションがクライアントとして機能できます。 これらのAPIは、デフォルトでJSONコンテンツで応答しますが、XMLもネイティブでサポートしています。 拡張機能によって、必要に応じて他の方法でコンテンツを提供できます。 詳細は、 [APIヘッダーリファレンス](./consuming-apis/api-headers-reference.md#accept) を参照してください。
 
 ### 安全に接続する
 
-LiferayのWebインターフェイスと同様に、ヘッドレスAPIを介したすべてのインタラクションは、特定のユーザーアカウントを使用して（またはゲストとして）行われます。 LiferayのAPIは、基本認証、OAuthトークン、Cookieの3つの認証方法をサポートしています。 詳しくは、[APIヘッダーリファレンス](./consuming-apis/api-headers-reference.md#authorization)を参照してください。 ゲストとしてAPIリクエストを行うことも可能です。詳細は、[認証されていないリクエストを行う](./consuming-apis/making-unauthenticated-requests.md)を参照してください。
+LiferayのWebインターフェイスと同様に、ヘッドレスAPIを介したすべてのインタラクションは、特定のユーザーアカウントを使用して（またはゲストとして）行われます。 LiferayのAPIは、基本認証、OAuthトークン、Cookieの3つの認証方法をサポートしています。 詳しくは、 [APIヘッダーリファレンス](./consuming-apis/api-headers-reference.md#authorization) を参照してください。 ゲストとしてAPIリクエストを行うことも可能です。詳細は、 [認証されていないリクエストを行う](./consuming-apis/making-unauthenticated-requests.md) を参照してください。
 
 ### データサイズを管理しやすくする
 
@@ -50,6 +54,8 @@ LiferayのWebインターフェイスと同様に、ヘッドレスAPIを介し�
 `flatten`パラメーターは、階層APIの場合、階層コンテキストからリクエストを実行します。 これにより、たとえば、関連する組織を見つけるために組織図をトラバースする必要がなく、「マーケティング」と呼ばれる組織で検索を実行できます。
 
 これらのパラメーターのいずれかを使用する方法の詳細は、[API Headers Reference](./consuming-apis/api-headers-reference.md)を参照してください。
+
+<a name="関連情報" />
 
 ## 関連情報
 

@@ -8,6 +8,8 @@
 * [`Content-Type`](#content-type)
 * [`Cookie`](#cookie)
 
+<a name="accept" />
+
 ## `Accept`
 
 応答コンテンツの形式を示します。 デフォルトは`json`です。
@@ -23,6 +25,8 @@
 curl --header 'Accept: application/xml' 'example.com/o/headless-admin-user/v1.0/user-accounts'
 ```
 
+<a name="accept-language" />
+
 ## `Accept-Language`
 
 複数の言語に翻訳されたコンテンツを含むリソースの場合、返される応答コンテンツの言語を示します。
@@ -37,9 +41,11 @@ curl --header 'Accept: application/xml' 'example.com/o/headless-admin-user/v1.0/
 curl --header 'Accept-Language: pt-BR' 'example.com/o/headless-delivery/v1.0/sites/20124/blog-postings'
 ```
 
+<a name="authorization" />
+
 ## `Authorization`
 
-DXPの認証フレームワークを使用して、リクエストを行っているユーザーを識別します。 （[`Cookie`](#cookie)も参照してください。） これと`Cookie`の両方が提供されていない場合は、リクエストはゲスト（未認証）ユーザーとしてのみ試行されます。
+DXPの認証フレームワークを使用して、リクエストを行っているユーザーを識別します。 （ [`Cookie`](#cookie) も参照してください。） これと`Cookie`の両方が提供されていない場合は、リクエストはゲスト（未認証）ユーザーとしてのみ試行されます。
 
 ### 有効なオプション
 
@@ -51,6 +57,8 @@ DXPの認証フレームワークを使用して、リクエストを行って�
 ```
 curl --header 'Authorization: Basic dXNlcm5hbWU6cGFzc3dvcmQK' 'example.com/o/headless-admin-user/v1.0/user-accounts'
 ```
+
+<a name="content-type" />
 
 ## `Content-Type`
 
@@ -66,9 +74,11 @@ curl --header 'Authorization: Basic dXNlcm5hbWU6cGFzc3dvcmQK' 'example.com/o/hea
 curl --form 'file=@myfile.txt' --header 'Content-Type: multipart/form-data; boundary=ARBITRARY' 'example.com'
 ```
 
+<a name="cookie" />
+
 ## `Cookie`
 
-DXPの認証フレームワークを使用して、リクエストを行っているユーザーを識別します。 （[`Authorization`](#authorization)も参照してください。） これと`Authorization`の両方が提供されていない場合は、リクエストはゲスト（未認証）ユーザーとしてのみ試行されます。
+DXPの認証フレームワークを使用して、リクエストを行っているユーザーを識別します。 （ [`Authorization`](#authorization) も参照してください。） これと`Authorization`の両方が提供されていない場合は、リクエストはゲスト（未認証）ユーザーとしてのみ試行されます。
 
 ### 有効なオプション
 
@@ -80,9 +90,11 @@ DXPの認証フレームワークを使用して、リクエストを行って�
 curl --header 'Cookie: JSESSIONID=6349351B37C3EE1F6BA4E128107E9A34' 'example.com/o/headless-admin-user/v1.0/user-accounts'
 ```
 
+<a name="x-accept-all-languages" />
+
 ## `X-Accept-All-Languages`
 
-サーバーが要求されたコンテンツを利用可能なすべての言語で返す必要があることを示します。 （[`Accept-Language`](#accept-language)も参照してください。）
+サーバーが要求されたコンテンツを利用可能なすべての言語で返す必要があることを示します。 （ [`Accept-Language`](#accept-language) も参照してください。）
 
 ### 有効なオプション
 

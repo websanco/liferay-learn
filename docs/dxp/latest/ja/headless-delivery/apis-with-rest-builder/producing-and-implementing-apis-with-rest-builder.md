@@ -2,6 +2,8 @@
 
 RESTビルダーを使用すると、構築するAPIを定義でき、RESTビルダーはフレームワークとエンドポイントを提供します。 <!-- Add link to the REST Builder overview article once available. -->
 
+<a name="サンプルのrest-apiをデプロイする" />
+
 ## サンプルのREST APIをデプロイする
 
 RESTビルダーの動作を確認するために、カタログ内のIDによってダミー製品を取得するサンプルAPIをデプロイできます。 この簡単な例がどのように機能するかを理解したら、独自のアプリケーション用のAPIを作成できます。
@@ -12,7 +14,7 @@ RESTビルダーの動作を確認するために、カタログ内のIDによ�
     docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
     ```
 
-1. [Acme Foo API](./producing-apis-with-rest-builder/liferay-r3b2.zip)を含む`.zip`アーカイブをダウンロードして解凍します。
+1. [Acme Foo API](./producing-apis-with-rest-builder/liferay-r3b2.zip) を含む`.zip`アーカイブをダウンロードして解凍します。
 
     ```bash
     curl https://learn.liferay.com/dxp/latest/en/headless-delivery/producing-apis-with-rest-builder/liferay-r3b2.zip -O
@@ -39,7 +41,7 @@ RESTビルダーの動作を確認するために、カタログ内のIDによ�
     STARTED com.acme.headless.r3b2.impl_1.0.0
     ```
 
-1. DXPインスタンスにログインし、_グローバルメニュー_（![Global Menu icon](../../images/icon-applications-menu.png)）&rarr; _［コントロールパネル］_ &rarr; _［Gogo シェル］_に移動します。
+1. DXPインスタンスにログインし、 **グローバルメニュー**（![Global Menu icon](../../images/icon-applications-menu.png)）&rarr; ［**コントロールパネル**］ &rarr; ［**Gogo シェル**］ に移動します。
 
 1. Gogo シェルプロンプトで、次のコマンドを入力します。
 
@@ -71,6 +73,8 @@ RESTビルダーの動作を確認するために、カタログ内のIDによ�
 
 RESTビルダーで生成されたAPIを確認したので、次はそれがどのように機能するかを理解します。
 
+<a name="初期設定" />
+
 ## 初期設定
 
 Liferayワークスペースプロジェクトで`impl`および`api`モジュールを作成することから始めます。  `impl`モジュールの`build.gradle`ファイルは、RESTビルダーをプラグインとしてインストールして適用する必要があります。
@@ -97,6 +101,8 @@ dependencies {
 ```
 
 両方のモジュールの`build.gradle`ファイルも、ポータルリリースへの依存関係を宣言する必要があります。
+
+<a name="yaml構成" />
 
 ## YAML構成
 
@@ -185,7 +191,7 @@ components:
                     type: string
 ```
 
-この例では、`Foo`というスキーマが、このAPIを使用するための重要なデータを表しています。 `Goo`エンティティは、`fooId`を使用して`Foo`にリンクされています。  スキーマでサポートされているデータタイプのリストについては、[OpenAPIの仕様](https://swagger.io/docs/specification/data-models/data-types/)を参照してください。
+この例では、`Foo`というスキーマが、このAPIを使用するための重要なデータを表しています。 `Goo`エンティティは、`fooId`を使用して`Foo`にリンクされています。  スキーマでサポートされているデータタイプのリストについては、 [OpenAPIの仕様](https://swagger.io/docs/specification/data-models/data-types/) を参照してください。
 
 スキーマ定義によって、RESTビルダーが生成するクラスの名前が決まります。これには、リソースファイル内のビルディングブロックとテンプレートが含まれます。 上記のスキーマは`Foo`および`Bar`と呼ばれるため、実装ロジックは`FooResourceImpl`クラスと`GooResourceImpl`クラスに属します。
 
@@ -255,6 +261,8 @@ tags: ["Foo"]
 
 関係をどのように行うかを示す`Goo`オブジェクトもあります。Gooは、`fooId`に関連付けられているという意味でFooに関連付けられています。
 
+<a name="restビルダーを実行する" />
+
 ## RESTビルダーを実行する
 
 これで、RESTビルダーがほとんどの作業を実行するために必要なすべての構成が追加されたので、`impl`モジュール内から次のコマンドを実行して`buildREST` Gradleタスクを実行します。
@@ -264,6 +272,8 @@ tags: ["Foo"]
 ```
 
 RESTビルダーはこの構成を使用して、`api`クラスと`impl`クラスの両方にビルディングブロックコードと、実装ロジックを追加できるJavaクラスを取り込みます。
+
+<a name="実装ロジックを追加する" />
 
 ## 実装ロジックを追加する
 
@@ -312,6 +322,8 @@ RESTビルダーはこの構成を使用して、`api`クラスと`impl`クラ�
         return Page.of(goos);
     }
 ```
+
+<a name="まとめ" />
 
 ## まとめ
 
