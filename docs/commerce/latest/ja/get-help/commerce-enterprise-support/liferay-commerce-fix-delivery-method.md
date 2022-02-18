@@ -15,7 +15,7 @@ Liferay Commerceのメンテナンスアップデートは定期的にリリー�
 Liferay Digital Experience Platformの一部であるコアモジュールおよびスイートの場合、メンテナンスアップデートは、Liferay Connected Servicesおよびカスタマーポータルを通じて単一の [DXP 7.1](https://customer.liferay.com/group/customer/downloads? **com** liferay **osb** customer **downloads** display **web** DownloadsDisplayPortlet **formDate=1542377673692&p** p **id=com** liferay **osb** customer **downloads** display **web** DownloadsDisplayPortlet&p **p** lifecycle=0&p **p** state=normal&p **p** mode=view& **com** liferay **osb** customer **downloads** display **web** DownloadsDisplayPortlet **product=dxp** 71& **com** liferay **osb** customer **downloads** display **web** DownloadsDisplayPortlet_fileType=fixPacks) フィックスパックとしてリリースされます。
 
 | 推定リリースターゲット      | レギュラー    | 必要に応じて   |
-| ---------------- | -------- | -------- |
+| :--- | :--- | :--- |
 | Liferay DXP *    | &#10003; | &#10003; |
 | Liferay Commerce | &#10003; | &#10003; |
 
@@ -26,7 +26,7 @@ Liferay Digital Experience Platformの一部であるコアモジュールおよ
 緊急アップデートは、本番環境にデプロイされたLiferayコンポーネントに対して個別に提供されます。 本番環境のデプロイスケジュールで本番環境に加えることができる変更の量や頻度が制限されている場合は、Liferayサポートチームに緊急アップデートをリクエストすることをお勧めします。 これらのアップデートは、将来のメンテナンスアップデートに含まれるお客様固有の一時的なソリューションです。 Liferay Digital Experience Platformの場合、緊急アップデートは、コアモジュールおよびスイートにパッチを適用できる短期的なソリューションであるホットフィックスとしても知られています。 緊急アップデートをインストールした場合は、新しい開発フェーズに入ったらすぐに、Liferay DXPシステムを最新のメンテナンスアップデートで最新の状態にすることを強くお勧めします。
 
 | 推定リリースターゲット      | レギュラー    |
-| ---------------- | -------- |
+| :--- | :--- |
 | Liferay DXP *    | &#10003; |
 | Liferay Commerce | &#10003; |
 

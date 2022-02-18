@@ -18,7 +18,7 @@ Once purchased, you can [download]() and [deploy]() the Salesforce Connector to 
 The following chart lists supported Salesforce entities with their Liferay counterparts. While some entity data can be transferred bidirectionally, some Liferay data cannot be transferred to Salesforce.
 
 | Salesforce | Liferay | From Salesforce to Liferay | From Liferay to Salesforce |
-| --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- |
 | Account | Account | &#10004; | &#10004; |
 | Account Address | Account | &#10004; | &#10004; |
 | Account Contact | User | &#10004; |  |
@@ -71,7 +71,7 @@ When created, the settings editor for each Talend Dispatch Task is automatically
 Each task includes the following fields for entering Liferay and Salesforce credentials.
 
 | Context Parameter | Description |
-| --- | --- |
+| :--- | :--- |
 | `LiferayServerURL` | URL for the Liferay server |
 | `LiferayUser` | Liferay account username |
 | `LiferayPassword` | Liferay account password |
@@ -83,7 +83,7 @@ Each task includes the following fields for entering Liferay and Salesforce cred
 ### Products Reference
 
 | Context Parameter | Description | Default Value |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | `catalogName` | The name assigned to the Catalog used for Salesforce data | |
 | `catalogExternalReferenceCode` | The external reference code used when creating or fetching the catalog; must be `SALESFORCE` | `SALESFORCE` |
 | `catalogDefaultCurrency` | The currency used for the Catalog |  |
@@ -99,7 +99,7 @@ Each task includes the following fields for entering Liferay and Salesforce cred
 ### Price_List Reference
 
 | Context Parameter | Description | Default Value |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | `catalogId` |  |  |
 | `currencyCode` |  |  |
 | `neverExpire` |  |  |
@@ -110,7 +110,7 @@ Each task includes the following fields for entering Liferay and Salesforce cred
 ### Accounts Reference
 
 | Context Parameter | Description | Default Value |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | `accountType` | The account type used when creating all accounts: 1 (personal) or 2 (business) | |
 | `countryMapping _null` | The country mapping used for Account addresses, must use the following syntax `countryMapping_ NAME=COUNTRY _ISO_ CODE` (e.g., `countryMapping_Croatia=HR`) | |
 | `regionMapping _null` | The region mapping used for Account addresses; must use the following syntax `regionMapping_ NAME=REGION _ISO_ CODE` (e.g., `regionMapping_Milan=MI`) | |
@@ -118,7 +118,7 @@ Each task includes the following fields for entering Liferay and Salesforce cred
 ### Orders Reference
 
 | Context Parameter | Description | Default Value |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | `channelId` | | |
 | `defaultCurrency` | | |
 | `statusMapping_Activated` | | |

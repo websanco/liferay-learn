@@ -21,7 +21,7 @@ Once the selected payment method is active, configure the payment method with yo
 Each details screen contains fields that determine how the payment method is rendered in the Checkout widget.
 
 |Field | Description |
-|----- | ----------- |
+| :--- | :--- |
 |Name  | Name of the Payment Method |
 |Description | Short description of the payment method |
 |Icon| Upload a small image or logo to represent the payment method |

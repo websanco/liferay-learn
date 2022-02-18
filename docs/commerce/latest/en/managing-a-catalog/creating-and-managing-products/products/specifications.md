@@ -83,7 +83,7 @@ Next, edit the label to give it a value.
 1. Click _Edit_.
 
 |Field | Description |
-|----- | --------- |
+| :--- | :--- |
 | Value | Gives a short description of what the Product is made of |
 | Group | Select a Specification Group. |
 | Priority | Establishes the order to display the specification groups with smaller numbers going first. |

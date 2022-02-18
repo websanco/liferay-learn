@@ -44,7 +44,7 @@ The *Diagram Mapping* section becomes active after the upload is complete.
 ![The Diagram Mapping section becomes active after the upload is complete.](./shop-by-diagram/images/04.gif)
 
 | | <div style="margin-left:35px"><b>Diagram Mapping Reference</b> |
-| ----- | -------------------------------------------------------------------------- |
+| :--- | :--- |
 | **Field** | <div style="width:400px"><b>Purpose</b> |
 | Position | Denotes the label given to a pin. It can be numbers or letters. For non-exploded diagrams, the pins can be used as labels. There can be more than one component with the same position. For instance, equipment might use the same gear in different areas. In a Diagram, all the gears use the same position to denote that they are the same component but at different places in the equipment. |
 | Type | Choose *Linked to a SKU*, *Linked to a Diagram* or *Not Linked to a Catalog*.<ul><li>Linked to a SKU - Link the pin on the Diagram to an SKU in the Catalog.</li><li>Linked to a Diagram - Link the pin on the Diagram to another Diagram in the Catalog.</li><li>Not Linked to a Catalog - Link the pin on the Diagram to a label. Sellers might want to show the name of a part or component in the Diagram that they don't sell in their online catalog for informational purposes. These products use labels.</li></ul>|
