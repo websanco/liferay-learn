@@ -44,7 +44,7 @@ Once you've [generated model, persistence, and service code](./service-builder-b
 
 1. Deploy the E4G5 Portlet to a page. You can find the example portlet under Sample Widgets.
 
-   ![Add the E4G5 Portlet to a page](./business-logic-with-service-builder/images/)
+   ![Add the E4G5 Portlet to a page](./business-logic-with-service-builder/images/01.png)
 
 1. Try adding an entry by inputting a name and description (e.g. e4g5_name1 and e4g5_description1). Click `Add` and the new entry will be listed under `E4G5 Entries`. Take note of the `e4g5EntryId` number.
 
