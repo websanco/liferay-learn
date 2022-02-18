@@ -1,13 +1,9 @@
 APIの使用
 ==============
 
-.. toctree::
-   :maxdepth: 3
+.. toctree:: :maxdepth: 3
 
-   consuming-apis/consuming-rest-services.md
-   consuming-apis/consuming-graphql-apis.md
-   consuming-apis/making-unauthenticated-requests.md
-   consuming-apis/api-headers-reference.md
+   consuming-apis/consuming-rest-services.md consuming-apis/consuming-graphql-apis.md consuming-apis/making-unauthenticated-requests.md consuming-apis/api-headers-reference.md
 
 -  :doc:`/headless-delivery/consuming-apis/consuming-rest-services`
 -  :doc:`/headless-delivery/consuming-apis/consuming-graphql-apis`

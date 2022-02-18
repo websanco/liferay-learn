@@ -2,55 +2,51 @@
 
 Liferay DXPには、ほとんどのアプリケーションに対応している[GraphQL](https://graphql.org) APIが含まれています。 ここでは、それらを使用する方法を学びます。 必要なステップはわずか3つです。
 
-1.  使用するAPIを特定します。
-2.  必要なデータを含むサイトを特定します。
-3.  データにアクセスできる資格情報を使用してAPI呼び出しを行います。
+1. 使用するAPIを特定します。
+1. 必要なデータを含むサイトを特定します。
+1. データにアクセスできる資格情報を使用してAPI呼び出しを行います。
 
 ## 使用するサービスを特定する
 
 GraphQL APIを呼び出すには、実行中のLiferay DXPが必要です。 Dockerを使用して取得するには、次のコマンドを実行します。
 
-``` bash
-docker run -it -p 8080:8080 [$LIFERAY_LEARN_DXP_DOCKER_IMAGE$]
+```bash
+docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
 ```
 
 Liferay DXPの初期化後、必要なサービスを見つけることができます。
 
-1.  `http：// localhost：8080` に移動し、デフォルトの資格情報を使用してサインインします： **ユーザー名：** `test@liferay.com` **パスワード：** `test`
+1. `http：// localhost：8080` に移動し、デフォルトの認証情報を使用してサインインします： **ユーザー名：** `test@liferay.com` **パスワード：** `test`
 
-2.  次のURLにアクセスします。
+1. 次のURLにアクセスします。
+   
+        http://localhost:8080/o/api
 
-    ``` 
-     http://localhost:8080/o/api
-    ```
+1. 表示される画面の左上で、セレクタから *headless-delivery* を選択します。 これはブログ投稿APIを含むカテゴリです。
 
-3.  表示される画面の左上で、セレクタから *headless-delivery* を選択します。 これはブログ投稿APIを含むカテゴリです。
+1. 画面右上の *Show GraphQL* ボタンをクリックして、Liferayの [GraphiQL](https://github.com/graphql/graphiql) ブラウザを開きます。
 
-4.  画面右上の *Show GraphQL* ボタンをクリックして、Liferayの [GraphiQL](https://github.com/graphql/graphiql) ブラウザを開きます。
+1. クリックしたボタンの下にある［ *Docs* リンクをクリックします。 これでAPIを閲覧できます。
 
-5.  クリックしたボタンの下にある[ *Docs* リンクをクリックします。 これでAPIを閲覧できます。
+1. GraphQLが分離読み取りおよび書き込み動作第1のA呼び出すことにより、 *クエリ* 及び第 *の突然変異*。 最初に行うのはブログエントリの投稿なので、 *ミューテーション*クリックします。
 
-6.  GraphQLが分離読み取りおよび書き込み動作第1のA呼び出すことにより、 *クエリ* 及び第 *の突然変異*。 最初に行うのはブログエントリの投稿なので、 *ミューテーション*クリックします。
+1. API全体のリストが表示されます。上部の検索を使用するか下にスクロールして、 `createSiteBlogPosting`への呼び出しを見つけます。
 
-7.  API全体のリストが表示されます。上部の検索を使用するか下にスクロールして、 `createSiteBlogPosting`への呼び出しを見つけます。
-
-    ``` graphql
+    ```graphql
     createSiteBlogPosting(
       blogPosting: InputBlogPosting
       siteKey: String!
       ): BlogPosting
     ```
 
-<!-- end list -->
+```note::
+   スキーマを直接要求することで、ローカルインストールのAPIを見つけることもできます
 
-```{note}
-You can also discover your local installation's APIs by requesting the schema directly:
-
-`curl 'http://localhost:8080/o/graphql'  -H 'Content-Type: application/json' --data '{"query":"query{ __schema{ queryType{ name fields{ name args{ name } description } } } }","variables":{}}'`
+   ``curl 'http://localhost:8080/o/graphql'  -H 'Content-Type: application/json' --data '{"query":"query{ __schema{ queryType{ name fields{ name args{ name } description } } } }","variables":{}}'``
 
 
-This URL does not require authentication, but it's quite cumbersome to manage the returned schema. For this reason, it's better to use the included GraphQL client.
-```
+   このURLは認証を必要としませんが、返されたスキーマを管理するのはかなり面倒です。 このため、付属のGraphQLクライアントを使用することをお勧めします。
+   ```
 
 ![含まれているGraphQLクライアントには、スキーマドキュメントブラウザがあります。](./consuming-graphql-apis/images/01.png)
 
@@ -62,15 +58,15 @@ APIでは、エントリが投稿されるブログを含むサイトを把握�
 
 ここで、デフォルトのサイトIDを見つける必要があります。
 
-1.  デフォルトの認証情報を使用してサインインします（**ユーザー名：** `test@liferay.com` **パスワード：** `test`）。
-2.  [Control Panel] → [Sites] → [Sites]に移動します。
-3.  Liferayサイトの横にある[Actions]ボタンをクリックし、[ *Go to Site Settings*]を選択します。
+1. デフォルトの認証情報を使用してサインインします（**ユーザー名：** `test@liferay.com` **パスワード：** `test`）。
+1. ［コントロールパネル］ &rarr; ［Sites］ &rarr; ［Sites］に移動します。
+1. Liferayサイトの横にある［Actions］ボタンをクリックし、［ *Go to Site Settings*］を選択します。
 
-サイトIDが[Details]セクションの上部に表示されます。 `20122`のような整数になります。
+サイトIDが［Details］セクションの上部に表示されます。 `20122`のような整数になります。
 
 ## データにアクセスできる認証情報を使用してサービス呼び出しを行う
 
-これで、呼び出しを行うために必要なものがすべて揃いました。 すべてのWebサービスには、要求しているデータにアクセスできる資格情報を使用してアクセスする必要があります。 含まれているGraphQLクライアントは、ブラウザーを使用して認証します。 スタンドアロンクライアントを作成する計画の場合は、 [OAuth2](../using-oauth2/introduction-to-using-oauth2.md)介してユーザーを承認する必要があります。
+これで、呼び出しを行うために必要なものがすべて揃いました。 すべてのWebサービスには、要求しているデータにアクセスできる資格情報を使用してアクセスする必要があります。 含まれているGraphQLクライアントは、ブラウザーを使用して認証します。 スタンドアロンのクライアントを作成する場合は、[OAuth2](../using-oauth2/using-oauth2.md)経由でユーザーを認証する必要があります。
 
 開発中は、URLで資格情報データを渡す基本認証を使用する方がはるかに簡単です。 これは安全ではないため、 *このメソッドをプロダクションに使用しません。*
 
@@ -78,7 +74,7 @@ APIでは、エントリが投稿されるブログを含むサイトを把握�
 
 基本認証を使用してサービスを呼び出すには、URLに資格情報を指定します。
 
-``` bash
+```bash
 curl --request POST --url http://localhost:8080/o/graphql \ -u test@liferay.com:test  --header 'content-type: application/json' --data '{"query":"query {blogPostings(filter: \"\", page: 1, pageSize: 10, search: \"\", siteKey: \"20122\", sort: \"\"){ page  items{ id articleBody headline  creator{ name }}}}"}'
 ```
 
@@ -86,7 +82,7 @@ curl --request POST --url http://localhost:8080/o/graphql \ -u test@liferay.com:
 
 本番環境では、[OAuth2アプリケーション](../using-oauth2/creating-oauth2-applications.md)を作成し、OAuth2プロセスを使用して認証トークンを取得します。 トークンを取得したら、それをHTTPヘッダーに指定します。
 
-``` bash
+```bash
 curl --request POST --url http://localhost:8080/o/graphql -H "Authorization: Bearer d5571ff781dc555415c478872f0755c773fa159" --header 'content-type: application/json' --data '{"query":"query {blogPostings(filter: \"\", page: 1, pageSize: 10, search: \"\", siteKey: \"20122\", sort: \"\"){ page  items{ id articleBody headline  creator{ name }}}}"}'
 ```
 
@@ -94,7 +90,7 @@ curl --request POST --url http://localhost:8080/o/graphql -H "Authorization: Bea
 
 GraphQLクライアントの左上のウィンドウに、すべてのブログエントリを取得する次のコードを配置します。
 
-``` graphql
+```graphql
 query {blogPostings(filter:"",page:1,pageSize:10,search:"",siteKey:"20122",sort:"")
     {page
      items {
@@ -111,8 +107,8 @@ query {blogPostings(filter:"",page:1,pageSize:10,search:"",siteKey:"20122",sort:
 
 再生ボタンをクリックして実行すると、ブログエントリが表示されません。
 
-``` json
-{"data":{"blogPostings":{"page":1,"items":[]}}}
+```json
+{"data":{"blogPostings":{"page":1,"items":［］}}}
 ```
 
 次に、ブログエントリを投稿します。
@@ -121,36 +117,38 @@ query {blogPostings(filter:"",page:1,pageSize:10,search:"",siteKey:"20122",sort:
 
 GraphQLスキーマによって、ブログエントリを投稿するために行う必要がある呼び出しが明らかになりました。
 
-1.  公開するエントリを含むJSONドキュメントを作成します。
+1. 公開するエントリを含むJSONドキュメントを作成します。
 
-    ``` json
-    {
-      "blog": {
-          "articleBody": "This Blog entry was created by calling the GraphQL service!",
-          "headline": "GraphQL Blog Entry"
-      }
+   ```json
+   {
+     "blog": {
+         "articleBody": "This Blog entry was created by calling the GraphQL service!",
+         "headline": "GraphQL Blog Entry"
+     }
+   }
+    ```
+
+1. スキーマドキュメンテーションに基づいてGraphQLクエリを作成します。
+
+   ```
+   mutation CreateBlog($blog: InputBlogPosting){
+     createSiteBlogPosting(blogPosting: $blog, siteKey: "20122" ) {
+       headline
+       articleBody
+       id
+       friendlyUrlPath
+     }
+
     }
     ```
 
-2.  スキーマドキュメンテーションに基づいてGraphQLクエリを作成します。
-   
-        mutation CreateBlog($blog: InputBlogPosting){
-          createSiteBlogPosting(blogPosting: $blog, siteKey: "20122" ) {
-            headline
-            articleBody
-            id
-            friendlyUrlPath
-          }
-       
-         }
+1. 再度 `http://localhost:8080/o/api` アクセスしてリクエストを行います。 *Show GraphQL* ボタンをクリックします。
 
-3.  再度 `http://localhost:8080/o/api` アクセスしてリクエストを行います。 *Show GraphQL* ボタンをクリックします。
+1. 左下のクエリ変数ボックスにJSONドキュメントを貼り付けます。
 
-4.  左下のクエリ変数ボックスにJSONドキュメントを貼り付けます。
+1. 変異を右上のラベルのないボックスに貼り付けます。
 
-5.  変異を右上のラベルのないボックスに貼り付けます。
-
-6.  上部の再生ボタンをクリックしてクエリを実行します。
+1. 上部の再生ボタンをクリックしてクエリを実行します。
 
 追加したブログエントリがGraphQLクライアントの右ペインに表示されます。
 
@@ -158,7 +156,7 @@ GraphQLスキーマによって、ブログエントリを投稿するために�
 
 Liferay DXPは、ミューテーションでリクエストされたフィールドを含むブログエントリのJSON表現を返します。
 
-``` json
+```json
 {
   "data": {
     "createSiteBlogPosting": {
@@ -171,17 +169,17 @@ Liferay DXPは、ミューテーションでリクエストされたフィール
 }
 ```
 
-```{note}
-You can make these requests with any web client, such as Curl:
+```note::
+これらのリクエストは、cURLなどの任意のWebクライアントで行うことができます：
 
-`curl --request POST --url http://localhost:8080/o/graphql -u test@liferay.com:test --header 'content-type: application/json' --data '{"query":"mutation CreateBlog($blog: InputBlogPosting){   createSiteBlogPosting(blogPosting: $blog, siteKey: \"20122\" ) {    headline    articleBody    id    friendlyUrlPath  }    } ","variables":{"blog":{"articleBody":"This Blog entry was created by using Curl to call the GraphQL service!","headline":"Curl GraphQL Blog Entry"}},"operationName":"CreateBlog"}'`
+   ``curl --request POST --url http://localhost:8080/o/graphql -u test@liferay.com:test --header 'content-type: application/json' --data '{"query":"mutation CreateBlog($blog: InputBlogPosting){   createSiteBlogPosting(blogPosting: $blog, siteKey: \"20122\" ) {    headline    articleBody    id    friendlyUrlPath  }    } ","variables":{"blog":{"articleBody":"This Blog entry was created by using cURL to call the GraphQL service!","headline":"cURL GraphQL Blog Entry"}},"operationName":"CreateBlog"}'``
 ```
 
 ### すべてのブログエントリを取得する
 
 これで、最初のクエリを繰り返すことができます。
 
-``` graphql
+```graphql
 query {blogPostings(filter:"",page:1,pageSize:10,search:"",siteKey:"20122",sort:"")
     {page
      items {
@@ -198,12 +196,12 @@ query {blogPostings(filter:"",page:1,pageSize:10,search:"",siteKey:"20122",sort:
 
 Liferay DXPは、投稿したブログエントリを含むJSONを返します。
 
-``` json
+```json
 {
   "data": {
     "blogPostings": {
       "page": 1,
-      "items": [
+      "items": ［
         {
           "id": 35541,
           "articleBody": "This Blog entry was created by calling the GraphQL service!",
@@ -212,7 +210,7 @@ Liferay DXPは、投稿したブログエントリを含むJSONを返します�
             "name": "Test Test"
           }
         }
-      ]
+      ］
     }
   }
 }
@@ -222,13 +220,15 @@ Liferay DXPは、投稿したブログエントリを含むJSONを返します�
 
 単一のブログエントリを取得するためのGraphQLスキーマからのAPI呼び出しには、パラメーターが1つしかありません。
 
-    blogPosting(
-       blogPostingId: Long
-    ): BlogPosting
+```
+blogPosting(
+   blogPostingId: Long
+): BlogPosting
+```
 
 上記のクエリでブログ投稿のIDが判明したため、必要な投稿のみを取得できます。
 
-``` graphql
+```graphql
 query {blogPosting(blogPostingId: 35541)
   { id
     headline
@@ -236,9 +236,9 @@ query {blogPosting(blogPostingId: 35541)
 }
 ```
 
-これをクライアントの左上のウィンドウに貼り付け、[ *Play* ]ボタンをクリックします。 同じブログエントリを返します。
+これをクライアントの左上のウィンドウに貼り付け、［ *Play* ］ボタンをクリックします。 同じブログエントリを返します。
 
-``` json
+```json
 {
   "data": {
     "blogPosting": {
@@ -254,13 +254,15 @@ query {blogPosting(blogPostingId: 35541)
 
 ブログエントリの削除は、作成と同様にミューテーションです。 その呼び出しは、単一のブログエントリを取得することとほぼ同じです。
 
-    deleteBlogPosting(
-      blogPostingId: Long
-    ): Boolean
+```
+deleteBlogPosting(
+  blogPostingId: Long
+): Boolean
+```
 
 クライアントを使用して、次のような呼び出しを行うことができます。
 
-``` graphql
+```graphql
 mutation {
   deleteBlogPosting(blogPostingId: 35541)
 }
@@ -268,7 +270,7 @@ mutation {
 
 この呼び出しは、成功または失敗を示すブール値をJSONドキュメントで返します。
 
-``` json
+```json
 {
   "data": {
     "deleteBlogPosting": true
@@ -276,4 +278,4 @@ mutation {
 }
 ```
 
-Liferay DXPのGraphQLサービスを呼び出す方法を学びました。 上記の例では基本認証を使用していることに注意してください。本番環境では、OAuth2を使用して安全な方法でサービスを呼び出します。
+　 Liferay DXPのGraphQLサービスを呼び出す方法を学びました。 上記の例では基本認証を使用していることに注意してください。本番環境では、OAuth2を使用して安全な方法でサービスを呼び出します。

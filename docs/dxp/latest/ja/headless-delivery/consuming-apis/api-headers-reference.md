@@ -2,11 +2,11 @@
 
 この記事では、Headless APIリクエストを行うときに使用できるヘッダーについて説明します。
 
-  - [`Accept`](#accept)
-  - [`Accept-Language`](#accept-language)
-  - [`Authorization`](#authorization)
-  - [`Content-Type`](#content-type)
-  - [`Cookie`](#cookie)
+* [`Accept`](#accept)
+* [`Accept-Language`](#accept-language)
+* [`Authorization`](#authorization)
+* [`Content-Type`](#content-type)
+* [`Cookie`](#cookie)
 
 ## `Accept`
 
@@ -14,12 +14,12 @@
 
 ### 有効なオプション
 
-  - `json`
-  - `xml`
+* `json`
+* `xml`
 
 ### 例
 
-``` bash
+```bash
 curl --header 'Accept: application/xml' 'example.com/o/headless-admin-user/v1.0/user-accounts'
 ```
 
@@ -33,7 +33,9 @@ curl --header 'Accept: application/xml' 'example.com/o/headless-admin-user/v1.0/
 
 ### 例
 
-    curl --header 'Accept-Language: pt-BR' 'example.com/o/headless-delivery/v1.0/sites/20124/blog-postings'
+```
+curl --header 'Accept-Language: pt-BR' 'example.com/o/headless-delivery/v1.0/sites/20124/blog-postings'
+```
 
 ## `Authorization`
 
@@ -41,12 +43,14 @@ DXPの認証フレームワークを使用して、リクエストを行って�
 
 ### 有効なオプション
 
-  - `Basic` + Base64エンコードされた認証情報
-  - `Bearer` + OAuthトークン
+* `Basic` + Base64エンコードされた認証情報
+* `Bearer` + OAuthトークン
 
 ### 例
 
-    curl --header 'Authorization: Basic dXNlcm5hbWU6cGFzc3dvcmQK' 'example.com/o/headless-admin-user/v1.0/user-accounts'
+```
+curl --header 'Authorization: Basic dXNlcm5hbWU6cGFzc3dvcmQK' 'example.com/o/headless-admin-user/v1.0/user-accounts'
+```
 
 ## `Content-Type`
 
@@ -54,11 +58,13 @@ DXPの認証フレームワークを使用して、リクエストを行って�
 
 ### 有効なオプション
 
-  - `multipart/form-data`
+* `multipart/form-data`
 
 ### 例
 
-    curl --form 'file=@myfile.txt' --header 'Content-Type: multipart/form-data; boundary=ARBITRARY' 'example.com'
+```
+curl --form 'file=@myfile.txt' --header 'Content-Type: multipart/form-data; boundary=ARBITRARY' 'example.com'
+```
 
 ## `Cookie`
 
@@ -66,11 +72,13 @@ DXPの認証フレームワークを使用して、リクエストを行って�
 
 ### 有効なオプション
 
-  - `JSESSIONID`
+* `JSESSIONID`
 
 ### 例
 
-    curl --header 'Cookie: JSESSIONID=6349351B37C3EE1F6BA4E128107E9A34' 'example.com/o/headless-admin-user/v1.0/user-accounts'
+```
+curl --header 'Cookie: JSESSIONID=6349351B37C3EE1F6BA4E128107E9A34' 'example.com/o/headless-admin-user/v1.0/user-accounts'
+```
 
 ## `X-Accept-All-Languages`
 
@@ -78,9 +86,11 @@ DXPの認証フレームワークを使用して、リクエストを行って�
 
 ### 有効なオプション
 
-  - `true`
-  - `false`
+* `true`
+* `false`
 
 ### 例
 
-    curl --header 'X-Accept-All-Languages: true' 'example.com/o/headless-admin-user/v1.0/user-accounts'
+```
+curl --header 'X-Accept-All-Languages: true' 'example.com/o/headless-admin-user/v1.0/user-accounts'
+```
