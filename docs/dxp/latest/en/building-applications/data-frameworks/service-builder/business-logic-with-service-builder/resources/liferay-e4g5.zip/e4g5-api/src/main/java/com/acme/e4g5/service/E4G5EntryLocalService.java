@@ -103,11 +103,9 @@ public interface E4G5EntryLocalService
 	 *
 	 * @param e4g5Entry the e4g5 entry
 	 * @return the e4g5 entry that was removed
-	 * @throws PortalException
 	 */
 	@Indexable(type = IndexableType.DELETE)
-	public E4G5Entry deleteE4G5Entry(E4G5Entry e4g5Entry)
-		throws PortalException;
+	public E4G5Entry deleteE4G5Entry(E4G5Entry e4g5Entry);
 
 	/**
 	 * Deletes the e4g5 entry with the primary key from the database. Also notifies the appropriate model listeners.

@@ -92,12 +92,10 @@ public class E4G5EntryLocalServiceWrapper
 	 *
 	 * @param e4g5Entry the e4g5 entry
 	 * @return the e4g5 entry that was removed
-	 * @throws PortalException
 	 */
 	@Override
 	public com.acme.e4g5.model.E4G5Entry deleteE4G5Entry(
-			com.acme.e4g5.model.E4G5Entry e4g5Entry)
-		throws com.liferay.portal.kernel.exception.PortalException {
+		com.acme.e4g5.model.E4G5Entry e4g5Entry) {
 
 		return _e4g5EntryLocalService.deleteE4G5Entry(e4g5Entry);
 	}

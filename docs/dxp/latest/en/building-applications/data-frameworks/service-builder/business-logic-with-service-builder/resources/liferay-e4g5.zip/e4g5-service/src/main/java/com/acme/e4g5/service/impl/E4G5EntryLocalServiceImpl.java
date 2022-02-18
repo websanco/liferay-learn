@@ -43,8 +43,11 @@ public class E4G5EntryLocalServiceImpl extends E4G5EntryLocalServiceBaseImpl {
 		return e4g5EntryPersistence.update(e4g5Entry);
 	}
 
-	public E4G5Entry deleteE4G5Entry(E4G5Entry e4g5Entry)
+	public E4G5Entry deleteE4G5Entry(long e4g5EntryId)
 		throws PortalException {
+
+		E4G5Entry e4g5Entry = e4g5EntryPersistence.findByPrimaryKey(
+			e4g5EntryId);
 
 		e4g5EntryPersistence.remove(e4g5Entry);
 

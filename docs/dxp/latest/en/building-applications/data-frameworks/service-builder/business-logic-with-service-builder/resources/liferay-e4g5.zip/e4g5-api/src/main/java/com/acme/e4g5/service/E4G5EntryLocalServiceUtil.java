@@ -95,11 +95,8 @@ public class E4G5EntryLocalServiceUtil {
 	 *
 	 * @param e4g5Entry the e4g5 entry
 	 * @return the e4g5 entry that was removed
-	 * @throws PortalException
 	 */
-	public static E4G5Entry deleteE4G5Entry(E4G5Entry e4g5Entry)
-		throws PortalException {
-
+	public static E4G5Entry deleteE4G5Entry(E4G5Entry e4g5Entry) {
 		return getService().deleteE4G5Entry(e4g5Entry);
 	}
 

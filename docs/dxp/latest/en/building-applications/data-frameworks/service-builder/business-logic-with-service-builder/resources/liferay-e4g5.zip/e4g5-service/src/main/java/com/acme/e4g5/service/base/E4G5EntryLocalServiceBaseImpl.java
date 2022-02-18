@@ -132,13 +132,10 @@ public abstract class E4G5EntryLocalServiceBaseImpl
 	 *
 	 * @param e4g5Entry the e4g5 entry
 	 * @return the e4g5 entry that was removed
-	 * @throws PortalException
 	 */
 	@Indexable(type = IndexableType.DELETE)
 	@Override
-	public E4G5Entry deleteE4G5Entry(E4G5Entry e4g5Entry)
-		throws PortalException {
-
+	public E4G5Entry deleteE4G5Entry(E4G5Entry e4g5Entry) {
 		return e4g5EntryPersistence.remove(e4g5Entry);
 	}
 
