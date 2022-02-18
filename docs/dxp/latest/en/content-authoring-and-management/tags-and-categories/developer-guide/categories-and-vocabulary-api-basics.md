@@ -77,7 +77,7 @@ The `TaxonomyVocabulary_POST_ToSite.sh` script calls the REST service with a cUR
 Here are the command's arguments:
 
 | Arguments | Description |
-| --------- | ----------- |
+| :--- | :--- |
 | `-H "Content-Type: application/json"` | Indicates that the request body format is JSON. |
 | `-X POST` | The HTTP method to invoke at the specified endpoint |
 | `"http://localhost:8080/o/headless-admin-taxonomy/v1.0/sites/${1}/taxonomy-vocabularies"` | The REST service endpoint |

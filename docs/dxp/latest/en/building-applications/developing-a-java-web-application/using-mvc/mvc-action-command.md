@@ -108,11 +108,11 @@ The portlet's `view.jsp` file renders links for invoking the portlet's MVC Actio
 The first line makes the Portlet 2.0 tag library available via the `portlet` prefix. This JSP binds actions to UI components using the tag library's `portlet:actionURL` tag. Each tag maps the UI component to an MVC command by assigning the MVC Action Command's `mvc.command.name` property value to the tag's `name` attribute.
 
 | `view.jsp` Portlet Action URL | `DoL6Y9AbleMVCActionCommand` Component Property |
-| ----------------------------- | ----------------------------------------------- |
+| :--- | :--- |
 | `<portlet:actionURL name="/do_l6y9_able" />` | `mvc.command.name=/l6y9/do_l6y9_able` |
 
 | `view.jsp` Portlet Action URL | `DoL6Y9BakerMVCActionCommand` Component Property |
-| ----------------------------- | ----------------------------------------------- |
+| :--- | :--- |
 | `<portlet:actionURL name="/do_l6y9_baker" />` | `mvc.command.name=/l6y9/do_l6y9_baker` |
 
 Clicking on the *Do L6Y9 Able* link, for example, invokes `DoL6Y9AbleMVCActionCommand`'s `doProcessAction` method.

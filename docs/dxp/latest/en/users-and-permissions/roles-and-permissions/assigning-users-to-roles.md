@@ -7,7 +7,7 @@ The location of a Role's assignment UI corresponds with the [Role's scope](./und
 Globally scoped regular roles are available for configuration in the DXP [Control Panel](../../getting-started/navigating-dxp.md#control-panel).
 
 | Permission Scope | Available Assignments |
-| ---------------- | --------- |
+| :--- | :--- |
 | Throughout the Virtual Instance (global) | User Groups <br />Organizations <br />Sites <br />Segments <br />Individual Users |
 
 You can assign Users to a Regular Role in the Assignees tab of the Add/Edit Role form.
@@ -29,7 +29,7 @@ You can assign Users to a Regular Role in the Assignees tab of the Add/Edit Role
 You can assign Users to a Site Role in the Memberships section of a Site's People sub-menu.
 
 | Permission Scope | Available Assignments |
-| ---------------- | --------- |
+| :--- | :--- |
 | A single Site    | User Groups <br />Organizations <br />Segments <br />Individual Site Members |
 
 1. Go to Site Menu &rarr; People &rarr; Memberships.
@@ -53,7 +53,7 @@ As of Liferay CE 7.3.1 GA2 and Liferay DXP 7.2 SP3+, you can assign Site Roles t
 You can assign Users to a Organization Role in the Organizations tab of the Users and Organizations Control Panel section.
 
 | Permission Scope | Available Assignments |
-| ---------------- | --------- |
+| :--- | :--- |
 | A single Organization | Individual Users |
 
 1. Go to Control Panel &rarr; Users &rarr; Users and Organizations, and click on the _Organizations_ tab.
@@ -73,7 +73,7 @@ You can assign Users to a Organization Role in the Organizations tab of the User
 Making Role assignments for Asset Libraries is nearly identical to making assignments for Sites: assign Users to an Asset Library Role in the Memberships section of the Asset Library's People sub-menu.
 
 | Permission Scope | Available Assignments |
-| ---------------- | --------- |
+| :--- | :--- |
 | A single Asset Library | Organizations <br />User Groups <br /> Individual Users |
 
 1. Go to the [Asset Library](../../content-authoring-and-management/asset-libraries/asset-libraries-overview.md) Menu &rarr; People &rarr; Memberships.
@@ -94,7 +94,7 @@ Making Role assignments for Asset Libraries is nearly identical to making assign
 You can assign Users to an Account Role in the Accounts Control Panel section.
 
 | Permission Scope | Available Assignments |
-| ---------------- | --------- |
+| :--- | :--- |
 | A single Account | Individual Account Members
 
 1. Go to Control Panel &rarr; Accounts &rarr; Accounts, and click on the Account of interest.
@@ -115,7 +115,7 @@ You can assign Users to an Account Role in the Accounts Control Panel section.
 By default, new Users receive only the Users Role, but you can manage the default Role associations to add new Roles or remove the User assignment.
 
 | Permission Scope | Available Assignments |
-| ---------------- | --------- |
+| :--- | :--- |
 | Throughout the Virtual Instance (global) | All new Users |
 
 1. Navigate to Control Panel &rarr; Configuration &rarr; Instance Settings.

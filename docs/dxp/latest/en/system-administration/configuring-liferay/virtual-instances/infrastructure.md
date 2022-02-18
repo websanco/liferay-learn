@@ -7,7 +7,7 @@ The Infrastructure category contains settings to specify which content types are
 To access these settings, open the Control Panel and navigate to *Configuration* &rarr; *Instance Settings* and select *Infrastructure* under the Platform heading. 
 
 | Configuration | Purpose |
-| --------- | ------------ |
+| :--- | :--- |
 | Validate File Entries | If checked, publishing or importing some types of text content causes Liferay DXP to check the content for links to documents and ensure that each link points to a valid document. |
 | Validate Journal Feed References | If checked, publishing or importing some types of text content causes Liferay DXP to check the content for references to web content feeds, and ensure that each reference points to a valid feed. |
 | Validate Layout References | If checked, publishing or importing some types of text content triggers validation of links that reference a Liferay DXP virtual host, ensuring that each link points to a valid page within the portal. Uncheck this if your virtual host has pages outside of Liferay DXP. |

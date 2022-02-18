@@ -40,7 +40,7 @@ If you're upgrading from Liferay 7.0 or earlier, examine the deprecations that o
 Here are the features deprecated in 7.2:
 
 | Feature |  Availability |  Notes |
-| ------- | ------------- | ------ |
+| :--- | :--- | :--- |
 | AlloyUI | Bundled | Replaced by [MetalJS](http://metaljs.com/) (temporary) exposed as [ClayUI tag](https://clayui.com/) equivalents. |
 | Audience Targeting | Removed | Replaced by [Personalization](../../../site-building/personalizing-site-experience/personalizing-site-experience.md) (see [Migrating from Audience Targeting](https://help.liferay.com/hc/en-us/articles/360028711992-Manually-Migrating-from-Audience-Targeting)). |
 | Central Authentication Service (CAS) | Bundled | Migrate to [SAML-based authentication](../../securing-liferay/configuring-sso/authenticating-with-saml.md). |

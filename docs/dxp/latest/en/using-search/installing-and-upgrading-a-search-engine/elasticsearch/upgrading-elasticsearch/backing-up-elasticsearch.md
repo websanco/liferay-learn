@@ -282,7 +282,7 @@ Run the same command for the `liferay-20101-search-tuning-rankings` index. If yo
 The out-of-the-box Search Tuning index names depend on your Liferay version and patch level:
 
 | Liferay Version and Patch | Search Tuning Indexes |
-| ------------------------- | --------------------- |
+| :--- | :--- |
 | Liferay DXP 7.2 SP2/FP5 and below| `liferay-search-tuning-rankings`<br />`liferay-search-tuning-synonyms-liferay-<companyId>` |
 | Liferay DXP 7.2 SP3/FP8 and above | `liferay-<companyId>-search-tuning-rankings`<br />`liferay-<companyId>-search-tuning-synonyms` |
 | Liferay DXP 7.3 GA1+ and 7.4 GA1+  | `liferay-<companyId>-search-tuning-rankings`<br />`liferay-<companyId>-search-tuning-synonyms` |

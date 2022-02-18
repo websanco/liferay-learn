@@ -134,7 +134,7 @@ Windows™サーバーでKerberosとActive Directoryをセットアップする�
 2.  [Configuration] → [Instance Settings] → [Authentication] → [LDAP]に移動し、LDAPサーバーを追加して、Liferay DXPをAD over LDAPに接続します。 インストールに適切な情報を提供します。
 
     | 設定                               | 説明                                                                                  |
-    | -------------------------------- | ----------------------------------------------------------------------------------- |
+    | :--- | :--- |
     | **Base Provider URL**            | 適切なポート上のADサーバー。                                                                     |
     | **Base DN**                      | ドメイン構成。 上記の例では `DC=INTDOMAIN.DC=LOCAL`。                                             |
     | **Principal/Credentials**        | keytabファイルにエクスポートされたユーザーの資格情報を入力します。                                                |

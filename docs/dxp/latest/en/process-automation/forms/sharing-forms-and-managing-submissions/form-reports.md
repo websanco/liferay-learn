@@ -25,7 +25,7 @@ Form Reports shows you aggregated form data. To see each form entry individually
 The data presentation is different depending on the field type:
 
 | Field(s) | Data Display Format | Additional Information |
-| -------- | ---------- | ---------------------- |
+| :--- | :--- | :--- |
 | Color<br />Date<br />Number<br />Text| Field List | Number fields also include these summary statistics: Average, Maximum Value, Minimum Value, Sum |
 | Select from List<br />Single Selection | Pie Chart | None |
 | Grid<br />Multiple Selection | Bar Graph | Multiple Selection graphs are horizontal, where Grid graphs are vertical with grouped bars

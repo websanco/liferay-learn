@@ -3,7 +3,7 @@
 The Instance Configuration settings define the configuration information for the virtual instance, from its appearance to the Terms of Use your Users agree to the first time they sign in. Access the Instance Configuration settings from the Control Panel's *Configuration* &rarr; *Instance Settings* section, and select the *Instance Configuration* category under *PLATFORM*. The Instance Configuration contains four entries:
 
 | Configuration | Purpose |
-| --------- | ------------ |
+| :--- | :--- |
 | Appearance | Define the default logo and the overall look and feel |
 | Contact Information | Configure physical addresses, email addresses, websites, and phone numbers for the instance |
 | General | Specify landing pages, legal information, and other details |

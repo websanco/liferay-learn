@@ -9,7 +9,7 @@ There are many use cases satisfied by incorporating Custom Filters into your sea
 For now, consider these basic usages:
 
 | Use Case | `Configuration` _(Value)_ |
-| -----------| ----------- |
+| :--- | :--- |
 | **User Title Filter:** End Users directly manipulate the filter key to refine results to the one they were looking for, using the Title |`Filter Field` _(title\_en\_US)_ <br /> `Filter Value` _(podcast)_ <br /> `Filter Query Type` _(Match)_ <br /> `Occur Type` _(must_not)_|
 | **Hard-Coded Filtering:** An administrative User configures the Search Page with filters that are invisible and unchangeable for end Users | ***Add to the above configuration*** <br /> `Invisible` _(True--checked)_ <br /> `Immutable` _(True--checked)_|
 

@@ -23,7 +23,7 @@ When working with Staging, you must think about the applications you're using on
 **Content Origin for Staged and Unstaged Applications**
 
 | Content Type | Staged | Unstaged | Data Origin Staged | Data Origin Live |
-| ------------ | -------| -----------| ------------- | ----------- |
+| :--- | :--- | :--- | :--- | :--- |
 | Collaborative |  | &#10004; | | &#10004; |
 | Site Scoped | &#10004; | |&#10004; |  | 
 | Page Scoped Apps | &#10004;* | | &#10004; | |

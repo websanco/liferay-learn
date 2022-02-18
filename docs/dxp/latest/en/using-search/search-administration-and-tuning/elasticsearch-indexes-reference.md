@@ -3,7 +3,7 @@
 The default Liferay DXP 7.3 indexes in your installation approximate the list below (subject to change). The default global *Index Name Prefix* is `liferay-`: it can be changed in the Elasticsearch 7 connector configuration. `20101` is the generated `companyId` of a given Company in your database. It is displayed as Instance ID in the UI and represents a [Virtual Instance](../../system-administration/configuring-liferay/virtual-instances/understanding-virtual-instances.md).
 
 | Index ID                                              | Index Type    | Index Purpose |
-| ----------------------------------------------------- | ------------- | ------------- |
+| :--- | :--- | :--- |
 | liferay-0                                             | System Index  | Searching in the System Settings application |
 | liferay-20101                                         | Company Index | Searching the indexed assets of the Liferay DXP Virtual Instance |
 | liferay-20101-search-tuning-rankings                  | App Index     | Primary data storage for the Result Rankings application |
@@ -27,7 +27,7 @@ Liferay DXP provides APIs for creating and using (writing to and reading from) c
 If you have a [Liferay Commerce](https://www.liferay.com/products/commerce) subscription and it is activated in your installation, you also have these indexes:
 
 | Index ID                                                     | Index Type    | Index Purpose |
-| ------------------------------------------------------------ | ------------- | ------------- |
+| :--- | :--- | :--- |
 | liferay-20101-commerce-ml-forecast                           | App Index     | Machine Learning capabilities |
 | liferay-20101-product-content-commerce-ml-recommendation     | App Index     | Recommendation services       |
 | liferay-20101-product-interaction-commerce-ml-recommendation | App Index     | Recommendation services       |

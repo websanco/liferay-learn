@@ -111,7 +111,7 @@ For example,
 1. Enter these values:
 
    | Field | Value |
-   | --- | --- |
+   | :--- | :--- |
    | Name | J1V3-Remote-App |
    | Type | Custom Element |
    | HTML Element Name | `j1v3-remote-app` |

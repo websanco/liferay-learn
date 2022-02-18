@@ -35,7 +35,7 @@ Preparation and planning may be of little consequence for small, casual installa
 Look up your current Liferay DXP/Portal version in this table to determine your installation upgrade path.
 
 | Upgrade Path                            | Description |
-| --------------------------------------- | ----------- |
+| :--- | :--- |
 | Liferay DXP/Portal 6.2+ &rarr; DXP 7.4      |             |
 | Liferay Portal 6.1.x &rarr; DXP/Portal 7.1 &rarr; DXP 7.4 | Support life ended for Liferay Portal 6.1 |
 | Liferay Portal 5.x and 6.0.x &rarr; Liferay Portal 6.2 &rarr; Liferay DXP 7.4 | Support life ended for Liferay Portal 5.0, 5.1, 5.2, and 6.0 |

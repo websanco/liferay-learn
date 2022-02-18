@@ -7,7 +7,7 @@ The connection to Elasticsearch is primarily defined in the _Elasticsearch 6/7_ 
 ## Configuration Files and System Settings Entries
 
 | Connecting Servers | <div style="width:380px">System Settings Entry/Configuration File</div> |
-| --------------- | -------------------------------------- | 
+| :--- | :--- |
 | Liferay 7.2.x<br />Elasticsearch 6.x  | Elasticsearch 6<br />`com.liferay.portal.search.elasticsearch6.configuration.ElasticsearchConfiguration.config` |
 | Liferay 7.2.x<br />Elasticsearch 7.x  | Elasticsearch 7<br />`com.liferay.portal.search.elasticsearch7.configuration.ElasticsearchConfiguration.config` |
 | Liferay 7.3+<br />Elasticsearch 7.x  | Elasticsearch 7<br />`com.liferay.portal.search.elasticsearch7.configuration.ElasticsearchConfiguration.config`<br /><br />Elasticsearch Connections (factory)<br />`com.liferay.portal.search.elasticsearch7.configuration.ElasticsearchConnectionConfiguration-[connectionId].config` |
@@ -25,7 +25,7 @@ Deploy configuration files to `[Liferay_Home]/osgi/configs` and a listener auto-
 ## Configuration Properties
 
 | System Settings Field Name | <div style="width:290px">Configuration File Syntax and Default Value<br />Description (Click to Expand) | Availability |
-| ----------------------------- | ------------------------------------------------------------------------------ | ------------ | 
+| :--- | :--- | :--- |
 | | <a href="#general-connection-settings" id="general-connection-settings">GENERAL CONNECTION SETTINGS</a> |
 | Track Total Hits | <details><summary>`trackTotalHits=B"true"`</summary>If enabled, hits are accurately counted when there are more than 10,000 results for a search. Leaving this enabled may have an impact on performance when there is a large number of hits for a search.</details> | Liferay 7.2+<br />(Connector to Elasticsearch 7) |
 | Production Mode Enabled | <details><summary>`productionModeEnabled=B"false"`</summary>Enable production mode. In Liferay 7.3, <code>productionModeEnabled</code> replaces the deprecated setting <code>operationMode</code>. If this is checked, production mode is enabled and the Operation Mode configuration is ignored. Enabling production mode requires connecting to a remote standalone Elasticsearch cluster. If left disabled, the Operation Mode configuration is used.</details> | Liferay 7.3+ |

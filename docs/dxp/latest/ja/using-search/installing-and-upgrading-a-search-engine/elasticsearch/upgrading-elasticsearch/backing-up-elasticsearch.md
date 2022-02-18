@@ -274,7 +274,7 @@ POST _reindex/
 すぐに使用できる検索の調整インデックス名は、Liferayのバージョンとパッチレベルによって異なります。
 
 | Liferayのバージョンとパッチ         | 検索の調整インデックス                                                                                                      |
-| ------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| :--- | :--- |
 | Liferay DXP 7.2 SP2/FP5以下 | `liferay-search-tuning-rankings`<br />`liferay-search-tuning-synonyms-liferay-<companyId>`           |
 | Liferay DXP 7.2 SP3/FP8以降 | `liferay-<companyId>-search-tuning-rankings`<br />`liferay-<companyId>-search-tuning-synonyms` |
 | Liferay DXP 7.3、すべてのパッチ   | `liferay-<companyId>-search-tuning-rankings`<br />`liferay-<companyId>-search-tuning-synonyms` |

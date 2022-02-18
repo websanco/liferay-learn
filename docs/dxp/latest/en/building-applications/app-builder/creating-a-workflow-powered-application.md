@@ -16,7 +16,7 @@ Workflow Powered Apps are designed by thinking about the steps the object's form
 Each step has configuration options depending on its stage in the workflow:
 
 | Step | Configuration Options | Description |
-| ---- | ------ | ----------- |
+| :--- | :--- | :--- |
 | Start (Initial Step) | Step Name <br /> Main Data Object <br /> Form View <br /> Table View <br /> Action | At a minimum, choose an object, form view, and table view so that the data object can begin getting filled out. There's no assignee, because anyone who can add a record begins the processing. The action can be renamed but always proceeds to the next step. |
 | 1 (Step 1) | Step Name <br /> Assignee <br /> Form View <br /> Action | Name the step and assign it to a [Role](../../users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.md). Then choose or create a form view (set it to read only or editable) and name the action that transitions to the next step. |
 | Additional Numbered Steps (e.g., Step 2, 3, 4, etc.) | Same as for step 1, plus the _Add New Action_ option | Additional steps can do everything that Step 1 can do, plus create a new action that transitions back to the previous workflow step, if necessary. |

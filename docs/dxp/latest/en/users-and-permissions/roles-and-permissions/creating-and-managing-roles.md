@@ -51,7 +51,7 @@ Be careful about granting these permissions. This is administrative functionalit
 A Web Content Folder contains Web Content articles. The Web Content Folder is an asset container, and the Web Content Article is an asset. It's possible to give a Role permission to delete an asset container without giving the Role permission to delete individual assets. In that case, beware: if a Role assignee deletes an asset container with individual assets in it, the individual assets themselves are deleted as well.
 
 | Asset Container | Asset |
-| --------------------------- | ------- |
+| :--- | :--- |
 | Web Content Folder          | Web Content Article |
 | Knowledge Base Folder       | Knowledge Base Article |
 | Message Boards Category     | Message Boards Thread |

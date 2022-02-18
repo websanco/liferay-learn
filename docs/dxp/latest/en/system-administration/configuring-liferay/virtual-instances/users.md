@@ -7,7 +7,7 @@ To access the Users settings, Open the Control Panel and navigate to *Configurat
 The Users Instance configuration contains three entries:
 
 | Configuration | Purpose |
-| --------- | ------------ |
+| :--- | :--- |
 | Personal Menu | Configure the look and feel of personal applications and whether the Personal Menu appears in the Control Menu |
 | Default User Associations | Automatically confer membership to some Sites, Roles, and User Groups |
 | Fields | Enable and disable some optional fields from the User form |

@@ -130,7 +130,7 @@ The portlet's `view.jsp` file renders a link for invoking the MVC Resource Comma
 The first line makes the Portlet 2.0 tag library available via the `portlet` prefix. This JSP binds an action to a UI component using the tag library's `portlet:resourceURL` tag. The tag's `id` attribute uses the MVC Resource Command's `mvc.command.name` property value. The following table shows the correlation:
 
 | `view.jsp` Portlet Resource URL | `P8V5DownloadMVCResourceCommand` Component Property |
-| ----------------------------- | ----------------------------------------------- |
+| :--- | :--- |
 | `<a href="<portlet:resourceURL id="/p8v5/download" />">Download</a>` | `mvc.command.name=/p8v5/download` |
 
 Clicking the view's *Download* link invokes `P8V5DownloadMVCResourceCommand`'s `serveResource` method.

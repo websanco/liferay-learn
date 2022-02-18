@@ -106,7 +106,7 @@ The `User_POST_ToInstance.sh` script calls the REST service with a cURL command.
 Here are the command's arguments:
 
 | Arguments | Description |
-| --------- | ----------- |
+| :--- | :--- |
 | `-H "Content-Type: application/json"` | Indicates that the request body format is JSON. |
 | `-X POST` | The HTTP method to invoke at the specified endpoint |
 | `"http://localhost:8080/o/headless-admin-user/v1.0/user-accounts"` | The REST service endpoint |
@@ -132,7 +132,7 @@ The `User_POST_ToInstance.java` class adds a User by calling the user related se
 The class calls the REST service with only three lines of code:
 
 | Line (abbreviated) | Description |
-| ------------------ | ----------- |
+| :--- | :--- |
 | `UserAccountResource.Builder builder = ...` | Gets a `Builder` for generating a `UserAccountResource` service instance. |
 | `UserAccountResource userAccountResource = builder.authentication(...).build()` | Specifies basic authentication and generates a `UserAccountResources` service instance. |
 | `UserAccount userAccount = userAccountResource.postUserAccount(...)` | Calls the `userAccountResource.postUserAccount` method and passes the data to post. |

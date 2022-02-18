@@ -3,7 +3,7 @@
 The Localization category contains these entries:
 
 | Configuration | Purpose |
-| --------- | ------------ |
+| :--- | :--- |
 | Language | Set the default instance language, and the languages that are available in the instance. |
 | Time Zone | Set the time zone for the instance |
 | Language Selector (WIDGET SCOPE) | Set the instance-scoped default for the Language Selector widget. Override this setting in the widget itself. |

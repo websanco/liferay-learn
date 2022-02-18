@@ -16,7 +16,7 @@ You can access Server Administration by clicking *Control Panel* &rarr; *Configu
 Server Administration's functionality is segmented into tabs:
 
 | Server Admin Tab   | Description                     | Documentation Link       |
-| ------------------ | ------------------------------- | ------------------------ |
+| :--- | :--- | :--- |
 | Resources          | Monitor the system and perform management tasks (run the garbage collector, clear the database cache, etc.) | [Managing System Resources](./using-the-server-administration-panel/managing-system-resources.md) |
 | Log Levels         | View and set logging levels. Modify log levels for Liferay DXP classes and packages. Add custom objects to the logging configuration. | [Configuring Logging](./using-the-server-administration-panel/configuring-logging.md) |
 | Properties         | View System and Portal properties. System Properties shows the system properties for the JVM and Liferay DXP and is used when debugging or checking the running configuration. Portal Properties shows the current portal property values. See the [portal properties reference documentation](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html) for more details. | [Portal Properties](../installation-and-upgrades/reference/portal-properties.md) |

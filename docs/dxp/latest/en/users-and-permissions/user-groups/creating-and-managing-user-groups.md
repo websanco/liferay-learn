@@ -7,7 +7,7 @@ A User Group is a list of Users created for a specific purpose. User Groups can 
  Here you'll learn how to work with User Groups to serve the most common use cases.
 
 | Use Case                     | Description                                    |
-| ---------------------------- | -----------------------------------------------|
+| :--- | :--- |
 | Manage Site membership       | Grant Site membership to all Users in a User Group. Using the previous example, the Teachers User Group could be added as a member of the Sites *University Employees* and *Students and Teachers Collaboration*. All users in that User Group would become members of those Sites. |
 | Manage Users' personal pages | Provide predefined public or private pages to those in the User Group. For example, the Teachers User Group could be created to ensure the home page on all teachers' personal Sites has the same layout and applications. |
 | Collect permissions          |Assign Roles and permissions to a group of Users that don't share an organization. For example, in a university's portal, a User Group could be created to group all teachers independently of their departments (organizations). This would make it easier to assign one or several Roles at once to all the teachers. |

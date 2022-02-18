@@ -21,7 +21,7 @@ To access the Settings menu, choose the desired form (for example, _Guest Survey
 ![The Settings menu contains these options.](./forms-configuration-reference/images/02.png)
 
 | Section | Field | Description |
-| ------- | :--- | :--- |
+| :--- | :--- | :--- |
 | General | Require User Authentication | Requires sign in before submitting the form |
 | General | CAPTCHA | Requires answering CAPTCHA questions when submitting the form |
 | General | Save Answers Automatically | Saves answers to the form automatically |

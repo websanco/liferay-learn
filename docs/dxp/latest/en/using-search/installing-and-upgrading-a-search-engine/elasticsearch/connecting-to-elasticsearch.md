@@ -181,7 +181,7 @@ Now Liferay is indexing content into your remote Elasticsearch 7 installation.
 The bundled connector to Elasticsearch is not always the best choice for your installation. It's important to understand the differences between the connectors you can use to communicate with Elasticsearch:
 
 | Liferay CE/DXP Version | Name | Availability | Communication Protocol | Supports Secure Connection | Operation Modes |
-| ---------------------- | ---- | ------------ | ---------------------- | -------------------------- | --------------- |
+| :--- | :--- | :--- | :--- | :--- | :--- |
 | Liferay 7.4, all varieties | Liferay Connector to Elasticsearch 7 | Bundled | [HTTP](https://www.elastic.co/guide/en/elasticsearch/client/java-rest/7.x/java-rest-overview.html) | &#10004; | Sidecar / Remote (Production)\* |
 | CE 7.3 GA4+, DXP 7.3 GA1+ | Liferay (CE) Connector to Elasticsearch 7 | Bundled | [HTTP](https://www.elastic.co/guide/en/elasticsearch/client/java-rest/7.x/java-rest-overview.html) | &#10004; | Sidecar / Remote (Production)\* |
 | CE 7.2, DXP 7.2 | Liferay Connector (CE) to Elasticsearch 6 | Bundled | [Transport](https://www.elastic.co/guide/en/elasticsearch/client/java-api/6.x/transport-client.html) | &#10004;\*\* (requires [LES](https://www.liferay.com/products/dxp/enterprise-search)) | Embedded / Remote |

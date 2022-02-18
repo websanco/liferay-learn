@@ -3,7 +3,7 @@
 The Email configuration is where you configure email notifications at the Virtual Instance scope. Open the Control Panel and navigate to *Configuration* &rarr; *Instance Settings* and select the *Email* category under the PLATFORM section. The Email configuration contains six entries:
 
 | Configuration | Purpose |
-| --------- | ------------ |
+| :--- | :--- |
 | Account Created Notification | Set whether and what to email Users when the create a new account |
 | Email Sender | Set the *From* name and address for the email templates |
 | Email Verification Notification | Create the template that asks Users to verify their email address |

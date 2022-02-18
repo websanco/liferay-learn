@@ -52,7 +52,7 @@ To configure the OpenAM SSO module at the system scope:
 1. Click on *Configuration* &rarr; *System Settings* &rarr; *Security* &rarr; *SSO* &rarr; *OpenSSO*. You'll see the settings below. The values configured here provide the default values for all portal instances. Enter them in the same format as you would when initializing a Java primitive type with a literal value.
 
 | Property Label | Property Key | Description | Type |
-| ----- | ----- | ----- | ----- |
+| :--- | :--- | :--- | :--- |
 | **Version** | `version` | OpenAM version to use (12 and below or 13) | `String` |
 | **Enabled** | `enabled` | Check this box to enable OpenAM authentication. Note that OpenAM works only if LDAP authentication is also enabled and Liferay DXP's authentication type is set to screen name. | `boolean`|
 | **Import from LDAP** | `importFromLDAP` | If this is checked, users authenticated from OpenAM that do not exist in Liferay DXP are imported from LDAP. LDAP must be enabled. | `boolean` |

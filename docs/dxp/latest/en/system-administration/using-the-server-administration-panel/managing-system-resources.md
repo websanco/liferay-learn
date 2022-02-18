@@ -3,7 +3,7 @@
 The Server Administration panel's Resources tab contains several features, all related to low-level monitoring and management of the system's resources:
 
 | Function | Purpose       |
-| --------- | ------------ |
+| :--- | :--- |
 | System Information | Obtain the Liferay DXP version and uptime data |
 | Memory Monitor | Monitor the Used Memory against the Total Memory and Max Memory |
 | System Actions | Run the garbage collector and generate thread dumps | 

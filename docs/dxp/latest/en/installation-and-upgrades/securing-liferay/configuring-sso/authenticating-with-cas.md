@@ -61,7 +61,7 @@ For some situations, it might be more convenient to specify the system configura
 The format of this file is the same as any properties file. The key to use for each property that can be configured is shown below. Enter values in the same format as you would when initializing a Java primitive type with a literal value.
 
 | Property Label | Property Key | Description | Type |
-| ----- | ----- | ----- | ----- |
+| :--- | :--- | :--- | :--- |
 | **Enabled** | `enabled` | Check this box to enable CAS SSO authentication. | `boolean` |
 | **Import from LDAP** | `importFromLDAP` | Users authenticated from CAS that do not exist in Liferay DXP are imported from LDAP. LDAP must be enabled separately. | `boolean` |
 | **Login URL** | `loginURL` | Set the CAS server login URL. | `String` |

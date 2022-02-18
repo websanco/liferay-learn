@@ -34,7 +34,7 @@ The conceptual diagram below shows how the User inherits the necessary permissio
 Roles have scope, so they apply at different levels.
 
 | Permission Scope | Role Type | Where is it assigned to Users? | Available Assignments |
-| ---------------- | --------- | -------- | --------- |
+| :--- | :--- | :--- | :--- |
 | Throughout the Virtual Instance (global) | Regular   | Control Panel &rarr; Users &rarr; Roles (Click on the Role) &rarr; Assignees | User Groups <br />Organizations <br />Sites <br />Segments <br />Individual Users |
 | A single Organization | Organization | Control Panel &rarr; Users &rarr; Users and Organizations &rarr; Organizations (Organization actions menu) | Individual Users |
 | A single Site    | Site   | Site Administration &rarr; People &rarr; Memberships | User Groups <br />Organizations <br />Segments <br />Individual Site Members |

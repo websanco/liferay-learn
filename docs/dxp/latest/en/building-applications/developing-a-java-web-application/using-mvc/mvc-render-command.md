@@ -144,11 +144,11 @@ The hyperlink `<a href="<%= bakerURL %>">Go to Baker</a>` binds the render URL t
 `baker.jsp` is similar to `able.jsp` except its portlet render URL `mvcRenderCommandName` parameter value is `/a4p1/able`. Each JSP's `portlet:renderURL` tag maps to an MVC Render Command by assigning the MVC Render Command's `mvc.command.name` property value to the tag's `mvcRenderCommandName` portlet parameter.
 
 | `able.jsp` Portlet Render URL Parameter | `A4P1BakerMVCRenderCommand` Component Property |
-| ----------------------------- | ----------------------------------------------- |
+| :--- | :--- |
 | `<portlet:param name="mvcRenderCommandName" value="/a4p1/baker" />` | `mvc.command.name=/a4p1/baker` |
 
 | `baker.jsp` Portlet Render URL Parameter | `A4P1AbleMVCRenderCommand` Component Property |
-| ----------------------------- | ----------------------------------------------- |
+| :--- | :--- |
 | `<portlet:param name="mvcRenderCommandName" value="/a4p1/able" />` | `mvc.command.name=/a4p1/able` |
 
 ## What's Next

@@ -5,7 +5,7 @@
 User Segments are dynamically assigned User collections. If a [Segment can be well-defined with the available criteria](../../site-building/personalizing-site-experience/segmentation/creating-and-managing-user-segments.md), the administrative overhead of User management can be greatly reduced. On top of this, you can define [personalized experiences](../../site-building/personalizing-site-experience/personalizing-site-experience.md) for User Segments created at the Site scope, ensuring that Users see the most relevant content in your Site.
 
 | Where Do I Create User Segments? | What Are They For? | Where Do I Assign Roles To a Segment? |
-| --------------------------------------------------------------------------- | -------------------------------------------------------------- | --------------------- |
+| :--- | :--- | :--- |
 | Site Segments (Site Menu &rarr; People &rarr; Segments)                     | Create personalized experiences for a Site's Users             | Site Menu &rarr; People &rarr; Segments (Actions) |
 | Instance Segments (Control Panel &rarr; Users &rarr; Roles (Regular Roles)) | Efficiently and dynamically manage Users and their permissions | Control Panel &rarr; Users &rarr; Roles (Regular Roles) |
 

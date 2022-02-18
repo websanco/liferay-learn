@@ -50,7 +50,7 @@ Manually test the upgraded search experience to ensure the features you depend o
 These LES apps were renamed in the 7.3 life cycle to better reflect their functionality and to emphasize their identity as LES apps:
 
 | Functionality | Old App Name | New App Name | 7.2 Configuration File | 7.3/7.4 Configuration File |
-| ------------- | ------------ | ------------ |------------ | ------------ |
+| :--- | :--- | :--- | :--- | :--- |
 | Monitoring the Elasticsearch cluster | Liferay Connector to X-Pack Monitoring [Elastic Stack 6.x] | Liferay Enterprise Search Monitoring | `com.liferay.portal.search.elasticsearch6.xpack.monitoring.web.internal.configuration.XPackMonitoringConfiguration.config` | `com.liferay.portal.search.elasticsearch.monitoring.web.internal.configuration.MonitoringConfiguration.config` |
 | Securing the Elasticsearch cluster | Liferay Connector to X-Pack Security [Elastic Stack 6.x] | Liferay Enterprise Search Security | No action required; this app is not available for DXP 7.4. Its features are integrated into the Elasticsearch 7 connector. |
 | Using machine learning to optimize the search algorithm | Liferay Connector to Elasticsearch Learning to Rank | Liferay Enterprise Search Learning to Rank | No changes. |

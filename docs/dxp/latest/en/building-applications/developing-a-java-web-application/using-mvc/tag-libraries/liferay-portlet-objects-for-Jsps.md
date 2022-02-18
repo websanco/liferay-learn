@@ -3,7 +3,7 @@
 You may have noticed the `<liferay-portlet:defineObjects>` tag in your JSPs.  Similar to the [theme:defineObjects](./liferay-theme-objects-for-Jsps.md)  tag, when you include this tag in your JSP, you gain access to several variables  that, in this case, return useful information about your portlet. Note that the  JSR-286 specification defines four lifecycle methods for a portlet:  processAction, processEvent, render, and serveResource. Some of the variables  defined by the `<portlet:defineObjects/>` tag are only available to a JSP if the  JSP was included during the appropriate phase of the portlet lifecycle. These  objects are described in the table below:
 
 | Object | Description |
-| ------ | ----------- |
+| :--- | :--- |
 | `ActionRequest actionRequest` | Represents the request sent to the portlet to handle an action. `actionRequest` is only available to a JSP if the JSP was included during the action-processing phase. |
 | `ActionResponse actionResponse` | Represents the portlet response to an action request. `actionResponse` is only available to a JSP if the JSP was included in the action-processing phase. |
 | `EventRequest eventRequest` | Represents the request sent to the portlet to handle an event. `eventRequest` is only available to a JSP if the JSP was included during the event-processing phase. |

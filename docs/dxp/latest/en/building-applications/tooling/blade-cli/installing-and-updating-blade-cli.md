@@ -78,7 +78,7 @@ Snapshot versions can be unstable, so use them at your own risk.
 Below is a summary of the available blade commands. Help is available at the CLI by typing `blade help [command]`.
 
 Command | Description
-------- | -------------
+:--- | :---
 `convert` | Converts a Plugins SDK plugin project to a Gradle Workspace project.
 `create` | Creates a new Liferay project from available templates.
 `deploy` | Builds and deploys projects to Liferay.

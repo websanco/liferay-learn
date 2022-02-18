@@ -13,7 +13,7 @@ To follow the example you must first enable local network access in the Data Pro
 This example requires creating two data providers, and a form with four fields and three form rules. The table below contains a summary of the elements:
 
 | Liferay Forms Element | Element Label | Description
-| ------------- | ---------------  | ----------------------------------------------------------------------- |
+| :--- | :--- | :--- |
 | Data Provider | Get Group Users  | Get the Site's/Group's Users and provide a list of their email addresses.
 | Data Provider | Get User by Email | Get the User by the selected email address and provide the first and last name.
 | Form Field    | Hidden Group ID  | Use a hidden Numeric field to hold the Group ID of the current site.

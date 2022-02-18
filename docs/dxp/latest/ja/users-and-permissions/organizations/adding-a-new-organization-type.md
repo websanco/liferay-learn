@@ -12,7 +12,7 @@
 *League*という別の組織タイプを追加するには、次のオプションを構成フォームに入力します。
 
 | 組織名      | Country Enabled | Country Required | Rootable | Children Types         |
-| -------- | --------------- | ---------------- | -------- | ---------------------- |
+| :--- | :--- | :--- | :--- | :--- |
 | League   | True            | False            | True     | Division               |
 | Division | True            | False            | False    | Team                   |
 | Team     | True            | False            | False    | \[blank: leaf node\] |

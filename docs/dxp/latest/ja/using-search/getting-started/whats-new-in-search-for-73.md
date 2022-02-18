@@ -142,7 +142,7 @@ Learning to Rank（LTR）は、機械学習（ML）モデルを適用して検�
 Liferay CE/DXP 7.3リリースには明示的にリンクされていませんが、次のアプリは、機能をより適切に反映し、LESアプリとしてのアイデンティティを強調するために名前が変更されました。
 
 | 機能                        | 旧アプリ名                                                          | 新アプリ名                                      |
-| ------------------------- | -------------------------------------------------------------- | ------------------------------------------ |
+| :--- | :--- | :--- |
 | Elasticsearchクラスターのモニタリング | Liferay Connector to X-Pack Monitoring \[Elastic Stack 6.x\] | Liferay Enterprise Search Monitoring       |
 | Elasticsearchクラスターの保護     | Liferay Connector to X-Pack Security \[Elastic Stack 6.x\]   | Liferay Enterprise Search Security         |
 | 機械学習を使用した検索アルゴリズムの最適化     | Liferay Connector to Elasticsearch Learning to Rank            | Liferay Enterprise Search Learning to Rank |

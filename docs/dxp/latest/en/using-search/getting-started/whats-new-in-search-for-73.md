@@ -144,7 +144,7 @@ Judgment lists are the source of truth that informs and guides the model trainin
 Though not explicitly linked to the Liferay CE/DXP 7.3 release, these apps were renamed to better reflect their functionality and to emphasize their identity as LES apps:
 
 | Functionality | Old App Name | New App Name |
-| ------------- | ------------ | ------------ |
+| :--- | :--- | :--- |
 | Monitoring the Elasticsearch cluster | Liferay Connector to X-Pack Monitoring [Elastic Stack 6.x] | Liferay Enterprise Search Monitoring |
 | Securing the Elasticsearch cluster | Liferay Connector to X-Pack Security [Elastic Stack 6.x] | Liferay Enterprise Search Security |
 | Using machine learning to optimize the search algorithm | Liferay Connector to Elasticsearch Learning to Rank | Liferay Enterprise Search Learning to Rank |

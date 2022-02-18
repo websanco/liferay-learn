@@ -56,7 +56,7 @@ Use these steps to blacklist using a configuration file:
 ### Blacklist Bundle Symbolic Names
 
 | Type       | Bundle Symbolic Name |
-| ---------- | --------------|
+| :--- | :--- |
 | App        | App name displayed in the [App Manager](./using-the-app-manager.md) |
 | LPKG       | LPKG file name without the `.lpkg` extension |
 | Module/Bundle JAR | `Bundle-SymbolicName` in `bnd.bnd` or `MANIFEST.MF` file |

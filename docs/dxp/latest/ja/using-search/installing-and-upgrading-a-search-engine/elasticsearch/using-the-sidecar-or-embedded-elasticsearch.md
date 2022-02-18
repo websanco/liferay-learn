@@ -55,7 +55,7 @@ Synonym Sets and Result Rankings are applications that use the search index for 
 ElasticsearchサイドカーサーバーはLiferay DXP 7.3およびLiferay Portal CE 7.3 GA4+ TomcatバンドルとDockerイメージにバンドルされていますが、サポートされているアプリケーションサーバーにLiferay WARをインストールする場合は、いくつかの重要な違いがあります。
 
 | Liferay DXPのフレーバー        | デフォルトのElasticsearch | 事前インストール | 手動による介入が必要  |
-| ------------------------ | ------------------- | -------- | ----------- |
+| :--- | :--- | :--- | :--- |
 | Tomcatバンドル：7.3 GA4+      | サイドカー               | ✔        | ✘           |
 | Tomcat：7.3 GA4+          | サイドカー               | ✘        | ✘（自動ダウンロード） |
 | Dockerタグ：7.3 GA4+        | サイドカー               | ✔        | ✘           |
@@ -80,7 +80,7 @@ The bundled Elasticsearch server is useful for development and testing purposes 
 ElasticsearchサーバーのEmbeddedモードとサイドカーモードの比較を次に示します。
 
 | Embedded                              | サイドカー                                             |
-| ------------------------------------- | ------------------------------------------------- |
+| :--- | :--- |
 | 安全な接続を構成できません                         | 安全な接続を構成できません                                     |
 | ElasticsearchのOSSバージョンを使用します          | ElasticsearchのOSSバージョンを使用します                      |
 | <http://localhost:9200>で実行します         | <http://localhost:9201>で実行します                     |

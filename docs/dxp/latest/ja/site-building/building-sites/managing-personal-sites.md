@@ -42,7 +42,7 @@
 個人サイトのデフォルトページをカスタマイズするために、[`portal-ext.properties`](../../installation-and-upgrades/reference/portal-properties.md)に追加できるポータルプロパティがいくつかあります。 ページの名前、ページに表示されるアプリケーション、ページのテーマとレイアウトテンプレートなどをカスタマイズできます。 詳細は、`portal.properties`ファイルの[Default User Public Layouts](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html#Default%20User%20Public%20Layouts)および[Default User Private Layouts](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html#Default%20User%20Private%20Layouts)セクションを参照してください。 これらのプロパティの一部を以下の表に示します。
 
 | 機能                          | プロパティ                                           |
-| --------------------------- | ----------------------------------------------- |
+| :--- | :--- |
 | 個人サイトを無効にする                 | `layout.user.public.layouts.enabled=false`      |
 | 個人サイトのプライベートページを無効にする       | `layout.user.private.layouts.enabled=false`     |
 | 個人サイトの自動作成を無効にする            | `layout.user.public.layouts.auto.create=false`  |

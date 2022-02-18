@@ -32,7 +32,7 @@ Liferay DXPは、ワイドエリアネットワーク（WAN）プロトコルを
 インストールされているデフォルトのLiferay DXP 7.3インデックスは、以下のリストに近似しています（変更される可能性があります）。 デフォルトのグローバル*インデックス名接頭辞*は`liferay-`です。これはElasticsearch 7コネクタ設定で変更できます。 `20101`は、データベース内の特定の会社の生成された`companyId`です。  UIにインスタンスIDとして表示され、[仮想インスタンス](../../../system-administration/configuring-liferay/virtual_instances.rst)を表します。
 
 | インデックスID                                            | インデックスタイプ  | インデックスの目的                                     |
-| --------------------------------------------------- | ---------- | --------------------------------------------- |
+| :--- | :--- | :--- |
 | liferay-0                                           | システムインデックス | システム設定アプリケーションでの検索                            |
 | liferay-20101                                       | 会社インデックス   | Liferay DXP仮想インスタンスのインデックス付きアセットの検索           |
 | liferay-20101-search-tuning-rankings                | アプリインデックス  | 結果ランキングアプリケーションのプライマリデータストレージ                 |
@@ -56,7 +56,7 @@ Liferay DXP provides APIs for creating and using (writing to and reading from) c
 [Liferay Commerce](https://www.liferay.com/products/commerce)サブスクリプションがあり、インストールでアクティブ化されている場合は、次のようなインデックスもあります。
 
 | インデックスID                                                     | インデックスタイプ | インデックスの目的     |
-| ------------------------------------------------------------ | --------- | ------------- |
+| :--- | :--- | :--- |
 | liferay-20101-commerce-ml-forecast                           | アプリインデックス | 機械学習機能        |
 | liferay-20101-product-content-commerce-ml-recommendation     | アプリインデックス | レコメンデーションサービス |
 | liferay-20101-product-interaction-commerce-ml-recommendation | アプリインデックス | レコメンデーションサービス |

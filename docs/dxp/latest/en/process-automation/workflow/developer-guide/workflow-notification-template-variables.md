@@ -93,7 +93,7 @@ These are the variables logged when you enable the Single Approver Definition
 for Blogs Entries, then submit a new entry for publication:
 
 | Variable Name                | Value    | Operation | Description or Link                       |
-| ---------------------------- | -------- | --------- |--------------------------------------------- |
+| :--- | :--- | :--- | :--- |
 | ${saxReaderUtil}             |          | &#10004;  | [SaxReaderUtil](https://learn.liferay.com/reference/latest/en/dxp/javadocs/portal-kernel/com/liferay/portal/kernel/xml/SAXReaderUtil.html) |
 | ${getterUtil}                |          | &#10004;  | [GetterUtil](https://learn.liferay.com/reference/latest/en/dxp/javadocs/portal-kernel/com/liferay/portal/kernel/util/GetterUtil.html) |
 | ${portalPermission}          |          | &#10004;  | [PortalPermission](https://learn.liferay.com/reference/latest/en/dxp/javadocs/portal-kernel/com/liferay/portal/kernel/service/permission/PortalPermission.html) |

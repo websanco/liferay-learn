@@ -55,7 +55,7 @@ Here are common uses for the default Elasticsearch server (sidecar and embedded)
 While an Elasticsearch sidecar server is bundled on Liferay DXP 7.3 and Liferay Portal 7.3 GA4+ Tomcat bundles and Docker images, there are some key differences if you're installing the Liferay WAR onto any supported application server.
 
 | Liferay DXP Flavor       | Default Elasticsearch | Pre-Installed | Requires Manual Intervention |
-| ------------------------ | ------------------- | ------------- | ---------------------------- |
+| :--- | :--- | :--- | :--- |
 | Tomcat bundle: 7.3+  | Sidecar             | &#10004;      | &#10008;                     |
 | Tomcat: 7.3+         | Sidecar             | &#10008;      | &#10008; (auto-downloaded)   |
 | Docker: 7.3+         | Sidecar             | &#10004;      | &#10008;                     |
@@ -78,7 +78,7 @@ The bundled Elasticsearch server is useful for development and testing purposes 
 Here's a comparison between the embedded and sidecar Elasticsearch servers.
 
 | EMBEDDED           | SIDECAR           |
-| ------------------ | ----------------- |
+| :--- | :--- |
 | Cannot configure a secure connection | Cannot configure a secure connection |
 | Uses an OSS version of Elasticsearch | Uses an OSS version of Elasticsearch |
 | Runs at <http://localhost:9200> | Runs at <http://localhost:9201> |

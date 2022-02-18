@@ -16,7 +16,7 @@ Liferay's User Associated Data (UAD) framework assists you in meeting two of the
 The following Liferay applications have the UAD framework applied to them:
 
 | Liferay Application | Liferay 7.2 (DXP & CE) | Liferay 7.3 (DXP & CE) |
-| ------------------- | ---------------------- | ---------------------- |
+| :--- | :--- | :--- |
 | Announcements          | Yes | Yes |
 | Blogs                  | Yes | Yes |
 | Bookmarks (deprecated) | Yes | Yes |

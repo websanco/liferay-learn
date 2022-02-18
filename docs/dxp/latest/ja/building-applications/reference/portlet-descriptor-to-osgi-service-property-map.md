@@ -20,7 +20,7 @@
 **注:** 簡単にするために、**ポートレットXSD** [4](#four)から派生したXPath記法を使用しています。
 
 | portlet.xml XPath                                                                                             | OSGiポートレットサービスプロパティ                                                                                                                                                |
-| ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| :--- | :--- |
 | `/portlet-app/container-runtime-option`                                                                       | portlet-appスコープではサポートされていません                                                                                                                                       |
 | `/portlet-app/custom-portlet-mode`                                                                            | サポートされていません                                                                                                                                                        |
 | `/portlet-app/custom-window-state`                                                                            | サポートされていません                                                                                                                                                        |
@@ -67,7 +67,7 @@
 ### Liferayディスプレイ
 
 | liferay-display.xml XPath  | OSGiポートレットサービスプロパティ                                  |
-| -------------------------- | ---------------------------------------------------- |
+| :--- | :--- |
 | `/display/category[@name]` | `com.liferay.portlet.display-category=<value>` |
 
 ### Liferayポートレット
@@ -75,7 +75,7 @@
 **注:** 簡単にするために、**Liferayポートレット** [5](#five)から派生したXPath記法を使用しています。
 
 | liferay-portlet.xml XPath                                            | OSGi Liferayポートレットサービスプロパティ                                                                                             |
-| -------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| :--- | :--- |
 | `/liferay-portlet-app/portlet/action-timeout`                        | `com.liferay.portlet.action-timeout=<int>`                                                                        |
 | `/liferay-portlet-app/portlet/action-url-redirect`                   | `com.liferay.portlet.action-url-redirect=<boolean>`                                                               |
 | `/liferay-portlet-app/portlet/active`                                | `com.liferay.portlet.active=<boolean>`                                                                            |

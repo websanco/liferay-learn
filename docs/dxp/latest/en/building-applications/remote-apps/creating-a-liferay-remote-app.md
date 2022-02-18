@@ -147,7 +147,7 @@ For example,
 1. Enter these values:
 
    | Field | Value |
-   | --- | --- |
+   | :--- | :--- |
    | Name | H5V7-Remote-App |
    | Type | Custom Element |
    | HTML Element Name | `h5v7-remote-app` |

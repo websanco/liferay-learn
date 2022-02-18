@@ -23,7 +23,7 @@ These beans have the `@PortletRequestScoped` annotation. Here are their artifact
 Table 1: Portlet Request Scoped Beans[^1]
 
 | Artifact | Bean EL Name | Qualifier | Valid during | 
-| -------- | ------------ | --------- | ------------ |
+| :--- | :--- | :--- | :--- |
 | `PortletConfig` | `portletConfig` | - | all | 
 | `PortletRequest` | `portletRequest` | - | all | 
 | `PortletResponse` | `portletResponse` | - | all | 
@@ -59,7 +59,7 @@ These beans use the `@Dependent` scope. They're of type `java.lang.String`, whic
 Table 2: Dependent Scoped Beans[^2]
 
 | Artifact | Bean EL Name | Qualifier | Valid during |
-| -------- | ------------ | --------- | ------------ |
+| :--- | :--- | :--- | :--- |
 | `Namespace` (String) | `namespace` | `@Namespace` | all |
 | `ContextPath` (String) | `contextPath` | `@ContextPath` | all |
 | `WindowID` (String) | `windowId` | `@WindowId` | all |

@@ -15,7 +15,7 @@ For detailed instructions on creating App Builder objects, form views, and table
 ## **Form:** Create the _Employee Request_ form.
 
    | Field Type | Field Label | Options | Required | Other Properties |
-   | ---------- | ----------- | ------- | -------- | ---------------- |
+   | :--- | :--- | :--- | :--- | :--- |
    | Text | Name | Not applicable (NA) |  &#10004; | NA |
    | Text | Current Manager's Name | NA |  &#10004; | NA |
    | Text | Current Role | NA |  &#10004; | NA |
@@ -24,7 +24,7 @@ For detailed instructions on creating App Builder objects, form views, and table
 ## **Form:** Create the _Current Manager's Assessment_ form.
 
    | Field Type | Field Label | Options | Required | Other Properties |
-   | ---------- | ----------- | ------- | -------- | ---------------- |
+   | :--- | :--- | :--- | :--- | :--- |
    | Single Selection | Current Manager: Is the Transfer Approved? | Yes <br /> No |  &#10004; | NA |
    | Single Selection | Does the employee exhibit skills and experiences requisite with the requested role? | Yes <br /> No |  &#10004; | NA |
    | Text | Detail the employee's skills and characteristics that will make the transfer successful | NA |  &#10008; | Multiple Lines |
@@ -34,7 +34,7 @@ For detailed instructions on creating App Builder objects, form views, and table
 ## **Form:** Create the _Potential Manager's Assessment_ form.
 
    | Field Type | Field Label | Options | Required | Other Properties |
-   | ---------- | ----------- | ------- | -------- | ---------------- |
+   | :--- | :--- | :--- | :--- | :--- |
    | Single Selection | Receiving Manager: Is the Transfer Approved? | Yes <br /> No |  &#10004; | NA |
    | Single Selection | Is there an available role for the employee? | Yes <br /> No |  &#10004; | NA |
    | Single Selection | Do you have concerns about the suitability of the employee? | Yes <br /> No |  &#10008; | NA |
@@ -44,14 +44,14 @@ For detailed instructions on creating App Builder objects, form views, and table
 ## **Form:** Create the _HR Assessment_ form.
 
    | Field Type | Field Label | Options | Required | Other Properties |
-   | ---------- | ----------- | ------- | -------- | ---------------- |
+   | :--- | :--- | :--- | :--- | :--- |
    | Single Selection | HR Representative: Is the Transfer Approved? | Yes <br /> No |  &#10004; | NA |
    | Single Selection | Does the transfer require a reassessment of the employee's benefits? | Yes <br /> No |  &#10004; | NA |
 
 ## **Table:** Create the _Role Change Request Master List_ table.
 
    | Column 1 | Column 2 | Column 3 | Column 4 | Column 5 | Column 6 |
-   | ---------- | ----------- | ------- | -------- | ---------------- | ---- |
+   | :--- | :--- | :--- | :--- | :--- | :--- |
    | Name | Requested Role | Current Manager: Is the Transfer Approved? | Receiving Manager: Is the Transfer Approved? | HR Representative: Is the Transfer Approved? | When can the transfer occur? |
 
 ## Related Information
