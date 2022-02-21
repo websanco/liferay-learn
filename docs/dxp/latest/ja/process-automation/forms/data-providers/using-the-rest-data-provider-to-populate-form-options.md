@@ -66,7 +66,7 @@
 1. 完了したら、 ［**保存**］ をクリックします。
 
 ```{note}
-   `nameCurrentValue` の前の `$..` は、JSONデータストラクチャーをナビゲートし、出力へのパスを指定するJsonPath構文です。 詳しくは `JsonPath <https://github.com/json-path/JsonPath>`_ と `こちら <http://goessner.net/articles/JsonPath/>`_ を参照してください。
+   `nameCurrentValue` の前の `$..` は、JSONデータストラクチャーをナビゲートし、出力へのパスを指定するJsonPath構文です。 詳しくは [JsonPath](https://github.com/json-path/JsonPath) と [こちら](http://goessner.net/articles/JsonPath/) を参照してください。
 ```
 
 <a name="restデータプロバイダーのフィルターとしての入力の使用" />
