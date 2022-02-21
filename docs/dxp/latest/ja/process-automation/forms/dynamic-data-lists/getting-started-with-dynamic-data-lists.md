@@ -1,7 +1,7 @@
 # 動的データリストの概要
 
 ```{important}
-   動的データリストは、Liferay DXP7.3で非推奨になりました。 `アプリビルダー <../../.../developing-applications/developing-low-code-applications/app-builder-overview.md>`_ と `Forms Reports <../sharing-forms-and-managing-submissions/form-reports.md>`_ で置き換えられました。
+   動的データリストは、Liferay DXP7.3で非推奨になりました。 [アプリビルダー](../../.../developing-applications/developing-low-code-applications/app-builder-overview.md] と [Forms Reports](../sharing-forms-and-managing-submissions/form-reports.md) で置き換えられました。
 ```
 
 動的データリストには、データ定義と呼ばれるフィールドセットから作成されたフォームが表示されます。 データ定義は、フォームのフィールドタイプ（テキスト、ブール値、日付、ラジオボタン、セレクターメニューなど）と、それらのフィールドのラベルと設定で構成されます。 データ定義は、動的データリストのデータモデルとして効果的に機能します。 例えば、カンファレンスの登録用に3つのフィールド（ユーザー名、メールアドレス、Tシャツサイズのドロップダウンリスト）を持つデータ定義を作成することができます。 このデータ定義は、あなたが作成するすべての会議登録フォームに使用することができます。

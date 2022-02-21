@@ -5,8 +5,7 @@ Liferay Formsのフィールドは、 [データプロバイダー](../data-prov
 RESTデータプロバイダーが目的に合わない場合は、`DDMDataProvider`拡張ポイントを使用して、独自のデータプロバイダーを作成します。
 
 ```{note}
-     このデータプロバイダーの例では、 [GeoDataSource™ Location Search Web Service](https://www.geodatasource.com/web-service/location-search) から XML データを消費します。 このサンプルには、Liferay社員のAPIキーがハードコードされています。
-サンプルを使いすぎないようにしてください。 本番環境では絶対に使用しないでください。
+このデータプロバイダーの例では、 [GeoDataSource™ Location Search Web Service](https://www.geodatasource.com/web-service/location-search) から XML データを消費します。 このサンプルには、Liferay社員のAPIキーがハードコードされています。 サンプルを使いすぎないようにしてください。 本番環境では絶対に使用しないでください。
 ```
 
 <a name="カスタムデータプロバイダーをデプロイする" />
