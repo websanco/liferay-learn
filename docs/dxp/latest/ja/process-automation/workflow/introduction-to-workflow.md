@@ -4,42 +4,63 @@ Liferay DXPには、ユーザーがブログ、Webコンテンツ、Wikiなど�
 
 ## ワークフローのアクティブ化
 
-特定のアセットに対してワークフローがアクティブ化されると、*[Publish]* ボタンが*[Submit for Publication]* ボタンに置き換わり、即時公開ではなく、アセットのステータスが*[Pending]* に設定されます。 公開するにはワークフローを進める必要があります。
+特定のアセットに対してワークフローがアクティブ化されると、_［公開］_ボタンが_［公開申請］_ボタンに置き換わり、即時公開ではなく、アセットのステータスが_［保留中］_に設定されます。 公開するにはワークフローを進める必要があります。
 
-![[Publish]ボタンの代わりに、ワークフローが有効なリソースに対して[Submit for Publication]ボタンが表示されます。](./introduction-to-workflow/images/01.png)
+![［公開］ボタンの代わりに、ワークフローが有効なリソースに対して［公開申請］ボタンが表示されます。](./introduction-to-workflow/images/01.png)
 
-既定のワークフロープロセスは、*Single Approver*と呼ばれます。このプロセスでは、公開前に提出物を確認および承認する人が1名必要です。
+既定のワークフロープロセスは、_唯一の承認者_と呼ばれます。このプロセスでは、公開前に提出物を確認および承認する人が1名必要です。
 
-詳細は、 [ワークフローのアクティブ化](./using-workflows/activating-workflow.md)および[sending assets through review](./using-workflows/reviewing-assets.md) を参照してください。
+詳細は、 [ワークフローのアクティブ化](./using-workflows/activating-workflow.md)および[レビューでアセットを送信する](./using-workflows/reviewing-assets.md) を参照してください。
 
 ## ワークフローの構築
 
 ワークフローを使用すると、ユーザーは複数のレビュー担当者と承認者が設定されたより複雑なワークフローを構築できます。 効果的なワークフローを構築する方法を学習しましょう。
 
-  - [Crafting Review Processes in XML](https://help.liferay.com/hc/articles/360029147791-Introduction-to-Crafting-XML-Workflow-Definitions)
-  - [Visually Designing Review Processes](https://help.liferay.com/hc/articles/360028821892-Workflow-Designer)（サブスクライバー）
-  - [Uploading Workflow Definitions](./designing-and-managing-workflows/managing-workflows.md#uploading-a-new-workflow-definitions)
-  - [Managing Workflow Definitions](./designing-and-managing-workflows/managing-workflows.md)
+* [XMLでのレビュープロセスの作成](./developer-guide/crafting-xml-workflow-definitions.md)
+* [レビュープロセスの視覚的設計](./designing-and-managing-workflows/workflow-designer/workflow-designer-overview.md) （サブスクライバー）
+* [ワークフロー定義のアップロード](./designing-and-managing-workflows/managing-workflows.md#uploading-a-new-workflow-definitions)
+* [ワークフロー定義の管理](./designing-and-managing-workflows/managing-workflows.md)
 
-独自のワークフローの構築を開始するには、[Building Workflows](./designing-and-managing-workflows/building-workflows.md)を参照してください。
+独自のワークフローの構築を開始するには、[ワークフローの構築](./designing-and-managing-workflows/building-workflows.md)を参照してください。
 
 ### ワークフローメトリクスを使用したSLAの実装
 
 > サブスクリプション
 
-*メトリクス*関数を使用して、ワークフロープロセスのサービスレベルアグリーメント（SLA）のパフォーマンスを測定できます。 SLAは、ワークフロープロセスのイベントの期限を定義します。 期限は顧客との間で正式に合意したり、次のようなイベントを追跡して社内目標を達成するために非公式に作成することもできます。
+_メトリクス_関数を使用して、ワークフロープロセスのサービスレベルアグリーメント（SLA）のパフォーマンスを測定できます。 SLAは、ワークフロープロセスのイベントの期限を定義します。 期限は顧客との間で正式に合意したり、次のようなイベントを追跡して社内目標を達成するために非公式に作成することもできます。
 
-  - 解決までの合計時間
-  - 特定のワークフロータスクを完了する時間
+* 解決までの合計時間
+* 特定のワークフロータスクを完了する時間
 
-SLAが設定されると、SLAタイマーをトリガーするワークフローの送信がワークフローメトリクスフレームワークによって自動的に報告され、*[On Time]* または *[Overdue]* のステータスが付けられます。
+SLAが設定されると、SLAタイマーをトリガーするワークフローの送信がワークフローメトリクスフレームワークによって自動的に報告され、_［予定通り］_または _［期限切れ］_のステータスが付けられます。
 
 ![SLAに基づいて生成されたワークフローレポートを参照してください。](./introduction-to-workflow/images/02.png)
 
 SLAをワークフローに追加する方法については、[Using Workflow Metrics](./using-workflows/using-workflow-metrics.md)の記事を参照してください。
 
+## ワークフローステータスを理解する
+
+ワークフロープロセスのアセットは、常にステータスを持っています。 このステータスは、アセットをエンドユーザーに表示できるかどうかなどの重要な判断材料として使用されます。 多くのステータスがありますが、その中でも特に一般的で理解すべき重要なものをここで説明します。
+
+- _下書き_ ステータスは、ワークフローでのレビューまたはエンドユーザーによる表示の準備ができる前に保存できるコンテンツに割り当てられます。
+- _保留中_ ステータスは、そのアセットがまだ完了していないワークフロープロセスにあることを示します。
+- _承認済み_ ステータスは、アセットを表示する権限を持つすべてのユーザーがUIに表示できる状態であることを意味します。
+- _拒否_ ステータスは、ワークフローを通過できなかったアセットのためのものです。 このステータスを利用して、アセットのオリジナル提出者に通知を行い、コンテンツの修正と再提出を促すことができます。
+
+![コンテンツは、ワークフローのステータスを持つことができます。](./introduction-to-workflow/images/03.png)
+
+ソースコードの [WorkflowConstantsクラス](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/workflow/WorkflowConstants.java) を参照して、利用可能なすべてのステータスを確認してください。
+
+### バージョン管理されたアセットは複数のステータスを持つことができます
+
+バージョン管理したアセットには、2つのステータスがあります。
+
+![バージョン管理されたアセットには、2つのステータスがあります。](./introduction-to-workflow/images/04.png)
+
+ほとんどのアセットでは、デフォルトで承認済みの最新バージョンが表示されます。 すでに承認されているアセットが更新された場合、新しいバージョンが作成され、ワークフローで送信されます。 新しいバージョンがワークフローでまだ承認されていない間、アセットの2番目のステータスが表示されます（例： _保留中_）。 最後に承認されたバージョンは、新しいバージョンが承認されるまで継続して使用されます。
+
 ## 次のステップ
 
-  - [ワークフローのアクティブ化](./using-workflows/activating-workflow.md)
-  - [Managing Workflows](./designing-and-managing-workflows/managing-workflows.md)
-  - [Workflow Designer Overview](./designing-and-managing-workflows/workflow-designer/workflow-designer-overview.md)
+* [ワークフローのアクティブ化](./using-workflows/activating-workflow.md)
+* [ワークフローの管理](./designing-and-managing-workflows/managing-workflows.md)
+* [ワークフローデザイナーの概要](./designing-and-managing-workflows/workflow-designer/workflow-designer-overview.md)

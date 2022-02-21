@@ -2,30 +2,26 @@
 
 フォームを共有するには2つの方法があります。
 
-  - *[Form]* ウィジェットをサイトページに配置し、特定のフォームを表示するようにウィジェットを構成する。 これにより、[サイトページ](../../../site-building/creating-pages/understanding-pages/understanding-pages.md)にアクセスできるユーザーがフォームを表示したりフォームを送信したりできます。
-  - 専用フォームURLをユーザーと直接共有する。 これにより、フォームへのアクセスは、直接リンクを持っているユーザーのみに制限されます。
+* _［フォーム］_ウィジェットをサイトページに配置し、特定のフォームを表示するようにウィジェットを構成する。 これにより、[サイトページ](../../../site-building/creating-pages/understanding-pages/understanding-pages.md)にアクセスできるユーザーがフォームを表示したりフォームを送信したりできます。
+* 専用フォームURLをユーザーと直接共有する。 これにより、フォームへのアクセスは、直接リンクを持っているユーザーのみに制限されます。
 
 ## サイトページにフォームを表示する
 
-1.  サイトページ（例：*Contact Us* ）に移動します。
+1. サイトページ（例：_Contact Us_ ）に移動します。
+1. _［Add］_ボタンをクリックします。
+1. _［Widgets］_をクリックし、次に_［Collaboration］_をクリックしてメニューを展開します。
 
-2.  *[Add]* ボタンをクリックします。
+    ![［フォーム］ウィジェットの選択](./sharing-forms/images/04.png)
 
-3.  *[Widgets]* をクリックし、次に*[Collaboration]* をクリックしてメニューを展開します。
+1. _［フォーム］_ウィジェットをページに追加します。
 
-    ![[Form]ウィジェットの選択](./sharing-forms/images/04.png)
+    ![ページ上の空白の［フォーム］ウィジェット](./sharing-forms/images/01.png)
 
-4.  *[Form]* ウィジェットをページに追加します。
+1. _［フォーム］ウィジェット_がページに表示されたら、_［Select Form］_をクリックします。
+1. _［Guest Survey］_フォームを選択して、_［保存］_をクリックします。
+1. _［Form Configuration］_ウィンドウを閉じます。
 
-    ![ページ上の空白の[Form]ウィジェット](./sharing-forms/images/01.png)
-
-5.  *[Form]ウィジェット*がページに表示されたら、*[Select Form]* をクリックします。
-
-6.  *[Guest Survey]* フォームを選択して、*[保存]* をクリックします。
-
-7.  *[Form Configuration]* ウィンドウを閉じます。
-
-    ![[Form]ウィジェットに[Guest Survey]フォームが表示されます](./sharing-forms/images/05.png)
+    ![［フォーム］ウィジェットに［Guest Survey］フォームが表示されます](./sharing-forms/images/05.png)
 
 ## フォームへの直接URLを取得する
 
@@ -37,7 +33,7 @@
 
 ![公開ボタンをクリックすると、フォームのリンクがバナーで表示されます。](./sharing-forms/images/08.png)
 
-バナーが消えた後にリンクを取得したり、フォームのリンクをメールで共有するには、 *[共有]* ボタンをクリックします。
+バナーが消えた後にリンクを取得したり、フォームのリンクをメールで共有するには、 _［共有］_ボタンをクリックします。
 
 ![共有画面からURLを取得します。](./sharing-forms/images/03.png)
 
@@ -45,4 +41,4 @@ URLをコピーしたり、関連する受信者に送信するメールを設�
 
 ## 次のステップ
 
-  - [Managing Form Entries](./managing-form-entries.md)
+* [Managing Form Entries](./managing-form-entries.md)

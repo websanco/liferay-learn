@@ -1,22 +1,10 @@
-# フォーム
+フォーム
+=====
 
-```{toctree}
-:maxdepth: 3
+.. toctree:: :maxdepth: 3
 
-forms/introduction-to-forms.md
-forms/creating-and-managing-forms.md
-forms/sharing-forms-and-managing-submissions.md
-forms/form-rules.md
-forms/data-providers.md
-forms/dynamic-data-lists.md
-forms/kaleo-forms.md
-forms/developer-guide.md
-```
+   forms/introduction-to-forms.md forms/creating_and_managing_forms.rst forms/sharing_forms_and_managing_submissions.rst forms/form_rules.rst forms/data_providers.rst forms/dynamic_data_lists.rst forms/kaleo_forms.rst forms/developer_guide.rst
 
-```{raw} html
-:file: ../landingpage_template.html
-```
+.. raw:: html :file: ../landingpage_template.html
 
-```{raw} html
-:file: forms/landing.html
-```
+.. raw:: html :file: forms/landing.html

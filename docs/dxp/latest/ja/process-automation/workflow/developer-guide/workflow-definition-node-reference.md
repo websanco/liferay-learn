@@ -1,10 +1,10 @@
 # ワークフロー定義ノードリファレンス
 
-*ノード*要素とそのサブ要素は、ワークフロー定義を構成する基本的な構成要素です。 多くの場合、ノードはレビュープロセスの実際の段階を反映しています。 このガイドでは、さまざまなタイプのノードとその使用方法について説明します。
+_ノード_要素とそのサブ要素は、ワークフロー定義を構成する基本的な構成要素です。 多くの場合、ノードはレビュープロセスの実際の段階を反映しています。 このガイドでは、さまざまなタイプのノードとその使用方法について説明します。
 
-  - [ステータスノード](#state-nodes)
-  - [条件ノード](#conditions)
-  - [フォークと結合](#forks-and-joins)
+* [ステータスノード](#state-nodes)
+* [条件ノード](#conditions)
+* [フォークと結合](#forks-and-joins)
 
 ## ステータスノード
 
@@ -12,7 +12,7 @@
 
 初期のステータスノードには、多くの場合、1つのトランジションしか含まれていません。
 
-``` xml
+```xml
 <state>
     <name>created</name>
     <initial>true</initial>
@@ -28,14 +28,14 @@
 
 ステータスノードで通知またはスクリプトが必要な場合は、`actions`タグを使用できます。 以下は、Groovyスクリプトを含む `action`要素です。 これは、多くの末端ステータスノードに見られるもので、ワークフローでアセットを承認済みとマークします。
 
-``` xml
+```xml
 <actions>
     <action>
         <name>Approve</name>
         <description>Approve</description>
         <script>
-            <![CDATA[
-            com.liferay.portal.kernel.workflow.WorkflowStatusManagerUtil.updateStatus(com.liferay.portal.kernel.workflow.WorkflowConstants.getLabelStatus("approved"), workflowContext);]]>
+            <!［CDATA［
+            com.liferay.portal.kernel.workflow.WorkflowStatusManagerUtil.updateStatus(com.liferay.portal.kernel.workflow.WorkflowConstants.getLabelStatus("approved"), workflowContext);］］>
         </script>
         <script-language>groovy</script-language>
         <execution-type>onEntry</execution-type>
@@ -45,15 +45,15 @@
 
 ## 条件
 
-*条件ノード*は、条件が満たされているかどうかを判別し、満たされている場合は、ワークフローを適切なノードに移行します。 たとえば、提出されたドキュメントが契約書である場合、それは法務チームに送られる必要があります。それ以外の場合は、マーケティングチームに送られます。
+_条件ノード_は、条件が満たされているかどうかを判別し、満たされている場合は、ワークフローを適切なノードに移行します。 たとえば、提出されたドキュメントが契約書である場合、それは法務チームに送られる必要があります。それ以外の場合は、マーケティングチームに送られます。
 
-以下は、[Category Specific Approval](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/portal-workflow/portal-workflow-kaleo-runtime-impl/src/main/resources/META-INF/definitions/category-specific-definition.xml)ワークフロー定義の`determine-branch`条件を示しています。
+以下は、[Category Specific Approval](../designing-and-managing-workflows/workflow-designer/workflow-designer-overview/resources/category-specific-definition.xml)ワークフロー定義の`determine-branch`条件を示しています。
 
-``` xml
+```xml
 <condition>
     <name>determine-branch</name>
     <script>
-        <![CDATA[
+        <!［CDATA［
             import com.liferay.asset.kernel.model.AssetCategory;
             import com.liferay.asset.kernel.model.AssetEntry;
             import com.liferay.asset.kernel.model.AssetRenderer;
@@ -91,7 +91,7 @@
                     return;
                 }
             }
-        ]]>
+        ］］>
     </script>
     <script-language>groovy</script-language>
     <transitions>
@@ -109,15 +109,15 @@
 </condition>
 ```
 
-この例では、アセットカテゴリをチェックして、*法務レビュー*タスクに移行するか、または*コンテンツレビュー*タスクに移行するかを選択します。
+この例では、アセットカテゴリをチェックして、_法務レビュー_タスクに移行するか、または_コンテンツレビュー_タスクに移行するかを選択します。
 
-`returnValue`変数は、条件からトランジションを指し、その値は有効なトランジション名と一致する必要があります。 このスクリプトでは、対象となるアセットを調べ、そのアセットカテゴリーを取得し、初期値として`returnValue`を設定します。 その後、そのアセットが*legal*カテゴリでマークされているかどうかを確認します。 マークされていない場合は、*コンテンツレビュー*（ワークフローのcontent-reviewタスク）を通過し、マークされている場合は、*法務レビュー*（ワークフローのlegal-reviewタスク）を通過します。
+`returnValue`変数は、条件からトランジションを指し、その値は有効なトランジション名と一致する必要があります。 このスクリプトでは、対象となるアセットを調べ、そのアセットカテゴリーを取得し、初期値として`returnValue`を設定します。 その後、そのアセットが_legal_カテゴリでマークされているかどうかを確認します。 マークされていない場合は、_コンテンツレビュー_（ワークフローのcontent-reviewタスク）を通過し、マークされている場合は、_法務レビュー_（ワークフローのlegal-reviewタスク）を通過します。
 
 ## フォークと結合
 
 フォークはワークフロープロセスを分割し、結合はプロセスを統合されたブランチに戻します。 処理は常に結合（またはXOR 結合）を使用して戻す必要があり、ワークフロー定義内のフォークと結合の数は同じである必要があります。
 
-``` xml
+```xml
 <fork>
     <name>fork-1</name>
     <transitions>
@@ -149,7 +149,7 @@
 
 XOR 結合は、1つの重要な点で結合とは異なります。それは、処理を続行する前に両方のフォークを完了する必要があるという制約がないことです。 フォークのいずれを完了すれば、アセットの処理を続行できます。
 
-``` xml
+```xml
 <join-xor>
     <name>join-xor</name>
     <transitions>
@@ -168,7 +168,7 @@ XOR 結合は、1つの重要な点で結合とは異なります。それは、
 
 以下は、Category Specific Approval ワークフローの`content-review`タスクで、簡潔にするために`role`割り当てタグの一部を切り取ったものです。
 
-``` xml
+```xml
 <task>
     <name>content-review</name>
     <actions>
@@ -225,5 +225,5 @@ XOR 結合は、1つの重要な点で結合とは異なります。それは、
 
 ## 追加情報
 
-  - [Crafting XML Workflow Definitions](./crafting-xml-workflow-definitions.md)
-  - [Workflow Task Node Reference](./workflow-task-node-reference.md)
+* [Crafting XML Workflow Definitions](./crafting-xml-workflow-definitions.md)
+* [Workflow Task Node Reference](./workflow-task-node-reference.md)

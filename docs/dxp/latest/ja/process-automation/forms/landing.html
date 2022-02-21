@@ -1,4 +1,5 @@
 <script type="module">
+
 	import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.esm.browser.min.js'
 
 	const page = new Vue({
@@ -6,112 +7,116 @@
 		data: {
 			cards: [
 				{
-					sectionName: 'フォームの概要',
+					sectionName: 'Introduction to Forms',
 					sectionURL: 'forms/introduction-to-forms.html',
 				},
 				{
-					sectionName: 'フォームの作成と管理',
+					sectionName: 'Creating and Managing Forms',
 					sectionURL: 'forms/creating-and-managing-forms.html',
 					showAll: false,
 					subsections: [
 						{
-							name: 'フォームの作成',
+							name: 'Creating Forms',
 							url: 'forms/creating-and-managing-forms/creating-forms.html'
 						},
 						{
-							name: 'フォームレイアウトのカスタマイズ',
+							name: 'Customizing Form Layouts',
 							url: 'forms/creating-and-managing-forms/customizing-form-layouts.html'
 						},
 						{
-							name: 'フォームフィールドタイプのリファレンス',
+							name: 'Forms Field Types Reference',
 							url: 'forms/creating-and-managing-forms/forms-field-types-reference.html'
 						},
 					]
 				},
 				{
-					sectionName: 'フォームの共有と送信数の管理',
+					sectionName: 'Sharing Forms and Managing Submissions',
 					sectionURL: 'forms/sharing-forms-and-managing-submissions.html',
 					showAll: false,
 					subsections: [
 						{
-							name: 'フォームの共有',
+							name: 'Sharing Forms',
 							url: 'forms/sharing-forms-and-managing-submissions/sharing-forms.html'
 						},
 						{
-							name: 'フォームエントリーの管理',
+							name: 'Managing Form Entries',
 							url: 'forms/sharing-forms-and-managing-submissions/managing-form-entries.html'
 						},
 						{
-							name: 'フォーム送信でのCAPTCHAの有効化',
+							name: 'Enabling CAPTCHA on Form Submissions',
 							url: 'forms/sharing-forms-and-managing-submissions/enabling-captcha-on-form-submissions.html'
 						},
 					]
 				},
 				{
-					sectionName: 'フォームルール',
+					sectionName: 'Form Rules',
 					sectionURL: 'forms/form-rules.html',
 					showAll: false,
 					subsections: [
 						{
-							name: 'フォームルールの概要',
+							name: 'Form Rules Overview',
 							url: 'forms/form-rules/form-rules-overview.html'
 						},
 						{
-							name: '必須ルールの使用',
+							name: 'Using the Require Rule',
 							url: 'forms/form-rules/using-the-require-rule.html'
 						},
 						{
-							name: '自動入力ルールの使用',
+							name: 'Using the Autofill Rule',
 							url: 'forms/form-rules/using-the-autofill-rule.html'
 						},
 					]
 				},
 				{
-					sectionName: 'データプロバイダー',
+					sectionName: 'Data Providers',
 					sectionURL: 'forms/data-providers.html',
 					showAll: false,
 					subsections: [
 						{
-							name: 'データプロバイダーの概要',
+							name: 'Data Providers Overview',
 							url: 'forms/data-providers/data-providers-overview.html'
 						},
 						{
-							name: 'データプロバイダーを使用したフォームオプションの入力',
-							url: 'forms/data-providers/using-data-providers-to-populate-form-options.html'
+							name: 'Using the REST Data Provider to Populate Form Options',
+							url: 'forms/data-providers/using-the-rest-data-provider-to-populate-form-options.html'
 						},
 					]
 				},
 				{
-					sectionName: '動的データリスト',
+					sectionName: 'Dynamic Data Lists',
 					sectionURL: 'forms/dynamic-data-lists.html',
 					showAll: false,
 					subsections: [
 						{
-							name: '動的データリストの概要 (近日公開！)',
+							name: 'Getting Started with Dynamic Data Lists',
 							url: 'forms/dynamic-data-lists/getting-started-with-dynamic-data-lists.html'
 						},
 						{
-							name: 'テンプレートを使用してフォームとリストを表示する (近日公開！)',
+							name: 'Using Templates to Display Forms and Lists',
 							url: 'forms/dynamic-data-lists/using-templates-to-display-forms-and-lists.html'
 						},
 					]
 				},
 				{
-					sectionName: 'Kaleoフォーム (近日公開！)',
-					sectionURL: 'forms/kaleo-forms.html',
+					sectionName: 'Kaleo Forms',
+					sectionURL: 'forms/kaleo-forms/kaleo-forms.html',
 				},
 				{
-					sectionName: '開発者ガイド',
+					sectionName: 'Developer Guide',
 					sectionURL: 'forms/developer-guide.html',
 					showAll: false,
 					subsections: [
 						{
-							name: 'フォームストレージアダプターの書き込み',
+							name: 'Writing a Form Storage Adapter',
 							url: 'forms/developer-guide/writing-a-form-storage-adapter.html'
 						},
 						{
-							name: 'フォームストレージアダプターについて',
+							name: 'Understanding Form Storage Adapters',
 							url: 'forms/developer-guide/understanding-form-storage-adapters.html'
+						},
+						{
+							name: 'Writing a Custom Data Provider',
+							url: 'forms/developer-guide/writing-a-custom-data-provider.html'
 						},
 					]
 				},

@@ -2,15 +2,15 @@
 
 Liferay DXPのすべてのワークフロー定義は、XML形式で記述されています。 独自のワークフロー定義を作成するためには、実際の承認プロセスを反映した定義が必要です。
 
-```{tip}
-DXPを使用しているサブスクライバーは、 [グラフィカルデザイナー](../user-guide/workflow-designer/workflow-designer-overview.md) を使用してワークフローを作成できます。 すでにXMLでワークフローを作成している場合は、それをアップロードしてGUIで続行できます。 
+```tip::
+   DXPを使用しているサブスクライバーは、グラフィカルデザイナー<../user-guide/workflow-designer/workflow-designer-overview.md>`_を使用してワークフローを作成できます。 すでにXMLでワークフローを作成している場合は、それをアップロードしてGUIで続行できます。 
 ```
 
-1.  グローバルメニュー（![Global Menu](../../../images/icon-applications-menu.png)）を開きます。 [ワークフロー]で、*[Process Builder]* を選択します。
+1. グローバルメニュー（![Global Menu](../../../images/icon-applications-menu.png)）を開きます。 ［ワークフロー］で、_［プロセスビルダー］_を選択します。
 
-2.  新しいワークフロー定義を追加するには、 ![add](../../../images/icon-add.png) アイコンをクリックします。
+1. 新しいワークフロー定義を追加するには、 ![add](../../../images/icon-add.png) アイコンをクリックします。
 
-3.  ワークフローの定義は、エディターに入力することも、ローカルで作成したものを読み込むこともできます。
+1. ワークフローの定義は、エディターに入力することも、ローカルで作成したものを読み込むこともできます。
 
 ワークフローを公開すると、ワークフローが有効な場所であればどこでも適用できるようになります。
 
@@ -18,13 +18,12 @@ DXPを使用しているサブスクライバーは、 [グラフィカルデザ
 
 デフォルトでは、唯一の承認者という1つのワークフロー定義のみがインストールされています。 また、Liferayのソースコードにもいくつか組み込まれています。 これらの定義は、ここで説明するすべての機能を理解する良い例となります。
 
-  - [Category Specific](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/portal-workflow/portal-workflow-kaleo-runtime-impl/src/main/resources/META-INF/definitions/category-specific-definition.xml)
-  - [Legal Marketing](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/portal-workflow/portal-workflow-kaleo-runtime-impl/src/main/resources/META-INF/definitions/legal-marketing-definition.xml)
-  - [唯一の承認者](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/portal-workflow/portal-workflow-kaleo-runtime-impl/src/main/resources/META-INF/definitions/single-approver-definition.xml)
-  - [Single Approver Scripted Assignment](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/portal-workflow/portal-workflow-kaleo-runtime-impl/src/main/resources/META-INF/definitions/single-approver-definition-scripted-assignment.xml)
-  以下では、最もシンプルなワークフローである「唯一の承認者」を使って、基本を学習します。 唯一の承認者のワークフローには、「開始」と「終了」の2つの必須ステータスが含まれており、それぞれ*「作成済み」*と*「承認済み」*という名前が付けられています。 また、*「レビュー」*と*「アップデート」*という2つのタスクも含まれています。 これらのタスクは、*承認*、*拒否*、*再送信*などの*アクション*を定義します。
+* [カテゴリー別](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/portal-workflow/portal-workflow-kaleo-runtime-impl/src/main/resources/META-INF/definitions/category-specific-definition.xml)
+* [リーガルマーケティング](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/portal-workflow/portal-workflow-kaleo-runtime-impl/src/main/resources/META-INF/definitions/legal-marketing-definition.xml)
+* [唯一の承認者](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/portal-workflow/portal-workflow-kaleo-runtime-impl/src/main/resources/META-INF/definitions/single-approver-definition.xml)
+* [唯一の承認者スクリプトでの割り当て](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/portal-workflow/portal-workflow-kaleo-runtime-impl/src/main/resources/META-INF/definitions/single-approver-definition-scripted-assignment.xml)　以下では最もシンプルなワークフローである油井胃兪の承認者を使って、基本を学習します。 唯一の承認者のワークフローには、［開始］と［終了］の2つの必須ステータスが含まれており、それぞれ_［作成済み］_と_［承認済み］_という名前が付けられています。 また、_［レビュー］_と_［アップデート］_という2つのタスクも含まれています。 これらのタスクは、_承認_、_拒否_、_再送信_などの_アクション_を定義します。
 
-ワークフローを構成しているコンポーネントに分解するときは、「ステータス」、「タスク」、「アクション」について考えます。 それらを定義したら、作業を開始する準備が整います。 これで、唯一の承認者のワークフローがどのように機能するかを確認して、すべてをまとめる準備が整いました。
+ワークフローを構成しているコンポーネントに分解するときは、［ステータス］、［タスク］、［アクション］について考えます。 それらを定義したら、作業を開始する準備が整います。 これで、唯一の承認者のワークフローがどのように機能するかを確認して、すべてをまとめる準備が整いました。
 
 ## スキーマ
 
@@ -32,7 +31,7 @@ DXPを使用しているサブスクライバーは、 [グラフィカルデザ
 
 ワークフロー定義ファイルの先頭でスキーマを宣言します。
 
-``` xml
+```xml
 <?xml version="1.0"?>
 <workflow-definition
     xmlns="urn:liferay.com:liferay-workflow_7.3.0"
@@ -45,7 +44,7 @@ DXPを使用しているサブスクライバーは、 [グラフィカルデザ
 
 定義には、名前、説明、バージョンを付けます。
 
-``` xml
+```xml
 <name>Single Approver</name>
 <description>A single approver can approve a workflow content.</description>
 <version>1</version>
@@ -53,9 +52,9 @@ DXPを使用しているサブスクライバーは、 [グラフィカルデザ
 
 ## 開始ノードと終了ノード
 
-各ワークフロー定義は、*ステータスノード*で開始および終了します。 [唯一の承認者](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/portal-workflow/portal-workflow-kaleo-runtime-impl/src/main/resources/META-INF/definitions/single-approver-definition.xml)から次のような*開始*ノードを作成します。
+各ワークフロー定義は、_ステータスノード_で開始および終了します。 [唯一の承認者](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/portal-workflow/portal-workflow-kaleo-runtime-impl/src/main/resources/META-INF/definitions/single-approver-definition.xml)から次のような_開始_ノードを作成します。
 
-``` xml
+```xml
 <state>
     <name>created</name>
     <initial>true</initial>
@@ -68,26 +67,26 @@ DXPを使用しているサブスクライバーは、 [グラフィカルデザ
 </state>
 ```
 
-この例では、 *開始*ノードに以下のようなプロパティが設定されています。
+この例では、 _開始_ノードに以下のようなプロパティが設定されています。
 
-  - それが初期状態です。
-  - ノードは、*レビュー*と呼ばれる[*タスク*ノード](./workflow-task-node-reference.md)に移行します。
+* それが初期状態です。
+* ノードは、_レビュー_と呼ばれる[_タスク_ノード](./workflow-task-node-reference.md)に移行します。
 
-*終了*ノードは次のようになります。
+_終了_ノードは次のようになります。
 
-``` xml
+```xml
     <state>
         <name>approved</name>
         <actions>
             <action>
                 <name>approve</name>
                 <script>
-                    <![CDATA[
+                    <!［CDATA［
                         import com.liferay.portal.kernel.workflow.WorkflowStatusManagerUtil;
                         import com.liferay.portal.kernel.workflow.WorkflowConstants;
 
                         WorkflowStatusManagerUtil.updateStatus(WorkflowConstants.getLabelStatus("approved"), workflowContext);
-                    ]]>
+                    ］］>
                 </script>
                 <script-language>groovy</script-language>
                 <execution-type>onEntry</execution-type>
@@ -98,21 +97,21 @@ DXPを使用しているサブスクライバーは、 [グラフィカルデザ
 
 ワークフローが最終ステータスに移行すると、送信が承認されます。 例をシンプルにするために、通知機能は含まれていませんが、追加することも可能でした。 終了ノードには、ワークフローステータスを`approved`に設定する[スクリプト](./using-the-script-engine-in-workflow.md)があります
 
-詳しくは、[Workflow Definition Node Reference](./workflow-definition-node-reference.md) を参照してください。
+詳しくは、[ワークフローの定義ノードリファレンス](./workflow-definition-node-reference.md) を参照してください。
 
 ## タスクノード
 
 タスクノードは、ユーザーがワークフロープロセスで行うべきことを定義します。 他のワークフローノードとは異なり、タスクノードには割り当てがあり、タスクをユーザーや[ロール](../../../users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.md)に割り当てることができます。
 
-タスクノードには、タスクタイマー、アクション（通知やスクリプトを含む）、トランジションを含めることができます。 詳しくは、[Workflow Task Node Reference](./workflow-task-node-reference.md)を参照してください。 唯一の承認者のワークフローには、*レビュー*と*アップデート*の2つのタスクが含まれています。
+タスクノードには、タスクタイマー、アクション（通知やスクリプトを含む）、トランジションを含めることができます。 詳しくは、[ワークフロー タスクノードリファレンス](./workflow-task-node-reference.md)を参照してください。 唯一の承認者のワークフローには、_レビュー_と_アップデート_の2つのタスクが含まれています。
 
 ### レビュータスクノードの作成
 
-レビュータスクには、「拒否」または「承認」の2つの結果があります。 これには、提出物のレビューの準備が整ったことをレビュアに通知する`<notification>`要素が含まれています。 ユーザーに割り当てられた場合、そのユーザーはアセットをレビューする必要があります。 ロールに割り当てられている場合、そのロールを持つ人は誰でもアセットをレビューできます。
+レビュータスクには、［拒否］または［承認］の2つの結果があります。 これには、提出物のレビューの準備が整ったことをレビュアに通知する`<notification>`要素が含まれています。 ユーザーに割り当てられた場合、そのユーザーはアセットをレビューする必要があります。 ロールに割り当てられている場合、そのロールを持つ人は誰でもアセットをレビューできます。
 
-可能なトランジションには、*承認*と*拒否*の2つがあります。 承認されると、ワークフローは終了ステータスに移行します。このステータスは、以前は`approved`と呼ばれていました。 拒否された場合、ワークフローはアップデートタスクに移行します。
+可能なトランジションには、_承認_と_拒否_の2つがあります。 承認されると、ワークフローは終了ステータスに移行します。このステータスは、以前は`approved`と呼ばれていました。 拒否された場合、ワークフローはアップデートタスクに移行します。
 
-``` xml
+```xml
     <task>
         <name>review</name>
         <actions>
@@ -200,13 +199,13 @@ DXPを使用しているサブスクライバーは、 [グラフィカルデザ
     </task>
 ```
 
-*レビュー*タスクノードが追加され、設定されました。   あとは、アップデートタスクを残すのみです。
+_レビュー_タスクノードが追加され、設定されました。 Excellent! あとは、アップデートタスクを残すのみです。
 
 ### アップデートタスクノードの作成
 
-提出物がレビュータスクで*拒否*トランジションに入ると、アップデートタスクに送られ、レビューのために再提出できるようになります。 アセットがアップデートタスクに到着すると、似たような名前の*拒否*アクションが実行され、ワークフローのステータスが`denied`に割り当てられ、次に`pending`に割り当てられます。 元の作成者には通知が送られます。 また、そのアセットは元の作成者に再度割り当てられます。 ここで、元の作成者は、アセットを編集して拒否される原因となった問題を解決した後、アセットを再送信できます。
+提出物がレビュータスクで_拒否_トランジションに入ると、アップデートタスクに送られ、レビューのために再提出できるようになります。 アセットがアップデートタスクに到着すると、似たような名前の_拒否_アクションが実行され、ワークフローのステータスが`denied`に割り当てられ、次に`pending`に割り当てられます。 元の作成者には通知が送られます。 また、そのアセットは元の作成者に再度割り当てられます。 ここで、元の作成者は、アセットを編集して拒否される原因となった問題を解決した後、アセットを再送信できます。
 
-``` xml
+```xml
     <task>
         <name>update</name>
         <actions>
@@ -252,7 +251,7 @@ DXPを使用しているサブスクライバーは、 [グラフィカルデザ
 
 ここで、終了タグを追加します。
 
-``` xml
+```xml
 </workflow-definition>
 ```
 
@@ -260,9 +259,9 @@ DXPを使用しているサブスクライバーは、 [グラフィカルデザ
 
 ## 追加情報
 
-  - [Workflow Definition Node Reference](./workflow-definition-node-reference.md)
-  - [Workflow Task Node Reference](./workflow-task-node-reference.md)
-  - [ワークフローでのスクリプトエンジンの使用](./using-the-script-engine-in-workflow.md)
-  - [Managing Workflows](../designing-and-managing-workflows/managing-workflows.md)
-  - [Workflow Designer Overview](../designing-and-managing-workflows/workflow-designer/workflow-designer-overview.md)
-  - [ロールと権限について](../../../users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.md)
+* [ワークフロー定義ノードリファレンス](./workflow-definition-node-reference.md)
+* [ワークフロータスクノードリファレンス](./workflow-task-node-reference.md)
+* [ワークフローでのスクリプトエンジンの使用](./using-the-script-engine-in-workflow.md)
+* [ワークフローの管理](../designing-and-managing-workflows/managing-workflows.md)
+* [ワークフローデザイナーの概要](../designing-and-managing-workflows/workflow-designer/workflow-designer-overview.md)
+* [ロールと権限について](../../../users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.md)

@@ -4,35 +4,31 @@
 
 フォームの電子メール通知を設定するには：
 
-1.  *プロダクトメニュー*（![Product Menu](../../../images/icon-product-menu.png)）を開き、*[サイト管理]* メニューのコンパスアイコン（![Compass](../../../images/icon-compass.png)）をクリックします。 フォームが関連付けられているサイトを選択します。
-
-2.  *[Content & Data]* → *[Forms]* の順にクリックします。
-
-3.  フォームを選択します（例：*Guest Survey Form* ）。
-
-4.  *オプション*ボタン（![Options](../../../images/icon-options.png)）をクリックして*[Settings]* を選択し、フォームの*[Form Settings]* セクションを開きます。
+1. _プロダクトメニュー_（![Product Menu](../../../images/icon-product-menu.png)）を開き、_サイト管理_メニューのコンパスアイコン（![Compass](../../../images/icon-compass.png)）をクリックします。 フォームが関連付けられているサイトを選択します。
+1. _［コンテンツ & データ］_ &rarr; _ ［フォーム］_をクリックします。
+1. フォームを選択します（例：_Guest Survey Form_ ）。
+1. _オプション_ボタン（![Options](../../../images/icon-options.png)）をクリックして_［Settings］_を選択し、フォームの_［Form Settings］_セクションを開きます。
 
     ![フォームの設定](./configuring-form-notifications/images/01.png)
 
-5.  *[Email Notifications]* タブをクリックします。
-
-6.  *[Send an Email Notification for Each Entry]* オプションを有効にします。
+1. _［メール通知設定］_タブをクリックします。
+1. _［エントリごとにEメール通知を送信］_オプションを有効にします。
 
     ![フォームエントリーが送信されるたびに電子メール通知を送信するよう設定します。](./configuring-form-notifications/images/02.png)
 
-7.  次のように入力します：
+1. 次のように入力します：
 
-    **From Name：**送信者の名前。 これは、サイト名、フォーム名、または受信者に有益なその他の情報にできます。
+    **送信者名：**送信者の名前。 これは、サイト名、フォーム名、または受信者に有益なその他の情報にできます。
 
-    **From Address：**送信者のメールアドレス。 `noreply@example.com`を使用して、受信者が返信しないようにすることができます。
+    **送信者メールアドレス：**送信者のメールアドレス。 `noreply@example.com`を使用して、受信者が返信しないようにすることができます。
 
-    **To Address：**受信者の電子メールアドレス（`test@example.com`など）。
+    **宛先アドレス：**受信者の電子メールアドレス（`test@example.com`など）。
 
-    **Subject：**メールの件名。
+    **件名：**メールの件名。
 
-8.  *[Done]* をクリックして、ダイアログウィンドウを閉じます。
+1. _［完了］_をクリックして、ダイアログウィンドウを閉じます。
 
 ## 追加情報
 
-  - [Using Forms with a Workflow](./using-forms-with-a-workflow.md)
-  - [Configuring Mail](../../../installation-and-upgrades/setting-up-liferay/configuring-mail.md)
+* [ワークフローでのフォームの使用](./using-forms-with-a-workflow.md)
+* [メールサーバーへの接続](../../../installation-and-upgrades/setting-up-liferay/configuring-mail/connecting-to-a-mail-server.md)

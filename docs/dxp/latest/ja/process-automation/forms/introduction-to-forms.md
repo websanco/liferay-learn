@@ -6,13 +6,10 @@ Liferayフォームでは、堅牢なフォーム構築機能が提供される�
 
 基本的なフォームを作成するときの機能をいくつか以下に示します。
 
-  - フィールドをフォームレイアウトにドラッグアンドドロップする機能。
-
-  - フォームにページを追加する。
-
-  - フォームの送信後にユーザーを成功ページにリダイレクトする。
-
-  - 同じようなフォームを最初から作成するのではなく、フォームを複製する。
+* フィールドをフォームレイアウトにドラッグアンドドロップする機能。
+* フォームにページを追加する。
+* フォームの送信後にユーザーを成功ページにリダイレクトする。
+* 同じようなフォームを最初から作成するのではなく、フォームを複製する。
 
     ![フォーム](./introduction-to-forms/images/02.png)
 
@@ -22,10 +19,10 @@ Liferayフォームでは、堅牢なフォーム構築機能が提供される�
 
 Liferayフォームには、ユーザーが高度なエンゲージメントフォームを効率的に作成できるようにするための多くの追加機能とツールも含まれています。 これらの機能には次のものがあります。
 
-  - [データプロバイダー](./data-providers/using-data-providers-to-populate-form-options.md)との統合によるフィールドオプションの入力
-  - [条件付きフィールド](./creating-and-managing-forms/building-forms-with-conditional-fields.md)
-  - Liferayの組み込み[ワークフローシステム](./sharing-forms-and-managing-submissions/using-forms-with-a-workflow.md)との統合
-  - など・・・
+* [データプロバイダー](./data-providers/using-the-rest-data-provider-to-populate-form-options.md)との統合によるフィールドオプションの入力
+* [条件付きフィールド](./creating-and-managing-forms/building-forms-with-conditional-fields.md)
+* Liferayの組み込み[ワークフローシステム](./sharing-forms-and-managing-submissions/using-forms-with-a-workflow.md)との統合
+* など・・・
 
 ## フォームとビジネスプロセスの統合
 
@@ -37,5 +34,5 @@ Liferayフォームには、ユーザーが高度なエンゲージメントフ�
 
 ## 次のステップ
 
-  - [Creating a Form](./creating-and-managing-forms/creating-forms.md)
-  - [Sharing a Form](./sharing-forms-and-managing-submissions/sharing-forms.md)
+* [Creating a Form](./creating-and-managing-forms/creating-forms.md)
+* [Sharing a Form](./sharing-forms-and-managing-submissions/sharing-forms.md)

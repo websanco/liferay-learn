@@ -1,4 +1,8 @@
 Kaleoフォーム
 ===========
 
-近日公開！
+.. toctree:: :maxdepth: 3
+
+   kaleo-forms/kaleo-forms.md
+
+-  :doc:`/process-automation/forms/kaleo-forms/kaleo-forms`

@@ -4,15 +4,15 @@
 
 CAPTCHAを有効にするには：
 
-1.  フォームの *オプション* ボタン（![Options](../../../images/icon-actions.png)）をクリックし、 *[Settings]* を選択します。
+1. フォームの _Options_ ボタン（![Options](../../../images/icon-actions.png)）をクリックし、 _Settings_を選択します。
 
     ![フォーム設定に移動します](./enabling-captcha-on-form-submissions/images/01.png)
 
-2.  「 *CAPTCHAが必要」* トグルを右に切り替えます。
+1. _CAPTCHAの入力を求める_ トグルを右に切り替えます。
 
     ![CAPTCHAを有効にする](./enabling-captcha-on-form-submissions/images/02.png)
 
-3.  *[Done]* をクリックします。
+1. _［完了］_ をクリックします。
 
 フォームの送信では、CAPTCHAチェックを完了する必要があります。
 
@@ -20,4 +20,4 @@ CAPTCHAを有効にするには：
 
 ## 追加情報
 
-デフォルトでは、Liferayは「Simple CAPTCHA」チェックを使用します。 これは、GoogleのreCAPTCHAサービスなどの代替CAPTCHAエンジンを使用するように構成および変更できます。 この方法の詳細は、[認証の基本](../../../installation-and-upgrades/securing-liferay/authentication-basics.md#configuring-captcha-or-recaptcha)を参照してください。
+デフォルトでは、Liferayは［Simple CAPTCHA］チェックを使用します。 これは、GoogleのreCAPTCHAサービスなどの代替CAPTCHAエンジンを使用するように構成および変更できます。 この方法の詳細は、[認証の基本](../../../installation-and-upgrades/securing-liferay/authentication-basics.md#configuring-captcha-or-recaptcha)を参照してください。

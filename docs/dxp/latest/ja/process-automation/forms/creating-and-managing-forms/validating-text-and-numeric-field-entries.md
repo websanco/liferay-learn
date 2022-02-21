@@ -2,19 +2,21 @@
 
 入力検証を有効にして、特定の値のみがテキストまたは数値フィールドで受け入れられるようにします。
 
+<!-- Update this. Rename to "Text and Numeric Fields: Validation and Masking" and then add a seciton on "Masking Numeric Fields". Make the section example-oriented with a few useful examples.-->
+
+<!-- Also consider updating because date fields can be validated in 7.4 -->
+
 ## フィールド検証の有効化
 
 検証を有効にするには：
 
-1.  フォームを表示しているときに、テキストまたは数値フィールドをクリックして、フィールド構成メニューを開きます。
-
-2.  *[詳細設定]* タブをクリックします。
-
-3.  検証を有効にするには、 *検証* トグルを右に切り替えます。
+1. フォームを表示しているときに、テキストまたは数値フィールドをクリックして、フィールド構成メニューを開きます。
+1. _［Advanced］_ タブをクリックします。
+1. 検証を有効にするには、 _検証_ トグルを右に切り替えます。
 
     ![図1：データを検証して、有用な情報のみを収集していることを確認します。](./validating-text-and-numeric-field-entries/images/01.png)
 
-検証を有効にしたら、 *If Input* 条件を指定し、検証がどのように失敗したかを示す *Show Error Message* を入力します。
+検証を有効にしたら、 _If Input_ 条件を指定し、検証がどのように失敗したかを示す _Show Error Message_ を入力します。
 
 <!-- When are the validation rules active? Does a person need to "Save" the form for the validation to be active? If yes, then we should explicitly say so. -->
 
@@ -26,11 +28,9 @@
 
 メールアドレスを検証するようにフォームを設定できます。 ユーザーが有効なメールアドレスを入力したことを確認するには：
 
-1.  *If Input* ドロップダウンから *Is not email* 条件を選択します。
-
-2.  エラーメッセージを[ *Show Error Message* フィールドに入力します。有効なメールアドレスを入力してください。
-
-3.  完了したら、*[フォームを保存]* をクリックします。
+1. _If Input_ ドロップダウンから _Is not email_ 条件を選択します。
+1. エラーメッセージを［ _Show Error Message_ フィールドに入力します。有効なメールアドレスを入力してください。
+1. 完了したら、［ _Save Form_］クリックします。
 
     ![テキストフィールドの検証を使用して、ユーザーが有効なメールアドレスまたはURLを入力していることを確認します。](./validating-text-and-numeric-field-entries/images/04.png)
 
@@ -40,9 +40,9 @@
 
 URLを検証するには：
 
-1.  *If Input* ドロップダウンから *Is not URL* 条件を選択します。
-2.  エラーメッセージを入力してください。
-3.  完了したら、*[フォームを保存]* をクリックします。
+1. _If Input_ ドロップダウンから _Is not URL_ 条件を選択します。
+1. エラーメッセージを入力してください。
+1. 完了したら、［ _Save Form_］クリックします。
 
 ### 正規表現の使用
 
@@ -52,15 +52,13 @@ URLを検証するには：
 
 正規表現を使用してテキストフィールドを検証するには：
 
-1.  [ *If Input* ]ドロップダウンメニューから[ *Does Not Match* 条件を選択します。
-
-2.  正規表現を入力します。
-
-3.  *Show Error Message* フィールドにエラーメッセージを入力します。
+1. ［ _If Input_ ］ドロップダウンメニューから［ _Does Not Match_ 条件を選択します。
+1. 正規表現を入力します。
+1. _Show Error Message_ フィールドにエラーメッセージを入力します。
 
     ![図4：正規表現のテキスト検証は、無数の可能性を切り開きます。](./validating-text-and-numeric-field-entries/images/05.png)
 
-4.  完了したら、*[フォームを保存]* をクリックします。
+1. 完了したら、［ _Save Form_］クリックします。
 
 ## 数値フィールドの検証
 
@@ -68,31 +66,28 @@ URLを検証するには：
 
 数値フィールドを検証するには：
 
-1.  *If Input* ドロップダウンメニューから目的の条件を選択します（たとえば、 *は*より大きい）。
-
-2.  制限となる数値（*10*）を入力します。
-
-3.  *[エラーメッセージを表示]* フィールドにエラーメッセージを入力します。
+1. _If Input_ ドロップダウンメニューから目的の条件を選択します（たとえば、 _は_より大きい）。
+1. 制限となる数値（_10_）を入力します。
+1. _Show Error Message_ フィールドにエラーメッセージを入力します。
 
     ![数値条件は、ユーザーが入力した数値データを制約します。](./validating-text-and-numeric-field-entries/images/02.png)
 
-4.  完了したら、[ *Save Form*]クリックします。
+1. 完了したら、［ _Save Form_］クリックします。
 
 ### 整数のみが必要
 
-数値が整数であることを要求するようにフォームを構成できます。 デフォルトでは、 *My numeric type is* 値はDecimalに設定されています。
+数値が整数であることを要求するようにフォームを構成できます。 デフォルトでは、 _My numeric type is_ 値はDecimalに設定されています。
 
 整数のみを受け入れるように数値フィールドを構成するには：
 
-1.  フォームを表示しているときに、数値フィールドをクリックしてフィールド構成メニューを開きます。
-
-2.  *[Basic]* タブで、 *[Integer]* オプションボタンをクリックします。
+1. フォームを表示しているときに、数値フィールドをクリックしてフィールド構成メニューを開きます。
+1. _Basic_ タブで、 _Integer_ オプションボタンをクリックします。
 
     ![数値が10進数か整数のみかを指定します。](./validating-text-and-numeric-field-entries/images/03.png)
 
-3.  変更を適用するには、[ *Save Form* ]をクリックします。
+1. 変更を適用するには、［ _Save Form_ ］をクリックします。
 
 ## 追加情報
 
-  - [Validation Conditions Reference](./validation-conditions-reference.md)
-  - [フォームの作成](./creating-forms.md)
+* [検証条件リファレンス](./validation-conditions-reference.md)
+* [Creating Forms](./creating-forms.md)

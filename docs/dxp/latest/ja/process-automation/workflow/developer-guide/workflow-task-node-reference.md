@@ -8,7 +8,7 @@
 
 唯一の承認者定義のレビュータスクを見てみましょう。
 
-``` xml
+```xml
 <task>
     <name>review</name>
     <actions>
@@ -60,15 +60,15 @@
 
 ワークフロータスクはユーザーが完了します。 割り当てを行うことで、適切なユーザーがタスクにアクセスできるようになります。 割り当ての設定方法を選択できます。 割り当ては以下に追加できます
 
-  - 特定のロール
-  - あるロールタイプ（組織、サイト、通常のロールタイプ）の複数のロール
-  - アセット作成者
-  - リソースアクション
-  - 特定のユーザー
+* 特定のロール
+* 1つのロールタイプ（組織、サイト、アセットライブラリ、アカウント、または通常のロールタイプ）の複数のロール
+* アセット作成者
+* リソースアクション
+* 特定のユーザー
 
-さらに、割り当てを定義するスクリプトを書くこともできます。 例えば、[single-approver-definition-scripted-assignment.xml](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/portal-workflow/portal-workflow-kaleo-runtime-impl/src/main/resources/META-INF/definitions/single-approver-definition-scripted-assignment.xml)を参照してください。
+さらに、割り当てを定義するスクリプトを書くこともできます。 例として、 [single-approver-definition-scripted-assignment.xml](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/portal-workflow/portal-workflow-kaleo-runtime-impl/src/main/resources/META-INF/definitions/single-approver-definition-scripted-assignment.xml)をご覧ください。
 
-``` xml
+```xml
 <assignments>
     <roles>
         <role>
@@ -81,7 +81,7 @@
 
 上記の割り当ては、組織管理者がタスクを完了する必要があることを指定しています。
 
-``` xml
+```xml
 <assignments>
     <user>
         <user-id>20156</user-id>
@@ -91,11 +91,11 @@
 
 上記の割り当ては、ユーザーIDが20156のユーザーのみがタスクを完了できることを指定しています。 または、ユーザーの `<screen-name>` または `<email-address>` を指定します。
 
-``` xml
+```xml
 <assignments>
     <scripted-assignment>
         <script>
-            <![CDATA[
+            <!［CDATA［
                     import com.liferay.portal.kernel.model.Group;
                     import com.liferay.portal.kernel.model.Role;
                     import com.liferay.portal.kernel.service.GroupLocalServiceUtil;
@@ -127,7 +127,7 @@
                     }
 
                     user = null;
-                ]]>
+                ］］>
             </script>
         <script-language>groovy</script-language>
     </scripted-assignment>
@@ -146,14 +146,14 @@
 
 作成されたすべてのリソースアクションを見つけるには、コントロールパネルのロールの管理アプリケーションへのアクセスが必要です（すなわち、ロールリソースのVIEWアクションの権限が必要です）。
 
-1.  *[コントロールパネル]* → *[ユーザー]* → *[ロール]* へ移動します。
-2.  新しい標準ロールを追加します。 詳細は、[ロールの管理](../../../users-and-permissions/roles-and-permissions/creating-and-managing-roles.md)を参照してください。
-3.  ロールが追加されたら、ロールの[権限の定義]インターフェイスに移動します。
-4.  ワークフローの割り当てを定義するアクションを持つリソースを探します。
+1. _［コントロールパネル］_ → _［Users］_ → _［Roles］_に移動します。
+1. 新しい標準ロールを追加します。 詳細は、[ロールの管理](../../../users-and-permissions/roles-and-permissions/creating-and-managing-roles.md)を参照してください。
+1. ロールが追加されたら、ロールの［権限の定義］インターフェイスに移動します。
+1. ワークフローの割り当てを定義するアクションを持つリソースを探します。
 
 割り当てのXMLは次のようになります。
 
-``` xml
+```xml
 <assignments>
     <resource-actions>
         <resource-action>UPDATE</resource-action>
@@ -161,17 +161,17 @@
 </assignments>
 ```
 
-これで、ワークフローがリソースアクションの割り当てがあるタスクに進むと、リソース（たとえば、掲示板のメッセージ）に対する`UPDATE`権限を持つユーザーにタスクが通知され、タスクを自分に割り当てることができます（通知が[タスク担当者]に設定されている場合）。 具体的には、ユーザーには、*[自分のロールに割り当て済み]* タブに*[マイワークフロータスク]* アプリケーションのタスクが表示されます。
+これで、ワークフローがリソースアクションの割り当てがあるタスクに進むと、リソース（たとえば、掲示板のメッセージ）に対する`UPDATE`権限を持つユーザーにタスクが通知され、タスクを自分に割り当てることができます（通知が［タスク担当者］に設定されている場合）。 具体的には、ユーザーには、*［自分のロールに割り当て済み］*タブに*［マイワークフロータスク］*アプリケーションのタスクが表示されます。
 
 リソースのアクション名には、すべて大文字を使用してください。 一般的なリソースアクションは次のとおりです。
 
-  - UPDATE
-  - ADD
-  - DELETE
-  - VIEW
-  - PERMISSIONS
-  - SUBSCRIBE
-  - ADD\_DISCUSSION
+* UPDATE
+* ADD
+* DELETE
+* VIEW
+* PERMISSIONS
+* SUBSCRIBE
+* ADD_DISCUSSION
 
 考えられるリソースアクション名を、そのリソースの権限画面から決定します。 例えば、掲示板では、その画面に表示される権限の1つに*Add Discussion*があります。 これをすべて大文字に変換し、スペースをアンダースコアに置き換えると、アクション名になります。
 
@@ -179,7 +179,7 @@
 
 タスクタイマーは、指定された期間が経過した後にアクションをトリガーします。 タイマーは、タスクが長時間放置されないようにするために便利です。 使用可能なタイマーアクションには、追加の通知の送信、アセットの再割り当て、タイマーアクションの作成などがあります。
 
-``` xml
+```xml
 <task-timers>
     <task-timer>
         <name></name>
@@ -206,7 +206,7 @@
 
 上記のタスクタイマーは通知を作成します。 `<delay>` タグで期間を指定し、 `<timer-actions>` ブロックで期間が過ぎたときのアクションを指定します。 `<blocking>` 要素は、タイマーアクションを繰り返すかどうかを指定します。 ブロッキングが`false`に設定されている場合、タイマーアクションを繰り返すことができます。 `recurrence`要素では、上記で示したように`duration`と`scale`を使って繰り返し間隔を指定します。 上記のrecurrence要素は、タイマーアクションが最初の発生後10分ごとに再度実行されることを指定しています。 ブロッキングをtrueに設定すると、タイマーアクションが繰り返されなくなります。
 
-``` xml
+```xml
 <timer-actions>
     <reassignments>
        <assignments>
@@ -232,5 +232,5 @@
 
 ## 追加情報
 
-  - [Crafting XML Workflow Definitions](./crafting-xml-workflow-definitions.md)
-  - [Workflow Definition Node Reference](./workflow-definition-node-reference.md)
+* [Crafting XML Workflow Definitions](./crafting-xml-workflow-definitions.md)
+* [Workflow Definition Node Reference](./workflow-definition-node-reference.md)

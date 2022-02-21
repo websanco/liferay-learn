@@ -6,8 +6,8 @@
 
 動的データマッピング（DDM）バックエンドは、フォームレコードの他のストレージ形式に*適応*することができます。 これにより、フォームデータをデフォルトのJSONではなく、XMLやYAML（または希望する形式）として簡単にシリアライズできます。 そして、フォームデータをLiferayデータベースを含む任意の場所に保存することを選択できます。
 
-```{important}
-新しく追加されたストレージアダプターは、新しいフォームでのみ使用することができます。 既存のすべてのフォームは、作成時に選択されたアダプター（デフォルトではJSON）を引き続き使用し、異なるストレージアダプターを選択することはできません。
+```important::
+   A newly added storage adapter can only be used with new Forms. All existing Forms continue to use the adapter selected (JSON by default) at the time of their creation, and a different storage adapter cannot be selected.
 ```
 
 ## フォームレコードの保存

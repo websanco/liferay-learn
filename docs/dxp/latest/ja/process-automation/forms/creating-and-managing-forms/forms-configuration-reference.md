@@ -4,17 +4,17 @@
 
 ## フォームオプション
 
-サイト間でフォームをエクスポートおよびインポートすることができます。 *[エクスポート/インポート]* メニューにアクセスするには、*[サイト管理]* → *[コンテンツとデータ]* → *[フォーム]* に移動します。 右上の![Options](../../../images/icon-options.png)アイコンをクリックし、*[エクスポート/インポート]* をクリックします。
+サイト間でフォームをエクスポートおよびインポートすることができます。 _エクスポート/インポート_ にメニューにアクセスするには、_［サイト管理］_ &rarr; _［コンテンツおよびデータ］_  &rarr; _［フォーム］_ 右上の![Options](../../../images/icon-options.png)アイコンをクリックし、_［エクスポート/インポート］_をクリックします。
 
 ![フォームをエクスポートおよびインポートできます。](./forms-configuration-reference/images/01.png)
 
-詳しくは、[Exporting and Importing Forms](./exporting-and-importing-forms.md)および[サイトとコンテンツのインポート/エクスポート](../../../site-building/building-sites/importing-exporting-pages-and-content.md)を参照してください。
+詳しくは、 [フォームのエクスポートとインポート](./exporting-and-importing-forms.md) および [ページとコンテンツのインポートとエクスポート](../../../site-building/building-sites/importing-exporting-pages-and-content.md) を参照してください。
 
 ## フォームの設定
 
 各フォームにはそれぞれ設定メニューがあります。
 
-設定メニューを表示するには、目的のフォームを選択します（例：  *ゲスト調査のフィードバック *）。 右上の![Options](../../../images/icon-options.png)アイコンをクリックし、*[Settings]* をクリックします。
+設定メニューを表示するには、目的のフォームを選択します（例：  _ゲスト調査のフィードバック _）。 右上の![Options](../../../images/icon-options.png)アイコンをクリックし、_［Settings］_をクリックします。
 
 ### フォームオプション
 
@@ -27,11 +27,11 @@
 | 回答を自動保存                                                            | フォームへの回答を自動的に保存します                                     |
 | フォーム送信完了時のリダイレクト先URL                                               | フォームの送信が成功した場合のリダイレクトURLを指定します。                        |
 | ストレージの種類                                                           | デフォルトのストレージタイプとしてJSONを設定します（編集不可）。                     |
-| [ワークフロー](../sharing-forms-and-managing-submissions/using-forms-with-a-workflow.md)の選択 | フォームの送信を確認するためのワークフロー定義を選択します。ワークフローはデフォルトでは無効になっています。 |
+| [ワークフロー](./advanced-forms-usage/using-forms-with-a-workflow.md)の選択 | フォームの送信を確認するためのワークフロー定義を選択します。ワークフローはデフォルトでは無効になっています。 |
 
 ### メール通知設定
 
-ここでは、フォームエントリーが送信されるたびに通知メールを送信するようにフォームアプリを設定できます。 まずはメールサーバーを設定する必要があります。詳しくは[Configuring Mail](../../../installation-and-upgrades/setting-up-liferay/configuring-mail.md)を参照してください。
+ここでは、フォームエントリーが送信されるたびに通知メールを送信するようにフォームアプリを設定できます。 まずはメールサーバーを設定する必要があります。詳しくは[Connecting to a Mail Server](../../../installation-and-upgrades/setting-up-liferay/configuring-mail/connecting-to-a-mail-server.md)を参照してください。
 
 ![フォームに通知機能を追加することができます。](./forms-configuration-reference/images/03.png)
 
@@ -46,7 +46,7 @@
 
 ## フォームウィジェットの設定
 
-サイトページに配置されている*フォーム*ウィジェットを設定することができます。 *[設定]* メニューにアクセスするには、ウィジェットのタイトルの横にある![Options](../../../images/icon-app-options.png)アイコン → *[設定]* をクリックします。
+サイトページに配置されている_フォーム_ウィジェットを設定することができます。 _［設定］_メニューにアクセスするには、ウィジェットのタイトルの横にある![Options](../../../images/icon-app-options.png)アイコン → _［設定]］_をクリックします。
 
 ### 設定
 
@@ -62,61 +62,44 @@
 
 ### 範囲
 
-ここでは、ウィジェットのスコープを「グローバル」「サイト」「ページ」から変更できます。
+ここでは、ウィジェットのスコープを［グローバル］［サイト］［ページ］から変更できます。
 
 ![フォームウィジェットのスコープを選択します。](./forms-configuration-reference/images/06.png)
 
 ## インスタンス設定
 
-インスタンス間でフォームを設定する方法はいくつかあります。
+インスタンス設定の Forms 設定エントリは、システム設定の Forms エントリと同じです (下記参照)。 詳細については、 [設定スコープ](../../../system-administration/configuring-liferay/understanding-configuration-scope.md) についてを参照してください。
 
-1.  *グローバルメニュー*（![global icon](../../../images/icon-applications-menu.png)）→ *[コントロールパネル]* に移動します。
-
-2.  *[Instance Settings]* をクリックします。
-
-    ![コントロールパネルからインスタンス設定にアクセスします。](./forms-configuration-reference/images/09.png)
-
-3.  *[コンテンツとデータ]* セクションで*[フォーム]* をクリックします。
-
-    ![[Instance Settings]メニューでフォームを設定します。](./forms-configuration-reference/images/07.png)
-
-| フィールド       | 説明                                           |
-| :--- | :--- |
-| 自動保存間隔      | フォームの自動保存を行う時間を分単位で設定します。0に設定すると自動保存は行われません。 |
-| CSVエクスポート   | 管理者がフォームエントリーをCSVとしてダウンロードできるかどうかを決定します。     |
-| デフォルトの表示ビュー | 検索コンテナでのフォームの表示方法を設定します。                     |
+各構成プロパティの説明については、 [システム設定](#system-settings)を参照してください。
 
 ## システム設定
 
-システム全体のフォーム設定はいくつかあります。
+現在、システムレベルのFormsの設定項目は1つしかありません。 Liferay UIでプロパティを設定するには、以下の方法があります。
 
-1.  *グローバルメニュー*（![global icon](../../../images/icon-applications-menu.png)）→ *[コントロールパネル]* に移動します。
-2.  *[システム設定]* をクリックします。
-3.  *[コンテンツとデータ]* セクションで*[フォーム]* をクリックします。
+1. _グローバルメニュー_（![global icon](../../../images/icon-applications-menu.png)）→ _[コントロールパネル]_に移動します。
+1. _［システム設定］_をクリックします。
+1. _［コンテンツとデータ］_セクションで_［フォーム］_をクリックします。
 
-### システムスコープ
+![［システム設定］メニューでフォームを構成します。](./forms-configuration-reference/images/07.png)
 
-*[システムスコープ]* で*フォームナビゲーター*を設定できます。 *[Add]* をクリックして、新しい*設定エントリー*を追加します。
+また、バッキング `DDMFormWebConfiguration` サービスを、 `.config` という名前のファイルで設定することもできます。
 
-![フォームナビゲーターを設定できます。](./forms-configuration-reference/images/10.png)
+```
+com.liferay.dynamic.data.mapping.form.web.internal.configuration.DDMFormWebConfiguration.config
+```
 
-| フィールド            | 説明                                             |
+`Liferay Home/osgi/configs`に配置してください。 詳細は、[構成ファイルの使用](../../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md) を参照してください。
+
+| フィールド                                                   | 説明                                                                                                                                                                                          |
 | :--- | :--- |
-| フォーム ナビゲーター ID   | フォームナビゲーターIDを入力します                             |
-| フォームナビゲーターエントリキー | エントリーキーを入力します。複数のキーがある場合は、カンマ区切りのリストを使用してください。 |
-
-### サイトスコープ
-
-サイトスコープの設定で、各フォームの動作を管理します。 これらは、インスタンス設定と同様です。
-
-![システム全体のフォーム設定を行うことができます。](./forms-configuration-reference/images/08.png)
-
-| フィールド       | 説明                                           |
-| :--- | :--- |
-| 自動保存間隔      | フォームの自動保存を行う時間を分単位で設定します。0に設定すると自動保存は行われません。 |
-| CSVエクスポート   | 管理者がフォームエントリーをCSVとしてダウンロードできるかどうかを決定します。     |
-| デフォルトの表示ビュー | 検索コンテナでのフォームの表示方法を設定します。                     |
+| 自動保存間隔 (`autosaveInterval`)                             | フォームの自動保存を行う時間を分単位で設定します。0に設定すると自動保存は行われません。                                                                                                                                                |
+| CSVエクスポート(`csvExport`)                                  | 管理者がフォームエントリーをCSVとしてダウンロードできるかどうかを決定します。                                                                                                                                                    |
+| 既定の表示モード (`defaultDisplayView`)                         | 検索コンテナでのフォームの表示方法を設定します。                                                                                                                                                                    |
+| ゲストアップロードファイル拡張子（`guestUploadFileExtensions`）           | 受け入れられるファイル拡張子のコンマ区切りリストを入力します。 デフォルトでは以下のリストがサポートされています：`doc`、`docx`、`jpeg`、`jpg`、`pdf`、`png`、`ppt`、`pptx`、`tiff`、`txt`、`xls`、および`xlsx`。                                                   |
+| ゲストアップロードの最大ファイルサイズ（`guestUploadMaximumFileSize`）       | ゲストユーザーがアップロード欄からアップロードできる最大ファイルサイズを設定します。 これは、ドキュメントとメディアアプリケーションの設定で、認証されたユーザーに対して設定され、システム全体の制限は、アップロードサーブレットリクエストシステム設定エントリーの［合計最大アップロードリクエストサイズ］というフィールドで定義されます。 デフォルトでは25MBに設定されています。 |
+| アップロードフィールドの最大繰り返し（`maximumRepetitionsForUploadFields`） | フィールドが反復可能に設定されている場合、ユーザーがフォームにフィールドを追加できる最大回数を設定します（ゲストユーザーとログインユーザーに同じように適用されます）。 デフォルトでは5に設定されています。                                                                                      |
+| ゲストアップロードフィールドの最大送信数``）                                 | ゲストユーザーがゲスト対応のアップロードフィールドを含むフォームを送信できる最大回数を設定します。 ゲストユーザーのIPアドレスは、送信数の記録のために使用されます。 デフォルトでは5に設定されています。                                                                                      |
 
 ## 追加情報
 
-  - [Forms Permissions Reference](./forms-permissions-reference.md)
+* [フォーム権限リファレンス](./forms-permissions-reference.md)

@@ -4,7 +4,7 @@
 
 ## テキストフィールドの検証条件
 
-これは「含む」の反対です。エントリに値が</em> ない *が含まれる場合、検証は失敗します。</td> </tr> 
+これは［含む］の反対です。エントリに値が</em> ない _が含まれる場合、検証は失敗します。</td> </tr> 
 
 </tbody> </table> 
 
@@ -25,4 +25,4 @@
 
 ## 追加情報
 
-  - [Validating Text and Numeric Field Entries](./validating-text-and-numeric-field-entries.md)
+* [テキストおよび数値フィールドエントリの検証](./validating-text-and-numeric-field-entries.md)
