@@ -4,21 +4,21 @@
 
 この例では、以下のフィールドを持つ登録フォームを想定しています。
 
-* _Are you taking any medications?_: _［Yes］_と_［No］_の2つのオプションを持つ必須の単一選択フィールドです。
-* _List all medications_: テキストフィールド要素です。
+***Are you taking any medications?** : ［**Yes**］ と ［**No**］ の2つのオプションを持つ必須の単一選択フィールドです。
+***List all medications** : テキストフィールド要素です。
 
 有効/無効ルールを設定します。
 
-1. _［ルール］_タブをクリックします。
+1. ［**ルール**］ タブをクリックします。
 1. 追加（![Add](../../../images/icon-add.png)）ボタンをクリックします。
-1. ［条件］ドロップダウンメニューから_［Are you taking any medications?］_を選択します。
-1. 条件の作成： _Is equal to_ &rarr; _Value_ &rarr; _Yes_.
-1. ［アクション］ドロップダウンメニューで_［Enable］_を選択します。
-1. _［List all medications］_を選択します。
+1. ［条件］ドロップダウンメニューから ［**Are you taking any medications?**］ を選択します。
+1. 条件の作成： **Is equal to** &rarr; **Value** &rarr; **Yes** .
+1. ［アクション］ドロップダウンメニューで ［**Enable**］ を選択します。
+1. ［**List all medications**］ を選択します。
 
     ![条件に基づいて、有効/無効のルールを作成します。](./using-the-enable-disable-rule/images/01.png)
 
-1. 完了したら、_［保存］_をクリックします。
+1. 完了したら、 ［**保存**］ をクリックします。
 
 有効ルールが作成され、ユーザーは［Yes］を選択した場合のみフィールドを編集できます。 それ以外の場合は、フィールドがグレーアウトしています。
 
@@ -27,6 +27,8 @@
 回答者が［YES］と回答した場合は、そのフィールドを編集することができます。
 
 ![ユーザーが［Yes］を選択すると、フィールドが有効になります。](./using-the-enable-disable-rule/images/03.png)
+
+<a name="追加情報" />
 
 ## 追加情報
 

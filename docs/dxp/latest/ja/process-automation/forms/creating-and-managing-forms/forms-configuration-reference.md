@@ -2,19 +2,23 @@
 
 ここでは、フォームの全構成の概要を説明していますので、必要な構成をすぐに見つけることができます。
 
+<a name="フォームオプション" />
+
 ## フォームオプション
 
-サイト間でフォームをエクスポートおよびインポートすることができます。 _エクスポート/インポート_ にメニューにアクセスするには、_［サイト管理］_ &rarr; _［コンテンツおよびデータ］_  &rarr; _［フォーム］_ 右上の![Options](../../../images/icon-options.png)アイコンをクリックし、_［エクスポート/インポート］_をクリックします。
+サイト間でフォームをエクスポートおよびインポートすることができます。 **エクスポート/インポート** にメニューにアクセスするには、 ［**サイト管理**］ &rarr; ［**コンテンツおよびデータ**］ &rarr; ［**フォーム**］ 右上の![Options](../../../images/icon-options.png)アイコンをクリックし、 ［**エクスポート/インポート**］ をクリックします。
 
 ![フォームをエクスポートおよびインポートできます。](./forms-configuration-reference/images/01.png)
 
 詳しくは、 [フォームのエクスポートとインポート](./exporting-and-importing-forms.md) および [ページとコンテンツのインポートとエクスポート](../../../site-building/building-sites/importing-exporting-pages-and-content.md) を参照してください。
 
+<a name="フォームの設定" />
+
 ## フォームの設定
 
 各フォームにはそれぞれ設定メニューがあります。
 
-設定メニューを表示するには、目的のフォームを選択します（例：  _ゲスト調査のフィードバック _）。 右上の![Options](../../../images/icon-options.png)アイコンをクリックし、_［Settings］_をクリックします。
+設定メニューを表示するには、目的のフォームを選択します（例： **ゲスト調査のフィードバック**）。 右上の![Options](../../../images/icon-options.png)アイコンをクリックし、 ［**Settings**］ をクリックします。
 
 ### フォームオプション
 
@@ -44,9 +48,11 @@
 
 詳しくは、[Configuring Form Notifications](../sharing-forms-and-managing-submissions/configuring-form-notifications.md)を参照してください。
 
+<a name="フォームウィジェットの設定" />
+
 ## フォームウィジェットの設定
 
-サイトページに配置されている_フォーム_ウィジェットを設定することができます。 _［設定］_メニューにアクセスするには、ウィジェットのタイトルの横にある![Options](../../../images/icon-app-options.png)アイコン → _［設定]］_をクリックします。
+サイトページに配置されている **フォーム** ウィジェットを設定することができます。 ［**設定**］ メニューにアクセスするには、ウィジェットのタイトルの横にある![Options](../../../images/icon-app-options.png)アイコン → ［**設定**]］ をクリックします。
 
 ### 設定
 
@@ -66,19 +72,23 @@
 
 ![フォームウィジェットのスコープを選択します。](./forms-configuration-reference/images/06.png)
 
+<a name="インスタンス設定" />
+
 ## インスタンス設定
 
 インスタンス設定の Forms 設定エントリは、システム設定の Forms エントリと同じです (下記参照)。 詳細については、 [設定スコープ](../../../system-administration/configuring-liferay/understanding-configuration-scope.md) についてを参照してください。
 
-各構成プロパティの説明については、 [システム設定](#system-settings)を参照してください。
+各構成プロパティの説明については、 [システム設定](#system-settings) を参照してください。
+
+<a name="システム設定" />
 
 ## システム設定
 
 現在、システムレベルのFormsの設定項目は1つしかありません。 Liferay UIでプロパティを設定するには、以下の方法があります。
 
-1. _グローバルメニュー_（![global icon](../../../images/icon-applications-menu.png)）→ _[コントロールパネル]_に移動します。
-1. _［システム設定］_をクリックします。
-1. _［コンテンツとデータ］_セクションで_［フォーム］_をクリックします。
+1. **グローバルメニュー**（![global icon](../../../images/icon-applications-menu.png)）→ [**コントロールパネル**] に移動します。
+1. ［**システム設定**］ をクリックします。
+1. ［**コンテンツとデータ**］ セクションで ［**フォーム**］ をクリックします。
 
 ![［システム設定］メニューでフォームを構成します。](./forms-configuration-reference/images/07.png)
 
@@ -88,7 +98,7 @@
 com.liferay.dynamic.data.mapping.form.web.internal.configuration.DDMFormWebConfiguration.config
 ```
 
-`Liferay Home/osgi/configs`に配置してください。 詳細は、[構成ファイルの使用](../../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md) を参照してください。
+`Liferay Home/osgi/configs`に配置してください。 詳細は、 [構成ファイルの使用](../../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md) を参照してください。
 
 | フィールド                                                   | 説明                                                                                                                                                                                          |
 | :--- | :--- |
@@ -99,6 +109,8 @@ com.liferay.dynamic.data.mapping.form.web.internal.configuration.DDMFormWebConfi
 | ゲストアップロードの最大ファイルサイズ（`guestUploadMaximumFileSize`）       | ゲストユーザーがアップロード欄からアップロードできる最大ファイルサイズを設定します。 これは、ドキュメントとメディアアプリケーションの設定で、認証されたユーザーに対して設定され、システム全体の制限は、アップロードサーブレットリクエストシステム設定エントリーの［合計最大アップロードリクエストサイズ］というフィールドで定義されます。 デフォルトでは25MBに設定されています。 |
 | アップロードフィールドの最大繰り返し（`maximumRepetitionsForUploadFields`） | フィールドが反復可能に設定されている場合、ユーザーがフォームにフィールドを追加できる最大回数を設定します（ゲストユーザーとログインユーザーに同じように適用されます）。 デフォルトでは5に設定されています。                                                                                      |
 | ゲストアップロードフィールドの最大送信数``）                                 | ゲストユーザーがゲスト対応のアップロードフィールドを含むフォームを送信できる最大回数を設定します。 ゲストユーザーのIPアドレスは、送信数の記録のために使用されます。 デフォルトでは5に設定されています。                                                                                      |
+
+<a name="追加情報" />
 
 ## 追加情報
 

@@ -55,9 +55,11 @@ url, http://localhost:8080/group/guest/~/control_panel/manage?p_p_id=com_liferay
 userURL, http://localhost:8080/web/test
 ```
 
+<a name="ワークフロー定義のワークフローコンテキスト属性へのアクセス" />
+
 ## ワークフロー定義のワークフローコンテキスト属性へのアクセス
 
-アクセスするには `workflowContext` の属性フォーム[`<script>`](using-the-script-engine-in-workflow.md)にアクセスするには、`Map#get` 方法をで取得します。
+アクセスするには `workflowContext` の属性フォーム [`<script>`](using-the-script-engine-in-workflow.md) にアクセスするには、`Map#get` 方法をで取得します。
 
 ```groovy
 import com.liferay.portal.kernel.workflow.WorkflowConstants;
@@ -76,6 +78,8 @@ long classPK = GetterUtil.getLong((String)workflowContext.get(WorkflowConstants.
 
 [`WorkflowConstants`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/workflow/WorkflowConstants.java) オブジェクトフィールドを使用することで、エラーになりやすい文字列リテラルを避けることができます。 `workflowContext` フィールドの前には、すべて `CONTEXT` が付けられます（例： `CONTEXT_COMPANY_ID`）。
 
+
+<a name="ワークフロー定義でのワークフローコンテキスト属性の設定" />
 
 ## ワークフロー定義でのワークフローコンテキスト属性の設定
 
@@ -105,6 +109,8 @@ workflowContext.put("assetTitle", assetTitle);
 上記のコードは、アセットが `getTitle` メソッドを持っている場合のみ動作します（例：`JournalArticle`）。
 ```
 
+<a name="ワークフロー定義でアクセス用のサービスコンテキスト属性を設定する" />
+
 ## ワークフロー定義でアクセス用のサービスコンテキスト属性を設定する
 
 カスタムのJavaコードで、ワークフロー定義に情報を渡す必要がありますが、`workflowContext`がない場合があります。 例えば、ブログのエントリーを追加するコードを書いている場合、 [`BlogsEntryLocalService#addEntry`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/blogs/blogs-api/src/main/java/com/liferay/blogs/service/BlogsEntryLocalService.java) メソッドのいずれかを呼び出すことができます。 `workflowContext`はこれらのメソッドのパラメータではありませんが、`ServiceContext`はパラメータです。 サービスコンテキストに新しい属性を追加します。
@@ -123,6 +129,8 @@ ServiceContext serviceContext = (ServiceContext)workflowContext.get(WorkflowCons
 
 serviceContext.getAttribute("customAttributeKey");
 ```
+
+<a name="関連情報" />
 
 ## 関連情報
 

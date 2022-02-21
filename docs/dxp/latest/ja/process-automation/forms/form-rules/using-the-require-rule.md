@@ -1,32 +1,36 @@
 # 必須ルールの使用
 
-_必須_ルールを使用すると、1つまたは複数の条件に基づいてフィールドを必須にすることができます。 必須ルールは、_表示_ルールのように、他のルールと関連して機能します。
+**必須** ルールを使用すると、1つまたは複数の条件に基づいてフィールドを必須にすることができます。 必須ルールは、 **表示** ルールのように、他のルールと関連して機能します。
 
 例えば、キャンプの登録フォームに以下の項目が含まれているとします。
 
-* _I am 18 Years Old or Older_: _［Yes］_と_［No］_の2つのオプションを持つ必須の単一選択フィールド。
-* _Legal Guardian Email Address_: 有効なメールアドレスを受け付けるテキストフィールド。
-* _［I am 18 Years Old or Older］_の値が［NO］の場合に_［Legal Guardian Address］_フィールドを表示する[表示ルール](./using-the-show-hide-rule.md)。
+***I am 18 Years Old or Older** : ［**Yes**］ と ［**No**］ の2つのオプションを持つ必須の単一選択フィールド。
+***Legal Guardian Email Address** : 有効なメールアドレスを受け付けるテキストフィールド。
+［***I am 18 Years Old or Older**］ の値が［NO］の場合に ［**Legal Guardian Address**］ フィールドを表示する[表示ルール](./using-the-show-hide-rule.md)。
 
-回答者が_［No］_と答えた場合、_［Legal Guardian Email Address］_が表示され、回答者は有効なメールアドレスを入力しなければなりません。
+回答者が ［**No**］ と答えた場合、 ［**Legal Guardian Email Address**］ が表示され、回答者は有効なメールアドレスを入力しなければなりません。
+
+<a name="必須ルールの設定" />
 
 ## 必須ルールの設定
 
 以下の手順に従ってください。
 
-1. _［ルール］_タブをクリックします。
-1. _［I am 18 Years Old or Older］_ルールの横にあるアクション（![Actions](../../../images/icon-actions.png)）をクリックします。
+1. ［**ルール**］ タブをクリックします。
+1. ［**I am 18 Years Old or Older**］ ルールの横にあるアクション（![Actions](../../../images/icon-actions.png)）をクリックします。
 
     ![既存の表示/非表示ルールを変更します。](./using-the-require-rule/images/01.png)
 
-1. _［Edit］_をクリックします。
-1. _［アクション］_の下で_［ルールの追加］_ボタンをクリックします。
-1. _［アクション］_ドロップダウンメニューから_［Require］_を選択します。
-1. 2つ目のドロップダウンメニューから_［Legal Guardian Email Address］_を選択します。
+1. ［**Edit**］ をクリックします。
+1. ［**アクション**］ の下で ［**ルールの追加**］ ボタンをクリックします。
+1. ［**アクション**］ ドロップダウンメニューから ［**Require**］ を選択します。
+1. 2つ目のドロップダウンメニューから ［**Legal Guardian Email Address**］ を選択します。
 
     ![必須ルールを追加します。](./using-the-require-rule/images/02.png)
 
-1. 完了したら、_［保存］_をクリックします。
+1. 完了したら、 ［**保存**］ をクリックします。
+
+<a name="追加情報" />
 
 ## 追加情報
 
