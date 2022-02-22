@@ -3,7 +3,7 @@
 Liferayは、ファイルの変換やファイルのプレビューを生成するための外部サービスとの統合を提供します。 これらのうち3つのサービスは、サーバー管理の設定で有効にすることができます。 [ImageMagick](https://www.imagemagick.org/script/index.php) 、 [Ghostscript](https://www.ghostscript.com/) 、および [Xuggler](http://www.xuggle.com/xuggler/) です。
 
 ```{important}
-Liferay 7.3.xでは、Xugglerの統合は非推奨となっています。 ユーザーはLiferayのFFmpegインテグレーションを代替として使用することをお勧めします。 詳しくは【FFmpeg for Audio and Video Previewsを有効にする】(../../content-authoring-and-management/documents-and-media/devops/enabling-ffmpeg-for-audio-and-video-previews.md)をご覧ください。
+Liferay 7.3.xでは、Xugglerの統合は非推奨となっています。 ユーザーはLiferayのFFmpegインテグレーションを代替として使用することをお勧めします。 詳しくは [FFmpeg for Audio and Video Previewsを有効にする](../../content-authoring-and-management/documents-and-media/devops/enabling-ffmpeg-for-audio-and-video-previews.md) をご覧ください。
 ```
 
 ![［外部サービス］タブからImageMagick、Ghostscript、およびXugglerを有効にします。](./configuring-external-services/images/01.png)
@@ -13,7 +13,7 @@ Liferay 7.3.xでは、Xugglerの統合は非推奨となっています。 ユ�
 これらのサービスをインストールしたら、コントロールパネルの［サーバー管理］ページでLiferayインスタンスがこれらのサービスを使用するように設定します。
 
 ```{note}
-Liferay 7.1では、OpenOffice/LibreOfficeは、サーバー管理やポータルのプロパティではなく、OSGi Configuration Adminで設定されます。 詳しくは【OpenOffice/LibreOfficeの統合を可能にする】(./../content-authoring-and-management/documents-and-media/devops/enabling-openoffice-libreoffice-integration.md)をご覧ください。
+Liferay 7.1では、OpenOffice/LibreOfficeは、サーバー管理やポータルのプロパティではなく、OSGi Configuration Adminで設定されます。 詳しくは [OpenOffice/LibreOfficeの統合を可能にする](./../content-authoring-and-management/documents-and-media/devops/enabling-openoffice-libreoffice-integration.md) をご覧ください。
 ```
 
 <a name="imagemagickとghostscriptを有効にする" />
@@ -97,5 +97,5 @@ xuggler.enabled=true
 
 ## 追加情報
 
-* [ドキュメントとメディアプレビューの設定](../../content-authoring-and-management/documents-and-media/devops/configuring-documents-and-media-previews.md)
-* [音声とビデオのプレビュー用にFFmpegを有効にする](../../content-authoring-and-management/documents-and-media/devops/enabling-ffmpeg-for-audio-and-video-previews.md)
+* [ドキュメントとメディアプレビューの設定](../../../content-authoring-and-management/documents-and-media/devops/configuring-documents-and-media-previews.md)
+* [音声とビデオのプレビュー用にFFmpegを有効にする](../../../content-authoring-and-management/documents-and-media/devops/enabling-ffmpeg-for-audio-and-video-previews.md)
