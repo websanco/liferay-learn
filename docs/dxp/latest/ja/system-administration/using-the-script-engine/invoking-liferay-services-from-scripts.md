@@ -1,6 +1,6 @@
 # スクリプトからLiferayサービスを呼び出す
 
-多くのスクリプトシナリオでは、Liferayサービスを呼び出す必要があります。 [Liferay `*ServiceUtil`クラス](https://docs.liferay.com/dxp/portal/7.2-latest/javadocs/portal-kernel/)は、[スクリプトコンソール](./running-scripts-from-the-script-console.md)でLiferayサービスを呼び出す最も速くて便利な方法です。 Javaを使用するのと同じ方法でGroovyを使用してLiferayサービスを呼び出します。 Groovyの構文では、簡潔で洗練されたスクリプトを容易に作成できます。
+多くのスクリプトシナリオでは、Liferayサービスを呼び出す必要があります。 [Liferay `*ServiceUtil`クラス](https://learn.liferay.com/reference/latest/en/dxp/javadocs/portal-kernel/)は、[スクリプトコンソール](./running-scripts-from-the-script-console.md)でLiferayサービスを呼び出す最も速くて便利な方法です。 Javaを使用するのと同じ方法でGroovyを使用してLiferayサービスを呼び出します。 Groovyの構文では、簡潔で洗練されたスクリプトを容易に作成できます。
 
 ユーザーのリストを取得し、その名前をLiferayのログに出力する方法を、Javaコードの場合と`UserLocalServiceUtil`を使用するGroovyコードの場合を比較して説明します。
 
@@ -8,7 +8,7 @@
 
 DXPにデプロイされたモジュールで次のJavaコードを実行するか、[スクリプトコンソール](./running-scripts-from-the-script-console.md)でコードを実行できます。
 
-``` groovy
+```groovy
 import com.liferay.portal.kernel.model.User;
 import com.liferay.portal.kernel.service.UserLocalServiceUtil;
 import java.util.List;
@@ -29,7 +29,7 @@ for (User user:users) {
 
 または、スクリプトコンソールでGroovyコードを使用することもできます。
 
-``` groovy
+```groovy
 import com.liferay.portal.kernel.service.UserLocalServiceUtil
 
 userCount = UserLocalServiceUtil.getUsersCount()
@@ -42,12 +42,12 @@ for (user in users){
 
 スクリプトコンソールで使用できるため、`com.liferay.portal.kernel.model.User`と`java.util.List`をインポートする必要はありません。 また、Groovy構文はJava構文よりも単純です。
 
-```{note}
-サービスに ` * ServiceUtil`クラスがない場合は、 サービスにアクセスするために、次を使用します。Service Tracker。
+```note::
+   サービスに `` * ServiceUtil``クラスがない場合は、 サービスにアクセスするために、次を使用します。 `Service Tracker <../../liferay-internals/dependency-injection/using-a-service-tracker.md>`_ to access the service
 ```
 
 ## 次のステップ
 
-  - [スクリプトコンソールからのスクリプトの実行](./running-scripts-from-the-script-console.md)
-  - [ワークフローでのスクリプトエンジンの使用](../../process-automation/workflow/developer-guide/using-the-script-engine-in-workflow.md)
-  - [スクリプトの例](./script-examples.md)
+* [スクリプトコンソールからのスクリプトの実行](./running-scripts-from-the-script-console.md)
+* [ワークフローでのスクリプトエンジンの使用](../../process-automation/workflow/developer-guide/using-the-script-engine-in-workflow.md)
+* [スクリプトの例](./script-examples.md)

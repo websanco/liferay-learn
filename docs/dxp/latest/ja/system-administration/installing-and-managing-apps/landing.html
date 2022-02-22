@@ -1,0 +1,45 @@
+<script type="module">
+	import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.esm.browser.min.js'
+
+	const page = new Vue({
+		el: '#landingPage',
+		data: {
+			cards: [
+				{
+					sectionName: 'Installing Apps',
+					sectionURL: 'installing-and-managing-apps/installing-apps.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'Downloading Apps',
+							url: 'installing-and-managing-apps/installing-apps/downloading-apps.html'
+						},
+						{
+							name: 'Accessing EE Plugins During a Trial Period',
+							url: 'installing-and-managing-apps/installing-apps/accessing-ee-plugins-during-a-trial-period.html'
+						},
+					]
+				},
+				{
+					sectionName: 'Managing Apps',
+					sectionURL: 'installing-and-managing-apps/managing-apps.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'Using the App Manager',
+							url: 'installing-and-managing-apps/managing-apps/using-the-app-manager.html'
+						},
+						{
+							name: 'Configuring Portlets, Themes, and Layout Templates',
+							url: 'installing-and-managing-apps/managing-apps/configuring-portlets-themes-and-layout-templates.html'
+						},
+						{
+							name: 'Blacklisting Apps',
+							url: 'installing-and-managing-apps/managing-apps/blacklisting-apps.html'
+						},
+					]
+				},
+			]
+		}
+	})
+</script>

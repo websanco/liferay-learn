@@ -1,8 +1,7 @@
 セキュリティ設定
 =================
 
-.. toctree::
-   :maxdepth: 4
+.. toctree:: :maxdepth: 4
 
    ../file-storage/enabling-antivirus-scanning-for-uploaded-files.md
 

@@ -1,98 +1,93 @@
 # 外部サービスの構成
 
-ユーザーエクスペリエンスを向上させるためにLiferay DXPインストールに追加できる外部サービスがいくつかあります。
+Liferayは、ファイルの変換やファイルのプレビューを生成するための外部サービスとの統合を提供します。 これらのうち3つのサービスは、サーバー管理の設定で有効にすることができます。 [ImageMagick](https://www.imagemagick.org/script/index.php)、 [Ghostscript](https://www.ghostscript.com/)、および [Xuggler](http://www.xuggle.com/xuggler/)です。
 
-## ドキュメントのプレビューを有効にする
+```{important}
+Liferay 7.3.xでは、Xugglerの統合は非推奨となっています。 ユーザーはLiferayのFFmpegインテグレーションを代替として使用することをお勧めします。 詳しくは【FFmpeg for Audio and Video Previewsを有効にする】(../../content-authoring-and-management/documents-and-media/devops/enabling-ffmpeg-for-audio-and-video-previews.md)をご覧ください。
+```
 
-Liferay DXPユーザーは、Documents and Mediaライブラリを介して、あらゆるタイプのファイルをアップロードおよび共有できます。これは、ファイルのカスタマイズ可能で権限が有効なオンラインリポジトリです（詳細については、 [公開と共有](../../content-authoring-and-management/documents-and-media/devops/configuring-document-previews.md) を参照）。
+![［外部サービス］タブからImageMagick、Ghostscript、およびXugglerを有効にします。](./configuring-external-services/images/01.png)
 
-[PDFBox](https://pdfbox.apache.org/) はデフォルトで、特定のファイルタイプ（主にPDF）のLiferay DXPの自動プレビューを生成します。 2つの追加ツールをインストールして、他のファイルタイプのプレビューを生成できます。
+各外部サービスをLiferayインスタンスで有効にするには、サーバーにインストールする必要があります。 Liferay DXPでは古いバージョンが正しく動作しない可能性があるため、サービスをインストールするときは、オペレーティングシステムに最新の安定バージョンを使用してください。
 
-
-<!--
--   [**OpenOffice:**](https://www.openoffice.org/) or [**LibreOffice:**](https://www.libreoffice.org/)
-    Convert and generate previews for many types of documents.
--->
-
-  - [**ImageMagick：**](https://www.imagemagick.org/script/index.php) 多くのタイプの画像の高品質な画像プレビューを生成します。
-
-  - [**Xuggler：**](http://www.xuggle.com/xuggler/) オーディオおよびビデオファイルのプレビューを変換および生成します。
-
-![[外部サービス]タブからImageMagick、Ghostscript、およびXugglerを有効にします。](./configuring-external-services/images/01.png)
+これらのサービスをインストールしたら、コントロールパネルの［サーバー管理］ページでLiferayインスタンスがこれらのサービスを使用するように設定します。
 
 ```{note}
-As of Liferay 7.1, OpenOffice/LibreOffice is configured in OSGi Configuration Admin instead of Server Administration or portal properties. To adjust these settings, go to System Settings and find the OpenOffice Integration entry. Alternatively, deploy a com.liferay.document.library.document.conversion.internal.configuration.OpenOfficeConfiguration.config file with the settings you need.
+Liferay 7.1では、OpenOffice/LibreOfficeは、サーバー管理やポータルのプロパティではなく、OSGi Configuration Adminで設定されます。 詳しくは【OpenOffice/LibreOfficeの統合を可能にする】(./../content-authoring-and-management/documents-and-media/devops/enabling-openoffice-libreoffice-integration.md)をご覧ください。
 ```
 
-まずサーバーにImageMagickとXugglerをインストールしてから、サーバー管理アプリの[外部サービス]タブを使用して、Liferay DXPでの使用を構成します。 ご使用のオペレーティングシステムに対応するこれらのツールの正しいバージョンを選択してください。 古いバージョンはLiferay DXPで正しく動作しない可能性があるため、最新の安定バージョンをインストールしてください。 ImageMagickは手動でインストールする必要がありますが、コントロールパネルからXugglerをインストールできます。
+## ImageMagickとGhostscriptを有効にする
+
+デフォルトでは、ドキュメントやメディアは使用しています [PDFBox](https://pdfbox.apache.org/) プレビューを生成します。 [ImageMagickの](https://www.imagemagick.org/script/index.php) 及び [のGhostscript](https://www.ghostscript.com/) 高速かつ高品質のプレビューやコンバージョン提供し、複数の画像ファイルの種類をサポートします。 動作させるには、両方のサービスを一緒にインストールして有効にする必要があります。
+
+```{note}
+お使いのOSによっては、これらのサービスがすでにインストールされている場合があります。 Linuxをお使いの方は、すでに両方ともインストールされていると思います。 ただし、Windowsにはインストールされていない可能性が高く、macOSにはインストールされている可能性があります。
+```
+
+ImageMagickとGhostscriptの両方がサーバーにインストールされたら、以下の手順でLiferayインスタンスのこれらのサービスを有効にします。
+
+1. *グローバルメニュー* （![Global Menu](../../images/icon-applications-menu.png)）を開き、 *［コントロールパネル］* &rarr; *コンフィギュ* &rarr; *［サーバの管理］*へ行きます。
+
+1. *［外部サービス］* タブをクリックします。
+
+1. ImageMagickとGhostscriptの *有効* をチェックします。
+
+1. ImageMagickおよびGhostscript実行可能ファイルへのパスが正しいことを確認します。
+
+1. リソース制限を構成します。
+
+1. 完了したら、*［保存］*をクリックします。
+
+## Xugglerを有効にする
+
+デフォルトでは、［ドキュメントとメディア］では、オーディオファイルやビデオファイルのプレビューは生成されません。 LiferayのXuggler統合を使用して、これらのファイルを変換し、プレビューを生成することができます。 Xugglerがまだサーバーにインストールされていない場合は、［サーバー管理］の［外部サービス］タブからXugglerをインストールできます。
 
 ```{tip}
-Xuggler requires glibc version 2.6 or later on Linux.
+Xugglerは、Linuxではglibcバージョン2.6以降が必要です。
 ```
 
-### サーバー管理でのImageMagickの構成
+以下の手順で、LiferayインスタンスにXugglerをインストールして有効にします。
 
-ImageMagickを設定して画像とPDFプレビューを生成する前に、それとその依存関係であるGhostscriptをインストールします。 これはオペレーティングシステムによって異なります。Linuxでは、両方が既にインストールされている可能性があります。 Windowsにはインストールされない可能性がありますが、macOSにインストールされる可能性があります。
+1. *［グローバルメニュー］* （![Global Menu](../../images/icon-applications-menu.png)）を開き、 *［コントロールパネル］* &rarr; *［設定］* &rarr; *［サーバの管理］*へ行きます。
 
-1.  [ImageMagick](https://www.imagemagick.org/script/index.php)ダウンロードしてインストールし
+1. *［外部サービス］* タブをクリックします。
 
- 。</p></li> 
-   
-   2  [Ghostscript](https://www.ghostscript.com/)ダウンロードしてインストールし 。</p></li> </ol> 
-  
-  インストールしたら、サーバー管理アプリの[外部サービス]タブまたは [ポータルプロパティ](../../content-authoring-and-management/documents-and-media/devops/enabling-openoffice-libreoffice-integration.md) ファイルでImageMagickを有効にします。 `portal-ext.properties`を使用する場合は、次の行を追加し、検索パスがImageMagickおよびGhostscript実行可能ファイルを含むディレクトリを指していることを確認します。 macOSまたはUnix環境でGhostscriptが使用するフォントのパスを構成する必要がある場合もあります。
-  
-  サーバー管理アプリの[外部サービス]タブからImageMagickを有効にするには、
-  
-  1.  *コントロールパネル*、[ *構成* →[ *サーバー管理*]に移動し、[ *外部サービス* ]タブをクリックします。
+1. Xugglerの*有効化をチェックします。</p>
 
-2.  ImageMagickおよびGhostscriptセクションを展開し、 *Enabled*を選択します。
+   Xugglerがまだインストールされていない場合は、インストールするように促されます。 OSに適したJARを選択し、*［インストール］*をクリックします。 その後、サーバーを再起動すると変更が反映されます。 インストールが完了したら、 *［外部サービス］* タブに戻り、Xugglerを有効にすることができます。
 
-3.  ImageMagickおよびGhostscript実行可能ファイルへのパスが正しいことを確認します。
+   ![Xugglerがインストールされていない場合は、インストールするように促されます。](./configuring-external-services/images/02.png)</li>
 
-4.  使用するリソース制限を設定します。
+1
 
+*［保存］*をクリックします。</ol>
 
+## `portal-ext.properties` ファイルを使用して外部サービスを有効にする。
 
-#### ポータルプロパティファイルでのImageMagickの構成
+コントロールパネルに加えて、`portal-ext.properties` ファイルを使用してこれらの外部サービスを有効にできます。
 
-あるいは、 [ポータルプロパティ](../../content-authoring-and-management/documents-and-media/devops/configuring-document-previews.md) ファイルでImageMagickを有効にできます。 `portal-ext.properties`を使用する場合は、次の行を追加し、検索パスがImageMagickおよびGhostscript実行可能ファイルを含むディレクトリを指していることを確認します。 macOSまたはUnix環境でGhostscriptが使用するフォントのパスを構成する必要がある場合もあります。
+### ImageMagickとGhostscriptを有効にする
 
+`portal-ext.properties`を使用してImageMagickとGhostscriptを有効にするには、 `imagemagick.enabled` と `imagemagick.global.search.path` プロパティをファイルに追加してください。 検索パスがImageMagickとGhostscriptの実行ファイルのあるディレクトリを指していることを確認してください。 macOSまたはUnix環境でGhostscriptが使用するフォントのパスを構成する必要がある場合もあります。
 
-
-``` properties
+```properties
 imagemagick.enabled=true
 imagemagick.global.search.path[apple]=/opt/local/bin:/opt/local/share/ghostscript/fonts:/opt/local/share/fonts/urw-fonts
 imagemagick.global.search.path[unix]=/usr/local/bin:/usr/local/share/ghostscript/fonts:/usr/local/share/fonts/urw-fonts
 imagemagick.global.search.path[windows]=C:\\Program Files\\ImageMagick
 ```
 
+### Xugglerを有効にする
 
+`portal-ext.properties` ファイルを使用してXugglerを有効にするには、そのファイルに以下のコードを追加します。
 
-
-### サーバー管理でのXugglerの構成
-
-Xugglerをインストールして構成するには、
-
-1.  *コントロールパネル*、[ *構成* →[ *サーバー管理*]に移動し、[ *外部サービス* ]タブをクリックします。
-
-2.  Xugglerセクションで、オペレーティングシステムに一致するXuggler `.jar` ファイルを選択します。 次に、[ *インストール*]をクリックします。
-
-3.  アプリケーションサーバーをシャットダウンします。 サーバー管理ではなくポータルプロパティファイルでXugglerを有効にする場合は、「 [ポータルプロパティファイルでXugglerを有効にする](#enabling-xuggler-wtih-a-portal-properties-file) セクションに移動します。 それ以外の場合は、ここでアプリケーションサーバーを再起動してから、次の手順を実行します。
-
-4.  Xugglerを有効にして終了します。サーバー管理の[外部サービス]タブに戻り、[ *有効*]を選択します。
-   
-   ![XugglerをインストールしてLiferay DXPを再起動すると、[有効]チェックボックスが表示されます。](./configuring-external-services/images/02.png)
-
-5.  *[保存]* をクリックします。
-
-
-
-### ポータルプロパティファイルでXugglerを有効にする
-
-Xugglerは、 [Portal Properties](../../content-authoring-and-management/documents-and-media/devops/configuring-document-previews.md) ファイルを使用して有効にすることもできます。 この行を `portal-ext.properties`に追加し`</p>
-
-<pre><code class="properties">xuggler.enabled=true
-`</pre> 
+```properties
+xuggler.enabled=true
+```
 
 アプリケーションサーバーを再起動して、Xugglerの有効化を完了します。
+
+## 追加情報
+
+* [ドキュメントとメディアプレビューの設定](../../content-authoring-and-management/documents-and-media/devops/configuring-documents-and-media-previews.md)
+* [音声とビデオのプレビュー用にFFmpegを有効にする](../../content-authoring-and-management/documents-and-media/devops/enabling-ffmpeg-for-audio-and-video-previews.md)

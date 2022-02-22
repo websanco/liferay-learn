@@ -2,12 +2,12 @@
 
 スクリプトコンソールは、Groovyスクリプトを実行し、その出力を印刷するための単一のビューを提供します。 ウィジェットとユーザーの操作を容易にする定義済みの変数があります。 次のトピックでは、スクリプトコンソールの使用を開始します。
 
-  - [スクリプトコンソールでサンプルスクリプトを実行する](#running-a-sample-script-in-the-script-console)
-  - [スクリプトコンソールで使用可能な定義済み変数](#predefined-variables)
-  - [スクリプトコンソールでスクリプトを実行するためのヒント](#tips)
+* [スクリプトコンソールでサンプルスクリプトを実行する](#running-a-sample-script-in-the-script-console)
+* [スクリプトコンソールで使用可能な定義済み変数](#predefined-variables)
+* [スクリプトコンソールでスクリプトを実行するためのヒント](#tips)
 
-```{important}
-スクリプトコンソールは、システムの操作とメンテナンス用です。エンドユーザー用ではありません。 スクリプトコンソールへのアクセスをポータル管理者に制限してください。
+```important::
+   スクリプトコンソールは、システムの操作とメンテナンス用です。エンドユーザー用ではありません。 スクリプトコンソールへのアクセスをポータル管理者に制限してください。
 ```
 
 まず、スクリプトコンソールのサンプルスクリプトを実行します。
@@ -16,13 +16,11 @@
 
 スクリプトコンソールでサンプルスクリプトを実行する方法は次のとおりです。
 
-1.  管理者としてログインします。
+1. 管理者としてログインします。
+1. プロダクトメニューから、*［コントロールパネル］ * へ行き、*［設定］* &rarr; *［サーバ管理］ *を選択します。
+1. *［Script］*をクリックします。 これがスクリプトコンソールです。 デフォルトのサンプルスクリプトは、ユーザー数をコンソール出力に出力します。
 
-2.  製品メニューで、*コントロールパネル*に移動し、*[Configuration]* → *[Server Administration]* を選択します。
-
-3.  *[Script]* をクリックします。 これがスクリプトコンソールです。 デフォルトのサンプルスクリプトは、ユーザー数をコンソール出力に出力します。
-
-    ``` groovy
+    ```groovy
     // ### Groovy Sample ###
 
     number = com.liferay.portal.kernel.service.UserLocalServiceUtil.getUsersCount();
@@ -30,14 +28,14 @@
     out.println(number);
     ```
 
-4.  *[Execute]* をクリックし、スクリプトコンソールの*出力*でユーザー数を確認します。
+1. *［Execute］*をクリックし、スクリプトコンソールの*出力*でユーザー数を確認します。
 
     ![スクリプトコンソールのサンプルのGroovyスクリプトは、ユーザー数をスクリプトコンソールの出力に出力します。](./running-scripts-from-the-script-console/images/01.png)
 
-Groovyのサンプルは、Liferayサービスユーティリティ[`UserLocalServiceUtil`](https://docs.liferay.com/dxp/portal/7.2-latest/javadocs/portal-kernel/com/liferay/portal/kernel/service/UserLocalServiceUtil.html)を呼び出して、ユーザー数を取得します。 次に、`out`（組み込みの`PrintWriter`）を使用して、スクリプトコンソールに数を書き込みます。
+Groovyのサンプルは、Liferayサービスユーティリティ[`UserLocalServiceUtil`](https://learn.liferay.com/reference/latest/en/dxp/javadocs/portal-kernel/com/liferay/portal/kernel/service/UserLocalServiceUtil.html)を呼び出して、ユーザー数を取得します。 次に、`out`（組み込みの`PrintWriter`）を使用して、スクリプトコンソールに数を書き込みます。
 
-```{note}
-*out.println*ではなく*System.out.println*を使用すると、出力はスクリプトコンソールではなくLiferayのログファイルに出力されます。
+```note::
+   *out.println*ではなく*System.out.println*を使用すると、出力はスクリプトコンソールではなくLiferayのログファイルに出力されます。
 ```
 
 ## 定義済みのスクリプトコンソール変数
@@ -58,7 +56,7 @@ Groovyのサンプルは、Liferayサービスユーティリティ[`UserLocalSe
 
 次のスクリプトは、`actionRequest`変数を使用してポータルインスタンスの`Company`を取得する方法を示しています。
 
-``` groovy
+```groovy
 import com.liferay.portal.kernel.util.*
 
 company = PortalUtil.getCompany(actionRequest)
@@ -76,10 +74,10 @@ userInfo.each {
 
 スクリプトコンソールを使用するときは、次の点に注意してください。
 
-  - 元に戻すことはできません。
-  - プレビューはありません。
-  - アクセス許可のチェックは、ローカルサービスには適用されません。
-  - スクリプトは同期的に実行されます。 時間がかかる可能性のあるスクリプトの実行は避けてください。
+* 元に戻すことはできません。
+* プレビューはありません。
+* アクセス許可のチェックは、ローカルサービスには適用されません。
+* スクリプトは同期的に実行されます。 時間がかかる可能性のあるスクリプトの実行は避けてください。
 
 スクリプトコンソールを慎重に使用し、スクリプトを本番環境で実行する前に非運用システムでテストしてください。
 
@@ -87,6 +85,6 @@ userInfo.each {
 
 ## 追加情報
 
-  - [スクリプトからLiferayサービスを呼び出す](./invoking-liferay-services-from-scripts.md)
-  - [ワークフローでのスクリプトエンジンの使用](../../process-automation/workflow/developer-guide/using-the-script-engine-in-workflow.md)
-  - [スクリプトの例](./script-examples.md)
+* [Liferayサービスの呼び出し](./invoking-liferay-services-from-scripts.md)
+* [ワークフローでのスクリプトエンジンの使用](../../process-automation/workflow/developer-guide/using-the-script-engine-in-workflow.md)
+* [スクリプトの例](./script-examples.md)
