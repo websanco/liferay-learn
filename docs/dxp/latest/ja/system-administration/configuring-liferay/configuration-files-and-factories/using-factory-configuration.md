@@ -1,18 +1,22 @@
 # 工場構成の使用
 
-ほとんどのLiferay DXPシステム設定では、1つのエントリに1つの設定セットしか許可されていません。 構成を変更するには、単一の構成フォームを更新します。これは、[影響を受ける構成全体](../understanding-configuration-scope.md)に適用されます。 あまり一般的ではあり *が、構成は同時に共存する複数のエントリをサポートします。これらは*ファクトリ構成*と呼ばれます。 工場構成の場合、各構成セットは固有の構成を提供します。 一般的な使用法は、サードパーティサーバー（LDAPやElasticsearchなど）へのシステムスコープの接続の構成です。 これらのサーバーへの接続ごとに固有の構成値が必要であるため、工場出荷時の構成を使用してそれを可能にします。</p>
+ほとんどのLiferay DXPシステム設定では、1つのエントリに1つの設定セットしか許可されていません。 構成を変更するには、単一の構成フォームを更新します。これは、[影響を受ける構成全体](../understanding-configuration-scope.md)に適用されます。 あまり一般的ではあり **が、構成は同時に共存する複数のエントリをサポートします。これらは** ファクトリ構成*と呼ばれます。 工場構成の場合、各構成セットは固有の構成を提供します。 一般的な使用法は、サードパーティサーバー（LDAPやElasticsearchなど）へのシステムスコープの接続の構成です。 これらのサーバーへの接続ごとに固有の構成値が必要であるため、工場出荷時の構成を使用してそれを可能にします。</p>
 
 ```{tip}
 Factory Configuration Example: [Adding Organization types](../../../users-and-permissions/organizations/adding-a-new-organization-type.md) is supported, and is useful if you need to model real-life hierarchies or enforce hierarchical rules. In Liferay DXP, each Organization type is created via a factory configuration entry in System Settings.
 ```
 
+<a name="工場構成の特定" />
+
 ## 工場構成の特定
 
 サービスが出荷時の構成をサポートしている場合、そのシステム設定エントリには[追加]ボタンがあります。
 
-![システム設定エントリに[追加]ボタンがある場合、工場出荷時の構成をサポートしています。](./using-configuration-files/images/01.png)
+![システム設定エントリに [追加]ボタンがある場合、工場出荷時の構成をサポートしています。](./using-configuration-files/images/01.png)
 
 追加ボタン ![Add](../../../images/icon-add.png) をクリックして、構成値の新しいセットを追加します。
+
+<a name="ファクトリー構成ファイル" />
 
 ## ファクトリー構成ファイル
 
@@ -28,7 +32,7 @@ my.service.ServiceConfiguration.config
 com.liferay.organizations.internal.configuration.OrganizationTypeConfiguration-default.config
 ```
 
-次のインスタンスには、一意の *サブネーム* （ *以外のデフォルト*）が含まれています。 このインスタンスを使用する必要があるときにわかりやすい名前を使用することをお勧めします。 [新しい組織タイプの追加](../../../users-and-permissions/organizations/adding-a-new-organization-type.md)の例に続いて、次の名前の設定ファイルで*リーグ*タイプを追加できます。
+次のインスタンスには、一意の **サブネーム**（**以外のデフォルト**）が含まれています。 このインスタンスを使用する必要があるときにわかりやすい名前を使用することをお勧めします。 [新しい組織タイプの追加](../../../users-and-permissions/organizations/adding-a-new-organization-type.md) の例に続いて、次の名前の設定ファイルで **リーグ** タイプを追加できます。
 
 ``` bash
 com.liferay.organizations.internal.configuration.OrganizationTypeConfiguration-league.config

@@ -2,7 +2,9 @@
 
 DBStoreは、ファイルをBLOBとしてDXPデータベースに保存します。 DBStoreには、ファイルベースのストアタイプ（Simple、Advanced、S3）が持つトランザクションロールバックの脆弱性はありません。
 
-DBStoreのファイルサイズ制限は1ギガバイトです。 1ギガバイトを超えるファイルを保存するには、[Simple File System Store](./simple-file-system-store.md)または[Advanced File System Store](../file-storage.md#configuring-advanced-file-system-store)を使用します。
+DBStoreのファイルサイズ制限は1ギガバイトです。 1ギガバイトを超えるファイルを保存するには、 [Simple File System Store](./simple-file-system-store.md) または [Advanced File System Store](../file-storage.md#configuring-advanced-file-system-store) を使用します。
+
+<a name="ストアの構成" />
 
 ## ストアの構成
 
@@ -15,6 +17,8 @@ DBStoreのファイルサイズ制限は1ギガバイトです。 1ギガバイ�
 2.  DXPを再起動します。
 
 DXPがファイルをDBStoreに保存するようになりました。
+
+<a name="追加情報" />
 
 ## 追加情報
 

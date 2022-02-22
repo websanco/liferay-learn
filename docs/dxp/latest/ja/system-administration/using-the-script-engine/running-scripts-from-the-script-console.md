@@ -6,19 +6,21 @@
 * [スクリプトコンソールで使用可能な定義済み変数](#predefined-variables)
 * [スクリプトコンソールでスクリプトを実行するためのヒント](#tips)
 
-```important::
+```{important}
    スクリプトコンソールは、システムの操作とメンテナンス用です。エンドユーザー用ではありません。 スクリプトコンソールへのアクセスをポータル管理者に制限してください。
 ```
 
 まず、スクリプトコンソールのサンプルスクリプトを実行します。
+
+<a name="スクリプトコンソールでサンプルスクリプトを実行する" />
 
 ## スクリプトコンソールでサンプルスクリプトを実行する
 
 スクリプトコンソールでサンプルスクリプトを実行する方法は次のとおりです。
 
 1. 管理者としてログインします。
-1. プロダクトメニューから、*［コントロールパネル］ * へ行き、*［設定］* &rarr; *［サーバ管理］ *を選択します。
-1. *［Script］*をクリックします。 これがスクリプトコンソールです。 デフォルトのサンプルスクリプトは、ユーザー数をコンソール出力に出力します。
+1. プロダクトメニューから、 ［**コントロールパネル**］ へ行き、 ［**設定**］ &rarr; ［**サーバ管理**］ を選択します。
+1. ［**Script**］ をクリックします。 これがスクリプトコンソールです。 デフォルトのサンプルスクリプトは、ユーザー数をコンソール出力に出力します。
 
     ```groovy
     // ### Groovy Sample ###
@@ -28,15 +30,17 @@
     out.println(number);
     ```
 
-1. *［Execute］*をクリックし、スクリプトコンソールの*出力*でユーザー数を確認します。
+1. ［**Execute**］ をクリックし、スクリプトコンソールの **出力** でユーザー数を確認します。
 
     ![スクリプトコンソールのサンプルのGroovyスクリプトは、ユーザー数をスクリプトコンソールの出力に出力します。](./running-scripts-from-the-script-console/images/01.png)
 
-Groovyのサンプルは、Liferayサービスユーティリティ[`UserLocalServiceUtil`](https://learn.liferay.com/reference/latest/en/dxp/javadocs/portal-kernel/com/liferay/portal/kernel/service/UserLocalServiceUtil.html)を呼び出して、ユーザー数を取得します。 次に、`out`（組み込みの`PrintWriter`）を使用して、スクリプトコンソールに数を書き込みます。
+Groovyのサンプルは、Liferayサービスユーティリティ [`UserLocalServiceUtil`](https://learn.liferay.com/reference/latest/en/dxp/javadocs/portal-kernel/com/liferay/portal/kernel/service/UserLocalServiceUtil.html) を呼び出して、ユーザー数を取得します。 次に、`out`（組み込みの`PrintWriter`）を使用して、スクリプトコンソールに数を書き込みます。
 
-```note::
+```{note}
    *out.println*ではなく*System.out.println*を使用すると、出力はスクリプトコンソールではなくLiferayのログファイルに出力されます。
 ```
+
+<a name="定義済みのスクリプトコンソール変数" />
 
 ## 定義済みのスクリプトコンソール変数
 
@@ -70,6 +74,8 @@ userInfo.each {
 
 ![以下は、事前定義されているout、actionRequest、およびuserInfo変数を使用して、会社とユーザーに関する情報を出力するGroovyスクリプトを呼び出す例です。](./running-scripts-from-the-script-console/images/02.png)
 
+<a name="ヒント" />
+
 ## ヒント
 
 スクリプトコンソールを使用するときは、次の点に注意してください。
@@ -82,6 +88,8 @@ userInfo.each {
 スクリプトコンソールを慎重に使用し、スクリプトを本番環境で実行する前に非運用システムでテストしてください。
 
 スクリプトエンジンは、Kaleoワークフローなど、スクリプトコンソールの外部で使用できます。 ワークフローでスクリプトエンジンを使用する方法は次回学びます。
+
+<a name="追加情報" />
 
 ## 追加情報
 

@@ -1,10 +1,12 @@
 # スクリプトの例
 
-DXPでスクリプトを使用するのに役立ついくつかの例を次に示します。 ほとんどの例は、Liferayブログの投稿「[5 Tips to Improve Usage of the Liferay Script Console](https://liferay.dev/blogs/-/blogs/5-tips-to-improve-usage-of-the-liferay-script-console)」に基づいています。
+DXPでスクリプトを使用するのに役立ついくつかの例を次に示します。 ほとんどの例は、Liferayブログの投稿「 [5 Tips to Improve Usage of the Liferay Script Console](https://liferay.dev/blogs/-/blogs/5-tips-to-improve-usage-of-the-liferay-script-console) 」に基づいています。
+
+<a name="例1新しい利用規約をユーザーに提示する" />
 
 ## 例1：新しい利用規約をユーザーに提示する
 
-この例では、データベースからユーザー情報を取得し、ユーザーを変更して、変更をデータベースに保存します。 あなたの会社が[利用規約](https://help.liferay.com/hc/en-us/articles/360031899692-Instance-Configuration-Instance-Settings#terms-of-use)を更新し、ユーザーにそれらを提示したいとします。 ユーザーが利用規約に同意すると、そのユーザーに関連付けられているユーザーレコードに`agreedToTermsOfUse`と呼ばれるブール型フィールドが設定されます。 フィールド値が`true`である限り、ユーザーには利用規約が表示されません。 すべてのユーザーに対してフィールドを`false`に設定した場合、ユーザーはログインする前に利用規約に再度同意する必要があります。
+この例では、データベースからユーザー情報を取得し、ユーザーを変更して、変更をデータベースに保存します。 あなたの会社が [利用規約](https://help.liferay.com/hc/en-us/articles/360031899692-Instance-Configuration-Instance-Settings#terms-of-use) を更新し、ユーザーにそれらを提示したいとします。 ユーザーが利用規約に同意すると、そのユーザーに関連付けられているユーザーレコードに`agreedToTermsOfUse`と呼ばれるブール型フィールドが設定されます。 フィールド値が`true`である限り、ユーザーには利用規約が表示されません。 すべてのユーザーに対してフィールドを`false`に設定した場合、ユーザーはログインする前に利用規約に再度同意する必要があります。
 
 1. スクリプトコンソールに次のスクリプトを入力して実行します。
 
@@ -44,11 +46,13 @@ DXPでスクリプトを使用するのに役立ついくつかの例を次に�
 
     このスクリプトは、各ユーザーの`agreedToTermsOfUse`フィールドを`false`に設定します。 デフォルトのユーザーと、現在ログインしてスクリプトを実行しているデフォルトの管理ユーザーはスキップされます。
 
-1. *［Execute］* をクリックします。
+1. ［**Execute**］ をクリックします。
 
 1. 最初のスクリプトを再度実行して、スクリプトがレコードを更新したことを確認します。
 
 すべてのユーザー（デフォルトのユーザーとあなたのユーザーを除く）が更新されます。 すべてのユーザーが同意するための新しい利用規約を有効にしました。
+
+<a name="例2スクリプト出力へのhtmlマークアップの埋め込み" />
 
 ## 例2：スクリプト出力へのHTMLマークアップの埋め込み
 
@@ -67,6 +71,8 @@ out.println(
 ```
 
 ![このスクリプトは、HTMLを使用して出力のスタイルを設定します。](./script-examples/images/01.png)
+
+<a name="例3スクリプトコンソールに例外を表示する" />
 
 ## 例3：スクリプトコンソールに例外を表示する
 
@@ -89,6 +95,8 @@ try {
 ```
 
 ![以下は、例外をキャッチしてスクリプトコンソールに例外情報を出力するGroovyスクリプトの例です。](./script-examples/images/02.png)
+
+<a name="例4ファイルへの出力のロギング" />
 
 ## 例4：ファイルへの出力のロギング
 
@@ -117,7 +125,7 @@ users.each { u ->
 }
 ```
 
-このスクリプトは、`scripting`と呼ばれる[Liferay Home](../../installation-and-upgrades/reference/liferay-home.md)にサブフォルダを作成し、スクリプト出力をこのフォルダ内のファイルに保存します。
+このスクリプトは、`scripting`と呼ばれる [Liferay Home](../../installation-and-upgrades/reference/liferay-home.md) にサブフォルダを作成し、スクリプト出力をこのフォルダ内のファイルに保存します。
 
 ファイルシステムに直接アクセスできない場合は、次のコードを使用して、ファイルの内容をスクリプトコンソールに出力できます。
 
@@ -128,6 +136,8 @@ out.println(outputFile.text)
 ```
 
 　 スクリプトコンソールでさまざまなスクリプトを実行しました。
+
+<a name="追加情報" />
 
 ## 追加情報
 

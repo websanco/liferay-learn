@@ -1,6 +1,6 @@
 # Simple File System Store
 
-Simple File System Storeは、デフォルトのファイルストアタイプです。 ファイルシステム（ローカルまたはマウントされた共有）を使用してファイルを格納します。 クラスター環境でSimple File System Storeを使用する場合、そのフォルダはすべてのクラスターノードからアクセス可能で、同時要求を処理し、ファイルロックをサポートしている必要があります。 [記憶域ネットワーク](https://en.wikipedia.org/wiki/Storage_area_network)またはクラスター化ファイルシステムを使用することをお勧めします。
+Simple File System Storeは、デフォルトのファイルストアタイプです。 ファイルシステム（ローカルまたはマウントされた共有）を使用してファイルを格納します。 クラスター環境でSimple File System Storeを使用する場合、そのフォルダはすべてのクラスターノードからアクセス可能で、同時要求を処理し、ファイルロックをサポートしている必要があります。 [記憶域ネットワーク](https://en.wikipedia.org/wiki/Storage_area_network) またはクラスター化ファイルシステムを使用することをお勧めします。
 
 Simple File System Storeは、Liferay DXPデータベースにバインドされています。 デフォルトのルートフォルダは`[Liferay Home]/data/document_library`です。 Simple File System Storeは、次のファイルパス形式を使用してファイルを保存します。
 
@@ -18,7 +18,7 @@ Simple File System Storeは、Liferay DXPデータベースにバインドされ
 
 `versionNumber`：ファイルエントリのバージョン番号。
 
-**注：**ドキュメントの数値ファイルエントリ名とドキュメントIDは、次の点で異なります。
+**注：** ドキュメントの数値ファイルエントリ名とドキュメントIDは、次の点で異なります。
 
   - それぞれ独立したカウンターを持っています。
   - 数値ファイルエントリ名はストレージファイルパスで使用されますが、ドキュメントIDは使用されません。
@@ -28,21 +28,23 @@ Simple File System Storeは、Liferay DXPデータベースにバインドされ
 ドキュメントライブラリでデータベーストランザクションのロールバックが発生した場合、トランザクションのファイルシステムの変更は元に戻され**ません**。 ドキュメントライブラリファイルとファイルシステムストア内のファイルとの間に不整合が発生する可能性があり、手動での同期が必要になる場合があります。 [DBStore](./dbstore.md) を除くすべてのDXPストアは、この制限に対して脆弱です。
 ```
 
+<a name="ストアの構成" />
+
 ## ストアの構成
 
 Simple File System Storeを構成するには、次の手順に従います。
 
-1.  *メニュー*（![Menu](./simple-file-system-store/images/02.png)）ボタンをクリックして、*コントロールパネル*にアクセスします。
+1. **メニュー**（![Menu](./simple-file-system-store/images/02.png)）ボタンをクリックして、 **コントロールパネル** にアクセスします。
 
-2.  *[Control Panel]* → *[Configuration]* → *[System Settings]* に移動します。
+2. [**Control Panel**] → [**Configuration**] → [**System Settings**] に移動します。
 
-3.  *[Platform]* セクションで、*[File Storage]* をクリックします。
+3. [**Platform**] セクションで、 [**File Storage**] をクリックします。
 
-4.  *[Simple File System Store]* 画面で、*[Root directory]* を[Liferay Home](../../../installation-and-upgrades/reference/liferay-home.md)パス（絶対または相対）に設定します。
+4. [**Simple File System Store**] 画面で、 [**Root directory**] を [Liferay Home](../../../installation-and-upgrades/reference/liferay-home.md) パス（絶対または相対）に設定します。
 
-    ![システム設定の[File Storage]ページでは、ドキュメントリポジトリストレージを設定できます。](./simple-file-system-store/images/03.png)
+    ![システム設定の [File Storage]ページでは、ドキュメントリポジトリストレージを設定できます。](./simple-file-system-store/images/03.png)
 
-5.  *[保存]* をクリックします。
+5. [**保存**] をクリックします。
 
 ファイルストアがすぐに新しいフォルダに切り替わります。
 
@@ -52,9 +54,13 @@ Simple File System Storeを構成するには、次の手順に従います。
 dl.store.impl=com.liferay.portal.store.file.system.FileSystemStore
 ```
 
+<a name="クラスター環境でのストアの使用" />
+
 ## クラスター環境でのストアの使用
 
 [クラスター環境](../../../installation-and-upgrades/setting-up-liferay/clustering-for-high-availability.md)では、すべてのノードがアクセスできるネットワークマウントファイルシステムをストアに指定します。 ネットワーク化されたファイルシステムは、すべてのノードからアクセス可能で、同時要求をサポートし、ファイルロックをサポートしている必要があります。 そのようなファイルシステムなしでSimple File System Storeを使用し、複数のユーザーが同時に同じファイルに書き込もうとすると、データが破損する可能性があります。
+
+<a name="追加情報" />
 
 ## 追加情報
 
