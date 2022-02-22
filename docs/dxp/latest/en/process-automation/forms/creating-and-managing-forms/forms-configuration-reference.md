@@ -20,7 +20,7 @@ To access the Settings menu, choose the desired form (for example, _Guest Survey
 
 ![The Settings menu contains these options.](./forms-configuration-reference/images/02.png)
 
-| Section | Field | Description |
+| Section | Field | <div style="width:290px">Description |
 | :--- | :--- | :--- |
 | General | Require User Authentication | Require respondents to sign in before submitting the form. |
 | General | CAPTCHA | Require answering CAPTCHA questions when submitting the form. |

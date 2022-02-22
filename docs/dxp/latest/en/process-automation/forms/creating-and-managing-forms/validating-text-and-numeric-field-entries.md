@@ -18,7 +18,7 @@ To enable validation:
 
     ![Validate data to ensure you're collecting only useful information.](./validating-text-and-numeric-field-entries/images/01.png)
 
-Once validation has been enabled, configure the settings. For example, the Text field can specify the _If Input_ condition and the _Show Error Message_ to indicate how validation failed.
+Once validation has been enabled, configure the settings. For example, the Text field can specify the _Accept If Input_ condition and the _Error Message_ to indicate how validation failed.
 
 The Field validation rule is triggered as soon as a User navigates away from a validated form field (by clicking into another field, for example). 
 
@@ -32,9 +32,9 @@ See the [Validation Conditions Reference](./validation-conditions-reference.md) 
 
 Forms can be configured to validate email addresses. To ensure that the user has entered a valid email address:
 
-1. Select the _Is not email_ condition from the _If Input_ dropdown.
-1. Enter the error message in the _Show Error Message_ field: Please enter a valid email address.
-1. Click _Save Form_ when finished.
+1. Select the _Is an email_ condition from the _Accept If Input_ dropdown.
+1. Enter the error message in the _Error Message_ field: Please enter a valid email address.
+1. Click _Save_ when finished.
 
     ![Use text field validation to make sure users enter a valid email address or URL.](./validating-text-and-numeric-field-entries/images/04.png)
 
@@ -44,9 +44,9 @@ Similar to emails, Forms can be configured to validate URLs.
 
 To validate URLs:
 
-1. Select the _Is not URL_ condition from the _If Input_ dropdown.
+1. Select the _Is a URL_ condition from the _Accept If Input_ dropdown.
 1. Enter an error message.
-1. Click _Save Form_ when finished.
+1. Click _Save_ when finished.
 
 ### Using Regular Expressions
 
@@ -56,11 +56,11 @@ Forms can be configured to use [regular expressions](https://en.wikipedia.org/wi
 
 To validate a text field using a regular expression:
 
-1. Select the _Does Not Match_ condition from the _If Input_ dropdown menu.
+1. Select the _Matches_ condition from the _Accept If Input_ dropdown menu.
 1. Enter the regular expression.
-1. Enter an error message in the _Show Error Message_ field.
+1. Enter an error message in the _Error Message_ field.
 
-    ![Figure 4: Regular expression text validation opens up countless possibilities.](./validating-text-and-numeric-field-entries/images/05.png)
+    ![Regular expression text validation opens up countless possibilities.](./validating-text-and-numeric-field-entries/images/05.png)
 
 1. Click _Save Form_ when finished.
 
@@ -70,7 +70,7 @@ Numeric field validation is similar to text field validation, but the conditions
 
 To validate numeric fields:
 
-1. Select the desired condition from the _If Input_ dropdown menu (for example, _Is greater than_).
+1. Select the desired condition from the _Accept If Input_ dropdown menu (for example, _Is greater than_).
 1. Enter numeric value (_10_) that serves as the limit.
 1. Enter an error message in the _Show Error Message_ field.
 
@@ -116,7 +116,6 @@ The Input Mask configuration lets you you display the correct number format as t
    - Decimal field masks: Configure the Thousands Separator, the Decimal Separator, the Decimal Places, and the Prefix or Suffix settings. The thousands separator style can be `None`, `1,000`, `1.000`, or `1 000`. The decimal separator style can be `0.00` or `0,00`. Prefix or Suffix. Use the Decimal Places setting to specify a limit to the number of decimal digits. The prefix or suffix is usually used to define the units of the decimal number. For example, use `$` as a prefix for a field that expects the user to enter a dollar amount.
 
      ![Create an input mask for decimal fields.](./validating-text-and-numeric-field-entries/images/09.png)
-
 
 ## Additional Information
 
