@@ -9,5 +9,5 @@ developer-guide/user-account-api-basics.md
 ```
 
 - [Accounts APIの基本](./developer-guide/accounts-api-basics.md)
-- [アカウントユーザーとロールのAPI](./account-users-and-roles-apis.md)
+- [アカウントユーザーとロールのAPI](./developer-guide/account-users-and-roles-apis.md)
 - [ユーザーアカウントAPIの基礎知識](./developer-guide/user-account-api-basics.md)
