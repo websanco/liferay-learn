@@ -1,27 +1,56 @@
 # 組織ロール
 
-近日公開！
+Liferay [組織](./understanding-organizations.md) は、分散したユーザー管理を実装する便利な方法を提供します。 これらのロールを使用して、組織のすべてのメンバーに標準的な権限を割り当てたり、ユーザーの特定の責任に基づいてより専門的な権限を割り当てたりすることができます。 そうすることで、時間の節約にもなりますし、ポータルデザインが実際の階層に対応しているかどうかを確認することもできます。
 
-<!-- What are Organization Roles and how are they different from Regular / Site roles? -->
+## 組織ロールを理解する
 
-<!-- ## Organization Roles and Permissions
+組織ロールパーミッションは、グローバルレベルで定義され、割り当てられた特定の組織に適用されます。 [組織サイト](./organization-sites.md)での対応する暗黙的の権利もユーザーに付与します。 ただし、一部の組織ロールは、子組織およびそのサイトに対する権限を付与します。 必要に応じて、サイトロールを使用し、 [サイトチーム](../../site-building/building-sites/site-membership/creating-teams-for-sites.md) を作成して、組織サイト内のユーザーに追加のロールを明示的に割り当てることができます。 詳細については、 [ロールと権限について](../roles-and-permissions/understanding-roles-and-permissions.md) を参照してください。
 
-A time-saving benefit of including Organizations into your portal design is that Organization administrators can assign Organization-scoped Roles to members of the entire Organization. For example, consider an IT Security group in a corporate setting. You could have a sub-Organization of your IT organization that handles security for all applications company-wide. If you grant the IT Security Organization the portal administrator Role, all members of the Organization get administrative access to the entire system. Suppose further that a User in this Organization was later hired by the Human Resources department. The act of removing the User from the IT Security Organization also removes the User's administrative privileges, since the privilege came from the IT Security Organization's Role. By adding the User to the HR Organization, any roles the HR Organization has (such as access to a benefits system in the portal) are transferred to the User. In this manner, you can design your portal to correspond with your existing organization chart and Users' permissions are granted according to their positions in the chart.
+```note::
+   デフォルトでは、組織ロールはコントロールパネルへのアクセスを許可しません。 ただし、組織の管理者やオーナーは、ドロップダウンの［個人用メニュー］から［私の組織］をクリックすることで、自分が管理する組織にアクセスできます。
+```
 
-Of course, this is only one way to set things up. If you have more complex requirements for permissions within an Organization, you can create custom Organization-scoped Roles to assemble the permissions you wish to grant to particular Users. Alternatively, you can attach a Site to your Organization and use Site Teams to assemble the sets of permissions (see below). See [Roles and Permissions](../roles-and-permissions/defining-roles.md) for more details. -->
+Liferay DXPでは、以下のデフォルトの組織ロールが用意されています。
 
-<!-- ## Organization Administrators -->
+### 組織 ユーザー
 
-<!-- Organization Administrator vs Administrator vs. Site Administrator Comparison? I'm very focused on trying to use tables or some other method of describing distinctions between things because of the overall amount of text present in the article. -->
+このロールは、組織内での基本的な権限を与えるもので、すべてのメンバーに自動的に割り当てられます。 組織にサイトが併設されている場合、このロールはユーザーにサイトの基本メンバーシップを付与します。
 
-<!-- ## What can Organization Administrators Do?
+```note::
+   子組織のメンバーは、親組織のメンバーとなります。 これは、例えば、子組織のメンバーが親組織のプライベートページにアクセスできることを意味します。 この動作は、portal-ext.properties <https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#Organizations>`_ファイルの``組織``セクションでカスタマイズすることができ、組織に特有のプロパティが記載されています。
+```
 
-Whenever you have a collection of Users that fits into a hierarchical structure, you can use Organizations to model those Users. Organization administrators can manage all the Users in their Organization *and* in any sub-Organization. Referring to the hierarchy above, for example, an Organization administrator of the Lunar Resort could manage any Users belonging to the resort itself, to any of the departments, or to any of a department's subdivisions. An Organization Administrator of the Physical Plant Department can manage any Users belonging to the Physical Plant Department itself, or to the Grounds Crew, the Janitorial Crew, or the Mechanical Crew. However, an administrator of the Physical Plant Department can't manage Users belonging to the Recreation Department or the Retail Group organization.
+### 組織管理者
 
-Organizations and sub-Organization hierarchies can nest to unlimited levels. Users can be members of one or many Organizations. The rights of an Organization administrator apply both to his/her Organization and to any child Organizations. Members of child Organizations are implicit members of their parent Organizations. This means, for example, that members of child Organizations can access the private pages of their parent Organizations. This behavior can be customized in the `Organizations` [section of the portal-ext.properties](https://docs.liferay.com/portal/7.2-latest/propertiesdoc/portal.properties.html#Organizations) file where the properties specific to Organizations are listed. -->
+このロールは、組織とそのサイト、および子組織とそのサイト内でのスーパーユーザー権限を付与します。 これには、子組織の作成と削除、既存の組織メンバーの子組織への割り当て、組織サイトの作成と削除、組織所属の新しいポータルユーザーの作成などの機能が含まれます。 組織サイトでは、［サイト］メニューのほか、グローバルメニューの［アプリケーション］タブにある［コンテンツ］、［アカウント］、［検索調整］、［コミュニケーション］、［App Builder］、［カスタムアプリ］へのアクセスが許可されます。 ただし、このロールでは組織管理者や組織オーナーを割り当てたり、削除したりすることはできません。
 
-<!-- Organizations can enable distributed User administration. Organization administrators have an entirely different set of privileges than Site administrators. Site administrators maintain the pages, widgets, content, and membership of their Sites. To this end, they can set the membership type to Open, Restricted, or Private. They can also add Users to or remove Users from their Sites but cannot manage the Users themselves. If an Organization has a Site attached to it, the Organization Administrator has the same rights as a Site Administrator for managing the Site's content, but an Organization Site's members are the members of the Organization. Thus Organization administrators have more User management permissions than Site administrators: they can edit Users belonging to their Organization or any sub-Organization. They cannot add existing portal Users to their Organization, but they can create new Users within their Organization. Only portal administrators can add existing users to an Organization. -->
+### 組織所有者
 
-<!-- Organization administrators can't access the Control Panel by default, but it's not necessary. In their personal Sites, Organization administrators can click the *My Organizations* link to gain access to any Organizations they manage.
+このロールは、組織管理者ロールで付与されたすべての権限と、組織管理者および組織所有者を割り当てたり削除したりする機能を与えます。 ただし、組織オーナーの権限は、その権限が与えられた組織と、その子組織や付属サイトにも適用されます。
 
-![The My Organizations application lets Organization Administrators manage their organizations in their personal site.](./creating-and-managing-organizations/images/01.png) -->
+## 組織ロールの割り当て
+
+以下の手順で、既存の組織ユーザーに組織ロールを割り当てます。
+
+1. *グローバルメニュー* を開き、*［コントロールパネル］* &rarr; *［ユーザー］* &rarr; *［ユーザーと組織］*に行きます。 そして、 *組織* タブをクリックします。
+
+1. 既存の組織の *［アクション］* ボタン（![Actions Button](../../images/icon-actions.png)）をクリックし、 *［組織ロールの割当て］*を選択します。
+
+    ![［組織ロールの割当て］を選択します。](./organization-roles/images/01.png)
+
+1. ユーザーに割り当てたい *組織ロール* をクリックします。
+
+    ![ユーザーに割り当てたい組織ロールをクリックします。](./organization-roles/images/02.png)
+
+1. *チェックボックス* を使って、どのユーザーにロールを割り当てるかを選択します。
+
+    ![チェックボックスを使って、どのユーザーにそのロールを割り当てるかを選択します。](./organization-roles/images/03.png)
+
+1. 終了したら *［関連性の更新］* をクリックします。
+
+## 追加情報
+
+* [組織について](./understanding-organizations.md)
+* [組織の作成と管理](./creating-and-managing-organizations.md)
+* [組織へのユーザーの追加](./adding-users-to-organizations.md)
+* [組織サイト](./organization-sites.md)

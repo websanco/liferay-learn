@@ -12,15 +12,15 @@ Liferayサイトにアクセスするすべての人は、ユーザーと見な�
 
 ## ユーザーの管理
 
-ユーザーは、コントロールパネルの*[Users]* セクションで管理されます。
+ユーザーは、コントロールパネルの*［ユーザー］*セクションで管理されます。
 
-![コントロールパネルの[Users and Organizations]セクションでユーザーを管理する。](./understanding-users/images/01.png)
+![コントロールパネルの［ユーザーと組織］セクションでユーザーを管理する。](./understanding-users/images/01.png)
 
 ここでは、ユーザーのメタデータ（名前、部門など）、権限、およびアクティベーションステータスを管理できます。
 
 ### ユーザーの追加
 
-管理者は、コントロールパネルの[Users and Organizations]セクションまたは[APIを使用](../developer-guide/user-account-api-basics.md)してユーザーを追加できます。 新規ユーザーは管理者が作成したり、オープン登録が設定されている場合は自分で登録したり、LDAPサーバーから同期したりできます。 詳細については、[Adding and Managing Users](./adding-and-managing-users.md)を参照してください。
+管理者は、コントロールパネルの［ユーザーと組織］セクションまたは[APIを使用](../developer-guide/user-account-api-basics.md)してユーザーを追加できます。 新規ユーザーは管理者が作成したり、オープン登録が設定されている場合は自分で登録したり、LDAPサーバーから同期したりできます。 詳細は、[ユーザーの追加と管理](./adding-and-managing-users.md)を参照してください。
 
 #### オープン登録
 
@@ -30,7 +30,7 @@ Liferayサイトにアクセスするすべての人は、ユーザーと見な�
 
 #### ユーザーディレクトリの設定
 
-LDAPでユーザーを管理する組織は、LDAPサーバーをLiferayと同期してユーザーをインポートできます。 詳細については、[こちらの記事](../connecting-to-a-user-directory/connecting-to-an-ldap-directory.md)を参照してください。
+LDAPでユーザーを管理する組織は、LDAPサーバーをLiferayと同期してユーザーをインポートできます。 詳細は、[こちらの記事](../connecting-to-a-user-directory/connecting-to-an-ldap-directory.md)を参照してください。
 
 
 <!-- #### Other Methods
@@ -53,6 +53,6 @@ Liferayには、ユーザーの整理と管理に役立つツールがいくつ�
 
 ## 関連情報
 
-  - [Adding and Managing Users](./adding-and-managing-users.md)
-  - [Organizations](../organizations/understanding-organizations.md)
-  - [User Groups](../user-groups/creating-and-managing-user-groups.md)
+* [ユーザーの追加と管理](./adding-and-managing-users.md)
+* [組織](../organizations/understanding-organizations.md)
+* [ユーザーグループ](../user-groups/creating-and-managing-user-groups.md)

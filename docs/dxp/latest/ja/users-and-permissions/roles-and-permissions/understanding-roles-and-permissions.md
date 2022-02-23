@@ -1,33 +1,31 @@
 # ロールと権限について
 
-Liferay DXPで作業を行うには、 [ユーザー](./../users/understanding-users.md) に適切な権限が必要です。 ロールは、権限を持つユーザーに参加します。 ロールと権限のほとんどの管理作業は、 *コントロールパネル* → *ユーザー* → *ロール*で行います。
+Liferay DXPで作業を行うには、 [ユーザー](./../users/understanding-users.md) に適切な権限が必要です。 ロールは、権限を持つユーザーに参加します。 ロールとパーミッションに関するほとんどの管理作業は、 *コントロールパネル* &rarr; *ユーザー* &rarr; *ロール*で行われます。
 
 ![コントロールパネルからロールを管理します。](./understanding-roles-and-permissions/images/03.png)
 
 直接ロールの作成とユーザーの割り当てにスキップするには、を参照してください。
 
-  - [ロールの作成と管理](./creating-and-managing-roles.md)
-  - [ロール権限の定義](./defining-role-permissions.md)
-  - [ロールへのユーザーの割り当て](./assigning-users-to-roles.md)
-
-<!-- end list -->
+* [ロールの作成と管理](./creating-and-managing-roles.md)
+* [ロール権限の定義](./defining-role-permissions.md)
+* [ロールへのユーザーの割り当て](./assigning-users-to-roles.md)
 
 ```{note}
-[Site Teams](./../site-building/building-sites/creating-teams-for-sites.md) has a dedicated permissions management User Interface.
+［サイトチーム］(./../../site-building/building-sites/site-membership/creating-teams-for-sites.md)には、専用のパーミッション管理のユーザーインターフェースがあります。
 ```
 
 ## ロールと範囲
 
 Liferay DXP内で目的の機能を実行するために必要な権限をユーザーに与えるには、最初に一連の権限をロールに関連付ける必要があります。
 
-例として、メッセージボード *管理者* ロールとユーザー *ジェーンスローター* を例として使用すると、次の手順を実行できます。
+例として、メッセージボード _管理者_ ロールとユーザー _ジェーンスローター_ を例として使用すると、次の手順を実行できます。
 
-1.  必要な機能を決定する： *LiferayのDXPで掲示板を管理します。*
-2.  スコープを決定します： *仮想インスタンス全体（グローバル）。*
-3.  適切にスコープ設定されたロールを作成し、機能を実行する権限を割り当てます *メッセージボード管理者（通常のロール）。*
-4.  ユーザーコレクションを作成します *、掲示板の管理者と呼ばれるユーザーグループです。*
-5.  ロールをユーザーコレクションに割り当てます *掲示板管理者→掲示板管理者ロール。*
-6.  ユーザーをユーザーコレクションに割り当てます： *ジェーンスローター→メッセージボード管理者。*
+1. 必要な機能を決定する： _LiferayのDXPで掲示板を管理します。_
+1. スコープを決定します： _仮想インスタンス全体（グローバル）。_
+1. 適切にスコープ設定されたロールを作成し、機能を実行する権限を割り当てます _メッセージボード管理者（通常のロール）。_
+1. ユーザーコレクションを作成します _、掲示板の管理者と呼ばれるユーザーグループです。_
+1. ロールをユーザーコレクションに割り当てます _掲示板管理者&rarr;掲示板管理者ロール。_
+1. ユーザーをユーザーコレクションに割り当てます： _ジェーンスローター→メッセージボード管理者。_
 
 以下の概念図は、ユーザーがLiferay DXPのロールと権限システムで必要な権限を継承する方法を示しています。 ここには（メッセージボード管理者になるユーザーの）完全に関連付けられたロールの割り当てが1つだけ表示されますが、新しい矢印を描くと、他のユーザーコレクションやロールの割り当てを介してユーザーとアクセス許可がどのようにリンクされるかを確認できます。
 
@@ -35,51 +33,50 @@ Liferay DXP内で目的の機能を実行するために必要な権限をユー
 
 ロールにはスコープがあるため、さまざまなレベルで適用されます。
 
-| 許可範囲              | ロールタイプ    | ユーザーにはどこに割り当てられますか？                    | 利用可能な割り当て                                                                    |
+| 許可範囲              | ロールタイプ    | ユーザーにはどこに割り当てられますか？                                                | 利用可能な割り当て                                                                    |
 | :--- | :--- | :--- | :--- |
-| 仮想インスタンス全体（グローバル） | レギュラー     | コントロールパネル→ユーザー→ロール（ロールをクリック）→担当者       | ユーザーグループ <br />組織 <br />サイト <br />セグメント <br />個別ユーザー |
-| 単一の組織             | 組織        | コントロールパネル→ユーザー→ユーザーと組織→組織（組織アクションメニュー） | 個人ユーザー                                                                       |
-| 単一のサイト            | サイト       | サイト管理→People→メンバーシップ                   | ユーザーグループ <br />組織 <br />セグメント <br />個別サイトメンバー              |
-| 単一のアカウント          | 上にマージ     | コントロールパネル→アカウント→アカウント（アカウントの選択）→ロール    | 個人口座会員                                                                       |
-| 単一のアセットライブラリ      | アセットライブラリ | 資産ライブラリーのサイト/ライブラリー管理→People→メンバーシップ   | 組織 <br />ユーザーグループ <br /> 個別ユーザー                                  |
+| 仮想インスタンス全体（グローバル） | レギュラー     | ［コントロールパネル ］&rarr; ［ユーザー］ &rarr; ［ロール］（ロールをクリック） &rarr; 割り当て先      | ユーザーグループ <br />組織 <br />サイト <br />セグメント <br />個別ユーザー |
+| 単一の組織             | 組織        | ［コントロールパネル］ &rarr; ［ユーザー］ &rarr; ［ユーザーと組織］ &rarr; ［組織（組織アクションメニュー） | 個人ユーザー                                                                       |
+| 単一のサイト            | サイト       | サイト管理 &rarr; People &rarr; 会員権                                     | ユーザーグループ <br />組織 <br />セグメント <br />個別サイトメンバー              |
+| 単一のアセットライブラリ      | アセットライブラリ | アセットライブラリのサイト／ライブラリ管理の&rarr;People &rarr;サイトメンバーシップ                | 組織 <br />ユーザーグループ <br /> 個別ユーザー                                  |
+
+<!-- ripped out row from above table as per LRODCS-8188: | A single Account | Account   | Control Panel &rarr; Accounts &rarr; Accounts (Select Account) &rarr; Roles | Individual Account Members -->
 
 個人 [ユーザー](./../users/understanding-users.md) は手動でロールに割り当てることができます。 この方法は、Usersのコレクションを使用するよりも効率的ではありません。 ユーザーを自動的に [することもできます](../../system-administration/virtual-instances/configuring-a-virtual-instance-users.md#default-user-associations) デフォルトユーザー関連付けと呼ばれる仮想インスタンス設定を介してすべてのスコープのロールに割り当てられます。
 
 ### 通常のロール
 
-インスタンススコープのロールは通常のロールと呼ばれます。 これらのロールは、グローバルに、または [仮想インスタンス](./../../system-administration/virtual_instances.rst)全体に権限を付与します。
+インスタンススコープのロールは通常のロールと呼ばれます。 これらのロールは、グローバルに、または [仮想インスタンス](./../../system-administration/configuring-liferay/virtual_instances.html)全体に権限を付与します。
 
 いくつかのユーザーコレクションを通常のロールに割り当てることができます。
 
-  - [組織](./../organizations/understanding-organizations.md) は、共有階層レベルのユーザーを保持します。
-  - [ユーザーグループ](./../user-groups/creating-and-managing-user-groups.md) は、同じ機能を実行する必要性のみを共有するユーザーを保持します。
-  - [サイト](./../../site-building/building-sites/adding-members-to-sites.md) は、特定のアクションを実行する必要があるユーザー（サイトメンバーとして）を保持します。
-  - [セグメント](./../../site-building/personalizing-site-experience/segmentation/creating-and-managing-user-segments.md) は、特定の条件に一致するサイトのユーザーを保持します。
+* [組織](./../organizations/understanding-organizations.md) は、共有階層レベルのユーザーを保持します。
+* [ユーザーグループ](./../user-groups/creating-and-managing-user-groups.md) は、同じ機能を実行する必要性のみを共有するユーザーを保持します。
+* [サイト](./../../site-building/building-sites/site-membership/adding-members-to-sites.md) は、特定のアクションを実行する必要があるユーザー（サイトメンバーとして）を保持します。
+* [セグメント](./../../site-building/personalizing-site-experience/segmentation/creating-and-managing-user-segments.md) は、特定の条件に一致するサイトのユーザーを保持します。
 
 ### 組織ロール
 
-組織スコープのロールは、組織ロールと呼ばれます。 組織ロールの権限は、グローバルレベルで定義され、1つの特定に適用される [機関](../../users-and-permissions/organizations/understanding-organizations.md)。 ユーザーは組織に個別に追加され、組織のロールに個別に割り当てられます。
+組織スコープのロールは、組織ロールと呼ばれます。 組織ロールの権限は、グローバルレベルで定義され、1つの特定に適用される [機関](../../users-and-permissions/organizations/understanding-organizations.md)。 ユーザーは組織に個別に追加され、組織ロールに個別に割り当てられます。
 
 ### サイトのロール
 
 サイトスコープのロールはサイトロールと呼ばれます。 サイトのロールの権限は、グローバルレベルで定義され、1つの特定に適用される [サイト](../../site-building/introduction-to-site-building.md)。 個々のユーザー、組織、およびユーザーグループは、サイトメンバーシップの制御とサイトロールの割り当ての両方に使用できます。
 
-## パーミッション
+## 権限
 
 権限は、アプリケーションの開発者によって作成されます。 これらは、ユーザーが実行できるアクション、またはユーザーが特定のアセットにどの程度アクセスできるかを定義します。
 
 ### アプリケーションスコープのアクセス許可
 
-Liferay DXPのページに配置された各ウィジェットインスタンス、および各管理アプリケーションの[サイトメニュー]→[コンテンツとデータ]セクションに権限を付与できます。 詳細については、 [ウィジェット権限](./../../site-building/widget-permissions.md) を参照してください。
+Liferay DXPのページに配置された各ウィジェットインスタンス、および各管理アプリケーションの［サイトメニュー］→［コンテンツとデータ］セクションに権限を付与できます。 詳細は、 [ウィジェット権限](./../../site-building/widget-permissions.md) を参照してください。
 
 ### アセットスコープの権限
 
-アセットレベルの権限（たとえば、個々のブログ投稿を編集する権限、またはドキュメントとメディアライブラリのフォルダーを表示する権限）は、コントロールパネルではなく、個別のアセットから管理されます。 詳細については、 [ウィジェット権限](./../../site-building/widget-permissions.md) を参照してください。
+アセットレベルの権限（たとえば、個々のブログ投稿を編集する権限、またはドキュメントとメディアライブラリのフォルダーを表示する権限）は、コントロールパネルではなく、個別のアセットから管理されます。 詳細は、 [ウィジェット権限](./../../site-building/widget-permissions.md) を参照してください。
 
 ## 関連トピック
 
-  - [ロールの作成と管理](./creating-and-managing-roles.md)
-
-  - [ロール権限の定義](./defining-role-permissions.md)
-
-  - [ロールへのユーザーの割り当て](./assigning-users-to-roles.md)
+* [ロールの作成と管理](./creating-and-managing-roles.md)
+* [ロール権限の定義](./defining-role-permissions.md)
+* [ロールへのユーザーの割り当て](./assigning-users-to-roles.md)

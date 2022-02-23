@@ -10,8 +10,8 @@ Liferay組織は、実際の組織階層を反映したユーザーおよびサ�
 
 組織は、その組織だけを対象範囲とするロールを持つことができます。 組織ロールの権限は、その組織の階層内のアプリケーションとコンテンツにのみ影響します。 たとえば、メッセージボードへのアクセスを定義するポータルスコープのロールと組織スコープのロールの違いは2つあります。
 
-1.  組織ロールは、その組織（またはその子）のメッセージボードにのみ影響します。
-2.  ポータルロールは、インストール全体のすべてのメッセージボードに影響します。
+1. 組織ロールは、その組織（またはその子）のメッセージボードにのみ影響します。
+1. ポータルロールは、インストール全体のすべてのメッセージボードに影響します。
 
 ![組織ロールは組織内でのみ有効です。](./understanding-organizations/images/02.png)
 
@@ -21,11 +21,11 @@ Liferay組織は、実際の組織階層を反映したユーザーおよびサ�
 
 組織管理者は*委任された*管理者です。 つまり、彼らはあなたのポータルの一部（あなたが定義した部分）を取得して、あなたの管理の負担の一部を肩代わりします。 組織管理者は次のことを実行できます。
 
-  - 組織内およびすべての子組織内のすべてのユーザーを管理します。
-  - 必要に応じて、ユーザーを組織に割り当てます（[portal-ext.propertiesの`[Organizations]`セクション](https://docs.liferay.com/portal/7.2-latest/propertiesdoc/portal.properties.html#Organizations)を参照）。
-  - サイト管理者と同じように、組織のサイトを管理します。
+* 組織内およびすべての子組織内のすべてのユーザーを管理します。
+* 必要に応じて、ユーザーを組織に割り当てます（[portal-ext.propertiesの`［Organizations］`セクション](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#Organizations)を参照）。
+* サイト管理者と同じように、組織のサイトを管理します。
 
-組織管理者は、デフォルトではコントロールパネルにアクセスできません。 代わりに、*[My Organizations]* リンクをクリックして、管理している組織にアクセスできます。
+組織管理者は、デフォルトではコントロールパネルにアクセスできません。 代わりに、*［自分の組織］*リンクをクリックして、管理している組織にアクセスできます。
 
 ![組織管理者は、プロファイルから組織にアクセスできます。](./understanding-organizations/images/03.png)
 
@@ -35,4 +35,4 @@ Liferay組織は、実際の組織階層を反映したユーザーおよびサ�
 
 ## 次のステップ
 
-  - [Creating and Managing Organizations](./creating-and-managing-organizations.md)
+* [組織の作成と管理](./creating-and-managing-organizations.md)

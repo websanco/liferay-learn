@@ -1,9 +1,9 @@
 # 新しい組織タイプの追加
 
-デフォルトでは、Liferay DXPには*組織*タイプのみが含まれています。 [System Settings] → [Users] → [Organization Type]で、既存のタイプを設定するか、タイプを追加できます。 組織タイプを設定する主な理由は2つあります。
+デフォルトでは、Liferay DXPには*組織*タイプのみが含まれています。 既存のタイプを設定したり、システム設定の &rarr; ユーザー &rarr; 組織タイプでタイプを追加することができます。 組織タイプを設定する主な理由は2つあります。
 
-1.  組織は通常、実際の階層構造に関連付けられています。 管理者やユーザにとっては、それらを実際の名前で呼ぶと便利です。 たとえば、野球組織では、*League*、*Division*、*Team*といった組織タイプが必要になる場合があります。
-2.  トップレベルの組織にできる組織と、親の各組織タイプに許可されているサブ組織のタイプを制御します。 たとえば、野球組織では、[Division]組織タイプを[Team]組織のサブ組織にすることはできません。
+1. 組織は通常、実際の階層構造に関連付けられています。 管理者やユーザにとっては、それらを実際の名前で呼ぶと便利です。 たとえば、野球組織では、*League*、*Division*、*Team*といった組織タイプが必要になる場合があります。
+1. トップレベルの組織にできる組織と、親の各組織タイプに許可されているサブ組織のタイプを制御します。 たとえば、野球組織では、［Division］組織タイプを［Team］組織のサブ組織にすることはできません。
 
 ![組織タイプと呼ばれるシステム設定エントリを使用して、新しい組織タイプを作成します。](./adding-a-new-organization-type/images/01.png)
 
@@ -11,23 +11,23 @@
 
 *League*という別の組織タイプを追加するには、次のオプションを構成フォームに入力します。
 
-| 組織名      | Country Enabled | Country Required | Rootable | Children Types         |
+| 組織名      | Country Enabled | Country Required | Rootable | Children Types     |
 | :--- | :--- | :--- | :--- | :--- |
-| League   | True            | False            | True     | Division               |
-| Division | True            | False            | False    | Team                   |
-| Team     | True            | False            | False    | \[blank: leaf node\] |
+| League   | True            | False            | True     | Division           |
+| Division | True            | False            | False    | Team               |
+| Team     | True            | False            | False    | [blank: leaf node] |
 
 **Name：**組織タイプの名前を入力します。
 
 **Country Enabled：**組織タイプを追加または編集するときに、フォームの国選択リストフィールドを有効にします。
 
-**Country Required：**これらの組織タイプのいずれかを追加するときに、*[Country]* フィールドが不要であることを指定します。
+**Country Required：**これらの組織タイプのいずれかを追加するときに、*［国］*フィールドが不要であることを指定します。
 
 **Rootable：**このタイプを最上位組織として有効にします。 上記のDivisionとTeamはLeagueの子である必要があるため、どちらもFalseであることに注意してください。
 
 **Children Types：**この親タイプに許可されるサブ組織タイプを指定します。 上記のように、DivisionはLeagueの子にしかできず、TeamはDivisionの子にしかなりません。
 
-追加の組織タイプを設定して[保存]をクリックすると、組織の追加フォームで選択できる新しいタイプが見つかります。
+追加の組織タイプを設定して［保存］をクリックすると、組織の追加フォームで選択できる新しいタイプが見つかります。
 
 ![カスタム構成タイプは、組織の追加フォームで使用できます。](./adding-a-new-organization-type/images/02.png)
 
