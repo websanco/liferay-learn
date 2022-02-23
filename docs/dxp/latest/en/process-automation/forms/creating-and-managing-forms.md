@@ -26,7 +26,7 @@ creating-and-managing-forms/forms-permissions-reference.md
 - [Reusing Sets of Form Elements](./creating-and-managing-forms/reusing-sets-of-form-elements.md)
 - [Providing Help Text and Predefined Values](./creating-and-managing-forms/providing-help-text-and-predefined-values.md)
 - [Building Forms with Conditional Fields](./creating-and-managing-forms/building-forms-with-conditional-fields.md)
-- [Validating Text and Numeric Field Entries](./creating-and-managing-forms/validating-text-and-numeric-field-entries.md)
+- [Validation and Masking](./creating-and-managing-forms/validating-text-and-numeric-field-entries.md)
 - [Using the Search Location Field](./creating-and-managing-forms/using-the-search-location-field.md)
 - [Translating Forms](./creating-and-managing-forms/translating-forms.md)
 - [Customizing Auto Save Behavior](./creating-and-managing-forms/customizing-auto-save-behavior.md)

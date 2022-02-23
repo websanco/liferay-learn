@@ -55,7 +55,7 @@ The Grid field accepts a single entry for each of multiple related questions (e.
 
 ### Show Partial Results to Form Respondents
 
-> Liferay 7.4 Only
+> Available: Liferay 7.4+
 
 The Submissions tab of a [Form's Settings modal](../creating-and-managing-forms/forms-configuration-reference.md#form-settings) has a checkbox for _Show Partial Results to Respondents_. Enabling this setting allows respondents to view the current [Forms Report](../sharing-forms-and-managing-submissions/form-reports.md) data for the form.
 
