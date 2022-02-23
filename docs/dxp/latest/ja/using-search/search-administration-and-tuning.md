@@ -1,27 +1,27 @@
-# 検索管理とチューニング
+検索管理とチューニング
+================================
 
-```{toctree}
-:maxdepth: 2
+.. toctree:: :maxdepth: 2
 
-search-administration-and-tuning/synonym-sets.md
-search-administration-and-tuning/result-rankings.md
-search-administration-and-tuning/elasticsearch-indexes-reference.md
-```
+   search-administration-and-tuning/synonym-sets.md search-administration-and-tuning/result-rankings.md search-administration-and-tuning/elasticsearch-indexes-reference.md
 
-- Search Administration Panel Overview (Coming Soon)
-- Understanding Localized Search (Coming Soon)
+- 検索管理パネルの概要（近日公開）
+- ローカライズされた検索を理解する（近日公開）
 
-## Search Tuning
+検索チューニング
+~~~~~~~~~~~~~
 
-- [Synonym Sets](search-administration-and-tuning/synonym-sets.md)
-- [Result Rankings](search-administration-and-tuning/result-rankings.md)
+-  :doc:`/using-search/search-administration-and-tuning/synonym-sets`
+-  :doc:`/using-search/search-administration-and-tuning/result-rankings`
 
 
-## Troubleshooting Search
+Troubleshooting Search
+~~~~~~~~~~~~~~~~~~~~~~
 
-- [Search Insights](search-pages-and-widgets/search-insights.md)
+- Search Insights (Coming soon)
 - Adjusting Elasticsearch Logging (Coming soon)
 
-## Reference
+Reference
+~~~~~~~~~
 
-- [Elasticsearch Indexes Reference](search-administration-and-tuning/elasticsearch-indexes-reference.md)
+-  :doc:`/using-search/search-administration-and-tuning/elasticsearch-indexes-reference`

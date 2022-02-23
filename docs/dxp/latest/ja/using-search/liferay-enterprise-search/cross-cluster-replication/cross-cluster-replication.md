@@ -4,9 +4,9 @@
 
 従来のLiferay DXP/検索エンジンのインストールでは、1つのLiferay DXPクラスターが1つのElasticsearchクラスターと通信し、検索エンジンクラスターへの1つの接続を介して、すべての読み取り（検索クエリの実行）および書き込み（ドキュメントの作成）要求を送信します。 この設定では、すべてのElasticsearchクラスターノードが単一のデータセンターに配置されていることを前提としています（ただし、Liferay DXPサーバーとは異なるデータセンターに配置することもできます）。
 
-Elasticsearchは、データの局所性とディザスタリカバリに関する懸念に対処するために、[LESサブスクライバー](https://www.liferay.com/products/dxp/enterprise-search)がElasticsearch 7以降でLiferay DXPで使用できる[クラスター横断レプリケーション（CCR）](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/xpack-ccr.html)機能をリリースしました（バージョン互換性の詳細については、[LES互換性マトリックス](https://help.liferay.com/hc/en-us/articles/360016511651#Liferay-Enterprise-Search)を参照してください）。 LES CCRモジュールを使用すると、別の形のマルチデータセンター展開が可能です。 Elasticsearchクラスターのノードを複数のデータセンターに分散することはできませんが、各データセンターで個別のElasticsearchクラスターを構成して接続することはできます。
+Elasticsearchは、データの局所性とディザスタリカバリに関する懸念に対処するために、 [LESサブスクライバー](https://www.liferay.com/products/dxp/enterprise-search) がElasticsearch 7以降でLiferay DXPで使用できる [クラスター横断レプリケーション（CCR）](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/xpack-ccr.html) 機能をリリースしました（バージョン互換性の詳細は、 [LES互換性マトリックス](https://help.liferay.com/hc/en-us/articles/360016511651#Liferay-Enterprise-Search) を参照してください）。 LES CCRモジュールを使用すると、別の形のマルチデータセンター展開が可能です。 Elasticsearchクラスターのノードを複数のデータセンターに分散することはできませんが、各データセンターで個別のElasticsearchクラスターを構成して接続することはできます。
 
-この構成では、*リーダー*インデックスを保持する1つのクラスターと、リーダーからレプリケートされた*フォロワー*インデックスを保持する少なくとも1つのクラスターを想定しています。 フォロワーインデックスは、Liferay DXPがデータを読み取るためにのみ使用されます。 リーダーインデックスは常に書き込みに使用されますが、読み取りにも使用できます。
+この構成では、 **リーダー** インデックスを保持する1つのクラスターと、リーダーからレプリケートされた **フォロワー** インデックスを保持する少なくとも1つのクラスターを想定しています。 フォロワーインデックスは、Liferay DXPがデータを読み取るためにのみ使用されます。 リーダーインデックスは常に書き込みに使用されますが、読み取りにも使用できます。
 
 ![クラスター横断レプリケーションを使用すると、異なるデータセンターがLiferay DXPインデックスを使用して同期されたElasticsearchクラスターを保持できます。](./cross-cluster-replication/images/01.png)
 
@@ -16,20 +16,24 @@ Liferay DXPは、ワイドエリアネットワーク（WAN）プロトコルを
 
 クラスター横断レプリケーションを設定するには、次のことを行う必要があります
 
-  - [LESサブスクリプションを購入する](https://www.liferay.com/products/dxp/enterprise-search)
-  - フォロワーのElasticsearchインデックスから読み取りを行うすべてのLiferay DXPノードにCCRモジュールをインストールする
-  - リーダークラスターからレプリケートするインデックスを選択する
-  - Elasticsearchクラスターを構成する
-  - Liferay DXPクラスターのElasticsearch接続を設定する
-  - フォロワーインデックスから読み取りを行うLiferay DXPノードでクラスター横断レプリケーションを有効にして設定する
+- [LESサブスクリプションを購入する](https://www.liferay.com/products/dxp/enterprise-search)
+- フォロワーのElasticsearchインデックスから読み取りを行うすべてのLiferay DXPノードにCCRモジュールをインストールする
+- リーダークラスターからレプリケートするインデックスを選択する
+- Elasticsearchクラスターを構成する
+- Liferay DXPクラスターのElasticsearch接続を設定する
+- フォロワーインデックスから読み取りを行うLiferay DXPノードでクラスター横断レプリケーションを有効にして設定する
+
+<a name="liferay-dxplesクラスター横断レプリケーションモジュールのインストール" />
 
 ## Liferay DXP：LESクラスター横断レプリケーションモジュールのインストール
 
 ローカルクラスターのフォロワーインデックスから読み取りを行い、リモートクラスターのリーダーインデックスへの個別の接続を介して書き込みを行うLiferay DXPノードには、CCRモジュールがインストールされている必要があります。 一貫性と適応性のために、クラスター内のすべてのノードにインストールするのが最善です。 このモジュールは、LESサブスクリプションとともに（LPKGファイルとして）ダウンロードできます。
 
+<a name="liferay-dxpリモートクラスターからレプリケートするインデックスを決定する" />
+
 ## Liferay DXP：リモートクラスターからレプリケートするインデックスを決定する
 
-インストールされているデフォルトのLiferay DXP 7.3インデックスは、以下のリストに近似しています（変更される可能性があります）。 デフォルトのグローバル*インデックス名接頭辞*は`liferay-`です。これはElasticsearch 7コネクタ設定で変更できます。 `20101`は、データベース内の特定の会社の生成された`companyId`です。  UIにインスタンスIDとして表示され、[仮想インスタンス](../../../system-administration/configuring-liferay/virtual_instances.rst)を表します。
+インストールされているデフォルトのLiferay DXP 7.3インデックスは、以下のリストに近似しています（変更される可能性があります）。 デフォルトのグローバル **インデックス名接頭辞** は`liferay-`です。これはElasticsearch 7コネクタ設定で変更できます。 `20101`は、データベース内の特定の会社の生成された`companyId`です。  UIにインスタンスIDとして表示され、[仮想インスタンス](../../../system-administration/configuring-liferay/virtual_instances.md)を表します。
 
 | インデックスID                                            | インデックスタイプ  | インデックスの目的                                     |
 | :--- | :--- | :--- |
@@ -46,14 +50,15 @@ Liferay DXPは、ワイドエリアネットワーク（WAN）プロトコルを
 | liferay-20101-workflow-metrics-transitions          | アプリインデックス  | ワークフロー統計情報アプリケーションのワークフロートランジションに関するデータを保存する  |
 
 ```{important}
-Liferay 7.2 index names are more complex, as patches have introduced changes to the index naming pattern. See [Multi-Tenant Index Names](../../getting-started/whats-new-in-search-for-73.md#multi-tenant-index-names)_ for more information.
+   Liferay 7.2のインデックス名は、パッチによってインデックスの命名パターンに変更が加えられたため、より複雑になっています。 詳しくは、 `Multi-Tenant Index Names <.././getting-started/whats-new-in-search-for-73.md#multi-tenant-index-names>`_ を参照してください。
+   Liferay 7.1のインストールには、会社とシステムのインデックスだけが含まれています。
 ```
 
 ```{note}
-Liferay DXP provides APIs for creating and using (writing to and reading from) custom Elasticsearch indexes that remain completely under your control. See the [Developer Guide](../../developer-guide.html)_ for information on using these APIs.
+   Liferay DXPは、カスタムElasticsearchインデックスを作成、使用（書き込み、読み込み）するためのAPIを提供します。 これらのAPIの使用方法については、 `Developer Guide <../../developer_guide.html>`_ を参照してください。
 ```
 
-[Liferay Commerce](https://www.liferay.com/products/commerce)サブスクリプションがあり、インストールでアクティブ化されている場合は、次のようなインデックスもあります。
+[Liferay Commerce](https://www.liferay.com/products/commerce) サブスクリプションがあり、インストールでアクティブ化されている場合は、次のようなインデックスもあります。
 
 | インデックスID                                                     | インデックスタイプ | インデックスの目的     |
 | :--- | :--- | :--- |
@@ -63,30 +68,36 @@ Liferay DXP provides APIs for creating and using (writing to and reading from) c
 
 特段の理由がない限り、すべてのLiferay DXPインデックスとすべてのカスタムインデックスをフォロワーのElasticsearchクラスターにレプリケートする必要があります。
 
+<a name="elasticsearchクラスターを構成する" />
+
 ## Elasticsearchクラスターを構成する
 
-クラスター横断レプリケーションにも対応しているLiferay DXPでサポートされているバージョンを使用して、Elasticsearchクラスターをセットアップします。 詳細については、[LES互換性マトリックス](https://help.liferay.com/hc/en-us/articles/360016511651#Liferay-Enterprise-Search)を参照してください。
+クラスター横断レプリケーションにも対応しているLiferay DXPでサポートされているバージョンを使用して、Elasticsearchクラスターをセットアップします。 詳細は、 [LES互換性マトリックス](https://help.liferay.com/hc/en-us/articles/360016511651#Liferay-Enterprise-Search) を参照してください。
 
-[Liferay DXPが必要とするElasticsearchプラグインをインストールし、フォロワークラスターとリーダークラスターを区別するためのクラスター名](../../installing-and-upgrading-a-search-engine/elasticsearch/installing-elasticsearch.html#configure-elasticsearch)を指定してください。
+[Liferay DXPが必要とするElasticsearchプラグインをインストールし、フォロワークラスターとリーダークラスターを区別するためのクラスター名](../../installing-and-upgrading-a-search-engine/elasticsearch/installing-elasticsearch.html#configure-elasticsearch) を指定してください。
 
-CCRにはElasticsearch Platinumレベルのライセンスが必要ですが、[LESのお客様](../../liferay-enterprise-search.html)はすでに所有しています。 ローカルでテストしている場合は、各クラスターで[トライアルライセンス](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/start-trial.html)を開始してください。
+CCRにはElasticsearch Platinumレベルのライセンスが必要ですが、 [LESのお客様](../../liferay_enterprise_search.html) はすでに所有しています。 ローカルでテストしている場合は、各クラスターで [トライアルライセンス](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/start-trial.html) を開始してください。
+
+<a name="liferay-dxpをelasticsearchに接続する" />
 
 ## Liferay DXPをElasticsearchに接続する
 
 ```{important}
-Configure the Liferay Clustering behavior first. In the example provided in the tutorial, some configuration is provided for testing purposes. See the [clustering documentation](../../../installation-and-upgrades/setting-up-liferay/clustering-for-high-availability.md)_ for more information on setting up a production cluster.
+   最初にLiferay Clusteringの動作を設定します。 チュートリアルの例では、テスト用にいくつかの設定を行っています。 本番クラスタの設定については、 `clustering documentation <../../installation-and-upgrades/setting-up-liferay/clustering-for-high-availability.md>`_ を参照してください。
 ```
 
 すべてのLiferay DXPノードには、2つのElasticsearch構成が必要です。本番モードを有効にし、リモートElasticsearch接続を宣言します。 これに対応するために、リモートElasticsearch接続をElasticsearch接続で設定する必要があります。 フォロワーのElasticsearchクラスターから読み取りを行うノードにも、追加の接続を定義する必要があります。 （`.config`ファイルまたはシステム設定で）適切な構成値を指定してから、DXPノードを起動（または再起動）します。 リーダーインデックスの読み取りと書き込みを行うノードが正しく機能していることを確認します。
 
 ノードを起動し、クラスター内のすべてのノードにLESアプリをインストールします（まだ起動していない場合）。
 
+<a name="クラスター横断レプリケーションを有効にして構成する" />
+
 ## クラスター横断レプリケーションを有効にして構成する
 
 Liferay DXPには、CCRセットアップを完了するためのロジックが含まれていますが、[構成ファイル](../../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md)ではなく、システム設定UIでCCR機能を有効にすることに依存しています。 最低でも、`readFromLocalClusters`プロパティがUIからトリガーされなければなりません。 CCRを構成したら、あとはインデックスのレプリケーションを確認して検索を開始するだけです。
 
-初めてCCRを有効にすると（設定で*[アップデート]* をクリックした後---[Configuring CCR in a Local Follower Data Center](./configuring-ccr-in-a-local-follower-data-center.md)を参照）、ローカルクラスター構成の各エントリが処理されます。 まず、[リモートクラスター](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/modules-remote-clusters.html)が[クラスターアップデート設定API](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/cluster-update-settings.html)を介して登録されます。 次に、リモートクラスター内の各インデックス（`.`から始まるインデックスまたは[除外するインデックス]設定で定義されたインデックスを除く）に対して、[フォロワーの作成API](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/ccr-put-follow.html)が呼び出され、リモートインデックスとのフォロワー/リーダーの関係が設定されます。
+初めてCCRを有効にすると（設定で ［**アップデート**］ をクリックした後---[Configuring CCR in a Local Follower Data Center](./configuring-ccr-in-a-local-follower-data-center.md)を参照）、ローカルクラスター構成の各エントリが処理されます。 まず、 [リモートクラスター](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/modules-remote-clusters.html) が [クラスターアップデート設定API](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/cluster-update-settings.html) を介して登録されます。 次に、リモートクラスター内の各インデックス（`.`から始まるインデックスまたは［除外するインデックス］設定で定義されたインデックスを除く）に対して、 [フォロワーの作成API](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/ccr-put-follow.html) が呼び出され、リモートインデックスとのフォロワー/リーダーの関係が設定されます。
 
-既存のCCR構成を編集した後、またはCCRを無効にすると、以前にローカルクラスター構成に保存された各エントリが処理されます。 インデックスごとに、[フォローが一時停止](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/ccr-post-pause-follow.html)され、[インデックスが閉じられ](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/indices-close.html#indices-close)、[リーダーがフォロー解除され](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/ccr-post-unfollow.html)、[フォロワーインデックスが削除](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/indices-delete-index.html)されます。 その後、リモートクラスターは[クラスターアップデート設定API](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/cluster-update-settings.html)を介して登録解除されます。 CCRを無効にするだけの場合は、ここで処理が終了します。 構成を編集する場合、既存のローカルクラスター構成エントリは、CCRを初めて有効にする場合と同じように引き続き処理されます。 エントリごとに、[リモートクラスター](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/modules-remote-clusters.html)が[クラスターアップデート設定API](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/cluster-update-settings.html)を介して登録されます。 各リモートクラスター内のすべてのインデックス（`.`から始まるインデックスまたは[除外するインデックス]設定で定義されたインデックスを除く）に対して、[フォロワーの作成API](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/ccr-put-follow.html)が呼び出され、リモートインデックスとのフォロワー/リーダーの関係が設定されます。
+既存のCCR構成を編集した後、またはCCRを無効にすると、以前にローカルクラスター構成に保存された各エントリが処理されます。 インデックスごとに、 [フォローが一時停止](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/ccr-post-pause-follow.html) され、 [インデックスが閉じられ](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/indices-close.html#indices-close) 、 [リーダーがフォロー解除され](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/ccr-post-unfollow.html) 、 [フォロワーインデックスが削除](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/indices-delete-index.html) されます。 その後、リモートクラスターは [クラスターアップデート設定API](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/cluster-update-settings.html) を介して登録解除されます。 CCRを無効にするだけの場合は、ここで処理が終了します。 構成を編集する場合、既存のローカルクラスター構成エントリは、CCRを初めて有効にする場合と同じように引き続き処理されます。 エントリごとに、 [リモートクラスター](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/modules-remote-clusters.html) が [クラスターアップデート設定API](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/cluster-update-settings.html) を介して登録されます。 各リモートクラスター内のすべてのインデックス（`.`から始まるインデックスまたは［除外するインデックス］設定で定義されたインデックスを除く）に対して、 [フォロワーの作成API](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/ccr-put-follow.html) が呼び出され、リモートインデックスとのフォロワー/リーダーの関係が設定されます。
 
 手順を理解したところで、[基本的な特定のユースケース](./configuring-an-example-ccr-installation-replicating-between-data-centers.md)を使用して、ローカルの例の設定を開始しましょう。

@@ -5,12 +5,14 @@ CCR構成プロセスを支援するために、ここでは本ガイドの段�
 以下の構成は、インストールでX-Pack Securityを介した暗号化通信（TLS/SSL）とユーザー認証を有効にすることを前提としています。 詳しくは、[Securing Elasticsearch](../../installing-and-upgrading-a-search-engine/elasticsearch/securing-elasticsearch.md)を参照してください。
 
 ```{tip}
-[Configuration values provided by .config files](../../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md)_ are propagated throughout a DXP cluster as soon as the file is deployed to a single node. However, it's a best practice to provide identical configurations for each cluster node. 
+   <../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md>`_ は、ファイルが1つのノードにデプロイされると同時に、DXPクラスタ全体に伝播されます。 しかし、各クラスタノードには同一の構成を用意することが最善の方法です。 
 ```
 
-## リモートDXPクラスターノードの構成
+<a name="リモートdxpクラスターノードの設定" />
 
-これらの構成ファイルは`[Remote Liferay Home]/osgi/configs`にデプロイされます。
+## リモートDXPクラスターノードの設定
+
+これらの構成ファイルは`［Remote Liferay Home］/osgi/configs`にデプロイされます。
 
 ### Elasticsearch の構成
 
@@ -20,28 +22,29 @@ CCR構成プロセスを支援するために、ここでは本ガイドの段�
 
 Liferay DXP 7.3ファイルの内容：
 
-``` properties
+```properties
 productionModeEnabled="true"
 remoteClusterConnectionId="remote"
 logExceptionsOnly="false"
 ```
 
-Liferay DXP 7.2ファイルの内容：
+Liferay DXP 7.1/7.2のファイル内容です。
 
-``` properties
+```properties
 clusterName="LiferayElasticsearchCluster_LEADER"
 operationMode="REMOTE"
 transportAddresses=["localhost:9300"]
 logExceptionsOnly="false"
 ```
 
-Liferay DXP 7.2では、`XPackSecurityConfiguration.config`ファイルが別途必要です。
+Liferay DXP 7.1/7.2では、個別の `XPackSecurityConfiguration.config` ファイルが必要です。
 
 ファイル名：`com.liferay.portal.search.elasticsearch7.configuration.XPackSecurityConfiguration.config`
 
-Liferay DXP 7.2ファイルの内容：
+Liferay DXP 7.1/7.2のファイル内容です。
 
-``` properties
+
+```properties
 certificateFormat="PKCS#12"
 sslKeystorePath="/PATH/TO/elastic-nodes.p12"
 sslKeystorePassword="liferay"
@@ -55,16 +58,16 @@ transportSSLEnabled=B"true"
 ```
 
 ```{tip}
-The X-Pack security configuration file is not required on Liferay DXP 7.3. Security is configured in each connection's `.config` file. The values should be identical on all Liferay nodes.
+   Liferay DXP 7.3では、X-Packセキュリティ設定ファイルは必要ありません。 セキュリティの設定は、各コネクションの.configファイルで行います。 この値は、すべてのLiferayノードで同一でなければなりません。
 ```
 
 ### Elasticsearch接続設定
 
-\[DXP 7.3のみ\]リモート接続ファイル名： `com.liferay.portal.search.elasticsearch7.configuration.ElasticsearchConnectionConfiguration-remote.config`
+[DXP 7.3のみ】リモート接続ファイル名です。 `com.liferay.portal.search.elasticsearch7.configuration.ElasticsearchConnectionConfiguration-remote.config`です。
 
 ファイルの内容：
 
-``` properties
+```properties
 active="true"
 connectionId="remote"
 networkHostAddresses=["https://localhost:9200"]
@@ -78,14 +81,14 @@ truststoreType="pkcs12"
 ```
 
 ```{tip}
-For Liferay DXP 7.2, you used the `ElasticsearchConfiguration.config` and the `XPackSecurityConfiguration.config` files to configure the remote connection.
+   Liferay DXP 7.1/7.2の場合、リモート接続を設定するために ``ElasticsearchConfiguration.config`` と ``XPackSecurityConfiguration.config`` ファイルを使用しました。
 ```
 
-\[DXP 7.3のみ\]読み取り専用接続ファイル名： `com.liferay.portal.search.elasticsearch7.configuration.ElasticsearchConnectionConfiguration-ccr.config`
+[DXP 7.3 only] 読み取り専用の接続ファイル名です。 `com.liferay.portal.search.elasticsearch7.configuration.ElasticsearchConnectionConfiguration-ccr.config`となります。
 
 Liferay DXP 7.3のファイルの内容：
 
-``` properties
+```properties
 active="true"
 connectionId="ccr"
 networkHostAddresses=["https://localhost:9201"]
@@ -98,11 +101,11 @@ truststorePath="/PATH/to/elastic-nodes.p12"
 truststoreType="pkcs12"
 ```
 
-\[DXP 7.2のみ\]読み取り専用接続ファイル名： `com.liferay.portal.search.elasticsearch.cross.cluster.replication.internal.configuration.ElasticsearchConnectionConfiguration-ccr.config`
+[DXP 7.1/7.2 only] 読み取り専用の接続ファイル名です。 `com.liferay.portal.search.elasticsearch.cross.cluster.replication.internal.configuration.ElasticsearchConnectionConfiguration-ccr.config`となります。
 
-Liferay DXP 7.2のファイルの内容：
+Liferay DXP 7.1/7.2のファイル内容です。
 
-``` properties
+```properties
 clusterName="LiferayElasticsearchCluster_FOLLOWER"
 connectionId="ccr"
 username="elastic"
@@ -118,26 +121,30 @@ sslKeystorePassword="liferay"
 sslKeystorePath="/PATH/TO/elastic-nodes.p12"
 ```
 
+<a name="ローカルdxpクラスターノードの構成" />
+
 ## ローカルDXPクラスターノードの構成
 
-これらの構成ファイルは`[Local Liferay Home]/osgi/configs`にデプロイされます。
+これらの構成ファイルは`［Local Liferay Home］/osgi/configs`にデプロイされます。
 
 リモートDXPノードに提供したローカルDXPノードに同一のElasticsearch 7構成（接続構成ファイルを含む）を提供します。
 
 ### ローカルDXPクラスターノードCCRモジュールの構成
 
-任意のノード（リモートデータセンターにあるノードも含む）のシステム設定UIからLESクラスター横断設定アプリケーションを構成します。 LPKGがデプロイされている場合、設定エントリーは[システム設定]→[検索機能]→[クラスター横断レプリケーション]にあります。
+任意のノード（リモートデータセンターにあるノードも含む）のシステム設定UIからLESクラスター横断設定アプリケーションを構成します。 LPKGが展開されている場合、設定項目は「システム設定」の &rarr; 「検索」 &rarr; 「クラスター横断レプリケーション」にあります。
 
 次の値を設定します。
 
-  - *[Read from Local Clusters]* チェックボックスをオンにする
-  - *[Local Cluster Configurations]* プロパティに値*localhost:9080,ccr*を設定する
+［***Read from Local Clusters**］ チェックボックスをオンにする
+［***Local Cluster Configurations**］ プロパティに値 **localhost:9080,ccr** を設定する
 
 ![システム設定からCCRを設定します。](./ccr-basic-use-case-config-reference/images/01.png)
 
 ```{important}
-Never set the value to the remote data center here (in the example, it would be `localhost:8080,remote`). Setting this would cause follower indexes to be created in the remote cluster, where leader indexes of the same name already reside.
+   ここでは決してリモートデータセンターに値を設定しないでください（例では、``localhost:8080,remote``となります）。 これを設定すると、同じ名前のリーダーインデックスがすでに存在するリモートクラスタにフォロワーインデックスが作成されます。
 ```
+
+<a name="リーダーelasticsearchクラスターノードの構成" />
 
 ## リーダーElasticsearchクラスターノードの構成
 
@@ -146,8 +153,7 @@ Never set the value to the remote data center here (in the example, it would be 
 ファイル名：`elasticsearch.yml`
 
 ファイルの内容：
-
-``` yaml
+```yaml
 cluster.name: LiferayElasticsearchCluster_LEADER
 node.name: es-leader-node-1
 
@@ -175,6 +181,8 @@ xpack.security.http.ssl.truststore.password: liferay
 xpack.monitoring.collection.enabled: true
 ```
 
+<a name="フォロワーelasticsearchクラスターノードの構成" />
+
 ## フォロワーElasticsearchクラスターノードの構成
 
 場所：`ES_FOLLOWER_HOME/config`
@@ -183,7 +191,7 @@ xpack.monitoring.collection.enabled: true
 
 ファイルの内容：
 
-``` yaml
+```yaml
 cluster.name: LiferayElasticsearchCluster_FOLLOWER
 node.name: es-follower-node-1
 

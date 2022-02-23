@@ -1,3 +1,4 @@
-# APIs
+API
+====
 
 Coming soon!
