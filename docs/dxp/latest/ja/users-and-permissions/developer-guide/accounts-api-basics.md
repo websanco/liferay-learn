@@ -2,6 +2,8 @@
 
 アプリケーションメニューから [アカウント](../accounts.md) を管理することができますが、LiferayのREST APIを利用することもできます。 これらのサービスを呼び出して、アカウントの作成や管理を行います。
 
+<a name="アカウントの追加" />
+
 ## アカウントの追加
 
 1. Liferay DXPを起動します。 まだDockerコンテナがない場合は、以下を使用します。
@@ -10,7 +12,7 @@
    docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_DXP_DOCKER_IMAGE$]
    ```
 
-1. ダウンロードして解凍する [Accounts API Basics](./liferay-t5p9.zip)。
+1. ダウンロードして解凍する [Accounts API Basics](./liferay-t5p9.zip) 。
 
    ```bash
    curl https://learn.liferay.com/dxp/latest/en/users-and-permissions/developer-guide/liferay-t5p9.zip -O
@@ -23,7 +25,7 @@
 2. cURLスクリプトを使用して、インスタンスに新しいAccountを追加します。 コマンドラインで、 `curl` フォルダに移動します。 `Account_POST_ToInstance.sh` スクリプトを実行します。
 
     ```bash
-    ./Account_POST_ToInstance.sh
+    ./Account **POST** ToInstance.sh
     ```
 
     JSONレスポンスでは、新しいAccountが追加されたことを示しています。
@@ -42,21 +44,23 @@
 
     ```
 
-3. *［グローバルメニュー］* &rarr; *［アプリケーション］* &rarr; *［アカウント］*に移動します。 新しいアカウントが追加されたことを確認してください。
+3. ［**グローバルメニュー**］ &rarr; ［**アプリケーション**］ &rarr; ［**アカウント**］ に移動します。 新しいアカウントが追加されたことを確認してください。
 
    ![新しいアカウントが追加されたことを確認します。](./accounts-api-basics/images/01.png)
 
 4. RESTサービスは、Javaクライアントを使って呼び出すこともできます。 `curl` フォルダから、 `java` フォルダに移動します。 以下のコマンドでソースファイルをコンパイルします。
 
     ```bash
-    javac -classpath .:* *.java
+    javac -classpath .: *** .java
     ```
 
 5. `Account_POST_ToInstance.java` クラスを以下のコマンドで実行します。
 
     ```bash
-    java -classpath .:* Account_POST_ToInstance
+    java -classpath .: **Account***POST** ToInstance
     ```
+
+<a name="curlコマンドの検証" />
 
 ## cURLコマンドの検証
 
@@ -81,6 +85,8 @@
 ```
 
 他のcURLコマンドも同様のJSON引数を使用しています。
+
+<a name="javaクラスを調べる" />
 
 ## Javaクラスを調べる
 
@@ -107,16 +113,18 @@ main`メソッドのコメントでは、クラスの実行を実演していま
 他のJavaクラスの例はこれと似ていますが、異なる `AccountResource` メソッドを呼び出しています。
 
 ```{important}
-サービスの詳細は、 [AccountResource](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/headless/headless-admin-user/headless-admin-user-client/src/main/java/com/liferay/headless/admin/user/client/resource/v1_0/AccountResource.java)を参照してください。
+サービスの詳細は、 [AccountResource](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/headless/headless-admin-user/headless-admin-user-client/src/main/java/com/liferay/headless/admin/user/client/resource/v1_0/AccountResource.java) を参照してください。
 ```
 
 以下は、cURLとJavaを使って、他の `Account` RESTサービスを呼び出す例です。
+
+<a name="インスタンスからアカウントを取得" />
 
 ## インスタンスからアカウントを取得
 
 以下のcURLまたはJavaコマンドを実行することで、アカウントを一覧表示することができます。
 
-### Accounts_GET_FromInstance.sh
+### Accounts **GET** FromInstance.sh
 
 コマンド:
 
@@ -130,7 +138,7 @@ Code:
    :language: bash
 ```
 
-### Accounts_GET_FromInstance.java
+### Accounts **GET** FromInstance.java
 
 コマンド:
 
@@ -148,6 +156,8 @@ Code:
 
 インスタンスの `アカウント` オブジェクトがJSONで表示されます。
 
+<a name="アカウントの取得" />
+
 ## アカウントの取得
 
 以下のcURLまたはJavaコマンドで特定のアカウントを取得します。
@@ -156,7 +166,7 @@ Code:
 インスタンスのアカウントIDを取得するには、Accounts_GET_FromInstance.[java|sh]を使用します。
 ```
 
-### Account_GET_ById.sh
+### Account **GET** ById.sh
 
 コマンド:
 
@@ -170,7 +180,7 @@ Code:
    :language: bash
 ```
 
-### Account_GET_ById.java
+### Account **GET** ById.java
 
 コマンド:
 
@@ -188,11 +198,13 @@ Code:
 
 `アカウント` フィールドはJSONで表示されます。
 
+<a name="アカウントへのパッチ適用" />
+
 ## アカウントへのパッチ適用
 
 以下のcURLおよびJavaコマンドで、既存のAccountの部分編集を行います。 なお、 `1234` は、アカウントのIDに置き換えてください。
 
-### Account_PATCH_ById.sh
+### Account **PATCH** ById.sh
 
 コマンド:
 
@@ -206,7 +218,7 @@ Code:
    :language: bash
 ```
 
-### Account_PATCH_ById.java
+### Account **PATCH** ById.java
 
 コマンド:
 
@@ -222,11 +234,13 @@ Code:
    :lines: 9-25
 ```
 
+<a name="アカウントの作成" />
+
 ## アカウントの作成
 
 以下のcURLとJavaコマンドで、既存のAccountを完全に上書きします。 なお、 `1234` は、アカウントのIDに置き換えてください。
 
-### Account_PUT_ById.sh
+### Account **PUT** ById.sh
 
 コマンド:
 
@@ -240,7 +254,7 @@ Code:
    :language: bash
 ```
 
-### Account_PUT_ById.java
+### Account **PUT** ById.java
 
 コマンド:
 
@@ -256,11 +270,13 @@ Code:
    :lines: 9-25
 ```
 
+<a name="アカウントの削除" />
+
 ## アカウントの削除
 
 以下のcURLおよびJavaコマンドで既存のAccountを削除します。 なお、 `1234` は、アカウントのIDに置き換えてください。
 
-### Account_DELETE_ById.sh
+### Account **DELETE** ById.sh
 
 コマンド:
 
@@ -274,7 +290,7 @@ Code:
    :language: bash
 ```
 
-### Account_DELETE_ById.java
+### Account **DELETE** ById.java
 
 コマンド
 

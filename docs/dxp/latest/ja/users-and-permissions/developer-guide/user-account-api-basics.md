@@ -4,6 +4,8 @@
 
 まず、新しいユーザーを追加します。
 
+<a name="ユーザーの追加" />
+
 ## ユーザーの追加
 
 1. Liferay DXPを起動します。 まだDockerコンテナがない場合は、以下を使用します。
@@ -12,7 +14,7 @@
    docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
    ```
 
-1. [User Account API Basics](./liferay-y6q4.zip)をダウンロードし解答します。
+1. [User Account API Basics](./liferay-y6q4.zip) をダウンロードし解答します。
 
    ```bash
    curl https://learn.liferay.com/dxp/latest/en/users-and-permissions/developer-guide/liferay-y6q4.zip -O
@@ -25,7 +27,7 @@
 1. cURLスクリプトを使用して、Liferayインスタンスに新しいUserを追加します。 コマンドラインで、 `curl` フォルダに移動します。 `User_POST_ToInstance.sh` スクリプトを実行します。
 
     ```bash
-    ./User_POST_ToInstance.sh
+    ./User **POST** ToInstance.sh
     ```
 
     JSONレスポンスは、新しいUserが追加されたことを示しています。
@@ -80,13 +82,13 @@
 1. RESTサービスは、Javaクラスで呼び出すこともできます。 `curl` フォルダから、 `java` フォルダに移動します。 以下のコマンドでソースファイルをコンパイルします。
 
     ```bash
-    javac -classpath .:* *.java
+    javac -classpath .: *** .java
     ```
 
 1. `User_POST_ToInstance` クラスを以下のコマンドで実行します。
 
     ```bash
-    java -classpath .:* User_POST_ToInstance
+    java -classpath .: **User***POST** ToInstance
     ```
 
     コントロールパネルで、別のユーザーが追加されていることを確認します。
@@ -94,6 +96,8 @@
     ![コントロールパネルに、もう一人のユーザーが追加されました。](user-account-api-basics/images/02.png)
 
 cURLコマンドとJavaクラスの仕組みをご覧ください。
+
+<a name="curlコマンドの検証" />
 
 ## cURLコマンドの検証
 
@@ -113,11 +117,13 @@ cURLコマンドとJavaクラスの仕組みをご覧ください。
 | `-d "{\"alternateName\": \"Able\", \"emailAddress\": \"able@liferay.com\", \"familyName\": \"Foo\", \"givenName\": \"Able\"}"` | 投稿をリクエストしているデータ             |
 | `-u "test@liferay.com:test"`                                                                                                                   | 基本認証の資格情報                   |
 
-```note::
-   ここでは、デモンストレーションの目的で基本認証を使用しています。 本番環境の場合は、`OAuth  <../../../headless-delivery/using-oauth2/using-oauth2.md>`_経由でユーザーを認証する必要があります。
+```{note}
+   ここでは、デモンストレーションの目的で基本認証を使用しています。 本番環境の場合は、`OAuth  <../../../headless-delivery/using-oauth2/using-oauth2.md>`_ 経由でユーザーを認証する必要があります。
 ```
 
 他のcURLコマンドも同様のJSON引数を使用しています。
+
+<a name="javaクラスを調べる" />
 
 ## Javaクラスを調べる
 
@@ -137,23 +143,25 @@ cURLコマンドとJavaクラスの仕組みをご覧ください。
 | `UserAccountResource userAccountResource = builder.authentication(...).build()` | ベーシック認証を指定し、 `UserAccountResources` サービスインスタンスを生成します。          |
 | `UserAccount userAccount = userAccountResource.postUserAccount(...)`            | `userAccountResource.postUserAccount` メソッドを呼び出し、データをpostに渡します。 |
 
-```note::
+```{note}
    main``メソッドのコメントでは、クラスの実行を実演しています。
 ```
 
 他のJavaクラスの例はこれと似ていますが、異なる `UserAccountResource` メソッドを呼び出しています。
 
-```important::
-   サービスの詳細は、`UserAccountResource <https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/headless/headless-admin-user/headless-admin-user-client/src/main/java/com/liferay/headless/admin/user/client/resource/v1_0/UserAccountResource.java>`_を参照してください。
+```{important}
+   サービスの詳細は、 `UserAccountResource <https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/headless/headless-admin-user/headless-admin-user-client/src/main/java/com/liferay/headless/admin/user/client/resource/v1_0/UserAccountResource.java>`_ を参照してください。
 ```
 
 以下は、cURLとJavaを使って、他のUser RESTサービスを呼び出す例です。
+
+<a name="インスタンスユーザーの取得" />
 
 ## インスタンスユーザーの取得
 
 以下のcURLとJavaのコマンドで全ユーザーのリストを取得します。
 
-### Users_GET_FromInstance.sh
+### Users **GET** FromInstance.sh
 
 コマンド:
 
@@ -167,7 +175,7 @@ Code:
    :language: bash
 ```
 
-### Users_GET_FromInstance.java
+### Users **GET** FromInstance.java
 
 コマンド:
 
@@ -185,11 +193,13 @@ Code:
 
 JSON レスポンスには、そのインスタンスのすべての Users がリストアップされます。
 
+<a name="ユーザーの取得" />
+
 ## ユーザーの取得
 
 以下のcURLとJavaコマンドで特定のUserを取得します。 なお、 `1234` は、ユーザーのIDに置き換えてください。
 
-### User_GET_ById.sh
+### User **GET** ById.sh
 
 コマンド:
 
@@ -203,7 +213,7 @@ Code:
    :language: bash
 ```
 
-### User_GET_ById.java
+### User **GET** ById.java
 
 コマンド:
 
@@ -221,11 +231,13 @@ Code:
 
 User は JSON レスポンスで返されます。
 
+<a name="ユーザーへのパッチ" />
+
 ## ユーザーへのパッチ
 
 以下のcURLとJavaコマンドで、既存のUserの部分編集を行います。 なお、 `1234` は、ユーザーのIDに置き換えてください。
 
-### User_PATCH_ById.sh
+### User **PATCH** ById.sh
 
 コマンド:
 
@@ -239,7 +251,7 @@ Code:
    :language: bash
 ```
 
-### User_PATCH_ById.java
+### User **PATCH** ById.java
 
 コマンド:
 
@@ -257,11 +269,13 @@ Code:
 
 この例では、AbleとBakerの名字がFooからBarに変わっていることに注意してください。
 
+<a name="ユーザーの配置" />
+
 ## ユーザーの配置
 
 以下のcURLとJavaコマンドで、既存のUserを完全に上書きします。 なお、 `1234` は、ユーザーのIDに置き換えてください。
 
-### User_PUT_ById.sh
+### User **PUT** ById.sh
 
 コマンド:
 
@@ -275,7 +289,7 @@ Code:
    :language: bash
 ```
 
-### User_PUT_ById.java
+### User **PUT** ById.java
 
 コマンド:
 
@@ -295,11 +309,13 @@ Code:
 
 ![これまでのユーザーデータは、パッチサービスに置き換えられています。](./user-account-api-basics/images/03.png)
 
+<a name="ユーザーの削除" />
+
 ## ユーザーの削除
 
 以下のcURLおよびJavaコマンドで既存のUserを削除します。 なお、 `1234` は、ユーザーのIDに置き換えてください。
 
-### User_DELETE_ById.sh
+### User **DELETE** ById.sh
 
 コマンド:
 
@@ -313,7 +329,7 @@ Code:
    :language: bash
 ```
 
-### User_DELETE_ById.java
+### User **DELETE** ById.java
 
 コマンド:
 
@@ -330,6 +346,8 @@ Code:
 ```
 
 ユーザー［Able Goo］と［Baker Goo］は削除されました。
+
+<a name="追加情報" />
 
 ## 追加情報
 

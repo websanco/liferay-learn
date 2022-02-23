@@ -2,6 +2,8 @@
 
 アプリケーションメニューから [アカウントユーザー](../accounts/account-users.md) と [アカウントロール](../accounts/account-roles.md) を管理することができますが、LiferayのREST APIを利用することもできます。 これらのサービスを呼び出して、アカウントユーザーとRolesの作成と管理を行います。
 
+<a name="アカウントユーザーの追加" />
+
 ## アカウントユーザーの追加
 
 1. Liferay DXPを起動します。 まだDockerコンテナがない場合は、以下を使用します。
@@ -10,7 +12,7 @@
    docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_DXP_DOCKER_IMAGE$]
    ```
 
-1. ダウンロードして解凍する [Accounts API Basics](./liferay-t5p9.zip)。
+1. ダウンロードして解凍する [Accounts API Basics](./liferay-t5p9.zip) 。
 
    ```bash
    curl https://learn.liferay.com/dxp/latest/en/users-and-permissions/developer-guide/liferay-t5p9.zip -O
@@ -25,7 +27,7 @@
 1. cURLスクリプトを使用して、新しいアカウントユーザーをアカウントに追加します。 コマンドラインで、 `curl` フォルダに移動します。 アカウントIDをパラメータとして、 `AccountUser_POST_ToAccount.sh` スクリプトを実行します。
 
    ```bash
-   ./AccountUser_POST_ToAccount.sh 1234
+   ./AccountUser **POST** ToAccount.sh 1234
    ```
 
    JSONのレスポンスには、新しいアカウントが追加されたことが示されています。
@@ -79,21 +81,23 @@
         }     
     ```
 
-1. *グローバルメニュー* &rarr; *アプリケーション* &rarr; *アカウント*に移動します。 ユーザーを作成したアカウントをクリックします。 *Users* タブをクリックすると、作成された新しいUserが表示されます。
+1. **グローバルメニュー** &rarr; **アプリケーション** &rarr; **アカウント** に移動します。 ユーザーを作成したアカウントをクリックします。 **Users** タブをクリックすると、作成された新しいUserが表示されます。
 
   ![新しいアカウントユーザーが追加されたことを確認します。](./account-users-and-roles-apis/images/01.png)
 
 1. RESTサービスは、Javaクライアントを使って呼び出すこともできます。 `curl` フォルダから、 `java` フォルダに移動します。 以下のコマンドでソースファイルをコンパイルします。
 
     ```bash
-    javac -classpath .:* *.java
+    javac -classpath .: *** .java
     ```
 
 2. `AccountUser_POST_ToAccount.java` クラスを以下のコマンドで実行します。 `1234` をアカウントのIDに置き換えてください。
 
    ```bash
-   java -classpath .:* -DaccountId=1234 AccountUser_POST_ToAccount
+   java -classpath .: **-DaccountId=1234 AccountUser***POST** ToAccount
    ```
+
+<a name="curlコマンドの検証" />
 
 ## cURLコマンドの検証
 
@@ -118,6 +122,8 @@
 ```
 
 他のcURLコマンドも同様のJSON引数を使用しています。
+
+<a name="javaクラスを調べる" />
 
 ## Javaクラスを調べる
 
@@ -144,16 +150,18 @@ main`メソッドのコメントでは、クラスの実行を実演していま
 他のJavaクラスの例は、このクラスと似ていますが、異なるメソッドを呼び出しています。
 
 ```{important}
-サービスの詳細は、 [AccountResource](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/headless/headless-admin-user/headless-admin-user-client/src/main/java/com/liferay/headless/admin/user/client/resource/v1_0/AccountResource.java)を参照してください。
+サービスの詳細は、 [AccountResource](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/headless/headless-admin-user/headless-admin-user-client/src/main/java/com/liferay/headless/admin/user/client/resource/v1_0/AccountResource.java) を参照してください。
 ```
 
 以下は、cURLとJavaを使って、関連する他のRESTサービスを呼び出す例です。
+
+<a name="accountからアカウントユーザーを取得" />
 
 ## Accountからアカウントユーザーを取得
 
 以下のcURLまたはJavaコマンドを実行すると、アカウントのユーザーを一覧表示できます。 上記と同様に、 `1234` をアカウントのIDに置き換えてください。
 
-### AccountUsers_GET_FromAccount.sh
+### AccountUsers **GET** FromAccount.sh
 
 コマンド:
 
@@ -167,7 +175,7 @@ Code:
    :language: bash
 ```
 
-### AccountUsers_GET_FromAccount.java
+### AccountUsers **GET** FromAccount.java
 
 コマンド:
 
@@ -185,11 +193,13 @@ Code:
 
 アカウントの `UserAccountの` オブジェクトがJSONで表示されます。
 
+<a name="アカウントロールの投稿" />
+
 ## アカウントロールの投稿
 
 特定のアカウントに対して新しいアカウントロールを作成します。 なお、 `1234` は、アカウントのIDに置き換えてください。
 
-### AccountRole_POST_ToAccount.sh
+### AccountRole **POST** ToAccount.sh
 
 コマンド:
 
@@ -203,7 +213,7 @@ Code:
    :language: bash
 ```
 
-### AccountRole_POST_ToAccount.java
+### AccountRole **POST** ToAccount.java
 
 コマンド:
 
@@ -219,11 +229,13 @@ Code:
    :lines: 9-25
 ```
 
+<a name="ユーザーをアカウントロールに関連付ける" />
+
 ## ユーザーをアカウントロールに関連付ける
 
 ユーザーを特定のアカウントロールに関連付けることができます。 `1234` をアカウントのIDに置き換えてください。 お使いのアカウントのロールのIDを`5678` に置き換えます。 `9012` は、アカウントユーザーのIDに置き換えてください。
 
-### AccountRole_POST_UserAssociation.sh
+### AccountRole **POST** UserAssociation.sh
 
 コマンド:
 
@@ -237,7 +249,7 @@ Code:
    :language: bash
 ```
 
-### AccountRole_POST_UserAssociation.java
+### AccountRole **POST** UserAssociation.java
 
 コマンド:
 
@@ -253,11 +265,13 @@ Code:
    :lines: 9-19
 ```
 
+<a name="アカウントからのアカウントロールの取得" />
+
 ## アカウントからのアカウントロールの取得
 
 以下のcURLまたはJavaコマンドを実行することで、Accountのアカウントロールsを一覧表示することができます。 `1234` をアカウントのIDに置き換えてください。
 
-### AccountRoles_GET_FromAccount.sh
+### AccountRoles **GET** FromAccount.sh
 
 コマンド:
 
@@ -271,7 +285,7 @@ Code:
    :language: bash
 ```
 
-### AccountRoles_GET_FromAccount.java
+### AccountRoles **GET** FromAccount.java
 
 コマンド:
 
@@ -289,11 +303,13 @@ Code:
 
 アカウントの `AccountRoleの` オブジェクトがJSONで表示されます。
 
+<a name="アカウントロールユーザーアソシエーションの削除" />
+
 ## アカウントロール・ユーザー・アソシエーションの削除
 
 特定のアカウントユーザーからアカウントロールの関連付けを削除します。 `1234` をアカウントのIDに置き換えてください。 お使いのアカウントのロールのIDを`5678` に置き換えます。 `9012` は、アカウントユーザーのIDに置き換えてください。
 
-### AccountRole_DELETE_UserAssociation.sh
+### AccountRole **DELETE** UserAssociation.sh
 
 コマンド:
 
@@ -307,7 +323,7 @@ Code:
    :language: bash
 ```
 
-### AccountRole_DELETE_UserAssociation.java
+### AccountRole **DELETE** UserAssociation.java
 
 コマンド
 
