@@ -8,7 +8,7 @@ To configure the spell check settings:
 
     Click *Execute* next to *Reindex all spell check indexes*.
 
-1. Add the *Suggestions* widget to the search page.
+1. Make sure that one *Suggestions* widget is on the search page (it's added by default if using the [Search Page Template](../working-with-search-pages/using-a-search-page-template.md)).
 
 1. Open the *Suggestions* widget configuration screen. Click the widget Options button (![Options](../../../images/icon-widget-options.png)) and select *Configuration*.
 
