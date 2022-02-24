@@ -1,6 +1,6 @@
 # Multithreading Process
 
-Your [Upgrade Processes](../upgrade-processes.md) may involve making complex changes to large data sets. If performance is critical, make use of the `processConcurrently()` method. This method executes in multiple threads and can reduce your overall upgrade times.
+Your [Upgrade Processes](../upgrade-processes.md) may involve making complex changes to large data sets. If performance is critical, make use of the `processConcurrently()` method in the `UpgradeProcess` class of your application. This method executes in multiple threads and can reduce your overall upgrade times.
 
 ## See the Sample Code
 
@@ -95,11 +95,11 @@ Your [Upgrade Processes](../upgrade-processes.md) may involve making complex cha
 
 ### Execute the Upgrade
 
-1. Navigate to the Script console at *Control Panel* &rarr; *Gogo Shell*.
+1. Navigate to the Gogo shell console at *Control Panel* &rarr; *Gogo Shell*.
 
 1. Verify that the 1.0.1 upgrade is available by entering the command `upgrade:list com.acme.j7z3.service`. The 1.0.1 version should be listed as a registered upgrade process in the output window.
 
-1. Execute the upgrade with by entering the command `upgrade:execute com.acme.j7z3.service`. The output window should display that the upgrade was completed.
+1. Execute the upgrade by entering the command `upgrade:execute com.acme.j7z3.service`. The output window should display that the upgrade was completed.
 
    ![Execute the upgrade and the output should display that the upgrade was completed.](./multithreading-process/images/02.png)
 
@@ -127,13 +127,14 @@ The method has four parts:
 1. Exception - A message that can be used in case an exception occurs.
 
 The sample project shows a simple example in which the `name` field is processed and modified by the `processConcurrently()` method.
-1. `select j7z3EntryId, name from J7Z3_J7Z3Entry` - The SQL statement queries all the entries
+
+1. `select j7z3EntryId, name from J7Z3_J7Z3Entry` - The SQL statement queries all the entries.
 
 1. ```java
    resultSet -> new Object[] {
 				resultSet.getLong("j7z3EntryId"), resultSet.getString("name")
    ```
-   `resultSet` gathers all the objects and stores it in an array.
+   The objects are gathered and stored in the `resultSet` array.
 
 1. ```java
    columns -> {
@@ -151,7 +152,7 @@ The sample project shows a simple example in which the `name` field is processed
 			}
 		}
    ```
-   For every entry, `name` field is set as `baker`.
+   For every `j7z3EntryId`, the `name` field is set as `baker`.
 
 1. The exception is set to `null`.
 
