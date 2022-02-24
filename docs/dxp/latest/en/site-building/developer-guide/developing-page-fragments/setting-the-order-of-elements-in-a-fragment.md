@@ -14,7 +14,7 @@ Starting with Liferay DXP 7.4, the Slider and Tab Fragments show their elements 
 
 1. Go to *Site Administration* &rarr; *Design* &rarr; *Fragments*.
 
-1. Under the *Collections* area, click the Collection with the Fragment you want to customize.
+1. Under *Fragment Sets*, click the Set with the Fragment you want to customize.
 
 1. Click on the Slider or Tab Fragment's *Actions* (![Action](./../../../images/icon-actions.png)) button and select *Edit* to open the [Fragments Editor](./using-the-fragments-editor.md).
 
@@ -23,7 +23,7 @@ Starting with Liferay DXP 7.4, the Slider and Tab Fragments show their elements 
 1. In the HTML code area, you can Edit the Slider Fragment code. Add the `data-lfr-priority` attribute to the Editable or Drop Zone areas. This example configures the carousel elements to use this order:
 
    1. `First Slide Title`, with `data-lfr-priority="1"`
-   1. `First Slide Subtitle`, with `data-lfr-prioriy="2"`
+   1. `First Slide Subtitle`, with `data-lfr-priority="2"`
    1. `First Responsive Image`, with `data-lfr-priority="3"`
 
     ```html

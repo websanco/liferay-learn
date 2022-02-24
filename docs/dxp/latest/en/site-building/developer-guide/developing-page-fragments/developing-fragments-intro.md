@@ -4,16 +4,20 @@ Page Fragments are the building blocks for [Content Pages](../../creating-pages/
 
 ![Fragments are combined like puzzle pieces to build a Content Page.](./developing-fragments-intro/images/01.png)
 
-## Collections
+```{note}
+For Liferay DXP 7.4+, Fragment Collections are called Fragment Sets in the Liferay UI.
+```
 
-Collections organize Fragments so that groups of related Fragments can be managed and shared. Users navigate Collections when selecting Fragments to add to a page, so you'll create Fragments in Collections that make it easy to combine into Pages. An example appears in the admin page, which shows all the out-of-the-box Fragments (and their code). A Page Fragment's code can be updated through the admin interface. If you want your Page Fragment's code instead to be static (locked and unable to be edited through the interface), you can create a [Contributed Fragment Collection](./creating-a-contributed-fragment-collection.md).
+## Fragment Sets
+
+Sets organize Fragments so that groups of related Fragments can be managed and shared. Users navigate Sets when selecting Fragments to add to a page, so you'll create Fragments in Sets that make it easy to combine into Pages. An example appears in the admin page, which shows all the out-of-the-box Fragments (and their code). A Page Fragment's code can be updated through the admin interface. If you want your Page Fragment's code instead to be static (locked and unable to be edited through the interface), you can create a [Contributed Fragment Set](./creating-a-contributed-fragment-set.md).
 
 ## Tooling
 
 Browser-based tools help you create Fragments directly on your system, and CLI-based tools integrate with your own toolset to preserve your productivity:
 
 * [The Built-in Fragments Editor](./using-the-fragments-editor.md): use the built-in editor to develop Page Fragments inside of Liferay Portal.
-* [The Fragments Toolkit](./using-the-fragments-toolkit.md): use the Fragments CLI to generate, import, and export Page Fragments and Fragment Collections from your desktop.
+* [The Fragments Toolkit](./using-the-fragments-toolkit.md): use the Fragments CLI to generate, import, and export Page Fragments and Fragment Sets from your desktop.
 
 ## Features
 

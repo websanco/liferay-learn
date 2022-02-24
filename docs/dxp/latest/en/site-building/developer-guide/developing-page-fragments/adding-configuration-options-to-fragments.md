@@ -6,10 +6,14 @@ Configurable options help make your Fragments flexible, so you don't have to mai
 
 - [Deploy a Configurable Fragment](#deploy-a-configurable-fragment)
 - [Examine the Configuration](#examine-the-configuration)
-- [Escape Configuration Text Values](#escape-configuration-text-values)
+  - [Escape Configuration Text Values](#escape-configuration-text-values)
 - [Modify the Configuration](#modify-the-configuration)
 - [Propagate the Changes and Test](#propagate-the-changes-and-test)
 - [Related Information](#related-information)
+
+```{note}
+For Liferay DXP 7.4+, Fragment Collections are called Fragment Sets in the Liferay UI.
+```
 
 ## Deploy a Configurable Fragment
 
@@ -21,7 +25,7 @@ First, deploy an example to see how Fragment configuration options work:
     docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
     ```
 
-1. Download and unzip the [example Fragment Collection](https://learn.liferay.com/dxp/latest/en/site-building/developer-guide/developing-page-fragments/liferay-c7f8.zip):
+1. Download and unzip the [example Fragment Set](https://learn.liferay.com/dxp/latest/en/site-building/developer-guide/developing-page-fragments/liferay-c7f8.zip):
 
     ```bash
     curl https://learn.liferay.com/dxp/latest/en/site-building/developer-guide/developing-page-fragments/liferay-c7f8.zip -O
@@ -41,7 +45,7 @@ First, deploy an example to see how Fragment configuration options work:
     ./setup_tutorial.sh 
     ```
 
-1. Import the Fragment Collection to the Docker container using the Fragments Toolkit. Alternatively, you can [import the Fragment manually](../../displaying-content/using-fragments/managing-page-fragments.md).
+1. Import the Fragment Set to the Docker container using the Fragments Toolkit. Alternatively, you can [import the Fragment manually](../../displaying-content/using-fragments/managing-page-fragments.md).
 
     ```bash
     yarn run import
@@ -62,25 +66,19 @@ First, deploy an example to see how Fragment configuration options work:
     Project imported
     ```
 
-1. Verify that the Fragment Collection is available. Point your browser to `https://localhost:8080`, and under the Site Menu on the left side of the screen, go to *Design* &rarr; *Fragments*. The Collection appears in the Collection list.
+1. Verify the Fragment Set is available. Open the *Site Menu* (![Site Menu](../../../images/icon-product-menu.png)) and go to *Design* &rarr; *Fragments*. The Set should appear in the list.
 
-    ![The Collection is available.](./adding-configuration-options-to-fragments/images/01.png)
+    ![Verify the Set is available.](./adding-configuration-options-to-fragments/images/01.png)
 
     ```{note}
     For Liferay DXP 7.1 and 7.2, instead navigate to *Site* → *Site Builder* → *Page Fragments* under the Product Menu to get to the Fragments page.
     ```
 
-1. Go to the Home Page and click the (![Edit icon](../../../images/icon-edit-pencil.png)) icon to edit the Content Page.
+1. Go to a Content Page and click the *Edit* icon (![Edit icon](../../../images/icon-edit-pencil.png)) to begin editing.
 
-1. Expand the *Configurable Marketing Collection* heading in the [Fragments panel](../../creating-pages/building-and-managing-content-pages/content-page-editor-user-interface-reference.md#fragments-and-widgets) and drag the *Configurable Marketing Card* Fragment onto the page.
+1. Expand the *C7F8 Set* heading in the [Fragments and Widgets panel](../../creating-pages/building-and-managing-content-pages/content-pages-overview.md#fragments) and drag the *C7F8 Card* Fragment onto the page.
 
-1. Select the Configurable Marketing Card. Open the Fragment Configuration Menu by clicking the (![Gear icon](../../../images/icon-control-menu-gear.png)) icon in the context menu that appears. From here, you can choose a configuration option for the text style to change the text from dark to light.
-
-1. Go to a [Content Page](../../creating-pages/understanding-pages/understanding-pages.md#content-pages) (such as the default Home Page) and click the (![Edit icon](../../../images/icon-edit-pencil.png)) icon to edit the page.
-
-1. Expand the *C7F8 Collection* heading in the [Fragments and Widgets panel](../../creating-pages/building-and-managing-content-pages/content-pages-overview.md#fragments) and drag the *C7F8 Card* Fragment onto the page.
-
-1. Select the *C7F8 Card* on the page. The Selection panel appears on the right. In the *General* tab, set the component's text style to dark or light.
+1. Select the *C7F8 Card* on the page to open the Fragment Configuration Menu. In the *General* tab, set the component's text style to dark or light.
 
     ![Configurable Fragments provide options to modify the Fragment's look and feel.](./adding-configuration-options-to-fragments/images/02.png)
 
@@ -96,7 +94,7 @@ You can edit a Fragment's configuration options in Liferay's built-in [Fragments
 
 Open the example's `fragment.json` file to determine the Fragment's configuration file.
 
-```json 
+```json
 {
     "configurationPath": "index.json",
     "cssPath": "index.css",
@@ -218,13 +216,13 @@ function (fragmentElement, configuration) {
 
 Now that you know how the configuration works, you can modify it.
 
-1. Under the Site Menu on the left side of the screen, go to *Design* &rarr; *Fragments*. The Collection appears in the Collection list.
+1. Open the *Site Menu* (![Site Menu](../../../images/icon-product-menu.png)) and go to *Design* &rarr; *Fragments*.
 
     ```{note}
     For Liferay DXP 7.1 and 7.2, instead navigate to *Site* → *Site Builder* → *Page Fragments* under the Product Menu to get to the Fragments page.
     ```
 
-1. Select the *C7F8 Collection*, click *Actions* (![Actions Icon](../../../images/icon-actions.png)) for the C7F8 Card and select *Edit*. The Fragments Editor appears.
+1. Select the *C7F8 Set*, click the *Actions* button (![Actions Icon](../../../images/icon-actions.png)) for the C7F8 Card and select *Edit*. This opens the Fragments Editor.
 
 1. Click the *Configuration* tab and update the configuration with a checkbox field to hide/show the card's description. Insert this code on a new line after the `c7f8TextStyle` field's closing brace and comma (`},`)
 
@@ -257,13 +255,16 @@ You can also access the configuration's value through the JavaScript with the sy
 
 Now you can test the updates.
 
-1. Propagate the changes so they're reflected on the Content Page. Click *Actions* (![Action Icon](../../../images/icon-actions.png)) for the C7F8 Card and select  *View Usages*. 
+1. Propagate the changes so they're reflected on the Content Page. Click *Actions* (![Action Icon](../../../images/icon-actions.png)) for the C7F8 Card and select  *View Usages*.
+
 1. Check the box for the Content Page and click the (![propagate button](../../../images/icon-propagate.png)) button.
 
     ![Configurable Fragments provide options to modify the Fragment's look and feel.](./adding-configuration-options-to-fragments/images/04.png)
 
 1. Go back to the Content Page and once again click the (![Edit icon](../../../images/icon-edit-pencil.png)) icon to edit the Content Page.
+
 1. Select the *C7F8 Card* again to show Selection panel on the right.
+
 1. In the *General* tab, check/uncheck the *Show Description* checkbox to show/hide the card's text.
 
     ![You can have as many configuration options as you want for your Fragments.](./adding-configuration-options-to-fragments/images/05.png)

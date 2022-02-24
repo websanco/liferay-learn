@@ -2,13 +2,15 @@
 
 > Available: Liferay Portal 7.3 GA1+ and Liferay DXP 7.3+
 
-If you're [developing Page Fragments with your own tooling](./using-the-fragments-toolkit.md#collection-format-overview), you can deploy them by packaging them in ZIP files for importing via the Liferay UI. But you're not limited to using the UI. You can deploy Fragment ZIP files from the command line too. Here you'll learn how to work with Fragment projects and import the Fragments to the Sites you want from the command line using Liferay's auto-deployment mechanism.
+If you're [developing Page Fragments with your own tooling](./using-the-fragments-toolkit.md#fragment-set-structure), you can deploy them by packaging them in ZIP files for importing via the Liferay UI. But you're not limited to using the UI. You can deploy Fragment ZIP files from the command line too. Here you'll learn how to work with Fragment projects and import the Fragments to the Sites you want from the command line using Liferay's auto-deployment mechanism.
 
-Start with auto-deploying an example Fragment Collection.
+```{note}
+For Liferay DXP 7.4+, Fragment Collections are called Fragment Sets in the Liferay UI.
+```
 
-## Deploy an Auto-deployable Fragment Collection
+## Deploy an Auto-deployable Fragment Set
 
-Start with auto-deploying an example Fragment Collection.
+Start with auto-deploying an example Fragment Set.
 
 1. Run the command below to start the Docker container:
 
@@ -16,7 +18,7 @@ Start with auto-deploying an example Fragment Collection.
     docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
     ```
 
-1. Download and unzip the [example auto-deployable Fragment Collection](https://learn.liferay.com/dxp/latest/en/site-building/developer-guide/developing-page-fragments/liferay-a2f8.zip):
+1. Download and unzip the [example auto-deployable Fragment Set](https://learn.liferay.com/dxp/latest/en/site-building/developer-guide/developing-page-fragments/liferay-a2f8.zip):
 
     ```bash
     curl https://learn.liferay.com/dxp/latest/en/site-building/developer-guide/developing-page-fragments/liferay-a2f8.zip -O
@@ -26,17 +28,17 @@ Start with auto-deploying an example Fragment Collection.
     unzip liferay-a2f8.zip
     ```
 
-1. Compress the Fragment project's Collection and its deployment descriptor into a ZIP file:
+1. Compress the Fragment project's Set and its deployment descriptor into a ZIP file:
 
     ```bash
     cd liferay-a2f8
     ```
 
     ```bash
-    zip -r  a2f8-fragments.zip a2f8-collection/ liferay-deploy-fragments.json
+    zip -r  a2f8-fragments.zip a2f8-set/ liferay-deploy-fragments.json
     ```
 
-1. Import the Fragments Collection to the descriptor-specified Site by copying the new `.zip` file to the auto-deploy folder in Liferay's Docker container:
+1. Import the Fragments Set to the descriptor-specified Site by copying the new `.zip` file to the auto-deploy folder in Liferay's Docker container:
 
     ```bash
     docker cp a2f8-fragments.zip $(docker ps -lq):/opt/liferay/deploy
@@ -48,26 +50,25 @@ Start with auto-deploying an example Fragment Collection.
     INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][AutoDeployDir:263] Processing a2f8-fragments.zip
     ```
 
-1. Verify that the Fragment Collection is available. Open your browser to `https://localhost:8080`. From the Site Menu on the left side of the screen, go to *Design* &rarr; *Fragments*. The *A2F8 Collection* is in the Fragment Collections list.
+1. Verify the Fragment Set is available. Open the *Site Menu* (![Site Menu](../../../images/icon-product-menu.png)) and go to *Design* &rarr; *Fragments*. The Set should appear in the list.
 
 ```{note}
 If an imported Fragment has invalid rules, it is automatically saved as a draft.
 ```
 
-![The Collection is available.](./auto-deploying-fragments/images/01.png)
+![The Set is available.](./auto-deploying-fragments/images/01.png)
 
-## Deployment Descriptor Overview
+## Fragment Project Structure
 
-Auto-deployable Fragment project ZIP files have this structure:
+The auto-deployable Fragment project has this structure:
 
-```
+```bash
 [project ZIP]
-├── [fragment-collection]
+├── [fragment-set]
 │   ├── collection.json
 │   └── [fragment]
 │       └── fragment files ...
 └── liferay-deploy-fragments.json
-
 ```
 
 The `liferay-deploy-fragments.json` file specifies the scope where you want to deploy the Fragments:
@@ -97,28 +98,29 @@ Both keys in this JSON file are optional. In your `liferay-deploy-fragments.json
 The Fragments Toolkit's [npm run compress command](./using-the-fragments-toolkit.md) facilitates creating Fragment ZIP files and their deployment descriptors.
 ```
 
-## Modify the Fragment Collection and Redeploy
+## Modify the Fragment Set and Redeploy
 
-Follow these steps to modify the Fragment Collection and redeploy it:
+Follow these steps to modify the Fragment Set and redeploy it:
 
-1. Add a new Fragment to the example Collection by moving the project's `a2f8-jumbotron` Fragment folder into the `a2f8-collection/` folder. 
-1. Compress the Collection into a ZIP file as you did above:
+1. Add a new Fragment to the example Set by moving the project's `a2f8-jumbotron` Fragment folder into the `a2f8-set/` folder.
+
+1. Compress the Fragment Set into a ZIP file as you did above:
 
     ```bash
-    zip -r  a2f8-fragments.zip a2f8-collection/ liferay-deploy-fragments.json
+    zip -r  a2f8-fragments.zip a2f8-set/ liferay-deploy-fragments.json
     ```
 
-1. Import the modified Collection by copying the ZIP file to the Docker container as you did previously:
+1. Import the modified Fragment Set by copying the ZIP file to the Docker container as you did previously:
 
    ```bash
    docker cp a2f8-fragments.zip $(docker ps -lq):/opt/liferay/deploy
    ```
 
-1. Check for the new Fragment. In the Site Menu, go to *Design* &rarr; *Fragments* and then click on the *A2F8 Collection*. The A2F8 Jumbotron Fragment is in the Collection.
+1. Check for the new Fragment. Open the *Site Menu* (![Site Menu](../../../images/icon-product-menu.png)), go to *Design* &rarr; *Fragments*, and click on *A2F8 Set*. It should include the A2F8 Jumbotron Fragment.
 
-    ![The new Fragment is included in the auto-deployed Collection.](./auto-deploying-fragments/images/02.png)
+    ![The new Fragment is included in the auto-deployed Set.](./auto-deploying-fragments/images/02.png)
 
-Great! Now you know how to work with a Fragment Collection locally, specify a Site for it, and import it using auto-deployment.
+Great! Now you know how to work with a Fragment Set locally, specify a Site for it, and import it using auto-deployment.
 
 ## Additional Information
 

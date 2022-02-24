@@ -60,7 +60,7 @@ Another way to add the Javascript code is to create a page fragment that can be 
 
 1. Click the Product Menu (![Product Menu icon.](../../images/icon-product-menu.png)) and navigate to *Design* &rarr; *Fragments*.
 
-1. Click the *Plus* icon (![Plus icon.](../../images/icon-plus.png)) under Collections to create a new fragment collection.
+1. Click the *Plus* icon (![Plus icon.](../../images/icon-plus.png)) for Fragment Sets.
 
 1. Click the *Add* icon (![Add icon.](../../images/icon-add.png)) to create a new fragment.
 

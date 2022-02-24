@@ -14,7 +14,7 @@ The [Fragments Toolkit](../../developing-page-fragments/using-the-fragments-tool
 | `npm run compress` | Create a `.zip` file that can be manually imported into Portal |
 
 ```{note}
-You can see all of the available tasks inside the `scripts` section in the Fragment Collection project's `package.json`.
+You can see all of the available tasks inside the `scripts` section in the Fragment Set project's `package.json`.
 ```
 
 With these tools at your disposal, you can efficiently manage creating and editing Page Fragments from the command line in your local environment.

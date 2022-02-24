@@ -1,6 +1,6 @@
 # Saving a Fragment Composition
 
-You can save customized Fragment compositions (Section or Row layout Fragments) as new Fragments, so you can reuse them in your other Fragment-based pages. For example, you may want to save a [Grid Fragment](../../creating-pages/building-and-managing-content-pages/configuring-elements-on-content-pages.md#configuring-the-grid-fragment) composition with a different number of modules per row or a custom grid padding options.
+You can save customized Fragment compositions (Section or Row layout Fragments) as new Fragments, so you can reuse them in your other Fragment-based pages. For example, you may want to save a [Grid Fragment](../../creating-pages/building-and-managing-content-pages/configuring-elements-on-content-pages.md#configuring-the-grid-fragment) composition with a different number of modules per row or custom grid padding options.
 
 To save the Fragment composition,
 
@@ -24,7 +24,7 @@ To save the Fragment composition,
       ![Provide the information for the Fragment composition in the dialog that appears.](./saving-a-fragment-composition/images/02.png)
 
     ```{note}
-    If no Site-specific Fragment Collection exists, the saved Fragment composition is saved automatically to a new Fragment Collection called Saved Fragments.
+    If no Site-specific Fragment Set exists, the saved Fragment composition is saved automatically to a new Set called Saved Fragments.
     ```
 
 ## Using Saved Fragment Compositions

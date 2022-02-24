@@ -18,7 +18,7 @@ You can add a new Page from the Pages administration screen or from the Page Tre
     Starting with 7.3, the default Home Page is a Content Page instead of a Widget Page.
     ```
 
-1. Under Collections, select a Basic or Global template for your page. To start with an empty [Content Page](../understanding-pages/understanding-pages.md#page-types), click the *Blank* [Master Page Template](../defining-headers-and-footers/master-page-templates.md). Alternatively, click one of the Page templates under the Other heading.
+1. Under Page Template Sets, select a Basic or Global template for your page. To start with an empty [Content Page](../understanding-pages/understanding-pages.md#page-types), click the *Blank* [Master Page Template](../defining-headers-and-footers/master-page-templates.md). Alternatively, click one of the Page Templates under the Other heading.
 
    ![Select a Basic or Global Template for your Page.](./adding-a-page-to-a-site/images/03.png)
 

@@ -1,6 +1,10 @@
 # Using the Fragments Toolkit
 
-The Fragments Toolkit helps you develop and manage Fragments locally, using your favorite tools. Here you'll use the toolkit to generate a Fragments Project with sample Fragments, deploy it, and add your own Fragments Collection to it.
+The Fragments Toolkit helps you develop and manage Fragments locally, using your favorite tools. Here you'll use the toolkit to generate a Fragments Project with sample Fragments, deploy it, and add your own Fragments Set to it.
+
+```{note}
+For Liferay DXP 7.4+, Fragment Collections are called Fragment Sets in the Liferay UI.
+```
 
 ## Setting Up the Toolkit
 
@@ -104,9 +108,9 @@ Congratulations on generating your Fragments Project!
 
 The generator creates each project in a folder derived from the project name. For example, since you named the project `Sample Liferay Fragments`, the generator created a project folder called `sample-liferay-fragments`.
 
-## Import the Sample Collection
+## Import the Sample Fragment Set
 
-Import the sample Fragment Collection to Liferay to view the Fragments:
+Import the sample Fragment Set to Liferay to view the Fragments:
 
 1. Run the command below to start the Docker container:
 
@@ -114,12 +118,19 @@ Import the sample Fragment Collection to Liferay to view the Fragments:
     docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
     ```
 
-1. Import the Fragment Collection to your Liferay instance invoking the `yarn run import` command in your `sample-liferay-fragments` project folder. Alternatively, you can [import the Fragment Collection manually](../../displaying-content/using-fragments/managing-page-fragments.md).
+1. Import the Fragment Set to your Liferay instance invoking the `yarn run import` command in the project's root folder (e.g., `sample-liferay-fragments`). Alternatively, you can [import the Fragment Set manually](../../displaying-content/using-fragments/managing-page-fragments.md).
+
+    ```bash
+    cd sample-liferay-fragments
+    ```
 
     ```bash
     yarn run import
-    yarn run v1.22.10
-    warning package.json: No license field
+    ```
+
+1. Answer the prompts.
+
+    ```bash
     $ yo liferay-fragments:import
     ? Liferay host & port http://localhost:8080
     ? Username test@liferay.com
@@ -137,9 +148,9 @@ Import the sample Fragment Collection to Liferay to view the Fragments:
     Done in 21.43s.
     ```
 
-1. Verify that the Fragment Collection is available. Point your browser to `https://localhost:8080`, and under the Site Menu on the left side of the screen, go to *Design* &rarr; *Fragments*. The Collection appears in the Collection list.
+1. Verify the Fragment Set is available. Open the *Site Menu* (![Site Menu](../../../images/icon-product-menu.png)) and go to *Design* &rarr; *Fragments*. The Set should appear in the list.
 
-    ![The Collection is available.](./using-the-fragments-toolkit/images/01.png)
+    ![The Set is available.](./using-the-fragments-toolkit/images/01.png)
 
     ```{note}
     For Liferay DXP 7.1 and 7.2, instead navigate to *Site* → *Site Builder* → *Page Fragments* under the Product Menu to get to the *Fragments* page.
@@ -149,22 +160,22 @@ Import the sample Fragment Collection to Liferay to view the Fragments:
 
     ![Here is the sample Fragment with React.](./using-the-fragments-toolkit/images/02.png)
 
-Great! You successfully deployed a Fragment Collection.
+Great! You successfully deployed a Fragment Set.
 
-## Collection Format Overview
+## Fragment Set Structure
 
-Fragment Collections use this project structure:
+Each Fragment Set uses this structure:
 
-* `collection.json`: a text file that describes the Collection.
+* `collection.json`: a text file that describes the Fragment Set.
 
-    ```json 
+    ```json
     {
         "description": "Optional description",
-        "name": "Collection name"
+        "name": "Fragment Set Name"
     }
     ```
 
-* `language.properties` (optional): language keys defined for the Collection.
+* `language.properties` (optional): language keys defined for the Fragment Set.
 
 * `[fragment-name]/`: a folder containing all of the files for a Fragment.
 
@@ -193,36 +204,41 @@ Fragment Collections use this project structure:
 
 * `resources/` (optional): a folder containing any additional images or files the Fragments need. See [Including Default Resources in Fragments](./including-default-resources-with-fragments.md) for more information.
 
-The Fragments Toolkit facilitates creating Fragment Collections.
- 
-## Add a New Collection and Fragment
+You can use the Fragments Toolkit to quickly create projects with this structure.
 
-Create a Fragment Collection in your existing project with the `yarn run add-collection` command and answer the prompts with your Collection's name and an optional description:
+## Add a Fragment Set to the Project
 
-```bash
-yarn run add-collection
+Use the `add-collection` command to add a Fragment Set to your project.
 
-> yo liferay-fragments:collection
+1. Navigate to your project's root folder and run this command.
 
-? Collection name (required) My Collection
-? Collection description (optional) This is my new Fragment Collection.
-   create src/my-collection/collection.json
-```
+    ```bash
+    yarn run add-collection
+    ```
 
-Resulting `collection.json` file:
+1. When prompted, enter a name and description for the Fragment Set.
 
-```json
-{
-    "description": "This is my new Fragment Collection.",
-    "name": "My Collection"
-}
-```
+    ```bash
+    > yo liferay-fragments:collection
+    ? Collection name (required) My Set
+    ? Collection description (optional) This is my new Fragment Set.
+    create src/my-set/collection.json
+    ```
+
+1. Verify your new Fragment Set was created successfully in the project's `src` folder. It should only include a `collection.json` file:
+
+    ```json
+    {
+        "description": "This is my new Fragment Set.",
+        "name": "My Set"
+    }
+    ```
 
 ## Create a New Fragment
 
-The `add-fragment` command generates a Fragment per your input.
+Use the `add-fragment` command to add a new Fragment to the Set.
 
-1. Run the `add-fragment` command.
+1. Navigate to your project's root folder and run this command.
 
     ```bash
     yarn run add-fragment
@@ -260,15 +276,13 @@ The `add-fragment` command generates a Fragment per your input.
     Please see [Fragment-Specific Tags](../reference/fragments/fragment-specific-tags-reference.md) for more information on Liferay's editable data syntax.
     ```
 
-1. Select the Collection you just created (`My Collection`).
+1. Select the Fragment Set you just created (`My Set`).
 
     ```bash
-    ? Choose a collection (my-collection)
-       create src/my-collection/my-jumbotron/index.html
-       create src/my-collection/my-jumbotron/main.js
-       create src/my-collection/my-jumbotron/styles.css
-       create src/my-collection/my-jumbotron/fragment.json
-       create src/my-collection/my-jumbotron/configuration.json
+    ? Choose a collection
+        My Set
+        Sample Set
+        + New Collection
     ```
 
     ```{note}
@@ -287,7 +301,7 @@ Here is the Fragment's `index.html`:
 
 The Fragment HTML uses the new `data-lfr` editable syntax.
 
-## Edit Your Fragment 
+## Edit Your Fragment
 
 Modify any part of your Fragment.
 
@@ -371,14 +385,14 @@ You can import your new Fragment as you did the original example Fragment:
     yarn run import
     ```
 
-1. Verify that the new Fragment Collection is available. Point your browser to `https://localhost:8080`, and under the Site Menu on the left side of the screen, go to *Design* &rarr; *Fragments*. The Collection appears in the Collection list.
+1. Verify the Fragment Set is available. Open the *Site Menu* (![Site Menu](../../../images/icon-product-menu.png)) and go to *Design* &rarr; *Fragments*. The Set should appear in the list.
 
-![The Collection is available.](./using-the-fragments-toolkit/images/03.png)
+![The Set is available.](./using-the-fragments-toolkit/images/03.png)
 
 Great! Now you know how to use the Fragments Toolkit to create and manage Fragments. See the [Fragments Toolkit Command Reference](../reference/fragments/fragments-toolkit-command-reference.md) for more toolkit command information.
 
 ## Related Information
 
-* [Creating a Contributed Fragment Collection](./creating-a-contributed-fragment-collection.md)
+* [Creating a Contributed Fragment Set](./creating-a-contributed-fragment-set.md)
 * [Using the Fragments Editor](./using-the-fragments-editor.md)
 * [Fragments Toolkit Command Reference](../reference/fragments/fragments-toolkit-command-reference.md)

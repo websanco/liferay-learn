@@ -8,6 +8,10 @@ Page Templates help you efficiently create pages based on predefined layouts and
 
 You may also create your own [Content Page](../building-and-managing-content-pages/content-pages-overview.md) Templates and [Widget Page](../understanding-pages/understanding-pages.md#widget-pages) Templates, as described below.
 
+```{note}
+For Liferay DXP 7.4+, Page Template Collections are called Page Template Sets in the Liferay UI.
+```
+
 ## Creating a New Page Template
 
 The steps below show how to create and use Widget and Content Page Templates.
@@ -16,11 +20,11 @@ The steps below show how to create and use Widget and Content Page Templates.
 
 1. Select the *Page Templates* tab.
 
-1. Click *New* and create a new collection to organize your Page Templates.
+1. Click *New* and create a new Set to organize your Page Templates.
 
-    ![Creating a new Page Template Collection.](./creating-a-page-template/images/02.png)
+    ![Creating a new Page Template Set.](./creating-a-page-template/images/02.png)
 
-1. Click the *Add* icon (![Add Page Template](../../../images/icon-add.png)) and select either *Widget Page Template* or *Content Page Template*. You can return to the Page Template's configuration at any time by clicking the *Actions* icon (![Actions](../../../images/icon-actions.png)) next to the Page Template in the Collection and selecting *Configure*.
+1. Click the *Add* icon (![Add Page Template](../../../images/icon-add.png)) and select either *Widget Page Template* or *Content Page Template*. You can return to the Page Template's configuration at any time by clicking the *Actions* icon (![Actions](../../../images/icon-actions.png)) next to the Page Template in the Set and selecting *Configure*.
 
 1. Enter a Name.
 

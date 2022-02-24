@@ -5,8 +5,11 @@ Drop zones are integral to building your Content Pages. With them, you can creat
 Follow these steps to define a drop zone:
 
 1. Go to *Site Administration* &rarr; *Design* &rarr; *Fragments*.
-1. Under Collections, select the Collection with the Fragment you want to edit.
+
+1. Under Fragment Sets, select the Set with the Fragment you want to edit.
+
 1. Click the Fragment's *Actions* (![Action](./../../../images/icon-actions.png)) button and select *Edit* to open the [Fragments Editor](./using-the-fragments-editor.md).
+
 1. In the HTML code area, add the `<lfr-drop-zone></lfr-drop-zone>` label to define a drop zone within a Fragment.
 
    ```{important}
