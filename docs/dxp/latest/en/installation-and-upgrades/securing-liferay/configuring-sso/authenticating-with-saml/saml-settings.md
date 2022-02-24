@@ -20,7 +20,7 @@ Many of the same fields appear in both the Service Provider and the Identity Pro
 
 **User Resolution:** Choose from No Matching, Match a User Field Chosen Dynamically Based on Name ID Format, or Match Using a Specific SAML Attribute Mapping. This algorithm determines how users are found or provisioned. For example, if you choose based on Name ID Format and the  Name ID Format is email address, the algorithm matches by email address. 
 
-**Attribute Mapping:** Choose a field from Liferay to match to a SAML attribute. You can choose several fields from Liferay's User object or custom fields you have created for the User object. These attributes are updated from the SAML assertion when a user logs into the system. 
+**Attribute Mapping:** Choose a field from Liferay to match to a SAML attribute. You can choose several fields from Liferay's User object or custom fields you have created for the User object. These attributes are updated from the SAML assertion when a user logs into the system. By default the `NameID` and Service Provider are bound to a user after the `emailAddress` is matched at least once. Bindings are preferred and checked before user matching is conducted, so users whose email addresses have changed don't lose their ability to log in, and email addresses can be corrected through SAML attribute mappings. 
 
 **Keep Alive:**If users are logged into several Liferay SP instances via a Liferay IdP, their sessions can be kept alive as long as they keep a browser window open to one of them. Configure this only if the SP is Liferay DXP. The URL is `https://[SP host name]/c/portal/saml/keep_alive`.
 
