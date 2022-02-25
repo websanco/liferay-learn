@@ -6,7 +6,7 @@ All of Liferay's dependencies that use Node are designed to use a specific versi
 
 ## Updating Your Node Version
 
-If you have an old or unsupported version of Node installed for your Liferay installation, then you may need to update it to work correctly. Follow these steps to update Node to a specific version.
+If you have an old or unsupported version of Node installed for your Liferay installation, then you may need to update it to work correctly. Follow these steps to update Node to a specific major version.
 
 1. Remove your existing Node installation.
 
@@ -48,7 +48,7 @@ If you have an old or unsupported version of Node installed for your Liferay ins
 	npm --version
 	```
 
-You should now have a supported version of Node and NPM for your Liferay installation. However, if your NPM version does not match the expected version, then you can install a specific version of NPM with this command:
+You should now have a supported version of Node and NPM for your Liferay installation (updated to the latest minor version that is supported). However, if your NPM version does not match the expected version, then you can install a specific version of NPM with this command:
 
 ```bash
 npm install -g npm@x.x.x
