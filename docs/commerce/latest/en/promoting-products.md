@@ -11,6 +11,7 @@ promoting-products/using-the-promotion-base-list.md
 promoting-products/creating-a-promotion.md
 promoting-products/promotion-base-list-reference.md
 promoting-products/introduction-to-product-groups.md
+promoting-products/replacement-products.md
 ```
 
 ```{raw} html
