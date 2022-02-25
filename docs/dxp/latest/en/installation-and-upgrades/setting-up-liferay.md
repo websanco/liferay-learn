@@ -11,7 +11,6 @@ setting-up-liferay/configuring-mail.md
 ../system-administration/file-storage.md
 ../system-administration/file-storage/enabling-antivirus-scanning-for-uploaded-files.md
 ../using-search/installing-and-upgrading-a-search-engine/installing-a-search-engine.md
-securing-liferay.md
 maintaining-a-liferay-installation/backing-up.md
 ../system-administration/installing-and-managing-apps.md
 setting-up-liferay/using-a-cdn.md
@@ -31,7 +30,7 @@ After [installing Liferay](./installing-liferay.md), configure it to meet your n
 * [Configure Users](#configure-users)
 * [Configure File Storage](#configure-file-storage)
 * [Install a Search Engine](#install-a-search-engine)
-* [Secure Liferay](#securre-liferay)
+* [Secure Liferay](#secure-liferay)
 * [Configure Backups](#configure-backups)
 
 **Other Setup Tasks**
