@@ -82,7 +82,7 @@ Learning to Rankを使用して、Elasticsearchに送信されたLiferayクエ�
 始める前に、Liferayと通信するリモート [Elasticsearch](../installing-and-upgrading-a-search-engine/elasticsearch.html) クラスターが必要です。 詳細は、 [検索エンジンの互換性マトリックス](https://help.liferay.com/hc/en-us/articles/360016511651) を参照してください。
 
 ```{tip}
-   `Sugguggestions <../search-pages-and-widgets/search-results/enabling-search-suggestions.md>`_  を使用して、最も一般的なクエリを発見することができます（これは、Learning to Rank モデルを作成するクエリを決定する 1 つの方法になります）。
+   `Sugguggestions <../search-pages-and-widgets/search-results/enabling-search-suggestions.md>`_ を使用して、最も一般的なクエリを発見することができます（これは、Learning to Rank モデルを作成するクエリを決定する 1 つの方法になります）。
 ```
 
 <a name="ステップ1elasticsearchにlearning-to-rankプラグインをインストールする" />

@@ -2,9 +2,9 @@
 
 > 以下に適用されます。Liferay DXP 7.3, Liferay Portal 7.3 GA4
 
-ここでは、ローカルマシン上でLiferay-Elasticsearchの最小セットアップを行い、ElasticsearchとLiferay DXP 7.3の間の [Rest Client](https://www.elastic.co/guide/en/elasticsearch/client/java-rest/7.x/java-rest-high.html) 接続がどのように構成されているかを確認することができます。 この例では、2つのDockerコンテナを使用しています。1つはElasticsearchコンテナ、もう1つはLiferay DXPコンテナです。 より概念的で本番環境に似た情報については、[Elasticsearchのインストール](./getting-started-with-elasticsearch.md)を参照してください。
+ここでは、ローカルマシン上でLiferay-Elasticsearchの最小セットアップを行い、ElasticsearchとLiferay DXP 7.3の間の [Rest Client](https://www.elastic.co/guide/en/elasticsearch/client/java-rest/7.x/java-rest-high.html) 接続がどのように構成されているかを確認することができます。 この例では、2つのDockerコンテナを使用しています。1つはElasticsearchコンテナ、もう1つはLiferay DXPコンテナです。 より概念的で本番環境に似た情報については、 [Elasticsearchのインストール](./getting-started-with-elasticsearch.md)を参照してください。
 
-Elasticsearch接続で認証と暗号化を有効にするには、[Securing Elasticsearch](./securing-elasticsearch.md)をお読みください。
+Elasticsearch接続で認証と暗号化を有効にするには、[Elasticsearchの保護](./securing-elasticsearch.md)をお読みください。
 
 <a name="dockerコンテナにバインドマウントするためのローカルフォルダを作成する" />
 

@@ -1,16 +1,17 @@
-開発者ガイド
-===============
+# 開発者ガイド
 
-.. toctree:: :maxdepth: 2
+```{toctree}
+:maxdepth: 2
 
-   developer-guide/writing-a-similar-results-contributor.md developer-guide/apis.rst
+developer-guide/writing-a-similar-results-contributor.md
+developer-guide/apis.md
+```
 
--  :doc:`/using-search/developer-guide/writing-a-similar-results-contributor`
-* 集計
-* モデルエンティティのインデックス作成
-* 検索クエリとフィルター
+- [Contributing Custom Content to the Similar Results Widget](developer-guide/writing-a-similar-results-contributor.md)
+- 集計
+- モデルエンティティのインデックス作成
+- 検索クエリとフィルター
 
-API
-----
+## APIs
 
--  :doc:`/using-search/developer-guide/apis`
+- [Search APIs](./developer-guide/apis.md)

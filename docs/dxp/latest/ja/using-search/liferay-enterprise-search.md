@@ -8,7 +8,7 @@ Liferay Enterprise Search
    liferay-enterprise-search/learning-to-rank.md 
    liferay-enterprise-search/monitoring-elasticsearch.md
 
-Liferay Enterprise Search (LES) のサブスクリプションでは、Liferay DXPのサブスクリプションで利用できる検索機能以外の追加機能にアクセスできます。 お使いのLiferay DXPのバージョンでLESに含まれるサービスや機能の詳細な説明を見るには、 `Liferay DXP コンポーネントリソース<https://help.liferay.com/hc/en-us/articles/360014400932>`_ のLESの公式説明を参照してください。 LESはすぐにインストールできますが、その機能を使うにはライセンスが必要です。 アクティベーションの記事に詳細があります。
+Liferay Enterprise Search (LES) のサブスクリプションでは、Liferay DXPのサブスクリプションで利用できる検索機能以外の追加機能にアクセスできます。 お使いのLiferay DXPのバージョンでLESに含まれるサービスや機能の詳細な説明を見るには、 `Liferay DXP コンポーネントリソース　<https://help.liferay.com/hc/en-us/articles/360014400932>`_ のLESの公式説明を参照してください。 LESはすぐにインストールできますが、その機能を使うにはライセンスが必要です。 アクティベーションの記事に詳細があります。
 
 -  :doc:`/using-search/liferay-enterprise-search/activating-liferay-enterprise-search`
 

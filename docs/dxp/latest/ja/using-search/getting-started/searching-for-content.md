@@ -47,7 +47,7 @@ Liferayの検索インフラストラクチャは、サポートされている�
 ![構成画面で検索バーの動作を構成します。](./searching-for-content/images/05.png)
 
 ```{note}
-   あるページの上部にグローバルに埋め込まれた検索バーウィジェットを設定すると、サイト内のすべてのページでページトップの検索バーウィジェットが設定されます。 また、 `destination Search Page's <../search-pages-and-widgets/working-with-search-pages/search-pages.md>`_ Search Bar Portlet' が異なる設定になっている場合は、そちらも上書きされます。 ただし、他のページに手動で設置した検索バーウィジェットを上書きすることはできません。
+   あるページの上部にグローバルに埋め込まれた検索バーウィジェットを設定すると、サイト内のすべてのページでページトップの検索バーウィジェットが設定されます。 また `destination Search Page's <../search-pages-and-widgets/working-with-search-pages/search-pages.md>`_ Search Bar Portlet' が異なる設定になっている場合は、そちらも上書きされます。 ただし、他のページに手動で設置した検索バーウィジェットを上書きすることはできません。
 ```
 
 いくつかのオプションがあります：

@@ -9,7 +9,7 @@
 * Liferayにデプロイされ、デプロイメントに適合するように構成されたElasticsearchコネクタアプリケーション。
 
 ```{tip}
-   Additional features and intergrations are available with a `Liferay Enterprise Search <../../liferay_enterprise_search.rst>`_ subscription.
+   Additional features and intergrations are available with a `Liferay Enterprise Search <../../liferay-enterprise-search.md>`_ subscription.
 ```
 
 Liferayサーバーがすでに設置されていると仮定すると、残りの手順は次のとおりです。
@@ -47,13 +47,13 @@ Elasticsearchは、ElasticsearchアーカイブまたはDockerイメージを使
 
 ## LiferayをElasticsearchに接続する
 
-ElasticsearchへのコネクタはLiferayにバンドルされています。 Elasticsearchアプリケーションへの最新のLiferayコネクタはLiferay マーケットプレイスでも入手できます。 詳細は、[Connecting to Elasticsearch](./connecting-to-elasticsearch.md)を参照してください。
+ElasticsearchへのコネクタはLiferayにバンドルされています。 Elasticsearchアプリケーションへの最新のLiferayコネクタはLiferay マーケットプレイスでも入手できます。 詳細は、 [Elasticsearchへの接続](./connecting-to-elasticsearch.md) を参照してください。
 
 <a name="elasticsearchの保護" />
 
 ## Elasticsearchの保護
 
-本番環境では、LiferayとElasticsearchの通信を保護する必要があります。 [Securing Elasticsearch](./securing-elasticsearch.md)では、認証と暗号化を設定する方法を説明し、Liferay Enterprise Search Monitoringに必要なPEM証明書の使用方法を示しています。
+本番環境では、LiferayとElasticsearchの通信を保護する必要があります。 [Elasticsearchの保護](./securing-elasticsearch.md)では、認証と暗号化を設定する方法を説明し、Liferay Enterprise Search Monitoringに必要なPEM証明書の使用方法を示しています。
 
 <a name="次のステップ" />
 

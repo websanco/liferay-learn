@@ -244,6 +244,6 @@ SSLException: No PSK available. Unable to resume
 ## 関連トピック
 
 * [Elasticsearchの保護](../installing-and-upgrading-a-search-engine/elasticsearch/securing-elasticsearch.md)
-* [クラスター横断レプリケーション](./cross_cluster_replication.html)
-* [検索の調整](../search_administration_and_tuning.html)
-* [Liferayのインストールとアップグレード](../../installation_and_upgrades.html)
+* [クラスター横断レプリケーション](./cross-cluster-replication.md)
+* [検索の調整](../search-administration-and-tuning.md)
+* [Liferayのインストールとアップグレード](../../installation-and-upgrades.md)
