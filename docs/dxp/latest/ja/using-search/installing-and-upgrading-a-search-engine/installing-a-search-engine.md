@@ -4,7 +4,7 @@
 
 <!-- MAKE A DIAGRAM SIMILAR TO THE CCR ONE BUT WITH JUST ONE CONNECTION -->
 
-Liferayを起動すると、組み込みのElasticsearchサーバー（サイドカー）が同時に起動します。 このデフォルトの検索エンジンは、テスト用の便利な検索機能を提供しますが、本番環境での使用はサポートされていません。 [Elasticsearchを開始する](./elasticsearch/getting-started-with-elasticsearch.md) では本番環境レベルのElasticsearchのセットアップについて説明しています。 [Using the Sidecar or Embedded Elasticsearch](./elasticsearch/using-the-sidecar-or-embedded-elasticsearch.md) では、デフォルトのElasticsearchサーバー（7.3ではサイドカー、7.2ではEmbedded）の機能と制限について説明しています。
+Liferayを起動すると、組み込みのElasticsearchサーバー（サイドカー）が同時に起動します。 このデフォルトの検索エンジンは、テスト用の便利な検索機能を提供しますが、本番環境での使用はサポートされていません。 [Elasticsearchを開始する](./elasticsearch/getting-started-with-elasticsearch.md) では本番環境レベルのElasticsearchのセットアップについて説明しています。 [サイドカーまたはEmbedded モードのElasticsearchの使用](./elasticsearch/using-the-sidecar-or-embedded-elasticsearch.md) では、デフォルトのElasticsearchサーバー（7.3ではサイドカー、7.2ではEmbedded）の機能と制限について説明しています。
 
 ```{note}
 Liferayの [Solr](http://lucene.apache.org/solr) のサポートは、廃止される前にもう一つのアップデート（Solr 8のサポート）が行われます。 しかし、SolrはLiferayにバンドルされていないため、開発やテストの際にもリモートで接続する必要があります。 Solrを使用するには、 [Solrのインストール](./solr/installing-solr.md) を参照してください。

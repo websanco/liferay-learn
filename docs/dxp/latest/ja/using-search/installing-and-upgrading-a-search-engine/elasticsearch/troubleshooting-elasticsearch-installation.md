@@ -14,7 +14,7 @@
 
 Elasticsearchコネクター設定の`transportAddresses`プロパティの値には、Elasticsearchノードが実行されている有効なホストとポートが少なくとも1つ含まれている必要があります。 Liferayを組み込みモードで実行していて、スタンドアロンのElasticsearchノードまたはクラスターを起動すると、ポート`9300`が占有されていることが検出され、ポート`9301`に切り替わります。 その後、LiferayのElasticsearchコネクターをリモートモードに設定すると、引き続きデフォルトのポート（`9300`）でElasticsearchを検索します。 クラスターのマスターノードとデータノードのアドレスがすべて記載されていることを確認してください。
 
-[Connecting to Elasticsearch](./connecting-to-elasticsearch.md)では、コネクター設定オプションについて詳しく説明しています。
+[Elasticsearchへの接続](./connecting-to-elasticsearch.md) では、コネクター設定オプションについて詳しく説明しています。
 
 <a name="ネットワークホストアドレス" />
 

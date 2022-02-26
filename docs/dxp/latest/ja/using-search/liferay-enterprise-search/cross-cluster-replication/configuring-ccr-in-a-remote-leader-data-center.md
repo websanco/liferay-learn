@@ -44,7 +44,7 @@
    xpack.monitoring.collection.enabled: true
    ```
 
-   セキュリティ設定（`xpack.security...`）を使用するには、パスワードを設定し、ノード証明書を取得する必要があります。 詳しくは、[Securing Elasticsearch](../../installing-and-upgrading-a-search-engine/elasticsearch/securing-elasticsearch.md)を参照してください。
+   セキュリティ設定（`xpack.security...`）を使用するには、パスワードを設定し、ノード証明書を取得する必要があります。 詳しくは、 [Elasticsearchの保護](../../installing-and-upgrading-a-search-engine/elasticsearch/securing-elasticsearch.md) を参照してください。
 
 1. サーバーを起動します。 サーバーディレクトリのルートにいる場合は、以下を実行します。
 

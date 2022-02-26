@@ -17,11 +17,11 @@
 | liferay-20101-workflow-metrics-transitions          | アプリインデックス  | ワークフロー統計情報アプリケーションのワークフロートランジションに関するデータを保存する  |
 
 ```{important}
-   Liferay 7.2のインデックス名は、パッチによってインデックスの命名パターンに変更が加えられたため、より複雑になっています。 詳しくは、 `Multi-Tenant Index Names <../getting-started/whats-new-in-search-for-73.md#multi-tenant-index-names>`_ をご覧ください。
+   Liferay 7.2のインデックス名は、パッチによってインデックスの命名パターンに変更が加えられたため、より複雑になっています。 詳しくは、 [Multi-Tenant Index Names](../getting-started/whats-new-in-search-for-73.md#multi-tenant-index-names) をご覧ください。
 ```
 
 ```{note}
-   Liferay DXPは、カスタムElasticsearchインデックスを作成、使用（書き込み、読み込み）するためのAPIを提供します。 これらのAPIの使用方法については、 `Developer Guide <../developer_guide.html>`_ をご参照ください。
+   Liferay DXPは、カスタムElasticsearchインデックスを作成、使用（書き込み、読み込み）するためのAPIを提供します。 これらのAPIの使用方法については、  [Developer Guide](../developer-guide.html) をご参照ください。
 ```
 
 もし、 [Liferay Commerce](https://www.liferay.com/products/commerce) のサブスクリプションを持っていて、それがインストールで有効になっている場合、これらのインデックスも持っています。

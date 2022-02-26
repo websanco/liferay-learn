@@ -9,7 +9,7 @@
 - サーチエンジンから返されるレスポンス文字列
 
 ```{note}
-   リクエスト文字列として返されたJSONは、明確にするためにいくつかのElasticsearchのクエリのデフォルトから刈り取られています。 Elasticsearchが処理した完全なリクエストJSONを見るには、 `Elasticsearchサーバのロギング <https://www.elastic.co/guide/en/elasticsearch/reference/6.x/logging.html>`_ を調整してください。
+   リクエスト文字列として返されたJSONは、明確にするためにいくつかのElasticsearchのクエリのデフォルトから刈り取られています。 Elasticsearchが処理した完全なリクエストJSONを見るには、 [Elasticsearchサーバのロギング](https://www.elastic.co/guide/en/elasticsearch/reference/6.x/logging.html) を調整してください。
 ```
 
 **スコアの説明を有効にする** オプション（デフォルトで有効）を指定すると、「洞察」ウィジェットは、返された各結果に対して関連性スコアの説明も表示します。

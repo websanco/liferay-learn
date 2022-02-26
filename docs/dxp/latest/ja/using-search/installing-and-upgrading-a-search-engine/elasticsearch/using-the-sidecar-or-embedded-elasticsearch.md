@@ -38,7 +38,7 @@ Elasticsearchサーバーには、次のURLからアクセスできます。
 HSQLのような組み込みデータベースを本番環境で実行したり、バンドルされたElasticsearchサーバーを本番環境で実行したりしないでください。 代わりに、Elasticsearchをスタンドアロンサーバーまたはサーバーノードのクラスターとしてリモートモードで実行します。
 
 ```{important}
-   Synonym SetsとResult Rankingsは、検索インデックスを一次データの保存に使用するアプリケーションです。 Liferayのデータベースにデータは保存されません。 そのため、サイドカーや組み込みのElasticsearchを使用しているときにSynonym SetsやResult Rankingsが設定されていた場合、リモートのElasticsearchサーバに切り替えてインデックスを再作成しても、それらの設定は``復元されません。 その代わり、シノニムセットと結果ランキングをリモートのElasticsearchクラスタに手動で取り込む必要があります。 インデックスを維持するためのElasticの `スナップショットと復元 <https://www.elastic.co/guide/en/elasticsearch/reference/7.x/snapshot-restore.html>`_ 機能の詳細は `アップグレードガイド<../elasticsearch.html>`_ を参照してください。
+   Synonym SetsとResult Rankingsは、検索インデックスを一次データの保存に使用するアプリケーションです。 Liferayのデータベースにデータは保存されません。 そのため、サイドカーや組み込みのElasticsearchを使用しているときにSynonym SetsやResult Rankingsが設定されていた場合、リモートのElasticsearchサーバに切り替えてインデックスを再作成しても、それらの設定は``復元されません。 その代わり、シノニムセットと結果ランキングをリモートのElasticsearchクラスタに手動で取り込む必要があります。 インデックスを維持するためのElasticの [スナップショットと復元](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/snapshot-restore.html) 機能の詳細は [アップグレードガイド](../elasticsearch.html) を参照してください。
 ```
 
 <a name="バンドルされているelasticsearchサーバーのユースケース" />
@@ -75,7 +75,7 @@ Tomcat以外のアプリケーションサーバーのバンドルをダウン�
 <!-- ongoing work, LRDOCS-8008 -->
 
 ```{important}
-   バンドルされているElasticsearchサーバは、開発およびテスト目的に有用であり、本番環境では使用しないでください。 リモート検索エンジンのインストールについては、 `Elasticsearchをインスト0るする <./getting-started-with-elasticsearch.md>`_ を参照してください。
+   バンドルされているElasticsearchサーバは、開発およびテスト目的に有用であり、本番環境では使用しないでください。 リモート検索エンジンのインストールについては、 [Elasticsearchをインスト0るする](./getting-started-with-elasticsearch.md) を参照してください。
 ```
 
 <a name="embeddedとサイドカーの比較" />

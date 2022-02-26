@@ -67,13 +67,13 @@ docker cp ~/path/to/com.liferay.portal.search.elasticsearch7.configuration.Elast
 
 
 ```{tip}
-   コネクタには多くの設定項目があります。 それぞれの定義については、 `Elasticsearch コネクターの設定 <./elasticsearch-connector-configuration-reference.md>`_ をご参照ください。 ほとんどの設定は、 `Elasticsearch <https://www.elastic.co/guide/en/elasticsearch/reference/7.x/index.html>`_ で利用可能な設定に対応しています。
+   コネクタには多くの設定項目があります。 それぞれの定義については、 [Elasticsearch コネクターの設定](./elasticsearch-connector-configuration-reference.md) をご参照ください。 ほとんどの設定は、 [Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/index.html) で利用可能な設定に対応しています。
 ```
 
 Elasticsearchサーバーを名前で参照するには、各Elasticsearchサーバー名をDNSまたはLiferayサーバーの`/etc/hosts` ファイル内のIPアドレスにマップします。
 
 ```{tip}
-  ネットワークホストアドレスのフォーマットは、``http[s]://[host name]:[port]`` です。 LiferayのDockerコンテナを使用している場合、``docker run``コマンドで``--add-host [host name]:[IP address]``オプションを使用して、ホスト名を各ElasticsearchサーバのIPアドレスにマッピングすることができます。 ポートは、Elasticsearchコンテナのdocker runコマンドで、``-p 1234:5678``オプションの最初の値として定義されます（ここでは``1234``です）。 HTTPSが有効になっていないローカルテスト環境を実行している場合は、すべてのアドレスが ``http://localhost:port`` になります。 cDockerのドキュメント <https://docs.docker.com/engine/reference/run/#managing-etchosts>`_ をご覧ください。
+  ネットワークホストアドレスのフォーマットは、//[host name]:[port]` です。 LiferayのDockerコンテナを使用している場合、`docker run`コマンドで`--add-host [host name]:[IP address]`オプションを使用して、ホスト名を各ElasticsearchサーバのIPアドレスにマッピングすることができます。 ポートは、Elasticsearchコンテナのdocker runコマンドで、`-p 1234:5678`オプションの最初の値として定義されます（ここでは`1234`です）。 HTTPSが有効になっていないローカルテスト環境を実行している場合は、すべてのアドレスが `http://localhost:port` [になります。 cDockerのドキュメント](https://docs.docker.com/engine/reference/run/#managing-etchosts) をご覧ください。
 ```
 
 <a name="liferay-72elasticsearch-7コネクタのインストール" />
@@ -108,7 +108,7 @@ Liferay 7.2では、バンドルされているコネクタアプリケーショ
     Liferayサーバーを起動すると（まだ起動していない場合）、Liferayはこのファイルを読み取り、宣言されたバンドルの起動をブロックします。
 
     ```{tip}
-      **Docker:** ``Liferay Home`` やその他のLiferayインストールの重要なフォルダは、 ``/mnt/liferay`` にあるDockerコンテナにアクセスして、以下のように説明されます。 <../../.../installation-and-upgrades/installing-liferay/using-liferay-docker-images/container-lifecycle-and-api.md#api>`_ . docker cp /path/to/local/file [container_name]:/mnt/liferay/files/osgi/configs``を使って、コンフィグレーションファイルをコンテナ内に配置することができます。 その後、``docker cp``を使ってLiferay Connector to Elasticsearch 7のLPKGファイルをデプロイすることができます。
+      **Docker:** eray Home` やその他のLiferayインストールの重要なフォルダは、 `/mnt/liferay` [にあるDockerコンテナにアクセスして、以下のように説明されます。](../../.../installation-and-upgrades/installing-liferay/using-liferay-docker-images/container-lifecycle-and-api.md#api) . docker cp /path/to/local/file [container_name]:/mnt/liferay/files/osgi/configs`を使って、コンフィグレーションファイルをコンテナ内に配置することができます。 その後、`docker cp`を使ってLiferay Connector to Elasticsearch 7のLPKGファイルをデプロイすることができます。
     ```
 
 ### Elasticsearch 7コネクタのインストール
@@ -177,7 +177,7 @@ Liferay 7.3では、［Workflow Metrics Settings］ウィンドウから[ワー�
 1. ［**すべてインデックスを再構築**］ をクリックします。 この操作をシステム内の各仮想インスタンスに対して繰り返します。
 
 ```{note}
-   一次データの保存（データベースにバックアップされていないデータの保存）に使用されているElasticsearchインデックスがある場合は、`snapshot and restore approach <./upgrading-elasticsearch/backing-up-elasticsearch.md>`_ . Liferay独自の検索の調整インデックス(結果ランキングとSynyonyms用)は、プライマリーストレージのインデックスです。
+   一次データの保存（データベースにバックアップされていないデータの保存）に使用されているElasticsearchインデックスがある場合は、[snapshot and restore approach](./upgrading-elasticsearch/backing-up-elasticsearch.md) . Liferay独自の検索の調整インデックス(結果ランキングとSynyonyms用)は、プライマリーストレージのインデックスです。
 ```
 
 これで、LiferayはリモートのElasticsearch 7インストールにコンテンツのインデックスを作成します。
@@ -194,7 +194,7 @@ Liferay 7.3では、［Workflow Metrics Settings］ウィンドウから[ワー�
 | CE 7.2、DXP 7.2          | Liferayコネクター（CE）とElasticsearch 6の連携              | バンドル                                                                                                                                                     | [トランスポート](https://www.elastic.co/guide/en/elasticsearch/client/java-api/6.x/transport-client.html) | &#10004;\ **\**(requires [LES](https://www.liferay.com/products/dxp/enterprise-search) ) | エンベデッド/リモート                       |
 | CE 7.2、DXP 7.2          | Liferay Connector (CE) to Elasticsearch 7 (v3.x) | マーケットプレイス [CE](https://web.liferay.com/marketplace/-/mp/application/170642090) , [DXP](https://web.liferay.com/marketplace/-/mp/application/170390307) です。 | [トランスポート](https://www.elastic.co/guide/en/elasticsearch/client/java-api/7.x/transport-client.html) | &#10004;                                                                                  | エンベデッド/リモート                       |
 
-\ **コネクタ設定の***動作モード***( `operationMode`) 設定は非推奨になり、 ***本番モードが有効**(`productionModeEnabled`)に置き換えられました。
+\ **コネクタ設定の****動作モード*(** `operationMode`) 設定は非推奨になり、****本番モードが有効**(`productionModeEnabled`)に置き換えられました。
 
 \ **\** [Liferay Enterprise Search Security](https://web.liferay.com/marketplace/-/mp/application/106163963) アプリケーションを通して。
 
@@ -204,7 +204,7 @@ Liferay 7.3では、［Workflow Metrics Settings］ウィンドウから[ワー�
 
 ## 次のステップ
 
-LiferayがElasticsearchに接続されたので、Elasticsearchの使用を開始できます。 本番環境では、LiferayサーバーとElasticsearchサーバー間の通信を保護する必要があります。 詳しくは、[Securing Elasticsearch](./securing-elasticsearch.md)を参照してください。
+LiferayがElasticsearchに接続されたので、Elasticsearchの使用を開始できます。 本番環境では、LiferayサーバーとElasticsearchサーバー間の通信を保護する必要があります。 詳しくは、 [Elasticsearchの保護](./securing-elasticsearch.md) を参照してください。
 
 <a name="関連トピック" />
 

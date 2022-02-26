@@ -43,7 +43,7 @@ Upgrading
 保護する 
 ~~~~~~~~
 - :doc:`/using-search/installing-and-upgrading-a-search-engine/elasticsearch/securing-elasticsearch`
-旧バージョンのElasticsearchをインストールする **_***_***_***_***_***_***_***_***_***_***_***_***_***_***_***_***_***_***_**
+旧バージョンのElasticsearchをインストールする ***_*_*****_*_*****_*_*****_*_*****_*_*****_*_*****_*_*****_*_*****_*_****_**
 - Elasticsearch 6 for Liferay 7.2 (近日公開)
 設定
 ~~~~~~~~~~~

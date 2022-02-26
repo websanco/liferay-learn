@@ -46,7 +46,7 @@
 カスタムファセットを使用するには、構成で使用する非分析キーワードフィールドを知っておく必要があります。
 
 ```{tip}
-   Elasticsearchは複数の方法でフィールドのインデックス化をサポートしています。 いくつかのテキストフィールドは、マッピングの中で ``raw`` `multi-fields <https://www.elastic.co/guide/en/elasticsearch/reference/7.x/multi-fields.html>`_  のようにネストされている場合や、フィールドが ``fieldName_sortable`` として追加の別のフィールドマッピングでマッピングされている場合（``キーワード`` として）、キーワードフィールドとして使用することができます。 以下の例では、カスタムフィールドのファセットを作成し、Elasticsearchのマルチフィールドのコンセプトを活用しています。
+   Elasticsearchは複数の方法でフィールドのインデックス化をサポートしています。 いくつかのテキストフィールドは、マッピングの中で ` [multi-fields](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/multi-fields.html)  のようにネストされている場合や、フィールドが `fieldName_sortable` として追加の別のフィールドマッピングでマッピングされている場合（`キーワード` として）、キーワードフィールドとして使用することができます。 以下の例では、カスタムフィールドのファセットを作成し、Elasticsearchのマルチフィールドのコンセプトを活用しています。
 ```
 
 使用可能なフィールドのリスト全体を参照するには、［**コントロールパネル**］→［**構成**］→［**検索**］（［**フィールドマッピング**］タブをクリック）からフィールドマッピングを調べます。 ここでは、数多くのインデックスを見ることができます。 興味のあるLiferayアセットは、 [company index](../../search-administration-and-tuning/elasticsearch-indexes-reference.md)にインデックスされており、 `liferay-20101` のような名前になっています（`20101` はカンパニーID）。
@@ -54,7 +54,7 @@
 あるいは、検索エンジンのAPIを使ってマッピングを閲覧することもできます。 Elasticsearchでは、端末からcURLを使ってフィールドマッピングにアクセスし、 [Get Mapping API](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/indices-get-mapping.html) を呼び出すことができます。
 
 ```{tip}
-   `Kibanaの <../../liferay-enterprise-search/monitoring-elasticsearch.md>`_  Dev Toolsのコンソールは、ElasticsearchのAPIコールを行うのに、cURLよりも便利です。
+   [Kibanaの](../../liferay-enterprise-search/monitoring-elasticsearch.md)  Dev Toolsのコンソールは、ElasticsearchのAPIコールを行うのに、cURLよりも便利です。
 ```
 
  ```bash

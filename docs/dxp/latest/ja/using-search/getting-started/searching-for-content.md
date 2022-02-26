@@ -47,7 +47,7 @@ Liferayの検索インフラストラクチャは、サポートされている�
 ![構成画面で検索バーの動作を構成します。](./searching-for-content/images/05.png)
 
 ```{note}
-   あるページの上部にグローバルに埋め込まれた検索バーウィジェットを設定すると、サイト内のすべてのページでページトップの検索バーウィジェットが設定されます。 また `destination Search Page's <../search-pages-and-widgets/working-with-search-pages/search-pages.md>`_ Search Bar Portlet' が異なる設定になっている場合は、そちらも上書きされます。 ただし、他のページに手動で設置した検索バーウィジェットを上書きすることはできません。
+   あるページの上部にグローバルに埋め込まれた検索バーウィジェットを設定すると、サイト内のすべてのページでページトップの検索バーウィジェットが設定されます。 また [destination Search Page's](../search-pages-and-widgets/working-with-search-pages/search-pages.md) Search Bar Portlet が異なる設定になっている場合は、そちらも上書きされます。 ただし、他のページに手動で設置した検索バーウィジェットを上書きすることはできません。
 ```
 
 いくつかのオプションがあります：
@@ -80,7 +80,7 @@ http://localhost:8080/web/guest/search?q=data&scope=this-site
 http://localhost:8080/web/guest/search?q=data&target=this-site
 ```
 
-**リンク先ページ：** [検索ページ](../search-pages-and-widgets/working-with-search-pages/search-pages.md) わかりやすいURLを提供します。 構成されていない場合、または存在しないページを指している場合、ユーザーに表示するには検索バーを構成する必要があるというメッセージが管理者に表示されます。
+**リンク先ページ：**[検索ページ](../search-pages-and-widgets/working-with-search-pages/search-pages.md) わかりやすいURLを提供します。 構成されていない場合、または存在しないページを指している場合、ユーザーに表示するには検索バーを構成する必要があるというメッセージが管理者に表示されます。
 
 **高度な検索構文を使用：** Elasticsearchを使用している場合、これを有効にすると、ユーザーは [クエリ文字列構文](https://www.elastic.co/guide/en/elasticsearch/reference/7.6/query-dsl-simple-query-string-query.html) を検索バーに入力できます。 Solrを使用している場合は、 [適切な構文](https://lucene.apache.org/solr/guide/7_0/query-syntax-and-parsing.html) ドキュメントを参照してください。
 

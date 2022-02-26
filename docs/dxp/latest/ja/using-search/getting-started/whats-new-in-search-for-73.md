@@ -100,7 +100,7 @@ DXP 7.2 SP2以前から7.3にアップグレードすると、新しいDXPイン
 
 類似結果の最初のバージョンは、ブログ、掲示板、ドキュメント、およびWikiをサポートしています。 [拡張ポイント](../developer-guide/writing-a-similar-results-contributor.md)を実装することにより、追加のアセットタイプ（ネイティブアセットとカスタムアセットの両方）のサポートが可能になります。 ドキュメント類似性を判断するために使用されるロジックは、ElasticsearchのMore Like This [クエリパラメーター](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-mlt-query.html) ごとに設定できます。
 
-詳細は、[Similar Results](../search-pages-and-widgets/similar-results.md)を参照してください。
+詳細は、 [同様の結果](../search-pages-and-widgets/similar-results.md) を参照してください。
 
 <a name="検索の調整" />
 
@@ -178,7 +178,7 @@ Elasticsearchのバージョンに依存しない`IndexSettingsContributor`が�
 
 > 利用可能:Liferay CE 7.3 GA4以降、Liferay DXP 7.3 GA1以降
 
-オープンソース（OSS）版のElasticsearch 7.9.0（ライセンスはApache 2.0）がLiferay CE/DXP 7.3のTomcatバンドルにバンドルされ、 **サイドカー** のJVMで同時に起動します。 このサイドカーのインストールは、 **開発モード** と呼ばれ、以前の **組み込み** モードに置き換わるものです（どちらも本番環境のインストールではサポートされていません）。 サイドカーのシステム設定には、Elasticsearch 7設定に専用のプロパティがあります。 デフォルトでは、HTTPポート9201で実行されます。 詳細は、[Using the Sidecar or Embedded Elasticsearch](../installing-and-upgrading-a-search-engine/elasticsearch/using-the-sidecar-or-embedded-elasticsearch.md)を参照してください。
+オープンソース（OSS）版のElasticsearch 7.9.0（ライセンスはApache 2.0）がLiferay CE/DXP 7.3のTomcatバンドルにバンドルされ、 **サイドカー** のJVMで同時に起動します。 このサイドカーのインストールは、 **開発モード** と呼ばれ、以前の **組み込み** モードに置き換わるものです（どちらも本番環境のインストールではサポートされていません）。 サイドカーのシステム設定には、Elasticsearch 7設定に専用のプロパティがあります。 デフォルトでは、HTTPポート9201で実行されます。 詳細は、 [サイドカーまたはEmbedded モードのElasticsearchの使用](../installing-and-upgrading-a-search-engine/elasticsearch/using-the-sidecar-or-embedded-elasticsearch.md) を参照してください。
 
 Elasticsearch 7.9.0 OSSバージョンは、最初の起動時に自動ダウンロードされます。 リソースをダウンロードするための外部サイトにデプロイメントが到達できない場合は、[サイドカーサーバー](../installing-and-upgrading-a-search-engine/elasticsearch/using-the-sidecar-or-embedded-elasticsearch.md)の手動インストールを参照してください。
 

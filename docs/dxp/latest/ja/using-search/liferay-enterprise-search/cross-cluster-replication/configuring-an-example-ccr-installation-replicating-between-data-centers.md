@@ -62,7 +62,7 @@ cluster.link.enabled=true
 
    Liferay DXP 7.1および7.2の場合、 `ElasticsearchConfiguration.config` でリモート接続を、 `ElasticsearchConnectionConfiguration-ccr.config` でリードオンリー接続を設定します。
 
-   各接続にセキュリティ設定を含めます。 詳細は、 [Elasticsearchの保護](../../installing-and-upgrading-a-search-engine/elasticsearch/securing-elasticsearch.md) を参照してください。 [Configuring CCR in a Local Follower Data Center](./configuring-ccr-in-a-local-follower-data-center.md)では、ローカルDXPノードからの読み取り専用CCR接続に対するセキュリティの設定について説明しています。
+   各接続にセキュリティ設定を含めます。 詳細は、 [Elasticsearchの保護](../../installing-and-upgrading-a-search-engine/elasticsearch/securing-elasticsearch.md) を参照してください。 [ローカルフォロワーデータセンターでのCCRの構成](./configuring-ccr-in-a-local-follower-data-center.md) では、ローカルDXPノードからの読み取り専用CCR接続に対するセキュリティの設定について説明しています。
 
 完全な構成例は、[こちら](./ccr-basic-use-case-config-reference.md)で提供しています。
 

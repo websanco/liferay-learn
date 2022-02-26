@@ -5,9 +5,9 @@ Solrは、Apache Luceneをベースに開発されたエンタープライズサ
 ここでは、Liferay 7.1～7.3用のSolr 8のインストールについて説明します。 これらはLiferay 7.1-7.2用のSolr 7をインストールする際にも同様に適用されますが、バージョン名の調整が必要な場合があります。
 
 ```{important}
-   - LiferayのSolrサポートは非推奨で、Solr 8が最後にサポートされたSolrバージョンです。 `Elasticsearch<../elasticsearch/getting-started-with-elasticsearch.md>`_  に移行することを検討してください。
+   - LiferayのSolrサポートは非推奨で、Solr 8が最後にサポートされたSolrバージョンです。 [Elasticsearch](../elasticsearch/getting-started-with-elasticsearch.md)  に移行することを検討してください。
 
-   - Solrをインストールする際には、注意すべき重要な制限事項があります。 インストールを進める前に、 `Solrの制限 <./solr-limitations.md>`_ をお読みください。
+   - Solrをインストールする際には、注意すべき重要な制限事項があります。 インストールを進める前に、 [Solrの制限](./solr-limitations.md) をお読みください。
 ```
 
 これらの用語を覚えておいてください。
@@ -32,11 +32,11 @@ Liferay Connector to Solrをインストールする前に、ブラックリス�
 - Liferay Connector to Elasticsearchモジュールの組み合わせ
 
 ```{tip}
-   OSGiランタイムにデプロイされたモジュールを検索し、シンボリックネームでリストアップするには、Gogoシェルのコマンド ``lb [substring-to-search] -s``を使用します。 シンボリックネームは、``blacklistBundleSymbolicNames``プロパティに入力する値です。
+   OSGiランタイムにデプロイされたモジュールを検索し、シンボリックネームでリストアップするには、Gogoシェルのコマンド b [substring-to-search] -s`を使用します。 シンボリックネームは、`blacklistBundleSymbolicNames`プロパティに入力する値です。
 
    以下のコマンドは、ブラックリストに登録しなければならないモジュールのリストを返します。
 
-   ``lb -s | grep 'search' | grep 'elasticsearch|tuning'``
+   `lb -s | grep 'search' | grep 'elasticsearch|tuning'`
 ```
 
 ### Elasticsearchのみの機能のブラックリスト化

@@ -35,7 +35,7 @@ Liferay DXPのインスタンスで例 `SimilarResultsContributor` 起動して�
 1. [Acme Similar Results Contributor](./liferay-r1s1.zip) をダウンロードと解凍します。
 
     ```bash
-    curl https://learn.liferay.com/dxp/latest/en/using-search/developer-guide/liferay-r1s1.zip -O
+    curl https://learn.liferay.com/dxp/latest/ja/using-search/developer-guide/liferay-r1s1.zip -O
     ```
 
     ```bash

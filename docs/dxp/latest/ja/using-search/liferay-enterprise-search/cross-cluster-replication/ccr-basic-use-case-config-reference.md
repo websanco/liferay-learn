@@ -2,10 +2,10 @@
 
 CCR構成プロセスを支援するために、ここでは本ガイドの段階的な手順に従った設定例を示します。 これらの構成は可能な限り一般的なものになっていますが、環境に合わせてパスやポートなどを調整する必要があります。 さらに、インストールを完了するには特定の手順を手動で実行する必要があるため、これらの手順は段階的な手順に代わるものではありません。
 
-以下の構成は、インストールでX-Pack Securityを介した暗号化通信（TLS/SSL）とユーザー認証を有効にすることを前提としています。 詳しくは、[Securing Elasticsearch](../../installing-and-upgrading-a-search-engine/elasticsearch/securing-elasticsearch.md)を参照してください。
+以下の構成は、インストールでX-Pack Securityを介した暗号化通信（TLS/SSL）とユーザー認証を有効にすることを前提としています。 詳しくは、 [Elasticsearchの保護](../../installing-and-upgrading-a-search-engine/elasticsearch/securing-elasticsearch.md) を参照してください。
 
 ```{tip}
-   <../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md>`_ は、ファイルが1つのノードにデプロイされると同時に、DXPクラスタ全体に伝播されます。 しかし、各クラスタノードには同一の構成を用意することが最善の方法です。 
+   '<../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md>`_ は、ファイルが1つのノードにデプロイされると同時に、DXPクラスタ全体に伝播されます。 しかし、各クラスタノードには同一の構成を用意することが最善の方法です。 
 ```
 
 <a name="リモートdxpクラスターノードの設定" />

@@ -1,5 +1,4 @@
-検索管理とチューニング
-================================
+# 検索管理とチューニング
 
 ```{toctree}
 :maxdepth: 2
@@ -13,20 +12,18 @@ search-administration-and-tuning/search-administration.md
 - 検索管理パネルの概要（近日公開）
 - ローカライズされた検索を理解する（近日公開）
 
-検索チューニング
-~~~~~~~~~~~~~
+## 検索チューニング
 
--  :doc:`/using-search/search-administration-and-tuning/synonym-sets`
--  :doc:`/using-search/search-administration-and-tuning/result-rankings`
+- [同義語セット](search-administration-and-tuning/synonym-sets.md)
+- [結果ランキング](search-administration-and-tuning/result-rankings.md)
 
+## Troubleshooting Search
 
-Troubleshooting Search
-~~~~~~~~~~~~~~~~~~~~~~
-
-- [Search Insights](search-pages-and-widgets/search-insights.md)
+- [検索インサイト](search-pages-and-widgets/search-insights.md)
 - Adjusting Elasticsearch Logging (Coming soon)
 
-Reference
-~~~~~~~~~
+## Reference
 
--  :doc:`/using-search/search-administration-and-tuning/elasticsearch-indexes-reference`
+- [Elasticsearch インデックスのリファレンス](search-administration-and-tuning/elasticsearch-indexes-reference.md)
+
+

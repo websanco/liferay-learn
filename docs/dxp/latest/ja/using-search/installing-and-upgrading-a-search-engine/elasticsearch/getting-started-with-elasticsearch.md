@@ -9,7 +9,7 @@
 * Liferayにデプロイされ、デプロイメントに適合するように構成されたElasticsearchコネクタアプリケーション。
 
 ```{tip}
-   Additional features and intergrations are available with a `Liferay Enterprise Search <../../liferay-enterprise-search.md>`_ subscription.
+   Additional features and intergrations are available with a [Liferay Enterprise Search](../../liferay-enterprise-search.md) subscription.
 ```
 
 Liferayサーバーがすでに設置されていると仮定すると、残りの手順は次のとおりです。
@@ -29,7 +29,7 @@ Liferay CE/DXPの各バージョンには、特定のElasticsearchのメジャ�
 [検索エンジンの互換性マトリックス](https://help.liferay.com/hc/en-us/articles/360016511651) には、Liferayの各バージョンでサポートされている最新のElasticsearchコンポーネントのバージョンが表示されています。 ElasticsearchサーバーとElasticsearchへのコネクタは必須コンポーネントです。
 
 ```{warning}
-   Liferayのインストールに含まれているLiferay Connector to Elasticsearchは、最新のコネクタではない可能性があります。 使用しているElasticsearchのバージョンに合わせて最新のコネクタを使用するようにしてください。 コネクタは、`Liferay Marketplace <https://web.liferay.com/marketplace>`_ で入手できます。
+   Liferayのインストールに含まれているLiferay Connector to Elasticsearchは、最新のコネクタではない可能性があります。 使用しているElasticsearchのバージョンに合わせて最新のコネクタを使用するようにしてください。 コネクタは、 [Liferay Marketplace](https://web.liferay.com/marketplace) で入手できます。
 ```
 
 <a name="elasticsearchのインストール" />

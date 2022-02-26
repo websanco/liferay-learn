@@ -5,7 +5,7 @@ Elasticsearchのアップグレード
 
    upgrading-elasticsearch/upgrading-search-for-liferay-73.md upgrading-elasticsearch/upgrading-to-elasticsearch-7.md upgrading-elasticsearch/backing-up-elasticsearch.md
 
-Liferay 7.3は、Elasticsearch 7の組み込みサポートを含む、検索の新しい改善 &lt;../../getting-started/whats-new-in-search-for-73.md&gt;</code> **_** をもたらします。 `互換性マトリックス <https://help.liferay.com/hc/en-us/sections/360002103292-Compatibility-Matrix>`_ では、最新のサポートの詳細を提供しています。
+Liferay 7.3は、Elasticsearch 7の組み込みサポートを含む、検索の新しい改善 &lt;../../getting-started/whats-new-in-search-for-73.md&gt;</code> ***_* をもたらします。 `互換性マトリックス <https://help.liferay.com/hc/en-us/sections/360002103292-Compatibility-Matrix>`** では、最新のサポートの詳細を提供しています。
 
 .. 重要:: Solrの統合はLiferay 7.3で非推奨となり、Elasticsearchの統合に置き換えられました。 Elasticsearchに移行するには、 `Elasticsearchのセットアップ <./getting-started-with-elasticsearch.md>`_ そして `Liferayを接続する <./connecting-to-elasticsearch.md>`_ が必要です。
 

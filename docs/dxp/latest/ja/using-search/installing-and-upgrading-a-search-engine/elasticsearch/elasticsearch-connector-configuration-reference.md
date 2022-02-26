@@ -20,7 +20,7 @@ Liferay 7.3以降では、Elasticsearch接続という接続設定項目が追�
 com.liferay.portal.search.elasticsearch7.configuration.ElasticsearchConnectionConfiguration-[connectionId].config
 ```
 
-Elasticsearch 6にセキュリティを設定する場合は、別途Liferayの設定（およびLESのサブスクリプション）が必要です。 詳しくは、 [Securing Elasticsearch](securing-elasticsearch.md) を参照してください。
+Elasticsearch 6にセキュリティを設定する場合は、別途Liferayの設定（およびLESのサブスクリプション）が必要です。 詳しくは、 [Elasticsearchの保護](securing-elasticsearch.md) を参照してください。
 
 設定ファイルを `[Liferay_Home]/osgi/configs` にデプロイし、リスナーが設定を自動検出してデータベースに書き込みます。
 

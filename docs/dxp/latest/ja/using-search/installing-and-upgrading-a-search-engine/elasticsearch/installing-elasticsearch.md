@@ -3,11 +3,11 @@
 オンプレミスでElasticsearchをインストール、設定、起動する方法は次のとおりです。
 
 ```{important}
-   Liferay 7.3にバンドルされているSidecar Elasticsearchサーバは、Elasticsearch OSSディストリビューションを使用しています。 OSS版を本番用にインストールしないでください。 LiferayをElasticsearchで安全に運用するためには、最低でもElasticsearchのBasicレベルをインストールする必要があります。 詳しくは `Elasticのサブスクリプションページ <https://www.elastic.co/subscriptions>`_ をご覧ください。
+   Liferay 7.3にバンドルされているSidecar Elasticsearchサーバは、Elasticsearch OSSディストリビューションを使用しています。 OSS版を本番用にインストールしないでください。 LiferayをElasticsearchで安全に運用するためには、最低でもElasticsearchのBasicレベルをインストールする必要があります。 詳しくは [Elasticのサブスクリプションページ](https://www.elastic.co/subscriptions) をご覧ください。
 ```
 
 ```{note}
-   一次データの保存（データベースにバックアップされていないデータの保存）に使用されているElasticsearchインデックスがある場合は、`snapshot and restore approach <./upgrading-elasticsearch/backing-up-elasticsearch.md>`_ . Liferay独自の検索の調整インデックス(結果ランキングとSynyonyms用)は、プライマリーストレージのインデックスです。
+   一次データの保存（データベースにバックアップされていないデータの保存）に使用されているElasticsearchインデックスがある場合は、[snapshot and restore approach](./upgrading-elasticsearch/backing-up-elasticsearch.md) . Liferay独自の検索の調整インデックス(結果ランキングとSynyonyms用)は、プライマリーストレージのインデックスです。
 ```
 
 <a name="本番環境のようなインストールのための環境設定" />
@@ -42,7 +42,7 @@ sysctl -w vm.max_map_count=262144
 1. [ElasticのWebサイト](https://www.elastic.co) からElasticsearchアーカイブ（OSSバージョンではない）をダウンロードします。
 
     ```{important}
-       お使いのLiferayのバージョンと互換性のある最新のElasticsearchアーカイブをダウンロードしてください <./connecting-to-elasticsearch.html#available-liferay-elasticsearch-connectors>`_.
+       [お使いのLiferayのバージョンと互換性のある](./connecting-to-elasticsearch.html#available-liferay-elasticsearch-connectors) 最新のElasticsearchアーカイブをダウンロードしてください.
     ```
 
 1. Elasticsearchを実行するローカルフォルダにアーカイブの内容を展開します。 このフォルダが **Elasticsearchホーム** です。
@@ -73,7 +73,7 @@ sysctl -w vm.max_map_count=262144
 
 シングルノードおよびマルチノードのElasticsearchクラスター構成の例を次に示します。
 
-Elasticsearch サーバーとの通信の認証と暗号化については、[Securing Elasticsearch](./securing-elasticsearch.md)を参照してください。
+Elasticsearch サーバーとの通信の認証と暗号化については、 [Elasticsearchの保護](./securing-elasticsearch.md) を参照してください。
 
 ### 例：シングルノードの本番環境Elasticsearchクラスター
 
@@ -96,7 +96,7 @@ transport.port: 9300
 `LiferayElasticsearchCluster`と呼ばれるこのクラスターには、`es-node1`と呼ばれるノードが1つあります。
 
 ```{tip}
-   プロダクションモードのセットアップでホストを設定しない場合は、ホストの値として ``localhost`` を使用してください。 Elasticsearchは、HTTPとTransportの通信のためにループバックアドレスにバインドすることができます。 シングルノードの発見とともに、これはElasticsearchサーバーが「開発モード」で動作していることを意味します。
+   プロダクションモードのセットアップでホストを設定しない場合は、ホストの値として `localhost` を使用してください。 Elasticsearchは、HTTPとTransportの通信のためにループバックアドレスにバインドすることができます。 シングルノードの発見とともに、これはElasticsearchサーバーが「開発モード」で動作していることを意味します。
 ```
 
 ### 例：マルチノード本番環境Elasticsearchクラスター
@@ -124,27 +124,27 @@ transport.port: 9302
 ```
 
 ```{tip}
-   プロダクションモードのセットアップでホストを設定しない場合は、ホストの値として ``localhost`` を使用してください。 Elasticsearchは、HTTPとTransportの通信のためにループバックアドレスにバインドすることができます。 これは「開発モード」と呼ばれています。
+   プロダクションモードのセットアップでホストを設定しない場合は、ホストの値として `localhost` を使用してください。 Elasticsearchは、HTTPとTransportの通信のためにループバックアドレスにバインドすることができます。 これは「開発モード」と呼ばれています。
 
    関連するElasticsearchのドキュメントです。
 
-   - `Important Elasticsearch configuration <https://www.elastic.co/guide/en/elasticsearch/reference/7.x/important-settings.html>`_ 
+   - [Important Elasticsearch configuration](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/important-settings.html) 
 
-   - `Security settings in Elasticsearch <https://www.elastic.co/guide/en/elasticsearch/reference/7.x/security-settings.html>`_ 
+   - [Security settings in Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/security-settings.html) 
 
-   - `Bootstrap Checks, Development vs. production mode <https://www.elastic.co/guide/en/elasticsearch/reference/7.x/bootstrap-checks.html>`_ 
+   - [Bootstrap Checks, Development vs. production mode](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/bootstrap-checks.html) 
 ```
 
 ```{important}
-   各Elasticsearchノードの ``elasticsearch.yml`` ファイルは、以下のプロパティに固有の値を使用する必要があります。
+   各Elasticsearchノードの `elasticsearch.yml` ファイルは、以下のプロパティに固有の値を使用する必要があります。
 
-   - ``node.name``
+   - `node.name`
 
-   - ``http.port``
+   - `http.port`
 
-   - ``network.host``
+   - `network.host`
 
-   - ``transport.port``
+   - `transport.port`
 ```
 
 ### 本番環境モードで単一サーバーのブートストラップチェックを実施する

@@ -24,7 +24,7 @@ Before upgrading Elasticsearch, back up your existing data. If something goes wr
     xpack.security.enabled: true
     ```
 
-    セキュリティ設定の範囲の詳細については、[Securing Elasticsearch](../securing-elasticsearch.md)を参照してください。
+    セキュリティ設定の範囲の詳細については、 [Elasticsearchの保護](../securing-elasticsearch.md) を参照してください。
 
 6.  \ [7.2のみ\] [バンドルされているLiferay Connector to Elasticsearch 6をブラックリストに登録し](#blacklisting-elasticsearch-6) 、Connector to Elasticsearch 7を [インストール](../connecting-to-elasticsearch.md#install-the-elasticsearch-7-connector) します。
 
@@ -81,7 +81,7 @@ LiferayがElasticsearchクラスターに接続されたら、該当するイン
 
 2.  [ワークフロー統計情報インデックス](../../../../process-automation/workflow/using-workflows/workflow-metrics-reports.md#re-indexing-workflow-metrics) を再作成します。グローバルメニュー（![Global Menu](../../../../images/icon-applications-menu.png)）から、 [**Applications**] → [**Workflow---Metrics**] に移動します。 設定メニュー（![Options](../../../../images/icon-options.png)）を開き、 [**すべてインデックスを再構築**] をクリックします。
 
-これにより、Liferayデータベースに保存されているデータから作成されたインデックスが復元されます。 プライマリストレージとして使用されるインデックスを復元するには、[Backing Up Elasticsearch](./backing-up-elasticsearch.md)を参照してください。
+これにより、Liferayデータベースに保存されているデータから作成されたインデックスが復元されます。 プライマリストレージとして使用されるインデックスを復元するには、 [Elasticsearchのバックアップ](./backing-up-elasticsearch.md) を参照してください。
 
 <a name="liferay-72elasticsearch-6への復帰" />
 
