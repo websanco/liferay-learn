@@ -1,6 +1,6 @@
 # Node NPM Version Information
 
-Liferay DXP uses [Node](https://nodejs.org/en/) (and [NPM](https://www.npmjs.com/)) for many different components, especially frontend elements. For example, developing with the [Fragments Toolkit](../../site-building/developer-guide/reference/fragments/fragments-toolkit-command-reference.md) or [themes](../../site-building/site-appearance/themes/theme-development/getting-started/setting-up-an-environment-and-creating-a-theme.md) requires the use of NPM commands.
+Liferay DXP uses [Node](https://nodejs.org/en/) (and [NPM](https://www.npmjs.com/)) for many different components, especially frontend elements. For example, developing with the [Fragments Toolkit](../../../site-building/developer-guide/reference/fragments/fragments-toolkit-command-reference.md) or [themes](../../../site-building/site-appearance/themes/theme-development/getting-started/setting-up-an-environment-and-creating-a-theme.md) requires the use of NPM commands.
 
 All of Liferay's dependencies that use Node are designed to use specific versions of Node and NPM. Check the [Node version compatibility matrix](#version-compatibility-matrix) to ensure you have the correct versions installed.
 
@@ -74,4 +74,3 @@ node {
 | 7.2 | 10.15.3 | 6.4.1 |
 | 7.3 | 10.15.3 | 6.4.1 |
 | 7.4 | 16.13.0 | 8.1.0 |
-
