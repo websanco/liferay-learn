@@ -1,10 +1,8 @@
 # Multithreading Process
 
-Your [Upgrade Processes](../upgrade-processes.md) may involve making complex changes to large data sets. If performance is critical, make use of the `processConcurrently()` method in the `UpgradeProcess` class of your application. This method executes in multiple threads and can reduce your overall upgrade times.
+Your [Upgrade Processes](../upgrade-processes.md) may involve making complex changes to large data sets. If performance is critical, use the `processConcurrently()` method in the `UpgradeProcess` class of your application. This method executes in multiple threads and can shorten your upgrade times.
 
-## See the Sample Code
-
-### Deploy Version 1.0.0
+## Deploy Version 1.0.0
 
 1. Start Liferay DXP. If you don't already have a docker container, use
 
@@ -30,13 +28,13 @@ Your [Upgrade Processes](../upgrade-processes.md) may involve making complex cha
    cd 1.0.0
    ```
 
-    ```bash
-    ../gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)
-    ```
+   ```bash
+   ../gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)
+   ```
 
-    ```{note}
-    This command is the same as copying the deployed jars to /opt/liferay/osgi/modules on the Docker container.
-    ```
+   ```{note}
+   This command is the same as copying the deployed jars to /opt/liferay/osgi/modules on the Docker container.
+   ```
 
 1. Confirm the deployment in the Liferay Docker container console.
 
@@ -45,7 +43,7 @@ Your [Upgrade Processes](../upgrade-processes.md) may involve making complex cha
     STARTED com.acme.j7z3.service_1.0.0 [1031]
     ```
 
-### Add Entries to the App
+## Add Entries to the App
 
 1. Navigate to the Script console at *Control Panel* &rarr; *Server Administration* &rarr; *Script*.
 
@@ -73,8 +71,8 @@ Your [Upgrade Processes](../upgrade-processes.md) may involve making complex cha
    The J7Z3_J7Z3Entry table now has three entries.
 
    ![The three entries can been verified in the database table.](./multithreading-process/images/01.png)
-   
-### Deploy Version 1.0.1
+
+## Execute the Upgrade
 
 1. Move into the `1.0.1` directory, build and deploy.
 
@@ -82,24 +80,15 @@ Your [Upgrade Processes](../upgrade-processes.md) may involve making complex cha
    cd ../1.0.1    
    ```
 
-    ```bash
-    ../gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)
-    ```
-
-1. Confirm the deployment in the Liferay Docker container console.
-
-    ```bash
-    STARTED com.acme.j7z3.api_1.0.0 [1030]
-    STARTED com.acme.j7z3.service_1.0.0 [1031]
-    ```
-
-### Execute the Upgrade
+   ```bash
+   ../gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)
+   ```
 
 1. Navigate to the Gogo shell console at *Control Panel* &rarr; *Gogo Shell*.
 
-1. Verify that the 1.0.1 upgrade is available by entering the command `upgrade:list com.acme.j7z3.service`. The 1.0.1 version should be listed as a registered upgrade process in the output window.
+1. Verify that the 1.0.1 upgrade is available by entering the command `upgrade:list com.acme.j7z3.service`. The 1.0.1 version appears as a registered upgrade process in the output window.
 
-1. Execute the upgrade by entering the command `upgrade:execute com.acme.j7z3.service`. The output window should display that the upgrade was completed.
+1. Execute the upgrade by entering the command `upgrade:execute com.acme.j7z3.service`. The output window shows that the upgrade was completed.
 
    ![Execute the upgrade and the output should display that the upgrade was completed.](./multithreading-process/images/02.png)
 
@@ -109,7 +98,7 @@ Your [Upgrade Processes](../upgrade-processes.md) may involve making complex cha
 
 ## Implement the Multithreading Method
 
-In the `UpgradeProcess` class of your application, utilize the `processConcurrently()` method.
+In the `UpgradeProcess` class of your application, override the `processConcurrently()` method.
 
 ```{literalinclude} ./multithreading-process/resources/liferay-j7z3.zip/1.0.1/j7z3-service/src/main/java/com/acme/j7z3/internal/upgrade/v1_0_1/J7Z3EntryUpgradeProcess.java
 :dedent: 1
@@ -118,15 +107,16 @@ In the `UpgradeProcess` class of your application, utilize the `processConcurren
 ```
 
 The method has four parts:
+
 1. SQL Query - An SQL statement to query the database data.
 
-1. Gathering objects - A function to receive a result set and return an array of objects based on the result set.
+1. Gathering objects - Receive a result set and return an array of objects based on the result set.
 
-1. Processing objects - A procedure that receives that array of objects and executes logic with each object.
+1. Processing objects - Execute business logic on the array of objects.
 
-1. Exception - A message that can be used in case an exception occurs.
+1. Exception - Send a message if an exception occurs.
 
-The sample project shows a simple example in which the `name` field is processed and modified by the `processConcurrently()` method.
+The sample project shows a simple example where the `name` field is processed and modified by the `processConcurrently()` method.
 
 1. `select j7z3EntryId, name from J7Z3_J7Z3Entry` - The SQL statement queries all the entries.
 
