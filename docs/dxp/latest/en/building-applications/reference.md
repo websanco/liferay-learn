@@ -5,9 +5,7 @@
 
 reference/deploying-wars-wab-generator.md
 reference/jars-excluded-from-wabs.md
-reference/node-version-information.md
 ```
 
 * [Deploying WARs (WAB Generator)](./reference/deploying-wars-wab-generator.md)
 * [JARS Excluded from WABs](./reference/jars-excluded-from-wabs.md)
-* [Node Version Information](./reference/node-version-information.md)

@@ -2,7 +2,7 @@
 
 Liferay DXP uses [Node](https://nodejs.org/en/) (and [NPM](https://www.npmjs.com/)) for many different components, especially frontend elements. For example, developing with the [Fragments Toolkit](../../site-building/developer-guide/reference/fragments/fragments-toolkit-command-reference.md) or [themes](../../site-building/site-appearance/themes/theme-development/getting-started/setting-up-an-environment-and-creating-a-theme.md) requires the use of NPM commands.
 
-All of Liferay's dependencies that use Node are designed to use a specific version of Node and NPM. Check the [Node version compatibility matrix](#version-compatibility-matrix) to ensure you have the correct versions installed.
+All of Liferay's dependencies that use Node are designed to use specific versions of Node and NPM. Check the [Node version compatibility matrix](#version-compatibility-matrix) to ensure you have the correct versions installed.
 
 ## Updating Your Node Version
 
