@@ -19,6 +19,8 @@ workspace-data/definitions.md
 
 ワークスペースに接続されている[さまざまなデータソースを表示し、管理する](./workspace-data/managing-data-sources.md)ことができます。
 
+<a name="次のステップ" />
+
 ## 次のステップ
 
 - [APIアクセスの管理](./workspace-data/managing-api-access.md)

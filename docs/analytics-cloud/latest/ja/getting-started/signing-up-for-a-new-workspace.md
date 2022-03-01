@@ -1,8 +1,8 @@
 # 新しいワークスペースにサインアップする
 
-Liferay Analytics Cloudの使用を開始するには、 [analytics.liferay.com](https://analytics.liferay.com) にアクセスし、 [liferay.com](https://www.liferay.com) アカウントの電子メールアドレスでサインインしてください。 [liferay.com](https://www.liferay.com)のアカウントをお持ちでない方は、ログインページからサインアップすることもできます。 アカウントに多要素認証を設定していない場合は、設定を促すメッセージが表示されます。 詳しくは [多要素認証をご覧ください](./multi-factor-authentication.md)。
+Liferay Analytics Cloudの使用を開始するには、 [analytics.liferay.com](https://analytics.liferay.com) にアクセスし、 [liferay.com](https://www.liferay.com) アカウントの電子メールアドレスでサインインしてください。 [liferay.com](https://www.liferay.com) のアカウントをお持ちでない方は、ログインページからサインアップすることもできます。 アカウントに多要素認証を設定していない場合は、設定を促すメッセージが表示されます。 詳しくは [多要素認証をご覧ください](./multi-factor-authentication.md)。
 
-```important::
+```{important}
    Liferay DXP のインストールは、以下のフィックスパックの最小要件を満たす必要があります：
      * 7.3 Fix Pack 1
      * 7.2 Fix Pack 11
@@ -14,11 +14,13 @@ Liferay Analytics Cloudの使用を開始するには、 [analytics.liferay.com]
 
 ![ビジネスプランやエンタープライズプランに申し込むか、無料トライアルから始めましょう。](signing-up-for-a-new-workspace/images/01.png)
 
+<a name="無料トライアルのワークスペースを作成する" />
+
 ## 無料トライアルのワークスペースを作成する
 
 無料トライアルワークスペースでは、有効なLiferay DXPインスタンスを持っていてAnalytics Cloudに接続している場合に限り、3ヶ月間無料でAnalytics Cloudをテストすることができます。
 
-無料トライアルは、 [liferay.com](https://www.liferay.com)に登録された有効なEメールアドレス1つにつき、1つのワークスペースに制限されます。 Liferayパートナーで、複数の無料トライアルアカウントをご希望の場合は、 [営業担当](mailto:sales@liferay.com)までご連絡ください。
+無料トライアルは、 [liferay.com](https://www.liferay.com) に登録された有効なEメールアドレス1つにつき、1つのワークスペースに制限されます。 Liferayパートナーで、複数の無料トライアルアカウントをご希望の場合は、 [営業担当](mailto:sales@liferay.com) までご連絡ください。
 
 ホーム画面から［無料トライアル開始］ボタンをクリックすると、ワークスペースの設定画面に移動します。
 
@@ -37,7 +39,7 @@ Liferay Analytics Cloudの使用を開始するには、 [analytics.liferay.com]
 
 **フレンドリURL：** フレンドリURLを設定して、ワークスペースを他の共同編集者と簡単に共有できるようにします。
 
-**許可された電子メール ドメイン：**同じ電子メール ドメインを持つ他のユーザーがこのワークスペースを見つけてアクセスすることを許可します。 たとえば、この構成に @mycompany.com を設定すると、同じメール ドメインを持つ他のユーザーは、Analytics Cloud にログインした後に、このワークスペースを表示して参加をリクエストできるようになります。
+**許可された電子メール ドメイン：** 同じ電子メール ドメインを持つ他のユーザーがこのワークスペースを見つけてアクセスすることを許可します。 たとえば、この構成に @mycompany.com を設定すると、同じメール ドメインを持つ他のユーザーは、Analytics Cloud にログインした後に、このワークスペースを表示して参加をリクエストできるようになります。
 
 最後に、利用規約とプライバシーポリシーに同意の上、終了します。
 
@@ -48,6 +50,8 @@ Liferay Analytics Cloudの使用を開始するには、 [analytics.liferay.com]
 この作業は、30分から1時間程度で完了する場合があります。 ワークスペースの準備が整い次第、メールが送信されます。
 
 次のセクションで、 [ワークスペースにアクセスする方法](./accessing-your-workspace.md)を参照してください。
+
+<a name="アナリティクスのクラウドワークスペースを購入する" />
 
 ## アナリティクスのクラウドワークスペースを購入する
 

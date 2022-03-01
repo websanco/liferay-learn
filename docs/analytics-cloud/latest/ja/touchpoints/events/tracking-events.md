@@ -34,6 +34,8 @@ Analytics.track("Add to Cart Click",{
 
 なお、指定した属性に加えて、すべてのイベントに自動的に関連付けられる [グローバル属性](../../workspace-data/definitions/definitions-for-event-attributes.md) があります。
 
+<a name="javascriptコードの追加" />
+
 ## JavaScriptコードの追加
 
 JavaScriptコードを追加して、イベントの追跡を有効にする方法がいくつかあります。 個々のページの変更、ページフラグメントの追加、またはカスタム実装の使用。
@@ -42,39 +44,39 @@ JavaScriptコードを追加して、イベントの追跡を有効にする方�
 
 JavaScriptコードを追加する最も簡単な方法は、個々のページを変更することです。 この時、ページにJavaScriptのコードを追加する機能を持つウィジェットページを使用するようにしてください。
 
-1. ［プロダクトメニュー］（![Product Menu icon.](../../images/icon-product-menu.png)）をクリックして、 *［サイトビルダー］* &rarr; *［ページ］*に移動します。
+1. ［プロダクトメニュー］（![Product Menu icon.](../../images/icon-product-menu.png)）をクリックして、 ［**サイトビルダー**］ &rarr; ［**ページ**］ に移動します。
 
-1. 個々のページの *［アクション］* アイコン（![Actions icon.](../../images/icon-actions.png)）をクリックして、 *［構成］*をクリックします。
+1. 個々のページの ［**アクション**］ アイコン（![Actions icon.](../../images/icon-actions.png)）をクリックして、 ［**構成**］ をクリックします。
 
-1. JavaScriptコードをテキストボックスエリアの *JavaScript*に貼り付けます。 これは［詳細設定］タブの下にあります。
+1. JavaScriptコードをテキストボックスエリアの **JavaScript** に貼り付けます。 これは［詳細設定］タブの下にあります。
 
     ![JavaScriptコードをテキストボックスに貼り付けます。](./tracking-events/images/01.png)
 
-1. *［保存］* をクリックすると、ページでイベントを追跡する準備が整います。
+1. ［**保存**］ をクリックすると、ページでイベントを追跡する準備が整います。
 
-詳しくは、 [Configuring Individual Pages](https://learn.liferay.com/dxp/latest/en/site-building/creating-pages/page-settings/configuring-individual-pages.html)を参照してください。
+詳しくは、 [個々のページの構成](https://learn.liferay.com/dxp/latest/ja/site-building/creating-pages/page-settings/configuring-individual-pages.html) を参照してください。
 
 ### ページフラグメントの追加
 
 Javascriptのコードを追加するもう一つの方法は、コンテントページに追加できるページフラグメントを作成することです。 ウェブサイトのどのページにも素早くフラグメントを追加することができるため、より高いスケーラビリティを得ることができます。
 
-1. ［プロダクトメニュー］（![Product Menu icon.](../../images/icon-product-menu.png)）をクリックして、 *［デザイン］* &rarr; *［フラグメント］*に移動します。
+1. ［プロダクトメニュー］（![Product Menu icon.](../../images/icon-product-menu.png)）をクリックして、 ［**デザイン**］ &rarr; ［**フラグメント**］ に移動します。
 
-1. コレクションの下にある *［プラス］* アイコン（![Plus icon.](../../images/icon-plus.png)）をクリックして、新しいフラグメントコレクションを作成します。
+1. コレクションの下にある ［**プラス**］ アイコン（![Plus icon.](../../images/icon-plus.png)）をクリックして、新しいフラグメントコレクションを作成します。
 
-1. *［追加］* アイコン (![Add icon.](../../images/icon-add.png)) をクリックして、新しいフラグメントを作成します。
+1. ［**追加**］ アイコン (![Add icon.](../../images/icon-add.png)) をクリックして、新しいフラグメントを作成します。
 
-1. *［コード］* タブをクリックし、JavaScriptフィールドにJavaScriptコードを貼り付けます。
+1. ［**コード**］ タブをクリックし、JavaScriptフィールドにJavaScriptコードを貼り付けます。
 
     ![JavaScriptコードをJavaScriptフィールドに貼り付けます。](./tracking-events/images/02.png)
 
     なお、属性値をフェッチするコードや、 `Analytics.track` コードをトリガーするロジックを追加する必要がある場合もあります。
 
-1. *［保存］* をクリックすると、ページフラグメントが使えるようになります。
+1. ［**保存**］ をクリックすると、ページフラグメントが使えるようになります。
 
-1. フラグメントを追加したいコンテントページに移動します。 *［編集］* アイコン（![Edit icon.](../../images/icon-edit.png)）をクリックして、ページエディタを開きます。 先ほど作成したフラグメントを見つけ、自分のページにドラッグします。 *［Publish］*をクリックします。
+1. フラグメントを追加したいコンテントページに移動します。 ［**編集**］ アイコン（![Edit icon.](../../images/icon-edit.png)）をクリックして、ページエディタを開きます。 先ほど作成したフラグメントを見つけ、自分のページにドラッグします。 ［**Publish**］ をクリックします。
 
-詳細については、 [Developing Fragments](https://learn.liferay.com/dxp/latest/en/site-building/developer-guide/developing-page-fragments/developing-fragments-intro.html)を参照してください。
+詳細については、 [フラグメントの開発](https://learn.liferay.com/dxp/latest/ja/site-building/developer-guide/developing-page-fragments/developing-fragments-intro.html) を参照してください。
 
 ### カスタムインプリメンテーションの使用
 

@@ -1,6 +1,6 @@
 # Managing Data Sources
 
-After [connecting data sources](../connecting-data-sources.md) to your workspace, you can view and make changes to them from the settings page. Navigate to *Settings* &rarr; *Workspace Data* &rarr; *Data Sources*. 
+After [connecting data sources](../connecting-data-sources.md) to your workspace, you can view and make changes to them from the settings page. Navigate to **Settings** &rarr; **Workspace Data** &rarr; **Data Sources** . 
 
 ![See the list of connected data sources in settings.](./managing-data-sources/images/01.png)
 
@@ -18,14 +18,16 @@ The Current Status panel on the right shows the data source's status: **Active**
 
 **DXP Instance ID:** Displays the unique ID of your DXP instance. 
 
-If you choose to disconnect the DXP instance from the workspace, click the *Disconnect* button. You're asked to confirm. Note, disconnecting the data source stops all syncing of analytics data.
+If you choose to disconnect the DXP instance from the workspace, click the **Disconnect** button. You're asked to confirm. Note, disconnecting the data source stops all syncing of analytics data.
 
-**Synced Sites:** Shows your DXP Sites' sync status with Analytics Cloud. To configure, see [syncing sites to a property](../connecting-data-sources/scoping-sites-and-individuals-using-properties.md#syncing-sites-to-a-property).
+**Synced Sites:** Shows your DXP Sites' sync status with Analytics Cloud. To configure, see [syncing sites to a property](../connecting-data-sources/scoping-sites-and-individuals-using-properties.md#syncing-sites-to-a-property) .
 
 **Synced Contacts:** Shows your DXP contacts sync status with Analytics Cloud. To configure, see [syncing contacts to a property](../connecting-data-sources/scoping-sites-and-individuals-using-properties.md#syncing-contacts-to-a-property)
 
 Note that this manage page looks different for a Salesforce data source or a CSV data source.
 
+<a name="deleting-a-data-source" />
+
 ## Deleting a Data Source
 
-To delete the data source, click the *Delete Data Source* button at the top right of the page. You're asked to confirm. Note, deleting the data source removes the connection and deletes all synced data.
+To delete the data source, click the **Delete Data Source** button at the top right of the page. You're asked to confirm. Note, deleting the data source removes the connection and deletes all synced data.

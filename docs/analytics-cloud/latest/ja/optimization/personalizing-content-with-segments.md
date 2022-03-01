@@ -14,4 +14,4 @@ Liferay DXPとAnalytics CloudのSegmentsの比較です。
 | 匿名ユーザーを含めることはできません           | 匿名ユーザーを含む                                       |
 | 限定的で短期的なパーソナライゼーションに最適       | 広範囲で長期的なパーソナライゼーションに適しています。                     |
 
-Liferay DXPでのAnalytics Cloudセグメントの使用については、 [ユーザーセグメントでのAnalytics Cloudの使用](https://learn.liferay.com/dxp/latest/en/site-building/personalizing-site-experience/segmentation/getting-analytics-for-user-segments.html)を参照してください。 Liferay DXP のパーソナライズについては、 [エクスペリエンスのパーソナライズ](https://learn.liferay.com/dxp/latest/en/site-building/personalizing_site_experience.html#)を参照してください。
+Liferay DXPでのAnalytics Cloudセグメントの使用については、 [ユーザーセグメントでのAnalytics Cloudの使用](https://learn.liferay.com/dxp/latest/ja/site-building/personalizing-site-experience/segmentation/getting-analytics-for-user-segments.html) を参照してください。 Liferay DXP のパーソナライズについては、 [エクスペリエンスのパーソナライズ](https://learn.liferay.com/dxp/latest/ja/site-building/personalizing_site_experience.html#) を参照してください。

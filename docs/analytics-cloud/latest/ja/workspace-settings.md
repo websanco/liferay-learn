@@ -19,6 +19,8 @@ workspace-settings/managing-workspaces.md
 
 [ワークスペース設定の表示と変更](./workspace-settings/managing-workspaces.md)。
 
+<a name="次のステップ" />
+
 ## 次のステップ
 
 - [ユーザーの管理](./workspace-settings/managing-users.md)

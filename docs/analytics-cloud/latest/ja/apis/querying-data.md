@@ -35,6 +35,8 @@ curl -L -H "Authorization: Bearer {token}" https://analytics.liferay.com/api/rep
 {"results":[],"total":0}
 ```
 
+<a name="アカウントデータへのアクセス" />
+
 ## アカウントデータへのアクセス
 
 アカウントデータは、以下のコマンドで取得できます：
@@ -46,6 +48,8 @@ curl -H "Authorization: Bearer {token}" -L https://analytics.liferay.com/api/rep
 ### パラメーター
 
 * `ページ` （整数）：ページ番号の結果
+
+<a name="ユーザーデータへのアクセス" />
 
 ## ユーザーデータへのアクセス
 
@@ -59,6 +63,8 @@ curl -H "Authorization: Bearer {token}" -L https://analytics.liferay.com/api/rep
 
 * `ページ` 整数：ページ番号の結果
 * `クエリ` 文字列：ユーザーの人口統計情報と一致するキーワード
+
+<a name="ユーザーのアクティビティ" />
 
 ## ユーザーのアクティビティ
 
@@ -93,6 +99,8 @@ curl -H "Authorization: Bearer {token}" -L https://analytics.liferay.com/api/rep
 * `eventId` （文字列）：ユーザーによって実行されたアナリティクスイベントのID。イベントIDは、ユーザーによって実行されるアクションを表す。
 * `eventProperties` （オブジェクト）：イベントに関するメタデータ情報。eventIdによって異なる。
 
+<a name="ユーザーの興味" />
+
 ## ユーザーの興味
 
 ```
@@ -120,6 +128,8 @@ curl -H "Authorization: Bearer {token}" -L https://analytics.liferay.com/api/rep
 * `id` （文字列）：興味対象の一異な識別情報。
 * `name` （文字列）：興味のあるものの名前。
 
+<a name="ユーザーのセグメント" />
+
 ## ユーザーのセグメント
 
 ```
@@ -127,6 +137,8 @@ curl -H "Authorization: Bearer {token}" -L https://analytics.liferay.com/api/rep
 ```
 
 ユーザーが所属するセグメントのリストを返します。各セグメントの構造については、［データ型 > セグメント］で説明しています。
+
+<a name="セグメントデータへのアクセス" />
 
 ## セグメントデータへのアクセス
 
@@ -140,6 +152,8 @@ curl -H "Authorization: Bearer {token}" -L https://analytics.liferay.com/api/rep
 
 `ページ` ：整数、結果ページ番号
 
+<a name="ユーザーのセグメント化" />
+
 ## ユーザーのセグメント化
 
 セグメントに属するユーザーのリストを返します。
@@ -147,6 +161,8 @@ curl -H "Authorization: Bearer {token}" -L https://analytics.liferay.com/api/rep
 ```
 curl -H "Authorization: Bearer {token}" -L https://analytics.liferay.com/api/reports/segments/{id}/individuals
 ```
+
+<a name="ページデータへのアクセス" />
 
 ## ページデータへのアクセス
 
@@ -162,4 +178,4 @@ curl -H "Authorization: Bearer {token}" -L https://analytics.liferay.com/api/rep
 * `キーワード` （文字列）：ページのタイトルやURL情報にマッチさせるキーワード。
 * `rangeKey` （整数）：データのグループ化に使用される範囲。 設定可能な値は、0（24時間前のデータ）、1（昨日のデータ）、7（7日前のデータ）、28（28日前のデータ）、30（デフォルト値、30日前のデータ）、90（90日前のデータ）。
 * `sortMetric` （文字列）：結果を並べ替えるメトリックを定義。デフォルトはviewsMetrics。可能な値は、ctrMetric、timeOnPageMetric、exitRateMetric、ctpMetric、sessionsMetric、avgTimeOnPageMetric、bounceMetric、maxScrollDepthMetric、visitorsMetric、viewsMetric、bounceRateMetric、indirectAccessMetric、entlinesMetric、directAccessMetric。
-* `sortOrder` （文字列）、可能な値は * asc *または *desc*。 sortMetricに従って、結果を昇順または降順で並べ替える。 デフォルトはdesc。
+* `sortOrder` （文字列）、可能な値は **asc** または **desc** 。 sortMetricに従って、結果を昇順または降順で並べ替える。 デフォルトはdesc。

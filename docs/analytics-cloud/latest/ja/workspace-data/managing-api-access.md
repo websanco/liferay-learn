@@ -1,6 +1,8 @@
 # Managing API Access
 
-Utilizing the Analytics Cloud API requires the use of an access token. This can be found and managed under *Settings* &rarr; *Workspace Data* &rarr; *APIs*.
+Utilizing the Analytics Cloud API requires the use of an access token. This can be found and managed under **Settings** &rarr; **Workspace Data** &rarr; **APIs** .
+
+<a name="copying-the-access-token" />
 
 ## Copying the Access Token
 
@@ -9,6 +11,8 @@ After [generating an access token](../apis/authentication.md), click the copy ic
 ![Click the copy icon to copy the access token.](./managing-api-access/images/01.png)
 
 Use the access token in your API requests for authentication.
+
+<a name="revoking-the-access-token" />
 
 ## Revoking the Access Token
 

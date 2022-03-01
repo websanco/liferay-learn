@@ -1,8 +1,10 @@
 # Webコンテンツ
 
-[Webコンテンツ記事](https://learn.liferay.com/dxp/latest/en/content-authoring-and-management/web-content/web-content-articles/adding-a-basic-web-content-article.html) は、サイト訪問者に情報を提示するための重要なアセットです。 Analytics Cloudでは、サイト ユーザーがどのようにコンテンツを利用しているかについて、重要な洞察を得ることができます。
+[Webコンテンツ記事](https://learn.liferay.com/dxp/latest/ja/content-authoring-and-management/web-content/web-content-articles/adding-a-basic-web-content-article.html) は、サイト訪問者に情報を提示するための重要なアセットです。 Analytics Cloudでは、サイト ユーザーがどのようにコンテンツを利用しているかについて、重要な洞察を得ることができます。
 
 ![Webコンテンツのアナリティクスデータを表形式で見ることができます。](web-content/images/01.png)
+
+<a name="訪問者の行動" />
 
 ## 訪問者の行動
 
@@ -11,6 +13,8 @@
 ![Webコンテンツに対するユーザーのエンゲージメントは、時間の経過とともにチャートで見ることができます。](web-content/images/02.png)
 
 1日（または1時間、前日または過去24時間が選択されている場合）あたりのビュー数は、ビューのトレンドラインを確立するために、選択された期間にわたってプロットされます。 これを使用して、時間の経過とともにコンテンツが訪問者をどれだけうまく巻き込んでいるかを評価します。
+
+<a name="オーディエンス" />
 
 ## オーディエンス
 
@@ -33,11 +37,15 @@
 
 なお、オーディエンスについて表示されるセグメンテーションデータは、訪問時にセグメントに所属している個人を基準としています。
 
+<a name="場所別ビュー" />
+
 ## 場所別ビュー
 
 ［Views by Location ］ パネルのマップには、選択した期間の国別のビュー数が表示されます。
 
 ![地図図は、地理的にユーザーを識別します。](web-content/images/04.png)
+
+<a name="技術別ビュー" />
 
 ## 技術別ビュー
 
@@ -46,6 +54,8 @@
 ![また、ユーザーはデバイス別に見ることができます。](web-content/images/05.png)
 
 Webブラウザをクリックすると、選択した期間の上位8つのWebブラウザまで表示されるドーナツ型のチャートが表示されます。 該当する場合、残りのWebブラウザは9番目のドーナツセグメントに集約されます。
+
+<a name="asset-appears-on" />
 
 ## Asset Appears On
 
