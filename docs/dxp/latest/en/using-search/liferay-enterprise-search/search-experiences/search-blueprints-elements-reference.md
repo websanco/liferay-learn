@@ -1,12 +1,12 @@
 # Search Blueprints Elements Reference
 
-Elements are one of the building blocks of a [Search Blueprint](understanding-search-blueprints.md#what-is-a-blueprint).
+Elements are one of the fundamental building blocks of a [Search Blueprint](understanding-search-blueprints.md#what-is-a-blueprint). To explore all the available Elements, Open the Global Menu (![Global](../../../images/icon-applications-menu.png)) &rarr; Applications &rarr; Blueprints. Open the Elements tab.
 
-<!-- Hide Hidden Contents, Scheduling Aware, Staging Aware, Limit Search to HEAD Version:  This Element duplicates the functionality of a Liferay Search Framework query clause. -->
+To add the Element to a Blueprint, [create a Blueprint](./creating-and-managing-search-blueprints.md) and use its Query Builder &rarr; Query Elements sidebar to search and add Elements.
 
-What should we show for each Element? JSON, screenshot of configuration screen?
+![Configure Query Elements in the Search Blueprints application.](./search-blueprints-elements-reference/images/13.png)
 
-To see the JSON representation for any Element, click the Actions icon (![Actions](../../../images/icon-actions.png)) &rarr; View Element JSON.
+To see the JSON representation for any Element in the Query Elements screen, click the Actions icon (![Actions](../../../images/icon-actions.png)) &rarr; View Element JSON.
 
 Each Element can be disabled or enabled in the Blueprint using the toggle switch in the Title Bar of the Blueprint. For a streamlined view of the Elements in the Blueprint, you can collapse the contents of an Element using the Down Arrow Icon (![Down Arrow Icon](../../../images/icon-angle-down.png)) in the Title Bar of the Element.
 
@@ -14,18 +14,24 @@ Each Element has configuration options, many of which directly correspond to att
 
 ## Boost Some Results
 
+A `boost` configured on an [Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/query-dsl-term-query.html#term-field-params) query adjusts the relevance score of matching results. Values over one increase the score, while values between zero and one decrease it.
+
 When boosting certain results, the boost value will need tuning to meet your specific needs. Use the [Preview Sidebar](creating-and-managing-search-blueprints.md#testing-a-blueprint-with-the-preview-sidebar)  to inspect how the documents are being scored and to fine-tune your boost values.
 
 **Boost All Keywords Match:** Use a Multi-match query to boost results if the search keywords match in the given fields. You can boost the Element's Multi-match query clause as a whole, and you can boost a match to each individual field. The _Text to Match_ configuration field is optional: if left blank, the search user's keywords are passed into the query.
 
 ![Flexibly boost matches to a Multi-match query.](./search-blueprints-elements-reference/images/01.png)
 
+- Field: choose which fields to search and whether to boost them individually.
+- Match Type:
+- Boost: adjust the relevance score of matching results. Because the default value is 1.0, Values over one increase the score, while values between zero and one decrease it.
+- Text to Match: match hardcoded keywords or leave blank to match the User's search keywords.
+
 _External Reference_: See the Elasticsearch [Multi-match](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/query-dsl-multi-match-query.html) query documentation.
 
 **Boost Asset Type:** Boost the given asset type. Select the Asset Type (required) from a list of registered [Assets](../../../building-applications/data-frameworks/asset-framework.md) and configure the boost value.
 
-**Boost Contents for the Current Language:** Boost contents having a default language matching the current session language. Configure the boost value.
-<!-- explain what it means to have a default language? -->
+**Boost Contents for the Current Language:** Boost Pages and Web Content having with a default language matching the current session language, as stored in the `context.language_id` field. Configure the boost value.
 
 **Boost Contents in a Category by Keyword Match:** Boost contents in a category if the user's search keywords contain any of the configured keywords. The Keywords and Asset Category ID are required.
 <!-- How do I find the Asset Category ID? This is ugly to have to document. Can't we provide a user friendly dropdown list of categories, like we do for Asset Entries in the Boost Asset Type Element? -->
@@ -52,7 +58,7 @@ GET /_search
 If you're not sure whether the field to search for is localized or not, use a Multi-match query as in the above snippet to search multiple variations of the field.
 ```
 
-Users with the proper permissions can find the Asset Category ID by navigating to the Site Menu &rarr; Categorization &rarr; Categories. Ope the Category and check out its URL. For example,
+Alternatively, Users with the proper permissions can find the Asset Category ID by navigating to the Site Menu &rarr; Categorization &rarr; Categories. Ope the Category and check out its URL. For example,
 
 <http://localhost:8080/group/guest/~/control_panel/manage/-/categories_admin/vocabulary/41891/category/41892>
 
@@ -107,9 +113,8 @@ Therefore this document will have a score of about `3` added to it because of th
 
 _External Reference:_ See the Elasticsearch [Function score query](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/query-dsl-function-score-query.html) documentation.
 
-Might need an explanation of this one. The presence of a `boost: 10` throws me off here:
+<!-- I might need an explanation of this one. The presence of a separate boost throws me off here:
 
-```json
 {
 	"queryConfiguration": {
 		"queryEntries": [
@@ -135,78 +140,137 @@ Might need an explanation of this one. The presence of a `boost: 10` throws me o
 		]
 	}
 }
-```
+-->
 
 **Boost Freshness:** Boost contents modified recently using a Gaussian function.
 
 ![Boost results modified more recently.](./search-blueprints-elements-reference/images/07.png)
 
-copied from the personalizing doc for now--might be useful:
-   ```{note}
-   The Gaussian function used to score documents by their proximity to the sending IP address might need to be adjusted. The Boost Proximity Element lets you adjust the decay, scale, and boost:
+The Gaussian function used to score documents by their freshness might need to be adjusted. You can adjust the Decay, Scale, Offset, and Boost in the Boost Freshness Element configuration:
 
-   - Decay defines the factor by which to reduce the boost value when the proximity of the asset to the User is equal to the scale.
+- Decay defines the factor by which to reduce the boost value when the freshness of the asset is equal to the sum of the Scale and Offset values.
+- Offset is the number of days (in the past) from now, above which the relevance of results should begin to deteriorate as calculated by the decay function.
+- Scale is added to Offset to determine the number of days (in the past) from now when the relevance of results will equal the Decay parameter.
+- Boost is the beginning numeric value to boost results that are within the defined scale.
 
-   - Scale is the distance away from the User's IP adress location, above which the relevance of results should begin to deteriorate.
+For example, if you specify a boost of 100 for search results geolocated to within 10 km of the User, and define a decay factor of 0.5, a result exactly 10 km away from the User will receive half of the maximum boost value, so it will be boosted by 50. At distances greater than 10 km, the Gaussian function takes over in determining the remaining scores.
 
-   - Boost is the numeric value to boost results that are within the defined scale.
+_External Reference:_ See [Elastic's Function Score Query](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/query-dsl-function-score-query.html) documentation for more details.
 
-   For example, if you specify a boost of 100 for search results geolocated to within 10 km of the User, and define a decay factor of 0.5, a result exactly 10 km away from the User will receive half of the maximum boost value, so it will be boosted by 50. At distances greater than 10 km, the Gaussian function takes over in determining the remaining scores.
+**Boost Longer Contents:** Using a Function Score Query's Field Value Factor, boost results with longer content field data in the user's current language.
 
-   See [Elastic's Function Score Query](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/query-dsl-function-score-query.html) documentation for more details.
-   ```
-**Boost Longer Contents:** Boost contents with longer content in the user's current language.
+The `context.language_id` parameter is used to get the `content_{context.language_id}_length_sortable` field's value, a numeric field. Using a function (the natural logarithm by default) with the numeric field value, a modification to the score of the document is calculated.
 
-**Boost Proximity:** Boost contents in closer proximity to the search user with a Gaussian function. Additional setup is required.
+![Boost results with longer contet.](./search-blueprints-elements-reference/images/08.png)
 
-**Boost Tagged Contents:** Boost contents having at least one of the given tags.
+You can adjust the Boost, Factor, and Modifier in the Element configuration:
 
-**Boost Tags Match:** Boost contents with an exact keyword match to a tag.
+- Boost is the numeric value to boost results after they've been scored by the function.
+- Factor is the value to multiply the field value by.
+- Modifier defines the function to use when modifying the field value.
 
-**Boost Web Contents by Keyword Match:** Boost certain Web Content if the user's search keywords contain the given keywords.
+_External Reference:_ See [Elastic's Function Score Query](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/query-dsl-function-score-query.html) documentation for more details.
+
+**Boost Proximity:** Boost contents in closer proximity to the search user with a Gaussian function. Additional setup is required. Pull info in from ./personalizing-the-search-experience.md
+
+**Boost Tagged Contents:** Boost contents having at least one of the given tags. Enter multiple tag names using a comma-separated list.
+
+**Boost Tags Match:** Boost contents with an exact keyword match to a tag. The User's search keywords are compared with the `assetTagNames.raw` field content (this makes a keyword field out of the `assetTagNames` text field), and if the term query matches in a document, its score is boosted by the configured value.
+
+**Boost Web Contents by Keyword Match:** Boost certain Web Content if the user's search keywords contain the given keywords. Configure the Article IDs and the Keywords.
 
 ## Filter Results
 
-**Filter by Exact Terms Match:** Filter results by one or multiple terms. At least one must match.
+When you filter search results, you are asking a yes or no question: does the document's fields match the query? In this case you're not concerned about the relevance (i.e., how well does it match?). Several filtering Elements are provided to help narrow the scope of what's returned in the Search Results.
 
-**Limit Search to Contents Created Within a Period of Time:** Limit search to contents created within the given time range.
+**Filter by Exact Terms Match:** Filter results by matching (using a Terms query) one or multiple terms to a field value. At least one must match for the filter to be applied.
 
-**Limit Search to HEAD Version:** Limit the search to return only the HEAD version of Web Content articles. This Element duplicates the functionality of a Liferay Search Framework query clause.
+![Filter results that have an exact match in a given field.](./search-blueprints-elements-reference/images/09.png)
 
-**Limit Search to My Contents:** Limit the search to contents the user is an owner of.
+_External Reference:_ See the [Elasticsearch Terms query](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/query-dsl-terms-query.html) documentation.
 
-**Limit Search to My Sites:** Limit the search scope to the sites that the user is a member of.
+**Limit Search to Contents Created Within a Period of Time:** Filter results using a Range query. Configure the time range.
 
-**Limit Search to PDF files:** Limit the search to PDF files, as recorded in the mimeType field.
+_External Reference:_ See the [Elasticsearch Range query](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/query-dsl-range-query.html) documentation.
 
-**Limit Search to Published Contents:** Limit the search to contents that are published.
+**Limit Search to HEAD Version:** Limit the search to return only the latest version of Web Content articles. This Element duplicates the functionality of a Liferay Search Framework query clause and is most useful for advanced use cases. For example, if you've disabled Liferay's search framework from contributing its default search clauses, you can use this Element to restore part of the lost functionality.
 
-**Limit Search to the Current Site:** Limit the search to the current site.
+**Limit Search to My Contents:** Limit the search to contents the user is an owner of. This Element filters results by a Term query on the `userId` field, matching it to the `user.id` context parameter.
 
-**Limit Search to These Sites:** Limit the search scope to the given sites.
+**Limit Search to My Sites:** Limit the search scope to the sites that the user is a member of. This Element filters results by a Terms query on the `scopeGroupId` field, matching it to the `user.group_ids` context parameter.
+
+**Limit Search to PDF files:** Limit the search to PDF files. This Element filters results by a Term query on the `mimeType` field, matching its value with the hardcoded query value `application_pdf`.
+
+**Limit Search to Published Contents:** Limit the search to contents that are published. This Element duplicates the functionality of a Liferay Search Framework query clause and is most useful for advanced use cases. For example, if you've disabled Liferay's search framework from contributing its default search clauses, you can use this Element to restore part of the lost functionality.
+
+This Element filters results using a Term query on the `status` field, matching its value to the hardcoded value of `0`, which represents published contents in [Liferay's Workflow system](../../../process-automation/workflow/introduction-to-workflow.md#understanding-workflow-status).
+
+**Limit Search to the Current Site:** Limit the search to the current site. This Element filters results using a Term query on the `scopeGroupId` field, matching its value with the context parameter `context.scope_groupId`.
+<!--We should talk about how this works when the Search Bar's Search Everything setting is configured-->
+
+**Limit Search to These Sites:** Limit the search scope to the given sites. Filter results using a Terms query on the `scopeGroupId` field, matching its value with the configured Group IDs.
+
+![Limit the search to return results only in the given sites.](./search-blueprints-elements-reference/images/10.png)
+
+The ID for a site is displayed in its Site Settings &rarr; Site Configuration screen.
 
 ## Hide Some Results
 
-**Hide by Exact Term Match:** Hide contents with an exact term match on the given field.
+By wrapping a query in a Boolean query with a Must Not occurrence clause, results can be hidden if they match the query.
 
-**Hide Comments:** Do not search for comments.
+_External Reference:_ See the [Elasticsearch Boolean query](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/query-dsl-bool-query.html) documentation.
 
-**Hide Contents in a Category for Guest Users:** Hide contents in a category if the user is not logged in.
+**Hide by Exact Term Match:** Hide contents with an exact term match on the given field. When you choose a localized text field, localization options appear in the configuration.
 
-**Hide Contents in a Category:** Hide contents in the given category.
+![Hide results matching the term query.](./search-blueprints-elements-reference/images/11.png)
 
-**Hide Hidden Contents:** Hide assets which are marked not searchable. This Element duplicates the functionality of a Liferay Search Framework query clause.
+**Hide Comments:** Do not search for comments. This Element looks for documents with a `discussion` field. If the field exists and its content is anything but `false`, the document is not included in the search results.
 
-**Hide Tagged Contents:** Hide contents with a given tag.
+**Hide Contents in a Category for Guest Users:** Hide results in a category if the user is not logged in. This is a conditional Element: if the `user.is_signed_in` context parameter is `false`, results with the `assetCategoryIds` field matching the configured Asset Category ID are not returned.
+
+**Hide Contents in a Category:** Hide results with the given category.
+
+**Hide Hidden Contents:** Hide assets which are marked not searchable. This Element duplicates the functionality of a Liferay Search Framework query clause and is most useful for advanced use cases. For example, if you've disabled Liferay's search framework from contributing its default search clauses, you can use this Element to restore part of the lost functionality.
+
+This Element specifies that returned results must not have the field `hidden` or if they do, its value must be `false`.
+
+**Hide Tagged Contents:** Hide results with a given tag.
 
 ## Other Elements
 
-**Paste Any Elasticsearch Query:** Paste any Elasticsearch DSL query body into the element as-is.
+**Paste Any Elasticsearch Query:** Paste any Elasticsearch DSL query body into the element as-is. Specify the occur clause. The Element takes the JSON string you provide and creates a Wrapper query out of it in the background.
 
-**Scheduling Aware:** Show only contents with a display date that's not in the future. This Element duplicates the functionality of a Liferay Search Framework query clause.
+For example, to make sure no documents are returned if the title matches the query keyword "bruno", add a Multi-match query on three common title fields and specify a Must Not occur clause:
 
-**Search with the Lucene Syntax:** Use Query String query syntax to match one or more fields with a single operator (OR or AND).
+![Paste an Elasticsearch query body into the Element.](./search-blueprints-elements-reference/images/12.png)
 
-**Staging Aware:** Show only published contents on live sites. Show only published and staged contents on staging sites. This Element duplicates the functionality of a Liferay Search Framework query clause.
+_External Reference:_ See the [Elasticsearch Wrapper query](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/query-dsl-wrapper-query.html) documentation.
 
-**Text Match Over Multiple Fields:** Search for a text match over multiple text fields.
+**Scheduling Aware:** Show only contents with a display date that's not in the future. This Element duplicates the functionality of a Liferay Search Framework query clause and is most useful for advanced use cases. For example, if you've disabled Liferay's search framework from contributing its default search clauses, you can use this Element to restore part of the lost functionality.
+
+**Search with the Lucene Syntax:** Use Query String query syntax to match one or more fields. Specify the default boolean operator (OR or AND) to use in determining whether all search keywords must match (AND) or only one must match (OR). This Element allows the User to enter more advanced search keyword strings, using boolean operators, wildcards, and more.
+<!-- SME: please check the above description-->
+
+_External Reference:_ See the [Elasticsearch Query String query](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/query-dsl-query-string-query.html#query-string-syntax) documentation.
+
+**Staging Aware:** Show only published contents on live sites. Show only published and staged contents on staging sites. This Element duplicates the functionality of a Liferay Search Framework query clause and is most useful for advanced use cases. For example, if you've disabled Liferay's search framework from contributing its default search clauses, you can use this Element to restore part of the lost functionality.
+
+**Text Match Over Multiple Fields:** Search for a text match over multiple text fields. Match either the User's search keywords or the configured Text to Match from the Element configuration. This is the [Swiss Army Knife](https://en.wikipedia.org/wiki/Swiss_Army_knife#Cultural_impact) of Elements, as it adds a highly configurable full text query with on multiple fields:
+
+- Use the Fields configuration to chose which fields to search. Only choose analyzed text fields.
+- The Operator determines if all the analyzed search keywords should appear in each field (AND) or if only one must appear in each field (OR). The exact behavior is influenced by the Match Type.
+- Match Type determines the way the query is handled internally by Elasticsearch: _Most Fields_ is probably the most fundamental, as it creates a Match query for each specified field and combines the scores.
+- Fuzziness sets the behavior around imprecise matching. Setting 0, 1, or 2 directly specifies the [Levenshtein edit distance](https://en.wikipedia.org/wiki/Levenshtein_distance) that's allowed for the query to return a match. AUTO generates the edit distance based on the length of the term being searched. See the [Elasticsearch fuzziness documentation](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/common-options.html#fuzziness) for more information.
+- Minimum Should Match sets the minimum number of clauses that must match for the document to be returned by the search. See [Elasticsearch's minimum_should_match](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/query-dsl-minimum-should-match.html) documentation for more information.
+- Slop is used by the Phrase and Phrase Prefix Match Types. It allows for inexact phrase matching by specifying the number of words that the phrase can be off by and still match. For example, using the Phrase type and a slop of 1, searching for "liferay blogs" could still match a field that contained "liferay dxp blogs".
+- Set the Boost to boost any document that matches the clauses provided by this Element.
+- Se the Text to Match if you want to hardcode the value the query clauses should be matched with. Leave this blank if you just want to use the User's keyword search to match by.
+
+_External Reference:_ See the [Elasticsearch Multi-match query](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/query-dsl-multi-match-query.html) documentation.
+
+<!-- I don't know if I like Text Match over Multiple Fields being buried down here -->
+
+## Additional Information
+
+- [Creating and Managing Search Blueprints](./creating-and-managing-search-blueprints.md)
+- [Personalizing the Search Experience](./personalizing-the-search-experience.md)
