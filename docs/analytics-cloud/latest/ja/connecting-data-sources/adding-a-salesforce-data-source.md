@@ -17,10 +17,10 @@ Analytics Cloudは、SalesforceのデータとLiferay DXPなどのデータを�
     ```{note}
        Salesforceインスタンスの管理者は、次の設定でこの接続アプリケーションを作成する必要があります
 
-       * コールバックURL： https://analytics.liferay.com/oauth/receive
+       * コールバックURL: https://analytics.liferay.com/oauth/receive
        * OAuthスコープ： - 基本情報（ID、プロファイル、電子メールアドレス、電話）- データへのアクセスと管理（api）- いつでもユーザーに代わってリクエストを実行（refresh **token、offline** access）
 
-       SalesforceでOAuth接続アプリを作成し、そのクライアントIDとクライアントシークレットを見つける手順については、「Salesforceのドキュメント」を参照してください。](https://help.salesforce.com/articleView?id=connected_app_overview.htm&type=5)。
+       SalesforceでOAuth接続アプリを作成し、そのクライアントIDとクライアントシークレットを見つける手順については、「Salesforceのドキュメント](https://help.salesforce.com/articleView?id=connected_app_overview.htmtype=5) を参照してください。
     ```
 
 1. **Authorize & Save** をクリックします。 これにより、Salesforceからリード、連絡先、アカウントのデータのインポートが開始されます。 このデータは、以下のようにAnalytics Cloudのデータと統合されています。

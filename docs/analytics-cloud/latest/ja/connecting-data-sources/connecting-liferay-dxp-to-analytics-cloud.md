@@ -30,7 +30,7 @@ Analytics Cloudはアクセストークンを使用してLiferay DXPと接続し
 接続が成功すると、 `Your DXP instance is connected to Analytics Cloud`というメッセージが表示されます。
 
 ```{note}
-   分析データの抑制については、 `Do Not Track Feature <.././workspace-data/data-control-and-privacy.md#do-not-track-feature>`_ を参照してください。
+   分析データの抑制については、 [Do Not Track Feature](.././workspace-data/data-control-and-privacy.md#do-not-track-feature) を参照してください。
 ```
 
 ![DXPとAnalytics Cloudの接続が正しく設定されたことを示す成功メッセージが表示されます。](connecting-liferay-dxp-to-analytics-cloud/images/04.png)
