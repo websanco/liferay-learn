@@ -32,7 +32,7 @@ Liferay Analytics Cloudには2種類のデータが必要です。 １つ目は�
 
 チームメイトが既にデータソースを追加していない限り、リストは空です。 新しいデータソースを追加するには、以下のチュートリアルを参照してください。
 
-- [Connecting Liferay DXP to Analytics Cloud](./connecting-data-sources/connecting-liferay-dxp-to-analytics-cloud.md)
+- [Liferay DXPをAnalytics Cloudに接続する](./connecting-data-sources/connecting-liferay-dxp-to-analytics-cloud.md)
 - [Salesforce データソースの追加](./connecting-data-sources/adding-a-salesforce-data-source.md)
 - [CSVデータソースを追加する](./connecting-data-sources/adding-a-csv-data-source.md)
 
@@ -42,7 +42,7 @@ Liferay Analytics Cloudには2種類のデータが必要です。 １つ目は�
 
 ## 次のステップ
 
-- [Connecting Liferay DXP to Analytics Cloud](./connecting-data-sources/connecting-liferay-dxp-to-analytics-cloud.md)
+- [Liferay DXPをAnalytics Cloudに接続する](./connecting-data-sources/connecting-liferay-dxp-to-analytics-cloud.md)
 - [連絡先データの同期](./connecting-data-sources/syncing-contact-data-from-dxp.md)
 - [プロパティを使用したスコープサイトと個人](./connecting-data-sources/scoping-sites-and-individuals-using-properties.md)
 - [Salesforce データソースの追加](./connecting-data-sources/adding-a-salesforce-data-source.md)

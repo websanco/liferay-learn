@@ -70,7 +70,7 @@ Analytics Cloudは、これらのLiferay DXPアセットをサポートしてい
 - [ブログ](./touchpoints/assets/blogs.md)
 - [ドキュメントとメディア](./touchpoints/assets/documents-and-media.md)
 - [フォーム](./touchpoints/assets/forms.md)
-- [Web Content](./touchpoints/assets/web-content.md)
+- [Webコンテンツ](./touchpoints/assets/web-content.md)
 
 フォームを使ったユーザーの行動については、例えば、Analytics Cloudでは、ビュー数や投稿数、フォームを放棄したユーザーの割合、フォームの平均完了時間などが表示されます。 折れ線グラフは、時間の経過とともに表示数が変化します。
 

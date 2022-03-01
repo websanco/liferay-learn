@@ -29,7 +29,7 @@ Analytics Cloudでサイトのデータを見るためには、サイトをプ�
 1. Liferay DXPインスタンスで **Instance Settings** -> **Analytics Cloud** を表示して、Liferay DXPインスタンスがAnalytics Cloudと同期していることを確認します。 `Your DXP instance is connected to Analytics Cloud` というメッセージは、Liferay DXPインスタンスがAnalytics Cloudに正しく接続されていることを示します。
 
     ```{important}
-    Your DXP instance is connected to Analytics Cloud.`というメッセージが表示されない場合は、[Connecting Liferay DXP Sites to Analytics Cloud](./connecting-liferay-dxp-to-analytics-cloud.md)をご確認ください。
+    Your DXP instance is connected to Analytics Cloud.`というメッセージが表示されない場合は、 [Liferay DXPをAnalytics Cloudに接続する](./connecting-liferay-dxp-to-analytics-cloud.md) をご確認ください。
     ```
 
 1. Analytics Cloudのワークスペースで、 ［**同期済みのサイト**］ をクリックします。 Analytics Cloudで作成した利用可能なプロパティのリストが表示されます。 ここに追跡するサイトの新しいプロパティを作成します。
