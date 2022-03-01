@@ -1,4 +1,4 @@
-# Implementing a New API with REST Builder
+# Producing and Implementing APIs with REST Builder
 
 With REST Builder, you can define the API you want to build, and REST Builder provides the framework and endpoints for you. <!-- Add link to the REST Builder overview article once available. -->
 
@@ -12,10 +12,10 @@ To see REST Builder in action, you can deploy an example API that retrieves a du
     docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
     ```
 
-1. Download and unzip the `.zip` archive containing the [Acme Foo API](./producing-apis-with-rest-builder/liferay-r3b2.zip):
+1. Download and unzip the `.zip` archive containing the [Acme Foo API](./producing-and-implementing-apis-with-rest-builder/liferay-r3b2.zip):
 
     ```bash
-    curl https://learn.liferay.com/dxp/latest/en/headless-delivery/producing-apis-with-rest-builder/liferay-r3b2.zip -O
+    curl https://learn.liferay.com/dxp/latest/en/headless-delivery/producing-and-implementing-apis-with-rest-builder/liferay-r3b2.zip -O
     ```
 
     ```bash
@@ -49,7 +49,7 @@ To see REST Builder in action, you can deploy an example API that retrieves a du
 
     The page lists all of the installed JAX-RS bundles, including the newly deployed API, `Liferay.Headless.R3B2`. The API is now deployed and ready for you to call.
 
-    ![The newly deployed API (named Liferay.Headless.R3B2) is listed as a result from the command and is ready to use.](./implementing-a-new-api-with-rest-builder/images/01.png)
+    ![The newly deployed API (named Liferay.Headless.R3B2) is listed as a result from the command and is ready to use.](./producing-and-implementing-apis-with-rest-builder/images/01.png)
 
 1. Test the API by running the following command from your terminal, substituting a number between 1 and 3 for `{fooId}`:
 
