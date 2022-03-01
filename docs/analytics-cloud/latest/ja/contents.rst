@@ -1,20 +1,9 @@
 コンテント
 ========
 
-.. toctree::
-   :glob:
-   :includehidden:
-   :maxdepth: 3
+.. toctree:: :glob: :includehidden: :maxdepth: 3
 
-   getting-started
-   connecting-data-sources
-   touchpoints
-   people
-   optimization
-   apis
-   workspace-data
-   workspace-settings
-   troubleshooting
+   getting-started connecting-data-sources touchpoints people optimization apis workspace-data workspace-settings troubleshooting
 
 索引と表
 ==================

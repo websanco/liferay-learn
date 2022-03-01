@@ -2,9 +2,9 @@
 
 ## アカウント
 
-アカウントは、サイトと相互作用している企業や組織のことです。 会社の確定情報が記載されており、同じアカウントに所属している全てのユーザーの情報も記載されています。 アカウントリソースの説明は以下の通りです。
+アカウントは、サイトと相互作用している企業や組織のことです。 会社の確定情報が記載されており、同じアカウントに所属している全てのユーザーの情報も記載されています。 アカウントリソースについては以下の通りです。
 
-``` json
+```json
 { 
    "activeIndividualsCount":0,
    "dateCreated":"2019-12-27T19:17:49.924Z",
@@ -44,20 +44,20 @@
 } 
 ```
 
-### 詳細設定
+**プロパティ**
 
--   `activeIndividualsCount` (Number)：アカウントに所属するアクティブユーザーの数。
--   `dateCreated` (Date)：システムでアカウントが作成された日付。
--   `dateModified` (Date)：アカウントのプロパティを最終的に変更した日付。
--   `ID` （文字列）：アカウントのユニークな識別子です。
--   `individualsCount` (数値)：アカウントに所属するユーザー数、アクティブまたは非アクティブのユーザーがこのメトリックでカウントされます。
--   ` Properties `: アカウントの動的プロパティのキー／バリュー（文字列）マップで、例としては業界、ファックス、電話などがあります。
+* `activeIndividualsCount` (Number)：アカウントに所属するアクティブユーザーの数。
+* `dateCreated` （Date）：アカウントがシステムで作成された日付。
+* `dateModified` （日付）：アカウントプロパティが最後に変更された日付。
+* `ID` （文字列）：アカウントのユニークな識別子です。
+* `individualsCount` (数値)：アカウントに所属するユーザー数、アクティブまたは非アクティブのユーザーがこのメトリックでカウントされます。
+* ` Properties `: アカウントの動的プロパティのキー／バリュー（文字列）マップで、例としては業界、ファックス、電話などがあります。
 
-## ユーザー
+## 個人
 
-ユーザーはポータルにアクセスしたすべてのユーザーを表します。 個人が知られていても、匿名でも構いません。 既知のユーザーとは、連絡先の同期中にデータが濃縮された人のことです。 充実させた後、既知のユーザーは、メールや人口統計などの追加属性を持つようになります。 個々のリソースとその特性を以下に説明します。
+ユーザーはポータルにアクセスしたすべてのユーザーを表します。 ユーザーは既知でも匿名でも構いません。 既知のユーザーとは、連絡先の同期中にデータが濃縮された人のことです。 充実させた後、既知のユーザーは、メールや人口統計などの追加属性を持つようになります。 個々のリソースとそのプロパティについて、以下の通りです。
 
-``` json
+```json
 {
    "demographics":{
       "gender":"male",
@@ -84,16 +84,16 @@
 }
 ```
 
-### 詳細設定
+**プロパティ**
 
--   `人口統計` キー/値 (文字列:) ユーザーの人口統計の動的なプロパティのマップ; 例としては、性別、生年月日、電子メールなどがあります。
--   `ID` (文字列)：ユーザーの一意の識別子。
+* `人口統計` キー/値 (文字列:) ユーザーの人口統計の動的なプロパティのマップ; 例としては、性別、生年月日、電子メールなどがあります。
+* `ID` (文字列)：ユーザーの一意の識別子。
 
 ## セグメント
 
-セグメントとは、似たような特徴を持つユーザーのグループのことです。 セグメントは、 *静的* または *動的*のいずれかになります。 静的セグメントは、選択されたユーザーの静的なグループです。 動的セグメントは、基準に基づいています（例えば、米国から閲覧しているすべてのユーザーをグループ化する）。 定義された基準は、Liferay Analytics Cloud UIの動的セグメントに含まれるユーザーを決定します。 セグメントリソースについては、以下のように説明します。
+セグメントとは、似たような特徴を持つユーザーのグループのことです。 セグメントは*静的* または *動的*のいずれかです。 静的セグメントは、選択されたユーザーの静的なグループです。 動的セグメントは、基準に基づいています（例えば、米国から閲覧しているすべてのユーザーをグループ化する）。 定義された基準は、Liferay Analytics Cloud UIの動的セグメントに含まれるユーザーを決定します。 セグメントのリソースについては以下の通りです：
 
-``` json
+```json
 { 
    "dateCreated":"2019-12-27T19:17:49.924Z",
    "id":"386700296216137268",
@@ -113,21 +113,21 @@
 }
 ```
 
-### 詳細設定
+**プロパティ**
 
--   `dateCreated` (Date)：システムでセグメントが作成された日付。
--   `ID` (String)：セグメントの一意の識別子。
--   `individualCount` (Number)：このメトリックは匿名または既知のユーザーの両方を考慮します。
--   `knownIndividualsCount` (Number)：セグメントに属する既知のユーザーの数。
--   `name` (String)：セグメントの名前。
--   `segmentType` (String)：セグメントが静的か動的か。
--   `includeAnonymousUsers` (ブール値)：セグメントに匿名ユーザーが含まれるかどうか。 false の場合、 individualCount と knownIndividualCount は常に等しくなります。
+* `dateCreated` （日付）：セグメントがシステムで作成された日付。
+* `ID` （文字列）：セグメントのユニークな識別子。
+* `individualCount` (Number)：このメトリックは匿名または既知のユーザーの両方を考慮します。
+* `knownIndividualsCount` (Number)：セグメントに属する既知のユーザーの数。
+* `name` （文字列）：セグメントの名前。
+* `segmentType` （文字列）：セグメントが静的か動的か。
+* `includeAnonymousUsers` （ブール値）：セグメントに匿名ユーザーが含まれているかどうか。 falseの場合、individualCountとknownIndividualCountは常に等しくなります。
 
 ## ページ
 
-ページ情報は、追跡されたページとの相互作用データを集約したものです。 各ページのURLには、ページ滞在時間やページの閲覧数などのプロパティが含まれます。 すべてのプロパティは以下の通りです。
+ページ情報は、追跡されたページでのインタラクションデータを集約したものです。 各ページのURLには、ページ滞在時間やページの閲覧数などのプロパティが含まれます。 すべてのプロパティは以下の通りです。
 
-``` json
+```json
 { 
    "title":"Home - Liferay DXP",
    "metrics":{ 
@@ -253,14 +253,240 @@
 }
 ```
 
-### 詳細設定
+**プロパティ**
 
--   `title` (文字列)：ページタイトル。
--   `メトリクス` (メトリック)：各ページはタイトル、URLペアによって一意に識別されます。
-    -   `メトリクス` (メトリック)：各ページはタイトル、Urlペアによって一意に識別されます。
-        -   トレンド
-            -   `パーセンテージ` (数値) - 前のメトリック値と現在のメトリック値の相対的な変動。
-            -   `trendClassfication` (String)で、POSITIVE, NEUTRAL, NEGATIVEの値を想定することができます。 これは、以前の値と比較したときに、メトリックがどの程度のパフォーマンスを発揮しているかを考慮に入れています。
-        -   `値` (Number)：メトリック値、rangeKeyに依存し、選択されたrangeKeyが30の場合、値は過去30日間の集計データを表します。
-        -   `previousValue` (Number)： 前のメトリック値。 また、要求されたrangeKeyにも依存しますが、選択されたrangeKeyが30の場合、前の値は、今日から60日前までのデータを集約します。
--   `url` (文字列)：ページのURL
+* `title` (文字列)：ページタイトル。
+* `metrics` （メトリック）：ページのメトリック値のリスト。各ページはタイトル、URLのペアで一意に識別されます。
+  * `Metric` （オブジェクト）：メトリック値を表すオブジェクト。メトリックプロパティについては、以下に説明されています：
+    * トレンド
+      * `パーセント` （Number）-以前と現在のメトリック値の相対的なバリエーション。
+      * `TrendClassfication` （文字列）、POSITIVE、NEUTRAL、NEGATIVEの値をとることができます。 この指標は、以前の値と比較して、どれだけパフォーマンスが向上しているかを考慮しています。
+    * `Value/0> （Number）：メトリック値。rangeKeyによって異なります。選択したrangeKeyが30の場合、値は過去30日間の集計データを表します。</li>
+<li><code>previousValue` （Number）：前のメトリック値。 また、要求されたレンジキーにもよりますが、選択されたレンジキーが30の場合、前の値は今日-60日目から今日-30日目までのデータを集約します。
+* `url` （文字列）：ページのURL
+
+## アセット
+
+アセット情報は、追跡されたアセットページでのインタラクションデータを集約したものです。 どのページURLにも複数のアセットを含めることができます。 アセットメトリクスは、ページレポートを補完するもので、ページのインタラクションをより詳細に見ることができます。 ブログ、ドキュメントとメディア、フォーム、そしてWebコンテンツの4つのアセットが用意されています。 これらの各アセットには、特定のエンドポイントがあります：
+
+* ブログ - [https://analytics.liferay.com/api/reports/blogs](https://analytics.liferay.com/api/reports/blogs)
+* ドキュメントとメディア - [https://analytics.liferay.com/api/reports/documents-and-media](https://analytics.liferay.com/api/reports/documents-and-media)
+* フォーム- [https://analytics.liferay.com/api/reports/forms](https://analytics.liferay.com/api/reports/forms)
+* Webコンテンツ- [https://analytics.liferay.com/api/reports/web-contents](https://analytics.liferay.com/api/reports/web-contents)
+
+各アセットには、それぞれのプロパティが含まれています。
+
+### ブログ
+
+```json
+ {
+      "id": "107694635",
+      "title": "Awesome Web Portal Examples",
+      "metrics": {
+        "readingTimeMetric": {
+          "value": 71788.99821937321
+        },
+        "clicksMetric": {
+          "value": 1969.0
+        },
+        "viewsMetric": {
+          "value": 3253.0
+        },
+        "ratingsMetric": {
+          "value": 0.0
+        },
+        "commentsMetric": {
+          "value": 0.0
+        }
+      },
+      "_links": {
+        "self": {
+          "href": "https://analytics.liferay.com/api/reports/blogs/107694635?blogTitle=16%20Awesome%20Web%20Portal%20Examples&rangeKey=30"
+        }
+      }
+```
+
+**プロパティ**
+
+* `ID` （文字列）：ブログのユニークな識別子。
+* ` Title ` （文字列）：ブログに使用されるタイトル。
+* `Reading Time Metric` （Double）：ブログの閲覧に費やしたユーザーの平均時間。
+* `Clicks Metric` （Double）：ブログ上でユーザーがクリックした回数の合計。
+* `Views Metric` （Double）：ブログのユーザー閲覧数の合計。
+* `Ratings Metric` （Double）：その選択期間中のブログの平均評価（1〜5の範囲）。
+* `Comments Metric` （Double）：ブログに追加されたコメントの合計。
+
+### ドキュメントとメディア
+
+```json
+{
+      "id": "320981007",
+      "title": "My Awesome Document",
+      "metrics": {
+        "downloadsMetric": {
+          "value": 6.0
+        },
+        "ratingsMetric": {
+          "value": 0.0
+        },
+        "commentsMetric": {
+          "value": 0.0
+        },
+        "previewsMetric": {
+          "value": 286.0
+        }
+      },
+      "_links": {
+        "self": {
+          "href": "https://analytics.liferay.com/api/reports/documents-and-media/320981007?documentTitle=My%20Awesome%20Document&rangeKey=30"
+      }
+}
+```
+
+**プロパティ**
+
+* `ID` （文字列）：ドキュメントまたはメディアのユニークな識別子。
+* `Title` （文字列）：ドキュメントまたはメディアに使用されるタイトル。
+* `Downloads Metric` （Double）：ドキュメントまたはメディアのユーザーダウンロード数の合計。
+* `Ratings Metric` （Double）：その選択期間中のドキュメントまたはメディアの平均評価（1〜5の範囲）。
+* `Comments Metric` （Double）：ドキュメントまたはメディアに追加されたコメントの合計。
+* `Previews Metric` （Double）：ドキュメントまたはメディアのユーザープレビュー数の合計。
+
+### フォーム
+
+```json
+{
+      "id": "872a3ca0-324d-438a-9d82-e4cad68c3a20",
+      "title": "Blog Subscription",
+      "metrics": {
+        "viewsMetric": {
+          "value": 20409.0
+        },
+        "abandonmentsMetric": {
+          "value": 0.9989710421872703
+        },
+        "submissionsMetric": {
+          "value": 22.0
+        },
+        "completionTimeMetric": {
+          "value": 33645.77272727273
+        }
+      },
+      "_links": {
+        "self": {
+          "href": "https://analytics.liferay.com/api/reports/forms/872a3ca0-324d-438a-9d82-e4cad68c3a20?formTitle=Blog%20Subscription&rangeKey=30"
+        },
+        "pages": {
+          "href": "https://analytics.liferay.com/api/reports/forms/872a3ca0-324d-438a-9d82-e4cad68c3a20/pages?formTitle=Blog%20Subscription&rangeKey=30"
+        }
+      }
+```
+
+**プロパティ**
+
+* `ID` （文字列）：フォームのユニークな識別子。
+* ` Title ` （文字列）：フォームに使用されるタイトル。
+* `Views Metric` （Double）：フォームのユーザー閲覧数の合計。
+* `Abandonments Metric` (Double)：フォームの放棄率（0～1の範囲）。
+* `Submissions Metric` （Double）：フォームの送信数の合計。
+* `Completion Time Metric` (Double)：フォームを完了するためのユーザーの平均時間。
+
+また、ページのリンクに移動すると、フォームのページメトリクス情報を見ることができます。 ページおよびフォームフィールドごとにフォームメトリックが表示されます。
+
+```json
+{
+  "formId": "872a3ca0-324d-438a-9d82-e4cad68c3a20",
+  "formTitle": "Blog Subscription",
+  "formPages": [
+    {
+      "id": "0",
+      "title": "",
+      "fields": {
+        "name_field": {
+          "metrics": {
+            "fieldInteractionsMetric": {
+              "value": 6.0
+            },
+            "fieldInteractionsDurationMetric": {
+              "value": 0.0
+            },
+            "fieldRefilledMetric": {
+              "value": 3.0
+            },
+            "fieldAbandonmentsMetric": {
+              "value": 3.0
+            }
+          }
+        },
+        "email_field": {
+          "metrics": {
+            "fieldInteractionsMetric": {
+              "value": 86.0
+            },
+            "fieldInteractionsDurationMetric": {
+              "value": 223983.0
+            },
+            "fieldRefilledMetric": {
+              "value": 34.0
+            },
+            "fieldAbandonmentsMetric": {
+              "value": 10.0
+            }
+          }
+        }       
+      },
+      "metrics": {
+        "pageViewsMetric": {
+          "value": 20409.0
+        },
+        "pageAbandonmentsMetric": {
+          "value": 20388.0
+        }
+      }
+    }
+  ],
+  "_links": {
+    "self": {
+      "href": "https://analytics.liferay.com/api/reports/forms/872a3ca0-324d-438a-9d82-e4cad68c3a20/pages?formTitle=Blog%20Subscription&rangeKey=30"
+    },
+    "parent": {
+      "href": "https://analytics.liferay.com/api/reports/forms/872a3ca0-324d-438a-9d82-e4cad68c3a20?formTitle=Blog%20Subscription&rangeKey=30"
+    }
+  }
+}
+```
+
+**プロパティ**
+
+* `Form ID` （文字列）：フォームのユニークな識別子。
+* `Form Title` （文字列）：フォームに使用されるタイトル。
+* `Field Interactions Metric` (Double)：フォーム項目のユーザーインタラクションの合計。
+* `Field Interactions Duration Metric` (Double)：フォーム項目の平均インタラクション時間。
+* `Field Abandonments Metric` (Double)：このフィールドでフォームを放棄したユーザーの合計。
+* `Page Views Metric` (Double)：フォームページのユーザービューの合計。
+* `Page Abandonments Metric` (Double)：このページでユーザーがフォームを放棄した数の合計。
+
+### Web コンテンツ
+
+```json
+ {
+      "id": "231976097",
+      "title": "My Web Content",
+      "metrics": {
+        "viewsMetric": {
+          "value": 280756.0
+        }
+      },
+      "_links": {
+        "self": {
+          "href": "https://analytics.liferay.com/api/reports/web-contents/231976097?webContentTitle=My%20Web%20Content&rangeKey=30"
+        }
+      }
+    }
+```
+
+**プロパティ**
+
+* `ID` （文字列）：Webコンテンツのユニークな識別子。
+* ` Title ` （文字列）：Webコンテンツに使用されるタイトル。
+* `Views Metric` （Double）：Webコンテンツのユーザー閲覧数の合計。

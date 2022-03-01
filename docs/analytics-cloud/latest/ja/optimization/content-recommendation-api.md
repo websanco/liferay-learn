@@ -4,8 +4,8 @@ Liferay Analytics CloudのコンテンツレコメンデーションAPIは、Lif
 
 コンテンツレコメンデーションAPIには、以下を有効にするサービスが含まれています。
 
--   ユーザーが閲覧している現在のタグに基づいて、類似したタグ（コンテンツ）を発見します。
--   ユーザーの経年的な興味に基づいてタグを発見する。
+* ユーザーが閲覧している現在のタグに基づいて、類似したタグ（コンテンツ）を発見します。
+* ユーザーの経年的な興味に基づいてタグを発見する。
 
 ## 類似のタグを発見する
 
@@ -29,7 +29,7 @@ Liferay Analytics CloudのコンテンツレコメンデーションAPIは、Lif
 
 例えば、関連する用語を含むJSONレスポンスは次のようになります。
 
-``` json
+```json
 {
   "_embedded": {
     "interest-terms": [
@@ -69,11 +69,13 @@ Liferay Analytics CloudのコンテンツレコメンデーションAPIは、Lif
 
 ここでは、ユーザIDのみを含むリクエストの例を示します。
 
-    {url}/api/1.0/interests/terms/953be104-5540-abf8-59b8-55f895200acc
+```
+{url}/api/1.0/interests/terms/953be104-5540-abf8-59b8-55f895200acc
+```
 
 そして、JSONでのレスポンス例です。
 
-``` json
+```json
 {
   "_embedded": {
     "interest-topics": [

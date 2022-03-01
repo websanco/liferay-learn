@@ -1,12 +1,14 @@
 # データのクエリ
 
-Liferay Analytics Cloudのルートエンドポイントは、 <https://analytics.liferay.com/api/reports>です。 上記URLにGETリクエストすることで、全データ型エンドポイントの一覧を取得することができます。 curlで試します。
+Liferay Analytics Cloudのルートエンドポイントは、 <https://analytics.liferay.com/api/reports>です。 上記のURLにGETをリクエストすることで、すべてのデータタイプのエンドポイントのリストを取得することができます。 curlで試します。
 
-    curl -L -H "Authorization: Bearer {token}" https://analytics.liferay.com/api/reports
+```
+curl -L -H "Authorization: Bearer {token}" https://analytics.liferay.com/api/reports
+```
 
 以下のようなレスポンスが返ってきます。
 
-``` json
+```json
 {
    "_links":{
       "accounts":{
@@ -25,44 +27,50 @@ Liferay Analytics Cloudのルートエンドポイントは、 <https://analytic
 }
 ```
 
-ここから、アカウント、個人、ページ、セグメントのデータを取得するために異なるAPIを呼び出すことができます。
+ここから、さまざまなAPIを呼び出して、アカウント、ユーザー、ページ、セグメントのデータを取得することができます。
 
-アナリティクスデータに対するサーバーの応答はすべて同じデータ構造に従っています。 レスポンスは、Liferay Analytics Cloudによって計算されたエンティティのページ化された結果です。 デフォルトでは、各ページには20の要素が含まれており、ページクエリパラメータを置き換えることでナビゲートすることができます。 Totalは利用可能な要素の総数を示します。 以下に回答形式を示します。
+アナリティクスデータに対するサーバーの応答は、すべて同じデータ構造に従っています。 応答は、Liferay Analytics Cloudによって計算されたエンティティのページ結果です。 デフォルトでは、各ページには20個の要素が含まれており、ページのクエリパラメーターを置き換えることでナビゲートすることができます。 Totalは、利用可能な要素の総数を表示します。 以下はリスポンスの形式です：
 
-``` json
+```json
 {"results":[],"total":0}
 ```
 
 ## アカウントデータへのアクセス
 
-アカウントデータは、以下のコマンドで取得できます。
+アカウントデータは、以下のコマンドで取得できます：
 
-    curl -H "Authorization: Bearer {token}" -L https://analytics.liferay.com/api/reports/accounts
+```
+curl -H "Authorization: Bearer {token}" -L https://analytics.liferay.com/api/reports/accounts
+```
 
 ### パラメーター
 
--   `ページ` (整数)：結果ページ番号
+* `ページ` （整数）：ページ番号の結果
 
 ## ユーザーデータへのアクセス
 
-個人データは以下のコマンドで取得できます。
+ユーザーデータは、以下のコマンドで取得できます：
 
-    curl -H "Authorization: Bearer {token}" -L https://analytics.liferay.com/api/reports/individuals
+```
+curl -H "Authorization: Bearer {token}" -L https://analytics.liferay.com/api/reports/individuals
+```
 
 ### パラメーター
 
--   `ページ` 整数：結果ページ番号
--   `クエリ` 文字列: 個人の人口統計情報と一致させるキーワード
+* `ページ` 整数：ページ番号の結果
+* `クエリ` 文字列：ユーザーの人口統計情報と一致するキーワード
 
 ## ユーザーのアクティビティ
 
-    curl -H "Authorization: Bearer {token}" -L https://analytics.liferay.com/api/reports/individuals/{id}/activities
+```
+curl -H "Authorization: Bearer {token}" -L https://analytics.liferay.com/api/reports/individuals/{id}/activities
+```
 
-個人が行ったアクティビティのリストを返します
+ユーザーによって実行されたアクティビティのリストを返します。
 
-各活動の構成は以下の通りです。
+各活動の構成は以下のとおりです：
 
-``` json
+```json
 {
    "ownerId": "371000621354447876",
    "startTime": "2019-10-28T21:49:05.674Z",,
@@ -79,19 +87,21 @@ Liferay Analytics Cloudのルートエンドポイントは、 <https://analytic
 
 ### 詳細設定
 
--   `ownerId` (String)：アクティビティの所有者、個人のIDに相当します。
--   `startTime` (Date)：アクティビティが発生した日付のタイムスタンプ。
--   `applicationId` (String)：イベントをトリガしたアプリケーションの Id。
--   `eventId` (String)：個人によって実行されたアナリティクスイベントのID; イベントIDは個人によって実行されたアクションを表します。
--   `eventProperties` (Object)：イベントに関するメタデータ情報で、eventIdによって異なります。
+* `ownerId` （文字列）：ユーザーIDに相当する、アクティビティの所有者。
+* `startTime` （日付）：アクティビティが発生した日付のタイムスタンプ。
+* `applicationId` （文字列）：イベントをトリガーしたアプリケーションのID。
+* `eventId` （文字列）：ユーザーによって実行されたアナリティクスイベントのID。イベントIDは、ユーザーによって実行されるアクションを表す。
+* `eventProperties` （オブジェクト）：イベントに関するメタデータ情報。eventIdによって異なる。
 
-## 個人の関心トピック
+## ユーザーの興味
 
-    curl -H "Authorization: Bearer {token}" -L https://analytics.liferay.com/api/reports/individuals/{id}/interests
+```
+curl -H "Authorization: Bearer {token}" -L https://analytics.liferay.com/api/reports/individuals/{id}/interests
+```
 
-個人の関心トピックのリストを返します。
+ユーザーが興味があるもののリストを返します。各興味の構造は以下のようになります。
 
-``` json
+```json
 {
    "score":0.6908830400645879,
    "ownerId":"385450976494153117",
@@ -103,45 +113,53 @@ Liferay Analytics Cloudのルートエンドポイントは、 <https://analytic
 
 ### 詳細設定
 
--   ` score ` (数値)：個人がその特定のトピックにどれだけ興味を持っているかを数値で表したもの。
--   `ownerId` (String)：アクティビティの所有者、個人のIDに相当します。
--   `dateRecorded` (Date)：関心トピックの数値が計算された日付のタイムスタンプ。
--   `applicationId` (String)：イベントをトリガしたアプリケーションの Id。
--   `applicationId` (String)：イベントをトリガしたアプリケーションの Id。
--   `name` (String)：関心トピックの名前
+* ` score ` (数値)：ユーザーがその特定のトピックにどれだけ興味を持っているかを数値で表したもの。
+* `ownerId` （文字列）：ユーザーIDに相当する、アクティビティの所有者。
+* `dateRecorded` （日付）：興味が計算された日付のタイムスタンプ。
+* `applicationId` （文字列）：イベントをトリガーしたアプリケーションのID。
+* `id` （文字列）：興味対象の一異な識別情報。
+* `name` （文字列）：興味のあるものの名前。
 
 ## ユーザーのセグメント
 
-    curl -H "Authorization: Bearer {token}" -L https://analytics.liferay.com/api/reports/individuals/{id}/segments
+```
+curl -H "Authorization: Bearer {token}" -L https://analytics.liferay.com/api/reports/individuals/{id}/segments
+```
 
-個人が所属するセグメントのリストを返します。各セグメントの構造については、［データ型 &gt; セグメント］で説明しています。
+ユーザーが所属するセグメントのリストを返します。各セグメントの構造については、［データ型 > セグメント］で説明しています。
 
 ## セグメントデータへのアクセス
 
-セグメントデータは以下のコマンドで取得できます。
+セグメンツデータは以下のコマンドで取得できます：
 
-    curl -H "Authorization: Bearer {token}" -L https://analytics.liferay.com/api/reports/segments
+```
+curl -H "Authorization: Bearer {token}" -L https://analytics.liferay.com/api/reports/segments
+```
 
 ### 詳細設定
 
-`ページ` : 整数、結果ページ番号
+`ページ` ：整数、結果ページ番号
 
 ## ユーザーのセグメント化
 
-セグメントに属する個人のリストを返します。
+セグメントに属するユーザーのリストを返します。
 
-    curl -H "Authorization: Bearer {token}" -L https://analytics.liferay.com/api/reports/segments/{id}/individuals
+```
+curl -H "Authorization: Bearer {token}" -L https://analytics.liferay.com/api/reports/segments/{id}/individuals
+```
 
 ## ページデータへのアクセス
 
-ページデータは以下のコマンドで取得できます。
+ページデータは、以下のコマンドで取得できます：
 
-    curl -H "Authorization: Bearer {token}" -L https://analytics.liferay.com/api/reports/pages
+```
+curl -H "Authorization: Bearer {token}" -L https://analytics.liferay.com/api/reports/pages 
+```
 
 ### 詳細設定
 
--   `ページ` (整数)：結果ページ番号。
--   `キーワード` (文字列): ページのタイトルまたはURL情報と一致させるキーワード。
--   `rangeKey` (Integer): データをグループ化するために使用する範囲。 可能な値は、0 (過去24時間のデータ)、1 (昨日のデータ)、7 (過去7日間のデータ)、28 (過去28日間のデータ)、30 (デフォルト値、過去30日間のデータ)、90 (過去90日間のデータ)です。
--   `sortMetric` (String): defined what metric to sort the results, default to viewsMetrics; possible values are ctrMetric, timeOnPageMetric, exitRateMetric, ctpMetric, sessionsMetric, avgTimeOnPageMetric, bounceMetric, maxScrollDepthMetric, visitorsMetric, viewsMetric, bounceRateMetric, indirectAccessMetric, entrancesMetric, directAccessMetric
--   `sortOrder` (String), 可能な値は *asc* または *desc*です. sortMetricに従って結果を昇順または降順に並べ替えます。 デフォルトは desc です。
+* `ページ` （整数）：ページ番号の結果。
+* `キーワード` （文字列）：ページのタイトルやURL情報にマッチさせるキーワード。
+* `rangeKey` （整数）：データのグループ化に使用される範囲。 設定可能な値は、0（24時間前のデータ）、1（昨日のデータ）、7（7日前のデータ）、28（28日前のデータ）、30（デフォルト値、30日前のデータ）、90（90日前のデータ）。
+* `sortMetric` （文字列）：結果を並べ替えるメトリックを定義。デフォルトはviewsMetrics。可能な値は、ctrMetric、timeOnPageMetric、exitRateMetric、ctpMetric、sessionsMetric、avgTimeOnPageMetric、bounceMetric、maxScrollDepthMetric、visitorsMetric、viewsMetric、bounceRateMetric、indirectAccessMetric、entlinesMetric、directAccessMetric。
+* `sortOrder` （文字列）、可能な値は * asc *または *desc*。 sortMetricに従って、結果を昇順または降順で並べ替える。 デフォルトはdesc。

@@ -1,23 +1,29 @@
 # データのエクスポート
 
-前述したように、すべてのAPIコールはデータのサブセットのみを返し、スコープはページクエリパラメータによって制御されます。 幸いなことに、データセット全体をJSONファイルにエクスポートする方法があります。 最初のリクエストでデータファイルの準備を行い、エクスポート後に同じエンドポイントをフェッチしてデータ結果をストリームすることができます。
+前述のように、すべてのAPIコールはデータのサブセットを返すだけで、そのスコープはページのクエリパラメータによって制御されます。 幸い、データセット全体をJSONファイルにエクスポートする方法があります。 最初のリクエストでデータファイルを用意し、エクスポート後に同じエンドポイントをフェッチしてデータ結果をストリームすることができます。
 
-ユーザーは、前述の4つのリソースタイプ（アカウント、個人、セグメント、ページ）のデータエクスポートを要求することができます。
+ユーザーは、前述の4つのリソースタイプ（アカウント、個人、セグメント、ページ）のデータエクスポートをリクエストできます。
 
 ## データのエクスポートをリクエストする
 
-    curl -H "Authorization: Bearer {token}" -L https://analytics.liferay.com/api/reports/export/{type}
+```
+curl -H "Authorization: Bearer {token}" -L https://analytics.liferay.com/api/reports/export/{type}
+```
 
-前述の通り、データ型を定義しています。 可能な値は以下の通りです。 **アカウント**, **個人**, **ページ**, および **セグメント**。 そのため、セグメントデータのエクスポートに興味がある場合は、以下のようなリクエストを送信します。
+前述の通り、タイプはデータ型を定義します。 設定可能な値は次のとおりです： **アカウント**、 **個人**、 **ページ**、 **セグメント**。  したがって、セグメントデータのエクスポートに興味がある場合は、次のリクエストを送信します：
 
-    curl -H "Authorization: Bearer {token}" -L https://analytics.liferay.com/api/reports/export/segment
+```
+curl -H "Authorization: Bearer {token}" -L https://analytics.liferay.com/api/reports/export/segment
+```
 
-以下のようなレスポンスが返ってきます。
+以下のようなレスポンスが返ってきます：
 
-``` json
+```json
 {"message":"The data export file is being created. Please come back later."}
 ```
 
-最初のリクエストが行われた日から30分間は、同じデータ書き出しファイルが返却されます。 その後、新しいリクエストに応じて新しいデータエクスポートファイルが生成されます。 エクスポートジョブが完了したら、次のコマンドでファイルをダウンロードできます。
+最初のリクエストが行われた日から30分間は、同じデータエクスポートファイルが返されます。 その後、新しいリクエストに応じて、新しいデータエクスポートファイルが生成されます。 エクスポートジョブが完了すると、以下のコマンドでファイルをダウンロードできます：
 
-    curl -H "Authorization: Bearer {token}" -L https://analytics.liferay.com/api/reports/export/segment > segment-data.json
+```
+curl -H "Authorization: Bearer {token}" -L https://analytics.liferay.com/api/reports/export/segment > segment-data.json
+```

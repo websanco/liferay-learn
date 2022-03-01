@@ -8,4 +8,4 @@ pages/paths.md
 ```
 
 - [ページ](./pages/pages.md)
-- [Paths](./pages/paths.md)
+- [パス](./pages/paths.md)
