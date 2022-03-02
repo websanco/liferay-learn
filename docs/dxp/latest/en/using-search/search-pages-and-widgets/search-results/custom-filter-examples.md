@@ -119,7 +119,7 @@ There's no configuration for searching multiple Sites on one Search Page without
 
    **Filter Value:** `38109`
 
-   For the example content form the above screenshot, one more Custom Filter is needed. Configure it identically to the above with one exception: the Filter Value is `38105`.
+   For the example content from the above screenshot, one more Custom Filter is needed. Configure it identically to the above with one exception: the Filter Value is `38105`.
 
    > **Checkpoint:** Search again and confirm that content from only the designated Sites is returned. This can be further confirmed by looking at the details view if the search results are configured to _Display Results in Document Form_.
 
