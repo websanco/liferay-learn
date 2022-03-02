@@ -1,11 +1,9 @@
-UIアーキテクチャ
-===============
+# UIアーキテクチャ
 
-.. toctree:: :maxdepth: 3
+```{raw} html
+:file: ../../landingpage_template.html
+```
 
-   ui-architecture/ui-architecture.md ui-architecture/theme-components.md ui-architecture/understanding-the-page-layout.md
-
-
--  :doc:`/liferay-internals/architecture/ui-architecture/ui-architecture` (Coming soon!)
--  :doc:`/liferay-internals/architecture/ui-architecture/theme-components` (Coming soon!)
--  :doc:`/liferay-internals/architecture/ui-architecture/understanding-the-page-layout` (Coming soon!)
+```{raw} html
+:file: ui-architecture/landing.html
+```
