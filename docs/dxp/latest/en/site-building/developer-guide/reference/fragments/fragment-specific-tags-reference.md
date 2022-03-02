@@ -9,7 +9,7 @@ Page Fragments have access to these types of liferay-specific tags and attribute
 - [Editable Links](#creating-editable-links)
 - [Editable HTML (Liferay Portal 7.3 GA3+ and DXP 7.3+)](#creating-editable-html)
 - [Embedded Widgets](#including-widgets-within-a-fragment)
-- [Localizable Fragment Fields](#localizing-fragment-configuration-fields)
+- [Localizable Fragment Fields](#localizing-fragment-configurations)
 
 ```{note}
 When you start typing the name of a tag, the [HTML editor](../../developing-page-fragments/using-the-fragments-editor.md) provides auto-completion for `lfr` tags like editable elements and embeddable widgets.
@@ -114,7 +114,7 @@ Most images can be handled like this, but to add an editable background image yo
 </div>
 ```
 
-Content mapping connects editable fields in your Fragment with fields from an Asset type like Web Content or Blogs. For example, you can map an image field to display a preview image for a Web Content Article. For more information on mapping fields, see [Configuring Elements on Content Pages](../../../creating-pages/building-and-managing-content-pages/configuring-elements-on-content-pages.md#mapping-content).
+Content mapping connects editable fields in your Fragment with fields from an Asset type like Web Content or Blogs. For example, you can map an image field to display a preview image for a Web Content Article. For more information on mapping fields, see [Fragment Mapping Settings](../../../creating-pages/page-fragments-and-widgets/using-fragments/configuring-fragments/fragment-sub-elements-reference.md#mapping-settings).
 
 ## Creating Editable Links
 
@@ -143,7 +143,7 @@ You can edit the type of link, target URL, and link mapping from the Content Pag
 
 ![You have several options for defining a link's appearance and behavior.](./fragment-specific-tags-reference/images/03.png)
 
-For more information on editable links, see [Editable Links](../../../creating-pages/building-and-managing-content-pages/configuring-elements-on-content-pages.md#editing-hyperlinks).
+For more information on editable links, see [Editable Links](../../../creating-pages/page-fragments-and-widgets/configuring-fragments/fragment-sub-elements-reference.md#link-settings).
 
 ## Creating Editable HTML
 
@@ -214,11 +214,11 @@ When you deploy your widget, it's available to add. The name you specify in the 
 According to the W3C HTML standards, custom elements can't be self-closing. Therefore, even though you can't add anything between the opening and closing `<lfr-widget...>` tags, you can't use the self-closing notation for the tag.
 ```
 
-## Localizing Fragment Configuration Fields
+## Localizing Fragment Configurations
 
 > Available: Liferay DXP/Portal 7.4+
 
-You can change the Fragment configuration fields depending on the Page's target language. For example, on a Button Fragment you can define one button type when the page language is en-US, and a different button type when the page language is es-ES. To localize a Fragment configuration field, use the `localizable` attribute.
+You can localize Fragment configuration for a Page's target language. For example, on a Button Fragment you can define one button type when the page language is en-US, and a different button type when the page language is es-ES. To localize a Fragment configuration field, use the `localizable` attribute.
 
 ```{note}
 The `localizable` attribute is not available for Fragment configuration fields where the `configurationRole` property is set to `style`. 

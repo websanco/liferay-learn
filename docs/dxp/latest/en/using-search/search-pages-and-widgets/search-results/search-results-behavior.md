@@ -102,7 +102,7 @@ Highlighting is a helpful visual cue that hints at why the result is returned, b
 
 ## Returning Pages in Search Results
 
-In Liferay 7.2+, [page content](../../../site-building/creating-pages/building-and-managing-content-pages/content-pages-overview.md) from public content pages is returned in the Search Results widget. For example, you can search for text found in a Paragraph fragment on a public page.
+In Liferay 7.2+, [page content](../../../site-building/creating-pages/using-content-pages.md) from public content pages is returned in the Search Results widget. For example, you can search for text found in a Paragraph fragment on a public page.
 
 By contrast, in the latest Liferay 7.2 and 7.3, and all Liferay 7.4+ releases, page content on private content pages and staged pages is not indexed and thus not returned in the list of search results, regardless of the User's permission to view the page.
 

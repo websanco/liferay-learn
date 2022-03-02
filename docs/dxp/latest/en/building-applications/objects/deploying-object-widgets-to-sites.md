@@ -40,7 +40,7 @@ You can also click the widget's *Options* button (![Options Button](../../images
 
 ![Click the Options button to access additional functions and configuration options.](./deploying-object-widgets-to-sites/images/03.png)
 
-Available options depend on whether the widget is deployed to a [Content Page](../../site-building/creating-pages/building-and-managing-content-pages/using-widgets-on-a-content-page.md) or [Widget Page](../../site-building/creating-pages/using_widget_pages.html).
+Available options depend on whether the widget is deployed to a [Content Page](../../site-building/creating-pages/using-content-pages/using-widgets-on-a-content-page.md) or [Widget Page](../../site-building/creating-pages/using_widget_pages.html).
 
 ## Additional Information
 

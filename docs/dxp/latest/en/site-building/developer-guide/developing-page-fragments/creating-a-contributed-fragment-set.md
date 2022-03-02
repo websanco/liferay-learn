@@ -67,7 +67,7 @@ First, deploy an example to see what a contributed Fragment Set looks like:
 
 Great! You successfully deployed a contributed Fragment Set.
 
-As you can see, the contributed Fragment Set appears with the default Fragment Sets, and the Fragments can't be modified from the UI. The only way to modify the Set is to update the module they came from or [copy the Fragment to another Set](../../displaying-content/using-fragments/managing-page-fragments.md#managing-individual-page-fragments) and modify the Fragment copy.
+As you can see, the contributed Fragment Set appears with the default Fragment Sets, and the Fragments can't be modified from the UI. The only way to modify the Set is to update the module they came from or [copy the Fragment to another Set](../../creating-pages/page-fragments-and-widgets/using-fragments/managing-fragments.md#managing-individual-page-fragments) and modify the Fragment copy.
 
 ## Contributed Fragment Set Logic and metadata
 

@@ -1,6 +1,6 @@
 # Configuring Navigation Menus
 
-To display and configure a [Navigation Menu](./using-navigation-menus.md), you can use the [Menu Display Fragment](../creating-pages/building-and-managing-content-pages/page-fragments-user-interface-reference.md#menu-display) (available in Liferay DXP 7.4+) or Navigation Menu Widget. With any of these two options, you can define the menu display options and create different navigation levels for your Site.
+To display and configure a [Navigation Menu](./using-navigation-menus.md), you can use the [Menu Display Fragment](../creating-pages/page-fragments-and-widgets/using-fragments/default-fragments-reference.md) (available in Liferay DXP 7.4+) or Navigation Menu Widget. With any of these two options, you can define the menu display options and create different navigation levels for your Site.
 
 ```{note}
 Configuring the Menu Display Fragment is easier than the Navigation Menu Widget, and you have preview options working with [Master Page Template](../creating-pages/defining-headers-and-footers/creating-a-master-page-template.md) that Navigation Menu Widgets do not provide.
@@ -12,7 +12,7 @@ Configuring the Menu Display Fragment is easier than the Navigation Menu Widget,
 
 Using the Menu Display Fragment, you can create a navigation menu anywhere in your Content Page. This navigation menu is based on your Site's Public or Private Pages hierarchy, or any other hierarchy you define using Liferay DXP [Navigation Menus](./configuring-navigation-menus.md). You can also define the menu display style options and the number of sub-levels to include in the navigation.
 
-The Menu Display Fragment appears under the Fragments and Widget section of your Content Page. You add and configure this Fragment as with other Fragments in your Content Pages. For more information, see [Adding Elements to Content Pages](../creating-pages/building-and-managing-content-pages/adding-elements-to-content-pages.md) and [Configuring Elements on Content Pages](../creating-pages/building-and-managing-content-pages/configuring-elements-on-content-pages.md).
+The Menu Display Fragment appears under the Fragments and Widget section of your Content Page. You add and configure this Fragment as with other Fragments in your Content Pages. For more information, see [Adding Elements to Content Pages](../creating-pages/using-content-pages/adding-elements-to-content-pages.md) and [Configuring Fragments](../creating-pages/page-fragments-and-widgets/using-fragments/configuring-fragments.md).
 
 ![The Menu Display Fragment appears under the Fragments and Widget section of your Content Page.](./configuring-navigation-menus/images/06.png)
 
@@ -80,5 +80,5 @@ You can configure which pages at what level from the menu appear in the widget. 
 
 - [Using Navigation Menus](./using-navigation-menus.md)
 - [Managing Site Navigation](./managing-site-navigation.md)
-- [Adding Elements to Content Pages](../creating-pages/building-and-managing-content-pages/adding-elements-to-content-pages.md)
-- [Content Page Editor User Interface Reference](../creating-pages/building-and-managing-content-pages/content-page-editor-user-interface-reference.md)
+- [Adding Elements to Content Pages](../creating-pages/using-content-pages/adding-elements-to-content-pages.md)
+- [Content Page Editor UI Reference](../creating-pages/using-content-pages/content-page-editor-ui-reference.md)

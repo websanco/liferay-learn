@@ -1,8 +1,8 @@
 # Building Responsive Layouts with the Grid Fragment
-
+<!--TASK: Reconsider article.-->
 > Availability: Liferay DXP 7.3+.
 
-Liferay DXP [uses responsive design](./building-a-responsive-site.md) by default, but there are situations where you want additional and more granular control of the content layout. By using the [Grid Fragment](../../creating-pages/building-and-managing-content-pages/configuring-elements-on-content-pages.md#configuring-the-grid-fragment) in your Content Page, you gain precise control of the content layout for the different screen sizes in desktop and mobile devices. When you [edit a Content Page](../../creating-pages/building-and-managing-content-pages/adding-elements-to-content-pages.md), you can use the Grid Fragment (A) to outline your content and define customized layout styles (B) for the different target devices in the Device Display section (C). For example, you can customize the number of modules per row or the grid padding options for smartphone-size screens only.
+Liferay DXP [uses responsive design](./building-a-responsive-site.md) by default, but there are situations where you want additional and more granular control of the content layout. By using the [Grid Fragment](../../creating-pages/page-fragments-and-widgets/using-fragments/using-layout-elements.md) in your Content Page, you gain precise control of the content layout for the different screen sizes in desktop and mobile devices. When you [edit a Content Page](../../creating-pages/using-content-pages/adding-elements-to-content-pages.md), you can use the Grid Fragment (A) to outline your content and define customized layout styles (B) for the different target devices in the Device Display section (C). For example, you can customize the number of modules per row or the grid padding options for smartphone-size screens only.
 
 ![Using the Grid Fragment you can customize the layout options for different screen sizes.](./building-responsive-layouts-with-the-grid-fragment/images/04.png)
 
@@ -16,8 +16,8 @@ When you access this 'Services' Content Page from your computer, the grid layout
 
 ## Modifying the Layout of the Grid Fragment
 
-1. Open and [edit your Content Page](../../creating-pages/building-and-managing-content-pages/adding-elements-to-content-pages.md) (or create a new [Content Page](./../../creating-pages/adding-pages/adding-a-page-to-a-site.md)).
-1. [Configure the Grid Fragment](../../creating-pages/building-and-managing-content-pages/configuring-elements-on-content-pages.md#configuring-the-grid-fragment) on the Content Page.
+1. Open and [edit your Content Page](../../creating-pages/using-content-pages/adding-elements-to-content-pages.md) (or create a new [Content Page](./../../creating-pages/adding-pages/adding-a-page-to-a-site.md)).
+1. [Configure the Grid Fragment](../../creating-pages/page-fragments-and-widgets/using-fragments/using-layout-elements.md) on the Content Page.
 1. In the Editing sidebar, click *Selection* and click the Grid Fragment you want to customize.
 1. In the Device Display section of the Editing Toolbar, select the screen size you want to optimize.
 
@@ -34,12 +34,11 @@ When you access this 'Services' Content Page from your computer, the grid layout
     ![Use the Device Display and Styles options in the Content Page editor to customize the Grid Fragment's layout.](./building-responsive-layouts-with-the-grid-fragment/images/03.gif)
 
 ```{tip}
-You can save and reuse the Grid Fragment configuration of your choice in other Content Pages. For more information, see [Saving a Fragment Composition](../../displaying-content/using-fragments/saving-a-fragment-composition.md).
+You can save and reuse the Grid Fragment configuration of your choice in other Content Pages. For more information, see [Saving Fragment Compositions](../../creating-pages/page-fragments-and-widgets/using-fragments/saving-fragment-compositions.md).
 ```
 
 ## Additional Information
 
 - [Building a Responsive Site Overview](./building-a-responsive-site.md)
-- [Creating Content Page Compositions Using the Container Fragment](../../creating-pages/building-and-managing-content-pages/creating-content-page-compositions-using-the-container-fragment.md).
-- [Configuring the Grid Fragment](../../creating-pages/building-and-managing-content-pages/configuring-elements-on-content-pages.md#configuring-the-grid-fragment)
-- [Saving a Fragment Composition](../../displaying-content/using-fragments/saving-a-fragment-composition.md)
+- [Saving Fragment Compositions](../../creating-pages/page-fragments-and-widgets/using-fragments/saving-fragment-compositions.md)
+- [Using Layout Elements](../../creating-pages/page-fragments-and-widgets/using-fragments/using-layout-elements.md)

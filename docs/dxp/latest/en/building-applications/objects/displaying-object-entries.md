@@ -12,7 +12,7 @@ Together, these integrations enable users to leverage Liferay's WYSIWYG page bui
 
 Once you've published an Object, follow these steps to use the Collection Display fragment to display an Object's entries:
 
-1. Create a new [Content Page](../../site-building/creating-pages/building_and_managing_content_pages.html) or [Display Page Template](../../site-building/displaying-content/using-display-page-templates/creating-and-managing-display-page-templates.md). Alternatively, begin *editing* (![Edit Button](../../images/icon-edit-pencil.png)) an existing one.
+1. Create a new [Content Page](../../site-building/creating-pages/using-content-pages.html) or [Display Page Template](../../site-building/displaying-content/using-display-page-templates/creating-and-managing-display-page-templates.md). Alternatively, begin *editing* (![Edit Button](../../images/icon-edit-pencil.png)) an existing one.
 
    ```{note}
    You can also create a Collection Page using the Collection Provider. See [Collections and Collection Pages](../../content-authoring-and-management/collections-and-collection-pages/about-collections-and-collection-pages.md) for more information.

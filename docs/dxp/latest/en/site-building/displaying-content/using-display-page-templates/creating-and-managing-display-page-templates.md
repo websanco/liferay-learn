@@ -22,11 +22,11 @@ Display Page Templates are only supported for Web Content, Documents, Blog Entri
 
    ![Select the content type and subtype for your new template.](./creating-and-managing-display-page-templates/images/03.png)
 
-1. Add element in the Display Page Template editor using the same interface and page elements as [Content Pages](../../creating-pages/building-and-managing-content-pages/content-page-editor-user-interface-reference.md).
+1. Add element in the Display Page Template editor using the same interface and page elements as [Content Pages](../../creating-pages/using-content-pages/content-page-editor-ui-reference.md).
 
    ![Build your template using Fragments and Widgets.](./creating-and-managing-display-page-templates/images/04.png)
 
-1. Once you've added Page elements, you can [map](../../creating-pages/building-and-managing-content-pages/configuring-elements-on-content-pages.md#mapping-content) them to content structure fields (e.g., title, description) by double-clicking on an editable field.
+1. Once you've added Page elements, you can [map](../../creating-pages/page-fragments-and-widgets/using-fragments/configuring-fragments/fragment-sub-elements-reference.md#mapping-settings) them to content structure fields (e.g., title, description) by double-clicking on an editable field.
 
    ```{tip}
    Mapped fields are outlined in purple color.
@@ -87,5 +87,5 @@ If you assign your content to a new Display Page Template, make sure the content
 
 - [Publishing Content with Display Pages](./publishing-content-with-display-pages.md)
 - [Configuring SEO and Open Graph](./configuring-seo-and-open-graph.md)
-- [Content Page Overview](./../../creating-pages/building-and-managing-content-pages/content-pages-overview.md)
-- [Adding Elements to Content Pages](../../creating-pages/building-and-managing-content-pages/adding-elements-to-content-pages.md)
+- [Using Content Pages](./../../creating-pages/using-content-pages.md)
+- [Adding Elements to Content Pages](../../creating-pages/using-content-pages/adding-elements-to-content-pages.md)

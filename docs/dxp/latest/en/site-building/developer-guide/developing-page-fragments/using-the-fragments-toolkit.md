@@ -33,11 +33,11 @@ Liferay's [setup_tutorial.sh](https://github.com/liferay/liferay-learn/blob/mast
 
 1. Set up the Fragments Toolkit and its dependencies using the `setup_tutorial.sh` script.
 
-    ```bash 
+    ```bash
     cd liferay-x2y6
     ```
 
-    ```bash 
+    ```bash
     ./setup_tutorial.sh
     ```
 
@@ -57,19 +57,19 @@ Here's how to generate a Fragments Project:
 
 1. Launch the project generator by executing the `yo liferay-fragments` command:
 
-    ```
+    ```bash
     yo liferay-fragments
     ```
 
 1. Name your project. For this example, accept the default project name by clicking enter.
 
-    ```
+    ```bash
     ? Project name (Sample Liferay Fragments)
     ```
 
 1. Indicate whether to add sample content. For this example, enter `Yes`.
 
-    ```
+    ```bash
     ? Add sample content? Yes
     Creating directory
        force .yo-rc.json
@@ -118,7 +118,7 @@ Import the sample Fragment Set to Liferay to view the Fragments:
     docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
     ```
 
-1. Import the Fragment Set to your Liferay instance invoking the `yarn run import` command in the project's root folder (e.g., `sample-liferay-fragments`). Alternatively, you can [import the Fragment Set manually](../../displaying-content/using-fragments/managing-page-fragments.md).
+1. Import the Fragment Set to your Liferay instance invoking the `yarn run import` command in the project's root folder (e.g., `sample-liferay-fragments`). Alternatively, you can [import the Fragment Set manually](../../creating-pages/page-fragments-and-widgets/using-fragments/managing-fragments.md).
 
     ```bash
     cd sample-liferay-fragments

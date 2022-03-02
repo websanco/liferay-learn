@@ -1,5 +1,5 @@
 # Serving Device and Screen Optimized Media
-
+<!--TASK: Rename to "Adaptive Media", add content from "How Adaptive Media Works" article. -->
 ```{toctree}
 :maxdepth: 4
 

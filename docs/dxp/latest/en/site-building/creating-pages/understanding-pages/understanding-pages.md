@@ -24,7 +24,7 @@ The Page Type of the currently viewed page appears at the top of the page to hel
 
 ### Content Pages
 
-Content Pages enable users to build professional pages that can be easily managed and have their content edited in-line on the fly. Content Pages are primarily built using [Page Fragments](../../displaying-content/using-fragments/using-page-fragments.md), but also allow widgets.
+Content Pages enable users to build professional pages that can be easily managed and have their content edited in-line on the fly. Content Pages are primarily built using [Page Fragments](../page-fragments-and-widgets/using-fragments.md), but also allow widgets.
 
 ![Content Pages can be composed of multiple Fragments.](./understanding-pages/images/04.png)
 
@@ -34,7 +34,7 @@ Using Content Pages allows access to additional powerful features and benefits:
 * [A/B Testing](../../optimizing-sites/ab-testing/ab-testing.md)
 * Approachable Content and Site Building Experience
 
-To learn more about Content Pages, see the [Content Page Overview](../building-and-managing-content-pages/content-pages-overview.md). To jump right into building one, see [Adding Elements to Content Pages](../building-and-managing-content-pages/adding-elements-to-content-pages.md).
+To learn more about Content Pages, see the [Using Content Pages](../using-content-pages.md). To jump right into building one, see [Adding Elements to Content Pages](../using-content-pages/adding-elements-to-content-pages.md).
 
 ### Widget Pages
 

@@ -1,0 +1,70 @@
+<script type="module">
+	import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.esm.browser.min.js'
+
+	const page = new Vue({
+		el: '#landingPage',
+		data: {
+			cards: [
+				{
+					sectionName: 'Default Fragments Reference',
+					sectionURL: 'using-fragments/default-fragments-reference.html',
+				},
+				{
+					sectionName: 'Using Layout Elements',
+					sectionURL: 'using-fragments/using-layout-elements.html',
+				},
+				{
+					sectionName: 'Configuring Fragments',
+					sectionURL: 'using-fragments/configuring-fragments.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'General Settings Reference',
+							url: 'using-fragments/configuring-fragments/general-settings-reference.html'
+						},
+						{
+							name: 'Styles Reference',
+							url: 'using-fragments/configuring-fragments/styles-reference.html'
+						},
+						{
+							name: 'Fragment Sub-Elements Reference',
+							url: 'using-fragments/configuring-fragments/fragment-sub-elements-reference.html'
+						},
+					]
+				},
+				{
+					sectionName: 'Mapping and Linking Fragment Elements',
+					sectionURL: 'using-fragments/mapping-and-linking-fragment-elements.html',
+				},
+				{
+					sectionName: 'Configuring Fragment Visibility',
+					sectionURL: 'using-fragments/configuring-fragment-visibility.html',
+				},
+				{
+					sectionName: 'Editing Fragment Elements',
+					sectionURL: 'using-fragments/editing-fragment-elements.html',
+				},
+				{
+					sectionName: 'Creating Dropdown Menus with Fragments',
+					sectionURL: 'using-fragments/creating-dropdown-menus-with-fragments.html',
+				},
+				{
+					sectionName: 'Duplicating Fragments',
+					sectionURL: 'using-fragments/duplicating-fragments.html',
+				},
+				{
+					sectionName: 'Saving Fragment Compositions',
+					sectionURL: 'using-fragments/saving-fragment-compositions.html',
+				},
+				{
+					sectionName: 'Managing Fragments',
+					sectionURL: 'using-fragments/managing-fragments.html',
+				},
+				{
+					sectionName: 'Propagating Fragment Changes',
+					sectionURL: 'using-fragments/propagating-fragment-changes.html',
+				},
+			]
+		}
+	})
+</script>

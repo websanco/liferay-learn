@@ -1,0 +1,30 @@
+<script type="module">
+	import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.esm.browser.min.js'
+
+	const page = new Vue({
+		el: '#landingPage',
+		data: {
+			cards: [
+				{
+					sectionName: 'Using Fragments',
+					sectionURL: 'page-fragments-and-widgets/using-fragments.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'Configuring Fragments',
+							url: 'page-fragments-and-widgets/using-fragments/configuring-fragments.html'
+						},
+						{
+							name: 'Managing Fragments',
+							url: 'page-fragments-and-widgets/using-fragments/managing-fragments.html'
+						},
+						{
+							name: 'Default Fragments Reference',
+							url: 'page-fragments-and-widgets/using-fragments/default-fragments-reference.html'
+						},
+					]
+				},
+			]
+		}
+	})
+</script>

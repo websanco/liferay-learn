@@ -6,7 +6,7 @@ Page Templates help you efficiently create pages based on predefined layouts and
 
 ![Basic Page Templates are available.](./creating-a-page-template/images/01.png)
 
-You may also create your own [Content Page](../building-and-managing-content-pages/content-pages-overview.md) Templates and [Widget Page](../understanding-pages/understanding-pages.md#widget-pages) Templates, as described below.
+You may also create your own [Content Page](../using-content-pages.md) Templates and [Widget Page](../understanding-pages/understanding-pages.md#widget-pages) Templates, as described below.
 
 ```{note}
 For Liferay DXP 7.4+, Page Template Collections are called Page Template Sets in the Liferay UI.
@@ -30,7 +30,7 @@ The steps below show how to create and use Widget and Content Page Templates.
 
 1. Click *Save*.
 
-1. You're automatically transported to the new Page Template. Follow the instructions in [Widget Pages](../understanding-pages/understanding-pages.md#widget-pages) to create your Widget Page Template. Likewise, see [Building Content Pages](../building-and-managing-content-pages/adding-elements-to-content-pages.md) to configure your Content Page Template.
+1. You're automatically transported to the new Page Template. Follow the instructions in [Widget Pages](../understanding-pages/understanding-pages.md#widget-pages) to create your Widget Page Template. Likewise, see [Building Content Pages](../using-content-pages/adding-elements-to-content-pages.md) to configure your Content Page Template.
 
 ## Sharing a New Page Template
 
@@ -55,7 +55,7 @@ When creating a page from a Widget Page Template, changes are inherited from the
 
 ### Propagating Changes for Content Pages
 
-Changes for Content Pages **are not automatically propagated** when created using a Content Page Template. However, you can propagate changes to Fragments used on a Content Page. See [Propagating Fragment Changes](../../displaying-content/using-fragments/propagating-fragment-changes.md) for more information.
+Changes for Content Pages **are not automatically propagated** when created using a Content Page Template. However, you can propagate changes to Fragments used on a Content Page. See [Propagating Fragment Changes](../page-fragments-and-widgets/using-fragments/propagating-fragment-changes.md) for more information.
 
 ### Sharing Page Templates With Other Sites
 

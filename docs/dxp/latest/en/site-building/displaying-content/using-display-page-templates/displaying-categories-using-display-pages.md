@@ -8,7 +8,7 @@ Using a [Display Page Template](./about-display-page-templates-and-display-pages
 
 You render Categories in a Display Page in the same way you render other types of Display Page content. There are two options:
 
-- [Create a Display Page Template](../../creating-pages/building-and-managing-content-pages/adding-elements-to-content-pages.md) for Categories and set this template as the default one.
+- [Create a Display Page Template](../../creating-pages/using-content-pages/adding-elements-to-content-pages.md) for Categories and set this template as the default one.
 - Select the Display Page Template of your choice when you [create or edit the Category](../../../content-authoring-and-management/tags-and-categories/defining-categories-and-vocabularies-for-content.md).
 
 You can also assign a Display Page Template to multiple Categories at once. Under Site Administration &rarr; *Categorization* &rarr; *Categories*, check the Categories you want to update and then click the Page (![Page](../../../images/icon-page.png)) icon or, from the top Actions (![Actions](../../../images/icon-actions.png)) menu, select *Assign Display Page Template*.
@@ -65,10 +65,10 @@ Starting with Liferay DXP 7.4, the Display Page Template includes an option to u
 After you create the Display Page Template, you can edit the components mappings and layout.
 
 ```{tip}
-The Display Page Template editor works like the Content Page Editor. See [Configuring Elements on Content Pages](../../creating-pages/building-and-managing-content-pages/configuring-elements-on-content-pages.md) for more information.
+The Display Page Template editor works like the Content Page Editor. See [Adding Elements to Content Pages](../../creating-pages/using-content-pages/adding-elements-to-content-pages.md) for more information.
 ```
 
-This example shows how to map the Category fields using a [Card Fragment](../../creating-pages/building-and-managing-content-pages/page-fragments-user-interface-reference.md).
+This example shows how to map the Category fields using a [Card Fragment](../../creating-pages/page-fragments-and-widgets/using-fragments/default-fragments-reference.md).
 
 1. Drag and drop a Container Fragment to the default drop zone.
 1. On top of the Container Fragment, drag and drop a new Card Fragment.

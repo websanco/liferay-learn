@@ -45,7 +45,7 @@ First, deploy an example to see how Fragment configuration options work:
     ./setup_tutorial.sh 
     ```
 
-1. Import the Fragment Set to the Docker container using the Fragments Toolkit. Alternatively, you can [import the Fragment manually](../../displaying-content/using-fragments/managing-page-fragments.md).
+1. Import the Fragment Collection to the Docker container using the Fragments Toolkit. Alternatively, you can [import the Fragment manually](../../creating-pages/page-fragments-and-widgets/using-fragments/managing-fragments.md).
 
     ```bash
     yarn run import
@@ -76,11 +76,11 @@ First, deploy an example to see how Fragment configuration options work:
 
 1. Go to a Content Page and click the *Edit* icon (![Edit icon](../../../images/icon-edit-pencil.png)) to begin editing.
 
-1. Expand the *C7F8 Set* heading in the [Fragments and Widgets panel](../../creating-pages/building-and-managing-content-pages/content-pages-overview.md#fragments) and drag the *C7F8 Card* Fragment onto the page.
+1. Expand the *C7F8 Set* heading in the [Fragments and Widgets panel](../../creating-pages/using-content-pages/content-page-editor-ui-reference.md#fragments-and-widgets) and drag the *C7F8 Card* Fragment onto the page.
 
 1. Select the *C7F8 Card* on the page to open the Fragment Configuration Menu. In the *General* tab, set the component's text style to dark or light.
 
-    ![Configurable Fragments provide options to modify the Fragment's look and feel.](./adding-configuration-options-to-fragments/images/02.png)
+   ![Configurable Fragments provide options to modify the Fragment's look and feel.](./adding-configuration-options-to-fragments/images/02.png)
 
 Great! You successfully imported and configured a configurable Fragment.
 
@@ -138,7 +138,7 @@ Open the configuration file.
 }
 ```
 
-The configuration file above, specifies a selector for applying a *dark* or *light* text style to the Fragment. The configuration has a field named `c7f8TextStyle`. The field's `type` is `select`, which makes it a selector component. See [Fragment Configuration Types](../reference/fragments/fragment-configuration-types-reference.md) for details. The selector's valid values are `dark` or `light`. The `"dataType": "string"` property means that the selector operates on string data. 
+The configuration file above, specifies a selector for applying a *dark* or *light* text style to the Fragment. The configuration has a field named `c7f8TextStyle`. The field's `type` is `select`, which makes it a selector component. See [Fragment Configuration Types](../reference/fragments/fragment-configuration-types-reference.md) for details. The selector's valid values are `dark` or `light`. The `"dataType": "string"` property means that the selector operates on string data.
 
 This selector is a part of a field set labeled *C7F8* (the label is optional). In the UI, this selector is found in the Fragment's configuration section labeled *C7F8*. The selector is labeled `Text Style` per the field's `label` property. The figure below shows the selector.
 

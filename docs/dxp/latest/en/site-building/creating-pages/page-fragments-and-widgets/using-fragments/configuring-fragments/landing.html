@@ -1,0 +1,27 @@
+<script type="module">
+	import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.esm.browser.min.js'
+
+	const page = new Vue({
+		el: '#landingPage',
+		data: {
+			cards: [
+				{
+					sectionName: 'General Settings Reference',
+					sectionURL: 'configuring-fragments/general-settings-reference.html',
+				},
+				{
+					sectionName: 'Styles Reference',
+					sectionURL: 'configuring-fragments/styles-reference.html',
+				},
+				{
+					sectionName: 'Fragment Sub-Elements Reference',
+					sectionURL: 'configuring-fragments/fragment-sub-elements-reference.html',
+				},
+				{
+					sectionName: 'Localizing Fragment Configuration Fields',
+					sectionURL: 'configuring-fragments/localizing-fragment-configuration-fields.html',
+				},
+			]
+		}
+	})
+</script>

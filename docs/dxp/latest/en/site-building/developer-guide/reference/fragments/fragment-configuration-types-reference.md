@@ -243,7 +243,7 @@ This JSON configuration creates an input text field you can implement for cases 
 
 > Available: Liferay DXP/Portal 7.4+.
 
-Using the `videoSelector` type, you can create a video selector to incorporate a [External Video](../../../creating-pages/building-and-managing-content-pages/page-fragments-user-interface-reference.md#external-video) Fragment in another Fragment.
+Using the `videoSelector` type, you can create a video selector to incorporate a [External Video](../../../creating-pages/page-fragments-and-widgets/using-fragments/default-fragments-reference.md) Fragment in another Fragment.
 
 ```json
 {
@@ -306,7 +306,7 @@ This is useful when you want a Fragment that has an embedded video by default. T
 ![With the Video Selector you can include External Videos in Fragments](./fragment-configuration-types-reference/images/06.png)
 
 ```{note}
-The `videoSelector` type is compatible with the [External Video](../../../creating-pages/building-and-managing-content-pages/page-fragments-user-interface-reference.md#external-video) Fragment, but not with the [Video URL](../../../creating-pages/building-and-managing-content-pages/page-fragments-user-interface-reference.md#video-url) Fragment.
+The `videoSelector` type is compatible with the [External Video](../../../creating-pages/page-fragments-and-widgets/using-fragments/default-fragments-reference.md#external-video) Fragment, but not with the [Video URL](../../../creating-pages/page-fragments-and-widgets/using-fragments/default-fragments-reference.md) Fragment.
 ```
 
 ## Collection Selector
@@ -337,7 +337,7 @@ The following JSON configuration shows how to use the `collectionSelector`:
 }
 ```
 
-You can use this Fragment configuration with the following HTML code sample to list the Collection items. The `collectionObjectList` represents the Collection selected in the [Content Page editor](../../../creating-pages/building-and-managing-content-pages/content-page-editor-user-interface-reference.md).
+You can use this Fragment configuration with the following HTML code sample to list the Collection items. The `collectionObjectList` represents the Collection selected in the [Content Page editor](../../../creating-pages/using-content-pages/content-page-editor-ui-reference.md).
 
 To reference this Collection in the HTML, use the Collection `name` in the JSON configuration and the `ObjectList` suffix. In the previous JSON code excerpt, the Collection `name` is `collection` so the HTML references the Collection using `collectionObjectList`.
 

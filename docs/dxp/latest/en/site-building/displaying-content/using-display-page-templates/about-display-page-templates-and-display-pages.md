@@ -2,7 +2,7 @@
 
 > Available: Liferay DXP/Portal 7.3+
 
-Display Pages are paired with Display Page Templates to present your content in a pre-defined layout. Similarly to [Content Pages](../../creating-pages/building-and-managing-content-pages/content-pages-overview.md), you organize the Display Page content in [Fragments](../using-fragments/using-page-fragments.md) and [Widgets](../../creating-pages/building-and-managing-content-pages/using-widgets-on-a-content-page.md) and use a Display Page Template to organize how that content appears. Using a single Display Page Template, you can apply the same layout multiple times to different content of the same type.
+Display Pages are paired with Display Page Templates to present your content in a pre-defined layout. Similarly to [Content Pages](../../creating-pages/using-content-pages.md), you organize the Display Page content in [Fragments](../../creating-pages/page-fragments-and-widgets/using-fragments.md) and [Widgets](../../creating-pages/using-content-pages/using-widgets-on-a-content-page.md) and use a Display Page Template to organize how that content appears. Using a single Display Page Template, you can apply the same layout multiple times to different content of the same type.
 
 ```{tip}
 With Content Pages, you can create the Page layout and composition, but you cannot save and reuse them as templates.
@@ -16,7 +16,7 @@ For more information about the different ways of displaying content in Liferay D
 
 ## Understanding Display Page Templates and Display Pages
 
-The Display Page Template determines how to display and map your content on the Display Page. Creating a Display Page Template is similar to how you [add elements to Content Pages](../../creating-pages/building-and-managing-content-pages/adding-elements-to-content-pages.md). However, Display Pages are always associated with a certain type of content, while Content Pages are not.
+The Display Page Template determines how to display and map your content on the Display Page. Creating a Display Page Template is similar to how you [add elements to Content Pages](../../creating-pages/using-content-pages/adding-elements-to-content-pages.md). However, Display Pages are always associated with a certain type of content, while Content Pages are not.
 
 To create a Display Page, create a Display Page Template first and then display the content using the Display Page unique URL.
 
@@ -47,7 +47,7 @@ On your insurance business website, you want to showcase the different insurance
 ![You can apply the same layout to different content of the same type using a single Display Page Template.](./about-display-page-templates-and-display-pages/images/02.png)
 
 ```{tip}
-[Content Pages](../../creating-pages/building-and-managing-content-pages/content-pages-overview.md) give you the tools to create stunning landing pages.
+[Content Pages](../../creating-pages/using-content-pages.md) give you the tools to create stunning landing pages.
 ```
 
 You want to use the same layout for each one of the four detail pages describing the different insurance options, and you want to map each field dynamically to the insurance information in your Web Content Articles.

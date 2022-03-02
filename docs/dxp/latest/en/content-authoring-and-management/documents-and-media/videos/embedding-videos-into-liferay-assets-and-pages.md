@@ -28,7 +28,9 @@ With Liferay, you can use URLs and [video shortcuts](./creating-external-video-s
 
 Liferay provides two out-of-the-box fragments specifically for embedding videos into Pages.
 
-**Video URL**: Use the Video URL fragment to display internal video files or external YouTube videos. Once a URL is added to the fragment, you can configure the following settings:
+### Video URL
+
+Use the Video URL fragment to display internal video files or external YouTube videos. Once a URL is added to the fragment, you can configure the following settings:
 
    * **Autoplay:** Determine whether the video plays automatically when the page is loaded.
 
@@ -38,9 +40,15 @@ Liferay provides two out-of-the-box fragments specifically for embedding videos 
 
    * **Hide Video Controls:** Determine whether users can access video controls.
 
-**External Video**: Use the eternal video shortcut to embed YouTube, Vimeo, Facebook, and Twitch videos into a page. Adding a video opens a window for entering a video URL or selecting videos and external video shortcuts in Documents and Media.
+### External Video
+
+Use the External Video fragment to embed YouTube, Vimeo, Facebook, and Twitch videos into a page. Videos can be added via URL or by selecting from videos and [External Video Shortcuts](creating-external-video-shortcuts.md) in Documents and Media.
+
+```{note}
+The External Video fragment does not support video controls for autoplay, loop, or mute. If you need these controls, use the Video URL fragment.
+```
 
 ## Additional Information
 
 * [Creating External Video Shortcuts](./creating-external-video-shortcuts.md)
-<!-- * [Creating Custom Video Shortcut Providers](./creating-custom-video-shortcut-providers.md) -->
+* [Creating Video Shortcut Providers](../developer-guide/creating-video-shortcut-providers.md)

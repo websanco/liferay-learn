@@ -7,7 +7,7 @@ You can customize your Content Page to different groups of users using *Experien
 ## Creating a New Content Page Experience
 
 1. Go to *Site Administration* &rarr; *Site Builder* &rarr; *Pages*.
-1. Click the Actions (![Actions](../../../images/icon-actions.png)) menu and select *Edit*, or [create a new Content Page](../../creating-pages/building-and-managing-content-pages/building-content-pages.md).
+1. Click the Actions (![Actions](../../../images/icon-actions.png)) menu and select *Edit*, or [create a new Content Page](../../creating-pages/using-content-pages/building-content-pages.md).
 1. At the top of the page, for the *Experience* click on *Default* to open the Experience selection dialog.
 
 1. Click the Actions (![Actions](../../../images/icon-actions.png)) menu and select *Edit*, or [create a new Content Page](../../creating-pages/adding-pages/adding-a-page-to-a-site.md).

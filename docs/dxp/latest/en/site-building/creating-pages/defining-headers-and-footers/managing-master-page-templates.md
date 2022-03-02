@@ -32,7 +32,7 @@ After changes are made and published, they are propagated to all pages that use 
 
 ## Changing the Master Page Template of a Page
 
-You can change the Master Page Template of a Page in the [Content Page Editor](../building-and-managing-content-pages/content-page-editor-user-interface-reference.md). Follow these steps:
+You can change the Master Page Template of a Page in the [Content Page Editor](../using-content-pages/content-page-editor-ui-reference.md). Follow these steps:
 
 1. Navigate to the Page where you want to change the Master Page Template.
 1. Click the *Page Design* menu (![Page Design menu](../../../images/icon-format.png)).

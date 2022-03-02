@@ -30,7 +30,7 @@ When you open a Page in view mode, the available tools in the Applications Bar c
 
 ![Content Pages and Widget Pages show a different set of tools in the Application Bar.](./navigating-dxp/images/08.png)
 
-For [Content Pages](../site-building/creating-pages/building-and-managing-content-pages/content-pages-overview.md) (A), the available tools are:
+For [Content Pages](../site-building/creating-pages/using-content-pages.md) (A), the available tools are:
 
 - Edit (![Edit](../images/icon-edit.png))
 - Configure Page (![Configure Page](../images/icon-settings.png))

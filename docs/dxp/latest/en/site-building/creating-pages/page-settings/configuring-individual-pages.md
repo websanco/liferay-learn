@@ -187,5 +187,5 @@ Here you can add custom `<meta>` tags to the `<head>` of a Page. These tags are 
 ## Additional Information
 
 * [Adding Pages to a Site](./../adding-pages/adding-a-page-to-a-site.md)
-* [Content Pages Overview](../building-and-managing-content-pages/content-pages-overview.md)
+* [Using Content Pages](../using-content-pages.md)
 * [Configuring Page Sets](./configuring-page-sets.md)

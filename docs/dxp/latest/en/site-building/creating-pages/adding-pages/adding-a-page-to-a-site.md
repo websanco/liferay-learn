@@ -79,5 +79,5 @@ Using the Actions Menu (![Actions Menu](../../../images/icon-actions.png)) next 
 ## Related Information
 
 - [Understanding Pages](../understanding-pages/understanding-pages.md)
-- [Content Page Overview](../building-and-managing-content-pages/content-pages-overview.md)
+- [Using Content Pages](../using-content-pages.md)
 - [Managing Site Navigation](../../site-navigation/managing-site-navigation.md)

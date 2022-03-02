@@ -2,9 +2,9 @@
 
 > Availability: Liferay 7.4+.
 
-The [Slider](../../creating-pages/building-and-managing-content-pages/page-fragments-user-interface-reference.md#slider) or [Tab](../../creating-pages/building-and-managing-content-pages/page-fragments-user-interface-reference.md#tabs) fragments are typically used to show different areas of information. Sliders present this information in a carousel of slides. Tabs have multiple tabs, each one containing different information.
+The [Slider](../../creating-pages/page-fragments-and-widgets/using-fragments/default-fragments-reference.md) or [Tab](../../creating-pages/page-fragments-and-widgets/using-fragments/default-fragments-reference.md) fragments are typically used to show different areas of information. Sliders present this information in a carousel of slides. Tabs have multiple tabs, each one containing different information.
 
-When you edit your Slider or Tab Fragment in the [Content Page Editor](../../creating-pages/building-and-managing-content-pages/page-fragments-user-interface-reference.md), the sidebar selection (![Selection](../../../images/icon-pages-tree.png)) button shows the list of elements in your Fragment. Before Liferay DXP 7.4, these elements were not presented in order. This made it difficult to identify how the Slider or Tab elements were grouped, especially for Fragments with many elements.
+When configuring Slider or Tab Fragments in a Page or Template, their sub-elements are listed in the *Selection* panel (![Selection](../../../images/icon-pages-tree.png)) in the sidebar menu. Before Liferay DXP 7.4, these elements were not presented in order. This made it difficult to identify how the Slider or Tab elements were grouped, especially for Fragments with many elements.
 
 ![Liferay DXP 7.4+ shows the order of elements in a Fragment in order.](./setting-the-order-of-elements-in-a-fragment/images/01.png)
 
