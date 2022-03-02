@@ -6,11 +6,13 @@ DXP Cloudのサービススタック自体のバージョンは、お客様の�
 
 例えば、 `liferay` サービスのDockerイメージ名をご覧ください。
 
-    liferaycloud/liferay-dxp:7.2.10-sp1-fp4-3.0.21
+```
+liferaycloud/liferay-dxp:7.2.10-sp1-fp4-3.0.21
+```
 
 このイメージのバージョンは `3.0.21`です。 これは、この環境のサービススタックのバージョンが3.x.xであることを示しています。
 
-どのDXP Cloud環境でも、そのサービスのDockerイメージのバージョンが様々な場所に表示されます。 環境の *概要* または *サービス* ページや各サービスのページなど、これらの場所で表示されるイメージ名の最後にある数字を調べることで、環境のサービス スタック バージョンを確認することができます。
+どのDXP Cloud環境でも、そのサービスのDockerイメージのバージョンが様々な場所に表示されます。 環境の _概要_ または _サービス_ ページや各サービスのページなど、これらの場所で表示されるイメージ名の最後にある数字を調べることで、環境のサービス スタック バージョンを確認することができます。
 
 ![環境にナビゲートして最初に表示されるのは、サービスのバージョンを示す1ページです。](./understanding-service-stack-versions/images/01.png)
 
@@ -22,7 +24,7 @@ Dockerイメージのバージョンは、サービススタックが4.x.xにア
 
 リポジトリのバージョンが3.x.x以下の場合、リポジトリのルートには、各サービスのバージョンを定義した `gradle.properties` という記事があります。 このファイルを開き、Dockerイメージのバージョンを特定するために、これらのプロパティを確認します。
 
-``` properties
+```properties
 liferay.workspace.lcp.backup.image=liferaycloud/backup:3.2.1
 liferay.workspace.lcp.database.image=liferaycloud/database:3.2.1
 liferay.workspace.lcp.search.image=liferaycloud/elasticsearch:6.1.4-3.0.3
@@ -39,7 +41,7 @@ liferay.workspace.lcp.jenkins.image=liferaycloud/jenkins:2.176.1-3.1.1
 
 例えば、`LCP.json` のファイル `データベース` サービスのセクションを参照：
 
-``` json
+```json
 {
    "kind": "Deployment",
    "id": "database",
@@ -49,11 +51,11 @@ liferay.workspace.lcp.jenkins.image=liferaycloud/jenkins:2.176.1-3.1.1
 
 この例では、 `image` プロパティの値は、 `4.0.0`で終わる名前を持っており、サービススタックのバージョンが 4.x.x であることを示しています。
 
-```{tip}
-最新の機能を利用するには、お使いのサービススタックをバージョン `4.x.x` にアップグレードすることをお勧めします。 See [Upgrading Your DXP Cloud Stack](./upgrading-your-dxp-cloud-stack.md)_ for steps on performing the upgrade.
+```tip::
+   最新の機能を利用するには、お使いのサービススタックをバージョン ``4.x.x`` にアップグレードすることをお勧めします。 アップグレードの手順については、Upgrading Your DXP Cloud Stack <./upgrading-your-dxp-cloud-stack.md>__ を参照してください。
 ```
 
 ## 追加情報
 
-  - [バージョン4におけるDXP Cloudプロジェクトの変更](./dxp-cloud-project-changes-in-version-4.md)
-  - [DXP Cloudスタックのアップグレード](./upgrading-your-dxp-cloud-stack.md)
+* [バージョン4におけるDXP Cloudプロジェクトの変更](./dxp-cloud-project-changes-in-version-4.md)
+* [DXP Cloudスタックのアップグレード](./upgrading-your-dxp-cloud-stack.md)

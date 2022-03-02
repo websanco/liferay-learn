@@ -1,66 +1,63 @@
 # DXP Cloud デプロイメントワークフローの概要
 
-この記事では、開発者がDXP Cloudプロジェクト用に開発してデプロイするための経路を概説します。 DXP Cloudを使用した開発プロセスは、次の3つの段階に従います。
+DXP Cloudは、高効率なCI/CD戦略を実現するための強固なフレームワークを提供します。 GitとJenkinsの統合により、CIビルドを自動的にトリガーして、プロジェクト環境にデプロイすることができます。 また、CIサービスのビルドプロセスを完全に省略し、 [Command Line Interface](../reference/command-line-tool.md) (CLI)ツールを使用して、プロジェクト環境にローカルの変更を直接デプロイすることもできます。
 
-  - [開発と設定](#develop-and-configure)
-  - [ビルドとテスト](#build-and-test)
-  - [デプロイ](#deploy)
+デプロイメントには複数のパスがありますが、ワークフローは一般的に以下の3つのステージに沿って行われます：
 
-## 開発と設定
+* [開発と構成](#develop-and-configure)
+* [ビルドとテスト](#build-and-test)
+* [デプロイ](#deploy)
 
-環境へのデプロイには複数のパスがありますが、すべてのパスは、[DXP Cloud プロジェクトで設定した](../getting-started/configuring-your-github-repository.md) GitHub リポジトリ に変更を加えることから始まります。 このリポジトリは、Liferay DXPサービスインスタンス自体を含む、DXP Cloudプロジェクトへのカスタム追加の基礎として使用されます。
+## 開発と構成
 
-リポジトリでは以下のように提供されています。
+すべてのワークフローは、プロジェクトのGitリポジトリ（つまり、[GitHub](../getting-started/configuring-your-github-repository.md)、[Bitbucket](../getting-started/configuring-your-bitbucket-repository.md)、または[GitLab](../getting-started/configuring-your-gitlab-repository.md)）に変更を加えることから始まります。 このリポジトリは、Liferay DXPサービスインスタンスを含む、お客様のプロジェクトへのカスタム追加の基礎となります。 このGitリポジトリは、プロジェクトサービスの構成とカスタマイゼーションのための共有バージョンコントロール、プロジェクトのデプロイのための信頼できる唯一のソース、DXPモジュール、テーマ、拡張機能を構築するための共有ワークスペースを提供します。
 
-  - Liferay DXPモジュール、テーマ、および拡張機能を構築するためのワークスペース。
-  - DXP Cloudサービスの設定とカスタマイズのための共有バージョン管理。
-  - DXP Cloudプロジェクトデプロイメントの信頼できる単一の情報源。
+サービスの [LCP.json file](../reference/configuration-via-lcp-json.md)を構成、 または`configs/` フォルダを介してサービスへの環境固有およびプロジェクト全体の変更を行います。 各サービスの構成オプションの詳細については、それぞれのドキュメンテーションを参照してください：
 
-`common` フォルダを除いて、所定のサービスの環境フォルダ（例： `DEV`、 `UAT`、 `PRD`）に追加された変化は、対応する環境にデプロイするときにのみ伝播されます。 `common` 追加された変更は、ターゲットのデプロイメント環境に関係なく常にデプロイされます。 詳細は、 [デプロイメント](../using-the-liferay-dxp-service/introduction-to-the-liferay-dxp-service.md#deployment-customization-patching-and-licensing) を参照してください。
-
-### コードの追加
-
-新規追加コードのソースは、リポジトリーのルートにあるフォルダーに追加する必要があります。
-
-  - 新モジュール用の `モジュール` フォルダー
-  - カスタムテーマ用の `テーマ` フォルダー
-  - デプロイされたWARの `wars` フォルダー
-
-ビルドがデプロイされると、これらの場所のコード変更は自動的にコンパイルされ、Liferay DXPサービスに追加されます。
-
-### コンパイルされた追加ファイル
-
-コンパイル済みファイル（ビルド済みのJARまたはLPKGなど）をサービスの `デプロイ` フォルダに追加できます。 ビルドが環境にデプロイされると、これらのファイルは `$LIFERAY_HOME` 内の対応するフォルダにコピーされます（ファイルタイプによって異なります）。 例えば、 JARファイルを `lcp/liferay/deploy/common/` に追加すると、ビルドがデプロイされた環境に対して `$LIFERAY_HOME/osgi/modules/` にコピーされます。
+* [Liferayサービス](../using-the-liferay-dxp-service/configuring-the-liferay-dxp-service.md)
+* [バックアップサービス](../platform-services/backup-service/backup-service-overview.md)
+* [継続的インテグレーションサービス（Jenkins）](../platform-services/continuous-integration.md)
+* [データベースサービス(MySQL)](../platform-services/database-service/database-service.md)
+* [検索サービス（Elasticsearch）](../platform-services/search-service.md)
+* [Webサーバーサービス（Nginx）](../platform-services/web-server-service.md)
 
 ## ビルドとテスト
 
-CIサービスが自動的に実行され、次のいずれかのイベントのために構築します：コミットは、DXP Cloudリポジトリにマージされ、変更をプル要求をリポジトリに送信され、または `lcs deploy` 展開するためのコマンドラインインタフェース（CLI）を使用して呼び出されますDXP Cloud環境に。 `infra` 環境の `CI` サービスは、テストを含む追加のパイプラインステップを含めるように変更できます。 詳細は、 [継続的インテグレーション](../platform-services/continuous-integration.md) を参照してください。
+プロジェクトのGitリポジトリの構成にもよりますが、プロジェクトの中央リポジトリにコミットをマージしたり、変更内容を記載した新しいプルリクエストを公開したりすることで、自動CIビルドをトリガーすることができます。 このプロセスは自動的に行われますが、`infra`環境のCIサービスを変更して、テストを含む追加のパイプラインステップを含めることができます。 詳しくは [継続的インテグレーション](../platform-services/continuous-integration.md) を参照してください。
 
-[ `ビルド` ]タブに移動して、開始されたすべてのビルドを表示します。 保留中、成功、または失敗したビルドがすべて表示されます。 ビルドがCIに合格した場合、クラウドコンソールは、合格したビルドを該当する環境にデプロイするためのオプションをUIで提供します。
+すべてのプロジェクト環境のビルドの履歴にアクセスするには、DXP Cloudコンソールの *Builds*ページに移動します。 ここでは、CIサービスまたはCLIツールのいずれかによって開始されたすべてのビルドを、その一般的な情報やステータス（保留、通過、失敗など）とともに表示することができます。
 
-![ビルドの確認](./overview-of-the-dxp-cloud-deployment-workflow/images/02.png)
+![ビルドページからプロジェクトのビルドにアクセスできます。](./overview-of-the-dxp-cloud-deployment-workflow/images/01.png)
 
 ## デプロイ
 
-DXP Cloudのサービスにデプロイするには、2つの主な方法があります。 CLIを介してデプロイするか、DXP Cloud管理コンソールの[ `ビルド` ]タブから成功したビルドをデプロイします。
+Liferay DXP Cloudでは、サービスをデプロイする方法として、CLIツールを介したデプロイ（手動）、DXP Cloud管理コンソールを介したデプロイ（手動）、または特定のCIビルドを構成して自動的にデプロイする３つの方法があります。
 
 ### オプション1：コマンドラインインターフェースを介したデプロイ
 
-ローカルでリポジトリからサービスをデプロイする最も簡単な方法は、CLIを使用することです。 CLIのセットアップの詳細は、「 [コマンドラインインターフェースの使用](../reference/command-line-tool.md) 」を参照してください。
+CLIツールを使用するのが、ローカル変更をサービスにデプロイする最も早い方法です。 これを使えば、ターミナルからデプロイすることができ、変更内容をリモートリポジトリにプッシュしたり、Jenkinsのビルドをトリガーしたりする必要がありません。 他のデプロイ方法とは異なり、CLIツールでは一度に1つのサービスのローカル変更をデプロイすることもできます。
 
-CLIを介してログインした後、 `lcp deploy` を使用して、ローカルリポジトリに存在する追加を展開します。 CLIは、（例えば、に展開する環境のいずれかを選択するよう求められます `DEV`、 `UAT`、または `PRD`）。 展開を成功させるには、選択した環境に展開する権限が必要です。
+これを行うには、ターミナルのCLIツールにログインし、デプロイしたいサービスのフォルダーに移動します（フォルダーにはサービスの`LCP.json`ファイルが含まれている必要があります）。 次に、`lcp deploy`を実行してデプロイを開始し、デプロイするプロジェクトと環境を選択します（例： `dev`、`uat`、`prd`）。 デプロイを成功させるには、選択した環境にデプロイする権限が必要です。 このデプロイのワークフローについては、 [Deploying Changes via CLI Tool](./deploying-changes-via-the-cli-tool.md)を参照してください。
 
-### オプション2：DXP Cloudで `ビルド` からデプロイする
+```{important}
+バックアップ、CI、データベース、検索機能、Webサーバの各サービスを直接デプロイすることはできますが、 `lcp deploy` コマンドを実行する前に、まずLiferayサービスのgradleビルドを作成する必要があります。 詳細については、[Deploying to the Liferay Service](../using-the-liferay-dxp-service/deploying-to-the-liferay-service.md#cli-tool-deployment) を参照してください。
+```
 
-変更をデプロイする別の方法は、DXP Cloud管理コンソールからCIで完成したビルドを使用することです。
+CLIツールでデプロイする場合、すべてのサービスを一度にデプロイする（プロジェクトのルートディレクトリからコマンドを実行する）か、単一のサービスのみをデプロイする（サービスの `LCP.json`ファイルを含むディレクトリからコマンドを実行する）ことができます。 `liferay` サービスではデプロイするために[追加のステップ](../using-the-liferay-dxp-service/deploying-to-the-liferay-service.md#cli-tool-deployment) を必要とするため、プロジェクトワークスペースからファイルをビルドおよび準備できます。
 
-リポジトリへのコミットされた変更は、プルリクエストが送信またはマージされるたびに、CIの新しいビルドを自動的にトリガーします。 これにより、レビュープロセスの任意の時点で変更をテスト環境に展開できます。 チュートリアルの例については、 [継続的インテグレーション](./walking-through-the-deployment-life-cycle.md) を参照してください。
+### オプション2：Liferay DXP Cloudコンソールからのデプロイ
 
-![製品へのデプロイ](./overview-of-the-dxp-cloud-deployment-workflow/images/01.png)
+Liferay DXP Cloudコンソールは、プロジェクトの変更をデプロイするための主要な方法です。 これを使用すると、成功したビルドを表示して選択し、選択した環境にデプロイできます。 これらには、CIサービスとCLIツールの両方で生成されたビルドが含まれており、DXP Cloudコンソールの*Builds*ページからアクセスできます。 このデプロイのワークフローについては、 [Deploying Changes via the DXP Cloud Console](./deploying-changes-via-the-cli-tool.md)を参照してください。
+
+![DXP Cloudコンソールからビルドをデプロイします。](./overview-of-the-dxp-cloud-deployment-workflow/images/02.png)
+
+### オプション3：自動的にビルドを `dev`環境にデプロイ
+
+必要に応じて、CIサービスを設定して、プロジェクトの `dev`環境にビルドを自動的にデプロイすることもできます。 CIサービスに環境変数を追加することで、指定したブランチで作成されたビルドの自動デプロイを開始します。 詳細については、[Setting Up Automatic Deployment](./automatically-deploying-ci-service-builds)を参照してください。
 
 ## 追加情報
 
-  - [GitHubリポジトリの設定](../getting-started/configuring-your-github-repository.md)
-  - [DXP Cloud環境について](../getting-started/understanding-dxp-cloud-environments.md)
-  - [コマンドラインインターフェイスの使用](../reference/command-line-tool.md)
-  - [デプロイメントライフサイクルの概要](../build-and-deploy/walking-through-the-deployment-life-cycle.md)
+* [デプロイタイプを理解する](./understanding-deployment-types.md)
+* [デプロイメント戦略について](./understanding-deployment-strategies.md)
+* [DXP Cloudコンソールによる変更の展開](./deploying-changes-via-the-dxp-cloud-console.md)
+* [CLIツールによる変更点のデプロイ](./deploying-changes-via-the-cli-tool.md)

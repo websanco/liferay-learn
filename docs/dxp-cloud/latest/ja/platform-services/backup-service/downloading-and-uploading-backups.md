@@ -7,31 +7,38 @@ DXP Cloudのバックアップサービスでは、環境のデータベース�
 
 
 
+```note::
+   バックアップページは、バックアップサービスのバージョンが4.3.5よりも古い場合、実稼働環境でのみ利用できます。
+```
+
+
+
+
 ## コンソールによるバックアップのダウンロード
 
-以下の手順で、 `prd` 環境の *Backups* ページからバックアップをダウンロードします。
+以下の手順で、選択した環境の *［バックアップ］* ページからバックアップをダウンロードします：
 
-1.  ダウンロードしたいバックアップの *Actions* ボタン( ⋮ )をクリックします。
+1. ダウンロードしたいバックアップの *Actions* ボタン( ⋮ )をクリックします。
 
-2.  *ダウンロード*をクリックします。
+1. *［ダウンロード］* をクリックします。
    
-   ![ [Actions] ボタンをクリックして、[Download] をクリックします。](./downloading-and-uploading-backups/images/01.png)
+   ![ ［Actions］ ボタンをクリックして、［Download］ をクリックします。](./downloading-and-uploading-backups/images/01.png)
 
-3.  *Database* (`.gz`) または *Liferay* (`.tgz`) のファイルをクリックすると、ダウンロードが始まります。 これらのZIPアーカイブを合わせて、環境のバックアップとします。 
+1. *Database* (`.gz`) または *Liferay* (`.tgz`) のファイルをクリックすると、ダウンロードが始まります。 これらのZIPアーカイブを合わせて、環境のバックアップとします。 
    
    
 
-    ```{note}
-    バックアップサービスがまだバージョン4.2以上にアップデートされていない場合、データベースボリュームは `.gz` ではなく `.tgz` アーカイブとしてダウンロードされます。
+    ```note::
+       バックアップサービスがまだバージョン4.2以上にアップデートされていない場合、データベースボリュームは ``.gz`` ではなく ``.tgz`` アーカイブとしてダウンロードされます。
     ```
 
 
 ![クリックすると、データベースとLiferayのデータボリュームファイルをダウンロードできます。](./downloading-and-uploading-backups/images/02.png)
 
-<!-- end list -->
 
-```{note}
-本番環境の管理者のみが、「バックアップ」ページからバックアップをダウンロードできます。
+
+```note::
+   選択した環境の管理者のみが、バックアップページからバックアップをダウンロードできます。
 ```
 
 
@@ -39,26 +46,26 @@ DXP Cloudのバックアップサービスでは、環境のデータベース�
 
 ## コンソールによるバックアップのアップロード
 
-また、 `prd` 環境の [*Backups*] ページから、プロジェクトにバックアップをアップロードすることもできます。
+また、 選択した環境の [*バックアップ*] ページから、プロジェクトにバックアップをアップロードすることもできます。
 
 DXP Cloudにバックアップをアップロードする前に、データベースダンプとドキュメントライブラリを別々のアーカイブに圧縮する必要があります。 オンプレミス環境でのアップロードの準備については、 [データベースとドキュメント・ライブラリーのアップロードの準備](#preparing-the-database-and-document-library-for-upload) を参照してください。
 
 
 
-```{warning}
-アップロードが開始されると、アップロードが完了するまで、バックアップサービスは他のバックアップの生成やリストアに利用できません。
+```warning::
+   アップロードが開始されると、アップロードが完了するまで、バックアップサービスは他のバックアップの生成やリストアに利用できません。
 ```
 
 
 *バックアップ* のページから以下の手順を行います。
 
-1.  画面上部の *「バックアップをアップロード...」をクリックします。画面上部の* をクリックします。
+1. 画面上部の *「バックアップをアップロード...」をクリックします。画面上部の* をクリックします。
 
-2.  バックアップのアップロード」ページで、該当する本番環境を展開し、データベースとドキュメント・ライブラリの両方の `` アイコンをクリックしてアップロードします。
+1. バックアップのアップロードページで、該当する環境を展開し、データベースとドキュメントライブラリの両方の `［+］` アイコンをクリックしてアップロードします。
    
    ![アイコンをクリックすると、データベースとドキュメントライブラリの両方が.gz形式のアーカイブとしてアップロードされます。](./downloading-and-uploading-backups/images/03.png)
 
-3.  データベース・ダンプとドキュメント・ライブラリの両方がアップロードされたら、 *[アップロードの開始]* をクリックします。
+1. データベース・ダンプとドキュメント・ライブラリの両方がアップロードされたら、 *［アップロードの開始］* をクリックします。
 
 DXP Cloudはアップロードしたファイルを使用してバックアップの生成を開始し、環境にリストアできるリストに追加します。 バックアップが生成されている間は、他のバックアップの生成や復元はできません。
 
@@ -84,10 +91,10 @@ DXP Cloudはアップロードしたファイルを使用してバックアッ�
 
 次の例を考えてみましょう：
 
-  - サービス名： `backup`
-  - プロジェクト名： `lfrjoebloggs`
-  - 環境名： `prd`
-  - ホスト名： `backup-lfrjoebloggs-prd.lfr.cloud`
+* サービス名： `backup`
+* プロジェクト名： `lfrjoebloggs`
+* 環境名： `prd`
+* ホスト名： `backup-lfrjoebloggs-prd.lfr.cloud`
 
 
 
@@ -101,9 +108,9 @@ SSOが有効な場合、トークン認証が必要であることに注意し�
 
 
 
-``` bash
+```bash
 curl -X POST \
-  https://backup-<PROJECT-NAME>-prd.lfr.cloud/backup/upload \
+  https://backup-<PROJECT-NAME>-<ENV>.lfr.cloud/backup/upload \
   -H 'Content-Type: multipart/form-data' \
   -H 'dxpcloud-authorization: Bearer <USER_TOKEN>' \
   -F 'database=@/my-folder/database.gz' \
@@ -113,8 +120,8 @@ curl -X POST \
 
 
 
-```{note}
-注：ヘッダー dxpcloud-authorization にユーザートークンを渡すことは、バックアップサービスのバージョン 3.2.0 以降でのみ機能します。 Previous versions should be upgraded to at least `3.2.0`. Requests to earlier versions must use the header `Authorization: Bearer <PROJECT_MASTER_TOKEN>`. You can find the project master token by running the command `env | grep LCP_PROJECT_MASTER_TOKEN` in any shell in the Liferay DXP Cloud console.
+```note::
+   注：ヘッダー dxpcloud-authorization にユーザートークンを渡すことは、バックアップサービスのバージョン 3.2.0 以降でのみ機能します。 それ以前のバージョンは、少なくとも ``3.2.0`` にアップグレードする必要があります。 以前のバージョンへのリクエストには ``Authorization.Bearer <PROJECT_MASTER_TOKEN>``を使用します。 プロジェクトマスタートークンは、Liferay DXP Cloudコンソールの任意のシェルで ``env | grep LCP_PROJECT_MASTER_TOKEN`` コマンドを実行することで見つけることができます。
 ```
 
 
@@ -129,7 +136,7 @@ curl -X POST \
 #### パラメーター
 
 | 名前   | タイプ      | 必須 |
-| :--- | :--- | :--- |
+| ---- | -------- | -- |
 | `id` | `String` | はい |
 
 
@@ -139,9 +146,9 @@ curl -X POST \
 
 
 
-``` bash
+```bash
 curl -X GET \
-  https://backup-<PROJECT-NAME>-prd.lfr.cloud/backup/download/database/id \
+  https://backup-<PROJECT-NAME>-<ENV>.lfr.cloud/backup/download/database/id \
   -u user@domain.com:password \
   --output database.gz
 ```
@@ -149,8 +156,8 @@ curl -X GET \
 
 
 
-```{note}
-バックアップサービスがまだバージョン4.2以上にアップデートされていない場合、データベースボリュームは `.gz` ではなく `.tgz` アーカイブとしてダウンロードされます。
+```note::
+   バックアップサービスがまだバージョン4.2以上にアップデートされていない場合、データベースボリュームは ``.gz`` ではなく ``.tgz`` アーカイブとしてダウンロードされます。
 ```
 
 
@@ -165,7 +172,7 @@ curl -X GET \
 #### パラメーター
 
 | 名前   | タイプ      | 必須 |
-| :--- | :--- | :--- |
+| ---- | -------- | -- |
 | `id` | `String` | はい |
 
 
@@ -175,9 +182,9 @@ curl -X GET \
 
 
 
-``` bash
+```bash
 curl -X GET \
-  https://backup-<PROJECT-NAME>-prd.lfr.cloud/backup/download/volume/id \
+  https://backup-<PROJECT-NAME>-<ENV>.lfr.cloud/backup/download/volume/id \
   -u user@domain.com:password \
   --output volume.tgz
 ```
@@ -189,11 +196,11 @@ curl -X GET \
 
 アップロードバックアップAPIを使ってDXP Cloudにバックアップをアップロードするには、以下の手順に従ってください。
 
-1.  [データベースファイル作成します](#creating-the-database-file)。
+1. [データベースファイル作成します](#creating-the-database-file)。
 
-2.  [ボリュームファイル作成します](#creating-the-volume-file)。
+1. [ボリュームファイル作成します](#creating-the-volume-file)。
 
-3.  [データベースとボリュームのファイルを使って、](#invoking-the-backup-api) バックアップAPIを起動します。
+1. [データベースとボリュームのファイルを使って、](#invoking-the-backup-api) バックアップAPIを起動します。
 
 アップロードAPIを使用する前に、データベースダンプとドキュメントライブラリを別々のアーカイブに圧縮する必要があります。 オンプレミス環境でのアップロードの準備については、 [データベースとドキュメント・ライブラリーのアップロードの準備](#preparing-the-database-and-document-library-for-upload) を参照してください。
 
@@ -204,18 +211,18 @@ curl -X GET \
 **パラメーター**
 
 | 名前         | タイプ    | 必須 |
-| :--- | :--- | :--- |
-| `database` | `File` | はい |
-| `volume`   | `File` | はい |
+| ---------- | ------ | -- |
+| `database` | `ファイル` | はい |
+| `体積`       | `File` | はい |
 
 
 **curlの例**
 
 
 
-``` bash
+```bash
 curl -X POST \
-  https://backup-<PROJECT-NAME>-prd.lfr.cloud/backup/upload \
+  https://backup-<PROJECT-NAME>-<ENV>.lfr.cloud/backup/upload \
   -H 'Content-Type: multipart/form-data' \
   -F 'database=@/my-folder/database.gz' \
   -F 'volume=@/my-folder/volume.tgz' \
@@ -237,15 +244,15 @@ MySQLのダンプを（ `.sql` スクリプトとして）作成し、それを 
 
 
 
-``` bash
+```bash
 mysqldump -uroot -ppassword --add-drop-database --databases lportal | gzip -c | cat > database.gz
 ```
 
 
 
 
-```{note}
-お使いのBackupサービスが少なくともバージョン `4.2` にアップデートされていない場合には、以下のコマンドを実行して、アーカイブを `.tgz` ファイルに変換する必要があります。tar zcvf database.tgz database.gz`. Then use the resulting `.tgz` archive to upload.
+```note::
+   お使いのBackupサービスが少なくともバージョン ``4.2`` にアップデートされていない場合には、以下のコマンドを実行して、アーカイブを ``.tgz`` ファイルに変換する必要があります。tar zcvf database.tgz database.gz``. そして、出来上がった［``.tgz``］のアーカイブを使ってアップロードします。
 ```
 
 
@@ -255,7 +262,7 @@ mysqldump -uroot -ppassword --add-drop-database --databases lportal | gzip -c | 
 
 
 
-``` sql
+```sql
 --
 -- Current Database: `lportal`
 --
@@ -276,7 +283,7 @@ USE `lportal`;
 
 
 
-``` bash
+```bash
 cd $LIFERAY_HOME/data && tar -czvf volume.tgz document_library
 ```
 
@@ -285,6 +292,6 @@ cd $LIFERAY_HOME/data && tar -czvf volume.tgz document_library
 
 ## 追加情報
 
-  - [バックアップサービスの概要](./backup-service-overview.md)
-  - [バックアップからのデータの復元](./restoring-data-from-a-backup.md)
-  - [データベースサービス(MySQL)](../database-service/database-service.md)
+* [バックアップサービスの概要](./backup-service-overview.md)
+* [バックアップからのデータの復元](./restoring-data-from-a-backup.md)
+* [データベースサービス(MySQL)](../database-service/database-service.md)

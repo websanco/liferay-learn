@@ -2,30 +2,36 @@
 
 DXP Cloudバージョン4の新しい構造を使用するようにリポジトリをアップグレードすると、リポジトリ内でLiferayワークスペースを活用し、サービスを最新の状態に保ち、さまざまな新機能や更新された機能を使用できます。
 
-新しいリポジトリ構造へのアップグレードには、 [アップグレードスクリプト](https://github.com/LiferayCloud/stack-upgrade/archive/release.zip)使用が含まれます。
+新しいリポジトリ構造へのアップグレードには、 [アップグレードスクリプト](https://github.com/LiferayCloud/stack-upgrade/archive/release.zip)の使用が含まれます。
 
 ## アップグレードの準備
 
-DXP Cloudスタックのバージョン4.xにアップグレードするには、現在のサービスが3.xである必要があります。 現在のバージョンを確認するには、リポジトリでgradle.propertiesファイルを見つけます。 リポジトリは次の構造に従います。
+DXP Cloudスタックのバージョン4.x.xにアップグレードするには、現在のサービスが3.x.xである必要があります。 現在のバージョンを確認するには、リポジトリでgradle.propertiesファイルを見つけます。 バージョン4.x.xにアップグレードする前のリポジトリは、このような構造になっています：
 
-    repository
-    ├── gradle
-    ├── lcp
-    ├── liferay
-    ├── modules
-    ├── themes
-    ├── build.gradle
-    ├── gradle.properties
-    ├── gradlew
-    ├── gradlew.bat
-    ├── Jenkinsfile
-    ├── README.md
-    ├── README-dxpcloud.md
-    └── settings.gradle
+```
+repository
+├── gradle
+├── lcp
+├── liferay
+├── modules
+├── themes
+├── build.gradle
+├── gradle.properties
+├── gradlew
+├── gradlew.bat
+├── Jenkinsfile
+├── README.md
+├── README-dxpcloud.md
+└── settings.gradle
+```
 
-`gradle.properties` ファイルを開き、Dockerイメージに指定されたバージョンを確認します。 たとえば、これはLiferayサービスのイメージバージョンです。
+```important::
+   リポジトリがこのような構造になっていない場合（ルートに ``gradle.properties`` ファイルや ``lcp`` フォルダーが存在しない場合）、バージョン 4.x.x へのアップグレードがすでに完了していることを示しています。
+```
 
-``` properties
+`gradle.properties` ファイルを開き、Dockerイメージに指定されたバージョンを確認します。 たとえば、これはLiferayサービスのイメージバージョンです：
+
+```properties
 liferay.workspace.lcp.liferay.image=liferaycloud/liferay-dxp:7.2.10-sp1-fp4-3.0.19
 ```
 
@@ -33,73 +39,83 @@ Dockerイメージ名の末尾の数字は、使用しているDXP Cloudスタ�
 
 次に、Gitリポジトリがクリーンなブランチ上にあることを確認します。 アップグレードスクリプトは、以前にコミットされていないファイルをコミットし、 `upgrade-workspace`と呼ばれる新しいブランチをチェックアウトします。
 
-```{important}
-すでに `upgrade-workspace` ブランチがある場合、スクリプトはそのブランチの作成をスキップして、現在のブランチで動作します。
+```important::
+   すでに ``upgrade-workspace`` ブランチがある場合、スクリプトはそのブランチの作成をスキップして、現在のブランチで動作します。
 ```
 
 ## アップグレードスクリプトの実行
 
-アップグレードするには、次の手順を実行します。
+アップグレードするには、次の手順を実行します：
 
-1.  [アップグレードスクリプト](https://github.com/LiferayCloud/stack-upgrade/archive/release.zip)ダウンロードし、ローカルのDXP Cloudリポジトリのルートに抽出します。
+1. [アップグレードスクリプト](https://github.com/LiferayCloud/stack-upgrade/archive/release.zip)をダウンロードし、ローカルのDXP Cloudリポジトリのルートに抽出します：
 
-    ``` bash
+    ```bash
     curl -L https://github.com/LiferayCloud/stack-upgrade/archive/release.zip -O
     ```
 
-    ``` bash
+    ```bash
     unzip -j release.zip stack-upgrade-release/upgrade-workspace.sh -d path/to/project/folder
     ```
 
-2.  アップグレードスクリプトを実行します。
+1. アップグレードスクリプトを実行します：
 
-    ``` bash
+    ```bash
     cd /path/to/project/folder
     ```
 
-    ``` bash
+    ```bash
     ./upgrade-workspace.sh
     ```
 
-3.  スクリプトの開始出力を読み、プロンプトでプロジェクトのIDを入力します。
-   
-        Enterを押して続行してください。
-        プロジェクトIDを入力してください: lfrlearn
+1. スクリプトの開始出力を読み、プロンプトでプロジェクトのIDを入力します：
 
-4.  プロンプトで、DXP Cloud Consoleに認証します。
-
-5.  サービスに使用するLiferayバージョンに対応する番号を入力します。
-   
-        1) 7.0
-        2) 7.1
-        3) 7.2
-        Liferay DXPバージョンを選択してください。これにより、liferay/LCP.jsonにあるLiferay CLOUDイメージセットとliferay/gradle.propertiesにあるLiferayイメージセットが決定されます。3
-
-6.  プロンプトで、プロジェクトファイルに使用する環境のコンマ区切りのリストを入力します（ `common`は含まれません）。
-   
-        環境のリストをカンマ区切りで入力してください: dev,uat,prd
-
-    ```{important}
-    プロジェクトリポジトリにファイルを追加するLiferay環境の名前だけを入力してください。 インフラストラクチャ(`infra`)環境を追加しない。
+    ```
+    Press enter to continue:
+    Please enter your project id: lfrlearn
     ```
 
-7.  すべてのLiferay環境にElasticsearchプラグインをインストールする場合は、プロンプトでそれらの名前のコンマ区切りのリストを入力します。 それ以外の場合は、Enterキーを押します。
-   
-        elasticsearchプラグインのリストをカンマ区切りで入力してください。
+1. プロンプトで、DXP Cloud Consoleに認証します。
+
+1. サービスに使用するLiferayバージョンに対応する番号を入力します：
+
+    ```
+    1) 7.0
+    2) 7.1
+    3) 7.2
+    Please select the Liferay DXP version, which will determine the Liferay CLOUD image set in liferay/LCP.json and the Liferay image set in liferay/gradle.properties: 3
+    ```
+
+1. プロンプトで、プロジェクトファイルに使用する環境のコンマ区切りのリストを入力します（ `common`は含まれません）。
+
+    ```
+    Please enter a comma-delimited list of environments: dev,uat,prd
+    ```
+
+    ```important::
+       プロジェクトリポジトリにファイルを追加するLiferay環境の名前だけを入力してください。 インフラストラクチャ(`infra`)環境を追加しないでください。
+    ```
+
+1. すべてのLiferay環境にElasticsearchプラグインをインストールする場合は、プロンプトでそれらの名前のコンマ区切りのリストを入力します。 それ以外の場合は、Enterキーを押します。
+
+    ```
+    Please enter a comma-delimited list of elasticsearch plugins:
+    ```
 
     このスクリプトは、リポジトリに新しいブランチを作成してチェックアウトし、アップグレードスクリプトを `.gitignore` ファイルに追加します。
 
-8.  サービスレベルのフォルダーがルートレベルにある状態で、リポジトリの新しい組織をチェックして、スクリプトが正常に実行されたことを確認します。
-   
-        repository
-        ├── backup
-        ├── build
-        ├── ci
-        ├── database
-        ├── liferay
-        ├── search
-        ├── webserver
-        └── upgrade-workspace.sh
+1. サービスレベルのフォルダーがルートレベルにある状態で、リポジトリの新しい組織をチェックして、スクリプトが正常に実行されたことを確認します。
+
+    ```
+    repository
+    ├── backup
+    ├── build
+    ├── ci
+    ├── database
+    ├── liferay
+    ├── search
+    ├── webserver
+    └── upgrade-workspace.sh
+    ```
 
 リポジトリが再編成され、 `liferay` フォルダーがLiferayワークスペースになり、サービスが4.xxにアップグレードされます。
 
@@ -107,41 +123,59 @@ Dockerイメージ名の末尾の数字は、使用しているDXP Cloudスタ�
 
 サービススタックのアップグレードを完了した後、プロジェクトの `ci/LCP.json` ファイル内の環境変数の動作が異なる場合があります。 アップグレードしたプロジェクトを続行する前に、 `ci` サービスの環境変数が正しい設定を反映していることを確認してください。
 
-プロジェクトとバージョン管理との統合（この例では、GitHubを使用）に対して次のプロパティが正しく設定されていることを確認します。
+### リポジトリ統合変数の確認
 
-``` json
+プロジェクトとバージョン管理との統合（この例では、GitHubを使用）に対して次のプロパティが正しく設定されていることを確認します：
+
+```json
 {
     "LCP_CI_SCM_PROVIDER": "github",
     "LCP_CI_SCM_REPOSITORY_OWNER": "OWNER_NAME",
     "LCP_CI_SCM_REPOSITORY_NAME": "PROJECT_NAME",
-    "LCP_CI_SCM_TOKEN": "AUTH_TOKEN",
+    "LCP_CI_SCM_TOKEN": "AUTH_TOKEN"
 }
 ```
 
-デフォルトJenkinsfileがされているので [はもはや必要な](./dxp-cloud-project-changes-in-version-4.md#ci-service-changes) プロジェクトで、プロジェクトのルートにJenkinsfileもアップグレードした後に除去することはできません。 プロジェクトにデフォルトのJenkinsfileを使用する場合は、 `ci` サービス環境変数がこれを反映していることを確認してください。
+詳しくは[GitHub](../getting-started/configuring-your-github-repository.md#setting-environment-variables)、 [Bitbucket](../getting-started/configuring-your-bitbucket-repository.md#connecting-bitbucket-to-your-jenkins-service)、 [GitLab](../getting-started/configuring-your-gitlab-repository.md#connecting-gitlab-to-your-jenkins-service) の統合を参照してください。
 
-``` json
+### Jenkinsfile設定変数の確認
+
+プロジェクトにデフォルトのJenkinsfileが[必要とされていない](./dxp-cloud-project-changes-in-version-4.md#ci-service-changes)ので、プロジェクトのルートのJenkinsfileもアップグレードした後に除去することができます。 プロジェクトにデフォルトのJenkinsfileを使用する場合は、 `ci` サービス環境変数がこれを反映していることを確認してください：
+
+```json
 {
     "LCP_CI_USE_DEFAULT_JENKINSFILE": "true",
     "LCP_CI_SCM_JENKINSFILE_HOOKS_DIR": "ci/",
 }
 ```
 
-```{note}
-デフォルトのJenkinsfileを拡張するフックを使いたい場合は `LCP_CI_SCM_JENKINSFILE_HOOKS_DIR` 変数を定義する必要があります。
+```note::
+   デフォルトのJenkinsfileを拡張するフックを使いたい場合は ``LCP_CI_SCM_JENKINSFILE_HOOKS_DIR`` 変数を定義する必要があります。
 ```
 
 `ci` サービスディレクトリ内に独自のJenkinsfileを定義してデフォルトを上書きする場合は、環境変数が次のようになっていることを確認してください。
 
-``` json
+```json
 {
     "LCP_CI_USE_DEFAULT_JENKINSFILE": "false",
-    "LCP_CI_SCM_JENKINSFILE_PATH": "ci/Jenkinsfile",
+    "LCP_CI_SCM_JENKINSFILE_PATH": "ci/Jenkinsfile"
 }
 ```
 
 ## 次のステップ
 
-ローカルリポジトリを変更後、 [のCLIツール](./command-line-tool.md)'の `lcp deploy` コマンドを使用して、 `ci` サービスを `infra` 環境にデプロイします。 これにより、 `ci` サービスへの変更が最初にデプロイされることが保証されます。
+ローカルリポジトリが変更されたら、 `ci` サービスを `infra` 環境にデプロイします。 他のより先に`インフラ`環境にデプロイすることによって、`ci`サービスへの変更事項が最初にデプロイされることが保証されます。これにより、他の変更事項が正しくデプロイされます。
 
-次に、新しいサービスバージョン</a> を開発環境に デプロイするか、DXP Cloudサービスの新しいバージョンの新機能のいくつかを探索することができます。 詳細は、[変更点の説明 ](./dxp-cloud-project-changes-in-version-4.md)ご覧ください。
+`ci` サービスのみをデプロイするには、 [CLIツールを使用](../build-and-deploy/deploying-changes-via-the-cli-tool.md)するのが最も早い方法です。 プロジェクトリポジトリの `ci/` フォルダに移動し、 `lcp deploy` コマンドを実行します：
+
+```bash
+    lcp deploy --project=<project-name> --environment=infra
+```
+
+Alternatively, you can also follow the [development workflow](../build-and-deploy/overview-of-the-dxp-cloud-deployment-workflow.md) and deploy the changes as a build from the DXP Cloud console.
+
+その後、 [新しいサービスバージョンを](../build-and-deploy/deploying-changes-via-the-dxp-cloud-console.md) 開発環境にデプロイしたり、DXP Cloudサービスの新しいバージョンの新機能を試したりすることができます。 詳細は、[変更点の説明 ](./dxp-cloud-project-changes-in-version-4.md)ご覧ください。
+
+## 追加情報
+
+* [サービススタックのバージョンについて](./understanding-service-stack-versions.md)

@@ -7,20 +7,20 @@ MySQLのユーザー名は `lcp-secret-database-user` のシークレットに�
 ユーザー名を変更すると、データベースに接続されている他のサービス（ `liferay` や `backup` サービスなど）に影響を与える可能性があることに留意してください。 これらのサービスは、データベースのユーザー名が変更されたときにも再起動しなければ、継続して動作しません。
 
 ```{note}
-If no database username secret exists, then your Project service uses the `LCP_MASTER_USER_NAME` variable. This variable is defined in the `LCP.json` file and uses `dxpcloud` as its default value.
+データベースユーザー名シークレットが存在しない場合、プロジェクトサービスはLCP_MASTER_USER_NAME変数を使用します。 この変数はLCP.jsonファイルで定義され、デフォルト値としてdxpcloudが使用されます。
 ```
 
 ## データベースのユーザー名の保持
 
 現在のユーザー名を保持するには、以下の手順で保持するユーザーのリストに追加します。
 
-1.  目的のプロジェクト環境のデータベースサービス専用ページにアクセスします。
+1. 目的のプロジェクト環境のデータベースサービス専用ページにアクセスします。
 
-2.  *環境変数* タブをクリックします。
+1. *［環境変数］* タブをクリックします。
 
-3.  `LCP_DATABASE_USER_WHITELISTの` を *Regular variablesの*に入力し、その *値として保持したいユーザー名*に入力します。 複数のユーザー名を入力する場合は、スペースやカンマで区切ってください。
+1. `LCP_DATABASE_USER_WHITELISTの` を *Regular variablesの*に入力し、その *値として保持したいユーザー名*に入力します。 複数のユーザー名を入力する場合は、スペースやカンマで区切ってください。
 
-4.  *変更を保存*をクリックします。
+1. *［変更を保存］*をクリックします。
 
 保存すると、データベースサービスが自動的に再起動し、現在の認証情報が保持されているユーザーのリストに追加されます。 サービスの再起動が完了したら、 `lcp-secret-database-user` のシークレットを変更します。
 
@@ -28,22 +28,22 @@ If no database username secret exists, then your Project service uses the `LCP_M
 
 以下の手順で、データベースのユーザー名を変更してください。
 
-1.  目的のプロジェクト環境に移動し、環境メニューの *設定* をクリックします。
+1. 目的のプロジェクト環境に移動し、環境メニューの *設定* をクリックします。
 
-2.  *シークレット* セクションで、 *アクション* ボタン `lcp-secret-database-user`をクリックして 、*編集*を選択します。
+1. *シークレット* セクションの、`lcp-secret-database-user`で*［アクション］* ボタンをクリックして 、*［編集］*を選択します。
 
-3.  *値* セクションで、 *表示* をクリックすると、シークレットの値が表示され、編集が可能になります。 そして、新しい値を設定します。
+1. *［値］* セクションで、 *［表示］* をクリックすると、シークレットの値が表示され、編集が可能になります。 そして、新しい値を設定します。
 
-    オプションで、どのユーザーがシークレットの値を閲覧できるか、またどのサービスがシークレットを使用するかを選択することができます。
+   オプションで、どのユーザーがシークレットの値を閲覧できるか、またどのサービスがシークレットを使用するかを選択することができます。
 
-4.  接続されているサービスへの変更の影響を確認するには、 *publish secret* チェックボックスを使用します。
+1. 接続されているサービスへの変更の影響を確認するには、 *publish secret* チェックボックスを使用します。
 
-5.  *変更の公開*をクリックします。
+1. *［変更の公開］*をクリックします。
 
 公開されると、接続されているすべてのサービスが再起動し、数分間リクエストの受信が停止します。 また、シークレットの使い方によっても挙動が異なる場合があります。 サービスの起動時には、環境変数が読み込まれ、データベースのユーザーが更新されます。
 
 ## 追加情報
 
-  - [データベースサービス](./database-service.md)
-  - [データベースパスワードの変更](./changing-your-database-password.md)
-  - [シークレットで安全な環境変数を管理](../../infrastructure-and-operations/security/managing-secure-environment-variables-with-secrets.md)
+* [データベースサービス](./database-service.md)
+* [データベースパスワードの変更](./changing-your-database-password.md)
+* [シークレットで安全な環境変数を管理](../../infrastructure-and-operations/security/managing-secure-environment-variables-with-secrets.md)

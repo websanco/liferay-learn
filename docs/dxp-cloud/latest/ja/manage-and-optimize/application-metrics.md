@@ -1,58 +1,106 @@
 # アプリケーションメトリクス
 
-DXP Cloudのビルトインモニタリングにより、管理者はすべてのサービスに関する次の情報を追跡できます。
+Liferay DXP Cloudに組み込まれたモニタリング機能により、各環境サービスが使用するリソースを追跡することができます。 これらのアプリケーションメトリクスには、メモリとCPUの使用量、およびネットワークデータ転送量が含まれます。 メトリクスは、デフォルトのDXP Cloudのスタックサービス（Webサーバ、Liferay、検索、データベース、バックアップ）で利用できます。
 
-  - CPU使用率
-  - メモリ使用量
-  - データの転送
+## サービスポップオーバー
 
-DXP Cloud管理コンソールにログインしながら、アプリケーションメトリクスを表示するには：
+サービスの現在のリソース使用状況は、DXP Cloud環境の _概要_ や _サービス_ のページや、個々のサービスのページなど、いくつかのページから素早く確認することができます。 サービスのアイコンにカーソルを合わせると、そのサービスのリソース使用状況のポップオーバーが表示されます。
 
-1.  *[Monitoring]* タブをクリックします。
-2.  過去30日間のデータが表示されます。 期間を変更するには、時間セレクターのドロップダウンメニューをクリックします。
+![サービスのアイコンにカーソルを合わせます。](./application-metrics/images/01.png)
 
-![図1：DXP Cloudを使用してサービスを監視できます。](./application-metrics/images/01.png)
+## 拡張アプリケーションメトリクス
 
-## 本番環境での高度なアプリケーションメトリクス
+ユーザーは、 *［モニタリング］* ページから拡張サービスメトリクスを表示できます：
 
-Dynatraceの高度なモニタリング機能を使用する前に、次の要件を満たす必要があります。
+1. 環境メニューの *［モニタリング］* をクリックします。
+1. ドロップダウンメニューを使って、モニターしたいサービスと時間帯を選択します。
 
-  - Dynatraceアカウントを作成している。
-  - Dynatraceシークレットの `token` および `tenant` の値が生成されている。
-  - Dynatrace環境変数が、DXPサービスの本番環境の `LCP.json` ファイルに追加されている。 例：
+![DXP Cloudを使用してサービスを監視できます。](./application-metrics/images/02.png)
 
-<!-- end list -->
+ユーザーは、 *［Services］* ページから拡張サービスメトリクスを表示できます：
 
-``` json
+1. 環境メニューの *［サービス］* をクリックします。
+
+1. モニターしたい *［Service］* をクリックします。
+
+1. *［メトリクス］* タブをクリックします。
+
+![サービスのページからメトリクスを表示します。](./application-metrics/images/03.png)
+
+## サービスに割り当てられるリソースの決定
+
+サービスの `LCP.json` ファイルの設定により、そのサービスに割り当てられたメモリとCPUの合計が決定され、アプリケーションのメトリクスには、これらのリソースの使用状況が時系列で表示されます。
+
+以下は `liferay` サービスの `LCP.json` ファイルにおけるCPUとMemoryの割り当ての例です：
+
+```
+"id": "liferay",
+
+"memory": 8192,
+"cpu": 8
+```
+
+ユーザーはDXP Cloudのコンソールから割り当てられたリソースを確認できます。
+
+![DXP Cloudのコンソールから、お客様の環境サービスに割り当てられたリソースを確認できます。](./application-metrics/images/04.png)
+
+## 高度なアプリケーションメトリクス（本番環境のみ）
+
+Liferay DXP Cloudでは、 [Dynatrace](https://www.dynatrace.com/)の高度なパフォーマンスモニタリングを本番環境に統合することができます。
+
+詳しくは、 [Dynatrace limitations](../reference/platform-limitations.md#dynatrace) を参照してください。
+
+### Dynatraceと本番環境の統合
+
+以下の手順でDynatraceを統合します：
+
+1. Dynatraceのアカウントを作成します。
+
+1. `トークン` および `テナント` 値を生成します。
+
+1. Liferayサービスに、Dynatrace`token`値を[Secret](../infrastructure-and-operations/security/managing-secure-environment-variables-with-secrets.md)として追加します。
+
+1. Liferayサービスの本番環境の`LCP.json`ファイルにDynatrace`テナント` Dynatrace環境変数を追加します。 たとえば、
+
+```json
 {
     "environments": {
       "prd": {
         "env": {
-          "LCP_PROJECT_MONITOR_DYNATRACE_TENANT": "tot02934",
-          "LCP_PROJECT_MONITOR_DYNATRACE_TOKEN": "dDKSowkdID8dKDkCkepW"
+          "LCP_PROJECT_MONITOR_DYNATRACE_TENANT": "tot02934"
         }
       }
     }
 }
 ```
 
-| 名前                                     | 説明                                                                               |
-| :--- | :--- |
-| `LCP_PROJECT_MONITOR_DYNATRACE_TENANT` | 8文字の文字列。 これはDynatrace SaaSアカウントのURL（プレフィックス）の一部です。                               |
-| `LCP_PROJECT_MONITOR_DYNATRACE_TOKEN`  | *Dynatraceアカウントで見つかる22文字の文字列* → *インストールを開始* → *PaaS監視をセットアップ* → *インストーラのダウンロード*. |
+| 名前 | 説明 |
+| -- | -- |
+|    |    |
 
-これらの必要な手順が完了後：
 
-1.  <https://console.liferay.cloud/projects> に移動します。
-2.  本番環境をクリックします。
-3.  左側のメニューで *[Monitoring]* をクリックします。
-4.  *[Advanced]* タブをクリックします。
-5.  *[Go to Dynatrace Dashboard]* をクリックして、 [[Dynatrace]](https://www.dynatrace.com/) ダッシュボードにアクセスします。
+`LCP_PROJECT_MONITOR_DYNATRACE_TENANT` | Dynatrace SaaSアカウントのURL（敬称）の一部である文字列です。 | `LCP_PROJECT_MONITOR_DYNATRACE_TOKEN` | Dynatraceアカウントにある文字列です。 トークンを取得するには、 *［Manage］* &rarr; *［Deploy Dynatrace］* &rarr; *［Set up PaaS Integration］*にナビゲートします。次に環境IDを入力し、 *［Generate new token］*をクリックします。 |
 
-![Dynatraceダッシュボード](./application-metrics/images/02.png)
+これらの値の詳細については、 [official Dynatrace documentation](https://www.dynatrace.com/support/help/dynatrace-api/basics/dynatrace-api-authentication/) を参照してください。
 
-Dynatrace資格情報でサインインして、ログの追跡を確認し、カスタムダッシュボードを作成します。
+### Dynatraceへのアクセス
+
+DXP CloudのコンソールからDynatraceの高度なパフォーマンスモニタリングにアクセスできるようになりました。
+
+1. 本番環境に移動します。
+
+1. 環境メニューの *［モニタリング］* をクリックします。
+
+1. *［Advanced］* タブをクリックします。
+
+1. *[Go to Dynatrace Dashboard]*ボタンをクリックして、 [Dynatrace] ダッシュボードにアクセスします。
+
+    ![DXP CloudコンソールからDynatraceダッシュボードにアクセスします。](./application-metrics/images/05.png)
+
+Dynatraceの認証情報でログインすると、ログの軌跡を確認したり、カスタムダッシュボードを作成したりできます。
 
 ## 追加情報
 
-  - [Advanced Monitoring: APM Tools - Dynatrace](https://help.liferay.com/hc/en-us/articles/360017896452-Advanced-Monitoring-APM-Tools-Dynatrace)
+* [Liferay DXPサービスの概要](../using-the-liferay-dxp-service/introduction-to-the-liferay-dxp-service.md)
+* [リアルタイムアラート](./real-time-alerts.md)
+* [割り当て](./quotas.md)

@@ -6,14 +6,15 @@
    :includehidden:
    :maxdepth: 3
 
-   getting_started
-   using_the_liferay_dxp_service
-   build_and_deploy
-   manage_and_optimize
-   platform_services
-   infrastructure_and_operations
-   troubleshooting
-   reference
+   getting-started.md
+   using-the-liferay-dxp-service.md
+   build-and-deploy.md
+   manage-and-optimize.md
+   platform-services.md
+   infrastructure-and-operations.md
+   migrating-to-dxp-cloud.md
+   troubleshooting.md
+   reference.md
 
 
 索引と表

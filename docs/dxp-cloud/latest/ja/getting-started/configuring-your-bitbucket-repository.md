@@ -1,172 +1,191 @@
 # Bitbucket リポジトリの設定
 
-DXP Cloudオンボーディングメールを受信すると、 `dxpcloud` 組織でホストされているGitHubリポジトリがプロビジョニングされます。 このリポジトリは、チームの個別のプライベートDXP Cloud開発リポジトリのテンプレートとして使用する必要があり、通常は10営業日後に削除されます。 ユーザーは次のことを期待されています。
+DXP Cloudオンボーディングメールを受信すると、 `dxpcloud` 組織でホストされているGitHubリポジトリがプロビジョニングされます。 このリポジトリは、チームの個別のプライベートDXP Cloud開発リポジトリのテンプレートで、通常は10営業日後に削除されます。 ユーザーは以下のことを行う必要があります：
 
-1.  最初にプロビジョニングされたリポジトリを独自のプライベートリポジトリに転送します。
-2.  Webhookを使用して、そのリポジトリをDXP CloudのJenkins（CI）サービスと統合します。
+1. プロビジョニングされたリポジトリを独自のプライベートリポジトリに転送します。
+1. プライベートリポジトリとDXP CloudのJenkins(CI)サービスをWebhookで連携させます。
 
 プロビジョニングされたリポジトリはGitHubにありますが、Jenkinsサービスのバージョン3.2.0以降ではBitBucketリポジトリに転送できます。
 
 ## Jenkinsサービスの準備
 
-開始する前に、 `LCP.json` で `ci` サービスを確認し、次のJenkinsサービス以上を実行していることを確認してください。
+すでにDXPクラウドのインスタンスで [version 4.x.x services](../reference/understanding-service-stack-versions.md) を使用している場合は、JenkinsサービスはすでにBitbucketと互換性があります。 アップグレードの詳細については、 [DXP Cloudスタックのアップグレード](../reference/upgrading-your-dxp-cloud-stack.md) を参照してください。
 
-    liferaycloud/jenkins:2.222.1-3.2.0
+version 3.x.xのサービスを使用している場合は、 `LCP.json` で、 `ci` サービスを確認し、以下のJenkinsサービス以上のものを実行していることを確認してください：
 
-そうでない場合は、次の手順に従ってアップグレードします。
+```
+liferaycloud/jenkins:2.222.1-3.2.0
+```
 
-1.  最後に、新しいリポジトリを指すようにJenkinsサービスの環境変数を設定します。
+そうでない場合は、次の手順に従ってアップグレードします：
 
-2.  ルートフォルダーにある `Jenkinsfile` 削除します。
+1. Jenkinsサービスを `liferaycloud/jenkins：2.222.1-3.2.0` バージョンに更新します。
 
-3.  次の環境変数を追加します `LCP_CI_USE_DEFAULT_JENKINSFILE：true`。
+1. ルートフォルダーにある `Jenkinsfile` を削除します。
 
-4.  Jenkinsサービスをデプロイします。
+1. 次の環境変数を追加します： `LCP_CI_USE_DEFAULT_JENKINSFILE: true`。
 
-<!-- end list -->
+1. Jenkinsサービスをデプロイします。
 
-```{note}
-Jenkinsfile をカスタマイズしている場合は、以下のガイドに従って [デフォルトの Jenkinsfile](../platform-services/continuous-integration.md#extending-the-default-jenkinsfile)_.
+```note::
+    Jenkinsfile をカスタマイズしている場合は、以下のガイドに従って `デフォルトの Jenkinsfile <../platform-services/continuous-integration.md#extending-the-default-jenkinsfile>`__を延長します。
 ```
 
 ## Bitbucketリポジトリの作成
 
 まず、新しいBitbucketリポジトリを作成します。
 
-1.  [Bitbucket](https://bitbucket.org)に移動します。
+1. [［Bitbucket］](https://bitbucket.org)に移動します。
 
-2.  サイドバーの検索アイコンの下にある「＋」アイコンをクリックします。
+1. サイドバーの検索アイコンの下にある「＋」アイコンをクリックします。
 
     ![+アイコンをクリックして、新しいBitBucketリポジトリの作成を開始します。](./configuring-your-bitbucket-repository/images/01.png)
 
-3.  *リポジトリ* をクリックして、新しいリポジトリの作成を開始します。
+1. _［リポジトリ］_ をクリックして、新しいリポジトリの作成を開始します。
 
     ![新しいリポジトリの詳細を入力します。](./configuring-your-bitbucket-repository/images/02.png)
 
-4.  リポジトリの名前を指定します。
+1. リポジトリの名前を指定します。
 
-5.  アクセスレベルがプライベートに設定されていることを確認します。
+1. アクセスレベルがプライベートに設定されていることを確認します。
 
-6.  *README を含めるか?* から *いいえ*に設定します。
+1. _［Include a README?］_の設定を_［No］_にします。
 
-7.  *リポジトリを作成*をクリックします。
+1. _［Create repository］_ をクリックします。
 
 ## GitHubからBitbucketへの転送
 
-以下の手順に従って、初期の GitHub リポジトリを自分の Bitbucket リポジトリに転送します。
+以下の手順に従って、プロビジョニング済みの GitHub リポジトリを自分の Bitbucket リポジトリに転送します：
 
-1.  最初のGitHubリポジトリをローカルでクローンします。
+1. プロビジョニング済みのGitHubリポジトリをローカルでクローンします：
 
     `git clone git@github.com:dxpcloud/example.git`
 
-    ```{note}
-    すでに他のプロバイダで作業するためにリポジトリをクローンしている場合は、このステップをスキップして、同じクローン内で作業することができます。
+    ```note::
+       すでに他のプロバイダで作業するためにリポジトリをクローンしている場合は、このステップをスキップして、同じクローン内で作業することができます。
     ```
 
-2.  新しいGitリモートを追加し、Bitbucketをポイントします。
+1. 新しいGitリモートを追加し、Bitbucketをポイントします：
 
     `git remote add bitbucket git@bitbucket.org:example/example.git`
 
-3.  クローンされたリポジトリを新しいリモートリポジトリにプッシュします。
+1. クローンされたリポジトリを新しいリモートリポジトリにプッシュします：
 
     `git push bitbucket master`
 
-リポジトリの作成、複製、およびプッシュに関するヘルプが必要な場合は、 [Bitbucketのドキュメント](https://confluence.atlassian.com/bitbucket/create-a-git-repository-759857290.html)参照してください。
+リポジトリの作成、複製、およびプッシュに関するヘルプが必要な場合は、 [Bitbucket's documentation](https://confluence.atlassian.com/bitbucket/create-a-git-repository-759857290.html)を参照してください。
 
 ## BitBucketのアプリパスワードの生成
 
-次に、WebhookがBitbucketで認証してJenkinsビルドをトリガーするために使用するアプリパスワードを作成します。 アプリパスワード生成のBitbucketユーザー **必見** リポジトリへの管理者レベルのアクセス権を持っています。
+次に、WebhookがBitbucketで認証してJenkinsビルドをトリガーするために使用するアプリパスワードを作成します。 アプリのパスワードを生成するBitbucketユーザーは、リポジトリへの管理者レベルのアクセス権を持っている**必要**があります。
 
-次の手順を実行して、アプリのパスワードを生成します。
+次の手順を実行して、アプリのパスワードを生成します：
 
-1.  ユーザー設定ページの[ *Access Management* ]で、[ *App passwords*]をクリックします。
+1. ユーザー設定ページから、 _［Access Management］_にある_［App passwords］_をクリックします。
 
-    ![ユーザー設定ページの[アプリパスワード]をクリックします。](./configuring-your-bitbucket-repository/images/03.png)
+    ![ユーザー設定ページの［アプリパスワード］をクリックします。](./configuring-your-bitbucket-repository/images/03.png)
 
-2.  [ *アプリパスワードの作成*]をクリックします。
+1. _［Create app password］_ をクリックします。
 
-    ![新しいアプリパスワードを生成します。 後で再びアクセスすることはできません。](./configuring-your-bitbucket-repository/images/04.png)
+    ![新しいアプリパスワードを生成します。後で再びアクセスすることはできません。](./configuring-your-bitbucket-repository/images/04.png)
 
-3.  アプリパスワードのラベルを提供します。
+1. アプリパスワードのラベルを提供します。
 
-4.  アプリに次の権限を付与します。
+1. アプリに次の権限を付与します：
 
-      - - `プルリクエスト-読み取り、書き込み` （これにより、リポジトリにもフラグが付けられます-読み取り、書き込み）
-      - `ウェブフック - 読み取り、書き込み`
+    * `Pull request - read, write` （これにより、リポジトリにもフラグが付けられます - 読み取り、書き込み）
+    * `Webhooks -  read, write`
 
-5.  [作成]をクリックします。
+1. _［作成］_ をクリックします。
 
-6.  アプリのパスワードをコピーします（それ以外の場合は表示されません）。 これはBitBucketの個人用アクセストークンに相当します。
+1. アプリのパスワードをコピーします（再度表示されません）。 これはBitBucketの個人用アクセストークンに相当します。
 
-<!-- end list -->
-
-```{important}
-アプリのパスワードを生成したユーザーは、環境変数 `LCP_CI_SCM_USERNAME` にそのユーザー名を使用しなければなりません。
+```important::
+   アプリのパスワードを生成したユーザーは、環境変数 ［LCP_CI_SCM_USERNAME］にそのユーザー名を使用しなければなりません。
 ```
+
+## ブランチタイプと敬称の確認
+
+DXP Cloudがブランチに正しくリンクできるようにするためには、リポジトリで使用されているブランチ敬称の完全なリストをDXP Cloudに提供する必要があります。 リポジトリで使用されるブランチタイプには、それぞれ独自の敬称があり、リポジトリの設定で定義されています。
+
+[the Bitbucket website](https://bitbucket.org)で、メニューの左側の _［Repository settings］_ &rarr; _［Branching model］_をクリックします。 これにより、 _Branching model_ のページが表示され、各ブランチの敬称が記載されています。 これらの各敬称をメモして、 `LCP_CI_SCM_BITBUCKET_BRANCH_PREFIXES` CI環境変数に追加してください。
+
+![Bitbucket リポジトリのデフォルトのブランチタイプ（および敬称）は、bugfix/、feature/、hotfix/、release/ です。](./configuring-your-bitbucket-repository/images/05.png)
 
 ## JenkinsサービスへのBitBucketの接続
 
-最後に、新しいリポジトリを指すようにJenkinsサービスの環境変数を設定します。
+最後に、新しいリポジトリを指すようにJenkinsサービスの環境変数を設定します：
 
-1.  DXP Cloudコンソールにログインし、 `インフラ` 環境でJenkinsサービスに移動します。
+1. DXP Cloudコンソールにログインし、 `infra` 環境でJenkinsサービスに移動します。
 
-2.  「 *環境変数* 」タブに移動します。
+1. _［環境変数］_ タブに移動します。
 
-3.  次の環境変数を設定します。
+1. 以下の環境変数を設定します：
 
-| 名前                            | 値                      |
-| :--- | :--- |
-| `LCP_CI_SCM_PROVIDER`         | bitbucket              |
-| `LCP_CI_SCM_REPOSITORY_OWNER` | \[repo\_owner\]    |
-| `LCP_CI_SCM_REPOSITORY_NAME`  | \[repo\_name\]     |
-| `LCP_CI_SCM_TOKEN`            | \[app\_password\]  |
-| `LCP_CI_SCM_USERNAME`         | \[auth\_username\] |
+| 名前                                     | Value              |
+| -------------------------------------- | ------------------ |
+| `LCP_CI_SCM_PROVIDER`                  | bitbucket          |
+| `LCP_CI_SCM_REPOSITORY_OWNER`          | [repo owner]       |
+| `LCP_CI_SCM_REPOSITORY_NAME`           | [repo name]        |
+| `LCP_CI_SCM_TOKEN`                     | [app password]     |
+| `LCP_CI_SCM_USERNAME`                  | [auth username]    |
+| `LCP_CI_SCM_BITBUCKET_BRANCH_PREFIXES` | [list of prefixes] |
 
-`LCP_CI_SCM_USERNAME` を、 [がアプリのパスワード](#generating-app-password-for-bitbucket)を生成したユーザーとして定義します。
+`LCP_CI_SCM_USERNAME` を、 [アプリのパスワードを生成した](#generating-app-password-for-bitbucket)ユーザーとして定義します。 `LCP_CI_SCM_BITBUCKET_BRANCH_PREFIXES` を、[リポジトリのブランチで使用される敬称](#checking-branch-types-and-prefixes)の全てのリストとして、スペースで区切って定義します。
 
 これらの環境変数を更新した後、Jenkinsサービスが再起動します。 これで、新しいリポジトリでプッシュされたブランチとプルリクエストがトリガーされます。
 
+## プライベートBitbucketサーバーへの接続
+
+プライベートなBitbucketサーバーを使用するには、Jenkinsサービスで追加の環境変数を設定する必要があります：
+
+| 名前                       | Value              |
+| ------------------------ | ------------------ |
+| `LCP_CI_SCM_SERVER_HOST` | [private host URL] |
+
+`LCP_CI_SCM_SERVER_HOST` 変数に、プライベートBitbucketサーバーのベースURLを設定します（例えば、 `http://private.bitbucket.org/`）。 これにより、ビルドを生成してリポジトリのブランチにリンクするときにCIがコードベースを取得するために使用するサーバーURLが設定されます。 デフォルトでは、CIはBitbucketのベースURLとして `https://bitbucket.org/` を使用しています。
+
 ## ビルドの確認
 
-プッシュされたブランチとプルリクエストは、DXP Cloudコンソールの[ *Builds* ]タブから表示またはデプロイできるビルドをトリガーする必要があります。 Jenkins サービスとの統合を設定したら、次のステップとして、インテグレーションが成功したかどうかを確認するためにビルドを検証します。
+プッシュされたブランチとプルリクエストは、DXP Cloudコンソールの _［Builds］_ タブから表示またはデプロイできるビルドをトリガーする必要があります。 Jenkins サービスとの統合を設定したら、次のステップとして、インテグレーションが成功したかどうかを確認するためにビルドを検証します。
 
 ### プッシュされたブランチからのビルドの確認
 
-新しいGitプッシュがJenkinsビルドをトリガーしていることを確認するには：
+新しいGitプッシュがJenkinsビルドをトリガーすることを確認します：
 
-1.  リポジトリに変更を加え（ファイルの追加など）、ブランチにコミットします。
+1. リポジトリに変更を加え（ファイルの追加など）、ブランチにコミットします：
 
-    ``` bash
+    ```bash
     git commit -m "Add file to test builds"
     ```
 
-2.  ブランチをBitBucketにプッシュします。
+1. ブランチをBitBucketにプッシュします：
 
-    ``` bash
+    ```bash
     git push bitbucket branch-name
     ```
 
-3.  DXP Cloud コンソールの *ビルド* ページに移動します。
+1. DXP Cloud コンソールの _Builds_ ページに移動します。
 
-4.  *ビルド* ページで、プッシュされたブランチのビルドが表示されることを確認します。
+1. _Builds_ ページで、プッシュされたブランチのビルドが表示されることを確認します。
 
 ### プルリクエストからのビルドの確認
 
-アプリパスワードを生成するには、次の手順を実行します。
+新しいプルリクエストがJenkinsビルドをトリガーすることを確認します：
 
-1.  任意のブランチから `develop` ブランチへのプルリクエストを作成します。
+1. 任意のブランチから `develop` ブランチへのプルリクエストを作成します。
 
-2.  プルリクエストに対して新しいビルドが作成されていることを確認します。
+1. プルリクエストに対して新しいビルドが作成されていることを確認します。
 
-3.  DXP Cloudコンソールの *Builds* ページに移動します。
+1. DXP Cloud コンソールの _Builds_ ページに移動します。
 
-4.  ブランチのリンクをクリックして、適切なビルドでコミットします。
+1. ブランチのリンクをクリックして、適切なビルドでコミットします。
 
-    ![[ビルド]ページで、ブランチのリンクを確認し、ビルドをコミットします。](./configuring-your-bitbucket-repository/images/05.png)
+    ![Buildページで、ブランチのリンクを確認し、ビルドをコミットします。](./configuring-your-bitbucket-repository/images/06.png)
 
-5.  リンクが正しいBitBucketページにリダイレクトすることを確認します。
+1. リンクが正しいBitBucketページにリダイレクトすることを確認します。
 
 ## 追加情報
 
-  - [GitHubリポジトリの設定](./configuring-your-github-repository.md)
-  - [GitLabリポジトリの設定](./configuring-your-gitlab-repository.md)
+* [GitHubリポジトリの設定](./configuring-your-github-repository.md)
+* [GitHubリポジトリの設定](./configuring-your-gitlab-repository.md)

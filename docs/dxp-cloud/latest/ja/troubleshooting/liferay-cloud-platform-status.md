@@ -6,9 +6,9 @@ Liferay Cloud Platformは複数のシステムで設定されています。 ユ
 
 ユーザーは、DXP CloudのコンソールからLiferay Cloud Platformのステータスページにアクセスできます。
 
-1.  コンソールページの右上にある *ヘルプ* アイコンをクリックします。
+1. コンソールページの右上にある *ヘルプ* アイコンをクリックします。
 
-2.  *稼働時間ステータス*をクリックします。
+1. *稼働時間ステータス*をクリックします。
 
 ![図1：「稼働時間ステータス」をクリックすると、「Liferay Cloud Platform Status」ページが表示されます。](./liferay-cloud-platform-status/images/01.png)
 
@@ -16,13 +16,13 @@ Liferay Cloud Platformは複数のシステムで設定されています。 ユ
 
 Liferay Cloud Platformのステータスページには、以下のシステムの現在のステータスが表示されます。
 
-  - インフラサービス
-  - データベースサービス
-  - ストレージサービス
-  - モニタリング・ロギングサービス
-  - ネットワークサービス
-  - Liferay Cloudコンソール
-  - Liferay Cloud API
+* インフラサービス
+* データベースサービス
+* ストレージサービス
+* モニタリング・ロギングサービス
+* ネットワークサービス
+* Liferay Cloudコンソール
+* Liferay Cloud API
 
 ![図2：Liferay Cloud Platformシステムの現在の状況を表示しています。](./liferay-cloud-platform-status/images/02.png)
 
@@ -46,5 +46,5 @@ Liferay Cloud Platformのステータスページを下にスクロールする�
 
 ## 追加情報
 
-  - [DXP Cloudサポートの概要](https://help.liferay.com/hc/articles/360030208451-DXP-Cloud-Support-Overview)
-  - [トラブルシューティングツールとリソース](./troubleshooting-tools-and-resources.md)
+* [DXP Cloudサポートの概要](https://help.liferay.com/hc/articles/360030208451-DXP-Cloud-Support-Overview)
+* [トラブルシューティングツールとリソース](./troubleshooting-tools-and-resources.md)
