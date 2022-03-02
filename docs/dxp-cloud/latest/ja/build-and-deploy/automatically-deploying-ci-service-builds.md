@@ -8,21 +8,21 @@ DXP Cloudでは、プロジェクトのGitリポジトリ（例： [GitHub](../g
 
 1. DXP Cloud・プロジェクトの `infra` 環境に移動します。
 
-1. *CI* サービスのページに行き、 *環境変数* タブをクリックします。
+1. **CI** サービスのページに行き、 **環境変数** タブをクリックします。
 
    ![CIサービスのページを開き、[環境変数]タブをクリックします。](./automatically-deploying-ci-service-builds/images/01.png)
 
 1. CIサービスに以下の変数を追加します。
 
-   * **Key**: `LCP_CI_DEPLOY_BRANCH`
+   ***Key** : `LCP_CI_DEPLOY_BRANCH`
 
-      **Value**: 任意のブランチ名を入力します（例： `useracceptance`）。
+      **Value** : 任意のブランチ名を入力します（例： `useracceptance`）。
 
-   * **Key**: `LCP_CI_DEPLOY_TARGET`
+   ***Key** : `LCP_CI_DEPLOY_TARGET`
 
-      **Value**：任意の環境名を入力します（例： `uat`）。
+      **Value** ：任意の環境名を入力します（例： `uat`）。
 
-1. *変更を保存*をクリックします。 これにより、CIサービスは新しい変数で再起動します。
+1. **変更を保存** をクリックします。 これにより、CIサービスは新しい変数で再起動します。
 
 再起動すると、指定したブランチにプッシュまたはマージされた変更が自動的にビルドされ、ターゲット環境にデプロイされます。
 

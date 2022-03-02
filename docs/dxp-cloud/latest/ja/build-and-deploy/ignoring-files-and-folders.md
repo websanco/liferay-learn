@@ -27,7 +27,7 @@ DXP Cloudを使用すると、サブスクライバーは、サービスをデ�
 | `file[01].txt`                            | `file0.txt`、`file1.txt`。ただし `file2.txt` 、`file01.txt`は不可。                               | 角かっこを使用すると、指定したセットの1文字と一致します。                                                                        |
 | `file[!01].txt`                           | `FILE2.TXT`ではなく `file0.txt`、また `FILE1.TXT`、また `file01.txt`                              | エクスクラメーションマークを使用すると、指定したセットの文字以外のすべての文字に一致します。                                                       |
 | `file[a-z].txt`                           | `filea.txt`、`fileb.txt`。ただし `file1.txt`は不可。                                             | 範囲は数値またはアルファベットにすることができます。                                                                           |
-| `txts`                                    | `txts`、`txt/file.txt`、`txts/latest/foo.bar`、`build/txts`、`build/txts/file.txt`          | スラッシュがある場合は * not * 付加し、パターンがその名前のファイルとフォルダの内容の両方に一致します。 左の一致例では、 `txts` という名前のフォルダーとファイルの両方が無視されます。 |
+| `txts`                                    | `txts`、`txt/file.txt`、`txts/latest/foo.bar`、`build/txts`、`build/txts/file.txt`          | スラッシュがある場合は **not** 付加し、パターンがその名前のファイルとフォルダの内容の両方に一致します。 左の一致例では、 `txts` という名前のフォルダーとファイルの両方が無視されます。 |
 | `txts/`                                   | `txts/file.txt`、`txts/latest/foo.bar`、`build/txts/foo.bar`、`build/txts/latest/file.txt` | スラッシュを追加すると、パターンがフォルダーであることを示します。 その名前に一致するリポジトリ内のすべてのファイルとサブフォルダを含むフォルダの内容全体は無視されます。                |
 | `txts/**/file.txt`                        | `txts/file.txt`、`txts/monday/file.txt`または `txts/monday/pm/file.txt`                     | 二重アスタリスクは、0個以上のフォルダーと一致します。                                                                          |
 | `txts/*day/file.txt`                      | `txts/monday/file.txt` または `txts/tuesday/file.txt`。ただし `txts/latest/file.txt`は不可。       | ワイルドカードは、フォルダフォルダ名にも使用できます。                                                                          |
@@ -35,7 +35,7 @@ DXP Cloudを使用すると、サブスクライバーは、サービスをデ�
 
 ベストプラクティスとして、 `.lcpignore` ファイルをプロジェクトの最上位フォルダに保持します。 リポジトリに`.lcpignore` ファイル（非推奨）が複数ある場合は、DXP Cloudは、統一された文書としてそれらを読み込みます。
 
-```note::
+```{note}
    ファイルやフォルダがデプロイされていて、管理者が後で無視したい場合、後続のルールがそのファイルやフォルダをインクルードしようとしても、DXP Cloudはそのファイルを無視しません。 むしろ、そのファイルやフォルダは更新されません。
 ```
 

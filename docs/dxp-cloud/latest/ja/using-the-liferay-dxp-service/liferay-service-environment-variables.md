@@ -55,7 +55,7 @@ Liferayサービスへの追加については、 [環境変数の定義](../ref
 
 | 名前                                           | デフォルト値 | 説明                                                                                                                                         |
 | -------------------------------------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| `LCP_PROJECT_MONITOR_DYNATRACE_TOKEN`        |        | Dynatraceアカウントの*［Deploy Dynatrace］* &rarr; *［Start installation］* &rarr; *［Set up PaaS monitoring］* &rarr; *［Installer Download］*にある文字列です。 |
+| `LCP_PROJECT_MONITOR_DYNATRACE_TOKEN`        |        | Dynatraceアカウントの ［**Deploy Dynatrace**］ &rarr; ［**Start installation**］ &rarr; ［**Set up PaaS monitoring**］ &rarr; ［**Installer Download**］ にある文字列です。 |
 | `LCP_SECRET_DATABASE_NAME`                   |        | データベース接続（jdbc、jdbc ping、および読み取り専用のユーザー接続）に使用されるデータベース名です。                                                                                  |
 | `LCP_SECRET_DATABASE_PASSWORD`               |        | jdbc（およびjdbc ping）の設定にのみ使用されるデータベースのパスワードです。                                                                                               |
 | `LCP_SECRET_DATABASE_READONLY_USER`          |        | 読み取り専用のユーザー名です。                                                                                                                            |

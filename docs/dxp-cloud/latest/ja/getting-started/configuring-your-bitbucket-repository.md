@@ -27,7 +27,7 @@ liferaycloud/jenkins:2.222.1-3.2.0
 
 1. Jenkinsサービスをデプロイします。
 
-```note::
+```{note}
     Jenkinsfile をカスタマイズしている場合は、以下のガイドに従って `デフォルトの Jenkinsfile <../platform-services/continuous-integration.md#extending-the-default-jenkinsfile>`__を延長します。
 ```
 
@@ -41,7 +41,7 @@ liferaycloud/jenkins:2.222.1-3.2.0
 
     ![+アイコンをクリックして、新しいBitBucketリポジトリの作成を開始します。](./configuring-your-bitbucket-repository/images/01.png)
 
-1. _［リポジトリ］_ をクリックして、新しいリポジトリの作成を開始します。
+1. ［**リポジトリ**］ をクリックして、新しいリポジトリの作成を開始します。
 
     ![新しいリポジトリの詳細を入力します。](./configuring-your-bitbucket-repository/images/02.png)
 
@@ -49,9 +49,9 @@ liferaycloud/jenkins:2.222.1-3.2.0
 
 1. アクセスレベルがプライベートに設定されていることを確認します。
 
-1. _［Include a README?］_の設定を_［No］_にします。
+1. ［**Include a README?**］ の設定を ［**No**］ にします。
 
-1. _［Create repository］_ をクリックします。
+1. ［**Create repository**］ をクリックします。
 
 ## GitHubからBitbucketへの転送
 
@@ -61,7 +61,7 @@ liferaycloud/jenkins:2.222.1-3.2.0
 
     `git clone git@github.com:dxpcloud/example.git`
 
-    ```note::
+    ```{note}
        すでに他のプロバイダで作業するためにリポジトリをクローンしている場合は、このステップをスキップして、同じクローン内で作業することができます。
     ```
 
@@ -77,15 +77,15 @@ liferaycloud/jenkins:2.222.1-3.2.0
 
 ## BitBucketのアプリパスワードの生成
 
-次に、WebhookがBitbucketで認証してJenkinsビルドをトリガーするために使用するアプリパスワードを作成します。 アプリのパスワードを生成するBitbucketユーザーは、リポジトリへの管理者レベルのアクセス権を持っている**必要**があります。
+次に、WebhookがBitbucketで認証してJenkinsビルドをトリガーするために使用するアプリパスワードを作成します。 アプリのパスワードを生成するBitbucketユーザーは、リポジトリへの管理者レベルのアクセス権を持っている **必要** があります。
 
 次の手順を実行して、アプリのパスワードを生成します：
 
-1. ユーザー設定ページから、 _［Access Management］_にある_［App passwords］_をクリックします。
+1. ユーザー設定ページから、 ［**Access Management**］ にある ［**App passwords**］ をクリックします。
 
     ![ユーザー設定ページの［アプリパスワード］をクリックします。](./configuring-your-bitbucket-repository/images/03.png)
 
-1. _［Create app password］_ をクリックします。
+1. ［**Create app password**］ をクリックします。
 
     ![新しいアプリパスワードを生成します。後で再びアクセスすることはできません。](./configuring-your-bitbucket-repository/images/04.png)
 
@@ -96,11 +96,11 @@ liferaycloud/jenkins:2.222.1-3.2.0
     * `Pull request - read, write` （これにより、リポジトリにもフラグが付けられます - 読み取り、書き込み）
     * `Webhooks -  read, write`
 
-1. _［作成］_ をクリックします。
+1. ［**作成**］ をクリックします。
 
 1. アプリのパスワードをコピーします（再度表示されません）。 これはBitBucketの個人用アクセストークンに相当します。
 
-```important::
+```{important}
    アプリのパスワードを生成したユーザーは、環境変数 ［LCP_CI_SCM_USERNAME］にそのユーザー名を使用しなければなりません。
 ```
 
@@ -108,7 +108,7 @@ liferaycloud/jenkins:2.222.1-3.2.0
 
 DXP Cloudがブランチに正しくリンクできるようにするためには、リポジトリで使用されているブランチ敬称の完全なリストをDXP Cloudに提供する必要があります。 リポジトリで使用されるブランチタイプには、それぞれ独自の敬称があり、リポジトリの設定で定義されています。
 
-[the Bitbucket website](https://bitbucket.org)で、メニューの左側の _［Repository settings］_ &rarr; _［Branching model］_をクリックします。 これにより、 _Branching model_ のページが表示され、各ブランチの敬称が記載されています。 これらの各敬称をメモして、 `LCP_CI_SCM_BITBUCKET_BRANCH_PREFIXES` CI環境変数に追加してください。
+[the Bitbucket website](https://bitbucket.org)で、メニューの左側の ［**Repository settings**］ &rarr; ［**Branching model**］ をクリックします。 これにより、 **Branching model** のページが表示され、各ブランチの敬称が記載されています。 これらの各敬称をメモして、 `LCP_CI_SCM_BITBUCKET_BRANCH_PREFIXES` CI環境変数に追加してください。
 
 ![Bitbucket リポジトリのデフォルトのブランチタイプ（および敬称）は、bugfix/、feature/、hotfix/、release/ です。](./configuring-your-bitbucket-repository/images/05.png)
 
@@ -118,7 +118,7 @@ DXP Cloudがブランチに正しくリンクできるようにするために�
 
 1. DXP Cloudコンソールにログインし、 `infra` 環境でJenkinsサービスに移動します。
 
-1. _［環境変数］_ タブに移動します。
+1. ［**環境変数**］ タブに移動します。
 
 1. 以下の環境変数を設定します：
 
@@ -147,7 +147,7 @@ DXP Cloudがブランチに正しくリンクできるようにするために�
 
 ## ビルドの確認
 
-プッシュされたブランチとプルリクエストは、DXP Cloudコンソールの _［Builds］_ タブから表示またはデプロイできるビルドをトリガーする必要があります。 Jenkins サービスとの統合を設定したら、次のステップとして、インテグレーションが成功したかどうかを確認するためにビルドを検証します。
+プッシュされたブランチとプルリクエストは、DXP Cloudコンソールの ［**Builds**］ タブから表示またはデプロイできるビルドをトリガーする必要があります。 Jenkins サービスとの統合を設定したら、次のステップとして、インテグレーションが成功したかどうかを確認するためにビルドを検証します。
 
 ### プッシュされたブランチからのビルドの確認
 
@@ -165,9 +165,9 @@ DXP Cloudがブランチに正しくリンクできるようにするために�
     git push bitbucket branch-name
     ```
 
-1. DXP Cloud コンソールの _Builds_ ページに移動します。
+1. DXP Cloud コンソールの **Builds** ページに移動します。
 
-1. _Builds_ ページで、プッシュされたブランチのビルドが表示されることを確認します。
+1. **Builds** ページで、プッシュされたブランチのビルドが表示されることを確認します。
 
 ### プルリクエストからのビルドの確認
 
@@ -177,7 +177,7 @@ DXP Cloudがブランチに正しくリンクできるようにするために�
 
 1. プルリクエストに対して新しいビルドが作成されていることを確認します。
 
-1. DXP Cloud コンソールの _Builds_ ページに移動します。
+1. DXP Cloud コンソールの **Builds** ページに移動します。
 
 1. ブランチのリンクをクリックして、適切なビルドでコミットします。
 

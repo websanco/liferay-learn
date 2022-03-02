@@ -27,7 +27,7 @@ liferaycloud/jenkins:2.222.1-3.2.0
 
 1. Jenkinsサービスをデプロイします。
 
-```note::
+```{note}
     Jenkinsfile をカスタマイズしている場合は、以下のガイドに従って デフォルトの Jenkinsfile <../platform-services/continuous-integration.md#extending-the-default-jenkinsfile>`__を延長します。
 ```
 
@@ -37,7 +37,7 @@ liferaycloud/jenkins:2.222.1-3.2.0
 
 1. [GitLab](https://gitlab.com)に移動します。
 
-1. _［New project］_ をクリックします。
+1. ［**New project**］ をクリックします。
 
     ![［新しいプロジェクト］をクリックして、新しいGitLabリポジトリの作成を開始します。](./configuring-your-gitlab-repository/images/01.png)
 
@@ -47,9 +47,9 @@ liferaycloud/jenkins:2.222.1-3.2.0
 
 1. 表示レベルをプライベートに設定します（無料ユーザーは無制限のプライベートリポジトリを使用できます）。
 
-1. _［Initialize repository with a README］_ がチェックされていないことを確認します。
+1. ［**Initialize repository with a README**］ がチェックされていないことを確認します。
 
-1. _［Create project］_ をクリックします。
+1. ［**Create project**］ をクリックします。
 
 ## GitHubからGitLabへの転送
 
@@ -59,7 +59,7 @@ liferaycloud/jenkins:2.222.1-3.2.0
 
     `git clone git@github.com:dxpcloud/example.git`
 
-    ```note::
+    ```{note}
        すでに他のプロバイダで作業するためにリポジトリをクローンしている場合は、このステップをスキップして、同じクローン内で作業することができます。
     ```
 
@@ -89,7 +89,7 @@ GitHub リポジトリの作成、クローン、プッシュについてのヘ�
     * read_repository
     * write_repository
 
-1. [_Create personal access token_]をクリックします。
+1. [**Create personal access token**]をクリックします。
 
 1. アクセストークンをコピーしてどこかに保存します（アクセストークンが再度表示されないためです）。
 
@@ -99,7 +99,7 @@ GitHub リポジトリの作成、クローン、プッシュについてのヘ�
 
 1. DXP Cloudコンソールにログインし、 `infra` 環境でJenkinsサービスに移動します。
 
-1. _［環境変数］_ タブに移動します。
+1. ［**環境変数**］ タブに移動します。
 
 1. 以下の環境変数を設定します：
 
@@ -128,23 +128,23 @@ Liferay DXP CloudのJenkinsサービスは、選択したgit SCMプロバイダ�
 
 1. GitLabリポジトリに移動します。
 
-1. _Settings_ に移動し _［Webhooks］_ を選択します。
+1. **Settings** に移動し ［**Webhooks**］ を選択します。
 
-1. _Project Hooks_ で、作成されたWebhookがリストされていることを確認します。
+1. **Project Hooks** で、作成されたWebhookがリストされていることを確認します。
 
-1. CI webhookの[ _Edit_ ]ボタンをクリックします。
+1. CI webhookの[**Edit**]ボタンをクリックします。
 
     ![リポジトリ用に自動的に作成されたWebhookを編集します。](./configuring-your-gitlab-repository/images/04.png)
 
-1. _［Tags push events］_ と _［Comments］_ をアンチェックします。
+1. ［**Tags push events**］ と ［**Comments**］ をアンチェックします。
 
-1. _［Enable SSL verification］_ にチェックします。
+1. ［**Enable SSL verification**］ にチェックします。
 
-1. _［変更を保存］_ クリックします。
+1. ［**変更を保存**］ クリックします。
 
 ## ビルドの確認
 
-プッシュされたブランチとマージリクエスト（GitLabのプルリクエストに相当）は、DXP Cloudコンソールの[ _Builds_ ]タブから表示またはデプロイできるビルドをトリガーする必要があります。 Jenkins サービスとの統合を設定したら、次のステップとして、インテグレーションが成功したかどうかを確認するためにビルドを検証します。
+プッシュされたブランチとマージリクエスト（GitLabのプルリクエストに相当）は、DXP Cloudコンソールの[**Builds**]タブから表示またはデプロイできるビルドをトリガーする必要があります。 Jenkins サービスとの統合を設定したら、次のステップとして、インテグレーションが成功したかどうかを確認するためにビルドを検証します。
 
 ### プッシュされたブランチからのビルドの確認
 
@@ -162,9 +162,9 @@ Liferay DXP CloudのJenkinsサービスは、選択したgit SCMプロバイダ�
     git push gitlab branch-name
     ```
 
-1. DXP Cloud コンソールの _Builds_ ページに移動します。
+1. DXP Cloud コンソールの **Builds** ページに移動します。
 
-1. _Builds_ ページで、プッシュされたブランチのビルドが表示されることを確認します。
+1. **Builds** ページで、プッシュされたブランチのビルドが表示されることを確認します。
 
 ### マージリクエストからのビルドの確認
 
@@ -174,7 +174,7 @@ Liferay DXP CloudのJenkinsサービスは、選択したgit SCMプロバイダ�
 
 1. マージリクエストに対して新しいビルドが作成されていることを確認します。
 
-1. DXP Cloud コンソールの _Builds_ ページに移動します。
+1. DXP Cloud コンソールの **Builds** ページに移動します。
 
 1. ブランチのリンクをクリックして、適切なビルドでコミットします。
 

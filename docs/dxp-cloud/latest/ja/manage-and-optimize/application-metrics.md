@@ -4,26 +4,26 @@ Liferay DXP Cloudに組み込まれたモニタリング機能により、各環
 
 ## サービスポップオーバー
 
-サービスの現在のリソース使用状況は、DXP Cloud環境の _概要_ や _サービス_ のページや、個々のサービスのページなど、いくつかのページから素早く確認することができます。 サービスのアイコンにカーソルを合わせると、そのサービスのリソース使用状況のポップオーバーが表示されます。
+サービスの現在のリソース使用状況は、DXP Cloud環境の **概要** や **サービス** のページや、個々のサービスのページなど、いくつかのページから素早く確認することができます。 サービスのアイコンにカーソルを合わせると、そのサービスのリソース使用状況のポップオーバーが表示されます。
 
 ![サービスのアイコンにカーソルを合わせます。](./application-metrics/images/01.png)
 
 ## 拡張アプリケーションメトリクス
 
-ユーザーは、 *［モニタリング］* ページから拡張サービスメトリクスを表示できます：
+ユーザーは、 ［**モニタリング**］ ページから拡張サービスメトリクスを表示できます：
 
-1. 環境メニューの *［モニタリング］* をクリックします。
+1. 環境メニューの ［**モニタリング**］ をクリックします。
 1. ドロップダウンメニューを使って、モニターしたいサービスと時間帯を選択します。
 
 ![DXP Cloudを使用してサービスを監視できます。](./application-metrics/images/02.png)
 
-ユーザーは、 *［Services］* ページから拡張サービスメトリクスを表示できます：
+ユーザーは、 ［**Services**］ ページから拡張サービスメトリクスを表示できます：
 
-1. 環境メニューの *［サービス］* をクリックします。
+1. 環境メニューの ［**サービス**］ をクリックします。
 
-1. モニターしたい *［Service］* をクリックします。
+1. モニターしたい ［**Service**］ をクリックします。
 
-1. *［メトリクス］* タブをクリックします。
+1. ［**メトリクス**］ タブをクリックします。
 
 ![サービスのページからメトリクスを表示します。](./application-metrics/images/03.png)
 
@@ -79,7 +79,7 @@ Liferay DXP Cloudでは、 [Dynatrace](https://www.dynatrace.com/)の高度な�
 |    |    |
 
 
-`LCP_PROJECT_MONITOR_DYNATRACE_TENANT` | Dynatrace SaaSアカウントのURL（敬称）の一部である文字列です。 | `LCP_PROJECT_MONITOR_DYNATRACE_TOKEN` | Dynatraceアカウントにある文字列です。 トークンを取得するには、 *［Manage］* &rarr; *［Deploy Dynatrace］* &rarr; *［Set up PaaS Integration］*にナビゲートします。次に環境IDを入力し、 *［Generate new token］*をクリックします。 |
+`LCP_PROJECT_MONITOR_DYNATRACE_TENANT` | Dynatrace SaaSアカウントのURL（敬称）の一部である文字列です。 | `LCP_PROJECT_MONITOR_DYNATRACE_TOKEN` | Dynatraceアカウントにある文字列です。 トークンを取得するには、 ［**Manage**］ &rarr; ［**Deploy Dynatrace**］ &rarr; ［**Set up PaaS Integration**］ にナビゲートします。次に環境IDを入力し、 ［**Generate new token**］ をクリックします。 |
 
 これらの値の詳細については、 [official Dynatrace documentation](https://www.dynatrace.com/support/help/dynatrace-api/basics/dynatrace-api-authentication/) を参照してください。
 
@@ -89,11 +89,11 @@ DXP CloudのコンソールからDynatraceの高度なパフォーマンスモ�
 
 1. 本番環境に移動します。
 
-1. 環境メニューの *［モニタリング］* をクリックします。
+1. 環境メニューの ［**モニタリング**］ をクリックします。
 
-1. *［Advanced］* タブをクリックします。
+1. ［**Advanced**］ タブをクリックします。
 
-1. *[Go to Dynatrace Dashboard]*ボタンをクリックして、 [Dynatrace] ダッシュボードにアクセスします。
+1. [**Go to Dynatrace Dashboard**] ボタンをクリックして、 [Dynatrace] ダッシュボードにアクセスします。
 
     ![DXP CloudコンソールからDynatraceダッシュボードにアクセスします。](./application-metrics/images/05.png)
 

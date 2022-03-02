@@ -2,15 +2,15 @@
 
 Liferayは定期的にLiferay DXPの新しいマイナーバージョンとメジャーバージョンをリリースします。 このバージョンには、セキュリティとバグ修正、および拡張機能が含まれています。 Liferay DXPの新しいメジャーバージョンの増分にアップグレードするには、DXPデータベースをアップグレードする必要があります。
 
-```note::
+```{note}
    本番環境で大規模なデータセットを使用する場合、スムーズなアップグレードを行うためには、いくつかの考慮すべき点があります。 コアアップグレードの包括的な概要については、`the guide to upgrading Liferay DXP<https://learn.liferay.com/dxp/latest/en/installation-and-upgrades/upgrading-liferay/upgrade-basics/upgrade-overview.html>`__を参照してください。
 ```
 
-```note::
+```{note}
    新しいマイナーバージョンやサービスパックにアップデートするには、`Updating to a New Version of Liferay DXP <./updating-your-dxp-instance-to-a-new-minor-version.md>`_を参照してください。
 ```
 
-```important::
+```{important}
    DXP Cloudの環境をアップグレードするには、アップグレードしたデータベースを復元する必要があるため、Liferayサービスの再起動にダウンタイムが発生します。 Plan ahead for this downtime for production environments.
 ```
 
@@ -31,7 +31,7 @@ Liferayは定期的にLiferay DXPの新しいマイナーバージョンとメ�
 * [ローカルで利用可能なMySQLインストール](https://dev.mysql.com/doc/mysql-installation-excerpt/5.7/en/)。
 * アップグレードするバージョンのDXPに対応する、[ダウンロードしたLiferay DXPバンドル](https://customer.liferay.com/en_US/downloads) 。 このバンドルを選択した場所に抽出します。
 
-```important::
+```{important}
    古いものを再利用するのではなく、アップグレード用の新しいバンドルをダウンロードしてください。 そうしないと、以前にバンドルを使用していたときのデータが、データのアップグレードに支障をきたす可能性があります。
 ```
 
@@ -41,11 +41,11 @@ Liferayは定期的にLiferay DXPの新しいマイナーバージョンとメ�
 
 1. [DXP Cloudコンソール](https://console.liferay.cloud/login)にログインします。
 
-1. 本番環境に移動し、メニューから［ _バックアップ_ ］を選択します。
+1. 本番環境に移動し、メニューから［**バックアップ**］を選択します。
 
     ![運用環境の［バックアップ］ページに移動します。](./upgrading-your-liferay-dxp-instance/images/01.png)
 
-1. リストされているバックアップの1つを選択し、［アクション］メニューから［_ダウンロード_］を選択します。 データボリュームとデータベースのzipファイルをダウンロードします。
+1. リストされているバックアップの1つを選択し、［アクション］メニューから［**ダウンロード**］を選択します。 データボリュームとデータベースのzipファイルをダウンロードします。
 
     ![各オプションをクリックして、データボリュームとデータベースアーカイブの両方をダウンロードします。](./upgrading-your-liferay-dxp-instance/images/02.png)
 
@@ -109,7 +109,7 @@ Liferayは定期的にLiferay DXPの新しいマイナーバージョンとメ�
 
 DXPバンドルは、データのアップグレードに使用されるアップグレードツールを提供します。 このツールは、バンドルに含まれるスクリプト `db_upgrade.sh`を介して呼び出されます。
 
-```note::
+```{note}
    データベースのアップグレードツールを事前に設定しておくことで、実行時の柔軟性を高めることができます。 高度な使い方については、`Using the Database Upgrade Tool<https://learn.liferay.com/dxp/latest/en/installation-and-upgrades/upgrading-liferay/upgrade-basics/using-the-database-upgrade-tool.html>`__ を参照してください。
 ```
 
@@ -173,7 +173,7 @@ Checking to see if all upgrades have completed... done.
     tar -czvf volume.tgz document_library
     ```
 
-    ```important::
+    ```{important}
        もしダウンロードしたデータボリュームにさらに多くのフォルダ（例えば ``license/`` フォルダ）が含まれていた場合は、``document_library`` の後に追加の引数として追加してください。
     ```
 
@@ -211,7 +211,7 @@ Checking to see if all upgrades have completed... done.
 
     `<PROJECT-NAME>`とプロジェクトの名前を、`/path/to/folder/`と`.tgz`アーカイブが配置されているパスを置換します。 `<ENV>` を、アップグレードしたバックアップをアップロードする環境の略語に置き換えてください（例： `dev`）。
 
-通話が完了すると、アップロードからの新しいバックアップが、DXP Cloudコンソールの _Backups_ ページに表示されます。
+通話が完了すると、アップロードからの新しいバックアップが、DXP Cloudコンソールの **Backups** ページに表示されます。
 
 ## バックアップを復元する
 
@@ -219,9 +219,9 @@ Checking to see if all upgrades have completed... done.
 
 1. まだログインしていない場合は、DXP Cloudコンソールにログインします。
 
-1. [バックアップをアップロードした](#call-the-upload-api)環境に移動し、サイドメニューから _［バックアップ］_ をクリックします。
+1. [バックアップをアップロードした](#call-the-upload-api)環境に移動し、サイドメニューから ［**バックアップ**］ をクリックします。
 
-1. リストからバックアップを選択し、そのバックアップのアクションメニューから _［復元］_をクリックします。
+1. リストからバックアップを選択し、そのバックアップのアクションメニューから ［**復元**］ をクリックします。
 
     ![アップロードしたバックアップの［アクション］メニューから［復元先...］を選択します。](./upgrading-your-liferay-dxp-instance/images/03.png)
 
@@ -229,9 +229,9 @@ Checking to see if all upgrades have completed... done.
 
     ![バックアップを展開する環境を選択します。](./upgrading-your-liferay-dxp-instance/images/04.png)
 
-1. _［環境への復元］_をクリックします。
+1. ［**環境への復元**］ をクリックします。
 
-    ```note::
+    ```{note}
        選択した環境は、バックアップがデプロイされている間は利用できなくなります。
     ```
 

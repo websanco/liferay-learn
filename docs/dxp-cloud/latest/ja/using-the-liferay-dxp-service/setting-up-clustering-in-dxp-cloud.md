@@ -13,7 +13,7 @@
 
 DXP Cloudコンソールで目的の環境から開始します。 次に、 `［Services］`から `［liferay］`に移動して、 `［環境変数］`をクリックします。 `LCP_PROJECT_LIFERAY_CLUSTER_ENABLED` 変数が `true`に設定されていることを確認します。 これは、イメージの起動プロセスに、クラスタリング設定をLiferay DXPに追加するように指示します。
 
-![LCP_PROJECT_LIFERAY_CLUSTER_ENABLEDの設定](./setting-up-clustering-in-dxp-cloud/images/01.png)
+![LCP **PROJECT** LIFERAY **CLUSTER** ENABLEDの設定](./setting-up-clustering-in-dxp-cloud/images/01.png)
 
 ## クラスタリングスケールの設定
 
@@ -32,11 +32,11 @@ DXP Cloudコンソールで目的の環境から開始します。 次に、 `�
 
 Liferayサービスが `scale` プロパティを `1`に設定してデプロイされたら、この値を必要なノード数に更新します。
 
-```warning::
+```{warning}
    クラスタ化された環境の複数のノードは、データベーススキーマに変更があった場合（パッチのインストール時など）、互いに競合する可能性があります。 このような場合は、まずスケールを1に戻してLiferayサービスを再配置することで、スキーマの競合問題を回避します。 その後、スケールを正しいノード数に戻し、サービスを再配置します。
 ```
 
-```note::
+```{note}
    Liferay DXPインスタンスのノード数を増やすと、プロジェクトに割り当てられるCPUコア数が増える可能性があります。 増加したCPUコア数が計画の最大値 `quota <../manage-and-optimize/quotas.md>`_ を超える場合、導入に失敗する可能性があります。
 ```
 

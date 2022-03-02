@@ -6,9 +6,9 @@ Liferay Cloud Platformは複数のシステムで設定されています。 ユ
 
 ユーザーは、DXP CloudのコンソールからLiferay Cloud Platformのステータスページにアクセスできます。
 
-1. コンソールページの右上にある *ヘルプ* アイコンをクリックします。
+1. コンソールページの右上にある **ヘルプ** アイコンをクリックします。
 
-1. *稼働時間ステータス*をクリックします。
+1. **稼働時間ステータス** をクリックします。
 
 ![図1：「稼働時間ステータス」をクリックすると、「Liferay Cloud Platform Status」ページが表示されます。](./liferay-cloud-platform-status/images/01.png)
 
@@ -32,15 +32,15 @@ Liferay Cloud Platformのステータスページには、以下のシステム�
 
 Liferay Cloud Platformのステータスページを下にスクロールすると、最近のインシデントが表示されます。
 
-ページ下部の *インシデント履歴* をクリックすると、拡張記録が表示されます。
+ページ下部の **インシデント履歴** をクリックすると、拡張記録が表示されます。
 
 ![図3：過去のインシデントや計画されたメンテナンスのウィンドウを見ることができます。](./liferay-cloud-platform-status/images/03.png)
 
 ## 更新情報の登録
 
-ユーザーは、 *Subscribe to Updates* に登録することで、プラットフォームのステータスが変更された際に、リアルタイムで通知を受け取ることができます。
+ユーザーは、 **Subscribe to Updates** に登録することで、プラットフォームのステータスが変更された際に、リアルタイムで通知を受け取ることができます。
 
-*Subscribe to Updates*をクリックして、ご都合のよい通知方法をお選びください。
+**Subscribe to Updates** をクリックして、ご都合のよい通知方法をお選びください。
 
 ![図4：Liferay Cloud Platformのステータスに関する更新情報を受け取るために登録する。](./liferay-cloud-platform-status/images/04.png)
 

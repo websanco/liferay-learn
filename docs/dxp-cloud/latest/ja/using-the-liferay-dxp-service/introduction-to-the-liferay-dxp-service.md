@@ -29,7 +29,7 @@ DXP CloudのLiferay DXPサービスは、Liferay DXPのオンプレミスイン�
 liferay.workspace.docker.image.liferay=liferay/dxp:7.2.10-sp2-202005120922
 ```
 
-```note::
+```{note}
    DXP Cloudのスタックがまだ4.x.xにアップデートされていない場合、デフォルトでは、このバージョンは代わりに、リポジトリのルートにある ``gradle.properties`` ファイル内に配置されます。 この場合、``liferay.workspace.lcp.liferay.image`` プロパティでバージョンを定義します（メジャーバージョンと別に定義する必要はありません）。 バージョンの確認については、`Understanding Service Stack Versions <../reference/understanding-service-stack-versions.md>`__ を参照してください。
 ```
 
@@ -41,7 +41,7 @@ DXP Cloudの [Services Changelog](https://help.liferay.com/hc/en-us/sections/360
 
 Liferay DXPへのカスタム追加の導入には、Gitリポジトリの適切な場所への新しいモジュール、ライセンス、またはホットフィックスの追加が含まれます。
 
-`common/`ディレクトリを除き、特定の環境フォルダ（`dev`、`uat`、`prod`など）に追加された変更は、対応する環境にデプロイするときに_のみ_伝播されます。 `common/`ディレクトリに追加された変更は、ターゲットのデプロイ環境に関係なく、_常に_デプロイされます。 これは、すべてのサービスにおいて、 `configs/` ディレクトリ内のすべてのサブフォルダに適用されます。
+`common/`ディレクトリを除き、特定の環境フォルダ（`dev`、`uat`、`prod`など）に追加された変更は、対応する環境にデプロイするときに **のみ** 伝播されます。 `common/`ディレクトリに追加された変更は、ターゲットのデプロイ環境に関係なく、 **常に** デプロイされます。 これは、すべてのサービスにおいて、 `configs/` ディレクトリ内のすべてのサブフォルダに適用されます。
 
 Liferayサービスは、他のサービスに比べて多くのカスタマイゼーション（ホットフィックスの追加、モジュールのソースコードの構築など）を提供しているため、サービスをデプロイする際には、いくつかの考慮すべき点があります。 詳しくは [Deploying to the Liferay Service](./deploying-to-the-liferay-service.md) を参照してください。 また、一般的なデプロイメントワークフローについては、 [Overview of Deployment Workflow](../build-and-deploy/overview-of-the-dxp-cloud-deployment-workflow.md) を参照してください。 DXP Cloudへのデプロイについてのチュートリアルは、 [Deploying Changes via DCP Cloud Console](../build-and-deploy/deploying-changes-via-the-dxp-cloud-console.md)を参照してください。
 
@@ -55,7 +55,7 @@ Liferayサービスは、他のサービスに比べて多くのカスタマイ�
 
 ホットデプロイは、Liferay DXP UIを介して実行できます。 これを行うには、［コントロールパネル］→［アプリ］→［アプリマネージャー］に移動します。 次に、右上の点をクリックして、[アップロード]をクリックします。 この画面から、ローカルファイルシステムからファイルを選択してデプロイおよびインストールできます。
 
-```note::
+```{note}
    この方法でデプロイされたカスタマイズは、その後のDXPサービスのデプロイで失われてしまうため、DXP Cloudでホットデプロイを使用することは推奨されません。
 ```
 
@@ -81,7 +81,7 @@ liferay
             └── remove-log-files.sh
 ```
 
-```note::
+```{note}
    バージョン3.x.xのサービスを使用している場合、スクリプトはリポジトリの「lcp/liferay/script/」フォルダに置かれます。 バージョンの確認については、`Understanding Service Stack Versions <../reference/understanding-service-stack-versions.md>`__ を参照してください。
 ```
 

@@ -10,8 +10,8 @@ Liferay DXPサービスの使用
 Maintenance and Upgrades
 ------------------------
 
--  `Applying Patches <./using-the-liferay-dxp-service/introduction-to-the-liferay-dxp-service.md#deploying-hotfixes>`__
--  `Activating Products <./using-the-liferay-dxp-service/introduction-to-the-liferay-dxp-service.md#deploying-licenses>`__
+-  `Applying Patches <./using-the-liferay-dxp-service/introduction-to-the-liferay-dxp-service.md#deploying-hotfixes>` **_**
+-  `Activating Products <./using-the-liferay-dxp-service/introduction-to-the-liferay-dxp-service.md#deploying-licenses>` **_**
 -  :doc:`/using-the-liferay-dxp-service/upgrading-your-liferay-dxp-instance`
 -  :doc:`/using-the-liferay-dxp-service/updating-your-dxp-instance-to-a-new-minor-version`
 
@@ -30,8 +30,8 @@ Scalability and Performance
 --------------
 
 -  :doc:`/using-the-liferay-dxp-service/deploying-to-the-liferay-service`
--  `Deploying Apps, Themes, and Modules <./using-the-liferay-dxp-service/deploying-to-the-liferay-service.md#deploying-themes-portlets-and-osgi-modules>`__
--  `Deploying Customizations from Source <./using-the-liferay-dxp-service/deploying-to-the-liferay-service.md#building-and-deploying-source-code>`__
+-  `Deploying Apps, Themes, and Modules <./using-the-liferay-dxp-service/deploying-to-the-liferay-service.md#deploying-themes-portlets-and-osgi-modules>` **_**
+-  `Deploying Customizations from Source <./using-the-liferay-dxp-service/deploying-to-the-liferay-service.md#building-and-deploying-source-code>` **_**
 
 Liferay Service Shell
 ---------------------

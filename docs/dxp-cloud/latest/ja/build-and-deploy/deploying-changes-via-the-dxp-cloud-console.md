@@ -4,7 +4,7 @@
 
 始めるためには、プロジェクトのCIサービスと統合されたコードホスティングサービスと、プロジェクトのリポジトリのローカルな作業コピーが必要です。
 
-```note::
+```{note}
    別のデプロイメントワークフローについては、`Deploying Changes via CLI Tool <./deploying-changes-via-the-cli-tool.md>`__を参照して、Liferay Cloud Platform CLIツールを使用して、プロジェクト環境にローカルの変更をデプロイする方法を学んでください。
 ```
 
@@ -31,8 +31,8 @@
    web.server.display.node=true
    ```
 
-   ```note::
-      バージョン3.x.xのサービスを使用している場合は、適切なフォルダパスは ``lcp/liferay/deploy/dev`` となります。 ディレクトリ構造の違いについては、`DXP Cloud Project Changes in Version 4 <../reference/dxp-cloud-project-changes-in-version-4.md>`__を、サービスのバージョンを確認する方法については、`Understanding Service Stack Versions <../reference/understanding-service-stack-versions.md>`__を参照してください。
+   ```{note}
+      バージョン3.x.xのサービスを使用している場合は、適切なフォルダパスは ``lcp/liferay/deploy/dev`` となります。 ディレクトリ構造の違いについては、`DXP Cloud Project Changes in Version 4 <../reference/dxp-cloud-project-changes-in-version-4.md>` **_** を、サービスのバージョンを確認する方法については、`Understanding Service Stack Versions <../reference/understanding-service-stack-versions.md>` **_** を参照してください。
    ```
 
 1. 以下のコマンドで、 `portal-env.properties` ファイルに変更を追加し、コミットします。
@@ -69,9 +69,9 @@
 
 新しいビルドの準備ができたら、DXP Cloudコンソールからプロジェクトの `dev` 環境にデプロイします。
 
-1. DXP Cloudコンソールで、プロジェクトの *Builds* ページに移動します。 このページは、どのプロジェクト環境からでもアクセスできます。
+1. DXP Cloudコンソールで、プロジェクトの **Builds** ページに移動します。 このページは、どのプロジェクト環境からでもアクセスできます。
 
-1. デプロイしたいビルドの *［Actions］* ボタン（⋮）をクリックし、 *［Deploy Build To...］*を選択します。
+1. デプロイしたいビルドの ［**Actions**］ ボタン（⋮）をクリックし、 ［**Deploy Build To...**］ を選択します。
 
    ![ビルドページからビルドの表示とデプロイを行うことができます。](./deploying-changes-via-the-dxp-cloud-console/images/04.png)
 
@@ -79,25 +79,25 @@
 
    ![開発環境を選択し、［Deploy Build］をクリックします。](./deploying-changes-via-the-dxp-cloud-console/images/05.png)
 
-1. チェックボックスを使ってデプロイを確認し、 *［Deploy Build］*をクリックします。
+1. チェックボックスを使ってデプロイを確認し、 ［**Deploy Build**］ をクリックします。
 
    ![チェックボックスを使ってデプロイを確認し、［Deploy Build］をクリックします。](./deploying-changes-via-the-dxp-cloud-console/images/06.png)
 
    ```tip::
-      また、デプロイしたいビルドの*Build ID*をクリックすると、*Deploy Build to...*のページにアクセスできます。
+      また、デプロイしたいビルドの **Build ID** をクリックすると、 **Deploy Build to...** のページにアクセスできます。
    ```
 
-   デプロイメントのステータスは、 *デプロイメント* ページや、  `dev` 環境の*ログ* および *アクティビティ* ページから見ることができます。
+   デプロイメントのステータスは、 **デプロイメント** ページや、  `dev` 環境の **ログ** および **アクティビティ** ページから見ることができます。
 
    ![デプロイメントページからデプロイメントのステータスを確認する](./deploying-changes-via-the-dxp-cloud-console/images/07.png)
 
 ## サンプルデプロイメントの検証
 
-ビルドが正常にデプロイされ、 `dev` 環境のLiferayサービスが *Ready*になったら、以下の手順で変更内容を確認します。
+ビルドが正常にデプロイされ、 `dev` 環境のLiferayサービスが **Ready** になったら、以下の手順で変更内容を確認します。
 
 1. プロジェクトの `dev` の環境に移動します。
 
-1. *Web Server* サービスのページにアクセスし、その URL をクリックして、 `dev` 環境の DXP インスタンスにアクセスします：`https://webserver-<project-name>-dev.lfr.cloud/`。
+1. **Web Server** サービスのページにアクセスし、その URL をクリックして、 `dev` 環境の DXP インスタンスにアクセスします：`https://webserver-<project-name>-dev.lfr.cloud/`。
 
    ![開発環境のDXPインスタンスにアクセスするために、WebサーバのURLをクリックします。](./deploying-changes-via-the-dxp-cloud-console/images/08.png)
 

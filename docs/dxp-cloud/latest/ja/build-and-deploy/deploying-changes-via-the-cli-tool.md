@@ -123,11 +123,11 @@ liferay.workspace.lcp.jenkins.image=liferaycloud/jenkins:2.176.1-3.1.1
 
 ## サンプルデプロイメントの検証
 
-ビルドが正常にデプロイされ、 `dev` 環境のLiferayサービスが *Ready*になったら、以下の手順で変更内容を確認します。
+ビルドが正常にデプロイされ、 `dev` 環境のLiferayサービスが **Ready** になったら、以下の手順で変更内容を確認します。
 
 1. プロジェクトの `dev` の環境に移動します。
 
-1. *Web Server* サービスのページにアクセスし、その URL をクリックして、次の `dev` 環境の DXP インスタンスにアクセスします。 `https://webserver-<project-name>-dev.lfr.cloud/`
+1. **Web Server** サービスのページにアクセスし、その URL をクリックして、次の `dev` 環境の DXP インスタンスにアクセスします。 `https://webserver-<project-name>-dev.lfr.cloud/`
 
    ![WebサーバーのURLをクリックすると、開発環境のDXPインスタンスにアクセスできます。](./deploying-changes-via-the-cli-tool/images/02.png)
 

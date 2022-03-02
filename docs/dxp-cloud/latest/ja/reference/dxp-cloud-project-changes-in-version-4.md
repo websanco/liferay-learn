@@ -33,7 +33,7 @@ DXP Cloud Stackバージョン4にアップグレードすると、すべての�
 
 次の表は、 `liferay` サービス設定の新しい設定をまとめたものです。
 
-| **ファイル**                   | **3.xでの場所**                 | **4.xでの場所**                            |
+| **ファイル** | **3.xでの場所** | **4.xでの場所** |
 | -------------------------- | --------------------------- | -------------------------------------- |
 | デプロイするファイル                 | lcp/liferay/deploy /{ENV}/  | liferay/configs /{ENV}/ deploy /       |
 | OSGi設定ファイル（.cfgまたは.config） | lcp/liferay/config /{ENV}/  | liferay/configs /{ENV}/ osgi/configs / |
@@ -42,7 +42,7 @@ DXP Cloud Stackバージョン4にアップグレードすると、すべての�
 | ホットフィックスとパッチツール            | lcp/liferay/hotfix /{ENV}/  | liferay/configs /{ENV}/ patching /     |
 | ライセンス                      | lcp/liferay/license /{ENV}/ | lcp/configs /{ENV}/ deploy /           |
 
-```note::
+```{note}
    configs/{ENV}/`` ディレクトリ内のファイルは、オーバーライドとして DXP Cloud の Liferay コンテナ内の ``LIFERAY_HOME`` ディレクトリにコピーされます。
 ```
 
@@ -56,13 +56,13 @@ DXP Cloud Stackバージョン4にアップグレードすると、すべての�
 
 `search` サービス内のすべての設定は、環境固有の `configs` ディレクトリに属します。 `search` サービス設定の新しい設定については、次の表を参照してください：
 
-| **ファイル**                      | **3.xでの場所**                | **4.xでの場所**                      |
+| **ファイル** | **3.xでの場所** | **4.xでの場所** |
 | ----------------------------- | -------------------------- | -------------------------------- |
 | Elasticsearch の設定             | lcp/search/config /{ENV}/  | search/configs /{ENV}/ config /  |
 | カスタムシェルスクリプト                  | lcp/search/script /{ENV}/  | search/configs /{ENV}/ scripts / |
 | Elasticsearchライセンス（.json）ファイル | lcp/search/license /{ENV}/ | search/configs /{ENV}/ license / |
 
-```note::
+```{note}
    検索コンテナ内の ``search/configs/{ENV}/`` にあるファイルは、DXP Cloud の検索コンテナ内の ``usr/shared/elasticsearch/`` にオーバーライドとしてコピーされます。 例えば、 ``search/configs/{ENV}/config/``` の設定、例えば ``elasticsearch.yml`` のような設定は ``usr/shared/elasticsearch/config/`` にコピーされ、既存のデフォルト値を上書きします。
 ```
 
@@ -101,13 +101,13 @@ bin/elasticsearch-plugin list
 
 `webserver` サービス設定の新しい設定については、次の表を参照してください：
 
-| **ファイル**  | **3.xでの場所**                  | **4.xでの場所**                         |
+| **ファイル** | **3.xでの場所** | **4.xでの場所** |
 | --------- | ---------------------------- | ----------------------------------- |
 | ウェブサーバー設定 | lcp/webserver/config /{ENV}/ | webserver/configs /{ENV}/conf.d/    |
 | カスタムスクリプト | lcp/webserver/script /{ENV}/ | webserver/configs /{ENV}/ scripts / |
 | 静的コンテンツ   | lcp/webserver/deploy /{ENV}/ | webserver/configs /{ENV}/ public /  |
 
-```note::
+```{note}
    webserver/configs/{ENV}/``内のファイルは、DXP Cloudのウェブサーバコンテナ内の ``/etc/nginx/``にオーバーライドとしてコピーされます。 Files in ``/webserver/configs/{ENV}/public/`` will be copied as overrides into ``var/www/html/``.
 ```
 
@@ -115,7 +115,7 @@ bin/elasticsearch-plugin list
 
 `liferay.conf` ファイルを `webserver/configs /{ENV}/conf.d/`追加することにより、 `webserver` サービスのルートの場所をカスタマイズできます。 これにより、 `webserver` サービスイメージのコンテナで利用可能なデフォルトの `liferay.conf` が上書きされます。 ルートの場所をカスタマイズするときに、DXP Cloud Consoleのシェルにアクセスして、デフォルトとして `liferay.conf` ファイルを参照として表示します。
 
-```warning::
+```{warning}
    ルートの場所を ``liferay.conf`` 以外のファイル名でカスタマイズしないでください。これにより、デフォルトの``liferay.conf``を上書きします。 そうでない場合は、両方のファイルがコンテナ内に一緒に存在していて、2つのルート位置が見つかってエラーになることがあります。
 
    他のファイル名は、代わりにウェブサーバの追加の場所を定義するために使用されます。
@@ -139,7 +139,7 @@ location /static/ {
 
 `バックアップ` サービス内のすべての設定は、環境固有の `コンフィグ` ディレクトリに属するようになりました。 これは主にカスタムSQLスクリプトに関係しています：
 
-| **ファイル**     | **3.xでの場所**               | **4.xでの場所**                      |
+| **ファイル** | **3.xでの場所** | **4.xでの場所** |
 | ------------ | ------------------------- | -------------------------------- |
 | カスタムSQLスクリプト | lcp/backup/script /{ENV}/ | backup/configs /{ENV}/ scripts / |
 

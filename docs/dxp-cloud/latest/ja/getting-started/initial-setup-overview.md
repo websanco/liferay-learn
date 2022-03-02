@@ -36,7 +36,7 @@ Liferay DXP Cloudのサブスクリプションに関連付けられたEメー�
 
 1. GitHubへのログイン
 
-1. `dxpcloud` を _Your teams_ の検索ボックスで検索します。
+1. `dxpcloud` を **Your teams** の検索ボックスで検索します。
 
 ![図2：「Your teams」の検索ボックスでdxpcloudを検索します。](./initial-setup-overview/images/02.png)
 
@@ -48,7 +48,7 @@ Liferay DXP Cloudのサブスクリプションに関連付けられたEメー�
 
 詳しい手順は、 [GitHubリポジトリの設定](./configuring-your-github-repository.md) をご覧ください。
 
-```note::
+```{note}
    他のホスティングサービスを利用していますか？ Bitbucket <./configuring-your-bitbucket-repository.md>`_ または `GitLab <./configuring-your-gitlab-repository.md>`_ のリポジトリを設定する方法を参照してください。
 ```
 
@@ -56,7 +56,7 @@ Liferay DXP Cloudのサブスクリプションに関連付けられたEメー�
 
 Jenkins(CI)とLiferay DXPにログインして、それぞれのWebインターフェースに直接アクセスします。
 
-どちらのログイン資格も最初のオンボーディング メールで提供されていますが、 *環境変数* の下に、 *infra* 環境の *ci* サービス ページにも記載されています。
+どちらのログイン資格も最初のオンボーディング メールで提供されていますが、 **環境変数** の下に、 **infra** 環境の **ci** サービス ページにも記載されています。
 
 詳しい手順については、 [DXP Cloudサービスへのログイン](./logging-into-your-dxp-cloud-services.md) をご覧ください。
 
@@ -66,7 +66,7 @@ Liferay DXP Cloudでのデプロイを開始する前に、正しい環境とサ
 
 ### 環境の検証
 
-購入したすべての環境がDXP Cloud Consoleの [ホームページ](https://console.liferay.cloud/projects) の *Projects*に表示されていることを確認します。
+購入したすべての環境がDXP Cloud Consoleの [ホームページ](https://console.liferay.cloud/projects) の **Projects** に表示されていることを確認します。
 
 ![図3：DXP Cloud Consoleでプロビジョニングされた環境を見る。](./initial-setup-overview/images/03.png)
 
@@ -78,7 +78,7 @@ Liferay DXP Cloudでのデプロイを開始する前に、正しい環境とサ
 
 すべての環境の場所は、DXP Cloudコンソールの [ホームページ](https://console.liferay.cloud/projects)に記載されています。
 
-また、環境の *概要* ページや *設定* ページに移動することで、環境の位置を確認することができます。
+また、環境の **概要** ページや **設定** ページに移動することで、環境の位置を確認することができます。
 
 ![図4：［Overview］ページで環境の位置を確認する。](./initial-setup-overview/images/04.png)
 
@@ -88,9 +88,9 @@ Liferay DXP Cloudでのデプロイを開始する前に、正しい環境とサ
 
 DXP Cloudのスタックサービスが正しく展開されていることを確認します。
 
-1. DXP Cloud Consoleから *dev* 環境にアクセスします。
+1. DXP Cloud Consoleから **dev** 環境にアクセスします。
 
-1. *Services* ページに移動します。
+1. **Services** ページに移動します。
 
 ![図5：［Services］ページでDXP Cloud Stackサービスのステータスを表示します。](./initial-setup-overview/images/05.png)
 

@@ -13,9 +13,9 @@ liferay
 └── LCP.json
 ```
 
-`common/`ディレクトリを除き、特定の環境フォルダ（`dev`、`uat`、`prod`など）に追加された変更は、対応する環境にデプロイするときに_のみ_伝播されます。 `common/`ディレクトリに追加された変更は、ターゲットのデプロイ環境に関係なく、_常に_デプロイされます。 これは、すべてのサービスにおいて、 `configs/` ディレクトリ内のすべてのサブフォルダに適用されます。
+`common/`ディレクトリを除き、特定の環境フォルダ（`dev`、`uat`、`prod`など）に追加された変更は、対応する環境にデプロイするときに **のみ** 伝播されます。 `common/`ディレクトリに追加された変更は、ターゲットのデプロイ環境に関係なく、 **常に** デプロイされます。 これは、すべてのサービスにおいて、 `configs/` ディレクトリ内のすべてのサブフォルダに適用されます。
 
-```note::
+```{note}
    バージョン3.x.xのサービスを使用している場合、これらの設定ファイルは適切な ``lcp/liferay/config/{ENV}/`` フォルダに属しています。 バージョンの確認については、`Understanding Service Stack Versions <../reference/understanding-service-stack-versions.md>`__ を参照してください。
 ```
 
@@ -27,7 +27,7 @@ liferay
 
 例えば、dev環境のプロパティは、 `configs/common` ディレクトリのプロパティファイルと、 `configs/dev` ディレクトリのプロパティから構成されています。 同名のファイルがある場合は、環境固有のディレクトリにあるファイルが、 `共通の` ディレクトリにあるファイルを上書きします。
 
-```note::
+```{note}
    バージョン3.x.xのサービスを使用している場合、これらの設定ファイルは適切な ``lcp/liferay/config/{ENV}/`` フォルダに属しています。 バージョンの確認については、`Understanding Service Stack Versions <../reference/understanding-service-stack-versions.md>`__ を参照してください。
 ```
 
@@ -67,7 +67,7 @@ liferay
 
 `portal-ext.properties` と `portal-all.properties` は、すべての環境で共有されます。 そこに共有のプロパティを追加し、それぞれの `portal-env.properties` ファイルに環境固有のプロパティを追加することができます。 詳細については、 [Portal Property Priority](https://learn.liferay.com/dxp/latest/en/installation-and-upgrades/reference/portal-properties.html#portal-property-priority)を参照してください。
 
-```note::
+```{note}
    ポータルプロパティは、環境変数として定義することもできます。 詳細は `環境変数リファレンス <./introduction-to-the-liferay-dxp-service.md#environment-variables-reference>`_ を参照してください。
 ```
 
@@ -77,7 +77,7 @@ OSGi構成（`.cfg` または `.config` ファイル）は、Liferay DXPでOSGi�
 
 これらの構成ファイルは、 `$LIFERAY_HOME`内の `osgi/configs/` フォルダに属しています。 Liferay DXP Cloudを使用する場合、これらのファイルを適切な `config` フォルダに配置して、デプロイ時にLiferay DXPインスタンスの `configs/{ENV}/osgi` にコピーします。
 
-```note::
+```{note}
    バージョン3.x.xのサービスを使用している場合、OSGiの設定ファイルはLiferayサービスディレクトリ内の適切な``config/{ENV}/``フォルダに属します。 バージョンの確認については、`Understanding Service Stack Versions <../reference/understanding-service-stack-versions.md>`__ を参照してください。
 ```
 
@@ -85,11 +85,11 @@ OSGi構成（`.cfg` または `.config` ファイル）は、Liferay DXPでOSGi�
 
 適切な環境の `liferay/configs/{ENV}` フォルダにファイルをデプロイして、LiferayサービスのTomcatサーバーを設定し、設定ファイルを上書きします。 例えば、Liferayコンテナのファイルシステムにある `{TOMCAT HOME}/conf/web.xml` ファイルを上書きするには、カスタマイズしたファイルをリポジトリの適切な `liferay/configs/{ENV}/tomcat/conf/` フォルダに配置して、変更をデプロイします。
 
-```note::
+```{note}
    DXPクラウドのLiferayコンテナには、一般的な「tomcat」フォルダと、バージョン管理された「tomcat-x.x.xの2つのtomcatフォルダが存在します。 「tomcat」フォルダは、バージョン管理された「tomcat-x.x.x」 フォルダへのシンボリックリンクを持っているので、一般的な 「tomcat」フォルダ内のファイルを上書きすると、新しいファイルが両方のフォルダに反映されます。
 ```
 
-```warning::
+```{warning}
    デフォルトのTomcatの設定を上書きする際には、DXP CloudのLiferayサービスは、クラウドプラットフォーム上の閉じられたネットワークに存在することに留意してください。 オンプレミスのLiferayインストールで変更可能なネットワーク構成の中には、クラウド環境ではデフォルト値から変更できないものや、お客様の環境で問題が発生する可能性のあるものがあります。
 ```
 

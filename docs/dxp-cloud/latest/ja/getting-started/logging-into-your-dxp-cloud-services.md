@@ -4,20 +4,20 @@
 
 ## ログイン資格情報の検索
 
-1. _infra_ 環境に移動します。
-1. 左側のメニューで［_ Services_ ］をクリックします。
-1. _［ci］_ サービスを選択します。
-1. _［Environment Variables］_ タブをクリックします。
-1. `JENKINS_CUSTOMER_PASSWWORD` 横の _［show］_ アイコンを表示して、パスワードを取得します。
-1. `JENKINS_CUSTOMER_USER_NAME` 横にある _［show］_ アイコンをクリックして、ユーザー名を取得します。
+1. **infra** 環境に移動します。
+1. 左側のメニューで［**Services**］をクリックします。
+1. ［**ci**］ サービスを選択します。
+1. ［**Environment Variables**］ タブをクリックします。
+1. `JENKINS_CUSTOMER_PASSWWORD` 横の ［**show**］ アイコンを表示して、パスワードを取得します。
+1. `JENKINS_CUSTOMER_USER_NAME` 横にある ［**show**］ アイコンをクリックして、ユーザー名を取得します。
 
 ![ウェブサーバー](./logging-into-your-dxp-cloud-services/images/01.png)
 
 ## ログイン
 
-1. 選択した環境（_dev_、_prd_、 など）に移動します。
+1. 選択した環境（**dev** 、 **prd** 、 など）に移動します。
 
-1. ページの上部にある *［Visit Site］* ドロップダウンメニューをクリックします。
+1. ページの上部にある ［**Visit Site**］ ドロップダウンメニューをクリックします。
 
     ![［Visit Site］ドロップダウンには、環境内のLiferayインスタンスの利用可能なエンドポイントがすべて表示されます。](./logging-into-your-dxp-cloud-services/images/02.png)
 

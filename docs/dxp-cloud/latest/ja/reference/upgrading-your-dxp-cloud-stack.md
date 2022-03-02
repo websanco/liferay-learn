@@ -25,7 +25,7 @@ repository
 └── settings.gradle
 ```
 
-```important::
+```{important}
    リポジトリがこのような構造になっていない場合（ルートに ``gradle.properties`` ファイルや ``lcp`` フォルダーが存在しない場合）、バージョン 4.x.x へのアップグレードがすでに完了していることを示しています。
 ```
 
@@ -35,11 +35,11 @@ repository
 liferay.workspace.lcp.liferay.image=liferaycloud/liferay-dxp:7.2.10-sp1-fp4-3.0.19
 ```
 
-Dockerイメージ名の末尾の数字は、使用しているDXP Cloudスタックのバージョンを示します。 イメージ名が `3.xx` （この例では、liferay-dxp：7.2.10-sp1-fp4-**3.0.19**）で終わっていることを確認します。
+Dockerイメージ名の末尾の数字は、使用しているDXP Cloudスタックのバージョンを示します。 イメージ名が `3.xx` （この例では、liferay-dxp：7.2.10-sp1-fp4- **3.0.19**）で終わっていることを確認します。
 
 次に、Gitリポジトリがクリーンなブランチ上にあることを確認します。 アップグレードスクリプトは、以前にコミットされていないファイルをコミットし、 `upgrade-workspace`と呼ばれる新しいブランチをチェックアウトします。
 
-```important::
+```{important}
    すでに ``upgrade-workspace`` ブランチがある場合、スクリプトはそのブランチの作成をスキップして、現在のブランチで動作します。
 ```
 
@@ -91,7 +91,7 @@ Dockerイメージ名の末尾の数字は、使用しているDXP Cloudスタ�
     Please enter a comma-delimited list of environments: dev,uat,prd
     ```
 
-    ```important::
+    ```{important}
        プロジェクトリポジトリにファイルを追加するLiferay環境の名前だけを入力してください。 インフラストラクチャ(`infra`)環境を追加しないでください。
     ```
 
@@ -149,7 +149,7 @@ Dockerイメージ名の末尾の数字は、使用しているDXP Cloudスタ�
 }
 ```
 
-```note::
+```{note}
    デフォルトのJenkinsfileを拡張するフックを使いたい場合は ``LCP_CI_SCM_JENKINSFILE_HOOKS_DIR`` 変数を定義する必要があります。
 ```
 

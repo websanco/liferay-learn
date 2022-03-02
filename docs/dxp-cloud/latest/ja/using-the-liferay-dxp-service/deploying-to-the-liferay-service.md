@@ -2,7 +2,7 @@
 
 他のサービスと同様に、カスタム追加のデプロイには、設定やファイルをGitリポジトリの適切な場所に追加する必要があります。 しかし、Liferayサービスのデプロイは、他のサービスのデプロイとは若干異なります。
 
-Liferayサービスは、Liferayワークスペース<!--Add link when available-->を利用して、 [デプロイ可能なファイル](#deploying-themes-portlets-and-osgi-modules)、 [ソースコード](#building-and-deploying-source-code)などを追加するためのオプションを提供します。 These are easily included with a [CI build](../build-and-deploy/overview-of-the-dxp-cloud-deployment-workflow.md), but if you are using the [CLI tool](../reference/command-line-tool.md), then some [extra steps](#cli-tool-deployment) are necessary specifically for the Liferay service.
+Liferayサービスは、Liferayワークスペース <!--Add link when available--> を利用して、 [デプロイ可能なファイル](#deploying-themes-portlets-and-osgi-modules)、 [ソースコード](#building-and-deploying-source-code)などを追加するためのオプションを提供します。 These are easily included with a [CI build](../build-and-deploy/overview-of-the-dxp-cloud-deployment-workflow.md), but if you are using the [CLI tool](../reference/command-line-tool.md), then some [extra steps](#cli-tool-deployment) are necessary specifically for the Liferay service.
 
 ## Liferay DXP Dockerイメージの定義
 
@@ -20,7 +20,7 @@ Liferayサービスの「LCP.json」ファイルの「image」プロパティで
 
 [デプロイ可能なファイル](#deploying-themes-portlets-and-osgi-modules)、 [ビルドされたソースコード](#building-and-deploying-source-code)、 [ホットフィックス](#deploying-hotfixes)、および [ライセンス](#deploying-licenses) は、CLIツールを使用している場合、デプロイに含めるための追加手順が必要です。 これらの追加手順は、 [CIサービス](../platform-services/continuous-integration.md) を使用してリポジトリからビルドを生成する場合には必要ありません。
 
-通常通りCLIでLiferayサービスをデプロイした場合（全てのサービスを一度にデプロイした場合や、 `liferay/` ディレクトリからデプロイした場合）、DXPイメージの **デフォルトバージョン** （ `LCP.json`で定義されているメジャーバージョンを使用）がデプロイされますが、その中にはお客様のカスタマイゼーションは含まれていません。 これは、カスタマイゼーションしたものをサービスに含めるためには、そのサービスを具体的に構築してデプロイする必要があるからです。
+通常通りCLIでLiferayサービスをデプロイした場合（全てのサービスを一度にデプロイした場合や、 `liferay/` ディレクトリからデプロイした場合）、DXPイメージの **デフォルトバージョン**（ `LCP.json`で定義されているメジャーバージョンを使用）がデプロイされますが、その中にはお客様のカスタマイゼーションは含まれていません。 これは、カスタマイゼーションしたものをサービスに含めるためには、そのサービスを具体的に構築してデプロイする必要があるからです。
 
 以下の手順で、カスタマイゼーションを含んだLiferayサービスをデプロイします：
 

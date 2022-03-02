@@ -6,7 +6,7 @@ DXP Cloudオンボーディングメールを受信すると、 `dxpcloud` 組�
 
 1. プライベートリポジトリとDXP CloudのJenkins(CI)サービスをWebhookで連携させます。
 
-```note::
+```{note}
    組織のアカウントを使用している場合、リポジトリを組織に転送するには管理者権限が必要です。
 ```
 
@@ -26,27 +26,27 @@ GitHub リポジトリの作成、クローン、プッシュについてのヘ�
 
 次に、新しいリポジトリをDXP CloudのJenkinsサービスと統合する必要があります。 JenkinsサービスにプッシュするGitHubでWebhookを設定します：
 
-1. GitHubでは、リポジトリの *Settings* ページに移動し、 *［Webhooks］*を選択します。
+1. GitHubでは、リポジトリの **Settings** ページに移動し、 ［**Webhooks**］ を選択します。
 
-1. *［Webhookの追加］*クリックします。  *Webhookの追加* フォームが開きます。
+1. ［**Webhookの追加**］ クリックします。 **Webhookの追加** フォームが開きます。
 
-1. *Payload URL* フィールドに、DXP Cloud `infra` 環境のJenkinsサービスのドメインを追加します。 たとえば、 `acme` というプロジェクトの `インフラ` 環境の `ci` サービスのURLは `https://ci-acme-infra.lfr.cloud/github-webhook/`です。 Jenkins GitHubプラグインと統合するには、相対パス `github-webhook` が必要です。
+1. **Payload URL** フィールドに、DXP Cloud `infra` 環境のJenkinsサービスのドメインを追加します。 たとえば、 `acme` というプロジェクトの `インフラ` 環境の `ci` サービスのURLは `https://ci-acme-infra.lfr.cloud/github-webhook/`です。 Jenkins GitHubプラグインと統合するには、相対パス `github-webhook` が必要です。
 
-1. *Content type* セレクターメニューで、 *application/json*を選択します。
+1. **Content type** セレクターメニューで、 **application/json** を選択します。
 
-1. *［Secret］* フィールドを空白のままにし、*［Enable SSL verification］*が選択されていることを確認します。
+1. ［**Secret**］ フィールドを空白のままにし、 ［**Enable SSL verification**］ が選択されていることを確認します。
 
     ![図1：ペイロードURLとコンテンツタイプを指定し、SSL検証を有効にします。](./configuring-your-github-repository/images/01.png)
 
-1. *［ Which events would you like to trigger this webhook?］*の下にある、*［Let me select individual events.］*を選択してください。 イベントのリストが表示されます。
+1. ［**Which events would you like to trigger this webhook?**］ の下にある、 ［**Let me select individual events.**］ を選択してください。 イベントのリストが表示されます。
 
-1. イベントのリストから *［Pushes］* と *［Pull Requests］* を選択します。<0>
+1. イベントのリストから ［**Pushes**］ と ［**Pull Requests**］ を選択します。
 
     ![図2：このWebhookの個々のイベントを選択する必要があります。](./configuring-your-github-repository/images/02.png)
 
     ![図3：プッシュとプルリクエストを選択します。](./configuring-your-github-repository/images/03.png)
 
-1. *［Active］*が選択されていることを確認し、*［Add webhook］*をクリックします。
+1. ［**Active**］ が選択されていることを確認し、 ［**Add webhook**］ をクリックします。
 
     ![図4：WebhookをActiveに設定し、作成を完了します。](./configuring-your-github-repository/images/04.png)
 
@@ -56,7 +56,7 @@ GitHub リポジトリの作成、クローン、プッシュについてのヘ�
 
 1. DXP Cloudコンソールにログインし、 `infra` 環境でJenkinsサービスに移動します。
 
-1. *［環境変数］* タブに移動します。
+1. ［**環境変数**］ タブに移動します。
 
 1. 以下の環境変数を設定します：
 
@@ -69,13 +69,13 @@ GitHub リポジトリの作成、クローン、プッシュについてのヘ�
 
 `LCP_CI_SCM_TOKEN` の値には、GitHub組織用に作成した個人用アクセストークンを使用します。 このトークンの作成とアクセスの手順については、 [GitHub's documentation](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line)を参照してください。
 
-```note::
+```{note}
    SAMLシングルサインオン認証で組織のアカウントを使用している場合は、アクセストークンを認証するために追加の手順を行う必要があります。 詳細は、 `GitHub's official documentation <https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/authorizing-a-personal-access-token-for-use-with-saml-single-sign-on>`__ を参照してください。
 ```
 
 これらの環境変数を更新した後、Jenkinsサービスが再起動します。 これで、新しいリポジトリでプッシュされたブランチとプルリクエストがビルドをトリガーします。
 
-```note::
+```{note}
    ［2.222.1-3.2.0］以前のJenkinsのバージョンでは、代わりに環境変数 ［GITHUB_REPOSITORY］と［GITHUB_TOKEN］を使用します。 環境変数 ［LCP_CI_SCM_*］を使用する場合、Jenkins［2.222.1-3.2.0］以上のものを実行していることを確認してください。
 ```
 
@@ -83,7 +83,7 @@ GitHub リポジトリの作成、クローン、プッシュについてのヘ�
 
 リポジトリと統合するために`LCP_CI_SCM_TOKEN`の 値によってレファレンスされているパーソナルアクセストークンが必要です。
 
-```warning::
+```{warning}
    パーソナルアクセストークンが個人のユーザーアカウントに属していて、そのユーザーが組織から削除されている場合、すべてのビルドが完了しません。 代わりに、組織専用のアカウントを使用してください。 詳細は、 `GitHub's official documentation <https://docs.github.com/en/actions/learn-github-actions/security-hardening-for-github-actions#considering-cross-repository-access>`__ を参照してください。
 ```
 
@@ -97,7 +97,7 @@ GitHub リポジトリの作成、クローン、プッシュについてのヘ�
 
 ## ビルドの確認
 
-プッシュされたブランチとプルリクエストは、DXP Cloudコンソールの _［Builds］_ タブから表示またはデプロイできるビルドをトリガーする必要があります。 Jenkins サービスとの統合を設定したら、次のステップとして、インテグレーションが成功したかどうかを確認するためにビルドを検証します。
+プッシュされたブランチとプルリクエストは、DXP Cloudコンソールの ［**Builds**］ タブから表示またはデプロイできるビルドをトリガーする必要があります。 Jenkins サービスとの統合を設定したら、次のステップとして、インテグレーションが成功したかどうかを確認するためにビルドを検証します。
 
 ### プッシュされたブランチからのビルドの確認
 
@@ -115,9 +115,9 @@ GitHub リポジトリの作成、クローン、プッシュについてのヘ�
     git push origin branch-name
     ```
 
-1. DXP Cloud コンソールの _Builds_ ページに移動します。
+1. DXP Cloud コンソールの **Builds** ページに移動します。
 
-1. _Builds_ ページで、プッシュされたブランチのビルドが表示されることを確認します。
+1. **Builds** ページで、プッシュされたブランチのビルドが表示されることを確認します。
 
 ### プルリクエストからのビルドの確認
 
@@ -127,7 +127,7 @@ GitHub リポジトリの作成、クローン、プッシュについてのヘ�
 
 1. プルリクエストに対して新しいビルドが作成されていることを確認します。
 
-1. DXP Cloud コンソールの _Builds_ ページに移動します。
+1. DXP Cloud コンソールの **Builds** ページに移動します。
 
 1. ブランチのリンクをクリックして、適切なビルドでコミットします。
 
