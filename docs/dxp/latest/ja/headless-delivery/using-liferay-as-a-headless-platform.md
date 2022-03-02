@@ -2,14 +2,14 @@
 
 Liferayでは、Webインターフェイスで利用可能なアクションと同じ種類のアクションを実行する一連のAPIを提供しています。 これは、モバイルアプリケーション、カスタムWebアプリケーション、自動化されたプロセスの作成など、機械可読形式でデータを取得する必要がある場合に不可欠です。 すぐに使用できるインターフェイスよりも多くの労力を要しますが、仕事を進める上でさらに強力な機能が備わっています。
 
-<a name="接続する方法" />
+<a name="ways-to-connect" />
 
 ## 接続する方法
 
 クライアントがWeb APIを介してLiferay DXPに接続するには、3つの異なるアプローチがあります。
-* OpenAPIの仕様に準拠した [**_** ヘッドレスREST API **_**](#headless-rest-apis)
-* GraphQLの仕様に準拠した [**_** GraphQL API **_**](#graphql-api)
-* サービスビルダによって生成された、 [**_** プレーンWeb / RESTサービス **_**](#plain-webrest-services)
+* OpenAPIの仕様に準拠した [***_* ヘッドレスREST API *_***](#headless-rest-apis)
+* GraphQLの仕様に準拠した [***_* GraphQL API *_***](#graphql-api)
+* サービスビルダによって生成された、 [***_* プレーンWeb / RESTサービス *_***](#plain-webrest-services)
 
 ### ヘッドレスREST API
 
@@ -29,7 +29,7 @@ LiferayのWebサービスは古いフレームワークの一部であり、DXP�
 
 ただし、Webサービスは、特定のタスクを実行するためのより簡単な方法を提供する場合があります。 使用方法については、[Service Builder Web Services](../developing-applications/data-frameworks/service-builder.md)を参照してください。
 
-<a name="機能一覧" />
+<a name="features" />
 
 ## 機能一覧
 
@@ -55,7 +55,7 @@ LiferayのWebインターフェイスと同様に、ヘッドレスAPIを介し�
 
 これらのパラメーターのいずれかを使用する方法の詳細は、[APIヘッダーリファレンス](./consuming-apis/api-headers-reference.md)を参照してください。
 
-<a name="関連情報" />
+<a name="related-information" />
 
 ## 関連情報
 

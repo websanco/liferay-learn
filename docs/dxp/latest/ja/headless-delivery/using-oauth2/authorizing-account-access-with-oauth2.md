@@ -2,7 +2,7 @@
 
 アプリケーションを登録したら、ユーザーの認証を開始できます。 そのためには、承認サーバー（Liferay DXP）へのURLを作成する必要があります。 承認サーバーは、前のチュートリアルでスコープとして定義したように、要求されたリソースへのアクセス許可を認証するようユーザーに要求します。
 
-<a name="認証コードのフロー" />
+<a name="authorization-code-flow" />
 
 ## 認証コードのフロー
 
@@ -55,7 +55,7 @@ client_id=［client ID］ client_secret=［client secret］ grant_type=authoriza
 
 ここから、アクセストークンを抽出して保持する必要があります。 トークンを無期限に（上記の例では600秒を超えて）使用する場合は、更新トークンも必要です。 これを更新トークンフローと組み合わせて使用すると、ユーザーの承認なしに、同じアクセス許可を持つ新しいアクセストークンを取得できます。 承認サーバーは、アプリケーション登録がこのフローに登録されている場合にのみ、更新トークンを発行します。
 
-<a name="pkce拡張認証コードフロー" />
+<a name="pkce-extended-authorization-code-flow" />
 
 ## PKCE拡張認証コードフロー
 
@@ -75,7 +75,7 @@ https://［hostname］/o/oauth2/authorize?response_type=code&client_id=［client
 code_verifier=［Code Verifier that was transformed and sent as code_challenge previously］
 ```
 
-<a name="クライアント資格情報とリソース所有者のフロー" />
+<a name="client-credentials-and-resource-owner-flows" />
 
 ## クライアント資格情報とリソース所有者のフロー
 
@@ -93,7 +93,7 @@ https://［hostname］/o/oauth2/token?grant_type=password&client_id=［client ID
 
 ユーザーはパスワードの入力を求められ、ログインに成功すると認証コードを受け取ります。
 
-<a name="トークンの使用" />
+<a name="token-use" />
 
 ## トークンの使用
 
@@ -107,7 +107,7 @@ curl -H 'Authorization: Bearer 946856e2b5ddf0928f6fc55f657bab73' 'https://［hos
 
 OAuth 2.0は、資格情報を共有せずに、ユーザがクライアントアプリケーションに特定のサービス （スコープ）へのアクセスを許可するための便利な方法を提供します。
 
-<a name="アクセスの取り消し" />
+<a name="revoking-access" />
 
 ## アクセスの取り消し
 
@@ -125,7 +125,7 @@ OAuth 2.0は、資格情報を共有せずに、ユーザがクライアント�
 
 リストされている承認の ［**Revoke**］ ボタンをクリックすると、そのユーザーのアカウントへのそのアプリケーションのアクセスが取り消されます。
 
-<a name="まとめ" />
+<a name="summary" />
 
 ## まとめ
 

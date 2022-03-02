@@ -8,7 +8,7 @@ Liferay DXPには、ほとんどのアプリケーションに対応している
 
 この例では、Liferay DXPの新規インストールでDockerイメージを使用しています。
 
-<a name="使用するサービスを特定する" />
+<a name="identify-the-service-to-consume" />
 
 ## 使用するサービスを特定する
 
@@ -40,7 +40,7 @@ APIはいくつかのカテゴリに分類されます。 この例では、`Blo
 
 ![スキーマブラウザを使用すると、必要なサービスを見つけて呼び出すことができます。 ](./consuming-rest-services/images/01.png)
 
-<a name="データを含むサイトを特定する" />
+<a name="identify-the-site-containing-the-data" />
 
 ## データを含むサイトを特定する
 
@@ -55,7 +55,7 @@ Liferay DXPの初期化後、ブラウザで`http://localhost:8080`にアクセ�
 
    ![［サイト設定］と［Site Configuration］オプションでサイトIDを特定します。](./consuming-rest-services/images/03.png)
 
-<a name="データにアクセスできる認証情報を使用してサービス呼び出しを行う" />
+<a name="make-the-service-call-using-credentials-with-access-to-the-data" />
 
 ## データにアクセスできる認証情報を使用してサービス呼び出しを行う
 
@@ -79,7 +79,7 @@ curl "http://localhost:8080/o/headless-delivery/v1.0/sites/20122/blog-postings/"
 curl -H "Authorization: Bearer d5571ff781dc555415c478872f0755c773fa159" http://localhost:8080/o/headless-delivery/v1.0/sites/20122/blog-postings
 ```
 
-<a name="データの取得と投稿" />
+<a name="getting-and-posting-data" />
 
 ## データの取得と投稿
 

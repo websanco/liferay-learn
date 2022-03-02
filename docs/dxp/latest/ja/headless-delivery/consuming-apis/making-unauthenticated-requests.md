@@ -16,7 +16,7 @@ curl localhost:8080/o/headless-admin-user/v1.0/sites/20122
 
 認証情報なしでAPIにアクセスする必要がある場合は、サービス・アクセス・ポリシーを介して無制限のアクセスを許可します。
 
-<a name="サービスアクセスポリシーによるapi制限の緩和" />
+<a name="relaxing-api-restrictions-via-service-access-policy" />
 
 ## サービス・アクセス・ポリシーによるAPI制限の緩和
 
@@ -51,7 +51,7 @@ curl localhost:8080/o/headless-admin-user/v1.0/sites/20122
 
 これでサービス・アクセス・ポリシーが有効になり、ゲストにサイトAPIへのアクセスが許可されます。
 
-<a name="アクセスの確認" />
+<a name="confirming-access" />
 
 ## アクセスの確認
 

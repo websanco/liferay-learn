@@ -6,7 +6,7 @@ OAuth 2.0では、アプリケーションはユーザーデータの制限さ�
 
 2. 開発者が、JAX-RSエンドポイントを作成する。 デフォルトでは、スコープはJAX-RSエンドポイントでサポートされるHTTP動詞に基づいて生成されます。 特殊な注釈は、この動作をオーバーライドし、特定のスコープを登録します。
 
-<a name="jsonwsサービスのスコープの作成" />
+<a name="creating-a-scope-for-a-jsonws-service" />
 
 ## JSONWSサービスのスコープの作成
 
@@ -28,7 +28,7 @@ http://［host］:［port］/api/jsonws/
 
 これを選択して、アプリケーションを保存できます。
 
-<a name="承認ページの作成" />
+<a name="creating-the-authorization-page" />
 
 ## 承認ページの作成
 

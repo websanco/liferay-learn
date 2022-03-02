@@ -6,6 +6,8 @@ Liferay DXPには、ほとんどのアプリケーションに対応している
 1. 必要なデータを含むサイトを特定します。
 1. データにアクセスできる資格情報を使用してAPI呼び出しを行います。
 
+<a name="identify-the-service-to-consume" />
+
 ## 使用するサービスを特定する
 
 GraphQL APIを呼び出すには、実行中のLiferay DXPが必要です。 Dockerを使用して取得するには、次のコマンドを実行します。
@@ -52,6 +54,8 @@ Liferay DXPの初期化後、必要なサービスを見つけることができ
 
 APIでは、エントリが投稿されるブログを含むサイトを把握している必要があるため、最初にサイトIDを見つける必要があります。
 
+<a name="identify-the-site-containing-the-data" />
+
 ## データを含むサイトを特定する
 
 ブラウザで `http://localhost:8080`アクセスします。
@@ -63,6 +67,8 @@ APIでは、エントリが投稿されるブログを含むサイトを把握�
 1. Liferayサイトの横にある［Actions］ボタンをクリックし、［ *Go to Site Settings*］を選択します。
 
 サイトIDが［Details］セクションの上部に表示されます。 `20122`のような整数になります。
+
+<a name="make-the-service-call-using-credentials-with-access-to-the-data" />
 
 ## データにアクセスできる認証情報を使用してサービス呼び出しを行う
 
@@ -85,6 +91,8 @@ curl --request POST --url http://localhost:8080/o/graphql \ -u test@liferay.com:
 ```bash
 curl --request POST --url http://localhost:8080/o/graphql -H "Authorization: Bearer d5571ff781dc555415c478872f0755c773fa159" --header 'content-type: application/json' --data '{"query":"query {blogPostings(filter: \"\", page: 1, pageSize: 10, search: \"\", siteKey: \"20122\", sort: \"\"){ page  items{ id articleBody headline  creator{ name }}}}"}'
 ```
+
+<a name="getting-and-posting-data" />
 
 ## データの取得と投稿
 

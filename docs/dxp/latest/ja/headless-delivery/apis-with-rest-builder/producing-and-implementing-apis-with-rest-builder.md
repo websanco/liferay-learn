@@ -2,7 +2,7 @@
 
 RESTビルダーを使用すると、構築するAPIを定義でき、RESTビルダーはフレームワークとエンドポイントを提供します。 <!-- Add link to the REST Builder overview article once available. -->
 
-<a name="サンプルのrest-apiをデプロイする" />
+<a name="deploy-an-example-rest-api" />
 
 ## サンプルのREST APIをデプロイする
 
@@ -73,7 +73,7 @@ RESTビルダーの動作を確認するために、カタログ内のIDによ�
 
 RESTビルダーで生成されたAPIを確認したので、次はそれがどのように機能するかを理解します。
 
-<a name="初期設定" />
+<a name="initial-setup" />
 
 ## 初期設定
 
@@ -102,7 +102,7 @@ dependencies {
 
 両方のモジュールの`build.gradle`ファイルも、ポータルリリースへの依存関係を宣言する必要があります。
 
-<a name="yaml構成" />
+<a name="yaml-configuration" />
 
 ## YAML構成
 
@@ -261,7 +261,7 @@ tags: ["Foo"]
 
 関係をどのように行うかを示す`Goo`オブジェクトもあります。Gooは、`fooId`に関連付けられているという意味でFooに関連付けられています。
 
-<a name="restビルダーを実行する" />
+<a name="run-rest-builder" />
 
 ## RESTビルダーを実行する
 
@@ -273,7 +273,7 @@ tags: ["Foo"]
 
 RESTビルダーはこの構成を使用して、`api`クラスと`impl`クラスの両方にビルディングブロックコードと、実装ロジックを追加できるJavaクラスを取り込みます。
 
-<a name="実装ロジックを追加する" />
+<a name="add-your-implementation-logic" />
 
 ## 実装ロジックを追加する
 
@@ -323,7 +323,7 @@ RESTビルダーはこの構成を使用して、`api`クラスと`impl`クラ�
     }
 ```
 
-<a name="まとめ" />
+<a name="conclusion" />
 
 ## まとめ
 

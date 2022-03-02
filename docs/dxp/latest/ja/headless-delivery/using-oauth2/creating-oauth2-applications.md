@@ -12,7 +12,7 @@ OAuth 2.0を使用して承認できるアプリケーションがある場合�
 
 アプリケーションのOAuth2認証をLiferay Portalに追加する方法をマスターしました。 次に、アプリケーションがアクセスできるユーザーデータのスコープを定義する必要があります。
 
-<a name="oauth2管理リファレンス" />
+<a name="oauth2-administration-reference" />
 
 ## OAuth2管理リファレンス
 
