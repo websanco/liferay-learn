@@ -14,7 +14,7 @@ Most Patching Tool commands (such as `install`) cannot be run on a Slim Bundle u
 
 スリムバンドルにはパッチを適用できますが、パッチファイルを復元する追加の手順が必要です。 各パッチの各パッチのパッチファイルは、 [ヘルプセンター](https://customer.liferay.com/downloads) 入手できます。
 
-<a name="スリムバンドルのパッチ" />
+<a name="patching-slim-bundles" />
 
 ## スリムバンドルのパッチ
 
@@ -44,7 +44,7 @@ Most Patching Tool commands (such as `install`) cannot be run on a Slim Bundle u
 
 スリムバンドルを使用するメリットを学び、パッチを適用する方法を理解しました。
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 

@@ -8,7 +8,7 @@
 * [代替発見プロトコル](#alternative-discovery-protocols)
 * [異なる制御およびトランスポートチャネルポートの使用](#using-different-control-and-transport-channel-ports)
 
-<a name="ユニキャスト構成" />
+<a name="unicast-configurations" />
 
 ## ユニキャスト構成
 
@@ -85,7 +85,7 @@
 
 これで、TCPクラスタリングを介したユニキャストがセットアップされました。
 
-<a name="代替発見プロトコル" />
+<a name="alternative-discovery-protocols" />
 
 ## 代替発見プロトコル
 
@@ -124,7 +124,7 @@ S3 Pingを構成するには、 [ユニキャスト構成](#unicast-configuratio
 
 JGroupsは、Rackspace Ping、BPing、File Pingなど、クラスターメンバーがお互いを発見するための他の手段を提供します。 これらの検出方法については、 [JGroups Documentation](http://www.jgroups.org/manual4/index.html#DiscoveryProtocols) を参照してください。
 
-<a name="異なる制御およびトランスポートチャネルポートの使用" />
+<a name="using-different-control-and-transport-channel-ports" />
 
 ## 異なる制御およびトランスポートチャネルポートの使用
 
@@ -205,7 +205,7 @@ JGroupsは、Rackspace Ping、BPing、File Pingなど、クラスターメンバ
 
 キャッシュできるエンティティを追加した場合、またはシステムのキャッシュ構成を調整したい場合は、モジュールを使用して行うことができます。 <!--TODO Link to caching articles. jhinkey -->
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 

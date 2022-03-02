@@ -16,7 +16,7 @@ CASでLiferayを実行するには、3つのステップがあります。
 1. CASをインストールする
 1. CASを使用するようにLiferayを構成する
 
-<a name="ssl証明書の生成" />
+<a name="generating-an-ssl-certificate" />
 
 ## SSL証明書の生成
 
@@ -44,7 +44,7 @@ keytool -import -alias tomcat -file server.cert -keypass changeit -keystore $JAV
 
 Windowsシステムを使用している場合は、上記の`$JAVA_HOME`を`%JAVA_HOME%`に置き換えます。 もちろん、これらはすべてCASが実行されているシステムで実行する必要があります。
 
-<a name="casを使用するようにliferay-dxpを構成する" />
+<a name="configure-liferay-dxp-to-use-cas" />
 
 ## CASを使用するようにLiferay DXPを構成する
 

@@ -6,7 +6,7 @@ Liferay DXP 7.0以降、Liferayはデータベースベンダーがネイティ�
    Liferay continues to support its logical partitioning capabilities (also known as virtual instances).
 ```
 
-<a name="データのアップグレードの前に構成を追加する" />
+<a name="add-configurations-before-the-data-upgrade" />
 
 ## データのアップグレードの前に構成を追加する
 
@@ -53,7 +53,7 @@ Liferay DXP 7.0以降、Liferayはデータベースベンダーがネイティ�
     jdbc.default.password=[the password]
     ```
 
-<a name="プロパティのアップグレードと更新" />
+<a name="upgrade-and-update-properties" />
 
 ## プロパティのアップグレードと更新
 

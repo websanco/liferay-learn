@@ -57,10 +57,10 @@ INFO  [fileinstall-directory-watcher][LicenseManager:?] License registered for D
 
 DXPライセンスを更新しました。
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 
-* [Activating Liferay DXP](../../setting-up-liferay/activating-liferay-dxp.md)
+* [Liferay DXPのアクティブ化](../../setting-up-liferay/activating-liferay-dxp.md)
 * [コンテナへのファイルの提供](./providing-files-to-the-container.md)
-* [Upgrading to a New Docker Image](./upgrading-to-a-new-docker-image.md)
+* [新しいDockerイメージへのアップグレード](./upgrading-to-a-new-docker-image.md)

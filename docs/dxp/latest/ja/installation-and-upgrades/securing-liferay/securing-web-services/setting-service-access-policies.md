@@ -4,7 +4,7 @@
 
 サービスアクセスポリシーは、Webサービスの呼び出しを介して公開されるメソッドのホワイトリストを定義します。 ワイルドカードを使用して、ホワイトリストに登録されているクラスとメソッドを定義できます。 サービスアクセスポリシーは権限システムを尊重することに注意してください。 ポリシーがユーザーにリモートサービスへのアクセスを許可する場合、そのユーザーは引き続き、そのサービスを呼び出すための適切な権限を持っている必要があります。
 
-<a name="デフォルトのサービスアクセスポリシー" />
+<a name="default-service-access-policies" />
 
 ## デフォルトのサービスアクセスポリシー
 
@@ -38,7 +38,7 @@
 
 デフォルトの構成では、システムに付属するすべてのWebサービスへのアクセスを提供する対応するスコープが使用可能になります。 スコープを使用できるようにするには、OAuth 1または2アプリケーションに割り当てる必要があります。 管理者は、使用するスコープを確認し、他のスコープを無効にする必要があります。
 
-<a name="サービスアクセスポリシーについて" />
+<a name="understanding-service-access-policies" />
 
 ## サービスアクセスポリシーについて
 
@@ -63,7 +63,7 @@ com.liferay.portal.kernel.service.UserService
 com.liferay.document.library.kernel.service.DLAppService#get*
 ```
 
-<a name="サービスアクセスポリシーの作成" />
+<a name="creating-a-service-access-policy" />
 
 ## サービスアクセスポリシーの作成
 
@@ -94,7 +94,7 @@ Liferayアプリケーションは、独自のデフォルトポリシーを宣�
 
 デフォルトでは、Liferayのトンネリングサーブレットは`SYSTEM_USER_PASSWORD`サービスアクセスポリシーを使用します。 ただし、トンネリングサーブレット用に独自のポリシーを作成し、`TunnelingServletAuthVerifier`の`service.access.policy.name`プロパティを使用して、代わりに自分のポリシーを使用するように指定できます。
 
-<a name="サービスアクセスポリシーモジュールについて" />
+<a name="understanding-the-service-access-policy-module" />
 
 ## サービスアクセスポリシーモジュールについて
 
@@ -113,7 +113,7 @@ Liferayのサービスアクセスポリシーモジュールは、ソースコ�
 
 これらのモジュールは、コントロールパネルからアクセスできるサービスアクセスポリシー管理UIを提供します。 また、`ServiceAccessPolicy`のインターフェイスとデフォルト実装も提供します。
 
-<a name="サービスアクセスポリシーモジュールの構成" />
+<a name="configuring-the-service-access-policy-module" />
 
 ## サービスアクセスポリシーモジュールの構成
 

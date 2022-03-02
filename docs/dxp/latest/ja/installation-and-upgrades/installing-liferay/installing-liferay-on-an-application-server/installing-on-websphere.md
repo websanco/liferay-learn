@@ -8,14 +8,14 @@ WebSphereにLiferay DXPをインストールするには、DXP WARのインス�
 このインストールおよび設定プロセス全体を通して、WebSphereは［*Save*］をクリックして変更をマスター構成に適用するようにプロンプトを出します。 変更を保存するには、この操作が必要です。
 ```
 
-<a name="前提条件" />
+<a name="prerequisites" />
 
 ## 前提条件
 
 Liferay DXPが正しく機能するには、WebSphere 9（フィックスパック11以降）がインストールされている必要があります。 このフィックスパックについて詳しくは、 [IBMサポート](http://www-01.ibm.com/support/docview.wss?uid=swg24043005) にアクセスしてください。 Liferay DXPは現在、WebSphere Application Liberty Profileをサポートしていません。
 
 ```{important}
-DXPをインストールする前に、[Installing a Liferay-Tomcat Bundle](../installing-a-liferay-tomcat-bundle.md)および[Configuring a Database](../configuring-a-database.md)の記事を確認してください。
+DXPをインストールする前に、 [Liferay-Tomcatバンドルのインストール](../installing-a-liferay-tomcat-bundle.md) および [データベースの構成](../configuring-a-database.md) の記事を確認してください。
 ```
 
 次のファイルは、WebSphereアプリケーションサーバーにLiferay DXPをインストールするために必要であり、 [ヘルプセンター](https://customer.liferay.com/downloads) （サブスクリプション）または [Liferayコミュニティのダウンロード](https://www.liferay.com/downloads-community) から入手できます。
@@ -24,11 +24,11 @@ DXPをインストールする前に、[Installing a Liferay-Tomcat Bundle](../i
 * OSGi依存関係のZIPファイル
 * 依存関係のZIPファイル（DXP 7.3以前）
 
-Liferay DXPにはJava JDK 8または11が必要です。 JDKの選択には [互換性マトリックス](https://help.liferay.com/hc/en-us/articles/360049238151) を参照してください。 推奨される設定については、[JVM Configuration](../../reference/jvm-configuration.md)を参照してください。
+Liferay DXPにはJava JDK 8または11が必要です。 JDKの選択には [互換性マトリックス](https://help.liferay.com/hc/en-us/articles/360049238151) を参照してください。 推奨される設定については、 [JVM設定](../../reference/jvm-configuration.md) を参照してください。
 
 [`［Liferay Home］`](../../reference/liferay-home.md) フォルダーは、Liferay DXPが機能するために必要なファイルとフォルダーを格納および管理する場所です。 WebSphereでは、`［Liferay Home］`フォルダは通常`［Install Location］/WebSphere/AppServer/profiles/［your-profile］/liferay`です。
 
-<a name="websphereの構成" />
+<a name="configuring-websphere" />
 
 ## WebSphereの構成
 
@@ -93,7 +93,7 @@ WebSphereアプリケーションサーバーで`webcontainer`プロパティを
 ```
 
 ```{note}
-DXPのインストール後、これらの構成（これらのJVMオプションを含む）をさらに調整して、パフォーマンスを向上させることができます。 詳細については、[Tuning Liferay](../../setting-up-liferay/tuning-liferay.md)および[Tuning Your JVM](../../setting-up-liferay/tuning-your-jvm.md)を参照してください。
+DXPのインストール後、これらの構成（これらのJVMオプションを含む）をさらに調整して、パフォーマンスを向上させることができます。 詳細については、 [Liferayの調整](../../setting-up-liferay/tuning-liferay.md) および [JVMの調整](../../setting-up-liferay/tuning-your-jvm.md) を参照してください。
 ```
 
 `server.xml`の`<jvmEntries genericJvmArguments=.../>`属性でUTF-8プロパティを設定できます。 これは必須です。設定しないと、国際文字は正しく解析されません。 ヒープサイズの最大値と最小値も増やします。 `jvmEntries`タグ内に以下を追加します。
@@ -153,7 +153,7 @@ com.ibm.ws.exception.RuntimeWarning: com.ibm.ws.webcontainer.exception.WebAppNot
 1. サーバーのタイムゾーンがGMTに設定されている。
 1. `secureSessionCookie`タグが削除されている。
 
-<a name="依存関係をインストールする" />
+<a name="installing-dependencies" />
 
 ## 依存関係をインストールする
 
@@ -172,7 +172,7 @@ DXP 7.3以前の場合は、依存関係のZIPファイルを解凍し、その�
 DXP/Portal 7.3以前の場合は、依存関係のZIPファイルを解凍し、そのコンテンツをWebSphereアプリケーションサーバーの`[Install Location]/WebSphere/AppServer/lib/ext`フォルダに配置します。
 ```
 
-<a name="elasticsearchアーカイブのインストール" />
+<a name="installing-elasticsearch-archives" />
 
 ## Elasticsearchアーカイブのインストール
 
@@ -219,11 +219,11 @@ DXPの`portlet.jar`をサーバーに関連付けられた共有ライブラリ�
 
 アプリケーションサーバープロファイルを起動します。
 
-<a name="データベース設定" />
+<a name="database-configuration" />
 
 ## データベース設定
 
-DXPには組み込みのHypersonicデータベースが含まれています。これはデモンストレーション目的には最適ですが、本番環境では使用しないでください。 デモの目的以外に、フル機能のサポートされているRDBMSを使用することをお勧めします。 データベースのセットアップについては、[Configuring a Database](../configuring-a-database.md)を参照してください。
+DXPには組み込みのHypersonicデータベースが含まれています。これはデモンストレーション目的には最適ですが、本番環境では使用しないでください。 デモの目的以外に、フル機能のサポートされているRDBMSを使用することをお勧めします。 データベースのセットアップについては、 [データベースの構成](../configuring-a-database.md) を参照してください。
 
 Liferay DXPは、DXPに組み込まれているデータソースを使用する（推奨）か、アプリケーションサーバー上に作成したデータソースを使用してデータベースに接続できます。
 
@@ -268,7 +268,7 @@ Liferayは、デモ目的でデフォルトでHSQLを使用しています。 HS
    ```
 
    ```{tip}
-   URLの例については、[Database Templates](../../reference/database-templates.md)の`jdbc.default.url`の値を参照してください。
+   URLの例については、 [データベーステンプレート](../../reference/database-templates.md) の`jdbc.default.url`の値を参照してください。
    ```
 
    ［**OK**］ をクリックして、マスター構成に保存します。
@@ -281,7 +281,7 @@ Liferayは、デモ目的でデフォルトでHSQLを使用しています。 HS
     jdbc.default.jndi.name=jdbc/LiferayPool
     ```
 
-<a name="メール設定" />
+<a name="mail-configuration" />
 
 ## メール設定
 
@@ -313,7 +313,7 @@ WebSphereを使用してメールセッションを管理する場合は、次�
 
 メールセッションが正しく構成されていることを検証するには、WARがデプロイされ、サーバーが起動し、ユーザーがシステム管理者としてサインインした後で、これをテストする方法がいくつかあります。 検証する簡単な方法の1つは、有効なメールアカウントで新しいユーザーを作成することです。 新しく作成されたユーザーは、電子メール通知を受信します。 ログには、リストされている正しいポート番号でSMTPサーバーがpingされていることが表示されます。
 
-<a name="httpセッションのcookieを有効にする" />
+<a name="enable-cookies-for-http-sessions" />
 
 ## HTTPセッションのCookieを有効にする
 
@@ -331,7 +331,7 @@ User 0 is not allowed to access URL http://localhost:9081/web/guest/home and por
 1. ［**Apply**］ をクリックします。
 1. ［**保存**］ をクリックします。
 
-<a name="dxpのデプロイ" />
+<a name="deploying-dxp" />
 
 ## DXPのデプロイ
 
@@ -349,7 +349,7 @@ User 0 is not allowed to access URL http://localhost:9081/web/guest/home and por
 
 DXPがインストールされました。 DXPを開始する前に、いくつかの必要な手順があります。
 
-<a name="jspをコンパイルするためのjdkバージョンの設定" />
+<a name="setting-the-jdk-version-for-compiling-jsps" />
 
 ## JSPをコンパイルするためのJDKバージョンの設定
 
@@ -367,7 +367,7 @@ DXPでは、JSPをJava 8バイトコード形式にコンパイルする必要�
 
 DXP `.war`は、`ibm-web-ext.xmi`ファイルにあらかじめパッケージ化されていることに注意してください。この形式は機能的に`.xml`と同じで、WebSphereは両方の形式を認識します。 WebSphereによるJSPのコンパイル方法に関する一般的な情報については、IBMの [WebSphere Application Server 9.0.0.x](https://www.ibm.com/support/knowledgecenter/en/SSEQTP_9.0.0/com.ibm.websphere.base.doc/ae/rweb_jspengine.html) の公式ドキュメントを参照してください。
 
-<a name="dxpの開始" />
+<a name="starting-dxp" />
 
 ## DXPの開始
 
@@ -393,11 +393,11 @@ DXPをデプロイした後、`PhaseOptimizer`に関連する以下のような�
 |     current AST contains: ［ES3 keywords as identifiers, getters, reserved words as properties, setters, string continuation, trailing comma, array pattern rest, arrow function, binary literal, block-scoped function declaration, class, computed property, const declaration, default parameter, destructuring, extended object literal, for-of loop, generator, let declaration, member declaration, new.target, octal literal, RegExp flag 'u', RegExp flag 'y', rest parameter, spread expression, super, template literal, exponent operator (**), async function, trailing comma in param list, object literals with spread, object pattern rest］
 ```
 
-Liferay DXP Enterpriseサブスクリプションをお持ちの場合、DXPはアクティベーションキーを要求します。 詳細は、[Activating Liferay DXP](../../setting-up-liferay/activating-liferay-dxp.md)を参照してください。
+Liferay DXP Enterpriseサブスクリプションをお持ちの場合、DXPはアクティベーションキーを要求します。 詳細は、 [Liferay DXPのアクティブ化](../../setting-up-liferay/activating-liferay-dxp.md) を参照してください。
 
 　 Liferay DXPをWebSphereで実行しています。
 
-<a name="次のステップ" />
+<a name="next-steps" />
 
 ## 次のステップ
 

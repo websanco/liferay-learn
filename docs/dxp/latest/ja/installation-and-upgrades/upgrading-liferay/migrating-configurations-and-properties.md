@@ -2,7 +2,7 @@
 
 現在のDXPインストールのOSGi構成（7.0以降）とプロパティ（[ポータルプロパティ](../../reference/portal-properties.md)や[システムプロパティ](../../reference/system-properties.md)など）によって、ニーズに合わせてDXPインスタンスがセットアップされます。 これらの設定を新しいDXPインスタンスで使用するには、それらを新しいLiferay Homeに移行して更新する必要があります。
 
-<a name="概要" />
+<a name="overview" />
 
 ## 概要
 
@@ -10,7 +10,7 @@
 * [データベースアップグレードの設定の更新](#updating-settings-used-by-the-database-upgrade)
 * [ポータルプロパティの移行](#migrating-portal-properties)
 
-<a name="liferayホームおよびアプリケーションサーバーファイルの移行" />
+<a name="migrating-liferay-home-and-application-server-files" />
 
 ## Liferayホームおよびアプリケーションサーバーファイルの移行
 
@@ -27,7 +27,7 @@
 
 1. [ファイル ストア (ドキュメント ライブラリ)](../../../system-administration/file-storage/configuring-file-storage.md)を、[バックアップ](../../maintaining-a-liferay-dxp-installation/backing-up.md)から新しいインストールにコピーするか、または [`.config`ファイル](../../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md#creating-configuration-files) を介して使用するように新しいインストールを設定してセットアップします。
 
-<a name="データベースアップグレードの設定の更新" />
+<a name="updating-settings-for-the-database-upgrade" />
 
 ## データベースアップグレードの設定の更新
 
@@ -54,12 +54,12 @@ jdbc.default.driverClassName=com.mysql.cj.jdbc.Driver
 
 その他のドライバーの例については、[Database Templates](../../reference/database-templates.md)を参照してください。
 
-<a name="ポータルプロパティの移行" />
+<a name="migrating-portal-properties" />
 
 ## ポータルプロパティの移行
 
 ```{important}
-   `` locales```ポータルプロパティ<../../../installation-and-upgrades/reference/portal-properties.md>`_をオーバーライドした場合は、アップグレードする前に新しいインストールでそれをオーバーライドしてください。 これにより、すべてのロケールのデータが確実にアップグレードされます。
+   ``locales`` [ポータルプロパティ](../../../installation-and-upgrades/reference/portal-properties.md) をオーバーライドした場合は、アップグレードする前に新しいインストールでそれをオーバーライドしてください。 これにより、すべてのロケールのデータが確実にアップグレードされます。
 ```
 
 ここで説明するプロパティは、データベースのアップグレード後に更新できます。 プロパティの移行には、次のアクションが含まれます。
@@ -124,7 +124,7 @@ rootDir="{document_library_path}"
 `.config`ファイルを`［Liferay Home］/osgi/configs`というフォルダに配置します。
 
 ```tip::
-   コントロールパネルの［*System Settings*］画面（［*Configuration*］の下）は、OSGi構成管理の値を管理します。 これらの画面は``.config``ファイルを作成する最も正確な方法です。 構成する機能の構成画面を見つけて*保存*をクリックし、オプションボタンを使用して画面の構成<../../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md>`_を``.config``ファイルにエクスポートします。
+   コントロールパネルの［*System Settings*］画面（［*Configuration*］の下）は、OSGi構成管理の値を管理します。 これらの画面は ``.config`` ファイルを作成する最も正確な方法です。 構成する機能の構成画面を見つけて*保存*をクリックし、オプションボタンを [使用して画面の構成](../../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md) を ``.config`` ファイルにエクスポートします。
 ```
 
 ### プロパティの移行に関する特別な考慮事項
@@ -149,7 +149,7 @@ rootDir="{document_library_path}"
       好きなフレームワークを使用して画像スプライトを作成し、プラグインにデプロイできます。
    ```
 
-<a name="次のステップ" />
+<a name="next-steps" />
 
 ## 次のステップ
 

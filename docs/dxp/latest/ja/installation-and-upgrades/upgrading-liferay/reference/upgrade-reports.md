@@ -30,7 +30,7 @@ echo "upgrade.report.enabled=\"true\"" << tools/portal-tools-db-upgrade-client/p
 
 [データベースアップグレードツール](../upgrade-basics/using-the-database-upgrade-tool.md)は、次回の実行時にアップグレードレポートを生成します。
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 
@@ -40,4 +40,4 @@ echo "upgrade.report.enabled=\"true\"" << tools/portal-tools-db-upgrade-client/p
 
 * [データベースアップグレードツールのリファレンス](../reference/database-upgrade-tool-reference.md#manual-configuration)
 
-* [Troubleshooting Upgrades](../reference/troubleshooting-upgrades.md)
+* [アップグレードのトラブルシューティング](../reference/troubleshooting-upgrades.md)

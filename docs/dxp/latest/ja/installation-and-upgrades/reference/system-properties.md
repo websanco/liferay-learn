@@ -29,7 +29,7 @@ DXPは、次の方法でシステムプロパティファイルを使用しま�
 * [システムプロパティを直接設定する](#setting-system-properties-directly)
 * [`system-ext.properties` ファイルの使用](#using-a-system-ext-properties-file)
 
-<a name="システムプロパティを直接設定する" />
+<a name="setting-system-properties-directly" />
 
 ## システムプロパティを直接設定する
 
@@ -53,7 +53,7 @@ DXPは、次の方法でシステムプロパティファイルを使用しま�
 
 アプリケーションサーバーとDXPは新しいシステムプロパティを使用しています。
 
-<a name="system-extproperties-ファイルの使用" />
+<a name="using-a-system-extproperties-file" />
 
 ## `system-ext.properties` ファイルの使用
 
@@ -75,7 +75,7 @@ DXPの `system.properties` ファイルを使用し、システムプロパテ�
 
 Liferay DXPはシステムプロパティを柔軟に処理するので、システムを自由に構成できます。
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 

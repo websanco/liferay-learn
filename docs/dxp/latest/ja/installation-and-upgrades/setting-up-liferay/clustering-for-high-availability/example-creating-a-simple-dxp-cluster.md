@@ -13,7 +13,7 @@ DXPクラスタリングを学習する簡単な方法は、 [Dockerコンテナ
 | DXPサーバー | Tomcat        | `dxp-2`         |
 
 ```{warning}
-この例は学習を目的としたものであり、本番環境のユースケースには適していません。 本番環境では、DXPサーバーへのリクエストの負荷分散用にHTTPサーバーを含め、読み取り専用操作と読み取り/書き込み操作に別々のデータベースサーバーを使用し、データベースサーバー、ファイルストアサーバー、および検索エンジンサーバーのクラスタリングと負荷分散を検討する必要があります。 詳細は、[Clustering for High Availability](../clustering-for-high-availability.md)のすべての記事をお読みください。
+この例は学習を目的としたものであり、本番環境のユースケースには適していません。 本番環境では、DXPサーバーへのリクエストの負荷分散用にHTTPサーバーを含め、読み取り専用操作と読み取り/書き込み操作に別々のデータベースサーバーを使用し、データベースサーバー、ファイルストアサーバー、および検索エンジンサーバーのクラスタリングと負荷分散を検討する必要があります。 詳細は、 [高可用性のクラスタリング](../clustering-for-high-availability.md) のすべての記事をお読みください。
 ```
 
 
@@ -30,7 +30,7 @@ Should we remove this diagram since it includes a load balancer? -->
 1. [DXPクラスターを開始する](#start-the-dxp-cluster)
 1. [DXPクラスターをテストする](#test-the-dxp-cluster)
 
-<a name="データベースサーバーを起動する" />
+<a name="start-a-database-server" />
 
 ## データベースサーバーを起動する
 
@@ -72,13 +72,13 @@ DXPクラスターには、すべてのDXPクラスターノードからアク�
 
 データベースサーバーでDXP用の準備が整いました。
 
-<a name="ファイルストアサーバーを起動する" />
+<a name="start-a-file-store-server" />
 
 ## ファイルストアサーバーを起動する
 
 DXPクラスターには、すべてのDXPクラスターノードからアクセスできるファイルストアが必要です。 便宜上、この例では、DXPデータベースで構成された [DBStoreファイルストア](../../../system-administration/file-storage/other-file-store-types/dbstore.md)を使用しています。 この例ですでに起動しているデータベースサーバーには、ファイルストアが含まれています。 すべてのファイルストアタイプの設定については、[ファイルストレージの構成](../../../system-administration/file-storage/configuring-file-storage.md)を参照してください。
 
-<a name="検索エンジンサーバーを起動する" />
+<a name="start-a-search-engine-server" />
 
 ## 検索エンジンサーバーを起動する
 
@@ -110,7 +110,7 @@ Elasticsearchサーバーを作成して設定します。
 
 検索エンジンは検索インデックスを管理する準備ができました。
 
-<a name="ノードごとに検索エンジンサーバーを設定する" />
+<a name="configure-the-search-engine-server-for-each-node" />
 
 ## ノードごとに検索エンジンサーバーを設定する
 
@@ -148,7 +148,7 @@ Elasticsearchサーバーを作成して設定します。
 後でDXPサーバーに使用される`docker run --add-host elasticsearch:[ip] ...`コマンドは、名前`elasticsearch`をElasticsearchサーバーのホストIPアドレスにマップする`/etc/hosts/`エントリを追加します。
 ```
 
-<a name="dxpクラスターを開始する" />
+<a name="start-the-dxp-cluster" />
 
 ## DXPクラスターを開始する
 
@@ -265,9 +265,9 @@ DXPコンテンツのインデックス作成を開始します。
     ****Reindex all search indexes**
     ****Reindex all spell check indexes**
 
-コンテンツは検索エンジンにインデックス付けされます。 詳細は、 [Search Overview](../../../using-search/getting-started/search-overview.md)を参照してください。
+コンテンツは検索エンジンにインデックス付けされます。 詳細は、 [検索の概要](../../../using-search/getting-started/search-overview.md) を参照してください。
 
-<a name="dxpクラスターをテストする" />
+<a name="test-the-dxp-cluster" />
 
 ## DXPクラスターをテストする
 
@@ -285,13 +285,13 @@ DXPコンテンツのインデックス作成を開始します。
 
 作業中の DXPクラスタを作成しました!
 
-<a name="次のステップ" />
+<a name="whats-next" />
 
 ## 次のステップ
 
 DXPクラスター用に[データベース](./database-configuration-for-cluster-nodes.md)を設定します。
 
-<a name="付録a環境設定" />
+<a name="appendix-a-environment-settings" />
 
 ## 付録A：環境設定
 
@@ -313,7 +313,7 @@ DXPクラスター用に[データベース](./database-configuration-for-cluste
 
 詳細は、Env/ [ポータルプロパティ](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html) の定義を参照してください。
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 

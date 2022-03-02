@@ -23,7 +23,7 @@ Incompatible setting for: company.security.auth.type
 
 さらに、認証メカニズム用のモジュールまたはプラグインを備えたApacheなどのフロントWebサーバーなど、Liferay Portalの外部のセキュリティメカニズムを使用する必要があります。 リバースプロキシを使用すると、HTTPリクエストをクライアントのWebブラウザからLiferay Portalのアプリケーションサーバーに直接送信することで、悪意のあるユーザーのなりすましを防ぐことができます。
 
-<a name="トークンベースの認証の構成" />
+<a name="configuring-token-based-authentication" />
 
 ## トークンベースの認証の構成
 
@@ -44,7 +44,7 @@ Incompatible setting for: company.security.auth.type
 
 ［**保存**］ をクリックして、トークンベースのSSOをアクティブにしてください。
 
-<a name="必要なsiteminder構成" />
+<a name="required-siteminder-configuration" />
 
 ## 必要なSiteMinder構成
 
@@ -56,7 +56,7 @@ BadUrlChars       //,./,/.,/*,*.,\,%00-%1f,%7f-%ff,%25
 
 上記の設定は、`~`文字を除いてデフォルトと同じです。 SiteMinderを再起動して、構成のアップデートを有効にします。 詳細は、SiteMinderの [ドキュメント](https://techdocs.broadcom.com/us/product-content/recommended-reading/technical-document-index/ca-siteminder-informational-documentation-index.html) を参照してください。
 
-<a name="まとめ" />
+<a name="summary" />
 
 ## まとめ
 

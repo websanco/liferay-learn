@@ -17,7 +17,7 @@ Liferay DXPをデータベースに接続するには、次の手順が必要で
 * [JDBCコネクタのインストール](#installing-a-jdbc-connector)
 * [データソースの構成](#configure-a-data-source)
 
-<a name="データベース設定-1" />
+<a name="database-configuration-1" />
 
 ## データベース設定
 
@@ -63,7 +63,7 @@ Liferay DXPがデータを保持するには、データベースユーザーの
 
 データベースサーバー、データベース、およびデータベースユーザーを構成しました。 Liferay DXPがデータベースとの通信に使用するJDBCコネクタをインストールする準備が整いました。
 
-<a name="jdbcコネクタをインストールする" />
+<a name="install-a-jdbc-connector" />
 
 ## JDBCコネクタをインストールする
 
@@ -82,7 +82,7 @@ OracleやDB2などの専用データベースに接続している場合は、�
 | DB2    | `db2jcc4.jar` | [IBM](https://www.ibm.com/)                 | ` dbc2jcc`コネクタは3.72以降廃止されました。                                                                                                                     |
 | Oracle | `ojdbc8.jar`  | [Oracle](https://www.oracle.com/index.html) | [データ切り捨ての問題](https://issues.liferay.com/browse/LPS-79229) がCLOB列からデータを読み取って検出されたため、少なくともOracle 12.2.0.1.0 JDBC 4.2バージョンを備えた`ojdbc8.jar`ライブラリが必要です。 |
 
-<a name="データソースの構成" />
+<a name="configuring-a-data-source" />
 
 ## データソースの構成
 
@@ -96,14 +96,14 @@ OracleやDB2などの専用データベースに接続している場合は、�
 
 ### Docker環境変数
 
-DXP環境変数をDockerイメージに渡すことで、組み込みのデータソース接続を構成できます。 例として、[Database Templates](./database-templates.md)を参照してください。
+DXP環境変数をDockerイメージに渡すことで、組み込みのデータソース接続を構成できます。 例として、 [データベーステンプレート](./database-templates.md) を参照してください。
 
 ### ポータルプロパティ
 
-[ポータルプロパティ](./portal-properties.md) ファイルを使用して、Liferay Tomcatバンドル、アプリケーションサーバーのインストール、またはDockerイメージでデータソース接続を構成できます。 例として、[Database Templates](./database-templates.md)を参照してください。
+[ポータルプロパティ](./portal-properties.md) ファイルを使用して、Liferay Tomcatバンドル、アプリケーションサーバーのインストール、またはDockerイメージでデータソース接続を構成できます。 例として、 [データベーステンプレート](./database-templates.md) を参照してください。
 
 ```{note}
-Dockerイメージでポータルプロパティファイルを使用するには、バインドマウントまたはボリュームを使用してファイルを渡す必要があります。 詳細については、[Providing Files to the Container](../installing-liferay/using-liferay-docker-images/providing-files-to-the-container.md)を参照してください。
+Dockerイメージでポータルプロパティファイルを使用するには、バインドマウントまたはボリュームを使用してファイルを渡す必要があります。 詳細については、 [コンテナへのファイルの提供](../installing-liferay/using-liferay-docker-images/providing-files-to-the-container.md) を参照してください。
 ```
 
 ### セットアップウィザード

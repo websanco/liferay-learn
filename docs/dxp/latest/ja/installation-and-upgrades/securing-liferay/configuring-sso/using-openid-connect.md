@@ -8,7 +8,7 @@ OpenID Connectは、ユーザーが他のシステムにあるアカウントを
 
 OpenID ConnectのトークンフローはOAuth 2.0の機能の上に構築されているため、OAuth 2.0に似ています。 OAuth 2.0は認証プロトコルにすぎないため、特定のAPIへのアクセスを許可する **アクセストークン** を送信します。 OpenID Connectは、ユーザーが認証され、権限を付与されている場合に、 **名前** や **電子メール** などのユーザー情報を渡す **IDトークン** をこれに追加します。
 
-<a name="openid-connectプロバイダーでクライアントを作成する" />
+<a name="creating-a-client-in-openid-connect-provider" />
 
 ## OpenID Connectプロバイダーでクライアントを作成する
 
@@ -26,7 +26,7 @@ OpenID Connectを使用するには、まずプロバイダーにクライアン
 
 プロバイダーから情報を収集します。 プロバイダー接続を作成する必要があります。
 
-<a name="openid-connectプロバイダー接続の構成" />
+<a name="configuring-an-openid-connect-provider-connection" />
 
 ## OpenID Connectプロバイダー接続の構成
 
@@ -67,7 +67,7 @@ com.liferay.portal.security.sso.openid.connect.internal.configuration.OpenIdConn
 
 ここで、`［name］`には、`provider1`などの一意の名前を入力します。
 
-<a name="openid-connect認証の有効化" />
+<a name="enabling-openid-connect-authentication" />
 
 ## OpenID Connect認証の有効化
 
@@ -85,7 +85,7 @@ com.liferay.portal.security.sso.openid.connect.configuration.OpenIdConnectConfig
 
 これで、ユーザーはOpenID Connectでサインインできます。
 
-<a name="openid-connectでサインインする" />
+<a name="signing-in-with-openid-connect" />
 
 ## OpenID Connectでサインインする
 

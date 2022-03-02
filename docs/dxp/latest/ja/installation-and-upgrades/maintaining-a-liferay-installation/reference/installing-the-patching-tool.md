@@ -4,7 +4,7 @@
 
 アプリケーションサーバー上のDXPへのパッチ適用とパッチ適用ツールの更新は手動で行われます。
 
-<a name="インストール" />
+<a name="installation" />
 
 ## インストール
 
@@ -24,7 +24,7 @@ cd patching-tool
 ./patching-tool.sh help
 ```
 
-<a name="パッチツールの更新" />
+<a name="updating-the-patching-tool" />
 
 ## パッチツールの更新
 
@@ -41,7 +41,7 @@ Patching Toolは、インストールするパッチに新しいPatching Toolバ
 
 パッチツールは、DXPインストールで構成する準備ができています。
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 

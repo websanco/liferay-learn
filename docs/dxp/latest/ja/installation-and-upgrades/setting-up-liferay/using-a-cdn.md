@@ -22,7 +22,7 @@ LiferayがCDN経由でのサービス提供をサポートしているリソー�
 CDNは、外部から動的に読み込まれたリソースを提供するものではありません。
 ```
 
-<a name="liferay-cdnの要件" />
+<a name="liferay-cdn-requirements" />
 
 ## Liferay CDNの要件
 
@@ -34,7 +34,7 @@ CDNは、次の要件を満たす必要があります。
 
 認定されたCDNを設定した後、それを使用するようにLiferayを設定します。
 
-<a name="cdnを使用するようにliferayを設定する" />
+<a name="configuring-liferay-to-use-a-cdn" />
 
 ## CDNを使用するようにLiferayを設定する
 
@@ -70,7 +70,7 @@ CDNホストを設定しました。 これでLiferayは、古いホストを新
 
 
 
-<a name="カスタムプラグインでのcdnの使用" />
+<a name="using-a-cdn-in-custom-plugins" />
 
 ## カスタムプラグインでのCDNの使用
 

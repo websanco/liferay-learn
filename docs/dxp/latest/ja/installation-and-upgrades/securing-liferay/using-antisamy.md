@@ -8,7 +8,7 @@ AntiSamyはデフォルトで有効になっています。
 
 ![Liferay DXPのAntiSamy構成オプションには、ブラックリストとホワイトリストの両方が含まれます。](./using-antisamy/images/01.png)
 
-<a name="antisamyの構成" />
+<a name="configuring-antisamy" />
 
 ## AntiSamyの構成
 
@@ -32,7 +32,7 @@ AntiSamyはブラックリストとホワイトリストの両方を使用する
 
 1. 完了したら、 ［**保存**］ をクリックします。
 
-<a name="ワイルドカードの使用" />
+<a name="using-wildcards" />
 
 ## ワイルドカードの使用
 
@@ -46,7 +46,7 @@ AntiSamyはブラックリストとホワイトリストの両方を使用する
 
 AntiSamyを使用して、ユーザーが生成したコンテンツを他のユーザーが安全に閲覧できるようにします。
 
-<a name="antisamy-サニタイザー-クラス名別" />
+<a name="antisamy-sanitizer-by-class-name" />
 
 ## AntiSamy サニタイザー (クラス名別)
 

@@ -6,7 +6,7 @@ Liferay DXPは、XML（`.xml` ） アクティベーションキーを使用し�
 
 ![DXPを初めて実行すると、ライセンスページが表示されます。](./activating-liferay-dxp/images/01.png)
 
-<a name="キーを使用したdxpのアクティブ化" />
+<a name="activating-dxp-using-a-key" />
 
 ## キーを使用したDXPのアクティブ化
 
@@ -33,7 +33,7 @@ License registered ...
 
 DXPを使用する準備が整いました。
 
-<a name="キーが必要ですか" />
+<a name="need-a-key" />
 
 ## キーが必要ですか？
 
@@ -45,7 +45,7 @@ DXPをお試し中ですか？ [30日間の試用アクティベーションキ�
 Liferay DXP 7.2以前でLiferay Connected Services（LCS）を使用している場合、LCSでDXPインスタンスをアクティブ化する手順については、 [LCSのドキュメント](https://help.liferay.com/hc/en-us/articles/360017897492-Introduction-to-Managing-Liferay-DXP-with-Liferay-Connected-Services-) を参照してください。
 ```
 
-<a name="liferay-dxpの再アクティブ化" />
+<a name="reactivating-liferay-dxp" />
 
 ## Liferay DXPの再アクティブ化
 

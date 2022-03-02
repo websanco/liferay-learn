@@ -6,7 +6,7 @@
 Clustering will not work with the embedded HSQL database.
 ```
 
-<a name="読み書きデータベース構成" />
+<a name="read-writer-database-configuration" />
 
 ## 読み書きデータベース構成
 
@@ -114,13 +114,13 @@ Clustering will not work with the embedded HSQL database.
 
 DXPは、次回の起動時に、読み取りデータソース、書き込みデータソース、およびカウンターデータソースを使用します。
 
-<a name="データベースの複製" />
+<a name="database-replication" />
 
 ## データベースの複製
 
 データベースクラスタを使用すると、フォールトトレランスとDXPのパフォーマンスが向上します。 データベースクラスタインスタンスは常に同期している必要があります。 レプリケーションは、変更されたデータと変更されたスキーマを1つのデータベースインスタンスから別のデータベースインスタンスにコピーするプロセスです。 すべて [サポートされるデータベース](https://help.liferay.com/hc/en-us/articles/360049238151) のサポートレプリケーション。 データベースクラスターを使用している場合は、データベースベンダーの指示に従って、データベースをレプリケーション用に設定します。
 
-<a name="次のステップ" />
+<a name="whats-next" />
 
 ## 次のステップ
 

@@ -4,7 +4,7 @@ Kerberosを使用して、Liferay DXPでMicrosoft Windows&trade;アカウント�
 
 セキュリティの脆弱性が存続するため、この構成は [NTLM](https://portal.liferay.dev/docs/7-1/deploy/-/knowledge_base/d/ntlm-single-sign-on-authentication) よりも優先されます。
 
-<a name="前提条件" />
+<a name="prerequisites" />
 
 ## 前提条件
 
@@ -22,7 +22,7 @@ Windows&trade;サーバーでKerberosとActive Directoryをセットアップす
 
 これらの前提条件がすべて整ったら、Kerberos認証を構成する準備が整います。
 
-<a name="kerberos認証のしくみ" />
+<a name="how-kerberos-authentication-works" />
 
 ## Kerberos認証のしくみ
 
@@ -36,7 +36,7 @@ Windows&trade;サーバーでKerberosとActive Directoryをセットアップす
 
 次に、これらすべてを機能させる方法を学習します。
 
-<a name="kerberos認証の構成" />
+<a name="configuring-kerberos-authentication" />
 
 ## Kerberos認証の構成
 

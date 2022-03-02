@@ -4,7 +4,7 @@
 
 Fast IDentity Online 2またはFIDO2標準では、バイオメトリクス（指紋リーダーなど）、モバイル機器、またはパスワードレス認証用のその他のセキュリティキーを使用できます。 管理者はインスタンスに対してFIDO2を有効にするだけでよく、ユーザーはFIDO2準拠のデバイスを登録して使用できます。
 
-<a name="fido2の有効化" />
+<a name="enabling-fido2" />
 
 ## FIDO2の有効化
 
@@ -32,7 +32,7 @@ Fast IDentity Online 2またはFIDO2標準では、バイオメトリクス（�
 
 **Allow Origin Subdomain：** 元のマッチングルールに任意の元のサブドメインを含めるには、このボックスをオンにします。
 
-<a name="fido2オーセンティケーターの登録" />
+<a name="registering-a-fido2-authenticator" />
 
 ## FIDO2オーセンティケーターの登録
 
@@ -54,7 +54,7 @@ FIDO2を有効にすると、ユーザーはアカウント設定にオーセン
 
 ![アカウント設定には、登録したオーセンティケーターが一覧表示されます。](./fast-identity-online-2/images/03.png)
 
-<a name="fido2経由でログイン" />
+<a name="logging-in-via-fido2" />
 
 ## FIDO2経由でログイン
 

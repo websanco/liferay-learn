@@ -4,7 +4,7 @@ Java仮想マシン（JVM）の調整は、主にJavaヒープおよび非ヒー
 
 サンプルのOracle JVM設定をJVMの設定に適合させることができます。 互換性のあるJVMについては、 [互換性マトリックス](https://help.liferay.com/hc/en-us/articles/360049238151) を参照してください。
 
-<a name="ヒープスペースと非ヒープスペースを設定する" />
+<a name="set-heap-and-non-heap-space" />
 
 ## ヒープスペースと非ヒープスペースを設定する
 
@@ -36,7 +36,7 @@ JVMのメモリは、ヒープスペースと非ヒープスペースで構成�
 JVMヒープに32gを超える割り当てをしないでください。 ヒープサイズは、使用可能なCPUリソースの速度と量に見合ったものにする必要があります。
 ```
 
-<a name="survivor領域を設定する" />
+<a name="set-survivor-space" />
 
 ## Survivor領域を設定する
 
@@ -56,7 +56,7 @@ JVMヒープに32gを超える割り当てをしないでください。 ヒー�
 | `-XX:TargetSurvivorRatio=50`  | 各Edenガベージコレクションの後にSurvivor領域の50％を使用するようにJVMに指示します。      |
 | `-XX:MaxTenuringThreshold=15` | 旧世代のスペースに昇格する前に、最大15のガベージコレクション用にサバイバースペースにサバイバーを保持します。 |
 
-<a name="ガベージコレクションを設定する" />
+<a name="configure-garbage-collection" />
 
 ## ガベージコレクションを設定する
 
@@ -95,7 +95,7 @@ Garbage-First（G1）のような追加の「新しい」アルゴリズムが�
 
 CMSおよびParNewアルゴリズムはJava 11で廃止予定になっているため、Garbage-First（G1）アルゴリズムを使用してください。 デフォルトで有効になっています。 G1のデフォルト設定でテストを開始します。
 
-<a name="大きなページの使用を検討する" />
+<a name="consider-using-large-pages" />
 
 ## 大きなページの使用を検討する
 
@@ -149,7 +149,7 @@ Linuxで大きなページ（別名「巨大なページ」）を構成する方
 
 ハードウェア仕様とアプリケーションプロファイルに基づいてページサイズを調整します。
 
-<a name="まとめ" />
+<a name="conclusion" />
 
 ## まとめ
 

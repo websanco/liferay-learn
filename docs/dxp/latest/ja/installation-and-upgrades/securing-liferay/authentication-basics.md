@@ -19,7 +19,7 @@
 
 [Authentication Verifier](./securing-web-services/using-authentication-verifiers.md)はリモートアプリケーションの認証を管理でき、[認証パイプライン](../../developing-applications/README.md)はユーザーが1つまたは複数のシステムによって検証される方法を定義します。
 
-<a name="認証タイプ" />
+<a name="authentication-types" />
 
 ## 認証タイプ
 
@@ -57,7 +57,7 @@ company.security.auth.type=emailAddress
 #company.security.auth.type=userId
 ```
 
-<a name="sign-inウィジェットの使用と設定" />
+<a name="using-and-configuring-the-sign-in-widget" />
 
 ## ［Sign In］ウィジェットの使用と設定
 
@@ -97,10 +97,10 @@ CAPTCHAまたはreCAPTCHAを有効にして、ボットによるアカウント�
 1. その他のオプションを使用すると、開発者はSimple CAPTCHAエンジンをカスタマイズできます。
 1. 完了したら、 ［**保存**］ をクリックします。
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 
-* [Securing Liferay](../securing-liferay.md)
+* [Liferayの保護](../securing-liferay.md)
 * [Introduction to Securing Web Services](./securing-web-services.md)
 * [パスワードポリシーの設定](../../users-and-permissions/roles-and-permissions/configuring-a-password-policy.md)

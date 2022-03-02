@@ -4,14 +4,14 @@
 
 `［LIFERAY_HOME］/tools/portal-tools-db-upgrade-client`フォルダ（Windowsでは`db_upgrade.bat`）にある`db_upgrade.sh`スクリプトを使用して、アップグレードツールを起動します。
 
-<a name="概要" />
+<a name="overview" />
 
 ## 概要
 
 * [アップグレードツールの使用](#database-upgrade-tool-usage)
 * [アップグレードツールの設定](#configuring-the-upgrade-tool)
 
-<a name="データベースアップグレードツールの使用" />
+<a name="database-upgrade-tool-usage" />
 
 ## データベースアップグレードツールの使用
 
@@ -57,7 +57,7 @@ db_upgrade.sh -l "output.log"
 db_upgrade.sh -j "-Xmx8000m -Dfile.encoding=UTF-8 -Duser.timezone=GMT"
 ```
 
-<a name="アップグレードツールの設定" />
+<a name="configuring-the-upgrade-tool" />
 
 ## アップグレードツールの設定
 

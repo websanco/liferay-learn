@@ -21,7 +21,7 @@ Liferayインスタンスから切り離された状態でデータベースを�
 | Liferay DXP（サブスクリプション） | [**ダウンロード** ページ](https://customer.liferay.com/group/customer/downloads) に移動し、DXPバージョンと **製品/サービスパック** のファイルタイプを選択します。 表示されるリストで、 **Liferay DXPアップグレードクライアント** 用の ［**Download**］ をクリックします。                                                                   |
 | Liferay Portal         | [［**Downloads**］ ページ](https://www.liferay.com/downloads-community) に移動します。 ［**Liferay Portal**］ ダウンロードメニューで、 ［**Other files**］ を選択して、 ［**ダウンロード**］ をクリックします。 最新のLiferay PortalのリリースアセットのGitHubページが表示されます。 `liferay-ce-portal-tools-［version］.zip`をクリックします。 |
 
-<a name="新規インストール時の設定" />
+<a name="setting-up-a-new-installation" />
 
 ## 新規インストール時の設定
 
@@ -63,7 +63,7 @@ Liferayインスタンスから切り離された状態でデータベースを�
 
 1. [コマース](https://learn.liferay.com/commerce/latest/ja/index.html) を使用している場合は、コマースをアップグレードする準備をしてください。  詳細については、 [Liferay Commerceのアップグレード](https://learn.liferay.com/commerce/latest/ja/installation-and-upgrades/upgrading-liferay-commerce.html) を参照してください。
 
-1. Liferayデータベースのアップグレードと一緒にマーケットプレイスアプリのデータをアップグレードする場合は、新しいLiferayバージョンの対象となる各アプリの最新バージョンを[ダウンロード](../../../system-administration/installing-and-managing-apps/installing-apps/downloading-apps.md)して、`[Liferay Home]/deploy`フォルダにコピーします。 それ以外の場合は、[Post-Upgrade Considerations](./post-upgrade-considerations.md)で説明されているように、データベースのアップグレード後にアプリをインストールし、データをアップグレードできます。 
+1. Liferayデータベースのアップグレードと一緒にマーケットプレイスアプリのデータをアップグレードする場合は、新しいLiferayバージョンの対象となる各アプリの最新バージョンを[ダウンロード](../../../system-administration/installing-and-managing-apps/installing-apps/downloading-apps.md)して、`[Liferay Home]/deploy`フォルダにコピーします。 それ以外の場合は、 [アップグレード後の考慮事項](./post-upgrade-considerations.md) で説明されているように、データベースのアップグレード後にアプリをインストールし、データをアップグレードできます。 
 
 1. [高度なファイルシステムストア](../../../system-administration/file-storage/configuring-file-storage.md)または[簡易ファイルシステムストア](../../../system-administration/file-storage/other-file-store-types/simple-file-system-store.md)を使用していて、保存場所を変更している場合は、ファイルストアの設定を [`.config`ファイル](../../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md#creating-configuration-files) にエクスポートして、新しい`［Liferay Home］/osgi/configs/`フォルダにコピーします。 
    
@@ -103,7 +103,7 @@ Liferayインスタンスから切り離された状態でデータベースを�
 
 
 
-<a name="アップグレードツールの実行" />
+<a name="running-the-upgrade-tool" />
 
 ## アップグレードツールの実行
 
@@ -175,7 +175,7 @@ Liferayインスタンスから切り離された状態でデータベースを�
 
 
 
-<a name="アップグレードされたデータベースのテスト" />
+<a name="test-the-upgraded-database" />
 
 ## アップグレードされたデータベースのテスト
 
@@ -204,11 +204,11 @@ Liferayインスタンスから切り離された状態でデータベースを�
 
 これが試用版のアップグレードで、アップグレード時間を短縮したい場合は、データベースをアップグレード用に調整し（まだ行っていない場合）、データベースから[不要なデータを削除](../upgrade-stability-and-performance/database-pruning-for-faster-upgrades.md)してください。 必要に応じてこの記事の手順を繰り返してください。
 
-問題が発生した場合は、[アップグレードレポート](../reference/upgrade-reports.md)を確認し、[Troubleshooting Upgrades](../reference/troubleshooting-upgrades.md)を参照してください。
+問題が発生した場合は、[アップグレードレポート](../reference/upgrade-reports.md)を確認し、 [アップグレードのトラブルシューティング](../reference/troubleshooting-upgrades.md) を参照してください。
 
 
 
-<a name="次のステップ" />
+<a name="next-steps" />
 
 ## 次のステップ
 

@@ -16,7 +16,7 @@ DXPパッチタイプとPortal CEフィックス配信方法の概要を以下�
 
 
 
-<a name="フィックスパック" />
+<a name="fix-packs" />
 
 ## フィックスパック
 
@@ -28,7 +28,7 @@ DXPパッチタイプとPortal CEフィックス配信方法の概要を以下�
 
 
 
-<a name="セキュリティ修正パック" />
+<a name="security-fix-packs" />
 
 ## セキュリティ修正パック
 
@@ -54,7 +54,7 @@ Security Fix Packs do not change your DXP installation's regular Fix Pack level.
 
 
 
-<a name="ホットフィックス" />
+<a name="hotfixes" />
 
 ## ホットフィックス
 
@@ -66,7 +66,7 @@ Security Fix Packs do not change your DXP installation's regular Fix Pack level.
 
 
 
-<a name="サービスパック" />
+<a name="service-packs" />
 
 ## サービスパック
 
@@ -80,7 +80,7 @@ Service Packは、元のDXP GAメジャーリリースの上に構築されて�
 
 
 
-<a name="ポータルceの配信を修正" />
+<a name="rolling-releases" />
 
 ## ポータルCEの配信を修正
 
@@ -88,7 +88,7 @@ Liferay Portal CE GAリリースはDXPサービスパックに基づいており
 
 
 
-<a name="パッチテスト" />
+<a name="patch-testing" />
 
 ## パッチテスト
 
@@ -104,7 +104,7 @@ Liferay Portal CE GAリリースはDXPサービスパックに基づいており
 
 
 
-<a name="パッチについていく" />
+<a name="keeping-up-with-patches" />
 
 ## パッチについていく
 
@@ -128,7 +128,7 @@ Liferay Portal CE GAリリースはDXPサービスパックに基づいており
 
 
 
-<a name="まとめ" />
+<a name="conclusion" />
 
 ## まとめ
 
@@ -136,7 +136,7 @@ Liferayが修正プログラムを提供するために提供するパッチの�
 
 
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 

@@ -56,7 +56,7 @@ Liferayは、 [サポートされている任意のアプリケーションサ�
 
 ## 次のステップ
 
-Liferayをインストールした後、[Setting Up Liferay](../setting-up-liferay.md)に進み、次のオプションを構成します。
+Liferayをインストールした後、 [Liferayのセットアップ](../setting-up-liferay.md) に進み、次のオプションを構成します。
 
 * 検索機能
 * ローカリゼーション
@@ -72,4 +72,4 @@ Liferayをインストールした後、[Setting Up Liferay](../setting-up-lifer
 
 * [バックアップ](../maintaining-a-liferay-dxp-installation/backing-up.md)
 * [Patching Liferay DXP](../maintaining-a-liferay-dxp-installation/patching-liferay/patching-liferay.md)
-* [Securing Liferay](../securing-liferay.md)
+* [Liferayの保護](../securing-liferay.md)

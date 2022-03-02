@@ -8,7 +8,7 @@ DXPバンドルとDXPアプリケーションサーバーのインストール�
 
 DXPバンドルにパッチを適用する場合は、以下の基本的なパッチ適用手順に進んでください。 あなたは、アプリケーション・サーバー上でDXPにパッチを適用している場合、 [アプリケーションサーバ上でDXPにパッチを適用するための準備](#preparing-to-patch-dxp-on-an-application-server) **前** パッチ適用手順以下。
 
-<a name="パッチ適用手順" />
+<a name="patching-steps" />
 
 ## パッチ適用手順
 
@@ -120,7 +120,7 @@ DXPインスタンスにパッチが適用され、実行されています。
 If the patch doesn't install or if you're unable to resolve errors that occur, please open a [Help Center ticket](https://help.liferay.com/hc/) and provide the full Patching Tool `info` output by running `./patching-tool.sh info > output.txt` and attaching the `output.txt` file to the ticket.
 ```
 
-<a name="アプリケーションサーバー上のdxpにパッチを適用する準備" />
+<a name="preparing-to-patch-dxp-on-an-application-server" />
 
 ## アプリケーションサーバー上のDXPにパッチを適用する準備
 
@@ -139,7 +139,7 @@ DXPをアプリケーションサーバーにインストールした場合、DX
 
 DXPバンドルとDXPアプリケーションサーバーのインストールにパッチを適用する方法をマスターしました。
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 

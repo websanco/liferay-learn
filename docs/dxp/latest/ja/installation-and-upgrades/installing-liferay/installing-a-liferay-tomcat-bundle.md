@@ -3,20 +3,20 @@
 Tomcatバンドルには、Liferay DXPが事前にデプロイされたApache Tomcatアプリケーションサーバーが含まれています。 これは、Liferay DXPをオンプレミスにインストールする最も簡単で最速の方法です。
 
 ```{note}
-   次のアプリケーションサーバーのいずれかをすでに使用している場合は、使用しているアプリケーションサーバーの名前をクリックして、DXPをデプロイする手順を確認してください。 `Tomcat <./installing-liferay-on-an-application-server/installing-on-tomcat.md>`、`WildFly <./installing-liferay-on-an-application-server/installing-on-wildfly.md>`_、`JBoss EAP <./installing-liferay-on-an-application-server/installing-on-jboss-eap.md>`_、`WebLogic <./installing-liferay-on-an-application-server/installing-on-weblogic.md>`_、または`WebSphere <./installing-liferay-on-an-application-server/installing-on-websphere.md>`_.。
+   次のアプリケーションサーバーのいずれかをすでに使用している場合は、使用しているアプリケーションサーバーの名前をクリックして、DXPをデプロイする手順を確認してください。 [Tomcat](./installing-liferay-on-an-application-server/installing-on-tomcat.md)、[WildFly](./installing-liferay-on-an-application-server/installing-on-wildfly.md)、[JBoss EAP](./installing-liferay-on-an-application-server/installing-on-jboss-eap.md)、[WebLogic](./installing-liferay-on-an-application-server/installing-on-weblogic.md)、または[WebSphere](./installing-liferay-on-an-application-server/installing-on-websphere.md).。
 ```
 
 ```{note}
-   ツアーやデモンストレーションの目的でLiferay DXPインスタンスをすばやく起動するには、`Starting With a Docker Image <../../getting-started/starting-with-a-docker-image.md>`_を参照してください。
+   ツアーやデモンストレーションの目的でLiferay DXPインスタンスをすばやく起動するには、[Starting With a Docker Image](../../getting-started/starting-with-a-docker-image.md)を参照してください。
 ```
 
-<a name="前提条件" />
+<a name="prerequisites" />
 
 ## 前提条件
 
-Liferay DXPにはJava JDK 8または11が必要です。 JDKの選択には [互換性マトリックス](https://help.liferay.com/hc/en-us/articles/360049238151) を参照してください。 推奨される設定については、[JVM Configuration](../reference/jvm-configuration.md)を参照してください。
+Liferay DXPにはJava JDK 8または11が必要です。 JDKの選択には [互換性マトリックス](https://help.liferay.com/hc/en-us/articles/360049238151) を参照してください。 推奨される設定については、 [JVM設定](../reference/jvm-configuration.md) を参照してください。
 
-<a name="dxpをダウンロードする" />
+<a name="download" />
 
 ## DXPをダウンロードする
 
@@ -31,7 +31,7 @@ Liferay DXPにはJava JDK 8または11が必要です。 JDKの選択には [互
 | Tomcatバンドル（`.tar.gz` ） | 任意のOSにインストールされるgzip圧縮されたバンドルアーカイブ  |
 | Tomcatバンドル（`.7z`）      | 任意のOSにインストールされる7-Zip圧縮されたバンドルアーカイブ |
 
-<a name="dxpをインストールする" />
+<a name="install" />
 
 ## DXPをインストールする
 
@@ -39,8 +39,8 @@ Liferay DXPにはJava JDK 8または11が必要です。 JDKの選択には [互
 
 　 Liferay DXPをインストールしました。 次にデータベースを設定します。
 
-<a name="次のステップ" />
+<a name="next-steps" />
 
 ## 次のステップ
 
-* [Configuring a Database](./configuring-a-database.md)
+* [データベースの構成](./configuring-a-database.md)

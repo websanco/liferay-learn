@@ -30,7 +30,7 @@ Liferayコンテナは、提供されたファイルを使用して、次のユ�
 
 バインドマウントは、ファイルを提供するためのボリュームよりも単純であるため、ここでの例で使用されています。 コンテナにマウントするためのファイルを準備するときは、管理しやすい方法でファイルを整理すると便利です。 ここでは、Liferayコンテナへのバインドマウント、ファイルの整理、および `docker cp`の使用について説明します。
 
-<a name="バインドマウント形式" />
+<a name="bind-mount-format" />
 
 ## バインドマウント形式
 
@@ -42,7 +42,7 @@ Liferayコンテナは、提供されたファイルを使用して、次のユ�
 
 バインドマウントソースは、ホスト内の任意のフォルダパスまたはファイルパスにすることができます。 バインドマウント先は、コンテナ内の任意のフォルダパスまたはファイルパスにすることができます。
 
-<a name="スキャンされたコンテナフォルダ" />
+<a name="scanned-container-folders" />
 
 ## スキャンされたコンテナフォルダ
 
@@ -58,7 +58,7 @@ Liferayコンテナは、提供されたファイルを使用して、次のユ�
 
 各フォルダに関連付けられているアクションと使用例については、 [API](./container-lifecycle-and-api.md#api) を参照してください。
 
-<a name="バインドマウント用のファイルの整理" />
+<a name="organizing-files-for-bind-mounting" />
 
 ## バインドマウント用のファイルの整理
 
@@ -80,7 +80,7 @@ Liferayコンテナのバインドマウントは、いくつかの方法で整�
 
 コンテナの [構成フェーズ](./container-lifecycle-and-api.md#lifecycle) ファイルを提供する最も一般的な方法は、ホストフォルダーをコンテナの `/mnt/liferay` フォルダーにバインドマウントすることです。
 
-<a name="バインド-ホストフォルダを-mntliferayにマウントする" />
+<a name="bind-mounting-a-host-folder-to-mntliferay" />
 
 ## バインド ホストフォルダを `/mnt/liferay`にマウントする
 
@@ -136,7 +136,7 @@ Liferayへの構成、パッチ適用、および展開のためにファイル�
 
 [コンテナライフサイクル](./container-lifecycle-and-api.md#liferay-phases) に従って、新しいコンテナはマウントされたホストフォルダ内のファイル（およびネストされたフォルダ）に作用し、Tomcatを起動します
 
-<a name="docker-cpを使用する" />
+<a name="using-docker-cp" />
 
 ## `docker cp`を使用する
 
@@ -160,12 +160,12 @@ docker cp com.liferay.journal.configuration.JournalServiceConfiguration.config m
 
 しかし、macOSなどのオペレーティングシステムでは、`docker cp`を使用すると、ファイル権限の問題が発生する場合があります。 このような場合は、バインドマウント（このセクションで説明）またはボリュームを使用してください。
 
-<a name="まとめ" />
+<a name="conclusion" />
 
 ## まとめ
 
 バインドマウントと `docker cp` コマンドを使用してコンテナにファイルを提供する方法をマスターしました。 詳細は、 [コンテナのライフサイクルとAPI](./container-lifecycle-and-api.md) を参照してください。 ユースケースの詳細は、次の記事を参照してください。
 
-* [Configuring Containers](./configuring-containers.md)
+* [コンテナの設定](./configuring-containers.md)
 * [コンテナへのアプリやその他のアーティファクトのインストール](./installing-apps-and-other-artifacts-to-containers.md)
 * [DockerでDXPにパッチを適用する](./patching-dxp-in-docker.md)

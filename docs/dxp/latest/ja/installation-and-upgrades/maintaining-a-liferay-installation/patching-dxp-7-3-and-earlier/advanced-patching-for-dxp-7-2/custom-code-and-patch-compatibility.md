@@ -11,7 +11,7 @@
 これらのカスタマイズとパッチ適用の手順は、Liferay DXP 7.2にのみ適用されます。 DXP 7.3以降には適用されません。
 ```
 
-<a name="カスタムパッチのパッチレベル情報の保存" />
+<a name="storing-patch-level-information-for-custom-patches" />
 
 ## カスタムパッチのパッチレベル情報の保存
 
@@ -26,7 +26,7 @@ Patching Toolの `store` および `diff` コマンドは、Liferay DXPパッチ
 
 詳しい使用方法については、 `./patching-tool.sh help store`実行してください。
 
-<a name="パッチレベルの比較" />
+<a name="comparing-patch-level-differences" />
 
 ## パッチレベルの比較
 
@@ -40,7 +40,7 @@ Patching Toolの `store` および `diff` コマンドは、Liferay DXPパッチ
 
 詳しい使用方法については、 `./patching-tool.sh help diff`実行してください。
 
-<a name="パッチとカスタムプラグイン間の衝突の処理" />
+<a name="handling-collisions-between-patches-and-custom-plugins" />
 
 ## パッチとカスタムプラグイン間の衝突の処理
 
@@ -66,7 +66,7 @@ Patching Toolの `store` および `diff` コマンドは、Liferay DXPパッチ
 
 カスタムコードとカスタムパッチを他のDXPパッチと統合する方法をマスターしました。
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 

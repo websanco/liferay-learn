@@ -6,7 +6,7 @@ LiferayはOpenAMバージョン13のみをサポートしています。 OpenAM/
 
 OpenAMは、SunのSystem Access Manager製品のコードベースから提供されるオープンソースのシングルサインオンソリューションです。 OpenAMを使用して、IDのさまざまなリポジトリに対するいくつかの異なる認証スキームを含むインフラストラクチャにLiferay DXPを統合できます。
 
-<a name="インストールに関する注記" />
+<a name="installation-notes" />
 
 ## インストールに関する注記
 
@@ -24,7 +24,7 @@ OpenAMをLiferay DXPと同じサーバーにインストールする場合は、
 OpenAM 12以下はLiferay DXPで動作しますが、サポートは終了しています。 このため、本番環境での使用にはOpenAM 13のみをお勧めします。
 ```
 
-<a name="openamの構成" />
+<a name="configuring-openam" />
 
 ## OpenAMの構成
 
@@ -45,7 +45,7 @@ OpenAM 12以下はLiferay DXPで動作しますが、サポートは終了して
 
 Liferay DXPは、ユーザーが`/c/portal/login` URLをリクエストすると（たとえば、 ［**Sign In**］ リンクをクリックしたとき）、ユーザーをOpenAMにリダイレクトします。
 
-<a name="別のliferayスコープでopenamを構成する" />
+<a name="configuring-openam-at-a-different-liferay-scope" />
 
 ## 別のLiferayスコープでOpenAMを構成する
 

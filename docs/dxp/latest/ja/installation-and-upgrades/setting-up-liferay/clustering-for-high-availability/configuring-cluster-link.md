@@ -17,7 +17,7 @@ DXPのクラスタリングは、ネットワークとクラスタノードの�
 
 
 
-<a name="クラスタリンクの有効化" />
+<a name="enabling-cluster-link" />
 
 ## クラスタリンクの有効化
 
@@ -54,7 +54,7 @@ Cluster Linkには、ノード間の1対多タイプの通信を提供する拡�
 
 
 
-<a name="クラスタリンクの構成-1" />
+<a name="configuring-cluster-link-1" />
 
 ## クラスタリンクの構成
 
@@ -114,7 +114,7 @@ cluster.link.autodetect.address=www.google.com:80
 
 
 
-<a name="まとめ" />
+<a name="conclusion" />
 
 ## まとめ
 
@@ -133,7 +133,7 @@ GMS: address=oz-52865, cluster=liferay-channel-control, physical address=192.168
 
 
 
-<a name="次のステップ" />
+<a name="whats-next" />
 
 ## 次のステップ
 
@@ -141,7 +141,7 @@ GMS: address=oz-52865, cluster=liferay-channel-control, physical address=192.168
 
 
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 

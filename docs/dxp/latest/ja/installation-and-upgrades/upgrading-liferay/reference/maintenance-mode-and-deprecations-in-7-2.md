@@ -13,10 +13,10 @@
 ```
 
 ```{important}
-   詳細は、`Maintenance Mode and Deprecation Policies <https://help.liferay.com/hc/en-us/articles/360015767952-Maintenance-Mode-and-Deprecation>`_を参照してください。
+   詳細は、 [Maintenance Mode and Deprecation Policies](https://help.liferay.com/hc/en-us/articles/360015767952-Maintenance-Mode-and-Deprecation) を参照してください。
 ```
 
-<a name="廃止予定の機能の利用可能性" />
+<a name="deprecated-feature-availability" />
 
 ## 廃止予定の機能の利用可能性
 
@@ -37,7 +37,7 @@ Liferay 7.0以前からアップグレードする場合は、該当するリリ
 * [ 7.1](https://help.liferay.com/hc/en-us/articles/360018403151-Digital-Experience-Platform-7-1-Deprecated-and-Removed-Items)
 * [ 7.0](https://help.liferay.com/hc/en-us/articles/360018123832-Digital-Experience-Platform-7-0-Deprecated-and-Removed-Items)
 
-<a name="72で廃止予定の機能" />
+<a name="features-deprecated-in-72" />
 
 ## 7.2で廃止予定の機能
 
@@ -70,7 +70,7 @@ Liferay 7.0以前からアップグレードする場合は、該当するリリ
 | ユーザーグループページ（コピーモード）                  | バンドル      | 有効にする方法については、[レガシーユーザーグループサイトの動作](../../../users-and-permissions/user-groups/user-group-sites.md)の説明を参照してください。                                                                                                                                                       |
 | Webフォーム                              | 削除しました    | 7.0用にリリースされた最終バージョン。                                                                                                                                                                                                                                                 |
 
-<a name="72でメンテナンスモードに移行された機能" />
+<a name="features-moved-to-maintenance-mode-in-72" />
 
 ## 7.2でメンテナンスモードに移行された機能
 
@@ -81,9 +81,9 @@ Liferay 7.0以前からアップグレードする場合は、該当するリリ
 * Liferay Sync
 * ステージング
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 
-* [7.2 Breaking Changes](../../../liferay-internals/reference/7-2-breaking-changes.md)
+* [破壊的変更](../../../liferay-internals/reference/7-2-breaking-changes.md)
 * [7.2 Default Setting Changes](./default-setting-changes-in-7-2.md)

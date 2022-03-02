@@ -2,7 +2,7 @@
 
 データベースをアップグレードした後、本番環境用にLiferayを再度構成し、Liferayインスタンスに影響を与える可能性のある機能の変更を確認する必要があります。
 
-<a name="本番環境設定を再度有効にする" />
+<a name="re-enable-production-settings" />
 
 ## 本番環境設定を再度有効にする
 
@@ -36,13 +36,13 @@ rm osgi/configs/com.liferay.portal.search.configuration.IndexStatusManagerConfig
 データのアップグレード中にシャード化された環境から移行した場合、仮想インスタンスへの移行を完了するには、構成をさらに調整する必要があります。 詳細は、 [Upgrade and Update Properties](../other-upgrade-scenarios/upgrading-a-sharded-environment.md#Upgrade-and-Update-Properties) のセクションを参照してください。
 ```
 
-<a name="最新のマーケットプレイスアプリのインストール" />
+<a name="installing-the-latest-marketplace-apps" />
 
 ## 最新のマーケットプレイスアプリのインストール
 
 新しいLiferayバージョンの[マーケットプレイスアプリ](../../../system-administration/installing-and-managing-apps/installing-apps/downloading-apps.md)の最新バージョンをまだインストールしていない場合は、それらをインストールし、[Gogoシェルコマンド](../upgrade-stability-and-performance/upgrading-modules-using-gogo-shell.md)を使用して、必要なデータベースのアップグレードを確認して実行します。
 
-<a name="機能変更の考慮" />
+<a name="accounting-for-feature-changes" />
 
 ## 機能変更の考慮
 
@@ -68,13 +68,13 @@ Unable to add the journal article image {filename} into the file repository
 
 そのようなメッセージがない場合は、すべての画像がファイルストアにあるはずです。 Webコンテンツの記事をプレビューして、画像を確認できます。
 
-<a name="メンテナンスモードでの非推奨項目と機能の考慮" />
+<a name="account-for-deprecations-and-features-in-maintenance-mode" />
 
 ## メンテナンスモードでの非推奨項目と機能の考慮
 
 [メンテナンスモードでの非推奨項目と機能](../reference/maintenance-mode-and-deprecations-in-7-3.md)を確認し、Liferayインスタンスへの影響に対応するための計画を立ててください（まだ行ってない場合）。
 
-<a name="廃止されたデータを削除する" />
+<a name="remove-obsolete-data" />
 
 ## 廃止されたデータを削除する
 
@@ -84,7 +84,7 @@ Unable to add the journal article image {filename} into the file repository
 
 * 利用可能なLiferayアプリおよびモジュールからの廃止されたデータ。 [データ削除](../reference/data-removal.md) ツールを使用して削除します。
 
-<a name="まとめ" />
+<a name="conclusion" />
 
 ## まとめ
 

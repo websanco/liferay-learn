@@ -58,7 +58,7 @@ InnoDBの二重書き込みをオフにし、トランザクションコミッ�
 
 [同期コミット](https://www.postgresql.org/docs/10/wal-async-commit.html) をオフにし、 [ログ先行書き込みライター遅延](https://www.postgresql.org/docs/10/wal-async-commit.html) を`1000`ミリ秒に設定します。
 
-<a name="まとめ" />
+<a name="conclusion" />
 
 ## まとめ
 

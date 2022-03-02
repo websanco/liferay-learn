@@ -10,7 +10,7 @@
 
 コンテナは、これらのユースケースをトリガーおよび構成するためのAPIを提供します。 ライフサイクルのさまざまなフェーズでユースケースを実行します。
 
-<a name="ライフサイクル" />
+<a name="lifecycle" />
 
 ## ライフサイクル
 
@@ -38,7 +38,7 @@
 * `/user/local/liferay/scripts`
 
 ```{note}
-   You can pass files to these container folders in several different ways, including using `bind mounts <https://docs.docker.com/storage/bind-mounts/>`_, `volumes <https://docs.docker.com/storage/volumes/>`_, and ``docker cp``. See `Providing Files to the Container <./providing-files-to-the-container.md>`_ for more information.
+   You can pass files to these container folders in several different ways, including using [bind mounts](https://docs.docker.com/storage/bind-mounts/) , [volumes](https://docs.docker.com/storage/volumes/) , and `docker cp`. See [コンテナへのファイルの提供](./providing-files-to-the-container.md) for more information.
 ```
 
 上記の主要なフォルダーには、特定のアクション用に指定されたサブフォルダーがあります。 次のセクションでは、サブフォルダー、それらのファイルで実行されるアクション、および関連するユースケースをライフサイクルの段階順に記述します。
@@ -77,12 +77,12 @@
 |:------------------------------------------ |:------------------- |:----------------------------------------------------------------- |
 | `/usr/local/liferay/scripts/post-shutdown` | スクリプトをアルファベット順に実行する | [Tomcatをシャットダウンした後の](./running-scripts-in-containers.md) スクリプトの実行 |
 
-<a name="次のステップ" />
+<a name="whats-next" />
 
 ## 次のステップ
 
 コンテナのライフサイクルと API いついて学習できました。これで、 [コンテナに](./providing-files-to-the-container.md) ファイルを提供する最良の方法を決定できます。 または、上記の表に記載されているユースケースの実行を開始できます。 それらはあなたの便宜のためにここにリストされています：
 
-* [Configuring Containers](./configuring-containers.md)
+* [コンテナの設定](./configuring-containers.md)
 * [コンテナへのアプリやその他のアーティファクトのインストール](./installing-apps-and-other-artifacts-to-containers.md)
 * [DockerでDXPにパッチを適用する](./patching-dxp-in-docker.md)

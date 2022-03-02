@@ -18,19 +18,19 @@
 
 ローリング再起動の対象となるメンテナンスシナリオを以下に示します。
 
-<a name="新しいモジュールとプラグイン" />
+<a name="new-modules-and-plugins" />
 
 ## 新しいモジュールとプラグイン
 
 新しいプラグインまたはモジュール（クラスターにまだ存在しないもの）がローリング再起動の対象になるには、既存のプラグインまたはモジュールとの互換性を損なうような方法でデータを変更したり、データベース列を削除または名前変更したりしてはなりません。
 
-<a name="既存のモジュールとプラグインの更新" />
+<a name="updating-existing-modules-and-plugins" />
 
 ## 既存のモジュールとプラグインの更新
 
 既存のプラグインまたはモジュールの新しいバージョンをローリング再起動の対象にするためには、既存のバージョンのプラグインまたはモジュールとの互換性を損なう方法で、データを変更したり、データベース列を削除または名前変更したりしてはなりません。
 
-<a name="フィックスパックの適用" />
+<a name="applying-fix-packs" />
 
 ## フィックスパックの適用
 
@@ -38,7 +38,7 @@
 
 カスタマーポータルは、元に戻せないためローリング再起動の対象外となる[フィックスパック](../patching-liferay/patching-liferay.md)を識別します。 他のすべてのフィックスパックは対象です。
 
-<a name="フィックスパックの復元" />
+<a name="reverting-fix-packs" />
 
 ## フィックスパックの復元
 
@@ -46,25 +46,25 @@
 
 復帰可能なフィックスパックは、ローリング再起動で削除できます。
 
-<a name="portal-extpropertiesによって制御されるポータルプロパティ" />
+<a name="portal-properties-controlled-by-portal-extproperties" />
 
 ## portal-ext.propertiesによって制御されるポータルプロパティ
 
 [ポータルプロパティ](../../reference/portal-properties.md) ファイルの変更は、ローリング再起動に適用できます。
 
-<a name="構成管理ファイルによって制御されるシステム設定" />
+<a name="system-settings-controlled-by-configuration-admin-files" />
 
 ## 構成管理ファイルによって制御されるシステム設定
 
 [システム構成](../../reference/system-properties.md)ファイルは、ローリング再起動に適用できます。
 
-<a name="アプリケーションサーバーまたはjvm設定の変更" />
+<a name="application-server-or-jvm-setting-modifications" />
 
 ## アプリケーションサーバーまたはJVM設定の変更
 
 アプリケーションサーバーとJVM設定の変更は、ローリング再起動時に実行できます。
 
-<a name="javaバージョンの更新" />
+<a name="java-version-updates" />
 
 ## Javaバージョンの更新
 
@@ -72,7 +72,7 @@ Javaのマイナーバージョンの更新はローリング再起動時に適�
 
 ローリング再起動の対象となるすべての更新は、前述のローリング再起動手順を使用して適用できます。 他の更新は、次に説明するように異なる方法で行う必要があります。
 
-<a name="関連トピック" />
+<a name="additional-information" />
 
 ## 関連トピック
 

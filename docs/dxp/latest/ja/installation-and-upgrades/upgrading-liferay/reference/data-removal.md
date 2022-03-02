@@ -12,10 +12,10 @@
 
 廃止されたデータが削除されます。
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 
 * [データのクリーンアップ](./data-cleanup.md)
-* [Upgrading Via Docker](../upgrade-basics/upgrading-via-docker.md)
+* [Dockerによるアップグレード](../upgrade-basics/upgrading-via-docker.md)
 * [Using the Upgrade Tool](../upgrade-basics/using-the-database-upgrade-tool.md)

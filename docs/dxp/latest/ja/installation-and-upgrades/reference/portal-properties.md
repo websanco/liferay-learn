@@ -28,7 +28,7 @@ Liferayのインストールでは、プロパティファイルを使用しま�
 DXP 7.3以降、仮想インスタンスごとのポータルプロパティファイル機能は削除されました。 DXPは、`portal-[companyId].properties`形式のファイルから取得したインスタンスごとのプロパティを会社IDと一致するインスタンスに適用しなくなりました。
 ```
 
-<a name="ポータルプロパティの使用" />
+<a name="using-portal-properties" />
 
 ## ポータルプロパティの使用
 
@@ -51,7 +51,7 @@ jdbc.default.username=joe.bloggs
 jdbc.default.password=123456
 ```
 
-データベース構成の詳細は、[Database Configurations](./database-configurations.md)および[Database Templates](./database-templates.md)を参照してください 。
+データベース構成の詳細は、[Database Configurations](./database-configurations.md)および [データベーステンプレート](./database-templates.md) を参照してください 。
 
 ### Liferayホームの場所の設定
 
@@ -94,7 +94,7 @@ company.security.auth.type=userId
 
 
 
-<a name="ポータルプロパティの優先度" />
+<a name="portal-property-priority" />
 
 ## ポータルプロパティの優先度
 
@@ -231,7 +231,7 @@ mail.session.jndi.name=mail/DevMailSession
 
 
 
-<a name="システム設定と構成ファイルの使用" />
+<a name="using-system-settings-and-configuration-files" />
 
 ## システム設定と構成ファイルの使用
 
@@ -243,12 +243,12 @@ DXPデータベースに格納されているプロパティは、ポータル�
 
 
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 
 * [ポータルプロパティ](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html)
 * [ポータル開発者プロパティ](../../liferay-internals/reference/portal-developer-properties.md)
-* [Configuring Containers](../installing-liferay/using-liferay-docker-images/configuring-containers.md)
-* [System Settings](../../system-administration/configuring-liferay/system-settings.md)
+* [コンテナの設定](../installing-liferay/using-liferay-docker-images/configuring-containers.md)
+* [システム設定](../../system-administration/configuring-liferay/system-settings.md)
 * [構成ファイルについて](../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md)

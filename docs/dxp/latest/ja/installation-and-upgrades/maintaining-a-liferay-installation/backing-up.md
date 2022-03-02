@@ -40,13 +40,13 @@ Git、BitBucket、Subversion、CVSなどのソース管理リポジトリを使�
 ファイルストア（ドキュメントライブラリ）を`[Liferay Home]/data`サブフォルダ以外の場所に構成した場合は、その場所をバックアップします。
 ```
 
-<a name="アプリケーションサーバー" />
+<a name="application-server" />
 
 ## アプリケーション・サーバー
 
 アプリケーションサーバーには、カスタマイズした可能性のあるDXP記述子、デプロイメント、および依存関係があります。 たとえば、DXPの `web.xml` ファイルをカスタマイズした場合、DXPパッチの `web.xml` 常に既存のものを上書きするため、バックアップする必要があります。 アプリケーションサーバー全体をバックアップすることをお勧めします。
 
-<a name="データベース" />
+<a name="database" />
 
 ## データベース
 
@@ -60,13 +60,13 @@ mysqldump --databases my-liferay-database > my-liferay-database-backup.sql
 
 その後、このファイルをバックアップできます。 データベースの復元時に、このファイルをデータベースにインポートして、データベースをエクスポートしたときの状態にデータベースの状態を再作成できます。
 
-<a name="ファイルストア" />
+<a name="file-store" />
 
 ## ファイルストア
 
 [ファイルストア（ドキュメントライブラリ）](../../system-administration/file-storage/configuring-file-storage.md)をバックアップします。  新しいバージョンのDXPにアップグレードするときは、既存のドキュメントライブラリを参照するか、ドキュメントライブラリを新しいDXP環境にコピーする必要があります。
 
-<a name="検索インデックス" />
+<a name="search-indexes" />
 
 ## 検索インデックス
 
@@ -74,13 +74,13 @@ mysqldump --databases my-liferay-database > my-liferay-database-backup.sql
 
 さらに、データセットが大きいユーザーは、バックアップから復元するときに、すべてのコンテンツとアセットのインデックスを再作成することを回避できます。 検索インデクスを保存する別の[ElasticsearchまたはSolr](../../using-search/installing-and-upgrading-a-search-engine/installing-a-search-engine.md)環境がある場合は、検索データのバックアップが最も簡単です。 詳細については、検索エンジンのバックアップ/復元のドキュメンテーションに従ってください（たとえば、Elasticsearchの [スナップショットと復元のドキュメンテーション](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/snapshot-restore.html) を参照してください）。
 
-<a name="ソースコード" />
+<a name="source-code" />
 
 ## ソースコード
 
 DXPを拡張した場合、またはプラグインを作成した場合は、GitやBitBucketなどのソースコードリポジトリに保存する必要があります。 進行中の作業を維持するために、ソースコードリポジトリを定期的にバックアップする必要があります。
 
-<a name="まとめ" />
+<a name="conclusion" />
 
 ## まとめ
 

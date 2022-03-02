@@ -5,7 +5,7 @@ Liferayの[パッチ](../../maintaining-a-liferay-dxp-installation/patching-life
 > エンタープライズサブスクリプション
 
 ```{important}
-   **Always** `back up <../../maintaining-a-liferay-dxp-installation/backing-up.md>`_ your database and installation before patching.
+   **Always** [back up](../../maintaining-a-liferay-dxp-installation/backing-up.md) your database and installation before patching.
 ```
 
 DXPコンテナのパッチに関するトピックは次のとおりです。
@@ -16,7 +16,7 @@ DXPコンテナのパッチに関するトピックは次のとおりです。
 * [パッチツールの更新](#updating-the-patching-tool)
 * [パッチのためのデータベースのアップグレード](#upgrading-the-database-for-a-patch)
 
-<a name="フィックスパックセキュリティフィックスパックおよびサービスパックイメージの使用" />
+<a name="using-fix-pack-security-fix-pack-and-service-pack-images" />
 
 ## フィックスパック、セキュリティフィックスパック、およびサービスパックイメージの使用
 
@@ -62,7 +62,7 @@ DXPコンテナのパッチに関するトピックは次のとおりです。
 
 DXPは、アーティファクトとファイルを使用して新しいコンテナで起動します。
 
-<a name="パッチのインストール" />
+<a name="installing-a-patch" />
 
 ## パッチのインストール
 
@@ -117,16 +117,16 @@ DXPは、アーティファクトとファイルを使用して新しいコン�
     ```
 
     ```{note}
-       バインドマウントを指定する方法については、`Providing Files to the Container <./providing-files-to-the-container.md>`_を参照してください。
+       バインドマウントを指定する方法については、 [コンテナへのファイルの提供](./providing-files-to-the-container.md) を参照してください。
     ```
 
 パッチツールがパッチをインストールし、DXPが起動します。
 
 ```{important}
-   パッチツールでメッセージ``［patch file］ is incompatible with Patching Tool version ［x.y.z］``が報告された場合は、最新のパッチツールをインストールしてください。 詳細は、`Installing the Patching Tool <#installing-the-patching-tool>`_を参照してください。
+   パッチツールでメッセージ`［patch file］ is incompatible with Patching Tool version ［x.y.z］`が報告された場合は、最新のパッチツールをインストールしてください。 詳細は、 [Installing the Patching Tool](#installing-the-patching-tool) を参照してください。
 ```
 
-<a name="パッチを元に戻す" />
+<a name="reverting-a-patch" />
 
 ## パッチを元に戻す
 
@@ -148,7 +148,7 @@ DXPは、アーティファクトとファイルを使用して新しいコン�
 
 1. 以前に使用した`docker run`引数を使用して、同じイメージまたは互換性のあるフィックスパックレベルを持つイメージから新しいコンテナを作成します。 ボリュームまたは [バインドマウント](./providing-files-to-the-container.md#bind-mounting-a-host-folder-to-mnt-liferay) を介して、必要なパッチを適用します。
 
-<a name="パッチツールの更新" />
+<a name="updating-the-patching-tool" />
 
 ## パッチツールの更新
 
@@ -168,7 +168,7 @@ DXPは、アーティファクトとファイルを使用して新しいコン�
 
 コンテナを再起動するか新しいコンテナを実行すると、コンテナのエントリポイントによって新しいパッチツールがインストールされます。
 
-<a name="パッチのためのデータベースのアップグレード" />
+<a name="upgrading-the-database-for-a-patch" />
 
 ## パッチのためのデータベースのアップグレード
 
@@ -182,11 +182,11 @@ DXPは、アーティファクトとファイルを使用して新しいコン�
 
 データベースがアップグレードされたら、そのデータベースを使用するコンテナを実行します。
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 
-* [Installing Apps and Other Artifacts to Containers](./installing-apps-and-other-artifacts-to-containers.md)
+* [アプリやその他のアーティファクトをコンテナにインストールする](./installing-apps-and-other-artifacts-to-containers.md)
 * [Docker Container Basics](./docker-container-basics.md)
 * [コンテナへのファイルの提供](./providing-files-to-the-container.md)
 * [コンテナのライフサイクルとAPI](./container-lifecycle-and-api.md)

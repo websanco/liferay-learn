@@ -16,14 +16,14 @@ Dockerをお持ちではありませんか？ まずは以下をご確認くだ�
 | Liferay Portal         | [`portal`](https://hub.docker.com/r/liferay/portal) | [こちら](https://hub.docker.com/r/liferay/portal/tags) |
 
 ```{important}
-エンタープライズサブスクライバーのインストールおよびクリティカルインストールへのアップグレードは、データベースアップグレードツールを使用して行う必要があります。 詳細は、[Using the Database Upgrade Tool](./using-the-database-upgrade-tool.md)を参照してください。
+エンタープライズサブスクライバーのインストールおよびクリティカルインストールへのアップグレードは、データベースアップグレードツールを使用して行う必要があります。 詳細は、 [データベースアップグレードツールの使用](./using-the-database-upgrade-tool.md) を参照してください。
 ```
 
 ```{important}
 アップグレードする前に、**必ず**データベースと既存のインストールを[バックアップ](../../maintaining-a-liferay-dxp-installation/backing-up.md)してください。 バックアップコピーでアップグレードプロセスをテストすることをお勧めします。
 ```
 
-<a name="最新のdockerイメージによるアップグレード" />
+<a name="upgrading-with-the-latest-docker-image" />
 
 ## 最新のDockerイメージによるアップグレード
 
@@ -45,7 +45,7 @@ Dockerイメージを使用してアップグレードする手順は次のと�
 
 1. [コマース](https://learn.liferay.com/commerce/latest/ja/index.html) を使用している場合は、コマースをアップグレードする準備をしてください。  詳細については、 [Liferay Commerceのアップグレード](https://learn.liferay.com/commerce/latest/ja/installation-and-upgrades/upgrading-liferay-commerce.html) を参照してください。
 
-1. Liferayデータベースのアップグレードと一緒にマーケットプレイスアプリのデータをアップグレードする場合は、新しいLiferayバージョンの対象となる各アプリの最新バージョンを[ダウンロード](../../../system-administration/installing-and-managing-apps/installing-apps/downloading-apps.md)して、`new-version/deploy`フォルダにコピーします。 それ以外の場合は、[Post-Upgrade Considerations](./post-upgrade-considerations.md)で説明されているようにデータベースのアップグレード後にアプリをインストールし、データをアップグレードできます。
+1. Liferayデータベースのアップグレードと一緒にマーケットプレイスアプリのデータをアップグレードする場合は、新しいLiferayバージョンの対象となる各アプリの最新バージョンを[ダウンロード](../../../system-administration/installing-and-managing-apps/installing-apps/downloading-apps.md)して、`new-version/deploy`フォルダにコピーします。 それ以外の場合は、 [アップグレード後の考慮事項](./post-upgrade-considerations.md) で説明されているようにデータベースのアップグレード後にアプリをインストールし、データをアップグレードできます。
 
 1. 組み込みの[Elasticsearch](../../../using-search/installing-and-upgrading-a-search-engine/elasticsearch/getting-started-with-elasticsearch.md)エンジンまたはローカルの[ファイルストア\（ドキュメントライブラリ\）](../../../system-administration/file-storage/configuring-file-storage.md)を使用している場合は、`[Liferay Home]/data`フォルダを新しい`files`フォルダにコピーして`new-version/files/data`を作成します。
 
@@ -90,7 +90,7 @@ Dockerイメージを使用してアップグレードする手順は次のと�
      liferay/[place image name here]:[place tag here]
     ```
 
-    `-v new-version:/mnt/liferay`の引数は、ホストの`new-version`フォルダをコンテナの`/mnt/liferay`フォルダにバインドマウントします。 コンテナのLiferay Homeへのファイルのマッピングについては、[Providing Files to the Container](../../installing-liferay/using-liferay-docker-images/providing-files-to-the-container.md)を参照してください。
+    `-v new-version:/mnt/liferay`の引数は、ホストの`new-version`フォルダをコンテナの`/mnt/liferay`フォルダにバインドマウントします。 コンテナのLiferay Homeへのファイルのマッピングについては、 [コンテナへのファイルの提供](../../installing-liferay/using-liferay-docker-images/providing-files-to-the-container.md) を参照してください。
 
     パラメータ`-e LIFERAY_UPGRADE_PERIOD_DATABASE_PERIOD_AUTO_PERIOD_RUN=true`は、データベースのアップグレードをトリガーします。
 
@@ -118,7 +118,7 @@ Dockerイメージを使用してアップグレードする手順は次のと�
 [Docker Container Basics](../../../installation-and-upgrades/installing-liferay/using-liferay-docker-images/docker-container-basics.md)では、Dockerコンテナの作成、停止、再起動について説明しています。
 ```
 
-<a name="まとめ" />
+<a name="conclusion" />
 
 ## まとめ
 
@@ -128,8 +128,8 @@ Dockerイメージを使用してアップグレードする手順は次のと�
 
 * [データベースアップグレードツールの使用](./using-the-database-upgrade-tool.md) では、Liferayサーバーのオフライン時にデータベースをアップグレードする方法を示しています。 アップグレードに時間がかかりすぎる場合は、[データベースの調整](../upgrade-stability-and-performance/database-tuning-for-upgrades.md)、 [不要なデータの削除](../upgrade-stability-and-performance/database-pruning-for-faster-upgrades.md)、[データベース アップグレード ツールの使用](./using-the-database-upgrade-tool.md)を検討してください。
 
-* [Upgrading Custom Development](../upgrading-custom-development.md)では、カスタムプラグインコードを新しいLiferayバージョンに適応させる方法を示しています。
+* [カスタム開発のアップグレード](../upgrading-custom-development.md) では、カスタムプラグインコードを新しいLiferayバージョンに適応させる方法を示しています。
 
 * [Maintaining Clustered Installations](../../maintaining-a-liferay-dxp-installation/maintaining-clustered-installations/maintaining-clustered-installations.md)では、クラスター環境でアップグレードする方法について説明しています。
 
-* [Troubleshooting Upgrades](../reference/troubleshooting-upgrades.md)
+* [アップグレードのトラブルシューティング](../reference/troubleshooting-upgrades.md)

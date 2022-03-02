@@ -28,7 +28,7 @@ Liferayのモジュールは [`portal-language-lang`](https://github.com/liferay
 
 影響を受けるモジュールを拡張し、その拡張機能が[言語キーをオーバーライド](../../../liferay-internals/extending-liferay/overriding-module-language-keys.md)する場合は、言語キーのオーバーライドを更新して新しい名前を使用します。
 
-<a name="言語キーマップ" />
+<a name="language-key-map" />
 
 ## 言語キーマップ
 
@@ -123,7 +123,7 @@ Liferayのモジュールは [`portal-language-lang`](https://github.com/liferay
 | `x-by-x`（保存済み）                                                                                 | `x,-by-x`                                                                                                                                   | `portal-workflow-lang`                                                                                                                                                                                                                                                                                 |
 | `your-user-x-could-not-be-logged-in`（保存済み）                                                     | `your-user-x-could-not-be-signed-in`                                                                                                        | `login-authentication-opensso-web`                                                                                                                                                                                                                                                                     |
 
-<a name="関連情報" />
+<a name="related-information" />
 
 ## 関連情報
 

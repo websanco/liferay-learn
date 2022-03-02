@@ -2,7 +2,7 @@
 
 デフォルトでは、Liferay DXPから送信される電子メールは、名前と電子メールアドレスをデフォルトの管理ユーザーとして使用します。 この動作は、さまざまな電子メールタイプごとに設定できます。
 
-<a name="デフォルトのメール送信者の変更" />
+<a name="changing-the-default-email-sender" />
 
 ## デフォルトのメール送信者の変更
 
@@ -34,7 +34,7 @@ admin.email.from.name=Joe Bloggs
 admin.email.from.address=test@domain.invalid
 ```
 
-<a name="アナウンスのためのメール送信者の変更" />
+<a name="changing-the-email-sender-for-announcements" />
 
 ## アナウンスのためのメール送信者の変更
 
@@ -45,7 +45,7 @@ announcements.email.to.name=
 announcements.email.to.address=noreply@domain.invalid
 ```
 
-<a name="ブラックリストに登録されたメール" />
+<a name="blacklisted-emails" />
 
 ## ブラックリストに登録されたメール
 
@@ -62,7 +62,7 @@ announcements.email.to.address=noreply@domain.invalid
 Email xxx will be ignored because it is included in mail.send.blacklist
 ```
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 

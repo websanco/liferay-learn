@@ -6,7 +6,7 @@ CORSは、クロスオリジンリソース共有（Cross-Origin Resource Sharin
 
 たとえば、Docs & Mediaで画像を管理している場合、それらに対してクロスオリジン要求を許可することができます。 Liferay Portalの一致するURLまたはJAX-RSアプリケーションリソースに対してCORSを有効にできます。
 
-<a name="liferay-dxpサービス用にcorsを有効にする" />
+<a name="enabling-cors-for-liferay-dxp-services" />
 
 ## Liferay DXPサービス用にCORSを有効にする
 
@@ -28,7 +28,7 @@ CORSは、クロスオリジンリソース共有（Cross-Origin Resource Sharin
 
 CORS を設定するには、設定ファイルを使用することもできます。
 
-<a name="jax-rsアプリケーション用にcorsを有効にする" />
+<a name="enabling-cors-for-jax-rs-applications" />
 
 ## JAX-RSアプリケーション用にCORSを有効にする
 
@@ -49,9 +49,9 @@ CORS を設定するには、設定ファイルを使用することもできま
 
 JAX-RS開発者は、 `@CORS` アノテーションを使用して、デプロイされたアプリケーションのポリシーを設定できます。
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 
-* [Securing Liferay](../../securing-liferay.md)
+* [Liferayの保護](../../securing-liferay.md)
 * [Introduction to Securing Web Services](../securing-web-services.md)

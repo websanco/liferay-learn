@@ -7,7 +7,7 @@
 
 これらの手法を以下で比較します。
 
-<a name="クラスター更新手法" />
+<a name="cluster-update-techniques" />
 
 ## クラスター更新手法
 
@@ -49,7 +49,7 @@
 * `com.liferay.portal.scheduler.multiple`
 * `com.liferay.portal.scheduler.multiple.*`
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 

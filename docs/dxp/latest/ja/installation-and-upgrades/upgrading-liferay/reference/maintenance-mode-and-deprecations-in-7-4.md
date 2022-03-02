@@ -16,7 +16,7 @@
 詳細は、 [Maintenance Mode and Deprecation Policies](https://help.liferay.com/hc/en-us/articles/360015767952-Maintenance-Mode-and-Deprecation) を参照してください。
 ```
 
-<a name="廃止予定の機能の利用可能性" />
+<a name="deprecated-feature-availability" />
 
 ## 廃止予定の機能の利用可能性
 
@@ -32,7 +32,7 @@
 
 **削除：** この機能とそのコードは使用できません。
 
-<a name="74で廃止予定の機能" />
+<a name="features-deprecated-in-74" />
 
 ## 7.4で廃止予定の機能
 
@@ -50,7 +50,7 @@
 * [7.1の非推奨事項](https://help.liferay.com/hc/en-us/articles/360018403151-Digital-Experience-Platform-7-1-Deprecated-and-Removed-Items)
 * [7.0の非推奨事項](https://help.liferay.com/hc/en-us/articles/360018123832-Digital-Experience-Platform-7-0-Deprecated-and-Removed-Items)
 
-<a name="74でメンテナンスモードに移行された機能" />
+<a name="features-moved-to-maintenance-mode-in-74" />
 
 ## 7.4でメンテナンスモードに移行された機能
 
@@ -58,7 +58,7 @@
 
 * TBD
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 

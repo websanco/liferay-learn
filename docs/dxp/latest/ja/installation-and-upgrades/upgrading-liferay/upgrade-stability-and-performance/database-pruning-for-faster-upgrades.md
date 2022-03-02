@@ -10,7 +10,7 @@
 * 未使用のオブジェクトを見つけて削除する
 * プルーニングされたデータベースのコピーを使用してテストする
 
-<a name="廃止されたデータの削除" />
+<a name="removing-obsolete-data" />
 
 ## 廃止されたデータの削除
 
@@ -20,7 +20,7 @@
 
 1. 使用可能なモジュールから古いデータを削除するには、 [データ削除](../reference/data-removal.md) ツールを使用します。
 
-<a name="重複するweb-コンテンツストラクチャーのフィールド名を削除する" />
+<a name="removing-duplicate-web-content-structure-field-names" />
 
 ## 重複するWeb コンテンツストラクチャーのフィールド名を削除する
 
@@ -33,7 +33,7 @@ com.liferay.portal.verify.VerifyException: com.liferay.dynamic.data.mapping.vali
 
 このエラーが発生した場合は、Liferay Portal 6.2の以前のバックアップにロールバックし、重複するフィールド名を見つけて削除してください。
 
-<a name="未使用のオブジェクトの削除" />
+<a name="removing-unused-objects" />
 
 ## 未使用のオブジェクトの削除
 
@@ -110,7 +110,7 @@ imported "LIFERAY"."USER\_" 17.32 MB 62214 rows
   * 組織
   * グローバル`ResourcePermission`オブジェクト
 
-***中間Webコンテンツバージョン：** Liferay DXPは、変更（翻訳を含む）後に新しいWebコンテンツバージョンを生成します。 不要なバージョンは削除することを検討してください。 特に、削除されたバージョンにそれらのバージョンに固有のイメージファイルなどのオブジェクトが含まれている場合、削除することでかなりの領域を解放できます。 詳細は、[Example: Removing Intermediate Journal Article Versions](./example-removing-intermediate-journal-article-versions.md)を参照してください。
+***中間Webコンテンツバージョン：** Liferay DXPは、変更（翻訳を含む）後に新しいWebコンテンツバージョンを生成します。 不要なバージョンは削除することを検討してください。 特に、削除されたバージョンにそれらのバージョンに固有のイメージファイルなどのオブジェクトが含まれている場合、削除することでかなりの領域を解放できます。 詳細は、 [例：ジャーナル記事の中間バージョンの削除](./example-removing-intermediate-journal-article-versions.md) を参照してください。
 
 ***ドキュメントのバージョン** ：ジャーナル記事と同様に、中間ドキュメントバージョンが不要な場合は削除してください。 これにより、データベースとファイルシステムの両方で領域が節約されます。
 
@@ -127,18 +127,18 @@ imported "LIFERAY"."USER\_" 17.32 MB 62214 rows
   * 存在しないロール、レイアウト、ユーザー、ポートレットインスタンスなどに関連付けられている`ResourcePermission`オブジェクト。
   * 存在しないポートレットまたはレイアウトに関連付けられている`PortletPreference`オブジェクト。 これは、多くの組み込みポートレットがある環境でよく見られます。 これらのポートレットインスタンスには異なるライフサイクルがあり、ポートレットがテンプレートから削除されても削除されません。
 
-中間オブジェクトバージョンの削除例については、[Example: Removing Intermediate Journal Article Versions](./example-removing-intermediate-journal-article-versions.md)をご覧ください。
+中間オブジェクトバージョンの削除例については、 [例：ジャーナル記事の中間バージョンの削除](./example-removing-intermediate-journal-article-versions.md) をご覧ください。
 
 次に、プルーニングされたデータベースを使用してインスタンスをテストします。
 
-<a name="プルーニングされたデータベースのコピーを使用してテストする" />
+<a name="testing-with-a-copy-of-the-pruned-database" />
 
 ## プルーニングされたデータベースのコピーを使用してテストする
 
 削除したオブジェクトに関連する問題を見つけて解決します。 これは、オブジェクトが誤って削除された場合や、他のコンテンツに影響を与える場合に重要な手順です。 問題を解決できない場合は、いつでも本番データベースの新しいコピーのプルーニングを再開できます。
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 
-* [Example: Removing Intermediate Journal Article Versions](./example-removing-intermediate-journal-article-versions.md)
+* [例：ジャーナル記事の中間バージョンの削除](./example-removing-intermediate-journal-article-versions.md)

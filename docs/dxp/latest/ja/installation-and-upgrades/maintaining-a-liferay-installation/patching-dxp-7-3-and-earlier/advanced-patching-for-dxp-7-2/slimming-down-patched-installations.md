@@ -15,7 +15,7 @@ Liferay DXP 7.2では、DXPパッチ情報は、デフォルトでインスト�
   - [インストールからパッチファイルを分離する](#separating-patch-files-from-the-installation)
   - [個別のパッチファイルの復元](#restoring-separated-patch-files)
 
-<a name="インストールからパッチファイルを分離する" />
+<a name="separating-patch-files-from-the-installation" />
 
 ## インストールからパッチファイルを分離する
 
@@ -39,7 +39,7 @@ Liferay DXP 7.2では、DXPパッチ情報は、デフォルトでインスト�
     liferay-patching-files-[separation-name].zip file into the 'patches' directory
     and run patching-tool setup.
 
-<a name="個別のパッチファイルの復元" />
+<a name="restoring-separated-patch-files" />
 
 ## 個別のパッチファイルの復元
 
@@ -57,7 +57,7 @@ DXPに再度パッチを適用する必要がある場合は、分離された�
 
 DXPのインストールが不要なスペースを占有しないように、パッチファイルを保存する方法をマスターしました。 また、新しいパッチをインストールできるようにパッチファイルを復元する方法も知っています。
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 

@@ -2,13 +2,13 @@
 
 アプリケーションサーバーとしてWebLogicを使用している場合は、DXPをWebLogic管理対象サーバーにインストールすることを **強くお勧め** します。 管理対象サーバーは、DXPをすばやく起動または停止でき、クラスター構成に変換できます。 ここでは、DXPを管理対象サーバーにインストールします。
 
-<a name="前提条件" />
+<a name="prerequisites" />
 
 ## 前提条件
 
 [WebLogicのドキュメンテーション](http://www.oracle.com/technetwork/middleware/weblogic/documentation/index.html) に従って、管理サーバーと管理対象サーバーを構成します。
 
-Liferay DXPにはJava JDK 8または11が必要です。 JDKの選択には [互換性マトリックス](https://help.liferay.com/hc/en-us/articles/360049238151) を参照してください。 推奨される設定については、[JVM Configuration](../../reference/jvm-configuration.md)を参照してください。
+Liferay DXPにはJava JDK 8または11が必要です。 JDKの選択には [互換性マトリックス](https://help.liferay.com/hc/en-us/articles/360049238151) を参照してください。 推奨される設定については、 [JVM設定](../../reference/jvm-configuration.md) を参照してください。
 
 これらのファイルを [ヘルプセンター](https://customer.liferay.com/downloads) （サブスクリプション）または [Liferayコミュニティダウンロード](https://www.liferay.com/downloads-community) からダウンロードします。
 
@@ -16,7 +16,7 @@ Liferay DXPにはJava JDK 8または11が必要です。 JDKの選択には [互
 * OSGi依存関係のZIPファイル
 * 依存関係のZIPファイル（DXP 7.3以前）
 
-<a name="dxp-warの準備" />
+<a name="preparing-the-dxp-war" />
 
 ## DXP WARの準備
 
@@ -38,7 +38,7 @@ Liferay DXPにはJava JDK 8または11が必要です。 JDKの選択には [互
 DXPのデプロイ後に`portal-ext.properties`を更新する必要がある場合は、ユーザードメインの`autodeploy/ROOT/WEB-INF/classes`フォルダにあります。 `autodeploy/ROOT`フォルダにはDXPデプロイメントが含まれていることに注意してください。
 ```
 
-<a name="weblogicの構成" />
+<a name="configuring-weblogic" />
 
 ## WebLogicの構成
 
@@ -126,10 +126,10 @@ Javaオプションとメモリ引数について以下に説明します。
 | `-XX:SurvivorRatio`    | 新しいスペースとSurvivor領域の比率。 Survivor領域は、古い世代の領域に昇格する前に、若い世代のオブジェクトを保持します。   |
 
 ```{note}
-DXPのインストール後、これらの構成（これらのJVMオプションを含む）をさらに調整して、パフォーマンスを向上させることができます。 詳細については、[Tuning Liferay](../../setting-up-liferay/tuning-liferay.md)および[Tuning Your JVM](../../setting-up-liferay/tuning-your-jvm.md)を参照してください。
+DXPのインストール後、これらの構成（これらのJVMオプションを含む）をさらに調整して、パフォーマンスを向上させることができます。 詳細については、 [Liferayの調整](../../setting-up-liferay/tuning-liferay.md) および [JVMの調整](../../setting-up-liferay/tuning-your-jvm.md) を参照してください。
 ```
 
-<a name="依存関係をインストールする" />
+<a name="installing-dependencies" />
 
 ## 依存関係をインストールする
 
@@ -146,7 +146,7 @@ HypersonicデータベースはDXPにバンドルされており、テスト目�
 DXP 7.3以前の場合、依存関係のZIPファイルをWebLogicドメインの `lib`フォルダに解凍します。
 ```
 
-<a name="elasticsearchのインストール" />
+<a name="installing-elasticsearch" />
 
 ## Elasticsearchのインストール
 
@@ -162,7 +162,7 @@ DXPが起動すると、デフォルトの[sidecar](../../../using-search/instal
 
 DXPの起動時に、DXPはアーカイブを解凍してインストールし、SidecarのElasticsearchサーバーを起動します。
 
-<a name="データベースに接続" />
+<a name="connect-to-database" />
 
 ## データベースに接続
 
@@ -191,7 +191,7 @@ Liferay DXPは、DXPの組み込みデータソース（推奨）またはアプ
     jdbc.default.jndi.name=jdbc/LiferayPool
     ```
 
-<a name="メールサーバーに接続" />
+<a name="connect-to-mail-server" />
 
 ## メールサーバーに接続
 
@@ -217,7 +217,7 @@ DXPがデプロイされると、`portal-ext.properties`ファイルはドメイ
 
 管理サーバーと管理サーバーを再起動すると、変更が有効になります。
 
-<a name="dxpのデプロイ" />
+<a name="deploying-dxp" />
 
 ## DXPのデプロイ
 
@@ -246,11 +246,11 @@ May 02, 2018 9:12:27 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass pr
      current AST contains: [ES3 keywords as identifiers, getters, reserved words as properties, setters, string continuation, trailing comma, array pattern rest, arrow function, binary literal, block-scoped function declaration, class, computed property, const declaration, default parameter, destructuring, extended object literal, for-of loop, generator, let declaration, member declaration, new.target, octal literal, RegExp flag 'u', RegExp flag 'y', rest parameter, spread expression, super, template literal, exponent operator (**), async function, trailing comma in param list, object literals with spread, object pattern rest]
 ```
 
-Liferay DXP Enterpriseサブスクリプションをお持ちの場合、DXPはアクティベーションキーを要求します。 詳細は、[Activating Liferay DXP](../../setting-up-liferay/activating-liferay-dxp.md)を参照してください。
+Liferay DXP Enterpriseサブスクリプションをお持ちの場合、DXPはアクティベーションキーを要求します。 詳細は、 [Liferay DXPのアクティブ化](../../setting-up-liferay/activating-liferay-dxp.md) を参照してください。
 
 　 WebLogicでDXPを実行しています。
 
-<a name="次のステップ" />
+<a name="next-steps" />
 
 ## 次のステップ
 

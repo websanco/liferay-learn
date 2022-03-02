@@ -1,5 +1,13 @@
 # アップグレードの基本
 
+```{toctree}
+:maxdepth: 2
+
+upgrade-basics/upgrading-via-docker.md
+upgrade-basics/using-the-database-upgrade-tool.md
+upgrade-basics/post-upgrade-considerations.md
+```
+
 Liferayのツールや説明書は、DXPやポータルCE環境を安全かつ迅速にアップグレードするのに役立ちます。 小さなデータセットを持つ非クラスター環境などは、[Dockerイメージ](./upgrade-basics/upgrading-via-docker.md)を使ってアップグレードすることができます。 複雑で、より大きなデータセットを持つ、または多くのカスタマイズがあるDXP環境およびポータルCE環境は、[データベースアップグレードツール](./upgrade-basics/using-the-database-upgrade-tool.md)を使用してアップグレードします。
 
 ```{warning}

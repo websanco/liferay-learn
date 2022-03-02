@@ -8,10 +8,10 @@
 * PostgreSQL
 
 ```{important}
-   The `Liferay DXP Compatibility Matrix <https://help.liferay.com/hc/en-us/articles/360049238151>`_ lists the supported databases and versions.
+   The [Liferay DXP Compatibility Matrix](https://help.liferay.com/hc/en-us/articles/360049238151) lists the supported databases and versions.
 ```
 
-<a name="データベースを構成する" />
+<a name="configure-the-database" />
 
 ## データベースを構成する
 
@@ -39,10 +39,10 @@
 　 Liferay DXPのデータベースを構成しました。
 
 ```{note}
-   データベース構成の詳細は、`Database Configuration Reference <../reference/database-configurations.md>`_を参照してください。
+   データベース構成の詳細は、[Database Configuration Reference](../reference/database-configurations.md)を参照してください。
 ```
 
-<a name="次のステップ" />
+<a name="next-steps" />
 
 ## 次のステップ
 

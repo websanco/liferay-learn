@@ -24,7 +24,7 @@ Liferayのインストールのセキュリティ保護には、ホスティン�
 セキュリティパッチがリリースされたら、それらを展開することをお勧めします。 コミュニティとCEのインストールの場合は、以前のセキュリティパッチがすべて含まれている最新のコミュニティリリースを常に使用することをお勧めします。
 ```
 
-<a name="認証" />
+<a name="authentication" />
 
 ## 認証
 
@@ -35,15 +35,15 @@ LiferayDXP認証は柔軟です。 デフォルトでは、ユーザーは ［**
 * Liferayは、ポータルデータベースを使用する代わりに、[LDAPと統合](../users-and-permissions/connecting-to-a-user-directory/connecting-to-an-ldap-directory.md)してユーザーを検証することもできます。
 * ゲストアカウントの作成を [オフ](./securing-liferay/authentication-basics.md#disabling-guest-account-creation) にすることができます。
 
-詳細は、[Authentication Basics](./securing-liferay/authentication-basics.md)をご覧ください。
+詳細は、 [認証の基本](./securing-liferay/authentication-basics.md) をご覧ください。
 
-<a name="権限" />
+<a name="permissions" />
 
 ## 権限
 
 Liferay DXPには、堅牢なロールベースのアクセス制御（RBAC）システムがあります。 ユーザーは、サイト、チーム、ユーザーグループ、または組織に割り当てることができます。 カスタムのロールを作成し、権限をこれらのロールに割り当て、それらのロールをユーザーに割り当てることができます。 ロールは、サイト、組織、またはグローバルなどの特定のコンテキストでのみ適用されるようにスコープが設定されています。 詳細は、[ロールと権限](../users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.md)を参照してください。
 
-<a name="webサービスの保護" />
+<a name="securing-web-services" />
 
 ## Webサービスの保護
 
@@ -55,7 +55,7 @@ Liferay Webサービスには、セキュリティと承認に対する多層的
 
 詳細は、[Webサービスの保護の概要](./securing-liferay/securing-web-services.md)を参照してください。
 
-<a name="セキュリティの微調整" />
+<a name="fine-tuning-security" />
 
 ## セキュリティの微調整
 
@@ -72,7 +72,7 @@ Liferay Webサービスには、セキュリティと承認に対する多層的
 Liferayポータルの理念は「デフォルトで安全」です。 セキュリティ固有のデフォルトまたはホワイトリストを変更する場合は、十分に注意してください。 このようなアクションは、セキュリティの設定ミスや安全でないデプロイにつながる可能性があります。
 ```
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 
@@ -80,7 +80,7 @@ Liferay Portalのインストールのセキュリティ保護の詳細は、 [�
 
 [Liferay マーケットプレイス](https://www.liferay.com/marketplace) から追加のセキュリティプラグインを入手できます。
 
-<a name="次のステップ" />
+<a name="next-steps" />
 
 ## 次のステップ
 

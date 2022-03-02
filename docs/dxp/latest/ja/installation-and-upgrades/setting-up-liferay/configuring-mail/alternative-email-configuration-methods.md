@@ -2,7 +2,7 @@
 
 メールサーバーに接続するようにLiferay DXPを構成するには、いくつかの方法があります。 開始する最も簡単な方法は、[サーバー管理UIを使用してメールを設定する](./connecting-to-a-mail-server.md)ことです。 この記事では、ポータルプロパティまたはアプリケーションサーバーのメールセッションを使用した、メールを構成する代替方法について説明します。
 
-<a name="ポータルプロパティを使用した組み込みメールセッションの構成" />
+<a name="configuring-the-built-in-mail-session-using-portal-properties" />
 
 ## ポータルプロパティを使用した組み込みメールセッションの構成
 
@@ -33,7 +33,7 @@
 
 DXPは次回の起動時にメールセッションに接続します。
 
-<a name="アプリケーションサーバー上のメールセッションへの接続" />
+<a name="connecting-to-a-mail-session-on-the-application-server" />
 
 ## アプリケーションサーバー上のメールセッションへの接続
 
@@ -55,7 +55,7 @@ DXPは次回の起動時にメールセッションに接続します。
 [portal-ext.properties](../../reference/portal-properties.md)で以下のプロパティを設定し、サーバーを再起動すると、コントロールパネルの値を設定するのと同じ効果があります：`mail.session.jndi.name=mail/MailSession`
 ```
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 

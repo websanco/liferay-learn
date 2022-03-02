@@ -2,7 +2,7 @@
 
 JBoss EAPにインストールするには、DXP WARのインストール、依存関係のインストール、JBossの設定、およびDXPのデプロイが必要です。 データベースとメールサーバーの接続も設定する必要があります。
 
-<a name="前提条件" />
+<a name="prerequisites" />
 
 ## 前提条件
 
@@ -16,14 +16,14 @@ Liferay DXPにはJava JDK 8または11が必要です。 詳細は、 [互換性
 
 [**Liferay Home**](../../reference/liferay-home.md) は、JBossサーバーフォルダーを含むフォルダーです。 DXPをインストールしてデプロイした後、`data`、`deploy`、および`logs`フォルダを生成します。 `$JBOSS_HOME` はJBossサーバーフォルダーを参照します。 このフォルダーの名前は通常 `jboss-eap-［version］`です。
 
-<a name="dxp-warのインストール" />
+<a name="installing-the-dxp-war" />
 
 ## DXP WARのインストール
 
 1. フォルダー `$JBOSS_HOME/standalone/deployments/ROOT.war` がJBossインストールにすでに存在する場合は、そのサブフォルダーとファイルをすべて削除します。 それ以外の場合は、 `$JBOSS_HOME/standalone/deployments/ROOT.war`という名前の新しいフォルダーを作成します。
 1. DXP `.war` ファイルを `ROOT.war` フォルダーに解凍します。
 
-<a name="依存関係をインストールする" />
+<a name="installing-dependencies" />
 
 ## 依存関係をインストールする
 
@@ -68,7 +68,7 @@ DXP 7.3以前の場合は、次の追加手順に従います。
     <resource-root path="com.liferay.petra.concurrent.jar" />
     ```
 
-<a name="スタンドアロンモードとドメインモードのjboss-eapでのdxpの実行" />
+<a name="running-dxp-on-jboss-eap-in-standalone-mode-vs-domain-mode" />
 
 ## スタンドアロンモードとドメインモードのJBoss EAPでのDXPの実行
 
@@ -82,7 +82,7 @@ DXPは、スタンドアロンモードで実行する場合はJBoss EAPをサ�
 これにより、DXPが複数のJBossサーバー上のクラスター環境で実行されるのを防ぐことはできません。 スタンドアロンモードで実行されているJBoss EAPサーバーで実行されているインスタンスのクラスターを設定できます。 詳細については、[クラスタリングの記事](../../setting-up-liferay/clustering-for-high-availability.md) を参照してください。
 ```
 
-<a name="jbossの構成" />
+<a name="configuring-jboss" />
 
 ## JBossの構成
 
@@ -216,7 +216,7 @@ Javaオプションとメモリ引数について以下に説明します。
 | `-XX:SurvivorRatio`    | 新しいスペースとSurvivor領域の比率。 Survivor領域は、古い世代の領域に昇格する前に、若い世代のオブジェクトを保持します。   |
 
 ```{note}
-DXPのインストール後、これらの構成（これらのJVMオプションを含む）をさらに調整して、パフォーマンスを向上させることができます。 詳細については、[Tuning Liferay](../../setting-up-liferay/tuning-liferay.md)および[Tuning Your JVM](../../setting-up-liferay/tuning-your-jvm.md)を参照してください。
+DXPのインストール後、これらの構成（これらのJVMオプションを含む）をさらに調整して、パフォーマンスを向上させることができます。 詳細については、 [Liferayの調整](../../setting-up-liferay/tuning-liferay.md) および [JVMの調整](../../setting-up-liferay/tuning-your-jvm.md) を参照してください。
 ```
 
 ### IBM JDKの使用
@@ -241,7 +241,7 @@ JBossサーバーでIBM JDKを使用する場合は、以下の追加手順を�
 
 スクリプトの変更が完了しました。
 
-<a name="データベースに接続する" />
+<a name="connect-to-a-database" />
 
 ## データベースに接続する
 
@@ -308,7 +308,7 @@ JBossを使用してデータソースを管理する場合は、次の手順に
 
 これで、データソースが構成され、データベースに接続する準備ができました。
 
-<a name="メールサーバーに接続する" />
+<a name="connect-to-a-mail-server" />
 
 ## メールサーバーに接続する
 
@@ -341,7 +341,7 @@ JBossでメールセッションを設定する場合は、以下の手順に従
     mail.session.jndi.name=java:jboss/mail/MailSession
     ```
 
-<a name="dxpのデプロイ" />
+<a name="deploying-dxp" />
 
 ## DXPのデプロイ
 
@@ -360,11 +360,11 @@ INFO: pass supports: [ES3 keywords as identifiers, getters, reserved words as pr
 current AST contains: [ES3 keywords as identifiers, getters, reserved words as properties, setters, string continuation, trailing comma, array pattern rest, arrow function, binary literal, block-scoped function declaration, class, computed property, const declaration, default parameter, destructuring, extended object literal, for-of loop, generator, let declaration, member declaration, new.target, octal literal, RegExp flag 'u', RegExp flag 'y', rest parameter, spread expression, super, template literal, exponent operator (**), async function, trailing comma in param list, object literals with spread, object pattern rest]
 ```
 
-Liferay DXP Enterpriseサブスクリプションをお持ちの場合、DXPはアクティベーションキーを要求します。 詳細は、[Activating Liferay DXP](../../setting-up-liferay/activating-liferay-dxp.md)を参照してください。
+Liferay DXP Enterpriseサブスクリプションをお持ちの場合、DXPはアクティベーションキーを要求します。 詳細は、 [Liferay DXPのアクティブ化](../../setting-up-liferay/activating-liferay-dxp.md) を参照してください。
 
 　 DXPはJBoss EAPで実行されています。
 
-<a name="次のステップ" />
+<a name="next-steps" />
 
 ## 次のステップ
 

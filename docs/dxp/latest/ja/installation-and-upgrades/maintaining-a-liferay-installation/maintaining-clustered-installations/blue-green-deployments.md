@@ -19,7 +19,7 @@
 * [BlueGreenDeployment](http://martinfowler.com/bliki/BlueGreenDeployment.html)
 * [Implementing Blue-Green Deployments with AWS](https://www.thoughtworks.com/insights/blog/implementing-blue-green-deployments-aws)
 
-<a name="関連トピック" />
+<a name="additional-information" />
 
 ## 関連トピック
 

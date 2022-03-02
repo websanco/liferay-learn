@@ -11,7 +11,7 @@ TomcatおよびLiferayファイルの設定、アーティファクトの展開�
 
 次のセクションでは、上記のフェーズでのスクリプトの作成と実行について説明します。
 
-<a name="構成フェーズでのスクリプトの実行" />
+<a name="running-scripts-during-the-configure-phase" />
 
 ## 構成フェーズでのスクリプトの実行
 
@@ -50,7 +50,7 @@ TomcatとLiferayを構成する方法が、構成フェーズが提供する方�
 in configure-phase-script.sh
 ```
 
-<a name="他のフェーズでのスクリプトの実行" />
+<a name="running-scripts-in-other-phases" />
 
 ## 他のフェーズでのスクリプトの実行
 
@@ -124,13 +124,13 @@ in configure-phase-script.sh
 inside some-pre-configure-script.sh
 ```
 
-<a name="まとめ" />
+<a name="conclusion" />
 
 ## まとめ
 
 これで、コンテナのライフサイクルのすべての部分でスクリプトを実行する方法がわかりました。
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 

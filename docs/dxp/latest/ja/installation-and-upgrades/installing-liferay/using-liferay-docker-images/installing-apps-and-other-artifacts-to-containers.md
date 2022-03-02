@@ -8,10 +8,10 @@
 * [`docker cp`を使用したアーティファクトのインストール](#installing-artifacts-using-docker-cp)
 
 ```{note}
-   A `Docker volume <https://docs.docker.com/storage/volumes/>`_ can also be used to install artifacts to a container.
+   A [Docker volume](https://docs.docker.com/storage/volumes/) can also be used to install artifacts to a container.
 ```
 
-<a name="バインドマウントを使用したアーティファクトのインストール" />
+<a name="installing-artifacts-using-a-bind-mount" />
 
 ## バインドマウントを使用したアーティファクトのインストール
 
@@ -45,7 +45,7 @@ Liferayが起動してアーティファクトをインストールします。 
    Liferayの起動後、追加のアーティファクトを``［host folder］/deployフォルダにコピーすることでLiferayにインストールできます。
 ```
 
-<a name="docker-cpを使用したアーティファクトのインストール" />
+<a name="installing-artifacts-using-docker-cp" />
 
 ## `docker cp`を使用したアーティファクトのインストール
 
@@ -57,12 +57,12 @@ docker cp ~/my-apps/some-app.lpkg ［container］:/opt/liferay/deploy
 
 アプリやその他のアーティファクトをLiferayにインストールする方法をマスターしました。
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 
 * [Docker Container Basics](./docker-container-basics.md)
 * [コンテナへのファイルの提供](./providing-files-to-the-container.md)
 * [コンテナのライフサイクルとAPI](./container-lifecycle-and-api.md)
-* [Configuring Containers](./configuring-containers.md)
+* [コンテナの設定](./configuring-containers.md)
 * [DockerでDXPにパッチを適用する](./patching-dxp-in-docker.md)

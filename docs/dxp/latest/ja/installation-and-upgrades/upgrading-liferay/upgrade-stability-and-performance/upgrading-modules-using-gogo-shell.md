@@ -15,7 +15,7 @@
 * [アップグレードステータスの確認](#checking-upgrade-status)
 * [検証プロセスの実行](#executing-verify-processes)
 
-<a name="コマンドの使用" />
+<a name="command-usage" />
 
 ## コマンドの使用
 
@@ -42,7 +42,7 @@
 
 次に、各モジュールのアップグレードの可用性を調べます。
 
-<a name="アップグレード可能なモジュールのリスト" />
+<a name="listing-modules-ready-for-upgrade" />
 
 ## アップグレード可能なモジュールのリスト
 
@@ -52,7 +52,7 @@
 
 モジュールがアクティブだがリストにない場合は、その依存関係をアップグレードする必要があります。
 
-<a name="モジュールの依存関係のトラブルシューティング" />
+<a name="troubleshooting-module-dependencies" />
 
 ## モジュールの依存関係のトラブルシューティング
 
@@ -86,7 +86,7 @@ Registered upgrade processes for com.liferay.bookmarks.service 1.0.0
 
 モジュールのアップグレードプロセスを理解することで、自信を持って実行できます。
 
-<a name="モジュールのアップグレードの実行" />
+<a name="executing-module-upgrades" />
 
 ## モジュールのアップグレードの実行
 
@@ -112,7 +112,7 @@ Registered upgrade processes for com.liferay.iframe.web 1.0.0
 
 完了していないモジュールのアップグレードについては、そのステータスを確認して問題を解決できます。
 
-<a name="アップグレードステータスの確認" />
+<a name="checking-upgrade-status" />
 
 ## アップグレードステータスの確認
 
@@ -142,7 +142,7 @@ The following service(s) are missing:
 
 各モジュールには1つの`Release_`テーブルレコードがあり、その`schemaVersion`フィールドの値は`1.0.0`以上である必要があります。 `1.0.0`は、バージョン6.2以前を対象とした従来のプラグインであったものを除き、Liferay DXPモジュールの初期バージョンです。
 
-<a name="検証プロセスの実行" />
+<a name="executing-verify-processes" />
 
 ## 検証プロセスの実行
 
@@ -150,7 +150,7 @@ The following service(s) are missing:
 
 使用可能な検証プロセスを確認するには、Gogoシェルコマンド`verify:list`を入力します。 検証プロセスを実行するには、`verify:execute ［verify_qualified_name］`と入力します。
 
-<a name="関連トピック" />
+<a name="related-topics" />
 
 ## 関連トピック
 

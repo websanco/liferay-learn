@@ -28,12 +28,12 @@
 `com.liferay.data.cleanup.internal.configuration.DataCleanupConfiguration.config` [構成ファイル](../../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md)を使用して、サーバーの起動時に（[Liferay Dockerコンテナ](../upgrade-basics/upgrading-via-docker.md)またはローカルマシンで）モジュールデータをクリーンアップすることもできます。 クリーンアップ後、 `osgi / configs`フォルダから構成ファイルを削除して、その後のサーバーの立ち上げ時にクリーンアップが再度実行されないようにします。
 ```
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 
-* [Data Removal](./data-removal.md)
+* [データ削除](./data-removal.md)
 * [構成ファイルの使用](../../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md)
-* [Upgrading Via Docker](../upgrade-basics/upgrading-via-docker.md)
+* [Dockerによるアップグレード](../upgrade-basics/upgrading-via-docker.md)
 * [コンテナへのファイルの提供](../../installing-liferay/using-liferay-docker-images/providing-files-to-the-container.md)
 * [Using the Upgrade Tool](../upgrade-basics/using-the-database-upgrade-tool.md)

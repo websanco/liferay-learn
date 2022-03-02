@@ -4,7 +4,7 @@ Liferay DXP 7.4には、多要素認証用の2つの追加の要素チェッカ�
 
 ![多要素認証を有効にすると、他の要素チェッカーが表示されます。](./multi-factor-authentication-checkers/images/01.png)
 
-<a name="ipアドレスmfaチェッカー" />
+<a name="ip-address-mfa-checker" />
 
 ## IPアドレスMFAチェッカー
 
@@ -18,7 +18,7 @@ IPアドレスチェッカーは、Liferay DXPが内部ネットワークから�
 
 **許可するIPアドレスとネットワークマスク** : 許可されたIPアドレス範囲とネットワークマスクを追加します。 デフォルトは`127.0.0.1/255.0.0.0、::1/128, 10.0.0.0/8、172.16.0.0/12、192.168.0.0/16、fc00::/7`です。
 
-<a name="タイムベースワンタイムパスワードmfaチェッカー" />
+<a name="time-based-one-time-password-mfa-checker" />
 
 ## タイムベースワンタイムパスワードMFAチェッカー
 
@@ -36,8 +36,8 @@ IPアドレスチェッカーは、Liferay DXPが内部ネットワークから�
 
 **アルゴリズムの鍵サイズ:** 生成されたキーのサイズを文字数で設定します。
 
-<a name="関連情報" />
+<a name="related-information" />
 
 ## 関連情報
 
-[Using Multi-Factor Authentication](./using-multi-factor-authentication.md)
+[多要素認証の使用](./using-multi-factor-authentication.md)

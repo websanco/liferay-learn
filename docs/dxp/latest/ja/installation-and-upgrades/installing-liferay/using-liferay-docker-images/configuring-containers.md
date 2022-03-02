@@ -11,10 +11,10 @@ Liferayインストールで構成可能なものはすべて、Liferay Docker�
 * [System Settings](#system-settings)
 
 ```{note}
-   ここでは、コンテナにファイルを提供する設定のユースケースを、 `bind mounts <https://docs.docker.com/storage/bind-mounts/>`_を使用して示しています。 また、`volumes <https://docs.docker.com/storage/volumes/>`_ を使ったり、場合によっては ``docker cp`` コマンドを使うこともできます。 詳細は、`Providing File to the Container <./providing-files-to-the-container.md>`_を参照してください。
+   ここでは、コンテナにファイルを提供する設定のユースケースを、 [bind mounts](https://docs.docker.com/storage/bind-mounts/) を使用して示しています。 また、 [volumes](https://docs.docker.com/storage/volumes/) を使ったり、場合によっては `docker cp` コマンドを使うこともできます。 詳細は、[Providing File to the Container](./providing-files-to-the-container.md)を参照してください。
 ```
 
-<a name="jvmオプション" />
+<a name="jvm-options" />
 
 ## JVMオプション
 
@@ -29,7 +29,7 @@ docker run -it -m 8g -p 8080:8080 -e LIFERAY_JVM_OPTS=[value\ with\ space] lifer
 ```
 
 ```{warning}
-   `` LIFERAY_JVM_OPTS``値では、バックスラッシュを使用してスペース文字をエスケープします。 引用符は使用しないでください。
+   ` LIFERAY_JVM_OPTS`値では、バックスラッシュを使用してスペース文字をエスケープします。 引用符は使用しないでください。
 ```
 
 コンテナは Tomcat の `CATALINA_OPTS` に追加された `LIFERAY_JVM_OPTS` で実行されます。
@@ -70,14 +70,14 @@ JVMオプションを設定する別の方法には、Tomcatの `setenv.sh` ス�
 コンテナは `setenv.sh` スクリプトの JVM オプションを使用します。
 
 ```{note}
-   コンテナの``/mnt/liferay``フォルダへのバインドマウントについては、`Providing Files to the Container <./providing-files-to-the-container.md#bind-mounting-a-host-folder-to-mnt-liferay>`_を参照してください。
+   コンテナの`/mnt/liferay`フォルダへのバインドマウントについては、 [Providing Files to the Container](./providing-files-to-the-container.md#bind-mounting-a-host-folder-to-mnt-liferay) を参照してください。
 ```
 
 ```{note}
-   Liferayコンテナの起動と動作に関する詳細は、`Docker Container Basics <./docker-container-basics.md>`_を参照してください。
+   Liferayコンテナの起動と動作に関する詳細は、[Docker Container Basics](./docker-container-basics.md)を参照してください。
 ```
 
-<a name="ポータルプロパティ" />
+<a name="portal-properties" />
 
 ## ポータルプロパティ
 
@@ -105,15 +105,15 @@ JVMオプションを設定する別の方法には、Tomcatの `setenv.sh` ス�
     ```
 
     ```{warning}
-       ``Env``変数値では、バックスラッシュを使用してスペース文字をエスケープします。 引用符は使用しないでください。
+       `Env`変数値では、バックスラッシュを使用してスペース文字をエスケープします。 引用符は使用しないでください。
     ```
 
     ```{note}
-    データベース環境変数の例については、[Database Templates](../../reference/database-templates.md)を参照してください。
+    データベース環境変数の例については、 [データベーステンプレート](../../reference/database-templates.md) を参照してください。
     ```
 
     ```{note}
-       コンテナの起動と動作に関する詳細は、`Docker Container Basics <./docker-container-basics.md>`_を参照してください。
+       コンテナの起動と動作に関する詳細は、[Docker Container Basics](./docker-container-basics.md)を参照してください。
     ```
 
 プロパティは、コントロールパネルの ［**設定**］ &rarr; ［**サーバー管理**］ &rarr; ［**プロパティ**］ &rarr; ［**ポータルプロパティ**］ で表示されます。
@@ -143,10 +143,10 @@ JVMオプションを設定する別の方法には、Tomcatの `setenv.sh` ス�
 プロパティは、コントロールパネルの ［**設定**］ &rarr; ［**サーバー管理**］ &rarr; ［**プロパティ**］ &rarr; ［**ポータルプロパティ**］ で表示されます。
 
 ```{note}
-データベースポータルプロパティの例については、[Database Templates](../../reference/database-templates.md)を参照してください。
+データベースポータルプロパティの例については、 [データベーステンプレート](../../reference/database-templates.md) を参照してください。
 ```
 
-<a name="画像定義の環境変数" />
+<a name="image-defined-environment-variables" />
 
 ## 画像定義の環境変数
 
@@ -212,7 +212,7 @@ LIFERAY_TERMS_PERIOD_OF_PERIOD_USE_PERIOD_REQUIRED=false
 
 コンテナはプロパティ設定を使用します。
 
-<a name="システムプロパティ" />
+<a name="system-properties" />
 
 ## システムプロパティ
 
@@ -237,7 +237,7 @@ LIFERAY_TERMS_PERIOD_OF_PERIOD_USE_PERIOD_REQUIRED=false
     ```
 
     ```{note}
-       コンテナの``/mnt/liferay``フォルダへのバインドマウントについては、`Providing Files to the Container <./providing-files-to-the-container.md#bind-mounting-a-host-folder-to-mnt-liferay>`_を参照してください。
+       コンテナの`/mnt/liferay`フォルダへのバインドマウントについては、 [Providing Files to the Container](./providing-files-to-the-container.md#bind-mounting-a-host-folder-to-mnt-liferay) を参照してください。
     ```
 
 プロパティは、コントロールパネルの ［**設定**］ &rarr; ［**サーバー管理**］ &rarr; ［**プロパティ**］ &rarr; ［**システムプロパティ**］ で表示されます。
@@ -277,7 +277,7 @@ Liferayシステム設定は、 [コントロールパネル](../../../system-ad
     ```
 
     ```{note}
-       コンテナの``/mnt/liferay``フォルダへのバインドマウントについては、`Providing Files to the Container <./providing-files-to-the-container.md#bind-mounting-a-host-folder-to-mnt-liferay>`_を参照してください。
+       コンテナの`/mnt/liferay`フォルダへのバインドマウントについては、 [Providing Files to the Container](./providing-files-to-the-container.md#bind-mounting-a-host-folder-to-mnt-liferay) を参照してください。
     ```
 
 システムコンポーネントの構成は、そのコンポーネントの画面のコントロールパネルで、 ［**設定**］ &rarr; ［**システム設定**］ に表示されます。
@@ -290,13 +290,13 @@ Liferayシステム設定は、 [コントロールパネル](../../../system-ad
 docker cp ［config file］ ［container］:/opt/liferay/osgi/configs
 ```
 
-<a name="まとめ" />
+<a name="conclusion" />
 
 ## まとめ
 
 LiferayコンテナのJVMオプション、ポータルプロパティ、イメージ環境変数、システムプロパティ、およびシステム設定を構成する方法をマスターしました。
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 

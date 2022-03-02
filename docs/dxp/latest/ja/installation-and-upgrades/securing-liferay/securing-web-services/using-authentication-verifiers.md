@@ -13,7 +13,7 @@ Authentication Verifierは、一元化された拡張可能な方法でLiferay P
 認証検証レイヤの焦点は、資格情報の提供ではなく、認証の検証にあります。 トークンや資格情報を発行したり、サインインポートレットを表示したりすることはありません。 代わりに、このレイヤは既存の資格情報と認証済みセッションを検証し、認証エンドポイントを補完します。 下位互換性を確保するために、デフォルトの実装では、ユーザー名とパスワードの資格情報を提供するリクエストをサポートしています。 したがって、認証検証レイヤは、認証と承認の境界に位置しています。
 ```
 
-<a name="認証検証プロセス" />
+<a name="authentication-verification-process" />
 
 ## 認証検証プロセス
 
@@ -35,7 +35,7 @@ Authentication Verifierを設定するには、 ［**コントロールパネル
 
 解決されたユーザーは、`AuthVerifier`インスタンスのいずれかによって返されたユーザーか、または指定された資格情報を確認できたインスタンスがない場合はゲストユーザーになります。
 
-<a name="組み込みauthentication-verifierの構成" />
+<a name="configuring-built-in-authentication-verifiers" />
 
 ## 組み込みAuthentication Verifierの構成
 
@@ -101,7 +101,7 @@ LibreOffice/OpenOfficeに接続している場合、Officeプロセスは、画�
 
 デフォルト設定はデフォルトで有効になっていますが、アクセスはローカルホストのみに制限されています。 トンネリングを許可するクライアントIPアドレスを設定して構成します。 詳細については、 [プロパティのドキュメント](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#HTTP%20Tunneling) および[リモートステージング](../../../site-building/publishing-tools/staging/configuring-remote-live-staging.md)を参照してください。
 
-<a name="関連トピック" />
+<a name="related-topics" />
 
 ## 関連トピック
 

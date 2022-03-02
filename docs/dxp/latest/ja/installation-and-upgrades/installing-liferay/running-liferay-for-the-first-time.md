@@ -2,7 +2,7 @@
 
 [Liferay DXPをインストール](./installing-a-liferay-tomcat-bundle.md#installing) して[データベースを構成](./configuring-a-database.md)すると、Liferay DXPを実行する準備が整います。
 
-<a name="liferay-dxpを起動する" />
+<a name="start-the-server" />
 
 ## Liferay DXPを起動する
 
@@ -52,7 +52,7 @@ Liferay DXP Enterpriseサブスクリプションをお持ちの場合、DXPは�
 
 最後に、サーバーを再起動するようプロンプト表示されます。
 
-<a name="サーバーを再起動する" />
+<a name="restart-the-server" />
 
 ## サーバーを再起動する
 
@@ -76,7 +76,7 @@ DXPは、セットアップウィザードで指定したデータベースと�
 
 　 オンプレミスのLiferay DXPインスタンスを起動しました。
 
-<a name="次のステップ" />
+<a name="next-steps" />
 
 ## 次のステップ
 
