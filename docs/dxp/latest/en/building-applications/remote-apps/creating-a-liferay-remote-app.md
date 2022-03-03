@@ -7,9 +7,9 @@ Remote Apps use Liferay's front-end infrastructure to register external applicat
 In this tutorial, you'll use the `create_remote_app.sh` script to create a simple React application. After the application is generated, you'll compile its code and host its `.js` and `.css` files at a URL which is reachable by browser clients.
 
 ```{tip}
-For demonstration purposes this tutorial illustrates hosting the static resources in the Liferay Document Library.
+For demonstration purposes this tutorial hosts the application's static resources in Liferay's Document Library.
 
-More realistic use cases would have the application's resources hosted by a server designed for hosting static resources.
+In a production environment, instead host the application's resources on a server optimized for hosting static resources.
 ```
 
 Once hosted, you'll copy each file's WebDAV URLs and use them to create a Liferay Remote App. Finally, you can deploy the application to Site Pages as a widget.
@@ -109,7 +109,7 @@ File sizes after gzip:
   121 B     build/static/css/main.9877909d.css
 ```
 
-These files must be [hosted](#hosting-the-application-files) in a location accessible to Liferay Remote Apps. They can be hosted on a remote server or a data storage system. This example uploads them to Liferay's Document Library and hosts them using WebDAV URLs.
+These files must be [hosted](#hosting-the-application-files) in a location accessible to Liferay Remote Apps. They can be hosted on a remote server or a data storage system optimized for serving static resources. For demonstration purposes, this example uploads them to Liferay's Document Library and hosts them using WebDAV URLs.
 
 ```{tip}
 Unique file names are generated for every build. When testing your custom applications, remember to update your `.js` and `.css` files after builds.
