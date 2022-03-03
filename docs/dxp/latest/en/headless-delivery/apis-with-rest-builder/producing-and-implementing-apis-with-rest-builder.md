@@ -1,6 +1,6 @@
 # Producing and Implementing APIs with REST Builder
 
-With REST Builder, you can define the API you want to build, and REST Builder provides the framework and endpoints for you. <!-- Add link to the REST Builder overview article once available. -->
+With REST Builder, you can define the API you want to build, and REST Builder provides the framework and endpoints for you.
 
 ## Deploy an Example REST API
 
@@ -264,6 +264,8 @@ Now that you have added all of the configuration necessary for REST Builder to d
 ```
 
 REST Builder uses your configuration and populates both your `api` and `impl` classes with scaffolding code, as well as the Java classes where you can add your implementation logic.
+
+GraphQL endpoint code and JAX-RS application code are both generated in the `graphql` and `jaxrs` packages, respectively. Your own API implementation is added into the appropriate `*ResourceImpl` class in the `resource` package.
 
 ## Add Your Implementation Logic
 
