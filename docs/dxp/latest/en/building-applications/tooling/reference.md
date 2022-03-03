@@ -3,7 +3,7 @@
 ```{toctree}
 :maxdepth: 3
 
-reference/node-npm-version-information.md
+reference/node-version-information.md
 ```
 
-* [Node NPM Version Information](./reference/node-npm-version-information.md)
+* [Node Version Information](./reference/node-version-information.md)
