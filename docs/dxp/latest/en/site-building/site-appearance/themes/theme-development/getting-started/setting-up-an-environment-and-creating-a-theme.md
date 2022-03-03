@@ -12,6 +12,10 @@ Older versions of the Liferay Theme Generator can be used to generate themes for
 
 ### Installation
 
+```{note}
+Node and NPM are both required for developing themes with the Liferay Theme Generator. Check the [Node Compatibility Matrix](../../../../../building-applications/tooling/reference/node-npm-version-information.md) to ensure you have the correct versions of these installed for your version of Liferay.
+```
+
 If you have not already done so, install the Liferay Theme Generator with this command:
 
 ```bash
