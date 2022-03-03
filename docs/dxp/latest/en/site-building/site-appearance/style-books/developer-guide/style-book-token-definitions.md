@@ -8,7 +8,7 @@ When you assign a theme to your Site's Public Pages, the token definition includ
 
 ## Defining Tokens for Your Style Book
 
-Since the token definition is tied to your theme, token definitions must correspond to a CSS variable contained within your theme module. Specify the token definitions themselves in a `.json` file within your theme module's folder, named `frontend-token-definition.json`. 
+Since the token definition is tied to your theme, token definitions must correspond to a CSS variable contained within your theme module. Specify the token definitions themselves in a `.json` file within your theme module's `src/WEB-INF/` folder, named `frontend-token-definition.json`. 
 
 ### Token Categories
 
@@ -16,7 +16,7 @@ Tokens defining the options for configuring your Style Book are grouped into cat
 
 ![Each of the options in the drop-down menu corresponds to one category of Style Book tokens.](./style-book-token-definitions/images/01.png)
 
-Define each of these categories within a `frontendTokenCategories` field within your `frontend-token-definition.json` file:
+Define each of these categories within a `frontendTokenCategories` field within your theme's `frontend-token-definition.json` file in `src/WEB-INF/`:
 
 ```json
 {
@@ -126,7 +126,7 @@ Here is an example list of tokens within a token set:
 
 ## Matching CSS Variables to Style Book Tokens
 
-The `frontend-token-definition.json` file containing your token definition must be in the `src/WEB-INF` folder of your theme module folder. Every token defined in your token definition must represent a style (color, spacing, font, etc.) in the CSS of your theme.
+The `frontend-token-definition.json` file containing your token definition must be in the `src/WEB-INF/` folder of your theme module folder. Every token defined in your token definition must represent a style (color, spacing, font, etc.) in the CSS of your theme.
 
 All styles that your tokens represent must be coded as CSS variables. For example, take this definition of a token (giving an option to configure a font):
 
