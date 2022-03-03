@@ -22,7 +22,7 @@ Administrators can configure facets. Read about [Search facets](../search-facets
 
 The search engine uses relevance---a score calculated by the search engine---to rank results. Numerous factors contribute to the total score of a returned document, which depend on the search engine being used:
 
-* [Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/relevance-intro.html#relevance-intro)
+* [Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/index-modules-similarity.html#bm25)
 * [Solr](https://lucene.apache.org/solr/guide/8_0/relevance.html)
 
 [Result Rankings](../../search-administration-and-tuning/result-rankings.md) help you control the order of returned search results. 
