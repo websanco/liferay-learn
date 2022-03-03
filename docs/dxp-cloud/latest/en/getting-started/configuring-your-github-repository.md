@@ -69,6 +69,10 @@ Set these environment variables in the Jenkins service to point to your new repo
 
 For the `LCP_CI_SCM_TOKEN` value, use the personal access token created for your GitHub organization. For instructions on creating and accessing this token, see [GitHub's documentation](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line).
 
+Ensure that the personal access token has all of the necessary boxes checked under *Select scopes*. Select all of the scope permissions under *repo* and *admin:repo_hook*. The *admin:repo_hook* scope permissions specifically can be removed later if you [disable automatic web hook management](#personal-access-token-usage) after your repository is successfully integrated with DXP Cloud.
+
+![Check the correct permissions to ensure that the PAT can be used successfully.](./configuring-your-github-repository/images/05.png)
+
 ```{note}
 If you are using an organization account with SAML single sign-on authentication, then you must take additional steps to authorize your access token. See [GitHub's official documentation](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/authorizing-a-personal-access-token-for-use-with-saml-single-sign-on)_ for more information.
 ```
@@ -84,14 +88,14 @@ Jenkins versions prior to `2.222.1-3.2.0` use the environment variables `GITHUB_
 The personal access token referenced by the `LCP_CI_SCM_TOKEN` value is needed for DXP Cloud to integrate with your repository.
 
 ```{warning}
-If the personal access token belongs to a personal user account and that user is removed from the organization, all builds will fail to complete. Instead, use an account specifically belonging to the organization. See [GitHub's official documentation](https://docs.github.com/en/actions/learn-github-actions/security-hardening-for-github-actions#considering-cross-repository-access)_ for more information.
+If the personal access token belongs to a personal user account and that user is removed from the organization, all builds will fail to complete. Instead, use an account specifically belonging to the organization. See [GitHub's official documentation](https://docs.github.com/en/actions/learn-github-actions/security-hardening-for-github-actions#considering-cross-repository-access) for more information.
 ```
 
-By default, the GitHub organization's [Personal Access Token](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token) must have the `admin:repo_hook` permissions in order for the CI service to successfully integrate using the default web hook.
+By default, the GitHub organization's [Personal Access Token](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token) must also have the `admin:repo_hook` permissions in order for the CI service to successfully integrate using the default web hook.
 
 However, it is recommended to set the `LCP_CLI_SCM_MANAGE_HOOKS` [environment variable](../reference/defining-environment-variables.md) to `false` in your [CI service](../platform-services/continuous-integration.md). This disables automatic management of the web hook (which is no longer needed after you have finished setting up integration with your repository), and allows you to remove the (admin-level) `admin:repo_hook` permissions from the personal access token DXP Cloud uses:
 
-![You can remove the admin:repo_hook permissions from the personal access token if you disable automatic web hook management.](./configuring-your-github-repository/images/05.png)
+![You can remove the admin:repo_hook permissions from the personal access token if you disable automatic web hook management.](./configuring-your-github-repository/images/06.png)
 
 Removing these permissions from the web hook improves security by minimizing access given to your repository.
 
