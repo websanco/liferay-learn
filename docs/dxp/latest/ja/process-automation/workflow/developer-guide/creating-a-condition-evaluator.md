@@ -7,7 +7,7 @@
 
 まず、 `ConditionEvaluator`をデプロイし、動作を確認します。
 
-<a name="コンディション評価装置の導入" />
+<a name="deploy-a-condition-evaluator" />
 
 ## コンディション評価装置の導入
 
@@ -20,7 +20,7 @@
 1. Acme R6J9 Implementationプロジェクトをダウンロードして解凍します。
 
    ```bash
-   curl https://learn.liferay.com/dxp/latest/en/process-automation/workflow/developer-guide/liferay-r6j9.zip -O
+   curl https://learn.liferay.com/dxp/latest/ja/process-automation/workflow/developer-guide/liferay-r6j9.zip -O
    ```
 
    ```bash
@@ -47,7 +47,7 @@
 便宜上、`ConditionEvaluator`の`activate`メソッドは、R6J9 Conditional Approverのワークフロー定義をオートロードしました。 このコードは、ワークフロープロセスビルダーに移動し、ワークフロー定義をアップロードするのと同じことを実現します。 [新しいワークフロー定義のアップロード](../designing-and-managing-workflows/managing-workflows.md#uploading-a-new-workflow-definition) を参照してください。
 ```
 
-<a name="条件エバリュエーターをテストする" />
+<a name="test-the-condition-evaluator" />
 
 ## 条件エバリュエーターをテストする
 
@@ -75,7 +75,7 @@ Acme R6J9 Condition Evaluatorを使用するには、ブログエントリーで
 
 唯一の承認者の定義や、管理者ではない別のユーザーでテストすると、ブログのエントリが **返答待ち** というステータスで追加されていることがわかります。
 
-<a name="r6j9condition-evaluatorについて" />
+<a name="understanding-the-r6j9-condition-evaluator" />
 
 ## R6J9Condition Evaluatorについて
 

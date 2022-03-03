@@ -4,7 +4,7 @@ DXPインスタンス全体または特定のサイトのみで、アセット�
 
 または、個々のサイトでワークフローを有効または無効にすることを選択できます。 デフォルトでは、ワークフローはサイトで無効になっています。
 
-<a name="dxpインスタンス全体でワークフローをアクティブ化する" />
+<a name="activating-workflow-across-a-dxp-instance" />
 
 ## DXPインスタンス全体でワークフローをアクティブ化する
 
@@ -22,7 +22,7 @@ DXPインスタンス全体または特定のサイトのみで、アセット�
 1. ［**保存**］ をクリックします。
 1. ワークフローを必要とする他のすべてのアセットタイプについて繰り返します。
 
-<a name="サイトでのワークフローのアクティブ化" />
+<a name="activating-workflow-on-a-site" />
 
 ## サイトでのワークフローのアクティブ化
 
@@ -45,7 +45,7 @@ DXPインスタンス全体または特定のサイトのみで、アセット�
    インスタンス全体で有効になっている場合でも、サイト上のアセットタイプのワークフローはいつでも無効にできます。
 ```
 
-<a name="特定のアプリケーションのワークフローをアクティブにする" />
+<a name="activating-workflow-for-specific-applications" />
 
 ## 特定のアプリケーションのワークフローをアクティブにする
 
@@ -154,8 +154,8 @@ Page revisions now have to go through the workflow process.
 ![With workflow enabled on Page Revisions, the Site administrator must submit their page variation for publication before it can go live.](./activating-workflow/images/13.png)
 -->
 
-<a name="次のステップ" />
+<a name="whats-next" />
 
 ## 次のステップ
 
-* [Reviewing Assets](./reviewing-assets.md)
+* [アセットの確認](./reviewing-assets.md)

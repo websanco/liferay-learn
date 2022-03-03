@@ -25,7 +25,7 @@ Groovyアクションロジックをワークフロー定義の `<script>` 要�
 
 まず、 `ActionExecutor`をデプロイし、動作を確認します。
 
-<a name="アクションエクゼキュータの配置" />
+<a name="deploy-an-action-executor" />
 
 ## アクション・エクゼキュータの配置
 
@@ -38,7 +38,7 @@ Groovyアクションロジックをワークフロー定義の `<script>` 要�
 1. Acme E5C9 Implementationプロジェクトをダウンロードして解凍します。
 
    ```bash
-   curl https://learn.liferay.com/dxp/latest/en/process-automation/workflow/developer-guide/liferay-e5c9.zip -O
+   curl https://learn.liferay.com/dxp/latest/ja/process-automation/workflow/developer-guide/liferay-e5c9.zip -O
    ```
 
    ```bash
@@ -65,7 +65,7 @@ Groovyアクションロジックをワークフロー定義の `<script>` 要�
    利便性のために、 ``ActionExecutor`` の ``activate`` メソッドは、 E5C9 唯一の承認者 のワークフローの定義をオートロードしました。 このコードは、ワークフロープロセスビルダーに移動し、ワークフロー定義をアップロードするのと同じことを実現します。 `アップロード新しいワークフロー定義を参照してください <../designing-and-managing-workflows/managing-workflows.md#uploading-a-new-workflow-definition>` __。
 ```
 
-<a name="アクションエグゼキュータをテストする" />
+<a name="test-the-action-executor" />
 
 ## アクションエグゼキュータをテストする
 
@@ -93,7 +93,7 @@ Acme E5C9 Action Executorを使用するには、ワークフロー定義をブ�
 
 唯一の承認者ワークフローをブログエントリに割り当てると、［E5C9 唯一の承認者］と同じように動作することがわかります。
 
-<a name="e5c9アクションエグゼキュータを理解する" />
+<a name="understanding-the-e5c9-action-executor" />
 
 ## E5C9アクションエグゼキュータを理解する
 

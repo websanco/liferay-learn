@@ -55,7 +55,7 @@ url, http://localhost:8080/group/guest/~/control_panel/manage?p_p_id=com_liferay
 userURL, http://localhost:8080/web/test
 ```
 
-<a name="ワークフロー定義のワークフローコンテキスト属性へのアクセス" />
+<a name="accessing-workflow-context-attributes-in-workflow-definitions" />
 
 ## ワークフロー定義のワークフローコンテキスト属性へのアクセス
 
@@ -79,7 +79,7 @@ long classPK = GetterUtil.getLong((String)workflowContext.get(WorkflowConstants.
 [`WorkflowConstants`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/workflow/WorkflowConstants.java) オブジェクトフィールドを使用することで、エラーになりやすい文字列リテラルを避けることができます。 `workflowContext` フィールドの前には、すべて `CONTEXT` が付けられます（例： `CONTEXT_COMPANY_ID`）。
 
 
-<a name="ワークフロー定義でのワークフローコンテキスト属性の設定" />
+<a name="setting-workflow-context-attributes-in-workflow-definitions" />
 
 ## ワークフロー定義でのワークフローコンテキスト属性の設定
 
@@ -109,7 +109,7 @@ workflowContext.put("assetTitle", assetTitle);
 上記のコードは、アセットが `getTitle` メソッドを持っている場合のみ動作します（例：`JournalArticle`）。
 ```
 
-<a name="ワークフロー定義でアクセス用のサービスコンテキスト属性を設定する" />
+<a name="setting-service-context-attributes-for-access-in-workflow-definitions" />
 
 ## ワークフロー定義でアクセス用のサービスコンテキスト属性を設定する
 
@@ -130,7 +130,7 @@ ServiceContext serviceContext = (ServiceContext)workflowContext.get(WorkflowCons
 serviceContext.getAttribute("customAttributeKey");
 ```
 
-<a name="関連情報" />
+<a name="related-information" />
 
 ## 関連情報
 

@@ -20,7 +20,7 @@
    フォームレポートには、集計されたフォームデータが表示されます。 各フォームエントリーを個別に表示するには、`Managing Form Entries <./managing-form-entries.md#viewing-form-entries>`__を参照してください。
 ```
 
-<a name="フォームフィールドと表タイプ" />
+<a name="form-fields-and-chart-types" />
 
 ## フォームフィールドと表タイプ
 
@@ -55,7 +55,7 @@
 
 ![グリッドエントリーは縦棒グラフで表示されます。](./form-reports/images/05.png)
 
-<a name="関連トピック" />
+<a name="related-topics" />
 
 ## 関連トピック
 

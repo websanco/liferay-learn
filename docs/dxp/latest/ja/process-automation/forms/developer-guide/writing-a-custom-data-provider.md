@@ -8,7 +8,7 @@ RESTデータプロバイダーが目的に合わない場合は、`DDMDataProvi
 このデータプロバイダーの例では、 [GeoDataSource™ Location Search Web Service](https://www.geodatasource.com/web-service/location-search) から XML データを消費します。 このサンプルには、Liferay社員のAPIキーがハードコードされています。 サンプルを使いすぎないようにしてください。 本番環境では絶対に使用しないでください。
 ```
 
-<a name="カスタムデータプロバイダーをデプロイする" />
+<a name="deploy-a-custom-data-provider" />
 
 ## カスタムデータプロバイダーをデプロイする
 
@@ -21,7 +21,7 @@ RESTデータプロバイダーが目的に合わない場合は、`DDMDataProvi
 1. Acme XML Data Providerをダウンロードし、解凍する。
 
    ```bash
-   curl https://learn.liferay.com/dxp/latest/en/process-automation/forms/developer-guide/liferay-b4d8.zip -O
+   curl https://learn.liferay.com/dxp/latest/ja/process-automation/forms/developer-guide/liferay-b4d8.zip -O
    ```
 
    ```bash
@@ -44,7 +44,7 @@ RESTデータプロバイダーが目的に合わない場合は、`DDMDataProvi
    STARTED com.acme.n4g6.impl_1.0.0
    ```
 
-<a name="データプロバイダをテストする" />
+<a name="test-the-data-provider" />
 
 ## データプロバイダをテストする
 
@@ -92,7 +92,7 @@ RESTデータプロバイダーが目的に合わない場合は、`DDMDataProvi
 
 これは良い例ですが、データプロバイダーのURLをハードコードしています。 URLを設定できるようにしておけば、この同じデータプロバイダーを他の都市や、XMLを提供する他のURLでも使用することができます。
 
-<a name="b4d8-ddmデータプロバイダーについて" />
+<a name="understanding-the-b4d8-ddm-data-provider" />
 
 ## B4D8 DDMデータプロバイダーについて
 
@@ -185,7 +185,7 @@ RESTデータプロバイダーが目的に合わない場合は、`DDMDataProvi
    :lines: 67-70,158-160
 ```
 
-<a name="データプロバイダー設定を追加する" />
+<a name="add-data-provider-settings" />
 
 ## データプロバイダー設定を追加する
 
@@ -282,7 +282,7 @@ import com.liferay.portal.kernel.util.Http;
 
 これで、アップデートデータプロバイダをテストする準備が整いました。
 
-<a name="更新されたデータプロバイダのデプロイとテスト" />
+<a name="deploy-and-test-the-updated-data-provider" />
 
 ## 更新されたデータプロバイダのデプロイとテスト
 

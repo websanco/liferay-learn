@@ -9,7 +9,7 @@ Liferayの[ワークフローエンジン](../introduction-to-workflow.md)は、
 * [スクリプトの例](#script-example)
 * [OSGiサービスの呼び出し](#calling-osgi-services)
 
-<a name="ワークフローノードへのスクリプトの追加" />
+<a name="adding-scripts-to-workflow-nodes" />
 
 ## ワークフローノードへのスクリプトの追加
 
@@ -48,7 +48,7 @@ Liferayの[ワークフローエンジン](../introduction-to-workflow.md)は、
 <script-language>groovy</script-language>
 ```
 
-<a name="定義済み変数" />
+<a name="predefined-variables" />
 
 ## 定義済み変数
 
@@ -75,7 +75,7 @@ Liferayの[ワークフローエンジン](../introduction-to-workflow.md)は、
 | `workflowTaskAssignees` (`List<` [`WorkflowTaskAssignee`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/workflow/WorkflowTaskAssignee.java) `>`)                                                 | タスクの担当者をリストアップします。                                                                                                           |                                                        |
 | `kaleoTimerInstanceToken` ( [`KaleoTimerInstanceToken`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/portal-workflow/portal-workflow-kaleo-api/src/main/java/com/liferay/portal/workflow/kaleo/model/KaleoTimerInstanceToken.java) ) | [タスクタイマー](./workflow-task-node-reference.md)が存在する場合は、`kaleoTimerInstanceToken.getKaleoTimerInstanceTokenId()`を呼び出してIDを取得します。 | |                                                      |
 
-<a name="スクリプトの例" />
+<a name="script-example" />
 
 ## スクリプトの例
 
@@ -145,7 +145,7 @@ Liferayの[ワークフローエンジン](../introduction-to-workflow.md)は、
 
 ダウンロード可能なワークフローのスクリプト例へのリンクは、 [Crafting Workflow Definitions](./crafting-xml-workflow-definitions.md) を参照してください。
 
-<a name="osgiサービスの呼び出し" />
+<a name="calling-osgi-services" />
 
 ## OSGiサービスの呼び出し
 
@@ -202,10 +202,10 @@ Bundle bundle = FrameworkUtil.getBundle(GroovyExecutor.class);
 
 LiferayのKaleoワークフローエンジンとLiferayのスクリプトエンジンの組み合わせは強力です。 権限を設定するときは、ワークフロー定義内のスクリプトが不適切だったり悪意を持って記述された場合の潜在的な影響に注意してください。
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 
-* [Introduction to Workflow](../introduction-to-workflow.md)
+* [ワークフローの概要](../introduction-to-workflow.md)
 * [Running Scripts From the Script Console](../../../system-administration/using-the-script-engine/running-scripts-from-the-script-console)
-* [Script Examples](../../../system-administration/using-the-script-engine/script-examples.md)
+* [スクリプトの例](../../../system-administration/using-the-script-engine/script-examples.md)

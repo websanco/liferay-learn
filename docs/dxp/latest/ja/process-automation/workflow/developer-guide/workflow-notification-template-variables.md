@@ -18,7 +18,7 @@ ${variableName}
 
 これらの変数を使用するには、ワークフローの通知コンテキストで利用可能な変数を知っておく必要があります。 利用できる変数は、ワークフロー定義の詳細やワークフロー内のアセットに応じて変化します。 ここで紹介する方法は、特定のコンテキストに合わせて変数のリストを取得する方法を示していますので、推測で行う必要はありません。
 
-<a name="ワークフロー通知テンプレート変数の確認" />
+<a name="discovering-the-workflow-notification-template-variables" />
 
 ## ワークフロー通知テンプレート変数の確認
 
@@ -89,7 +89,7 @@ DEBUGレベルの [ロギング](./../../../system-administration/using-the-serv
    ${dateUtil.getCurrentDate("MM/dd/yyyy, HH:mm",  localeUtil.getDefault())}`
    ```
 
-<a name="ワークフロー通知テンプレートの変数について" />
+<a name="understanding-the-workflow-notification-template-variables" />
 
 ## ワークフロー通知テンプレートの変数について
 

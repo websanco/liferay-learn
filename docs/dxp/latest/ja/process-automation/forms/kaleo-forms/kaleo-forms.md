@@ -7,7 +7,7 @@ Liferayの **KALEOフォーム** ソリューションの特徴を兼ね備え�
   - [Kaleoフォームプロセスの利用](#using-a-kaleo-forms-process)
   - [追加情報](#additional-information)
 
-<a name="kaleoフォームプロセスの作成" />
+<a name="creating-a-kaleo-forms-process" />
 
 ## Kaleoフォームプロセスの作成
 
@@ -57,7 +57,7 @@ Liferayの **KALEOフォーム** ソリューションの特徴を兼ね備え�
 
 1. ［**保存**］ をクリックします。
 
-<a name="kaleoフォームプロセスの利用" />
+<a name="using-a-kaleo-forms-process" />
 
 ## Kaleoフォームプロセスの利用
 
@@ -77,7 +77,7 @@ Liferayの **KALEOフォーム** ソリューションの特徴を兼ね備え�
 
 ここからは、指定されたタスクを完了するためのプロセスをクリックし、指定されたタスクフォームを編集、拒否、または承認して、解決に向けてプロセスを進めることができます。 利用可能なオプションと条件は、選択されたKaleoフォームのプロセスによって定義されます。
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 

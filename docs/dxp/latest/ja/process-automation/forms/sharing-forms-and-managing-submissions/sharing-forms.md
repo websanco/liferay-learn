@@ -5,7 +5,7 @@
 ［***フォーム**］ ウィジェットをサイトページに配置し、特定のフォームを表示するようにウィジェットを構成する。 これにより、[サイトページ](../../../site-building/creating-pages/understanding-pages/understanding-pages.md)にアクセスできるユーザーがフォームを表示したりフォームを送信したりできます。
 * 専用フォームURLをユーザーと直接共有する。 これにより、フォームへのアクセスは、直接リンクを持っているユーザーのみに制限されます。
 
-<a name="サイトページにフォームを表示する" />
+<a name="displaying-a-form-on-a-site-page" />
 
 ## サイトページにフォームを表示する
 
@@ -25,7 +25,7 @@
 
     ![［フォーム］ウィジェットに［Guest Survey］フォームが表示されます](./sharing-forms/images/05.png)
 
-<a name="フォームへの直接urlを取得する" />
+<a name="getting-the-direct-url-to-a-form" />
 
 ## フォームへの直接URLを取得する
 
@@ -43,8 +43,8 @@
 
 URLをコピーしたり、関連する受信者に送信するメールを設定することができます。 リンクをクリックしたユーザーは、フォームに直接アクセスできます。
 
-<a name="次のステップ" />
+<a name="whats-next" />
 
 ## 次のステップ
 
-* [Managing Form Entries](./managing-form-entries.md)
+* [フォームエントリーの管理](./managing-form-entries.md)

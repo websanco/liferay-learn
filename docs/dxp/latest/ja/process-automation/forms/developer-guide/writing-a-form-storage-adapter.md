@@ -8,7 +8,7 @@
 
 最初に、 [デフォルトのストレージアダプター](https://github.com/liferay/liferay-portal/blob/［$LIFERAY **LEARN** PORTAL **GIT** TAG$]/modules/apps/dynamic-data-mapping/dynamic-data-mapping-service/src/main/java/com/liferay/dynamic/data/mapping/internal/storage/JSONDDMStorageAdapter.java) がフォームレコードをLiferay DXPのデータベースにJSONコンテンツとして保存する方法を確認します。 そして、各フォームレコードをファイルシステムに保存するロジックを追加します。
 
-<a name="実行中のddmストレージアダプターを調べる" />
+<a name="examine-a-running-ddm-storage-adapter" />
 
 ## 実行中のDDMストレージアダプターを調べる
 
@@ -31,7 +31,7 @@
 1. [DDMストレージアダプターのプロジェクト](./writing-a-form-storage-adapter/resources/liferay-r2f1.zip) をダウンロードして解凍します。
 
     ```bash
-    curl https://learn.liferay.com/dxp/latest/en/process-automation/forms/developer-guide/liferay-r2f1.zip -O
+    curl https://learn.liferay.com/dxp/latest/ja/process-automation/forms/developer-guide/liferay-r2f1.zip -O
     ```
 
     ```bash
@@ -80,7 +80,7 @@
    WARN  [http-nio-8080-exec-5][R2F1DDMStorageAdapter:82] Acme storage adapter's save method was invoked
    ```
 
-<a name="拡張ポイントを理解する" />
+<a name="understand-the-extension-point" />
 
 ## 拡張ポイントを理解する
 
@@ -137,7 +137,7 @@ public DDMStorageAdapterSaveResponse save(
 
 すべてのメソッドに`DDMStorageAdapter［Save/Delete/Get］Request`が渡されます。 リクエストオブジェクトには、有用なコンテキスト情報を返すgetterメソッドが含まれています。
 
-<a name="ファイルシステムストレージを実装する" />
+<a name="implement-file-system-storage" />
 
 ## ファイルシステムストレージを実装する
 
@@ -297,7 +297,7 @@ private static final Log _log = LogFactoryUtil.getLog(
 
    `_jsonStorageAdapter.save`の呼び出しが最初に行われ、新しいフォームエントリー用にプライマリーキーが作成されます。 このプライマリーキーは、`fielId`を作成するために`Response`オブジェクトから取得されます。
 
-<a name="ストレージアダプターをデプロイしてテストする" />
+<a name="deploy-and-test-the-storage-adapter" />
 
 ## ストレージアダプターをデプロイしてテストする
 
@@ -328,7 +328,7 @@ private static final Log _log = LogFactoryUtil.getLog(
    WARN  [http-nio-8080-exec-5][R2F1DDMStorageAdapter:112] Reading the file with the ID 42088: {"availableLanguageIds":["en **US"],"defaultLanguageId":"en** US","fieldValues":[{"instanceId":"EJ5UglA1","name":"Field51665758","value":{"en_US":"Stretched limousine"}}]}
    ```
 
-<a name="まとめ" />
+<a name="conclusion" />
 
 ## まとめ
 

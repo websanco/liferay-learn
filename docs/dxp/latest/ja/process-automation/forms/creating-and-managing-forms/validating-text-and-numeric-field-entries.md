@@ -6,8 +6,6 @@
 
 <!-- Also consider updating because date fields can be validated in 7.4 -->
 
-<a name="フィールド検証の有効化" />
-
 ## フィールド検証の有効化
 
 検証を有効にするには：
@@ -21,8 +19,6 @@
 検証を有効にしたら、 **If Input** 条件を指定し、検証がどのように失敗したかを示す **Show Error Message** を入力します。
 
 <!-- When are the validation rules active? Does a person need to "Save" the form for the validation to be active? If yes, then we should explicitly say so. -->
-
-<a name="テキストフィールド" />
 
 ## テキストフィールド
 
@@ -64,8 +60,6 @@ URLを検証するには：
 
 1. 完了したら、［**Save Form**］クリックします。
 
-<a name="数値フィールドの検証" />
-
 ## 数値フィールドの検証
 
 数値フィールドの検証はテキストフィールドの検証に似ていますが、条件は入力された数値の値を他の値と比較します。
@@ -93,9 +87,7 @@ URLを検証するには：
 
 1. 変更を適用するには、［**Save Form**］をクリックします。
 
-<a name="追加情報" />
-
 ## 追加情報
 
 * [検証条件リファレンス](./validation-conditions-reference.md)
-* [Creating Forms](./creating-forms.md)
+* [フォームの作成](./creating-forms.md)

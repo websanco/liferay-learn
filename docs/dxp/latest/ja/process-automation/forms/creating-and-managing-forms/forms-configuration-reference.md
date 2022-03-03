@@ -2,7 +2,7 @@
 
 ここでは、フォームの全構成の概要を説明していますので、必要な構成をすぐに見つけることができます。
 
-<a name="フォームオプション" />
+<a name="forms-options" />
 
 ## フォームオプション
 
@@ -12,7 +12,7 @@
 
 詳しくは、 [フォームのエクスポートとインポート](./exporting-and-importing-forms.md) および [ページとコンテンツのインポートとエクスポート](../../../site-building/building-sites/importing-exporting-pages-and-content.md) を参照してください。
 
-<a name="フォームの設定" />
+<a name="form-settings" />
 
 ## フォームの設定
 
@@ -46,9 +46,9 @@
 | 送信先アドレス    | 受信者のメールアドレス（例：`test@example.com`)                              |
 | 件名         | 有益な件名にすることで、受信者はメールの内容を把握しやすくなります。                             |
 
-詳しくは、[Configuring Form Notifications](../sharing-forms-and-managing-submissions/configuring-form-notifications.md)を参照してください。
+詳しくは、 [フォーム通知の設定](../sharing-forms-and-managing-submissions/configuring-form-notifications.md) を参照してください。
 
-<a name="フォームウィジェットの設定" />
+<a name="form-widget-configuration" />
 
 ## フォームウィジェットの設定
 
@@ -72,7 +72,7 @@
 
 ![フォームウィジェットのスコープを選択します。](./forms-configuration-reference/images/06.png)
 
-<a name="インスタンス設定" />
+<a name="instance-settings" />
 
 ## インスタンス設定
 
@@ -80,7 +80,7 @@
 
 各構成プロパティの説明については、 [システム設定](#system-settings) を参照してください。
 
-<a name="システム設定" />
+<a name="system-settings" />
 
 ## システム設定
 
@@ -110,7 +110,7 @@ com.liferay.dynamic.data.mapping.form.web.internal.configuration.DDMFormWebConfi
 | アップロードフィールドの最大繰り返し（`maximumRepetitionsForUploadFields`） | フィールドが反復可能に設定されている場合、ユーザーがフォームにフィールドを追加できる最大回数を設定します（ゲストユーザーとログインユーザーに同じように適用されます）。 デフォルトでは5に設定されています。                                                                                      |
 | ゲストアップロードフィールドの最大送信数``）                                 | ゲストユーザーがゲスト対応のアップロードフィールドを含むフォームを送信できる最大回数を設定します。 ゲストユーザーのIPアドレスは、送信数の記録のために使用されます。 デフォルトでは5に設定されています。                                                                                      |
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 

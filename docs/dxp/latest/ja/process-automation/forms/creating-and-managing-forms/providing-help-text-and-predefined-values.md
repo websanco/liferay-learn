@@ -10,7 +10,7 @@
 
 すべてのフォーム項目タイプはヘルプテキストを持つことができ、ユーザー入力を受け入れるすべてのフォーム項目タイプは事前定義値を持つことができます。 プレースホルダーテキストを持つことができるのは、テキストフィールドと数値フィールドのみです。
 
-<a name="ヘルプまたはプレースホルダーテキストの入力" />
+<a name="entering-help-or-placeholder-texts" />
 
 ## ヘルプまたはプレースホルダーテキストの入力
 
@@ -32,7 +32,7 @@
 
 ![定義済みの値とプレースホルダーテキストを入力します。](./providing-help-text-and-predefined-values/images/02.png)
 
-<a name="事前定義値の入力" />
+<a name="entering-a-predefined-value" />
 
 ## 事前定義値の入力
 
@@ -43,7 +43,7 @@
 
 1. 完了したら、［**Save Form**］クリックします。
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 

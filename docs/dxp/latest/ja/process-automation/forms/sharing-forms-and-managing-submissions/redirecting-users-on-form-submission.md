@@ -12,8 +12,8 @@
 
 1. ［**Done**］ をクリックします。
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 
-* [Creating Forms](../creating-and-managing-forms/creating-forms.md)
+* [フォームの作成](../creating-and-managing-forms/creating-forms.md)

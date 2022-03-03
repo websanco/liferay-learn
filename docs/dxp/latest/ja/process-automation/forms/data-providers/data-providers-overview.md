@@ -7,7 +7,7 @@
 
 よくある例としては、RESTデータプロバイダーを使用して、［リストから選択］フィールドのオプションに国のリストを入力することが挙げられます。
 
-<a name="登録済みのjson-webサービス" />
+<a name="registered-json-web-services" />
 
 ## 登録済みのJSON Webサービス
 
@@ -40,7 +40,7 @@ Webサービスから選択可能なフィールドを選択します。 `get-co
 
 ![［URL例］タブには、対応するJSON Webサービスが表示されます。](./data-providers-overview/images/02.png)
 
-<a name="データプロバイダー設定リファレンス" />
+<a name="data-provider-configuration-reference" />
 
 ## データプロバイダー設定リファレンス
 
@@ -96,7 +96,7 @@ RESTサービスからのパスパラメーターまたはクエリパラメー�
 
 `restcountries.eu`データプロバイダーを使用している場合は、ユーザーには国名が表示され、データベースには数字の国コードが保存されます。
 
-<a name="次のステップ" />
+<a name="whats-next" />
 
 ## 次のステップ
 

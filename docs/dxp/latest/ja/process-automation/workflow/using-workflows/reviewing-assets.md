@@ -6,7 +6,7 @@
 
 ![アセットをレビューする準備ができたという通知がワークフローから送信されます。](./reviewing-assets/images/01.png)
 
-<a name="アセットの確認-1" />
+<a name="reviewing-an-asset" />
 
 ## アセットの確認
 
@@ -54,10 +54,10 @@
 
 承認されたアセット（Wikiページ）がウィジェットに公開されます。
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 
-* [Managing Notifications and Requests](../../../collaboration-and-social/notifications-and-requests/user-guide/managing-notifications-and-requests.md)
+* [通知とリクエストの管理](../../../collaboration-and-social/notifications-and-requests/user-guide/managing-notifications-and-requests.md)
 * [Workflow Task Nodes](../developer-guide/workflow-task-node-reference.md)
 * [Workflow Notifications](https://help.liferay.com/hc/articles/360028834772-Workflow-Notifications)

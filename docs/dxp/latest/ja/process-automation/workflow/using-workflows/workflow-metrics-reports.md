@@ -20,7 +20,7 @@
 ** Elasticsearchが必要です：**ワークフロー統計情報を使用するには、Elasticsearchを使用してLiferay DXPデータにインデックスを付ける必要があります。 Elasticsearchのインストールについては、 [here]（.../.../using-search/installing-and-upgrading-a-search-engine/installing-a-search-engine.md）を参照してください。
 ```
 
-<a name="ダッシュボードについて" />
+<a name="understanding-the-dashboard" />
 
 ## ダッシュボードについて
 
@@ -34,7 +34,7 @@
 
 **担当者ごとの作業量:** 担当者ごとの作業量の表には、ワークフロープロセスの担当者の内訳が、キュー内の項目数の降順で表示されます。 この表では、負担がかかり過ぎている担当者を一目で把握できる貴重な情報が提供されます。 ［**すべての担当者を見る**］ リンクをクリックして、 [［すべての項目］](#viewing-all-workflow-items) ビューを表示します。このビューには、より優れたフィルタリングおよび検索機能を備えた、より堅牢なテーブルがあります。 たとえば、ワークフローのステップごとにフィルタリングすることで、負担の多い担当者と負担の軽い担当者を識別することができます。 いくつかのタスクを再割り当てすることで、ボトルネックを解消することができます。
 
-<a name="プロセスパフォーマンスを理解する" />
+<a name="understanding-process-performance" />
 
 ## プロセスパフォーマンスを理解する
 
@@ -66,13 +66,13 @@ Liferay 7.4では、Performance by Stepメトリックにバージョンセレ�
 
 ワークフローの担当者の全体像を表示するには、 ［**すべての担当者を見る**］ をクリックします。
 
-<a name="時間ごとのメトリクスの絞り込み" />
+<a name="filtering-metrics-by-time" />
 
 ## 時間ごとのメトリクスの絞り込み
 
 今日、昨日、過去7日間、過去30日間、90日間、180日間、または昨年のイベントなど、時間によるフィルタリングが可能です。 期間を変更すると、メトリクスが変更され（たとえば、1時間あたりのインスタンス数、1週間あたりのインスタンス数など）、データの適切なビューが提供されます。
 
-<a name="すべてのワークフロー項目の表示" />
+<a name="viewing-all-workflow-items" />
 
 ## すべてのワークフロー項目の表示
 
@@ -124,7 +124,7 @@ Liferay 7.4では、Performance by Stepメトリックにバージョンセレ�
 
 ![フィルターを組み合わせることで、必要な項目だけを表示することができます。](./workflow-metrics-reports/images/08.png)
 
-<a name="項目の詳細" />
+<a name="item-details" />
 
 ## 項目の詳細
 
@@ -140,9 +140,9 @@ Liferay 7.4では、Performance by Stepメトリックにバージョンセレ�
 
 **解決済み** : 定義されたSLA目標が完了しました。 解決済みの項目のステータスは、［期限切れ］または［予定通り］のいずれかです。
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 
-* [Using Workflow Metrics](./using-workflow-metrics.md)
-* [Building Workflows](../designing-and-managing-workflows/building-workflows.md)
+* [ワークフローメトリクスの使用](./using-workflow-metrics.md)
+* [ワークフローの構築](../designing-and-managing-workflows/building-workflows.md)

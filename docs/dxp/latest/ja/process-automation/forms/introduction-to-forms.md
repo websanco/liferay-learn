@@ -2,7 +2,7 @@
 
 Liferayフォームでは、堅牢なフォーム構築機能が提供されるため、必要なユーザーデータ（顧客のフィードバック、求人応募など）を収集できます。 このアプリケーションは、ルールとRESTデータプロバイダーによって作成されたリストを含む複雑な、複数ページにわたる住宅所有者保険アプリケーションへの1つまたは2つの簡単なアンケート調査に使用できます。 フォームをすばやく作成して、そのフォームをユーザーと共有できます。
 
-<a name="フォームの作成" />
+<a name="creating-forms" />
 
 ## フォームの作成
 
@@ -17,7 +17,7 @@ Liferayフォームでは、堅牢なフォーム構築機能が提供される�
 
 詳細は、 [フォームの作成](./creating-and-managing-forms/creating-forms.md) を参照してください。
 
-<a name="その他のフォーム機能" />
+<a name="additional-forms-features" />
 
 ## その他のフォーム機能
 
@@ -28,7 +28,7 @@ Liferayフォームには、ユーザーが高度なエンゲージメントフ�
 * Liferayの組み込み[ワークフローシステム](./sharing-forms-and-managing-submissions/using-forms-with-a-workflow.md)との統合
 * など・・・
 
-<a name="フォームとビジネスプロセスの統合" />
+<a name="integrating-forms-with-business-processes" />
 
 ## フォームとビジネスプロセスの統合
 
@@ -38,7 +38,7 @@ Liferayフォームには、ユーザーが高度なエンゲージメントフ�
 
 ![Kaleoデモフォーム](./introduction-to-forms/images/01.png)
 
-<a name="次のステップ" />
+<a name="next-steps" />
 
 ## 次のステップ
 

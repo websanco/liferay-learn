@@ -12,7 +12,7 @@
 ***Registration Fee** : 150が[定義済みの値](../creating-and-managing-forms/providing-help-text-and-predefined-values.md)として設定されている数値フィールド。
 ***Total** : 合計が表示される数値フィールド。
 
-<a name="計算ルールの設定" />
+<a name="configuring-the-calculate-rule" />
 
 ## 計算ルールの設定
 
@@ -36,10 +36,10 @@
 
 ![2つのフィールドを掛け合わせて、総登録料を計算します。](./using-the-calculate-rule/images/02.png)
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 
 * [フォームの作成](../creating-and-managing-forms/creating-forms.md)
-* [Form Rules Overview](./form-rules-overview.md)
+* [フォームルールの概要](./form-rules-overview.md)
 * [Providing Predefined Values for a Form](../creating-and-managing-forms/providing-help-text-and-predefined-values.md)

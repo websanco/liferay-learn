@@ -56,7 +56,7 @@
 
 レビュータスクには2つの`actions`があり、両方とも`<notification>`です。 各通知には、名前、テンプレート、通知タイプ、実行タイプ、および受信者を含めることができます。 通知のほかに、`<action>`タグを使用することもできます 。 これらには名前と[スクリプト](./using-the-script-engine-in-workflow.md)があり、タスクよりもステータスノードで使われることが多いです。
 
-<a name="割り当て" />
+<a name="assignments" />
 
 ## 割り当て
 
@@ -140,7 +140,7 @@
 
 上記の`roles = new ArrayList<Role>();`の行に注目してください。 スクリプトでの割り当てでは、`roles` 変数で、タスクが割り当てられるロールを指定します。 例えば、`roles.add(adminRole);`が呼び出されると、管理者ロールが割り当てに追加されます。
 
-<a name="リソースアクションの割り当て" />
+<a name="resource-action-assignments" />
 
 ## リソースアクションの割り当て
 
@@ -179,7 +179,7 @@
 
 考えられるリソースアクション名を、そのリソースの権限画面から決定します。 例えば、掲示板では、その画面に表示される権限の1つに **Add Discussion** があります。 これをすべて大文字に変換し、スペースをアンダースコアに置き換えると、アクション名になります。
 
-<a name="タスクタイマー" />
+<a name="task-timers" />
 
 ## タスクタイマー
 
@@ -236,9 +236,9 @@
 `timer-action`には、` execution-type`という1つの例外を除いて、`action`と同じタグをすべて含めることができます。 タイマーアクションは、時間切れになると常にトリガーされるため、たとえば、 実行タイプに`onEntry`を指定しても、タイマーの中では意味がありません。
 ```
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 
-* [Crafting XML Workflow Definitions](./crafting-xml-workflow-definitions.md)
-* [Workflow Definition Node Reference](./workflow-definition-node-reference.md)
+* [XMLワークフロー定義の作成](./crafting-xml-workflow-definitions.md)
+* [ワークフロー定義ノードリファレンス](./workflow-definition-node-reference.md)

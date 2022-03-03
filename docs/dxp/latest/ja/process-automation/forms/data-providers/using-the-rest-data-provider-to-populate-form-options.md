@@ -2,7 +2,7 @@
 
 ［**リストから選択**］ フィールドには、多くのオプションを含めることができます。 これらのオプションは、Liferay DXPに登録されているJSON Web サービスや、その他のサードパーティーのREST Webサービスを使用して、自動的に提供することができます。 データプロバイダーの一般的な説明については、 [データプロバイダーの概要](./data-providers-overview.md) を参照してください。 RESTデータプロバイダーをフォームに適用するために、JSONウェブサービスを呼び出し、そこからデータを引き出すようにデータプロバイダーを設定し、フォームでデータプロバイダーを使用する方法を学びます。
 
-<a name="前提条件" />
+<a name="prerequisites" />
 
 ## 前提条件
 
@@ -36,7 +36,7 @@
 
 1. 完了したら、 ［**保存**］ をクリックします。
 
-<a name="基本的なrestデータプロバイダーの追加" />
+<a name="adding-a-basic-rest-data-provider" />
 
 ## 基本的なRESTデータプロバイダーの追加
 
@@ -69,7 +69,7 @@
    `nameCurrentValue` の前の `$..` は、JSONデータストラクチャーをナビゲートし、出力へのパスを指定するJsonPath構文です。 詳しくは [JsonPath](https://github.com/json-path/JsonPath) と [こちら](http://goessner.net/articles/JsonPath/) を参照してください。
 ```
 
-<a name="restデータプロバイダーのフィルターとしての入力の使用" />
+<a name="using-inputs-as-filters-for-the-rest-data-provider" />
 
 ## RESTデータプロバイダーのフィルターとしての入力の使用
 
@@ -89,7 +89,7 @@
 
    これらの値の詳細については、 [データプロバイダーの概要](./data-providers-overview.md) 参照してください。
 
-<a name="データプロバイダーへの権限付与" />
+<a name="granting-data-provider-permissions" />
 
 ## データプロバイダーへの権限付与
 
@@ -106,7 +106,7 @@
 1. 必要な権限を付与します。
 1. 完了したら、 ［**保存**］ をクリックします。
 
-<a name="選択フィールドでのデータプロバイダーを使用する" />
+<a name="using-a-data-provider-in-a-select-field" />
 
 ## 選択フィールドでのデータプロバイダーを使用する
 
@@ -126,7 +126,7 @@
 
 ![フォームのユーザーは、データプロバイダーによって入力されたリストからオプションを選択します。](./using-the-rest-data-provider-to-populate-form-options/images/07.png)
 
-<a name="データプロバイダーのエラーのトラブルシューティング" />
+<a name="troubleshooting-data-provider-errors" />
 
 ## データプロバイダーのエラーのトラブルシューティング
 
@@ -139,7 +139,7 @@
 
 データプロバイダーでエラーが発生した場合、コンソールが警告メッセージを送信するようになりました。
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 

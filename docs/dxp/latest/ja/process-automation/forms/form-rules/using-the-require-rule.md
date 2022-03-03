@@ -10,7 +10,7 @@
 
 回答者が ［**No**］ と答えた場合、 ［**Legal Guardian Email Address**］ が表示され、回答者は有効なメールアドレスを入力しなければなりません。
 
-<a name="必須ルールの設定" />
+<a name="configuring-the-require-rule" />
 
 ## 必須ルールの設定
 
@@ -30,9 +30,9 @@
 
 1. 完了したら、 ［**保存**］ をクリックします。
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 
 * [フォームの作成](../creating-and-managing-forms/creating-forms.md)
-* [Using the Show-Hide Rule](./using-the-show-hide-rule.md)
+* [表示/非表示ルールの使用](./using-the-show-hide-rule.md)

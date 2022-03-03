@@ -2,7 +2,7 @@
 
 フォーム応答が送信される前に検証するために使用できる、すぐに使用できる検証条件がいくつかあります。
 
-<a name="テキストフィールドの検証条件" />
+<a name="text-field-validation-conditions" />
 
 ## テキストフィールドの検証条件
 
@@ -12,7 +12,7 @@
 
 
 
-<a name="数値フィールド検証条件" />
+<a name="numeric-field-validation-conditions" />
 
 ## 数値フィールド検証条件
 
@@ -27,7 +27,7 @@
 
 
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 

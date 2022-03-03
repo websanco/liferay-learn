@@ -4,7 +4,7 @@
 
 ![デフォルトでは、フォームはリスト形式で表示されます。](./creating-forms/images/01.png)
 
-<a name="フォームの作成-1" />
+<a name="building-a-form" />
 
 ## フォームの作成
 
@@ -99,7 +99,7 @@ Liferay 7.3では、既存のフォームページを並び替えることがで
 
 詳細は、 [フォームの共有](../sharing-forms-and-managing-submissions/sharing-forms.md) を参照してください。
 
-<a name="フォームの複製" />
+<a name="duplicating-a-form" />
 
 ## フォームの複製
 
@@ -116,7 +116,7 @@ Liferay 7.3では、既存のフォームページを並び替えることがで
 
 ![複製フォームの生成](./creating-forms/images/05.png)
 
-<a name="次のステップ" />
+<a name="whats-next" />
 
 ## 次のステップ
 

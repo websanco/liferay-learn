@@ -10,13 +10,13 @@
    A newly added storage adapter can only be used with new Forms. All existing Forms continue to use the adapter selected (JSON by default) at the time of their creation, and a different storage adapter cannot be selected.
 ```
 
-<a name="フォームレコードの保存" />
+<a name="saving-form-records" />
 
 ## フォームレコードの保存
 
 デフォルトのJSON実装では、保存リクエストに格納されているブール値`isInsert`に応じて、異なる応答をします。 trueの場合は、新しいフォームレコードを追加するロジックが呼び出され、falseの場合は、代わりに更新が行われます。 このロジックは、`insert` と `update`というメソッドに含まれています。 `DDMStorageAdapterの` の実装がこのパラダイムにも対応していることを確認してください。
 
-<a name="フォームレコードのシリアライズとデシリアライズ" />
+<a name="serializing-and-deserializing-form-records" />
 
 ## フォームレコードのシリアライズとデシリアライズ
 
@@ -28,4 +28,4 @@
 
 このシリアライズのロジックに実装する`DDMFormValuesSerializer`インターフェイスと、デシリアライズのロジックに実装する`DDMFormValuesDeserializer`インターフェイスがあります。 `DDMFormValues`オブジェクトのJSONへの変換（およびその逆の変換）をサポートしているLiferayのデフォルトの実装は、それぞれ [こちら](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/dynamic-data-mapping/dynamic-data-mapping-service/src/main/java/com/liferay/dynamic/data/mapping/internal/io/DDMFormValuesJSONSerializer.java) と [こちら](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/dynamic-data-mapping/dynamic-data-mapping-service/src/main/java/com/liferay/dynamic/data/mapping/internal/io/DDMFormValuesJSONDeserializer.java) にあります。
 
-完全な例については、[Writing a Form Storage Adapter](./writing-a-form-storage-adapter.md)を参照してください。
+完全な例については、 [フォームストレージアダプターの書き込み](./writing-a-form-storage-adapter.md) を参照してください。

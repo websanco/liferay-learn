@@ -13,7 +13,7 @@
     ［***Region**］ という名前のテキストフィールド
     * [restcountries.eu](https://restcountries.eu) データプロバイダーを使用する ［**Choose a Destination Country**］ という名前の［リストから選択］フィールド
 
-<a name="自動入力ルールの設定" />
+<a name="configuring-the-autofill-rule" />
 
 ## 自動入力ルールの設定
 
@@ -37,7 +37,7 @@
 
 1. 完了したら、 ［**保存**］ をクリックします。
 
-<a name="自動入力ルールの検証" />
+<a name="verifying-the-autofill-rule" />
 
 ## 自動入力ルールの検証
 
@@ -51,7 +51,7 @@
 
 ユーザーは、地域を検索した後、フォーム内の国を検索できるようになりました。
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 

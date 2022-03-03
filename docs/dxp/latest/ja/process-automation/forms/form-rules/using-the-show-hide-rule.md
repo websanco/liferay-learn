@@ -7,7 +7,7 @@
 ***I am 18 Years Old or Older** : ［**Yes**］ と ［**No**］ の2つのオプションを持つ必須の単一選択フィールド。
 ***Legal Guardian Email Address** : 有効なメールアドレスを受け付けるテキストフィールド。
 
-<a name="表示アクションルールの設定" />
+<a name="configuring-the-show-action-rule" />
 
 ## 表示アクションルールの設定
 
@@ -30,14 +30,14 @@
 
 これで、ユーザーが ［**I am 18 years old or older**］ フィールドで ［**No**］ を選択した場合にのみ、 ［**Legal Guardian Email Address**］ フィールドが表示されます。
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 
 * [フォームの作成](../creating-and-managing-forms/creating-forms.md)
-* [Form Rules Overview](./form-rules-overview.md)
-* [Using the Require Rule](./using-the-require-rule.md)
+* [フォームルールの概要](./form-rules-overview.md)
+* [必須ルールの使用](./using-the-require-rule.md)
 * [Using the Enable Rule](./using-the-enable-disable-rule.md)
-* [Using the Jump to Page Rule](./using-the-jump-to-page-rule.md)
-* [Using the Autofill Rule](./using-the-autofill-rule.md)
-* [Using the Calculate Rule](./using-the-calculate-rule.md)
+* [ページへ移動ルールの使用](./using-the-jump-to-page-rule.md)
+* [自動入力ルールの使用](./using-the-autofill-rule.md)
+* [計算ルールの使用](./using-the-calculate-rule.md)

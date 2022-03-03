@@ -9,7 +9,7 @@ Liferayフォームアプリケーションには、フォームに追加する�
 
 ![多くの便利なフォーム要素があります。](./forms-field-types-reference/images/01.png)
 
-<a name="フィールド設定の概要" />
+<a name="field-configuration-overview" />
 
 ## フィールド設定の概要
 
@@ -51,7 +51,7 @@ Liferay 7.3の最初のリリースでは、編集可能な構成のField Name�
 
 ![フィールド参照の設定では、フォームビルダーがフィールドの人間が読めるシステム名を設定することができます。](./forms-field-types-reference/images/20.png)
 
-<a name="フォームのフィールドと要素" />
+<a name="form-fields-and-elements" />
 
 ## フォームのフィールドと要素
 
@@ -197,7 +197,7 @@ Liferay 7.4以降の［ロケーションの検索］フィールドを使用し
 
 詳細については、 [検索場所フィールドを使う](using-the-search-location-field.md) を参照してください。
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 

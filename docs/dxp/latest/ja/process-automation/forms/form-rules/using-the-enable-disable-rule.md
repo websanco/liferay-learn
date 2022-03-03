@@ -28,14 +28,14 @@
 
 ![ユーザーが［Yes］を選択すると、フィールドが有効になります。](./using-the-enable-disable-rule/images/03.png)
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 
 * [フォームの作成](../creating-and-managing-forms/creating-forms.md)
-* [Form Rules Overview](./form-rules-overview.md)
-* [Using the Require Rule](./using-the-require-rule.md)
+* [フォームルールの概要](./form-rules-overview.md)
+* [必須ルールの使用](./using-the-require-rule.md)
 * [Using the Enable Rule](./using-the-enable-disable-rule.md)
-* [Using the Jump to Page Rule](./using-the-jump-to-page-rule.md)
-* [Using the Autofill Rule](./using-the-autofill-rule.md)
-* [Using the Calculate Rule](./using-the-calculate-rule.md)
+* [ページへ移動ルールの使用](./using-the-jump-to-page-rule.md)
+* [自動入力ルールの使用](./using-the-autofill-rule.md)
+* [計算ルールの使用](./using-the-calculate-rule.md)

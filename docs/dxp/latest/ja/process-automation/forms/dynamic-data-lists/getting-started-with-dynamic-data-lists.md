@@ -25,7 +25,7 @@
 * [フォームテンプレートの作成](./creating-form-templates.md)
 * [表示テンプレートの作成](./creating-display-templates.md)
 
-<a name="システム設定" />
+<a name="system-configuration" />
 
 ## システム設定
 

@@ -6,7 +6,7 @@
 * [条件ノード](#conditions)
 * [フォークと結合](#forks-and-joins)
 
-<a name="ステータスノード" />
+<a name="state-nodes" />
 
 ## ステータスノード
 
@@ -45,7 +45,7 @@
 </actions>
 ```
 
-<a name="条件" />
+<a name="conditions" />
 
 ## 条件
 
@@ -117,7 +117,7 @@
 
 `returnValue`変数は、条件からトランジションを指し、その値は有効なトランジション名と一致する必要があります。 このスクリプトでは、対象となるアセットを調べ、そのアセットカテゴリーを取得し、初期値として`returnValue`を設定します。 その後、そのアセットが **legal** カテゴリでマークされているかどうかを確認します。 マークされていない場合は、 **コンテンツレビュー**（ワークフローのcontent-reviewタスク）を通過し、マークされている場合は、 **法務レビュー**（ワークフローのlegal-reviewタスク）を通過します。
 
-<a name="フォークと結合" />
+<a name="forks-and-joins" />
 
 ## フォークと結合
 
@@ -168,7 +168,7 @@ XOR 結合は、1つの重要な点で結合とは異なります。それは、
 </join-xor>
 ```
 
-<a name="タスクノード" />
+<a name="task-nodes" />
 
 ## タスクノード
 
@@ -231,9 +231,9 @@ XOR 結合は、1つの重要な点で結合とは異なります。それは、
 </task>
 ```
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 
-* [Crafting XML Workflow Definitions](./crafting-xml-workflow-definitions.md)
-* [Workflow Task Node Reference](./workflow-task-node-reference.md)
+* [XMLワークフロー定義の作成](./crafting-xml-workflow-definitions.md)
+* [ワークフロータスクノードリファレンス](./workflow-task-node-reference.md)

@@ -18,7 +18,7 @@ CAPTCHAを有効にするには：
 
 ![キャプチャを有効にしたフォーム。](./enabling-captcha-on-form-submissions/images/03.png)
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 

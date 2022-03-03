@@ -1,14 +1,20 @@
-開発者ガイド
-===============
+# 開発者ガイド
 
-.. toctree:: :maxdepth: 3
+```{toctree}
+:maxdepth: 3
 
-   developer-guide/writing-a-custom-data-provider.md developer-guide/writing-a-form-storage-adapter.md developer-guide/understanding-form-storage-adapters.md
+developer-guide/understanding-form-storage-adapters.md
+developer-guide/writing-a-custom-data-provider.md
+developer-guide/writing-a-form-storage-adapter.md
+```
 
-フォーム
------
+<a name="forms" />
 
--  :doc:`/process-automation/forms/developer-guide/writing-a-custom-data-provider`
--  :doc:`/process-automation/forms/developer-guide/writing-a-form-storage-adapter`
--  :doc:`/process-automation/forms/developer-guide/understanding-form-storage-adapters`
+## フォーム
+
+
+- [フォームストレージアダプターについて](./developer-guide/understanding-form-storage-adapters.md)
+- [カスタムデータプロバイダーの作成](./developer-guide/writing-a-custom-data-provider.md)
+- [フォームストレージアダプターの書き込み](./developer-guide/writing-a-form-storage-adapter.md)
+
 * DDM IO APIによるフォームのシリアル化

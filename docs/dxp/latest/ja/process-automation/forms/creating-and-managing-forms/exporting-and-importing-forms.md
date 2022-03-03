@@ -4,7 +4,7 @@
 
 インポート/エクスポートのプロセスについては、 [サイトとコンテンツのインポート/エクスポート](../../../site-building/building-sites/importing-exporting-pages-and-content.md) を参照してください。
 
-<a name="フォームをlarファイルとしてエクスポートする" />
+<a name="exporting-forms-as-a-lar-file" />
 
 ## フォームをLARファイルとしてエクスポートする
 
@@ -29,7 +29,7 @@
 
 フォームの`LAR`ファイルをダウンロードしました。 これを別のサイトに取り込むことができます。
 
-<a name="フォームをサイトにインポートする" />
+<a name="importing-forms-into-a-site" />
 
 ## フォームをサイトにインポートする
 
@@ -49,7 +49,7 @@
 
 ゲストサイトのフォームがこのサイトにインポートされます。
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 

@@ -20,7 +20,7 @@
 
 1. **保存** をクリックして、リストの作成を終了します。 新しいリストがテーブルに表示されます。
 
-<a name="リストレコードの作成" />
+<a name="creating-list-records" />
 
 ## リストレコードの作成
 
@@ -58,7 +58,7 @@
 
 ![レコード追加フォームに必要事項を入力してください。](./creating-data-lists/images/04.png)
 
-<a name="動的データリスト表示ウィジェットの構成" />
+<a name="configuring-the-dynamic-data-lists-display-widget" />
 
 ## 動的データリスト表示ウィジェットの構成
 

@@ -21,10 +21,10 @@
 
 ![フォームレコードが承認されました](./using-forms-with-a-workflow/images/05.png)
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 
-* [Managing Form Entries](./managing-form-entries.md)
-* [Reviewing Assets](../../workflow/using-workflows/reviewing-assets.md)
-* [Using the Script Engine in Workflow](../../workflow/developer-guide/using-the-script-engine-in-workflow.md)
+* [フォームエントリーの管理](./managing-form-entries.md)
+* [アセットの確認](../../workflow/using-workflows/reviewing-assets.md)
+* [ワークフローでのスクリプトエンジンの使用](../../workflow/developer-guide/using-the-script-engine-in-workflow.md)

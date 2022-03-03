@@ -14,7 +14,7 @@ Liferay DXPのすべてのワークフロー定義は、XML形式で記述され
 
 ワークフローを公開すると、ワークフローが有効な場所であればどこでも適用できるようになります。
 
-<a name="既存のワークフロー定義" />
+<a name="existing-workflow-definitions" />
 
 ## 既存のワークフロー定義
 
@@ -27,7 +27,7 @@ Liferay DXPのすべてのワークフロー定義は、XML形式で記述され
 
 ワークフローを構成しているコンポーネントに分解するときは、［ステータス］、［タスク］、［アクション］について考えます。 それらを定義したら、作業を開始する準備が整います。 これで、唯一の承認者のワークフローがどのように機能するかを確認して、すべてをまとめる準備が整いました。
 
-<a name="スキーマ" />
+<a name="schema" />
 
 ## スキーマ
 
@@ -44,7 +44,7 @@ Liferay DXPのすべてのワークフロー定義は、XML形式で記述され
         http://www.liferay.com/dtd/liferay-workflow-definition_7_3_0.xsd">
 ```
 
-<a name="メタデータ" />
+<a name="metadata" />
 
 ## メタデータ
 
@@ -56,7 +56,7 @@ Liferay DXPのすべてのワークフロー定義は、XML形式で記述され
 <version>1</version>
 ```
 
-<a name="開始ノードと終了ノード" />
+<a name="start-and-end-nodes" />
 
 ## 開始ノードと終了ノード
 
@@ -107,7 +107,7 @@ Liferay DXPのすべてのワークフロー定義は、XML形式で記述され
 
 詳しくは、[ワークフローの定義ノードリファレンス](./workflow-definition-node-reference.md) を参照してください。
 
-<a name="タスクノード" />
+<a name="task-nodes" />
 
 ## タスクノード
 
@@ -257,7 +257,7 @@ Liferay DXPのすべてのワークフロー定義は、XML形式で記述され
      </task>
 ```
 
-<a name="まとめ" />
+<a name="conclusion" />
 
 ## まとめ
 
@@ -269,7 +269,7 @@ Liferay DXPのすべてのワークフロー定義は、XML形式で記述され
 
 これで唯一の承認者のワークフローが完成しました。 ワークフローがどのように作成されるかがわかったところで、フォーク、結合、条件など、その他の可能なオプションについて学びましょう。 Liferayのワークフローシステムには、必要なプロセスを実装することができます。
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 
