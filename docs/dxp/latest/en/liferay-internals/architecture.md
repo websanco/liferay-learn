@@ -93,7 +93,7 @@ Front-end applications invoke the services to do work. You can deploy Java-based
 
 ![Local and remote applications can invoke services via REST web APIs. Java-based portlets can also invoke services via Java APIs.](./architecture/images/03.png)
 
-Liferay services are built using [Service Builder](../building-applications/data-frameworks/service-builder.md) and made REST-ful using [REST Builder](../../headless-delivery/apis-with-rest-builder/producing-and-implementing-apis-with-rest-builder.md). The services are easy to [override and extend](./extending-liferay/overriding-osgi-services.md) too.
+Liferay services are built using [Service Builder](../building-applications/data-frameworks/service-builder.md) and made REST-ful using [REST Builder](../../headless-delivery/apis-with-rest-builder.md). The services are easy to [override and extend](./extending-liferay/overriding-osgi-services.md) too.
 
 The web-based UI makes content and service functionality available in browsers.
 

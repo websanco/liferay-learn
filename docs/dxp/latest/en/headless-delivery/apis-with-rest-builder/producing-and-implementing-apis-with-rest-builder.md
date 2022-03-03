@@ -12,17 +12,17 @@ To see REST Builder in action, you can deploy an example API that retrieves a du
     docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
     ```
 
-1. Download and unzip the `.zip` archive containing the [Acme Foo API](./producing-and-implementing-apis-with-rest-builder/liferay-r3b2.zip):
+2. Download and unzip the `.zip` archive containing the [Acme Foo API](./liferay-r3b2.zip):
 
     ```bash
-    curl https://learn.liferay.com/dxp/latest/en/headless-delivery/producing-and-implementing-apis-with-rest-builder/liferay-r3b2.zip -O
+    curl https://learn.liferay.com/dxp/latest/en/headless-delivery/apis-with-rest-builder/liferay-r3b2.zip -O
     ```
 
     ```bash
     unzip liferay-r3b2.zip
     ```
 
-1. Build and deploy the example:
+3. Build and deploy the example:
 
     ```bash
     ./gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)
@@ -32,16 +32,16 @@ To see REST Builder in action, you can deploy an example API that retrieves a du
     This command is the same as copying the deployed jars to /opt/liferay/osgi/modules on the Docker container.
     ```
 
-1. Confirm the deployment in the Docker container console for both the `api` and `impl` bundles:
+4. Confirm the deployment in the Docker container console for both the `api` and `impl` bundles:
 
     ```
     STARTED com.acme.headless.r3b2.api_1.0.0 
     STARTED com.acme.headless.r3b2.impl_1.0.0
     ```
 
-1. Log into your DXP instance and navigate to the _Global Menu_ ( ![Global Menu icon](../../images/icon-applications-menu.png) ) &rarr; _Control Panel_ &rarr; _Gogo Shell._
+5. Log into your DXP instance and navigate to the _Global Menu_ ( ![Global Menu icon](../../images/icon-applications-menu.png) ) &rarr; _Control Panel_ &rarr; _Gogo Shell._
 
-1. In the Gogo Shell prompt, type the following command:
+6. In the Gogo Shell prompt, type the following command:
 
     ```
     jaxrs:check
@@ -51,7 +51,7 @@ To see REST Builder in action, you can deploy an example API that retrieves a du
 
     ![The newly deployed API (named Liferay.Headless.R3B2) is listed as a result from the command and is ready to use.](./producing-and-implementing-apis-with-rest-builder/images/01.png)
 
-1. Test the API by running the following command from your terminal, substituting a number between 1 and 3 for `{fooId}`:
+7. Test the API by running the following command from your terminal, substituting a number between 1 and 3 for `{fooId}`:
 
     ```bash
     curl -u 'test@liferay.com:test' "http://localhost:8080/o/headless-r3b2/v1.0/foo/{fooId}"
