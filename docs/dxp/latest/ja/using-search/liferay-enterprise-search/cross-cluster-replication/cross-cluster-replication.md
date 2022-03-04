@@ -4,7 +4,7 @@
 
 従来のLiferay DXP/検索エンジンのインストールでは、1つのLiferay DXPクラスターが1つのElasticsearchクラスターと通信し、検索エンジンクラスターへの1つの接続を介して、すべての読み取り（検索クエリの実行）および書き込み（ドキュメントの作成）要求を送信します。 この設定では、すべてのElasticsearchクラスターノードが単一のデータセンターに配置されていることを前提としています（ただし、Liferay DXPサーバーとは異なるデータセンターに配置することもできます）。
 
-Elasticsearchは、データの局所性とディザスタリカバリに関する懸念に対処するために、 [LESサブスクライバー](https://www.liferay.com/products/dxp/enterprise-search) がElasticsearch 7以降でLiferay DXPで使用できる [クラスター横断レプリケーション（CCR）](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/xpack-ccr.html) 機能をリリースしました（バージョン互換性の詳細は、 [LES互換性マトリックス](https://help.liferay.com/hc/en-us/articles/360016511651#Liferay-Enterprise-Search) を参照してください）。 LES CCRモジュールを使用すると、別の形のマルチデータセンター展開が可能です。 Elasticsearchクラスターのノードを複数のデータセンターに分散することはできませんが、各データセンターで個別のElasticsearchクラスターを構成して接続することはできます。
+Elasticsearchは、データの局所性とディザスタリカバリに関する懸念に対処するために、 [LESサブスクライバー](https://www.liferay.com/products/dxp/enterprise-search) がElasticsearch 7以降でLiferay DXPで使用できる [クラスター横断レプリケーション（CCR）](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/xpack-ccr.html) 機能をリリースしました（バージョン互換性の詳細は、 [LES互換性マトリックス](https://help.liferay.com/hc/ja/articles/360016511651#Liferay-Enterprise-Search) を参照してください）。 LES CCRモジュールを使用すると、別の形のマルチデータセンター展開が可能です。 Elasticsearchクラスターのノードを複数のデータセンターに分散することはできませんが、各データセンターで個別のElasticsearchクラスターを構成して接続することはできます。
 
 この構成では、 **リーダー** インデックスを保持する1つのクラスターと、リーダーからレプリケートされた **フォロワー** インデックスを保持する少なくとも1つのクラスターを想定しています。 フォロワーインデックスは、Liferay DXPがデータを読み取るためにのみ使用されます。 リーダーインデックスは常に書き込みに使用されますが、読み取りにも使用できます。
 
@@ -23,13 +23,13 @@ Liferay DXPは、ワイドエリアネットワーク（WAN）プロトコルを
 - Liferay DXPクラスターのElasticsearch接続を設定する
 - フォロワーインデックスから読み取りを行うLiferay DXPノードでクラスター横断レプリケーションを有効にして設定する
 
-<a name="liferay-dxplesクラスター横断レプリケーションモジュールのインストール" />
+<a name="liferay-dxp-install-the-les-cross-cluster-replication-module" />
 
 ## Liferay DXP：LESクラスター横断レプリケーションモジュールのインストール
 
 ローカルクラスターのフォロワーインデックスから読み取りを行い、リモートクラスターのリーダーインデックスへの個別の接続を介して書き込みを行うLiferay DXPノードには、CCRモジュールがインストールされている必要があります。 一貫性と適応性のために、クラスター内のすべてのノードにインストールするのが最善です。 このモジュールは、LESサブスクリプションとともに（LPKGファイルとして）ダウンロードできます。
 
-<a name="liferay-dxpリモートクラスターからレプリケートするインデックスを決定する" />
+<a name="liferay-dxp-decide-which-indexes-to-replicate-from-the-remote-cluster" />
 
 ## Liferay DXP：リモートクラスターからレプリケートするインデックスを決定する
 
@@ -68,17 +68,17 @@ Liferay DXPは、ワイドエリアネットワーク（WAN）プロトコルを
 
 特段の理由がない限り、すべてのLiferay DXPインデックスとすべてのカスタムインデックスをフォロワーのElasticsearchクラスターにレプリケートする必要があります。
 
-<a name="elasticsearchクラスターを構成する" />
+<a name="configure-the-elasticsearch-clusters" />
 
 ## Elasticsearchクラスターを構成する
 
-クラスター横断レプリケーションにも対応しているLiferay DXPでサポートされているバージョンを使用して、Elasticsearchクラスターをセットアップします。 詳細は、 [LES互換性マトリックス](https://help.liferay.com/hc/en-us/articles/360016511651#Liferay-Enterprise-Search) を参照してください。
+クラスター横断レプリケーションにも対応しているLiferay DXPでサポートされているバージョンを使用して、Elasticsearchクラスターをセットアップします。 詳細は、 [LES互換性マトリックス](https://help.liferay.com/hc/ja/articles/360016511651#Liferay-Enterprise-Search) を参照してください。
 
 [Liferay DXPが必要とするElasticsearchプラグインをインストールし、フォロワークラスターとリーダークラスターを区別するためのクラスター名](../../installing-and-upgrading-a-search-engine/elasticsearch/installing-elasticsearch.html#configure-elasticsearch) を指定してください。
 
 CCRにはElasticsearch Platinumレベルのライセンスが必要ですが、 [LESのお客様](../../liferay_enterprise_search.html) はすでに所有しています。 ローカルでテストしている場合は、各クラスターで [トライアルライセンス](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/start-trial.html) を開始してください。
 
-<a name="liferay-dxpをelasticsearchに接続する" />
+<a name="connect-liferay-dxp-to-elasticsearch" />
 
 ## Liferay DXPをElasticsearchに接続する
 
@@ -90,7 +90,7 @@ CCRにはElasticsearch Platinumレベルのライセンスが必要ですが、 
 
 ノードを起動し、クラスター内のすべてのノードにLESアプリをインストールします（まだ起動していない場合）。
 
-<a name="クラスター横断レプリケーションを有効にして構成する" />
+<a name="enable-and-configure-cross-cluster-replication" />
 
 ## クラスター横断レプリケーションを有効にして構成する
 

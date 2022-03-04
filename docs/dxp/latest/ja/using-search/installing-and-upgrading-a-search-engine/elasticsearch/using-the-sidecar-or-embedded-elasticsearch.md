@@ -41,7 +41,7 @@ HSQLのような組み込みデータベースを本番環境で実行したり�
    Synonym SetsとResult Rankingsは、検索インデックスを一次データの保存に使用するアプリケーションです。 Liferayのデータベースにデータは保存されません。 そのため、サイドカーや組み込みのElasticsearchを使用しているときにSynonym SetsやResult Rankingsが設定されていた場合、リモートのElasticsearchサーバに切り替えてインデックスを再作成しても、それらの設定は``復元されません。 その代わり、シノニムセットと結果ランキングをリモートのElasticsearchクラスタに手動で取り込む必要があります。 インデックスを維持するためのElasticの [スナップショットと復元](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/snapshot-restore.html) 機能の詳細は [アップグレードガイド](../elasticsearch.html) を参照してください。
 ```
 
-<a name="バンドルされているelasticsearchサーバーのユースケース" />
+<a name="bundled-elasticsearch-server-use-cases" />
 
 ## バンドルされているElasticsearchサーバーのユースケース
 
@@ -52,7 +52,7 @@ HSQLのような組み込みデータベースを本番環境で実行したり�
 * [検索の調整](../../search_administration_and_tuning.md)機能のテスト
 * [検索ウィジェット](../../search_pages_and_widgets.md)の調査と設定
 
-<a name="アプリサーバーの違い" />
+<a name="app-server-differences" />
 
 ## アプリサーバーの違い
 
@@ -78,7 +78,7 @@ Tomcat以外のアプリケーションサーバーのバンドルをダウン�
    バンドルされているElasticsearchサーバは、開発およびテスト目的に有用であり、本番環境では使用しないでください。 リモート検索エンジンのインストールについては、 [Elasticsearchをインスト0るする](./getting-started-with-elasticsearch.md) を参照してください。
 ```
 
-<a name="embeddedとサイドカーの比較" />
+<a name="embedded-versus-sidecar" />
 
 ## Embeddedとサイドカーの比較
 

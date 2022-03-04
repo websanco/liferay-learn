@@ -20,7 +20,7 @@
 * Webコンテンツフォルダー
 * Wikiページ
 
-<a name="タイプファセットの設定" />
+<a name="configuring-the-type-facet" />
 
 ## タイプファセットの設定
 

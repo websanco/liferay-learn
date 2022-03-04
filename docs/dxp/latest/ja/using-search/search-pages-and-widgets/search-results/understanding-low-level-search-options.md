@@ -42,7 +42,7 @@
 
 [**Liferay 7.4 ] Attributes：** このセクションは、開発やテストの目的でのみ役立ちます。 これを使って、検索コンテキストに、カスタムコードで読み取れるキー／バリュー属性を追加します（例： `searchContext.getAttribute("key")`）。
 
-<a name="低レベルの検索結果を表示する" />
+<a name="displaying-low-level-search-results" />
 
 ## 低レベルの検索結果を表示する
 
@@ -54,19 +54,19 @@ Liferay社のインデックスに登録されているアセット（例： `li
 
 ![低レベルサーチフレームワークには、魅力的な結果サマリーをその場で作成するロジックが含まれています。](./understanding-low-level-search-options/images/04.png)
 
-<a name="低レベルサーチとパーミッションチェック" />
+<a name="low-level-search-and-permission-checking" />
 
 ## 低レベルサーチとパーミッションチェック
 
 低レベル検索では、パーミッションチェックはできません。 低レベル検索を使って企業のインデックスまで検索してしまうと、重要な [権限チェック](../search-results/search-results-behavior.md#permissions-and-search-results) が回避されてしまいます。 ほとんどの場合、権限チェックのメリットを求めますが、意図的に権限チェックを回避するユースケースとして考えられるのは、管理者専用の検索ページで、検索ページにアクセスする人は会社のインデックスにあるすべての結果にアクセスできなければならない場合です。
 
-<a name="低レベルの検索と関連性" />
+<a name="low-level-search-and-relevance" />
 
 ## 低レベルの検索と関連性
 
 関連性スコアリングは、インデックスの中でのみ意味を持ちます。 別々のインデックスから得られた結果は、お互いに正確なスコアリングができません。 そのため、各インデックスからの結果を別の「検索結果」ウィジェットに表示するのがベストです。 以下の例では、そのことを示しています。
 
-<a name="例1代替インデックスの検索" />
+<a name="example-1-searching-an-alternate-index" />
 
 ## 例1：代替インデックスの検索
 
@@ -103,7 +103,7 @@ Liferay社のインデックスに登録されているアセット（例： `li
 
 ![低レベル検索による結果の例](./understanding-low-level-search-options/images/03.png)
 
-<a name="例2liferayカンパニーインデックスと追加インデックスの検索" />
+<a name="example-2-searching-the-liferay-company-index-and-an-additional-index" />
 
 ## 例2：Liferayカンパニーインデックスと追加インデックスの検索
 

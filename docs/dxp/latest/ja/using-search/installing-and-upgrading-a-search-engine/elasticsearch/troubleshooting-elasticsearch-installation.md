@@ -2,13 +2,13 @@
 
 リモートモードで[LiferayにElasticsearch](./getting-started-with-elasticsearch.md)をセットアップしたが、LiferayがElasticsearchに接続していない場合は、次のことを確認してください。
 
-<a name="クラスター名" />
+<a name="cluster-name" />
 
 ## クラスター名
 
 `elasticsearch.yml`の`cluster.name`プロパティの値は、Liferay Elasticsearchコネクターで設定された`clusterName`プロパティと一致する必要があります。
 
-<a name="トランスポートアドレス" />
+<a name="transport-addresses" />
 
 ## トランスポートアドレス
 
@@ -16,13 +16,13 @@ Elasticsearchコネクター設定の`transportAddresses`プロパティの値�
 
 [Elasticsearchへの接続](./connecting-to-elasticsearch.md) では、コネクター設定オプションについて詳しく説明しています。
 
-<a name="ネットワークホストアドレス" />
+<a name="network-host-addresses" />
 
 ## ネットワークホストアドレス
 
 Liferay 7.3では、バンドルされているElasticsearchサーバー（サイドカー）はデフォルトでポート`9201`で実行されます。 これは、ElasticsearchのデフォルトのHTTPポート（`9200`）を使用してリモートのElasticsearchインストールの`networkHostAddress`を設定しても、競合が発生しないことを意味します。 トランスポートアドレスと同様に、クラスターのすべてのマスターノードとデータノードのアドレスがすべて記載されていることを確認してください。
 
-<a name="クラスタースニッフィング追加設定" />
+<a name="cluster-sniffing-additional-configurations" />
 
 ## クラスタースニッフィング（追加設定）
 
@@ -30,7 +30,7 @@ Elasticsearchクラスターは複数のノード [タイプ](https://www.elasti
 
 クラスタースニッフィングを無効にするには、`clientTransportSniff=false`を`.config`ファイルに追加するか、［システム設定］の［クライアント・トランスポート・スニフ］プロパティの選択を解除します。
 
-<a name="docker-接続が拒否されました" />
+<a name="docker-connection-refused" />
 
 ## [Docker] 接続が拒否されました。
 
@@ -46,13 +46,13 @@ Liferay DXPコンテナは、接続を確立するためにElasticsearch IPを�
 Dockerネットワークはブリッジを実行します。
 ```
 
-<a name="設定ファイル名" />
+<a name="configuration-file-names" />
 
 ## 設定ファイル名
 
 LiferayをElasticsearchに接続する際に問題が発生した場合（おそらくLiferayログに`NoNodeAvailableException`メッセージが表示されます）、最初に実行する手順の1つは、設定ファイルに適切な名前が付けられていることを確認することです。 認識できない設定ファイルは処理されません。 結果として生じるエラーは様々です。
 
-<a name="elasticsearchの非推奨ログを無効にする" />
+<a name="disable-elasticsearch-deprecation-logging" />
 
 ## Elasticsearchの非推奨ログを無効にする
 

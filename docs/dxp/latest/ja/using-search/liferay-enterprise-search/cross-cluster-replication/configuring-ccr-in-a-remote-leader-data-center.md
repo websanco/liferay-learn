@@ -6,7 +6,7 @@
 
 ここに示す例は、単一のLiferay DXPノードと単一のElasticsearchノードで構成されています。 構成例は、セキュリティ構成の設定を含む[CCR設定リファレンス](./ccr-basic-use-case-config-reference.md)にも記載されています。
 
-<a name="リモートリーダーelasticsearchクラスターの構成" />
+<a name="configure-the-remote-leader-elasticsearch-cluster" />
 
 ## リモートリーダーElasticsearchクラスターの構成
 
@@ -63,6 +63,8 @@
    ```bash
    [2020-02-26T10:19:36,420][INFO ][o.e.l.LicenseService     ] [es-leader-node-1] license [lf263a315-8da3-41f7-8622-lfd7cc14cae29] mode [trial] - valid
    ```
+
+<a name="configure-the-remote-liferay-dxp-cluster-node" />
 
 ### リモートLiferay DXPクラスターノードの構成
 

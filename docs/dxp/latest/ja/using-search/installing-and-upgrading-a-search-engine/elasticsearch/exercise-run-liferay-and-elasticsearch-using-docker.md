@@ -6,7 +6,7 @@
 
 Elasticsearch接続で認証と暗号化を有効にするには、[Elasticsearchの保護](./securing-elasticsearch.md)をお読みください。
 
-<a name="dockerコンテナにバインドマウントするためのローカルフォルダを作成する" />
+<a name="create-local-folders-for-bind-mounting-to-the-docker-containers" />
 
 ## Dockerコンテナにバインドマウントするためのローカルフォルダを作成する
 
@@ -20,7 +20,7 @@ mkdir -p test-es-install/dxp/files/osgi/configs && mkdir -p test-es-install/elas
    最後の ``cd test-es-install`` コマンドで、``test-es-install`` フォルダに入ります。 このフォルダからElasticsearchとLiferay DXPの両方の残りのコマンドを実行することを確認してください。
 ```
 
-<a name="elasticsearchのインストール" />
+<a name="install-elasticsearch" />
 
 ## Elasticsearchのインストール
 
@@ -62,7 +62,7 @@ mkdir -p test-es-install/dxp/files/osgi/configs && mkdir -p test-es-install/elas
            },
    ```
 
-<a name="liferay-dxpのインストール" />
+<a name="install-liferay-dxp" />
 
 ## Liferay DXPのインストール
 
@@ -91,7 +91,7 @@ Liferay DXPがElasticsearchに接続するために必要なプロパティを�
 
 検索インデックスとスペルチェックインデックスを再作成します。 どちらのインデックス再作成も、コントロールパネルの &rarr; 設定 &rarr; 検索の「インデックスアクション」タブから実行されます。
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 

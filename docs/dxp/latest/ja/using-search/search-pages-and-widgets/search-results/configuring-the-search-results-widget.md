@@ -6,7 +6,7 @@
 
 設定は概念的に、表示、ページネーション、および統合検索設定に分類できます。 さらに、開発およびテスト中に、 ［**ドキュメントのフォームに結果を表示**］ をチェックすることにより、各結果の検索エンジンドキュメントを検査できます。
 
-<a name="検索結果の表示" />
+<a name="displaying-search-results" />
 
 ## 検索結果の表示
 
@@ -28,7 +28,7 @@
 
 ![コンテキストで表示オプションがオフになっている場合、またはコンテンツがサイトのページに表示されていない場合、Asset Publisherウィジェットはコンテンツを検索ページ自体に表示します。](./configuring-the-search-results-widget/images/04.png)
 
-<a name="結果のページ分割の構成" />
+<a name="configuring-results-pagination" />
 
 ## 結果のページ分割の構成
 
@@ -50,7 +50,7 @@ http://localhost:8080/web/guest/search?q=test&start=2
 http://localhost:8080/web/guest/search?q=test&delta=10
 ```
 
-<a name="代替インデックスからの結果の表示" />
+<a name="displaying-results-from-alternate-indexes" />
 
 ## 代替インデックスからの結果の表示
 
@@ -58,7 +58,7 @@ http://localhost:8080/web/guest/search?q=test&delta=10
 
 **表示するフィールド：** 統合検索キーの設定を使用して、 [代替インデックス](./understanding-low-level-search-options.md) を検索する場合は、そのインデックスから検索するフィールドを指定します。 検索結果ウィジェットに表示されるには、フィールドがインデックスされ、 [に](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/mapping-store.html) が格納されている必要があります。
 
-<a name="検索エンジンドキュメントの検査" />
+<a name="inspecting-search-engine-documents" />
 
 ## 検索エンジンドキュメントの検査
 

@@ -6,7 +6,7 @@ Elasticsearchを保護するために最初に行う必要があるのは、 [X-
 **Elasticsearch 6.x:** Elasticsearch 6を使用している場合、ElasticのX-Pack Securityを使用するにはLiferay Enterprise Search (LES)サブスクリプションとLiferay Enterprise Search Securityアプリケーションが必要です。 Liferay Connector to Elasticsearch 7（ [Customer Downloads Portal](https://customer.liferay.com/downloads) で入手可能で、Liferay 7.3にバンドルされている）から、ElasticのX-Packセキュリティのサポートがデフォルトで含まれています。 Elastic社のX-Packモニタリングと連携するには、LESが必要です。
 ```
 
-<a name="x-pack-securityの有効化" />
+<a name="enable-x-pack-security" />
 
 ## X-Pack Securityの有効化
 
@@ -18,7 +18,7 @@ xpack.security.enabled: true
 
 これで、X-Packユーザーを設定できます。
 
-<a name="x-packユーザーの設定" />
+<a name="set-up-x-pack-users" />
 
 ## X-Packユーザーの設定
 
@@ -41,11 +41,13 @@ Elasticsearchサーバーで、 [`setup-passwords`コマンド](https://www.elas
 内蔵ユーザーのパスワードを更新するには、KibanaのUIまたは [Change Password API](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/security-api-change-password.html) を使用します。
 ```
 
-<a name="elasticsearch通信の暗号化" />
+<a name="encrypting-elasticsearch-communication" />
 
 ## Elasticsearch通信の暗号化
 
 トランスポート層セキュリティ（TLS）を有効にするには、ノード証明書と鍵を生成し、ElasticsearchサーバーとLiferayサーバーに適用する必要があります。
+
+<a name="generate-node-certificates" />
 
 ### ノード証明書の生成
 
@@ -125,6 +127,8 @@ Elasticsearchサーバーで、 [`setup-passwords`コマンド](https://www.elas
 
 証明書と鍵が、Elasticsearch設定で使用できるようになりました。
 
+<a name="configure-tls-for-elasticsearch" />
+
 ### Elasticsearch用のTLSを設定する
 
 `［Elasticsearch Home］/config/elasticsearch.yml`ファイルを介して各ノードで [TLSを有効](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/configuring-tls.html) にします。
@@ -173,6 +177,8 @@ Elasticsearchサーバーで、 [`setup-passwords`コマンド](https://www.elas
     #xpack.security.http.ssl.key: certs/elastic-nodes.key
     ```
 
+<a name="example-elasticsearch-security-configuration" />
+
 ### Elasticsearchのセキュリティ設定の例
 
 Elasticsearch 7の完全な設定は次のとおりです（`elasticsearch.yml`。Elasticsearch 6.5.x以降にも同様に適用されます）。
@@ -200,7 +206,7 @@ xpack.security.http.ssl.truststore.password: liferay
 #xpack.monitoring.collection.enabled: true
 ```
 
-<a name="liferayでelasticsearchへの安全な接続を設定する" />
+<a name="configure-a-secure-connection-to-elasticsearch-in-liferay" />
 
 ## LiferayでElasticsearchへの安全な接続を設定する
 
@@ -213,6 +219,8 @@ Liferayでは、セキュリティはコントロールパネルまたは設定�
 TLSの設定に加えて、`authenticationEnabled`/`requiresAuthentication`を`true`に設定し、LiferayがElasticsearchへの認証に使用するElasticsearchユーザーの認証情報を提供することにより、以下の設定で認証を有効にします。
 
 セキュリティの設定が完了したら、Elasticsearchを再起動します。 これらの手順では、Elasticsearchクラスターを完全に再起動する必要があります。
+
+<a name="configure-a-secure-connection-to-elasticsearch-in-liferay-73-and-74" />
 
 ### Liferay 7.3でElasticsearchへの安全な接続を設定する
 
@@ -242,6 +250,8 @@ truststorePassword="liferay"
 truststorePath="/PATH/TO/elastic-nodes.p12"
 truststoreType="pkcs12"
 ```
+
+<a name="configure-a-secure-connection-to-elasticsearch-in-liferay-72" />
 
 ### Liferay 7.2でElasticsearchへの安全な接続を設定する
 
@@ -288,6 +298,8 @@ transportSSLVerificationMode="certificate"
 transportSSLEnabled="true"
 ```
 
+<a name="elasticsearch-7-connector-security-settings-in-liferay-73-and-74" />
+
 ### Liferay 7.3でのElasticsearch 7コネクタセキュリティの設定
 
 7.3におけるElasticsearch 7コネクタのセキュリティ設定の完全な一覧は次のとおりです（括弧内はデフォルト値）。
@@ -305,6 +317,8 @@ transportSSLEnabled="true"
 `truststorePath`（**/path/ro/localhost.p12**）：［HTTP SSLが有効］がオンになっている場合、トラストストアファイルへのパスを設定します。
 
 `truststorePassword`：［HTTP SSLが有効］がオンになっている場合、パスワードをトラストストアに設定します。
+
+<a name="enterprise-search-security--x-pack-security-settings-in-liferay-72" />
 
 ### Liferay 7.2のエンタープライズ・サーチセキュリティ/X-Pack Securityの設定
 
@@ -336,7 +350,7 @@ Liferay 7.2のX-Pack Security構成の設定の完全な一覧は次のとおり
 
 `sslTruststorePassword`：パスワードをトラストストアに設定します。
 
-<a name="関連トピック" />
+<a name="related-topics" />
 
 ## 関連トピック
 

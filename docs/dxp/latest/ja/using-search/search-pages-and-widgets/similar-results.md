@@ -10,7 +10,7 @@
 
 類似結果は、入力ドキュメント/メインアセットを使用して、クエリに最も一致するものとして自分自身を返すクエリを作成し、この論理積クエリ（または `OR`）を検索エンジンに送信して、一致する結果ドキュメントを返します。 このプロセスは構成可能です。入力ドキュメントを処理する方法、処理されたコンテンツから用語を選択する方法、およびクエリ自体を形成する方法です。 [詳細は、Elasticsearchのドキュメントを参照してください](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-mlt-query.html#_parameters_2) 。
 
-<a name="類似結果ウィジェットの構成" />
+<a name="configuring-the-similar-results-widget" />
 
 ## 類似結果ウィジェットの構成
 
@@ -26,7 +26,7 @@
 
 
 
-<a name="類似結果ウィジェットの使用" />
+<a name="using-the-similar-results-widget" />
 
 ## 類似結果ウィジェットの使用
 
@@ -40,7 +40,7 @@
 
 
 
-<a name="ユースケース1asset-publisherページでの同様の結果" />
+<a name="use-case-1-similar-results-on-asset-publisher-pages" />
 
 ## ユースケース1：Asset Publisherページでの同様の結果
 
@@ -78,7 +78,7 @@ Asset Publisherウィジェットで表示されたアセットをクリック�
 
 
 
-<a name="ユースケース2アセット表示ページでの類似結果" />
+<a name="use-case-2-similar-results-on-asset-display-pages" />
 
 ## ユースケース2：アセット表示ページでの類似結果
 
@@ -108,11 +108,11 @@ Asset Publisherウィジェットで表示されたアセットをクリック�
 
 
 
-<a name="同様の結果ウィジェットテンプレート" />
+<a name="similar-results-widget-templates" />
 
 ## 同様の結果ウィジェットテンプレート
 
-デフォルトでは、類似の結果は **コンパクトレイアウト** [ウィジェットテンプレート](https://help.liferay.com/hc/en-us/articles/360029132571-Styling-Widgets-with-Widget-Templates) を使用してレンダリングされ、ハイパーリンクされたタイトルのリストが表示されます。
+デフォルトでは、類似の結果は **コンパクトレイアウト** [ウィジェットテンプレート](https://help.liferay.com/hc/ja/articles/360029132571-Styling-Widgets-with-Widget-Templates) を使用してレンダリングされ、ハイパーリンクされたタイトルのリストが表示されます。
 
 追加の2つのウィジェットテンプレートは、すぐに使用できます **リストレイアウト** と **カードレイアウト** です。
 
@@ -126,6 +126,8 @@ Asset Publisherウィジェットで表示されたアセットをクリック�
 
 
 
+<a name="add-a-custom-widget-template-for-similar-results" />
+
 ### 同様の結果のカスタムウィジェットテンプレートを追加する
 
 類似結果表示用の独自のウィジェットテンプレートを作成するには、
@@ -136,15 +138,15 @@ Asset Publisherウィジェットで表示されたアセットをクリック�
 
 1. ［追加］ボタン（![Add](../../images/icon-add.png)）をクリックして、テンプレートクリエーターパレットを開きます。
    
-   標準の [ウィジェットテンプレート](https://help.liferay.com/hc/en-us/articles/360029132571-Styling-Widgets-with-Widget-Templates) 変数に加えて、テンプレートエディターで提供される検索固有の変数を活用します。
+   標準の [ウィジェットテンプレート](https://help.liferay.com/hc/ja/articles/360029132571-Styling-Widgets-with-Widget-Templates) 変数に加えて、テンプレートエディターで提供される検索固有の変数を活用します。
 
-1. 好みに合わせてテンプレートをデザインしてください。 詳細は、 [ウィジェットテンプレート](https://help.liferay.com/hc/en-us/articles/360029132571-Styling-Widgets-with-Widget-Templates) ドキュメントをご覧ください。
+1. 好みに合わせてテンプレートをデザインしてください。 詳細は、 [ウィジェットテンプレート](https://help.liferay.com/hc/ja/articles/360029132571-Styling-Widgets-with-Widget-Templates) ドキュメントをご覧ください。
 
 同じテンプレートエディターには、［サイトメニュー］の［**サイトビルダー** セクションの［ウィジェットテンプレート］エントリからアクセスできます。
 
 
 
-<a name="同様の結果の構成" />
+<a name="similar-results-configurations" />
 
 ## 同様の結果の構成
 

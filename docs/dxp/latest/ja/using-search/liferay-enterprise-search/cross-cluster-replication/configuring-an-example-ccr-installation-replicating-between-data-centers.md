@@ -20,7 +20,7 @@
    Kibanaを使うには、複数のElasticsearchクラスタ（この例では2つのシングルノードクラスタ）が稼働していることを思い出してください。 Kibanaの ``kibana.yml`` ファイル内の ``elasticsearch.hosts:[ "http://localhost:<port>" ]Kibanaの ``kibana.yml`` ファイルの `` 設定は、リーダーとフォロワーのクラスタが混在しないように、後述のインデックスやその他の設定を管理する際に、正しいポートを指し示す必要があります。 ここでは、リーダーとなるElasticserachクラスタノードが9200番台のポートを使用し、フォロワーが9202番台のポートを使用していることを想定しています。 
 ```
 
-<a name="クラスターliferay-dxp" />
+<a name="cluster-liferay-dxp" />
 
 ## クラスターLiferay DXP
 
@@ -32,7 +32,7 @@ cluster.link.enabled=true
 
 これは単純なクラスタリング構成です。 完全な構成については、[クラスタリング](../../../installation-and-upgrades/setting-up-liferay/clustering-for-high-availability.md)を参照してください。
 
-<a name="必要なelasticsearchプラグインのインストール" />
+<a name="install-required-elasticsearch-plugins" />
 
 ## 必要なElasticsearchプラグインのインストール
 
@@ -43,7 +43,7 @@ cluster.link.enabled=true
 - `analysis-kuromoji`
 - `analysis-smartcn`
 
-<a name="セキュリティの前提条件認証と暗号化を設定する" />
+<a name="prerequisite-for-security-configure-authentication-and-encryption" />
 
 ## セキュリティの前提条件：認証と暗号化を設定する
 
@@ -66,7 +66,7 @@ cluster.link.enabled=true
 
 完全な構成例は、[こちら](./ccr-basic-use-case-config-reference.md)で提供しています。
 
-<a name="クラスター横断レプリケーションモジュールのインストール" />
+<a name="install-the-cross-cluster-replication-module" />
 
 ## クラスター横断レプリケーションモジュールのインストール
 

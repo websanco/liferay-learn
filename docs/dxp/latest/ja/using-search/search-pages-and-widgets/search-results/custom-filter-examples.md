@@ -11,11 +11,13 @@
 
 カスタムフィルターウィジェットの詳細な説明については、 [フィルター検索結果](./filtering-search-results.md) を参照してください。
 
-<a name="一部のコンテンツを除く" />
+<a name="excluding-certain-content" />
 
 ## 一部のコンテンツを除く
 
 カスタムフィルタは、 `must_not` Occur の設定と一緒に使用すると、検索結果からドキュメントをキャッチして除外することができます。
+
+<a name="excluding-certain-documents-and-media-content" />
 
 ### 一部のドキュメントおよびメディアコンテンツを除く
 
@@ -31,6 +33,8 @@
 
 この構成により、値`41103`の`folderId`フィールドを含む検索ドキュメントが検索結果に返されないようになります。
 
+<a name="excluding-content-with-certain-extensions" />
+
 ### 特定の拡張子を持つコンテンツの除外
 
 おそらく、GIFファイルを検索結果から除外しなければなりません。 カスタムフィルターを以下のように設定します。
@@ -45,11 +49,13 @@
 
 この構成は、ドキュメントとメディア [`DLFileEntry`モデル](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/document-library/document-library-service/src/main/java/com/liferay/document/library/internal/search/spi/model/index/contributor/DLFileEntryModelDocumentContributor.java) からインデックス付けされた`extension`フィールドの存在を利用します。 これにより、値`gif`の`extention`フィールドを含む検索文書が検索結果に返されないようになります。
 
-<a name="ブーストフィールド" />
+<a name="boosting-fields" />
 
 ## ブーストフィールド
 
 特定のフィールドに基づいて特定のドキュメントを強化したいというニーズはよくありますが、「カスタムフィルタ」ウィジェットを使えば、簡単に実現できます。 ブースト値は、お客様のニーズに合わせてチューニングが必要な場合があります。 **スコアの説明を有効にする** を有効にして 検索インサイト ウィジェットを使用し、ドキュメントがどのようにスコアリングされているかを調べ、ブースト値を微調整します。
+
+<a name="boosting-matches-to-designated-fields" />
 
 ### 指定フィールドへのブーストマッチ
 
@@ -69,6 +75,8 @@
 
 マルチマッチクエリは、複数のフィールドを一度にマッチさせることができます。 そうしないと、他の設定値が同じであっても、個別のフィールドごとにカスタムフィルタを設定する必要があります。
 
+<a name="boosting-by-a-fields-presence" />
+
 ### フィールドの存在による後押し
 
 タグの値に関わらず、タグ付けされたコンテンツをブーストするには、次のようにカスタムフィルターを設定します。
@@ -83,7 +91,7 @@
 
 クエリにマッチするドキュメントがタグ付けされている場合、 `assetTagNames` フィールドが含まれます。 Existsクエリは、フィールドのあらゆる値にマッチします。
 
-<a name="サイトidによるフィルタリング" />
+<a name="filtering-by-site-id" />
 
 ## サイトIDによるフィルタリング
 
@@ -133,7 +141,7 @@
 
 重要なのは、 `groupId` によるフィルタは、 `SiteBoolQuery` を親クエリとして宣言していることです。 各サイトの子Termクエリの **should** Occur句は、OR演算子として機能し、 `groupId`のいずれかがマッチした場合、そのコンテンツが［検索結果］ウィジェットに表示されるようになっています。
 
-<a name="クエリ文字列による複合フィルタ" />
+<a name="complex-filter-with-query-string" />
 
 ## クエリ文字列による複合フィルタ
 
@@ -158,7 +166,7 @@
    クエリ文字列クエリは、渡される値が検索バーからのものである場合には使用しないでください（`Boosting Matches to Designated Fields`_で説明しています）。 検索バーのユーザーが無効な構文を含むキーワードを入力した場合、エラーが返されます。
 ```
 
-<a name="ネストしたフィールドへのブーストマッチ" />
+<a name="boosting-matches-to-nested-fields" />
 
 ## ネストしたフィールドへのブーストマッチ
 
@@ -255,7 +263,7 @@
 
 ブースト値は、お客様のニーズに合わせてチューニングが必要な場合があります。 **Score Explanation** を有効にして Search Insights ウィジェットを使用し、ドキュメントがどのようにスコアリングされているかを調べ、ブースト値を微調整します。
 
-<a name="関連する内容" />
+<a name="related-content" />
 
 ## 関連する内容
 

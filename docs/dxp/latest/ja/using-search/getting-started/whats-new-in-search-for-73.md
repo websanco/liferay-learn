@@ -1,24 +1,30 @@
 # 7.3の検索の新機能
 
-<a name="elasticsearchの統合" />
+<a name="elasticsearch-integration" />
 
 ## Elasticsearchの統合
+
+<a name="elasticsearch-7-support" />
 
 ### Elasticsearch 7のサポート
 
 > 利用可能:Liferay CE 7.3 GA4以降、Liferay DXP 7.3 GA1以降
 
-Liferay DXP 7.3では、Elasticsearch 7を標準でサポートしています。 最小限必要なバージョンは7.9です。 詳細なサポート情報については、 [検索エンジンの互換性マトリックス](https://help.liferay.com/hc/en-us/articles/360016511651) を参照してください。
+Liferay DXP 7.3では、Elasticsearch 7を標準でサポートしています。 最小限必要なバージョンは7.9です。 詳細なサポート情報については、 [検索エンジンの互換性マトリックス](https://help.liferay.com/hc/ja/articles/360016511651) を参照してください。
 
 ```{important}
    Liferay CE/DXP 7.3ではElasticsearch 6.xはサポートされていません。
 ```
+
+<a name="the-elasticsearch-7-connector-is-based-on-the-rest-client" />
 
 ### Elasticsearch 7コネクタはRESTクライアントに基づいています
 
 > 利用可能:Liferay CE 7.3 GA4以降、Liferay DXP 7.3 GA1以降
 
 DXP 7.3にバンドルされているElasticsearch 7コネクタは、 [ElasticのJava RESTクライアント](https://www.elastic.co/guide/en/elasticsearch/client/java-rest/7.x/java-rest-overview.html) を使用して、HTTPを介してElasticsearchと通信します。 この通信プロトコルは、DXPとElasticsearch間のJavaシリアル化を必要としないため、Elasticsearch 7ノードをLiferay DXPとは異なるJVMで実行できるようになりました。
+
+<a name="x-pack-security-features-integrated" />
 
 ### X-Pack Security機能が統合されました
 
@@ -28,11 +34,15 @@ DXP 7.3にバンドルされているElasticsearch 7コネクタは、 [Elastic�
 
 [アップグレード](../installing-and-upgrading-a-search-engine/elasticsearch/upgrading_elasticsearch.md)ガイドには、暗号化設定をElasticsearch 7コネクタに移動するための情報が含まれています。
 
+<a name="multiple-elasticsearch-connections" />
+
 ### 複数のElasticsearch接続
 
 > 利用可能:Liferay CE 7.3 GA4以降、Liferay DXP 7.3 GA1以降
 
 複数のElasticsearchクラスターへの接続を設定します。 Liferay DXP 7.2では、Liferayが接続されているElasticsearchクラスター内の任意のインデックス（Liferay以外のインデックスも含む）に対してクエリを実行できました。 Lifera以外のElasticsearchクラスターのインデックスに対してクエリを実行できるようになりました。 これにより、低レベル検索オプションおよび検索結果ウィジェットと組み合わせて使用することで、Elasticsearchクラスターを使用しているサードパーティシステムからの結果を表示することができます。 この機能は、主にLiferay Enterprise Search（LES）の [クラスター横断レプリケーション](#cross-cluster-replication) 機能をサポートするために追加されました。
+
+<a name="embedded-mode-replaced-with-sidecar" />
 
 ### 組み込みモードがサイドカーに置き換えられました
 
@@ -40,9 +50,11 @@ DXP 7.3にバンドルされているElasticsearch 7コネクタは、 [Elastic�
 
 [「開発」](#development) の [「サイドカー」](#a-sidecar-elasticsearch-7-is-bundled) セクションを参照してください。
 
-<a name="検索インフラストラクチャ--管理" />
+<a name="search-infrastructure--administration" />
 
 ## 検索インフラストラクチャ & 管理
+
+<a name="multi-tenant-index-names" />
 
 ### マルチテナントインデックス名
 
@@ -62,6 +74,8 @@ liferay-20096-search-tuning-rankings
 
 DXP 7.2 SP2以前から7.3にアップグレードすると、新しいDXPインデックスが自動的に作成されます。完全なインデックスの再構築と正常なアップグレードの確認後、古いインデックスを削除できます。
 
+<a name="connections-in-search-admin" />
+
 ### 検索管理の接続
 
 > 利用可能:Liferay CE 7.3 GA1以降、Liferay DXP 7.3 GA1以降
@@ -74,21 +88,27 @@ DXP 7.2 SP2以前から7.3にアップグレードすると、新しいDXPイン
 
 これは、以前のバージョンの［アクションをインデックスする］ページの上部にある情報バーに置き換わるものです。
 
+<a name="standardized-index-document-ids" />
+
 ### 標準化されたインデックスドキュメントID
 
 > 利用可能:Liferay CE 7.3 GA1以降、Liferay DXP 7.3 GA1以降
 
 インデックスドキュメントのUID（または `id`）は、Liferay DXPエンティティのデータベース行と1対1のパリティを持つようになりました。
 
-<a name="検索ウィジェット" />
+<a name="search-widgets" />
 
 ## 検索ウィジェット
+
+<a name="customize-search-widgets-using-widget-templates" />
 
 ### ウィジェットテンプレートを使用して検索ウィジェットをカスタマイズする
 
 > 利用可能:Liferay CE 7.3 GA4以降、Liferay DXP 7.3 GA1以降
 
 検索ウィジェットは、FreemarkerまたはVelocityテンプレートを使用して各ウィジェットの視覚的なルックアンドフィールをカスタマイズするために、[ウィジェットテンプレート](./../../site-building/displaying-content/additional-content-display-options/styling-widgets-with-widget-templates.md)（以前はアプリケーションディスプレイテンプレート）をサポートするようになりました。 たとえば、検索結果ウィジェットはカードレイアウトを表示するように設定でき、`author`や`modified date`のようなアセットのプロパティを表示または非表示にすることができます。 サポートされている検索ウィジェットごとに、すぐに使えるデフォルトテンプレートがいくつか用意されています。
+
+<a name="similar-results" />
 
 ### 類似結果
 
@@ -102,11 +122,13 @@ DXP 7.2 SP2以前から7.3にアップグレードすると、新しいDXPイン
 
 詳細は、 [同様の結果](../search-pages-and-widgets/similar-results.md) を参照してください。
 
-<a name="検索の調整" />
+<a name="search-tuning" />
 
 ## 検索の調整
 
 > **サブスクライバー**
+
+<a name="search-tuning-result-rankings" />
 
 ### 検索の調整：結果ランキング
 
@@ -118,23 +140,29 @@ DXP 7.2 SP2以前から7.3にアップグレードすると、新しいDXPイン
 1. 結果は結果リストから非表示にすることができます。 この機能を使用して、古くなった結果や無関係な結果を削除できます。
 1. エイリアスは、同じカスタムの固定された結果および非表示の結果を代替検索クエリに適用します。 たとえば、クエリ「デジタルエクスペリエンスプラットフォーム」の結果を固定および非表示にして結果ランキングを作成する場合、エイリアス「portal」および「dxp」を追加すると、同じ固定された結果と非表示の結果が適用されます。
 
+<a name="search-tunings-synonyms" />
+
 ### 検索の調整：同義語
 
 > 利用可能:Liferay DXP 7.2 SP1以降、Liferay DXP 7.3 GA1以降
 
 同義語は、同様の意味を持つクエリを関連付け、検索時に同義クエリに同等の重みを与えます。 たとえば、「mobile phone」、「cell phone」、「hand phone」というクエリは同等の意味を持ち、同義で使用できます。 これらの3つのクエリで同義語セットを定義すると、「mobile phone」と検索したユーザーには、「cell phone」または「hand phone」という単語を含むドキュメントが表示されます。 [Synonyms documentation from Elastic](https://www.elastic.co/guide/en/elasticsearch/guide/current/synonyms.html) を参照してください。
 
-<a name="liferay-enterprise-searchles" />
+<a name="liferay-enterprise-search-les" />
 
 ## Liferay Enterprise Search（LES）
 
 > [**LESサブスクライバー](https://www.liferay.com/products/dxp/enterprise-search**)
+
+<a name="cross-cluster-replication-les" />
 
 ### クラスター横断レプリケーション（LES）
 
 > 利用可能：Liferay DXP 7.2 SP3以降、Liferay DXP 7.3 GA1以降で、[Liferay Enterprise Searchクラスター横断レプリケーション](../liferay-enterprise-search/cross-cluster-replication/cross-cluster-replication.md)アプリケーションを使用。
 
 クラスター横断レプリケーションアプリケーションは、ディザスタリカバリ（高可用性）と地理的近接パフォーマンスの最適化のために、リモートデータセンター全体でElasticsearchクラスターを複製します。 Elasticsearchの [クラスター横断レプリケーション](https://www.elastic.co/guide/en/elasticsearch/reference/7.9/xpack-ccr.html) 機能を活用し、アクティブパッシブモデルを使用して分散したクラスター間で検索インデックスを複製します。 すべてのDXPノードのすべての書き込み操作は単一のリーダーインデックスにルーティングされますが、各DXPクラスターノードは任意のフォロワーインデックスから読み取るように設定できます。
+
+<a name="learning-to-rank-les" />
 
 ### Learning to Rank（LES）
 
@@ -149,6 +177,8 @@ Learning to Rank（LTR）は、機械学習（ML）モデルを適用して検�
 
 判断リストは、モデルのトレーニングに情報を提供し、導くための信頼できる情報源です。 ユーザーが検索クエリを送信すると、LTRは検索エンジンから返された最初の **×** 件の結果（デフォルトでは最初の1,000件の結果）を受け取り、学習したモデルを使ってそれらの結果を再スコアリングして並べ替えた後、リストをユーザーに返します。
 
+<a name="les-applications-renamed" />
+
 ### LESアプリケーションの名前が変更されました
 
 Liferay CE/DXP 7.3リリースには明示的にリンクされていませんが、次のアプリは、機能をより適切に反映し、LESアプリとしてのアイデンティティを強調するために名前が変更されました。
@@ -160,9 +190,11 @@ Liferay CE/DXP 7.3リリースには明示的にリンクされていません�
 | 機械学習を使用した検索アルゴリズムの最適化     | Liferay Connector to Elasticsearch Learning to Rank               | Liferay Enterprise Search Learning to Rank |
 | リモートデータセンター間でのインデックスの複製   | NA（新アプリ）                                                          | Liferay Enterprise Searchクラスター横断レプリケーション   |
 
-<a name="開発" />
+<a name="development" />
 
 ## 開発
+
+<a name="new-index-settings-contributor-extension-point" />
 
 ### 新しいインデックス設定コントリビューター拡張ポイント
 
@@ -174,6 +206,8 @@ Elasticsearchのバージョンに依存しない`IndexSettingsContributor`が�
 * `com.liferay.portal.search.spi.settings.IndexSettingsHelper.java`
 * `com.liferay.portal.search.spi.settings.TypeMappingsHelper.java`
 
+<a name="a-sidecar-elasticsearch-7-is-bundled" />
+
 ### Sidecar Elasticsearch 7がバンドルされています
 
 > 利用可能:Liferay CE 7.3 GA4以降、Liferay DXP 7.3 GA1以降
@@ -182,13 +216,13 @@ Elasticsearchのバージョンに依存しない`IndexSettingsContributor`が�
 
 Elasticsearch 7.9.0 OSSバージョンは、最初の起動時に自動ダウンロードされます。 リソースをダウンロードするための外部サイトにデプロイメントが到達できない場合は、[サイドカーサーバー](../installing-and-upgrading-a-search-engine/elasticsearch/using-the-sidecar-or-embedded-elasticsearch.md)の手動インストールを参照してください。
 
-<a name="dxp-73へのアップグレード" />
+<a name="upgrading-to-dxp-73" />
 
 ## DXP 7.3へのアップグレード
 
 以前のDXPバージョンから7.3にアップグレードするには、 [RESTクライアント](#the-elasticsearch-7-connector-is-based-on-the-rest-client) に切り替えるため、いくつかの特別な手順が必要です。 アップグレードに役立つ重要な情報については、[アップグレードのドキュメンテーション](../installing-and-upgrading-a-search-engine/elasticsearch/upgrading_elasticsearch.md)を参照してください。
 
-<a name="関連トピック" />
+<a name="related-topics" />
 
 ## 関連トピック
 

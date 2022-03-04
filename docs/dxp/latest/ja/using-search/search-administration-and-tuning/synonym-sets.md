@@ -6,7 +6,7 @@
 
 たとえば、ユーザーが「US」という単語を検索するとします。 ほとんどの場合、ユーザーは **America** 、 **U.S.A** 、 **United States** などの同義語も含む検索結果を求めています。 同義語セットを作成することで、ユーザーが検索を最大限に活用できるようになります。
 
-<a name="要求事項と制限事項" />
+<a name="requirements-and-limitations" />
 
 ## 要求事項と制限事項
 
@@ -16,7 +16,7 @@
 
 Elasticsearchでサポートされている [`=>`形式](https://www.elastic.co/guide/en/elasticsearch/guide/current/synonyms.html) は同義語セットUIではサポートされていません。
 
-<a name="同義語セットの作成と管理" />
+<a name="creating-and-managing-synonym-sets" />
 
 ## 同義語セットの作成と管理
 
@@ -42,7 +42,7 @@ Elasticsearchでサポートされている [`=>`形式](https://www.elastic.co/
 
    同義語セットが公開されると、使用できるようになります。
 
-<a name="同義語セットの使用" />
+<a name="using-synonym-sets" />
 
 ## 同義語セットの使用
 
@@ -52,7 +52,7 @@ Elasticsearchでサポートされている [`=>`形式](https://www.elastic.co/
 
 上記の例では、月面車に関するこのブログ記事には「LRV」という単語は含まれていませんが、検索結果の一致として返されるようになりました。 同義語が強調表示されていることにも注目してください。
 
-<a name="新しいシノニム言語フィルタの作成" />
+<a name="creating-new-synonym-language-filters" />
 
 ## 新しいシノニム言語フィルタの作成
 
@@ -70,6 +70,8 @@ Synonyms Setsは、すぐに [英語とスペイン語のみ](#requirements-and-
 
 
 
+<a name="prerequisite-obtain-the-default-mappings" />
+
 ### 前提条件デフォルトマッピングの取得
 
 カスタマイズする前に、Elasticsearch コネクタのデフォルトの JSON マッピングを取得する必要があります。
@@ -82,7 +84,7 @@ Liferay DXP バンドルからマッピングを取得するには。
 1. 解凍したJARファイルをアーカイブマネージャーで開き、 `META-INF/mappings`に移動します。
 1. `liferay-type-mappings.json` というファイルが必要なリソースになります。 お使いのファイルシステムに解凍してください。
 
-ソースコードからマッピングを取得するには、 [Liferay DXP ソースコードアクセス](https://help.liferay.com/hc/en-us/articles/360045389291) ,
+ソースコードからマッピングを取得するには、 [Liferay DXP ソースコードアクセス](https://help.liferay.com/hc/ja/articles/360045389291) ,
 
 1. ソースコードのリポジトリにアクセスできたら、上記の記事の手順に従って、修正パックレベルのタグを探します。
 1. `modules/apps/portal-search-elasticsearch(6 or 7)/portal-search-elasticsearch(6 or 7)-impl/src/main/resources/META-INF/mappings`に移動します。
@@ -96,6 +98,8 @@ Liferay DXP バンドルからマッピングを取得するには。
 
 
 
+
+<a name="adding-a-language" />
 
 ### 言語の追加
 

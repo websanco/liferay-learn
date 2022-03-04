@@ -6,7 +6,7 @@
 
 完全な構成例は、[CCR設定リファレンスガイド](./ccr-basic-use-case-config-reference.md)にも記載しています。
 
-<a name="フォロワーelasticsearchクラスターの構成" />
+<a name="configure-the-follower-elasticsearch-cluster" />
 
 ## フォロワーElasticsearchクラスターの構成
 
@@ -62,7 +62,7 @@
    POST / **license/start** trial?acknowledge=true
    ```
 
-<a name="ローカルliferay-dxpクラスターノードの構成" />
+<a name="configure-the-local-liferay-dxp-cluster-node" />
 
 ## ローカルLiferay DXPクラスターノードの構成
 
@@ -133,7 +133,7 @@
 
 あとは、CCR自体を有効にして構成するだけです。
 
-<a name="クラスター横断レプリケーションモジュールの設定" />
+<a name="configure-the-cross-cluster-replication-module" />
 
 ## クラスター横断レプリケーションモジュールの設定
 
@@ -174,7 +174,7 @@ LESクラスター横断レプリケーションモジュールは、リーダ�
 
 接続が構成され、インデックスがレプリケートされたら、システムが正しく機能していることを確認します。
 
-<a name="セットアップの確認" />
+<a name="verify-the-setup" />
 
 ## セットアップの確認
 

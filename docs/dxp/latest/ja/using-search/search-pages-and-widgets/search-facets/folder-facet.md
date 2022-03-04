@@ -4,7 +4,7 @@
 
 ![フォルダファセットの結果の例。](folder-facet/images/01.png)
 
-<a name="フォルダーファセットの設定" />
+<a name="configuring-the-folder-facet" />
 
 ## フォルダーファセットの設定
 

@@ -6,7 +6,7 @@
 
 テンプレートは、次の2つの方法で使用することができますに [検索ページを管理する](#using-a-page-template-to-manage-search-pages) テンプレートを使用して作成した、またはに [ベースラインの検索ページの作成](#using-a-page-template-to-create-a-baseline-search-page) 独立したテンプレートの設定されています。
 
-<a name="ページテンプレートを使用した検索ページの管理" />
+<a name="using-a-page-template-to-manage-search-pages" />
 
 ## ページテンプレートを使用した検索ページの管理
 
@@ -36,7 +36,7 @@
 
 ページテンプレートが更新されるたびに、検索ページが更新されます。
 
-<a name="ページテンプレートを使用してベースライン検索ページを作成する" />
+<a name="using-a-page-template-to-create-a-baseline-search-page" />
 
 ## ページテンプレートを使用してベースライン検索ページを作成する
 
@@ -56,7 +56,7 @@
 
 これで、ページはテンプレートに基づいて作成され、ページテンプレートに加えられた変更を受信せずにさらに調整および構成できます。
 
-<a name="デフォルトの検索ページテンプレートの使用" />
+<a name="using-the-default-search-page-template" />
 
 ## デフォルトの検索ページテンプレートの使用
 

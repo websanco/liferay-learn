@@ -4,7 +4,7 @@ Liferay DXP 7.4より、Liferay Enterprise Search (LES)アプリケーション�
 
 LESはデフォルトで有効になっており、追加のインストール手順は必要ありません。 ただし、Liferayの公式サポートや追加特典を受けるためには、LESのアドオン・サブスクリプションを購入する必要があります。 LESアプリケーションのメンテナンスとアップデートは、Fix PackとService Packのリリースを通じて行われます。 LESのサブスクリプションをお持ちでない方は、以下の手順でアクセスを完全に無効にすることができます。
 
-<a name="ローカルバンドルlesの無効化" />
+<a name="local-bundle-deactivating-les" />
 
 ## ローカルバンドルLESの無効化
 
@@ -14,7 +14,7 @@ LESアプリケーションは、すべてのLiferay DXP 7.4バンドルでデ�
 enterprise.product.enterprise.search.enabled=false
 ```
 
-<a name="dockerの場合lesの無効化" />
+<a name="docker-deactivating-les" />
 
 ## Dockerの場合LESの無効化
 

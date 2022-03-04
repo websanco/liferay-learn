@@ -13,6 +13,6 @@ Liferay 7.3は、Elasticsearch 7の組み込みサポートを含む、検索の
 
 あなたのアップグレードを計画する前に、 `Liferayの7.3検索 <./upgrading-elasticsearch/upgrading-search-for-liferay-73.md>` **を参照してください。 古いLiferay/Elasticsearchシステムをサポートされている最新の検索スタックにアップグレードするために必要な手順の概要を提供しています。  `Elasticsearchをアップグレードする前に <./upgrading-elasticsearch/upgrading-to-elasticsearch-7.md>`** `検索インデックスのバックアップ <./upgrading-elasticsearch/backing-up-elasticsearch.md>`_   を必ず行ってください。
 
--  :doc:`/using-search/installing-and-upgrading-a-search-engine/elasticsearch/upgrading-elasticsearch/upgrading-search-for-liferay-73`
--  :doc:`/using-search/installing-and-upgrading-a-search-engine/elasticsearch/upgrading-elasticsearch/upgrading-to-elasticsearch-7`
--  :doc:`/using-search/installing-and-upgrading-a-search-engine/elasticsearch/upgrading-elasticsearch/backing-up-elasticsearch`
+-  [Liferay7.3の検索機能のアップグレード](/using-search/installing-and-upgrading-a-search-engine/elasticsearch/upgrading-elasticsearch/upgrading-search-for-liferay-73.md)
+-  [Elasticsearch 7へのアップグレード](/using-search/installing-and-upgrading-a-search-engine/elasticsearch/upgrading-elasticsearch/upgrading-to-elasticsearch-7.md)
+-  [Elasticsearchのバックアップ](/using-search/installing-and-upgrading-a-search-engine/elasticsearch/upgrading-elasticsearch/backing-up-elasticsearch.md)

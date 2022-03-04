@@ -10,7 +10,7 @@
 
 ナレッジベースアプリケーションは、そのままではKB記事の `SimilarResultsContributor` を実装しないため、この例では1を実装しています。 簡単にするために、ここではアプリケーションのルートフォルダーにあるKB記事のみを扱います。
 
-<a name="概要" />
+<a name="overview" />
 
 ## 概要
 
@@ -18,7 +18,7 @@
 1. [**例の説明**](#walk-through-the-example)
 1. [**追加情報**](#additional-information)
 
-<a name="サンプルをデプロイする" />
+<a name="deploy-an-example" />
 
 ## サンプルをデプロイする
 
@@ -84,7 +84,7 @@ Liferay DXPのインスタンスで例 `SimilarResultsContributor` 起動して�
 
 例が適切に動作することを確認したので、それがどのように機能するかを学びます。
 
-<a name="例の説明" />
+<a name="walk-through-the-example" />
 
 ## 例の説明
 
@@ -92,6 +92,8 @@ Liferay DXPのインスタンスで例 `SimilarResultsContributor` 起動して�
 
 * [OSGi登録のコントリビュータークラスに注釈を付ける](#annotate-the-contributor-class-for-osgi-registration)
 * [`SimilarResultsContributor` インターフェースを確認する](#review-the-similarresultscontributor-interface)
+
+<a name="annotate-the-contributor-class-for-osgi-registration" />
 
 ### OSGi登録のコントリビュータークラスに注釈を付ける
 
@@ -103,6 +105,8 @@ public class R1S1SimilarResultsContributor implements SimilarResultsContributor 
 ```
 
 `サービス` コンポーネントプロパティは、実装を `SimilarResultsContributor` サービスとして登録します。
+
+<a name="review-the-similarresultscontributor-interface" />
 
 ### `SimilarResultsContributor` インターフェースを確認する
 
@@ -132,6 +136,8 @@ public void writeDestination(
 ```
 
 ユーザーが類似結果ウィジェットのリンクをクリックしたときにメインアセットを更新するには、 `writeDestination` を実装します。
+
+<a name="complete-the-similar-results-contributor" />
 
 ### 同様の結果の貢献者を完了する
 
@@ -250,7 +256,7 @@ private Http _http;
 private KBArticleLocalService _kbArticleLocalService;
 ```
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 
@@ -265,6 +271,8 @@ private KBArticleLocalService _kbArticleLocalService;
 
 前述のとおり、この例では、アプリケーションのルートフォルダーにあるKB記事で機能する `SimilarResultsModelDocumentContributor` を作成する方法を示しています。 KBフォルダーのサポートを追加することは可能であり、やる気のある読者にとって興味深い演習です。 [`DocumentLibrarySimilarResultsContributor`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/dxp/apps/portal-search-similar-results/portal-search-similar-results-web/src/main/java/com/liferay/portal/search/similar/results/web/internal/contributor/document/library/DocumentLibrarySimilarResultsContributor.java) のソースコードを見て、インスピレーションを得てください。
 
+<a name="troubleshooting-asset-uid-architecture" />
+
 ### トラブルシューティング：アセットUIDアーキテクチャ
 
 `uid` は、Liferay DXP 7.3以降の標準的な方法で構築されます。 `com.liferay.portal.search.internal.model.uid.UIDFactoryImpl` クラスは、Liferayのインデックスアーキテクチャによって制御されているすべてのドキュメントに `uid` を設定する責任があります。 現在は標準化されているので、推測をする必要はありません。
@@ -273,7 +281,7 @@ private KBArticleLocalService _kbArticleLocalService;
 
 ただし、レガシーインデクサーAPIでインデックス付けされたエンティティ（つまり、エンティティにはLiferayの `BaseIndexer`を拡張する `*インデクサー` クラスがある）は、 `uid`を設定するロジックをオーバーライドしている可能性があるため、エンティティのインデックス付けの実装を調べる価値があります。
 
-<a name="まとめ" />
+<a name="conclusion" />
 
 ## まとめ
 

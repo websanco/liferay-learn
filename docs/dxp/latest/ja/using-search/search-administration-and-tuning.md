@@ -12,15 +12,21 @@ search-administration-and-tuning/search-administration.md
 - 検索管理パネルの概要（近日公開）
 - ローカライズされた検索を理解する（近日公開）
 
+<a name="search-tuning" />
+
 ## 検索チューニング
 
 - [同義語セット](search-administration-and-tuning/synonym-sets.md)
 - [結果ランキング](search-administration-and-tuning/result-rankings.md)
 
+<a name="troubleshooting-search" />
+
 ## Troubleshooting Search
 
 - [検索インサイト](search-pages-and-widgets/search-insights.md)
 - Adjusting Elasticsearch Logging (Coming soon)
+
+<a name="reference" />
 
 ## Reference
 

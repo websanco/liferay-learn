@@ -10,9 +10,11 @@
    一次データの保存（データベースにバックアップされていないデータの保存）に使用されているElasticsearchインデックスがある場合は、[snapshot and restore approach](./upgrading-elasticsearch/backing-up-elasticsearch.md) . Liferay独自の検索の調整インデックス(結果ランキングとSynyonyms用)は、プライマリーストレージのインデックスです。
 ```
 
-<a name="本番環境のようなインストールのための環境設定" />
+<a name="environment-setup-for-production-like-installation" />
 
 ## 本番環境のようなインストールのための環境設定
+
+<a name="adding-hosts" />
 
 ### ホストの追加
 
@@ -27,6 +29,8 @@ localhostまたはDockerコンテナを使用してテスト環境をセット�
 
 ループバックアドレス`127.0.0.1`ではなく、システムの実際のIPアドレスを使用してください。
 
+<a name="adjusting-mmap" />
+
 ### mmapの調整
 
 Elasticsearchは、ほとんどのオペレーティングシステムのデフォルトよりも多くの **mmapカウント** を必要とします（インデックスを保持するディレクトリをメモリにマッピングするため）。 Linuxでは、rootユーザーとして、次のように実行します。
@@ -35,7 +39,7 @@ Elasticsearchは、ほとんどのオペレーティングシステムのデフ�
 sysctl -w vm.max_map_count=262144
 ```
 
-<a name="elasticsearchのインストール-1" />
+<a name="install-elasticsearch" />
 
 ## Elasticsearchのインストール
 
@@ -65,7 +69,7 @@ sysctl -w vm.max_map_count=262144
    ./elasticsearch-plugin install analysis-stempel
    ```
 
-<a name="elasticsearchの設定" />
+<a name="configure-elasticsearch" />
 
 ## Elasticsearchの設定
 
@@ -74,6 +78,8 @@ sysctl -w vm.max_map_count=262144
 シングルノードおよびマルチノードのElasticsearchクラスター構成の例を次に示します。
 
 Elasticsearch サーバーとの通信の認証と暗号化については、 [Elasticsearchの保護](./securing-elasticsearch.md) を参照してください。
+
+<a name="example-single-node-production-elasticsearch-cluster" />
 
 ### 例：シングルノードの本番環境Elasticsearchクラスター
 
@@ -98,6 +104,8 @@ transport.port: 9300
 ```{tip}
    プロダクションモードのセットアップでホストを設定しない場合は、ホストの値として `localhost` を使用してください。 Elasticsearchは、HTTPとTransportの通信のためにループバックアドレスにバインドすることができます。 シングルノードの発見とともに、これはElasticsearchサーバーが「開発モード」で動作していることを意味します。
 ```
+
+<a name="example-multi-node-production-elasticsearch-cluster" />
 
 ### 例：マルチノード本番環境Elasticsearchクラスター
 
@@ -147,6 +155,8 @@ transport.port: 9302
    - `transport.port`
 ```
 
+<a name="enforce-bootstrap-checks-for-single-server-in-production-mode" />
+
 ### 本番環境モードで単一サーバーのブートストラップチェックを実施する
 
 Elasticsearch [ブートストラップチェック](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/bootstrap-checks.html) では、起動時に構成を検査し、構成が欠落しているか疑わしい場合は警告をログに記録します。 本番環境では、構成ミスの際に起動を停止するようにブートストラップチェックを設定する必要があります。
@@ -157,7 +167,7 @@ Elasticsearch [ブートストラップチェック](https://www.elastic.co/guid
 -Des.enforce.bootstrap.checks=true
 ```
 
-<a name="elasticsearchの起動" />
+<a name="start-elasticsearch" />
 
 ## Elasticsearchの起動
 
@@ -179,7 +189,7 @@ Elasticsearchは[Liferayからの接続](./connecting-to-elasticsearch.md)の準
 
 本番環境で実行している場合は、[LiferayとElasticsearch間の通信を保護します](./securing-elasticsearch.md)。
 
-<a name="追加のトピック" />
+<a name="additional-topics" />
 
 ## 追加のトピック
 

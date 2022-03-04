@@ -16,7 +16,7 @@
 
 1. 必要に応じて設定し、［**保存**］をクリックします。
 
-<a name="提案構成リファレンス" />
+<a name="suggestions-configuration-reference" />
 
 ## 提案構成リファレンス
 

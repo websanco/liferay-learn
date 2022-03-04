@@ -10,6 +10,8 @@ installing-and-upgrading-a-search-engine/solr.md
 - [検索エンジンのインストール](./installing-and-upgrading-a-search-engine/installing-a-search-engine.md)
 - [None](./installing-and-upgrading-a-search-engine/elasticsearch/upgrading-elasticsearch.md)
 
+<a name="elasticsearch" />
+
 ## Elasticsearch
 
 - [Elasticsearchを開始する](installing-and-upgrading-a-search-engine/elasticsearch/getting-started-with-elasticsearch.md)
@@ -21,6 +23,8 @@ installing-and-upgrading-a-search-engine/solr.md
 - [サイドカーまたはEmbedded モードのElasticsearchの使用](installing-and-upgrading-a-search-engine/elasticsearch/using-the-sidecar-or-embedded-elasticsearch.md)
 - [Elasticsearchコネクターの設定リファレンス](installing-and-upgrading-a-search-engine/elasticsearch/elasticsearch-connector-configuration-reference.md)
 - [Liferay Elasticsearch コネクタの高度な設定](installing-and-upgrading-a-search-engine/elasticsearch/advanced-configuration-of-the-liferay-elasticsearch-connector.md)
+
+<a name="solr" />
 
 ## Solr
 

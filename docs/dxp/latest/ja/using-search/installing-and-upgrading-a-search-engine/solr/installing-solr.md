@@ -16,13 +16,13 @@ Solrは、Apache Luceneをベースに開発されたエンタープライズサ
 
 **Liferay Home** : Liferayインストールのルートフォルダ。 `osgi`, `deploy`, `data`, and `license` フォルダなどが含まれています。
 
-<a name="互換性" />
+<a name="compatibility" />
 
 ## 互換性
 
-パッチレベルごとの互換性のあるSolrとLiferayのバージョンに関する詳細な情報については、 [検索エンジン互換性マトリクス](https://help.liferay.com/hc/en-us/articles/360016511651) を参照してください。
+パッチレベルごとの互換性のあるSolrとLiferayのバージョンに関する詳細な情報については、 [検索エンジン互換性マトリクス](https://help.liferay.com/hc/ja/articles/360016511651) を参照してください。
 
-<a name="elasticsearchのみの機能を無効にする" />
+<a name="disabling-elasticsearch-only-features" />
 
 ## Elasticsearchのみの機能を無効にする
 
@@ -38,6 +38,8 @@ Liferay Connector to Solrをインストールする前に、ブラックリス�
 
    `lb -s | grep 'search' | grep 'elasticsearch|tuning'`
 ```
+
+<a name="blacklisting-elasticsearch-only-features" />
 
 ### Elasticsearchのみの機能のブラックリスト化
 
@@ -68,6 +70,8 @@ Liferay DXPをご利用の方は、ブラックリスト機能を使ってElasti
 
 1. `Liferay Home/osgi/configs`に配置してください。
 
+<a name="stopping-the-modules-with-elasticsearch-only-features" />
+
 ### Elasticsearchのみの機能を持つモジュールの停止
 
 アプリケーションマネージャとGogoシェルは、 `osgi/state` フォルダを頼りに、バンドルの状態を「記憶」しています。 このフォルダを削除すると（ [Liferay DXP](../../../installation-and-upgrades/maintaining-a-liferay-dxp-installation/patching-liferay/patching-liferay.md)のパッチ適用時に推奨）、Elasticsearchコネクタが再インストールされ、自動的に起動されます。 Liferay CEのユーザーは、ブラックリスト方式を使用するか、App ManagerまたはGogoシェルでElasticsearchおよび検索チューニングモジュールを無効にすることができます。
@@ -86,7 +90,7 @@ Liferay DXPをご利用の方は、ブラックリスト機能を使ってElasti
 
 1. リストアップされた各バンドルに対して、 `stop [bundle ID]`と入力します。
 
-<a name="solrコネクタのダウンロード" />
+<a name="downloading-the-solr-connector" />
 
 ## Solrコネクタのダウンロード
 
@@ -100,9 +104,9 @@ Liferay Connector to Solr [7、8]をインストールするには、 [Liferay M
       - [Liferay Connector to Solr 8](https://web.liferay.com/marketplace/-/mp/application/181462183)
       - [Liferay Connector to Solr 7](https://web.liferay.com/marketplace/-/mp/application/117931595)
 
-お使いのLiferayのバージョンとパッチレベルで互換性のあるアプリケーションのバージョンについては、 [検索エンジン互換性マトリクス](https://help.liferay.com/hc/en-us/articles/360016511651) を参照してください。
+お使いのLiferayのバージョンとパッチレベルで互換性のあるアプリケーションのバージョンについては、 [検索エンジン互換性マトリクス](https://help.liferay.com/hc/ja/articles/360016511651) を参照してください。
 
-<a name="solrのインストールと設定" />
+<a name="installing-and-configuring-solr" />
 
 ## Solrのインストールと設定
 
@@ -110,7 +114,7 @@ Liferay Connector to Solr [7、8]をインストールするには、 [Liferay M
 
 Liferay用のSolrをインストールし、適切に設定するために。
 
-1. [互換性のある](https://help.liferay.com/hc/en-us/articles/360016511651) Solrサーバーをダウンロードし、解凍します。 以下のリンクは便宜上のものであり、執筆時に互換性のある最新のSolrバージョンを表しています。 新しい互換性のあるバージョンがあるかどうかは、 [検索エンジン互換性マトリクス](https://help.liferay.com/hc/en-us/articles/360016511651) を参照してください。 このガイドでは、以下のバージョンを例に挙げています。
+1. [互換性のある](https://help.liferay.com/hc/ja/articles/360016511651) Solrサーバーをダウンロードし、解凍します。 以下のリンクは便宜上のものであり、執筆時に互換性のある最新のSolrバージョンを表しています。 新しい互換性のあるバージョンがあるかどうかは、 [検索エンジン互換性マトリクス](https://help.liferay.com/hc/ja/articles/360016511651) を参照してください。 このガイドでは、以下のバージョンを例に挙げています。
    - Liferay 7.1-7.3： [Solr 8.6.3](https://archive.apache.org/dist/lucene/solr/8.6.3/) となります。
    - Liferay 7.1-7.2： [Solr 7.5.0](http://archive.apache.org/dist/lucene/solr/7.5.0/) です。
 
@@ -181,7 +185,7 @@ Liferay用のSolrをインストールし、適切に設定するために。
 
 これでSolrがインストールされ、起動しました。 次に、Liferay用のSolrコネクタを構成し、インストールします。
 
-<a name="solrコネクタのインストールと設定" />
+<a name="installing-and-configuring-the-solr-connector" />
 
 ## Solrコネクタのインストールと設定
 
@@ -216,7 +220,7 @@ com.liferay.portal.search.solr7.configuration.SolrConfiguration.config
 
    ![Solrの接続は、Search管理コンソールで確認できます。](./installing-solr/images/01.png)
 
-<a name="solrcloudによる高可用性" />
+<a name="high-availability-with-solrcloud" />
 
 ## SolrCloudによる高可用性
 
@@ -300,7 +304,7 @@ SolrCloudモードで実行中のSolrを停止するには、次のように **s
 ./bin/solr stop -all
 ```
 
-<a name="solrcloud用solrコネクタの設定" />
+<a name="configure-the-solr-connector-for-solrcloud" />
 
 ## SolrCloud用Solrコネクタの設定
 
@@ -316,7 +320,7 @@ SolrCloudモードで実行中のSolrを停止するには、次のように **s
 
 ![［Solr システム設定］のエントリーから、「Client Type」を「Cloud」に設定します。](./installing-solr/images/03.png)
 
-<a name="solr-コネクタ設定リファレンス" />
+<a name="solr-connector-configuration-reference" />
 
 ## Solr コネクタ設定リファレンス
 

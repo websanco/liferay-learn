@@ -11,13 +11,15 @@ Elasticsearchコネクタには多くの設定オプションが用意されて�
 
 Elasticsearchで設定可能なものは、Elasticsearchコネクターを使って設定することができます。
 
-<a name="liferay-elasticsearch-コネクタへの設定とマッピングの追加" />
+<a name="adding-settings-and-mappings-to-the-liferay-elasticsearch-connector" />
 
 ## Liferay Elasticsearch コネクタへの設定とマッピングの追加
 
 利用可能な設定オプションは、簡単に設定できる一般的なものと、YAMLやJSONの入力が必要な複雑な設定の2つのグループに分かれていると考えてください。
 
 ![システム設定で現在用意されている設定に、Elasticsearchの設定を追加することができます。](./advanced-configuration-of-the-liferay-elasticsearch-connector/images/01.png)
+
+<a name="adding-index-configurations" />
 
 ### インデックス構成の追加
 
@@ -53,6 +55,8 @@ Elasticsearchで設定可能なものは、Elasticsearchコネクターを使っ
 
 
 
+
+<a name="adding-type-mappings" />
 
 ### タイプマッピングの追加
 
@@ -104,6 +108,8 @@ Elasticsearchのフィールドデータタイプの詳細については、 [�
 上の例では、Liferayのタイプマッピングに、 `fooName` フィールドを追加する方法を示しています。 `fooName` はマッピングの既存のプロパティではないため、正常に機能します。 既存のプロパティマッピングを上書きしようとすると、インデックス作成に失敗します。 代わりに、 `overrideTypeMappings` の設定を使用して、マッピングの `プロパティ` をオーバーライドします。
 
 
+
+<a name="overriding-type-mappings" />
 
 ### 型マッピングのオーバーライド
 
@@ -171,13 +177,15 @@ http://[HOST]:[ES_PORT]/liferay-[COMPANY_ID]/_mapping?pretty
 
 
 
+<a name="adding-configurations-to-the-development-mode-elasticsearch" />
+
 ### 開発モードのElasticsearchに設定を追加する
 
 追加設定(`additionalConfigurations`) フィールドを使用して、埋め込みまたはサイドカーのElasticsearchインスタンスの追加設定を（YAMLで）定義します。 これはテスト環境でのみ有効です。 通常、 `elasticsearch.yml` で設定するノードの設定は、すべてここで宣言することができます。 可能なすべてのノード設定の説明については、 [Elasticsearch のドキュメンテーション](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/index.html)  を参照してください。
 
 
 
-<a name="複数行のyaml設定" />
+<a name="multi-line-yaml-configurations" />
 
 ## 複数行のYAML設定
 

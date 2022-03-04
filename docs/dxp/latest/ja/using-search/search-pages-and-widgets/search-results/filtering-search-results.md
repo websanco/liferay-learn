@@ -15,7 +15,7 @@
 
 カスタムフィルターは非常に多くのことを実行でき、それらすべてをリストすることは不可能です。 以下はウィジェット設定ツアーです。 設定例は [カスタムフィルターの例](./custom-filter-examples.md) で見ることができます。
 
-<a name="カスタムフィルターの追加" />
+<a name="adding-a-custom-filter" />
 
 ## カスタムフィルターの追加
 
@@ -27,7 +27,7 @@
 
 ![カスタムフィルターは、構成するまで影響がありません。](./filtering-search-results/images/01.png)
 
-<a name="カスタムフィルター構成" />
+<a name="custom-filter-configuration" />
 
 ## カスタムフィルター構成
 
@@ -72,7 +72,7 @@ Liferay DXPインデックスに存在するフィールドを見つけるには
 
 このフィールドの値は、通常、アプリケーション定義のインデックスの名前と一致します。
 
-<a name="フィールドを見つける" />
+<a name="finding-fields" />
 
 ## フィールドを見つける
 
@@ -80,7 +80,7 @@ Liferay DXPインデックスに存在するフィールドを見つけるには
 
 ![フィールドマッピングを参照して、Liferay DXPのインデックス付きフィールドを見つけます。](./filtering-search-results/images/04.png)
 
-<a name="ネストされたフィールドの検索と使用" />
+<a name="finding-and-using-nested-fields" />
 
 ## ネストされたフィールドの検索と使用
 
@@ -135,7 +135,7 @@ GET liferay-20097/_search
 
 カスタムフィルタ」ウィジェットでのDDM構造体フィールドの使用例については、 [Boosting Matches to Nested Fields](custom-filter-examples.md#boosting-matches-to-nested-fields) を参照してください。
 
-<a name="関連する内容" />
+<a name="related-content" />
 
 ## 関連する内容
 

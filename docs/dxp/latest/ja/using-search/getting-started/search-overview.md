@@ -15,7 +15,7 @@
 * ファセット検索
 * 高度な検索構文（AND/OR/NOT、ワイルドカードなど）の有効化・無効化
 
-<a name="検索ページとウィジェット" />
+<a name="search-pages-and-widgets" />
 
 ## 検索ページとウィジェット
 
@@ -29,7 +29,7 @@
 
 詳細は、 [検索ページの構成](../search-pages-and-widgets/working-with-search-pages/search-pages.md) または [検索ページとウィジェット](../search-pages-and-widgets/working_with_search_pages.md)を参照してください。
 
-<a name="検索の構成と管理" />
+<a name="search-configuration-and-administration" />
 
 ## 検索の構成と管理
 
@@ -45,7 +45,7 @@
 
 詳細は、 [検索の管理とチューニング](../search_administration_and_tuning.md)をご覧ください。
 
-<a name="検索におけるカスタム開発" />
+<a name="custom-development-in-search" />
 
 ## 検索におけるカスタム開発
 
@@ -63,7 +63,7 @@
 
 詳しくは、 [開発者ガイド](../developer_guide.md) をご覧ください。
 
-<a name="次のステップ" />
+<a name="whats-next" />
 
 ## 次のステップ
 

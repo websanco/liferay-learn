@@ -15,7 +15,7 @@
 
 ウィジェットから不要な並べ替えオプションを削除することもできます。
 
-<a name="ページへの並べ替えウィジェットの追加" />
+<a name="adding-the-sort-widget-to-a-page" />
 
 ## ページへの並べ替えウィジェットの追加
 
@@ -25,7 +25,7 @@
 
 1. ［検索］カテゴリから、並べ替えウィジェットをページにドラッグします。
 
-<a name="並べ替えウィジェットの構成" />
+<a name="configuring-the-sort-widget" />
 
 ## 並べ替えウィジェットの構成
 
@@ -47,7 +47,7 @@
 
 ![並べ替えウィジェットの構成から、並べ替えオプションを追加、編集、または削除します。](./sorting-search-results/images/02.png)
 
-<a name="デフォルトのソート動作の変更" />
+<a name="changing-the-default-sort-behavior" />
 
 ## デフォルトのソート動作の変更
 
@@ -65,7 +65,7 @@
 
 1. 設定を保存します。 検索を入力すると、新しいソートが適用されたことがわかります。
 
-<a name="並べ替え可能なフィールドの検索" />
+<a name="finding-sortable-fields" />
 
 ## 並べ替え可能なフィールドの検索
 
@@ -98,7 +98,7 @@ index.sortable.text.fields=firstName,jobTitle,lastName,name,screenName,title
 
 ここにリストされているすべてのテキストフィールドには、インデックスで自動的に作成される `fieldName_sortable` 対応物があります。 さらに追加するには、このプロパティを [`portal-ext.properties`](./../../../installation-and-upgrades/reference/portal-properties.md) ファイルにLiferayホームフォルダーにコピーし、並べ替えに必要な新しいフィールド名を追加して、サーバーを再起動します。
 
-<a name="新しい並べ替えオプションの追加" />
+<a name="adding-new-sort-options" />
 
 ## 新しい並べ替えオプションの追加
 
@@ -106,7 +106,7 @@ index.sortable.text.fields=firstName,jobTitle,lastName,name,screenName,title
 
 すでに適切なデータ型である新しい並べ替えオプションを追加するには、オプションの **フィールド** 構成の下にあるプラス記号を使用して、フィールドに入力します。 構成画面でのオプションの順序は、ウィジェットを検索用に構成するときの選択リストの順序と一致します。
 
-<a name="並べ替えオプションの編集と削除" />
+<a name="editing-and-deleting-sort-options" />
 
 ## 並べ替えオプションの編集と削除
 
@@ -114,7 +114,7 @@ index.sortable.text.fields=firstName,jobTitle,lastName,name,screenName,title
 
 既存のオプションを削除するには、 **フィールド** 設定の下にあるマイナス記号を使用します。
 
-<a name="ソート順の制御" />
+<a name="controlling-the-sort-order" />
 
 ## ソート順の制御
 
@@ -128,7 +128,7 @@ index.sortable.text.fields=firstName,jobTitle,lastName,name,screenName,title
 
 フィールド名に続く `+` 記号は、順序が **昇順** ことを示しています。  この方法で並べ替えると、最も古い（作成日順）結果がリストの一番上に表示されます。
 
-<a name="ネストしたフィールドでのソート" />
+<a name="sorting-by-nested-fields" />
 
 ## ネストしたフィールドでのソート
 

@@ -18,7 +18,7 @@ Liferayのデータがインデックス化されている[セキュリティで
 
 1. Elasticsearchと通信するようにLESモニタリングアプリを設定します。
 
-<a name="データ収集を有効にする" />
+<a name="enable-data-collection" />
 
 ## データ収集を有効にする
 
@@ -30,11 +30,11 @@ xpack.monitoring.collection.enabled: true
 
 Elasticsearchを再起動してから、Kibanaをインストールします。
 
-<a name="kibanaをインストールする" />
+<a name="install-kibana" />
 
 ## Kibanaをインストールする
 
-KibanaのバージョンがElasticsearchのバージョンと一致していることを確認してください。 詳細は、 [Liferay Enterprise Search互換性マトリックス](https://help.liferay.com/hc/en-us/articles/360016511651) を参照してください。
+KibanaのバージョンがElasticsearchのバージョンと一致していることを確認してください。 詳細は、 [Liferay Enterprise Search互換性マトリックス](https://help.liferay.com/hc/ja/articles/360016511651) を参照してください。
 
 ```{note} 
    Elasticsearch 6.x は [end of life](https://www.elastic.co/support/eol#elasticsearch) に達しました。 Liferay 7.2システムでElasticsearch 6.xを使用している場合、Elasticsearch 7.xにアップグレードする必要があります。 詳細は [Upgrading to Elasticsearch 7](./.installing-and-upgrading-a-search-engine/elasticsearch/upgrading-elasticsearch/upgrading-to-elasticsearch-7.md)  をご参照ください。
@@ -103,7 +103,7 @@ KibanaのバージョンがElasticsearchのバージョンと一致している�
 
 続行する前にKibanaを停止してください。
 
-<a name="lesモニタリングアプリをインストールして設定する" />
+<a name="install-and-configure-the-les-monitoring-app" />
 
 ## LESモニタリングアプリをインストールして設定する
 
@@ -163,7 +163,7 @@ LESモニタリングアプリをダウンロードし、LPKGファイルを`［
 
 LiferayとKibanaを再起動します。
 
-<a name="liferayでのモニタリング" />
+<a name="monitoring-in-liferay" />
 
 ## Liferayでのモニタリング
 
@@ -175,7 +175,7 @@ KibanaとLES Monitoringがインストールされ、構成され、すべての
 
 > 詳細については、関連するElasticsearchのドキュメントを参照してください。 [**クラスタを監視する](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/es-monitoring.html**) [X-Packを設定する--クラスタ環境での監視とセキュリティのベストプラクティス](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/setup-xpack.html) </a>
 
-<a name="kibana構成の例" />
+<a name="example-kibana-configuration" />
 
 ## Kibana構成の例
 
@@ -223,7 +223,7 @@ server.basePath: "/o/portal-search-elasticsearch-monitoring/monitoring-proxy"
 #server.ssl.key: config/certs/elastic-nodes.key
 ```
 
-<a name="モニタリング設定のトラブルシューティング" />
+<a name="troubleshooting-the-monitoring-setup" />
 
 ## モニタリング設定のトラブルシューティング
 
@@ -237,9 +237,9 @@ SSLException: No PSK available. Unable to resume
 
 1. Tomcatのアウトバウンド接続でTLS 1.3を無効にする。 Tomcatの `setenv.bat/sh`(`CATALINA_OPTS`に追加) 内の`-Dhttps.protocols=TLSv1.1,TLSv1.2` を設定します。
 1. KibanaでTLS 1.3を無効にするには、 `--tls-max-v1.2` を `KIBANA_HOME/config/node.options`に追加します。
-1. 根本的な問題（ [JDK-8213202](https://bugs.openjdk.java.net/browse/JDK-8213202) ）がすでに修正されている [互換性のあるJDKバージョン](https://help.liferay.com/hc/en-us/articles/360016511651) に切り替えてください。
+1. 根本的な問題（ [JDK-8213202](https://bugs.openjdk.java.net/browse/JDK-8213202) ）がすでに修正されている [互換性のあるJDKバージョン](https://help.liferay.com/hc/ja/articles/360016511651) に切り替えてください。
 
-<a name="関連トピック" />
+<a name="related-topics" />
 
 ## 関連トピック
 

@@ -4,7 +4,7 @@
 
 Elasticsearchへの接続は、システム設定（または [対応する構成ファイル](#configuration-files-and-system-settings-entries) 介して）の **Elasticsearch 6/7** の設定エントリーで主に定義されます。 Liferay 7.3では、 [ファクトリー設定の](../../../system-administration/configuring-liferay/configuration-files-and-factories/using-factory-configuration.md)**Elasticsearch接続** により、Elasticsearchへの複数の接続を定義できるようになりました。 両方の設定エントリーは [システム設定](../../../system-administration/configuring-liferay/system-settings.md) または [のOSGi構成ファイル](../../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md)で設定可能です。 本番環境では、設定ファイルを使用することをお勧めします。
 
-<a name="設定ファイルとシステム設定項目" />
+<a name="configuration-files-and-system-settings-entries" />
 
 ## 設定ファイルとシステム設定項目
 
@@ -24,7 +24,7 @@ Elasticsearch 6にセキュリティを設定する場合は、別途Liferayの�
 
 設定ファイルを `[Liferay_Home]/osgi/configs` にデプロイし、リスナーが設定を自動検出してデータベースに書き込みます。
 
-<a name="構成プロパティ" />
+<a name="configuration-properties" />
 
 ## 構成プロパティ
 
@@ -894,11 +894,11 @@ Elasticsearch 6にセキュリティを設定する場合は、別途Liferayの�
   </tr>
 </table>
 
-<a name="関連トピック" />
+<a name="related-topics" />
 
 ## 関連トピック
 - [7.3の検索の新機能](../../getting-started/whats-new-in-search-for-73.md)
 - [Elasticsearchの保護](securing-elasticsearch.md)
 - [Elasticsearchへの接続](connecting-to-elasticsearch.md)
-- [Liferay DXP Elasticsearchコネクタ。テクニカルデータシート（KBリファレンス）](https://help.liferay.com/hc/en-us/articles/360046478452)
-- [Liferay DXPのElasticsearchとの互換性について（KBリファレンス）](https://help.liferay.com/hc/en-us/articles/360051492032)
+- [Liferay DXP Elasticsearchコネクタ。テクニカルデータシート（KBリファレンス）](https://help.liferay.com/hc/ja/articles/360046478452)
+- [Liferay DXPのElasticsearchとの互換性について（KBリファレンス）](https://help.liferay.com/hc/ja/articles/360051492032)

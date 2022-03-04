@@ -32,7 +32,7 @@
 | liferay-20101-product-content-commerce-ml-recommendation     | アプリインデックス | レコメンデーションサービス |
 | liferay-20101-product-interaction-commerce-ml-recommendation | アプリインデックス | レコメンデーションサービス |
 
-<a name="関連情報" />
+<a name="related-information" />
 
 ## 関連情報
 

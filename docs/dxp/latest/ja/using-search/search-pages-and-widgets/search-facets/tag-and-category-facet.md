@@ -6,7 +6,7 @@
 
 ![カテゴリファセットの結果の例。](tag-and-category-facet/images/02.png)
 
-<a name="タグファセットとカテゴリファセットの設定" />
+<a name="configuring-the-tag-facet-and-the-category-facet" />
 
 ## タグファセットとカテゴリファセットの設定
 

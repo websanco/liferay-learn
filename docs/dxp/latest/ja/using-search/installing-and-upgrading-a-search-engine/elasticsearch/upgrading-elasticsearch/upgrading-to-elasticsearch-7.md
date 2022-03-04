@@ -1,6 +1,6 @@
 # Elasticsearch 7へのアップグレード
 
-Elasticsearch 7は、Liferay7.3では標準サポートされています。 特定のバージョンの互換性の詳細については、 [Search Engine Compatibility Matrix](https://help.liferay.com/hc/en-us/articles/360016511651) を参照してください。
+Elasticsearch 7は、Liferay7.3では標準サポートされています。 特定のバージョンの互換性の詳細については、 [Search Engine Compatibility Matrix](https://help.liferay.com/hc/ja/articles/360016511651) を参照してください。
 
 Liferay 7.2では、Elasticsearch 7は [Liferay Connector to Elasticsearch 7](https://web.liferay.com/marketplace/-/mp/application/170390307)  (バージョン`3.x`) を介してサポートされています。 Liferay 7.3にアップグレードする場合、または既存の7.2検索エンジンをElasticsearch 7に移行する場合は、Elasticsearchサーバーもアップグレードする必要があります。 新しいLiferay7.2システムをセットアップするには、Elasticsearch 7をインストールし、[インストールガイド](../getting-started-with-elasticsearch.md)に従います。
 
@@ -36,7 +36,7 @@ Before upgrading Elasticsearch, back up your existing data. If something goes wr
 
 10. 検索調整エントリが引き継がれていることを確認します。
 
-<a name="elasticsearchのアップグレード" />
+<a name="upgrading-elasticsearch" />
 
 ## Elasticsearchのアップグレード
 
@@ -44,7 +44,7 @@ Before upgrading Elasticsearch, back up your existing data. If something goes wr
 
 新しいElasticsearchサーバーをインストールし、アップグレード前のデータにインデックスを付けたい場合、Liferay[データベースがアップグレード](../../../../installation-and-upgrades/upgrading-liferay/upgrade-basics/using-the-database-upgrade-tool.md)されると、UIから [再インデックス](#re-index) をトリガーすることで、ほとんどのLiferayインデックスを復元できます。 ただし、検索の調整（結果ランキングと同義語）インデックス、およびデータベースストレージにバックアップされていないカスタムインデックスは、 [アップグレード前のインデックスのスナップショット](./backing-up-elasticsearch.md#backing-up-and-restoring-search-tuning-indexes) から復元する必要があります。
 
-<a name="elasticsearch-6のブラックリストへの登録" />
+<a name="blacklisting-elasticsearch-6" />
 
 ## Elasticsearch 6のブラックリストへの登録
 
@@ -71,7 +71,7 @@ Before upgrading Elasticsearch, back up your existing data. If something goes wr
 
 3.  ファイルをサーバーの`deploy`フォルダにコピーしてデプロイします。
 
-<a name="インデックスの再作成" />
+<a name="restart-liferay-and-re-index" />
 
 ## インデックスの再作成
 
@@ -83,7 +83,7 @@ LiferayがElasticsearchクラスターに接続されたら、該当するイン
 
 これにより、Liferayデータベースに保存されているデータから作成されたインデックスが復元されます。 プライマリストレージとして使用されるインデックスを復元するには、 [Elasticsearchのバックアップ](./backing-up-elasticsearch.md) を参照してください。
 
-<a name="liferay-72elasticsearch-6への復帰" />
+<a name="liferay-72-reverting-to-elasticsearch-6" />
 
 ## Liferay 7.2：Elasticsearch 6への復帰
 

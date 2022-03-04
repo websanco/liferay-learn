@@ -6,9 +6,9 @@ Elasticsearchのような検索エンジンには、一般的な検索目的に�
 
 LES Learning to Rankは、機械学習を利用して検索結果のランキングを向上させます。 データサイエンティストの専門知識と機械学習を組み合わせて、検索クエリに適用されるよりスマートなスコアリング関数を生成します。
 
-LES Learning to Rankには、Liferay Enterprise Searchのサブスクリプションが必要です。 [Elasticsearch Learning to Rankのプラグイン](https://elasticsearch-learning-to-rank.readthedocs.io/en/latest/index.html) はElasticによって作成されたものではなく、LiferayでサポートされているすべてのElasticsearchバージョンに対応したビルド済みのプラグインはないことを理解することが重要です。 詳細は、 [LES互換性マトリックス](https://help.liferay.com/hc/en-us/articles/360016511651#Liferay-Enterprise-Search) を参照してください。
+LES Learning to Rankには、Liferay Enterprise Searchのサブスクリプションが必要です。 [Elasticsearch Learning to Rankのプラグイン](https://elasticsearch-learning-to-rank.readthedocs.io/en/latest/index.html) はElasticによって作成されたものではなく、LiferayでサポートされているすべてのElasticsearchバージョンに対応したビルド済みのプラグインはないことを理解することが重要です。 詳細は、 [LES互換性マトリックス](https://help.liferay.com/hc/ja/articles/360016511651#Liferay-Enterprise-Search) を参照してください。
 
-<a name="検索ページでのlearning-to-rankを無効にする" />
+<a name="disabling-learning-to-rank-on-a-search-page" />
 
 ## 検索ページでのLearning to Rankを無効にする
 
@@ -28,7 +28,7 @@ LES Learning to Rankがデプロイされているが、（おそらくはソー
 
 これで、ページの検索バーに入力されたクエリに対し、Learning to Rankの再スコアリングプロセスがスキップされます。 その結果は並べ替え可能で、デフォルトの関連性アルゴリズムを使用して返されます。
 
-<a name="前提条件" />
+<a name="prerequisites" />
 
 ## 前提条件
 
@@ -42,7 +42,7 @@ Learning to Rankを使用して、Elasticsearchに送信されたLiferayクエ�
 
 - [トレーニング済みモデル](https://elasticsearch-learning-to-rank.readthedocs.io/en/latest/training-models.html) がLearning to Rankプラグインにアップロードされている。
 
-<a name="技術概要" />
+<a name="technical-overview" />
 
 ## 技術概要
 
@@ -62,7 +62,7 @@ Learning to Rankを使用して、Elasticsearchに送信されたLiferayクエ�
 
 これは上に挙げたソート済みリストの中の小さな点にすぎませんが、このパラダイムでの作業の多くは、トレーニングされたモデルを作成して磨きをかけることです。 それは本セクションの範囲外ですが、Liferayのクエリで機械学習の魅力を調和させるために、すべての要素を適切に整えるのに役立つ情報を以下に示します。 以下は、 **モデルのトレーニング** を構成する内容の概要です。
 
-<a name="モデルトレーニング" />
+<a name="model-training" />
 
 ## モデルトレーニング
 
@@ -79,13 +79,13 @@ Learning to Rankを使用して、Elasticsearchに送信されたLiferayクエ�
 
 [機能](https://elasticsearch-learning-to-rank.readthedocs.io/en/latest/core-concepts.html#features-the-raw-material-of-relevance) は、アルゴリズムが結果をよりスマートな方法でスコアリングできる関数を作成するために使用する変数です。 関連する機能を十分に、あるいは正しく与えなければ、モデルは結果を改善するのに十分な「賢さ」を持ちません。
 
-始める前に、Liferayと通信するリモート [Elasticsearch](../installing-and-upgrading-a-search-engine/elasticsearch.html) クラスターが必要です。 詳細は、 [検索エンジンの互換性マトリックス](https://help.liferay.com/hc/en-us/articles/360016511651) を参照してください。
+始める前に、Liferayと通信するリモート [Elasticsearch](../installing-and-upgrading-a-search-engine/elasticsearch.html) クラスターが必要です。 詳細は、 [検索エンジンの互換性マトリックス](https://help.liferay.com/hc/ja/articles/360016511651) を参照してください。
 
 ```{tip}
    [Sugguggestions](../search-pages-and-widgets/search-results/enabling-search-suggestions.md) を使用して、最も一般的なクエリを発見することができます（これは、Learning to Rank モデルを作成するクエリを決定する 1 つの方法になります）。
 ```
 
-<a name="ステップ1elasticsearchにlearning-to-rankプラグインをインストールする" />
+<a name="step-1-install-the-learning-to-rank-plugin-on-elasticsearch" />
 
 ## ステップ1：ElasticsearchにLearning to Rankプラグインをインストールする
 
@@ -99,13 +99,13 @@ Learning to Rankプラグインのインストールについては、 [Elastics
 
 [ElasticsearchクラスターでX-Pack Security](../installing-and-upgrading-a-search-engine/elasticsearch/securing-elasticsearch.md)を使用している場合は、 [追加の手順が必要になる場合があります。](https://elasticsearch-learning-to-rank.readthedocs.io/en/latest/x-pack.html)
 
-<a name="ステップ2モデルのトレーニングとアップロード" />
+<a name="step-2-training-and-uploading-a-model" />
 
 ## ステップ2：モデルのトレーニングとアップロード
 
 モデルのトレーニングに関する詳細な手順は、このガイドの範囲外です。 トレーニングには、適切なツールとモデルを推奨できるデータサイエンティストの介入が必要です。 自分に合ったものを使用してください。 そうすることで、選択したトレーニングツールで使用できる [判断リスト](https://elasticsearch-learning-to-rank.readthedocs.io/en/latest/core-concepts.html#judgments-expression-of-the-ideal-ordering) と [機能セット](https://elasticsearch-learning-to-rank.readthedocs.io/en/latest/building-features.html) をコンパイルして、ほぼ確実に適切な検索結果を生成するモデルを生成できます。 モデルを作成したら、それをLearning to Rankプラグインにアップロードします。
 
-<a name="ステップ3モデルをlearning-to-rankプラグインにアップロードする" />
+<a name="step-3-upload-the-model-to-the-learning-to-rank-plugin" />
 
 ## ステップ3：モデルをLearning to Rankプラグインにアップロードする
 
@@ -190,7 +190,7 @@ Liferay自体で行うことはあまりないため、この一連の指示は�
    判定リストを作り直してください。
 ```
 
-<a name="ステップ4learning-to-rankを有効にする" />
+<a name="step-4-enable-learning-to-rank" />
 
 ## ステップ4：Learning to Rankを有効にする
 

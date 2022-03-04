@@ -4,7 +4,7 @@
    LiferayのSolrサポートは非推奨です。  `Elasticsearch<../elasticsearch/getting-started-with-elasticsearch.md>_` に移行することを検討してください。
 ```
 
-<a name="エンドユーザー機能の制限" />
+<a name="end-user-feature-limitations" />
 
 ## エンドユーザー機能の制限
 
@@ -16,7 +16,7 @@ LiferayのSolr統合には、Liferay Commerceおよび以下の機能の使用�
 * 検索のチューニング：検索結果のカスタマイズ
 * 検索チューニング：同義語
 
-<a name="開発者機能の制限" />
+<a name="developer-feature-limitations" />
 
 ## 開発者機能の制限
 

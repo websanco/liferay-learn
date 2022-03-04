@@ -10,13 +10,13 @@ Liferayを起動すると、組み込みのElasticsearchサーバー（サイド
 Liferayの [Solr](http://lucene.apache.org/solr) のサポートは、廃止される前にもう一つのアップデート（Solr 8のサポート）が行われます。 しかし、SolrはLiferayにバンドルされていないため、開発やテストの際にもリモートで接続する必要があります。 Solrを使用するには、 [Solrのインストール](./solr/installing-solr.md) を参照してください。
 ```
 
-<a name="java要件" />
+<a name="java-requirements" />
 
 ## Java要件
 
 * 検索エンジンには、`JAVA_HOME`環境変数が必要です。 それを検索エンジンのホストに設定します。
 
-* Liferay 7.2を使用している場合、ElasticsearchとLiferayは同じJavaバージョンとディストリビューションを使用する必要があります。 サポートされているJDKディストリビューションとバージョンの詳細は、 [Elasticsearch互換性マトリックス](https://www.elastic.co/support/matrix#matrix_jvm) と [Liferayの検索エンジン互換性マトリックス](https://help.liferay.com/hc/en-us/articles/360016511651) を参照してください。  これはElasticsearchで指定できます。
+* Liferay 7.2を使用している場合、ElasticsearchとLiferayは同じJavaバージョンとディストリビューションを使用する必要があります。 サポートされているJDKディストリビューションとバージョンの詳細は、 [Elasticsearch互換性マトリックス](https://www.elastic.co/support/matrix#matrix_jvm) と [Liferayの検索エンジン互換性マトリックス](https://help.liferay.com/hc/ja/articles/360016511651) を参照してください。  これはElasticsearchで指定できます。
 
     ```properties
     [Elasticsearch Home]/bin/elasticsearch.in.sh`: `JAVA_HOME=/path/to/java`
@@ -26,7 +26,7 @@ Elasticsearch 7コネクターはHTTP経由で通信するため、Javaのバー
 
 SolrコネクターもHTTP経由で通信するため、同じ要件はSolrにも適用されません。
 
-<a name="検索エンジンのクラスタリング" />
+<a name="clustering-the-search-engine" />
 
 ## 検索エンジンのクラスタリング
 
@@ -36,17 +36,17 @@ SolrコネクターもHTTP経由で通信するため、同じ要件はSolrに�
 
 * リモートのSolrサーバーまたはクラスターを設定するには、 [Solrのインストール](./solr/installing-solr.md) を参照してください。
 
-<a name="検索エンジンのベンダーとバージョンの選択" />
+<a name="selecting-a-search-engine-vendor-and-version" />
 
 ## 検索エンジンのベンダーとバージョンの選択
 
 Elasticsearchは、Liferayでの検索とインデックス作成に推奨される検索エンジンです。 Solrは廃止予定で、[制限](./solr/solr-limitations.md)があります。
 
 ```{important}
-サポートされている正確なバージョンを確認するには、必ず [検索エンジン互換性マトリクス](https://help.liferay.com/hc/en-us/articles/360016511651) を参照してください。
+サポートされている正確なバージョンを確認するには、必ず [検索エンジン互換性マトリクス](https://help.liferay.com/hc/ja/articles/360016511651) を参照してください。
 ```
 
-<a name="次のステップ" />
+<a name="whats-next" />
 
 ## 次のステップ
 

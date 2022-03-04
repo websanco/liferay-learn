@@ -22,7 +22,7 @@ It's convenient to create and manage snapshots via the [Kibana 7.x UI](https://w
 For more detailed information, refer to Elastic's [Elasticsearch administration guide](https://www.elastic.co/guide/en/elasticsearch/guide/master/administration.html) , and in particular to the [Snapshot and Restore module](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/snapshot-restore.html) .
 ```
 
-<a name="リポジトリの作成" />
+<a name="backing-up-indexes-before-upgrading" />
 
 ## リポジトリの作成
 
@@ -61,7 +61,7 @@ PUT /_snapshot/test_backup
 
 リポジトリが存在しているので、スナップショットを作成します。
 
-<a name="クラスターのスナップショットを取得する" />
+<a name="creating-elasticsearch-cluster-backups" />
 
 ## クラスターのスナップショットを取得する
 
@@ -152,7 +152,7 @@ DELETE /_snapshot/test_backup/snapshot_1
 
 スナップショットにすべてのインデックスを含めると、多くの時間とストレージを消費する可能性があります。 誤ってスナップショットの作成を開始した場合（例えば、特定のインデックスにフィルターをかけようとしたが、すべてのインデックスを含めてしまったなど）、`DELETE`コマンドを使用してスナップショットの処理をキャンセルすることができます。 名前でスナップショットを削除すると、スナップショットプロセスが終了し、部分的なスナップショットがリポジトリから削除されます。
 
-<a name="スナップショットからの復元のテスト" />
+<a name="test-restoring-from-the-snapshot" />
 
 ## スナップショットからの復元のテスト
 
@@ -195,7 +195,7 @@ DELETE /restored_liferay-20116index_3
 
 本番環境システムでの壊滅的な障害は誰もが望みませんが、スナップショットを取得してインデックスを復元するためのElasticsearchのAPIを使用すれば、障害が発生した場合に検索クラスターを復元できるので安心です。 詳細とオプションについては、Elasticの [スナップショットと復元のドキュメンテーション](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/snapshot-restore.html) を参照してください。
 
-<a name="検索の調整インデックスのバックアップと復元" />
+<a name="backing-up-and-restoring-indexes-used-for-primary-storage" />
 
 ## 検索の調整インデックスのバックアップと復元
 
@@ -289,13 +289,13 @@ POST _reindex/
 
 `<companyId>`（例えば`20101`）は、データベース内の指定された`Company`レコードに属しています。 UIでは **インスタンスID** として表示され、[仮想インスタンス](../../../../system-administration/configuring-liferay/virtual-instances/understanding-virtual-instances.md)を表します。
 
-<a name="次のステップ" />
+<a name="whats-next" />
 
 ## 次のステップ
 
 [Elasticsearchをアップグレード](./upgrading-to-elasticsearch-7.md)する場合は、今すぐアップグレードできます。
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 

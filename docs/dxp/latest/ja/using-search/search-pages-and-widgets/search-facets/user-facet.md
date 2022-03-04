@@ -4,7 +4,7 @@
 
 ![ユーザーファセットの結果の例。](user-facet/images/01.png)
 
-<a name="ユーザーファセットの設定" />
+<a name="configuring-the-user-facet" />
 
 ## ユーザーファセットの設定
 
