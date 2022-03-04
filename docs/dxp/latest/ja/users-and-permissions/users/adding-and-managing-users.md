@@ -2,7 +2,7 @@
 
 コアユーザー管理アクティビティには、ユーザーの追加、編集、削除が含まれます。 これらのアクティビティは通常、管理ユーザーに制限されています。
 
-<a name="ユーザーの追加" />
+<a name="adding-users" />
 
 ## ユーザーの追加
 
@@ -29,7 +29,7 @@
 
 ![ユーザーのパスワードを手動で設定するには、パスワードを2回入力します。 使用しているパスワードポリシーが許可するように構成されている場合は、ユーザーが初めてポータルにログインしたときにパスワードのリセットを要求するかどうかを選択します。](./adding-and-managing-users/images/03.png)
 
-<a name="ユーザーの編集" />
+<a name="editing-users" />
 
 ## ユーザーの編集
 
@@ -49,7 +49,7 @@
 | Erase Personal Data  | [ユーザーの個人データを削除します](../managing-user-data/sanitizing-user-data.md)。    |
 | Export Personal Data | [ユーザーの個人データをダウンロードします](../managing-user-data/exporting-user-data.md)。 |
 
-<a name="ユーザーの非アクティブ化と削除" />
+<a name="deactivating-and-deleting-users" />
 
 ## ユーザーの非アクティブ化と削除
 
@@ -85,7 +85,7 @@
 
 ユーザーが削除されます。 以前に削除したユーザーを以前のバックアップから復元する以外に復元する方法はありません。
 
-<a name="偽装ユーザー" />
+<a name="impersonating-users" />
 
 ## 偽装ユーザー
 
@@ -97,7 +97,7 @@
 
 そのユーザーとしてログインしている別のブラウザーウィンドウが開きます。
 
-<a name="ユーザーパスワードのリセット" />
+<a name="resetting-a-user-password" />
 
 ## ユーザーパスワードのリセット
 
@@ -109,7 +109,7 @@
 
 デフォルトポリシーの編集または独自のポリシーを作成する詳細は、[Password Policies](../roles-and-permissions/configuring-a-password-policy.md)を参照してください。
 
-<a name="関連情報" />
+<a name="related-information" />
 
 ## 関連情報
 

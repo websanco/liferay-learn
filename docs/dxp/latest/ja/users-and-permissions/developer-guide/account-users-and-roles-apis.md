@@ -2,7 +2,7 @@
 
 アプリケーションメニューから [アカウントユーザー](../accounts/account-users.md) と [アカウントロール](../accounts/account-roles.md) を管理することができますが、LiferayのREST APIを利用することもできます。 これらのサービスを呼び出して、アカウントユーザーとRolesの作成と管理を行います。
 
-<a name="アカウントユーザーの追加" />
+<a name="adding-an-account-user" />
 
 ## アカウントユーザーの追加
 
@@ -15,7 +15,7 @@
 1. ダウンロードして解凍する [Accounts API Basics](./liferay-t5p9.zip) 。
 
    ```bash
-   curl https://learn.liferay.com/dxp/latest/en/users-and-permissions/developer-guide/liferay-t5p9.zip -O
+   curl https://learn.liferay.com/dxp/latest/ja/users-and-permissions/developer-guide/liferay-t5p9.zip -O
    ```
 
    ```bash
@@ -97,7 +97,7 @@
    java -classpath .: **-DaccountId=1234 AccountUser***POST** ToAccount
    ```
 
-<a name="curlコマンドの検証" />
+<a name="examine-the-curl-command" />
 
 ## cURLコマンドの検証
 
@@ -123,7 +123,7 @@
 
 他のcURLコマンドも同様のJSON引数を使用しています。
 
-<a name="javaクラスを調べる" />
+<a name="examine-the-java-class" />
 
 ## Javaクラスを調べる
 
@@ -155,7 +155,7 @@ main`メソッドのコメントでは、クラスの実行を実演していま
 
 以下は、cURLとJavaを使って、関連する他のRESTサービスを呼び出す例です。
 
-<a name="accountからアカウントユーザーを取得" />
+<a name="get-account-users-from-account" />
 
 ## Accountからアカウントユーザーを取得
 
@@ -193,7 +193,7 @@ Code:
 
 アカウントの `UserAccountの` オブジェクトがJSONで表示されます。
 
-<a name="アカウントロールの投稿" />
+<a name="post-an-account-role" />
 
 ## アカウントロールの投稿
 
@@ -229,7 +229,7 @@ Code:
    :lines: 9-25
 ```
 
-<a name="ユーザーをアカウントロールに関連付ける" />
+<a name="associate-a-user-to-an-account-role" />
 
 ## ユーザーをアカウントロールに関連付ける
 
@@ -265,7 +265,7 @@ Code:
    :lines: 9-19
 ```
 
-<a name="アカウントからのアカウントロールの取得" />
+<a name="get-account-roles-from-an-account" />
 
 ## アカウントからのアカウントロールの取得
 
@@ -303,7 +303,7 @@ Code:
 
 アカウントの `AccountRoleの` オブジェクトがJSONで表示されます。
 
-<a name="アカウントロールユーザーアソシエーションの削除" />
+<a name="remove-account-role-user-association" />
 
 ## アカウントロール・ユーザー・アソシエーションの削除
 

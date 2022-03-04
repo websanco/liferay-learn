@@ -17,7 +17,7 @@ accounts/account-management-widget.md
 アカウントは、もともと [Liferay Commerce](https://learn.liferay.com/commerce/latest/ja/users-and-accounts/account-management.html) に搭載されていた機能で、現在はLiferay DXP 7.4以上に搭載されています。
 ```
 
-<a name="アカウントの作成" />
+<a name="creating-an-account" />
 
 ## アカウントの作成
 
@@ -81,7 +81,7 @@ accounts/account-management-widget.md
 
 詳しくは、 [アカウントのロール](./accounts/account-roles.md) をご覧ください。
 
-<a name="アカウントの変更" />
+<a name="making-changes-to-an-account" />
 
 ## アカウントの変更
 
@@ -110,7 +110,7 @@ accounts/account-management-widget.md
    * アカウントグループタブ - アカウントが属しているアカウントグループを表示します。 詳細については、 [アカウントグループ](./accounts/account-groups.md) を参照してください。
    * ロール］タブ - ［アカウント］のさまざまなロールを追加・管理します。 詳しくは、 [アカウントのロール](./accounts/account-roles.md) を参照してください。
 
-<a name="関連情報" />
+<a name="related-information" />
 
 ## 関連情報
 

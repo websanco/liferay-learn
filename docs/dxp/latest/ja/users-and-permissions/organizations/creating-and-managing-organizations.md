@@ -2,7 +2,7 @@
 
 組織とは何か、または組織が必要かどうかが不明な場合は、[ここ](./understanding-organizations.md)から始めてください。
 
-<a name="組織の追加" />
+<a name="adding-organizations" />
 
 ## 組織の追加
 
@@ -26,7 +26,7 @@
 
 組織管理者はこれらのロールの割り当てを行うことはできず、他の組織管理者または所有者のメンバーシップを管理することもできません。
 
-<a name="組織の編集" />
+<a name="editing-organizations" />
 
 ## 組織の編集
 

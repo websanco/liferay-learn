@@ -4,7 +4,7 @@
 
 まず、新しいユーザーを追加します。
 
-<a name="ユーザーの追加" />
+<a name="adding-users" />
 
 ## ユーザーの追加
 
@@ -17,7 +17,7 @@
 1. [User Account API Basics](./liferay-y6q4.zip) をダウンロードし解答します。
 
    ```bash
-   curl https://learn.liferay.com/dxp/latest/en/users-and-permissions/developer-guide/liferay-y6q4.zip -O
+   curl https://learn.liferay.com/dxp/latest/ja/users-and-permissions/developer-guide/liferay-y6q4.zip -O
    ```
 
    ```bash
@@ -97,7 +97,7 @@
 
 cURLコマンドとJavaクラスの仕組みをご覧ください。
 
-<a name="curlコマンドの検証" />
+<a name="examine-the-curl-command" />
 
 ## cURLコマンドの検証
 
@@ -118,12 +118,12 @@ cURLコマンドとJavaクラスの仕組みをご覧ください。
 | `-u "test@liferay.com:test"`                                                                                                                   | 基本認証の資格情報                   |
 
 ```{note}
-   ここでは、デモンストレーションの目的で基本認証を使用しています。 本番環境の場合は、`OAuth  <../../../headless-delivery/using-oauth2/using-oauth2.md>`_ 経由でユーザーを認証する必要があります。
+   ここでは、デモンストレーションの目的で基本認証を使用しています。 本番環境の場合は、[OAuth](../../../headless-delivery/using-oauth2/using-oauth2.md) 経由でユーザーを認証する必要があります。
 ```
 
 他のcURLコマンドも同様のJSON引数を使用しています。
 
-<a name="javaクラスを調べる" />
+<a name="examine-the-java-class" />
 
 ## Javaクラスを調べる
 
@@ -150,12 +150,12 @@ cURLコマンドとJavaクラスの仕組みをご覧ください。
 他のJavaクラスの例はこれと似ていますが、異なる `UserAccountResource` メソッドを呼び出しています。
 
 ```{important}
-   サービスの詳細は、 `UserAccountResource <https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/headless/headless-admin-user/headless-admin-user-client/src/main/java/com/liferay/headless/admin/user/client/resource/v1_0/UserAccountResource.java>`_ を参照してください。
+   サービスの詳細は、 [UserAccountResource](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/headless/headless-admin-user/headless-admin-user-client/src/main/java/com/liferay/headless/admin/user/client/resource/v1_0/UserAccountResource.java) を参照してください。
 ```
 
 以下は、cURLとJavaを使って、他のUser RESTサービスを呼び出す例です。
 
-<a name="インスタンスユーザーの取得" />
+<a name="get-instance-users" />
 
 ## インスタンスユーザーの取得
 
@@ -193,7 +193,7 @@ Code:
 
 JSON レスポンスには、そのインスタンスのすべての Users がリストアップされます。
 
-<a name="ユーザーの取得" />
+<a name="get-a-user" />
 
 ## ユーザーの取得
 
@@ -231,7 +231,7 @@ Code:
 
 User は JSON レスポンスで返されます。
 
-<a name="ユーザーへのパッチ" />
+<a name="patch-a-user" />
 
 ## ユーザーへのパッチ
 
@@ -269,7 +269,7 @@ Code:
 
 この例では、AbleとBakerの名字がFooからBarに変わっていることに注意してください。
 
-<a name="ユーザーの配置" />
+<a name="put-a-user" />
 
 ## ユーザーの配置
 
@@ -309,7 +309,7 @@ Code:
 
 ![これまでのユーザーデータは、パッチサービスに置き換えられています。](./user-account-api-basics/images/03.png)
 
-<a name="ユーザーの削除" />
+<a name="delete-a-user" />
 
 ## ユーザーの削除
 
@@ -347,7 +347,7 @@ Code:
 
 ユーザー［Able Goo］と［Baker Goo］は削除されました。
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 

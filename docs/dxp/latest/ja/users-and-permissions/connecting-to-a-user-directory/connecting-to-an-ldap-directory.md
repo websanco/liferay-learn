@@ -2,7 +2,7 @@
 
 Lightweight Directory Access Protocol （LDAP）サーバーは、Liferay DXPの一般的なユーザーストアです。 LDAPは、システム設定のシステムスコープまたはインスタンス設定のインスタンススコープで設定できます。 ユーザーはLDAPからインポートしたりLDAPにエクスポートしたりできます。
 
-<a name="新しいldapサーバー接続の追加" />
+<a name="adding-a-new-ldap-server-connection" />
 
 ## 新しいLDAPサーバー接続の追加
 
@@ -38,7 +38,7 @@ LDAPサーバー設定に［config］ファイルを使用するには、サー�
 バーチャル・インスタンスIDは、*コントロールパネル* -> *設定* -> *仮想インスタンス* で確認できます。
 ```
 
-<a name="ldapサーバー設定リファレンス" />
+<a name="ldap-server-configuration-reference" />
 
 ## LDAPサーバー設定リファレンス
 
@@ -56,7 +56,7 @@ LDAPサーバー設定に［config］ファイルを使用するには、サー�
 
 **Credentials：** LDAP管理ユーザーのパスワードを入力します。
 
-<a name="チェックポイント" />
+<a name="checkpoint" />
 
 ## チェックポイント
 
@@ -68,7 +68,7 @@ LiferayのLDAP接続の微調整に進む前に、次の手順が実行されて
 
 1. LDAPサーバーを追加するとき、 ［**サーバー名**］ 、 ［**Default Values**］ 、 ［**つながり**］ の値が正しい。 保存する前に、 ［**Test LDAP Connection**］ をクリックすることをお勧めします。
 
-<a name="sslを使用してldapサーバーに接続する" />
+<a name="using-ssl-to-connect-to-an-ldap-server" />
 
 ## SSLを使用してLDAPサーバーに接続する
 

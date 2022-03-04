@@ -14,7 +14,7 @@ Liferay DXPで作業を行うには、 [ユーザー](./../users/understanding-u
 ［サイトチーム］(./../../site-building/building-sites/site-membership/creating-teams-for-sites.md)には、専用のパーミッション管理のユーザーインターフェースがあります。
 ```
 
-<a name="ロールと範囲" />
+<a name="roles-and-scope" />
 
 ## ロールと範囲
 
@@ -65,7 +65,7 @@ Liferay DXP内で目的の機能を実行するために必要な権限をユー
 
 サイトスコープのロールはサイトロールと呼ばれます。 サイトのロールの権限は、グローバルレベルで定義され、1つの特定に適用される [サイト](../../site-building/introduction-to-site-building.md)。 個々のユーザー、組織、およびユーザーグループは、サイトメンバーシップの制御とサイトロールの割り当ての両方に使用できます。
 
-<a name="権限" />
+<a name="permissions" />
 
 ## 権限
 
@@ -79,7 +79,7 @@ Liferay DXPのページに配置された各ウィジェットインスタンス
 
 アセットレベルの権限（たとえば、個々のブログ投稿を編集する権限、またはドキュメントとメディアライブラリのフォルダーを表示する権限）は、コントロールパネルではなく、個別のアセットから管理されます。 詳細は、 [ウィジェット権限](./../../site-building/widget-permissions.md) を参照してください。
 
-<a name="関連トピック" />
+<a name="related-topics" />
 
 ## 関連トピック
 

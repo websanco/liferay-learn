@@ -14,7 +14,7 @@
 
 
 
-<a name="通常のロールをユーザーセグメントに割り当てる" />
+<a name="assigning-a-regular-role-to-a-user-segment" />
 
 ## 通常のロールをユーザーセグメントに割り当てる
 
@@ -44,7 +44,7 @@
 
 
 
-<a name="ユーザーセグメントへのサイトロールの割り当て" />
+<a name="assigning-a-site-role-to-a-user-segment" />
 
 ## ユーザーセグメントへのサイトロールの割り当て
 
@@ -64,7 +64,7 @@
 
 
 
-<a name="関連情報" />
+<a name="related-information" />
 
 ## 関連情報
 

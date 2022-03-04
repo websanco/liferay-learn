@@ -4,7 +4,7 @@
 
 ロールの作成と管理は、コントロールパネルの &rarr; ユーザー &rarr; ロールで行います。
 
-<a name="ロールの作成" />
+<a name="creating-roles" />
 
 ## ロールの作成
 
@@ -24,7 +24,7 @@
 
 これで、ロールがデータベースに存在し、さらに構成する準備ができました。 次に、 [割り当てて、ロールユーザー](./assigning-users-to-roles.md) または [定義し、ロールの権限を定義します](./defining-role-permissions.md)。
 
-<a name="ロールの更新" />
+<a name="updating-roles" />
 
 ## ロールの更新
 
@@ -32,7 +32,7 @@
 
 ロールを更新するには、［アクション］メニュー（![Actions](../../images/icon-actions.png)）をクリックして、［**編集**］を選択します。 ロール作成フォームが再び表示され、編集して保存できるようになります。
 
-<a name="ロールを削除する" />
+<a name="deleting-roles" />
 
 ## ロールを削除する
 
@@ -40,11 +40,11 @@
 
 ![結果を受け入れる場合は、［OK］をクリックしてロールを削除します。](./creating-and-managing-roles/images/03.png)
 
-<a name="ロール管理権限" />
+<a name="role-management-permissions" />
 
 ## ロール管理権限
 
-ロールの［アクション］メニュー（![Actions](../../images/icon-actions.png)）の **権限** エントリは、ロールを管理できるユーザーを定義するためのものです。 この機能は、ロールの割り当て先に付与されるアクセス許可を一覧表示する [Defining Role Permissions](./defining-role-permissions.md)とは異なります。
+ロールの［アクション］メニュー（![Actions](../../images/icon-actions.png)）の **権限** エントリは、ロールを管理できるユーザーを定義するためのものです。 この機能は、ロールの割り当て先に付与されるアクセス許可を一覧表示する [ロール権限の定義](./defining-role-permissions.md) とは異なります。
 
 ![ロールの作成と管理のために権限を設定できます。](./creating-and-managing-roles/images/01.png)
 
@@ -54,7 +54,7 @@
    これらの権限の付与には注意してください。 これは、少数の信頼できるユーザーに委ねる管理機能です。
 ```
 
-<a name="アセットコンテナを削除するとアセットが削除される" />
+<a name="deleting-asset-containers-deletes-their-assets" />
 
 ## アセットコンテナを削除するとアセットが削除される
 

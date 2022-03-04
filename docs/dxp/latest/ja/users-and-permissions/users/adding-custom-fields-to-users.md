@@ -14,7 +14,7 @@ Liferayのアセットとリソースの多くは、新しいフィールドで�
 
 ![選択できるさまざまな項目タイプがあります。](adding-custom-fields-to-users/images/02.png)
 
-<a name="項目タイプ" />
+<a name="field-types" />
 
 ## 項目タイプ
 
@@ -44,7 +44,7 @@ Liferayのアセットとリソースの多くは、新しいフィールドで�
 
 ![たとえば、ユーザーが選択できる［ドロップダウン］項目タイプを選択できます。](adding-custom-fields-to-users/images/03.png)
 
-<a name="新しいフィールドの使用" />
+<a name="using-your-new-field" />
 
 ## 新しいフィールドの使用
 

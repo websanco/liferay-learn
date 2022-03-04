@@ -2,7 +2,7 @@
 
 インポート/エクスポートの設定では、LDAPとLiferay間のマッピングを構成して、2つのシステム間のユーザーを一致させます。
 
-<a name="ldapディレクトリでユーザーを検索する" />
+<a name="finding-users-in-your-ldap-directory" />
 
 ## LDAPディレクトリでユーザーを検索する
 
@@ -20,7 +20,7 @@
 
 ユーザーのサブセットまたは異なるLDAPオブジェクトクラスを持つユーザーのみを検索する場合は、これを変更できます。
 
-<a name="ldapユーザー属性のliferayフィールドへのマッピング" />
+<a name="mapping-ldap-user-attributes-to-liferay-fields" />
 
 ## LDAPユーザー属性のLiferayフィールドへのマッピング
 
@@ -48,7 +48,7 @@ LDAPグループをLiferayユーザーグループとしてインポートする
 
 ![［Test LDAP Users］ボタンをクリックすると、ユーザーのリストが表示されます。](./configuring-user-import-and-export/images/01.png)
 
-<a name="ldapグループのliferayユーザーグループへのマッピング" />
+<a name="mapping-ldap-groups-to-liferay-user-groups" />
 
 ## LDAPグループのLiferayユーザーグループへのマッピング
 
@@ -68,7 +68,7 @@ LDAPグループをLiferayユーザーグループとしてインポートする
 
 **Test LDAP Groups：**［**Test LDAP Groups**］ ボタンをクリックすると、検索フィルターによって返されたグループのリストが表示されます。
 
-<a name="エクスポート" />
+<a name="export" />
 
 ## エクスポート
 

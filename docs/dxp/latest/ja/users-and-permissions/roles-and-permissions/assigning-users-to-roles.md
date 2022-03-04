@@ -6,7 +6,7 @@
 
 
 
-<a name="通常のロール" />
+<a name="regular-roles" />
 
 ## 通常のロール
 
@@ -33,7 +33,7 @@
 
 
 
-<a name="サイトのロール" />
+<a name="site-roles" />
 
 ## サイトのロール
 
@@ -59,13 +59,13 @@
 
 
 ```{note}
-   Liferay CE 7.3.1 GA2 および Liferay DXP 7.2 SP3+ の時点で、サイトロールを `User Segments <../../site-building/personalizing-site-experience/segmentation/creating-and-managing-user-segments.md>`_ に割り当てることができます。 詳細は、 `ユーザーセグメントにロールを割り当てる <./assigning-roles-to-user-segments.md>`_ を参照してください。
+   Liferay CE 7.3.1 GA2 および Liferay DXP 7.2 SP3+ の時点で、サイトロールを [User Segments](../../site-building/personalizing-site-experience/segmentation/creating-and-managing-user-segments.md) に割り当てることができます。 詳細は、 [ユーザーセグメントにロールを割り当てる](./assigning-roles-to-user-segments.md) を参照してください。
 ```
 
 
 
 
-<a name="組織ロール" />
+<a name="organization-roles" />
 
 ## 組織ロール
 
@@ -90,7 +90,7 @@
 
 
 
-<a name="アセットライブラリのロール" />
+<a name="asset-library-roles" />
 
 ## アセットライブラリのロール
 
@@ -137,7 +137,7 @@ You can assign Users to an Account Role in the Accounts Control Panel section.
 
 
 
-<a name="デフォルトのユーザーの関連付け" />
+<a name="default-user-associations" />
 
 ## デフォルトのユーザーの関連付け
 

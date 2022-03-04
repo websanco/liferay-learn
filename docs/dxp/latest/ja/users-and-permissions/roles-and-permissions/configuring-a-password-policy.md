@@ -6,7 +6,7 @@
    新規ユーザーには、デフォルトでデフォルトパスワードポリシーが割り当てられます。 ユーザーをカスタムパスワードポリシーに関連付ける場合は、そのポリシーのメンバーとして割り当てられる必要があります。
 ```
 
-<a name="概要" />
+<a name="overview" />
 
 ## 概要
 
@@ -16,7 +16,7 @@
 1. [プロパティファイルの活用](#using-the-properties-file)
 1. [パスワードのプロパティリファレンス](#password-properties-reference)
 
-<a name="デフォルトのパスワードポリシーの変更" />
+<a name="modifying-the-default-password-policy" />
 
 ## デフォルトのパスワードポリシーの変更
 
@@ -46,7 +46,7 @@
 
 **ロックアウト：** アカウントがロックされるまでの認証試行の最大失敗回数、試行回数の保存期間、およびロックアウトの継続期間を設定します。
 
-<a name="カスタムパスワードポリシーの作成" />
+<a name="creating-a-custom-password-policy" />
 
 ## カスタムパスワードポリシーの作成
 
@@ -60,7 +60,7 @@
 
 1. ポリシーのプロパティを設定します（上記参照）。 完了したら、 ［**保存**］ をクリックします。
 
-<a name="パスワードポリシーへのメンバーの割り当て" />
+<a name="assigning-members-to-a-password-policy" />
 
 ## パスワードポリシーへのメンバーの割り当て
 
@@ -76,7 +76,7 @@
 
    これで、ユーザーまたは組織がパスワードポリシーに関連付けられました。
 
-<a name="プロパティファイルの使用" />
+<a name="using-the-properties-file" />
 
 ## プロパティファイルの使用
 
@@ -104,7 +104,7 @@ passwords.default.policy.min.symbols=1
 
 `portal-ext.properties` ファイルを作成したら、 [`[Liferay Home]`](../../installation-and-upgrades/reference/liferay-home.md) フォルダに配置します。 [ポータルのプロパティの詳細](../../installation-and-upgrades/reference/portal-properties.md) または、Dockerを使用している場合は、 [Dockerコンテナの設定](../../installation-and-upgrades/installing-liferay/using-liferay-docker-images/configuring-containers.md)を参照してください。
 
-<a name="パスワードのプロパティリファレンス" />
+<a name="password-properties-reference" />
 
 ## パスワードのプロパティリファレンス
 
@@ -135,7 +135,7 @@ passwords.default.policy.min.symbols=1
 | `passwords.default.policy.reset.ticket.max.age`   | 86400                    | パスワードリセットリンクの有効期間。 時間の単位は秒                                      |
 | `passwords.default.policy.warning.time`           | 86400                    | パスワードの有効期限が切れる前に、ユーザーに通知する時間を指定します。 時間の単位は秒                     |
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 

@@ -18,7 +18,7 @@ A **User Group Site** isn't really a Site: it's a set of pages that gets added t
 
 **マイプロファイル** および **マイダッシュボード** セレクターメニューから [サイトテンプレート](../../site-building/building-sites/building-sites-with-site-templates.md) 選択することにより、 [がユーザーグループ](./creating-and-managing-user-groups.md) 作成している間にユーザーグループサイトを作成できます。 手動で、またはサイトテンプレートを使用して、後でユーザーグループサイトを作成することもできます。
 
-<a name="サイトテンプレートからのユーザーグループサイトの作成" />
+<a name="creating-user-group-sites-from-site-templates" />
 
 ## サイトテンプレートからのユーザーグループサイトの作成
 
@@ -44,7 +44,7 @@ A **User Group Site** isn't really a Site: it's a set of pages that gets added t
 Site Templates have an option that propagates changes made to the Site Template. If you use a Site Template with this option enabled, the User Group Sites update automatically when that template changes. If you disable this option but enable it again later, the template's pages are copied to the Users' Sites, overwriting any changes they may have made.
 ```
 
-<a name="ユーザーグループサイトを手動で作成する" />
+<a name="creating-user-group-sites-manually" />
 
 ## ユーザーグループサイトを手動で作成する
 
@@ -66,7 +66,7 @@ Site Templates have an option that propagates changes made to the Site Template.
 
 新しいウィンドウで、ページやポートレットを追加し、サイト設定を構成できます。
 
-<a name="従来のユーザーグループサイトの動作" />
+<a name="legacy-user-group-sites-behavior" />
 
 ## 従来のユーザーグループサイトの動作
 

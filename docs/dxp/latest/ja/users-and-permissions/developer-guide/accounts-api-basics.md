@@ -2,7 +2,7 @@
 
 アプリケーションメニューから [アカウント](../accounts.md) を管理することができますが、LiferayのREST APIを利用することもできます。 これらのサービスを呼び出して、アカウントの作成や管理を行います。
 
-<a name="アカウントの追加" />
+<a name="adding-an-account" />
 
 ## アカウントの追加
 
@@ -15,7 +15,7 @@
 1. ダウンロードして解凍する [Accounts API Basics](./liferay-t5p9.zip) 。
 
    ```bash
-   curl https://learn.liferay.com/dxp/latest/en/users-and-permissions/developer-guide/liferay-t5p9.zip -O
+   curl https://learn.liferay.com/dxp/latest/ja/users-and-permissions/developer-guide/liferay-t5p9.zip -O
    ```
 
    ```bash
@@ -60,7 +60,7 @@
     java -classpath .: **Account***POST** ToInstance
     ```
 
-<a name="curlコマンドの検証" />
+<a name="examine-the-curl-command" />
 
 ## cURLコマンドの検証
 
@@ -86,7 +86,7 @@
 
 他のcURLコマンドも同様のJSON引数を使用しています。
 
-<a name="javaクラスを調べる" />
+<a name="examine-the-java-class" />
 
 ## Javaクラスを調べる
 
@@ -118,7 +118,7 @@ main`メソッドのコメントでは、クラスの実行を実演していま
 
 以下は、cURLとJavaを使って、他の `Account` RESTサービスを呼び出す例です。
 
-<a name="インスタンスからアカウントを取得" />
+<a name="get-accounts-from-instance" />
 
 ## インスタンスからアカウントを取得
 
@@ -156,7 +156,7 @@ Code:
 
 インスタンスの `アカウント` オブジェクトがJSONで表示されます。
 
-<a name="アカウントの取得" />
+<a name="get-an-account" />
 
 ## アカウントの取得
 
@@ -198,7 +198,7 @@ Code:
 
 `アカウント` フィールドはJSONで表示されます。
 
-<a name="アカウントへのパッチ適用" />
+<a name="patch-an-account" />
 
 ## アカウントへのパッチ適用
 
@@ -234,7 +234,7 @@ Code:
    :lines: 9-25
 ```
 
-<a name="アカウントの作成" />
+<a name="put-an-account" />
 
 ## アカウントの作成
 
@@ -270,7 +270,7 @@ Code:
    :lines: 9-25
 ```
 
-<a name="アカウントの削除" />
+<a name="delete-an-account" />
 
 ## アカウントの削除
 
