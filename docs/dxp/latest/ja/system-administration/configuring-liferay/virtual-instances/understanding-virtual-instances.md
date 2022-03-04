@@ -32,7 +32,7 @@ Liferay DXPのインストールとデータベースをホストするサーバ
 
 ![インスタンス設定には、いくつかのプラットフォームカテゴリがあります。](./understanding-virtual-instances/images/02.png)
 
-<a name="関連トピック" />
+<a name="related-topics" />
 
 ## 関連トピック
 

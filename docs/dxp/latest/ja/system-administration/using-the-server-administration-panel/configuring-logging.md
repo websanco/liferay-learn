@@ -8,7 +8,7 @@
 
 各ロギング構成は、カテゴリーと呼ばれます。
 
-<a name="ログレベルのユーザーインターフェイスへのクラスまたはパッケージの追加" />
+<a name="adding-a-class-or-package-to-the-log-levels-user-interface" />
 
 ## ログレベルのユーザーインターフェイスへのクラスまたはパッケージの追加
 
@@ -30,7 +30,7 @@
 
 ロギングレベルの説明については、 [ApacheのLog4j `Level` クラスJavadoc](https://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/Level.html) 参照してください。
 
-<a name="既存のカテゴリのログレベルの変更" />
+<a name="changing-the-log-level-of-an-existing-category" />
 
 ## 既存のカテゴリのログレベルの変更
 

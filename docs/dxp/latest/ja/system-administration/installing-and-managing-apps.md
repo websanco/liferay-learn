@@ -1,10 +1,9 @@
-アプリのインストールと管理
-============================
+# アプリのインストールと管理
 
-.. toctree:: :maxdepth: 2
+```{toctree}
+:maxdepth: 3
 
-   installing-and-managing-apps/getting_started.rst installing-and-managing-apps/installing_apps.rst installing-and-managing-apps/managing_apps.rst
-
-.. raw:: html :file: ../landingpage_template.html
-
-.. raw:: html :file: installing-and-managing-apps/landing.html
+installing-and-managing-apps/using-marketplace.md
+installing-and-managing-apps/installing-apps.md
+installing-and-managing-apps/managing-apps.md
+```

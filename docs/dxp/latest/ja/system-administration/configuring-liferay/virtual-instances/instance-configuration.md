@@ -9,7 +9,7 @@
 | 一般    | ランディングページ、法的情報、およびその他の詳細を指定します             |
 | 利用規約  | インスタンスのカスタム利用規約を提供します                      |
 
-<a name="外観" />
+<a name="appearance" />
 
 ## 外観
 
@@ -21,7 +21,7 @@
 
 ![仮想インスタンスの外観を設定します。](./instance-configuration/images/01.png)
 
-<a name="連絡先情報" />
+<a name="contact-information" />
 
 ## 連絡先情報
 
@@ -39,7 +39,7 @@
 
 ![仮想インスタンスの連絡先情報を設定します。](./instance-configuration/images/02.png)
 
-<a name="一般" />
+<a name="general" />
 
 ## 一般
 
@@ -72,7 +72,7 @@ company.default.home.url=
 
 ![仮想インスタンスの一般情報を設定します。](./instance-configuration/images/03.png)
 
-<a name="利用規約" />
+<a name="terms-of-use" />
 
 ## 利用規約
 

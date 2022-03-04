@@ -4,7 +4,7 @@
 
 [**Control Panel**] → [**Apps**] → [**App Manager**] を選択して、アプリケーションマネージャにアクセスします。 アプリケーションマネージには、インストールされているアプリとモジュールが一覧表示され、アプリのアップロード機能が提供されます。
 
-<a name="アプリのリスト" />
+<a name="the-app-listing" />
 
 ## アプリのリスト
 
@@ -27,7 +27,7 @@
 
 コンポーネント/ポートレットのレベルは、ソースコードにアクセスすることなく実行できる最も遠いレベルです。 アプリケーションマネージャのどのレベルでも、リストの上にアイテムの階層コンテキストを示すリンクトレイルがあります。
 
-<a name="アプリのインストール" />
+<a name="installing-apps" />
 
 ## アプリのインストール
 
@@ -47,7 +47,7 @@ For installing and uninstalling apps in production-grade environments, install a
 
 アプリは [自動デプロイ](../installing-apps.md#installing-apps-via-the-file-system) を介してインストールされます。 インストールが完了したら、ダイアログを閉じます。これで使用する準備が整いました。
 
-<a name="アプリのアンインストール" />
+<a name="uninstalling-apps" />
 
 ## アプリのアンインストール
 
@@ -59,7 +59,7 @@ For installing and uninstalling apps in production-grade environments, install a
 
 アプリケーションマネージャを使用して、アプリケーションのデプロイを検査および管理できます。
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 

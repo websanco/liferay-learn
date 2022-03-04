@@ -2,7 +2,7 @@
 
 DXPでスクリプトを使用するのに役立ついくつかの例を次に示します。 ほとんどの例は、Liferayブログの投稿「 [5 Tips to Improve Usage of the Liferay Script Console](https://liferay.dev/blogs/-/blogs/5-tips-to-improve-usage-of-the-liferay-script-console) 」に基づいています。
 
-<a name="例1新しい利用規約をユーザーに提示する" />
+<a name="example-1-presenting-new-terms-of-use-to-users" />
 
 ## 例1：新しい利用規約をユーザーに提示する
 
@@ -52,7 +52,7 @@ DXPでスクリプトを使用するのに役立ついくつかの例を次に�
 
 すべてのユーザー（デフォルトのユーザーとあなたのユーザーを除く）が更新されます。 すべてのユーザーが同意するための新しい利用規約を有効にしました。
 
-<a name="例2スクリプト出力へのhtmlマークアップの埋め込み" />
+<a name="example-2-embedding-html-markup-in-script-output" />
 
 ## 例2：スクリプト出力へのHTMLマークアップの埋め込み
 
@@ -72,7 +72,7 @@ out.println(
 
 ![このスクリプトは、HTMLを使用して出力のスタイルを設定します。](./script-examples/images/01.png)
 
-<a name="例3スクリプトコンソールに例外を表示する" />
+<a name="example-3-showing-exceptions-in-the-script-console" />
 
 ## 例3：スクリプトコンソールに例外を表示する
 
@@ -96,7 +96,7 @@ try {
 
 ![以下は、例外をキャッチしてスクリプトコンソールに例外情報を出力するGroovyスクリプトの例です。](./script-examples/images/02.png)
 
-<a name="例4ファイルへの出力のロギング" />
+<a name="example-4-logging-output-to-a-files" />
 
 ## 例4：ファイルへの出力のロギング
 
@@ -137,7 +137,7 @@ out.println(outputFile.text)
 
 　 スクリプトコンソールでさまざまなスクリプトを実行しました。
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 

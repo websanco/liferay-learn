@@ -12,7 +12,7 @@
    移行する前に、**必ず**ファイルストアとデータベースをバックアップ<../../installation-and-upgrades/maintaining-a-liferay-dxp-installation/backing-up.md>`_してください。 バックアップコピーで移行プロセスをテストすることをお勧めします。
 ```
 
-<a name="ファイルの移行" />
+<a name="migrating-files" />
 
 ## ファイルの移行
 
@@ -42,7 +42,7 @@ DXPインスタンスが、新しく設定されたファイルストア上に�
    システム設定で新しいストア構成を必ず保存してください。 そうしないと、新しいストアを使用できず、次の例外が発生します：`java.lang.IllegalStateException: Store is not available`
 ```
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 

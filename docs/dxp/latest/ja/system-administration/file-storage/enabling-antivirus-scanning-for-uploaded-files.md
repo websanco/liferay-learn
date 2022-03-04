@@ -56,7 +56,7 @@ Liferayは、 [ClamAV Daemon](https://www.clamav.net/documents/scanning#clamd) (
 ウイルスに感染したファイルは絶対に保存しないでください。 現在の操作をキャンセルして、ファイルを拒否します。
 ```
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 

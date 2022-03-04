@@ -14,8 +14,8 @@
 
 必要に応じて、左矢印ボタンと右矢印ボタンを使用して、言語を[現在]（設定済みで有効）と[Available]（有効ではないが設定可能）間で切り替えることができます。 上下の矢印ボタンを使用して、現在の言語を希望の順序で並べ替えます。
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 
-  - [Initial Instance Localization](../../../installation-and-upgrades/setting-up-liferay/initial-instance-localization.md)
+  - [初期インスタンスのローカリゼーション](../../../installation-and-upgrades/setting-up-liferay/initial-instance-localization.md)

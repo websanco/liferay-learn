@@ -4,7 +4,7 @@
 
 アプリをダウンロードする最も迅速で便利な方法は、レシートを使用することです。
 
-<a name="レシートによるダウンロード" />
+<a name="downloading-via-the-receipt" />
 
 ## レシートによるダウンロード
 
@@ -26,7 +26,7 @@ Liferayから電子送信されたレシートには、[Purchased App]ページ�
 
 レシートからアプリをダウンロードしなかった場合も、心配する必要はありません。 購入したアプリは、マーケットプレイスWebサイトの[Purchased Apps]ページとLiferay.comアカウントのホームからダウンロードできます。
 
-<a name="purchased-appsページからダウンロード" />
+<a name="downloading-via-the-purchased-apps-page" />
 
 ## [Purchased Apps]ページからダウンロード
 
@@ -56,7 +56,7 @@ Liferayから電子送信されたレシートには、[Purchased App]ページ�
 
 アプリがLPKGファイルとしてダウンロードされます。 このファイルを介して[アプリをインストール](../installing-apps.md)できます。
 
-<a name="次のステップ" />
+<a name="next-steps" />
 
 ## 次のステップ
 

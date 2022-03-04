@@ -28,7 +28,7 @@ Simple File System Storeは、Liferay DXPデータベースにバインドされ
 ドキュメントライブラリでデータベーストランザクションのロールバックが発生した場合、トランザクションのファイルシステムの変更は元に戻され**ません**。 ドキュメントライブラリファイルとファイルシステムストア内のファイルとの間に不整合が発生する可能性があり、手動での同期が必要になる場合があります。 [DBStore](./dbstore.md) を除くすべてのDXPストアは、この制限に対して脆弱です。
 ```
 
-<a name="ストアの構成" />
+<a name="configuring-the-store" />
 
 ## ストアの構成
 
@@ -54,13 +54,13 @@ Simple File System Storeを構成するには、次の手順に従います。
 dl.store.impl=com.liferay.portal.store.file.system.FileSystemStore
 ```
 
-<a name="クラスター環境でのストアの使用" />
+<a name="using-the-store-in-a-clustered-environment" />
 
 ## クラスター環境でのストアの使用
 
 [クラスター環境](../../../installation-and-upgrades/setting-up-liferay/clustering-for-high-availability.md)では、すべてのノードがアクセスできるネットワークマウントファイルシステムをストアに指定します。 ネットワーク化されたファイルシステムは、すべてのノードからアクセス可能で、同時要求をサポートし、ファイルロックをサポートしている必要があります。 そのようなファイルシステムなしでSimple File System Storeを使用し、複数のユーザーが同時に同じファイルに書き込もうとすると、データが破損する可能性があります。
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 

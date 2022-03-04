@@ -1,19 +1,25 @@
-ファイル ストレージ
-============
+# ファイル ストレージ
 
-.. toctree:: :maxdepth: 4
+```{toctree}
+:maxdepth: 3
 
-   /system-administration/file-storage/configuring-file-storage.md /system-administration/file-storage/enabling-antivirus-scanning-for-uploaded-files.md /system-administration/file-storage/other_file_store_types.rst /system-administration/file-storage/file-store-migration.md
+file-storage/enabling-antivirus-scanning-for-uploaded-files.md
+file-storage/file-store-migration.md
+file-storage/other-file-store-types.md
+```
 
--  :doc:`/system-administration/file-storage/configuring-file-storage`
--  :doc:`/system-administration/file-storage/file-store-migration`
+-  [ファイルストアの移行](/system-administration/file-storage/file-store-migration.md)
 
-Antivirus ~~~~~~~~~
-- :doc:`/system-administration/file-storage/enabling-antivirus-scanning-for-uploaded-files`
-その他のファイルストアタイプ ~~~~~~~~~~~~~~~~~~~~~~
+<a name="configuring-advanced-file-system-store" />
 
--  :doc:`/system-administration/file-storage/other-file-store-types/simple-file-system-store`
--  :doc:`/system-administration/file-storage/other-file-store-types/amazon-s3-store`
--  :doc:`/system-administration/file-storage/other-file-store-types/dbstore`
--  :doc:`/system-administration/file-storage/other-file-store-types/google-cloud-storage`
--  :doc:`/system-administration/file-storage/other-file-store-types/microsoft-azure-blob-storage`
+## Antivirus
+
+- [アップロードされたファイルのウイルス対策スキャンを有効にする](/system-administration/file-storage/enabling-antivirus-scanning-for-uploaded-files.md)
+
+<a name="other-file-storage-topics" />
+
+## その他のファイルストアタイプ
+
+-  [Simple File System Store](/system-administration/file-storage/other-file-store-types/simple-file-system-store.md)
+-  [Amazon Simple Storage Service](/system-administration/file-storage/other-file-store-types/amazon-s3-store.md)
+-  [DBStore](/system-administration/file-storage/other-file-store-types/dbstore.md)

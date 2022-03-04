@@ -13,7 +13,7 @@
 
 ![サーバー管理の［リソース］タブから、いくつかのサーバーメンテナンスタスクを実行できます。](./managing-system-resources/images/01.png)
 
-<a name="サーバー管理リソースリファレンス" />
+<a name="server-administration-resources-reference" />
 
 ## サーバー管理：リソースリファレンス
 

@@ -13,7 +13,7 @@ Liferay マーケットプレイスは、アプリの共有、閲覧、ダウン
   - [アプリの購入](#purchasing-an-app)
   - [付録：マーケットプレイス プラグインのインストール](#appendix-installing-the-marketplace-plugin)
 
-<a name="マーケットプレイスへのアクセス" />
+<a name="visiting-the-marketplace" />
 
 ## マーケットプレイスへのアクセス
 
@@ -31,7 +31,7 @@ DXPからマーケットプレイスに入る方法は次のとおりです。
 
 マーケットプレイスが表示されます。 いくつかのアプリをチェックしてみましょう。
 
-<a name="アプリの閲覧" />
+<a name="browsing-apps" />
 
 ## アプリの閲覧
 
@@ -68,7 +68,7 @@ DXPからマーケットプレイスに入る方法は次のとおりです。
 
 ![アプリをクリックすると、スクリーンショットとアプリの詳細が表示されます。](./using-marketplace/images/04.png)
 
-<a name="アプリの購入" />
+<a name="purchasing-an-app" />
 
 ## アプリの購入
 
@@ -90,7 +90,7 @@ DXPからマーケットプレイスに入る方法は次のとおりです。
 
 アプリはLiferay DXPに自動的にダウンロードおよびインストールされます。   Liferay マーケットプレイスアプリを検索、購入、インストールする方法が分かりました。
 
-<a name="付録マーケットプレイス-プラグインのインストール" />
+<a name="appendix-installing-the-marketplace-plugin" />
 
 ## 付録：マーケットプレイス プラグインのインストール
 
@@ -108,7 +108,7 @@ DXP Tomcatバンドルを使用している場合は、マーケットプレイ�
 
 これで、マーケットプレイスがコントロールパネルで使用できるようになりました。
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 

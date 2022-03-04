@@ -10,7 +10,7 @@ S3はファイルストレージに **バケット** の概念を使用してい
 AWS署名バージョン4リクエストの承認をサポートするためのアクションは必要ありません。
 ```
 
-<a name="ストアの構成" />
+<a name="configuring-the-store" />
 
 ## ストアの構成
 
@@ -51,7 +51,7 @@ AWS署名バージョン4リクエストの承認をサポートするための�
 
 DXPインスタンスがAmazon S3ストアを使用するようになりました。
 
-<a name="クラスター環境でのストアの使用" />
+<a name="using-the-store-in-a-clustered-environment" />
 
 ## クラスター環境でのストアの使用
 
@@ -63,7 +63,7 @@ DXPインスタンスがAmazon S3ストアを使用するようになりまし�
 
 DXPがクラスター全体でAmazon S3ストアを使用するようになりました。
 
-<a name="データベースのロールバックの制限" />
+<a name="database-rollback-limitation" />
 
 ## データベースのロールバックの制限
 
@@ -71,7 +71,7 @@ DXPがクラスター全体でAmazon S3ストアを使用するようになり�
 
 Amazonのサービスの使用に関する詳細については、Amazon Simple Storageのドキュメントを参照してください。
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 

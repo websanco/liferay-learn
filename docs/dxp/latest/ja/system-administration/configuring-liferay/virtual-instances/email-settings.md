@@ -15,7 +15,7 @@
 Your installation must have a [configured connection to a mail server](../../../installation-and-upgrades/setting-up-liferay/configuring-mail.md) in order to send email notifications.
 ```
 
-<a name="アカウント作成通知" />
+<a name="account-created-notification" />
 
 ## アカウント作成通知
 
@@ -23,7 +23,7 @@ Your installation must have a [configured connection to a mail server](../../../
 
 ![アカウント作成のメール通知を設定します](./email-settings/images/01.png)
 
-<a name="メール送信者" />
+<a name="email-sender" />
 
 ## メール送信者
 
@@ -31,7 +31,7 @@ Your installation must have a [configured connection to a mail server](../../../
 
 ![システムメールの送信者名とアドレスを設定します。](./email-settings/images/02.png)
 
-<a name="メール検証通知" />
+<a name="email-verification-notification" />
 
 ## メール検証通知
 
@@ -39,7 +39,7 @@ Your installation must have a [configured connection to a mail server](../../../
 
 ![ユーザーのメールアドレスを確認します。](./email-settings/images/03.png)
 
-<a name="メールホスト名" />
+<a name="mail-host-names" />
 
 ## メールホスト名
 
@@ -47,7 +47,7 @@ Your installation must have a [configured connection to a mail server](../../../
 
 ![仮想インスタンスの追加のメールホスト名を設定します。](./email-settings/images/04.png)
 
-<a name="パスワードの変更を通知" />
+<a name="password-changed-notification" />
 
 ## パスワードの変更を通知
 
@@ -55,7 +55,7 @@ Your installation must have a [configured connection to a mail server](../../../
 
 ![パスワードの変更時にユーザーに通知します。](./email-settings/images/05.png)
 
-<a name="パスワードリセットの通知" />
+<a name="password-reset-notification" />
 
 ## パスワードリセットの通知
 

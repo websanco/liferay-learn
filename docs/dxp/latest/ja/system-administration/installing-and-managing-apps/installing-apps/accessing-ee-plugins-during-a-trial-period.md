@@ -24,7 +24,7 @@ During your trial period, plugin management for EE plugins is only available in 
 EEプラグインのソースコードは、正式なエンタープライズサブスクリプションを取得した後にのみ利用できます。
 ```
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 

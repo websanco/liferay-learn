@@ -2,7 +2,7 @@
 
 Liferay DXPは、IBMの [Cloud Object Storage](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-getting-started-cloud-object-storage) ストアをS3互換性レイヤーとともに実装しているため、AWS S3 Storeと同じ設定を使用します。 IBMアカウントを設定してバケットを作成したら、インスタンスのS3 Storeを設定する準備が整います。
 
-<a name="ストアの構成" />
+<a name="configuring-the-store" />
 
 ## ストアの構成
 
@@ -30,13 +30,13 @@ Liferay DXPは、IBMの [Cloud Object Storage](https://cloud.ibm.com/docs/cloud-
 dl.store.impl=com.liferay.portal.store.s3.IBMS3Store
 ```
 
-<a name="クラスター環境でのストアの使用" />
+<a name="using-the-store-in-a-clustered-environment" />
 
 ## クラスター環境でのストアの使用
 
 クラスター環境でIBM Cloud Object Storageのストアを使用するには、すべてのノードの構成が同一である必要があります。 特に、 `portal-ext.properties`ファイルと、システム設定のS3 Storeの設定が同じであることを確認してください。
 
-<a name="データベースのロールバックの制限" />
+<a name="database-rollback-limitation" />
 
 ## データベースのロールバックの制限
 
@@ -44,7 +44,7 @@ dl.store.impl=com.liferay.portal.store.s3.IBMS3Store
 
 IBMのサービスの使用に関する追加の詳細については、IBM Cloud Object Storageの公式資料を参照してください。
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 

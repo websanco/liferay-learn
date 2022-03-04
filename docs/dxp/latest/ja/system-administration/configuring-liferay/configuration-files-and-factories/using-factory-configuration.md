@@ -6,7 +6,7 @@
 Factory Configuration Example: [Adding Organization types](../../../users-and-permissions/organizations/adding-a-new-organization-type.md) is supported, and is useful if you need to model real-life hierarchies or enforce hierarchical rules. In Liferay DXP, each Organization type is created via a factory configuration entry in System Settings.
 ```
 
-<a name="工場構成の特定" />
+<a name="identifying-factory-configurations" />
 
 ## 工場構成の特定
 
@@ -16,7 +16,7 @@ Factory Configuration Example: [Adding Organization types](../../../users-and-pe
 
 追加ボタン ![Add](../../../images/icon-add.png) をクリックして、構成値の新しいセットを追加します。
 
-<a name="ファクトリー構成ファイル" />
+<a name="factory-configuration-files" />
 
 ## ファクトリー構成ファイル
 

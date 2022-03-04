@@ -16,7 +16,7 @@ Liferay 7.3.xでは、Xugglerの統合は非推奨となっています。 ユ�
 Liferay 7.1では、OpenOffice/LibreOfficeは、サーバー管理やポータルのプロパティではなく、OSGi Configuration Adminで設定されます。 詳しくは [OpenOffice/LibreOfficeの統合を可能にする](./../content-authoring-and-management/documents-and-media/devops/enabling-openoffice-libreoffice-integration.md) をご覧ください。
 ```
 
-<a name="imagemagickとghostscriptを有効にする" />
+<a name="enabling-imagemagick-and-ghostscript" />
 
 ## ImageMagickとGhostscriptを有効にする
 
@@ -40,7 +40,7 @@ ImageMagickとGhostscriptの両方がサーバーにインストールされた�
 
 1. 完了したら、 ［**保存**］ をクリックします。
 
-<a name="xugglerを有効にする" />
+<a name="enabling-xuggler" />
 
 ## Xugglerを有効にする
 
@@ -66,7 +66,7 @@ Xugglerは、Linuxではglibcバージョン2.6以降が必要です。
 
 ［**保存**］ をクリックします。</ol>
 
-<a name="portal-extproperties-ファイルを使用して外部サービスを有効にする" />
+<a name="using-a-portal-extproperties-file-to-enable-external-services" />
 
 ## `portal-ext.properties` ファイルを使用して外部サービスを有効にする。
 
@@ -93,7 +93,7 @@ xuggler.enabled=true
 
 アプリケーションサーバーを再起動して、Xugglerの有効化を完了します。
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 

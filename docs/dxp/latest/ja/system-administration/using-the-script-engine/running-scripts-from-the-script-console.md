@@ -12,7 +12,7 @@
 
 まず、スクリプトコンソールのサンプルスクリプトを実行します。
 
-<a name="スクリプトコンソールでサンプルスクリプトを実行する" />
+<a name="running-a-sample-script-in-the-script-console" />
 
 ## スクリプトコンソールでサンプルスクリプトを実行する
 
@@ -40,7 +40,7 @@ Groovyのサンプルは、Liferayサービスユーティリティ [`UserLocalS
    *out.println*ではなく*System.out.println*を使用すると、出力はスクリプトコンソールではなくLiferayのログファイルに出力されます。
 ```
 
-<a name="定義済みのスクリプトコンソール変数" />
+<a name="predefined-script-console-variables" />
 
 ## 定義済みのスクリプトコンソール変数
 
@@ -74,7 +74,7 @@ userInfo.each {
 
 ![以下は、事前定義されているout、actionRequest、およびuserInfo変数を使用して、会社とユーザーに関する情報を出力するGroovyスクリプトを呼び出す例です。](./running-scripts-from-the-script-console/images/02.png)
 
-<a name="ヒント" />
+<a name="tips" />
 
 ## ヒント
 
@@ -89,7 +89,7 @@ userInfo.each {
 
 スクリプトエンジンは、Kaleoワークフローなど、スクリプトコンソールの外部で使用できます。 ワークフローでスクリプトエンジンを使用する方法は次回学びます。
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 

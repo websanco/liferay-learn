@@ -50,7 +50,7 @@ for (user in users){
    サービスに `` * ServiceUtil``クラスがない場合は、 サービスにアクセスするために、次を使用します。 [Service Tracker](../../liferay-internals/dependency-injection/using-a-service-tracker.md) to access the service
 ```
 
-<a name="次のステップ" />
+<a name="next-steps" />
 
 ## 次のステップ
 

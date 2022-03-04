@@ -10,7 +10,7 @@
 The `.cfg` file format is common in OSGi environments, and it's a supported format, but `.config` files are preferred because you can both specify a property value's type, and allow multi-valued properties. For this reason, `.config` files are used, recommended, and documented as a best practice.
 ```
 
-<a name="構成ファイルの作成" />
+<a name="creating-configuration-files" />
 
 ## 構成ファイルの作成
 
@@ -28,7 +28,7 @@ com.liferay.journal.configuration.JournalServiceConfiguration.config
 
 システムは構成ファイルの名前を強制します。 名前を編集すると、構成エントリへのリンクが壊れ、それ以上のカスタマイズは有効になりません。 唯一の例外は [ファクトリ構成](./using-factory-configuration.md)で、一意のサブネームを提供できる場合があります。
 
-<a name="キー値の構文" />
+<a name="keyvalue-syntax" />
 
 ## キー/値の構文
 
@@ -78,7 +78,7 @@ blacklistBundleSymbolicNames=["Liferay\ Marketplace","Liferay\ Sharepoint\ Conne
 
 自分でスペースをエスケープしない場合、システムは展開後にバックスラッシュを追加します。
 
-<a name="型付き値" />
+<a name="typed-values" />
 
 ## 型付き値
 
@@ -94,7 +94,7 @@ addDefaultStructures=B"true"
 addDefaultStructures="true"
 ```
 
-<a name="構成ファイルのデプロイ" />
+<a name="deploying-a-configuration-file" />
 
 ## 構成ファイルのデプロイ
 
@@ -102,7 +102,7 @@ addDefaultStructures="true"
 
 `.config` ファイルを展開するには、 [Liferay Homeの](../../../installation-and-upgrades/reference/liferay-home.md) `osgi/configs` フォルダに配置します。 さらに構成を変更するには、 `.config` ファイルを直接編集するか、システム設定を使用します。
 
-<a name="構成ファイルとクラスタリング" />
+<a name="configuration-files-and-clustering" />
 
 ## 構成ファイルとクラスタリング
 
