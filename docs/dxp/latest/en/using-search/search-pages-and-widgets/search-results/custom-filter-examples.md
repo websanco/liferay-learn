@@ -47,6 +47,35 @@ This configuration leverages the presence of the `extension` field indexed from 
 
 Boosting certain documents based on specific fields is a common need, and it's readily accomplished with the Custom Filter widget. The boost value often needs tuning to meet your needs. Use the Search Insights widget with _Enable Score Explanation_ enabled to inspect how the documents are being scored and to fine-tune your boost values.
 
+### Boosting Results by Date Range
+
+The Date Range query option in the [Custom Filter widget's configuration form](filtering-search-results.md#custom-filter-configuration) corresponds to the [Elasticsearch Range query](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-range-query.html). To boost results created within the last year add a Custom Filter to a page and configure it like this:
+
+**Filter Field:** `createDate`
+
+**Filter Value:** `[now-1y now]`
+
+**Filter Query Type:** `Range`
+
+**Occur:** `Should`
+
+**Boost:** `100`
+
+Results created in the last year are boosted as a result of this Custom Filter. To see this in action create two blogs about three minutes apart with the following title and content:
+
+| Blog 1 | Blog 2 |
+| :----- | :----- | 
+| Title: `liferay dxp` | Title: `liferay dxp` |
+| Content: `liferay dxp`| Content: `liferay` |
+
+When you search for `dxp` the earlier blog will be higher in the Search Results because it has the searched keyword more frequently, and both were created in the last year so they were boosted equally.
+
+Immediately after creating the second blog post, configure the Custom Filter's Filter Value with `[now-2m now]`--this value may need to be adjusted.
+ 
+Search again, and the order of the blogs in Search Results will now show the later blog first (as long as the newer blog was created within the configured time range, and the older blog was not).
+
+See the [Elasticsearch date-math documentation](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/common-options.html#date-math) to understand more about how to specify the ranges.
+
 ### Boosting Matches to Designated Fields
 
 To boost a document with certain fields that match the searched keywords, configure a Custom Filter like this:
