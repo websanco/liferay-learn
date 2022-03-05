@@ -2,7 +2,7 @@
 
 > **Subscribers**
 
-> **Availability:** [Liferay Marketplace](https://web.liferay.com/marketplace/-/mp/application/172465398)
+> **Availability:** Bundled with DXP 7.3 and DXP 7.4, through [Liferay Marketplace](https://web.liferay.com/marketplace/-/mp/application/172465398) for DXP 7.2 SP2+/FP5+
 
 The Similar Results widget shows search results similar to the _main asset_ that's selected on the page.
 
