@@ -6,7 +6,7 @@ Configurable options help make your Fragments flexible, so you don't have to mai
 
 - [Deploy a Configurable Fragment](#deploy-a-configurable-fragment)
 - [Examine the Configuration](#examine-the-configuration)
-  - [Escape Configuration Text Values](#escape-configuration-text-values)
+- [Escape Configuration Text Values](#escape-configuration-text-values)
 - [Modify the Configuration](#modify-the-configuration)
 - [Propagate the Changes and Test](#propagate-the-changes-and-test)
 - [Related Information](#related-information)
