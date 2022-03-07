@@ -4,7 +4,6 @@
 
 Your [Upgrade Processes](../upgrade-processes.md) may involve making complex changes to large data sets. If performance is critical, use the `processConcurrently()` method in the `UpgradeProcess` class of your application. This method executes in multiple threads and can shorten your upgrade times.
 
-
 ## Deploy Version 1.0.0
 
 1. Start Liferay DXP. If you don't already have a docker container, use
