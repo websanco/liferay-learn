@@ -10,6 +10,8 @@ DXP Cloudオンボーディングメールを受信すると、 `dxpcloud` 組�
    組織のアカウントを使用している場合、リポジトリを組織に転送するには管理者権限が必要です。
 ```
 
+<a name="transferring-the-repository" />
+
 ## リポジトリの転送
 
 次の手順に従って、プロビジョニング済みのリポジトリを独自のGitHubリポジトリに転送します：
@@ -20,7 +22,9 @@ DXP Cloudオンボーディングメールを受信すると、 `dxpcloud` 組�
 
 1. 手順2で複製したリポジトリを手順1で作成したリモートリポジトリにプッシュします。
 
-GitHub リポジトリの作成、クローン、プッシュについてのヘルプが必要な場合は、 [GitHub's documentation](https://help.github.com)を参照してください。
+GitHub リポジトリの作成、クローン、プッシュについてのヘルプが必要な場合は、 [GitHub's documentation](https://help.github.com) を参照してください。
+
+<a name="integrating-with-the-jenkins-service" />
 
 ## Jenkinsサービスとの統合
 
@@ -50,6 +54,8 @@ GitHub リポジトリの作成、クローン、プッシュについてのヘ�
 
     ![図4：WebhookをActiveに設定し、作成を完了します。](./configuring-your-github-repository/images/04.png)
 
+<a name="setting-environment-variables" />
+
 ### 環境変数の設定
 
 新しいリポジトリを指すようにJenkinsサービスの環境変数を設定します：
@@ -67,10 +73,10 @@ GitHub リポジトリの作成、クローン、プッシュについてのヘ�
 | `LCP_CI_SCM_REPOSITORY_NAME`  | [repo_name]    |
 | `LCP_CI_SCM_TOKEN`            | [access_token] |
 
-`LCP_CI_SCM_TOKEN` の値には、GitHub組織用に作成した個人用アクセストークンを使用します。 このトークンの作成とアクセスの手順については、 [GitHub's documentation](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line)を参照してください。
+`LCP_CI_SCM_TOKEN` の値には、GitHub組織用に作成した個人用アクセストークンを使用します。 このトークンの作成とアクセスの手順については、 [GitHub's documentation](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line) を参照してください。
 
 ```{note}
-   SAMLシングルサインオン認証で組織のアカウントを使用している場合は、アクセストークンを認証するために追加の手順を行う必要があります。 詳細は、 `GitHub's official documentation <https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/authorizing-a-personal-access-token-for-use-with-saml-single-sign-on>`__ を参照してください。
+   SAMLシングルサインオン認証で組織のアカウントを使用している場合は、アクセストークンを認証するために追加の手順を行う必要があります。 詳細は、 [GitHub's official documentation](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/authorizing-a-personal-access-token-for-use-with-saml-single-sign-on) を参照してください。
 ```
 
 これらの環境変数を更新した後、Jenkinsサービスが再起動します。 これで、新しいリポジトリでプッシュされたブランチとプルリクエストがビルドをトリガーします。
@@ -79,12 +85,14 @@ GitHub リポジトリの作成、クローン、プッシュについてのヘ�
    ［2.222.1-3.2.0］以前のJenkinsのバージョンでは、代わりに環境変数 ［GITHUB_REPOSITORY］と［GITHUB_TOKEN］を使用します。 環境変数 ［LCP_CI_SCM_*］を使用する場合、Jenkins［2.222.1-3.2.0］以上のものを実行していることを確認してください。
 ```
 
+<a name="personal-access-token-usage" />
+
 ### パーソナルアクセストークンの使用
 
 リポジトリと統合するために`LCP_CI_SCM_TOKEN`の 値によってレファレンスされているパーソナルアクセストークンが必要です。
 
 ```{warning}
-   パーソナルアクセストークンが個人のユーザーアカウントに属していて、そのユーザーが組織から削除されている場合、すべてのビルドが完了しません。 代わりに、組織専用のアカウントを使用してください。 詳細は、 `GitHub's official documentation <https://docs.github.com/en/actions/learn-github-actions/security-hardening-for-github-actions#considering-cross-repository-access>`__ を参照してください。
+   パーソナルアクセストークンが個人のユーザーアカウントに属していて、そのユーザーが組織から削除されている場合、すべてのビルドが完了しません。 代わりに、組織専用のアカウントを使用してください。 詳細は、 [GitHub's official documentation](https://docs.github.com/en/actions/learn-github-actions/security-hardening-for-github-actions#considering-cross-repository-access) を参照してください。
 ```
 
 デフォルトでは、GitHub組織の [Personal Access Token](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token) に、 `admin:repo_hook` のパーミッションがなければ、CIサービスがデフォルトのウェブフックを使ってうまく統合できません。
@@ -95,9 +103,13 @@ GitHub リポジトリの作成、クローン、プッシュについてのヘ�
 
 これらの権限をウェブフックから削除することで、リポジトリに与えられるアクセスを最小限に抑え、セキュリティを向上させることができます。
 
+<a name="verifying-builds" />
+
 ## ビルドの確認
 
 プッシュされたブランチとプルリクエストは、DXP Cloudコンソールの ［**Builds**］ タブから表示またはデプロイできるビルドをトリガーする必要があります。 Jenkins サービスとの統合を設定したら、次のステップとして、インテグレーションが成功したかどうかを確認するためにビルドを検証します。
+
+<a name="verifying-builds-from-pushed-branches" />
 
 ### プッシュされたブランチからのビルドの確認
 
@@ -119,6 +131,8 @@ GitHub リポジトリの作成、クローン、プッシュについてのヘ�
 
 1. **Builds** ページで、プッシュされたブランチのビルドが表示されることを確認します。
 
+<a name="verifying-builds-from-pull-requests" />
+
 ### プルリクエストからのビルドの確認
 
 新しいプルリクエストがJenkinsビルドをトリガーすることを確認します：
@@ -132,6 +146,8 @@ GitHub リポジトリの作成、クローン、プッシュについてのヘ�
 1. ブランチのリンクをクリックして、適切なビルドでコミットします。
 
 1. リンクが正しいGitHubページにリダイレクトされることを確認します。
+
+<a name="additional-information" />
 
 ## 追加情報
 

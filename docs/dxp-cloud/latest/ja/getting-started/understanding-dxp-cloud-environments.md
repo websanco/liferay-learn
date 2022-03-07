@@ -12,6 +12,8 @@ DXP Cloudプロジェクトには、それぞれ異なる目的（開発、ス�
 
 ![図1：このセレクターメニューからプロジェクトの環境にアクセスできます。](./understanding-dxp-cloud-environments/images/01.png)
 
+<a name="environment-location" />
+
 ## 環境の場所
 
 異なる環境を異なるリージョンに配置できます。 例えば、ヨーロッパにエンジニアリングチームを持ち、北米にほとんどの顧客を持つ企業は、開発環境をフランクフルトに、生産環境をオレゴンに置くことができます。 ユーザーのリクエストに近い場所に配置すると、ネットワークの待ち時間が短縮されます。
@@ -23,6 +25,8 @@ DXP Cloudプロジェクトには、それぞれ異なる目的（開発、ス�
 ![図2：環境はさまざまな場所でホストできます。](./understanding-dxp-cloud-environments/images/02.png)
 
 
+
+<a name="environment-type" />
 
 ## 環境タイプ
 

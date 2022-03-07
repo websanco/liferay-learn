@@ -8,6 +8,8 @@
    DXP Cloudは常に最新の変更を設定に適用します。 LCP.jsonファイルで最新の変更が行われた場合、再起動時に、環境変数がWebコンソールに反映されます。 ただし、Webコンソールで環境変数が変更された場合、コンテナはそれらの新しい構成で再起動されます。
 ```
 
+<a name="defining-environment-variables-via-the-dxp-cloud-console" />
+
 ## DXP Cloudコンソールを介した環境変数の定義
 
 DXP Cloudのコンソールから、サービスの環境変数を追加、変更、または削除することができます。 この方法でサービスを設定すると、すべての変数は、定義されたプロジェクト環境にスコープされます。
@@ -26,7 +28,7 @@ DXP Cloudのコンソールからサービスに環境変数を追加するに�
 
 1. ［**環境変数**］ タブをクリックします。
 
-   ![図1：サービスの[環境変数]タブに移動します。](./defining-environment-variables/images/01.png)
+   ![図1：サービスの [環境変数]タブに移動します。](./defining-environment-variables/images/01.png)
 
 1. 新しい環境変数をキーと値のペアで入力します。 次の例では、LiferayDXPサービスのクラスタリングを無効にします：
 
@@ -43,7 +45,9 @@ DXP Cloudのコンソールからサービスに環境変数を追加するに�
 
 変数の削除や変更が完了したら、 ［**Save Changes**］ をクリックして、環境変数が更新された状態でサービスを再起動します。
 
-![図2：[アイコンを表示]をクリックして、変数の値を表示および編集します。](./defining-environment-variables/images/02.png)
+![図2： [アイコンを表示]をクリックして、変数の値を表示および編集します。](./defining-environment-variables/images/02.png)
+
+<a name="defining-environment-variables-via-lcpjson" />
 
 ## LCP.jsonによる環境変数の定義
 
@@ -77,11 +81,15 @@ DXP Cloudのコンソールからサービスに環境変数を追加するに�
 
 サービスの `LCP.json` ファイルの編集が完了したら、環境変数を更新するために変更内容を保存してデプロイします。 詳細は、 [DXP Cloudのデプロイメントワークフローの概要](../build-and-deploy/overview-of-the-dxp-cloud-deployment-workflow.md) を参照してください。
 
+<a name="secret-environment-variables" />
+
 ## 秘密の環境変数
 
 通常の環境変数には、特別なセキュリティ対策はありません。 DXP Cloudプロジェクトにアクセスできるすべてのユーザーは、サービスの変数値も見ることができます。
 
-機密性の高い変数値（ログイン認証情報など）を保存するには、シークレットを使用することができます。 シークレットはバックエンドで暗号化され、 **管理者** 役割がないユーザーから非表示にすることができます。 また、通常の環境変数は値を確保するために[シークレットを参照](../infrastructure-and-operations/security/managing-secure-environment-variables-with-secrets.md#referencing-secrets-from-environment-variables)することができます。 詳しくは、 [Managing Secure Environment Variables with Secrets](../infrastructure-and-operations/security/managing-secure-environment-variables-with-secrets.md) をご覧ください。
+機密性の高い変数値（ログイン認証情報など）を保存するには、シークレットを使用することができます。 シークレットはバックエンドで暗号化され、 **管理者** 役割がないユーザーから非表示にすることができます。 また、通常の環境変数は値を確保するために [シークレットを参照](../infrastructure-and-operations/security/managing-secure-environment-variables-with-secrets.md#referencing-secrets-from-environment-variables) することができます。 詳しくは、 [シークレットで安全な環境変数を管理](../infrastructure-and-operations/security/managing-secure-environment-variables-with-secrets.md) をご覧ください。
+
+<a name="additional-information" />
 
 ## 追加情報
 

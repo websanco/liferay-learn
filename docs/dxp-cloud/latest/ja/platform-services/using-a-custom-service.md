@@ -10,11 +10,13 @@ DXP Cloudは、サービスの基盤としてDockerイメージを使用して�
 
 詳しくは、 [［custom services limitations］](../reference/platform-limitations.md#custom-services) を参照してください。
 
+<a name="adding-a-custom-service" />
+
 ## カスタムサービスの追加
 
 次の手順を使用して、DXP Cloudのビルドに独自のカスタムサービスを追加します：
 
-1. カスタムサービスをDockerイメージとして作成または検索します。 プロジェクトのワークスペースに直接追加したDockerfileを使用するか、 [［Docker Hub］](https://hub.docker.com/)などのパブリックリポジトリのイメージを使用できます。
+1. カスタムサービスをDockerイメージとして作成または検索します。 プロジェクトのワークスペースに直接追加したDockerfileを使用するか、 [［Docker Hub］](https://hub.docker.com/) などのパブリックリポジトリのイメージを使用できます。
 
 1. サービス用の新しいディレクトリを他のサービスディレクトリ（たとえば `［liferay］` および `［データベース］`）と一緒に追加し、その中に `［LCP.json］` ファイルを含めます：
 
@@ -81,6 +83,8 @@ DXP Cloudは、サービスの基盤としてDockerイメージを使用して�
 このビルドをいずれかの環境にデプロイする場合（アクションメニューで[**ビルドを** にデプロイ]をクリックして）、その環境の ［**サービス**］ ページに移動して、そこにリストされているカスタムサービスを確認することもできます：
 
 ![新規 "カスタムサービス" 他のサービスと一緒にデプロイします。](./using-a-custom-service/images/01.png)
+
+<a name="additional-information" />
 
 ## 追加情報
 

@@ -8,6 +8,8 @@ Liferay DXP Cloudでは、DNSプロバイダーを使ってカスタムドメイ
 * [DXP Cloudサービスへのカスタムドメインの追加](#adding-a-custom-domain-to-a-dxp-cloud-service)
 * [カスタムドメインのステータスの確認](#verifying-the-status-of-a-custom-domain)
 
+<a name="registering-a-custom-domain-with-an-environment-ip" />
+
 ## 環境IPを利用したカスタムドメインの登録
 
 各プロジェクト環境には独自のIngress Load Balancer IPがあり、カスタムドメインを環境サービスに接続するために使用することができます。
@@ -27,6 +29,8 @@ DNSの伝播が有効になるまでに24〜48時間かかることがありま�
 この伝播プロセス中に、あるデバイスは更新されたアドレスのドメインに到達できる可能性がありますが、別のデバイスは到達できない可能性があります。 これは、デバイスがどのDNSサーバーに到達するかによって異なります。
 
 準備が整うと、ドメインはどのデバイスからでもアクセス可能となり、標準の `default backend - 404` エラーを返します。
+
+<a name="adding-a-custom-domain-to-a-dxp-cloud-service" />
 
 ## DXP Cloudサービスへのカスタムドメインの追加
 
@@ -53,6 +57,8 @@ DNSの伝播が有効になるまでに24〜48時間かかることがありま�
 ```{note}
    DXP Cloudのコンソールでカスタムドメインを追加すると、自動的に「Let's Encrypt <https://letsencrypt.org/>」__が提供する証明書がすべてのドメインに使用されます。 カスタムドメインに［custom SSL certificates <./load-balancer.md#custom-ssl>］__ を使用したい場合は、代わりにWebサーバーの［LCP.json］ファイルを介して追加する必要があります。
 ```
+
+<a name="adding-a-custom-domain-via-lcpjson" />
 
 ### LCP.jsonによるカスタムドメインの追加
 
@@ -84,6 +90,8 @@ DNSの伝播が有効になるまでに24〜48時間かかることがありま�
    カスタムドメインの数は、プロビジョニングプロセス中に設定されたクォータによって制限できます。 DXP Cloudは、独自のロードバランサーを50個のカスタムドメインに制限しています。
 ```
 
+<a name="verifying-the-status-of-a-custom-domain" />
+
 ## カスタムドメインのステータスの確認
 
 カスタムドメインのステータスは、以下の2つの方法で確認できます：
@@ -93,7 +101,7 @@ DNSの伝播が有効になるまでに24〜48時間かかることがありま�
 
 ![図4：すべてのエンドポイントとカスタムドメインを［ネットワーク］ページに表示します。](./custom-domains/images/04.png)
 
-バックエンドの処理により、設定後にカスタムドメインを確認できるようになるまでに時間がかかる場合があります。 カスタムドメインの検証時間に影響を与えるバックエンドのプロセスには、DXP Cloudのロードバランサーへのルートの追加、 [Let's Encrypt](https://letsencrypt.org/)によるSSLサーバー証明書の要求、Let's Encryptからのチャレンジの受信、チャレンジに成功した後に証明書によるロードバランサーの更新などがあります。
+バックエンドの処理により、設定後にカスタムドメインを確認できるようになるまでに時間がかかる場合があります。 カスタムドメインの検証時間に影響を与えるバックエンドのプロセスには、DXP Cloudのロードバランサーへのルートの追加、 [Let's Encrypt](https://letsencrypt.org/) によるSSLサーバー証明書の要求、Let's Encryptからのチャレンジの受信、チャレンジに成功した後に証明書によるロードバランサーの更新などがあります。
 
 ```{important}
    チャレンジプロセス中にユーザーがドメインにアクセスしようとすると、ブラウザにセキュリティ警告が表示されますが、これは無視しても問題ありません。
@@ -101,7 +109,9 @@ DNSの伝播が有効になるまでに24〜48時間かかることがありま�
 
 バックエンドの処理が完了すると、DXP CloudのロードバランサーのSSLサーバー証明書が更新され、サービスを安全に使用することができます。
 
-1つ以上のカスタムSSL証明書の設定方法など、ロードバランサーLiferay DXP CloudのSSL証明書の詳細については、 [Load Balancer](./load-balancer.md)を参照してください。
+1つ以上のカスタムSSL証明書の設定方法など、ロードバランサーLiferay DXP CloudのSSL証明書の詳細については、 [ロードバランサー](./load-balancer.md) を参照してください。
+
+<a name="additional-information" />
 
 ## 追加情報
 

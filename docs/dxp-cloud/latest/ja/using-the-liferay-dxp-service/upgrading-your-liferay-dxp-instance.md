@@ -3,11 +3,11 @@
 Liferayは定期的にLiferay DXPの新しいマイナーバージョンとメジャーバージョンをリリースします。 このバージョンには、セキュリティとバグ修正、および拡張機能が含まれています。 Liferay DXPの新しいメジャーバージョンの増分にアップグレードするには、DXPデータベースをアップグレードする必要があります。
 
 ```{note}
-   本番環境で大規模なデータセットを使用する場合、スムーズなアップグレードを行うためには、いくつかの考慮すべき点があります。 コアアップグレードの包括的な概要については、`the guide to upgrading Liferay DXP<https://learn.liferay.com/dxp/latest/en/installation-and-upgrades/upgrading-liferay/upgrade-basics/upgrade-overview.html>`__を参照してください。
+   本番環境で大規模なデータセットを使用する場合、スムーズなアップグレードを行うためには、いくつかの考慮すべき点があります。 コアアップグレードの包括的な概要については、 [the guide to upgrading Liferay DXP](https://learn.liferay.com/dxp/latest/ja/installation-and-upgrades/upgrading-liferay/upgrade-basics/upgrade-overview.html) を参照してください。
 ```
 
 ```{note}
-   新しいマイナーバージョンやサービスパックにアップデートするには、`Updating to a New Version of Liferay DXP <./updating-your-dxp-instance-to-a-new-minor-version.md>`_を参照してください。
+   新しいマイナーバージョンやサービスパックにアップデートするには、[Updating to a New Version of Liferay DXP](./updating-your-dxp-instance-to-a-new-minor-version.md)を参照してください。
 ```
 
 ```{important}
@@ -28,8 +28,8 @@ Liferayは定期的にLiferay DXPの新しいマイナーバージョンとメ�
 
 アップグレード手順を開始する前に、次の前提条件を満たしていることを確認してください：
 
-* [ローカルで利用可能なMySQLインストール](https://dev.mysql.com/doc/mysql-installation-excerpt/5.7/en/)。
-* アップグレードするバージョンのDXPに対応する、[ダウンロードしたLiferay DXPバンドル](https://customer.liferay.com/en_US/downloads) 。 このバンドルを選択した場所に抽出します。
+* [ローカルで利用可能なMySQLインストール](https://dev.mysql.com/doc/mysql-installation-excerpt/5.7/en/) 。
+* アップグレードするバージョンのDXPに対応する、 [ダウンロードしたLiferay DXPバンドル](https://customer.liferay.com/en_US/downloads) 。 このバンドルを選択した場所に抽出します。
 
 ```{important}
    古いものを再利用するのではなく、アップグレード用の新しいバンドルをダウンロードしてください。 そうしないと、以前にバンドルを使用していたときのデータが、データのアップグレードに支障をきたす可能性があります。
@@ -39,7 +39,7 @@ Liferayは定期的にLiferay DXPの新しいマイナーバージョンとメ�
 
 次の手順を実行して、現在 `prd` 環境で実行されているDXPインスタンスのバックアップ（データベースとデータボリュームの両方で設定される）をダウンロードします。
 
-1. [DXP Cloudコンソール](https://console.liferay.cloud/login)にログインします。
+1. [DXP Cloudコンソール](https://console.liferay.cloud/login) にログインします。
 
 1. 本番環境に移動し、メニューから［**バックアップ**］を選択します。
 
@@ -110,7 +110,7 @@ Liferayは定期的にLiferay DXPの新しいマイナーバージョンとメ�
 DXPバンドルは、データのアップグレードに使用されるアップグレードツールを提供します。 このツールは、バンドルに含まれるスクリプト `db_upgrade.sh`を介して呼び出されます。
 
 ```{note}
-   データベースのアップグレードツールを事前に設定しておくことで、実行時の柔軟性を高めることができます。 高度な使い方については、`Using the Database Upgrade Tool<https://learn.liferay.com/dxp/latest/en/installation-and-upgrades/upgrading-liferay/upgrade-basics/using-the-database-upgrade-tool.html>`__ を参照してください。
+   データベースのアップグレードツールを事前に設定しておくことで、実行時の柔軟性を高めることができます。 高度な使い方については、 [データベースアップグレードツールの使用](https://learn.liferay.com/dxp/latest/ja/installation-and-upgrades/upgrading-liferay/upgrade-basics/using-the-database-upgrade-tool.html) を参照してください。
 ```
 
 `LIFERAY_HOME/tools/portal-tools-db-upgrade-client` フォルダー内のコマンドプロンプトを開きます。 次に、以下のコマンドを実行します：
@@ -174,7 +174,7 @@ Checking to see if all upgrades have completed... done.
     ```
 
     ```{important}
-       もしダウンロードしたデータボリュームにさらに多くのフォルダ（例えば ``license/`` フォルダ）が含まれていた場合は、``document_library`` の後に追加の引数として追加してください。
+       もしダウンロードしたデータボリュームにさらに多くのフォルダ（例えば icense/` フォルダ）が含まれていた場合は、`document_library` の後に追加の引数として追加してください。
     ```
 
 ### データベースアップグレードツールの使用
@@ -197,7 +197,7 @@ Checking to see if all upgrades have completed... done.
 
 アップロードAPIを呼び出して、データベースとドキュメントライブラリのアーカイブを `バックアップ` サービスにアップロードします。
 
-1. まだログインしていない場合は、 [DXP Cloudコンソール](https://console.liferay.cloud/login)にログインします。
+1. まだログインしていない場合は、 [DXP Cloudコンソール](https://console.liferay.cloud/login) にログインします。
 
 1. ブラウザで `https://api.liferay.cloud/user` を開きます。
 
@@ -219,7 +219,7 @@ Checking to see if all upgrades have completed... done.
 
 1. まだログインしていない場合は、DXP Cloudコンソールにログインします。
 
-1. [バックアップをアップロードした](#call-the-upload-api)環境に移動し、サイドメニューから ［**バックアップ**］ をクリックします。
+1. [バックアップをアップロードした](#call-the-upload-api) 環境に移動し、サイドメニューから ［**バックアップ**］ をクリックします。
 
 1. リストからバックアップを選択し、そのバックアップのアクションメニューから ［**復元**］ をクリックします。
 
@@ -248,6 +248,6 @@ Upgrading the liferay service requires a database upgrade and restoring the life
 
 DXPアップグレードの詳細：
 
-* [Liferay DXPアップグレードの概要](https://learn.liferay.com/dxp/latest/en/installation-and-upgrades/upgrading-liferay/upgrade-basics/upgrade-overview.html)
+* [Liferay DXPアップグレードの概要](https://learn.liferay.com/dxp/latest/ja/installation-and-upgrades/upgrading-liferay/upgrade-basics/upgrade-overview.html)
 * \[DXPインスタンスを新しいマイナーバージョンに更新する\](./updating-your-dxp-instance-toa-new-minor-version.md)
-* [Using the Database Upgrade Tool](https://learn.liferay.com/dxp/latest/en/installation-and-upgrades/upgrading-liferay/upgrade-basics/using-the-database-upgrade-tool.html)
+* [データベースアップグレードツールの使用](https://learn.liferay.com/dxp/latest/ja/installation-and-upgrades/upgrading-liferay/upgrade-basics/using-the-database-upgrade-tool.html)

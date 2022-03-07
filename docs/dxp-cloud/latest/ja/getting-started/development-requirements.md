@@ -4,15 +4,15 @@ Liferay DXP Cloudでのデプロイを開始する前に、DXP Cloudのモジュ
 
 DXP Cloudで開発するためのローカル環境をセットアップするには、以下が必要です:
 
-* [JDK 1.8またはJDK 11](http://www.oracle.com/technetwork/java/javase/downloads/index.html)：Liferay DXPをローカルで実行するために必要
+* [JDK 1.8またはJDK 11](http://www.oracle.com/technetwork/java/javase/downloads/index.html) ：Liferay DXPをローカルで実行するために必要
 
     ```{important}
-       JDK 9 と JDK 10 はサポートされていません。 詳しくは最新の `互換性マトリックス <https://help.liferay.com/hc/en-us/articles/360049238151>`_ を参照してください。
+       JDK 9 と JDK 10 はサポートされていません。 詳しくは最新の [互換性マトリックス](https://help.liferay.com/hc/ja/articles/360049238151) を参照してください。
     ```
 
-* [Gradle 4+](http://www.gradle.org/downloads)：Liferay DXPおよびDXP Cloudのさまざまなビルドコマンドを実行するために使用されます
+* [Gradle 4+](http://www.gradle.org/downloads) ：Liferay DXPおよびDXP Cloudのさまざまなビルドコマンドを実行するために使用されます
 
-* [Git](https://git-scm.com/)：DXP Cloudにデプロイする変更を追加するために必要
+* [Git](https://git-scm.com/) ：DXP Cloudにデプロイする変更を追加するために必要
 
 * リポジトリホスティングサービスアカウント：コードの変更をリモートリポジトリにプッシュしたり、DXP Cloudのビルド用に変更を送信するために必要です。 以下の利用可能なオプションのいずれかにアカウントを使用することができます：
 
@@ -21,8 +21,10 @@ DXP Cloudで開発するためのローカル環境をセットアップする�
   * [GitLab](https://gitlab.com/)
 
 ```{note}
-    Liferay DXP Cloudは、 `Liferay Workspace <https://help.liferay.com/hc/en-us/articles/360029147471-Liferay-Workspace>`_ と同様の前提条件を持っています。 Liferay Dev Studio <https://customer.liferay.com/downloads?p_p_id=com_liferay_osb_customer_downloads_display_web_DownloadsDisplayPortlet&_com_liferay_osb_customer_downloads_display_web_DownloadsDisplayPortlet_productAssetCategoryId=118191007&_com_liferay_osb_customer_downloads_display_web_DownloadsDisplayPortlet_fileTypeAssetCategoryId=118191038>`_, `Maven <https://help.liferay.com/hc/en-us/articles/360017885592-Maven-Workspace>`_, `Liferay IntelliJ Plugin <https://plugins.jetbrains.com/plugin/10739-liferay-intellij-plugin>`_ を使ってLiferayワークスペースを作成することに慣れている開発者は、必要なツールのほとんどをすでに設定しています。
+    Liferay DXP Cloudは、 [Liferay Workspace](https://help.liferay.com/hc/ja/articles/360029147471-Liferay-Workspace) と同様の前提条件を持っています。 [Liferay Dev Studio](https://customer.liferay.com/downloads?p_p_id=com_liferay_osb_customer_downloads_display_web_DownloadsDisplayPortlet&_com_liferay_osb_customer_downloads_display_web_DownloadsDisplayPortlet_productAssetCategoryId=118191007&_com_liferay_osb_customer_downloads_display_web_DownloadsDisplayPortlet_fileTypeAssetCategoryId=118191038) , [Maven](https://help.liferay.com/hc/ja/articles/360017885592-Maven-Workspace) , [Liferay IntelliJ Plugin](https://plugins.jetbrains.com/plugin/10739-liferay-intellij-plugin) を使ってLiferayワークスペースを作成することに慣れている開発者は、必要なツールのほとんどをすでに設定しています。
 ```
+
+<a name="additional-information" />
 
 ## 追加情報
 

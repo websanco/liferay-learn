@@ -17,7 +17,11 @@ CLIツールを使用して、DXP Cloudサービスを表示および管理で�
 * [サービスのシェルへのアクセス](#accessing-a-services-shell)
 * [CLIツールのバージョン3のアンインストール](#uninstalling-version-3-of-the-cli-tool)
 
+<a name="installing-the-cli-tool" />
+
 ## CLIツールのインストール
+
+<a name="nix-systems" />
 
 ### \*nixシステム
 
@@ -29,23 +33,31 @@ curl https://cdn.liferay.cloud/lcp/stable/latest/install.sh -fsSL | bash
 
 パーミッションエラーが発生した場合、同じコマンドを `sudo`で実行してみてください。
 
+<a name="windows-systems" />
+
 ### Windowsシステム
 
 [Windowsインストーラー](https://cdn.liferay.cloud/lcp/stable/latest/lcp-install.exe) の最新バージョンをダウンロードし、ウィザードの手順に従います。
+
+<a name="upgrading-the-cli-tool-from-version-2-to-3" />
 
 ## CLIツールのバージョン2から3へのアップグレード
 
 バージョン3をインストールして使用するには、まず現在のバージョンをアンインストールする必要があります。 これにより、同じバイナリ名との競合が防止されます。
 
 ```{important}
-以下の手順は、CLIバージョン2のアンインストールに固有のものであり、[CLIツールのバージョン3をアンインストールする](#uninstalling-version-3-of-the-cli-tool)の手順とは**同じではありません。**
+以下の手順は、CLIバージョン2のアンインストールに固有のものであり、 [CLIツールのバージョン3をアンインストールする](#uninstalling-version-3-of-the-cli-tool) の手順とは**同じではありません。**
 ```
+
+<a name="uninstalling-version-2-on-macos-or-linux" />
 
 ### MacOSまたはLinuxでのバージョン2のアンインストール
 
 1. ターミナルを開いて `lcp uninstall`を実行します。
 
 1. コマンド `lcp`実行して、アンインストールが完了したことを確認します。
+
+<a name="uninstalling-version-2-on-windows" />
 
 ### Windowsでのバージョン2のアンインストール
 
@@ -59,9 +71,13 @@ curl https://cdn.liferay.cloud/lcp/stable/latest/install.sh -fsSL | bash
 
 バージョン3をインストールする前に、CLIバージョン2がアンインストールされていることを確認してください。
 
+<a name="installing-version-3" />
+
 ### バージョン3のインストール
 
 バージョン2がアンインストールされたら、 [先の手順](#installing-the-cli-tool) に従って、CLIツールのバージョン3をインストールできます。
+
+<a name="configuring-the-cli-remote" />
 
 ## CLIリモートの設定
 
@@ -88,6 +104,8 @@ lcp remote default <remote-alias>
 ```shell
 lcp shell -p <project-id> --service <service-id> --remote <remote-alias>
 ```
+
+<a name="showing-the-service-logs" />
 
 ## サービスログの表示
 
@@ -131,6 +149,8 @@ lcp log --since "<start_time>" --until "<end_time>"
 lcp log -p <project>-<environment> -s <service> --since "<start_time>" --until "<end_time>" >> "<new-file.txt>"
 ```
 
+<a name="changing-the-number-of-service-instances" />
+
 ## サービスインスタンスの数の変更
 
 環境サービスを個別に拡張するには、 `lcp scale` コマンドを使用します。 以下の例では、一般的なコマンドを紹介していますが、利用可能なコマンドのオプションは、`lcp scale --help`を実行することで確認できます。
@@ -154,6 +174,8 @@ lcp scale -p <project>-<environment> -s <service> <instances>
 ```shell
 lcp scale --url <service>-<project>-<environment>.lfr.cloud <instances>
 ```
+
+<a name="listing-projects-or-services" />
 
 ## プロジェクトまたはサービスの一覧表示
 
@@ -183,6 +205,8 @@ lcp list -p <project>-<environment> --service <serviceID>
 lcp list --url <service>-<project>-<environment>.lfr.cloud
 ```
 
+<a name="restarting-a-service" />
+
 ## サービスの再起動
 
 `lcp restart` コマンドを使用して、環境サービスを再起動します。 以下の例では、一般的なコマンドを紹介していますが、利用可能なコマンドのオプションは、`lcp restart --help`を実行することで確認できます。
@@ -205,6 +229,8 @@ lcp restart -p <project>-<environment> -s <service>
 lcp restart --url <serviceID>-<projectID>.lfr.cloud
 ```
 
+<a name="deploying-to-your-dxp-cloud-environment" />
+
 ## DXP Cloud環境へのデプロイ
 
 `lcp deploy` コマンドを使用して、特定のサービスまたはすべてのサービスをいずれかの環境にデプロイします：
@@ -221,7 +247,9 @@ lcp deploy
 lcp deploy -r <remote-id>
 ```
 
-詳細については、 [Deploying Changes via the CLI Tool](../build-and-deploy/deploying-changes-via-the-cli-tool.md) を参照してください。
+詳細については、 [CLIツールによる変更点のデプロイ](../build-and-deploy/deploying-changes-via-the-cli-tool.md) を参照してください。
+
+<a name="accessing-a-services-shell" />
 
 ## サービスのシェルへのアクセス
 
@@ -239,9 +267,13 @@ lcp shell
 lcp shell -p <project>-<environment> -s <service>
 ```
 
+<a name="open-docs" />
+
 ## ドキュメントを開く
 
 `lcp docs` コマンドを使用すると、公式ドキュメントやヘルプセンターのコンテンツなど、Liferay DXP Cloudのリソースにアクセスできます。
+
+<a name="uninstalling-version-3-of-the-cli-tool" />
 
 ## CLIツールのバージョン3のアンインストール
 
@@ -252,6 +284,8 @@ curl https://cdn.liferay.cloud/lcp/stable/latest/uninstall.sh -fsSL | bash
 ```
 
 Windows 7および8の場合は、 ［**コントロールパネル**］ &rarr; ［**Add or Remove Programs**］ に進みます。 Windows 10では、 ［**コントロールパネル**］ &rarr; ［**プログラム**］ &rarr; ［**プログラムのアンインストール**］ に移動します。 次に、 プログラムの一覧から **LCP CLI** を探し、［**アンインストール**］をクリックします。 ウィザードの手順に従います。
+
+<a name="additional-information" />
 
 ## 追加情報
 

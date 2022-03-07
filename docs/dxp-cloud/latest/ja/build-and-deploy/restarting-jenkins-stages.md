@@ -2,6 +2,8 @@
 
 CIサービスでは、Jenkinsのスタッシュを保存するように設定することができます。 この隠し場所を使って、Jenkinsビルドの特定のステージを再開することができます。
 
+<a name="preserving-jenkins-stashes" />
+
 ## ジェンキンス・スタッシュの保存
 
 以下のCIサービス変数を使用して、スタッシュとアーティファクトが保存される完了ビルドの数を決定します。
@@ -16,8 +18,10 @@ CIサービスでは、Jenkinsのスタッシュを保存するように設定�
 デフォルトでは、 `LCP_CI_PRESERVE_STASHES_BUILD_COUNT` の値は `20`に設定されています。一方、 `LCP_CI_ARTIFACT_NUM_TO_KEEP` の値は `1`に設定されています。 ステージの再起動が重要でない場合は、それらの値を `0` に設定して、CIがstashやartifactを保持しないようにすることができます。
 
 ```{important}
-   LCP_CI_PRESERVE_STASHES_BUILD_COUNT``変数に設定されているビルド数に関わらず、 ``LCP_CI_ARTIFACT_NUM_TO_KEEP`` 変数で許可されている以上のビルド数でスタッシュを保存することはできません。
+   LCP_CI_PRESERVE_STASHES_BUILD_COUNT変数に設定されているビルド数に関わらず、 `LCP_CI_ARTIFACT_NUM_TO_KEEP` 変数で許可されている以上のビルド数でスタッシュを保存することはできません。
 ```
+
+<a name="how-to-restart-a-jenkins-stage" />
 
 ## Jenkinsのステージを再起動する方法
 
@@ -42,6 +46,8 @@ CIサービスでは、Jenkinsのスタッシュを保存するように設定�
    これにより、選択したステージから始まる新しいJenkinsランが開始され、ベースとなったランと同じPRとコミット情報を持つことになります。 新しい説明文は、その前に実行された内容と、再開されたステージの名前が自動的に生成されます。 ナビゲーションバーの左上にあるパンくずボタンを使って、前のランにすばやく戻ることができます。
 
    ![これにより、選択したビルドに基づいて新しいビルドが実行されます。](./restarting-jenkins-stages/images/05.png)
+
+<a name="additional-information" />
 
 ## 追加情報
 

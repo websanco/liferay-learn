@@ -27,6 +27,8 @@
 バージョン3.x.xのサービスを使用している場合、`liferay` サービスの`LCP.json` ファイルは、`lcp/liferay/` directoryディレクトリにあります。 バージョン確認の詳細については、[Understanding Service Stack Versions]（../ reference / understanding-service-stack-versions.md）を参照してください。
 ```
 
+<a name="sharing-volumes-between-different-services" />
+
 ## 異なるサービス間でのボリュームの共有
 
 `Deployment` タイプのサービスのボリュームのみ、NFSを使用して同じ環境の他のサービスと共有できます。 `StatefulSet` タイプのサービスにはそれぞれ、共有できない独自のボリュームがあります。
@@ -66,9 +68,13 @@
 
 両方のサービスは、サービスの再起動後、次のデプロイ時にNFSの指定されたボリュームにアクセスできます。
 
+<a name="removing-contents-of-a-volume" />
+
 ## ボリュームのコンテンツの削除
 
 サービスが削除されても、ボリュームは環境内に残ります。 サービスで使用しているボリュームの名前を変更して（または既存のボリュームの名前を変更して）新しいボリュームを使用することができますが、古いボリュームのコンテンツは（NFSまたはサービスのSSDのいずれかに）存在します。 また、ボリュームの内容を保持したくない場合は、内容を自分で削除する必要があります。
+
+<a name="additional-information" />
 
 ## 追加情報
 

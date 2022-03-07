@@ -7,6 +7,8 @@ DXP Cloudオンボーディングメールを受信すると、 `dxpcloud` 組�
 
 プロビジョニングされたリポジトリはGitHubにありますが、Jenkinsサービスのバージョン3.2.0以降ではBitBucketリポジトリに転送できます。
 
+<a name="preparing-the-jenkins-service" />
+
 ## Jenkinsサービスの準備
 
 すでにDXPクラウドのインスタンスで [version 4.x.x services](../reference/understanding-service-stack-versions.md) を使用している場合は、JenkinsサービスはすでにBitbucketと互換性があります。 アップグレードの詳細については、 [DXP Cloudスタックのアップグレード](../reference/upgrading-your-dxp-cloud-stack.md) を参照してください。
@@ -28,14 +30,16 @@ liferaycloud/jenkins:2.222.1-3.2.0
 1. Jenkinsサービスをデプロイします。
 
 ```{note}
-    Jenkinsfile をカスタマイズしている場合は、以下のガイドに従って `デフォルトの Jenkinsfile <../platform-services/continuous-integration.md#extending-the-default-jenkinsfile>`__を延長します。
+    Jenkinsfile をカスタマイズしている場合は、以下のガイドに従って [デフォルトの Jenkinsfile](../platform-services/continuous-integration.md#extending-the-default-jenkinsfile) _を延長します。
 ```
+
+<a name="creating-a-bitbucket-repository" />
 
 ## Bitbucketリポジトリの作成
 
 まず、新しいBitbucketリポジトリを作成します。
 
-1. [［Bitbucket］](https://bitbucket.org)に移動します。
+1. [［Bitbucket］](https://bitbucket.org) に移動します。
 
 1. サイドバーの検索アイコンの下にある「＋」アイコンをクリックします。
 
@@ -52,6 +56,8 @@ liferaycloud/jenkins:2.222.1-3.2.0
 1. ［**Include a README?**］ の設定を ［**No**］ にします。
 
 1. ［**Create repository**］ をクリックします。
+
+<a name="transferring-from-github-to-bitbucket" />
 
 ## GitHubからBitbucketへの転送
 
@@ -73,7 +79,9 @@ liferaycloud/jenkins:2.222.1-3.2.0
 
     `git push bitbucket master`
 
-リポジトリの作成、複製、およびプッシュに関するヘルプが必要な場合は、 [Bitbucket's documentation](https://confluence.atlassian.com/bitbucket/create-a-git-repository-759857290.html)を参照してください。
+リポジトリの作成、複製、およびプッシュに関するヘルプが必要な場合は、 [Bitbucket's documentation](https://confluence.atlassian.com/bitbucket/create-a-git-repository-759857290.html) を参照してください。
+
+<a name="generating-app-password-for-bitbucket" />
 
 ## BitBucketのアプリパスワードの生成
 
@@ -104,13 +112,17 @@ liferaycloud/jenkins:2.222.1-3.2.0
    アプリのパスワードを生成したユーザーは、環境変数 ［LCP_CI_SCM_USERNAME］にそのユーザー名を使用しなければなりません。
 ```
 
+<a name="checking-branch-types-and-prefixes" />
+
 ## ブランチタイプと敬称の確認
 
 DXP Cloudがブランチに正しくリンクできるようにするためには、リポジトリで使用されているブランチ敬称の完全なリストをDXP Cloudに提供する必要があります。 リポジトリで使用されるブランチタイプには、それぞれ独自の敬称があり、リポジトリの設定で定義されています。
 
-[the Bitbucket website](https://bitbucket.org)で、メニューの左側の ［**Repository settings**］ &rarr; ［**Branching model**］ をクリックします。 これにより、 **Branching model** のページが表示され、各ブランチの敬称が記載されています。 これらの各敬称をメモして、 `LCP_CI_SCM_BITBUCKET_BRANCH_PREFIXES` CI環境変数に追加してください。
+[the Bitbucket website](https://bitbucket.org) で、メニューの左側の ［**Repository settings**］ &rarr; ［**Branching model**］ をクリックします。 これにより、 **Branching model** のページが表示され、各ブランチの敬称が記載されています。 これらの各敬称をメモして、 `LCP_CI_SCM_BITBUCKET_BRANCH_PREFIXES` CI環境変数に追加してください。
 
 ![Bitbucket リポジトリのデフォルトのブランチタイプ（および敬称）は、bugfix/、feature/、hotfix/、release/ です。](./configuring-your-bitbucket-repository/images/05.png)
+
+<a name="connecting-bitbucket-to-your-jenkins-service" />
 
 ## JenkinsサービスへのBitBucketの接続
 
@@ -131,9 +143,11 @@ DXP Cloudがブランチに正しくリンクできるようにするために�
 | `LCP_CI_SCM_USERNAME`                  | [auth username]    |
 | `LCP_CI_SCM_BITBUCKET_BRANCH_PREFIXES` | [list of prefixes] |
 
-`LCP_CI_SCM_USERNAME` を、 [アプリのパスワードを生成した](#generating-app-password-for-bitbucket)ユーザーとして定義します。 `LCP_CI_SCM_BITBUCKET_BRANCH_PREFIXES` を、[リポジトリのブランチで使用される敬称](#checking-branch-types-and-prefixes)の全てのリストとして、スペースで区切って定義します。
+`LCP_CI_SCM_USERNAME` を、 [アプリのパスワードを生成した](#generating-app-password-for-bitbucket) ユーザーとして定義します。 `LCP_CI_SCM_BITBUCKET_BRANCH_PREFIXES` を、 [リポジトリのブランチで使用される敬称](#checking-branch-types-and-prefixes) の全てのリストとして、スペースで区切って定義します。
 
 これらの環境変数を更新した後、Jenkinsサービスが再起動します。 これで、新しいリポジトリでプッシュされたブランチとプルリクエストがトリガーされます。
+
+<a name="connecting-to-a-private-bitbucket-server" />
 
 ## プライベートBitbucketサーバーへの接続
 
@@ -145,9 +159,13 @@ DXP Cloudがブランチに正しくリンクできるようにするために�
 
 `LCP_CI_SCM_SERVER_HOST` 変数に、プライベートBitbucketサーバーのベースURLを設定します（例えば、 `http://private.bitbucket.org/`）。 これにより、ビルドを生成してリポジトリのブランチにリンクするときにCIがコードベースを取得するために使用するサーバーURLが設定されます。 デフォルトでは、CIはBitbucketのベースURLとして `https://bitbucket.org/` を使用しています。
 
+<a name="verifying-builds" />
+
 ## ビルドの確認
 
 プッシュされたブランチとプルリクエストは、DXP Cloudコンソールの ［**Builds**］ タブから表示またはデプロイできるビルドをトリガーする必要があります。 Jenkins サービスとの統合を設定したら、次のステップとして、インテグレーションが成功したかどうかを確認するためにビルドを検証します。
+
+<a name="verifying-builds-from-pushed-branches" />
 
 ### プッシュされたブランチからのビルドの確認
 
@@ -169,6 +187,8 @@ DXP Cloudがブランチに正しくリンクできるようにするために�
 
 1. **Builds** ページで、プッシュされたブランチのビルドが表示されることを確認します。
 
+<a name="verifying-builds-from-pull-requests" />
+
 ### プルリクエストからのビルドの確認
 
 新しいプルリクエストがJenkinsビルドをトリガーすることを確認します：
@@ -184,6 +204,8 @@ DXP Cloudがブランチに正しくリンクできるようにするために�
     ![Buildページで、ブランチのリンクを確認し、ビルドをコミットします。](./configuring-your-bitbucket-repository/images/06.png)
 
 1. リンクが正しいBitBucketページにリダイレクトすることを確認します。
+
+<a name="additional-information" />
 
 ## 追加情報
 

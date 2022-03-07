@@ -39,6 +39,8 @@
 }
 ```
 
+<a name="environment-variables-reference" />
+
 ## 環境変数リファレンス
 
 | 名前           | 値 | 説明                                                         |
@@ -47,6 +49,8 @@
 | `targetPort` | 7000  | 公開するサービスの内部ポート                                             |
 | `protocol`      | TCP   | 作成する接続のタイプ（TCPおよびUDPがサポートされています）                           |
 | `external`   | true  | 接続が外部接続で使用できるかどうか。 デフォルト値 `false` は、接続を内部DXP Cloud接続に制限します |
+
+<a name="additional-information" />
 
 ## 追加情報
 

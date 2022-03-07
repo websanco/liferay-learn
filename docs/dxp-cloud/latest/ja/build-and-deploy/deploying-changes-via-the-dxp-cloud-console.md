@@ -5,13 +5,15 @@
 始めるためには、プロジェクトのCIサービスと統合されたコードホスティングサービスと、プロジェクトのリポジトリのローカルな作業コピーが必要です。
 
 ```{note}
-   別のデプロイメントワークフローについては、`Deploying Changes via CLI Tool <./deploying-changes-via-the-cli-tool.md>`__を参照して、Liferay Cloud Platform CLIツールを使用して、プロジェクト環境にローカルの変更をデプロイする方法を学んでください。
+   別のデプロイメントワークフローについては、[Deploying Changes via CLI Tool](./deploying-changes-via-the-cli-tool.md) を参照して、Liferay Cloud Platform CLIツールを使用して、プロジェクト環境にローカルの変更をデプロイする方法を学んでください。
 ```
 
 * [Liferayサービスへのポータル・プロパティの追加](#adding-a-portal-property-to-the-liferay-service)
 * [GitHubを使ったJenkinsビルドの実行](#triggering-a-jenkins-build-with-github)
 * [DXP Cloudコンソールによる新規ビルドのデプロイメント](#deploying-your-new-build-via-the-dxp-cloud-console)
 * [サンプルデプロイメントの検証](#verifying-your-sample-deployment)
+
+<a name="adding-a-portal-property-to-the-liferay-service" />
 
 ## Liferayサービスへのポータル・プロパティの追加
 
@@ -32,7 +34,7 @@
    ```
 
    ```{note}
-      バージョン3.x.xのサービスを使用している場合は、適切なフォルダパスは ``lcp/liferay/deploy/dev`` となります。 ディレクトリ構造の違いについては、`DXP Cloud Project Changes in Version 4 <../reference/dxp-cloud-project-changes-in-version-4.md>` **_** を、サービスのバージョンを確認する方法については、`Understanding Service Stack Versions <../reference/understanding-service-stack-versions.md>` **_** を参照してください。
+      バージョン3.x.xのサービスを使用している場合は、適切なフォルダパスは `lcp/liferay/deploy/dev` となります。 ディレクトリ構造の違いについては、 [バージョン4におけるDXP Cloudプロジェクトの変更](../reference/dxp-cloud-project-changes-in-version-4.md) **_** を、サービスのバージョンを確認する方法については、 [サービススタックのバージョンについて](../reference/understanding-service-stack-versions.md) **_** を参照してください。
    ```
 
 1. 以下のコマンドで、 `portal-env.properties` ファイルに変更を追加し、コミットします。
@@ -44,6 +46,8 @@
    ```bash
    git commit -m "Test - Adding Portal Property"
    ```
+
+<a name="triggering-a-jenkins-build-with-a-pull-request" />
 
 ## プル・リクエストによるJenkinsビルドのトリガー
 
@@ -64,6 +68,8 @@
    ![プロジェクトのJenkinsページでビルドのステータスを追跡](./deploying-changes-via-the-dxp-cloud-console/images/02.png)
 
    ![プロジェクトのJenkinsページから詳細なログを見ることができます。](./deploying-changes-via-the-dxp-cloud-console/images/03.png)
+
+<a name="deploying-your-new-build-via-the-dxp-cloud-console" />
 
 ## DXP Cloudコンソールによる新規ビルドのデプロイメント
 
@@ -91,6 +97,8 @@
 
    ![デプロイメントページからデプロイメントのステータスを確認する](./deploying-changes-via-the-dxp-cloud-console/images/07.png)
 
+<a name="verifying-your-sample-deployment" />
+
 ## サンプルデプロイメントの検証
 
 ビルドが正常にデプロイされ、 `dev` 環境のLiferayサービスが **Ready** になったら、以下の手順で変更内容を確認します。
@@ -104,6 +112,8 @@
 1. ホームページの下部にWebサーバーのノードが表示されていることを確認します。
 
    ![ホームページの下部にWebサーバーのノードが表示されていることを確認します。](./deploying-changes-via-the-dxp-cloud-console/images/09.png)
+
+<a name="additional-information" />
 
 ## 追加情報
 

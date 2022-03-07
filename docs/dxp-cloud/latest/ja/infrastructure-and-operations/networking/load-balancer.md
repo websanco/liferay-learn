@@ -21,6 +21,8 @@ Ingress Load Balancerは、TLS（1.0から1.2）プロトコルを使用した�
 }
 ```
 
+<a name="cdn" />
+
 ## CDN
 
 Liferayのコンテンツ配信ネットワーク（CDN）は、DXP Cloudで提供される組み込み機能です。 このCDNは静的コンテンツをグローバルにキャッシュし、配信速度を大幅に向上させます。 このCDNはデフォルトでは無効になっていますが、 `LCP.json` ファイルの中の、 `loadbalancer` オブジェクトの中で、サービスに対して有効にすることができます：
@@ -33,11 +35,13 @@ Liferayのコンテンツ配信ネットワーク（CDN）は、DXP Cloudで提�
 }
 ```
 
-![CDNのステータスは[ネットワーク]ページに表示されます。](./load-balancer/images/02.png)
+![CDNのステータスは [ネットワーク]ページに表示されます。](./load-balancer/images/02.png)
 
 ```{note}
 現在、ドバイ/アラブ首長国連邦北部地域では、CDNはサポートされていません。
 ```
+
+<a name="clearing-the-cdn-cache" />
 
 ### CDNキャッシュのクリア
 
@@ -51,7 +55,7 @@ CDNキャッシュをクリアしてコンテンツを強制的に再取得す�
 
 1. ［**CDN**］ セクションの下の、 ［**Clear CDN Cache...**］ をクリックします。
 
-    ![ご使用の環境の[ネットワーク]ページで[CDNキャッシュのクリア]ボタンをクリックします。](./load-balancer/images/03.png)
+    ![ご使用の環境の[ネットワーク]ページで [CDNキャッシュのクリア]ボタンをクリックします。](./load-balancer/images/03.png)
 
 1. ［Clear CDN cache］ページで、キャッシュのクリアにともなう影響を理解し、CDNを有効にしたすべてのサービスに適用されるということを理解したら、全てのチェックボックスを選択します。
 
@@ -65,6 +69,8 @@ CDNキャッシュをクリアしてコンテンツを強制的に再取得す�
 CDNキャッシュを頻繁にクリアすると、サーバーのパフォーマンスに悪影響を与える可能性があります。これは、キャッシュが他の方法で提供していたはずのサービスへのリクエストが短期的に急増する可能性があるためです。 この影響を軽減するために、キャッシュのクリアは例外的な状況にのみ行うようにしてください。
 ```
 
+<a name="port" />
+
 ## ポート
 
 ロードバランサーのサービスエンドポイントがどの内部ポート(`［targetPort］`)を経由するかを設定できます。 DXP Cloudは、提供するサービスに適したポートを自動的に設定します。
@@ -75,6 +81,8 @@ CDNキャッシュを頻繁にクリアすると、サーバーのパフォー�
 
 ![ロードバランサーは、ポート構成を示しています。](./load-balancer/images/05.png)
 
+<a name="custom-ssl" />
+
 ## カスタムSSL
 
 サービスにロードバランサー属性を指定すると、次のようなネーミングパターンでサービスのエンドポイントが追加されます：
@@ -83,15 +91,17 @@ CDNキャッシュを頻繁にクリアすると、サーバーのパフォー�
 
 `.lfr.cloud` でDXP Cloudのインフラストラクチャによって作成されたドメインは、ネットワークページのSSL証明書セクションに表示されないワイルドカード証明書によってカバーされています。
 
-コンソールまたは `LCP.json`を介して追加されたすべてのカスタムドメインの場合、Liferay DXP Cloudは [Let's Encrypt](https://letsencrypt.org/)に到達して、自動的に更新され、かつ、作成したすべてのカスタムドメインをカバーする証明書を取得します。
+コンソールまたは `LCP.json`を介して追加されたすべてのカスタムドメインの場合、Liferay DXP Cloudは [Let's Encrypt](https://letsencrypt.org/) に到達して、自動的に更新され、かつ、作成したすべてのカスタムドメインをカバーする証明書を取得します。
+
+<a name="adding-custom-ssl-certificates" />
 
 ### カスタムSSL証明書の追加
 
 独自のSSL証明書を追加して、作成したカスタムドメインをカバーすることもできます。 Let's Encryptが提供するSSL証明書（DXPクラウドのコンソールで追加されたカスタムドメイン用）を使用するか、 `webserver` サービスの `LCP.json` ファイルで1つまたは複数のカスタム証明書を定義することができます。 両方の場所に証明書が存在する場合は、 `LCP.json` ファイルで定義されたカスタム証明書が優先されます。
 
-カスタム証明書を作成する時、DXP Cloudはカプセル化境界を含む[Base64](https://tools.ietf.org/html/rfc4648#section-4)エンコーディングを使用した適切なPEM形式での鍵と証明書のみを受け入れるということに注意してください。
+カスタム証明書を作成する時、DXP Cloudはカプセル化境界を含む [Base64](https://tools.ietf.org/html/rfc4648#section-4) エンコーディングを使用した適切なPEM形式での鍵と証明書のみを受け入れるということに注意してください。
 
-単一のSSL証明書を `LCP.json`ファイルに追加するには、`ssl` オブジェクトを追加し、証明書 `key`と`crt` の値を [`loadbalancer`オブジェクト](./custom-domains.md#adding-a-custom-domain-via-lcp-json)の中に入れます：
+単一のSSL証明書を `LCP.json`ファイルに追加するには、`ssl` オブジェクトを追加し、証明書 `key`と`crt` の値を [`loadbalancer`オブジェクト](./custom-domains.md#adding-a-custom-domain-via-lcp-json) の中に入れます：
 
 ```json
 {
@@ -105,6 +115,8 @@ CDNキャッシュを頻繁にクリアすると、サーバーのパフォー�
 ```
 
 `ssl` オブジェクトを `LCP.json` で使用すると、この環境で使用されるすべてのカスタムドメインにマッピングされる単一のカスタムSSL証明書が作成されます。
+
+<a name="mapping-multiple-ssl-certificates-to-custom-domains" />
 
 ### 複数のSSL証明書をカスタムドメインにマッピングする
 
@@ -134,6 +146,8 @@ CDNキャッシュを頻繁にクリアすると、サーバーのパフォー�
 ```{note}
 複数のSSL証明書をカスタムドメインにマッピングするには、［webserver］サービスの［LCP.json］ファイルに［certs］プロパティを追加する必要があります。 DXP Cloudコンソールでカスタムドメインを追加すると、すべてのカスタムドメインが1つの証明書にマッピングされます。
 ```
+
+<a name="generating-an-ssl-certificate" />
 
 ### SSL証明書の生成
 
@@ -189,6 +203,8 @@ base64encodedcertificate
 
 ![DXP Cloudは、カスタムドメインをカバーするSSL証明書のステータスを示しています。](./load-balancer/images/06.png)
 
+<a name="environment-variables-reference" />
+
 ## 環境変数リファレンス
 
 | 名前              | Value                              | 説明                                                                                                                                                                            |
@@ -196,8 +212,10 @@ base64encodedcertificate
 | `cdn`           | false                              | CDNはデフォルトで無効になっています。 設定を`true`にすることで有効にできます。                                                                                                                                  |
 | `customDomains` | ["example.com", "www.example.com"] | カスタムドメインの名前。 複数をリストできます。                                                                                                                                                      |
 | `targetPort`    | 3000                               | ロードバランサーのポート番号                                                                                                                                                                |
-| `key`           |                                    | Base64形式のSSL証明書のキー。 これを[`ssl`](#adding-custom-ssl-certificates) オブジェクト、または[`certs`](#mapping-multiple-ssl-certificates-to-custom-domains) オブジェクトにグループ化します （複数の証明書をリストするために）。  |
-| `crt`           |                                    | Base64形式のSSL証明書のcrt。 これを[`ssl`](#adding-custom-ssl-certificates) オブジェクト、または[`certs`](#mapping-multiple-ssl-certificates-to-custom-domains) オブジェクトにグループ化します （複数の証明書をリストするために）。 |
+| `key`           |                                    | Base64形式のSSL証明書のキー。 これを [`ssl`](#adding-custom-ssl-certificates) オブジェクト、または [`certs`](#mapping-multiple-ssl-certificates-to-custom-domains) オブジェクトにグループ化します （複数の証明書をリストするために）。  |
+| `crt`           |                                    | Base64形式のSSL証明書のcrt。 これを [`ssl`](#adding-custom-ssl-certificates) オブジェクト、または [`certs`](#mapping-multiple-ssl-certificates-to-custom-domains) オブジェクトにグループ化します （複数の証明書をリストするために）。 |
+
+<a name="additional-information" />
 
 ## 追加情報
 

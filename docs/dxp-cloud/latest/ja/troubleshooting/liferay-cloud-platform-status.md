@@ -2,6 +2,8 @@
 
 Liferay Cloud Platformは複数のシステムで設定されています。 ユーザーは、 [Liferay Cloud Platform](https://status.liferay.cloud/) ステータス ページを介して、Liferay Cloud Platform システムのステータス、インシデント履歴、および計画されたメンテナンス ウィンドウを表示できます。
 
+<a name="access-the-status-page-via-the-dxp-cloud-console" />
+
 ## DXP Cloudコンソールからステータスページにアクセスする
 
 ユーザーは、DXP CloudのコンソールからLiferay Cloud Platformのステータスページにアクセスできます。
@@ -11,6 +13,8 @@ Liferay Cloud Platformは複数のシステムで設定されています。 ユ
 1. **稼働時間ステータス** をクリックします。
 
 ![図1：「稼働時間ステータス」をクリックすると、「Liferay Cloud Platform Status」ページが表示されます。](./liferay-cloud-platform-status/images/01.png)
+
+<a name="view-the-status-of-cloud-platform-systems" />
 
 ## クラウドプラットフォームシステムの状況を見る
 
@@ -26,6 +30,8 @@ Liferay Cloud Platformのステータスページには、以下のシステム�
 
 ![図2：Liferay Cloud Platformシステムの現在の状況を表示しています。](./liferay-cloud-platform-status/images/02.png)
 
+<a name="view-incident-history-and-scheduled-maintenance-windows" />
+
 ## インシデントの履歴やメンテナンス予定のウィンドウを表示
 
 ユーザーは、Liferay Cloud Platformのステータスページから、過去のインシデントやスケジュールされたメンテナンスウィンドウを確認することができます。
@@ -36,6 +42,8 @@ Liferay Cloud Platformのステータスページを下にスクロールする�
 
 ![図3：過去のインシデントや計画されたメンテナンスのウィンドウを見ることができます。](./liferay-cloud-platform-status/images/03.png)
 
+<a name="subscribe-to-updates" />
+
 ## 更新情報の登録
 
 ユーザーは、 **Subscribe to Updates** に登録することで、プラットフォームのステータスが変更された際に、リアルタイムで通知を受け取ることができます。
@@ -43,6 +51,8 @@ Liferay Cloud Platformのステータスページを下にスクロールする�
 **Subscribe to Updates** をクリックして、ご都合のよい通知方法をお選びください。
 
 ![図4：Liferay Cloud Platformのステータスに関する更新情報を受け取るために登録する。](./liferay-cloud-platform-status/images/04.png)
+
+<a name="additional-information" />
 
 ## 追加情報
 

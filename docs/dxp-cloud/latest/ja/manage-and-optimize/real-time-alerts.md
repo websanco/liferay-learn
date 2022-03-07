@@ -2,6 +2,8 @@
 
 Liferay DXP Cloudは、プロジェクトの予期せぬ動作をシステム管理者に警告することができます。 予期せぬ動作の例としては、オートスケーリングイベント、予想以上のメモリ消費量、割り当てられたCPUクォータへの到達、データベース接続の問題などがあります。
 
+<a name="alert-preferences" />
+
 ## アラート設定
 
 ユーザーはDXP Cloud Consoleを介して、すべての環境に対して [Alert Preferences](https://console.liferay.cloud/account/alerts-preferences) を設定することができます。
@@ -18,9 +20,11 @@ Liferay DXP Cloudは、プロジェクトの予期せぬ動作をシステム管
 
 ユーザーは、アラートページからアラート設定にアクセスすることもできます。
 
+<a name="alerts-page" />
+
 ## アラートページ
 
-コンソールに配信されるアラートは、 [Alerts page](https://console.liferay.cloud/alerts)から表示および管理できます。 ページ右上のベルのアイコンをクリックすると、このページにアクセスできます。
+コンソールに配信されるアラートは、 [Alerts page](https://console.liferay.cloud/alerts) から表示および管理できます。 ページ右上のベルのアイコンをクリックすると、このページにアクセスできます。
 
 アラートの表には、以下のアラート情報が一覧表示されます：
 
@@ -41,6 +45,8 @@ Liferay DXP Cloudは、プロジェクトの予期せぬ動作をシステム管
 ***アラート設定** : アラート設定のページに移動します。
 
 ![リアルタイムアラート](./real-time-alerts/images/02.png)
+
+<a name="additional-information" />
 
 ## 追加情報
 

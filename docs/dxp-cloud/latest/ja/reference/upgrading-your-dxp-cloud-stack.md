@@ -2,7 +2,9 @@
 
 DXP Cloudバージョン4の新しい構造を使用するようにリポジトリをアップグレードすると、リポジトリ内でLiferayワークスペースを活用し、サービスを最新の状態に保ち、さまざまな新機能や更新された機能を使用できます。
 
-新しいリポジトリ構造へのアップグレードには、 [アップグレードスクリプト](https://github.com/LiferayCloud/stack-upgrade/archive/release.zip)の使用が含まれます。
+新しいリポジトリ構造へのアップグレードには、 [アップグレードスクリプト](https://github.com/LiferayCloud/stack-upgrade/archive/release.zip) の使用が含まれます。
+
+<a name="preparing-to-upgrade" />
 
 ## アップグレードの準備
 
@@ -26,7 +28,7 @@ repository
 ```
 
 ```{important}
-   リポジトリがこのような構造になっていない場合（ルートに ``gradle.properties`` ファイルや ``lcp`` フォルダーが存在しない場合）、バージョン 4.x.x へのアップグレードがすでに完了していることを示しています。
+   リポジトリがこのような構造になっていない場合（ルートに radle.properties` ファイルや `lcp` フォルダーが存在しない場合）、バージョン 4.x.x へのアップグレードがすでに完了していることを示しています。
 ```
 
 `gradle.properties` ファイルを開き、Dockerイメージに指定されたバージョンを確認します。 たとえば、これはLiferayサービスのイメージバージョンです：
@@ -40,14 +42,16 @@ Dockerイメージ名の末尾の数字は、使用しているDXP Cloudスタ�
 次に、Gitリポジトリがクリーンなブランチ上にあることを確認します。 アップグレードスクリプトは、以前にコミットされていないファイルをコミットし、 `upgrade-workspace`と呼ばれる新しいブランチをチェックアウトします。
 
 ```{important}
-   すでに ``upgrade-workspace`` ブランチがある場合、スクリプトはそのブランチの作成をスキップして、現在のブランチで動作します。
+   すでに `upgrade-workspace` ブランチがある場合、スクリプトはそのブランチの作成をスキップして、現在のブランチで動作します。
 ```
+
+<a name="running-the-upgrade-script" />
 
 ## アップグレードスクリプトの実行
 
 アップグレードするには、次の手順を実行します：
 
-1. [アップグレードスクリプト](https://github.com/LiferayCloud/stack-upgrade/archive/release.zip)をダウンロードし、ローカルのDXP Cloudリポジトリのルートに抽出します：
+1. [アップグレードスクリプト](https://github.com/LiferayCloud/stack-upgrade/archive/release.zip) をダウンロードし、ローカルのDXP Cloudリポジトリのルートに抽出します：
 
     ```bash
     curl -L https://github.com/LiferayCloud/stack-upgrade/archive/release.zip -O
@@ -119,9 +123,13 @@ Dockerイメージ名の末尾の数字は、使用しているDXP Cloudスタ�
 
 リポジトリが再編成され、 `liferay` フォルダーがLiferayワークスペースになり、サービスが4.xxにアップグレードされます。
 
+<a name="verify-ci-services-environment-variables" />
+
 ## CIサービスの環境変数を確認する
 
 サービススタックのアップグレードを完了した後、プロジェクトの `ci/LCP.json` ファイル内の環境変数の動作が異なる場合があります。 アップグレードしたプロジェクトを続行する前に、 `ci` サービスの環境変数が正しい設定を反映していることを確認してください。
+
+<a name="verify-repository-integration-variables" />
 
 ### リポジトリ統合変数の確認
 
@@ -136,11 +144,13 @@ Dockerイメージ名の末尾の数字は、使用しているDXP Cloudスタ�
 }
 ```
 
-詳しくは[GitHub](../getting-started/configuring-your-github-repository.md#setting-environment-variables)、 [Bitbucket](../getting-started/configuring-your-bitbucket-repository.md#connecting-bitbucket-to-your-jenkins-service)、 [GitLab](../getting-started/configuring-your-gitlab-repository.md#connecting-gitlab-to-your-jenkins-service) の統合を参照してください。
+詳しくは [GitHub](../getting-started/configuring-your-github-repository.md#setting-environment-variables) 、 [Bitbucket](../getting-started/configuring-your-bitbucket-repository.md#connecting-bitbucket-to-your-jenkins-service) 、 [GitLab](../getting-started/configuring-your-gitlab-repository.md#connecting-gitlab-to-your-jenkins-service) の統合を参照してください。
+
+<a name="verify-jenkinsfile-configuration-variables" />
 
 ### Jenkinsfile設定変数の確認
 
-プロジェクトにデフォルトのJenkinsfileが[必要とされていない](./dxp-cloud-project-changes-in-version-4.md#ci-service-changes)ので、プロジェクトのルートのJenkinsfileもアップグレードした後に除去することができます。 プロジェクトにデフォルトのJenkinsfileを使用する場合は、 `ci` サービス環境変数がこれを反映していることを確認してください：
+プロジェクトにデフォルトのJenkinsfileが [必要とされていない](./dxp-cloud-project-changes-in-version-4.md#ci-service-changes) ので、プロジェクトのルートのJenkinsfileもアップグレードした後に除去することができます。 プロジェクトにデフォルトのJenkinsfileを使用する場合は、 `ci` サービス環境変数がこれを反映していることを確認してください：
 
 ```json
 {
@@ -150,7 +160,7 @@ Dockerイメージ名の末尾の数字は、使用しているDXP Cloudスタ�
 ```
 
 ```{note}
-   デフォルトのJenkinsfileを拡張するフックを使いたい場合は ``LCP_CI_SCM_JENKINSFILE_HOOKS_DIR`` 変数を定義する必要があります。
+   デフォルトのJenkinsfileを拡張するフックを使いたい場合は `LCP_CI_SCM_JENKINSFILE_HOOKS_DIR` 変数を定義する必要があります。
 ```
 
 `ci` サービスディレクトリ内に独自のJenkinsfileを定義してデフォルトを上書きする場合は、環境変数が次のようになっていることを確認してください。
@@ -161,6 +171,8 @@ Dockerイメージ名の末尾の数字は、使用しているDXP Cloudスタ�
     "LCP_CI_SCM_JENKINSFILE_PATH": "ci/Jenkinsfile"
 }
 ```
+
+<a name="next-steps" />
 
 ## 次のステップ
 
@@ -175,6 +187,8 @@ Dockerイメージ名の末尾の数字は、使用しているDXP Cloudスタ�
 Alternatively, you can also follow the [development workflow](../build-and-deploy/overview-of-the-dxp-cloud-deployment-workflow.md) and deploy the changes as a build from the DXP Cloud console.
 
 その後、 [新しいサービスバージョンを](../build-and-deploy/deploying-changes-via-the-dxp-cloud-console.md) 開発環境にデプロイしたり、DXP Cloudサービスの新しいバージョンの新機能を試したりすることができます。 詳細は、[変更点の説明 ](./dxp-cloud-project-changes-in-version-4.md)ご覧ください。
+
+<a name="additional-information" />
 
 ## 追加情報
 

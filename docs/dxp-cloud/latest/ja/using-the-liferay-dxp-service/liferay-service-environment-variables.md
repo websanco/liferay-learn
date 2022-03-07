@@ -1,6 +1,8 @@
 # Liferayサービス環境変数
 
-Liferayサービスには [の範囲の環境変数](#environoment-variables-reference) があり、サービスや他のサービスへの接続、DXPのインストール自体を設定するために使用されます。 DXP Cloud固有の環境変数を使用したり、DXPの [ポータルプロパティ](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html)をオーバーライドする変数を定義したりすることができます。
+Liferayサービスには [の範囲の環境変数](#environoment-variables-reference) があり、サービスや他のサービスへの接続、DXPのインストール自体を設定するために使用されます。 DXP Cloud固有の環境変数を使用したり、DXPの [ポータルプロパティ](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html) をオーバーライドする変数を定義したりすることができます。
+
+<a name="overriding-portal-properties" />
 
 ## ポータルプロパティのオーバーライド
 
@@ -35,6 +37,8 @@ Liferayサービスへの追加については、 [環境変数の定義](../ref
 1. 任意の文字を大文字に変換します。
 
 例えば、ポータルプロパティ名 `setup.wizard.enabled`を例にとると、 `CharPool` というエンドポイントを使って、環境変数の名前に変換することができます。 `LIFERAY_SETUP_PERIOD_WIZARD_PERIOD_ENABLED`となります。
+
+<a name="environment-variables-reference" />
 
 ## 環境変数リファレンス
 

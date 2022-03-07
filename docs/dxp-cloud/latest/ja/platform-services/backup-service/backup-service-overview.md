@@ -10,6 +10,8 @@
 
 詳細は、 [バックアップサービスの制限](../../reference/platform-limitations.md#backup-service) のセクションを参照してください。
 
+<a name="the-backups-page" />
+
 ## バックアップのページ
 
 どの環境のバックアップページからでも、バックアップサービスの情報や保持されているバックアップの確認、手動でバックアップを作成したりすることができます。
@@ -28,7 +30,7 @@
 
 ***バックアップ情報の表示** : 選択した環境のバックアップサービス情報をすばやく表示できます。 これには、自動バックアップの頻度、バックアップの保持期間、次回のスケジュールされたバックアップ、最新の作成されたバックアップ、最も古い保持されたバックアップのタイムスタンプ情報が含まれます。
 ***バックアップ履歴の表示** ：選択した環境で保持されているバックアップの完全なリストを表示できます。 各エントリには、バックアップの名前、サイズ、作成日時が表示されます。
-***手動バックアップの作成** ：選択した環境のバックアップを手動で作成できます。 詳しくは[Creating a Manual Backup](#creating-a-manual-backup) をご覧ください。
+***手動バックアップの作成** ：選択した環境のバックアップを手動で作成できます。 詳しくは [Creating a Manual Backup](#creating-a-manual-backup) をご覧ください。
 
 ```{note}
 バックアップのタイムスタンプはブラウザの位置情報に基づいて自動的に表示され、バックアップのスケジュールはUTC±00のタイムゾーンに基づいて表示されます。
@@ -39,6 +41,8 @@
 これらのアクションの詳細と実行方法については、 [バックアップのダウンロードとアップロード](./downloading-and-uploading-backups.md) および [バックアップからのデータの復元](./restoring-data-from-a-backup.md)を参照してください。
 
 ![管理者は、バックアップページからバックアップをダウンロードしたり、環境を復元したりできます。](./backup-service-overview/images/03.png)
+
+<a name="creating-a-manual-backup" />
 
 ## 手動バックアップの作成
 
@@ -56,6 +60,8 @@ Liferayインスタンス上でデータが能動的に変更されている間�
 
 サービスログの閲覧については、 [ログ管理](../../troubleshooting/reading-dxp-cloud-service-logs.md) を参照してください。
 
+<a name="configuring-the-backup-service" />
+
 ## バックアップサービスの設定
 
 DXP Cloudのコンソールや、バックアップサービスの `LCP.json` ファイルから、プロジェクトのニーズに合わせてバックアップサービスを設定することができます。
@@ -65,6 +71,8 @@ DXP Cloudのコンソールや、バックアップサービスの `LCP.json` �
 ```{important}
 バックアップサービスを再設定するたびに、バックアップサービスが再起動し、数分間リクエストを受け取らなくなったり、設定によっては挙動が異なる場合があります。
 ```
+
+<a name="configuring-the-backup-service-via-the-dxp-cloud-console" />
 
 ### DXP Cloudコンソールによるバックアップサービスの設定
 
@@ -86,7 +94,9 @@ DXP Cloudのコンソールや、バックアップサービスの `LCP.json` �
 
 1. ［**変更を保存**］ をクリックします。
 
-通常の環境変数とは別に、DXP Cloudのコンソールから **シークレット** 変数を設定することができます。 詳しくは、 [Managing Secure Environment Variables with Secrets](../../infrastructure-and-operations/security/managing-secure-environment-variables-with-secrets.md) をご覧ください。
+通常の環境変数とは別に、DXP Cloudのコンソールから **シークレット** 変数を設定することができます。 詳しくは、 [シークレットで安全な環境変数を管理](../../infrastructure-and-operations/security/managing-secure-environment-variables-with-secrets.md) をご覧ください。
+
+<a name="configuring-the-backup-service-via-the-backup-lcpjson-file" />
 
 ### バックアップによるバックアップサービスの設定 `LCP.json` ファイル
 
@@ -113,6 +123,8 @@ DXP Cloudのコンソールや、バックアップサービスの `LCP.json` �
 1. ファイルを保存してプロジェクトにデプロイすると、設定が反映されます。
 
 環境サービスの`LCP.json`ファイルによる設定の詳細については、[LCP.jsonによる設定](../../reference/configuration-via-lcp-json.md)を参照してください。
+
+<a name="scheduling-automated-backups-and-cleanups" />
 
 ### 自動バックアップとクリーンアップのスケジューリング
 
@@ -145,20 +157,24 @@ Liferayインスタンス上でデータが能動的に変更されている間�
  },
 ```
 
+<a name="environment-variables-reference" />
+
 ## 環境変数リファレンス
 
 | 名前                            | デフォルト値                     | 説明                                                                                                                                                                                          |
 | ----------------------------- | -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `LCP_BACKUP_CLEANUP_SCHEDULE` | 0 1 **** | この変数は、 [Cronスケジューリングシンタックス](https://crontab.guru/)を使って、自動クリーニングをスケジュールします。 クリーンアップでは、バックアップ保持期間を超えたバックアップをすべて削除します。                                                                         |
-| `LCP_BACKUP_CREATE_SCHEDULE`  | `[5-55][0-1] * * *`        | この変数は、 [Cronスケジューリングシンタックス](https://crontab.guru/)を使用して、自動バックアップをスケジュールします。 バックアップサービスのバージョン `3.2.1` 以降では、値が指定されていない場合、ランダムなデフォルトが作成されます。                                                   |
+| `LCP_BACKUP_CLEANUP_SCHEDULE` | 0 1 **** | この変数は、 [Cronスケジューリングシンタックス](https://crontab.guru/) を使って、自動クリーニングをスケジュールします。 クリーンアップでは、バックアップ保持期間を超えたバックアップをすべて削除します。                                                                         |
+| `LCP_BACKUP_CREATE_SCHEDULE`  | `[5-55][0-1] * * *`        | この変数は、 [Cronスケジューリングシンタックス](https://crontab.guru/) を使用して、自動バックアップをスケジュールします。 バックアップサービスのバージョン `3.2.1` 以降では、値が指定されていない場合、ランダムなデフォルトが作成されます。                                                   |
 | `LCP_BACKUP_FOLDER`           | `/opt/liferay/data`        | バックアップするLiferayフォルダ。                                                                                                                                                                        |
-| `LCP_BACKUP_RESTORE_SCHEDULE` | 該当なし                       | この変数は、 [Cronスケジューリングシンタックス](https://crontab.guru/)を使用して、自動復元をスケジュールします。 [Disaster Recovery environments](../../troubleshooting/configuring-cross-region-disaster-recovery.md)での使用を目的としています。 |
+| `LCP_BACKUP_RESTORE_SCHEDULE` | 該当なし                       | この変数は、 [Cronスケジューリングシンタックス](https://crontab.guru/) を使用して、自動復元をスケジュールします。 [Disaster Recovery environments](../../troubleshooting/configuring-cross-region-disaster-recovery.md)での使用を目的としています。 |
 | `LCP_BACKUP_RETENTION_PERIOD` | `30`                       | この変数は、スケジュールされたクリーンアップでどのバックアップを削除するかを決定します。 クリーンアップによって削除される前にバックアップを保持する日数を選択します。 最大保存期間は30日です。                                                                                           |
 | `LCP_DATABASE_SERVICE`        | `database`                 | データベースサービスのID。                                                                                                                                                                              |
 | `LCP_DBNAME`                  | `lportal`                  | データベース名。                                                                                                                                                                                    |
 | `LCP_DEBUG_LOG`               | `false`                    | Backupサービスのデバッグログを有効にします。 `true` または `false`に設定します。                                                                                                                                         |
 | `LCP_MASTER_USER_NAME`        | `dxpcloud`                 | マスターユーザー名。                                                                                                                                                                                  |
 | `LCP_MASTER_USER_PASSWORD`    | `LCP_PROJECT_MASTER_TOKEN` | マスターパスワード。                                                                                                                                                                                  |
+
+<a name="additional-information" />
 
 ## 追加情報
 

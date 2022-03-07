@@ -12,6 +12,8 @@ VPN接続が設定されると、環境のログページで、ドロップダ�
 
 詳細は、 [VPNサーバーの制限](../../reference/platform-limitations.md#vpn-servers) のセクションを参照してください。
 
+<a name="configuration" />
+
 ## 設定
 
 クライアントからサイトへのVPN機能は、次のプロトコルをサポートしています。
@@ -26,6 +28,8 @@ VPN接続が設定されると、環境のログページで、ドロップダ�
 ```
 
 詳しくは [DXP CloudへのVPNサーバーの接続](./connecting-a-vpn-server-to-dxp-cloud.md) をご覧ください。
+
+<a name="connecting-dxp-cloud-to-an-ipsec-vpn-server" />
 
 ## DXP CloudとIPSec VPNサーバーの接続
 
@@ -47,15 +51,21 @@ curl vpn:33000
 <body><h1>Hello world!</h1></body></html>
 ```
 
+<a name="dxp-cloud-ip-ranges-for-shared-cluster" />
+
 ### 共有クラスターのDXP Cloud IP範囲
 
 DXP Cloudは、VPNサーバーにマッピングできる幅広い利用可能なIPアドレスを使用します。 デフォルトでは、DXP Cloudサービスのすべての発信外部IPアドレスは固定されていません。
 
 安定した発信外部IPアドレスを取得する最良の方法は、DXP Cloudプライベートクラスター機能を使用することです。
 
+<a name="dxp-cloud-ip-ranges-for-private-cluster" />
+
 ### プライベートクラスタのDXP Cloud IP範囲
 
 Liferay DXP Cloudは、各加入者のサービスを独自の専用クラスターに分離するオプションのプライベートクラスターを提供します。 各クラスターは、サブスクライバーのクラスターからのすべての送信インターネットトラフィック専用のゲートウェイで設定され、静的外部IPが割り当てられます。
+
+<a name="whats-next" />
 
 ## 次のステップ
 

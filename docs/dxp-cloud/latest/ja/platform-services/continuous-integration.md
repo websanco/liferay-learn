@@ -14,6 +14,8 @@ DXPクラウドの顧客（ ［customer］ログインを使用）には、ビ�
 
 詳しくは、 [CI service limitations](../reference/platform-limitations.md#continuous-integration-service) を参照してください。
 
+<a name="using-the-default-jenkinsfile" />
+
 ## デフォルトのJenkinsfileの使用
 
 CIサービスのバージョン `［liferaycloud/jenkins:2.222.1-3.2.0］`からは、オーバーライドされていない場合、デフォルトのJenkinsfileが利用可能です。 デフォルトのJenkinsfileは、[［version 4.x.x servicesを使用］](../reference/understanding-service-stack-versions.md)しているプロジェクトで常に使うことができます。
@@ -21,6 +23,8 @@ CIサービスのバージョン `［liferaycloud/jenkins:2.222.1-3.2.0］`か�
 デフォルトのJenkinsfileは、それまでJenkinsfileに保存されていたすべてのロジックをカプセル化し、Jenkinsプラグインに移動させます。 つまり、CI構成を必要とせずに、すべてのバグ修正、セキュリティ修正、および改善を適用できます。
 
 それとは別に、CIパイプラインのすべてのステップをカスタマイズするための強力な拡張ポイントのセットを提供しています。
+
+<a name="enable-the-default-jenkinsfile" />
 
 ### デフォルトのJenkinsfileを有効にする
 
@@ -33,6 +37,8 @@ CIサービスのバージョン `［liferaycloud/jenkins:2.222.1-3.2.0］`か�
 1. 次の環境変数を追加します：`［LCP_CI_USE_DEFAULT_JENKINSFILE: true］`
 
 1. Jenkinsサービスをデプロイします
+
+<a name="extending-the-default-jenkinsfile" />
 
 ### デフォルトのJenkinsfileの拡張
 
@@ -63,10 +69,12 @@ CIビルドプロセスのステップの基本的な概要は次のとおりで
 1. 存在する場合は、 `［ci/Jenkinsfile-post-always］`をロードします。 これは、ビルドが失敗したときと成功したときの両方で実行されます。
 
 ```{note}
-バージョン3.x.xのサービスを使用している場合、Jenkinsfileのこれらの拡張は、［lcp/ci/］フォルダーにあります。 バージョン確認の詳細については、[Understanding Service Stack Versions](../reference/understanding-service-stack-versions.md) を参照してください。
+バージョン3.x.xのサービスを使用している場合、Jenkinsfileのこれらの拡張は、［lcp/ci/］フォルダーにあります。 バージョン確認の詳細については、 [サービススタックのバージョンについて](../reference/understanding-service-stack-versions.md) を参照してください。
 ```
 
 Jenkinsサービスの起動ログを監視して、デフォルトのパイプラインでこれらがどのように使用されるかを確認することができます。 完全なデフォルトのJenkinsfileが起動ログに出力されます。
+
+<a name="extra-pipeline-customization-and-external-calls" />
 
 ## 追加のパイプラインのカスタマイズと外部通話
 
@@ -79,8 +87,10 @@ Jenkinsサービスの起動ログを監視して、デフォルトのパイプ�
 ```
 
 ```{note}
-もし、バージョン 3.x.x のサービスを使用していて、独自の ［Jenkinsfile］を定義している場合は、代わりにリポジトリのルートに定義する必要があります。 バージョン確認の詳細については、[Understanding Service Stack Versions](../reference/understanding-service-stack-versions.md) を参照してください。
+もし、バージョン 3.x.x のサービスを使用していて、独自の ［Jenkinsfile］を定義している場合は、代わりにリポジトリのルートに定義する必要があります。 バージョン確認の詳細については、 [サービススタックのバージョンについて](../reference/understanding-service-stack-versions.md) を参照してください。
 ```
+
+<a name="reusing-code-between-different-extension-points" />
 
 ## 異なる拡張ポイント間でのコードの再利用
 
@@ -103,12 +113,14 @@ util.sendSlackMessage("About to create DXP Cloud build...")
 ```
 
 ```{note}
-バージョン3.x.xのサービスを使用している場合、これらのファイルはリポジトリ内の［lcp/ci/］ディレクトリにあります。 バージョン確認の詳細については、[Understanding Service Stack Versions](../reference/understanding-service-stack-versions.md) を参照してください。
+バージョン3.x.xのサービスを使用している場合、これらのファイルはリポジトリ内の［lcp/ci/］ディレクトリにあります。 バージョン確認の詳細については、 [サービススタックのバージョンについて](../reference/understanding-service-stack-versions.md) を参照してください。
 ```
+
+<a name="environment-variables-reference" />
 
 ## 環境変数リファレンス
 
-次の環境変数は、デフォルトのJenkinsファイルでのみ使用されます。 これらが何をするのかは、 [パイプラインオプションに関するJenkinsのドキュメント](https://jenkins.io/doc/book/pipeline/syntax/#options)を参照してください。
+次の環境変数は、デフォルトのJenkinsファイルでのみ使用されます。 これらが何をするのかは、 [パイプラインオプションに関するJenkinsのドキュメント](https://jenkins.io/doc/book/pipeline/syntax/#options) を参照してください。
 
 | 名前                                    | デフォルト値   | 説明                                                                                                                                                                                                                                                                              |
 | ------------------------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -130,6 +142,8 @@ util.sendSlackMessage("About to create DXP Cloud build...")
 | `LCP_CI_USE_DEFAULT_JENKINSFILE`      | `false`  | デフォルトのJenkinsfileを有効または無効にするオプション                                                                                                                                                                                                                                               |
 | `LCP_DATABASE_SERVICE`                |          | データベースサービスのホスト名。                                                                                                                                                                                                                                                                |
 
+
+<a name="additional-information" />
 
 ## 追加情報
 

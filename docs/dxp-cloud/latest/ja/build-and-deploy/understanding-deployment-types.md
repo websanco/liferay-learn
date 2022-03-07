@@ -2,6 +2,8 @@
 
 サービスのデプロイタイプによって、パフォーマンス、メモリ使用量、ファイルまたはボリュームへのアクセスなど、サービスの機能に関するさまざまな側面が決まります。 DXP Cloudは、そのサービスに2つの展開タイプを提供します： `Deployment` および `StatefulSet`。
 
+<a name="differences-between-deployment-types" />
+
 ## デプロイメントタイプの違い
 
 **Deployment** タイプには次の機能があります：
@@ -27,6 +29,8 @@
 
 一般に、 `Deployment` タイプはより軽量であり、より高速なデプロイメント、およびサービス間での共有ボリューム（ドキュメントライブラリなどの共有ファイル用）を可能にします。 `StatefulSet` タイプは、デプロイメントとリソース使用量（プロジェクトに割り当てられたメモリとCPUの合計を含む）の方がコストがかかりますが、専用SSDを使用することにより、デプロイメントを通じてデータを保持し、ファイルアクセスパフォーマンスを向上させます。
 
+<a name="shared-volumes-nfs-vs-ssd-storage" />
+
 ### 共有ボリューム（NFS）とSSDストレージの比較
 
 Network File System（NFS）は、すべての `Deployment` タイプのサービスで利用できます。 NFSは、サービスが再デプロイされるか削除されるかに関わらず存続します。
@@ -34,6 +38,8 @@ Network File System（NFS）は、すべての `Deployment` タイプのサー�
 NFSに格納されているボリュームは、すべての ` Deployment ` タイプのサービスでも利用できます。 ドキュメントライブラリへのアクセスを共有するために、 `Liferay` および `Backup` サービスでは、NFSがそのまま使用されます。 NFS用のボリュームの設定の詳細は、 [永続的なファイルシステムボリュームの設定](./configuring-persistent-file-storage-volumes.md) を参照してください。
 
 `StatefulSet` タイプのサービスには、代わりにすべてのボリュームストレージ専用のSSDがあります。 `StatefulSet` タイプのサービスで使用できる専用SSDは、他のサービスからアクセスできません。 また、SSDに保存されたボリュームは、再デプロイ時やサービスの削除後も保持されます。 クラスター化された `StatefulSet` サービスでは、各インスタンスは異なるボリュームを持ちます。
+
+<a name="how-dxp-clouds-services-are-configured" />
 
 ## DXP Cloudのサービスの設定方法
 
@@ -46,6 +52,8 @@ NFSに格納されているボリュームは、すべての ` Deployment ` タ�
 ***CI** サービスは **StatefulSet** タイプを使用するため、専用SSDを使用することにより、ファイルアクセス速度が向上します。
 
 ***Search** サービスも **StatefulSet** タイプを使用するので、検索の速度が向上し、サービスが再起動してもSSDに保存されている検索インデックスが失われません。
+
+<a name="configuring-deployment-types" />
 
 ## デプロイメントの種類の設定
 
@@ -61,6 +69,8 @@ NFSに格納されているボリュームは、すべての ` Deployment ` タ�
 ```{note}
    DXP Cloudでのサービスのデプロイメントの種類は、データの損失やパフォーマンスに影響を与える可能性があるため、注意して変更する必要があります。
 ```
+
+<a name="additional-information" />
 
 ## 追加情報
 

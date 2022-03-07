@@ -2,6 +2,8 @@
 
 環境ログは、プロジェクトにおける技術的な問題を診断し、解決するために非常に重要です。 Liferay DXP Cloudでは、ユーザーがDXP CloudのコンソールやOS端末からアクセスしてダウンロードできる様々な環境ログを提供しています。
 
+<a name="log-types" />
+
 ## ログの種類
 
 Liferay DXP Cloudでは、環境サービスに対して3種類のログを提供しています：
@@ -11,6 +13,8 @@ Liferay DXP Cloudでは、環境サービスに対して3種類のログを提�
 ***Application Logs** ：これらのログは、アプリケーションが実行され、ユーザーがアクセスした後に生成されたランタイム情報をリストアップします。 ステータス情報の例としては、イメージが正常に引き出されたとき、コンテナが作成・起動されたとき、レディネスプローブやライヴネスプローブが失敗したときなどがあります。
 
 ***Application Logs** ：これらのログは、アプリケーションが実行され、ユーザーがアクセスした後に生成されたランタイム情報をリストアップします。
+
+<a name="log-structure" />
 
 ## ログ構造
 
@@ -34,7 +38,9 @@ DXP Cloudの多くのログには、このメッセージが直接サービス�
 
 ![インスタンスのドロップダウンメニューをクリックすると、すべてのインスタンスが表示されます](./reading-dxp-cloud-service-logs/images/01.png)
 
-インスタンスIDの形式は、サービスがどのような配布タイプ（展デプロイまたはステートフルセット）として構成されているかによって異なります。 詳細は、 [Understanding Deployment Types](../build-and-deploy/understanding-deployment-types.md)を参照してください。
+インスタンスIDの形式は、サービスがどのような配布タイプ（展デプロイまたはステートフルセット）として構成されているかによって異なります。 詳細は、 [デプロイタイプについて](../build-and-deploy/understanding-deployment-types.md) を参照してください。
+
+<a name="instance-id-for-deployment-type-logs" />
 
 ### 配布タイプログのインスタンスID
 
@@ -52,6 +58,8 @@ Jun 29 10:07:57.102 build-214 [liferay-7485669bdd-7ktfl] [LIFERAY] Executing 010
 
 * ランダムに生成された **コンテナID** ：この例では、 `7ktfl`となっています。 サービスが起動するたびに新しいコンテナが作成されるため（例えば、新しいビルドをデプロイした後サービスが再起動した場合など）、新しいコンテナIDが生成されます。 バージョンIDが変更されない場合でも、再起動すると新しいコンテナIDが生成されることに注意してください（例えば、 [ライブネスやレディネスプローブの失敗](../troubleshooting/self-healing.md) が再起動をトリガーした場合など）。
 
+<a name="instance-id-for-stateful-set-type-logs" />
+
 ### ステートフルセットタイプログのインスタンスID
 
 ステートフルセットタイプのログは、インスタンスIDが小さく、一貫性があります。 以下はステートフルセットタイプサービスのログメッセージの例です：
@@ -67,6 +75,8 @@ Jun 29 07:44:44.676 build-214 [search-0] #  - Creating and Starting rollup jobs 
 * イテレート（非ランダム）**ノードID** ：この例では、 `0`。 このIDは、新しいバージョンのサービスをデプロイしても同じです。
 
 ステートフルセットタイプのサービスのインスタンスID全体は、サービスの各ノードで常に同じものが使用されます。 これにより、サービスが再びデプロイされた後でも、同じインスタンスIDを使用して、同じ [ボリューム](../build-and-deploy/configuring-persistent-file-storage-volumes.md)を持つクラスタ内のノードを確実に識別することができます。
+
+<a name="accessing-logs-via-the-dxp-cloud-console" />
 
 ## DXP Cloudコンソールを介したログへのアクセス
 
@@ -85,6 +95,8 @@ DXP Cloudのコンソールから環境サービスログにアクセスする�
 また、各サービスのログは、各サービスの専用ページの **ログ** タブでご覧いただけます。
 
 ![図2：各サービスの専用ページの［Logs］タブから、各サービスのログにアクセスし、ダウンロードすることができます。](./reading-dxp-cloud-service-logs/images/03.png)
+
+<a name="accessing-logs-via-the-terminal" />
 
 ## ターミナルからログにアクセスする
 
@@ -107,6 +119,8 @@ lcp log -p <environment-id>
 ```shell
 lcp log -p <environment-id> -s <service-id>
 ```
+
+<a name="additional-information" />
 
 ## 追加情報
 

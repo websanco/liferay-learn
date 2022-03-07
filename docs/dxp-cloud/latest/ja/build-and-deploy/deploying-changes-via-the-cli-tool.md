@@ -2,19 +2,21 @@
 
 CLIツールを使用すると、Jenkinsのビルドをトリガーしたり、DXP Cloud Management Consoleを使用することなく、ローカルプロジェクトの変更を直接デプロイすることができます。 このチュートリアルでは、Liferayサービスにポータル・プロパティを追加し、CLIツールを使用して `dev` にデプロイするプロセスを説明します。
 
-はじめに、まず [のCLIツール](../reference/command-line-tool.md) をインストールして使用できる状態にし、プロジェクトのGitリポジトリのローカルコピー（例, [GitHub](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository-from-github), [Bitbucket](https://confluence.atlassian.com/bitbucketserver/clone-a-repository-790632786.html), [GitLab](https://docs.gitlab.com/ee/university/training/topics/getting_started.html#instantiate-workflow-with-clone)など）が必要です。)
+はじめに、まず [のCLIツール](../reference/command-line-tool.md) をインストールして使用できる状態にし、プロジェクトのGitリポジトリのローカルコピー（例, [GitHub](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository-from-github) , [Bitbucket](https://confluence.atlassian.com/bitbucketserver/clone-a-repository-790632786.html) , [GitLab](https://docs.gitlab.com/ee/university/training/topics/getting_started.html#instantiate-workflow-with-clone) など）が必要です。)
 
 ```{note}
-CLIツールは、プロジェクトへの変更を迅速にデプロイする方法を提供しますが、大部分のデプロイにはCIサービスとDXP Cloudコンソールを使用することがベストプラクティスです。 方法については、[Deploying Changes via the DXP Cloud Console](./deploying-changes-via-the-dxp-cloud-console.md)を参照してください。
+CLIツールは、プロジェクトへの変更を迅速にデプロイする方法を提供しますが、大部分のデプロイにはCIサービスとDXP Cloudコンソールを使用することがベストプラクティスです。 方法については、 [DXP Cloudコンソールによる変更の展開](./deploying-changes-via-the-dxp-cloud-console.md) を参照してください。
 ```
 
-プロジェクトでバージョン3.x.xのサービスを使用している場合、CLIツールで変更をデプロイする前に、まずそれらの`LCP.json`ファイルを[準備](#preparing-lcpjson-files-in-project-version-3)する必要があります。
+プロジェクトでバージョン3.x.xのサービスを使用している場合、CLIツールで変更をデプロイする前に、まずそれらの`LCP.json`ファイルを [準備](#preparing-lcpjson-files-in-project-version-3) する必要があります。
 
 そうでなければ、このステップをスキップして、デプロイメントプロセスを開始することができます。
 
 * [Liferayサービスへのポータル・プロパティの追加](#adding-a-portal-property-to-the-liferay-service)
 * [CLIツールで新しいビルドをデプロイする](#deploying-your-new-build-via-the-cli-tool)
 * [サンプルデプロイメントの検証](#verifying-your-sample-deployment)
+
+<a name="preparing-lcpjson-files-in-project-version-3" />
 
 ## プロジェクトバージョン3でのLCP.jsonファイルの準備
 
@@ -41,6 +43,8 @@ liferay.workspace.lcp.jenkins.image=liferaycloud/jenkins:2.176.1-3.1.1
 `liferay.workspace.lcp.jenkins.image`プロパティは、`ci`サービスに対応しています。
 ```
 
+<a name="adding-a-portal-property-to-the-liferay-service" />
+
 ## Liferayサービスへのポータル・プロパティの追加
 
 デプロイメント ライフサイクルを開始するには、 `dev` 環境の Liferay サービスにポータル プロパティを追加し、変更をコミットします。
@@ -60,7 +64,7 @@ liferay.workspace.lcp.jenkins.image=liferaycloud/jenkins:2.176.1-3.1.1
    ```
 
    ```{note}
-   バージョン3.x.xのサービスを使用している場合は、適切なフォルダパスは、`lcp/liferay/deploy/dev`となります。 ディレクトリ構造の違いについては、[DXP Cloud Project Changes in Version 4](../reference/dxp-cloud-project-changes-in-version-4.md)を、サービスのバージョンを確認する方法については、[Understanding Service Stack Versions](../reference/understanding-service-stack-versions.md)を参照してください。
+   バージョン3.x.xのサービスを使用している場合は、適切なフォルダパスは、`lcp/liferay/deploy/dev`となります。 ディレクトリ構造の違いについては、 [バージョン4におけるDXP Cloudプロジェクトの変更](../reference/dxp-cloud-project-changes-in-version-4.md) を、サービスのバージョンを確認する方法については、 [サービススタックのバージョンについて](../reference/understanding-service-stack-versions.md) を参照してください。
    ```
 
 1. 以下のコマンドで変更内容を追加し、コミットします。
@@ -72,6 +76,8 @@ liferay.workspace.lcp.jenkins.image=liferaycloud/jenkins:2.176.1-3.1.1
    ```bash
    git commit -m "Test - Adding Portal Property"
    ```
+
+<a name="deploying-your-new-build-via-the-cli-tool" />
 
 ## CLIツールで新しいビルドをデプロイする
 
@@ -121,6 +127,8 @@ liferay.workspace.lcp.jenkins.image=liferaycloud/jenkins:2.176.1-3.1.1
 
    このプロセスでは、新しいビルドがプロジェクトに追加され、 `dev` 環境にデプロイされます。 このとき、Liferay サービスは新しいポータル・プロパティで再起動する必要があります。
 
+<a name="verifying-your-sample-deployment" />
+
 ## サンプルデプロイメントの検証
 
 ビルドが正常にデプロイされ、 `dev` 環境のLiferayサービスが **Ready** になったら、以下の手順で変更内容を確認します。
@@ -134,6 +142,8 @@ liferay.workspace.lcp.jenkins.image=liferaycloud/jenkins:2.176.1-3.1.1
 1. ホームページの下部にWebサーバーのノードが表示されていることを確認します。
 
    ![ホームページの下部にウェブサーバノードが表示されていることを確認します。](./deploying-changes-via-the-cli-tool/images/03.png)
+
+<a name="additional-information" />
 
 ## 追加情報
 

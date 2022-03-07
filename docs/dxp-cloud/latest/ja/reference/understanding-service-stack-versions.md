@@ -16,9 +16,13 @@ liferaycloud/liferay-dxp:7.2.10-sp1-fp4-3.0.21
 
 ![環境にナビゲートして最初に表示されるのは、サービスのバージョンを示す1ページです。](./understanding-service-stack-versions/images/01.png)
 
+<a name="verifying-the-service-stack-version-from-the-repository" />
+
 ## リポジトリからサービススタックのバージョンを確認する
 
 Dockerイメージのバージョンは、サービススタックが4.x.xにアップグレードされているかどうかに応じて、異なる場所に定義されています。 そのため、各バージョンごとに異なる場所を確認する必要があります。 4.x.xにアップグレードする前と後での違いについては、 [バージョン4におけるDXP Cloudプロジェクトの変更](./dxp-cloud-project-changes-in-version-4.md)を参照してください。
+
+<a name="checking-before-the-upgrade-to-4xx" />
 
 ### 4.x.xへのアップグレード前の確認事項
 
@@ -34,6 +38,8 @@ liferay.workspace.lcp.jenkins.image=liferaycloud/jenkins:2.176.1-3.1.1
 ```
 
 上記の例では、各サービスの名前の末尾が `3.x.x`となっており、サービススタックのバージョンが3.x.xであることを示しています。
+
+<a name="checking-after-the-upgrade-to-4xx" />
 
 ### 4.x.xへのアップグレード後の確認事項
 
@@ -54,6 +60,8 @@ liferay.workspace.lcp.jenkins.image=liferaycloud/jenkins:2.176.1-3.1.1
 ```tip::
    最新の機能を利用するには、お使いのサービススタックをバージョン ``4.x.x`` にアップグレードすることをお勧めします。 アップグレードの手順については、Upgrading Your DXP Cloud Stack <./upgrading-your-dxp-cloud-stack.md>__ を参照してください。
 ```
+
+<a name="additional-information" />
 
 ## 追加情報
 

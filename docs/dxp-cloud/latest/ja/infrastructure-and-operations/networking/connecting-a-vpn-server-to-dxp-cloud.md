@@ -4,6 +4,8 @@ DXP CloudのVPN機能を使って、DXP Cloudのサービスをプライベー�
 
 たとえば、企業のVPNでのみアクセス可能なディレクトリまたはアプリケーションにDXP Cloudサービスを接続する必要がある場合があります。 その方法はこちらでご紹介しています。
 
+<a name="creating-a-vpn-configuration" />
+
 ## VPN設定の作成
 
 1. あなたの環境の **設定** タブに移動します。
@@ -54,6 +56,8 @@ DXP CloudのVPN機能を使って、DXP Cloudのサービスをプライベー�
 
 VPN設定が作成されました。 ただし、VPNの詳細ページから手動で接続するまでは、VPNは接続されていません。
 
+<a name="managing-your-vpn-configuration" />
+
 ## VPN設定の管理
 
 VPN設定を作成した後は、詳細ページで接続状況や設定の詳細を確認したり、設定の編集や接続・切断を行うことができます。
@@ -67,6 +71,8 @@ VPN設定を作成した後は、詳細ページで接続状況や設定の詳�
 ```{note}
 VPNの状態（接続されているか、されていないか）は、VPNの詳細ページと、あなたの環境の`設定`ページのVPNセクションの両方から見ることができます。
 ```
+
+<a name="connecting-and-disconnecting-the-vpn" />
 
 ### VPNの接続と切断
 
@@ -94,6 +100,8 @@ VPNを切断すると、DXPクラウドとの外部サービスとの通信が�
 
 VPNを切断したときの影響を確認するボックスにチェックを入れ、 ［**Disconnect VPN**］ をクリックすると、すぐにVPNを切断することができます。 一度VPNを切断すると、再び設定を変更することができます。
 
+<a name="editing-the-configuration" />
+
 ### 設定の編集
 
 それが作成された後は、 **VPNは、現在接続されていない限り、** VPN構成（転送ポートを含む）のいずれかの内容を変更することができます 。 VPNが接続されている場合は、設定を編集する前に [切断](#connecting-and-disconnecting-the-vpn) してください。
@@ -101,6 +109,8 @@ VPNを切断したときの影響を確認するボックスにチェックを�
 設定を編集するには、その環境の詳細ページに行き、右上のアクションメニューから ［**Edit...**］ を選択します。 初めてVPN設定を作成したときと同じ画面が表示されます。
 
 ![VPNが接続されていない状態で、アクションメニューの「編集」ボタンをクリックすると、設定を変更することができます。](./connecting-a-vpn-server-to-dxp-cloud/images/09.png)
+
+<a name="deleting-the-configuration" />
 
 ### 設定内容の削除
 
@@ -110,11 +120,13 @@ VPNを切断したときの影響を確認するボックスにチェックを�
 
 1. Delete VPNページでは、チェックボックスにチェックを入れて削除を確認します。 その時にVPNが接続されていれば、さらにチェックボックスが表示され、効果を確認することができます。
 
-    ![[VPNの削除]のページ。](./connecting-a-vpn-server-to-dxp-cloud/images/10.png)
+    ![ [VPNの削除]のページ。](./connecting-a-vpn-server-to-dxp-cloud/images/10.png)
 
 1. ページの下部にある［Delete VPN］をクリックします。
 
 これでVPNは削除され、お客様の環境では使用できなくなります。 代わりに、新しいVPN構成を追加して、ご使用の環境に接続してください。
+
+<a name="additional-information" />
 
 ## 追加情報
 

@@ -6,6 +6,8 @@ DXP Cloudのコマンドラインツールは、速度、制御、トレーサ�
    バックアップサービスとデータベースサービスでは、シェルアクセスはできません。 
 ```
 
+<a name="accessing-the-shell-via-the-web-console" />
+
 ## Webコンソールを介してシェルにアクセスする
 
 次の手順に従って、DXP Cloud Webコンソール経由でシェルにアクセスします。
@@ -15,6 +17,8 @@ DXP Cloudのコマンドラインツールは、速度、制御、トレーサ�
 1. アクセスするサービスを選択し、[**Shell**]タブをクリックします。
 
 ![図1：DXP CloudのWebコンソールからシェルにアクセスします。](./shell-access/images/01.png)
+
+<a name="accessing-the-shell-via-a-terminal" />
 
 ## ターミナルからシェルにアクセスする
 
@@ -31,6 +35,8 @@ DXP Cloudのコマンドラインツールは、速度、制御、トレーサ�
 ```shell
 lcp shell -p projectID -s serviceID
 ```
+
+<a name="shell-limitations" />
 
 ## シェルの制限
 

@@ -2,6 +2,8 @@
 
 各プロジェクト環境でのアクティビティを把握することは非常に重要です。 Liferay DXP Cloudでは、ビルド、デプロイメント、その他のプロジェクトアクティビティをWebコンソールで監視することができます。
 
+<a name="types-of-environment-activities" />
+
 ## 環境アクティビティの種類
 
 各環境の中で、アクティビティは **Builds and Deployments** と **General Activities** の２つにセクションに分類されています。
@@ -17,6 +19,8 @@
 ***メンバーシップアクティビティ** : 例えば、環境への招待が送られるときや、新しいメンバーが環境に参加するときなどです。
 
 どちらのセクションでも、アクティングチームのメンバーとアクティビティの時間を指定しています。
+
+<a name="viewing-environment-activities" />
 
 ## 環境アクティビティの表示
 
@@ -39,6 +43,8 @@
 ```{note}
    また、プロジェクト環境のすべてのビルドとデプロイメントのアクティビティは、［Builds］および［Deployments］ページで確認できます。 これらのページの詳細については、［Overview of DXP Cloud Deployment Workflow <../build-and-deploy/overview-of-the-dxp-cloud-deployment-workflow.md>］_ を参照してください。
 ```
+
+<a name="additional-information" />
 
 ## 追加情報
 

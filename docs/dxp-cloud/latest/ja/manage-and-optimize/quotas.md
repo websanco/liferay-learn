@@ -21,6 +21,6 @@
 * サービスごとの拡張
 * サービスあたりのメモリ
 
-上記のリソース割り当ては、各サービスの `lcp.json` ファイルで設定できます。 [Configuration via LCP.json](../reference/configuration-via-lcp-json.md)を参照してください。
+上記のリソース割り当ては、各サービスの `lcp.json` ファイルで設定できます。 [LCP.jsonを介した設定](../reference/configuration-via-lcp-json.md) を参照してください。
 
-リソースの割り当ての増加を要求するには、 [Help Center ticket](https://liferay-support.zendesk.com/agent/)を開いてください。
+リソースの割り当ての増加を要求するには、 [Help Center ticket](https://liferay-support.zendesk.com/agent/) を開いてください。

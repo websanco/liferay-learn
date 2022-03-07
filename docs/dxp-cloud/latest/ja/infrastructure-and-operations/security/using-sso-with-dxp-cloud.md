@@ -6,6 +6,8 @@ SAMLを使用してSSOを実行するには、クライアント、サービス�
 
 このシナリオでは、DXP Cloudはサービスプロバイダーとして機能します。 DXP Cloudにログインしようとしているお客様がクライアントです。 IDプロバイダーは、顧客が管理するエンタープライズディレクトリソリューションです。
 
+<a name="enabling-sso-for-a-dxp-cloud-project" />
+
 ## DXP CloudプロジェクトのSSOの有効化
 
 DXP CloudプロジェクトでSSOを有効にするには、次の手順を実行する必要があります：
@@ -13,6 +15,8 @@ DXP CloudプロジェクトでSSOを有効にするには、次の手順を実�
 1. [IdPメタデータをDXP Cloudチームに提供する](#provide-identity-provider-metadata-to-the-dxp-cloud-team)
 1. [DXP Cloudチームは提供されたIdPデータをインポートし、サービスプロバイダー（SP）メタデータを提供します](#dxp-cloud-team-imports-provided-idp-data-and-provides-service-provider-metadata)
 1. [Liferay DXP Cloudチームが提供するSPメタデータをインポートする](#import-sp-metadata-provided-by-the-liferay-dxp-cloud-team)
+
+<a name="provide-identity-provider-metadata-to-the-dxp-cloud-team" />
 
 ### IDプロバイダーメタデータをDXP Cloudチームに提供する
 
@@ -37,7 +41,9 @@ Microsoft ADFSを使用するクライアントは、SAMLを使用してSSOを�
 | IdPシングルサインオンURL | デフォルト設定は `/ adfs/ls`です。 例： <http://adfs.example.com/adfs/ls/>                |
 | IdP署名証明書        | DERエンコードされたバイナリX.509証明書ファイル                                                  |
 
-IdPメタデータが生成されたら、 [はDXP Cloudチームでチケットを開きます](https://help.liferay.com/hc/)。 IdPメタデータは、XMLファイルまたはURLエンドポイントのいずれかの形式で送信できます（[https：// localhost：8080/c/saml/metadata](https://localhost:8080/c/saml/metadata) は基本的な例です）。
+IdPメタデータが生成されたら、 [はDXP Cloudチームでチケットを開きます](https://help.liferay.com/hc/) 。 IdPメタデータは、XMLファイルまたはURLエンドポイントのいずれかの形式で送信できます（ [https：// localhost：8080/c/saml/metadata](https://localhost:8080/c/saml/metadata) は基本的な例です）。
+
+<a name="dxp-cloud-team-imports-provided-idp-data-and-provides-service-provider-metadata" />
 
 ### DXP Cloudチームは提供されたIdPデータをインポートし、サービスプロバイダーのメタデータを提供します
 
@@ -48,9 +54,13 @@ DXP Cloudチームは、次のSPメタデータ値をクライアントに提供
 | アサーションコンシューマサービス（ACS）URL | DXP Cloudが受信したSAML応答。 これは常に <https://auth.liferay.cloud>からのアドレスサーバーになります |
 | オーディエンスURL               | 顧客のIDプロバイダーにアクセスするために使用されるURL Liferay Cloud                              |
 
+<a name="import-sp-metadata-provided-by-the-liferay-dxp-cloud-team" />
+
 ### Liferay DXP Cloudチームが提供するSPメタデータをインポートする
 
 DXP CloudチームからSPメタデータを受け取ったら、SPメタデータ値をIdPに入力します。
+
+<a name="using-sso" />
 
 ## SSOの使用
 

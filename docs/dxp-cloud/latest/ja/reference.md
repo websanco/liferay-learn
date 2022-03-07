@@ -15,13 +15,13 @@ reference/platform-limitations.md
 reference/example-configuration-files.md
 ```
 
-- [DXP Cloud Infrastructure](./reference/dxp-cloud-infrastructure.md)
-- [Configuration via LCP.json](./reference/configuration-via-lcp-json.md)
-- [Understanding Service Stack Versions](./reference/understanding-service-stack-versions.md)
-- [Upgrading Your DXP Cloud Stack](./reference/upgrading-your-dxp-cloud-stack.md)
-- [DXP Cloud Project Changes in Version 4](./reference/dxp-cloud-project-changes-in-version-4.md)
+- [DXP Cloudインフラストラクチャー](./reference/dxp-cloud-infrastructure.md)
+- [LCP.jsonを介した設定](./reference/configuration-via-lcp-json.md)
+- [サービススタックのバージョンについて](./reference/understanding-service-stack-versions.md)
+- [DXP Cloudスタックのアップグレード](./reference/upgrading-your-dxp-cloud-stack.md)
+- [バージョン4におけるDXP Cloudプロジェクトの変更](./reference/dxp-cloud-project-changes-in-version-4.md)
 - [Upgrading to a High Availability Subscription](./reference/upgrading-to-a-high-availability-subscription.md)
-- [Command-Line Tool](./reference/command-line-tool.md)
-- [Defining Environment Variables](./reference/defining-environment-variables.md)
-- [Platform Limitations](./reference/platform-limitations.md)
+- [コマンドラインツール](./reference/command-line-tool.md)
+- [環境変数の定義](./reference/defining-environment-variables.md)
+- [プラットフォームの制限](./reference/platform-limitations.md)
 - [Example Configuration Files](./reference/example-configuration-files.md)

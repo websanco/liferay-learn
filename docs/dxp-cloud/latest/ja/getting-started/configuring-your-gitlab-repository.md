@@ -7,6 +7,8 @@ DXP Cloudオンボーディングメールを受信すると、 `dxpcloud` 組�
 
 プロビジョニングされたリポジトリはGitHubにありますが、Jenkinsサービスのバージョン3.2.0以降ではGitLabリポジトリに転送できます。
 
+<a name="preparing-the-jenkins-service" />
+
 ## Jenkinsサービスの準備
 
 すでにDXP Cloudのインスタンスで [version 4.x.x services](../reference/understanding-service-stack-versions.md) を使用している場合は、JenkinsサービスはすでにGitLabと互換性があります。 アップグレードの詳細については、 [DXP Cloudスタックのアップグレード](../reference/upgrading-your-dxp-cloud-stack.md) を参照してください。
@@ -28,14 +30,16 @@ liferaycloud/jenkins:2.222.1-3.2.0
 1. Jenkinsサービスをデプロイします。
 
 ```{note}
-    Jenkinsfile をカスタマイズしている場合は、以下のガイドに従って デフォルトの Jenkinsfile <../platform-services/continuous-integration.md#extending-the-default-jenkinsfile>`__を延長します。
+    Jenkinsfile をカスタマイズしている場合は、以下のガイドに従って [デフォルトの Jenkinsfile を延長します](../platform-services/continuous-integration.md#extending-the-default-jenkinsfile) _。
 ```
+
+<a name="creating-a-gitlab-repository" />
 
 ## GitLabリポジトリの作成
 
 まず、新しいGitLabリポジトリを作成します：
 
-1. [GitLab](https://gitlab.com)に移動します。
+1. [GitLab](https://gitlab.com) に移動します。
 
 1. ［**New project**］ をクリックします。
 
@@ -50,6 +54,8 @@ liferaycloud/jenkins:2.222.1-3.2.0
 1. ［**Initialize repository with a README**］ がチェックされていないことを確認します。
 
 1. ［**Create project**］ をクリックします。
+
+<a name="transferring-from-github-to-gitlab" />
 
 ## GitHubからGitLabへの転送
 
@@ -71,13 +77,15 @@ liferaycloud/jenkins:2.222.1-3.2.0
 
     `git push gitlab master`
 
-GitHub リポジトリの作成、クローン、プッシュについてのヘルプが必要な場合は、 [GitLab's documentation](https://docs.gitlab.com/ee/gitlab-basics/start-using-git.html)を参照してください。
+GitHub リポジトリの作成、クローン、プッシュについてのヘルプが必要な場合は、 [GitLab's documentation](https://docs.gitlab.com/ee/gitlab-basics/start-using-git.html) を参照してください。
+
+<a name="generating-access-tokens-for-gitlab" />
 
 ## GitLabのアクセストークンの生成
 
 次に、JenkinsのビルドをトリガーするためにWebhookで使用するアクセストークンを作成します。
 
-1. [パーソナル・アクセストークンのページ](https://gitlab.com/profile/personal_access_tokens)に移動します。
+1. [パーソナル・アクセストークンのページ](https://gitlab.com/profile/personal_access_tokens) に移動します。
 
     ![後で再びアクセスできないGitLabの個人アクセストークンを作成します。](./configuring-your-gitlab-repository/images/03.png)
 
@@ -92,6 +100,8 @@ GitHub リポジトリの作成、クローン、プッシュについてのヘ�
 1. [**Create personal access token**]をクリックします。
 
 1. アクセストークンをコピーしてどこかに保存します（アクセストークンが再度表示されないためです）。
+
+<a name="connecting-gitlab-to-your-jenkins-service" />
 
 ## GitLabをJenkinsサービスに接続する
 
@@ -112,6 +122,8 @@ GitHub リポジトリの作成、クローン、プッシュについてのヘ�
 
 これらの環境変数を更新した後、Jenkinsサービスは再起動します。 これで、新しいリポジトリでプッシュされたブランチとプルリクエストがビルドをトリガーします。
 
+<a name="connecting-to-a-private-gitlab-server" />
+
 ## プライベートGitLabサーバーへの接続
 
 プライベートGitLabサーバーを使用するには、Jenkinsサービスで追加の環境変数を設定する必要があります：
@@ -121,6 +133,8 @@ GitHub リポジトリの作成、クローン、プッシュについてのヘ�
 | `LCP_CI_SCM_SERVER_HOST` | [private host URL] |
 
 `LCP_CI_SCM_SERVER_HOST` 変数に、プライベートGitLabサーバーのベースURLを設定します（例えば、 `http://private.gitlab.server.com/`）。 これにより、ビルドを生成してリポジトリのブランチにリンクするときにCIがコードベースを取得するために使用するサーバーURLが設定されます。 デフォルトでは、CIはGitLabのベースURLとして `https://gitlab.com/` を使用しています。
+
+<a name="additional-gitlab-webhook-configurations" />
 
 ## 追加のGitLab Webhook設定
 
@@ -142,9 +156,13 @@ Liferay DXP CloudのJenkinsサービスは、選択したgit SCMプロバイダ�
 
 1. ［**変更を保存**］ クリックします。
 
+<a name="verifying-builds" />
+
 ## ビルドの確認
 
 プッシュされたブランチとマージリクエスト（GitLabのプルリクエストに相当）は、DXP Cloudコンソールの[**Builds**]タブから表示またはデプロイできるビルドをトリガーする必要があります。 Jenkins サービスとの統合を設定したら、次のステップとして、インテグレーションが成功したかどうかを確認するためにビルドを検証します。
+
+<a name="verifying-builds-from-pushed-branches" />
 
 ### プッシュされたブランチからのビルドの確認
 
@@ -166,6 +184,8 @@ Liferay DXP CloudのJenkinsサービスは、選択したgit SCMプロバイダ�
 
 1. **Builds** ページで、プッシュされたブランチのビルドが表示されることを確認します。
 
+<a name="verifying-builds-from-merge-requests" />
+
 ### マージリクエストからのビルドの確認
 
 新しいマージリクエストがJenkinsビルドをトリガーすることを確認します：
@@ -181,6 +201,8 @@ Liferay DXP CloudのJenkinsサービスは、選択したgit SCMプロバイダ�
     ![Buildsページで、ブランチのリンクを確認し、ビルドをコミットします。](./configuring-your-gitlab-repository/images/05.png)
 
 1. リンクが正しいGitLabページにリダイレクトすることを確認します。
+
+<a name="additional-information" />
 
 ## 追加情報
 

@@ -2,7 +2,7 @@
 
 DXP Cloudのバックアップサービスでは、環境のデータベースと `LIFERAY_HOME/data` フォルダの全コンテンツのバックアップを作成します。 このコンテンツはアーカイブファイル（`.gz` 、 `.tgz` ）として保存されており、DXP Cloudのコンソールからダウンロードすることができます。
 
-また、ユーザーはDXP Cloudコンソール</a>、または [バックアップAPI](#backup-service-apis)を使用して、環境のバックアップをダウンロードまたはアップロードすることができます
+また、ユーザーはDXP Cloudコンソール</a>、または [バックアップAPI](#backup-service-apis) を使用して、環境のバックアップをダウンロードまたはアップロードすることができます
 。</p> 
 
 
@@ -13,6 +13,8 @@ DXP Cloudのバックアップサービスでは、環境のデータベース�
 
 
 
+
+<a name="downloading-backups-via-the-console" />
 
 ## コンソールによるバックアップのダウンロード
 
@@ -29,7 +31,7 @@ DXP Cloudのバックアップサービスでは、環境のデータベース�
    
 
     ```{note}
-       バックアップサービスがまだバージョン4.2以上にアップデートされていない場合、データベースボリュームは ``.gz`` ではなく ``.tgz`` アーカイブとしてダウンロードされます。
+       バックアップサービスがまだバージョン4.2以上にアップデートされていない場合、データベースボリュームは gz` ではなく `.tgz` アーカイブとしてダウンロードされます。
     ```
 
 
@@ -43,6 +45,8 @@ DXP Cloudのバックアップサービスでは、環境のデータベース�
 
 
 
+
+<a name="uploading-backups-via-the-console" />
 
 ## コンソールによるバックアップのアップロード
 
@@ -75,11 +79,15 @@ DXP Cloudはアップロードしたファイルを使用してバックアッ�
 
 
 
+<a name="backup-service-apis" />
+
 ## バックアップサービスのAPI
 
 バックアップサービスにはAPIが用意されており、バックアップのダウンロードやアップロードにも利用できます。 これらのAPIは、 `curl`のようなコマンドラインツールを使って呼び出すことができます。
 
 
+
+<a name="getting-the-host-name" />
 
 ### ホスト名の取得
 
@@ -97,6 +105,8 @@ DXP Cloudはアップロードしたファイルを使用してバックアッ�
 * ホスト名： `backup-lfrjoebloggs-prd.lfr.cloud`
 
 
+
+<a name="authentication" />
 
 ### 認証
 
@@ -121,11 +131,13 @@ curl -X POST \
 
 
 ```{note}
-   注：ヘッダー dxpcloud-authorization にユーザートークンを渡すことは、バックアップサービスのバージョン 3.2.0 以降でのみ機能します。 それ以前のバージョンは、少なくとも ``3.2.0`` にアップグレードする必要があります。 以前のバージョンへのリクエストには ``Authorization.Bearer <PROJECT_MASTER_TOKEN>``を使用します。 プロジェクトマスタートークンは、Liferay DXP Cloudコンソールの任意のシェルで ``env | grep LCP_PROJECT_MASTER_TOKEN`` コマンドを実行することで見つけることができます。
+   注：ヘッダー dxpcloud-authorization にユーザートークンを渡すことは、バックアップサービスのバージョン 3.2.0 以降でのみ機能します。 それ以前のバージョンは、少なくとも .2.0` にアップグレードする必要があります。 以前のバージョンへのリクエストには ` [Authorization.Bearer](PROJECT_MASTER_TOKEN) `を使用します。 プロジェクトマスタートークンは、Liferay DXP Cloudコンソールの任意のシェルで `env | grep LCP_PROJECT_MASTER_TOKEN` コマンドを実行することで見つけることができます。
 ```
 
 
 
+
+<a name="download-database-api" />
 
 ### データベースAPIのダウンロード
 
@@ -157,11 +169,13 @@ curl -X GET \
 
 
 ```{note}
-   バックアップサービスがまだバージョン4.2以上にアップデートされていない場合、データベースボリュームは ``.gz`` ではなく ``.tgz`` アーカイブとしてダウンロードされます。
+   バックアップサービスがまだバージョン4.2以上にアップデートされていない場合、データベースボリュームは gz` ではなく `.tgz` アーカイブとしてダウンロードされます。
 ```
 
 
 
+
+<a name="download-data-volume-api" />
 
 ### Data Volume APIのダウンロード
 
@@ -192,13 +206,15 @@ curl -X GET \
 
 
 
+<a name="upload-backup-api" />
+
 ### バックアップAPIのアップロード
 
 アップロードバックアップAPIを使ってDXP Cloudにバックアップをアップロードするには、以下の手順に従ってください。
 
-1. [データベースファイル作成します](#creating-the-database-file)。
+1. [データベースファイル作成します](#creating-the-database-file) 。
 
-1. [ボリュームファイル作成します](#creating-the-volume-file)。
+1. [ボリュームファイル作成します](#creating-the-volume-file) 。
 
 1. [データベースとボリュームのファイルを使って、](#invoking-the-backup-api) バックアップAPIを起動します。
 
@@ -232,11 +248,15 @@ curl -X POST \
 
 
 
+<a name="preparing-the-database-and-document-library-for-upload" />
+
 ## データベースとドキュメントライブラリのアップロード準備
 
 お客様の環境のバックアップをDXP Cloudにアップロードするためには、その環境のデータベースとドキュメントライブラリが別々のアーカイブファイルとして準備されている必要があります。
 
 
+
+<a name="creating-the-database-file" />
 
 ### データベースファイルの作成
 
@@ -252,7 +272,7 @@ mysqldump -uroot -ppassword --add-drop-database --databases lportal | gzip -c | 
 
 
 ```{note}
-   お使いのBackupサービスが少なくともバージョン ``4.2`` にアップデートされていない場合には、以下のコマンドを実行して、アーカイブを ``.tgz`` ファイルに変換する必要があります。tar zcvf database.tgz database.gz``. そして、出来上がった［``.tgz``］のアーカイブを使ってアップロードします。
+   お使いのBackupサービスが少なくともバージョン  にアップデートされていない場合には、以下のコマンドを実行して、アーカイブを `.tgz` ファイルに変換する必要があります。tar zcvf database.tgz database.gz`. そして、出来上がった［`.tgz`］のアーカイブを使ってアップロードします。
 ```
 
 
@@ -277,6 +297,8 @@ USE `lportal`;
 
 
 
+<a name="creating-the-volume-file" />
+
 ### ボリュームファイルの作成
 
 このコマンドを実行すると、データボリュームが圧縮されます。
@@ -289,6 +311,8 @@ cd $LIFERAY_HOME/data && tar -czvf volume.tgz document_library
 
 
 
+
+<a name="additional-information" />
 
 ## 追加情報
 

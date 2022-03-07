@@ -13,17 +13,23 @@ DXP Cloudスタックのバージョン3.xと4.xの間で、サービスのDocke
 * [バックアップサービスの変更](#backup-service-changes)
 * [既知の制限](#known-limitations)
 
+<a name="changes-to-docker-image-definitions" />
+
 ## Dockerイメージ定義の変更
 
 DXP Cloudのバージョン4.xのサービス用Dockerイメージは、プロジェクトの `gradle.properties` ファイルに定義されなくなりました。 これらは、各サービスの `LCP.json` で定義されるようになりました。
 
 DXP Cloud Stackバージョン4にアップグレードすると、すべてのサービスのDockerイメージバージョンが `3.xx` から `4.xx`に変更されます。 これらのイメージの変更は、DXP Cloudプロジェクトの構造と機能の方法に対する組織の変更に加えて行われます。
 
+<a name="project-organization-changes" />
+
 ## プロジェクト組織の変更
 
 リポジトリの最大の変更点は、各サービスのファイルがリポジトリのルートにあるフォルダーに移動されたことです。 `lcp` フォルダーが削除され、これらのサービスのパスに含まれなくなりました。 これらのフォルダー自体は、Liferayのワークスペース構造に類似するように再編成されています。 <!-- TODO: Point to workspace documentation -->
 
 リポジトリのルートにあった他のいくつかのファイル（ `gradle.properties`、 `build.gradle`、 `settings.gradle`を含む）も、 `liferay` サービスに移動されました。
+
+<a name="liferay-service-changes" />
 
 ## Liferayサービスの変更
 
@@ -43,14 +49,18 @@ DXP Cloud Stackバージョン4にアップグレードすると、すべての�
 | ライセンス                      | lcp/liferay/license /{ENV}/ | lcp/configs /{ENV}/ deploy /           |
 
 ```{note}
-   configs/{ENV}/`` ディレクトリ内のファイルは、オーバーライドとして DXP Cloud の Liferay コンテナ内の ``LIFERAY_HOME`` ディレクトリにコピーされます。
+   configs/{ENV}/ ディレクトリ内のファイルは、オーバーライドとして DXP Cloud の Liferay コンテナ内の `LIFERAY_HOME` ディレクトリにコピーされます。
 ```
 
 ホットフィックスを直接リポジトリにコミットするのではなく、Liferayサービスのデプロイ時に自動的に追加される新しいCIサービス環境変数が用意されています。 詳細については、 [Installing Hotfixes with an Environment Variable](#installing-hotfixes-with-an-environment-variable) を参照してください。
 
+<a name="custom-script-execution" />
+
 ### カスタムスクリプトの実行
 
 `liferay/configs /{ENV}/ scripts /` 配置されたスクリプトは、rootユーザーではなく `liferay` ユーザーとして実行されるようになりました。 スクリプトをルートとして実行する必要がある場合は、代わりにスクリプトを `Jenkinsfile` に追加する必要があります。
+
+<a name="search-service-changes" />
 
 ## 検索サービスの変更
 
@@ -63,8 +73,10 @@ DXP Cloud Stackバージョン4にアップグレードすると、すべての�
 | Elasticsearchライセンス（.json）ファイル | lcp/search/license /{ENV}/ | search/configs /{ENV}/ license / |
 
 ```{note}
-   検索コンテナ内の ``search/configs/{ENV}/`` にあるファイルは、DXP Cloud の検索コンテナ内の ``usr/shared/elasticsearch/`` にオーバーライドとしてコピーされます。 例えば、 ``search/configs/{ENV}/config/``` の設定、例えば ``elasticsearch.yml`` のような設定は ``usr/shared/elasticsearch/config/`` にコピーされ、既存のデフォルト値を上書きします。
+   検索コンテナ内の onfigs/{ENV}/` にあるファイルは、DXP Cloud の検索コンテナ内の `usr/shared/elasticsearch/` にオーバーライドとしてコピーされます。 例えば、 `search/configs/{ENV}/config/` の設定、例えば `elasticsearch.yml` のような設定は `usr/shared/elasticsearch/config/` にコピーされ、既存のデフォルト値を上書きします。
 ```
+
+<a name="elasticsearch-plugins" />
 
 ### Elasticsearchプラグイン
 
@@ -76,11 +88,15 @@ bin/elasticsearch-plugin list
 
 イメージがデフォルトでインストールするプラグイン以外のElasticsearchプラグインを追加でインストールする場合は、 `search` サービスの `LCP_SERVICE_SEARCH_ES_PLUGINS` 環境変数を、インストールするプラグイン名のカンマ区切りリストに設定できます。 これらは、サービスのデプロイ中にインストールされます。
 
+<a name="ci-service-changes" />
+
 ## CIサービスの変更
 
 デフォルトのパイプラインが定義されたため、デフォルトの `Jenkinsfile` はリポジトリで不要になりました。 任意の `Jenkinsfile` は、リポジトリのルートではなく `ci` フォルダに定義されるようになりました。
 
 複数の `Jenkinsfile` 拡張ポイントが `ci` フォルダ内で利用できるようになり、ビルド作成のさまざまな段階で手順を定義できるようになりました。 <!-- TODO: Add reference to Jenkinsfile-specific article -->
+
+<a name="installing-hotfixes-with-an-environment-variable" />
 
 ### 環境変数を使用したホットフィックスのインストール
 
@@ -95,6 +111,8 @@ bin/elasticsearch-plugin list
 }
 ```
 
+<a name="webserver-service-changes" />
+
 ## ウェブサーバーサービスの変更
 
 `webserver` サービス内のすべての設定は、環境固有の `configs` ディレクトリに属します。 さらに、静的コンテンツ用の `deploy` フォルダーが削除されました。 代わりに、カスタムコンテンツを `パブリック` フォルダーに追加します。
@@ -108,20 +126,24 @@ bin/elasticsearch-plugin list
 | 静的コンテンツ   | lcp/webserver/deploy /{ENV}/ | webserver/configs /{ENV}/ public /  |
 
 ```{note}
-   webserver/configs/{ENV}/``内のファイルは、DXP Cloudのウェブサーバコンテナ内の ``/etc/nginx/``にオーバーライドとしてコピーされます。 Files in ``/webserver/configs/{ENV}/public/`` will be copied as overrides into ``var/www/html/``.
+   webserver/configs/{ENV}/イルは、DXP Cloudのウェブサーバコンテナ内の `/etc/nginx/`にオーバーライドとしてコピーされます。 Files in `/webserver/configs/{ENV}/public/` will be copied as overrides into `var/www/html/`.
 ```
+
+<a name="webserver-configuration-overrides" />
 
 ### Webサーバー設定の上書き
 
 `liferay.conf` ファイルを `webserver/configs /{ENV}/conf.d/`追加することにより、 `webserver` サービスのルートの場所をカスタマイズできます。 これにより、 `webserver` サービスイメージのコンテナで利用可能なデフォルトの `liferay.conf` が上書きされます。 ルートの場所をカスタマイズするときに、DXP Cloud Consoleのシェルにアクセスして、デフォルトとして `liferay.conf` ファイルを参照として表示します。
 
 ```{warning}
-   ルートの場所を ``liferay.conf`` 以外のファイル名でカスタマイズしないでください。これにより、デフォルトの``liferay.conf``を上書きします。 そうでない場合は、両方のファイルがコンテナ内に一緒に存在していて、2つのルート位置が見つかってエラーになることがあります。
+   ルートの場所を iferay.conf` 以外のファイル名でカスタマイズしないでください。これにより、デフォルトの`liferay.conf`を上書きします。 そうでない場合は、両方のファイルがコンテナ内に一緒に存在していて、2つのルート位置が見つかってエラーになることがあります。
 
    他のファイル名は、代わりにウェブサーバの追加の場所を定義するために使用されます。
 ```
 
 また、 `webserver/configs/{ENV}/`に `nginx.conf` ファイルを追加することで、デフォルトの NGINX 設定を上書きすることもできます。 これを使用して、Webサーバーの動作をさらに定義できます。 詳細は、 [公式のNGINXドキュメント](https://docs.nginx.com/nginx/admin-guide/basic-functionality/managing-configuration-files/) を参照してください。
+
+<a name="configuring-the-public-directory" />
 
 ### パブリックディレクトリの設定
 
@@ -135,6 +157,8 @@ location /static/ {
 }
 ```
 
+<a name="backup-service-changes" />
+
 ## バックアップサービスの変更
 
 `バックアップ` サービス内のすべての設定は、環境固有の `コンフィグ` ディレクトリに属するようになりました。 これは主にカスタムSQLスクリプトに関係しています：
@@ -143,11 +167,15 @@ location /static/ {
 | ------------ | ------------------------- | -------------------------------- |
 | カスタムSQLスクリプト | lcp/backup/script /{ENV}/ | backup/configs /{ENV}/ scripts / |
 
+<a name="known-limitations" />
+
 ## 既知の制限事項
 
 新しいスタックには、ローカル環境を立ち上げるためのdocker-composeファイルが含まれていません。 このため、ローカルテストにはDXPバンドルが必要です。
 
 ローカル環境で変更事項をテストしてから、DXP Cloudに移行することができます。 詳細については、 [Migrating from an On-Premises DXP Installation](../using-the-liferay-dxp-service/migrating-from-an-on-premises-dxp-installation.md) を参照してください。
+
+<a name="additional-information" />
 
 ## 追加情報
 

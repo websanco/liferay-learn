@@ -10,6 +10,8 @@
    選択した環境のAdminロールを持つユーザーのみが、DXP Cloudコンソールを介して環境を手動でリストアできます。
 ```
 
+<a name="restoring-an-environment-from-the-backups-page" />
+
 ## バックアップから環境を復元するページ
 
 以下の手順で、バックアップから環境を復元します。
@@ -42,6 +44,8 @@
 
 バックアップ サービスの **ログ** や、アクティビティ ページの **一般** セクションで、リストアのステータスを追跡することができます。
 
+<a name="applying-custom-sql-scripts-with-a-data-restore" />
+
 ## データリストアでのカスタムSQLスクリプトの適用
 
 また、カスタム SQL スクリプトを使用して、通常のデータ復元でデータベースの追加更新を行うこともできます。 この方法では、別々に管理しているデータベースのバックアップにスクリプトを適用できるため、機密データのサニタイズに最適です。
@@ -49,6 +53,8 @@
 ```{note}
    この機能を使用するには、バックアップサービスのバージョン3.0.7以降が必要です。
 ```
+
+<a name="preparing-sql-scripts" />
 
 ### SQLスクリプトの準備
 
@@ -62,8 +68,10 @@ SQLスクリプトでサポートされているフォーマットは以下の�
 SQLスクリプトを適切な、環境固有の `backup/configs/{ENV}/scripts/` フォルダに入れます。
 
 ```{note}
-   バージョン3.x.xのサービスを使用している場合、SQLスクリプトは適切な ``lcp/backup/script/{ENV}/`` フォルダに置かれます。 バージョンの確認方法については、［Understanding Service Stack Versions <../../reference/understanding-service-stack-versions.md>］__ を参照してください。
+   バージョン3.x.xのサービスを使用している場合、SQLスクリプトは適切な `lcp/backup/script/{ENV}/` フォルダに置かれます。 バージョンの確認方法については、［Understanding Service Stack Versions <../../reference/understanding-service-stack-versions.md>］__ を参照してください。
 ```
+
+<a name="performing-the-data-restore" />
 
 ### データリストアの実行
 
@@ -71,7 +79,7 @@ SQLスクリプトの準備ができたら、以下の手順でカスタムSQL�
 
 1. [バックアップサービスをデプロイして](../../build-and-deploy/overview-of-the-dxp-cloud-deployment-workflow.md) カスタムSQLスクリプトをオンラインに含める。
 
-1. 上記の [バックアップからの環境の復元ページ](#restoring-an-environment-from-the-backups-page)の手順に従ってください。
+1. 上記の [バックアップからの環境の復元ページ](#restoring-an-environment-from-the-backups-page) の手順に従ってください。
 
 データベースがリストアされると、バックアップ サービスの `scripts` フォルダにある SQL スクリプトが実行されます。
 
@@ -79,6 +87,8 @@ SQLスクリプトの準備ができたら、以下の手順でカスタムSQL�
 Jun 20 14:46:41.795 build-39 [backup-57488f8b8-rjq4f] Running Script: SanitizeOrg.sql
 Jun 20 14:46:41.970 build-39 [backup-57488f8b8-rjq4f] Running Script: SanitizeUsers.sql
 ```
+
+<a name="additional-information" />
 
 ## 追加情報
 

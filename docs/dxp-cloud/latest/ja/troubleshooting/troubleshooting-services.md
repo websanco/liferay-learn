@@ -2,6 +2,8 @@
 
 サービスはDXP Cloud環境のコアです。 この記事では、DXP Cloudサービスで発生する可能性のある問題を調査し、対処するために使用できるトラブルシューティング手法について説明します。
 
+<a name="a-service-is-continually-restarting" />
+
 ## サービスが継続的に再起動する
 
 サービスが何度も再起動するのは、そのサービスの [活性または準備プローブ](./self-healing.md) に問題があることを示している可能性があります。 この現象が発生すると、ある環境の概要の ［**アクティビティ**］ パネルの ［**一般**］ タブに表示される場合があります。 <!-- Add screenshot if a way to easily reproduce this is available.-->
@@ -15,6 +17,8 @@
 1. [スタートアップエラーがないかサービスログを確認する](#review-service-logs-for-startup-errors)
 1. [プローブ構成の調整](#adjust-probe-configurations)
 
+<a name="check-service-logs-for-liveness-or-readiness-probe-failures" />
+
 ### サービスログをチェックして、活性または準備プローブの失敗を確認する
 
 サービスのページに移動すると、最初のタブでログが表示されます。 最近のログをスキャンして、プローブの不具合を示すものを探します。
@@ -24,6 +28,8 @@
 ```
 Liveness probe failed: HTTP probe failed with statuscode: 500
 ```
+
+<a name="review-probe-configurations" />
 
 ### プローブ構成の確認
 
@@ -78,6 +84,8 @@ successThreshold: 3
 
 ほとんどの環境では、デフォルトのプローブ設定で問題ないはずです。 プローブの設定を全く変更していない場合は、設定が正しくされていないことが原因ではないと思われます。
 
+<a name="review-service-logs-for-startup-errors" />
+
 ### スタートアップエラーがないかサービスログを確認する
 
 プローブの設定が正しい場合、プローブが正しく機能しないのはサービス自体に問題がある可能性があります。
@@ -88,7 +96,9 @@ successThreshold: 3
    Liferayサービスでは、再起動後の最初のログに次のようなメッセージが表示されます。``[LIFERAY] To SSH into this container, run: "docker exec -it liferay-<node-id> /bin/bash".``
 ```
 
-Liferayのスタートアップエラーの処理にサポートが必要な場合は、[サポートに連絡してください](https://help.liferay.com/hc/en-us) 。
+Liferayのスタートアップエラーの処理にサポートが必要な場合は、 [サポートに連絡してください](https://help.liferay.com/hc/en-us) 。
+
+<a name="adjust-probe-configurations" />
 
 ### プローブ構成の調整
 
@@ -104,8 +114,10 @@ Liferayのスタートアップエラーの処理にサポートが必要な場�
 
 プローブの設定（サービスの `LCP.json` ファイル）でこれらの値を1つまたは複数増やし、速度低下によりサービスの再起動が発生している場合は、サービスに応じて適切に変更をデプロイします。 ただし、これらの値を恣意的に高く設定しないようにしてください。今後、サービスを再起動するたびに、変更内容がプローブに適用されるからです。
 
-詳細は、[Using and Configuring Probes](./self-healing.md#using-and-configuring-probes)を参照してください。
+詳細は、 [Using and Configuring Probes](./self-healing.md#using-and-configuring-probes) を参照してください。
+
+<a name="contact-cloud-support" />
 
 ### クラウドサポートへのお問い合わせ
 
-活性や準備プローブの失敗がサービスの再起動の原因となっていない場合、またはこれらの戦略がそれらの問題を解決するために役立っていない場合は[DXP Cloudサポート](https://help.liferay.com/hc/en-us)にご連絡ください。
+活性や準備プローブの失敗がサービスの再起動の原因となっていない場合、またはこれらの戦略がそれらの問題を解決するために役立っていない場合は [DXP Cloudサポート](https://help.liferay.com/hc/en-us) にご連絡ください。
