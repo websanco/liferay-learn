@@ -1,6 +1,9 @@
 # Multithreading Process
 
+> Available in Liferay DXP 7.4 U10 and above or Liferay Portal 7.4 GA14 and above
+
 Your [Upgrade Processes](../upgrade-processes.md) may involve making complex changes to large data sets. If performance is critical, use the `processConcurrently()` method in the `UpgradeProcess` class of your application. This method executes in multiple threads and can shorten your upgrade times.
+
 
 ## Deploy Version 1.0.0
 
