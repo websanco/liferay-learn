@@ -73,6 +73,14 @@ Once saved, the workflow engine implements the prescribed process, and users ass
 
 From here, you can click on the process to complete your assigned task, editing, rejecting, or approving the designated task form to move the process forward to resolution. Available options and conditions are defined by the selected Kaleo Forms process.
 
+## Tracking a Kaleo Forms Entry in the Workflow
+
+In Liferay 7.4 a new feature was added to the Kaleo Form Admin application's UI: you can track each submitted form's progress through the workflow in a diagram view:
+
+![Track each Kaleo Form through the workflow.](./kaleo-forms/images/07.png)
+
+To access the diagram view, click the Track Workflow configuration option in the entry's Actions menu (![Actions](../../../images/icon-actions.png)).
+
 ## Additional Information
 
 * [Introduction to Forms](../introduction-to-forms.md)

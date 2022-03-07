@@ -84,7 +84,19 @@ There's a table view for all the items in the workflow that provides handy filte
 
 **Creation Date**: Shows the date and time the item was submitted to the workflow.
 
-The columns can be clicked to sort the workflow items in ascending or descending order by a particular field. In addition, workflow items can be filtered so you can find the subset you want to analyze.
+The columns can be clicked to sort the workflow items in ascending or descending order by a particular field. 
+
+Each item has an Actions menu (![Actions](../../../images/icon-actions.png)) with three options: Reassign Task, Update Due Date, and Track Workflow.
+
+**Reassign Task:** Open the Select New Assignee modal to reassign the workflow task.
+
+**Update Due Date:** If the item should have a new due date, use the Update Task Due Date modal to reconfigure it.
+
+**Track Workflow:** [Added in 7.4] Open a diagramatic view of the item's progress in the workflow.
+
+![See where the item is in the overall flow of the workflow process.](./workflow-metrics-reports/images/15.png)
+
+In addition, workflow items can be filtered so you can find the subset you want to analyze.
 
 ### Filtering by SLA Status
 
@@ -129,6 +141,8 @@ The top of the Item Detail view is important. It shows you the information about
 **Open**: The defined SLA goals are not yet met. Open items can be of status Overdue or On Time.
 
 **Resolved**: The defined SLA goals are completed. Resolved items can be of status Overdue or On Time.
+
+The Process Details section section of the modal was enhanced in 7.4. Click the Track Workflow link to open a diagram view of the item's progress in the workflow.
 
 ## Additional Information
 
