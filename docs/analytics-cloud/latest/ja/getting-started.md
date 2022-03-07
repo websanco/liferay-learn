@@ -15,7 +15,7 @@ Liferay Analytics Cloudは、Liferay Digital Experience Platform（Liferay DXP�
 
 ![オーディエンスの興味を引くトピックについて学ぶと、オンラインコンテンツや対面で、そのトピックについて知的に話すことができるようになります。](./getting-started/images/01.png)
 
-<a name="メリット" />
+<a name="benefits" />
 
 ## メリット
 
@@ -39,7 +39,7 @@ Analytics Cloudは、サイト訪問者、サイトとの相互作用、サイ�
 - [タッチポイント](./touchpoints.md)
 - [パス](./touchpoints/pages/paths.md)
 
-<a name="連絡先" />
+<a name="people" />
 
 ## 連絡先
 
@@ -51,7 +51,7 @@ Analytics Cloudでは、個人をセグメントに集約することができ�
 
 コンタクトプロファイルはAnalytics Cloudの大きな部分を占めていますが、ウェブサイトのページやアセットと人々のインタラクションに関するアナリティクスの方が大きな部分を占めています。 このタイプのアナリティクス（タッチポイントアナリティクスと呼ばれる）は、コンテンツがビジネス目標を達成する上でどれだけ効果的かを判断するのに役立ちます。
 
-<a name="タッチポイントアナリティクス" />
+<a name="touchpoint-analytics" />
 
 ## タッチポイントアナリティクス
 
@@ -94,7 +94,7 @@ Analytics Cloudは、これらのLiferay DXPアセットをサポートしてい
 
 サイト訪問者がどのようにしてページやアセットにたどり着くのかを学ぶことも有用です。 それがパスアナリティクスです。
 
-<a name="パス分析" />
+<a name="path-analytics" />
 
 ## パス分析
 
@@ -113,7 +113,7 @@ Analytics Cloudは、これらのLiferay DXPアセットをサポートしてい
 
 Liferay Analytics Cloudとその機能についてご紹介してきましたが、いかがでしたでしょうか。セグメント、タッチポイント、パスなどをご紹介しました。 アナリティクスクラウドをご自身で体験してみてはいかがでしょうか。
 
-<a name="次のステップ" />
+<a name="next-steps" />
 
 ## 次のステップ
 

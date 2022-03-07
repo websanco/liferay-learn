@@ -37,7 +37,7 @@ Liferay Analytics Cloudでは、ワークスペース内の各プロパティに
 
 **期間を指定：** 任意の開始日と終了日を選択します。
 
-<a name="サイトアクティビティ" />
+<a name="site-activities" />
 
 ## サイトアクティビティ
 
@@ -57,7 +57,7 @@ Liferay Analytics Cloudでは、ワークスペース内の各プロパティに
 
 右下の凡例は、既知の訪問者と匿名の訪問者のユニークビジターの内訳を示しています。
 
-<a name="上位のページ" />
+<a name="top-pages" />
 
 ## 上位のページ
 
@@ -73,7 +73,7 @@ Liferay Analytics Cloudでは、ワークスペース内の各プロパティに
 
 より詳細なページアナリティクスを表示するには、パネル下の ［**ページを見る**］ をクリックします。 または、スクリーン上部の［**Pages**］タブをクリックしてください。 どちらも、 [Viewing Page Data](../touchpoints.md#viewing-page-data) で説明したページアナリティクスにつながります。
 
-<a name="アクイジション" />
+<a name="acquisitions" />
 
 ## アクイジション
 
@@ -89,7 +89,7 @@ Liferay Analytics Cloudでは、ワークスペース内の各プロパティに
 
 このレポートは、マーケティングキャンペーンでUTMパラメータを使用している場合に最適です。 UTMパラメータを使用すると、Analytics Cloudは訪問者がどこから来たか（特定のリファラーや広告キャンペーンなど）を判断することができます。
 
-<a name="日時別の訪問者" />
+<a name="visitors-by-day-and-time" />
 
 ## 日時別の訪問者
 
@@ -103,7 +103,7 @@ Liferay Analytics Cloudでは、ワークスペース内の各プロパティに
    このパネルは、タイムゾーン設定の影響を受けず、Analytics Cloudユーザーのタイムゾーンに基づいて表示されます。
 ```
 
-<a name="検索条件と興味関心" />
+<a name="search-terms-and-interests" />
 
 ## 検索条件と興味関心
 
@@ -115,7 +115,7 @@ Search Terms and Interestsパネルには、訪問者の最も一般的な検索
 
 興味のあるトピックの全リストを表示するには、パネル下の ［**すべての興味**］ をクリックします。 または、スクリーン上部の［**Interests**］タブをクリックしてください。
 
-<a name="場所別のセッション数" />
+<a name="sessions-by-location" />
 
 ## 場所別のセッション数
 
@@ -123,7 +123,7 @@ Search Terms and Interestsパネルには、訪問者の最も一般的な検索
 
 ![マップ・ダイアグラム上の色付きシェーディングは、ユーザーの出身国をすばやく識別します。](./sites-dashboard/images/06.png)
 
-<a name="セッションのテクノロジー" />
+<a name="session-technology" />
 
 ## セッションのテクノロジー
 
@@ -131,7 +131,7 @@ Search Terms and Interestsパネルには、訪問者の最も一般的な検索
 
 ![この画面を使って、OS間でのユーザーの分布を確認することができます。](./sites-dashboard/images/07.png)
 
-<a name="コホート分析" />
+<a name="cohort-analysis" />
 
 ## コホート分析
 

@@ -12,7 +12,7 @@ assets/tracking-custom-assets.md
 ```
 
 - [アセット](./assets/assets.md)
-- [Web Content](./assets/web-content.md)
+- [Webコンテンツ](./assets/web-content.md)
 - [ブログ](./assets/blogs.md)
 - [フォーム](./assets/forms.md)
 - [ドキュメントとメディア](./assets/documents-and-media.md)

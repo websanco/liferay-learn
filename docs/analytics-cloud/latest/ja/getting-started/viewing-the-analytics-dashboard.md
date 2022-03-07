@@ -6,13 +6,13 @@
 
 ダッシュボードは、さまざまなワークスペース管理や設定作業の出発点でもあります。
 
-<a name="dxpサイトをanalytics-cloudに接続する" />
+<a name="connecting-a-dxp-site-to-analytics-cloud" />
 
 ## DXPサイトをAnalytics Cloudに接続する
 
 新しいワークスペースの最初のタスクは、ワークスペースをデータ ソースに接続することです。 Analytics Cloudは、Liferay DXP Sitesをキーデータソースとして利用するために構築されています。 詳細は、 [Liferay DXPサイトをAnalytics Cloudに接続する](../connecting-data-sources/connecting-liferay-dxp-to-analytics-cloud.md) を参照してください。 また、 [CSVファイル](../connecting-data-sources/adding-a-csv-data-source.md) や [のSalesforce](../connecting-data-sources/adding-a-salesforce-data-source.md) からデータを持ち込んで、既存のユーザーデータを補完することもできます。
 
-<a name="自分のワークスペースにユーザーを招待する" />
+<a name="inviting-others-to-your-workspace" />
 
 ## 自分のワークスペースにユーザーを招待する
 
@@ -20,7 +20,7 @@
 
 ワークスペースにユーザーを追加する方法の詳細は、 [ユーザーの管理](../../workspace-settings/managing-users.md) を参照してください。
 
-<a name="ワークスペースの設定を行う" />
+<a name="configure-settings-for-your-workspace" />
 
 ## ワークスペースの設定を行う
 

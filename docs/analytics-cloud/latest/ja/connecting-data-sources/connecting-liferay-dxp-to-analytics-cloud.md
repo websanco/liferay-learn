@@ -9,7 +9,7 @@ Analytics Cloudはアクセストークンを使用してLiferay DXPと接続し
 * 7.1 Fix Pack 21
 * 7.0 Fix Pack 97
 
-<a name="データソースの追加" />
+<a name="adding-a-data-source" />
 
 ## データソースの追加
 
@@ -39,7 +39,7 @@ Analytics Cloudはアクセストークンを使用してLiferay DXPと接続し
 
 注：新しいデータソースが追加されると、同じ名前のプロパティが自動的に作成されます。 重複している場合は、増分のサフィックスが追加されます（例：Liferay DXP（1））。 データソースの名前もプロパティの名前も、後でいつでも変更できます。
 
-<a name="次のステップ" />
+<a name="next-steps" />
 
 ## 次のステップ
 

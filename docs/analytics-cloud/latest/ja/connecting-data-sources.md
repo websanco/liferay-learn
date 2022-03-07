@@ -16,7 +16,7 @@ Liferay Analytics Cloudには2種類のデータが必要です。 １つ目は�
 
 コンタクトデータはマージされ、単一のカスタマービューに集約されます。 Liferay DXPのデータソースでは、同期する組織やユーザーグループを選択することができます。 個々の連絡先は、メールアドレスで照合されます。 コンタクトデータモデルは、好きなフィールド名やタイプを使って定義することができますが、Analytics Cloudでは、値を提案することで簡単に軽微なモデルフィールドを定義することができます。
 
-<a name="データソースの表示" />
+<a name="viewing-your-data-sources" />
 
 ## データソースの表示
 
@@ -38,7 +38,7 @@ Liferay Analytics Cloudには2種類のデータが必要です。 １つ目は�
 
 データソースを作成した後、データソースを変更する必要がある場合もあります。 詳細は [Managing Data Sources](./workspace-data/managing-data-sources.md) を参照してください。
 
-<a name="次のステップ" />
+<a name="next-steps" />
 
 ## 次のステップ
 

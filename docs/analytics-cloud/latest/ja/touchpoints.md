@@ -11,13 +11,13 @@ touchpoints/events.md
 
 タッチポイントは、ユーザーや顧客がブランドと相互作用するさまざまな方法を反映しています。 Analytics Cloudは、ページビューなどの従来のページアナリティクスと、包括的なサイト、パス、アセットに特化したアナリティクスデータを組み合わせた幅広いアナリティクスデータを提示します。
 
-Analytics Cloudは、サイト全体の包括的なレポートを提供する [サイトワイド レポート ダッシュボード](./touchpoints/sites-dashboard.md) を提示します。 これは、あなたのサイトのユニークな訪問者の数、どのページにアクセスしているか、彼らの興味は何か、などを把握するのに役立ちます。 [個別ページ](./touchpoints/pages/pages.md) のアナリティクスも簡単に見ることができます。 視聴率、訪問者数、バウンス率などが含まれます。 [パスアナリティクス](./touchpoints/pages/paths.md) は、訪問者がどのようにしてページにたどり着くかを示します。 これには、彼らがあなたのページよりも先にどのページを訪問したか、彼らの位置情報やデバイスの種類などの情報が含まれます。 多くのLiferay DXP [アセット](./touchpoints/assets/assets.md) のパフォーマンスを追跡して、ページレベルよりも深く掘り下げて、サイトのパフォーマンスを改善する方法を判断することもできます。 [Events Analysis](./touchpoints/events/events-analysis.md)では、個人がどのようにサイトを訪れ、どのように利用しているかを分析することができます。
+Analytics Cloudは、サイト全体の包括的なレポートを提供する [サイトワイド レポート ダッシュボード](./touchpoints/sites-dashboard.md) を提示します。 これは、あなたのサイトのユニークな訪問者の数、どのページにアクセスしているか、彼らの興味は何か、などを把握するのに役立ちます。 [個別ページ](./touchpoints/pages/pages.md) のアナリティクスも簡単に見ることができます。 視聴率、訪問者数、バウンス率などが含まれます。 [パスアナリティクス](./touchpoints/pages/paths.md) は、訪問者がどのようにしてページにたどり着くかを示します。 これには、彼らがあなたのページよりも先にどのページを訪問したか、彼らの位置情報やデバイスの種類などの情報が含まれます。 多くのLiferay DXP [アセット](./touchpoints/assets/assets.md) のパフォーマンスを追跡して、ページレベルよりも深く掘り下げて、サイトのパフォーマンスを改善する方法を判断することもできます。 [イベントの分析](./touchpoints/events/events-analysis.md) では、個人がどのようにサイトを訪れ、どのように利用しているかを分析することができます。
 
 ![タッチポイント］メニューでは、［サイト］［ページ］［アセット］に関する情報にアクセスすることができます。](./touchpoints/images/01.png)
 
 タッチポイントは、 [サイトダッシュボード](./touchpoints/sites-dashboard.md) からアクセスします。 タッチポイントでは、ページやアセットの追加分析も確認できます。
 
-<a name="ページデータの閲覧" />
+<a name="viewing-page-data" />
 
 ## ページデータの閲覧
 
@@ -55,7 +55,7 @@ Analytics Cloudは、サイト全体の包括的なレポートを提供する [
 
 ![訪問者の行動パネルでは、一定期間の詳細な統計が表示されます。](./touchpoints/images/03.png)
 
-<a name="アセットデータの検索" />
+<a name="finding-asset-data" />
 
 ## アセットデータの検索
 
@@ -82,16 +82,20 @@ Analytics Cloudは、サイト全体の包括的なレポートを提供する [
 
 アセットの種類ごとに別々のリストがあることを覚えておいてください。 各アセットタイプのメトリクスの詳細は、その後の記事で解説しています。
 
-<a name="次のステップ" />
+<a name="next-steps" />
 
 ## 次のステップ
 
 - [サイトダッシュボード](./touchpoints/sites-dashboard.md)
 
+<a name="pages" />
+
 ### ページ
 
 - [ページ](./touchpoints/pages/pages.md)
 - [パス](./touchpoints/pages/paths.md)
+
+<a name="assets" />
 
 ### アセット
 
@@ -101,6 +105,8 @@ Analytics Cloudは、サイト全体の包括的なレポートを提供する [
 - [フォーム](./touchpoints/assets/forms.md)
 - [ドキュメントとメディア](./touchpoints/assets/documents-and-media.md)
 - [カスタムアセットのトラッキング](./touchpoints/assets/tracking-custom-assets.md)
+
+<a name="events" />
 
 ### 予定
 

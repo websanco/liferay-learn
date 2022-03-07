@@ -7,7 +7,7 @@ Liferay Analytics CloudのコンテンツレコメンデーションAPIは、Lif
 * ユーザーが閲覧している現在のタグに基づいて、類似したタグ（コンテンツ）を発見します。
 * ユーザーの経年的な興味に基づいてタグを発見する。
 
-<a name="類似のタグを発見する" />
+<a name="discover-similar-tags" />
 
 ## 類似のタグを発見する
 
@@ -51,7 +51,7 @@ Liferay Analytics CloudのコンテンツレコメンデーションAPIは、Lif
 }
 ```
 
-<a name="興味に基づいたタグの発見" />
+<a name="discover-tags-based-on-interest" />
 
 ## 興味に基づいたタグの発見
 

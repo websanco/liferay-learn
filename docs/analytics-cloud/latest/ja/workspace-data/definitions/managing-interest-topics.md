@@ -6,7 +6,7 @@ Analytics Cloudの [Recommendation API](../../optimization/content-recommendatio
 現在、インタレスト・トピックは英語版のみ対応しています。 英語以外のコンテンツはフィルタリングされています。
 ```
 
-<a name="興味のあるトピックの理解" />
+<a name="understanding-interests" />
 
 ## 興味のあるトピックの理解
 
@@ -27,7 +27,7 @@ Analytics Cloudの [Recommendation API](../../optimization/content-recommendatio
 
 いずれにしても、利害関係者の洞察力は、新しいビジネスを生み出すのに役立ちます。 関心度インサイトでは、顧客が最も訪問するページやアセットによって言及されている最も一般的なトピックを知ることができます。
 
-<a name="ブロックリストにキーワードを追加" />
+<a name="adding-keywords-to-the-block-list" />
 
 ## ブロックリストにキーワードを追加
 

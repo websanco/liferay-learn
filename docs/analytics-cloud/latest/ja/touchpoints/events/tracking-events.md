@@ -22,7 +22,7 @@ Analytics.track("Add to Cart Click",{
 });
 ```
 
-属性に設定できるデータタイプキャストは以下の通りです：ブール値、日付、継続期間、数値、文字列。 Analytics Cloudは、その属性に対して収集された最初のデータに基づいて、自動的にデータタイプを検出してキャストしようとします。 必要に応じてAnalytics Cloudの設定ページにある [Definitions for Event Attributes](../../workspace-data/definitions/definitions-for-event-attributes.md) でタイプキャストを変更してください。
+属性に設定できるデータタイプキャストは以下の通りです：ブール値、日付、継続期間、数値、文字列。 Analytics Cloudは、その属性に対して収集された最初のデータに基づいて、自動的にデータタイプを検出してキャストしようとします。 必要に応じてAnalytics Cloudの設定ページにある [イベント属性の定義](../../workspace-data/definitions/definitions-for-event-attributes.md) でタイプキャストを変更してください。
 
 | 属性タイプ      | 説明                                            |
 | ---------- | --------------------------------------------- |
@@ -34,11 +34,13 @@ Analytics.track("Add to Cart Click",{
 
 なお、指定した属性に加えて、すべてのイベントに自動的に関連付けられる [グローバル属性](../../workspace-data/definitions/definitions-for-event-attributes.md) があります。
 
-<a name="javascriptコードの追加" />
+<a name="adding-javascript-code" />
 
 ## JavaScriptコードの追加
 
 JavaScriptコードを追加して、イベントの追跡を有効にする方法がいくつかあります。 個々のページの変更、ページフラグメントの追加、またはカスタム実装の使用。
+
+<a name="modify-an-individual-page" />
 
 ### 個々のページを変更する
 
@@ -55,6 +57,8 @@ JavaScriptコードを追加する最も簡単な方法は、個々のページ�
 1. ［**保存**］ をクリックすると、ページでイベントを追跡する準備が整います。
 
 詳しくは、 [個々のページの構成](https://learn.liferay.com/dxp/latest/ja/site-building/creating-pages/page-settings/configuring-individual-pages.html) を参照してください。
+
+<a name="add-a-page-fragment" />
 
 ### ページフラグメントの追加
 
@@ -77,6 +81,8 @@ Javascriptのコードを追加するもう一つの方法は、コンテント�
 1. フラグメントを追加したいコンテントページに移動します。 ［**編集**］ アイコン（![Edit icon.](../../images/icon-edit.png)）をクリックして、ページエディタを開きます。 先ほど作成したフラグメントを見つけ、自分のページにドラッグします。 ［**Publish**］ をクリックします。
 
 詳細については、 [フラグメントの開発](https://learn.liferay.com/dxp/latest/ja/site-building/developer-guide/developing-page-fragments/developing-fragments-intro.html) を参照してください。
+
+<a name="use-a-custom-implementation" />
 
 ### カスタムインプリメンテーションの使用
 

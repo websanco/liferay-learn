@@ -6,7 +6,7 @@
 
 Liferay Analytics Cloudは、フォーム、ブログ、ドキュメントとメディア、ウェブコンテンツなどの組み込みのLiferay DXPアセットを検出して分析することができます。 ただし、カスタム アプリ内のアセットを分析するには、アプリの HTML にタグを付ける必要があります。
 
-<a name="アセットイベント" />
+<a name="asset-events" />
 
 ## アセットイベント
 
@@ -22,7 +22,7 @@ Analytics Cloud JavaScript プラグインには、追跡できる以下のイ�
 
 `AssetSubmitted`: アセットエリアでのフォーム送信。 これは、HTMLフォーム要素の下にサブミットの入力タイプを配置する必要があります。
 
-<a name="必要なメタデータ" />
+<a name="required-metadata" />
 
 ## 必要なメタデータ
 
@@ -36,7 +36,7 @@ Analytics Cloud JavaScript プラグインには、追跡できる以下のイ�
 
 **アセットのタイトル（文字列、オプション）：** アセットのタイトル。 このためのHTML属性はdata-analytics-asset-titleです。
 
-<a name="アセットイベントの追跡" />
+<a name="tracking-asset-events" />
 
 ## アセットイベントの追跡
 
@@ -76,6 +76,8 @@ Analytics Cloud JavaScript プラグインには、追跡できる以下のイ�
 ```{note}
    これらの属性は、Analytics Cloudにトラッキングさせたい個々のアセットに追加する必要があります。 しかし、スクリプトを使って属性の値を入力することで、アセットごとにこのプロセスを自動化することができます。
 ```
+
+<a name="tracking-downloads" />
 
 ### ダウンロードの追跡
 

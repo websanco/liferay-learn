@@ -6,7 +6,7 @@
 
 プロパティを使用して、その逆を行うこともできます。 ユーザーは、Liferay DXPインスタンス内のサイトごとに個別のプロパティを作成できるため、AnalyticsCloudユーザーはサイトごとにスコープを設定した詳細な分析データを使用することができます。 管理者は、Analytics Cloudユーザーに、異なるプロパティにスコープされた権限を割り当てることもできます。
 
-<a name="プロパティの作成" />
+<a name="creating-a-property" />
 
 ## プロパティの作成
 
@@ -20,7 +20,7 @@ Analytics Cloudの各ワークスペースでは、複数のプロパティを�
 
 ![新しいプロパティが作成されました。](scoping-sites-and-individuals-using-properties/images/02.png)
 
-<a name="サイトをプロパティに同期する" />
+<a name="syncing-sites-to-a-property" />
 
 ## サイトをプロパティに同期する
 
@@ -44,7 +44,7 @@ Analytics Cloudでサイトのデータを見るためには、サイトをプ�
     1つのDXPサイトを複数のプロパティと同期させることはできません。 あなたのサイトの1つがすでに別のプロパティに同期されている場合。 ここではグレーアウトされており、選択できません。
     ```
 
-<a name="連絡先をプロパティに同期する" />
+<a name="syncing-contacts-to-a-property" />
 
 ## 連絡先をプロパティに同期する
 
@@ -60,7 +60,7 @@ Analytics Cloudでサイトのデータを見るためには、サイトをプ�
 
 Liferay DXPからコンタクトデータを同期する についての詳細は [こちら](syncing-contact-data-from-dxp.md) を確認してください。
 
-<a name="プロパティの許可を管理する" />
+<a name="managing-permissions-for-a-property" />
 
 ## プロパティの許可を管理する
 
@@ -80,7 +80,7 @@ Liferay DXPからコンタクトデータを同期する についての詳細�
 
 ![プロパティにユーザーを追加します。](scoping-sites-and-individuals-using-properties/images/06.png)
 
-<a name="異なるプロパティ間の移動" />
+<a name="navigating-between-different-properties" />
 
 ## 異なるプロパティ間の移動
 

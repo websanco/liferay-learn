@@ -19,7 +19,7 @@ workspace-settings/managing-workspaces.md
 
 [ワークスペース設定の表示と変更](./workspace-settings/managing-workspaces.md)。
 
-<a name="次のステップ" />
+<a name="next-steps" />
 
 ## 次のステップ
 

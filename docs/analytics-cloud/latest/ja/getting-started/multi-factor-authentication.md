@@ -2,7 +2,7 @@
 
 すべてのAnalytics Cloudユーザーには多要素認証（MFA）が必要です。 この追加のセキュリティ層は、フィッシングやMITM（man-in-the-middle）攻撃などのサイバー攻撃からユーザーを保護するのに役立ちます。
 
-<a name="多要素認証の設定" />
+<a name="setting-up-multi-factor-authentication" />
 
 ## 多要素認証の設定
 
@@ -34,7 +34,7 @@
 
 1. 認証が完了すると、Analytics Cloudのスタートページが表示されます。 ここから、 [ワークスペース](./accessing-your-workspace.md)にアクセスすることができます。
 
-<a name="mfaのヘルプ" />
+<a name="help-with-mfa" />
 
 ## MFAのヘルプ
 

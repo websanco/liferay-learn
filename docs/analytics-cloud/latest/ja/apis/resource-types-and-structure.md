@@ -1,6 +1,6 @@
 # リソースの種類とストラクチャー
 
-<a name="アカウント" />
+<a name="accounts" />
 
 ## アカウント
 
@@ -55,7 +55,7 @@
 * `individualsCount` (数値)：アカウントに所属するユーザー数、アクティブまたは非アクティブのユーザーがこのメトリックでカウントされます。
 * ` Properties `: アカウントの動的プロパティのキー／バリュー（文字列）マップで、例としては業界、ファックス、電話などがあります。
 
-<a name="個人" />
+<a name="individuals" />
 
 ## 個人
 
@@ -93,7 +93,7 @@
 * `人口統計` キー/値 (文字列:) ユーザーの人口統計の動的なプロパティのマップ; 例としては、性別、生年月日、電子メールなどがあります。
 * `ID` (文字列)：ユーザーの一意の識別子。
 
-<a name="セグメント" />
+<a name="segments" />
 
 ## セグメント
 
@@ -129,7 +129,7 @@
 * `segmentType` （文字列）：セグメントが静的か動的か。
 * `includeAnonymousUsers` （ブール値）：セグメントに匿名ユーザーが含まれているかどうか。 falseの場合、individualCountとknownIndividualCountは常に等しくなります。
 
-<a name="ページ" />
+<a name="pages" />
 
 ## ページ
 
@@ -273,7 +273,7 @@
 <li><code>previousValue` （Number）：前のメトリック値。 また、要求されたレンジキーにもよりますが、選択されたレンジキーが30の場合、前の値は今日-60日目から今日-30日目までのデータを集約します。
 * `url` （文字列）：ページのURL
 
-<a name="アセット" />
+<a name="assets" />
 
 ## アセット
 
@@ -285,6 +285,8 @@
 * Webコンテンツ- [https://analytics.liferay.com/api/reports/web-contents](https://analytics.liferay.com/api/reports/web-contents)
 
 各アセットには、それぞれのプロパティが含まれています。
+
+<a name="blogs" />
 
 ### ブログ
 
@@ -326,6 +328,8 @@
 * `Ratings Metric` （Double）：その選択期間中のブログの平均評価（1〜5の範囲）。
 * `Comments Metric` （Double）：ブログに追加されたコメントの合計。
 
+<a name="documents-and-media" />
+
 ### ドキュメントとメディア
 
 ```json
@@ -361,6 +365,8 @@
 * `Ratings Metric` （Double）：その選択期間中のドキュメントまたはメディアの平均評価（1〜5の範囲）。
 * `Comments Metric` （Double）：ドキュメントまたはメディアに追加されたコメントの合計。
 * `Previews Metric` （Double）：ドキュメントまたはメディアのユーザープレビュー数の合計。
+
+<a name="forms" />
 
 ### フォーム
 
@@ -475,6 +481,8 @@
 * `Field Abandonments Metric` (Double)：このフィールドでフォームを放棄したユーザーの合計。
 * `Page Views Metric` (Double)：フォームページのユーザービューの合計。
 * `Page Abandonments Metric` (Double)：このページでユーザーがフォームを放棄した数の合計。
+
+<a name="web-content" />
 
 ### Web コンテンツ
 

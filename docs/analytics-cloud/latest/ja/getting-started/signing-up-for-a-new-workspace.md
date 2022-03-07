@@ -14,7 +14,7 @@ Liferay Analytics Cloudの使用を開始するには、 [analytics.liferay.com]
 
 ![ビジネスプランやエンタープライズプランに申し込むか、無料トライアルから始めましょう。](signing-up-for-a-new-workspace/images/01.png)
 
-<a name="無料トライアルのワークスペースを作成する" />
+<a name="creating-a-free-trial-workspace" />
 
 ## 無料トライアルのワークスペースを作成する
 
@@ -51,7 +51,7 @@ Liferay Analytics Cloudの使用を開始するには、 [analytics.liferay.com]
 
 次のセクションで、 [ワークスペースにアクセスする方法](./accessing-your-workspace.md)を参照してください。
 
-<a name="アナリティクスのクラウドワークスペースを購入する" />
+<a name="buying-analytics-cloud-workspace" />
 
 ## アナリティクスのクラウドワークスペースを購入する
 

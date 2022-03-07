@@ -2,7 +2,7 @@
 
 環境やデータ・ソースが誤って設定されていると、Liferay DXPのデータ・ソースへのアクセスを妨げたり、中断させたりすることがあります。 ここでは、DXP データソースの問題をトラブルシューティングする方法をご紹介します。
 
-<a name="アナリティクスクラウドへのネットワークアクセスがない" />
+<a name="no-network-access-to-analytics-cloud" />
 
 ## アナリティクスクラウドへのネットワークアクセスがない
 
@@ -21,11 +21,13 @@
 企業のイントラネットの利用状況を分析するなど、いくつかのユースケースでは、訪問者のブラウザもファイアウォールの背後にあります。 このシナリオでは、企業のオフィスネットワークが上記のURLのアウトバウンドアクセスも許可していることを確認する必要があります。
 ```
 
-<a name="アナリティクスクラウドへの接続を検証する" />
+<a name="validating-the-connection-to-analytics-cloud" />
 
 ## アナリティクスクラウドへの接続を検証する
 
 データがAnalytics Cloudに送信されているかどうかを検証するのに役立つヒントをご紹介します。
+
+<a name="analytics-events" />
 
 ### アナリティクスのイベント
 
@@ -40,6 +42,8 @@
     ![Analytics Cloudへの接続を検証します。](connecting-data-sources/images/01.png)
 
     この要求が表示されている場合は、お客様のウェブサイトがアナリティクス データをAnalytics Cloudワークスペースに送信していることを意味します。 リクエストペイロードをチェックして、 `channelId`という変数があることを確認してください。
+
+<a name="contacts-data" />
 
 ### 連絡先データ
 
@@ -59,7 +63,7 @@ INFO  [liferay/scheduler_dispatch-3][SendAnalyticsMessagesMessageListener:164] D
 
 これらのサーバーログが表示されている場合は、連絡先データが正常にACに送信されていることを示しています。
 
-<a name="データ処理時間" />
+<a name="data-processing-time" />
 
 ## データ処理時間
 
@@ -73,7 +77,7 @@ INFO  [liferay/scheduler_dispatch-3][SendAnalyticsMessagesMessageListener:164] D
 
 訪問者プロフィールは、処理に時間がかかり、時間の経過とともに利用可能になります。
 
-<a name="サポートされていないバージョン" />
+<a name="unsupported-version" />
 
 ## サポートされていないバージョン
 

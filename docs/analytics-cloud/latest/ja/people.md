@@ -18,18 +18,24 @@ people/segments.md
 
 堅牢な個人プロファイルと柔軟なセグメント構築を組み合わせることで、Analytics Cloudはユーザーに素晴らしい体験を提供することができます。
 
-<a name="次のステップ" />
+<a name="next-steps" />
 
 ## 次のステップ
 
+<a name="individuals" />
+
 ### 個人
 
-- [Individuals Dashboard](./people/individuals/individuals-dashboard.md)
+- [個人ダッシュボード](./people/individuals/individuals-dashboard.md)
 - [訪問者プロフィール](./people/individuals/individual-profiles.md)
+
+<a name="accounts" />
 
 ### アカウント管理
 
 - [アカウント管理](./people/accounts.md)
+
+<a name="segments" />
 
 ### セグメント
 

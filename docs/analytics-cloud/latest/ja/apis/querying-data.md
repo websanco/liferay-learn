@@ -35,7 +35,7 @@ curl -L -H "Authorization: Bearer {token}" https://analytics.liferay.com/api/rep
 {"results":[],"total":0}
 ```
 
-<a name="アカウントデータへのアクセス" />
+<a name="accessing-accounts-data" />
 
 ## アカウントデータへのアクセス
 
@@ -45,11 +45,13 @@ curl -L -H "Authorization: Bearer {token}" https://analytics.liferay.com/api/rep
 curl -H "Authorization: Bearer {token}" -L https://analytics.liferay.com/api/reports/accounts
 ```
 
+<a name="parameters" />
+
 ### パラメーター
 
 * `ページ` （整数）：ページ番号の結果
 
-<a name="ユーザーデータへのアクセス" />
+<a name="accessing-individuals-data" />
 
 ## ユーザーデータへのアクセス
 
@@ -59,12 +61,14 @@ curl -H "Authorization: Bearer {token}" -L https://analytics.liferay.com/api/rep
 curl -H "Authorization: Bearer {token}" -L https://analytics.liferay.com/api/reports/individuals
 ```
 
+<a name="parameters-1" />
+
 ### パラメーター
 
 * `ページ` 整数：ページ番号の結果
 * `クエリ` 文字列：ユーザーの人口統計情報と一致するキーワード
 
-<a name="ユーザーのアクティビティ" />
+<a name="individual-activities" />
 
 ## ユーザーのアクティビティ
 
@@ -91,6 +95,8 @@ curl -H "Authorization: Bearer {token}" -L https://analytics.liferay.com/api/rep
 }
 ```
 
+<a name="properties" />
+
 ### 詳細設定
 
 * `ownerId` （文字列）：ユーザーIDに相当する、アクティビティの所有者。
@@ -99,7 +105,7 @@ curl -H "Authorization: Bearer {token}" -L https://analytics.liferay.com/api/rep
 * `eventId` （文字列）：ユーザーによって実行されたアナリティクスイベントのID。イベントIDは、ユーザーによって実行されるアクションを表す。
 * `eventProperties` （オブジェクト）：イベントに関するメタデータ情報。eventIdによって異なる。
 
-<a name="ユーザーの興味" />
+<a name="individual-interests" />
 
 ## ユーザーの興味
 
@@ -119,6 +125,8 @@ curl -H "Authorization: Bearer {token}" -L https://analytics.liferay.com/api/rep
 }
 ```
 
+<a name="properties-1" />
+
 ### 詳細設定
 
 * ` score ` (数値)：ユーザーがその特定のトピックにどれだけ興味を持っているかを数値で表したもの。
@@ -128,7 +136,7 @@ curl -H "Authorization: Bearer {token}" -L https://analytics.liferay.com/api/rep
 * `id` （文字列）：興味対象の一異な識別情報。
 * `name` （文字列）：興味のあるものの名前。
 
-<a name="ユーザーのセグメント" />
+<a name="individual-segments" />
 
 ## ユーザーのセグメント
 
@@ -138,7 +146,7 @@ curl -H "Authorization: Bearer {token}" -L https://analytics.liferay.com/api/rep
 
 ユーザーが所属するセグメントのリストを返します。各セグメントの構造については、［データ型 > セグメント］で説明しています。
 
-<a name="セグメントデータへのアクセス" />
+<a name="accessing-segments-data" />
 
 ## セグメントデータへのアクセス
 
@@ -148,11 +156,13 @@ curl -H "Authorization: Bearer {token}" -L https://analytics.liferay.com/api/rep
 curl -H "Authorization: Bearer {token}" -L https://analytics.liferay.com/api/reports/segments
 ```
 
+<a name="properties-2" />
+
 ### 詳細設定
 
 `ページ` ：整数、結果ページ番号
 
-<a name="ユーザーのセグメント化" />
+<a name="segment-individuals" />
 
 ## ユーザーのセグメント化
 
@@ -162,7 +172,7 @@ curl -H "Authorization: Bearer {token}" -L https://analytics.liferay.com/api/rep
 curl -H "Authorization: Bearer {token}" -L https://analytics.liferay.com/api/reports/segments/{id}/individuals
 ```
 
-<a name="ページデータへのアクセス" />
+<a name="accessing-page-data" />
 
 ## ページデータへのアクセス
 
@@ -171,6 +181,8 @@ curl -H "Authorization: Bearer {token}" -L https://analytics.liferay.com/api/rep
 ```
 curl -H "Authorization: Bearer {token}" -L https://analytics.liferay.com/api/reports/pages 
 ```
+
+<a name="properties-3" />
 
 ### 詳細設定
 

@@ -8,7 +8,7 @@
 
    ![分析対象のイベントを選択します。](./events-analysis/images/01.png)
 
-   デフォルトのイベントは、AnalyticsCloudによってすでに追跡されています。 カスタムイベントは、自身で定義および設定したイベントです。 詳細は、[Definitions for Events](../../workspace-data/definitions/definitions-for-events.md)を参照してください。
+   デフォルトのイベントは、AnalyticsCloudによってすでに追跡されています。 カスタムイベントは、自身で定義および設定したイベントです。 詳細は、 [イベントの定義](../../workspace-data/definitions/definitions-for-events.md) を参照してください。
 
    ドロップダウンリストの特定のイベントにカーソルを合わせると、そのイベントの説明が表示されます。 説明文を編集するには、 ［**鉛筆**］ アイコン（![Pencil](../../images/icon-edit.png)）をクリックします。
 
@@ -34,7 +34,7 @@
 
 1. 別のイベントを分析したり、別の内訳を見るには、［close］アイコン（![Close](../../images/icon-close.png)）をクリックして、イベントや内訳を閉じます。 新しいイベント分析を表示するには、新しい選択を行います。
 
-<a name="追加情報" />
+<a name="additional-information" />
 
 ## 追加情報
 

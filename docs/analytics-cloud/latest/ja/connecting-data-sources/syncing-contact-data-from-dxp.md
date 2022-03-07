@@ -10,7 +10,7 @@
      * Liferay 7.0 Fix Pack 97
 ```
 
-<a name="コンタクトデータの初期同期" />
+<a name="initial-sync-of-contact-data" />
 
 ## コンタクトデータの初期同期
 
@@ -34,7 +34,7 @@
 
       選択後、ページ下部にある **保存** ボタンをクリックします。
 
-<a name="コンタクトデータフィールドの同期を変更する" />
+<a name="modifying-sync-of-contact-data-fields" />
 
 ## コンタクトデータフィールドの同期を変更する
 
