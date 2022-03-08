@@ -135,7 +135,7 @@ behavior of the widget. Many of these settings are used to configure the
 
 | Advanced Settings | Definition |
 | :---------------- | :----------|
-| Scope | Choose between This Site (default) and Everything to display similar results from the current site only (*This Site*) or expand the scope of the search to all sites (*Everything*).
+| [Introduced in 7.4] Scope | Choose between This Site (default) and Everything to display similar results from the current site only (*This Site*) or expand the scope of the search to all sites (*Everything*).
 | Fields | Use a comma-separated list to specify keyword or text fields whose content is used to determine whether another asset matches the Main Asset. |
 | Maximum Query Terms | Set the maximum number of query terms to extract from the main asset. These are the terms used for matching search results to the main asset. Increasing this value enhances the relevance of returned results at the expense of execution speed. If left blank, this defaults to `25`. |
 | Minimum Term Frequency | Set the minimum threshold for the times a term must appear in the index to be used for matching similar results. If left blank, this defaults to `2`. |
