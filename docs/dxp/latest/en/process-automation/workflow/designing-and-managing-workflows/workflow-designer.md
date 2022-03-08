@@ -18,10 +18,11 @@ The Workflow Designer user interface was refreshed in a Liferay 7.4 update. The 
 ![Compare the older designer with the newr one.](./workflow-designer/images/03.png)
 ```
 
+- [Workflow Designer Overview](./workflow-designer/workflow-designer-overview.md)
 - [Creating Workflow Tasks](./workflow-designer/creating-workflow-tasks.md)
-- [Workflow Nodes](./workflow-designer/workflow-nodes.md)
 - [Configuring Workflow Actions and Notifications](./workflow-designer/configuring-workflow-actions-and-notifications.md)
-- [Workflow Nodes](./workflow-designer/workflow-nodes.md)
+- [Assigning Task Nodes](./workflow-designer/assigning-task-nodes.md)
 - [Using Forks and Joins](./workflow-designer/using-forks-and-joins.md)
 - [Using Condition Nodes](./workflow-designer/using-condition-nodes.md)
-- [Assigning Task Nodes](./workflow-designer/assigning-task-nodes.md)
+- [Workflow Nodes](./workflow-designer/workflow-nodes.md)
+

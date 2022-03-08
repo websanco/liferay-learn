@@ -29,15 +29,14 @@ Follow the steps below:
 
     ![Modify the Update node.](./configuring-workflow-actions-and-notifications/images/04.png)
 
-1. Double click _Actions_ to define an action.
+1. Click an existing action or _New_ if there are none currently defined.
 1. Enter _reject_ in the Name field.
-1. Select _Groovy_ from the _Script Language_ dropdown menu.
 1. Select _On Assignment_ from the _Execution Type_ dropdown menu.
-1. Enter the script in the _Script_ field. The Single Approver workflow contains an Update task with an action written in Groovy that sets the status of the asset as _denied_, then sets it to _pending_.
+1. Enter the script in the _Template (Groovy)_ field (it's called the _Script_ field in some versions). The Single Approver workflow contains an Update task with an action written in Groovy that sets the status of the asset as _denied_, then sets it to _pending_.
 
     ```java
-    import com.liferay.portal.kernel.workflow.WorkflowStatusManagerUtil;
     import com.liferay.portal.kernel.workflow.WorkflowConstants;
+    import com.liferay.portal.kernel.workflow.WorkflowStatusManagerUtil;
 
     WorkflowStatusManagerUtil.updateStatus(WorkflowConstants.getLabelStatus("denied"), workflowContext);
     WorkflowStatusManagerUtil.updateStatus(WorkflowConstants.getLabelStatus("pending"), workflowContext);
@@ -45,9 +44,9 @@ Follow the steps below:
 
     ![Add the reject action.](./configuring-workflow-actions-and-notifications/images/05.png)
 
-1. Click _Save_ when finished.
+1. Click the back arrow (![Back](../../../../images/icon-angle-left.png)) when finished (in some versions you must click _Save_ in the action definition).
 
-Once you have configured the _Update_ node, add a notification that informs the asset creator that the submission has been rejected at this time and needs more work.
+Next add a notification that informs the asset creator that the submission has been rejected at this time and needs more work.
 
 ## Adding Notifications
 
@@ -55,7 +54,7 @@ Add notifications to the _Update_ Task node which informs the asset creator that
 
 Follow the steps below:
 
-1. Double click on _Notifications_ in the _Update_ node's Properties tab.
+1. In the Update node's properties sidebar, click an existing notification or _New_ if none are defined yet.
 
  ![Notifications are found in the Properties tab.](./configuring-workflow-actions-and-notifications/images/03.png)
 
@@ -67,7 +66,7 @@ Follow the steps below:
 1. Enter a message in the _Template_ field:
     * `Your submission was rejected by ${userName}, please modify and resubmit.`
 
-1. Select the Notification Type; this field is multiple-select so you can multiple users:
+1. Select the Notification Type(s):
 
     * Email
     * User Notification
@@ -77,7 +76,7 @@ Follow the steps below:
 
      ![Add an Notification to the Update node which notifies the creator that the submission has been rejected.](./configuring-workflow-actions-and-notifications/images/06.png)
 
-1. Click _Save_ when finished.
+1. Click the back arrow (![Back](../../../../images/icon-angle-left.png)) when finished (in some versions you must click _Save_ in the notification section).
 
 Notifications on the Update node have been added.
 

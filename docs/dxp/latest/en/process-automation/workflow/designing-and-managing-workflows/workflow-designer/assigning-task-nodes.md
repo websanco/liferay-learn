@@ -2,7 +2,15 @@
 
 > Subscribers
 
-Task nodes require interaction by people. To alert the right people and associate the task with the right people, use [Notifications](./configuring-workflow-actions-and-notifications.md#adding-notifications) and Assignments, respectively. You can assign Task nodes to specific Roles, multiple Roles of a [Role type](../../../../users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.md) (Organization, Site, Asset Library, Account, or Regular Role types), to the Asset Creator, to Resource Actions, or to specific Users. Additionally, you can write a script to define the assignment (see below). In the example below, the task has been assigned to the Portal Content Reviewer Role.
+Task nodes require interaction by people. To alert the right people and associate the task with the right people, use [Notifications](./configuring-workflow-actions-and-notifications.md#adding-notifications) and Assignments, respectively. You can assign Task nodes to 
+
+- Specific Roles
+- Multiple Roles of a [Role type](../../../../users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.md) (Organization, Site, Asset Library, Account, or Regular Role types)
+- The Asset Creator
+- Resource Actions
+- Specific Users
+
+Additionally, you can write a [script](../../developer-guide/using-the-script-engine-in-workflow.md) to define the assignment (see below). In the example below, the task has been assigned to the Portal Content Reviewer Role.
 
 ![You can add an Assignment to a Task node.](./assigning-task-nodes/images/01.png)
 
@@ -12,7 +20,7 @@ You can assign a workflow task to a _Resource Action_. Resource actions are oper
 
 <!--To learn more about Resource Actions, refer to the developer tutorial on the [permission system](../../../../building-applications/permissions.md) for a more detailed explanation.-->
 
-Here's what the assignment looks like in the Source (Workflow XML) tab:
+Here's what the assignment looks like in the Source (Workflow XML) view:
 
 ```xml
 <assignments>
@@ -26,7 +34,13 @@ You can assign the workflow to the appropriate workflow enabled asset.
 
 Now when the workflow proceeds to the task with the resource action assignment, Users with `UPDATE` permission on the resource (for example, Message Boards Messages) are notified of the task and can assign it to themselves (if the notification is set to Task Assignees). Specifically, Users see the tasks in their *My Workflow Tasks* application under the tab *Assigned to My Roles*.
 
-Use all upper case letters for resource action names. Here are some common resource actions:
+```{note}
+The My Workflow Tasks application is accessible from a User's personal menu:
+
+![My Workflow Tasks is where Users go to manage content in the workflow.](./assigning-task-nodes/images/02.png)
+```
+
+Use all upper case letters for resource action names. To enter more than one, use a comma-separated list. Here are some common resource actions:
 
 * UPDATE
 * ADD

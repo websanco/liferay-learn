@@ -6,18 +6,16 @@ _Condition_ nodes are useful for acting  (transitioning, assigning, etc.) condit
 
 Conditions act as a gatekeeper by checking whether the specified conditions are met, and then acting on the asset---assigning the right reviewer, or transitioning to a certain task, based on those conditions.
 
-The [Category Specific Definition](https://github.com/liferay/liferay-learn/blob/master/docs/dxp/latest/en/process-automation/workflow/designing-and-managing-workflows/workflow-designer/workflow-designer-overview/resources/category-specific-definition.xml) contains an example of a Condition node:
+The [Category Specific Definition](https://github.com/liferay/liferay-learn/blob/master/docs/dxp/latest/en/process-automation/workflow/designing-and-managing-workflows/workflow-designer/workflow-designer-overview/resources/category-specific-definition.xml) contains an example of a Condition node. The conditional logic checks the asset category to choose whether to transition to the _Legal Review_ task or the _Content Review_ task. To add a Condition node to your workflow,
 
 1. Navigate to the _Global Menu_ &rarr;  _Applications_ &rarr; _Workflow_ &rarr; _Process Builder_.
 1. Click the (![Add icon](../../../../images/icon-add.png)) to add a new workflow.
 1. In the workflow designer Canvas, enter a name for the workflow.
 1. Click the _Source_ tab.
-1. Click _Import A File_.
-1. Upload the [Category Specific Definition](https://github.com/liferay/liferay-learn/blob/master/docs/dxp/latest/en/process-automation/workflow/designing-and-managing-workflows/workflow-designer/workflow-designer-overview/resources/category-specific-definition.xml).
-1. Click the _Diagram_ tab.
-1. Double Click on the _Condition_ node to configure the node's properties.
-1. Click _Value_ next to _Script_.
-1. The script appears: 
+1. Find the [Category Specific Definition](https://github.com/liferay/liferay-learn/blob/master/docs/dxp/latest/en/process-automation/workflow/designing-and-managing-workflows/workflow-designer/workflow-designer-overview/resources/category-specific-definition.xml). Either copy its raw contents into the source view, overwriting all the existing content, or click _Import A File_ and upload the definition's XML file.
+1. Open the _Diagram_ view.
+1. Click the Condition node, _Determine Branch_, to configure the node's properties.
+1. Find the _Script (Groovy)_ field. Resize the field (make it bigger) to see the contents more clearly:
 
     ```groovy
     import com.liferay.asset.kernel.model.AssetCategory;
@@ -64,7 +62,7 @@ The [Category Specific Definition](https://github.com/liferay/liferay-learn/blob
 
    The script loops through the asset's categories looking for the string `legal`. If it's found, workflow continues along the Legal Review path. Otherwise, it continues along the Content Review path. 
 
-1. Click _Save_ or _Cancel_ to return to the Canvas.
+1. Click the back arrow (![Back](../../../../images/icon-angle-left.png) (or _Save_ if using an earlier version of the Workflow Designer) when finished working with the condition's script.
 
 ![The Category Specific Approval definition starts with a Condition node.](./using-condition-nodes/images/02.png)
 
@@ -72,7 +70,7 @@ Notice how the _Condition_ node is connected to three different Task nodes:
 
 * If the document is in the `legal` category, the asset is sent to the Legal Department.
 * Otherwise, the asset is sent to the Marketing team.
-* The _update_ node assigns the asset back to the original creator to make changes if the asset was rejected.
+* The _update_ node sends the processing back to the Condition once it's updated by the original creator (if the asset was rejected in one of the review nodes).
 
 See [Creating Workflow Tasks](./creating-workflow-tasks.md) and [Assigning Task Nodes](./assigning-task-nodes.md) to learn how to configure Task nodes.
 
