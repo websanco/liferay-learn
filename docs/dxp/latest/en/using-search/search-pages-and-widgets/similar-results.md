@@ -123,7 +123,7 @@ The same template editor is accessible from the Widget Templates entry in the Si
 
 The first configuration options appear in a section called _Display Settings_.
 
-![Configure different options in the similar results configuration.](similar-results/images/07.png)
+![Configure different options in the similar results configuration.](similar-results/images/01.png)
 
 **Display Template:** Choose the widget template to configure how similar results are displayed.
 
@@ -134,7 +134,8 @@ behavior of the widget. Many of these settings are used to configure the
 [More Like this Query for Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-mlt-query.html).
 
 | Advanced Settings | Definition |
-|----------------------|------------------------------|
+| :---------------- | :----------|
+| Scope | Choose between This Site (default) and Everything to display similar results from the current site only (*This Site*) or expand the scope of the search to all sites (*Everything*).
 | Fields | Use a comma-separated list to specify keyword or text fields whose content is used to determine whether another asset matches the Main Asset. |
 | Maximum Query Terms | Set the maximum number of query terms to extract from the main asset. These are the terms used for matching search results to the main asset. Increasing this value enhances the relevance of returned results at the expense of execution speed. If left blank, this defaults to `25`. |
 | Minimum Term Frequency | Set the minimum threshold for the times a term must appear in the index to be used for matching similar results. If left blank, this defaults to `2`. |
