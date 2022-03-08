@@ -69,7 +69,7 @@ Set these environment variables in the Jenkins service to point to your new repo
 
 For the `LCP_CI_SCM_TOKEN` value, use the personal access token created for your GitHub organization. For instructions on creating and accessing this token, see [GitHub's documentation](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line).
 
-Ensure that the personal access token has all of the necessary boxes checked under *Select scopes*. Select all of the scope permissions under *repo* and *admin:repo_hook*. The *admin:repo_hook* scope permissions specifically can be removed later if you [disable automatic web hook management](#personal-access-token-usage) after your repository is successfully integrated with DXP Cloud.
+The personal access token created must have all of the scope permissions under *repo* and *admin:repo_hook* checked. The *admin:repo_hook* scope permissions specifically can be removed later if you [disable automatic web hook management](#personal-access-token-usage) after your repository is successfully integrated with DXP Cloud.
 
 ![Check the correct permissions to ensure that the PAT can be used successfully.](./configuring-your-github-repository/images/05.png)
 
