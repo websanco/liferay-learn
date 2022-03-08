@@ -7,7 +7,7 @@ The Process Builder's workflow designer is a graphical interface for creating wo
 ![Drag and drop nodes onto the designer canvas.](./workflow-designer-overview/images/01.png)
 
 ```{tip}
-Alternately, you can write or upload XML definitions from the Source tab in the Process Builder. See [Managing Workflows](../managing-workflows.md#uploading-a-new-workflow-definition).
+Alternately, you can write or upload XML definitions from the Source View in the Process Builder. See [Managing Workflows](../managing-workflows.md#uploading-a-new-workflow-definition).
 ```
 
 The workflow designer supports all [workflow node](./workflow-nodes.md) types:
