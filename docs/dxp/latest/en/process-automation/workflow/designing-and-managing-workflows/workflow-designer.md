@@ -10,6 +10,7 @@ workflow-designer/workflow-nodes.md
 workflow-designer/using-forks-and-joins.md
 workflow-designer/using-condition-nodes.md
 workflow-designer/assigning-task-nodes.md
+workflow-designer/workflow-transitions.md
 ```
 
 ```{note}
@@ -25,4 +26,5 @@ The Workflow Designer user interface was refreshed in a Liferay 7.4 update. The 
 - [Using Forks and Joins](./workflow-designer/using-forks-and-joins.md)
 - [Using Condition Nodes](./workflow-designer/using-condition-nodes.md)
 - [Workflow Nodes](./workflow-designer/workflow-nodes.md)
+- [Workflow Transitions](./workflow-designer/workflow-transitions.md)
 

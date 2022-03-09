@@ -35,7 +35,7 @@ Click the (![Add icon](../../../../images/icon-add.png)) to begin.
 
 Each Workflow Node represents a specific point in an approval process, whether it starts the review process, approves or rejects the asset, or reassigns the task.
 
-Workflow transitions link each node to create the desired flow in the review process. On exiting the first node, processing continues to the next node indicated by the transition.
+[Workflow transitions](./workflow-transitions.md) link each node to create the desired flow in the review process. On exiting the first node, processing continues to the next node indicated by the transition.
 
 Ready to work on workflows? Your next step is [creating workflow tasks](./creating-workflow-tasks.md).
 
