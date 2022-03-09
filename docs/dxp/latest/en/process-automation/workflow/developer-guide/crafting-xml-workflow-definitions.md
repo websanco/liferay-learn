@@ -28,17 +28,17 @@ When breaking down your workflow into its components, then, think about your Sta
 
 ## Schema
 
-The structure of a workflow definition is defined in its XSD file: [`liferay-workflow-definition-7_3_0.xsd`](https://www.liferay.com/dtd/liferay-workflow-definition_7_3_0.xsd).
+The structure of a workflow definition is defined in its XSD file: [`liferay-workflow-definition-7_4_0.xsd`](https://www.liferay.com/dtd/liferay-workflow-definition_7_4_0.xsd).
 
 Declare the schema at the top of the workflow definition file:
 
 ```xml
 <?xml version="1.0"?>
 <workflow-definition
-    xmlns="urn:liferay.com:liferay-workflow_7.3.0"
+    xmlns="urn:liferay.com:liferay-workflow_7.4.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="urn:liferay.com:liferay-workflow_7.3.0
-        http://www.liferay.com/dtd/liferay-workflow-definition_7_3_0.xsd">
+    xsi:schemaLocation="urn:liferay.com:liferay-workflow_7.4.0
+        http://www.liferay.com/dtd/liferay-workflow-definition_7_4_0.xsd">
 ```
 
 ## Metadata
