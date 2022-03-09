@@ -108,4 +108,4 @@ The Navigation Menu has been deleted.
 ## Additional Information
 
 * [Managing Site Navigation](./managing-site-navigation.md)
-* [Configuring Menus Display](./configuring-menus-display.md)
+* [Configuring Menu Displays](./configuring-menu-displays.md)
