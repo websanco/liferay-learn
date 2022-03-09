@@ -1,8 +1,12 @@
-開発者ガイド
-===============
+## 開発者ガイド
 
-.. toctree::
-   :maxdepth: 2
+```{toctree}
+:maxdepth: 3
+```
+Coming Soon!
 
-.. include:: /content-authoring-and-management/06-recycle-bin/02-developer-guide/README.rst
-   :start-line: 2
+* Enabling Recycle Bin in Service Builder
+* Restoring Entries
+* Implementing Undo
+* Moving and Restoring Parent Entities
+* Resolving Recycling Conflicts

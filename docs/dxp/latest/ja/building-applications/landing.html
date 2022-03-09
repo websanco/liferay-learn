@@ -6,20 +6,39 @@
 		data: {
 			cards: [
 				{
-					sectionName: '単一ページアプリケーションの開発',
+					sectionName: 'オブジェクト',
+					sectionURL: 'building-applications/objects.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'オブジェクト',
+							url: 'building-applications/objects.html'
+						},
+						{
+							name: 'オブジェクトの作成と管理',
+							url: 'building-applications/objects/creating-and-managing-objects.html'
+						},
+						{
+							name: 'オブジェクト統合を理解する',
+							url: 'building-applications/objects/understanding-object-integrations.html'
+						},
+					]
+				},
+				{
+					sectionName: 'JavaScriptアプリケーションの開発',
 					sectionURL: 'building-applications/developing-a-javascript-application.html',
 					showAll: false,
 					subsections: [
 						{
-							name: 'Reactの使用 (近日公開！)',
+							name: 'Reactの使用',
 							url: 'building-applications/developing-a-javascript-application/using-react.html'
 						},
 						{
-							name: 'Angularの使用 (近日公開！)',
+							name: 'Angularの使用',
 							url: 'building-applications/developing-a-javascript-application/using-angular.html'
 						},
 						{
-							name: 'Vue.jsの使用 (近日公開！)',
+							name: 'Vue.jsの使用',
 							url: 'building-applications/developing-a-javascript-application/using-vuejs.html'
 						}
 					]
@@ -30,25 +49,25 @@
 					showAll: false,
 					subsections: [
 						{
-							name: 'ポートレット',
-							url: 'building-applications/developing-a-java-web-application/reference/portlets.html'
-						},
-						{
-							name: 'MVCの使用 (近日公開！)',
+							name: 'MVCの使用',
 							url: 'building-applications/developing-a-java-web-application/using-mvc.html'
 						},
 						{
-							name: 'Springの使用 (近日公開！)',
+							name: 'Springの使用',
 							url: 'building-applications/developing-a-java-web-application/using-spring.html'
 						},
 						{
-							name: 'JSFの使用 (近日公開！)',
+							name: 'JSFの使用',
 							url: 'building-applications/developing-a-java-web-application/using-jsf.html'
+						},
+						{
+							name: 'Bean Portletの使用 (近日公開！)',
+							url: 'building-applications/developing-a-java-web-application/using-bean-portlet.html'
 						},
 					]
 				},
 				{
-					sectionName: 'Developing a REST Web API',
+					sectionName: 'RESTビルダーを使用したAPIの作成',
 					sectionURL: 'headless-delivery/apis-with-rest-builder.html',
 				},
 				{
@@ -57,8 +76,32 @@
 					showAll: false,
 					subsections: [
 						{
-							name: 'Message Bus (近日公開！)',
+							name: '設定フレームワーク',
+							url: 'building-applications/core-frameworks/configuration-framework.html'
+						},
+						{
+							name: 'Dependency Injection',
+							url: 'building-applications/core-frameworks/dependency-injection.html'
+						},
+						{
+							name: 'ディスパッチの使用',
+							url: 'building-applications/core-frameworks/dispatch-framework/using-dispatch.html'
+						},
+						{
+							name: 'Message Busメッセージバス',
 							url: 'building-applications/core-frameworks/message-bus.html'
+						},
+						{
+							name: 'Portlet Providers',
+							url: 'building-applications/core-frameworks/portlet-providers.html'
+						},
+						{
+							name: 'Servlets',
+							url: 'building-applications/core-frameworks/servlets.html'
+						},
+						{
+							name: 'リファレンス',
+							url: 'building-applications/core-frameworks/reference.html'
 						},
 					]
 				},
@@ -68,39 +111,40 @@
 					showAll: false,
 					subsections: [
 						{
-							name: 'サービスビルダー (近日公開！)',
+							name: 'サービスビルダー',
 							url: 'building-applications/data-frameworks/service-builder.html'
 						},
 						{
 							name: '開発者ガイド',
-							url: 'content-authoring-and-management/documents-and-media/developer_guide.html'
+							url: 'content-authoring-and-management/documents-and-media/developer-guide.html'
 						},
 						{
 							name: '開発者ガイド',
-							url: 'using-search/developer_guide.html'
+							url: 'using-search/developer-guide.html'
 						},
 					]
 				},
 				{
 					sectionName: 'ツーリング',
 					sectionURL: 'building-applications/tooling.html',
+					showAll: false,
 					subsections: [
 						{
 							name: '開発者ツールの概要',
 							url: 'building-applications/tooling/developer-tools-overview.html'
 						},
 						{
-							name: 'ブレードCLIのインストールと更新',
+							name: 'Blade CLIのインストールと更新',
 							url: 'building-applications/tooling/blade-cli/installing-and-updating-blade-cli.html'
 						},
 						{
-							name: 'Liferay Workspace (近日公開！)',
-							url: 'building-applications/tooling/liferay-workspace.html'
+							name: 'Liferay Workspaceの概要',
+							url: 'building-applications/tooling/liferay-workspace/what-is-liferay-workspace.html'
 						},
 					]
 				},
 				{
-					sectionName: '参照',
+					sectionName: 'リファレンス',
 					sectionURL: 'building-applications/reference.html',
 					showAll: false,
 					subsections: [
@@ -109,7 +153,7 @@
 							url: 'building-applications/reference/deploying-wars-wab-generator.html'
 						},
 						{
-							name: 'WABから除外されたJAR',
+							name: 'WABから除外されたJAR (近日公開！)',
 							url: 'building-applications/reference/jars-excluded-from-wabs.html'
 						},
 					]
@@ -120,7 +164,7 @@
 					showAll: false,
 					subsections: [
 						{
-							name: 'アプリビルダーの概要',
+							name: 'アプリビルダー',
 							url: 'building-applications/app-builder.html'
 						},
 						{
@@ -130,7 +174,7 @@
 						{
 							name: 'ワークフロー対応アプリケーションの作成',
 							url: 'building-applications/app-builder/creating-a-workflow-powered-application.html'
-						},
+						}
 					]
 				}
 			]
