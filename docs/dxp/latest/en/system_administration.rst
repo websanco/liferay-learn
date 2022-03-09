@@ -9,6 +9,7 @@ System Administration
    system-administration/configuring_liferay.rst
    system-administration/using-the-script-engine.md
    system-administration/using-the-server-administration-panel.md
+   system-administration/data-integration.md
 
 .. raw:: html
    :file: landingpage_template.html
