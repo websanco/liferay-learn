@@ -34,7 +34,7 @@ Use the Name field to set a Page's title used for Site navigation and displayed 
 While a Page's name and friendly URL are initially defined together at Page creation, they are configured independently afterwards. It is best practice to update them together so that they match.
 ```
 
-### Navigation Menu Widget
+### Navigation Menu Display
 
 You can hide a Page from Menu Display widgets that show the Public Pages Hierarchy. When enabled, a hidden Page can still appear in other navigation menus if added to them. See [Configuring Site Navigation](./../../site-navigation/managing-site-navigation.md) for more information.
 

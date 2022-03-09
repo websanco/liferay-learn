@@ -40,7 +40,7 @@ Here are the features deprecated in 7.4:
 | Bootstrap 3 & Bootstrap 4 compatibility layer | Removed | Opt in to adding a compatibility layer during [Theme upgrade](../../../site-building/site-appearance/themes/upgrading-a-theme.md) or manually add the layer.  |
 | Commerce Account Widget | Removed | Replaced by the DXP/Portal Accounts Widget |
 | Central Authentication Service (CAS) | Archived | Deprecated in 7.2. It is replaced by other solutions, including SAML, OpenID Connect, and Token-based SSO. |
-| Commerce Categories Navigation widget | Bundled | Replaced by [Display Page Templates](../../../site-building/displaying-content/using-display-page-templates/about-display-page-templates-and-display-pages.md) [Menu Display](../../../site-building/site-navigation/configuring-navigation-menus.md) support. |
+| Commerce Categories Navigation widget | Bundled | Replaced by [Display Page Templates](../../../site-building/displaying-content/using-display-page-templates/about-display-page-templates-and-display-pages.md) [Menu Display](../../../site-building/site-navigation/configuring-menus-display.md) support. |
 | Commerce Bill of Materials (BOM) | Removed | To be replaced by Shop By Diagram. |
 | Commerce Category Content widget | Bundled | Replaced by [Display Page Templates](../../../site-building/displaying-content/using-display-page-templates/about-display-page-templates-and-display-pages.md). |
 | Digest Authentication | Bundled | Digest Authentication  requires weak password hash storage, which is a vulnerability. |
