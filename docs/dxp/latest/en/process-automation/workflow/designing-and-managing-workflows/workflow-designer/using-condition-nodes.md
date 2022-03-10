@@ -11,7 +11,7 @@ The [Category Specific Definition](https://github.com/liferay/liferay-learn/blob
 1. Navigate to the _Global Menu_ &rarr;  _Applications_ &rarr; _Workflow_ &rarr; _Process Builder_.
 1. Click the (![Add icon](../../../../images/icon-add.png)) to add a new workflow.
 1. In the workflow designer Canvas, enter a name for the workflow.
-1. Click the _Source_ tab.
+1. Open the _Source_ view.
 1. Find the [Category Specific Definition](https://github.com/liferay/liferay-learn/blob/master/docs/dxp/latest/en/process-automation/workflow/designing-and-managing-workflows/workflow-designer/workflow-designer-overview/resources/category-specific-definition.xml). Either copy its raw contents into the source view, overwriting all the existing content, or click _Import A File_ and upload the definition's XML file.
 1. Open the _Diagram_ view.
 1. Click the Condition node, _Determine Branch_, to configure the node's properties.
