@@ -34,7 +34,7 @@ Staging is a complex subsystem that's flexible and scalable. Before you begin us
 Depending on the content in your Site and Asset Library, you can turn on Staging for only the necessary content types during your initial setup. You can also configure your publish process to only include certain types of content. Both of these measures can help to avoid unnecessary work.
 
 ```{important}
-By default, content displayed using the following widgets is always included in publishing processes: Dynamic Data Lists Display, Form, Web Content Display, and Wiki Display. If desired, you can disable this behavior so that displayed content is only published when explicitly included in the publishing process's configuration. See [Configuring Automatic Publishing of Displayed Content](./configuring-automatic-publishing-of-displayed-content.md) for more information.
+By default, content displayed using the following widgets is always included in publishing processes: Dynamic Data Lists Display, Form, Web Content Display, and Wiki Display. For Liferay DXP/Portal 7.4+, you can disable this behavior so that displayed content is only published when explicitly included in the publishing process's configuration. See [Configuring Automatic Publishing of Displayed Content](./configuring-automatic-publishing-of-displayed-content.md) for more information.
 ```
 
 ### Hardware Environment
