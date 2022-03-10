@@ -246,14 +246,15 @@ Liferay DXPは、DXPに組み込まれているデータソースを使用する
         <Resource
             name="jdbc/LiferayPool"
             auth="Container"
-            type="javax.sql.DataSource "
-            driverClassName =" [ドライバー名をここに配置] "
-            url =" [データベースへのURLをここに配置] "
-            username =" [ユーザー名をここに配置] "
-            password =" [パスワードをここに配置] "
-            maxTotal =" 100"
-            maxIdle = "30"
-            maxWaitMillis = "10000"
+            factory="com.zaxxer.hikari.HikariJNDIFactory"
+            type="javax.sql.DataSource"
+            minimumIdle="10"
+            maxLifetime="0"
+            maximumPoolSize="85"
+            driverClassName="com.mysql.jdbc.Driver"
+            dataSource.user="[ユーザー名をここに配置]"
+            dataSource.password="[パスワードをここに配置]"
+            jdbcUrl="jdbc:mysql://localhost/lportal?characterEncoding=UTF8&amp;dontTrackOpenResources=true&amp;holdResultsOpenOverStatementClose=true&amp;useFastDateParsing=false&amp;useUnicode=true"
         />
     </Context>
     ```

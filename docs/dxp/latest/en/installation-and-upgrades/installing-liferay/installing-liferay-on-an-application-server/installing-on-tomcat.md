@@ -238,19 +238,20 @@ Otherwise, you can configure the data source in Tomcat.
         <Resource
             name="jdbc/LiferayPool"
             auth="Container"
+            factory="com.zaxxer.hikari.HikariJNDIFactory"
             type="javax.sql.DataSource"
-            driverClassName="[place the driver name here]"
-            url="[place the URL to your database here]"
-            username="[place your user name here]"
-            password="[place your password here]"
-            maxTotal="100"
-            maxIdle="30"
-            maxWaitMillis="10000"
+            minimumIdle="10"
+            maxLifetime="0"
+            maximumPoolSize="85"
+            driverClassName="com.mysql.jdbc.Driver"
+            dataSource.user="[place your user name here]"
+            dataSource.password="[place your password here]"
+            jdbcUrl="jdbc:mysql://localhost/lportal?characterEncoding=UTF8&amp;dontTrackOpenResources=true&amp;holdResultsOpenOverStatementClose=true&amp;useFastDateParsing=false&amp;useUnicode=true"
         />
     </Context>
     ```
 
-    Make sure to replace the database URL, user name, and password with the appropriate values.
+    Make sure to replace the database URL, user name, and password with the appropriate values. Note that Liferay uses [Hikari CP](https://liferay.dev/blogs/-/blogs/tomcat-hikaricp) by default for the database connection pool.
 
 1. In a `portal-ext.properties` file in **[Liferay_Home]**, specify the data source. For example,
 
