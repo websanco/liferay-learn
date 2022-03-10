@@ -89,7 +89,7 @@ To customize the Success Page,
 
 ### Publishing a Form
 
-Once you have completed your form, publish it to make it publicly available for your target audience. Click the _Publish_ button.
+Once you have completed your form, click the _Publish_ button to make it publicly available for your target audience.
 
 When you publish a form, a URL is generated that can be sent to users to fill out the form.
 
