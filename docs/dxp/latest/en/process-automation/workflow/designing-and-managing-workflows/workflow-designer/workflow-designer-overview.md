@@ -39,6 +39,30 @@ Each Workflow Node represents a specific point in an approval process, whether i
 
 Ready to work on workflows? Your next step is [creating workflow tasks](./creating-workflow-tasks.md).
 
+## Localizing the Workflow
+
+A workflow process's text is experienced by Users in these ways:
+
+- Administrators and workflow participants (e.g., workflow task assignees) see the workflow definition's title in the list of workflows.
+- Workflow participants (e.g., workflow task assignees) see the Node and Transition labels while managing their workflow content (e.g., in My Workflow Tasks).
+
+<!-- TODO: adjust this update number as needed -->
+As of Liferay 7.4 U16, these textual items are all translatable.
+
+To translate the workflow,
+
+1. Open a workflow or add a new one from the Global Menu &rarr; Applications &rarr; Process Builder. 
+1. If it's a new workflow connect the start node to the end node with a [transition](./workflow-transitions.md).
+1. All of the localizable fields were created in the instance's default language. To begin translating, click the Language Selector near the workflow's title field:
+
+![]()
+
+1. Select the language to begin translating.
+1. Go through the workflow and translate the node labels, transition labels, and the workflow title.
+1. Save the workflow.
+
+Once the workflow definition is published and [associated to an asset](../../using-workflows/activating-workflow.md), participants like workflow task assignees will interact with the workflow in their language.
+
 ## Additional Information
 
 * [Managing Workflows](../managing-workflows.md)
