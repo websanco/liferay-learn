@@ -102,6 +102,10 @@ After selecting your Content option, click *Refresh Counts* to update the number
 
 You can also click on *Change* for each content type to manage items and other settings included in each type, such as *version history*, *vocabularies*, and *previews and thumbnails*. See [Managing Data and Content Types in Staging](./managing-data-and-content-types-in-staging.md) for more information.
 
+```{important}
+By default, content displayed using the following widgets is always included in publishing processes: Dynamic Data Lists Display, Form, Web Content Display, and Wiki Display. If desired, you can disable this behavior so that displayed content is only published when explicitly included in the publishing process's configuration. See [Configuring Automatic Publishing of Displayed Content](./configuring-automatic-publishing-of-displayed-content.md) for more information.
+```
+
 **Permissions**: Select whether to include permissions for the Pages and widgets when your changes are published.
 
 ![Select whether to include permissions for the Pages and widgets when your changes are published.](./site-staging-ui-reference/images/10.png)
