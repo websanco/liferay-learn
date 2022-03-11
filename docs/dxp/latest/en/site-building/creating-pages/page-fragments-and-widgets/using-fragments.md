@@ -26,10 +26,53 @@ All Page Fragments are organized into Sets, which group related Fragments for ea
 
 After adding Fragments to a Page or Template, you can configure and customize them and their sub-elements. These options can vary, though some are common to all. See [Configuring Fragments](./using-fragments/configuring-fragments.md) to learn more about available options.
 
-```{raw} html
-:file: ../../../landingpage_template.html
-```
+::::{grid} 2
+:gutter: 3 3 3 3
 
-```{raw} html
-:file: using-fragments/landing.html
-```
+:::{grid-item-card} Default Fragments Reference
+:link: ./using-fragments/default-fragments-reference.md
+:::
+
+:::{grid-item-card} Using Layout Elements
+:link: ./using-fragments/using-layout-elements.md
+:::
+
+:::{grid-item-card} Configuring Fragments
+
+* [General Settings Reference](using-fragments/configuring-fragments/general-settings-reference.md)
+* [Styles Reference](using-fragments/configuring-fragments/styles-reference.md)
+* [Fragment Sub-Elements Reference](using-fragments/configuring-fragments/fragment-sub-elements-reference.md)
+:::
+
+:::{grid-item-card} Mapping and Linking Fragment Elements
+:link: ./using-fragments/mapping-and-linking-fragment-elements.md
+:::
+
+:::{grid-item-card} Configuring Fragment Visibility
+:link: ./using-fragments/configuring-fragment-visibility.md
+:::
+
+:::{grid-item-card} Editing Fragment Elements
+:link: ./using-fragments/editing-fragment-elements.md
+:::
+
+:::{grid-item-card} Creating Dropdown Menus with Fragments
+:link: ./using-fragments/creating-dropdown-menus-with-fragments.md
+:::
+
+:::{grid-item-card} Duplicating Fragments
+:link: ./using-fragments/duplicating-fragments.md
+:::
+
+:::{grid-item-card} Saving Fragment Compositions
+:link: ./using-fragments/saving-fragment-compositions.md
+:::
+
+:::{grid-item-card} Managing Fragments
+:link: ./using-fragments/managing-fragments.md
+:::
+
+:::{grid-item-card} Propagating Fragment Changes
+:link: ./using-fragments/propagating-fragment-changes.md
+:::
+::::

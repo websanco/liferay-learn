@@ -14,6 +14,7 @@ Follow these steps to access management options for Fragment Sets:
 
     ```{note}
     For Liferay DXP/Portal 7.3 and earlier, it's located under *Product Menu* &rarr; *Site Menu* &rarr; *Site Builder* &rarr; *Page Fragments*.
+    ```
 
 1. Select the desired Set in the *Fragment Sets* list and click its *Actions* button (![Actions](../../../../images/icon-actions.png)).
 
