@@ -25,6 +25,7 @@ The top area in the Content Performance tool provides general information about 
 | Content Name | Content or Widget Page's name or name of the asset based on a Display Page Template. |
 | URL | Represent the URL of the Content Page, Widget Page, or Web Content associated with a Display Page Template. |
 | Author | Author's name. This information is only available for Web Content using a Display Page Template. |
+| Time Span Selector | Select a time span (Last 7 Days / Last 30 Days) and the charts shows the data for the time span selected. |
 | Publication date | Shows the publication date. Note that when you link the asset to a Display Page Template newer than the asset publication date, the publication date corresponds to the Display Page Template creation date. |
 
 The [Engagement](#analyzing-content-engagement) and [Traffic Channels](#analyzing-traffic-channels) areas in the Content Performance tool show statistics for the language selected in the language icon selector. When your content is localized in different languages, you can view metrics for each language.
@@ -34,6 +35,21 @@ Even when your content is not translated into a specific language, you may find 
 ```
 
 ![The top area in the Content Performance tool provides general information about your content.](./analyze-content-metrics-using-content-performance-tool/images/05.png)
+
+### Using the Time Span Selector
+
+Users can select a time span (Last 7 Days / Last 30 Days) from the dropdown and then navigate to previous and next periods.The Time Span Selector affects all the charts (Engagement and Traffic Channels).
+
+![Using the Time Span Selector ](./analyze-content-metrics-using-content-performance-tool/images/timespandelectoramarelo.png)
+
+```{note}
+If you select a different time span, the charts shows a spinner while fetching the data for the time span selected.
+```
+
+The time span selector is also included in the detail view of the panel for the *Referral* and *Social traffic*. Now the user can retrieve referral and social traffic data for the time span selected (Last 7 Days / Last 30 Days) in the detail view. 
+
+![Time Span on the Detail View of the Panel ](./analyze-content-metrics-using-content-performance-tool/images/detailviewtimespanselector.png)
+
 
 ## Analyzing Content Engagement
 
