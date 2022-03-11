@@ -15,8 +15,8 @@ readonly LIFERAY_LEARN_PORTAL_GIT_TAG_TOKEN=\\[\$LIFERAY_LEARN_PORTAL_GIT_TAG\$\
 readonly LIFERAY_LEARN_PORTAL_GIT_TAG_VALUE=7.4.3.8-ga8
 readonly LIFERAY_LEARN_PORTAL_WORKSPACE_TOKEN=\\[\$LIFERAY_LEARN_PORTAL_WORKSPACE\$\\]
 readonly LIFERAY_LEARN_PORTAL_WORKSPACE_TOKEN_VALUE=portal-7.4-ga8
-readonly LIFERAY_LEARN_YOUTUBE_BEGIN_HTML='\<iframe width\=\"560\" height\=\"315\" src\=\"'
-readonly LIFERAY_LEARN_YOUTUBE_END_HTML='\" title\=\"YouTube video player\" frameborder\=\"0\" allow\=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen\>\<\/iframe\>'
+readonly LIFERAY_LEARN_YOUTUBE_BEGIN_HTML='\<iframe allow\=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen frameborder\=\"0\" height\=\"315\" src\=\"'
+readonly LIFERAY_LEARN_YOUTUBE_END_HTML='\" title\=\"YouTube video player\" width\=\"560\"\>\<\/iframe\>'
 readonly LIFERAY_LEARN_YOUTUBE_URL_TOKEN=\\[\$LIFERAY_LEARN_YOUTUBE_URL\$\\]
 
 function download_nexus_jar {
