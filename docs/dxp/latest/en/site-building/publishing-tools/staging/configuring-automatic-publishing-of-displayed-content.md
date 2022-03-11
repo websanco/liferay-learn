@@ -1,6 +1,6 @@
 # Configuring Automatic Publishing of Displayed Content
 
-> Available Liferay DXP/Portal 7.4+
+> Available: Liferay DXP/Portal 7.4+
 
 By default, all publishing processes automatically republish content displayed using the following widgets: Dynamic Data Lists Display, Form, Web Content Display, and Wiki Display. This happens regardless of the publishing process's configuration to ensure your displayed content in Live stays up to date.
 
