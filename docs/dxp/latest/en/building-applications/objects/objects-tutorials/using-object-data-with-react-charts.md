@@ -1,8 +1,6 @@
 # Using Object Data with React Charts
 
-Liferay [Objects](../../objects.md) can be combined with [Headless APIs](../understanding-object-integrations/headless-framework-integration.md), and Remote Apps with React [FusionCharts](https://www.fusioncharts.com/dev/getting-started/react/your-first-chart-using-react) to create dynamic visuals for data dashboards.
-
-First, you'll set up a new DXP instance with [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) enabled for Object API calls. Then, you'll create an Object for receiving and storing data. After adding data to the Object using REST APIs, you'll download and build the provided React application. Once the code is compiled, you'll host the generated `.js` file in the Liferay Document Library and copy its WebDAV URL. Finally, you'll use this URL to create a Remote App for the React chart and deploy it as a Page widget.
+Here you'll use [Objects](../../objects.md), [Headless APIs](../understanding-object-integrations/headless-framework-integration.md), and [Remote Apps](../../remote-apps.md) to create a dynamic chart for data dashboards. First, you'll set up a new DXP instance with [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) enabled for Object API calls. Then, you'll create an Object for receiving and storing data. After adding data to the Object using REST APIs, you'll download and build the provided React [FusionCharts](https://www.fusioncharts.com/dev/getting-started/react/your-first-chart-using-react) application. Once the code is compiled, you'll host the generated `.js` file in the Liferay Document Library and copy its WebDAV URL. Finally, you'll use this URL to create a Remote App for the React chart and deploy it as a Page widget.
 
 The chart is configured to call the Object via Headless API every five seconds, which returns the Object's data and updates the chart dynamically.
 
@@ -101,7 +99,7 @@ Follow these steps to download and build the React application:
    ```
 
    ```bash
-   unzip liferay-x3j8.zip -d liferay-x3j8
+   unzip liferay-x3j8.zip
    ```
 
    ```bash
@@ -114,7 +112,15 @@ Follow these steps to download and build the React application:
    ./setup_tutorial.sh
    ```
 
-1. cd x3j8-remote-app
+1. Navigate to the React application's folder and install the dependencies.
+
+   ```bash
+   cd x3j8-remote-app
+   ```
+
+   ```bash
+   yarn install
+   ```
 
 1. (Optional) Start the React server.
 
