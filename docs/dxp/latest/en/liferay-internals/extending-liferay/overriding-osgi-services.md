@@ -49,10 +49,30 @@ The sample modules demonstrate how to override an OSGi service. These modules in
    ```
 
    ```bash
-   unzip liferay-s1j6.zip -d liferay-s1j6
+   unzip liferay-s1j6.zip
    ```
 
 1. Run the following `gradlew` command from the `s1j6-api`, `s1j6-able-impl`, and `s1j6-web` subfolders to build and deploy a JAR file for each module to your new Docker container:
+
+   ```bash
+   cd liferay-s1j6/s1j6-api
+   ```
+
+   ```bash
+   ../gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)
+   ```
+
+   ```bash
+   cd ../s1j6-able-impl
+   ```
+
+   ```bash
+   ../gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)
+   ```
+
+   ```bash
+   cd ../s1j6-web
+   ```
 
    ```bash
    ../gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)
@@ -62,7 +82,7 @@ The sample modules demonstrate how to override an OSGi service. These modules in
 
    Log messages indicate when Liferay begins processing and successfully starts each module. These logs also provide each service's bundle id.
 
-   ```
+   ```bash
    STARTED com.acme.s1j6.api_1.0.0 [1356]
    STARTED com.acme.s1j6.able.impl_1.0.0 [1357]
    STARTED com.acme.s1j6.web_1.0.0 [1358]
@@ -76,7 +96,7 @@ The sample modules demonstrate how to override an OSGi service. These modules in
 
    If successful, the output reads as follows:
 
-   ```
+   ```shell
    1356|Active     |   15|Acme S1J6 API (1.0.0)|1.0.0
    1357|Active     |   15|Acme S1J6 Able Implementation (1.0.0)|1.0.0
    1358|Active     |   15|Acme S1J6 Web (1.0.0)|1.0.0
@@ -95,7 +115,7 @@ To gather its service details, run the following command:
 scr:info com.acme.s1j6.able.internal.S1J6AbleImpl
 ```
 
-```
+```shell
 Component Description: com.acme.s1j6.able.internal.S1J6AbleImpl
 ===============================================================
 Class:         com.acme.s1j6.able.internal.S1J6AbleImpl
@@ -125,7 +145,7 @@ It also indicates that the service is used by a component within the `com.acme.s
 scr:info com.acme.s1j6.web.internal.portlet.S1J6Portlet
 ```
 
-```
+```shell
 Component Description: com.acme.s1j6.web.internal.portlet.S1J6Portlet
 =====================================================================
 Class:         com.acme.s1j6.web.internal.portlet.S1J6Portlet
@@ -189,9 +209,11 @@ When deployed, the highest ranking service takes priority and is bound to `S1J6P
 
 Follow these steps to deploy `S1J6BakerImpl`, `S1J6CharlieImpl`, and `S1J6DogImpl`:
 
-1. Open the `s1j6-baker-impl` folder in your console.
+1. Open the `s1j6-baker-impl` folder in your console and run the following `gradlew` command to build and deploy a JAR file for the module to the Docker container:
 
-1. Run the following `gradlew` command to build and deploy a JAR file for the module to the Docker container:
+   ```bash
+   cd ../s1j6-baker-impl
+   ```
 
    ```bash
    ../gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)
@@ -199,7 +221,7 @@ Follow these steps to deploy `S1J6BakerImpl`, `S1J6CharlieImpl`, and `S1J6DogImp
 
    Log messages indicate when Liferay begins processing and successfully starts the module along with its bundle ID.
 
-   ```
+   ```bash
    STARTED com.acme.s1j6.baker_1.0.0 [1359]
    ```
 
@@ -211,16 +233,24 @@ Follow these steps to deploy `S1J6BakerImpl`, `S1J6CharlieImpl`, and `S1J6DogImp
 
    If successful, `S1J6Portlet` is bound to `S1J6BakerImpl`, since it outranks `S1J6AbleImpl`.
 
-   ```
+   ```shell
    References:   (total 1)
      - _s1j6: com.acme.s1j6.S1J6 SATISFIED 1..1 static
        target=(*) scope=bundle (1 binding):
        * Bound to [3248] from bundle 1359 (com.acme.s1j6.baker.impl:1.0.0)
    ```
 
-1. Deploy `S1J6CharlieImpl` and `S1J6DogImpl` at the same time to the Docker container.
+1. Deploy `S1J6CharlieImpl` and `S1J6DogImpl` at the same time to the Docker container from the `s1j6-liferay`.
 
+   ```bash
+   cd ..
    ```
+
+   ```bash
+   ../gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)
+   ```
+
+   ```bash
    STARTED com.acme.s1j6.charlie_1.0.0 [1360]
    STARTED com.acme.s1j6.dog_1.0.0 [1361]
    ```
@@ -231,7 +261,7 @@ Follow these steps to deploy `S1J6BakerImpl`, `S1J6CharlieImpl`, and `S1J6DogImp
    lb -s | grep -i "s1j6"
    ```
 
-   ```
+   ```shell
    1356|Active     |   15|com.acme.s1j6.api (1.0.0)|1.0.0
    1357|Active     |   15|com.acme.s1j6.able.impl (1.0.0)|1.0.0
    1358|Active     |   15|com.acme.s1j6.web (1.0.0)|1.0.0
@@ -246,7 +276,7 @@ Follow these steps to deploy `S1J6BakerImpl`, `S1J6CharlieImpl`, and `S1J6DogImp
    scr:info com.acme.s1j6.web.internal.portlet.S1J6Portlet
    ```
 
-   ```
+   ```shell
    References:   (total 1)
      - _s1j6: com.acme.s1j6.S1J6 SATISFIED 1..1 static
        target=(*) scope=bundle (1 binding):

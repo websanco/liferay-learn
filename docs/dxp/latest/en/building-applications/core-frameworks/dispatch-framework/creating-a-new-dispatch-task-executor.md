@@ -59,10 +59,14 @@ Follow these steps to download, build, and deploy the sample Dispatch Task Execu
    ```
 
    ```bash
-   unzip liferay-s7a3.zip -d liferay-s7a3
+   unzip liferay-s7a3.zip
    ```
 
 1. Run this `gradlew` command to build the JAR file and deploy it to your new Docker container:
+
+   ```bash
+   cd liferay-s7a3
+   ```
 
    ```bash
    ./gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)

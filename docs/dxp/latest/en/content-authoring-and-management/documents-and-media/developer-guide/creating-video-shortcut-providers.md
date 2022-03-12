@@ -44,10 +44,14 @@ Below is a [sample external video shortcut provider](liferay-g9b6.zip) that demo
    ```
 
    ```bash
-   unzip liferay-g9b6.zip -d liferay-g9b6
+   unzip liferay-g9b6.zip
    ```
 
 1. Run the `gradlew deploy` command to build the JAR file and deploy it to your new Docker container:
+
+   ```bash
+   cd liferay-g9b6
+   ```
 
    ```bash
    ./gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)

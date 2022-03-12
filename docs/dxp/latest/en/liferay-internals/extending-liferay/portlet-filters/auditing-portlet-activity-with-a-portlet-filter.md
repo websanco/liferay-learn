@@ -47,10 +47,14 @@ Follow these steps to download, build, and deploy the sample Portlet Filter to a
    ```
 
    ```bash
-   unzip liferay-b4k8.zip -d liferay-b4k8
+   unzip liferay-b4k8.zip
    ```
 
 1. Run the following `gradlew` command to build the JAR file and deploy it to your new Docker container:
+
+   ```bash
+   cd liferay-b4k8
+   ```
 
    ```bash
    ./gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)
