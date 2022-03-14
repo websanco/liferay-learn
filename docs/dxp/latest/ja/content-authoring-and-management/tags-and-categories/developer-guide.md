@@ -1,14 +1,11 @@
-開発者ガイド
-===============
+# 開発者ガイド
 
-.. toctree::
-   :maxdepth: 2
+```{toctree}
+:maxdepth: 3
 
-   developer-guide/apis.rst
+developer-guide/categories-and-vocabulary-api-basics.md
+developer-guide/tags-api-basics.md
+```
 
-- アセットタグとカテゴリの実装
-
-API
-----
-
-近日公開！
+* [Categories and Vocabulary API Basics](./developer-guide/categories-and-vocabulary-api-basics.md)
+* [Tags API Basics](./developer-guide/tags-api-basics.md)

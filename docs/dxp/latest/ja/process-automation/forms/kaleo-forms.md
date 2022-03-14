@@ -1,8 +1,9 @@
-Kaleoフォーム
-===========
+# Kaleoフォーム
 
-.. toctree:: :maxdepth: 3
+```{toctree}
+:maxdepth: 3
 
-   kaleo-forms/kaleo-forms.md
+kaleo-forms/kaleo-forms.md
+```
 
--  :doc:`/process-automation/forms/kaleo-forms/kaleo-forms`
+- [Kaleo Forms](./kaleo-forms/kaleo-forms.md)

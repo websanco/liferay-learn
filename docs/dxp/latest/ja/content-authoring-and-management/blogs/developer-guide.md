@@ -1,8 +1,9 @@
-開発者ガイド
-===============
+# 開発者ガイド
 
-.. toctree:: :maxdepth: 2
+```{toctree}
+:maxdepth: 3
 
-   developer-guide/blog-api-basics.md
+developer-guide/blog-api-basics.md
+```
 
--  :doc:`/content-authoring-and-management/blogs/developer-guide/blog-api-basics`
+* [Blog API Basics](./developer-guide/blog-api-basics.md)

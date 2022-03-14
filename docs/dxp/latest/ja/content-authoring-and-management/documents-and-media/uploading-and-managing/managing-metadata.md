@@ -1,9 +1,11 @@
-メタデータの管理
-=================
+# メタデータの管理
 
-.. toctree:: :maxdepth: 2
+```{toctree}
+:maxdepth: 2
 
-   managing-metadata/defining-document-types.md managing-metadata/defining-metadata-sets.md
+managing-metadata/defining-document-types.md
+managing-metadata/defining-metadata-sets.md
+```
 
--  :doc:`/content-authoring-and-management/documents-and-media/uploading-and-managing/managing-metadata/defining-document-types`
--  :doc:`/content-authoring-and-management/documents-and-media/uploading-and-managing/managing-metadata/defining-metadata-sets`
+- [Defining Document Types](./managing-metadata/defining-document-types.md)
+- [Defining Metadata Sets](./managing-metadata/defining-metadata-sets.md)
