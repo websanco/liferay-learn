@@ -11,14 +11,14 @@ A/Bテストを実行するときに、次のパラメーターを設定でき�
 
 テストを作成したら、*[A/Bテスト]* ボタン（![A/B Test icon](../../../images/icon-ab-testing.png)）をクリックして、テストステータスと完了および終了したA/Bテストの履歴を確認します。 Liferay DXP 7.3以降では、[エクスペリエンス選択ダイアログ](../../personalizing-site-experience/experience-personalization/content-page-personalization.md)からエクスペリエンスのA/Bテストのステータスを表示することもできます。
 
-Liferay DXPは、テストが終了したときに、テストのステータスと勝利したバリアントのみを表示します。 Analytics CloudでA/Bテストの他の側面を管理できます。 詳細は、[A/B Testing Analytics](https://learn.liferay.com/analytics-cloud/latest/en/touchpoints/a-b-testing.html)を参照してください。
+Liferay DXPは、テストが終了したときに、テストのステータスと勝利したバリアントのみを表示します。 Analytics CloudでA/Bテストの他の側面を管理できます。 詳細は、 [A/B Testing Analytics](https://learn.liferay.com/analytics-cloud/latest/ja/optimization/a-b-testing.html) を参照してください。
 
-A/Bテストが終了したら、テスト結果を確認して、優先テストバリアントを公開できます。 詳細は、[Reviewing A/B Test Results and Publishing Test Variants](./reviewing-ab-test-results-and-publishing-test-variants.md)を参照してください。
+A/Bテストが終了したら、テスト結果を確認して、優先テストバリアントを公開できます。 詳細は、 [A/Bテスト結果のレビューとテストバリアントの公開](./reviewing-ab-test-results-and-publishing-test-variants.md) を参照してください。
 
 ## A/Bテストの実行
 
 ```{note}
-Before running the test, you must create the A/B Test and test Variant. For more information, read [Creating A/B Tests](./creating-ab-tests.md).
+Before running the test, you must create the A/B Test and test Variant. For more information, read [A/Bテストの作成](./creating-ab-tests.md) .
 ```
 
 1.  A/Bテストを実行するコンテンツページに移動します
@@ -32,7 +32,7 @@ Before running the test, you must create the A/B Test and test Variant. For more
 
 ## 関連情報
 
-  - [A/B Testing](./ab-testing.md)
-  - [Verifying A/B Test Requirements](./verifying-ab-test-requirements.md)
+  - [A/Bテスト](./ab-testing.md)
+  - [A/Bテスト要件の確認](./verifying-ab-test-requirements.md)
   - [Running and Monitoring A/B Tests](./running-and-monitoring-ab-tests)
-  - [Reviewing A/B Test Results and Publishing Test Variants](./reviewing-ab-test-results-and-publishing-test-variants.md)
+  - [A/Bテスト結果のレビューとテストバリアントの公開](./reviewing-ab-test-results-and-publishing-test-variants.md)

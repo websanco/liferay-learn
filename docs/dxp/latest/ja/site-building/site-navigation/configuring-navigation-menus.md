@@ -53,5 +53,5 @@
 
 ## 追加情報
 
-  - [Using Navigation Menus](./using-navigation-menus.md)
-  - [Managing Site Navigation](./managing-site-navigation.md)
+  - [ナビゲーションメニューの使用](./using-navigation-menus.md)
+  - [サイトナビゲーションの管理](./managing-site-navigation.md)

@@ -5,7 +5,7 @@
 デフォルトでは、すべてのユーザーがコレクションのすべてのコンテンツを表示でき、*Anyone* グループに属しています。 [セグメント](../segmentation/creating-and-managing-user-segments.md)を使用して、コレクションのアイテムの*個人用バリエーション*を作成できます。 個人用バリエーションを使用する場合、コレクションの一部であるアイテムは変更されませんが、コレクションページまたはコレクション表示フラグメントには、セグメントに対してフィルタリングされたアイテムが表示されます。
 
 ```{note}
-To customize a Collection using Segments, you must define the Segments first. For more information, see [Creating and Managing User Segments](../segmentation/creating-and-managing-user-segments.md).
+To customize a Collection using Segments, you must define the Segments first. For more information, see [ユーザーセグメントの作成と管理](../segmentation/creating-and-managing-user-segments.md) .
 ```
 
 ![コレクションは、デフォルトで誰でも利用できます](./personalizing-collections/images/02.png)
@@ -50,7 +50,7 @@ You can create multiple Personalized Variations for a Collection, and edit or de
 
 次に、[セグメント](../segmentation/creating-and-managing-user-segments.md)を使用して、コンテンツセットのパーソナライズを示します。 この例では、*ホーム*ページに表示されるデフォルトのコンテンツセットを作成します。 次に、それを変更して、*American Engineers*セグメントのメンバー向けの技術記事を含む個人用バリエーションを作成します。
 
-コンテンツセットに詳しくない場合は、[Creating Content Sets](../../../content-authoring-and-management/collections-and-collection-pages/creating-collections.md#creating-content-sets)の記事を読んでから開始してください。
+コンテンツセットに詳しくない場合は、 [Creating Content Sets](../../../content-authoring-and-management/collections-and-collection-pages/creating-collections.md#creating-content-sets) の記事を読んでから開始してください。
 
 #### デフォルトのコンテンツセットの作成と設定
 
@@ -64,7 +64,7 @@ You can create multiple Personalized Variations for a Collection, and edit or de
 
 4.  新しいコンテンツセットの場合は、*[アセットエントリー]* の横にある*[選択]* をクリックし <0>[基本Webコンテンツ]* を選択します。</p>
 
-    ![[選択]をクリックして、新しいアセットエントリーを追加します。](./personalizing-collections/images/20.png)</li>
+    ![ [選択]をクリックして、新しいアセットエントリーを追加します。](./personalizing-collections/images/20.png) </li>
 
 5
 
@@ -109,4 +109,4 @@ You can create multiple Personalized Variations for a Collection, and edit or de
   - [コンテンツページのパーソナライゼーション](./content-page-personalization.md)
   - [コレクションとコレクションページについて](../../../content-authoring-and-management/collections-and-collection-pages/about-collections-and-collection-pages.md)
   - [Creating User Segments](../segmentation/creating-and-managing-user-segments.md)
-  - [Assigning Roles to User Segments](../../../users-and-permissions/roles-and-permissions/assigning-roles-to-user-segments.md)
+  - [ユーザーセグメントへのロールの割り当て](../../../users-and-permissions/roles-and-permissions/assigning-roles-to-user-segments.md)

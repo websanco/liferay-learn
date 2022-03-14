@@ -14,7 +14,7 @@ Tomcatバンドルには、Liferay DXPが事前にデプロイされたApache To
 
 ## 前提条件
 
-Liferay DXPにはJava JDK 8または11が必要です。 JDKの選択には [互換性マトリックス](https://help.liferay.com/hc/en-us/articles/360049238151) を参照してください。 推奨される設定については、 [JVM設定](../reference/jvm-configuration.md) を参照してください。
+Liferay DXPにはJava JDK 8または11が必要です。 JDKの選択には [互換性マトリックス](https://help.liferay.com/hc/ja/articles/360049238151) を参照してください。 推奨される設定については、 [JVM設定](../reference/jvm-configuration.md) を参照してください。
 
 <a name="download" />
 

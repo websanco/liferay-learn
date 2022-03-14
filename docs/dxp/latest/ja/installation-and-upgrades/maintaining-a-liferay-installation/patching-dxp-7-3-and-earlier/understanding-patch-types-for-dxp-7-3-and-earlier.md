@@ -32,7 +32,7 @@ DXPパッチタイプとPortal CEフィックス配信方法の概要を以下�
 
 ## セキュリティ修正パック
 
-[DXPセキュリティフィックスパック](https://help.liferay.com/hc/en-us/articles/360035038331) は、最新の重要なセキュリティ問題に対処します。 これらはヘルプセンターの [ダウンロード](https://customer.liferay.com/downloads) ページで入手でき、 [パッチツール](./installing-patches-for-dxp-7-3-and-earlier.md)を使用してインストールされます。
+[DXPセキュリティフィックスパック](https://help.liferay.com/hc/ja/articles/360035038331) は、最新の重要なセキュリティ問題に対処します。 これらはヘルプセンターの [ダウンロード](https://customer.liferay.com/downloads) ページで入手でき、 [パッチツール](./installing-patches-for-dxp-7-3-and-earlier.md)を使用してインストールされます。
 
 特定のフィックスパック（ベースフィックスパック）を対象としたセキュリティフィックスパック。 [Downloads](https://customer.liferay.com/downloads) ページの各Security Fix Packは、その対象となる基本Fix Packを指定します。 それらのファイル名は、基本フィックスパックも示しています。
 
@@ -122,7 +122,7 @@ Liferay Portal CE GAリリースはDXPサービスパックに基づいており
       - セキュリティ フィックスパック
       - パッチツール
       - もっと
-  - [セキュリティー・ページ](https://help.liferay.com/hc/en-us/categories/360000892792-Security) ：セキュリティー関連の概要、アドバイザリー、およびフィックスパックへのリンク。
+  - [セキュリティー・ページ](https://help.liferay.com/hc/ja/categories/360000892792-Security) ：セキュリティー関連の概要、アドバイザリー、およびフィックスパックへのリンク。
 
 ヘルプセンターは、アカウントサポート、サポートに関するよくある質問などの出発点でもあります。 Liferayがお手伝いします\！
 

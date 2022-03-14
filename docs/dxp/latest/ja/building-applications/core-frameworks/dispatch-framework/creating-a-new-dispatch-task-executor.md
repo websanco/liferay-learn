@@ -57,7 +57,7 @@
 1. サンプルモジュールをダウンロードして解凍します。
 
    ```bash
-   curl https://learn.liferay.com/docs/dxp/latest/en/developing-applications/core-frameworks/dispatch-framework/liferay-s7a3.zip -O
+   curl https://learn.liferay.com/dxp/latest/ja/developing-applications/core-frameworks/dispatch-framework/liferay-s7a3.zip -O
    ```
 
    ```bash

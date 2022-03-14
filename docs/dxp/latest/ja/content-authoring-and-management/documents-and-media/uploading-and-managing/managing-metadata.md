@@ -7,5 +7,5 @@ managing-metadata/defining-document-types.md
 managing-metadata/defining-metadata-sets.md
 ```
 
-- [Defining Document Types](./managing-metadata/defining-document-types.md)
-- [Defining Metadata Sets](./managing-metadata/defining-metadata-sets.md)
+- [ドキュメントタイプの定義](./managing-metadata/defining-document-types.md)
+- [メタデータセットの定義](./managing-metadata/defining-metadata-sets.md)

@@ -4,7 +4,7 @@
 
 ## コンテナの幅
 
-[コンテナフラグメント](./using-fragments.md#using-the-container-fragment)を使用する場合、特にブラウザウィンドウのサイズが変更された場合に、コンテナフラグメントの幅が静的であるかどうかを判断するようにコンテナの幅を設定できます。
+[コンテナフラグメント](./using-fragments.md#using-the-container-fragment) を使用する場合、特にブラウザウィンドウのサイズが変更された場合に、コンテナフラグメントの幅が静的であるかどうかを判断するようにコンテナの幅を設定できます。
 
 ![コンテナは、可変または固定幅のいずれかに設定できます。](./fragment-styles-reference/images/01.png)
 
@@ -105,7 +105,7 @@
 ## 追加情報
 
   - [Configuring Fragment Styles](./configuring-fragment-styles.md)
-  - [Content Pages Overview](./content-pages-overview.md)
+  - [コンテンツページの概要](./content-pages-overview.md)
   - [フラグメントの使用](./using-fragments.md)
   - [新しいスタイルブックの作成](../../site-appearance/using-a-style-book-to-standardize-site-appearance.md)
   - [Style Book Tokens](../../site-appearance/developer-guide/style-book-token-definitions.md)

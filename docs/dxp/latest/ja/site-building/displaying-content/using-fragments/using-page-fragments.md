@@ -6,7 +6,7 @@
 
 ただし、カスタムフラグメントが必要な場合があります。 組み込みの [ページフラグメントエディター](../../developer-guide/reference/fragments/page-fragment-editor-interface-reference.md) か、デスクトップからローカルに [フラグメントツールキット](../../developer-guide/developing-page-fragments/using-the-fragments-toolkit.md)を使用して、独自のページフラグメントを作成できます。 カスタムページフラグメントの作成の詳細については、 [ページフラグメントの開発](../../developer-guide/developing-page-fragments/developing-fragments-intro.md)参照してください。
 
-[Liferayはウィジェット埋め込み](../../developer-guide/developing-page-fragments/reference/fragment-specific-tags-reference.md#including-widgets-within-a-fragment)、ページ・フラグメントにテキストや画像を含むフィールドを追加できます。 エンドユーザーは、コンテンツページの最終公開プロセス中に、これらのページ要素にコンテンツを追加できます。
+[Liferayはウィジェット埋め込み](../../developer-guide/developing-page-fragments/reference/fragment-specific-tags-reference.md#including-widgets-within-a-fragment) 、ページ・フラグメントにテキストや画像を含むフィールドを追加できます。 エンドユーザーは、コンテンツページの最終公開プロセス中に、これらのページ要素にコンテンツを追加できます。
 
 ![独自のコンテンツをフラグメントで提供できます。](./using-page-fragments/images/02.png)
 

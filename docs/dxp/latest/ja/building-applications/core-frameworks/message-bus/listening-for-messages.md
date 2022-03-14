@@ -23,7 +23,7 @@
 1. [サンプルのプロジェクト](dxp/latest/en/developing-applications/core-frameworks/message-bus/liferay-w3a4.zip) をダウンロードして解凍します。
 
     ```bash
-    curl https://learn.liferay.com/dxp/latest/en/developing-applications/core-frameworks/message-bus/liferay-w3a4.zip -O
+    curl https://learn.liferay.com/dxp/latest/ja/developing-applications/core-frameworks/message-bus/liferay-w3a4.zip -O
     ```
 
     ```bash

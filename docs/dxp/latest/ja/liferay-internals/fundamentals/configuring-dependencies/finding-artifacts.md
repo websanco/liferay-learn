@@ -135,7 +135,7 @@ JavadocでLiferayアプリモジュールの属性を見つけるには、次の
 
 ## 次のステップ
 
-アーティファクトの属性がわかったので、アーティファクトへの依存関係を構成できます。 詳細については、[Specifying Dependencies](./specifying-dependencies.md)を参照してください。
+アーティファクトの属性がわかったので、アーティファクトへの依存関係を構成できます。 詳細については、 [依存関係の指定](./specifying-dependencies.md) を参照してください。
 
 <a name="追加情報" />
 

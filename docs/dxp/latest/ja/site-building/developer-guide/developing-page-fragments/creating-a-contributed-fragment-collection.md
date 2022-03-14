@@ -1,6 +1,6 @@
 # 提供されたフラグメントコレクションの作成
 
-提供されたフラグメントコレクションは、ページフラグメントを含むデプロイ可能なモジュールです。 提供されたコレクションのフラグメントは、通常のフラグメントと同じように使用できますが、データベースには含まれておらず、UI から直接変更することはできません。 Liferay 7.3以降を実行している場合は、圧縮された ZIP コレクションで作成された[自動デプロイ済みフラグメント](./auto-deploying-fragments.md)を使用することをお勧めします。 これらは[独自のツール](./using-the-fragments-toolkit.md#collection-format-overview)または[Liferayフラグメントツールキット](./using-the-fragments-toolkit.md)で作成でき、UI から変更して画像リソースを含めることができます。
+提供されたフラグメントコレクションは、ページフラグメントを含むデプロイ可能なモジュールです。 提供されたコレクションのフラグメントは、通常のフラグメントと同じように使用できますが、データベースには含まれておらず、UI から直接変更することはできません。 Liferay 7.3以降を実行している場合は、圧縮された ZIP コレクションで作成された[自動デプロイ済みフラグメント](./auto-deploying-fragments.md)を使用することをお勧めします。 これらは [独自のツール](./using-the-fragments-toolkit.md#collection-format-overview) または[Liferayフラグメントツールキット](./using-the-fragments-toolkit.md)で作成でき、UI から変更して画像リソースを含めることができます。
 
 次の例は、Liferay 7.3以降で動作します。
 
@@ -8,7 +8,7 @@
 提供されたフラグメントコレクションを通じて追加されたすべてのフラグメントは、すべてのサイトでグローバルに使用できます。
 ```
 
-提供されたフラグメントコレクションを追加するには、それ自体が[`FragmentCollectionContributor`インターフェイス](https://docs.liferay.com/dxp/apps/fragment/latest/javadocs/com/liferay/fragment/contributor/FragmentCollectionContributor.html)を実装している[`BaseFragmentCollectionContributor`クラス](https://docs.liferay.com/dxp/apps/fragment/latest/javadocs/com/liferay/fragment/contributor/BaseFragmentCollectionContributor.html)を展開します。
+提供されたフラグメントコレクションを追加するには、それ自体が [`FragmentCollectionContributor`インターフェイス](https://docs.liferay.com/dxp/apps/fragment/latest/javadocs/com/liferay/fragment/contributor/FragmentCollectionContributor.html) を実装している [`BaseFragmentCollectionContributor`クラス](https://docs.liferay.com/dxp/apps/fragment/latest/javadocs/com/liferay/fragment/contributor/BaseFragmentCollectionContributor.html) を展開します。
 
 ここでは、フラグメントコレクションを提供する方法を学びます。
 
@@ -26,10 +26,10 @@
     docker run -it -p 8080:8080 [$LIFERAY_LEARN_DXP_DOCKER_IMAGE$]
     ```
 
-2.  [サンプル](https://learn.liferay.com/dxp/7.x/en/site-building/developer-guide/developing-page-fragments/liferay-l3m9.zip)をダウンロードして解凍します。
+2.  [サンプル](https://learn.liferay.com/dxp/7.x/ja/site-building/developer-guide/developing-page-fragments/liferay-l3m9.zip) をダウンロードして解凍します。
 
     ``` bash
-    curl https://learn.liferay.com/dxp/7.x/en/site-building/developer-guide/developing-page-fragments/liferay-l3m9.zip -O
+    curl https://learn.liferay.com/dxp/7.x/ja/site-building/developer-guide/developing-page-fragments/liferay-l3m9.zip -O
     ```
 
     ``` bash
@@ -62,7 +62,7 @@
 
 提供されたフラグメントコレクションを正常にデプロイしました。
 
-ご覧のとおり、提供されたフラグメントコレクションはデフォルトのフラグメントコレクションとともに表示され、フラグメントは UI から変更できません。 コレクションを変更する唯一の方法は、元のモジュールを更新するか、[フラグメントを別のコレクションにコピー](../../displaying-content/using-fragments/managing-page-fragments.md#managing-individual-page-fragments)してフラグメントのコピーを変更することです。
+ご覧のとおり、提供されたフラグメントコレクションはデフォルトのフラグメントコレクションとともに表示され、フラグメントは UI から変更できません。 コレクションを変更する唯一の方法は、元のモジュールを更新するか、 [フラグメントを別のコレクションにコピー](../../displaying-content/using-fragments/managing-page-fragments.md#managing-individual-page-fragments) してフラグメントのコピーを変更することです。
 
 ## 提供されたフラグメントコレクションのロジックとメタデータ
 
@@ -101,7 +101,7 @@ private ServletContext _servletContext;
   - `Web-ContextPath` ヘッダはコレクションを含むモジュールフォルダを示すので、`ServletContext` が正しく生成されます。
   - `-dsannotations-options` は、コンポーネントクラスのクラス階層にある宣言型サービスのアノテーションを有効にします。
 
-これらの値の参照については、サンプルプロジェクトの [`bnd.bnd`](https://learn.liferay.com/dxp/7.x/en/site-building/developer-guide/developing-page-fragments/liferay-l3m9.zip) を参照してください。
+これらの値の参照については、サンプルプロジェクトの [`bnd.bnd`](https://learn.liferay.com/dxp/7.x/ja/site-building/developer-guide/developing-page-fragments/liferay-l3m9.zip) を参照してください。
 
 次に、プロジェクトを変更して、提供されたコレクションに別のフラグメントを含めます。
 

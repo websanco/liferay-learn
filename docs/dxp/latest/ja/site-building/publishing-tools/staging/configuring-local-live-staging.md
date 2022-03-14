@@ -13,11 +13,11 @@ DXPインスタンスのローカル現行環境ステージングを設定す�
 
 1.  *[プロダクトメニュー]* → *[公開設定]* → *[ステージング]* に移動します。
 
-    ![プロダクトメニューの[ステージング]に移動します。](./configuring-local-live-staging/images/01.jpg)
+    ![プロダクトメニューの [ステージング]に移動します。](./configuring-local-live-staging/images/01.jpg)
 
 2.  *[ローカル現行環境]* を選択すると、*[ページバージョニング]* と*[ステージコンテンツ]* の追加フィールドが表示されます。
 
-    ![[ローカル現行環境]を選択します。](./configuring-local-live-staging/images/02.png)
+    ![ [ローカル現行環境]を選択します。](./configuring-local-live-staging/images/02.png)
 
 3.  *[ページバージョニング]* をパブリックページセットまたはプライベートページセット、あるいはその両方で有効にするかどうかを選択します。
 
@@ -28,7 +28,7 @@ DXPインスタンスのローカル現行環境ステージングを設定す�
     ![ステージングするデータとコンテンツのタイプを選択します。](./configuring-local-live-staging/images/04.png)
 
     ```{warning}
-    When applications are checked, their data is copied to Staging, and it may not be possible to edit them directly in Live. When unchecking an application, first make sure that any changes in Staging are published, since they may be lost. See [Managing Data and Content Types in Staging](./managing-data-and-content-types-in-staging.md) for more information.
+    When applications are checked, their data is copied to Staging, and it may not be possible to edit them directly in Live. When unchecking an application, first make sure that any changes in Staging are published, since they may be lost. See [ステージングでのデータとコンテンツタイプの管理](./managing-data-and-content-types-in-staging.md) for more information.
     ```
 
 5.  *[保存]* をクリックして、クローン作成プロセスを開始します。 このプロセスの期間は、サイトのサイズによって異なります。
@@ -53,7 +53,7 @@ DXPインスタンスのローカル現行環境ステージングを設定す�
 
 ## 追加情報
 
-  - [Staging Overview](../staging.md)
+  - [ステージングの概要](../staging.md)
   - [Staging UI Reference](./staging-ui-reference.md)
   - [ステージングでのデータとコンテンツタイプの管理](./managing-data-and-content-types-in-staging.md)
   - [ステージング権限の管理](./managing-staging-permissions.md)

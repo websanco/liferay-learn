@@ -26,5 +26,5 @@ When the Recycle Bin is disabled for a site, content and assets that are removed
 
 ## 追加情報
 
-  - [Recycle Bin Overview](../../../content-authoring-and-management/recycle-bin/recycle-bin-overview.md)
-  - [Configuring the Recycle Bin](../../../content-authoring-and-management/recycle-bin/configuring-the-recycle-bin.md)
+  - [ゴミ箱の概要](../../../content-authoring-and-management/recycle-bin/recycle-bin-overview.md)
+  - [ごみ箱の設定](../../../content-authoring-and-management/recycle-bin/configuring-the-recycle-bin.md)

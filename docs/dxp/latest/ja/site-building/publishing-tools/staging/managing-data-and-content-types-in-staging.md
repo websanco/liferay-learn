@@ -70,6 +70,6 @@ Assets like tags, categories, structures, templates, widget templates, document 
 
 ## 追加情報
 
-  - [Staging Overview](../staging.md)
+  - [ステージングの概要](../staging.md)
   - [公開プロセスを理解する](./understanding-the-publishing-process.md)
   - [Staging UI Reference](./staging-ui-reference.md)

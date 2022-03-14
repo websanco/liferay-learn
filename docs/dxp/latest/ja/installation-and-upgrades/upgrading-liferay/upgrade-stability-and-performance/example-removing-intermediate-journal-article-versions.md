@@ -8,7 +8,7 @@
 
 2. **エンティティのバージョンを削除する方法を見つけます。** Liferay DXPの [アプリAPI](https://docs.liferay.com/dxp/apps/) と [com.liferay.portal.kernel API](https://learn.liferay.com/reference/latest/en/dxp/javadocs/portal-kernel/) が使用可能なオプションです。
 
-    [Service Builder](https://help.liferay.com/hc/en-us/articles/360030958811-Running-Service-Builder) エンティティの場合は、エンティティの`*LocalServiceUtil`クラスの`delete*`メソッドを調べます。
+    [Service Builder](https://help.liferay.com/hc/ja/articles/360030958811-Running-Service-Builder) エンティティの場合は、エンティティの`*LocalServiceUtil`クラスの`delete*`メソッドを調べます。
 
     たとえば、 [`JournalArticleLocalServiceUtil`](https://docs.liferay.com/dxp/apps/web-experience/latest/javadocs/com/liferay/journal/service/JournalArticleLocalServiceUtil.html#deleteArticle-long-java.lang.String-double-java.lang.String-com.liferay.portal.kernel.service.ServiceContext-) の次の`deleteArticle`は、ジャーナル記事のバージョンを1つ削除します。
 
@@ -29,7 +29,7 @@
             JournalArticleLocalServiceUtil.getJournalArticleResources(start, end);
         ```
 
-    1. 各`JournalArticleResource`に関連付けられた`JournalArticle`オブジェクトを介して、各`JournalArticle`バージョンのワークフローステータスを取得します。 [動的クエリ](https://help.liferay.com/hc/en-us/articles/360030614272-Dynamic-Query) は、各オブジェクトから必要なデータを正確に取得する効率的な方法です。
+    1. 各`JournalArticleResource`に関連付けられた`JournalArticle`オブジェクトを介して、各`JournalArticle`バージョンのワークフローステータスを取得します。 [動的クエリ](https://help.liferay.com/hc/ja/articles/360030614272-Dynamic-Query) は、各オブジェクトから必要なデータを正確に取得する効率的な方法です。
 
         <!--Add back link for 'Dynamic Query' once dynamic-query article is available-->
 

@@ -24,7 +24,7 @@
 1. サンプルをダウンロードして解凍します。
 
     ```bash
-    curl https://learn.liferay.com/dxp/latest/en/developing-applications/core-frameworks/message-bus/liferay-s3z9.zip -O
+    curl https://learn.liferay.com/dxp/latest/ja/developing-applications/core-frameworks/message-bus/liferay-s3z9.zip -O
     ```
 
     ```bash

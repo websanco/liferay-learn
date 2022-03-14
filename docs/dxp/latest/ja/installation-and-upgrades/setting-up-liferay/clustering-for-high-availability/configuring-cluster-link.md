@@ -137,7 +137,7 @@ GMS: address=oz-52865, cluster=liferay-channel-control, physical address=192.168
 
 ## 次のステップ
 
-負荷をかけた状態でDXPクラスタをテストし、システムの最適化を調査するのが最善です。 サイトで最も使用されているエンティティを検討し、キャッシュ設定を適切に調整します。 キャッシュの構成については、 [キャッシュ構成](https://help.liferay.com/hc/en-us/articles/360035581451-Introduction-to-Cache-Configuration) を参照してください。
+負荷をかけた状態でDXPクラスタをテストし、システムの最適化を調査するのが最善です。 サイトで最も使用されているエンティティを検討し、キャッシュ設定を適切に調整します。 キャッシュの構成については、 [キャッシュ構成](https://help.liferay.com/hc/ja/articles/360035581451-Introduction-to-Cache-Configuration) を参照してください。
 
 
 

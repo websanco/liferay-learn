@@ -30,4 +30,4 @@ include-and-override=portal-developer.properties
 
 ## 追加情報
 
-* [Portal Properties](../../installation-and-upgrades/reference/portal-properties.md)
+* [ポータルプロパティ](../../installation-and-upgrades/reference/portal-properties.md)

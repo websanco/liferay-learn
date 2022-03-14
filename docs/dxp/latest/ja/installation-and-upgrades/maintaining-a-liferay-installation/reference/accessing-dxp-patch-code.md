@@ -80,7 +80,7 @@ Liferay DXPソースコードのカスタマイズはサポートされていな
 
 GitHubユーザーのリポジトリアクセスを削除する方法は次のとおりです。
 
-1. [ヘルプセンター](https://help.liferay.com/hc/en-us/) で、
+1. [ヘルプセンター](https://help.liferay.com/hc/ja/) で、
 ［Projects］ページに移動します。</li> 
    
    1 DXPプロジェクトを選択します。
@@ -110,11 +110,11 @@ GitHubユーザーのリポジトリアクセスを削除する方法は次の�
 | wikiの編集            | (3)    |
 
 
-（**1）問題とコメントについて：** ソースコードリポジトリで発生した問題をクローズし、未回答のままにします。 Liferayソフトウェアに問題がある場合は、ヘルプセンターで [サポートチケットを作成](https://help.liferay.com/hc/en-us/requests/new) してLiferayサポートチームにお知らせください。 
+（**1）問題とコメントについて：** ソースコードリポジトリで発生した問題をクローズし、未回答のままにします。 Liferayソフトウェアに問題がある場合は、ヘルプセンターで [サポートチケットを作成](https://help.liferay.com/hc/ja/requests/new) してLiferayサポートチームにお知らせください。 
 
 （**2）コード投稿について：** パブリックLiferay Portalリポジトリ（<https://github.com/liferay/liferay-portal>）でコードを投稿できます。 承認された投稿は、次のLiferay DXPリリースに含まれます。 詳細については、 [Contributing to Liferay Development](../../../liferay-internals/contributing_to_liferay_development.html) （近日公開）をご覧ください。
 
-（**3）Wikiについて：** Liferay DXPの公式ドキュメンテーションは<https://learn.liferay.com>にあり、サポートナレッジベースは [ヘルプセンター](https://help.liferay.com/hc/en-us/) にあります。 `liferay-dxp`リポジトリのwikiは使用していません。  記事の変更を提案したり、トピックに関するドキュメントをリクエストする場合は、ヘルプセンターで [サポートチケットを作成](https://help.liferay.com/hc/en-us/requests/new) してLiferayサポートチームにお知らせください。
+（**3）Wikiについて：** Liferay DXPの公式ドキュメンテーションは<https://learn.liferay.com>にあり、サポートナレッジベースは [ヘルプセンター](https://help.liferay.com/hc/ja/) にあります。 `liferay-dxp`リポジトリのwikiは使用していません。  記事の変更を提案したり、トピックに関するドキュメントをリクエストする場合は、ヘルプセンターで [サポートチケットを作成](https://help.liferay.com/hc/ja/requests/new) してLiferayサポートチームにお知らせください。
 
 
 

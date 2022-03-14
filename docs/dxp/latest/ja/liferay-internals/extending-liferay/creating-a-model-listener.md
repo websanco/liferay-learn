@@ -28,7 +28,7 @@
 1. Acme Model Listenerを`ダウンロードして解凍します `。
 
     ```bash
-    curl https://learn.liferay.com/dxp/latest/en/liferay-internals/extending-liferay/liferay-n4g6.zip -O
+    curl https://learn.liferay.com/dxp/latest/ja/liferay-internals/extending-liferay/liferay-n4g6.zip -O
     ```
 
     ```bash

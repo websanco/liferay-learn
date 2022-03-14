@@ -16,7 +16,7 @@
 
 3.  *[スタイルブック]* タブをクリックして開きます。
 
-    ![[スタイルブック]タブを開き、リストから目的のスタイルブックを選択します。](./style-books/using-a-style-book-to-standardize-site-appearance/images/01.png)
+    ![ [スタイルブック]タブを開き、リストから目的のスタイルブックを選択します。](./style-books/using-a-style-book-to-standardize-site-appearance/images/01.png)
 
 4.  リストから目的のスタイルブックを選択します。
 
@@ -36,7 +36,7 @@
 
     ![利用可能なカテゴリのいずれかを選択し、スタイルブックをカスタマイズします。](./style-books/using-a-style-book-to-standardize-site-appearance/images/02.png)
 
-    これらのオプションは、サイトで使用されているテーマに基づいています。 デフォルトの標準テーマで使用可能なカテゴリの詳細については、[デフォルトの標準テーマのカテゴリ](#default-classic-theme-categories)を参照してください。
+    これらのオプションは、サイトで使用されているテーマに基づいています。 デフォルトの標準テーマで使用可能なカテゴリの詳細については、 [デフォルトの標準テーマのカテゴリ](#default-classic-theme-categories) を参照してください。
 
 5.  *[公開]* をクリックします。
 
@@ -58,7 +58,7 @@ You can place the `Style Guide Sample` widget on your pages to help test out the
 
 テーマで定義されているフォントと視覚要素に使用される色は、[色体系]カテゴリでカスタマイズできます。 通常、これは、ページの本文、背景、およびテキストの色を変更できることを意味します。
 
-![[色体系]カテゴリのオプションを使用して、ディスプレイまたはUI要素に使用される色を変更します。](./style-books/using-a-style-book-to-standardize-site-appearance/images/03.png)
+![ [色体系]カテゴリのオプションを使用して、ディスプレイまたはUI要素に使用される色を変更します。](./style-books/using-a-style-book-to-standardize-site-appearance/images/03.png)
 
 ```{note}
 Changing the colors for alert-related elements (such as *Success* or *Warning*) may not affect the color of incoming alerts on your Site because each type of alert may use one of many colors. In order to fully customize the color of alerts, you must define a variety of customizable colors and use them in your own theme's categories.
@@ -72,7 +72,7 @@ Changing the colors for alert-related elements (such as *Success* or *Warning*) 
 
 これらのオプションは、サイトのすべてのページに表示される要素の色と間隔を変更します。 たとえば、*[本文の背景]* オプションは、すべてのページの背景色を変更します。
 
-![[一般]カテゴリの[本文の背景]オプションを使用して、サイトページの背景の色をカスタマイズします。](./style-books/using-a-style-book-to-standardize-site-appearance/images/04.png)
+![[一般]カテゴリの [本文の背景]オプションを使用して、サイトページの背景の色をカスタマイズします。](./style-books/using-a-style-book-to-standardize-site-appearance/images/04.png)
 
 ### レイアウト
 
@@ -86,7 +86,7 @@ Changing the colors for alert-related elements (such as *Success* or *Warning*) 
 
 これらのオプションは、デフォルトタイプのボタンのスタイルを変更します。 標準テーマで使用される各ボタンの背景色、前景色、および線の色をカスタマイズできます。
 
-![標準テーマを使用するときに、[Button Primary]で色を変更すると、すぐに使用できるウィジェットの多くの一般的なボタンに作用します。](./style-books/using-a-style-book-to-standardize-site-appearance/images/05.png)
+![標準テーマを使用するときに、 [Button Primary]で色を変更すると、すぐに使用できるウィジェットの多くの一般的なボタンに作用します。](./style-books/using-a-style-book-to-standardize-site-appearance/images/05.png)
 
 ## 追加情報
 

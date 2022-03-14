@@ -11,7 +11,7 @@
 
 コードエディタは 4 つのペインに分割されます。
 
-**HTML:** 動的動作を追加するために使用できる Liferay Portal 固有のタグおよび FreeMarker ([代替 (角括弧) 構文](https://freemarker.apache.org/docs/dgui_misc_alternativesyntax.html)を使用) とともに、標準の HTML をサポートします。
+**HTML:** 動的動作を追加するために使用できる Liferay Portal 固有のタグおよび FreeMarker ( [代替 (角括弧) 構文](https://freemarker.apache.org/docs/dgui_misc_alternativesyntax.html) を使用) とともに、標準の HTML をサポートします。
 
 ```{tip}
 `$(` と入力すると、自動補完機能を使って変数名の検索を開始します。 自動補完機能を使用して taglib 名を検索するには、`[@` と入力します。
@@ -41,4 +41,4 @@
 
 DXP 7.3 以降では、ページの上部にあるチェックボックスを選択して、フラグメントをキャッシュ可能にすることもできます。 このオプションを有効にすると、フラグメントがページに追加されるときにフラグメントがキャッシュに追加され、これらのフラグメントを含むページのパフォーマンスが向上します。
 
-![フラグメントをキャッシュしてページのパフォーマンスを向上させるには、[キャッシュ可能] オプションをオンにします。](./page-fragment-editor-interface-reference/images/02.png)
+![フラグメントをキャッシュしてページのパフォーマンスを向上させるには、 [キャッシュ可能] オプションをオンにします。](./page-fragment-editor-interface-reference/images/02.png)

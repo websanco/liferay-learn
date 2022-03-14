@@ -43,7 +43,7 @@ Liferayでは、一般的に3種類のモジュールを使用します。
 1. `liferay-r9u2.zip`をダウンロードして解凍します。
 
     ```bash
-    curl hhttps://learn.liferay.com/dxp/latest/en/liferay-internals/architecture/liferay-r9u2.zip -O
+    curl hhttps://learn.liferay.com/dxp/latest/ja/liferay-internals/architecture/liferay-r9u2.zip -O
     ```
 
     ```bash

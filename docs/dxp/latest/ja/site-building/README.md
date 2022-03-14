@@ -7,7 +7,7 @@
 ## サイトの構築
 
   - [サイトの追加](./building-sites/adding-a-site.md)
-  - [Building Sites with Site Templates](./building-sites/building-sites-with-site-templates.md)
+  - [サイトテンプレートを使用したサイトの構築](./building-sites/building-sites-with-site-templates.md)
   - [サイトテンプレートの変更のマージ](./building-sites/merging-site-template-changes.md)
   - [サイトテンプレートの共有](./building-sites/sharing-site-templates.md)
   - [サイト階層](./building-sites/site-hierarchies.md)

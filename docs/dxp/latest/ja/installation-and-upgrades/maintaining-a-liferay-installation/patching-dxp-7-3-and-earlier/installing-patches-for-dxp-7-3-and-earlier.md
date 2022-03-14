@@ -62,7 +62,7 @@ DXPバンドルにパッチを適用する場合は、以下の基本的なパ�
      Currently installed patches:
      ...
 
-5.  Service Packをインストールし、そのリリースノートに [マイクロまたはマイナースキーマ/データの変更](https://help.liferay.com/hc/en-us/articles/360030959231-Meaningful-Schema-Versioning) が記載されている場合は、 [データベースアップグレードツール](../../upgrading-liferay/upgrade-basics/using-the-database-upgrade-tool.md) を使用して、マイナー変更（必須）および必要なマイクロ変更を適用します。
+5.  Service Packをインストールし、そのリリースノートに [マイクロまたはマイナースキーマ/データの変更](https://help.liferay.com/hc/ja/articles/360030959231-Meaningful-Schema-Versioning) が記載されている場合は、 [データベースアップグレードツール](../../upgrading-liferay/upgrade-basics/using-the-database-upgrade-tool.md) を使用して、マイナー変更（必須）および必要なマイクロ変更を適用します。
 
     ```{important}
     If you're updating from Liferay DXP 7.2 GA1 or Fix Pack 1 to DXP 7.2 SP1 / Fix Pack 2 (or above), you must update the data and database using the Database Upgrade Tool.

@@ -8,13 +8,13 @@ Liferay DXPを使用すると、サイトの各ページにフレンドリURLを
 
 ページのフレンドリURLを変更するには、*[プロダクトメニュー]* を開き、*[サイトビルダー]* → *[ページ]* に移動します。 次に、カスタマイズするページの*アクション*ボタン（![Actions button](../../../images/icon-staging-bar-options.png)）をクリックし、 *[設定]* を選択します。
 
-![カスタマイズするページの[アクション]ボタンをクリックし、[設定]を選択します](./configuring-your-pages-friendly-url/images/01.png)
+![カスタマイズするページの[アクション]ボタンをクリックし、 [設定]を選択します](./configuring-your-pages-friendly-url/images/01.png)
 
 または、カスタマイズするページに移動して、*アプリケーションバー*の右上にある*[ページ設定]* ボタン（![Configure Page Button](../../../images/icon-cog.png)）をクリックして、個々のページ設定にアクセスすることもできます。
 
 [一般]タブで、*[フレンドリURL]* フィールドを使用して、ページの新しいURLを入力します。 ローカライズされたURLを設定するには、*[言語フラグ]* をクリックして、目的の言語を選択します。 完了したら、* [保存]* をクリックします。
 
-![[フレンドリURL]フィールドを使用して、ページのカスタムURLを設定します。](./configuring-your-pages-friendly-url/images/02.png)
+![ [フレンドリURL]フィールドを使用して、ページのカスタムURLを設定します。](./configuring-your-pages-friendly-url/images/02.png)
 
 このフィールドに入力された値は、その[サイトURL](./../../site-settings/managing-site-urls/configuring-your-sites-friendly-url.md)に追加され、一意である必要があります。
 
@@ -36,11 +36,11 @@ Liferay DXPは、ページに使用されるすべてのフレンドリURLのリ
 
 **記憶したURL情報を消去**：ページに関連付けられたフレンドリURLが不要になった場合は、*[記憶したURL情報を消去]* ボタン（![Delete icon](../../../images/icon-delete.png)）をクリックします。 ユーザーが消去されたURLを使用してページにアクセスしようとすると、リンクが壊れ、Liferayは「Not found」というメッセージを表示します。
 
-![古いURLにカーソルを合わせると、[復元]オプションと[消去]オプションが表示されます。](./configuring-your-pages-friendly-url/images/04.png)
+![古いURLにカーソルを合わせると、[復元]オプションと [消去]オプションが表示されます。](./configuring-your-pages-friendly-url/images/04.png)
 
 ## 追加情報
 
-  - [Configuring Your Site's Friendly URL](./../../site-settings/managing-site-urls/configuring-your-sites-friendly-url.md)
-  - [Configuring Individual Pages](./configuring-individual-pages.md)
+  - [サイトのフレンドリURLを設定する](./../../site-settings/managing-site-urls/configuring-your-sites-friendly-url.md)
+  - [個々のページの構成 (近日公開！)](./configuring-individual-pages.md)
 
 <!--Include Reference to SEO article when finished.-->

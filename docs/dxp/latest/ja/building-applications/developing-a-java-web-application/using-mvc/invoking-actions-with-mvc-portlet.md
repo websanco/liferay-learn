@@ -19,7 +19,7 @@
 1. サンプルをダウンロードして解凍します。
 
    ```bash
-   curl https://learn.liferay.com/dxp/latest/en/developing-applications/developing-a-java-web-application/using-mvc/liferay-u8t2.zip -O
+   curl https://learn.liferay.com/dxp/latest/ja/developing-applications/developing-a-java-web-application/using-mvc/liferay-u8t2.zip -O
    ```
 
    ```bash

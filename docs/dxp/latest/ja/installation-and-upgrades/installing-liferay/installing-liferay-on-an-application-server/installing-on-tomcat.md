@@ -23,7 +23,7 @@ Tomcatの構成方法に関係なく、 [ヘルプセンター](https://customer
 Java JDK 8または11が必要です。
 
 ```{note}
-サポートされているJDK、データベース、および環境については、 [互換性マトリックス](https://help.liferay.com/hc/en-us/articles/360049238151) を参照してください。  推奨されるJVM設定については、 [JVM設定](../../reference/jvm-configuration.md) を参照してください。
+サポートされているJDK、データベース、および環境については、 [互換性マトリックス](https://help.liferay.com/hc/ja/articles/360049238151) を参照してください。  推奨されるJVM設定については、 [JVM設定](../../reference/jvm-configuration.md) を参照してください。
 ```
 
 Tomcatサーバーの親フォルダは[**Liferay Home**](../../reference/liferay-home.md)です。 `$TOMCAT_HOME`はTomcatサーバーフォルダを参照します。 通常は、`tomcat-［version］`または`apache-tomcat-［version］`という名前です。
@@ -42,7 +42,7 @@ Tomcatサーバーの親フォルダは[**Liferay Home**](../../reference/lifera
 DXPは、Liferay-Tomcatバンドルに含まれている多くのJARに依存しています。 バンドル内のJARの中には必須ではないファイルもありますが、有用なJARもあります。 Tomcatバンドルを使用していない場合は、ダウンロードした **OSGi依存関係** アーカイブと、以下で説明するサードパーティのJAR依存関係を使用します。
 
 1. OSGi Dependencies ZIPファイルの内容を `［Liferay Home］/osgi` フォルダーに解凍します（このフォルダーが存在しない場合は作成します）。 LiferayのOSGiランタイムは、これらのモジュールに依存しています。
-1. DXP 7.4+ WARファイルには、MariaDB、MySQL、およびPostgreSQLのドライバーが含まれています。 以前のWARにはそれらがありません。 WARに必要なドライバーがない場合は、データベースベンダーのJDBC JARファイルを`$TOMCAT_HOME/lib/ext`フォルダにダウンロードします。 サポートされるデータベースのリストについては、 [互換性マトリックス](https://help.liferay.com/hc/en-us/articles/360049238151) を参照してください。
+1. DXP 7.4+ WARファイルには、MariaDB、MySQL、およびPostgreSQLのドライバーが含まれています。 以前のWARにはそれらがありません。 WARに必要なドライバーがない場合は、データベースベンダーのJDBC JARファイルを`$TOMCAT_HOME/lib/ext`フォルダにダウンロードします。 サポートされるデータベースのリストについては、 [互換性マトリックス](https://help.liferay.com/hc/ja/articles/360049238151) を参照してください。
 
 ```{note}
 HypersonicデータベースはDXPにバンドルされており、テスト目的で役立ちます。 本番環境インスタンスにはHSQLを**使用しないでください**。

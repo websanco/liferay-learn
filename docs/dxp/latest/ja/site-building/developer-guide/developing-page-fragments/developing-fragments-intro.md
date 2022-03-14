@@ -1,6 +1,6 @@
 # フラグメントの開発
 
-ページ フラグメントは、[コンテンツ ページ](../../creating-pages/understanding-pages/understanding-pages.md#content-pages)の構成要素です。 これらは、Web ページの 3 つのコンポーネント (CSS、HTML、JavaScript) で構成されています。 ページを作成するには、複数のフラグメントを組み合わせ、それらを組み合わせてページのデザインとその機能を作成します。 フラグメントは、より大きなページ要素 (カードや段落要素など) を構成することも、単独でスタンドアロン (バナーなど) にすることもできます。
+ページ フラグメントは、 [コンテンツ ページ](../../creating-pages/understanding-pages/understanding-pages.md#content-pages) の構成要素です。 これらは、Web ページの 3 つのコンポーネント (CSS、HTML、JavaScript) で構成されています。 ページを作成するには、複数のフラグメントを組み合わせ、それらを組み合わせてページのデザインとその機能を作成します。 フラグメントは、より大きなページ要素 (カードや段落要素など) を構成することも、単独でスタンドアロン (バナーなど) にすることもできます。
 
 ![フラグメントをパズルのピースのように組み合わせて、コンテンツ ページを構築します。](./developing-fragments-intro/images/01.png)
 
@@ -22,7 +22,7 @@
   - [編集可能な要素](../reference/fragments/fragment-specific-tags-reference.md): テキスト、画像、リンク、および「リッチ」テキスト要素を編集可能にして、ユーザーがコンテンツをカスタムのテキストと画像に置き換えることができるようにします。 これは、フラグメントを再利用可能にするフラグメントの主要な機能です。 ウィジェットを埋め込むこともできます。
   - [ドロップ ゾーン](./defining-fragment-drop-zones.md) `<lfr-drop-zone></lfr-drop-zone>` ラベルを使用してフラグメントにドロップ ゾーンを追加します。 追加したら、フラグメントとウィジェットを定義した領域にドラッグ アンド ドロップできます。
   - [設定オプション](./adding-configuration-options-to-fragments.md) <!-- TODO: Fix link --> : フラグメントのフォントの色を変更するなど、アプリケーションの設定メニューに設定オプションを追加します。
-  - [FreeMarker](https://freemarker.apache.org/): FreeMarker は、変数、条件文などで HTML を拡張するテンプレート言語です。 HTML から、FreeMarker に[代替 (角括弧) 構文](https://freemarker.apache.org/docs/dgui_misc_alternativesyntax.html)を使用できます。
+  - [FreeMarker](https://freemarker.apache.org/) : FreeMarker は、変数、条件文などで HTML を拡張するテンプレート言語です。 HTML から、FreeMarker に [代替 (角括弧) 構文](https://freemarker.apache.org/docs/dgui_misc_alternativesyntax.html) を使用できます。
 
 <!-- end list -->
 
@@ -42,6 +42,6 @@ FreeMarkerでテンプレートを作成または編集する権限は信頼で�
 
 ## 追加情報
 
-  - [Adding Configuration Options to Fragments](./adding-configuration-options-to-fragments.md)
+  - [フラグメントへの構成オプションの追加](./adding-configuration-options-to-fragments.md)
   - [フラグメントエディターの使用](./using-the-fragments-editor.md)
   - [フラグメントツールキットの使用](./using-the-fragments-toolkit.md)

@@ -3,7 +3,7 @@
 Liferay DXP/Portal 7.4では、Liferayモジュールの言語キーがLiferay Portal言語モジュールに移動しました。 多くのキーの名前が変更されました。 名前を変更した言語キーをオーバーライドする場合は、モジュールのキー名を更新する必要があります。
 
 ```{note}
-言語キーフックプラグインをアップグレードする場合は、まず [Upgrading Portlet Language Key Hooks](https://help.liferay.com/hc/en-us/articles/360029005272-Upgrading-Portlet-Language-Key-Hooks) に従ってください。
+言語キーフックプラグインをアップグレードする場合は、まず [Upgrading Portlet Language Key Hooks](https://help.liferay.com/hc/ja/articles/360029005272-Upgrading-Portlet-Language-Key-Hooks) に従ってください。
 ```
 
 言語キーのオーバーライドをアップグレードする方法は次のとおりです。

@@ -6,11 +6,11 @@
 
 1.  製品メニューを開き、[サイト]メニューの[ *Site Builder* → *Page Templates* ]に移動し、[ *Masters* ]タブを選択します。
 
-    ![ページテンプレートアプリケーションの[マスター]タブからマスターページテンプレートを管理します。](./managing-master-pages/images/01.png)
+    ![ページテンプレートアプリケーションの [マスター]タブからマスターページテンプレートを管理します。](./managing-master-pages/images/01.png)
 
 2.  マスターページテンプレートの[アクション]メニューを開き、以下にリストされているオプションのいずれかを選択します。
 
-      - **編集：** マスターページテンプレートを構成します。 または、[ *Edit Master* ]ボタンをクリックして、ページの [*Look＆Feel* メニュー](../building-and-managing-content-pages/content-pages-overview.md#look-and-feel)からページのマスターページテンプレートを編集することもできます。
+      - **編集：** マスターページテンプレートを構成します。 または、[ *Edit Master* ]ボタンをクリックして、ページの [*Look＆Feel* メニュー](../building-and-managing-content-pages/content-pages-overview.md#look-and-feel) からページのマスターページテンプレートを編集することもできます。
 
       - **サムネイルの変更：** [ *マスター* ]タブでマスターページテンプレートのカードに表示するサムネイル画像を選択します
 
@@ -30,7 +30,7 @@ After changes are made and published, they are propagated to all pages that use 
 
 ## ページのマスターページテンプレートの変更
 
-ページのマスターページテンプレートは、ページの[*ルック＆フィール*メニュー](../building-and-managing-content-pages/content-pages-overview.md#look-and-feel)から変更することができます。 次の手順を実行します：
+ページのマスターページテンプレートは、ページの [*ルック＆フィール*メニュー](../building-and-managing-content-pages/content-pages-overview.md#look-and-feel) から変更することができます。 次の手順を実行します：
 
 1.  マスターページテンプレートを変更するページに移動します。
 
@@ -38,7 +38,7 @@ After changes are made and published, they are propagated to all pages that use 
 
 3.  [ *Look＆Feel* ]タブの下の[ *Change Master* ]ボタンをクリックします。
 
-    ![[マスターの変更]ボタンをクリックして、別のマスターページテンプレートを選択します。](./managing-master-pages/images/03.png)
+    ![ [マスターの変更]ボタンをクリックして、別のマスターページテンプレートを選択します。](./managing-master-pages/images/03.png)
 
 4.  新しいマスターページテンプレートを選択し、[ *完了*]をクリックします。 [ *保存* をクリックして変更を適用します。
 

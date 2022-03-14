@@ -34,7 +34,7 @@ Should we remove this diagram since it includes a load balancer? -->
 
 ## データベースサーバーを起動する
 
-DXPクラスターには、すべてのDXPクラスターノードからアクセスできるデータソースが必要です。 データソースは、JNDIデータソースにするか、データベースサーバーまたはデータベースサーバークラスターへの直接接続にすることができます。 DXPバージョンがサポートするデータベースサーバーについては、 [互換性マトリックス](https://help.liferay.com/hc/en-us/articles/360049238151) を参照してください。 詳細は、 [クラスタノードのデータベース構成](./database-configuration-for-cluster-nodes.md) を参照してください。
+DXPクラスターには、すべてのDXPクラスターノードからアクセスできるデータソースが必要です。 データソースは、JNDIデータソースにするか、データベースサーバーまたはデータベースサーバークラスターへの直接接続にすることができます。 DXPバージョンがサポートするデータベースサーバーについては、 [互換性マトリックス](https://help.liferay.com/hc/ja/articles/360049238151) を参照してください。 詳細は、 [クラスタノードのデータベース構成](./database-configuration-for-cluster-nodes.md) を参照してください。
 
 データベースサーバーとDXPデータベースを作成します。
 

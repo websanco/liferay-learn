@@ -34,7 +34,7 @@
 
 2.  [テンプレートの表示]ドロップダウンメニューを見つけ、目的のテンプレートの名前を選択します。
 
-    ![Asset Publisher構成の[表示テンプレート]ドロップダウンボックス。](../additional-content-display-options/styling-widgets-with-widget-templates/images/03.png)
+    ![Asset Publisher構成の [表示テンプレート]ドロップダウンボックス。](../additional-content-display-options/styling-widgets-with-widget-templates/images/03.png)
 
     ```{note}
     This drop-down menu is on the default tab, Setup, for most widgets. For the Asset Publisher widget, this setting is found under the Display Settings tab.

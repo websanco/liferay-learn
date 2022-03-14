@@ -18,7 +18,7 @@ Liferay DXPには、パーソナライズされたエクスペリエンスを理
 
 Liferay DXPインスタンスをLiferay Analytics Cloudと統合して、セグメントを強化します。 Analytics Cloudを使用すると、DXPをSalesforce（tm）およびその他のデータソースと統合して、ユーザーベースをさらに理解する方法を提供できます。
 
-Analytics Cloudとの統合により、機械学習を活用した詳細なデータ分析機能が提供され、DXPサイトのすべてのページに対するユーザーの行動とエンゲージメントを理解するのに役立ちます。 Analytics Cloudを使用すると、サイトのユーザーと訪問者が標準コンテンツとターゲットコンテンツの両方でどのように動作し、どのように対話しているかを確認できます。 詳細については、[Getting Analytics for User Segments](./segmentation/getting-analytics-for-user-segments.md)を参照してください。
+Analytics Cloudとの統合により、機械学習を活用した詳細なデータ分析機能が提供され、DXPサイトのすべてのページに対するユーザーの行動とエンゲージメントを理解するのに役立ちます。 Analytics Cloudを使用すると、サイトのユーザーと訪問者が標準コンテンツとターゲットコンテンツの両方でどのように動作し、どのように対話しているかを確認できます。 詳細については、 [ユーザーセグメントの分析の取得](./segmentation/getting-analytics-for-user-segments.md) を参照してください。
 
 ![Analytics Cloudを使用したサイトメトリクス。](./introduction-to-personalizing-site-experience/images/05.png)
 
@@ -28,7 +28,7 @@ Analytics Cloudとの統合により、機械学習を活用した詳細なデ�
 
 ### コンテンツページ
 
-コンテンツページのパーソナライゼーションは、ページの閲覧者に基づいてページレイアウトとコンテンツを動的に変更します。 ページを表示しているユーザーのユーザーセグメント基準に基づいて、さまざまなテキスト、画像、ウィジェット、さらにはさまざまなレイアウトを提供する[コンテンツページ](../creating-pages/building-and-managing-content-pages/building-content-pages.md)の*エクスペリエンス*を作成できます。 詳細については、[Content Page Personalization](./experience-personalization/content-page-personalization.md)を参照してください。
+コンテンツページのパーソナライゼーションは、ページの閲覧者に基づいてページレイアウトとコンテンツを動的に変更します。 ページを表示しているユーザーのユーザーセグメント基準に基づいて、さまざまなテキスト、画像、ウィジェット、さらにはさまざまなレイアウトを提供する[コンテンツページ](../creating-pages/building-and-managing-content-pages/building-content-pages.md)の*エクスペリエンス*を作成できます。 詳細については、 [コンテンツページのカスタマイズと管理](./experience-personalization/content-page-personalization.md) を参照してください。
 
 ![ユーザーのさまざまなセグメントに固有のエクスペリエンスを作成できます。](./introduction-to-personalizing-site-experience/images/02.png)
 

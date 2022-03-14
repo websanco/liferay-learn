@@ -13,7 +13,7 @@
 ```
 
 ```{important}
-   詳細は、 [Maintenance Mode and Deprecation Policies](https://help.liferay.com/hc/en-us/articles/360015767952-Maintenance-Mode-and-Deprecation) を参照してください。
+   詳細は、 [Maintenance Mode and Deprecation Policies](https://help.liferay.com/hc/ja/articles/360015767952-Maintenance-Mode-and-Deprecation) を参照してください。
 ```
 
 <a name="deprecated-feature-availability" />
@@ -34,8 +34,8 @@
 
 Liferay 7.0以前からアップグレードする場合は、該当するリリースで発生した廃止予定事項を調べてください。
 
-* [ 7.1](https://help.liferay.com/hc/en-us/articles/360018403151-Digital-Experience-Platform-7-1-Deprecated-and-Removed-Items)
-* [ 7.0](https://help.liferay.com/hc/en-us/articles/360018123832-Digital-Experience-Platform-7-0-Deprecated-and-Removed-Items)
+* [ 7.1](https://help.liferay.com/hc/ja/articles/360018403151-Digital-Experience-Platform-7-1-Deprecated-and-Removed-Items)
+* [ 7.0](https://help.liferay.com/hc/ja/articles/360018123832-Digital-Experience-Platform-7-0-Deprecated-and-Removed-Items)
 
 <a name="features-deprecated-in-72" />
 
@@ -47,7 +47,7 @@ Liferay 7.0以前からアップグレードする場合は、該当するリリ
 | 機能                                   | 利用可能性     | メモ                                                                                                                                                                                                                                                                   |
 | ------------------------------------ | --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | AlloyUI                              | バンドル      | [ClayUIタグ](https://clayui.com/) に相当するものとして公開されている [MetalJS](https://metaljs.com/) （仮）に置き換えられました。                                                                                                                                                                        |
-| オーディエンスターゲティング                       | 削除        | [パーソナライゼーション](../../../site-building/personalizing-site-experience/personalizing-site-experience.html) に置き換えられました（ [Migrating from Audience Targeting](https://help.liferay.com/hc/en-us/articles/360028711992-Manually-Migrating-from-Audience-Targeting) を参照）。        |
+| オーディエンスターゲティング                       | 削除        | [パーソナライゼーション](../../../site-building/personalizing-site-experience/personalizing-site-experience.html) に置き換えられました（ [Migrating from Audience Targeting](https://help.liferay.com/hc/ja/articles/360028711992-Manually-Migrating-from-Audience-Targeting) を参照）。        |
 | :--- | :--- | :--- |
 | 中央認証サービス（CAS）                        | バンドル      | [ SAMLベースの認証](../../securing-liferay/configuring-sso/authenticating-with-saml/single-sign-on-with-saml.md)に移行。                                                                                                                                                       |
 | CMISストア                              | 削除        | 別の[ファイルストアオプション](../../../system-administration/file-storage/configuring-file-storage.md)に移行。 [Liferay 7.2にアップグレード](../upgrade-basics/upgrade-overview.md)する前に、[ファイルストアデータを移行してください](../../../system-administration/file-storage/file-store-migration.md)。           |
@@ -61,7 +61,7 @@ Liferay 7.0以前からアップグレードする場合は、該当するリリ
 | OpenAM/OpenSSO                       | バンドル      | [ SAMLベースの認証](../../installation-and-upgrades/securing-liferay/configuring-sso/authenticating-with-saml/single-sign-on-with-saml.md)に移行。                                                                                                                             |
 | OpenID                               | マーケットプレース | [OpenID Connect](../../securing-liferay/configuring-sso/other-ssos/using-openid-connect.md)に置き換えられました。                                                                                                                                                               |
 | リソースインポーター                           | バンドル      | 7.1で非推奨、直接の置き換えなし                                                                                                                                                                                                                                                    |
-| RSSパブリッシャー                           | バンドル      | このウィジェットの有効化と使用に関する [記事](https://help.liferay.com/hc/en-us/articles/360028820672-The-RSS-Publisher-Widget) を参照してください。                                                                                                                                                  |
+| RSSパブリッシャー                           | バンドル      | このウィジェットの有効化と使用に関する [記事](https://help.liferay.com/hc/ja/articles/360028820672-The-RSS-Publisher-Widget) を参照してください。                                                                                                                                                  |
 | **ツール** カテゴリの検索ウィジェット（クラシック）           | バンドル      | 7.1で廃止。 **検索** カテゴリの[検索ウィジェット](../../../using-search/search-pages-and-widgets/search-results/search-results.md)に置き換えられました。                                                                                                                                              |
 | スプライトフレームワーク                         | バンドル      | Liferayの画像スプライトフレームワークは非推奨になり、`sprite.enabled` [ポータルプロパティ](https://learn.liferay.com/dxp/latest/ja/installation-and-upgrades/reference/portal-properties.html) を介してデフォルトで無効になっています。 引き続き好きなフレームワークを使用して画像スプライトを作成し、プラグインにデプロイできます。                                     |
 | テーマ：Fjord                            | 最終版       | 直接の置換はありません。                                                                                                                                                                                                                                                         |

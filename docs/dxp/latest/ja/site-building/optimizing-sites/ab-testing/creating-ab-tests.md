@@ -8,7 +8,7 @@ A/Bテストを作成する前に、次の点に留意してください。
   - アクティブなA/Bテストがすでに実行されているエクスペリエンスに対しテストを作成することはできません。
   - A/Bテストの一部であるコンテンツページまたはエクスペリエンスを削除すると、テストも削除されます。
 
-A/Bテストを作成するには、最初に[テストを作成](#creating-the-test)してから、1つ以上の[テストバリアント](#creating-the-test-variant)を作成します。
+A/Bテストを作成するには、最初に [テストを作成](#creating-the-test) してから、1つ以上の [テストバリアント](#creating-the-test-variant) を作成します。
 
 ```{important}
 Verify that your environment [meets the requirements](./verifying-ab-test-requirements.md) for A/B Testing before creating the test.
@@ -47,13 +47,13 @@ Verify that your environment [meets the requirements](./verifying-ab-test-requir
 
     1.  *[有効なテスト]* タブの*[目標をクリック]* セクションで、*[要素を設定]* をクリックします。
 
-        ![[要素を設定]をクリックして、テスト用の要素を設定します](./creating-ab-tests/images/03.png)
+        ![ [要素を設定]をクリックして、テスト用の要素を設定します](./creating-ab-tests/images/03.png)
 
     2.  コンテンツページでテストする要素をクリックします。
 
     3.  *[要素をクリック対象に設定]* をクリックします。
 
-        ![[要素をクリック対象に設定]ボタンをクリックして選択します。](./creating-ab-tests/images/01.png)
+        ![ [要素をクリック対象に設定]ボタンをクリックして選択します。](./creating-ab-tests/images/01.png)
     
     <!-- end list -->
     
@@ -71,11 +71,11 @@ Verify that your environment [meets the requirements](./verifying-ab-test-requir
 
 7.  *[バリエーションを保存]* をクリックします。
 
-テストとテストバリアントを作成した後、[テストを実行](./running-and-monitoring-ab-tests)できます。
+テストとテストバリアントを作成した後、 [テストを実行](./running-and-monitoring-ab-tests) できます。
 
 ## 関連情報
 
   - [Running and Monitoring A/B Tests](./running-and-monitoring-ab-tests)
-  - [A/B Testing](./ab-testing.md)
+  - [A/Bテスト](./ab-testing.md)
   - [Configuring A/B Testing](./creating-ab-tests.md)
-  - [Reviewing A/B Test Results and Publishing Test Variants](./reviewing-ab-test-results-and-publishing-test-variants.md)
+  - [A/Bテスト結果のレビューとテストバリアントの公開](./reviewing-ab-test-results-and-publishing-test-variants.md)

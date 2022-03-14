@@ -16,7 +16,7 @@
 
 ## liferay-ui:flashタグを削除
 - **日付：** 2020年13月10日
-- **JIRAチケット：**[LPS-121732](https://issues.liferay.com/browse/LPS-121732)
+- **JIRAチケット：** [LPS-121732](https://issues.liferay.com/browse/LPS-121732)
 
 ### 何が変わりましたか？
 
@@ -40,7 +40,7 @@
 
 ## /portal/flashパスの削除
 - **日付：** 2020年13月10日
-- **JIRAチケット：**[LPS-121733](https://issues.liferay.com/browse/LPS-121733)
+- **JIRAチケット：** [LPS-121733](https://issues.liferay.com/browse/LPS-121733)
 
 ### 何が変わりましたか？
 
@@ -66,7 +66,7 @@
 
 ## swfobject AUIモジュールの削除
 - **日付：** 2020年13月10日
-- **JIRAチケット：**[LPS-121736](https://issues.liferay.com/browse/LPS-121736)
+- **JIRAチケット：** [LPS-121736](https://issues.liferay.com/browse/LPS-121736)
 
 ### 何が変わりましたか？
 
@@ -90,7 +90,7 @@ AUIモジュールの`swfobject`は削除されました。 これは、Adobe Fl
 
 ## AssetEntries_AssetCategoriesテーブルと対応するコードを削除
 - **日付：** 2020年16月10日
-- **JIRAチケット：**[LPS-89065](https://issues.liferay.com/browse/LPS-89065)
+- **JIRAチケット：** [LPS-89065](https://issues.liferay.com/browse/LPS-89065)
 
 ### 何が変わりましたか？
 
@@ -116,7 +116,7 @@ AUIモジュールの`swfobject`は削除されました。 これは、Adobe Fl
 
 ## AntivirusScannerのサポートとClamdの統合をリファクタリング
 - **日付：** 2020年10月21日
-- **JIRAチケット：**[LPS-122280](https://issues.liferay.com/browse/LPS-122280)
+- **JIRAチケット：** [LPS-122280](https://issues.liferay.com/browse/LPS-122280)
 
 ### 何が変わりましたか？
 
@@ -142,7 +142,7 @@ AUIモジュールの`swfobject`は削除されました。 これは、Adobe Fl
 
 ## エンティティ表示ページ登録追跡ロジックを変更
 - **日付：** 2020年10月27日
-- **JIRAチケット：**[LPS-122275](https://issues.liferay.com/browse/LPS-122275)
+- **JIRAチケット：** [LPS-122275](https://issues.liferay.com/browse/LPS-122275)
 
 ### 何が変わりましたか？
 
@@ -172,7 +172,7 @@ AUIモジュールの`swfobject`は削除されました。 これは、Adobe Fl
 
 ## 廃止予定および未使用のJSPタグを削除
 - **日付：** 2020年11月24日
-- **JIRAチケット：**[LPS-112476](https://issues.liferay.com/browse/LPS-112476)
+- **JIRAチケット：** [LPS-112476](https://issues.liferay.com/browse/LPS-112476)
 
 ### 何が変わりましたか？
 
@@ -209,7 +209,7 @@ AUIモジュールの`swfobject`は削除されました。 これは、Adobe Fl
 
 ## .container-fluid-1280 CSSクラスを置き換え
 - **日付：** 2020年11月24日
-- **JIRAチケット：**[LPS-123894](https://issues.liferay.com/browse/LPS-123894)
+- **JIRAチケット：** [LPS-123894](https://issues.liferay.com/browse/LPS-123894)
 
 ### 何が変わりましたか？
 
@@ -233,7 +233,7 @@ AUIモジュールの`swfobject`は削除されました。 これは、Adobe Fl
 
 ## CSSおよびJavaScriptリソースのランタイム縮小化をデフォルトで無効化
 - **日付：** 2020年11月27日
-- **JIRAチケット：**[LPS-123550](https://issues.liferay.com/browse/LPS-123550)
+- **JIRAチケット：** [LPS-123550](https://issues.liferay.com/browse/LPS-123550)
 
 ### 何が変わりましたか？
 
@@ -257,7 +257,7 @@ AUIモジュールの`swfobject`は削除されました。 これは、Adobe Fl
 
 ## SoyPortletクラスを削除
 - **日付：** 2020年12月9日
-- **JIRAチケット：**[LPS-122955](https://issues.liferay.com/browse/LPS-122955)
+- **JIRAチケット：** [LPS-122955](https://issues.liferay.com/browse/LPS-122955)
 
 ### 何が変わりましたか？
 
@@ -285,7 +285,7 @@ JSPを使用する`MVCPortlet`などの確立されたアーキテクチャ、�
 
 ## サーバー側のClosure Templates（Soy）のサポートを削除
 - **日付：** 2020年12月14日
-- **JIRAチケット：**[LPS-122956](https://issues.liferay.com/browse/LPS-122956)
+- **JIRAチケット：** [LPS-122956](https://issues.liferay.com/browse/LPS-122956)
 
 ### 何が変わりましたか？
 
@@ -324,7 +324,7 @@ JSPを使用する`MVCPortlet`などの確立されたアーキテクチャ、�
 
 ## com.liferay.portal.kernel.model.PortletPreferencesメソッド、getPreferencesおよびsetPreferencesを削除
 - **日付：** 2020年12月20日
-- **JIRAチケット：**[LPS-122562](https://issues.liferay.com/browse/LPS-122562)
+- **JIRAチケット：** [LPS-122562](https://issues.liferay.com/browse/LPS-122562)
 
 ### 何が変わりましたか？
 
@@ -348,7 +348,7 @@ JSPを使用する`MVCPortlet`などの確立されたアーキテクチャ、�
 
 ## CSS互換性レイヤーを削除
 - **日付：** 2021-Jan-02
-- **JIRAチケット：**[LPS-123359](https://issues.liferay.com/browse/LPS-123359)
+- **JIRAチケット：** [LPS-123359](https://issues.liferay.com/browse/LPS-123359)
 
 ### 何が変わりましたか？
 
@@ -372,7 +372,7 @@ Clayマークアップを使用している場合は、最新の [Clayコンポ�
 
 ## Log4j XML定義ファイルからspi.idプロパティを削除
 - **日付：** 2021-Jan-19
-- **JIRAチケット：**[LPS-125998](https://issues.liferay.com/browse/LPS-125998)
+- **JIRAチケット：** [LPS-125998](https://issues.liferay.com/browse/LPS-125998)
 
 ### 何が変わりましたか？
 
@@ -396,7 +396,7 @@ SPIが [LPS-110758](https://issues.liferay.com/browse/LPS-110758) によって�
 
 ## frontend-taglib-clayタグから廃止予定の属性を削除
 - **日付：** 2021-Jan-26
-- **JIRAチケット：**[LPS-125256](https://issues.liferay.com/browse/LPS-125256)
+- **JIRAチケット：** [LPS-125256](https://issues.liferay.com/browse/LPS-125256)
 
 ### 何が変わりましたか？
 
@@ -416,7 +416,7 @@ SPIが [LPS-110758](https://issues.liferay.com/browse/LPS-110758) によって�
 
 ## HTMLタグのブール属性の処理を変更
 - **日付：** 2021-Feb-18
-- **JIRAチケット：**[LPS-127832](https://issues.liferay.com/browse/LPS-127832)
+- **JIRAチケット：** [LPS-127832](https://issues.liferay.com/browse/LPS-127832)
 
 ### 何が変わりましたか？
 
@@ -468,7 +468,7 @@ DOMに存在させたいブール属性に`true`値を渡すようにしてく�
 
 ## com.liferay.portal.kernel.model.PortalPreferencesメソッド、getPreferencesおよびsetPreferencesを削除
 - **日付：** 2020-Mar-31
-- **JIRAチケット：**[LPS-124338](https://issues.liferay.com/browse/LPS-124338)
+- **JIRAチケット：** [LPS-124338](https://issues.liferay.com/browse/LPS-124338)
 
 ### 何が変わりましたか？
 
@@ -492,7 +492,7 @@ DOMに存在させたいブール属性に`true`値を渡すようにしてく�
 
 ## item-selector-taglibはcoverImage関連のイベントを起動しなくなりました
 - **日付：** 2021-Apr-15
-- **JIRAチケット：**[LPS-130359](https://issues.liferay.com/browse/LPS-130359)
+- **JIRAチケット：** [LPS-130359](https://issues.liferay.com/browse/LPS-130359)
 
 ### 何が変わりましたか？
 
@@ -516,7 +516,7 @@ DOMに存在させたいブール属性に`true`値を渡すようにしてく�
 
 ## OAuth 2.0トークンインストロスペクション機能識別子を変更
 - **日付：** 2021年5月04日
-- **JIRAチケット：**[LPS-131573](https://issues.liferay.com/browse/LPS-131573)
+- **JIRAチケット：** [LPS-131573](https://issues.liferay.com/browse/LPS-131573)
 
 ### 何が変わりましたか？
 
@@ -543,7 +543,7 @@ OAuth 2.0トークンイントロスペクション機能識別子が`token_intr
 
 ## JournalArticleのコンテンツ項目を削除
 - **日付：** 2021年5月21日
-- **JIRAチケット：**[LPS-129058](https://issues.liferay.com/browse/LPS-129058)
+- **JIRAチケット：** [LPS-129058](https://issues.liferay.com/browse/LPS-129058)
 
 ### 何が変わりましたか？
 
@@ -567,7 +567,7 @@ OAuth 2.0トークンイントロスペクション機能識別子が`token_intr
 
 ## com.liferay.portal.kernel.util.StringBundlerをcom.liferay.petra.string.StringBundlerに置き換え
 - **日付：** 2021-Jun-25
-- **JIRAチケット：**[LPS-133200](https://issues.liferay.com/browse/LPS-133200)
+- **JIRAチケット：** [LPS-133200](https://issues.liferay.com/browse/LPS-133200)
 
 ### 何が変わりましたか？
 
@@ -610,7 +610,7 @@ OAuth 2.0トークンイントロスペクション機能識別子が`token_intr
 
 ## UserLocalService関連のクラスがパブリックAPIを変更しました
 - **日付：** 2021年7月7日
-- **JIRAチケット：**[LPS-134096](https://issues.liferay.com/browse/LPS-134096)
+- **JIRAチケット：** [LPS-134096](https://issues.liferay.com/browse/LPS-134096)
 
 ### 何が変わりましたか？
 
@@ -647,7 +647,7 @@ OAuth 2.0トークンイントロスペクション機能識別子が`token_intr
 
 ## frontend-css-web CSSモジュールを削除
 - **日付：** 2021-Aug-02
-- **JIRAチケット：**[LPS-127085](https://issues.liferay.com/browse/LPS-127085)
+- **JIRAチケット：** [LPS-127085](https://issues.liferay.com/browse/LPS-127085)
 
 ### 何が変わりましたか？
 
@@ -701,7 +701,7 @@ OAuth 2.0トークンイントロスペクション機能識別子が`token_intr
 
 ## 一部のSanitizedServletResponse静的メソッド、HttpHeaders X **XSS** PROTECTION定数、およびhttp.header.secure.x.xss.protectionポータルプロパティを削除
 - **日付：** 2021-Aug-05
-- **JIRAチケット：**[LPS-134188](https://issues.liferay.com/browse/LPS-134188)
+- **JIRAチケット：** [LPS-134188](https://issues.liferay.com/browse/LPS-134188)
 
 ### 何が変わりましたか？
 
@@ -742,7 +742,7 @@ X-Xss-Protectionヘッダーは、最新のブラウザではサポートされ�
 
 ## OpenIdConnectServiceHandlerインターフェイスをOpenIdConnectAuthenticationHandlerに置き換え
 - **日付：** 2021-Aug-09
-- **JIRAチケット：**[LPS-124898](https://issues.liferay.com/browse/LPS-124898)
+- **JIRAチケット：** [LPS-124898](https://issues.liferay.com/browse/LPS-124898)
 
 ### 何が変わりましたか？
 
@@ -809,7 +809,7 @@ portal.security.sso.openid.connect.OpenIdConnectAuthenticationHandler
 
 ## CAS SSOモジュールをportal-security-sso-casプロジェクトに移動
 - **日付：** 2021-Sep-15
-- **JIRAチケット：**[LPS-88905](https://issues.liferay.com/browse/LPS-88905)
+- **JIRAチケット：** [LPS-88905](https://issues.liferay.com/browse/LPS-88905)
 
 ### 何が変わりましたか？
 
@@ -833,7 +833,7 @@ CAS SSOモジュールは、`portal-security-sso`プロジェクトから`portal
 
 ## clay:selectタグの名前に印刷用の属性のネームスペースを指定
 - **日付：** 2021-Sep-15
-- **JIRAチケット：**[LPS-139131](https://issues.liferay.com/browse/LPS-139131)
+- **JIRAチケット：** [LPS-139131](https://issues.liferay.com/browse/LPS-139131)
 
 ### 何が変わりましたか？
 
@@ -859,7 +859,7 @@ CAS SSOモジュールは、`portal-security-sso`プロジェクトから`portal
 
 ## コアレジストリAPIおよびレジストリ実装モジュールを削除
 - **日付：** 2021-Sep-28
-- **JIRAチケット：**[LPS-138126](https://issues.liferay.com/browse/LPS-138126)
+- **JIRAチケット：** [LPS-138126](https://issues.liferay.com/browse/LPS-138126)
 
 ### 何が変わりましたか？
 

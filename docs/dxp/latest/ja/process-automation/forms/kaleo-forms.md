@@ -6,4 +6,4 @@
 kaleo-forms/kaleo-forms.md
 ```
 
-- [Kaleo Forms](./kaleo-forms/kaleo-forms.md)
+- [Kaleoフォーム](./kaleo-forms/kaleo-forms.md)

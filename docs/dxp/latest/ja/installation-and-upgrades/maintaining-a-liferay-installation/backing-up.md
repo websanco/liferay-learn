@@ -26,7 +26,7 @@ Liferayホームフォルダーには次のファイルが含まれているた�
 
 ***`/license`フォルダ(Subscription):** Liferay Enterpriseサブスクリプションのアクティベーションキーを保持します。
 
-***`/osgi`フォルダ:** DXPのOSGiランタイムを構成するファイルは、Liferay Homeの`/osgi`フォルダに保存されます。 DXPにデプロイされたすべてのアプリとモジュールのJARファイルが含まれています。 `/osgi`フォルダには、他の必要なJARファイル、 [設定ファイル](https://help.liferay.com/hc/en-us/articles/360029131651-Understanding-System-Configuration-Files) 、およびログファイルも含まれています。
+***`/osgi`フォルダ:** DXPのOSGiランタイムを構成するファイルは、Liferay Homeの`/osgi`フォルダに保存されます。 DXPにデプロイされたすべてのアプリとモジュールのJARファイルが含まれています。 `/osgi`フォルダには、他の必要なJARファイル、 [設定ファイル](https://help.liferay.com/hc/ja/articles/360029131651-Understanding-System-Configuration-Files) 、およびログファイルも含まれています。
 
 ***`/logs`フォルダ:** DXPのログファイルが含まれています。 DXPで問題が発生した場合、ログファイルは、問題の原因を特定するための情報を提供します。
 

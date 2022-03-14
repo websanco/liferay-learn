@@ -133,7 +133,7 @@ rootDir="{document_library_path}"
 
 1. ファイルストア設定の更新については、[Updating the File Store](./updating-the-file-store.md)で説明しています。
 
-1. Liferay Portal 6.1以前を使用している場合は、 [Liferay Portal 6.2で導入された新しいデフォルトにプロパティを適合](https://help.liferay.com/hc/en-us/articles/360017903232-Upgrading-Liferay#review-the-liferay-62-properties-defaults) させてください。
+1. Liferay Portal 6.1以前を使用している場合は、 [Liferay Portal 6.2で導入された新しいデフォルトにプロパティを適合](https://help.liferay.com/hc/ja/articles/360017903232-Upgrading-Liferay#review-the-liferay-62-properties-defaults) させてください。
 
 1. シャード化された環境がある場合は、[シャード化されていない環境を生成するようにアップグレードを構成](../other-upgrade-scenarios/upgrading-a-sharded-environment.md)します。
 

@@ -2,7 +2,7 @@
 
 サイトのメンバーになると、通常のゲスト以上のアクセス権と能力が付与されます。 これらの主なメリットは、サイトメンバーシップに付属しています。
 
-  - サイトメンバーのみがサイトの[プライベートページ](../../understanding-pages.md#page-sets)を表示できます。
+  - サイトメンバーのみがサイトの [プライベートページ](../../understanding-pages.md#page-sets) を表示できます。
   - サイトのメンバーは、掲示板やWikiなどの多くのウィジェットに対して、ゲストよりも多くの権限を持っており、コンテンツを作成してサイトで共同作業を行うことができます。
   - サイトメンバーは、サイト権限を付与するロールに関連付けることができます。
 
@@ -10,4 +10,4 @@
 
 ## 追加情報
 
-  - [Changing Site Membership Type](../../site-settings/site-users/changing-site-membership-type.md)
+  - [サイトメンバーシップタイプの変更](../../site-settings/site-users/changing-site-membership-type.md)

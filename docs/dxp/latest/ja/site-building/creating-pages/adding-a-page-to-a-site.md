@@ -1,24 +1,24 @@
 # サイトにページを追加する
 
-以下の手順では、サイトに新しいページを追加し、一般的なオプションを構成する方法について説明します。 残りのページ設定を構成する方法については、[Configuring Individual Pages](./06-configuring-individual-pages.md)を参照するか、または[ページセット](./understanding-pages.md#page-sets)のオプションを設定する方法について[Configuring Page Sets](./05-configuring-page-sets.md)を参照してください。
+以下の手順では、サイトに新しいページを追加し、一般的なオプションを構成する方法について説明します。 残りのページ設定を構成する方法については、[Configuring Individual Pages](./06-configuring-individual-pages.md)を参照するか、または [ページセット](./understanding-pages.md#page-sets) のオプションを設定する方法について[Configuring Page Sets](./05-configuring-page-sets.md)を参照してください。
 
 ## 新しいページを追加する
 
 次の手順に従って、ページを追加します。
 
-1.  [サイトメニュー](../../getting-started/navigating-dxp.md#site-menu)を使用して、目的のサイトに移動します。
+1.  [サイトメニュー](../../getting-started/navigating-dxp.md#site-menu) を使用して、目的のサイトに移動します。
 
 2.  サイトメニューの*[Site Builder]* → *[Pages]* に移動します。
 
 3.  [Pages]ページで、*追加*ボタン（![Add](../../images/icon-add.png)）をクリックしてトップレベルのページを作成します。
 
-    ![[Pages]画面では、サイトページ全体を編集できます。](./adding-pages/adding-a-page-to-a-site/images/01.png)
+    ![ [Pages]画面では、サイトページ全体を編集できます。](./adding-pages/adding-a-page-to-a-site/images/01.png)
 
     ```{tip}
     または、Liferay DXP 7.3以降では、サイト名の横にあるページツリーアイコンをクリックして、ページツリーメニューを開くことができます。 ページツリーメニューを使用すると、検索バーでキーワードによってページをすばやく検索したり、ページを選択してそのページに移動したり、アクションメニューからページを追加したりすることもできます。
     ```
 
-4.  *[Blank]* をクリックして[コンテンツページ](./understanding-pages.md#page-types)を作成するか、*[Other]* 見出しの下の[別のページタイプ](./other-page-types.md)を選択するか、あるは*[Global Template]* メニューの下に表示されるページテンプレートを選択します。 Liferay DXP 7.3より前のバージョンでは、ページタイプは*[Basic Pages]* にリストされています。
+4.  *[Blank]* をクリックして [コンテンツページ](./understanding-pages.md#page-types) を作成するか、*[Other]* 見出しの下の[別のページタイプ](./other-page-types.md)を選択するか、あるは*[Global Template]* メニューの下に表示されるページテンプレートを選択します。 Liferay DXP 7.3より前のバージョンでは、ページタイプは*[Basic Pages]* にリストされています。
 
     ![ページを追加するときは、ページタイプを選択する必要があります。](./adding-pages/adding-a-page-to-a-site/images/04.png)
 

@@ -9,5 +9,5 @@ auto-tagging/auto-tagging-images.md
 ```
 
 * [Configuring Asset Auto Tagging](./auto-tagging/auto-tagging-assets.md)
-* [Auto Tagging Assets](./auto-tagging/auto-tagging-assets.md)
-* [Auto Tagging Images](./auto-tagging/auto-tagging-images.md)
+* [アセットの自動タグ付け](./auto-tagging/auto-tagging-assets.md)
+* [画像の自動タグ付け](./auto-tagging/auto-tagging-images.md)

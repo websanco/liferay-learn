@@ -14,7 +14,7 @@
 
 変更を追跡するためのパブリケーションをまだ作成していない場合は、[Publications]バーのドロップダウンメニューで*[新規公開を作成]* をクリックします。
 
-![[Publications]バーのドロップダウンメニューで[新規公開を作成]をクリックします。](./making-and-publishing-changes/images/01.png)
+![[Publications]バーのドロップダウンメニューで [新規公開を作成]をクリックします。](./making-and-publishing-changes/images/01.png)
 
 *[新規公開を作成]* ページにリダイレクトされます。このページで、新しいパブリケーションの名前と説明を設定できます。 詳細は、[パブリケーションの作成と管理](./creating-and-managing-publications.md)を参照してください。
 
@@ -24,7 +24,7 @@
 
 目的のパブリケーションで作業していない場合は、*[公開を選択]* をクリックして、正しいパブリケーションを選択してください。
 
-![[公開を選択]をクリックして、作業するパブリケーションを選択します。](./making-and-publishing-changes/images/02.png)
+![ [公開を選択]をクリックして、作業するパブリケーションを選択します。](./making-and-publishing-changes/images/02.png)
 
 追跡可能な場合、インスタンス上のWebコンテンツ、ドキュメント、およびページに加えられた変更は、現在のパブリケーションの変更履歴のリストに追加されます。 各パブリケーションはインスタンスに範囲指定されているため、変更履歴は複数のサイトにまたがることがあります。 同じパブリケーション内の異なるサイトを編集する場合、すべての変更履歴は、パブリケーションの公開時に本番環境に適用されることに注意してください。
 
@@ -60,7 +60,7 @@
 
 公開する前に、パブリケーションの変更履歴を確認します。 これを行うには、[Publications]バーのドロップダウンメニューで*[変更の確認]* を選択します。
 
-![[Publications]バーのドロップダウンメニューで[変更の確認]をクリックします。](./making-and-publishing-changes/images/03.png)
+![[Publications]バーのドロップダウンメニューで [変更の確認]をクリックします。](./making-and-publishing-changes/images/03.png)
 
 または、[Publications]概要ページの*[進行中]* タブで、パブリケーションの変更履歴を確認できます。 確認するパブリケーションの*アクション*ボタン（![Actions button](../../../images/icon-actions.png)）をクリックし、*[変更の確認]* を選択して、選択したパブリケーションに含まれるすべての変更を表示します。
 
@@ -92,7 +92,7 @@
 
 変更をすぐに公開するには、本番環境に公開するパブリケーションにいることを確認してください。 次に、*[Publications]* バーのドロップダウンメニューで*[公開]* をクリックします。
 
-![[Publications]バーのドロップダウンメニューで[公開]をクリックします。](./making-and-publishing-changes/images/06.png)
+![[Publications]バーのドロップダウンメニューで [公開]をクリックします。](./making-and-publishing-changes/images/06.png)
 
 または、*[Changes]* ページに移動し、*[公開]* をクリックして、パブリケーションを公開することもできます。
 
@@ -104,7 +104,7 @@ DXPは競合検出を実行して、競合する変更があるかどうかを�
 
 変更を後で公開するには、本番環境に公開するパブリケーションにいることを確認してください。 次に、*[Publications]* バーのドロップダウンメニューで*[スケジュール]* をクリックします。
 
-![[Publications]バーのドロップダウンメニューで[スケジュール]をクリックします。](./making-and-publishing-changes/images/07.png)
+![[Publications]バーのドロップダウンメニューで [スケジュール]をクリックします。](./making-and-publishing-changes/images/07.png)
 
 または、パブリケーションの*[Changes]* ページに移動し、*[スケジュール]* をクリックして公開することもできます。
 
@@ -117,5 +117,5 @@ DXPは予備的な競合検出を実行して、既存の競合があるかど�
 ## 追加情報
 
   - [Publications Overview](../publications.md)
-  - [Enabling Publications](./enabling-publications.md)
+  - [パブリケーションの有効化](./enabling-publications.md)
   - [パブリケーションの作成と管理](./creating-and-managing-publications.md)

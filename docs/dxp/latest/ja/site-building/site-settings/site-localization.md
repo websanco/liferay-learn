@@ -1,20 +1,20 @@
 # サイトのローカライゼーション
 
 ```{note}
-If you are setting up your Liferay installation for the first time, we recommend reviewing [Initial Instance Localization](../../installation-and-upgrades/setting-up-liferay/initial-instance-localization.md) first.
+If you are setting up your Liferay installation for the first time, we recommend reviewing [初期インスタンスのローカリゼーション](../../installation-and-upgrades/setting-up-liferay/initial-instance-localization.md) first.
 ```
 
 ## サイト言語の設定
 
 サイトのデフォルト言語を設定できます。 サイトで有効な言語を定義することもできます。
 
-1.  [[サイト設定UI]](./site-settings-ui-reference.md#language)で、[Languages]タブをクリックします。
+1.  [ [サイト設定UI]](./site-settings-ui-reference.md#language) で、[Languages]タブをクリックします。
 
-    ![[サイトの設定]で、[Languages]タブをクリックします。](./site-localization/images/01.png)
+    ![[サイトの設定]で、 [Languages]タブをクリックします。](./site-localization/images/01.png)
 
 2.  *[Define a custom default language and additional available languages for this site]* をクリックします。
 
-    ![[Define a custom default language and additional available languages for this site]をクリックします。](./site-localization/images/02.png)
+    ![ [Define a custom default language and additional available languages for this site]をクリックします。](./site-localization/images/02.png)
 
 3.  デフォルト言語をリスト内の任意の言語に変更できます。
 

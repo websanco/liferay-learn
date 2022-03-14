@@ -53,5 +53,5 @@
 ## 関連情報
 
   - [Content Set Personalization](./content-set-personalization.md)
-  - [Getting Analytics for User Segments](../segmentation/getting-analytics-for-user-segments.md)
+  - [ユーザーセグメントの分析の取得](../segmentation/getting-analytics-for-user-segments.md)
   - [Creating User Segments](../segmentation/creating-and-managing-user-segments.md)

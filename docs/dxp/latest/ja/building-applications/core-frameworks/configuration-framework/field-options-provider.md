@@ -15,7 +15,7 @@
 1. [フィールドオプションプロバイダー](./liferay-z4h3.zip) をダウンロードして解凍します。
 
     ```bash
-    curl https://learn.liferay.com/dxp/latest/en/developing-applications/core-frameworks/configuration-framework/liferay-z4h3.zip -O
+    curl https://learn.liferay.com/dxp/latest/ja/developing-applications/core-frameworks/configuration-framework/liferay-z4h3.zip -O
     ```
 
     ```bash

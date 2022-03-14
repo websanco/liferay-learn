@@ -8,7 +8,7 @@
 * PostgreSQL
 
 ```{note}
-[Liferay DXP Compatibility Matrix](https://help.liferay.com/hc/en-us/articles/360049238151) には、サポートされているデータベースとバージョンが一覧表示されています。
+[Liferay DXP Compatibility Matrix](https://help.liferay.com/hc/ja/articles/360049238151) には、サポートされているデータベースとバージョンが一覧表示されています。
 ```
 
 Liferay DXPをデータベースに接続するには、次の手順が必要です。
@@ -59,7 +59,7 @@ Liferay DXPがデータを保持するには、データベースユーザーの
 
 ### クエリ結果の並べ替え順序を設定する（オプション）
 
-すべてのデータベースには、結果をソートするためのデフォルトの順序があります（ [この記事](https://help.liferay.com/hc/en-us/articles/360029315971-Sort-Order-Changed-with-a-Different-Database) を参照）。 この順序が気になる場合は、データベースベンダーのドキュメントを参照して並べ替え順序を確認し、必要に応じて、Liferay DXPエンティティに適したデフォルトのクエリ結果順序を使用するようにデータベースを構成してください。
+すべてのデータベースには、結果をソートするためのデフォルトの順序があります（ [この記事](https://help.liferay.com/hc/ja/articles/360029315971-Sort-Order-Changed-with-a-Different-Database) を参照）。 この順序が気になる場合は、データベースベンダーのドキュメントを参照して並べ替え順序を確認し、必要に応じて、Liferay DXPエンティティに適したデフォルトのクエリ結果順序を使用するようにデータベースを構成してください。
 
 データベースサーバー、データベース、およびデータベースユーザーを構成しました。 Liferay DXPがデータベースとの通信に使用するJDBCコネクタをインストールする準備が整いました。
 

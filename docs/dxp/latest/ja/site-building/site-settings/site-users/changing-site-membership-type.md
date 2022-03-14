@@ -25,4 +25,4 @@
 ## 追加情報
 
   - [Managing Site Membership and Permissions With User Groups](../../../users-and-permissions/user-groups/managing-site-membership-and-permissions-with-user-groups.md)
-  - [Understanding Site Membership](../../building-sites/site-membership/understanding-site-membership.md)
+  - [サイトメンバーシップについて](../../building-sites/site-membership/understanding-site-membership.md)

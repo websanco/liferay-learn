@@ -10,7 +10,7 @@
 
   - コンテンツの表示および編集権限がある。
   - コンテンツが、 [ディスプレイページテンプレート](../../site-building/displaying-content/using-display-page-templates/displaying-content-with-display-page-templates.md)（ *ページ*（![Page](../../images/icon-page.png)）アイコン で示される）に基づいている。
-  - Liferay DXPインスタンスがアクティブに有効な[Liferay Analytics Cloudへの接続](https://learn.liferay.com/analytics-cloud/latest/en/getting-started/connecting-data-sources/connecting-liferay-dxp-to-analytics-cloud.html)があり、サイトが同期されている。
+  - Liferay DXPインスタンスがアクティブに有効な [Liferay Analytics Cloudへの接続](https://learn.liferay.com/analytics-cloud/latest/ja/connecting-data-sources/connecting-liferay-dxp-to-analytics-cloud.html) があり、サイトが同期されている。
 
 コンテンツパフォーマンスサイドバーを開くには：
 
@@ -19,7 +19,7 @@
 
 コンテンツダッシュボードの外部からパフォーマンスメトリクスにアクセスすることもできます。 *[統計情報を表示]* ボタンは、Webコンテンツのレイアウトを編集する権限がある場合、Webコンテンツの閲覧モードで使用できます。
 
-![[統計情報を表示]ボタンからコンテンツパフォーマンスメトリクスにアクセスします](../content-performance-panel/analyze-content-metrics-using-content-performance-panel/images/08.png)
+![ [統計情報を表示]ボタンからコンテンツパフォーマンスメトリクスにアクセスします](../content-performance-panel/analyze-content-metrics-using-content-performance-panel/images/08.png)
 
 コンテンツがさまざまな言語にローカライズされている場合、 *[Languages Translated Into]* セクションで各言語のメトリクスを表示することができます。 これを行うには、言語アイコンセレクターをクリックして、言語を選択します。
 
@@ -73,6 +73,6 @@
 
 ## 関連情報
 
-  - [About the Content Dashboard](./about-the-content-dashboard.md)
+  - [コンテンツダッシュボードについて](./about-the-content-dashboard.md)
   - [コンテンツダッシュボードインターフェイス](./content-dashboard-interface.md)
   - [コンテンツのカテゴリとボキャブラリの定義](../tags-and-categories/defining-categories-and-vocabularies-for-content.md)

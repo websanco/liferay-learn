@@ -24,7 +24,7 @@ DXPをインストールする前に、 [Liferay-Tomcatバンドルのインス�
 * OSGi依存関係のZIPファイル
 * 依存関係のZIPファイル（DXP 7.3以前）
 
-Liferay DXPにはJava JDK 8または11が必要です。 JDKの選択には [互換性マトリックス](https://help.liferay.com/hc/en-us/articles/360049238151) を参照してください。 推奨される設定については、 [JVM設定](../../reference/jvm-configuration.md) を参照してください。
+Liferay DXPにはJava JDK 8または11が必要です。 JDKの選択には [互換性マトリックス](https://help.liferay.com/hc/ja/articles/360049238151) を参照してください。 推奨される設定については、 [JVM設定](../../reference/jvm-configuration.md) を参照してください。
 
 [`［Liferay Home］`](../../reference/liferay-home.md) フォルダーは、Liferay DXPが機能するために必要なファイルとフォルダーを格納および管理する場所です。 WebSphereでは、`［Liferay Home］`フォルダは通常`［Install Location］/WebSphere/AppServer/profiles/［your-profile］/liferay`です。
 
@@ -158,7 +158,7 @@ com.ibm.ws.exception.RuntimeWarning: com.ibm.ws.webcontainer.exception.WebAppNot
 ## 依存関係をインストールする
 
 1. OSGi依存関係ZIPファイルを解凍し、その内容を`［Liferay Home］/osgi`フォルダに置きます(まだ存在しない場合は、このフォルダを作成します)。 LiferayのOSGiランタイムは、これらのモジュールに依存しています。
-1. DXP 7.4+ WARファイルには、MariaDB、MySQL、およびPostgreSQLのドライバーが含まれています。 以前のDXP WARにはそれらがありません。 DXP WARに必要なドライバーがない場合は、データベースベンダーのJDBC JARファイルを`[Install Location]/WebSphere/AppServer/lib/ext`フォルダにダウンロードします。 サポートされるデータベースのリストについては、 [互換性マトリックス](https://help.liferay.com/hc/en-us/articles/360049238151) を参照してください。
+1. DXP 7.4+ WARファイルには、MariaDB、MySQL、およびPostgreSQLのドライバーが含まれています。 以前のDXP WARにはそれらがありません。 DXP WARに必要なドライバーがない場合は、データベースベンダーのJDBC JARファイルを`[Install Location]/WebSphere/AppServer/lib/ext`フォルダにダウンロードします。 サポートされるデータベースのリストについては、 [互換性マトリックス](https://help.liferay.com/hc/ja/articles/360049238151) を参照してください。
 
 ```{note}
 HypersonicデータベースはDXPにバンドルされており、テスト目的で役立ちます。 本番環境インスタンスにはHSQLを**使用しないでください**。

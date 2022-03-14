@@ -14,7 +14,7 @@
 
 2.  *[表示ページテンプレート]* タブをクリックします。
 
-    ![[ページテンプレート] に移動し、[表示ページテンプレート] タブをクリックします。](./creating-and-managing-display-page-templates/images/02.png)
+    ![[ページテンプレート] に移動し、 [表示ページテンプレート] タブをクリックします。](./creating-and-managing-display-page-templates/images/02.png)
 
 3.  *追加*（![Add](./../../../images/icon-add.png)）をクリックします。
 
@@ -26,11 +26,11 @@
 
     ![コンテンツ ページの要素を使用してテンプレートを作成します。](./creating-and-managing-display-page-templates/images/04.png)
 
-6.  ページ要素を追加したら、編集可能なフィールドをダブルクリックして、それらをコンテンツストラクチャーフィールド (タイトル、説明など) に[マップ](../../creating-pages/building-and-managing-content-pages/building-content-pages.md#mapping-content)できます。 マップされたフィールドは紫の輪郭で示されます。
+6.  ページ要素を追加したら、編集可能なフィールドをダブルクリックして、それらをコンテンツストラクチャーフィールド (タイトル、説明など) に [マップ](../../creating-pages/building-and-managing-content-pages/building-content-pages.md#mapping-content) できます。 マップされたフィールドは紫の輪郭で示されます。
 
     ![ページ要素をストラクチャーフィールドにマップします。](./creating-and-managing-display-page-templates/images/05.png)
 
-    表示ページの SEO および Open Graph 設定を構成するときにこれらのマップされたストラクチャーフィールドを使用する方法については、[Configuring SEO and Open Graph](./configuring-seo-and-open-graph.md) を参照してください。
+    表示ページの SEO および Open Graph 設定を構成するときにこれらのマップされたストラクチャーフィールドを使用する方法については、 [SEO と Open Graph の設定](./configuring-seo-and-open-graph.md) を参照してください。
 
 7.  完了したら、* [Publish]* をクリックして作業内容を保存します。
 
@@ -68,6 +68,6 @@ If you assign your content to a new Display Page Template, review that the conte
 ## 追加情報
 
   - [Publishing Content with Display Pages](./publishing-content-with-display-pages.md)
-  - [Configuring SEO and Open Graph](./configuring-seo-and-open-graph.md)
+  - [SEO と Open Graph の設定](./configuring-seo-and-open-graph.md)
   - [Content Page Overview](./../../creating-pages/building-and-managing-content-pages/content-pages-overview.md)
   - [Building Content Pages](../../creating-pages/building-and-managing-content-pages/building-content-pages.md)

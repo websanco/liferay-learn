@@ -115,7 +115,7 @@ Liferay Portal CE 7.3 GA2 以下では、以下の構文を使用します。
 </div>
 ```
 
-コンテンツ マッピングは、フラグメント内の編集可能なフィールドを、Web コンテンツやブログなどのアセット タイプのフィールドに接続します。 たとえば、画像フィールドをマップして、Web コンテンツ記事のプレビュー画像を表示できます。 フィールドのマッピングの詳細は、[Building Content Pages](../../../creating-pages/building-and-managing-content-pages/building-content-pages.md#mapping-content) を参照してください。
+コンテンツ マッピングは、フラグメント内の編集可能なフィールドを、Web コンテンツやブログなどのアセット タイプのフィールドに接続します。 たとえば、画像フィールドをマップして、Web コンテンツ記事のプレビュー画像を表示できます。 フィールドのマッピングの詳細は、 [Building Content Pages](../../../creating-pages/building-and-managing-content-pages/building-content-pages.md#mapping-content) を参照してください。
 
 ## 編集可能なリンクの作成
 
@@ -144,7 +144,7 @@ Liferay Portal CE 7.3 GA2 以下では、以下の構文を使用します。
 
 ![リンクの外観と動作を定義するためのオプションがいくつかあります。](./fragment-specific-tags-reference/images/03.png)
 
-編集可能なリンクの詳細は、[Editable Links](../../../creating-pages/building-and-managing-content-pages/building-content-pages.md#editing-a-hyperlink) を参照してください。
+編集可能なリンクの詳細は、 [Editable Links](../../../creating-pages/building-and-managing-content-pages/building-content-pages.md#editing-a-hyperlink) を参照してください。
 
 ## 編集可能な HTML の作成
 

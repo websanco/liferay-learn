@@ -22,7 +22,7 @@ Liferay Portalには、ページの作成に使用できるいくつかのレイ
 ``` -->
 
 > 入手可能：Liferay 7.3以降。以前は *セクション* と *セクションビルダー* パネルに分割されていました。
-ページにフラグメントをドラッグアンドドロップできます。 フラグメントには、[テキスト](./building-content-pages.md#editing-text)、[画像](./building-content-pages.md#editing-an-image)、[リンク](./building-content-pages.md#editing-a-hyperlink)などの編集可能な要素を含めることができ、カスタムコンテンツで置き換えることができます。 サイト自体ですでに利用可能なコンテンツに[これらの要素をマッピング](./building-content-pages.md#mapping-content)することもできます。 これらの要素の開発の詳細については、[Fragment Specific Tags](../../displaying-content/using-fragments/using-page-fragments.md)を参照してください。
+ページにフラグメントをドラッグアンドドロップできます。 フラグメントには、 [テキスト](./building-content-pages.md#editing-text) 、 [画像](./building-content-pages.md#editing-an-image) 、 [リンク](./building-content-pages.md#editing-a-hyperlink) などの編集可能な要素を含めることができ、カスタムコンテンツで置き換えることができます。 サイト自体ですでに利用可能なコンテンツに [これらの要素をマッピング](./building-content-pages.md#mapping-content) することもできます。 これらの要素の開発の詳細については、[Fragment Specific Tags](../../displaying-content/using-fragments/using-page-fragments.md)を参照してください。
 ### レイアウト要素
 
 <!-- ```note::
@@ -33,7 +33,7 @@ Liferay Portalには、ページの作成に使用できるいくつかのレイ
 レイアウト要素パネルには2つのフラグメントが含まれています。
 - セクション：行を含めることができるコンテナフラグメント。 追加するセクションごとに、ページの幅が埋められます。 セクションには、複数の行を重ねて含めることができます。
 - 行：フラグメントまたはウィジェットを追加できる列のセットを含むフラグメント。 行を別の行内にネストして、より複雑なレイアウトを作成できます。 あなたは、することができます [の間隔調整](./building-content-pages.md#configuring-a-row-s-columns) 新しいデザインを作成するために、行の列のを。
-![[レイアウト]パネルには、フラグメントを整理するためのレイアウトが含まれています。](content-pages-overview/images/16.png)
+![ [レイアウト]パネルには、フラグメントを整理するためのレイアウトが含まれています。](content-pages-overview/images/16.png)
 ### 基本コンポーネント
 基本コンポーネントは、ページに機能を追加する小さなデザイン要素または部品です。 コンポーネントには、フォーマットが設定された画像や、スタイルが事前に適用されたテキストのブロックなどがあります。 コンポーネントが連携して、ページを1つずつ構築します。
 ![以下は、レイアウトに配置されている標準のコンポーネントです。](./content-pages-overview/images/05.png)
@@ -42,7 +42,7 @@ Liferay Portalには、ページの作成に使用できるいくつかのレイ
 
 <!-- An image with better text contrast would probably be a better example here - to help the image / text / CTA button stand out from one another more. -->
 
-![コンテンツページの編集中に[Banner]という名前のセクションが表示されます。](./content-pages-overview/images/01.png)
+![コンテンツページの編集中に [Banner]という名前のセクションが表示されます。](./content-pages-overview/images/01.png)
 ### フッター
 
 <!-- ```note::
@@ -66,7 +66,7 @@ Liferay Portalには、ページの作成に使用できるいくつかのレイ
 ``` -->
 
 > 対応可能：Liferay DXP 7.3以降
-*Content Display* パネルからコンテンツ表示フラグメントを追加することにより、単一の既存のWebコンテンツ、ブログエントリ、またはドキュメントを表示できます。 詳細については、[Using the Content Display Fragment](./README.md#using-fragments)を参照してください。
+*Content Display* パネルからコンテンツ表示フラグメントを追加することにより、単一の既存のWebコンテンツ、ブログエントリ、またはドキュメントを表示できます。 詳細については、 [Using the Content Display Fragment](./README.md#using-fragments) を参照してください。
 ## ウィジェット
 ウィジェットパネルには、ページに追加できる、すぐに使用できるアプリケーションとツールが一覧表示されます。 コンテンツページでのウィジェットの使用にはいくつかの制限があります。 詳細については、「 [コンテンツページでのウィジェットの使用](./using-widgets-on-a-content-page.md) 」を参照してください。
 ![ウィジェットパネルは、レイアウト内に追加できるウィジェットのリストを提供します。](./content-pages-overview/images/06.png)
@@ -83,17 +83,17 @@ While portlets are rendered according to [render-weight](https://docs.liferay.co
 
 > 対応可能：Liferay DXP 7.3以降
 
-[コンテンツ]パネルには、ページで使用されているWebコンテンツのリストが表示されます。 ウィジェットに表示されるコンテンツやコンテンツフィールドにマップされたコンテンツなどがあります。 *コンテンツ*ボタン（![Contents](../../../images/icon-contents.png)）をクリックして、[Contents]パネルを開きます。 このパネルから、さまざまなアクションを実行して、Webコンテンツを編集および管理できます。 詳細については、[Managing Web Content on Content Pages](./managing-web-content-on-content-pages.md)を参照してください。
+[コンテンツ]パネルには、ページで使用されているWebコンテンツのリストが表示されます。 ウィジェットに表示されるコンテンツやコンテンツフィールドにマップされたコンテンツなどがあります。 *コンテンツ*ボタン（![Contents](../../../images/icon-contents.png)）をクリックして、[Contents]パネルを開きます。 このパネルから、さまざまなアクションを実行して、Webコンテンツを編集および管理できます。 詳細については、 [コンテンツページでのWebコンテンツの管理](./managing-web-content-on-content-pages.md) を参照してください。
 
 ## ページ構造
 
 ページ構造は、ページ上のフラグメントとそのコンテンツの階層ビューを提供します。 ページ構造のフィールドをクリックして、ページ上で強調表示します。 ヘッダーとフッターは、カスタム [マスターページテンプレート](../defining-headers-and-footers/master-page-templates.md)の階層にも表示されますが、マスターページテンプレートからのみ変更できるため、無効になっています。
 
-![[Page Structure]では、ページの階層が表示されます。](./content-pages-overview/images/08.png)
+![ [Page Structure]では、ページの階層が表示されます。](./content-pages-overview/images/08.png)
 
 ## ルックアンドフィール
 
-*ルックアンドフィール*アイコン（![Look and Feel](../../../images/icon-look-and-feel.png)）をクリックして、テーマを変更したり、ページの他のオプションを管理したりします。 これらのオプションについては、[Configuring Individual Pages](../page-settings/configuring-individual-pages.md#look-and-feel)でさらに詳しく説明します。
+*ルックアンドフィール*アイコン（![Look and Feel](../../../images/icon-look-and-feel.png)）をクリックして、テーマを変更したり、ページの他のオプションを管理したりします。 これらのオプションについては、 [Configuring Individual Pages](../page-settings/configuring-individual-pages.md#look-and-feel) でさらに詳しく説明します。
 
 ## コメント
 

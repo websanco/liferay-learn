@@ -40,7 +40,7 @@ Liferay DXPのページは、主にサイトのユーザーにコンテンツと
 
 <!-- Should there be an article that covers layouts and layout templates? -->
 
-ウィジェットページは、*ウィジェット*（アプリケーション）を表示できるようにレイアウトが設定されたページです。 ウィジェットは、コンテンツを表示したり、インタラクティブで動的な機能をページに追加したりできます。 Liferay Portalを初めて起動したとき、最初のホームページがウィジェットページです。 詳細については、[Adding Widgets to a Page](../using-widget-pages/adding-widgets-to-a-page.md)を参照してください。
+ウィジェットページは、*ウィジェット*（アプリケーション）を表示できるようにレイアウトが設定されたページです。 ウィジェットは、コンテンツを表示したり、インタラクティブで動的な機能をページに追加したりできます。 Liferay Portalを初めて起動したとき、最初のホームページがウィジェットページです。 詳細については、 [ページへのウィジェットの追加](../using-widget-pages/adding-widgets-to-a-page.md) を参照してください。
 
 ![ウィジェットページは、専用のWikiページソリューションなど、いくつかの機能を提供できます。](./understanding-pages/images/05.png)
 
@@ -60,7 +60,7 @@ Liferay DXPのページは、主にサイトのユーザーにコンテンツと
 
 ### その他のページタイプ
 
-使用できるページタイプは他にもいくつかあります。特定の使用例に合わせて使用できます。 詳細については、[Other Page Types](../understanding-pages/other-page-types.md)を参照してください。
+使用できるページタイプは他にもいくつかあります。特定の使用例に合わせて使用できます。 詳細については、 [その他のページタイプ](../understanding-pages/other-page-types.md) を参照してください。
 
 ## グローバルページテンプレート
 
@@ -75,7 +75,7 @@ Liferay DXPのページは、主にサイトのユーザーにコンテンツと
 ページテンプレートの詳細：
 
   - Adding a Page Using a Page Template
-  - [Creating a Page Template](../adding-pages/creating-a-page-template.md)
+  - [ページテンプレートの作成](../adding-pages/creating-a-page-template.md)
 
 ## 子ページとページ階層
 
@@ -86,5 +86,5 @@ Liferay DXPのページは、主にサイトのユーザーにコンテンツと
 ## 関連情報
 
   - [Adding a Page](../adding-pages/adding-a-page-to-a-site.md)
-  - [Configuring Individual Pages](../page-settings/configuring-individual-pages.md)
+  - [個々のページの構成 (近日公開！)](../page-settings/configuring-individual-pages.md)
   - [ウィジェットページのユーザーパーソナライズの有効化](../using-widget-pages/enabling-user-personalization-of-widget-pages.md)

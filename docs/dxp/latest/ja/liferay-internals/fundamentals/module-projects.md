@@ -8,7 +8,7 @@ Liferayのアプリケーションやカスタマイズは、 [OSGi モジュー
 
 1. **ビルドスクリプト：** モジュールをビルドしてデプロイするための [Gradle](https://gradle.org/) ファイル。
 
-1. **メタデータ：**[Bnd](https://bnd.bndtools.org/) ファイルは、モジュールのアーティファクトを定義し、モジュールが提供するまたは必要とするパッケージや機能を指定します。
+1. **メタデータ：** [Bnd](https://bnd.bndtools.org/) ファイルは、モジュールのアーティファクトを定義し、モジュールが提供するまたは必要とするパッケージや機能を指定します。
 
 モジュールプロジェクトの構造は次のとおりです。
 
@@ -61,7 +61,7 @@ Liferayでは、一般的に3種類のモジュールを使用します。
 1. サンプルをダウンロードして解凍します。
 
     ```bash
-    curl https://learn.liferay.com/dxp/latest/en/liferay-internals/fundamentals/liferay-k8s2.zip -O
+    curl https://learn.liferay.com/dxp/latest/ja/liferay-internals/fundamentals/liferay-k8s2.zip -O
     ```
 
     ```bash

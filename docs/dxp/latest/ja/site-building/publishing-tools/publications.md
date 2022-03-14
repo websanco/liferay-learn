@@ -22,7 +22,7 @@ publications/reverting-changes.md
 
 さらに、パブリケーションはプロセスの透明性が高いため、公開時の競合をより簡単に特定して解決することができます。 また、完全な公開履歴を保持しているので、インスタンスへの変更を確認したり、元に戻したりするのに利用できます。
 
-開始するには、[Enabling Publications](./publications/enabling-publications.md)を参照してください。
+開始するには、 [パブリケーションの有効化](./publications/enabling-publications.md) を参照してください。
 
 ```{raw} html
 :file: ../../../landingpage_template.html

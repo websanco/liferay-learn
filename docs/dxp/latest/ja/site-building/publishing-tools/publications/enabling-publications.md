@@ -10,7 +10,7 @@ Staging and Publications cannot be enabled at the same time. If Staging is enabl
 
 1.  *グローバルメニュー*（![Global Menu](../../../images/icon-applications-menu.png)）に移動し、*[Publications]* の下にある *[設定]* をクリックします。
 
-    ![グローバルメニューで、[Publications]の下の[設定]をクリックします。](./enabling-publications/images/01.png)
+    ![グローバルメニューで、[Publications]の下の [設定]をクリックします。](./enabling-publications/images/01.png)
 
 2.  トグルスイッチを*[Yes]* に設定して、DXPインスタンスのパブリケーションを有効にします。
 
@@ -18,7 +18,7 @@ Staging and Publications cannot be enabled at the same time. If Staging is enabl
 
     または、*[保存して概要に移動]* をクリックすると、構成が保存され、[Publications]概要ページにリダイレクトされます。
 
-    ![トグルを[Yes]に設定し、[送信]または[保存して概要に移動]をクリックします。](./enabling-publications/images/02.png)
+    ![トグルを[Yes]に設定し、[送信]または [保存して概要に移動]をクリックします。](./enabling-publications/images/02.png)
 
 有効にすると、DXPインスタンスの任意のページからドロップダウンの[Publications]バーメニューにアクセスできます。 このメニューを使用して、新規パブリケーションを作成したり、作業するパブリケーションを選択したり、編集モードと本番環境モードを切り替えたり、選択したパブリケーションの変更を確認して即時にまたは後で公開したりできます。 個々のパブリケーションの作成、編集、および削除については、[パブリケーションの作成と管理](./creating-and-managing-publications.md)を参照してください。
 

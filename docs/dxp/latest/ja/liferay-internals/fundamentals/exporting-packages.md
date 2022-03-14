@@ -30,7 +30,7 @@ Bndは、モジュールのエクスポートされたパッケージを*置換�
 
 ## 追加情報
 
-* [Configuring Dependencies](./configuring-dependencies.md)
+* [依存関係の構成](./configuring-dependencies.md)
 * [セマンティックバージョニング](./semantic-versioning.md)
 * [Liferay Workspace](../../developing-applications/tooling/liferay-workspace/what-is-liferay-workspace.md)
 * [Blade CLI](../../developing-applications/tooling/blade-cli/generating-projects-with-blade-cli.md)

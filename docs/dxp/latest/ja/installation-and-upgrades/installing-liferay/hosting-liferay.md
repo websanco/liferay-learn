@@ -38,18 +38,18 @@ Liferay Tomcatバンドルは、LiferayがTomcatに事前インストールさ�
 バンドルを開始するには、[Installing a Liferay Tomcat Bundle](./installing-a-liferay-tomcat-bundle.md)を参照してください。
 
 ```{warning}
-DockerイメージとTomcatバンドルでは、Liferayはデフォルトで組み込みHSQLデータベースを使用するように構成されています。 デモ目的以外では、フル機能の [サポートされているRDBMS](https://help.liferay.com/hc/en-us/articles/360049238151) を使用することをお勧めします。 構成手順については、[Database Configurations](../reference/database-configurations.md)を参照してください。
+DockerイメージとTomcatバンドルでは、Liferayはデフォルトで組み込みHSQLデータベースを使用するように構成されています。 デモ目的以外では、フル機能の [サポートされているRDBMS](https://help.liferay.com/hc/ja/articles/360049238151) を使用することをお勧めします。 構成手順については、[Database Configurations](../reference/database-configurations.md)を参照してください。
 ```
 
 <a name="アプリケーションサーバーへのliferayのインストール" />
 
 ## アプリケーションサーバーへのLiferayのインストール
 
-Liferayは、 [サポートされている任意のアプリケーションサーバー](https://help.liferay.com/hc/en-us/articles/360049238151) にインストールできます。 これは通常、DevOpsおよび高可用性環境で使用する最も実用的なインストールタイプです。
+Liferayは、 [サポートされている任意のアプリケーションサーバー](https://help.liferay.com/hc/ja/articles/360049238151) にインストールできます。 これは通常、DevOpsおよび高可用性環境で使用する最も実用的なインストールタイプです。
 
 開始するには、
 
-1. [互換性マトリックス](https://help.liferay.com/hc/en-us/articles/360049238151) からサポートされているアプリケーションサーバーを選択します。
+1. [互換性マトリックス](https://help.liferay.com/hc/ja/articles/360049238151) からサポートされているアプリケーションサーバーを選択します。
 1. [アプリケーションサーバー](./installing_liferay_on_an_application_server.html) にLiferayをインストールするための手順に従います。
 
 <a name="次のステップ" />

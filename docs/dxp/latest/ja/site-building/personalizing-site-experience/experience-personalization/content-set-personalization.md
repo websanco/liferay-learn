@@ -32,6 +32,6 @@
 
 ## 関連情報
 
-  - [Content Page Personalization](./content-page-personalization.md)
+  - [コンテンツページのカスタマイズと管理](./content-page-personalization.md)
   - [Creating User Segments](../segmentation/creating-and-managing-user-segments.md)
-  - [Assigning Roles to User Segments](../../../users-and-permissions/roles-and-permissions/assigning-roles-to-user-segments.md)
+  - [ユーザーセグメントへのロールの割り当て](../../../users-and-permissions/roles-and-permissions/assigning-roles-to-user-segments.md)

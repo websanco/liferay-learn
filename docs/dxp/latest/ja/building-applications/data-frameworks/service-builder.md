@@ -50,7 +50,7 @@ DXP / Portalのバックエンドサービスにはサービスビルダーを�
 
 ***ローカルサービスの実装**（`*LocalServiceImpl.java`）：永続レイヤーを呼び出してデータエンティティを取得および保存する役割を担います。 ローカルサービスはビジネスロジックを含み、永続レイヤーにアクセスします。 これらは、同じJava仮想マシンで実行されているクライアントコードによって呼び出すことができます。
 
-***リモートサービスの実装**（`*ServiceImpl.java`）：`service.xml`がリモートサービス用に構成されている場合に生成されます。 リモートサービスには通常、権限チェックコードが含まれており、JVMの外部からアクセスできるようになっています。 サービスビルダーは、JSONまたはSOAPを介してリモートサービスを利用できるようにするコードを自動的に生成します。また、[RESTビルダー](../../headless-delivery/producing-apis-with-rest-builder/producing-apis-with-rest-builder.md)または [JAX-RS](https://help.liferay.com/hc/en-us/articles/360031902292-JAX-RS) を介して独自のリモートAPIを作成することもできます。
+***リモートサービスの実装**（`*ServiceImpl.java`）：`service.xml`がリモートサービス用に構成されている場合に生成されます。 リモートサービスには通常、権限チェックコードが含まれており、JVMの外部からアクセスできるようになっています。 サービスビルダーは、JSONまたはSOAPを介してリモートサービスを利用できるようにするコードを自動的に生成します。また、[RESTビルダー](../../headless-delivery/producing-apis-with-rest-builder/producing-apis-with-rest-builder.md)または [JAX-RS](https://help.liferay.com/hc/ja/articles/360031902292-JAX-RS) を介して独自のリモートAPIを作成することもできます。
 
 これらのクラスは、カスタムビジネスロジックを実装する場所です。 これらは、カスタマイズを目的としてサービスビルダーによって生成される唯一のクラスです。
 

@@ -5,8 +5,8 @@
 ナビゲーションメニューの使用を開始するには、次の操作を行います。
 
 1.  [ナビゲーションメニューの作成](#creating-navigation-menus)
-2.  [既存ページ](#assigning-pages-to-a-navigation-menu)、リンクの追加、サブメニューなどの項目をメニューに追加する
-3.  オプションで、サイトで特定の機能を提供するように[ナビゲーションメニュー](#marking-a-navigation-menu)にマークを付ける
+2.  [既存ページ](#assigning-pages-to-a-navigation-menu) 、リンクの追加、サブメニューなどの項目をメニューに追加する
+3.  オプションで、サイトで特定の機能を提供するように [ナビゲーションメニュー](#marking-a-navigation-menu) にマークを付ける
 4.  ナビゲーションメニューウィジェット（まだ存在しない場合）をページに追加して[設定する](./configuring-navigation-menus.md)
 
 たとえば、ナビゲーションメニューには、特定のページのすべての子ページを含めることができます。 親ページのナビゲーションメニューウィジェットを使用してメニューを表示できます。 これにより、選択した子ページのみを表示するナビゲーションが作成され、事実上ミニサイトが作成されます。
@@ -89,7 +89,7 @@ In DXP 7.3+, you can use Custom Fields to add more information to each item in y
 
     ![ナビゲーションメニューをプライマリとしてマークします。](./using-navigation-menus/images/07.png)
 
-ナビゲーションメニューのタイプが*[以下として設定する：]* フィールドに表示されます。 各タイプの詳細については、[Configuring Navigation Menus](./configuring-navigation-menus.md#navigation-menu)を参照してください。
+ナビゲーションメニューのタイプが*[以下として設定する：]* フィールドに表示されます。 各タイプの詳細については、 [Configuring Navigation Menus](./configuring-navigation-menus.md#navigation-menu) を参照してください。
 
 ## ナビゲーションメニューの削除
 
@@ -100,5 +100,5 @@ In DXP 7.3+, you can use Custom Fields to add more information to each item in y
 
 ## 追加情報
 
-  - [Managing Site Navigation](./managing-site-navigation.md)
-  - [Configuring Navigation Menus](./configuring-navigation-menus.md)
+  - [サイトナビゲーションの管理 (近日公開！)](./managing-site-navigation.md)
+  - [ナビゲーションメニューの設定](./configuring-navigation-menus.md)

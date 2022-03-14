@@ -6,4 +6,4 @@
 developer-guide/blog-api-basics.md
 ```
 
-* [Blog API Basics](./developer-guide/blog-api-basics.md)
+* [ブログAPIの基本](./developer-guide/blog-api-basics.md)

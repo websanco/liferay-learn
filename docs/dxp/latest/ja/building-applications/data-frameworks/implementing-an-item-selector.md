@@ -17,7 +17,7 @@
 1. サンプルモジュールをダウンロードします。
 
    ```bash
-   curl https://learn.liferay.com/dxp/latest/en/developing-applications/data-frameworks/liferay-f5d5.zip -O
+   curl https://learn.liferay.com/dxp/latest/ja/developing-applications/data-frameworks/liferay-f5d5.zip -O
    ```
 
    ```bash

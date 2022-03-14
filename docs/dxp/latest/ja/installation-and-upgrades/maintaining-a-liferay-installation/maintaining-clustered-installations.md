@@ -27,7 +27,7 @@
 | ポータルプロパティの変更                                   | &#10004; | &#10004; |
 | 構成管理ファイルによるシステム設定の変更                           | &#10004; | &#10004; |
 
-[<a name="one">1</a>] Blue-Greenを使用したアクティベーションキーの更新は、仮想クラスターアクティベーションキーでのみサポートされます。 詳しくは、 [Virtual Cluster Activation Key for Liferay DXP and Liferay Commerce](https://help.liferay.com/hc/en-us/articles/4402390080141) をご覧ください。
+[<a name="one">1</a>] Blue-Greenを使用したアクティベーションキーの更新は、仮想クラスターアクティベーションキーでのみサポートされます。 詳しくは、 [Virtual Cluster Activation Key for Liferay DXP and Liferay Commerce](https://help.liferay.com/hc/ja/articles/4402390080141) をご覧ください。
 
 [<a name="two">2</a>]下位互換性のないデータおよびデータスキーマの変更には、次のものがありますが、これらに限定されません。
 

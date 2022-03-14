@@ -13,4 +13,4 @@
 これらのトピックの詳細は、以下をお読みください。
 
   - [表示ページテンプレートの作成と管理](./creating-and-managing-display-page-templates.md)
-  - [Publishing Content With Display Pages](./publishing-content-with-display-pages.md)
+  - [表示ページによるコンテンツの公開](./publishing-content-with-display-pages.md)

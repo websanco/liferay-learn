@@ -83,7 +83,7 @@ Liferay DXP/Portal 7.4以降を使用している場合は、[Overriding Global 
 1. `liferay-e6u7.zip`をダウンロードして解凍します。
 
     ```bash
-    curl https://learn.liferay.com/dxp/latest/en/liferay-internals/extending-liferay/liferay-e6u7.zip -O
+    curl https://learn.liferay.com/dxp/latest/ja/liferay-internals/extending-liferay/liferay-e6u7.zip -O
     ```
 
     ```bash

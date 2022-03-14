@@ -9,13 +9,13 @@ Liferay DXP 7.3以降。 以前のLiferay DXPのバージョンについては�
   - [編集ツールバー](#editing-toolbar)
   - [編集サイドバー](#editing-sidebar)
 
-![[編集する]をクリックして、コンテンツページの編集ツールバーとサイドバーにアクセスします。](./editing-content-pages/images/01.png)
+![ [編集する]をクリックして、コンテンツページの編集ツールバーとサイドバーにアクセスします。](./editing-content-pages/images/01.png)
 
 ## 編集ツールバー
 
 コンテンツページのツールバーには、独自のユーザーエクスペリエンスの作成、ローカライズされた翻訳の設定、編集モードの切り替えなどのツールが含まれています。
 
-![[編集する]をクリックして、コンテンツページのツールバーにアクセスします。](./editing-content-pages/images/02.png)
+![ [編集する]をクリックして、コンテンツページのツールバーにアクセスします。](./editing-content-pages/images/02.png)
 
 ### エクスペリエンス
 
@@ -35,7 +35,7 @@ Liferay DXP 7.3以降。 以前のLiferay DXPのバージョンについては�
 
 ### 編集モードセレクター
 
-編集モードのドロップダウンメニューをクリックして、*コンテント編集*モードと*ページデザイン*モードから選択します。 各モードによって、編集サイドバーメニューでアクセスできるパネルが決まります。 [コンテント編集]では、[選択](#selection)（![Selection](../../../images/icon-pages-tree.png)）、[コンテンツ](#contents) （![Contents](../../../images/icon-list-ul.png)）、および[コメント](#comments)（![Comments](../../../images/icon-comments-w.png)）パネルにアクセスできます。 ページデザインでは、[フラグメントとウィジェット](#fragments-and-widgets)（![Fragments and Widgets](../../../images/icon-cards2.png)）や [ページデザインオプション](#page-design-options)（![Page Design Options](../../../images/icon-format.png)）にもアクセスできます。
+編集モードのドロップダウンメニューをクリックして、*コンテント編集*モードと*ページデザイン*モードから選択します。 各モードによって、編集サイドバーメニューでアクセスできるパネルが決まります。 [コンテント編集]では、 [選択](#selection) （![Selection](../../../images/icon-pages-tree.png)）、 [コンテンツ](#contents) （![Contents](../../../images/icon-list-ul.png)）、および [コメント](#comments) （![Comments](../../../images/icon-comments-w.png)）パネルにアクセスできます。 ページデザインでは、 [フラグメントとウィジェット](#fragments-and-widgets) （![Fragments and Widgets](../../../images/icon-cards2.png)）や [ページデザインオプション](#page-design-options) （![Page Design Options](../../../images/icon-format.png)）にもアクセスできます。
 
 ### プレビューと公開
 
@@ -51,15 +51,15 @@ Liferay DXP 7.3以降。 以前のLiferay DXPのバージョンについては�
   - ![ページデザインオプション](../../../images/icon-format.png) - [ページデザインオプション](#page-design-options)
   - ![コメント](../../../images/icon-comments-w.png) - [コメント](#comments)
 
-![[編集する]をクリックして、コンテンツページのサイドバーメニューにアクセスします。](editing-content-pages/images/03.png)
+![ [編集する]をクリックして、コンテンツページのサイドバーメニューにアクセスします。](editing-content-pages/images/03.png)
 
 ### フラグメントとウィジェット
 
 フラグメントとウィジェットサイドバーパネル（ ![Fragments and Widgets icon](../../../images/icon-cards2.png) ）では、ページを作成するために、すぐに使用できるページ要素とカスタムページ要素の両方にアクセスできます。
 
-  - **フラグメント**：フラグメントは、コンテンツページの主要な構成要素として機能する、拡張可能で再利用可能なドラッグアンドドロップ要素です。 例としては、レイアウト要素、ビデオ、テキストオーバーレイ付きのバナー画像などがあります。 DXPのすぐに使えるフラグメントの詳細は[フラグメントの使用](./using-fragments.md) を、独自のフラグメントを作成する方法については[Developing Fragments](../../developer-guide/developing-page-fragments/developing-fragments-intro.md)を参照してください。
+  - **フラグメント**：フラグメントは、コンテンツページの主要な構成要素として機能する、拡張可能で再利用可能なドラッグアンドドロップ要素です。 例としては、レイアウト要素、ビデオ、テキストオーバーレイ付きのバナー画像などがあります。 DXPのすぐに使えるフラグメントの詳細は[フラグメントの使用](./using-fragments.md) を、独自のフラグメントを作成する方法については [フラグメントの開発](../../developer-guide/developing-page-fragments/developing-fragments-intro.md) を参照してください。
 
-  - **ウィジェット**：他のDXPコンテキストと同様に、ウィジェットはページに動的機能を追加する[アプリケーション](../../../building-applications.html)です。 例としては、ブログ、掲示板、カレンダーなどがあります。 詳細は、[Using Widgets on Content Pages](./using-widgets-on-a-content-page.md)を参照してください。
+  - **ウィジェット**：他のDXPコンテキストと同様に、ウィジェットはページに動的機能を追加する [アプリケーション](../../../building-applications.html) です。 例としては、ブログ、掲示板、カレンダーなどがあります。 詳細は、[Using Widgets on Content Pages](./using-widgets-on-a-content-page.md)を参照してください。
 
 ### 選択
 
@@ -73,11 +73,11 @@ Liferay DXP 7.3以降。 以前のLiferay DXPのバージョンについては�
 
 ### コンテンツ
 
-ここでは、ページ上のすべてのWebコンテンツを表示、編集、および管理できます。 ウィジェットに表示されるコンテンツやコンテンツフィールドにマップされたコンテンツなどがあります。 詳細は、[Managing Web Content on Content Pages](./managing-web-content-on-content-pages.md)を参照してください。
+ここでは、ページ上のすべてのWebコンテンツを表示、編集、および管理できます。 ウィジェットに表示されるコンテンツやコンテンツフィールドにマップされたコンテンツなどがあります。 詳細は、 [コンテンツページでのWebコンテンツの管理](./managing-web-content-on-content-pages.md) を参照してください。
 
 ### ページデザインオプション
 
-*ルックアンドフィール*アイコン（![Look and Feel](../../../images/icon-format.png)）をクリックして、テーマを変更したり、ページの他のオプションを管理したりします。 これらのオプションの詳細は、[Page Configuration UI Reference](../page-settings/page-configuration-ui-reference.md#look-and-feel)を参照してください。
+*ルックアンドフィール*アイコン（![Look and Feel](../../../images/icon-format.png)）をクリックして、テーマを変更したり、ページの他のオプションを管理したりします。 これらのオプションの詳細は、 [Page Configuration UI Reference](../page-settings/page-configuration-ui-reference.md#look-and-feel) を参照してください。
 
 ### コメント
 
@@ -141,7 +141,7 @@ Liferay DXP 7.3以降。 以前のLiferay DXPのバージョンについては�
 
 [Widgets]セクションは、 	ウィジェットページの*[Add]* メニューと同様に機能します。 使用可能なウィジェットの完全なリストが表示され、それらをページに追加できます。
 
-![[Widgets]セクションには、レイアウト内に追加できるウィジェットのリストが表示されます。](./editing-content-pages/images/24.png)
+![ [Widgets]セクションには、レイアウト内に追加できるウィジェットのリストが表示されます。](./editing-content-pages/images/24.png)
 
 主な違いは、コンテンツページのウィジェットで使用できるのは主要な設定オプションのみという点です。 *ルックアンドフィール*のような他の様々な設定は、ウィジェットページのウィジェットに対してのみ利用できます。
 
@@ -149,13 +149,13 @@ Liferay DXP 7.3以降。 以前のLiferay DXPのバージョンについては�
 
 [ページ構造]には、ページ上の各フラグメント内のすべてのフラグメントとフィールドの概要ビューが表示されます。
 
-![[ページ構造]では、ページの階層が表示されます。](./editing-content-pages/images/25.png)
+![ [ページ構造]では、ページの階層が表示されます。](./editing-content-pages/images/25.png)
 
 ページ構造でフィールドを選択すると、ページ上でそのフィールドが強調表示されます。 大きくて複雑なページでは、何かを見つける場合に役立ちます。
 
 ### ルックアンドフィール
 
-*ページデザインオプション*アイコン（![Look and Feel](../../../images/icon-look-and-feel.png)）をクリックして、テーマを変更したり、ページの他のオプションを管理したりします。 これらのオプションについては、[Creating Pages](../../creating_pages.rst)で詳しく説明しています。
+*ページデザインオプション*アイコン（![Look and Feel](../../../images/icon-look-and-feel.png)）をクリックして、テーマを変更したり、ページの他のオプションを管理したりします。 これらのオプションについては、 [Creating Pages](../../creating_pages.rst) で詳しく説明しています。
 
 ### コメント
 
@@ -177,7 +177,7 @@ Liferay DXP 7.3以降。 以前のLiferay DXPのバージョンについては�
 
 ### タイトルバー
 
-タイトルバーは、メインメニューに戻るナビゲーション、ページ設定へのリンク、および他のページを検索する機能を提供します。 タイトルバーについては、[Creating Pages](../../creating_pages.rst)で詳しく説明しています。
+タイトルバーは、メインメニューに戻るナビゲーション、ページ設定へのリンク、および他のページを検索する機能を提供します。 タイトルバーについては、 [Creating Pages](../../creating_pages.rst) で詳しく説明しています。
 
 ![タイトルバーには、いくつかのツールが組み込まれています。](./editing-content-pages/images/28.png)
 

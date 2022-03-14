@@ -23,7 +23,7 @@
 1. サンプルをダウンロードして解凍します。
 
     ```bash
-    curl https://learn.liferay.com/dxp/latest/en/developing-applications/core-frameworks/message-bus/liferay-m4q7.zip -O
+    curl https://learn.liferay.com/dxp/latest/ja/developing-applications/core-frameworks/message-bus/liferay-m4q7.zip -O
     ```
 
     ```bash

@@ -9,7 +9,7 @@
 
     パッケージを含むモジュールを見つけたら、それを[デプロイ](../../../system-administration/installing-and-managing-apps/getting-started/installing-and-managing-apps.md)し、[それに`compileOnly`依存関係を追加](./specifying-dependencies.md)します。 パッケージのモジュールがない場合は、次の手順に進みます。
 
-1. 使用しているライブラリパッケージをLiferayがすでにエクスポートしているかどうかを確認します。 Liferayがそれらをエクスポートしている場合は、[Exported Third Party Packages](../../reference/exported-third-party-packages.md)の指示に従って依存関係を調整してください。
+1. 使用しているライブラリパッケージをLiferayがすでにエクスポートしているかどうかを確認します。 Liferayがそれらをエクスポートしている場合は、 [エクスポートされたサードパーティパッケージ](../../reference/exported-third-party-packages.md) の指示に従って依存関係を調整してください。
 
 1. 非OSGi JARを`compileInclude`依存関係として追加します。
 

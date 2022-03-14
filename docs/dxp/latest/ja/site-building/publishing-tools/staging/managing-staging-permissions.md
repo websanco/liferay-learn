@@ -54,7 +54,7 @@
 
 2.  設定するバリエーションの*アクション*ボタン（ ![Actions button](../../../images/icon-actions.png) ）をクリックし、*[権限設定]* を選択します。
 
-    ![[権限設定]を選択します。](./managing-staging-permissions/images/02.png)
+    ![ [権限設定]を選択します。](./managing-staging-permissions/images/02.png)
 
 3.  チェックボックスを使用して、選択したバリエーションのユーザー権限を設定し、*[保存]* をクリックします。
 
@@ -62,6 +62,6 @@
 
 ## 追加情報
 
-  - [Staging Overview](../staging.md)
-  - [Page Versioning](./page-versioning.md)
+  - [ステージングの概要](../staging.md)
+  - [ページバージョニング](./page-versioning.md)
   - [Staging UI Reference](./staging-ui-reference.md)

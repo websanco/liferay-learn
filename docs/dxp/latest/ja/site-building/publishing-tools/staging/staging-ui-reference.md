@@ -16,9 +16,9 @@
 
 ステージングバーを介して、ステージング環境のウィジェットページの次のオプションにアクセスすることもできます。
 
-  - **サイトページバリエーション**：ドロップダウンメニューを使用して、ステージングされたサイトのページセットのバリエーションを切り替えることができます。 ステージングバーの*アクション*ボタン（![Actions button](../../../images/icon-actions.png)）をクリックし、*[サイトページバリエーション]* を選択して、ページセットのバリエーションを管理および作成することもできます。 詳細は、[Page Versioning](./page-versioning.md)を参照してください。
+  - **サイトページバリエーション**：ドロップダウンメニューを使用して、ステージングされたサイトのページセットのバリエーションを切り替えることができます。 ステージングバーの*アクション*ボタン（![Actions button](../../../images/icon-actions.png)）をクリックし、*[サイトページバリエーション]* を選択して、ページセットのバリエーションを管理および作成することもできます。 詳細は、 [ページバージョニング](./page-versioning.md) を参照してください。
 
-  - **ページバリエーション**：ドロップダウンメニューを使用して、ステージングされたサイトの単一ページのバリエーションを切り替えることができます。 ステージングバーの*アクション*ボタン（![Actions button](../../../images/icon-actions.png)）をクリックし、*[ページバリエーション]* を選択して、ページバリエーションを管理および作成することもできます。 詳細は、[Page Versioning](./page-versioning.md)を参照してください。
+  - **ページバリエーション**：ドロップダウンメニューを使用して、ステージングされたサイトの単一ページのバリエーションを切り替えることができます。 ステージングバーの*アクション*ボタン（![Actions button](../../../images/icon-actions.png)）をクリックし、*[ページバリエーション]* を選択して、ページバリエーションを管理および作成することもできます。 詳細は、 [ページバージョニング](./page-versioning.md) を参照してください。
 
   - **[Undo/Redo]**：ステージングバーの*アクション*ボタン（![Actions button](../../../images/icon-actions.png)）をクリックし、*[Undo*/*Redo]* を選択すると、ページへの最近の変更を元に戻すか、やり直すことができます。 ページを*[Ready for Publish Process]* とマークした後は、最近の変更を元に戻したり、やり直したりすることはできません。
 
@@ -30,7 +30,7 @@
 
 *[本番環境に公開]* をクリックすると、公開プロセスを設定するための追加オプションを含むモーダルウィンドウが表示されます。 *[Simple]* または*[詳細設定]* 設定を使用して公開できます。
 
-![[本番環境に公開]をクリックして、公開モーダルウィンドウにアクセスします。](./site-staging-ui-reference/images/03.png)
+![ [本番環境に公開]をクリックして、公開モーダルウィンドウにアクセスします。](./site-staging-ui-reference/images/03.png)
 
 ## シンプルな公開
 
@@ -46,7 +46,7 @@ This displays the number of Page deletions tracked by the Staging framework. Kee
 
 準備ができたら、*[本番環境に公開]* をクリックして公開を開始します。
 
-![[本番環境に公開]をクリックして、公開を開始します。](./site-staging-ui-reference/images/04.png)
+![ [本番環境に公開]をクリックして、公開を開始します。](./site-staging-ui-reference/images/04.png)
 
 ## 高度な公開
 
@@ -80,9 +80,9 @@ This displays the number of Page deletions tracked by the Staging framework. Kee
 
 ![変更が公開されたときにページとウィジェットの権限を含めるかどうかを選択します。](./site-staging-ui-reference/images/10.png)
 
-ページまたはコンテンツを公開するたびに詳細オプションを手動で設定する代わりに、ステージング設定を[*公開テンプレート*](#publish-templates)として保存して、今後も使用できるようにすることができます。 公開プロセス用に保存されたテンプレートを表示および選択するには、*[公開テンプレート]* タブをクリックします。
+ページまたはコンテンツを公開するたびに詳細オプションを手動で設定する代わりに、ステージング設定を [*公開テンプレート*](#publish-templates) として保存して、今後も使用できるようにすることができます。 公開プロセス用に保存されたテンプレートを表示および選択するには、*[公開テンプレート]* タブをクリックします。
 
-![公開プロセス用に保存されたテンプレートを表示および選択するには、[公開テンプレート]タブをクリックします。](./site-staging-ui-reference/images/11.png)
+![公開プロセス用に保存されたテンプレートを表示および選択するには、 [公開テンプレート]タブをクリックします。](./site-staging-ui-reference/images/11.png)
 
 準備ができたら、*[本番環境に公開]* をクリックして公開を開始します。
 
@@ -116,7 +116,7 @@ This displays the number of Page deletions tracked by the Staging framework. Kee
 
 ![頻繁に公開する設定のテンプレートを作成および管理します。](./site-staging-ui-reference/images/16.png)
 
-ステージングバーの*[本番環境に公開]* ボタンを使用してページまたはコンテンツを公開するときにテンプレートを使用することもできます。 詳細は、[Advanced Publishing](#advanced-publishing)を参照してください。
+ステージングバーの*[本番環境に公開]* ボタンを使用してページまたはコンテンツを公開するときにテンプレートを使用することもできます。 詳細は、 [Advanced Publishing](#advanced-publishing) を参照してください。
 
 ### ステージング設定
 
@@ -128,7 +128,7 @@ This displays the number of Page deletions tracked by the Staging framework. Kee
 
 ## 追加情報
 
-  - [Staging Overview](../staging.md)
+  - [ステージングの概要](../staging.md)
   - [公開プロセスを理解する](./understanding-the-publishing-process.md)
-  - [Page Versioning](./page-versioning.md)
+  - [ページバージョニング](./page-versioning.md)
   - [ステージングでのデータとコンテンツタイプの管理](./managing-data-and-content-types-in-staging.md)

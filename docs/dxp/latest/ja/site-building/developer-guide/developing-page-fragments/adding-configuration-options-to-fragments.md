@@ -21,10 +21,10 @@
     docker run -it -p 8080:8080 [$LIFERAY_LEARN_DXP_DOCKER_IMAGE$]
     ```
 
-2.  [サンプルのフラグメントコレクション](https://learn.liferay.com/dxp/7.x/en/site-building/developer-guide/developing-page-fragments/liferay-c7f8.zip)をダウンロードして解凍します。
+2.  [サンプルのフラグメントコレクション](https://learn.liferay.com/dxp/7.x/ja/site-building/developer-guide/developing-page-fragments/liferay-c7f8.zip) をダウンロードして解凍します。
 
     ``` bash
-    curl https://learn.liferay.com/dxp/7.x/en/site-building/developer-guide/developing-page-fragments/liferay-c7f8.zip -O
+    curl https://learn.liferay.com/dxp/7.x/ja/site-building/developer-guide/developing-page-fragments/liferay-c7f8.zip -O
     ```
 
     ``` bash
@@ -72,13 +72,13 @@
 
 6.  ホームページに移動し、(![Edit icon](../../../images/icon-edit-pencil.png)) アイコンをクリックしてコンテンツページを編集します。
 
-7.  [フラグメントパネル](../../creating-pages/building-and-managing-content-pages/editing-content-pages.md#fragments)の*Configurable Marketing Collection*見出しを展開し、*Configurable Marketing Card*フラグメントをページにドラッグします。
+7.  [フラグメントパネル](../../creating-pages/building-and-managing-content-pages/editing-content-pages.md#fragments) の*Configurable Marketing Collection*見出しを展開し、*Configurable Marketing Card*フラグメントをページにドラッグします。
 
 8.  [Configurable Marketing Card]を選択します。 表示されるコンテキスト メニューの（![Gear icon](../../../images/icon-control-menu-gear.png)) アイコンをクリックして、フラグメント設定メニューを開きます。 ここから、テキスト スタイルの構成オプションを選択して、テキストを暗い色から明るい色に変更できます。
 
 9.  [コンテンツ ページ](../../creating-pages/understanding-pages/understanding-pages.md#content-pages) (デフォルトのホームページなど) に移動し、(![Edit icon](../../../images/icon-edit-pencil.png)) アイコンをクリックしてページを編集します。
 
-10. [フラグメントとウィジェットパネル](../../creating-pages/building-and-managing-content-pages/content-pages-overview.md#fragments)の*C7F8コレクション*見出しを展開し、*C7F8カード*フラグメントをページにドラッグします。
+10. [フラグメントとウィジェットパネル](../../creating-pages/building-and-managing-content-pages/content-pages-overview.md#fragments) の*C7F8コレクション*見出しを展開し、*C7F8カード*フラグメントをページにドラッグします。
 
 11. ページで*[C7F8 カード]* を選択します。 右側に選択パネルが表示されます。 *[一般]* タブで、コンポーネントのテキスト スタイルを「暗い」または「明るい」に設定します。
 
@@ -198,7 +198,7 @@
 
 悪意のあるコードがテキストフィールドに挿入され、他のフラグメントユーザーに大損害を与える可能性があります。 クロスサイトスクリプティング（XSS）攻撃から保護するには、フラグメントテキスト値をエスケープする必要があります。
 
-一般的なケースでは、HTML `escape()`メソッドを使用できます。 詳細は、[`HtmlUtil`](https://docs.liferay.com/dxp/portal/7.3-latest/javadocs/portal-kernel/com/liferay/portal/kernel/util/HtmlUtil.html)クラスを参照してください。
+一般的なケースでは、HTML `escape()`メソッドを使用できます。 詳細は、 [`HtmlUtil`](https://docs.liferay.com/dxp/portal/7.3-latest/javadocs/portal-kernel/com/liferay/portal/kernel/util/HtmlUtil.html) クラスを参照してください。
 
 ``` html
 <div class="fragment_38816">
@@ -279,4 +279,4 @@ function (fragmentElement, configuration) {
 
   - [Auto-deploying Fragments](./auto-deploying-fragments.md)
   - [Including Default Resources with Fragments](./including-default-resources-with-fragments.md)
-  - [Fragment Configuration Types Reference](../reference/fragments/fragment-configuration-types-reference.md)
+  - [フラグメント設定タイプのリファレンス](../reference/fragments/fragment-configuration-types-reference.md)

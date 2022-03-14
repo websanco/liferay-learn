@@ -18,7 +18,7 @@
 
 ### Liferay FontAwesomeはデフォルトで含まれなくなりました
 - **日付：** 2019-Aug-21
-- **JIRAチケット：**[LPS-100021](https://issues.liferay.com/browse/LPS-100021)
+- **JIRAチケット：** [LPS-100021](https://issues.liferay.com/browse/LPS-100021)
 
 #### 何が変わりましたか？
 
@@ -58,7 +58,7 @@ Font Awesome、Glyphicon、およびカスタムLiferayアイコンのアイコ�
 
 ### liferay.frontend.ProgressBarを削除
 - **日付：** 2019-Aug-28
-- **JIRAチケット：**[LPS-100122](https://issues.liferay.com/browse/LPS-100122)
+- **JIRAチケット：** [LPS-100122](https://issues.liferay.com/browse/LPS-100122)
 
 #### 何が変わりましたか？
 
@@ -80,7 +80,7 @@ Font Awesome、Glyphicon、およびカスタムLiferayアイコンのアイコ�
 
 ### AssetCategoryのツリーパスが左右のカテゴリーIDに置き換わりました
 - **日付：** 2019年08月10日
-- **JIRAチケット：**[LPS-102671](https://issues.liferay.com/browse/LPS-102671)
+- **JIRAチケット：** [LPS-102671](https://issues.liferay.com/browse/LPS-102671)
 
 #### 何が変わりましたか？
 
@@ -155,7 +155,7 @@ else {
 
 ### liferay.frontend.Sliderを削除
 - **日付：** 2019年10月10日
-- **JIRAチケット：**[LPS-100124](https://issues.liferay.com/browse/LPS-100124)
+- **JIRAチケット：** [LPS-100124](https://issues.liferay.com/browse/LPS-100124)
 
 #### 何が変わりましたか？
 
@@ -177,7 +177,7 @@ else {
 
 ### com.liferay.asset.taglib.servlet.taglib.soy.AssetTagsSelectorTagを削除
 - **日付：** 2019-Oct-15
-- **JIRAチケット：**[LPS-100144](https://issues.liferay.com/browse/LPS-100144)
+- **JIRAチケット：** [LPS-100144](https://issues.liferay.com/browse/LPS-100144)
 
 #### 何が変わりましたか？
 
@@ -199,7 +199,7 @@ Javaクラス`com.liferay.asset.taglib.servlet.taglib.soy.AssetTagsSelectorTag`�
 
 ### 削除されたポータルプロパティuser.groups.copy.layouts.to.user.personal.site
 - **日付：** 2019年12月26日
-- **JIRAチケット：**[LPS-106339](https://issues.liferay.com/browse/LPS-106339)
+- **JIRAチケット：** [LPS-106339](https://issues.liferay.com/browse/LPS-106339)
 
 #### 何が変わりましたか？
 
@@ -221,7 +221,7 @@ Javaクラス`com.liferay.asset.taglib.servlet.taglib.soy.AssetTagsSelectorTag`�
 
 ### EXTプラグインの自動デプロイのサポートを削除
 - **日付：** 2019年12月31日
-- **JIRAチケット：**[LPS-106008](https://issues.liferay.com/browse/LPS-106008)
+- **JIRAチケット：** [LPS-106008](https://issues.liferay.com/browse/LPS-106008)
 
 #### 何が変わりましたか？
 
@@ -243,7 +243,7 @@ Auto Deployerを使用して（ `liferay-home/deploy folder`介して）EXTプ�
 
 ### 置き換えられたOSGi構成プロパティーautoUpgrade
 - **日付：** 2020-Jan-03
-- **JIRAチケット：**[LPS-102842](https://issues.liferay.com/browse/LPS-102842)
+- **JIRAチケット：** [LPS-102842](https://issues.liferay.com/browse/LPS-102842)
 
 #### 何が変わりましたか？
 
@@ -271,7 +271,7 @@ Auto Deployerを使用して（ `liferay-home/deploy folder`介して）EXTプ�
 
 ### 削除されたキャッシュブートストラップ機能
 - **日付：** 2020-Jan-8
-- **JIRAチケット：**[LPS-96563](https://issues.liferay.com/browse/LPS-96563)
+- **JIRAチケット：** [LPS-96563](https://issues.liferay.com/browse/LPS-96563)
 
 #### 何が変わりましたか？
 
@@ -297,7 +297,7 @@ Auto Deployerを使用して（ `liferay-home/deploy folder`介して）EXTプ�
 
 ### liferay-frontend：cards-treeviewタグを削除
 - **日付：** 2020-Jan-10
-- **JIRAチケット：**[LPS-106899](https://issues.liferay.com/browse/LPS-106899)
+- **JIRAチケット：** [LPS-106899](https://issues.liferay.com/browse/LPS-106899)
 
 #### 何が変わりましたか？
 
@@ -319,7 +319,7 @@ Auto Deployerを使用して（ `liferay-home/deploy folder`介して）EXTプ�
 
 ### liferay-frontend:contextual-sidebarタグを削除
 - **日付：** 2020-Jan-10
-- **JIRAチケット：**[LPS-100146](https://issues.liferay.com/browse/LPS-100146)
+- **JIRAチケット：** [LPS-100146](https://issues.liferay.com/browse/LPS-100146)
 
 #### 何が変わりましたか？
 
@@ -341,7 +341,7 @@ Auto Deployerを使用して（ `liferay-home/deploy folder`介して）EXTプ�
 
 ### Portal Vulcan APIのアクションの追加メソッドを削除
 - **日付：** 2020-Jan-22
-- **JIRAチケット：**[LPS-98387](https://issues.liferay.com/browse/LPS-98387)
+- **JIRAチケット：** [LPS-98387](https://issues.liferay.com/browse/LPS-98387)
 
 #### 何が変わりましたか？
 
@@ -363,7 +363,7 @@ Auto Deployerを使用して（ `liferay-home/deploy folder`介して）EXTプ�
 
 ### 変更されたコントロールメニューとプロダクトメニューの配置
 - **日付：** 2020年2月4日
-- **JIRAチケット：**[LPS-107487](https://issues.liferay.com/browse/LPS-107487)
+- **JIRAチケット：** [LPS-107487](https://issues.liferay.com/browse/LPS-107487)
 
 #### 何が変わりましたか？
 
@@ -426,7 +426,7 @@ Auto Deployerを使用して（ `liferay-home/deploy folder`介して）EXTプ�
 
 ### jQueryはデフォルトで含まれなくなりました
 - **日付：** 2020年2月4日
-- **JIRAチケット：**[LPS-95726](https://issues.liferay.com/browse/LPS-95726)
+- **JIRAチケット：** [LPS-95726](https://issues.liferay.com/browse/LPS-95726)
 
 #### 何が変わりましたか？
 
@@ -450,7 +450,7 @@ Auto Deployerを使用して（ `liferay-home/deploy folder`介して）EXTプ�
 
 ### サーバー側の並列レンダリングはサポートされなくなりました
 - **日付：** 2020-Mar-16
-- **JIRAチケット：**[LPS-110359](https://issues.liferay.com/browse/LPS-110359)
+- **JIRAチケット：** [LPS-110359](https://issues.liferay.com/browse/LPS-110359)
 
 #### 何が変わりましたか？
 
@@ -472,7 +472,7 @@ Auto Deployerを使用して（ `liferay-home/deploy folder`介して）EXTプ�
 
 ### ContentField値のプロパティ名をcontentFieldValueに変更
 - **日付：** 2020-Mar-18
-- **JIRAチケット：**[LPS-106886](https://issues.liferay.com/browse/LPS-106886)
+- **JIRAチケット：** [LPS-106886](https://issues.liferay.com/browse/LPS-106886)
 
 #### 何が変わりましたか？
 
@@ -494,7 +494,7 @@ RESTクライアントでプロパティ名を`contentFieldValue`に変更しま
 
 ### liferay-editor-image-uploaderプラグインを削除しました
 - **日付：** 2020-Mar-27
-- **JIRAチケット：**[LPS-110734](https://issues.liferay.com/browse/LPS-110734)
+- **JIRAチケット：** [LPS-110734](https://issues.liferay.com/browse/LPS-110734)
 
 ### 何が変わりましたか？
 
@@ -516,7 +516,7 @@ RESTクライアントでプロパティ名を`contentFieldValue`に変更しま
 
 ### TinyMCEエディターはデフォルトでバンドルされなくなりました
 - **日付：** 2020-Mar-27
-- **JIRAチケット：**[LPS-110733](https://issues.liferay.com/browse/LPS-110733)
+- **JIRAチケット：** [LPS-110733](https://issues.liferay.com/browse/LPS-110733)
 
 ### 何が変わりましたか？
 
@@ -544,7 +544,7 @@ TinyMCEを使用するようにLiferayポータルを構成している場合は
 
 ### Simple Editorはデフォルトでバンドルされなくなりました
 - **日付：** 2020-Mar-27
-- **JIRAチケット：**[LPS-110734](https://issues.liferay.com/browse/LPS-110734)
+- **JIRAチケット：** [LPS-110734](https://issues.liferay.com/browse/LPS-110734)
 
 ### 何が変わりましたか？
 
@@ -572,7 +572,7 @@ Simplerayを使用するようにLiferayポータルを構成している場合�
 
 ### asset.vocabulary.defaultが言語キーを保持するようになりました
 - **日付：** 2020-Apr-28
-- **JIRAチケット：**[LPS-112334](https://issues.liferay.com/browse/LPS-112334)
+- **JIRAチケット：** [LPS-112334](https://issues.liferay.com/browse/LPS-112334)
 
 ### 何が変わりましたか？
 
@@ -594,7 +594,7 @@ Simplerayを使用するようにLiferayポータルを構成している場合�
 
 ### Liferay.Pollerがデフォルトで初期化されなくなりました
 - **日付：** 2020年5月19日
-- **JIRAチケット：**[LPS-112942](https://issues.liferay.com/browse/LPS-112942)
+- **JIRAチケット：** [LPS-112942](https://issues.liferay.com/browse/LPS-112942)
 
 #### 何が変わりましたか？
 
@@ -632,7 +632,7 @@ Simplerayを使用するようにLiferayポータルを構成している場合�
 
 ### ContentTransformerListenerはデフォルトで無効になっています
 - **日付：** 2020年5月25日
-- **JIRAチケット：**[LPS-114239](https://issues.liferay.com/browse/LPS-114239)
+- **JIRAチケット：** [LPS-114239](https://issues.liferay.com/browse/LPS-114239)
 
 #### 何が変わりましたか？
 
@@ -654,7 +654,7 @@ Simplerayを使用するようにLiferayポータルを構成している場合�
 
 ### Liferay.BrowserSelectors.runが呼び出されなくなりました
 - **日付：** 2020年5月26日
-- **JIRAチケット：**[LPS-112983](https://issues.liferay.com/browse/LPS-112983)
+- **JIRAチケット：** [LPS-112983](https://issues.liferay.com/browse/LPS-112983)
 
 #### 何が変わりましたか？
 
@@ -713,7 +713,7 @@ Simplerayを使用するようにLiferayポータルを構成している場合�
 
 ### ブロッキングキャッシュのサポートを削除
 - **日付：** 2020-Jun-17
-- **JIRAチケット：**[LPS-115687](https://issues.liferay.com/browse/LPS-115687)
+- **JIRAチケット：** [LPS-115687](https://issues.liferay.com/browse/LPS-115687)
 
 #### 何が変わりましたか？
 
@@ -739,7 +739,7 @@ Simplerayを使用するようにLiferayポータルを構成している場合�
 
 ### 各エンティティモデルのキャッシュプロパティ設定のサポートを削除
 - **日付：** 2020-Jun-24
-- **JIRAチケット：**[LPS-116049](https://issues.liferay.com/browse/LPS-116049)
+- **JIRAチケット：** [LPS-116049](https://issues.liferay.com/browse/LPS-116049)
 
 #### 何が変わりましたか？
 
@@ -771,7 +771,7 @@ Simplerayを使用するようにLiferayポータルを構成している場合�
 
 ### ポータルプロパティの名前を"module.framework.properties.felix.fileinstall.\ **"から"module.framework.properties.file.install.\** "に変更
 - **日付：** 2020年7月13日
-- **JIRAチケット：**[LPS-115016](https://issues.liferay.com/browse/LPS-115016)
+- **JIRAチケット：** [LPS-115016](https://issues.liferay.com/browse/LPS-115016)
 
 #### 何が変わりましたか？
 
@@ -793,7 +793,7 @@ Simplerayを使用するようにLiferayポータルを構成している場合�
 
 ### Elasticsearchの動的データマッピングフィールドをネストされたドキュメントに変更
 - **日付：** 2020年7月27日
-- **JIRAチケット：**[LPS-103224](https://issues.liferay.com/browse/LPS-103224)
+- **JIRAチケット：** [LPS-103224](https://issues.liferay.com/browse/LPS-103224)
 
 #### 何が変わりましたか？
 
@@ -831,7 +831,7 @@ Liferayコードにはいくつかの例があります。 たとえば、 [DDMI
 
 ### Lexiconアイコンパスの移動
 - **日付：** 2020年8月17日
-- **JIRAチケット：**[LPS-115812](https://issues.liferay.com/browse/LPS-115812)
+- **JIRAチケット：** [LPS-115812](https://issues.liferay.com/browse/LPS-115812)
 
 ### 何が変わりましたか？
 
@@ -853,7 +853,7 @@ Lexiconアイコンのパスが`themeDisplay.getPathThemeImages() + "/lexicon/ic
 
 ### DDM永続性クラスからclassNameId関連のメソッドを削除
 - **日付：** 2020-Aug-18
-- **JIRAチケット：**[LPS-108525](https://issues.liferay.com/browse/LPS-108525)
+- **JIRAチケット：** [LPS-108525](https://issues.liferay.com/browse/LPS-108525)
 
 ### 何が変わりましたか？
 
@@ -882,7 +882,7 @@ Lexiconアイコンのパスが`themeDisplay.getPathThemeImages() + "/lexicon/ic
 
 ### com.liferay.dynamic.data.mapping.util.BaseDDMDisplayメソッドを削除
 - **日付：** 2020-Aug-18
-- **JIRAチケット：**[LPS-103549](https://issues.liferay.com/browse/LPS-103549)
+- **JIRAチケット：** [LPS-103549](https://issues.liferay.com/browse/LPS-103549)
 
 ### 何が変わりましたか？
 
@@ -904,7 +904,7 @@ Lexiconアイコンのパスが`themeDisplay.getPathThemeImages() + "/lexicon/ic
 
 ### ポータルプロパティview.count.enabledおよびbuffered.increment.enabledを置き換え
 - **日付：** 2020年01月10日
-- **JIRAチケット：**[LPS-120626](https://issues.liferay.com/browse/LPS-120626) および [LPS-121145](https://issues.liferay.com/browse/LPS-121145)
+- **JIRAチケット：** [LPS-120626](https://issues.liferay.com/browse/LPS-120626) および [LPS-121145](https://issues.liferay.com/browse/LPS-121145)
 
 #### 何が変わりましたか？
 
@@ -940,7 +940,7 @@ Lexiconアイコンのパスが`themeDisplay.getPathThemeImages() + "/lexicon/ic
 
 ### ポータルプロパティ"module.framework.properties.file.install.optionalImportRefreshScope"を削除
 - **日付：** 2020年11月10日
-- **JIRAチケット：**[LPS-122008](https://issues.liferay.com/browse/LPS-122008)
+- **JIRAチケット：** [LPS-122008](https://issues.liferay.com/browse/LPS-122008)
 
 #### 何が変わりましたか？
 

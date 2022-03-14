@@ -13,7 +13,7 @@ Liferay DXPで使用されるデフォルトのページタイプはコンテン
   - [ルックアンドフィール](#look-and-feel)
   - [コメント](#comments)
 
-Liferay Portalには、ページの作成に使用できるいくつかのレイアウト、フラグメント、およびウィジェットが付属しています。 開発者は、[独自のフラグメントを作成](./README.md#dev-guide)してこれらに追加できます。
+Liferay Portalには、ページの作成に使用できるいくつかのレイアウト、フラグメント、およびウィジェットが付属しています。 開発者は、 [独自のフラグメントを作成](./README.md#dev-guide) してこれらに追加できます。
 
 ## フラグメント
 
@@ -21,13 +21,13 @@ Liferay Portalには、ページの作成に使用できるいくつかのレイ
 Liferay DXP 7.3以降で利用できます。 このセクションは、以前は[*Sections*]パネルと[*Section Builder*]パネルに分かれていました。
 ```
 
-ページにフラグメントをドラッグアンドドロップできます。 フラグメントには、[テキスト](./building-content-pages.md#modify-editable-text)、[画像](./building-content-pages.md#modify-editable-images)、[リンク](./building-content-pages.md#modify-editable-links)などの編集可能な要素を含めることができ、カスタムコンテンツで置き換えることができます。 サイト自体ですでに利用可能なコンテンツに[これらの要素をマッピング](./building-content-pages.md#mapping-elements)することもできます。 これらの要素の開発の詳細については、[Fragment Specific Tags](./README.md#using-fragments)を参照してください。
+ページにフラグメントをドラッグアンドドロップできます。 フラグメントには、 [テキスト](./building-content-pages.md#modify-editable-text) 、 [画像](./building-content-pages.md#modify-editable-images) 、 [リンク](./building-content-pages.md#modify-editable-links) などの編集可能な要素を含めることができ、カスタムコンテンツで置き換えることができます。 サイト自体ですでに利用可能なコンテンツに [これらの要素をマッピング](./building-content-pages.md#mapping-elements) することもできます。 これらの要素の開発の詳細については、 [Fragment Specific Tags](./README.md#using-fragments) を参照してください。
 
 ### レイアウト
 
 レイアウトは、フラグメントまたはウィジェットを追加できるキャンバスを提供します。 追加する各レイアウトによって、ページの幅が調整されます。 複数のレイアウトをページに追加できます。
 
-![[Layouts]セクションには、フラグメントを整理するためのレイアウトが含まれています。](content-pages-overview/images/16.png)
+![ [Layouts]セクションには、フラグメントを整理するためのレイアウトが含まれています。](content-pages-overview/images/16.png)
 
 ### 基本コンポーネント
 
@@ -41,7 +41,7 @@ Liferay DXP 7.3以降で利用できます。 このセクションは、以前�
 
 <!-- An image with better text contrast would probably be a better example here - to help the image / text / CTA button stand out from one another more. -->
 
-![コンテンツページの編集中に[Banner]という名前のセクションが表示されます。](./content-pages-overview/images/01.png)
+![コンテンツページの編集中に [Banner]という名前のセクションが表示されます。](./content-pages-overview/images/01.png)
 
 ### フッター
 
@@ -49,7 +49,7 @@ Liferay DXP 7.3以降で利用できます。 このセクションは、以前�
 Liferay DXP 7.3以降で利用できます。 これらのフラグメントは、以前は[*Sections*]パネルに含まれていました。
 ```
 
-*[Footers]* パネルには、ページのフッターとして追加できるフラグメントが含まれています。 Liferay DXP 7.3での使用については、[Master Pages](./README.md#creating-pages)を参照してください。
+*[Footers]* パネルには、ページのフッターとして追加できるフラグメントが含まれています。 Liferay DXP 7.3での使用については、 [Master Pages](./README.md#creating-pages) を参照してください。
 
 ### ナビゲーションバー
 
@@ -57,7 +57,7 @@ Liferay DXP 7.3以降で利用できます。 これらのフラグメントは�
 Liferay DXP 7.3以降で利用できます。 これらのフラグメントは、以前は[*Sections*]パネルに含まれていました。
 ```
 
-*[Navigation Bars]* パネルには、ページのヘッダーとして追加できるフラグメントが含まれています。 Liferay DXP 7.3での使用については、[Master Pages](./README.md#creating-pages)を参照してください。
+*[Navigation Bars]* パネルには、ページのヘッダーとして追加できるフラグメントが含まれています。 Liferay DXP 7.3での使用については、 [Master Pages](./README.md#creating-pages) を参照してください。
 
 ### コンテンツ表示
 
@@ -78,7 +78,7 @@ Rather than spend valuable real estate here comparing to how its different from 
 
 [Widgets]セクションは、 	ウィジェットページの*[Add]* メニューと同様に機能します。 使用可能なウィジェットの完全なリストが表示され、それらをページに追加できます。 主な違いは、コンテンツページのウィジェットの主要な設定オプションのみが表示される点です。 *ルックアンドフィール*のような他の様々な設定は、ウィジェットページのウィジェットに対してのみ利用できます。
 
-![[Widgets]セクションには、レイアウト内に追加できるウィジェットのリストが表示されます。](./content-pages-overview/images/06.png)
+![ [Widgets]セクションには、レイアウト内に追加できるウィジェットのリストが表示されます。](./content-pages-overview/images/06.png)
 
 ## コンテンツ
 
@@ -92,11 +92,11 @@ Liferay DXP 7.3以降で利用できます。
 
 [Page Structure]には、ページ上の各フラグメント内のすべてのフラグメントとフィールドが階層表示されます。 ページ構造内のフィールドをクリックすると、ページ上で強調表示され、他の要素の中ですばやく見つけることができます。
 
-![[Page Structure]では、ページの階層が表示されます。](./content-pages-overview/images/08.png)
+![ [Page Structure]では、ページの階層が表示されます。](./content-pages-overview/images/08.png)
 
 ## ルックアンドフィール
 
-*ルックアンドフィール*アイコン（![Look and Feel](../../images/icon-look-and-feel.png)）をクリックして、テーマを変更したり、ページの他のオプションを管理したりします。 これらのオプションについては、[Configuring Individual Pages](./06-configuring-individual-pages.md#look-and-feel)でさらに詳しく説明します。
+*ルックアンドフィール*アイコン（![Look and Feel](../../images/icon-look-and-feel.png)）をクリックして、テーマを変更したり、ページの他のオプションを管理したりします。 これらのオプションについては、 [Configuring Individual Pages](./06-configuring-individual-pages.md#look-and-feel) でさらに詳しく説明します。
 
 ## コメント
 

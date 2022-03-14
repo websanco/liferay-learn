@@ -77,11 +77,11 @@ Liferay DXP には、コンテンツページフラグメントを作成する�
 
     ![ページ フラグメントに構成オプションを追加します。](./using-the-fragments-editor/images/04.png)
 
-5.  *[Publish]* をクリックして、[コンテンツページ](../../creating-pages/understanding-pages/understanding-pages.md#content-pages)で使用できるようにします。
+5.  *[Publish]* をクリックして、 [コンテンツページ](../../creating-pages/understanding-pages/understanding-pages.md#content-pages) で使用できるようにします。
 
     ![フラグメントはコンテンツ ページで使用できます。](./using-the-fragments-editor/images/05.png)
 
-フラグメントの作成中、変更内容はフラグメントが公開されるまで自動的にドラフトとして保存されます。 コレクションに追加すると、フラグメントエディターでいつでもフラグメントをコピー、エクスポート、編集、および削除できます。 ページ フラグメントで使用可能なアクションの詳細は、[Managing Page Fragments](../../displaying-content/using-fragments/managing-page-fragments.md)を参照してください。
+フラグメントの作成中、変更内容はフラグメントが公開されるまで自動的にドラフトとして保存されます。 コレクションに追加すると、フラグメントエディターでいつでもフラグメントをコピー、エクスポート、編集、および削除できます。 ページ フラグメントで使用可能なアクションの詳細は、 [ページフラグメントの管理](../../displaying-content/using-fragments/managing-page-fragments.md) を参照してください。
 
 ```{note}
 Liferay DXP 7.2 SP1以降および Liferay Portal CE 7.2 GA2以降では、*グローバル* サイトでページ フラグメントを作成して、すべてのサイトで利用できるようにすることができます。 これらのバージョンの最初のリリースでこの機能を公開するには、`com.liferay.fragment.web.internal.configuration.FragmentGlobalPanelAppConfiguration.config` という名前の `.config` ファイルを作成し、`enabled=B"true"` プロパティを追加する必要があります。 それを Liferay DXP インスタンスの `osgi/configs` フォルダにコピーします。 グローバル ページ フラグメントは子サイトに継承され、グローバル サイトからのみ編集できます。 グローバル ページ フラグメントがグローバル サイトから参照するすべてのリソースは、ページ フラグメントを利用するサイトにコピーされます。
@@ -90,4 +90,4 @@ Liferay DXP 7.2 SP1以降および Liferay Portal CE 7.2 GA2以降では、*グ�
 ## 追加情報
 
   - [フラグメントツールキットの使用](./using-the-fragments-toolkit.md)
-  - [Adding Configuration Options to Fragments](./adding-configuration-options-to-fragments.md)
+  - [フラグメントへの構成オプションの追加](./adding-configuration-options-to-fragments.md)

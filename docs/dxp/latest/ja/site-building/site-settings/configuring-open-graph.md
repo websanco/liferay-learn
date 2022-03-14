@@ -1,6 +1,6 @@
 # Open Graphの設定
 
-[Open Graph](https://ogp.me/)のメタタグはすべてのページに埋め込まれているため、Facebook、Twitter、Slackなどの対応するアプリケーションでコンテンツを共有できます。 この動作は、サイトの一般設定から無効にできます。
+[Open Graph](https://ogp.me/) のメタタグはすべてのページに埋め込まれているため、Facebook、Twitter、Slackなどの対応するアプリケーションでコンテンツを共有できます。 この動作は、サイトの一般設定から無効にできます。
 
 <!-- It'd be great to have a screenshot here of the practical application of this feature. -->
 
@@ -10,7 +10,7 @@
 
 3.  *[Open Graphを有効にする]* 設定をオン/オフにしてこの機能を有効/無効にしたり、オプションでOpen Graphタグのデフォルトとして機能するOpen Graph画像を設定します。
 
-![サイトの設定の[全般]タブで、サイト全体のOpen Graph設定を構成します。](./configuring-open-graph/images/01.png)
+![サイトの設定の [全般]タブで、サイト全体のOpen Graph設定を構成します。](./configuring-open-graph/images/01.png)
 
 ここから、Open Graphを有効/無効にしたり、サイトのページに使用されるデフォルトの`og:image`プロパティを定義したりできます。
 
@@ -51,5 +51,5 @@
 ## 追加情報
 
   - [Search Engine Optimization](./../optimizing_sites.html#search-engine-optimization)
-  - [Site Settings UI Reference](./site-settings-ui-reference.md)
-  - [Configuring Individual Pages](./../creating-pages/page-settings/configuring-individual-pages.md)
+  - [サイト設定UIリファレンス](./site-settings-ui-reference.md)
+  - [個々のページの構成 (近日公開！)](./../creating-pages/page-settings/configuring-individual-pages.md)

@@ -2,7 +2,7 @@
 
 <!-- What IS content sharing? What does this mean? What is the default setting and what would changing that allow/disallow? -->
 
-[構成設定](../site-settings-ui-reference.md#advanced)から、サイトのコンテンツ共有を有効にできます。 これをグローバルに制御することもできます。
+[構成設定](../site-settings-ui-reference.md#advanced) から、サイトのコンテンツ共有を有効にできます。 これをグローバルに制御することもできます。
 
 ## コンテンツ共有の設定
 
@@ -24,4 +24,4 @@
 
       - **Disabled**：子サイトは親サイトのコンテンツを表示できません。また、この動作をサイト管理者が変更することはできません。
 
-![[Instance Settings]からコンテンツ共有をグローバルに設定できます。](./managing-content-sharing-globally/images/01.png)
+![ [Instance Settings]からコンテンツ共有をグローバルに設定できます。](./managing-content-sharing-globally/images/01.png)

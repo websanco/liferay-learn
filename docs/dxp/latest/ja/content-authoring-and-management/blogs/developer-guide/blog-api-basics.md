@@ -17,7 +17,7 @@ LiferayのREST APIは、ブログの投稿や画像を追加、変更、削除�
 1. [ブログAPIの基本](./liferay-r3g4.zip) をダウンロードして解凍します。
 
    ```bash
-   curl https://learn.liferay.com/dxp/latest/en/content-authoring-and-management/blogs/developer-guide/liferay-r3g4.zip -O
+   curl https://learn.liferay.com/dxp/latest/ja/content-authoring-and-management/blogs/developer-guide/liferay-r3g4.zip -O
    ```
 
    ```bash

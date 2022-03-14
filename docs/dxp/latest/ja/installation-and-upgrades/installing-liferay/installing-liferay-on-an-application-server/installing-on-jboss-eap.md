@@ -6,7 +6,7 @@ JBoss EAPにインストールするには、DXP WARのインストール、依�
 
 ## 前提条件
 
-Liferay DXPにはJava JDK 8または11が必要です。 詳細は、 [互換性マトリクス](https://help.liferay.com/hc/en-us/articles/360049238151) を参照してください。
+Liferay DXPにはJava JDK 8または11が必要です。 詳細は、 [互換性マトリクス](https://help.liferay.com/hc/ja/articles/360049238151) を参照してください。
 
 これらのファイルを [ヘルプセンター](https://customer.liferay.com/downloads) （サブスクリプション）または [Liferayコミュニティダウンロード](https://www.liferay.com/downloads-community) からダウンロードします。
 
@@ -28,7 +28,7 @@ Liferay DXPにはJava JDK 8または11が必要です。 詳細は、 [互換性
 ## 依存関係をインストールする
 
 1. OSGi Dependencies ZIPファイルを `［Liferay Home］/osgi` フォルダーに解凍します（このフォルダーが存在しない場合は作成します）。 LiferayのOSGiランタイムは、これらのモジュールに依存しています。
-1. DXP 7.4+ WARファイルには、MariaDB、MySQL、およびPostgreSQLのドライバーが含まれています。 以前のWARにはそれらがありません。 WARに必要なドライバーがない場合は、データベースベンダーのJDBC JARファイルを`$JBOSS_HOME/modules/com/liferay/portal/main`フォルダにダウンロードします（このフォルダーが存在しない場合は作成します）。 サポートされるデータベースのリストについては、 [互換性マトリックス](https://help.liferay.com/hc/en-us/articles/360049238151) を参照してください。
+1. DXP 7.4+ WARファイルには、MariaDB、MySQL、およびPostgreSQLのドライバーが含まれています。 以前のWARにはそれらがありません。 WARに必要なドライバーがない場合は、データベースベンダーのJDBC JARファイルを`$JBOSS_HOME/modules/com/liferay/portal/main`フォルダにダウンロードします（このフォルダーが存在しない場合は作成します）。 サポートされるデータベースのリストについては、 [互換性マトリックス](https://help.liferay.com/hc/ja/articles/360049238151) を参照してください。
 
 ```{note}
 DXPには、テスト目的に役立つHypersonicデータベースが含まれています。 本番環境インスタンスにはHSQLを**使用しないでください**。

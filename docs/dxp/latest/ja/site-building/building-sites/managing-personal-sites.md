@@ -1,6 +1,6 @@
 # 個人サイトの管理
 
-デフォルトでは、Liferay DXPで作成されたすべてのユーザーには、パブリック（プロフィール）ページとプライベート（ダッシュボード）ページで構成される、自分だけがメンバーである個人サイトが生成されます。 この動作が望ましくない場合、このユーザーごとの個人サイトは[簡単に無効](#customizing-personal-sites-with-portal-properties)にできます。
+デフォルトでは、Liferay DXPで作成されたすべてのユーザーには、パブリック（プロフィール）ページとプライベート（ダッシュボード）ページで構成される、自分だけがメンバーである個人サイトが生成されます。 この動作が望ましくない場合、このユーザーごとの個人サイトは [簡単に無効](#customizing-personal-sites-with-portal-properties) にできます。
 
 ## プロフィールページとダッシュボードページ
 
@@ -39,7 +39,7 @@
 
 ## ポータルプロパティを使用した個人サイトのカスタマイズ
 
-個人サイトのデフォルトページをカスタマイズするために、[`portal-ext.properties`](../../installation-and-upgrades/reference/portal-properties.md)に追加できるポータルプロパティがいくつかあります。 ページの名前、ページに表示されるアプリケーション、ページのテーマとレイアウトテンプレートなどをカスタマイズできます。 詳細は、`portal.properties`ファイルの[Default User Public Layouts](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html#Default%20User%20Public%20Layouts)および[Default User Private Layouts](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html#Default%20User%20Private%20Layouts)セクションを参照してください。 これらのプロパティの一部を以下の表に示します。
+個人サイトのデフォルトページをカスタマイズするために、[`portal-ext.properties`](../../installation-and-upgrades/reference/portal-properties.md)に追加できるポータルプロパティがいくつかあります。 ページの名前、ページに表示されるアプリケーション、ページのテーマとレイアウトテンプレートなどをカスタマイズできます。 詳細は、`portal.properties`ファイルの [Default User Public Layouts](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html#Default%20User%20Public%20Layouts) および [Default User Private Layouts](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html#Default%20User%20Private%20Layouts) セクションを参照してください。 これらのプロパティの一部を以下の表に示します。
 
 | 機能                          | プロパティ                                           |
 | :--- | :--- |

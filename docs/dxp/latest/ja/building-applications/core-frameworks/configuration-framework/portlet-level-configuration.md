@@ -21,7 +21,7 @@
 1. [ローカライズされたメッセージの共有](./liferay-x7y2.zip) をダウンロードして解凍します。
 
     ```bash
-    curl https://learn.liferay.com/dxp/latest/en/developing-applications/core-frameworks/configuration-framework/liferay-x7y2.zip -O
+    curl https://learn.liferay.com/dxp/latest/ja/developing-applications/core-frameworks/configuration-framework/liferay-x7y2.zip -O
     ```
 
     ```bash

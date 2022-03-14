@@ -17,7 +17,7 @@ Webアプリケーションの開発を開始する簡単な方法は、JSPフ�
 1. サンプルをダウンロードして解凍します。
 
    ```bash
-   curl https://learn.liferay.com/dxp/latest/en/developing-applications/developing-a-java-web-application/using-mvc/liferay-w3e7.zip -O
+   curl https://learn.liferay.com/dxp/latest/ja/developing-applications/developing-a-java-web-application/using-mvc/liferay-w3e7.zip -O
    ```
 
    ```bash

@@ -16,7 +16,7 @@ Web コンテンツを作成するときは、メッセージ ボードのエン
   - Webコンテンツフォルダー
   - Wikiページ
 
-タグ、カテゴリ、ボキャブラリ、コメント、評価、およびアセットの関係をサポートする[アセットフレームワーク](TODO)を使用するカスタムアセットタイプを定義できます。
+タグ、カテゴリ、ボキャブラリ、コメント、評価、およびアセットの関係をサポートする [アセットフレームワーク](TODO) を使用するカスタムアセットタイプを定義できます。
 
 手動で選択すると、表示されるアセットをコントロールできますが、リストを定期的に更新するとなると、リストの管理が面倒になります。 この場合は、アセットパブリッシャーを使用してコンテンツを動的に選択する方が便利です。
 
@@ -34,4 +34,4 @@ Web コンテンツを作成するときは、メッセージ ボードのエン
 
   - [Selecting Assets for the Asset Publisher](./selecting-assets-for-the-asset-publisher.md)
   - [表示設定の構成](./configuring-display-settings.md)
-  - [Configuring Asset Publisher Subscriptions](./configuring-asset-publisher-subscriptions.md)
+  - [アセットパブリッシャー購読の設定](./configuring-asset-publisher-subscriptions.md)

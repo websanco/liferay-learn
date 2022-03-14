@@ -10,7 +10,7 @@
 
 2.  公開するアセットの*アクション*ボタン（![Actions button](../../../images/icon-actions.png)）をクリックし、*[本番環境に公開]* を選択します。
 
-    ![公開するアセットのアクションボタンをクリックし、[本番環境に公開]を選択します。](./publishing-single-assets-and-widgets/images/01.png)
+    ![公開するアセットのアクションボタンをクリックし、 [本番環境に公開]を選択します。](./publishing-single-assets-and-widgets/images/01.png)
 
 確認すると、公開ステータスを確認できるプロセスページに移動します。
 
@@ -26,11 +26,11 @@ Single asset publishing is not supported for page-scoped content.
 
 ウィジェットを変更した後、ウィジェットの *アクション* ボタン（ ![Actions button](../../../images/icon-actions.png)）をクリックして*[ステージング]* を選択することにより、ウィジェットを公開できます。
 
-![ウィジェットのアクションボタンをクリックして、[ステージング]を選択します。](./publishing-single-assets-and-widgets/images/04.png)
+![ウィジェットのアクションボタンをクリックして、 [ステージング]を選択します。](./publishing-single-assets-and-widgets/images/04.png)
 
 ## 追加情報
 
-  - [Staging Overview](../staging.md)
+  - [ステージングの概要](../staging.md)
   - [ステージング権限の管理](./managing-staging-permissions.md)
-  - [Page Versioning](./page-versioning.md)
+  - [ページバージョニング](./page-versioning.md)
   - [Staging UI Reference](./staging-ui-reference.md)

@@ -90,5 +90,5 @@ Liferay DXPのほとんどの新しいバージョンには、デフォルト設
 
 ## 追加情報
 
-* [Default Setting Changes in 7.2](default-setting-changes-in-7-2.md)
+* [7.2でのデフォルト設定の変更](default-setting-changes-in-7-2.md)
 * [7.3破壊的な変更](../../../liferay-internals/reference/7-3-breaking-changes.md)

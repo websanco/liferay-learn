@@ -4,7 +4,7 @@ Liferay DXPのパブリケーションツールは、公開されたすべての
 
 1.  *[Publications]* 概要ページに移動して、*[履歴]* タブをクリックします。
 
-    ![[Publications]概要ページに移動し、[履歴]をクリックします。](./reverting-changes/images/01.png)
+    ![[Publications]概要ページに移動し、 [履歴]をクリックします。](./reverting-changes/images/01.png)
 
 2.  元に戻すパブリケーションまたは復元の*[元に戻す]* をクリックします。
 
@@ -14,7 +14,7 @@ Liferay DXPのパブリケーションツールは、公開されたすべての
 
 5.  *[Now]* または*[Later]* にかかわらず、復元をいつ公開するかを決定します。
 
-    ![[元に戻す]ページから、改訂履歴をいつ公開するかを決定できます。](./reverting-changes/images/02.png)
+    ![ [元に戻す]ページから、改訂履歴をいつ公開するかを決定できます。](./reverting-changes/images/02.png)
 
 6.  *[公開を復元して作成]* をクリックします。
 

@@ -72,11 +72,11 @@ Liferayサーバーの準備ができたら、次の手順に従ってDXPイン�
 
 1.  *[プロダクトメニュー]* → *[公開設定]* → *[ステージング]* に移動します。
 
-    ![プロダクトメニューの[ステージング]に移動します。](./configuring-remote-live-staging/images/01.jpg)
+    ![プロダクトメニューの [ステージング]に移動します。](./configuring-remote-live-staging/images/01.jpg)
 
 2.  *[リモート本番環境]* を選択すると、*[リモート本番環境への接続設定]*、*[ページバージョニング]*、および*[ステージコンテンツ]* の追加フィールドが表示されます。
 
-    ![[リモート本番環境ステージング]を選択します。](./configuring-remote-live-staging/images/02.png)
+    ![ [リモート本番環境ステージング]を選択します。](./configuring-remote-live-staging/images/02.png)
 
 3.  次のフィールドを使用して、リモートDXPインスタンスの情報を入力します。
 
@@ -88,12 +88,12 @@ Liferayサーバーの準備ができたら、次の手順に従ってDXPイン�
 
     **リモートサイトID**：リモートLiferay DXPインスタンスの*サイトID*を入力します。
 
-    ![[リモート本番環境への接続設定]フィールドを使用して、リモートDXPインスタンスの情報を入力します](./configuring-remote-live-staging/images/03.png)
+    ![ [リモート本番環境への接続設定]フィールドを使用して、リモートDXPインスタンスの情報を入力します](./configuring-remote-live-staging/images/03.png)
 
     ```{note}
     If you're configuring an IPv6 address, it must contain brackets when entered into the *Remote Host/IP* field (e.g., [0:0:0:0:0:0:0:1]).
 
-    If the Remote server is a cluster, you can set the Remote Host/IP to the cluster's load balanced IP address to increase the availability of the publishing process. See the [Configuring Remote Staging in a Clustered Environment](https://help.liferay.com/hc/en-us/articles/360018175251-Configuring-Remote-Staging-in-a-Clustered-Environment) for details.
+    If the Remote server is a cluster, you can set the Remote Host/IP to the cluster's load balanced IP address to increase the availability of the publishing process. See the [Configuring Remote Staging in a Clustered Environment](https://help.liferay.com/hc/ja/articles/360018175251-Configuring-Remote-Staging-in-a-Clustered-Environment) for details.
     ```
 
 4.  ステージングから本番環境にページを公開するために安全なネットワーク接続（つまりHTTPS）を使用するかどうかを選択します。
@@ -109,7 +109,7 @@ Liferayサーバーの準備ができたら、次の手順に従ってDXPイン�
     ![ステージングするデータとコンテンツのタイプを選択します。](./configuring-remote-live-staging/images/05.png)
 
     ```{warning}
-    When applications are checked, their data is copied, and it may not be possible to edit them directly on the live Site. When unchecking an application, first make sure that any changes in Staging are published, since they may be lost. See [Managing Data and Content Types in Staging](./managing-data-and-content-types-in-staging.md) for more information.
+    When applications are checked, their data is copied, and it may not be possible to edit them directly on the live Site. When unchecking an application, first make sure that any changes in Staging are published, since they may be lost. See [ステージングでのデータとコンテンツタイプの管理](./managing-data-and-content-types-in-staging.md) for more information.
     ```
 
 8.  *[保存]* をクリックして、ステージングプロセスを開始します。 このプロセスの期間は、サイトのサイズによって異なります。
@@ -130,7 +130,7 @@ Never clone your Liferay DXP database. Doing this can duplicate important data u
 
 ローカルユーザーにステージングから本番環境への変更を公開する権限を与えるには、リモートサーバー上のユーザーに対して同一の権限を持つ同一のユーザーアカウントを作成します。
 
-このプロセスを簡素化するために、LDAPを使用して、選択したユーザーアカウントをローカルサーバーからリモートサーバーにコピーできます。 詳細は、[Connecting to an LDAP Directory](../../../users-and-permissions/connecting-to-a-user-directory/connecting-to-an-ldap-directory.md)を参照してください。
+このプロセスを簡素化するために、LDAPを使用して、選択したユーザーアカウントをローカルサーバーからリモートサーバーにコピーできます。 詳細は、 [LDAPディレクトリへの接続](../../../users-and-permissions/connecting-to-a-user-directory/connecting-to-an-ldap-directory.md) を参照してください。
 
 ## リモートステージングのバッファサイズの設定
 
@@ -156,7 +156,7 @@ Never clone your Liferay DXP database. Doing this can duplicate important data u
 
 ## 追加情報
 
-  - [Staging Overview](../staging.md)
+  - [ステージングの概要](../staging.md)
   - [Staging UI Reference](./staging-ui-reference.md)
   - [ステージング権限の管理](./managing-staging-permissions.md)
   - [ステージングでのデータとコンテンツタイプの管理](./managing-data-and-content-types-in-staging.md)

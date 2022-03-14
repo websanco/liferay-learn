@@ -10,7 +10,7 @@ Liferay DXPには、サイトのトラフィックを分析するためのGoogle
 
 3.  追加したいサービスの名前を*[アナリティクス]* フィールドに入力します。
 
-    ![[Instance Settings]から追加のアナリティクスサービスを入力できます。](./adding-a-new-analytics-service/images/01.png)
+    ![ [Instance Settings]から追加のアナリティクスサービスを入力できます。](./adding-a-new-analytics-service/images/01.png)
 
 ## アナリティクスサービスの追跡コードを追加する
 

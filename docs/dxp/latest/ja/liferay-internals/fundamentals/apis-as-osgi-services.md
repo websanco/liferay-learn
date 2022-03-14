@@ -30,7 +30,7 @@ APIと実装に関する懸念事項を異なるモジュールに分離する�
 1. `liferay-p9g2.zip`をダウンロードして解凍します。
 
     ```bash
-    curl https://learn.liferay.com/dxp/latest/en/liferay-internals/fundamentals/liferay-p9g2.zip -O
+    curl https://learn.liferay.com/dxp/latest/ja/liferay-internals/fundamentals/liferay-p9g2.zip -O
     ```
 
     ```bash
@@ -211,7 +211,7 @@ Service-Component: OSGI-INF/com.acme.p9g2.internal.P9G2Greeter.xml
 
 ## まとめ
 
-`Greeter`というサービス機能を **定義** し、`P9G2Greeter`というサービスコンポーネントで提供しました。 `Greeter`サービスが配置されました。 クライアントはどのようにサービスにアクセスして使用するのでしょうか。 これについては、[Using an OSGi Service](./using-an-osgi-service.md)で説明しています。
+`Greeter`というサービス機能を **定義** し、`P9G2Greeter`というサービスコンポーネントで提供しました。 `Greeter`サービスが配置されました。 クライアントはどのようにサービスにアクセスして使用するのでしょうか。 これについては、 [OSGiサービスの使用](./using-an-osgi-service.md) で説明しています。
 
 <a name="追加情報" />
 

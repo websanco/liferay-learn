@@ -16,7 +16,7 @@
 
 1.  製品メニューを開き、 *[Control Panel]* → *[Sites]* → *[Sites]* に移動します。
 
-    ![コントロールパネルの[Sites]オプションに移動。](./building-sites-with-site-templates/images/03.png)
+    ![コントロールパネルの [Sites]オプションに移動。](./building-sites-with-site-templates/images/03.png)
 
 2.  *追加*アイコン（![Add Site](../../images/icon-add.png)）をクリックし、メニューからサイトテンプレートを選択します。
 
@@ -26,7 +26,7 @@
 
 4.  *[保存]* をクリックします。
 
-5.  [サイト設定](../site-settings/README.rst)を構成します。
+5.  [サイト設定](../site-settings/README.rst) を構成します。
 
 6.  フォームの下の*[Pages]* パネルを開きます。
 
@@ -43,11 +43,11 @@
 9.  *[Actions]* をクリックし、新しいサイトの横にある*[Go to Public Pages]* または*[Go to Private Pages]* を選択して表示します。
 
     ```{tip}
-    To view a newly created *blank site*, you must first create a page for it. See [Adding a Page to a Site](../creating-pages/adding-pages/adding-a-page-to-a-site.md) for more information.
+    To view a newly created *blank site*, you must first create a page for it. See [サイトにページを追加する](../creating-pages/adding-pages/adding-a-page-to-a-site.md) for more information.
     ```
 
 ## 追加情報
 
-  - [Introduction to Site Building](../introduction-to-site-building.md)
+  - [Introduction to Site Building (近日公開！)](../introduction-to-site-building.md)
   - Creating a Site Template
   - [Adding Members to Sites](./adding-members-to-sites.md)

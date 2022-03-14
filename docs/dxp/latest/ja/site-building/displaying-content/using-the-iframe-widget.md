@@ -1,6 +1,6 @@
 # iframeウィジェットの使用
 
-*Iframe*ウィジェットは、Webページを埋め込んで表示できる[iframe](https://www.w3schools.com/html/html_iframe.asp)です。
+*Iframe*ウィジェットは、Webページを埋め込んで表示できる [iframe](https://www.w3schools.com/html/html_iframe.asp) です。
 
 ## IFrameウィジェットのセットアップ
 
@@ -12,7 +12,7 @@
 
 3.  埋め込みたいWebサイトの URLを [ソースURL] フィールドに入力します。
 
-    ![[ソースURL] フィールドに URL を入力します。](additional-content-display-options/iframe-widget/images/03.png)
+    ![ [ソースURL] フィールドに URL を入力します。](additional-content-display-options/iframe-widget/images/03.png)
 
     *[保存]* をクリックします。
 

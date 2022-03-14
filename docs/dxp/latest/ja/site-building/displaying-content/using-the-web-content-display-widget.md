@@ -10,13 +10,13 @@ Webコンテンツの表示ウィジェットをページに追加して構成�
 
     ![Webコンテンツの表示アプリをページに追加して、新しいWebコンテンツ記事の表示を開始します。](./additional-content-display-options/using-the-web-content-display-widget/images/01.png)
 
-2.  [Webコンテンツの表示ウィジェットの構成メニューを開きます](TODO:adding-widgets#configuration-menu)。
+2.  [Webコンテンツの表示ウィジェットの構成メニューを開きます](TODO:adding-widgets#configuration-menu) 。
 
 3.  *[選択]* ボタンをクリックして、Webコンテンツの一部を選択します。
 
 4.  表示したい記事を検索してクリックします。
 
-5.  ウィジェットで有効にしたい[オプションを設定します](#using-the-web-content-display-widget-configuration-options)。
+5.  ウィジェットで有効にしたい [オプションを設定します](#using-the-web-content-display-widget-configuration-options) 。
 
 6.  *[保存]* をクリックして変更を適用し、構成ウィンドウを閉じます。 コンテンツページを使用している場合は、*[Publish]* をクリックして、ウィジェットを含むページを公開します。
 

@@ -16,7 +16,7 @@
 
 4.  *Usages and Propagation* ページから、Page Fragmentの変更が伝播するコンテンツページ、コンテンツページテンプレート、および表示ページを選択します。 さまざまなフィルターと選択オプションを使用して、更新をページにすばやく適用できます。
 
-    ![[使用法と伝播]ページには、伝播によって更新されたページが表示されます。](./propagating-fragment-changes/images/01.png)
+    ![ [使用法と伝播]ページには、伝播によって更新されたページが表示されます。](./propagating-fragment-changes/images/01.png)
 
 5.  *伝播* アイコン（![Propagate](../../../images/icon-propagate.png)）をクリックして、変更を伝播します。
 

@@ -12,10 +12,10 @@
     docker run -it -p 8080:8080 [$LIFERAY_LEARN_DXP_DOCKER_IMAGE$]
     ```
 
-2.  [サンプルのリソースフラグメントコレクション](https://learn.liferay.com/dxp/7.x/en/site-building/developer-guide/developing-page-fragments/liferay-i6r3.zip)をダウンロードして解凍します。
+2.  [サンプルのリソースフラグメントコレクション](https://learn.liferay.com/dxp/7.x/ja/site-building/developer-guide/developing-page-fragments/liferay-i6r3.zip) をダウンロードして解凍します。
 
     ``` bash
-    curl https://learn.liferay.com/dxp/7.x/en/site-building/developer-guide/developing-page-fragments/liferay-i6r3.zip -O
+    curl https://learn.liferay.com/dxp/7.x/ja/site-building/developer-guide/developing-page-fragments/liferay-i6r3.zip -O
     ```
 
     ``` bash
@@ -133,6 +133,6 @@
 
 ## 関連情報
 
-  - [Adding Configuration Options to Fragments](./adding-configuration-options-to-fragments.md)
+  - [フラグメントへの構成オプションの追加](./adding-configuration-options-to-fragments.md)
   - [Auto-deploying Fragments](./auto-deploying-fragments.md)
   - [フラグメントエディターの使用](./using-the-fragments-editor.md)

@@ -4,7 +4,7 @@
 
 以下の手順は、Webコンテンツテンプレートをフラグメントにマップする方法を示しています。
 
-1.  マッピングしたいフィールドを含むWebコンテンツ記事と同じストラクチャーを使用する[Webコンテンツテンプレートを作成](../../../content-authoring-and-management/web-content/web_content_templates.rst)します。 例えば、以下のWebコンテンツ記事は、ストラクチャー*Web Content with Audience*を使用しています。
+1.  マッピングしたいフィールドを含むWebコンテンツ記事と同じストラクチャーを使用する [Webコンテンツテンプレートを作成](../../../content-authoring-and-management/web-content/web_content_templates.rst) します。 例えば、以下のWebコンテンツ記事は、ストラクチャー*Web Content with Audience*を使用しています。
 
     ![Webコンテンツ記事と同じストラクチャーを使用するテンプレートを作成します。](./mapping-web-content-templates-to-fragments/images/01.png)
 
@@ -14,9 +14,9 @@
 
 2.  スクリプトウィンドウの左側にある*[Fields]* 見出しの下にある名前をクリックして、テンプレート内の[ストラクチャー]フィールドをレンダリングし、変数を追加します。
 
-    ![[Fields]見出しの下にある名前をクリックして、テンプレートの[ストラクチャー]フィールドをレンダリングします。](./mapping-web-content-templates-to-fragments/images/03.png)
+    ![[Fields]見出しの下にある名前をクリックして、テンプレートの [ストラクチャー]フィールドをレンダリングします。](./mapping-web-content-templates-to-fragments/images/03.png)
 
-3.  フラグメントがサポートされているページ（コンテンツページ、ディスプレイページテンプレートなど）で、 [フラグメント](./building-content-pages.md#adding-elements-to-a-content-page)を追加し、[マッピング可能な要素](./building-content-pages.md#mapping-content)をクリックして、そのコンテキストメニューを表示します。
+3.  フラグメントがサポートされているページ（コンテンツページ、ディスプレイページテンプレートなど）で、 [フラグメント](./building-content-pages.md#adding-elements-to-a-content-page) を追加し、 [マッピング可能な要素](./building-content-pages.md#mapping-content) をクリックして、そのコンテキストメニューを表示します。
 
 4.  マッピングダイアログの*マップ*ボタン(![Map](../../../images/icon-map.png))をクリックし、追加ボタン（![Add](../../../images/icon-add-app.png)）をクリックして、マッピングしたい値が含まれているWebコンテンツ記事を選択します。
 

@@ -47,7 +47,7 @@ OSGiサービスをオーバーライドするには、次の手順に従いま�
 1. サンプルモジュールをダウンロードして解凍します。
 
    ```bash
-   curl https://learn.liferay.com/dxp/latest/en/liferay-internals/extending-liferay/liferay-s1j6.zip -O
+   curl https://learn.liferay.com/dxp/latest/ja/liferay-internals/extending-liferay/liferay-s1j6.zip -O
    ```
 
    ```bash
@@ -272,6 +272,6 @@ References:   (total 1)
 ## 追加情報
 
 * [モジュールプロジェクト](../fundamentals/module-projects.md)
-* [Using an OSGi Service](../fundamentals/using-an-osgi-service.md)
+* [OSGiサービスの使用](../fundamentals/using-an-osgi-service.md)
 * [OSGiサービスとしてのAPI](../fundamentals/apis-as-osgi-services.md)
 * [モジュールのライフサイクル](../architecture/module-lifecycle.md)

@@ -40,7 +40,7 @@ Liferayのツールや説明書は、DXPやポータルCE環境を安全かつ�
 | Liferay Portal 6.1.x → DXP/Portal 7.1 → DXP 7.3                   | Liferay Portal 6.1のサポート期間は終了しました                |
 | Liferay Portal 5.xおよび6.0.x → Liferay Portal 6.2 → Liferay DXP 7.3 | Liferay Portal 5.0、5.1、5.2、および6.0のサポート期間は終了しました |
 
-パスにLiferay Portal 6.2へのアップグレードが含まれている場合は、最初に[Liferay Portal 6.2のアップグレード手順](https://help.liferay.com/hc/en-us/articles/360017903232-Upgrading-Liferay)に従ってください。
+パスにLiferay Portal 6.2へのアップグレードが含まれている場合は、最初に [Liferay Portal 6.2のアップグレード手順](https://help.liferay.com/hc/ja/articles/360017903232-Upgrading-Liferay) に従ってください。
 
 ### 非推奨項目およびデフォルト設定の変更点を確認する
 
@@ -53,7 +53,7 @@ Liferayの新しいバージョンでは、機能と構成のデフォルトが�
 
 > サブスクリプション
 
-Liferay DXPサブスクリプションをお持ちの場合は、最新のフィックスパックにアップデートするか、データベースのアップグレードの準備をするためのアップグレードパッチをリクエストしてください。 このプロセスを開始するには、[ヘルプセンター](https://help.liferay.com/hc/requests/new)でチケットを提出してください。
+Liferay DXPサブスクリプションをお持ちの場合は、最新のフィックスパックにアップデートするか、データベースのアップグレードの準備をするためのアップグレードパッチをリクエストしてください。 このプロセスを開始するには、 [ヘルプセンター](https://help.liferay.com/hc/requests/new) でチケットを提出してください。
 
 ### マーケットプレイスアプリの更新
 
@@ -67,7 +67,7 @@ Liferayデータベースをアップグレードする前に、マーケット�
 
 ## カスタム開発のアップグレード
 
-開発したプラグイン（テーマ、アプリ、カスタマイゼーションなど）は、新しいLiferayバージョンに適合させる必要があります。 これは、依存関係の更新と同じくらい簡単な場合もあれば、APIの変更に合わせたコードの更新が必要な場合もあります。 カスタムプラグインの更新をしないと、新しいLiferayバージョンで無効になる場合があります。 [Upgrading Custom Development](./upgrading-custom-development.md)では、コードのアップグレードのプロセスを説明しています。
+開発したプラグイン（テーマ、アプリ、カスタマイゼーションなど）は、新しいLiferayバージョンに適合させる必要があります。 これは、依存関係の更新と同じくらい簡単な場合もあれば、APIの変更に合わせたコードの更新が必要な場合もあります。 カスタムプラグインの更新をしないと、新しいLiferayバージョンで無効になる場合があります。 [カスタム開発のアップグレード](./upgrading-custom-development.md) では、コードのアップグレードのプロセスを説明しています。
 
 ## 構成とインフラストラクチャの移行と更新
 
@@ -105,10 +105,10 @@ Liferayデータベースをアップグレードするには、2つの方法が
 
 アップグレードコンポーネントについて理解したので、Liferayインスタンスをアップグレードできます。 データベースをアップグレードする前に、現在のインストールで準備作業を必ず行ってください。 カスタムプラグインコードのアップグレードとデータベースのアップグレードを並行して実行するのが一般的です。 データベースのアップグレードは最初に開始する一般的なタスクであるため、以下に2つの方法へのリンクを示します。
 
-  - [Upgrading Via Docker](./upgrade-basics/upgrading-via-docker.md)
+  - [Dockerによるアップグレード](./upgrade-basics/upgrading-via-docker.md)
   - [データベースアップグレードツールの使用](./upgrade-basics/using-the-database-upgrade-tool.md)
 
 さらに、アップグレードに関連する以下のアップグレードシナリオを参照してください。
 
-  - [Upgrading a Sharded Environment](./other-upgrade-scenarios/upgrading-a-sharded-environment.md)
-  - [Maintaining Clustered Installations](../maintaining-a-liferay-installation/maintaining-clustered-installations.md)
+  - [シャード化された環境のアップグレード](./other-upgrade-scenarios/upgrading-a-sharded-environment.md)
+  - [クラスター化されたインストールの維持](../maintaining-a-liferay-installation/maintaining-clustered-installations.md)

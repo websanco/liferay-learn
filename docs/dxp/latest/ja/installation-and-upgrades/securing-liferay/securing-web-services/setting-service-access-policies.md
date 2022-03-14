@@ -30,7 +30,7 @@
 
 | サービスアクセスポリシー                                           | 説明                                                                                                                                                                                                                      | デフォルトで有効 |
 | :--- | :--- | :--- |
-| **OAUTH2_analytics.read/write**                        | [Liferay Analytics Cloud](https://www.liferay.com/products/analytics-cloud)と統合して、JSON Webサービスにアクセスできるようにします。                                                                                                            | &#10004; |
+| **OAUTH2_analytics.read/write**                        | [Liferay Analytics Cloud](https://www.liferay.com/products/analytics-cloud) と統合して、JSON Webサービスにアクセスできるようにします。                                                                                                            | &#10004; |
 | **OAUTH2_everything/read/documents/userprofile/write** | Everythingポリシーは、さまざまな理由ですべてのJSON Webサービスへのアクセスを許可します。 Everythingとはすべて、つまりすべてのJSON Webサービスです（`*`に一致）。 その他は、その説明に適したメソッドシグネチャと一致します。 たとえば、OAUTH2_everything.readは、`fetch`、`get`、`has`、`is`、または`search`で始まるすべてのメソッドに一致します。 | &#10004; |
 | :--- | :--- | :--- |
 | **OAUTH2_analytics.read/write** | [Liferay Analytics Cloud](https://www.liferay.com/products/analytics-cloud) と統合して、JSON Webサービスにアクセスできるようにします。                                                                                                            | &#10004; |

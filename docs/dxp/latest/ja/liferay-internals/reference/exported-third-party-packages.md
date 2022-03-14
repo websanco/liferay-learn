@@ -67,6 +67,6 @@ Export-Package:\
 
 ## 追加情報
 
-* [Configuring Dependencies](../fundamentals/configuring-dependencies.md)
+* [依存関係の構成](../fundamentals/configuring-dependencies.md)
 * [JARs Excluded from WABs](../../developing-applications/reference/jars-excluded-from-wabs.md)
-* [Resolving Third Party Library Package Dependencies](../fundamentals/configuring-dependencies/resolving-third-party-library-package-dependencies.md)
+* [サードパーティライブラリパッケージの依存関係の解決](../fundamentals/configuring-dependencies/resolving-third-party-library-package-dependencies.md)

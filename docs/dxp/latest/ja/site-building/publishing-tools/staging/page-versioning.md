@@ -35,7 +35,7 @@ Page templates are not recognized by the Staging framework. This means that exis
 
 2.  モーダルウィンドウの右下にある*[Add]* ボタンをクリックします。
 
-    ![モーダルウィンドウの右下にある[Add]ボタンをクリックします。](./page-versioning/images/04.png)
+    ![モーダルウィンドウの右下にある [Add]ボタンをクリックします。](./page-versioning/images/04.png)
 
 3.  新しいバリエーションの*名前*と*説明*を入力します。 これらのフィールドは、バリエーションに合わせていつでも変更できます。
 
@@ -67,11 +67,11 @@ Page templates are not recognized by the Staging framework. This means that exis
 
 1.  ステージング バーの*アクション*ボタン（![Actions button](../../../images/icon-actions.png)）をクリックし、[サイトページバリエーション]を選択します。
 
-    ![[サイトページバリエーション]を選択します。](./page-versioning/images/07.png)
+    ![ [サイトページバリエーション]を選択します。](./page-versioning/images/07.png)
 
 2.  マージのベースとして使用するバリエーションの*アクション*ボタン（ ![Actions button](../../../images/icon-actions.png) ）をクリックし、*[マージ]* を選択します。
 
-    ![マージのベースとして使用するバリエーションのアクションボタンをクリックし、[マージ]を選択します。](./page-versioning/images/08.png)
+    ![マージのベースとして使用するバリエーションのアクションボタンをクリックし、 [マージ]を選択します。](./page-versioning/images/08.png)
 
 3.  ベースとなるバリエーションの上にマージするバリエーションを選択します。
 
@@ -85,7 +85,7 @@ Page templates are not recognized by the Staging framework. This means that exis
 
 ## 追加情報
 
-  - [Staging Overview](../staging.md)
-  - [Configuring Local Live Staging](./configuring-local-live-staging.md)
-  - [Configuring Remote Live Staging](./configuring-remote-live-staging.md)
+  - [ステージングの概要](../staging.md)
+  - [ローカル現行環境ステージングの設定](./configuring-local-live-staging.md)
+  - [リモート本番環境ステージングの設定](./configuring-remote-live-staging.md)
   - [Staging UI Reference](./staging-ui-reference.md)

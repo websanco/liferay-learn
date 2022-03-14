@@ -26,7 +26,7 @@ OSGiサービスは任意のJavaクラスで使用できます。
 LiferayサービスのJavadocは [こちら](https://learn.liferay.com/reference/latest/en/dxp.html) から入手できます。
 
 ```{note}
-OSGiサービスの作成方法については、[APIs as OSGi Services](./apis-as-osgi-services.md)を参照してください。
+OSGiサービスの作成方法については、 [OSGiサービスとしてのAPI](./apis-as-osgi-services.md) を参照してください。
 ```
 
 <a name="gogo-シェルコマンドの例をデプロイする" />
@@ -44,7 +44,7 @@ OSGiサービスの作成方法については、[APIs as OSGi Services](./apis-
 1. `liferay-j1h1.zip`をダウンロードして解凍します。
 
     ```bash
-    curl hhttps://learn.liferay.com/dxp/latest/en/liferay-internals/fundamentals/liferay-j1h1.zip -O
+    curl hhttps://learn.liferay.com/dxp/latest/ja/liferay-internals/fundamentals/liferay-j1h1.zip -O
     ```
 
     ```bash
@@ -156,7 +156,7 @@ OSGiサービスの作成方法については、[APIs as OSGi Services](./apis-
 
 APIモジュールとImplモジュールは、それぞれ`Greeter`サービスを定義および提供しました。 例の`j1h1-osgi-commands`モジュールは、サービスを使用して単純なGogo シェルコマンドを作成します。 API-Provider-Consumer契約によって疎結合が促進され、ソフトウェアの管理、拡張、およびサポートが容易になります。
 
-隣接するプロジェクトからOSGiサービスを使用することに慣れてきたので、外部アーティファクトからOSGiサービスを使用することを検討してみましょう。 [Configuring Dependencies](./configuring-dependencies.md)では、モジュールを見つけて依存関係として構成する方法を示しています。
+隣接するプロジェクトからOSGiサービスを使用することに慣れてきたので、外部アーティファクトからOSGiサービスを使用することを検討してみましょう。 [依存関係の構成](./configuring-dependencies.md) では、モジュールを見つけて依存関係として構成する方法を示しています。
 
 <a name="追加情報" />
 

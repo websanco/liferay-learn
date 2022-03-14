@@ -2,12 +2,12 @@
 
 > 利用可能: Liferay Portal 7.3 GA6、DXP 7.3 GA1以降
 
-コレクションページまたはコレクション表示フラグメントを追加することで、コレクションを表示できます。 これらの表示オプションの詳細は、[コレクションとコレクションページについて](../../content-authoring-and-management/collections-and-collection-pages/about-collections-and-collection-pages.md#displaying-collections)を参照してください。
+コレクションページまたはコレクション表示フラグメントを追加することで、コレクションを表示できます。 これらの表示オプションの詳細は、 [コレクションとコレクションページについて](../../content-authoring-and-management/collections-and-collection-pages/about-collections-and-collection-pages.md#displaying-collections) を参照してください。
 
-デフォルトでは、どのユーザーもコレクションのコンテンツを表示できます。 ただし、セグメントを使用して、これらの項目の*パーソナライズされたバリエーション*を作成できます。 詳細は、[Customizing Collections Using Segments](../../content-authoring-and-management/collections-and-collection-pages/about-collections-and-collection-pages.md#customizing-collections)を参照してください。
+デフォルトでは、どのユーザーもコレクションのコンテンツを表示できます。 ただし、セグメントを使用して、これらの項目の*パーソナライズされたバリエーション*を作成できます。 詳細は、 [Customizing Collections Using Segments](../../content-authoring-and-management/collections-and-collection-pages/about-collections-and-collection-pages.md#customizing-collections) を参照してください。
 
 ```{note}
-コレクションを表示する前に、コレクションを作成する必要があります。 詳細は、[Creating Collections](../../content-authoring-and-management/collections-and-collection-pages/creating-collections.md) を参照してください。
+コレクションを表示する前に、コレクションを作成する必要があります。 詳細は、 [コレクションの作成](../../content-authoring-and-management/collections-and-collection-pages/creating-collections.md) を参照してください。
 ```
 
 ## ページにコレクションを表示する
@@ -16,7 +16,7 @@
 
 ### コレクションページでコレクションを表示する
 
-コレクションページは、ページをコレクションにリンクします。 コレクションページには、ページの一部としてコレクション表示フラグメントが含まれます。 代わりに既存のページにコレクション表示フラグメントを追加するには、[このセクション](#adding-a-collection-display-fragment-to-a-page)を参照してください。
+コレクションページは、ページをコレクションにリンクします。 コレクションページには、ページの一部としてコレクション表示フラグメントが含まれます。 代わりに既存のページにコレクション表示フラグメントを追加するには、 [このセクション](#adding-a-collection-display-fragment-to-a-page) を参照してください。
 
 次の手順に従って、コレクションページを追加します。
 
@@ -32,7 +32,7 @@
 
 5.  コレクションページの*名前*を入力し、*[Add]* をクリックします。
 
-6.  コレクションを表示するには、そのコンテンツをページ要素にマップします。 詳細は、[Mapping Components](#mapping-components-to-display-a-collection-s-assets)のセクションを参照してください。
+6.  コレクションを表示するには、そのコンテンツをページ要素にマップします。 詳細は、 [Mapping Components](#mapping-components-to-display-a-collection-s-assets) のセクションを参照してください。
 
 <!-- end list -->
 
@@ -124,13 +124,13 @@
 1.  *[サイト管理]* → *[サイトビルダー]* → *[コレクション]* に移動します。
 2.  *[コレクション]* タブで、確認するコレクションの横にあるアクション（![Actions Menu](../../images/icon-actions.png)）メニューをクリックし、*[利用数を表示]* を選択します。
 
-![[利用数を表示] を選択して、サイト全体でコレクションがどのように使用されているかを把握します](./additional-content-display-options/displaying-collections/images/05.png)
+![ [利用数を表示] を選択して、サイト全体でコレクションがどのように使用されているかを把握します](./additional-content-display-options/displaying-collections/images/05.png)
 
 ## Liferay DXP 7.2
 
 ### コンテンツセットの表示
 
-コンテンツセットは、主にアセットパブリッシャーを通じて表示されます。 これは現在、追加設定なしで表示できる唯一の方法ですが、コンテンツセットを利用する独自の外部アプリケーションまたはウィジェットを開発することができます。 [コンテンツセットの作成](../../content-authoring-and-management/collections-and-collection-pages/creating-collections.md#creating-content-sets)で、2つのコンテンツセットを作成しました。 それらをページに表示してみましょう。
+コンテンツセットは、主にアセットパブリッシャーを通じて表示されます。 これは現在、追加設定なしで表示できる唯一の方法ですが、コンテンツセットを利用する独自の外部アプリケーションまたはウィジェットを開発することができます。 [コンテンツセットの作成](../../content-authoring-and-management/collections-and-collection-pages/creating-collections.md#creating-content-sets) で、2つのコンテンツセットを作成しました。 それらをページに表示してみましょう。
 
 #### コンテンツセット用のアセットパブリッシャーの構成
 
@@ -197,5 +197,5 @@
 ## 関連情報
 
   - [コレクションの作成](../../content-authoring-and-management/collections-and-collection-pages/creating-collections.md)
-  - [About Collections and Collection Pages](../../content-authoring-and-management/collections-and-collection-pages/about-collections-and-collection-pages.md)
+  - [コレクションとコレクションページについて](../../content-authoring-and-management/collections-and-collection-pages/about-collections-and-collection-pages.md)
   - [コレクションのパーソナライズ](../personalizing-site-experience/experience-personalization/personalizing-collections.md)

@@ -26,7 +26,7 @@ Liferay 7.2 以前のユーザーの場合、コレクションは [コンテン
 
     **コレクション:** このオプションを選択して、以前に保存したコレクションから選択します。 [コレクションを選択]で、*[選択]* ボタンをクリックしてコレクションを選択します。
 
-    ![[選択]をクリックして、保存済みの選択項目から選択します。](selecting-assets-in-the-asset-publisher-widget/images/04.png)
+    ![ [選択]をクリックして、保存済みの選択項目から選択します。](selecting-assets-in-the-asset-publisher-widget/images/04.png)
 
     詳細は、[About Collections](../../../content-authoring-and-management/collections-and-collection-pages/about-collections-and-collection-pages.md)のページを参照してください。
 

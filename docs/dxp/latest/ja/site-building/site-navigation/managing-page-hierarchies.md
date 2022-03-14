@@ -4,7 +4,7 @@
 
 ## ページの作成
 
-*[サイトビルダー]* → *[Pages]* をクリックして、新規ページを作成します。 誰でも閲覧できる公開ページや、サイトメンバーだけが閲覧できる非公開ページを作成できます。 ページを追加する方法については、[Adding a Page to a Site](../creating-pages/adding-pages/adding-a-page-to-a-site.md)を参照してください。
+*[サイトビルダー]* → *[Pages]* をクリックして、新規ページを作成します。 誰でも閲覧できる公開ページや、サイトメンバーだけが閲覧できる非公開ページを作成できます。 ページを追加する方法については、 [サイトにページを追加する (近日公開！)](../creating-pages/adding-pages/adding-a-page-to-a-site.md) を参照してください。
 
 ページが作成されると、階層に表示され、そこでその位置を移動したり整理したりできます。
 
@@ -63,5 +63,5 @@
 
 ## 追加情報
 
-  - [Using Navigation Menus](./using-navigation-menus.md)
-  - [Configuring Navigation Menus](./configuring-navigation-menus.md)
+  - [ナビゲーションメニューの使用](./using-navigation-menus.md)
+  - [ナビゲーションメニューの設定](./configuring-navigation-menus.md)

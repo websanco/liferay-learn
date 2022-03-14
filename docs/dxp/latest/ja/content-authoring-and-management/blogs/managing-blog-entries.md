@@ -46,7 +46,7 @@
 
 ## ブログエントリの共有
 
-サイト管理でブログアプリからブログエントリを共有することもできます。 [Configuring Sharing](https://help.liferay.com/hc/en-us/articles/360029040731-Configuring-Sharing) で説明されているように、共有はデフォルトで有効になっています。 ブログエントリの共有は、 [ファイルの共有](https://help.liferay.com/hc/en-us/articles/360029040711-Sharing-Files) と同じように機能します。
+サイト管理でブログアプリからブログエントリを共有することもできます。 [Configuring Sharing](https://help.liferay.com/hc/ja/articles/360029040731-Configuring-Sharing) で説明されているように、共有はデフォルトで有効になっています。 ブログエントリの共有は、 [ファイルの共有](https://help.liferay.com/hc/ja/articles/360029040711-Sharing-Files) と同じように機能します。
 
 ブログエントリを共有するには：
 

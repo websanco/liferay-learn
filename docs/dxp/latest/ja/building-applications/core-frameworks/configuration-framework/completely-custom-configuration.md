@@ -17,7 +17,7 @@
 1. [完全なカスタム構成](./liferay-u2g5.zip) をダウンロードして解凍します。
 
     ```bash
-    curl https://learn.liferay.com/dxp/latest/en/developing-applications/core-frameworks/configuration-framework/liferay-u2g5.zip -O
+    curl https://learn.liferay.com/dxp/latest/ja/developing-applications/core-frameworks/configuration-framework/liferay-u2g5.zip -O
     ```
 
     ```bash

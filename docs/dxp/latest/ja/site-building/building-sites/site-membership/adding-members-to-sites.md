@@ -71,4 +71,4 @@
 
 ## 追加情報
 
-招待ウィジェットを使用して、ユーザーをサイトのメンバーに招待することもできます。 詳しくは、[Inviting Members to Your Site](./inviting-members-to-your-site.md)を参照してください。
+招待ウィジェットを使用して、ユーザーをサイトのメンバーに招待することもできます。 詳しくは、 [サイトにメンバーを招待する](./inviting-members-to-your-site.md) を参照してください。

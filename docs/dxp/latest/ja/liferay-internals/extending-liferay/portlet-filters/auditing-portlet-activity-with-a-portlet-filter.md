@@ -18,7 +18,7 @@
 1. `@Component`アノテーションを使用して、OSGiフレームワーク内のコンポーネントをポートレットフィルターとして宣言し、それを`PortletFilter.class`サービスとして識別します。
 
    ```{note}
-      ポートレットフィルターは[OSGi Declarative Service（DS）コンポーネント](https://enroute.osgi.org/FAQ/300-declarative-services.html)です。 フィルタは、portlet.xml`記述子または`@PortletLifecycleFilter`アノテーションを使用してポートレットに適用することもできます。 詳細については、ポートレット3.0仕様を参照してください。
+      ポートレットフィルターは [OSGi Declarative Service（DS）コンポーネント](https://enroute.osgi.org/FAQ/300-declarative-services.html) です。 フィルタは、portlet.xml`記述子または`@PortletLifecycleFilter`アノテーションを使用してポートレットに適用することもできます。 詳細については、ポートレット3.0仕様を参照してください。
    ```
 
 1. `@Component`宣言に次のプロパティを入力します。
@@ -45,7 +45,7 @@
 1. サンプルモジュールをダウンロードして解凍します。
 
    ```bash
-   curl https://learn.liferay.com/dxp/latest/en/liferay-internals/extending-liferay/portlet-filters/liferay-b4k8.zip -O
+   curl https://learn.liferay.com/dxp/latest/ja/liferay-internals/extending-liferay/portlet-filters/liferay-b4k8.zip -O
    ```
 
    ```bash

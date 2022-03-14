@@ -2,7 +2,7 @@
 
 > 利用可能: Liferay Portal CE 7.3 GA1以降および Liferay DXP 7.3以降
 
-[独自のツールを使用してページフラグメントを開発している](./using-the-fragments-toolkit.md#collection-format-overview)場合は、Liferay UI を介してインポートできるように、それらを ZIP ファイルにパッケージ化することでデプロイできます。 ただし、UI の使用に限定されません。 コマンドラインからフラグメント ZIP ファイルをデプロイすることもできます。 ここでは、フラグメントプロジェクトを操作し、Liferay の自動デプロイメカニズムを使用してコマンドラインからフラグメントを必要なサイトにインポートする方法を学びます。
+[独自のツールを使用してページフラグメントを開発している](./using-the-fragments-toolkit.md#collection-format-overview) 場合は、Liferay UI を介してインポートできるように、それらを ZIP ファイルにパッケージ化することでデプロイできます。 ただし、UI の使用に限定されません。 コマンドラインからフラグメント ZIP ファイルをデプロイすることもできます。 ここでは、フラグメントプロジェクトを操作し、Liferay の自動デプロイメカニズムを使用してコマンドラインからフラグメントを必要なサイトにインポートする方法を学びます。
 
 フラグメントコレクションのサンプルを自動デプロイすることから始めます。
 
@@ -16,10 +16,10 @@
     docker run -it -p 8080:8080 [$LIFERAY_LEARN_DXP_DOCKER_IMAGE$]
     ```
 
-2.  [サンプルの自動デプロイ可能なフラグメントコレクション](https://learn.liferay.com/dxp/7.x/en/site-building/developer-guide/developing-page-fragments/liferay-a2f8.zip)をダウンロードして解凍します。
+2.  [サンプルの自動デプロイ可能なフラグメントコレクション](https://learn.liferay.com/dxp/7.x/ja/site-building/developer-guide/developing-page-fragments/liferay-a2f8.zip) をダウンロードして解凍します。
 
     ``` bash
-    curl https://learn.liferay.com/dxp/7.x/en/site-building/developer-guide/developing-page-fragments/liferay-a2f8.zip -O
+    curl https://learn.liferay.com/dxp/7.x/ja/site-building/developer-guide/developing-page-fragments/liferay-a2f8.zip -O
     ```
 
     ``` bash
@@ -126,4 +126,4 @@
 ## 追加情報
 
   - [Including Default Resources with Fragments](./including-default-resources-with-fragments.md)
-  - [Adding Configuration Options to Fragments](./adding-configuration-options-to-fragments.md)
+  - [フラグメントへの構成オプションの追加](./adding-configuration-options-to-fragments.md)

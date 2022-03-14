@@ -1,6 +1,6 @@
 # フラグメント設定タイプのリファレンス
 
-このリファレンスには、フラグメントに使用可能な構成タイプがリストされています。 フラグメントを構成可能にする方法の詳細は、[Adding Configuration Options to Fragments](../../developing-page-fragments/adding-configuration-options-to-fragments.md)を参照してください。
+このリファレンスには、フラグメントに使用可能な構成タイプがリストされています。 フラグメントを構成可能にする方法の詳細は、 [フラグメントへの構成オプションの追加](../../developing-page-fragments/adding-configuration-options-to-fragments.md) を参照してください。
 
 実装できる 5 つの構成可能なフラグメント タイプがあります。
 

@@ -31,6 +31,6 @@ Gogoシェルは、 [Felix Gogoの基本コマンド](https://felix.apache.org/d
 
 ## 追加情報
 
-* [Using the Gogo Shell](../using-the-gogo-shell.md)
-* [Command Line Gogo Shell](./command-line-gogo-shell.md)
+* [Gogo シェルの使用](../using-the-gogo-shell.md)
+* [コマンドラインGogo シェル](./command-line-gogo-shell.md)
 * [Apache Felix Gogo 公式ドキュメント](http://felix.apache.org/documentation/subprojects/apache-felix-gogo.html)

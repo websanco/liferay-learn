@@ -22,7 +22,7 @@ Liferay DXPは、メールサーバーを使用して、ユーザー登録とパ
 
 2.  *[Control Panel] → [Configuration] → [Server Administration] → [Mail]* に移動します。
 
-3.  [次のフィールド](#mail-configuration-reference)に値を入力します。
+3.  [次のフィールド](#mail-configuration-reference) に値を入力します。
 
     * **Incoming POP Server：** pop.gmail.com
     * **Incoming Port：** 110
@@ -58,8 +58,8 @@ DXPがすぐにメールセッションに接続します。
 
 ## 追加情報
 
-* [Configuring Default Email Senders](./configuring-mail/configuring-default-email-senders.md)
-* [Alternative Email Configuration Methods](./configuring-mail/alternative-email-configuration-methods.md)
+* [デフォルトのメール送信者の設定](./configuring-mail/configuring-default-email-senders.md)
+* [代替の電子メールの設定方法](./configuring-mail/alternative-email-configuration-methods.md)
 * [Connecting to a Mail Server](configuring-mail/connecting-to-a-mail-server.md)
 * [デフォルトのメール送信者の設定](configuring-mail/configuring-default-email-senders.md)
 * [代替の電子メールの設定方法](configuring-mail/alternative-email-configuration-methods.md)

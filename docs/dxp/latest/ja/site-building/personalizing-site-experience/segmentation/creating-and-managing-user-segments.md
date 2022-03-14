@@ -4,7 +4,7 @@
 
 1.  製品メニューを開き、サイトのメニューから*[People]* → *[Segments]* に移動します。
 
-    ![[People ]メニューからユーザーセグメントを追加します。](./creating-and-managing-user-segments/images/01.png)
+    ![ [People ]メニューからユーザーセグメントを追加します。](./creating-and-managing-user-segments/images/01.png)
 
 2.  *追加*ボタン（![Add](../../../images/icon-add.png)）をクリックします。
 
@@ -34,6 +34,6 @@
 
 ## 関連情報
 
-  - [Assigning Roles to User Segments](../../../users-and-permissions/roles-and-permissions/assigning-roles-to-user-segments.md)
-  - [Getting Analytics for User Segments](./getting-analytics-for-user-segments.md)
+  - [ユーザーセグメントへのロールの割り当て](../../../users-and-permissions/roles-and-permissions/assigning-roles-to-user-segments.md)
+  - [ユーザーセグメントの分析の取得](./getting-analytics-for-user-segments.md)
   - [コンテンツページのパーソナライゼーション](../experience-personalization/content-page-personalization.md)

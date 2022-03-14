@@ -18,11 +18,11 @@ In DXP 7.3+, if you want to create a Navigation Menu to use across multiple Site
 
 ![サイトビルダーのページメニューは、サイト上のすべてのページの主要なリファレンスとして機能します。](./managing-site-navigation/images/01.png)
 
-新しいページは、*[サイトビルダー]* → *[Pages]* メニューで作成します。 ページは、誰でも閲覧できる公開ページにすることも、サイトメンバーだけが閲覧できる非公開ページにすることもできます。 ページを追加する方法については、[Adding a Page to a Site](../creating-pages/adding-pages/adding-a-page-to-a-site.md)を参照してください。
+新しいページは、*[サイトビルダー]* → *[Pages]* メニューで作成します。 ページは、誰でも閲覧できる公開ページにすることも、サイトメンバーだけが閲覧できる非公開ページにすることもできます。 ページを追加する方法については、 [サイトにページを追加する (近日公開！)](../creating-pages/adding-pages/adding-a-page-to-a-site.md) を参照してください。
 
 ## ナビゲーションメニューの使用
 
-ナビゲーションメニューを作成してページに配置する方法については、[Using Navigation Menus](./using-navigation-menus.md)を参照してください。 ナビゲーションメニューウィジェットの設定方法の詳細については、[Configuring Navigation Menus](./configuring-navigation-menus.md)を参照してください。
+ナビゲーションメニューを作成してページに配置する方法については、 [ナビゲーションメニューの使用](./using-navigation-menus.md) を参照してください。 ナビゲーションメニューウィジェットの設定方法の詳細については、 [ナビゲーションメニューの設定](./configuring-navigation-menus.md) を参照してください。
 
 ## ページツリーの使用
 
@@ -44,6 +44,6 @@ In DXP 7.3+, if you want to create a Navigation Menu to use across multiple Site
 
 ## 追加情報
 
-  - [Adding a Page to a Site](../creating-pages/adding-pages/adding-a-page-to-a-site.md)
-  - [Using Navigation Menus](./using-navigation-menus.md)
-  - [Managing Page Hierarchies](./managing-page-hierarchies.md)
+  - [サイトにページを追加する (近日公開！)](../creating-pages/adding-pages/adding-a-page-to-a-site.md)
+  - [ナビゲーションメニューの使用](./using-navigation-menus.md)
+  - [ページ階層の管理 (近日公開！)](./managing-page-hierarchies.md)

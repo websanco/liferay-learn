@@ -2,11 +2,11 @@
 
 > モバイルデバイスルールは、Liferay Mobile Device Detection Liteが7.3で廃止予定になったため、Liferay7.2以前でのみ使用できます。
 
-前提条件として、Liferay マーケットプレイスから[Liferay Mobile Device Detection Lite (LMDD)](https://web.liferay.com/marketplace/-/mp/application/92831494)アプリをインストールする必要があります。 このアプリは、どのモバイルデバイスがアクセスしているかを検出するために必要なデバイス検出データベースを提供します。
+前提条件として、Liferay マーケットプレイスから [Liferay Mobile Device Detection Lite (LMDD)](https://web.liferay.com/marketplace/-/mp/application/92831494) アプリをインストールする必要があります。 このアプリは、どのモバイルデバイスがアクセスしているかを検出するために必要なデバイス検出データベースを提供します。
 
 ## モバイルデバイス種別の作成
 
-モバイルデバイス種別は、デバイスのタイプに基づいたモバイルデバイスアクションのグループです。 [モバイルデバイスアクション](#adding-mobile-device-actions)を作成する前に、モバイルデバイス種別を作成します。 たとえば、すべてのAndroidデバイスのグループを作成します。LiferayがAndroidデバイスを検出すると、訪問者をモバイル対応のページにリダイレクトできます。
+モバイルデバイス種別は、デバイスのタイプに基づいたモバイルデバイスアクションのグループです。 [モバイルデバイスアクション](#adding-mobile-device-actions) を作成する前に、モバイルデバイス種別を作成します。 たとえば、すべてのAndroidデバイスのグループを作成します。LiferayがAndroidデバイスを検出すると、訪問者をモバイル対応のページにリダイレクトできます。
 
 モバイルデバイス種別を作成するには、
 
@@ -109,7 +109,7 @@ Segmentation and Personalization has a *Device* rule that evaluates whether a Us
 
 8.  *名前*と*説明*を入力します。
 
-9.  *タイプ*を選択します（たとえば、*[サイトにリダイレクト]*）。 タイプについては、次の[モバイルデバイスアクションのリファレンス](#mobile-device-actions-reference)を参照してください。
+9.  *タイプ*を選択します（たとえば、*[サイトにリダイレクト]*）。 タイプについては、次の [モバイルデバイスアクションのリファレンス](#mobile-device-actions-reference) を参照してください。
 
 10. 訪問者がリダイレクトされる目的のサイトを選択します。
 

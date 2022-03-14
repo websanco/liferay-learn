@@ -20,18 +20,18 @@
 
 6.  残りの設定を構成し、*[保存]* をクリックします。
 
-    ![[General]セクションには、サイトの基本情報が示されます。](./adding-a-site/images/01.png)
+    ![ [General]セクションには、サイトの基本情報が示されます。](./adding-a-site/images/01.png)
 
 ```{tip}
-新しく作成された*空のサイト*を表示するには、まずそのサイトにページを作成する必要があります。 See [Adding a Page to a Site](../creating-pages/adding-pages/adding-a-page-to-a-site.md) for more information.
+新しく作成された*空のサイト*を表示するには、まずそのサイトにページを作成する必要があります。 See [サイトにページを追加する](../creating-pages/adding-pages/adding-a-page-to-a-site.md) for more information.
 ```
 
-製品メニューを開くと、新しいサイトが選択されています。 利用可能なすべてのサイト設定の概要については、[Site Settings](../site-settings/README.rst)を参照してください。
+製品メニューを開くと、新しいサイトが選択されています。 利用可能なすべてのサイト設定の概要については、 [Site Settings](../site-settings/README.rst) を参照してください。
 
 ## 追加情報
 
-  - [Introduction to Site Building](../introduction-to-site-building.md)
-  - [Building Sites with Site Templates](./building-sites-with-site-templates.md)
+  - [Introduction to Site Building (近日公開！)](../introduction-to-site-building.md)
+  - [サイトテンプレートを使用したサイトの構築](./building-sites-with-site-templates.md)
   - [Adding Members to Sites](./adding-members-to-sites.md) <!-- ### The Default Site
 
 @Michael Williams - This information feels out of place here.

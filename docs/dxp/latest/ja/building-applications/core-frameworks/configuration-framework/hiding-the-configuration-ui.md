@@ -32,7 +32,7 @@ Liferayは、 [構成インターフェイスがデプロイ](./setting-and-acce
 1. [構成UIの非表示](./liferay-g8v3.zip) をダウンロードして解凍します。
 
     ```bash
-    curl https://learn.liferay.com/dxp/latest/en/developing-applications/core-frameworks/configuration-framework/liferay-g8v3.zip -O
+    curl https://learn.liferay.com/dxp/latest/ja/developing-applications/core-frameworks/configuration-framework/liferay-g8v3.zip -O
     ```
 
     ```bash

@@ -19,7 +19,7 @@ MVCリソースコマンドを使用するサンプルポートレットをデ�
 1. サンプルをダウンロードして解凍します。
 
    ```bash
-   curl https://learn.liferay.com/dxp/latest/en/developing-applications/developing-a-java-web-application/using-mvc/liferay-p8v5.zip -O
+   curl https://learn.liferay.com/dxp/latest/ja/developing-applications/developing-a-java-web-application/using-mvc/liferay-p8v5.zip -O
    ```
 
    ```bash

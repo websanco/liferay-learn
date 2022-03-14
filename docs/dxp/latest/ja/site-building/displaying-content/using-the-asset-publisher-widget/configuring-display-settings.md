@@ -77,6 +77,6 @@
 
 ![アセットを異なるグループに分けることができます。](./configuring-asset-publisher-display-settings/images/05.png)
 
-たとえば、*[メンバーシップタイプ]* というボキャブラリがあり、*[Premium]* と*[Regular]* の2つのカテゴリがあるとします。 メンバーシップタイプでアセットをグループ化すると、[Premium]カテゴリのすべてのアセットが1つのグループに表示され、[Regular]カテゴリのすべてのアセットが別のグループに表示されます。 グループ化ルールは、[順序付けルール](./selecting-assets-for-the-asset-publisher.md#configuring-asset-display-ordering)の前に適用されます。 順序付けルールは、アセットのグループごとに個別に適用されます。 下の図の例では、アセットをタイプ別にグループ化しています。画像は、Webコンテンツ記事の後にリストされます。
+たとえば、*[メンバーシップタイプ]* というボキャブラリがあり、*[Premium]* と*[Regular]* の2つのカテゴリがあるとします。 メンバーシップタイプでアセットをグループ化すると、[Premium]カテゴリのすべてのアセットが1つのグループに表示され、[Regular]カテゴリのすべてのアセットが別のグループに表示されます。 グループ化ルールは、 [順序付けルール](./selecting-assets-for-the-asset-publisher.md#configuring-asset-display-ordering) の前に適用されます。 順序付けルールは、アセットのグループごとに個別に適用されます。 下の図の例では、アセットをタイプ別にグループ化しています。画像は、Webコンテンツ記事の後にリストされます。
 
 ![アセットをタイプ別にグループ化できます。](./configuring-asset-publisher-display-settings/images/06.png)

@@ -16,7 +16,7 @@ Quickly access the Global Menu anywhere in your DXP instance using the following
 **Windows/Linux**: Ctrl+Shift+M
 ```
 
-![グローバルメニューの[Applications]タブにある[Publications]概要ページにアクセスします。](./creating-and-managing-publications/images/01.png)
+![グローバルメニューの[Applications]タブにある [Publications]概要ページにアクセスします。](./creating-and-managing-publications/images/01.png)
 
   - [新しいパブリケーションの作成](#creating-a-new-publication)
   - [進行中のパブリケーションの管理](#managing-ongoing-publications)
@@ -29,7 +29,7 @@ Quickly access the Global Menu anywhere in your DXP instance using the following
 
 1.  ドロップダウンの[Publications]バーメニューで*[新規公開を作成]* をクリックします。 *[新規公開を作成]* ページにリダイレクトされます。
 
-    ![ドロップダウンの[Publications]バーメニューで[新規公開を作成]をクリックします。](./creating-and-managing-publications/images/02.png)
+    ![ドロップダウンの[Publications]バーメニューで [新規公開を作成]をクリックします。](./creating-and-managing-publications/images/02.png)
 
     または、[Publications]概要ページの*[進行中]* タブで新規公開を作成することもできます。 *追加*ボタン（![Add button](../../../images/icon-add.png)）をクリックします。
 
@@ -43,7 +43,7 @@ Quickly access the Global Menu anywhere in your DXP instance using the following
 
 4.  *[Create]* をクリックします。
 
-![パブリケーションの名前と説明を入力し、[Create]をクリックします。](./creating-and-managing-publications/images/03.png)
+![パブリケーションの名前と説明を入力し、 [Create]をクリックします。](./creating-and-managing-publications/images/03.png)
 
 この方法で作成されたパブリケーションは、変更を加えることなく、現在の本番環境をベースラインとして使用します。 パブリケーションで行われたすべての変更は、作成時の本番環境からの逸脱として追跡されます。
 
@@ -53,7 +53,7 @@ Quickly access the Global Menu anywhere in your DXP instance using the following
 
 *[進行中]* タブには、DXPインスタンスのすべてのアクティブな未公開のパブリケーションが一覧表示されます。 デフォルトでは、これらのパブリケーションは*編集日時*でソートされていますが、*名前*でソートすることもできます。 各エントリには、パブリケーションの名前、説明、最終変更時刻、作成時刻、および所有者が含まれます。
 
-![[進行中]タブには、DXPインスタンスのすべてのアクティブな未公開のパブリケーションとそれらの情報が一覧表示されます。](./creating-and-managing-publications/images/04.png)
+![ [進行中]タブには、DXPインスタンスのすべてのアクティブな未公開のパブリケーションとそれらの情報が一覧表示されます。](./creating-and-managing-publications/images/04.png)
 
 パブリケーションの*アクション*ボタン（ ![Actions button](../../../images/icon-actions.png) ）をクリックすると、パブリケーションを選択して、以下にリストされているタスクのいずれかを実行できます。
 
@@ -61,7 +61,7 @@ Quickly access the Global Menu anywhere in your DXP instance using the following
 
 **編集：** パブリケーションの作成後はいつでも、パブリケーションの名前または説明を変更できます。
 
-**変更の確認：** 選択したパブリケーションに含まれるすべての変更を表示します。 デフォルトでは、DXPはパブリケーションの追跡された変更の簡単な要約を表示します。 *[すべての項目を表示]* のトグルスイッチを使用して、変更に関連するすべてのプロセスを表示します。 リストとコンテキストの表示形式を切り替えることもできます。 詳細は、[パブリケーションの変更の確認](./making-and-publishing-changes.md#reviewing-publication-changes)を参照してください。
+**変更の確認：** 選択したパブリケーションに含まれるすべての変更を表示します。 デフォルトでは、DXPはパブリケーションの追跡された変更の簡単な要約を表示します。 *[すべての項目を表示]* のトグルスイッチを使用して、変更に関連するすべてのプロセスを表示します。 リストとコンテキストの表示形式を切り替えることもできます。 詳細は、 [パブリケーションの変更の確認](./making-and-publishing-changes.md#reviewing-publication-changes) を参照してください。
 
 **公開：** パブリケーションの変更をすぐに公開します。 選択すると、DXPは競合を検出し、必要に応じて通知します。 競合がない場合は、*[公開]* をクリックして変更を公開します。 このプロセスの詳細は、[変更の作成と公開](./making-and-publishing-changes.md)および[競合の解決](./resolving-conflicts.md)を参照してください。
 
@@ -79,7 +79,7 @@ Deleting a publication permanently removes all of its changes from your database
 
 *[スケジュール]* タブには、インスタンスでスケジュールされているすべてのパブリケーションが一覧表示されます。 デフォルトでは、これらのパブリケーションは名前でソートされていますが、編集日時または各パブリケーションの公開がスケジュールされている日時でソートすることもできます。
 
-![[スケジュール]タブには、インスタンスでスケジュールされているすべてのパブリケーションが一覧表示されます。](./creating-and-managing-publications/images/05.png)
+![ [スケジュール]タブには、インスタンスでスケジュールされているすべてのパブリケーションが一覧表示されます。](./creating-and-managing-publications/images/05.png)
 
 スケジュール設定されたパブリケーションの*アクション*ボタン（![Actions button](../../../images/icon-actions.png)）をクリックすると、そのパブリケーションの*スケジュール解除*、*再スケジュール*、および*変更の確認*ができます。 パブリケーションのスケジュールが解除されると、再び編集可能になり、[進行中]タブに一覧表示されます。
 
@@ -87,7 +87,7 @@ Deleting a publication permanently removes all of its changes from your database
 
 *[履歴]* タブには、インスタンスで以前に公開されたすべてのパブリケーションが一覧表示されます。 デフォルトでは、これらのパブリケーションは*公開日*でソートされていますが、*名前*でソートすることもできます。
 
-![[履歴]タブには、インスタンスで以前に公開されたすべてのパブリケーションが一覧表示されます。](./creating-and-managing-publications/images/06.png)
+![ [履歴]タブには、インスタンスで以前に公開されたすべてのパブリケーションが一覧表示されます。](./creating-and-managing-publications/images/06.png)
 
 *[元に戻す]* をクリックすると、以前に公開された変更をインスタンスに元に戻すパブリケーションを簡単に作成できます。 [元に戻す]パブリケーションの一部として、DXPインスタンスに追加の変更を加えることもできます。 このプロセスの詳細は、[変更を元に戻す](./reverting-changes.md)を参照してください。
 
@@ -98,5 +98,5 @@ Its recommended Users enable Publications early on in your development process t
 ## 追加情報
 
   - [Publications Overview](../publications.md)
-  - [Enabling Publications](./enabling-publications.md)
+  - [パブリケーションの有効化](./enabling-publications.md)
   - [変更の作成と公開](./making-and-publishing-changes.md)

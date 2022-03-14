@@ -88,10 +88,10 @@ public class HelloWorldPortlet extends MVCPortlet {
 [Liferay DXPがその名前を使用して[ポートレットのID]を作成する方法(../reference/portlet-descriptor-to-osgi-service-property-map.md#ten)を考慮して、ポートレット名を一意にします。
 ```
 
-コンポーネントを使用して公開している `Portlet.class` 実装の種類について、混乱が生じる可能性があります。 サービスレジストリは、これが [`javax.portlet.Portlet`](https://learn.liferay.com/reference/latest/en/portlet-api/javax/portlet/Portlet.html) インターフェイスであると想定しています。 たとえば、 `com.liferay.portal.kernel.model.Portlet`ではなく、それをインポートします。
+コンポーネントを使用して公開している `Portlet.class` 実装の種類について、混乱が生じる可能性があります。 サービスレジストリは、これが [`javax.portlet.Portlet`](https://docs.liferay.com/portlet-api/3.0/javadocs/javax/portlet/Portlet.html) インターフェイスであると想定しています。 たとえば、 `com.liferay.portal.kernel.model.Portlet`ではなく、それをインポートします。
 
 ```{note}
-DTD [liferay-portlet-app_7_3_0.dtd](https://learn.liferay.com/reference/latest/en/dxp/definitions/liferay-portlet-app_7_3_0.dtd.html) は、ポートレットコンポーネントのプロパティとして指定できるすべてのLiferay固有の属性を定義します。 `javax.portlet.`で名前空間が設定されたプロパティは、 [`portlet.xml` descriptor](https://docs.liferay.com/portlet-api/3.0/portlet-app_3_0.xsd) の要素です。
+DTD [liferay-portlet-app_7_3_0.dtd](https://docs.liferay.com/ce/portal/7.3-latest/definitions/liferay-portlet-app_7_3_0.dtd.html) は、ポートレットコンポーネントのプロパティとして指定できるすべてのLiferay固有の属性を定義します。 `javax.portlet.`で名前空間が設定されたプロパティは、 [`portlet.xml` descriptor](https://docs.liferay.com/portlet-api/3.0/portlet-app_3_0.xsd) の要素です。
 ```
 
 <a name="a-simpler-mvc-portlet" />

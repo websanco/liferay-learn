@@ -28,7 +28,7 @@
 
 ## 追加情報
 
-  - [Content Pages Overview](./content-pages-overview.md)
+  - [コンテンツページの概要](./content-pages-overview.md)
   - [フラグメントの使用](./using-fragments.md)
   - [Fragment Styles Reference](./fragment-styles-reference.md)
   - [新しいスタイルブックの作成](../../site-appearance/using-a-style-book-to-standardize-site-appearance.md)

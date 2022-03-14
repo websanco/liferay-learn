@@ -160,4 +160,4 @@
 
   - [フラグメントの開発](./developing-fragments-intro.md)
   - [フラグメントエディターの使用](./using-the-fragments-editor.md)
-  - [Adding Configuration Options to Fragments](./adding-configuration-options-to-fragments.md)
+  - [フラグメントへの構成オプションの追加](./adding-configuration-options-to-fragments.md)

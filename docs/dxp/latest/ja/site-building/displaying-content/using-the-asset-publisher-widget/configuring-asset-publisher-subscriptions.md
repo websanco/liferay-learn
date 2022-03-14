@@ -14,7 +14,7 @@
 
     ![メール購読は、新しいアセットが公開されたときにユーザーに通知します。](./configuring-asset-publisher-subscriptions/images/01.png)
 
-4.  *[表示設定]* タブ → [*[設定と有効化]* セクション](./configuring-display-settings.md#set-and-enable-options)で、*[変更通知を受け取る（購読する）]* 機能を有効にします (有効になっていない場合)。 ユーザーは、*[変更通知を受け取る（購読する）]* ボタンをクリックして、新しく公開されたアセットの電子メール通知を受け取ることができます。
+4.  *[表示設定]* タブ → [* [設定と有効化]* セクション](./configuring-display-settings.md#set-and-enable-options) で、*[変更通知を受け取る（購読する）]* 機能を有効にします (有効になっていない場合)。 ユーザーは、*[変更通知を受け取る（購読する）]* ボタンをクリックして、新しく公開されたアセットの電子メール通知を受け取ることができます。
 
 ![メールの購読を有効にすると、変更通知を受け取る（購読する）リンクがアセットパブリッシャーに追加されます。](./configuring-asset-publisher-subscriptions/images/02.png)
 
@@ -41,7 +41,7 @@ RSSフィードはLiferay Portal 7.2以降では廃止予定であり、デフ�
 
 2.  *[コンテンツとデータ]* 見出しの下にある*[Webコンテンツ]* を選択します。
 
-3.  *[システムスコープ]* → *[管理]* タブで、*[フィードを表示]* ボックスをオンにします。 廃止予定のアプリの詳細は、[こちらの記事](TODO:deprecated-apps)を参照してください。
+3.  *[システムスコープ]* → *[管理]* タブで、*[フィードを表示]* ボックスをオンにします。 廃止予定のアプリの詳細は、 [こちらの記事](TODO:deprecated-apps) を参照してください。
 
     ![システム設定でRSSフィードを有効にします。](./configuring-asset-publisher-subscriptions/images/04.png)
 
@@ -53,7 +53,7 @@ RSSフィードはLiferay Portal 7.2以降では廃止予定であり、デフ�
 
     ![RSS購読は、RSSフィードを購読者のRSSリーダーに送信します。](./configuring-asset-publisher-subscriptions/images/05.png)
 
-7.  *[表示設定]* タブ → [*[設定と有効化]* セクション](./configuring-display-settings.md#set-and-enable-options)で、*[変更通知を受け取る（購読する）]* 機能を有効にします (有効になっていない場合)。 ユーザーは*RSS*リンクをクリックしてRSSフィードを購読できます。
+7.  *[表示設定]* タブ → [* [設定と有効化]* セクション](./configuring-display-settings.md#set-and-enable-options) で、*[変更通知を受け取る（購読する）]* 機能を有効にします (有効になっていない場合)。 ユーザーは*RSS*リンクをクリックしてRSSフィードを購読できます。
 
 ![RSS購読を有効にすると、アセットパブリッシャーにRSSリンクが追加されます。](./configuring-asset-publisher-subscriptions/images/06.png)
 

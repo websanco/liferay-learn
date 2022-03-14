@@ -19,10 +19,10 @@ Liferay Portalインスタンス内の複数のサイトや組織で使用する
 
 2.  *[メンバー]* → *[チーム]* の順に選択します。
 
-    ![プロダクトメニューの[メンバー]見出しからチームを作成します。](./creating-teams-for-sites/images/01.png)
+    ![プロダクトメニューの [メンバー]見出しからチームを作成します。](./creating-teams-for-sites/images/01.png)
 
     ```{note}
-    *サイトメンバーシップ*アプリ（*メンバー*タブにもある）で、*ユーザー*、*組織*、*ユーザーグループ*などの他のサイトメンバーシップグループを設定できます。 サイトメンバーシップの仕組みの詳細は、 [Changing Site Membership Type](../../site-settings/site-users/changing-site-membership-type.md) を参照してください。
+    *サイトメンバーシップ*アプリ（*メンバー*タブにもある）で、*ユーザー*、*組織*、*ユーザーグループ*などの他のサイトメンバーシップグループを設定できます。 サイトメンバーシップの仕組みの詳細は、 [サイトメンバーシップタイプの変更](../../site-settings/site-users/changing-site-membership-type.md) を参照してください。
     ```
 
 3.  *[チームを追加]* アイコン（![Add Team](../../../images/icon-add.png)）をクリックします。
