@@ -6,7 +6,9 @@ Contents
    :includehidden:
    :maxdepth: 6
 
-   fundamentals.md
+   7.2.md
+   7.3.md
+   7.4.md
 
 Indices and tables
 ==================
