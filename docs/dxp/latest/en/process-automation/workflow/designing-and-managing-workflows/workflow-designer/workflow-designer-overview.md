@@ -2,12 +2,12 @@
 
 > Subscribers
 
-The Process Builder's workflow designer is a graphical interface for creating workflow process definitions. The convenient drag and drop interface makes workflow design easier than writing XML definitions by hand. It's accessed in the Control Panel &rarr; Workflow &rarr; Process Builder.
+The Process Builder's workflow designer is a graphical interface for creating workflow process definitions. The convenient drag and drop interface makes workflow design easier than [writing XML definitions by hand](../../developer-guide/crafting-xml-workflow-definitions). It's accessed in the Control Panel &rarr; Workflow &rarr; Process Builder.
 
 ![Drag and drop nodes onto the designer canvas.](./workflow-designer-overview/images/01.png)
 
 ```{tip}
-Alternately, you can write or upload XML definitions from the Source View in the Process Builder. See [Managing Workflows](../managing-workflows.md#uploading-a-new-workflow-definition).
+Alternatively, you can write or upload XML definitions from the Source View in the Process Builder. See [Managing Workflows](../managing-workflows.md#uploading-a-new-workflow-definition).
 ```
 
 The workflow designer supports all [workflow node](./workflow-nodes.md) types:
@@ -47,7 +47,7 @@ A workflow process's text is experienced by Users in these ways:
 - Workflow participants (e.g., workflow task assignees) see the Node and Transition labels while managing their workflow content (e.g., in My Workflow Tasks).
 
 <!-- TODO: adjust this update number as needed -->
-As of Liferay 7.4 U16, these textual items are all translatable.
+As of Liferay 7.4 U20, the Workflow text that appears in the UI is translatable.
 
 To translate the workflow,
 
@@ -55,7 +55,7 @@ To translate the workflow,
 1. If it's a new workflow connect the start node to the end node with a [transition](./workflow-transitions.md).
 1. All of the localizable fields were created in the instance's default language. To begin translating, click the Language Selector near the workflow's title field:
 
-![]()
+   ![Use the language selector to choose a translation language.](./workflow-designer-overview/images/02.png)
 
 1. Select the language to begin translating.
 1. Go through the workflow and translate the node labels, transition labels, and the workflow title.

@@ -4,7 +4,7 @@
 
 Using the workflow designer, users can configure Workflow Actions and notifications for each node.
 
-Actions are very adaptable and you can specify when the Action occurs: before entering the node, after exiting a node, or once a task node is assigned. For example, when a reviewer rejects an Web Content article, a Workflow Action sets the asset's status as _Pending_ and automatically reassigns the article to the original author.
+Actions are very adaptable and you can specify when the Action occurs: before entering the node, after exiting a node, or once a task node is assigned. For example, when a reviewer rejects a Web Content article, a Workflow Action sets the asset's status as _Pending_ and automatically reassigns the article to the original author.
 
 ![You can add an Action to a Task node.](./configuring-workflow-actions-and-notifications/images/01.png)
 
@@ -18,7 +18,7 @@ In the Single Approver definition, the two [Task nodes (Review and Update)](./cr
 
 ## Adding Actions
 
-Add a Reject _Action_ to the _Update_ Task node if the submission needs more work. The Reject Action contains a Groovy script which, when executed, sets the asset's status as _denied_ then _pending_.
+If you're creating the Single Approver workflow definition, you must add a Reject _Action_ to the _Update_ Task node. This Reject Action contains a Groovy script which, when executed, sets the asset's status as _denied_ then _pending_.
 
 Follow the steps below:
 

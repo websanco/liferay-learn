@@ -56,7 +56,7 @@ You'll create the workflow in 4 steps:
    * **Execution Type:** On Exit
    * **Recipient Type:** Asset Creator 
 
-1. Click the back arrow (![Back](../../../../images/icon-angle-left.png) (or _Save_ if using an earlier version of the Workflow Designer) when finished with the notifications.
+1. Click the back arrow (![Back](../../../../images/icon-angle-left.png)) or _Save_ (if using an earlier version of the Workflow Designer) when finished with the notifications.
 1. Add the _Assignments_. You can assign the review task to a Role, Role Type, a specific User, or a Resource Action. In this example, assign the review Task to a Role Type. Select these Roles, clicking _New Section_ each time you must add a new Role:
 
    * Asset Library Role Type:
@@ -103,9 +103,9 @@ You can also assign the Task node to a Resource Action instead of another user o
    * **Execution Type:** On Assignment
    * **Recipient Type:** Task Assignees
 
-1. Click the back arrow (![Back](../../../../images/icon-angle-left.png) (or _Save_ if using an earlier version of the Workflow Designer) when finished with the notification.
+1. Click the back arrow (![Back](../../../../images/icon-angle-left.png)) or _Save_ (if using an earlier version of the Workflow Designer) when finished with the notification.
 1. Click on _Assignments_. Select _Asset Creator_. 
-1. Click the back arrow (![Back](../../../../images/icon-angle-left.png) (or _Save_ if using an earlier version of the Workflow Designer) when finished with the assignment.
+1. Click the back arrow (![Back](../../../../images/icon-angle-left.png)) or _Save_ (if using an earlier version of the Workflow Designer) when finished with the assignment.
 1. Now add _Actions_:
 
    * **Name:** reject
@@ -119,7 +119,7 @@ You can also assign the Task node to a Resource Action instead of another user o
      ```
    * Leave the rest of the defaults (e.g., Execution type _On Entry_).
 
-1. Click the back arrow (![Back](../../../../images/icon-angle-left.png) (or _Save_ if using an earlier version of the Workflow Designer) when finished with the action.
+1. Click the back arrow (![Back](../../../../images/icon-angle-left.png)) or _Save_ (if using an earlier version of the Workflow Designer) when finished with the action.
 1. Make sure nothing is selected on the palette; move your mouse pointer to the edge of the _update_ node. Drag a connector from the _update_ node back to the _review_ node. 
 1. Name the new connector _resubmit_. 
 1. Save the workflow definition.

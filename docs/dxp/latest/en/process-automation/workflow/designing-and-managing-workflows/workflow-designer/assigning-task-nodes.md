@@ -10,7 +10,7 @@ Task nodes require interaction by people. To alert the right people and associat
 - Resource Actions
 - Specific Users
 
-Additionally, you can write a [script](../../developer-guide/using-the-script-engine-in-workflow.md) to define the assignment (see below). In the example below, the task has been assigned to the Portal Content Reviewer Role.
+Additionally, you can write a [script](../../developer-guide/using-the-script-engine-in-workflow.md) to define the assignment (see [Scripted Assignments](#scripted-assignments)).
 
 ![You can add an Assignment to a Task node.](./assigning-task-nodes/images/01.png)
 
@@ -52,7 +52,7 @@ Use all upper case letters for resource action names. To enter more than one, us
 
 You can determine the probable resource action name from the permissions screen for that resource. For example, in Message Boards, one of the permissions displayed on that screen is *Add Discussion*. Convert that to all uppercase and replace the space with an underscore, and you have the action name.
 
-### Scripted Assignments
+## Scripted Assignments
 
 You can also use a script to manage the assignment. Here's the script for the Review task assignment in the Scripted Single Approver workflow definition (`single-approver-definition-scripted-assignment.xml`):
 

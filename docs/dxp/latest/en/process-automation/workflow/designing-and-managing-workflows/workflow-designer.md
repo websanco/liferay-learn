@@ -14,7 +14,7 @@ workflow-designer/workflow-transitions.md
 ```
 
 ```{note}
-The Workflow Designer user interface was refreshed in a Liferay 7.4 update. The look and feel of the new builder is improved, and the user experience is more intuitive. The documentation is updated based on the new interface. The steps presented in these sections may need to be adjusted if you are using the earlier Workflow Designer on Liferay 7.3 and below.
+The Workflow Designer's user interface was refreshed in Liferay DXP 7.4 Update 20 <!--revise when known -->. The look and feel of the new builder is improved and the user experience is more intuitive. The documentation is updated based on the new interface. The steps presented in these sections may need to be adjusted if you are using the earlier Workflow Designer on Liferay 7.3 and below.
 
 ![Compare the older designer with the newr one.](./workflow-designer/images/03.png)
 ```
