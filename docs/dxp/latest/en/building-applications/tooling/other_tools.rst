@@ -5,6 +5,7 @@ Other Tools
    :maxdepth: 4
 
    other-tools/fragments-cli.md
+   other-tools/liferay-cli-tool.md
    other-tools/liferay-js-generator.md
    other-tools/liferay_npm_bundler.rst
    other-tools/intellij-plugin.md
