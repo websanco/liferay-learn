@@ -8,6 +8,10 @@ An Object layout defines how its fields and relationships are organized and disp
 The automatically generated layout does not display Object relationships. To display relationships, you must create a custom layout with a dedicated relationships tab.
 ```
 
+```{note}
+Custom layouts can only be added to custom Objects. They cannot be added for System Objects.
+```
+
 ## Adding Object Entry Layouts
 
 1. Open the *Objects* portlet and click on the desired *Object*.

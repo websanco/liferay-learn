@@ -34,6 +34,10 @@ You can add and configure relationships for custom Objects. After creation, user
 You can add, edit, and remove layouts for custom Objects at any time. Custom layouts must include all of an Object's required fields in order to be set as the Object's default layout. See [Designing Object Layouts](./designing-object-layouts.md) for more information.
 <!--TASK: Replace with following text once system Objects are supported, "You can add, edit, and remove layouts for both system and custom Objects at any time. Custom layouts must include all of an Object's required fields in order to be set as the Object's default layout. See [Designing Object Layouts](./designing-object-layouts.md) for more information."-->
 
+### Views
+
+You can add, edit, and remove views for custom Objects at any time. These views define tables for displaying entries in an Object's application page. See [Designing Object Views](./designing-object-views.md) for more information.
+
 ## Activating and Deactivating Objects
 
 By default, custom Objects are *Activated* when they're first [published](./creating-objects.md#publishing-object-drafts). This makes the application available for use as soon as it's created. While active, the Object and its entries can be accessed via the Liferay UI and Headless API calls. You can, however, deactivate custom Objects at any time. 

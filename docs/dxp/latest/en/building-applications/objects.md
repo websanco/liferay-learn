@@ -10,6 +10,7 @@ objects/deploying-object-widgets-to-sites.md
 objects/displaying-object-entries.md
 objects/enabling-workflows-for-objects.md
 objects/using-picklists.md
+objects/understanding-object-field-types.md
 objects/understanding-object-integrations.md
 objects/objects-application-permissions.md
 ```
@@ -18,7 +19,9 @@ objects/objects-application-permissions.md
 
 With Liferay Objects, you can build and deliver applications without having to write code or deploy modules, yet these applications are built on and integrated with Liferay's core frameworks. Quickly develop and manage flexible solutions that adapt Liferay DXP to your business needs while maintaining a seamless user experience.
 
-When creating Objects, you can add data [fields](./objects/creating-and-managing-objects/adding-fields-to-objects.md) and define complex [relationships](./objects/creating-and-managing-objects/defining-object-relationships.md) between Object entries. You can then design [layouts](./objects/creating-and-managing-objects/designing-object-layouts.md) to determine how fields and relationships are displayed when creating or editing entries. Before publishing, you can scope each Object's data to Company or Site and determine where it's displayed in the Liferay UI. <!--TASK: Add in Views once implemented-->
+When creating Objects, you can add data [fields](./objects/creating-and-managing-objects/adding-fields-to-objects.md) and define complex [relationships](./objects/creating-and-managing-objects/defining-object-relationships.md) between Object entries. You can then design [layouts](./objects/creating-and-managing-objects/designing-object-layouts.md) to determine how fields and relationships are displayed when creating or editing entries. Additionally, you can design [views](./objects/creating-and-managing-objects/designing-object-views.md) to determine how an Object's entries are displayed in its application page.
+
+Before publishing, you can scope each Object's data to Company or Site and determine where it's displayed in the Liferay UI.
 
 From the time of creation, all Objects are fully integrated with Liferay's [core frameworks](./core-frameworks.md) to provide a unified experience across the platform and leverage all of Liferay's capabilities. This includes automatically generating [Headless REST APIs](./objects/understanding-object-integrations/headless-framework-integration.md) for every Object, so you can interact with your Objects through defined endpoints. These APIs can also be used with the [Job Scheduler](./core-frameworks/dispatch-framework/using-dispatch.md) integration to configure Talend jobs to sync Object data dynamically with external systems.
 
