@@ -55,7 +55,7 @@ Once started, follow these steps to add the `/o/c/*` URL pattern to the *Default
 
 ## Adding Data to the Object using Headless APIs
 
-1. Open the Liferay *API Explorer* (i.e., `localhost:8080/o/api`), select the *REST Services* drop-down menu, and choose `c/x3j8objects`.
+1. Open the Liferay *API Explorer* (i.e., `localhost:8080/o/api`), click the *REST Applications* drop-down menu, and choose `c/x3j8objects`.
 
 1. Enter this data into the request body for the batch `POST` API:
 

@@ -14,7 +14,7 @@ With the REST APIs, you can perform both single and batch CRUD operations for Ob
 
 ![Each Object appears under REST Applications.](./headless-framework-integration/images/01.png)
 
-All endpoints and Java methods use the Object's name. In the following examples, replace `ObjectName`/`objectName` with the name of your Object.
+All endpoints and Java methods use the Object's name. In the following examples, replace `ObjectName` and `objectName` with the name of your Object.
 
 See [Consuming REST Services](../../../headless-delivery/consuming-apis/consuming-rest-services.md) for more information.
 
