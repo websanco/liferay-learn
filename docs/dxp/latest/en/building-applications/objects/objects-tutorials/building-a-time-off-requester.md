@@ -51,7 +51,7 @@ You can now use the Picklist as a field in the Time Off Request Object.
    | Start Date | `startDate` | Date | n/a | &#10004; |
    | End Date | `endDate` | Date | n/a |  |
    | Department | `department` | Picklist | Department | &#10004; |
-   | Comments | `comments` | String | n/a |  |
+   | Comments | `comments` | Text | n/a |  |
 
    ![Add the Start Date, End Date, Department, and Comments fields to the Object.](./building-a-time-off-requester/images/03.png)
 
@@ -59,7 +59,7 @@ You can now use the Picklist as a field in the Time Off Request Object.
 
    | Field | Value |
    | :--- | :--- |
-   | Name | Creation Sync |
+   | Action Name | Creation Sync |
    | When | On After Add |
    | Then | Webhook |
    | URL | Enter a test webhook URL from either your app or a site like, https://webhook.site. |
@@ -96,8 +96,8 @@ Next, you'll create an Employee Object and relate it to the Time Off Request Obj
 
    | Label | Field Name | Type | Required |
    | :--- | :--- | :--- | :--- |
-   | Name | `name` | String | &#10004; |
-   | Email | `email` | String | &#10004; |
+   | Name | `name` | Text | &#10004; |
+   | Email | `email` | Text | &#10004; |
 
    ![Add the Name and Email fields to the Object.](./building-a-time-off-requester/images/05.png)
 

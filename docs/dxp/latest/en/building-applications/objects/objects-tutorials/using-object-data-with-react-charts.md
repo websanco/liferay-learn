@@ -46,7 +46,7 @@ Once started, follow these steps to add the `/o/c/*` URL pattern to the *Default
 
    | Label | Field Name | Type | Required |
    | :--- | :--- | :--- | :--- |
-   | Label | label | String | &#10004; |
+   | Label | label | Text | &#10004; |
    | Value | value | Integer | &#10004; |
 
 1. Click the *Details* tab and click *Publish*.

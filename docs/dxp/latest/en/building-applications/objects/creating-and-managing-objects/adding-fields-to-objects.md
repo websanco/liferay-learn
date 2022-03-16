@@ -2,7 +2,7 @@
 
 > Available: Liferay DXP/Portal 7.4+
 
-Fields are data definitions that represent database columns. They store different [types of values](#field-type-reference) for Liferay Objects. You can add fields to any published or unpublished Object, including both system and custom Objects.
+Fields are data definitions that represent database columns. They store different [types of values](#field-types-ui-reference) for Liferay Objects. You can add fields to any published or unpublished Object, including both system and custom Objects.
 
 When an Object is [published](./creating-objects.md#publishing-object-drafts), an initial database table is created with the draft's data definitions. This table includes all Object fields and relationships that exist at the time of publishing. Fields and relationships added to an Object after publishing are added to a side table (i.e., `[Initial_Table_Name]_x`).
 
@@ -32,9 +32,13 @@ Follow these steps to add a new field to an Object:
    The following field names are reserved by Liferay and cannot be used for custom fields: `companyId`, `createDate`, `groupId`, `id`, `lastPublishDate`, `modifiedDate`, `status`, `statusByUserId`, `statusByUserName`, `statusDate`, `userId`, `userName`. If users attempt to create a field using one of these field names, Liferay displays an error message.
    ```
 
-1. Select a field *Type*. See [Field Type Reference](#field-type-reference) for more information.
+1. Select a field *Type*. See [Field Type Reference](#field-types-ui-reference) for more information.
 
 1. Determine whether or not the field is *Mandatory*.
+
+   ```{note}
+   Mandatory boolean fields require a true value from end users.
+   ```
 
 1. Click on *Save*.
 
@@ -42,18 +46,21 @@ After saving fields to an Object draft, you can select them to define whether th
 
 ![After saving the field, determine whether or not it is searchable.](./adding-fields-to-objects/images/02.png)
 
-## Field Type Reference
+## Field Types UI Reference
+
+> For Liferay DXP 7.4 U10
 
 | Type | Description |
 | :--- | :--- |
-| BigDecimal | A high precision numerical value with a decimal point that is used for calculations |
-| Boolean | A logical, binary value of either *true* or *false* |
-| Date | A value indicating a specific day, month, and year |
-| Double | A 64 bit numerical value with a floating point |
-| Integer | A 32 bit numerical value without a floating point |
-| Long | A 64 bit numerical value without a floating point |
-| Picklist | A string value stored in a [picklist](../using-picklists.md) |
-| String | A sequence of characters (e.g., letters, numbers, punctuation) |
+| Boolean | Stores true or false values |
+| Date | Stores date values |
+| Text (*previously String*) | Stores simple text value up to 280 characters |
+| Long Text (*previously Clob*) | Stores a text box value that supports up to 65,000 characters |
+| Picklist | Stores a [Picklist](../using-picklists.md) string value |
+| Integer | Stores an integer up to 9 digits in length |
+| Long Integer (*previously Long*) | Stores a large integer up to 19 digits in length |
+| Decimal (*previously Double*) | Stores a decimal number value that supports fractional portions |
+| Precision Decimal (*Previously BigDecimal*) | Stores a high-precision decimal number without rounding |
 
 ## Additional Information
 

@@ -84,16 +84,19 @@ Attempting to publish a form with invalid mappings displays an error message tha
 
 ## Field Compatibility Reference
 
+> For Liferay DXP 7.4 U10
+
 | Object Field Types | Compatible Form Fields |
 | :--- | :--- |
-| BigDecimal | Numeric |
-| Boolean | Boolean |
+| Boolean | Boolean (checkbox) |
 | Date | Date |
-| Double | Numeric |
-| Integer | Numeric |
-| Long | Numeric |
+| Text | Text, Multiple Selection, Grid, Color |
+| Long Text (*previously Clob*) | Text |
 | Picklist | Select from List, Single Selection |
-| String | Text, Multiple Selection, Grid, Color |
+| Integer | Numeric &rarr; Integer |
+| Long Integer (*previously Long*) | Numeric &rarr; Integer |
+| Decimal (*previously Double*) | Numeric &rarr; Decimal |
+| Precision Decimal (*previously BigDecimal*) | Numeric &rarr; Decimal |
 
 ## Additional Information
 
