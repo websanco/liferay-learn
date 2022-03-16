@@ -75,7 +75,7 @@ From here, you can click on the process to complete your assigned task, editing,
 
 ## Tracking a Kaleo Forms Entry in the Workflow
 
-In Liferay 7.4 a new feature was added to the Kaleo Form Admin application's UI: you can track each submitted form's progress through the workflow in a diagram view:
+In Liferay 7.4 Update 15, a new feature was added to the Kaleo Form Admin application's UI: you can track each submitted form's progress through the workflow in a diagram view:
 
 ![Track each Kaleo Form through the workflow.](./kaleo-forms/images/07.png)
 
