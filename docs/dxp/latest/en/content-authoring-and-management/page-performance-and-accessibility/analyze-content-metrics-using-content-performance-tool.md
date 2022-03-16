@@ -34,13 +34,13 @@ The [Engagement](#analyzing-content-engagement) and [Traffic Channels](#analyzin
 Even when your content is not translated into a specific language, you may find statistics for that language if users access the content using that language's URL.
 ```
 
-![The top area in the Content Performance tool provides general information about your content.](./analyze-content-metrics-using-content-performance-tool/images/05.png)
+![The top area in the Content Performance tool provides general information about your content.](./analyze-content-metrics-using-content-performance-tool/images/01.png)
 
 ### Using the Time Span Selector
 
 Users can select a time span (Last 7 Days / Last 30 Days) from the dropdown and then navigate to previous and next periods.The Time Span Selector affects all the charts (Engagement and Traffic Channels).
 
-![Using the Time Span Selector ](./analyze-content-metrics-using-content-performance-tool/images/timespandelectoramarelo.png)
+![Using the Time Span Selector ](./analyze-content-metrics-using-content-performance-tool/images/02.png)
 
 ```{note}
 If you select a different time span, the charts shows a spinner while fetching the data for the time span selected.
@@ -48,7 +48,7 @@ If you select a different time span, the charts shows a spinner while fetching t
 
 The time span selector is also included in the detail view of the panel for the *Referral* and *Social traffic*. Now the user can retrieve referral and social traffic data for the time span selected (Last 7 Days / Last 30 Days) in the detail view. 
 
-![Time Span on the Detail View of the Panel ](./analyze-content-metrics-using-content-performance-tool/images/detailviewtimespanselector.png)
+![Time Span on the Detail View of the Panel ](./analyze-content-metrics-using-content-performance-tool/images/03.png)
 
 
 ## Analyzing Content Engagement
@@ -61,7 +61,7 @@ By default, the Engagement area shows the total number of views for the content,
 If the Engagement chart shows a zero value for a certain period, it means that the information could not be collected or analyzed for that period.
 ```
 
-![The Engagement area in the Content Performance tool provides Views information.](./analyze-content-metrics-using-content-performance-tool/images/07.png)
+![The Engagement area in the Content Performance tool provides Views information.](./analyze-content-metrics-using-content-performance-tool/images/04.png)
 
 ## Analyzing Traffic Channels
 
@@ -75,11 +75,11 @@ This part of the Content Performance sidebar provides information about the sour
 | Referral | Sources other than the search engines and same Page's domain |
 | Direct | Other or unknown sources |
 
-![The Search Engines Traffic area in the Content Performance tool provides information about your traffic channels.](./analyze-content-metrics-using-content-performance-tool/images/06.png)
+![The Search Engines Traffic area in the Content Performance tool provides information about your traffic channels.](./analyze-content-metrics-using-content-performance-tool/images/05.png)
 
 When you click one of the traffic channels (A), you can see extended information for the channel (B).
 
-![Click on the traffic channels to access additional channel details.](./analyze-content-metrics-using-content-performance-tool/images/02.png)
+![Click on the traffic channels to access additional channel details.](./analyze-content-metrics-using-content-performance-tool/images/06.png)
 
 The following table describes the metrics you can find in the Traffic Channels area:
 
