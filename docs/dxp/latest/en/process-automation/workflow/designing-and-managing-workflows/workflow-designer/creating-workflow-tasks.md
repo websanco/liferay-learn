@@ -6,11 +6,11 @@ The default [Single Approver Definition](https://github.com/liferay/liferay-lear
 
 ![The single approver definition has two task nodes.](./creating-workflow-tasks/images/01.png)
 
-Task nodes are often the most complex parts of a workflow definition. They can have Assignments which can assign the task to users or a Resource Action (see [Using Task Nodes](./assigning-task-nodes.md)).
+Task nodes are often the most complex parts of a workflow definition. They can have Assignments which can assign the task to users or a Resource Action (see [Assigning Task Nodes](./assigning-task-nodes.md)).
 
-Task nodes also contain Notifications and Actions--to which complexity can be added with [scripts](../../developer-guide/using-the-script-engine-in-workflow.md). See [Configuring Workflow Actions and Notifications](./configuring-workflow-actions-and-notifications.md).
+Task nodes also contain Notifications and Actions--both of which support [workflow scripts](../../developer-guide/using-the-script-engine-in-workflow.md). See [Configuring Workflow Actions and Notifications](./configuring-workflow-actions-and-notifications.md).
 
-When the review is finished and the approved transition is triggered, the workflow advances to the next node. In the Single Approver process, it simply moves to the Approved End node.
+When the review is finished and the approved transition is triggered, the workflow advances to the next node. In the Single Approver process, it moves to the Approved nd node.
 
 ## Creating the Single Approver Workflow
 
