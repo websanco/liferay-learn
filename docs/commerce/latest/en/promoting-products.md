@@ -1,5 +1,4 @@
-Promoting Products
-==================
+# Promoting Products
 
 ```{toctree}
 :maxdepth: 1
@@ -14,10 +13,38 @@ promoting-products/introduction-to-product-groups.md
 promoting-products/replacement-products.md
 ```
 
-```{raw} html
-:file: landingpage_template.html
-```
+::::{grid} 2
+:gutter: 3 3 3 3
 
-```{raw} html
-:file: promoting-products/landing.html
-```
+:::{grid-item-card}  Introduction to Discounts
+:link: ./promoting-products/introduction-to-discounts.md
+:::
+
+:::{grid-item-card}  Creating a Discount
+:link: ./promoting-products/creating-a-discount.md
+:::
+
+:::{grid-item-card}  Introduction to Promotions
+:link: ./promoting-products/introduction-to-promotions.md
+:::
+
+:::{grid-item-card}  Using the Promotion Base List
+:link: ./promoting-products/using-the-promotion-base-list.md
+:::
+
+:::{grid-item-card}  Creating a Promotion
+:link: ./promoting-products/creating-a-promotion.md
+:::
+
+:::{grid-item-card}  Promotion Base List Reference
+:link: ./promoting-products/promotion-base-list-reference.md
+:::
+
+:::{grid-item-card}  Introduction to Product Groups
+:link: ./promoting-products/introduction-to-product-groups.md
+:::
+
+:::{grid-item-card}  Replacement Products
+:link: ./promoting-products/replacement-products.md
+:::
+::::
