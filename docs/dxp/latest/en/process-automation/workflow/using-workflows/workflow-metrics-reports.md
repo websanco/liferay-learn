@@ -92,7 +92,7 @@ Each item has an Actions menu (![Actions](../../../images/icon-actions.png)) wit
 
 **Update Due Date:** If the item should have a new due date, use the Update Task Due Date modal to reconfigure it.
 
-**Track Workflow:** [Added in 7.4 Update 15] Open a diagramatic view of the item's progress in the workflow.
+**Track Workflow:** [Added in 7.4 Update 1] Open a diagramatic view of the item's progress in the workflow.
 
 ![See where the item is in the overall flow of the workflow process.](./workflow-metrics-reports/images/15.png)
 
