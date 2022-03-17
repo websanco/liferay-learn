@@ -67,4 +67,16 @@ To see how storage adapters work, deploy an example and then add some form data 
 1. Click the *Add* button (![Add](./../../../images/icon-add.png)) to open the Form Builder.
 
 1. Add the _C2P9 Slider_ field to the form.
-ERRORS!
+
+1. You can fill out the Label, Predefined Value, and Help Text, as well as make the field Required. These settings match what many of the [out of the box fields](../creating-and-managing-forms/forms-field-types-reference.md) provide as basic settings.
+
+1. Publish the form and go submit a record using the slider field.
+
+![Use the slider to set a value between 0 and 100.](./writing-a-custom-forms-field-type/images/02.png)
+
+## Understand the Form Field's Code
+
+Form Field Types in Liferay contain Java and JavaScript source code. In the C2P9 Slider field,
+
+- `C2P9DDMFormFieldType.java` provides a `DDMFormFieldType` implementation (by extending the abstract class `BaseDDMFormFieldType` and defining its metadata in the OSGi Component.
+- `Slider.es.js` provides the JavaScript logic for the field.
