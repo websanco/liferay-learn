@@ -1,9 +1,9 @@
 # Liferay CLI Tool
 
-You can create applications for your Liferay instance using plain JavaScript, or using frameworks including [React](https://reactjs.org/), [Angular](https://angular.io/), and [Vue.js](https://vuejs.org/). The Liferay CLI tool allows you to generate, build, and deploy projects by invoking a simple `liferay` command.
+The Liferay CLI tool makes it easy to create [Angular](https://angular.io/), JavaScript, [React](https://reactjs.org/), shared bundle, or [Vue.js](https://vuejs.org/) projects to interface with Liferay's REST and GraphQL services. Using a `liferay` command, you can generate, build, and deploy projects. 
 
 ```{note}
-The Liferay CLI tool replaces the old Yeoman generators used to create JavaScript application projects for Liferay DXP 7.4+. However, if you want to create projects for previous versions, then you must invoke the older Yeoman generators using `yo liferay-js`.
+The Liferay CLI tool replaces the old Yeoman generators used to create JavaScript application projects for Liferay DXP 7.4+. However, if you want to create projects for previous versions, you must invoke the older Yeoman generators using `yo liferay-js`.
 ```
 
 ## Installing the CLI Tool
@@ -14,36 +14,38 @@ Run this command to install the CLI tool on your local system:
 npm install -g @liferay/cli
 ```
 
-This installs the CLI tool so you can run `liferay` commands from your command line.
-
 ## Generating a Project
 
 The Liferay CLI tool creates projects with a different architecture from the Yeoman generators. This allows you to run additional commands within your project using the Liferay CLI tool.
 
 Use the `liferay new` command to create a new [Remote App](../remote-apps/creating-a-liferay-remote-app.md) or Liferay Platform project:
 
-1. Open a terminal in the directory you want to create the project in, and run this command (replacing `project-name` with your choice of name):
+1. Open a terminal and navigate to where you want to create the project. Run this command:
 
 	```bash
-	liferay new project-name
+	liferay new [project-name]
 	```
 
 1. Enter a name for your new project at the prompt. This name is used as the ID.
 
 1. Choose whether to create a Remote App project or a Liferay Platform project.
 
-    ![Use the arrow keys and press Enter to select a Remote App or Liferay Platform project.](./liferay-cli-tool/images/01.png)
+<!-- What is the difference between a Remote App project and a Platform project? -Rich -->
+
+   ![Use the arrow keys and press Enter to select a Remote App or Liferay Platform project.](./liferay-cli-tool/images/01.png)
 
 1. Enter a human readable description of the new project at the prompt. The default value is "New Project".
 
-1. Choose the target platform for the project. You can select either a Liferay Portal or Liferay DXP target platform for versions 7.1+, or you can select an option to use Liferay Portal CE but not sharing the platform's packages.
+1. Choose the target platform for the project. You can select a Liferay Portal or Liferay DXP target platform for versions 7.1+, or you can select an option to use Liferay Portal CE but not sharing the platform's packages.
+
+<!-- What does it mean not to share the platform's packages, and how is this different from selecting a Liferay Portal target platform? -Rich -->
 
 1. Choose the type of project to create from the given options in the prompt.
 
     ![Use the arrow keys and press Enter to select the type of project to create.](./liferay-cli-tool/images/02.png)
 
     ```{note}
-    If you chose to create a Remote App project, then you can only choose the React type.
+    If you chose to create a Remote App project, you can only choose the React type.
     ```
 
 1. **If you chose to create a Liferay Platform project:** choose a category for your widget. The category determines how it is sorted in the list of widgets when you edit a page. The default value is `category.sample` (for the "Sample" widget category), but you can change it to any custom value.
@@ -74,11 +76,11 @@ Use this command to deploy the JAR file stored in your project's `dist/` directo
 liferay deploy
 ```
 
-When you run this task for the first time, it asks for your Liferay installation's directory so it can deploy to it, and stores the answer in `.liferay.json` file in your project's folder. Change the directory configured in this file to change where this command deploys to.
+When you run this task for the first time, it asks for your Liferay installation's directory so it can deploy to it, and stores the answer in a `.liferay.json` file in your project's folder. Change the directory configured in this file to change the deployment location.
 
 ## Clearing Out a Project's Build Files
 
-You may need to clean files from previous builds when out-of-date artifacts would interfere with your builds. The `clean` command deletes the `build/` and `dist/` created by the [`build`](#building-a-project) and [`deploy`](#deploying-a-project) commands.
+Use the `clean` command to delete the `build/` and `dist/` created by the [`build`](#building-a-project) and [`deploy`](#deploying-a-project) commands when out-of-date artifacts would interfere with your builds.
 
 Run this command from your project's directory to remove these folders:
 
@@ -91,7 +93,7 @@ liferay clean
 A project must be structured correctly for you to run CLI tool commands on it. Projects made with the old Yeoman generators (using the `yo liferay-js` command) must first be upgraded to the new architecture.
 
 ```{warning}
-The `upgrade-project` command only upgrades parts of your project that the Yeoman generator used to create it originally configured. Other changes or customizations you made to your project are left as-is. Back up your project before you attempt to upgrade it, and be ready to make manual changes in case the upgrade conflicts with your own changes.
+The `upgrade-project` command only upgrades parts of your project that the Yeoman generator created. Other changes or customizations you made to your project are left as-is. Back up your project before you attempt to upgrade it and be ready to make manual changes in case the upgrade conflicts with your own changes.
 ```
 
 Run this command to upgrade a React, Angular, or Vue.js project made with the Yeoman generators to work with the Liferay CLI tool:
@@ -116,7 +118,7 @@ Run this command from the project's directory to adapt the project created with 
 liferay adapt
 ```
 
-The CLI tool adapts your project based on which framework it detects in your project's dependencies. It looks for these specific dependencies (listed as a `dependency` or `devDependency`) in your project's `package.json` file:
+The CLI tool adapts your project based on the framework it detects in your project's dependencies. It looks for these specific dependencies (listed as a `dependency` or `devDependency`) in your project's `package.json` file:
 
 * For **React**: `react-scripts`
 
