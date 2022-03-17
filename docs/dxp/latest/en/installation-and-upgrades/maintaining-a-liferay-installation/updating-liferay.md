@@ -1,6 +1,7 @@
 # Updating Liferay
 
-Use Bundle Releases to stay up to date with the latest Liferay features and security releases. See [Updating Previous Versions of Liferay](./updating-previous-versions-of-liferay.md) for versions before Liferay DXP 7.3 SP3+ and 7.4 GA1+.
+Update your Liferay installation with Bundle Releases. The latest features, security releases, as well as library updates are all delivered together in one bundle.
+See [Updating Previous Versions of Liferay](./updating-previous-versions-of-liferay.md) for versions before Liferay DXP 7.3 SP3+ and 7.4 GA1+.
 
 ```{warning}
 **Always** [back up](./backing-up.md) your database and installation before updating Liferay DXP/Portal.
