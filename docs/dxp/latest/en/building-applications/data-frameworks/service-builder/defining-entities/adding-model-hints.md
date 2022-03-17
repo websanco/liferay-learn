@@ -1,8 +1,8 @@
 # Adding Model Hints
 
-Once you've used Service Builder to define model entities, you may want to refine how users enter that data. Model hints specify entity data restrictions and other formatting. For example, model hints can define a calendar field with selectable dates only in the future. 
+Once you've used Service Builder to define model entities, you may want to refine how users enter that data. Model hints specify entity data restrictions and other formatting. For example, model hints can define a calendar field with selectable dates only in the future.
 
-You define model hints in a file called `portlet-model-hints.xml`. The `portlet-model-hints.xml` file goes in the service module's `src/main/resources/META-INF` folder. 
+You define model hints in a file called `portlet-model-hints.xml`. The `portlet-model-hints.xml` file goes in the service module's `src/main/resources/META-INF` folder.
 
 Model hints define two things:
 
@@ -10,7 +10,7 @@ Model hints define two things:
 
 1. The size of database columns
 
-As Liferay renders your form fields, it customizes the form's input fields based on your configuration. 
+As Liferay renders your form fields, it customizes the form's input fields based on your configuration.
 
 ```{note}
 If you chose Spring as the dependency injector, Service Builder generates a number of XML configuration files in your service module's ``src/main/resources/META-INF`` folder. Service Builder uses most of these files to manage Spring and Hibernate configurations. Don't modify the Spring or Hibernate configuration files; changes to them are overwritten when Service Builder runs. You can however, safely edit the ``portlet-model-hints.xml`` file.
@@ -62,13 +62,13 @@ As an example, consider the [Bookmarks app service module's](https://repository.
 </model-hints>
 ```
 
-The root-level element is `model-hints`. Model entities are represented by `model` sub-elements of the `model-hints` element. Each `model` element must have a `name` attribute specifying the fully-qualified class name. Models have `field` elements representing their entity's columns. Finally, `field` elements must have a name and a type. Each `field` element's name and type maps to the name and type specified for the entity's column in the service module's `service.xml` file. Service Builder generates all these elements for you, based on the `service.xml`. 
+The root-level element is `model-hints`. Model entities are represented by `model` sub-elements of the `model-hints` element. Each `model` element must have a `name` attribute specifying the fully-qualified class name. Models have `field` elements representing their entity's columns. Finally, `field` elements must have a name and a type. Each `field` element's name and type maps to the name and type specified for the entity's column in the service module's `service.xml` file. Service Builder generates all these elements for you, based on the `service.xml`.
 
-To add hints to a field, add a `hint` child element. For example, you can add a `display-width hint` to specify the pixel width to use in displaying the field. The default pixel width is `350`. To show a `String` field with 50 pixels, you could nest a `hint` element named `display-width` and give it a value of `50`. 
+To add hints to a field, add a `hint` child element. For example, you can add a `display-width hint` to specify the pixel width to use in displaying the field. The default pixel width is `350`. To show a `String` field with 50 pixels, you could nest a `hint` element named `display-width` and give it a value of `50`.
 
-To see the effect of a hint on a field, [run Service Builder](../service-builder-basics/generating-model-persistence-and-service-code.html#generate-the-persistence-code) again and [redeploy your module](../../../../liferay-internals/fundamentals/module-projects.html#deploy-a-simple-module). Note that changing `display-width` doesn't limit the number of characters a user can enter into the `name` field; it only controls the field's width in the AlloyUI input form. 
+To see the effect of a hint on a field, [run Service Builder](../service-builder-basics/generating-model-persistence-and-service-code.md#generate-the-persistence-code) again and [redeploy your module](../../../../liferay-internals/fundamentals/module-projects.md#deploy-a-simple-module). Note that changing `display-width` doesn't limit the number of characters a user can enter into the `name` field; it only controls the field's width in the AlloyUI input form. 
 
-To configure the maximum size of a model field's database column (i.e., the maximum number of characters that can be saved for the field), use the `max-length` hint. The default `max-length` value is `75` characters. If you want the `name` field to persist up to 100 characters, add a `max-length` hint  to that field: 
+To configure the maximum size of a model field's database column (i.e., the maximum number of characters that can be saved for the field), use the `max-length` hint. The default `max-length` value is `75` characters. If you want the `name` field to persist up to 100 characters, add a `max-length` hint  to that field:
 
 ```xml
 <field name="name" type="String">
@@ -77,7 +77,7 @@ To configure the maximum size of a model field's database column (i.e., the maxi
 </field>
 ```
 
-Remember to run Service Builder and redeploy your project after updating the `portlet-model-hints.xml` file. 
+Remember to run Service Builder and redeploy your project after updating the `portlet-model-hints.xml` file.
 
 ## Model Hint Types
 
@@ -112,11 +112,11 @@ The aui taglib is fully supported and not related to AlloyUI (the JavaScript lib
 You can use a mix of Clay and aui tags in a form. Model hints, however, affect aui tags only.
 ```
 
-Note that Liferay has its own model hints file (`portal-model-hints.xml`). It's in `portal-impl.jar`'s `META-INF` folder. This file contains many hint examples, so you can reference it when creating `portlet-model-hints.xml` files. 
+Note that Liferay has its own model hints file (`portal-model-hints.xml`). It's in `portal-impl.jar`'s `META-INF` folder. This file contains many hint examples, so you can reference it when creating `portlet-model-hints.xml` files.
 
 ## Default Hints
 
-You can use the `default-hints` element to define a list of hints to apply to every field of a model. For example, adding the following element inside a model element applies a `display-width` of 300 pixels to each field: 
+You can use the `default-hints` element to define a list of hints to apply to every field of a model. For example, adding the following element inside a model element applies a `display-width` of 300 pixels to each field:
 
 ```xml
 <default-hints>
@@ -166,7 +166,7 @@ You can apply a hint collection to a model field by referencing the hint collect
 </field>
 ```
 
-Suppose you want to use a couple of model hints in your project. Start by providing users with an editor for filling in their comment fields. To apply the same hint to multiple entities, define it as a hint collection. Then reference the hint collection in each entity. 
+Suppose you want to use a couple of model hints in your project. Start by providing users with an editor for filling in their comment fields. To apply the same hint to multiple entities, define it as a hint collection. Then reference the hint collection in each entity.
 
 To define a hint collection, add a `hint-collection` element inside the `model-hints` root element in your `portlet-model-hints.xml` file. For example:
 
@@ -186,6 +186,6 @@ To reference a hint collection for a specific field, add the `hint-collection` e
 </field>
 ```
 
-After defining hint collections and adding hint collection references, rebuild your services, redeploy your project, and check that the hints defined in your hint collection have taken effect. 
+After defining hint collections and adding hint collection references, rebuild your services, redeploy your project, and check that the hints defined in your hint collection have taken effect.
 
 Nice work! Now you can not only influence how your model's input fields are displayed, but you can also can set its database table column sizes. You can organize hints, insert individual hints directly into your fields, apply a set of default hints to all of a model's fields, or define collections of hints to apply at either of those scopes.
