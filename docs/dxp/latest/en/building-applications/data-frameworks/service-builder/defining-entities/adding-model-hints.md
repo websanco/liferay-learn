@@ -16,49 +16,70 @@ As Liferay renders your form fields, it customizes the form's input fields based
 If you chose Spring as the dependency injector, Service Builder generates a number of XML configuration files in your service module's ``src/main/resources/META-INF`` folder. Service Builder uses most of these files to manage Spring and Hibernate configurations. Don't modify the Spring or Hibernate configuration files; changes to them are overwritten when Service Builder runs. You can however, safely edit the ``portlet-model-hints.xml`` file.
 ```
 
-As an example, consider the [Bookmarks app service module's](https://repository.liferay.com/nexus/content/repositories/liferay-public-releases/com/liferay/com.liferay.bookmarks.service/) model hints file:
+As an example, consider the [Blogs app service module's](https://github.com/liferay/liferay-portal/blob/master/modules/apps/blogs/blogs-service/src/main/resources/META-INF/portlet-model-hints.xml) model hints file:
 
 ```xml
 <?xml version="1.0"?>
 
 <model-hints>
-    <model name="com.liferay.bookmarks.model.BookmarksEntry">
-        <field name="uuid" type="String" />
-        <field name="entryId" type="long" />
-        <field name="groupId" type="long" />
-        <field name="companyId" type="long" />
-        <field name="userId" type="long" />
-        <field name="userName" type="String" />
-        <field name="createDate" type="Date" />
-        <field name="modifiedDate" type="Date" />
-        <field name="folderId" type="long" />
-        <field name="treePath" type="String">
-            <hint name="max-length">4000</hint>
-        </field>
-        <field name="name" type="String">
-            <hint name="max-length">255</hint>
-        </field>
-        <field name="url" type="String">
-            <hint-collection name="URL" />
-            <validator name="required" />
-            <validator name="url" />
-        </field>
-        <field name="description" type="String">
-            <hint-collection name="TEXTAREA" />
-        </field>
-        <field name="visits" type="int" />
-        <field name="priority" type="int">
-            <hint name="display-width">20</hint>
-        </field>
-        <field name="lastPublishDate" type="Date" />
-        <field name="status" type="int" />
-        <field name="statusByUserId" type="long" />
-        <field name="statusByUserName" type="String" />
-        <field name="statusDate" type="Date" />
-    </model>
-    <model name="com.liferay.bookmarks.model.BookmarksFolder">
-        ...
-    </model>
+	<model name="com.liferay.blogs.model.BlogsEntry">
+		<field name="mvccVersion" type="long" />
+		<field name="ctCollectionId" type="long" />
+		<field name="uuid" type="String" />
+		<field name="externalReferenceCode" type="String" />
+		<field name="entryId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="title" type="String">
+			<hint name="max-length">255</hint>
+			<sanitize content-type="text/plain" modes="ALL" />
+			<validator name="required" />
+		</field>
+		<field name="subtitle" type="String">
+			<hint-collection name="TEXTAREA" />
+		</field>
+		<field name="urlTitle" type="String">
+			<hint name="max-length">255</hint>
+		</field>
+		<field name="description" type="String">
+			<hint-collection name="TEXTAREA" />
+			<hint name="display-width">350</hint>
+		</field>
+		<field name="content" type="String">
+			<hint-collection name="CLOB" />
+			<sanitize content-type="text/html" modes="ALL" />
+		</field>
+		<field name="displayDate" type="Date" />
+		<field name="allowPingbacks" type="boolean" />
+		<field name="allowTrackbacks" type="boolean" />
+		<field name="trackbacks" type="String">
+			<hint-collection name="CLOB" />
+		</field>
+		<field name="coverImageCaption" type="String">
+			<hint-collection name="TEXTAREA" />
+			<sanitize content-type="text/html" modes="ALL" />
+		</field>
+		<field name="coverImageFileEntryId" type="long" />
+		<field name="coverImageURL" type="String">
+			<hint-collection name="URL" />
+		</field>
+		<field name="smallImage" type="boolean" />
+		<field name="smallImageFileEntryId" type="long" />
+		<field name="smallImageId" type="long" />
+		<field name="smallImageURL" type="String">
+			<hint-collection name="URL" />
+			<hint name="display-width">210</hint>
+		</field>
+		<field name="lastPublishDate" type="Date" />
+		<field name="status" type="int" />
+		<field name="statusByUserId" type="long" />
+		<field name="statusByUserName" type="String" />
+		<field name="statusDate" type="Date" />
+	</model>
 </model-hints>
 ```
 
@@ -112,7 +133,7 @@ The aui taglib is fully supported and not related to AlloyUI (the JavaScript lib
 You can use a mix of Clay and aui tags in a form. Model hints, however, affect aui tags only.
 ```
 
-Note that Liferay has its own model hints file (`portal-model-hints.xml`). It's in `portal-impl.jar`'s `META-INF` folder. This file contains many hint examples, so you can reference it when creating `portlet-model-hints.xml` files.
+Note that Liferay has its own model hints file [`portal-model-hints.xml`](https://github.com/liferay/liferay-portal/blob/master/portal-impl/src/META-INF/portal-model-hints.xml). It's in `portal-impl.jar`'s `META-INF` folder. This file contains many hint examples, so you can reference it when creating `portlet-model-hints.xml` files.
 
 ## Default Hints
 
