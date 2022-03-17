@@ -9,7 +9,7 @@ patching-dxp-7-3-and-earlier/advanced-patching-for-dxp-7-2.md
 ```
 
 ```{note}
-Liferay DXP 7.3 SP3+ follows a rolling release model that uses Updates. Please see [Updating Liferay](./updating-liferay.md) if you are applying an Update. All Hotfixes are patches. If you're applying a Hotfix, continue reading.
+Liferay DXP uses Bundle Releases for our latest releases. Please see [Updating Liferay](./updating-liferay.md) if you are applying an Update. All Hotfixes are patches. If you're applying a Hotfix, continue reading.
 ```
 
 As Liferay releases fixes, you'll want to keep your DXP instances up to date. Liferay aggregates fixes and makes them available to Enterprise Subscribers in ZIP files called _patches_.
