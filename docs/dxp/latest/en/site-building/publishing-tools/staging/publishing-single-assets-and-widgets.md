@@ -22,6 +22,8 @@ Single asset publishing is not supported for page-scoped content.
 
 ## Publishing Single Widgets
 
+> Only Available for Widget Pages
+
 Although Staging is typically used to publish content, you can also publish widgets. For example, you can modify a widget's title and publish the change to Live. This is possible because widget configurations are always staged. To publish a widget that is on a Page, you must publish the Page first.
 
 After changing a widget, you can publish the widget by clicking on the *Actions* button ( ![Actions button](../../../images/icon-actions.png) ) for the widget and selecting *Staging*.
