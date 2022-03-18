@@ -1,8 +1,6 @@
 # フィールドオプションプロバイダー
 
-[ドロップダウンリスト](./setting-and-accessing-configurations.html#implementing-a-dropdown-selection-ui) は、構成インターフェイスの`@Meta.AD`アノテーションに手動で入力できます。 ただし、`ConfigurationFieldOptionsProvider`クラスを使用して、オプションのラベルと値を自動的に入力することもできます。 これは、ドロップダウンリストに動的にデータを入力する場合に役立ちます。 たとえば、Webサービスからオブジェクトのリストをフェッチしたり、データベースを反復処理してドロップダウンリストに動的にデータを入力したりできます。
-
-<a name="deploy-the-tutorial-code" />
+[ドロップダウンリスト](./setting-and-accessing-configurations.html#implementing-a-dropdown-selection-ui)は、構成インターフェイスの`@Meta.AD`アノテーションに手動で入力できます。 ただし、`ConfigurationFieldOptionsProvider`クラスを使用して、オプションのラベルと値を自動的に入力することもできます。 これは、ドロップダウンリストに動的にデータを入力する場合に役立ちます。 たとえば、Webサービスからオブジェクトのリストをフェッチしたり、データベースを反復処理してドロップダウンリストに動的にデータを入力したりできます。
 
 ## チュートリアルコードをデプロイする
 
@@ -12,10 +10,10 @@
     docker run -it -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
     ```
 
-1. [フィールドオプションプロバイダー](./liferay-z4h3.zip) をダウンロードして解凍します。
+1. [フィールドオプションプロバイダー](./liferay-z4h3.zip)をダウンロードして解凍します。
 
     ```bash
-    curl https://learn.liferay.com/dxp/latest/ja/developing-applications/core-frameworks/configuration-framework/liferay-z4h3.zip -O
+    curl https://learn.liferay.com/dxp/latest/en/building-applications/core-frameworks/configuration-framework/liferay-z4h3.zip -O
     ```
 
     ```bash
@@ -38,17 +36,15 @@
     STARTED com.acme.z4h3.impl_1.0.0 [1150]
     ```
 
-1. ブラウザで`https://localhost:8080` を開き、 ［**コントロールパネル**］ &rarr; ［**設定**］ &rarr; ［**システム設定**］ に移動します。 ［プラットフォーム］で ［**サードパーティー**］ をクリックします。 左側の ［**Z4H3 Configuration**］ をクリックします 。
+1. ブラウザで`https://localhost:8080` を開き、*［コントロールパネル］* &rarr; *［設定］* &rarr; *［システム設定］*に移動します。 ［プラットフォーム］で*［サードパーティー］*をクリックします。 左側の*［Z4H3 Configuration］*をクリックします 。
 
     ![設定UIには、2つのドロップダウンリストが表示されます。](./field-options-provider/images/01.png)
 
 最初のドロップダウンリストには、`@Meta.AD`アノテーションが手動で入力されます。 2番目のドロップダウンリストには、フィールドオプションプロバイダーが表示されます。
 
-<a name="setting-the-configuration-interface" />
-
 ## 構成インターフェイスを設定する
 
-[構成インターフェイスを作成](./setting-and-accessing-configurations.html#creating-the-configuration-interface) し、入力する構成フィールド名を設定します。
+[構成インターフェイスを作成](./setting-and-accessing-configurations.html#creating-the-configuration-interface)し、入力する構成フィールド名を設定します。
 
 ```{literalinclude} ./field-options-provider/resources/liferay-z4h3.zip/z4h3-impl/src/main/java/com/acme/z4h3/internal/configuration/Z4H3Configuration.java
 :dedent: 1
@@ -57,8 +53,6 @@
 ```
 
 サンプルプロジェクトでは、`providerPopulatedColors`は入力される構成フィールド名です。
-
-<a name="implement-the-field-options-provider" />
 
 ## フィールドオプションプロバイダーを実装する
 
@@ -81,4 +75,4 @@
 
 チュートリアルコードでは、文字列配列の簡単な例を使用していますが、より複雑なユースケースも可能です。
 
-[`EnabledClassNamesConfigurationFieldOptionsProvider.java`](https://github.com/liferay/liferay-portal/blob/master/modules/apps/asset/asset-auto-tagger-service/src/main/java/com/liferay/asset/auto/tagger/internal/configuration/admin/definition/EnabledClassNamesConfigurationFieldOptionsProvider.java) を使用した実際のLiferayの例を参照してください。 このコードは、`AssetRendererFactory`オブジェクトのリストを取得し、リストを反復処理して、アセットのタイプ名をラベルとして、クラス名を値として使用して、`Option`の新しいリストを作成します。
+[`EnabledClassNamesConfigurationFieldOptionsProvider.java`](https://github.com/liferay/liferay-portal/blob/master/modules/apps/asset/asset-auto-tagger-service/src/main/java/com/liferay/asset/auto/tagger/internal/configuration/admin/definition/EnabledClassNamesConfigurationFieldOptionsProvider.java)を使用した実際のLiferayの例を参照してください。 このコードは、`AssetRendererFactory`オブジェクトのリストを取得し、リストを反復処理して、アセットのタイプ名をラベルとして、クラス名を値として使用して、`Option`の新しいリストを作成します。

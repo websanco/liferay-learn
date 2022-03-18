@@ -52,7 +52,7 @@ Liferay DXPでWebフロントエンドを開発するすべての方法には、
 
 以下では、ポートレットの開発を始めるための方法を紹介します。
 
-* [MVCの使用](../using-mvc.md)
-* [Springの使用](../using-spring.md)
-* [JSFの使用](../using-jsf.md)
-* [Bean Portletの使用 (近日公開！)](../using-bean-portlet.md)
+* [Using MVC](../using-mvc.md)
+* [Using Spring](../using-spring.md)
+* [Using JSF](../using-jsf.md)
+* [Using Bean Portlet](../using-bean-portlet.md)

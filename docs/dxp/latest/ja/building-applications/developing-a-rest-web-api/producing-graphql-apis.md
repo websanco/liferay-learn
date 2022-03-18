@@ -1,3 +1,3 @@
-# GraphQL APIの使用
+# GraphQL APIの作成
 
 Coming soon!

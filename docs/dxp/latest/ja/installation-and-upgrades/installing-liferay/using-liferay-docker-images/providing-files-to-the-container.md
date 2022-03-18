@@ -6,10 +6,10 @@ Liferayコンテナは、提供されたファイルを使用して、次のユ�
 * Tomcatを構成する
 * アプリとその他のアーティファクトをデプロイする
 * パッチツールを更新する
-* パッチDXP
+* DXPをパッチする
 * スクリプトを実行する
 
-コンテナが主要なコンテナフォルダー内の特定のフォルダーでファイルを見つけた場合、すべてのユースケースはコンテナの作成時にトリガーできます。
+コンテナが主要なキーコンテナフォルダー内の特定のフォルダーでファイルを見つけた場合、すべてのユースケースはコンテナの作成時にトリガーできます。
 
 **主要なコンテナフォルダ：**
 
@@ -22,7 +22,7 @@ Liferayコンテナは、提供されたファイルを使用して、次のユ�
 
 **ファイルを提供する方法：**
 
-* [バインドをバインド](https://docs.docker.com/storage/bind-mounts/)
+* [バインドマウント](https://docs.docker.com/storage/bind-mounts/)
 * [ボリューム](https://docs.docker.com/storage/volumes/)
 * [`docker cp`を使用する](https://docs.docker.com/engine/reference/commandline/cp/)
 
@@ -72,19 +72,17 @@ Liferayコンテナのバインドマウントは、いくつかの方法で整�
 
 ### バインドマウントの例
 
-| 方法                             | 例                                                                                                                                                               | 利点:                                   | 欠点:                                                                                          |
-|:------------------------------ |:--------------------------------------------------------------------------------------------------------------------------------------------------------------- |:------------------------------------- |:-------------------------------------------------------------------------------------------- |
-| `/mnt/liferay`にマウント            | `-v［host-path］:/mnt/liferay`                                                                                                                                    | 入力ファイルを一元化します。                        | 入力ファイルは、コンテナが予期するサブフォルダーに編成する必要があります（上記の [リストされている場所を参照してください](#scanned-container-folders) ）。 |
-| `/mnt/liferay` サブフォルダーに個別にマウント | `-v ［host-path］/［folder-1］:/mnt/liferay/deploy -v ［host-path］/［folder-2］:/mnt/liferay/files`<br><br><br>注: `［host-path］` は同じパスまたは異なるパスでも可能です。 | ホスト上のさまざまな場所で入力ファイルグループを使用する柔軟性。      | 管理するホストファイルの場所が増えました。                                                                        |
-| 個々のファイルにマウント                   | `-v ［host path］/setenv.sh:/mnt/liferay/files/tomcat/bin/setenv.sh`                                                                                              | 入力ファイルは、 `docker run` コマンドで明確に表示されます。 | 長いドッカーランコマンド。 管理するホストファイルの場所がさらに増えます。                                                        |
+| 方式                             | 例                                                                                                                                                               | 長所                                    | 短所                                                                                               |
+|:------------------------------ |:--------------------------------------------------------------------------------------------------------------------------------------------------------------- |:------------------------------------- |:------------------------------------------------------------------------------------------------ |
+| `/mnt/liferay`にマウント            | `-v［host-path］:/mnt/liferay`                                                                                                                                    | 入力ファイルを一元化します。                        | 入力ファイルは、コンテナが予期するサブフォルダーに編成する必要があります（ ロケーションがリストされている[上記](#scanned-container-folders)を参照してください）。 |
+| `/mnt/liferay` サブフォルダーに個別にマウント | `-v ［host-path］/［folder-1］:/mnt/liferay/deploy -v ［host-path］/［folder-2］:/mnt/liferay/files`<br><br><br>注: `［host-path］` は同じパスまたは異なるパスでも可能です。 | ホスト上のさまざまな場所で入力ファイルグループを使用する柔軟性。      | 管理するホストファイルの場所が増えました。                                                                            |
+| 個々のファイルにマウント                   | `-v ［host path］/setenv.sh:/mnt/liferay/files/tomcat/bin/setenv.sh`                                                                                              | 入力ファイルは、 `docker run` コマンドで明確に表示されます。 | 長いdocker実行コマンド。 管理するホストファイルのロケーションがさらに増えます。                                                      |
 
 コンテナの [構成フェーズ](./container-lifecycle-and-api.md#lifecycle) ファイルを提供する最も一般的な方法は、ホストフォルダーをコンテナの `/mnt/liferay` フォルダーにバインドマウントすることです。
 
-<a name="bind-mounting-a-host-folder-to-mntliferay" />
+## ホストフォルダを `/mnt/liferay`にバインドマウントする
 
-## バインド ホストフォルダを `/mnt/liferay`にマウントする
-
-Liferayへの構成、パッチ適用、および展開のためにファイルを集中管理する場合は、ホストフォルダをコンテナの `/mnt/liferay` フォルダにバインドマウントすることを検討してください。
+Liferayへの構成、パッチ適用、およびデプロイのためのファイルを集中管理する場合は、ホストフォルダをコンテナの `/mnt/liferay` フォルダにバインドマウントすることを検討してください。
 
 ```{note}
    ユースケース記事のほとんどの例では、このバインドマウント戦略を使用しています。
@@ -94,7 +92,7 @@ Liferayへの構成、パッチ適用、および展開のためにファイル�
 
 1. ホスト上のフォルダーをベースフォルダーとして機能するように指定します。
 
-1. ベースホストフォルダーで、コンテナが作用するすべての `/mnt/liferay` サブフォルダーに対応するサブフォルダーを作成します。 コンテナフォルダの詳細は、 [コンテナのライフサイクルとAPI](./container-lifecycle-and-api.md) を参照してください。
+1. ベースホストフォルダーで、コンテナが作用するすべての `/mnt/liferay` サブフォルダーに対応するサブフォルダーを作成します。 コンテナフォルダの詳細は、[コンテナのライフサイクルとAPI](./container-lifecycle-and-api.md)を参照してください。
 
     ```bash
     cd [host folder]
@@ -112,9 +110,9 @@ Liferayへの構成、パッチ適用、および展開のためにファイル�
     ```
 
     ```{note}
-       すべてのサブフォルダを作成する必要はありません。入力するサブフォルダだけを作成します。
+    すべてのサブフォルダを作成する必要はありません。入力するサブフォルダだけを作成します。
     ```
-1. コンテナが作用するファイルをサブフォルダに入力します。
+1. コンテナが動作するファイルをサブフォルダに入れます。
 
     例えば、 [`portal-ext.properties` ファイルを追加して](./configuring-containers.md#portal-properties) 、DXPを構成し、 [セキュリティフィックスパック](./patching-dxp-in-docker.md) を追加してインストールできます。
 
@@ -128,7 +126,7 @@ Liferayへの構成、パッチ適用、および展開のためにファイル�
     └───scripts
     ```
 
-1. `ドッカーラン` コマンドで、ベースホストフォルダーをコンテナの `/mnt/liferay` フォルダーにバインドマウントします。
+1. `docker run` コマンドで、ベースホストフォルダーをコンテナの `/mnt/liferay` フォルダーにバインドマウントします。
 
     ```bash
     docker run -v [host folder path]:/mnt/liferay ...
@@ -158,7 +156,23 @@ docker cp some_app.lpkg my_container:/opt/liferay/deploy
 docker cp com.liferay.journal.configuration.JournalServiceConfiguration.config my_container:/opt/liferay/osgi/configs
 ```
 
-しかし、macOSなどのオペレーティングシステムでは、`docker cp`を使用すると、ファイル権限の問題が発生する場合があります。 このような場合は、バインドマウント（このセクションで説明）またはボリュームを使用してください。
+macOSで `docker cp` を使用するとuser/group `liferay`に変更するのではなく、ファイルの所有権が保持されます。 いくつかの回避策です:
+
+* `tar` を、 `docker cp` コマンドの入力として使用し、ファイルの所有権とパーミッションを設定します。 以下に例を示します。
+
+    ```bash
+    tar -cf - command.sh --mode u=+rwx,g=-wx,o=-wx --owner liferay --group liferay | docker cp - my_container:/usr/local/liferay/scripts/pre-startup
+    ```
+
+* `docker cp` を使用した後、コンテナ内でBashセッションを開き、ファイルの所有権を変更します。
+
+    ```bash
+    docker exec -it my_container bash
+    ```
+
+    ```bash
+    chown -R liferay:liferay /usr/local/liferay/scripts/pre-startup/command.sh
+    ```
 
 <a name="conclusion" />
 

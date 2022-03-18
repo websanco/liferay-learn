@@ -1,8 +1,6 @@
 # 完全なカスタム構成
 
-[インターフェイスを作成](./setting-and-accessing-configurations.html#creating-the-configuration-interface) すると、構成UIが自動的に生成されます。 ただし、構成に完全にカスタムのUIが必要な場合もあります。 たとえば、Liferayの構成管理を使用する代わりに、プログラムで構成を処理するよう計画している場合などです。 または、完全にカスタムのUIを作成する柔軟性が必要な場合もあります。 その方法は以下の通りです。
-
-<a name="see-the-example-project" />
+[インターフェイスを作成](./setting-and-accessing-configurations.html#creating-the-configuration-interface)すると、構成UIが自動的に生成されます。 ただし、構成に完全にカスタムのUIが必要な場合もあります。 たとえば、Liferayの構成管理を使用する代わりに、プログラムで構成を処理するよう計画している場合などです。 または、完全にカスタムのUIを作成する柔軟性が必要な場合もあります。 その方法は以下の通りです。
 
 ## サンプルプロジェクトを参照する
 
@@ -14,10 +12,10 @@
 
     別のLiferay PortalバージョンまたはLiferay DXPを実行している場合は、上記のコマンドを適宜調整してください。
 
-1. [完全なカスタム構成](./liferay-u2g5.zip) をダウンロードして解凍します。
+1. [完全なカスタム構成](./liferay-u2g5.zip)をダウンロードして解凍します。
 
     ```bash
-    curl https://learn.liferay.com/dxp/latest/ja/developing-applications/core-frameworks/configuration-framework/liferay-u2g5.zip -O
+    curl https://learn.liferay.com/dxp/latest/en/building-applications/core-frameworks/configuration-framework/liferay-u2g5.zip -O
     ```
 
     ```bash
@@ -31,7 +29,7 @@
     ```
 
     ```{note}
-       このコマンドは、デプロイされたjarをDockerコンテナの/opt/liferay/osgi/modulesにコピーするのと同じです。
+    このコマンドは、デプロイされたjarをDockerコンテナの/opt/liferay/osgi/modulesにコピーするのと同じです。
     ```
 
 1. Liferay Dockerコンテナコンソールでデプロイを確認します。
@@ -42,13 +40,11 @@
 
 1. サンプルのモジュールが機能していることを確認します。 ブラウザで`https://localhost:8080`を開きます。
 
-1. ［**コントロールパネル**］ &rarr; ［**設定**］ &rarr; ［**システム設定**］ &rarr; ［**サードパーティー**］ に移動します。 ［**U2G5 Configuration**］ をクリックします。
+1. *［コントロールパネル］* &rarr; *［設定］* &rarr; *［システム設定］* &rarr; *［サードパーティー］*に移動します。 *［U2G5 Configuration］*をクリックします。
 
    ![システム設定でU2G5構成に移動します。](./completely-custom-configuration/images/01.png)
 
    このビューはカスタムJSPファイルによって提供されることに注意してください。
-
-<a name="create-the-configuration-interface" />
 
 ## 構成インターフェイスを作成する
 
@@ -61,8 +57,6 @@
 
 `@ExtendedObjectClassDefinition`アノテーションでは、`generateUI`が`false`に設定されていることに注意してください。 これにより、構成UIが自動生成されなくなります。
 
-<a name="add-the-configuration-bean-declaration" />
-
 ## 構成Bean宣言を追加する
 
 構成クラスを`ConfigurationBeanDeclaration`に登録します。 これにより、システムは構成の変更が発生したときにそれを追跡できます。
@@ -71,8 +65,6 @@
 :language: java
 :lines: 9-18
 ```
-
-<a name="implement-the-configuration-screen" />
 
 ## 設定画面を実装する
 
@@ -90,7 +82,7 @@
     :lines: 24-40
     ```
 
-1. この例では、構成スコープは `system`に設定されています。 詳細については、 [スコープ設定](./scoping-configurations.md) を参照してください。
+1. この例では、構成スコープは `system`に設定されています。 詳細については、[Scoping Configurations](./scoping-configurations.md)を参照してください。
 
     ```{literalinclude} ./completely-custom-configuration/resources/liferay-u2g5.zip/u2g5-web/src/main/java/com/acme/u2g5/web/internal/configuration/admin/display/U2G5ConfigurationScreen.java
     :dedent: 1
@@ -114,13 +106,9 @@
     )
     ```
 
-<a name="add-the-web-contextpath" />
-
 ## Web-ContextPathを追加する
 
 `bnd.bnd`ファイルでバンドルの`Web-ContextPath`を指定します。 たとえば、サンプルプロジェクトのBndファイルには`Web-ContextPath: /u2g5-web`があります。 これは、構成画面ファイルに`ServletContext`オブジェクトを登録するものです。 サーブレットコンテキストはポートレット用に自動的に作成されますが、このサンプルにはポートレットがないため、この行をBndファイルに追加する必要があることに注意してください。
-
-<a name="create-a-custom-jsp" />
 
 ## カスタムJSPを作成する
 

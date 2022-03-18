@@ -2,8 +2,6 @@
 
 Liferayの構成フレームワークを使用して、MVCポートレットの設定UIを追加できます。
 
-<a name="see-the-example-portlet" />
-
 ## サンプルポートレットを参照する
 
 1. Liferay DXPを起動します。 まだDockerコンテナがない場合は、以下を使用します。
@@ -12,10 +10,10 @@ Liferayの構成フレームワークを使用して、MVCポートレットの�
     docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
     ```
 
-1. [構成の設定とアクセス](./liferay-n2f3.zip) をダウンロードして解凍します。
+1. [構成の設定とアクセス](./liferay-n2f3.zip)をダウンロードして解凍します。
 
     ```bash
-    curl https://learn.liferay.com/dxp/latest/ja/developing-applications/core-frameworks/configuration-framework/liferay-n2f3.zip -O
+    curl https://learn.liferay.com/dxp/latest/en/building-applications/core-frameworks/configuration-framework/liferay-n2f3.zip -O
     ```
 
     ```bash
@@ -46,19 +44,17 @@ Liferayの構成フレームワークを使用して、MVCポートレットの�
 
     UIには、フォントの色、フォントファミリー、フォントサイズの3つの設定可能な属性とともにウェルカムメッセージが表示されます。
 
-1. 構成を変更するには、 ［**コントロールパネル**］ → ［**設定**］ → ［**システム設定**］ に移動します。 ［Other］の下の **category.n2f3** をクリックします。
+1. 構成を変更するには、*［コントロールパネル］* → *［設定］* → *［システム設定］*に移動します。 ［Other］の下の*category.n2f3*をクリックします。
 
     ![［Other］カテゴリーの下にあるcategory.n2f3をクリックします。](./setting-and-accessing-configurations/images/02.png)
 
-    別のフォントの色、フォントファミリー、およびフォントサイズを入力してみてください。 ［**アップデート**］ ボタンをクリックして、公開されたウィジェットのあるページに戻ります。 属性が変更されたことを確認します。
+    別のフォントの色、フォントファミリー、およびフォントサイズを入力してみてください。 *［アップデート］*ボタンをクリックして、公開されたウィジェットのあるページに戻ります。 属性が変更されたことを確認します。
 
 構成フレームワークの仕組みは次のとおりです。
 
-<a name="creating-the-configuration-interface" />
-
 ## 構成インターフェイスを作成する
 
-構成インターフェイスで構成可能な属性を定義するだけで、 [システム設定](../../../system-administration/configuring-liferay/system-settings.md) で構成UIを生成できます。
+構成インターフェイスで構成可能な属性を定義するだけで、[システム設定](../../../system-administration/configuring-liferay/system-settings.md)で構成UIを生成できます。
 
 サンプルプロジェクトでは、`N2F3WebConfiguration.java`ファイルが構成インターフェイスです。
 
@@ -67,7 +63,7 @@ Liferayの構成フレームワークを使用して、MVCポートレットの�
 :lines: 5-17
 ```
 
-このサンプルインターフェイスでは、スコープが`Scope.COMPANY`に設定されていることに注意してください。 詳細については、 [スコープ設定](./scoping-configurations.md) を参照してください。
+このサンプルインターフェイスでは、スコープが`Scope.COMPANY`に設定されていることに注意してください。 詳細については、 [Scoping Configurations](./scoping-configurations.md)を参照してください。
 
 インターフェイスには、フォントの色、フォントファミリー、フォントサイズの3つの設定可能な属性があります。 色とファミリーは`string`型であり、サイズは`int`型であることに注意してください。
 
@@ -77,11 +73,9 @@ Liferayの構成フレームワークを使用して、MVCポートレットの�
 IDには、構成インターフェイスの完全修飾クラス名（FQCN）を指定する必要があることに注意してください。
 ```
 
-`Meta.AD`は、デフォルト値や属性が必須項目であるかどうかなど、属性に関する [オプションのメタデータ](http://bnd.bndtools.org/chapters/210-metatype.html) を指定します。 属性値が必要であるがデフォルトが設定されていない場合、管理者はアプリケーションが正しく機能するように設定で値を設定する必要があることに注意してください。
+`Meta.AD`は、デフォルト値や属性が必須項目であるかどうかなど、属性に関する[オプションのメタデータ](http://bnd.bndtools.org/chapters/210-metatype.html)を指定します。 属性値が必要であるがデフォルトが設定されていない場合、管理者はアプリケーションが正しく機能するように設定で値を設定する必要があることに注意してください。
 
 次に、MVCポートレットによって構成がどのように読み取られるかを確認します。
-
-<a name="reading-the-configuration-from-the-application" />
 
 ## アプリケーションから構成を読み取る
 
@@ -101,8 +95,6 @@ IDには、構成インターフェイスの完全修飾クラス名（FQCN）�
 
     構成オブジェクトがリクエストオブジェクトに追加され、アプリケーションのJSPのリクエストから読み取ることができるようになりました。
 
-<a name="create-a-configuration-bean-declaration" />
-
 ## 構成Bean宣言を作成する
 
 `ConfigurationProvider`を使用するには、構成クラスも`ConfigurationBeanDeclaration`に登録する必要があります。 これにより、システムは構成の変更が発生したときにそれを追跡できます。
@@ -113,8 +105,6 @@ IDには、構成インターフェイスの完全修飾クラス名（FQCN）�
 ```
 
 このクラスには、アプリケーションの構成インターフェイスのクラスを返すメソッドが1つあります。
-
-<a name="accessing-the-configuration-from-a-jsp" />
 
 ## JSPから構成にアクセスする
 
@@ -133,8 +123,6 @@ IDには、構成インターフェイスの完全修飾クラス名（FQCN）�
     ```
 
 1. 属性`fontColor()`、`fontFamily()`、`fontSize()`をJSPで使用できるようになりました。
-
-<a name="implementing-a-dropdown-selection-ui" />
 
 ## ドロップダウン選択UIを実装する
 
@@ -155,10 +143,8 @@ required = false)
 
 これで、フォントファミリー属性はドロップダウン選択になります。
 
-<a name="further-customization" />
-
 ## さらなるカスタマイゼーション
 
-* [構成の分類](./categorizing-a-configuration.md)
+* [Categorizing a Configuration](./categorizing-a-configuration.md)
 * [Scoping Configurations](./scoping-configurations)
-* [フィールドオプションプロバイダー](./field-options-provider.md)
+* [Field Options Provider](./field-options-provider.md)

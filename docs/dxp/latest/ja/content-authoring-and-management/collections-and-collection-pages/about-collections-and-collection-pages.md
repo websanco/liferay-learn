@@ -1,10 +1,10 @@
 # コレクションとコレクションページについて
 
 ```{note}
-   この情報はLiferay DXP 7.3以降に適用されます。 以前のLiferayバージョンでは、コレクションはコンテンツセットと呼ばれていました。 コンテンツセットの詳細は、 [Liferay DXP 7.2](#liferay-dxp-7-2) を参照してください。
+この情報はLiferay DXP 7.3以降に適用されます。 以前のLiferayバージョンでは、コレクションはコンテンツセットと呼ばれていました。 コンテンツセットの詳細は、[Liferay DXP 7.2](#liferay-dxp-7-2)を参照してください。
 ```
 
-コレクションは、情報をグループ化および絞り込みするために使用できるコンテンツ項目のセットです。 次の例を考えてみましょう。 あなたは、製品のWebページに、お客様のサクセスストーリーを紹介するセクションを新設することを計画しています。 このセクションでは、新しいサクセスストーリーが公開されると自動的に表示されるようにしたいと考えています。 この場合、コレクションのコンテンツを表示するコレクションページを使用して、すべてのサクセスストーリーをグループ化するコレクションを作成できます。 コレクションページに加えて、コレクション表示フラグメントを使用して、このコレクションを他のコンテンツページに表示できます（詳細は、[コレクションの表示](../../site-building/displaying-content/additional-content-display-options/displaying-collections.md)を参照してください）。
+コレクションは、情報をグループ化および絞り込みするために使用できるコンテンツ項目のセットです。 次の例を考えてみましょう。 あなたは、製品のWebページに、お客様のサクセスストーリーを紹介するセクションを新設することを計画しています。 このセクションでは、新しいサクセスストーリーが公開されると自動的に表示されるようにしたいと考えています。 この場合、コレクションのコンテンツを表示するコレクションページを使用して、すべてのサクセスストーリーをグループ化するコレクションを作成できます。 コレクションページに加えて、コレクション表示フラグメントを使用して、このコレクションを他のコンテンツページに表示できます（詳細は、[Displaying Collections](../../site-building/displaying-content/additional-content-display-options/displaying-collections.md)を参照してください）。
 
 Liferayには2種類のコレクションがあります。
 
@@ -26,7 +26,7 @@ Liferayには2種類のコレクションがあります。
 
 ## コレクションの表示
 
-コレクションの表示には、 [コレクションページ](../../site-building/displaying-content/additional-content-display-options/displaying-collections.md#displaying-collections-on-a-collection-page) や [コレクション表示フラグメント](../../site-building/displaying-content/additional-content-display-options/displaying-collections.md#adding-a-collection-display-fragment-to-a-page) を使用することができます。
+コレクションの表示には、[コレクションページ](../../site-building/displaying-content/additional-content-display-options/displaying-collections.md#displaying-collections-on-a-collection-page)や[コレクション表示フラグメント](../../site-building/displaying-content/additional-content-display-options/displaying-collections.md#adding-a-collection-display-fragment-to-a-page)を使用することができます。
 
 コレクションページは、コレクションにリンクされているページの一種です。 コレクションページは、コレクションの表示とカスタマイズの作業を容易にします。 たとえば、コレクションページを使用して、コレクションに新しい項目をすばやく追加できます。
 
@@ -36,9 +36,7 @@ Liferayには2種類のコレクションがあります。
 
 ![コレクション表示フラグメントを使用して、コレクションのコンテンツを表示できます。](./about-collections-and-collection-pages/images/02.png)
 
-詳細は、[コレクションの表示](../../site-building/displaying-content/additional-content-display-options/displaying-collections.md)を参照してください。
-
-<a name="customizing-collections" />
+詳細は、[Displaying Collections](../../site-building/displaying-content/additional-content-display-options/displaying-collections.md)を参照してください。
 
 ## コレクションのカスタマイズ
 
@@ -52,9 +50,7 @@ Liferayセグメントをコレクションに関連付けて、[セグメント
 
 ## アセットパブリッシャー設定をコレクションに変換する
 
-コレクションは、直接作成することも、[アセットパブリッシャーウィジェット](../../site-building/displaying-content/using-the-asset-publisher-widget/displaying-assets-using-the-asset-publisher-widget.md)から作成することもできます。 アセットパブリッシャーオプションは、カスタマイズを他のページのコレクションとして使用する場合に役立ちます。 詳細は、 [コレクションの作成](./creating-collections.md#creating-a-collection-from-an-asset-publisher) をご覧してください。
-
-<a name="liferay-dxp-72" />
+コレクションは、直接作成することも、[アセットパブリッシャーウィジェット](../../site-building/displaying-content/using-the-asset-publisher-widget/displaying-assets-using-the-asset-publisher-widget.md)から作成することもできます。 アセットパブリッシャーオプションは、カスタマイズを他のページのコレクションとして使用する場合に役立ちます。 詳細は、[コレクションの作成](./creating-collections.md#creating-a-collection-from-an-asset-publisher)をご覧してください。
 
 ## Liferay DXP 7.2
 
@@ -68,7 +64,7 @@ Liferayセグメントをコレクションに関連付けて、[セグメント
 
 ### コンテンツセットの作成と表示
 
-コンテンツセットは、サイト管理インターフェイスを介して作成されます。 コンテンツセットを作成および管理するためのすべての機能がここに含まれています。 コンテンツセットは、Liferayのウィジェットまたは独自のカスタムアプリケーションを使用して表示されます。 詳細は、 [コンテンツセットの作成](./creating-collections.md#creating-content-sets) および [コンテンツセットの表示](../../site-building/displaying-content/additional-content-display-options/displaying-collections.md#displaying-content-sets) を参照してください。
+コンテンツセットは、サイト管理インターフェイスを介して作成されます。 コンテンツセットを作成および管理するためのすべての機能がここに含まれています。 コンテンツセットは、Liferayのウィジェットまたは独自のカスタムアプリケーションを使用して表示されます。 詳細は、[Creating Content Sets](./creating-collections.md#creating-content-sets)および[Displaying Content Sets](../../site-building/displaying-content/additional-content-display-options/displaying-collections.md#displaying-content-sets)を参照してください。
 
 ### コンテンツセットのパーソナライゼーション
 
@@ -82,6 +78,6 @@ Liferayセグメントをコレクションに関連付けて、[セグメント
 
 ## 関連情報
 
-- [コレクションの作成](./creating-collections.md)
+- [Creating Collections](./creating-collections.md)
 - [コレクションの表示](../../site-building/displaying-content/additional-content-display-options/displaying-collections.md)
-- [コレクションのパーソナライズ](../../site-building/personalizing-site-experience/experience-personalization/personalizing-collections.md)
+- [Personalizing Collections](../../site-building/personalizing-site-experience/experience-personalization/personalizing-collections.md)

@@ -6,30 +6,27 @@
 
 マッピングは、記述子タイプごとに編成されています。
 
-* [標準ポートレット記述子](#portlet-descriptor-mappings) 。 プロパティキーは、プリフィックス`javax.portlet`を使用します。
+* [標準ポートレット記述子](#portlet-descriptor-mappings)。 プロパティキーは、プリフィックス`javax.portlet`を使用します。
 
-* [Liferay記述子の記述子](#liferay-descriptor-mappings) 。 プロパティキーは、プリフィックス`com.liferay.portlet`を使用します。Liferay の記述子は、記述子ファイル名によってさらにグループ化されます。
+* [Liferay記述子の記述子](#liferay-descriptor-mappings)。 プロパティキーは、プリフィックス`com.liferay.portlet`を使用します。Liferay の記述子は、記述子ファイル名によってさらにグループ化されます。
 
     * `liferay-display.xml`
     * `liferay-portlet.xml`
 
 標準のポートレット記述子マッピングが最初です。
 
-<a name="portlet-descriptor-mappings" />
-
 ## ポートレット記述子のマッピング
 
-**注:** 簡単にするために、 **ポートレットXSD** [4](#four) から派生したXPath記法を使用しています。
+**注:** 簡単にするために、**ポートレットXSD** [4](#four)から派生したXPath記法を使用しています。
 
 | portlet.xml XPath                                                                                             | OSGiポートレットサービスプロパティ                                                                                                                                                 |
-| :--- | :--- |
- |
+| ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `/portlet-app/container-runtime-option`                                                                       | portlet-appスコープではサポートされていません                                                                                                                                        |
 | `/portlet-app/custom-portlet-mode`                                                                            | サポートされていません                                                                                                                                                         |
 | `/portlet-app/custom-window-state`                                                                            | サポートされていません                                                                                                                                                         |
 | `/portlet-app/default-namespace`                                                                              | `javax.portlet.default-namespace=<String>`                                                                                                                    |
 | `/portlet-app/event-definition`                                                                               | `javax.portlet.event-definition=<QNameLocalPart>;<QNameURI>［;<PayloadType>］［,<AliasQNameLocalPart>;<AliasQNameURI>］` [2](#two)        |
-| `/portlet-app/filter`<br/>`/portlet-app/filter/init-param/name`<br/>`/portlet-app/filter-mapping` | [3](#three) <br/>`javax.portlet.init-param.<name>=<value>` [3](#three) , [9](#nine) <br/> [3](#three)                                           |
+| `/portlet-app/filter`<br/>`/portlet-app/filter/init-param/name`<br/>`/portlet-app/filter-mapping` | [3](#three)<br/>`javax.portlet.init-param.<name>=<value>` [3](#three), [9](#nine)<br/>[3](#three)                                           |
 | `/portlet-app/public-render-parameter`                                                                        | サポートされていません                                                                                                                                                         |
 | `/portlet-app/resource-bundle`                                                                                | portlet-appスコープではサポートされていません                                                                                                                                        |
 | `/portlet-app/security-constraint`                                                                            | サポートされていません                                                                                                                                                         |
@@ -38,12 +35,12 @@
 | `/portlet-app/portlet/async-supported`                                                                        | `javax.portlet.async-supported=<boolean>`                                                                                                                     |
 | `/portlet-app/portlet/cache-scope`                                                                            | サポートされていません                                                                                                                                                         |
 | `/portlet-app/portlet/container-runtime-option`                                                               | `javax.portlet.container-runtime-option.<name>=<value>` [2](#two)                                                                                       |
-| `/portlet-app/portlet/dependency`                                                                             | `javax.portlet.dependency=<name>;<scope>;<version>` [2](#two) , [6](#six)                                                                          |
+| `/portlet-app/portlet/dependency`                                                                             | `javax.portlet.dependency=<name>;<scope>;<version>` [2](#two), [6](#six)                                                                          |
 | `/portlet-app/portlet/description`                                                                            | `javax.portlet.description=<String>`                                                                                                                          |
 | `/portlet-app/portlet/display-name`                                                                           | `javax.portlet.display-name=<String>`                                                                                                                         |
 | `/portlet-app/portlet/expiration-cache`                                                                       | `javax.portlet.expiration-cache=<int>`                                                                                                                        |
 | `/portlet-app/portlet/init-param/name`                                                                        | `javax.portlet.init-param.<name>=<value>`                                                                                                               |
-| `/portlet-app/portlet/listener`                                                                               | `javax.portlet.listener=<listener-class>;<ordinal>` [2](#two) , [8](#eight)                                                                               |
+| `/portlet-app/portlet/listener`                                                                               | `javax.portlet.listener=<listener-class>;<ordinal>` [2](#two),[8](#eight)                                                                               |
 | `/portlet-app/portlet/multipart-config/file-size-threshold`                                                   | `javax.portlet.multipart.file-size-threshold=<Integer>`                                                                                                       |
 | `/portlet-app/portlet/multipart-config/location`                                                              | `javax.portlet.multipart.location=<String>`                                                                                                                   |
 | `/portlet-app/portlet/multipart-config/max-file-size`                                                         | `javax.portlet.multipart.max-file-size=<Long>`                                                                                                                |
@@ -56,41 +53,38 @@
 | `/portlet-app/portlet/portlet-preferences`                                                                    | `javax.portlet.preferences=<String>`<br/>または<br/>`javax.portlet.preferences=classpath:<path_to_file_in_jar>`                                |
 | `/portlet-app/portlet/portlet-preferences/preferences-validator`                                              | `javax.portlet.preferences-validator=<String>` [1](#one)                                                                                                      |
 | `/portlet-app/portlet/resource-bundle`                                                                        | `javax.portlet.resource-bundle=<String>`                                                                                                                      |
-| `/portlet-app/portlet/security-role-ref`                                                                      | `javax.portlet.security-role-ref=<String>［,<String>］` [2](#two)                                                                                          |
+| `/portlet-app/portlet/security-role-ref`                                                                      | `javax.portlet.security-role-ref=<String>［,<String>］`[2](#two)                                                                                          |
 | `/portlet-app/portlet/supported-locale`                                                                       | `javax.portlet.supported-locale=<String>` [2](#two)                                                                                                           |
 | `/portlet-app/portlet/supported-processing-event`                                                             | `javax.portlet.supported-processing-event=<QNameLocalPart>` または `javax.portlet.supported-processing-event=<QNameLocalPart>;<QNameURI>`  [2](#two) |
-| `/portlet-app/portlet/supported-public-render-parameter`                                                      | `javax.portlet.supported-public-render-parameter=<String>` [2](#two)                                                                                           |
+| `/portlet-app/portlet/supported-public-render-parameter`                                                      | `javax.portlet.supported-public-render-parameter=<String>`[2](#two)                                                                                           |
 | `/portlet-app/portlet/supported-publishing-event`                                                             | `javax.portlet.supported-publishing-event=<QNameLocalPart>` または `javax.portlet.supported-publishing-event=<QNameLocalPart>;<QNameURI>` [2](#two)  |
 | `/portlet-app/portlet/supports/mime-type`                                                                     | サポートされていません                                                                                                                                                         |
 | `/portlet-app/portlet/supports/portlet-mode`                                                                  | `javax.portlet.portlet-mode=<mime-type>;<portlet-mode>［,<portlet-mode>］*`                                                                         |
 | `/portlet-app/portlet/supports/window-state`                                                                  | `javax.portlet.window-state=<mime-type>;<window-state>［,<window-state>］*`                                                                         |
-
-<a name="liferay-descriptor-mappings" />
 
 ## Liferay記述子のマッピング
 
 ### Liferayディスプレイ
 
 | liferay-display.xml XPath  | OSGiポートレットサービスプロパティ                                  |
-| :--- | :--- |
+| -------------------------- | ---------------------------------------------------- |
 | `/display/category［@name］` | `com.liferay.portlet.display-category=<value>` |
-reference/portlet-descriptor-to-osgi-service-property-map.md
 
 ### Liferayポートレット
 
-**注:** 簡単にするために、 **Liferayポートレット** [5](#five) から派生したXPath記法を使用しています。
+**注:** 簡単にするために、**Liferayポートレット** [5](#five)から派生したXPath記法を使用しています。
 
 | liferay-portlet.xml XPath                                            | OSGi Liferayポートレットサービスプロパティ                                                                                             |
-| :--- | :--- |
+| -------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
 | `/liferay-portlet-app/portlet/action-timeout`                        | `com.liferay.portlet.action-timeout=<int>`                                                                        |
 | `/liferay-portlet-app/portlet/action-url-redirect`                   | `com.liferay.portlet.action-url-redirect=<boolean>`                                                               |
 | `/liferay-portlet-app/portlet/active`                                | `com.liferay.portlet.active=<boolean>`                                                                            |
 | `/liferay-portlet-app/portlet/add-default-resource`                  | `com.liferay.portlet.add-default-resource=<boolean>`                                                              |
 | `/liferay-portlet-app/portlet/ajaxable`                              | `com.liferay.portlet.ajaxable=<boolean>`                                                                          |
-| `/liferay-portlet-app/portlet/application-type`                      | `com.liferay.portlet.application-type=full-page-application` または `com.liferay.portlet.application-type=widget` [2](#two) |
+| `/liferay-portlet-app/portlet/application-type`                      | `com.liferay.portlet.application-type=full-page-application` または `com.liferay.portlet.application-type=widget`[2](#two) |
 | `/liferay-portlet-app/portlet/asset-renderer-factory`                | [3](#three)                                                                                                             |
 | `/liferay-portlet-app/portlet/atom-collection-adapter`               | [3](#three)                                                                                                             |
-| `/liferay-portlet-app/portlet/autopropagated-parameters`             | `com.liferay.portlet.autopropagated-parameters=<String>` [2](#two)                                                 |
+| `/liferay-portlet-app/portlet/autopropagated-parameters`             | `com.liferay.portlet.autopropagated-parameters=<String>`[2](#two)                                                 |
 | `/liferay-portlet-app/portlet/configuration-action-class`            | [3](#three)                                                                                                             |
 | `/liferay-portlet-app/portlet/configuration-path`                    | サポートされていません                                                                                                             |
 | `/liferay-portlet-app/portlet/control-panel-entry-category`          | `com.liferay.portlet.control-panel-entry-category=<String>`                                                       |
@@ -100,18 +94,18 @@ reference/portlet-descriptor-to-osgi-service-property-map.md
 | `/liferay-portlet-app/portlet/custom-attributes-display`             | [3](#three)                                                                                                             |
 | `/liferay-portlet-app/portlet/ddm-display`                           | [3](#three)                                                                                                             |
 | `/liferay-portlet-app/portlet/facebook-integration`                  | サポートされていません                                                                                                             |
-| `/liferay-portlet-app/portlet/footer-portal-css`                     | `com.liferay.portlet.footer-portal-css=<String>` [2](#two)                                                         |
-| `/liferay-portlet-app/portlet/footer-portal-javascript`              | `com.liferay.portlet.footer-portal-javascript=<String>` [2](#two)                                                  |
-| `/liferay-portlet-app/portlet/footer-portlet-css`                    | `com.liferay.portlet.footer-portlet-css=<String>` [2](#two)                                                        |
-| `/liferay-portlet-app/portlet/footer-portlet-javascript`             | `com.liferay.portlet.footer-portlet-javascript=<String>` [2](#two)                                                 |
+| `/liferay-portlet-app/portlet/footer-portal-css`                     | `com.liferay.portlet.footer-portal-css=<String>`[2](#two)                                                         |
+| `/liferay-portlet-app/portlet/footer-portal-javascript`              | `com.liferay.portlet.footer-portal-javascript=<String>`[2](#two)                                                  |
+| `/liferay-portlet-app/portlet/footer-portlet-css`                    | `com.liferay.portlet.footer-portlet-css=<String>`[2](#two)                                                        |
+| `/liferay-portlet-app/portlet/footer-portlet-javascript`             | `com.liferay.portlet.footer-portlet-javascript=<String>`[2](#two)                                                 |
 | `/liferay-portlet-app/portlet/friendly-url-mapper-class`             | [3](#three)                                                                                                             |
 | `/liferay-portlet-app/portlet/friendly-url-mapping`                  | `com.liferay.portlet.friendly-url-mapping=<String>
 `                                                              |
 | `/liferay-portlet-app/portlet/friendly-url-routes`                   | `com.liferay.portlet.friendly-url-routes=<String>`                                                                |
-| `/liferay-portlet-app/portlet/header-portal-css`                     | `com.liferay.portlet.header-portal-css=<String>` [2](#two)                                                         |
-| `/liferay-portlet-app/portlet/header-portal-javascript`              | `com.liferay.portlet.header-portal-javascript=<String>` [2](#two)                                                  |
-| `/liferay-portlet-app/portlet/header-portlet-css`                    | `com.liferay.portlet.header-portlet-css=<String>` [2](#two)                                                        |
-| `/liferay-portlet-app/portlet/header-portlet-javascript`             | `com.liferay.portlet.header-portlet-javascript=<String>` [2](#two)                                                 |
+| `/liferay-portlet-app/portlet/header-portal-css`                     | `com.liferay.portlet.header-portal-css=<String>`[2](#two)                                                         |
+| `/liferay-portlet-app/portlet/header-portal-javascript`              | `com.liferay.portlet.header-portal-javascript=<String>`[2](#two)                                                  |
+| `/liferay-portlet-app/portlet/header-portlet-css`                    | `com.liferay.portlet.header-portlet-css=<String>`[2](#two)                                                        |
+| `/liferay-portlet-app/portlet/header-portlet-javascript`             | `com.liferay.portlet.header-portlet-javascript=<String>`[2](#two)                                                 |
 | `/liferay-portlet-app/portlet/header-request-attribute-prefix`       | `com.liferay.portlet.header-request-attribute-prefix=<String>` [7](#seven)                                        |
 | `/liferay-portlet-app/portlet/header-timeout`                        | `header-timeout=<int>`                                                                                            |
 | `/liferay-portlet-app/portlet/icon`                                  | `com.liferay.portlet.icon=<String>`                                                                               |
@@ -172,10 +166,10 @@ reference/portlet-descriptor-to-osgi-service-property-map.md
 * [<a name="two">2</a>] これらのプロパティの複数を使用できます。 これにより、値の配列が生成されます。
 * [<a name="three">3</a>] このタイプはOSGiサービスとして登録されています。
 * [<a name="four">4</a>] [https://xmlns.jcp.org/xml/ns/portlet/portlet-app_3_0.xsd](https://xmlns.jcp.org/xml/ns/portlet/portlet-app_3_0.xsd)
-* [<a name="five">5</a>] [http://www.liferay.com/dtd/liferay-portlet-app_7_3_0.dtd](https://docs.liferay.com/ce/portal/7.3-latest/definitions/liferay-portlet-app_7_3_0.dtd.html)
+* [<a name="five">5</a>] [`liferay-portlet-app_[version].dtd`](https://learn.liferay.com/reference/latest/en/dxp/definitions/index.html)
 * [<a name="six">6</a>] 複数の`javax.portlet.dependency`プロパティを使用した例を以下に示します。
 
-    **旧:**
+    *旧:*
 
     ```xml
     <portlet>
@@ -194,7 +188,7 @@ reference/portlet-descriptor-to-osgi-service-property-map.md
     </portlet>
     ```
 
-    **新:**
+    *新:*
 
     ```java
     @Component(
@@ -214,7 +208,7 @@ reference/portlet-descriptor-to-osgi-service-property-map.md
 
 * [<a name="seven">7</a>] `com.liferay.portlet.header-request-attribute-prefix`プロパティの例を以下に示します。
 
-    **旧:**
+    *旧:*
 
     ```xml
     <portlet>
@@ -224,7 +218,7 @@ reference/portlet-descriptor-to-osgi-service-property-map.md
     </portlet>
     ```
 
-    **新:**
+    *新:*
 
     ```java
     @Component(
@@ -242,7 +236,7 @@ reference/portlet-descriptor-to-osgi-service-property-map.md
 
 * [<a name="eight">8</a>] `javax.portlet.listener`プロパティの例を以下に示します。
 
-    **旧:**
+    *旧:*
 
     ```xml
     <portlet>
@@ -255,7 +249,7 @@ reference/portlet-descriptor-to-osgi-service-property-map.md
     </portlet>
     ```
 
-    **新:**
+    *新:*
 
     ```java
     @Component(
@@ -289,5 +283,5 @@ reference/portlet-descriptor-to-osgi-service-property-map.md
 * [<a name="ten">10</a>] Liferayはポートレットの名前に基づいて、各ポートレットのIDを作成します（すなわち、`liferay-portlet.xml`の`portlet-name`記述子または`javax.portlet.name` OSGiサービスのプロパティ）。 ポートレット名にはダッシュ、ピリオド、スペースを使用できますが、これらの文字やその他のJavaScriptの安全でない文字は、ポートレットIDに使用される名前の値から取り除かれます。 したがって、削除される文字を考慮して、ポートレット名を一意なものにしてください。 そうしないと、既にデプロイ済みのポートレットと同じIDのポートレットをデプロイしようとすると、ポートレットのデプロイが失敗し、Liferayは次のメッセージを記録します。
 
     ```
-    Portlet id [portletId] is already in use
+    ポートレットID [portletId] は既に使用されています
     ```

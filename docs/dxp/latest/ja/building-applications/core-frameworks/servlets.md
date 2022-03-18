@@ -1,4 +1,4 @@
-# Servlets
+# サーブレット
 
 ```{raw} html
 :file: ../../landingpage_template.html

@@ -11,29 +11,12 @@ maintaining-a-liferay-installation/patching-dxp-7-3-and-earlier.md
 maintaining-a-liferay-installation/reference.md
 ```
 
--  [バックアップ](/installation-and-upgrades/maintaining-a-liferay-installation/backing-up.md)
--  [Dockerによるアップグレード](/installation-and-upgrades/upgrading-liferay/upgrade-basics/upgrading-via-docker.md)
+Liferayがバグを修正したり、機能を追加するので、それらについていく必要があります。 Liferay DXP 7.3 SPは、 *ローリングリリース*を行っています。 つまり、DXPのソースコードには継続的に修正や目立たない機能が追加され、アップデートリリース（Update）でエンタープライズサブスクライバーに提供されます。 サブスクライバーは、DXPで確認されたミッションクリティカルな問題に対して [Hot Fixes](./maintaining-a-liferay-installation/applying-a-hotfix.md) をリクエストすることができます。
 
-## Liferayのパッチ
+```{important}
+Liferay DXP 7.3 SP3以前のバージョンでは、代わりにパッチモデルを使用しています。 Liferay DXP 7.3 SP3以前のバージョンをお使いの方は、[Patching DXP](./maintaining-a-liferay-installation/patching-dxp-7-3-and-earlier.md)をご覧ください。
+```
 
--  [DXP 7.3 ライフレイのパッチ](/installation-and-upgrades/maintaining-a-liferay-installation/patching-dxp-7-3-and-earlier.md)
--  [パッチタイプについて](/installation-and-upgrades/maintaining-a-liferay-installation/patching-dxp-7-3-and-earlier/understanding-patch-types-for-dxp-7-3-and-earlier.md)
--  [パッチのインストール](/installation-and-upgrades/maintaining-a-liferay-installation/patching-dxp-7-3-and-earlier/installing-patches-for-dxp-7-3-and-earlier.md)
--  [パッチのアンインストール](/installation-and-upgrades/maintaining-a-liferay-installation/reference/uninstalling-patches.md)
--  [パッチツールのインストール](/installation-and-upgrades/maintaining-a-liferay-installation/reference/installing-the-patching-tool.md)
--  [パッチツールの構成](/installation-and-upgrades/maintaining-a-liferay-installation/reference/configuring-the-patching-tool.md)
--  [パッチ情報の取得](/installation-and-upgrades/maintaining-a-liferay-installation/reference/getting-patch-information.md)
--  [DXPのパッチコードへのアクセス](/installation-and-upgrades/maintaining-a-liferay-installation/reference/accessing-dxp-patch-code.md)
--  [Dockerによるアップグレード](/installation-and-upgrades/upgrading-liferay/upgrade-basics/upgrading-via-docker.md)
+インストールを維持するために不可欠なのは、バックアップです。 定期的に保存するシステムコンポーネントの詳細については、 [Backing Up](./maintaining-a-liferay-installation/backing-up.md) を参照してください。
 
-### DXP 7.2のための高度なパッチ適用
-
--  [スリムバンドルの使用](/installation-and-upgrades/maintaining-a-liferay-installation/patching-dxp-7-3-and-earlier/advanced-patching-for-dxp-7-2/using-slim-bundles.md)
--  [パッチを適用したインストールのスリム化](/installation-and-upgrades/maintaining-a-liferay-installation/patching-dxp-7-3-and-earlier/advanced-patching-for-dxp-7-2/slimming-down-patched-installations.md)
--  [カスタムコードとパッチの互換性](/installation-and-upgrades/maintaining-a-liferay-installation/patching-dxp-7-3-and-earlier/advanced-patching-for-dxp-7-2/custom-code-and-patch-compatibility.md)
-
-## クラスター化されたインストールの維持
-
--  [クラスター化されたインストールの維持](/installation-and-upgrades/maintaining-a-liferay-installation/maintaining-clustered-installations.md)
--  [ローリング再起動の実行](/installation-and-upgrades/maintaining-a-liferay-installation/maintaining-clustered-installations/rolling-restarts.md)
--  [ブルーグリーンのデプロイ](/installation-and-upgrades/maintaining-a-liferay-installation/maintaining-clustered-installations/blue-green-deployments.md)
+[apply the latest updates](./maintaining-a-liferay-installation/updating-liferay.md) を随時適用することができます。

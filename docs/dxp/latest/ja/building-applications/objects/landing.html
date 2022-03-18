@@ -1,0 +1,91 @@
+<script type="module">
+	import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.esm.browser.min.js'
+
+	const page = new Vue({
+		el: '#landingPage',
+		data: {
+			cards: [
+				{
+					sectionName: 'Creating and Managing Objects',
+					sectionURL: 'objects/creating-and-managing-objects.html',
+					subsections: [
+						{
+							name: 'Creating Objects',
+							url: 'objects/creating-and-managing-objects/creating-objects.html'
+						},
+						{
+							name: 'Managing Objects',
+							url: 'objects/creating-and-managing-objects/managing-objects.html'
+						},
+						{
+							name: 'Adding Fields to Objects',
+							url: 'objects/creating-and-managing-objects/adding-fields-to-objects.html'
+						},
+					]
+				},
+				{
+					sectionName: 'Objects Tutorials',
+					sectionURL: 'objects/objects-tutorials.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'Building a Time Off Requester',
+							url: 'objects/objects-tutorials/building-a-time-off-requester.html'
+						},
+						{
+							name: 'Using Object Data with React Charts',
+							url: 'objects/objects-tutorials/using-object-data-with-react-charts.html'
+						},
+						{
+							name: 'Using Objects to Create Kanban Boards (Coming Soon)',
+							url: 'objects/objects-tutorials/using-objects-to-create-kanban-boards.html'
+						}
+					]
+				},
+				{
+					sectionName: 'Using Forms with Objects',
+					sectionURL: 'objects/using-forms-with-objects.html',
+				},
+				{
+					sectionName: 'Deploying Object Widgets to Sites',
+					sectionURL: 'objects/deploying-object-widgets-to-sites.html',
+				},
+				{
+					sectionName: 'Displaying Object Entries',
+					sectionURL: 'objects/displaying-object-entries.html',
+				},
+				{
+					sectionName: 'Enabling Workflows for Objects',
+					sectionURL: 'objects/enabling-workflows-for-objects.html',
+				},
+				{
+					sectionName: 'Using Picklists',
+					sectionURL: 'objects/using-picklists.html',
+				},
+				{
+					sectionName: 'Understanding Object Integrations',
+					sectionURL: 'objects/understanding-object-integrations.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'Permissions Framework Integration',
+							url: 'objects/understanding-object-integrations/permissions-framework-integration.html'
+						},
+						{
+							name: 'Headless Framework Integration',
+							url: 'objects/understanding-object-integrations/headless-framework-integration.html'
+						},
+						{
+							name: 'Assets Framework Integration (Coming Soon)',
+							url: 'objects/understanding-object-integrations/assets-framework-integration.html'
+						}
+					]
+				},
+				{
+					sectionName: 'Objects Application Permissions',
+					sectionURL: 'objects/objects-application-permissions.html',
+				}
+			]
+		}
+	})
+</script>

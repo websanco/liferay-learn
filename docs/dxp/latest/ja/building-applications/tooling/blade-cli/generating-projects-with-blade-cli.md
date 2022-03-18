@@ -2,8 +2,6 @@
 
 Blade CLIは、Liferay WorkspaceでLiferayプロジェクトを作成、ビルド、およびデプロイするために存在します。 作成したプロジェクトは、IDEにインポートすることも、直接作業することもできます。 ここでは、Liferayプロジェクトを作成および管理するさまざまな方法を学びます。
 
-<a name="creating-a-liferay-workspace" />
-
 ## Liferay Workspaceの作成
 
 Liferay Workspaceは、プロジェクトとDevOps構成を保存するマシン上の一連のフォルダーです。 Liferay WorkspaceはGradleプロジェクトであるため、任意のIDEにインポートできます。 詳しくは、[Liferay Workspace](../liferay-workspace/what-is-liferay-workspace.md)を参照してください。 Liferay Workspaceを作成するには、次の手順に従います。
@@ -16,9 +14,7 @@ Liferay Workspaceは、プロジェクトとDevOps構成を保存するマシン
    blade init -v 7.3 [workspace name]
    ```
 
-<a name="creating-a-project" />
-
-## プロジェクトを作成する
+## プロジェクトの作成
 
 プロジェクトはLiferay Workspaceに存在します。 覚えておくべき重要なオプションは次のとおりです。
 
@@ -36,13 +32,11 @@ Liferay Workspaceは、プロジェクトとDevOps構成を保存するマシン
 blade create -t mvc-portlet -p com.acme.z3x1.portlet -c GuestbookPortlet guestbook
 ```
 
-これにより、MVCポートレットテンプレート、`com.acme.z3x1.portlet`と呼ばれるデフォルトのパッケージ、`GuestbookPortlet`と呼ばれるポートレットクラス（Liferay 7.4では **ゲストブック** と呼ばれる）を使用してプロジェクトが作成されます。 これで、ワークスペースをIDEにインポートできます。 Liferay IntelliJプラグインまたはLiferay Developer StudioのEclipseプラグインは、拡張サポートを提供します。 Bladeを使用してプロジェクトに新しいワークスペースを作成する場合は、IDEでGradleプロジェクトを更新する必要があることに注意してください。
-
-<a name="creating-sample-projects" />
+これにより、MVCポートレットテンプレート、`com.acme.z3x1.portlet`と呼ばれるデフォルトのパッケージ、`GuestbookPortlet`と呼ばれるポートレットクラス（Liferay 7.4では*ゲストブック*と呼ばれる）を使用してプロジェクトが作成されます。 これで、ワークスペースをIDEにインポートできます。 Liferay IntelliJプラグインまたはLiferay Developer StudioのEclipseプラグインは、拡張サポートを提供します。 Bladeを使用してプロジェクトに新しいワークスペースを作成する場合は、IDEでGradleプロジェクトを更新する必要があることに注意してください。
 
 ## サンプルプロジェクトの作成
 
-Liferayは、 [サンプルプロジェクト](https://github.com/liferay/liferay-blade-samples/tree/7.4) GitHubリポジトリを維持しています。 これらは、プロジェクトの開始点として使用できるさまざまなLiferayテクノロジの完全に実装されたサンプルです。 ただし、リポジトリにクローンを作成してアクセスするのではなく、Blade CLIを使用してローカルに作成できます。
+Liferayは、 [サンプルプロジェクト](https://github.com/liferay/liferay-blade-samples/tree/7.4)のGitHubリポジトリを維持しています。 これらは、プロジェクトの開始点として使用できるさまざまなLiferayテクノロジーの完全に実装されたサンプルです。 ただし、リポジトリにクローンを作成してアクセスするのではなく、Blade CLIを使用してローカルに作成できます。
 
 1. 必要なサンプルプロジェクトを見つけます。
 
@@ -50,7 +44,7 @@ Liferayは、 [サンプルプロジェクト](https://github.com/liferay/lifera
    blade samples
    ```
 
-1. [モデルリスナー](../../../liferay-internals/extending-liferay/creating-a-model-listener.md)実際の例が必要だとします。 次のコマンドを入力します。
+1. [モデルリスナー](../../../liferay-internals/extending-liferay/creating-a-model-listener.md)の実用的な例が必要だとします。 次のコマンドを入力します。
 
    ```bash
    blade samples model-listener
@@ -61,8 +55,6 @@ Liferayは、 [サンプルプロジェクト](https://github.com/liferay/lifera
    ```bash
    blade samples -v 7.1 model-listener
    ```
-
-<a name="converting-legacy-plugins-sdk-projects" />
 
 ## レガシープラグインSDKプロジェクトの変換
 
@@ -84,10 +76,8 @@ Liferayは、 [サンプルプロジェクト](https://github.com/liferay/lifera
    blade convert -s [path to old Plugins SDK] [name of Plugins SDK project to convert]
    ```
 
-- Service Builderサービスを含むプロジェクトを変換すると、Blade CLIは個別のAPIおよびサービスOSGiモジュールを作成します。 ポートレットはWARのままで、 `wars` フォルダーに移動します。
+- Service Builderサービスを含むプロジェクトを変換すると、Blade CLIは個別のAPIおよびサービスOSGiモジュールを作成します。 ポートレットはWARのままで、`wars` フォルダに移動します。
 - テーマは、Liferay 7.xテーマのようにNodeJSを活用するように変換されます。 Javaベースのテーマを変換するには、代わりにTheme Builder Gradleプラグインを使用する `-t` オプションを追加します。
-
-<a name="related-topics" />
 
 ## 関連トピック
 

@@ -6,11 +6,11 @@
 
 1. 1つのクラスターノード（JVMインスタンス）をシャットダウンします。
 
-2. そのノードのデプロイを更新/変更します（以下のメンテナンスシナリオを参照）。
+1. そのノードのデプロイを更新/変更します（以下のメンテナンスシナリオを参照）。
 
-3. ノードを起動します。
+1. ノードを起動します。
 
-4. 他のすべてのクラスターノードに対してこれらの手順を繰り返します。
+1. 他のすべてのクラスターノードに対してこれらの手順を繰り返します。
 
     ```{note}
       Maintenance scenarios vary in how they behave in rolling restarts. For example, UI changes in a plugin update are only visible on the updated nodes. Users on nodes that haven't been updated don't see the UI changes. Maintenance scenarios might have specific cases that cannot be performed in rolling restarts --- the scenario descriptions mention these cases.
@@ -36,9 +36,7 @@
 
 > サブスクリプション
 
-カスタマーポータルは、元に戻せないためローリング再起動の対象外となる[フィックスパック](../patching-liferay/patching-liferay.md)を識別します。 他のすべてのフィックスパックは対象です。
-
-<a name="reverting-fix-packs" />
+カスタマーポータルは、復帰不可能な[フィックスパック](../patching-dxp-7-3-and-earlier.md)を特定し、ローリング再起動の対象外となります。 他のすべてのフィックスパックは対象です。
 
 ## フィックスパックの復元
 
@@ -72,10 +70,8 @@ Javaのマイナーバージョンの更新はローリング再起動時に適�
 
 ローリング再起動の対象となるすべての更新は、前述のローリング再起動手順を使用して適用できます。 他の更新は、次に説明するように異なる方法で行う必要があります。
 
-<a name="additional-information" />
+## 追加情報
 
-## 関連トピック
-
-* [Blue Green Deployment](./blue-green-deployments.md)
-* [高可用性のクラスタリング](../../setting-up-liferay/clustering-for-high-availability.md)
-* [パッチ](../patching-liferay/patching-liferay.md)
+* [ブルーグリーンのデプロイ](./blue-green-deployments.md)
+* [Clustering for High Availability](../../setting-up-liferay/clustering-for-high-availability.md)
+* [DXP へのパッチ適用](../patching-dxp-7-3-and-earlier.md)

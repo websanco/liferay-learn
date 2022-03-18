@@ -1,32 +1,28 @@
 # DXPのナビゲート
 
-Liferay DXPのすぐに使えるナビゲーションは、 **個人用メニュー** 、 **グローバルメニュー** 、 **サイトメニュー** の3つの主要な領域に編成されています。
-
-<a name="site-menu" />
+Liferay DXPのすぐに使えるナビゲーションは、_個人用メニュー_、_グローバルメニュー_、_サイトメニュー_の3つの主要な領域に編成されています。
 
 ## サイトメニュー
 
-画面の左側にあるDXP **サイトメニュー** には、現在表示されている特定のサイトを対象とするアクション、コンテンツ、および構成が含まれています。 画面の左上隅にあるアイコン（![Site Menu icon](../images/icon-menu.png)）をクリックして展開するまで、サイトメニューを非表示にしておくことができます。
+画面の左側にあるDXP_サイトメニュー_には、現在表示されている特定のサイトを対象とするアクション、コンテンツ、および構成が含まれています。 アプリケーションバーのサイトメニューアイコン（![Site Menu](../images/icon-menu.png)）をクリックすると、サイトメニューの表示・非表示を切り替えることができます。
 
 ![サイトメニューを展開して、すべてのオプションを表示します。](./navigating-dxp/images/05.png)
 
-```{note}
-   *サイトメニュー*は選択したサイトを示します。 この例では、サイトは「Liferay」です。 サイトメニューのコンパスアイコンをクリックして、作業しているサイトを変更できます。
-```
 
-次の一般的なサイト構築および管理アクティビティは、 **サイトメニュー** で実行できます。
+*サイトメニュー*は選択したサイトを示します。 上記の例では、サイトは `Liferay`です。 サイトメニューのコンパスアイコン（ ![Compass Icon](../images/icon-compass.png) ）をクリックすると、作業しているサイトを変更することができます。
 
-* [ページを追加する](../site-building/creating-pages/adding-pages/adding-a-page-to-a-site.md)
-* [コンテンツを作成する](../content_authoring_and_management.html)
-* [サイトメンバーシップを管理する](../site-building/building-sites/site-membership/adding-members-to-sites.md)
+
+次の一般的なサイト構築および管理アクティビティは、_サイトメニュー_で実行できます。
+
+* [ページの追加](../site-building/creating-pages/adding-pages/adding-a-page-to-a-site.md)
+* [コンテンツを作成する](../content-authoring-and-management.html)
+* [サイトメンバーシップの管理](../site-building/building-sites/site-membership/adding-members-to-sites.md)
 * [サイトの動作と機能の設定と最適化](../site_building.html)
-* 等々・・・
-
-<a name="applications-bar" />
+* など・・・
 
 ## アプリケーションバー
 
-**アプリケーションバー** は、 [サイトメニュー](#site-menu) のさまざまなページとアプリケーションに表示されます。 アプリケーションバーには、現在開いているアプリケーションに応じて、さまざまなオプションが含まれるアクション（![Actions](../images/icon-actions.png)）メニューが表示されます。
+_アプリケーションバー_ は、各ページの上部に表示され、アプリケーションは [サイトメニュー](#site-menu)に一覧表示されます。 アプリケーションバーには、現在開いているアプリケーションに応じて、さまざまなオプションが含まれるアクション（![Actions](../images/icon-actions.png)）メニューが表示されます。
 
 ![アプリケーションバーで使用できるアクションは、現在開いているアプリケーションによって異なります。](./navigating-dxp/images/07.png)
 
@@ -47,18 +43,16 @@ Liferay DXPのすぐに使えるナビゲーションは、 **個人用メニュ
 
 - ページ設定（![Configure Page](../images/icon-settings.png)）
 - トグルコントロール（![Toggle Controls](../images/icon-preview.png)）
-- Add (![Add](../images/icon-plus.png))
+- 追加 (![Add](../images/icon-plus.png))
 - シミュレーション（![Simulation](../images/icon-simulation.png)）
 - コンテンツパフォーマンス（![Performance](../images/icon-analytics.png)）
 - ページ監査（![Page Audit](../images/icon-information.png)）
 
 ```{note}
-   コンテンツページとウィジェットページのアプリケーションバーオプションは、Lifera yDXPのバージョンによって異なります。 [コンテンツパフォーマンス](../content-authoring-and-management/content-performance-tool/about-the-content-performance-tool.md)は、Liferay DXP7.3以降のコンテンツページとLiferay DXP7.4以降のウィジェットページで利用できます。 ページ監査は、Liferay DXP7.4以降で利用できます。 トグルコントロールオプションは、Liferay DXP7.3以降で使用できます。
+コンテンツページとウィジェットページのアプリケーションバーオプションは、Lifera yDXPのバージョンによって異なります。 [コンテンツパフォーマンス](../content-authoring-and-management/content-performance-tool/about-the-content-performance-tool.md)は、Liferay DXP 7.3以降のコンテンツページと、Liferay DXP 7.4以降のウィジェットページで利用できます。 ページ監査は、Liferay DXP7.4以降で利用できます。 トグルコントロールオプションは、Liferay DXP7.3以降で使用できます。
 ```
 
-<a name="personal-menu" />
-
-## パーソナルメニュー
+## 個人用メニュー
 
 パーソナルメニューは、ログインしているユーザーの情報とアクティビティのハブです。
 
@@ -66,35 +60,33 @@ Liferay DXPのすぐに使えるナビゲーションは、 **個人用メニュ
 
 ユーザーはパーソナルメニューを使用して次のことができます。
 
-* [アカウント情報を変更する](./introduction-to-the-admin-account.md#changing-account-information) （名前、パスワードなど）
+* [アカウント情報を変更する](./introduction-to-the-admin-account.md#changing-account-information)（名前、パスワードなど）
 * [メンバーとなっているサイトを確認する](../site-building/building-sites/site-membership/adding-members-to-sites.md)
 * [サイト通知を確認する](../collaboration-and-social/notifications-and-requests/user-guide/managing-notifications-and-requests.md)
 * [サインアウトする](./introduction-to-the-admin-account.md#signing-out)
-* 等々・・・
-
-<a name="global-menu" />
+* など・・・
 
 ## グローバルメニュー
 
-DXPの **グローバルメニュー** には、 **アプリケーションメニュー** と **コントロールパネル** が含まれています。 画面上部の **アプリケーションメニュー** アイコン（![Applications Menu icon](../images/icon-applications-menu.png)）をクリックしてアクセスします。
+DXPの_グローバルメニュー_には、_アプリケーションメニュー_と_コントロールパネル_が含まれています。 画面上部の_アプリケーションメニュー_アイコン（![Applications Menu icon](../images/icon-applications-menu.png)）をクリックしてアクセスします。
 
 ```{note}
-   デフォルトでは、*ゲスト*または*ユーザー*のロールを持つユーザーは、グローバルメニューにアクセスできません。
+デフォルトでは、*ゲスト*または*ユーザー*のロールを持つユーザーは、グローバルメニューにアクセスできません。
 ```
 
-右側の **グローバルメニュー** の ［**Applications**］ タブまたは ［**コントロールパネル**］ タブから、利用可能な他のサイトに移動することもできます。
+インターフェイスの右側の_グローバルメニュー_の_［Applications］_タブまたは_［コントロールパネル］_タブから、利用可能な他のサイトに移動することもできます。
 
-### グローバルメニュー
+### アプリケーションメニュー
 
-**アプリケーションメニュー** には、Liferay DXPサーバー内のさまざまなアプリケーションを管理するためのさまざまなリンクが含まれています。
+_アプリケーションメニュー_には、Liferay DXPサーバー内のさまざまなアプリケーションを管理するためのさまざまなリンクが含まれています。
 
 ![アプリケーションメニューには、すべてのサイトに適用できる多くのグローバル設定と重要な機能が含まれています。](./navigating-dxp/images/02.png)
 
-**アプリケーションメニュー** から管理できるアプリケーションの一部を次に示します。
+_アプリケーションメニュー_から管理できるアプリケーションの一部を次に示します。
 
 * [コレクション](../content-authoring-and-management/collections-and-collection-pages/about-collections-and-collection-pages.md)とコンテンツダッシュボード
 * [ワークフロー](../process-automation/workflow/introduction-to-workflow.md)
-* [アプリビルダー](../developing-applications/developing-low-code-applications/app-builder-overview.md)
+* [アプリビルダー](../building-applications/app-builder.md)
 
 ### コマースメニュー
 
@@ -102,19 +94,19 @@ Liferay 7.3 CE GA6およびLiferay DXP 7.3 GA1以降、Liferay Commerce 3.0はLi
 
 ![コマースメニューには、すべてのストア機能が含まれています。](./navigating-dxp/images/03.png)
 
-**コマース** メニューから管理できる機能は次のとおりです。
+_コマース_メニューから管理できる機能は次のとおりです。
 
-* [新しいカタログを作成する](https://learn.liferay.com/commerce/latest/ja/product-management/catalogs/creating-a-new-catalog.html)
-* [新しいチャンネルを作成する](https://learn.liferay.com/commerce/latest/ja/starting-a-store/channels/managing-channels.html)
-* [在庫を管理する](https://learn.liferay.com/commerce/latest/ja/product-management/managing-inventory/introduction-to-managing-inventory.html)
-* [注文を処理する](https://learn.liferay.com/commerce/latest/ja/order-management/orders/processing-an-order.html)
+* [新しいカタログを作成する](https://learn.liferay.com/commerce/latest/en/managing-a-catalog/catalogs/creating-a-new-catalog.html)
+* [新しいチャンネルを作成する](https://learn.liferay.com/commerce/latest/en/starting-a-store/channels/managing-channels.html)
+* [在庫を管理する](https://learn.liferay.com/commerce/latest/en/managing-a-catalog/managing-inventory/introduction-to-managing-inventory.html)
+* [注文を処理する](https://learn.liferay.com/commerce/latest/en/orders-and-fulfillment/orders/processing-an-order.html)
 * その他
 
-Liferay Commerceの詳細については、 [Liferay Commerceの概要](https://learn.liferay.com/commerce/latest/ja/starting-a-store/introduction-to-liferay-commerce.html) を参照してください。
+Liferay Commerceの詳細については、[Introduction to Liferay Commerce](https://learn.liferay.com/commerce/latest/en/starting-a-store/introduction-to-liferay-commerce.html)を参照してください。
 
 ### コントロールパネル
 
-**コントロールパネル** には、Liferay DXPインストールまたは特定のインスタンスに **グローバル** にスコープできる一般的な管理アクションと構成が含まれています。
+_コントロールパネル_には、Liferay DXPインストールまたは特定のインスタンスに_グローバル_にスコープできる一般的な管理アクションと構成が含まれています。
 
 ![これで、コントロールパネルがグローバルメニューの一部になりました。](./navigating-dxp/images/04.png)
 
@@ -124,25 +116,19 @@ Liferay Commerceの詳細については、 [Liferay Commerceの概要](https://
 * [ユーザーのログイン方法を変更する](../installation-and-upgrades/securing-liferay/authentication-basics.md)
 * [新しいサイトを作成する](../site-building/building-sites/adding-a-site.md)
 * サイト上のアプリケーションに新しいカスタムフィールドを追加する
-* 等々・・・
-
-<a name="dxp-71-and-72" />
+* など・・・
 
 ## DXP7.1および7.2
 
-7.3より前のLiferay DXPバージョンでは、代わりにグローバルメニューのすべてのコンテンツがコントロールパネルに含まれています。 これらのバージョンでは、コントロールパネル自体が画面左側のサイトメニューの上にあります。
+Liferay DXP 7.3以前のバージョンでは、グローバルメニューの内容は、画面の左側のサイトメニューの上にあるコントロールパネルの中にあります。
 
 ![DXP 7.1および7.2のコントロールパネルは、サイトメニューの上にあります。](./navigating-dxp/images/06.png)
 
-<a name="whats-next" />
-
 ## 次のステップ
 
-引き続きスタートガイドを進め、 [最初のサイトを作成する](./creating-your-first-site.md) 方法について学習します。
-
-<a name="related-information" />
+引き続きスタートガイドを進め、[最初のサイトを作成する](./creating-your-first-site.md)方法について紹介します。
 
 ## 関連情報
 
-- [Creating your first Site](./creating-your-first-site.md)
-- [Changing your Site's Appearance](./changing-your-sites-appearance.md)
+* [Creating your first Site](./creating-your-first-site.md)
+* [Changing your Site's Appearance](./changing-your-sites-appearance.md)

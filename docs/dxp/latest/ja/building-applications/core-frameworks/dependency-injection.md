@@ -1,4 +1,4 @@
-# Dependency Injection
+# 依存性注入
 
 ```{raw} html
 :file: ../../landingpage_template.html

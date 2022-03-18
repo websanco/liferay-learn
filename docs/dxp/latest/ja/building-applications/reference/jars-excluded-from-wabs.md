@@ -1,6 +1,6 @@
 # WABから除外されたJAR
 
-[Liferayで生成されたWebアプリケーションバンドル\（WAB\）](./deploying-wars-wab-generator.md)からは、[Liferayがすでにエクスポートしているパッケージ](../../liferay-internals/reference/exported-third-party-packages.md)を含むサードパーティーのJARが削除されます。 追加のJARから同じサードパーティーパッケージをデプロイすると、デバッグが難しい奇妙なエラーが発生する可能性があります。 Liferayの [`module.framework.web.generator.excluded.paths`](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#Module%20Framework%20Web%20Application%20Bundles) [portal property](../../installation-and-upgrades/reference/portal-properties.md)は、除外されたJARを指定しています。 デフォルトの`module.framework.web.generator.excluded.paths`プロパティからの抜粋を以下に示します。
+[Liferayで生成されたWebアプリケーションバンドル\（WAB\）](./deploying-wars-wab-generator.md)からは、[Liferayがすでにエクスポートしているパッケージ](../../liferay-internals/reference/exported-third-party-packages.md)を含むサードパーティーのJARが削除されます。 追加のJARから同じサードパーティーパッケージをデプロイすると、デバッグが難しい奇妙なエラーが発生する可能性があります。 Liferayの[`module.framework.web.generator.excluded.paths`](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#Module%20Framework%20Web%20Application%20Bundles) [portal property](../../installation-and-upgrades/reference/portal-properties.md)は、除外されたJARを指定しています。 デフォルトの`module.framework.web.generator.excluded.paths`プロパティからの抜粋を以下に示します。
 
 ```properties
 module.framework.web.generator.excluded.paths=\
@@ -15,7 +15,7 @@ module.framework.web.generator.excluded.paths=\
 ```
 
 ```{note}
-    WABが [liferay-plugin-package.properties](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/liferay-plugin-package_7_3_0.properties.html) ファイル内の``portal-dependency-jars``プロパティにJARを一覧表示していても、LiferayはこれらのJARをWABから除外します。
+WABが[liferay-plugin-package.properties](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/liferay-plugin-package_7_3_0.properties.html)ファイル内の`portal-dependency-jars`プロパティにJARを一覧表示していても、LiferayはこれらのJARをWABから除外します。
 ```
 
 <a name="including-a-different-version-of-a-third-party-package" />
@@ -37,7 +37,7 @@ WARで[エクスポートされたサードパーティーパッケージ](../..
 
 1. 必要なパッケージバージョンを提供する[アーティファクトを見つけます](../../liferay-internals/fundamentals/configuring-dependencies/finding-artifacts.md)。
 
-1. Liferayが除外する対応するアーティファクトがあるかどうか、 [`module.framework.web.generator.excluded.paths`](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#Module%20Framework) ポータルプロパティを確認します。 たとえば、Liferayは次のSpring Framework JARを除外します。
+1. Liferayが除外する対応するアーティファクトがあるかどうか、 [`module.framework.web.generator.excluded.paths`](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#Module%20Framework)ポータルプロパティを確認します。 たとえば、Liferayは次のSpring Framework JARを除外します。
 
     ```properties
     module.framework.web.generator.excluded.paths=\
@@ -72,6 +72,6 @@ WARで[エクスポートされたサードパーティーパッケージ](../..
 
 ## 追加情報
 
-* [エクスポートされたサードパーティパッケージ](../../liferay-internals/reference/exported-third-party-packages.md)
-* [依存関係の構成 (近日公開！)](../../liferay-internals/fundamentals/configuring-dependencies.md)
+* [Exported Third Party Packages](../../liferay-internals/reference/exported-third-party-packages.md)
+* [Configuring Dependencies](../../liferay-internals/fundamentals/configuring-dependencies.md)
 * [Deploying WARs \(WAB Generator\)](./deploying-wars-wab-generator.md)

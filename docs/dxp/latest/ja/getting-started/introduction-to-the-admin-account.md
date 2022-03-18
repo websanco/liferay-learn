@@ -2,18 +2,16 @@
 
 管理者ユーザーアカウントは、Liferay DXPの新規インストールでデフォルトで作成され、Liferay DXPインスタンスのすべてのファセットを変更するための完全なアクセス権を持っています。 管理者ユーザーは、サイト、ユーザー、ページを作成、変更、削除し、すべてのサイト管理タスクを実行できます。
 
-<a name="accessing-liferay-dxp-as-the-admin-user" />
-
 ## 管理者ユーザーとしてLiferay DXPにアクセスする
 
 1. ブラウザで`http://localhost:8080`を開きます。
 
-1. ［**Sign In**］ リンクをクリックします。
+1. _［ログイン］_リンクをクリックします。
 
     ![サインインリンク](./introduction-to-the-admin-account/images/01.png "サインインリンク")
 
     ```{note}
-       Liferay DXPバンドルが使用されている場合、セットアップウィザード <../installation-and-upgrades/installing-liferay/running-liferay-for-the-first-time.md>`_.が表示されることがあります。 画面上の指示に従って、管理者ユーザーを設定してください。
+    Liferay DXPバンドルが使用されている場合、[Setup Wizard](../installation-and-upgrades/installing-liferay/running-liferay-for-the-first-time.md)が表示されることがあります。 画面上の指示に従って、管理者ユーザーを設定します。
     ```
 
 1. ログインするデフォルトの管理者資格情報を入力します。
@@ -31,29 +29,27 @@
 
 ### ログインパスワードの変更
 
-1. ［**User Avatar**］ をクリックして、 ［**アカウント設定**］ &rarr; ［**Password**］ に移動します。
+1. _［User Avatar］_をクリックして、_［アカウント設定］_ &rarr; _［Password］_に移動します。
 
-1. **現在のパスワード** を入力し、新しいパスワードを入力します。
+1. _現在のパスワード_を入力し、新しいパスワードを入力します。
 
     ![パスワード設定](./introduction-to-the-admin-account/images/02.png "パスワード設定")
 
 ### アカウント情報の変更
 
-1. ［**User Avatar**］ &rarr; ［**アカウント設定**］ の順にクリックします。
+1. _［User Avatar］_ &rarr; _［アカウント設定］_の順にクリックします。
 
     ![アカウント設定](./introduction-to-the-admin-account/images/03.png "アカウント設定")
 
-1. ［**Information**］ タブで、必要に応じてユーザー情報を変更または追加します。
+1. _［Information］_タブで、必要に応じてユーザー情報を変更または追加します。
 
     ![アカウント情報](./introduction-to-the-admin-account/images/04.png "アカウント情報")
-
-<a name="signing-out" />
 
 ## ログアウト
 
 アカウントからログアウトするには：
 
-1. ［**User Avatar**］ &rarr; ［**Sign Out**］ の順にクリックします。
+1. _［User Avatar］_ &rarr; _［Sign Out］_の順にクリックします。
 
     ![ログアウト](./introduction-to-the-admin-account/images/05.png "ログアウト")
 
@@ -67,13 +63,13 @@
 
 1. 新しいユーザーを作成します。 方法については、[Adding Users](../users-and-permissions/users/adding-and-managing-users.md)を参照してください。
 
-1. 左側のナビゲーションペイン（［**Edit User**］ ページの ［**General**］ タブ）で ［**Roles**］ リンクをクリックします。
+1. 左側のナビゲーションペイン（［一般］の下の［ユーザーの編集］ページ）から*［ロール］*リンクをクリックします。
 
     ![ロールリンクをクリックして、ユーザーのロールを編集します。](./introduction-to-the-admin-account/images/06.png)
 
-1. ［**Regular Roles**］ の横にある ［**選択**］ をクリックします。
+1. *［Regular Roles］*の横にある*［選択］*をクリックします。
 
-1. リストから **管理者** ロールを選択します（［**Choose**］ をクリック）。 ダイアログボックスが閉じ、ロールがアカウントに関連付けられているロールのリストに追加されます。
+1. リストから*管理者*ロールを選択します（*［Choose］*をクリック）。 ダイアログボックスが閉じ、ロールがアカウントに関連付けられているロールのリストに追加されます。
 
 ユーザーがポータル管理者になりました。 ログアウトしてから、新しいユーザーアカウントで再度ログインします。
 

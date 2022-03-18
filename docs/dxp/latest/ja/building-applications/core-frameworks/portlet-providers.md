@@ -1,4 +1,4 @@
-# Portlet Providers
+# ポートレットプロバイダー
 
 ```{raw} html
 :file: ../../landingpage_template.html

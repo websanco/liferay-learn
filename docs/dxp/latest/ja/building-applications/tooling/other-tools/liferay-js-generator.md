@@ -1,3 +1,3 @@
-# Liferay JSジェネレーター
+# Liferay JS Generator
 
 Coming soon!

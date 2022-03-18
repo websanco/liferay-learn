@@ -19,10 +19,8 @@
 * [BlueGreenDeployment](http://martinfowler.com/bliki/BlueGreenDeployment.html)
 * [Implementing Blue-Green Deployments with AWS](https://www.thoughtworks.com/insights/blog/implementing-blue-green-deployments-aws)
 
-<a name="additional-information" />
-
-## 関連トピック
+## 追加情報
 
 * [Rolling Restarts](./rolling-restarts.md)
-* [高可用性のクラスタリング](../../setting-up-liferay/clustering-for-high-availability.md)
-* [パッチ](../patching-liferay/patching-liferay.md)
+* [Clustering for High Availability](../../setting-up-liferay/clustering-for-high-availability.md)
+* [DXP へのパッチ適用](../patching-dxp-7-3-and-earlier.md)

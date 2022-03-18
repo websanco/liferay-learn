@@ -4,17 +4,15 @@
 
 ここでは、ポートレットレンダーURLを使用するサンプルアプリケーションをデプロイします。 ポートレットが、MVCポートレットの`mvcPath`パラメーターを使用してビューパスを設定するURLを作成する方法を見ていきます。
 
-サンプルポートレットには2つのビューがあります。 **ビュー1** にはその名前と **ビュー2** へのリンクが表示され、その逆も同様です。
+サンプルポートレットには2つのビューがあります。*ビュー1*にはその名前と*ビュー2*へのリンクが表示され、その逆も同様です。
 
 ![これがビュー1です。](./rendering-views-with-mvc-portlet/images/01.png)
-
-<a name="deploy-an-mvc-portlet-with-multiple-views" />
 
 ## 複数のビューを持つMVCポートレットをデプロイする
 
 サンプルポートレットをデプロイし、そのビュー間を移動する方法は次のとおりです。 学習の目的で、ポートレットは`mvcPath`パラメーター値をログに記録します。
 
-1. [Liferay Dockerコンテナ](../../../installation-and-upgrades/installing-liferay/using-liferay-docker-images/docker-container-basics.md)を起動します。
+1. [Liferay Dockerコンテナ](../../../installation-and-upgrades/installing-liferay/using-liferay-docker-images.md)を起動します。
 
    ```bash
    docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
@@ -23,7 +21,7 @@
 1. サンプルをダウンロードして解凍します。
 
    ```bash
-   curl https://learn.liferay.com/dxp/latest/ja/developing-applications/developing-a-java-web-application/using-mvc/liferay-c8m3.zip -O
+   curl https://learn.liferay.com/dxp/latest/en/building-applications/developing-a-java-web-application/using-mvc/liferay-c8m3.zip -O
    ```
 
    ```bash
@@ -54,11 +52,11 @@
 
 1. デフォルトの認証情報を使用してサインインします。
 
-   **ユーザー名** : `test@liferay.com`
+   **ユーザー名**: `test@liferay.com`
 
    **パスワード：** `test`
 
-1. **C8M3ポートレット** ウィジェットを ［**Samples**］ カテゴリからウィジェットページに追加します。 **ビュー1**（ポートレットのデフォルトビュー）が表示されます。
+1. *C8M3ポートレット*ウィジェットを*［Samples］*カテゴリからウィジェットページに追加します。 *ビュー1*（ポートレットのデフォルトビュー）が表示されます。
 
     ![ビュー1をページに追加しました。](./rendering-views-with-mvc-portlet/images/02.png)
 
@@ -70,7 +68,7 @@
 
     描画リクエストには、MVCパスパラメーターがまだ含まれていません。 これは予想通りです。 ポートレットは、デフォルトでポートレットクラス（後述）を使用してビュー1をレンダリングします。 次のステップでは、MVCパスパラメーターを使用します。
 
-1. ［**Go to View 2**］ をクリックします。 ビュー2が表示されます。
+1. *［Go to View 2］*をクリックします。 ビュー2が表示されます。
 
     ![ビュー2に移動しました。](./rendering-views-with-mvc-portlet/images/03.png)
 
@@ -80,7 +78,7 @@
     MVC path /view_2.jsp
     ```
 
-1. ［**Go to View 1**］ をクリックします。 ビュー1が再び表示されます。
+1. *［Go to View 1］*をクリックします。 ビュー1が再び表示されます。
 
    ![ビュー1に戻りました。](./rendering-views-with-mvc-portlet/images/04.png)
 
@@ -92,38 +90,32 @@
 
 ポートレットビュー間を往復しました。 次に、ポートレットがデフォルトのビューを設定し、レンダーURLとMVCパスリクエストパラメータを使用してビューへのパスを設定する方法を学習します。
 
-<a name="setting-the-default-view" />
-
 ## デフォルトビューの設定
 
-ポートレットのデフォルトビューは、ユーザーが最初にポートレットのページにアクセスしたときにレンダリングされます。 ポートレットクラスの初期化パラメーターは、デフォルトビューを設定します。 `C8M3Portlet.java`のサンプルクラスは、 [`@Component`](https://osgi.org/javadoc/r6/residential/org/osgi/service/component/annotations/Component.html) でデフォルトビューを設定します。
+ポートレットのデフォルトビューは、ユーザーが最初にポートレットのページにアクセスしたときにレンダリングされます。 ポートレットクラスの初期化パラメーターは、デフォルトビューを設定します。 `C8M3Portlet.java`のサンプルクラスは、[`@Component`](https://osgi.org/javadoc/r6/residential/org/osgi/service/component/annotations/Component.html)でデフォルトビューを設定します。
 
 ```{literalinclude} ./rendering-views-with-mvc-portlet/resources/liferay-c8m3.zip/c8m3-web/src/main/java/com/acme/c8m3/web/internal/portlet/C8M3Portlet.java
    :language: java
    :lines: 16-24
 ```
 
-[`@Component`](https://osgi.org/javadoc/r6/residential/org/osgi/service/component/annotations/Component.html) プロパティ`"javax.portlet.init-param.view-template=/view1.jsp"`は、デフォルトのビューテンプレートとして`/view1.jsp`を指定します。 テンプレートパスは、ポートレットの`src/main/resources/META-INF/resources`フォルダへの相対パスです。
+[`@Component`](https://osgi.org/javadoc/r6/residential/org/osgi/service/component/annotations/Component.html)プロパティ`"javax.portlet.init-param.view-template=/view1.jsp"`は、デフォルトのビューテンプレートとして`/view1.jsp`を指定します。 テンプレートパスは、ポートレットの`src/main/resources/META-INF/resources`フォルダへの相対パスです。
 
 次に、ビュー1がビュー2にリンクする方法を学習します。
 
-<a name="linking-to-a-view-using-a-portlet-render-url" />
-
 ## ポートレットレンダーURLを使用したビューへのリンク
 
-ビュー1には、 ［**View 1**］ という見出しと、 ［**Go to View 2**］ というラベルの付いたリンクしかありません。 `view1.jsp`コードは次のとおりです。
+ビュー1には、*［View 1］*という見出しと、*［Go to View 2］*というラベルの付いたリンクしかありません。 `view1.jsp`コードは次のとおりです。
 
 ```{literalinclude} ./rendering-views-with-mvc-portlet/resources/liferay-c8m3.zip/c8m3-web/src/main/resources/META-INF/resources/view_1.jsp
    :language: jsp
 ```
 
-`portlet:renderURL`タグはポートレットtaglibから取得され、プレフィックス`portlet`が割り当てられます。 上記のレンダーURLは、変数`view2URL`に割り当てられています。 レンダーURLは、`mvcPath`という名前の`portlet:param`に値`/view_2.jsp`を宣言します。 ポートレットがレンダリングされると、`mvcPath`パラメーターがポートレットの [`RenderRequest`](https://docs.liferay.com/portlet-api/2.0/javadocs/javax/portlet/RenderRequest.html) オブジェクトに追加されます。 ポートレットリクエストの処理時に、 [`MVCPortlet`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/portlet/bridges/mvc/MVCPortlet.java) は`mvcPath`に割り当てられたテンプレートをレンダリングします。
+`portlet:renderURL`タグはポートレットtaglibから取得され、プレフィックス`portlet`が割り当てられます。 上記のレンダーURLは、変数`view2URL`に割り当てられています。 レンダーURLは、`mvcPath`という名前の`portlet:param`に値`/view_2.jsp`を宣言します。 ポートレットがレンダリングされると、`mvcPath`パラメーターがポートレットの[`RenderRequest`](https://docs.liferay.com/portlet-api/2.0/javadocs/javax/portlet/RenderRequest.html)オブジェクトに追加されます。 ポートレットリクエストの処理時に、[`MVCPortlet`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/portlet/bridges/mvc/MVCPortlet.java)は`mvcPath`に割り当てられたテンプレートをレンダリングします。
 
 ポートレットがレンダーURLを使用するには、そのURLをハイパーリンクやボタンなどのUIコンポーネントにバインドする必要があります。 ハイパーリンク`<a href="<%= view2URL %>">［Go to View 2］</a>`は、レンダーURLをUIコンポーネントにバインドします。
 
-ユーザーが ［**Go to View 2**］ ハイパーリンクをクリックすると、`mvcPath`パラメーターを含むポートレットリクエストがポートレットクラスに送信されます。
-
-<a name="handling-the-mvcpath-portlet-parameter" />
+ユーザーが*［Go to View 2］*ハイパーリンクをクリックすると、`mvcPath`パラメーターを含むポートレットリクエストがポートレットクラスに送信されます。
 
 ## mvcPathポートレットパラメーターの処理
 
@@ -135,7 +127,7 @@
    :lines: 26-40
 ```
 
-`C8M3Portlet`の`render`メソッドは、`mvcPath`パラメーター値をログに記録してから、ポートレットのレンダリングをスーパークラス`MVCPortlet`に委任します。  [`MVCPortlet`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/portlet/bridges/mvc/MVCPortlet.java) は、`mvcPath`ポートレットリクエストパラメータに割り当てられたビューをレンダリングします。
+`C8M3Portlet`の`render`メソッドは、`mvcPath`パラメーター値をログに記録してから、ポートレットのレンダリングをスーパークラス`MVCPortlet`に委任します。  [`MVCPortlet`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/portlet/bridges/mvc/MVCPortlet.java)は、`mvcPath`ポートレットリクエストパラメータに割り当てられたビューをレンダリングします。
 
 ```{note}
 `mvcPath`リクエストパラメータがない場合、` MVCPortlet`はデフォルトのテンプレート（つまり、 `javax.portlet.init-param.view-template`コンポーネントプロパティが指定するテンプレート）を表示します。
@@ -149,17 +141,13 @@
 
 ビュー1に戻るラウンドトリップを実装します。
 
-<a name="whats-next" />
-
 ## 次のステップ
 
 これで、ポートレットビューをレンダリングする方法がわかりました。 次に、個別の`RenderCommand`クラスを使用して、ポートレットでアクションを実行したり、ビューをレンダリングしたりできます。
 
-<a name="additional-information" />
-
 ## 追加情報
 
-* [MVCレンダーコマンド](./mvc-render-command.md)
-* [MVCアクションコマンド](./mvc-action-command.md)
-* [MVCポートレットでのローカライズされたメッセージの使用](./using-localized-messages-in-an-mvc-portlet.md)
+* [MVC Render Command](./mvc-render-command.md)
+* [MVC Action Command](./mvc-action-command.md)
+* [Using Localized Messages in an MVC Portlet](./using-localized-messages-in-an-mvc-portlet.md)
 * [ポートレット](../reference/portlets.md)

@@ -2,9 +2,7 @@
 
 管理者とユーザーに、ポートレットのルック&フィールを使用してポートレットをカスタマイズする方法を提供できます。 ポートレットのルック&フィールを任意のMVCポートレットに追加して、ユーザーがプリファレンスにアクセスして設定するためのUIを提供できます。
 
-ポートレットのルック&フィールは、アプリケーションの構成とは別に保存されるプロパティであることに注意してください。 詳細については、 [ポートレットレベルの設定](../../core-frameworks/configuration-framework/portlet-level-configuration.md) を参照してください。
-
-<a name="see-a-sample-implementation" />
+ポートレットのルック&フィールは、アプリケーションの構成とは別に保存されるプロパティであることに注意してください。 詳細については、[Portlet Level Configuration](../../core-frameworks/configuration-framework/portlet-level-configuration.md)を参照してください。
 
 ## サンプル実装を参照する
 
@@ -16,10 +14,10 @@
 
     別のLiferay PortalバージョンまたはLiferay DXPを実行している場合は、上記のコマンドを適宜調整してください。
 
-1. [ポートレットのルック&フィール](./liferay-p1z2.zip) をダウンロードして解凍します。
+1. サンプルをダウンロードして解凍します。
 
     ```bash
-    curl https://learn.liferay.com/dxp/latest/ja/developing-applications/developing-a-java-web-application/using-mvc/liferay-p1z2.zip -O
+    curl https://learn.liferay.com/dxp/latest/en/building-applications/developing-a-java-web-application/using-mvc/liferay-p1z2.zip -O
     ```
 
     ```bash
@@ -33,7 +31,7 @@
     ```
 
     ```{note}
-       このコマンドは、デプロイされたjarをDockerコンテナの/opt/liferay/osgi/modulesにコピーするのと同じです。
+    このコマンドは、デプロイされたjarをDockerコンテナの/opt/liferay/osgi/modulesにコピーするのと同じです。
     ```
 
 1. Liferay Dockerコンテナコンソールでデプロイを確認します。
@@ -46,15 +44,13 @@
 
 1. P1Z2ポートレットをページに追加します。 サンプルポートレットは、サンプルウィジェットの下にあります。 デフォルトのカラー変数が青に設定されていることに注意してください。
 
-1. ポートレットのオプションアイコン（![options icon](../../../images/icon-options.png)）をクリックし、 ［**設定**］ をクリックします。 ポートレットの設定ウィンドウが開きます。
+1. ポートレットのオプションアイコン（![options icon](../../../images/icon-options.png)）をクリックし、*［設定］*をクリックします。 ポートレットの設定ウィンドウが開きます。
 
     ![構成をクリックして、ポートレットの設定を開きます](./portlet-preferences/images/01.png)
 
-1. 別の色を選択し、 ［**保存**］ をクリックします。 設定メニューを閉じると、ポートレットに新しい選択が表示されます。
+1. 別の色を選択し、*［保存］*をクリックします。 設定メニューを閉じると、ポートレットに新しい選択が表示されます。
 
 次に設定の仕組みを確認します。
-
-<a name="create-the-configuration-jsp" />
 
 ## 設定JSPを作成する
 
@@ -71,8 +67,6 @@ JSPファイルは、`<liferay-portlet:actionURL />`および`<liferay-portlet:r
 
 リクエストの目的を示す`cmd`という名前のURLパラメーターが提供されます。 `cmd`パラメーターの値は`update`です。
 
-<a name="create-the-configuration-action" />
-
 ## 設定アクションを作成する
 
 カスタム構成アクションクラスを作成して、ポートレットの設定にアクセスできるようにします。
@@ -85,8 +79,6 @@ JSPファイルは、`<liferay-portlet:actionURL />`および`<liferay-portlet:r
 `@Component`アノテーションで、アクションクラスが適用されるポートレットを`property`タグで指定します。
 
 構成フォームからポートレットのルック&フィールを読み取り、それらをデータベースに保管する`processAction()`メソッドを追加します。  サンプルのポートレットでは、メソッドは`color` URLパラメーターを読み取り、その値をポートレット設定として設定します。
-
-<a name="add-the-preference-logic" />
 
 ## プリファレンスロジックを追加する
 
@@ -101,8 +93,6 @@ JSPファイルは、選択されたポートレット設定をチェックし�
 
 `<portlet:defineObjects />`タグを使用すると、`portletPreferences`が使用可能になります。これを使用して、JSPで`color`の設定を取得します。
 
-<a name="add-the-portlets-path-parameters" />
-
 ## ポートレットのパスパラメータを追加する
 
 ポートレットの`@Component`アノテーションで、ビューテンプレートと設定用テンプレートのパスパラメーターを追加します。
@@ -112,8 +102,6 @@ JSPファイルは、選択されたポートレット設定をチェックし�
 :lines: 9-18
 ```
 
-<a name="related-information" />
-
 ## 関連情報
 
-* [ポートレットレベルの設定](../../core-frameworks/configuration-framework/portlet-level-configuration.md)
+* [Portlet Level Configuration](../../core-frameworks/configuration-framework/portlet-level-configuration.md)

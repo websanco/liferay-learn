@@ -2,8 +2,6 @@
 
 アプリケーションで作業するときに、複数のモジュールがあり、それぞれに独自の言語キーが設定されている場合があります。 さまざまな言語プロパティファイルをさまざまな場所に保持するのではなく、それらを1つの場所に統合します。 このサンプルプロジェクトでは、言語キーを異なるモジュール間で共有する方法について示しています。
 
-<a name="run-the-tutorial-code" />
-
 ## チュートリアルコードを実行する
 
 1. Liferay DXPを起動します。 まだDockerコンテナがない場合は、以下を使用します。
@@ -17,7 +15,7 @@
 1. サンプルをダウンロードして解凍します。
 
     ```bash
-    curl https://learn.liferay.com/dxp/latest/ja/developing-applications/developing-a-java-web-application/using-mvc/liferay-u8t2.zip -O
+    curl https://learn.liferay.com/dxp/latest/en/building-applications/developing-a-java-web-application/using-mvc/liferay-u8t2.zip -O
     ```
 
     ```bash
@@ -55,8 +53,6 @@
 
 次に、どのように機能するかを見ていきましょう。
 
-<a name="create-the-language-properties-file" />
-
 ## 言語プロパティファイルを作成する
 
 すべての共有言語キーを保持するための個別のプロジェクトモジュールを作成します。 サンプルプロジェクトでは、共有キーは`Acme U8T2 Impl`モジュールにあります。
@@ -75,8 +71,6 @@ yellow=Yellow
 ```
 
 他のロケールの言語プロパティファイルもフォルダに含めることができます。 たとえば、日本語の言語キーを含めるには、`Language_ja.properties`ファイルをフォルダに追加します。
-
-<a name="add-the-bnd-instruction" />
 
 ## bnd命令を追加する
 
@@ -97,8 +91,6 @@ Bundle-Version: 1.0.0
 
 個々のモジュールにいくつかの言語キーを配置できることに注意してください。 たとえば、サンプルプロジェクトのウェルカムメッセージは、`Acme U8T2 Impl`の共有キーではなく、`Acme U8T2 Web`モジュールの言語キーから送信されます。  個々のモジュールの言語キーは、`-liferay-aggregate-resource-bundles`で指定された共有キーよりも優先されます。
 
-<a name="related-topics" />
-
 ## 関連トピック
 
-* [Aggregating Resource Bundles](../../core-frameworks/reference/localization/aggregating-resource-bundles.md)
+* [Aggregating Resource Bundles](../../core-frameworks/localization/reference/aggregating-resource-bundles.md)

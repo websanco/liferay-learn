@@ -9,7 +9,7 @@ understanding-object-integrations/assets-framework-integration.md
 ```
 
 ```{raw} html
-:file: ../../../landingpage_template.html
+:file: ../../landingpage_template.html
 ```
 
 ```{raw} html

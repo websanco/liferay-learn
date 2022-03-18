@@ -1,6 +1,6 @@
 # Liferay Workspaceの設定
 
-Liferay Workspaceは使い方が簡単で、[最初から](./what-is-liferay-workspace.md)基本を学ぶことができます。 [プロジェクトを作成](./creating-code-with-liferay-workspace.md)したり、 [コードをデプロイ](./creating-code-with-liferay-workspace.md#deploying-code-via-liferay-workspace) したり、[Dockerコンテナを使用](./configuring-a-liferay-docker-container.md)したりしている場合は、ここにある情報は必要ないかもしれません。 ただし、もっと掘り下げて、ワークスペースで実行できるすべてのことについて学びたい場合は、このサイトが有益となるでしょう。
+Liferay Workspaceは使い方が簡単で、[最初から](./what-is-liferay-workspace.md)基本を学ぶことができます。 [プロジェクトを作成](./creating-code-with-liferay-workspace.md)したり、[コードをデプロイ](./creating-code-with-liferay-workspace.md#deploying-code-via-liferay-workspace)したり、[Dockerコンテナを使用](./configuring-a-liferay-docker-container.md)したりしている場合は、ここにある情報は必要ないかもしれません。 ただし、もっと掘り下げて、ワークスペースで実行できるすべてのことについて学びたい場合は、このサイトが有益となるでしょう。
 
 取り上げるトピックは次のとおりです。
 
@@ -8,13 +8,11 @@ Liferay Workspaceは使い方が簡単で、[最初から](./what-is-liferay-wor
 - 開発、UAT、および本番環境の使用
 - ターゲットプラットフォームの管理
 
-<a name="updating-liferay-workspace-and-bundled-plugins" />
-
 ## Liferay Workspaceとバンドルされたプラグインの更新
 
 Liferay Workspaceは、開発者の生産性を高めるために常に更新されており、ワークスペースを最新の状態にするのは簡単なプロセスです。
 
-1. Liferayのリポジトリにある [ワークスペースのリリースに移動](https://repository-cdn.liferay.com/nexus/content/repositories/liferay-public-releases/com/liferay/com.liferay.gradle.plugins.workspace) します。 バージョンがリストに表示されます。必要なバージョン番号をメモしてください。
+1. Liferayのリポジトリにある[ワークスペースのリリースに移動](https://repository-cdn.liferay.com/nexus/content/repositories/liferay-public-releases/com/liferay/com.liferay.gradle.plugins.workspace)します。 バージョンがリストに表示されます。必要なバージョン番号をメモしてください。
 1. ワークスペースのルートフォルダにある`settings.gradle`ファイルを開きます。
 1. `依存関係`ブロックで、リポジトリで見つけたバージョンでバージョンを更新します。 最新のリリースを維持したい場合は、バージョン番号の代わりにテキスト`latest.release`を指定してください。
 
@@ -32,8 +30,6 @@ Liferay Workspaceは、開発者の生産性を高めるために常に更新さ
 
 　 これで、ワークスペースがアップグレードされました。
 
-<a name="updating-your-liferay-version" />
-
 ## Liferayバージョンの更新
 
 ワークスペースがコンパイルするLiferayのバージョンを更新することをお勧めします。 これは、単一のプロパティによって処理されます。
@@ -44,12 +40,10 @@ liferay.workspace.product=[$LIFERAY_LEARN_PORTAL_WORKSPACE$]
 
 プロパティの値を、コードを開発しているLiferayのバージョンに更新します。 その後、ワークスペースの依存関係が自動的に新しいバージョンに更新されます。
 
-<a name="using-jdk-11" />
-
 ## JDK11の使用
 
 ```{note}
-   JDK 11でコンパイルする場合は、JDK11で実行する必要があります。 ワークスペースに変更を加える前に、アプリサーバーでJDK11が実行されていることを確認してください。 LiferayのDockerイメージはデフォルトでJDK8を使用することに注意してください。 これをオーバーライドするには、``-e JAVA_VERSION=zulu11``環境変数を使用してDockerイメージを作成します。
+JDK 11でコンパイルする場合は、JDK11で実行する必要があります。 ワークスペースに変更を加える前に、アプリサーバーでJDK11が実行されていることを確認してください。 LiferayのDockerイメージはデフォルトでJDK8を使用することに注意してください。 これをオーバーライドするには、`-e JAVA_VERSION=zulu11`環境変数を使用してDockerイメージを作成します。
 ```
 
 **前提条件：** 古いバージョンのワークスペースを使用している場合は、次の2つをアップグレードする必要があります。
@@ -99,8 +93,6 @@ JAX-WSプロジェクトがある場合は、JDK 11から削除された`javax.x
 ```groovy
 compile 'com.sun.xml.ws:jaxws-ri:2.3.2'
 ```
-
-<a name="creating-deployment-environments" />
 
 ## デプロイメント環境の構築
 
@@ -222,12 +214,10 @@ Liferay Workspaceを使用すると、コンテナーベースであろうと従
    これにより、gzip圧縮された`tar`ファイルが`build`フォルダにビルドされます。 このアーカイブを取得して、他のLiferayバンドルと同じように開発サーバーにインストールできます。ただし、このバンドルは希望どおりに完全に構成されており、すべてのアプリケーションが既にインストールされている点が異なります。
 
 ```{note}
-.zipアーカイブが必要な場合は、 `` distBundleZip``コマンドを使用できます。
+.zipアーカイブが必要な場合は、`distBundleZip`コマンドを使用できます。
 ```
 
 上記の手順に従って、各環境をテストおよび構築します。
-
-<a name="managing-the-target-platform" />
 
 ## ターゲットプラットフォームの管理
 

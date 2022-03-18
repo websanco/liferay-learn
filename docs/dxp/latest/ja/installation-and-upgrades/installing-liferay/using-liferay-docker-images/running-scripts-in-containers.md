@@ -1,11 +1,11 @@
 # コンテナでのスクリプトの実行
 
-TomcatおよびLiferayファイルの設定、アーティファクトの展開、およびパッチの適用以外に、Liferayコンテナで実行したいことが他にもある場合は、スクリプトを使用できます。 コンテナは、 [ライフサイクル](./container-lifecycle-and-api.md)のいくつかの時点で特定のフォルダー内のスクリプトをスキャンします。 次の表に、スクリプトの挿入ポイントを示します。
+TomcatおよびLiferayファイルの設定、アーティファクトのデプロイ、およびパッチの適用以外に、Liferayコンテナで実行したいことが他にもある場合は、スクリプトを使用できます。 コンテナは、 [ライフサイクル](./container-lifecycle-and-api.md)のいくつかの時点で特定のフォルダー内のスクリプトをスキャンします。 次の表に、スクリプトの挿入ポイントを示します。
 
 | ライフサイクルフェーズ | 説明                                 | ターゲットコンテナフォルダー                             |
 |:----------- |:---------------------------------- |:------------------------------------------ |
 | 事前構成        | 構成フェーズの前にスクリプトを実行する                | `/usr/local/liferay/scripts/pre-configure` |
-| 構成、設定       | ファイルを `［Liferay Home］`にコピーしてから実行する | `/mnt/liferay/scripts`                     |
+| 設定          | ファイルを `［Liferay Home］`にコピーしてから実行する | `/mnt/liferay/scripts`                     |
 | スタートアップ前    | Tomcatを起動する前にスクリプトを実行します           | `/usr/local/liferay/scripts/pre-startup`   |
 | シャットダウン後    | Tomcatをシャットダウンした後にスクリプトを実行する       | `/usr/local/liferay/scripts/post-shutdown` |
 
@@ -25,11 +25,11 @@ TomcatとLiferayを構成する方法が、構成フェーズが提供する方�
     mkdir scripts
     ```
 
-    ```tip::
-       If you plan to `mount the container's /mnt/liferay folder <./providing-files-to-the-container.md#bind-mounting-a-host-folder-to-mnt-liferay>`_ already, you can put your Configure Phase scripts into a folder called ``scripts`` in your local mount folder to include in the Configure Phase. The ``[local-folder]/scripts`` folder would map to the container's ``/mnt/liferay/scripts`` folder.
+    ```{tip}
+    [コンテナの /mnt/liferay フォルダをマウント](./providing-files-to-the-container.md#bind-mounting-a-host-folder-to-mnt-liferay)を既に計画している場合は、構成フェーズスクリプトをローカルのマウントフォルダ内の`scripts`というフォルダに入れてConfigure Phaseに含めることができます。 [local-folder]/scripts` フォルダは、コンテナの `/mnt/liferay/scripts` フォルダにマッピングされます。
     ```
 
-1. 事前設定アクションを実行するためのスクリプトを作成します。
+1. 事前に設定したアクションを実行するためのスクリプトを作成します。
 
     ```bash
     echo "inside some-pre-configure.sh" > scripts/configure-phase-script.sh
@@ -54,7 +54,7 @@ in configure-phase-script.sh
 
 ## 他のフェーズでのスクリプトの実行
 
-コンテナは、設定フェーズの外でもスクリプトを実行する方法を提供します。
+コンテナは、構成フェーズの以外でもスクリプトを実行する方法を提供します。
 
 | ライフサイクルフェーズ | 説明                           | ターゲットコンテナフォルダー                             |
 |:----------- |:---------------------------- |:------------------------------------------ |
@@ -96,6 +96,10 @@ in configure-phase-script.sh
     ```
 
 1. アクションをフェーズフォルダーの任意のスクリプトに実装します。
+
+    ```{warning}
+    スクリプトに `exit` キーワードを使用しないでください。 スクリプトで `exit` を実行すると、エントリーポイントの起動処理が中断されます。
+    ```
 
     ```bash
     echo "inside pre-configure-script.sh" > pre-configure/some-pre-configure-script.sh

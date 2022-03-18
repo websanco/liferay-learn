@@ -7,7 +7,7 @@
 サンプルアプリケーションを作成するには、以下をお読みください。
 
 * [ロール変更リクエストオブジェクトの作成](./creating-the-role-change-request-object.md)
-* [ロール変更リクエストアプリの作成](./creating-the-role-change-request-app.md)
+* [Creating the Role Change Request App](./creating-the-role-change-request-app.md)
 
 ワークフロー対応アプリは、オブジェクトのフォームが完了したと見なされる前に通過する必要のある手順を考慮して設計されています。
 
@@ -16,10 +16,10 @@
 各ステップには、ワークフローのステージに応じた設定オプションがあります。
 
 | 手順                         | 設定オプション                                                                                      | 説明                                                                                                                                                                                  |
-| :--- | :--- | :--- |
+| -------------------------- | -------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 開始（最初のステップ）                | ステップ名 <br /> メインデータオブジェクト <br /> フォームビュー <br /> テーブルビュー <br /> アクション | 少なくとも、オブジェクト、フォームビュー、およびテーブルビューを選択して、データオブジェクトの入力を開始できるようにします。 レコードを追加できる人は誰でも処理を開始するため、担当者は存在しません。 アクションの名前は変更できますが、常に次のステップに進みます。                                                 |
 | 1（ステップ1）                   | ステップ名 <br /> 担当者 <br /> フォームビュー <br /> アクション                               | ステップに名前を付けて、[ロール](../../users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.md)に割り当てます。 次に、フォームビューを選択または作成し（読み取り専用または編集可能に設定）、次のステップに移行するアクションに名前を付けます。 |
-| 追加の番号付きステップ（例：ステップ2、3、4など） | ステップ1と同じ、追加で **新規アクションの追加** オプション                                                                | 追加のステップでは、ステップ1で実行できるすべてのことを実行できます。さらに、必要に応じて、前のワークフローステップに戻る新しいアクションを作成できます。                                                                                                       |
+| 追加の番号付きステップ（例：ステップ2、3、4など） | ステップ1と同じ、追加で_新規アクションの追加_オプション                                                                | 追加のステップでは、ステップ1で実行できるすべてのことを実行できます。さらに、必要に応じて、前のワークフローステップに戻る新しいアクションを作成できます。                                                                                                       |
 | 終了（最後のステップ）                | ステップ名                                                                                        | ワークフロープロセスの最後のステップに名前を付けます                                                                                                                                                          |
 
 <a name="app-versions" />
@@ -38,7 +38,7 @@
 
 ## 関連情報
 
-* [App Builder Overview](./app-builder-overview.md)
-* [標準アプリケーションの作成](./creating-a-standard-application.md)
-* [Workflow](../../../process-automation/workflow/introduction-to-workflow.md)
-* [ロールと権限](../../../users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.md)
+* [App Builder Overview](../app-builder.md)
+* [Creating a Standard Application](./creating-a-standard-application.md)
+* [Workflow](../../process-automation/workflow/introduction-to-workflow.md)
+* [ロールと権限](../../users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.md)

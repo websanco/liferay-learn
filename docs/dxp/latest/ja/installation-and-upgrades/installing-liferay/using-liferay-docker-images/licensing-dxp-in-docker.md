@@ -29,7 +29,7 @@ ERROR [fileinstall-directory-watcher][LicenseManager:?] DXP Development license 
 1. OSGiモジュールフォルダからすべてのトライアルライセンスとアクティベーションキーファイルを削除します。
 
     ```bash
-    rm /opt/liferay/osgi/modules/ **license** .xml /opt/liferay/osgi/modules/ **activation** .xml
+    rm /opt/liferay/osgi/modules/*license*.xml /opt/liferay/osgi/modules/*activation*.xml
     ```
 
 1. Bashシェルを終了します。
@@ -46,6 +46,8 @@ ERROR [fileinstall-directory-watcher][LicenseManager:?] DXP Development license 
 
     または、[バインドマウント](./providing-files-to-the-container.md)をコンテナに関連付けている場合は、ライセンス/キーファイルを`/mnt/liferay/deploy`にマップされているフォルダにコピーできます。
 
+    詳細は、[コンテナへのファイルの提供](./providing-files-to-the-container.md)を参照してください。
+
 DXPはライセンスのインストールをログに記録します。 例:
 
 ```
@@ -57,10 +59,8 @@ INFO  [fileinstall-directory-watcher][LicenseManager:?] License registered for D
 
 DXPライセンスを更新しました。
 
-<a name="additional-information" />
-
 ## 追加情報
 
-* [Liferay DXPのアクティブ化](../../setting-up-liferay/activating-liferay-dxp.md)
+* [Activating Liferay DXP](../../setting-up-liferay/activating-liferay-dxp.md)
 * [コンテナへのファイルの提供](./providing-files-to-the-container.md)
 * [新しいDockerイメージへのアップグレード](./upgrading-to-a-new-docker-image.md)

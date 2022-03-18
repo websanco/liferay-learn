@@ -10,12 +10,12 @@ Liferay DXPは、言語、タイムゾーンなどによるローカリゼーシ
 
 ## ポータルプロパティ
 
-DXPを開始する前にデフォルトの仮想インスタンスのローカリゼーションを設定する場合は、 [`portal-ext.properties` ファイル](../reference/portal-properties.md)使用します。
+DXPを開始する前にデフォルトの仮想インスタンスのローカリゼーションを設定する場合は、 [`portal-ext.properties` ファイル](../reference/portal-properties.md)を使用します。
 
-| **ポータルプロパティ** | **説明** |
+| **ポータルプロパティ**               | **説明**                                                                                                                                                                 |
 |:--------------------------- |:---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `company.default.locale`    | [`locales`](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#Languages%20and%20Time%20Zones) ポータルプロパティに定義されている使用可能なロケールに設定します。    |
-| `company.default.time.zone` | [`time.zones`](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#Languages%20and%20Time%20Zones) ポータルプロパティで定義されている任意のタイムゾーンに設定します。 |
+| `company.default.locale`    | [`locales`](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#Languages%20and%20Time%20Zones)ポータルプロパティに定義されている使用可能なロケールに設定します。    |
+| `company.default.time.zone` | [`time.zones`](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#Languages%20and%20Time%20Zones)ポータルプロパティで定義されている任意のタイムゾーンに設定します。 |
 
 例:
 
@@ -30,11 +30,11 @@ company.default.time.zone=Europe/Lisbon
 
 ## セットアップウィザード
 
-[セットアップウィザード](../installing-liferay/running-liferay-for-the-first-time.md) は、DXPインスタンスのデフォルトの言語とタイムゾーンを設定します。 これらは、 **デフォルト言語** および **タイムゾーン** セレクターで選択できます。
+[セットアップウィザード](../installing-liferay/running-liferay-for-the-first-time.md) は、DXPインスタンスのデフォルトの言語とタイムゾーンを設定します。 これらは、 _［Default Language］_ と _［Time Zone］_ セレクタで選択できます。
 
-![セットアップウィザードを使用して、DXPインスタンスのデフォルトの言語とタイムゾーンを設定する](./initial-instance-localization/images/01.png)
+![Use the Setup Wizard to set the DXP instance's default language and time zone](./initial-instance-localization/images/01.png)
 
-セットアップウィザードがデフォルトで有効になって [のLiferay-Tomcatのバンドル](../installing-liferay/installing-a-liferay-tomcat-bundle.md) と [のアプリケーション・サーバーのインストール](../installing-liferay/installing_liferay_on_an_application_server.html) 。
+セットアップウィザードは、[Liferay-Tomcatバンドル](../installing-liferay/installing-a-liferay-tomcat-bundle.md)と[アプリケーションサーバーのインストール](../installing-liferay/installing-liferay-on-an-application-server.md)でデフォルトで有効になっています。
 
 すでにDXPを起動している場合は、コントロールパネルでインスタンスのデフォルトの言語とタイムゾーンを変更します。
 
@@ -42,18 +42,14 @@ company.default.time.zone=Europe/Lisbon
 
 ## コントロールパネル
 
-仮想インスタンスのデフォルトの言語とタイムゾーンは、インスタンスの **Localization** ページを使用して変更できます。 手順については、[Configuring a Virtual Instance Localization](../../system-administration/configuring-liferay/virtual-instances/localization.md)を参照してください。
-
-<a name="conclusion" />
+仮想インスタンスのデフォルトの言語とタイムゾーンは、インスタンスの_ローカリゼーション_ページを使用して変更できます。 手順については、[Configuring a Virtual Instance Localization](../../system-administration/configuring-liferay/virtual-instances/localization.md)を参照してください。
 
 ## まとめ
 
-DXPインスタンスのデフォルトの言語とタイムゾーンを構成しました。 ロケールの選択を容易にする方法など、DXPのローカライズに関する詳細は、 [Sサイトローカリゼーション](../../site-building/site-settings/configuring_site_languages.html) を参照してください。
-
-<a name="additional-information" />
+DXPインスタンスのデフォルトの言語とタイムゾーンを構成しました。 ロケールの選択を容易にする方法など、DXPのローカライズに関する詳細は、 [サイトのローカライゼーション](../../site-building/site-settings/site-localization.md)を参照してください。
 
 ## 追加情報
 
-* [Configuring a Virtual Instance Localization](../../system-administration/configuring-liferay/virtual-instances/localization.md)
-* [Overriding Global Language Keys](https://help.liferay.com/hc/ja/articles/360029122551-Overriding-Global-Language-Keys)
-* [Localizing Your Application](https://help.liferay.com/hc/ja/articles/360028746692-Localizing-Your-Application)
+* [仮想インスタンスのローカリゼーションの構成](../../system-administration/configuring-liferay/virtual-instances/localization.md)
+* [Overriding Global Language Translations](../../liferay-internals/extending-liferay/overriding-global-language-translations.md)
+* [アプリケーションのローカライズ](https://help.liferay.com/hc/en-us/articles/360028746692-Localizing-Your-Application)

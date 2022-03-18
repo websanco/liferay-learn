@@ -1,51 +1,59 @@
-# DXP 7.3 ライフレイのパッチ
+# 以前のDXPバージョンにパッチを適用
 
 ```{toctree}
 :maxdepth: 3
 
 patching-dxp-7-3-and-earlier/understanding-patch-types-for-dxp-7-3-and-earlier.md
 patching-dxp-7-3-and-earlier/installing-patches-for-dxp-7-3-and-earlier.md
-patching-dxp-7-3-and-earlier/updating-liferay-portal-ce.md
 patching-dxp-7-3-and-earlier/advanced-patching-for-dxp-7-2.md
 ```
 
-DXPインスタンスを開発して保守するときは、最新の修正でインスタンスを更新する必要があります。 Liferayは修正を集約し、 **パッチ** と呼ばれるZIPファイルでエンタープライズサブスクライバーが利用できるようにします。
+```{note}
+Liferay DXP 7.3 SP3+はアップデートを用いたローリングリリースモデルを採用しています。 アップデートを適用する場合は、[Updating Liferay](./updating-liferay.md)を参照してください。 すべてのホットフィックスはパッチです。 ホットフィックスを適用する場合は、このまま読み進めてください。
+```
 
-<a name="パッチの種類" />
+Liferayの修正プログラムがリリースされたら、DXPインスタンスを最新の状態にしておきましょう。 Liferayは修正を集約し、 _パッチ_と呼ばれるZIPファイルでエンタープライズサブスクライバーが利用できるようにします。
 
 ## パッチの種類
 
 パッチにはいくつかの種類があり、それらは異なる目的を果たします。
 
-  - **フィックスパック：** 最新の問題を解決します。
-  - **セキュリティフィックスパック：** 最新のセキュリティ問題に直ちに対処します。
-  - **ホットフィックス：** ビジネスクリティカルなDXP問題を迅速に修正するために顧客から要求されました。
-  - **サービスパック：** より多くのテストを必要とする大きな修正を組み込みます。 Service Packリリースは、Service Packで構築され、TomcatにバンドルされているDXPも提供します。
+* **フィックスパック：** 最新の問題を解決します。
+* **セキュリティフィックスパック：** 最新のセキュリティ問題に直ちに対処します。
 
-[パッチタイプ](./patching-dxp-7-3-and-earlier/understanding-patch-types-for-dxp-7-3-and-earlier.md) は、すべてのパッチオプションを説明します。
+**すべてのDXPバージョンで**
 
-<a name="パッチのインストール" />
+* **ホットフィックス：**ビジネスクリティカルなDXP問題を迅速に修正するようにお客様から依頼されました。
 
-## パッチのインストール
+**DXP 7.3 SP3以前のバージョンの場合**
 
-必要なパッチを入手したら、Liferayのパッチツールを使用してパッチを適用できます。 [パッチのインストール](./patching-dxp-7-3-and-earlier/installing-patches-for-dxp-7-3-and-earlier.md) では、DXPに安全かつ包括的にパッチを適用するための基本的な手順を説明しています。
+* **フィックスパック：** 最新の問題を解決します。
+* **セキュリティフィックスパック：** 最新のセキュリティ問題に直ちに対処します。 なお、Liferay DXP 7.3 SP3+はセキュリティーアップデートを使用しています。 詳細は、 [Updating Liferay](./updating-liferay.md) を参照してください。
+* **サービスパック：** より多くのテストを必要とする大きな修正を組み込みます。 Service Packのリリースには、完全なDXP Service PackTomcatバンドルも含まれています。
 
-<a name="パッチツールの構成" />
+[Understanding Patch Types](./patching-dxp-7-3-and-earlier/understanding-patch-types-for-dxp-7-3-and-earlier.md) 上記のパッチオプションについて説明します。
 
-## パッチツールの構成
+## Installing Patches
 
-[`patching-tool.sh auto-discovery` コマンド](./reference/configuring-the-patching-tool.md) は、Tomcatバンドルおよび一般的なアプリサーバー構成に対してツールを自動的に構成します。 パッチツールを手動で設定して、DXPインストールのバリエーションを処理することもできます。
+必要なパッチが見つかったら、パッチングツールを使って適用します。 [パッチのインストール](./patching-dxp-7-3-and-earlier/installing-patches-for-dxp-7-3-and-earlier.md) では、DXPに安全かつ包括的にパッチを適用するための基本的な手順を説明しています。
 
-<a name="高度なパッチ" />
+## パッチングツールの構成
 
-## 高度なパッチ
+[`patching-tool.sh auto-discovery` コマンド](./reference/configuring-the-patching-tool.md) は、Tomcatバンドルおよび一般的なアプリサーバー構成に対してツールを自動的に構成します。 パッチングツールを手動で設定して、DXPインストールのバリエーションを処理することもできます。
 
-定期的にパッチを適用したり、新しいDXP環境を追加したり、DXPソースコードを操作したりするとき、パッチを管理するための最良の方法を知りたいと思うでしょう。 パッチ適用に関する高度なトピックには次のものがあります。
+## その他のパッチ適用に関するトピック
 
-  - [パッチ情報の取得](./reference/getting-patch-information.md)
-  - [パッチのアンインストール](./reference/uninstalling-patches.md)
-  - [パッチを適用したインストールのスリム化](./patching-dxp-7-3-and-earlier/advanced-patching-for-dxp-7-2/slimming-down-patched-installations.md)
-  - [スリムバンドルの使用](./patching-dxp-7-3-and-earlier/advanced-patching-for-dxp-7-2/using-slim-bundles.md)
-  - [パッチとカスタムプラグイン間の衝突の処理](./patching-dxp-7-3-and-earlier/advanced-patching-for-dxp-7-2/custom-code-and-patch-compatibility.md)
+パッチを適用すると、サポートリクエストでパッチ情報を提出したり、不要になったパッチをアンインストールする必要が出てきます。
 
-パッチ適用の概要を理解したところで、使用可能な [パッチタイプ](./patching-dxp-7-3-and-earlier/understanding-patch-types-for-dxp-7-3-and-earlier.md) について学習します。 その後、 [パッチのインストール](./patching-dxp-7-3-and-earlier/installing-patches-for-dxp-7-3-and-earlier.md) 続いて、パッチを適用する準備が整います。
+* [パッチ情報の取得](./reference/getting-patch-information.md)
+* [パッチのアンインストール](./reference/uninstalling-patches.md)
+
+## DXP 7.2へのパッチ適用
+
+次のトピックでは、DXP 7.2でパッチを管理するためのベストプラクティスを紹介します。
+
+* [パッチを適用したインストールのスリム化](./patching-dxp-7-3-and-earlier/advanced-patching-for-dxp-7-2/slimming-down-patched-installations.md)
+* [スリムバンドルの使用](./patching-dxp-7-3-and-earlier/advanced-patching-for-dxp-7-2/using-slim-bundles.md)
+* [パッチとカスタムプラグイン間の衝突の処理](./patching-dxp-7-3-and-earlier/advanced-patching-for-dxp-7-2/custom-code-and-patch-compatibility.md)
+
+パッチ適用の概要を理解したところで、使用可能な [パッチタイプ](./patching-dxp-7-3-and-earlier/understanding-patch-types-for-dxp-7-3-and-earlier.md) について学習します。 その後、 [パッチのインストール](./patching-dxp-7-3-and-earlier/installing-patches-for-dxp-7-3-and-earlier.md)に続いて、パッチを適用する準備が整います。

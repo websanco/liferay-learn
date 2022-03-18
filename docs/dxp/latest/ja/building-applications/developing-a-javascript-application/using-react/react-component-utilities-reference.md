@@ -5,8 +5,6 @@ Reactを使用してLiferay DXPで高性能コンポーネントとアプリケ�
 * [`frontend-js-react-web`モジュール](#frontend-js-react-web-module)
 * [Reactコンポーネントタグ](#react-component-tag)
 
-<a name="frontend-js-react-web-module" />
-
 ## `frontend-js-react-web`モジュール
 
 `frontend-js-react-web`共有モジュールは、Liferay DXP全体でReactのすべてのコンシューマで使用できるReactの単一の共通バージョンを提供します。 このモジュールには、Liferay DXPのコンテキストでReactコンポーネントをマウント（つまりレンダリング）する標準的な方法が含まれており、対応するポートレットが破棄されたときにコンポーネントをアンマウント（クリーンに破棄）する場合などの詳細に対応しています。 例を以下に示します。

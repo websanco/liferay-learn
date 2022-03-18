@@ -1,3 +1,3 @@
-# デベロッパー・スタジオ
+# Developer Studio
 
 Coming soon!
