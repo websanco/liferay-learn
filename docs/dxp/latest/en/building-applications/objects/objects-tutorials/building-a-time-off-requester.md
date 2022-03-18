@@ -204,7 +204,7 @@ Now that your app is complete, you can use the Liferay UI and Headless APIs to a
 
 Follow these steps to add employee entries using Headless APIs:
 
-1. Open the Liferay *API Explorer* (i.e., `localhost:8080/o/api`), click the *REST Applications* drop-down menu, and select *c/employees*.
+1. Open Liferay's *API Explorer* (i.e., `localhost:8080/o/api`), click the *REST Applications* drop-down menu, and click *c/employees*.
 
 1. Enter this script into the request body for the batch `POST` API.
 

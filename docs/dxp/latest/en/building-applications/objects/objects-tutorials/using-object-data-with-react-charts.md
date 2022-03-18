@@ -55,7 +55,7 @@ Once started, follow these steps to add the `/o/c/*` URL pattern to the *Default
 
 ## Adding Data to the Object using Headless APIs
 
-1. Open the Liferay *API Explorer* (i.e., `localhost:8080/o/api`), click the *REST Applications* drop-down menu, and choose `c/x3j8objects`.
+1. Open Liferay's *API Explorer* (i.e., `localhost:8080/o/api`), click the *REST Applications* drop-down menu, and click *c/x3j8objects*.
 
 1. Enter this data into the request body for the batch `POST` API:
 
@@ -112,18 +112,12 @@ Follow these steps to download and build the React application:
    ./setup_tutorial.sh
    ```
 
-1. Navigate to the React application's folder and install the dependencies.
+1. Navigate to the React application's folder and start the React server.
 
    ```bash
    cd x3j8-remote-app
    ```
-
-   ```bash
-   yarn install
-   ```
-
-1. (Optional) Start the React server.
-
+   
    ```bash
    yarn start
    ```

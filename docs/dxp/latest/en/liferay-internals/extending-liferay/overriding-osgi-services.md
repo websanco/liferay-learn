@@ -52,27 +52,7 @@ The sample modules demonstrate how to override an OSGi service. These modules in
    unzip liferay-s1j6.zip
    ```
 
-1. Run the following `gradlew` command from the `s1j6-api`, `s1j6-able-impl`, and `s1j6-web` subfolders to build and deploy a JAR file for each module to your new Docker container:
-
-   ```bash
-   cd liferay-s1j6/s1j6-api
-   ```
-
-   ```bash
-   ../gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)
-   ```
-
-   ```bash
-   cd ../s1j6-able-impl
-   ```
-
-   ```bash
-   ../gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)
-   ```
-
-   ```bash
-   cd ../s1j6-web
-   ```
+1. Run the following `gradlew` command from the `s1j6-api`, `s1j6-able-impl`, and `s1j6-web` subfolders to build and deploy each module to your new Docker container individually:
 
    ```bash
    ../gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)
