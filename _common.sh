@@ -28,13 +28,11 @@ function generate_remote_app {
 
 	mkdir liferay-${1}.zip
 
-	cp setup_tutorial.sh ./liferay-${1}.zip
+	cp $(git rev-parse --show-toplevel)/docs/_template/js/setup_tutorial.sh ./liferay-${1}.zip
 
 	cd liferay-${1}.zip
 
 	curl -Ls https://github.com/liferay/liferay-portal/raw/master/tools/create_remote_app.sh | bash -s ${1}-remote-app react
-
-	rm -fr ./${1}-remote-app/node_modules
 
 	if [ -e ../liferay-${1}-overlay ]
 	then
@@ -43,18 +41,24 @@ function generate_remote_app {
 
 		if [ -e ../liferay-${1}-overlay/package.json ]
 		then
+			rm -fr ./${1}-remote-app/node_modules
+
 			jq -s '.[0] * .[1]' ../liferay-${1}-overlay/package.json ./${1}-remote-app/package.json > package.json
 
 			rm -f ./${1}-remote-app/package.json
 
 			mv package.json ./${1}-remote-app/package.json
 
+			cd ${1}-remote-app
+
+			yarn install
+
+			cd ..
 		fi
 
 		rm -fr ./${1}-remote-app/src
 
 		cp -r ../liferay-${1}-overlay/src ${1}-remote-app
-
 	fi
 
 	cd ..

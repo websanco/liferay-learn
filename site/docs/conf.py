@@ -20,6 +20,7 @@ copybutton_image_svg = """
 <svg xmlns="http://www.w3.org/2000/svg" fill="#fff" viewBox="0 0 512 512"><path fill="none" d="M412,128h-60V68c0-37.4-30.6-68-68-68H100C62.6,0,32,30.6,32,68v248c0,37.4,30.6,68,68,68h60v60c0,37.4,30.6,68,68,68h184c37.4,0,68-30.6,68-68V196C480,158.6,449.4,128,412,128z" class="lexicon-icon-body"/><path d="M412,128h-60V68c0-37.4-30.6-68-68-68H100C62.6,0,32,30.6,32,68v248c0,37.4,30.6,68,68,68h60v60c0,37.4,30.6,68,68,68h184c37.4,0,68-30.6,68-68V196C480,158.6,449.4,128,412,128z M160,196v124H96V64h192v64h-60C190.6,128,160,158.6,160,196z M416,448H224V192h192V448z" class="lexicon-icon-outline"/></svg>
 """
 copyright = "2022, Liferay"
+exclude_patterns = ["**/resources/**/node", "**/resources/**/node_modules", "**/resources/**/node_modules_cache"]
 extensions = [
     "myst_parser",
     "notfound.extension",
