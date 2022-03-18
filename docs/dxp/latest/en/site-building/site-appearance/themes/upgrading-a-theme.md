@@ -37,6 +37,13 @@ A warning appears reminding you to back up your files if you have not yet done s
 sure you wish to start the upgrade process?
 ```
 
+**If you are upgrading to Liferay 7.4**: another prompt appears asking whether you would like to add the Bootstrap 3 to 4 compatibility layer. If your theme requires compatibility with Bootstrap 3, type "y" (or "yes"), and then again to confirm when a warning appears. If you do not need compatibility with Bootstrap 3, then type "no" (or "no").
+
+```
+? Would you like to add the Bootstrap 3 to 4 compatibility layer? Yes
+? Bootstrap 3 to 4 compatibility layer is for DXP 7.4 GA1 and we cannot garauntee it working with future releases of Liferay DXP. Confirm?
+```
+
 Confirm that the upgrade task has completed with the messages in the console:
 
 ```
