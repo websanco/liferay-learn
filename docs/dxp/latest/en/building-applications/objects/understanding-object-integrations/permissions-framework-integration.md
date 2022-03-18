@@ -14,8 +14,8 @@ Custom Objects include the following standard application permissions according 
 
 | Permission | Description |
 | :--- | :--- |
-| Access in Control Panel (Company Scope Only) | Access the Object in the Global Menu |
-| Access in Site and Asset Library Administration (Site Scope Only) | Access the Object in the Site Menu or Asset Library |
+| Access in Control Panel (*Company Scope Only*) | Access the Object in the Global Menu |
+| Access in Site and Asset Library Administration (*Site Scope Only*) | Access the Object in the Site Menu or Asset Library |
 | Configuration | View and set the Object's configuration options |
 | Permissions | View and modify the Object's permissions |
 | Preferences | View and set the Object's preferences |
@@ -46,6 +46,30 @@ Each Object also has the following resource permissions.
 | Permissions | View and modify permissions for individual Object entries |
 | Update | Update an Object entry |
 | View | View an Object entry |
+
+## Defining Permissions for Object Entries
+
+> Available Liferay DXP 7.4 U10+ and Liferay Portal 7.4 GA14+
+
+With custom Objects, you can define permissions for individual entries to manage access to Object data.
+
+Follow these steps:
+
+1. Navigate to the desired custom Object.
+
+1. Click on the Actions button (![Actions Button](../../../images/icon-actions.png)) for the desired entry and select *Permissions*.
+
+   ![Click the Actions button for the desired entry and select Permissions.](./permissions-framework-integration/images/01.png)
+
+1. Use the checkboxes to assign Delete, Permissions, Update, and View permissions to the desired roles.
+
+   ```{note}
+   Permissions defined at the Roles admin level override permissions defined at the entry level.
+   ```
+
+   ![Use the checkboxes to assign permissions to the desired roles.](./permissions-framework-integration/images/02.png)
+
+1. Click *Save*.
 
 ## Additional Information
 
