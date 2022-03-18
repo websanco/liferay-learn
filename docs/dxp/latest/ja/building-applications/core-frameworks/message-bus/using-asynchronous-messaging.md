@@ -293,7 +293,7 @@ INFO  [acme/n8k5_baker-2][N8K5Baker:30] Received message payload N8K5CharlieMess
 `N8K5CharlieMessageListener`は、`N8K5Baker`のメッセージを受信してから、応答メッセージを応答先に送信します。 `N8K5Baker`は応答メッセージを受信し、メッセージペイロードを出力します。
 
 ```{note}
-クラスでメッセージを再度交換する場合は、[Gogo シェル](../../../liferay-internals/fundamentals/using-the-gogo-shell.md)でモジュール（OSGiバンドル）を再起動できます。  バンドルを一覧表示して（`lb`）バンドルIDを取得し、バンドルを停止して（`stop <id>`）、バンドルを再起動します（`start <id>`）。
+クラスでメッセージを再度交換する場合は、[Gogo シェル](../../../liferay-internals/fundamentals/using-the-gogo-shell.md)でモジュール（OSGiバンドル）を再起動できます。  バンドルを一覧表示して（`lb`）バンドルIDを取得し、バンドルを停止して（[stop](id)）、バンドルを再起動します（[start](id)）。
 ```
 
 ```{note}
