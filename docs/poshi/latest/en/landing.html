@@ -1,0 +1,59 @@
+<script type="module">
+	import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.esm.browser.min.js'
+
+	const page = new Vue({
+		el: '#landingPage',
+		data: {
+			cards: [
+				{
+					icon: '#getting-started-logo',
+					sectionName: 'Poshi Basics',
+					sectionURL: 'poshi-basics.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'Poshi Advantages',
+							url: 'poshi-basics/poshi-advantages.html'
+						},
+						{
+							name: 'Poshi Layers',
+							url: 'poshi-basics/poshi-layers.html'
+						},
+					]
+				},
+				{
+					icon: '#getting-started-logo',
+					sectionName: 'Getting Started',
+					sectionURL: 'getting-started.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'Setup',
+							url: 'getting-started/setup.html'
+						},
+						{
+							name: 'Creating a Path File',
+							url: 'getting-started/creating-paths.html'
+						},
+						{
+							name: 'Creating a Macro File',
+							url: 'getting-started/creating-macros.html'
+						},
+						{
+							name: 'Creating a Testcase File',
+							url: 'getting-started/creating-testcases.html'
+						},
+						{
+							name: 'Running a Test',
+							url: 'getting-started/running-a-test.html'
+						},
+						{
+							name: 'Debugging Poshi',
+							url: 'getting-started/debugging-poshi.html'
+						}
+					]
+				}
+			]
+		}
+	})
+</script>
