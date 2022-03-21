@@ -11,6 +11,7 @@ promoting-products/creating-a-promotion.md
 promoting-products/promotion-base-list-reference.md
 promoting-products/introduction-to-product-groups.md
 promoting-products/replacement-products.md
+promoting-products/product-recommendations.md
 ```
 
 ::::{grid} 2
@@ -46,5 +47,9 @@ promoting-products/replacement-products.md
 
 :::{grid-item-card}  Replacement Products
 :link: ./promoting-products/replacement-products.md
+:::
+
+:::{grid-item-card}  Product Recommendations
+:link: ./promoting-products/product-recommendations.md
 :::
 ::::
