@@ -36,7 +36,7 @@ This type provides personalized and context aware product recommendations. It us
 
 To view them, use the Product Publisher widget with data source set to *User Interaction Based Recommendations*.
 
-![To view Context Aware User Personalized Recommendations, use the Product Publisher widget with data source set to User Interaction Based Recommendations.](./understanding-recommendation-types/images/03.png)
+![To view Context Aware User Personalized Recommendations, use the Product Publisher widget with data source set to User Interaction Based Recommendations.](./understanding-recommendation-types/images/02.png)
 
 ## “You May Also Like” Product Recommendations
 
@@ -44,7 +44,7 @@ This type recommends products that use both Product and customer data. It uses t
 
 To view them, use the Product Publisher widget with the data source set to *Product Interaction Based Recommendations*.
 
-![To view “You May Also Like” Product Recommendations, use the Product Publisher widget with the data source set to Product Interaction Based Recommendations.](./understanding-recommendation-types/images/04.png)
+![To view “You May Also Like” Product Recommendations, use the Product Publisher widget with the data source set to Product Interaction Based Recommendations.](./understanding-recommendation-types/images/03.png)
 
 ## “Also Bought” Product Recommendations
 
@@ -52,7 +52,7 @@ This type provides customers with Product recommendations based on the current c
 
 To view them, use the Product Publisher widget with the data source set to *Frequent Pattern Recommendations*.
 
-![To view “Also Bought” Product Recommendations, use the Product Publisher widget with the data source set to Frequent Pattern Recommendations.](./understanding-recommendation-types/images/05.png)
+![To view “Also Bought” Product Recommendations, use the Product Publisher widget with the data source set to Frequent Pattern Recommendations.](./understanding-recommendation-types/images/04.png)
 
 ## Additional Information
 
