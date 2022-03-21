@@ -46,17 +46,17 @@ You can import user data from LDAP directories using the following options:
 
 **Import User Sync Strategy:** Set the strategy used to sync user accounts. Options are Auth Type (i.e., the way the user authenticates, like with screen name) and UUID (requires a UUID attribute in LDAP).
 
-**Enable User Password on Import:** Assign a default password (see below) when users are imported, so they can be synced between the two systems.
+**Enable User Password on Import:** Assign a default password when users are imported from LDAP. This password can be auto-generated (see below). 
 
 **Autogenerate User Password on Import:** Create a random password on user import.
 
-**Default User Password:** Enter the default password users are assigned when they first log in via LDAP.
+**Default User Password:** Use the password entered here if _Enable User Password on Import_ and _Autogenerate User Password on Import_ are disabled.
 
 **Enable Group Cache on Import:** Cache the imported groups so import isn't slowed by database access.
 
 **Create Role per Group on Import:** For every LDAP group, create a corresponding Liferay Role.
 
-![The Import screen.](./ldap-configuration-reference/images/04.png)
+![The Import screen contains the above options.](./ldap-configuration-reference/images/04.png)
 
 ## Servers
 
@@ -76,7 +76,7 @@ These settings cover the connection to LDAP.
 
 **Credentials:** Enter the password for the LDAP administrative user.
 
-![Adding a new LDAP server.](./ldap-configuration-reference/images/05.png)
+![Adding a new LDAP server requires only a few options to be defined.](./ldap-configuration-reference/images/05.png)
 
 Once you've finished configuring LDAP, click the *Save* button.
 
