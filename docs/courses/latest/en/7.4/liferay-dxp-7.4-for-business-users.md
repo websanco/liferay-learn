@@ -4,7 +4,7 @@
 :maxdepth: 2
 
 liferay-dxp-7.4-for-business-users/create-and-manage-your-content-with-liferay-dxp.md
-liferay-dxp-7.4-for-business-users/create-content-review-and-publication-processes.md
+liferay-dxp-7.4-for-business-users/create-content-review-and-publication-processes-with-liferay-dxp.md
 liferay-dxp-7.4-for-business-users/gather-and-analyze-data-with-liferay-dxp.md
 liferay-dxp-7.4-for-business-users/build-new-sites-with-liferay-dxp.md
 liferay-dxp-7.4-for-business-users/add-users-and-manage-permissions-with-liferay-dxp.md
