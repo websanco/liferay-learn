@@ -3,15 +3,14 @@
 ```{toctree}
 :maxdepth: 2
 
-improve-sites-with-liferay-dxps-modern-tools/ 
-improve-sites-with-liferay-dxps-modern-tools/intro.md 
-improve-sites-with-liferay-dxps-modern-tools/create-content-pages.md 
-improve-sites-with-liferay-dxps-modern-tools/exercises-create-content-pages.md 
-improve-sites-with-liferay-dxps-modern-tools/using-master-pages-style-books.md 
-improve-sites-with-liferay-dxps-modern-tools/exercises-establish-site-aesthetics.md 
-improve-sites-with-liferay-dxps-modern-tools/create-unique-user-experiences.md 
-improve-sites-with-liferay-dxps-modern-tools/exercises-create-unique-user-experiences.md 
-improve-sites-with-liferay-dxps-modern-tools/summary.md 
+improve-sites-with-liferay-dxps-modern-tools/intro.md
+improve-sites-with-liferay-dxps-modern-tools/create-content-pages.md
+improve-sites-with-liferay-dxps-modern-tools/exercises-create-content-pages.md
+improve-sites-with-liferay-dxps-modern-tools/using-master-pages-style-books.md
+improve-sites-with-liferay-dxps-modern-tools/exercises-establish-site-aesthetics.md
+improve-sites-with-liferay-dxps-modern-tools/create-unique-user-experiences.md
+improve-sites-with-liferay-dxps-modern-tools/exercises-create-unique-user-experiences.md
+improve-sites-with-liferay-dxps-modern-tools/summary.md
 ```
 
 * [Introduction](./improve-sites-with-liferay-dxps-modern-tools/intro.md) 

@@ -3,10 +3,9 @@
 ```{toctree}
 :maxdepth: 2
 
-gather-and-analyze-data-with-liferay-dxp/ 
-gather-and-analyze-data-with-liferay-dxp/intro.md 
-gather-and-analyze-data-with-liferay-dxp/exercises-creating-forms.md 
-gather-and-analyze-data-with-liferay-dxp/exercises-gathering-and-viewing-data.md 
+gather-and-analyze-data-with-liferay-dxp/intro.md
+gather-and-analyze-data-with-liferay-dxp/exercises-creating-forms.md
+gather-and-analyze-data-with-liferay-dxp/exercises-gathering-and-viewing-data.md
 ```
 
 * [Introduction](./gather-and-analyze-data-with-liferay-dxp/intro.md) 

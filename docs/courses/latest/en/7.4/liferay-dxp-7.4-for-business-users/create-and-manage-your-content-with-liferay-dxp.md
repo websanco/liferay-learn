@@ -3,12 +3,11 @@
 ```{toctree}
 :maxdepth: 2
 
-create-and-manage-your-content-with-liferay-dxp/ 
-create-and-manage-your-content-with-liferay-dxp/intro.md 
-create-and-manage-your-content-with-liferay-dxp/exercises-organize-content-with-asset-libraries.md 
-create-and-manage-your-content-with-liferay-dxp/exercises-organize-content-with-categories-and-tags.md 
-create-and-manage-your-content-with-liferay-dxp/exercises-organize-content-with-folders.md 
-create-and-manage-your-content-with-liferay-dxp/exercises-present-content-with-display-page-templates.md 
+create-and-manage-your-content-with-liferay-dxp/intro.md
+create-and-manage-your-content-with-liferay-dxp/exercises-organize-content-with-asset-libraries.md
+create-and-manage-your-content-with-liferay-dxp/exercises-organize-content-with-categories-and-tags.md
+create-and-manage-your-content-with-liferay-dxp/exercises-organize-content-with-folders.md
+create-and-manage-your-content-with-liferay-dxp/exercises-present-content-with-display-page-templates.md
 ```
 
 * [Introduction](./create-and-manage-your-content-with-liferay-dxp/intro.md) 

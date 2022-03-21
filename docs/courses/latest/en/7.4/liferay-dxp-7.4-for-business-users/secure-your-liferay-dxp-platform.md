@@ -3,12 +3,11 @@
 ```{toctree}
 :maxdepth: 2
 
-secure-your-liferay-dxp-platform/ 
-secure-your-liferay-dxp-platform/intro.md 
-secure-your-liferay-dxp-platform/securing-liferay-with-user-authentication.md 
-secure-your-liferay-dxp-platform/exercises-create-a-password-policy.md 
-secure-your-liferay-dxp-platform/exercises-enable-captcha.md 
-secure-your-liferay-dxp-platform/securing-web-services.md 
+secure-your-liferay-dxp-platform/intro.md
+secure-your-liferay-dxp-platform/securing-liferay-with-user-authentication.md
+secure-your-liferay-dxp-platform/exercises-create-a-password-policy.md
+secure-your-liferay-dxp-platform/exercises-enable-captcha.md
+secure-your-liferay-dxp-platform/securing-web-services.md
 secure-your-liferay-dxp-platform/securing-content-and-fine-tuning-security.md
 secure-your-liferay-dxp-platform/summary.md
 ```
