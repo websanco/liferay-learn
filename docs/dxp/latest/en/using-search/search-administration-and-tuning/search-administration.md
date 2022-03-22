@@ -9,7 +9,7 @@ In *Control Panel* &rarr; *Configuration* &rarr; *Search* there are three admini
 Information about the search engine connection(s) is displayed here. For example,
 
 * Search Engine Vendor: Elasticsearch
-* Client Version: 7.14.1
+* Client Version: 7.17.1
 * Active Connections: 1
 * Health: Green
 * Connection ID: \_REMOTE\_

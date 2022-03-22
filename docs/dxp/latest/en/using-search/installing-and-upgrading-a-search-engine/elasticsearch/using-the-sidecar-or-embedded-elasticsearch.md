@@ -13,15 +13,15 @@ Here's example sidecar server output:
 {
   "name" : "liferay",
   "cluster_name" : "LiferayElasticsearchCluster",
-  "cluster_uuid" : "Etr-YyyNQzOPfETH3_GU2A",
+  "cluster_uuid" : "_lcJyLZXQ2WY5No5oW8edg",
   "version" : {
-    "number" : "7.10.2",
+    "number" : "7.17.0",
     "build_flavor" : "unknown",
     "build_type" : "unknown",
-    "build_hash" : "747e1cc71def077253878a59143c1f785afa92b9",
-    "build_date" : "2021-01-13T00:42:12.435326Z",
+    "build_hash" : "bee86328705acaa9a6daede7140defd4d9ec56bd",
+    "build_date" : "2022-01-28T08:36:04.875279988Z",
     "build_snapshot" : false,
-    "lucene_version" : "8.7.0",
+    "lucene_version" : "8.11.1",
     "minimum_wire_compatibility_version" : "6.8.0",
     "minimum_index_compatibility_version" : "6.0.0-beta1"
   },
@@ -29,16 +29,18 @@ Here's example sidecar server output:
 }
 ```
 
-While the bundled Elasticsearch servers are convenient for development and testing, neither is suitable for production.
+While the bundled Elasticsearch servers are convenient for development and testing, neither is suitable for production. 
 
 ```{note}
-While it's not a supported production configuration, installing Kibana to monitor the bundled Elasticsearch server is useful during development and testing. Just be aware that you must install the [OSS only Kibana build](https://www.elastic.co/downloads/kibana-oss).
+While it's not a supported production configuration, installing Kibana to monitor the bundled Elasticsearch server is useful during development and testing. 
+- On Liferay 7.3, install the [OSS only Kibana build](https://www.elastic.co/downloads/kibana-oss).
+- On Liferay 7.4 U17+, install the free version of [Kibana](https://www.elastic.co/downloads/past-releases#kibana).
 ```
 
 You wouldn't run an embedded database like HSQL in production, and you shouldn't run the bundled Elasticsearch server in production either. Instead, run Elasticsearch in remote mode, as a standalone server or cluster of server nodes.
 
 ```{important}
-Synonym Sets and Result Rankings are applications that use the search index for primary data storage. No data is stored in the Liferay database. Therefore, if you have Synonym Sets or Result Rankings configured while using the sidecar or embedded Elasticsearch, switching to a remote Elasticsearch server and reindexing does `not` restore those configurations. Instead you must manually bring the Synonym Sets and Result Rankings into the remote Elasticsearch cluster. See the [Upgrade Guide](../elasticsearch.html) for details on using Elastic's [Snapshot and Restore](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/snapshot-restore.html) feature to preserve these indexes.
+The search tuning apps [Synonym Sets](using-search/search-administration-and-tuning/synonym-sets.md) and [Result Rankings](using-search/search-administration-and-tuning/result-rankings.md) used the search index for primary data storage on Liferay 7.2 and 7.3. No data for these apps was stored in the Liferay database. Therefore, if you have Synonym Sets or Result Rankings configured while using the sidecar or embedded Elasticsearch in Liferay 7.2 and 7.3, switching to a remote Elasticsearch server and reindexing does _not_ restore those configurations. Instead you must manually bring the Synonym Sets and Result Rankings into the remote Elasticsearch cluster. See the [Upgrade Guide](../elasticsearch/upgrading-elasticsearch.md) for details on using Elastic's [Snapshot and Restore](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/snapshot-restore.html) feature to preserve these indexes.
 ```
 
 ## Bundled Elasticsearch Server Use cases
@@ -80,7 +82,7 @@ Here's a comparison between the embedded and sidecar Elasticsearch servers.
 | EMBEDDED           | SIDECAR           |
 | :--- | :--- |
 | Cannot configure a secure connection | Cannot configure a secure connection |
-| Uses an OSS version of Elasticsearch | Uses an OSS version of Elasticsearch |
+| Uses an OSS version of Elasticsearch | Liferay 7.3 uses an OSS version of Elasticsearch<br />As of Update 17, Liferay 7.4 no longer uses the OSS Elasticsearch |
 | Runs at <http://localhost:9200> | Runs at <http://localhost:9201> |
 | Pre-Installed on all Liferay distributions  | Not Always Pre-Installed  |
 | Not supported for production  | Not supported for production |

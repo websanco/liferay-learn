@@ -244,7 +244,7 @@ See the dedicated [Search Administration](search-administration.md) documentatio
 Information about the search engine connection(s) is displayed here. For example,
 
 * Search Engine Vendor: Elasticsearch
-* Client Version: 7.14.1
+* Client Version: 7.17.1
 * Active Connections: 1
 * Health: Green
 * Connection ID: \_REMOTE\_
