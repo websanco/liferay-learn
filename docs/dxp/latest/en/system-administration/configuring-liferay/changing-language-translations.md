@@ -16,9 +16,9 @@ Use the Language Override tool to override existing translations or add new lang
 
 3. Locate and click on the translation. A new window opens. You can also click the *Actions* (![Actions icon](../../images/icon-actions.png)) &rarr; _Edit_ to the right of the translation. 
 
-4. Enter new translations for the locales you want to override. Click *Save* at the bottom of the page. 
+4. Enter a new translation for each language you want to override. Click *Save* at the bottom of the page. 
 
-   ![Enter new translations for the locales you want to override.](./changing-language-translations/images/02.png)
+   ![Enter a new translation for each language you want to override.](./changing-language-translations/images/02.png)
 
 5. The translation for `home` is now overridden.
 
@@ -28,7 +28,7 @@ Use the Language Override tool to override existing translations or add new lang
 
 1. Open the Global Menu (![Global Menu](../../images/icon-applications-menu.png)). Navigate to *Control Panel* &rarr; *Configuration* &rarr; *Language Override*.
 
-2. Use the search bar to find override you wish to modify. To filter the results for only the translations that have overrides, click *Filter and Order* and select *Any Language*. Or click *Selected Language* to only show overrides within the locale selected.
+2. Use the search bar to find the override you wish to modify. To filter the results for only the translations that have overrides, click *Filter and Order* and select *Any Language*. Or click *Selected Language* to only show overrides within the locale selected.
 
 3. Select the translation you wish to modify. A new window opens. You can also click the *Actions* (![Actions icon](../../images/icon-actions.png)) &rarr; _Edit_ to the right of the translation. 
 
@@ -52,20 +52,20 @@ Language overrides can be easily imported or exported with language properties f
 
 ### Importing Language Translations
 
-1. To import, click the Actions icon (![Actions icon](../../images/icon-actions.png)) to the left of the Global Menu icon. 
+1. To import, click the *Actions* (![Actions icon](../../images/icon-actions.png)) to the left of the Global Menu icon. 
 
-1. Select *Import Translations* and a new window will open.
+2. Select *Import Translations* and a new window will open.
 
    ![Select import translations and a new window will open.](./changing-language-translations/images/05.png)
 
-1. Use the drop-down menu to select the language.
+3. Use the drop-down menu to select the language.
 
-1. Click *Choose File* and select the `Language.properties` file that contains your overrides. Note, that you must supply a separate file for each language you wish to override. Each language has its own [language properties file](https://github.com/liferay/liferay-portal/tree/master/modules/apps/portal-language/portal-language-lang/src/main/resources/content) containing keys for its language. 
+4. Click *Choose File* and select the `Language.properties` file that contains your overrides. Note, that you must supply a separate file for each language you wish to override. Each language has its own [language properties file](https://github.com/liferay/liferay-portal/tree/master/modules/apps/portal-language/portal-language-lang/src/main/resources/content) containing keys for its language. 
 
-1. Click *Save* and the overrides are now saved.
+5. Click *Save* and the overrides are now saved.
 
 ### Exporting Language Translations
 
-1. To export, click the Actions icon (![Actions icon](../../images/icon-actions.png)) to the left of the Global Menu icon. 
+1. To export, click the *Actions* (![Actions icon](../../images/icon-actions.png)) to the left of the Global Menu icon. 
 
-1. Select *Export* and a ZIP file containing `Language.properties` files for each language with overrides will begin downloading.
+2. Select *Export* and a ZIP file containing `Language.properties` files for each language with overrides will begin downloading.
