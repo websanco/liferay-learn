@@ -28,15 +28,17 @@ Use the Language Override tool to override existing translations or add new lang
 
 1. Open the Global Menu (![Global Menu](../../images/icon-applications-menu.png)). Navigate to *Control Panel* &rarr; *Configuration* &rarr; *Language Override*.
 
-2. Use the search bar to find the override you wish to modify. To filter the results for only the translations that have overrides, click *Filter and Order* and select *Any Language*. Or click *Selected Language* to only show overrides within the locale selected.
+1. Use the search bar to find the override you wish to modify. To filter the results for only the translations that have overrides, click *Filter and Order* and select *Any Language*. Or click *Selected Language* to only show overrides within the locale selected.
 
-3. Select the translation you wish to modify. A new window opens. You can also click the *Actions* (![Actions icon](../../images/icon-actions.png)) &rarr; _Edit_ to the right of the translation. 
+   Note existing overrides are indicated under each language key. For example, "Languages With Override: en_US, ja_JP".
+
+2. Select the translation you wish to modify. A new window opens. You can also click the *Actions* (![Actions icon](../../images/icon-actions.png)) &rarr; _Edit_ to the right of the translation. 
 
    If overrides exist, the *Actions* icon (![Actions icon](../../images/icon-actions.png)) also has an option to remove translation overrides. Click *Remove all translation overrides* and click *OK* in the pop-up window to remove all overrides. If an override exists in the locale you have selected, there's an additional option to remove just that locale's translation (e.g. *Remove translation override for en_US* if US English is selected).
 
    ![The Actions icon has an option to remove translation overrides.](./changing-language-translations/images/04.png)
 
-4. Enter your changes and click *Save* at the bottom of the page. If you wish to remove all overrides and revert back to the original translations, click *Clear All Overrides*.
+3. Enter your changes and click *Save* at the bottom of the page. If you wish to remove all overrides and revert back to the original translations, click *Clear All Overrides*.
 
 ## Adding a Language Key and Translation
 
@@ -54,18 +56,18 @@ Language overrides can be easily imported or exported with language properties f
 
 1. To import, click the *Actions* (![Actions icon](../../images/icon-actions.png)) to the left of the Global Menu icon. 
 
-2. Select *Import Translations* and a new window will open.
+1. Select *Import Translations* and a new window will open.
 
    ![Select import translations and a new window will open.](./changing-language-translations/images/05.png)
 
-3. Use the drop-down menu to select the language.
+1. Use the drop-down menu to select the language.
 
-4. Click *Choose File* and select the `Language.properties` file that contains your overrides. Note, that you must supply a separate file for each language you wish to override. Each language has its own [language properties file](https://github.com/liferay/liferay-portal/tree/master/modules/apps/portal-language/portal-language-lang/src/main/resources/content) containing keys for its language. 
+1. Click *Choose File* and select the `Language.properties` file that contains your overrides. Note, that you must supply a separate file for each language you wish to override. Each language has its own [language properties file](https://github.com/liferay/liferay-portal/tree/master/modules/apps/portal-language/portal-language-lang/src/main/resources/content) containing keys for its language. 
 
-5. Click *Save* and the overrides are now saved.
+1. Click *Save* and the overrides are now saved.
 
 ### Exporting Language Translations
 
 1. To export, click the *Actions* (![Actions icon](../../images/icon-actions.png)) to the left of the Global Menu icon. 
 
-2. Select *Export* and a ZIP file containing `Language.properties` files for each language with overrides will begin downloading.
+1. Select *Export* and a ZIP file containing `Language.properties` files for each language with overrides will begin downloading.
