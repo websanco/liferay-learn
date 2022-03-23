@@ -23,11 +23,10 @@ public class P5D2EntryUpgradeProcess extends UpgradeProcess {
 
 	@Override
 	protected void doUpgrade() throws Exception {
-
-			alterColumnName("P5D2_P5D2Entry", "foo", "bar VARCHAR(75) null");
-			alterColumnType("P5D2_P5D2Entry", "able", "DATE");
-			alterTableAddColumn("P5D2_P5D2Entry", "charlie", "VARCHAR(75) null");
-			alterTableDropColumn("P5D2_P5D2Entry", "baker");
+		alterColumnName("P5D2_P5D2Entry", "foo", "bar VARCHAR(75) null");
+		alterColumnType("P5D2_P5D2Entry", "able", "DATE");
+		alterTableAddColumn("P5D2_P5D2Entry", "charlie", "VARCHAR(75) null");
+		alterTableDropColumn("P5D2_P5D2Entry", "baker");
 	}
 
 }
