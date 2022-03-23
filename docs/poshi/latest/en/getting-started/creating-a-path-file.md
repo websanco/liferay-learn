@@ -1,4 +1,4 @@
-# Creating A Path file
+# Creating A Path File
 
 ## Test Scenario
 

@@ -1,4 +1,4 @@
-# Creating the testcase file
+# Creating the Testcase File
 
 ## Test Scenario
 
@@ -18,7 +18,7 @@ Write your first testcase file using the test scenario below:
 
   1. Assert that a message appears saying there are no articles available.
 
-## Building the testcase file
+## Building the Testcase File
 
 1. Create an empty file in your `poshi-standalone/poshi-tests/testcase` directory and name it `LiferayLearnSearch.testcase`.
 

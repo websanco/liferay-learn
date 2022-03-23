@@ -1,4 +1,4 @@
-# Creating a .macro file
+# Creating a .macro File
 
 ## Test Scenario
 
@@ -18,7 +18,7 @@ Write your first macro file using the test scenario below:
 
   1. Assert that a message appears saying there are no articles available.
 
-## Building the macro file
+## Building the Macro File
 
 1. Create an empty file in your `poshi-standalone/poshi-tests/macros` directory and name it `LiferayLearnSearch.macro`.
 

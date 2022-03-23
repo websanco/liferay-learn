@@ -37,7 +37,7 @@ Path files are written in HTML that when rendered displays a table containing th
 </html>
 ```
 
-## Benefits of using path files
+## Benefits of Using Path Files
 
 **Promotes reusability**: When writing multiple tests that interact with the same element, you are able to share and reuse locators instead of having them hardcoded for each interaction.
 

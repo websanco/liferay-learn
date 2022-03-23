@@ -2,7 +2,7 @@
 
 A macro is a set of functions that perform a task. Macros are where locators (paths) and functions are brought together to script interactions that a user performs on the system being tested. Anything from clicking on a button, to performing navigations, to asserting information, or even sending API calls to improve test setup speed can be scripted on the macro layer.
 
-## Benefits of using macro files
+## Benefits of Using Macro Files
 
 **Promotes reusability**: Reusing macros is the most efficient way to use a set of interactions that is repeated across multiple tests. For example, say you are writing three separate tests to edit the title of a blog post, a document, and a web content. If the interaction to edit requires you to expand a panel and click on the edit button, you create an `Assets.macro` file with a macro similar to the following:
 
