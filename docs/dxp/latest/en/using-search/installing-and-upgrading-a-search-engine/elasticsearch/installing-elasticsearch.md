@@ -3,7 +3,7 @@
 Here's how to install, configure, and start Elasticsearch on-premises.
 
 ```{important}
-The Sidecar Elasticsearch server bundled with Liferay 7.3 and Liferay 7.4 prior to DXP U17+ and Portal GA17+ uses the Elasticsearch OSS distribution. Do not install the OSS version for production. To run Liferay securely with Elasticsearch, you must install the Basic level of Elasticsearch at a minimum. See [Elastic's subscriptions page](https://www.elastic.co/subscriptions) for more information.
+The Sidecar Elasticsearch server bundled with Liferay 7.3 and early Liferay 7.4 versions (through Liferay DXP 7.4 U16/Liferay Portal 7.4 GA16) uses the Elasticsearch OSS distribution. Do not install the OSS version for production. To run Liferay securely with Elasticsearch, you must install the Basic level of Elasticsearch at a minimum. See [Elastic's subscriptions page](https://www.elastic.co/subscriptions) for more information.
 ```
 
 ```{note}
