@@ -58,7 +58,7 @@ To see how storage adapters work, deploy an example and then add some form data 
     STARTED com.acme.c2p9.impl_1.0.0 [1009]
     ```
 
-### Use the Deployed Forms Field
+### Use the Deployed Slider Field
 
 1. Open your browser to <http://localhost:8080>.
 
@@ -80,3 +80,49 @@ Form Field Types in Liferay contain Java and JavaScript source code. In the C2P9
 
 - `C2P9DDMFormFieldType.java` provides a `DDMFormFieldType` implementation (by extending the abstract class `BaseDDMFormFieldType` and defining its metadata in the OSGi Component.
 - `Slider.es.js` provides the JavaScript logic for the field.
+
+`Slider.es.js` description:
+
+The import statements bring in functionality from Liferay's base form field, `dynamic-data-mapping-form-field-type`. These will be called later using the declared variables `FieldBase` and `useSyncValue`.
+
+```{literalinclude} ./writing-a-custom-forms-field-type/resources/liferay-c2p9.zip/c2p9-impl/src/main/resources/META-INF/resources/C2P9/Slider.es.js
+   :dedent: 0
+   :language: js
+   :lines: 1-2
+```
+
+The `const Slider =` block defines the field: it consists of the properties `name`, `onChange`, `predefinedValue`, `readOnly`, and `value`. Some of its input properties are hard coded: 
+
+1. `className="ddm-field-slider form-control slider"` blah blah blah
+1. `id="myRange"` blah blah blah
+1. `type="range"` defines the type of data that will be passed as a value to the field. The `range` type means that the fields accepts an integer.
+1. `max={100}` specifies that the maximum value for the field will be `100`.
+1. `min={1}` sets the minimum accepted value at `1`.
+
+Below you can find steps showing you how to make the max and min properties configurable by the form builder.
+
+The rest of the properties () are defined by the Main block and its function. When the exported `Main` variable is called by the Forms Framework, .
+
+What are the `otherProps`: Required, Help Text, Show Label, Repeatable?
+
+```{literalinclude} ./writing-a-custom-forms-field-type/resources/liferay-c2p9.zip/c2p9-impl/src/main/resources/META-INF/resources/C2P9/Slider.es.js
+   :dedent: 0
+   :language: js
+   :lines: 5-17
+```
+
+The `const Main =` block defines the field's configuration options and the field's behavior.
+
+```{literalinclude} ./writing-a-custom-forms-field-type/resources/liferay-c2p9.zip/c2p9-impl/src/main/resources/META-INF/resources/C2P9/Slider.es.js
+   :dedent: 0
+   :language: js
+   :lines: 19-51
+```
+
+At the end we export the Main function as the default.
+
+```{literalinclude} ./writing-a-custom-forms-field-type/resources/liferay-c2p9.zip/c2p9-impl/src/main/resources/META-INF/resources/C2P9/Slider.es.js
+   :dedent: 0
+   :language: js
+   :lines: 53-55
+```
