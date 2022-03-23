@@ -14,8 +14,6 @@
 
 package com.acme.p5d2.internal.upgrade.v2_0_0;
 
-import com.acme.p5d2.internal.upgrade.v2_0_0.util.P5D2EntryTable;
-
 import com.liferay.portal.kernel.upgrade.UpgradeProcess;
 
 /**
@@ -25,12 +23,11 @@ public class P5D2EntryUpgradeProcess extends UpgradeProcess {
 
 	@Override
 	protected void doUpgrade() throws Exception {
-		alter(
-			P5D2EntryTable.class,
-			new AlterColumnName("foo", "bar VARCHAR(75) null"),
-			new AlterColumnType("able", "DATE"),
-			new AlterTableAddColumn("charlie", "VARCHAR(75) null"),
-			new AlterTableDropColumn("baker"));
+
+			alterColumnName("P5D2_P5D2Entry", "foo", "bar VARCHAR(75) null");
+			alterColumnType("P5D2_P5D2Entry", "able", "DATE");
+			alterTableAddColumn("P5D2_P5D2Entry", "charlie", "VARCHAR(75) null");
+			alterTableDropColumn("P5D2_P5D2Entry", "baker");
 	}
 
 }
