@@ -34,7 +34,7 @@ While the bundled Elasticsearch servers are convenient for development and testi
 ```{note}
 While it's not a supported production configuration, installing Kibana to monitor the bundled Elasticsearch server is useful during development and testing. 
 - On Liferay 7.3, install the [OSS only Kibana build](https://www.elastic.co/downloads/kibana-oss).
-- On Liferay 7.4 U17+, install the free version of [Kibana](https://www.elastic.co/downloads/past-releases#kibana).
+- On Liferay DXP 7.4 U17+ and Liferay Portal 7.4 GA17+, install the free version of [Kibana](https://www.elastic.co/downloads/past-releases#kibana).
 ```
 
 You wouldn't run an embedded database like HSQL in production, and you shouldn't run the bundled Elasticsearch server in production either. Instead, run Elasticsearch in remote mode, as a standalone server or cluster of server nodes.
@@ -82,7 +82,7 @@ Here's a comparison between the embedded and sidecar Elasticsearch servers.
 | EMBEDDED           | SIDECAR           |
 | :--- | :--- |
 | Cannot configure a secure connection | Cannot configure a secure connection |
-| Uses an OSS version of Elasticsearch | Liferay 7.3 uses an OSS version of Elasticsearch<br />As of Update 17, Liferay 7.4 no longer uses the OSS Elasticsearch |
+| Uses an OSS version of Elasticsearch | Liferay 7.3 uses an OSS version of Elasticsearch<br />Liferay DXP 7.4 U17+ and Liferay Portal 7.4 GA17+ no longer use the OSS Elasticsearch |
 | Runs at <http://localhost:9200> | Runs at <http://localhost:9201> |
 | Pre-Installed on all Liferay distributions  | Not Always Pre-Installed  |
 | Not supported for production  | Not supported for production |
