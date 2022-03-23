@@ -1,4 +1,4 @@
-# Organize Content with Folders 
+# Exercise 3: Organize Content with Folders 
 
 Coming Soon!
 

@@ -46,12 +46,6 @@ Introductory text to what this section is about.
 :link: ./liferay-dxp-7.4-for-business-users/secure-your-liferay-dxp-platform.md
 :::
 
-:::{grid-item-card}  Card Title
-:link: ./path-to/article.md
-
-Article description
-:::
-
 :::{grid-item-card}  Using Liferay Objects
 :link: ./liferay-dxp-7.4-for-business-users/using-liferay-objects.md
 :::

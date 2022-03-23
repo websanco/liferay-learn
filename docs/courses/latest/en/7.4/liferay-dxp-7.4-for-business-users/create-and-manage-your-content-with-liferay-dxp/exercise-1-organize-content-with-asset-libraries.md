@@ -1,4 +1,4 @@
-# Organize Content with Asset Libraries 
+# Exercise 1: Organize Content with Asset Libraries 
 
 Coming Soon!
 

@@ -1,4 +1,4 @@
-## Organize Content with Categories and Tags 
+# Exercise 2: Organize Content with Categories and Tags 
 
 Coming Soon!
 
