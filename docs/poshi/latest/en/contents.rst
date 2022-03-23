@@ -6,7 +6,7 @@ Contents
    :includehidden:
    :maxdepth: 6
 
-   getting_started.md
+   getting-started.md
    poshi-basics.md
 
 Indices and tables
