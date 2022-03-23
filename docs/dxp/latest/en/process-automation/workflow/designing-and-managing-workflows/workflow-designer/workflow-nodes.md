@@ -1,6 +1,6 @@
 # Workflow Nodes
 
-> Subscribers
+{bdg-primary}`Subscription`
 
 A Workflow Node represents a specific point in an approval process, whether it begins the review process, approves or rejects the asset, or reassigns the task.
 

@@ -1,6 +1,6 @@
 # Workflow Designer Overview
 
-> Subscribers
+{bdg-primary}`Subscription`
 
 The Process Builder's workflow designer is a graphical interface for creating workflow process definitions. The convenient drag and drop interface makes workflow design easier than [writing XML definitions by hand](../../developer-guide/crafting-xml-workflow-definitions). It's accessed in the Control Panel &rarr; Workflow &rarr; Process Builder.
 

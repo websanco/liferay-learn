@@ -1,6 +1,6 @@
 # Using Forks and Joins
 
-> Subscribers
+{bdg-primary}`Subscription`
 
 Here you'll learn how to use the _Fork_, _Join_ and _Join XOR_ nodes. These nodes are useful for workflow processes that have multiple reviewers like the [Legal-Marketing Definition](https://github.com/liferay/liferay-learn/blob/master/docs/dxp/latest/en/process-automation/workflow/designing-and-managing-workflows/workflow-designer/workflow-designer-overview/resources/legal-marketing-definition.xml) sample.
 

@@ -1,8 +1,8 @@
 # Assigning Task Nodes
 
-> Subscribers
+{bdg-primary}`Subscription`
 
-Task nodes require interaction by people. To alert the right people and associate the task with the right people, use [Notifications](./configuring-workflow-actions-and-notifications.md#adding-notifications) and Assignments, respectively. You can assign Task nodes to 
+Task nodes require interaction by people. To alert and associate tasks with the right people, use [Notifications](./configuring-workflow-actions-and-notifications.md#adding-notifications) and Assignments, respectively. You can assign Task nodes to 
 
 - Specific Roles
 - Multiple Roles of a [Role type](../../../../users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.md) (Organization, Site, Asset Library, Account, or Regular Role types)

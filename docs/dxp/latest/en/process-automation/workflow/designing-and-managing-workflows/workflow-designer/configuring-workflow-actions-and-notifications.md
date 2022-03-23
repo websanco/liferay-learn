@@ -1,6 +1,6 @@
 # Configuring Workflow Actions and Notifications
 
-> Subscribers
+{bdg-primary}`Subscription`
 
 Using the workflow designer, users can configure Workflow Actions and notifications for each node.
 

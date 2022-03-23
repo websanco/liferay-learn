@@ -1,6 +1,6 @@
 # Using Condition Nodes
 
-> Subscribers
+{bdg-primary}`Subscription`
 
 _Condition_ nodes are useful for acting  (transitioning, assigning, etc.) conditionally in the workflow. Perhaps you have multiple reviewers and must determine which reviewer should be assigned a task. For example, different documents might require review by the Legal department or the Marketing team.
 

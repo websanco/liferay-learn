@@ -1,5 +1,7 @@
 # Workflow Transitions
 
+{bdg-primary}`Subscription`
+
 Transitions represent the paths a workflow can traverse. In the Workflow Designer's palette, transitions are the arrows connecting the workflow nodes:
 
 ![Transitions direct the path of the workflow.](./workflow-transitions/images/01.png)
