@@ -2,7 +2,7 @@
 
 > Available Liferay DXP 7.4 U10 and Liferay Portal 7.4 __
 
-Object views define tables for displaying entries in an Object's application page. By default, Liferay automatically generates a default view for each published Object. This view orders all entry fields alphabetically. However, you can design custom views to determine which Object fields are included in the table and how they're ordered.
+Object views define tables for displaying entries in an Object's application page. By default, Liferay automatically generates a default view for each published Object. This view orders all entry fields alphabetically. You can, however, design custom views to determine which Object fields are included in the table and how they're ordered.
 
 ![Design custom views for displaying Object entries.](./designing-object-views/images/01.png)
 
@@ -22,7 +22,7 @@ Follow these steps to design a custom Object view:
 
 1. Go to the *Views* tab and click the *Add* button (![Add Button](../../../images/icon-add.png)).
 
-1. Enter a *name* and click *Save*. This creates a new blank view. You can now add fields to it.
+1. Enter a *name* and click *Save* to create a new blank view. You can now add fields to it.
 
    ![Create a blank view.](./designing-object-views/images/02.png)
 
@@ -45,10 +45,10 @@ Follow these steps to design a custom Object view:
    Available options include [manually added fields](./adding-fields-to-objects.md) and automatically added fields (i.e., Author, Creation Date, Modified Date, Workflow Status, and ID).
 
    ```{note}
-   Views do not support columns with multiple entries (e.g., *Many to Many* relationship fields).
+   Views do not support columns containing multiple entries (e.g., *Many to Many* relationship fields).
    ```
 
-   ![Arrange](./designing-object-views/images/04.png)
+   ![Arrange the fields in any order you want.](./designing-object-views/images/04.png)
 
 1. Drag and drop fields to arrange their order.
 
@@ -56,7 +56,7 @@ Follow these steps to design a custom Object view:
 
 Once saved, the custom view is used for displaying Object entries.
 
-![The view is used for displaying Object entries](./designing-object-views/images/05.png)
+![The view is used for displaying Object entries.](./designing-object-views/images/05.png)
 
 ## Sorting Views
 <!-- U17? Sorting custom views-->

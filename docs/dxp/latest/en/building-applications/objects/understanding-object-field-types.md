@@ -2,7 +2,7 @@
 
 Object fields represent database columns that store specific types of data for an Object. Fields can be added to both custom and system Objects and can only store one type of data.
 
-Liferay provides a user-friendly name for each field type, which corresponds to a specific data type in the backend. When making Headless API calls that include fields, you must use the backend data type names:
+Liferay provides a user-friendly name for each field type, which corresponds to a specific data type in the back-end. When making Headless API calls that include fields, you must use the back-end data type names:
 
 | Field Types (UI) | Data Type (HEADLESS) | Description |
 | :--- | :--- | :--- |
