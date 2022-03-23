@@ -12,7 +12,7 @@ poshi-basics/poshi-advantages.md
 poshi-basics/poshi-layers
 ```
 
-With any new feature or upgrade of a system, it is ideal that a battery of tests are ran to check that no functionality is broken by the new code. With a constantly evolving platform like Liferay DXP, manual test executions can quickly become unsustainable because of time and cost constraints. A more realistic means to continuously test your implementation is through automated testing.
+New features, improvements, and system upgrades can sometimes introduce unexpected behaviors and bugs. Running suites of automated tests is an advantageous method of identifying issues before they can impact users in production.
 
 
 ::::{grid} 2

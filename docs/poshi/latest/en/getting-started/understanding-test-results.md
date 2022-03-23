@@ -1,6 +1,6 @@
 # Understanding Test Results and Debugging Tests
 
-Poshi tests are ran on the terminal or command line. When a test run is completed there are multiple ways to view the test results and diagnose test issues.
+Poshi tests are run on the terminal or command line. When a test run is completed there are multiple ways to view the test results and diagnose test issues.
 
 ## Viewing Test Results on the Console Log
 
@@ -114,7 +114,7 @@ A failed test result will display the failing test step with a red bar indicatin
 
 To test this, make a copy of your `CannotSearchForPumpkins` test and replace the term `Pumpkins` with `Blogs`. If you are also changing the test name, remember to edit your `poshi-ext.properties` file. See [Running a Test](./running-a-test.md) for more information.
 
-## Diagnosing the cause of a test failure
+## Diagnosing the Cause of a Test Failure
 
 From the information provided in the log, there are a few ways to diagnose the issue:
 

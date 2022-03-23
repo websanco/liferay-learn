@@ -1,8 +1,8 @@
 # Functions
 
-In Poshi, Functions handle extra WebDriver commands that an element might require to interact with a page object or element. Functions combine the basic methods defined in the BaseWebDriverImpl layer to create reusable functions for test cases, no Java experience required.
+In Poshi, Functions handle extra WebDriver commands that an element might require to interact with a page object or element. Functions combine the basic methods defined in the `BaseWebDriverImpl` layer to create reusable functions for test cases, no Java experience required.
 
-As an example, say a test includes clicking the Edit button on a page. On the surface, it seems like the only method needed is selenium.click(). To improve the reliability of the test it is advisable to include waiting for the page to load and asserting console log errors. The steps will then be as follows:
+As an example, say a test includes clicking the Edit button on a page. On the surface, it seems like the only method needed is `selenium.click()`. To improve the reliability of the test it is advisable to include waiting for the page to load and asserting console log errors. The steps will then be as follows:
 
 1. Wait for the page to load.
 

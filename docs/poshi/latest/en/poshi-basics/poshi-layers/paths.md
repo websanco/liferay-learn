@@ -4,7 +4,7 @@ A path is an element on a page that a test will interact with.  An element can b
 
 **Locator key**: This is a descriptive label for what the element is (e.g. EDIT). Locator keys are all-caps and use underscores instead of spaces.
 
-**XPath identifier**: This is the address that points to that particular element in the HTML page (e.g. //button[contains(.,'Edit')]).
+**XPath identifier**: This is the address that points to that particular element in the HTML page (e.g. `//button[contains(.,'Edit')]`).
 
 Path files are written in HTML that when rendered displays a table containing the locator names and the locators. Think of path files as a library of test objects that a collection of tests can interact with.
 

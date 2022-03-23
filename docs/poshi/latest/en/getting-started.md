@@ -14,11 +14,11 @@ getting-started/creating-a-macro-file.md
 getting-started/creating-a-testcase-file.md
 getting-started/syntax-validation.md
 getting-started/running-a-test.md
-getting-started/debugging-poshi.md
+getting-started/understanding-test-results.md
 ```
 
-In the past, Poshi tests could only be ran by downloading and creating the test files within the [Liferay source
-code](https://github.com/liferay/liferay-portal/). Now, with the _Poshi Standalone_ gradle project, you can take advantage of all that Poshi has to offer at any directory of your choosing without having to fetch the Liferay github repository.
+Previously, Poshi tests could only be executed by downloading and creating the test files within the [Liferay source
+code](https://github.com/liferay/liferay-portal/). The _Poshi Standalone_ gradle project enables you to use Poshi in any directory of your choosing without having to fetch the entire Liferay Portal github repository.
 
 ::::{grid} 2
 :gutter: 3 3 3 3
