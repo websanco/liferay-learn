@@ -22,7 +22,7 @@ Write your first path file using the test scenario below:
 
 From the given test scenario, gather the elements that your test needs to interact with.
 
-1. The URL for the Liferay Learn site: `http://learn.liferay.com`.
+1. You will need the URL for the Liferay Learn site: `http://learn.liferay.com`.
 
 1. Open the browser's Web Developer Console (F12; this displays the DOM). The console will have an icon with an arrow that allows you to inspect the search bar to get the locator. This is called the selector.
 
@@ -32,7 +32,7 @@ From the given test scenario, gather the elements that your test needs to intera
 
 1. Again, using the selector icon from the Web Developer Console, click on the "No Results" message and determine the path. In this case, use `//h4[@id="noResultsMessage"]`.
 
-1. For an added assertion, search for a term that will surely have results, like the term "Staging". When the search results are displayed, use the selector icon to get the path for one of the search results. In this case, use `//ul[@class='search']//a[contains(.,'Staging')]`. Note that the term 'Staging' is specific to this search result and makes the path inflexible to be used in other scenarios. To make this path reusable, use a variable that can be passed on from the testcase: `//ul[@class='search']//a[contains(.,'${key_searchTerm}')]`. See [Using Variables](../poshi-basics/variables.md) for more information.
+1. For an added assertion, search for a term that will surely have results, for example, search for the term "Staging". When the search results are displayed, use the selector icon to get the path for one of the results. In this case, use `//ul[@class='search']//a[contains(.,'Staging')]`. Note that the term 'Staging' is specific to this search result and makes the path inflexible to be used in other scenarios. To make this path reusable, use a variable that can be passed on from the testcase: `//ul[@class='search']//a[contains(.,'${key_searchTerm}')]`. See [Using Variables](../poshi-basics/variables.md) for more information.
 
 ## Building the path file
 

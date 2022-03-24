@@ -39,4 +39,4 @@ You would then simply call this `Click` function in a test with an xpath locator
 Click(locator1 = "//button[contains(.,'Edit')]");
 ```
 
-Functions are readily available for you in Poshi standalone. Available functions can be found in the [functions directory on Liferay source](https://github.com/liferay/liferay-portal/tree/master/portal-web/test/functional/com/liferay/portalweb/functions).
+Functions are readily available for you in Poshi standalone. Available functions can be found in the [functions directory on Liferay Portal source](https://github.com/liferay/liferay-portal/tree/master/portal-web/test/functional/com/liferay/portalweb/functions).
