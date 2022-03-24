@@ -1,4 +1,4 @@
-# Add Sites to the Mondego Platform 
+# Exercise 2: Add Sites to the Platform 
 
 Coming Soon!
 
@@ -118,4 +118,11 @@ Coming Soon!
 1. Create a Site Template for Mondego's Business Banking sites. The template should have at least three Content Pages that include at least one fragment or widget on each. 
 2. Add Mondego Regional Office Sites for Mondego locations in Chile and Germany. Make sure they are created as Child Sites of the main Mondego Site. 
 3. Add a custom Content Page to one of the new Mondego Regional Office Sites created from the Site Template. Navigate to the new Site and look at the Pages you added within the Site itself. 
+
+---
+
+## Next Up
+
+* [Exercise 2b: Create User Groups](./exercises-create-user-groups.md)
+
 -->

@@ -1,4 +1,4 @@
-# Manage Site Configuration 
+# Exercise 3: Manage Site Configuration 
 
 Coming Soon!
 
@@ -73,4 +73,11 @@ Coming Soon!
 
 ## Bonus Exercise 
 1. Add pages to the Mondego Matters site. Use two Private Pages and two Public Pages. Sign out of the Administrator account and view the Site as a guest. (You may need to enter the URL to see the specific Site. Generally, this will be `localhost:8080/web/[site-name]`.) 
+
+---
+
+## Next Up
+
+* [Exercise 2b: Create User Groups](./exercises-create-user-groups.md)
+
 -->

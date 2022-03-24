@@ -243,4 +243,10 @@ Coming Soon!
 
 ## Bonus Exercise 
 1. Create a workflow for reviewing PTO requests that includes at least two different reviewers. Submit a request and go through the approval process using the newly created workflow. 
+
+---
+
+## Next Up
+
+* [Exercise 2b: Create User Groups](./exercises-create-user-groups.md)
 -->

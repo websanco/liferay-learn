@@ -66,4 +66,10 @@ Coming Soon!
 
 ## Bonus Exercise 
 1. Go back to the CAPTCHA Security Settings in the Control Panel. Increase the number of Maximum Challenges. Return to the Message Board and add Categories and Threads to see the changes. 
+
+---
+
+## Next Up
+
+* [Exercise 2b: Create User Groups](./exercises-create-user-groups.md)
 -->

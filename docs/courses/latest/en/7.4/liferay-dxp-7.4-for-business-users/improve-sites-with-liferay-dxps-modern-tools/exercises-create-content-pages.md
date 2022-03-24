@@ -208,4 +208,10 @@ Coming Soon!
 ## Bonus Exercises 
 1. Add two more Content Pages, called "Join the Community" and "FAQ." Add at least two Fragments of your choice to each page and adjust the settings for at least one fragment to Hide or Show on different devices. 
 2. Grant the Site Content Creator Role to another User and edit the Fragments of the Welcome Page as that User. Add text to the three paragraph elements in the Highlights Fragment. 
+
+---
+
+## Next Up
+
+* [Exercise 2b: Create User Groups](./exercises-create-user-groups.md)
 -->

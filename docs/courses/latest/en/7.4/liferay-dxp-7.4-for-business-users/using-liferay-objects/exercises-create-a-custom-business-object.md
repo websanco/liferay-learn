@@ -194,4 +194,10 @@ Coming Soon!
 
 ## Bonus Exercise 
 1. Create a new Liferay Object for Account Activity. Be sure to include fields for Customer Name, Transaction Amount, Account Number, and Account Type. 
+
+---
+
+## Next Up
+
+* [Exercise 2b: Create User Groups](./exercises-create-user-groups.md)
 -->

@@ -121,4 +121,10 @@ Coming Soon!
 ## Bonus Exercise 
 1. Update the Header and Footer Master Page Template we created on the Mondego Group Site in the Build New Sites Module. Add the Mondego logo to the Header and Footer. Add one more fragment to either the Header or Footer. View the changes on Pages that use the template. 
 2. Add a New Style Book to the Mondego Group Site. Adjust the Color System colors to match those on the Mondego Community Site. Adjust Spacing, Layout, or Typography settings. Apply the Style Book to only one page on the Site and view the changes. (You may need to add more content to pages to view some changes.) 
+
+---
+
+## Next Up
+
+* [Exercise 2b: Create User Groups](./exercises-create-user-groups.md)
 -->

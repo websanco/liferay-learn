@@ -1,4 +1,4 @@
-# Organize Content with Folders 
+# Exercise 3: Organize Content with Folders 
 
 Coming Soon!
 
@@ -79,4 +79,10 @@ Coming Soon!
 
 ## Bonus Exercise 
 1. Create a folder structure for Web Content in the Product Assets Asset Library. Include folders for Product Highlights, New Products, and Product Development. 
+
+---
+
+## Next Up
+
+* [Exercise 2b: Create User Groups](./exercises-create-user-groups.md)
 -->

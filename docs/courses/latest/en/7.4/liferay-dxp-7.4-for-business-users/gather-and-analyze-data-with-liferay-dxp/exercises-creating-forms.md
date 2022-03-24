@@ -169,4 +169,10 @@ Coming Soon!
 ## Bonus Exercises 
 1. Create a new Form on the main Marvin Robotics Site for gathering feedback from employees. The Form should be at least two pages long with no more than five fields on a page. 
 2. Create an Element Set for commonly asked questions about customer experience and satisfaction. Use the Element Set to create a Returning Customer Satisfaction Form. 
+
+---
+
+## Next Up
+
+* [Exercise 2b: Create User Groups](./exercises-create-user-groups.md)
 -->

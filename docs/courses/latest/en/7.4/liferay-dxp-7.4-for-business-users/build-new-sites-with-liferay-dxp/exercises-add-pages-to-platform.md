@@ -1,4 +1,4 @@
-# Add Pages to the Mondego Platform with Page Templates 
+# Exercise 1: Add Pages to the Platform with Page Templates 
 
 Coming Soon!
 
@@ -140,5 +140,11 @@ Coming Soon!
 ## Bonus Exercises: 
 1. Add another Content Page Template called Credit Cards to the Mondego Group Site. Pick two Fragments and one Widget to use on the page. Create at least one new page on the Mondego Group Site using the new template. View the new page in the Navigation Menu. 
 2. Create another Widget Page Template on the Global Site to use for Financial Advice. Use a Web Content Display widget, a Blogs widget, and a Message Boards widget. Choose whichever layout you prefer. 
+
+---
+
+## Next Up
+
+* [Exercise 2b: Create User Groups](./exercises-create-user-groups.md)
 
 -->

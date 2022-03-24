@@ -177,4 +177,10 @@ Coming Soon!
 
 ## Bonus Exercise 
 1. Create an additional publication. Make changes to the publication and to Production so that there are conflicts (for example, add duplicate folders or move a Web Content article). Resolve any conflicts that you are notified about when you attempt to publish the Publication. 
+
+---
+
+## Next Up
+
+* [Exercise 2b: Create User Groups](./exercises-create-user-groups.md)
 -->

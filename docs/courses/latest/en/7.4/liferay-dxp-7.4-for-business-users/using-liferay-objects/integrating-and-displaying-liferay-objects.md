@@ -4,4 +4,10 @@ Coming Soon!
 
 <!--
 [$LIFERAY_LEARN_YOUTUBE_URL$]=https://www.youtube.com/embed/fWl4w1H0OWc
+
+---
+
+## Next Up
+
+* [Exercise 2b: Create User Groups](./exercises-create-user-groups.md)
 -->

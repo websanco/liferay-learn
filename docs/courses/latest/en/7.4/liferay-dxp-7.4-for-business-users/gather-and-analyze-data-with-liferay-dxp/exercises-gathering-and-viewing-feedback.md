@@ -108,4 +108,10 @@ Coming Soon!
 ## Bonus Exercises 
 1. Add the New Webinar Form created in the previous exercise to a page on the Marvin Robotics Site and fill out the form as Bea Bullbruchs, Arthur Prefect, and Mary Jennings using their User information. 
 2. View the form entries for the New Webinar Form and edit the email address for Mary Jennings to be majennings@marvinrobotics.com. 
+
+---
+
+## Next Up
+
+* [Exercise 2b: Create User Groups](./exercises-create-user-groups.md)
 -->

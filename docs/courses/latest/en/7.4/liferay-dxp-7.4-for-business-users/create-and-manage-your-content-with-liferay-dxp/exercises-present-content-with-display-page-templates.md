@@ -1,4 +1,4 @@
-# Present Content with Display Page Templates 
+# Exercise 4: Present Content with Display Page Templates 
 
 Coming Soon!
 
@@ -165,4 +165,10 @@ Coming Soon!
 
 ## Bonus Exercise 
 1. Create another Display Page Template. Choose any Content Type you want. Add Fragments to the page and map content elements to the Fragments. Preview the Display Page Template using the Preview feature in the top right corner. 
+
+---
+
+## Next Up
+
+* [Exercise 2b: Create User Groups](./exercises-create-user-groups.md)
 -->

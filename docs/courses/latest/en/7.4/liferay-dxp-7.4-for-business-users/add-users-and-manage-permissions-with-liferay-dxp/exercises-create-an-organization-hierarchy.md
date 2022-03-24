@@ -67,6 +67,12 @@
 
 ---
 
-### Bonus Exercise 
+## Bonus Exercise 
 
 1. Create Sub-Organizations under Investment Marketing for Sales, Design, and Events. Add appropriate tags for each sub-organization. Assign Bethany Park to the Sales Organization. 
+
+---
+
+## Next Up
+
+* [Exercise 2b: Create User Groups](./exercises-create-user-groups.md)

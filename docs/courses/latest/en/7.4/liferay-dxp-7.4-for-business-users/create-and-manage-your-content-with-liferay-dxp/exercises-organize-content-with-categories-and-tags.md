@@ -1,4 +1,4 @@
-## Organize Content with Categories and Tags 
+# Exercise 2: Organize Content with Categories and Tags 
 
 Coming Soon!
 
@@ -93,4 +93,10 @@ Coming Soon!
 
 ## Bonus Exercise 
 1. Create a Vocabulary for the _Technical Documents_ Asset Library. Add categories for Manuals, Demonstrations, and Warranties. 
+
+---
+
+## Next Up
+
+* [Exercise 2b: Create User Groups](./exercises-create-user-groups.md)
 -->

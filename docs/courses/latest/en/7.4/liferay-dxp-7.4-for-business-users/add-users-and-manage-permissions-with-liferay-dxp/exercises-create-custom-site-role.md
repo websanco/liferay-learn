@@ -98,3 +98,9 @@
 ## Bonus Exercises 
 
 1. Create a new User named Corrie Alders. Make Corrie a member of the Mondego Site. Assign Corrie the _Site Content Creator_ role. 
+
+---
+
+## Next Up
+
+* [Exercise 4: Permissions on Sites](./exercises-permissions-on-sites.md)

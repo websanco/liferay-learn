@@ -41,3 +41,9 @@
 ## Bonus Exercises 
 
 1. Create a new User and make them a member of the main Mondego Site. Grant the new User the _Site Content Reviewer_ role. 
+
+---
+
+## Next Up
+
+* [Exercise 3b: Create Custom Site Role](./exercises-create-custom-site-role.md)

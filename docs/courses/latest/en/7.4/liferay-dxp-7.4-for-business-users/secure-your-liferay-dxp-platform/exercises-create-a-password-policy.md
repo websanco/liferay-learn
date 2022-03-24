@@ -123,4 +123,10 @@ Coming Soon!
 
 ## Bonus Exercise 
 1. Add another Password Policy for Mondego Customers. Set syntax requirements, a password expiration, and enable password history and account lockout. Assign an existing User to this policy instead of the Employee Policy. 
+
+---
+
+## Next Up
+
+* [Exercise 2b: Create User Groups](./exercises-create-user-groups.md)
 -->

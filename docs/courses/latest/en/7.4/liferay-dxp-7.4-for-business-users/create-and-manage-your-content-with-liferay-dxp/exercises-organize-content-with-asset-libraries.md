@@ -1,4 +1,4 @@
-# Organize Content with Asset Libraries 
+# Exercise 1: Organize Content with Asset Libraries 
 
 Coming Soon!
 
@@ -101,5 +101,11 @@ Coming Soon!
 
 ## Bonus Exercises 
 1. Add another Asset Library for Marketing. Connect it to just the Marvin Robotics Site. 
-2. Add a Document Type for Order Forms in the Product Assets Asset Library. 
+2. Add a Document Type for Order Forms in the Product Assets Asset Library.
+
+---
+
+## Next Up
+
+* [Exercise 2b: Create User Groups](./exercises-create-user-groups.md)
 -->

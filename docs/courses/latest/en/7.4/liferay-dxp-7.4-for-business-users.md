@@ -39,7 +39,7 @@ Introductory text to what this section is about.
 :::
 
 :::{grid-item-card}  Improve Sites with Liferay DXPs Modern Tools
-:link: ./liferay-dxp-7.4-for-business-users/add-users-and-manage-permissions-with-liferay-dxp.md
+:link: ./liferay-dxp-7.4-for-business-users/improve-sites-with-liferay-dxps-modern-tools.md
 :::
 
 :::{grid-item-card}  Secure Your Liferay DXP Platform

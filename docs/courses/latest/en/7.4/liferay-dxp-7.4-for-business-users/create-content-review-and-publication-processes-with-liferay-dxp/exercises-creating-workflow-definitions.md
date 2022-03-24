@@ -252,4 +252,10 @@ Coming Soon!
 ## Bonus Exercises 
 1. Add a few more lines to the New Products January 2022 Web Content Article. Resubmit the article and go through the Marketing Content Workflow again, this time Approving it at both the Manager Review and the Final Review. 
 2. Create another Workflow. Use Fork and Join nodes to allow two kinds of Review, Copyedit and Content, at the same time. (The Fork node should be placed between the StartNode and two Task nodes and the Join node should be placed after the Task nodes and before the EndNode.) 
+
+---
+
+## Next Up
+
+* [Exercise 2b: Create User Groups](./exercises-create-user-groups.md)
 -->

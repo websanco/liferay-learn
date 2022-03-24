@@ -77,3 +77,9 @@
 ## Bonus Exercises
 
 1. Create Private Account Overview Pages for the Mondego Gold and Silver Cards User Group Sites using different fragments and widgets than the Mondego Platinum Cards Page. Add Ayokunle Idowu to the Mondego Gold Cards User Group. Sign in as Ayokunle to confirm access to the Account Overview page. 
+
+---
+
+## Next Up
+
+* [Exercise 3a: Customize Site Content Reviewer Role](./exercises-customize-site-content-reviewer-role.md)

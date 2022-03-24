@@ -105,3 +105,9 @@
 ## Bonus Exercises
 
 1. Create a new User, Bethany Park. Give Bethany a password, access to the Mondego Group Site, and the phone number (314) 157-2757 as Contact Information. 
+
+--- 
+
+## Next Up
+
+* [Exercise 2a: Create an Organization Hierarchy](./exercises-create-an-organization-hierarchy.md)

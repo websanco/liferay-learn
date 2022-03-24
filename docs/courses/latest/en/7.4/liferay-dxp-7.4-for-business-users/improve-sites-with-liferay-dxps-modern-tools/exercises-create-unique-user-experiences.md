@@ -219,4 +219,10 @@ Coming Soon!
 
 ## Bonus Exercise 
 1. Add a second Experience to the Welcome Page on the Mondego Community Site. Name the New User Segment "Content Creators" and set it to include only those assigned the Site Content Creator Role. Give the Content Creators Experience priority above the Default and Mondego Employees Experiences. Add Fragments and Content to the Welcome Page for that Experience and view those changes. 
+
+---
+
+## Next Up
+
+* [Exercise 2b: Create User Groups](./exercises-create-user-groups.md)
 -->
