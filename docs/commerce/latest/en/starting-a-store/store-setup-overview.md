@@ -25,7 +25,7 @@ Global configurations for Liferay Commerce include setting the store timezone, a
 
 * [Setting Locale Options](../store-administration/locale-options.md)
 * [Adding Regions](../store-administration/adding-regions.md)
-* [Setting up Warehouses](../managing-a-catalog/managing-inventory/warehouse-reference-guide.md)
+* [Setting up Warehouses](../product-management/managing-inventory/warehouse-reference-guide.md)
 * [Creating Channels](./channels/introduction-to-channels.md)
 
 ### Create a Store Site
@@ -68,23 +68,23 @@ Liferay Commerce has several options to calculate shipping rates. Commerce Enter
 
 ## Creating the Catalog
 
-After setting up the store, begin [creating a new catalog](../managing-a-catalog/catalogs/creating-a-new-catalog.md).
+After setting up the store, begin [creating a new catalog](../product-management/catalogs/creating-a-new-catalog.md).
 
 ### Adding Products to a Catalog
 
-When adding a product, there are three product types: **Simple**, **Grouped**, and **Virtual**. See the [Introduction to Product Types](../managing-a-catalog/creating-and-managing-products/product-types/introduction-to-product-types.md) for more information.
+When adding a product, there are three product types: **Simple**, **Grouped**, and **Virtual**. See the [Introduction to Product Types](../product-management/creating-and-managing-products/product-types/introduction-to-product-types.md) for more information.
 
 #### Adding Product Information
 
 The Liferay Commerce Catalog supports storing and managing a wide variety of product information. The following articles cover some of the available options:
 
-* [Product Options](../managing-a-catalog/creating-and-managing-products/products/using-product-options.md)
-* [Product Specifications](../managing-a-catalog/creating-and-managing-products/products/specifications.md)
-* [Product Images](../managing-a-catalog/creating-and-managing-products/products/product-images.md)
-* [Product Relations](../managing-a-catalog/creating-and-managing-products/products/related-products-up-sells-and-cross-sells.md)
-* [Product Categorization](../managing-a-catalog/creating-and-managing-products/products/organizing-your-catalog-with-product-categories.md)
-* [Availability Estimates](../managing-a-catalog/managing-inventory/availability-estimates.md)
-* [Low Stock Action](../managing-a-catalog/managing-inventory/low-stock-action.md)
+* [Product Options](../product-management/creating-and-managing-products/products/using-product-options.md)
+* [Product Specifications](../product-management/creating-and-managing-products/products/specifications.md)
+* [Product Images](../product-management/creating-and-managing-products/products/product-images.md)
+* [Product Relations](../product-management/creating-and-managing-products/products/related-products-up-sells-and-cross-sells.md)
+* [Product Categorization](../product-management/creating-and-managing-products/products/organizing-your-catalog-with-product-categories.md)
+* [Availability Estimates](../product-management/managing-inventory/availability-estimates.md)
+* [Low Stock Action](../product-management/managing-inventory/low-stock-action.md)
 
 #### Product Pricing
 
@@ -96,7 +96,7 @@ There are several ways to price products and these methods are related to one an
 
 #### Managing Inventory
 
-* [Introduction to Managing Inventory](../managing-a-catalog/managing-inventory/introduction-to-managing-inventory.md)
+* [Introduction to Managing Inventory](../product-management/managing-inventory/introduction-to-managing-inventory.md)
 
 ## Creating the Storefront
 

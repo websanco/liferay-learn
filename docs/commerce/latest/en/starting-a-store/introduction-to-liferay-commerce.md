@@ -22,7 +22,7 @@ Liferay Commerce includes a wide range of tools for setting up a storefront. New
 
 ## Multi-Channel Catalog and Product Information Management
 
-Liferay Commerce contains a catalog management system that supports a variety of [product types](../managing-a-catalog/creating-and-managing-products/product-types/introduction-to-product-types.md) and stores a wide range of product data. [Product options](../managing-a-catalog/creating-and-managing-products/products/using-product-options.md), [pricing](../../pricing/introduction-to-pricing.md), [images](../managing-a-catalog/creating-and-managing-products/products/product-images.md), and [specifications](../managing-a-catalog/creating-and-managing-products/products/specifications.md) are a few examples. Products are then readily available to a distribution channel of choice.
+Liferay Commerce contains a catalog management system that supports a variety of [product types](../product-management/creating-and-managing-products/product-types/introduction-to-product-types.md) and stores a wide range of product data. [Product options](../product-management/creating-and-managing-products/products/using-product-options.md), [pricing](../../pricing/introduction-to-pricing.md), [images](../product-management/creating-and-managing-products/products/product-images.md), and [specifications](../product-management/creating-and-managing-products/products/specifications.md) are a few examples. Products are then readily available to a distribution channel of choice.
 
 ![Product catalog](./introduction-to-liferay-commerce/images/02.png)
 
@@ -30,7 +30,7 @@ Liferay Commerce contains a catalog management system that supports a variety of
 
 ![Channels enabled for a product](./introduction-to-liferay-commerce/images/03.png)
 
-[Categories](../managing-a-catalog/creating-and-managing-products/products/organizing-your-catalog-with-product-categories.md) and [Product Relationships](../managing-a-catalog/creating-and-managing-products/products/related-products-up-sells-and-cross-sells.md) simplify store navigation and increase revenue generating opportunities.
+[Categories](../product-management/creating-and-managing-products/products/organizing-your-catalog-with-product-categories.md) and [Product Relationships](../product-management/creating-and-managing-products/products/related-products-up-sells-and-cross-sells.md) simplify store navigation and increase revenue generating opportunities.
 
 ![Product details and related products](./introduction-to-liferay-commerce/images/04.png)
 

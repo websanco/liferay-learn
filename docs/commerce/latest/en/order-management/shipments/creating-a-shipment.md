@@ -27,7 +27,7 @@ To create a new shipment:
     ![Orders menu](./creating-a-shipment/images/07.png)
 
 1. Click _Submit_.
-1. Click _Edit_ next to the item to select a quantity and the sourcing [warehouse](../../managing-a-catalog/managing-inventory/warehouse-reference-guide.md).
+1. Click _Edit_ next to the item to select a quantity and the sourcing [warehouse](../../product-management/managing-inventory/warehouse-reference-guide.md).
 1. Enter the quantity in the _Quantity in Shipment_ field.
 
     ![Orders menu](./creating-a-shipment/images/08.png)
@@ -54,7 +54,7 @@ To create a shipment in previous versions of Liferay Commerce:
     ![Select an Order](./creating-a-shipment/images/02.png)
 
 1. Click _Save_.
-1. Enter the quantity from the corresponding [warehouse](../../managing-a-catalog/managing-inventory/warehouse-reference-guide.md).
+1. Enter the quantity from the corresponding [warehouse](../../product-management/managing-inventory/warehouse-reference-guide.md).
 
     ![Entering Quantity from US NE Warehouse](./creating-a-shipment/images/03.png)
 
@@ -89,8 +89,8 @@ The order manager can update the status of the shipment as needed, until the ord
 
 ## Additional Information
 
-* [Setting Up Commerce Warehouses](../../managing-a-catalog/managing-inventory/setting-up-commerce-warehouses.md)
-* [Setting Inventory by Warehouse](../../managing-a-catalog/managing-inventory/setting-inventory-by-warehouse.md)
+* [Setting Up Commerce Warehouses](../../product-management/managing-inventory/setting-up-commerce-warehouses.md)
+* [Setting Inventory by Warehouse](../../product-management/managing-inventory/setting-inventory-by-warehouse.md)
 * [Order Information](../orders/order-information.md)
 * [Processing an Order](../orders/processing-an-order.md)
-* [Warehouse Reference Guide](../../managing-a-catalog/managing-inventory/warehouse-reference-guide.md)
+* [Warehouse Reference Guide](../../product-management/managing-inventory/warehouse-reference-guide.md)

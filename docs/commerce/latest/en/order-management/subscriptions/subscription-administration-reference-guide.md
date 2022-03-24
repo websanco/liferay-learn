@@ -69,14 +69,14 @@ The _Delivery Subscription_ section tracks the following information:
 | Field | Description |
 | :--- | :--- |
 | Status | This is the workflow status of the subscription. |
-| Next Iteration Date | This is the next day the [shipment](./shipments/introduction-to-shipments.md) is sent out. |
+| Next Iteration Date | This is the next day the [shipment](../shipments/introduction-to-shipments.md) is sent out. |
 | Subscription Type | This is how the type of the subscription. |
 | Subscription Length | This refers to the length of the interval between shipments. |
 | Mode | This refers to the date on which the intervals are marked. Users can also select exact days of the month or _The Last Day of the Month_ as options.  |
 
 ### Items
 
-The _Items_ section lists all the [products](../../managing-a-catalog/creating-and-managing-products/products/products-overview.md) in the subscription.
+The _Items_ section lists all the [products](../../product-management/creating-and-managing-products/products/products-overview.md) in the subscription.
 
 ![Items](./subscription-administration-reference-guide/images/05.png)
 
@@ -89,7 +89,7 @@ The _Shipments_ tab displays the following information:
 | Field | Description |
 | :--- | :--- |
 | Create Date | This is the date the order was [created](../orders/processing-an-order.md). |
-| Shipment ID | This number is generated as the [Shipment](./shipments/introduction-to-shipments.md) ID |
+| Shipment ID | This number is generated as the [Shipment](../shipments/introduction-to-shipments.md) ID |
 | Status | This is the [Order](../orders/orders-menu-reference-guide.md)'s status. |
 | Order ID | This refers to the subscription's underlying order. |
 | Sent To | This is the account's shipping address. |
@@ -110,7 +110,7 @@ The _Payments_ tab tracks the order's payment history.
 
 ## Additional Information
 
-* [Enabling a Subscription](../../managing-a-catalog/creating-and-managing-products/products/enabling-subscriptions-for-a-product.md)
+* [Enabling a Subscription](../../product-management/creating-and-managing-products/products/enabling-subscriptions-for-a-product.md)
 * [Managing Subscriptions](./managing-subscriptions.md)
 * [Processing an Order](../orders/processing-an-order.md)
 * [Introduction to Shipments](../shipments/introduction-to-shipments.md)

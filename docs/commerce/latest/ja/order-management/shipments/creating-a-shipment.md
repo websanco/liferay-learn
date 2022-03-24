@@ -29,7 +29,7 @@
     ![注文メニュー](./creating-a-shipment/images/07.png)
 
 1. ［**送信**］をクリックします 。
-1. アイテムの横にある［**編集**］クリックして、数量とソーシング [倉庫を選択します](../../managing-a-catalog/managing-inventory/warehouse-reference-guide.md)。
+1. アイテムの横にある［**編集**］クリックして、数量とソーシング [倉庫を選択します](../../product-management/managing-inventory/warehouse-reference-guide.md)。
 1. ［**発送数量**］フィールドに数量を入力します。
 
     ![注文メニュー](./creating-a-shipment/images/08.png)
@@ -58,7 +58,7 @@ Liferay Commerceの以前のバージョンで発送を作成するには：
     ![注文を選択](./creating-a-shipment/images/02.png)
 
 1. ［**保存**］ をクリックします。
-1. 対応する [倉庫](../../managing-a-catalog/managing-inventory/warehouse-reference-guide.md)からの数量を入力します。
+1. 対応する [倉庫](../../product-management/managing-inventory/warehouse-reference-guide.md)からの数量を入力します。
 
     ![US NE倉庫から数量を入力](./creating-a-shipment/images/03.png)
 
@@ -95,8 +95,8 @@ Liferay Commerceの以前のバージョンで発送を作成するには：
 
 ## 追加情報
 
-* [Commerce倉庫のセットアップ](../../managing-a-catalog/managing-inventory/setting-up-commerce-warehouses.md)
-* [倉庫ごとの在庫設定](../../managing-a-catalog/managing-inventory/setting-inventory-by-warehouse.md)
+* [Commerce倉庫のセットアップ](../../product-management/managing-inventory/setting-up-commerce-warehouses.md)
+* [倉庫ごとの在庫設定](../../product-management/managing-inventory/setting-inventory-by-warehouse.md)
 * [注文情報](../orders/order-information.md)
 * [注文の処理](../orders/processing-an-order.md)
-* [倉庫リファレンスガイド](../../managing-a-catalog/managing-inventory/warehouse-reference-guide.md)
+* [倉庫リファレンスガイド](../../product-management/managing-inventory/warehouse-reference-guide.md)

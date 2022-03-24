@@ -11,17 +11,17 @@ Navigate to the _Global Applications_ menu &rarr; _Commerce_. Administrators can
 * [Discounts](../pricing/promoting-products/introduction-to-discounts.md)
 * Promotions
 * Product Groups
-* [Catalogs](../managing-a-catalog/catalogs/creating-a-new-catalog.md)
-* [Products](../managing-a-catalog/creating-and-managing-products/products/products-overview.md)
-* [Options](../managing-a-catalog/creating-and-managing-products/products/using-product-options.md)
+* [Catalogs](../product-management/catalogs/creating-a-new-catalog.md)
+* [Products](../product-management/creating-and-managing-products/products/products-overview.md)
+* [Options](../product-management/creating-and-managing-products/products/using-product-options.md)
 * [Orders](../order-management/orders/orders-menu-reference-guide.md)
 * [Shipments](../order-management/shipments/introduction-to-shipments.md)
-* [Bill of Materials](../managing-a-catalog/creating-and-managing-products/products/managing-boms.md)
+* [Bill of Materials](../product-management/creating-and-managing-products/products/managing-boms.md)
 * [Subscriptions](../order-management/subscriptions/managing-subscriptions.md)
 * [Currencies](../store-administration/currencies/adding-a-new-currency.md)
-* [Inventory](../managing-a-catalog/managing-inventory/introduction-to-managing-inventory.md)
-* [Warehouses](../managing-a-catalog/managing-inventory/warehouse-reference-guide.md)
-* [Availability Estimates](../managing-a-catalog/managing-inventory/availability-estimates.md)
+* [Inventory](../product-management/managing-inventory/introduction-to-managing-inventory.md)
+* [Warehouses](../product-management/managing-inventory/warehouse-reference-guide.md)
+* [Availability Estimates](../product-management/managing-inventory/availability-estimates.md)
 
 ## Liferay Commerce 2.1 and Below
 
@@ -41,11 +41,11 @@ The Commerce Global Settings menu contains the following tabs:
 
 ![Commerce Global Settings Tab](./liferay-commerce-configuration-overview/images/02.png)
 
-* [Availability Estimates](../managing-a-catalog/managing-inventory/availability-estimates.md)
+* [Availability Estimates](../product-management/managing-inventory/availability-estimates.md)
 * [Adding a New Currency](../store-administration/currencies/adding-a-new-currency.md)
 * [Measurement Units](../store-administration/configuring-shipping-methods/measurement-units.md)
 * [Regions](../store-administration/adding-regions.md)
-* [Warehouses](../managing-a-catalog/managing-inventory/warehouse-reference-guide.md)
+* [Warehouses](../product-management/managing-inventory/warehouse-reference-guide.md)
 
 ### Commerce Site Settings
 

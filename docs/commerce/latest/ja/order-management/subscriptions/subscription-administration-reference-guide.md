@@ -89,7 +89,7 @@ Payment Subscriptionセクションでは、次の情報を追跡します。
 
 ### アイテム
 
-**アイテム** セクションには、サブスクリプション内の [商品](../../managing-a-catalog/creating-and-managing-products/products/products-overview.md) がすべてリストされます。
+**アイテム** セクションには、サブスクリプション内の [商品](../../product-management/creating-and-managing-products/products/products-overview.md) がすべてリストされます。
 
 ![アイテム](./subscription-administration-reference-guide/images/05.png)
 
@@ -137,7 +137,7 @@ Payment Subscriptionセクションでは、次の情報を追跡します。
 
 ## 追加情報
 
-* [サブスクリプションを有効にする](../../managing-a-catalog/creating-and-managing-products/products/enabling-subscriptions-for-a-product.md)
+* [サブスクリプションを有効にする](../../product-management/creating-and-managing-products/products/enabling-subscriptions-for-a-product.md)
 * [サブスクリプションの管理](./managing-subscriptions.md)
 * [注文の処理](../orders/processing-an-order.md)
 * [出荷の概要](../shipments/introduction-to-shipments.md)

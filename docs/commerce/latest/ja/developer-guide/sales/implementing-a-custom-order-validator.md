@@ -50,7 +50,7 @@
     STARTED com.acme.n9b2.impl_1.0.0
     ```
 
-1. 失敗メッセージを表示して、サンプルの注文バリデーターが追加されたことを確認します。 ブラウザで`https://localhost:8080`を開き、100ドル以上の価格のアイテムが少なくとも1つあるカタログに移動します。 そのような商品がまだ存在しない場合は、自分で追加してください。詳細は、[シンプル商品の作成](../../managing-a-catalog/creating-and-managing-products/product-types/creating-a-simple-product.md)を参照してください。
+1. 失敗メッセージを表示して、サンプルの注文バリデーターが追加されたことを確認します。 ブラウザで`https://localhost:8080`を開き、100ドル以上の価格のアイテムが少なくとも1つあるカタログに移動します。 そのような商品がまだ存在しない場合は、自分で追加してください。詳細は、[シンプル商品の作成](../../product-management/creating-and-managing-products/product-types/creating-a-simple-product.md)を参照してください。
 
     カタログからこの価格の商品を見つけて、［カートへ追加］をクリックします。 数量を11以上に増やし、矢印をクリックして続行します。 表示されるエラーメッセージは、カスタム注文バリデーターがアイテムの追加を正常に拒否したことを示しています。
 
@@ -206,5 +206,5 @@ this-expensive-item-has-a-maximum-quantity-of-x=This expensive item has a maximu
 
 ## 追加情報
 
-* [シンプル商品を作成する](../../managing-a-catalog/creating-and-managing-products/product-types/creating-a-simple-product.md)
+* [シンプル商品を作成する](../../product-management/creating-and-managing-products/product-types/creating-a-simple-product.md)
 * [アプリケーションのローカライズ](https://help.liferay.com/hc/en-us/articles/360018168251-Localizing-Your-Application)

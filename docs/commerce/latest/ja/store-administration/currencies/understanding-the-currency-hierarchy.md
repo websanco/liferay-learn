@@ -2,7 +2,7 @@
 
 Liferay Commerceでは、カタログ、価格表、およびチャネルで異なる通貨を使用することができます。 各通貨は、Commerceの通貨階層の中で独自の役割を持っています。
 
-[カタログ](../../managing-a-catalog/catalogs/creating-a-new-catalog.md)の 通貨は、各商品の基本価格を決定する基本価格リストの初期通貨を設定します。 カスタム[価格表](../../pricing/creating-a-price-list.md)と代替通貨を使って、特定のチャネル、アカウント、およびアカウントグループの基本価格表を上書きすることができます。
+[カタログ](../../product-management/catalogs/creating-a-new-catalog.md)の 通貨は、各商品の基本価格を決定する基本価格リストの初期通貨を設定します。 カスタム[価格表](../../pricing/creating-a-price-list.md)と代替通貨を使って、特定のチャネル、アカウント、およびアカウントグループの基本価格表を上書きすることができます。
 
 商品が[チャネル](../../starting-a-store/channels/managing-channels.md)に追加されると [為替レートプロバイダー](./managing-exchange-rates.md)を使用してチャネルの通貨に変換されます。 変換された価格はチャネルに保存され、表示価格や注文価格に使用されます。
 

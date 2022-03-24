@@ -273,5 +273,4 @@ Congratulations! You now know the basics for implementing the `CPType` interface
 
 ## Additional Information
 
-* [Product Types](../../managing-a-catalog/creating-and-managing-products/product-types/product-types.md)
 * [Localizing Your Application](https://help.liferay.com/hc/en-us/articles/360018168251-Localizing-Your-Application)

@@ -1,6 +1,6 @@
 # Using the Product Downloads Widget
 
-Liferay Commerce includes the *Product Downloads* widget to access and download digital assets purchased as [Virtual Products](../../managing-a-catalog/creating-and-managing-products/product-types/creating-a-virtual-product.md).
+Liferay Commerce includes the *Product Downloads* widget to access and download digital assets purchased as [Virtual Products](../../product-management/creating-and-managing-products/product-types/creating-a-virtual-product.md).
 
 Follow the steps below to use the Product Downloads widget.
 

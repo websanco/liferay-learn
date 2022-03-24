@@ -118,7 +118,7 @@ Commerce 3.0では、 **注文** および **サブスクリプション** は *
 ## 追加情報
 
 * [サブスクリプション管理リファレンスガイド](./subscription-administration-reference-guide.md)
-* [商品のサブスクリプションを有効にする](../../managing-a-catalog/creating-and-managing-products/products/enabling-subscriptions-for-a-product.md)
+* [商品のサブスクリプションを有効にする](../../product-management/creating-and-managing-products/products/enabling-subscriptions-for-a-product.md)
 * [注文の処理](../orders/processing-an-order.md)
 * [注文メニューリファレンスガイド](../orders/orders-menu-reference-guide.md)
 * [発想の概要](../shipments/introduction-to-shipments.md)

@@ -38,9 +38,9 @@ Miniumのカタログには、事前定義されたいくつかのカテゴリ�
 
 ![プリセットカテゴリ](./using-the-minium-accelerator-to-jump-start-your-b2b-store/images/04.png)
 
-> カテゴリは **グローバル** スコープレベルで定義されていることに注意してください。 詳細は、[商品のカテゴリー](../managing-a-catalog/creating-and-managing-products/products/organizing-your-catalog-with-product-categories.md)を参照してください。
+> カテゴリは **グローバル** スコープレベルで定義されていることに注意してください。 詳細は、[商品のカテゴリー](../product-management/creating-and-managing-products/products/organizing-your-catalog-with-product-categories.md)を参照してください。
 
-サンプル商品には、あらかじめ設定された[オプション](../managing-a-catalog/creating-and-managing-products/products/using-product-options.md) 、[仕様](../managing-a-catalog/creating-and-managing-products/products/specifications.md) 、および画像も付属しています。
+サンプル商品には、あらかじめ設定された[オプション](../product-management/creating-and-managing-products/products/using-product-options.md) 、[仕様](../product-management/creating-and-managing-products/products/specifications.md) 、および画像も付属しています。
 
 ![商品仕様](./using-the-minium-accelerator-to-jump-start-your-b2b-store/images/05.png)
 
@@ -62,7 +62,7 @@ Miniumは、初期状態では設定されていない、空サイト用のそ�
 
 | 機能                                                                                                                    | 詳細                       |
 | :--- | :--- |
-| [倉庫](../managing-a-catalog/managing-inventory/setting-up-commerce-warehouses.md)                                      | イタリア、米国北東部、米国南西部         |
+| [倉庫](../product-management/managing-inventory/setting-up-commerce-warehouses.md)                                      | イタリア、米国北東部、米国南西部         |
 | [サイトの種類](../starting-a-store/sites-and-site-types.md)                                                                 | B2B                      |
 | [配送方法のオプション](../store-administration/configuring-shipping-methods/using-the-flat-rate-shipping-method.md)             | 標準配送、速達配送                |
 | チャネル                                                                                                                  | ミニポータル                   |
@@ -72,5 +72,5 @@ Miniumは、初期状態では設定されていない、空サイト用のそ�
 | [測定単位](../store-administration/configuring-shipping-methods/measurement-units.md) - 寸法                                | インチ、ミリメートル、フィート、メートル     |
 | [測定単位](../store-administration/configuring-shipping-methods/measurement-units.md) - 重量                                | オンス、ポンド、キログラム、グラム        |
 | [アカウントロール](../users-and-accounts/account-management/account-roles.md)                                                 | 購入者、アカウントマネージャー、販売代理店    |
-| [入荷見積り](../managing-a-catalog/managing-inventory/availability-estimates.md)                                           | 3～5日、5～7日、7～14日          |
-| [商品関係タイプ](../managing-a-catalog/creating-and-managing-products/products/related-products-up-sells-and-cross-sells.md) | アップセル、スペア、関連、アクセサリ、クロスセル |
+| [入荷見積り](../product-management/managing-inventory/availability-estimates.md)                                           | 3～5日、5～7日、7～14日          |
+| [商品関係タイプ](../product-management/creating-and-managing-products/products/related-products-up-sells-and-cross-sells.md) | アップセル、スペア、関連、アクセサリ、クロスセル |

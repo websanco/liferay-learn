@@ -2,7 +2,7 @@
 
 購入者は、任意の商品を配送するための定額配送オプションを選択できます。 複数の定額オプションを作成することにより、顧客に費用、速さ、またはセキュリティの選択肢を提供できます。
 
-定額配送では、カタログ内のすべての商品に同じ費用がかかります。 ただし、商品の[［設定］](../../managing-a-catalog/managing-inventory/product-inventory-configuration-reference.md)タブの ［**配送追加費用**］ フィールドから個々の商品について例外を作成できます。
+定額配送では、カタログ内のすべての商品に同じ費用がかかります。 ただし、商品の[［設定］](../../product-management/managing-inventory/product-inventory-configuration-reference.md)タブの ［**配送追加費用**］ フィールドから個々の商品について例外を作成できます。
 
 デフォルトでは、定額配送方法が有効になっています。
 

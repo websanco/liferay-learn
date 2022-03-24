@@ -11,17 +11,17 @@ Liferay Commerce 3.0の設定は、 ［**グローバルアプリケーション
 * [割引](../promoting-products/introduction-to-discounts.md)
 * プロモーション
 * 商品グループ
-* [カタログ](../managing-a-catalog/catalogs/creating-a-new-catalog.md)
-* [商品](../managing-a-catalog/creating-and-managing-products/products/products-overview.md)
-* [オプション](../managing-a-catalog/creating-and-managing-products/products/using-product-options.md)
+* [カタログ](../product-management/catalogs/creating-a-new-catalog.md)
+* [商品](../product-management/creating-and-managing-products/products/products-overview.md)
+* [オプション](../product-management/creating-and-managing-products/products/using-product-options.md)
 * [注文](../order-management/orders/orders-menu-reference-guide.md)
 * [出荷](../order-management/shipments/introduction-to-shipments.md)
-* [素材リスト](../managing-a-catalog/creating-and-managing-products/products/managing-boms.md)
+* [素材リスト](../product-management/creating-and-managing-products/products/managing-boms.md)
 * [サブスクリプション](../order-management/subscriptions/managing-subscriptions.md)
 * [通貨](../store-administration/currencies/adding-a-new-currency.md)
-* [在庫](../managing-a-catalog/managing-inventory/introduction-to-managing-inventory.md)
-* [倉庫](../managing-a-catalog/managing-inventory/warehouse-reference-guide.md)
-* [在庫数の見積もり](../managing-a-catalog/managing-inventory/availability-estimates.md)
+* [在庫](../product-management/managing-inventory/introduction-to-managing-inventory.md)
+* [倉庫](../product-management/managing-inventory/warehouse-reference-guide.md)
+* [在庫数の見積もり](../product-management/managing-inventory/availability-estimates.md)
 
 <a name="liferay-commerce-21-and-below" />
 
@@ -43,11 +43,11 @@ Liferay Commerce 2.1の設定は、Liferay ［**商品メニュー**］ のい�
 
 ![Commerceのグローバル設定タブ](./liferay-commerce-configuration-overview/images/02.png)
 
-* [在庫数の見積もり](../managing-a-catalog/managing-inventory/availability-estimates.md)
+* [在庫数の見積もり](../product-management/managing-inventory/availability-estimates.md)
 * [新しい通貨を追加する為替レート](../store-administration/currencies/adding-a-new-currency.md)
 * [計量単位](../store-administration/configuring-shipping-methods/measurement-units.md)
 * [地域](../store-administration/adding-regions.md)
-* [倉庫](../managing-a-catalog/managing-inventory/warehouse-reference-guide.md)
+* [倉庫](../product-management/managing-inventory/warehouse-reference-guide.md)
 
 ### Commerceのサイト設定
 

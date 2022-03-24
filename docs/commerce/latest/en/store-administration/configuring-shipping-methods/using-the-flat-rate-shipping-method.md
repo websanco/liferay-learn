@@ -2,7 +2,7 @@
 
 Buyers can choose a flat rate shipping option to ship any product. By creating multiple flat rate options, you can give customers choices of cost, speed, or security.
 
-Flat rate shipping imposes the same cost on every product in the catalog. You can create exceptions, however, for individual products from the _Shipping Extra Price_ field in the product’s [Configuration](../../managing-a-catalog/managing-inventory/product-inventory-configuration-reference.md) tab.
+Flat rate shipping imposes the same cost on every product in the catalog. You can create exceptions, however, for individual products from the _Shipping Extra Price_ field in the product’s [Configuration](../../product-management/managing-inventory/product-inventory-configuration-reference.md) tab.
 
 By default, the Flat Rate shipping method is enabled.
 

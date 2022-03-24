@@ -162,4 +162,4 @@ Congratulations! You now know the basics for implementing the `CPDataSource` int
 ## Additional Information
 
 * [Localizing Your Application](https://help.liferay.com/hc/en-us/articles/360018168251-Localizing-Your-Application)
-* [Related Products, Up-Sells, and Cross-Sells](../../managing-a-catalog/creating-and-managing-products/products/related-products-up-sells-and-cross-sells.md)
+* [Related Products, Up-Sells, and Cross-Sells](../../product-management/creating-and-managing-products/products/related-products-up-sells-and-cross-sells.md)

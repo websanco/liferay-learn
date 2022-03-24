@@ -8,7 +8,7 @@
 * 一定期間プロモーションをスケジュールする
 
 ```tip::
-   割引は*価格表*とは異なります。 価格設定の詳細は、`Introduction to Pricing <../managing-a-catalog/managing-prices/introduction-to-pricing.md>`_, `Creating a Price List <../managing-a-catalog/managing-prices/creating-a-price-list.md>`_, and `Using Price Tiers <../managing-a-catalog/managing-prices/using-price-tiers.md>`_ を参照してください。
+   割引は*価格表*とは異なります。 価格設定の詳細は、`Introduction to Pricing <../product-management/managing-prices/introduction-to-pricing.md>`_, `Creating a Price List <../product-management/managing-prices/creating-a-price-list.md>`_, and `Using Price Tiers <../product-management/managing-prices/using-price-tiers.md>`_ を参照してください。
 ```
 
 ```note::
@@ -23,7 +23,7 @@
 
 | 割引タイプ  | 説明                                                                                                                                                    |
 | :--- | :--- |
-| カテゴリ   | 割引は、特定の [カテゴリ](../managing-a-catalog/creating-and-managing-products/products/organizing-your-catalog-with-product-categories.md)タグ付けされたすべての商品に適用されます。 |
+| カテゴリ   | 割引は、特定の [カテゴリ](../product-management/creating-and-managing-products/products/organizing-your-catalog-with-product-categories.md)タグ付けされたすべての商品に適用されます。 |
 | 商品     | 割引は、特定の商品または商品のリストに適用されます。                                                                                                                            |
 | 配送     | 割引は、パーセントまたは定額のいずれかで、運賃に適用されます。                                                                                                                       |
 | 小計     | 注文の小計は、通常は税金やその他の手数料が適用される前に減額されます。                                                                                                                   |

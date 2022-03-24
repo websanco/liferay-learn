@@ -60,5 +60,5 @@ Liferay Commerceでは、グローバルメニュー（![Global Menu](../../imag
 
 ## 追加情報
 
-* [在庫数の見積もり](../../managing-a-catalog/managing-inventory/availability-estimates.md)
+* [在庫数の見積もり](../../product-management/managing-inventory/availability-estimates.md)
 * [測定単位](../../store-administration/configuring-shipping-methods/measurement-units.md)

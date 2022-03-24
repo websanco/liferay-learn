@@ -108,7 +108,7 @@ Once the order has been accepted, it appears on the [Subscriptions menu](./subsc
 ## Additional Information
 
 * [Subscription Management Reference Guide](./subscription-administration-reference-guide.md)
-* [Enabling Subscriptions for a Product](../../managing-a-catalog/creating-and-managing-products/products/enabling-subscriptions-for-a-product.md)
+* [Enabling Subscriptions for a Product](../../product-management/creating-and-managing-products/products/enabling-subscriptions-for-a-product.md)
 * [Processing an Order](../orders/processing-an-order.md)
 * [Orders Menu Reference Guide](../orders/orders-menu-reference-guide.md)
 * [Introduction to Shipments](../shipments/introduction-to-shipments.md)

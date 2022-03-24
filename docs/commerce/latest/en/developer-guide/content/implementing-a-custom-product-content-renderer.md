@@ -2,7 +2,7 @@
 
 This tutorial will show you how to add a custom product content renderer by implementing the [CPContentRenderer](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-product-content-api/src/main/java/com/liferay/commerce/product/content/render/CPContentRenderer.java) interface.
 
-A product content renderer provides a style of displaying product details for a specific [product type](../../managing-a-catalog/creating-and-managing-products/product-types/introduction-to-product-types.md), in a variety of widgets that can display products. Liferay Commerce provides product content renderers for each out-of-the-box product type, such as [SimpleCPContentRenderer](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-product-type-simple/src/main/java/com/liferay/commerce/product/type/simple/internal/SimpleCPContentRenderer.java) for Simple products.
+A product content renderer provides a style of displaying product details for a specific product type, in a variety of widgets that can display products. Liferay Commerce provides product content renderers for each out-of-the-box product type, such as [SimpleCPContentRenderer](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-product-type-simple/src/main/java/com/liferay/commerce/product/type/simple/internal/SimpleCPContentRenderer.java) for Simple products.
 
 ![Out-of-the-box product content renderers](./implementing-a-custom-product-content-renderer/images/01.png "Out-of-the-box product content renderers")
 
@@ -198,5 +198,4 @@ Congratulations! You now know the basics for implementing the `CPContentRenderer
 
 ## Additional Information
 
-* [Product Types](../../managing-a-catalog/creating-and-managing-products/product-types/product-types.md)
 * [Localizing Your Application](https://help.liferay.com/hc/en-us/articles/360018168251-Localizing-Your-Application)

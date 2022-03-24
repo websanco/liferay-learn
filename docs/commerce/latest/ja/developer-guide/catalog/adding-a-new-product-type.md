@@ -283,5 +283,5 @@ c1n4-screen-navigation-entry=C1N4 Screen Navigation Entry
 
 ## 追加情報
 
-  - [商品タイプ](../../managing-a-catalog/creating-and-managing-products/product-types/product-types.md)
+  - [商品タイプ](../../product-management/creating-and-managing-products/product-types/product-types.md)
   - [アプリケーションのローカライズ](https://help.liferay.com/hc/en-us/articles/360018168251-Localizing-Your-Application)

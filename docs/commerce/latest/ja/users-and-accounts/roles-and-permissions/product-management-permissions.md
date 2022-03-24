@@ -142,6 +142,6 @@ Liferay DXP 7.3以前では、*コマース商品仕様オプションの追加*
 
 ## 追加情報
 
-* [商品の概要](../../managing-a-catalog/creating-and-managing-products/products/products-overview.md)
-* [新しいカタログを作成する](../../managing-a-catalog/catalogs/creating-a-new-catalog.md)
-* [商品オプションの使用](../../managing-a-catalog/creating-and-managing-products/products/using-product-options.md)
+* [商品の概要](../../product-management/creating-and-managing-products/products/products-overview.md)
+* [新しいカタログを作成する](../../product-management/catalogs/creating-a-new-catalog.md)
+* [商品オプションの使用](../../product-management/creating-and-managing-products/products/using-product-options.md)

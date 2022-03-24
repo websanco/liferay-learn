@@ -161,5 +161,5 @@
 
 * [割引について](./introduction-to-discounts.md)
 * [新規アカウントグループの作成](../users-and-accounts/account-management/creating-a-new-account-group.md)
-* [価格表の作成](../managing-a-catalog/managing-prices/creating-a-price-list.md)
-* [価格レートを使う](../managing-a-catalog/managing-prices/using-price-tiers.md)
+* [価格表の作成](../product-management/managing-prices/creating-a-price-list.md)
+* [価格レートを使う](../product-management/managing-prices/using-price-tiers.md)

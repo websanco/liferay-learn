@@ -31,7 +31,7 @@ Liferay Commerceのグローバル設定には、ストアのタイムゾーン�
 
 * [ロケールオプションの設定](../store-administration/locale-options.md)
 * [リージョンの追加](../store-administration/adding-regions.md)
-* [倉庫の設定](../managing-a-catalog/managing-inventory/warehouse-reference-guide.md)
+* [倉庫の設定](../product-management/managing-inventory/warehouse-reference-guide.md)
 * [チャネルの作成](./channels/introduction-to-channels.md)
 
 ### ストアサイトを作成する
@@ -76,23 +76,23 @@ Liferay Commerceには、送料を計算するためのいくつかのオプシ�
 
 ## カタログの作成
 
-ストアをセットアップした後、[新しいカタログの作成](../managing-a-catalog/catalogs/creating-a-new-catalog.md) を開始します。
+ストアをセットアップした後、[新しいカタログの作成](../product-management/catalogs/creating-a-new-catalog.md) を開始します。
 
 ### カタログに商品を追加する
 
-商品を追加するときは、 **シンプル** 、 **グループ** 、 **仮想** の3つの商品タイプがあります。 詳細は、[Introduction to Product Types](../managing-a-catalog/creating-and-managing-products/product-types/introduction-to-product-types.md)を参照してください。
+商品を追加するときは、 **シンプル** 、 **グループ** 、 **仮想** の3つの商品タイプがあります。 詳細は、[Introduction to Product Types](../product-management/creating-and-managing-products/product-types/introduction-to-product-types.md)を参照してください。
 
 #### 商品情報の追加
 
 Liferay Commerceカタログは、さまざまな商品情報の保存と管理をサポートしています。 次の記事では、利用可能なオプションの一部を説明しています。
 
-* [商品オプション](../managing-a-catalog/creating-and-managing-products/products/using-product-options.md)
-* [商品仕様](../managing-a-catalog/creating-and-managing-products/products/specifications.md)
-* [商品画像](../managing-a-catalog/creating-and-managing-products/products/product-images.md)
-* [商品関連](../managing-a-catalog/creating-and-managing-products/products/related-products-up-sells-and-cross-sells.md)
-* [商品の分類](../managing-a-catalog/creating-and-managing-products/products/organizing-your-catalog-with-product-categories.md)
-* [在庫数の見積もり](../managing-a-catalog/managing-inventory/availability-estimates.md)
-* [在庫数低下時のアクション](../managing-a-catalog/managing-inventory/low-stock-action.md)
+* [商品オプション](../product-management/creating-and-managing-products/products/using-product-options.md)
+* [商品仕様](../product-management/creating-and-managing-products/products/specifications.md)
+* [商品画像](../product-management/creating-and-managing-products/products/product-images.md)
+* [商品関連](../product-management/creating-and-managing-products/products/related-products-up-sells-and-cross-sells.md)
+* [商品の分類](../product-management/creating-and-managing-products/products/organizing-your-catalog-with-product-categories.md)
+* [在庫数の見積もり](../product-management/managing-inventory/availability-estimates.md)
+* [在庫数低下時のアクション](../product-management/managing-inventory/low-stock-action.md)
 
 #### 商品価格
 
@@ -104,7 +104,7 @@ Liferay Commerceカタログは、さまざまな商品情報の保存と管理�
 
 #### 在庫管理
 
-* [在庫管理の概要](../managing-a-catalog/managing-inventory/introduction-to-managing-inventory.md)
+* [在庫管理の概要](../product-management/managing-inventory/introduction-to-managing-inventory.md)
 
 <a name="creating-the-storefront" />
 

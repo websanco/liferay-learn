@@ -136,6 +136,6 @@ In Liferay DXP 7.3 and earlier, the *Add Commerce Product Specification Option* 
 
 ## Additional Information
 
-* [Products Overview](../../managing-a-catalog/creating-and-managing-products/products/products-overview.md)
-* [Creating a New Catalog](../../managing-a-catalog/catalogs/creating-a-new-catalog.md)
-* [Using Product Options](../../managing-a-catalog/creating-and-managing-products/products/using-product-options.md)
+* [Products Overview](../../product-management/creating-and-managing-products/products/products-overview.md)
+* [Creating a New Catalog](../../product-management/catalogs/creating-a-new-catalog.md)
+* [Using Product Options](../../product-management/creating-and-managing-products/products/using-product-options.md)

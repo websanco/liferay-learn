@@ -3,10 +3,10 @@
 ```{toctree}
 :maxdepth: 3
 
-managing-a-catalog/catalogs.md
-managing-a-catalog/creating-and-managing-products.md
-managing-a-catalog/managing-inventory.md
-managing-a-catalog/managing-prices.md
+product-management/catalogs.md
+product-management/creating-and-managing-products.md
+product-management/managing-inventory.md
+product-management/managing-prices.md
 ```
 
 ```{raw} html
@@ -14,4 +14,4 @@ managing-a-catalog/managing-prices.md
 ```
 
 ```{raw} html
-:file: managing-a-catalog/landing.html
+:file: product-management/landing.html

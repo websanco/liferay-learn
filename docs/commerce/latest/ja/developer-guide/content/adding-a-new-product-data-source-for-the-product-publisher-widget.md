@@ -172,4 +172,4 @@ products-ending-in-the-same-word=Products Ending in the Same Word
 ## 追加情報
 
 * [アプリケーションのローカライズ](https://help.liferay.com/hc/en-us/articles/360018168251-Localizing-Your-Application)
-* [関連商品、アップセル、クロスセル](../../managing-a-catalog/creating-and-managing-products/products/related-products-up-sells-and-cross-sells.md)
+* [関連商品、アップセル、クロスセル](../../product-management/creating-and-managing-products/products/related-products-up-sells-and-cross-sells.md)
