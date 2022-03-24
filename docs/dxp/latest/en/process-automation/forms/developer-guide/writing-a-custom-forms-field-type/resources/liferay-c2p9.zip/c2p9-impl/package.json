@@ -1,5 +1,6 @@
 {
-	"dependencies": {},
+	"dependencies": {
+	},
 	"devDependencies": {
 		"@babel/cli": "^7.2.3",
 		"@liferay/portal-7.4": "*"
