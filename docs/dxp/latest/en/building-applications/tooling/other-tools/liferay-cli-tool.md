@@ -16,7 +16,7 @@ npm install -g @liferay/cli
 
 ## Generating a Project
 
-The Liferay CLI tool creates projects with a different architecture from the Yeoman generators. This allows you to run additional commands within your project using the Liferay CLI tool.
+The Liferay CLI tool creates projects with a specific folder structure meant for Liferay DXP 7.4+ projects. When you run other commands with the tool within these projects, it recognizes this folder structure (and the contents of the project's `package.json` file) and determines that the project is valid for these commands.
 
 Use the `liferay new` command to create a new [Remote App](../remote-apps/creating-a-liferay-remote-app.md) or Liferay Platform project:
 
@@ -30,19 +30,21 @@ Use the `liferay new` command to create a new [Remote App](../remote-apps/creati
 
 1. Choose whether to create a Remote App project or a Liferay Platform project.
 
-<!-- What is the difference between a Remote App project and a Platform project? -Rich -->
-
    ![Use the arrow keys and press Enter to select a Remote App or Liferay Platform project.](./liferay-cli-tool/images/01.png)
+
+   ```{note}
+   [Remote App projects](../remote-apps/creating-a-liferay-remote-app.md) are hosted on a remote server that your Liferay DXP instance can access to use as an application. Liferay Platform projects are applications that you can deploy as an application on its own.
+   ```
 
 1. Enter a human readable description of the new project at the prompt. The default value is "New Project".
 
-1. Choose the target platform for the project. You can select a Liferay Portal or Liferay DXP target platform for versions 7.1+, or you can select an option to use Liferay Portal CE but not sharing the platform's packages.
-
-<!-- What does it mean not to share the platform's packages, and how is this different from selecting a Liferay Portal target platform? -Rich -->
+1. Choose the target platform for the project. The target platform you choose determines the project's default dependencies and the rules used to build the project (for example, whether your project should have access to all of the target platform's available JavaScript API).
 
 1. Choose the type of project to create from the given options in the prompt.
 
     ![Use the arrow keys and press Enter to select the type of project to create.](./liferay-cli-tool/images/02.png)
+
+    You can select a Liferay Portal or Liferay DXP target platform for versions 7.1+. You can also select "Liferay Portal CE (not sharing platform's packages)", which defines a `@lifray/portal-agnostic` target in the project's `package.json` file (so your project will not include any additional packages bundled with Liferay Portal, and the only required dependencies are build and bundle tools).
 
     ```{note}
     If you chose to create a Remote App project, you can only choose the React type.
