@@ -16,7 +16,7 @@ The _Details_ section is where the channel's name, currency, and [Commerce Site 
 
 ### Orders
 
-Users can enable a workflow for [buyers and sellers](../../../orders-and-fulfillment/order-workflows/introduction-to-order-workflows.md). Users can also enable or disable Guest Checkout and whether the Purchase Order Number is displayed (where applicable).
+Users can enable a workflow for [buyers and sellers](../../../order-management/order-workflows/introduction-to-order-workflows.md). Users can also enable or disable Guest Checkout and whether the Purchase Order Number is displayed (where applicable).
 
 ![The Orders tab is where the Workflow is enabled.](./channels-reference-guide/images/02.png)
 
@@ -110,4 +110,4 @@ Users can manage their Punch Out procurement systems from here. Purchasing the a
 ## Additional Information
 
 * [Configuring Product Visibility Using Channels](./configuring-product-visibility-using-channels.md)
-* [Enabling or Disabling Order Workflows](../../../orders-and-fulfillment/order-workflows/enabling-or-disabling-order-workflows.md)
+* [Enabling or Disabling Order Workflows](../../../order-management/order-workflows/enabling-or-disabling-order-workflows.md)

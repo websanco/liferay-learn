@@ -83,5 +83,5 @@ In Liferay DXP 7.3 and earlier, Manage All Accounts and Manage Order Prices were
 
 ## Additional Information
 
-* [Processing an Order](../../orders-and-fulfillment/orders/processing-an-order.md)
-* [Shipments Management Reference Guide](../../orders-and-fulfillment/shipments/shipments-management-reference-guide.md)
+* [Processing an Order](../../order-management/orders/processing-an-order.md)
+* [Shipments Management Reference Guide](../../order-management/shipments/shipments-management-reference-guide.md)

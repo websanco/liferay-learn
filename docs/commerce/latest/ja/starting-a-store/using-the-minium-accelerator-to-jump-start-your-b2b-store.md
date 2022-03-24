@@ -2,7 +2,7 @@
 
 MiniumはLiferay Commerceの[アクセラレータ](./accelerators.md)であり、メーカーのニーズを満たすように設計された企業間取引（B2B）ストアを迅速かつ簡単にセットアップし、最新のB2Bデジタルコマースエクスペリエンスを提示します。 機能的でエレガントな要素を持つことで、可能な限りスムーズなエクスペリエンスを実現する機能を使用して設計されています。
 
-アクセラレータは、サイトページとサイトのデザイン、サンプルデータ、およびサイト構成の基本階層を1回の操作で提供することによって、これを実現します。 また、Miniumは、Liferay CommerceのB2Bアカウント管理機能を強調し、[アカウントロール](../users-and-accounts/account-management/account-roles.md)、[アカウントグループ](../users-and-accounts/account-management/creating-a-new-account-group.md)、および[注文ワークフロー](../orders-and-fulfillment/order-workflows/introduction-to-order-workflows.md)を使用して、合理化されたアカウント管理とセルフサービスを可能にします。
+アクセラレータは、サイトページとサイトのデザイン、サンプルデータ、およびサイト構成の基本階層を1回の操作で提供することによって、これを実現します。 また、Miniumは、Liferay CommerceのB2Bアカウント管理機能を強調し、[アカウントロール](../users-and-accounts/account-management/account-roles.md)、[アカウントグループ](../users-and-accounts/account-management/creating-a-new-account-group.md)、および[注文ワークフロー](../order-management/order-workflows/introduction-to-order-workflows.md)を使用して、合理化されたアカウント管理とセルフサービスを可能にします。
 
 この記事では、Minium Acceleratorの主な機能について説明します。
 

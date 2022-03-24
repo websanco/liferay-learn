@@ -52,8 +52,8 @@ Liferay Commerceでは、在庫管理は商品SKUごとに行われます。 詳
 
 ## 追加情報
 
-* [新規出荷の作成](../../orders-and-fulfillment/shipments/creating-a-shipment.md)
+* [新規出荷の作成](../../order-management/shipments/creating-a-shipment.md)
 * [在庫管理リファレンスガイド](./inventory-management-reference-guide.md)
 * [商品の在庫設定のリファレンス](./product-inventory-configuration-reference.md)
-* [注文ライフサイクル](../../orders-and-fulfillment/orders/order-life-cycle.md)
+* [注文ライフサイクル](../../order-management/orders/order-life-cycle.md)
 * [在庫管理システムの活用](./using-the-inventory-management-system.md)

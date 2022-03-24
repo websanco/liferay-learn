@@ -12,7 +12,7 @@
    creating_store_content
    promoting-products.md
    account_management
-   orders-and-fulfillment.md
+   order-management.md
    store-administration.md
    developer-guide.md
    get-help.md

@@ -14,10 +14,10 @@ Liferay Commerce 3.0の設定は、 ［**グローバルアプリケーション
 * [カタログ](../managing-a-catalog/catalogs/creating-a-new-catalog.md)
 * [商品](../managing-a-catalog/creating-and-managing-products/products/products-overview.md)
 * [オプション](../managing-a-catalog/creating-and-managing-products/products/using-product-options.md)
-* [注文](../orders-and-fulfillment/orders/orders-menu-reference-guide.md)
-* [出荷](../orders-and-fulfillment/shipments/introduction-to-shipments.md)
+* [注文](../order-management/orders/orders-menu-reference-guide.md)
+* [出荷](../order-management/shipments/introduction-to-shipments.md)
 * [素材リスト](../managing-a-catalog/creating-and-managing-products/products/managing-boms.md)
-* [サブスクリプション](../orders-and-fulfillment/subscriptions/managing-subscriptions.md)
+* [サブスクリプション](../order-management/subscriptions/managing-subscriptions.md)
 * [通貨](../store-administration/currencies/adding-a-new-currency.md)
 * [在庫](../managing-a-catalog/managing-inventory/introduction-to-managing-inventory.md)
 * [倉庫](../managing-a-catalog/managing-inventory/warehouse-reference-guide.md)
@@ -37,7 +37,7 @@ Liferay Commerce 2.1の設定は、Liferay ［**商品メニュー**］ のい�
 
 * [チャネル](../starting-a-store/channels/managing-channels.md)
 * [価格表](../managing-a-catalog/managing-prices/creating-a-price-list.md)
-* [注文](../orders-and-fulfillment/orders/orders-menu-reference-guide.md)
+* [注文](../order-management/orders/orders-menu-reference-guide.md)
 
 ［コマース Global Settings］メニューには、次のタブが含まれています。
 
@@ -62,7 +62,7 @@ Liferay Commerce 2.1の設定は、Liferay ［**商品メニュー**］ のい�
 ここには、以下のサイト設定があります。
 
 * [お知らせ](./sending-emails/using-notification-templates.md)
-* [注文ワークフローの概要](../orders-and-fulfillment/order-workflows/introduction-to-order-workflows.md)
+* [注文ワークフローの概要](../order-management/order-workflows/introduction-to-order-workflows.md)
 * [支払方法](../store-administration/configuring-payment-methods/payments.md)
 * 商品表示ページ
 * [配送方法](../store-administration/configuring-shipping-methods/shipping-method-reference.md)

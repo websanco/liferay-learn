@@ -71,5 +71,5 @@ Liferay Commerceでは、［[ Simple ](../product-types/creating-a-simple-produc
 
 ## 追加情報
 
-* [サブスクリプションの管理](../../../orders-and-fulfillment/subscriptions/managing-subscriptions.md)
-* [サブスクリプション管理リファレンスガイド](../../../orders-and-fulfillment/subscriptions/subscription-administration-reference-guide.md)
+* [サブスクリプションの管理](../../../order-management/subscriptions/managing-subscriptions.md)
+* [サブスクリプション管理リファレンスガイド](../../../order-management/subscriptions/subscription-administration-reference-guide.md)

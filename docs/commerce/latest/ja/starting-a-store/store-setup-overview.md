@@ -133,7 +133,7 @@ Liferay Commerceでストアを構築するには、完全なカタログが1つ
 
 注文が受信されると、注文はERPに送信され、オプションでCRMに送信されます。 要求された商品が出荷可能になると、ストアの在庫スペシャリストが出荷を追跡できます。 注文のライフサイクルと出荷プロセスについては、次の記事を参照してください。
 
-* [注文ライフサイクル](../orders-and-fulfillment/orders/order-life-cycle.md)
-* [発送の概要](../orders-and-fulfillment/shipments/introduction-to-shipments.md)
-* [発送の作成](../orders-and-fulfillment/shipments/creating-a-shipment.md)
-* [発送のキャンセル](../orders-and-fulfillment/shipments/cancelling-a-shipment.md)
+* [注文ライフサイクル](../order-management/orders/order-life-cycle.md)
+* [発送の概要](../order-management/shipments/introduction-to-shipments.md)
+* [発送の作成](../order-management/shipments/creating-a-shipment.md)
+* [発送のキャンセル](../order-management/shipments/cancelling-a-shipment.md)

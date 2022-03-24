@@ -89,5 +89,5 @@ Liferay DXP 7.3 以前のバージョンでは、すべてのアカウントの�
 
 ## 追加情報
 
-* [注文の処理](../../orders-and-fulfillment/orders/processing-an-order.md)
-* [発送管理リファレンスガイド](../../orders-and-fulfillment/shipments/shipments-management-reference-guide.md)
+* [注文の処理](../../order-management/orders/processing-an-order.md)
+* [発送管理リファレンスガイド](../../order-management/shipments/shipments-management-reference-guide.md)

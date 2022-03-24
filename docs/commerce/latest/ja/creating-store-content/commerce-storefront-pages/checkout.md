@@ -42,7 +42,7 @@
 
 ![注文確定のステップ](./checkout/images/06.png)
 
-注文が確定されると、販売者は注文を処理できる状態になります。 詳細は、[注文ライフサイクル](../../orders-and-fulfillment/orders/order-life-cycle.md)を参照してください。
+注文が確定されると、販売者は注文を処理できる状態になります。 詳細は、[注文ライフサイクル](../../order-management/orders/order-life-cycle.md)を参照してください。
 
 <a name="additional-information" />
 

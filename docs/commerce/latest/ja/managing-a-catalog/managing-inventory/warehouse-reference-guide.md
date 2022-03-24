@@ -63,6 +63,6 @@
 
 ## 追加情報
 
-* [発送の概要](../../orders-and-fulfillment/shipments/introduction-to-shipments.md)
+* [発送の概要](../../order-management/shipments/introduction-to-shipments.md)
 * [Commerce倉庫のセットアップ](./setting-up-commerce-warehouses.md)
 * [倉庫ごとの在庫設定](./setting-inventory-by-warehouse.md)

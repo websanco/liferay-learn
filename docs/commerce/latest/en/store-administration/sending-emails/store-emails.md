@@ -57,7 +57,7 @@ See the [Notification Template Variables Reference Guide](./notification-templat
 
 ## Viewing Order Communications History
 
-Email notifications related to an order are tracked and can be reviewed in the *Emails* tab when viewing an order. Navigate to the _Control Panel_ &rarr; _Commerce_ &rarr; _Orders_. Click on an Order ID then the _Email_ tab. See [Orders Information](../../orders-and-fulfillment/orders/order-information.md) to learn more.
+Email notifications related to an order are tracked and can be reviewed in the *Emails* tab when viewing an order. Navigate to the _Control Panel_ &rarr; _Commerce_ &rarr; _Orders_. Click on an Order ID then the _Email_ tab. See [Orders Information](../../order-management/orders/order-information.md) to learn more.
 
 ![Message Logs are in the Orders information.](./store-emails/images/04.png)
 

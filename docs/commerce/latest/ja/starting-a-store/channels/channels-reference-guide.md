@@ -18,7 +18,7 @@
 
 ### ［注文］
 
-ユーザーは、買い手 [と売り手](../../../orders-and-fulfillment/order-workflows/introduction-to-order-workflows.md)ワークフローを有効にできます。 ユーザーは、ゲストチェックアウトを有効または無効にしたり、注文番号が表示されるかどうか（該当する場合）もできます。
+ユーザーは、買い手 [と売り手](../../../order-management/order-workflows/introduction-to-order-workflows.md)ワークフローを有効にできます。 ユーザーは、ゲストチェックアウトを有効または無効にしたり、注文番号が表示されるかどうか（該当する場合）もできます。
 
 ![［注文］タブでは、ワークフローが有効になります。](./channels-reference-guide/images/02.png)
 
@@ -147,4 +147,4 @@ Users can manage their Punch Out procurement systems from here. Purchasing the a
 ## 追加情報
 
 * [チャネルを使用した商品の可視性の構成](./configuring-product-visibility-using-channels.md)
-* [注文ワークフローの有効化または無効化](../../../orders-and-fulfillment/order-workflows/enabling-or-disabling-order-workflows.md)
+* [注文ワークフローの有効化または無効化](../../../order-management/order-workflows/enabling-or-disabling-order-workflows.md)

@@ -144,4 +144,4 @@
 * [配送方法の制限の適用](./applying-shipping-method-restrictions.md)
 * [計量単位](./measurement-units.md)
 * [配送方法リファレンス](./shipping-method-reference.md)
-* [新規出荷の作成](../../orders-and-fulfillment/shipments/creating-a-shipment.md)
+* [新規出荷の作成](../../order-management/shipments/creating-a-shipment.md)

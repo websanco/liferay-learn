@@ -14,7 +14,7 @@
 
 ![保留中の注文の確認](./pending-orders/images/04.png)
 
-[注文ワークフロー](../../orders-and-fulfillment/order-workflows/introduction-to-order-workflows.md)が有効になっている場合、上記の手順は若干異なる場合があります。
+[注文ワークフロー](../../order-management/order-workflows/introduction-to-order-workflows.md)が有効になっている場合、上記の手順は若干異なる場合があります。
 
 <a name="additional-information" />
 
@@ -22,4 +22,4 @@
 
 * [Widget Reference Guide](../liferay-commerce-widgets/widget-reference.md)
 * [Creating Pages](https://help.liferay.com/hc/en-us/articles/360018171291-Creating-Pages)
-* [Order Workflows](../../orders-and-fulfillment/order-workflows/introduction-to-order-workflows.md)
+* [Order Workflows](../../order-management/order-workflows/introduction-to-order-workflows.md)

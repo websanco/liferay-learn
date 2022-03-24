@@ -9,10 +9,10 @@ Contents
    installation-and-upgrades.md
    starting-a-store.md
    creating-store-content.md
-   managing-a-catalog.md
-   promoting-products.md
+   product-management.md
+   pricing.md
    users-and-accounts.md
-   orders-and-fulfillment.md
+   orders-management.md
    store-administration.md
    add-ons-and-connectors.md
    developer-guide.md

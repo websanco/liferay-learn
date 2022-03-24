@@ -1,12 +1,12 @@
-# 注文とフルフィルメント
+# 注文管理
 
 ```{toctree}
 :maxdepth: 2
 
-orders-and-fulfillment/orders.md
-orders-and-fulfillment/order-workflows.md
-orders-and-fulfillment/subscriptions.md
-orders-and-fulfillment/shipments.md
+order-management/orders.md
+order-management/order-workflows.md
+order-management/subscriptions.md
+order-management/shipments.md
 ```
 
 ```{raw} html
@@ -14,5 +14,5 @@ orders-and-fulfillment/shipments.md
 ```
 
 ```{raw} html
-:file: orders-and-fulfillment/landing.html
+:file: order-management/landing.html
 ```
