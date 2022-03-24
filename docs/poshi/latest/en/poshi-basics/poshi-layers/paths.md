@@ -25,6 +25,11 @@ Path files are written in HTML that when rendered displays a table containing th
 	<td>//a[contains(@class,'btn')]//i[contains(@class,'icon-pencil')]</td>
 	<td></td>
 </tr>
+<tr>
+	<td>EDIT_ROW</td>
+	<td>//*[@data-qa-id='row' and contains(.,'${key_rowEntry}')]//*[normalize-space(text())='Edit']</td>
+	<td></td>
+</tr>
 ...
 </tbody>
 </table>
@@ -40,7 +45,7 @@ Path files are written in HTML that when rendered displays a table containing th
 
 ## Best Practices
 
-**Make path files specific yet reusable**: Path files must be specific enough to describe and locate the correct element, but general enough that they are reusable throughout the system being tested. Using [Variables](./variables.md) can help make locators both specific and reusable.
+**Make path files specific yet reusable**: Path files must be specific enough to describe and locate the correct element, but general enough that they are reusable throughout the system being tested. Using [Variables](./variables.md), as in the `EDIT_ROW` locator above, can help make locators both specific and reusable.
 
 **Organize path files**: There are multiple ways to organize path files. Some suggestions are as follows:
 
