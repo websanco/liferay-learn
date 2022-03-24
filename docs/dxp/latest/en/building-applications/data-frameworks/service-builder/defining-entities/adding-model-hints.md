@@ -1,6 +1,6 @@
 # Adding Model Hints
 
-Once you've used Service Builder to define model entities, you may want to refine how users enter that data. Model hints specify entity data restrictions and other formatting. For example, model hints can define a calendar field with selectable dates only in the future.
+Once you've used Service Builder to define model entities, you may want to refine how users enter that data. Model hints specify entity data restrictions and other formatting. For example, model hints can define a calendar field with dates selectable in the future only.
 
 You define model hints in a file called `portlet-model-hints.xml`. The `portlet-model-hints.xml` file goes in the service module's `src/main/resources/META-INF` folder.
 
@@ -87,7 +87,7 @@ The root-level element is `model-hints`. Model entities are represented by `mode
 
 To add hints to a field, add a `hint` child element. For example, you can add a `display-width hint` to specify the pixel width to use in displaying the field. The default pixel width is `350`. To show a `String` field with 50 pixels, you could nest a `hint` element named `display-width` and give it a value of `50`.
 
-To see the effect of a hint on a field, [run Service Builder](../service-builder-basics/generating-model-persistence-and-service-code.md#generate-the-persistence-code) again and [redeploy your module](../../../../liferay-internals/fundamentals/module-projects.md#deploy-a-simple-module). Note that changing `display-width` doesn't limit the number of characters a user can enter into the `name` field; it only controls the field's width in the AlloyUI input form.
+To see the effect of a hint on a field, [run Service Builder](../service-builder-basics/generating-model-persistence-and-service-code.md#generate-the-persistence-code) again and [redeploy your module](../../../../liferay-internals/fundamentals/module-projects.md#deploy-a-simple-module). Note that changing `display-width` doesn't limit the number of characters a user can enter into the `name` field; it only controls the field's width in the input form.
 
 To configure the maximum size of a model field's database column (i.e., the maximum number of characters that can be saved for the field), use the `max-length` hint. The default `max-length` value is `75` characters. If you want the `name` field to persist up to 100 characters, add a `max-length` hint  to that field:
 
@@ -102,7 +102,7 @@ Remember to run Service Builder and redeploy your project after updating the `po
 
 ## Model Hint Types
 
-So far, you've seen a few different hints. The following table describes the portlet model hints available for use.
+The following table describes the portlet model hints available for use.
 
 **Model Hint Values and Descriptions**
 
@@ -133,7 +133,7 @@ The aui taglib is fully supported and not related to AlloyUI (the JavaScript lib
 You can use a mix of Clay and aui tags in a form. Model hints, however, affect aui tags only.
 ```
 
-Note that Liferay has its own model hints file [`portal-model-hints.xml`](https://github.com/liferay/liferay-portal/blob/master/portal-impl/src/META-INF/portal-model-hints.xml). It's in `portal-impl.jar`'s `META-INF` folder. This file contains many hint examples, so you can reference it when creating `portlet-model-hints.xml` files.
+Note that Liferay DXP/Portal has its own model hints file [`portal-model-hints.xml`](https://github.com/liferay/liferay-portal/blob/master/portal-impl/src/META-INF/portal-model-hints.xml). It's in `portal-impl.jar`'s `META-INF` folder. This file contains many hint examples, so you can reference it when creating `portlet-model-hints.xml` files.
 
 ## Default Hints
 

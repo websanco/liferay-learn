@@ -1,20 +1,35 @@
 # Defining Entity Columns
 
-An entity's columns represent its attributes. These attributes map table fields to Java object fields. To add attributes for your entity, add `<column />` tags to your entity definition:
+An entity's columns represent its attributes. These attributes map table fields to Java object fields. 
+
+<!-- Add text to this effect: 
+   Here you'll use the project from [Understanding Service Builder Generated Classes]() to learn more details about columns. 
+
+   1. Download [blah blah]
+   
+   1. Unzip
+
+   1. Deploy
+
+   1. Open the service.xml file
+
+-->
+
+To add attributes for your entity, add `<column />` tags to your entity definition:
 
 ```xml
 <column name="w9b7EntryId" primary="true" type="long" />
 ```
 
-Service Builder creates a database field for each column you add to the `service.xml` file. It maps a database field type appropriate to the Java type specified for each column, and it does this across all the databases Liferay supports. Once Service Builder runs, it generates a Hibernate configuration that handles the object-relational mapping. Service Builder automatically generates getter/setter methods in the model class for these attributes. The column's name specifies the name used in the getters and setters that are created for the entity's Java field. The column's type indicates the Java type of this field for the entity. If a column's `primary` (i.e., primary key) attribute is set to `true`, the column becomes part of the primary key for the entity. If only one column has `primary` set to `true`, that column represents the entire primary key for the entity. This is the case in the W9B7 application found in [Understanding and Extending Generated Classes](../service-builder-basics/understanding-service-builder-generated-classes.md). If you define multiple columns with the `primary` attribute set to true, the combination of columns makes up a compound primary key for the entity.
+When Service Builder runs, it generates a Hibernate configuration that handles the object-relational mapping. Service Builder creates a database field for each column you add to the `service.xml` file. It maps a database field type appropriate to the Java type specified for each column, and it does this across all the databases Liferay supports.  Service Builder also generates getter/setter methods in the model class for these attributes. If a column's `primary` (i.e., primary key) attribute is set to `true`, the column becomes the primary key for the entity. This is the case in the W9B7 application found in [Understanding and Extending Generated Classes](../service-builder-basics/understanding-service-builder-generated-classes.md). If you define multiple columns with the `primary` attribute set to true, the combination of columns makes up a compound primary key for the entity.
 
 ```{note}
-The [Implementing an Add Method](../service-builder-basics/understanding-service-builder-generated-classes.md#adding-a-local-service-method) article demonstrates how to generate unique primary keys for entity instances.
+[Implementing an Add Method](../service-builder-basics/understanding-service-builder-generated-classes.md#adding-a-local-service-method) demonstrates how to generate unique primary keys for entity instances.
 ```
 
 ## Create Entity Columns
 
-Define the columns you need for your first entity. The W9B7 entity is simple: it has only three attributes; a primary key, description, and name:
+Define the columns you need for your first entity. The W9B7 entity has only three attributes: a primary key, description, and name.
 
 ```xml
 <column name="w9b7EntryId" primary="true" type="long" />
