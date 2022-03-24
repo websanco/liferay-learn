@@ -69,3 +69,13 @@
     ```
 
 With this setup, you can run `./gradlew task` (`gradlew.bat task` for Windows) to view available tasks on the project. For more information on the Gradle configurations for Poshi Standalone, see [Poshi Standalone](https://github.com/liferay/liferay-portal/tree/master/modules/test/poshi/poshi-standalone) on the Liferay github repository.
+
+## Updating Poshi Standalone
+
+Poshi Standalone will always run the latest released version and there are no extra steps needed to update the gradle project. Should you need to downgrade, add the following lines to the end of the `build.gradle` file, replacing the version number with the desired version from the [Poshi Runner Changelog](https://github.com/liferay/liferay-portal/blob/master/modules/test/poshi/CHANGELOG.markdown).
+
+```
+poshiRunner {
+    version = "1.0.xxx"
+}
+```
