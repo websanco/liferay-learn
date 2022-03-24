@@ -2,6 +2,8 @@
 
 ## Test Scenario
 
+Write your first testcase file using the test scenario below:
+
   Joe Bloggs, would like to test that the term "Pumpkin" does not appear on any learn.liferay.com article. The steps he would take are the following. Follow along manually on a separate browser to test the steps.
 
   1. Navigate to the [Liferay Learn site](http://learn.liferay.com).
