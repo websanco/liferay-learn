@@ -14,10 +14,10 @@ The next step is to fork the *liferay-portal* repo from Github and configure the
 
 To build Liferay Portal from source, do the following:
 
-* Clone the *liferay-binaries-cache-2017* repo to speed up builds:
+* Clone the *liferay-binaries-cache-2020* repo to speed up builds:
 
 ```
-git clone https://github.com/liferay/liferay-binaries-cache-2017 --branch master --single-branch --depth 1
+git clone https://github.com/liferay/liferay-binaries-cache-2020 --branch master --single-branch --depth 1
 ```
 
 * Fork the liferay-portal repo on Github: https://github.com/liferay/liferay-portal
