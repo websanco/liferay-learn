@@ -18,7 +18,7 @@ Write your first path file using the test scenario below:
 
   1. Assert that a message appears saying there are no articles available.
 
-## Building the path file.
+## Gathering the locators
 
 From the given test scenario, gather the elements that your test needs to interact with.
 
