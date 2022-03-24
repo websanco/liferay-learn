@@ -1,4 +1,4 @@
-# Publishing Content 
+# Exercise 2: Publishing Content 
 
 Coming Soon!
 

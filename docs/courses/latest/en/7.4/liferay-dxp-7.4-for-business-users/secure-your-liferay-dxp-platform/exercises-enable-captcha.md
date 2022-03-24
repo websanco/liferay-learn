@@ -1,4 +1,4 @@
-# Exercise: Enable CAPTCHA 
+# Exercise 2: Enable CAPTCHA 
 
 Coming Soon!
 

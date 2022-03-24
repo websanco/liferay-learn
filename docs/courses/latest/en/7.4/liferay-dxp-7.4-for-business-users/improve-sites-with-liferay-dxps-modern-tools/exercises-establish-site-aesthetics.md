@@ -1,4 +1,4 @@
-# Establish Site Aesthetics 
+# Exercise 2: Establish Site Aesthetics 
 
 Coming Soon!
 

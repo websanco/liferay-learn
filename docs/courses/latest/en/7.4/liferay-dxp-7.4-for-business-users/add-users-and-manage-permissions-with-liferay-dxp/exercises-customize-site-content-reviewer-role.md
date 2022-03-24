@@ -1,4 +1,4 @@
-# Customize the Site Content Reviewer Role 
+# Exercise 3a: Customize the Site Content Reviewer Role 
 
 [$LIFERAY_LEARN_YOUTUBE_URL$]=https://www.youtube.com/embed/bYdmKytC9bs
 

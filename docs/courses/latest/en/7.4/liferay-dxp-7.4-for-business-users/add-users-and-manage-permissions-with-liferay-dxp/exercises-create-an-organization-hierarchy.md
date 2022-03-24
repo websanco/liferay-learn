@@ -1,4 +1,4 @@
-# Create an Organization Hierarchy 
+# Exercise 2a: Create an Organization Hierarchy 
 
 [$LIFERAY_LEARN_YOUTUBE_URL$]=https://www.youtube.com/embed/uEPu4jZTaUU
 

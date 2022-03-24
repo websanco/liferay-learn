@@ -1,4 +1,4 @@
-# Exercise: Creating Workflow Definitions 
+# Exercise 1: Creating Workflow Definitions 
 
 Coming Soon!
 

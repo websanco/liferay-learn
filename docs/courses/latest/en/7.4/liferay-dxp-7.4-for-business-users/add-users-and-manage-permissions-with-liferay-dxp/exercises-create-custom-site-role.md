@@ -1,4 +1,4 @@
-# Create a Custom Site Role 
+# Exercise 3b: Create a Custom Site Role 
 
 [$LIFERAY_LEARN_YOUTUBE_URL$]=https://www.youtube.com/embed/crKkQtShfqc
 

@@ -1,4 +1,4 @@
-# Exercise: Create Content Pages and Fragments
+# Exercise 1: Create Content Pages and Fragments
 
 Coming Soon!
 

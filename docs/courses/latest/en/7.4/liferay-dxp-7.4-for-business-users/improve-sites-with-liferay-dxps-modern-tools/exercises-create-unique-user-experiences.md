@@ -1,4 +1,4 @@
-# Exercise: Create Unique User Experiences 
+# Exercise 3: Create Unique User Experiences 
 
 Coming Soon!
 

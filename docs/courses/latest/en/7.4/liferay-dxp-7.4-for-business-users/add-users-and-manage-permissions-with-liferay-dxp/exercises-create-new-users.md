@@ -1,4 +1,4 @@
-# Create New Users 
+# Exercise 1: Create New Users 
 
 [$LIFERAY_LEARN_YOUTUBE_URL$]=https://www.youtube.com/embed/dQtziaK12bw
 

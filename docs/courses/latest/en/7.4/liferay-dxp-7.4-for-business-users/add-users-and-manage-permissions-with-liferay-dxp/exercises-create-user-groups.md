@@ -1,4 +1,4 @@
-# Create and Manage User Groups 
+# Exercise 2b: Create and Manage User Groups 
 
 [$LIFERAY_LEARN_YOUTUBE_URL$]=https://www.youtube.com/embed/nmaItQ_WTg4
 

@@ -1,4 +1,4 @@
-# Manage Teams and Community Permissions 
+# Exercise 4: Manage Teams and Community Permissions 
 
 [$LIFERAY_LEARN_YOUTUBE_URL$]=https://www.youtube.com/embed/3VPHze0KvHY
 

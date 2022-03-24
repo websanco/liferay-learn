@@ -4,7 +4,7 @@
 :maxdepth: 2
 
 using-liferay-objects/creating-new-objects.md
-using-liferay-objects/exercises-create-a-custom-business-objects.md
+using-liferay-objects/exercises-create-a-custom-business-object.md
 using-liferay-objects/integrating-and-displaying-liferay-objects.md
 using-liferay-objects/exercises-integrate-objects-with-forms-and-workflows.md
 using-liferay-objects/summary.md

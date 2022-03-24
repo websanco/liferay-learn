@@ -1,4 +1,4 @@
-# Exercise: Create a Password Policy 
+# Exercise 1: Create a Password Policy 
 
 Coming Soon!
 
