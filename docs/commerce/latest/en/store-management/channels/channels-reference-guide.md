@@ -10,19 +10,19 @@ The _General_ tab is where many important channel settings are located, such as 
 
 ### Details
 
-The _Details_ section is where the channel's name, currency, and [Commerce Site Type](../../../starting-a-store/sites-and-site-types.md) are set.
+The _Details_ section is where the channel's name, currency, and [Commerce Site Type](../../starting-a-store/sites-and-site-types.md) are set.
 
 ![The Details tab is where the name, currency, and site type are set.](./channels-reference-guide/images/01.png)
 
 ### Orders
 
-Users can enable a workflow for [buyers and sellers](../../../order-management/order-workflows/introduction-to-order-workflows.md). Users can also enable or disable Guest Checkout and whether the Purchase Order Number is displayed (where applicable).
+Users can enable a workflow for [buyers and sellers](../../order-management/order-workflows/introduction-to-order-workflows.md). Users can also enable or disable Guest Checkout and whether the Purchase Order Number is displayed (where applicable).
 
 ![The Orders tab is where the Workflow is enabled.](./channels-reference-guide/images/02.png)
 
 ### Prices
 
-Users can set the [Shipping Tax Category](../../../store-administration/configuring-taxes/creating-tax-categories.md), the Price Type, and the Discount Target Price Type.
+Users can set the [Shipping Tax Category](../../pricing/configuring-taxes/creating-tax-categories.md), the Price Type, and the Discount Target Price Type.
 
 For _Price Type_, users can determine whether product prices are displayed with either tax included (gross price) or tax excluded (net price).
 
@@ -38,21 +38,21 @@ Health checks allow users to quickly fix any common setup issues with their stor
 
 ### Payment Methods
 
-Users can configure which [payment methods](../../../store-administration/configuring-payment-methods/managing-payment-methods.md) to use for the channel. In addition, users can use a [custom payment engine](../../../developer-guide/implementing-a-new-payment-method.md).
+Users can configure which [payment methods](../../store-management/configuring-payment-methods/managing-payment-methods.md) to use for the channel. In addition, users can use a [custom payment engine](../../developer-guide/sales/implementing-a-new-payment-method.md).
 
 ![The Payment Methods section allows you to choose which payment method to use.](./channels-reference-guide/images/05.png)
 
 ### Shipping Methods
 
-Users can configure the channel's shipment methods. By default, the [flat rate](../../../store-administration/configuring-shipping-methods/using-the-flat-rate-shipping-method.md) is enabled. Users can also enable a [variable rate](../../../store-administration/configuring-shipping-methods/using-the-variable-rate-shipping-method.md) shipping method. Subscribers can also enable [FedEx](../../../store-administration/configuring-shipping-methods/using-the-fedex-shipping-method.md).
+Users can configure the channel's shipment methods. By default, the [flat rate](../../store-management/configuring-shipping-methods/using-the-flat-rate-shipping-method.md) is enabled. Users can also enable a [variable rate](../../store-management/configuring-shipping-methods/using-the-variable-rate-shipping-method.md) shipping method. Subscribers can also enable [FedEx](../../store-management/configuring-shipping-methods/using-the-fedex-shipping-method.md).
 
-Lastly, users can use a [custom shipping engine](../../../developer-guide/implementing-a-new-shipping-engine.md).
+Lastly, users can use a [custom shipping engine](../../developer-guide/sales/implementing-a-new-shipping-engine.md).
 
 ![The Shipment Methods section allows you to choose which shipment method to use.](./channels-reference-guide/images/06.png)
 
 ### Tax Calculations
 
-Users can configure the channel's tax calculations. To learn more about setting a tax rate, see [Setting Rates for Tax Calculations](../../store-administration/configuring-taxes/setting-rates-for-tax-calculations.md).
+Users can configure the channel's tax calculations. To learn more about setting a tax rate, see [Setting Rates for Tax Calculations](../../pricing/configuring-taxes/setting-rates-for-tax-calculations.md).
 
 ![Users can configure the channel's tax calculation.](./channels-reference-guide/images/07.png)
 
@@ -66,15 +66,15 @@ A channel can be connected to a DXP site. Alternately, a channel can be connecte
 
 Liferay Commerce can be configured to send email notifications that are triggered by a variety of events. When an event triggers a notification (for example, an order is placed), the notification is logged in the channel's _Notification Queue_ tab. By default, the Liferay Commerce instance checks whether a notification has been sent every 15 minutes and deletes any unsent notifications after 43200 minutes (30 days).
 
-See the [Configuring the Commerce Notification Queue](../../../store-administration/sending-emails/configuring-the-commerce-notification-queue.md) article for more information.
+See the [Configuring the Commerce Notification Queue](../../store-management/sending-emails/configuring-the-commerce-notification-queue.md) article for more information.
 
 ## Notification Templates
 
 Notification Templates allow users to customize their email notifications and define the triggering events.
 
-To learn more about sending emails notifications, see [Store emails](../../../store-administration/sending-emails/store-emails.md).
+To learn more about sending emails notifications, see [Store emails](../../store-management/sending-emails/store-emails.md).
 
-To learn more about creating and using notification templates, see [Using Notification Templates](../../../store-administration/sending-emails/using-notification-templates.md).
+To learn more about creating and using notification templates, see [Using Notification Templates](../../store-management/sending-emails/using-notification-templates.md).
 
 ![Create notification templates.](./channels-reference-guide/images/11.png)
 
@@ -90,7 +90,7 @@ Product Display Pages operate on a similar premise to Category Display Pages; us
 
 ## Payment Restrictions
 
-Users can configure which payment methods are _restricted_ for the buyer's country. (If no billing address is listed, the channel checks the shipping address.) To do so, at least one [payment methods](../../../store-administration/configuring-payment-methods/managing-payment-methods.md) must be activated. Check the boxes for each country so that accounts from that country cannot use that payment method.
+Users can configure which payment methods are _restricted_ for the buyer's country. (If no billing address is listed, the channel checks the shipping address.) To do so, at least one [payment methods](../../store-management/configuring-payment-methods/managing-payment-methods.md) must be activated. Check the boxes for each country so that accounts from that country cannot use that payment method.
 
 ![Payment Restrictions](./channels-reference-guide/images/08.png)
 
@@ -110,4 +110,4 @@ Users can manage their Punch Out procurement systems from here. Purchasing the a
 ## Additional Information
 
 * [Configuring Product Visibility Using Channels](./configuring-product-visibility-using-channels.md)
-* [Enabling or Disabling Order Workflows](../../../order-management/order-workflows/enabling-or-disabling-order-workflows.md)
+* [Enabling or Disabling Order Workflows](../../order-management/order-workflows/enabling-or-disabling-order-workflows.md)

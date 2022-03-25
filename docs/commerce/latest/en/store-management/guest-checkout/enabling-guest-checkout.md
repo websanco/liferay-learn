@@ -1,17 +1,17 @@
 # Enabling Guest Checkout
 
-Guest checkout functionality can be enabled on a per-[channel](../../starting-a-store/channels/introduction-to-channels.md) basis and allows users to submit orders without a registered account on the site.
+Guest checkout functionality can be enabled on a per-[channel](../../store-management/channels/introduction-to-channels.md) basis and allows users to submit orders without a registered account on the site.
 
 To enable Guest Checkout:
 
 1. Navigate to the _Global Menu_ &rarr; _Commerce_.
-1. Click _Channels_ under _Store Management_.
+2. Click _Channels_ under _Store Management_.
 
     ![Access Commerce settings in the Global Commerce menu.](./enabling-guest-checkout/images/04.png)
 
-1. Click on the desired channel (for example _Everest Portal_).
-1. On the _General_ tab's _Orders_ section, slide the _Guest Checkout_ toggle to Enabled.
-1. Click _Save_.
+3. Click on the desired channel (for example _Everest Portal_).
+4. On the _General_ tab's _Orders_ section, slide the _Guest Checkout_ toggle to Enabled.
+5. Click _Save_.
 
     ![Enable Guest Checkout](./enabling-guest-checkout/images/01.png)
 
@@ -67,6 +67,6 @@ They must enter their contact information including a valid email address before
 ## Additional Information
 
 * [Guest Checkout Overview](./guest-checkout-overview.md)
-* [Introduction to Channels](../../starting-a-store/channels/introduction-to-channels.md)
-* [Managing Channels](../../starting-a-store/channels/managing-channels.md)
-* [Channels Reference Guide](../../starting-a-store/channels/channels-reference-guide.md)
+* [Introduction to Channels](../../store-management/channels/introduction-to-channels.md)
+* [Managing Channels](../../store-management/channels/managing-channels.md)
+* [Channels Reference Guide](../../store-management/channels/channels-reference-guide.md)

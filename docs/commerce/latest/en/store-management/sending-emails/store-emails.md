@@ -8,7 +8,7 @@ To use Liferay Commerce's Notifications feature, first configure the Mail settin
 
 ## Configuring Store Email Notifications
 
-Once the Liferay Commerce's mail settings have been configured, navigate to the _Control Panel_ &rarr; _Commerce_ &rarr; _Channels_ to begin creating store email notifications. Email notifications are configured per [channel](../../starting-a-store/channels/introduction-to-channels.md). Using an [accelerator](../../starting-a-store/accelerators.md) creates a store, catalog, and channel for you to start with.
+Once the Liferay Commerce's mail settings have been configured, navigate to the _Control Panel_ &rarr; _Commerce_ &rarr; _Channels_ to begin creating store email notifications. Email notifications are configured per [channel](../../store-management/channels/introduction-to-channels.md). Using an [accelerator](../../starting-a-store/accelerators.md) creates a store, catalog, and channel for you to start with.
 
 ![Available Notification Templates](./store-emails/images/02.png)
 

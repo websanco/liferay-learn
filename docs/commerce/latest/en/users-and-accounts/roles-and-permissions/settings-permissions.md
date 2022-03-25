@@ -54,5 +54,5 @@ Settings applications reference the following resources:
 
 ## Additional Information
 
-* [Availability Estimates](../../product-management/managing-inventory/availability-estimates.md)
-* [Measurement Units](../../store-administration/configuring-shipping-methods/measurement-units.md)
+* [Availability Estimates](../../inventory-management/availability-estimates.md)
+* [Measurement Units](../../store-management/configuring-shipping-methods/measurement-units.md)

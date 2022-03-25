@@ -80,7 +80,7 @@ Store Management applications are connected to the following resources:
 
 ## Additional Information
 
-* [Introduction to Channels](../../starting-a-store/channels/introduction-to-channels.md)
-* [Managing Channels](../../starting-a-store/channels/managing-channels.md)
-* [Channels Reference Guide](../../starting-a-store/channels/channels-reference-guide.md)
-* [Currencies Reference](../../store-administration/currencies/currencies-reference.md)
+* [Introduction to Channels](../../store-management/channels/introduction-to-channels.md)
+* [Managing Channels](../../store-management/channels/managing-channels.md)
+* [Channels Reference Guide](../../store-management/channels/channels-reference-guide.md)
+* [Currencies Reference](../../store-management/currencies/currencies-reference.md)

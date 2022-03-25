@@ -2,7 +2,7 @@
 
 Buyers can choose a flat rate shipping option to ship any product. By creating multiple flat rate options, you can give customers choices of cost, speed, or security.
 
-Flat rate shipping imposes the same cost on every product in the catalog. You can create exceptions, however, for individual products from the _Shipping Extra Price_ field in the product’s [Configuration](../../product-management/managing-inventory/product-inventory-configuration-reference.md) tab.
+Flat rate shipping imposes the same cost on every product in the catalog. You can create exceptions, however, for individual products from the _Shipping Extra Price_ field in the product’s [Configuration](../../inventory-management/product-inventory-configuration-reference.md) tab.
 
 By default, the Flat Rate shipping method is enabled.
 
@@ -12,24 +12,24 @@ To add a new Flat Rate Shipping Option:
 
     ![Navigate to Channels in the Control Panel](./using-the-flat-rate-shipping-method/images/02.png)
 
-1. Click on the desired channel (for example, Sahara.com). (Note that if you had used an accelerator like Minium to create your site, there is already a corresponding channel created by default.)
-1. Scroll down to _Shipment Methods_.
+2. Click on the desired channel (for example, Sahara.com). (Note that if you had used an accelerator like Minium to create your site, there is already a corresponding channel created by default.)
+3. Scroll down to _Shipment Methods_.
 
     ![Shipping Methods is configured on the Channel.](./using-the-flat-rate-shipping-method/images/03.png)
 
-1. Click _Edit_.
-1. Switch the _Active_ toggle to _YES_.
-1. Click the _Shipping Options_ tab.
-1. Click the Add (![Add Icon](../../images/icon-add.png)) button to add a new Shipping option:
-1. Enter the following:
+4. Click _Edit_.
+5. Switch the _Active_ toggle to _YES_.
+6. Click the _Shipping Options_ tab.
+7. Click the Add (![Add Icon](../../images/icon-add.png)) button to add a new Shipping option:
+8. Enter the following:
     * **Name**: 7-Day Shipping
     * **Amount**: 3.95
     * **Priority**: 0.0
 
     ![Add a new shipping method option.](./using-the-flat-rate-shipping-method/images/04.png)
 
-1. Click _Save_.
-1. Close the window.
+9. Click _Save_.
+10. Close the window.
 
 ![Verify the new shipping method option has been created.](./using-the-flat-rate-shipping-method/images/05.png)
 
