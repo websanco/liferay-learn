@@ -70,7 +70,7 @@ Users with the configured Role can now manually translate any web content into t
 
    Alternatively, click *Save as Draft* to save and publish your translation at a later time.
 
-## Integrating Translation with Custom Workflows
+## Integrating Translations with Custom Workflows
 
 You can integrate the translation process with custom workflows so your published translations go through a defined review and approval process.
 

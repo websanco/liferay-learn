@@ -1,12 +1,26 @@
 # Automatically Translating Web Content
 
-Liferay integrates with the Google Cloud Translation API to generate automatic translations of Web Content. To enable this feature, you must have an active Google Cloud project with Cloud Translation API enabled. This project must also have a service account with a JSON account key. See official [Google Cloud Translation documentation](https://cloud.google.com/translate/docs/setup) for more information.
+Liferay can integrate with the following service APIs to generate automatic translations of Web Content.
 
-## Enabling Automatic Translation
+* [Google Cloud Translation](#enabling-for-google-cloud-translation)
+* [Amazon Translate](#enabling-for-amazon-translate)
+* [Microsoft Translator](#enabling-for-microsoft-translator)
 
-1. Open the *Global Menu*(![Global Menu](../../../images/icon-applications-menu.png)). Click the *Control Panel* tab and go to *System Settings* &rarr; *Translation*.
+To use this feature, you must first set up each service and then enable them in Liferay's system settings. Once enabled, you can use the service to [generate translations](#using-automatic-translation) for Web Content.
 
-   ![Go to Translation under System Settings.](./automatically-translating-web-content/images/01.png)
+```{important}
+Only one service can be active at a given time. If you enable multiple services, the system picks the first one available.
+```
+
+## Enabling for Google Cloud Translation
+
+Enabling Google Cloud Translation requires an active account and a Google Cloud project with Cloud Translation API enabled. This project must also have a service account with a JSON account key. See official [Google Cloud Translation](https://cloud.google.com/translate/docs/setup) documentation for more information.
+
+When ready, follow these steps:
+
+1. Open the *Global Menu*(![Global Menu](../../../images/icon-applications-menu.png)), click the *Control Panel* tab, and go to *System Settings* &rarr; *Translation* &rarr; *Translator Using Google Cloud*.
+
+   ![Go to Translator Using Google Cloud.](./automatically-translating-web-content/images/01.png)
 
 1. Check *Enabled*.
 
@@ -14,9 +28,47 @@ Liferay integrates with the Google Cloud Translation API to generate automatic t
 
 1. Click *Save*.
 
+## Enabling for Amazon Translate
+
+<!--{bdg-secondary}`Available 7.4 ???+`-->
+
+Enabling Amazon Translate requires an active account. See official [Amazon Translate](https://docs.aws.amazon.com/translate/latest/dg/what-is.html) documentation for more information.
+
+When ready, follow these steps:
+
+1. Open the *Global Menu*(![Global Menu](../../../images/icon-applications-menu.png)), click the *Control Panel* tab, and go to *System Settings* &rarr; *Translation* &rarr; *Translator Using AWS*.
+
+   ![Go to Translator Using AWS.](./automatically-translating-web-content/images/02.png)
+
+1. Check *Enabled*.
+
+1. Enter a valid *Access Key* and *Secret Key*.
+
+1. Enter your region. The default value is `us-west-1`.
+
+1. Click *Save*.
+
+## Enabling for Microsoft Translator
+
+<!--{bdg-secondary}`Available 7.4 ???+`-->
+
+Enabling Microsoft Translator requires an active account. See official [Microsoft Translator](https://docs.microsoft.com/en-us/azure/cognitive-services/translator/) documentation for more information.
+
+When ready, follow these steps:
+
+1. Open the *Global Menu*(![Global Menu](../../../images/icon-applications-menu.png)), click the *Control Panel* tab, and go to *System Settings* &rarr; *Translation* &rarr; *Translator Using Azure*.
+
+   ![Go to Translator Using Azure.](./automatically-translating-web-content/images/03.png)
+
+1. Check *Enabled*.
+
+1. Enter a valid *Subscription Key* and *Resource Location* (region).
+
+1. Click *Save*.
+
 ## Using Automatic Translation
 
-Once Google Cloud Translation is enabled, auto translate buttons are added to the translation interface for Web Content.
+Once a translation service is enabled, auto translate buttons are added to the translation interface for Web Content.
 
 Follow these steps to automatically translate all or only individual Web Content fields:
 
@@ -24,15 +76,15 @@ Follow these steps to automatically translate all or only individual Web Content
 
 1. Click *Actions* (![Actions Button](../../../images/icon-actions.png)) for the content you want to translate and select *Translate*.
 
-   ![Open the Web Content translation interface.](./automatically-translating-web-content/images/02.png)
+   ![Open the Web Content translation interface.](./automatically-translating-web-content/images/04.png)
 
 1. Click the top left *Auto Translate* button to translate all Web Content fields into the selected language.
 
-   ![Click the top left Auto Translate button to translate all Web Content fields.](./automatically-translating-web-content/images/03.png)
+   ![Click the top left Auto Translate button to translate all Web Content fields.](./automatically-translating-web-content/images/05.png)
 
    Alternatively, click a field's individual *Auto Translate* button (![Auto Translate Button](../../../images/icon-translate.png)) to only translate its text.
 
-   ![Click a field's individual Auto Translate button to only translate its text.](./automatically-translating-web-content/images/04.png)
+   ![Click a field's individual Auto Translate button to only translate its text.](./automatically-translating-web-content/images/06.png)
 
 1. Click *Save as Draft* or *Publish* when finished.
 
