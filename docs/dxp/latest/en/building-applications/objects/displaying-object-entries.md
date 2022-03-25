@@ -14,7 +14,7 @@ Together, these integrations enable users to leverage Liferay's WYSIWYG page bui
 
 Once you've published an Object, follow these steps to use the Collection Display fragment to display an Object's entries:
 
-1. Create a new [Content Page](../../site-building/creating-pages/using-content-pages.html) or [Display Page Template](../../site-building/displaying-content/using-display-page-templates/creating-and-managing-display-page-templates.md). Alternatively, begin *editing* (![Edit Button](../../images/icon-edit-pencil.png)) an existing one.
+1. Create a new [Content Page](../../site-building/creating-pages/using-content-pages.md) or [Display Page Template](../../site-building/displaying-content/using-display-page-templates/creating-and-managing-display-page-templates.md). Alternatively, begin *editing* (![Edit Button](../../images/icon-edit-pencil.png)) an existing one.
 
    ```{note}
    You can also create a Collection Page using the Collection Provider. See [Collections and Collection Pages](../../content-authoring-and-management/collections-and-collection-pages/about-collections-and-collection-pages.md) for more information.
@@ -78,9 +78,9 @@ Follow these steps:
 
 1. Click *Save*. This redirects you to the template design page.
 
-1. (Optional) Click the Actions button (![Actions Button](../../images/icon-actions.png)) in the  [Import](#importing-and-exporting-scripts) an existing FreeMarker script from an `.ftl` file.
+1. (Optional) Click the Actions button (![Actions Button](../../images/icon-actions.png)) in the Application Bar, select *Import Script*, and choose an `.ftl` file to import. This replaces the current template with the file's FreeMarker script.
 
-   ![](./displaying-object-entries/images/10.png)
+   ![Import script from an .ftl file.](./displaying-object-entries/images/10.png)
 
 1. Use FreeMarker to design your template.
 
