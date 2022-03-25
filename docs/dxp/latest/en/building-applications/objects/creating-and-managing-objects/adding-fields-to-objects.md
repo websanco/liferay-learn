@@ -56,7 +56,7 @@ After saving fields to an Object draft, you can select them to define whether th
 | Date | Stores date values |
 | Text (*previously String*) | Stores simple text value up to 280 characters |
 | Long Text (*previously Clob*) | Stores a text box value that supports up to 65,000 characters |
-| Picklist | Stores a [Picklist](../using-picklists.md) string value |
+| Picklist | Stores a [Picklist](../picklists/using-picklists.md) string value |
 | Integer | Stores an integer up to 9 digits in length |
 | Long Integer (*previously Long*) | Stores a large integer up to 19 digits in length |
 | Decimal (*previously Double*) | Stores a decimal number value that supports fractional portions |

@@ -47,24 +47,24 @@ Each Object also has the following resource permissions.
 | Update | Update an Object entry |
 | View | View an Object entry |
 
-## Defining Permissions for Object Entries
+## Managing Permissions for Individual Object Entities
 
 > Available Liferay DXP 7.4 U10+ and Liferay Portal 7.4 GA14+
 
-With custom Objects, you can define permissions for individual entries to manage access to Object data.
+With custom Objects, you can manage permissions for individual database entities to control access to Object data.
 
 Follow these steps:
 
 1. Navigate to the desired custom Object.
 
-1. Click on the Actions button (![Actions Button](../../../images/icon-actions.png)) for the desired entry and select *Permissions*.
+1. Click on the *Actions* button (![Actions Button](../../../images/icon-actions.png)) for the desired entity and select *Permissions*.
 
-   ![Click the Actions button for the desired entry and select Permissions.](./permissions-framework-integration/images/01.png)
+   ![Click the Actions button for the desired entity and select Permissions.](./permissions-framework-integration/images/01.png)
 
-1. Use the checkboxes to assign Delete, Permissions, Update, and View permissions to the desired roles.
+1. Use the checkboxes to grant [database entity](#actions-on-database-entities) permissions to the desired desired roles.
 
    ```{note}
-   Permissions defined at the Roles admin level override permissions defined at the entry level.
+   Permissions defined at the Roles admin level override permissions defined at the entity level.
    ```
 
    ![Use the checkboxes to assign permissions to the desired roles.](./permissions-framework-integration/images/02.png)

@@ -12,7 +12,7 @@ See [Defining Role Permissions](../../users-and-permissions/roles-and-permission
 
 Application permissions grant permission to perform general application-related operations and do not include [resource-related permissions](#resource-permissions).
 
-The Objects portlet has the following application permissions:
+Objects has the following application permissions:
 
 | Permission | Description |
 | :--- | :--- |
@@ -24,11 +24,11 @@ The Objects portlet has the following application permissions:
 
 ## Resource Permissions
 
-Resource permissions grant specific permissions on application resources. Some of these permissions enable performing [operations on database entities](#object-definition-actions) (i.e., model resources). Others grant permission to perform [resource-related operations](#object-related-actions) in an application context (e.g., create a new resource entity).
+Resource permissions grant specific permissions on application resources. Some of these permissions enable performing [operations on database entities](#actions-on-database-entities) (i.e., model resources). Others grant permission to perform [resource-related operations](#resource-related-actions) in an application context (e.g., create a new resource entity).
 
-The Object's portlet has the following resource permissions.
+Objects has the following resource permissions.
 
-### Object Related Actions
+### Resource-Related Actions
 
 | Permission | Description |
 | :--- | :--- |
@@ -37,7 +37,7 @@ The Object's portlet has the following resource permissions.
 | Permissions | View and manage permissions related to Objects |
 | Publish Object Definition | Publish an Object draft |
 
-### Object Definition Actions
+### Actions on Database Entities
 
 | Permission | Description |
 | :--- | :--- |
@@ -45,6 +45,28 @@ The Object's portlet has the following resource permissions.
 | Permissions | View and modify permissions for an Object |
 | Update | Update an Object |
 | View | View an Object |
+
+## Managing Permissions for Individual Object Definitions
+
+> Available Liferay DXP 7.4 U17+ and Liferay Portal 7.4 GA17+
+
+Follow these steps to manage permissions for individual Object definitions:
+
+1. Open the *Objects* application via the *Global Menu* (![Global Menu](../../images/icon-applications-menu.png)).
+
+1. Click on the *Actions* button (![Actions Button](../../images/icon-actions.png)) for the desired Object definition and select *Permissions*.
+
+   ![Click the Actions button for the desired Object definition and select Permissions.](./objects-application-permissions/images/02.png)
+
+1. Use the checkboxes to grant [Object definition](#actions-on-database-entities) permissions to the desired roles.
+
+   ```{note}
+   Permissions defined at the Roles admin level override permissions defined at the individual level.
+   ```
+
+   ![Use the checkboxes to assign permissions to the desired roles.](./objects-application-permissions/images/03.png)
+
+1. Click *Save*.
 
 ## Additional Information
 

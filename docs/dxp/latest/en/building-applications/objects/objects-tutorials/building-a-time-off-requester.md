@@ -2,7 +2,7 @@
 
 > Available: Liferay DXP/Portal 7.4+
 
-Liferay Objects empowers you to build entire applications without writing code or deploying modules. Here, you'll create a Time Off Request application using Liferay [Objects](../../objects.md) and [Picklists](../using-picklists.md).
+Liferay Objects empowers you to build entire applications without writing code or deploying modules. Here, you'll create a Time Off Request application using Liferay [Objects](../../objects.md) and [Picklists](../picklists/using-picklists.md).
 
 First, you'll [add a Picklist](#adding-a-department-picklist) for defining department values. Then, you'll create two Objects, one for [Time Off Requests](#adding-a-time-off-request-object) and another for [Employees](#adding-an-employee-object). During this process, you'll relate these Objects to one another and add a webhook to the Time Off Request Object. Finally, you'll [design custom layouts](#designing-custom-object-layouts) to display the relationship fields.
 
@@ -249,4 +249,4 @@ Once requests are added and related to employee entries, you can view them in th
 
 * [Objects Overview](../../objects.md)
 * [Creating Objects](../creating-and-managing-objects/creating-objects.md)
-* [Using Picklists](../using-picklists.md)
+* [Using Picklists](../picklists/using-picklists.md)
