@@ -8,6 +8,10 @@ When an Object is published, Liferay creates a Collection Provider that you can 
 
 Additionally, you can use FreeMarker to create [Information Templates for Objects](#creating-information-templates-for-objects). Once created, you can map fragment fields to your template to determine how entries are rendered in Content Pages and Display Pages.
 
+```{note}
+Information Templates can be used in Content Display fragments and any other fragment with [sub-elements](../../../../../../site/build/input/dxp/latest/en/site-building/creating-pages/page-fragments-and-widgets/using-fragments/configuring-fragments/fragment-sub-elements-reference.md) (e.g., text, rich text) that can be mapped to Objects.
+```
+
 Together, these integrations enable users to leverage Liferay's WYSIWYG page building capabilities while delivering personalized user experiences.
 
 ## Using the Collection Provider for Objects
