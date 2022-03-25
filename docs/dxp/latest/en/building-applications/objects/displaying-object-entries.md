@@ -6,6 +6,8 @@ With Liferay Objects, you can use existing DXP frameworks to display Object entr
 
 When an Object is published, Liferay creates a Collection Provider that you can use with the [Collection Display fragment](../../site-building/displaying-content/additional-content-display-options/displaying-collections.md#adding-a-collection-display-fragment-to-a-page) to display multiple Object entries. You can also configure the fragment to style, filter, and paginate the collection. And since published Objects are integrated with the Info framework, you can select them as the content type for [Display Page Templates](../../site-building/displaying-content/using-display-page-templates/about-display-page-templates-and-display-pages.md). When selected, the Object is set as the template's mapping source, so you can easily map fragment fields to Object fields to create flexible page displays for individual Object entries.
 
+Additionally, you can use FreeMarker to create [Information Templates for Objects](). Once created, you can map fragment fields to your template to determine how entries are rendered in Content Pages and Display Pages.
+
 Together, these integrations enable users to leverage Liferay's WYSIWYG page building capabilities while delivering personalized user experiences.
 
 ## Using the Collection Provider for Objects
@@ -61,6 +63,40 @@ After selecting the desired provider, use additional fragment options to determi
 Once saved, the selected Object is set as the template's mapping source, and you're redirected to edit the template. Here, you can design flexible page displays for individual Object entries using fragments that map to Object fields. See [Using Display Page Templates](../../site-building/displaying-content/using-display-page-templates/about-display-page-templates-and-display-pages.md) for information.
 
 ![Map fragment elements to Object fields to dynamically populate Display Pages for individual entries.](./displaying-object-entries/images/08.png)
+
+## Creating Information Templates for Objects
+
+Follow these steps:
+
+1. Open the *Site Menu* (![Site Menu](../../images/icon-product-menu.png)) and go to *Design* &rarr; *Templates* &rarr; *Information Templates*.
+
+1. Click the *Add* button (![Add Button](../../images/icon-add.png))
+
+1. Enter a *name* and select the desired *Object*.
+
+   ![Enter a name and select the desired Object.](./displaying-object-entries/images/09.png)
+
+1. Click *Save*. This redirects you to the template design page.
+
+1. (Optional) Click the Actions button (![Actions Button](../../images/icon-actions.png)) in the  [Import](#importing-and-exporting-scripts) an existing FreeMarker script from an `.ftl` file.
+
+   ![](./displaying-object-entries/images/10.png)
+
+1. Use FreeMarker to design your template.
+
+   In the *Elements* side panel (![Elements](../../images/icon-list-ul.png)), you can access available fields from the selected Object's structure.
+
+   ![Select from available fields in the Object's structure.](./displaying-object-entries/images/11.png)
+
+1. (Optional) Add a *description* or *image* to the template in the Properties side panel (![Properties](../../images/icon-cog3.png)).
+
+   ![Add a description or image in the Properties panel.](./displaying-object-entries/images/12.png)
+
+1. Click *Save* when finished.
+
+You can now select from the template when mapping Object entries to fragment fields.
+
+![Select the template when mapping fragment elements.](./displaying-object-entries/images/13.png)
 
 ## Additional Information
 
