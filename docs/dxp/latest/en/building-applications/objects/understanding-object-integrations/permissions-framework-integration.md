@@ -8,7 +8,7 @@ When defining role permissions, active Objects appear according to their scope a
 
 ## Application Permissions
 
-Application permissions grant permission to perform general application-related operations and do not include [resource-related permissions](#object-resource-permissions).
+Application permissions grant permission to perform general application-related operations and do not include [resource-related permissions](#resource-permissions).
 
 Custom Objects include the following standard application permissions according to their defined scope.
 
