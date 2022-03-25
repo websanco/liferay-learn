@@ -32,7 +32,7 @@ Enable [subscriptions](./enabling-subscriptions-for-a-product.md) for Simple, Gr
 
 ## Inventory Rules
 
-You can also configure custom Product [inventory rules](../../managing-inventory/introduction-to-managing-inventory.md) to set the maximum and minimum quantity customers can buy, determine whether your Channel takes back orders, or govern how a Product is sold when its inventory falls below a set threshold.
+You can also configure custom Product [inventory rules](../../../inventory-management/introduction-to-managing-inventory.md) to set the maximum and minimum quantity customers can buy, determine whether your Channel takes back orders, or govern how a Product is sold when its inventory falls below a set threshold.
 
 ## Additional Information
 

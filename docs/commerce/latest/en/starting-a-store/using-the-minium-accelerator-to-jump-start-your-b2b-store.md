@@ -54,15 +54,15 @@ Minium applies a number of other site configurations that are not set out-of-the
 
 | Feature | Details |
 | :--- | :--- |
-| [Warehouses](../product-management/managing-inventory/setting-up-commerce-warehouses.md) | Italy, United States Northeast, United States Southwest |
+| [Warehouses](../inventory-management/setting-up-commerce-warehouses.md) | Italy, United States Northeast, United States Southwest |
 | [Site Type](../starting-a-store/sites-and-site-types.md) | B2B |
-| [Shipping Method Options](../store-administration/configuring-shipping-methods/using-the-flat-rate-shipping-method.md) | Standard Delivery, Expedited Delivery |
+| [Shipping Method Options](../store-management/configuring-shipping-methods/using-the-flat-rate-shipping-method.md) | Standard Delivery, Expedited Delivery |
 | Channels | Minium Portal |
 | Countries | France, China, United States, and 245 more |
-| [Currencies](../store-administration/currencies/adding-a-new-currency.md) | USD, AUD, GBP, and 7 more |
+| [Currencies](../store-management/currencies/adding-a-new-currency.md) | USD, AUD, GBP, and 7 more |
 | Default Image | &#10003; |
-| [Measurement Units](../store-administration/configuring-shipping-methods/measurement-units.md) - Dimensions | inches, millimeters, feet, meters |
-| [Measurement Units](../store-administration/configuring-shipping-methods/measurement-units.md) - Weight | ounces, pounds, kilograms, grams |
+| [Measurement Units](../store-management/configuring-shipping-methods/measurement-units.md) - Dimensions | inches, millimeters, feet, meters |
+| [Measurement Units](../store-management/configuring-shipping-methods/measurement-units.md) - Weight | ounces, pounds, kilograms, grams |
 | [Account Roles](../users-and-accounts/account-management/account-roles.md) | Buyer, Account Manager, Sales Agent
-| [Availability Estimates](../product-management/managing-inventory/availability-estimates.md) | 3-5 days, 5-7 days, 7-14 days |
+| [Availability Estimates](../inventory-management/availability-estimates.md) | 3-5 days, 5-7 days, 7-14 days |
 | [Product Relation Type](../product-management/creating-and-managing-products/products/related-products-up-sells-and-cross-sells.md) | Up-Sell, Spare, Related, Accessories, Cross-Sell  |

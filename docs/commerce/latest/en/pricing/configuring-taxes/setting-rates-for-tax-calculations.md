@@ -8,7 +8,7 @@ Liferay Commerce includes built-in tools for defining and applying tax rates to 
 
 ## Understanding Tax Engines
 
-Commerce tax engines define calculations for tax rates when a transaction is made. Liferay provides two out-of-the-box engines (i.e., *Fixed Tax Rate* and *By Address*), though you can design and implement [custom engines](../../developer-guide/implementing-a-new-tax-engine.md).
+Commerce tax engines define calculations for tax rates when a transaction is made. Liferay provides two out-of-the-box engines (i.e., *Fixed Tax Rate* and *By Address*), though you can design and implement [custom engines](../../developer-guide/sales/implementing-a-new-tax-engine.md).
 
 ```{note}
 Tax Categories can contain multiple tax rates created using either the same or different tax engine.

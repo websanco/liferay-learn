@@ -88,9 +88,8 @@ The product is not searchable in the catalog. In the _Control Panel_, the produc
 
 ## Additional Information
 
-* [Introduction to Product Types](../creating-and-managing-products/product-types/introduction-to-product-types.md)
-* [Configuring Product Visibility Using Channels](../../starting-a-store/channels/configuring-product-visibility-using-channels.md)
-* [Creating a Simple Product](../creating-and-managing-products/product-types/creating-a-simple-product.md)
-* [Creating a Grouped Product](../creating-and-managing-products/product-types/creating-a-grouped-product.md)
-* [Creating a Virtual Product](../creating-and-managing-products/product-types/creating-a-virtual-product.md)
+* [Configuring Product Visibility Using Channels](../store-management/channels/configuring-product-visibility-using-channels.md)
+* [Creating a Simple Product](../product-management/creating-and-managing-products/product-types/creating-a-simple-product.md)
+* [Creating a Grouped Product](../product-management/creating-and-managing-products/product-types/creating-a-grouped-product.md)
+* [Creating a Virtual Product](../product-management/creating-and-managing-products/product-types/creating-a-virtual-product.md)
 * [Low Stock Action](./low-stock-action.md)

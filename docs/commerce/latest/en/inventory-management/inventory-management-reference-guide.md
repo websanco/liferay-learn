@@ -38,7 +38,7 @@ The _Overview_ tab displays a short summary of the inventory of a given SKU by w
 | Available | The actual quantity used for calculating the end-user stock availability. |
 | Incoming | This represents quantities that will soon be available in that warehouse. |
 
-Click Add (![Add Icon](../../images/icon-add.png)) to update inventory or to transfer inventory between warehouses.
+Click Add (![Add Icon](../images/icon-add.png)) to update inventory or to transfer inventory between warehouses.
 
 ![Add your inventory or transfer inventory between warehouses.](./inventory-management-reference-guide/images/04.png)
 
@@ -54,7 +54,7 @@ You can input a quantity that will be delivered to a particular warehouse at a f
 
 ![Add a quantity for a particular warehouse.](./inventory-management-reference-guide/images/06.png)
 
-Click Add (![Add Icon](../../images/icon-add.png)) to enter your values.
+Click Add (![Add Icon](../images/icon-add.png)) to enter your values.
 
 ![Add a quantity for a particular warehouse.](./inventory-management-reference-guide/images/05.png)
 
@@ -83,7 +83,7 @@ Inventory Management is located in the _Control Panel_. To access Inventory Mana
 
 ## Additional Information
 
-* [Creating SKUs for Product Variants](../creating-and-managing-products/products/creating-skus-for-product-variants.md)
+* [Creating SKUs for Product Variants](../product-management/creating-and-managing-products/products/creating-skus-for-product-variants.md)
 * [Low Stock Action](./low-stock-action.md)
 * [Setting Up Commerce Warehouses](./setting-up-commerce-warehouses.md)
 * [Warehouse Reference Guide](./warehouse-reference-guide.md)

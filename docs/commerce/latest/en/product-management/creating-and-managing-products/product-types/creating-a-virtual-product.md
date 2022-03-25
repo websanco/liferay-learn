@@ -18,7 +18,7 @@ Follow these steps to create a Virtual Product:
 
 1. Click *Submit* when finished.
 
-Once a Virtual Product is created, you'll need to associate it with the desired digital assets, set its SKU's [base price](./../../../pricing/setting-a-products-base-price.md), and [assign it inventory](../../managing-inventory/setting-inventory-by-warehouse.md) before it can be purchased by customers.
+Once a Virtual Product is created, you'll need to associate it with the desired digital assets, set its SKU's [base price](./../../../pricing/setting-a-products-base-price.md), and [assign it inventory](../../../inventory-management/setting-inventory-by-warehouse.md) before it can be purchased by customers.
 
 ## Configuring Virtual Products
 
@@ -106,7 +106,7 @@ To set product prices and quantities:
 
 To learn more about pricing see: [Introduction to Pricing](../../../pricing/introduction-to-pricing.md)
 
-To learn how to configure inventory for your product, see: [Setting Inventory by Warehouse](../../managing-inventory/setting-inventory-by-warehouse.md).
+To learn how to configure inventory for your product, see: [Setting Inventory by Warehouse](../../../inventory-management/setting-inventory-by-warehouse.md).
 
 Once you have set the product's price and SKUs, see the sections above on how to add Product Options, Specifications or upload Product Images.
 

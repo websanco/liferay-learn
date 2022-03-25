@@ -38,7 +38,7 @@ Once the server finishes restarting, the connector is active and ready for confi
 
 ## Configure the Connector
 
-The PunchOut2Go Connector is configured on a per-[channel](../starting-a-store/channels/introduction-to-channels.md) basis.
+The PunchOut2Go Connector is configured on a per-[channel](../../store-management/channels/introduction-to-channels.md) basis.
 
 Users must have the URL of the store's catalog page; in this example: `http://localhost:8080/web/everest.com/catalog`.
 
@@ -86,7 +86,7 @@ The Auto Login _Punch Out_ Token is configured.
 
 ## Create a Punch Out Buyer Role
 
-As best practice, users should create a Role for vendors using Punch Out. To learn more about Commerce Roles, see [Commerce Roles](../users-and-accounts/roles-and-permissions/commerce-roles-reference.md). For more information about Roles and Permissions in DXP, see [Understanding Roles and Permissions](https://learn.liferay.com/dxp/latest/en/users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.html)
+As best practice, users should create a Role for vendors using Punch Out. To learn more about Commerce Roles, see [Commerce Roles](../../users-and-accounts/roles-and-permissions/commerce-roles-reference.md). For more information about Roles and Permissions in DXP, see [Understanding Roles and Permissions](https://learn.liferay.com/dxp/latest/en/users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.html)
 
 1. Navigate to the _Control Panel_ → _Users_ → _Roles_.
 1. Click the _Site Roles_ tab.

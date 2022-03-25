@@ -42,7 +42,7 @@ After the SKUs have been generated, set the base price and quantities in the inv
 
 To learn more about pricing, see: [Introduction to Pricing](../../../pricing/introduction-to-pricing.md)
 
-To learn how to configure inventory for your product, see: [Setting Inventory by Warehouse](../../managing-inventory/setting-inventory-by-warehouse.md).
+To learn how to configure inventory for your product, see: [Setting Inventory by Warehouse](../../../inventory-management/setting-inventory-by-warehouse.md).
 
 ## Configure Product Specifications
 
@@ -99,4 +99,4 @@ Once you have set the product's price and SKUs, see the sections above on how to
 
 * [Creating a Grouped Product](./creating-a-grouped-product.md)
 * [Creating a Virtual Product](./creating-a-virtual-product.md)
-* [Setting Inventory by Warehouse](../../managing-inventory/setting-inventory-by-warehouse.md)
+* [Setting Inventory by Warehouse](../../../inventory-management/setting-inventory-by-warehouse.md)

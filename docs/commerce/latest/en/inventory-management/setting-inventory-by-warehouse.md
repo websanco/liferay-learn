@@ -1,6 +1,6 @@
 # Setting Inventory by Warehouse
 
-Stores with multiple warehouses can manage product inventory on a per warehouse basis. The _Inventory_ menu is where users manage the number of products available for sale in each warehouse. If the [Minium Accelerator](../../starting-a-store/using-the-minium-accelerator-to-jump-start-your-b2b-store.md) was used to create the store, there are three warehouses already created.
+Stores with multiple warehouses can manage product inventory on a per warehouse basis. The _Inventory_ menu is where users manage the number of products available for sale in each warehouse. If the [Minium Accelerator](../starting-a-store/using-the-minium-accelerator-to-jump-start-your-b2b-store.md) was used to create the store, there are three warehouses already created.
 
 To set inventory by warehouse:
 
@@ -26,7 +26,7 @@ To transfer stock between warehouses:
 
 1. Go to the _Global Applications_ menu &rarr; _Commerce_ &rarr; _Inventory_.
 1. Click on a SKU (CREAM-12PACK).
-1. Click the (![Add icon](../../images/icon-add.png)) then _Create Transfer_.
+1. Click the (![Add icon](../images/icon-add.png)) then _Create Transfer_.
 
     ![Users can transfer stock between warehouses](./setting-inventory-by-warehouse/images/02.png)
 
@@ -70,7 +70,7 @@ To transfer stock between warehouses:
 
 1. Navigate to the _Control Panel_ &rarr; _Commerce_ &rarr; _Inventory_.
 1. Click on a SKU (CREAM-12PACK).
-1. Click the (![Add icon](../../images/icon-add.png)) then _Create Transfer_.
+1. Click the (![Add icon](../images/icon-add.png)) then _Create Transfer_.
 
     ![Users can transfer stock between warehouses](./setting-inventory-by-warehouse/images/02.png)
 

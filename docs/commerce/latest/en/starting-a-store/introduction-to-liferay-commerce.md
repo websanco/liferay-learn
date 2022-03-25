@@ -22,11 +22,11 @@ Liferay Commerce includes a wide range of tools for setting up a storefront. New
 
 ## Multi-Channel Catalog and Product Information Management
 
-Liferay Commerce contains a catalog management system that supports a variety of [product types](../product-management/creating-and-managing-products/product-types/introduction-to-product-types.md) and stores a wide range of product data. [Product options](../product-management/creating-and-managing-products/products/using-product-options.md), [pricing](../../pricing/introduction-to-pricing.md), [images](../product-management/creating-and-managing-products/products/product-images.md), and [specifications](../product-management/creating-and-managing-products/products/specifications.md) are a few examples. Products are then readily available to a distribution channel of choice.
+Liferay Commerce contains a catalog management system that supports a variety of product types and stores a wide range of product data. [Product options](../product-management/creating-and-managing-products/products/using-product-options.md), [pricing](../pricing/introduction-to-pricing.md), [images](../product-management/creating-and-managing-products/products/product-images.md), and [specifications](../product-management/creating-and-managing-products/products/specifications.md) are a few examples. Products are then readily available to a distribution channel of choice.
 
 ![Product catalog](./introduction-to-liferay-commerce/images/02.png)
 
-[Channels](./channels/introduction-to-channels.md) connect catalogs and products to any place products are sold: a Liferay Commerce based storefront, third party marketplaces, or even back office phone sales.
+[Channels](../store-management/channels/introduction-to-channels.md) connect catalogs and products to any place products are sold: a Liferay Commerce based storefront, third party marketplaces, or even back office phone sales.
 
 ![Channels enabled for a product](./introduction-to-liferay-commerce/images/03.png)
 
@@ -34,7 +34,7 @@ Liferay Commerce contains a catalog management system that supports a variety of
 
 ![Product details and related products](./introduction-to-liferay-commerce/images/04.png)
 
-Managing product pricing is flexible through the use of [Price Lists](../../pricing/creating-a-price-list.md) and [Tiered Pricing](../../pricing/using-price-tiers.md) - all of which can be tailored to meet unique customer needs.
+Managing product pricing is flexible through the use of [Price Lists](../pricing/creating-a-price-list.md) and [Tiered Pricing](../pricing/using-price-tiers.md) - all of which can be tailored to meet unique customer needs.
 
 ## B2B Focused Account Management and Purchasing Workflow
 
@@ -46,12 +46,12 @@ Liferay Commerce is optimized for business-to-business transactions with feature
 
 Liferay Commerce offers Order Management that enables buyers and sellers to prepare, place, approve, transmit, and fulfill orders.
 
-Payments for orders may be completed with several different [payment methods](../store-administration/configuring-payment-methods/managing-payment-methods.md) available out-of-the-box. Integration with more payment processors may be accomplished with additional customization.
+Payments for orders may be completed with several different [payment methods](../store-management/configuring-payment-methods/managing-payment-methods.md) available out-of-the-box. Integration with more payment processors may be accomplished with additional customization.
 
 ![Payment Methods page](./introduction-to-liferay-commerce/images/06.png)
 
-Orders may be fulfilled using several different [shipping methods](../store-administration/configuring-shipping-methods/shipping-method-reference.md):
-sellers can [impose a flat rate](../store-administration/configuring-shipping-methods/using-the-flat-rate-shipping-method.md), apply [shipping method restrictions](../store-administration/configuring-shipping-methods/applying-shipping-method-restrictions.md), or integrate with the [carrier rates like FedEx](../store-administration/configuring-shipping-methods/using-the-fedex-shipping-method.md).
+Orders may be fulfilled using several different [shipping methods](../store-management/configuring-shipping-methods/shipping-method-reference.md):
+sellers can [impose a flat rate](../store-management/configuring-shipping-methods/using-the-flat-rate-shipping-method.md), apply [shipping method restrictions](../store-management/configuring-shipping-methods/applying-shipping-method-restrictions.md), or integrate with the [carrier rates like FedEx](../store-management/configuring-shipping-methods/using-the-fedex-shipping-method.md).
 
 ## ML Powered Recommendations and Alerts
 

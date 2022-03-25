@@ -13,7 +13,7 @@ Contents
    pricing.md
    users-and-accounts.md
    order-management.md
-   store-administration.md
+   store-management.md
    inventory-management.md
    add-ons-and-connectors.md
    developer-guide.md

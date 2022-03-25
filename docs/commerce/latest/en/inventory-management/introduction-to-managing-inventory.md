@@ -22,7 +22,7 @@ Warehouses represent the physical locations where product inventory is managed a
 
 See [Setting Up Commerce Warehouses](./setting-up-commerce-warehouses.md) and [Warehouse Reference Guide](./warehouse-reference-guide.md) for more information on managing warehouses.
 
-In order for a store to accept orders for a product, the related channel must have a warehouse associated with it. See the [Introduction to Channels](../../starting-a-store/channels/introduction-to-channels.md) article on how channels work.
+In order for a store to accept orders for a product, the related channel must have a warehouse associated with it. See the [Introduction to Channels](../store-management/channels/introduction-to-channels.md) article on how channels work.
 
 ## Availability Estimates
 
@@ -34,7 +34,7 @@ See the [Availability Estimates](./availability-estimates.md) for more informati
 
 Low Stock Actions can be configured to perform automated actions when available product inventory reaches a specified threshold. See the [Low Stock Action](./low-stock-action.md) to learn how to configure what behavior is executed when inventory reaches a minimum threshold.
 
-Developers interested in creating their own custom low stock action can refer to [Implementing a Custom Low Stock Activity](../../developer-guide/implementing-a-custom-low-stock-activity.md).
+Developers interested in creating their own custom low stock action can refer to [Implementing a Custom Low Stock Activity](../developer-guide/managing-inventory/implementing-a-custom-low-stock-activity.md).
 
 ## Setting Inventory by Warehouse
 
@@ -44,8 +44,8 @@ In Liferay Commerce, inventory management is done per product SKU. To learn more
 
 ## Additional Information
 
-* [Creating a New Shipment](../../order-management/shipments/creating-a-shipment.md)
+* [Creating a New Shipment](../order-management/shipments/creating-a-shipment.md)
 * [Inventory Management Reference Guide](./inventory-management-reference-guide.md)
 * [Product Inventory Configuration Reference](./product-inventory-configuration-reference.md)
-* [Order Life Cycle](../../order-management/orders/order-life-cycle.md)
+* [Order Life Cycle](../order-management/orders/order-life-cycle.md)
 * [Using the Inventory Management System](./using-the-inventory-management-system.md)

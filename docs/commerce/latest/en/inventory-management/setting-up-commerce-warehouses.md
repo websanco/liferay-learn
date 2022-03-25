@@ -2,19 +2,19 @@
 
 Commerce Warehouses represent physical locations where Product inventory is stored. Each Warehouse can be linked to multiple Channels and must have a set geolocation to be activated. These geolocations are used by the Fedex shipping method when calculating shipping costs for customers.
 
-When using an [accelerator](../../starting-a-store/accelerators.md) to create a Commerce Site, three sample Warehouses are created.
+When using an [accelerator](../starting-a-store/accelerators.md) to create a Commerce Site, three sample Warehouses are created.
 
 ```{note}
-When setting up commerce warehouses, users may need to first enable the applicable country and region location of the Warehouse (state or province). See [Adding Regions](../../store-administration/adding-regions.md) for more information.
+When setting up commerce warehouses, users may need to first enable the applicable country and region location of the Warehouse (state or province). See [Adding Regions](../store-management/adding-regions.md) for more information.
 ```
 
 ## Adding a Warehouse
 
 Follow these steps to add a new Warehouse:
 
-1. Open the *Global Menu* (![Global Menu](../../images/icon-applications-menu.png)), click on the *Commerce* tab, and go to *Warehouses*.
+1. Open the *Global Menu* (![Global Menu](../images/icon-applications-menu.png)), click on the *Commerce* tab, and go to *Warehouses*.
 
-1. Click the *Add* button (![Add Button](../../images/icon-add.png)).
+1. Click the *Add* button (![Add Button](../images/icon-add.png)).
 
    ![Click the Add button to create a new Warehouse.](./setting-up-commerce-warehouses/images/01.png)
 
@@ -42,7 +42,7 @@ Commerce provides integration with the Bing Maps API to automatically generate W
 
 Then, follow these steps to configure the Bing Geocoder for your instance:
 
-1. Open the *Global Menu* (![Global Menu](../../images/icon-applications-menu.png)), and go to *Control Panel* &rarr; *System Settings* &rarr; *Commerce* &rarr; *Shipping* &rarr; *Bing Geocoder*.
+1. Open the *Global Menu* (![Global Menu](../images/icon-applications-menu.png)), and go to *Control Panel* &rarr; *System Settings* &rarr; *Commerce* &rarr; *Shipping* &rarr; *Bing Geocoder*.
 
 1. Enter your *API Key*.
 
@@ -50,7 +50,7 @@ Then, follow these steps to configure the Bing Geocoder for your instance:
 
 1. Click *Save*.
 
-Once the Geocoder is configured, you can generate Warehouse geolocations for any Warehouse with a set address. Simply navigate to the Warehouses page, click on the *Actions* button (![Actions Button](../../images/icon-actions.png)) for the desired Warehouse, and select *Geolocate*. The Geocoder converts the address into latitude and longitude coordinates.
+Once the Geocoder is configured, you can generate Warehouse geolocations for any Warehouse with a set address. Simply navigate to the Warehouses page, click on the *Actions* button (![Actions Button](../images/icon-actions.png)) for the desired Warehouse, and select *Geolocate*. The Geocoder converts the address into latitude and longitude coordinates.
 
 ![Select Geolocate](./setting-up-commerce-warehouses/images/03.png)
 
@@ -60,7 +60,7 @@ To add a warehouse in the _Control Panel_:
 
 1. Go to _Control Panel_ → _Commerce_ → _Settings_.
 1. Click the _Warehouses_ tab.
-1. Click the _Add Warehouse_ (![Add Icon](../../images/icon-add.png)) button.
+1. Click the _Add Warehouse_ (![Add Icon](../images/icon-add.png)) button.
 1. Enter the following:
    * *Name:* _Warehouse name_ (e.g. North Vegas Warehouse)
    * *Description:* _Warehouse description_ (e.g. North Vegas Processing Center)
@@ -79,6 +79,6 @@ The new warehouse is now active and available as an option in the _Shipment_ tab
 
 ## Additional Information
 
-* [Adding Regions](../../store-administration/adding-regions.md)
-* [Deactivating a Country for Billing or Shipping](../../store-administration/deactivating-a-country-for-billing-or-shipping.md)
-* [Introduction to Channels](../../starting-a-store/channels/introduction-to-channels.md)
+* [Adding Regions](../store-management/adding-regions.md)
+* [Deactivating a Country for Billing or Shipping](../store-management/deactivating-a-country-for-billing-or-shipping.md)
+* [Introduction to Channels](../store-management/channels/introduction-to-channels.md)

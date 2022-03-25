@@ -19,7 +19,7 @@ Each inventory item is tracked by a SKU. Users can add multiple SKUs in the _Inv
 To add an inventory item:
 
 1. Navigate to the _Control Panel_ &rarr; _Commerce_ &rarr; _Inventory_.
-1. Click the (![Add Icon](../../images/icon-add.png)) icon.
+1. Click the (![Add Icon](../images/icon-add.png)) icon.
 1. Enter the following:
 
     * **SKU**: CHINAWARE-GRAY
@@ -43,7 +43,7 @@ Safety Stock is product inventory that is physically located in a warehouse but 
 To set a safety stock quantity:
 
 1. Click on the SKU (12 PACKMOCHA).
-1. Click the 3-dot icon (![Actions](../../images/icon-actions.png)) &rarr; _Edit_ next to the warehouse.
+1. Click the 3-dot icon (![Actions](../images/icon-actions.png)) &rarr; _Edit_ next to the warehouse.
 1. Enter the following:
 
    * **Quantity on Hand**: 40 (leave as-is)
@@ -73,7 +73,7 @@ Store managers can enter incoming stock quantities and the expected delivery day
 
 1. Click on the SKU.
 1. Click the _Incoming_ tab.
-1. Click the (![Add Icon](../../images/icon-add.png)) icon.
+1. Click the (![Add Icon](../images/icon-add.png)) icon.
 1. Enter the following:
 
     * **Quantity**: 20

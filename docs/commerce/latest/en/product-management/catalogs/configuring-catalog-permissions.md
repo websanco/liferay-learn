@@ -3,7 +3,7 @@
 Catalog permissions determine which users can see and modify catalogs and their related products. Admin users have these permissions by default and these permissions can be added to new roles that have been added to the system.
 
 ```{note}
-Individual product view permissions are managed by modifying the channels that they are available in. See [Configuring Product Visibility Using Channels](../../starting-a-store/channels/configuring-product-visibility-using-channels.md) to learn more.
+Individual product view permissions are managed by modifying the channels that they are available in. See [Configuring Product Visibility Using Channels](../store-management/channels/configuring-product-visibility-using-channels.md) to learn more.
 ```
 
 ## Adding Catalog Management Permissions to an Existing Role
@@ -58,4 +58,4 @@ The catalog's permissions are now configured.
 ## Additional Information
 
 * [Understanding Roles and Permissions](https://learn.liferay.com/dxp/latest/en/users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.html)
-* [Configuring Product Visibility Using Channels](../../starting-a-store/channels/configuring-product-visibility-using-channels.md)
+* [Configuring Product Visibility Using Channels](../../store-management/channels/configuring-product-visibility-using-channels.md)

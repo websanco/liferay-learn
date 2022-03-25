@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This article is intended to provide a walk through for users who are new to building a store in Liferay Commerce. It assumes that Liferay Commerce (and Liferay DXP) have been appropriately installed and configured. For more information on installation, see the [Installation Overview](../../installation-and-upgrades/installation-overview.md).
+This article is intended to provide a walk through for users who are new to building a store in Liferay Commerce. It assumes that Liferay Commerce (and Liferay DXP) have been appropriately installed and configured. For more information on installation, see the [Installation Overview](../installation-and-upgrades/installation-overview.md).
 
 ## Road Map
 
@@ -17,16 +17,16 @@ This article is intended to provide a walk through for users who are new to buil
 An [Accelerator](../starting-a-store/accelerators.md) may be used to create the store site. Using an Accelerator to create the store site will configure many of the settings mentioned in this section, see [Using the Minium Accelerator to Jump Start Your B2B Store](../starting-a-store/using-the-minium-accelerator-to-jump-start-your-b2b-store.md) for further details.
 ```
 
-Initial store setup is done with the [Admin account](./introduction-to-the-admin-account.md). Read the [Liferay Commerce Configuration Overview](../store-administration/liferay-commerce-configuration-overview.md) to become more familiar with the Liferay Commerce configuration layout and available options.
+Initial store setup is done with the [Admin account](./introduction-to-the-admin-account.md). Read the [Liferay Commerce Configuration Overview](../store-management/liferay-commerce-configuration-overview.md) to become more familiar with the Liferay Commerce configuration layout and available options.
 
 ### Configure Global Commerce Settings
 
 Global configurations for Liferay Commerce include setting the store timezone, available languages, adding regions and region specific measurement units, and more. Learn more from the following articles:
 
-* [Setting Locale Options](../store-administration/locale-options.md)
-* [Adding Regions](../store-administration/adding-regions.md)
-* [Setting up Warehouses](../product-management/managing-inventory/warehouse-reference-guide.md)
-* [Creating Channels](./channels/introduction-to-channels.md)
+* [Setting Locale Options](../store-management/locale-options.md)
+* [Adding Regions](../store-management/adding-regions.md)
+* [Setting up Warehouses](../inventory-management/warehouse-reference-guide.md)
+* [Creating Channels](../store-management/channels/introduction-to-channels.md)
 
 ### Create a Store Site
 
@@ -42,29 +42,29 @@ The following sections cover configurations that are store site specific.
 
 Liferay Commerce provides support for several third party payment processors and also allows for the use of money orders to accept payment. See:
 
-* [Payments](../store-administration/configuring-payment-methods/payments.md)
-* [Managing Payment Methods](../store-administration/configuring-payment-methods/managing-payment-methods.md)
-* [Authorize.net](../store-administration/configuring-payment-methods/authorize.net.md)
-* [PayPal](../store-administration/configuring-payment-methods/mercanet.md)
-* [Mercanet](../store-administration/configuring-payment-methods/mercanet.md)
-* [Money Orders](../store-administration/configuring-payment-methods/mercanet.md)
+* [Payments](../store-management/configuring-payment-methods.md)
+* [Managing Payment Methods](../store-management/configuring-payment-methods/managing-payment-methods.md)
+* [Authorize.net](../store-management/configuring-payment-methods/authorize.net.md)
+* [PayPal](../store-management/configuring-payment-methods/mercanet.md)
+* [Mercanet](../store-management/configuring-payment-methods/mercanet.md)
+* [Money Orders](../store-management/configuring-payment-methods/mercanet.md)
 
 #### Collecting Applicable Taxes
 
 In order to collect the applicable taxes, Liferay Commerce has the ability to create tax categories and to set tax rates by address or by a fixed rate.
 
-* [Creating Tax Categories](../store-administration/configuring-taxes/creating-tax-categories.md)
-* [Setting Rates for Tax Calculations](../store-administration/configuring-taxes/setting-rates-for-tax-calculations.md)
-* [Applying Tax Rates](../store-administration/configuring-taxes/applying-tax-rates.md)
+* [Creating Tax Categories](../pricing/configuring-taxes/creating-tax-categories.md)
+* [Setting Rates for Tax Calculations](../pricing/configuring-taxes/setting-rates-for-tax-calculations.md)
+* [Applying Tax Rates](../pricing/configuring-taxes/applying-tax-rates.md)
 
 #### Shipping Products
 
 Liferay Commerce has several options to calculate shipping rates. Commerce Enterprise subscribers receive FedEx carrier integration out-of-the-box.
 
-* [Shipping Methods](../store-administration/configuring-shipping-methods/shipping-methods.md)
-* [Variable Rate](../store-administration/configuring-shipping-methods/using-the-variable-rate-shipping-method.md)
-* [Flat Rate](../store-administration/configuring-shipping-methods/using-the-flat-rate-shipping-method.md)
-* [Using FedEx as a Carrier](../store-administration/configuring-shipping-methods/using-the-fedex-shipping-method.md)
+* [Shipping Methods](../store-management/configuring-shipping-methods.md)
+* [Variable Rate](../store-management/configuring-shipping-methods/using-the-variable-rate-shipping-method.md)
+* [Flat Rate](../store-management/configuring-shipping-methods/using-the-flat-rate-shipping-method.md)
+* [Using FedEx as a Carrier](../store-management/configuring-shipping-methods/using-the-fedex-shipping-method.md)
 
 ## Creating the Catalog
 
@@ -72,7 +72,7 @@ After setting up the store, begin [creating a new catalog](../product-management
 
 ### Adding Products to a Catalog
 
-When adding a product, there are three product types: **Simple**, **Grouped**, and **Virtual**. See the [Introduction to Product Types](../product-management/creating-and-managing-products/product-types/introduction-to-product-types.md) for more information.
+When adding a product, there are three product types: **Simple**, **Grouped**, and **Virtual**. See the [Introduction to Product Types](../product-management/creating-and-managing-products/product-types.md) for more information.
 
 #### Adding Product Information
 
@@ -83,8 +83,8 @@ The Liferay Commerce Catalog supports storing and managing a wide variety of pro
 * [Product Images](../product-management/creating-and-managing-products/products/product-images.md)
 * [Product Relations](../product-management/creating-and-managing-products/products/related-products-up-sells-and-cross-sells.md)
 * [Product Categorization](../product-management/creating-and-managing-products/products/organizing-your-catalog-with-product-categories.md)
-* [Availability Estimates](../product-management/managing-inventory/availability-estimates.md)
-* [Low Stock Action](../product-management/managing-inventory/low-stock-action.md)
+* [Availability Estimates](../inventory-management/availability-estimates.md)
+* [Low Stock Action](../inventory-management/low-stock-action.md)
 
 #### Product Pricing
 
@@ -96,7 +96,7 @@ There are several ways to price products and these methods are related to one an
 
 #### Managing Inventory
 
-* [Introduction to Managing Inventory](../product-management/managing-inventory/introduction-to-managing-inventory.md)
+* [Introduction to Managing Inventory](../inventory-management/introduction-to-managing-inventory.md)
 
 ## Creating the Storefront
 

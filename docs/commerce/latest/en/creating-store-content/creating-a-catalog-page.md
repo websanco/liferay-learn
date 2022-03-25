@@ -59,4 +59,4 @@ Once this option has been enabled, all Channel Products are displayed in the _Se
 
 ![When enabled, all Channel Products are displayed in the Search Results widget.](./creating-a-catalog-page/images/01.png)
 
-By default, Products are visible across all Channels. However, visibility can be limited to specific Channels. See [Configuring Product Visibility Using Channels](../starting-a-store/channels/configuring-product-visibility-using-channels.md) to learn more.
+By default, Products are visible across all Channels. However, visibility can be limited to specific Channels. See [Configuring Product Visibility Using Channels](../store-management/channels/configuring-product-visibility-using-channels.md) to learn more.

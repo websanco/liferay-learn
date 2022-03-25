@@ -1,0 +1,129 @@
+<script type="module">
+	import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.esm.browser.min.js'
+
+	const page = new Vue({
+		el: '#landingPage',
+		data: {
+			cards: [
+				{
+					sectionName: 'Channels',
+					sectionURL: 'store-management/channels.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'Introduction to Channels',
+							url: 'store-management/channels/introduction-to-channels.html'
+						},
+						{
+							name: 'Managing Channels',
+							url: 'store-management/channels/managing-channels.html'
+						}
+					]
+				},
+				{
+					sectionName: 'Currencies',
+					sectionURL: 'store-management/currencies.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'Understanding the Currencies Hierarchy',
+							url: 'store-management/currencies/understanding-the-currency-hierarchy.html'
+						},
+						{
+							name: 'Adding a New Currency',
+							url: 'store-management/currencies/adding-a-new-currency.html'
+						}
+					]
+				},
+				{
+					sectionName: 'Configuring Payment Methods',
+					sectionURL: 'store-management/configuring-payment-methods.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'Managing Payment Methods',
+							url: 'store-management/configuring-payment-methods/managing-payment-methods.html'
+						},
+						{
+							name: 'Authorize.net',
+							url: 'store-management/configuring-payment-methods/authorize.net.html'
+						},
+						{
+							name: 'PayPal',
+							url: 'store-management/configuring-payment-methods/paypal.html'
+						}
+					]
+				},
+				{
+					sectionName: 'Configuring Shipping Methods',
+					sectionURL: 'store-management/configuring-shipping-methods.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'Using the Fedex Shipping Method',
+							url: 'store-management/configuring-shipping-methods/using-the-fedex-shipping-method.html'
+						},
+						{
+							name: 'Measurement Units',
+							url: 'store-management/configuring-shipping-methods/measurement-units.html'
+						},
+						{
+							name: 'Applying Shipping Method Restrictions',
+							url: 'store-management/configuring-shipping-methods/applying-shipping-method-restrictions.html'
+						},
+					]
+				},
+				{
+					sectionName: 'Liferay Commerce Configuration Overview',
+					sectionURL: 'store-management/liferay-commerce-configuration-overview.html',
+				},
+				{
+					sectionName: 'Locale Options',
+					sectionURL: 'store-management/locale-options.html',
+				},
+				{
+					sectionName: 'Adding Regions',
+					sectionURL: 'store-management/adding-regions.html',
+				},
+				{
+					sectionName: 'Sending Emails',
+					sectionURL: 'store-management/sending-emails.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'Using Notification Templates',
+							url: 'store-management/sending-emails/using-notification-templates.html'
+						},
+						{
+							name: 'Configuring the Commerce Notification Queue',
+							url: 'store-management/sending-emails/configuring-the-commerce-notification-queue.html'
+						},
+						{
+							name: 'Notification Template Variables Reference Guide',
+							url: 'store-management/sending-emails/notification-template-variables-reference-guide.html'
+						}
+					]
+				},
+				{
+					sectionName: 'Guest Checkout',
+					sectionURL: 'store-management/guest-checkout.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'Guest Checkout Overview',
+							url: 'store-management/guest-checkout/guest-checkout-overview.html'
+						},
+						{
+							name: 'Enabling Guest Checkout',
+							url: 'store-management/guest-checkout/enabling-guest-checkout.html'
+						},
+					]
+				},
+				{
+					sectionName: 'Deactivating a Country for Billing or Shipping',
+					sectionURL: 'store-management/deactivating-a-country-for-billing-or-shipping.html',
+				}
+			]
+		}
+	})
+</script>

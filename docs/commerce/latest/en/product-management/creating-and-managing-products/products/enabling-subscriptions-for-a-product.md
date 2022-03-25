@@ -16,7 +16,7 @@ Both Payment Subscriptions and Delivery Subscriptions can be combined for scenar
 
 ## Prerequisites
 
-In order to enable subscriptions for a Product, store administrators must activate a payment method that supports recurring payments. By default, Liferay Commerce supports [Paypal](../../../store-administration/configuring-payment-methods/paypal.md) as a recurring payment method.
+In order to enable subscriptions for a Product, store administrators must activate a payment method that supports recurring payments. By default, Liferay Commerce supports [Paypal](../../../store-management/configuring-payment-methods/paypal.md) as a recurring payment method.
 
 ## Enabling Product Subscriptions
 

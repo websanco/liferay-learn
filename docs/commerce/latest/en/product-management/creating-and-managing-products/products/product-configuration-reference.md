@@ -95,7 +95,7 @@ Create and manage subscription options for Products. Examples include magazines,
 
 ## Visibility
 
-By default, Products are visible across all Channels and Catalogs, you can limit visibility to specific Channels and Account Groups. See [Configuring Product Visibility Using Channels](../../../starting-a-store/channels/configuring-product-visibility-using-channels.md) and [Configuring Product Visibility Using Account Groups](./configuring-product-visibility-using-account-groups.md) for more information.
+By default, Products are visible across all Channels and Catalogs, you can limit visibility to specific Channels and Account Groups. See [Configuring Product Visibility Using Channels](../../../store-management/channels/configuring-product-visibility-using-channels.md) and [Configuring Product Visibility Using Account Groups](./configuring-product-visibility-using-account-groups.md) for more information.
 
 ![Managing Product visibility.](./product-configuration-reference/images/08.png)
 

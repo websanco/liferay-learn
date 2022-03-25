@@ -77,6 +77,6 @@ The Liferay Commerce instance has been updated. There is no need to reindex and 
 
 Liferay Commerce is built on Liferay Digital Experience Platform. Occasionally, it is necessary to update the core Liferay DXP platform, are a requirement to updating to the latest major, minor, or maintenance version. Fixes to Liferay Commerce are independent from Liferay.
 
-* [Liferay Commerce Fix Delivery Method](../../get-help/commerce-enterprise-support/liferay-commerce-fix-delivery-method.md)
+* [Liferay Commerce Fix Delivery Method](../get-help/commerce-enterprise-support/liferay-commerce-fix-delivery-method.md)
 * [Upgrading Liferay Commerce](./upgrading-liferay-commerce.md)
 * [End of Life](https://www.liferay.com/subscription-services/end-of-life/commerce)

@@ -1,10 +1,10 @@
 # Low Stock Action
 
-With Liferay Commerce, you can set up automated actions for when a Product's inventory falls below a specified threshold. While Commerce only includes the *Set as Unpublished* low stock action out of the box, you can create [custom low stock actions](../../developer-guide/implementing-a-custom-low-stock-activity.md) if desired.
+With Liferay Commerce, you can set up automated actions for when a Product's inventory falls below a specified threshold. While Commerce only includes the *Set as Unpublished* low stock action out of the box, you can create [custom low stock actions](../developer-guide/managing-inventory/implementing-a-custom-low-stock-activity.md) if desired.
 
 Follow these steps to set up a low stock action for a Product:
 
-1. Open the *Global Menu* (![Global Menu](../../images/icon-applications-menu.png)), click on the *Commerce* tab, and go to *Products*.
+1. Open the *Global Menu* (![Global Menu](../images/icon-applications-menu.png)), click on the *Commerce* tab, and go to *Products*.
 
 1. Click on the desired Product.
 
@@ -47,4 +47,4 @@ The Low Stock Action for this product has been configured. In the future, should
 ## Additional Information
 
 * [Product Inventory Configuration Reference](./product-inventory-configuration-reference.md)
-* [Implementing a Custom Low Stock Action](../../developer-guide/implementing-a-custom-low-stock-activity.md)
+* [Implementing a Custom Low Stock Action](../developer-guide/managing-inventory/implementing-a-custom-low-stock-activity.md)

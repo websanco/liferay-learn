@@ -2,13 +2,13 @@
 
 If a Product becomes unavailable, store owners can provide customers with an estimate for when it will be restocked.
 
-When using an [accelerator](../../starting-a-store/accelerators.md) to create a Commerce Site, three sample estimates are created.
+When using an [accelerator](../starting-a-store/accelerators.md) to create a Commerce Site, three sample estimates are created.
 
 Follow these steps to create your own availability estimates:
 
-1. Open the *Global Menu* (![Global Menu](../../images/icon-applications-menu.png)), click on the *Commerce* tab, and go to *Availability Estimates*.
+1. Open the *Global Menu* (![Global Menu](../images/icon-applications-menu.png)), click on the *Commerce* tab, and go to *Availability Estimates*.
 
-1. Click the *Add* button (![Add Button](../../images/icon-add.png)).
+1. Click the *Add* button (![Add Button](../images/icon-add.png)).
 
     ![Click the Add button to create a new Availability Estimate.](./availability-estimates/images/01.png)
 
@@ -30,7 +30,7 @@ The selected estimate is displayed to customers whenever the Product's inventory
 
 ## Commerce 2.1 and Below
 
-A set of Availability Estimates are created when using an [Accelerator](../../starting-a-store/accelerators.md) to create a storefront.
+A set of Availability Estimates are created when using an [Accelerator](../starting-a-store/accelerators.md) to create a storefront.
 
 ![Managing Availability Estimates](./availability-estimates/images/04.png)
 
