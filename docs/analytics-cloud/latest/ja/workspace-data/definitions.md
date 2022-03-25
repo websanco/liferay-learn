@@ -1,4 +1,4 @@
-# Definitions
+# 定義
 
 ```{toctree}
 :maxdepth: 3
