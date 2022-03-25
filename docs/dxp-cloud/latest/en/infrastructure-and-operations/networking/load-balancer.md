@@ -87,24 +87,28 @@ For all custom domains added through the console or `LCP.json`, Liferay DXP Clou
 
 ### Adding Custom SSL Certificates
 
-You can also add your own SSL certificate to cover any custom domains you create. You can either use the SSL certificate provided by Let's Encrypt (for any custom domains added through the DXP Cloud console), or you can define one or more custom certificates in your `webserver` service's `LCP.json` file. If certificates exist in both places, then any custom certificates defined in the `LCP.json` file take precedent.
+You can also add your own SSL certificate to cover any custom domains you create. You can either use the SSL certificate provided by Let's Encrypt (for any custom domains added through the DXP Cloud console), or you can define one or more custom certificates by referencing secret values in your `webserver` service's `LCP.json` file. If certificates exist in both places, then any custom certificates defined in the `LCP.json` file take precedent.
 
 When creating custom certificates, note that DXP Cloud only accepts keys and certificates that are in the proper PEM format with [Base64](https://tools.ietf.org/html/rfc4648#section-4) encoding, which must include encapsulation boundaries.
 
-To add a single SSL certificate to the `LCP.json` file, add an `ssl` object with certificates `key` and `crt` values inside of the [`loadbalancer` object](./custom-domains.md#adding-a-custom-domain-via-lcp-json):
+To add a single SSL certificate to the `LCP.json` file:
+
+1. Add [secret variables](../security/managing-secure-environment-variables-with-secrets.md#adding-a-new-secret) to your chosen environment for the certificate's `key` and `crt` values.
+
+1. In your project repository's `webserver/LCP.json` file, add an `ssl` object inside of the `loadbalancer` object, with `key` and `crt` values that [reference the keys for the secrets you added](../security/managing-secure-environment-variables-with-secrets.md#adding-secret-variables-via-lcp-json):
 
 ```json
 {
     "loadbalancer": {
         "ssl": {
-            "key": "...",
-            "crt": "..."
+            "key": "@ssl-key-secret",
+            "crt": "@ssl-crt-secret"
         }
     }
 }
 ```
 
-Using the `ssl` object in your `LCP.json` creates a single custom SSL certificate that maps to all custom domains used in this environment.
+Using the `ssl` object in your `LCP.json` file creates a single custom SSL certificate that maps to all custom domains used in this environment.
 
 ### Mapping Multiple SSL Certificates to Custom Domains
 
