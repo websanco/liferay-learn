@@ -28,6 +28,36 @@ Because documentation is published on a static site, folder names become part of
 
 `docs/dxp/latest/en/site-building/site-appearance/site-appearance.md`
 
+### Badges
+
+Currently there are three badges: subscription, unsupported, and version. Use badges to mark articles or sections appropriately. 
+
+**Subscription:** Use the subscription badge to mark a feature that appears only in the commercial product, and not in the open source product. 
+
+```markdown
+{bdg-primary}`Subscription`
+```
+
+**Unsupported:** Use the unsupported badge to mark a feature that exists, but is not supported. 
+
+```markdown
+{bdg-warning}`Unsupported`
+```
+
+**Version:** Use the version badge to mark a feature that appears in particular versions of the product. 
+
+```markdown
+{bdg-secondary}`Available 7.4 U5+`
+```
+
+Badges may have links: 
+
+```markdown
+{bdg-link-warning}`Unsupported <../unsupported-features.md>
+```
+
+For further information, please see the [Sphinx Design documentation](https://sphinx-design.readthedocs.io/en/latest/badges_buttons.html) on badges.
+
 ### Numbered Lists
 
 Single/double space; number all with 1. Multiple paragraphs must be indented to where the first paragraph starts.
