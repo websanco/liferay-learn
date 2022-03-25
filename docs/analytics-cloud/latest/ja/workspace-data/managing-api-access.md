@@ -1,23 +1,19 @@
-# Managing API Access
+# APIアクセスの管理
 
-Utilizing the Analytics Cloud API requires the use of an access token. This can be found and managed under **Settings** &rarr; **Workspace Data** &rarr; **APIs** .
+Analytics Cloud APIを利用するには、アクセストークンを使用する必要があります。 これは、 *［設定］* &rarr; *［ワークスペースデータ］* &rarr; *［API］*で見つけ管理することが可能です。
 
-<a name="copying-the-access-token" />
+## アクセストークンのコピー
 
-## Copying the Access Token
+[アクセストークンを生成したら](../apis/authentication.md)コピーアイコンをクリックし、アクセストークンをクリップボードにコピーしてください。
 
-After [generating an access token](../apis/authentication.md), click the copy icon to copy the access token to your clipboard.
+![［コピー］アイコンをクリックすると、アクセストークンがコピーされます。](./managing-api-access/images/01.png)
 
-![Click the copy icon to copy the access token.](./managing-api-access/images/01.png)
+APIリクエストでアクセストークンを使用し、認証を行ってください。
 
-Use the access token in your API requests for authentication.
+## アクセストークンの取り消し
 
-<a name="revoking-the-access-token" />
+アクセストークンの有効期限は30日です。 現在のアクセストークンを削除する場合は、［取り消し］ボタンをクリックします。
 
-## Revoking the Access Token
+![現在のアクセストークンを取り消すには、［取り消し］ボタンをクリックします。](./managing-api-access/images/02.png)
 
-The access token expires after 30 days. If you choose to delete your current access token, click the Revoke button.
-
-![Click the revoke button to revoke the current access token.](./managing-api-access/images/02.png)
-
-Click the Continue button and the access token is deleted.
+［Continue］ボタンをクリックすると、アクセストークンが削除されます。

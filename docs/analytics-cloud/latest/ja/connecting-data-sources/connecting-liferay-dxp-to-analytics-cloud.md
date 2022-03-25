@@ -1,13 +1,13 @@
 # Liferay DXPをAnalytics Cloudに接続する
 
-お客様のLiferay DXPインスタンスには、ウェブアナリティクスデータや訪問者データが豊富に含まれています。 ウェブサイトの訪問者情報を監視・収集するためには、データソースを追加してLiferay DXPサイトとAnalytics Cloudとの接続を設定する必要があります。
+お客様のLiferay DXPインスタンスには、Webアナリティクスデータや訪問者データが豊富に含まれています。 Webサイトの訪問者情報を監視・収集するためには、データソースを追加してLiferay DXPサイトとAnalytics Cloudとの接続を設定する必要があります。
 
 Analytics Cloudはアクセストークンを使用してLiferay DXPと接続します。 Liferay DXPのインストールは、以下のフィックスパックの最小要件を満たしている必要があります：
 
 * 7.3 Fix Pack 1
 * 7.2 Fix Pack 11
 * 7.1 Fix Pack 21
-* 7.0 Fix Pack 97
+* 7.0 Fix Pack 98
 
 <a name="adding-a-data-source" />
 

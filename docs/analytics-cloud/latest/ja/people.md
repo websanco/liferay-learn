@@ -31,9 +31,9 @@ people/segments.md
 
 <a name="accounts" />
 
-### アカウント管理
+### アカウント
 
-- [アカウント管理](./people/accounts.md)
+- [アカウント](./people/accounts.md)
 
 <a name="segments" />
 

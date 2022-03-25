@@ -1,6 +1,6 @@
 # 使用量の追跡
 
-Analytics Cloudのプランは、データソースから同期された [個人](../people/individuals/individual-profiles.md) と [ページビュー](../touchpoints/pages/pages.md) の合計量によって制限されます。 いずれかの制限を超えた場合、Analytics Cloudユーザーは、追加使用に対応するためにプランのアップグレードまたはアドオンを購入するように求められます。
+Analytics Cloudのプランは、データソースから同期された [Individuals](../people/individuals/individual-profiles.md) と [Page Views](../touchpoints/pages/pages.md) の合計量によって制限されます。 いずれかの制限を超えた場合、Analytics Cloudユーザーは、追加使用に対応するためにプランのアップグレードまたはアドオンを購入するように求められます。
 
 ![使用量ページでは、プランの制限に近づいたり、制限を超えたりした場合に報告されます。](tracking-usage/images/01.png)
 

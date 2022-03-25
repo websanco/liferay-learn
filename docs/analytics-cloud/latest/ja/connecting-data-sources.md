@@ -10,7 +10,7 @@ connecting-data-sources/adding-a-salesforce-data-source.md
 connecting-data-sources/adding-a-csv-data-source.md
 ```
 
-Liferay Analytics Cloudには2種類のデータが必要です。 １つ目は、Liferay DXP Pagesやアセットとのユーザーインタラクションに関するウェブアナリティクスデータ。 2つ目は、ユーザー自身のプロフィールデータです。 Analytics Cloudはこれら2種類のデータを同期して、ユーザーがどのようにサイトを利用しているのか、およびそれらのユーザーが誰なのかを知ることができます。 まず、Analytics Cloudにデータソースを提供します。
+Liferay Analytics Cloudには2種類のデータが必要です。 １つ目は、Liferay DXP Pagesやアセットとのユーザーインタラクションに関するウェブアナリティクスデータです。 2つ目は、ユーザー自身のプロフィールデータです。 Analytics Cloudはこれら2種類のデータを同期して、ユーザーがどのようにサイトを利用しているのか、およびそれらのユーザーが誰なのかを知ることができます。 まず、Analytics Cloudにデータソースを提供します。
 
 どちらの種類のデータもLiferay DXPインスタンスから取得することができます。 Liferay DXPのユーザーモデルにすでに保存されているものに加えて、他のユーザープロファイルデータがある場合は、CSVファイルからインポートしたり、Salesforceシステムのコンタクトデータで追加することができます。
 
@@ -22,11 +22,11 @@ Liferay Analytics Cloudには2種類のデータが必要です。 １つ目は�
 
 データソースは、ナビゲーションパネルから見ることができます。
 
-1. [設定]を選択します。
+1. ［Settings］を選択します。
 
-1. [データソース]をクリックします。
+1. ［Data Sources］をクリックします。
 
-[データソース]ページが表示され、既存のすべてのデータソースが一覧表示されます。
+［Data Sources］ページが表示され、既存のすべてのデータソースが一覧表示されます。
 
 ![ [データソース]ページからデータソースを表示、編集、および追加します。](./connecting-data-sources/images/01.png)
 
@@ -36,7 +36,7 @@ Liferay Analytics Cloudには2種類のデータが必要です。 １つ目は�
 - [Salesforce データソースの追加](./connecting-data-sources/adding-a-salesforce-data-source.md)
 - [CSVデータソースを追加する](./connecting-data-sources/adding-a-csv-data-source.md)
 
-データソースを作成した後、データソースを変更する必要がある場合もあります。 詳細は [Managing Data Sources](./workspace-data/managing-data-sources.md) を参照してください。
+データソースを作成した後、データソースを変更する必要がある場合もあります。 詳細は [データソースの管理](./workspace-data/managing-data-sources.md) を参照してください。
 
 <a name="next-steps" />
 

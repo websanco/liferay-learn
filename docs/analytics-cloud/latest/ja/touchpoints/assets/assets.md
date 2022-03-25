@@ -9,12 +9,12 @@
 
 これらのアセットのメトリクスは現在、Analytics Cloudで報告されています。
 
-* [ブログ](./blogs.md)
-* [ドキュメントとメディア](./documents-and-media.md)
-* [フォーム](./forms.md)
-* [Webコンテンツ](./tracking-custom-assets.md)
-* [カスタム](./tracking-custom-assets.md)
+* [Blogs](./blogs.md)
+* [Documents and Media](./documents-and-media.md)
+* [Forms](./forms.md)
+* [Web Content](./tracking-custom-assets.md)
+* [Custom](./tracking-custom-assets.md)
 
 ![各アセットには独自のテーブルがあります。](assets/images/01.png)
 
-個々のアセットをクリックすると、そのアセットの分析データを示す概要ページが表示されます。 [既知の訪問者]タブをクリックすると、アセットを操作した既知の訪問者のリストが表示されます。
+個々のアセットをクリックすると、そのアセットの分析データを示す概要ページが表示されます。 ［既知の訪問者］タブをクリックすると、アセットを操作した既知の訪問者のリストが表示されます。

@@ -65,7 +65,7 @@ curl -H "Authorization: Bearer {token}" -L https://analytics.liferay.com/api/rep
 
 ### パラメーター
 
-* `ページ` 整数：ページ番号の結果
+* `ページ` 整数：結果ページ番号
 * `クエリ` 文字列：ユーザーの人口統計情報と一致するキーワード
 
 <a name="individual-activities" />
@@ -97,7 +97,7 @@ curl -H "Authorization: Bearer {token}" -L https://analytics.liferay.com/api/rep
 
 <a name="properties" />
 
-### 詳細設定
+### プロパティ
 
 * `ownerId` （文字列）：ユーザーIDに相当する、アクティビティの所有者。
 * `startTime` （日付）：アクティビティが発生した日付のタイムスタンプ。
@@ -127,13 +127,13 @@ curl -H "Authorization: Bearer {token}" -L https://analytics.liferay.com/api/rep
 
 <a name="properties-1" />
 
-### 詳細設定
+### プロパティ
 
-* ` score ` (数値)：ユーザーがその特定のトピックにどれだけ興味を持っているかを数値で表したもの。
+* ` score ` (数値)：ユーザーがその特定のトピックにどれだけ興味を持っているかを数値（範囲は0～1）で表したもの。
 * `ownerId` （文字列）：ユーザーIDに相当する、アクティビティの所有者。
 * `dateRecorded` （日付）：興味が計算された日付のタイムスタンプ。
 * `applicationId` （文字列）：イベントをトリガーしたアプリケーションのID。
-* `id` （文字列）：興味対象の一異な識別情報。
+* `id` （文字列）：興味対象の一意な識別情報。
 * `name` （文字列）：興味のあるものの名前。
 
 <a name="individual-segments" />
@@ -158,7 +158,7 @@ curl -H "Authorization: Bearer {token}" -L https://analytics.liferay.com/api/rep
 
 <a name="properties-2" />
 
-### 詳細設定
+### プロパティ
 
 `ページ` ：整数、結果ページ番号
 
@@ -184,9 +184,9 @@ curl -H "Authorization: Bearer {token}" -L https://analytics.liferay.com/api/rep
 
 <a name="properties-3" />
 
-### 詳細設定
+### プロパティ
 
-* `ページ` （整数）：ページ番号の結果。
+* `ページ` （整数）：結果ページ番号。
 * `キーワード` （文字列）：ページのタイトルやURL情報にマッチさせるキーワード。
 * `rangeKey` （整数）：データのグループ化に使用される範囲。 設定可能な値は、0（24時間前のデータ）、1（昨日のデータ）、7（7日前のデータ）、28（28日前のデータ）、30（デフォルト値、30日前のデータ）、90（90日前のデータ）。
 * `sortMetric` （文字列）：結果を並べ替えるメトリックを定義。デフォルトはviewsMetrics。可能な値は、ctrMetric、timeOnPageMetric、exitRateMetric、ctpMetric、sessionsMetric、avgTimeOnPageMetric、bounceMetric、maxScrollDepthMetric、visitorsMetric、viewsMetric、bounceRateMetric、indirectAccessMetric、entlinesMetric、directAccessMetric。

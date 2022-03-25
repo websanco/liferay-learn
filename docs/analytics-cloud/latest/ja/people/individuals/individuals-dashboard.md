@@ -4,11 +4,11 @@ Individuals dashboardでは、訪問者やサイトの利用状況に関する�
 
 ダッシュボードを表示するには
 
-1. メニューの **メンバー** のセクションにある［ Individual］ をクリックします。
+1. メニューの **メンバー** のセクションにある［Individual］ をクリックします。
 
 1. **Overview** タブをクリックします（Individualsをクリックすると、このタブがデフォルトで選択されます）。
 
-Individuals ダッシュボードには、以下のパネルがあります。
+Individuals Dashboardには、以下のパネルがあります。
 
 * [Current Totals](#current-totals)
 * [Enriched Profiles](#enriched-profiles)
@@ -20,7 +20,7 @@ Individuals ダッシュボードには、以下のパネルがあります。
 
 ## Current Totals
 
-現在の合計パネルには、Analytics Cloudによって追跡された既知および匿名の個人の合計数が表示されます。
+Current Totalsパネルには、Analytics Cloudによって追跡された既知および匿名の個人の合計数が表示されます。
 
 ![Current Totalsパネルには、サイトへの訪問者の合計数が表示されます。](./individuals-dashboard/images/01.png)
 
@@ -32,7 +32,7 @@ Individuals ダッシュボードには、以下のパネルがあります。
 
 ## Enriched Profiles
 
-Enriched Profiles］パネルには、過去30日以内にエンリッチされた個人の合計数が表示されます。
+Enriched Profilesパネルには、過去30日以内にエンリッチされた個人の合計数が表示されます。
 
 ![Enriched Profilesパネルには、エンリッチメントを受けた個人の総数が表示されます。](./individuals-dashboard/images/02.png)
 
@@ -42,7 +42,7 @@ Enriched Profiles］パネルには、過去30日以内にエンリッチされ�
 
 ## Active Individuals
 
-アクティブなユーザーパネルには、選択した期間中にお客様のサイトにアクセスした既知および匿名の個人に関する情報が表示されます。
+Active Individualsパネルには、選択した期間中にお客様のサイトにアクセスした既知および匿名の個人に関する情報が表示されます。
 
 ![Active Individualsパネルには、本サイトにアクセスしたことのある個人を時系列で表示しています。](./individuals-dashboard/images/03.png)
 
@@ -58,7 +58,7 @@ Interestsパネルでは、人気のあったトピックのトップ5を紹介�
 
 これらのトピックは、ページのHTMLのtitle、description、keywordタグから導き出されます。
 
-興味のあるトピックの全リストを表示するには、パネル内の **View All Interests** をクリックします。 または、ページ上部の［興味］タブをクリックします。
+興味のあるトピックの全リストを表示するには、パネル内の **View All Interests** をクリックします。 または、ページ上部の［Interests］タブをクリックします。
 
 Interestsの詳細については、 [Understanding Interests](../../workspace-data/definitions/managing-interest-topics.html#understanding-interests) を参照してください。
 
@@ -76,7 +76,7 @@ Breakdownパネルは、選択されたユーザーの属性に基づいて分�
 
 1. ドロップダウンメニューで属性を選択します。
 
-1. 内訳の名前を入力し、 **保存** をクリックします。
+1. 内訳の名前を入力し、 **［保存］** をクリックします。
 
-追加属性の内訳を表示するには、 **Explore Breakdown** をクリックしてください。 または、ページ上部の［**ディストリビューション**］タブをクリックします。
+追加属性の内訳を表示するには、 **Explore Breakdown** をクリックしてください。 または、ページ上部の［**Distribution**］タブをクリックします。
 

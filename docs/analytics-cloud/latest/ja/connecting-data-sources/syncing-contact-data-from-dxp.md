@@ -20,19 +20,19 @@
 
 1. ［**連絡先の同期**］ をクリックします。
 
-1. スイッチを使って、 **Sync All** を有効にします。 また、連絡先の一部だけを同期させたい場合は、［ユーザーグループ別に同期］または［組織別に同期］をクリックしてください。
+1. スイッチを使って、 **Sync All** を有効にします。 また、連絡先の一部だけを同期させたい場合は、［Sync by User Groups］または［Sync by Organizations］をクリックしてください。
 
       ![すべての連絡先を同期したり、グループや組織を同期することができます。](./syncing-contact-data-from-dxp/images/01.png)
 
-      ［**保存して次へ**］ ボタンをクリックします。
+      ［**Save and Next**］ ボタンをクリックします。
 
-1. Liferay DXPでは、コンタクトデータを2つの別々のテーブル（ContactとUser）に保存します。 コンタクトタブとユーザータブを切り替えて、同期するフィールドを選択します。 Analytics Cloudでは、いくつかのフィールドを同期する必要があり、それらはグレーで表示されます。
+1. Liferay DXPでは、コンタクトデータを2つの別々のテーブル（ContactとUser）に保存します。 ［Contact］タブと［User］タブを切り替えて、同期するフィールドを選択します。 Analytics Cloudでは、いくつかのフィールドを同期する必要があり、それらはグレーで表示されます。
 
       ![連絡先に同期するフィールドを選択します。](./syncing-contact-data-from-dxp/images/02.png)
 
       なお、ユーザー用に作成されたカスタムフィールドは、すべて同期に利用できます。 ユーザーにカスタムフィールドを追加する についての詳細は [こちら](https://learn.liferay.com/dxp/latest/ja/users-and-permissions/users/adding-custom-fields-to-users.html) 。
 
-      選択後、ページ下部にある **保存** ボタンをクリックします。
+      選択後、ページ下部にある **［保存］** ボタンをクリックします。
 
 <a name="modifying-sync-of-contact-data-fields" />
 
@@ -42,6 +42,6 @@
 
       ![コントロールパネルの［同期されたコンタクトデータ］セクションに移動します。](./syncing-contact-data-from-dxp/images/03.png)
 
-1. **同期データフィールド** をクリックします。
+1. ［**Sync Data Field**］ をクリックします。
 
-1. 修正して、 **保存** ボタンをクリックします。
+1. 修正して、 ［**保存**］ ボタンをクリックします。

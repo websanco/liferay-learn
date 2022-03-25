@@ -6,7 +6,7 @@ Analytics Cloudと同様に、Liferay DXPにはセグメントを含めること
 
 Liferay DXPとAnalytics CloudのSegmentsの比較です。
 
-| Liferay DXPセグメント             | アナリティクスクラウドのセグメント                               |
+| Liferay DXPセグメント             | Analytics Cloudのセグメント                               |
 | ---------------------------- | ----------------------------------------------- |
 | DXPのユーザーデータのみに基づく            | 複数のソース（DXP、Salesforce、CSVファイルなど）からのユーザーデータに基づいて |
 | セッション属性とクッキーから作成             | ユーザーの興味や過去の行動から作成                               |

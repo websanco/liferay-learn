@@ -1,4 +1,4 @@
-# 予定
+# イベント
 
 ```{toctree}
 :maxdepth: 3
