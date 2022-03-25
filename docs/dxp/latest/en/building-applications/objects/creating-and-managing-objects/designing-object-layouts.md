@@ -32,7 +32,7 @@ Object elements can be organized into two types of tabs:
 
 [**Relationships**](#relationships-tabs): Displays relationship tables and must be used for showing the parent side of *One to Many* relationships and both sides of *Many to Many* relationships.
 
-To design your layout, repeat the following steps until you've added all the desired [fields](#adding-fields-tabs) and [relationships](#adding-relationships-tabs).
+To design your layout, repeat the following steps until you've added all the desired [fields](#fields-tabs) and [relationships](#relationships-tabs).
 
 ```{important}
 Only the first tab appears during Object entry creation. Other tabs appear only when editing the Object entry.
