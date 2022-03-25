@@ -54,11 +54,11 @@ Follow these steps to manage permissions for individual Object definitions:
 
 1. Open the *Objects* application via the *Global Menu* (![Global Menu](../../images/icon-applications-menu.png)).
 
-1. Click on the *Actions* button (![Actions Button](../../images/icon-actions.png)) for the desired Object definition and select *Permissions*.
+1. Click the *Actions* button (![Actions Button](../../images/icon-actions.png)) for the desired Object definition and select *Permissions*.
 
    ![Click the Actions button for the desired Object definition and select Permissions.](./objects-application-permissions/images/02.png)
 
-1. Use the checkboxes to grant [Object definition](#actions-on-database-entities) permissions to the desired roles.
+1. Use the checkboxes to grant [Object definition](#actions-on-database-entities) permissions to the desired Roles.
 
    ```{note}
    Permissions defined at the Roles admin level override permissions defined at the individual level.

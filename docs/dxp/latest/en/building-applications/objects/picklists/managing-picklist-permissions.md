@@ -1,10 +1,10 @@
 # Managing Picklist Permissions
 
-Picklist is integrated with Liferay's permissions framework. This means you can assign [application](#application-permissions) and [resource](#resource-permissions) permissions to user roles to determine which users have access to the Picklists application and its data.
+Picklist is integrated with Liferay's permissions framework. This means you can assign [application](#application-permissions) and [resource](#resource-permissions) permissions to user Roles to determine which users have access to the Picklists application and its data.
 
-![Assign Picklist permissions when defining role permissions.](./managing-picklist-permissions/images/01.png)
+![Assign Picklist permissions when defining Role permissions.](./managing-picklist-permissions/images/01.png)
 
-See [Defining Role Permissions](../../../users-and-permissions/roles-and-permissions/defining-role-permissions.md) for more information about assigning permissions to user roles.
+See [Defining Role Permissions](../../../users-and-permissions/roles-and-permissions/defining-role-permissions.md) for more information about assigning permissions to user Roles.
 
 ## Application Permissions
 
@@ -22,7 +22,7 @@ Picklists has the following application permissions:
 
 ## Resource Permissions
 
-Resource permissions grant specific permissions on application resources. Some of these permissions enable performing [operations on database entities](#resource-related-actions) (i.e., model resources). Others grant permission to perform [resource-related operations](#actions-on-database-entities) in an application context (e.g., create a new resource entity).
+Resource permissions grant permissions on specific application resources. Some of these permissions enable performing [operations on database entities](#resource-related-actions) (i.e., model resources). Others grant permission to perform [resource-related operations](#actions-on-database-entities) in an application context (e.g., create a new resource entity).
 
 The Picklists portlet has the following resource permissions.
 
@@ -54,7 +54,7 @@ Follow these steps to manage permissions for individual Picklists:
 
    ![Click the Actions button for the desired Picklist and select Permissions.](./managing-picklist-permissions/images/02.png)
 
-1. Use the checkboxes to grant [database entity](#actions-on-database-entities) permissions to the desired roles.
+1. Use the checkboxes to grant [database entity](#actions-on-database-entities) permissions to the desired Roles.
 
    ```{note}
    Permissions defined at the Roles admin level override permissions defined at the individual level.
