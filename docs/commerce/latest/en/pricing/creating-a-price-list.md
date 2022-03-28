@@ -4,9 +4,9 @@ Price Lists are entities for creating and storing SKU price entries that target 
 
 Follow these steps to create a new Price List:
 
-1. Open the *Global Menu* (![Applications Menu icon](../../images/icon-applications-menu.png)), click on the *Commerce* tab, and go to *Pricing* &rarr; *Price Lists*.
+1. Open the *Global Menu* (![Applications Menu icon](../images/icon-applications-menu.png)), click on the *Commerce* tab, and go to *Pricing* &rarr; *Price Lists*.
 
-1. Click on the *Add* button (![Add icon](../../images/icon-add.png)).
+1. Click on the *Add* button (![Add icon](../images/icon-add.png)).
 
 1. Enter a *Name*, *Catalog*, and *Currency* for the new Price List. While its name and currency can be changed at any time after creation, its Catalog cannot be changed.
 
@@ -31,7 +31,7 @@ When a Catalog is first created, a Base Price List is automatically created to s
 To add a price list:
 
 1. Navigate to the _Control Panel_ → _Commerce_ → _Price Lists_.
-1. Click the (![Add icon](../../images/icon-add.png)) button.
+1. Click the (![Add icon](../images/icon-add.png)) button.
 1. Enter the following fields (example values shown below):
     * **Catalog**: Sahara.com
     * **Name**: VIP Customers
@@ -57,7 +57,7 @@ The price list (_VIP Customers_ in this example) has been created and applied to
 
 ## Additional Information
 
-* [Creating a New Account](../../users-and-accounts/account-management/creating-a-new-account.md)
-* [Creating a New Account Group](../../users-and-accounts/account-management/creating-a-new-account-group.md)
+* [Creating a New Account](../users-and-accounts/account-management/creating-a-new-account.md)
+* [Creating a New Account Group](../users-and-accounts/account-management/creating-a-new-account-group.md)
 * [Adding Products to a Price List](./adding-products-to-a-price-list.md)
 * [Using Price Tiers](./using-price-tiers.md)

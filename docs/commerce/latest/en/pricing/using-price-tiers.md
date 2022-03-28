@@ -4,7 +4,7 @@ With Liferay Commerce, you can use *Price Tiers* to offer price reductions based
 
 Follow these steps to add tiered pricing to an existing Price List:
 
-1. Open the *Global Menu* (![Applications Menu icon](../../images/icon-applications-menu.png)), click on the *Commerce* tab, and go to *Pricing* &rarr; *Price Lists*.
+1. Open the *Global Menu* (![Applications Menu icon](../images/icon-applications-menu.png)), click on the *Commerce* tab, and go to *Pricing* &rarr; *Price Lists*.
 
 1. Click on the desired *Price List*, and go to the *Entries* tab.
 
@@ -16,7 +16,7 @@ Follow these steps to add tiered pricing to an existing Price List:
    While both price tier options are configured in the same way, they apply prices differently. *Bulk Pricing* applies the same tier price to all items in qualifying bulk orders, while *Tiered Pricing* applies different prices to order items according to defined pricing tiers.      
    ```
 
-1. Click the *Add* button (![Add icon](../../images/icon-add.png)).
+1. Click the *Add* button (![Add icon](../images/icon-add.png)).
 
 1. Enter a *Quantity* to determine the minimum quantity for receiving the bulk price.
 
@@ -45,7 +45,7 @@ When finished, click on *Publish* for the selected Price List to make your chang
 1. Click the _Entries_ sub-tab.
 1. Click on a product (_Premium Brake Fluid_ in this example).
 1. Click the _Tier Price Entries_ sub-tab.
-1. Click the (![Add icon](../../images/icon-add.png)) button.
+1. Click the (![Add icon](../images/icon-add.png)) button.
 1. Enter the following fields (example values shown below):
     * **Price**: 90
     * **Promo Price**: (leave it blank)

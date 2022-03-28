@@ -1,12 +1,12 @@
 # Using Gross and Net Price Types
 
-With Liferay Commerce, you can use either the Gross or Net price type for calculating promotions and discounts. This setting is configured for [Price Lists](./creating-a-price-list.md) and [Channels](../../starting-a-store/channels/introduction-to-channels.md).
+With Liferay Commerce, you can use either the Gross or Net price type for calculating promotions and discounts. This setting is configured for [Price Lists](./creating-a-price-list.md) and [Channels](../starting-a-store/channels/introduction-to-channels.md).
 
 ## Setting the Price List's Price Type
 
 Follow these steps to set the price type for a Price List:
 
-1. Open the *Global Menu* (![Applications Menu icon](../../images/icon-applications-menu.png)), click on the *Commerce* tab, and go to *Price Lists*.
+1. Open the *Global Menu* (![Applications Menu icon](../images/icon-applications-menu.png)), click on the *Commerce* tab, and go to *Price Lists*.
 
 1. Click on the Price List you want to configure.
 
@@ -22,7 +22,7 @@ Your selected price type will now be used as the basis for calculating promotion
 
 You can also set the price type for a Channel. To do so, follow these step:
 
-1. Open the *Global Menu* (![Applications Menu icon](../../images/icon-applications-menu.png)), click on the *Commerce* tab, and go to *Channels*.
+1. Open the *Global Menu* (![Applications Menu icon](../images/icon-applications-menu.png)), click on the *Commerce* tab, and go to *Channels*.
 
 1. Click on the desired Channel.
 

@@ -4,7 +4,7 @@ Once you've created a [Price List](./creating-a-price-list.md), create price ent
 
 Follow these steps to add price entries to a Price List for Product SKUs:
 
-1. Open the *Global Menu* (![Applications Menu icon](../../images/icon-applications-menu.png)), click on the *Commerce* tab, and go to *Pricing* &rarr; *Price Lists*.
+1. Open the *Global Menu* (![Applications Menu icon](../images/icon-applications-menu.png)), click on the *Commerce* tab, and go to *Pricing* &rarr; *Price Lists*.
 
 1. Click on the *Price List* you want to configure, and go to the *Entries* tab.
 
@@ -53,7 +53,7 @@ When creating a new product, you can easily add it to an existing price list usi
 
     ![Adding Products to a Price List in 2.1](./adding-products-to-a-price-list/images/02.png)
 
-1. Click the Add (![Add icon](../../images/icon-add.png)) button.
+1. Click the Add (![Add icon](../images/icon-add.png)) button.
 1. Choose one or more price lists (_VIP Customers_ in this example) to which this SKU will be added.
 1. Click _Add_.
 

@@ -5,7 +5,7 @@ Follow the steps below to create a discount by selecting the discount type, the 
 To create a new discount:
 
 1. Go to the _Global Applications_ → _Commerce_ → _Discounts_.
-1. Click the (![Add](../images/icon-add.png)) button to add a new Discount.
+1. Click the (![Add](../../images/icon-add.png)) button to add a new Discount.
 1. Enter a name: _Spring Sale_.
 1. Select a discount type (for example, _Apply to Subtotal_) from the _Apply to_ drop down. (See [Discount Types](./introduction-to-discounts.md#types-of-discounts) to learn more about the different discount types.)
 1. Select _Percentage_ or _Fixed Amount_ from the _Type_ dropdown menu.
@@ -58,7 +58,7 @@ If using more than one rule, you can either aggregate the rules or decide which 
 To add a new discount rule:
 
 1. Once the rule has been created, scroll down to the _Rules_ section.
-1. Click (![Add icon](../images/icon-add.png)) button to add a new Discount Rule.
+1. Click (![Add icon](../../images/icon-add.png)) button to add a new Discount Rule.
 1. Enter a name: _Spring Sales_.
 1. Select _Cart Total_ from the _Rule Type_ drop down menu.
 
@@ -82,7 +82,7 @@ You can make this discount available for all accounts or specific accounts or ac
 To specify which accounts and account groups are eligible for this discount:
 
 1. Click the _Eligibility_ tab.
-1. Click the [Select Account Groups](../users-and-accounts/account-management/creating-a-new-account-group.md) radio button.
+1. Click the [Select Account Groups](../../users-and-accounts/account-management/creating-a-new-account-group.md) radio button.
 1. In the _Add Account Groups_ search bar, search for the desired account groups; in this example, _US Accounts East_.
 1. Click _Select_ to add the account group.
 
@@ -107,11 +107,11 @@ Your store now has an active discount with 20% off selected goods for those in t
 To create a discount:
 
 1. Navigate to the _Control Panel_ &rarr; _Commerce_ &rarr; _Discounts_.
-1. Click the (![Add](../images/icon-add.png)) button to add a new Discount.
+1. Click the (![Add](../../images/icon-add.png)) button to add a new Discount.
 1. Enter a name: _Spring Sale_.
 1. Select a discount type (for example, _Apply to Subtotal_) from the _Target_ drop down. (See [Discount Types](./introduction-to-discounts.md#types-of-discounts) to learn more about the different discount types.)
 1. Check the box for which channel this discount applies to.
-1. Select which [Account Groups](../users-and-accounts/account-management/creating-a-new-account-group.md) this discount applies to. In this example, _US East Coast_.
+1. Select which [Account Groups](../../users-and-accounts/account-management/creating-a-new-account-group.md) this discount applies to. In this example, _US East Coast_.
 1. If using a coupon code, switch the _Use Coupon Code_ toggle to _Yes_. Then enter a code in the _Couple Code_ field. Otherwise leave it as _NO_.
 1. If using a percentage, switch the _Use Percentage_ toggle to _Yes_.
 1. Enter the _Maximum Discount Amount_: $20.00
@@ -130,7 +130,7 @@ Your store now has an active discount with 20% off selected goods for those in t
 
     ![Discount rules tab](./creating-a-discount/images/02.png)
 
-1. Click (![Add icon](../images/icon-add.png)) button to add a new Discount Rule.
+1. Click (![Add icon](../../images/icon-add.png)) button to add a new Discount Rule.
 1. Select _Cart Total_ from the _Type_ drop down menu.
 1. Enter 15.00 in the _Cart Total Minimum Amount_ field.
 1. Click _Save_.

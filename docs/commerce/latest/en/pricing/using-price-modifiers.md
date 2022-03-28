@@ -6,11 +6,11 @@ Price modifiers are defined at the Price List level and modify the price of list
 
 Follow these steps to add a new price modifier to a Price List:
 
-1. Open the *Global Menu* (![Applications Menu icon](../../images/icon-applications-menu.png)), click on the *Commerce* tab, and go to *Pricing* &rarr; *Price Lists*.
+1. Open the *Global Menu* (![Applications Menu icon](../images/icon-applications-menu.png)), click on the *Commerce* tab, and go to *Pricing* &rarr; *Price Lists*.
 
 1. Click on the *Price List* you want to configure, and go to the *Price Modifiers* tab.
 
-1. Click on the *Add* button (![Add icon](../../images/icon-add.png)).
+1. Click on the *Add* button (![Add icon](../images/icon-add.png)).
 
 1. Enter a *Name* for the modifier.
 

@@ -51,5 +51,4 @@ Any selected Web Content article takes priority over terms added in the text edi
 
 ## Additional Information
 
-* [Introduction to Product Types](./introduction-to-product-types.md)
 * [Creating a Virtual Product](./creating-a-virtual-product.md)

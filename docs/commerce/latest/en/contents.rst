@@ -14,6 +14,7 @@ Contents
    users-and-accounts.md
    order-management.md
    store-administration.md
+   inventory-management.md
    add-ons-and-connectors.md
    developer-guide.md
    get-help.md

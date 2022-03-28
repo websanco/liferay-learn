@@ -24,7 +24,7 @@ The Base Price List stores the starting price entry for every Product SKU in a C
 
 ### Base Promotion List
 
-The Base Promotion List stores base promotional price entries for all Product SKUs in a Catalog. When applied to an SKU, the base promotional price entry overrides its base price for all customers. This list is automatically created for every Catalog and is made available to all Accounts and Channels. See [Promotion Base List Reference](./../../promoting-products/promotion-base-list-reference.md) for more information.
+The Base Promotion List stores base promotional price entries for all Product SKUs in a Catalog. When applied to an SKU, the base promotional price entry overrides its base price for all customers. This list is automatically created for every Catalog and is made available to all Accounts and Channels. See [Promotion Base List Reference](./promoting-products/promotion-base-list-reference.md) for more information.
 
    ![The Base Promotion List stores base promotional price entries for all Product SKUs in a Catalog.](./introduction-to-pricing/images/03.png)
 
@@ -36,7 +36,7 @@ Custom Price Lists store price entries for specific Products and are made availa
 
 ### Promotion Lists
 
-Custom Promotion Lists store sale price entries for specific Products and are made available only to eligible customers. These lists can use a different currency from the Base Price List and only include manually selected Products. When applied, they override an SKU's other price entries (e.g., base prices, tiered prices) for eligible users. In these lists, you also define [Price Modifiers](./using-price-modifiers.md) to modify specific price entries. While active, both the original price and promotional price appear together on the Product page so that buyers see the markdown. See [Creating a Promotion](./../../promoting-products/creating-a-promotion.md) for more information.
+Custom Promotion Lists store sale price entries for specific Products and are made available only to eligible customers. These lists can use a different currency from the Base Price List and only include manually selected Products. When applied, they override an SKU's other price entries (e.g., base prices, tiered prices) for eligible users. In these lists, you also define [Price Modifiers](./using-price-modifiers.md) to modify specific price entries. While active, both the original price and promotional price appear together on the Product page so that buyers see the markdown. See [Creating a Promotion](./promoting-products/creating-a-promotion.md) for more information.
 
    ![Use custom Promotion Lists to store targeted sale price entries.](./introduction-to-pricing/images/05.png)
 
@@ -46,7 +46,7 @@ Price Tiers are set directly within a price entry and define specific prices for
 
 ### Discounts
 
-Discounts are applied on top a price and modify it without superseding it. They can be defined within an existing price entry, or created as separate entities and used to target Products, Product Groups, Categories, Shipping costs, Subtotals, or Totals. See [Introduction to Discounts](./../../promoting-products/introduction-to-discounts.md) to learn more.
+Discounts are applied on top a price and modify it without superseding it. They can be defined within an existing price entry, or created as separate entities and used to target Products, Product Groups, Categories, Shipping costs, Subtotals, or Totals. See [Introduction to Discounts](./promoting-products/introduction-to-discounts.md) to learn more.
 
    ![Create Discounts are applied on top a price and modify it without superseding it.](./introduction-to-pricing/images/06.png)
 
@@ -127,4 +127,4 @@ Commerce is updated to use the Pricing Engine v2.0 for all price calculations in
 * [Creating a Price List](./creating-a-price-list.md)
 * [Adding Products to a Price List](./adding-products-to-a-price-list.md)
 * [Using Price Tiers](./adding-products-to-a-price-list.md)
-* [Creating a Discount](../../promoting-products/creating-a-discount.md)
+* [Creating a Discount](./promoting-products/creating-a-discount.md)

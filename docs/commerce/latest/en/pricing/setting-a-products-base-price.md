@@ -6,7 +6,7 @@ Product SKUs are created without a set base price. So, you'll need to add one be
 
 Follow these steps to assign a price to a SKU:
 
-1. Open the *Global Menu* (![Applications Menu icon](../../images/icon-applications-menu.png)), click on the *Commerce* tab, and go to *Products*.
+1. Open the *Global Menu* (![Applications Menu icon](../images/icon-applications-menu.png)), click on the *Commerce* tab, and go to *Products*.
 
 1. Click on the desired product.
 
@@ -44,4 +44,4 @@ This product SKU’s base price, promo price (optional), and cost (optional) hav
 ## Additional Information
 
 * [Creating a Price List](./creating-a-price-list.md)
-* [Creating a Discount](../../promoting-products/creating-a-discount.md)
+* [Creating a Discount](./promoting-products/creating-a-discount.md)
