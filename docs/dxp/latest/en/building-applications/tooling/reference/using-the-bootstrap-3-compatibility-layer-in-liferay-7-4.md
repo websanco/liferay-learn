@@ -28,23 +28,9 @@ Once you have the compatibility layer installed, you can use it in any project t
 
 ## Using the Compatibility Layer in Your Project
 
-To use the compatibility layer, you must import it into your project's `main.scss` and `clay.scss` files (unless it is a theme that already has it included as part of an [upgrade to 7.4](../../../site-building/site-appearance/themes/upgrading-a-theme.md)).
+To use the compatibility layer, you must import it into your project's `clay.scss` file (unless it is a theme that already has it included as part of an [upgrade to 7.4](../../../site-building/site-appearance/themes/upgrading-a-theme.md)).
 
-Add this to your project's `src/css/main.scss` file:
-
-```css
-@import 'clay/base';
-
-@import 'clay/atlas';
-
-@import '@liferay/bs3-bs4-compat/scss/atlas_variables';
-
-@import '@liferay/bs3-bs4-compat/scss/components';
-
-@import '@liferay/bs3-bs4-compat/scss/variables';
-```
-
-Then, if you require the atlas theme variables, then add this to your project's `src/css/clay.scss` file:
+If you require the atlas theme variables, then add this to your project's `src/css/clay.scss` file:
 
 ```css
 @import 'clay/atlas';
