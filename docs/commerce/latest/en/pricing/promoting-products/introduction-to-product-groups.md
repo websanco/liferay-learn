@@ -12,9 +12,9 @@ Product Groups don’t change the way Products are grouped or displayed for the 
 
 ## Creating a Product Group
 
-1. Open the Applications Menu ![Applications Menu](../images/icon-applications-menu.png), click on the _Commerce_ tab, and go to _Pricing_ &rarr; _Product Groups_.
+1. Open the Applications Menu ![Applications Menu](../../images/icon-applications-menu.png), click on the _Commerce_ tab, and go to _Pricing_ &rarr; _Product Groups_.
 
-1. Click _Add_ (![Add](../images/icon-add.png)) and enter a name and description for the Product Group.
+1. Click _Add_ (![Add](../../images/icon-add.png)) and enter a name and description for the Product Group.
 
     ![Enter details for the Product Group.](./introduction-to-product-groups/images/01.png)
 
@@ -42,7 +42,7 @@ Apart from adding Products to a Product Group, you can also link a Product Group
 
 1. Click the Applications Menu &rarr; _Commerce_ tab, and go to _Pricing_ &rarr; _Discounts_.
 
-1. Click _Add_ (![Add](../images/icon-add.png)) and enter the following information:
+1. Click _Add_ (![Add](../../images/icon-add.png)) and enter the following information:
 
     __Name__: Example Product Group Discount
 
@@ -74,15 +74,15 @@ You can validate it by checking the Product in your catalog to view the discount
 
 To link a Price List to a Product Group, you must first create a Price List and then create a Price Modifier that targets the Product Group you created.
 
-1. Open the Applications Menu ![Applications Menu](../images/icon-applications-menu.png), &rarr; _Commerce_ tab and go to _Pricing_ &rarr; _Price Lists_.
+1. Open the Applications Menu ![Applications Menu](../../images/icon-applications-menu.png), &rarr; _Commerce_ tab and go to _Pricing_ &rarr; _Price Lists_.
 
-1. Click _Add_ (![Add](../images/icon-add.png)) and enter a name, catalog, and currency for your Price List.
+1. Click _Add_ (![Add](../../images/icon-add.png)) and enter a name, catalog, and currency for your Price List.
 
     ![Configure the Price List.](./introduction-to-product-groups/images/06.png)
 
 1. Click _Submit_ when done.
 
-1. Click _Add_ (![Add](../images/icon-add.png)) under the Price Modifiers section and enter the following information.
+1. Click _Add_ (![Add](../../images/icon-add.png)) under the Price Modifiers section and enter the following information.
 
     __Name__: Wheels Modifier
 
@@ -116,11 +116,11 @@ You can validate it by checking the product in your catalog to view the updated 
 
 ![The Price Modifier is applied to the product in the Product Group.](./introduction-to-product-groups/images/10.png)
 
-To view whether a discount or price list has been linked to a Product Group, click the _Applications Menu_ ![Applications Menu](../images/icon-applications-menu.png), click the _Commerce_ tab, and go to _Pricing_ &rarr; _Product Groups_. Under Price Lists and Discounts, you can see the associated entities.
+To view whether a discount or price list has been linked to a Product Group, click the _Applications Menu_ ![Applications Menu](../../images/icon-applications-menu.png), click the _Commerce_ tab, and go to _Pricing_ &rarr; _Product Groups_. Under Price Lists and Discounts, you can see the associated entities.
 
 ## Additional Information
 
 * [Introduction to Discounts](./introduction-to-discounts.md)
-* [Introduction to Pricing](../managing-a-catalog/managing-prices/introduction-to-pricing.md)
-* [Creating a Price List](../managing-a-catalog/managing-prices/creating-a-price-list.md)
-* [Adding Products to a Price List](../managing-a-catalog/managing-prices/adding-products-to-a-price-list.md)
+* [Introduction to Pricing](../introduction-to-pricing.md)
+* [Creating a Price List](../creating-a-price-list.md)
+* [Adding Products to a Price List](../adding-products-to-a-price-list.md)

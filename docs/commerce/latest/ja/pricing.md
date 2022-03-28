@@ -1,4 +1,4 @@
-# 価格の管理
+# 価格設定
 
 ```{toctree}
 :maxdepth: 1
@@ -9,6 +9,7 @@ managing-prices/creating-a-price-list.md
 managing-prices/adding-products-to-a-price-list.md
 managing-prices/adding-tiered-pricing.md
 managing-prices/using-gross-and-net-price-types.md
+managing-prices/promoting-products.md
 ```
 
 ```{raw} html

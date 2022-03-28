@@ -16,7 +16,7 @@ Liferay Commerceでは、仮想商品とは、顧客がダウンロードでき�
 
 1. 完了したら、 [**送信**] をクリックします。
 
-仮想商品が作成されたら、顧客が購入できるようにする前に、希望するデジタルアセットと関連付けさせ、SKUの［[基本価格](./../../managing-prices/setting-a-products-base-price.md)］を設定し、［[在庫を割り当てる](../../managing-inventory/setting-inventory-by-warehouse.md) ］必要があります。
+仮想商品が作成されたら、顧客が購入できるようにする前に、希望するデジタルアセットと関連付けさせ、SKUの［[基本価格](./../../../pricing/setting-a-products-base-price.md)］を設定し、［[在庫を割り当てる](../../managing-inventory/setting-inventory-by-warehouse.md) ］必要があります。
 
 <a name="configuring-virtual-products" />
 
@@ -103,10 +103,10 @@ Liferay Commerceでは、仮想商品とは、顧客がダウンロードでき�
     ***Promo Price** : 0.00
     ***Cost** : 0.00
 1. ［**保存**］ をクリックします。 （［Promo Price］および［Cost］フィールドが0.00のままの場合、この時点では割引やプロモーションは適用されません。）
-1. ［**Price List**］をクリックして、この商品を既存の[［価格表］](../../managing-prices/adding-products-to-a-price-list.md)に適用します。
-1. 在庫を設定するには、 ［**在庫**］ サブタブをクリックし、各倉庫に適切な数量を設定します。 更新されたすべての倉庫の ［**保存**]ボタンをクリックします。
+2. ［**Price List**］をクリックして、この商品を既存の[［価格表］](../../../pricing/adding-products-to-a-price-list.md)に適用します。
+3. 在庫を設定するには、 ［**在庫**］ サブタブをクリックし、各倉庫に適切な数量を設定します。 更新されたすべての倉庫の ［**保存**]ボタンをクリックします。
 
-価格設定の詳細は、 [プライシングの概要](../../managing-prices/introduction-to-pricing.md) を参照してください。
+価格設定の詳細は、 [プライシングの概要](../../../pricing/introduction-to-pricing.md) を参照してください。
 
 商品の在庫を設定する方法については、[倉庫ごとの在庫設定](../../managing-inventory/setting-inventory-by-warehouse.md)を参照してください。
 
@@ -116,7 +116,6 @@ Liferay Commerceでは、仮想商品とは、顧客がダウンロードでき�
 
 ## 追加情報
 
-* [商品タイプについて](./introduction-to-product-types.md)
 * [グループ商品の作成](./creating-a-grouped-product.md)
 * [シンプル商品の作成](./creating-a-simple-product.md)
 * [仮想商品リファレンス](./virtual-product-reference.md)

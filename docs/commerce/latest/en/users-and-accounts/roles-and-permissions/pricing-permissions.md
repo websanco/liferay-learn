@@ -98,5 +98,5 @@ Pricing applications reference the following resources:
 
 ## Additional Information
 
-* [Introduction to Pricing](../../managing-a-catalog/managing-prices/introduction-to-pricing.md)
-* [Introduction to Discounts](../../promoting-products/introduction-to-discounts.md)
+* [Introduction to Pricing](../../pricing/introduction-to-pricing.md)
+* [Introduction to Discounts](../../pricing/promoting-products/introduction-to-discounts.md)

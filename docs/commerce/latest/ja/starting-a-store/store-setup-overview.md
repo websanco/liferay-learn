@@ -98,9 +98,9 @@ Liferay Commerceカタログは、さまざまな商品情報の保存と管理�
 
 商品の価格設定にはいくつかの方法があり、これらの方法は価格設定階層（基本価格、価格表、段階型価格、プロモーション価格、割引）で互いに関連しています。 価格はSKUごとに管理されます。
 
-* [価格](../managing-a-catalog/managing-prices/introduction-to-pricing.md)
-* [価格表](../managing-a-catalog/managing-prices/creating-a-price-list.md)
-* [割引](../promoting-products/introduction-to-discounts.md)
+* [価格](../pricing/introduction-to-pricing.md)
+* [価格表](../pricing/creating-a-price-list.md)
+* [割引](../pricing/promoting-products/introduction-to-discounts.md)
 
 #### 在庫管理
 

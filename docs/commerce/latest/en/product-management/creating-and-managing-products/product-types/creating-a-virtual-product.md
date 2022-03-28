@@ -18,7 +18,7 @@ Follow these steps to create a Virtual Product:
 
 1. Click *Submit* when finished.
 
-Once a Virtual Product is created, you'll need to associate it with the desired digital assets, set its SKU's [base price](./../../managing-prices/setting-a-products-base-price.md), and [assign it inventory](../../managing-inventory/setting-inventory-by-warehouse.md) before it can be purchased by customers.
+Once a Virtual Product is created, you'll need to associate it with the desired digital assets, set its SKU's [base price](./../../../pricing/setting-a-products-base-price.md), and [assign it inventory](../../managing-inventory/setting-inventory-by-warehouse.md) before it can be purchased by customers.
 
 ## Configuring Virtual Products
 
@@ -101,10 +101,10 @@ To set product prices and quantities:
     * **Promo Price**: 0.00
     * **Cost**: 0.00
 1. Click _Save_. (If Promo Price and Cost fields are left as 0.00, no discounts or promotions are applied at this point.)
-1. Click _Price List_ to apply this product to any existing [Price Lists](../../managing-prices/adding-products-to-a-price-list.md).
+1. Click _Price List_ to apply this product to any existing [Price Lists](../../../pricing/adding-products-to-a-price-list.md).
 1. To set inventory, click the _Inventory_ sub-tab and set the appropriate quantities in each warehouse. Click the _Save_ button for every warehouse that is updated.
 
-To learn more about pricing see: [Introduction to Pricing](../../managing-prices/introduction-to-pricing.md)
+To learn more about pricing see: [Introduction to Pricing](../../../pricing/introduction-to-pricing.md)
 
 To learn how to configure inventory for your product, see: [Setting Inventory by Warehouse](../../managing-inventory/setting-inventory-by-warehouse.md).
 
@@ -112,7 +112,6 @@ Once you have set the product's price and SKUs, see the sections above on how to
 
 ## Additional Information
 
-* [Introduction to Product Types](./introduction-to-product-types.md)
 * [Creating a Grouped Product](./creating-a-grouped-product.md)
 * [Creating a Simple Product](./creating-a-simple-product.md)
 * [Virtual Product Reference](./virtual-product-reference.md)

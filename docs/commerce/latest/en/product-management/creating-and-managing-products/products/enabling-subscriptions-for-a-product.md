@@ -61,5 +61,5 @@ Subscription details are displayed in a Product's display page via the Product D
 
 ## Additional Information
 
-* [Managing Subscriptions](../../../orders-and-fulfillment/subscriptions/managing-subscriptions.md)
-* [Subscription Administration Reference Guide](../../../orders-and-fulfillment/subscriptions/subscription-administration-reference-guide.md)
+* [Managing Subscriptions](../../../order-management/subscriptions/managing-subscriptions.md)
+* [Subscription Administration Reference Guide](../../../order-management/subscriptions/subscription-administration-reference-guide.md)

@@ -4,11 +4,11 @@ Discounts are created in the _Discounts_ menu in the _Global Applications_ &rarr
 
 * Reducing the price of specific products
 * Offering free shipping
-* Tailoring a discount for specific [Account Groups](../users-and-accounts/account-management/creating-a-new-account-group.md), or to a more narrowly defined group of customers
+* Tailoring a discount for specific [Account Groups](../../users-and-accounts/account-management/creating-a-new-account-group.md), or to a more narrowly defined group of customers
 * Schedule a promotion for a period of time
 
 ```{tip}
-Discounts are not the same as a *Price List*. For more information on Pricing see [Introduction to Pricing](../managing-a-catalog/managing-prices/introduction-to-pricing.md), [Creating a Price List](../managing-a-catalog/managing-prices/creating-a-price-list.md), and [Using Price Tiers](../managing-a-catalog/managing-prices/using-price-tiers.md).
+Discounts are not the same as a *Price List*. For more information on Pricing see [Introduction to Pricing](../introduction-to-pricing.md), [Creating a Price List](../creating-a-price-list.md), and [Using Price Tiers](../using-price-tiers.md).
 ```
 
 ```{note}
@@ -21,7 +21,7 @@ The following types of discounts are available:
 
 | Discount Type | Description |
 | :--- | :--- |
-| Categories | The discount is applied to all products tagged with a specific [Category](../managing-a-catalog/creating-and-managing-products/products/organizing-your-catalog-with-product-categories.md). |
+| Categories | The discount is applied to all products tagged with a specific [Category](../../product-management/creating-and-managing-products/products/organizing-your-catalog-with-product-categories.md). |
 | Products | The discount is applied to a specific product or list of products.  |
 | Shipments | The discount is applied to the shipment costs, either by a percentage or flat sum. |
 | Subtotal | The order's subtotal is reduced, usually before taxes and other fees are applied. |
@@ -36,7 +36,7 @@ Regardless of which discount type you choose, you can require a coupon code to q
 
 ![Activate the Coupon Code feature and enter a coupon code for this discount type.](./introduction-to-discounts/images/02.png)
 
-In order to accept coupon codes, the _Coupon Code Entry_ widget must be deployed on a store's [Checkout](../creating-store-content/commerce-storefront-pages/checkout.md) page. (The Checkout page is created automatically if you had used the [Minium accelerator](../starting-a-store/using-the-minium-accelerator-to-jump-start-your-b2b-store.md) to build the store site.) In this example, the _Coupon Code Entry_ widget is placed on the page so that customers can enter their coupon code while they review their order.
+In order to accept coupon codes, the _Coupon Code Entry_ widget must be deployed on a store's [Checkout](../../creating-store-content/commerce-storefront-pages/checkout.md) page. (The Checkout page is created automatically if you had used the [Minium accelerator](../../starting-a-store/using-the-minium-accelerator-to-jump-start-your-b2b-store.md) to build the store site.) In this example, the _Coupon Code Entry_ widget is placed on the page so that customers can enter their coupon code while they review their order.
 
 ![Place the Coupon Code Entry widget on the Checkout page.](./introduction-to-discounts/images/07.png)
 
@@ -66,7 +66,7 @@ You can define rules that specify requirements to qualify for a discount. There 
 | Has all of these products | Orders must include all specified products in order to receive the discount. |
 | Has one of these products | Orders must contain at least one product from a list of specified products to receive the discount. |
 
-The discount rules are added on the _Rules_ tab. Developers can also [implement new discount rules](../developer-guide/adding-a-new-discount-rule-type.md).
+The discount rules are added on the _Rules_ tab. Developers can also [implement new discount rules](../../developer-guide/promotions/adding-a-new-discount-rule-type.md).
 
 ![Add a discount rule.](./introduction-to-discounts/images/04.png)
 

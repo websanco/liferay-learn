@@ -53,6 +53,6 @@ A Warehouse's geolocation is used by the FedEx shipping method to calculate ship
 
 ## Additional Information
 
-* [Introduction to Shipments](../../orders-and-fulfillment/shipments/introduction-to-shipments.md)
+* [Introduction to Shipments](../../order-management/shipments/introduction-to-shipments.md)
 * [Setting Up Commerce Warehouses](./setting-up-commerce-warehouses.md)
 * [Setting Inventory by Warehouse](./setting-inventory-by-warehouse.md)

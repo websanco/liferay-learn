@@ -48,7 +48,7 @@ SKUが生成されたら、在庫で各アイテムの基本価格と数量を�
 1. ［**公開**］をクリックします。
 1. 設定を閉じます
 
-価格設定の詳細は、 [プライシングの概要](../../managing-prices/introduction-to-pricing.md) を参照してください。
+価格設定の詳細は、 [プライシングの概要](../../../pricing/introduction-to-pricing.md) を参照してください。
 
 商品の在庫を設定する方法については、[倉庫ごとの在庫設定](../../managing-inventory/setting-inventory-by-warehouse.md)を参照してください。
 
@@ -109,7 +109,7 @@ SKUが生成されたら、在庫で各アイテムの基本価格と数量を�
     ***Promo Price** : 0.00
     ***Cost** : 0.00
 1. ［**保存**］ をクリックします。 （［Promo Price］および［Cost］フィールドが00のままの場合、この時点では割引やプロモーションは適用されません。）
-1. ［**Price List**］をクリックして、この商品を既存の[価格リスト](../../managing-prices/adding-products-to-a-price-list.md)に適用します。
+1. ［**Price List**］をクリックして、この商品を既存の[価格リスト](../../../pricing/adding-products-to-a-price-list.md)に適用します。
 
 商品の価格とSKUを設定したら、商品オプションや仕様を追加する方法、または商品画像をアップロードする方法について、上記のセクションを参照してください。
 

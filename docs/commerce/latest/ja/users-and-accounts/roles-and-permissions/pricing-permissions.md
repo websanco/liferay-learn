@@ -104,5 +104,5 @@ Liferay Commerceでは、グローバルメニュー（![Global Menu](../../imag
 
 ## 追加情報
 
-* [プライシングの概要](../../managing-a-catalog/managing-prices/introduction-to-pricing.md)
-* [割引について](../../promoting-products/introduction-to-discounts.md)
+* [プライシングの概要](../../pricing/introduction-to-pricing.md)
+* [割引について](../../../pricing/promoting-products/introduction-to-discounts.md)

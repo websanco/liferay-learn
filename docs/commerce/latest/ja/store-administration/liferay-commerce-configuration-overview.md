@@ -7,7 +7,7 @@ Liferay Commerce 3.0の設定は、 ［**グローバルアプリケーション
 ［**グローバルアプリケーション**］ メニュー &rarr; ［**コマース**］ に移動します。 管理者は以下を構成できます：
 
 * [チャネル](../starting-a-store/channels/managing-channels.md)
-* [価格表](../managing-a-catalog/managing-prices/creating-a-price-list.md)
+* [価格表](../pricing/creating-a-price-list.md)
 * [割引](../promoting-products/introduction-to-discounts.md)
 * プロモーション
 * 商品グループ
@@ -36,7 +36,7 @@ Liferay Commerce 2.1の設定は、Liferay ［**商品メニュー**］ のい�
 ![グローバルCommerce設定](./liferay-commerce-configuration-overview/images/01.png)
 
 * [チャネル](../starting-a-store/channels/managing-channels.md)
-* [価格表](../managing-a-catalog/managing-prices/creating-a-price-list.md)
+* [価格表](../pricing/creating-a-price-list.md)
 * [注文](../order-management/orders/orders-menu-reference-guide.md)
 
 ［コマース Global Settings］メニューには、次のタブが含まれています。

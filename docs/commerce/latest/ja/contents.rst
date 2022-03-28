@@ -10,7 +10,7 @@
    starting-a-store.md
    managing_a_catalog
    creating_store_content
-   promoting-products.md
+   pricing.md
    account_management
    order-management.md
    store-administration.md
