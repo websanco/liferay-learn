@@ -8,12 +8,14 @@
 
    installation-and-upgrades.md
    starting-a-store.md
-   managing_a_catalog
-   creating_store_content
+   product-management.md
+   creating-store-content.md
    pricing.md
    account_management
    order-management.md
-   store-administration.md
+   inventory-management.md
+   store-management.md
+   add-ons-and-connectors.md
    developer-guide.md
    get-help.md
 
