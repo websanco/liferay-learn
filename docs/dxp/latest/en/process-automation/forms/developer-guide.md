@@ -7,6 +7,8 @@ developer-guide/writing-a-custom-forms-field-type.md
 developer-guide/understanding-form-storage-adapters.md
 developer-guide/writing-a-custom-data-provider.md
 developer-guide/writing-a-form-storage-adapter.md
+developer-guide/developing-a-custom-form-field-for-liferay-7-2.md
+
 ```
 
 ## Forms
@@ -15,3 +17,4 @@ developer-guide/writing-a-form-storage-adapter.md
 - [Understanding Form Storage Adapters](./developer-guide/understanding-form-storage-adapters.md)
 - [Writing a Custom Data Provider](./developer-guide/writing-a-custom-data-provider.md)
 - [Writing a Form Storage Adapter](./developer-guide/writing-a-form-storage-adapter.md)
+- [Developing a Custom Form Field for Liferay 7.2](./developer-guide/developing-a-custom-form-field-for-liferay-7-2.md)

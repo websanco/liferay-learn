@@ -1,17 +1,16 @@
 # Writing a Custom Forms Field Type
 
-The Forms application contains many highly configurable [field types out-of-the-box](../creating-and-managing-forms/forms-field-types-reference.md). Most use cases are met with one of the existing field types. If you’re reading this, however, your use case probably wasn’t met with the default field types.
+The Forms application contains many highly configurable [field types out-of-the-box](../creating-and-managing-forms/forms-field-types-reference.md). Most use cases are met with one of the existing field types. If your use case can't be met with the default field types, you can create your own.
 
 ![There are many useful form elements.](./writing-a-custom-forms-field-type/images/01.png)
 
-* See how the example project works
+* Deploy an example project and see how it works
 * Add custom settings to the field
-* Learn how to create form fields for Liferay 7.2
 
 ```{note}
-The example project here is configured to run on Liferay 7.4. If you're running Liferay 7.3, the source code is compatible but the [Workspace project](../../../building-applications/tooling/liferay-workspace/what-is-liferay-workspace.md) must be reconfigured for Liferay 7.3. The steps to do this are included in the instructions below.
+The example project here is coded and configured to run on Liferay 7.4. If you're running Liferay 7.3, the source code is compatible but the [Workspace project](../../../building-applications/tooling/liferay-workspace/what-is-liferay-workspace.md) must be reconfigured for Liferay 7.3. The steps to do this are included in the instructions below.
 
-If you're running Liferay 7.2, this source code will not run. Please see the section [Custom Form Fields on 7.2](#custom-form-fields-on-7-2) to learn more.
+If you're running Liferay 7.2, this source code will not run due to a difference in supported frontend frameworks. Please see the article [Developing a Custom Form Field for Liferay 7.2](./developing-a-custom-form-field-for-liferay-7-2.md) to learn how to adapt the C2P9 Slider code sample for 7.2.
 ```
 
 ## Examine the Custom Forms Field in Liferay 
@@ -50,6 +49,12 @@ To see how storage adapters work, deploy an example and then add some form data 
 
     ```{tip}
     This command is the same as copying the deployed jars to /opt/liferay/osgi/modules on the Docker container.
+    ```
+
+    ```{note}
+    For Liferay 7.3, make these adjustments to the project before deploying it:
+    - In `c2p9-impl/package.json`, change the `devDependencies` reference form `@liferay/portal-7.4` to `@liferay/portal-7.3`.
+    - In `gradle.properties`, change the `liferay.workspace.product` value to `portal-7.3-ga8` (if a Liferay 7.3 version newer than GA8 is available, try to reference it here instead).
     ```
 
 1. Confirm the deployment in the Liferay Docker container console.
@@ -91,7 +96,7 @@ The import statements bring in functionality from Liferay's base form field, `dy
    :lines: 1-2
 ```
 
-The `const Slider =` block defines the field: it consists of the properties `name`, `onChange`, `predefinedValue`, `readOnly`, and `value`. Some of its input properties are hard coded: 
+The `const Slider =` block defines the field: it's instantiated with the parameters `name`, `onChange`, `predefinedValue`, `readOnly`, and `value`. Some of its input properties are hard coded: 
 
 1. `className="ddm-field-slider form-control slider"` blah blah blah
 1. `id="myRange"` blah blah blah
@@ -126,3 +131,228 @@ At the end we export the Main function as the default.
    :language: js
    :lines: 53-55
 ```
+
+## Add Custom Settings to the Form Field
+
+Right now the Max and Min settings for the Slider field are hard coded, but it's better if they're configurable. To add custom settings to a form field,
+
+- Adjust the backend by adding a `DDMFormFieldTypeSettings` class and adding a method to the `DDMFormFieldType`.
+- Adapt the frontend for rendering the new settings by adding a `DDMFormFieldTemplateContextContributor` and updating the way the settings are defined in `Slider.es.js`.
+
+### Supporting Custom Settings in the Backend
+
+The form field's settings are defined in the `DDMTypeSettings` class, which also defines the form that appears in the field's sidebar using the `@DDMForm` annotation. Then the `DDMFormFieldType` itself must know about the new settings definition so it doesn't simply display the default field settings form. A `DDMFormFieldContextContributor` class sends the new settings to the React component so it can be displayed to the end user.
+<!--Note, the description of the context contributor comes from the liferay-docs PR but I can see the settings in the sidebar without this contributor or any frontend work, because of the form annotations that define the settings form. So I need some more understanding of what this contributor is needed for. -->
+
+1. Add a `C2P9DDMFormFieldTypeSettings` Java class to the `com.acme.c2p9.internal.dynamic.data.mapping.form.field.type` package.
+
+   ```java
+   package com.acme.c2p9.internal.dynamic.data.mapping.form.field.type;
+   
+   import com.liferay.dynamic.data.mapping.annotations.DDMForm;
+   import com.liferay.dynamic.data.mapping.annotations.DDMFormField;
+   import com.liferay.dynamic.data.mapping.annotations.DDMFormLayout;
+   import com.liferay.dynamic.data.mapping.annotations.DDMFormLayoutColumn;
+   import com.liferay.dynamic.data.mapping.annotations.DDMFormLayoutPage;
+   import com.liferay.dynamic.data.mapping.annotations.DDMFormLayoutRow;
+   import com.liferay.dynamic.data.mapping.annotations.DDMFormRule;
+   import com.liferay.dynamic.data.mapping.form.field.type.DefaultDDMFormFieldTypeSettings;
+   import com.liferay.dynamic.data.mapping.model.DDMFormFieldValidation;
+   import com.liferay.dynamic.data.mapping.model.LocalizedValue;
+   
+   @DDMForm
+   @DDMFormLayout(
+   	paginationMode = com.liferay.dynamic.data.mapping.model.DDMFormLayout.TABBED_MODE,
+   	value = {
+   		@DDMFormLayoutPage(
+   			title = "%basic",
+   			value = {
+   				@DDMFormLayoutRow(
+   					{
+   						@DDMFormLayoutColumn(
+   							size = 12,
+   							value = {
+   								"label", "predefinedValue", "required", "tip"
+   							}
+   						)
+   					}
+   				)
+   			}
+   		),
+   		@DDMFormLayoutPage(
+   			title = "%advanced",
+   			value = {
+   				@DDMFormLayoutRow(
+   					{
+   						@DDMFormLayoutColumn(
+   							size = 12,
+   							value = {
+   								"dataType", "min", "max", "name", "showLabel", "repeatable",
+   								"type", "validation", "visibilityExpression"
+   							}
+   						)
+   					}
+   				)
+   			}
+   		)
+   	}
+   )
+   public interface C2P9DDMFormFieldTypeSettings
+   	extends DefaultDDMFormFieldTypeSettings {
+   
+   	@DDMFormField(
+   		label = "%min-value",
+   		properties = {
+   			"placeholder=%enter-the-bottom-limit-of-the-range"
+   		},
+   		type = "numeric"
+   	)
+   	public String min();
+   
+   	@DDMFormField(
+   		label = "%max-value",
+   		properties = {
+   			"placeholder=%enter-the-top-limit-of-the-range"
+   		},
+   		type = "numeric"
+   	)
+   	public String max();
+   }
+   ```
+
+1. There are two language keys for each setting: the `label` and the `placeholder`. Open `c2p9-impl/src/main/resources/content/Language.properties` and add these lines:
+
+   ```properties
+   max-value=Maximum Value
+   min-value=Minimum Value
+   enter-the-bottom-limit-of-the-range=Enter the bottom limit of the range
+   enter-the-top-limit-of-the-range=Enter the top limit of the range
+   ```
+
+1. Update the `DDMFormFieldType` class by adding/overriding the `getDDMFormFieldTypeSettings` method:
+
+   ```java
+   @Override
+   public Class<? extends DDMFormFieldTypeSettings>
+   	getDDMFormFieldTypeSettings() {
+   
+   	return C2P9DDMFormFieldTypeSettings.class;
+   }
+   ```
+
+### Supporting Custom Settings in the Frontend
+
+The frontend requires updates to the `Slider.es.js` to support user-entered min and max values, and a `DDMTemplateContextContributor` so that the frontend can receive the setting values from the backend.
+
+1. Create a `C2P9DDMFormFieldTemplateContextContributor` class in the `com.acme.c2p9.internal.dynamic.data.mapping.form.field.type` package:
+
+   ```java
+   package com.acme.c2p9.internal.dynamic.data.mapping.form.field.type;
+   
+   import com.liferay.dynamic.data.mapping.form.field.type.DDMFormFieldTemplateContextContributor;
+   import com.liferay.dynamic.data.mapping.model.DDMFormField;
+   import com.liferay.dynamic.data.mapping.render.DDMFormFieldRenderingContext;
+   
+   import java.util.HashMap;
+   import java.util.Map;
+   
+   import org.osgi.service.component.annotations.Component;
+   
+   @Component(
+   	property = "ddm.form.field.type.name=c2p9-slider",
+   	service = {
+   		DDMFormFieldTemplateContextContributor.class,
+   		C2P9DDMFormFieldTemplateContextContributor.class
+   	}
+   )
+   public class C2P9DDMFormFieldTemplateContextContributor
+   	implements DDMFormFieldTemplateContextContributor {
+   
+   	@Override
+   	public Map<String, Object> getParameters(
+   		DDMFormField ddmFormField,
+   		DDMFormFieldRenderingContext ddmFormFieldRenderingContext) {
+   
+   		Map<String, Object> parameters = new HashMap<>();
+   
+   		parameters.put("max", (String)ddmFormField.getProperty("max"));
+   		parameters.put("min", (String)ddmFormField.getProperty("min"));
+   
+   		return parameters;
+   	}
+   
+   }
+   ```
+1. Update the JavaScript component in `Slider.es.js`, removing the hard coded min and max values and instead allowing for the user to enter their values. The full file contents are provided below:
+
+   ```javascript
+   import {FieldBase} from 'dynamic-data-mapping-form-field-type/FieldBase/ReactFieldBase.es';
+   import {useSyncValue} from 'dynamic-data-mapping-form-field-type/hooks/useSyncValue.es';
+   import React from 'react';
+   
+   const Slider = ({max, min, name, onChange, predefinedValue, readOnly, value}) => (
+   	<input
+   		className="ddm-field-slider form-control slider"
+   		disabled={readOnly}
+   		id="myRange"
+   		max={max}
+   		min={min}
+   		name={name}
+   		onInput={onChange}
+   		type="range"
+   		value={value ? value : predefinedValue}
+   	/>
+   );
+   
+   const Main = ({
+   	label,
+   	max,
+   	min,
+   	name,
+   	onChange,
+   	predefinedValue,
+   	readOnly,
+   	value,
+   	...otherProps
+   }) => {
+   	const [currentValue, setCurrentValue] = useSyncValue(
+   		value ? value : predefinedValue
+   	);
+   
+   	return (
+   		<FieldBase
+   			label={label}
+   			name={name}
+   			predefinedValue={predefinedValue}
+   			{...otherProps}
+   		>
+   			<Slider
+   				max={max}
+   				min={min}
+   				name={name}
+   				onChange={(event) => {
+   					setCurrentValue(event.target.value);
+   					onChange(event);
+   				}}
+   				predefinedValue={predefinedValue}
+   				readOnly={readOnly}
+   				value={currentValue}
+   			/>
+   		</FieldBase>
+   	);
+   };
+   
+   Main.displayName = 'Slider';
+   
+   export default Main;
+   ```
+
+1. Restart Liferay:
+
+    ```shell
+    docker container restart $(docker ps -lq)
+    ```
+
+1. Test the Slider field in a form again. This time make sure you go to the Advanced tab in the field's sidebar settings and try a different min and max setting.
+
+   ![The Min and Max settings are now configurable.](./writing-a-custom-forms-field-type/images/03.png)
