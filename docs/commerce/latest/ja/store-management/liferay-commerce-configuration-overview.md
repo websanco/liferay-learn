@@ -6,9 +6,9 @@ Liferay Commerce 3.0の設定は、 ［**グローバルアプリケーション
 
 ［**グローバルアプリケーション**］ メニュー &rarr; ［**コマース**］ に移動します。 管理者は以下を構成できます：
 
-* [チャネル](../starting-a-store/channels/managing-channels.md)
+* [チャネル](../store-management/channels/managing-channels.md)
 * [価格表](../pricing/creating-a-price-list.md)
-* [割引](../promoting-products/introduction-to-discounts.md)
+* [割引](../pricing/promoting-products/introduction-to-discounts.md)
 * プロモーション
 * 商品グループ
 * [カタログ](../product-management/catalogs/creating-a-new-catalog.md)
@@ -18,10 +18,10 @@ Liferay Commerce 3.0の設定は、 ［**グローバルアプリケーション
 * [出荷](../order-management/shipments/introduction-to-shipments.md)
 * [素材リスト](../product-management/creating-and-managing-products/products/managing-boms.md)
 * [サブスクリプション](../order-management/subscriptions/managing-subscriptions.md)
-* [通貨](../store-administration/currencies/adding-a-new-currency.md)
-* [在庫](../product-management/managing-inventory/introduction-to-managing-inventory.md)
-* [倉庫](../product-management/managing-inventory/warehouse-reference-guide.md)
-* [在庫数の見積もり](../product-management/managing-inventory/availability-estimates.md)
+* [通貨](../store-management/currencies/adding-a-new-currency.md)
+* [在庫](../inventory-management/introduction-to-managing-inventory.md)
+* [倉庫](../inventory-management/warehouse-reference-guide.md)
+* [在庫数の見積もり](../inventory-management/availability-estimates.md)
 
 <a name="liferay-commerce-21-and-below" />
 
@@ -35,7 +35,7 @@ Liferay Commerce 2.1の設定は、Liferay ［**商品メニュー**］ のい�
 
 ![グローバルCommerce設定](./liferay-commerce-configuration-overview/images/01.png)
 
-* [チャネル](../starting-a-store/channels/managing-channels.md)
+* [チャネル](../store-management/channels/managing-channels.md)
 * [価格表](../pricing/creating-a-price-list.md)
 * [注文](../order-management/orders/orders-menu-reference-guide.md)
 
@@ -43,11 +43,11 @@ Liferay Commerce 2.1の設定は、Liferay ［**商品メニュー**］ のい�
 
 ![Commerceのグローバル設定タブ](./liferay-commerce-configuration-overview/images/02.png)
 
-* [在庫数の見積もり](../product-management/managing-inventory/availability-estimates.md)
-* [新しい通貨を追加する為替レート](../store-administration/currencies/adding-a-new-currency.md)
-* [計量単位](../store-administration/configuring-shipping-methods/measurement-units.md)
-* [地域](../store-administration/adding-regions.md)
-* [倉庫](../product-management/managing-inventory/warehouse-reference-guide.md)
+* [在庫数の見積もり](../inventory-management/availability-estimates.md)
+* [新しい通貨を追加する為替レート](../store-management/currencies/adding-a-new-currency.md)
+* [計量単位](../store-management/configuring-shipping-methods/measurement-units.md)
+* [地域](../store-management/adding-regions.md)
+* [倉庫](../inventory-management/warehouse-reference-guide.md)
 
 ### Commerceのサイト設定
 
@@ -63,7 +63,7 @@ Liferay Commerce 2.1の設定は、Liferay ［**商品メニュー**］ のい�
 
 * [お知らせ](./sending-emails/using-notification-templates.md)
 * [注文ワークフローの概要](../order-management/order-workflows/introduction-to-order-workflows.md)
-* [支払方法](../store-administration/configuring-payment-methods/payments.md)
+* [支払方法](../store-management/configuring-payment-methods.md)
 * 商品表示ページ
-* [配送方法](../store-administration/configuring-shipping-methods/shipping-method-reference.md)
+* [配送方法](../store-management/configuring-shipping-methods/shipping-method-reference.md)
 * [サイトのタイプ](../starting-a-store/sites-and-site-types.md)

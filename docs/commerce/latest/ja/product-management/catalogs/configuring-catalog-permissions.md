@@ -64,4 +64,4 @@
 ## 追加情報
 
 * [ロールと権限について](https://learn.liferay.com/dxp/latest/ja/users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.html)
-* [チャネルを使用した商品の可視性の構成](../../starting-a-store/channels/configuring-product-visibility-using-channels.md)
+* [チャネルを使用した商品の可視性の構成](../../store-management/channels/configuring-product-visibility-using-channels.md)

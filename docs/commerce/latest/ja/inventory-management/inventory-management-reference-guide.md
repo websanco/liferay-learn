@@ -40,7 +40,7 @@ Liferay Commerceの在庫管理は、商品の在庫レベルを管理するた�
 | 利用可能  | エンドユーザーの在庫状況の計算に使用される実際の数量。                                              |
 | 受信    | これは、その倉庫で間もなく利用可能になる数量を表します。                                             |
 
-追加（![Add Icon](../../images/icon-add.png)）をクリックして、在庫を更新するか、倉庫間で在庫を転送します。
+追加（![Add Icon](../images/icon-add.png)）をクリックして、在庫を更新するか、倉庫間で在庫を転送します。
 
 ![在庫を追加するか、倉庫間で在庫を移動します。](./inventory-management-reference-guide/images/04.png)
 
@@ -56,7 +56,7 @@ Liferay Commerceの在庫管理は、商品の在庫レベルを管理するた�
 
 ![特定の倉庫の数量を追加します。](./inventory-management-reference-guide/images/06.png)
 
-追加（![Add Icon](../../images/icon-add.png)）をクリックして値を入力します。
+追加（![Add Icon](../images/icon-add.png)）をクリックして値を入力します。
 
 ![特定の倉庫の数量を追加します。](./inventory-management-reference-guide/images/05.png)
 
@@ -89,7 +89,7 @@ Liferay Commerceの在庫管理は、商品の在庫レベルを管理するた�
 
 ## 追加情報
 
-* [商品バリアントのSKU作成](../creating-and-managing-products/products/creating-skus-for-product-variants.md)
+* [商品バリアントのSKU作成](../product-management/creating-and-managing-products/products/creating-skus-for-product-variants.md)
 * [在庫数低下時のアクション](./low-stock-action.md)
 * [Commerce倉庫のセットアップ](./setting-up-commerce-warehouses.md)
 * [倉庫リファレンスガイド](./warehouse-reference-guide.md)

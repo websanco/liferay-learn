@@ -4,9 +4,9 @@
 
 以下の手順に従って、新しい価格表を作成します：
 
-1. ［**グローバルメニュー**］(![Applications Menu icon](../../images/icon-applications-menu.png))を開き、［**Commerce**］タブをクリックして、［**価格**］ &rarr; ［**価格表**］に移動します。
+1. ［**グローバルメニュー**］(![Applications Menu icon](../images/icon-applications-menu.png))を開き、［**Commerce**］タブをクリックして、［**価格**］ &rarr; ［**価格表**］に移動します。
 
-1. **追加** ボタン（![Add icon](../../images/icon-add.png)）をクリックします。
+1. **追加** ボタン（![Add icon](../images/icon-add.png)）をクリックします。
 
 1. 新しい価格表の ［**名前**］ 、 ［**カタログ**］ 、 そして ［**通貨**］ を入力します。 名前と通貨は作成後いつでも変更できますが、カタログは変更できません。
 
@@ -33,7 +33,7 @@
 価格表を追加するには：
 
 1. ［**コントロールパネル**］ → ［**コマース**］ → ［**価格表**］に移動します。
-1. （![Add icon](../../images/icon-add.png)）ボタンをクリックします。
+1. （![Add icon](../images/icon-add.png)）ボタンをクリックします。
 1. 以下のフィールドに入力します（値の例を次に示します）。
     ***カタログ** ：Sahara.com
     ***名前** ：VIP顧客
@@ -61,7 +61,7 @@
 
 ## 追加情報
 
-* [新規アカウントの作成](../../users-and-accounts/account-management/creating-a-new-account.md)
-* [新規アカウントグループの作成](../../users-and-accounts/account-management/creating-a-new-account-group.md)
+* [新規アカウントの作成](../users-and-accounts/account-management/creating-a-new-account.md)
+* [新規アカウントグループの作成](../users-and-accounts/account-management/creating-a-new-account-group.md)
 * [商品を価格表に追加する](./adding-products-to-a-price-list.md)
 * [価格レートを使う](./using-price-tiers.md)

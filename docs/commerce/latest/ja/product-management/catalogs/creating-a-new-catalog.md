@@ -48,5 +48,5 @@
 
 ## 追加情報
 
-* [ロケールオプション](../../store-administration/locale-options.md)
-* [新しい通貨の追加](../../store-administration/currencies/adding-a-new-currency.md)
+* [ロケールオプション](../../store-management/locale-options.md)
+* [新しい通貨の追加](../../store-management/currencies/adding-a-new-currency.md)

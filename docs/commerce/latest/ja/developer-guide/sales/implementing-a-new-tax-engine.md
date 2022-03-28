@@ -160,4 +160,4 @@ this-tax-engine-serves-a-fixed-x-percent-flat-tax-rate=This tax engine serves a 
 ## 追加情報
 
 * [アプリケーションのローカライズ](https://help.liferay.com/hc/en-us/articles/360018168251-Localizing-Your-Application)
-* [税計算のためのレート設定](../store-administration/configuring-taxes/setting-rates-for-tax-calculations.md)
+* [税計算のためのレート設定](../store-management/configuring-taxes/setting-rates-for-tax-calculations.md)

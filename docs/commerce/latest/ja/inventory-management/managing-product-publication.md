@@ -94,9 +94,8 @@ Commerce 2.1以前の設定は、 **コントロールパネル** にありま�
 
 ## 追加情報
 
-* [商品タイプについて](../creating-and-managing-products/product-types/introduction-to-product-types.md)
-* [チャネルを使用した商品の可視性の構成](../../starting-a-store/channels/configuring-product-visibility-using-channels.md)
-* [シンプル商品の作成](../creating-and-managing-products/product-types/creating-a-simple-product.md)
-* [グループ商品の作成](../creating-and-managing-products/product-types/creating-a-grouped-product.md)
-* [仮想商品の作成](../creating-and-managing-products/product-types/creating-a-virtual-product.md)
+* [チャネルを使用した商品の可視性の構成](../store-management/channels/configuring-product-visibility-using-channels.md)
+* [シンプル商品の作成](../product-management/creating-and-managing-products/product-types/creating-a-simple-product.md)
+* [グループ商品の作成](../product-management/creating-and-managing-products/product-types/creating-a-grouped-product.md)
+* [仮想商品の作成](../product-management/creating-and-managing-products/product-types/creating-a-virtual-product.md)
 * [在庫数低下時のアクション](./low-stock-action.md)

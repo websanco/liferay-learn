@@ -109,7 +109,7 @@ SKUは、商品のバリアントを表します。 詳しくは、 ［ [商品�
 
 ## 可視性
 
-デフォルトでは、商品はすべてのチャネルとカタログに表示されますが、特定のチャネルやアカウントグループに表示を制限することもできます。 詳細は、 [チャネルを使用した商品の可視性の構成](../../../starting-a-store/channels/configuring-product-visibility-using-channels.md) および [アカウントグループを使用した商品の可視性の構成](./configuring-product-visibility-using-account-groups.md) を参照してください。
+デフォルトでは、商品はすべてのチャネルとカタログに表示されますが、特定のチャネルやアカウントグループに表示を制限することもできます。 詳細は、 [チャネルを使用した商品の可視性の構成](../../../store-management/channels/configuring-product-visibility-using-channels.md) および [アカウントグループを使用した商品の可視性の構成](./configuring-product-visibility-using-account-groups.md) を参照してください。
 
 ![商品の可視性の管理](./product-configuration-reference/images/08.png)
 

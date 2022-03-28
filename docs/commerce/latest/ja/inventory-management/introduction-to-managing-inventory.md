@@ -22,7 +22,7 @@ Liferay Commerceは、単一の店先と倉庫を持つユーザーから、複�
 
 在庫管理についての詳細は、 [Commerce倉庫のセットアップ](./setting-up-commerce-warehouses.md) と [倉庫リファレンスガイド](./warehouse-reference-guide.md) を参照してください。
 
-ストアが商品の注文を受け付けるには、関連するチャネルに関連付けられた倉庫が必要です。 チャネルの仕組みについては、記事[「Introduction to Channels」](../../starting-a-store/channels/introduction-to-channels.md)を参照してください。
+ストアが商品の注文を受け付けるには、関連するチャネルに関連付けられた倉庫が必要です。 チャネルの仕組みについては、記事[「Introduction to Channels」](../store-management/channels/introduction-to-channels.md)を参照してください。
 
 <a name="availability-estimates" />
 
@@ -38,7 +38,7 @@ Liferay Commerceは、単一の店先と倉庫を持つユーザーから、複�
 
 在庫数低下時のアクションは、販売可能な商品在庫が指定されたしきい値に達したときに自動アクションを実行するように設定できます。 在庫が最小しきい値に達したときに実行されるアクションを設定する方法については、[在庫数低下時のアクション](./low-stock-action.md)を参照してください。
 
-独自のカスタムの在庫数低下時のアクションの作成に興味のある開発者は、[カスタムの在庫不足アクティビティの実装](../../developer-guide/implementing-a-custom-low-stock-activity.md)を参照してください。
+独自のカスタムの在庫数低下時のアクションの作成に興味のある開発者は、[カスタムの在庫不足アクティビティの実装](../developer-guide/managing-inventory/implementing-a-custom-low-stock-activity.md)を参照してください。
 
 <a name="setting-inventory-by-warehouse" />
 
@@ -52,8 +52,8 @@ Liferay Commerceでは、在庫管理は商品SKUごとに行われます。 詳
 
 ## 追加情報
 
-* [新規出荷の作成](../../order-management/shipments/creating-a-shipment.md)
+* [新規出荷の作成](../order-management/shipments/creating-a-shipment.md)
 * [在庫管理リファレンスガイド](./inventory-management-reference-guide.md)
 * [商品の在庫設定のリファレンス](./product-inventory-configuration-reference.md)
-* [注文ライフサイクル](../../order-management/orders/order-life-cycle.md)
+* [注文ライフサイクル](../order-management/orders/order-life-cycle.md)
 * [在庫管理システムの活用](./using-the-inventory-management-system.md)

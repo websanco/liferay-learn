@@ -16,7 +16,7 @@
 
 ## 支払い
 
-［**支払い**］タブは、注文のトランザクション履歴、 [支払方法](../../store-administration/configuring-payment-methods/managing-payment-methods.md)、および支払ステータスを追跡します。
+［**支払い**］タブは、注文のトランザクション履歴、 [支払方法](../../store-management/configuring-payment-methods/managing-payment-methods.md)、および支払ステータスを追跡します。
 
 ![注文メニュー-［支払い］タブ](./order-information/images/02.png)
 
@@ -40,7 +40,7 @@
 
 ## メール
 
-［**メール**］タブには、Liferay Commerceインスタンスによって送信された [トランザクションメール](../../store-administration/sending-emails/store-emails.md) がすべて含まれています。
+［**メール**］タブには、Liferay Commerceインスタンスによって送信された [トランザクションメール](../../store-management/sending-emails/store-emails.md) がすべて含まれています。
 
 ![メールタブ](./order-information/images/05.png)
 
@@ -50,6 +50,6 @@
 
 * [注文ワークフローの概要](../order-workflows/introduction-to-order-workflows.md)
 * [注文メニューリファレンスガイド](./orders-menu-reference-guide.md)
-* [支払方法の管理](../../store-administration/configuring-payment-methods/managing-payment-methods.md)
+* [支払方法の管理](../../store-management/configuring-payment-methods/managing-payment-methods.md)
 * [出荷の概要](../shipments/introduction-to-shipments.md)
-* [メールを保存](../../store-administration/sending-emails/store-emails.md)
+* [メールを保存](../../store-management/sending-emails/store-emails.md)

@@ -16,7 +16,7 @@ A new order is created when a buyer places products into the cart. At this start
 
 ### Step 2: Order Placed
 
-After providing information to the seller and viewing an order summary, the buyer places the order. If an Order Workflow has been enabled, the order is reviewed before submission. While the order is processed, the buyer can receive [notifications](../../store-administration/sending-emails/store-emails.md) tracking the order's status.
+After providing information to the seller and viewing an order summary, the buyer places the order. If an Order Workflow has been enabled, the order is reviewed before submission. While the order is processed, the buyer can receive [notifications](../../store-management/sending-emails/store-emails.md) tracking the order's status.
 
 ### Step 3: Order Transmitted
 
@@ -32,4 +32,4 @@ The seller completes the remaining steps to deliver the ordered products to the 
 * [Processing an Order](./processing-an-order.md)
 * [Orders Menu](./orders-menu-reference-guide.md)
 * [Introduction to Shipments](../shipments/introduction-to-shipments.md)
-* [Store Emails](../../store-administration/sending-emails/store-emails.md)
+* [Store Emails](../../store-management/sending-emails/store-emails.md)

@@ -34,5 +34,5 @@
 
 ## 追加情報
 
-* [カスタムの在庫不足アクティビティの実装](../../developer-guide/implementing-a-custom-low-stock-activity.md)
+* [カスタムの在庫不足アクティビティの実装](../developer-guide/managing-inventory/implementing-a-custom-low-stock-activity.md)
 * [在庫数低下時のアクション](./low-stock-action.md)

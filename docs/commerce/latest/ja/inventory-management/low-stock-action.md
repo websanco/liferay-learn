@@ -1,10 +1,10 @@
 # 在庫数低下時のアクション
 
-Liferay Commerceでは、商品の在庫が指定されたしきい値を下回った場合の自動アクションを設定することができます。 Commerceには、通常 **未公開として設定** されている 在庫数低下時のアクションのみが含まれていますが、必要に応じて [カスタムの在庫数低下時のアクション](../../developer-guide/implementing-a-custom-low-stock-activity.md) を作成することができます。
+Liferay Commerceでは、商品の在庫が指定されたしきい値を下回った場合の自動アクションを設定することができます。 Commerceには、通常 **未公開として設定** されている 在庫数低下時のアクションのみが含まれていますが、必要に応じて [カスタムの在庫数低下時のアクション](../developer-guide/managing-inventory/implementing-a-custom-low-stock-activity.md) を作成することができます。
 
 以下の手順で、商品の在庫数低下時のアクションを設定します：
 
-1. ［**グローバルメニュー**］ (![Global Menu](../../images/icon-applications-menu.png))を開き、［**Commerce**］タブをクリックして、［**商品**］に移動します。
+1. ［**グローバルメニュー**］ (![Global Menu](../images/icon-applications-menu.png))を開き、［**Commerce**］タブをクリックして、［**商品**］に移動します。
 
 1. 目的の商品をクリックします。
 
@@ -51,4 +51,4 @@ Liferay Commerceでは、商品の在庫が指定されたしきい値を下回�
 ## 追加情報
 
 * [商品の在庫設定のリファレンス](./product-inventory-configuration-reference.md)
-* [在庫数低下時のアクションの実装](../../developer-guide/implementing-a-custom-low-stock-activity.md)
+* [在庫数低下時のアクションの実装](../developer-guide/managing-inventory/implementing-a-custom-low-stock-activity.md)

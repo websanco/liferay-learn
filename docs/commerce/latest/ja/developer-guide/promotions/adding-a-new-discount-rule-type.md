@@ -258,6 +258,6 @@ minimum-number-of-items=Minimum Number of Items
 
 ## 追加情報
 
-* [割引を作成する](../../promoting-products/creating-a-discount.md)
+* [割引を作成する](../../pricing/promoting-products/creating-a-discount.md)
 * [アプリケーションのローカライズ](https://help.liferay.com/hc/en-us/articles/360018168251-Localizing-Your-Application)
 * [AUI Taglibsの使用](https://help.liferay.com/hc/en-us/articles/360020189212-Using-AUI-Taglibs)

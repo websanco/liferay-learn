@@ -8,7 +8,7 @@
 
 次の手順に従って、価格をサイトに割り当てます：
 
-1. ［**グローバルメニュー**］ (![Applications Menu icon](../../images/icon-applications-menu.png))を開き、［**Commerce**］タブをクリックして、［**商品**］に移動します。
+1. ［**グローバルメニュー**］ (![Applications Menu icon](../images/icon-applications-menu.png))を開き、［**Commerce**］タブをクリックして、［**商品**］に移動します。
 
 1. 目的の商品をクリックします。
 
@@ -50,4 +50,4 @@
 ## 追加情報
 
 * [価格表の作成](./creating-a-price-list.md)
-* [割引を作成する](../../promoting-products/creating-a-discount.md)
+* [割引を作成する](./promoting-products/creating-a-discount.md)

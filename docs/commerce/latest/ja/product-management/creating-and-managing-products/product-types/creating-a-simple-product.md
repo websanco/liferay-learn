@@ -50,7 +50,7 @@ SKUが生成されたら、在庫で各アイテムの基本価格と数量を�
 
 価格設定の詳細は、 [プライシングの概要](../../../pricing/introduction-to-pricing.md) を参照してください。
 
-商品の在庫を設定する方法については、[倉庫ごとの在庫設定](../../managing-inventory/setting-inventory-by-warehouse.md)を参照してください。
+商品の在庫を設定する方法については、[倉庫ごとの在庫設定](../../../inventory-management/setting-inventory-by-warehouse.md)を参照してください。
 
 <a name="configure-product-specifications" />
 
@@ -117,7 +117,6 @@ SKUが生成されたら、在庫で各アイテムの基本価格と数量を�
 
 ## 追加情報
 
-* [商品タイプについて](./introduction-to-product-types.md)
 * [グループ商品の作成](./creating-a-grouped-product.md)
 * [仮想商品の作成](./creating-a-virtual-product.md)
-* [倉庫ごとの在庫設定](../../managing-inventory/setting-inventory-by-warehouse.md)
+* [倉庫ごとの在庫設定](../../../inventory-management/setting-inventory-by-warehouse.md)

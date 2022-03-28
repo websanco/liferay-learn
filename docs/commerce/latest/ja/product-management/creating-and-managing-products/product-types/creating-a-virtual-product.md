@@ -16,7 +16,7 @@ Liferay Commerceでは、仮想商品とは、顧客がダウンロードでき�
 
 1. 完了したら、 [**送信**] をクリックします。
 
-仮想商品が作成されたら、顧客が購入できるようにする前に、希望するデジタルアセットと関連付けさせ、SKUの［[基本価格](./../../../pricing/setting-a-products-base-price.md)］を設定し、［[在庫を割り当てる](../../managing-inventory/setting-inventory-by-warehouse.md) ］必要があります。
+仮想商品が作成されたら、顧客が購入できるようにする前に、希望するデジタルアセットと関連付けさせ、SKUの［[基本価格](./../../../pricing/setting-a-products-base-price.md)］を設定し、［[在庫を割り当てる](../../../inventory-management/setting-inventory-by-warehouse.md) ］必要があります。
 
 <a name="configuring-virtual-products" />
 
@@ -108,7 +108,7 @@ Liferay Commerceでは、仮想商品とは、顧客がダウンロードでき�
 
 価格設定の詳細は、 [プライシングの概要](../../../pricing/introduction-to-pricing.md) を参照してください。
 
-商品の在庫を設定する方法については、[倉庫ごとの在庫設定](../../managing-inventory/setting-inventory-by-warehouse.md)を参照してください。
+商品の在庫を設定する方法については、[倉庫ごとの在庫設定](../../../inventory-management/setting-inventory-by-warehouse.md)を参照してください。
 
 商品の価格とSKUを設定したら、上記の、商品オプションや仕様の追加、または商品画像をアップロードする方法を参照してください。
 

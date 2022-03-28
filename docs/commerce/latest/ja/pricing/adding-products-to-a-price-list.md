@@ -4,7 +4,7 @@
 
 以下の手順で、商品SKUの価格表に価格エントリを追加します：
 
-1. ［**グローバルメニュー**］(![Applications Menu icon](../../images/icon-applications-menu.png))を開き、［**Commerce**］タブをクリックして、［**価格**］ &rarr; ［**価格表**］に移動します。
+1. ［**グローバルメニュー**］(![Applications Menu icon](../images/icon-applications-menu.png))を開き、［**Commerce**］タブをクリックして、［**価格**］ &rarr; ［**価格表**］に移動します。
 
 1. 設定したい ［**価格表**］ をクリックし、 ［**エントリ**］ タブに移動します。
 
@@ -55,7 +55,7 @@
 
     ![2.1での価格表への商品の追加](./adding-products-to-a-price-list/images/02.png)
 
-1. 追加（![Add icon](../../images/icon-add.png)）ボタンをクリックします。
+1. 追加（![Add icon](../images/icon-add.png)）ボタンをクリックします。
 1. このSKUを追加する1つ以上の価格表を選択します（この例では **VIP Customers**）。
 1. ［**追加**］をクリックします。
 

@@ -79,7 +79,7 @@ Payment Subscriptionセクションでは、次の情報を追跡します。
 | フィールド        | 説明                                                                   |
 | :--- | :--- |
 | 状態           | これはサブスクリプションのワークフローステータスです。                                          |
-| 次の繰り返し日      | これは、 [発送](./shipments/introduction-to-shipments.md) が発送された翌日です。      |
+| 次の繰り返し日      | これは、 [発送](../shipments/introduction-to-shipments.md) が発送された翌日です。      |
 | サブスクリプションタイプ | これは、サブスクリプションのタイプです。                                                 |
 | サブスクリプション期間  | これは、出荷の間隔を指します。                                                      |
 | モード          | これは、間隔がマークされた日付を指します。 ユーザーは、オプションとして月の正確な日または **月の最後の日** を選択することもできます。 |
@@ -106,7 +106,7 @@ Payment Subscriptionセクションでは、次の情報を追跡します。
 | フィールド    | 説明                                                               |
 | :--- | :--- |
 | 日付を作成します | これは、注文が[作成された日です ](../orders/processing-an-order.md)。            |
-| 出荷ID     | この番号は [発送](./shipments/introduction-to-shipments.md) IDとして生成されます |
+| 出荷ID     | この番号は [発送](../shipments/introduction-to-shipments.md) IDとして生成されます |
 | 状態       | これは [注文](../orders/orders-menu-reference-guide.md)のステータスです。      |
 | オーダーID   | これは、サブスクリプションの基になる注文を指します。                                       |
 | 送信先      | これはアカウントの配達先住所です。                                                |

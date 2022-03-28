@@ -11,7 +11,7 @@
    product-management.md
    creating-store-content.md
    pricing.md
-   account_management
+   users-and-accounts.md
    order-management.md
    inventory-management.md
    store-management.md

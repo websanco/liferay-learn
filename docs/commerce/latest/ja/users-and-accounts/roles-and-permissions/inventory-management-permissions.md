@@ -59,6 +59,6 @@ Liferay Commerceでは、グローバルメニュー（![Global Menu](../../imag
 
 ## 追加情報
 
-* [在庫管理の概要](../../product-management/managing-inventory/introduction-to-managing-inventory.md)
-* [在庫管理リファレンスガイド](../../product-management/managing-inventory/inventory-management-reference-guide.md)
-* [倉庫リファレンスガイド](../../product-management/managing-inventory/warehouse-reference-guide.md)
+* [在庫管理の概要](../../inventory-management/introduction-to-managing-inventory.md)
+* [在庫管理リファレンスガイド](../../inventory-management/inventory-management-reference-guide.md)
+* [倉庫リファレンスガイド](../../inventory-management/warehouse-reference-guide.md)

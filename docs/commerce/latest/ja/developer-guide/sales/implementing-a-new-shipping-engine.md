@@ -301,5 +301,5 @@ ship-for-a-discounted-price=Ship for a discounted price.
 
 ## 追加情報
 
-* [配送方法の制限の適用](../../store-administration/configuring-shipping-methods/applying-shipping-method-restrictions.md)
+* [配送方法の制限の適用](../../store-management/configuring-shipping-methods/applying-shipping-method-restrictions.md)
 * [アプリケーションのローカライズ](https://help.liferay.com/hc/en-us/articles/360018168251-Localizing-Your-Application)

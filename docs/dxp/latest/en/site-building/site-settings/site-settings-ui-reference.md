@@ -27,7 +27,7 @@ By default, the Commerce area includes the following settings:
 - Payment
 - Shipping
 
-Here you can configure the Commerce settings at the Site scope. For more information about Commerce settings, see [Liferay Commerce Configuration Overview](https://learn.liferay.com/commerce/latest/en/store-administration/liferay-commerce-configuration-overview.html).
+Here you can configure the Commerce settings at the Site scope. For more information about Commerce settings, see [Liferay Commerce Configuration Overview](https://learn.liferay.com/commerce/latest/en/store-management/liferay-commerce-configuration-overview.html).
 
 ![Default Site Settings for Commerce](./site-settings-ui-reference/images/21.png)
 

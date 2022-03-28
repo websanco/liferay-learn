@@ -2,13 +2,13 @@
 
 商品の在庫がなくなった場合、ストアの所有者は顧客に商品の再入荷時期の見積もりを提供できます。
 
-[Accelerator ](../../starting-a-store/accelerators.md) を使用して Commerce Site を作成する場合、3つのサンプル見積もりが作成されます。
+[Accelerator ](../starting-a-store/accelerators.md) を使用して Commerce Site を作成する場合、3つのサンプル見積もりが作成されます。
 
 次の手順に従って、独自の入荷見積もりを作成します：
 
-1. ［**グローバルメニュー**］（![Global Menu](../../images/icon-applications-menu.png)）を開き、 ［**コマース**］ タブをクリックし、 ［**在庫数の見積もり**］ に進みます。
+1. ［**グローバルメニュー**］（![Global Menu](../images/icon-applications-menu.png)）を開き、 ［**コマース**］ タブをクリックし、 ［**在庫数の見積もり**］ に進みます。
 
-1. **追加** ボタン（![Add Button](../../images/icon-add.png)）をクリックします。
+1. **追加** ボタン（![Add Button](../images/icon-add.png)）をクリックします。
 
     ![追加ボタンをクリックして、新しい在庫数の見積もりを作成します。](./availability-estimates/images/01.png)
 
@@ -32,7 +32,7 @@
 
 ## Commerce 2.1以前
 
-[アクセラレータ](../../starting-a-store/accelerators.md)を使用してストアフロントを作成すると、入荷見積りのセットが作成されます。
+[アクセラレータ](../starting-a-store/accelerators.md)を使用してストアフロントを作成すると、入荷見積りのセットが作成されます。
 
 ![入荷見積りの管理](./availability-estimates/images/04.png)
 

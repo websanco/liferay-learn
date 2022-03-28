@@ -61,5 +61,4 @@
 
 ## 追加情報
 
-* [商品タイプについて](./introduction-to-product-types.md)
 * [仮想商品の作成](./creating-a-virtual-product.md)

@@ -4,7 +4,7 @@
 
 ## はじめに
 
-この記事は、Liferay Commerceでストアを構築するのが初めてのユーザー向けにウォークスルーを提供することを目的としています。 Liferay Commerce（およびLiferay DXP）が適切にインストールされ、設定されていることを前提としています。 インストールの詳細は、[インストールの概要](../../installation-and-upgrades/installation-overview.md)を参照してください。
+この記事は、Liferay Commerceでストアを構築するのが初めてのユーザー向けにウォークスルーを提供することを目的としています。 Liferay Commerce（およびLiferay DXP）が適切にインストールされ、設定されていることを前提としています。 インストールの詳細は、[インストールの概要](../installation-and-upgrades/installation-overview.md)を参照してください。
 
 <a name="road-map" />
 
@@ -20,19 +20,19 @@
 ## ストア設定
 
 ```{note}
-   [Accelerator](../starting-a-store/accelerators.md) は店のサイトを作成するために使用することができます。 アクセラレータを使用してストアサイトを作成すると、このセクションで説明されている多くの設定が構成されます。詳細は、 [MiniumAcceleratorを使用してB2Bストアをジャンプスタートする](../starting-a-store/using-the-minium-accelerator-to-jump-start-your-b2b-store.md>) を参照してください。
+   [Accelerator](../store-management/accelerators.md) は店のサイトを作成するために使用することができます。 アクセラレータを使用してストアサイトを作成すると、このセクションで説明されている多くの設定が構成されます。詳細は、 [MiniumAcceleratorを使用してB2Bストアをジャンプスタートする](../starting-a-store/using-the-minium-accelerator-to-jump-start-your-b2b-store.md) を参照してください。
 ```
 
-最初のストア設定は、[管理者アカウント](./introduction-to-the-admin-account.md)を使用して行います 。 Liferay Commerceの設定レイアウトと使用可能なオプションについては、[Liferay Commerceの設定の概要](../store-administration/liferay-commerce-configuration-overview.md)をご覧ください。
+最初のストア設定は、[管理者アカウント](./introduction-to-the-admin-account.md)を使用して行います 。 Liferay Commerceの設定レイアウトと使用可能なオプションについては、[Liferay Commerceの設定の概要](../store-management/liferay-commerce-configuration-overview.md)をご覧ください。
 
 ### グローバルCommerce設定の構成
 
 Liferay Commerceのグローバル設定には、ストアのタイムゾーンと使用可能な言語の設定、地域や地域固有の測定単位の追加などがあります。 詳細は、次の記事をご覧ください。
 
-* [ロケールオプションの設定](../store-administration/locale-options.md)
-* [リージョンの追加](../store-administration/adding-regions.md)
-* [倉庫の設定](../product-management/managing-inventory/warehouse-reference-guide.md)
-* [チャネルの作成](./channels/introduction-to-channels.md)
+* [ロケールオプションの設定](../store-management/locale-options.md)
+* [リージョンの追加](../store-management/adding-regions.md)
+* [倉庫の設定](../inventory-management/warehouse-reference-guide.md)
+* [チャネルの作成](../store-management/channels/introduction-to-channels.md)
 
 ### ストアサイトを作成する
 
@@ -48,29 +48,29 @@ Liferay CommerceはLiferay DXP上に構築されています。 Liferay DXPサ�
 
 Liferay Commerceは、複数のサードパーティの支払い処理業者に対応しており、郵便為替を使用した支払いにも対応しています。 以下を参照してください。
 
-* [支払い](../store-administration/configuring-payment-methods/payments.md)
-* [支払い方法の管理](../store-administration/configuring-payment-methods/managing-payment-methods.md)
-* [Authorize.net](../store-administration/configuring-payment-methods/authorize.net.md)
-* [PayPal](../store-administration/configuring-payment-methods/mercanet.md)
-* [Mercanet](../store-administration/configuring-payment-methods/mercanet.md)
-* [マネーオーダー](../store-administration/configuring-payment-methods/mercanet.md)
+* [支払い](../store-management/configuring-payment-methods.md)
+* [支払い方法の管理](../store-management/configuring-payment-methods/managing-payment-methods.md)
+* [Authorize.net](../store-management/configuring-payment-methods/authorize.net.md)
+* [PayPal](../store-management/configuring-payment-methods/mercanet.md)
+* [Mercanet](../store-management/configuring-payment-methods/mercanet.md)
+* [マネーオーダー](../store-management/configuring-payment-methods/mercanet.md)
 
 #### 適用税の徴収
 
 適用税を徴収するために、Liferay Commerceには、税カテゴリを作成し、住所または固定レートごとに税率を設定する機能があります。
 
-* [税区分の作成](../store-administration/configuring-taxes/creating-tax-categories.md)
-* [税計算のためのレート設定](../store-administration/configuring-taxes/setting-rates-for-tax-calculations.md)
-* [税率の適用](../store-administration/configuring-taxes/applying-tax-rates.md)
+* [税区分の作成](../pricing/configuring-taxes/creating-tax-categories.md)
+* [税計算のためのレート設定](../pricing/configuring-taxes/setting-rates-for-tax-calculations.md)
+* [税率の適用](../pricing/configuring-taxes/applying-tax-rates.md)
 
 #### 商品の出荷
 
 Liferay Commerceには、送料を計算するためのいくつかのオプションがあります。 Commerce Enterpriseの加入者は、FedExのキャリア統合をすぐに利用できます。
 
-* [配送方法](../store-administration/configuring-shipping-methods/shipping-methods.md)
-* [可変レート](../store-administration/configuring-shipping-methods/using-the-variable-rate-shipping-method.md)
-* [一律料金](../store-administration/configuring-shipping-methods/using-the-flat-rate-shipping-method.md)
-* [FedExを運送業者として使用する](../store-administration/configuring-shipping-methods/using-the-fedex-shipping-method.md)
+* [配送方法](../store-management/configuring-shipping-methods.md)
+* [可変レート](../store-management/configuring-shipping-methods/using-the-variable-rate-shipping-method.md)
+* [一律料金](../store-management/configuring-shipping-methods/using-the-flat-rate-shipping-method.md)
+* [FedExを運送業者として使用する](../store-management/configuring-shipping-methods/using-the-fedex-shipping-method.md)
 
 <a name="creating-the-catalog" />
 
@@ -80,7 +80,7 @@ Liferay Commerceには、送料を計算するためのいくつかのオプシ�
 
 ### カタログに商品を追加する
 
-商品を追加するときは、 **シンプル** 、 **グループ** 、 **仮想** の3つの商品タイプがあります。 詳細は、[Introduction to Product Types](../product-management/creating-and-managing-products/product-types/introduction-to-product-types.md)を参照してください。
+商品を追加するときは、 **シンプル** 、 **グループ** 、 **仮想** の3つの商品タイプがあります。
 
 #### 商品情報の追加
 
@@ -91,8 +91,8 @@ Liferay Commerceカタログは、さまざまな商品情報の保存と管理�
 * [商品画像](../product-management/creating-and-managing-products/products/product-images.md)
 * [商品関連](../product-management/creating-and-managing-products/products/related-products-up-sells-and-cross-sells.md)
 * [商品の分類](../product-management/creating-and-managing-products/products/organizing-your-catalog-with-product-categories.md)
-* [在庫数の見積もり](../product-management/managing-inventory/availability-estimates.md)
-* [在庫数低下時のアクション](../product-management/managing-inventory/low-stock-action.md)
+* [在庫数の見積もり](../inventory-management/availability-estimates.md)
+* [在庫数低下時のアクション](../inventory-management/low-stock-action.md)
 
 #### 商品価格
 
@@ -104,7 +104,7 @@ Liferay Commerceカタログは、さまざまな商品情報の保存と管理�
 
 #### 在庫管理
 
-* [在庫管理の概要](../product-management/managing-inventory/introduction-to-managing-inventory.md)
+* [在庫管理の概要](../inventory-management/introduction-to-managing-inventory.md)
 
 <a name="creating-the-storefront" />
 

@@ -21,7 +21,7 @@ Liferay Commerceの **在庫管理** システムは、ユーザーがLiferay Co
 在庫商品を追加する：
 
 1. ［**コントロールパネル**］ &rarr; ［**コマース**］ &rarr; ［**在庫**］に移動します。
-1. （![Add Icon](../../images/icon-add.png)）アイコンをクリックします。
+1. （![Add Icon](../images/icon-add.png)）アイコンをクリックします。
 1. 次のように入力します：
 
     ***SKU** : CHINAWARE-GRAY
@@ -43,7 +43,7 @@ Liferay Commerceの **在庫管理** システムは、ユーザーがLiferay Co
 安全在庫量を設定する：
 
 1. SKU（12 PACKMOCHA）をクリックします。
-1. 3点アイコン（![Actions](../../images/icon-actions.png)）をクリックし&rarr;倉庫の横にある [**編集**] をクリックします。
+1. 3点アイコン（![Actions](../images/icon-actions.png)）をクリックし&rarr;倉庫の横にある [**編集**] をクリックします。
 1. 次のように入力します：
 
    ***手持数量** : 40 (修正しない)
@@ -77,7 +77,7 @@ Liferay Commerceの **在庫管理** システムは、ユーザーがLiferay Co
 
 1. SKUをクリックします。
 1. ［**入荷**］タブをクリックします。
-1. （![Add Icon](../../images/icon-add.png)）アイコンをクリックします。
+1. （![Add Icon](../images/icon-add.png)）アイコンをクリックします。
 1. 次のように入力します：
 
     ***数量** ：20

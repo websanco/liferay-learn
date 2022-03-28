@@ -24,7 +24,7 @@ Liferay Commerceでは、グローバルメニュー（![Global Menu](../../imag
 
 ［**商品グループ**］ ：このアプリケーションは、商品グループエンティティを作成および管理するために使用されます。
 
-［**税カテゴリー**］ ：このアプリケーションは、チャネル商品と送料に税率を適用するためのカテゴリーを作成および管理するために使用されます。 詳細は、 [税カテゴリーの作成](../../store-administration/configuring-taxes/creating-tax-categories.md) を参照してください。
+［**税カテゴリー**］ ：このアプリケーションは、チャネル商品と送料に税率を適用するためのカテゴリーを作成および管理するために使用されます。 詳細は、 [税カテゴリーの作成](../../pricing/configuring-taxes/creating-tax-categories.md) を参照してください。
 
 すべての価格設定アプリケーションには、次の権限があります：
 
@@ -105,4 +105,4 @@ Liferay Commerceでは、グローバルメニュー（![Global Menu](../../imag
 ## 追加情報
 
 * [プライシングの概要](../../pricing/introduction-to-pricing.md)
-* [割引について](../../../pricing/promoting-products/introduction-to-discounts.md)
+* [割引について](../../pricing/promoting-products/introduction-to-discounts.md)

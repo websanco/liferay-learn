@@ -28,11 +28,11 @@ Liferay Commerceには、ストアフロントをセットアップするため�
 
 ## マルチチャネルカタログと商品情報管理
 
-Liferay Commerceには、さまざまな [商品タイプ](../product-management/creating-and-managing-products/product-types/introduction-to-product-types.md) をサポートし、幅広い商品データを格納するカタログ管理システムが含まれています。 [商品オプション](../product-management/creating-and-managing-products/products/using-product-options.md)、 [価格](../pricing/introduction-to-pricing.md)、 [画像](../product-management/creating-and-managing-products/products/product-images.md)、及び [仕様](../product-management/creating-and-managing-products/products/specifications.md) がいくつかの例です。 その後、商品は選択した流通チャネルですぐに利用できます。
+Liferay Commerceには、さまざまな 商品タイプ をサポートし、幅広い商品データを格納するカタログ管理システムが含まれています。 [商品オプション](../product-management/creating-and-managing-products/products/using-product-options.md)、 [価格](../pricing/introduction-to-pricing.md)、 [画像](../product-management/creating-and-managing-products/products/product-images.md)、及び [仕様](../product-management/creating-and-managing-products/products/specifications.md) がいくつかの例です。 その後、商品は選択した流通チャネルですぐに利用できます。
 
 ![商品カタログ](./introduction-to-liferay-commerce/images/02.png)
 
-[チャネル](./channels/introduction-to-channels.md) は、カタログおよび商品を、商品が販売される任意の場所に接続します。LiferayCommerceベースのストアフロント、サードパーティのマーケットプレイス、またはバックオフィスの電話販売です。
+[チャネル](../store-management/channels/introduction-to-channels.md) は、カタログおよび商品を、商品が販売される任意の場所に接続します。LiferayCommerceベースのストアフロント、サードパーティのマーケットプレイス、またはバックオフィスの電話販売です。
 
 ![商品に対して有効なチャネル](./introduction-to-liferay-commerce/images/03.png)
 
@@ -56,11 +56,11 @@ Liferay Commerceは、B2Bニーズに対応するように設計された機能�
 
 Liferay Commerceは、買い手と売り手が注文の準備、発注、承認、送信、および実行を可能にする注文管理を提供します。
 
-注文の支払いは、初期設定から利用可能ないくつかの異なる [支払い方法](../store-administration/configuring-payment-methods/managing-payment-methods.md)で完了できます。 追加のカスタマイズにより、より多くの決済処理業者との統合を実現できます。
+注文の支払いは、初期設定から利用可能ないくつかの異なる [支払い方法](../store-management/configuring-payment-methods/managing-payment-methods.md)で完了できます。 追加のカスタマイズにより、より多くの決済処理業者との統合を実現できます。
 
 ![支払方法ページ](./introduction-to-liferay-commerce/images/06.png)
 
-注文は、いくつかの異なる[配送方法](../store-administration/configuring-shipping-methods/shipping-method-reference.md)を使用することができます： 売り手は [一律料金を課す](../store-administration/configuring-shipping-methods/using-the-flat-rate-shipping-method.md)ことができ、[配送方法の制限](../store-administration/configuring-shipping-methods/applying-shipping-method-restrictions.md)を適用でき、また [フェデックスのような配送業者](../store-administration/configuring-shipping-methods/using-the-fedex-shipping-method.md)と統合することができます。
+注文は、いくつかの異なる[配送方法](../store-management/configuring-shipping-methods/shipping-method-reference.md)を使用することができます： 売り手は [一律料金を課す](../store-management/configuring-shipping-methods/using-the-flat-rate-shipping-method.md)ことができ、[配送方法の制限](../store-management/configuring-shipping-methods/applying-shipping-method-restrictions.md)を適用でき、また [フェデックスのような配送業者](../store-management/configuring-shipping-methods/using-the-fedex-shipping-method.md)と統合することができます。
 
 <a name="ml-powered-recommendations-and-alerts" />
 

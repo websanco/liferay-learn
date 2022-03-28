@@ -1,0 +1,126 @@
+<script type="module">
+	import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.esm.browser.min.js'
+
+	const page = new Vue({
+		el: '#landingPage',
+		data: {
+			cards: [
+				{
+					sectionName: 'チャネル',
+					sectionURL: 'store-management/channels.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'チャネルについて',
+							url: 'store-management/channels/introduction-to-channels.html'
+						},
+						{
+							name: 'チャネル管理',
+							url: 'store-management/channels/managing-channels.html'
+						}
+					]
+				},
+				{
+					sectionName: '通貨',
+					sectionURL: 'store-management/currencies.html',
+					showAll: false,
+					subsections: [
+						{
+							name: '通貨階層を理解する',
+							url: 'store-management/currencies/understanding-the-currency-hierarchy.html'
+						},
+						{
+							name: '新しい通貨の追加',
+							url: 'store-management/currencies/adding-a-new-currency.html'
+						}
+					]
+				},
+				{
+					sectionName: '支払い',
+					sectionURL: 'store-management/configuring-payment-methods.html',
+					subsections: [
+            			{
+							name: '支払方法の管理',
+							url: 'store-management/configuring-payment-methods/managing-payment-methods.html'
+						},
+						{
+							name: 'Authorize.net',
+							url: 'store-management/configuring-payment-methods/authorize.net.html'
+						},
+						{
+							name: 'PayPal',
+							url: 'store-management/configuring-payment-methods/paypal.html'
+						}
+					]
+				},
+				{
+					sectionName: '配送方法',
+					sectionURL: 'store-management/configuring-shipping-methods.html',
+					subsections: [
+						{
+							name: '測定単位',
+							url: 'store-management/configuring-shipping-methods/measurement-units.html'
+						},
+						{
+							name: '配送方法の制限の適用',
+							url: 'store-management/configuring-shipping-methods/applying-shipping-method-restrictions.html'
+						},
+						{
+							name: 'FedEx配送方法の使用',
+							url: 'store-management/configuring-shipping-methods/using-the-fedex-shipping-method.html',
+						}
+					]
+				},
+				{
+					sectionName: 'ゲストのチェックアウト',
+					sectionURL: 'store-management/guest-checkout.html',
+					showAll: false,
+					subsections: [
+						{
+							name: 'ゲストチェックアウトの概要',
+							url: 'store-management/guest-checkout/guest-checkout-overview.html'
+						},
+						{
+							name: 'ゲストチェックアウトの有効化',
+							url: 'store-management/guest-checkout/enabling-guest-checkout.html'
+						},
+					]
+				},
+				{
+					sectionName: 'ストアメール',
+					sectionURL: 'store-management/sending-emails.html',
+					subsections: [
+          				{
+							name: '通知テンプレートの使用',
+              				url: 'store-management/sending-emails/using-notification-templates.html'
+						},
+						{
+							name: 'Commerce 通知キューの設定',
+              				url: 'store-management/sending-emails/configuring-the-commerce-notification-queue.html'
+						},
+						{
+							name: '通知テンプレート変数リファレンスガイド',
+              				url: 'store-management/sending-emails/notification-template-variables-reference-guide.html'
+						}
+					]
+				},
+				{
+					sectionName: 'Liferay Commerce設定の概要',
+					sectionURL: 'store-management/liferay-commerce-configuration-overview.html',
+				},
+				{
+					sectionName: 'ロケールオプション',
+					sectionURL: 'store-management/locale-options.html',
+				},
+				{
+					sectionName: 'リージョンの追加',
+					sectionURL: 'store-management/adding-regions.html',
+				},
+				{
+					sectionName: '請求先または配送先として国を無効にする',
+					sectionURL: 'store-management/deactivating-a-country-for-billing-or-shipping.html',
+				}						
+			]
+		}
+	})
+</script>

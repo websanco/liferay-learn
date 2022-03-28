@@ -33,22 +33,22 @@
 					subsections: [
 						{
 							name: '管理者アカウントの概要',
-							url: 'starting-a-store/introduction-to-the-admin-account.html'
+							url: 'store-management/introduction-to-the-admin-account.html'
 						},
 						{
 							name: 'ストア設定の概要',
-							url: 'starting-a-store/store-setup-overview.html'
+							url: 'store-management/store-setup-overview.html'
 						},
 						{
 							name: 'チャネル',
-							url: 'starting-a-store/channels.html'
+							url: 'store-management/channels.html'
 						}
 					]
 				},
 				{
 					icon: '#developing-applications-logo',
-					sectionName: 'カタログの管理',
-					sectionURL: 'managing-a-catalog.html',
+					sectionName: '製品管理',
+					sectionURL: 'product-management.html',
 					showAll: false,
 					subsections: [
 						{
@@ -56,8 +56,8 @@
 							url: 'product-management/catalogs/creating-a-new-catalog.html'
 						},
 						{
-							name: '在庫管理の概要',
-							url: 'product-management/managing-inventory/introduction-to-managing-inventory.html'
+							name: 'カタログ権限設定の構成',
+							url: 'product-management/catalogs/configuring-catalog-permissions.html'
 						},
 						{
 							name: '仕様',
@@ -91,8 +91,8 @@
 					sectionURL: 'pricing.html',
 					subsections: [
 						{
-							name: '割引について',
-							url: 'pricing/promoting-products/introduction-to-discounts.html'
+							name: 'プライシングの概要',
+							url: 'pricing/introduction-to-pricing.html'
 						},
 						{
 							name: '割引を作成する',
@@ -137,28 +137,49 @@
 					]
 				},
 				{
+					icon: '#using-search-logo',
+					sectionName: '在庫管理',
+					sectionURL: 'inventory-management.html',
+					showAll: false,
+					subsections: [
+						{
+							name: '在庫管理の概要',
+							url: 'inventory-management/introduction-to-managing-inventory.html'
+						},
+						{
+							name: '在庫管理システムの活用',
+							url: 'inventory-management/using-the-inventory-management-system.html'
+						},
+						{
+							name: '在庫数低下時のアクション',
+							url: 'inventory-management/low-stock-action.html'
+						}
+
+					]
+				},
+				{
 					icon: '#system-administration-logo',
-					sectionName: 'ストアサイトの管理',
-					sectionURL: 'store-administration.html',
+					sectionName: '店舗管理',
+					sectionURL: 'store-management.html',
 					subsections: [
 						{
 							name: 'Liferay Commerce設定の概要',
-							url: 'store-administration/liferay-commerce-configuration-overview.html'
+							url: 'store-management/liferay-commerce-configuration-overview.html'
 						},
 						{
 							name: '支払方法の管理',
-							url: 'store-administration/configuring-payment-methods/managing-payment-methods.html'
+							url: 'store-management/configuring-payment-methods/managing-payment-methods.html'
 						},
 						{
 							name: 'ゲストチェックアウトの概要',
-							url: 'store-administration/guest-checkout/guest-checkout-overview.html'
+							url: 'store-management/guest-checkout/guest-checkout-overview.html'
 						}
 					]
 				},
 				{
 					icon: '#liferay-internals-logo',
 					sectionName: 'アドオンとコネクター',
-					sectionURL: 'add_ons_and_connectors.html',
+					sectionURL: 'add-ons-and-connectors.html',
 					subsections: [
 						{
 							name: 'Liferay Commerce Connector to PunchOut2Go',

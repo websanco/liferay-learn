@@ -62,15 +62,15 @@ Miniumは、初期状態では設定されていない、空サイト用のそ�
 
 | 機能                                                                                                                    | 詳細                       |
 | :--- | :--- |
-| [倉庫](../product-management/managing-inventory/setting-up-commerce-warehouses.md)                                      | イタリア、米国北東部、米国南西部         |
+| [倉庫](../inventory-management/setting-up-commerce-warehouses.md)                                      | イタリア、米国北東部、米国南西部         |
 | [サイトの種類](../starting-a-store/sites-and-site-types.md)                                                                 | B2B                      |
-| [配送方法のオプション](../store-administration/configuring-shipping-methods/using-the-flat-rate-shipping-method.md)             | 標準配送、速達配送                |
+| [配送方法のオプション](../store-management/configuring-shipping-methods/using-the-flat-rate-shipping-method.md)             | 標準配送、速達配送                |
 | チャネル                                                                                                                  | ミニポータル                   |
 | 国                                                                                                                     | フランス、中国、米国、その他245か国      |
-| [通貨](../store-administration/currencies/adding-a-new-currency.md)                                                     | USD、AUD、GBP、その他7通貨       |
+| [通貨](../store-management/currencies/adding-a-new-currency.md)                                                     | USD、AUD、GBP、その他7通貨       |
 | デフォルト画像                                                                                                               | &#10003;                 |
-| [測定単位](../store-administration/configuring-shipping-methods/measurement-units.md) - 寸法                                | インチ、ミリメートル、フィート、メートル     |
-| [測定単位](../store-administration/configuring-shipping-methods/measurement-units.md) - 重量                                | オンス、ポンド、キログラム、グラム        |
+| [測定単位](../store-management/configuring-shipping-methods/measurement-units.md) - 寸法                                | インチ、ミリメートル、フィート、メートル     |
+| [測定単位](../store-management/configuring-shipping-methods/measurement-units.md) - 重量                                | オンス、ポンド、キログラム、グラム        |
 | [アカウントロール](../users-and-accounts/account-management/account-roles.md)                                                 | 購入者、アカウントマネージャー、販売代理店    |
-| [入荷見積り](../product-management/managing-inventory/availability-estimates.md)                                           | 3～5日、5～7日、7～14日          |
+| [入荷見積り](../inventory-management/availability-estimates.md)                                           | 3～5日、5～7日、7～14日          |
 | [商品関係タイプ](../product-management/creating-and-managing-products/products/related-products-up-sells-and-cross-sells.md) | アップセル、スペア、関連、アクセサリ、クロスセル |

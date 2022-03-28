@@ -2,10 +2,10 @@
 
 Commerce倉庫は、商品の在庫が保管されている物理的な場所を表します。 各倉庫は複数のチャネルにリンクすることができ、有効にするには位置情報が設定されている必要があります。 これらの位置情報は、Fedexの配送方法で顧客への送料を計算する際に使用されます。
 
-[Accelerator ](../../starting-a-store/accelerators.md)を使用して Commerce Site を作成する場合、3つのサンプル倉庫が作成されます。
+[Accelerator ](../starting-a-store/accelerators.md)を使用して Commerce Site を作成する場合、3つのサンプル倉庫が作成されます。
 
 ```{note}
-   Commerce倉庫を設定するとき、ユーザーは最初に倉庫の該当する国および地域の場所（州または県）を有効にする必要がある場合があります。 詳細は、 [リージョンの追加](../../store-administration/adding-regions.md) を参照してください。
+   Commerce倉庫を設定するとき、ユーザーは最初に倉庫の該当する国および地域の場所（州または県）を有効にする必要がある場合があります。 詳細は、 [リージョンの追加](../store-management/adding-regions.md) を参照してください。
 ```
 
 <a name="adding-a-warehouse" />
@@ -14,9 +14,9 @@ Commerce倉庫は、商品の在庫が保管されている物理的な場所を
 
 次の手順に従って、新しい倉庫を追加します：
 
-1. ［**グローバルメニュー**］ (![Global Menu](../../images/icon-applications-menu.png))を開き、［**Commerce**］タブをクリックして、［**倉庫**］に移動します。
+1. ［**グローバルメニュー**］ (![Global Menu](../images/icon-applications-menu.png))を開き、［**Commerce**］タブをクリックして、［**倉庫**］に移動します。
 
-1. **追加** ボタン（![Add Button](../../images/icon-add.png)）をクリックします。
+1. **追加** ボタン（![Add Button](../images/icon-add.png)）をクリックします。
 
    ![追加ボタンをクリックして、新しい倉庫を作成します。](./setting-up-commerce-warehouses/images/01.png)
 
@@ -46,7 +46,7 @@ Commerceでは、Bing Maps APIとの連携により、倉庫の位置情報を�
 
 その後、以下の手順に従ってインスタンスにBing ジオコーダを設定します:
 
-1. **グローバルメニュー**（![Global Menu](../../images/icon-applications-menu.png)）を開き、 ［**コントロールパネル**］ &rarr; ［**システム設定**］ &rarr; ［**コマース**］ &rarr; ［**出荷先**］ &rarr; ［**Bing ジオコーダ**］ に移動します。
+1. **グローバルメニュー**（![Global Menu](../images/icon-applications-menu.png)）を開き、 ［**コントロールパネル**］ &rarr; ［**システム設定**］ &rarr; ［**コマース**］ &rarr; ［**出荷先**］ &rarr; ［**Bing ジオコーダ**］ に移動します。
 
 1. ［**API キー**］ を入力します。
 
@@ -54,7 +54,7 @@ Commerceでは、Bing Maps APIとの連携により、倉庫の位置情報を�
 
 1. ［**保存**］ をクリックします。
 
-ジオコーダを設定すると、住所が設定されている倉庫に対して倉庫の位置情報を生成することができます。 倉庫のページに移動し、目的の倉庫の ［**アクション**］ ボタン（![Actions Button](../../images/icon-actions.png)）をクリックし、 ［**ジオロケーション**］ を選択します。 ジオコーダは、住所を緯度と経度の座標に変換します。
+ジオコーダを設定すると、住所が設定されている倉庫に対して倉庫の位置情報を生成することができます。 倉庫のページに移動し、目的の倉庫の ［**アクション**］ ボタン（![Actions Button](../images/icon-actions.png)）をクリックし、 ［**ジオロケーション**］ を選択します。 ジオコーダは、住所を緯度と経度の座標に変換します。
 
 ![ジオロケーションを選択します](./setting-up-commerce-warehouses/images/03.png)
 
@@ -66,7 +66,7 @@ Commerceでは、Bing Maps APIとの連携により、倉庫の位置情報を�
 
 1. ［**コントロールパネル**］ → ［**コマース**］ → ［**設定**］に移動します。
 1. ［**倉庫**］ タブをクリックします。
-1. **倉庫の追加**（![Add Icon](../../images/icon-add.png)）ボタンをクリックします。
+1. **倉庫の追加**（![Add Icon](../images/icon-add.png)）ボタンをクリックします。
 1. 次のように入力します：
    ****Name：***倉庫の名前**（例：ノースラスベガスの倉庫）
    ****Description：***倉庫の説明**（例：ノースラスベガスの処理センター）
@@ -87,6 +87,6 @@ Commerceでは、Bing Maps APIとの連携により、倉庫の位置情報を�
 
 ## 追加情報
 
-* [リージョンの追加](../../store-administration/adding-regions.md)
-* [請求先または配送先として国を無効にする](../../store-administration/deactivating-a-country-for-billing-or-shipping.md)
-* [チャネルについて](../../starting-a-store/channels/introduction-to-channels.md)
+* [リージョンの追加](../store-management/adding-regions.md)
+* [請求先または配送先として国を無効にする](../store-management/deactivating-a-country-for-billing-or-shipping.md)
+* [チャネルについて](../store-management/channels/introduction-to-channels.md)

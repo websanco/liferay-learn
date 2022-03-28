@@ -5,7 +5,7 @@
 新しい割引を作成するには：
 
 1. ［**グローバルアプリケーション**］ → ［**コマース**］ → ［**割引**］に移動します。
-1. （![Add](../images/icon-add.png)）ボタンをクリックして、新しい割引を追加します。
+1. （![Add](../../images/icon-add.png)）ボタンをクリックして、新しい割引を追加します。
 1. 名前を入力します（**スプリングセール**）。
 1. ［**適用先**］ ドロップダウンから割引タイプ（たとえば、 ［**小計に適用**］）を選択します。 （さまざまな割引タイプの詳細は、 [割引タイプ](./introduction-to-discounts.md#types-of-discounts) を参照してください。）
 1. ［**パーセント**］ または ［**固定金額**］ を、 ［**タイプ**］ ドロップダウンメニューから選択します。
@@ -62,7 +62,7 @@
 新しい割引ルールを追加するには：
 
 1. ルールが作成されたら、 ［**ルール**］ のセクションまでスクロールダウンします。
-1. （![Add icon](../images/icon-add.png)）ボタンをクリックして、新しい割引ルールを追加します。
+1. （![Add icon](../../images/icon-add.png)）ボタンをクリックして、新しい割引ルールを追加します。
 1. 名前を入力します： **スプリングセール** 。
 1. ［**ルールタイプ**］ ドロップダウンメニューから ［**カートの合計金額**］を選択します。
 
@@ -91,7 +91,7 @@
 この割引の対象となるアカウントとアカウントグループを指定するには、次の手順に従います：
 
 1. ［**適合性**］ タブをクリックします。
-1. [［アカウントグループを選択］](../users-and-accounts/account-management/creating-a-new-account-group.md) ラジオボタンをクリックします。
+1. [［アカウントグループを選択］](../../users-and-accounts/account-management/creating-a-new-account-group.md) ラジオボタンをクリックします。
 1. ［**アカウントを追加する**］ の検索バーで、目的のアカウントグループを検索します。この例では、 **US Accounts East** となっています。
 1. ［**選択**］ をクリックして、アカウントグループを追加します。
 
@@ -118,7 +118,7 @@
 割引を作成するには：
 
 1. ［**コントロールパネル**］ → ［**コマース**］ → ［**割引**］に移動します。
-1. （![Add](../images/icon-add.png)）ボタンをクリックして、新しい割引を追加します。
+1. （![Add](../../images/icon-add.png)）ボタンをクリックして、新しい割引を追加します。
 1. 名前を入力します（**スプリングセール**）。
 1. **ターゲット** ドロップダウンから割引タイプ（たとえば、 **小計** 適用）を選択します。 （さまざまな割引タイプの詳細は、 [割引タイプ](./introduction-to-discounts.md#types-of-discounts) を参照してください。）
 1. この割引が適用されるチャネルのボックスをオンにします。
@@ -145,7 +145,7 @@
    
    ![割引ルールタブ](./creating-a-discount/images/02.png)
 
-1. （![Add icon](../images/icon-add.png)）ボタンをクリックして、新しい割引ルールを追加します。
+1. （![Add icon](../../images/icon-add.png)）ボタンをクリックして、新しい割引ルールを追加します。
 
 1. ［**タイプ**］ ドロップダウンメニューから ［**Cart Total**］を選択します。
 1. ［カートの合計最小金額］フィールドに15.00と入力します。
@@ -161,5 +161,5 @@
 
 * [割引について](./introduction-to-discounts.md)
 * [新規アカウントグループの作成](../users-and-accounts/account-management/creating-a-new-account-group.md)
-* [価格表の作成](../product-management/managing-prices/creating-a-price-list.md)
-* [価格レートを使う](../product-management/managing-prices/using-price-tiers.md)
+* [価格表の作成](../creating-a-price-list.md)
+* [価格レートを使う](../using-price-tiers.md)

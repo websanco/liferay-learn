@@ -52,7 +52,7 @@
     STARTED com.acme.j1e4.impl_1.0.0
     ```
 
-1. サンプルの在庫不足アクティビティが追加されたことを確認します。 ブラウザで`https://localhost:8080`を開きます。 アプリケーションメニュー（![Applications Menu](../images/icon-applications-menu.png)）をクリックし、［**コマース**］→［**商品**］に移動します。 次に、任意の商品のメニュー内の［**編集**］をクリックします。 必要に応じて、 [商品](../../product-management/creating-and-managing-products/product-types/creating-a-simple-product.md)追加できます。
+1. サンプルの在庫不足アクティビティが追加されたことを確認します。 ブラウザで`https://localhost:8080`を開きます。 アプリケーションメニュー（![Applications Menu](../../images/icon-applications-menu.png)）をクリックし、［**コマース**］→［**商品**］に移動します。 次に、任意の商品のメニュー内の［**編集**］をクリックします。 必要に応じて、 [商品](../../product-management/creating-and-managing-products/product-types/creating-a-simple-product.md)追加できます。
 
    そこから、［**設定**］に移動します。 新しいアクティビティ（"Log a warning message"）が［**在庫数低下時のアクション**］ドロップダウンの下に表示されます。
 
@@ -155,4 +155,4 @@ j1e4-commerce-low-stock-activity=J1E4 Commerce Low Stock Activity
 
 * [シンプル商品の作成](../../product-management/creating-and-managing-products/product-types/creating-a-simple-product.md)
 * [アプリケーションのローカライズ](https://help.liferay.com/hc/en-us/articles/360018168251-Localizing-Your-Application)
-* [在庫数低下時のアクション](../../product-management/managing-inventory/low-stock-action.md)
+* [在庫数低下時のアクション](../../inventory-management/low-stock-action.md)

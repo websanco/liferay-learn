@@ -1,6 +1,6 @@
 # ゲストチェックアウトの概要
 
-ゲストチェックアウト機能は、[チャネル](../../starting-a-store/channels/introduction-to-channels.md) ごとに有効にすることができ、ユーザーはサイトに登録されたアカウントがなくても注文を出すことができます。 詳しくは[「ゲストチェックアウトの有効化」](./enabling-guest-checkout.md)を参照してください。
+ゲストチェックアウト機能は、[チャネル](../../store-management/channels/introduction-to-channels.md) ごとに有効にすることができ、ユーザーはサイトに登録されたアカウントがなくても注文を出すことができます。 詳しくは[「ゲストチェックアウトの有効化」](./enabling-guest-checkout.md)を参照してください。
 
 ゲストチェックアウトを有効にすると、ゲストユーザーはチェックアウトの際にEメールアドレスの入力が必要になります。
 
@@ -24,7 +24,7 @@ Eメールの入力後、ゲストはログインするか、アカウントを�
 
 ## ゲストのチェックアウト認証ページの作成
 
-ゲストチェックアウトには、 [サイトページ](https://learn.liferay.com/dxp/latest/ja/site-building/creating_pages.html) に **ゲストのチェックアウト認証** ウィジェットを設置する必要があります。 このページとウィジェットを生成するには、 [チャネル設定](../../starting-a-store/channels/channels-reference-guide.md) のヘルスチェック機能を使用します。
+ゲストチェックアウトには、 [サイトページ](https://learn.liferay.com/dxp/latest/ja/site-building/creating_pages.html) に **ゲストのチェックアウト認証** ウィジェットを設置する必要があります。 このページとウィジェットを生成するには、 [チャネル設定](../../store-management/channels/channels-reference-guide.md) のヘルスチェック機能を使用します。
 
 ［**ゲストとして続行**］ をクリックすると、顧客はログインしたりアカウントを作成したりすることなく、購入を完了することができます。
 
@@ -37,6 +37,6 @@ Eメールの入力後、ゲストはログインするか、アカウントを�
 ## 追加情報
 
 * [ゲストチェックアウトの有効化](./enabling-guest-checkout.md)
-* [チャネルについて](../../starting-a-store/channels/introduction-to-channels.md)
-* [チャネル管理](../../starting-a-store/channels/managing-channels.md)
-* [チャネルリファレンスガイド](../../starting-a-store/channels/channels-reference-guide.md)
+* [チャネルについて](../../store-management/channels/introduction-to-channels.md)
+* [チャネル管理](../../store-management/channels/managing-channels.md)
+* [チャネルリファレンスガイド](../../store-management/channels/channels-reference-guide.md)

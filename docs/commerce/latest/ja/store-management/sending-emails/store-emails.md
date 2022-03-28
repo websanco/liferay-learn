@@ -10,7 +10,7 @@ Liferay Commerceは、さまざまな店舗イベントによってトリガー�
 
 ## ストアメール通知の構成
 
-Liferay Commerceのメール設定が構成されたら、 ［**コントロールパネル**］ &rarr; ［**コマース**］ &rarr; ［**チャネル**］ に移動して、ストアのメール通知設定を作成します。 メール通知は [チャネル](../../starting-a-store/channels/introduction-to-channels.md)ごとに構成されます。 使用 [加速器](../../starting-a-store/accelerators.md) あなたが開始するための店、カタログ、およびチャネルを作成します。
+Liferay Commerceのメール設定が構成されたら、 ［**コントロールパネル**］ &rarr; ［**コマース**］ &rarr; ［**チャネル**］ に移動して、ストアのメール通知設定を作成します。 メール通知は [チャネル](../../store-management/channels/introduction-to-channels.md)ごとに構成されます。 使用 [加速器](../../starting-a-store/accelerators.md) あなたが開始するための店、カタログ、およびチャネルを作成します。
 
 ![利用可能な通知テンプレート](./store-emails/images/02.png)
 

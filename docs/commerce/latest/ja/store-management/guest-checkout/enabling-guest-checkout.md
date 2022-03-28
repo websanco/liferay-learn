@@ -1,6 +1,6 @@
 # ゲストチェックアウトの有効化
 
-ゲストチェックアウト機能は、[チャネル](../../starting-a-store/channels/introduction-to-channels.md) ごとに有効にすることができ、ユーザーはサイトに登録されたアカウントがなくても注文を出すことができます。
+ゲストチェックアウト機能は、[チャネル](../../store-management/channels/introduction-to-channels.md) ごとに有効にすることができ、ユーザーはサイトに登録されたアカウントがなくても注文を出すことができます。
 
 ゲストチェックアウトを有効にする：
 
@@ -73,6 +73,6 @@
 ## 追加情報
 
 * [ゲストチェックアウトの概要](./guest-checkout-overview.md)
-* [チャネルについて](../../starting-a-store/channels/introduction-to-channels.md)
-* [チャネル管理](../../starting-a-store/channels/managing-channels.md)
-* [チャネルリファレンスガイド](../../starting-a-store/channels/channels-reference-guide.md)
+* [チャネルについて](../../store-management/channels/introduction-to-channels.md)
+* [チャネル管理](../../store-management/channels/managing-channels.md)
+* [チャネルリファレンスガイド](../../store-management/channels/channels-reference-guide.md)

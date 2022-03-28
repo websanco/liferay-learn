@@ -29,13 +29,13 @@
     ![注文メニュー](./creating-a-shipment/images/07.png)
 
 1. ［**送信**］をクリックします 。
-1. アイテムの横にある［**編集**］クリックして、数量とソーシング [倉庫を選択します](../../product-management/managing-inventory/warehouse-reference-guide.md)。
-1. ［**発送数量**］フィールドに数量を入力します。
+2. アイテムの横にある［**編集**］クリックして、数量とソーシング [倉庫を選択します](../../inventory-management/warehouse-reference-guide.md)。
+3. ［**発送数量**］フィールドに数量を入力します。
 
     ![注文メニュー](./creating-a-shipment/images/08.png)
 
-1. ［**保存**］ をクリックします。
-1. ［**処理を終了**］クリックします 。
+4. ［**保存**］ をクリックします。
+5. ［**処理を終了**］クリックします 。
 
 注文の発送準備が整ったら：
 
@@ -58,16 +58,16 @@ Liferay Commerceの以前のバージョンで発送を作成するには：
     ![注文を選択](./creating-a-shipment/images/02.png)
 
 1. ［**保存**］ をクリックします。
-1. 対応する [倉庫](../../product-management/managing-inventory/warehouse-reference-guide.md)からの数量を入力します。
+2. 対応する [倉庫](../../inventory-management/warehouse-reference-guide.md)からの数量を入力します。
 
     ![US NE倉庫から数量を入力](./creating-a-shipment/images/03.png)
 
-1. ［**保存**］ をクリックします。
-1. 発送先住所を確認します。
+3. ［**保存**］ をクリックします。
+4. 発送先住所を確認します。
 
     ![発送先住所を確認](./creating-a-shipment/images/04.png)
 
-1. ［**保存**］ をクリックします。
+5. ［**保存**］ をクリックします。
 
 新しい発送が作成されました。
 
@@ -95,8 +95,8 @@ Liferay Commerceの以前のバージョンで発送を作成するには：
 
 ## 追加情報
 
-* [Commerce倉庫のセットアップ](../../product-management/managing-inventory/setting-up-commerce-warehouses.md)
-* [倉庫ごとの在庫設定](../../product-management/managing-inventory/setting-inventory-by-warehouse.md)
+* [Commerce倉庫のセットアップ](../../inventory-management/setting-up-commerce-warehouses.md)
+* [倉庫ごとの在庫設定](../../inventory-management/setting-inventory-by-warehouse.md)
 * [注文情報](../orders/order-information.md)
 * [注文の処理](../orders/processing-an-order.md)
-* [倉庫リファレンスガイド](../../product-management/managing-inventory/warehouse-reference-guide.md)
+* [倉庫リファレンスガイド](../../inventory-management/warehouse-reference-guide.md)

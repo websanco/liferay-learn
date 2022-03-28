@@ -2,7 +2,7 @@
 
 このチュートリアルでは、 [CPContentRenderer](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-product-content-api/src/main/java/com/liferay/commerce/product/content/render/CPContentRenderer.java) インターフェイスを実装して、カスタム商品コンテンツレンダラーを追加する方法を示します。
 
-商品コンテンツレンダラーは、商品を表示できるさまざまなウィジェットで、特定の[商品タイプ](../../product-management/creating-and-managing-products/product-types/introduction-to-product-types.md)の商品詳細を表示するスタイルを提供します。 Liferay Commerceは、シンプル商品用の [SimpleCPContentRenderer](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-product-type-simple/src/main/java/com/liferay/commerce/product/type/simple/internal/SimpleCPContentRenderer.java) など、すぐに使用できる商品タイプごとに商品コンテンツレンダラーを提供しています。
+商品コンテンツレンダラーは、商品を表示できるさまざまなウィジェットで、特定の 商品タイプ の商品詳細を表示するスタイルを提供します。 Liferay Commerceは、シンプル商品用の [SimpleCPContentRenderer](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/apps/commerce/commerce-product-type-simple/src/main/java/com/liferay/commerce/product/type/simple/internal/SimpleCPContentRenderer.java) など、すぐに使用できる商品タイプごとに商品コンテンツレンダラーを提供しています。
 
 ![すぐに使える商品コンテンツレンダラー](./implementing-a-custom-product-content-renderer/images/01.png "すぐに使える商品コンテンツレンダラー")
 
@@ -208,5 +208,4 @@ q4f7-commerce-product-content-renderer=Q4F7 Commerce Product Content Renderer
 
 ## 追加情報
 
-  - [商品タイプ](../../product-management/creating-and-managing-products/product-types/product-types.md)
   - [アプリケーションのローカライズ](https://help.liferay.com/hc/en-us/articles/360018168251-Localizing-Your-Application)

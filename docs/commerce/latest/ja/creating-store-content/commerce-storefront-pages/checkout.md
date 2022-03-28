@@ -20,7 +20,7 @@
 
 ![配送方法のステップ](./checkout/images/03.png)
 
-購入者が利用できる配送方法は、［**サイト管理**］の中の［**配送方法**］ から → **Commerce** → ［**設定**］ -> ［**配送方法**］を変更することにより設定されます。 詳細は、[定額配送方法の使用](../../store-administration/configuring-shipping-methods/using-the-flat-rate-shipping-method.md)を参照してください。
+購入者が利用できる配送方法は、［**サイト管理**］の中の［**配送方法**］ から → **Commerce** → ［**設定**］ -> ［**配送方法**］を変更することにより設定されます。 詳細は、[定額配送方法の使用](../../store-management/configuring-shipping-methods/using-the-flat-rate-shipping-method.md)を参照してください。
 
 <a name="entering-a-billing-address" />
 
@@ -51,4 +51,4 @@
 * [Widget Reference Guide](../liferay-commerce-widgets/widget-reference.md)
 * [Creating Pages](https://help.liferay.com/hc/en-us/articles/360018171291-Creating-Pages)
 * [カスタム清算ステップの実装](../../developer-guide/sales/implementing-a-custom-checkout-step.md)
-* [定額配送方法の使用](../../store-administration/configuring-shipping-methods/using-the-flat-rate-shipping-method.md)
+* [定額配送方法の使用](../../store-management/configuring-shipping-methods/using-the-flat-rate-shipping-method.md)

@@ -178,5 +178,5 @@ private Map<String, Double> _exchangeRates = new HashMap<String, Double>() {
 
 ## 追加情報
 
-* [新しい通貨の追加](../../store-administration/currencies/adding-a-new-currency.md)
-* [為替レートの管理](../../store-administration/currencies/managing-exchange-rates.md)
+* [新しい通貨の追加](../../store-management/currencies/adding-a-new-currency.md)
+* [為替レートの管理](../../store-management/currencies/managing-exchange-rates.md)

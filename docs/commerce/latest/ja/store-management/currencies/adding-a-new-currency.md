@@ -33,4 +33,4 @@ Liferay Commerceでは、すぐに使用できる複数の通貨を事前設定�
 
 * ［**丸めモード**］ には、ドロップダウンメニューから [丸めモード](https://en.wikipedia.org/wiki/Rounding#Directed_rounding_to_an_integer) のタイプが必要です。
 
-* 一部の支払い方法では、ストアが機能するために特定の主要通貨を設定する必要があります。 [Mercanet](../../store-administration/configuring-payment-methods/mercanet.md) では、主要通貨としてEURが必要です。
+* 一部の支払い方法では、ストアが機能するために特定の主要通貨を設定する必要があります。 [Mercanet](../../store-management/configuring-payment-methods/mercanet.md) では、主要通貨としてEURが必要です。

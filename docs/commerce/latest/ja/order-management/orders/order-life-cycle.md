@@ -18,7 +18,7 @@
 
 ### ステップ2：発注
 
-売り手に情報を提供し、注文の概要を確認した後、買い手は注文を出します。 注文ワークフローが有効になっている場合、送信前に注文が確認されます。 注文が処理されている間、バイヤーは注文のステータスを追跡する [通知](../../store-administration/sending-emails/store-emails.md) を受け取ることができます。
+売り手に情報を提供し、注文の概要を確認した後、買い手は注文を出します。 注文ワークフローが有効になっている場合、送信前に注文が確認されます。 注文が処理されている間、バイヤーは注文のステータスを追跡する [通知](../../store-management/sending-emails/store-emails.md) を受け取ることができます。
 
 ### ステップ3：注文の送信
 
@@ -36,4 +36,4 @@
 * [注文の処理](./processing-an-order.md)
 * [注文メニュー](./orders-menu-reference-guide.md)
 * [出荷の概要](../shipments/introduction-to-shipments.md)
-* [メールを保存](../../store-administration/sending-emails/store-emails.md)
+* [メールを保存](../../store-management/sending-emails/store-emails.md)

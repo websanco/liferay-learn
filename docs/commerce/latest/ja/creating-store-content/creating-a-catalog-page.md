@@ -69,4 +69,4 @@
 
 ![有効にすると、すべてのチャネル商品が 検索結果ウィジェットに表示されます。](./creating-a-catalog-page/images/01.png)
 
-デフォルトでは、商品はすべてのチャネルで表示されるようになっています。 ただし、表示するかどうかを特定のチャネルに限定することができます。 詳細は、 [チャネルを使用した商品の可視性の構成](../starting-a-store/channels/configuring-product-visibility-using-channels.md) を参照してください。
+デフォルトでは、商品はすべてのチャネルで表示されるようになっています。 ただし、表示するかどうかを特定のチャネルに限定することができます。 詳細は、 [チャネルを使用した商品の可視性の構成](../store-management/channels/configuring-product-visibility-using-channels.md) を参照してください。

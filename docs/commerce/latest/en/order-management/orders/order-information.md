@@ -12,7 +12,7 @@ You can manage and track the order's status from start to finish on the _General
 
 ## Payments
 
-The _Payments_ tab tracks the order's transaction history, [payment method](../../store-administration/configuring-payment-methods/managing-payment-methods.md), and the payment status.
+The _Payments_ tab tracks the order's transaction history, [payment method](../../store-management/configuring-payment-methods/managing-payment-methods.md), and the payment status.
 
 ![Orders Menu - Payments tab](./order-information/images/02.png)
 
@@ -30,7 +30,7 @@ The _Notes_ tab displays notes that have been previously added to an order and a
 
 ## Emails
 
-The _Emails_ tab contains all the [transactional emails](../../store-administration/sending-emails/store-emails.md) sent by the Liferay Commerce instance.
+The _Emails_ tab contains all the [transactional emails](../../store-management/sending-emails/store-emails.md) sent by the Liferay Commerce instance.
 
 ![Emails Tab](./order-information/images/05.png)
 
@@ -38,6 +38,6 @@ The _Emails_ tab contains all the [transactional emails](../../store-administrat
 
 * [Introduction to Order Workflows](../order-workflows/introduction-to-order-workflows.md)
 * [Orders Menu Reference Guide](./orders-menu-reference-guide.md)
-* [Managing Payment Methods](../../store-administration/configuring-payment-methods/managing-payment-methods.md)
+* [Managing Payment Methods](../../store-management/configuring-payment-methods/managing-payment-methods.md)
 * [Introduction to Shipments](../shipments/introduction-to-shipments.md)
-* [Store Emails](../../store-administration/sending-emails/store-emails.md)
+* [Store Emails](../../store-management/sending-emails/store-emails.md)

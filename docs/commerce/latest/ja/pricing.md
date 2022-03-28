@@ -10,10 +10,11 @@ pricing/adding-products-to-a-price-list.md
 pricing/adding-tiered-pricing.md
 pricing/using-gross-and-net-price-types.md
 pricing/promoting-products.md
+pricing/configuring-taxes.md
 ```
 
 ```{raw} html
-:file: ../landingpage_template.html
+:file: landingpage_template.html
 ```
 
 ```{raw} html

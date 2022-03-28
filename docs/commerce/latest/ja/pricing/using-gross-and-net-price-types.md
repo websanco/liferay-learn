@@ -1,6 +1,6 @@
 # グロス価格とネット価格タイプの使用
 
-Liferay Commerceでは、プロモーションと割引の計算にグロスまたはネット価格タイプのいずれかを使用できます。 この設定は、 [価格表](../managing-prices/creating-a-price-list.md)と[チャネル](../../starting-a-store/channels/introduction-to-channels.md)に対して構成されています。
+Liferay Commerceでは、プロモーションと割引の計算にグロスまたはネット価格タイプのいずれかを使用できます。 この設定は、 [価格表](./creating-a-price-list.md)と[チャネル](../store-management/channels/introduction-to-channels.md)に対して構成されています。
 
 <a name="setting-the-price-lists-price-type" />
 
@@ -8,7 +8,7 @@ Liferay Commerceでは、プロモーションと割引の計算にグロスま�
 
 以下の手順で、価格表の価格の種類を設定します。
 
-1. [**グローバルメニュー**]（![Applications Menu icon](../../images/icon-applications-menu.png)）を開き、 [**Commerce**] タブをクリックし、 [**価格表**] に進みます。
+1. [**グローバルメニュー**]（![Applications Menu icon](../images/icon-applications-menu.png)）を開き、 [**Commerce**] タブをクリックし、 [**価格表**] に進みます。
 
 1. 設定したい価格表をクリックします。
 
@@ -26,7 +26,7 @@ Liferay Commerceでは、プロモーションと割引の計算にグロスま�
 
 チャネルの価格タイプを設定することもできます。 以下の手順で行います。
 
-1. **グローバルメニュー**（![Applications Menu icon](../../images/icon-applications-menu.png)）を開き、 **Commerce** タブをクリックし、 **チャネル** に進みます。
+1. **グローバルメニュー**（![Applications Menu icon](../images/icon-applications-menu.png)）を開き、 **Commerce** タブをクリックし、 **チャネル** に進みます。
 
 1. 目的のチャネルをクリックします。
 
@@ -62,6 +62,6 @@ Liferay Commerceでは、プロモーションと割引の計算にグロスま�
 
 ## 追加情報
 
-* [割引について](../../promoting-products/introduction-to-discounts.md)
+* [割引について](./promoting-products/introduction-to-discounts.md)
 * [価格表の作成](./creating-a-price-list.md)
-* [チャネル管理](../../starting-a-store/channels/managing-channels.md)
+* [チャネル管理](../store-management/channels/managing-channels.md)

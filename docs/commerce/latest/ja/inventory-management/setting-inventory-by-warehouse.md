@@ -1,6 +1,6 @@
 # 倉庫ごとに在庫を設定する
 
-複数の倉庫を持つ店舗は、倉庫ごとに商品在庫を管理できます。 **Inventory** メニューは、ユーザーが各倉庫で販売可能な商品の数を管理する場所です。 [ Minium Accelerator](../../starting-a-store/using-the-minium-accelerator-to-jump-start-your-b2b-store.md)を使用してストアが作成された場合は、すでに3つの倉庫が作成されています。
+複数の倉庫を持つ店舗は、倉庫ごとに商品在庫を管理できます。 **Inventory** メニューは、ユーザーが各倉庫で販売可能な商品の数を管理する場所です。 [ Minium Accelerator](../starting-a-store/using-the-minium-accelerator-to-jump-start-your-b2b-store.md)を使用してストアが作成された場合は、すでに3つの倉庫が作成されています。
 
 倉庫ごとに在庫を設定するには：
 
@@ -28,7 +28,7 @@
 
 1. ［**グローバルアプリケーション**］メニュー &rarr; ［**コマース**］&rarr; ［**在庫**］に移動します。
 1. SKU（CREAM-12PACK）をクリックします。
-1. （![Add icon](../../images/icon-add.png)）をクリックし、次に ［**Create Transfer**］をクリックします。
+1. （![Add icon](../images/icon-add.png)）をクリックし、次に ［**Create Transfer**］をクリックします。
 
     ![ユーザーは倉庫間で在庫を転送できます](./setting-inventory-by-warehouse/images/02.png)
 
@@ -74,7 +74,7 @@
 
 1. ［**コントロールパネル**］ &rarr; ［**コマース**］ &rarr; ［**在庫**］に移動します。
 1. SKU（CREAM-12PACK）をクリックします。
-1. （![Add icon](../../images/icon-add.png)）をクリックし、次に **Create Transfer** クリックします。
+1. （![Add icon](../images/icon-add.png)）をクリックし、次に **Create Transfer** クリックします。
 
     ![ユーザーは倉庫間で在庫を転送できます](./setting-inventory-by-warehouse/images/02.png)
 
