@@ -2,13 +2,13 @@ package com.acme.c2p9.internal.dynamic.data.mapping.form.field.type;
 
 import com.liferay.dynamic.data.mapping.form.field.type.BaseDDMFormFieldType;
 import com.liferay.dynamic.data.mapping.form.field.type.DDMFormFieldType;
-import com.liferay.dynamic.data.mapping.form.field.type.DDMFormFieldTypeSettings;
 import com.liferay.frontend.js.loader.modules.extender.npm.NPMResolver;
 
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
 
 @Component(
+	immediate = true,
 	property = {
 		"ddm.form.field.type.description=c2p9-description",
 		"ddm.form.field.type.display.order:Integer=10",
@@ -19,13 +19,6 @@ import org.osgi.service.component.annotations.Reference;
 	service = DDMFormFieldType.class
 )
 public class C2P9DDMFormFieldType extends BaseDDMFormFieldType {
-
-	@Override
-	public Class<? extends DDMFormFieldTypeSettings>
-		getDDMFormFieldTypeSettings() {
-
-		return C2P9DDMFormFieldTypeSettings.class;
-	}
 
 	@Override
 	public String getModuleName() {

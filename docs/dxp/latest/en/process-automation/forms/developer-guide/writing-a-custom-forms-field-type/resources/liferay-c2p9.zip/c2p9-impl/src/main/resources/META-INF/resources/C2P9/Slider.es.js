@@ -2,13 +2,13 @@ import {FieldBase} from 'dynamic-data-mapping-form-field-type/FieldBase/ReactFie
 import {useSyncValue} from 'dynamic-data-mapping-form-field-type/hooks/useSyncValue.es';
 import React from 'react';
 
-const Slider = ({max, min, name, onChange, predefinedValue, readOnly, value}) => (
+const Slider = ({name, onChange, predefinedValue, readOnly, value}) => (
 	<input
 		className="ddm-field-slider form-control slider"
 		disabled={readOnly}
 		id="myRange"
-		max={max}
-		min={min}
+		max={100}
+		min={1}
 		name={name}
 		onInput={onChange}
 		type="range"
@@ -18,8 +18,6 @@ const Slider = ({max, min, name, onChange, predefinedValue, readOnly, value}) =>
 
 const Main = ({
 	label,
-	max,
-	min,
 	name,
 	onChange,
 	predefinedValue,
@@ -39,8 +37,6 @@ const Main = ({
 			{...otherProps}
 		>
 			<Slider
-				max={max}
-				min={min}
 				name={name}
 				onChange={(event) => {
 					setCurrentValue(event.target.value);
