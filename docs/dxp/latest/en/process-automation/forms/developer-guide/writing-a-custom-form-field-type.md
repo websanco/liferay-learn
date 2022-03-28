@@ -13,7 +13,7 @@ The example project here is meant to run on Liferay 7.4. If you're running Lifer
 If you're running Liferay 7.2, this source code will not run due to a difference in supported frontend frameworks. Please see the article [Developing a Custom Form Field for Liferay 7.2](./developing-a-custom-form-field-for-liferay-7-2.md) to learn how to adapt the C2P9 Slider code sample for 7.2.
 ```
 
-## Examine the Custom Forms Field in Liferay 
+## Examine the Custom Form Field in Liferay 
 
 To see how custom form fields work, deploy an example and then add some form data using the new field.
 

@@ -1,6 +1,6 @@
-# Devleloping a Custom Form Field for Liferay 7.2
+# Developing a Custom Form Field for Liferay 7.2
 
-React-based custom form fields can be devleloped for Liferay 7.3 and Liferay 7.4. See [Writing Custom Form Field Types](./writing-a-form-storage-adapter.md) to learn how. Liferay 7.2 used a different frontend technology, based on MetalJS and Soy closure templates. In this tutorial you can learn to adapt the React-based Acme C2P9 Slider field to run on a Liferay 7.2 installation.
+React-based custom form fields can be developed for Liferay 7.3 and Liferay 7.4. See [Writing Custom Form Field Types](./writing-a-form-storage-adapter.md) to learn how. Liferay 7.2 used a different frontend technology, based on MetalJS and Soy closure templates. In this tutorial you can learn to adapt the React-based Acme C2P9 Slider field to run on a Liferay 7.2 installation.
 
 ## Adjusting the Acme C2P9 Slider to Run on Liferay 7.2
 
