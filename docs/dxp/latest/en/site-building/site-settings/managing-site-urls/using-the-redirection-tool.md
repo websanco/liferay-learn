@@ -1,6 +1,6 @@
 # Using the Redirection Tool
 
-> Available: Liferay DXP/Portal 7.3+
+{bdg-secondary}`Available 7.3+`
 
 Maintaining URL integrity is important for any Site. Liferay DXP's *Redirection* tool provides a convenient and integrated way to manage HTTP redirects and track 404 errors. With this tool, you can easily avoid and fix broken links, improving both user experience and SEO.
 
@@ -14,7 +14,7 @@ Here, the Redirection tool's functionalities are organized into two tabs: *Redir
 * [404 URLs](#404-urls)
 
 ```{important}
-For Liferay DXP/Portal 7.4+, 404 tracking is disabled by default. To use this feature, you must [enable 404 tracking](#enabling-404-tracking). This enables both 404 tracking and the 404 URL management tab in the Redirection application.
+For Liferay DXP/Portal 7.4+, 404 tracking is disabled by default. To use this feature, you must [enable 404 tracking](#enabling-404-tracking). This enables both 404 tracking and the 404 URLs tab in the Redirection application.
 ```
 
 ## Redirects
@@ -76,15 +76,15 @@ Changes made to a redirect may not immediately display in browsers that have cac
 
 ## 404 URLs
 
-```{note}
-To access this tab for Liferay DXP/Portal 7.4+, you must first [enable 404 tracking](#enabling-404-tracking).
-```
-
 In the *404 URLs* tab, you can view and manage Site requests leading to 404 errors. DXP catalogs each error, so you can assess the cause of the errors and quickly resolve any issues.
 
 ![You can view and manage 404 URLs.](./using-the-redirection-tool/images/10.png)
 
 Here, you can search, filter, and order cataloged 404 URLs, as well as conveniently create redirects for them when desired. These URLs are preserved in your database according to your Redirection configurations in the Control Panel, where you can configure both how many and how long 404s are cataloged.
+
+```{note}
+To access the 404 URLs tab for Liferay DXP/Portal 7.4+, you must first [enable 404 tracking](#enabling-404-tracking).
+```
 
 ### Viewing 404 URLs
 
@@ -120,9 +120,9 @@ By default, the *404 URL Maximum Age* is set to 30 days, the *Maximum Number of 
 
 ## Enabling 404 Tracking
 
-> For Liferay DXP/Portal 7.4+
+{bdg-secondary}`For Liferay DXP/Portal 7.4+`
 
-Follow these steps to activate the 404 URLs tab in the Redirects application and enable background tracking for 404 hits:
+Follow these steps to enable background 404 tracking and activate the 404 URLs tab:
 
 1. Open the *Global Menu* (![Global Menu](../../../images/icon-applications-menu.png)), click the *Control Panel* tab, and go to *System Settings* &rarr; *Pages* &rarr; *Redirection*.
 
@@ -132,7 +132,7 @@ Follow these steps to activate the 404 URLs tab in the Redirects application and
 
 1. Click *Update*.
 
-Once enabled, you can access the 404 URL management tab in the Redirects application.
+Once enabled, you can access the 404 URL management tab in the Redirection application.
 
 ```{important}
 Enabling or disabling the application does not affect data stored in the database. If disabled, you can reenable the feature to access your data at any time.
