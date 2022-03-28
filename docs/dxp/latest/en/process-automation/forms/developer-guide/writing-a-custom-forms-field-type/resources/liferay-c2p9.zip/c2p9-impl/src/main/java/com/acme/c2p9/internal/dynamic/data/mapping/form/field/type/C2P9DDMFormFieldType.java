@@ -8,7 +8,6 @@ import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
 
 @Component(
-	immediate = true,
 	property = {
 		"ddm.form.field.type.description=c2p9-description",
 		"ddm.form.field.type.display.order:Integer=10",

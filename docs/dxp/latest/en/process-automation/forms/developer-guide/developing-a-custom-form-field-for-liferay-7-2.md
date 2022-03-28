@@ -193,3 +193,23 @@ Liferay 7.2 used a different frontend framework for custom form fields. To adjus
           {call Slider.render data="all" /}
       {/deltemplate}
       ```
+
+1. Once the project's frontend is replaced, deploy it to a running Liferay 7.2. 
+
+   - To start a Liferay 7.2 Docker container run
+      ```shell
+      docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
+      ```
+   - To deploy the reconfigured form field project, go to the `liferay-c2p9.zip` folder and run
+      ```shell
+      ./gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)
+      ```
+
+1. Confirm the deployment in the Liferay Docker container console.
+
+   ```bash
+   STARTED com.acme.c2p9.impl_1.0.0 [1009]
+   ```
+
+The form field is deployed and [ready to use](writing-a-custom-forms-field-type.md#use-the-deployed-slider-field) on Liferay 7.2.
+
