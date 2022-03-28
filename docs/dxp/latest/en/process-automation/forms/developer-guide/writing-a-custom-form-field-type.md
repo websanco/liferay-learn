@@ -1,8 +1,8 @@
-# Writing a Custom Forms Field Type
+# Writing a Custom Form Field Type
 
 The Forms application contains many highly configurable [field types out-of-the-box](../creating-and-managing-forms/forms-field-types-reference.md). Most use cases are met with one of the existing field types. If your use case can't be met with the default field types, you can create your own.
 
-![There are many useful form elements.](./writing-a-custom-forms-field-type/images/01.png)
+![There are many useful form elements.](./writing-a-custom-form-field-type/images/01.png)
 
 * Deploy an example project and see how it works
 * Add custom settings to the field
@@ -31,7 +31,7 @@ To see how custom form fields work, deploy an example and then add some form dat
     docker start -i [container_name]
     ```
 
-1. Download and unzip [the Custom Form Field Type project](./writing-a-custom-forms-field-type/resources/liferay-c2p9.zip).
+1. Download and unzip [the Custom Form Field Type project](./writing-a-custom-form-field-type/resources/liferay-c2p9.zip).
 
     ```bash
     curl https://learn.liferay.com/dxp/latest/en/process-automation/forms/developer-guide/liferay-c2p9.zip -O
@@ -77,7 +77,7 @@ To see how custom form fields work, deploy an example and then add some form dat
 
 1. Publish the form and go submit a record using the slider field.
 
-![Use the slider to set a value between 0 and 100.](./writing-a-custom-forms-field-type/images/02.png)
+![Use the slider to set a value between 0 and 100.](./writing-a-custom-form-field-type/images/02.png)
 
 ## Understand the Form Field's Code
 
@@ -90,7 +90,7 @@ Form Field Types in Liferay contain Java and JavaScript source code. In the C2P9
 
 The import statements bring in functionality from Liferay's base form field, `dynamic-data-mapping-form-field-type`. These will be called later using the declared variables `FieldBase` and `useSyncValue`.
 
-```{literalinclude} ./writing-a-custom-forms-field-type/resources/liferay-c2p9.zip/c2p9-impl/src/main/resources/META-INF/resources/C2P9/Slider.es.js
+```{literalinclude} ./writing-a-custom-form-field-type/resources/liferay-c2p9.zip/c2p9-impl/src/main/resources/META-INF/resources/C2P9/Slider.es.js
    :dedent: 0
    :language: js
    :lines: 1-2
@@ -110,7 +110,7 @@ The rest of the properties () are defined by the Main block and its function. Wh
 
 What are the `otherProps`: Required, Help Text, Show Label, Repeatable?
 
-```{literalinclude} ./writing-a-custom-forms-field-type/resources/liferay-c2p9.zip/c2p9-impl/src/main/resources/META-INF/resources/C2P9/Slider.es.js
+```{literalinclude} ./writing-a-custom-form-field-type/resources/liferay-c2p9.zip/c2p9-impl/src/main/resources/META-INF/resources/C2P9/Slider.es.js
    :dedent: 0
    :language: js
    :lines: 5-17
@@ -118,7 +118,7 @@ What are the `otherProps`: Required, Help Text, Show Label, Repeatable?
 
 The `const Main =` block defines the field's configuration options and the field's behavior.
 
-```{literalinclude} ./writing-a-custom-forms-field-type/resources/liferay-c2p9.zip/c2p9-impl/src/main/resources/META-INF/resources/C2P9/Slider.es.js
+```{literalinclude} ./writing-a-custom-form-field-type/resources/liferay-c2p9.zip/c2p9-impl/src/main/resources/META-INF/resources/C2P9/Slider.es.js
    :dedent: 0
    :language: js
    :lines: 19-51
@@ -126,7 +126,7 @@ The `const Main =` block defines the field's configuration options and the field
 
 At the end we export the Main function as the default.
 
-```{literalinclude} ./writing-a-custom-forms-field-type/resources/liferay-c2p9.zip/c2p9-impl/src/main/resources/META-INF/resources/C2P9/Slider.es.js
+```{literalinclude} ./writing-a-custom-form-field-type/resources/liferay-c2p9.zip/c2p9-impl/src/main/resources/META-INF/resources/C2P9/Slider.es.js
    :dedent: 0
    :language: js
    :lines: 53-55
@@ -348,4 +348,4 @@ The frontend requires updates to the `Slider.es.js` to support user-entered min 
 
 1. Test the Slider field in a form again. This time make sure you go to the Advanced tab in the field's sidebar settings and try a different min and max setting.
 
-   ![The Min and Max settings are now configurable.](./writing-a-custom-forms-field-type/images/03.png)
+   ![The Min and Max settings are now configurable.](./writing-a-custom-form-field-type/images/03.png)
