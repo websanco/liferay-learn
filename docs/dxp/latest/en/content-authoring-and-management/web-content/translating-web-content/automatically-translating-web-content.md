@@ -30,7 +30,7 @@ When ready, follow these steps:
 
 ## Enabling for Amazon Translate
 
-<!--{bdg-secondary}`Available 7.4 ???+`-->
+{bdg-secondary}`Available 7.4 U9+ and GA13+`
 
 Enabling Amazon Translate requires an active account. See official [Amazon Translate](https://docs.aws.amazon.com/translate/latest/dg/what-is.html) documentation for more information.
 
@@ -50,7 +50,7 @@ When ready, follow these steps:
 
 ## Enabling for Microsoft Translator
 
-<!--{bdg-secondary}`Available 7.4 ???+`-->
+{bdg-secondary}`Available 7.4 U6+ and GA10+`
 
 Enabling Microsoft Translator requires an active account. See official [Microsoft Translator](https://docs.microsoft.com/en-us/azure/cognitive-services/translator/) documentation for more information.
 
