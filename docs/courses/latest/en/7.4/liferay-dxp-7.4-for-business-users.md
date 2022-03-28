@@ -13,8 +13,6 @@ liferay-dxp-7.4-for-business-users/secure-your-liferay-dxp-platform.md
 liferay-dxp-7.4-for-business-users/using-liferay-objects.md
 ```
 
-Introductory text to what this section is about.
-
 ::::{grid} 2
 :gutter: 3 3 3 3
 
