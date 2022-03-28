@@ -4,9 +4,9 @@
 :maxdepth: 2
 
 using-liferay-objects/creating-new-objects.md
-using-liferay-objects/exercises-create-a-custom-business-object.md
+using-liferay-objects/exercise-1-create-a-custom-business-object.md
 using-liferay-objects/integrating-and-displaying-liferay-objects.md
-using-liferay-objects/exercises-integrate-objects-with-forms-and-workflows.md
+using-liferay-objects/exercise-2-integrate-objects-with-forms-and-workflows.md
 using-liferay-objects/summary.md
 ```
 
@@ -44,7 +44,7 @@ using-liferay-objects/summary.md
 ## Next Steps
 
 * [Creating New Objects](./using-liferay-objects/creating-new-objects.md) 
-* [Exercise 1: Create a Custom Business Object](./using-liferay-objects/exercises-create-a-custom-business-object.md) 
+* [Exercise 1: Create a Custom Business Object](./using-liferay-objects/exercise-1-create-a-custom-business-object.md) 
 * [Integrating and Displaying Liferay Objects](./using-liferay-objects/integrating-and-displaying-liferay-objects.md) 
-* [Exercise 2: Integrate Objects with Forms and Workflows](./using-liferay-objects/exercises-integrate-objects-with-forms-and-workflows.md) 
+* [Exercise 2: Integrate Objects with Forms and Workflows](./using-liferay-objects/exercise-2-integrate-objects-with-forms-and-workflows.md) 
 * [Summary](./using-liferay-objects/summary.md) 

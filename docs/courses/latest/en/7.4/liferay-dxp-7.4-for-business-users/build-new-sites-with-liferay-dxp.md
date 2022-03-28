@@ -3,10 +3,9 @@
 ```{toctree}
 :maxdepth: 2
 
-build-new-sites-with-liferay-dxp/intro.md
-build-new-sites-with-liferay-dxp/exercises-add-pages-to-platform.md
-build-new-sites-with-liferay-dxp/exercises-add-sites-to-platform.md
-build-new-sites-with-liferay-dxp/exercises-manage-site-configuration.md
+build-new-sites-with-liferay-dxp/exercise-1-add-pages-to-platform.md
+build-new-sites-with-liferay-dxp/exercise-2-add-sites-to-platform.md
+build-new-sites-with-liferay-dxp/exercise-3-manage-site-configuration.md
 ```
 
 ## Learning Objectives
@@ -41,6 +40,6 @@ build-new-sites-with-liferay-dxp/exercises-manage-site-configuration.md
 
 ## Next Steps
 
-* [Exercise 1: Add Pages to the Platform with Page Templates](./build-new-sites-with-liferay-dxp/exercises-add-pages-to-platform.md)
-* [Exercise 2: Add Sites to the Platform](./build-new-sites-with-liferay-dxp/exercises-add-sites-to-platform.md)
-* [Exercise 3: Manage Site Configuration](./build-new-sites-with-liferay-dxp/exercises-manage-site-configuration.md)
+* [Exercise 1: Add Pages to the Platform with Page Templates](./build-new-sites-with-liferay-dxp/exercise-1-add-pages-to-platform.md)
+* [Exercise 2: Add Sites to the Platform](./build-new-sites-with-liferay-dxp/exercise-2-add-sites-to-platform.md)
+* [Exercise 3: Manage Site Configuration](./build-new-sites-with-liferay-dxp/exercise-3-manage-site-configuration.md)

@@ -3,8 +3,8 @@
 ```{toctree}
 :maxdepth: 2
 
-gather-and-analyze-data-with-liferay-dxp/exercises-creating-forms.md
-gather-and-analyze-data-with-liferay-dxp/exercises-gathering-and-viewing-feedback.md
+gather-and-analyze-data-with-liferay-dxp/exercise-1-creating-forms.md
+gather-and-analyze-data-with-liferay-dxp/exercise-2-gathering-and-viewing-feedback.md
 ```
 
 ## Learning Objectives
@@ -37,5 +37,5 @@ gather-and-analyze-data-with-liferay-dxp/exercises-gathering-and-viewing-feedbac
 
 ## Next Steps
 
-* [Exercise 1: Creating Forms](./gather-and-analyze-data-with-liferay-dxp/exercises-creating-forms.md) 
-* [Exercise 2: Gathering and Viewing Data](./gather-and-analyze-data-with-liferay-dxp/exercises-gathering-and-viewing-feedback.md) 
+* [Exercise 1: Creating Forms](./gather-and-analyze-data-with-liferay-dxp/exercise-1-creating-forms.md) 
+* [Exercise 2: Gathering and Viewing Data](./gather-and-analyze-data-with-liferay-dxp/exercise-2-gathering-and-viewing-feedback.md) 

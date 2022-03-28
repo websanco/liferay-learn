@@ -4,9 +4,9 @@
 :maxdepth: 2
 
 create-content-review-and-publication-processes-with-liferay-dxp/create-custom-workflow-definitions.md
-create-content-review-and-publication-processes-with-liferay-dxp/exercises-creating-workflow-definitions.md
+create-content-review-and-publication-processes-with-liferay-dxp/exercise-1-creating-workflow-definitions.md
 create-content-review-and-publication-processes-with-liferay-dxp/preparing-pages-content-for-production.md
-create-content-review-and-publication-processes-with-liferay-dxp/exercises-publishing-content.md
+create-content-review-and-publication-processes-with-liferay-dxp/exercise-2-publishing-content.md
 create-content-review-and-publication-processes-with-liferay-dxp/summary.md
 ```
 
@@ -43,7 +43,7 @@ create-content-review-and-publication-processes-with-liferay-dxp/summary.md
 ## Next Steps
 
 * [Creating Custom Workflow Definitions](./create-content-review-and-publication-processes-with-liferay-dxp/create-custom-workflow-definitions.md) 
-* [Exercise 1: Creating Workflow Definitions](./create-content-review-and-publication-processes-with-liferay-dxp/exercises-creating-workflow-definitions.md) 
+* [Exercise 1: Creating Workflow Definitions](./create-content-review-and-publication-processes-with-liferay-dxp/exercise-1-creating-workflow-definitions.md) 
 * [Preparing Pages and Content for Production](./create-content-review-and-publication-processes-with-liferay-dxp/preparing-pages-content-for-production.md) 
-* [Exercise 2: Publishing Content](./create-content-review-and-publication-processes-with-liferay-dxp/exercises-publishing-content.md) 
+* [Exercise 2: Publishing Content](./create-content-review-and-publication-processes-with-liferay-dxp/exercise-2-publishing-content.md) 
 * [Publishing Content Summary](./create-content-review-and-publication-processes-with-liferay-dxp/summary.md) 
