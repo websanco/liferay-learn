@@ -1,9 +1,9 @@
 # Using the Bootstrap 3 Compatibility Layer in Liferay 7.4
 
-As of Liferay DXP 7.4 GA1, the [Bootstrap 3](https://getbootstrap.com/) compatibility layer is removed from the built-in packages in Liferay frontend applications. If you are upgrading from a previous version, then you must include the compatibility layer as an external package for any of your projects that depend on Bootstrap 3 for their CSS code.
+As of Liferay DXP 7.4 GA1, the [Bootstrap 3](https://getbootstrap.com/) compatibility layer is removed from the built-in packages in Liferay frontend applications. If you are upgrading from a previous version, you must include the compatibility layer as an external package for any of your projects that depend on Bootstrap 3 for their CSS code.
 
 ```{note}
-If you use the `gulp upgrade` command to [upgrade a theme](../../../site-building/site-appearance/themes/upgrading-a-theme.md) to Liferay 7.4, then you have the option to automatically include the Bootstrap 3 compatibility layer with the upgrade. In this case, you do not need to manually add the compabitility layer to that theme.
+If you use the `gulp upgrade` command to [upgrade a theme](../../../site-building/site-appearance/themes/upgrading-a-theme.md) to Liferay 7.4, you have the option to automatically include the Bootstrap 3 compatibility layer with the upgrade. In this case, you do not need to manually add the compabitility layer to that theme.
 ```
 
 ```{warning}
@@ -30,7 +30,7 @@ Once you have the compatibility layer installed, you can use it in any project t
 
 To use the compatibility layer, you must import it into your project's `clay.scss` file (unless it is a theme that already has it included as part of an [upgrade to 7.4](../../../site-building/site-appearance/themes/upgrading-a-theme.md)).
 
-If you require the atlas theme variables, then add this to your project's `src/css/clay.scss` file:
+If you require the atlas theme variables, add this to your project's `src/css/clay.scss` file:
 
 ```css
 @import 'clay/atlas';
@@ -42,7 +42,7 @@ If you require the atlas theme variables, then add this to your project's `src/c
 @import '@liferay/bs3-bs4-compat/scss/components';
 ```
 
-If you **do not** require the atlas theme variables, then add this to your project's `src/css/clay.scss` file instead:
+If you **do not** require the atlas theme variables, add this to your project's `src/css/clay.scss` file instead:
 
 ```css
 @import 'clay/base';

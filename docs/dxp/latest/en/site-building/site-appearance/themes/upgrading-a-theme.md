@@ -37,7 +37,7 @@ A warning appears reminding you to back up your files if you have not yet done s
 sure you wish to start the upgrade process?
 ```
 
-**If you are upgrading to Liferay 7.4**: another prompt appears asking whether you would like to add the Bootstrap 3 to 4 compatibility layer. If your theme requires compatibility with Bootstrap 3, type "y" (or "yes"), and then again to confirm when a warning appears. If you do not need compatibility with Bootstrap 3, then type "no" (or "no").
+**If you are upgrading to Liferay 7.4**: another prompt appears asking whether you would like to add the Bootstrap 3 to 4 compatibility layer. If your theme requires compatibility with Bootstrap 3, enter "y" (or "yes"), and then enter it again when a warning appears to confirm. If you do not need compatibility with Bootstrap 3, then type "n" (or "no").
 
 ```
 ? Would you like to add the Bootstrap 3 to 4 compatibility layer? Yes
