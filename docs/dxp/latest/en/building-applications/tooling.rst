@@ -7,6 +7,7 @@ Tooling
    tooling/developer-tools-overview.md
    tooling/liferay_workspace.rst
    tooling/blade_cli.rst
+   tooling/poshi-test-automation.md
    tooling/developer-studio.md
    tooling/rest-builder.md
 
