@@ -70,8 +70,6 @@ Once saved, the selected Object is set as the template's mapping source, and you
 
 ## Creating Information Templates for Objects
 
-Follow these steps:
-
 1. Open the *Site Menu* (![Site Menu](../../images/icon-product-menu.png)) and go to *Design* &rarr; *Templates* &rarr; *Information Templates*.
 
 1. Click the *Add* button (![Add Button](../../images/icon-add.png))
@@ -86,13 +84,13 @@ Follow these steps:
 
    ![Import script from an .ftl file.](./displaying-object-entries/images/10.png)
 
-1. Use FreeMarker to design your template.
+1. Use [FreeMarker](https://freemarker.apache.org) to design your template.
 
    In the *Elements* side panel (![Elements](../../images/icon-list-ul.png)), you can access available fields from the selected Object's structure.
 
    ![Select from available fields in the Object's structure.](./displaying-object-entries/images/11.png)
 
-1. (Optional) Add a *description* or *image* to the template in the Properties side panel (![Properties](../../images/icon-cog3.png)).
+1. (Optional) Add a description or image to the template in the Properties side panel (![Properties](../../images/icon-cog3.png)).
 
    ![Add a description or image in the Properties panel.](./displaying-object-entries/images/12.png)
 
