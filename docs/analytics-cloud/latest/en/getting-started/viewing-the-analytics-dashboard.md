@@ -27,3 +27,13 @@ Most of the important settings are configured when you created the workspace. Ho
 * Workspace Settings
 
 You will begin to see analytics data once your workspace is connected. For example, view Site specific analytics on the [Sites dashboard](../../touchpoints/sites-dashboard.md). To see more about your workspace settings, see [Managing Workspaces](../../workspace-settings/managing-workspaces.md). 
+
+## Language Menu Option
+
+The UI for Analytics Cloud currently supports English, Japanese, Portuguese, and Spanish. To change your language settings, 
+
+1. Click on your user name at the bottom of the dashboard. Then click *Language*.
+
+   ![Click on your user name, then click Language.](./viewing-the-analytics-dashboard/images/02.png)
+
+2. Select the language. Refresh the page. The dashboard and menu is now in the selected language.
