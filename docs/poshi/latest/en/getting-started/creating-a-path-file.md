@@ -18,7 +18,7 @@ Write your first path file using the test scenario below:
 
   1. Assert that a message appears saying there are no articles available.
 
-## Gathering the locators
+## Gathering the Locators
 
 From the given test scenario, gather the elements that your test needs to interact with.
 
@@ -34,7 +34,7 @@ From the given test scenario, gather the elements that your test needs to intera
 
 1. For an added assertion, search for a term that will surely have results, for example, search for the term "Staging". When the search results are displayed, use the selector icon to get the path for one of the results. In this case, use `//ul[@class='search']//a[contains(.,'Staging')]`. Note that the term 'Staging' is specific to this search result and makes the path inflexible to be used in other scenarios. To make this path reusable, use a variable that can be passed on from the testcase: `//ul[@class='search']//a[contains(.,'${key_searchTerm}')]`. See [Using Variables](../poshi-basics/variables.md) for more information.
 
-## Building the path file
+## Building the Path File
 
 1. Start with an empty file in your `poshi-standalone/poshi-tests/paths` directory and name it `LiferayLearn.path`.
 

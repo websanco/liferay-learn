@@ -10,7 +10,7 @@
 
 1. [Gradle](https://gradle.org/install/) or [Gradle Wrapper](https://docs.gradle.org/current/userguide/gradle_wrapper.html#sec:adding_wrapper) 6.6.1 or higher.
 
-## Setting up the Poshi Standalone gradle project
+## Setting up the Poshi Standalone Gradle Project
 
 1. Create a new directory, example `poshi-standalone`.
 
