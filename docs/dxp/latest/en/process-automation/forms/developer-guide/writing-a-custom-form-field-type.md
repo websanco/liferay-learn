@@ -4,8 +4,9 @@ The Forms application contains many highly configurable [field types out-of-the-
 
 ![There are many useful form elements.](./writing-a-custom-form-field-type/images/01.png)
 
-* Deploy an example project and see how it works
-* Add custom settings to the field
+* [Deploy an example project and see how it works](#examine-the-custom-form-field-in-liferay)
+* [Understand the form field's code](#understand-the-form-field-s-code)
+* [Add custom settings to the field](#add-custom-settings-to-the-form-field)
 
 ```{note}
 The example project here is meant to run on Liferay 7.4. If you're running Liferay 7.3, the source code is compatible but the [Workspace project](../../../building-applications/tooling/liferay-workspace/what-is-liferay-workspace.md) must be reconfigured for Liferay 7.3. The steps to do this are included in the instructions below.
@@ -53,7 +54,7 @@ To see how custom form fields work, deploy an example and then add some form dat
 
    ```{note}
    For Liferay 7.3, make these adjustments to the project before deploying it:
-   - In `c2p9-impl/package.json`, change the `devDependencies` reference form `@liferay/portal-7.4` to `@liferay/portal-7.3`.
+   - In `c2p9-impl/package.json`, change the `devDependencies` reference from `@liferay/portal-7.4` to `@liferay/portal-7.3`.
    - In `gradle.properties`, change the `liferay.workspace.product` value to `portal-7.3-ga8` (if a Liferay 7.3 version newer than GA8 is available, try to reference it here instead).
    ```
 
@@ -81,12 +82,46 @@ To see how custom form fields work, deploy an example and then add some form dat
 
 ## Understand the Form Field's Code
 
-Form Field Types in Liferay contain Java and JavaScript source code. In the C2P9 Slider field,
+A basic form field contains a Java class and a JavaScript file. In the C2P9 Slider field, `C2P9DDMFormFieldType.java` provides a `DDMFormFieldType` implementation by extending the abstract class `BaseDDMFormFieldType` and defining its metadata in the OSGi Component:
 
-- `C2P9DDMFormFieldType.java` provides a `DDMFormFieldType` implementation (by extending the abstract class `BaseDDMFormFieldType` and defining its metadata in the OSGi Component.
-- `Slider.es.js` provides the JavaScript logic for the field.
+```{literalinclude} ./writing-a-custom-form-field-type/resources/liferay-c2p9.zip/c2p9-impl/src/main/java/com/acme/c2p9/internal/dynamic/data/mapping/form/field/type/C2P9DDMFormFieldType.java
+   :dedent: 0
+   :language: java
+   :lines: 10-20
+```
 
-`Slider.es.js` description:
+- `ddm.form.field.type.description`: provide the language key for the description text. Make sure the translated value is defined in the `Language.properties` file.
+- `ddm.form.field.type.display.order`: set an integer value to determine where the field is displayed in the Form Builder sidebar. If there's a tie, the fields are sorted alphabetically.
+- `ddm.form.field.type.group`:
+- `ddm.form.field.type.icon`: decide which icon type to use for your field. Choose from blah blah
+- `ddm.form.field.type.label`: provide the language key for the label text. Make sure the translated value is defined in the `Language.properties` file.
+- `ddm.form.field.type.name`: provide the language key for the field name. Make sure the translated value is defined in the `Language.properties` file.
+
+The `getModuleName` method passes the `Slider.es.js` file path to the `NPMResolver` service. Some of the path definition is accomplished in the `package.json` file (see the `name` declaration and the `source-maps` defined in the `scripts` section).
+
+```{literalinclude} ./writing-a-custom-form-field-type/resources/liferay-c2p9.zip/c2p9-impl/src/main/java/com/acme/c2p9/internal/dynamic/data/mapping/form/field/type/C2P9DDMFormFieldType.java
+   :dedent: 1
+   :language: java
+   :lines: 22-26,38-39
+```
+
+The `getName` method returns the language key defining the name that will appear in the UI: `c2p9-slider` in this case, which is translated to `C2P9 Slider` in the `c2p9-impl/src/main/resources/content/Language.properties` file.
+
+```{literalinclude} ./writing-a-custom-form-field-type/resources/liferay-c2p9.zip/c2p9-impl/src/main/java/com/acme/c2p9/internal/dynamic/data/mapping/form/field/type/C2P9DDMFormFieldType.java
+   :dedent: 1
+   :language: java
+   :lines: 28-31
+```
+
+The `isCustomDDMFormFieldType` method must return `true` for all form fields not shipped out of the box with Liferay.
+
+```{literalinclude} ./writing-a-custom-form-field-type/resources/liferay-c2p9.zip/c2p9-impl/src/main/java/com/acme/c2p9/internal/dynamic/data/mapping/form/field/type/C2P9DDMFormFieldType.java
+   :dedent: 1
+   :language: java
+   :lines: 33-36
+```
+
+`Slider.es.js` provides the JavaScript logic for the field. Two components are defined in the file; `Main` and `Slider`. The `Main` component is exported, and it includes the `Slider` as a child element of the imported `FieldBase`. The `onChange` function is used to get the slider's position/value each time the event is detected (each time the slider is dragged to a new value).
 
 The import statements bring in functionality from Liferay's base form field, `dynamic-data-mapping-form-field-type`. These will be called later using the declared variables `FieldBase` and `useSyncValue`.
 
@@ -96,19 +131,7 @@ The import statements bring in functionality from Liferay's base form field, `dy
    :lines: 1-2
 ```
 
-The `const Slider =` block defines the field: it's instantiated with the parameters `name`, `onChange`, `predefinedValue`, `readOnly`, and `value`. Some of its input properties are hard coded: 
-
-1. `className="ddm-field-slider form-control slider"` blah blah blah
-1. `id="myRange"` blah blah blah
-1. `type="range"` defines the type of data that will be passed as a value to the field. The `range` type means that the fields accepts an integer.
-1. `max={100}` specifies that the maximum value for the field will be `100`.
-1. `min={1}` sets the minimum accepted value at `1`.
-
-Below you can find steps showing you how to make the max and min properties configurable by the form builder.
-
-The rest of the properties () are defined by the Main block and its function. When the exported `Main` variable is called by the Forms Framework, .
-
-What are the `otherProps`: Required, Help Text, Show Label, Repeatable?
+The `const Slider =` block defines the field: it's instantiated with the parameters `name`, `onChange`, `predefinedValue`, `readOnly`, and `value`. 
 
 ```{literalinclude} ./writing-a-custom-form-field-type/resources/liferay-c2p9.zip/c2p9-impl/src/main/resources/META-INF/resources/C2P9/Slider.es.js
    :dedent: 0
@@ -116,21 +139,7 @@ What are the `otherProps`: Required, Help Text, Show Label, Repeatable?
    :lines: 5-17
 ```
 
-The `const Main =` block defines the field's configuration options and the field's behavior.
-
-```{literalinclude} ./writing-a-custom-form-field-type/resources/liferay-c2p9.zip/c2p9-impl/src/main/resources/META-INF/resources/C2P9/Slider.es.js
-   :dedent: 0
-   :language: js
-   :lines: 19-51
-```
-
-At the end we export the Main function as the default.
-
-```{literalinclude} ./writing-a-custom-form-field-type/resources/liferay-c2p9.zip/c2p9-impl/src/main/resources/META-INF/resources/C2P9/Slider.es.js
-   :dedent: 0
-   :language: js
-   :lines: 53-55
-```
+The values for these parameters, along with some others, define the HTML `<input>` tag for the form field. Importantly, the `max` and `min` values that the user can select are hardcoded right now. You'll [change this later](#add-custom-settings-to-the-form-field). The `value` of the field is defined using a ternary operator: if a value is entered, use it. Otherwise use the predefined value.
 
 ## Add Custom Settings to the Form Field
 
@@ -142,7 +151,6 @@ Right now the Max and Min settings for the Slider field are hard coded, but it's
 ### Supporting Custom Settings in the Backend
 
 The form field's settings are defined in the `DDMTypeSettings` class, which also defines the form that appears in the field's sidebar using the `@DDMForm` annotation. Then the `DDMFormFieldType` itself must know about the new settings definition so it doesn't simply display the default field settings form. A `DDMFormFieldContextContributor` class sends the new settings to the React component so it can be displayed to the end user.
-<!--Note, the description of the context contributor comes from the liferay-docs PR but I can see the settings in the sidebar without this contributor or any frontend work, because of the form annotations that define the settings form. So I need some more understanding of what this contributor is needed for. -->
 
 1. Add a `C2P9DDMFormFieldTypeSettings` Java class to the `com.acme.c2p9.internal.dynamic.data.mapping.form.field.type` package.
 
