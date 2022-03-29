@@ -3,7 +3,7 @@
 The Liferay CLI tool makes it easy to create [Angular](https://angular.io/), JavaScript, [React](https://reactjs.org/), shared bundle, or [Vue.js](https://vuejs.org/) projects to interface with Liferay's REST and GraphQL services. Using a `liferay` command, you can generate, build, and deploy projects. 
 
 ```{note}
-The Liferay CLI tool replaces the old Yeoman generators used to create JavaScript application projects for Liferay DXP 7.4+. However, if you want to create projects for previous versions, you must invoke the older Yeoman generators using `yo liferay-js`.
+The Liferay CLI tool replaces the old Yeoman generators used to create JavaScript application projects for Liferay DXP 7.4+. You can use either approach for older versions, but for 7.4+, you must use the CLI tool instead of invoking the Yeoman generators with `yo liferay-js`.
 ```
 
 ## Installing the CLI Tool
@@ -14,9 +14,13 @@ Run this command to install the CLI tool on your local system:
 npm install -g @liferay/cli
 ```
 
+```{note}
+If you would rather not install the CLI tool globally, you can also run the tool's commands without installing it by using `npx`. For example, you can [generate a new project](#generating-a-project) by running `npx @liferay/cli new [project-name]`.
+```
+
 ## Generating a Project
 
-The Liferay CLI tool creates projects with a specific folder structure meant for Liferay DXP 7.4+ projects. When you run other commands with the tool within these projects, it recognizes this folder structure (and the contents of the project's `package.json` file) and determines that the project is valid for these commands.
+The Liferay CLI tool creates projects with a specific folder structure, but the structure may change depending on the version of Liferay DXP you are using. When you run other commands with the tool within these projects, it recognizes the folder structure for the project's version (and the contents of the project's `package.json` file) and determines that the project is valid for these commands.
 
 Use the `liferay new` command to create a new [Remote App](../remote-apps/creating-a-liferay-remote-app.md) or Liferay Platform project:
 
@@ -40,11 +44,15 @@ Use the `liferay new` command to create a new [Remote App](../remote-apps/creati
 
 1. Choose the target platform for the project. The target platform you choose determines the project's default dependencies and the rules used to build the project (for example, whether your project should have access to all of the target platform's available JavaScript API).
 
+   You can select a Liferay Portal or Liferay DXP target platform for versions 7.1+. You can also select "Liferay Portal CE (not sharing platform's packages)", which defines a `@lifray/portal-agnostic` target in the project's `package.json` file (so your project will not include any additional packages bundled with Liferay Portal, and the only required dependencies are build and bundle tools).
+
+   ```{note}
+   If you chose to create a Remote App project, you can only choose a version 7.4+. If you choose a specific version instead of the `not sharing platform's packages` option, your project gets React packages from the Liferay platform. This option reduces the project's size and manual dependencies, but restricts your project to use the packages bundled with that version.
+   ```
+
 1. Choose the type of project to create from the given options in the prompt.
 
     ![Use the arrow keys and press Enter to select the type of project to create.](./liferay-cli-tool/images/02.png)
-
-    You can select a Liferay Portal or Liferay DXP target platform for versions 7.1+. You can also select "Liferay Portal CE (not sharing platform's packages)", which defines a `@lifray/portal-agnostic` target in the project's `package.json` file (so your project will not include any additional packages bundled with Liferay Portal, and the only required dependencies are build and bundle tools).
 
     ```{note}
     If you chose to create a Remote App project, you can only choose the React type.
