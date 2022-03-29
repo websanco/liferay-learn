@@ -75,4 +75,4 @@
 
 ## Next Up
 
-* [Exercise 2b: Create User Groups](./exercises-create-user-groups.md)
+* [Exercise 2b: Create User Groups](./exercise-2b-create-user-groups.md)

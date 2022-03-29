@@ -110,4 +110,4 @@
 
 ## Next Up
 
-* [Exercise 2a: Create an Organization Hierarchy](./exercises-create-an-organization-hierarchy.md)
+* [Exercise 2a: Create an Organization Hierarchy](./exercise-2a-create-an-organization-hierarchy.md)

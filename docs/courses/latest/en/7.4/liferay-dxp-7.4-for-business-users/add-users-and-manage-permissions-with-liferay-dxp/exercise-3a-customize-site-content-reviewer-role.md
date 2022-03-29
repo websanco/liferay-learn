@@ -46,4 +46,4 @@
 
 ## Next Up
 
-* [Exercise 3b: Create Custom Site Role](./exercises-create-custom-site-role.md)
+* [Exercise 3b: Create Custom Site Role](./exercise-3b-create-custom-site-role.md)

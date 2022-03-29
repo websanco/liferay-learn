@@ -103,4 +103,4 @@
 
 ## Next Up
 
-* [Exercise 4: Permissions on Sites](./exercises-permissions-on-sites.md)
+* [Exercise 4: Permissions on Sites](./exercise-4-permissions-on-sites.md)
