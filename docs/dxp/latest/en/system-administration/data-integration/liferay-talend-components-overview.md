@@ -1,5 +1,7 @@
 # Liferay Talend Components Overview
 
+{bdg-warning}`Unsupported`
+
 If you use Talend Open Studio for data integration jobs, Liferay's Talend Components make it easier to import/export data between Liferay/DXP Portal and other external systems (eg. MySQL, SAP, Salesforce). As of 7.4.x, these components are part of the [Liferay DXP/Portal codebase](https://github.com/liferay/liferay-portal/tree/master/modules/etl/talend/talend-definition/src/main/java/com/liferay/talend) and must be built and added into Talend Open Studio. Once added, you can use these components to design Talend [Jobs](https://help.talend.com/r/lqV2ftgSbYSEBU9Bwsd61w/eAVXNKXfys1ji9dujoRfrg) that connect to Liferay and perform ETL operations along with other Talend components.
 
 Liferay's Talend Components can connect to both out-of-the-box Headless APIs and any custom APIs developed using REST Builder. All components require a defined Headless API endpoint. Each endpoint path must begin with `/headless-` (e.g.,`/headless-delivery-api`) and include a proper version sub-path (e.g.,`/headless-commerce-admin-catalog/v1.0`, `/headless-commerce-delivery-catalog/v1.0`).

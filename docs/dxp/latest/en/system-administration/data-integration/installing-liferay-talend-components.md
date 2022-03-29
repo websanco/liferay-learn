@@ -1,5 +1,7 @@
 # Installing Liferay Talend Components
 
+{bdg-warning}`Unsupported`
+
 Liferay's components for Talend Open Studio can import and export data between Liferay DXP/Portal and external systems such as MySQL, SAP, and Salesforce, or even files. To use these components, you must add them to Talend Open Studio.
 
 ## Prerequisites
