@@ -56,6 +56,7 @@ Here are the features deprecated in 7.4:
 | Mobile SDK | Removed | Replaced by [Headless Delivery](../../../headless-delivery/using-liferay-as-a-headless-platform.md). |
 | NTLM | Archived | Deprecated in 7.2. It is replaced by [Kerberos](../../securing-liferay/configuring-sso/authenticating-with-kerberos.md). If you're using NTLM to authenticate Microsoft Windows™ accounts with , switch to using [Kerberos](../../securing-liferay/configuring-sso/authenticating-with-kerberos.md). |
 | OAuth 1.0a | Archived | Deprecated in 7.2. It is replaced by Liferay Connector to OAuth 2.0 |
+| Polls | Removed | Replaced by [Forms/Forms Reports](../../../process-automation/forms/sharing-forms-and-managing-submissions/form-reports.md). |
 | Search widget (classic) | Bundled | Deprecated in 7.1. It is replaced by the [Search widgets](../../../using-search/search-pages-and-widgets/search-results/search-results.md). |
 | SOAP Web Services | Bundled (disabled by default) | Replaced by JSON web services, REST services, and GraphQL services. |
 | Solr Connector | Removed | Deprecated in 7.3. It is replaced by Elasticsearch. |
