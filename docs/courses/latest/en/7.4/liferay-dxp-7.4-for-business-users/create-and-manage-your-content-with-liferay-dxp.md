@@ -3,11 +3,18 @@
 ```{toctree}
 :maxdepth: 2
 
+create-and-manage-your-content-with-liferay-dxp/organizing-assets-with-asset-libraries.md
 create-and-manage-your-content-with-liferay-dxp/exercise-1-organize-content-with-asset-libraries.md
+create-and-manage-your-content-with-liferay-dxp/organizing-assets-with-metadata.md
 create-and-manage-your-content-with-liferay-dxp/exercise-2-organize-content-with-categories-and-tags.md
+create-and-manage-your-content-with-liferay-dxp/organizing-assets-into-a-folder-structure.md
 create-and-manage-your-content-with-liferay-dxp/exercise-3-organize-content-with-folders.md
+create-and-manage-your-content-with-liferay-dxp/displaying-assets-on-a-page.md
 create-and-manage-your-content-with-liferay-dxp/exercise-4-present-content-with-display-page-templates.md
+create-and-manage-your-content-with-liferay-dxp/summary.md
 ```
+
+[$LIFERAY_LEARN_YOUTUBE_URL$]=https://www.youtube.com/embed/q3veTitreto
 
 ## Learning Objectives
 
@@ -49,7 +56,12 @@ create-and-manage-your-content-with-liferay-dxp/exercise-4-present-content-with-
 
 ## Next Steps
 
-* [Exercise 1: Organize Content with Asset Libraries](./create-and-manage-your-content-with-liferay-dxp/exercise-1-organize-content-with-asset-libraries.md) 
+* [Organizing Assets with Asset Libraries](./create-and-manage-your-content-with-liferay-dxp/organizing-assets-with-asset-libraries.md)
+* [Exercise 1: Organize Content with Asset Libraries](./create-and-manage-your-content-with-liferay-dxp/exercise-1-organize-content-with-asset-libraries.md)
+* [Organizing Assets with Metadata](./create-and-manage-your-content-with-liferay-dxp/organizing-assets-with-metadata.md) 
 * [Exercise 2: Organize Content with Categories and Tags](./create-and-manage-your-content-with-liferay-dxp/exercise-2-organize-content-with-categories-and-tags.md) 
+* [Organizing Assets into a Folder Structure](./create-and-manage-your-content-with-liferay-dxp/organizing-assets-into-a-folder-structure.md)
 * [Exercise 3: Organize Content with Folders](./create-and-manage-your-content-with-liferay-dxp/exercise-3-organize-content-with-folders.md) 
+* [Displaying Assets on a Page](./create-and-manage-your-content-with-liferay-dxp/displaying-assets-on-a-page.md)
 * [Exercise 4: Present Content with Display Page Templates](./create-and-manage-your-content-with-liferay-dxp/exercise-4-present-content-with-display-page-templates.md) 
+* [Summary](./create-and-manage-your-content-with-liferay-dxp/summary.md)

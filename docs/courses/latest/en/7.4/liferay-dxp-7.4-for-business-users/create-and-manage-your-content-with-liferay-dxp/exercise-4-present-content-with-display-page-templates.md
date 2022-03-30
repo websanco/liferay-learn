@@ -1,8 +1,5 @@
 # Exercise 4: Present Content with Display Page Templates 
 
-Coming Soon!
-
-<!--
 [$LIFERAY_LEARN_YOUTUBE_URL$]=https://www.youtube.com/embed/ja5uBzptelc
 
 ## Exercise Goals 
@@ -13,6 +10,7 @@ Coming Soon!
 - Preview the Display Page Layouts Using Published Content 
 
 ## Create a Display Page Template for Product Highlights 
+
 1. **Sign In** to your Liferay platform as an Administrator if you are not already. 
 2. **Open** the _Global Menu_. 
 3. **Select** _Marvin Robotics Store_ on the _Sites_ tab. 
@@ -25,6 +23,7 @@ Coming Soon!
 10. **Click** _Save_. 
 
 ## Add Fragments to the Product Highlights Display Page Template 
+
 1. **Open** the _Fragments and Widgets_ menu (the plus sign) in the sidebar at the right. 
 2. **Go to** `Fragments` &rarr; `Basic Components`. 
 3. **Drop** a _Heading_ fragment onto the page. 
@@ -39,6 +38,7 @@ Coming Soon!
 12. **Drop** a _Paragraph_ fragment into the right column of the _Grid_. 
 
 ## Map Basic Web Content Articles to the Fragments 
+
 1. **Open** the _Browser_ (arrow icon). 
 2. **Select** the _Title_ element under the _Heading_ fragment. 
 3. **Go to** _Field_ under the _Mapping_ tab. 
@@ -56,10 +56,12 @@ Coming Soon!
 15. **Click** _Publish_ at the top right. 
 
 ## Set Product Highlights as the Default Template 
+
 1. **Open** the _Options_ menu (three dots) beside _Product Highlights_. 
 2. **Click** _Mark as Default_. 
 
 ## Create a Web Content Article 
+
 1. **Open** the _Site Menu_. 
 2. **Go to** _Content & Data &rarr; Web Content_. 
 3. **Click** the _Add_ button. 
@@ -80,12 +82,14 @@ Coming Soon!
 17. **Click** _Publish_. 
 
 ## Preview the Web Content Article 
+
 1. **Open** the _Options_ menu beside the _TS2-100 Robotic Machine_ Web Content. 
 2. **Click** _Preview_. 
 	- You should see that the Web Content Article we just created now has the format we established in the template: the heading at the top, an image on the left, and the text on the right. 
 	- Note: You can also preview different types of content on your Display Page Template while you are editing the Display Page Template. This is done using the _Preview With_ option at the top right and selecting the Item you want to preview. 
 
 ## Create a Display Page Template for Categories 
+
 1. **Open** the _Site Menu_. 
 2. **Go to** _Design &rarr; Page Templates_. 
 3. **Click** the _Display Page Templates_ tab. 
@@ -95,6 +99,7 @@ Coming Soon!
 7. **Click** _Save_. 
 
 ## Add Fragments to the Product Bundles Display Page Template 
+
 1. **Open** the _Fragments and Widgets_ menu (the plus sign) in the sidebar at the right. 
 2. **Go to** `Fragments` &rarr; `Basic Components`. 
 3. **Drop** a _Heading_ fragment onto the page. 
@@ -111,6 +116,7 @@ Coming Soon!
 14. **Drop** a _Paragraph_ fragment into the right column of the _Grid_. 
 
 ## Map Category Basic Information to the Fragments 
+
 1. **Open** the _Browser_ (arrow icon). 
 2. **Select** the _Title_ element under the _Heading_ fragment. 
 3. **Go to** _Field_ under the _Mapping_ tab. 
@@ -132,10 +138,12 @@ Coming Soon!
 19. **Click** _Publish_ at the top right. 
 
 ## Set Product Bundles as the Default Template 
+
 1. **Open** the _Options_ menu (three dots) beside _Product Bundles. 
 2. **Click** _Mark as Default_. 
 
 ## Create a Product Bundles Vocabulary 
+
 1. **Open** the _Site Menu_. 
 2. **Go to** `Categorization` &rarr; `Categories`. 
 3. **Click** the _Add_ button beside _Vocabularies_. 
@@ -144,6 +152,7 @@ Coming Soon!
 6. **Click** _OK_ on the pop-up notification. 
 
 ## Add a Multi-Product Bundles Category 
+
 1. **Click** the _Add_ button at the right to create a new Category. 
 2. **Type** `Multi-Product Bundles` for the _Name_. 
 3. **Copy & Paste** the text from the `Multi-Product Bundles Description.txt` file into the _Description_. 
@@ -157,6 +166,7 @@ Coming Soon!
 10. **Click** _Publish_. 
 
 ## Preview the Product Bundles Category Display Page 
+
 1. **Click** _Product Bundles_ to view the _Categories_. 
 2. **Click** the _Options_ menu beside _Multi-Product Bundles_. 
 3. **Choose** _View Display Page_. 
@@ -164,11 +174,11 @@ Coming Soon!
 ---
 
 ## Bonus Exercise 
+
 1. Create another Display Page Template. Choose any Content Type you want. Add Fragments to the page and map content elements to the Fragments. Preview the Display Page Template using the Preview feature in the top right corner. 
 
 ---
 
 ## Next Up
 
-* [Exercise 2b: Create User Groups](./exercises-create-user-groups.md)
--->
+* [Summary](./summary.md)

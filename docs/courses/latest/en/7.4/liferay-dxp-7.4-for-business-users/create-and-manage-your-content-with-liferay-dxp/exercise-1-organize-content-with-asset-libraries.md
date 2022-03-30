@@ -1,16 +1,15 @@
 # Exercise 1: Organize Content with Asset Libraries 
 
-Coming Soon!
-
-<!--
 [$LIFERAY_LEARN_YOUTUBE_URL$]=https://www.youtube.com/embed/Y_AEKBN9Gfs
 
 ## Exercise Goals 
+
 * Create two new Asset Libraries for Marvin Robotics 
 * Add Content to the Asset Libraries 
 * Create a new Document Type 
 
 ## Create the Product Assets Asset Library 
+
 1. **Sign In** to Liferay as an Administrators. 
 2. **Open** the _Global Menu_.  
 3. **Go to** `Applications` &rarr; `Content`. 
@@ -22,6 +21,7 @@ Coming Soon!
 9. **Click** the _Save_ button at the bottom of the page. 
 
 ## Connect the Asset Library to the Marvin Robotics Sites 
+
 1. **Click** the _Sites_ tab on the left. 
 2. **Click** the _Add_ button next to _Connected Sites_. 
 3. **Choose** _Marvin Robotics_. 
@@ -29,6 +29,7 @@ Coming Soon!
 5. **Choose** _Marvin Robotics Store_. 
 
 ## Add Images to the Product Assets Library 
+
 1. **Click** the _Back_ (<) icon at the top beside _Product Assets_ to view all Asset Libraries. 
 2. **Click** _Product Assets_ to view the Asset Library. 
 3. **Select** _Documents and Media_ under the _Content & Data_ section. 
@@ -41,6 +42,7 @@ Coming Soon!
 9. **Click** the _Publish_ button in the right column. 
 
 ## Create the Technical Documents Asset Library 
+
 1. **Open** the _Global Menu_. 
 2. **Go to** `Applications` &rarr; `Content`. 
 3. **Click** _Asset Libraries_. 
@@ -51,6 +53,7 @@ Coming Soon!
 8. **Click** the _Save_ button at the bottom of the page. 
 
 ## Connect the Asset Library to the Marvin Robotics Sites 
+
 1. **Click** the _Sites_ tab on the left. 
 2. **Click** the _Add_ button next to _Connected Sites_. 
 3. **Choose** _Marvin Robotics_. 
@@ -58,6 +61,7 @@ Coming Soon!
 5. **Choose** _Marvin Robotics Store_. 
 
 ## Add Documents to the Technical Documents Library 
+
 1. **Click** the _Back_ (<) icon at the top beside _Technical Documents_ to view all Asset Libraries. 
 2. **Click** _Technical Documents_ to view the Asset Library. 
 3. **Select** _Documents and Media_ under the _Content & Data_ section. 
@@ -70,6 +74,7 @@ Coming Soon!
 9. **Click** the _Publish_ button in the right column. 
 
 ## Create a New Document Type in the Technical Documents Library 
+
 1. **Click** the _Document Types_ tab to the right of _Files_. 
 2. **Click** the _Add_ button at the right. 
 3. **Type** `Technical Guides` for the _Name_. 
@@ -86,6 +91,7 @@ Coming Soon!
 14. **Click** _Save_ in the top right corner. 
 
 ## Add a New Document using the Technical Guides Document Type 
+
 1. **Click** the _Files_ tab. 
 2. **Click** the _Add_ button at the right. 
 3. **Choose** _Technical Guides_. 
@@ -100,6 +106,7 @@ Coming Soon!
 ---
 
 ## Bonus Exercises 
+
 1. Add another Asset Library for Marketing. Connect it to just the Marvin Robotics Site. 
 2. Add a Document Type for Order Forms in the Product Assets Asset Library.
 
@@ -107,5 +114,4 @@ Coming Soon!
 
 ## Next Up
 
-* [Exercise 2b: Create User Groups](./exercises-create-user-groups.md)
--->
+* [Organizing Assets with Metadata](./organizing-assets-with-metadata.md)

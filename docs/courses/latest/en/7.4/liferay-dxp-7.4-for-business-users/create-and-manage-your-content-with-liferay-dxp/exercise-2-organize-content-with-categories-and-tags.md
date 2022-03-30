@@ -1,8 +1,5 @@
 # Exercise 2: Organize Content with Categories and Tags 
 
-Coming Soon!
-
-<!--
 [$LIFERAY_LEARN_YOUTUBE_URL$]=https://www.youtube.com/embed/HJ54Vp-mNYg
 
 ## Exercise Goals 
@@ -13,6 +10,7 @@ Coming Soon!
 * Connect assets using Related Assets 
 
 ## Create a Vocabulary for Marvin Robotics Products 
+
 1. **Open** the _Global Menu_. 
 2. **Go to** `Applications` &rarr; `Content`. 
 3. **Click** _Asset Libraries_. 
@@ -25,12 +23,14 @@ Coming Soon!
 10. **Click** _OK_ in the pop-up. 
 
 ## Add the Robotic Machines Category 
+
 1. **Click** on the _Robotics Products_ vocabulary if you are not already in it. 
 2. **Click** the _Add_ button near the top right. 
 3. **Type** in `Robotic Machines` for the _Name_. 
 4. **Click** _Save_. 
 
 ## Add Three More Categories 
+
 1. **Click** the _Add_ button near the top right. 
 2. **Type** in `Spare Hardware` for the _Name_. 
 3. **Click** _Save and Add a New One_. 
@@ -41,12 +41,14 @@ Coming Soon!
 	- You should see four categories in the Robotics Products vocabulary. 
 
 ## Add a Sub-Category for Robotic Arms 
+
 1. **Click** the _Robotic Machines_ Category. 
 2. **Click** the _Add_ button. 
 3. **Type** in `Robotic Arms`. 
 4. **Click** _Save_. 
 
 ## Categorize the Product Assets Images 
+
 1. **Open** the _Global Menu_. 
 2. **Go to** `Applications` &rarr; `Content` &rarr; `Asset Libraries`. 
 3. **Click** the _Product Assets_ Asset Library. 
@@ -60,6 +62,7 @@ Coming Soon!
 10. **Click** _Save_. 
 
 ## Add Tags to the Product Assets Images 
+
 1. **Click** the _Tags_ icon (one tag) beside the _Categories_ icon. 
 2. **Type** `spare parts, replacements` in the _Tags_ field. 
 	- The commas should separate each word or phrase into its own tag. Alternatively, you can press _Enter_ after each tag is typed. 
@@ -70,6 +73,7 @@ Coming Soon!
 7. **Click** _Save_. 
 
 ## Categorize Robotic Arm Images 
+
 1. **Click** _Clear_ at the top beside number of images selected to deselect all images. 
 2. **Select** all _Robotic Arm_ images (three images). 
 3. **Click** the _Categories_ icon. 
@@ -80,6 +84,7 @@ Coming Soon!
 8. **Click** _Save_. 
 
 ## Add Related Assets to the TS2-40 Robotic Machine 
+
 1. **Click** the _Options_ menu (three dots) on the _TS2-40 Robotic Machine_ image. 
 2. **Choose** _Edit_. 
 3. **Click** _Related Assets_ to expand the section. 
@@ -92,11 +97,11 @@ Coming Soon!
 ---
 
 ## Bonus Exercise 
+
 1. Create a Vocabulary for the _Technical Documents_ Asset Library. Add categories for Manuals, Demonstrations, and Warranties. 
 
 ---
 
 ## Next Up
 
-* [Exercise 2b: Create User Groups](./exercises-create-user-groups.md)
--->
+* [Organizing Assets into a Folder Structure](./organizing-assets-into-a-folder-structure.md)
