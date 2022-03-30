@@ -1,16 +1,15 @@
 # Exercise 2: Publishing Content 
 
-Coming Soon!
-
-<!--
 [$LIFERAY_LEARN_YOUTUBE_URL$]=https://www.youtube.com/embed/T2miIsAkqfc
 
 ## Exercise Goals 
+
 - Enable Publications and Create a New Publication 
 - Invite Users to a Publication 
 - Schedule a Publication and View the Changes 
 
 ## Enable Publications and Create a New Publication 
+
 1. **Sign In** as your platform Administrator. 
 2. **Open** the _Global Menu_. 
 3. **Go to** `Applications` &rarr; `Publications`. 
@@ -23,6 +22,7 @@ Coming Soon!
 	- You should see the new _Publication_ listed on the _Ongoing_ tab. Additionally, you should see a bar at the top of your browser with a blue dot and the name of the active Publication. 
 
 ## Add Pages in the New Publication 
+
 1. **Open** the _Global Menu_. 
 2. **Go to** the _Sites_ tab. 
 3. **Click** _View All_. 
@@ -37,6 +37,7 @@ Coming Soon!
 12. **Click** _Add_. 
 
 ## Add Fragments to the New Page 
+
 1. **Open** the _Fragments and Widgets_ menu in the sidebar (the plus icon). 
 2. **Go to** `Fragments` &rarr; `Featured Content`. 
 3. **Drag and Drop** a _Features_ fragment onto the Page. 
@@ -44,6 +45,7 @@ Coming Soon!
 5. **Click** _Marvin Machines_ in the list of _Public Pages_ to view. 
 
 ## Add Two More Public Pages 
+
 1. **Click** the _Back_ (<) arrow beside _Marvin Machines_. 
 2. **Click** the _Add_ button beside _Public Pages_. 
 3. **Choose** _Add Page_. 
@@ -61,6 +63,7 @@ Coming Soon!
 	- We will leave the Page blank for now. 
 
 ## Review and Publish Changes to the Publication 
+
 1. **Click** the _New Year Updates - 2022_ drop-down bar menu at the top of the page. 
 2. **Click** _Review Changes_. 
 	- You should see a list of the changes we just made. 
@@ -75,6 +78,7 @@ Coming Soon!
 	- You should see the new pages we added using the Publication. 
 
 ## Create a New User to Manage a Publication 
+
 1. **Open** the _Global Menu_. 
 2. **Go to** `Control Panel` &rarr; `Users` &rarr; `Users and Organizations`. 
 	- Make sure the bar menu at the top says Production. 
@@ -86,6 +90,7 @@ Coming Soon!
 8. **Click** _Save_. 
 
 ## Assign Douglas Membership, a Role, and a Password 
+
 1. **Click** _Memberships_ in the menu on the left. 
 2. **Click** _Select_ next to _Sites_. 
 3. **Choose** _Marvin Robotics_. 
@@ -101,12 +106,14 @@ Coming Soon!
 	- If this is the first new User you have created, be sure to disable email verification by opening the Global Menu and going to Control Panel &rarr; Configuration &rarr; Instance Settings. Click on User Authentication and deselect the checkbox beside "Require strangers to verify their email address?" 
 
 ## Create a Design Updates Publication 
+
 1. **Open** the _Production_ bar menu at the top of the Page. 
 2. **Choose** _Create a New Publication_. 
 3. **Type** `Design Updates` for the _Name_. 
 4. **Click** _Create_. 
 
 ## Invite Douglas Babel to the Publication 
+
 1. **Click** the _Options_ (three dots) icon. 
 2. **Select** _Invite Users_. 
 3. **Click** the _Viewer_ drop-down. 
@@ -116,6 +123,7 @@ Coming Soon!
 7. **Click** _OK_ in the pop-up. 
 
 ## Sign In as Douglas Babel 
+
 1. **Open** the _Personal Menu_. 
 2. **Click** _Sign Out_. 
 3. **Click** _Sign In_. 
@@ -127,6 +135,7 @@ Coming Soon!
 9. **Click** _Save_. 
 
 ## Access the Publication as Douglas Babel 
+
 1. **Open** the _Personal Menu_. 
 2. **Click** _Notifications_. 
 	- You should see a Notification from your Administrator inviting Douglas to work on Design Updates as a Publisher. 
@@ -139,6 +148,7 @@ Coming Soon!
 9. **Choose** _Marvin Robotics_. 
 
 ## Make Changes to a Page on the Marvin Robotics Site 
+
 1. **Open** the _Site Menu_. 
 2. **Click** the _Page Tree_ icon. 
 3. **Select** _Marvin Machines_ from the menu. 
@@ -156,6 +166,7 @@ Coming Soon!
 15. **Click** _Publish_ at the top right. 
 
 ## Compare the Publication and the Current Site 
+
 1. **Open** the drop-down bar menu at the top of the page. 
 2. **Select** _Work on Production_. 
 	- This will take you to the Site in its current state. You should see that the seasonal banner no longer appears. 
@@ -164,6 +175,7 @@ Coming Soon!
 	- This will take you back to the Publication. 
 
 ## Schedule the Publication for Release 
+
 1. **Open** the drop-down bar menu at the top of the page. 
 2. **Select** _Review Changes_. 
 3. **Click** _Schedule_ at the top right. 
@@ -176,11 +188,11 @@ Coming Soon!
 ---
 
 ## Bonus Exercise 
+
 1. Create an additional publication. Make changes to the publication and to Production so that there are conflicts (for example, add duplicate folders or move a Web Content article). Resolve any conflicts that you are notified about when you attempt to publish the Publication. 
 
 ---
 
 ## Next Up
 
-* [Exercise 2b: Create User Groups](./exercises-create-user-groups.md)
--->
+* [Summary](./summary.md)

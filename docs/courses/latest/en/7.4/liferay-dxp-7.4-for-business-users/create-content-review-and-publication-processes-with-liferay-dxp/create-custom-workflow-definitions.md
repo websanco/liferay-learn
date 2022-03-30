@@ -1,14 +1,7 @@
 # Creating Custom Workflow Definitions 
 
-Coming Soon!
-
-<!--
-
 [$LIFERAY_LEARN_YOUTUBE_URL$]=https://www.youtube.com/embed/zFfBLAKj9mc
-
----
 
 ## Next Up
 
-* [Exercise 2b: Create User Groups](./exercises-create-user-groups.md)
--->
+* [Exercise 1: Creating Workflow Definitions](./exercise-1-creating-workflow-definitions.md)

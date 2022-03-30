@@ -1,8 +1,5 @@
 # Preparing Pages and Content for Production 
 
-Coming Soon!
-
-<!--
 
 [$LIFERAY_LEARN_YOUTUBE_URL$]=https://www.youtube.com/embed/dB5TDQy7nMg
 
@@ -10,5 +7,4 @@ Coming Soon!
 
 ## Next Up
 
-* [Exercise 2b: Create User Groups](./exercises-create-user-groups.md)
--->
+* [Exercise 2: Publishing Content](./exercise-2-publishing-content.md)

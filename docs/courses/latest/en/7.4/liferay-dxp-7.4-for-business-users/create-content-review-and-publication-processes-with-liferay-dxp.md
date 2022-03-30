@@ -13,18 +13,20 @@ create-content-review-and-publication-processes-with-liferay-dxp/summary.md
 [$LIFERAY_LEARN_YOUTUBE_URL$]=https://www.youtube.com/embed/8HM8GxReUcI
 
 ## Learning Objectives
+
 * Understand how to use workflows for Content in Liferay DXP
 * Learn how to create custom workflows for unique business review processes
 * Learn how to create Publications to make simultaneous changes across a Site and schedule those changes for publication
 
 ## Tasks to Accomplish
+
 * Create a Workflow Definition
 * Walk through the Workflow process 
 * Create a Publication with several Site changes
 * Invite Users to work on a Publication
 * Schedule the changes for a Publication and observe them on the Site
 
-### Exercise Prerequisites
+## Exercise Prerequisites
 
 * Unzipped module exercise files in the following folder structure:
     * Windows: `C:\liferay`
@@ -46,4 +48,4 @@ create-content-review-and-publication-processes-with-liferay-dxp/summary.md
 * [Exercise 1: Creating Workflow Definitions](./create-content-review-and-publication-processes-with-liferay-dxp/exercise-1-creating-workflow-definitions.md) 
 * [Preparing Pages and Content for Production](./create-content-review-and-publication-processes-with-liferay-dxp/preparing-pages-content-for-production.md) 
 * [Exercise 2: Publishing Content](./create-content-review-and-publication-processes-with-liferay-dxp/exercise-2-publishing-content.md) 
-* [Publishing Content Summary](./create-content-review-and-publication-processes-with-liferay-dxp/summary.md) 
+* [Summary](./create-content-review-and-publication-processes-with-liferay-dxp/summary.md) 
