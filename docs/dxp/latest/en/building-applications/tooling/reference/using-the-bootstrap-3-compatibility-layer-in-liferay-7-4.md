@@ -1,13 +1,13 @@
 # Using the Bootstrap 3 Compatibility Layer in Liferay 7.4
 
-As of Liferay DXP 7.4 GA1, the [Bootstrap 3](https://getbootstrap.com/) compatibility layer is removed from the built-in packages in Liferay frontend applications. If you are upgrading from a previous version, you must include the compatibility layer as an external package for any of your projects that depend on Bootstrap 3 for their CSS code.
+As of Liferay DXP 7.4 GA1, the [Bootstrap 3](https://getbootstrap.com/) compatibility layer is removed from the built-in packages in Liferay front-end applications. If you are upgrading from a previous version, you must include the compatibility layer as an external package for any of your projects that depend on Bootstrap 3 for their CSS code.
 
 ```{note}
-If you use the `gulp upgrade` command to [upgrade a theme](../../../site-building/site-appearance/themes/upgrading-a-theme.md) to Liferay 7.4, you have the option to automatically include the Bootstrap 3 compatibility layer with the upgrade. In this case, you do not need to manually add the compabitility layer to that theme.
+If you use the `gulp upgrade` command to [upgrade a theme](../../../site-building/site-appearance/themes/upgrading-a-theme.md) to Liferay 7.4, you can automatically include the Bootstrap 3 compatibility layer with the upgrade. In this case, you need not add the compabitility layer manually to that theme.
 ```
 
 ```{warning}
-The Bootstrap 3 compatibility layer is provided as an external package only to help upgrades to Liferay 7.4 GA1 go more smoothly, and it is not intended to work for later versions. After you upgrade, it is recommended that you change your project's code so that you can remove the dependency on Bootstrap 3.
+We provide the Bootstrap 3 compatibility layer as an external package only to help upgrades to Liferay 7.4 GA1 go more smoothly. You should replace it as soon as possible, as it is not intended to work for later versions.
 ```
 
 ## Installing the Compatibility Layer
@@ -52,7 +52,7 @@ If you **do not** require the atlas theme variables, add this to your project's 
 @import '@liferay/bs3-bs4-compat/scss/components';
 ```
 
-Now the compatibility layer is properly included in your theme, and your projects may still use Bootstrap 3 with Liferay DXP 7.4 GA1.
+Now the Bootstrap 3 compatibility layer is included in your theme, so it works with Liferay DXP 7.4 GA1. Your next task is to change your project's code so you can remove the dependency on Bootstrap 3. 
 
 ## Additional Information
 
