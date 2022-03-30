@@ -1,6 +1,10 @@
 # Analyze Content Metrics Using the Content Performance Tool
 
-> Available: Liferay DXP/Portal 7.3+. Some Content Performance options are only available starting with Liferay DXP/Portal 7.4.
+```markdown
+{bdg-secondary}`Available 7.3+`
+```
+
+> Some Content Performance options are only available starting with Liferay DXP/Portal 7.4.
 
 You can use the Content Performance tool to analyze content metrics, like the number of views, traffic acquisition channels, or keywords driving people to your Page. In the Content Performance tool, you can view metrics for the URL of the Content Page, Widget Page, or Web Content associated with a [Display Page Template](../../site-building/displaying-content/using-display-page-templates/publishing-content-with-display-pages.md).
 
@@ -38,15 +42,11 @@ Even when your content is not translated into a specific language, you may find 
 
 ### Using the Time Span Selector
 
-Users can select a time span (Last 7 Days / Last 30 Days) from the dropdown and then navigate to previous and next periods.The Time Span Selector affects all the charts (Engagement and Traffic Channels).
+You can scope your metrics analysis by using the time span dropdown (Last 7 Days / Last 30 Days).
 
 ![Using the Time Span Selector ](./analyze-content-metrics-using-content-performance-tool/images/02.png)
 
-```{note}
-If you select a different time span, the charts shows a spinner while fetching the data for the time span selected.
-```
-
-The time span selector is also included in the detail view of the panel for the *Referral* and *Social traffic*. Now the user can retrieve referral and social traffic data for the time span selected (Last 7 Days / Last 30 Days) in the detail view. 
+The time span selector is also included in the detail view for the *Referral* and *Social traffic* panels.
 
 ![Time Span on the Detail View of the Panel ](./analyze-content-metrics-using-content-performance-tool/images/03.png)
 
