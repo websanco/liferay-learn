@@ -32,6 +32,7 @@ To access the Settings menu, choose the desired form (for example, _Guest Survey
 | Notifications | Send an Email Notification for Each Entry | Specify whether an [email notification](../sharing-forms-and-managing-submissions/configuring-form-notifications.md) sent to the form creator each time a form record is submitted. |
 | [Liferay 7.4 Only] Submissions | Limit to one Submission per User | Do not allow multiple form submissions to logged in Users. This also requires that Users are authenticated to fill out the form. |
 | [Liferay 7.4 Only] Submissions | Show Partial Results to Respondents | Allow respondents to view the current [Forms Report](../sharing-forms-and-managing-submissions/form-reports.md#show-partial-results-to-form-respondents) data for the form. Enabling this warns the user against submitting sensitive information. |
+| [Liferay 7.4 Only] Submissions | Expiration Date/Never Expire | Set the date when the form expires. After this date, no submissions are allowed. Form users see an expiration notification when accessing the form. You must disable the _Never Expire_ setting to choose an expiration date. |
 
 ### Email Notifications
 
