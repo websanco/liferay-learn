@@ -9,7 +9,7 @@ The Forms application contains many highly configurable [field types out-of-the-
 * [Add custom settings to the field](#add-custom-settings-to-the-form-field)
 
 ```{note}
-The example project here is meant to run on Liferay 7.4. If you're running Liferay 7.3, the source code is compatible but the [Workspace project](../../../building-applications/tooling/liferay-workspace/what-is-liferay-workspace.md) must be reconfigured for Liferay 7.3. The steps to do this are included in the instructions below.
+The example project here runs on Liferay 7.4. If you're running Liferay 7.3, the source code is compatible but the [Workspace project](../../../building-applications/tooling/liferay-workspace/what-is-liferay-workspace.md) must be reconfigured for Liferay 7.3. The steps to do this are included in the instructions below.
 
 If you're running Liferay 7.2, this source code will not run due to a difference in supported frontend frameworks. Please see the article [Developing a Custom Form Field for Liferay 7.2](./developing-a-custom-form-field-for-liferay-7-2.md) to learn how to adapt the C2P9 Slider code sample for 7.2.
 ```
@@ -91,19 +91,19 @@ A basic form field contains a Java class and a JavaScript file. In the C2P9 Slid
 ```
 
 - `ddm.form.field.type.description`: provide the language key for the description text. Make sure the translated value is defined in the `Language.properties` file.
-- `ddm.form.field.type.display.order`: set an integer value to determine where the field is displayed in the Form Builder sidebar. If there's a tie, the fields are sorted alphabetically.
-- `ddm.form.field.type.group`:
-- `ddm.form.field.type.icon`: decide which icon type to use for your field. Choose from blah blah
+- `ddm.form.field.type.display.order`: set an integer or floating point value to determine where the field is displayed in the Form Builder sidebar. Fields with the same value are ordered randomly.
+- `ddm.form.field.type.icon`: decide which icon type to use for your field. Choose any [Clay Icon](https://clayui.com/docs/components/icon.html).
 - `ddm.form.field.type.label`: provide the language key for the label text. Make sure the translated value is defined in the `Language.properties` file.
 - `ddm.form.field.type.name`: provide the language key for the field name. Make sure the translated value is defined in the `Language.properties` file.
 
-The `getModuleName` method passes the `Slider.es.js` file path to the `NPMResolver` service. Some of the path definition is accomplished in the `package.json` file (see the `name` declaration and the `source-maps` defined in the `scripts` section).
+The `getModuleName` method passes the `Slider.es.js` file path to the `NPMResolver` service.
 
 ```{literalinclude} ./writing-a-custom-form-field-type/resources/liferay-c2p9.zip/c2p9-impl/src/main/java/com/acme/c2p9/internal/dynamic/data/mapping/form/field/type/C2P9DDMFormFieldType.java
    :dedent: 1
    :language: java
    :lines: 22-26,38-39
 ```
+Some of the path definition is accomplished in the `package.json` file (see the `name` declaration and the `source-maps` defined in the `scripts` section).
 
 The `getName` method returns the language key defining the name that will appear in the UI: `c2p9-slider` in this case, which is translated to `C2P9 Slider` in the `c2p9-impl/src/main/resources/content/Language.properties` file.
 
@@ -113,7 +113,7 @@ The `getName` method returns the language key defining the name that will appear
    :lines: 28-31
 ```
 
-The `isCustomDDMFormFieldType` method must return `true` for all form fields not shipped out of the box with Liferay.
+The `isCustomDDMFormFieldType` method must return `true` for all form fields not included out of the box with Liferay.
 
 ```{literalinclude} ./writing-a-custom-form-field-type/resources/liferay-c2p9.zip/c2p9-impl/src/main/java/com/acme/c2p9/internal/dynamic/data/mapping/form/field/type/C2P9DDMFormFieldType.java
    :dedent: 1
@@ -121,7 +121,7 @@ The `isCustomDDMFormFieldType` method must return `true` for all form fields not
    :lines: 33-36
 ```
 
-`Slider.es.js` provides the JavaScript logic for the field. Two components are defined in the file; `Main` and `Slider`. The `Main` component is exported, and it includes the `Slider` as a child element of the imported `FieldBase`. The `onChange` function is used to get the slider's position/value each time the event is detected (each time the slider is dragged to a new value).
+`Slider.es.js` provides the JavaScript logic for the field. Two components are defined in the file; `Main` and `Slider`. 
 
 The import statements bring in functionality from Liferay's base form field, `dynamic-data-mapping-form-field-type`. These will be called later using the declared variables `FieldBase` and `useSyncValue`.
 
@@ -140,6 +140,14 @@ The `const Slider =` block defines the field: it's instantiated with the paramet
 ```
 
 The values for these parameters, along with some others, define the HTML `<input>` tag for the form field. Importantly, the `max` and `min` values that the user can select are hardcoded right now. You'll [change this later](#add-custom-settings-to-the-form-field). The `value` of the field is defined using a ternary operator: if a value is entered, use it. Otherwise use the predefined value.
+
+The `Main` component is exported at the end of the file; it includes the `Slider` as a child element of the imported `FieldBase`. The `onChange` function is used to get the slider's position/value each time the event is detected (each time the slider is dragged to a new value).
+
+```{literalinclude} ./writing-a-custom-form-field-type/resources/liferay-c2p9.zip/c2p9-impl/src/main/resources/META-INF/resources/C2P9/Slider.es.js
+   :dedent: 0
+   :language: js
+   :lines: 19-55
+```
 
 ## Add Custom Settings to the Form Field
 
