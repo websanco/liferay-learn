@@ -1,8 +1,5 @@
 # Exercise 3: Manage Site Configuration 
 
-Coming Soon!
-
-<!--
 [$LIFERAY_LEARN_YOUTUBE_URL$]=https://www.youtube.com/embed/ehcpSYpiS64
 
 ## Exercise Goals 
@@ -13,6 +10,7 @@ Coming Soon!
 - Add Private and Public Pages to the Mondego Publications Site 
 
 ## Add the Mondego Matters Employee Intranet 
+
 1. **Go to** `Control Panel` &rarr; `Sites` &rarr; `Sites` in the _Global Menu_. 
 2. **Click** the _Add_ icon. 
 3. **Choose** _Blank Site_. 
@@ -25,6 +23,7 @@ Coming Soon!
 10. **Click** the _Save_ button at the bottom of the page. 
 
 ## Add the Mondego Publications Site 
+
 1. **Go to** `Control Panel` &rarr; `Sites` &rarr; `Sites` in the _Global Menu_. 
 2. **Click** the _Add_ icon. 
 3. **Choose** _Blank Site_. 
@@ -40,6 +39,7 @@ Coming Soon!
 13. **Click** the _Save_ button at the bottom of the page. 
 
 ## Add a Public Blog Page to the Mondego Publications Site 
+
 1. **Open** the _Site Menu_. 
 2. **Go to** `Site Builder` &rarr; `Pages`. 
 3. **Click** the _New_ button in the middle of the page. 
@@ -55,6 +55,7 @@ Coming Soon!
 13. **Click** the _Publish_ button at the top right of the page. 
 
 ## Add Private Pages on the Mondego Publications Site 
+
 1. **Click** _Pages_ link at the top left to go back to the main Pages view. 
 2. **Click** the _Add_ button at the top right. 
 3. **Choose** _Private Page_. 
@@ -72,12 +73,11 @@ Coming Soon!
 ---
 
 ## Bonus Exercise 
+
 1. Add pages to the Mondego Matters site. Use two Private Pages and two Public Pages. Sign out of the Administrator account and view the Site as a guest. (You may need to enter the URL to see the specific Site. Generally, this will be `localhost:8080/web/[site-name]`.) 
 
 ---
 
 ## Next Up
 
-* [Exercise 2b: Create User Groups](./exercises-create-user-groups.md)
-
--->
+* [Summary](./summary.md)

@@ -1,8 +1,5 @@
 # Exercise 2: Add Sites to the Platform 
 
-Coming Soon!
-
-<!--
 [$LIFERAY_LEARN_YOUTUBE_URL$]=https://www.youtube.com/embed/tI0sAorMK_4
 
 ## Exercise Goals 
@@ -11,6 +8,7 @@ Coming Soon!
 - Use the template to create Sites for some of Mondego's regional banks 
 
 ## Create a Site Template for Mondego Regional Offices 
+
 1. **Open** the _Global Menu_. 
 2. **Go to** `Control Panel` &rarr; `Sites` &rarr; `Site Templates` in the _Menu_. 
 3. **Click** the _Add_ icon near the top right. 
@@ -34,6 +32,7 @@ Coming Soon!
 19. **Click** the _Back_ (<) icon. 
 
 ## Add a Personal Banking Page to the Site Template 
+
 1. **Click** the _Add_ icon near the top right. 
 2. **Choose** _Add Child Page of Home_ in the drop-down. 
 3. **Choose** _Add Site Template Page_. 
@@ -44,6 +43,7 @@ Coming Soon!
 7. **Click** the _Publish_ button at the top right. 
 
 ## Add Child Pages for Checking, Savings, and Mobile Banking 
+
 1. **Click** the _Add_ icon to the right of the _Personal_ Page we just created. 
 2. **Choose** _Add Page_. 
 3. **Choose** the _Blank_ Content Page. 
@@ -65,6 +65,7 @@ Coming Soon!
 	- To view the newly created Child Pages, click the Arrow icon to the right of the Personal Page. 
 
 ## Finish Creating the Page Structure for the Site Template 
+
 1. **Click** the _Add_ icon at the top right. 
 2. **Choose** _Add Site Template Page_. 
 3. **Choose** _Blank_ Content Page. 
@@ -86,6 +87,7 @@ Coming Soon!
 19. **Click** the _Back_ (<) icon. 
 
 ## Create a New Site Using the New Site Template 
+
 1. **Go to** `Control Panel` &rarr; `Sites` &rarr; `Sites` in the _Global Menu_. 
 2. **Click** the _Options_ icon next to _Mondego Group_. 
 3. **Choose** _Add Child Site_. 
@@ -97,6 +99,7 @@ Coming Soon!
 	* You'll see that the Pages we created in the template have been generated for this Site. 
 
 ## Create Two More Regional Bank Office Sites with the Site Template 
+
 1. **Go to** `Control Panel` &rarr; `Sites` &rarr; `Sites` in the _Global Menu_. 
 2. **Click** the _Options_ icon next to _Mondego Group_. 
 3. **Choose** _Add Child Site_. 
@@ -115,6 +118,7 @@ Coming Soon!
 ---
 
 ## Bonus Exercises 
+
 1. Create a Site Template for Mondego's Business Banking sites. The template should have at least three Content Pages that include at least one fragment or widget on each. 
 2. Add Mondego Regional Office Sites for Mondego locations in Chile and Germany. Make sure they are created as Child Sites of the main Mondego Site. 
 3. Add a custom Content Page to one of the new Mondego Regional Office Sites created from the Site Template. Navigate to the new Site and look at the Pages you added within the Site itself. 
@@ -123,6 +127,4 @@ Coming Soon!
 
 ## Next Up
 
-* [Exercise 2b: Create User Groups](./exercises-create-user-groups.md)
-
--->
+* [Managing Site Configuration](./managing-site-configuration.md)

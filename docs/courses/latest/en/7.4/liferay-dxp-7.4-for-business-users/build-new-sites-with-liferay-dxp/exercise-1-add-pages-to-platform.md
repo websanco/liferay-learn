@@ -1,8 +1,5 @@
 # Exercise 1: Add Pages to the Platform with Page Templates 
 
-Coming Soon!
-
-<!--
 [$LIFERAY_LEARN_YOUTUBE_URL$]=https://www.youtube.com/embed/U2SjonCjw2Q
 
 ## Exercise Goals 
@@ -15,6 +12,7 @@ Coming Soon!
 - Use the Template to create a Landing Page for Mondego's Sites 
 
 ## Create the Mondego Group Main Site 
+
 1. **Sign in** to Liferay as an Administrator. 
 2. **Open** the _Global Menu_ at the top right. 
 3. **Click** the _Control Panel_ tab. 
@@ -26,6 +24,7 @@ Coming Soon!
 	- This will take you to the _Site Settings_ page. 
 
 ## Create a Master Page Template 
+
 1. **Open** the _Site Menu_ at the top left. 
 2. **Go to** `Design` &rarr; `Page Templates` in the _Site Administration_ panel. 
 3. **Click** the _Add_ button at the top right. 
@@ -45,6 +44,7 @@ Coming Soon!
 15. **Click** the _Publish Master_ button at the top right of the page. 
 
 ## Create a Content Page Template Using the New Master 
+
 1. **Click** the _Page Templates_ tab at the top beside _Masters_. 
 2. **Click** the _New_ button to create a new Collection. 
 3. **Type** `Informational Pages` as the _Name_. 
@@ -56,6 +56,7 @@ Coming Soon!
 9. **Click** the _Save_ button. 
 
 ## Add Fragments to the Page Template 
+
 1. **Click** the _Fragments and Widgets_ icon (plus sign) on the right side to open the menu. 
 2. **Go to** `Fragments` &rarr; `Featured Content`. 
 3. **Drop** a _Banner Center_ onto the page. 
@@ -66,6 +67,7 @@ Coming Soon!
 8. **Click** the _Publish_ button at the top right of the page. 
 
 ## Create a Page with the Accounts Page Template 
+
 1. **Open** the _Menu_. 
 2. **Go to** `Site Builder` &rarr; `Pages` in the _Site Administration_ panel. 
 3. **Click** the _Add_ button at the top right. 
@@ -77,6 +79,7 @@ Coming Soon!
 	- You should see the Fragments we added to the Account Page Template as well as the Header and Footer established in the Master Page Template. 
 
 ## Create a Global Landing Page Template 
+
 1. **Open** the _Site Menu_. 
 2. **Click** the _Site Selector_ icon beside the current Site (Mondego Group). 
 	- The _Site Selector_ allows you to choose which Site you want to access in your Liferay platform. Once selected, you will be able to access and edit the Site with the _Site Administration_ panel. 
@@ -90,6 +93,7 @@ Coming Soon!
 9. **Click** the _Save_ button. 
 
 ## Configure the Widget Page Template 
+
 1. **Click** on the new _Mondego Landing Page_ template. 
 	- This will take you to the new template page. 
 2. **Click** the _Configure Page_ (gear) icon at the top right. 
@@ -98,6 +102,7 @@ Coming Soon!
 5. **Click** the _Back_ (<) icon. 
 
 ## Add Language and Content Widgets to the Template 
+
 1. **Click** the _Add_ icon in the top right corner of the page. 
 2. **Open** the `Widgets` &rarr; `Tools` section. 
 3. **Drop** a _Sign In_ widget into the first column. 
@@ -109,6 +114,7 @@ Coming Soon!
 	- If your browser opened a new tab when you clicked on the _Mondego Landing Page_ template, close the tab to get back to the _Pages_ section of the _Global_ Site. 
 
 ## Create a Page with the Landing Page Template 
+
 1. **Open** the _Menu_. 
 2. **Click** on the _Site Selector_ in the _Site Administration_ panel. 
 3. **Choose** the _Mondego Group_ Site. 
@@ -126,6 +132,7 @@ Coming Soon!
 13. **Click** _Home_ in the navigation menu. 
 
 ## Update the Master Page Template for the Landing Page 
+
 1. **Click** the _Configure Page_ (gear) icon. 
 2. **Click** the _Look and Feel_ tab. 
 3. **Select** _Change Master_ under the _Master_ section. 
@@ -138,6 +145,7 @@ Coming Soon!
 --- 
 
 ## Bonus Exercises: 
+
 1. Add another Content Page Template called Credit Cards to the Mondego Group Site. Pick two Fragments and one Widget to use on the page. Create at least one new page on the Mondego Group Site using the new template. View the new page in the Navigation Menu. 
 2. Create another Widget Page Template on the Global Site to use for Financial Advice. Use a Web Content Display widget, a Blogs widget, and a Message Boards widget. Choose whichever layout you prefer. 
 
@@ -145,6 +153,4 @@ Coming Soon!
 
 ## Next Up
 
-* [Exercise 2b: Create User Groups](./exercises-create-user-groups.md)
-
--->
+* [Creating Sites with Site Templates](./create-sites-with-site-templates.md)

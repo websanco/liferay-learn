@@ -3,10 +3,16 @@
 ```{toctree}
 :maxdepth: 2
 
+build-new-sites-with-liferay-dxp/create-reusable-page-structures.md
 build-new-sites-with-liferay-dxp/exercise-1-add-pages-to-platform.md
+build-new-sites-with-liferay-dxp/create-sites-with-site-templates.md
 build-new-sites-with-liferay-dxp/exercise-2-add-sites-to-platform.md
+build-new-sites-with-liferay-dxp/managing-site-configuration.md
 build-new-sites-with-liferay-dxp/exercise-3-manage-site-configuration.md
+build-new-sites-with-liferay-dxp/summary.md
 ```
+
+[$LIFERAY_LEARN_YOUTUBE_URL$]=https://www.youtube.com/embed/qyhvW4xxx0c
 
 ## Learning Objectives
 
@@ -40,6 +46,10 @@ build-new-sites-with-liferay-dxp/exercise-3-manage-site-configuration.md
 
 ## Next Steps
 
+* [Creating Reusable Page Structures](./build-new-sites-with-liferay-dxp/create-reusable-page-structures.md)
 * [Exercise 1: Add Pages to the Platform with Page Templates](./build-new-sites-with-liferay-dxp/exercise-1-add-pages-to-platform.md)
+* [Creating Sites with Site Templates](./build-new-sites-with-liferay-dxp/create-sites-with-site-templates.md)
 * [Exercise 2: Add Sites to the Platform](./build-new-sites-with-liferay-dxp/exercise-2-add-sites-to-platform.md)
+* [Managing Site Configuration](./build-new-sites-with-liferay-dxp/managing-site-configuration.md)
 * [Exercise 3: Manage Site Configuration](./build-new-sites-with-liferay-dxp/exercise-3-manage-site-configuration.md)
+* [Summary](./build-new-sites-with-liferay-dxp/summary.md)
