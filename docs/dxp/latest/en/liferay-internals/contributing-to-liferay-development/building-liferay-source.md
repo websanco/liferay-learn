@@ -16,58 +16,58 @@ To build Liferay Portal from source, do the following:
 
 * Clone the *liferay-binaries-cache-2020* repo to speed up builds:
 
-```
-git clone https://github.com/liferay/liferay-binaries-cache-2020 --branch master --single-branch --depth 1
-```
+    ```
+    git clone https://github.com/liferay/liferay-binaries-cache-2020 --branch master --single-branch --depth 1
+    ```
 
 * Fork the liferay-portal repo on Github: https://github.com/liferay/liferay-portal
 * Clone the forked repo's master branch:
 
-```
-git clone https://github.com/<github-username>/liferay-portal
-```
+    ```
+    git clone https://github.com/<github-username>/liferay-portal
+    ```
 
 * Add the main liferay-portal repo as an upstream for fetching changes:
 
-```
-git remote add upstream https://github.com/liferay/liferay-portal
-```
+    ```
+    git remote add upstream https://github.com/liferay/liferay-portal
+    ```
 
 * Run from liferay-portal dir:
 
-```
-ant compile install-portal-snapshots
-ant snapshot-bundle
-git checkout `cat ../bundles/.githash` -b my-custom-change
-```
+    ```
+    ant compile install-portal-snapshots
+    ant snapshot-bundle
+    git checkout `cat ../bundles/.githash` -b my-custom-change
+    ```
 
 * Run a second time to sync snapshots with snapshot hash:
 
-```
-ant compile install-portal-snapshots
-```
+    ```
+    ant compile install-portal-snapshots
+    ```
 
 Liferay core components can now be built and deployed to the snapshot bundle.  If a core component is built, then the bundle will need to be restarted as the components are not hot swappable.
 
 * To build a core project (portal-impl, portal-kernel, etc) run:
 
-```
-ant deploy
-```
+    ```
+    ant deploy
+    ```
 
 * Start the snapshot bundle from *liferay-portal* directory:
 
-```
-../bundles/tomcat-9.0.17/bin/startup.sh | bat
-```
+    ```
+    ../bundles/tomcat-9.0.17/bin/startup.sh | bat
+    ```
 
 A module can now be built from within liferay-portal without recompiling the whole platform. You must complete the steps above before compiling a module since it initializes the build environment.
 
 * To build a module (portal-workflow-web, message-boards-web), run:
 
-```
-blade gw deploy
-```
+    ```
+    blade gw deploy
+    ```
 
 The following messages should appear in the bundle logs:
 
@@ -106,27 +106,27 @@ Before pushing your branch to your fork on Github, it's a good idea to rebase on
 
 * Fetch latest commits from master:
 
-```
-git fetch upstream
-```
+    ```
+    git fetch upstream
+    ```
 
 * Fetch latest snapshot bundle:
 
-```
-ant snapshot-bundle
-```
+    ```
+    ant snapshot-bundle
+    ```
 
 * Rebase on latest snapshot revision:
 
-```
-git rebase `cat ../bundles/.githash`
-```
+    ```
+    git rebase `cat ../bundles/.githash`
+    ```
 
 * Push changes in your branch to your fork:
 
-```
-git push origin my-custom-change
-```
+    ```
+    git push origin my-custom-change
+    ```
 
 * Submit the pull request to the liferay/liferay-portal repo.
 * In the LPS ticket, provide a link to your GitHub pull request
