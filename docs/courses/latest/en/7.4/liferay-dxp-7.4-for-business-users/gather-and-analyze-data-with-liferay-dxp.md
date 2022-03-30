@@ -3,9 +3,15 @@
 ```{toctree}
 :maxdepth: 2
 
+gather-and-analyze-data-with-liferay-dxp/gathering-feedback.md
 gather-and-analyze-data-with-liferay-dxp/exercise-1-creating-forms.md
+gather-and-analyze-data-with-liferay-dxp/addressing-feedback.md
 gather-and-analyze-data-with-liferay-dxp/exercise-2-gathering-and-viewing-feedback.md
+gather-and-analyze-data-with-liferay-dxp/creating-a-kaleo-forms-process.md
+gather-and-analyze-data-with-liferay-dxp/summary.md
 ```
+
+[$LIFERAY_LEARN_YOUTUBE_URL$]=https://www.youtube.com/embed/lHrDFMEiUjw
 
 ## Learning Objectives
 
@@ -37,5 +43,9 @@ gather-and-analyze-data-with-liferay-dxp/exercise-2-gathering-and-viewing-feedba
 
 ## Next Steps
 
+* [Gathering Feedback](./gather-and-analyze-data-with-liferay-dxp/gathering-feedback.md) 
 * [Exercise 1: Creating Forms](./gather-and-analyze-data-with-liferay-dxp/exercise-1-creating-forms.md) 
+* [Addressing Feedback](./gather-and-analyze-data-with-liferay-dxp/addressing-feedback.md)
 * [Exercise 2: Gathering and Viewing Data](./gather-and-analyze-data-with-liferay-dxp/exercise-2-gathering-and-viewing-feedback.md) 
+* [Creating a Kaleo Forms Process](./gather-and-analyze-data-with-liferay-dxp/creating-a-kaleo-forms-process.md)
+* [Summary](./gather-and-analyze-data-with-liferay-dxp/summary.md)

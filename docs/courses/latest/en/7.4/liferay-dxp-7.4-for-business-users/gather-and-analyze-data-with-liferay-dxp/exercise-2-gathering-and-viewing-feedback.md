@@ -1,17 +1,15 @@
 # Exercise 2: Gathering and Viewing Feedback 
 
-Coming Soon!
-
-<!--
-
 [$LIFERAY_LEARN_YOUTUBE_URL$]=https://www.youtube.com/embed/JdU9KFOwNiQ 
 
 ## Exercise Goals 
+
 * Submit Entries for the Customer Satisfaction Survey 
 * View Entries for the Customer Satisfaction Survey 
 * Export Entries from the Customer Satisfaction Survey 
 
 ## Add the Customer Satisfaction Survey to the Marvin Robotics Store Site 
+
 1. **Sign In** to your platform as an Administrator. 
 2. **Open** the _Site Menu_. 
 3. **Click** the _Site Selector_ (compass icon) in the _Site Administration_ panel. 
@@ -25,6 +23,7 @@ Coming Soon!
 11. **Close** the pop-up. 
 
 ## Make Ford Dent and Tricia McMillan Members of the Marvin Robotics Store Site 
+
 1. **Open** the _Global Menu_. 
 2. **Go to** `Users`  &rarr; `Users and Organizations` in the _Control Panel_. 
 3. **Click** _Ford Dent_. 
@@ -40,6 +39,7 @@ Coming Soon!
 13. **Click** _Save_. 
 
 ## Fill out the Customer Satisfaction Survey as Ford Dent 
+
 1. **Open** the _Personal Menu_. 
 2. **Click** _Sign Out_. 
 3. **Click** _Sign In_. 
@@ -59,6 +59,7 @@ Coming Soon!
 15. **Click** _Submit_. 
 
 ## Fill out the Customer Satisfaction Survey as Tricia McMillan 
+
 1. **Open** the _Personal Menu_. 
 2. **Click** _Sign Out_. 
 3. **Click** _Sign In_. 
@@ -80,6 +81,7 @@ Coming Soon!
 17. **Click** _Sign Out_. 
 
 ## View the Form Entries for the Customer Satisfaction Survey 
+
 1. **Sign in** as your Administrator. 
 2. **Open** the _Site Menu_. 
 3. **Click** the _Site Selector_ (compass icon) in the _Site Administration_ panel. 
@@ -96,6 +98,7 @@ Coming Soon!
 14. **Click** _Back_. 
 
 ## Export the Form Entries 
+
 1. **Click** the _Back_ arrow next to _Form Entries_ at the top of the page. 
 2. **Click** the _Actions_ icon (three dots) next to _Customer Satisfaction Survey_. 
 3. **Click** _Export_. 
@@ -106,6 +109,7 @@ Coming Soon!
 ---
 
 ## Bonus Exercises 
+
 1. Add the New Webinar Form created in the previous exercise to a page on the Marvin Robotics Site and fill out the form as Bea Bullbruchs, Arthur Prefect, and Mary Jennings using their User information. 
 2. View the form entries for the New Webinar Form and edit the email address for Mary Jennings to be majennings@marvinrobotics.com. 
 
@@ -113,5 +117,4 @@ Coming Soon!
 
 ## Next Up
 
-* [Exercise 2b: Create User Groups](./exercises-create-user-groups.md)
--->
+* [Creating a Kaleo Forms Process](./creating-a-kaleo-forms-process.md)
