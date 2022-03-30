@@ -6,8 +6,6 @@
 
 1. Google Chrome
 
-1. [Git](https://docs.github.com/en/get-started/quickstart/create-a-repo)
-
 1. [Gradle](https://gradle.org/install/) or [Gradle Wrapper](https://docs.gradle.org/current/userguide/gradle_wrapper.html#sec:adding_wrapper) 6.6.1 or higher.
 
 ## Setting up the Poshi Standalone Gradle Project
@@ -31,8 +29,6 @@
     └── gradlew.bat
     ```
 
-1. Setup version control (git) in the directory.
-
 1. To fetch the Poshi Standalone build files, run the following command from the desired directory in a terminal/command line window:
 
     ```
@@ -49,7 +45,6 @@
 
     ```
     poshi-standalone
-    ├── .git
     ├── .gradle
     ├── gradle   
     ├── gradle   
