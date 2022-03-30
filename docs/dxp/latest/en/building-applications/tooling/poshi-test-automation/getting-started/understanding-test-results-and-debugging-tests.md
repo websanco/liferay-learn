@@ -106,11 +106,11 @@ Navigate to the `index.html` and open the file on a browser.
 
 A successful test result will display the test steps with a green bar indicating that the step passed.
 
-  ![This test passed successfully](../getting-started/images/understanding-test-results/01.PNG)
+  ![This test passed successfully](./understanding-test-results-and-debugging-tests/images//01.png)
 
 A failed test result will display the failing test step with a red bar indicating that the step failed. You can expand the exclamation mark icon to view more information on the failure point, including screenshots of the system state before and after the failure.
 
-  ![This test failed](../getting-started/images/understanding-test-results/02.PNG)
+  ![This test failed](./understanding-test-results-and-debugging-tests/images/02.png)
 
 To test this, make a copy of your `CannotSearchForPumpkins` test and replace the term `Pumpkins` with `Blogs`. If you are also changing the test name, remember to edit your `poshi-ext.properties` file. See [Running a Test](./running-a-test.md) for more information.
 

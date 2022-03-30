@@ -14,7 +14,7 @@ getting-started/creating-a-macro-file.md
 getting-started/creating-a-testcase-file.md
 getting-started/syntax-validation.md
 getting-started/running-a-test.md
-getting-started/understanding-test-results.md
+getting-started/understanding-test-results-and-debugging-tests.md
 ```
 
 Previously, Poshi tests could only be executed by downloading and creating the test files within the [Liferay source
@@ -60,7 +60,7 @@ Run Poshi tests
 :::
 
 :::{grid-item-card} Understanding Test Results and Debugging Poshi
-:link: ./getting-started/understanding-test-results.md
+:link: ./getting-started/understanding-test-results-and-debugging-tests.md
 
 Debugging failures in test runs
 :::

@@ -9,4 +9,4 @@
 
 1. Run the command `./gradlew.sh runPoshi` to run the test. A browser should pop up and automatically run the test without user input.
 
-1. Once complete, the results can be viewed in the `poshi-standalone/test-results/{TestCaseFileName#TestCaseName}` directory. For more information on test results, see [Understanding Test Results](./understanding-test-results.md).
+1. Once complete, the results can be viewed in the `poshi-standalone/test-results/{TestCaseFileName#TestCaseName}` directory. For more information on test results, see [Understanding Test Results](./understanding-test-results-and-debugging-tests.md).
