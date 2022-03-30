@@ -1,8 +1,5 @@
 # Exercise 3: Create Unique User Experiences 
 
-Coming Soon!
-
-<!--
 [$LIFERAY_LEARN_YOUTUBE_URL$]=https://www.youtube.com/embed/-NWR91BD0oU
 
 ## Exercise Goals 
@@ -14,7 +11,8 @@ Coming Soon!
 	- Create a Custom Navigation Menu 
 	- Use Grid, Dropdown, and Menu Display Fragments to Create a Navigation Bar 
 
-## Create a New Experience on the Mondego Community Welcome Page 
+## Create a New Experience on the Mondego Community Welcome Page
+
 1. **Sign In** to the Mondego Platform as your Administrator. 
 2. **Open** the _Site Menu_. 
 3. **Click** the _Site Selector_ (compass) icon. 
@@ -27,6 +25,7 @@ Coming Soon!
 10. **Click** _New Segment_ beside _Audience_. 
 
 ## Add Conditions to the New User Segment 
+
 1. **Type** `Mondego Employees` as the Title. 
 2. **Go to** the _User_ section of the _Properties_ menu. 
 3. **Drag and Drop** a _Site_ property onto the Conditions area. 
@@ -45,6 +44,7 @@ Coming Soon!
 16. **Type** `@mondego.com`. 
 
 ## Group the Site Properties and Define the Conditions 
+
 1. **Click and Drag** the second _Site_ property onto the first to group them. 
 	- A border should appear around the two properties to indicate they have been grouped. 
 2. **Click and Drag** the third _Site_ property just below the second. 
@@ -58,6 +58,7 @@ Coming Soon!
 8. **Click** _Save_ when you return to the _New Experience_ pop-up. 
 
 ## Make Changes to the Welcome Page in the Mondego Employees Experience 
+
 1. **Click** the _Plus_ (+) icon to open the _Fragments and Widgets_ menu. 
 2. **Go to** _Featured Content_ on the _Fragments_ tab. 
 3. **Drag and Drop** a _Banner Center_ to the very bottom of the page above the footer. 
@@ -78,12 +79,14 @@ Coming Soon!
 17. **Click** _Add_. 
 
 ## Set the Mondego Employees Experience Priority 
+
 1. **Click** the _Mondego Employees_ drop-down beside _Experience_ to open the _Experience_ menu. 
 2. **Click** the _Prioritize Experience_ arrow (^) beside _Mondego Employees_. 
 	- This will move the Mondego Employees Experience above the Default Experience. 
 3. **Click** _Publish_. 
 
 ## Preview the Mondego Employees Experience 
+
 1. **Open** the _Site Menu_. 
 2. **Click** _Home_ to view the home page. 
 3. **Click** the _Simulation_ icon (to the right of the gear icon). 
@@ -94,6 +97,7 @@ Coming Soon!
 7. **Close** the _Simulation_. 
 
 ## Create a Custom Navigation Menu 
+
 1. **Open** the _Site Menu_. 
 2. **Go to** `Site Builder` &rarr; `Navigation Menus`. 
 3. **Click** the _Add_ button. 
@@ -101,6 +105,7 @@ Coming Soon!
 5. **Click** _Add_. 
 
 ## Add a Submenu and URL Elements for Mondego Sites 
+
 1. **Click** _New_ to add an element. 
 2. **Choose** _Submenu_. 
 3. **Type** `Mondego Sites` for the _Name_. 
@@ -127,6 +132,7 @@ Coming Soon!
 	- You should now have three URL elements nested below the Mondego Sites Submenu element. 
 
 ## Add a Submenu and URL Elements for Mondego Regional Banks 
+
 1. **Click** the _Add_ button at the top right. 
 2. **Choose** _Submenu_. 
 3. **Type** `Mondego Regional Banks` for the _Name_. 
@@ -152,6 +158,7 @@ Coming Soon!
 	- You should now have three URL elements nested below the Mondego Regional Banks Submenu element.  
 
 ## Add a Navigation Bar to the Welcome Page for the Mondego Employees Experience 
+
 1. **Open** the _Site Menu_. 
 2. **Go to** `Site Builder` &rarr; `Pages`. 
 3. **Click** the _Options_ (three dots) icon beside _Welcome_. 
@@ -170,6 +177,7 @@ Coming Soon!
 16. **Type** `Mondego Regional Banks`. 
 
 ## Add Menu Display Fragments to the Dropdown Fragments 
+
 1. **Click** the _Dropdown_ Fragment in the first module. 
 2. **Check** the _Keep Panel Open in Edit Mode_ checkbox under _General_ in the _Browser_. 
 3. **Open** the _Fragments and Widgets_ menu sidebar. 
@@ -182,6 +190,7 @@ Coming Soon!
 10. **Drag and Drop** a _Menu Display_ Fragment into the _Place fragments here_ box below the second _Dropdown_. 
 
 ## Configure the Menu Display Fragments in the Dropdown Fragments 
+
 1. **Click** the _Menu Display_ under the _Mondego Sites_ Dropdown Fragment. 
 2. **Go to** the _General_ tab in the _Browser_. 
 3. **Click** _Public Pages Hierarchy_ to select a new source. 
@@ -198,6 +207,7 @@ Coming Soon!
 	- You should see three elements: Mondego North America, Mondego UK, and Mondego Japan. 
 
 ## Manage the Grid Fragment Layout for Mobile Devices 
+
 1. **Click** the first _Dropdown_ under _Page Elements_ in the _Browser_. 
 2. **Click** the checkbox to deselect _Keep Panel Open in Edit Mode_ on the _General_ tab. 
 3. **Click** the second _Dropdown_ under _Page Elements_. 
@@ -218,11 +228,11 @@ Coming Soon!
 ---
 
 ## Bonus Exercise 
+
 1. Add a second Experience to the Welcome Page on the Mondego Community Site. Name the New User Segment "Content Creators" and set it to include only those assigned the Site Content Creator Role. Give the Content Creators Experience priority above the Default and Mondego Employees Experiences. Add Fragments and Content to the Welcome Page for that Experience and view those changes. 
 
 ---
 
 ## Next Up
 
-* [Exercise 2b: Create User Groups](./exercises-create-user-groups.md)
--->
+* [Summary](./summary.md)

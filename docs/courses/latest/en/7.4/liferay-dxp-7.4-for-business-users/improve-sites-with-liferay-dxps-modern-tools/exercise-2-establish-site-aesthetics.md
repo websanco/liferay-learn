@@ -1,8 +1,5 @@
 # Exercise 2: Establish Site Aesthetics 
 
-Coming Soon!
-
-<!--
 [$LIFERAY_LEARN_YOUTUBE_URL$]=https://www.youtube.com/embed/ja5uBzptelc
 
 ## Exercise Goals 
@@ -11,6 +8,7 @@ Coming Soon!
 - Create a Style Book for the Mondego Community Site 
 
 ## Create a New Master Page Template 
+
 1. **Sign In** to the Mondego Platform as an Administrator. 
 	- This will be Elliot Quinn if you followed along with the module _Add Users and Manage Permissions with Liferay DXP_. 
 2. **Open** the _Site Menu_. 
@@ -23,6 +21,7 @@ Coming Soon!
 9. **Click** _Save_. 
 
 ## Add a Header and Footer to the Master Page Template 
+
 1. **Open** the _Fragments and Widgets_ (+) menu. 
 2. **Drag and Drop** an _Image_ fragment above the _Drop Zone_. 
 3. **Type** `Header` into the _Search_ bar. 
@@ -32,6 +31,7 @@ Coming Soon!
 	- The Drop Zone is where Fragments and Widgets will appear for any Content Page that uses this Master Page Template. 
 
 ## Add Images to the Header and Footer 
+
 1. **Select** the _Image_ fragment at the top of the page. 
 2. **Double-click** the _Image_ fragment. 
 3. **Click** _Select File_. 
@@ -51,6 +51,7 @@ Coming Soon!
 17. **Choose** the `mondego-logo.jpg` file from _Documents and Media_. 
 
 ## Update the Copyright in the Footer 
+
 1. **Click** the _Footer Nav Light_ fragment. 
 2. **Click** the `02-copy` element to highlight the element. 
 3. **Double-click** the text box. 
@@ -58,6 +59,7 @@ Coming Soon!
 5. **Type** `2022 Mondego Group` after the Copyright symbol. 
 
 ## Configure the Allowed Fragments for the Master Page Template 
+
 1. **Click** the _Configure Allowed Fragments_ button in the center of the Drop Zone. 
 2. **Click** the box beside _Footers_ to deselect. 
 3. **Click** the box beside _Navigation Bars_ to deselect. 
@@ -65,12 +67,14 @@ Coming Soon!
 5. **Click** _Publish Master_ at the top right. 
 
 ## Make the Community Master Page Template the Default 
+
 1. **Click** the _Options_ (three dots) icon beside _Community_ on the _Masters_ tab. 
 2. **Choose** _Mark as Default_ from the menu. 
 3. **Click** _OK_ when the pop-up asks if you want to replace _Blank_ as the default. 
 	- You should now see a blue checkmark on the Community Master Page Template. 
 
 ## Apply the Community Master Page Template to Pages 
+
 1. **Open** the _Site Menu_. 
 2. **Click** _Home_ to go to the main _Welcome_ page. 
 3. **Click** the _Edit_ (pencil) icon in the top corner. 
@@ -80,6 +84,7 @@ Coming Soon!
 	- You should now see the Header and Footer we defined in our Master applied to the Welcome page we created in the last exercise. 
 
 ## Create a New Style Book for the Mondego Community Site 
+
 1. **Open** the _Site Menu_. 
 2. **Go to** `Design &rarr; Style Books`. 
 3. **Click** the _Add_ button. 
@@ -87,6 +92,7 @@ Coming Soon!
 5. **Click** _Save_. 
 
 ## Change the Color System Colors 
+
 1. **Go to** _Brand Colors_ under _Color System_. 
 2. **Type** `#100455` as _Brand Color 1_. 
 3. **Type** `#0DADBD` as _Brand Color 2_. 
@@ -95,6 +101,7 @@ Coming Soon!
 6. **Type** `#0DADBD` as _Secondary_. 
 
 ## Change the Button Colors 
+
 1. **Click** _Color System_ to open the drop-down menu. 
 2. **Choose** _Buttons_. 
 3. **Go to** _Button Outline Primary_. 
@@ -107,6 +114,7 @@ Coming Soon!
 10. **Click** _OK_ in the pop-up. 
 
 ## Make the Community Main Style Book the Default and View Changes 
+
 1. **Click** the _Options_ (three dots) icon beside _Community Main_. 
 2. **Choose** _Mark as Default_. 
 3. **Open** the _Site Menu_. 
@@ -119,6 +127,7 @@ Coming Soon!
 ---
 
 ## Bonus Exercise 
+
 1. Update the Header and Footer Master Page Template we created on the Mondego Group Site in the Build New Sites Module. Add the Mondego logo to the Header and Footer. Add one more fragment to either the Header or Footer. View the changes on Pages that use the template. 
 2. Add a New Style Book to the Mondego Group Site. Adjust the Color System colors to match those on the Mondego Community Site. Adjust Spacing, Layout, or Typography settings. Apply the Style Book to only one page on the Site and view the changes. (You may need to add more content to pages to view some changes.) 
 
@@ -126,5 +135,4 @@ Coming Soon!
 
 ## Next Up
 
-* [Exercise 2b: Create User Groups](./exercises-create-user-groups.md)
--->
+* [Creating Unique Digital Experiences](./create-unique-user-experiences.md)

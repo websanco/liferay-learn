@@ -1,13 +1,9 @@
 # Create Unique User Experiences 
 
-Coming Soon!
-
-<!--
-[$LIFERAY_LEARN_YOUTUBE_URL$]=https://www.youtube.com/embed/uOR2nX7YCJg
+[$LIFERAY_LEARN_YOUTUBE_URL$]=https://www.youtube.com/embed/-NWR91BD0oU
 
 ---
 
 ## Next Up
 
-* [Exercise 2b: Create User Groups](./exercises-create-user-groups.md)
--->
+* [Exercise 3: Create Unique User Experiences](./exercise-3-create-unique-user-experiences.md)

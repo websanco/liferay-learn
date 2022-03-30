@@ -1,8 +1,5 @@
 # Exercise 1: Create Content Pages and Fragments
 
-Coming Soon!
-
-<!--
 [$LIFERAY_LEARN_YOUTUBE_URL$]=https://www.youtube.com/embed/Ks8wbbdXmz4
 
 ## Exercise Goals 
@@ -12,6 +9,7 @@ Coming Soon!
 - Edit the Content Page using the Site Content Creator Role 
 
 ## Create the Mondego Community Site 
+
 1. **Sign In** as your Mondego Administrator. 
 	- If you followed the steps in the Add Users and Manage Permissions module, this will be Elliot Quinn. If not, the default admin, Test Test, works as well. 
 2. **Open** the _Global Menu_. 
@@ -22,6 +20,7 @@ Coming Soon!
 7. **Click** _Save_. 
 
 ## Add a Content Page to the Mondego Community Site 
+
 1. **Open** the _Site Menu_. 
 2. **Go to** `Site Builder` &rarr; `Pages`. 
 3. **Click** the _Add_ button. 
@@ -31,6 +30,7 @@ Coming Soon!
 7. **Click** _Add_. 
 
 ## Add Fragments and Widgets to the Content Page 
+
 1. **Click** the _Fragments and Widgets_ icon (+) in the sidebar. 
 2. **Go to** _Basic Components_ on the _Fragments_ tab. 
 3. **Drag and Drop** a _Slider_ Fragment onto the page. 
@@ -40,6 +40,7 @@ Coming Soon!
 7. **Drag and Drop** an _Asset Publisher_ Widget onto the page. 
 
 ## Configure the Slider Fragment 
+
 1. **Click** the _Slider_ Fragment. 
 2. **Go to** the _General_ tab of the _Browser_. 
 3. **Type** `2` for the _Number of Slides_. 
@@ -58,6 +59,7 @@ Coming Soon!
 15. **Click** _Add_. 
 
 ## Configure the Highlights Fragment 
+
 1. **Click** the _Container_ Fragment below the _Slider_ in the _Browser_. 
 2. **Click** the _Plus_ (+) sign beside _Container_ to expand all the sub-sections if it is not already expanded. 
 3. **Click** the _Grid_ fragment. 
@@ -73,6 +75,7 @@ Coming Soon!
 	- The Layout should be set to 1 Module per Row. 
 
 ## Hide the Slider Fragment in Landscape and Portrait Phone View 
+
 1. **Click** the _Slider_ Fragment. 
 2. **Check** the _Hide Fragment_ checkbox in the _Styles_ tab. 
 	- The slider should disappear in this view, moving the next Fragment to the top of the page. 
@@ -82,6 +85,7 @@ Coming Soon!
 6. **Click** _Desktop_ in the _Device Display_ to return to the Default view. 
 
 ## Configure the Asset Publisher Widget 
+
 1. **Click** the _Asset Publisher_ Widget to select. 
 2. **Click** the _Options_ icon (three dots) in the top right corner of the widget. 
 3. **Click** _Configuration_. 
@@ -96,6 +100,7 @@ Coming Soon!
 11. **Close** the pop-up. 
 
 ## Add a Comment to the Slider Fragment 
+
 1. **Click** the _Comments_ icon in the sidebar. 
 2. **Click** the _Slider_ Fragment. 
 3. **Type** `@naomi.engel Please add a Header to the second slide.` in the comment box. 
@@ -106,6 +111,7 @@ Coming Soon!
 8. **Click** _Publish_. 
 
 ## Manage Mentions for the Mondego Platform 
+
 1. **Open** the _Global Menu_. 
 2. **Go to** `Control Panel` &rarr; `Configuration` &rarr; `Instance Settings`. 
 3. **Click** _Community Tools_ under _Content and Data_. 
@@ -117,6 +123,7 @@ Coming Soon!
 7. **Click** _Save_. 
 
 ## Assign Naomi Engel the Site Content Creator Role 
+
 1. **Open** the _Global Menu_. 
 2. **Go to** `Control Panel` &rarr; `Users` &rarr; `Users and Organizations`. 
 3. **Click** _Naomi Engel_. 
@@ -131,6 +138,7 @@ Coming Soon!
 12. **Click** _Save_. 
 
 ## Define the Site Content Creator Role Permissions 
+
 1. **Open** the _Global Menu_. 
 2. **Go to** `Control Panel` &rarr; `Users` &rarr; `Roles`. 
 3. **Click** the _Site Roles_ tab. 
@@ -147,6 +155,7 @@ Coming Soon!
 14. **Click** _Save_. 
 
 ## Sign In as Naomi Engel 
+
 1. **Open** the _Personal Menu_. 
 2. **Click** _Sign Out_. 
 3. **Click** _Sign In_. 
@@ -160,6 +169,7 @@ Coming Soon!
 10. **Click** _Save_. 
 
 ## Edit the Content Page as Naomi Engel 
+
 1. **Open** the _Personal Menu_. 
 2. **Click** _Notifications_ to view your notifications. 
 	- You should see a red notification bubble on the Personal Menu icon and two unread notifications in your Notifications List. 
@@ -182,6 +192,7 @@ Coming Soon!
 18. **Delete** the text. 
 
 ## Add Images to the Highlights Fragment 
+
 1. **Click** the _Page Elements_ tab in the _Browser_. 
 2. **Click** the '+' icon next to the Container. 
 3. **Open** all drop-downs to find the first image-square element. 
@@ -206,6 +217,7 @@ Coming Soon!
 ---
 
 ## Bonus Exercises 
+
 1. Add two more Content Pages, called "Join the Community" and "FAQ." Add at least two Fragments of your choice to each page and adjust the settings for at least one fragment to Hide or Show on different devices. 
 2. Grant the Site Content Creator Role to another User and edit the Fragments of the Welcome Page as that User. Add text to the three paragraph elements in the Highlights Fragment. 
 
@@ -213,5 +225,4 @@ Coming Soon!
 
 ## Next Up
 
-* [Exercise 2b: Create User Groups](./exercises-create-user-groups.md)
--->
+* [Using Master Page Templates and Style Books](./using-master-pages-style-books.md)
