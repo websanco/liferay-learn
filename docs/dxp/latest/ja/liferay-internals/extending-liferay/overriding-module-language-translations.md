@@ -137,7 +137,7 @@ Liferay DXP/Portal 7.4以降を使用している場合は、[Overriding Global 
 オーバーライドするキーを決定したら、モジュールの`src/main/resources/content`フォルダに言語プロパティファイルを作成します。  ファイルでキーを定義します。 ファイル名がオーバーライドするロケールと一致していることを確認してください。 たとえば、日本語の場合は、`Language_ja.properties`を使用します。
 
 ```{literalinclude} ./overriding-module-language-keys/resources/liferay-e6u7.zip/e6u7-impl/src/main/resources/content/Language_ja.properties
-:language:件のプロパティ
+:language: properties
 ```
 
 <a name="言語リソースバンドルを作成する" />

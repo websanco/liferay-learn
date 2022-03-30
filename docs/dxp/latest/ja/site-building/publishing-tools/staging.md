@@ -47,7 +47,7 @@ Page versioning is only supported for Widget Pages.
 このプロセスを理解すると、効率が向上し、シームレスな公開エクスペリエンスを実現するための事前の計画に役立ちます。 詳細は、[公開プロセスを理解する](./staging/understanding-the-publishing-process.md)を参照してください。
 
 ```{raw} html
-:file: ../../../landingpage_template.html
+:file: ../../landingpage_template.html
 ```
 
 ```{raw} html

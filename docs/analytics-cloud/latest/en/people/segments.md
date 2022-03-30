@@ -1,4 +1,4 @@
-## Segments
+# Segments
 
 ```{toctree}
 :maxdepth: 3

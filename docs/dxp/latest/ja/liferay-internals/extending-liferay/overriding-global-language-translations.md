@@ -52,7 +52,7 @@ Liferay DXP/Portal 7.4以降では、メタデータを使用してオーバー�
 この例では、`home`言語キー設定を次のように変更します。
 
 ```{literalinclude} ./overriding-global-language-keys/resources/liferay-i2f4.zip/i2f4-impl/src/main/resources/content/Language_en_US.properties
-:language:件のプロパティ
+:language: properties
 ```
 
 サンプルをデプロイする方法は次のとおりです。
@@ -114,7 +114,7 @@ Liferay DXP/Portal 7.4以降では、メタデータを使用してオーバー�
 オーバーライドするキーを選択します。 サンプルモジュールは、`home`言語キーをオーバーライドします。
 
 ```{literalinclude} ./overriding-global-language-keys/resources/liferay-i2f4.zip/i2f4-impl/src/main/resources/content/Language_en_US.properties
-:language:件のプロパティ
+:language: properties
 ```
 
 ```{important}
@@ -173,7 +173,7 @@ Provide-Capability:\
 この例では、`publish`言語キー設定を次のように変更します。
 
 ```{literalinclude} ./overriding-global-language-keys/resources/liferay-x8f3.zip/x8f3-impl/src/main/resources/content/Language_en_US.properties
-:language:件のプロパティ
+:language: properties
 ```
 
 サンプルをデプロイする方法は次のとおりです。

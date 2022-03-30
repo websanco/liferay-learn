@@ -89,7 +89,7 @@ app-builder/creating-the-role-change-request-app.md
   - [Creating an Application with App Builder](./creating-a-standard-application.md)
 
 ```{raw} html
-:file: ../../landingpage_template.html
+:file: ../landingpage_template.html
 ```
 
 ```{raw} html

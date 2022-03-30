@@ -25,7 +25,7 @@ publications/reverting-changes.md
 開始するには、 [パブリケーションの有効化](./publications/enabling-publications.md) を参照してください。
 
 ```{raw} html
-:file: ../../../landingpage_template.html
+:file: ../../landingpage_template.html
 ```
 
 ```{raw} html

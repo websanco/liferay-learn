@@ -11,7 +11,7 @@
 -  :doc:`/site-building/publishing-tools/introduction-to-publishing-tools`
 
 ステージング
-~~~~~~~
+~~~~~~~~~~~~~~
 
 -  :doc:`/site-building/publishing-tools/staging`
 -  :doc:`/site-building/publishing-tools/staging/understanding-the-publishing-process`

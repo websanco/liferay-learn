@@ -8,9 +8,9 @@ Picklists is an application for creating standard lists of values that are under
 
 Follow these steps to create a Picklist:
 
-1. Open the *Global Menu* (![Global Menu](../../images/icon-applications-menu.png)), go to the *Control Panel* tab, and click on *Picklists*.
+1. Open the *Global Menu* (![Global Menu](../../../images/icon-applications-menu.png)), go to the *Control Panel* tab, and click on *Picklists*.
 
-1. Click on the *Add* button (![Add Button](../../images/icon-add.png)).
+1. Click on the *Add* button (![Add Button](../../../images/icon-add.png)).
 
    ![Click the Add button to create a new Picklist.](./using-picklists/images/01.png)
 
@@ -18,7 +18,7 @@ Follow these steps to create a Picklist:
 
 1. Click on the new Picklist to edit it.
 
-1. Under Items, click the *Add* button (![Add Button](../../images/icon-add.png)).
+1. Under Items, click the *Add* button (![Add Button](../../../images/icon-add.png)).
 
    ![Click on the Add button to add a new item to the Picklist.](./using-picklists/images/02.png)
 

@@ -1,5 +1,5 @@
 バックアップサービス
-==============
+=====================
 
 -  :doc:`/platform-services/backup-service/backup-service-overview`
 -  :doc:`/platform-services/backup-service/downloading-and-uploading-backups`

@@ -30,7 +30,7 @@ promoting-products/product-recommendations.md
 :::
 
 :::{grid-item-card}  Using the Promotion Base List
-:link: ,/promoting-products/using-the-promotion-base-list.md
+:link: ./promoting-products/using-the-promotion-base-list.md
 :::
 
 :::{grid-item-card}  Creating a Promotion

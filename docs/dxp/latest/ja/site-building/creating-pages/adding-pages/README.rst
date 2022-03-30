@@ -1,5 +1,5 @@
 ページを追加する
-============
+=================
 
 -  :doc:`/site-building/creating-pages/adding-pages/adding-a-page-to-a-site`
 -  :doc:`/site-building/creating-pages/adding-pages/creating-a-page-template`

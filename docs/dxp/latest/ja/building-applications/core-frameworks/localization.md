@@ -8,7 +8,7 @@ localization/adding-a-language.md
 ```
 
 ```{raw} html
-:file: ../../../landingpage_template.html
+:file: ../../landingpage_template.html
 ```
 
 ```{raw} html
