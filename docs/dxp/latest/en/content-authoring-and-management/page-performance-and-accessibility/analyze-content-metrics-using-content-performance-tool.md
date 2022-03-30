@@ -87,8 +87,6 @@ The following table describes the metrics you can find in the Traffic Channels a
 | :--- | :--- |
 | Traffic Volume | The estimated number of visitors to your Page. |
 | Traffic Share | Percentage of traffic your content receives from the traffic source. |
-| Best Keyword | Top five keywords driving traffic through organic search. |
-| Best Paid Keyword | Top five keywords driving traffic through paid search. |
 | Top Referring Social Media | Top ten social media networks driving traffic to your Page. |
 | Top Referring Pages | Top ten referrer Pages driving traffic to your Page. |
 | Top Referring Domains | Top ten referrer domains driving traffic to your Page. |
