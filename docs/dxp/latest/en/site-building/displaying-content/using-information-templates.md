@@ -1,6 +1,6 @@
 # Using Information Templates
 
-{bdg-secondary}`Available Liferay DXP/Portal 7.4+`
+{bdg-secondary}`Available 7.4+`
 
 With Information Templates, you can create [FreeMarker](https://freemarker.apache.org/) templates for any item type that implements the [Info Framework](../../building-applications/data-frameworks/info-framework.md). Supported item types include Web Contents, Documents, Assets, Blogs, Categories, and Objects. Once created, you can map fragment fields to your template to determine how an item is rendered in Content Pages and Display Pages. This can help you implement a consistent style for your Site.
 
