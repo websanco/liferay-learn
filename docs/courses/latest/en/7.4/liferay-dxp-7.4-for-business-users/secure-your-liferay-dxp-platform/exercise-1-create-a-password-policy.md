@@ -1,8 +1,5 @@
 # Exercise 1: Create a Password Policy 
 
-Coming Soon!
-
-<!--
 [$LIFERAY_LEARN_YOUTUBE_URL$]=https://www.youtube.com/embed/rO8YB_WnSuc
 
 ## Exercise Goals 
@@ -11,6 +8,7 @@ Coming Soon!
 - Create a New User and Change their Password to fit the Policy 
 
 ## Create a New Password Policy 
+
 1. **Sign In** to the Mondego platform as an Administrator. 
 2. **Open** the _Global Menu_. 
 3. **Go to** `Control Panel` &rarr; `Security`. 
@@ -20,6 +18,7 @@ Coming Soon!
 7. **Type** `The password policy for all Mondego employees` for the description. 
 
 ## Manage Password Changes 
+
 1. **Click** _Password Changes_ to expand the menu. 
 2. **Click** the toggle beside _Changeable_ to allow password changes. 
 3. **Click** _Eternal_ under _Reset Ticket Max Age_. 
@@ -27,6 +26,7 @@ Coming Soon!
 4. **Choose** _1 Hour_. 
 
 ## Enable and Manage Syntax Checking
+
 1. **Click** _Password Syntax Checking_ to expand the section. 
 2. **Click** the toggle to _Enable Syntax Checking_. 
 3. **Type** `1` under _Minimum Alpha Numeric_. 
@@ -37,6 +37,7 @@ Coming Soon!
 8. **Type** `1` under _Minimum Upper Case_. 
 
 ## Enable and Manage Password History 
+
 1. **Click** _Password History_ to expand the section. 
 2. **Click** the toggle to _Enable History_. 
 3. **Click** the _History Count_ drop-down. 
@@ -44,6 +45,7 @@ Coming Soon!
 	- The platform will save 8 previous passwords to prevent Users from reusing old passwords. 
 
 ## Set a Password Expiration and Grace Limit 
+
 1. **Click** _Password Expiration_ to expand the section. 
 2. **Click** the toggle to _Enable Expiration_. 
 3. **Click** the _Maximum Age_ drop-down. 
@@ -55,6 +57,7 @@ Coming Soon!
 	- This will allow a User to log in 10 times after their password is expired before requiring them to change passwords. 
 
 ## Enable Password Lockout 
+
 1. **Click** _Lockout_ to expand the section. 
 2. **Click** the toggle to _Enable Lockout_. 
 3. **Type** `5` under _Maximum Failure_. 
@@ -63,6 +66,7 @@ Coming Soon!
 6. **Click** _Save_. 
 
 ## Assign the Employee Password Policy to Users 
+
 1. **Click** the _Options_ (three dots) icon next to _Employee Password Policy_. 
 2. **Click** _Assign Members_. 
 3. **Click** the _Add_ button at the top right. 
@@ -70,6 +74,7 @@ Coming Soon!
 5. **Click** _Add_. 
 
 ## Assign the Employee Password Policy to an Organization 
+
 1. **Click** the _Organizations_ tab to the right of _Users_. 
 2. **Click** the _Add_ button at the top right. 
 	- You should see three Organizations, Mondego Investments and its two Sub-Organizations, Investment Advisors and Investment Marketing. 
@@ -77,6 +82,7 @@ Coming Soon!
 4. **Click** _Add_. 
 
 ## Create a New User 
+
 1. **Open** the _Global Menu_. 
 2. **Click** _Users and Organizations_ under _Control Panel_ &rarr; _Users_. 
 3. **Click** the _Add_ button. 
@@ -87,18 +93,21 @@ Coming Soon!
 8. **Click** _Save_ at the bottom of the page. 
 
 ## Give Evie Calhoun a Password 
+
 1. **Click** _Password_ in the menu on the left. 
 2. **Type** `test` for the _New Password_. 
 3. **Type** `test` once more for _Enter Again_. 
 4. **Click** _Save_. 
 
 ## Add Evie Calhoun to the Mondego Investments Organization 
+
 1. **Click** _Organizations_ in the menu on the left. 
 2. **Click** _Select_ beside _Organizations_. 
 3. **Click** _Choose_ beside _Mondego Investments_. 
 4. **Click** _Save_. 
 
 ## Sign In as Evie Calhoun and Set a New Password 
+
 1. **Open** the _Personal Menu_. 
 2. **Click** _Sign Out_. 
 3. **Click** _Sign In_. 
@@ -122,11 +131,11 @@ Coming Soon!
 ---
 
 ## Bonus Exercise 
+
 1. Add another Password Policy for Mondego Customers. Set syntax requirements, a password expiration, and enable password history and account lockout. Assign an existing User to this policy instead of the Employee Policy. 
 
 ---
 
 ## Next Up
 
-* [Exercise 2b: Create User Groups](./exercises-create-user-groups.md)
--->
+* [Exercise 2: Enable CAPTCHA](./exercise-2-enable-captcha.md)

@@ -1,8 +1,5 @@
 # Exercise 2: Enable CAPTCHA 
 
-Coming Soon!
-
-<!--
 [$LIFERAY_LEARN_YOUTUBE_URL$]=https://www.youtube.com/embed/wZIJUwKNVWw
 
 ## Exercise Goals 
@@ -11,6 +8,7 @@ Coming Soon!
 - Enable CAPTCHA for Forms 
 
 ## Enable CAPTCHA for Message Boards 
+
 1. **Sign In** as your platform Administrator. 
 2. **Open** the _Global Menu_. 
 3. **Go to** `Control Panel` &rarr; `Configuration`. 
@@ -22,6 +20,7 @@ Coming Soon!
 8. **Click** _Save_ at the bottom of the page. 
 
 ## Add a New Message Board Category to the Mondego Publications Site 
+
 1. **Open** the _Personal Menu_. 
 2. **Click** _My Sites_. 
 3. **Click** the _My Sites_ tab. 
@@ -40,6 +39,7 @@ Coming Soon!
 13. **Click** _Save_ again. 
 
 ## Add A New Thread to the Category 
+
 1. **Click** _Meet the Experts_. 
 2. **Click** _New Thread_ to add a new thread to the Category. 
 3. **Type** `New Members` as the _Subject_. 
@@ -47,6 +47,7 @@ Coming Soon!
 	- Note, that there is not a second CAPTCHA challenge because the maximum number of challenges for the portlet (1) has been reached. 
 
 ## Add a CAPTCHA to a Form 
+
 1. **Open** the _Site Menu_. 
 2. **Go to** `Content & Data &rarr; Forms`. 
 3. **Click** the _Add_ button. 
@@ -65,11 +66,11 @@ Coming Soon!
 ---
 
 ## Bonus Exercise 
+
 1. Go back to the CAPTCHA Security Settings in the Control Panel. Increase the number of Maximum Challenges. Return to the Message Board and add Categories and Threads to see the changes. 
 
 ---
 
 ## Next Up
 
-* [Exercise 2b: Create User Groups](./exercises-create-user-groups.md)
--->
+* [Securing Web Services](./securing-web-services.md)
