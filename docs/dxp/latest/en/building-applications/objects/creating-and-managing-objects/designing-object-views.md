@@ -42,7 +42,7 @@ Follow these steps to design a custom Object view:
 
    Each selected field is used as a column in the application page table.
 
-   Available options include [manually added fields](./adding-fields-to-objects.md) and automatically added fields (i.e., Author, Creation Date, Modified Date, Workflow Status, and ID).
+   Available options include both [custom fields](./adding-fields-to-objects.md) and general metadata fields (i.e., ID, Author, Creation Date, Modified Date, and Workflow Status).
 
    ```{note}
    Views do not support columns containing multiple entries (e.g., *Many to Many* relationship fields).
@@ -56,11 +56,35 @@ Follow these steps to design a custom Object view:
 
 Once saved, the custom view is used for displaying Object entries.
 
-![The view is used for displaying Object entries.](./designing-object-views/images/05.png)
+## Setting a Default Sorting for Views
 
-## Sorting Views
-<!-- U17? Sorting custom views-->
-Coming Soon!
+{bdg-secondary}`Available Liferay DXP 7.4 U18+ and Portal 7.4 GA18+`
+
+Follow these steps to set the default ordering/sorting for Object View columns:
+
+1. Open the *Global Menu* (![Global Menu](../../../images/icon-applications-menu.png)), click the *Control Panel* tab, and go to *Objects*.
+
+1. Begin editing the desired *Object*, go to the *Views* tab, and select the desired *view*.
+
+1. Go to the *Default Sort* tab and click the *Add* button (![Add Button](../../../images/icon-add.png)).
+
+   ![Go to the Default Sort tab and click the Add button.](./designing-object-views/images/05.png)
+
+1. Select a *column* and *sorting* order (i.e., Ascending or Descending).
+
+   ```{important}
+   For column, you can select any custom field. However, default sorts cannot use metadata fields: Author (`creator`) Creation Date (`dateCreated`), Modified Date (`dateModified`), Workflow Status (`status`), or ID (`id`).
+   ```
+
+   ![Select a column and sorting.](./designing-object-views/images/06.png)
+
+1. Click *Save*.
+
+Object entries are now sorted according to your default sorting.
+
+If you create multiple default sorts, you can rearrange them to determine which is applied to the view. The view uses the sort that's placed first.
+
+![Arrange sortings to determine which is used.](./designing-object-views/images/07.png)
 
 ## Filtering Views
 <!-- U17? Filtering entries in a custom view-->
