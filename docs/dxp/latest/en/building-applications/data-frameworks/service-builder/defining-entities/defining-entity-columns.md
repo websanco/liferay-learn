@@ -2,18 +2,23 @@
 
 An entity's columns represent its attributes. These attributes map table fields to Java object fields. 
 
-<!-- Add text to this effect: 
-   Here you'll use the project from [Understanding Service Builder Generated Classes]() to learn more details about columns. 
+Here you'll examine the sample project from [Understanding Service Builder Generated Classes](../service-builder-basics/understanding-service-builder-generated-classes.md) to learn more details about columns.
 
-   1. Download [blah blah]
-   
-   1. Unzip
+Start by downloading and unzipping the example:
 
-   1. Deploy
+   ```bash
+   curl https://learn.liferay.com/dxp/latest/en/building-applications/data-frameworks/service-builder/service-builder-basics/liferay-w9b7.zip -O
+   ```
 
-   1. Open the service.xml file
+   ```bash
+   unzip liferay-w9b7.zip
+   ```
 
--->
+Examine the `w9b7-service/service.xml` file:
+
+```{literalinclude} ../service-builder-basics/understanding-service-builder-generated-classes/resources/liferay-w9b7.zip/w9b7-service/service.xml)
+:language: xml
+```
 
 To add attributes for your entity, add `<column />` tags to your entity definition:
 
