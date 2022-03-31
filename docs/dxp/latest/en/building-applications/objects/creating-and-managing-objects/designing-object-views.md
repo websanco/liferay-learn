@@ -72,10 +72,6 @@ Follow these steps to set the default ordering/sorting for Object View columns:
 
 1. Select a *column* and *sorting* order (i.e., Ascending or Descending).
 
-   ```{important}
-   For column, you can select any custom field. However, default sorts cannot use metadata fields: Author (`creator`) Creation Date (`dateCreated`), Modified Date (`dateModified`), Workflow Status (`status`), or ID (`id`).
-   ```
-
    ![Select a column and sorting.](./designing-object-views/images/06.png)
 
 1. Click *Save*.
