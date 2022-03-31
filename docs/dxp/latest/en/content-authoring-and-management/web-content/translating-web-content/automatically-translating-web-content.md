@@ -6,7 +6,7 @@ Liferay can integrate with the following service APIs to generate automatic tran
 * [Amazon Translate](#enabling-for-amazon-translate)
 * [Microsoft Translator](#enabling-for-microsoft-translator)
 
-To use this feature, you must first set up each service and then enable them in Liferay's system settings. Once enabled, you can use the service to [generate translations](#using-automatic-translation) for Web Content.
+To use this feature, you must first set up the translation service you are using and then enable it in Liferay's system settings. Once enabled, you can use the service to [generate translations](#using-automatic-translation) for Web Content.
 
 ```{important}
 Only one service can be active at a given time. If you enable multiple services, the system picks the first one available.
@@ -32,7 +32,7 @@ When ready, follow these steps:
 
 {bdg-secondary}`Available 7.4 U9+ and GA13+`
 
-Enabling Amazon Translate requires an active account. See official [Amazon Translate](https://docs.aws.amazon.com/translate/latest/dg/what-is.html) documentation for more information.
+Enabling Amazon Translate requires an active Amazon AWS account. See official [Amazon Translate](https://docs.aws.amazon.com/translate/latest/dg/what-is.html) documentation for more information.
 
 When ready, follow these steps:
 
@@ -52,7 +52,7 @@ When ready, follow these steps:
 
 {bdg-secondary}`Available 7.4 U6+ and GA10+`
 
-Enabling Microsoft Translator requires an active account. See official [Microsoft Translator](https://docs.microsoft.com/en-us/azure/cognitive-services/translator/) documentation for more information.
+Enabling Microsoft Translator requires an active Microsoft Azure account. See official [Microsoft Translator](https://docs.microsoft.com/en-us/azure/cognitive-services/translator/) documentation for more information.
 
 When ready, follow these steps:
 
