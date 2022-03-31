@@ -120,7 +120,7 @@ By default, the *404 URL Maximum Age* is set to 30 days, the *Maximum Number of 
 
 ## Enabling 404 Tracking
 
-{bdg-secondary}`For Liferay DXP/Portal 7.4+`
+{bdg-secondary}`Available 7.4+`
 
 Follow these steps to enable background 404 tracking and activate the 404 URLs tab:
 
