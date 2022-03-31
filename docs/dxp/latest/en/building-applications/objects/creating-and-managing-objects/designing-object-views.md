@@ -1,6 +1,6 @@
 # Designing Object Views
 
-> Available Liferay DXP 7.4 U10 and Liferay Portal 7.4 __
+{bdg-secondary}`Available Liferay DXP 7.4 U10+ and Portal 7.4 GA14+`
 
 Object views define tables for displaying entries in an Object's application page. By default, Liferay automatically generates a default view for each published Object. This view orders all entry fields alphabetically. You can, however, design custom views to determine which Object fields are included in the table and how they're ordered.
 
