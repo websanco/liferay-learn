@@ -6,7 +6,7 @@ Widget Templates use [FreeMarker](https://freemarker.apache.org/) to determine h
 For Liferay DXP/Portal 7.4+, widget templates only support FreeMarker. Velocity is no longer supported.
 ```
 
-To create a Widget Template, follow these steps:
+Follow these steps to create a Widget Template:
 
 1. Navigate to the desired Site where you want to create the widget template.
 
@@ -24,11 +24,7 @@ To create a Widget Template, follow these steps:
 
 1. Design your template in the editor.
 
-   In the *Elements* side panel (![Elements](../../../../images/icon-list-ul.png)), you can select from fields in the selected widget's structure.
-
-   ```{note}
-   The Elements side panel does not include fields based on templates. This is to prevent infinite loops.
-   ```
+   In the *Elements* side panel (![Elements](../../../../images/icon-list-ul.png)), you can select from available widget field. Some fields are common to all widgets, while others are specific to the selected widget type.
 
    ![Design the template using field elements.](./creating-a-widget-template/images/02.png)
 
