@@ -16,6 +16,6 @@ If this is a new workspace, you will see an onboarding guide upon entering for t
 
 ![Follow the onboarding guide to connect to your Liferay DXP instance.](./accessing-your-workspace/images/02.png)
 
-After successful connection, invite other people to have access to your new workspace.
+After successful connection, invite others to access to your new workspace.
 
 ![After successful connection, invite others to join the workspace](./accessing-your-workspace/images/03.png)
