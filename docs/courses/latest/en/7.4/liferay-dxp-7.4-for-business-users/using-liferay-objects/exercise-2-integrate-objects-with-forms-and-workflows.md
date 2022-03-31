@@ -1,8 +1,5 @@
 # Exercise 2: Integrate Objects with Forms and Workflows 
 
-Coming Soon!
-
-<!--
 [$LIFERAY_LEARN_YOUTUBE_URL$]=https://www.youtube.com/embed/vkgPvVDQOPY 
 
 ## Exercise Goals 
@@ -12,6 +9,7 @@ Coming Soon!
 - Display the Integrated Form Entries Using a Collection 
 
 ## Create a New Accounts Application Form 
+
 1. **Go to** `Content & Data` &rarr; `Forms` in the _Site Administration Menu_. 
 2. **Click** the _Add_ icon. 
 3. **Type** `New Account Application` where it reads _Untitled Form_. 
@@ -19,6 +17,7 @@ Coming Soon!
 5. **Click** the _Settings_ icon. 
 
 ## Integrate the New Accounts Application Form with the New Accounts Object 
+
 1. **Choose** _Object_ under _Select a Storage Type_. 
 2. **Choose** _New Account_ under _Select Object_. 
 3. **Click** _Done_. 
@@ -42,6 +41,7 @@ Coming Soon!
 21. **Click** the _Back_ arrow. 
 
 ## Add Remaining Fields to the New Accounts Application Form 
+
 1. **Drag and Drop** a _Select from List_ field onto the form. 
 2. **Type** `Account Type` for _Label_. 
 3. **Click** the slider next to _Required Field_. 
@@ -64,6 +64,7 @@ Coming Soon!
 20. **Click** _Publish_. 
 
 ## Create a Workflow for the New Accounts Application Form 
+
 1. **Go to** `Applications` &rarr; `Workflow` &rarr; `Process Builder` in the _Global Menu_. 
 2. **Click** the _Add_ icon. 
 3. **Type** `Account Approval Process` where it reads _Untitled Workflow_. 
@@ -93,12 +94,14 @@ Coming Soon!
 27. **Click** the _Save_ button. 
 
 ## Connect All of the Nodes with Transitions
+
 1. **Drag** a _Transition_ arrow from the _Submitted_ node to the _Review 1_ Task. 
-  - To drag a transition, place your cursor on the edge of the node so that you see a thin plus (+) sign. When it appears, click and drag the arrow to the next node, connecting it by positioning it to see the orange circle. 
+	- To drag a transition, place your cursor on the edge of the node so that you see a thin plus (+) sign. When it appears, click and drag the arrow to the next node, connecting it by positioning it to see the orange circle. 
 2. **Drag** a _Transition_ arrow from the _Review 1_ Task to the _Review 2_ Task. 
 3. **Drag** a _Transition_ arrow from the _Review 2_ Task to the _Approved_ node. 
 
 ## Name the New Transitions 
+
 1. **Click** the first Transition from _Submitted_ to _Review 1_. 
 2. **Double-click** the _Name_ value in the _Properties_ tab to edit it. 
 3. **Type** `Submit for Review` for the _Name_.  
@@ -114,6 +117,7 @@ Coming Soon!
 13. **Click** _Publish_. 
 
 ## Add the Account Approval Process Workflow to New Account Entries 
+
 1. **Open** the Global Menu. 
 2. **Click** on the _Mondego Group_ site. 
 3. **Go to** `Configuration` &rarr; `Workflow` in the _Site Administration Menu_. 
@@ -122,6 +126,7 @@ Coming Soon!
 6. **Click** _Save_. 
 
 ## Add the New Account Application Form to a Page 
+
 1. **Click** _Home_ in the _Site Administration Panel_. 
 2. **Click** the _Edit_ (small pencil) icon. 
 3. **Click** the _+_ icon to open the Fragments and Widgets sidebar. 
@@ -136,11 +141,13 @@ Coming Soon!
 12. **Click** _Publish_. 
 
 ## Submit an Entry for the New Account Application Form 
+
 1. **Fill out** the fields of the New Account Application Form. 
 	- The exact details here don't really matter so feel free to fill the form out as yourself, a friend, or your Administrative User. 
 2. **Click** _Submit_. 
 
 ## Approve the New Account Submission as a Site Content Reviewer 
+
 1. **Sign out** as your administrator. 
 	- Before you do this, be sure that you have created two additional Users, added them as members of the Mondego Group Site, and assigned them the Roles of Site Content Reviewer and Site Administrator, respectively. 
 2. **Sign in** as your Site Content Reviewer. 
@@ -155,6 +162,7 @@ Coming Soon!
 11. **Click** _Done_. 
 
 ## Approve the New Account Submission as a Site Administrator 
+
 1. **Sign out** as your Site Content Reviewer. 
 2. **Sign in** as your Site Administrator. 
 3. **Open** the _Personal Menu_. 
@@ -168,6 +176,7 @@ Coming Soon!
 11. **Click** _Done_. 
 
 ## Create a Display Page Template for New Account Entries 
+
 1. **Sign out** as your Site Administrator. 
 2. **Sign in** as your Platform Administrator. 
 3. **Go to** `Design` &rarr; `Page Templates` in the _Site Administration Menu_. 
@@ -179,6 +188,7 @@ Coming Soon!
 9. **Click** _Save_. 
 
 ## Design the New Accounts Display Page Template 
+
 1. **Drag and Drop** a _Container_ element onto the page. 
 2. **Drag and Drop** a _Heading_ component into the _Container_. 
 3. **Click** the _Heading_. 
@@ -224,6 +234,7 @@ Coming Soon!
 43. **Click** _Publish_. 
 
 ## Add a Private Page for Displaying New Account Entries 
+
 1. **Go to** `Site Builder` &rarr; `Pages` in the _Site Administration Menu_. 
 2. **Click** _Pages_ where it reads _Pages_ &rarr; _Public Pages_. 
 3. **Click** the _Add_ icon. 
@@ -242,11 +253,11 @@ Coming Soon!
 ---
 
 ## Bonus Exercise 
+
 1. Create a workflow for reviewing PTO requests that includes at least two different reviewers. Submit a request and go through the approval process using the newly created workflow. 
 
 ---
 
 ## Next Up
 
-* [Exercise 2b: Create User Groups](./exercises-create-user-groups.md)
--->
+* [Summary](./summary.md)

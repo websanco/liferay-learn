@@ -1,8 +1,5 @@
 # Exercise 1: Create a Custom Business Object 
 
-Coming Soon!
-
-<!--
 [$LIFERAY_LEARN_YOUTUBE_URL$]=https://www.youtube.com/embed/wjqXrN7-SKg
 
 ## Exercise Goals 
@@ -11,24 +8,26 @@ Coming Soon!
 - Create a Liferay Object for PTO Requests 
 
 ## Create a Picklist for Account Types 
+
 1. **Sign in** as an Administrator. 
 2. **Go to** `Control Panel` &rarr; `Object` &rarr; `Picklists` in the _Global Menu_. 
 3. **Click** the _Add_ icon in the upper right. 
 4. **Type** `Account Type` for _Name_. 
 5. **Click** _Save_. 
-* **Click** the new _Account Type_ picklist. 
-6. **Click** the _Add_ icon. 
-7. **Type** `Checking` for _Name_. 
-8. **Click** _Save_. 
-9. **Click** the _Add_ icon. 
-10. **Type** `Savings` for _Name_. 
-11. **Click** _Save_. 
-12. **Click** the _Add_ icon. 
-13. **Type** `Individual Retirement` for _Name_. 
-14. **Click** _Save_. 
+6. **Click** the new _Account Type_ picklist. 
+7. **Click** the _Add_ icon. 
+8. **Type** `Checking` for _Name_. 
+9. **Click** _Save_. 
+10. **Click** the _Add_ icon. 
+11. **Type** `Savings` for _Name_. 
+12. **Click** _Save_. 
+13. **Click** the _Add_ icon. 
+14. **Type** `Individual Retirement` for _Name_. 
 15. **Click** _Save_. 
+16. **Click** _Save_. 
 
 ## Create a Liferay Object for New Accounts 
+
 1. **Go to** `Control Panel` &rarr; `Object` &rarr; `Objects` in the _Global Menu_. 
 2. **Click** the _Add_ icon. 
 3. **Type** `New Account` for _Label_. 
@@ -42,6 +41,7 @@ Coming Soon!
 11. **Click** _Save_. 
 
 ## Add Initial Fields to the New Accounts Object 
+
 1. **Click** the _Fields_ tab at the top of the page. 
 2. **Click** the _Add_ icon. 
 3. **Type** `Account Holder` for _Label_. 
@@ -60,6 +60,7 @@ Coming Soon!
 16. **Click** _Save_. 
 
 ## Add Remaining Fields to the New Accounts Object 
+
 1. **Click** the _Add_ icon. 
 2. **Type** `Account Type` for _Label_. 
 3. **Choose** _Picklist_ for _Type_. 
@@ -80,6 +81,7 @@ Coming Soon!
 18. **Click** _Publish_. 
 
 ## Add Entries for the New Accounts Object 
+
 1. **Open** the Global Menu. 
 2. **Click** on the _Mondego Group_ site. 
 3. **Go to** `People` &rarr; `New Accounts` in the _Site Administration Panel_. 
@@ -102,6 +104,7 @@ Coming Soon!
 19. **Click** _Save_. 
 
 ## Create a Picklist for Mondego Departments 
+
 1. **Go to** `Control Panel` &rarr; `Object` &rarr; `Picklists` in the _Global Menu_. 
 2. **Click** the _Add_ icon in the upper right. 
 3. **Type** `Mondego Departments` for _Name_. 
@@ -125,6 +128,7 @@ Coming Soon!
 21. **Click** _Save_. 
 
 ## Create a Liferay Object for PTO Requests 
+
 1. **Go to** `Control Panel` &rarr; `Object` &rarr; `Objects` in the _Global Menu_. 
 2. **Click** the _Add_ icon. 
 3. **Type** `PTO Request` for _Label_. 
@@ -138,6 +142,7 @@ Coming Soon!
 11. **Click** _Save_. 
 
 ## Add Initial Fields to the PTO Requests Object 
+
 1. **Click** the _Fields_ tab at the top of the page. 
 2. **Click** the _Add_ icon. 
 3. **Type** `Name` for _Label_. 
@@ -152,6 +157,7 @@ Coming Soon!
 12. **Click** _Save_. 
 
 ## Add Remaining Fields to the PTO Requests Object 
+
 1. **Click** the _Add_ icon. 
 2. **Type** `Start Date` for _Label_. 
 3. **Choose** _Date_ for _Type_. 
@@ -171,6 +177,7 @@ Coming Soon!
 17. **Click** _Publish_. 
 
 ## Add Entries for the PTO Requests Object 
+
 1. **Open** the Global Menu. 
 2. **Click** on the _Mondego Group_ site. 
 3. **Go to** `People` &rarr; `New Accounts` in the _Site Administration Panel_. 
@@ -193,11 +200,11 @@ Coming Soon!
 ---
 
 ## Bonus Exercise 
+
 1. Create a new Liferay Object for Account Activity. Be sure to include fields for Customer Name, Transaction Amount, Account Number, and Account Type. 
 
 ---
 
 ## Next Up
 
-* [Exercise 2b: Create User Groups](./exercises-create-user-groups.md)
--->
+* [Integrating and Displaying Liferay Objects](./integrating-and-displaying-liferay-objects.md)
