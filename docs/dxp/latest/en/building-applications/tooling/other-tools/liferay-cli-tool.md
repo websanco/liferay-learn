@@ -3,7 +3,7 @@
 The Liferay CLI tool makes it easy to create [Angular](https://angular.io/), JavaScript, [React](https://reactjs.org/), shared bundle, or [Vue.js](https://vuejs.org/) projects to interface with Liferay's REST and GraphQL services. Using a `liferay` command, you can generate, build, and deploy projects. 
 
 ```{note}
-The Liferay CLI tool replaces the old Yeoman generators used to create JavaScript application projects for Liferay DXP 7.4+. You can use either approach for older versions, but for 7.4+, you must use the CLI tool instead of invoking the Yeoman generators with `yo liferay-js`.
+The Liferay CLI tool replaces the old Yeoman generators used to create JavaScript application projects for Liferay DXP 7.4+. You can use either approach for older versions, but for 7.4+, you must use the CLI tool instead of the Yeoman generators.
 ```
 
 ## Installing the CLI Tool
@@ -20,8 +20,6 @@ If you would rather not install the CLI tool globally, you can also run the tool
 
 ## Generating a Project
 
-The Liferay CLI tool creates projects with a specific folder structure, but the structure may change depending on the version of Liferay DXP you are using. When you run other commands with the tool within these projects, it recognizes the folder structure for the project's version (and the contents of the project's `package.json` file) and determines that the project is valid for these commands.
-
 Use the `liferay new` command to create a new [Remote App](../remote-apps/creating-a-liferay-remote-app.md) or Liferay Platform project:
 
 1. Open a terminal and navigate to where you want to create the project. Run this command:
@@ -37,17 +35,17 @@ Use the `liferay new` command to create a new [Remote App](../remote-apps/creati
    ![Use the arrow keys and press Enter to select a Remote App or Liferay Platform project.](./liferay-cli-tool/images/01.png)
 
    ```{note}
-   [Remote App projects](../remote-apps/creating-a-liferay-remote-app.md) are hosted on a remote server that your Liferay DXP instance can access to use as an application. Liferay Platform projects are applications that you can deploy as an application on its own.
+   [Remote App projects](../remote-apps/creating-a-liferay-remote-app.md) are hosted on a remote server that your Liferay DXP instance can access to use as an application. Liferay Platform projects are deployable to Liferay DXP/Portal.
    ```
 
 1. Enter a human readable description of the new project at the prompt. The default value is "New Project".
 
 1. Choose the target platform for the project. The target platform you choose determines the project's default dependencies and the rules used to build the project (for example, whether your project should have access to all of the target platform's available JavaScript API).
 
-   You can select a Liferay Portal or Liferay DXP target platform for versions 7.1+. You can also select "Liferay Portal CE (not sharing platform's packages)", which defines a `@lifray/portal-agnostic` target in the project's `package.json` file (so your project will not include any additional packages bundled with Liferay Portal, and the only required dependencies are build and bundle tools).
+   You can select a Liferay Portal or Liferay DXP target platform for versions 7.1+. You can also select "Liferay Portal CE (not sharing platform's packages)", which defines a `@lifray/portal-agnostic` target in the project's `package.json` file. In this case, your project won't include additional packages bundled with Liferay Portal, and the only required dependencies are build and bundle tools.
 
    ```{note}
-   If you chose to create a Remote App project, you can only choose a version 7.4+. If you choose a specific version instead of the `not sharing platform's packages` option, your project gets React packages from the Liferay platform. This option reduces the project's size and manual dependencies, but restricts your project to use the packages bundled with that version.
+   If you choose a Remote App project, you can only choose a version 7.4+. If you choose a specific version instead of the `not sharing platform's packages` option, your project gets React packages from the Liferay platform. This option reduces the project's size and manual dependencies, but restricts your project to use the packages bundled with that version.
    ```
 
 1. Choose the type of project to create from the given options in the prompt.
