@@ -355,6 +355,30 @@ This change was made to avoid using an old solution for authentication (Google S
 
 ---------------------------------------
 
+### Removed Liferay.Loader.addModules from liferay-amd-loader
+- **Date:** 2019-Feb-01
+- **JIRA Ticket:** [LPS-83949](https://issues.liferay.com/browse/LPS-83949)
+
+#### What changed?
+
+The addModules function was removed from liferay-amd-loader version 4.x and later.
+
+#### Who is affected?
+
+This affects anyone using liferay-amd-loader directly to define modules.
+
+#### How should I update my code?
+
+There is no direct replacement for Liferay.Loader.addModules.
+
+One alternative is to create a JS Toolkit project to publish modules: https://github.com/liferay/liferay-frontend-projects/tree/master/maintenance/projects/js-toolkit/docs
+
+#### Why was this change made?
+
+Performing all module resolutions in the server side boosts speed and network performance.
+
+---------------------------------------
+
 ### Updated AlloyEditor v2.0 Includes New Major Version of React
 - **Date:** 2019-Feb-04
 - **JIRA Ticket:** [LPS-90079](https://issues.liferay.com/browse/LPS-90079)
