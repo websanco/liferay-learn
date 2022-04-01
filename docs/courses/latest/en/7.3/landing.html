@@ -1,0 +1,45 @@
+<script type="module">
+    import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.esm.browser.min.js'
+
+    const page = new Vue({
+        el: '#landingPage',
+        data: {
+            cards: [ 
+                    {
+                        sectionName: 'Liferay DXP 7.3 for Business Users',
+                        sectionURL: 'liferay-dxp-7.3-business-users.html',
+                        showAll: false,
+                        subsections: [    
+                            {
+                                sectionName: 'Solutions Architect',
+                                sectionURL: 'liferay-dxp-7.4-for-business-users/solutions-architect.html',
+                            },
+                            {
+                                sectionName: 'Business Practitioner',
+                                sectionURL: 'liferay-dxp-7.3-for-business-users/business-pracitioner.html',
+                            },
+                        ]
+                    },
+                    {
+                        sectionName: 'Liferay DXP 7.3 for Technical Users',
+                        sectionURL: 'liferay-dxp-7.3-technical-users.html',
+                        showAll: false,
+                        subsections: [    
+                            {
+                                sectionName: '',
+                                sectionURL: '.html',
+                            },
+                            {
+                                sectionName: '',
+                                sectionURL: '.html',
+                            },
+                            {
+                                sectionName: '',
+                                sectionURL: '.html',
+                            },
+                        ]
+                    },
+                ]
+            }
+    })
+</script>
