@@ -1,6 +1,6 @@
 # Product Recommendations
 
-> Subscription Required
+{bdg-primary}`Subscription`
 
 ```{toctree}
 :maxdepth: 1

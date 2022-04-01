@@ -1,6 +1,6 @@
 # Shop by Diagram
 
-> Subscription Required
+{bdg-primary}`Subscription`
 
 With Shop by Diagram you can easily find parts for larger equipment visually through diagrams. This can be an automotive spare part, electronic component, or spares of heavy machinery.
  

@@ -1,5 +1,7 @@
 # Understanding Recommendation Types
 
+{bdg-primary}`Subscription`
+
 | Type | Includes Product Data  | Includes Order Data  | Personalized  | Context Aware  | Frequency  | Description  |
 |:--|:--|:--|:--|:--|:--|:--|
 | Content-Based Product Recommendations  |  &#10004; |   |   |  &#10004;  |   | Recommends similar products to the Product being viewed  |
