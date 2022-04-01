@@ -8,19 +8,19 @@ When a test run is successful the console log will display a message similar to 
 
 ```
 ###
-### LocalFile.LiferayLearn#CannotSearchForPumpkins
+### LocalFile.LiferayLearn#CannotSearchForMyName
 ###
 
 Using "L:\poshi-standalone\build\webdriver/chromedriver.exe" as "webdriver.chrome.driver" path
 
-com.liferay.poshi.runner.PoshiRunner > test[LocalFile.LiferayLearn#CannotSearchForPumpkins] STANDARD_ERROR
+com.liferay.poshi.runner.PoshiRunner > test[LocalFile.LiferayLearn#CannotSearchForMyName] STANDARD_ERROR
    Starting ChromeDriver 2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7) on port 46142
    Only local connections are allowed.
    Mar 21, 2022 9:42:39 AM org.openqa.selenium.remote.ProtocolHandshake createSession
    INFO: Detected dialect: OSS
 
-com.liferay.poshi.runner.PoshiRunner > test[LocalFile.LiferayLearn#CannotSearchForPumpkins] STANDARD_OUT
-   There should be no search results when a user searches for Pumpkins.
+com.liferay.poshi.runner.PoshiRunner > test[LocalFile.LiferayLearn#CannotSearchForMyName] STANDARD_OUT
+   There should be no search results when I search for my name.
    Total duration of 'LiferaySelenium.pause' usages: 0 ms
 
 BUILD SUCCESSFUL in 2m 5s
@@ -31,7 +31,7 @@ A failed test run displays more information which will include the reason the te
 
 ```
 ###
-### LocalFile.LiferayLearn#CannotSearchForPumpkins
+### LocalFile.LiferayLearn#CannotSearchForMyName
 ###
 
 Using "L:\poshi-standalone\build\webdriver/chromedriver.exe" as "webdriver.chrome.driver" path
@@ -92,7 +92,7 @@ poshi-standalone
 ├── ...
 ├── test-results   
 |   ├── binary
-|   ├──  index.html LocalFile.LiferayLearn_CannotSearchForPumpkins
+|   ├──  index.html LocalFile.LiferayLearn_CannotSearchForMyName
 |   |  ├── screenshots
 |   |  ├── index.html
 |   |  └── summary.html
@@ -112,7 +112,7 @@ A failed test result will display the failing test step with a red bar indicatin
 
   ![This test failed](./understanding-test-results-and-debugging-tests/images/02.png)
 
-To test this, make a copy of your `CannotSearchForPumpkins` test and replace the term `Pumpkins` with `Blogs`. If you are also changing the test name, remember to edit your `poshi-ext.properties` file. See [Running a Test](./running-a-test.md) for more information.
+To test this, make a copy of your `CannotSearchForMyName` test and replace your name with `Blogs`. If you are also changing the test name, remember to edit your `poshi-ext.properties` file. See [Running a Test](./running-a-test.md) for more information.
 
 ## Diagnosing the Cause of a Test Failure
 

@@ -4,17 +4,17 @@
 
 Write your first path file using the test scenario below:
 
-  Joe Bloggs, would like to test that the term "Pumpkin" does not appear on any learn.liferay.com article. The steps he would take are the following. Follow along manually on a separate browser to test the steps.
+  You would like to test that your name does not appear on any learn.liferay.com article. The steps you would take are the following. Follow along manually on a separate browser to test the steps.
 
   1. Navigate to the [Liferay Learn site](http://learn.liferay.com).
 
   1. Click on the Search input field.
 
-  1. Type in the search term, 'Pumpkin'.
+  1. Type in your name as the search term.
 
   1. Press the enter key to enter the search term.
 
-  1. Assert that there are no search results.
+  1. Assert that there are no search results. If searching for your name returns results, please pick a different name.
 
   1. Assert that a message appears saying there are no articles available.
 
@@ -28,7 +28,7 @@ From the given test scenario, gather the elements that your test needs to intera
 
 1. Using the selector icon, click on the search bar and determine the locator from the highlighted portion of the DOM. In this case, use `//input[@id="docsSearch"]`.
 
-1. Search for the term 'Pumpkin' to navigate to the search results page.
+1. Search for your name to navigate to the search results page.
 
 1. Again, using the selector icon from the Web Developer Console, click on the "No Results" message and determine the path. In this case, use `//h4[@id="noResultsMessage"]`.
 

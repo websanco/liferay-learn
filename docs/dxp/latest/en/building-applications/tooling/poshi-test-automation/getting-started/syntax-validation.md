@@ -38,16 +38,16 @@ Errors in validation are descriptive and will point to the line of code where th
   Invalid macro command LiferayLearnSearch#search at:
   /L:/poshi-standalone/poshi-tests/testcases/LiferayLearn.testcase:12
 
-    10 |   test CannotSearchForPumpkins {
+    10 |   test CannotSearchForMyName {
           at com.liferay.poshi.core.PoshiValidation._throwExceptions(PoshiValidation.java:1870)
-    11 |       task("When I search for the term 'Pumpkins'") {
+    11 |       task("When I search for my name") {
           at com.liferay.poshi.core.PoshiValidation.validate(PoshiValidation.java:106)
-  > 12 |           LiferayLearnSearch.search(searchTerm = "Pumpkins");
+  > 12 |           LiferayLearnSearch.search(searchTerm = "yourNameHere");
     13 |       }
     14 |
     15 |       task("Then I should see the no results message.") {
           at com.liferay.poshi.core.PoshiValidation.main(PoshiValidation.java:60)
-    16 |           LiferayLearnSearch.assertNoResults(searchTerm = "Pumpkins");
+    16 |           LiferayLearnSearch.assertNoResults(searchTerm = "yourNameHere");
     17 |       }
     18 |
     19 |   }
