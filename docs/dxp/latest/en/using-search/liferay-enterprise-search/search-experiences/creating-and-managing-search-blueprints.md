@@ -147,7 +147,7 @@ Here's an example Sort that sorts the search results by the `name` field, in des
 {
 	"sorts": [
 		{
-			"name": "desc"
+			"title_sortable": "desc"
 		}
 	]
 }
@@ -157,7 +157,6 @@ For more details see [Blueprints Configuration](./blueprints-configurations.md)
 
 ## Importing and Exporting Blueprints
 
-<!-- As of 01/11, the option to export is there, but clicking Export results in a java.lang.SecurityException --> 
 A Blueprint is a JSON object. Export the JSON of a Blueprint from one environment and import it into the other. This can be useful when bringing the Blueprint from a staging and testing environment to production.
 
 To export the Blueprint JSON, 
