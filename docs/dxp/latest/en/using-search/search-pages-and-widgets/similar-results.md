@@ -1,8 +1,8 @@
 # Similar Results
 
-> **Subscribers**
+{bdg-primary}`Subscription`
 
-> **Availability:** Bundled with DXP 7.3 and DXP 7.4; [Liferay Marketplace](https://web.liferay.com/marketplace/-/mp/application/172465398) for DXP 7.2 SP2+/FP5+
+{bdg-link-secondary}`Bundled with DXP 7.3 and 7.4; Liferay Marketplace for DXP 7.2 SP2+/FP5+ <https://web.liferay.com/marketplace/-/mp/application/172465398>`
 
 The Similar Results widget shows search results similar to the _main asset_ that's selected on the page.
 
