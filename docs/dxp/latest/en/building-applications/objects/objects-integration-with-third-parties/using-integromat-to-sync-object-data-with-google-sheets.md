@@ -1,8 +1,8 @@
 # Using Integromat to Sync Object Data with Google Sheets
 
-________
+You can use Liferay Objects with data integration tools to create automated tasks for syncing Object data with external services. These tasks are triggered using webhooks and can connect to Google applications, Microsoft Office, and more.
 
-Syncing your data in this way requires an Integromat account, Google Spreadsheet, and active DXP 7.4 instance. The DXP instance must also have a published Object with the desired fields for sending or receiving data to the Google Spreadsheet.
+Here you'll learn how to use webhooks to trigger sync tasks between Liferay Objects and Google Sheets using Integromat. Syncing your data in this way requires an Integromat account, Google Spreadsheet, and active DXP 7.4 instance. The DXP instance must also have a published Object with the desired fields for sending or receiving data to the Google Spreadsheet.
 
 <!-- The following examples __... -->
 
@@ -30,7 +30,7 @@ Follow these steps to sync Object data to a Google Sheet:
 
 1. Use the copied URL to [define an Object action](../creating-and-managing-objects/defining-object-actions.md) that sends a request to the webhook endpoint whenever a new Object entry is added.
 
-   ![Define an action that sends a request to the webhook endpoint whenever an entry is added.](./using-integromat-to-sync-object-data-with-google-sheets/images/06.png)
+   [Define an action that sends a request to the webhook endpoint whenever an entry is added.](./using-integromat-to-sync-object-data-with-google-sheets/images/06.png)nc-object-data-with-google-sheets/images/06.png)
 
 1. Trigger the webhook by adding a test entry to the Object.
 
