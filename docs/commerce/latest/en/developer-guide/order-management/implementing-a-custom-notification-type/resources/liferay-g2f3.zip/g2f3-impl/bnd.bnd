@@ -1,0 +1,3 @@
+Bundle-Name: Acme G2F3 Implementation
+Bundle-SymbolicName: com.acme.g2f3.impl
+Bundle-Version: 1.0.0
