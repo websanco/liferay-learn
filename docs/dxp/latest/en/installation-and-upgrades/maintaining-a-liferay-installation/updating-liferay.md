@@ -1,7 +1,8 @@
 # Updating Liferay
 
-Update your Liferay installation with Bundle Releases. The latest features, security releases, as well as library updates are all delivered together in one bundle.
-See [Updating Previous Versions of Liferay](./updating-previous-versions-of-liferay.md) for versions before Liferay DXP 7.3 SP3+ and 7.4 GA1+.
+{bdg-secondary}`Applicable for Liferay DXP 7.3 SP3+ and 7.4 GA1+`
+
+Update your Liferay installation with Bundle Releases. The latest features, security releases, as well as library updates are all delivered together in one bundle. See [Updating Previous Versions of Liferay](./updating-previous-versions-of-liferay.md) for versions before Liferay.
 
 ```{warning}
 **Always** [back up](./backing-up.md) your database and installation before updating Liferay DXP/Portal.
@@ -74,6 +75,12 @@ Next, use a Gradle task to generate a bundle. Use `distBundleZip` or `distBundle
 The Gradle task downloads a new bundle prior to layering the proper configuration files and compiling any modules and themes. 
 
 Note, the resulting bundle(s) are found in the *build* folder of the Liferay workspace. The version of Liferay DXP in use is defined by the *liferay.workspace.product* property inside the *gradle.properties* file.
+
+To generate bundles for all of your defined environments with a single task, use `distBundleZipAll` or `distBundleTarAll`. For example:
+
+      ./gradlew distBundleTarAll -Pliferay.workspace.bundle.dist.include.metadata=true
+
+Each resulting Zip or Tar's filename will include the name of the config environment and a timestamp. Note, this specific Gradle task is available in Liferay workspace 3.4.32 and above. 
 
 ## Important Files to Consider
 
