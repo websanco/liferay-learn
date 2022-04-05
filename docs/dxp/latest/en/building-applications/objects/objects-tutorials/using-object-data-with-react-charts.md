@@ -1,6 +1,6 @@
 # Using Object Data with React Charts
 
-Here you'll use [Objects](../../objects.md), [Headless APIs](../understanding-object-integrations/headless-framework-integration.md), and [Remote Apps](../../remote-apps.md) to create a dynamic chart for data dashboards. First, you'll set up a new DXP instance with [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) enabled for Object API calls. Then, you'll create an Object for receiving and storing data. After adding data to the Object using REST APIs, you'll download and build the provided React [FusionCharts](https://www.fusioncharts.com/dev/getting-started/react/your-first-chart-using-react) application. Once the code is compiled, you'll host the generated `.js` file in the Liferay Document Library and copy its WebDAV URL. Finally, you'll use this URL to create a Remote App for the React chart and deploy it as a Page widget.
+Here you'll use [Objects](../../objects.md), [Headless APIs](../understanding-object-integrations/headless-framework-integration.md), and [Remote Apps](../../remote-apps.md) to create a dynamic chart for data dashboards. First, you'll set up a new DXP instance with [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) enabled for Object API calls. Then, you'll create an Object for receiving and storing data. After adding data to the Object using REST APIs, you'll download and build the provided React [FusionCharts](https://www.fusioncharts.com/dev/getting-started/react/your-first-chart-using-react) application. Once the code is compiled, you'll host the generated `.js` file in the Liferay Document Library and copy its WebDAV URL. Finally, you'll use this URL to create a remote app for the React chart and deploy it as a Page widget.
 
 The chart is configured to call the Object via Headless API every five seconds, which returns the Object's data and updates the chart dynamically.
 
@@ -132,7 +132,7 @@ Follow these steps to download and build the React application:
    yarn build
    ```
 
-   This command creates an optimized production build, which includes the files necessary for running the application as a Remote App.
+   This command creates an optimized production build, which includes the files necessary for running the application as a remote app.
 
 1. Verify the build is successful and take note of the application's `.js` file.
 
@@ -158,7 +158,7 @@ Once the code is compiled, you can host the application's `.js` file in the Life
 
 1. Drag and drop the `.js` file into the upload area.
 
-   When uploaded to the Document Library, the file is assigned a unique WebDAV URL, which you'll use to create the Remote App.
+   When uploaded to the Document Library, the file is assigned a unique WebDAV URL, which you'll use to create the remote app.
 
 1. Click the *Info* icon (![Info Icon](../../../images/icon-information.png)) and select the *uploaded file*.
 
@@ -186,7 +186,7 @@ Once the code is compiled, you can host the application's `.js` file in the Life
 
 1. Click *Save*.
 
-Once Saved, Liferay creates a widget for the Remote App that you can deploy to Site Pages. This widget is listed under the application's Portlet Category Name (i.e., *Remote Apps* for this tutorial).
+Once Saved, Liferay creates a widget for the remote app that you can deploy to Site Pages. This widget is listed under the application's Portlet Category Name (i.e., *Remote Apps* for this tutorial).
 
 ![You can deploy the remote app widget to Site Pages.](./using-object-data-with-react-charts/images/06.png)
 

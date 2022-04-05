@@ -4,7 +4,7 @@
 
 Remote Apps use Liferay's front-end infrastructure to register external applications with the Liferay platform and render them as widgets.
 
-In this tutorial, you'll create a basic application using Liferay's [`create_remote_app.sh`](https://raw.githubusercontent.com/liferay/liferay-portal/master/tools/create_remote_app.sh) script. After the application is generated, you'll compile its code and host its `.js` and `.css` files. Once hosted, you'll copy each file's URLs and use them to create a Liferay Remote App. Finally, you can deploy the application to Site Pages as a widget.
+In this tutorial, you'll create a basic application using Liferay's [`create_remote_app.sh`](https://raw.githubusercontent.com/liferay/liferay-portal/master/tools/create_remote_app.sh) script. After the application is generated, you'll compile its code and host its `.js` and `.css` files. Once hosted, you'll copy each file's URLs and use them to create a Liferay remote app. Finally, you can deploy the application to Site Pages as a widget.
 
 ![Use the create_remote_app.sh script to create a simple React application.](./creating-a-basic-remote-app/images/01.png)
 
@@ -71,7 +71,7 @@ h5v7-remote-app
 The generated `index.js` file includes two customizations necessary for using the application as a Liferay Remote App.
 
 * WebComponent: On line 21, the application is declared a `WebComponent` so it can connect to Remote Apps.
-* ELEMENT_ID: On line 30, `ELEMENT_ID` is set to `h5v7-remote-app`, instead of the conventional `<div id="root" />`. This is because a Remote App's HTML Element Name must match the application's `ELEMENT_ID`, and `<div id="root" />` does not work for this purpose.
+* ELEMENT_ID: On line 30, `ELEMENT_ID` is set to `h5v7-remote-app`, instead of the conventional `<div id="root" />`. This is because a remote app's HTML Element Name must match the application's `ELEMENT_ID`, and `<div id="root" />` does not work for this purpose.
 
 ### Understanding the React Routes
 
@@ -131,7 +131,7 @@ For demonstration purposes this tutorial hosts the application’s static resour
 
 1. Click *Publish*.
 
-This adds the files to the Document Library and assigns them unique URLs, which you'll use to create the Remote App.
+This adds the files to the Document Library and assigns them unique URLs, which you'll use to create the remote app.
 
 To view each file's URL, click the *Info* icon (![Info Icon](../../../images/icon-information.png)) and select a file. Copy each file's *WebDAV URL* and save them for use in the next step.
 

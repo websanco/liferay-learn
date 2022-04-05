@@ -12,9 +12,9 @@ Remote Apps is an application for extending Liferay DXP without developing and d
 
 ![Register external JS applications with the Liferay platform and render them as Page widgets.](./remote-apps/images/01.png)
 
-Each Remote App entry is created at the company level and includes the necessary URLs and details for registering the application with Liferay. When created, a widget is automatically generated for each entry and renders the application according to its entry type.
+Each remote app entry is created at the company level and includes the necessary URLs and details for registering the application with Liferay. When created, a widget is automatically generated for each entry and renders the application according to its entry type.
 
-Liferay provides two types of Remote App entries: *Iframe* and *Custom Element*. While both types are incorporated into a Page during the render Page lifecycle, they are hosted and rendered differently. They also have different levels of access to Liferay services and runtime data.
+Liferay provides two types of remote app entries: *Iframe* and *Custom Element*. While both types are incorporated into a Page during the render Page lifecycle, they are hosted and rendered differently. They also have different levels of access to Liferay services and runtime data.
 
 * [IFrame](./remote-apps/understanding-remote-app-types.md#using-the-iframe-type): This type renders the application into a separate IFrame element (`<iframe>`) and can allow for limited interaction with the host page using Liferay's optional client SDK API. Each entry of this type stores a URL reference to where the application is running.
 
