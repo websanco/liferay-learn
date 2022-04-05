@@ -4,6 +4,10 @@ DXP Cloud is a flexible platform that combines a collection of key components to
 
 ![All of the key services and components integrated with DXP Cloud are shown with their connections here.](./dxp-cloud-infrastructure/images/01.png)
 
+```{note}
+Private cluster subscriptions also include a built-in [Web Application Firewall](../infrastructure-and-operations/security/web-application-firewall.md). However, this is [not available with a shared cluster](./platform-limitations.md#security).
+```
+
 See the following list for a description of the various components.
 
 ## Advanced Application Monitoring
