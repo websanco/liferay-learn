@@ -102,13 +102,27 @@ In a clustered environment, each node needs the same configuration values for ea
 If storing your Liferay DXP configuration (e.g., Liferay Home) in a source control system, make sure to include the OSGi configuration files (.config files).
 ```
 
-## Specifying a Read-Only Value
+## Setting Read-Only Configurations for a Schema
 
-If you must specify a read-only configuration value, use a [portal property](../../../installation-and-upgrades/reference/portal-properties.md).
+{bdg-secondary}`Available 7.4 U19+`
 
-```{note}
-DXP supports this feature in 7.4+, in 7.3 since FP1/SP1, and in 7.2 since FP14/SP5.
-```
+When provisioning specific sites or instances, it may be useful to set certain configurations to be read-only. To do this,
+
+1. Navigate to the specific configuration you wish to set as read-only. For example, navigate to Control Panel &rarr; Instance Settings &rarr; Blogs. 
+
+1. Save your configuration settings. Click the ![Actions](../../../images/icon-actions.png) icon. Click Export.
+
+1. On the command line, set the exported configuration file to be read-only. For example,
+
+      chmod -w com.liferay.blogs.configuration.BlogsGroupServiceConfiguration.scoped_scoped_b9862214-9308-4d00-a93c-f36d1acc90b4.config
+
+1. Place the config file into the `/osgi/configs` folder of your installation. Refresh the settings page. The configuration is now read-only. 
+
+## Specifying a Single Read-Only Value
+
+To specify a single read-only configuration value, use a [portal property](../../../installation-and-upgrades/reference/portal-properties.md).
+
+{bdg-secondary}`Available 7.4+, 7/3 FP1/SP1, and 7.2 FP14/SP5`
 
 Here's the property syntax:
 
