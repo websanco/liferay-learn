@@ -13,7 +13,7 @@ import org.osgi.service.component.annotations.Component;
 
 @Component(
 	property = {
-		"commerce.notification.type.key=314159265",
+		"commerce.notification.type.key=shipment-created",
 		"commerce.notification.type.order:Integer=51"
 	},
 	service = CommerceNotificationType.class
@@ -43,7 +43,7 @@ public class G2F3OrderShippedCommerceNotificationTypeImpl
 
 	@Override
 	public String getKey() {
-		return "314159265";
+		return "shipment-created";
 	}
 
 	@Override
