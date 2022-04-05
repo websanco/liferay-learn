@@ -1,14 +1,16 @@
 # Using Order Types
 
-To support the example scenario of stock and urgent orders, you can create two Order Types. Stock orders are those that have regular pricing for the buyer whereas urgent orders are those that incur a surcharge.
+To support the example scenario of stock and urgent orders, you can create two Order Types. Stock orders have regular pricing for the buyer, while urgent orders incur a surcharge.
 
 ```{important}
-For orders created using the *Add Order* or *Create New Order* button, buyers can choose the Order Type from a dropdown menu. This updates the product page with the correct prices linked to that Order Type, if any.
+For orders created using the *Add Order* or *Create New Order* buttons, buyers can choose the Order Type. This updates the product page with the correct prices linked to that Order Type, if any.
 ```
 
 ## Creating an Order Type
 
-If there is only one Order Type created, it is automatically assigned to a new order. For Products added to the cart directly, the Order Type with the lower Order number takes precedence over the others.
+If only one Order Type exists, it's assigned to a new order automatically. For Products added to the cart directly, the Order Type with the lower Order number takes precedence over the others. You can always change the Order number in the Order Type to set the default to what you want. 
+
+<!-- It would be helpful to have a screenshot here showing how you can set the Order number in the order type. -Rich -->
 
 1. Open the *Global Menu* (![Applications Menu icon](../../images/icon-applications-menu.png)) and click on *Commerce* &rarr; *Order Types*.
 1. Click the *Add* button(![Add icon](../../images/icon-add.png)), and enter the following information.
@@ -51,7 +53,7 @@ You can create a custom Price List and link it to the Urgent Order Type. To add 
 
     **Modifier:** Percentage
 
-    ![Enter the name, target, and modifier and click Submit to create the Price Modifier.](./using-order-types/images/02.png)
+    ![Enter the name, target, and modifier, and click Submit to create the Price Modifier.](./using-order-types/images/02.png)
 
 1. Click *Submit*.
 1. Click on the new Price Modifier and activate it using the *Active* toggle and set the *Amount* to 10.
