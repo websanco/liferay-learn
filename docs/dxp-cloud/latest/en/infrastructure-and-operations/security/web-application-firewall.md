@@ -6,6 +6,10 @@ Here, you'll learn how DXP Cloud's features form the WAF that protects against c
 
 ![Figure 1: The Web Application Firewall protects against common attacks.](./web-application-firewall/images/01.png)
 
+```{note}
+Custom firewall rules are not available with [shared cluster subscriptions](../../reference/platform-limitations.md#security).
+```
+
 ## Private Network
 
 DXP Cloud's services are not exposed publicly to the internet. Every environment in DXP Cloud has its own private network, which allows services from the same environment to communicate through a secure communication protocol without interacting with the public internet. For information on configuring this private network, see [Private Network](../networking/private-network.md).
