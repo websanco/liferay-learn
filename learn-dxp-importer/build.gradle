@@ -1,0 +1,32 @@
+buildscript {
+	dependencies {
+		classpath group: "com.liferay", name: "com.liferay.gradle.plugins.defaults", version: "latest.release"
+	}
+
+	repositories {
+		mavenLocal()
+
+		maven {
+			url "https://repository-cdn.liferay.com/nexus/content/groups/public"
+		}
+	}
+}
+
+apply plugin: "application"
+apply plugin: "com.liferay.source.formatter"
+apply plugin: "java"
+
+dependencies {
+	compile group: "com.vladsch.flexmark", name: "flexmark-all", version: "0.64.0"
+	compile group: "commons-io", name: "commons-io", version: "2.11.0"
+}
+
+mainClassName = "com.liferay.learn.dxp.importer.Main"
+
+repositories {
+	mavenLocal()
+
+	maven {
+		url "https://repository-cdn.liferay.com/nexus/content/groups/public"
+	}
+}
