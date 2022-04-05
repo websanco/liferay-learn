@@ -24,7 +24,7 @@ Using Remote Apps, you can decouple your custom application's development cycle 
 
 This approach can benefit all kinds of development environments. For on-premise scenarios, it helps to reduce dependence on the Liferay platform and simplify the upgrade path. While for multi-tenant and SaaS environments, Remote Apps provides powerful customization capabilities without requiring the ability to deploy modules to the Liferay server.
 
-To get started, see [Creating a Basic Remote App](./remote-apps/creating-a-basic-remote-app.md).
+To get started, see [Creating a Basic Remote App](./remote-apps/remote-apps-tutorials/creating-a-basic-remote-app.md).
 
 ```{raw} html
 :file: ../landingpage_template.html

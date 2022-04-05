@@ -53,5 +53,5 @@ When multiple instances of the Custom Element widget are added to a page, Lifera
 ## Additional Information
 
 * [Remote Apps Overview](../remote-apps.md)
-* [Creating a Basic Remote App](./creating-a-basic-remote-app.md)
+* [Creating a Basic Remote App](./remote-apps-tutorials/creating-a-basic-remote-app.md)
 * [Remote Apps UI Reference](./remote-apps-ui-reference.md)

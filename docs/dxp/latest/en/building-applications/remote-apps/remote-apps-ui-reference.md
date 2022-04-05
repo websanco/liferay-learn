@@ -26,4 +26,4 @@ When creating or editing a Remote App, the following fields are available depend
 
 * [Remote Apps](../remote-apps.md)
 * [Understanding Remote App Types](./understanding-remote-app-types.md)
-* [Creating a Basic Remote App](./creating-a-basic-remote-app.md)
+* [Creating a Basic Remote App](./remote-apps-tutorials/creating-a-basic-remote-app.md)

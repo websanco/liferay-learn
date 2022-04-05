@@ -9,7 +9,7 @@ In this tutorial, you'll create a basic application using Liferay's [`create_rem
 ![Use the create_remote_app.sh script to create a simple React application.](./creating-a-basic-remote-app/images/01.png)
 
 ```{note}
-Liferay Remote Apps is agnostic regarding how applications are built, packaged, and hosted. This tutorial only offers a convenient way to create a sample remote application with basic routing via app properties.
+Liferay Remote Apps is agnostic regarding how applications are built, packaged, and hosted. This tutorial only offers a convenient way to create a sample remote application.
 ```
 
 Running `create_remote_app.sh` requires the latest versions of [Node.JS](https://nodejs.org/), [NPM](https://www.npmjs.com/), and [YARN](https://classic.yarnpkg.com/). Before proceeding, ensure these tools are installed.
@@ -75,7 +75,7 @@ The generated `index.js` file includes two customizations necessary for using th
 
 ### Understanding the React Routes
 
-The generated code includes three routes: `hello-world` (default), `hello-foo`, and `hello-bar`. Routes are alternative sets of code that you can use when running an application. See ![Using Routes with a Basic Remote App](./using-routes-with-a-basic-remote-app.md) for a basic example.
+The generated code includes three routes: `hello-world` (default), `hello-foo`, and `hello-bar`. Routes are alternative sets of code that you can use when running an application. See [Using Routes with a Basic Remote App](./using-routes-with-a-basic-remote-app.md) for a basic example.
 
 ## Building the React Application
 
@@ -119,9 +119,9 @@ For demonstration purposes this tutorial hosts the application’s static resour
    docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_DXP_DOCKER_IMAGE$]
    ```
 
-1. Open the *Site Menu* (![Site Menu](../../images/icon-product-menu.png)), expand *Content & Data*, and go to *Documents and Media*.
+1. Open the *Site Menu* (![Site Menu](../../../images/icon-product-menu.png)), expand *Content & Data*, and go to *Documents and Media*.
 
-1. Click the *Add* button (![Add Button](../../images/icon-add.png)) and select *Multiple Files Upload*.
+1. Click the *Add* button (![Add Button](../../../images/icon-add.png)) and select *Multiple Files Upload*.
 
 1. Drag and drop the `.js` and `.css` files into the upload area.
 
@@ -133,7 +133,7 @@ For demonstration purposes this tutorial hosts the application’s static resour
 
 This adds the files to the Document Library and assigns them unique URLs, which you'll use to create the Remote App.
 
-To view each file's URL, click the *Info* icon (![Info Icon](../../images/icon-information.png)) and select a file. Copy each file's *WebDAV URL* and save them for use in the next step.
+To view each file's URL, click the *Info* icon (![Info Icon](../../../images/icon-information.png)) and select a file. Copy each file's *WebDAV URL* and save them for use in the next step.
 
 ![Copy each file's WebDAV URL.](./creating-a-basic-remote-app/images/03.png)
 
@@ -144,9 +144,9 @@ For example,
 
 ## Registering the Application with Remote Apps
 
-1. Open the *Global Menu* (![Global Menu](../../images/icon-applications-menu.png)), click the *Applications* tab, and go to *Remote Apps*.
+1. Open the *Global Menu* (![Global Menu](../../../images/icon-applications-menu.png)), click the *Applications* tab, and go to *Remote Apps*.
 
-1. Click the *Add* button (![Add Button](../../images/icon-add.png)).
+1. Click the *Add* button (![Add Button](../../../images/icon-add.png)).
 
 1. Enter these values:
 
@@ -167,6 +167,7 @@ Once saved, Liferay creates a widget named H5V7-Remote-App, which you can deploy
 
 ## Additional Information
 
-* [Building Applications](../../building-applications.md)
-* [Remote Apps Overview](../remote-apps.md)
-* [Objects Overview](../objects.md)
+* [Remote Apps Overview](../../remote-apps.md)
+* [Understanding Remote App Types](../understanding-remote-app-types.md)
+* [Using Routes with a Basic Remote App](./using-routes-with-a-basic-remote-app.md)
+* [Remote Apps UI Reference](../remote-apps-ui-reference.md)
