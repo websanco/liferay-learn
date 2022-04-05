@@ -1,14 +1,16 @@
-# Using Routes with Remote Apps
+# Using Routes with a Basic Remote App
 
-Remote Apps use Liferay's front-end infrastructure to register external applications with the Liferay platform and render them as widgets. For applications that include multiple routes (e.g., [React Router](https://reactrouter.com/), you can define Remote App properties to determine which route is used for a widget at runtime. These properties can be set for an application via Remote Apps or the widget's configuration options once deployed.
+Remote Apps use Liferay's front-end infrastructure to register external applications with the Liferay platform and render them as widgets. For applications that include multiple routes (e.g., [React Router](https://reactrouter.com/), you can define Remote App properties to determine which routes are used for a widget at runtime. These properties can be set for an application via Remote Apps or the widget's configuration options once deployed.
 
-In this tutorial, you'll create a React application using the `create_remote_app.sh` script, which generates an app with three routes: `hello-world`, `hello-foo`, `hello-bar`. After compiling the application and hosting its `.js` and `.css` files, you'll register the application with Remote Apps and deploy it as a Page widget. Finally, you'll configure it to use each of the alternative routes.
+In this tutorial, you'll create a basic React application using Liferay's `create_remote_app.sh` script, which generates a sample app with three routes: `hello-world`, `hello-foo`, `hello-bar`. After compiling the application and hosting its `.js` and `.css` files, you'll register the application with Remote Apps and deploy it as a Page widget. Finally, you'll configure it to use each of the alternative routes.
 
-![Create a simple Remote App with alternate routes and use the route property to configure which is rendered.](./using-routes-with-remote-apps/images/01.png)
+![Create a basic Remote App with alternate routes and use the route property to configure which is rendered.](./using-routes-with-a-basic-remote-app/images/01.png)
 
-```{important}
-Running `create_remote_app.sh` requires the latest versions of [Node.JS](https://nodejs.org/), [NPM](https://www.npmjs.com/), and [YARN](https://classic.yarnpkg.com/). Before proceeding, ensure these tools are installed.
+```{note}
+Liferay Remote Apps is agnostic regarding how applications are built, packaged, and hosted. This tutorial only offers a convenient way to create a sample remote application with basic routing.
 ```
+
+Running `create_remote_app.sh` requires the latest versions of [Node.JS](https://nodejs.org/), [NPM](https://www.npmjs.com/), and [YARN](https://classic.yarnpkg.com/). Before proceeding, ensure these tools are installed.
 
 ## Creating, Building, and Hosting the React Application
 
@@ -81,21 +83,26 @@ Running `create_remote_app.sh` requires the latest versions of [Node.JS](https:/
    121 B     build/static/css/main.9877909d.css
    ```
 
-1. In Liferay DXP, open the *Site Menu* (![Site Menu](../../images/icon-product-menu.png)), expand *Content & Data*, and go to *Documents and Media*.
+1. In Liferay DXP, open the *Site Menu* (![Site Menu](../../../images/icon-product-menu.png)), expand *Content & Data*, and go to *Documents and Media*.
 
-1. Click the *Add* button (![Add Button](../../images/icon-add.png)) and select *Multiple Files Upload*.
+   ```{tip}
+   For demonstration purposes this tutorial hosts the application’s static resources in Liferay’s Document Library.
+   In a production environment, instead host the application’s resources on a server optimized for hosting static resources.
+   ```
+
+1. Click the *Add* button (![Add Button](../../../images/icon-add.png)) and select *Multiple Files Upload*.
 
 1. Drag and drop the `.js` and `.css` files into the upload area.
 
-   ![Upload the .js and .css files to the Liferay Document Library.](./using-routes-with-remote-apps/images/02.png)
+   ![Upload the .js and .css files to the Liferay Document Library.](./using-routes-with-a-basic-remote-app/images/02.png)
 
 1. Click *Publish*.
 
 This adds the files to the Liferay Document Library and assigns them unique WebDAV URLs, which you'll use to create the Remote App.
 
-To view each file's URL, click the *Info* icon (![Info Icon](../../images/icon-information.png)) and select one of the files at a time. Copy each file's *WebDAV URL* and save them for use in the next step.
+To view each file's URL, click the *Info* icon (![Info Icon](../../../images/icon-information.png)) and select one of the files at a time. Copy each file's *WebDAV URL* and save them for use in the next step.
 
-![Copy each file's WebDAV URL.](./using-routes-with-remote-apps/images/03.png)
+![Copy each file's WebDAV URL.](./using-routes-with-a-basic-remote-app/images/03.png)
 
 For example,
 
@@ -104,9 +111,9 @@ For example,
 
 ## Registering and Deploying the Remote App
 
-1. Open the *Global Menu* (![Global Menu](../../images/icon-applications-menu.png)), click on the *Applications* tab, and go to *Remote Apps*.
+1. Open the *Global Menu* (![Global Menu](../../../images/icon-applications-menu.png)), click on the *Applications* tab, and go to *Remote Apps*.
 
-1. Click the *Add* button (![Add Button](../../images/icon-add.png)).
+1. Click the *Add* button (![Add Button](../../../images/icon-add.png)).
 
 1. Enter these values:
 
@@ -126,7 +133,7 @@ Once saved, Liferay creates a widget named J1V3-Remote-App, which you can deploy
 
 Since J1V3-Remote-App is instanceable, you can add many of them to a page, each with its own independent configuration. For this tutorial, add the widget to a page twice.
 
-![Deploy two instances of the J1V3-Remote-App widget.](./using-routes-with-remote-apps/images/04.png)
+![Deploy two instances of the J1V3-Remote-App widget.](./using-routes-with-a-basic-remote-app/images/04.png)
 
 ## Using the `route` Property
 
@@ -134,43 +141,43 @@ The auto-generated app includes three routes: `hello-world`, `hello-foo`, `hello
 
 ### Defining a Route Property via Remote Apps
 
-1. Open the *Global Menu* (![Global Menu](../../images/icon-applications-menu.png)), click on the *Applications* tab, and go to *Remote Apps*.
+1. Open the *Global Menu* (![Global Menu](../../../images/icon-applications-menu.png)), click on the *Applications* tab, and go to *Remote Apps*.
 
 1. Select *J1V3-Remote-App*.
 
-   ![Select J1V3-Remote-App.](./using-routes-with-remote-apps/images/05.png)
+   ![Select J1V3-Remote-App.](./using-routes-with-a-basic-remote-app/images/05.png)
 
 1. Enter `route=hello-foo` into the Properties field.
 
-   ![Enter route=hello-foo into the Properties field.](./using-routes-with-remote-apps/images/06.png)
+   ![Enter route=hello-foo into the Properties field.](./using-routes-with-a-basic-remote-app/images/06.png)
 
 1. Click *Publish*.
 
 1. Verify both deployed widgets use the `HelloFoo` route.
 
-   ![Verify both widgets use the HelloFoo route.](./using-routes-with-remote-apps/images/07.png)
+   ![Verify both widgets use the HelloFoo route.](./using-routes-with-a-basic-remote-app/images/07.png)
 
 ### Defining a Route Property via Widget Configuration
 
 1. Edit the Page containing the J1V3-Remote-App widgets.
 
-1. Click the *Options* button (![Options Button](../../images/icon-actions.png)) for one of the widgets and select *Configuration*.
+1. Click the *Options* button (![Options Button](../../../images/icon-actions.png)) for one of the widgets and select *Configuration*.
 
-   ![Click the Options button and select Configuration.](./using-routes-with-remote-apps/images/08.png)
+   ![Click the Options button and select Configuration.](./using-routes-with-a-basic-remote-app/images/08.png)
 
 1. Enter `route=hello-bar` into the Properties field.
 
-   ![Enter route=hello-bar into the Properties field.](./using-routes-with-remote-apps/images/09.png)
+   ![Enter route=hello-bar into the Properties field.](./using-routes-with-a-basic-remote-app/images/09.png)
 
 1. Click *Save*.
 
 1. Verify the configured widget uses the `hello-bar` route, while the other widget still uses the `hello-foo` route.
 
-   ![Verify the configured widget uses the HelloBar route.](./using-routes-with-remote-apps/images/10.png)
+   ![Verify the configured widget uses the HelloBar route.](./using-routes-with-a-basic-remote-app/images/10.png)
 
 ## Analyzing the Route Code
 
-```{literalinclude} ./using-routes-with-remote-apps/resources/liferay-j1v3.zip/j1v3-remote-app/src/index.js
+```{literalinclude} ./using-routes-with-a-basic-remote-app/resources/liferay-j1v3.zip/j1v3-remote-app/src/index.js
     :language: js
     :lines: 1-34
 ```
@@ -194,25 +201,25 @@ routes
 
 ### HelloWorld.js
 
-```{literalinclude} ./using-routes-with-remote-apps/resources/liferay-j1v3.zip/j1v3-remote-app/src/routes/hello-world/pages/HelloWorld.js
+```{literalinclude} ./using-routes-with-a-basic-remote-app/resources/liferay-j1v3.zip/j1v3-remote-app/src/routes/hello-world/pages/HelloWorld.js
     :language: js
     :lines: 1-9
 ```
 
 ### HelloFoo.js
 
-```{literalinclude} ./using-routes-with-remote-apps/resources/liferay-j1v3.zip/j1v3-remote-app/src/routes/hello-foo/pages/HelloFoo.js
+```{literalinclude} ./using-routes-with-a-basic-remote-app/resources/liferay-j1v3.zip/j1v3-remote-app/src/routes/hello-foo/pages/HelloFoo.js
     :language: js
     :lines: 1-9
 ```
 
 ### HelloBar.js
 
-```{literalinclude} ./using-routes-with-remote-apps/resources/liferay-j1v3.zip/j1v3-remote-app/src/routes/hello-bar/pages/HelloBar.js
+```{literalinclude} ./using-routes-with-a-basic-remote-app/resources/liferay-j1v3.zip/j1v3-remote-app/src/routes/hello-bar/pages/HelloBar.js
     :language: js
     :lines: 1-9
 ```
 
 ## Additional Information
 
-* [Creating a Liferay Remote App](./creating-a-liferay-remote-app.md)
+* [Creating a Basic Remote App](./creating-a-basic-remote-app.md)

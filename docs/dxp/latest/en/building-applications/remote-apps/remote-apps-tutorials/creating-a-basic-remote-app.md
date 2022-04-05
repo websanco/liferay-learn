@@ -1,28 +1,22 @@
-# Creating a Liferay Remote App
+# Creating a Basic Remote App
 
 > Available for Liferay DXP 7.4+
 
-Remote Apps use Liferay's front-end infrastructure to register external applications with the Liferay platform and render them as widgets. To simplify remote app creation, Liferay provides the [`create_remote_app.sh`](https://raw.githubusercontent.com/liferay/liferay-portal/master/tools/create_remote_app.sh) script. This script can be used to generate React and Vue applications compatible with Liferay Remote Apps.
+Remote Apps use Liferay's front-end infrastructure to register external applications with the Liferay platform and render them as widgets.
 
-In this tutorial, you'll use the `create_remote_app.sh` script to create a simple React application. After the application is generated, you'll compile its code and host its `.js` and `.css` files at a URL which is reachable by browser clients.
+In this tutorial, you'll create a basic application using Liferay's [`create_remote_app.sh`](https://raw.githubusercontent.com/liferay/liferay-portal/master/tools/create_remote_app.sh) script. After the application is generated, you'll compile its code and host its `.js` and `.css` files. Once hosted, you'll copy each file's URLs and use them to create a Liferay Remote App. Finally, you can deploy the application to Site Pages as a widget.
 
-```{tip}
-For demonstration purposes this tutorial hosts the application's static resources in Liferay's Document Library.
+![Use the create_remote_app.sh script to create a simple React application.](./creating-a-basic-remote-app/images/01.png)
 
-In a production environment, instead host the application's resources on a server optimized for hosting static resources.
+```{note}
+Liferay Remote Apps is agnostic regarding how applications are built, packaged, and hosted. This tutorial only offers a convenient way to create a sample remote application with basic routing via app properties.
 ```
 
-Once hosted, you'll copy each file's WebDAV URLs and use them to create a Liferay Remote App. Finally, you can deploy the application to Site Pages as a widget.
-
-![Use the create_remote_app.sh script to create a simple React application.](./creating-a-liferay-remote-app/images/01.png)
-
-```{important}
 Running `create_remote_app.sh` requires the latest versions of [Node.JS](https://nodejs.org/), [NPM](https://www.npmjs.com/), and [YARN](https://classic.yarnpkg.com/). Before proceeding, ensure these tools are installed.
-```
 
 ## Run the `create_remote_app.sh` Script
 
-When calling `create_remote_app.sh`, you must provide a valid HTML element name and specify the desired JavaScript framework.
+When calling `create_remote_app.sh`, you must provide a valid HTML element name and specify the desired JavaScript framework (i.e., React or Vue).
 
 Run this command to generate the React application's code:
 
@@ -70,7 +64,7 @@ h5v7-remote-app
 
 ### Understanding the `index.js` File
 
-   ```{literalinclude} ./creating-a-liferay-remote-app/resources/liferay-h5v7.zip/h5v7-remote-app/src/index.js
+   ```{literalinclude} ./creating-a-basic-remote-app/resources/liferay-h5v7.zip/h5v7-remote-app/src/index.js
        :language: js
    ```
 
@@ -81,7 +75,7 @@ The generated `index.js` file includes two customizations necessary for using th
 
 ### Understanding the React Routes
 
-The generated code includes three routes: `hello-world` (default), `hello-foo`, and `hello-bar`. Routes are alternative sets of code that you can use when running an application. <!--TASK: uncomment references once article is added; "See ![Using Routes with Remote Apps](./using-routes-with-remote-apps.md) for more information."-->
+The generated code includes three routes: `hello-world` (default), `hello-foo`, and `hello-bar`. Routes are alternative sets of code that you can use when running an application. See ![Using Routes with a Basic Remote App](./using-routes-with-a-basic-remote-app.md) for a basic example.
 
 ## Building the React Application
 
@@ -117,6 +111,8 @@ Unique file names are generated for every build. When testing your custom applic
 
 ## Hosting the Application Files
 
+For demonstration purposes this tutorial hosts the application’s static resources in Liferay’s Document Library. In a production environment, instead host the application’s resources on a server optimized for hosting static resources.
+
 1. Start up a new Liferay DXP 7.4+ container and log in.
 
    ```docker
@@ -131,7 +127,7 @@ Unique file names are generated for every build. When testing your custom applic
 
    Alternatively, use *Select Files* to upload them.
 
-   ![Upload the .js and .css files to the Liferay Document Library.](./creating-a-liferay-remote-app/images/02.png)
+   ![Upload the .js and .css files to the Liferay Document Library.](./creating-a-basic-remote-app/images/02.png)
 
 1. Click *Publish*.
 
@@ -139,7 +135,7 @@ This adds the files to the Document Library and assigns them unique URLs, which 
 
 To view each file's URL, click the *Info* icon (![Info Icon](../../images/icon-information.png)) and select a file. Copy each file's *WebDAV URL* and save them for use in the next step.
 
-![Copy each file's WebDAV URL.](./creating-a-liferay-remote-app/images/03.png)
+![Copy each file's WebDAV URL.](./creating-a-basic-remote-app/images/03.png)
 
 For example,
 
@@ -167,7 +163,7 @@ For example,
 
 Once saved, Liferay creates a widget named H5V7-Remote-App, which you can deploy to Site Pages like other Page widgets. This widget appears under the selected Portlet Category Name.
 
-![Deploy the H5V7-Remote-App widget to Site Pages.](./creating-a-liferay-remote-app/images/04.png)
+![Deploy the H5V7-Remote-App widget to Site Pages.](./creating-a-basic-remote-app/images/04.png)
 
 ## Additional Information
 
