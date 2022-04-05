@@ -19,13 +19,13 @@ If there is only one Order Type created, it is automatically assigned to a new o
 
 1. Click *Save*.
 
-    This creates the new Order Type and opens a configuration page. Create one more Order Type with the following information.
+    This creates the new Order Type and opens a configuration page. The *Order Number* field determines the sorting order of the Order Type in the dropdown menu. Set the value for the Order Number as 0 for the Stock Order Type. Create** one more Order Type with the following information.
 
     **Name:** Urgent
 
     **Description:** Order type for urgent orders that is subject to a 10% surcharge
 
-You can use the *Active* toggle to enable it. Under the *Eligibility* tab, you can link the Order Type to a specific Channel or all Channels.
+Set the value for the Order Number as 1 for this Order Type. You can use the *Active* toggle to enable it. Under the *Eligibility* tab, you can link the Order Type to a specific Channel or all Channels.
 
 ## Linking an Order with an Order Type
 
