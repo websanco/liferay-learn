@@ -27,6 +27,25 @@ Liferay 7.2 used a different frontend framework for custom form fields. To adjus
    liferay.workspace.product=portal-7.2-ga2
    ```
 
+1. Open the `liferay-c2p9.zip/settings.gradle` file and change the line
+
+   ```groovy
+   classpath group: "com.liferay", name: "com.liferay.gradle.plugins.workspace", version: "latest.release"
+   ```
+
+   to
+
+   ```groovy
+   classpath group: "com.liferay", name: "com.liferay.gradle.plugins.workspace", version: "3.4.17"
+   ```
+
+1. Open the `liferay-c2p9.zip/c2p9-impl/build.gradle` file and add the lines
+
+   ```groovy
+    compileOnly group: "org.osgi", name: "osgi.cmpn"
+    jsCompile group: "com.liferay", name: "com.liferay.dynamic.data.mapping.form.field.type"
+    ```
+
 1. Open the `liferay-c2p9.zip/c2p9-impl/package.json` file. Begin by replacing the `devDependencies` line
 
    ```json
