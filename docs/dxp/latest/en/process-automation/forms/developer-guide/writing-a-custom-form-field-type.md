@@ -94,7 +94,7 @@ A basic form field contains a Java class and a JavaScript file. In the C2P9 Slid
 - `ddm.form.field.type.display.order`: set an integer or floating point value to determine where the field is displayed in the Form Builder sidebar. Fields with the same value are ordered randomly.
 - `ddm.form.field.type.icon`: decide which icon type to use for your field. Choose any [Clay Icon](https://clayui.com/docs/components/icon.html).
 - `ddm.form.field.type.label`: provide the language key for the label text. Make sure the translated value is defined in the `Language.properties` file.
-- `ddm.form.field.type.name`: provide the language key for the field name. Make sure the translated value is defined in the `Language.properties` file.
+- `ddm.form.field.type.name`: provide the field type identifier. This is used to identify the field internally and in other components.
 
 The `getModuleName` method passes the `Slider.es.js` file path to the `NPMResolver` service.
 
@@ -105,7 +105,7 @@ The `getModuleName` method passes the `Slider.es.js` file path to the `NPMResolv
 ```
 Some of the path definition is accomplished in the `package.json` file (see the `name` declaration and the `source-maps` defined in the `scripts` section).
 
-The `getName` method returns the language key defining the name that will appear in the UI: `c2p9-slider` in this case, which is translated to `C2P9 Slider` in the `c2p9-impl/src/main/resources/content/Language.properties` file.
+The `getName` method returns the form field identifier. It must match the value in the component property `ddm.form.field.type.name`.
 
 ```{literalinclude} ./writing-a-custom-form-field-type/resources/liferay-c2p9.zip/c2p9-impl/src/main/java/com/acme/c2p9/internal/dynamic/data/mapping/form/field/type/C2P9DDMFormFieldType.java
    :dedent: 1
@@ -113,7 +113,7 @@ The `getName` method returns the language key defining the name that will appear
    :lines: 28-31
 ```
 
-The `isCustomDDMFormFieldType` method must return `true` for all form fields not included out of the box with Liferay.
+The `isCustomDDMFormFieldType` is used internally. Return `true` if you're returning the result of `NPMResolver.resolveModuleName()` in the `getModuleName` method.
 
 ```{literalinclude} ./writing-a-custom-form-field-type/resources/liferay-c2p9.zip/c2p9-impl/src/main/java/com/acme/c2p9/internal/dynamic/data/mapping/form/field/type/C2P9DDMFormFieldType.java
    :dedent: 1
