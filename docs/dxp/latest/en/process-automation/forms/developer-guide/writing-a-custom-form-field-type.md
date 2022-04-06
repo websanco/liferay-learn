@@ -236,8 +236,8 @@ The form field's settings are defined in the `DDMTypeSettings` class, which also
    ```properties
    max-value=Maximum Value
    min-value=Minimum Value
-   set-the-minimum-value=Set the minimum value.
-   set-the-maximum-value=Set the maximum value.
+   enter-the-bottom-limit-of-the-range=Enter the bottom limit of the range.
+   enter-the-top-limit-of-the-range=Enter the top limit of the range.
    ```
 
 1. Update the `DDMFormFieldType` class by adding/overriding the `getDDMFormFieldTypeSettings` method:
@@ -356,7 +356,11 @@ The frontend requires updates to the `Slider.es.js` to support user-entered min 
    export default Main;
    ```
 
-1. Restart Liferay:
+1. Redeploy the form field module. Once it's processed (STOPPED &rarr; STARTED in the console) restart Liferay:
+
+   ```shell
+   ./gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)
+   ```
 
    ```shell
    docker container restart $(docker ps -lq)
