@@ -93,7 +93,7 @@ public class Main {
 		return html;
 	}
 
-	private static void _uploadHtml(String html) {
+	private static void _uploadHtml(String html) throws Exception {
 		StructuredContentResource.Builder builder =
 			StructuredContentResource.builder();
 
@@ -102,37 +102,28 @@ public class Main {
 				"test@liferay.com", "test"
 			).build();
 
-		try {
-			StructuredContent structuredContent =
-				structuredContentResource.postSiteStructuredContent(
-					_siteId,
-					new StructuredContent() {
-						{
-							contentFields = new ContentField[] {
-								new ContentField() {
-									{
-										contentFieldValue =
-											new ContentFieldValue() {
-												{
-													data = html;
-												}
-											};
-										name = "content";
-									}
+		StructuredContent structuredContent =
+			structuredContentResource.postSiteStructuredContent(
+				_siteId,
+				new StructuredContent() {
+					{
+						contentFields = new ContentField[] {
+							new ContentField() {
+								{
+									contentFieldValue =
+										new ContentFieldValue() {
+											{
+												data = html;
+											}
+										};
+									name = "content";
 								}
-							};
-							contentStructureId = _contentStructureId;
-							title = "Article";
-						}
-					});
-		}
-		catch (Exception ex) {
-			Logger.getLogger(
-				Main.class.getName()
-			).log(
-				Level.SEVERE, null, ex
-			);
-		}
+							}
+						};
+						contentStructureId = _contentStructureId;
+						title = "Article";
+					}
+				});
 	}
 
 	static long _siteId = 20123;
