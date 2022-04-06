@@ -18,6 +18,7 @@ import com.liferay.headless.delivery.client.dto.v1_0.ContentField;
 import com.liferay.headless.delivery.client.dto.v1_0.ContentFieldValue;
 import com.liferay.headless.delivery.client.dto.v1_0.StructuredContent;
 import com.liferay.headless.delivery.client.resource.v1_0.StructuredContentResource;
+
 import com.vladsch.flexmark.html.HtmlRenderer;
 import com.vladsch.flexmark.parser.Parser;
 import com.vladsch.flexmark.util.ast.Node;
@@ -88,19 +89,19 @@ public class Main {
 		String html = htmlRenderer.render(node);
 
 		System.out.println(html.length());
-		
+
 		return html;
 	}
-	
+
 	private static void _uploadHtml(String html) {
-		StructuredContentResource.Builder builder = 
+		StructuredContentResource.Builder builder =
 			StructuredContentResource.builder();
-		
+
 		StructuredContentResource structuredContentResource =
 			builder.authentication(
 				"test@liferay.com", "test"
 			).build();
-		
+
 		try {
 			StructuredContent structuredContent =
 				structuredContentResource.postSiteStructuredContent(
@@ -124,13 +125,16 @@ public class Main {
 							title = "Article";
 						}
 					});
-		} catch (Exception ex) {
-			Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
 		}
-
-
+		catch (Exception ex) {
+			Logger.getLogger(
+				Main.class.getName()
+			).log(
+				Level.SEVERE, null, ex
+			);
+		}
 	}
-	
+
 	static long _siteId = 20123;
 	static long _contentStructureId = 40301;
 
