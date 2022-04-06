@@ -31,8 +31,6 @@ import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 import org.apache.commons.io.FileUtils;
 
@@ -56,7 +54,7 @@ public class Main {
 				String content = FileUtils.readFileToString(
 					new File(fileName), StandardCharsets.UTF_8);
 
-				_uploadHtml(_toHTML(content));
+				_uploadHTML(_toHTML(content));
 			}
 		}
 	}
@@ -93,7 +91,7 @@ public class Main {
 		return html;
 	}
 
-	private static void _uploadHtml(String html) throws Exception {
+	private static void _uploadHTML(String html) throws Exception {
 		StructuredContentResource.Builder builder =
 			StructuredContentResource.builder();
 
@@ -102,31 +100,30 @@ public class Main {
 				"test@liferay.com", "test"
 			).build();
 
-		StructuredContent structuredContent =
-			structuredContentResource.postSiteStructuredContent(
-				_siteId,
-				new StructuredContent() {
-					{
-						contentFields = new ContentField[] {
-							new ContentField() {
-								{
-									contentFieldValue =
-										new ContentFieldValue() {
-											{
-												data = html;
-											}
-										};
-									name = "content";
-								}
+		structuredContentResource.postSiteStructuredContent(
+			_GROUP_ID,
+			new StructuredContent() {
+				{
+					contentFields = new ContentField[] {
+						new ContentField() {
+							{
+								contentFieldValue = new ContentFieldValue() {
+									{
+										data = html;
+									}
+								};
+								name = "content";
 							}
-						};
-						contentStructureId = _contentStructureId;
-						title = "Article";
-					}
-				});
+						}
+					};
+					contentStructureId = _CONTENT_STRUCTURE_ID;
+					title = "Article";
+				}
+			});
 	}
 
-	static long _siteId = 20123;
-	static long _contentStructureId = 40301;
+	private static final long _CONTENT_STRUCTURE_ID = 40301;
+
+	private static final long _GROUP_ID = 20123;
 
 }
