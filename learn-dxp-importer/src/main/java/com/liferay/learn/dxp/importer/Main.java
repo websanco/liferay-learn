@@ -14,6 +14,10 @@
 
 package com.liferay.learn.dxp.importer;
 
+import com.liferay.headless.delivery.client.dto.v1_0.ContentField;
+import com.liferay.headless.delivery.client.dto.v1_0.ContentFieldValue;
+import com.liferay.headless.delivery.client.dto.v1_0.StructuredContent;
+import com.liferay.headless.delivery.client.resource.v1_0.StructuredContentResource;
 import com.vladsch.flexmark.html.HtmlRenderer;
 import com.vladsch.flexmark.parser.Parser;
 import com.vladsch.flexmark.util.ast.Node;
@@ -26,11 +30,14 @@ import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import org.apache.commons.io.FileUtils;
 
 /**
  * @author Brian Wing Shun Chan
+ * @author Rich Sezov
  */
 public class Main {
 
@@ -48,7 +55,7 @@ public class Main {
 				String content = FileUtils.readFileToString(
 					new File(fileName), StandardCharsets.UTF_8);
 
-				_toHTML(content);
+				_uploadHtml(_toHTML(content));
 			}
 		}
 	}
@@ -65,7 +72,7 @@ public class Main {
 		fileNames.add(fileName);
 	}
 
-	private static void _toHTML(String content) {
+	private static String _toHTML(String content) {
 		MutableDataSet mutableDataSet = new MutableDataSet();
 
 		HtmlRenderer htmlRenderer = HtmlRenderer.builder(
@@ -81,6 +88,50 @@ public class Main {
 		String html = htmlRenderer.render(node);
 
 		System.out.println(html.length());
+		
+		return html;
 	}
+	
+	private static void _uploadHtml(String html) {
+		StructuredContentResource.Builder builder = 
+			StructuredContentResource.builder();
+		
+		StructuredContentResource structuredContentResource =
+			builder.authentication(
+				"test@liferay.com", "test"
+			).build();
+		
+		try {
+			StructuredContent structuredContent =
+				structuredContentResource.postSiteStructuredContent(
+					_siteId,
+					new StructuredContent() {
+						{
+							contentFields = new ContentField[] {
+								new ContentField() {
+									{
+										contentFieldValue =
+											new ContentFieldValue() {
+												{
+													data = html;
+												}
+											};
+										name = "content";
+									}
+								}
+							};
+							contentStructureId = _contentStructureId;
+							title = "Article";
+						}
+					});
+		} catch (Exception ex) {
+			Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+		}
+
+
+	}
+	
+	static long _siteId = 20123;
+	static long _contentStructureId = 40301;
 
 }

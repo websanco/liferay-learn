@@ -19,6 +19,7 @@ apply plugin: "java"
 dependencies {
 	compile group: "com.vladsch.flexmark", name: "flexmark-all", version: "0.64.0"
 	compile group: "commons-io", name: "commons-io", version: "2.11.0"
+	compile group: "com.liferay", name: "com.liferay.headless.delivery.client", version: "4.0.19"
 }
 
 mainClassName = "com.liferay.learn.dxp.importer.Main"
