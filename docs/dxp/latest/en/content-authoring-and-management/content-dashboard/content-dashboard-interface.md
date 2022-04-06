@@ -23,7 +23,7 @@ To access the Content Info sidebar, click the *Actions Menu* (![Action Menu](../
 
 ## Content Audit Tool
 
-This tool is the graphical area at the top of the Content Dashboard page. The chart represents the total number of assets for the combination of categories in the global Vocabularies you select. This chart takes into account:
+This tool is the graphical area at the top of the Content Dashboard page. The chart represents the total number of assets for the combination of vocabularies categories including *global* and all *sites & asset libraries* in the instance. This chart takes into account:
 
 - [Web Content Articles](../web-content/web-content-articles/adding-a-basic-web-content-article.md) and [Documents and Media](../documents-and-media/documents-and-media-overview.md) across all Sites and Asset Libraries.
 
@@ -33,7 +33,7 @@ This tool is the graphical area at the top of the Content Dashboard page. The ch
 
 - Content you can access.
 - The existing [filters](#filtering-and-sorting-content-in-the-contents-list) in the [Contents list](#contents-list).
-- A maximum of two global Vocabularies (for the *x* and *y* axes.)
+- A maximum of two Vocabularies (for the *x* and *y* axes.)
 
 ![Overview of the Content Audit Tool in the Content Dashboard](./content-dashboard-interface/images/10.png)
 
@@ -50,22 +50,22 @@ The following video shows and overview of the Content Audit tool:
 In the Content Audit Tool interface you can find:
 
 - Chart legend (1)
-- *X*-axis Categories for the first global Vocabulary (2)
-- *Y*-axis Categories for the second global Vocabulary (3)
+- *X*-axis Categories for the first Vocabulary (2)
+- *Y*-axis Categories for the second Vocabulary (3)
 - Bar chart (4)
 
 ![Overview of the Content Performance user interface](./content-dashboard-interface/images/04.png)
 
 ### Customizing the Vocabularies and Categories in the Content Audit Tool
 
-By default, the bar chart shows the total number of assets for each Category in the selected global Vocabularies, but you can filter this information in different ways:
+By default, the bar chart shows the total number of assets for each Category in the selected Vocabularies, but you can filter this information in different ways:
 
 - Use the [filters](#filtering-and-sorting-content-in-the-contents-list) in the [Contents list](#contents-list).
 - Filter categories in the chart by checking or unchecking the Category name in the chart legend.
 - Click one of the bars to zoom-in on a specific Category's results.
-- Change the Vocabularies.
+- Change which Vocabularies are displayed in the graph.
 
-To change the Vocabularies:
+To change these Vocabularies:
 
 1. Click the *Configure Chart* icon (![gear icon](../../images/icon-settings.png)) in the Content Audit area.
 1. In the dual listbox, click the Vocabulary in the *Available* or *In Use* lists and click the selection buttons (![Angle Left](../../images/icon-angle-left.png) ![Angle right](../../images/icon-angle-right.png)) to add or remove the Vocabularies you want to show.
@@ -76,7 +76,7 @@ To change the Vocabularies:
     ![Select the Vocabularies in the Content Audit Tool](./content-dashboard-interface/images/12.png)
 
 ```{note}
-You can select a maximum of two Vocabularies defined at the Global Site level.
+You can select a maximum of two Vocabularies. Only vocabularies from the same site can be combined. Global vocabularies can be combined with vocabularies from any site.
 ```
 
 A gray bar denotes content without any categories in one of the selected Vocabularies. Chart labels for this content are distinctive. For instance, when you choose the Audience Vocabulary, the content that is not categorized under Audience shows the *No Audience Specified* label.
