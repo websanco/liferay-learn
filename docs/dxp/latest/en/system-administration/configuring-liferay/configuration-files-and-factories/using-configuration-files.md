@@ -108,15 +108,19 @@ If storing your Liferay DXP configuration (e.g., Liferay Home) in a source contr
 
 When provisioning specific sites or instances, it may be useful to set certain configurations to be read-only. To do this,
 
-1. Navigate to the specific configuration you wish to set as read-only. For example, navigate to Control Panel &rarr; Instance Settings &rarr; Blogs. 
+1. Navigate to the specific configuration you wish to set as read-only. For example, navigate to *Control Panel* &rarr; *Instance Settings* &rarr; *Blogs*. 
 
-1. Save your configuration settings. Click the ![Actions](../../../images/icon-actions.png) icon. Click Export.
+1. Change and save your configuration settings. Click the ![Actions](../../../images/icon-actions.png) icon. Click Export.
 
-1. On the command line, set the exported configuration file to be read-only. For example,
+1. On the command line, set the exported configuration file to be read-only for that file. For example,
 
-      chmod -w com.liferay.blogs.configuration.BlogsGroupServiceConfiguration.scoped_scoped_b9862214-9308-4d00-a93c-f36d1acc90b4.config
+   ```bash
+   chmod -w com.liferay.blogs.configuration.BlogsGroupServiceConfiguration.scoped_0efd1a18-105e-445d-8b42-0ea2d6117690.config
+   ```
 
 1. Place the config file into the `/osgi/configs` folder of your installation. Refresh the settings page. The configuration is now read-only. 
+
+   ![Place the config file into /osgi/configs and the configuration is now read-only.](./using-configuration-files/images/03.png)
 
 ## Specifying a Single Read-Only Value
 
