@@ -18,7 +18,7 @@ import com.liferay.headless.delivery.client.dto.v1_0.ContentField;
 import com.liferay.headless.delivery.client.dto.v1_0.ContentFieldValue;
 import com.liferay.headless.delivery.client.dto.v1_0.StructuredContent;
 import com.liferay.headless.delivery.client.resource.v1_0.StructuredContentResource;
-
+import com.liferay.petra.string.StringPool;
 import com.vladsch.flexmark.html.HtmlRenderer;
 import com.vladsch.flexmark.parser.Parser;
 import com.vladsch.flexmark.util.ast.Node;
@@ -54,7 +54,9 @@ public class Main {
 				String content = FileUtils.readFileToString(
 					new File(fileName), StandardCharsets.UTF_8);
 
-				_uploadHTML(_toHTML(content));
+				String title = _getTitle(content);
+				
+				_uploadHTML(title, _toHTML(content));
 			}
 		}
 	}
@@ -69,6 +71,16 @@ public class Main {
 		}
 
 		fileNames.add(fileName);
+	}
+	
+	private static String _getTitle(String markdown) {
+		int x = markdown.indexOf("#");
+
+		int y = markdown.indexOf(StringPool.NEW_LINE, x);
+
+		String title = markdown.substring(x + 1, y);
+
+		return title.trim();
 	}
 
 	private static String _toHTML(String content) {
@@ -90,9 +102,8 @@ public class Main {
 
 		return html;
 	}
-
-	private static void _uploadHTML(String html) throws Exception {
-		StructuredContentResource.Builder builder =
+	private static void _uploadHTML(String articleTitle, String html) throws Exception {
+		StructuredContentResource.Builder builder = 
 			StructuredContentResource.builder();
 
 		StructuredContentResource structuredContentResource =
@@ -100,26 +111,27 @@ public class Main {
 				"test@liferay.com", "test"
 			).build();
 
-		structuredContentResource.postSiteStructuredContent(
+			structuredContentResource.postSiteStructuredContent(
 			_GROUP_ID,
 			new StructuredContent() {
 				{
-					contentFields = new ContentField[] {
-						new ContentField() {
-							{
-								contentFieldValue = new ContentFieldValue() {
-									{
-										data = html;
-									}
-								};
-								name = "content";
-							}
+				contentFields = new ContentField[] {
+					new ContentField() {
+						{
+							contentFieldValue = new ContentFieldValue() {
+								{
+									data = html;
+								}
+							};
+							name = "content";
 						}
-					};
-					contentStructureId = _CONTENT_STRUCTURE_ID;
-					title = "Article";
-				}
-			});
+					}
+				};
+				contentStructureId = _CONTENT_STRUCTURE_ID;
+				title = articleTitle;
+			}
+		});
+
 	}
 
 	private static final long _CONTENT_STRUCTURE_ID = 40301;
