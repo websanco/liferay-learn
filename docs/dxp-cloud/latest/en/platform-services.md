@@ -8,9 +8,9 @@ platform-services/search-service.md
 platform-services/web-server-service.md
 platform-services/using-a-custom-service.md
 
-platform-services/backup-service.rst
+platform-services/backup-service.md
 
-platform-services/database_service.rst
+platform-services/database-service.md
 ```
 
 - [Continuous Integration](./platform-services/continuous-integration.md)
