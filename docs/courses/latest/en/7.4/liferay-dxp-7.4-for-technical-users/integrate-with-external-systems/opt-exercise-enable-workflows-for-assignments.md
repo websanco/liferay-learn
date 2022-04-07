@@ -1,6 +1,10 @@
-## Optional Exercise: Enable Workflows for Assignments
+# Optional Exercise: Enable Workflows for Assignments
 
-<div class="ahead">
+Coming Soon!
+
+<!--
+
+Note to the editor: I had to change some snippet instructions to remove the !--, #--, or -- in order to comment out the entire file. Make sure to review and ensure the snippets are correct.
 
 #### Exercise Goals
 
@@ -59,7 +63,7 @@ protected Assignment startWorkflowInstance(
 	workflowContext.put(WorkflowConstants.CONTEXT_USER_URL, userURL);
 ```
 
-<!-- pagebreak for pdf book -->
+< pagebreak for pdf book >
 
 ```java
 	return WorkflowHandlerRegistryUtil.startWorkflowInstance(
@@ -159,7 +163,7 @@ public Assignment deleteAssignment(Assignment assignment)
 		Assignment.class.getName(), assignment.getAssignmentId());
 ```
 
-<!-- pagebreak for pdf book -->
+< pagebreak for pdf book >
 
 ```java
 	// Delete the Assignment
@@ -191,7 +195,7 @@ public Assignment updateStatus(
 	assignmentPersistence.update(assignment);
 ```
 
-<!-- pagebreak for pdf book -->
+< pagebreak for pdf book >
 
 ```java
 	if (status == WorkflowConstants.STATUS_APPROVED) {
@@ -738,3 +742,5 @@ The last thing to do is to show status in the user interface. Let's add the `sta
 To be able to test, we have to enable and define a workflow for Assignments. Go to localhost:8080 in your browser and sign in if necessary. Go to workflows in the Site Administration panel. Set the *Assignment workflow* to *Single Approver*. Open the Gradebook application and create an Assignment. The status on the list should now be pending. Create a new assignment. After refreshing the page, you should see a notification on your avatar image indicating a new workflow event.
 
 Now you can manage the workflows for Assignments as for any other Liferay Assets.
+
+-->

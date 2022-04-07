@@ -1,6 +1,8 @@
-## Add CSS Resources
+# Add CSS Resources
 
-<div class="ahead">
+Coming Soon!
+
+<!--
 
 #### Exercise Goals
 
@@ -97,4 +99,4 @@ The portlet component needs to know where to load the CSS resources from. Also, 
 1. **Refresh** the browser to see the changes after redeploying the module. 
 2. **Switch** the list to the *Table* view using the button on the left side of the search bar, if necessary. The Author column is now better aligned and the links have underlining:
 
----
+-->

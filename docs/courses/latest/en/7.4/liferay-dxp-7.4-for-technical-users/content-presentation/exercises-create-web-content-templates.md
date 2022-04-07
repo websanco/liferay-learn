@@ -1,8 +1,10 @@
-<a href="#" id="1"></a>
+# Create Web Content Templates
 
-## Create Web Content Templates
+Coming Soon!
 
-<div class="ahead">
+<!--
+
+Note to the editor: I had to change some snippet instructions to remove the !--, #--, or -- in order to comment out the entire file. Make sure to review and ensure the snippets are correct.
 
 #### Exercise Goals
 
@@ -181,7 +183,7 @@
 #### Begin Creating the Featured Hotels Template
 1. **Go to** your _exercise-src_ folder.
 * **Open** the `featured-hotels-template.ftl` file with _Visual Studio Code_.
-* **Click** to highlight the `<#-- Insert 01-div-header-and-body snippet here -->` comment.
+* **Click** to highlight the `< Insert 01-div-header-and-body snippet here >` comment.
 * **Type** `lfr` and choose the `01-div-header-and-body` snippet.
     * Alternatively, you can type the following to replace the comment:
 
@@ -219,7 +221,7 @@
 ```
 
 #### Add the Second Rows and Columns
-1. **Click** to highlight the `<#-- Insert 04-top-row-second-column snippet here -->` comment.
+1. **Click** to highlight the `< Insert 04-top-row-second-column snippet here >` comment.
 * **Type** `lfr` and choose the `04-top-row-second-column` snippet.
     * Alternatively, you can Type the following to replace the comment:
 
@@ -243,7 +245,7 @@
 ```
 
 #### Add the Final Rows and Columns
-1. **Click** to highlight the `<#-- Insert 05-second-row snippet here -->` comment.
+1. **Click** to highlight the `< Insert 05-second-row snippet here >` comment.
 * **Type** `lfr` and choose the `05-second-row` snippet and _Save_ the file.
     * Alternatively, you can Type the following to replace the comment:
 
@@ -297,7 +299,7 @@
 * **Choose** the `Featured Hotels Content` Structure.
 * **Copy** the code from our new _featured-hotels-template.ftl_ template.
 * **Paste** it into the Template editor, replacing the default text.
-* **Click** to highlight `<#-- Insert title data here -->` at the very top of the code.
+* **Click** to highlight `< Insert title data here >` at the very top of the code.
 * **Click** the _Title_ field in the _Fields_ section to the left.
 * **Click** _Save_.
 
@@ -322,3 +324,5 @@
     * Logo
     * Content
 3. Create a Template for the Press Release using the built-in editor.
+
+-->

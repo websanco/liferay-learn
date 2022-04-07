@@ -1,6 +1,8 @@
-## Integrate with Portal Search
+# Integrate with Portal Search
 
-<div class="ahead">
+Coming Soon!
+
+<!--
 
 #### Exercise Goals
 
@@ -355,3 +357,5 @@ If you have created test Assignments, you have to reindex the search index to ge
 #### Test the Application
 1. **Use** the portal search bar to search Assignments.
 2. **Create** a new Assignment and check whether it appears in the search.
+
+-->

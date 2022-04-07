@@ -1,6 +1,8 @@
-## Implement Assignment Local Service
+# Implement Assignment Local Service
 
-<div class="ahead">
+Coming Soon!
+
+<!-- 
 
 #### Exercise Goals
 
@@ -339,3 +341,4 @@ public class AssignmentLocalServiceImpl extends AssignmentLocalServiceBaseImpl {
 1. **Run** the `buildService` Gradle task at the gradebook level to regenerate the service.
       * If you encounter issues with `buildService`, you may need to run it from `gradebook-workspace/modules/gradebook/gradebook-service/build`.
 
+-->

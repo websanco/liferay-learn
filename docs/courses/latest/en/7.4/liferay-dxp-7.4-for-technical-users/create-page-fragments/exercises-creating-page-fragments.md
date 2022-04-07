@@ -1,8 +1,8 @@
-<a href="#" id="1"></a>
+# Creating Page Fragments
 
-## Creating Page Fragments
+Coming Soon!
 
-<div class="ahead">
+<!--
 
 #### Exercise Goals
 
@@ -186,3 +186,5 @@ Note: the next two exercise sub-sections go over adding snippets to Visual Studi
 #### Bonus Exercises
 1. Create a new Collection using the Fragments Generator
 2. Create new Fragments using the Fragments Generator. Make sure it has editable elements.
+
+-->

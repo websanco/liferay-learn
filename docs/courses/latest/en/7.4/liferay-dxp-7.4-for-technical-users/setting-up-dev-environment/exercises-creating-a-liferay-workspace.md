@@ -1,6 +1,8 @@
-## Creating a Liferay Workspace
+# Creating a Liferay Workspace
 
-<div class="ahead">
+Coming Soon!
+
+<!--
 
 #### Exercise Goals
 
@@ -47,7 +49,4 @@ functionality and shortcuts separately. If that's your workflow, then check out 
         * For instructions on using Blade to generate projects go here: https://learn.liferay.com/dxp/latest/en/building-applications/tooling/blade-cli/generating-projects-with-blade-cli.html 
 2. **Navigate** down through the tree of files and try to understand how this structure might align with what you are already familiar with in WAR based portlet development.
     
-    
-    
-    
-    
+-->

@@ -1,6 +1,10 @@
-<a href="#" id="4"></a>
+# Configure the Theme to Provide Administrative Options
 
-## Configure the Theme to Provide Administrative Options
+Coming Soon!
+
+<!--
+
+Note to the editor: I had to change some snippet instructions to remove the !--, #--, or -- in order to comment out the entire file. Make sure to review and ensure the snippets are correct.
 
 <div class="ahead">
 
@@ -24,7 +28,7 @@
 
 #### Add Portlet Decorators
 1. **Drop** the `liferay-look-and-feel.xml` file from `livingstone-fjord-theme/src/WEB-INF` into the _Visual Studio Code_ editor.
-2. **Click** to highlight the `<!-- Insert snippet 01-portlet-decorators here -->` comment.
+2. **Click** to highlight the `< Insert snippet 01-portlet-decorators here >` comment.
 3. **Type** `lfr` to view the available code snippets.
 4. **Choose** the `01-portlet-decorators` snippet.
 5. **Save** the file.
@@ -78,7 +82,7 @@
 
 #### Add Custom Theme Settings to the Theme XML File
 1. **Drop** the `liferay-look-and-feel.xml` from _`livingstone-fjord-theme\src\WEB-INF`_ into the _Visual Studio Code_ editor.
-2. **Click** to highlight the `<!-- Insert snippet 02-theme-settings here -->` comment.
+2. **Click** to highlight the `< Insert snippet 02-theme-settings here >` comment.
 3. **Type** `lfr` to view the available code snippets.
 4. **Choose** the `02-theme-settings` snippet.
 5. **Save** the file.   
@@ -93,7 +97,7 @@
 
 #### Add Custom Variables in the Init_Custom File
 1. **Drop** the `init_custom.ftl` from _`livingstone-fjord-theme\src\templates`_ into the _Visual Studio Code_ editor.
-2. **Click** to highlight the `<#-- Insert snippet 06-init-custom-settings here -->` comment.
+2. **Click** to highlight the `< Insert snippet 06-init-custom-settings here >` comment.
 3. **Type** `lfr` to view the available code snippets.
 4. **Choose** the `06-init-custom-settings` snippet.
 5. **Save** the file.
@@ -108,7 +112,7 @@ twitter_icon_link_url = themeDisplay.getThemeSetting("twitter-icon-link-url")
 
 #### Add Social Media Icons to the Theme Footer
 1. **Drop** the `footer.ftl` from _`livingstone-fjord-theme\src\templates`_ into the _Visual Studio Code_ editor.
-2. **Click** to highlight the `<#-- Insert snippet 07-social-portal-normal here -->` comment.
+2. **Click** to highlight the `< Insert snippet 07-social-portal-normal here >` comment.
 3. **Type** `lfr` to view the available code snippets.
 4. **Choose** the `07-social-portal-normal` snippet.
 5. **Save** the file.
@@ -122,7 +126,7 @@ twitter_icon_link_url = themeDisplay.getThemeSetting("twitter-icon-link-url")
 
 #### Add the Code to the Social Media FreeMarker File
 1. **Drop** the `social_media.ftl` from _`livingstone-fjord-theme\src\templates`_ into the _Visual Studio Code_ editor.
-* **Click** to highlight the `<#-- Insert snippet 08-social-media-footer here -->` comment.
+* **Click** to highlight the `< Insert snippet 08-social-media-footer here >` comment.
 * **Type** `lfr` to view the available code snippets.
 * **Choose** the `08-social-media-footer` snippet.
 * **Save** the file.
@@ -181,4 +185,4 @@ twitter_icon_link_url = themeDisplay.getThemeSetting("twitter-icon-link-url")
   * You should already have a tab open at localhost:8080
 * **Click** to _Refresh_ the page after the theme changes have finished deploying.
 
-<br />
+-->

@@ -1,6 +1,8 @@
-## Implement Service Module Permissions
+# Implement Service Module Permissions
 
-<div class="ahead">
+Coming Soon!
+
+<!--
 
 #### Exercise Goals
 
@@ -582,5 +584,4 @@ public class AssignmentServiceImpl extends AssignmentServiceBaseImpl {
 1. **Sign out** of the portal.
 2. **Try** to add an assignment. You should get an error message.
 
-
-
+-->

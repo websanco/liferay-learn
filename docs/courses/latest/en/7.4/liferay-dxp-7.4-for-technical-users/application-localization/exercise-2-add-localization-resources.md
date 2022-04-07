@@ -1,6 +1,8 @@
-## Add Localization Resources
+# Add Localization Resources
 
-<div class="ahead">
+Coming Soon!
+
+<!--
 
 #### Exercise Goals
 
@@ -148,4 +150,4 @@ your-submission=Your Submission
 * **Refresh** the page.
 	- You should now be able to see the labels and messages correctly:
 
----
+-->

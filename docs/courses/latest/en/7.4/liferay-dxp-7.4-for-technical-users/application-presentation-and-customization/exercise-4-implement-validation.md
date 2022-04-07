@@ -1,6 +1,8 @@
-## Implement Validation
+# Implement Validation
 
-<div class="ahead">
+Coming Soon!
+
+<!--
 
 #### Exercise Goals
 
@@ -743,6 +745,6 @@ The complete `edit_assignments.jsp` file will look like this:
 * **Put** a dollar `$` sign in the title field and leave the *Description* field empty.
 * **Submit** the form.
 
-<br />
+-->
 
 

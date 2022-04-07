@@ -1,7 +1,8 @@
-<a href="#" id="2"></a>
-## Add a React SPA to Your Platform
+# Add a React SPA to Your Platform
 
-<div class="ahead">
+Coming Soon!
+
+<!--
 
 #### Exercise Goals
 
@@ -52,3 +53,4 @@
 #### Bonus Exercise
 1. Create a dashboard page for Mondego Group customers. Be sure to include the Faria Financial Manager App as well as areas for blog posts, comments, and a profile.
 
+-->

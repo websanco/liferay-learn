@@ -1,6 +1,8 @@
-## Setting up and Deploying with the Liferay Theme Generator
+# Setting up and Deploying with the Liferay Theme Generator
 
-<div class="ahead">
+Coming Soon!
+
+<!--
 
 #### Exercise Goals
 
@@ -140,3 +142,5 @@ Note: Liferay themes created with the theme generator are bundled with Gulp. In 
 #### Bonus Exercises
 1. Change the theme back to the _Classic_ theme.
 2. Explore the new theme project and add some css to the _custom.scss_ file in the _src_ folder and deploy the changes.
+
+-->

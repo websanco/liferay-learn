@@ -1,8 +1,8 @@
-<a href="#" id="3"></a>
+# Add Custom JavaScript to a Theme
 
-## Add Custom JavaScript to a Theme
+Coming Soon!
 
-<div class="ahead">
+<!--
 
 #### Exercise Goals
 
@@ -61,4 +61,4 @@
   * You should already have a tab open at localhost:8080
 * **Click** to _Refresh_ the page after the theme changes have finished deploying.
 
-<br />
+-->

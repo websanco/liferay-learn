@@ -1,6 +1,10 @@
-## Optional Exercise: Test the Service Through Remote API
+# Optional Exercise: Test the Service Through Remote API
 
-<div class="ahead">
+Coming Soon!
+
+<!--
+
+Note to the editor: I had to change some snippet instructions to remove the !--, #--, or -- in order to comment out the entire file. Make sure to review and ensure the snippets are correct.
 
 #### Exercise Goals
 
@@ -31,7 +35,7 @@ Liferay.Service('/gradebook.assignment/add-assignment', {
 	dueDate: (new Date('2019-08-22')).getTime()
 ```
 
-<!-- pagebreak for pdf book -->
+< pagebreak for pdf book >
 
 ```json
 }, function(obj) {
@@ -51,3 +55,4 @@ Now try deleting an assignment. Click *delete-assignment* on the page menu. Ente
 
 And that's it. Try it again with another assignment if you'd like.
 
+-->

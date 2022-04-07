@@ -1,5 +1,9 @@
 # Branding the Platform with Themes
 
+Coming Soon!
+
+<!--
+
 ```{toctree}
 :maxdepth: 2
 
@@ -53,3 +57,5 @@ In this module, you'll learn how to control the branding of the platform by crea
 * [](./brand-platform-themes/.md) 
 * [](./brand-platform-themes/.md) 
 * [](./brand-platform-themes/.md) 
+
+-->

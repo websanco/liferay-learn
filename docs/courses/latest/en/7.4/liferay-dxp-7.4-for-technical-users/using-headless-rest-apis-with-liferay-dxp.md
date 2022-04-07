@@ -1,5 +1,9 @@
 # Using Headless REST APIs with Liferay
 
+Coming Soon!
+
+<!--
+
 ```{toctree}
 :maxdepth: 2
 
@@ -23,3 +27,5 @@ using-headless-rest-apis-with-liferay-dxp/.md
 ## Next Steps
 
 * [](./using-headless-rest-apis-with-liferay-dxp/.md) 
+
+-->

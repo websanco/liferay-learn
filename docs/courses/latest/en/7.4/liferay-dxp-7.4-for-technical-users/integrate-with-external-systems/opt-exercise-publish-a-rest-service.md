@@ -1,6 +1,8 @@
-## Optional Exercise: Publish a REST Service
+# Optional Exercise: Publish a REST Service
 
-<div class="ahead">
+Coming Soon!
+
+<!--
 
 #### Exercise Goals
 
@@ -239,3 +241,4 @@ curl -H 'Accept: application/json' -H "Authorization: Bearer [ACCESS_TOKEN]"
 
 In this exercise you've seen how easy it is to create a REST API for your Liferay Services. Because JAX-RS Whiteboard is a standard OSGi specification, you now have another convenient tool at your disposal to create APIs that others can use to easily integrate with your applications.
 
+-->

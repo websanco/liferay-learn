@@ -1,6 +1,8 @@
-## Implement the Assignment Editing View
+# Implement the Assignment Editing View
 
-<div class="ahead">
+Coming Soon!
+
+<!--
 
 #### Exercise Goals
 
@@ -490,6 +492,6 @@ public class DeleteAssignmentMVCActionCommand extends BaseMVCActionCommand {
 * **Refresh** the page.
 	- Make sure the module has restarted successfully before refreshing the browser window then try adding, editing, viewing, deleting Assignments.
 
-<br />
+-->
 
 

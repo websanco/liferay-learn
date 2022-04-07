@@ -1,6 +1,8 @@
-## Use a Remote App with Liferay DXP
+# Use a Remote App with Liferay DXP
 
-<div class="ahead">
+Coming Soon!
+
+<!--
 
 #### Exercise Goals
 
@@ -42,3 +44,5 @@
 #### Bonus Exercise
 1. Use three dashes to add a break line before the Bonus Exericse. Include a general summary of the steps for the exercise. You do not need as much detail as in the main exercises.
 2. Add a second bonus exercise if desired. 
+
+-->

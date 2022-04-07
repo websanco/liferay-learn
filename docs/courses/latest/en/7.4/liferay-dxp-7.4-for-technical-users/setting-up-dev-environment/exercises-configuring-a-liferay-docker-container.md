@@ -1,6 +1,8 @@
-## Installing a Bundle in your Workspace
+# Installing a Bundle in your Workspace
 
-<div class="ahead">
+Coming Soon!
+
+<!--
 
 #### Exercise Goals
 
@@ -27,4 +29,4 @@ Congratulations. A Docker image based on the name of your workspace with `-lifer
 
 ---
 
-
+-->

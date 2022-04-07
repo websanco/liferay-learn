@@ -1,6 +1,8 @@
-<a href="#" id="5"></a>
+# Adding Style Books
 
-## Adding Style Books
+Coming Soon!
+
+<!--
 
 <div class="ahead">
 
@@ -231,7 +233,7 @@ h6,
 ```
 
 <div class="page"></div>
--->
+
 
 #### Change the Theme to Classic
 1. **Go to** localhost:8080 in your browser.
@@ -274,3 +276,5 @@ h6,
 
 #### Bonus Exercises
 1. Create a new style book that changes the color-system of the theme based on what you think looks best.
+
+-->

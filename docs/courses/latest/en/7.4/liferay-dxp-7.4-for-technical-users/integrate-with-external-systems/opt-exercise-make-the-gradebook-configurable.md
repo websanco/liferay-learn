@@ -1,6 +1,8 @@
-## Optional Exercise: Make the Gradebook Configurable
+# Optional Exercise: Make the Gradebook Configurable
 
-<div class="ahead">
+Coming Soon!
+
+<!--
 
 #### Exercise Goals
 
@@ -217,3 +219,5 @@ error.title-too-long=Title text too long.
 #### Test the Application
 
 Test the Gradebook application in your browser by creating new Assignments with either too short or too long descriptions. Make sure you've refreshed your browser before you start testing.
+
+-->

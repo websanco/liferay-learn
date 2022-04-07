@@ -1,6 +1,8 @@
-## Deploying with the NPM Bundle Generator
+# Deploying with the NPM Bundle Generator
 
-<div class="ahead">
+Coming Soon!
+
+<!--
 
 #### Exercise Goals
 
@@ -61,3 +63,5 @@
 #### Bonus Exercises
 1. Create any of the other JavaScript module types.
 2. Create and deploy another module using blade.
+
+-->

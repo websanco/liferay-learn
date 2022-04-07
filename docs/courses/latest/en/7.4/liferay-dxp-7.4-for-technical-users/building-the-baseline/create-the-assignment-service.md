@@ -1,6 +1,10 @@
-## Create the Assignment Service
+# Create the Assignment Service
 
-<div class="ahead">
+Coming Soon!
+
+<!--
+
+Note to the editor: I had to change some snippet instructions to remove the !-- -- in order to comment out the entire file. Make sure to review and ensure the snippets are correct.
 
 #### Exercise Goals
 
@@ -32,7 +36,7 @@ Feel free to use whatever method you are most comfortable with to generate this 
 	<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 7.4.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_7_4_0.dtd">
 	<service-builder dependency-injector="ds" package-path="com.liferay.training.gradebook">
 		<namespace>Gradebook</namespace>
-		<!--<entity data-source="sampleDataSource" local-service="true" name="Foo" remote-service="false" session-factory="sampleSessionFactory" table="foo" tx-manager="sampleTransactionManager uuid="true"">-->
+		<<entity data-source="sampleDataSource" local-service="true" name="Foo" remote-service="false" session-factory="sampleSessionFactory" table="foo" tx-manager="sampleTransactionManager uuid="true"">>
 	</service-builder>
 	```
 
@@ -67,7 +71,7 @@ This creates an entity named _Assignment_ and enables both the local and remote 
 #### Add Definitions to the `service.xml` File
 1. **Add** the following snippet after the _column_ definitions:
 	```xml
-	<!-- Order -->
+	< Order >
 	<order by="asc">
 		<order-column name="title" />
 	</order>
@@ -75,8 +79,8 @@ This creates an entity named _Assignment_ and enables both the local and remote 
 
 2. **Add** the following snippet after the _order_ definition:
 	```xml
-	<!-- Finders -->
-	<!-- Find by groupId -->
+	< Finders >
+	< Find by groupId >
 	<finder name="GroupId" return-type="Collection">
 		<finder-column name="groupId"></finder-column>
 	</finder>
@@ -87,9 +91,9 @@ This creates an entity named _Assignment_ and enables both the local and remote 
 
 3. **Add** the following reference definitions after the _finder_ definitions:
 	```xml
-	<!-- Reference to Group entity service -->
+	< Reference to Group entity service >
 	<reference entity="Group" package-path="com.liferay.portal"></reference>
-	<!-- Entity services needed for the integration to Asset framework -->
+	< Entity services needed for the integration to Asset framework >
 	<reference entity="AssetEntry"
 		package-path="com.liferay.portlet.asset"></reference>
 	<reference entity="AssetLink"
@@ -100,7 +104,7 @@ This creates an entity named _Assignment_ and enables both the local and remote 
 
 4. **Add** the following code snippet after the closing tag of _entity_:
 	```xml
-	<!-- Exceptions -->
+	< Exceptions >
 	<exceptions>
 		<exception>AssignmentValidation</exception>
 	</exceptions>
@@ -118,18 +122,18 @@ The final `service.xml` should look like this:
 
 <service-builder dependency-injector="ds" package-path="com.liferay.training.gradebook">
 	<namespace>Gradebook</namespace>
-	<!--<entity data-source="sampleDataSource" local-service="true" name="Foo" remote-service="false" session-factory="sampleSessionFactory" table="foo" tx-manager="sampleTransactionManager uuid="true"">-->
+	<<entity data-source="sampleDataSource" local-service="true" name="Foo" remote-service="false" session-factory="sampleSessionFactory" table="foo" tx-manager="sampleTransactionManager uuid="true"">>
 	<entity name="Assignment" local-service="true">
 
-		<!-- PK fields -->
+		< PK fields >
 
 		<column name="assignmentId" primary="true" type="long"></column>
 
-		<!-- Group instance -->
+		< Group instance >
 
 		<column name="groupId" type="long"></column>
 
-		<!-- Audit fields -->
+		< Audit fields >
 
 		<column name="companyId" type="long"></column>
 		<column name="userId" type="long"></column>
@@ -140,25 +144,25 @@ The final `service.xml` should look like this:
 		<column name="description" type="String"></column>
 		<column name="dueDate" type="Date"></column>
 
-		<!-- Order -->
+		< Order >
 
 		<order by="asc">
 			<order-column name="title" />
 		</order>
 
-		<!-- Finders -->
+		< Finders >
 
-		<!-- Find by groupId -->
+		< Find by groupId >
 
 		<finder name="GroupId" return-type="Collection">
 			<finder-column name="groupId"></finder-column>
 		</finder>
 
-		<!-- Reference to Group entity service -->
+		< Reference to Group entity service >
 
 		<reference entity="Group" package-path="com.liferay.portal"></reference>
 
-		<!-- Entity services needed for the integration to Asset framework -->
+		< Entity services needed for the integration to Asset framework >
 
 		<reference entity="AssetEntry"
 			package-path="com.liferay.portlet.asset"></reference>
@@ -168,7 +172,7 @@ The final `service.xml` should look like this:
 			package-path="com.liferay.portlet.asset"></reference>
 	</entity>
 
-	<!-- Exceptions -->
+	< Exceptions >
 
 	<exceptions>
 		<exception>AssignmentValidation</exception>
@@ -217,4 +221,4 @@ tasks.withType(JavaCompile) {
 }
 ```
 
-
+-->

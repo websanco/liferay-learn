@@ -1,6 +1,8 @@
-## Implement Assignment Remote Service
+# Implement Assignment Remote Service
 
-<div class="ahead">
+Coming Soon!
+
+<!--
 
 #### Exercise Goals
 - Declare dependencies
@@ -218,3 +220,5 @@ You should see a success log message if modules were deployed successfully:
 2019-03-20 11:31:59.667 INFO  [pipe-start 984][BundleStartStopLogger:39] STARTED com.liferay.training.gradebook.api_1.0.0 [984]
 2019-03-20 11:32:02.573 INFO  [pipe-start 985][BundleStartStopLogger:39] STARTED com.liferay.training.gradebook.service_1.0.0 [985]
 ```
+
+-->

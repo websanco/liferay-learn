@@ -1,8 +1,8 @@
-<a href="#" id="1"></a>
+# Create a Layout Template
 
-## Create a Layout Template
+Coming Soon!
 
-<div class="ahead">
+<!--
 
 #### Exercise Goals
 
@@ -89,3 +89,5 @@ Note: Liferay layouts created with the theme generator are bundled with Gulp. In
 1. Go to the new Hotel Front Page and add some widgets to see the layout in action.
 2. Create a new custom layout for Hotel Room pages.
 3. Add a Layout to a Theme and configure it to deploy with that theme.
+
+-->

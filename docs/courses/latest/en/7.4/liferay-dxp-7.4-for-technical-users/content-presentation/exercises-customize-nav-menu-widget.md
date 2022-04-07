@@ -1,8 +1,10 @@
-<a href="#" id="2"></a>
+# Customize a Navigation Menu Widget
 
-## Customize a Navigation Menu Widget
+Coming Soon!
 
-<div class="ahead">
+<!--
+
+Note to the editor: I had to change some snippet instructions to remove the !--, #--, or -- in order to comment out the entire file. Make sure to review and ensure the snippets are correct.
 
 #### Exercise Goals
 
@@ -33,7 +35,7 @@
 #### Add Alert Information if there are No Pages
 1. **Go to** the module exercise folder.  
 2. **Drop** the `vertical-navigation.ftl` into your _Visual Studio Code_ editor.  
-3. **Click** to highlight the `<#-- Insert 04-if-no-content-message here -->` comment.
+3. **Click** to highlight the `< Insert 04-if-no-content-message here >` comment.
 4. **Type** `lfr-widget` to view the available code snippets.
 5. **Choose** the `04-if-no-content-message` snippet.
 
@@ -46,14 +48,14 @@
 ```
 
 #### Add a Macro for the Navigation Pages
-1. **Click** to highlight the `<#-- insert 05-build-navigation-macro here -->` comment.
+1. **Click** to highlight the `< insert 05-build-navigation-macro here >` comment.
 2. **Type** `lfr-widget` to view the available code snippets.
 3. **Choose** the `05-build-navigation-macro` snippet.
   * Alternatively, you can type:
 
 ```HTML
 <#macro buildNavigation navItem>
-    <#-- Add 06-nav-item-assignments snippet here -->
+    < Add 06-nav-item-assignments snippet here >
 
     <li class="nav-item">
         <div class="d-inline-flex">
@@ -61,13 +63,13 @@
                   ${navItem.getName()}
             </a>
 
-        <#-- Add 07-children-menu-if-statement snippet here -->
+        < Add 07-children-menu-if-statement snippet here >
     </li>
 </#macro>
 ```
 
 #### Add Nav Item and Nav Item CSS Variables 
-1. **Click** to highlight the `<#-- Add 06-nav-item-assignments snippet here -->` comment.
+1. **Click** to highlight the `< Add 06-nav-item-assignments snippet here >` comment.
 2. **Type** `lfr-widget` to view the available code snippets.
 3. **Choose** the `06-nav-item-assignments` snippet.
   * Alternatively, you can type:
@@ -85,7 +87,7 @@
 ```
 
 #### Add If Statement for Child Pages in the Menu
-1. **Click** to highlight the `<#-- Add 07-children-menu-if-statement snippet here -->` comment.
+1. **Click** to highlight the `< Add 07-children-menu-if-statement snippet here >` comment.
 2. **Type** `lfr-widget` to view the available code snippets.
 3. **Choose** the `07-children-menu-if-statement` snippet.
   * Alternatively, you can type:
@@ -94,13 +96,13 @@
 <#if navItem.hasBrowsableChildren()>
     <#assign randomNamespace = portalUtil.generateRandomKey(request, "expandCollapse") />
         <a aria-controls="${randomNamespace}" aria-expanded="true" class="collapse-icon nav-link" data-toggle="collapse" href="#${randomNamespace}" role="button">
-            <#-- Add 08-opt-clay-symbol-macros snippet or type here -->
+            < Add 08-opt-clay-symbol-macros snippet or type here >
         </a>
     </div>
 
     <div class="collapse" id="${randomNamespace}">
         <ul class="nav nav-stacked">
-            <#-- Add 09-nav-children-macro snippet or type here -->
+            < Add 09-nav-children-macro snippet or type here >
         </ul>
     </div>
 <#else>
@@ -111,7 +113,7 @@
 <div class="page"></div>
 
 #### Add Clay Icon Macros for Child Menu Icons
-1. **Click** to highlight the `<#-- Add 08-opt-clay-symbol-macros snippet or type here -->` comment.
+1. **Click** to highlight the `< Add 08-opt-clay-symbol-macros snippet or type here >` comment.
 2. **Type** `<span class="collapse-icon-closed">` to replace the comment.
 3. **Press** _Enter_.
 4. **Type** `</span>` to close the div.
@@ -137,7 +139,7 @@
 <div class="page"></div>
 
 #### Add a List with Child Navigation Items Macro
-1. **Click** to highlight the `<#-- Add 9-opt-nav-children-macro snippet or type here -->` comment.
+1. **Click** to highlight the `< Add 9-opt-nav-children-macro snippet or type here >` comment.
 2. **Type** `<#list navItem.getBrowsableChildren() as navItemChild>` to replace the comment.
 3. **Press** _Enter_.
 4. **Type** `</#list>` to close the div.
@@ -152,7 +154,7 @@
 ```
 
 #### Add the Final Navigation Code Using the Custom Macro 
-1. **Click** to highlight the `<#-- Insert 10-nav-menu-using-macro here -->` comment.
+1. **Click** to highlight the `< Insert 10-nav-menu-using-macro here >` comment.
 2. **Type** `lfr-widget` to view the available code snippets.
 3. **Choose** the `10-nav-menu-using-macro` snippet.
 4. **Save** the file.
@@ -218,3 +220,5 @@
 1. Create child pages to test the navigation
 2. Test the Navigation in Mobile, Tablet, or Desktop sizes using the Simulation Menu at the top right
 3. Create new widget templates for other widgets
+
+-->

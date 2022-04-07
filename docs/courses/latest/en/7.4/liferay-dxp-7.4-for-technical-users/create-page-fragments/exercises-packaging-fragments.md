@@ -1,8 +1,8 @@
-<a href="#" id="2"></a>
+# Packaging Fragments
 
-## Packaging Fragments
+Coming Soon!
 
-<div class="ahead">
+<!--
 
 #### Exercise Goals
 
@@ -57,3 +57,5 @@
 
 #### Bonus Exercises
 1. Create a new Collection in the Fragments Editor. Export the Collection and import it into a new instance.
+
+-->

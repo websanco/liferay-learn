@@ -1,6 +1,10 @@
-<a href="#" id="1"></a>
+# Create the Livingstone Fjord Theme
 
-## Create the Livingstone Fjord Theme
+Coming Soon!
+
+<!---
+
+Note to the editor: I had to change some snippet instructions to remove the !-- -- in order to comment out the entire file. Make sure to review and ensure the snippets are correct.
 
 <div class="ahead">
 
@@ -129,9 +133,9 @@ _Note: We will be using `npm run deploy` throughout the course. If you decide to
 			<setting configurable="false" key="show-site-name-default" value="true" />
 			<setting configurable="false" key="show-site-name-supported" value="true" />
 			<setting configurable="true" key="use-a-retina-logo" type="checkbox" value="true" />
-			<!-- Insert snippet 02-theme-settings here -->
+			< Insert snippet 02-theme-settings here >
 		</settings>
-		<!-- Insert snippet 01-portlet-decorators here -->
+		< Insert snippet 01-portlet-decorators here >
 	</theme>
 </look-and-feel>
 ```
@@ -145,7 +149,7 @@ _Note: We will be using `npm run deploy` throughout the course. If you decide to
 * **Drop** the `portal_normal.ftl` file from the _`livingstone-fjord-theme\src\templates`_ file into the _Visual Studio Code_ editor.  
 
 #### Modify the Header
-1. **Click** to highlight the `<#-- Insert snippet 01-portal-normal-header here -->` comment.
+1. **Click** to highlight the `< Insert snippet 01-portal-normal-header here >` comment.
 * **Type** `lfr` to view the available code snippets.
 * **Choose** the `ftl: 01-portal-normal-header` snippet.
 	* Alternatively, you can just type in the following:
@@ -157,12 +161,12 @@ _Note: We will be using `npm run deploy` throughout the course. If you decide to
 ```
 
 #### Add the Content Section
-1. **Click** to highlight the `<#-- Insert snippet 02-portal-normal-main here -->` comment.
+1. **Click** to highlight the `< Insert snippet 02-portal-normal-main here >` comment.
 * **Type** `lfr` to view the available code snippets.
 * **Choose** the `ftl: 02-portal-normal-main` snippet.
 
 #### Keep the Footer Code Distinct
-1. **Click** to highlight the `<#-- Type footer.ftl include here -->` comment.
+1. **Click** to highlight the `< Type footer.ftl include here >` comment.
 * **Type** in the following to include the footer.ftl file and then _Save_ the file:
 
 ```html
@@ -175,14 +179,14 @@ _Note: We will be using `npm run deploy` throughout the course. If you decide to
 
 #### Add Code to the Footer FTL File
 1. **Drop** the `footer.ftl` file from _`livingstone-fjord-theme\src\templates`_ into the _Visual Studio Code_ editor.   
-* **Click** to highlight the `<#-- Insert 03-footer-ftl here -->` comment.
+* **Click** to highlight the `< Insert 03-footer-ftl here >` comment.
 * **Type** `lfr` to view the available code snippets.
 * **Choose** the `03-footer-ftl` snippet.
 * **Save** the file.
 
 #### Add a Sign-In Link to the Footer
 1. **Drop** the `footer_navigation.ftl` file from _`livingstone-fjord-theme\src\templates`_ into the _Visual Studio Code_ editor.
-* **Click** to highlight the `<#-- Insert snippet 04-footer-nav-sign-in here -->` comment.
+* **Click** to highlight the `< Insert snippet 04-footer-nav-sign-in here >` comment.
 * **Type** `lfr` to view the available code snippets.
 * **Choose** the `04-footer-nav-sign-in` snippet.
 	* Alternatively, you can type the following:
@@ -201,7 +205,7 @@ _Note: We will be using `npm run deploy` throughout the course. If you decide to
 <div class="page"></div>
 
 #### Add the Footer Navigation
-1. **Click** to highlight the `<#-- Insert snippet 05-footer-nav-menu here -->` comment.
+1. **Click** to highlight the `< Insert snippet 05-footer-nav-menu here >` comment.
 * **Type** `lfr` to view the available code snippets.
 * **Choose** the `05-footer-nav-menu` snippet.
 * **Save** the file.
@@ -224,4 +228,4 @@ _Note: We will be using `npm run deploy` throughout the course. If you decide to
 	* You should already be at localhost:8080 and logged into your Liferay instance.
 * **Click** to _Refresh_ the page after the changes to your theme have finished deploying.
 
-<br />
+--->

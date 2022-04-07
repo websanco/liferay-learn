@@ -1,5 +1,9 @@
 # Application Localization and Styling
 
+Coming Soon!
+
+<!--
+
 ```{toctree}
 :maxdepth: 2
 
@@ -33,7 +37,9 @@ application-localization/exercise-3-add-css-resources.md
 
 ## Next Steps
 
-* [](./application-localization/exercise-1-update-application-with-localizable-elements.md) 
-* [](./application-localization/exercise-2-add-localization-resources.md) 
-* [](./application-localization/adding-css-and-javascript-resources.md) 
-* [](./application-localization/exercise-3-add-css-resources.md) 
+* [Exercise 1: Update the Application with Localization Elements](./application-localization/exercise-1-update-application-with-localizable-elements.md) 
+* [Exercise 2: Add Localization Resources](./application-localization/exercise-2-add-localization-resources.md) 
+* [Adding CSS and JavaScript Resources](./application-localization/adding-css-and-javascript-resources.md) 
+* [Exercise 3: Add CSS Resources](./application-localization/exercise-3-add-css-resources.md) 
+
+-->

@@ -1,6 +1,8 @@
-<a href="#" id="2"></a>
+# Modify the Styling of the Themes
 
-## Modify the Styling of the Themes
+Coming Soon!
+
+<!--
 
 <div class="ahead">
 
@@ -185,3 +187,4 @@ Note: Now you should be able to see all the styling changes we made to the platf
 #### Bonus Exercise
 1. Change the theme colors and sizes of various elements using the files we created or updated in the exercise above. Be creative and make it look how you'd like it to look.
 
+-->

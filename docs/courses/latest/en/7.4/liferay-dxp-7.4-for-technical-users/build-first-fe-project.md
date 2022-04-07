@@ -1,5 +1,9 @@
 # Build Your First Front-End Project
 
+Coming Soon!
+
+<!--
+
 ```{toctree}
 :maxdepth: 2
 
@@ -41,3 +45,5 @@ In this module, you'll learn what tools and frameworks are available in Liferay 
 * [](./build-first-fe-project/.md) 
 * [](./build-first-fe-project/.md) 
 * [](./build-first-fe-project/.md) 
+
+-->

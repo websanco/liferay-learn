@@ -1,6 +1,8 @@
-## Create the Gradebook Web Module
+# Create the Gradebook Web Module
 
-<div class="ahead">
+Coming Soon!
+
+<!--
 
 #### Exercise Goals
 
@@ -199,6 +201,6 @@ gradebook.caption=Hello from Gradebook!
 3. **Expand** the *category.training* category in the *Widgets* menu.
 4. **Add** the *Gradebook* portlet on the page.
 
----
+-->
 
 

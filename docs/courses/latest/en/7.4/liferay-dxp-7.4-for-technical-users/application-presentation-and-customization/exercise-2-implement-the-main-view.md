@@ -1,6 +1,8 @@
-## Implement the Main View
+# Implement the Main View
 
-<div class="ahead">
+Coming Soon!
+
+<!--
 
 #### Exercise Goals
 
@@ -873,6 +875,6 @@ public class AssignmentsManagementToolbarDisplayContext
 * **Refresh** the page to see the changes.
 	* Make sure the module has restarted successfully or run `../gradlew deploy` again before refreshing the page.
 
-<br />
+-->
 
 

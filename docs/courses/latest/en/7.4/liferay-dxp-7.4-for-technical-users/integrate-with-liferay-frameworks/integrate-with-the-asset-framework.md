@@ -1,6 +1,10 @@
-## Integrate with the Asset Framework
+# Integrate with the Asset Framework
 
-<div class="ahead">
+Coming Soon!
+
+<!--
+
+Note to the editor: I had to change some snippet instructions to remove the !--, #--, or -- in order to comment out the entire file. Make sure to review and ensure the snippets are correct.
 
 #### Exercise Goals
 
@@ -30,15 +34,15 @@ We'll also add a status finder for listing Assignments by their status.
 	<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 7.4.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_7_4_0.dtd">	
 	<service-builder dependency-injector="ds" package-path="com.liferay.training.gradebook">
 		<namespace>Gradebook</namespace>
-		<!--<entity data-source="sampleDataSource" local-service="true" name="Foo" 
+		<<entity data-source="sampleDataSource" local-service="true" name="Foo" 
 			remote-service="false" session-factory="sampleSessionFactory" table="foo" 
-			tx-manager="sampleTransactionManager uuid="true""> -->	
+			tx-manager="sampleTransactionManager uuid="true""> >	
 		<entity local-service="true" name="Assignment" remote-service="true" uuid="true">	
-			<!-- PK fields -->
+			< PK fields >
 			<column name="assignmentId" primary="true" type="long"></column>
-			<!-- Group instance -->
+			< Group instance >
 			<column name="groupId" type="long"></column>
-			<!-- Audit fields -->
+			< Audit fields >
 			<column name="companyId" type="long"></column>
 			<column name="userId" type="long"></column>
 			<column name="userName" type="String"></column>
@@ -50,20 +54,20 @@ We'll also add a status finder for listing Assignments by their status.
 			<column name="statusByUserId" type="long" />
 			<column name="statusByUserName" type="String" />
 			<column name="statusDate" type="Date" />
-			<!-- Localization Fields -->
+			< Localization Fields >
 			<column name="title" type="String" localized="true"></column>	
-			<!-- Order -->	
+			< Order >	
 			<order by="asc">
 				<order-column name="title" />
 			</order>
-			<!-- Finders -->
-			<!-- Find by groupId -->
+			< Finders >
+			< Find by groupId >
 			<finder name="GroupId" return-type="Collection">
 				<finder-column name="groupId"></finder-column>
 			</finder>
-			<!-- Reference to Group entity service -->
+			< Reference to Group entity service >
 			<reference entity="Group" package-path="com.liferay.portal"></reference>
-			<!-- Entity services needed for the integration to Asset framework -->
+			< Entity services needed for the integration to Asset framework >
 			<reference entity="AssetEntry"
 				package-path="com.liferay.portlet.asset"></reference>
 			<reference entity="AssetLink"
@@ -71,7 +75,7 @@ We'll also add a status finder for listing Assignments by their status.
 			<reference entity="AssetTag"
 				package-path="com.liferay.portlet.asset"></reference>
 		</entity>
-		<!-- Exceptions -->
+		< Exceptions >
 		<exceptions>
 			<exception>AssignmentValidation</exception>
 		</exceptions>
@@ -658,3 +662,4 @@ public String getJspPath(HttpServletRequest request, String template) {
 
 Remember that to be able to show Assets in the Asset Publisher portlet, we also have to integrate to the Search Framework. We are going to do that in the next exercise.
 
+-->

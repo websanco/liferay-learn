@@ -1,6 +1,10 @@
-## Update Application with Localizable Elements
+# Update Application with Localizable Elements
 
-<div class="ahead">
+Coming Soon!
+
+<!--
+
+Note to the editor: I had to change some snippet instructions to remove the !-- -- in order to comment out the entire file. Make sure to review and ensure the snippets are correct.
 
 #### Exercise Goals
 
@@ -16,10 +20,10 @@
 	- Make sure to start the server as well.
 * **Open** the `service.xml` file.
 * **Remove** the `title` column.
-* **Create** a new section below the `<!-- Audit fields -->` with the following code:
+* **Create** a new section below the `< Audit fields >` with the following code:
 
 ```xml
-<!-- Localization Fields -->
+< Localization Fields >
 
 <column name="title" type="String" localized="true"></column>
 ```
@@ -705,7 +709,7 @@ import java.util.Map;
 
 public interface AssignmentValidator {
 ```
-<!-- pagebreak-->
+< pagebreak>
 ```java
 	/**
 	 * Validates an Assignment
@@ -893,5 +897,4 @@ public class AssignmentValidatorImpl implements AssignmentValidator {
 
 <br />
 
-
-
+-->

@@ -1,6 +1,10 @@
-## Implement Web Module Permissions
+# Implement Web Module Permissions
 
-<div class="ahead">
+Coming Soon!
+
+<!--
+
+Note to the editor: I had to change some snippet instructions to remove the !--, #--, or -- in order to comment out the entire file. Make sure to review and ensure the snippets are correct.
 
 #### Exercise Goals
 - Define portlet permissions
@@ -31,7 +35,7 @@
 				<action-key>VIEW</action-key>
 			</supports>
 ```
-<!-- page break for pdf book -->
+< page break for pdf book >
 ```xml
 			<site-member-defaults>
 				<action-key>VIEW</action-key>
@@ -464,3 +468,4 @@ The last thing we need to do is to hide the plus button on the management toolba
 	* Test whether you can add, edit, or delete Assignments.
 	* Add the *Add Entry* permission to the role and test again.
 
+-->
