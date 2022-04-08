@@ -10,7 +10,7 @@ To use Liferay Commerce's Notifications feature, first configure the Mail settin
 
 After configuring Liferay Commerce's mail settings, navigate to the _Control Panel_ &rarr; _Commerce_ &rarr; _Channels_ to begin creating store email notifications. Email notifications are configured per [channel](../../store-management/channels/introduction-to-channels.md). Using an [accelerator](../../starting-a-store/accelerators.md) creates a store, catalog, and channel for you to start with.
 
-![Available Notification Templates](./store-emails/images/02.png)
+![The Notification Templates available out-of-the-box.](./store-emails/images/02.png)
 
 ## Event Triggers
 
@@ -29,13 +29,13 @@ There are ten events that can trigger email notifications. You can use one of th
 | Subscription Suspended | Suspension of a subscription pending review or action by the store. |
 | Subscription Cancelled | Cancellation of a subscription |
 
-![Available Notification Templates](./store-emails/images/01.png)
+![Configuring a Notification Templates for a Channel.](./store-emails/images/01.png)
 
 ## Viewing the Notification Queue
 
 You can view all email notifications in a channel's _Notification Queue_. Here, you can verify the status of emails that have been triggered by an event.
 
-![Message Queues](./store-emails/images/03.png)
+![The Notification Queue contains a list of the triggered notifications.](./store-emails/images/03.png)
 
 By default, the system checks the Notification Queue at 15 minute intervals for unsent notifications. See [Configuring the Commerce Notification Queue](./configuring-the-commerce-notification-queue.md) article to learn more about changing the Check Interval.
 
@@ -59,7 +59,7 @@ See the [Notification Template Variables Reference Guide](./notification-templat
 
 Email notifications related to an order are tracked and you can review them under the *Emails* tab of an order. Navigate to the _Control Panel_ &rarr; _Commerce_ &rarr; _Orders_. Click on an Order ID then the _Email_ tab. See [Orders Information](../../order-management/orders/order-information.md) to learn more.
 
-![Message Logs are in the Orders information.](./store-emails/images/04.png)
+![You can view the triggered notification under the Emails tab of an Order.](./store-emails/images/04.png)
 
 ## Additional Information
 
