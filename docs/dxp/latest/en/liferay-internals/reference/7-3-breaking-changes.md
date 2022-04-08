@@ -267,6 +267,27 @@ This change was made to unify the auto-upgrade feature between the Core and modu
 
 ---------------------------------------
 
+### Removed SingleVMPoolUtil and MultiVMPoolUtil classes
+- **Date:** 2020-Jan-7
+- **JIRA Ticket:** [LPS-106315](https://issues.liferay.com/browse/LPS-106315)
+
+#### What changed?
+
+The `SingleVPMPoolUtil` and `MultiVMPoolUtil` classes have been removed.
+
+#### Who is affected?
+
+This affects anyone using these removed classes.
+
+#### How should I update my code?
+
+Use `PortalCacheHelperUtil` instead of `SingleVMPoolUtil` or `MultiVMPoolUtil`. For example, see [SQLQueryTableNamesUtil](https://github.com/liferay/liferay-portal-ee/blob/7.3.x/portal-impl/src/com/liferay/portal/dao/orm/hibernate/SQLQueryTableNamesUtil.java#L113-L116).
+
+#### Why was this change made?
+
+The `SingleVPMPoolUtil` and `MultiVMPoolUtil` classes were originally deprecated in [LPS-84138](https://issues.liferay.com/browse/LPS-84138). The classes are no longer in use.
+
+---------------------------------------
 ### Removed Cache Bootstrap Feature
 - **Date:** 2020-Jan-8
 - **JIRA Ticket:** [LPS-96563](https://issues.liferay.com/browse/LPS-96563)
