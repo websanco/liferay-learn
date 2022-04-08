@@ -8,13 +8,13 @@ To use Liferay Commerce's Notifications feature, first configure the Mail settin
 
 ## Configuring Store Email Notifications
 
-Once the Liferay Commerce's mail settings have been configured, navigate to the _Control Panel_ &rarr; _Commerce_ &rarr; _Channels_ to begin creating store email notifications. Email notifications are configured per [channel](../../store-management/channels/introduction-to-channels.md). Using an [accelerator](../../starting-a-store/accelerators.md) creates a store, catalog, and channel for you to start with.
+After configuring Liferay Commerce's mail settings, navigate to the _Control Panel_ &rarr; _Commerce_ &rarr; _Channels_ to begin creating store email notifications. Email notifications are configured per [channel](../../store-management/channels/introduction-to-channels.md). Using an [accelerator](../../starting-a-store/accelerators.md) creates a store, catalog, and channel for you to start with.
 
 ![Available Notification Templates](./store-emails/images/02.png)
 
 ## Event Triggers
 
-There are ten events that can trigger email notifications. Use one of the corresponding out-of-the-box Notification Templates to create a standardized email notification.
+There are ten events that can trigger email notifications. You can use one of the out-of-the-box Notification Templates to create a standardized email notification.
 
 | Notification Type | Event |
 | :--- | :---|
@@ -23,11 +23,11 @@ There are ten events that can trigger email notifications. Use one of the corres
 | Order Awaiting Shipment | The order is ready to be shipped. |
 | Order Partially Shipped | The customer is notified if the items are being shipped separately. |
 | Order Shipped | The order has been shipped. |
-| Order Completed | The order has been completed; delivery has been made. |
-| Subscription Renewed | The subscription (recurring order) has been renewed. |
-| Subscription Activated | The subscription has been activated. |
-| Subscription Suspended | The subscription has been suspending pending review or action by the store. |
-| Subscription Cancelled | The subscription has been cancelled. |
+| Order Completed | Order delivered and marked as complete |
+| Subscription Renewed | Renewal of a subscription (recurring order) |
+| Subscription Activated | Activation of a subscription |
+| Subscription Suspended | Suspension of a subscription pending review or action by the store. |
+| Subscription Cancelled | Cancellation of a subscription |
 
 ![Available Notification Templates](./store-emails/images/01.png)
 
@@ -41,7 +41,7 @@ By default, the system checks the Notification Queue at 15 minute intervals for 
 
 ## Customizing an Email Notification Template
 
-You can customize the Notification Templates with your own text and with the use of placeholder values to substitute for key values in the _Email Settings_ and _Body_ fields. Key values include a customer's name, the Order ID, shipping and billing addresses, and a list of items in the order.
+You can customize the Notification Templates with your own text and wildcard values that get substituted for key values in the _Email Settings_ and _Body_ fields. Some of the wildcards include a customer's name, the Order ID, shipping and billing addresses, and a list of items in the order.
 
 For example, the _Email Body_ field can contain:
 
@@ -51,13 +51,13 @@ Dear [%ORDER_CREATOR%],
 Your [%ORDER_ID%] has been shipped to [%ORDER_SHIPPING_ADDRESS%].
 ```
 
-The variables are then replaced with the relevant content when sending the email.
+The wildcards are then replaced with the relevant content when sending the email.
 
 See the [Notification Template Variables Reference Guide](./notification-template-variables-reference-guide.md) article to learn more.
 
 ## Viewing Order Communications History
 
-Email notifications related to an order are tracked and can be reviewed in the *Emails* tab when viewing an order. Navigate to the _Control Panel_ &rarr; _Commerce_ &rarr; _Orders_. Click on an Order ID then the _Email_ tab. See [Orders Information](../../order-management/orders/order-information.md) to learn more.
+Email notifications related to an order are tracked and you can review them under the *Emails* tab of an order. Navigate to the _Control Panel_ &rarr; _Commerce_ &rarr; _Orders_. Click on an Order ID then the _Email_ tab. See [Orders Information](../../order-management/orders/order-information.md) to learn more.
 
 ![Message Logs are in the Orders information.](./store-emails/images/04.png)
 
