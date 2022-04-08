@@ -8,26 +8,26 @@ For orders created using the *Add Order* or *Create New Order* buttons, buyers c
 
 ## Creating an Order Type
 
-If only one Order Type exists, it's assigned to a new order automatically. For Products added to the cart directly, the Order Type with the lower Order number takes precedence over the others. You can always change the Order number in the Order Type to set the default to what you want. 
+If only one Order Type exists, it's assigned to a new order automatically. For Products added to the cart directly, the Order Type with the lower Order number takes precedence over the others. You can always change the Order number in the Order Type to set the default to what you want.
 
-<!-- It would be helpful to have a screenshot here showing how you can set the Order number in the order type. -Rich -->
+![You can change the Order number of an Order Type to set the default to what you want.](./using-order-types/images/04.png)
 
 1. Open the *Global Menu* (![Applications Menu icon](../../images/icon-applications-menu.png)) and click on *Commerce* &rarr; *Order Types*.
-1. Click the *Add* button(![Add icon](../../images/icon-add.png)), and enter the following information.
+2. Click the *Add* button(![Add icon](../../images/icon-add.png)), and enter the following information.
 
     **Name:** Stock
 
     **Description:** Order Type for all regular orders
 
-1. Click *Save*.
+3. Click *Save*.
 
-    This creates the new Order Type and opens a configuration page. The *Order Number* field determines the sorting order of the Order Type in the dropdown menu. Set the value for the Order Number as 0 for the Stock Order Type. Create** one more Order Type with the following information.
+    This creates the new Order Type and opens a configuration page. The Order field determines the sorting order of the Order Type in the dropdown menu. Set the value for the Order field as 0 for the Stock Order Type. Create** one more Order Type with the following information.
 
     **Name:** Urgent
 
     **Description:** Order type for urgent orders that is subject to a 10% surcharge
 
-Set the value for the Order Number as 1 for this Order Type. You can use the *Active* toggle to enable it. Under the *Eligibility* tab, you can link the Order Type to a specific Channel or all Channels.
+Set the value for the Order as 1 for this Order Type. You can use the *Active* toggle to enable it. Under the *Eligibility* tab, you can link the Order Type to a specific Channel or all Channels.
 
 ## Linking an Order with an Order Type
 
