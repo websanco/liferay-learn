@@ -1,6 +1,6 @@
 # Store Emails
 
-You can configure Liferay Commerce to send email notifications for a variety of store event triggers. Templates are customizable and define the content of an email. You can configure a single event to trigger emails to different target audiences using OOTB wildcards and use a notification template specific to each party.
+You can configure Liferay Commerce to send email notifications for a variety of store event triggers. Templates are customizable and define the content of an email. You can configure a single event to trigger emails to different target audiences using OOTB wildcards or by specifying the email addresses you want to send them to. For each of them, you must use a notification template.
 
 ```{note}
 To use Liferay Commerce's Notifications feature, first configure the Mail settings for Liferay Digital Experience Platform (DXP). See [Configuring Mail](https://learn.liferay.com/dxp/latest/en/installation-and-upgrades/setting-up-liferay/configuring-mail.html) for more information.
