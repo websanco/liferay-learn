@@ -273,7 +273,7 @@ This change was made to unify the auto-upgrade feature between the Core and modu
 
 #### What changed?
 
-The `SingleVPMPoolUtil` and `MultiVMPoolUtil` classes have been removed.
+The `SingleVMPoolUtil` and `MultiVMPoolUtil` classes have been removed.
 
 #### Who is affected?
 
@@ -285,7 +285,7 @@ Use `PortalCacheHelperUtil` instead of `SingleVMPoolUtil` or `MultiVMPoolUtil`. 
 
 #### Why was this change made?
 
-The `SingleVPMPoolUtil` and `MultiVMPoolUtil` classes were originally deprecated in [LPS-84138](https://issues.liferay.com/browse/LPS-84138). The classes are no longer in use.
+The `SingleVMPoolUtil` and `MultiVMPoolUtil` classes were originally deprecated in [LPS-84138](https://issues.liferay.com/browse/LPS-84138). The classes are no longer in use.
 
 ---------------------------------------
 ### Removed Cache Bootstrap Feature
