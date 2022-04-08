@@ -1,5 +1,9 @@
 # Customize Liferay DXP to Develop Your Solution
 
+Coming Soon!
+
+<!-- 
+
 ```{toctree}
 :maxdepth: 2
 
@@ -19,3 +23,5 @@ customize-liferay-dxp-to-develop-solution/summary.md
 * [How can I customize a Site's appearance?](./customize-liferay-dxp-to-develop-solution/customize-site-appearance.md) 
 * [How can I use Liferay as a Headless Delivery Platform?](./customize-liferay-dxp-to-develop-solution/liferay-as-a-headless-platform.md) 
 * [Summary](./customize-liferay-dxp-to-develop-solution/summary.md) 
+
+-->

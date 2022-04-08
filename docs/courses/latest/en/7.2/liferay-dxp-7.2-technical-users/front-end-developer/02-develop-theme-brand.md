@@ -1,5 +1,9 @@
 # Module 2: Branding the Platform with Themes
 
+Coming Soon!
+
+<!--
+
 <div class="ahead">
 <h4>Learning Objectives</h4>
 
@@ -54,3 +58,5 @@ In this module, you'll learn how to control the branding of the platform by crea
 	</ul>
 </ul>
 </div>
+
+-->

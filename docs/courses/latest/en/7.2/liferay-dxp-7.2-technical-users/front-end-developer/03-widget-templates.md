@@ -1,5 +1,7 @@
 # Module 3: Widget Templates 
 
+<!--
+
 <div class="ahead">
 <h4>Learning Objectives</h4>
 In this module, you'll learn how to customize and control the Widget Presentation through the use of Widget Templates.
@@ -41,3 +43,5 @@ In this module, you'll learn how to customize and control the Widget Presentatio
     </ul>
 </ul>
 </div>
+
+-->

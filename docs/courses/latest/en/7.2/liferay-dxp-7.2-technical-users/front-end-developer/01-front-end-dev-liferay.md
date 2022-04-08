@@ -1,5 +1,9 @@
 # Module 1: Front-End Development in Liferay
 
+Coming Soon!
+
+<!--
+
 <div class="ahead">
 <h4>Learning Objectives</h4>
 
@@ -39,3 +43,5 @@ In this module, you'll learn what tools and frameworks are available in Liferay 
 	</ul>
 </ul>
 </div>
+
+-->

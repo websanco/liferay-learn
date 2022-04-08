@@ -1,24 +1,35 @@
-# Liferay DXP 7.4 for Business Users
+# Back-End Developer
 
 ```{toctree}
 :maxdepth: 2
 
-liferay-dxp-7.4-for-business-users/ 
-liferay-dxp-7.4-for-business-users/create-and-manage-your-content-with-liferay-dxp.md 
-liferay-dxp-7.4-for-business-users/create-content-review-and-publication-processes.md 
-liferay-dxp-7.4-for-business-users/gather-and-analyze-data-with-liferay-dxp.md 
-liferay-dxp-7.4-for-business-users/build-new-sites-with-liferay-dxp.md 
-liferay-dxp-7.4-for-business-users/add-users-and-manage-permissions-with-liferay-dxp.md 
-liferay-dxp-7.4-for-business-users/improve-sites-with-liferay-dxps-modern-tools.md 
-liferay-dxp-7.4-for-business-users/secure-your-liferay-dxp-platform.md 
-liferay-dxp-7.4-for-business-users/using-liferay-objects.md 
+back-end-developer/setting-up-the-development-environment.md
+back-end-developer/osgi-basics.md
+back-end-developer/liferay-osgi-container.md
+back-end-developer/managing-osgi-bundles.md
+back-end-developer/working-with-portlet-modules.md
+back-end-developer/real-world-application.md
+back-end-developer/platform-architecture-overview.md
+back-end-developer/customize-the-user-interface.md
+back-end-developer/extend-liferay-schema.md
+back-end-developer/customize-the-service-layer.md
+back-end-developer/override-controller-actions.md
+back-end-developer/catch-portal-events.md
+back-end-developer/leverage-the-liferay-message-bus.md
+back-end-developer/customize-the-portal-search.md
 ```
 
-* [Create and Manage Your Content with Liferay DXP](./liferay-dxp-7.4-for-business-users/create-and-manage-your-content-with-liferay-dxp.md) 
-* [Create Content Review and Publication Processes with Liferay DXP](./liferay-dxp-7.4-for-business-users/create-content-review-and-publication-processes-with-liferay-dxp.md) 
-* [Gather and Analyze Data with Liferay DXP](./liferay-dxp-7.4-for-business-users/gather-and-analyze-data-with-liferay-dxp.md) 
-* [Build New Sites with Liferay DXP](./liferay-dxp-7.4-for-business-users/build-new-sites-with-liferay-dxp.md) 
-* [Add Users and Manage Permissions with Liferay DXP](./liferay-dxp-7.4-for-business-users/add-users-and-manage-permissions-with-liferay-dxp.md) 
-* [Improve Sites with Liferay DXPs Modern Tools](./liferay-dxp-7.4-for-business-users/improve-sites-with-liferay-dxps-modern-tools.md) 
-* [Secure Your Liferay DXP Platform](./liferay-dxp-7.4-for-business-users/secure-your-liferay-dxp-platform.md) 
-* [Using Liferay Objects](./liferay-dxp-7.4-for-business-users/using-liferay-objects.md) 
+* [Setting Up the Development Environment](./back-end-developer/setting-up-the-development-environment.md) 
+* [OSGi Basics](./back-end-developer/osgi-basics.md) 
+* [Liferay's OSGi Container](./back-end-developer/liferay-osgi-container.md) 
+* [Managing OSGi Bundles](./back-end-developer/managing-osgi-bundles.md) 
+* [Working with Portlet Modules](./back-end-developer/working-with-portlet-modules.md) 
+* [Real-World Applications](./back-end-developer/real-world-application.md) 
+* [Platform Architecture Overview](./back-end-developer/platform-architecture-overview.md) 
+* [Customize the User Interface](./back-end-developer/customize-the-user-interface.md) 
+* [Extend the Liferay Schema](./back-end-developer/extend-liferay-schema.md) 
+* [Customize the Service Layer](./back-end-developer/customize-the-service-layer.md) 
+* [Override Controller Action](./back-end-developer/override-controller-actions.md) 
+* [Catch Portal Events](./back-end-developer/catch-portal-events.md) 
+* [Leverage the Liferay Message Bus](./back-end-developer/leverage-the-liferay-message-bus.md) 
+* [Customize the Portal Search](./back-end-developer/customize-the-portal-search.md) 
