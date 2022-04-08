@@ -213,6 +213,13 @@ Liferay 7.2 used a different frontend framework for custom form fields. To adjus
       {/deltemplate}
       ```
 
+1. A minor adjustment to the `DDMFormFieldType` is needed: the identifier for the field (the `name`) cannot have a hyphen (`-`) in it because oit is referenced as a String literal in the Soy template. Open the `C2P9DDMFormFieldType` class and remove the hyphen from
+
+   - the component property `ddm.form.field.type.name`
+   - the String returned by `getName`
+
+   The value in both locations is now `c2p9slider`.
+
 1. Once the project's frontend is replaced, deploy it to a running Liferay 7.2. 
 
    - To start a Liferay 7.2 Docker container run
