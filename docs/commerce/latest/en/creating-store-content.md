@@ -9,8 +9,8 @@ creating-store-content/creating-product-display-pages.md
 creating-store-content/creating-category-display-pages.md
 creating-store-content/using-wish-lists.md
 creating-store-content/commerce-storefront-pages.md
-creating-store-content/using_web_experience_management.rst
-creating-store-content/design_and_theme.md
+creating-store-content/using-web-experience-management.md
+creating-store-content/design-and-theme.md
 creating-store-content/liferay-commerce-widgets.md
 ```
 
