@@ -23,6 +23,10 @@ The installation steps use these terms:
 1. If you're starting with a clean JBoss installation and a `$JBOSS_HOME/standalone/deployments/ROOT.war` folder exists, delete all of its subfolders and files.
 1. Unzip the DXP WAR file into the `$JBOSS_HOME/standalone/deployments/ROOT.war` folder (create this folder if it doesn't exist).
 
+```{important}
+The default Liferay Portal web context can be changed (e.g. `localhost:8080/` to `localhost:8080/myportal`) by changing the WAR filename, but this is not recommended.
+```
+
 ## Installing Dependencies
 
 1. Unzip the OSGi Dependencies ZIP file into the `[Liferay Home]/osgi` folder (create this folder if it doesn't exist). Liferay's OSGi runtime depends on these modules.

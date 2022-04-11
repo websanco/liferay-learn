@@ -118,7 +118,11 @@ Continue configuring Tomcat.
 
      Setting `crossContext="true"` lets multiple web applications use the same class loader. This configuration includes commented instructions and tags for configuring a JAAS realm.
 
-1. Make sure to use UTF-8 URI encoding consistently. Copy the `$CATALINA_BASE/conf/server.xml` file from a Tomcat bundle to the server. Otherwise, open the `$CATALINA_BASE/conf/server.xml` file and add the attribute `URIEncoding="UTF-8"` to HTTP and AJP connectors that use `redirectPort=8443`. Here are examples:
+```{important}
+The default Liferay Portal web context can be changed (e.g. `localhost:8080/` to `localhost:8080/myportal`) by changing the XML filename, but this is not recommended.
+```
+
+2. Make sure to use UTF-8 URI encoding consistently. Copy the `$CATALINA_BASE/conf/server.xml` file from a Tomcat bundle to the server. Otherwise, open the `$CATALINA_BASE/conf/server.xml` file and add the attribute `URIEncoding="UTF-8"` to HTTP and AJP connectors that use `redirectPort=8443`. Here are examples:
 
     Old:
 
@@ -144,7 +148,7 @@ Continue configuring Tomcat.
     <Connector port="8009" protocol="AJP/1.3" redirectPort="8443" URIEncoding="UTF-8" />
     ```
 
-1. Refrain from writing access logs (optional) by commenting out the access log `Valve` element in `$CATALINA_BASE/conf/server.xml`. It's commented out here:
+3. Refrain from writing access logs (optional) by commenting out the access log `Valve` element in `$CATALINA_BASE/conf/server.xml`. It's commented out here:
 
     ```xml
     <!-- <Valve className="org.apache.catalina.valves.AccessLogValve"
@@ -153,7 +157,7 @@ Continue configuring Tomcat.
            pattern="%h %l %u %t &quot;%r&quot; %s %b" /> -->
     ```
 
-1. Optionally, set the following log levels in the `$CATALINA_HOME/conf/logging.properties` file:
+4. Optionally, set the following log levels in the `$CATALINA_HOME/conf/logging.properties` file:
 
     ```properties
     org.apache.catalina.startup.Catalina.level=INFO
@@ -162,7 +166,7 @@ Continue configuring Tomcat.
     org.apache.level=WARNING
     ```
 
-1. For DXP 7.3 and earlier, open the `$CATALINA_HOME/conf/web.xml` file and set the JSP compiler to Java 8 and set DXP's `TagHandlerPool` class to manage the JSP tag pool by adding the following elements above the `jsp` servlet element's `<load-on-startup>` element.
+5. For DXP 7.3 and earlier, open the `$CATALINA_HOME/conf/web.xml` file and set the JSP compiler to Java 8 and set DXP's `TagHandlerPool` class to manage the JSP tag pool by adding the following elements above the `jsp` servlet element's `<load-on-startup>` element.
 
     ```xml
     <init-param>
@@ -179,9 +183,9 @@ Continue configuring Tomcat.
     </init-param>
     ```
 
-1. In `$CATALINA_HOME/conf/web.xml`, specify whether the application server should look for extra metadata, such as annotations in the application's JARs and classes. Setting `web-app` element's attribute `metadata-complete="true"` tells the application server there's no extra metadata. The application server starts faster with this setting. The default is to check for extra metadata.
+6. In `$CATALINA_HOME/conf/web.xml`, specify whether the application server should look for extra metadata, such as annotations in the application's JARs and classes. Setting `web-app` element's attribute `metadata-complete="true"` tells the application server there's no extra metadata. The application server starts faster with this setting. The default is to check for extra metadata.
 
-1. If you're using Unix, Linux, or Mac OS, make the shell scripts in your `$CATALINA_HOME/bin` and `$CATALINA_BASE/bin` folders executable by running this command in each folder:
+7. If you're using Unix, Linux, or Mac OS, make the shell scripts in your `$CATALINA_HOME/bin` and `$CATALINA_BASE/bin` folders executable by running this command in each folder:
 
     ```bash
     chmod a+x *.sh
