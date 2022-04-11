@@ -104,6 +104,11 @@ public class Main {
 
 		// English
 
+		// TODO The external reference code must be unique and derived from the
+		// file name
+
+		String externalReferenceCode = "";
+
 		String englishContent = FileUtils.readFileToString(
 			new File(fileName), StandardCharsets.UTF_8);
 
@@ -117,9 +122,16 @@ public class Main {
 				Locale.US
 			).build();
 
-		StructuredContent structuredContent =
-			structuredContentResource.postSiteStructuredContent(
-				_GROUP_ID,
+		StructuredContent structuredContent = null;
+
+		try {
+			structuredContent =
+				structuredContentResource.
+					getSiteStructuredContentByExternalReferenceCode(
+						_GROUP_ID, externalReferenceCode);
+
+			structuredContent = structuredContentResource.putStructuredContent(
+				structuredContent.getId(),
 				new StructuredContent() {
 					{
 						contentFields = new ContentField[] {
@@ -139,6 +151,37 @@ public class Main {
 						title = _getTitle(englishContent);
 					}
 				});
+		}
+		catch (Exception exception) {
+
+			// TODO Make the catch more specific instead of just Exception
+
+			structuredContent =
+				structuredContentResource.postSiteStructuredContent(
+					_GROUP_ID,
+					new StructuredContent() {
+						{
+							contentFields = new ContentField[] {
+								new ContentField() {
+									{
+										contentFieldValue =
+											new ContentFieldValue() {
+												{
+													data = _toHTML(
+														englishContent);
+												}
+											};
+										name = "content";
+									}
+								}
+							};
+							contentStructureId = _CONTENT_STRUCTURE_ID;
+							title = _getTitle(englishContent);
+
+							setExternalReferenceCode(externalReferenceCode);
+						}
+					});
+		}
 
 		// Japanese
 
