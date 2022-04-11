@@ -29,9 +29,8 @@ import java.io.File;
 
 import java.nio.charset.StandardCharsets;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.Set;
+import java.util.TreeSet;
 
 import org.apache.commons.io.FileUtils;
 
@@ -42,25 +41,20 @@ import org.apache.commons.io.FileUtils;
 public class Main {
 
 	public static void main(String[] arguments) throws Exception {
-		List<String> fileNames = new ArrayList<>();
+		Set<String> fileNames = new TreeSet<>();
 
 		_addFileNames("../docs", fileNames);
 
-		Collections.sort(fileNames);
-
 		for (String fileName : fileNames) {
-			System.out.println(fileName);
+			if (fileName.contains("/en/") && fileName.endsWith(".md")) {
+				//System.out.println(fileName);
 
-			if (fileName.endsWith(".md")) {
-				String content = FileUtils.readFileToString(
-					new File(fileName), StandardCharsets.UTF_8);
-
-				_uploadHTML(content);
+				_uploadHTML(fileName);
 			}
 		}
 	}
 
-	private static void _addFileNames(String fileName, List<String> fileNames) {
+	private static void _addFileNames(String fileName, Set<String> fileNames) {
 		File file = new File(fileName);
 
 		if (file.isDirectory()) {
@@ -102,7 +96,23 @@ public class Main {
 		return html;
 	}
 
-	private static void _uploadHTML(String content) throws Exception {
+	private static void _uploadHTML(String fileName) throws Exception {
+		String englishContent = FileUtils.readFileToString(
+			new File(fileName), StandardCharsets.UTF_8);
+
+		File japaneseFile = new File(fileName.replace("/en/", "/ja/"));
+
+		if (japaneseFile.exists()) {
+			String japaneseContent = FileUtils.readFileToString(
+				japaneseFile, StandardCharsets.UTF_8);
+
+			System.out.println("Japanese content: " + japaneseContent.length());
+		}
+
+		/*if (true) {
+			return;
+		}*/
+
 		StructuredContentResource.Builder builder =
 			StructuredContentResource.builder();
 
@@ -120,7 +130,7 @@ public class Main {
 							{
 								contentFieldValue = new ContentFieldValue() {
 									{
-										data = _toHTML(content);
+										data = _toHTML(englishContent);
 									}
 								};
 								name = "content";
@@ -128,7 +138,7 @@ public class Main {
 						}
 					};
 					contentStructureId = _CONTENT_STRUCTURE_ID;
-					title = _getTitle(content);
+					title = _getTitle(englishContent);
 				}
 			});
 	}
