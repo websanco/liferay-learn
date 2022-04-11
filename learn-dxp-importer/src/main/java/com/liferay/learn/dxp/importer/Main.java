@@ -147,7 +147,6 @@ public class Main {
 								}
 							}
 						};
-						contentStructureId = _CONTENT_STRUCTURE_ID;
 						title = _getTitle(englishContent);
 					}
 				});
@@ -214,7 +213,6 @@ public class Main {
 							}
 						}
 					};
-					contentStructureId = _CONTENT_STRUCTURE_ID;
 					title = _getTitle(japaneseContent);
 				}
 			});
