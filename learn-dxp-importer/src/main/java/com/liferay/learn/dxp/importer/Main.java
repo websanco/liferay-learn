@@ -29,6 +29,7 @@ import java.io.File;
 
 import java.nio.charset.StandardCharsets;
 
+import java.util.Locale;
 import java.util.Set;
 import java.util.TreeSet;
 
@@ -97,21 +98,14 @@ public class Main {
 	}
 
 	private static void _uploadHTML(String fileName) throws Exception {
-		String englishContent = FileUtils.readFileToString(
-			new File(fileName), StandardCharsets.UTF_8);
-
-		File japaneseFile = new File(fileName.replace("/en/", "/ja/"));
-
-		if (japaneseFile.exists()) {
-			String japaneseContent = FileUtils.readFileToString(
-				japaneseFile, StandardCharsets.UTF_8);
-
-			System.out.println("Japanese content: " + japaneseContent.length());
-		}
-
 		/*if (true) {
 			return;
 		}*/
+
+		// English
+
+		String englishContent = FileUtils.readFileToString(
+			new File(fileName), StandardCharsets.UTF_8);
 
 		StructuredContentResource.Builder builder =
 			StructuredContentResource.builder();
@@ -119,10 +113,50 @@ public class Main {
 		StructuredContentResource structuredContentResource =
 			builder.authentication(
 				"test@liferay.com", "test"
+			).locale(
+				Locale.US
 			).build();
 
-		structuredContentResource.postSiteStructuredContent(
-			_GROUP_ID,
+		StructuredContent structuredContent =
+			structuredContentResource.postSiteStructuredContent(
+				_GROUP_ID,
+				new StructuredContent() {
+					{
+						contentFields = new ContentField[] {
+							new ContentField() {
+								{
+									contentFieldValue =
+										new ContentFieldValue() {
+											{
+												data = _toHTML(englishContent);
+											}
+										};
+									name = "content";
+								}
+							}
+						};
+						contentStructureId = _CONTENT_STRUCTURE_ID;
+						title = _getTitle(englishContent);
+					}
+				});
+
+		// Japanese
+
+		File japaneseFile = new File(fileName.replace("/en/", "/ja/"));
+
+		if (!japaneseFile.exists()) {
+			return;
+		}
+
+		String japaneseContent = FileUtils.readFileToString(
+			japaneseFile, StandardCharsets.UTF_8);
+
+		structuredContentResource = builder.locale(
+			Locale.JAPAN
+		).build();
+
+		structuredContentResource.putStructuredContent(
+			structuredContent.getId(),
 			new StructuredContent() {
 				{
 					contentFields = new ContentField[] {
@@ -130,7 +164,7 @@ public class Main {
 							{
 								contentFieldValue = new ContentFieldValue() {
 									{
-										data = _toHTML(englishContent);
+										data = _toHTML(japaneseContent);
 									}
 								};
 								name = "content";
@@ -138,7 +172,7 @@ public class Main {
 						}
 					};
 					contentStructureId = _CONTENT_STRUCTURE_ID;
-					title = _getTitle(englishContent);
+					title = _getTitle(japaneseContent);
 				}
 			});
 	}
