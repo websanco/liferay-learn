@@ -1,5 +1,9 @@
 # Data Removal
 
+```markdown
+{bdg-secondary}`Available 7.4+`
+```
+
 Current Liferay features may have known unnecessary data. The Data Removal tool removes this data.
 
 Here's how to remove the obsolete data:
