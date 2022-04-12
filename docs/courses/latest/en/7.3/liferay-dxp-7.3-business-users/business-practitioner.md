@@ -1,24 +1,25 @@
-# Liferay DXP 7.4 for Business Users
+# Business Practitioner
 
 ```{toctree}
 :maxdepth: 2
 
-liferay-dxp-7.4-for-business-users/ 
-liferay-dxp-7.4-for-business-users/create-and-manage-your-content-with-liferay-dxp.md 
-liferay-dxp-7.4-for-business-users/create-content-review-and-publication-processes.md 
-liferay-dxp-7.4-for-business-users/gather-and-analyze-data-with-liferay-dxp.md 
-liferay-dxp-7.4-for-business-users/build-new-sites-with-liferay-dxp.md 
-liferay-dxp-7.4-for-business-users/add-users-and-manage-permissions-with-liferay-dxp.md 
-liferay-dxp-7.4-for-business-users/improve-sites-with-liferay-dxps-modern-tools.md 
-liferay-dxp-7.4-for-business-users/secure-your-liferay-dxp-platform.md 
-liferay-dxp-7.4-for-business-users/using-liferay-objects.md 
+business-practitioner/digital-experiences-sites.md 
+business-practitioner/digital-asset-management.md 
+business-practitioner/manage-user-accounts.md 
+business-practitioner/control-user-access.md 
+business-practitioner/configure-review-processes.md 
+business-practitioner/gathering-and-addressing-feedback.md 
+business-practitioner/reflecting-business-hierarchies.md 
+business-practitioner/creating-multistage-review-processes.md 
+business-practitioner/building-a-website-with-experience-management-tools.md 
 ```
 
-* [Create and Manage Your Content with Liferay DXP](./liferay-dxp-7.4-for-business-users/create-and-manage-your-content-with-liferay-dxp.md) 
-* [Create Content Review and Publication Processes with Liferay DXP](./liferay-dxp-7.4-for-business-users/create-content-review-and-publication-processes-with-liferay-dxp.md) 
-* [Gather and Analyze Data with Liferay DXP](./liferay-dxp-7.4-for-business-users/gather-and-analyze-data-with-liferay-dxp.md) 
-* [Build New Sites with Liferay DXP](./liferay-dxp-7.4-for-business-users/build-new-sites-with-liferay-dxp.md) 
-* [Add Users and Manage Permissions with Liferay DXP](./liferay-dxp-7.4-for-business-users/add-users-and-manage-permissions-with-liferay-dxp.md) 
-* [Improve Sites with Liferay DXPs Modern Tools](./liferay-dxp-7.4-for-business-users/improve-sites-with-liferay-dxps-modern-tools.md) 
-* [Secure Your Liferay DXP Platform](./liferay-dxp-7.4-for-business-users/secure-your-liferay-dxp-platform.md) 
-* [Using Liferay Objects](./liferay-dxp-7.4-for-business-users/using-liferay-objects.md) 
+* [Creating Digital Experiences with Sites](./business-practitioner/digital-experiences-sites.md)
+* [Digital Asset Management](./business-practitioner/digital-asset-management.md)
+* [Import and Manage User Accounts](./business-practitioner/manage-user-accounts.md)
+* [Controlling User Access](./business-practitioner/control-user-access.md)
+* [Configuring Business Review Processes](./business-practitioner/configure-review-processes.md)
+* [Gathering and Addressing Feedback](./business-practitioner/gathering-and-addressing-feedback.md)
+* [Reflecting Business Hierarchies](./business-practitioner/reflecting-business-hierarchies.md)
+* [Creating Multistage Review Processes](./business-practitioner/creating-multistage-review-processes.md)
+* [Building a Website with Experience Management Tools](./business-practitioner/building-a-website-with-experience-management-tools.md)

@@ -1,5 +1,9 @@
 # Summary
 
+Coming Soon!
+
+<!--
+
 ## Starting Liferay
 
 * The latest versions of Liferay DXP are available as Docker images. With Docker installed, users can fetch and start Liferay DXP using the Docker image.
@@ -44,3 +48,5 @@
 * The GraphQL API is a query language. The GraphQL API supports interactions similar to headless APIs but with more flexibility.
 * Plain Web/REST Services are an older framework closely tied to Liferay DXP's internal working but lacking the power and flexibility of newer headless options.
 * OAuth 2.0 is an industry-standard authorization protocol. OAuth 2.0 authorizes password-less access to portions of user-owned resources and other permissioned resources.
+
+-->

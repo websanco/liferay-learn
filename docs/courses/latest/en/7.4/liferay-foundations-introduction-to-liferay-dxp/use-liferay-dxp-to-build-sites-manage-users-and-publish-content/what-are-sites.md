@@ -1,4 +1,4 @@
-# How can I customize a Site's Appearance?
+# What are Sites?
 
 Coming Soon!
 

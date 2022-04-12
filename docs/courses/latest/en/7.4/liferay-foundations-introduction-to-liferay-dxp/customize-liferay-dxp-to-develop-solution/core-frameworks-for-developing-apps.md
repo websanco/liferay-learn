@@ -1,5 +1,7 @@
 # What are the Core Frameworks for Developing Applications in Liferay?
 
+<!--
+
 ```{toctree}
 :maxdepth: 2
 
@@ -19,3 +21,5 @@ add-users-and-manage-permissions-with-liferay-dxp/exercises-permissions-on-sites
 * [Exercise 3a: Customize Site Content Reviewer Role](./add-users-and-manage-permissions-with-liferay-dxp/exercises-customize-site-content-reviewer-role.md) 
 * [Exercise 3b: Create Custom Site Role](./add-users-and-manage-permissions-with-liferay-dxp/exercises-create-custom-site-role.md) 
 * [Exercise 4: Permissions on Sites](./add-users-and-manage-permissions-with-liferay-dxp/exercises-permissions-on-sites.md) 
+
+-->

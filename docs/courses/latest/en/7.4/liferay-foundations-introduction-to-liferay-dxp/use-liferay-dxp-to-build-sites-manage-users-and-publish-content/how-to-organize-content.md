@@ -1,4 +1,4 @@
-# How can I customize a Site's Appearance?
+# How so I organize content?
 
 Coming Soon!
 
