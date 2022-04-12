@@ -12,12 +12,14 @@ function PatchForm() {
 			id: id,
 			name: name,
 		};
+
 		patchObject(object);
 	};
 
 	return (
 		<div className='App'>
-			<h2>Patch a J4X7 Objects</h2>
+			<h2>Patch a J4X7 Object</h2>
+
 			<form onSubmit={handleSubmit}>
 				<input
 					onChange={object => setId(object.target.value)}
@@ -25,12 +27,14 @@ function PatchForm() {
 					type='text'
 					value={id}
 				/>
+
 				<input
 					onChange={object => setName(object.target.value)}
 					placeholder='name'
 					type='text'
 					value={name}
 				/>
+
 				<input
 					onChange={object => setDescription(object.target.value)}
 					placeholder='description'

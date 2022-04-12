@@ -10,7 +10,8 @@ function DeleteForm() {
 
 	return (
 		<div className='App'>
-			<h2>Delete a J4X7 Objects</h2>
+			<h2>Delete a J4X7 Object</h2>
+
 			<form onSubmit={handleSubmit}>
 				<input
 					onChange={object => setId(object.target.value)}

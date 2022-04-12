@@ -10,12 +10,14 @@ function AddForm() {
 			description: description,
 			name: name,
 		};
+
 		addObject(object);
 	};
 
 	return (
 		<div className='App'>
-			<h2>Add a J4X7 Objects</h2>
+			<h2>Add a J4X7 Object</h2>
+
 			<form onSubmit={handleSubmit}>
 				<input
 					onChange={object => setName(object.target.value)}

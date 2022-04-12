@@ -9,6 +9,7 @@ function GetForm() {
 			.then(response => response.json())
 			.then(data => setObjects(data.items));
 	};
+
 	useEffect(() => {
 		get();
 	}, []);
@@ -16,6 +17,7 @@ function GetForm() {
 	return (
 		<div>
 			<h2>J4X7 Objects</h2>
+
 			{objects.map(items => (
 				<div key={items.id}>
 					{items.id} {items.name} {items.description}

@@ -7,8 +7,11 @@ function App() {
 	return (
 		<div>
 			<GetForm />
+
 			<AddForm />
+
 			<PatchForm />
+
 			<DeleteForm />
 		</div>
 	);
