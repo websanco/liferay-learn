@@ -8,6 +8,8 @@ All Objects use the `c/[pluralobjectlabel]` naming pattern (e.g., `c/timeoffrequ
 
 You can view and test an Object's APIs via the Liferay API Explorer at `[server]:[port]/o/api` (e.g., `localhost:8080/o/api`). REST APIs are listed under *REST Applications*. Click on *GraphQL* to access Liferay's [Graph*i*QL](https://github.com/graphql/graphiql) browser.
 
+See [Using APIs](../objects-tutorials/using-apis.md) for related Object tutorials.
+
 ## Object REST APIs
 
 With the REST APIs, you can perform both single and batch CRUD operations for Object entries.
@@ -28,11 +30,11 @@ The following REST APIs are available for all company scoped Objects.
 
 | HTTP Method | HTTP Endpoint | Java Method | Description |
 | :--- | :--- | :--- | :--- |
-| GET | `/` | `getObjectNamePage` | Returns a complete list of Object entries in a Liferay instance; results can be paginated, filtered, searched, and sorted |
-| POST | `/` | `postObjectNamePage` | Creates a new Object entry using the details provided in the API call |
 | DELETE | `/by-external-reference-code/{externalReferenceCode}` | `deleteByExternalReferenceCode` | Deletes the specified Object entry using its external reference code |
 | GET | `/by-external-reference-code/{externalReferenceCode}` | `getByExternalReferenceCode`| Returns details for the specified Object entry using its external reference code |
 | PUT | `/by-external-reference-code/{externalReferenceCode}` | `putByExternalReferenceCode` | Replaces the specified Object entry's details with those provided in the API call using its external reference code |
+| GET | `/` | `getObjectNamePage` | Returns a complete list of Object entries in a Liferay instance; results can be paginated, filtered, searched, and sorted |
+| POST | `/` | `postObjectName` | Creates a new Object entry using the details provided in the API call |
 | DELETE | `/batch` | `deleteObjectNameBatch` | Deletes multiple Object entries |
 | POST | `/batch` | `postObjectNameBatch` | Creates multiple Object entries using the details provided in the API call |
 | PUT | `/batch` | `putObjectNameBatch` | Replaces multiple Object entries using the details provided in the API call |
@@ -73,3 +75,4 @@ See [Consuming GraphQL APIs](../../../headless-delivery/consuming-apis/consuming
 
 * [Consuming REST Services](../../../headless-delivery/consuming-apis/consuming-rest-services.md)
 * [Consuming GraphQL APIs](../../../headless-delivery/consuming-apis/consuming-graphql-apis.md)
+* [Using APIs](../objects-tutorials/using-apis.md)
