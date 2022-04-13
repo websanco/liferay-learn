@@ -61,5 +61,5 @@ Liferayは、 [ClamAV Daemon](https://www.clamav.net/documents/scanning#clamd) (
 ## 追加情報
 
 * [ファイルストレージの構成](./configuring-file-storage.md)
-* [Liferayの設定](../configuring_liferay.html)
+* [Liferayの設定](../configuring-liferay.html)
 * [システム設定](../configuring-liferay/system-settings.md)

@@ -43,7 +43,7 @@ companyId=20098
 userId=36059
 ```
 
-To find the `companyId` for a [Virtual Instance](../../system-administration/configuring-liferay/virtual_instances.rst), go to Control Panel &rarr; System &rarr; Virtual Instances. The Instance ID displayed in the table is the `companyId` to use in the configuration file.
+To find the `companyId` for a [Virtual Instance](../../system-administration/configuring-liferay/virtual-instances.md), go to Control Panel &rarr; System &rarr; Virtual Instances. The Instance ID displayed in the table is the `companyId` to use in the configuration file.
 
 ```{note}
 `Why is there an extra field in the configuration file?`

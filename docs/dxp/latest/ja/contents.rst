@@ -14,7 +14,7 @@
    using-search
    collaboration_and_social
    users-and-permissions
-   system_administration
+   system-administration
    building-applications
    liferay-internals
    headless_delivery

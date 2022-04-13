@@ -46,7 +46,7 @@ Individual [Users](./../users/understanding-users.md) can be manually assigned t
 
 ### Regular Roles
 
-Instance scoped Roles are called Regular Roles. These Roles grant permissions globally, or throughout the [Virtual Instance](./../../system-administration/configuring-liferay/virtual_instances.html).
+Instance scoped Roles are called Regular Roles. These Roles grant permissions globally, or throughout the [Virtual Instance](./../../system-administration/configuring-liferay/virtual-instances.html).
 
 Several User collections can be assigned to Regular Roles:
 

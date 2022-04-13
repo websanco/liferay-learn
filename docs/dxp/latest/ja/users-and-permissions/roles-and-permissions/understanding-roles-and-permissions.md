@@ -48,7 +48,7 @@ Liferay DXP内で目的の機能を実行するために必要な権限をユー
 
 ### 通常のロール
 
-インスタンススコープのロールは通常のロールと呼ばれます。 これらのロールは、グローバルに、または [仮想インスタンス](./../../system-administration/configuring-liferay/virtual_instances.html) 全体に権限を付与します。
+インスタンススコープのロールは通常のロールと呼ばれます。 これらのロールは、グローバルに、または [仮想インスタンス](./../../system-administration/configuring-liferay/virtual-instances.html) 全体に権限を付与します。
 
 いくつかのユーザーコレクションを通常のロールに割り当てることができます。
 

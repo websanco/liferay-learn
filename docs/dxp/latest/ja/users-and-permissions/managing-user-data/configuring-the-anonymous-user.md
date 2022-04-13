@@ -45,7 +45,7 @@ companyId=20098
 userId=36059
 ```
 
-To find the `companyId` for a [仮想インスタンス](../../system-administration/configuring-liferay/virtual_instances.rst) , go to Control Panel &rarr; System &rarr; Virtual Instances. 表に表示されているインスタンスIDが、設定ファイルで使用する `companyId` です。
+To find the `companyId` for a [仮想インスタンス](../../system-administration/configuring-liferay/virtual-instances.md) , go to Control Panel &rarr; System &rarr; Virtual Instances. 表に表示されているインスタンスIDが、設定ファイルで使用する `companyId` です。
 
 ```{note}
    `構成ファイルに余分なフィールドがあるのはなぜですか？`
