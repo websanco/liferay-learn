@@ -4,10 +4,8 @@ import com.liferay.commerce.model.CommerceShipment;
 import com.liferay.commerce.notification.type.CommerceNotificationType;
 import com.liferay.portal.kernel.language.LanguageUtil;
 import com.liferay.portal.kernel.util.ResourceBundleUtil;
-
 import java.util.Locale;
 import java.util.ResourceBundle;
-
 import org.osgi.service.component.annotations.Component;
 
 @Component(
