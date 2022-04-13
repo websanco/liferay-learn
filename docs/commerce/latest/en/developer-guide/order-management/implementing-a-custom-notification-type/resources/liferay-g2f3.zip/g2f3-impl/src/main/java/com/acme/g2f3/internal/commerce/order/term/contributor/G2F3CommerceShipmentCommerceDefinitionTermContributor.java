@@ -60,10 +60,8 @@ public class G2F3CommerceShipmentCommerceDefinitionTermContributor
 			CommerceAddress commerceAddress =
 				commerceShipment.fetchCommerceAddress();
 
-			return _commerceDefinitionTermContributor.getFilledTerm(
-				commerceAddress.getStreet1() + ", " +
-					commerceAddress.getCity() + ", " + commerceAddress.getZip(),
-				commerceAddress, locale);
+			return commerceAddress.getStreet1() + ", " +
+				commerceAddress.getCity() + ", " + commerceAddress.getZip();
 		}
 
 		if (term.equals(_SHIPMENT_ID)) {
@@ -104,10 +102,6 @@ public class G2F3CommerceShipmentCommerceDefinitionTermContributor
 		).put(
 			_SHIPMENT_ID, "g2f3-shipment-id-definition-term"
 		).build();
-
-	@Reference
-	private CommerceDefinitionTermContributor
-		_commerceDefinitionTermContributor;
 
 	@Reference
 	private UserLocalService _userLocalService;
