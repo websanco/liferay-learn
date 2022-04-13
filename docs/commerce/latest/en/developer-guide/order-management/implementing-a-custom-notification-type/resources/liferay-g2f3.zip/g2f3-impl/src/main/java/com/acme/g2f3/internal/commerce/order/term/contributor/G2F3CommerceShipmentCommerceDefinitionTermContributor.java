@@ -66,8 +66,12 @@ public class G2F3CommerceShipmentCommerceDefinitionTermContributor
 		}
 
 		if (term.equals(_ORDER_SHIPPING_ADDRESS)) {
-			return _formatAddressTerm(
-				commerceShipment.fetchCommerceAddress(), locale);
+			
+			CommerceAddress commerceAddress = commerceShipment.fetchCommerceAddress();
+			
+			return _commerceDefinitionTermContributor.getFilledTerm((commerceAddress.getStreet1()
+					+ ", " + commerceAddress.getCity() + ", " + commerceAddress.getZip()), 
+					commerceAddress, locale);
 		}
 
 		if (term.equals(_SHIPMENT_ID)) {
@@ -92,73 +96,6 @@ public class G2F3CommerceShipmentCommerceDefinitionTermContributor
 		return new ArrayList<>(_commerceShipmentDefinitionTermsMap.keySet());
 	}
 
-	private String _formatAddressTerm(
-		CommerceAddress commerceAddress, Locale locale) {
-
-		if (commerceAddress == null) {
-			if (_log.isDebugEnabled()) {
-				_log.debug("Commerce address is null");
-			}
-
-			return StringPool.BLANK;
-		}
-
-		// Build the address string
-
-		StringBundler addressSB = new StringBundler(commerceAddress.getName());
-
-		addressSB.append("<br/>");
-
-		addressSB.append(commerceAddress.getStreet1());
-		addressSB.append("<br/>");
-
-		if (!Validator.isBlank(commerceAddress.getStreet2())) {
-			addressSB.append(commerceAddress.getStreet2());
-			addressSB.append("<br/>");
-		}
-
-		if (!Validator.isBlank(commerceAddress.getStreet3())) {
-			addressSB.append(commerceAddress.getStreet3());
-			addressSB.append("<br/>");
-		}
-
-		addressSB.append(commerceAddress.getCity());
-		addressSB.append(StringPool.COMMA_AND_SPACE);
-		addressSB.append(commerceAddress.getZip());
-		addressSB.append("<br/>");
-
-		try {
-			Region region = commerceAddress.getRegion();
-
-			if (region != null) {
-				addressSB.append(region.getName());
-				addressSB.append(StringPool.COMMA_AND_SPACE);
-			}
-
-			Country country = commerceAddress.getCountry();
-
-			if (country != null) {
-				addressSB.append(country.getTitle(locale));
-			}
-		}
-		catch (PortalException portalException) {
-			if (_log.isDebugEnabled()) {
-				_log.debug(
-					"It was not possible to get either the country or region " +
-						"for this commerce address",
-					portalException);
-			}
-		}
-
-		if (_log.isDebugEnabled()) {
-			_log.debug(
-				"Adding address term to the notification: " +
-					addressSB.toString());
-		}
-
-		return addressSB.toString();
-	}
-
 	private static final String _ORDER_CREATOR_NAME = "[%ORDER_CREATOR_NAME%]";
 
 	private static final String _ORDER_SHIPPING_ADDRESS =
@@ -181,5 +118,8 @@ public class G2F3CommerceShipmentCommerceDefinitionTermContributor
 
 	@Reference
 	private UserLocalService _userLocalService;
+	
+	@Reference
+	private CommerceDefinitionTermContributor _commerceDefinitionTermContributor;
 
 }
