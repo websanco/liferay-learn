@@ -1,7 +1,7 @@
 package com.acme.g2f3.internal.notification.type;
 
 import com.liferay.commerce.constants.CommerceOrderConstants;
-import com.liferay.commerce.model.CommerceOrder;
+import com.liferay.commerce.model.CommerceShipment;
 import com.liferay.commerce.notification.type.CommerceNotificationType;
 import com.liferay.portal.kernel.language.LanguageUtil;
 import com.liferay.portal.kernel.util.ResourceBundleUtil;
@@ -13,42 +13,46 @@ import org.osgi.service.component.annotations.Component;
 
 @Component(
 	property = {
-		"commerce.notification.type.key=shipment-created",
+		"commerce.notification.type.key=g2f3",
 		"commerce.notification.type.order:Integer=51"
 	},
 	service = CommerceNotificationType.class
 )
-public class G2F3OrderShippedCommerceNotificationTypeImpl
+public class G2F3ShipmentCreatedNotificationTypeImpl
 	implements CommerceNotificationType {
 
 	@Override
 	public String getClassName(Object object) {
-		if (!(object instanceof CommerceOrder)) {
+		if (!(object instanceof CommerceShipment)) {
 			return null;
 		}
 
-		return CommerceOrder.class.getName();
+		return CommerceShipment.class.getName();
 	}
 
 	@Override
 	public long getClassPK(Object object) {
-		if (!(object instanceof CommerceOrder)) {
+		if (!(object instanceof CommerceShipment)) {
 			return 0;
 		}
 
-		CommerceOrder commerceOrder = (CommerceOrder)object;
-
-		return commerceOrder.getCommerceOrderId();
+		CommerceShipment commerceShipment = (CommerceShipment)object;
+		
+		return commerceShipment.getPrimaryKey();
 	}
 
 	@Override
 	public String getKey() {
-		return "shipment-created";
+		return "g2f3";
 	}
-
+	
 	@Override
 	public String getLabel(Locale locale) {
-		return "Shipment Created";
+		ResourceBundle resourceBundle = ResourceBundleUtil.getBundle(
+			"content.Language", locale, getClass());
+
+		return LanguageUtil.get(
+			resourceBundle, "g2f3-shipment-created");
 	}
 
 }
