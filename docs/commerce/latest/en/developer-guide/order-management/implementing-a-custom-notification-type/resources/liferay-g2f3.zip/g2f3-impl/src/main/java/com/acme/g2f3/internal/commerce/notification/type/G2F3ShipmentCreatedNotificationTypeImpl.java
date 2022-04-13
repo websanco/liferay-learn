@@ -3,10 +3,8 @@ package com.acme.g2f3.internal.commerce.notification.type;
 import com.liferay.commerce.model.CommerceShipment;
 import com.liferay.commerce.notification.type.CommerceNotificationType;
 import com.liferay.portal.kernel.language.LanguageUtil;
-import com.liferay.portal.kernel.util.ResourceBundleUtil;
 
 import java.util.Locale;
-import java.util.ResourceBundle;
 
 import org.osgi.service.component.annotations.Component;
 
@@ -47,10 +45,7 @@ public class G2F3ShipmentCreatedNotificationTypeImpl
 
 	@Override
 	public String getLabel(Locale locale) {
-		ResourceBundle resourceBundle = ResourceBundleUtil.getBundle(
-			"content.Language", locale, getClass());
-
-		return LanguageUtil.get(resourceBundle, "g2f3-shipment-created");
+		return LanguageUtil.get(locale, "g2f3-shipment-created");
 	}
 
 }
