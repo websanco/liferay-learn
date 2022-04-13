@@ -64,22 +64,20 @@ public class G2F3CommerceShipmentRecipientCommerceDefinitionTermContributor
 
 	@Override
 	public String getLabel(String term, Locale locale) {
-		return LanguageUtil.get(
-			locale, _commerceShipmentDefinitionTermsMap.get(term));
+		return LanguageUtil.get(locale, _languageKeys.get(term));
 	}
 
 	@Override
 	public List<String> getTerms() {
-		return new ArrayList<>(_commerceShipmentDefinitionTermsMap.keySet());
+		return new ArrayList<>(_languageKeys.keySet());
 	}
 
 	private static final String _ORDER_CREATOR_EMAIL =
 		"[%ORDER_CREATOR_EMAIL%]";
 
-	private static final Map<String, String>
-		_commerceShipmentDefinitionTermsMap = HashMapBuilder.put(
-			_ORDER_CREATOR_EMAIL, "g2f3-order-creator-email-definition-term"
-		).build();
+	private static final Map<String, String> _languageKeys = HashMapBuilder.put(
+		_ORDER_CREATOR_EMAIL, "g2f3-order-creator-email-definition-term"
+	).build();
 
 	@Reference
 	private UserLocalService _userLocalService;

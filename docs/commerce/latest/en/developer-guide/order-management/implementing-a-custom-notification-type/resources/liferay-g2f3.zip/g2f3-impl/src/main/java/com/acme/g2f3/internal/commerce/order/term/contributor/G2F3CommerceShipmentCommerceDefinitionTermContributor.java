@@ -78,12 +78,12 @@ public class G2F3CommerceShipmentCommerceDefinitionTermContributor
 	@Override
 	public String getLabel(String term, Locale locale) {
 		return LanguageUtil.get(
-			locale, _commerceShipmentDefinitionTermsMap.get(term));
+			locale, _languageKeys.get(term));
 	}
 
 	@Override
 	public List<String> getTerms() {
-		return new ArrayList<>(_commerceShipmentDefinitionTermsMap.keySet());
+		return new ArrayList<>(_languageKeys.keySet());
 	}
 
 	private static final String _ORDER_CREATOR_NAME = "[%ORDER_CREATOR_NAME%]";
@@ -94,7 +94,7 @@ public class G2F3CommerceShipmentCommerceDefinitionTermContributor
 	private static final String _SHIPMENT_ID = "[%SHIPMENT_ID%]";
 
 	private static final Map<String, String>
-		_commerceShipmentDefinitionTermsMap = HashMapBuilder.put(
+		_languageKeys = HashMapBuilder.put(
 			_ORDER_CREATOR_NAME, "g2f3-order-creator-name-definition-term"
 		).put(
 			_ORDER_SHIPPING_ADDRESS,
