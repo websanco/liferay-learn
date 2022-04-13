@@ -1,4 +1,4 @@
-package com.acme.g2f3.internal.order.term.contributor;
+package com.acme.g2f3.internal.commerce.order.term.contributor;
 
 import com.liferay.commerce.account.constants.CommerceAccountConstants;
 import com.liferay.commerce.account.model.CommerceAccount;
