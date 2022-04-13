@@ -27,8 +27,7 @@ public class G2F3CommerceShipmentModelListener
 		}
 		catch (PortalException portalException) {
 			if (_log.isDebugEnabled()) {
-				_log.debug(
-					"The notification could not be processed", portalException);
+				_log.debug(portalException);
 			}
 		}
 	}

@@ -1,4 +1,4 @@
-package com.acme.g2f3.internal.notification.type;
+package com.acme.g2f3.internal.commerce.notification.type;
 
 import com.liferay.commerce.model.CommerceShipment;
 import com.liferay.commerce.notification.type.CommerceNotificationType;
