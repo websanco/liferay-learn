@@ -4,6 +4,8 @@ import com.liferay.commerce.model.CommerceShipment;
 import com.liferay.commerce.notification.util.CommerceNotificationHelper;
 import com.liferay.portal.kernel.exception.ModelListenerException;
 import com.liferay.portal.kernel.model.BaseModelListener;
+import com.liferay.portal.kernel.log.Log;
+import com.liferay.portal.kernel.log.LogFactoryUtil;
 import com.liferay.portal.kernel.model.ModelListener;
 import com.liferay.portal.kernel.exception.PortalException;
 import org.osgi.service.component.annotations.Component;
@@ -28,11 +30,17 @@ public class G2F3CommerceShipmentModelListener
 		}
 		catch(PortalException portalException) {
 			
-			System.out.println("Error: " + portalException.getMessage());
+			if (_log.isDebugEnabled()) {
+				_log.debug("The notification could not be processed",
+					portalException);
+			}
 			
 		}
 	}
 
+	private static final Log _log = LogFactoryUtil.getLog(
+			G2F3CommerceShipmentModelListener.class);
+	
 	@Reference
 	private CommerceNotificationHelper _commerceNotificationHelper;
 }
