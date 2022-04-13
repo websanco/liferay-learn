@@ -10,9 +10,9 @@
    collaboration-and-social/social_tools.rst
    collaboration-and-social/wiki.rst
    collaboration-and-social/questions.rst
-   collaboration-and-social/alerts_and_announcements.rst
+   collaboration-and-social/alerts-and-announcements.md
    collaboration-and-social/invitations.rst
-   collaboration-and-social/knowledge_base.rst
+   collaboration-and-social/knowledge-base.md
 
 Liferay DXPには、コラボレーションとコミュニケーションを促進するサイトやコミュニティを構築するために使用できる柔軟なアプリケーションの幅広いスイートが付属しています。 これらの機能の概要については、「 `コラボレーションとソーシャルの概要 <./ collaboration-and-social/collaboration-and-social-overview.md>`_ 」を参照してください。
 

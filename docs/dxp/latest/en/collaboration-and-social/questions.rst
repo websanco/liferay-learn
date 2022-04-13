@@ -6,7 +6,7 @@ Questions
 
    questions/using-the-questions-app.md
    questions/configuring-the-questions-app.md
-   questions/developer_guide.rst
+   questions/developer-guide.md
    questions/apis.rst
 
 -  :doc:`/collaboration-and-social/questions/using-the-questions-app`

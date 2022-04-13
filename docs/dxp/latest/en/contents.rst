@@ -11,7 +11,7 @@ Contents
    content-authoring-and-management
    process_automation
    using-search
-   collaboration_and_social
+   collaboration-and-social
    users-and-permissions
    system-administration
    building-applications

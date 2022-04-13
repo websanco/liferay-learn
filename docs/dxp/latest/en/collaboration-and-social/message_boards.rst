@@ -5,7 +5,7 @@ Message Boards
    :maxdepth: 2
 
    message-boards/user_guide.rst
-   message-boards/developer_guide.rst
+   message-boards/developer-guide.md
    message-boards/apis.rst
 
 User Guide

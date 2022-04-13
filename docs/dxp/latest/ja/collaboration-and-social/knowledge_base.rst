@@ -15,7 +15,7 @@
    knowledge-base/knowledge-base-zip-file-requirements.md
    knowledge-base/knowledge-base-importer-faq.md
    knowledge-base/knowledge-base-system-settings.md
-   knowledge-base/developer_guide.rst
+   knowledge-base/developer-guide.md
 
 -  :doc:`/collaboration-and-social/knowledge-base/using-the-knowledge-base`
 -  :doc:`/collaboration-and-social/knowledge-base/creating-knowledge-base-articles`
