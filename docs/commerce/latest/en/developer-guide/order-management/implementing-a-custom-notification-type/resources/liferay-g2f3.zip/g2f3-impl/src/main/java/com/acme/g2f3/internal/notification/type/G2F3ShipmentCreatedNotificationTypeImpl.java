@@ -1,6 +1,5 @@
 package com.acme.g2f3.internal.notification.type;
 
-import com.liferay.commerce.constants.CommerceOrderConstants;
 import com.liferay.commerce.model.CommerceShipment;
 import com.liferay.commerce.notification.type.CommerceNotificationType;
 import com.liferay.portal.kernel.language.LanguageUtil;
@@ -37,7 +36,7 @@ public class G2F3ShipmentCreatedNotificationTypeImpl
 		}
 
 		CommerceShipment commerceShipment = (CommerceShipment)object;
-		
+
 		return commerceShipment.getPrimaryKey();
 	}
 
@@ -45,14 +44,13 @@ public class G2F3ShipmentCreatedNotificationTypeImpl
 	public String getKey() {
 		return "g2f3";
 	}
-	
+
 	@Override
 	public String getLabel(Locale locale) {
 		ResourceBundle resourceBundle = ResourceBundleUtil.getBundle(
 			"content.Language", locale, getClass());
 
-		return LanguageUtil.get(
-			resourceBundle, "g2f3-shipment-created");
+		return LanguageUtil.get(resourceBundle, "g2f3-shipment-created");
 	}
 
 }

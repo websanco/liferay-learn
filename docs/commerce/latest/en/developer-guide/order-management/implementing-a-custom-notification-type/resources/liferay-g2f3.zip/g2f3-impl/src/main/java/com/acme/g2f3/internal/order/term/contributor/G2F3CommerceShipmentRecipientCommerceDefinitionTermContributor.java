@@ -2,16 +2,12 @@ package com.acme.g2f3.internal.order.term.contributor;
 
 import com.liferay.commerce.account.constants.CommerceAccountConstants;
 import com.liferay.commerce.account.model.CommerceAccount;
-import com.liferay.commerce.account.service.CommerceAccountUserRelLocalService;
 import com.liferay.commerce.constants.CommerceDefinitionTermConstants;
 import com.liferay.commerce.model.CommerceShipment;
 import com.liferay.commerce.order.CommerceDefinitionTermContributor;
-import com.liferay.commerce.service.CommerceOrderItemLocalService;
 import com.liferay.portal.kernel.exception.PortalException;
 import com.liferay.portal.kernel.language.LanguageUtil;
 import com.liferay.portal.kernel.model.User;
-import com.liferay.portal.kernel.service.RoleLocalService;
-import com.liferay.portal.kernel.service.UserGroupLocalService;
 import com.liferay.portal.kernel.service.UserLocalService;
 import com.liferay.portal.kernel.util.HashMapBuilder;
 import com.liferay.portal.kernel.util.ResourceBundleUtil;
@@ -54,18 +50,20 @@ public class G2F3CommerceShipmentRecipientCommerceDefinitionTermContributor
 
 		if (term.equals(_ORDER_CREATOR_EMAIL)) {
 			CommerceAccount commerceAccount =
-					commerceShipment.getCommerceAccount();
+				commerceShipment.getCommerceAccount();
 
 			if (commerceAccount.getType() ==
 					CommerceAccountConstants.ACCOUNT_TYPE_PERSONAL) {
 
 				User user = _userLocalService.getUser(
 					commerceAccount.getUserId());
+
 				return String.valueOf(user.getUserId());
 			}
+
 			return String.valueOf(commerceShipment.getUserId());
 		}
-		
+
 		return term;
 	}
 
@@ -83,10 +81,11 @@ public class G2F3CommerceShipmentRecipientCommerceDefinitionTermContributor
 		return new ArrayList<>(_commerceShipmentDefinitionTermsMap.keySet());
 	}
 
-	private static final String _ORDER_CREATOR_EMAIL = "[%ORDER_CREATOR_EMAIL%]";
+	private static final String _ORDER_CREATOR_EMAIL =
+		"[%ORDER_CREATOR_EMAIL%]";
 
-	private static final Map<String, String> _commerceShipmentDefinitionTermsMap =
-		HashMapBuilder.put(
+	private static final Map<String, String>
+		_commerceShipmentDefinitionTermsMap = HashMapBuilder.put(
 			_ORDER_CREATOR_EMAIL, "g2f3-order-creator-email-definition-term"
 		).build();
 
