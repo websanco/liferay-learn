@@ -4,7 +4,7 @@
 .. toctree::
    :maxdepth: 2
 
-   social-tools/user_guide.rst
+   social-tools/user-guide.md
    social-tools/developer-guide.md
    social-tools/apis.rst
 

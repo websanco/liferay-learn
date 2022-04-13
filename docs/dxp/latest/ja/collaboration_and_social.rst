@@ -5,11 +5,11 @@
    :maxdepth: 3
 
    collaboration-and-social/collaboration-and-social-overview.md
-   collaboration-and-social/message_boards.rst
-   collaboration-and-social/notifications_and_requests.rst
-   collaboration-and-social/social_tools.rst
+   collaboration-and-social/message-boards.md
+   collaboration-and-social/notifications-and-requests.md
+   collaboration-and-social/social-tools.md
    collaboration-and-social/wiki.rst
-   collaboration-and-social/questions.rst
+   collaboration-and-social/questions.md
    collaboration-and-social/alerts-and-announcements.md
    collaboration-and-social/invitations.rst
    collaboration-and-social/knowledge-base.md

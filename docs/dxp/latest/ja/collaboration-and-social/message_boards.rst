@@ -4,7 +4,7 @@
 .. toctree::
    :maxdepth: 2
 
-   message-boards/user_guide.rst
+   message-boards/user-guide.md
    message-boards/developer-guide.md
    message-boards/apis.rst
 

@@ -4,7 +4,7 @@
 :maxdepth: 2
 
 04-alerts-and-announcements/sending-alerts-and-announcements.md
-04-alerts-and-announcements/user_guide.rst
+04-alerts-and-announcements/user-guide.md
 04-alerts-and-announcements/developer-guide.md
 04-alerts-and-announcements/apis.rst
 ```

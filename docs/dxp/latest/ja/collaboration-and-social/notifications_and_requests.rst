@@ -4,7 +4,7 @@
 .. toctree::
    :maxdepth: 2
 
-   notifications-and-requests/user_guide.rst
+   notifications-and-requests/user-guide.md
    notifications-and-requests/developer-guide.md
    notifications-and-requests/apis.rst
 

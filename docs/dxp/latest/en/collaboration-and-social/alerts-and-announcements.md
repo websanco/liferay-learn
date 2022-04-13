@@ -9,10 +9,10 @@ alerts-and-announcements/developer-guide.md
 
 * [Sending Alerts and Announcements](./alerts-and-announcements/sending-alerts-and-announcements.md)
 
-Developer Guide
+## Developer Guide
 
 Coming soon!
 
-APIs
+## APIs
 
 Coming soon!
