@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 
-import {getObjects} from './Requests';
+import {getObjects} from '../utils/Requests';
 
 function GetForm() {
 	const [objects, setObjects] = useState([]);

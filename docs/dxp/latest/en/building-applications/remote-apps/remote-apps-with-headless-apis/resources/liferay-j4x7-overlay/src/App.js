@@ -1,7 +1,7 @@
-import AddForm from './AddForm';
-import DeleteForm from './DeleteForm';
-import GetForm from './GetForm';
-import PatchForm from './PatchForm';
+import AddForm from './components/AddForm';
+import DeleteForm from './components/DeleteForm';
+import GetForm from './components/GetForm';
+import PatchForm from './components/PatchForm';
 
 function App() {
 	return (

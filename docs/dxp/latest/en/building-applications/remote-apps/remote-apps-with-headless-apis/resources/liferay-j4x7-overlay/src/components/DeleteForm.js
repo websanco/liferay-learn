@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 
-import {deleteObject} from './Requests';
+import {deleteObject} from '../utils/Requests';
 
 function DeleteForm() {
 	const [id, setId] = useState('');

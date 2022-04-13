@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 
-import {addObject} from './Requests';
+import {addObject} from '../utils/Requests';
 
 function AddForm() {
 	const [description, setDescription] = useState('');

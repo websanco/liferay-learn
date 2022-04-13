@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 
-import {patchObject} from './Requests';
+import {patchObject} from '../utils/Requests';
 
 function PatchForm() {
 	const [description, setDescription] = useState('');
