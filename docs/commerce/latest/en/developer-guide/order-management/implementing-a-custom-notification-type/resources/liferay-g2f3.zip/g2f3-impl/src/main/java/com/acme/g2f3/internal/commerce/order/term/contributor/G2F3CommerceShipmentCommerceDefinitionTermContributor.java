@@ -6,25 +6,16 @@ import com.liferay.commerce.constants.CommerceDefinitionTermConstants;
 import com.liferay.commerce.model.CommerceAddress;
 import com.liferay.commerce.model.CommerceShipment;
 import com.liferay.commerce.order.CommerceDefinitionTermContributor;
-import com.liferay.petra.string.StringBundler;
-import com.liferay.petra.string.StringPool;
 import com.liferay.portal.kernel.exception.PortalException;
 import com.liferay.portal.kernel.language.LanguageUtil;
-import com.liferay.portal.kernel.log.Log;
-import com.liferay.portal.kernel.log.LogFactoryUtil;
-import com.liferay.portal.kernel.model.Country;
-import com.liferay.portal.kernel.model.Region;
 import com.liferay.portal.kernel.model.User;
 import com.liferay.portal.kernel.service.UserLocalService;
 import com.liferay.portal.kernel.util.HashMapBuilder;
-import com.liferay.portal.kernel.util.ResourceBundleUtil;
-import com.liferay.portal.kernel.util.Validator;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
-import java.util.ResourceBundle;
 
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
@@ -66,12 +57,13 @@ public class G2F3CommerceShipmentCommerceDefinitionTermContributor
 		}
 
 		if (term.equals(_ORDER_SHIPPING_ADDRESS)) {
-			
-			CommerceAddress commerceAddress = commerceShipment.fetchCommerceAddress();
-			
-			return _commerceDefinitionTermContributor.getFilledTerm((commerceAddress.getStreet1()
-					+ ", " + commerceAddress.getCity() + ", " + commerceAddress.getZip()), 
-					commerceAddress, locale);
+			CommerceAddress commerceAddress =
+				commerceShipment.fetchCommerceAddress();
+
+			return _commerceDefinitionTermContributor.getFilledTerm(
+				commerceAddress.getStreet1() + ", " +
+					commerceAddress.getCity() + ", " + commerceAddress.getZip(),
+				commerceAddress, locale);
 		}
 
 		if (term.equals(_SHIPMENT_ID)) {
@@ -103,9 +95,6 @@ public class G2F3CommerceShipmentCommerceDefinitionTermContributor
 
 	private static final String _SHIPMENT_ID = "[%SHIPMENT_ID%]";
 
-	private static final Log _log = LogFactoryUtil.getLog(
-		G2F3CommerceShipmentCommerceDefinitionTermContributor.class);
-
 	private static final Map<String, String>
 		_commerceShipmentDefinitionTermsMap = HashMapBuilder.put(
 			_ORDER_CREATOR_NAME, "g2f3-order-creator-name-definition-term"
@@ -117,9 +106,10 @@ public class G2F3CommerceShipmentCommerceDefinitionTermContributor
 		).build();
 
 	@Reference
-	private UserLocalService _userLocalService;
-	
+	private CommerceDefinitionTermContributor
+		_commerceDefinitionTermContributor;
+
 	@Reference
-	private CommerceDefinitionTermContributor _commerceDefinitionTermContributor;
+	private UserLocalService _userLocalService;
 
 }
