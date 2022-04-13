@@ -17,32 +17,32 @@ function PatchForm() {
 	};
 
 	return (
-		<div className='App'>
+		<div className="App">
 			<h2>Patch a J4X7 Object</h2>
 
 			<form onSubmit={handleSubmit}>
 				<input
 					onChange={object => setId(object.target.value)}
-					placeholder='id'
-					type='text'
+					placeholder="id"
+					type="text"
 					value={id}
 				/>
 
 				<input
 					onChange={object => setName(object.target.value)}
-					placeholder='name'
-					type='text'
+					placeholder="name"
+					type="text"
 					value={name}
 				/>
 
 				<input
 					onChange={object => setDescription(object.target.value)}
-					placeholder='description'
-					type='text'
+					placeholder="description"
+					type="text"
 					value={description}
 				/>
 
-				<button type='submit'>Patch</button>
+				<button type="submit">Patch</button>
 			</form>
 		</div>
 	);

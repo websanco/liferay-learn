@@ -15,24 +15,24 @@ function AddForm() {
 	};
 
 	return (
-		<div className='App'>
+		<div className="App">
 			<h2>Add a J4X7 Object</h2>
 
 			<form onSubmit={handleSubmit}>
 				<input
 					onChange={object => setName(object.target.value)}
-					placeholder='name'
-					type='text'
+					placeholder="name"
+					type="text"
 					value={name}
 				/>
 				<input
 					onChange={object => setDescription(object.target.value)}
-					placeholder='description'
-					type='text'
+					placeholder="description"
+					type="text"
 					value={description}
 				/>
 
-				<button type='submit'>Add</button>
+				<button type="submit">Add</button>
 			</form>
 		</div>
 	);
