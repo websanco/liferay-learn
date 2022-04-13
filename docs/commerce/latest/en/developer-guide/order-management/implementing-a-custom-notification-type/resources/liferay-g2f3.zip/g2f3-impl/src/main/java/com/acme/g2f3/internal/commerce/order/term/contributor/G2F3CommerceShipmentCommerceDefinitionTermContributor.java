@@ -31,17 +31,13 @@ import org.osgi.service.component.annotations.Reference;
 
 @Component(
 	property = {
-		"commerce.definition.term.contributor.key=" + G2F3CommerceShipmentCommerceDefinitionTermContributor.KEY,
+		"commerce.definition.term.contributor.key=" + CommerceDefinitionTermConstants.BODY_AND_SUBJECT_DEFINITION_TERMS_CONTRIBUTOR,
 		"commerce.notification.type.key=g2f3"
 	},
 	service = CommerceDefinitionTermContributor.class
 )
 public class G2F3CommerceShipmentCommerceDefinitionTermContributor
 	implements CommerceDefinitionTermContributor {
-
-	public static final String KEY =
-		CommerceDefinitionTermConstants.
-			BODY_AND_SUBJECT_DEFINITION_TERMS_CONTRIBUTOR;
 
 	@Override
 	public String getFilledTerm(String term, Object object, Locale locale)
@@ -87,11 +83,8 @@ public class G2F3CommerceShipmentCommerceDefinitionTermContributor
 
 	@Override
 	public String getLabel(String term, Locale locale) {
-		ResourceBundle resourceBundle = ResourceBundleUtil.getBundle(
-			"content.Language", locale, getClass());
-
 		return LanguageUtil.get(
-			resourceBundle, _commerceShipmentDefinitionTermsMap.get(term));
+			locale, _commerceShipmentDefinitionTermsMap.get(term));
 	}
 
 	@Override
@@ -104,7 +97,7 @@ public class G2F3CommerceShipmentCommerceDefinitionTermContributor
 
 		if (commerceAddress == null) {
 			if (_log.isDebugEnabled()) {
-				_log.debug("The commerce address is null");
+				_log.debug("Commerce address is null");
 			}
 
 			return StringPool.BLANK;
