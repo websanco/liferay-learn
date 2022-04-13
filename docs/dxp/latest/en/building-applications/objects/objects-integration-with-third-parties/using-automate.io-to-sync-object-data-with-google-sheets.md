@@ -1,64 +1,70 @@
 # Using Automate.io to Sync Object Data with Google Sheets
 
+{bdg-secondary}`Available 7.4+`
+
 You can use Liferay Objects with data integration tools to create automated tasks for syncing Object data with external services. These tasks are triggered using webhooks and can connect to Google applications, Microsoft Office, and more.
 
-Here you'll learn how to use webhooks to trigger sync tasks between Liferay Objects and Google Sheets using Automate.io. Syncing your data in this way requires an Automate.io account, Google Spreadsheet, and active DXP 7.4 instance. The DXP instance must also have a published Object with the desired fields for sending or receiving data to the Google Spreadsheet.
+Here you'll learn how to use webhooks to trigger sync tasks between Liferay Objects and Google Sheets using [Automate.io](https://automate.io/). Syncing your data in this way requires an premium Automate.io account, Google Spreadsheet, and active DXP 7.4 instance. The DXP instance must also have a published Object with the desired fields for sending or receiving data to the Google Spreadsheet.
 
 ## Syncing Object Data to a Google Sheet
 
 Follow these steps to sync Object data to a Google Sheet:
 
-1. Open Automate.io and click on *Create a Bot*.
+1. Sign in to [Automate.io](https://automate.io/) and click on *Create a Bot*.
 
-    ![Open Automate.io and click on Create a Bot.](./using-automate.io-to-sync-object-data-with-google-sheets/images/01.png)
+   ![Open Automate.io and click on Create a Bot.](./using-automate.io-to-sync-object-data-with-google-sheets/images/01.png)
 
-1. On the *Trigger* Step, search and select *Webhooks*.
+1. For the *Trigger* step, select the *Webhooks* app.
 
-    ![Select Webhooks.](./using-automate.io-to-sync-object-data-with-google-sheets/images/02.png)
+   ![Select Webhooks.](./using-automate.io-to-sync-object-data-with-google-sheets/images/02.png)
 
-1.  Click the *Trigger Event* dropdown menu and select *Incoming Hook*.
+   ```{note}
+   Webhooks is a premium Automate.io feature.
+   ```
 
-    ![Select Incoming Hook.](./using-automate.io-to-sync-object-data-with-google-sheets/images/03.png)
+1. For the *Trigger Event*, select *Incoming Hook*.
 
-1. Copy the *Webhooks URL*.
+   ![Select Incoming Hook.](./using-automate.io-to-sync-object-data-with-google-sheets/images/03.png)
 
-     ![Copy the Webhooks URL.](./using-automate.io-to-sync-object-data-with-google-sheets/images/04.png)
+1. Copy the generated *webhook URL*.
 
-1. Use the copied URL to [define an Object action](../creating-and-managing-objects/defining-object-actions.md) that sends a request to the webhook endpoint whenever a new Object entry is added.
+   ![Copy the Webhooks URL.](./using-automate.io-to-sync-object-data-with-google-sheets/images/04.png)
 
-    ![Define an action that sends a request to the webhook endpoint whenever an entry is added.](./using-automate.io-to-sync-object-data-with-google-sheets/images/05.png)
+1. In your Liferay instance, use the copied URL to [define an Object action](../creating-and-managing-objects/defining-object-actions.md) that sends a request to the webhook endpoint whenever a new Object entry is added.
 
-1. Trigger the webhook by adding a test entry to the Object.
+   ![Define an action that sends a request to the webhook endpoint whenever an entry is added.](./using-automate.io-to-sync-object-data-with-google-sheets/images/05.png)
 
-   This allows the Webhooks module to determine the Object's data structure automatically.
+1. Add a test Object entry to trigger the webhook.
 
-1. On the *Action* step , search and select *Google Sheets*.
+   This allows the Webhooks app in your Automate.io bot to determine the Object's data structure automatically.
 
-    ![Select Google Sheets.](./using-automate.io-to-sync-object-data-with-google-sheets/images/06.png)
+1. For the *Action* step, select the *Google Sheets* app.
 
-1. Choose a Google Sheet account to connect.
+   ![Select Google Sheets.](./using-automate.io-to-sync-object-data-with-google-sheets/images/06.png)
 
-    ![Choose a Google Sheet account to connect.](./using-automate.io-to-sync-object-data-with-google-sheets/images/07.png)
+1. Click *Authorize* to connect the app with a Google account.
 
-1. Select the desired *Spreadsheet*.
+   ![Choose a Google account to connect.](./using-automate.io-to-sync-object-data-with-google-sheets/images/07.png)
 
-    ![Select the desired Spreadsheet.](./using-automate.io-to-sync-object-data-with-google-sheets/images/08.png)
+1. For the Action field, select *Add Row*.
 
-1. Select the desired *Spreadsheet*, *Worksheet* to sync with the Object and click *Save*.
+   ![Select Add Row.](./using-automate.io-to-sync-object-data-with-google-sheets/images/08.png)
 
-    ![Select the desired Spreadsheet and Worksheet.](./using-automate.io-to-sync-object-data-with-google-sheets/images/09.png)
+1. Select the desired *Spreadsheet* and *Worksheet* to sync with the Object and click *Save*.
 
-1. *Turn On* your bot.
+   ![Select the desired Spreadsheet and Worksheet.](./using-automate.io-to-sync-object-data-with-google-sheets/images/09.png)
 
-    ![Turn On your bot.](./using-automate.io-to-sync-object-data-with-google-sheets/images/10.png)
+1. *Turn on* your bot.
 
-1. Test your bot using live data. 
+   ![Turn on your bot.](./using-automate.io-to-sync-object-data-with-google-sheets/images/10.png)
 
-    ![Test your bot using live data.](./using-automate.io-to-sync-object-data-with-google-sheets/images/11.png)
+1. Add an Object entry to test your bot.
 
-1. Verify if the test successfully determined the Object's data structure. If the data sent to the webhook URL is found, the step will show it was successful.
+   ![Test your bot using live data.](./using-automate.io-to-sync-object-data-with-google-sheets/images/11.png)
 
-    ![Successful Test.](./using-automate.io-to-sync-object-data-with-google-sheets/images/12.png)
+1. Verify the bot successfully received the Object data and triggered the Google Sheets action.
+
+   ![Verify the test was successful.](./using-automate.io-to-sync-object-data-with-google-sheets/images/12.png)
 
 ## Additional Information
 
