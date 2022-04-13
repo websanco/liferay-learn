@@ -5,11 +5,11 @@
 
 content-authoring-and-management/asset-libraries.md
 content-authoring-and-management/blogs.md
-content-authoring-and-management/collections-and-collection-pages.rst
+content-authoring-and-management/collections-and-collection-pages.md
 content-authoring-and-management/content-dashboard.md
 content-authoring-and-management/documents-and-media.md
 content-authoring-and-management/page-performance-and-accessibility.md
-content-authoring-and-management/recycle-bin.rst
+content-authoring-and-management/recycle-bin.md
 content-authoring-and-management/tags-and-categories.md
 content-authoring-and-management/web-content.md
 ```
