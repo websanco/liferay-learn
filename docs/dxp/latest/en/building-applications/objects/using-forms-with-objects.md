@@ -1,6 +1,6 @@
 # Using Forms with Objects
 
-> Available: Liferay DXP/Portal 7.4+
+{bdg-secondary}`Available Liferay DXP 7.4+`
 
 Liferay Objects are integrated with the Forms application, so you can design forms for receiving user input and creating Object entries. To do this, first add a new form and configure it to use the Objects storage type. Then select the desired Object, design your form, and map its fields to the selected Object's fields.
 
@@ -84,19 +84,22 @@ Attempting to publish a form with invalid mappings displays an error message tha
 
 ## Field Compatibility Reference
 
-> For Liferay DXP 7.4 U10
+{bdg-secondary}`For Liferay 7.4 U20+`
 
 | Object Field Types | Compatible Form Fields |
 | :--- | :--- |
+| Attachment | &#10060; |
 | Boolean | Boolean (checkbox) |
 | Date | Date |
-| Text | Text, Multiple Selection, Grid, Color |
-| Long Text (*previously Clob*) | Text |
-| Picklist | Select from List, Single Selection |
+| Decimal (*previously Double*) | Numeric &rarr; Decimal |
 | Integer | Numeric &rarr; Integer |
 | Long Integer (*previously Long*) | Numeric &rarr; Integer |
-| Decimal (*previously Double*) | Numeric &rarr; Decimal |
+| Long Text (*previously Clob*) | Text |
+| Picklist | Select from List, Single Selection |
 | Precision Decimal (*previously BigDecimal*) | Numeric &rarr; Decimal |
+| Relationship |  &#10060; |
+| Rich Text | Rich Text |
+| Text (*previously String*) | Text, Multiple Selection, Grid, Color |
 
 ## Additional Information
 

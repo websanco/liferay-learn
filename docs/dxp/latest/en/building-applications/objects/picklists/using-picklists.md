@@ -42,7 +42,7 @@ Follow these steps to create a Picklist:
 
 ## Adding Picklist Fields to Objects
 
-Once a list is created, you can select it when creating Object fields. Select the *Picklist* field type and choose the desired list. See [Adding Fields to Objects](./creating-and-managing-objects/adding-fields-to-objects.md) for more information.
+Once a list is created, you can select it when creating Object fields. Select the *Picklist* field type and choose the desired list. See [Adding Fields to Objects](../creating-and-managing-objects/adding-fields-to-objects.md) for more information.
 
 ![Users can select the Picklist when creating new Object fields.](./using-picklists/images/05.png)
 
@@ -74,5 +74,5 @@ When making POST, PATCH, and PUT API calls for Objects that include a Picklist f
 
 ## Additional Information
 
-* [Adding Fields to Objects](./creating-and-managing-objects/adding-fields-to-objects.md)
-* [Designing Object Layouts](./creating-and-managing-objects/designing-object-layouts.md)
+* [Adding Fields to Objects](../creating-and-managing-objects/adding-fields-to-objects.md)
+* [Managing Picklist Permissions](./managing-picklist-permissions.md)

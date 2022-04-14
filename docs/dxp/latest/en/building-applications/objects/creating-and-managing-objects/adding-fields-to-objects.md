@@ -1,6 +1,6 @@
 # Adding Fields to Objects
 
-> Available: Liferay DXP/Portal 7.4+
+{bdg-secondary}`Available Liferay DXP 7.4+`
 
 Fields are data definitions that represent database columns. They store different [types of values](#field-types-ui-reference) for Liferay Objects. You can add fields to any published or unpublished Object, including both system and custom Objects.
 
@@ -9,7 +9,7 @@ When an Object is [published](./creating-objects.md#publishing-object-drafts), a
 ```{important}
 If a field is saved to an Object draft, you can edit any of its settings and values. However, once fields are published or saved to a published Object, only its Label can be edited. All other values and settings cannot be changed. 
 
-Fields in Object drafts can be removed. After initial publication, however, fields cannot be removed, with the exception of fields added _after_ initial publication, because those fields were added to a side table.
+Fields in Object drafts can be removed. After initial publication, however, fields cannot be removed, with the exception of fields added *after* initial publication, because those fields were added to a side table.
 ```
 
 Follow these steps to add a new field to an Object:
@@ -48,19 +48,22 @@ After saving fields to an Object draft, you can select them to define whether th
 
 ## Field Types UI Reference
 
-> For Liferay DXP 7.4 U10
+{bdg-secondary}`For Liferay DXP 7.4 U20+`
 
 | Type | Description |
 | :--- | :--- |
+| Attachment | Stores `jpeg`, `jpg`, `pdf`, and `png` files no larger than 100 MB. |
 | Boolean | Stores true or false values |
 | Date | Stores date values |
-| Text (*previously String*) | Stores simple text value up to 280 characters |
-| Long Text (*previously Clob*) | Stores a text box value that supports up to 65,000 characters |
-| Picklist | Stores a [Picklist](../picklists/using-picklists.md) string value |
+| Decimal (*previously Double*) | Stores a decimal number value that supports fractional portions |
 | Integer | Stores an integer up to 9 digits in length |
 | Long Integer (*previously Long*) | Stores a large integer up to 19 digits in length |
-| Decimal (*previously Double*) | Stores a decimal number value that supports fractional portions |
-| Precision Decimal (*Previously BigDecimal*) | Stores a high-precision decimal number without rounding |
+| Long Text (*previously Clob*) | Stores a text box value that supports up to 65,000 characters |
+| Picklist | Stores a [Picklist](../picklists.md) string value |
+| Precision Decimal (*previously BigDecimal*) | Stores a high-precision decimal number without rounding |
+| Relationship | Stores the numeric ID for all related Object entries |
+| Rich Text | Stores text with advanced formatting tools and media elements (e.g., images, videos, audio). |
+| Text (*previously String*) | Stores simple text values up to 280 characters |
 
 ## Additional Information
 
