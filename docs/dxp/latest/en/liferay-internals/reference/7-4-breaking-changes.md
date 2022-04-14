@@ -529,7 +529,7 @@ This change facilitates referencing file, page, and web content DDM fields in th
 
 ### What changed?
 
-The `com.liferay.petra.string.StringBundler` class has been deprecated. The `com.liferay.portal.kernel.util.StringBundler` class has replaced it.
+The `com.liferay.portal.kernel.util.StringBundler` class has been deprecated. The `com.liferay.petra.string.StringBundler` class has replaced it.
 
 Here are some methods that now return `com.liferay.petra.string.StringBundler` instead of `com.liferay.portal.kernel.util.StringBundler`:
 
@@ -561,7 +561,7 @@ Import `com.liferay.petra.string.StringBundler` instead of
 
 ### Why was this change made?
 
-The `com.liferay.petra.string.StringBundler` class has been deprecated.
+The `com.liferay.portal.kernel.util.StringBundler` class has been deprecated.
 
 ---------------------------------------
 
