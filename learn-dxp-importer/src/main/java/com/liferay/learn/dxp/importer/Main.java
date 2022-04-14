@@ -20,6 +20,7 @@ import com.liferay.headless.delivery.client.dto.v1_0.StructuredContent;
 import com.liferay.headless.delivery.client.resource.v1_0.StructuredContentResource;
 import com.liferay.petra.string.StringPool;
 import com.liferay.portal.kernel.util.HashMapBuilder;
+import com.liferay.portal.kernel.util.LocaleUtil;
 
 import com.vladsch.flexmark.html.HtmlRenderer;
 import com.vladsch.flexmark.parser.Parser;
@@ -121,6 +122,8 @@ public class Main {
 		StructuredContentResource structuredContentResource =
 			builder.authentication(
 				"test@liferay.com", "test"
+			).locale(
+				LocaleUtil.US
 			).build();
 
 		StructuredContent structuredContent = new StructuredContent();
