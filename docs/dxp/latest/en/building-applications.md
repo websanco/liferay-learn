@@ -5,12 +5,12 @@
 
 building-applications/objects.md
 building-applications/developing-a-javascript-application.md
-building-applications/developing_a_rest_web_api.rst
+building-applications/developing-a-rest-web-api.md
 building-applications/developing-a-java-web-application.md
 building-applications/core-frameworks.md
 building-applications/data-frameworks.md
 building-applications/remote-apps.md
-building-applications/tooling.rst
+building-applications/tooling.md
 building-applications/reference.md
 building-applications/app-builder.md
 ```
