@@ -12,7 +12,7 @@ public class WikiNodes_GET_FromSite {
 		WikiNodeResource.Builder builder = WikiNodeResource.builder();
 
 		WikiNodeResource wikiNodeResource = builder.authentication(
-			"test@liferay.com", "test"
+			"test@liferay.com", "learn"
 		).build();
 
 		Page<WikiNode> page = wikiNodeResource.getSiteWikiNodesPage(

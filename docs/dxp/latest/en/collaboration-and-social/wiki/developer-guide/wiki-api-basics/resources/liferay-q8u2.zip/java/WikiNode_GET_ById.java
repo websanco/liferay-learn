@@ -10,7 +10,7 @@ public class WikiNode_GET_ById {
 		WikiNodeResource.Builder builder = WikiNodeResource.builder();
 
 		WikiNodeResource wikiNodeResource = builder.authentication(
-			"test@liferay.com", "test"
+			"test@liferay.com", "learn"
 		).build();
 
 		WikiNode wikiNode = wikiNodeResource.getWikiNode(

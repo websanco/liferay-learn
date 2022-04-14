@@ -10,7 +10,7 @@ public class WikiPage_POST_ToNode {
 		WikiPageResource.Builder builder = WikiPageResource.builder();
 
 		WikiPageResource wikiPageResource = builder.authentication(
-			"test@liferay.com", "test"
+			"test@liferay.com", "learn"
 		).build();
 
 		WikiPage wikiPage = wikiPageResource.postWikiNodeWikiPage(

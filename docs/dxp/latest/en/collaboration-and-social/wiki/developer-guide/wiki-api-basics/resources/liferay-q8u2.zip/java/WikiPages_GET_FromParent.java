@@ -11,7 +11,7 @@ public class WikiPages_GET_FromParent {
 		WikiPageResource.Builder builder = WikiPageResource.builder();
 
 		WikiPageResource wikiPageResource = builder.authentication(
-			"test@liferay.com", "test"
+			"test@liferay.com", "learn"
 		).build();
 
 		Page<WikiPage> page = wikiPageResource.getWikiPageWikiPagesPage(

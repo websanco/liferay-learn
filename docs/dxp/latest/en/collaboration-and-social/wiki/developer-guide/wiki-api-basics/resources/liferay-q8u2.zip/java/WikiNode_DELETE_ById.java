@@ -9,7 +9,7 @@ public class WikiNode_DELETE_ById {
 		WikiNodeResource.Builder builder = WikiNodeResource.builder();
 
 		WikiNodeResource wikiNodeResource = builder.authentication(
-			"test@liferay.com", "test"
+			"test@liferay.com", "learn"
 		).build();
 
 		wikiNodeResource.deleteWikiNode(

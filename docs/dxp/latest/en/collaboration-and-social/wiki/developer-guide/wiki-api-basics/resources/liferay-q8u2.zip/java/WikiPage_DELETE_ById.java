@@ -9,7 +9,7 @@ public class WikiPage_DELETE_ById {
 		WikiPageResource.Builder builder = WikiPageResource.builder();
 
 		WikiPageResource wikiPageResource = builder.authentication(
-			"test@liferay.com", "test"
+			"test@liferay.com", "learn"
 		).build();
 
 		wikiPageResource.deleteWikiPage(

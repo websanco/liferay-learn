@@ -8,12 +8,7 @@ Before proceeding with the tutorial, first set up a clean Liferay Docker contain
 
 ### Liferay Docker Container
 
-The following tutorial requires a DXP/Portal 7.3+ instance for testing the tutorial code. Since the Wiki application is Site scoped, you'll also need a Site ID throughout the tutorial.
-
-To start up a new Liferay DXP container, run the following command:
-
-```docker
-docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
+```{include} /_snippets/run-liferay.md
 ```
 
 Once started, retrieve the Site ID. To find your Site ID, open the *Site Menu* (![Site Menu](../../../images/icon-menu.png)), and go to *Configuration* &rarr; *Site Settings* &rarr; *Site Configuration*.
