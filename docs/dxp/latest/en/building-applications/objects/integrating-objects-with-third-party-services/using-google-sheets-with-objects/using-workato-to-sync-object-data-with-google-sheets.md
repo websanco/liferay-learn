@@ -12,23 +12,23 @@ Follow these steps to sync Object data to a Google Sheet:
 
    ![Navigate to the Projects page.](./using-workato-to-sync-object-data-with-google-sheets/images/01.png)
 
-1. Navigate to the *Recipes* page and click on *Create Recipe*.
+1. Navigate to the *Recipes* page and click *Create Recipe*.
 
-   ![Navigate to the Recipes page and click on Create Recipe.](./using-workato-to-sync-object-data-with-google-sheets/images/02.png)
+   ![Navigate to the Recipes page and click Create Recipe.](./using-workato-to-sync-object-data-with-google-sheets/images/02.png)
 
-1. Enter a recipe *Name*, *Location*, and pick the *Trigger from a webhook*. Then click *Start building*.
+1. Enter a recipe *Name*, *Location*, and pick the *Trigger from a webhook* starting point. Then click *Start building*.
 
    ![Enter a Name, Location and pick the starting point.](./using-workato-to-sync-object-data-with-google-sheets/images/03.png)
 
-1. Click *Start Guided Setup*.
-   <!--NOTE: Do users need to select the webhook trigger before clicking this? -->
-   ![Click Start Guided Setup.](./using-workato-to-sync-object-data-with-google-sheets/images/04.png)
+1. In the setup panel, click *Start guided setup*.
+
+   ![Click Start guided setup.](./using-workato-to-sync-object-data-with-google-sheets/images/04.png)
 
 1. Enter an *Event Name* and copy the generated *webhook URL*.
 
    ![Enter an Event Name and click Next.](./using-workato-to-sync-object-data-with-google-sheets/images/05.png)
 
-1. In your Liferay instance, use the copied URL to [define an Object action](../creating-and-managing-objects/defining-object-actions.md) that sends a request to the webhook endpoint whenever a new Object entry is added.
+1. In your Liferay instance, use the copied URL to [define an Object action](../../creating-and-managing-objects/defining-object-actions.md) that sends a request to the webhook endpoint whenever a new Object entry is added.
 
    ![Define an action that sends a request to the webhook endpoint whenever an entry is added.](./using-workato-to-sync-object-data-with-google-sheets/images/06.png)
 
@@ -76,6 +76,6 @@ Follow these steps to sync Object data to a Google Sheet:
 
 ## Additional Information
 
-* [Objects Overview](../../objects.md)
-* [Creating and Managing Objects](../creating-and-managing-objects.md)
-* [Understanding Object Integrations](../understanding-object-integrations.md)
+* [Objects Overview](../../../objects.md)
+* [Creating and Managing Objects](../../creating-and-managing-objects.md)
+* [Understanding Object Integrations](../../understanding-object-integrations.md)

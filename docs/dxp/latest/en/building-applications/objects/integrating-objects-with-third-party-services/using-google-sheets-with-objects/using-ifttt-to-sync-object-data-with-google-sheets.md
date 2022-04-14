@@ -12,17 +12,17 @@ Follow these steps to sync Object data to a Google Sheet:
 
     ![Click Create.](./using-ifttt-to-sync-object-data-with-google-sheets/images/01.png)
 
-1. Click *add* for the *If This* step.
+1. Click *Add* for the *If This* step.
 
-    ![Click add for the If This step.](./using-ifttt-to-sync-object-data-with-google-sheets/images/02.png)
+    ![Click Add for the If This step.](./using-ifttt-to-sync-object-data-with-google-sheets/images/02.png)
 
 1. Select *Webhooks*.
 
     ![Select Webhooks.](./using-ifttt-to-sync-object-data-with-google-sheets/images/03.png)
 
-1. Select the desired trigger type.
-    <!--NOTE: Does it matter which one? Should it say, "For trigger type, click *Receive a web request*."? -->
-    ![Select a Trigger type.](./using-ifttt-to-sync-object-data-with-google-sheets/images/04.png)
+1. For trigger type, click *Receive a web request*.
+
+    ![Select a trigger type.](./using-ifttt-to-sync-object-data-with-google-sheets/images/04.png)
 
 1. Enter an *Event Name* and click *Create Trigger*.
 
@@ -59,19 +59,19 @@ Follow these steps to sync Object data to a Google Sheet:
 1. When you finish the process, your *Applet* is already *connected*.
 
     ![Review and click Finish.](./using-ifttt-to-sync-object-data-with-google-sheets/images/12.png)
-    <!--NOTE: Imgs 12 and 13 are the same img. Are they supposed to be different? Maybe remove number 13?-->
-1. Once created, click on the *Webhook Icon* &rarr; Documentation &rarr; Copy the generated *webhook URL*. <!--maybe add a third image? This image would show the documentation step-->
 
-    ![Webhook Icon.](./using-ifttt-to-sync-object-data-with-google-sheets/images/13.png)
+1. Once created, click the *Webhook Icon* &rarr; *Documentation* and copy the generated *webhook URL*.
+
+    ![Click the webhook icon.](./using-ifttt-to-sync-object-data-with-google-sheets/images/13.png)
 
     ![Copy the generated webhook URL.](./using-ifttt-to-sync-object-data-with-google-sheets/images/14.png)
 
-1. In your Liferay instance, use the copied URL to [define an Object action](../creating-and-managing-objects/defining-object-actions.md) that sends a request to the webhook endpoint whenever a new Object entry is added.
+1. In your Liferay instance, use the copied URL to [define an Object action](../../creating-and-managing-objects/defining-object-actions.md) that sends a request to the webhook endpoint whenever a new Object entry is added.
 
     ![Define an action that sends a request to the webhook endpoint whenever an entry is added.](./using-ifttt-to-sync-object-data-with-google-sheets/images/15.png)
-<!--NOTE: Is this one finished? -->
+
 ## Additional Information
 
-* [Objects Overview](../../objects.md)
-* [Creating and Managing Objects](../creating-and-managing-objects.md)
-* [Understanding Object Integrations](../understanding-object-integrations.md)
+* [Objects Overview](../../../objects.md)
+* [Creating and Managing Objects](../../creating-and-managing-objects.md)
+* [Understanding Object Integrations](../../understanding-object-integrations.md)

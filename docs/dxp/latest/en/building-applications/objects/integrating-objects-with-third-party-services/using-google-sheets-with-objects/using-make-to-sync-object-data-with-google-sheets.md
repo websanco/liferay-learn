@@ -14,7 +14,9 @@ Follow these steps to sync Object data to a Google Sheet:
 
    ![Click Create a new scenario.](./using-make-to-sync-object-data-with-google-sheets/images/01.png)
 
-1. Click the *Add* button, select the *Webhooks* module, and choose the *Custom webhook* trigger. <!--This runs the scenario when the webhook receives data.-->
+1. Click the *Add* button, select the *Webhooks* module, and choose the *Custom webhook* trigger. 
+
+   This runs the scenario when the webhook receives data.
 
    ![Select Webhooks.](./using-make-to-sync-object-data-with-google-sheets/images/02.png)
 
@@ -28,7 +30,7 @@ Follow these steps to sync Object data to a Google Sheet:
 
    ![Copy the generated webhook URL.](./using-make-to-sync-object-data-with-google-sheets/images/05.png)
 
-1. In your Liferay instance, use the copied URL to [define an Object action](../creating-and-managing-objects/defining-object-actions.md) that sends a request to the webhook endpoint whenever a new Object entry is added.
+1. In your Liferay instance, use the copied URL to [define an Object action](../../creating-and-managing-objects/defining-object-actions.md) that sends a request to the webhook endpoint whenever a new Object entry is added.
 
    ![Define an action that sends a request to the webhook endpoint whenever an entry is added.](./using-make-to-sync-object-data-with-google-sheets/images/06.png)
 
@@ -82,7 +84,9 @@ Follow these steps to sync Google Sheet data to an Object:
 
    ![Click Create a new scenario.](./using-make-to-sync-object-data-with-google-sheets/images/13.png)
 
-1. Click the *Add* button, select the *Google Sheets* module, and choose the *Watch rows* trigger. <!--This sets the module to watch for new rows in a Sheet.-->
+1. Click the *Add* button, select the *Google Sheets* module, and choose the *Watch rows* trigger. 
+
+   This sets the module to watch for new rows in a Sheet.
 
    ![Select Google Sheets.](./using-make-to-sync-object-data-with-google-sheets/images/14.png)
 
@@ -102,7 +106,7 @@ Follow these steps to sync Google Sheet data to an Object:
 
 1. Set the limit of results to be worked with during one execution cycle.
 
-1. Click *OK* when finished.<!--prompted to determine when to start...-->
+1. Click *OK* when finished.
 
 1. Click the *Add new module* button, select the *HTTP* module, and choose the *Make a Basic Auth request* action.
 
@@ -116,7 +120,7 @@ Follow these steps to sync Google Sheet data to an Object:
 
 1. Select the new module and click *Add* to add basic authentication credentials.
 
-1. Once added, enter the Object's Headless API URL, which uses this format: `https://<your-domain>/o/c/<objectname>/`. See [Headless Framework Integration](../understanding-object-integrations/headless-framework-integration.md) for more information.
+1. Once added, enter the Object's Headless API URL, which uses this format: `https://<your-domain>/o/c/<objectname>/`. See [Headless Framework Integration](../../understanding-object-integrations/headless-framework-integration.md) for more information.
 
 1. Select the *post* method type.
 
@@ -140,6 +144,6 @@ Follow these steps to sync Google Sheet data to an Object:
 
 ## Additional Information
 
-* [Objects Overview](../../objects.md)
-* [Creating and Managing Objects](../creating-and-managing-objects.md)
-* [Understanding Object Integrations](../understanding-object-integrations.md)
+* [Objects Overview](../../../objects.md)
+* [Creating and Managing Objects](../../creating-and-managing-objects.md)
+* [Understanding Object Integrations](../../understanding-object-integrations.md)

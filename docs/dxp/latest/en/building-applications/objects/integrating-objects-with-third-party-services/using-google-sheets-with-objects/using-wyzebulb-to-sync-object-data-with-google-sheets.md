@@ -8,7 +8,7 @@ Here you'll learn how to use webhooks to trigger sync tasks between Liferay Obje
 
 Follow these steps to sync Object data to a Google Sheet:
 
-1. Log in to [Wyzebulb](https://www.wyzebulb.com/) and click *Create Flow*. <!--NOTE: Is this the first step? Previously, it went straight into step 2 without mentioning 'Create Flow'-->
+1. Log in to [Wyzebulb](https://www.wyzebulb.com/) and create a Flow.
 
 1. For the trigger, select the *Webhooks* app.
 
@@ -28,7 +28,7 @@ Follow these steps to sync Object data to a Google Sheet:
 
     ![Copy the Webhook URL.](./using-wyzebulb-to-sync-object-data-with-google-sheets/images/06.png)
 
-1. In your Liferay instance, use the copied URL to [define an Object action](../creating-and-managing-objects/defining-object-actions.md) that sends a request to the webhook endpoint whenever a new Object entry is added.
+1. In your Liferay instance, use the copied URL to [define an Object action](../../creating-and-managing-objects/defining-object-actions.md) that sends a request to the webhook endpoint whenever a new Object entry is added.
 
     ![Define an action that sends a request to the webhook endpoint whenever an entry is added.](./using-wyzebulb-to-sync-object-data-with-google-sheets/images/07.png)
 
@@ -74,6 +74,6 @@ Follow these steps to sync Object data to a Google Sheet:
 
 ## Additional Information
 
-* [Objects Overview](../../objects.md)
-* [Creating and Managing Objects](../creating-and-managing-objects.md)
-* [Understanding Object Integrations](../understanding-object-integrations.md)
+* [Objects Overview](../../../objects.md)
+* [Creating and Managing Objects](../../creating-and-managing-objects.md)
+* [Understanding Object Integrations](../../understanding-object-integrations.md)

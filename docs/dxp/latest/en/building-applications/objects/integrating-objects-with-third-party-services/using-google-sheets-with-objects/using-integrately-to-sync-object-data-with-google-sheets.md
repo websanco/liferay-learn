@@ -12,7 +12,7 @@ Follow these steps to sync Object data to a Google Sheet:
 
    ![Click New Automation.](./using-integrately-to-sync-object-data-with-google-sheets/images/01.png)
 
-1. Add the *Webhook* app to the automation.
+1. Add the *Webhook/API Integration* app to the automation.
 
    ![Search for and select Webhook/API Integration.](./using-integrately-to-sync-object-data-with-google-sheets/images/02.png)
 
@@ -28,41 +28,42 @@ Follow these steps to sync Object data to a Google Sheet:
 
    ![Copy the generated webhook URL.](./using-integrately-to-sync-object-data-with-google-sheets/images/05.png)
 
-1. In your Liferay instance, use the copied URL to [define an Object action](../creating-and-managing-objects/defining-object-actions.md) that sends a request to the webhook endpoint whenever a new Object entry is added.
+1. In your Liferay instance, use the copied URL to [define an Object action](../../creating-and-managing-objects/defining-object-actions.md) that sends a request to the webhook endpoint whenever a new Object entry is added.
 
    ![Define an action that sends a request to the webhook endpoint whenever an entry is added.](./using-integrately-to-sync-object-data-with-google-sheets/images/06.png)
 
 1. Add a test Object entry to trigger the webhook.
 
    This allows the Webhook app to determine the Object's data structure automatically.
-   <!--NOTE: Is this what it's doing? -->
 
-1. Click the *Done, Check if received* button.
-   <!--NOTE: How do we get from step 5 to step 8? Do you click the "I have set this URL in Webhook/API Integration"? Does It redirect you while testing? -->
-   ![Check if received.](./using-integrately-to-sync-object-data-with-google-sheets/images/07.png)
+1. In Integrately, click *I have set this URL in Webhook/API Integration*.
+
+1. Click *Done, Check if received*.
+
+   ![Click Done, Check if received.](./using-integrately-to-sync-object-data-with-google-sheets/images/07.png)
 
 1. Verify the test was successful and click *Continue*.
-   <!--NOTE: I removed a lot here. Verify this is okay. -->
+
    ![Verify the test was successful and click Continue.](./using-integrately-to-sync-object-data-with-google-sheets/images/08.png)
 
-1. Connect the google Sheets app to a Google account.
+1. Connect the Google Sheets app to a Google account.
 
    ![Connect the Google Sheets app to a Google account.](./using-integrately-to-sync-object-data-with-google-sheets/images/09.png)
 
 1. Select the desired *Spreadsheet* and *Worksheet* to sync with the Object.
-   <!--NOTE: When do you click Continue? After this step or after the following step? -->
+
    ![Select the desired Spreadsheet and Worksheet.](./using-integrately-to-sync-object-data-with-google-sheets/images/10.png)
 
 1. Map the Sheet's columns to data fields in the Object's structure.
-   <!--NOTE: The values in the img are a little unclear to me--specifically, 'text oito'; why is text there? Was that put there automatically? -->
+
    ![Map the Sheet's columns to Object fields.](./using-integrately-to-sync-object-data-with-google-sheets/images/11.png)
 
-1. Navigate to the *My Automations* page, and click on the *Power* Button to turn on your connection.
+1. Navigate to the *My Automations* page, and click the *Power* Button to turn on your connection.
 
    ![Turn on your connection.](./using-integrately-to-sync-object-data-with-google-sheets/images/12.png)
 
 ## Additional Information
 
-* [Objects Overview](../../objects.md)
-* [Creating and Managing Objects](../creating-and-managing-objects.md)
-* [Understanding Object Integrations](../understanding-object-integrations.md)
+* [Objects Overview](../../../objects.md)
+* [Creating and Managing Objects](../../creating-and-managing-objects.md)
+* [Understanding Object Integrations](../../understanding-object-integrations.md)
