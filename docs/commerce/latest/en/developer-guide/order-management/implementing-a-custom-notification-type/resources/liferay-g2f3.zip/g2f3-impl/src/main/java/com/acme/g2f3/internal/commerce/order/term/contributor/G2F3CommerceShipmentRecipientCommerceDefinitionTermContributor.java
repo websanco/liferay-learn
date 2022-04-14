@@ -43,7 +43,7 @@ public class G2F3CommerceShipmentRecipientCommerceDefinitionTermContributor
 			return term;
 		}
 
-		if (term.equals(_ORDER_CREATOR_EMAIL)) {
+		if (term.equals(_SHIPMENT_CREATOR_EMAIL)) {
 			CommerceAccount commerceAccount =
 				commerceShipment.getCommerceAccount();
 
@@ -72,11 +72,11 @@ public class G2F3CommerceShipmentRecipientCommerceDefinitionTermContributor
 		return new ArrayList<>(_languageKeys.keySet());
 	}
 
-	private static final String _ORDER_CREATOR_EMAIL =
-		"[%ORDER_CREATOR_EMAIL%]";
+	private static final String _SHIPMENT_CREATOR_EMAIL =
+		"[%SHIPMENT_CREATOR_EMAIL%]";
 
 	private static final Map<String, String> _languageKeys = HashMapBuilder.put(
-		_ORDER_CREATOR_EMAIL, "g2f3-order-creator-email-definition-term"
+		_SHIPMENT_CREATOR_EMAIL, "g2f3-shipment-creator-email-definition-term"
 	).build();
 
 	@Reference

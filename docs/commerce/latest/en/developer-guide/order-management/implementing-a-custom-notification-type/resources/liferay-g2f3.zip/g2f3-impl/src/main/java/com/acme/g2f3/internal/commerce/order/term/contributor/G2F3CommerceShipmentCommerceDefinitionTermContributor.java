@@ -40,7 +40,7 @@ public class G2F3CommerceShipmentCommerceDefinitionTermContributor
 
 		CommerceShipment commerceShipment = (CommerceShipment)object;
 
-		if (term.equals(_ORDER_CREATOR_NAME)) {
+		if (term.equals(_SHIPMENT_CREATOR_NAME)) {
 			CommerceAccount commerceAccount =
 				commerceShipment.getCommerceAccount();
 
@@ -86,7 +86,7 @@ public class G2F3CommerceShipmentCommerceDefinitionTermContributor
 		return new ArrayList<>(_languageKeys.keySet());
 	}
 
-	private static final String _ORDER_CREATOR_NAME = "[%ORDER_CREATOR_NAME%]";
+	private static final String _SHIPMENT_CREATOR_NAME = "[%SHIPMENT_CREATOR_NAME%]";
 
 	private static final String _ORDER_SHIPPING_ADDRESS =
 		"[%ORDER_SHIPPING_ADDRESS%]";
@@ -95,7 +95,7 @@ public class G2F3CommerceShipmentCommerceDefinitionTermContributor
 
 	private static final Map<String, String>
 		_languageKeys = HashMapBuilder.put(
-			_ORDER_CREATOR_NAME, "g2f3-order-creator-name-definition-term"
+			_SHIPMENT_CREATOR_NAME, "g2f3-shipment-creator-name-definition-term"
 		).put(
 			_ORDER_SHIPPING_ADDRESS,
 			"g2f3-order-shipping-address-definition-term"
