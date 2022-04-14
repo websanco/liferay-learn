@@ -1,8 +1,8 @@
 # Batch Object APIs
 
-When you publish an Object, Liferay automatically generates REST APIs for it. These include the batch APIs for bulk POST, PUT, and DELETE operations. Here you'll use cURL commands and Java classes to call these batch APIs for a custom Object.
+When you publish an Object, Liferay automatically generates REST APIs for it. These include the batch APIs for bulk POST, PUT, and DELETE operations. Here you'll use cURL commands to call these batch APIs for a custom Object.
 
-Before proceeding, set up a new Liferay DXP/Portal 7.4 instance and download the provided `.sh` and `.java` tutorial code.
+Before proceeding, set up a new Liferay DXP/Portal 7.4 instance and download the provided tutorial code.
 
 ```{tip}
 For a complete list of APIs generated for Site and Company Objects, see [Object's Headless Framework Integration](../../understanding-object-integrations/headless-framework-integration.md). You can also view and test an Object's APIs via the Liferay API Explorer at `[server]:[port]/o/api` (e.g., `localhost:8080/o/api`). REST APIs are listed under *REST Applications*.
@@ -44,9 +44,7 @@ Once the container has started, log in and follow these steps to [create](../../
 
 ## Preparing the Sample Code
 
-This tutorial provides sample cURL and Java code to demonstrate batch Object APIs.
-
-To download and unzip this code, run the following command:
+Run this commands to download and unzip the sample cURL scripts:
 
 ```bash
 curl https://learn.liferay.com/dxp/latest/en/building-applications/objects/objects-tutorials/using-apis/liferay-t4r3.zip -O
@@ -56,24 +54,14 @@ curl https://learn.liferay.com/dxp/latest/en/building-applications/objects/objec
 unzip liferay-t4r3.zip
 ```
 
-While the cURL scripts come ready for use, you must manually compile the Java source files before you can run them. To do this, go to the project's `java` folder, and run the `javac` command.
+The provided scripts include the following APIs:
 
-```bash
-cd liferay-t4r3/java
-```
-
-```bash
-javac -classpath .:* *.java
-```
-
-The sample code includes the following APIs:
-
-| HTTP Method | HTTP Endpoint | Java Method | Description |
-| :--- | :--- | :--- | :--- |
-| DELETE | `/batch` | `deleteObjectNameBatch` | Deletes multiple Object entries |
-| POST | `/batch` | `postObjectNameBatch` | Creates multiple Object entries using the details provided in the API call |
-| PUT | `/batch` | `putObjectNameBatch` | Replaces multiple Object entries using the details provided in the API call |
-| GET | `/` | `getCustomObjectPage` | Returns a complete list of Object entries in a Liferay instance; results can be paginated, filtered, searched, and sorted |
+| HTTP Method | HTTP Endpoint | Description |
+| :--- | :--- | :--- |
+| DELETE | `/batch` | Deletes multiple Object entries |
+| POST | `/batch` | Creates multiple Object entries using the details provided in the API call |
+| PUT | `/batch` | Replaces multiple Object entries using the details provided in the API call |
+| GET | `/` | Returns a complete list of Object entries in a Liferay instance; results can be paginated, filtered, searched, and sorted |
 
 ```{note}
 The GET method is included for demonstration purposes.
@@ -81,37 +69,19 @@ The GET method is included for demonstration purposes.
 
 ## Calling the Custom Object APIs
 
-For this exercise, you can use either the cURL commands or Java classes to call the Custom Object's APIs. The following output examples correspond to the cURL command, which slightly differs from the output for the provided Java classes.
-
-1. Navigate to the `curl` or `java` folder in the `liferay-t4r3` project.
-
-   **For cURL:**
+1. After downloading the sample code, navigate to the `curl` folder in the `liferay-t4r3` project.
 
    ```bash
    cd liferay-t4r3/curl
    ```
 
-   **For Java:**
-
-   ```bash
-   cd liferay-t4r3/java
-   ```
-
-1. Execute the `CustomObject_POST_Batch`. This creates multiple Object entries.
+1. Execute `CustomObject_POST_Batch`. This creates multiple Object entries.
 
    **For cURL:**
 
    ```bash
    ./CustomObject_POST_Batch.sh
    ```
-
-   <!--
-   **For Java:**
-
-    ```bash
-   java -classpath .:* CustomObject_POST_Batch
-   ``` 
-   -->
 
    The terminal should display a similar output.
 
@@ -130,24 +100,13 @@ For this exercise, you can use either the cURL commands or Java classes to call 
      "startTime" : "2022-04-07T22:51:37Z",
      "totalItemsCount" : 0
    }
-
    ```
 
 1. Run `CustomObjects_GET_FromCompany` to verify the entries were created. This returns a list of all Object entries.
 
-   **For cURL:**
-
    ```bash
    ./CustomObjects_GET_FromCompany.sh
    ```
-
-   <!--
-   **For Java:**
-
-   ```bash
-   java -classpath .:* CustomObjects_GET_FromCompany
-   ```
-   -->
 
    Copy each entry's ID for use with the following PUT and DELETE methods.
 
@@ -177,21 +136,11 @@ For this exercise, you can use either the cURL commands or Java classes to call 
    }
    ```
 
-1. Execute `CustomObject_PUT_Batch` using the entry ID for its parameter. This replaces the details of the specified entry with the details provided in the API call.
-
-   **For cURL:**
+1. Execute `CustomObject_PUT_Batch` with each entry ID as a parameter. This replaces the details of the specified entry with the details provided in the API call.
 
    ```bash
-   ./CustomObject_PUT_Batch.sh {entry-id}
+   ./CustomObject_PUT_Batch.sh {first-entry-id} {second-entry-id} {third-entry-id}
    ```
-
-   <!-- 
-   **For Java:**
-
-   ```bash
-   java -classpath .:* -DentryId={entry-id} CustomObject_PUT_Batch
-   ```
-   -->
 
    ```bash
    {
@@ -212,19 +161,9 @@ For this exercise, you can use either the cURL commands or Java classes to call 
 
 1. Run `CustomObjects_GET_FromCompany` to verify the entries were updated.
 
-   **For cURL:**
-
    ```bash
    ./CustomObjects_GET_FromCompany.sh
    ```
-
-   <!--
-   **For Java:**
-
-   ```bash
-   java -classpath .:* CustomObjects_GET_FromCompany
-   ```
-   -->
 
    ```bash
    {
@@ -252,40 +191,19 @@ For this exercise, you can use either the cURL commands or Java classes to call 
    }
    ```
 
-1. Execute `CustomObject_DELETE_Batch` using the entry ID for its parameter. This deletes the specified entry.<!--CONFIRM HOW THESE WORK!!!!!-->
-
-   **For cURL:**
+1. Execute `CustomObject_DELETE_Batch` with each entry ID as a parameter. This deletes the specified entries.
 
    ```bash
-   ./CustomObject_DELETE_Batch.sh {entry-id}
-   ```
-
-   <!--
-   **For Java:**
-
-   ```bash
-   java -classpath .:* -DentryId={entry-id} CustomObject_DELETE_Batch
-   ```
-   -->
-
-   ```bash
+   ./CustomObject_DELETE_Batch.sh {first-entry-id} {second-entry-id} {third-entry-id}
    ```
 
 1. Run `CustomObjects_GET_FromCompany` to verify the entries were deleted.
-
-   **For cURL:**
 
    ```bash
    ./CustomObjects_GET_FromCompany.sh
    ```
 
-   <!--
-   **For Java:**
-
-   ```bash
-   java -classpath .:* CustomObjects_GET_FromCompany
-   ```
-   -->
+   Since you deleted the entries in the preceding step, it should return an entry `NOT FOUND` error message.
 
 ## Examining the Sample cURL Scripts
 
@@ -307,28 +225,8 @@ For this exercise, you can use either the cURL commands or Java classes to call 
    :language: bash
 ```
 
-## Examining the Sample Java Classes
-
-### `CustomObject_POST_Batch.java`
-
-```{literalinclude} ./batch-object-apis/resources/liferay-t4r3.zip/java/CustomObject_POST_Batch.java
-   :language: bash
-```
-
-### `CustomObject_PUT_Batch.java`
-
-```{literalinclude} ./batch-object-apis/resources/liferay-t4r3.zip/java/CustomObject_PUT_Batch.java
-   :language: bash
-```
-
-### `CustomObject_DELETE_Batch.java`
-
-```{literalinclude} ./batch-object-apis/resources/liferay-t4r3.zip/java/CustomObject_DELETE_Batch.java
-   :language: bash
-```
-
 ## Additional Information
 
-* []()
-* []()
-* []()
+* [Headless Framework Integration](../../understanding-object-integrations/headless-framework-integration.md)
+* [Object API Basics](./object-api-basics.md)
+* [Using Nested Fields with Objects](./using-nested-fields-with-object.md)
