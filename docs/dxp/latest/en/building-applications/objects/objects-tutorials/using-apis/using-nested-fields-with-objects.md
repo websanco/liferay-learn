@@ -1,8 +1,8 @@
 # Using Nested Fields with Objects
 
-When you publish an Object, Liferay automatically generates REST APIs for it. Beginning with Liferay 7.4 U_/GA_, <!--FINISH--> you can use nested fields with Object APIs to run complex queries involving multiple levels of Object relationships. Here you'll use cURL commands and Java classes to call Object APIs with nested fields.
+When you publish an Object, Liferay automatically generates REST APIs for it. When calling these APIs, you can use nested fields to run complex queries involving multiple levels of Object relationships. This means you can use the `nestedFields` parameter with GET calls to return multiple levels of related Objects. You can also use the `nestedFieldsDepth` parameter to determine the depth of Object entries included in the query: `0-5`.
 
-Before proceeding, set up a new Liferay DXP/Portal 7.4 instance and download the provided `.sh` and `.java` tutorial code.
+Here you'll use cURL scripts to call Object APIs with nested fields. Before proceeding, set up a new Liferay DXP/Portal 7.4 instance and download the provided tutorial code.
 
 ```{tip}
 For a complete list of APIs generated for Site and Company Objects, see [Object's Headless Framework Integration](../../understanding-object-integrations/headless-framework-integration.md). You can also view and test an Object's APIs via the Liferay API Explorer at `[server]:[port]/o/api` (e.g., `localhost:8080/o/api`). REST APIs are listed under *REST Applications*.
@@ -68,9 +68,7 @@ Once published, you can access each Object via Headless APIs.
 
 ## Preparing the Sample Code
 
-This tutorial provides sample cURL and Java code to demonstrate using nested fields with Object APIs.
-
-To download and unzip this code, run the following command:
+Run these commands to download and unzip the sample code:
 
 ```bash
 curl https://learn.liferay.com/dxp/latest/en/building-applications/objects/objects-tutorials/using-apis/liferay-w4s7.zip -O
@@ -80,51 +78,23 @@ curl https://learn.liferay.com/dxp/latest/en/building-applications/objects/objec
 unzip liferay-w4s7.zip
 ```
 
-While the cURL scripts come ready for use, you must manually compile the Java source files before you can run them. To do this, go to the project's `java` folder, and run the `javac` command.
+The sample code includes POST commands for each Object, as well as a GET command for `CharlieObject`.
 
-```bash
-cd liferay-w4s7/java
-```
+## Using the Sample Code
 
-```bash
-javac -classpath .:* *.java
-```
+Follow these steps to add and query related Object entries:
 
-The sample code includes POST commands for the three options as well as a GET command for CharlieObject
-
-## Adding Related Object Entries
-
-Follow these steps to add related entries to each Object:
-
-1. Navigate to the `curl` or `java` folder in the `liferay-w4s7` project.
-
-   **For cURL:**
+1. Navigate to the `curl` folder in the `liferay-w4s7` project.
 
    ```bash
    cd liferay-p8n6/curl
    ```
 
-   **For Java:**
-
-   ```bash
-   cd liferay-w4s7/java
-   ```
-
-1. Execute `AbleObject_POST_ToCompany` to create an AbleObject entry.
-
-   **For cURL:**
+1. Execute `AbleObject_POST_ToCompany` to create an `AbleObject` entry.
 
    ```bash
    ./AbleObject_POST_ToCompany.sh
    ```
-
-   <!--
-   **For Java:**
-
-    ```bash
-   java -classpath .:* AbleObject_POST_ToCompany
-   ``` 
-   -->
 
    Copy the entry's ID for use with the following POST command.
 
@@ -136,23 +106,13 @@ Follow these steps to add related entries to each Object:
    }
    ```
 
-1. Execute `BakerObject_POST_ToCompany` using the AbleObject entry ID as a parameter.
-
-   **For cURL:**
+1. Execute `BakerObject_POST_ToCompany` using the `AbleObject` entry ID as a parameter.
 
    ```bash
    ./BakerObject_POST_ToCompany.sh {able-object-entry-id}
    ```
 
-   <!--
-   **For Java:**
-
-    ```bash
-   java -classpath .:* BakerObject_POST_ToCompany
-   ``` 
-   -->
-
-   This creates a BakerObject entry related to the preceding AbleObject entry. Copy this entry's ID for use with the following POST command.
+   This creates a `BakerObject` entry related to the preceding `AbleObject` entry. Copy this entry's ID for use with the following POST command.
 
    ```bash
    {
@@ -163,23 +123,13 @@ Follow these steps to add related entries to each Object:
    }
    ```
 
-1. Execute `CharlieObject_POST_ToCompany` using the BakerObject entry ID as a parameter.
-
-   **For cURL:**
+1. Execute `CharlieObject_POST_ToCompany` using the `BakerObject` entry ID as a parameter.
 
    ```bash
    ./CharlieObject_POST_ToCompany.sh {baker-object-entry-id}
    ```
 
-   <!--
-   **For Java:**
-
-    ```bash
-   java -classpath .:* CharlieObject_POST_ToCompany
-   ``` 
-   -->
-
-   This creates a CharlieObject entry related to the preceding BakerObject entry. Copy this entry's ID for use with the following GET command.
+   This creates a `CharlieObject` entry related to the preceding `BakerObject` entry. Copy this entry's ID for use with the following GET command.
 
    ```bash
    {
@@ -190,21 +140,11 @@ Follow these steps to add related entries to each Object:
    }
    ```
 
-1. Execute `CharlieObject_GET_ById` using the CharlieObject entry ID as a parameter.
-
-   **For cURL:**
+1. Execute `CharlieObject_GET_ById` using the `CharlieObject` entry ID as a parameter.
 
    ```bash
    ./CharlieObject_GET_ById.sh {charlie-object-entry-id}
    ```
-
-   <!--
-   **For Java:**
-
-    ```bash
-   java -classpath .:* CharlieObject_GET_ById
-   ``` 
-   -->
 
    This queries the entry using nested fields and returns the schema for all three Object entry levels (i.e., 0-2).
 
@@ -228,16 +168,19 @@ Follow these steps to add related entries to each Object:
    }
    ```
 
-## Examining the GET Code
+## Examining the GET Script
 
+```{literalinclude} ./using-nested-fields-with-objects/resources/liferay-w4s7.zip/curl/CharlieObject_GET_ById.sh
+   :language: bash
 ```
-```
-<!-- With the GET method, you can determine whether to include nested fields and the number of nested levels to include (i.e., 0-5). You can call the GET method with nested field queries to determine which relationships are displayed. -->
 
-http://localhost:8080/o/c/charlieobjects/${1}/?nestedFields=bakerObject,ableObject&nestedFieldsDepth=2
+The provided GET method calls a URL with the `nestedFields` and `nestedFieldsDepth` parameters.
 
-* `nestedFields`: determine the types of object entries that you want to include in your query (e.g., `bakerObject,ableObject`).
-* `nestedFieldsDepth`: determine the depth of entries you want to include (0-5).
-
+* `nestedFields`: Determines the types of entries included in the query (e.g., `bakerObject,ableObject`).
+* `nestedFieldsDepth`: Determines the depth of entries you want to include and can be set between 0-5.
 
 ## Additional Information
+
+* [Headless Framework Integration](../../understanding-object-integrations/headless-framework-integration.md)
+* [Object API Basics](./object-api-basics.md)
+* [Batch Object APIs](./batch-object-apis.md)
