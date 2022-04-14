@@ -19,6 +19,7 @@ import com.liferay.headless.delivery.client.dto.v1_0.ContentFieldValue;
 import com.liferay.headless.delivery.client.dto.v1_0.StructuredContent;
 import com.liferay.headless.delivery.client.resource.v1_0.StructuredContentResource;
 import com.liferay.petra.string.StringPool;
+import com.liferay.portal.kernel.util.HashMapBuilder;
 
 import com.vladsch.flexmark.html.HtmlRenderer;
 import com.vladsch.flexmark.parser.Parser;
@@ -29,7 +30,6 @@ import java.io.File;
 
 import java.nio.charset.StandardCharsets;
 
-import java.util.Locale;
 import java.util.Set;
 import java.util.TreeSet;
 
@@ -48,7 +48,7 @@ public class Main {
 
 		for (String fileName : fileNames) {
 			if (fileName.contains("/en/") && fileName.endsWith(".md")) {
-				//System.out.println(fileName);
+				System.out.println(fileName);
 
 				_uploadHTML(fileName);
 			}
@@ -98,9 +98,6 @@ public class Main {
 	}
 
 	private static void _uploadHTML(String fileName) throws Exception {
-		/*if (true) {
-			return;
-		}*/
 
 		// English
 
@@ -112,113 +109,88 @@ public class Main {
 		String englishContent = FileUtils.readFileToString(
 			new File(fileName), StandardCharsets.UTF_8);
 
+		String englishTitle = _getTitle(englishContent);
+
+		// Japanese
+
+		File japaneseFile = new File(fileName.replace("/en/", "/ja/"));
+
 		StructuredContentResource.Builder builder =
 			StructuredContentResource.builder();
 
 		StructuredContentResource structuredContentResource =
 			builder.authentication(
 				"test@liferay.com", "test"
-			).locale(
-				Locale.US
 			).build();
 
-		StructuredContent structuredContent = null;
+		StructuredContent structuredContent = new StructuredContent();
 
-		try {
-			structuredContent =
-				structuredContentResource.
-					getSiteStructuredContentByExternalReferenceCode(
-						_GROUP_ID, externalReferenceCode);
+		ContentField[] contentFields;
 
-			structuredContent = structuredContentResource.putStructuredContent(
-				structuredContent.getId(),
-				new StructuredContent() {
+		if (japaneseFile.exists()) {
+
+			String japaneseContent = FileUtils.readFileToString(
+				japaneseFile, StandardCharsets.UTF_8);
+
+			String japaneseTitle = _getTitle(japaneseContent);
+
+			ContentFieldValue englishContentFieldValue = new ContentFieldValue () {
+				{
+					data = _toHTML(englishContent);
+				}
+			};
+			ContentFieldValue japaneseContentFieldValue = new ContentFieldValue() {
+				{
+					data = _toHTML(japaneseContent);
+				}
+			};
+			contentFields = new ContentField[] {
+				new ContentField() {
 					{
-						contentFields = new ContentField[] {
-							new ContentField() {
-								{
-									contentFieldValue =
-										new ContentFieldValue() {
-											{
-												data = _toHTML(englishContent);
-											}
-										};
-									name = "content";
-								}
-							}
-						};
-						title = _getTitle(englishContent);
+						contentFieldValue = englishContentFieldValue;
+							
+						contentFieldValue_i18n = HashMapBuilder.put(
+						"en-US", englishContentFieldValue).put(
+						"es-ES", japaneseContentFieldValue).build();
+
+						name = "content";
 					}
-				});
-		}
-		catch (Exception exception) {
+				}
+			};
 
-			// TODO Make the catch more specific instead of just Exception
+			structuredContent.setTitle_i18n(HashMapBuilder.put(
+				"en-US", englishTitle).put(
+				"es-ES", japaneseTitle).build());
 
-			structuredContent =
-				structuredContentResource.postSiteStructuredContent(
-					_GROUP_ID,
-					new StructuredContent() {
-						{
-							contentFields = new ContentField[] {
-								new ContentField() {
-									{
-										contentFieldValue =
-											new ContentFieldValue() {
-												{
-													data = _toHTML(
-														englishContent);
-												}
-											};
-										name = "content";
-									}
+		} else {
+
+			contentFields = new ContentField[] {
+				new ContentField() {
+					{
+						contentFieldValue =
+							new ContentFieldValue() {
+								{
+									data = _toHTML(
+										englishContent);
 								}
 							};
-							contentStructureId = _CONTENT_STRUCTURE_ID;
-							title = _getTitle(englishContent);
-
-							setExternalReferenceCode(externalReferenceCode);
-						}
-					});
-		}
-
-		// Japanese
-
-		File japaneseFile = new File(fileName.replace("/en/", "/ja/"));
-
-		if (!japaneseFile.exists()) {
-			return;
-		}
-
-		String japaneseContent = FileUtils.readFileToString(
-			japaneseFile, StandardCharsets.UTF_8);
-
-		structuredContentResource = builder.locale(
-			Locale.JAPAN
-		).build();
-
-		structuredContentResource.putStructuredContent(
-			structuredContent.getId(),
-			new StructuredContent() {
-				{
-					contentFields = new ContentField[] {
-						new ContentField() {
-							{
-								contentFieldValue = new ContentFieldValue() {
-									{
-										data = _toHTML(japaneseContent);
-									}
-								};
-								name = "content";
-							}
-						}
-					};
-					title = _getTitle(japaneseContent);
+						name = "content";
+					}
 				}
-			});
+			};
+		}
+
+		structuredContent.setContentFields(contentFields);
+
+		structuredContent.setContentStructureId(_CONTENT_STRUCTURE_ID);
+
+		structuredContent.setTitle(_getTitle(englishContent));
+
+		structuredContentResource.postSiteStructuredContent(_GROUP_ID, structuredContent);
+
 	}
 
-	private static final long _CONTENT_STRUCTURE_ID = 40301;
+	private static final long _CONTENT_STRUCTURE_ID = 40298;
 
 	private static final long _GROUP_ID = 20123;
 
