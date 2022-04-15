@@ -136,7 +136,7 @@ behavior of the widget. Many of these settings are used to configure the
 | Advanced Settings | Definition |
 | :---------------- | :----------|
 | {bdg-secondary}`Available 7.4 U17+`<br />Scope | Choose between This Site (default) and Everything to display similar results from the current site only (*This Site*) or expand the scope of the search to all sites (*Everything*).
-| {bdg-secondary}`Available 7.4 U18+`<br />Link Behavior | Choose between Show Content (default) and View in Context to display a clicked result in the same display page (*Show Content*) or display it in its context (*Everything*; for example, a [Display Page Template](../../site-building/displaying-content/displaying-content-intro.md#display-page-template) or its context in another Site).
+| {bdg-secondary}`Available 7.4 U18+`<br />Link Behavior | Choose between Show Content (default) and View in Context to display a clicked result in the same display page (*Show Content*) or display it in its context (*View in Context*; for example, in its display widget on another page).
 | Fields | Use a comma-separated list to specify keyword or text fields whose content is used to determine whether another asset matches the Main Asset. |
 | Maximum Query Terms | Set the maximum number of query terms to extract from the main asset. These are the terms used for matching search results to the main asset. Increasing this value enhances the relevance of returned results at the expense of execution speed. If left blank, this defaults to `25`. |
 | Minimum Term Frequency | Set the minimum threshold for the times a term must appear in the index to be used for matching similar results. If left blank, this defaults to `2`. |
