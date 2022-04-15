@@ -38,9 +38,7 @@ Follow these steps to design a custom Object view:
 
 1. Go to the *View Builder* tab and click the *Add* button (![Add Button](../../../images/icon-add.png)).
 
-1. Check all fields you want to include in the view table and click *Save*.
-
-   Each selected field is used as a column in the application page table.
+1. Check all fields you want to include in the view table and click *Save*. Each selected field is used as a column in the application page table.
 
    Available options include both [custom fields](./adding-fields-to-objects.md) and general metadata fields (i.e., ID, Author, Creation Date, Modified Date, and Workflow Status).
 
@@ -52,12 +50,14 @@ Follow these steps to design a custom Object view:
 
 1. Drag and drop fields to arrange their order.
 
+1. (Optional) For 7.4 U21+, rename a column by clicking its *Actions* button (![Actions Button](../../../images/icon-actions.png)) and selecting *Rename*. This changes the column's display name in the custom view.
+
 1. Click *Save*.
 
 Once saved, the custom view is used for displaying Object entries.
 
 ```{tip}
-For Liferay DXP 7.4 U21+, you can duplicate a view by clicking its *Actions* button (![Actions Button](../../../images/icon-actions.png)) and selecting *Duplicate*. This creates a complete copy of the original view with "(Copy)" appended to it's name. 
+For 7.4 U21+, you can duplicate a view by clicking its *Actions* button (![Actions Button](../../../images/icon-actions.png)) and selecting *Duplicate*. This creates a complete copy of the original view with "(Copy)" appended to it's name. 
 ```
 
 ## Setting a Default Sorting for Views
