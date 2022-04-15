@@ -24,9 +24,9 @@ Once the container has started, log in and follow these steps to [create](../../
 
    | Field | Value |
    | :--- | :--- |
-   | Label | `Custom Object` |
-   | Plural Label | `Custom Objects` |
-   | Name | `CustomObject` |
+   | Label | `Able` |
+   | Plural Label | `Ables` |
+   | Name | `Able` |
 
 1. Select the new *Object* draft, click on the *Field* tab, and add a single text *field*:
 
@@ -54,20 +54,19 @@ curl https://learn.liferay.com/dxp/latest/en/building-applications/objects/objec
 unzip liferay-t4r3.zip
 ```
 
-The provided scripts include the following APIs:
+The provided scripts include the following batch APIs:
 
 | HTTP Method | HTTP Endpoint | Description |
 | :--- | :--- | :--- |
 | DELETE | `/batch` | Deletes multiple Object entries |
 | POST | `/batch` | Creates multiple Object entries using the details provided in the API call |
 | PUT | `/batch` | Replaces multiple Object entries using the details provided in the API call |
-| GET | `/` | Returns a complete list of Object entries in a Liferay instance; results can be paginated, filtered, searched, and sorted |
 
 ```{note}
-The GET method is included for demonstration purposes.
+The GET method is also included for demonstration purposes. This returns a complete list of Object entries in a Liferay instance.
 ```
 
-## Calling the Custom Object APIs
+## Calling the Custom Object's APIs
 
 1. After downloading the sample code, navigate to the `curl` folder in the `liferay-t4r3` project.
 
@@ -75,12 +74,12 @@ The GET method is included for demonstration purposes.
    cd liferay-t4r3/curl
    ```
 
-1. Execute `CustomObject_POST_Batch`. This creates multiple Object entries.
+1. Execute `Ables_POST_Batch`. This creates multiple Object entries.
 
    **For cURL:**
 
    ```bash
-   ./CustomObject_POST_Batch.sh
+   ./Ables_POST_Batch.sh
    ```
 
    The terminal should display a similar output.
@@ -102,10 +101,10 @@ The GET method is included for demonstration purposes.
    }
    ```
 
-1. Run `CustomObjects_GET_FromCompany` to verify the entries were created. This returns a list of all Object entries.
+1. Run `Ables_GET_FromCompany` to verify the entries were created. This returns a list of all Object entries.
 
    ```bash
-   ./CustomObjects_GET_FromCompany.sh
+   ./Ables_GET_FromCompany.sh
    ```
 
    Copy each entry's ID for use with the following PUT and DELETE methods.
@@ -117,17 +116,17 @@ The GET method is included for demonstration purposes.
        ...
        "id" : 41985,
        ...
-       "name" : "Able"
+       "name" : "Able 1"
      }, {
        ...
        "id" : 41987,
        ...
-       "name" : "Baker"
+       "name" : "Able 2"
      }, {
        ...
        "id" : 41989,
        ...
-       "name" : "Charlie"
+       "name" : "Able 3"
      } ],
      "lastPage" : 1,
      "page" : 1,
@@ -136,10 +135,10 @@ The GET method is included for demonstration purposes.
    }
    ```
 
-1. Execute `CustomObject_PUT_Batch` with each entry ID as a parameter. This replaces the details of the specified entry with the details provided in the API call.
+1. Execute `Ables_PUT_Batch` with each entry ID as a parameter. This replaces the details of the specified entry with the details provided in the API call.
 
    ```bash
-   ./CustomObject_PUT_Batch.sh {first-entry-id} {second-entry-id} {third-entry-id}
+   ./Ables_PUT_Batch.sh {first-entry-id} {second-entry-id} {third-entry-id}
    ```
 
    ```bash
@@ -159,10 +158,10 @@ The GET method is included for demonstration purposes.
    }
    ```
 
-1. Run `CustomObjects_GET_FromCompany` to verify the entries were updated.
+1. Run `Ables_GET_FromCompany` to verify the entries were updated.
 
    ```bash
-   ./CustomObjects_GET_FromCompany.sh
+   ./Ables_GET_FromCompany.sh
    ```
 
    ```bash
@@ -172,17 +171,17 @@ The GET method is included for demonstration purposes.
        ...
        "id" : 41985,
        ...
-       "name" : "Dog"
+       "name" : "Able 4"
      }, {
        ...
        "id" : 41987,
        ...
-       "name" : "Easy"
+       "name" : "Able 5"
      }, {
        ...
        "id" : 41989,
        ...
-       "name" : "Fox"
+       "name" : "Able 6"
      } ],
      "lastPage" : 1,
      "page" : 1,
@@ -191,37 +190,37 @@ The GET method is included for demonstration purposes.
    }
    ```
 
-1. Execute `CustomObject_DELETE_Batch` with each entry ID as a parameter. This deletes the specified entries.
+1. Execute `Ables_DELETE_Batch` with each entry ID as a parameter. This deletes the specified entries.
 
    ```bash
-   ./CustomObject_DELETE_Batch.sh {first-entry-id} {second-entry-id} {third-entry-id}
+   ./Ables_DELETE_Batch.sh {first-entry-id} {second-entry-id} {third-entry-id}
    ```
 
-1. Run `CustomObjects_GET_FromCompany` to verify the entries were deleted.
+1. Run `Ables_GET_FromCompany` to verify the entries were deleted.
 
    ```bash
-   ./CustomObjects_GET_FromCompany.sh
+   ./Ables_GET_FromCompany.sh
    ```
 
-   Since you deleted the entries in the preceding step, it should return an entry `NOT FOUND` error message.
+   Since you deleted the entries in the preceding step, it should return an entries `NOT FOUND` error.
 
 ## Examining the Sample cURL Scripts
 
-### `CustomObject_POST_Batch.sh`
+### `Ables_POST_Batch.sh`
 
-```{literalinclude} ./batch-object-apis/resources/liferay-t4r3.zip/curl/CustomObject_POST_Batch.sh
+```{literalinclude} ./batch-object-apis/resources/liferay-t4r3.zip/curl/Ables_POST_Batch.sh
    :language: bash
 ```
 
-### `CustomObject_PUT_Batch.sh`
+### `Ables_PUT_Batch.sh`
 
-```{literalinclude} ./batch-object-apis/resources/liferay-t4r3.zip/curl/CustomObject_PUT_Batch.sh
+```{literalinclude} ./batch-object-apis/resources/liferay-t4r3.zip/curl/Ables_PUT_Batch.sh
    :language: bash
 ```
 
-### `CustomObject_DELETE_Batch.sh`
+### `Ables_DELETE_Batch.sh`
 
-```{literalinclude} ./batch-object-apis/resources/liferay-t4r3.zip/curl/CustomObject_DELETE_Batch.sh
+```{literalinclude} ./batch-object-apis/resources/liferay-t4r3.zip/curl/Ables_DELETE_Batch.sh
    :language: bash
 ```
 
