@@ -56,6 +56,10 @@ Follow these steps to design a custom Object view:
 
 Once saved, the custom view is used for displaying Object entries.
 
+```{tip}
+For Liferay DXP 7.4 U21+, you can duplicate a view by clicking its *Actions* button (![Actions Button](../../../images/icon-actions.png)) and selecting *Duplicate*. This creates a complete copy of the original view with "(Copy)" appended to it's name. 
+```
+
 ## Setting a Default Sorting for Views
 
 {bdg-secondary}`Available Liferay DXP 7.4 U18+ and Portal 7.4 GA18+`
