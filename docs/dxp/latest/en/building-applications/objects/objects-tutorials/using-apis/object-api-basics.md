@@ -24,9 +24,9 @@ Once the container has started, log in and follow these steps to [create](../../
 
    | Field | Value |
    | :--- | :--- |
-   | Label | `Custom Object` |
-   | Plural Label | `Custom Objects` |
-   | Name | `CustomObject` |
+   | Label | `Able` |
+   | Plural Label | `Ables` |
+   | Name | `Able` |
 
 1. Select the new *Object* draft, click on the *Field* tab, and add a single text *field*:
 
@@ -62,10 +62,9 @@ These scripts include the following APIs:
 | POST | `/` | Creates a new Object entry using the details provided in the API call |
 | DELETE | `/{objectNameId}` | Deletes the specified Object entry and returns a 204 if the operation succeeds |
 | GET | `/{objectNameId}` | Returns details for the specified Object entry |
-| PATCH | `/{objectNameId}` | Updates the fields specified in the API call for the specified Object entry; other fields remain unchanged |
 | PUT | `/{objectNameId}` | Replaces the specified Object entry's details with those provided in the API call |
 
-## Calling the Custom Object APIs
+## Calling the Custom Object's APIs
 
 1. After downloading the sample code, navigate to the `curl` folder in the `liferay-v1s4` project.
 
@@ -73,52 +72,64 @@ These scripts include the following APIs:
    cd liferay-v1s4/curl
    ```
 
-1. Execute `CustomObject_POST_ToCompany`. This creates an Object entry.
+1. Execute `Able_POST_ToCompany`. This creates three entries.
 
    ```bash
-   ./CustomObject_POST_ToCompany.sh
+   ./Able_POST_ToCompany.sh
    ```
 
-   The terminal displays the complete schema for the newly created entry. The provided API calls only include the `name` field, though you should copy the entry's ID for use with the following GET, PUT, and DELETE methods.
+   The terminal displays the complete schema for the newly created entries. Copy the first entry's ID for use with the following GET, PUT, and DELETE methods.
 
    ```bash
    {
      "id" : 41969,
      ...
-     "name" : "Foo"
+     "name" : "Able 1"
+   }
+
+   {
+     "id" : 41971,
+     ...
+     "name" : "Able 2"
+   }
+
+   {
+     "id" : 41973,
+     ...
+     "name" : "Able 3"
    }
    ```
 
-1. Execute `CustomObjects_GET_FromCompany`. This returns a list of all Object entries.
+1. Execute `Ables_GET_FromCompany`. This returns a list of the Object's entries.
 
    ```bash
-   ./CustomObjects_GET_FromCompany.sh
+   ./Ables_GET_FromCompany.sh
    ```
 
-1. Execute `CustomObject_PUT_ById` using the entry ID for its parameter. This replaces the details of the specified entry with the details provided in the API call.
+1. Execute `Able_PUT_ById` with the first entry's ID as a parameter. This replaces the details of the specified entry with the details provided in the API call.
 
    ```bash
-   ./CustomObject_PUT_ById.sh {entry-id}
+   ./Able_PUT_ById.sh {entry-id}
    ```
 
    ```bash
    {
      "id" : 41969,
      ...
-     "name" : "Bar"
+     "name" : "Able One"
    }
    ```
 
-1. Execute `CustomObject_DELETE_ById` using the entry ID for its parameter. This deletes the specified entry.
+1. Execute `Able_DELETE_ById` with the same ID as its parameter. This deletes the specified entry.
 
    ```bash
-   ./CustomObject_DELETE_ById.sh {entry-id}
+   ./Able_DELETE_ById.sh {entry-id}
    ```
 
-1. Execute `CustomObject_GET_ById` using the previous entry ID for its parameter. This returns the details for the specified entry if it exists.
+1. Execute `Able_GET_ById` with the same ID as its parameter. This returns the details for the specified entry if it exists.
 
    ```bash
-   ./CustomObject_GET_ById.sh {entry-id}
+   ./Able_GET_ById.sh {entry-id}
    ```
 
    Since you deleted the entry in the preceding step, it returns the following message.
@@ -126,7 +137,7 @@ These scripts include the following APIs:
    ```bash
    {
      "status" : "NOT_FOUND",
-     "title" : "No ObjectEntry exists with the primary key 41980"
+     "title" : "No ObjectEntry exists with the primary key 41969"
    }
    ```
 
@@ -134,15 +145,15 @@ These scripts include the following APIs:
 
 The following are examples of the tutorial's cURL commands.
 
-### `CustomObject_POST_ToCompany.sh`
+### `Able_POST_ToCompany.sh`
 
-```{literalinclude} ./object-api-basics/resources/liferay-v1s4.zip/curl/CustomObject_POST_ToCompany.sh
+```{literalinclude} ./object-api-basics/resources/liferay-v1s4.zip/curl/Able_POST_ToCompany.sh
    :language: bash
 ```
 
-### `CustomObject_PUT_ById.sh`
+### `Able_PUT_ById.sh`
 
-```{literalinclude} ./object-api-basics/resources/liferay-v1s4.zip/curl/CustomObject_PUT_ById.sh
+```{literalinclude} ./object-api-basics/resources/liferay-v1s4.zip/curl/Able_PUT_ById.sh
    :language: bash
 ```
 
