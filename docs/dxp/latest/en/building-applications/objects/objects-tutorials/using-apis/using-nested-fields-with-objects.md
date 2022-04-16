@@ -22,45 +22,45 @@ For a complete list of APIs generated for Site and Company Objects, see [Object'
 
       | Field | Value |
       | :--- | :--- |
-      | Label | `Able Object` |
-      | Plural Label | `Able Objects` |
-      | Name | `AbleObject` |
+      | Label | `Able` |
+      | Plural Label | `Ables` |
+      | Name | `Able` |
 
    Second Object:
 
       | Field | Value |
       | :--- | :--- |
-      | Label | `Baker Object` |
-      | Plural Label | `Baker Objects` |
-      | Name | `BakerObject` |
+      | Label | `Baker` |
+      | Plural Label | `Bakers` |
+      | Name | `Baker` |
 
    Third Object:
 
       | Field | Value |
       | :--- | :--- |
-      | Label | `Charlie Object` |
-      | Plural Label | `Charlie Objects` |
-      | Name | `CharlieObject` |
+      | Label | `Charlie` |
+      | Plural Label | `Charlies` |
+      | Name | `Charlie` |
 
 1. Add the following text field to each Object draft.
 
    | Label | Field Name | Type | Required |
    | :--- | :--- | :--- | :--- |
-   | Name | name | Text | &#10004; |
+   | `Name` | `name` | Text | &#10004; |
 
 1. Define the following relationships.
 
-   For Able Object:
+   For Able:
 
       | Label | Relationship Name | Type | Object |
       | :--- | :--- | :--- | :--- |
-      | Able to Baker | ableToBaker | One to Many | BakerObject |
+      | `Able to Baker` | `ableToBaker` | One to Many | Baker |
 
-   For Baker Object:
+   For Baker:
 
       | Label | Relationship Name | Type | Object |
       | :--- | :--- | :--- | :--- |
-      | Baker to Charlie | bakerToCharlie | One to Many | CharlieObject |
+      | `Baker to Charlie` | `bakerToCharlie` | One to Many | Charlie |
 
 1. [Publish](../../creating-and-managing-objects/creating-objects.md#publishing-object-drafts) each Object.
 
@@ -78,7 +78,7 @@ curl https://learn.liferay.com/dxp/latest/en/building-applications/objects/objec
 unzip liferay-w4s7.zip
 ```
 
-The sample code includes POST commands for each Object, as well as a GET command for `CharlieObject`.
+The sample code includes POST commands for each Object, as well as a GET command for `Charlie`.
 
 ## Using the Sample Code
 
@@ -90,93 +90,133 @@ Follow these steps to add and query related Object entries:
    cd liferay-p8n6/curl
    ```
 
-1. Execute `AbleObject_POST_ToCompany` to create an `AbleObject` entry.
+1. Execute `Able_POST_ToCompany` to create `Able` entries.
 
    ```bash
-   ./AbleObject_POST_ToCompany.sh
+   ./Able_POST_ToCompany.sh
    ```
 
-   Copy the entry's ID for use with the following POST command.
+   Copy the first entry's ID for use with the following POST command.
 
    ```bash
    {
      "id" : 41969,
      ...
-     "name" : "Foo"
+     "name" : "Able 1"
    }
-   ```
 
-1. Execute `BakerObject_POST_ToCompany` using the `AbleObject` entry ID as a parameter.
-
-   ```bash
-   ./BakerObject_POST_ToCompany.sh {able-object-entry-id}
-   ```
-
-   This creates a `BakerObject` entry related to the preceding `AbleObject` entry. Copy this entry's ID for use with the following POST command.
-
-   ```bash
    {
      "id" : 41971,
      ...
-     "name" : "Bar"
-     "r_ableToBaker_c_ableObjectId" : 41969
+     "name" : "Able 2"
    }
-   ```
 
-1. Execute `CharlieObject_POST_ToCompany` using the `BakerObject` entry ID as a parameter.
-
-   ```bash
-   ./CharlieObject_POST_ToCompany.sh {baker-object-entry-id}
-   ```
-
-   This creates a `CharlieObject` entry related to the preceding `BakerObject` entry. Copy this entry's ID for use with the following GET command.
-
-   ```bash
    {
      "id" : 41973,
      ...
-     "name" : "Goo",
-     "r_bakerToCharlie_c_bakerObjectId" : 41971
+     "name" : "Able 3"
    }
    ```
 
-1. Execute `CharlieObject_GET_ById` using the `CharlieObject` entry ID as a parameter.
+1. Execute `Baker_POST_ToCompany` using the `Able` entry ID as a parameter.
 
    ```bash
-   ./CharlieObject_GET_ById.sh {charlie-object-entry-id}
+   ./Baker_POST_ToCompany.sh {able-entry-id}
    ```
 
-   This queries the entry using nested fields and returns the schema for all three Object entry levels (i.e., 0-2).
+   This creates `Baker` entries related to the specified `Able` entry. Copy the first `Baker` entry ID ID for use with the following POST command.
 
    ```bash
    {
-     "r_bakerToCharlie_c_bakerObject" : {
+     "id" : 41975,
+     ...
+     "name" : "Baker 1"
+     "r_ableToBaker_c_ableId" : 41969
+   }
+
+   {
+     "id" : 41977,
+     ...
+     "name" : "Baker 2"
+     "r_ableToBaker_c_ableId" : 41969
+   }
+
+   {
+     "id" : 41979,
+     ...
+     "name" : "Baker 3"
+     "r_ableToBaker_c_ableId" : 41969
+   }
+   ```
+
+1. Execute `Charlie_POST_ToCompany` using the `Baker` entry ID as a parameter.
+
+   ```bash
+   ./Charlie_POST_ToCompany.sh {baker-entry-id}
+   ```
+
+   This creates `Charlie` entries related to the preceding `Baker` entry. Copy the first  entry's ID for use with the following GET command.
+
+   ```bash
+   {
+     "id" : 41981,
+     ...
+     "name" : "Charlie 1",
+     "r_bakerToCharlie_c_bakerId" : 41975
+   }
+
+   {
+     "id" : 41983,
+     ...
+     "name" : "Charlie 2",
+     "r_bakerToCharlie_c_bakerId" : 41975
+   }
+
+   {
+     "id" : 41985,
+     ...
+     "name" : "Charlie 3",
+     "r_bakerToCharlie_c_bakerId" : 41975
+   }
+   ```
+
+1. Execute `Charlie_GET_ById` using the `Charlie` entry ID as a parameter.
+
+   ```bash
+   ./Charlie_GET_ById.sh {charlie-entry-id}
+   ```
+
+   This queries the entry using nested fields and returns the schema for all three levels of the related Objects.
+
+   ```bash
+   {
+     "r_bakerToCharlie_c_baker" : {
        ...
-       "id" : 41971,
+       "id" : 41975,
        ...
-       "r_ableToBaker_c_ableObject" : {
+       "r_ableToBaker_c_able" : {
          ...
          "id" : 41969,
          ...
-         "name" : "Foo"
+         "name" : "Able 1"
        },
-       "name" : "Bar",
-       "r_ableToBaker_c_ableObjectId" : 41969
+       "name" : "Baker 1",
+       "r_ableToBaker_c_ableId" : 41969
      },
-     "name" : "Goo",
-     "r_bakerToCharlie_c_bakerObjectId" : 41971
+     "name" : "Charlie 1",
+     "r_bakerToCharlie_c_bakerId" : 41975
    }
    ```
 
 ## Examining the GET Script
 
-```{literalinclude} ./using-nested-fields-with-objects/resources/liferay-w4s7.zip/curl/CharlieObject_GET_ById.sh
+```{literalinclude} ./using-nested-fields-with-objects/resources/liferay-w4s7.zip/curl/Charlie_GET_ById.sh
    :language: bash
 ```
 
 The provided GET method calls a URL with the `nestedFields` and `nestedFieldsDepth` parameters.
 
-* `nestedFields`: Determines the types of entries included in the query (e.g., `bakerObject,ableObject`).
+* `nestedFields`: Determines the types of entries included in the query (e.g., `able,baker`).
 * `nestedFieldsDepth`: Determines the depth of entries you want to include and can be set between 0-5.
 
 ## Additional Information
