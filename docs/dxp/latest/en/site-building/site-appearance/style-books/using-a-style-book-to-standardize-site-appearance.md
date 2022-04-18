@@ -44,11 +44,41 @@ The page is published using the new Style Book.
 
    These options come from the theme being used for your Site. See the [default Classic theme categories](#default-classic-theme-categories) for more information on the categories available for the default Classic theme.
 
+   ```{note}
+   The *Color System* option from the dropdown menu allows you to define the colors for each [Style Book token](./developer-guide/style-book-token-definitions.md) used in the theme.
+   ```
+
+1. Customize any of the provided fields given under the chosen category. Color fields specifically give you [multiple ways to choose a color](#customizing-your-style-book-s-colors).
+
 1. Click *Publish*.
 
 The Style Book can now be selected as an option for any page when editing.
 
 To make this Style Book the new default for your Site, open the Actions menu (![Actions icon](../../../images/icon-actions.png)) beside the newly created Style Book and click *Mark as Default*.
+
+### Customizing Your Style Book's Colors
+
+When you are choosing a color for any color field in your Style Book, you can choose the color in multiple ways:
+
+* Click the color on the left side to open a color picker, and choose any color.
+
+* Enter the hex code for the desired color into the text box to change to any color.
+
+* Click the *Value from Stylebook* button to open a menu of pre-defined colors to choose from (including the Style Book token values, under the "Color System" category).
+
+![You have several options available to change the color for any color option.](./using-a-style-book-to-standardize-site-appearance/images/03.png)
+
+If you click the Value from Stylebook button and select a Style Book token value, then that color field is linked to the chosen Style Book token. Any future changes to the token value for this Style Book will also change this color field.
+
+When a color field is tied to a Style Book token, the Value from Stylebook button is replaced with a *Detach Token* button. Click this button to detach the color field from the token (but keep the same color value).
+
+![Click the *Detach Token* button to detach a color field from the Style Book token, but keep the same color value.](./using-a-style-book-to-standardize-site-appearance/images/04.png)
+
+Click the *Clear Selection* button on the right side to reset the color back to the default value (defined in the theme).
+
+```{note}
+When you are editing colors from a Style Book on a specific page, you have the same options to choose a color. However, clicking the *Clear Selection* button instead resets the color value to the default defined in the chosen *Style Book*.
+```
 
 ## Default Classic Theme Categories
 
@@ -64,7 +94,7 @@ The categories listed here are available as options for the Classic theme.
 
 The colors used for fonts and visual elements defined in your theme are customizable in the Color System category. Generally, this means you can modify the body, background, and text colors on your pages.
 
-![Change the colors used for displays or UI elements with options under the Color System category.](./using-a-style-book-to-standardize-site-appearance/images/03.png)
+![Change the colors used for displays or UI elements with options under the Color System category.](./using-a-style-book-to-standardize-site-appearance/images/05.png)
 
 ```{note}
 Changing the colors for alert-related elements (such as *Success* or *Warning*) may not affect the color of incoming alerts on your Site because each type of alert may use one of many colors. To fully customize the color of alerts, you must define customizable colors and use them in your own theme's categories.
@@ -78,7 +108,7 @@ Adjust the spacing between the main elements on your pages with the options in t
 
 These options modify color and spacing on elements that appear on every page of your Site. For example, the *Body Background* option changes the background color of all pages.
 
-![Use the Body Background option in the General category to customize the color of the background of your Site pages.](./using-a-style-book-to-standardize-site-appearance/images/04.png)
+![Use the Body Background option in the General category to customize the color of the background of your Site pages.](./using-a-style-book-to-standardize-site-appearance/images/06.png)
 
 ### Layout
 
@@ -92,7 +122,7 @@ These options define new fonts for your pages. You can also adjust the size of h
 
 These options modify the style for the default types of buttons. You can customize the background, foreground, and border colors for each of the buttons used in the Classic theme.
 
-![Change the colors under Button Primary to affect many common buttons for out-of-the-box widgets when using the Classic theme.](./using-a-style-book-to-standardize-site-appearance/images/05.png)
+![Change the colors under Button Primary to affect many common buttons for out-of-the-box widgets when using the Classic theme.](./using-a-style-book-to-standardize-site-appearance/images/07.png)
 
 ## Additional Information
 
