@@ -67,21 +67,23 @@ To add a _Countries of the World_ data provider:
 
 ## Using Inputs as Filters for the REST Data Provider
 
-The above example is simple which uses only an Output to populate a _Select from List field_. Often the response from the REST provider must be filtered before display in the Select from List field. For this, a Data Provider _Input_ field is required.
+The above example uses only a single Output to populate a _Select from List field_. Sometimes the response from the REST provider must be filtered before display in the Select from List field. For this, a Data Provider _Input_ field is required.
 
 For example, to apply a region (for example, Americas, Europe, or Oceania) filter for the countries of the world:
 
 1. Enter this data:
    * **Name**: `restcountries`
-   * **URL**: `https://restcountries.eu/rest/v2/region/{region}?fields=name`(using a different REST provider)
+   * **URL**: `https://restcountries.eu/v3.1/region/{region}?fields=name`(using a different REST provider)
    * **Input Label**: Region
-   * **Parameter**: Region
+   * **Parameter**: region
    * **Input Type**: Text
-   * **Outputs Label**: Countries of the World with Regions
-   * **Outputs Path**: `$..name`
+   * **Outputs Label**: Country Name
+   * **Outputs Path**: `$..name.common`
    * **Output Type**: List
 
    To understand more about these values, see [Data Providers Overview](./data-providers-overview.md).
+
+Because this example uses an input parameter, you must provide the input to the data provider for the API call to resolve properly. You can set up an Autofill rule that sends the value of a text field into the data provider as input. See the [Autofill Rule](../form-rules/using-the-autofill-rule.md) documentation for an example. 
 
 ## Granting Data Provider Permissions
 

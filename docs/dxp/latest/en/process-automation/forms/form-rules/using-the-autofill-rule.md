@@ -41,7 +41,7 @@ Follow the steps below:
 
 1. Navigate to the Site where the form is displayed.
 
-1. Enter a valid region into the Region field and observe that the options in the Select from List Field are filtered based on the Region. The [restcountries.eu](https://restcountries.eu) service has these regions: Africa, Americas, Asia, Europe, Oceania, and Polar.
+1. Enter a valid region into the Region field and observe that the options in the Select from List Field are filtered based on the Region. The <restcountries.com> service has these regions: Africa, Americas, Asia, Europe, Oceania, and Arctic.
 
     ![Filter countries by region of the world.](./using-the-autofill-rule/images/02.gif)
 
