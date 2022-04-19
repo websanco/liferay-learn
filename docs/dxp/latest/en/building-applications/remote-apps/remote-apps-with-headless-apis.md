@@ -135,7 +135,9 @@ The [AddForm.js](./remote-apps-with-headless-apis/resources/liferay-j4x7-overlay
 
 The [PatchForm.js](./remote-apps-with-headless-apis/resources/liferay-j4x7-overlay/src/components/PatchForm.js) receives input and calls the `patchObject` method upon the user clicking *Patch*.
 
-The [deleteForm.js](./remote-apps-with-headless-apis/resources/liferay-j4x7-overlay/src/components/PatchForm.js) receives input and calls the `deleteObject` method upon the user clicking *Delete*.
+The [DeleteForm.js](./remote-apps-with-headless-apis/resources/liferay-j4x7-overlay/src/components/DeleteForm.js) receives input and calls the `deleteObject` method upon the user clicking *Delete*.
+
+The forms are gathered together and displayed on one page with the [App.js](./remote-apps-with-headless-apis/resources/liferay-j4x7-overlay/src/App.js) file.
 
 ## Additional Information
 
