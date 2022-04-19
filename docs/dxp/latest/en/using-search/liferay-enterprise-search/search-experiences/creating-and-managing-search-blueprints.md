@@ -65,8 +65,6 @@ Add Elements to begin adding query clauses to the Blueprint:
 
    See [Creating Elements](./creating-elements.md) to learn about building Custom JSON Elements.
 
-<!-- TODO: Remove not yet written statements when written -->
-
 ```{important}
 Some Elements require more action than simply adding them to the Blueprint in the Query Builder. For example, to use either the Boost Longer Contents element or the Boost Contents with More Versions element, you must re-index the following entries in Control Panel &rarr; Search &rarr; Index Actions:
 

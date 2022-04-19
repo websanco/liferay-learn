@@ -9,6 +9,7 @@ search-experiences/using-a-search-blueprint-on-a-search-page.md
 search-experiences/personalizing-the-search-experience.md
 search-experiences/search-blueprints-elements-reference.md
 search-experiences/search-blueprints-configuration-reference.md
+search-experiences/creating-and-managing-elements.md
 ```
 
 > **Liferay Enterprise Search (LES) Subscribers**
@@ -28,7 +29,11 @@ Search Blueprints is the first feature in the Search Experiences application. To
 - [Using a Search Blueprint on a Search Page](./search-experiences/using-a-search-blueprint-on-a-search-page.md)
 - [Personalizing the Search Experience](./search-experiences/personalizing-the-search-experience.md)
 - [Search blueprints Elements Reference](./search-experiences/search-blueprints-elements-reference.md)
+<<<<<<< HEAD
 - [Search Blueprints Configuration Reference](./search-experiences/search-blueprints-configuration-reference.md)
+=======
+- [Creating Elements](./search-experiences/creating-and-managing-elements.md)
+>>>>>>> 06f6057a5 (LRDOCS-10042 begin drafting the Creating and Managing Elements article)
 
 ```{important}
 Out of the box, elements are available to use in creating your Blueprints. However, if you've installed the Search Experiences application into an existing Liferay installation, you must re-index the `SXPElement` entity for the elements to appear in the Blueprints UI. Navigate to Control Panel &rarr; Search &rarr; Index Actions, then find the `com.liferay.search.experiences.model.SXPElement` entry and click _Execute_.
