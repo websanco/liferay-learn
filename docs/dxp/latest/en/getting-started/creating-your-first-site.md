@@ -22,7 +22,7 @@ To create a new Community Site, follow these steps:
 
 A new Site is created and ready for use with two pages: _Home_ and _Wiki_. Each page has several applications already deployed that you may begin exploring.
 
-Users are presented a variety of Site Settings options to further configure their new Site. Click to learn more about [Site Settings](../site-building/site_settings.html).
+Users are presented a variety of Site Settings options to further configure their new Site. Click to learn more about [Site Settings](../site-building/site-settings.html).
 
 ## Viewing the Site
 

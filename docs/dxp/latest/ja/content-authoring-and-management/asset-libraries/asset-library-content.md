@@ -51,7 +51,7 @@
 
 ![特定のアセットライブラリのコンテンツを含めるようにアセットパブリッシャーの範囲を設定します。](./asset-library-content/images/04.png)
 
-サイトでのコンテンツの使用の詳細は、 [コンテンツの表示](../../site-building/displaying_content.html) を参照してください。
+サイトでのコンテンツの使用の詳細は、 [コンテンツの表示](../../site-building/displaying-content.html) を参照してください。
 
 <a name="staging-content" />
 

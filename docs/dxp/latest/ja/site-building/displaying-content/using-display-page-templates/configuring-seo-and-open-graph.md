@@ -85,5 +85,5 @@
 
 ## 追加情報
 
-  - [Search Engine Optimization](./../../optimizing_sites.html#search-engine-optimization)
+  - [Search Engine Optimization](./../../optimizing-sites.html#search-engine-optimization)
   - [Open Graph](./../../site-settings/configuring-open-graph.md)

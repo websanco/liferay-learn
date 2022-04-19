@@ -17,7 +17,7 @@ The following common site building and management activities can be done in the 
 * [Adding Pages](../site-building/creating-pages/adding-pages/adding-a-page-to-a-site.md)
 * [Creating Content](../content-authoring-and-management.html)
 * [Managing Site Memberships](../site-building/building-sites/site-membership/adding-members-to-sites.md)
-* [Configuring and Optimizing Site Behavior and Functionality](../site_building.html)
+* [Configuring and Optimizing Site Behavior and Functionality](../site-building.html)
 * And more...
 
 ## Applications Bar

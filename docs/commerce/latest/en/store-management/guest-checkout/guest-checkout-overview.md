@@ -20,7 +20,7 @@ Guests do not share order histories with other authenticated users, even if they
 
 ## Creating a Guest Checkout Authentication Page
 
-Guest checkout requires a [site page](https://learn.liferay.com/dxp/latest/en/site-building/creating_pages.html) with the _Guest Checkout Authentication_ widget. Use the Health Check function on the [Channels setting](../../store-management/channels/channels-reference-guide.md) to generate this page and widget.
+Guest checkout requires a [site page](https://learn.liferay.com/dxp/latest/en/site-building/creating-pages.html) with the _Guest Checkout Authentication_ widget. Use the Health Check function on the [Channels setting](../../store-management/channels/channels-reference-guide.md) to generate this page and widget.
 
 Clicking the _Continue as a Guest_ allows customers to complete the purchase without logging in or having to create an account.
 

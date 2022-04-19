@@ -28,7 +28,7 @@ While both automatically direct users to a specified destination, they each have
 * **Permanent**: Use a 301 code to inform search engines and other tools accessing your Site that the requested resource has been permanently relocated. Search engines will replace the old URL with the new destination in search results, and browsers will cache the new destination for an indeterminate amount of time. A 301 code should only be used when you intend to use the destination URL indefinitely. This improves SEO and helps avoid unintended caching.
 * **Temporary**: Use a 302 code to inform search engines and other tools accessing your Site that the requested resource is temporarily moved. A 302 code is useful when you want to conduct A/B testing or redirect traffic while fixing a problem, without impacting your Site ranking. DXP uses 302 codes by default.
 
-See [Optimizing Sites](../../optimizing_sites.html) to learn more about the implications of each redirect type for SEO. Also, see [A/B Testing](../../optimizing-sites/ab-testing/ab-testing.md) to learn about using 302 codes when testing.
+See [Optimizing Sites](../../optimizing-sites.html) to learn more about the implications of each redirect type for SEO. Also, see [A/B Testing](../../optimizing-sites/ab-testing/ab-testing.md) to learn about using 302 codes when testing.
 
 ### Creating a Redirect
 

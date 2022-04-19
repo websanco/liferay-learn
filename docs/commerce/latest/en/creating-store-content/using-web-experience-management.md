@@ -5,7 +5,7 @@
 
 Developing Fragments<https://learn.liferay.com/dxp/latest/en/site-building/developer-guide/developing-page-fragments/developing-fragments-intro.html>
 Using Fragments<https://learn.liferay.com/dxp/latest/en/site-building/creating-pages/building-and-managing-content-pages/using-fragments.html>
-Navigation Menus<https://learn.liferay.com/dxp/latest/en/site-building/site_navigation.html>
+Navigation Menus<https://learn.liferay.com/dxp/latest/en/site-building/site-navigation.html>
 Styling Widgets with Widget Templates<https://learn.liferay.com/dxp/latest/en/site-building/displaying-content/additional-content-display-options/styling-widgets-with-widget-templates.html>
 using-web-experience-management/enabling-commerce-products-as-related-assets.md
 ```

@@ -50,7 +50,7 @@ Similarly, when publishing content using the Asset Publisher widget, you must se
 
 ![Set the Asset Publisher's scope to include content from a specific Asset Library.](./asset-library-content/images/04.png)
 
-See [Displaying Content](../../site-building/displaying_content.html) documentation for more information about using content in your Sites.
+See [Displaying Content](../../site-building/displaying-content.html) documentation for more information about using content in your Sites.
 
 ## Staging Content
 

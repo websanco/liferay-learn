@@ -155,7 +155,7 @@ Liferay DXP 7.3以降。 以前のLiferay DXPのバージョンについては�
 
 ### ルックアンドフィール
 
-*ページデザインオプション*アイコン（![Look and Feel](../../../images/icon-look-and-feel.png)）をクリックして、テーマを変更したり、ページの他のオプションを管理したりします。 これらのオプションについては、 [Creating Pages](../../creating_pages.rst) で詳しく説明しています。
+*ページデザインオプション*アイコン（![Look and Feel](../../../images/icon-look-and-feel.png)）をクリックして、テーマを変更したり、ページの他のオプションを管理したりします。 これらのオプションについては、 [Creating Pages](../../creating-pages.md) で詳しく説明しています。
 
 ### コメント
 
@@ -177,7 +177,7 @@ Liferay DXP 7.3以降。 以前のLiferay DXPのバージョンについては�
 
 ### タイトルバー
 
-タイトルバーは、メインメニューに戻るナビゲーション、ページ設定へのリンク、および他のページを検索する機能を提供します。 タイトルバーについては、 [Creating Pages](../../creating_pages.rst) で詳しく説明しています。
+タイトルバーは、メインメニューに戻るナビゲーション、ページ設定へのリンク、および他のページを検索する機能を提供します。 タイトルバーについては、 [Creating Pages](../../creating-pages.md) で詳しく説明しています。
 
 ![タイトルバーには、いくつかのツールが組み込まれています。](./editing-content-pages/images/28.png)
 

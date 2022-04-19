@@ -10,7 +10,7 @@ The system scope is the highest level configuration scope. All virtual instances
 If your installation contains only one virtual instance, there's no practical difference between a system scoped configuration and a virtual instance scoped configuration. Both types of configuration apply throughout your system.
 ```
 
-Liferay DXPのインストールとデータベースをホストするサーバーの用意はおそらく済んでいると思います。 そのサーバーには、多数の[ユーザー](../../../users-and-permissions/users/understanding-users.md)、 [サイト](../../../site_building.rst) および特定の [インスタンス設定](instance-configuration.md) が含まれています。 2つ目の同様のインストールが必要な場合は、 **仮想インスタンス** を追加することをお勧めします。
+Liferay DXPのインストールとデータベースをホストするサーバーの用意はおそらく済んでいると思います。 そのサーバーには、多数の[ユーザー](../../../users-and-permissions/users/understanding-users.md)、 [サイト](../../../site-building.md) および特定の [インスタンス設定](instance-configuration.md) が含まれています。 2つ目の同様のインストールが必要な場合は、 **仮想インスタンス** を追加することをお勧めします。
 
 一意のドメイン名のため、訪問者は正しい仮想インスタンスに誘導されます。 仮想インスタンスはアプリケーションサーバーとOSGiコンテナを共有するため、次のカスタマイゼーションも共有します。
 

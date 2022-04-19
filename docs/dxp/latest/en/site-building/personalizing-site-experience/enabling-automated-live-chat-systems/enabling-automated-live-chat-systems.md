@@ -20,7 +20,7 @@ To enable Click To Chat go to *Instance Settings*.
 
     ![Toggle the switch on to enable Click to Chat.](./enabling-automated-live-chat-systems/images/04.png)
 
-1. Once enabled, you must select a [Site Settings](../../site_settings.html) Strategy. Your Site Settings strategy determines how Click to Chat is enabled across sites that exist on a given [Liferay instance](../../../system-administration/configuring-liferay/virtual-instances/understanding-virtual-instances.md).
+1. Once enabled, you must select a [Site Settings](../../site-settings.html) Strategy. Your Site Settings strategy determines how Click to Chat is enabled across sites that exist on a given [Liferay instance](../../../system-administration/configuring-liferay/virtual-instances/understanding-virtual-instances.md).
 
     ![Choose your Site Settings Strategy option.](./enabling-automated-live-chat-systems/images/05.png)
 

@@ -7,7 +7,7 @@ Contents
    :maxdepth: 6
 
    getting_started.md
-   site_building
+   site-building
    content-authoring-and-management
    process_automation
    using-search

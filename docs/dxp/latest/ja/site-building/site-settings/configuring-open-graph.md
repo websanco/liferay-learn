@@ -50,6 +50,6 @@
 
 ## 追加情報
 
-  - [Search Engine Optimization](./../optimizing_sites.html#search-engine-optimization)
+  - [Search Engine Optimization](./../optimizing-sites.html#search-engine-optimization)
   - [サイト設定UIリファレンス](./site-settings-ui-reference.md)
   - [個々のページの構成 (近日公開！)](./../creating-pages/page-settings/configuring-individual-pages.md)

@@ -10,7 +10,7 @@ The system scope is the highest level configuration scope. All virtual instances
 If your installation contains only one virtual instance, there's no practical difference between a system scoped configuration and a virtual instance scoped configuration. Both types of configuration apply throughout your system.
 ```
 
-Perhaps you already have a server hosting a Liferay DXP installation and a database. It has many [Users](../../../users-and-permissions/users/understanding-users.md), [Sites](../../site_building.rst), and specific [instance settings](.//instance-configuration.md). If you require a second similar installation, then adding a *Virtual Instance* might be right for you. 
+Perhaps you already have a server hosting a Liferay DXP installation and a database. It has many [Users](../../../users-and-permissions/users/understanding-users.md), [Sites](../../site-building.md), and specific [instance settings](.//instance-configuration.md). If you require a second similar installation, then adding a *Virtual Instance* might be right for you. 
 
 Because of the unique domain name, visitors are directed to the correct Virtual Instance. Because Virtual Instances share an application server and OSGi container, they also share these customizations: 
 
