@@ -5,6 +5,7 @@
 
 remote-apps-tutorials/creating-a-basic-remote-app.md
 remote-apps-tutorials/using-routes-with-a-basic-remote-app.md
+remote-apps-tutorials/remote-apps-with-headless-apis.md
 ```
 
 ```{raw} html
