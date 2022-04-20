@@ -122,11 +122,14 @@ public class Main {
 		StructuredContentResource structuredContentResource =
 			builder.authentication(
 				"test@liferay.com", "test"
-			).locale(
-				LocaleUtil.US
 			).build();
 
 		StructuredContent structuredContent = new StructuredContent();
+
+		String[] languages = {
+			"en-US", "ja-JP"};
+		
+		structuredContent.setAvailableLanguages(languages);
 
 		ContentField[] contentFields;
 
@@ -154,7 +157,7 @@ public class Main {
 							
 						contentFieldValue_i18n = HashMapBuilder.put(
 						"en-US", englishContentFieldValue).put(
-						"es-ES", japaneseContentFieldValue).build();
+						"jp-JA", japaneseContentFieldValue).build();
 
 						name = "content";
 					}
@@ -163,7 +166,7 @@ public class Main {
 
 			structuredContent.setTitle_i18n(HashMapBuilder.put(
 				"en-US", englishTitle).put(
-				"es-ES", japaneseTitle).build());
+				"ja-JP", japaneseTitle).build());
 
 		} else {
 
