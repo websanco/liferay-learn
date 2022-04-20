@@ -1,10 +1,8 @@
 # Using the Minimum Order Amount Rule
 
-You may sometimes have operations which prohibit the fulfillment of orders below a certain value. This enforces a minimum order value, below which the order is not accepted. In Liferay, this is encompassed through Order Rules. Using this, you can set a minimum order amount and if the validation fails, the buyer will not be able to check out.
+{bdg-secondary}`Available DXP 7.4 U1+/GA5+`
 
-```{note}
-Order Rules are available starting from Liferay DXP 7.4+/Commerce 4.0+.
-```
+Sometimes, orders of low value are not accepted due to the cost involved in fulfillment. To overcome this, only orders above a certain value are fulfilled. In Liferay, this is done through Order Rules. Using this, you can set a minimum order amount and if the validation fails, the buyer will not be able to check out.
 
 ## Order Rules Overview
 
@@ -16,8 +14,8 @@ When there is an Order Rule applied, the buyer needs to fulfill the rule to cont
 
 The Minimum Order Amount rule is available OOTB.
 
-1. Open the Global Menu, click on Commerce &rarr; Order Rules
-1. Click the Add button (![Add icon](../../images/icon-add.png)) and enter the following information.
+1. Open the *Global Menu*, click on *Commerce* &rarr; *Order Rules*.
+1. Click the *Add* button (![Add icon](../../images/icon-add.png)) and enter the following information.
 
     **Name:** Minimum Order $30
 
@@ -25,11 +23,11 @@ The Minimum Order Amount rule is available OOTB.
 
     **Type:** Minimum Order Amount
 
-1. Click Submit.
+1. Click *Submit*.
 
-![Detailed configuration view of the Order Rule.](./using-the-minimum-order-amount-rule/images/02.png)
+    ![Detailed configuration view of the Order Rule.](./using-the-minimum-order-amount-rule/images/02.png)
 
-This opens a configuration view for the Order Rule. The priority decides which Order Rule takes precedence when there's more than one rule. The lower number takes priority over the higher one. You can activate it using the Active toggle and configure it to apply the minimum order amount to the total or subtotal. You can also set the currency here.
+This opens a configuration view for the Order Rule. The *Priority* decides which Order Rule takes precedence when there's more than one rule. The lower number takes priority over the higher one. You can activate it using the *Active* toggle and configure it to apply the minimum order amount to the total or subtotal. You can also set the currency here.
 
 ## Order Rule Eligibility
 
