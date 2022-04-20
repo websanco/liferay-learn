@@ -1,10 +1,10 @@
 # Developing a Custom Form Field for Liferay 7.2
 
-React-based custom form fields can be developed for Liferay 7.3 and Liferay 7.4. See [Writing Custom Form Field Types](./writing-a-form-storage-adapter.md) to learn how. Liferay 7.2 used a different frontend technology, based on MetalJS and Soy closure templates. In this tutorial you can learn to adapt the React-based Acme C2P9 Slider field to run on a Liferay 7.2 installation.
+React-based custom form fields can be developed for Liferay 7.3 and Liferay 7.4. See [Writing Custom Form Field Types](./writing-a-form-storage-adapter.md) to learn how. Liferay 7.2 used a different front-end technology, based on MetalJS and Soy closure templates. In this tutorial you can learn to adapt the React-based Acme C2P9 Slider field to run on a Liferay 7.2 installation.
 
 ## Adjusting the Acme C2P9 Slider to Run on Liferay 7.2
 
-Liferay 7.2 used a different frontend framework for custom form fields. To adjust the Acme C2P9 Slider field in order to run it on Liferay 7.2,
+Liferay 7.2 used a different front-end framework for custom form fields. To adjust the Acme C2P9 Slider field in order to run it on Liferay 7.2,
 
 1. Download and unzip [the Custom Forms Field Type project](./writing-a-custom-form-field-type/resources/liferay-c2p9.zip).
 
@@ -83,10 +83,10 @@ Liferay 7.2 used a different frontend framework for custom form fields. To adjus
    };
    ```
 
-   **Checkpoint:** The project is reconfigured to expect the 7.2 frontend framework, so you must replace the frontend of the form field project.
+   **Checkpoint:** The project is reconfigured to expect the 7.2 front-end framework, so you must replace the front-end of the form field project.
 
 1. Remove the existing `Slider.es.js` file and create these three files to replace it:
-   - `Slider.es.js`: the new slider component using the MetalJS + Soy frontend.
+   - `Slider.es.js`: the new slider component using the MetalJS + Soy front-end.
 
       ```js
       import 'dynamic-data-mapping-form-field-type/FieldBase/FieldBase.es';
@@ -213,14 +213,14 @@ Liferay 7.2 used a different frontend framework for custom form fields. To adjus
       {/deltemplate}
       ```
 
-1. A minor adjustment to the `DDMFormFieldType` is needed: the identifier for the field (the `name`) cannot have a hyphen (`-`) in it because oit is referenced as a String literal in the Soy template. Open the `C2P9DDMFormFieldType` class and remove the hyphen from
+1. A minor adjustment to the `DDMFormFieldType` is needed: the identifier for the field (the `name`) cannot have a hyphen (`-`) because it is referenced as a String literal in the Soy template. Open the `C2P9DDMFormFieldType` class and remove the hyphen from
 
    - the component property `ddm.form.field.type.name`
    - the String returned by `getName`
 
    The value in both locations is now `c2p9slider`.
 
-1. Once the project's frontend is replaced, deploy it to a running Liferay 7.2. 
+1. Once the project's front-end is replaced, deploy it to a running Liferay 7.2. 
 
    - To start a Liferay 7.2 Docker container run
       ```shell
