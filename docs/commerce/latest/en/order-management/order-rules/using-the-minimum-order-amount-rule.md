@@ -14,7 +14,7 @@ When there is an Order Rule applied, the buyer needs to fulfill the rule to cont
 
 The Minimum Order Amount rule is available OOTB.
 
-1. Open the *Global Menu*, click on *Commerce* &rarr; *Order Rules*.
+1. Open the *Global Menu* (![Applications Menu icon](../../images/icon-applications-menu.png)), click on *Commerce* &rarr; *Order Rules*.
 1. Click the *Add* button (![Add icon](../../images/icon-add.png)) and enter the following information.
 
     **Name:** Minimum Order $30
