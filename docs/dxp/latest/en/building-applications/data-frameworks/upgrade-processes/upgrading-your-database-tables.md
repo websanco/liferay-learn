@@ -4,7 +4,7 @@
 {bdg-secondary}`Available Liferay DXP 7.4 U10+ or Liferay Portal 7.4 GA14+`
 ```
 
-An upgrade of your application may require making changes to your database table. Liferay's Upgrade framework makes it easy to make these changes. Deploy the sample project to see this upgrade process.
+An upgrade of your application may require making changes to your database table. Liferay's Upgrade framework makes it easy to make these changes. Deploy the sample project to see this upgrade process. Follow [this guideline](https://help.liferay.com/hc/en-us/articles/360031165751-Creating-Upgrade-Processes-for-Modules) for previous versions of Liferay.
 
 ## Deploy Version 1.0.0
 
@@ -82,3 +82,54 @@ An upgrade of your application may require making changes to your database table
    ```
 
    ![Verify the table columns have been updated.](./upgrading-your-database-tables/images/03.png)
+
+## Examine the Code
+
+The example project demonstrates a simple change of the following table columns:
+
+| Before | After | Comment |
+| :--- | :--- | :--- |
+| `able` (type: long) | `able` (type: date) | The column datatype is changed. |
+| `baker` (type: boolean) | - | The column is dropped |
+| `foo` (type: string) | `bar` (type: string) | The column name is changed. |
+| - | `charlie` (type: string) | A new column is added. |
+
+Compare the `service.xml` column definitions of [1.0.0](./upgrading-your-database-tables/resources/liferay-p5d2.zip/1.0.0/p5d2-service/service.xml) with [2.0.0](./upgrading-your-database-tables/resources/liferay-p5d2.zip/2.0.0/p5d2-service/service.xml)
+
+### Create an UpgradeStepRegistrator Class
+
+Create a `UpgradeStepRegistrator` class that implements the `UpgradeStepRegister` interface.
+
+```{literalinclude} ./upgrade-process-for-your-application/resources/liferay-p5d2.zip/2.0.0/p5d2-service/src/main/java/com/acme/p5d2/internal/upgrade/P5D2EntryUpgrade.java
+:dedent: 1
+:language: java
+:lines: 26-34
+```
+
+Override the `register` method to implement the app's upgrade registration. Make sure to use the `@Component` annotation and identify it as a `UpgradeStepRegistrator.class` service.
+
+
+### Create an UpgradeProcess Class
+
+Create an `UpgradeProcess` class that extends the base class.
+
+```{literalinclude} ./upgrade-process-for-your-application/resources/liferay-p5d2.zip/2.0.0/p5d2-service/src/main/java/com/acme/p5d2/internal/upgrade/v2_0_0/P5D2EntryUpgradeProcess.java
+:dedent: 1
+:language: java
+:lines: 22-32
+```
+
+Override the `doUpgrade()` method with instructions to modify your table. The following operations are available:
+
+| Function | Description |
+| :--- | :--- |
+| alterColumnName | Change the column name |
+| alterColumnType | Change the column datatype |
+| alterTableAddColumn | Add a new column |
+| alterTableDropColumn | Remove a column |
+
+```{warning}
+`alterTableDropColumn` does not work in MariaDB. This is a [known bug](https://github.com/liferay-upgrades/liferay-portal/pull/263/commits/9a59708c40e19b209d99eeee2f7e68a815d5cd1b). Follow the [previous guidelines](https://help.liferay.com/hc/en-us/articles/360031165751-Creating-Upgrade-Processes-for-Modules) instead.
+```
+
+Re-run Service Builder after making your changes. You are now ready to build an deploy your upgrade.
