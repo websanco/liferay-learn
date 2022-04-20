@@ -73,7 +73,7 @@ For example, to apply a region (for example, Americas, Europe, or Oceania) filte
 
 1. Enter this data:
    * **Name**: `restcountries`
-   * **URL**: `https://restcountries.eu/v3.1/region/{region}?fields=name`(using a different REST provider)
+   * **URL**: `https://restcountries.com/v3.1/region/{region}?fields=name`(using a different REST provider)
    * **Input Label**: Region
    * **Parameter**: region
    * **Input Type**: Text
