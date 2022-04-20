@@ -24,7 +24,7 @@ Learn how to create custom applications and how to build modern websites with fr
 ::::{grid} 2
 :gutter: 3 3 3 3
 
-:::{grid-item-card}  Setting Up the Development Environment 
+:::{grid-item-card}  Setting Up the Development Environment
 :link: ./liferay-dxp-7.4-for-technical-users/setting-up-dev-environment.md
 :::
 
@@ -32,7 +32,7 @@ Learn how to create custom applications and how to build modern websites with fr
 :link: ./liferay-dxp-7.4-for-technical-users/building-the-baseline.md
 :::
 
-:::{grid-item-card}  Application Presentation and Customization 
+:::{grid-item-card}  Application Presentation and Customization
 :link: ./liferay-dxp-7.4-for-technical-users/application-presentation-and-customization.md
 :::
 
@@ -40,7 +40,7 @@ Learn how to create custom applications and how to build modern websites with fr
 :link: ./liferay-dxp-7.4-for-technical-users/application-localization.md
 :::
 
-:::{grid-item-card}  Implement Access Control 
+:::{grid-item-card}  Implement Access Control
 :link: ./liferay-dxp-7.4-for-technical-users/implement-access-control.md
 :::
 
@@ -56,7 +56,7 @@ Learn how to create custom applications and how to build modern websites with fr
 :link: ./liferay-dxp-7.4-for-technical-users/build-first-fe-project.md
 :::
 
-:::{grid-item-card}  Create Your Unique Site Brand with Themes 
+:::{grid-item-card}  Create Your Unique Site Brand with Themes
 :link: ./liferay-dxp-7.4-for-technical-users/brand-platform-themes.md
 :::
 
