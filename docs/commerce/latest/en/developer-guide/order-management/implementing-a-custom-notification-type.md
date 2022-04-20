@@ -121,7 +121,7 @@ After that, create a ModelListener for the CommerceShipment class. Next, review 
 
 You must provide a distinct key for the notification type so that Liferay Commerce can distinguish it from others in the notification status registry. Specifying a key that is already in use overrides the existing associated type. The order determines its sort order in the dropdown. In this case, the *Order Awaiting Shipment* notification type has the order as 50, and the *Order Partially Shipped* notification type has the order as 60. To place the status between the two, the order must be between those two numbers, in this case, 51.
 
-### Review the CommerceNotificationType interface
+### Review the `CommerceNotificationType` interface
 
 Implement the following methods:
 
@@ -159,7 +159,7 @@ This method returns the name of the notification type as it appears in the UI. T
 
 To complete the Notification type implementation, you must implement the above methods. In the first method, you check if the object is of type `CommerceShipment` and return its class name if it's true. In the second method, you check this again and return the shipment's primary key if it's true. The third method returns the unique key and the last method returns the label that appears on the UI.
 
-### Create a ModelListener for CommerceShipment
+### Create a `ModelListener` for `CommerceShipment`
 
 ```{literalinclude} ./implementing-a-custom-notification-type/resources/liferay-g2f3.zip/g2f3-impl/src/main/java/com/acme/g2f3/internal/commerce/notification/model/listener/G2F3CommerceShipmentModelListener.java
     :language: java
@@ -168,7 +168,7 @@ To complete the Notification type implementation, you must implement the above m
 
 For triggering the notification every time a shipment is created, you must extend the [`BaseModelListener`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/model/BaseModelListener.java) class that implements the [`ModelListener`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/model/ModelListener.java) interface. This interface has methods for the entity that are triggered for events like create, update, delete, etc. You can use the `onAfterCreate(T model)` method to trigger the notification upon creation of a shipment.
 
-### Review the CommerceDefinitionTermContributor interface
+### Review the `CommerceDefinitionTermContributor` interface
 
 Implement the following methods:
 
@@ -204,7 +204,7 @@ Term contributors resolve the wildcards present in the To, Subject, and Body fie
 
 Before resolving the wildcard, there are checks to verify whether the object is null or of type CommerceShipment. Then, if the term contains the wildcard, the wildcard gets replaced with the shipment creator's name, shipping address, or the shipment ID. For the shipment creator's name, the name of the account from the shipment is returned. The shipping address is returned as a concatenated string of the street 1 address, city, and zip. The shipment ID is returned from the shipment object directly.
 
-#### Implement the getFilledTerms method for the Recipient
+#### Implement the `getFilledTerm` method for the Recipient
 
 ```{literalinclude} ./implementing-a-custom-notification-type/resources/liferay-g2f3.zip/g2f3-impl/src/main/java/com/acme/g2f3/internal/commerce/order/term/contributor/G2F3CommerceShipmentRecipientCommerceDefinitionTermContributor.java
     :dedent: 1
@@ -214,7 +214,7 @@ Before resolving the wildcard, there are checks to verify whether the object is 
 
 Before resolving the wildcard, there are checks to verify whether the object is null or of type CommerceShipment. Then, if the term contains the wildcard, the wildcard gets replaced with the user ID of the account. When a notification is sent, it uses this ID to find the email of the user.
 
-#### Implement the getLabel and getTerms methods
+#### Implement the `getLabel` and `getTerms` methods
 
 The getLabel method returns the name of the terms as it appears in the UI. You can use language keys to do this or directly return a string.
 
