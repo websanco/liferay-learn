@@ -52,6 +52,18 @@ The Style Book can now be selected as an option for any page when editing.
 
 To make this Style Book the new default for your Site, open the Actions menu (![Actions icon](../../../images/icon-actions.png)) beside the newly created Style Book and click *Mark as Default*.
 
+### Previewing a Style Book
+
+While you are creating or editing a Style Book, you can preview the way it affects the look of various components of your Site, including pages, Page Templates, and Page Fragments.
+
+```{note}
+This feature requires Liferay DXP U9+ or GA13+.
+```
+
+Use the two dropdown menus at the top of the screen to select what components to preview. The left drop-down menu determines the overall type to display (pages, Page Templates, Master Page Templates, Display Page Templates, or Page Fragments), and the right drop-down menu determines which specific one of that type to display (or category, if applicable).
+
+![If you are previewing the Style Book's effect on Page Fragments, then you can choose all of the categories of Fragments available on your Site.](./using-a-style-book-to-standardize-site-appearance/images/08.png)
+
 ### Customizing Your Style Book's Colors
 
 When you are choosing a color for any color field in your Style Book, you can choose the color in multiple ways:
