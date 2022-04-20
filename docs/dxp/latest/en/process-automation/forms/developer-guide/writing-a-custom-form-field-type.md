@@ -9,9 +9,9 @@ The Forms application contains many highly configurable [field types out-of-the-
 * [Add custom settings to the field](#add-custom-settings-to-the-form-field)
 
 ```{note}
-The example project here runs on Liferay 7.4. If you're running Liferay 7.3, the source code is compatible but the [Workspace project](../../../building-applications/tooling/liferay-workspace/what-is-liferay-workspace.md) must be reconfigured for Liferay 7.3. The steps to do this are included in the instructions below.
+The example project runs on Liferay 7.4. If you're running Liferay 7.3, the source code is compatible but the [Workspace project](../../../building-applications/tooling/liferay-workspace/what-is-liferay-workspace.md) must be reconfigured for Liferay 7.3. The steps to do this are included in the instructions below.
 
-If you're running Liferay 7.2, this source code will not run due to a difference in supported frontend frameworks. Please see the article [Developing a Custom Form Field for Liferay 7.2](./developing-a-custom-form-field-for-liferay-7-2.md) to learn how to adapt the C2P9 Slider code sample for 7.2.
+If you're running Liferay 7.2, this source code does not run due to a difference in supported front-end frameworks. Please see [Developing a Custom Form Field for Liferay 7.2](./developing-a-custom-form-field-for-liferay-7-2.md) to learn how to adapt the C2P9 Slider code sample for 7.2.
 ```
 
 ## Examine the Custom Form Field in Liferay 
@@ -74,7 +74,7 @@ To see how custom form fields work, deploy an example and then add some form dat
 
 1. Add the _C2P9 Slider_ field to the form.
 
-1. You can fill out the Label, Predefined Value, and Help Text, as well as make the field Required. These settings match what many of the [out of the box fields](../creating-and-managing-forms/forms-field-types-reference.md) provide as basic settings.
+1. You can fill out the Label, Predefined Value, and Help Text, as well as make the field Required. These settings match what many [out-of-the-box fields](../creating-and-managing-forms/forms-field-types-reference.md) provide as basic settings.
 
 1. Publish the form and go submit a record using the slider field.
 
@@ -90,11 +90,15 @@ A basic form field contains a Java class and a JavaScript file. In the C2P9 Slid
    :lines: 10-20
 ```
 
-- `ddm.form.field.type.description`: provide the language key for the description text. Make sure the translated value is defined in the `Language.properties` file.
-- `ddm.form.field.type.display.order`: set an integer or floating point value to determine where the field is displayed in the Form Builder sidebar. Fields with the same value are ordered randomly.
-- `ddm.form.field.type.icon`: decide which icon type to use for your field. Choose any [Clay Icon](https://clayui.com/docs/components/icon.html).
-- `ddm.form.field.type.label`: provide the language key for the label text. Make sure the translated value is defined in the `Language.properties` file.
-- `ddm.form.field.type.name`: provide the field type identifier. This is used to identify the field internally and in other components.
+`ddm.form.field.type.description`: provide the language key for the description text. Make sure the translated value is defined in the `Language.properties` file.
+
+`ddm.form.field.type.display.order`: set an integer or floating point value to determine where the field is displayed in the Form Builder sidebar. Fields with the same value are ordered randomly.
+
+`ddm.form.field.type.icon`: decide which icon type to use for your field. Choose any [Clay Icon](https://clayui.com/docs/components/icon.html).
+
+`ddm.form.field.type.label`: provide the language key for the label text. Make sure the translated value is defined in the `Language.properties` file.
+
+`ddm.form.field.type.name`: provide the field type identifier. This is used to identify the field internally and in other components.
 
 The `getModuleName` method passes the `Slider.es.js` file path to the `NPMResolver` service.
 
@@ -123,7 +127,7 @@ The `isCustomDDMFormFieldType` is used internally. Return `true` if you're retur
 
 `Slider.es.js` provides the JavaScript logic for the field. Two components are defined in the file; `Main` and `Slider`. 
 
-The import statements bring in functionality from Liferay's base form field, `dynamic-data-mapping-form-field-type`. These will be called later using the declared variables `FieldBase` and `useSyncValue`.
+The import statements bring in functionality from Liferay's base form field, `dynamic-data-mapping-form-field-type`. These are called later using the declared variables `FieldBase` and `useSyncValue`.
 
 ```{literalinclude} ./writing-a-custom-form-field-type/resources/liferay-c2p9.zip/c2p9-impl/src/main/resources/META-INF/resources/C2P9/Slider.es.js
    :dedent: 0
@@ -139,9 +143,9 @@ The `const Slider =` block defines the field: it's instantiated with the paramet
    :lines: 5-17
 ```
 
-The values for these parameters, along with some others, define the HTML `<input>` tag for the form field. Importantly, the `max` and `min` values that the user can select are hardcoded right now. You'll [change this later](#add-custom-settings-to-the-form-field). The `value` of the field is defined using a ternary operator: if a value is entered, use it. Otherwise use the predefined value.
+The values for these parameters, along with some others, define the HTML `<input>` tag for the form field. Importantly, the `max` and `min` values that the user can select are hard coded right now. You'll [change this later](#add-custom-settings-to-the-form-field). The field's `value` is defined using a ternary operator: if a value is entered, use it. Otherwise use the predefined value.
 
-The `Main` component is exported at the end of the file; it includes the `Slider` as a child element of the imported `FieldBase`. The `onChange` function is used to get the slider's position/value each time the event is detected (each time the slider is dragged to a new value).
+The `Main` component is exported at the end of the file; it includes the `Slider` as a child element of the imported `FieldBase`. The `onChange` function gets the slider's position/value each time the event is detected (each time the slider is dragged to a new value).
 
 ```{literalinclude} ./writing-a-custom-form-field-type/resources/liferay-c2p9.zip/c2p9-impl/src/main/resources/META-INF/resources/C2P9/Slider.es.js
    :dedent: 0
@@ -153,12 +157,12 @@ The `Main` component is exported at the end of the file; it includes the `Slider
 
 Right now the Max and Min settings for the Slider field are hard coded, but it's better if they're configurable. To add custom settings to a form field,
 
-- Adjust the backend by adding a `DDMFormFieldTypeSettings` class and adding a method to the `DDMFormFieldType`.
-- Adapt the frontend for rendering the new settings by adding a `DDMFormFieldTemplateContextContributor` and updating the way the settings are defined in `Slider.es.js`.
+- Adjust the back-end by adding a `DDMFormFieldTypeSettings` class and adding a method to the `DDMFormFieldType`.
+- Adapt the front-end for rendering the new settings by adding a `DDMFormFieldTemplateContextContributor` and updating the way the settings are defined in `Slider.es.js`.
 
-### Supporting Custom Settings in the Backend
+### Supporting Custom Settings in the Back-end
 
-The form field's settings are defined in the `DDMTypeSettings` class, which also defines the form that appears in the field's sidebar using the `@DDMForm` annotation. Then the `DDMFormFieldType` itself must know about the new settings definition so it doesn't simply display the default field settings form. A `DDMFormFieldContextContributor` class sends the new settings to the React component so it can be displayed to the end user.
+The form field's settings are defined in the `DDMTypeSettings` class, which also defines the form that appears in the field's sidebar using the `@DDMForm` annotation. Then the `DDMFormFieldType` itself must know about the new settings definition so it doesn't display the default field settings form. A `DDMFormFieldContextContributor` class sends the new settings to the React component to show it to the end user.
 
 1. Add a `C2P9DDMFormFieldTypeSettings` Java class to the `com.acme.c2p9.internal.dynamic.data.mapping.form.field.type` package.
 
@@ -251,9 +255,9 @@ The form field's settings are defined in the `DDMTypeSettings` class, which also
    }
    ```
 
-### Supporting Custom Settings in the Frontend
+### Supporting Custom Settings in the Front-end
 
-The frontend requires updates to the `Slider.es.js` to support user-entered min and max values, and a `DDMTemplateContextContributor` so that the frontend can receive the setting values from the backend.
+The front-end requires updates to the `Slider.es.js` to support user-entered min and max values and a `DDMTemplateContextContributor` so that the front-end can receive the setting values from the back-end.
 
 1. Create a `C2P9DDMFormFieldTemplateContextContributor` class in the `com.acme.c2p9.internal.dynamic.data.mapping.form.field.type` package:
 
@@ -292,7 +296,7 @@ The frontend requires updates to the `Slider.es.js` to support user-entered min 
    }
    ```
 
-1. Update the JavaScript component in `Slider.es.js`, removing the hard coded min and max values and instead allowing for the user to enter their values. The full file contents are provided below:
+1. Update the JavaScript component in `Slider.es.js`, removing the hard coded min and max values and instead allowing for the user to enter their values. The full file contents appear below:
 
    ```javascript
    import {FieldBase} from 'dynamic-data-mapping-form-field-type/FieldBase/ReactFieldBase.es';
@@ -356,7 +360,7 @@ The frontend requires updates to the `Slider.es.js` to support user-entered min 
    export default Main;
    ```
 
-1. Redeploy the form field module. Once it's processed (STOPPED &rarr; STARTED in the console) restart Liferay:
+1. Redeploy the form field module. Once it's processed (STOPPED &rarr; STARTED in the console), restart Liferay:
 
    ```shell
    ./gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)
