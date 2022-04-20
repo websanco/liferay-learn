@@ -317,3 +317,220 @@ The boilerplate JSON populating the Element is nearly identical to the [Text Mat
 ```
 
 ## Understanding the Element Schema
+
+The schema for Search Blueprint Elements is defined in the [sxp-query-element.schema.json](https://github.com/liferay/liferay-portal/blob/master/modules/dxp/apps/search-experiences/search-experiences-web/src/main/resources/META-INF/resources/sxp_blueprint_admin/schemas/sxp-query-element.schema.json) file.
+
+Each Element has these three properties: `description_i18n`, `elementDefinition`, and `title_i18n`.
+
+```json
+{
+   "description_i18n": {},
+   "elementDefinition": {},
+   "title_i18n": {}
+}
+```
+
+The title and description fields are straightforward: set the title and description text for the Element, in as many languages as you need. For example,
+
+```json
+{
+	"description_i18n": {
+		"en_US": "Search for a text match over multiple text fields."
+	},
+   "elementDefinition": {...},
+	"title_i18n": {
+		"en_US": "Text Match Over Multiple Fields"
+	}
+}
+```
+
+The Element definition is where you'll do the bulk of the work. It contains three properties: `category`, `configuration`, `icon`, and `uiConfiguration`. The  Element Definition for the Text Match over Multiple Fields Element is instructive for learning about these properties:
+
+- `category` provides a string that classifies the behavior of the Element. Specify `match`, `boost`, `conditional`, `filter`, `hide`, or `custom`.
+- `configuration` provides the `queryConfiguration`, which holds the query clauses you're contributing, via the `queryEntries` property.
+- `icon` sets a string that sets which available icon to use for the Element. Specify `thumbs-up`, to use the out of the box icons.
+- `uiConfiguration` sets the configuration elements that you'll show in the UI and then pass into your custom Element with the configured values. For example, Elements that allow a boost to be configured pass the value of the configuration into the query with
+
+   ```json
+   "boost": "${configuration.boost}",
+   ```
+.
+
+```json
+"elementDefinition": {
+		"category": "match",
+		"configuration": {
+			"queryConfiguration": {
+				"queryEntries": [
+					{
+						"clauses": [
+							{
+								"context": "query",
+								"occur": "must",
+								"query": {
+									"multi_match": {
+										"fuzziness": "${configuration.fuzziness}",
+										"query": "${configuration.keywords}",
+										"minimum_should_match": "${configuration.minimum_should_match}",
+										"boost": "${configuration.boost}",
+										"fields": "${configuration.fields}",
+										"type": "${configuration.type}",
+										"operator": "${configuration.operator}",
+										"slop": "${configuration.slop}"
+									}
+								}
+							}
+						]
+					}
+				]
+			}
+		},
+		"icon": "picture",
+		"uiConfiguration": {
+			"fieldSets": [
+				{
+					"fields": [
+						{
+							"defaultValue": [
+								{
+									"field": "localized_title",
+									"locale": "${context.language_id}",
+									"boost": "2"
+								},
+								{
+									"field": "content",
+									"locale": "${context.language_id}",
+									"boost": "1"
+								}
+							],
+							"label": "Fields",
+							"name": "fields",
+							"type": "fieldMappingList",
+							"typeOptions": {
+								"boost": true
+							}
+						},
+						{
+							"defaultValue": "or",
+							"label": "Operator",
+							"name": "operator",
+							"type": "select",
+							"typeOptions": {
+								"options": [
+									{
+										"label": "OR",
+										"value": "or"
+									},
+									{
+										"label": "AND",
+										"value": "and"
+									}
+								]
+							}
+						},
+						{
+							"defaultValue": "best_fields",
+							"label": "Match Type",
+							"name": "type",
+							"type": "select",
+							"typeOptions": {
+								"options": [
+									{
+										"label": "Best Fields",
+										"value": "best_fields"
+									},
+									{
+										"label": "Most Fields",
+										"value": "most_fields"
+									},
+									{
+										"label": "Cross Fields",
+										"value": "cross_fields"
+									},
+									{
+										"label": "Phrase",
+										"value": "phrase"
+									},
+									{
+										"label": "Phrase Prefix",
+										"value": "phrase_prefix"
+									},
+									{
+										"label": "Boolean Prefix",
+										"value": "bool_prefix"
+									}
+								]
+							}
+						},
+						{
+							"defaultValue": "AUTO",
+							"helpText": "Only use fuzziness with the following match types: most fields, best fields, bool prefix.",
+							"label": "Fuzziness",
+							"name": "fuzziness",
+							"type": "select",
+							"typeOptions": {
+								"nullable": true,
+								"options": [
+									{
+										"label": "Auto",
+										"value": "AUTO"
+									},
+									{
+										"label": "0",
+										"value": "0"
+									},
+									{
+										"label": "1",
+										"value": "1"
+									},
+									{
+										"label": "2",
+										"value": "2"
+									}
+								]
+							}
+						},
+						{
+							"defaultValue": "0",
+							"label": "Minimum Should Match",
+							"name": "minimum_should_match",
+							"type": "text",
+							"typeOptions": {
+								"nullable": true
+							}
+						},
+						{
+							"defaultValue": "",
+							"helpText": "Only use slop with the following match types: phrase, phrase prefix.",
+							"label": "Slop",
+							"name": "slop",
+							"type": "number",
+							"typeOptions": {
+								"min": 0,
+								"nullable": true,
+								"step": 1
+							}
+						},
+						{
+							"defaultValue": 1,
+							"label": "Boost",
+							"name": "boost",
+							"type": "number",
+							"typeOptions": {
+								"min": 0
+							}
+						},
+						{
+							"helpText": "If this is set, the search terms entered in the search bar will be replaced by this value.",
+							"label": "Text to Match",
+							"name": "keywords",
+							"type": "keywords",
+							"typeOptions": {
+								"required": false
+							}
+						}
+					]
+				}
+			]
+		}
+```
