@@ -48,7 +48,7 @@ JavaScriptコードを追加する最も簡単な方法は、個々のページ�
 
 1. プロダクトメニュー（![Product Menu icon.](../../images/icon-product-menu.png)）をクリックして、 ［**サイトビルダー**］ &rarr; ［**ページ**］ に移動します。
 
-1. 個々のページの**アクション**アイコン（![Actions icon.](../../images/icon-actions.png)）をクリックして、 ［**構成**］ をクリックします。
+1. 個々のページの **アクション** アイコン（![Actions icon.](../../images/icon-actions.png)）をクリックして、 ［**構成**］ をクリックします。
 
 1. JavaScriptコードをテキストボックスエリアの **JavaScript** に貼り付けます。 これは［詳細設定］タブの下にあります。
 
@@ -68,7 +68,7 @@ Javascriptのコードを追加するもう一つの方法は、コンテント�
 
 1. コレクションの下にある **プラス** アイコン（![Plus icon.](../../images/icon-plus.png)）をクリックして、新しいフラグメントコレクションを作成します。
 
-1. **追加**アイコン (![Add icon.](../../images/icon-add.png)) をクリックして、新しいフラグメントを作成します。
+1. **追加** アイコン (![Add icon.](../../images/icon-add.png)) をクリックして、新しいフラグメントを作成します。
 
 1. ［**Code**］ タブをクリックし、JavaScriptフィールドにJavaScriptコードを貼り付けます。
 

@@ -31,7 +31,7 @@ Analytics Cloudは、SalesforceのデータとLiferay DXPなどのデータを�
 
   データのインポートには、Salesforceインスタンスにどれだけのデータが存在するかによっては、時間がかかる場合があることに注意してください。
 
-1. インポートの進行状況は、 **［CONFIGURE DATA SOURCE］** タブに表示されます。 ［View］をクリックすると、各Salesforceフィールド (［Accounts］と［Individuals］） と対応するAnalytics Cloudフィールドのマッピングが表示されます。 また、この情報は後から、 **設定** → **データソース** → (**Salesforce**) → **CONFIGURE DATA SOURCE** から見ることができます。
+1. インポートの進行状況は、 ［**CONFIGURE DATA SOURCE**］ タブに表示されます。 ［View］をクリックすると、各Salesforceフィールド (［Accounts］と［Individuals］） と対応するAnalytics Cloudフィールドのマッピングが表示されます。 また、この情報は後から、 **設定** → **データソース** → (**Salesforce**) → **CONFIGURE DATA SOURCE** から見ることができます。
 
 ![Salesforce インスタンスに接続するために必要な情報を入力します。](adding-a-salesforce-data-source/images/02.png)
 

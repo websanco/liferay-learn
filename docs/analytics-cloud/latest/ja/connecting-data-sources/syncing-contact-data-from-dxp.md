@@ -32,7 +32,7 @@
 
       なお、ユーザー用に作成されたカスタムフィールドは、すべて同期に利用できます。 ユーザーにカスタムフィールドを追加する についての詳細は [こちら](https://learn.liferay.com/dxp/latest/ja/users-and-permissions/users/adding-custom-fields-to-users.html) 。
 
-      選択後、ページ下部にある **［保存］** ボタンをクリックします。
+      選択後、ページ下部にある ［**保存**］ ボタンをクリックします。
 
 <a name="modifying-sync-of-contact-data-fields" />
 
