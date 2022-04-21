@@ -2,6 +2,8 @@
 
 Analytics Cloud APIを利用するには、アクセストークンを使用する必要があります。 これは、 ［**設定**］ &rarr; ［**ワークスペースデータ**］ &rarr; ［**API**］ で見つけ管理することが可能です。
 
+<a name="copying-the-access-token" />
+
 ## アクセストークンのコピー
 
 [アクセストークンを生成したら](../apis/authentication.md)コピーアイコンをクリックし、アクセストークンをクリップボードにコピーしてください。
@@ -9,6 +11,8 @@ Analytics Cloud APIを利用するには、アクセストークンを使用す�
 ![［コピー］アイコンをクリックすると、アクセストークンがコピーされます。](./managing-api-access/images/01.png)
 
 APIリクエストでアクセストークンを使用し、認証を行ってください。
+
+<a name="revoking-the-access-token" />
 
 ## アクセストークンの取り消し
 
