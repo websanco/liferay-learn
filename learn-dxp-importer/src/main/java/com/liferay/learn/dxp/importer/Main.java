@@ -140,7 +140,7 @@ public class Main {
 						).put(
 							"ja-JP", japaneseContentFieldValue
 						).build();
-						name = "content";
+						name = "body";
 					}
 				}
 			});
