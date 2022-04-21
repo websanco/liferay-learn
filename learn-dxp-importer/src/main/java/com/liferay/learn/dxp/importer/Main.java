@@ -20,7 +20,6 @@ import com.liferay.headless.delivery.client.dto.v1_0.StructuredContent;
 import com.liferay.headless.delivery.client.resource.v1_0.StructuredContentResource;
 import com.liferay.petra.string.StringPool;
 import com.liferay.portal.kernel.util.HashMapBuilder;
-import com.liferay.portal.kernel.util.LocaleUtil;
 
 import com.vladsch.flexmark.html.HtmlRenderer;
 import com.vladsch.flexmark.parser.Parser;
@@ -126,64 +125,76 @@ public class Main {
 
 		StructuredContent structuredContent = new StructuredContent();
 
-		String[] languages = {
-			"en-US", "ja-JP"};
-		
+		String[] languages = {"en-US", "ja-JP"};
+
 		structuredContent.setAvailableLanguages(languages);
 
 		ContentField[] contentFields;
 
-		if (japaneseFile.exists()) {
+		ContentFieldValue englishContentFieldValue = new ContentFieldValue() {
+			{
+				data = _toHTML(englishContent);
+			}
+		};
 
+		if (japaneseFile.exists()) {
 			String japaneseContent = FileUtils.readFileToString(
 				japaneseFile, StandardCharsets.UTF_8);
 
 			String japaneseTitle = _getTitle(japaneseContent);
 
-			ContentFieldValue englishContentFieldValue = new ContentFieldValue () {
-				{
-					data = _toHTML(englishContent);
-				}
-			};
-			ContentFieldValue japaneseContentFieldValue = new ContentFieldValue() {
-				{
-					data = _toHTML(japaneseContent);
-				}
-			};
+			ContentFieldValue japaneseContentFieldValue =
+				new ContentFieldValue() {
+					{
+						data = _toHTML(japaneseContent);
+					}
+				};
 			contentFields = new ContentField[] {
 				new ContentField() {
 					{
 						contentFieldValue = englishContentFieldValue;
-							
+
 						contentFieldValue_i18n = HashMapBuilder.put(
-						"en-US", englishContentFieldValue).put(
-						"jp-JA", japaneseContentFieldValue).build();
+							"en-US", englishContentFieldValue
+						).put(
+							"ja-JP", japaneseContentFieldValue
+						).build();
 
 						name = "content";
 					}
 				}
 			};
 
-			structuredContent.setTitle_i18n(HashMapBuilder.put(
-				"en-US", englishTitle).put(
-				"ja-JP", japaneseTitle).build());
-
-		} else {
-
+			structuredContent.setTitle_i18n(
+				HashMapBuilder.put(
+					"en-US", englishTitle
+				).put(
+					"ja-JP", japaneseTitle
+				).build());
+		}
+		else {
 			contentFields = new ContentField[] {
 				new ContentField() {
 					{
-						contentFieldValue =
-							new ContentFieldValue() {
-								{
-									data = _toHTML(
-										englishContent);
-								}
-							};
+						contentFieldValue = englishContentFieldValue;
+
+						contentFieldValue_i18n = HashMapBuilder.put(
+							"en-US", englishContentFieldValue
+						).put(
+							"ja-JP", englishContentFieldValue
+						).build();
+
 						name = "content";
 					}
 				}
 			};
+
+			structuredContent.setTitle_i18n(
+				HashMapBuilder.put(
+					"en-US", englishTitle
+				).put(
+					"ja-JP", englishTitle
+				).build());
 		}
 
 		structuredContent.setContentFields(contentFields);
@@ -192,11 +203,11 @@ public class Main {
 
 		structuredContent.setTitle(_getTitle(englishContent));
 
-		structuredContentResource.postSiteStructuredContent(_GROUP_ID, structuredContent);
-
+		structuredContentResource.postSiteStructuredContent(
+			_GROUP_ID, structuredContent);
 	}
 
-	private static final long _CONTENT_STRUCTURE_ID = 40298;
+	private static final long _CONTENT_STRUCTURE_ID = 40288;
 
 	private static final long _GROUP_ID = 20123;
 
