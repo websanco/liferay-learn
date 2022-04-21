@@ -44,10 +44,6 @@ The page is published using the new Style Book.
 
    These options come from the theme being used for your Site. See the [default Classic theme categories](#default-classic-theme-categories) for more information on the categories available for the default Classic theme.
 
-   ```{note}
-   The *Color System* option from the dropdown menu allows you to define the colors for each [Style Book token](./developer-guide/style-book-token-definitions.md) used in the theme.
-   ```
-
 1. Customize any of the provided fields given under the chosen category. Color fields specifically give you [multiple ways to choose a color](#customizing-your-style-book-s-colors).
 
 1. Click *Publish*.
@@ -64,11 +60,11 @@ When you are choosing a color for any color field in your Style Book, you can ch
 
 * Enter the hex code for the desired color into the text box to change to any color.
 
-* Click the *Value from Stylebook* button to open a menu of pre-defined colors to choose from (including the Style Book token values, under the "Color System" category).
+* Click the *Value from Stylebook* button to open a menu of pre-defined colors to choose from. You can choose to reuse colors from each of the general categories that you can customize.
 
 ![You have several options available to change the color for any color option.](./using-a-style-book-to-standardize-site-appearance/images/03.png)
 
-If you click the Value from Stylebook button and select a Style Book token value, then that color field is linked to the chosen Style Book token. Any future changes to the token value for this Style Book will also change this color field.
+If you click the Value from Stylebook button and select a Style Book token value (that is also defined in another category), then that color field is linked to the chosen Style Book token. Any future changes to the token value for this Style Book will also change this color field.
 
 When a color field is tied to a Style Book token, the Value from Stylebook button is replaced with a *Detach Token* button. Click this button to detach the color field from the token (but keep the same color value).
 
@@ -82,7 +78,7 @@ When you are editing colors from a Style Book on a specific page, you have the s
 
 ## Default Classic Theme Categories
 
-When you are editing a Style Book, the categories available from the drop-down box show different options for styling your pages.
+When you are editing a Style Book, the categories available from the drop-down box show different options for styling your pages. The options available in each category are defined by the theme.
 
 ```{tip}
 You can place the `Style Guide Sample` widget on your pages to help test out the various options in your Style Book categories. This sample widget contains many different UI elements that leverage most of the features in the Classic theme, so you can use it to test your page styles. 
