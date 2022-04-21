@@ -23,7 +23,6 @@ import com.liferay.portal.kernel.util.HashMapBuilder;
 
 import com.vladsch.flexmark.html.HtmlRenderer;
 import com.vladsch.flexmark.parser.Parser;
-import com.vladsch.flexmark.util.ast.Node;
 import com.vladsch.flexmark.util.data.MutableDataSet;
 
 import java.io.File;
@@ -67,17 +66,17 @@ public class Main {
 		fileNames.add(fileName);
 	}
 
-	private static String _getTitle(String content) {
-		int x = content.indexOf("#");
+	private static String _getTitle(String text) {
+		int x = text.indexOf("#");
 
-		int y = content.indexOf(StringPool.NEW_LINE, x);
+		int y = text.indexOf(StringPool.NEW_LINE, x);
 
-		String title = content.substring(x + 1, y);
+		String title = text.substring(x + 1, y);
 
 		return title.trim();
 	}
 
-	private static String _toHTML(String content) {
+	private static String _toHTML(String text) {
 		MutableDataSet mutableDataSet = new MutableDataSet();
 
 		HtmlRenderer htmlRenderer = HtmlRenderer.builder(
@@ -88,33 +87,76 @@ public class Main {
 			mutableDataSet
 		).build();
 
-		Node node = parser.parse(content);
-
-		String html = htmlRenderer.render(node);
-
-		System.out.println(html.length());
-
-		return html;
+		return htmlRenderer.render(parser.parse(text));
 	}
 
-	private static void _uploadHTML(String fileName) throws Exception {
+	private static StructuredContent _toStructuredContent(String fileName)
+		throws Exception {
 
-		// English
+		StructuredContent structuredContent = new StructuredContent();
 
-		// TODO The external reference code must be unique and derived from the
-		// file name
+		structuredContent.setAvailableLanguages(
+			new String[] {"en-US", "ja-JP"});
 
-		String externalReferenceCode = "";
-
-		String englishContent = FileUtils.readFileToString(
+		String englishText = FileUtils.readFileToString(
 			new File(fileName), StandardCharsets.UTF_8);
 
-		String englishTitle = _getTitle(englishContent);
+		ContentFieldValue englishContentFieldValue = new ContentFieldValue() {
+			{
+				data = _toHTML(englishText);
+			}
+		};
 
-		// Japanese
+		String englishTitle = _getTitle(englishText);
+
+		ContentFieldValue japaneseContentFieldValue;
+
+		String japaneseTitle = englishTitle;
 
 		File japaneseFile = new File(fileName.replace("/en/", "/ja/"));
 
+		if (japaneseFile.exists()) {
+			String japaneseText = FileUtils.readFileToString(
+				japaneseFile, StandardCharsets.UTF_8);
+
+			japaneseContentFieldValue = new ContentFieldValue() {
+				{
+					data = _toHTML(japaneseText);
+				}
+			};
+			japaneseTitle = _getTitle(japaneseText);
+		}
+		else {
+			japaneseContentFieldValue = englishContentFieldValue;
+		}
+
+		structuredContent.setContentFields(
+			new ContentField[] {
+				new ContentField() {
+					{
+						contentFieldValue = englishContentFieldValue;
+						contentFieldValue_i18n = HashMapBuilder.put(
+							"en-US", englishContentFieldValue
+						).put(
+							"ja-JP", japaneseContentFieldValue
+						).build();
+						name = "content";
+					}
+				}
+			});
+		structuredContent.setContentStructureId(_CONTENT_STRUCTURE_ID);
+		structuredContent.setTitle(_getTitle(englishText));
+		structuredContent.setTitle_i18n(
+			HashMapBuilder.put(
+				"en-US", englishTitle
+			).put(
+				"ja-JP", japaneseTitle
+			).build());
+
+		return structuredContent;
+	}
+
+	private static void _uploadHTML(String fileName) throws Exception {
 		StructuredContentResource.Builder builder =
 			StructuredContentResource.builder();
 
@@ -123,88 +165,8 @@ public class Main {
 				"test@liferay.com", "test"
 			).build();
 
-		StructuredContent structuredContent = new StructuredContent();
-
-		String[] languages = {"en-US", "ja-JP"};
-
-		structuredContent.setAvailableLanguages(languages);
-
-		ContentField[] contentFields;
-
-		ContentFieldValue englishContentFieldValue = new ContentFieldValue() {
-			{
-				data = _toHTML(englishContent);
-			}
-		};
-
-		if (japaneseFile.exists()) {
-			String japaneseContent = FileUtils.readFileToString(
-				japaneseFile, StandardCharsets.UTF_8);
-
-			String japaneseTitle = _getTitle(japaneseContent);
-
-			ContentFieldValue japaneseContentFieldValue =
-				new ContentFieldValue() {
-					{
-						data = _toHTML(japaneseContent);
-					}
-				};
-			contentFields = new ContentField[] {
-				new ContentField() {
-					{
-						contentFieldValue = englishContentFieldValue;
-
-						contentFieldValue_i18n = HashMapBuilder.put(
-							"en-US", englishContentFieldValue
-						).put(
-							"ja-JP", japaneseContentFieldValue
-						).build();
-
-						name = "content";
-					}
-				}
-			};
-
-			structuredContent.setTitle_i18n(
-				HashMapBuilder.put(
-					"en-US", englishTitle
-				).put(
-					"ja-JP", japaneseTitle
-				).build());
-		}
-		else {
-			contentFields = new ContentField[] {
-				new ContentField() {
-					{
-						contentFieldValue = englishContentFieldValue;
-
-						contentFieldValue_i18n = HashMapBuilder.put(
-							"en-US", englishContentFieldValue
-						).put(
-							"ja-JP", englishContentFieldValue
-						).build();
-
-						name = "content";
-					}
-				}
-			};
-
-			structuredContent.setTitle_i18n(
-				HashMapBuilder.put(
-					"en-US", englishTitle
-				).put(
-					"ja-JP", englishTitle
-				).build());
-		}
-
-		structuredContent.setContentFields(contentFields);
-
-		structuredContent.setContentStructureId(_CONTENT_STRUCTURE_ID);
-
-		structuredContent.setTitle(_getTitle(englishContent));
-
 		structuredContentResource.postSiteStructuredContent(
-			_GROUP_ID, structuredContent);
+			_GROUP_ID, _toStructuredContent(fileName));
 	}
 
 	private static final long _CONTENT_STRUCTURE_ID = 40288;
