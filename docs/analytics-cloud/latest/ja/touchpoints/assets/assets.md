@@ -9,9 +9,9 @@
 
 これらのアセットのメトリクスは現在、Analytics Cloudで報告されています。
 
-* [Blogs](./blogs.md)
-* [Documents and Media](./documents-and-media.md)
-* [Forms](./forms.md)
+* [ブログ](./blogs.md)
+* [ドキュメントとメディア](./documents-and-media.md)
+* [フォーム](./forms.md)
 * [Web Content](./tracking-custom-assets.md)
 * [Custom](./tracking-custom-assets.md)
 

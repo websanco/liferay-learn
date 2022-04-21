@@ -15,7 +15,7 @@
 1. セグメントの基準を右のパネルから画面中央のキャンバスにドラッグ＆ドロップします。 パネル上部のセレクタメニューに、選択できる基準の種類が表示されます。
 
     ***Web行動：** 人によって取られたアクション (フォームを送信した、ブログを閲覧した、など)。
-    ***個人の属性：** 個人に属する属性（年齢、国、業界など）。 なお、DXPのカスタムフィールドはIndividual Attributesでも選択できます。 詳細は、[DXPのユーザーにカスタムフィールドを追加する](https://learn.liferay.com/dxp/latest/ja/users-and-permissions/users/adding-custom-fields-to-users.html)を参照してください。
+    ***個人の属性：** 個人に属する属性（年齢、国、業界など）。 なお、DXPのカスタムフィールドはIndividual Attributesでも選択できます。 詳細は、 [DXPのユーザーにカスタムフィールドを追加する](https://learn.liferay.com/dxp/latest/ja/users-and-permissions/users/adding-custom-fields-to-users.html) を参照してください。
     ***アカウント属性：** Salesforceアカウントに属する属性 (アカウント名、業界、Webサイトなど)。
     ***関心のあるトピック：** その人が興味を持っているトピックやコンテンツの種類。 Analytics Cloudの［関心のあるトピック］の詳細は、Customer Insightsを参照してください。
     ***セッション属性：** 人のWebセッションに属する属性（ブラウザー、地理的位置など）。

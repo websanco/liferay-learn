@@ -20,9 +20,9 @@ Liferay DXPのデータソースを表示したり変更したりするには、
 
 ワークスペースからDXPインスタンスを切断する場合は、 ［**Disconnect**］ ボタンをクリックします。 確認を求められます。 なお、データソースを切断すると、アナリティクスデータのすべての同期が停止します。
 
-**Synced Sites：** DXPサイトのAnalytics Cloudとの同期状態を表示します。 設定方法は、 [syncing sites to a property](../connecting-data-sources/scoping-sites-and-individuals-using-properties.md#syncing-sites-to-a-property)を参照してください。
+**Synced Sites：** DXPサイトのAnalytics Cloudとの同期状態を表示します。 設定方法は、 [syncing sites to a property](../connecting-data-sources/scoping-sites-and-individuals-using-properties.md#syncing-sites-to-a-property) を参照してください。
 
-**Synced Contacts：** DXP連絡先のAnalytics Cloudとの同期状態を表示します。 設定方法は、 [syncing sites to a property](../connecting-data-sources/scoping-sites-and-individuals-using-properties.md#syncing-contacts-to-a-property)を参照してください。
+**Synced Contacts：** DXP連絡先のAnalytics Cloudとの同期状態を表示します。 設定方法は、 [syncing sites to a property](../connecting-data-sources/scoping-sites-and-individuals-using-properties.md#syncing-contacts-to-a-property) を参照してください。
 
 なお、この管理ページは、SalesforceデータソースとCSVデータソースでは異なって見えます。
 
