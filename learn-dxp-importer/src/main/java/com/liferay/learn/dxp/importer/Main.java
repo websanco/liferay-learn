@@ -90,30 +90,32 @@ public class Main {
 	}
 
 	private static String _toHTML(String text) {
-		MutableDataSet mutableDataSet = new MutableDataSet().set(
-			HtmlRenderer.GENERATE_HEADER_ID, true
+		MutableDataSet mutableDataSet = new MutableDataSet();
+
+		mutableDataSet.set(
+			AsideExtension.ALLOW_LEADING_SPACE, true
 		).set(
 			AsideExtension.EXTEND_TO_BLANK_LINE, false
 		).set(
 			AsideExtension.IGNORE_BLANK_LINE, false
 		).set(
-			AsideExtension.ALLOW_LEADING_SPACE, true
+			AsideExtension.INTERRUPTS_ITEM_PARAGRAPH, true
 		).set(
 			AsideExtension.INTERRUPTS_PARAGRAPH, true
 		).set(
-			AsideExtension.INTERRUPTS_ITEM_PARAGRAPH, true
-		).set(
 			AsideExtension.WITH_LEAD_SPACES_INTERRUPTS_ITEM_PARAGRAPH, true
+		).set(
+			HtmlRenderer.GENERATE_HEADER_ID, true
 		);
 
 		mutableDataSet.set(
 			Parser.EXTENSIONS,
 			Arrays.asList(
-				TablesExtension.create(), AnchorLinkExtension.create(),
-				AsideExtension.create(), AttributesExtension.create(),
-				DefinitionExtension.create(), FootnoteExtension.create(),
-				MediaTagsExtension.create(), StrikethroughExtension.create(),
-				SuperscriptExtension.create(), TocExtension.create(),
+				AnchorLinkExtension.create(), AsideExtension.create(),
+				AttributesExtension.create(), DefinitionExtension.create(),
+				FootnoteExtension.create(), MediaTagsExtension.create(),
+				StrikethroughExtension.create(), SuperscriptExtension.create(),
+				TablesExtension.create(), TocExtension.create(),
 				TypographicExtension.create(),
 				YamlFrontMatterExtension.create()));
 
