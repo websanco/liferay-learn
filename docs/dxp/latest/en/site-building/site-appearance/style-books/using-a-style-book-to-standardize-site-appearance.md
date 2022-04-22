@@ -60,9 +60,13 @@ While you are creating or editing a Style Book, you can preview the way it affec
 This feature requires Liferay DXP U9+ or GA13+.
 ```
 
-Use the two dropdown menus at the top of the screen to select what components to preview. The left drop-down menu determines the overall type to display (pages, Page Templates, Master Page Templates, Display Page Templates, or Page Fragments), and the right drop-down menu determines which specific one of that type to display (or category, if applicable).
+Use the two drop-down menus at the top of the screen to select what components to preview. The left drop-down menu determines the overall type to display (pages, Page Templates, Master Page Templates, Display Page Templates, or Page Fragments). The right drop-down menu determines which specific instance of the chosen type to display (or category, if applicable); only the four most recently used options are shown in the right drop-down menu, unless you click *More* from the list.
 
-![If you are previewing the Style Book's effect on Page Fragments, then you can choose all of the categories of Fragments available on your Site.](./using-a-style-book-to-standardize-site-appearance/images/08.png)
+![Use the two drop-down menus together to select what to display to preview your Style Book.](./using-a-style-book-to-standardize-site-appearance/images/08.png)
+
+Previewing a Collection of Page Fragments shows all Fragments in the Collection. The preview displays Fragments with multiple (selectable) configuration options with an instance of each option, so that you can preview your Style Book with any of them.
+
+![If you are previewing the Style Book's effect on Page Fragments, then you can preview any configuration of the Fragments from the chosen Collection.](./using-a-style-book-to-standardize-site-appearance/images/09.gif)
 
 ### Customizing Your Style Book's Colors
 
