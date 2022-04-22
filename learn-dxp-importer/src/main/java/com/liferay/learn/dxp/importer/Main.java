@@ -90,9 +90,7 @@ public class Main {
 	}
 
 	private static String _toHTML(String text) {
-		MutableDataSet mutableDataSet = new MutableDataSet();
-
-		mutableDataSet.set(
+		MutableDataSet mutableDataSet = new MutableDataSet().set(
 			AsideExtension.ALLOW_LEADING_SPACE, true
 		).set(
 			AsideExtension.EXTEND_TO_BLANK_LINE, false
