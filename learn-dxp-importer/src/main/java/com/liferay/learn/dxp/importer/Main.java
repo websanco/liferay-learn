@@ -20,6 +20,7 @@ import com.liferay.headless.delivery.client.dto.v1_0.StructuredContent;
 import com.liferay.headless.delivery.client.resource.v1_0.StructuredContentResource;
 import com.liferay.petra.string.StringPool;
 import com.liferay.portal.kernel.util.HashMapBuilder;
+
 import com.vladsch.flexmark.ext.anchorlink.AnchorLinkExtension;
 import com.vladsch.flexmark.ext.aside.AsideExtension;
 import com.vladsch.flexmark.ext.attributes.AttributesExtension;
@@ -32,7 +33,6 @@ import com.vladsch.flexmark.ext.tables.TablesExtension;
 import com.vladsch.flexmark.ext.toc.TocExtension;
 import com.vladsch.flexmark.ext.typographic.TypographicExtension;
 import com.vladsch.flexmark.ext.yaml.front.matter.YamlFrontMatterExtension;
-
 import com.vladsch.flexmark.html.HtmlRenderer;
 import com.vladsch.flexmark.parser.Parser;
 import com.vladsch.flexmark.util.data.MutableDataSet;
@@ -40,8 +40,8 @@ import com.vladsch.flexmark.util.data.MutableDataSet;
 import java.io.File;
 
 import java.nio.charset.StandardCharsets;
-import java.util.Arrays;
 
+import java.util.Arrays;
 import java.util.Set;
 import java.util.TreeSet;
 
@@ -90,29 +90,32 @@ public class Main {
 	}
 
 	private static String _toHTML(String text) {
-		MutableDataSet mutableDataSet = new MutableDataSet()
-			.set(HtmlRenderer.GENERATE_HEADER_ID, true)
-			.set(AsideExtension.EXTEND_TO_BLANK_LINE, false)
-			.set(AsideExtension.IGNORE_BLANK_LINE, false)
-			.set(AsideExtension.ALLOW_LEADING_SPACE, true)
-			.set(AsideExtension.INTERRUPTS_PARAGRAPH, true)
-			.set(AsideExtension.INTERRUPTS_ITEM_PARAGRAPH, true)
-			.set(AsideExtension.WITH_LEAD_SPACES_INTERRUPTS_ITEM_PARAGRAPH, true);
+		MutableDataSet mutableDataSet = new MutableDataSet().set(
+			HtmlRenderer.GENERATE_HEADER_ID, true
+		).set(
+			AsideExtension.EXTEND_TO_BLANK_LINE, false
+		).set(
+			AsideExtension.IGNORE_BLANK_LINE, false
+		).set(
+			AsideExtension.ALLOW_LEADING_SPACE, true
+		).set(
+			AsideExtension.INTERRUPTS_PARAGRAPH, true
+		).set(
+			AsideExtension.INTERRUPTS_ITEM_PARAGRAPH, true
+		).set(
+			AsideExtension.WITH_LEAD_SPACES_INTERRUPTS_ITEM_PARAGRAPH, true
+		);
 
-		mutableDataSet.set(Parser.EXTENSIONS, 
-			Arrays.asList(TablesExtension.create(),
-			AnchorLinkExtension.create(),
-			AsideExtension.create(),
-			AttributesExtension.create(),
-			DefinitionExtension.create(),
-			FootnoteExtension.create(),
-			MediaTagsExtension.create(),
-			StrikethroughExtension.create(),
-			SuperscriptExtension.create(),
-			TocExtension.create(),
-			TypographicExtension.create(),
-			YamlFrontMatterExtension.create()
-		));
+		mutableDataSet.set(
+			Parser.EXTENSIONS,
+			Arrays.asList(
+				TablesExtension.create(), AnchorLinkExtension.create(),
+				AsideExtension.create(), AttributesExtension.create(),
+				DefinitionExtension.create(), FootnoteExtension.create(),
+				MediaTagsExtension.create(), StrikethroughExtension.create(),
+				SuperscriptExtension.create(), TocExtension.create(),
+				TypographicExtension.create(),
+				YamlFrontMatterExtension.create()));
 
 		HtmlRenderer htmlRenderer = HtmlRenderer.builder(
 			mutableDataSet
