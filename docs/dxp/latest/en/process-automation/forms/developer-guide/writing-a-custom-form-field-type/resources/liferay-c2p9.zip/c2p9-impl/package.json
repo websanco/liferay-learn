@@ -6,7 +6,7 @@
 		"@liferay/portal-7.4": "*"
 	},
 	"main": "./",
-	"name": "@liferay/dynamic-data-mapping-form-field-type-c2p9-slider",
+	"name": "dynamic-data-mapping-form-field-type-c2p9-slider",
 	"scripts": {
 		"build": "npm run build-js && liferay-npm-bundler",
 		"build-js": "babel --source-maps -d build/resources/main/META-INF/resources src/main/resources/META-INF/resources"
