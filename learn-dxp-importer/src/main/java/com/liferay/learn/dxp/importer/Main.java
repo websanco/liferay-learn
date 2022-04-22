@@ -115,7 +115,8 @@ public class Main {
 				StrikethroughExtension.create(), SuperscriptExtension.create(),
 				TablesExtension.create(), TocExtension.create(),
 				TypographicExtension.create(),
-				YamlFrontMatterExtension.create()));
+				YamlFrontMatterExtension.create())
+		);
 
 		HtmlRenderer htmlRenderer = HtmlRenderer.builder(
 			mutableDataSet
