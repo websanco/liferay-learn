@@ -14,6 +14,8 @@ using-google-sheets-with-objects/using-wyzebulb-to-sync-object-data-with-google-
 using-google-sheets-with-objects/using-zapier-to-sync-object-data-with-google-sheets.md
 ```
 
+These articles explain how to use webhooks to trigger sync tasks between Liferay Objects and Google Sheets using a variety of third party tools.
+
 ::::{grid} 2
 :gutter: 3 3 3 3
 
