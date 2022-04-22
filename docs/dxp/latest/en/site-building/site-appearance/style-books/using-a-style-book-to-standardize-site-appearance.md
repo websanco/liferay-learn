@@ -70,6 +70,10 @@ When a color field is tied to a Style Book token, the Value from Stylebook butto
 
 ![Click the *Detach Token* button to detach a color field from the Style Book token, but keep the same color value.](./using-a-style-book-to-standardize-site-appearance/images/04.png)
 
+```{note}
+Attaching or detaching a color value to a Style Book token requires Liferay DXP 7.4 U10+ or GA14+.
+```
+
 Click the *Clear Selection* button on the right side to reset the color back to the default value (defined in the theme).
 
 ```{note}
