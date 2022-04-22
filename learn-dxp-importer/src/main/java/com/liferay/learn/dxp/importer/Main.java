@@ -106,9 +106,7 @@ public class Main {
 			AsideExtension.WITH_LEAD_SPACES_INTERRUPTS_ITEM_PARAGRAPH, true
 		).set(
 			HtmlRenderer.GENERATE_HEADER_ID, true
-		);
-
-		mutableDataSet.set(
+		).set(
 			Parser.EXTENSIONS,
 			Arrays.asList(
 				AnchorLinkExtension.create(), AsideExtension.create(),
