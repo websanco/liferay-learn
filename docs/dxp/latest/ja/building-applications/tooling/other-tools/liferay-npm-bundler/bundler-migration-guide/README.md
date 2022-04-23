@@ -1,5 +1,4 @@
-バンドラー移行ガイド
-=======================
+# バンドラー移行ガイド
 
 -  [1.xから2.xへのliferay-npm-bundlerプロジェクトの移行](/building-applications/tooling/other-tools/liferay-npm-bundler/bundler-migration-guide/migrating-bundler-projects-intro.md)
 -  [liferay-npm-bundlerの新しいモードを使用するためのプロジェクトの移行](/building-applications/tooling/other-tools/liferay-npm-bundler/bundler-migration-guide/migrating-to-the-new-mode.md)

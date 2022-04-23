@@ -1,5 +1,4 @@
-liferay-npm-bundler
-===================
+# liferay-npm-bundler
 
 -  [Liferay npmバンドラー](/building-applications/tooling/other-tools/liferay-npm-bundler/liferay-npm-bundler-intro.md)
 -  [Bundler 1.xと2.xの間の変更点](/building-applications/tooling/other-tools/liferay-npm-bundler/changes-between-bundler-1.x-and-2.x.md)
@@ -12,7 +11,7 @@ liferay-npm-bundler
 -  [OSGiバンドルとnpmパッケージ構造](/building-applications/tooling/other-tools/liferay-npm-bundler/the-structure-of-osgi-bundles-containing-npm-packages.md)
 -  [Liferay npmバンドラーローダーについて](/building-applications/tooling/other-tools/liferay-npm-bundler/understanding-bundler-loaders.md)
 
-Bundler Migration Guide ~~~~~~~~~~~~~~~~~~~~~~~
+## Bundler Migration Guide
 
 -  [1.xから2.xへのliferay-npm-bundlerプロジェクトの移行](/building-applications/tooling/other-tools/liferay-npm-bundler/bundler-migration-guide/migrating-bundler-projects-intro.md)
 -  [liferay-npm-bundlerの新しいモードを使用するためのプロジェクトの移行](/building-applications/tooling/other-tools/liferay-npm-bundler/bundler-migration-guide/migrating-to-the-new-mode.md)
