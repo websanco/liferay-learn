@@ -30,6 +30,8 @@
 
 ここでは、サンプルプロジェクトのメッセージングパフォーマンスを調べることから始めます。 次に、APIを使用して宛先統計を取得し、宛先を設定します。 最後に、サンプルの宛先設定を再構成し、サンプルを再実行して、統計を調べます。
 
+<a name="monitor-messaging-in-an-example-project" />
+
 ## サンプルプロジェクトでメッセージングを監視する
 
 サンプルプロジェクトは、宛先を作成し、メッセージリスナーを登録し、Gogoシェルコマンドを介して宛先統計を一覧表示します。
@@ -150,6 +152,8 @@
 
 これと同じAPIを使用してメッセージの宛先を監視できます。
 
+<a name="monitoring-messaging" />
+
 ## メッセージングの監視
 
 メッセージングAPIでは、宛先でのメッセージングパフォーマンスをその設定に応じて監視することができます。 次の表に、宛先設定とメッセージング統計にアクセスするためのAPIメソッドを示します。
@@ -178,6 +182,8 @@
 
 宛先統計を調べた後、宛先を再構成することでパフォーマンスの向上を試みることができます。
 
+<a name="changing-destination-type" />
+
 ## 宛先タイプの変更
 
 シリアル宛先を使用していて、メッセージが一部のメッセージリスナーに十分な速度で到達しない場合は、最大スレッドプールサイズを増やすか（以下で説明します）、パラレル宛先タイプに切り替えてみてください。 メッセージバスは、スレッドプールのスレッドを使用して、パラレル宛先メッセージリスナーを同時に処理します。
@@ -188,6 +194,8 @@
 * `createSerialDestinationConfiguration(String)`
 
 詳細については、 [Reconfigure the Example Destination](#reconfigure-the-example-destination) を参照してください。
+
+<a name="configuring-the-message-queue-and-thread-pool" />
 
 ## メッセージキューとスレッドプールの構成
 
@@ -205,6 +213,8 @@
 * `setWorkersMaxSize(int workersMaxSize)`
 
 次に、サンプルの宛先を再構成します。
+
+<a name="reconfigure-the-example-destination" />
 
 ## サンプルの宛先を再構成します
 
@@ -311,6 +321,8 @@ pending message count 0, sent message count 2
 ```
 
 これで、宛先でメッセージングを監視し、宛先設定を調整する方法がわかりました。 さまざまな設定をテストして、パフォーマンスを最適化できます。
+
+<a name="additional-information" />
 
 ## 追加情報
 

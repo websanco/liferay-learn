@@ -8,6 +8,8 @@ liferay-npm-bundlerは、Liferayポータルをプラットフォームとして
 また、 [project's Wiki] (https://github.com/liferay/liferay-npm-build-tools/wiki)にもliferay-npm-bundlerの情報があります。
 ```
 
+<a name="how-the-liferay-npm-bundler-works-internally" />
+
 ## Liferay npmバンドラーが内部でどのように機能するか
 
 liferay-npm-bundlerはウィジェットプロジェクトを取得し、そのファイル（npmパッケージを含む）をビルドフォルダーに出力するため、標準のウィジェットビルド（Gradle）でOSGiバンドルを生成できます。 ビルドフォルダーの構造の詳細については、 [OSGiバンドルとnpmパッケージ構造](./the-structure-of-osgi-bundles-containing-npm-packages.md) を参照してください。

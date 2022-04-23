@@ -20,6 +20,8 @@ YUI3に基づくLiferayのAlloyUIテクノロジーを利用する場合は、Li
 
 ご覧のとおり、LiferayのAlloyUIタグを使用するようにJSFアプリケーションを構成するのは非常に簡単です。
 
+<a name="additional-information" />
+
 ## 追加情報
 
 * [Developing a JSF Portlet Application \(Help Center\)](https://help.liferay.com/hc/ja/articles/360029069451-Developing-a-JSF-Portlet-Application)

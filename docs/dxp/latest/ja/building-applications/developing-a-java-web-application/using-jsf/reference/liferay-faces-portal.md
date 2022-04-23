@@ -23,6 +23,8 @@ Liferay Faces Portalに含まれる機能の一部は次のとおりです。
 
 * 式言語：Liferay固有の情報を取得するための`liferay`や、Liferayのデフォルトの国際化されたメッセージと統合するための`i18n`など、ELキーワードのセットを追加します。
 
+<a name="additional-information" />
+
 ## 追加情報
 
 * [Developing a JSF Portlet Application \(Help Center\)](https://help.liferay.com/hc/ja/articles/360029069451-Developing-a-JSF-Portlet-Application)

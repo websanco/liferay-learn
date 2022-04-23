@@ -21,6 +21,8 @@ WABジェネレータは、プラグインWARのJSP、記述子ファイル、�
 * リフレクションコード
 * クラスローダーコード
 
+<a name="war-versus-wab-structure" />
+
 ## WARとWABのストラクチャー比較
 
 WABフォルダストラクチャーとWARフォルダストラクチャーには違いがあります。 WARスタイルのポートレットの次のフォルダストラクチャーについて考えてみます。
@@ -72,6 +74,8 @@ WARスタイルのポートレットがLiferayにデプロイされ、WABジェ�
 ## WARのデプロイ
 
 WARプラグインに基づいてWABをデプロイするには、WARプラグインを`[Liferay Home]`内のLiferayインスタンスの `deploy/` フォルダにコピーします。
+
+<a name="saving-a-copy-of-the-wab" />
 
 <a name="saving-a-copy-of-the-wab" />
 

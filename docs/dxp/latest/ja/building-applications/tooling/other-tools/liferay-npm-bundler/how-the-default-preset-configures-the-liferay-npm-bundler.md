@@ -32,6 +32,8 @@ liferay-npm-bundlerには、デフォルトの構成プリセット [`liferay-np
 プロジェクトの「.npmbundlerrc」ファイルに独自の設定を追加することで、設定のプリセット値を上書きできます。 たとえば、上記の設定プリセットの例を使用して、独自の「.babelrc」値を「.npmbundlerrc」ファイルに定義して、定義された「liferay-standard」babelrcプリセットを上書きできます。
 ```
 
+<a name="liferay-standard-preset" />
+
 ## Liferay標準プリセット
 
 [`liferay-standard` プリセット](https://github.com/liferay/liferay-npm-build-tools/tree/master/packages/babel-preset-liferay-standard) は、次のプラグインをパッケージに適用します。
@@ -47,6 +49,8 @@ liferay-npm-bundlerには、デフォルトの構成プリセット [`liferay-np
 * [replace-browser-modules](https://github.com/liferay/liferay-npm-build-tools/tree/master/packages/liferay-npm-bundler-plugin-replace-browser-modules) : `ブラウザー`/`unpkg`/`/<code>jsdelivr`セクションに一覧されているモジュールに対して、サーバー側のファイルを、<1>package.json</code>の他のモジュールに対して置き換えます。
 
 * [resolve-linked-dependencies](https://github.com/liferay/liferay-npm-build-tools/tree/master/packages/liferay-npm-bundler-plugin-resolve-linked-dependencies) ： `package.json` ファイル（たとえば、ローカルファイルシステムまたはGitHubから取得したファイル）に表示されるリンクされた依存関係のバージョンを、プロジェクトの `node_modules` ディレクトリで解決される実際のバージョン番号で置き換えます。
+
+<a name="liferay-babel-preset" />
 
 ## Liferay Babelプリセット
 

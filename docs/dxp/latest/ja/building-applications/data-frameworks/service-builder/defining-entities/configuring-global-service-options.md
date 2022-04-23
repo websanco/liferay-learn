@@ -8,6 +8,8 @@
 * [ネームスペースオプション](#namespace-options)
 * [作成者](#author)
 
+<a name="dependency-injector" />
+
 ## 依存性インジェクター
 
 デフォルトの依存性注入は、OSGi宣言型サービスです。 これにより、Service Builderは他のモジュールと同じように一貫して機能します。 DXP/Portal 7.2より前は、Service BuilderはSpring依存性注入を使用していました。 唯一の違いは、サービスを利用する際にどのように注入するかということです。 詳細については、Core Frameworks</a>の **Dependency Injection** を参照してください。 両方のインジェクター設定を以下に示します。
@@ -32,6 +34,8 @@ Spring依存性インジェクター：
 Liferay DXP/Portal 7.2より前は、Springが唯一の依存性インジェクターでした。 サービスはSpring Beanでした。 LiferayのSpring Beanフレームワークは、相互に参照するSpring Beanに対応しています。たとえば、Spring Bean AにはSpring Bean Bフィールドがあり、その逆も同様です。 Springが依存性インジェクターである場合、サービスビルダーが生成する基本サービスには、すべての `service.xml`エンティティのローカルサービスフィールドと永続性フィールドが含まれます。 これにより、循環参照が発生します。 OSGi宣言型サービスは循環参照に対応していないため、DSが依存性インジェクターである場合、サービスビルダーは基本クラスにこれらのフィールドを作成しません。 詳細については、[Understanding Service Builder Generated Classes](../service-builder-basics/understanding-service-builder-generated-classes.md)を参照してください。
 ```
 
+<a name="package-path" />
+
 ## パッケージパス
 
 パッケージパスは、サービスクラスと永続性クラスが生成されるパッケージを指定します。 たとえば、ゲストブックのパッケージパスは次のとおりです。
@@ -42,6 +46,8 @@ Liferay DXP/Portal 7.2より前は、Springが唯一の依存性インジェク�
 ```
 
 上記のパッケージパスは、`*-api`モジュールのサービスクラスが`com.acme.guestbook`パッケージで生成されることを保証します。 永続性クラスは、`*-service`モジュール内の同じ名前のパッケージで生成されます。 生成されたクラスの詳細については、[Understanding Service Builder Generated Classes](../service-builder-basics/understanding-service-builder-generated-classes.md)を参照してください。
+
+<a name="multiversion-concurrency-control-mvcc" />
 
 ## マルチバージョン同時実行制御（MVCC）
 
@@ -60,6 +66,8 @@ Liferay DXP/Portal 7.2より前は、Springが唯一の依存性インジェク�
          package-path="com.acme.guestbook"
          mvcc-enabled="true">
 ```
+
+<a name="namespace-options" />
 
 ## ネームスペースオプション
 
@@ -96,6 +104,8 @@ buildService {
     ...
 }
 ```
+
+<a name="author" />
 
 ## 作成者
 

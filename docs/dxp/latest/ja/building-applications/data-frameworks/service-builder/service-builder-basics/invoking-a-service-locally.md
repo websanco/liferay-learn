@@ -8,6 +8,8 @@ DXP/Portalにデプロイされたサービスビルダーサービスは、同�
 
 ここでは、[portlet](../../../developing-a-java-web-application/reference/portlets.md) DSコンポーネントからサービスビルダーサービスを呼び出します。  新しいエントリーを追加するためのフォームがあるポートレットアプリケーションの例を使用します。 フォームはJavaServer Page（JSP）にあります。 フォームを送信すると、ポートレットがトリガーされ、エントリを作成して永続化するためのサービスが呼び出されます。
 
+<a name="call-a-service-from-a-portlet" />
+
 ## ポートレットからサービスを呼び出す
 
 1. [Liferay Dockerコンテナ](../../../../installation-and-upgrades/installing-liferay/using-liferay-docker-images.md)を起動します。
@@ -72,6 +74,8 @@ DXP/Portalにデプロイされたサービスビルダーサービスは、同�
 
 ポートレットからサービスビルダーサービスを呼び出しました。 その仕組みを、サービスAPIから見ていきましょう。
 
+<a name="examine-the-service-api" />
+
 ## サービスAPIを調べる
 
 `t2p5-api`モジュールプロジェクトの`T2P5EntryLocalService`クラスには、`addT2P5Entry(String description, String name)`というメソッドがあります。
@@ -101,6 +105,8 @@ The `t2p5-web` module's portlet application depends on the `T2P5EntryLocalServic
 アーティファクトの検索と依存関係の指定については、 [依存関係の構成 (近日公開！)](../../../../liferay-internals/fundamentals/configuring-dependencies.md) を参照してください。
 ```
 
+<a name="examine-the-portlet" />
+
 ## ポートレットを調べる
 
 `t2p5-web`モジュールの`T2P5Portlet`クラスは、`T2P5Entry`インスタンスを追加する要求を処理します。 `T2P5Portlet`クラスは次のとおりです。
@@ -121,6 +127,8 @@ The `t2p5-web` module's portlet application depends on the `T2P5EntryLocalServic
 `addT2P5Entry`メソッドは、`T2P5EntryLocalService`'の`addT2P5Entry`メソッドを呼び出し、`ActionRequest`から取得した説明と名前のパラメーターを渡します。
 
 ポートレットの`view.jsp`テンプレート（次で説明）は、`ActionRequests`を`T2P5Portlet`に送信します。
+
+<a name="examine-the-jsp" />
 
 ## JSPを調べる
 
@@ -156,9 +164,13 @@ JSPは、次のタグライブラリのタグを使用します。
 
 ポートレットアプリケーションからサービスビルダーサービスを呼び出しました。 これらのサービスは、MVCポートレットで簡単に使用できます。
 
+<a name="whats-next" />
+
 ## 次のステップ
 
 サービスビルダーの基本を理解したので、[エンティティの定義](../defining-entities.md)を調べて、エンティティ間の関係を作成したり、エンティティをローカライズしたり、クエリをサポートしたりできます。  または、[サービスビルダーによるビジネスロジック](../business-logic-with-service-builder.md)を学ぶこともできます。
+
+<a name="additional-information" />
 
 ## 追加情報
 

@@ -48,6 +48,8 @@ Liferay Objectsでは、特定の条件でトリガーされるアクション�
 
 ![Actions can be deactivated at any time.](./defining-object-actions/images/03.png)
 
+<a name="additional-information" />
+
 ## 追加情報
 
 * [オブジェクトの作成](./creating-objects.md)

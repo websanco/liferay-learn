@@ -2,6 +2,8 @@
 
 Blade CLIは、Liferay WorkspaceでLiferayプロジェクトを作成、ビルド、およびデプロイするために存在します。 作成したプロジェクトは、IDEにインポートすることも、直接作業することもできます。 ここでは、Liferayプロジェクトを作成および管理するさまざまな方法を学びます。
 
+<a name="creating-a-liferay-workspace" />
+
 ## Liferay Workspaceの作成
 
 Liferay Workspaceは、プロジェクトとDevOps構成を保存するマシン上の一連のフォルダーです。 Liferay WorkspaceはGradleプロジェクトであるため、任意のIDEにインポートできます。 詳しくは、[Liferay Workspace](../liferay-workspace/what-is-liferay-workspace.md)を参照してください。 Liferay Workspaceを作成するには、次の手順に従います。
@@ -13,6 +15,8 @@ Liferay Workspaceは、プロジェクトとDevOps構成を保存するマシン
    ```bash
    blade init -v 7.3 [workspace name]
    ```
+
+<a name="creating-a-project" />
 
 ## プロジェクトの作成
 
@@ -33,6 +37,8 @@ blade create -t mvc-portlet -p com.acme.z3x1.portlet -c GuestbookPortlet guestbo
 ```
 
 これにより、MVCポートレットテンプレート、`com.acme.z3x1.portlet`と呼ばれるデフォルトのパッケージ、`GuestbookPortlet`と呼ばれるポートレットクラス（Liferay 7.4では **ゲストブック** と呼ばれる）を使用してプロジェクトが作成されます。 これで、ワークスペースをIDEにインポートできます。 Liferay IntelliJプラグインまたはLiferay Developer StudioのEclipseプラグインは、拡張サポートを提供します。 Bladeを使用してプロジェクトに新しいワークスペースを作成する場合は、IDEでGradleプロジェクトを更新する必要があることに注意してください。
+
+<a name="creating-sample-projects" />
 
 ## サンプルプロジェクトの作成
 
@@ -56,6 +62,8 @@ Liferayは、 [サンプルプロジェクト](https://github.com/liferay/lifera
    blade samples -v 7.1 model-listener
    ```
 
+<a name="converting-legacy-plugins-sdk-projects" />
+
 ## レガシープラグインSDKプロジェクトの変換
 
 バージョン7.0より前のLiferayプロジェクトがある場合、それらはPlugins SDKに含まれています。 これらを6.2以降のLiferayのバージョンで使用するには、プラグインSDKからLiferay Workspaceに移行する必要があります。
@@ -78,6 +86,8 @@ Liferayは、 [サンプルプロジェクト](https://github.com/liferay/lifera
 
 - Service Builderサービスを含むプロジェクトを変換すると、Blade CLIは個別のAPIおよびサービスOSGiモジュールを作成します。 ポートレットはWARのままで、`wars` フォルダに移動します。
 - テーマは、Liferay 7.xテーマのようにNodeJSを活用するように変換されます。 Javaベースのテーマを変換するには、代わりにTheme Builder Gradleプラグインを使用する `-t` オプションを追加します。
+
+<a name="related-topics" />
 
 ## 関連トピック
 

@@ -8,6 +8,8 @@
 
 ![これがビュー1です。](./rendering-views-with-mvc-portlet/images/01.png)
 
+<a name="deploy-an-mvc-portlet-with-multiple-views" />
+
 ## 複数のビューを持つMVCポートレットをデプロイする
 
 サンプルポートレットをデプロイし、そのビュー間を移動する方法は次のとおりです。 学習の目的で、ポートレットは`mvcPath`パラメーター値をログに記録します。
@@ -90,6 +92,8 @@
 
 ポートレットビュー間を往復しました。 次に、ポートレットがデフォルトのビューを設定し、レンダーURLとMVCパスリクエストパラメータを使用してビューへのパスを設定する方法を学習します。
 
+<a name="setting-the-default-view" />
+
 ## デフォルトビューの設定
 
 ポートレットのデフォルトビューは、ユーザーが最初にポートレットのページにアクセスしたときにレンダリングされます。 ポートレットクラスの初期化パラメーターは、デフォルトビューを設定します。 `C8M3Portlet.java`のサンプルクラスは、 [`@Component`](https://osgi.org/javadoc/r6/residential/org/osgi/service/component/annotations/Component.html) でデフォルトビューを設定します。
@@ -102,6 +106,8 @@
 [`@Component`](https://osgi.org/javadoc/r6/residential/org/osgi/service/component/annotations/Component.html) プロパティ`"javax.portlet.init-param.view-template=/view1.jsp"`は、デフォルトのビューテンプレートとして`/view1.jsp`を指定します。 テンプレートパスは、ポートレットの`src/main/resources/META-INF/resources`フォルダへの相対パスです。
 
 次に、ビュー1がビュー2にリンクする方法を学習します。
+
+<a name="linking-to-a-view-using-a-portlet-render-url" />
 
 ## ポートレットレンダーURLを使用したビューへのリンク
 
@@ -116,6 +122,8 @@
 ポートレットがレンダーURLを使用するには、そのURLをハイパーリンクやボタンなどのUIコンポーネントにバインドする必要があります。 ハイパーリンク`<a href="<%= view2URL %>">［Go to View 2］</a>`は、レンダーURLをUIコンポーネントにバインドします。
 
 ユーザーが ［**Go to View 2**］ ハイパーリンクをクリックすると、`mvcPath`パラメーターを含むポートレットリクエストがポートレットクラスに送信されます。
+
+<a name="handling-the-mvcpath-portlet-parameter" />
 
 ## mvcPathポートレットパラメーターの処理
 
@@ -141,9 +149,13 @@
 
 ビュー1に戻るラウンドトリップを実装します。
 
+<a name="whats-next" />
+
 ## 次のステップ
 
 これで、ポートレットビューをレンダリングする方法がわかりました。 次に、個別の`RenderCommand`クラスを使用して、ポートレットでアクションを実行したり、ビューをレンダリングしたりできます。
+
+<a name="additional-information" />
 
 ## 追加情報
 

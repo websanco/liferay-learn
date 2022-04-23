@@ -4,6 +4,8 @@ MVCリソースコマンドのクラスは、アクションやレンダーを�
 
 MVCリソースコマンドを使用するサンプルポートレットをデプロイしてから、それを調べます。
 
+<a name="invoke-an-mvc-resource-command" />
+
 ## MVCリソースコマンドを呼び出す
 
 サンプルポートレットは、MVCリソースコマンドを使用して単純なファイルをダウンロードします。
@@ -68,6 +70,8 @@ MVCリソースコマンドを使用するサンプルポートレットをデ�
 
 MVCリソースコマンドを使用してファイルをダウンロードしました。 次に、それらがどのように機能するかを確認します。
 
+<a name="examine-the-portlet" />
+
 ## ポートレットを調べる
 
 `P8V5Portlet`は最小の [`MVCPortlet`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/portlet/bridges/mvc/MVCPortlet.java) です。
@@ -90,6 +94,8 @@ MVCリソースコマンドを使用してファイルをダウンロードし�
 ```
 
 次に、ポートレットのMVCリソースコマンドクラスを調べます。
+
+<a name="examine-the-mvcresourcecommand-class" />
 
 ## MVCResourceCommandクラスを調べる
 
@@ -119,6 +125,8 @@ MVCリソースコマンドクラスは、 [`MVCResourceCommand`](https://github
 
 次に、ポートレットのJSPがUIコンポーネントアクションをコマンドにマップする方法を学習します。
 
+<a name="examine-the-portlet-resource-url" />
+
 ## ポートレットリソースURLを調べる
 
 ポートレットの`view.jsp`ファイルは、MVCリソースコマンドを呼び出すためのリンクをレンダリングします。
@@ -135,9 +143,13 @@ MVCリソースコマンドクラスは、 [`MVCResourceCommand`](https://github
 
 ビューの **ダウンロード** リンクをクリックすると、`P8V5DownloadMVCResourceCommand`の`serveResource`メソッドが呼び出されます。
 
+<a name="whats-next" />
+
 ## 次のステップ
 
 これで、MVCリソースコマンドの使用方法がわかりました。 ポートレットのコンテンツをローカライズする場合は、[Using Localized Messages](./using-localized-messages-in-an-mvc-portlet.md)を参照してください。 モデルレイヤー、永続レイヤー、およびサービスレイヤーを開発する準備ができている場合は、 [サービスビルダー](../../data-frameworks/service-builder.md) をご覧ください。
+
+<a name="additional-information" />
 
 ## 追加情報
 

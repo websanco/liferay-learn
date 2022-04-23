@@ -10,6 +10,8 @@
 
 以下の手順を実行する前に、Dockerをインストールして実行する必要があります。
 
+<a name="choose-a-liferay-docker-image" />
+
 ## Liferay Dockerイメージの選択
 
 イメージのバージョンはワークスペースのバージョンから継承されるため、ほとんどの場合、Liferay Dockerイメージを選択する必要はありません。 ただし、ワークスペースで指定されているバージョン以外のイメージバージョンをインストールする必要がある場合は、バージョンを明示的に設定できます。 これを行う必要がない場合は、次のセクションにスキップしてください。
@@ -34,6 +36,8 @@ LiferayのDockerイメージは [Docker Hub](https://hub.docker.com/r/liferay/po
 
 1. ファイルを保存します。 これで、Dockerイメージを作成する準備が整いました。
 
+<a name="create-the-liferay-docker-image" />
+
 ## Liferay Dockerイメージを作成する
 
 ワークスペースのルートフォルダから次のコマンドを実行します。
@@ -43,6 +47,8 @@ LiferayのDockerイメージは [Docker Hub](https://hub.docker.com/r/liferay/po
    ```
 
 ワークスペースの名前に`-liferay`が追加されたDockerイメージが作成されます。 たとえば、ワークスペースフォルダが`my-project`の場合、Dockerコンテナは`my-project-liferay`と呼ばれます。 他のDockerイメージと同じようにコンテナを開始/停止できますが、最初にコンテナを構成することをお勧めします。
+
+<a name="configuring-a-docker-image" />
 
 ## Dockerイメージの構成
 

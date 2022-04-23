@@ -70,11 +70,15 @@
 
    - アクションの名前は「**送信**」のままにします。
 
+<a name="deploying-the-app" />
+
 ## アプリのデプロイ
 
 これで、アプリを使用する準備が整いました。 ユーザーがデータの送信を開始できるように、 [デプロイ](./creating-a-standard-application.md#deploying-the-application) する必要があります。
 
 ロール変更リクエストアプリは、専用リンクを備えたスタンドアロンアプリとしてデプロイできます。 このタイプのアプリを使用するには、事前に [Wiki](../../collaboration-and-social/collaboration-and-social-overview.md#wiki) または会社の従業員ハンドブック[ドキュメント](../../content-authoring-and-management/documents-and-media/documents-and-media-overview.md)でいくつかの手順について確認しておく必要があります。 そこにリンクを保持することで、従業員はロール変更リクエストを開始する前に適切なドキュメントを読むことができます。
+
+<a name="using-the-app" />
 
 ## アプリの使用
 
@@ -94,6 +98,8 @@
 [マイワークフロータスク](../../process-automation/workflow/using-workflows/reviewing-assets.md#assigning-the-review-task) アプリを使用してワークフロー対応アプリのステップを管理することはできません。
 ```
 
+<a name="going-further-with-the-role-change-request-app" />
+
 ## ロール変更リクエストアプリをさらに進化させる
 
 ロール変更リクエストアプリを完全に機能させるための拡張機能を追加します。
@@ -101,6 +107,8 @@
 1. マネージャーと人事用の[ロールを作成](../../users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.md)します。 管理者ロールを使用するのではなく、各ロールに適切な手順を割り当てます。
 
 2. 標準アプリを作成して、適切な権限を持つユーザーがロール変更リクエストオブジェクトからマスターリストテーブルを表示できるようにします。 管理者は、最初のフォームである **従業員リクエスト** にアクセスできるので、従業員用のフォームを開始することもできます。
+
+<a name="related-information" />
 
 ## 関連情報
 

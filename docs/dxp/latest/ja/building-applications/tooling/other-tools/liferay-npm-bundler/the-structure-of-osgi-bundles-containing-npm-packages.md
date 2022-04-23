@@ -44,6 +44,8 @@ JavaScriptモジュールをデプロイするには、プロジェクトの `no
 
 これでnpmパッケージを含むOSGiバンドルの構造がわかったと思うので、津次はliferay-npm-bundlerがインラインJavaScriptパッケージを処理する方法について説明します。
 
+<a name="inline-javascript-packages" />
+
 ## インラインJavaScriptパッケージ
 
 liferay-npm-bundlerが作成する結果のOSGiバンドルは、1つのインラインJavaScriptパッケージ（例では `my-bundle-package` という名前）と、 `node_modules` フォルダ内に配置された複数のnpmパッケージを、フォルダごとに1つずつデプロイするように構成されています。

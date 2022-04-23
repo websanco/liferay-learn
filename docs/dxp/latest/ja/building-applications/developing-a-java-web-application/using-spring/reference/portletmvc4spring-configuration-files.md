@@ -12,6 +12,8 @@ PortletMVC4Springアプリケーションの`WEB-INF`フォルダには、次の
 
 各ファイルの例が提供され、ポートレット固有のコンテンツがハイライト表示されています。
 
+<a name="webxml" />
+
 ## web.xml
 
 サーブレットコンテナは`web.xml`を処理します。 このファイルは、ポートレットをレンダリングするサーブレットと、ポートレットアプリケーションのコンテキスト、サーブレット、フィルタ、リスナーなどを指定します。 `web.xml`の例を次に示します。
@@ -98,6 +100,8 @@ PortletMVC4Springアプリケーションの`WEB-INF`フォルダには、次の
 ```
 
 Liferayのプロジェクトアーキタイプは、このすべての定型コードを生成します。
+
+<a name="portletxml" />
 
 ## portlet.xml
 
@@ -195,6 +199,8 @@ Liferayのプロジェクトアーキタイプは、このすべての定型コ�
 
 [`portlet XSD`](https://docs.liferay.com/portlet-api/3.0/portlet-app_3_0.xsd) は`portlet.xml`を定義します。 次に、Liferay固有のポートレット記述子について説明します。
 
+<a name="liferay-portletxml" />
+
 ## liferay-portlet.xml
 
 `liferay-portlet.xml` ファイルは、より多くの開発者機能を提供するLiferay固有の設定を適用します。 以下に例を示します。
@@ -234,6 +240,8 @@ Liferayのプロジェクトアーキタイプは、このすべての定型コ�
 
 [`liferay-portlet-app- [version].dtd`ファイル](https://learn.liferay.com/reference/latest/en/dxp/definitions/index.html) は、`liferay-portlet.xml`ファイルを定義します。
 
+<a name="liferay-displayxml" />
+
 ## liferay-display.xml
 
 `liferay-display.xml`は、表示特性をポートレットに適用します。 たとえば、次の記述子は、ポートレットをLiferay DXPの［ウィジェットの追加］メニューのウィジェットカテゴリに関連付けます。
@@ -252,6 +260,8 @@ Liferayのプロジェクトアーキタイプは、このすべての定型コ�
 詳細については、[`liferay-display- [version].dtd`ファイル](https://learn.liferay.com/reference/latest/en/dxp/definitions/index.html) を参照してください。
 
 次に、アプリケーションコンテキストを見てみましょう。
+
+<a name="portlet-application-context" />
 
 ## ポートレットアプリケーションコンテキスト
 
@@ -316,6 +326,8 @@ Liferayのプロジェクトアーキタイプは、このすべての定型コ�
 
 アプリケーションの各ポートレットのコンテキストを指定することもできます。
 
+<a name="portlet-contexts" />
+
 ## ポートレットコンテキスト
 
 ポートレットに固有のBeanは、ポートレットのコンテキストに入ります。 アノテーションはPortletMVC4Springポートレットを開発する最も簡単な方法であるため、ポートレットコンテキストでMVCアノテーションスキャンを指定する必要があります。
@@ -348,6 +360,8 @@ Liferayのプロジェクトアーキタイプは、このすべての定型コ�
 
 最後にアプリケーションパッケージについて説明します。
 
+<a name="liferay-plugin-packageproperties" />
+
 ## liferay-plugin-package.properties
 
 このファイルは、アプリケーションの名前、バージョン、Javaパッケージのインポート/エクスポート、およびOSGiメタデータを指定します。 パッケージプロパティファイルの例を次に示します。
@@ -378,6 +392,8 @@ com.liferay.portal.kernel.servlet.filters.invoker
 ポートレットアプリケーションのWARファイルをデプロイすると、[WABジェネレータ](../../../reference/deploying-wars-wab-generator.md)は指定されたOSGiメタデータを、Liferayのランタイムフレームワークにデプロイされた結果として生じるWebアプリケーションバンドル（WAB）に追加します。
 
 [`liferay-plugin-package- [version].dtd`ファイル](https://learn.liferay.com/reference/latest/en/dxp/definitions/index.html) は、`liferay-plugin-package.properties`ファイルを記述します。
+
+<a name="additional-information" />
 
 ## 追加情報
 

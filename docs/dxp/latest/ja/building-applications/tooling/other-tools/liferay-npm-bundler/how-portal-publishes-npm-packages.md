@@ -54,6 +54,8 @@
 OSGiバンドルID（598）は異なる場合があります。
 ```
 
+<a name="package-de-duplication" />
+
 ## パッケージの重複除外
 
 2つ以上のOSGiモジュールが同じパッケージとバージョンの複数のコピーをエクスポートする可能性があるため、Liferayポータルは、 **解決モジュール** と呼ばれる新しい概念を使用して、このような競合を重複排除する必要があります。
@@ -75,6 +77,8 @@ OSGiバンドルID（例では598）は削除され、モジュールは「resol
 ```
 
 次に、バンドラー（バージョン2.0.0以降）がパッケージの依存関係を分離する方法を学びます。 この変更が行われた理由の詳細については、[What Changed Between liferay-npm-bundler 1.x and 2.x](./changes-between-bundler-1.x-and-2.x.md)参照してください。
+
+<a name="isolated-package-dependencies" />
 
 ## 分離されたパッケージの依存関係
 
@@ -152,6 +156,8 @@ liferay-npm-bundler 2.xで生成された典型的なOSGiバンドル構造を�
 
 名前空間モジュールがバンドルの依存関係を分離して衝突を回避する方法を理解したので、次に重複除外について学習できます。
 
+<a name="de-duplication-through-importing" />
+
 ## インポートによる重複除外
 
 分離された依存関係は便利ですが、モジュール間で同じパッケージを共有する方が有益な場合があります。 これを行うために、liferay-npm-bundlerは、独自のパッケージを使用する代わりに、外部OSGiバンドルからパッケージをインポートできます。 これで、共有された依存関係を1つのプロジェクトに配置して、残りのプロジェクトから参照できます。
@@ -215,6 +221,8 @@ var Button = require('wui-provider$button');
 ```
 
 また、ローダーが正しいバージョンを見つけることができるように、バージョン `^ 1.0.0` `wui-provider$button` への依存関係が `my-toolbar`の `package.json` ファイルに含まれています。 必要なのはそれだけです。 実行時に `wui-provider$button` が必要になると、コードは `my-toolbar`から実行された場合でも、 `wui-provider`のコンテキストにジャンプし、そこからサブ依存関係をロードします。 これが機能するのは、ご想像のとおり、 `wui-provider`のモジュールにも名前空間があり、そこからモジュールをロードすると、 `wui-provider $` 接頭辞付きモジュールがずっと必要になるためです。
+
+<a name="strategies-when-importing-packages" />
 
 ## パッケージをインポートするときの戦略
 

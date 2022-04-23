@@ -2,6 +2,8 @@
 
 Liferayは現在、約50の言語をサポートしています。 これらの言語の多くは [翻訳](https://translate.liferay.com/) が完了していますが、一部はまだ翻訳中です。 各言語には、その言語のキーを含む [言語プロパティファイル](https://github.com/liferay/liferay-portal/tree/master/modules/apps/portal-language/portal-language-lang/src/main/resources/content) があります。 しかし、世界には [6000](https://www.linguisticsociety.org/content/how-many-languages-are-there-world) 以上のの言語があります。 どうしても言語を追加したい場合は、以下の方法があります。
 
+<a name="adding-a-new-language" />
+
 ## 新しい言語の追加
 
 デフォルトでは、 [`portal.properties`](https://github.com/liferay/liferay-portal/blob/41ac354cd0aa3f9d851a37a6a62d8167f81a2bce/portal-impl/src/portal.properties#L2930) ファイルがLiferayで利用可能なすべての言語を指定します。 指定されていない新しい言語を追加するには

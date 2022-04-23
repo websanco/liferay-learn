@@ -16,6 +16,8 @@ Liferay DXPは、 [JSR 362](https://jcp.org/en/jsr/detail?id=362) で指定さ�
 
 **有効なフェーズ：** Beanが有効な[ポートレットフェーズ](../../reference/portlets.md)。
 
+<a name="portlet-request-scoped-beans" />
+
 ## ポートレットリクエストスコープのBean
 
 これらのBeanには`@PortletRequestScoped`アノテーションがあります。 これらのアーティファクトタイプ、Bean EL名、アノテーション修飾子、および有効なポートレットフェーズは次のとおりです。
@@ -52,6 +54,8 @@ Liferay DXPは、 [JSR 362](https://jcp.org/en/jsr/detail?id=362) で指定さ�
 | `PortletSession`              | `portletSession`      | -   | すべて            |
 | `Locales(List<Locale>)` | `locales`             | -   | すべて            |
 
+<a name="dependent-scoped-beans" />
+
 ## 依存スコープのBean
 
 これらのBeanは`@Dependent`スコープを使用します。 それらは`java.lang.String`型で、 `final`です。 これにより、プロキシされなくなります。  元のスコープよりも広いスコープで依存スコープのBeanを使用しないようにするには、それらを`@PortletRequestScoped` Beanにのみ注入する必要があります。
@@ -64,6 +68,8 @@ Liferay DXPは、 [JSR 362](https://jcp.org/en/jsr/detail?id=362) で指定さ�
 | `ContextPath` (String)  | `contextPath` | `@ContextPath` | すべて  |
 | `WindowID` (String)     | `windowId`    | `@WindowId`    | すべて  |
 | `Portlet name` (String) | `portletName` | `@PortletName` | すべて  |
+
+<a name="additional-information" />
 
 ## 追加情報
 

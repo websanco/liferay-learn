@@ -50,6 +50,8 @@
 
 プロジェクトは、liferay-npm-bundler 2.xを使用するように移行されます。
 
+<a name="related-information" />
+
 ## 関連情報
 
 * [Formatting Your npm Modules for AMD](../how-the-bundler-formats-js-modules.md)

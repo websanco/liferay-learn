@@ -2,6 +2,8 @@
 
 サービスビルダーを使用すると、モデルを簡単に定義し、モデルコード、永続性コード、およびサービスコードを生成できます。 これは、`Y7G4Entry`というモデルを定義し、サービスビルダーを使用してコードを生成することで体験できます。 次に、コードをDXPにデプロイし、そのコードを使用するサービスを呼び出します。
 
+<a name="download-the-example-project" />
+
 ## サンプルプロジェクトをダウンロードする
 
 サンプルプロジェクトをダウンロードして解凍します。
@@ -20,6 +22,8 @@ unzip liferay-y7g4.zip
 * `y7g4-service`
 
 APIモジュール（`-api`）は、パブリックインターフェイスとユーティリティを提供します。 サービスモジュール（`-service`）は実装を提供します。
+
+<a name="examine-the-api-module" />
 
 ## APIモジュールを調べる
 
@@ -42,6 +46,8 @@ The `build.gradle` file declares the module's dependency on DXP/Portal.
 ```{literalinclude} ./generating-model-persistence-and-service-code/resources/liferay-y7g4.zip/y7g4-api/build.gradle
 :language: groovy
 ```
+
+<a name="examine-the-service-module" />
 
 ## サービスモジュールを調べる
 
@@ -74,6 +80,8 @@ Here's the `build.gradle` file:
 
 `buildService`タスクは、サービスのAPIクラスを`apiDir`で指定されたAPIモジュールのJavaソースフォルダに生成します。 サービスモジュールは、DXP/PortalおよびAPIモジュール（兄弟フォルダ`y7g4-api`内）に依存します。
 
+<a name="examine-the-service-model-definition" />
+
 ## サービスモデルの定義を調べる
 
 `service.xml`ファイルは、`Y7G4Entry`モデルエンティティを定義します。 サービスビルダーは、`service.xml`ファイルの仕様に従って、モデル、永続性、およびサービスクラスを生成します。
@@ -83,6 +91,8 @@ Here's the `build.gradle` file:
 ```
 
 This file defines a `Y7G4Entry` model that has an ID (the primary key), name, and description.
+
+<a name="service-builder-element" />
 
 ### `service-builder` Element
 
@@ -94,9 +104,13 @@ The `service-builder` element attributes affect all model entities in the `servi
 | `package-path` | Declares the leading package path for the generated classes. |
 | `short-no-such-exception-enabled` | If set to `true`, use a truncated version of the entity name in `NoSuchY7G4EntryException` messages; otherwise use the complete entity name. |
 
+<a name="namespace-element" />
+
 ### `namespace` Element
 
 The global `namespace` element specifies the prefix for all the model entity database tables.
+
+<a name="entity-element" />
 
 ### `entity` Element
 
@@ -108,6 +122,8 @@ The global `namespace` element specifies the prefix for all the model entity dat
 | `local-service` | If `true`, generate service classes to call from within the JVM. |
 | `remote-service` | If `true`, generate service classes, including web services classes, to call from outside of the JVM. |
 
+<a name="column-elements" />
+
 ### `column` Elements
 Each `column` element defines a column in the entity's table. Here are the `Y7G4Entry` entity column elements:
 
@@ -118,6 +134,8 @@ Each `column` element defines a column in the entity's table. Here are the `Y7G4
 | `description` | the instance's description (string). |
 
 For more information on `service.xml` elements, see the [Liferay Service Builder DTD](https://learn.liferay.com/reference/latest/en/dxp/definitions/liferay-service-builder_7_4_0.dtd.html) .
+
+<a name="generate-the-persistence-code" />
 
 ## Generate the Persistence Code
 
@@ -237,9 +255,13 @@ create table Y7G4_Y7G4Entry (
 
 この`service.xml`ファイルの要素はインデックスまたはシーケンスを指定しないため、`indexes.sql`または`sequences.sql`スクリプトは空です。
 
+<a name="deploy-the-persistence-layer-and-services" />
+
 ## 永続レイヤーとサービスをデプロイする
 
 次に、生成されたコードをDXPサーバーにデプロイして、永続レイヤーとサービスを作成します。 サーバーは、別のMariaDBデータベースサーバー上のデータソースを使用します。バンドルされているHypersonicサーバーよりもMariaDB上のデータベースを調べる方が簡単です。 すべてをデプロイした後、テーブルを検証し、サービスをテストします。
+
+<a name="create-the-database" />
 
 ### データベースを作成する
 
@@ -290,6 +312,8 @@ create table Y7G4_Y7G4Entry (
 
 `some-mariadb`コンテナの`IPv4Address`値の最初の部分を使用します。 例のIPアドレスは`172.17.0.2`です。
 
+<a name="start-the-server" />
+
 ### サーバーを起動する
 
 別の端末で、次のコマンドを使用してDXPを起動します。 必ず`[IP address]`を`some-mariadb`コンテナのIPアドレスに置き換えてください。
@@ -307,6 +331,8 @@ docker run -it \
 liferay/portal:7.4.2-ga3
 ```
 
+<a name="deploy-the-modules" />
+
 ### モジュールをデプロイする
 
 モジュールをデプロイしてデータベーステーブルを作成し、サービスをインストールします。
@@ -321,6 +347,8 @@ liferay/portal:7.4.2-ga3
 STARTED com.acme.y7g4.service_1.0.0 [1423]
 STARTED com.acme.y7g4.api_1.0.0 [1422]
 ```
+
+<a name="check-the-tables" />
 
 ### テーブルを確認する
 
@@ -384,6 +412,8 @@ STARTED com.acme.y7g4.api_1.0.0 [1422]
     quit
     ```
 
+<a name="test-the-services" />
+
 ### サービスをテストする
 
 サービスを呼び出して、データベースに`Y7G4Entry`データを入力します。
@@ -435,9 +465,13 @@ STARTED com.acme.y7g4.api_1.0.0 [1422]
 1. `Y7G4Entry`をデータベースに追加しました。
 1. データベースからすべての`Y7G4Entry`インスタンスを取得し、それらを印刷しました。
 
+<a name="whats-next" />
+
 ## 次のステップ
 
 モデルを定義し、その永続コードとサービスコードを生成する方法がわかったので、生成されたサービスクラスを調べる必要があります。 [生成されたクラスの理解と拡張](./understanding-service-builder-generated-classes.md) に進んでください。
+
+<a name="additional-information" />
 
 ## 追加情報
 

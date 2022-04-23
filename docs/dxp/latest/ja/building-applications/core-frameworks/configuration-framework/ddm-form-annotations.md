@@ -2,6 +2,8 @@
 
 自動生成された [configuration interface](./setting-and-accessing-configurations.html#creating-the-configuration-interface) UIは、構成によっては単純すぎる場合があります。  動的データマッピング（DDM）フォームのアノテーションを使用して、レイアウトのUIをカスタマイズできます。
 
+<a name="see-a-sample-configuration-ui" />
+
 ## サンプルの構成UIを参照する
 
 1. Liferay DXPを起動します。 まだDockerコンテナがない場合は、以下を使用します。
@@ -42,6 +44,8 @@
 
 DDMフォームのアノテーションの仕組みを以下に示します。
 
+<a name="write-the-configuration-form" />
+
 ## 構成フォームを作成する
 
 設定UIのすべてのフォーム項目を含む構成フォームインターフェイスを作成します。 フィールドごとに`@DDMFormField`アノテーションを使用します。 各フィールドの`label`、`properties`、`type`などの属性を定義します。
@@ -62,6 +66,8 @@ DDMフォームのアノテーションの仕組みを以下に示します。
 ```
 
 `DDMFormLayoutRow`アノテーションと`DDMFormLayoutColumn`を使用して、UIに必要な行と列にフォーム項目を配置します。
+
+<a name="write-the-form-declaration" />
 
 ## フォーム宣言を書く
 

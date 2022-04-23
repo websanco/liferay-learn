@@ -8,6 +8,8 @@ Liferay DXPでは、アプリケーションの構成をさまざまなレベル
 
 ポートレットスコープの構成は異なるアプローチを取ることに注意してください。 詳細については、 [ポートレットレベルの設定](./portlet-level-configuration.md) を参照してください。
 
+<a name="specify-scope-in-the-configuration-interface" />
+
 ## 構成インターフェイスでスコープを指定する
 
 構成のスコープを設定するには、構成インターフェイスでスコープを指定します。 `@ExtendedObjectClassDefinition`アノテーションを使用して、スコープを設定します。 システムスコープの場合は`Scope.SYSTEM`を使用します。 インスタンススコープの場合は`Scope.COMPANY`を使用します。 サイトスコープの場合は`Scope.GROUP`を使用します。
@@ -16,6 +18,8 @@ Liferay DXPでは、アプリケーションの構成をさまざまなレベル
 :language: java
 :lines: 7-9
 ```
+
+<a name="use-the-configuration-provider" />
 
 ## 構成プロバイダーを使用する
 

@@ -5,6 +5,8 @@ Liferayは、 [構成インターフェイスがデプロイ](./setting-and-acce
 * `generateUI`アノテーションプロパティを使用する
 * 構成の可視性インターフェイスを使用する
 
+<a name="using-generateui" />
+
 ## `generateUI`を使用する
 
 すべての状況で構成UIを非表示にする場合は、`ExtendedObjectClassDefinition`アノテーションプロパティ`generateUI`を構成インターフェイスに含めます。 プロパティを`false`に設定します。 これにより、すべてのスコープの構成UIが非表示になることに注意してください。
@@ -13,9 +15,13 @@ Liferayは、 [構成インターフェイスがデプロイ](./setting-and-acce
 @ExtendedObjectClassDefinition(generateUI=false)
 ```
 
+<a name="using-the-configuration-visibility-interface" />
+
 ## 構成の可視性インターフェイスを使用する
 
 構成UIを選択的に非表示にする場合は、`ConfigurationVisibilityController`インターフェイスを使用します。
+
+<a name="see-an-example-implementation" />
 
 ### 実装例を参照してください
 
@@ -56,6 +62,8 @@ Liferayは、 [構成インターフェイスがデプロイ](./setting-and-acce
     ![チェックボックスをクリックすると、他の構成UIが表示されます](./hiding-the-configuration-ui/images/01.png)
 
 1. このチェックボックスが有効になっていない場合、G8V3 Baker構成は非表示になっていることに注意してください。
+
+<a name="implement-the-interface" />
 
 ### インターフェイスを実装する
 

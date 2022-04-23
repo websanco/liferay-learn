@@ -22,6 +22,8 @@ unzip liferay-w9b7.zip
 
 生成されたクラスを確認してください。
 
+<a name="generated-classes-listing" />
+
 ## 生成されたクラスのリスト
 
 各モジュールの`com/acme/w9b7`パッケージフォルダには、サービスビルダーで生成されたJavaクラスが含まれています。 ファイルストラクチャーに表示されるモジュールクラスは次のとおりです。
@@ -72,6 +74,8 @@ w9b7-service/src/main/java/com/acme/w9b7
 
 APIクラスから順に、すべてのクラスについて説明します。
 
+<a name="api-classes" />
+
 ## APIクラス
 
 APIクラスは、パブリックインターフェイス、ユーティリティー、および定数を定義します。
@@ -89,6 +93,8 @@ APIクラスは、パブリックインターフェイス、ユーティリテ�
 | `W9B7EntryLocalServiceUtil`    | `W9B7EntryLocalServiceImpl`をラップするローカルサービスユーティリティクラス。                                                                                                                                                                                          |
 | `W9B7EntryLocalServiceWrapper` | `W9B7EntryLocalService`を実装するローカルサービスラッパー。 このクラスを拡張して、[エンティティのローカルサービスをカスタマイズ](../../../liferay-internals/extending-liferay/creating-service-wrappers.md)することができます。                                                                            |
 
+<a name="implementation-classes" />
+
 ## 実装クラス
 
 これらのクラスは、モデルレイヤー、永続性レイヤー、およびサービスレイヤーを実装します。
@@ -105,6 +111,8 @@ APIクラスは、パブリックインターフェイス、ユーティリテ�
 | `W9B7EntryPersistenceImpl`                   | `W9B7EntryPersistence`を実装する永続性実装クラス。                                                                                                                                                          |
 
 `*BaseImpl`抽象クラスは実装に富んでいます。 `W9B7EntryImpl`クラスと`W9B7EntryLocalServiceImpl`クラスはそれらを拡張し、機能を追加する方法を提供します。
+
+<a name="adding-a-local-service-method" />
 
 ## ローカルサービスメソッドの追加
 
@@ -164,6 +172,8 @@ APIクラスは、パブリックインターフェイス、ユーティリテ�
     ```
 
 新しいメソッドは、モジュールで公開できます。
+
+<a name="testing-the-new-service-method" />
 
 ## 新しいサービスメソッドのテスト
 
@@ -225,6 +235,8 @@ APIクラスは、パブリックインターフェイス、ユーティリテ�
     エントリーはJSON形式で印刷されます。
 
 　 これで、新しいサービスメソッドが正常に追加されました。
+
+<a name="whats-next" />
 
 ## 次のステップ
 

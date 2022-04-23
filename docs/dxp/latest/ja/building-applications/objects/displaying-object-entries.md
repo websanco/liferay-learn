@@ -6,6 +6,8 @@ Liferay Objectでは、既存のDXPフレームワークを使用して、オブ
 
 これらの統合により、パーソナライズされたユーザーエクスペリエンスを提供しながら、ユーザーはLiferayのWYSIWYGページ構築機能を活用できます。
 
+<a name="using-the-collection-provider-for-objects" />
+
 ## オブジェクトのコレクションプロバイダーの使用
 
 オブジェクトを公開した後、以下の手順でコレクション表示フラグメントを使用してオブジェクトのエントリーを表示します。
@@ -42,6 +44,8 @@ Liferay Objectでは、既存のDXPフレームワークを使用して、オブ
 
 ![フラグメントオプションを使用して、オブジェクトエントリーの表示方法を決定します。](./displaying-object-entries/images/06.png)
 
+<a name="creating-display-page-templates-for-objects" />
+
 ## オブジェクトの表示ページテンプレートの作成
 
 1. **サイトメニュー**（![Site Menu](../../images/icon-menu.png)）を開きます。 ［**デザイン**］ &rarr; ［**ページテンプレート**］ に移動し、 ［**表示ページテンプレート**］ タブをクリックします。
@@ -59,6 +63,8 @@ Liferay Objectでは、既存のDXPフレームワークを使用して、オブ
 保存されると、選択されたオブジェクトがテンプレートのマッピングソースとして設定され、テンプレートの編集画面にリダイレクトされます。 ここでは、オブジェクトフィールドに対応するフラグメントを使って、個々のオブジェクトエントリーのページ表示を柔軟にデザインすることができます。 詳しくは、 [Using Display Page Templates](../../site-building/displaying-content/using-display-page-templates/about-display-page-templates-and-display-pages.md) をご覧ください。
 
 ![フラグメント要素をオブジェクトフィールドにマップして、個々のエントリーの表示ページに動的に入力します。](./displaying-object-entries/images/08.png)
+
+<a name="additional-information" />
 
 ## 追加情報
 

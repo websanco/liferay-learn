@@ -35,6 +35,8 @@ Liferay MVCポートレットフレームワークは軽量で使いやすいで
 
 Liferay MVCポートレットフレームワークの各レイヤーがアプリケーションの懸念事項の分離にどのように役立つかを検討してください。
 
+<a name="mvc-layers-and-modularity" />
+
 ## MVCレイヤーとモジュール性
 
 MVCには、3つのレイヤーがあります。
@@ -49,6 +51,8 @@ Liferay DXPのアプリケーションは、複数の個別の[モジュール](
 
 [Workspace](../tooling/liferay-workspace/creating-code-with-liferay-workspace.md) を使用してマルチモジュールのService Builder駆動型MVCアプリケーション[プロジェクト](../../liferay-internals/fundamentals/module-projects.md)のスケルトンを生成すると、時間を大幅に節約でき、より重要な（そして興味深い）開発作業を開始できます。
 
+<a name="liferay-mvc-command-classes" />
+
 ## Liferay MVCコマンドクラス
 
 大規模なアプリケーションでは、すべてのコントローラーロジックを保持している場合、 `-Portlet` クラスは巨大で扱いにくいものになります。 Liferayは、コントローラー機能を分割するMVCコマンドクラスを提供します。
@@ -58,6 +62,8 @@ Liferay DXPのアプリケーションは、複数の個別の[モジュール](
 *** [`MVCResourceCommand`](https://learn.liferay.com/reference/latest/en/dxp/javadocs/portal-kernel/com/liferay/portal/kernel/portlet/bridges/mvc/MVCResourceCommand.html) ：** `-ResourceCommand` クラスを使用して、リソースURLに基づいてリソースを提供します。
 
 すべてをつなぎ合わせて適切に機能させるには、入り組んでいる構成ファイルが必要でしょうか。 いいえ、そうではありません。`-Portlet`クラスの`@Component`アノテーションですべて簡単に管理できます。
+
+<a name="liferay-mvc-portlet-component" />
 
 ## Liferay MVCポートレットコンポーネント
 
@@ -88,6 +94,8 @@ public class HelloWorldPortlet extends MVCPortlet {
 [`liferay-portlet-app_ [version].dtd` ファイル](https://learn.liferay.com/reference/latest/en/dxp/definitions/index.html) は、ポートレットコンポーネントのプロパティとして指定できるすべてのLiferay固有の属性を定義します。 `javax.portlet.`で名前空間が設定されたプロパティは、 [`portlet.xml` descriptor](https://docs.liferay.com/portlet-api/3.0/portlet-app_3_0.xsd) の要素です。
 ```
 
+<a name="a-simpler-mvc-portlet" />
+
 ## よりシンプルなMVCポートレット
 
 より単純なアプリケーションでは、MVCコマンドを使用しません。 ポートレットのレンダーURLは`mvcPath`パラメーターでJSPパスを指定し、 [`MVCPortlet`](https://learn.liferay.com/reference/latest/en/dxp/javadocs/portal-kernel/com/liferay/portal/kernel/portlet/bridges/mvc/MVCPortlet.html) メソッドは実装制御ロジックをオーバーライドします。 次のJSPコードには、JSPパス`/view_2.jsp`を指定するポートレットレンダーURLが含まれています。
@@ -104,6 +112,8 @@ public class HelloWorldPortlet extends MVCPortlet {
 
 ユーザーがリンクをクリックすると、ポートレットは`mvcPath`リクエストパラメータを受け取り、その`render`メソッドで制御ロジックを処理します。 詳細については、 [MVCポートレットを使用したビューのレンダリング](./using-mvc/rendering-views-with-mvc-portlet.md) を参照してください。
 
+<a name="whats-next" />
+
 ## 次のステップ
 
 これまで見てきたように、LiferayのMVCポートレットフレームワークは、適切に構造化されたコントローラーレイヤーを提供します。 MVCポートレットの基本を学びたい場合は、次のチュートリアルから始めてください。
@@ -119,6 +129,8 @@ public class HelloWorldPortlet extends MVCPortlet {
 * [MVCリソースコマンド](./using-mvc/mvc-resource-command.md)
 
 モデルレイヤーを開発する準備ができている場合は、 [サービスビルダー](../data-frameworks/service-builder.md) をご覧ください。
+
+<a name="additional-information" />
 
 ## 追加情報
 

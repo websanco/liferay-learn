@@ -2,9 +2,13 @@
 
 Blade CLIは、コマンドラインインターフェイスまたはグラフィカルインストーラーを使用してインストールできます。 プロキシの背後にいる場合は、インストールすると、プロキシを介して動作するように構成できます。 Blade CLIは、新しいバージョンがリリースされたときに通知し、CLIからいつでもアップグレードできます。
 
+<a name="installing-blade-cli" />
+
 ## CLIのインストール
 
 Blade CLIのインストール方法に関係なく、Java JDKの実装が最初にインストールされていることを確認してください。
+
+<a name="installing-from-the-cli" />
 
 ### CLIからインストールする
 
@@ -15,6 +19,8 @@ curl -L https://raw.githubusercontent.com/liferay/liferay-blade-cli/master/cli/i
 ```
 
 インストールが完了すると、`Bladeが正常にインストールされました`というメッセージが表示されます。 新しいコマンドラインを開き、`blade`と入力します。 エラーが見つからないコマンドがある場合は、 [パス](./troubleshooting-blade-cli.md#the-blade-command-is-not-available-in-my-cli) に`blade`コマンドを追加</0>する必要があります。
+
+<a name="installing-from-the-graphical-installer" />
 
 ### グラフィカルインストーラーからインストールする
 
@@ -40,6 +46,8 @@ curl -L https://raw.githubusercontent.com/liferay/liferay-blade-cli/master/cli/i
 
 Windows環境では、`blade` コマンドがパスに自動的に追加されます（Windowsの場合、またはMacおよびLinuxで `bash` または `zsh` を使用している場合）。 詳細は、 [Blade CLI](./troubleshooting-blade-cli.md) トラブルシューティングを参照してください。
 
+<a name="configuring-a-proxy" />
+
 ## プロキシの構成
 
 プロキシサーバーの背後にいる場合は、CLIから構成できます。
@@ -49,6 +57,8 @@ jpm command --jvmargs "-Dhttp(s).proxyHost=[your proxy host] -Dhttp(s).proxyPort
 ```
 
 これで、BladeはインターネットからLiferayサンプルおよびテンプレートにアクセスするときにプロキシサーバーを使用できます。
+
+<a name="updating-blade-cli" />
 
 ## Blade CLIの更新
 
@@ -72,6 +82,8 @@ blade update -s
 ```
 
 スナップショットのバージョンは不安定になる可能性があるため、自己責任で使用してください。
+
+<a name="blade-commands" />
 
 ## Bladeコマンド
 

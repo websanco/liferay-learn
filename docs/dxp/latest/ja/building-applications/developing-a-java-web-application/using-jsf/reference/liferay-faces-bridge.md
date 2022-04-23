@@ -39,6 +39,8 @@ JSR 329/378規格では、`javax.portlet.faces`ネームスペースのプレフ
 
 Liferay Faces Bridgeは、Liferay DXP/PortalのJSF開発プロセスの重要な部分です。 詳細については、 [Developing a JSF Portlet Application \(Help Center\)](https://help.liferay.com/hc/ja/articles/360029069451-Developing-a-JSF-Portlet-Application) を参照してください。
 
+<a name="additional-information" />
+
 ## 追加情報
 
 * [Liferay Faces Alloy](./liferay-faces-alloy.md)

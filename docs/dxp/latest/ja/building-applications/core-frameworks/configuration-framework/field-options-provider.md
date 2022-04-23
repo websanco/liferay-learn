@@ -2,6 +2,8 @@
 
 [ドロップダウンリスト](./setting-and-accessing-configurations.html#implementing-a-dropdown-selection-ui) は、構成インターフェイスの`@Meta.AD`アノテーションに手動で入力できます。 ただし、`ConfigurationFieldOptionsProvider`クラスを使用して、オプションのラベルと値を自動的に入力することもできます。 これは、ドロップダウンリストに動的にデータを入力する場合に役立ちます。 たとえば、Webサービスからオブジェクトのリストをフェッチしたり、データベースを反復処理してドロップダウンリストに動的にデータを入力したりできます。
 
+<a name="deploy-the-tutorial-code" />
+
 ## チュートリアルコードをデプロイする
 
 1. Liferay DXPを起動します。 まだDockerコンテナがない場合は、以下を使用します。
@@ -42,6 +44,8 @@
 
 最初のドロップダウンリストには、`@Meta.AD`アノテーションが手動で入力されます。 2番目のドロップダウンリストには、フィールドオプションプロバイダーが表示されます。
 
+<a name="setting-the-configuration-interface" />
+
 ## 構成インターフェイスを設定する
 
 [構成インターフェイスを作成](./setting-and-accessing-configurations.html#creating-the-configuration-interface) し、入力する構成フィールド名を設定します。
@@ -53,6 +57,8 @@
 ```
 
 サンプルプロジェクトでは、`providerPopulatedColors`は入力される構成フィールド名です。
+
+<a name="implement-the-field-options-provider" />
 
 ## フィールドオプションプロバイダーを実装する
 

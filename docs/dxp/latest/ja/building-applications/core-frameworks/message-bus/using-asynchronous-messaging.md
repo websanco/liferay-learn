@@ -10,6 +10,8 @@
 
 別のクラス（メッセージリスナー）がリッスンしているシリアル宛先にメッセージを送信することから始めます。
 
+<a name="send-a-message" />
+
 ## メッセージを送る
 
 サンプルプロジェクトでメッセージを送信することから始めます。
@@ -89,6 +91,8 @@
 
 `N8K5Baker`は、宛先`acme/n8k5_able`にメッセージを送信したことを報告しました。 `N8K5CharlieMessageListener`は、宛先`acme/n8k5_able`でペイロード`N8K5Baker#_activate`を含むメッセージを受信しました。 これで、サンプルコードを調べることができます。
 
+<a name="project-overview" />
+
 ## プロジェクトの概要
 
 この例の3つのモジュールには、それぞれ1つのクラスがあります。 各クラスは、メッセージングコンポーネントの1つ（宛先、送信者、リスナー）を表します。
@@ -109,6 +113,8 @@
 
 宛先構成と送信者クラスを調べます。 リスナークラス`N8K5CharlieMessageListener`は、 [メッセージを聞く](./listening-for-messages.md) に示す方法と同じ方法で登録します。
 
+<a name="examine-the-destination-configuration" />
+
 ## 宛先構成を調べる
 
 `n8k5-able-impl`モジュールの`N8K5AbleMessagingConfigurator`クラスは、宛先を作成して構成します。 コードは次のとおりです。
@@ -121,6 +127,8 @@
 どのクラスでも宛先を作成および構成できますが、 [`Component`](https://docs.osgi.org/javadoc/osgi.cmpn/7.0.0/org/osgi/service/component/annotations/Component.html) には`DestinationFactory`のように依存関係を挿入できます。 `_destinationFactory`フィールドの [`@Reference`](https://docs.osgi.org/javadoc/osgi.cmpn/7.0.0/org/osgi/service/component/annotations/Reference.html) アノテーションは、LiferayのOSGiフレームワークに`DestinationFactory`インスタンスを挿入するようにシグナルを送信します。
 
 `_activate`メソッドでは、`N8K5AbleMessagingConfigurator`は [`DestinationFactory`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/DestinationFactory.java) と [`DestinationConfiguration`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/DestinationConfiguration.java) を使用して、`acme/n8k5_able`という名前の **シリアル** 宛先を作成します。 次に、OSGiフレームワーク`BundleContext`を使用して、`Destination`に対するサービスを登録します。 `N8K5AbleMessagingConfigurator`が無効化されると、`_deactivate`メソッドはサービスの登録を解除します。
+
+<a name="examine-the-sender" />
 
 ## 送信者を調べる
 
@@ -149,6 +157,8 @@
 `Message`への応答を受信したい場合は、` Message`に応答先を設定し、 `N8K5Baker`などのクラスを` MessageListener`としてその宛先に登録します。 詳細については、 [メッセージを聞く](./listening-for-messages.md) を参照してください。
 ```
 
+<a name="add-response-handling" />
+
 ## 応答処理の追加
 
 メッセージ受信者からの応答が必要な場合は、返信の応答先を設定します。
@@ -157,6 +167,8 @@
 1. クラス（例えば、元の送信者）を`MessageListener`として応答先に登録します。
 1. メッセージで応答先を渡します。
 1. `MessageListener`に応答ロジックを追加します。
+
+<a name="step-1-register-a-destination-for-responses" />
 
 ### ステップ1：応答の宛先を登録する
 
@@ -194,6 +206,8 @@ private DestinationFactory _destinationFactory;
 private ServiceRegistration<Destination> _serviceRegistration;
 ```
 
+<a name="step-2-register-n8k5baker-as-a-listener-on-the-response-destination" />
+
 ### ステップ2：`N8K5Baker`を応答先のリスナーとして登録する
 
 送信者`N8K5Baker`の変更点は次のとおりです。
@@ -224,6 +238,8 @@ public class N8K5Baker implements MessageListener {
 }
 ```
 
+<a name="step-3-pass-the-response-destination-in-the-message" />
+
 ### ステップ3：メッセージの応答先を渡す
 
 `N8K5Baker`が送信するメッセージの応答先として`acme/n8k5_baker`を設定します。  次のようになります。
@@ -241,6 +257,8 @@ private void _activate(BundleContext bundleContext) {
    _messageBus.sendMessage("acme/n8k5_able", message);
 }
 ```
+
+<a name="step-4-add-response-logic-to-the-messagelisteners" />
 
 ### ステップ4：`MessageListener`に応答ロジックを追加する
 
@@ -268,6 +286,8 @@ public void receive(Message message) {
 @Reference
 private MessageBus _messageBus;
 ```
+
+<a name="test-your-changes" />
 
 ### 変更をテストする
 
@@ -304,11 +324,15 @@ OSGiコンポーネントではないクラスでは、 [MessageBusUtil](https:/
 
 　 2つのクラス間で非同期的にメッセージを交換しました。
 
+<a name="whats-next" />
+
 ## 次のステップ
 
 非同期メッセージングに慣れてきたので、最適なパフォーマンスになるように調整できます。 [メッセージングパフォーマンスのチューニング](./tuning-messaging-performance.md) でその方法を学びましょう。
 
 **デフォルト** モードと **ダイレクト** モードを使用した同期メッセージングを検討する場合は、詳細について [ダイレクト同期メッセージングの使用](./using-direct-synchronous-messaging.md) および [デフォルトの同期メッセージングの使用](./using-default-synchronous-messaging.md) を参照してください。
+
+<a name="additional-information" />
 
 ## 追加情報
 

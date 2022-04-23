@@ -40,6 +40,8 @@
 
 ![フィールドを保存した後、検索可能かどうかを決定します。](./adding-fields-to-objects/images/02.png)
 
+<a name="field-type-reference" />
+
 ## フィールドタイプリファレンス
 
 | タイプ                   | 説明                                         |
@@ -52,6 +54,8 @@
 | Long (Automatic Copy) | 浮動小数点を含まない64ビットの数値                         |
 | 選択リスト                 | [選択リスト](../using-picklists.md)に格納されている文字列値 |
 | 文字列                   | 文字のシーケンス（文字、数字、句読点など）                      |
+
+<a name="additional-information" />
 
 ## 追加情報
 

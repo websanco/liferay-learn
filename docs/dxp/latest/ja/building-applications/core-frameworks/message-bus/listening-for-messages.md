@@ -2,6 +2,8 @@
 
 登録済みのメッセージバスの宛先に送信されたメッセージは、DXP/Portalに組み込まれているもの、サードパーティによって定義されているもの、自分で作成したものに関係なく、リッスンすることができます。 同じ宛先に送信されるメッセージには、通常、類似したイベントタイプやトピックなど、共通点があります。 ここでは、`DestinationNames.DOCUMENT_LIBRARY_PDF_PROCESSOR`という宛先で受信したメッセージをリッスンするクラスをデプロイします。 ドキュメントとメディアは、アップロードされたすべてのPDFファイルを処理した後、この宛先にメッセージを送信します。
 
+<a name="run-the-example-message-listener" />
+
 ## サンプルのメッセージリスナーを実行する
 
 1.  Liferay Dockerイメージを起動します。
@@ -58,6 +60,8 @@
 
 仕組みは次のとおりです。
 
+<a name="determine-the-destination" />
+
 ## 宛先を決定する
 
 メッセージの宛先は、その名前で参照されます。 APIは宛先名を指定します。 たとえば、 [`DestinationNames`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/DestinationNames.java) クラスは、Liferayの組み込みの宛先を一覧表示します。 サンプルの`MessageListener`は、次の`String`定数で指定されたLiferayの宛先に送信されたメッセージをリッスンします。
@@ -67,6 +71,8 @@ DestinationNames.DOCUMENT_LIBRARY_PDF_PROCESSOR
 ```
 
 [ソースコード](https://github.com/liferay/liferay-portal/tree/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]) でLiferayの`*DestinationNames`クラスを検索するか、他のAPIでリスナーを追加できる宛先を検索します。 メッセージリスナーで宛先名を指定します。
+
+<a name="implement-the-messagelistener-interface" />
 
 ## `MessageListener`インターフェイスを実装する
 
@@ -87,6 +93,8 @@ DestinationNames.DOCUMENT_LIBRARY_PDF_PROCESSOR
 
 上記の実装は、メッセージのペイロードと宛先名をログに記録します。 他のメソッドの詳細については、 [`Message`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/MessageListener.java) クラスを参照してください。
 
+<a name="register-your-messagelistener-with-the-destination" />
+
 ## MessageListenerを宛先に登録する
 
 `Component`アノテーションを使用してクラスを登録し、目的の宛先でメッセージをリッスンします。 例:
@@ -101,6 +109,8 @@ DestinationNames.DOCUMENT_LIBRARY_PDF_PROCESSOR
 コンポーネントの`destination.name`プロパティ値を宛先の名前に設定します。
 
 プロジェクトをデプロイすると、OSGiランタイムは`MessageListener`を宛先に登録します。 これで、`MessageListener`は宛先に送信されたメッセージを受信します。
+
+<a name="additional-information" />
 
 ## 追加情報
 

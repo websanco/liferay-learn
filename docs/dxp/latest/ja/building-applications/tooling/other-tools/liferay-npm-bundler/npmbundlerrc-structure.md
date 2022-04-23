@@ -4,6 +4,8 @@ liferay-npm-bundlerは、ウィジェットプロジェクトのルートフォ�
 
 デフォルトプリセットがliferay-npm-bundlerを構成する方法については、 [default preset reference](./how-the-default-preset-configures-the-liferay-npm-bundler.md) を参照してください。 Liferay JS Generatorと一緒にliferay-npm-bundlerを使用してJavaScriptウィジェットを作成する方法については、[Creating JavaScript Widgets with JavaScript Tooling](../liferay-js-generator.md)を参照してください。
 
+<a name="the-structure" />
+
 ## 構造
 
 `.npmbundlerrc` ファイルには、4つの可能なフェーズ定義があります： **copy-process** 、 **pre-process** 、 **post-process** 、そして **babel** です。 これらのフェーズの定義について、以下で詳しく説明します。
@@ -107,6 +109,8 @@ liferay-npm-bundlerは、ウィジェットプロジェクトのルートフォ�
 上記のすべての定義形式（「*」、「some-package-name」、「some-package-name @ version」）が必要なわけではありません。 ほとんどの場合、ワイルドカード定義（ 「* 」）で十分です。 ワイルドカード以外の形式（「some-package-name」と「some-package-name @ version」）は、ワイルドカード定義が提供するよりも具体的な構成を必要とするパッケージのまれな例外です。
 ```
 
+<a name="standard-configuration-options" />
+
 ### 標準構成オプション
 
 以下は、 `.npmbundlerrc` ファイルの標準構成オプションです。
@@ -134,6 +138,8 @@ liferay-npm-bundlerは、ウィジェットプロジェクトのルートフォ�
 `preset:` 基本構成として使用する `liferay-npm-bundler` プリセットを指定します。 `.npmbundlerrc` ファイルが提供されていない場合、デフォルトの `liferay-npm-bundler-preset-standard` プリセットが使用されることに注意してください。 プリセットで提供されるすべての設定は継承されますが、上書きすることができます。
 
 `verbose:` ツールが実行していることに関する詳細情報をコンソールに出力するかどうかを設定します。 デフォルト値は `false`です。
+
+<a name="package-processing-options" />
 
 ### パッケージ処理オプション
 
@@ -215,6 +221,8 @@ liferay-npm-bundlerは、ウィジェットプロジェクトのルートフォ�
   "sources": ["src", "assets"]
 }
 ```
+
+<a name="osgi-bundle-creation-options" />
 
 ### OSGiバンドル作成オプション
 

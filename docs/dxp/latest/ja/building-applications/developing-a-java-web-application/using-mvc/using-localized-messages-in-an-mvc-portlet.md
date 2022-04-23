@@ -2,6 +2,8 @@
 
 Liferayのローカライズフレームワークは、MVCポートレットでローカライズされたメッセージを作成するためのものです。
 
+<a name="deploy-the-sample-code" />
+
 ## サンプルコードをデプロイする
 
 1. Liferay DXPを起動します。 まだDockerコンテナがない場合は、以下を使用します。
@@ -50,11 +52,15 @@ Liferayのローカライズフレームワークは、MVCポートレットで�
 
 次に、どのように機能するかを確認します。
 
+<a name="create-the-language-properties-file" />
+
 ## 言語プロパティファイルを作成する
 
 `Language.properties`ファイルを作成し、モジュールの`src/main/resources/content`フォルダに追加します。 ファイルで、MVCポートレットで使用するキーを定義します。
 
 他のロケールの言語プロパティファイルもフォルダに含めることができます。 たとえば、日本語の言語キーを含めるには、`Language_ja.properties`ファイルをフォルダに追加します。
+
+<a name="create-the-jsp-file" />
 
 ## JSPファイルを作成する
 
@@ -79,6 +85,8 @@ JSPファイルを作成し、モジュールの`/src/main/resources/META-INF/re
 これは、`Language.properties`ファイルにそのようなキーが見つからない場合、代わりにラベルが表示されることを示しています。
 
 タグライブラリの詳細については、 [Liferay Tag Library Reference](https://learn.liferay.com/reference/latest/en/dxp/taglibs/util-taglib/index.html) をご覧ください。 各タグライブラリには、タグに渡すことができる属性のリストがあります。
+
+<a name="add-the-component-definition" />
 
 ## コンポーネント定義を追加する
 

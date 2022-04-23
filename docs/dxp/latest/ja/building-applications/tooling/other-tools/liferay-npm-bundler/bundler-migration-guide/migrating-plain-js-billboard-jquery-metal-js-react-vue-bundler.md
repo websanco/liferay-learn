@@ -46,6 +46,8 @@
 
 プロジェクトは、liferay-npm-bundler 2.xを使用するように移行されます。
 
+<a name="related-information" />
+
 ## 関連情報
 
 * [Formatting Your npm Modules for AMD](../how-the-bundler-formats-js-modules.md) <!-- **\[Using the NPMResolver API in Your Portlets\](/docs/7-2/frameworks/-/knowledge_base/f/using-the-npmresolver-api-in-your-portlets) TODO: Update link-->**[What Changed between liferay-npm-bundler 1.x and 2.x](../changes-between-bundler-1.x-and-2.x.md)

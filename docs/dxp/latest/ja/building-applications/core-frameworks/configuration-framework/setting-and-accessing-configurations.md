@@ -2,6 +2,8 @@
 
 Liferayの構成フレームワークを使用して、MVCポートレットの設定UIを追加できます。
 
+<a name="see-the-example-portlet" />
+
 ## サンプルポートレットを参照する
 
 1. Liferay DXPを起動します。 まだDockerコンテナがない場合は、以下を使用します。
@@ -52,6 +54,8 @@ Liferayの構成フレームワークを使用して、MVCポートレットの�
 
 構成フレームワークの仕組みは次のとおりです。
 
+<a name="creating-the-configuration-interface" />
+
 ## 構成インターフェイスを作成する
 
 構成インターフェイスで構成可能な属性を定義するだけで、[システム設定](../../../system-administration/configuring-liferay/system-settings.md)で構成UIを生成できます。
@@ -77,6 +81,8 @@ IDには、構成インターフェイスの完全修飾クラス名（FQCN）�
 
 次に、MVCポートレットによって構成がどのように読み取られるかを確認します。
 
+<a name="reading-the-configuration-from-the-application" />
+
 ## アプリケーションから構成を読み取る
 
 1. `@Component`アノテーションでは、構成インターフェイスクラスは`configurationPid`で指定されます。
@@ -95,6 +101,8 @@ IDには、構成インターフェイスの完全修飾クラス名（FQCN）�
 
     構成オブジェクトがリクエストオブジェクトに追加され、アプリケーションのJSPのリクエストから読み取ることができるようになりました。
 
+<a name="create-a-configuration-bean-declaration" />
+
 ## 構成Bean宣言を作成する
 
 `ConfigurationProvider`を使用するには、構成クラスも`ConfigurationBeanDeclaration`に登録する必要があります。 これにより、システムは構成の変更が発生したときにそれを追跡できます。
@@ -105,6 +113,8 @@ IDには、構成インターフェイスの完全修飾クラス名（FQCN）�
 ```
 
 このクラスには、アプリケーションの構成インターフェイスのクラスを返すメソッドが1つあります。
+
+<a name="accessing-the-configuration-from-a-jsp" />
 
 ## JSPから構成にアクセスする
 
@@ -124,6 +134,8 @@ IDには、構成インターフェイスの完全修飾クラス名（FQCN）�
 
 1. 属性`fontColor()`、`fontFamily()`、`fontSize()`をJSPで使用できるようになりました。
 
+<a name="implementing-a-dropdown-selection-ui" />
+
 ## ドロップダウン選択UIを実装する
 
 サンプルプロジェクトには、構成可能な3つの属性があります。 現在、属性はテキスト入力フィールドに手動で入力する必要がありますが、これはさらにカスタマイズできます。
@@ -142,6 +154,8 @@ required = false)
 ![フォントファミリーがドロップダウン選択になりました。](./setting-and-accessing-configurations/images/03.png)
 
 これで、フォントファミリー属性はドロップダウン選択になります。
+
+<a name="further-customization" />
 
 ## さらなるカスタマイゼーション
 

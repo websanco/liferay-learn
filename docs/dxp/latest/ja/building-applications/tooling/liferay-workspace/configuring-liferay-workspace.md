@@ -8,6 +8,8 @@ Liferay Workspaceは使い方が簡単で、[最初から](./what-is-liferay-wor
 - 開発、UAT、および本番環境の使用
 - ターゲットプラットフォームの管理
 
+<a name="updating-liferay-workspace-and-bundled-plugins" />
+
 ## Liferay Workspaceとバンドルされたプラグインの更新
 
 Liferay Workspaceは、開発者の生産性を高めるために常に更新されており、ワークスペースを最新の状態にするのは簡単なプロセスです。
@@ -30,6 +32,8 @@ Liferay Workspaceは、開発者の生産性を高めるために常に更新さ
 
 　 これで、ワークスペースがアップグレードされました。
 
+<a name="updating-your-liferay-version" />
+
 ## Liferayバージョンの更新
 
 ワークスペースがコンパイルするLiferayのバージョンを更新することをお勧めします。 これは、単一のプロパティによって処理されます。
@@ -39,6 +43,8 @@ liferay.workspace.product=[$LIFERAY_LEARN_PORTAL_WORKSPACE$]
 ```
 
 プロパティの値を、コードを開発しているLiferayのバージョンに更新します。 その後、ワークスペースの依存関係が自動的に新しいバージョンに更新されます。
+
+<a name="using-jdk-11" />
 
 ## JDK11の使用
 
@@ -72,6 +78,8 @@ maven {
 ```
 これで、LiferayプロジェクトでJDK11を使用する準備が整いました。 既存のプロジェクトがある場合は、追加で必要な手順があります。
 
+<a name="service-builder-projects" />
+
 ### サービスビルダープロジェクト
 
 古いワークスペースをサービスビルダープロジェクトでアップグレードした場合は、この構成をサービスビルダーの`-service`モジュールの`build.gradle`ファイルに追加します。
@@ -85,6 +93,9 @@ tasks.withType(JavaCompile) {
     targetCompatibility = JavaVersion.VERSION_1_8
 }
 ```
+
+<a name="jax-ws-projects" />
+
 ### JAX-WSプロジェクト
 
 JAX-WSプロジェクトがある場合は、JDK 11から削除された`javax.xml.soap`のクラスが必要です。 次に、それらを依存関係として手動で指定する必要があります。
@@ -93,6 +104,8 @@ JAX-WSプロジェクトがある場合は、JDK 11から削除された`javax.x
 ```groovy
 compile 'com.sun.xml.ws:jaxws-ri:2.3.2'
 ```
+
+<a name="creating-deployment-environments" />
 
 ## デプロイメント環境の構築
 
@@ -120,6 +133,8 @@ Liferay Workspaceを使用すると、コンテナーベースであろうと従
 
 まだファイルには何も入れないでください。
 
+<a name="how-deployment-environments-work" />
+
 ### デプロイメント環境の仕組み
 
 `configs`フォルダは、特定のシナリオを定義します。
@@ -137,6 +152,8 @@ Liferay Workspaceを使用すると、コンテナーベースであろうと従
 `uat`：ユーザー受け入れテスト環境の構成が含まれています。
 
 構成ファイルを特定のフォルダに配置すると、その環境の構成が定義されます。 `common`の場合、その構成は、環境が構築されるときに他の構成とマージされます。 これで、いくつかの環境を構築する準備が整いました。
+
+<a name="building-deployment-environments" />
 
 ### デプロイメント環境の構築
 
@@ -194,6 +211,8 @@ Liferay Workspaceを使用すると、コンテナーベースであろうと従
 
 これで、環境を生成して配布する準備が整いました。
 
+<a name="generating-deployment-environments" />
+
 ### デプロイメント環境の生成
 
 これで、ローカルで実行したり、サーバーに配布したりする環境を生成できます。 これは、`initBundle`または`distBundle` Gradleタスクのいずれかを使用して実行されます。
@@ -218,6 +237,8 @@ Liferay Workspaceを使用すると、コンテナーベースであろうと従
 ```
 
 上記の手順に従って、各環境をテストおよび構築します。
+
+<a name="managing-the-target-platform" />
 
 ## ターゲットプラットフォームの管理
 

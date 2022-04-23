@@ -1,5 +1,7 @@
 # ディスパッチUIリファレンス
 
+<a name="dispatch-triggers" />
+
 ## ディスパッチのトリガー
 
 ![ディスパッチタスクを表示、作成、および管理します。](./dispatch-ui-reference/images/01.png)
@@ -22,6 +24,8 @@
 
 ここから、ディスパッチタスクをクリックして、次の詳細と構成オプションにアクセスします。
 
+<a name="details-tab" />
+
 ### ［詳細］タブ
 
 ![ディスパッチタスクの一般的な詳細を表示および編集します](./dispatch-ui-reference/images/02.png)
@@ -31,11 +35,15 @@
 | 名前              | ディスパッチタスクの名前を表示/編集します                      |
 | Settings Editor | ランタイム時にディスパッチタスクに挿入されるプロパティを定義するためのコードエディタ |
 
+<a name="talend-tab-for-talend-dispatch-tasks-only" />
+
 ### ［Talend］タブ（Talendディスパッチタスクのみ）
 
 ![Talendジョブアーカイブファイルをアップロードします。](./dispatch-ui-reference/images/03.png)
 
 Talend **ジョブアーカイブ** `.zip`ファイルをディスパッチタスクにアップロードします。
+
+<a name="logs-tab" />
 
 ### ［Logs］タブ
 
@@ -51,6 +59,8 @@ Talend **ジョブアーカイブ** `.zip`ファイルをディスパッチタ�
 | ステータス   | 実行ステータス（例： **Successful** 、 **Failed**） |
 
 ログエントリをクリックすると、実行時のエラーと出力も確認できます。
+
+<a name="dispatch-trigger-tab" />
 
 ### ［Dispatch Trigger］タブ
 
@@ -68,6 +78,8 @@ Talend **ジョブアーカイブ** `.zip`ファイルをディスパッチタ�
 | 無期限                         | ディスパッチタスクの自動実行を終了するかどうかを決定します。デフォルトではオンになっています                 |
 | 終了日                         | ディスパッチタスクの自動実行を終了する日時を定義します。 ［**Never End**］ がオンになっている場合は無効です     |
 
+<a name="scheduled-jobs" />
+
 ## スケジュールジョブ
 
 ![MessageListenerインターフェイスを使用してスケジュールされたすべてのジョブを表示します。](./dispatch-ui-reference/images/06.png)
@@ -82,6 +94,8 @@ Talend **ジョブアーカイブ** `.zip`ファイルをディスパッチタ�
 | ステータス        | ジョブの状態（例：`NORMAL`、`PAUSED`）               |
 | 今すぐ実行        | ジョブを手動で実行するためのボタン                         |
 | Pause/Resume | ジョブを **一時停止** / **再開** するオプション。アクションボタンからアクセスできます |
+
+<a name="additional-information" />
 
 ## 追加情報
 

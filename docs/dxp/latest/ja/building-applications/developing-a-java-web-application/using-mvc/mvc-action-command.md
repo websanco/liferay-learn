@@ -4,6 +4,8 @@ MVCアクションコマンドは、アクションを個別のクラスとし�
 
 MVCアクションコマンドを使用するサンプルポートレットをデプロイしてから、それを調べます。
 
+<a name="invoke-a-portlets-mvc-action-commands" />
+
 ## ポートレットのMVCアクションコマンドを呼び出す
 
 サンプルポートレットの2つのアクションは、呼び出されているMVCアクションコマンドクラスとメソッドを示すメッセージをログに記録します。 ポートレットをデプロイしてそのアクションをトリガーする方法は次のとおりです。
@@ -72,6 +74,8 @@ MVCアクションコマンドを使用するサンプルポートレットを�
 
 MVCアクションコマンドの動作を見てきました。 次に、それらがどのように機能するかを確認します。
 
+<a name="examine-the-portlet" />
+
 ## ポートレットを調べる
 
 `L6Y9Portlet`は最小の [`MVCPortlet`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/portlet/bridges/mvc/MVCPortlet.java) です。
@@ -97,6 +101,8 @@ MVCアクションコマンドの動作を見てきました。 次に、それ�
 
 サンプルポートレットは、デフォルトで`view.jsp`をレンダリングします。 次に、JSPがMVCアクションコマンドクラスを呼び出す方法を確認します。
 
+<a name="examine-the-portlet-action-urls" />
+
 ## ポートレットアクションのURLを調べる
 
 ポートレットの`view.jsp`ファイルは、ポートレットのMVCアクションコマンドを呼び出すためのリンクをレンダリングします。
@@ -116,6 +122,8 @@ MVCアクションコマンドの動作を見てきました。 次に、それ�
 | `<portlet:actionURL name="/do_l6y9_baker" />` | `mvc.command.name=/l6y9/do_l6y9_baker`     |
 
 たとえば、 **Do L6Y9 Able** リンクをクリックすると、`DoL6Y9AbleMVCActionCommand`の`doProcessAction`メソッドが呼び出されます。
+
+<a name="examine-the-mvcactioncommand-classes" />
 
 ## MVCActionCommandクラスを調べる
 
@@ -145,9 +153,13 @@ MVCアクションコマンドクラスは、 [`MVCActionCommand`](https://githu
 
 次に、ポートレットのJSPがUIコンポーネントのアクションをコマンドにマップする方法を確認します。
 
+<a name="whats-next" />
+
 ## 次のステップ
 
 MVCアクションコマンドの使用方法がわかったので、[MVC Render Commands](./mvc-render-command.md)と[MVC Resource Commands](./mvc-resource-command.md)を確認することをお勧めします。 アプリのコンテンツのローカライズを開始する場合は、[Using Localized Messages](./using-localized-messages-in-an-mvc-portlet.md)を参照してください。 モデルレイヤー、永続レイヤー、およびサービスレイヤーの開発を開始する準備ができている場合は、 [サービスビルダー](../../data-frameworks/service-builder.md) をご覧ください。
+
+<a name="additional-information" />
 
 ## 追加情報
 

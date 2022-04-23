@@ -2,6 +2,8 @@
 
 ポートレットは、バージョン3.0を指定して、Portlet 3.0 APIに「オプトイン」する必要があります。 3.0 Portlet APIのバージョンは、次の方法で指定できます。
 
+<a name="standard-portlet-portletapplication-annotation" />
+
 ## 標準のポートレットの`@PortletApplication`アノテーション
 
 標準ポートレットは、 [`@PortletApplication`](https://learn.liferay.com/reference/latest/en/portlet-api/javax/portlet/annotations/PortletApplication.html) アノテーションを指定するだけで済みます。
@@ -14,6 +16,8 @@ public class MyPortlet {
 }
 ```
 
+<a name="liferay-mvc-portlet-component-annotation" />
+
 ## Liferay MVCポートレットの`@Component`アノテーション
 
 `MVCPortlet`などの宣言型サービスポートレットは、`@Component`アノテーションでバージョン3.0を指定できます。
@@ -24,6 +28,8 @@ public class MyDeclarativeServicesPortlet {
     ...
 }
 ```
+
+<a name="portletxml-descriptor" />
 
 ### `portlet.xml`記述子
 

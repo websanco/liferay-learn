@@ -6,6 +6,8 @@
 
 オブジェクトのAPIは、Liferay API Explorerを介して`[server]:[port]/o/api`（例：`localhost:8080/o/api`）で表示およびテストできます。 REST APIは、 ［**REST Applications**］ の下にリストされています。 ［**GraphQL**］ をクリックして、Liferayの [Graph **i** QL](https://github.com/graphql/graphiql) ブラウザにアクセスします。
 
+<a name="object-rest-apis" />
+
 ## オブジェクトREST API
 
 REST APIを使用すると、オブジェクトエントリーに対して単一およびバッチの両方のCRUD操作を実行できます。
@@ -19,6 +21,8 @@ REST APIを使用すると、オブジェクトエントリーに対して単一
 ```{important}
 Liferay DXP 7.4 GA1では、選択リストフィールドの値は、オブジェクトAPIコールで以下のフォーマットを使用する必要があります。`"samplePicklist":"string"`です。 Liferay DXP 7.4 U1では、フォーマットが変更され、値はこのフォーマットを使用する必要があります。`"samplePicklist":{"key":"string"}`.
 ```
+
+<a name="company-scoped-objects" />
 
 ### 会社に範囲指定されているオブジェクト
 
@@ -38,6 +42,8 @@ Liferay DXP 7.4 GA1では、選択リストフィールドの値は、オブジ�
 | GET       | `/{objectNameId}`                                     | `getObjectName`                 | 指定されたオブジェクトエントリーの詳細を返します                                            |
 | PATCH     | `/{objectNameId}`                                     | `patchObjectName`               | 指定されたオブジェクトエントリーのAPI呼び出しで指定されたフィールドを更新します。他のフィールドは変更されません           |
 | PUT       | `/{objectNameId}`                                     | `putObjectName`                 | 指定されたオブジェクトエントリーの詳細を、API呼び出しで提供されたものに置き換えます                         |
+
+<a name="site-scoped-objects" />
 
 ### サイトに範囲指定されたオブジェクト
 
@@ -59,6 +65,8 @@ Liferay DXP 7.4 GA1では、選択リストフィールドの値は、オブジ�
 APIの `scopesKey`パラメーターには、目的のデータスコープの適切な識別子（サイトID、ユーザーロールなど）を使用します。
 ```
 
+<a name="object-graphql-apis" />
+
 ## オブジェクトGraphQL API
 
 GraphQL APIでは、オブジェクトデータを照会したり、変更したりすることができます。 LiferayのGraph **i** QL IDEを使用して、オブジェクトスキーマの検索、クエリのドラフト、リクエストの実行などを行います。
@@ -66,6 +74,8 @@ GraphQL APIでは、オブジェクトデータを照会したり、変更した
 ![LiferayのGraphiQLエクスプローラーを使用して、オブジェクトスキーマを検索し、リクエストを実行します。](./headless-framework-integration/images/02.png)
 
 詳しくは、 [GraphQL APIの使用](../../../headless-delivery/consuming-apis/consuming-graphql-apis.md) を参照してください。
+
+<a name="additional-information" />
 
 ## 追加情報
 

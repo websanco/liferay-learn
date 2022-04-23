@@ -42,6 +42,8 @@
 
 次のサンプルモジュールは、カスタムのディスパッチタスクエグゼキュータを作成してLiferayインスタンスにデプロイする方法を示しています。
 
+<a name="deploying-the-sample-dispatch-task-executor" />
+
 ## サンプルのディスパッチタスクエグゼキュータのデプロイ
 
 次の手順に従って、サンプルのディスパッチタスクエグゼキュータをダウンロード、ビルドして、新しいDockerコンテナにデプロイします。
@@ -95,6 +97,8 @@
 
    ![ディスパッチタスクのログを表示および管理します。](./creating-a-new-dispatch-task-executor/images/03.png)
 
+<a name="code-for-the-sample-dispatch-task-executor" />
+
 ## サンプルのディスパッチタスクエグゼキュータのコード
 
 ```{literalinclude} creating-a-new-dispatch-task-executor/resources/liferay-s7a3.zip/s7a3-impl/src/main/java/com/acme/s7a3/internal/dispatch/executor/S7A3DispatchTaskExecutor.java
@@ -105,6 +109,8 @@
 モジュールはOSGi `@Component`として宣言され、`dispatch.task.executor.name`と`dispatch.task.executor.type`の2つのプロパティを定義します。 その後、モジュールを`DispatchTaskExecutor.class`サービスとして識別します。
 
 `@Component`アノテーションに続いて、モジュールは`BaseDispatchTaskExecutor`抽象クラスを拡張し、`doExecute`メソッドをオーバーライドします。 このメソッドは、`LogFactoryUtil`を使用して、コンソールのログに通知メッセージを表示します。
+
+<a name="additional-information" />
 
 ## 追加情報
 

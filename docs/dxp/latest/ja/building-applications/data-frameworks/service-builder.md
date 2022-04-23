@@ -40,6 +40,8 @@ service-builder/reference.md
 DXP / Portalのバックエンドサービスにはサービスビルダーを使用する必要はありません。 JPAやHibernateなど、選択した永続フレームワークを使用することは完全に可能です。 内部的には、サービスビルダーは [Hibernate](http://hibernate.org/) を使用することに注意してください。 
 ```
 
+<a name="customization-via-implementation-classes" />
+
 ## 実装クラスによるカスタマイズ
 
 サービスビルダーで生成されたエンティティには、次の **実装** クラスが含まれています。
@@ -52,17 +54,25 @@ DXP / Portalのバックエンドサービスにはサービスビルダーを�
 
 これらのクラスは、カスタムビジネスロジックを実装する場所です。 これらは、カスタマイズを目的としてサービスビルダーによって生成される唯一のクラスです。
 
+<a name="hibernate-configurations" />
+
 ## Hibernateの構成
 
 サービスビルダーは、オブジェクト関係マッピングにHibernate永続フレームワークを使用します。 サービスビルダーは、Hibernateの複雑さを隠しつつ、動的クエリやカスタムSQLなどのテクノロジーへのアクセスを提供します。 Hibernate環境を手動でセットアップしたり、構成を行ったりすることなく、プロジェクトでオブジェクト関係マッピング（ORM）を利用できます。
+
+<a name="caching" />
 
 ## キャッシュ
 
 サービスビルダーは、 **エンティティ** 、 **ファインダー** 、および **Hibernate** の3つのレベルでオブジェクトをキャッシュします。 デフォルトでは、Liferayはこれらの各キャッシュレベルの基盤となるキャッシュプロバイダーとしてEhcacheを使用します。 ただし、これは[ポータルプロパティ](../../installation-and-upgrades/reference/portal-properties.md)を介して構成できます。  プロジェクトでエンティティとファインダーのキャッシュを有効にするには、`service.xml`ファイルでエンティティの`<entity>`要素の`cache-enabled=true`属性を設定するだけです。 [Liferay Clustering](../../installation-and-upgrades/setting-up-liferay/clustering-for-high-availability.md)では、クラスター内のLiferayキャッシングについて説明しています。
 
+<a name="dynamic-query-and-custom-sql-query" />
+
 ## 動的クエリとカスタムSQLクエリ
 
 サービスビルダーは、データベース永続コードの作成に関連する一般的なタスクの多くを自動化しますが、カスタムSQLクエリの作成を妨げることはありません。 XMLファイルでカスタムSQLクエリを定義し、クエリを実行するためのファインダーメソッドを実装できます。 何か集中して作業が必要な場合でも、サイトビルダーは邪魔になりません。 動的クエリを使用して、Hibernateの基準APIにアクセスすることもできます。
+
+<a name="whats-next" />
 
 ## 次のステップ
 
