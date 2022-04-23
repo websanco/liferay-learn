@@ -1,4 +1,4 @@
-# Webコンテンツ
+# Web Content
 
 ```{toctree}
 :maxdepth: 4

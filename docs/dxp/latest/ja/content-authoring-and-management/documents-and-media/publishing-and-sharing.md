@@ -1,4 +1,4 @@
-# 公開と共有
+# Publishing and Sharing
 
 ```{toctree}
 :maxdepth: 4

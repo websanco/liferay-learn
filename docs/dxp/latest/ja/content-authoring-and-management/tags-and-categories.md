@@ -1,4 +1,4 @@
-# タグとカテゴリ
+# Tags and Categories
 
 ```{toctree}
 :maxdepth: 3
@@ -12,21 +12,17 @@ tags-and-categories/auto-tagging.md
 tags-and-categories/developer-guide.md
 ```
 
-- [カテゴリとタグを使用したコンテンツの整理](./tags-and-categories/organizing-content-with-categories-and-tags.md)
-- [コンテンツのタグ付けとタグの管理](./tags-and-categories/tagging-content-and-managing-tags.md)
-- [コンテンツのカテゴリとボキャブラリの定義](./tags-and-categories/defining-categories-and-vocabularies-for-content.md)
-- [アセットの地理位置情報](./tags-and-categories/geolocating-assets.md)
-- [セッションプロパティのボキャブラリ](./tags-and-categories/session-property-vocabularies.md)
-
-<a name="auto-tagging" />
+- [Organizing Content with Categories and Tags](./tags-and-categories/organizing-content-with-categories-and-tags.md)
+- [Tagging Content and Managing Tags](./tags-and-categories/tagging-content-and-managing-tags.md)
+- [Defining Categories and Vocabularies for Content](./tags-and-categories/defining-categories-and-vocabularies-for-content.md)
+- [Geolocating Assets](./tags-and-categories/geolocating-assets.md)
+- [Session Property Vocabularies](./tags-and-categories/session-property-vocabularies.md)
 
 ## Auto Tagging
 
-- [アセットの自動タグ付けの設定](./tags-and-categories/auto-tagging/configuring-asset-auto-tagging.md)
-- [画像の自動タグ付け](./tags-and-categories/auto-tagging/auto-tagging-images.md)
-- [アセットの自動タグ付け](./tags-and-categories/auto-tagging/auto-tagging-assets.md)
-
-<a name="developer-guide" />
+- [Configuring Asset Auto Tagging](./tags-and-categories/auto-tagging/configuring-asset-auto-tagging.md)
+- [Auto Tagging Images](./tags-and-categories/auto-tagging/auto-tagging-images.md)
+- [Auto Tagging Assets](./tags-and-categories/auto-tagging/auto-tagging-assets.md)
 
 ## Developer Guide
 

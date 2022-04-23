@@ -1,4 +1,4 @@
-# ドキュメントアクセスの管理
+# Managing Document Access
 
 ```{toctree}
 :maxdepth: 4
@@ -10,8 +10,8 @@ managing-document-access/permissions-and-documents.md
 managing-document-access/documents-and-media-permissions-reference.md
 ```
 
-- [他のユーザーとのドキュメントの共有](./managing-document-access/sharing-documents-with-other-users.md)
-- [共有の有効化と構成](./managing-document-access/enabling-and-configuring-sharing.md)
-- [チェックアウトによるドキュメント変更の管理](./managing-document-access/managing-document-changes-with-checkout.md)
-- [権限とドキュメント](./managing-document-access/permissions-and-documents.md)
-- [ドキュメントとメディアの権限リファレンス](./managing-document-access/documents-and-media-permissions-reference.md)
+- [Sharing Documents with Other Users](./managing-document-access/sharing-documents-with-other-users.md)
+- [Enabling and Configuring Sharing](./managing-document-access/enabling-and-configuring-sharing.md)
+- [Managing Document Changes with Checkout](./managing-document-access/managing-document-changes-with-checkout.md)
+- [Permissions and Documents](./managing-document-access/permissions-and-documents.md)
+- [Documents and Media Permissions Reference](./managing-document-access/documents-and-media-permissions-reference.md)

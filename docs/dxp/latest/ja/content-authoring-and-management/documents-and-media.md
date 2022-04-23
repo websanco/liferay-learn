@@ -1,4 +1,4 @@
-# ドキュメントとメディア
+# Documents and Media
 
 ```{toctree}
 :maxdepth: 4

@@ -1,4 +1,4 @@
-# ウェブコンテンツの翻訳
+# Translating Web Content
 
 ```{toctree}
 :maxdepth: 2
@@ -8,11 +8,12 @@ translating-web-content/exporting-and-importing-translations.md
 translating-web-content/automatically-translating-web-content.md
 ```
 
-Liferayには、Webコンテンツの翻訳を提供する2つの方法があります。
+Liferay includes three methods for translating web content:
 
-- `UIを介したWebコンテンツの手動翻訳 <./translating-web-content/manually-translating-web-content.md>`_
-- `WebコンテンツをXLIFF形式でエクスポートし、翻訳をインポートする <translating-web-content/exporting-and-importing-translations.md>`_
+- [Manual translation of web content through the UI](./translating-web-content/manually-translating-web-content.md)
+- [Exporting web content in XLIFF format and importing translations](./translating-web-content/exporting-and-importing-translations.md)
+- [Using Google Cloud Translation to automatically translate web content](./translating-web-content/automatically-translating-web-content.md)
 
 ```{note}
-   インストールしたLiferayのローカライズを始めようとしているユーザーは、 [初期インスタンスのローカリゼーション](../../installation-and-upgrades/setting-up-liferay/initial-instance-localization.md) を参照して詳細を知ることができます。 
+   Users who are just starting out with localizing their installation of Liferay can learn more by reviewing [Initial Instance Localization](../../installation-and-upgrades/setting-up-liferay/initial-instance-localization.md).
 ```

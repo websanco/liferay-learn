@@ -6,4 +6,4 @@
 developer-guide/adaptive-media-modules-reference.md
 ```
 
-- [Adaptive Media Modules Reference](./developer-guide/adaptive-media-modules-reference.md)
+- [アダプティブメディアモジュールリファレンス](./developer-guide/adaptive-media-modules-reference.md)
