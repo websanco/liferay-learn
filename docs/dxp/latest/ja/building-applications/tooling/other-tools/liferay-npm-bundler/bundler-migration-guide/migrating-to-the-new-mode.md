@@ -24,7 +24,7 @@
     }
     ```
 
-1. プロジェクトの `.npmbundlerrc` ファイルでバンドラーが使用するルールを定義します（たとえば、ファイルをトランスパイルするためにbabelを実行する）。 以下の設定例では、 `babel-loader` を使用してJavaScriptファイルをトランスパイルするためのルールを定義しています。 デフォルトローダーの完全なリストについては、 [デフォルトローダーリファレンス](../default-bundler-loaders.md)を参照してください。 カスタムローダーを作成するには、[Creating Custom Loaders for the Bundler](../../developer/creating-custom-loaders-for-the-bundler.md)<!-- TODO: Fix link -->に記載の手順に従ってください。 liferay-npm-bundlerはbabelで `/src/` の `* .js` ファイルを処理し、デフォルトの `/build/` フォルダに結果を書き込みます。
+1. プロジェクトの `.npmbundlerrc` ファイルでバンドラーが使用するルールを定義します（たとえば、ファイルをトランスパイルするためにbabelを実行する）。 以下の設定例では、 `babel-loader` を使用してJavaScriptファイルをトランスパイルするためのルールを定義しています。 デフォルトローダーの完全なリストについては、 [デフォルトローダーリファレンス](../default-bundler-loaders.md)を参照してください。 カスタムローダーを作成するには、[Creating Custom Loaders for the Bundler](../../developer/creating-custom-loaders-for-the-bundler.md) <!-- TODO: Fix link --> に記載の手順に従ってください。 liferay-npm-bundlerはbabelで `/src/` の `* .js` ファイルを処理し、デフォルトの `/build/` フォルダに結果を書き込みます。
 
     ```json
     {

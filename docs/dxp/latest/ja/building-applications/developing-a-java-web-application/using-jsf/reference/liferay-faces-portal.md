@@ -1,6 +1,6 @@
 # Liferay Faces Portal
 
-*Liferay Faces Portal*は`.jar`ファイルで配布されます。 ポートレットプロジェクトの依存関係としてLiferay Faces Portalを追加して、Liferay固有のユーティリティとUIコンポーネントを使用できます。 Liferay Faces PortalがJSFポートレットプロジェクトに含まれている場合、`com.liferay.faces.portal.[version].jar`ファイルはポートレットのライブラリに存在します。
+**Liferay Faces Portal** は`.jar`ファイルで配布されます。 ポートレットプロジェクトの依存関係としてLiferay Faces Portalを追加して、Liferay固有のユーティリティとUIコンポーネントを使用できます。 Liferay Faces PortalがJSFポートレットプロジェクトに含まれている場合、`com.liferay.faces.portal.[version].jar`ファイルはポートレットのライブラリに存在します。
 
 ![構成したJSF UI Component Suiteに基づいて、JSFポートレットに必要な<code>.jar</code>ファイルがダウンロードされます。](./liferay-faces-portal/images/01.png)
 

@@ -12,9 +12,9 @@ Liferay DXPは、[JSR 362](https://jcp.org/en/jsr/detail?id=362)で指定され�
 
 **Bean EL名：** JSPまたはJSFページでBeanにアクセスするための式言語（EL）名。
 
-**修飾子：**Bean実装を定義および選択するためにBeanに適用されるアノテーション。
+**修飾子：** Bean実装を定義および選択するためにBeanに適用されるアノテーション。
 
-**有効なフェーズ：**Beanが有効な[ポートレットフェーズ](../../reference/portlets.md)。
+**有効なフェーズ：** Beanが有効な[ポートレットフェーズ](../../reference/portlets.md)。
 
 ## ポートレットリクエストスコープのBean
 

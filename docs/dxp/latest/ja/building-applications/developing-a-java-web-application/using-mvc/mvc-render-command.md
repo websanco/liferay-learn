@@ -46,15 +46,15 @@ MVCレンダーコマンドは、レンダリングするページを処理す�
 
 1. デフォルトの認証情報を使用してサインインします。
 
-   **ユーザー名**: `test@liferay.com`
+   **ユーザー名** : `test@liferay.com`
 
    **パスワード：** `test`
 
-1. *A4P1ポートレット*ウィジェットを*［Samples］*カテゴリからウィジェットページに追加します。 A4P1ポートレットが表示されます。
+1. **A4P1ポートレット** ウィジェットを ［**Samples**］ カテゴリからウィジェットページに追加します。 A4P1ポートレットが表示されます。
 
     ![A4P1ポートレットをページに追加しました。](./mvc-render-command/images/01.png)
 
-1. MVCレンダーコマンドを呼び出して、*［Go to Baker］*をクリックしてBakerビューにアクセスします。 `A4P1BakerMVCRenderCommand`は、その`render`メソッドの呼び出しをログに記録し、Bakerビューをレンダリングします。
+1. MVCレンダーコマンドを呼び出して、 ［**Go to Baker**］ をクリックしてBakerビューにアクセスします。 `A4P1BakerMVCRenderCommand`は、その`render`メソッドの呼び出しをログに記録し、Bakerビューをレンダリングします。
 
     ```bash
     [A4P1BakerMVCRenderCommand:26] Invoking #render(RenderRequest, RenderResponse)
@@ -62,7 +62,7 @@ MVCレンダーコマンドは、レンダリングするページを処理す�
 
     ![Bakerビューをレンダリングしています。](./mvc-render-command/images/02.png)
 
-1. 他のMVCレンダーコマンドを呼び出し、*［Go to Able］*をクリックしてAbleビューに再度アクセスします。 `A4P1AbleMVCRenderCommand`は、その`render`メソッドの呼び出しをログに記録し、Ableビューを再度レンダリングします。
+1. 他のMVCレンダーコマンドを呼び出し、 ［**Go to Able**］ をクリックしてAbleビューに再度アクセスします。 `A4P1AbleMVCRenderCommand`は、その`render`メソッドの呼び出しをログに記録し、Ableビューを再度レンダリングします。
 
     ```bash
     [A4P1AbleMVCRenderCommand:26] Invoking #render(RenderRequest, RenderResponse)

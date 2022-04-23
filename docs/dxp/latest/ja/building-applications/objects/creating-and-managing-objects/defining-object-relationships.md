@@ -1,6 +1,6 @@
 # オブジェクトリレーションの定義
 
-関連は、エンティティをリンクするオブジェクト間の接続です。 公開済みまたは未公開のカスタムオブジェクトに関連を追加できます。<!--TASK: Include system Objects once supported; "You can add relationships to any published or unpublished Object, including both system and custom Objects."-->
+関連は、エンティティをリンクするオブジェクト間の接続です。 公開済みまたは未公開のカスタムオブジェクトに関連を追加できます。 <!--TASK: Include system Objects once supported; "You can add relationships to any published or unpublished Object, including both system and custom Objects."-->
 
 ## 関連のタイプ
 
@@ -8,9 +8,9 @@
 
 <!--TASK: Add One to One after it's been implemented-->
 
-**One to Many（1対多）**：現在のオブジェクトのエンティティの1つを別のオブジェクトの複数のエンティティに関連付けることができます。 選択すると、関連の子側（つまり、「多」側）のエンティティに新しいフィールドが追加され、「親」側（つまり、「1」側）にテーブルが追加されます。 子側では、新しいフィールドをオブジェクトのカスタムレイアウトの[フィールドタブ](./designing-object-layouts.md#adding-fields-tabs)に追加し、そのエンティティを関連の親側の単一エンティティに関連付けることができます。 親側では、新しいテーブルをオブジェクトのカスタムレイアウトの[関連タブ](./designing-object-layouts.md#adding-relationships-tabs)に追加して、現在の親エンティティに関連するすべてのエンティティを一覧表示できます。 <!--REFINE-->
+**One to Many（1対多**） ：現在のオブジェクトのエンティティの1つを別のオブジェクトの複数のエンティティに関連付けることができます。 選択すると、関連の子側（つまり、「多」側）のエンティティに新しいフィールドが追加され、「親」側（つまり、「1」側）にテーブルが追加されます。 子側では、新しいフィールドをオブジェクトのカスタムレイアウトの[フィールドタブ](./designing-object-layouts.md#adding-fields-tabs)に追加し、そのエンティティを関連の親側の単一エンティティに関連付けることができます。 親側では、新しいテーブルをオブジェクトのカスタムレイアウトの[関連タブ](./designing-object-layouts.md#adding-relationships-tabs)に追加して、現在の親エンティティに関連するすべてのエンティティを一覧表示できます。 <!--REFINE-->
 
-**Many to Many（多対多）**：現在のオブジェクトの複数のエンティティを別のオブジェクトの複数のエンティティに関連付けることができます。 選択すると、関連の両側に新しいデータベーステーブルが作成されます。 このテーブルは、いずれかのオブジェクトのカスタムレイアウトの[関連タブ](./designing-object-layouts.md#adding-relationships-tabs)に追加でき、関連するすべてのエンティティを一覧表示するために使用されます。 <!--REFINE-->
+**Many to Many（多対多**） ：現在のオブジェクトの複数のエンティティを別のオブジェクトの複数のエンティティに関連付けることができます。 選択すると、関連の両側に新しいデータベーステーブルが作成されます。 このテーブルは、いずれかのオブジェクトのカスタムレイアウトの[関連タブ](./designing-object-layouts.md#adding-relationships-tabs)に追加でき、関連するすべてのエンティティを一覧表示するために使用されます。 <!--REFINE-->
 
 ```{important}
 オブジェクトエントリの関連を表示するには、カスタムレイアウトを作成する必要があります。 詳しくは、[Designing Object Layouts](./designing-object-layouts.md)を参照してください。 
@@ -20,21 +20,21 @@
 
 次の手順に従って、オブジェクトに関連を追加します。
 
-1. *オブジェクト* ポートレットを開きます。
+1. **オブジェクト** ポートレットを開きます。
 
 1. 目的のオブジェクトを選択します。
 
-1. *［関連］*タブをクリックし、*追加*ボタン（![Add Button](../../images/icon-add.png)）を選択します。
+1. ［**関連**］ タブをクリックし、 **追加** ボタン（![Add Button](../../images/icon-add.png)）を選択します。
 
    ![［関連］タブの追加ボタンをクリックし、ラベルと名前を入力して、関連タイプと目的のオブジェクトを選択します。](./defining-object-relationships/images/01.png)
 
-1. *ラベル*と*関連名*を入力します。
+1. **ラベル** と **関連名** を入力します。
 
-   **ラベル**：オブジェクトUIで関連を識別し、関連の作成後にローカライズできます。
+   **ラベル** ：オブジェクトUIで関連を識別し、関連の作成後にローカライズできます。
 
-   **関連名**：バックエンドで関連の名前を決定し、キャメルケースを使用します。 関連が公開されると、この値は変更できません。
+   **関連名** ：バックエンドで関連の名前を決定し、キャメルケースを使用します。 関連が公開されると、この値は変更できません。
 
-1. 関連タイプ（*［One to Many］*または*［Many to Many］*）を選択します。<!--TASK: Add One to One after it's been implemented-->   ```{note}
+1. 関連タイプ（［**One to Many**］ または ［**Many to Many**］）を選択します。 <!--TASK: Add One to One after it's been implemented-->   ```{note}
    同じオブジェクト内のエントリーを関連付ける場合は、［One to Many］タイプを使用する必要があります。 <!--タスク：実装後に1対1で追加-->
    ```
 

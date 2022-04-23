@@ -51,7 +51,7 @@ Liferayは、[構成インターフェイスがデプロイ](./setting-and-acces
     STARTED com.acme.g8v3.impl_1.0.0 [1650]
     ```
 
-1. ブラウザで`https://localhost:8080` を開き、*［コントロールパネル］* &rarr; *［設定］* &rarr; *［システム設定］*に移動します。 ［プラットフォーム］で*［サードパーティー］*をクリックします。 左側の*［G8V3 Able Configuration］*をクリックします 。 ［Enable G8V3 Baker Configuration］のチェックボックスをオンにします。 *[アップデート]*ボタンをクリックします。
+1. ブラウザで`https://localhost:8080` を開き、 ［**コントロールパネル**］ &rarr; ［**設定**］ &rarr; ［**システム設定**］ に移動します。 ［プラットフォーム］で ［**サードパーティー**］ をクリックします。 左側の ［**G8V3 Able Configuration**］ をクリックします 。 ［Enable G8V3 Baker Configuration］のチェックボックスをオンにします。 [**アップデート**] ボタンをクリックします。
 
     ![チェックボックスをクリックすると、他の構成UIが表示されます](./hiding-the-configuration-ui/images/01.png)
 

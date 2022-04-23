@@ -48,7 +48,7 @@
 
    ![ポートレットには、アイテムセレクターを開くボタンが1つあります。](./implementing-an-item-selector/images/02.png)
 
-1. _［Select］_ボタンをクリックすると、アイテムセレクターが表示されます。
+1. ［**Select**］ ボタンをクリックすると、アイテムセレクターが表示されます。
 
    ![アイテムセレクターには、チェックボックスをオンにして選択できるアイテムが表示されます。](./implementing-an-item-selector/images/03.png)
 
@@ -162,7 +162,7 @@
    />
    ```
 
-   `clay:button`タグは、ウィジェット上にボタン（ID `selectRoleButton`とラベル*Select*が画面に表示されます）を作成します。 このボタンは、文字列`<portlet:namespace />selectRoleButton`で識別できます。
+   `clay:button`タグは、ウィジェット上にボタン（ID `selectRoleButton`とラベル **Select** が画面に表示されます）を作成します。 このボタンは、文字列`<portlet:namespace />selectRoleButton`で識別できます。
 
 1. `<script>`タグを使用して、アイテムセレクターを開くJavaScriptを埋め込みます。
 

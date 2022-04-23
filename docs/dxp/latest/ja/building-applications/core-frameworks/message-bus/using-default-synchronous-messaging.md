@@ -74,7 +74,7 @@
 
 3つのサンプルモジュールクラスは、宛先を管理し、メッセージをリッスンし、メッセージを送信します。
 
-**`m4q7-able-impl`モジュール：**`M4Q7AbleMessagingConfigurator`は、`acme/m4q7_able`という名前のメッセージ宛先を作成し、それをメッセージバスに登録します。
+**`m4q7-able-impl`モジュール：** `M4Q7AbleMessagingConfigurator`は、`acme/m4q7_able`という名前のメッセージ宛先を作成し、それをメッセージバスに登録します。
 
 **`m4q7-baker-impl`モジュール：**
 
@@ -82,7 +82,7 @@
 * `M4Q7BakerMessagingConfigurator`は、`acme/m4q7_baker`という名前のメッセージ宛先を作成し、それをメッセージバスに登録します。
 * `M4Q7BakerMessageListener`は、`acme/m4q7_baker`宛先に送信されたメッセージをリッスンし、メッセージペイロードをログに記録します。
 
-**`m4q7-charlie-impl`モジュール：**`M4Q7CharlieMessageListener`は、`acme/m4q7_able`宛先に送信されたメッセージをリッスンし、メッセージペイロードをログに記録し、元のメッセージの応答先に応答メッセージを送信します。
+**`m4q7-charlie-impl`モジュール：** `M4Q7CharlieMessageListener`は、`acme/m4q7_able`宛先に送信されたメッセージをリッスンし、メッセージペイロードをログに記録し、元のメッセージの応答先に応答メッセージを送信します。
 
 イベントフローは次のとおりです。
 
@@ -115,7 +115,7 @@
 
 どちらのコンフィギュレータも[`Component`](https://docs.osgi.org/javadoc/osgi.cmpn/7.0.0/org/osgi/service/component/annotations/Component.html)クラスです。 これらは[`@Reference`](https://docs.osgi.org/javadoc/osgi.cmpn/7.0.0/org/osgi/service/component/annotations/Reference.html)アノテーションを使用して、`DestinationFactory`インスタンスを挿入します。
 
-`_activate(BundleContext)`メソッドは、[`DestinationFactory`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/DestinationFactory.java)と[`DestinationConfiguration`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/DestinationConfiguration.java)を使用して*シリアル*宛先を作成します。 最後に、`_activate(BundleContext)`メソッドは、`BundleContext`を使用して[`Destination`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/Destination.java)をOSGiサービスに登録します。
+`_activate(BundleContext)`メソッドは、[`DestinationFactory`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/DestinationFactory.java)と[`DestinationConfiguration`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/DestinationConfiguration.java)を使用して **シリアル** 宛先を作成します。 最後に、`_activate(BundleContext)`メソッドは、`BundleContext`を使用して[`Destination`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/Destination.java)をOSGiサービスに登録します。
 
 ```{warning}
 デフォルトの同期メッセージングでは、シリアルまたはパラレルの宛先のみを使用してください。 それらは、`DestinationConfiguration`の`createSerialDestinationConfiguration(String)`および `createParallelDestinationConfiguration(String)`メソッドを呼び出すことで作成できます。
@@ -162,7 +162,7 @@
    :lines: 12-38
 ```
 
-`M4Q7BakerOSGiCommands`は、独自のクラスタイプのサービス`Component`です。 これは、`@Reference`アノテーションを使用して、*デフォルト*モード（アノテーションの`target = "(mode=DEFAULT)"`属性で指定）に設定された`SynchronousMessageSender`を挿入します。
+`M4Q7BakerOSGiCommands`は、独自のクラスタイプのサービス`Component`です。 これは、`@Reference`アノテーションを使用して、 **デフォルト** モード（アノテーションの`target = "(mode=DEFAULT)"`属性で指定）に設定された`SynchronousMessageSender`を挿入します。
 
 ```{note}
 *デフォルト*モードでは、`SynchronousMessageSender`の`send`メソッドは、応答メッセージが受信されるまで、または送信者がタイムアウトするまで、呼び出し元のクラスをブロックします。
@@ -234,7 +234,7 @@
 
 ## 次のステップ
 
-*ダイレクト*モードを使用した同期メッセージングを検討する場合は、[Using Direct Synchronous Messaging](./using-direct-synchronous-messaging.md)を参照してください。
+**ダイレクト** モードを使用した同期メッセージングを検討する場合は、[Using Direct Synchronous Messaging](./using-direct-synchronous-messaging.md)を参照してください。
 
 メッセージを送信した直後に処理を続行する場合は、[Using Asynchronous Messaging](./using-asynchronous-messaging.md)を参照してください。
 

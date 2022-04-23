@@ -64,7 +64,7 @@
 | Hello World | `com_liferay_hello_world_web_portlet_HelloWorldPortlet` |
 | IFrame      | `com_liferay_iframe_web_portlet_IFramePortlet`          |
 
-**Search (Automatic Copy)**
+**Search (Automatic Copy**)
 
 | ポートレット      | ID (Automatic Copy)                                                           |
 | ----------- | ----------------------------------------------------------------------------- |

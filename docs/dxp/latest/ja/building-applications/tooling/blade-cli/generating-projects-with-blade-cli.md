@@ -32,7 +32,7 @@ Liferay Workspaceは、プロジェクトとDevOps構成を保存するマシン
 blade create -t mvc-portlet -p com.acme.z3x1.portlet -c GuestbookPortlet guestbook
 ```
 
-これにより、MVCポートレットテンプレート、`com.acme.z3x1.portlet`と呼ばれるデフォルトのパッケージ、`GuestbookPortlet`と呼ばれるポートレットクラス（Liferay 7.4では*ゲストブック*と呼ばれる）を使用してプロジェクトが作成されます。 これで、ワークスペースをIDEにインポートできます。 Liferay IntelliJプラグインまたはLiferay Developer StudioのEclipseプラグインは、拡張サポートを提供します。 Bladeを使用してプロジェクトに新しいワークスペースを作成する場合は、IDEでGradleプロジェクトを更新する必要があることに注意してください。
+これにより、MVCポートレットテンプレート、`com.acme.z3x1.portlet`と呼ばれるデフォルトのパッケージ、`GuestbookPortlet`と呼ばれるポートレットクラス（Liferay 7.4では **ゲストブック** と呼ばれる）を使用してプロジェクトが作成されます。 これで、ワークスペースをIDEにインポートできます。 Liferay IntelliJプラグインまたはLiferay Developer StudioのEclipseプラグインは、拡張サポートを提供します。 Bladeを使用してプロジェクトに新しいワークスペースを作成する場合は、IDEでGradleプロジェクトを更新する必要があることに注意してください。
 
 ## サンプルプロジェクトの作成
 

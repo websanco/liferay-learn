@@ -21,10 +21,10 @@ Liferay DXPでは、アプリケーションの構成をさまざまなレベル
 
 構成を取得するには、`ConfigurationProvider`を使用します。 構成プロバイダーAPIは、構成にアクセスする簡単な方法を提供します。 アプリケーションのニーズに合わせて特定の方法を選択してください。
 
-* `getSystemConfiguration()`：システムスコープの構成を取得します。 アプリケーションのシステムレベルの構成は、*［コントロールパネル］* &rarr; *［設定］* &rarr; *［システム設定］*にあります。
+* `getSystemConfiguration()`：システムスコープの構成を取得します。 アプリケーションのシステムレベルの構成は、 ［**コントロールパネル**］ &rarr; ［**設定**］ &rarr; ［**システム設定**］ にあります。
 
-* `getCompanyConfiguration()`：インスタンススコープの構成を取得します。 `Portal`のインスタンスを使用して`companyId`を取得します。 たとえば、`_portal.getCompanyId(renderRequest)`となります。 アプリケーションのインスタンスレベルの構成は、*［コントロールパネル］* &rarr; *［設定］* &rarr; *［Instance Settings］*にあります。
+* `getCompanyConfiguration()`：インスタンススコープの構成を取得します。 `Portal`のインスタンスを使用して`companyId`を取得します。 たとえば、`_portal.getCompanyId(renderRequest)`となります。 アプリケーションのインスタンスレベルの構成は、 ［**コントロールパネル**］ &rarr; ［**設定**］ &rarr; ［**Instance Settings**］ にあります。
 
-* `getGroupConfiguration()`：サイトスコープの構成を取得します。 `Portal`のインスタンスを使用して`groupId`を取得します。 たとえば、`_portal.getScopeGroupId(renderRequest)`となります。 アプリケーションのサイトレベルの構成は、*［コントロールパネル］* &rarr; *［設定］* &rarr; *［サイト設定］*にあります。 これは Liferay 7.4で利用できることに注意してください。
+* `getGroupConfiguration()`：サイトスコープの構成を取得します。 `Portal`のインスタンスを使用して`groupId`を取得します。 たとえば、`_portal.getScopeGroupId(renderRequest)`となります。 アプリケーションのサイトレベルの構成は、 ［**コントロールパネル**］ &rarr; ［**設定**］ &rarr; ［**サイト設定**］ にあります。 これは Liferay 7.4で利用できることに注意してください。
 
 ポートレットスコープの構成については、[Portlet Level Configuration](./portlet-level-configuration.md)を参照してください。

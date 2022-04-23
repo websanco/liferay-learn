@@ -97,7 +97,7 @@
 
 このコンフィギュレーターは[`Component`](https://docs.osgi.org/javadoc/osgi.cmpn/7.0.0/org/osgi/service/component/annotations/Component.html)クラスです。 これは、[`@Reference`](https://docs.osgi.org/javadoc/osgi.cmpn/7.0.0/org/osgi/service/component/annotations/Reference.html)アノテーションを使用して、`DestinationFactory`インスタンスを挿入します。
 
-`_activate(BundleContext)`メソッドは、[`DestinationFactory`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/DestinationFactory.java)と[`DestinationConfiguration`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/DestinationConfiguration.java)を使用して、`acme/x6n5_able`という名前の*同期*宛先を作成します。 同期宛先は、同期メッセージング用に最適化されています。 最後に、メソッドは`BundleContext`を使用して[`Destination`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/Destination.java)をOSGiサービスに登録します。
+`_activate(BundleContext)`メソッドは、[`DestinationFactory`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/DestinationFactory.java)と[`DestinationConfiguration`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/DestinationConfiguration.java)を使用して、`acme/x6n5_able`という名前の **同期** 宛先を作成します。 同期宛先は、同期メッセージング用に最適化されています。 最後に、メソッドは`BundleContext`を使用して[`Destination`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/Destination.java)をOSGiサービスに登録します。
 
 `X6N5AbleMessagingConfigurator`が無効化されると、その`_deactivate()`メソッドは宛先サービスの登録を解除します。
 
@@ -110,7 +110,7 @@
    :lines: 12-37
 ```
 
-`X6N5BakerOSGiCommands`は、独自のクラスタイプのサービス`Component`です。 これは、`@Reference`アノテーションを使用して、*ダイレクト*モード（アノテーションの`target = "(mode=DIRECT)"`属性で指定）に設定された`SynchronousMessageSender`を挿入します。
+`X6N5BakerOSGiCommands`は、独自のクラスタイプのサービス`Component`です。 これは、`@Reference`アノテーションを使用して、 **ダイレクト** モード（アノテーションの`target = "(mode=DIRECT)"`属性で指定）に設定された`SynchronousMessageSender`を挿入します。
 
 ```{note}
 *ダイレクト*モードでは、`SynchronousMessageSender` `send`メソッドは、現在のスレッドがすべてのリスナーにメッセージを配信するまで、呼び出し元のクラスをブロックします。
@@ -144,7 +144,7 @@
 
 ## 次のステップ
 
-*デフォルト*モードを使用した同期メッセージングを検討する場合は、[Using Default Synchronous Messaging](./using-default-synchronous-messaging.md)を参照してください。
+**デフォルト** モードを使用した同期メッセージングを検討する場合は、[Using Default Synchronous Messaging](./using-default-synchronous-messaging.md)を参照してください。
 
 メッセージを送信した直後に処理を続行する場合は、[Using Asynchronous Messaging](./using-asynchronous-messaging.md)を参照してください。
 

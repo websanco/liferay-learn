@@ -48,23 +48,23 @@ MVCアクションコマンドを使用するサンプルポートレットを�
 
 1. デフォルトの認証情報を使用してサインインします。
 
-    **ユーザー名**: `test@liferay.com`
+    **ユーザー名** : `test@liferay.com`
 
     **パスワード：** `test`
 
-1. *L6Y9 ポートレット*ウィジェットを*［Samples］*カテゴリからウィジェットページに追加します。 L6Y9ポートレットが表示されます。
+1. **L6Y9 ポートレット** ウィジェットを ［**Samples**］ カテゴリからウィジェットページに追加します。 L6Y9ポートレットが表示されます。
 
    ![L6Y9ポートレットをページに追加しました。](./mvc-action-command/images/01.png)
 
    リンクは、さまざまな`MVCActionCommand`クラスのメソッドを呼び出します。 学習の目的で、メソッドは自分自身を識別するメッセージをログに記録します。
 
-1. *［Do L6Y9 Able］* をクリックします。 `DoL6Y9AbleMVCActionCommand`は、その`doProcessAction`メソッドの呼び出しをログに記録します。
+1. ［**Do L6Y9 Able**］ をクリックします。 `DoL6Y9AbleMVCActionCommand`は、その`doProcessAction`メソッドの呼び出しをログに記録します。
 
     ```bash
     [DoL6Y9AbleMVCActionCommand:26] Invoke #doProcessAction(ActionRequest, ActionResponse)
     ```
 
-1. *［Do L6Y9 Baker］* をクリックします。 `DoL6Y9BakerMVCActionCommand`は、その`doProcessAction`メソッドの呼び出しをログに記録します。
+1. ［**Do L6Y9 Baker**］ をクリックします。 `DoL6Y9BakerMVCActionCommand`は、その`doProcessAction`メソッドの呼び出しをログに記録します。
 
     ```bash
     [DoL6Y9BakerMVCActionCommand:26] Invoke #doProcessAction(ActionRequest, ActionResponse)
@@ -115,7 +115,7 @@ MVCアクションコマンドの動作を見てきました。 次に、それ�
 | --------------------------------------------------- | ------------------------------------------ |
 | `<portlet:actionURL name="/do_l6y9_baker" />` | `mvc.command.name=/l6y9/do_l6y9_baker`     |
 
-たとえば、*Do L6Y9 Able*リンクをクリックすると、`DoL6Y9AbleMVCActionCommand`の`doProcessAction`メソッドが呼び出されます。
+たとえば、 **Do L6Y9 Able** リンクをクリックすると、`DoL6Y9AbleMVCActionCommand`の`doProcessAction`メソッドが呼び出されます。
 
 ## MVCActionCommandクラスを調べる
 
@@ -133,8 +133,8 @@ MVCアクションコマンドクラスは、[`MVCActionCommand`](https://github
 
       @Component(
          property = {
-            "javax.portlet.name=com_acme_l6y9_web_internal_portlet_L6Y9Portlet",
-            "javax.portlet.name=com_acme_l6y9_web_internal_portlet_L6Y0Portlet",
+            "javax.portlet.name=com **acme** l6y9 **web** internal **portlet** L6Y9Portlet",
+            "javax.portlet.name=com **acme** l6y9 **web** internal **portlet** L6Y0Portlet",
             "mvc.command.name=/l6y9/download"
          },
          service = MVCActionCommand.class

@@ -1,6 +1,6 @@
 # MVCポートレットを使用したアクションの呼び出し
 
-ポートレットの[*アクションフェーズ*](../reference/portlets.md#portlet-phases)は、状態の変更を適用します。 *ポートレットのアクションURL*を使用して、ポートレットのアクション処理メソッドをUIコンポーネントにバインドできます。 これらは、ユーザーの要求をアクションを実行するためのポートレットメソッドにマップする`portlet:actionURL` JSPタグです。
+ポートレットの[**アクションフェーズ**](../reference/portlets.md#portlet-phases)は、状態の変更を適用します。 **ポートレットのアクションURL** を使用して、ポートレットのアクション処理メソッドをUIコンポーネントにバインドできます。 これらは、ユーザーの要求をアクションを実行するためのポートレットメソッドにマップする`portlet:actionURL` JSPタグです。
 
 ここでは、アクションURLを3つの異なる方法で使用するサンプルポートレットを呼び出して調べる方法を学習します。
 
@@ -48,35 +48,35 @@
 
 1. デフォルトの認証情報を使用してサインインします。
 
-    **ユーザー名**: `test@liferay.com`
+    **ユーザー名** : `test@liferay.com`
 
     **パスワード：** `test`
 
-1. *U8T2ポートレット*ウィジェットを*［Samples］*カテゴリからウィジェットページに追加します。 U8T2ポートレットが表示されます。
+1. **U8T2ポートレット** ウィジェットを ［**Samples**］ カテゴリからウィジェットページに追加します。 U8T2ポートレットが表示されます。
 
    ![U8T2ポートレットをページに追加しました。](./invoking-actions-with-mvc-portlet/images/01.png)
 
    ポートレットには3つのリンクがあります。
 
-   * *Do Something*
-   * *Do Something Else*
-   * *Do Something More*
+   ****Do Something**
+   ****Do Something Else**
+   ****Do Something More**
 
     各リンクをクリックすると、異なるアクション処理メソッドが呼び出されます。 学習の目的で、各メソッドはそれ自体を識別するメッセージをログに記録します。
 
-1. *［Do Something］* をクリックします。 ポルトレットは`doSomething`メソッドの呼び出しをログに記録します。
+1. ［**Do Something**］ をクリックします。 ポルトレットは`doSomething`メソッドの呼び出しをログに記録します。
 
     ```bash
     [U8T2Portlet:28] Invoke #doSomething(ActionRequest, ActionResponse)
     ```
 
-1. *［Do Something Else］* をクリックします。 ポルトレットは`doSomethingElse`メソッドの呼び出しをログに記録します。
+1. ［**Do Something Else**］ をクリックします。 ポルトレットは`doSomethingElse`メソッドの呼び出しをログに記録します。
 
     ```bash
     [U8T2Portlet:36] Invoke #doSomethingElse(ActionRequest, ActionResponse)
     ```
 
-1. *［Do Something More］* をクリックします。 ポルトレットは`doSomethingMore`メソッドの呼び出しをログに記録します。
+1. ［**Do Something More**］ をクリックします。 ポルトレットは`doSomethingMore`メソッドの呼び出しをログに記録します。
 
     ```bash
     [U8T2Portlet:45] Invoke #doSomethingMore(ActionRequest, ActionResponse)
@@ -93,7 +93,7 @@
 :lines: 14-53
 ```
 
-[`@Component`](https://osgi.org/javadoc/r6/residential/org/osgi/service/component/annotations/Component.html)アノテーションは、クラスを、[`Portlet`](https://docs.liferay.com/portlet-api/3.0/javadocs/javax/portlet/Portlet.html)サービスを提供するOSGi宣言型サービスコンポーネントとしてマークします。 プロパティにより、ポートレットは*［Sample］*ウィジェットカテゴリで使用可能になり、ポートレットに*U8T2ポートレットという名前が付けられ、ポートレットのデフォルトのビューテンプレートが`/view.jsp`に設定されます。</p>
+[`@Component`](https://osgi.org/javadoc/r6/residential/org/osgi/service/component/annotations/Component.html)アノテーションは、クラスを、[`Portlet`](https://docs.liferay.com/portlet-api/3.0/javadocs/javax/portlet/Portlet.html)サービスを提供するOSGi宣言型サービスコンポーネントとしてマークします。 プロパティにより、ポートレットは ［**Sample**］ ウィジェットカテゴリで使用可能になり、ポートレットに*U8T2ポートレットという名前が付けられ、ポートレットのデフォルトのビューテンプレートが`/view.jsp`に設定されます。</p>
 
 各メソッドは、[`ActionRequest`](https://docs.liferay.com/portlet-api/3.0/javadocs/javax/portlet/ActionRequest.html)および[`ActionResponse`](https://docs.liferay.com/portlet-api/3.0/javadocs/javax/portlet/ActionResponse.html)パラメーターを取ります。 `ActionRequest`はメソッド情報を提供し、`ActionResponse`はメソッドが情報を渡すための手段を提供します。 各サンプルメソッドは、ログメッセージで自身を識別します。
 

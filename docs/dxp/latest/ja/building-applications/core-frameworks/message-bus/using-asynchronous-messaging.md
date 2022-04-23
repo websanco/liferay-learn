@@ -2,11 +2,11 @@
 
 メッセージバスの非同期オプションは、「ファイア・アンド・フォーゲット」動作を提供します。メッセージを送信し、応答を待たずに処理を続行します。
 
-非同期メッセージは、*シリアル*または*パラレル*宛先に送信されます。
+非同期メッセージは、 **シリアル** または **パラレル** 宛先に送信されます。
 
-* *シリアル*宛先の場合、メッセージバスはメッセージをキューに入れ、メッセージごとに1つのワーカースレッドを委任します。 スレッドはメッセージリスナーを順番に処理します。
+****シリアル** 宛先の場合、メッセージバスはメッセージをキューに入れ、メッセージごとに1つのワーカースレッドを委任します。 スレッドはメッセージリスナーを順番に処理します。
 
-* *パラレル*宛先の場合、メッセージバスはメッセージをキューに入れ、1つのメッセージリスナーにつきメッセージごとに1つのワーカースレッドを委任します。 スレッドはメッセージリスナーを同時に処理します。
+****パラレル** 宛先の場合、メッセージバスはメッセージをキューに入れ、1つのメッセージリスナーにつきメッセージごとに1つのワーカースレッドを委任します。 スレッドはメッセージリスナーを同時に処理します。
 
 別のクラス（メッセージリスナー）がリッスンしているシリアル宛先にメッセージを送信することから始めます。
 
@@ -120,7 +120,7 @@
 
 どのクラスでも宛先を作成および構成できますが、[`Component`](https://docs.osgi.org/javadoc/osgi.cmpn/7.0.0/org/osgi/service/component/annotations/Component.html)には`DestinationFactory`のように依存関係を挿入できます。 `_destinationFactory`フィールドの[`@Reference`](https://docs.osgi.org/javadoc/osgi.cmpn/7.0.0/org/osgi/service/component/annotations/Reference.html)アノテーションは、LiferayのOSGiフレームワークに`DestinationFactory`インスタンスを挿入するようにシグナルを送信します。
 
-`_activate`メソッドでは、`N8K5AbleMessagingConfigurator`は[`DestinationFactory`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/DestinationFactory.java)と[`DestinationConfiguration`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/DestinationConfiguration.java)を使用して、`acme/n8k5_able`という名前の*シリアル*宛先を作成します。 次に、OSGiフレームワーク`BundleContext`を使用して、`Destination`に対するサービスを登録します。 `N8K5AbleMessagingConfigurator`が無効化されると、`_deactivate`メソッドはサービスの登録を解除します。
+`_activate`メソッドでは、`N8K5AbleMessagingConfigurator`は[`DestinationFactory`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/DestinationFactory.java)と[`DestinationConfiguration`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/DestinationConfiguration.java)を使用して、`acme/n8k5_able`という名前の **シリアル** 宛先を作成します。 次に、OSGiフレームワーク`BundleContext`を使用して、`Destination`に対するサービスを登録します。 `N8K5AbleMessagingConfigurator`が無効化されると、`_deactivate`メソッドはサービスの登録を解除します。
 
 ## 送信者を調べる
 
@@ -308,7 +308,7 @@ OSGiコンポーネントではないクラスでは、[MessageBusUtil](https://
 
 非同期メッセージングに慣れてきたので、最適なパフォーマンスになるように調整できます。 [Tuning Messaging Performance](./tuning-messaging-performance.md)でその方法を学びましょう。
 
-*デフォルト*モードと*ダイレクト*モードを使用した同期メッセージングを検討する場合は、詳細について[Using Direct Synchronous Messaging](./using-direct-synchronous-messaging.md)および[Using Default Synchronous Messaging](./using-default-synchronous-messaging.md)を参照してください。
+**デフォルト** モードと **ダイレクト** モードを使用した同期メッセージングを検討する場合は、詳細について[Using Direct Synchronous Messaging](./using-direct-synchronous-messaging.md)および[Using Default Synchronous Messaging](./using-default-synchronous-messaging.md)を参照してください。
 
 ## 追加情報
 

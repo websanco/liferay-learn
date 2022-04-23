@@ -24,7 +24,7 @@ curl -L https://raw.githubusercontent.com/liferay/liferay-blade-cli/master/cli/i
 
    ![Liferay Workspaceインストーラーは、インストールされているJDKを自動検出します。](./installing-and-updating-blade-cli/images/01.png)
 
-1. イントロダクションの後、 *［Next］*をクリックします。
+1. イントロダクションの後、 ［**Next**］ をクリックします。
 
 1. インストール中に [Liferay Workspace](../liferay-workspace/what-is-liferay-workspace.md) 初期化できます。 Liferay Workspaceは、Liferayプロジェクトを管理するシステム上の環境（一連のフォルダー）です。 今すぐ初期化する場合は、その場所を設定します。
 
@@ -34,9 +34,9 @@ curl -L https://raw.githubusercontent.com/liferay/liferay-blade-cli/master/cli/i
 
    ![インストーラーのデフォルトはCommunity Editionですが、DXPを選択できます。](./installing-and-updating-blade-cli/images/03.png)
 
-   製品タイプを選択し、*［Next］*をクリックします。
+   製品タイプを選択し、 ［**Next**］ をクリックします。
 
-1. *［Next］*をクリックして、Blade CLIをインストールします。
+1. ［**Next**］ をクリックして、Blade CLIをインストールします。
 
 Windows環境では、`blade` コマンドがパスに自動的に追加されます（Windowsの場合、またはMacおよびLinuxで `bash` または `zsh` を使用している場合）。 詳細は、 [Blade CLI](./troubleshooting-blade-cli.md) トラブルシューティングを参照してください。
 

@@ -163,7 +163,7 @@ Liferayのプロジェクトアーキタイプは、このすべての定型コ�
 
 `<portlet-name/>`は内部であり、`<display-name/>`はユーザーに表示されます。 `<portlet-class/>`は、ポートレットのJavaクラスを指定します。
 
-**重要：**すべてのPortletMVC4Springポートレットは、`<portlet-class>com.liferay.portletmvc4spring.DispatcherPortlet</portlet-class>`を指定する必要があります。
+**重要：** すべてのPortletMVC4Springポートレットは、`<portlet-class>com.liferay.portletmvc4spring.DispatcherPortlet</portlet-class>`を指定する必要があります。
 
 `<supports/>` 要素は、ポートレットテンプレートが使用するMIME 種別を宣言する必要があります。
 

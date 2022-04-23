@@ -4,7 +4,7 @@
 
 すべてのオブジェクトは、`c/[pluralobjectlabel]`命名パターン（`c/timeoffrequests`など）を使用します。 各オブジェクトエントリースキーマには、オブジェクトのすべてのフィールドとリレーションシップが含まれています。
 
-オブジェクトのAPIは、Liferay API Explorerを介して`[server]:[port]/o/api`（例：`localhost:8080/o/api`）で表示およびテストできます。 REST APIは、*［REST Applications］*の下にリストされています。 *［GraphQL］*をクリックして、Liferayの[Graph*i*QL](https://github.com/graphql/graphiql)ブラウザにアクセスします。
+オブジェクトのAPIは、Liferay API Explorerを介して`[server]:[port]/o/api`（例：`localhost:8080/o/api`）で表示およびテストできます。 REST APIは、 ［**REST Applications**］ の下にリストされています。 ［**GraphQL**］ をクリックして、Liferayの[Graph **i** QL](https://github.com/graphql/graphiql)ブラウザにアクセスします。
 
 ## オブジェクトREST API
 
@@ -61,7 +61,7 @@ APIの `scopesKey`パラメーターには、目的のデータスコープの�
 
 ## オブジェクトGraphQL API
 
-GraphQL APIでは、オブジェクトデータを照会したり、変更したりすることができます。 LiferayのGraph*i*QL IDEを使用して、オブジェクトスキーマの検索、クエリのドラフト、リクエストの実行などを行います。
+GraphQL APIでは、オブジェクトデータを照会したり、変更したりすることができます。 LiferayのGraph **i** QL IDEを使用して、オブジェクトスキーマの検索、クエリのドラフト、リクエストの実行などを行います。
 
 ![LiferayのGraphiQLエクスプローラーを使用して、オブジェクトスキーマを検索し、リクエストを実行します。](./headless-framework-integration/images/02.png)
 

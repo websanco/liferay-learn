@@ -40,7 +40,7 @@
 
 1. サンプルのモジュールが機能していることを確認します。 ブラウザで`https://localhost:8080`を開きます。
 
-1. *［コントロールパネル］* &rarr; *［設定］* &rarr; *［システム設定］* &rarr; *［サードパーティー］*に移動します。 *［U2G5 Configuration］*をクリックします。
+1. ［**コントロールパネル**］ &rarr; ［**設定**］ &rarr; ［**システム設定**］ &rarr; ［**サードパーティー**］ に移動します。 ［**U2G5 Configuration**］ をクリックします。
 
    ![システム設定でU2G5構成に移動します。](./completely-custom-configuration/images/01.png)
 

@@ -16,7 +16,7 @@ Liferay Faces Bridgeを完全に理解するには、最初にポートレット
 2008年にPortlet 2.0（[JSR 286](http://www.jcp.org/en/jsr/detail?id=286)）規格がリリースされた際、JCPはPortlet Bridge 2.0（[JSR 329](http://www.jcp.org/en/jsr/detail?id=329)）EGを形成する必要がありました。 また、JSR
 1. がPortlet 2.0とJSF 1.2を対象として2010年にリリースされました。
 
-[JSR 314](http://www.jcp.org/en/jsr/detail?id=314) EGが2009年にJSF 2.0をリリースし、2010年にJSF 2.1をリリースした後、Portlet Bridge 3.0規格が有益であることが明らかになりました。 2015年、JCPはPortlet 3.0とJSF 2.2のブリッジを定義する[JSR 378](http://www.jcp.org/en/jsr/detail?id=378)を形成しました。 Portlet 2.0およびJSF 1.2/2.1/2.2をサポートする*Liferay Faces Bridge*のバリアントもあります。
+[JSR 314](http://www.jcp.org/en/jsr/detail?id=314) EGが2009年にJSF 2.0をリリースし、2010年にJSF 2.1をリリースした後、Portlet Bridge 3.0規格が有益であることが明らかになりました。 2015年、JCPはPortlet 3.0とJSF 2.2のブリッジを定義する[JSR 378](http://www.jcp.org/en/jsr/detail?id=378)を形成しました。 Portlet 2.0およびJSF 1.2/2.1/2.2をサポートする **Liferay Faces Bridge** のバリアントもあります。
 
 Liferay Faces Bridgeは、ポートレットブリッジ規格のリファレンス実装（RI）です。 また、ポートレットアプリケーション内でJSF 2.xの機能を活用できるようにする革新的な機能も含まれています。
 

@@ -58,10 +58,10 @@ Liferayは現在、約50の言語をサポートしています。 これらの�
     locales.enabled=am_ET,ar_SA,fa_IR,en_US,zh_CN,ja_JP
     ```
 
-1. モジュールがデプロイされたら、 *［コントロールパネル］* &rarr; *［インスタンス設定］* &rarr; *［Localization］*に移動します。 検証し、新しい言語を［current ］言語に移動させます。 *［Save］* をクリックします。
+1. モジュールがデプロイされたら、 ［**コントロールパネル**］ &rarr; ［**インスタンス設定**］ &rarr; ［**Localization**］ に移動します。 検証し、新しい言語を［current ］言語に移動させます。 ［**Save**］ をクリックします。
 
    ![Save your new language to the list of current languages.](./adding-a-language/images/01.png)
 
-3. デフォルトの言語を新しい言語に変更し、 *［Save］*をクリックします。 新しい言語がLiferayインスタンスで使用されるようになりました。
+3. デフォルトの言語を新しい言語に変更し、 ［**Save**］ をクリックします。 新しい言語がLiferayインスタンスで使用されるようになりました。
 
    ![Select and use the new language for your Liferay instance.](./adding-a-language/images/02.png)

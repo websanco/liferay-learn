@@ -41,7 +41,7 @@
     }
     ```
 
-1. `package.json` *devDependencies*から次のBabel依存関係を削除します。
+1. `package.json` **devDependencies** から次のBabel依存関係を削除します。
 
     ```json
     "babel-cli": "6.26.0",
