@@ -260,7 +260,7 @@ JBossを使用してデータソースを管理する場合は、次の手順に
     データベースのURL、ユーザー名、パスワードを適切な値に置き換えてください。
 
     ```{note}
-    データソース`jndi-name`を変更する必要がある場合は、`<default-bindings>`タグ内の`datasource`要素を編集してください。
+    データソース`jndi-name`を変更する必要がある場合は、[](default-bindings)タグ内の`datasource`要素を編集してください。
     ```
 
 1. `<datasources>` 要素内にもある `standalone.xml` ファイルの `<drivers>` 要素にドライバーを追加します。

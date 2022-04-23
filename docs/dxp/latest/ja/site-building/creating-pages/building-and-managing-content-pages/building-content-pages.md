@@ -169,7 +169,7 @@ Layouts (Sections or Rows) containing instanceable Widgets cannot be duplicated.
 他のフラグメントと同様に、コンポジションはサイト間でエクスポート/インポートできます。
 
 ```{note}
-`Liferayのフラグメントツールキットの最新バージョン <../developer-guide/developing-fragments/developing-page-fragments/developing-page-fragments-with-the-fragments-toolkit.md>` _サポートの作成、エクスポート/インポート、およびフラグメント構成のプレビュー。
+[Liferayのフラグメントツールキットの最新バージョン](../developer-guide/developing-fragments/developing-page-fragments/developing-page-fragments-with-the-fragments-toolkit.md) _サポートの作成、エクスポート/インポート、およびフラグメント構成のプレビュー。
 ```
 
 ### セクションの幅とパディングの構成

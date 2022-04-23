@@ -33,7 +33,7 @@
     ![サイト構成ページのドロップダウンを展開し、サイトテンプレートのオプションを表示。](building-sites-with-site-templates/images/04.png)
 
     ```{note}
-    [*Enable propagation of changes from the Site template*]をオンにすると、サイトテンプレートが変更された場合にサイトが更新を受信できるようになります。 サイトテンプレートから作成されたサイトに直接変更が加えられた場合、そのサイトはサイトテンプレートから更新を受け取りません。 詳細については、`Merging Site Template Changes <./merging-site-template-changes.md>`を参照してください。
+    [*Enable propagation of changes from the Site template*]をオンにすると、サイトテンプレートが変更された場合にサイトが更新を受信できるようになります。 サイトテンプレートから作成されたサイトに直接変更が加えられた場合、そのサイトはサイトテンプレートから更新を受け取りません。 詳細については、[Merging Site Template Changes](./merging-site-template-changes.md)を参照してください。
     ```
 
 7.  *[保存]* をクリックしてサイトを作成します。

@@ -1,4 +1,4 @@
 REST Web APIの開発
 =========================
 
--  :doc:`/building-applications/developing-a-rest-web-api/producing-graphql-apis`
+-  [GraphQL APIの作成](/building-applications/developing-a-rest-web-api/producing-graphql-apis.md)

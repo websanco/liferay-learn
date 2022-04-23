@@ -1,9 +1,11 @@
-リファレンス
-=========
+# リファレンス
 
-.. toctree:: :maxdepth: 3
+```{toctree}
+:maxdepth: 3
 
-   reference/deploying-wars-wab-generator.md reference/jars-excluded-from-wabs.md
+reference/deploying-wars-wab-generator.md
+reference/jars-excluded-from-wabs.md
+```
 
--  :doc:`/building-applications/reference/deploying-wars-wab-generator`
--  :doc:`/building-applications/reference/jars-excluded-from-wabs`
+* [Deploying WARs (WAB Generator)](./reference/deploying-wars-wab-generator.md)
+* [JARS Excluded from WABs](./reference/jars-excluded-from-wabs.md)
