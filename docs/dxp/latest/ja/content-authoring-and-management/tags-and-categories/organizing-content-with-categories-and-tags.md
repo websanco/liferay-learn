@@ -29,8 +29,6 @@
 
 ![ [カテゴリ設定]セクションを使用して、コンテンツにタグを付けて分類します](./organizing-content-with-categories-and-tags/images/02.png)
 
-<a name="vocabulary-visibility" />
-
 ## ボキャブラリの可視性
 
 > 対応可能：Liferay 7.3以降
@@ -66,8 +64,6 @@
   - 既存のコンテンツをマッピングするときに[すべてのカテゴリ]を選択すると、公開カテゴリのみが表示されます。
 
     ![コンテンツエディタの [カテゴリ設定]セクションから新しいカテゴリを追加します](./organizing-content-with-categories-and-tags/images/05.png)
-
-<a name="default-vocabularies" />
 
 ## デフォルトのボキャブラリ
 

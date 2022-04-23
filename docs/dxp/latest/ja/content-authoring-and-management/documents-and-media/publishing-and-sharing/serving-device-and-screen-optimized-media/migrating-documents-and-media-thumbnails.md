@@ -31,7 +31,7 @@ DXPは、アダプティブメディアを使用して、ドキュメントと�
 
 ドキュメントとメディアのサムネイルをアダプティブメディアに移行するには、次の2つの方法があります。
 
-* サムネイルの画像解像度に合わせて画像を調整する：これにより、既存のサムネイルがアダプティブメディアの画像解像度の値にスケーリングされます。これには、画像の数によっては時間がかかる場合があります。 これは、画像の数が少ない場合、または画像を最初から生成する場合にのみお勧めします。 このアプローチについては、 [Generating Missing Adapted Images](./managing-image-resolutions.md#generating-missing-adapted-images) で詳しく説明しています。
+  - サムネイルの画像解像度に合わせて画像を調整する：これにより、既存のサムネイルがアダプティブメディアの画像解像度の値にスケーリングされます。これには、画像の数によっては時間がかかる場合があります。 これは、画像の数が少ない場合、または画像を最初から生成する場合にのみお勧めします。 このアプローチについては、 [Generating Missing Adapted Images](./managing-image-resolutions.md#generating-missing-adapted-images) で詳しく説明しています。
 
 * 既存のサムネイルを再利用する移行プロセスを実行する：既存のサムネイルがアダプティブメディアにコピーされます。これにより、計算コストの高いスケーリング操作が回避されるため、パフォーマンスが向上します。
 
@@ -67,5 +67,5 @@ DXPは、アダプティブメディアを使用して、ドキュメントと�
 
 ## 追加情報
 
-* [画像解像度の管理](./managing-image-resolutions.md)
-* [アダプティブメディア構成リファレンス](./adaptive-media-configuration-reference.md)
+  - [画像解像度の管理](./managing-image-resolutions.md)
+  - [アダプティブメディア構成リファレンス](./adaptive-media-configuration-reference.md)

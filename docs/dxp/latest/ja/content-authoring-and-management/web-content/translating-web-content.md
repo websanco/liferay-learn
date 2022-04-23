@@ -15,5 +15,5 @@ Liferay includes three methods for translating web content:
 - [Using Google Cloud Translation to automatically translate web content](./translating-web-content/automatically-translating-web-content.md)
 
 ```{note}
-   Users who are just starting out with localizing their installation of Liferay can learn more by reviewing [Initial Instance Localization](../../installation-and-upgrades/setting-up-liferay/initial-instance-localization.md).
+   Users who are just starting out with localizing their installation of Liferay can learn more by reviewing [初期インスタンスのローカリゼーション](../../installation-and-upgrades/setting-up-liferay/initial-instance-localization.md) .
 ```

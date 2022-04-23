@@ -6,9 +6,9 @@
 
 テキストの自動タグ付けはデフォルトで無効になっています。 DXPで自動タグ付けを有効にしてから、テキストの自動タグ付けプロバイダーを有効にする必要があります。 最後に、自動タグ付けするアセットを選択する必要があります。 DXPで使用できるテキスト自動タグ付けプロバイダーは2つあります。
 
-  - **Google Cloud Natural Language Text Auto Tagging** : [Google Cloud Natural Language API](https://cloud.google.com/natural-language/)を使用して、コンテンツを分析し、自動的にタグ付けします。
+  - **Google Cloud Natural Language Text Auto Tagging** : [Google Cloud Natural Language API](https://cloud.google.com/natural-language/) を使用して、コンテンツを分析し、自動的にタグ付けします。
 
-  - **OpenNLP Text Auto Tagging** : オープンソースの[Apache OpenNLP](https://opennlp.apache.org/)ライブラリを使用して、ポータルコンテンツを分析し、自動的にタグ付けします。 位置名ファインダー、組織ファインダー、人物名ファインダーの3つのモデルが使用されます。
+  - **OpenNLP Text Auto Tagging** : オープンソースの [Apache OpenNLP](https://opennlp.apache.org/) ライブラリを使用して、ポータルコンテンツを分析し、自動的にタグ付けします。 位置名ファインダー、組織ファインダー、人物名ファインダーの3つのモデルが使用されます。
 
 <!-- end list -->
 

@@ -12,7 +12,7 @@
 
     ![ウィジェットには、既存のメディアファイルのみが表示されます。](./using-the-media-gallery-widget/images/01.png)
 
-4.  ウィジェットで[フォルダを追加](./../../uploading-and-managing/creating-folders.md#adding-a-folder)したり[メディアファイルをアップロード](../../uploading-and-managing/uploading-files.md)したりする場合の手順は同じです。
+4.  ウィジェットで [フォルダを追加](./../../uploading-and-managing/creating-folders.md#adding-a-folder) したり[メディアファイルをアップロード](../../uploading-and-managing/uploading-files.md)したりする場合の手順は同じです。
 
     ![ウィジェットのフォルダはファイルを追跡します。](./using-the-media-gallery-widget/images/02.png)
 
@@ -21,5 +21,5 @@
 ## 追加情報
 
   - [Managing Folders](../../uploading-and-managing/creating-folders.md)
-  - [Uploading Files](../../uploading-and-managing/uploading-files.md)
+  - [ファイルのアップロード](../../uploading-and-managing/uploading-files.md)
   - [Enabling Xuggler and ImageMagick for previews](../../../../system-administration/using-the-server-administration-panel/configuring-external-services.md)

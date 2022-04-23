@@ -123,7 +123,7 @@
 
 5.  下にスクロールして、 [**Create a Collection from this Configuration**] をクリックします。
 
-    ![[Create a collection from this configuration]をクリックして、アセットパブリッシャーウィジェットを新しいコレクションに変換します。](./creating-collections/images/08.png)
+    ![ [Create a collection from this configuration]をクリックして、アセットパブリッシャーウィジェットを新しいコレクションに変換します。](./creating-collections/images/08.png)
 
 6.  コレクションの **タイトル** を入力し、 [**保存**] をクリックします。
 
@@ -135,7 +135,7 @@
 
 ### コンテンツセットの作成
 
-コンテンツセットは、サイト管理のコンテンツセットインターフェースから作成できます。 コンテンツセットは、手動選択または動的選択のいずれかを使用できます。 コンテンツセットはいくつでも作成でき、アセットパブリッシャーまたはカスタムアプリケーションを介して表示できます。 コンテンツセットには、指定した基準に基づいてさまざまなユーザーにさまざまなエクスペリエンスを提供する [個人用バリエーション](../../site-building/personalizing-site-experience/experience-personalization/personalizing-collections.md#content-set-personalization) を持たせることもできます。 基準管理はアセットパブリッシャーと共有されます。 各オプションの詳細は、[Selecting Assets in the Asset Publisher](../../site-building/displaying-content/using-the-asset-publisher-widget/selecting-assets-in-the-asset-publisher-widget.md)を参照してください。
+コンテンツセットは、サイト管理のコンテンツセットインターフェイスを介してコンテンツ管理者によって作成されます。 コンテンツセットは手動または動的選択のいずれかを使用でき、コンテンツセットを必要な数だけ作成して、アセットパブリッシャーまたはカスタムアプリケーションを介して表示できます。 コンテンツセットには、指定した基準に基づいてさまざまなユーザーにさまざまなエクスペリエンスを提供する [パーソナライズされたバリエーション](../../site-building/personalizing-site-experience/experience-personalization/personalizing-collections.md#content-set-personalization) を持たせることもできます。 基準管理はアセットパブリッシャーと共有されているため、各オプションの詳細は、公式の[アセットパブリッシャー](../../site-building/displaying-content/using-the-asset-publisher-widget/selecting-assets-for-the-asset-publisher.md)を参照してください。
 
 #### 手動コンテンツセットの作成
 
@@ -143,7 +143,7 @@
 
 1. [**サイト管理**] → [**Content & Data**] に移動し、 [**コンテンツセット**] を選択します。
 
-    ![コンテンツセットは、サイト管理の［Content & Data］セクションにあります。](./creating-collections/images/20.png)
+    ![コンテンツセットは、サイト管理の [Content & Data]セクションにあります。](./creating-collections/images/20.png)
 
 2.  ![Add](../../images/icon-add.png)をクリックし、 [**手動選択**] を選択します。
 
@@ -180,11 +180,11 @@
 
 これにより、現在 **トレンド** としてタグ付けされている項目を含むコンテンツセットが作成され、今後 **トレンド** とタグ付けされた項目はコンテンツセットに自動的に追加されます。
 
-コンテンツセットを作成したので、[それらをページに表示する](../../site-building/displaying-content/displaying-collections.md#displaying-content-sets)ことができます。
+コンテンツセットを作成したので、 [それらをページに表示する](../../site-building/displaying-content/displaying-collections.md#displaying-content-sets) ことができます。
 
 ### アセットパブリッシャー設定をコンテンツセットに変換する
 
-このセクションの前の2つのガイドでは、 [コンテンツセットの作成](./creating-collections.md#creating-content-sets) と [コンテンツセットの表示](../../site-building/displaying-content/additional-content-display-options/displaying-collections.md#displaying-content-sets) について説明しました。 次に、既存のアセットパブリッシャー設定をコンテンツセットに変換してみます。
+このセクションの前の2つのガイドでは、 [コンテンツセットの作成](./creating-collections.md#creating-content-sets) と [コンテンツセットの表示](../../site-building/displaying-content/displaying-collections.md#displaying-content-sets) について説明しました。 次に、既存のアセットパブリッシャー設定をコンテンツセットに変換してみます。
 
 このケースでは、あるページにアセットパブリッシャーを設置し、 **トレンド** とタグ付けされた画像をタイトル別にアルファベットの逆順に表示するように設定しています。 これは、 **コンテンツセット** クリエイターで再現してもそれほど難しくないかもしれませんが、アセット パブリッシャーから直接コンテンツセットの定義を作成する方がより簡単です。
 

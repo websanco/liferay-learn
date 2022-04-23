@@ -14,18 +14,18 @@ devops/google-drive-integration.md
 devops/sharepoint-integration.md
 ```
 
-- [Configuring Documents and Media Previews](./devops/configuring-documents-and-media-previews.md)
-- [Enabling Antivirus Scanning for Uploaded Files](../../system-administration/file-storage/enabling-antivirus-scanning-for-uploaded-files.md)
+- [ドキュメントプレビューの構成](./devops/configuring-documents-and-media-previews.md)
+- [アップロードされたファイルのウイルス対策スキャンを有効にする](../../system-administration/file-storage/enabling-antivirus-scanning-for-uploaded-files.md)
 - [Setting Storage Quotas for Documents and Media](./devops/setting-storage-quotas-for-documents-and-media.md)
-- [Enabling Optimization of Animated GIFs](./devops/enabling-optimization-of-animated-gifs.md)
+- [アニメーションGIFの最適化を有効にする](./devops/enabling-optimization-of-animated-gifs.md)
 - [Enabling FFmpeg For Audio and Video Previews](./devops/enabling-ffmpeg-for-audio-and-video-previews.md)
-- [Enabling OpenOffice / LibreOffice Integration](./devops/enabling-openoffice-libreoffice-integration.md)
-- [Enabling Document Creation and Editing with Microsoft Office 365](./devops/enabling-document-creation-and-editing-with-microsoft-office-365.md)
+- [OpenOffice / LibreOffice統合の有効化 (近日公開！)](./devops/enabling-openoffice-libreoffice-integration.md)
+- [Microsoft Office 365でドキュメントの作成と編集を有効にする](./devops/enabling-document-creation-and-editing-with-microsoft-office-365.md)
 
 ## Google Drive Integration
 
-- [Enabling Links to Google Drive Documents](./devops/google-drive-integration/enabling-links-to-google-drive-documents.md)
-- [Enabling Document Creation and Editing with Google Drive](./devops/google-drive-integration/enabling-document-creation-and-editing-with-google-drive.md)
+- [Googleドライブドキュメントへのリンクを有効にする](./devops/google-drive-integration/enabling-links-to-google-drive-documents.md)
+- [Googleドライブでドキュメントの作成と編集を有効にする](./devops/google-drive-integration/enabling-document-creation-and-editing-with-google-drive.md)
 
 ## SharePoint Integration
 

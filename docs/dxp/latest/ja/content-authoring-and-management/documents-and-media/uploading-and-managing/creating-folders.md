@@ -1,8 +1,6 @@
 # フォルダの作成
 
-ドキュメントとメディアアプリケーションでは、デジタルアセットを整理するためのフォルダを作成できます。 必要な権限を持つ認証されたユーザーのみがフォルダを管理できます。 詳細については、 [ドキュメントとメディアの権限リファレンス](../publishing-and-sharing/managing-document-access/documents-and-media-permissions-reference.md) および[Roles and Permissions](../../../users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.md)を参照してください。
-
-<a name="adding-a-folder" />
+ドキュメントとメディアフォルダを使用して、ファイルを整理できます。 必要な権限を持つ認証されたユーザーのみがフォルダを管理できます。 詳細については、 [ドキュメントとメディアの権限リファレンス](../publishing-and-sharing/managing-document-access/documents-and-media-permissions-reference.md) を参照してください。 DXPのロールと権限の詳細については、 [Roles and Permissions](https://help.liferay.com/hc/articles/360017895212-Roles-and-Permissions) をご覧ください 。
 
 ## フォルダを追加する
 
@@ -54,7 +52,7 @@
 
 ## 追加情報
 
-* [ワークフローのアクティブ化](../../../process-automation/workflow/using-workflows/activating-workflow.md)
-* [ファイルのアップロード](./uploading-files.md)
-* [ドキュメントの公開](../publishing-and-sharing/publishing-documents.md)
-* [Enabling Xuggler and ImageMagick for previews](../../../system-administration/using-the-server-administration-panel/configuring-external-services.md)
+  - [Activating Workflow](../../../process-automation/workflow/user-guide/activating-workflow.md#documents-and-media-folders)
+  - [ファイルのアップロード](./uploading-files.md)
+  - [Using the Media Gallery](../publishing-and-sharing/publishing-documents-on-a-dxp-site/using-the-media-gallery-widget.md)
+  - [Enabling Xuggler and ImageMagick for previews](../../../system-administration/using-the-server-administration-panel/configuring-external-services.md)

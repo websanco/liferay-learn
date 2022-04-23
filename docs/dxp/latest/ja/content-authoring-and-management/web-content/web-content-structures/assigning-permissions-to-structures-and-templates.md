@@ -45,8 +45,6 @@ FreeMarkerでテンプレートを作成または編集する権限は信頼で�
 
 権限の設定の詳細は、 [ロール権限の定義](../../../users-and-permissions/roles-and-permissions/defining-role-permissions.md) を参照してください。
 
-<a name="related-information" />
-
 ## 関連情報
 
   - [ストラクチャーの作成](./creating-structures.md)

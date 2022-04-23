@@ -1,6 +1,6 @@
 # セッションプロパティのボキャブラリ
 
-**セッションプロパティのボキャブラリ** では、定義済みの値を使用して[セッションベースのセグメントプロパティ](../../site-building/personalizing-site-experience/segmentation/segments-editor-ui-reference.md#session-properties)を作成できます。 このオプションは、新しいセグメントの作成中にセグメントエディタでプロパティの値を手動で入力したくない場合に役立ちます。代わりに、ユーザーが事前定義された値のリストからそれらを選択できるようにします。 セッションプロパティのボキャブラリは、セグメントを定義するタスクを容易にし、手動入力エラーを排除します。
+**セッションプロパティのボキャブラリ** では、定義済みの値を使用して [セッションベースのセグメントプロパティ](../../site-building/personalizing-site-experience/segmentation/segments-editor-ui-reference.md#session-properties) を作成できます。 このオプションは、新しいセグメントの作成中にセグメントエディタでプロパティの値を手動で入力したくない場合に役立ちます。代わりに、ユーザーが事前定義された値のリストからそれらを選択できるようにします。 セッションプロパティのボキャブラリは、セグメントを定義するタスクを容易にし、手動入力エラーを排除します。
 
 たとえば、マーケティングチームは、デバイスのブランド情報を使用して、Appleデバイス用の新しいアプリのプロモーションなど、さまざまなコンテンツをWebサイトの訪問者にターゲティングしたい場合があります。 マーケティングチームのプロセスを容易にするために、さまざまなデバイスのブランドを含むセッションプロパティのボキャブラリを作成し、このボキャブラリを[ユーザーセグメント](../../site-building/personalizing-site-experience/segmentation/creating-and-managing-user-segments.md)にリンクすることができます。 このように、マーケティングチームが「デバイスブランド」 [セッションプロパティ](../../site-building/personalizing-site-experience/segmentation/segments-editor-ui-reference.md#session-properties) を使用してセグメントを作成する場合、異なるデバイスブランドオプションを入力する必要はありません。 可能なオプションのリストが事前定義されました。
 
@@ -12,8 +12,6 @@
 2.  [セッションプロパティのボキャブラリを定義します](#defining-the-session-property-vocabulary) 。
 3.  [セッションベースのセグメントを作成します](#creating-the-session-based-segment) 。
 
-<a name="configuring-the-vocabulary-for-the-session-based-segment" />
-
 ## セッションベースセグメントのボキャブラリの設定
 
 このボキャブラリで定義するカテゴリ（1）は、 [セッションプロパティ](../../site-building/personalizing-site-experience/segmentation/segments-editor-ui-reference.md#session-properties) を使用してセグメントを作成するときに選択できるカテゴリ（2）です。
@@ -22,7 +20,7 @@
 
 ![セッションベースのセグメントで使用可能なオプションは、グローバルボキャブラリのカテゴリに対応しています。](./session-property-vocabularies/images/02.png)
 
-新しいグローバルボキャブラリを作成することも、既存のボキャブラリを使用することもできます。 新しいボキャブラリを作成したり、既存のボキャブラリのカテゴリを更新したりするには、 [コンテンツのカテゴリとボキャブラリの定義](./defining-categories-and-vocabularies-for-content.md) を参照してください。 [公開または内部の可視性](./organizing-content-with-categories-and-tags.md#vocabulary-visibility) を持つボキャブラリを使用できます。 セッションプロパティのボキャブラリは、グローバルボキャブラリでのみ機能します。
+新しいグローバルボキャブラリを作成することも、既存のボキャブラリを使用することもできます。 新しいボキャブラリを作成したり、既存のボキャブラリのカテゴリを更新したりするには、[コンテンツのカテゴリとボキャブラリの定義](./defining-categories-and-vocabularies-for-content.md)を参照してください。 [公開または内部の可視性](./organizing-content-with-categories-and-tags.md#vocabulary-visibility) を持つボキャブラリを使用できます。 セッションプロパティのボキャブラリは、グローバルボキャブラリでのみ機能します。
 
 ```{note}
 グローバルサイトでは、グローバルボキャブラリのみを作成および編集できます。

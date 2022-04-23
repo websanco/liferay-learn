@@ -2,9 +2,7 @@
 
 **ドキュメントとメディア** アプリケーションは、ユーザーがDXPインスタンス内でファイルをネイティブに保存できる場所です。 特定のファイル形式が許可されていない場合を除き、ユーザーはドキュメント、画像、動画など、ほとんどのタイプのファイルをアップロードできます。
 
-```{note}
-ユーザーは、アップロード時にサポートされているアセットに自動的にタグを付けるようにLiferayを構成できます。 詳細については、 [アセットの自動タグ付けの設定](../../tags-and-categories/auto-tagging/configuring-asset-auto-tagging.md) を参照してください。 
-```
+適切な権限を持つユーザーは、単一のファイルまたは複数のファイルを同時にアップロードできます。 詳細については、 [ドキュメントとメディアの権限リファレンス](../publishing-and-sharing/managing-document-access/documents-and-media-permissions-reference.md) を参照してください。 DXPのロールと権限の詳細については、 [Roles and Permissions](https://help.liferay.com/hc/articles/360017895212-Roles-and-Permissions) をご覧ください 。
 
 ```{important}
 自動アンチウイルススキャンを有効にして、アップロード時にファイルをスキャンできます。 詳細については、 [アップロードされたファイルのウイルス対策スキャンを有効にする](../../../system-administration/file-storage/enabling-antivirus-scanning-for-uploaded-files.md) を参照してください。
@@ -64,6 +62,6 @@
 
 ## 追加情報
 
-* [フォルダの作成](./creating-folders.md)
-* [Media Galleryの使用](../publishing-and-sharing/publishing-documents.md#using-the-media-gallery-widget)
-* [Enabling Xuggler and ImageMagick for Previews](../../../system-administration/using-the-server-administration-panel/configuring-external-services.md#enabling-document-previews)
+  - [フォルダの作成](./creating-folders.md)
+  - [Media Galleryの使用](../publishing-and-sharing/publishing-documents-on-a-dxp-site/using-the-media-gallery-widget.md)
+  - [Enabling Xuggler and ImageMagick for previews](../../../system-administration/using-the-server-administration-panel/configuring-external-services.md)

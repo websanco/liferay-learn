@@ -15,14 +15,14 @@ blogs/blog-permissions-reference.md
 blogs/developer-guide.md
 ```
 
-* [Getting Started with Blogs](./blogs/getting-started-with-blogs.md)
-* [Adding Blog Entries](./blogs/adding-blog-entries.md)
-* [Managing Blog Entries](./blogs/managing-blog-entries.md)
-* [Configuring the Blogs App](./blogs/configuring-the-blogs-app.md)
-* [Displaying Blogs](./blogs/displaying-blogs.md)
-* [Aggregating Blogs](./blogs/aggregating-blogs.md)
-* [Highlighting Recent Bloggers](./blogs/highlighting-recent-bloggers.md)
-* [Blog Permissions Reference](./blogs/blog-permissions-reference.md)
+* [ブログを始める](./blogs/getting-started-with-blogs.md)
+* [ブログエントリの追加](./blogs/adding-blog-entries.md)
+* [ブログエントリの管理](./blogs/managing-blog-entries.md)
+* [ブログアプリの設定 (近日公開！)](./blogs/configuring-the-blogs-app.md)
+* [ブログの表示 (近日公開！)](./blogs/displaying-blogs.md)
+* [ブログの集計 (近日公開！)](./blogs/aggregating-blogs.md)
+* [最近のブログ作成者を強調表示する (近日公開！)](./blogs/highlighting-recent-bloggers.md)
+* [ブログ権限リファレンス](./blogs/blog-permissions-reference.md)
 
 ## Developer Guide
 

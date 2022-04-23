@@ -34,7 +34,7 @@
 
 [コンテンツ一覧](./content-dashboard-interface.md#contents-list) （2）には、全てのサイトとアセットライブラリのコンテンツが表示されます。 ここから、組み込みまたはカスタムのフィルターを使用して情報を並べ替えたり絞り込んだりできます。 コンテンツ監査ツールのグラフは、設定したフィルターに基づいて動的に変化します。
 
-コンテンツ一覧から、[［コンテンツ情報］](./content-dashboard-interface.md#content-info-sidebar)サイドバー（3）および[［コンテンツパフォーマンスツール］](../content-performance-tool/about-the-content-performance-tool.md)にアクセスできます。 情報サイドバーではアセットごとに異なるメタデータが表示され、コンテンツパフォーマンスツールでは閲覧数やトラフィック取得チャンネルなどのコンテンツの統計が収集されます。
+コンテンツ一覧から、 [［コンテンツ情報］](./content-dashboard-interface.md#content-info-sidebar) サイドバー（3）および[［コンテンツパフォーマンスツール］](../content-performance-tool/about-the-content-performance-tool.md)にアクセスできます。 情報サイドバーではアセットごとに異なるメタデータが表示され、コンテンツパフォーマンスツールでは閲覧数やトラフィック取得チャンネルなどのコンテンツの統計が収集されます。
 
 コンテンツダッシュボードインターフェイスの詳細と、ニーズに合わせて情報をカスタマイズする方法については、 [コンテンツダッシュボードインターフェイス](./content-dashboard-interface.md) のトピックを参照してください。
 

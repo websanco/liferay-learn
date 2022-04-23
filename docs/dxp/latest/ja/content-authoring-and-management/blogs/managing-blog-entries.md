@@ -12,7 +12,7 @@
 
 次の基準を使用してエントリを並べ替えるには、 [**Filter and Order**] をクリックします。
 
-![［Filter and Order］メニュー](./managing-blog-entries/images/02.png)
+![ [Filter and Order]メニュー](./managing-blog-entries/images/02.png)
 
 | フィルタ         | 説明                    |
 | :--- | :--- |

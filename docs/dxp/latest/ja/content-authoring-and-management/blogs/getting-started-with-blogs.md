@@ -12,11 +12,11 @@
 
 3. [**Widgets**] をクリックし、次に [**Collaboration**] をクリックしてメニューを展開します。
 
-![［Blogs］ウィジェットをページに追加する](./getting-started-with-blogs/images/02.png)
+    ![ [Blogs]ウィジェットをページに追加する](./getting-started-with-blogs/images/01.png)
 
 4. [**Blogs**] ウィジェットをページ上の目的の場所にドラッグアンドドロップします。
 
-![[Blogs]ウィジェットをページに追加する](./getting-started-with-blogs/images/02.png)
+![ [Blogs]ウィジェットをページに追加する](./getting-started-with-blogs/images/02.png)
 
 サイトのメンバーは、 [**Blogs**] ウィジェットを使用してブログ投稿を作成できます。 1ページあたりに設定できる [**Blogs**] ウィジェットの数は1つだけであることに注意してください。
 
@@ -24,13 +24,13 @@
 
 ブログアプリケーションの機能の使用方法を学習します。
 
-* [ブログエントリの追加](./adding-blog-entries.md)
-* [ブログエントリの管理](./managing-blog-entries.md)
-* [ブログの表示](./displaying-blogs.md)
-* [ブログアプリの設定](./configuring-the-blogs-app.md)
-* [最近のブログ作成者を強調表示する](./highlighting-recent-bloggers.md)
+  - [ブログエントリの追加](./adding-blog-entries.md)
+  - [ブログエントリの管理](./managing-blog-entries.md)
+  - [ブログの表示 (近日公開！)](./displaying-blogs.md)
+  - [ブログアプリの設定 (近日公開！)](./configuring-the-blogs-app.md)
+  - [最近のブログ作成者を強調表示する (近日公開！)](./highlighting-recent-bloggers.md)
 
 ### 参照
 
-* [ブログエントリエディターのリファレンス](./blog-entry-editor-reference.md)
-* [ブログ権限リファレンス](./blog-permissions-reference.md)
+  - [ブログエントリエディターのリファレンス](./blog-entry-editor-reference.md)
+  - [ブログ権限リファレンス](./blog-permissions-reference.md)

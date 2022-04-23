@@ -4,13 +4,13 @@
 
 コンテンツダッシュボードインターフェイスには、次の領域があります。
 
-- [コンテンツ監査ツール](#content-audit-tool)（1）
-- [コンテンツ一覧](#contents-list)（2）
-- [コンテンツ情報サイドバー](#content-info-sidebar)（3）
+- [コンテンツ監査ツール](#content-audit-tool) （1）
+- [コンテンツ一覧](#contents-list) （2）
+- [コンテンツ情報サイドバー](#content-info-sidebar) （3）
 
 ![コンテンツダッシュボードのユーザーインターフェイスには、3つの情報領域が含まれています。](./content-dashboard-interface/images/05.png)
 
-[コンテンツダッシュボードを開く](#accessing-the-content-dashboard)と、ページの上部に[コンテンツ監査ツール](#content-audit-tool)（1）が表示され、下部に[コンテンツ一覧](#contents-list)（2）が表示されます。 コンテンツ一覧から、[コンテンツ情報サイドバー](#content-info-sidebar)（3）と[コンテンツパフォーマンスパネル](../content-performance-tool/about-the-content-performance-tool.md)にアクセスできます。 コンテンツ情報サイドバーとコンテンツパフォーマンスパネルは折りたたみ可能です。 コンテンツ一覧の各アイテムの追加の詳細が表示されます。
+[コンテンツダッシュボードを開く](#accessing-the-content-dashboard) と、ページの上部に [コンテンツ監査ツール](#content-audit-tool) （1）が表示され、下部に [コンテンツ一覧](#contents-list) （2）が表示されます。 コンテンツ一覧から、 [コンテンツ情報サイドバー](#content-info-sidebar) （3）と[コンテンツパフォーマンスパネル](../content-performance-tool/about-the-content-performance-tool.md)にアクセスできます。 コンテンツ情報サイドバーとコンテンツパフォーマンスパネルは折りたたみ可能です。 コンテンツ一覧の各アイテムの追加の詳細が表示されます。
 
 コンテンツ情報サイドバーにアクセスするには、コンテンツの **アクションメニュー**（![Action Menu](../../images/icon-actions.png)）をクリックし、 ［**Info**］ オプションを選択します。 または、記事の上にカーソルを置き、 ［**Info**］（![Info](../../images/icon-information.png)）をクリックします。 **統計情報を表示**（![Metrics](../../images/icon-analytics.png)）オプションの詳細は、[About the Content Performance Panel](../content-performance-tool/about-the-content-performance-tool.md)を参照してください。
 
@@ -32,7 +32,7 @@
     ```
 
 - アクセスできるコンテンツ。
-- [コンテンツ一覧](#contents-list)の既存の[フィルター](#filtering-and-sorting-content-in-the-contents-list)。
+- [コンテンツ一覧](#contents-list) の既存の [フィルター](#filtering-and-sorting-content-in-the-contents-list) 。
 - 二つのグローバルボキャブラリの最大値（**x** および **y** 軸に対する）。
 
 ![コンテンツダッシュボードのコンテンツ監査ツールの概要](./content-dashboard-interface/images/10.png)
@@ -60,7 +60,7 @@
 
 デフォルトでは、棒グラフには、選択したグローバルボキャブラリの各カテゴリのアセットの総数が表示されますが、この情報はさまざまな方法で絞り込むことができます。
 
-- [コンテンツ一覧](#contents-list)で[フィルター](#filtering-and-sorting-content-in-the-contents-list)を使用する。
+- [コンテンツ一覧](#contents-list) で [フィルター](#filtering-and-sorting-content-in-the-contents-list) を使用する。
 - 表の凡例のカテゴリー名をオンまたはオフにして、表のカテゴリーを絞り込む。
 - バーの1つをクリックして、特定のカテゴリーの結果を拡大する。
 - ボキャブラリを変更する。
@@ -101,7 +101,7 @@
 | タイトル               | 記事のタイトル（*）。                                                                                                                                                                                       |
 | 作成者                | 作成者の名前。                                                                                                                                                                                           |
 | 種類                 | [Webコンテンツの記事](../web-content/web-content-articles/adding-a-basic-web-content-article.md)または[ドキュメント](../documents-and-media/documents-and-media-overview.md)アセットタイプ(Liferay DXP 7.4+にて利用可能)を特定します。 |
-| サブタイプ              | 記事の[サブカテゴリ](../tags-and-categories/defining-categories-and-vocabularies-for-content.md#creating-subcategories)。                                                                                   |
+| サブタイプ              | 記事の [サブカテゴリ](../tags-and-categories/defining-categories-and-vocabularies-for-content.md#creating-subcategories) 。                                                                                   |
 | サイトまたはアセットライブラリ    | Liferay DXPインスタンス内の記事の場所。                                                                                                                                                                         |
 | ステータス              | 記事のワークフローステータス。 ステータスが異なる複数のバージョンの記事には、すべてのステータスが表示されます。                                                                                                                                          |
 | **First Vocabulary** | これは、コンテンツ監査ツールの最初のボキャブラリです。                                                                                                                                                                       |
@@ -118,7 +118,7 @@
 
 - **View**（![View](../../images/icon-preview.png)）：ディスプレイページテンプレートに基づいて閲覧モードでコンテンツを開きます。
 - **編集する**（![Edit](../../images/icon-edit.png)）: コンテンツを編集モードで開きます。
-- **Info**（![Information](../../images/icon-information.png)）: [コンテンツ情報](#content-info-sidebar)サイドバーを開きます。
+- **Info**（![Information](../../images/icon-information.png)）: [コンテンツ情報](#content-info-sidebar) サイドバーを開きます。
 - **統計情報を表示**（![View Metrics](../../images/icon-analytics.png)）: [コンテンツパフォーマンスサイドバー](../content-performance-tool/about-the-content-performance-tool.md)を開きます。
 
     ![アクションメニューまたは各コンテンツ行のアイコンから、コンテンツ情報サイドバーとコンテンツパフォーマンスパネルにアクセスします。](./content-dashboard-interface/images/11.png)
@@ -133,11 +133,11 @@
 1. 事前定義されたフィルターの1つを選択するか、またはカスタムフィルター（3つのドットで示される）を選択して、独自の絞り込み基準を作成します。
 1. 絞り込みたいコンテンツを選択します。
 
-絞り込みエディター領域には、フィルターと結果の総数が表示されます。 1つ以上のフィルターを削除するには、フィルター名の横にある ［**閉じる**］（![Close](../../images/icon-times.png)）ボタンをクリックするか、 ［**クリア**］ をクリックしてすべてのフィルターを削除し、コンテンツ一覧をリセットします。 定義済みのフィルターおよびカスタムフィルターに加えて、検索フィールドのキーワードを使用して、コンテンツビューでアセットを検索および絞り込みできます。 さまざまなフィルターの組み合わせがどのように機能するかを理解するには、[コンテンツリストでの絞り込みの仕組みを理解する](#understanding-how-filtering-works-in-the-contents-list)を参照してください。
+絞り込みエディター領域には、フィルターと結果の総数が表示されます。 1つ以上のフィルターを削除するには、フィルター名の横にある ［**閉じる**］（![Close](../../images/icon-times.png)）ボタンをクリックするか、 ［**クリア**］ をクリックしてすべてのフィルターを削除し、コンテンツ一覧をリセットします。 定義済みのフィルターおよびカスタムフィルターに加えて、検索フィールドのキーワードを使用して、コンテンツビューでアセットを検索および絞り込みできます。 さまざまなフィルターの組み合わせがどのように機能するかを理解するには、 [コンテンツリストでの絞り込みの仕組みを理解する](#understanding-how-filtering-works-in-the-contents-list) を参照してください。
 
 ![絞り込みエディターを使用して、特定のフィルターまたはすべてのフィルターをフィルター領域から削除します.](./content-dashboard-interface/images/01.png)
 
-[［コンテンツ監査ツール］](#content-audit-tool)領域のバーの1つをクリックしてコンテンツを絞り込み、特定のカテゴリーの結果を拡大することもできます。
+[［コンテンツ監査ツール］](#content-audit-tool) 領域のバーの1つをクリックしてコンテンツを絞り込み、特定のカテゴリーの結果を拡大することもできます。
 
 ![コンテンツ監査ツールのバーの1つをクリックして、バーのカテゴリーで絞り込みます。](./content-dashboard-interface/images/08.png)
 

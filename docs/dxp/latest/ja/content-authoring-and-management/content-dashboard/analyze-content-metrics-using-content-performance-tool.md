@@ -10,7 +10,7 @@
 
   - コンテンツの表示および編集権限がある。
   - コンテンツが、 [ディスプレイページテンプレート](../../site-building/displaying-content/using-display-page-templates/displaying-content-with-display-page-templates.md)（**ページ**（![Page](../../images/icon-page.png)）アイコン で示される）に基づいている。
-  - Liferay DXPインスタンスがアクティブに有効な[Liferay Analytics Cloudへの接続](https://learn.liferay.com/analytics-cloud/latest/en/getting-started/connecting-data-sources/connecting-liferay-dxp-to-analytics-cloud.html)があり、サイトが同期されている。
+  - Liferay DXPインスタンスがアクティブに有効な [Liferay Analytics Cloudへの接続](https://learn.liferay.com/analytics-cloud/latest/en/getting-started/connecting-data-sources/connecting-liferay-dxp-to-analytics-cloud.html) があり、サイトが同期されている。
 
 コンテンツパフォーマンスサイドバーを開くには：
 
