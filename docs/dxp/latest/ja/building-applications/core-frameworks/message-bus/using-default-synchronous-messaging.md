@@ -21,7 +21,7 @@
 1. サンプルをダウンロードして解凍します。
 
     ```bash
-    curl https://learn.liferay.com/dxp/latest/en/building-applications/core-frameworks/message-bus/liferay-m4q7.zip -O
+    curl https://learn.liferay.com/dxp/latest/ja/building-applications/core-frameworks/message-bus/liferay-m4q7.zip -O
     ```
 
     ```bash
@@ -113,9 +113,9 @@
    :lines: 15-45
 ```
 
-どちらのコンフィギュレータも[`Component`](https://docs.osgi.org/javadoc/osgi.cmpn/7.0.0/org/osgi/service/component/annotations/Component.html)クラスです。 これらは[`@Reference`](https://docs.osgi.org/javadoc/osgi.cmpn/7.0.0/org/osgi/service/component/annotations/Reference.html)アノテーションを使用して、`DestinationFactory`インスタンスを挿入します。
+どちらのコンフィギュレータも [`Component`](https://docs.osgi.org/javadoc/osgi.cmpn/7.0.0/org/osgi/service/component/annotations/Component.html) クラスです。 これらは [`@Reference`](https://docs.osgi.org/javadoc/osgi.cmpn/7.0.0/org/osgi/service/component/annotations/Reference.html) アノテーションを使用して、`DestinationFactory`インスタンスを挿入します。
 
-`_activate(BundleContext)`メソッドは、[`DestinationFactory`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/DestinationFactory.java)と[`DestinationConfiguration`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/DestinationConfiguration.java)を使用して **シリアル** 宛先を作成します。 最後に、`_activate(BundleContext)`メソッドは、`BundleContext`を使用して[`Destination`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/Destination.java)をOSGiサービスに登録します。
+`_activate(BundleContext)`メソッドは、 [`DestinationFactory`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/DestinationFactory.java) と [`DestinationConfiguration`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/DestinationConfiguration.java) を使用して **シリアル** 宛先を作成します。 最後に、`_activate(BundleContext)`メソッドは、`BundleContext`を使用して [`Destination`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/Destination.java) をOSGiサービスに登録します。
 
 ```{warning}
 デフォルトの同期メッセージングでは、シリアルまたはパラレルの宛先のみを使用してください。 それらは、`DestinationConfiguration`の`createSerialDestinationConfiguration(String)`および `createParallelDestinationConfiguration(String)`メソッドを呼び出すことで作成できます。
@@ -127,7 +127,7 @@
 
 ## リスナーを調べる
 
-`m4q7-charlie-impl`モジュールの`M4Q7CharlieMessageListener`クラスは、`acme/m4q7_able` [`Destination`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/Destination.java)に送信されたメッセージをリッスンします。 [Listening for Messages](./listening-for-messages.md)に示されている方法と同じ方法で登録されます。
+`m4q7-charlie-impl`モジュールの`M4Q7CharlieMessageListener`クラスは、`acme/m4q7_able` [`Destination`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/Destination.java) に送信されたメッセージをリッスンします。 [メッセージを聞く](./listening-for-messages.md) に示されている方法と同じ方法で登録されます。
 
 `M4Q7CharlieMessageListener`クラス：
 
@@ -170,7 +170,7 @@
 
 `M4Q7BakerOSGiCommands`の`@Component`プロパティは、`m4q7`スコープで`sendMessage`と呼ばれるGogoシェルコマンド関数を定義します。 このコマンドは入力`String`を受け取り、`M4Q7BakerOSGiCommands`の`sendMessage(String)`メソッドにマップします。
 
-`sendMessage(String)`メソッドは、Gogoシェルコマンドの`String`をペイロードとして、`"acme/m4q7_baker"`を応答先として[`Message`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/Message.java)を作成します。
+`sendMessage(String)`メソッドは、Gogoシェルコマンドの`String`をペイロードとして、`"acme/m4q7_baker"`を応答先として [`Message`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/Message.java) を作成します。
 
 `sendMessage(String)`メソッドは、`SynchronousMessageSender`の`send(String, Message, long)`メソッドを呼び出してメッセージを送信し、`"acme/m4q7_able"`宛先名、メッセージインスタンス、および`10000`ミリ秒のタイムアウトを渡します。 デフォルトモードでは、`SynchronousMessageSender`はメッセージバススレッドを使用してメッセージをメッセージリスナーに配信します。 元のメッセージの応答IDを持つメッセージが`"acme/m4q7_baker"`応答先で受信されるまで、実行が`M4Q7BakerOSGiCommands`クラスでブロックされます。 応答を受信すると、`M4Q7BakerOSGiCommands`メソッドで実行が続行され、メッセージ応答がログに記録されます。 一致する応答メッセージを受信する前にタイムアウトが期限切れになると、`SynchronousMessageSender`の`send(String, Message, long)`メソッドは`MessageBusException`をスローします。
 
@@ -234,13 +234,13 @@
 
 ## 次のステップ
 
-**ダイレクト** モードを使用した同期メッセージングを検討する場合は、[Using Direct Synchronous Messaging](./using-direct-synchronous-messaging.md)を参照してください。
+**ダイレクト** モードを使用した同期メッセージングを検討する場合は、 [ダイレクト同期メッセージングの使用](./using-direct-synchronous-messaging.md) を参照してください。
 
-メッセージを送信した直後に処理を続行する場合は、[Using Asynchronous Messaging](./using-asynchronous-messaging.md)を参照してください。
+メッセージを送信した直後に処理を続行する場合は、 [非同期メッセージングの使用](./using-asynchronous-messaging.md) を参照してください。
 
 ## 追加情報
 
 * [Message Busメッセージバス](../message-bus.md)
-* [Listening for Messages](./listening-for-messages.md)
-* [Using Asynchronous Messaging](./using-asynchronous-messaging.md)
-* [Listening for Registration Events](./listening-for-registration-events.md)
+* [メッセージを聞く](./listening-for-messages.md)
+* [非同期メッセージングの使用](./using-asynchronous-messaging.md)
+* [登録イベントを聞く](./listening-for-registration-events.md)

@@ -1,14 +1,14 @@
 # オブジェクトアプリケーションの権限
 
-他のLiferayアプリケーションと同様に、オブジェクトポートレットは権限フレームワークと統合されています。 これは、[アプリケーション](#application-permissions)と[リソース](#resource-permissions)の権限をユーザーロールに割り当てて、オブジェクトポートレットとそのデータにアクセスできるユーザーを決定できることを意味します。
+他のLiferayアプリケーションと同様に、オブジェクトポートレットは権限フレームワークと統合されています。 これは、 [アプリケーション](#application-permissions) と [リソース](#resource-permissions) の権限をユーザーロールに割り当てて、オブジェクトポートレットとそのデータにアクセスできるユーザーを決定できることを意味します。
 
 ![ロール権限を定義するときにオブジェクト権限を割り当てます。](./objects-application-permissions/images/01.png)
 
-ユーザーロールへの権限の割り当ての詳細については、[Defining Role Permissions](../../users-and-permissions/roles-and-permissions/defining-role-permissions.md)を参照してください。
+ユーザーロールへの権限の割り当ての詳細については、 [ロール権限の定義](../../users-and-permissions/roles-and-permissions/defining-role-permissions.md) を参照してください。
 
 ## アプリケーションの権限
 
-アプリケーションの権限は、一般的なアプリケーション関連の操作を実行する権限を付与し、[リソース関連の権限](#resource-permissions)は含まれません。
+アプリケーションの権限は、一般的なアプリケーション関連の操作を実行する権限を付与し、 [リソース関連の権限](#resource-permissions) は含まれません。
 
 オブジェクトポートレットには、次のアプリケーション権限があります:
 
@@ -22,7 +22,7 @@
 
 ## リソース権限
 
-リソース権限は、アプリケーションリソースに特定の権限を付与します。 これらの権限の一部は、[データベースのエンティティ（＝モデルリソース）に対して操作](#object-definition-actions)を実行できるようにします。 また、アプリケーションコンテキストで[リソース関連の操作](#object-related-actions)を実行する権限を付与するものもあります（例えば、新しいリソースエンティティの作成など）。
+リソース権限は、アプリケーションリソースに特定の権限を付与します。 これらの権限の一部は、 [データベースのエンティティ（＝モデルリソース）に対して操作](#object-definition-actions) を実行できるようにします。 また、アプリケーションコンテキストで [リソース関連の操作](#object-related-actions) を実行する権限を付与するものもあります（例えば、新しいリソースエンティティの作成など）。
 
 オブジェクトのポートレットには、次のリソース権限があります。
 
@@ -47,5 +47,5 @@
 ## 追加情報
 
 * [Objects Overview](../objects.md)
-* [Creating Objects](./creating-and-managing-objects/creating-objects.md)
-* [Managing Objects](./creating-and-managing-objects/managing-objects.md)
+* [オブジェクトの作成](./creating-and-managing-objects/creating-objects.md)
+* [オブジェクトの管理](./creating-and-managing-objects/managing-objects.md)

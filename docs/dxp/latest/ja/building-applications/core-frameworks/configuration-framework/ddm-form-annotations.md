@@ -1,6 +1,6 @@
 # DDMフォームのアノテーション
 
-自動生成された[configuration interface](./setting-and-accessing-configurations.html#creating-the-configuration-interface) UIは、構成によっては単純すぎる場合があります。  動的データマッピング（DDM）フォームのアノテーションを使用して、レイアウトのUIをカスタマイズできます。
+自動生成された [configuration interface](./setting-and-accessing-configurations.html#creating-the-configuration-interface) UIは、構成によっては単純すぎる場合があります。  動的データマッピング（DDM）フォームのアノテーションを使用して、レイアウトのUIをカスタマイズできます。
 
 ## サンプルの構成UIを参照する
 
@@ -10,7 +10,7 @@
     docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
     ```
 
-1. [DDMフォームのアノテーション](./liferay-v1d9.zip)をダウンロードして解凍します。
+1. [DDMフォームのアノテーション](./liferay-v1d9.zip) をダウンロードして解凍します。
 
     ```bash
     curl https://learn.liferay.com/dxp/latest/en/building-applications/core-frameworks/configuration-framework/liferay-v3d9.zip -O
@@ -52,7 +52,7 @@ DDMフォームのアノテーションの仕組みを以下に示します。
 :lines: 37-58
 ```
 
-使用可能なすべての項目タイプの詳細については、[Form Field Types Reference](../../../process-automation/forms/creating-and-managing-forms/forms-field-types-reference.md)にアクセスしてください。 各項目タイプの`type`変数名については、[Field Type Constants](https://github.com/liferay/liferay-portal/blob/master/modules/apps/dynamic-data-mapping/dynamic-data-mapping-form-field-type-api/src/main/java/com/liferay/dynamic/data/mapping/form/field/type/constants/DDMFormFieldTypeConstants.java)を参照してください。
+使用可能なすべての項目タイプの詳細については、[Form Field Types Reference](../../../process-automation/forms/creating-and-managing-forms/forms-field-types-reference.md)にアクセスしてください。 各項目タイプの`type`変数名については、 [Field Type Constants](https://github.com/liferay/liferay-portal/blob/master/modules/apps/dynamic-data-mapping/dynamic-data-mapping-form-field-type-api/src/main/java/com/liferay/dynamic/data/mapping/form/field/type/constants/DDMFormFieldTypeConstants.java) を参照してください。
 
 各フォーム項目にアノテーションを付けた後、`DDMFormLayout`アノテーションを使用してクラス宣言のすぐ上にフォームのレイアウトを定義します。
 

@@ -46,16 +46,16 @@ message-bus/tuning-messaging-performance.md
 
 次のトピックでは、両方のメッセージング方法について説明します。
 
-* [Using Asynchronous Messaging](./message-bus/using-asynchronous-messaging.md)は、宛先を構成し、その宛先に非同期でメッセージを送信する方法を示しています。 これは、メッセージを送信する最も簡単な方法です。
+* [非同期メッセージングの使用](./message-bus/using-asynchronous-messaging.md) は、宛先を構成し、その宛先に非同期でメッセージを送信する方法を示しています。 これは、メッセージを送信する最も簡単な方法です。
 
-* [Using Default Synchronous Messaging](./message-bus/using-default-synchronous-messaging.md)は、1つのリスナーがメッセージに応答するまで、 **または** リスナーが応答しない場合はメッセージがタイムアウトするまで、メッセージ送信者がブロックする方法を示しています。
+* [デフォルトの同期メッセージングの使用](./message-bus/using-default-synchronous-messaging.md) は、1つのリスナーがメッセージに応答するまで、 **または** リスナーが応答しない場合はメッセージがタイムアウトするまで、メッセージ送信者がブロックする方法を示しています。
 
 * [Using Direct Synchronous Messaging](./message-bus/using-default-synchronous-messaging.md)は、 **すべての** リスナーがメッセージを受信するまでメッセージ送信者がメッセージの送信をブロックする方法を示しています。
 
 ## パフォーマンスの調整
 
-メッセージバスAPIを使用すると、登録イベント、宛先、宛先メッセージリスナー、およびメッセージキューの監視が容易になります。 宛先タイプ、メッセージキューパラメータ、およびスレッドパラメータを調整することにより、ニーズに合わせてメッセージバスコンポーネントを設定できます。 詳細については、[Tuning Messaging Performance](./message-bus/tuning-messaging-performance.md)を参照してください。
+メッセージバスAPIを使用すると、登録イベント、宛先、宛先メッセージリスナー、およびメッセージキューの監視が容易になります。 宛先タイプ、メッセージキューパラメータ、およびスレッドパラメータを調整することにより、ニーズに合わせてメッセージバスコンポーネントを設定できます。 詳細については、 [メッセージングパフォーマンスのチューニング](./message-bus/tuning-messaging-performance.md) を参照してください。
 
 ## 次のステップ
 
-メッセージバスを初めて使用する場合は、Liferayに組み込まれている宛先上でリッスンすることをお勧めします。 次に[Listening for Messages](./message-bus/listening-for-messages.md)を開始します。
+メッセージバスを初めて使用する場合は、Liferayに組み込まれている宛先上でリッスンすることをお勧めします。 次に [メッセージを聞く](./message-bus/listening-for-messages.md) を開始します。

@@ -10,10 +10,10 @@ Liferayの構成フレームワークを使用して、MVCポートレットの�
     docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
     ```
 
-1. [構成の設定とアクセス](./liferay-n2f3.zip)をダウンロードして解凍します。
+1. [構成の設定とアクセス](./liferay-n2f3.zip) をダウンロードして解凍します。
 
     ```bash
-    curl https://learn.liferay.com/dxp/latest/en/building-applications/core-frameworks/configuration-framework/liferay-n2f3.zip -O
+    curl https://learn.liferay.com/dxp/latest/ja/building-applications/core-frameworks/configuration-framework/liferay-n2f3.zip -O
     ```
 
     ```bash
@@ -63,7 +63,7 @@ Liferayの構成フレームワークを使用して、MVCポートレットの�
 :lines: 5-17
 ```
 
-このサンプルインターフェイスでは、スコープが`Scope.COMPANY`に設定されていることに注意してください。 詳細については、 [Scoping Configurations](./scoping-configurations.md)を参照してください。
+このサンプルインターフェイスでは、スコープが`Scope.COMPANY`に設定されていることに注意してください。 詳細については、 [スコープ設定](./scoping-configurations.md) を参照してください。
 
 インターフェイスには、フォントの色、フォントファミリー、フォントサイズの3つの設定可能な属性があります。 色とファミリーは`string`型であり、サイズは`int`型であることに注意してください。
 
@@ -73,7 +73,7 @@ Liferayの構成フレームワークを使用して、MVCポートレットの�
 IDには、構成インターフェイスの完全修飾クラス名（FQCN）を指定する必要があることに注意してください。
 ```
 
-`Meta.AD`は、デフォルト値や属性が必須項目であるかどうかなど、属性に関する[オプションのメタデータ](http://bnd.bndtools.org/chapters/210-metatype.html)を指定します。 属性値が必要であるがデフォルトが設定されていない場合、管理者はアプリケーションが正しく機能するように設定で値を設定する必要があることに注意してください。
+`Meta.AD`は、デフォルト値や属性が必須項目であるかどうかなど、属性に関する [オプションのメタデータ](http://bnd.bndtools.org/chapters/210-metatype.html) を指定します。 属性値が必要であるがデフォルトが設定されていない場合、管理者はアプリケーションが正しく機能するように設定で値を設定する必要があることに注意してください。
 
 次に、MVCポートレットによって構成がどのように読み取られるかを確認します。
 
@@ -145,6 +145,6 @@ required = false)
 
 ## さらなるカスタマイゼーション
 
-* [Categorizing a Configuration](./categorizing-a-configuration.md)
+* [構成の分類](./categorizing-a-configuration.md)
 * [Scoping Configurations](./scoping-configurations)
-* [Field Options Provider](./field-options-provider.md)
+* [フィールドオプションプロバイダー](./field-options-provider.md)

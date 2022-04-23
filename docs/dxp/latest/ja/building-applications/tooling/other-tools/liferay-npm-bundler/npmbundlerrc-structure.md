@@ -291,7 +291,7 @@ liferay-npm-bundlerは、ウィジェットプロジェクトのルートフォ�
 ***create-jar.features.settings：** このオプションは非推奨です。 代わりに `create-jar.features.configuration` オプションを使用してください。
 
 ```{note}
-プラグインの設定では、可能なすべてのフェーズでプラグインを設定するためのオプションと、バベルを実行する際に使用する`.babelrc`ファイルを指定します（このファイルフォーマットの詳細については、[Babel's documentation](https://babeljs.io/docs/usage/babelrc/)を参照してください）。
+プラグインの設定では、可能なすべてのフェーズでプラグインを設定するためのオプションと、バベルを実行する際に使用する`.babelrc`ファイルを指定します（このファイルフォーマットの詳細については、 [Babel's documentation](https://babeljs.io/docs/usage/babelrc/) を参照してください）。
 ```
 
 ```{note}

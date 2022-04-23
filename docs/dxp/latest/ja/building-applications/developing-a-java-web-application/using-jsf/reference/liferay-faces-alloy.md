@@ -6,7 +6,7 @@ Liferay Faces Alloyは、`.jar`ファイルで配布されます。 Liferay Face
 AlloyUIはLiferay DXP 7.2で廃止予定になりました。
 ```
 
-Liferay IDE/Developer StudioでのJSFポートレットの作成中に、ポートレットのJSF Component Suiteを選択するオプションがあります。 オプションには、 **JSF標準** 、[**ICEfaces**](http://www.icesoft.org/java/projects/ICEfaces/overview.jsf)、[**PrimeFaces**](http://primefaces.org/)、[**RichFaces**](http://richfaces.jboss.org/)、および **Liferay Faces Alloy** があります。
+Liferay IDE/Developer StudioでのJSFポートレットの作成中に、ポートレットのJSF Component Suiteを選択するオプションがあります。 オプションには、 **JSF標準** 、 [**ICEfaces**](http://www.icesoft.org/java/projects/ICEfaces/overview.jsf) 、 [**PrimeFaces**](http://primefaces.org/) 、 [**RichFaces**](http://richfaces.jboss.org/) 、および **Liferay Faces Alloy** があります。
 
 ポートレットのセットアップ中にLiferay Faces Alloy JSF Component Suiteを選択した場合、`.jar`ファイルはポートレットプロジェクトに含まれています。
 
@@ -22,6 +22,6 @@ YUI3に基づくLiferayのAlloyUIテクノロジーを利用する場合は、Li
 
 ## 追加情報
 
-* [Developing a JSF Portlet Application \(Help Center\)](https://help.liferay.com/hc/en-us/articles/360029069451-Developing-a-JSF-Portlet-Application)
+* [Developing a JSF Portlet Application \(Help Center\)](https://help.liferay.com/hc/ja/articles/360029069451-Developing-a-JSF-Portlet-Application)
 * [Liferay Faces Bridge](./liferay-faces-bridge.md)
 * [Liferay Faces Portal](./liferay-faces-portal.md)

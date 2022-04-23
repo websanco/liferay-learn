@@ -15,7 +15,7 @@ MVCレンダーコマンドは、レンダリングするページを処理す�
 1. サンプルをダウンロードして解凍します。
 
    ```bash
-   curl https://learn.liferay.com/dxp/latest/en/building-applications/developing-a-java-web-application/using-mvc/liferay-a4p1.zip -O
+   curl https://learn.liferay.com/dxp/latest/ja/building-applications/developing-a-java-web-application/using-mvc/liferay-a4p1.zip -O
    ```
 
    ```bash
@@ -73,7 +73,7 @@ MVCレンダーコマンドの動作を見てきました。 次に、それら�
 
 ## ポートレットを調べる
 
-`A4P1Portlet`は最小の[`MVCPortlet`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/portlet/bridges/mvc/MVCPortlet.java)です。
+`A4P1Portlet`は最小の [`MVCPortlet`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/portlet/bridges/mvc/MVCPortlet.java) です。
 
 ```{literalinclude} ./mvc-render-command/resources/liferay-a4p1.zip/a4p1-web/src/main/java/com/acme/a4p1/web/internal/portlet/A4P1Portlet.java
 :language: java
@@ -98,14 +98,14 @@ MVCレンダーコマンドの動作を見てきました。 次に、それら�
 
 ## MVCRenderCommandクラスを調べる
 
-MVCレンダーコマンドのクラスは、[`MVCRenderCommand`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/portlet/bridges/mvc/MVCRenderCommand.java)を直接実装することも、[`BaseMVCRenderCommand`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/portlet/bridges/mvc/BaseMVCRenderCommand.java)を拡張することもできます。  `A4P1AbleMVCRenderCommand`は、`MVCRenderCommand`を直接実装します。  `A4P1AbleMVCRenderCommand`は次のとおりです。
+MVCレンダーコマンドのクラスは、 [`MVCRenderCommand`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/portlet/bridges/mvc/MVCRenderCommand.java) を直接実装することも、 [`BaseMVCRenderCommand`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/portlet/bridges/mvc/BaseMVCRenderCommand.java) を拡張することもできます。  `A4P1AbleMVCRenderCommand`は、`MVCRenderCommand`を直接実装します。  `A4P1AbleMVCRenderCommand`は次のとおりです。
 
 ```{literalinclude} ./mvc-render-command/resources/liferay-a4p1.zip/a4p1-web/src/main/java/com/acme/a4p1/web/internal/portlet/action/A4P1AbleMVCRenderCommand.java
 :language: java
 :lines: 12-35
 ```
 
-`A4P1AbleMVCRenderCommand`は、`MVCRenderCommand`サービスを提供する[`Component`](https://docs.osgi.org/javadoc/osgi.cmpn/7.0.0/org/osgi/service/component/annotations/Component.html)です。 コンポーネントプロパティは、`A4P1AbleMVCRenderCommand`を`com_acme_a4p1_web_internal_portlet_A4P1Portlet`という名前のポートレットに適用し、`A4P1AbleMVCRenderCommand`をMVCコマンド名`/a4p1/able`にマップします。
+`A4P1AbleMVCRenderCommand`は、`MVCRenderCommand`サービスを提供する [`Component`](https://docs.osgi.org/javadoc/osgi.cmpn/7.0.0/org/osgi/service/component/annotations/Component.html) です。 コンポーネントプロパティは、`A4P1AbleMVCRenderCommand`を`com_acme_a4p1_web_internal_portlet_A4P1Portlet`という名前のポートレットに適用し、`A4P1AbleMVCRenderCommand`をMVCコマンド名`/a4p1/able`にマップします。
 
 ```{note}
 ポートレットごとに個別の `javax.portlet.name`プロパティを宣言することにより、`MVCRenderCommand`コンポーネントを複数のポートレットに関連付けることができます。 
@@ -139,7 +139,7 @@ MVCレンダーコマンドのクラスは、[`MVCRenderCommand`](https://github
 
 `portlet:renderURL`タグはポートレットtaglibから利用可能で、プレフィックス`portlet`が割り当てられます。 このレンダーURLは、`mvcRenderCommandName`ポートレットパラメーター値`/a4p1/baker`を宣言します。これは`A4P1AbleMVCRenderCommand`のMVCコマンド名です。 変数`bakerURL`は、このレンダーURLを参照します。
 
-ハイパーリンク`<a href="<%= bakerURL %>">Go to Baker</a>`は、レンダーURLをアクションにバインドします。 ユーザーがハイパーリンクをクリックすると、その`mvc.command.name`コンポーネントプロパティ値`/a4p1/baker`が`mvcRenderCommandName`パラメーター値と一致するため、ポートレットは[`RenderRequest`](https://docs.liferay.com/portlet-api/2.0/javadocs/javax/portlet/RenderRequest.html)を`A4P1BakerMVCRenderCommand`に送信します。
+ハイパーリンク`<a href="<%= bakerURL %>">Go to Baker</a>`は、レンダーURLをアクションにバインドします。 ユーザーがハイパーリンクをクリックすると、その`mvc.command.name`コンポーネントプロパティ値`/a4p1/baker`が`mvcRenderCommandName`パラメーター値と一致するため、ポートレットは [`RenderRequest`](https://docs.liferay.com/portlet-api/2.0/javadocs/javax/portlet/RenderRequest.html) を`A4P1BakerMVCRenderCommand`に送信します。
 
 `baker.jsp`は`able.jsp`に似ていますが、ポートレットレンダーURLの`mvcRenderCommandName`パラメーター値が`/a4p1/able`である点が異なります。 各JSPの`portlet:renderURL`タグは、MVCレンダーコマンドの`mvc.command.name`プロパティ値をタグの`mvcRenderCommandName`ポートレットパラメーターに割り当てることにより、MVCレンダーコマンドにマップされます。
 
@@ -157,7 +157,7 @@ MVCレンダーコマンドのクラスは、[`MVCRenderCommand`](https://github
 
 ## 追加情報
 
-* [MVC Resource Command](./mvc-resource-command.md)
-* [MVC Action Command](./mvc-action-command.md)
-* [Using Localized Messages in an MVC Portlet](./using-localized-messages-in-an-mvc-portlet.md)
+* [MVCリソースコマンド](./mvc-resource-command.md)
+* [MVCアクションコマンド (近日公開！)](./mvc-action-command.md)
+* [MVCポートレットでのローカライズされたメッセージの使用](./using-localized-messages-in-an-mvc-portlet.md)
 * [ポートレット](../reference/portlets.md)

@@ -2,11 +2,11 @@
 
 Liferay DXPでは、アプリケーションの構成をさまざまなレベルのスコープ（システム、インスタンス、サイト、またはポートレット）に設定できます。 たとえば、インスタンススコープ構成のアプリケーションを作成する場合、Liferay DXPのインストールでセットアップしたインスタンスごとにアプリケーションを個別に構成できます。 これは、各ユーザーに柔軟性とコントロールを提供するため、便利です。 たとえば、DXPインスタンスの管理者は、他のインスタンスから独立した独自のインスタンスの構成を設定できます。
 
-スコープの詳細については、[Understanding Configuration Scope](../../../system-administration/configuring-liferay/understanding-configuration-scope.md)を参照してください。
+スコープの詳細については、 [構成スコープについて](../../../system-administration/configuring-liferay/understanding-configuration-scope.md) を参照してください。
 
-インスタンススコープ構成の例を確認するには、[Setting and Accessing Configurations](./setting-and-accessing-configurations.md)のポートレットの例を参照してください。
+インスタンススコープ構成の例を確認するには、 [構成の設定とアクセス](./setting-and-accessing-configurations.md) のポートレットの例を参照してください。
 
-ポートレットスコープの構成は異なるアプローチを取ることに注意してください。 詳細については、 [Portlet Level Configuration](./portlet-level-configuration.md)を参照してください。
+ポートレットスコープの構成は異なるアプローチを取ることに注意してください。 詳細については、 [ポートレットレベルの設定](./portlet-level-configuration.md) を参照してください。
 
 ## 構成インターフェイスでスコープを指定する
 
@@ -27,4 +27,4 @@ Liferay DXPでは、アプリケーションの構成をさまざまなレベル
 
 * `getGroupConfiguration()`：サイトスコープの構成を取得します。 `Portal`のインスタンスを使用して`groupId`を取得します。 たとえば、`_portal.getScopeGroupId(renderRequest)`となります。 アプリケーションのサイトレベルの構成は、 ［**コントロールパネル**］ &rarr; ［**設定**］ &rarr; ［**サイト設定**］ にあります。 これは Liferay 7.4で利用できることに注意してください。
 
-ポートレットスコープの構成については、[Portlet Level Configuration](./portlet-level-configuration.md)を参照してください。
+ポートレットスコープの構成については、 [ポートレットレベルの設定](./portlet-level-configuration.md) を参照してください。

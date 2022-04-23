@@ -16,13 +16,13 @@
 
 1. **名前** を入力し、 ［**保存**］ をクリックします。
 
-保存すると、新しい空白のレイアウトが作成されます。 これで、カスタムレイアウトに[タブを追加](#adding-layout-tabs)し、エントリの作成と編集のためにオブジェクトのフィールドと関連をどのように編成するかを決定できます。
+保存すると、新しい空白のレイアウトが作成されます。 これで、カスタムレイアウトに [タブを追加](#adding-layout-tabs) し、エントリの作成と編集のためにオブジェクトのフィールドと関連をどのように編成するかを決定できます。
 
 ## レイアウトタブの追加 <!--TASK: Add drag and drop details once implemented.--> オブジェクト要素は、次の2種類のタブに整理できます。
 
 [**フィールド**](#fields-tabs)：オブジェクトエントリーフィールドを表示します。 これには、オブジェクトで直接作成されたフィールド、または ［**One to Many**］ の関係から継承されたフィールドが含まれます。 <!--TASK: Add in One to One after implemented--> [**関連**](#relationships-tabs)：関連テーブルを表示し、 ［**One to Many**］ の関係の親側と ［**Many to Many**］ の関係の両側を表示するために使用する必要があります。
 
-レイアウトを設計するには、必要なすべての[フィールド](#adding-fields-tabs)と[関連](#adding-relationships-tabs)を追加するまで、次の手順を繰り返します。
+レイアウトを設計するには、必要なすべての [フィールド](#adding-fields-tabs) と [関連](#adding-relationships-tabs) を追加するまで、次の手順を繰り返します。
 
 ```{important}
 オブジェクトエントリーの作成中は、最初のタブのみが表示されます。 他のタブは、オブジェクトエントリーを編集するときにのみ表示されます。
@@ -108,7 +108,7 @@
 
 ## 追加情報
 
-* [Creating Objects](./creating-objects.md)
-* [Adding Fields to Objects](./adding-fields-to-objects.md)
-* [Defining Object Relationships](./defining-object-relationships.md)
-* [Managing Objects](./managing-objects.md)
+* [オブジェクトの作成](./creating-objects.md)
+* [オブジェクトへのフィールドの追加](./adding-fields-to-objects.md)
+* [オブジェクトリレーションの定義](./defining-object-relationships.md)
+* [オブジェクトの管理](./managing-objects.md)

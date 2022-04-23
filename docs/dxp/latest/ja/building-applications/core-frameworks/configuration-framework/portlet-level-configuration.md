@@ -4,7 +4,7 @@
 
 構成フレームワークをポートレットのルック&フィールと組み合わせて使用できるため、アプリには、システム設定の構成UIと、ポートレットのセットアップタブのプリファレンスUIの両方を設定できます。
 
-ポートレットのルック&フィールがユーザーによって実装および設定されている場合、アプリケーションの構成はオーバーライドされることに注意してください。 詳細については、 [Portlet Preferences](../../developing-a-java-web-application/using-mvc/portlet-preferences.md)を参照してください。
+ポートレットのルック&フィールがユーザーによって実装および設定されている場合、アプリケーションの構成はオーバーライドされることに注意してください。 詳細については、 [ポートレットのルック&フィール](../../developing-a-java-web-application/using-mvc/portlet-preferences.md) を参照してください。
 
 ## サンプルコードを参照する
 
@@ -16,10 +16,10 @@
 
     別のLiferay PortalバージョンまたはLiferay DXPを実行している場合は、上記のコマンドを適宜調整してください。
 
-1. [ローカライズされたメッセージの共有](./liferay-x7y2.zip)をダウンロードして解凍します。
+1. [ローカライズされたメッセージの共有](./liferay-x7y2.zip) をダウンロードして解凍します。
 
     ```bash
-    curl https://learn.liferay.com/dxp/latest/en/building-applications/core-frameworks/configuration-framework/liferay-x7y2.zip -O
+    curl https://learn.liferay.com/dxp/latest/ja/building-applications/core-frameworks/configuration-framework/liferay-x7y2.zip -O
     ```
 
     ```bash
@@ -73,15 +73,15 @@
 
 この例は、より高いレベルに設定されたスコープでも機能することに注意してください（つまり、 サイト、インスタンス、システムスコープ）。 ベストプラクティスは、ポートレット設定で使用する予定のアプリケーションをポートレットスコープとしてマークすることです。
 
-詳細については、[Creating the Configuration Interface](./setting-and-accessing-configurations.html#Creating-the-Configuration-Interface)を参照してください。
+詳細については、 [Creating the Configuration Interface](./setting-and-accessing-configurations.html#Creating-the-Configuration-Interface) を参照してください。
 
 ## 構成Bean宣言を追加する
 
-`ConfigurationProvider`と同様に、`PortletDisplay`は、構成クラスを登録するために構成Bean宣言ファイルを必要とします。 詳細については、[構成Bean宣言](./setting-and-accessing-configurations.html#Create-a-Configuration-Bean-Declaration)を参照してください。
+`ConfigurationProvider`と同様に、`PortletDisplay`は、構成クラスを登録するために構成Bean宣言ファイルを必要とします。 詳細については、 [構成Bean宣言](./setting-and-accessing-configurations.html#Create-a-Configuration-Bean-Declaration) を参照してください。
 
 ## PortletDisplayで構成を読み取る
 
-[構成プロバイダーAPIから構成値を読み取る](./setting-and-accessing-configurations.html#Reading-the-Configuration-from-the-Application)のと同様に、ポートレット表示APIを使用してアプリケーションの構成値にアクセスできます。
+[構成プロバイダーAPIから構成値を読み取る](./setting-and-accessing-configurations.html#Reading-the-Configuration-from-the-Application) のと同様に、ポートレット表示APIを使用してアプリケーションの構成値にアクセスできます。
 
 ```{literalinclude} ./portlet-level-configuration/resources/liferay-x7y2.zip/x7y2-web/src/main/java/com/acme/x7y2/web/internal/portlet/X7Y2Portlet.java
 :language: java
@@ -92,7 +92,7 @@
 
 ## ポートレットのルック&フィールを設定する
 
-ポートレットにポートレットのルック&フィールを設定するには、構成JSPファイルと構成アクションもアプリケーションに追加する必要があります。 これらのファイルがポートレットでどのように機能するかについて詳しくは、[Portlet Preferences](../../developing-a-java-web-application/using-mvc/portlet-preferences.md)を参照してください。
+ポートレットにポートレットのルック&フィールを設定するには、構成JSPファイルと構成アクションもアプリケーションに追加する必要があります。 これらのファイルがポートレットでどのように機能するかについて詳しくは、 [ポートレットのルック&フィール](../../developing-a-java-web-application/using-mvc/portlet-preferences.md) を参照してください。
 
 ## 関連情報
 

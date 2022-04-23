@@ -15,7 +15,7 @@
 1. サンプルモジュールをダウンロードします。
 
    ```bash
-   curl https://learn.liferay.com/dxp/latest/en/building-applications/data-frameworks/liferay-f5d5.zip -O
+   curl https://learn.liferay.com/dxp/latest/ja/building-applications/data-frameworks/liferay-f5d5.zip -O
    ```
 
    ```bash
@@ -63,7 +63,7 @@
 - セレクターに必要な基準を定義する（つまり、どのエンティティを選択するか）
 - その基準のURLを作成する
 
-1. クラスの最後に、OSGiは`@Reference`アノテーションのために[`ItemSelector`クラス](https://github.com/liferay/liferay-portal/blob/7.3.4-ga5/modules/apps/item-selector/item-selector-api/src/main/java/com/liferay/item/selector/ItemSelector.java)インスタンスを挿入します。
+1. クラスの最後に、OSGiは`@Reference`アノテーションのために [`ItemSelector`クラス](https://github.com/liferay/liferay-portal/blob/7.3.4-ga5/modules/apps/item-selector/item-selector-api/src/main/java/com/liferay/item/selector/ItemSelector.java) インスタンスを挿入します。
 
    ```java
    @Reference
@@ -72,9 +72,9 @@
 
 1. ポートレットの`render`メソッドまでスクロールします。
 
-1. アイテムセレクターに表示する目的のエンティティを表す基準クラスが作成されます。 基準クラスは、[`ItemSelectorCriterion`インターフェイス](http://docs.liferay.com/portal/7.3-latest/apps/item-selector-3.0.4/javadocs/com/liferay/item/selector/ItemSelectorCriterion.html)を実装する必要があります。
+1. アイテムセレクターに表示する目的のエンティティを表す基準クラスが作成されます。 基準クラスは、 [`ItemSelectorCriterion`インターフェイス](http://docs.liferay.com/portal/7.3-latest/apps/item-selector-3.0.4/javadocs/com/liferay/item/selector/ItemSelectorCriterion.html) を実装する必要があります。
 
-   この例では、[`RoleItemSelectorCriterion`](http://docs.liferay.com/portal/7.3-latest/apps/roles-3.0.4/javadocs/com/liferay/roles/item/selector/RoleItemSelectorCriterion.html)への参照を使用して、ロールがセレクターに表示されるようにします。 これは、クラスの新しいインスタンスを作成することによって定義されます。
+   この例では、 [`RoleItemSelectorCriterion`](http://docs.liferay.com/portal/7.3-latest/apps/roles-3.0.4/javadocs/com/liferay/roles/item/selector/RoleItemSelectorCriterion.html) への参照を使用して、ロールがセレクターに表示されるようにします。 これは、クラスの新しいインスタンスを作成することによって定義されます。
 
    ```java
    ItemSelectorCriterion itemSelectorCriterion =
@@ -85,13 +85,13 @@
    必要なエンティティのタイプに基準が存在しない場合は、[BaseItemSelectorCriterion]を拡張することで独自の`ItemSelectorCriterion`を定義できます。
    ```
 
-1. 次に、ユーザーがエンティティを選択したときにエンティティが提供する情報を表す戻り値のタイプクラスが必要です。 戻り値のタイプクラスは、[`ItemSelectorReturnType`インターフェイス](http://docs.liferay.com/portal/7.3-latest/apps/item-selector-3.0.4/javadocs/com/liferay/item/selector/ItemSelectorReturnType.html)を実装する必要があります。  たとえば、戻り値のタイプクラスを使用して、エンティティのURL、UUID、またはプライマリーキーを返すことができます。 戻り値のタイプクラスは、以前に作成された基準クラスに追加されます。
+1. 次に、ユーザーがエンティティを選択したときにエンティティが提供する情報を表す戻り値のタイプクラスが必要です。 戻り値のタイプクラスは、 [`ItemSelectorReturnType`インターフェイス](http://docs.liferay.com/portal/7.3-latest/apps/item-selector-3.0.4/javadocs/com/liferay/item/selector/ItemSelectorReturnType.html) を実装する必要があります。  たとえば、戻り値のタイプクラスを使用して、エンティティのURL、UUID、またはプライマリーキーを返すことができます。 戻り値のタイプクラスは、以前に作成された基準クラスに追加されます。
 
    ```{important}
    使用されるすべての基準には、少なくとも1つの戻り値のタイプが関連付けられている必要があります。
    ```
 
-   この例では、[`UUIDItemSelectorReturnType`](http://docs.liferay.com/portal/7.3-latest/apps/item-selector-3.0.4/javadocs/com/liferay/item/selector/criteria/UUIDItemSelectorReturnType.html)への参照を使用して、選択したロールの`UUID`値を、戻す重要なデータとして定義します。 複数のロールが選択されている場合、それらはコンマ区切りのリストとして返されます。
+   この例では、 [`UUIDItemSelectorReturnType`](http://docs.liferay.com/portal/7.3-latest/apps/item-selector-3.0.4/javadocs/com/liferay/item/selector/criteria/UUIDItemSelectorReturnType.html) への参照を使用して、選択したロールの`UUID`値を、戻す重要なデータとして定義します。 複数のロールが選択されている場合、それらはコンマ区切りのリストとして返されます。
 
    ```{note}
    UUIDが使用できない場合は、プライマリーキーが返されます。
@@ -105,14 +105,14 @@
    ```
 
    ```{tip}
-   必要な情報のタイプの戻り値のタイプが存在しない場合は、独自の[ItemSelectorReturnType](https://github.com/liferay/liferay-portal/blob/7.3.4-ga5/modules/apps/item-selector/item-selector-api/src/main/java/com/liferay/item/selector/ItemSelectorReturnType.java)実装を定義できます。
+   必要な情報のタイプの戻り値のタイプが存在しない場合は、独自の [ItemSelectorReturnType](https://github.com/liferay/liferay-portal/blob/7.3.4-ga5/modules/apps/item-selector/item-selector-api/src/main/java/com/liferay/item/selector/ItemSelectorReturnType.java) 実装を定義できます。
    ```
 
    アイテムセレクターは、これら2つのクラスを使用して、表示するアイテムの選択ビュー（タブとして表示）と、各アイテムの識別方法を決定します。
 
 1. これで、条件を使用してアイテムセレクターのURLを生成できます。 このURLは、フロントエンドコードにアイテムセレクターダイアログを作成します。
 
-   [`RequestBackedPortletURLFactory`クラス](http://docs.liferay.com/portal/7.3-latest/javadocs/portal-kernel/com/liferay/portal/kernel/portlet/RequestBackedPortletURLFactory.html)は、次の基準を使用してアイテムセレクターのURLをすばやく生成できます。
+   [`RequestBackedPortletURLFactory`クラス](http://docs.liferay.com/portal/7.3-latest/javadocs/portal-kernel/com/liferay/portal/kernel/portlet/RequestBackedPortletURLFactory.html) は、次の基準を使用してアイテムセレクターのURLをすばやく生成できます。
 
    ```java
     PortletURL itemSelectorURL = _itemSelector.getItemSelectorURL(
@@ -153,7 +153,7 @@
 
    URLを取得したら、アイテムセレクターを開く方法を指定し、次に結果を使用する方法を定義する必要があります。
 
-1. [Clayボタン](https://clayui.com/docs/components/button.html)タグを使用して、アイテムセレクターを開くためのボタンを作成できます。
+1. [Clayボタン](https://clayui.com/docs/components/button.html) タグを使用して、アイテムセレクターを開くためのボタンを作成できます。
 
    ```jsp
    <clay:button

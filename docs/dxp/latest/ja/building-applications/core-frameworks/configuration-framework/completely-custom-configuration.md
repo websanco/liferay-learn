@@ -1,6 +1,6 @@
 # 完全なカスタム構成
 
-[インターフェイスを作成](./setting-and-accessing-configurations.html#creating-the-configuration-interface)すると、構成UIが自動的に生成されます。 ただし、構成に完全にカスタムのUIが必要な場合もあります。 たとえば、Liferayの構成管理を使用する代わりに、プログラムで構成を処理するよう計画している場合などです。 または、完全にカスタムのUIを作成する柔軟性が必要な場合もあります。 その方法は以下の通りです。
+[インターフェイスを作成](./setting-and-accessing-configurations.html#creating-the-configuration-interface) すると、構成UIが自動的に生成されます。 ただし、構成に完全にカスタムのUIが必要な場合もあります。 たとえば、Liferayの構成管理を使用する代わりに、プログラムで構成を処理するよう計画している場合などです。 または、完全にカスタムのUIを作成する柔軟性が必要な場合もあります。 その方法は以下の通りです。
 
 ## サンプルプロジェクトを参照する
 
@@ -12,10 +12,10 @@
 
     別のLiferay PortalバージョンまたはLiferay DXPを実行している場合は、上記のコマンドを適宜調整してください。
 
-1. [完全なカスタム構成](./liferay-u2g5.zip)をダウンロードして解凍します。
+1. [完全なカスタム構成](./liferay-u2g5.zip) をダウンロードして解凍します。
 
     ```bash
-    curl https://learn.liferay.com/dxp/latest/en/building-applications/core-frameworks/configuration-framework/liferay-u2g5.zip -O
+    curl https://learn.liferay.com/dxp/latest/ja/building-applications/core-frameworks/configuration-framework/liferay-u2g5.zip -O
     ```
 
     ```bash
@@ -82,7 +82,7 @@
     :lines: 24-40
     ```
 
-1. この例では、構成スコープは `system`に設定されています。 詳細については、[Scoping Configurations](./scoping-configurations.md)を参照してください。
+1. この例では、構成スコープは `system`に設定されています。 詳細については、 [スコープ設定](./scoping-configurations.md) を参照してください。
 
     ```{literalinclude} ./completely-custom-configuration/resources/liferay-u2g5.zip/u2g5-web/src/main/java/com/acme/u2g5/web/internal/configuration/admin/display/U2G5ConfigurationScreen.java
     :dedent: 1

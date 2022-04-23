@@ -2,7 +2,7 @@
 
 Liferay Objectsは、コードを書いたりモジュールをデプロイすることなく、アプリケーション全体を構築することができます。 ここでは、Liferayの [オブジェクト](../../objects.md) と [選択リスト](../using-picklists.md)を使用して、Time Off Requestアプリケーションを作成します。
 
-まず、部門の値を定義するための [選択リストを追加](#adding-a-department-picklist) します。 そして、 [Time Off Requests](#adding-a-time-off-request-object)用と[Employees](#adding-an-employee-object)用の2つのオブジェクトを作成します。 このプロセスでは、これらのオブジェクトを相互に関連付け、Time Off RequestオブジェクトにWebhookを追加します。 最後に、リレーションシップフィールドを表示するための[カスタムレイアウトを設計します](#designing-custom-object-layouts)。
+まず、部門の値を定義するための [選択リストを追加](#adding-a-department-picklist) します。 そして、 [Time Off Requests](#adding-a-time-off-request-object) 用と [Employees](#adding-an-employee-object) 用の2つのオブジェクトを作成します。 このプロセスでは、これらのオブジェクトを相互に関連付け、Time Off RequestオブジェクトにWebhookを追加します。 最後に、リレーションシップフィールドを表示するための [カスタムレイアウトを設計します](#designing-custom-object-layouts) 。
 
 ```{note}
 システムオブジェクトの拡張には制限があるため、リクエストとユーザープロファイルを関連付けるには、Employeeオブジェクトを作成する必要があります。 
@@ -124,7 +124,7 @@ docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_DXP_DOCKER_IMAGE$]
 
 1. ［**公開**］ をクリックします。
 
-公開されると、Liferay UIやHeadless APIを使ってエントリーを作成することができます。 しかし、これらのエントリをリクエストエントリに関連付けるためには、まず [カスタムレイアウト](#designing-custom-object-layouts)を作成する必要があります。
+公開されると、Liferay UIやHeadless APIを使ってエントリーを作成することができます。 しかし、これらのエントリをリクエストエントリに関連付けるためには、まず [カスタムレイアウト](#designing-custom-object-layouts) を作成する必要があります。
 
 ## カスタムオブジェクトレイアウトの設計
 
@@ -246,5 +246,5 @@ docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_DXP_DOCKER_IMAGE$]
 ## 追加情報
 
 * [Objects Overview](../../objects.md)
-* [Creating Objects](../creating-and-managing-objects/creating-objects.md)
+* [オブジェクトの作成](../creating-and-managing-objects/creating-objects.md)
 * [選択リストの使用](../using-picklists.md)

@@ -4,11 +4,11 @@
 
 ## Liferay Faces Archetypeポートレットの使用
 
-[Liferay Faces Archetypeポートレット](http://liferayfaces.org)を使用して、ポートレットに含める必要のあるLiferay Facesアーティファクトとバージョンを判別できます。 目的のLiferay Portalバージョン、JSFバージョン、コンポーネントスイート（オプション）、およびビルドツールを選択すると、ポートレットにはMavenアーキタイプからポートレットを生成するコマンドと、ビルドファイルにコピーできる依存関係のリストの両方が表示されます。 次のセクションでは、Liferay Facesアーティファクトの各バージョンに関する互換性情報を提供します。
+[Liferay Faces Archetypeポートレット](http://liferayfaces.org) を使用して、ポートレットに含める必要のあるLiferay Facesアーティファクトとバージョンを判別できます。 目的のLiferay Portalバージョン、JSFバージョン、コンポーネントスイート（オプション）、およびビルドツールを選択すると、ポートレットにはMavenアーキタイプからポートレットを生成するコマンドと、ビルドファイルにコピーできる依存関係のリストの両方が表示されます。 次のセクションでは、Liferay Facesアーティファクトの各バージョンに関する互換性情報を提供します。
 
 ## Liferay Faces Alloy
 
-[AlloyUI](http://alloyui.com/)を利用するJSFコンポーネントのスイートを提供します。
+[AlloyUI](http://alloyui.com/) を利用するJSFコンポーネントのスイートを提供します。
 
 | ブランチ                                                                        | アーティファクトの例                        | AlloyUI | JSF API | 追加情報                                                          |
 | --------------------------------------------------------------------------- | --------------------------------- | ------- | ------- | ------------------------------------------------------------- |
@@ -19,19 +19,19 @@
 
 ## Liferay Faces Bridge
 
-JSR 286（Portlet 2.0）およびJSR 362（Portlet 3.0）のリファレンス実装である[Apache Pluto](https://portals.apache.org/pluto/)内のポートレットとしてJSF Webアプリケーションをデプロイする機能を提供します。
+JSR 286（Portlet 2.0）およびJSR 362（Portlet 3.0）のリファレンス実装である [Apache Pluto](https://portals.apache.org/pluto/) 内のポートレットとしてJSF Webアプリケーションをデプロイする機能を提供します。
 
 | ブランチ                                                                                                                                                          | アーティファクトの例                                                                               | ポートレットAPI | JSF API |                           JCP仕様                           | 追加情報                                             |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |:---------:|:-------:|:---------------------------------------------------------:| ------------------------------------------------ |
-| API: [5.x](https://github.com/liferay/liferay-faces-bridge-api/tree/5.x)<br/>IMPL: [5.x](https://github.com/liferay/liferay-faces-bridge-impl/tree/5.x) | com.liferay.faces.bridge.api-5.0.0.jar<br/>com.liferay.faces.bridge.impl-5.0.0.jar |    3.0    |   2.2   |    [JSR 378](https://www.jcp.org/en/jsr/detail?id=378)    | **JCPによる「最終評価」中で、2020年にリリースされる予定です。** |
-| API: [4.x](https://github.com/liferay/liferay-faces-bridge-api/tree/4.x)<br/>IMPL: [4.x](https://github.com/liferay/liferay-faces-bridge-impl/tree/4.x) | com.liferay.faces.bridge.api-4.1.0.jar<br/>com.liferay.faces.bridge.impl-4.0.0.jar |    2.0    |   2.2   |    [JSR 329](https://www.jcp.org/en/jsr/detail?id=329)    | **JSF 2.2の非標準のブリッジ拡張機能が含まれています。** |
-| API: [3.x](https://github.com/liferay/liferay-faces-bridge-api/tree/3.x)<br/>IMPL: [3.x](https://github.com/liferay/liferay-faces-bridge-impl/tree/3.x) | com.liferay.faces.bridge.api-3.1.0.jar<br/>com.liferay.faces.bridge.impl-3.0.0.jar |    2.0    |   2.1   |    [JSR 329](https://www.jcp.org/en/jsr/detail?id=329)    | **JSF 2.1の非標準のブリッジ拡張機能が含まれています。** |
-| API: [2.x](https://github.com/liferay/liferay-faces-bridge-api/tree/2.x)<br/>IMPL: [2.x](https://github.com/liferay/liferay-faces-bridge-impl/tree/2.x) | com.liferay.faces.bridge.api-2.1.0.jar<br/>com.liferay.faces.bridge.impl-2.0.0.jar |    2.0    |   1.2   | [JSR 329](https://www.jcp.org/en/jsr/detail?id=329) (MR1) | **メンテナンスリリース1（MR1）のサポートが含まれています。** |
+| API: [5.x](https://github.com/liferay/liferay-faces-bridge-api/tree/5.x) <br/>IMPL: [5.x](https://github.com/liferay/liferay-faces-bridge-impl/tree/5.x) | com.liferay.faces.bridge.api-5.0.0.jar<br/>com.liferay.faces.bridge.impl-5.0.0.jar |    3.0    |   2.2   |    [JSR 378](https://www.jcp.org/en/jsr/detail?id=378)    | **JCPによる「最終評価」中で、2020年にリリースされる予定です。** |
+| API: [4.x](https://github.com/liferay/liferay-faces-bridge-api/tree/4.x) <br/>IMPL: [4.x](https://github.com/liferay/liferay-faces-bridge-impl/tree/4.x) | com.liferay.faces.bridge.api-4.1.0.jar<br/>com.liferay.faces.bridge.impl-4.0.0.jar |    2.0    |   2.2   |    [JSR 329](https://www.jcp.org/en/jsr/detail?id=329)    | **JSF 2.2の非標準のブリッジ拡張機能が含まれています。** |
+| API: [3.x](https://github.com/liferay/liferay-faces-bridge-api/tree/3.x) <br/>IMPL: [3.x](https://github.com/liferay/liferay-faces-bridge-impl/tree/3.x) | com.liferay.faces.bridge.api-3.1.0.jar<br/>com.liferay.faces.bridge.impl-3.0.0.jar |    2.0    |   2.1   |    [JSR 329](https://www.jcp.org/en/jsr/detail?id=329)    | **JSF 2.1の非標準のブリッジ拡張機能が含まれています。** |
+| API: [2.x](https://github.com/liferay/liferay-faces-bridge-api/tree/2.x) <br/>IMPL: [2.x](https://github.com/liferay/liferay-faces-bridge-impl/tree/2.x) | com.liferay.faces.bridge.api-2.1.0.jar<br/>com.liferay.faces.bridge.impl-2.0.0.jar |    2.0    |   1.2   | [JSR 329](https://www.jcp.org/en/jsr/detail?id=329) (MR1) | **メンテナンスリリース1（MR1）のサポートが含まれています。** |
 | 1.x                                                                                                                                                           | 該当なし                                                                                     |    1.0    |   1.2   |    [JSR 301](https://www.jcp.org/en/jsr/detail?id=301)    | **Liferay Faces BridgeがJSR 301を実装したことがないため、該当なし。** |
 
 ## Liferay Faces Bridge Ext
 
-[Liferay Portal](https://liferay.dev/-/portal)との互換性を提供し、フレンドリURLなどのLiferay固有の機能も利用するLiferay Faces Bridgeの拡張機能。
+[Liferay Portal](https://liferay.dev/-/portal) との互換性を提供し、フレンドリURLなどのLiferay固有の機能も利用するLiferay Faces Bridgeの拡張機能。
 
 | ブランチ                                                                   | アーティファクトの例                             | &nbsp;&nbsp;Liferay Portal API&nbsp;&nbsp; | &nbsp;&nbsp;ブリッジAPI&nbsp;&nbsp; | &nbsp;&nbsp;ポートレットAPI&nbsp;&nbsp; | JSF API |
 | ---------------------------------------------------------------------- | -------------------------------------- |:------------------------------------------:|:-------------------------------:|:---------------------------------:|:-------:|
@@ -46,7 +46,7 @@ JSR 286（Portlet 2.0）およびJSR 362（Portlet 3.0）のリファレンス�
 
 ## Liferay Faces Portal
 
-[Liferay Portal](https://liferay.dev/-/portal)によって提供されるJSPタグに基づくJSFコンポーネントのスイートを提供します。
+[Liferay Portal](https://liferay.dev/-/portal) によって提供されるJSPタグに基づくJSFコンポーネントのスイートを提供します。
 
 | ブランチ                                                               | アーティファクトの例                         | Liferay Portal API&nbsp;&nbsp; | &nbsp;&nbsp;ポートレットAPI | &nbsp;&nbsp;JSF API |
 | ------------------------------------------------------------------ | ---------------------------------- |:------------------------------:|:---------------------:|:-------------------:|

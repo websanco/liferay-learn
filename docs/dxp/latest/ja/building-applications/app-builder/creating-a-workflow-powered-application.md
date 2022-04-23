@@ -7,7 +7,7 @@
 サンプルアプリケーションを作成するには、以下をお読みください。
 
 * [ロール変更リクエストオブジェクトの作成](./creating-the-role-change-request-object.md)
-* [Creating the Role Change Request App](./creating-the-role-change-request-app.md)
+* [ロール変更リクエストアプリの作成](./creating-the-role-change-request-app.md)
 
 ワークフロー対応アプリは、オブジェクトのフォームが完了したと見なされる前に通過する必要のある手順を考慮して設計されています。
 
@@ -26,7 +26,7 @@
 
 ## アプリバージョン
 
-[ワークフロープロセスがバージョン管理されている](../../../process-automation/workflow/designing-and-managing-workflows/managing-workflows.md#viewing-and-restoring-workflow-revisions) ため、ワークフロー対応アプリはバージョン管理されています。 新しいバージョンのアプリは、以下のような場合に作成されます。
+[ワークフロープロセスがバージョン管理されている](../../process-automation/workflow/designing-and-managing-workflows/managing-workflows.md#viewing-and-restoring-workflow-revisions) ため、ワークフロー対応アプリはバージョン管理されています。 新しいバージョンのアプリは、以下のような場合に作成されます。
 
 - ワークフロープロセス（ワークフロープロセスの新しいバージョンを生成するアクション）のステップまたは遷移を追加、編集、または削除する。
 - ワークフローステップの1つでフォームビューを追加、更新、または削除する。
@@ -39,6 +39,6 @@
 ## 関連情報
 
 * [App Builder Overview](../app-builder.md)
-* [Creating a Standard Application](./creating-a-standard-application.md)
+* [標準アプリケーションの作成](./creating-a-standard-application.md)
 * [Workflow](../../process-automation/workflow/introduction-to-workflow.md)
 * [ロールと権限](../../users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.md)

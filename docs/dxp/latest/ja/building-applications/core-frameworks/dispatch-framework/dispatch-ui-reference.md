@@ -85,5 +85,5 @@ Talend **ジョブアーカイブ** `.zip`ファイルをディスパッチタ�
 
 ## 追加情報
 
-* [Using Dispatch](./using-dispatch.md)
-* [Understanding the Dispatch Framework](./understanding-the-dispatch-framework.md)
+* [ディスパッチの使用](./using-dispatch.md)
+* [ディスパッチフレームワークを理解する](./understanding-the-dispatch-framework.md)

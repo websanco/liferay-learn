@@ -2,7 +2,7 @@
 
 管理者とユーザーに、ポートレットのルック&フィールを使用してポートレットをカスタマイズする方法を提供できます。 ポートレットのルック&フィールを任意のMVCポートレットに追加して、ユーザーがプリファレンスにアクセスして設定するためのUIを提供できます。
 
-ポートレットのルック&フィールは、アプリケーションの構成とは別に保存されるプロパティであることに注意してください。 詳細については、[Portlet Level Configuration](../../core-frameworks/configuration-framework/portlet-level-configuration.md)を参照してください。
+ポートレットのルック&フィールは、アプリケーションの構成とは別に保存されるプロパティであることに注意してください。 詳細については、 [ポートレットレベルの設定](../../core-frameworks/configuration-framework/portlet-level-configuration.md) を参照してください。
 
 ## サンプル実装を参照する
 
@@ -17,7 +17,7 @@
 1. サンプルをダウンロードして解凍します。
 
     ```bash
-    curl https://learn.liferay.com/dxp/latest/en/building-applications/developing-a-java-web-application/using-mvc/liferay-p1z2.zip -O
+    curl https://learn.liferay.com/dxp/latest/ja/building-applications/developing-a-java-web-application/using-mvc/liferay-p1z2.zip -O
     ```
 
     ```bash
@@ -104,4 +104,4 @@ JSPファイルは、選択されたポートレット設定をチェックし�
 
 ## 関連情報
 
-* [Portlet Level Configuration](../../core-frameworks/configuration-framework/portlet-level-configuration.md)
+* [ポートレットレベルの設定](../../core-frameworks/configuration-framework/portlet-level-configuration.md)

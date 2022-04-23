@@ -4,7 +4,7 @@ PortletMVC4Springポートレットは、WARにパッケージ化されていま
 
 ## PortletMVC4Springプロジェクトを生成するためのMavenコマンド
 
-JSPXおよび[Thymeleaf](https://www.thymeleaf.org)ビューテンプレートを使用するPortletMVC4Springポートレットプロジェクトを生成するためのMavenコマンドは次のとおりです。
+JSPXおよび [Thymeleaf](https://www.thymeleaf.org) ビューテンプレートを使用するPortletMVC4Springポートレットプロジェクトを生成するためのMavenコマンドは次のとおりです。
 
 ### SP/JSPXフォームポートレット
 

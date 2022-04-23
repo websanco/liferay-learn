@@ -1,12 +1,12 @@
 # 権限設定フレームワークの統合
 
-作成されたオブジェクトは、Liferayの権限設定フレームワークと自動的に統合されます。 これは、[アプリケーション](#application-permissions)と[リソース](#resource-permissions)の権限を割り当てて、個々のオブジェクトとそのエントリーへのユーザーアクセスを管理できることを意味します。 ロールベースのアクセス制御により、適切なユーザーのみがアプリケーションのデータを表示・使用できるようにすることができます。
+作成されたオブジェクトは、Liferayの権限設定フレームワークと自動的に統合されます。 これは、 [アプリケーション](#application-permissions) と [リソース](#resource-permissions) の権限を割り当てて、個々のオブジェクトとそのエントリーへのユーザーアクセスを管理できることを意味します。 ロールベースのアクセス制御により、適切なユーザーのみがアプリケーションのデータを表示・使用できるようにすることができます。
 
 ロール権限を定義する際、アクティブオブジェクトがスコープとパネルカテゴリキーに従って表示されます。
 
 ## アプリケーションの権限
 
-アプリケーションの権限は、一般的なアプリケーション関連の操作を実行する権限を付与し、[リソース関連の権限](#object-resource-permissions)は含まれません。
+アプリケーションの権限は、一般的なアプリケーション関連の操作を実行する権限を付与し、 [リソース関連の権限](#object-resource-permissions) は含まれません。
 
 カスタムオブジェクトには、定義されたスコープに応じて、次の標準アプリケーションの権限が含まれます。
 
@@ -25,7 +25,7 @@
 
 ## リソース権限
 
-リソース権限は、アプリケーションリソースに関連する特定の機能を付与します。 これらの権限の中には、[データベースのエンティティ（＝モデルリソース）に対して操作](#actions-on-database-entities)を実行する権限を付与するものもあります。 また、アプリケーションコンテキストで[リソース関連の操作](#resource-related-actions)を実行する権限を付与するものもあります（例えば、新しいリソースエンティティの作成など）。
+リソース権限は、アプリケーションリソースに関連する特定の機能を付与します。 これらの権限の中には、 [データベースのエンティティ（＝モデルリソース）に対して操作](#actions-on-database-entities) を実行する権限を付与するものもあります。 また、アプリケーションコンテキストで [リソース関連の操作](#resource-related-actions) を実行する権限を付与するものもあります（例えば、新しいリソースエンティティの作成など）。
 
 各オブジェクトには、次のリソース権限もあります。
 
@@ -49,5 +49,5 @@
 
 * [Understanding Object Integrations](../understanding-object-integrations.md)
 * [Objects Overview](../../objects.md)
-* [Creating Objects](../creating-and-managing-objects/creating-objects.md)
-* [Managing Objects](../creating-and-managing-objects/managing-objects.md)
+* [オブジェクトの作成](../creating-and-managing-objects/creating-objects.md)
+* [オブジェクトの管理](../creating-and-managing-objects/managing-objects.md)

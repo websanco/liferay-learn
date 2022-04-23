@@ -36,7 +36,7 @@ blade create -t mvc-portlet -p com.acme.z3x1.portlet -c GuestbookPortlet guestbo
 
 ## サンプルプロジェクトの作成
 
-Liferayは、 [サンプルプロジェクト](https://github.com/liferay/liferay-blade-samples/tree/7.4)のGitHubリポジトリを維持しています。 これらは、プロジェクトの開始点として使用できるさまざまなLiferayテクノロジーの完全に実装されたサンプルです。 ただし、リポジトリにクローンを作成してアクセスするのではなく、Blade CLIを使用してローカルに作成できます。
+Liferayは、 [サンプルプロジェクト](https://github.com/liferay/liferay-blade-samples/tree/7.4) のGitHubリポジトリを維持しています。 これらは、プロジェクトの開始点として使用できるさまざまなLiferayテクノロジーの完全に実装されたサンプルです。 ただし、リポジトリにクローンを作成してアクセスするのではなく、Blade CLIを使用してローカルに作成できます。
 
 1. 必要なサンプルプロジェクトを見つけます。
 

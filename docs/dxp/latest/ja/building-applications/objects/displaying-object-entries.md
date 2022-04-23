@@ -62,6 +62,6 @@ Liferay Objectでは、既存のDXPフレームワークを使用して、オブ
 
 ## 追加情報
 
-* [Creating Objects](./creating-and-managing-objects/creating-objects.md)
+* [オブジェクトの作成](./creating-and-managing-objects/creating-objects.md)
 * [コレクションとコレクションページについて](../../content-authoring-and-management/collections-and-collection-pages/about-collections-and-collection-pages.md)
 * [About Display Page Templates and Display Pages](../../site-building/displaying-content/using-display-page-templates/about-display-page-templates-and-display-pages.md)

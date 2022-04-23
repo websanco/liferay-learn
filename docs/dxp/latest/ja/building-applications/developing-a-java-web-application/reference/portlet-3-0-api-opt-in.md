@@ -4,7 +4,7 @@
 
 ## 標準のポートレットの`@PortletApplication`アノテーション
 
-標準ポートレットは、[`@PortletApplication`](https://learn.liferay.com/reference/latest/en/portlet-api/javax/portlet/annotations/PortletApplication.html)アノテーションを指定するだけで済みます。
+標準ポートレットは、 [`@PortletApplication`](https://learn.liferay.com/reference/latest/en/portlet-api/javax/portlet/annotations/PortletApplication.html) アノテーションを指定するだけで済みます。
 
 ```java
 @PortletApplication(version="3.0") // 3.0 is the default for this annotation attribute

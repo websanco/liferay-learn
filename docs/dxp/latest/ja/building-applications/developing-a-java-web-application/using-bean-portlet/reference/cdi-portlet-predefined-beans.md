@@ -1,10 +1,10 @@
 # CDIポートレットの事前定義されたBean
 
-Liferay DXPは、[JSR 362](https://jcp.org/en/jsr/detail?id=362)で指定されているように、ポートレットの事前定義されたBeanと呼ばれるCDI用の注入可能なポートレットアーティファクトを提供します。  事前定義されたBeanには次の2つのタイプがあります。
+Liferay DXPは、 [JSR 362](https://jcp.org/en/jsr/detail?id=362) で指定されているように、ポートレットの事前定義されたBeanと呼ばれるCDI用の注入可能なポートレットアーティファクトを提供します。  事前定義されたBeanには次の2つのタイプがあります。
 
-* ポートレットリクエストスコープのBean（[`@PortletRequestScoped`](https://learn.liferay.com/reference/latest/en/portlet-api/javax/portlet/annotations/PortletRequestScoped.html)
+* ポートレットリクエストスコープのBean（ [`@PortletRequestScoped`](https://learn.liferay.com/reference/latest/en/portlet-api/javax/portlet/annotations/PortletRequestScoped.html)
 
-* 依存スコープのBean（[`@Dependent` scoped](https://docs.oracle.com/javaee/7/api/javax/enterprise/context/Dependent.html)）
+* 依存スコープのBean（ [`@Dependent` scoped](https://docs.oracle.com/javaee/7/api/javax/enterprise/context/Dependent.html) ）
 
 次の表は、各Beanのこれらの属性を示しています。
 

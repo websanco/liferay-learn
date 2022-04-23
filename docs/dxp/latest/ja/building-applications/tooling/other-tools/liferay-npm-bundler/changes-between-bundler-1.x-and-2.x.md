@@ -12,7 +12,7 @@
 
 ## ピア依存関係サポートの改善
 
-bundler 1.xでは、ウィジェット間で使用できる共有ピア依存パッケージは1つだけでした。 ウィジェットごとに独立した依存関係があるため、ピアの依存関係を完全に尊重することができます。 ピアの依存関係は、プロジェクトの名前の前にプロジェクトの名前が付いているため、プロジェクトで述べられているとおりに解決できます。 これは、[liferay-npm-bundler-plugin-inject-peer-dependencies](https://github.com/liferay/liferay-npm-build-tools/tree/master/packages/liferay-npm-bundler-plugin-inject-peer-dependencies) プラグインがあるために可能です。 すべてのJSモジュールは、必要な呼び出しをスキャンします。 バンドラーが必要なパッケージを `main.js` ファイルで見つけたが、 `package.json`で宣言されていない場合は、 `node_modules` フォルダで見つかった適切なバージョンに解決します。 次にプラグインは、新しい依存関係を必要なパッケージの出力 `package.json` に挿入します。
+bundler 1.xでは、ウィジェット間で使用できる共有ピア依存パッケージは1つだけでした。 ウィジェットごとに独立した依存関係があるため、ピアの依存関係を完全に尊重することができます。 ピアの依存関係は、プロジェクトの名前の前にプロジェクトの名前が付いているため、プロジェクトで述べられているとおりに解決できます。 これは、 [liferay-npm-bundler-plugin-inject-peer-dependencies](https://github.com/liferay/liferay-npm-build-tools/tree/master/packages/liferay-npm-bundler-plugin-inject-peer-dependencies) プラグインがあるために可能です。 すべてのJSモジュールは、必要な呼び出しをスキャンします。 バンドラーが必要なパッケージを `main.js` ファイルで見つけたが、 `package.json`で宣言されていない場合は、 `node_modules` フォルダで見つかった適切なバージョンに解決します。 次にプラグインは、新しい依存関係を必要なパッケージの出力 `package.json` に挿入します。
 
 挿入された依存バージョンの制約は、キャレットやその他のセマンティックバージョンの演算子なしで必要な特定のバージョン番号であることに注意してください。 これは、プロジェクトで見つかった正確なピア依存関係を尊重するためです。 より砕けたセマンティックバージョンの式を挿入すると、結果が不安定になる可能性があります。
 
@@ -22,4 +22,4 @@ bundler 1.xでは、ウィジェット間で使用できる共有ピア依存パ
 
 bundler 1.xでは、重複排除は自動的に行われましたが、それを制御することはできませんでした。 ただし、バージョン2.xでは、独自のパッケージを使用する代わりに、外部のOSGiバンドルからパッケージをインポートできるようになりました。 これにより、共有された依存関係を1つのプロジェクトに配置し、残りのプロジェクトから参照できます。 この新しい重複除外の方法は自動ではありませんが、各パッケージの解決方法を（ビルド時に）完全に制御できます。
 
-liferay-npm-bundlerのバージョン 1.x と 2.x の間で何が変更されたかを理解したところで、 [Migrating a liferay-npm-bundler Project from 1.x to 2.x](./bundler-migration-guide/migrating-bundler-projects-intro.md)に記載されている手順に従って、1.xプロジェクトを2.xに移行できます。
+liferay-npm-bundlerのバージョン 1.x と 2.x の間で何が変更されたかを理解したところで、 [1.xから2.xへのliferay-npm-bundlerプロジェクトの移行](./bundler-migration-guide/migrating-bundler-projects-intro.md) に記載されている手順に従って、1.xプロジェクトを2.xに移行できます。

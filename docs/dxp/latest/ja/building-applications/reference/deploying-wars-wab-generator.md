@@ -84,7 +84,7 @@ module.framework.web.generator.generated.wabs.store=true
 module.framework.web.generator.generated.wabs.store.dir=${module.framework.base.dir}/wabs
 ```
 
-これらのプロパティは、WABジェネレータに生成されたWABをインストールの`osgi/wabs/`フォルダに保存するように指示します。 生成されたWABは、上記のWABストラクチャーの例と同じ構造になっています。 [Module Framework Web Application Bundles](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#Module%20Framework%20Web%20Application%20Bundles)のプロパティセクションで詳細を説明しています。
+これらのプロパティは、WABジェネレータに生成されたWABをインストールの`osgi/wabs/`フォルダに保存するように指示します。 生成されたWABは、上記のWABストラクチャーの例と同じ構造になっています。 [Module Framework Web Application Bundles](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#Module%20Framework%20Web%20Application%20Bundles) のプロパティセクションで詳細を説明しています。
 
 WARプラグインをWABとしてデプロイでき、WABのコピーを保存して調べる方法が分かりました。
 
@@ -92,6 +92,6 @@ WARプラグインをWABとしてデプロイでき、WABのコピーを保存�
 
 ## 追加情報
 
-* [JARs Excluded from WABs](./jars-excluded-from-wabs.md)
-* [Resolving Third Party Library Package Dependencies](../../liferay-internals/fundamentals/configuring-dependencies/resolving-third-party-library-package-dependencies.md)
+* [WABから除外されたJAR](./jars-excluded-from-wabs.md)
+* [サードパーティライブラリパッケージの依存関係の解決](../../liferay-internals/fundamentals/configuring-dependencies/resolving-third-party-library-package-dependencies.md)
 * [モジュールのライフサイクル](../../liferay-internals/architecture/module-lifecycle.md)

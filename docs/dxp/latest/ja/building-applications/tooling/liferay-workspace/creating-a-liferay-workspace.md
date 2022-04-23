@@ -4,7 +4,7 @@ Liferay Workspaceは手動または[Blade CLI](../blade-cli/installing-and-updat
 
 ## Liferay Workspaceを手動で作成する
 
-Liferay Workspaceを手動で作成するには、[Gradle](https://gradle.org)がインストールされている必要があります。 また、ターゲットとするLiferay製品（DXP、ポータルローリングリリース、またはコマース）のIDを知っているか、`blade init -l` コマンドを使用してBlade CLIで検索できる必要があります。
+Liferay Workspaceを手動で作成するには、 [Gradle](https://gradle.org) がインストールされている必要があります。 また、ターゲットとするLiferay製品（DXP、ポータルローリングリリース、またはコマース）のIDを知っているか、`blade init -l` コマンドを使用してBlade CLIで検索できる必要があります。
 
 1.  ワークスペースを保存するフォルダをシステム上に作成します。
 

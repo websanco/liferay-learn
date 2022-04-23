@@ -22,12 +22,12 @@
       正しいエグゼキュータが一致するように、値は一意である必要があります。 値が一意でない場合、ログには起動時にエラーが表示され、同じプロパティ値を持つエグゼキュータが示されます。
       ```
 
-1. [**`DispatchTaskExecutor`**](https://github.com/liferay/liferay-portal/blob/master/modules/apps/dispatch/dispatch-api/src/main/java/com/liferay/dispatch/executor/DispatchTaskExecutor.java)：`DispatchTaskExecutor`インターフェイスを実装するか、その実装を拡張します（`BaseDispatchTaskExecutor`など）。
+1. [**`DispatchTaskExecutor`**](https://github.com/liferay/liferay-portal/blob/master/modules/apps/dispatch/dispatch-api/src/main/java/com/liferay/dispatch/executor/DispatchTaskExecutor.java) ：`DispatchTaskExecutor`インターフェイスを実装するか、その実装を拡張します（`BaseDispatchTaskExecutor`など）。
 
       ```{important}
       ディスパッチフレームワークはタスクの同時実行を制御するためにこれらのログに依存しているため、 `DispatchTaskExecutor`インターフェイスの実装はディスパッチタスクのステータスログを処理する必要があります。
 
-      便宜を図るため、Liferayは、ディスパッチタスクのステータスを`IN PROGRESS`、`SUCCESSFUL`、または`FAILED`としてログに記録する`BaseDispatchTaskExecutor`抽象[クラス](https://github.com/liferay/liferay-portal/blob/master/modules/apps/dispatch/dispatch-api/src/main/java/com/liferay/dispatch/executor/BaseDispatchTaskExecutor.java)を提供します。 
+      便宜を図るため、Liferayは、ディスパッチタスクのステータスを`IN PROGRESS`、`SUCCESSFUL`、または`FAILED`としてログに記録する`BaseDispatchTaskExecutor`抽象 [クラス](https://github.com/liferay/liferay-portal/blob/master/modules/apps/dispatch/dispatch-api/src/main/java/com/liferay/dispatch/executor/BaseDispatchTaskExecutor.java) を提供します。 
       ```
 
 1. **メソッド** ：`DispatchTaskExecutor`インターフェイスを直接実装している場合は、`execute()`メソッドをオーバーライドしてカスタムロジックを実装します。 代わりに、`BaseDispatchTaskExecutor`抽象クラスを拡張する場合は、その`doExecute()`メソッドをオーバーライドします。
@@ -77,7 +77,7 @@
    STARTED com.acme.s7a3.impl-1.0.0 [1656]
    ```
 
-1. モジュールを使用してLiferayインスタンスに[新しいディスパッチタスクを追加](./using-dispatch.md#adding-a-new-dispatch-task)することにより、モジュールが機能していることを確認します。
+1. モジュールを使用してLiferayインスタンスに [新しいディスパッチタスクを追加](./using-dispatch.md#adding-a-new-dispatch-task) することにより、モジュールが機能していることを確認します。
 
    ![新しいテンプレートを使用して、新しいディスパッチタスクを追加します。](./creating-a-new-dispatch-task-executor/images/01.png)
 
@@ -108,6 +108,6 @@
 
 ## 追加情報
 
-* [Understanding the Dispatch Framework](./understanding-the-dispatch-framework.md)
-* [Using Dispatch](./using-dispatch.md)
-* [Dispatch UI Reference](./dispatch-ui-reference.md)
+* [ディスパッチフレームワークを理解する](./understanding-the-dispatch-framework.md)
+* [ディスパッチの使用](./using-dispatch.md)
+* [ディスパッチUIリファレンス](./dispatch-ui-reference.md)

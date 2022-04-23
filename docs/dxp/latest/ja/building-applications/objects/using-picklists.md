@@ -40,7 +40,7 @@
 
 ## オブジェクトへの選択リストフィールドの追加
 
-リストが作成されると、オブジェクトフィールドを作成する際に選択することができます。 **選択リスト** フィールドタイプを選択し、必要なリストを選択します。 詳細については、[Adding Fields to Objects](./creating-and-managing-objects/adding-fields-to-objects.md)を参照してください。
+リストが作成されると、オブジェクトフィールドを作成する際に選択することができます。 **選択リスト** フィールドタイプを選択し、必要なリストを選択します。 詳細については、 [オブジェクトへのフィールドの追加](./creating-and-managing-objects/adding-fields-to-objects.md) を参照してください。
 
 ![ユーザーは、新しいオブジェクトフィールドを作成するときに選択リストを選択できます。](./using-picklists/images/05.png)
 

@@ -1,6 +1,6 @@
 # AMD向けにJavaScriptモジュールをフォーマットする方法
 
-Liferay AMDローダーは[AMD仕様](https://github.com/amdjs/amdjs-api/wiki/AMD)に基づいています。 npm OSGiバンドル内のすべてのモジュールは、AMD形式でなければなりません。 これは [CommonJS](http://www.commonjs.org/)モジュールに対して、`定義`呼び出しの中でモジュールコードをラップすることによって行われます。 liferay-npm-bundlerは、モジュールをラップして、このプロセスを自動化するのに役立ちます。 以下の構造について詳しくは、 [OSGi Bundles and npm Package Structure](./the-structure-of-osgi-bundles-containing-npm-packages.md)をご覧ください。
+Liferay AMDローダーは [AMD仕様](https://github.com/amdjs/amdjs-api/wiki/AMD) に基づいています。 npm OSGiバンドル内のすべてのモジュールは、AMD形式でなければなりません。 これは [CommonJS](http://www.commonjs.org/) モジュールに対して、`定義`呼び出しの中でモジュールコードをラップすることによって行われます。 liferay-npm-bundlerは、モジュールをラップして、このプロセスを自動化するのに役立ちます。 以下の構造について詳しくは、 [OSGiバンドルとnpmパッケージ構造](./the-structure-of-osgi-bundles-containing-npm-packages.md) をご覧ください。
 
 - `my-bundle/`
     - `META-INF/`

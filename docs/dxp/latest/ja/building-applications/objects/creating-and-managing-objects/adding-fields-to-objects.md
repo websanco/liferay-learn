@@ -1,8 +1,8 @@
 # オブジェクトへのフィールドの追加
 
-フィールドは、データベースの列を表すデータ定義です。 Liferay Objectのさまざまな[タイプの値](#field-type-reference)を格納します。 システムオブジェクトとカスタムオブジェクトの両方を含む、公開済みオブジェクトまたは未公開オブジェクトにフィールドを追加できます。
+フィールドは、データベースの列を表すデータ定義です。 Liferay Objectのさまざまな [タイプの値](#field-type-reference) を格納します。 システムオブジェクトとカスタムオブジェクトの両方を含む、公開済みオブジェクトまたは未公開オブジェクトにフィールドを追加できます。
 
-オブジェクトが[公開](./creating-objects.md#publishing-object-drafts)されると、ドラフトのデータ定義を使用して初期データベーステーブルが作成されます。 このテーブルには、公開時に存在するすべてのオブジェクトフィールドと関係が含まれます。 公開後にオブジェクトに追加されたフィールドと関係は、サイドテーブルに追加されます（つまり、 `[Initial_Table_Name]_x`）。
+オブジェクトが [公開](./creating-objects.md#publishing-object-drafts) されると、ドラフトのデータ定義を使用して初期データベーステーブルが作成されます。 このテーブルには、公開時に存在するすべてのオブジェクトフィールドと関係が含まれます。 公開後にオブジェクトに追加されたフィールドと関係は、サイドテーブルに追加されます（つまり、 `[Initial_Table_Name]_x`）。
 
 ```{important}
 フィールドがオブジェクトドラフトに保存されている場合は、その設定と値を編集できます。 ただし、フィールドが公開されるか、公開されたオブジェクトに保存されると、そのラベルのみを編集できます。 他のすべての値と設定は変更できません。 
@@ -30,7 +30,7 @@
    次のフ項目名はLiferayによって予約されており、カスタムフィールドには使用できません： `companyId`、` createDate`、 `groupId`、` id`、 `lastPublishDate`、` ModifiedDate`、 `status`、` statusByUserId`、 `statusByUserName `、` statusDate`、 `userId`、` userName`。 ユーザーがこれらの項目名のいずれかを使用してフィールドを作成しようとすると、Liferayはエラーメッセージを表示します。
    ```
 
-1. フィールドの **タイプ** を選択します。 詳細については、[Field Type Reference](#field-type-reference)を参照してください。
+1. フィールドの **タイプ** を選択します。 詳細については、 [Field Type Reference](#field-type-reference) を参照してください。
 
 1. フィールドが ［**Mandatory**］ かどうかを決定します。
 
@@ -55,7 +55,7 @@
 
 ## 追加情報
 
-* [Creating Objects](./creating-objects.md)
-* [Defining Object Relationships](./defining-object-relationships.md)
-* [Designing Object Layouts](./designing-object-layouts.md)
-* [Managing Objects](./managing-objects.md)
+* [オブジェクトの作成](./creating-objects.md)
+* [オブジェクトリレーションの定義](./defining-object-relationships.md)
+* [オブジェクトレイアウトの設計](./designing-object-layouts.md)
+* [オブジェクトの管理](./managing-objects.md)

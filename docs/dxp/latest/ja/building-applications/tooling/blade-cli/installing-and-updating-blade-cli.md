@@ -14,7 +14,7 @@ LinuxおよびMacオペレーティングシステム用のBlade CLIのインス
 curl -L https://raw.githubusercontent.com/liferay/liferay-blade-cli/master/cli/installers/local | sh
 ```
 
-インストールが完了すると、`Bladeが正常にインストールされました`というメッセージが表示されます。 新しいコマンドラインを開き、`blade`と入力します。 エラーが見つからないコマンドがある場合は、[パス](./troubleshooting-blade-cli.md#the-blade-command-is-not-available-in-my-cli)に`blade`コマンドを追加</0>する必要があります。
+インストールが完了すると、`Bladeが正常にインストールされました`というメッセージが表示されます。 新しいコマンドラインを開き、`blade`と入力します。 エラーが見つからないコマンドがある場合は、 [パス](./troubleshooting-blade-cli.md#the-blade-command-is-not-available-in-my-cli) に`blade`コマンドを追加</0>する必要があります。
 
 ### グラフィカルインストーラーからインストールする
 

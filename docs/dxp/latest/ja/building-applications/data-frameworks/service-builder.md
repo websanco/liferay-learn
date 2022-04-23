@@ -37,7 +37,7 @@ service-builder/reference.md
 * カスタムSQLクエリと動的クエリを追加するための柔軟性とサポート
 
 ```{note}
-DXP / Portalのバックエンドサービスにはサービスビルダーを使用する必要はありません。 JPAやHibernateなど、選択した永続フレームワークを使用することは完全に可能です。 内部的には、サービスビルダーは[Hibernate](http://hibernate.org/)を使用することに注意してください。 
+DXP / Portalのバックエンドサービスにはサービスビルダーを使用する必要はありません。 JPAやHibernateなど、選択した永続フレームワークを使用することは完全に可能です。 内部的には、サービスビルダーは [Hibernate](http://hibernate.org/) を使用することに注意してください。 
 ```
 
 ## 実装クラスによるカスタマイズ
@@ -48,7 +48,7 @@ DXP / Portalのバックエンドサービスにはサービスビルダーを�
 
 ***ローカルサービスの実装**（`*LocalServiceImpl.java`）：永続レイヤーを呼び出してデータエンティティを取得および保存する役割を担います。 ローカルサービスはビジネスロジックを含み、永続レイヤーにアクセスします。 これらは、同じJava仮想マシンで実行されているクライアントコードによって呼び出すことができます。
 
-***リモートサービスの実装**（`*ServiceImpl.java`）：`service.xml`がリモートサービス用に構成されている場合に生成されます。 リモートサービスには通常、権限チェックコードが含まれており、JVMの外部からアクセスできるようになっています。 サービスビルダーは、JSONまたはSOAPを介してリモートサービスを利用できるようにするコードを自動的に生成します。また、[RESTビルダー](../../headless-delivery/producing-apis-with-rest-builder/producing-apis-with-rest-builder.md)または[JAX-RS](https://help.liferay.com/hc/en-us/articles/360031902292-JAX-RS)を介して独自のリモートAPIを作成することもできます。
+***リモートサービスの実装**（`*ServiceImpl.java`）：`service.xml`がリモートサービス用に構成されている場合に生成されます。 リモートサービスには通常、権限チェックコードが含まれており、JVMの外部からアクセスできるようになっています。 サービスビルダーは、JSONまたはSOAPを介してリモートサービスを利用できるようにするコードを自動的に生成します。また、[RESTビルダー](../../headless-delivery/producing-apis-with-rest-builder/producing-apis-with-rest-builder.md)または [JAX-RS](https://help.liferay.com/hc/ja/articles/360031902292-JAX-RS) を介して独自のリモートAPIを作成することもできます。
 
 これらのクラスは、カスタムビジネスロジックを実装する場所です。 これらは、カスタマイズを目的としてサービスビルダーによって生成される唯一のクラスです。
 
@@ -66,4 +66,4 @@ DXP / Portalのバックエンドサービスにはサービスビルダーを�
 
 ## 次のステップ
 
-サイトビルダーは、Liferay DXPとそのアプリケーション全体で排他的に使用されるため、十分にテストされており、堅牢です。 これにより、初期開発時間と、プロジェクトの保守、拡張、またはカスタマイズに費やす必要のある時間の両方で、多くの開発時間が節約されます。 開始するには、[Service Builder Basics](./service-builder/service-builder-basics.md)から始めてください。
+サイトビルダーは、Liferay DXPとそのアプリケーション全体で排他的に使用されるため、十分にテストされており、堅牢です。 これにより、初期開発時間と、プロジェクトの保守、拡張、またはカスタマイズに費やす必要のある時間の両方で、多くの開発時間が節約されます。 開始するには、 [サービスビルダーの基本](./service-builder/service-builder-basics.md) から始めてください。

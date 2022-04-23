@@ -84,9 +84,9 @@ Workspaceがプロジェクトを認識していることを確認するには�
 
 1. 対象となるLiferayリリースを見つけます。
 
-   **DXP：**[［Liferay Workspace Target Versions］](https://help.liferay.com/hc/en-us/articles/360041818312)ページに移動し、バンドルURLをクリップボードにコピーします。
+   **DXP：** [［Liferay Workspace Target Versions］](https://help.liferay.com/hc/ja/articles/360041818312) ページに移動し、バンドルURLをクリップボードにコピーします。
 
-   **CE：**[releases-cdn.liferay.com/portal](https://releases-cdn.liferay.com/portal)を閲覧し、必要なバンドルを見つけて、そのURLをクリップボードにコピーします。
+   **CE：** [releases-cdn.liferay.com/portal](https://releases-cdn.liferay.com/portal) を閲覧し、必要なバンドルを見つけて、そのURLをクリップボードにコピーします。
 
 1. ワークスペースのルートフォルダから`gradle.properties`を開き、バンドルURLプロパティを設定します。
 
@@ -142,5 +142,5 @@ Liferay Workspaceに追加されたバンドルにコードをデプロイする
 
 ## 関連トピック
 
-* [Configuring a Liferay Docker Container](./configuring-a-liferay-docker-container.md)
-* [Generating Projects with Blade CLI](../blade-cli/generating-projects-with-blade-cli.md)
+* [LiferayのDockerコンテナの設定](./configuring-a-liferay-docker-container.md)
+* [Blade CLIを使用したプロジェクトの生成](../blade-cli/generating-projects-with-blade-cli.md)

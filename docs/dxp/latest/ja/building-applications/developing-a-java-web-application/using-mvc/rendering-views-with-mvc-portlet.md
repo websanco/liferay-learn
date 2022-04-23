@@ -21,7 +21,7 @@
 1. サンプルをダウンロードして解凍します。
 
    ```bash
-   curl https://learn.liferay.com/dxp/latest/en/building-applications/developing-a-java-web-application/using-mvc/liferay-c8m3.zip -O
+   curl https://learn.liferay.com/dxp/latest/ja/building-applications/developing-a-java-web-application/using-mvc/liferay-c8m3.zip -O
    ```
 
    ```bash
@@ -92,14 +92,14 @@
 
 ## デフォルトビューの設定
 
-ポートレットのデフォルトビューは、ユーザーが最初にポートレットのページにアクセスしたときにレンダリングされます。 ポートレットクラスの初期化パラメーターは、デフォルトビューを設定します。 `C8M3Portlet.java`のサンプルクラスは、[`@Component`](https://osgi.org/javadoc/r6/residential/org/osgi/service/component/annotations/Component.html)でデフォルトビューを設定します。
+ポートレットのデフォルトビューは、ユーザーが最初にポートレットのページにアクセスしたときにレンダリングされます。 ポートレットクラスの初期化パラメーターは、デフォルトビューを設定します。 `C8M3Portlet.java`のサンプルクラスは、 [`@Component`](https://osgi.org/javadoc/r6/residential/org/osgi/service/component/annotations/Component.html) でデフォルトビューを設定します。
 
 ```{literalinclude} ./rendering-views-with-mvc-portlet/resources/liferay-c8m3.zip/c8m3-web/src/main/java/com/acme/c8m3/web/internal/portlet/C8M3Portlet.java
    :language: java
    :lines: 16-24
 ```
 
-[`@Component`](https://osgi.org/javadoc/r6/residential/org/osgi/service/component/annotations/Component.html)プロパティ`"javax.portlet.init-param.view-template=/view1.jsp"`は、デフォルトのビューテンプレートとして`/view1.jsp`を指定します。 テンプレートパスは、ポートレットの`src/main/resources/META-INF/resources`フォルダへの相対パスです。
+[`@Component`](https://osgi.org/javadoc/r6/residential/org/osgi/service/component/annotations/Component.html) プロパティ`"javax.portlet.init-param.view-template=/view1.jsp"`は、デフォルトのビューテンプレートとして`/view1.jsp`を指定します。 テンプレートパスは、ポートレットの`src/main/resources/META-INF/resources`フォルダへの相対パスです。
 
 次に、ビュー1がビュー2にリンクする方法を学習します。
 
@@ -111,7 +111,7 @@
    :language: jsp
 ```
 
-`portlet:renderURL`タグはポートレットtaglibから取得され、プレフィックス`portlet`が割り当てられます。 上記のレンダーURLは、変数`view2URL`に割り当てられています。 レンダーURLは、`mvcPath`という名前の`portlet:param`に値`/view_2.jsp`を宣言します。 ポートレットがレンダリングされると、`mvcPath`パラメーターがポートレットの[`RenderRequest`](https://docs.liferay.com/portlet-api/2.0/javadocs/javax/portlet/RenderRequest.html)オブジェクトに追加されます。 ポートレットリクエストの処理時に、[`MVCPortlet`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/portlet/bridges/mvc/MVCPortlet.java)は`mvcPath`に割り当てられたテンプレートをレンダリングします。
+`portlet:renderURL`タグはポートレットtaglibから取得され、プレフィックス`portlet`が割り当てられます。 上記のレンダーURLは、変数`view2URL`に割り当てられています。 レンダーURLは、`mvcPath`という名前の`portlet:param`に値`/view_2.jsp`を宣言します。 ポートレットがレンダリングされると、`mvcPath`パラメーターがポートレットの [`RenderRequest`](https://docs.liferay.com/portlet-api/2.0/javadocs/javax/portlet/RenderRequest.html) オブジェクトに追加されます。 ポートレットリクエストの処理時に、 [`MVCPortlet`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/portlet/bridges/mvc/MVCPortlet.java) は`mvcPath`に割り当てられたテンプレートをレンダリングします。
 
 ポートレットがレンダーURLを使用するには、そのURLをハイパーリンクやボタンなどのUIコンポーネントにバインドする必要があります。 ハイパーリンク`<a href="<%= view2URL %>">［Go to View 2］</a>`は、レンダーURLをUIコンポーネントにバインドします。
 
@@ -127,7 +127,7 @@
    :lines: 26-40
 ```
 
-`C8M3Portlet`の`render`メソッドは、`mvcPath`パラメーター値をログに記録してから、ポートレットのレンダリングをスーパークラス`MVCPortlet`に委任します。  [`MVCPortlet`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/portlet/bridges/mvc/MVCPortlet.java)は、`mvcPath`ポートレットリクエストパラメータに割り当てられたビューをレンダリングします。
+`C8M3Portlet`の`render`メソッドは、`mvcPath`パラメーター値をログに記録してから、ポートレットのレンダリングをスーパークラス`MVCPortlet`に委任します。  [`MVCPortlet`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/portlet/bridges/mvc/MVCPortlet.java) は、`mvcPath`ポートレットリクエストパラメータに割り当てられたビューをレンダリングします。
 
 ```{note}
 `mvcPath`リクエストパラメータがない場合、` MVCPortlet`はデフォルトのテンプレート（つまり、 `javax.portlet.init-param.view-template`コンポーネントプロパティが指定するテンプレート）を表示します。
@@ -147,7 +147,7 @@
 
 ## 追加情報
 
-* [MVC Render Command](./mvc-render-command.md)
-* [MVC Action Command](./mvc-action-command.md)
-* [Using Localized Messages in an MVC Portlet](./using-localized-messages-in-an-mvc-portlet.md)
+* [MVCレンダーコマンド (近日公開！)](./mvc-render-command.md)
+* [MVCアクションコマンド (近日公開！)](./mvc-action-command.md)
+* [MVCポートレットでのローカライズされたメッセージの使用](./using-localized-messages-in-an-mvc-portlet.md)
 * [ポートレット](../reference/portlets.md)

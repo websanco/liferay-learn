@@ -19,7 +19,7 @@ DXP/Portalにデプロイされたサービスビルダーサービスは、同�
 1. サンプルをダウンロードして解凍します。
 
    ```bash
-   curl https://learn.liferay.com/dxp/latest/en/building-applications/data-frameworks/service-builder/service-builder-basics/liferay-t2p5.zip -O
+   curl https://learn.liferay.com/dxp/latest/ja/building-applications/data-frameworks/service-builder/service-builder-basics/liferay-t2p5.zip -O
    ```
 
    ```bash
@@ -98,7 +98,7 @@ The `t2p5-web` module's portlet application depends on the `T2P5EntryLocalServic
 ```
 
 ```{note}
-アーティファクトの検索と依存関係の指定については、[Configuring Dependencies](../../../../liferay-internals/fundamentals/configuring-dependencies.md)を参照してください。
+アーティファクトの検索と依存関係の指定については、 [依存関係の構成 (近日公開！)](../../../../liferay-internals/fundamentals/configuring-dependencies.md) を参照してください。
 ```
 
 ## ポートレットを調べる
@@ -115,7 +115,7 @@ The `t2p5-web` module's portlet application depends on the `T2P5EntryLocalServic
 `_t2p5EntryLocalService`フィールドの`@Reference`アノテーションは、`T2P5EntryLocalService`コンポーネントインスタンスをフィールドに挿入するようにランタイムフレームワークにシグナルを送信します。
 
 ```{note}
-`@Reference`アノテーションの使用に関する詳細と、他の方法でサービスにアクセスする詳細については、[Core Frameworks](../../../core-frameworks.md)の*依存性注入*を参照してください。
+`@Reference`アノテーションの使用に関する詳細と、他の方法でサービスにアクセスする詳細については、 [コアフレームワーク](../../../core-frameworks.md) の*依存性注入*を参照してください。
 ```
 
 `addT2P5Entry`メソッドは、`T2P5EntryLocalService`'の`addT2P5Entry`メソッドを呼び出し、`ActionRequest`から取得した説明と名前のパラメーターを渡します。
@@ -149,7 +149,7 @@ JSPは、次のタグライブラリのタグを使用します。
 `<aui:form>`は、エントリーの名前と説明のテキストフィールドをレンダリングします。 フォームを送信すると、その値が`ActionRequest`とともにポートレットメソッドに渡されます。
 
 ```{note}
-ポートレットアクションの詳細については、[Invoking Actions with MVC Portlet](../../../developing-a-java-web-application/using-mvc/invoking-actions-with-mvc-portlet.md)を参照してください。 
+ポートレットアクションの詳細については、 [MVCポートレットを使用したアクションの呼び出し](../../../developing-a-java-web-application/using-mvc/invoking-actions-with-mvc-portlet.md) を参照してください。 
 ```
 
 ページの ［**Entries**］ セクションには、すべてのエントリーが一覧表示されます。  `T2P5EntryLocalServiceUtil.getT2P5Entries(-1, -1)`を呼び出すことにより、すべてのエントリーを取得します。最小値と最大値の範囲の値`-1`は、すべてのエントリーを返すようにメソッドに指示します。
@@ -163,6 +163,6 @@ JSPは、次のタグライブラリのタグを使用します。
 ## 追加情報
 
 * [ポートレット](../../../developing-a-java-web-application/reference/portlets.md)
-* [Using MVC](../../../developing-a-java-web-application/using-mvc.md)
+* [MVCの使用](../../../developing-a-java-web-application/using-mvc.md)
 * [JSPおよびMVCポートレットの使用](../../../developing-a-java-web-application/using-mvc/using-a-jsp-and-mvc-portlet.md)
-* [MVC Action Command](../../../developing-a-java-web-application/using-mvc/mvc-action-command.md)
+* [MVCアクションコマンド](../../../developing-a-java-web-application/using-mvc/mvc-action-command.md)

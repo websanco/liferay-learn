@@ -10,7 +10,7 @@ app-builder/creating-the-role-change-request-object.md
 app-builder/creating-the-role-change-request-app.md
 ```
 
-> 利用可能：Liferay CE/DXP 7.3（[廃止され、7.4では削除されました](../installation-and-upgrades/upgrading-liferay/reference/maintenance-mode-and-deprecations-in-7-4.md#features-deprecated-in-7-4)）
+> 利用可能：Liferay CE/DXP 7.3（ [廃止され、7.4では削除されました](../installation-and-upgrades/upgrading-liferay/reference/maintenance-mode-and-deprecations-in-7-4.md#features-deprecated-in-7-4) ）
 
 アプリビルダーは、Liferay DXP用のローコードアプリケーション開発ソリューションです。 データモデルを構築し、アプリケーションのフォーム（データ入力用）とテーブル（データレコードの表示および管理用）を定義し、アプリケーションをサイトにデプロイしたり、または完全にスタンドアロンのアプリケーションとしてデプロイします。 アプリビルダーを使用すると、専用のユーザーインターフェイスとデータ分離を備えた機能的なビジネスアプリケーションを、コードを1行も記述せずに作成できます。
 

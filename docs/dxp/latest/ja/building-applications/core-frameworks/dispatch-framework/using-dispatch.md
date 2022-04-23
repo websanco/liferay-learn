@@ -1,10 +1,10 @@
 # ディスパッチの使用
 
-[ディスパッチ](https://github.com/liferay/liferay-portal/tree/master/modules/apps/dispatch)は、Liferayのスケジューラーエンジン上に構築された柔軟なフレームワークであり、あらゆるタイプのロジックを実行およびスケジュールするために使用できます。 このフレームワークは、`DispatchTaskExecutor`インターフェイスを使用してカスタムロジックでテンプレートを定義し、そのテンプレートを使用してコントロールパネルから[タスクを作成](#adding-a-new-dispatch-task)できます。 ディスパッチタスクが作成されると、その動作と実行[スケジュール](#scheduling-the-dispatch-task)を構成できます。
+[ディスパッチ](https://github.com/liferay/liferay-portal/tree/master/modules/apps/dispatch) は、Liferayのスケジューラーエンジン上に構築された柔軟なフレームワークであり、あらゆるタイプのロジックを実行およびスケジュールするために使用できます。 このフレームワークは、`DispatchTaskExecutor`インターフェイスを使用してカスタムロジックでテンプレートを定義し、そのテンプレートを使用してコントロールパネルから [タスクを作成](#adding-a-new-dispatch-task) できます。 ディスパッチタスクが作成されると、その動作と実行 [スケジュール](#scheduling-the-dispatch-task) を構成できます。
 
 ![［Dispatch］ページからディスパッチタスクを追加および管理します。](./using-dispatch/images/01.png)
 
-ディスパッチは、[`MessageListener`インターフェイスを使用してスケジュールされたすべてのインスタンスジョブ](#viewing-and-managing-scheduled-jobs)を表示および管理するための便利なUIを提供します。
+ディスパッチは、 [`MessageListener`インターフェイスを使用してスケジュールされたすべてのインスタンスジョブ](#viewing-and-managing-scheduled-jobs) を表示および管理するための便利なUIを提供します。
 
 ```{note}
 ディスパッチと `MessageListener`のどちらを使用してインスタンスジョブをスケジュールするかを決定するときは、次のディスパッチの利点を考慮してください。
@@ -18,12 +18,12 @@
 
 1. **追加** ボタン（![Add Button](../../../images/icon-add.png)）をクリックして、ディスパッチタスクに必要なテンプレートを選択します。 選択したテンプレートは、タスクの基本的なロジックを定義します。
 
-   各テンプレートは`DispatchTaskExecutor`インターフェイスの実装であり、各ディスパッチタスクは選択されたテンプレートのインスタンスです。 動作の詳細については、 [Understanding the Dispatch Framework](./understanding-the-dispatch-framework.md)を参照してください。
+   各テンプレートは`DispatchTaskExecutor`インターフェイスの実装であり、各ディスパッチタスクは選択されたテンプレートのインスタンスです。 動作の詳細については、 [ディスパッチフレームワークを理解する](./understanding-the-dispatch-framework.md) を参照してください。
 
    ```{note}
    Liferay DXPはさまざまなディスパッチタスクテンプレートを提供しますが、Liferay PortalにはTalendディスパッチタスクエグゼキュータのみが含まれています。
 
-   独自のテンプレートを作成することもできます。 その方法については、[Creating a New Dispatch Task Executor](./creating-a-new-dispatch-task-executor.md)を参照してください。
+   独自のテンプレートを作成することもできます。 その方法については、 [新しいディスパッチタスクエグゼキュータの作成](./creating-a-new-dispatch-task-executor.md) を参照してください。
    ```
 
    ![追加ボタンをクリックして、ディスパッチタスクのディスパッチタスクエグゼキュータテンプレートを選択します。](./using-dispatch/images/02.png)
@@ -80,7 +80,7 @@ Talendは、カスタムデータ統合ジョブを定義するためのオー�
 
 次の手順に従って、Talend **ジョブアーカイブ** をディスパッチタスクにアップロードします。
 
-1. Talendエグゼキュータテンプレートを使用して、インスタンスに新しいディスパッチタスクを追加します。 詳細な手順については、[Adding a New Dispatch Task](#adding-a-new-dispatch-task)を参照してください。
+1. Talendエグゼキュータテンプレートを使用して、インスタンスに新しいディスパッチタスクを追加します。 詳細な手順については、 [Adding a New Dispatch Task](#adding-a-new-dispatch-task) を参照してください。
 
 1. ［Dispatch］ページの ［**Dispatch Triggers**］ タブに移動し、目的のディスパッチタスクをクリックします。
 
@@ -100,6 +100,6 @@ Talendは、カスタムデータ統合ジョブを定義するためのオー�
 
 ## 追加情報
 
-* [Dispatch UI Reference](./dispatch-ui-reference.md)
-* [Understanding the Dispatch Framework](./understanding-the-dispatch-framework.md)
-* [Creating a New Dispatch Task Executor](./creating-a-new-dispatch-task-executor.md)
+* [ディスパッチUIリファレンス](./dispatch-ui-reference.md)
+* [ディスパッチフレームワークを理解する](./understanding-the-dispatch-framework.md)
+* [新しいディスパッチタスクエグゼキュータの作成](./creating-a-new-dispatch-task-executor.md)

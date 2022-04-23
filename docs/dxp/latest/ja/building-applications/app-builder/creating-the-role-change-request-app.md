@@ -72,9 +72,9 @@
 
 ## アプリのデプロイ
 
-## アプリのデプロイ
+これで、アプリを使用する準備が整いました。 ユーザーがデータの送信を開始できるように、 [デプロイ](./creating-a-standard-application.md#deploying-the-application) する必要があります。
 
-ロール変更リクエストアプリは、専用リンクを備えたスタンドアロンアプリとしてデプロイできます。 このタイプのアプリを使用するには、事前に[Wiki](../../collaboration-and-social/collaboration-and-social-overview.md#wiki)または会社の従業員ハンドブック[ドキュメント](../../content-authoring-and-management/documents-and-media/documents-and-media-overview.md)でいくつかの手順について確認しておく必要があります。 そこにリンクを保持することで、従業員はロール変更リクエストを開始する前に適切なドキュメントを読むことができます。
+ロール変更リクエストアプリは、専用リンクを備えたスタンドアロンアプリとしてデプロイできます。 このタイプのアプリを使用するには、事前に [Wiki](../../collaboration-and-social/collaboration-and-social-overview.md#wiki) または会社の従業員ハンドブック[ドキュメント](../../content-authoring-and-management/documents-and-media/documents-and-media-overview.md)でいくつかの手順について確認しておく必要があります。 そこにリンクを保持することで、従業員はロール変更リクエストを開始する前に適切なドキュメントを読むことができます。
 
 ## アプリの使用
 
@@ -91,7 +91,7 @@
 タスクをユーザーに割り当てるには、 ［**割り当て先**］ メニュー項目を使用します。 その後、 ［**編集する**］ メニューオプションを選択して、適切なフォームにアクセスできます。
 
 ```{note}
-[マイワークフロータスク](../../process-automation/workflow/using-workflows/reviewing-assets.md#assigning-the-review-task)アプリを使用してワークフロー対応アプリのステップを管理することはできません。
+[マイワークフロータスク](../../process-automation/workflow/using-workflows/reviewing-assets.md#assigning-the-review-task) アプリを使用してワークフロー対応アプリのステップを管理することはできません。
 ```
 
 ## ロール変更リクエストアプリをさらに進化させる

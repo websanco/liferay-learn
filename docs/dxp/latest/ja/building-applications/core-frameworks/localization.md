@@ -6,4 +6,4 @@
 localization/adding-a-language.md
 ```
 
-- [Adding A Language](./localization/adding-a-language.md)
+- [言語の追加](./localization/adding-a-language.md)

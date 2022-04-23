@@ -7,7 +7,7 @@
 サンプルプロジェクトをダウンロードして解凍します。
 
 ```bash
-curl https://learn.liferay.com/dxp/latest/en/building-applications/data-frameworks/service-builder/service-builder-basics/liferay-y7g4.zip -O
+curl https://learn.liferay.com/dxp/latest/ja/building-applications/data-frameworks/service-builder/service-builder-basics/liferay-y7g4.zip -O
 ```
 
 ```bash
@@ -35,7 +35,7 @@ y7g4-api
 ```{literalinclude} ./generating-model-persistence-and-service-code/resources/liferay-y7g4.zip/y7g4-api/bnd.bnd
 ```
 
-The `Bundle-` headers describe the module artifact. The `Export-Package` header specifies the API packages to publish. See [Module Projects](../../../../liferay-internals/fundamentals/module-projects.md) for details on bnd metadata and how it's used.
+The `Bundle-` headers describe the module artifact. The `Export-Package` header specifies the API packages to publish. See [モジュールプロジェクト](../../../../liferay-internals/fundamentals/module-projects.md) for details on bnd metadata and how it's used.
 
 The `build.gradle` file declares the module's dependency on DXP/Portal.
 
@@ -117,7 +117,7 @@ Each `column` element defines a column in the entity's table. Here are the `Y7G4
 | `name` | the instance's name (string). |
 | `description` | the instance's description (string). |
 
-For more information on `service.xml` elements, see the [Liferay Service Builder DTD](https://learn.liferay.com/reference/latest/en/dxp/definitions/liferay-service-builder_7_4_0.dtd.html).
+For more information on `service.xml` elements, see the [Liferay Service Builder DTD](https://learn.liferay.com/reference/latest/en/dxp/definitions/liferay-service-builder_7_4_0.dtd.html) .
 
 ## Generate the Persistence Code
 
@@ -221,7 +221,7 @@ SQLスクリプトと永続性構成が`resources/META-INF`フォルダに生成
 </hibernate-mapping>
 ```
 
-`module-hbm.xml`ファイルは、`Y7G4EntryImpl`オブジェクトを`Y7G4_Y7G4Entry`テーブルにマップします。 Hibernateでのマッピングの詳細については、[Hibernate](https://hibernate.org)をご覧ください。
+`module-hbm.xml`ファイルは、`Y7G4EntryImpl`オブジェクトを`Y7G4_Y7G4Entry`テーブルにマップします。 Hibernateでのマッピングの詳細については、 [Hibernate](https://hibernate.org) をご覧ください。
 
 `tables.sql`スクリプトは、`Y7G4_Y7G4Entry`テーブルを指定します。
 
@@ -437,9 +437,9 @@ STARTED com.acme.y7g4.api_1.0.0 [1422]
 
 ## 次のステップ
 
-モデルを定義し、その永続コードとサービスコードを生成する方法がわかったので、生成されたサービスクラスを調べる必要があります。 [Understanding and Extending Generated Classes](./understanding-service-builder-generated-classes.md)に進んでください。
+モデルを定義し、その永続コードとサービスコードを生成する方法がわかったので、生成されたサービスクラスを調べる必要があります。 [生成されたクラスの理解と拡張](./understanding-service-builder-generated-classes.md) に進んでください。
 
 ## 追加情報
 
-* [Invoking a Service Locally](./invoking-a-service-locally.md)
+* [ローカルでサービスを呼び出す](./invoking-a-service-locally.md)
 * [What is Liferay Workspace](../../../tooling/liferay-workspace/what-is-liferay-workspace.md)

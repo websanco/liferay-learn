@@ -1,6 +1,6 @@
 # オブジェクトのワークフローを有効にする
 
-公開されたすべてのオブジェクトは、ワークフローフレームワークと自動的に統合されるため、定義されたレビューと承認のプロセスを通じてオブジェクトエントリーの作成を指示できます。 オブジェクトのワークフローを有効にする方法は、オブジェクトのスコープ（[会社](#company-scoped-objects)または[サイト](#site-scoped-objects)）によって異なります。
+公開されたすべてのオブジェクトは、ワークフローフレームワークと自動的に統合されるため、定義されたレビューと承認のプロセスを通じてオブジェクトエントリーの作成を指示できます。 オブジェクトのワークフローを有効にする方法は、オブジェクトのスコープ（ [会社](#company-scoped-objects) または [サイト](#site-scoped-objects) ）によって異なります。
 
 一般的なワークフローの機能については、 [ワークフロー](../../process-automation/workflow.html) のドキュメントを参照してください。
 
@@ -37,5 +37,5 @@
 ## 追加情報
 
 * [オブジェクト](../objects.md)
-* [Creating Objects](./creating-and-managing-objects/creating-objects.md)
-* [Managing Objects](./creating-and-managing-objects/managing-objects.md)
+* [オブジェクトの作成](./creating-and-managing-objects/creating-objects.md)
+* [オブジェクトの管理](./creating-and-managing-objects/managing-objects.md)

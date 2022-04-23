@@ -3,7 +3,7 @@
 Liferay Objectはフォームアプリケーションと統合されているため、ユーザー入力を受け取ってオブジェクトエントリーを作成するためのフォームを設計できます。 これを行うには、最初に新しいフォームを追加し、オブジェクトストレージタイプを使用するように構成します。 次に、目的のオブジェクトを選択し、フォームをデザインして、そのフィールドを選択したオブジェクトのフィールドにマップします。
 
 ```{note}
-ルールや検証を含むすべてのフォーム機能がオブジェクトでサポートされています。 ただし、ユーザーはオブジェクトリレーションをフォーム項目にマップすることはできません。 オブジェクトリレーションを含むカスタムレイアウトを作成する方法については、[Designing Object Layouts](./creating-and-managing-objects/designing-object-layouts.md)を参照してください。
+ルールや検証を含むすべてのフォーム機能がオブジェクトでサポートされています。 ただし、ユーザーはオブジェクトリレーションをフォーム項目にマップすることはできません。 オブジェクトリレーションを含むカスタムレイアウトを作成する方法については、 [オブジェクトレイアウトの設計](./creating-and-managing-objects/designing-object-layouts.md) を参照してください。
 ```
 
 ## オブジェクト用のフォームを追加する
@@ -37,7 +37,7 @@ Liferay Objectはフォームアプリケーションと統合されているた
 1. フォームにフィールド要素を追加します。
 
    ```{important}
-   オブジェクトフィールドは、[互換性のあるフィールドタイプ](#field-compatibility-reference)にのみマップできます。
+   オブジェクトフィールドは、 [互換性のあるフィールドタイプ](#field-compatibility-reference) にのみマップできます。
 
    必須のオブジェクトフィールドにマップされると、フォーム項目タイプが自動的に設定されます。 
    ```
@@ -61,7 +61,7 @@ Liferay Objectはフォームアプリケーションと統合されているた
 1. フォームのデザインが完了したら、 ［**公開**］ をクリックしてフォームの作成を終了します。
 
    ```{important}
-   オブジェクトフォームを公開する前に、すべての[マッピング要件](#mapping-requirements)を満たす必要があります。
+   オブジェクトフォームを公開する前に、すべての [マッピング要件](#mapping-requirements) を満たす必要があります。
    ```
 
 公開後、フォームを使用して、選択したオブジェクトのオブジェクトエントリーを作成できます。
@@ -96,5 +96,5 @@ Liferay Objectはフォームアプリケーションと統合されているた
 ## 追加情報
 
 * [Objects Overview](../objects.md)
-* [Creating Objects](./creating-and-managing-objects/creating-objects.md)
-* [Designing Object Layouts](./creating-and-managing-objects/designing-object-layouts.md)
+* [オブジェクトの作成](./creating-and-managing-objects/creating-objects.md)
+* [オブジェクトレイアウトの設計](./creating-and-managing-objects/designing-object-layouts.md)

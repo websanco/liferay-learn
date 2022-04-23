@@ -30,7 +30,7 @@ import com.liferay.portal.configuration.metatype.annotations.ExtendedObjectClass
 
 独自のセクションとカテゴリーが必要な場合は、`ConfigurationCategory`インターフェイスを実装して作成できます。
 
-[Setting and Accessing Configurations](./setting-and-accessing-configurations)のプロジェクト例に従った場合、このコードをアプリケーションの`configuration`フォルダに追加できます。 これは、構成インターフェイスのJavaファイルを保持しているフォルダと同じです。 以下のコードは、foobarセクションとfoobarカテゴリーを作成します。
+[Setting and Accessing Configurations](./setting-and-accessing-configurations) のプロジェクト例に従った場合、このコードをアプリケーションの`configuration`フォルダに追加できます。 これは、構成インターフェイスのJavaファイルを保持しているフォルダと同じです。 以下のコードは、foobarセクションとfoobarカテゴリーを作成します。
 
 ```java
 package com.acme.n2f3.web.internal.configuration;

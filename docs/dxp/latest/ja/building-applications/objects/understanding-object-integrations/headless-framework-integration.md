@@ -1,10 +1,10 @@
 # ヘッドレスフレームワークの統合
 
-オブジェクトを公開するときは、ヘッドレスREST APIも一緒に公開します。 Liferayは、作成するオブジェクトごとにREST APIと[GraphQL](https://graphql.org) APIの両方を自動的に生成します。 オブジェクト用に生成されたAPIは、そのスコープ（つまり、会社またはサイト）によって異なります。
+オブジェクトを公開するときは、ヘッドレスREST APIも一緒に公開します。 Liferayは、作成するオブジェクトごとにREST APIと [GraphQL](https://graphql.org) APIの両方を自動的に生成します。 オブジェクト用に生成されたAPIは、そのスコープ（つまり、会社またはサイト）によって異なります。
 
 すべてのオブジェクトは、`c/[pluralobjectlabel]`命名パターン（`c/timeoffrequests`など）を使用します。 各オブジェクトエントリースキーマには、オブジェクトのすべてのフィールドとリレーションシップが含まれています。
 
-オブジェクトのAPIは、Liferay API Explorerを介して`[server]:[port]/o/api`（例：`localhost:8080/o/api`）で表示およびテストできます。 REST APIは、 ［**REST Applications**］ の下にリストされています。 ［**GraphQL**］ をクリックして、Liferayの[Graph **i** QL](https://github.com/graphql/graphiql)ブラウザにアクセスします。
+オブジェクトのAPIは、Liferay API Explorerを介して`[server]:[port]/o/api`（例：`localhost:8080/o/api`）で表示およびテストできます。 REST APIは、 ［**REST Applications**］ の下にリストされています。 ［**GraphQL**］ をクリックして、Liferayの [Graph **i** QL](https://github.com/graphql/graphiql) ブラウザにアクセスします。
 
 ## オブジェクトREST API
 
@@ -14,7 +14,7 @@ REST APIを使用すると、オブジェクトエントリーに対して単一
 
 すべてのエンドポイントとJavaメソッドは、オブジェクトの名前を使用します。 次の例では、`ObjectName`/`objectName`をオブジェクトの名前に置き換えます。
 
-詳しくは、[Consuming REST Services](../../../headless-delivery/consuming-apis/consuming-rest-services.md)を参照してください。
+詳しくは、 [RESTサービスの使用](../../../headless-delivery/consuming-apis/consuming-rest-services.md) を参照してください。
 
 ```{important}
 Liferay DXP 7.4 GA1では、選択リストフィールドの値は、オブジェクトAPIコールで以下のフォーマットを使用する必要があります。`"samplePicklist":"string"`です。 Liferay DXP 7.4 U1では、フォーマットが変更され、値はこのフォーマットを使用する必要があります。`"samplePicklist":{"key":"string"}`.
@@ -65,7 +65,7 @@ GraphQL APIでは、オブジェクトデータを照会したり、変更した
 
 ![LiferayのGraphiQLエクスプローラーを使用して、オブジェクトスキーマを検索し、リクエストを実行します。](./headless-framework-integration/images/02.png)
 
-詳しくは、[Consuming GraphQL APIs](../../../headless-delivery/consuming-apis/consuming-graphql-apis.md)を参照してください。
+詳しくは、 [GraphQL APIの使用](../../../headless-delivery/consuming-apis/consuming-graphql-apis.md) を参照してください。
 
 ## 追加情報
 

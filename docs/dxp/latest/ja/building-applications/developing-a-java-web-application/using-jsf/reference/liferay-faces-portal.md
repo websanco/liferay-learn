@@ -19,12 +19,12 @@ Liferay Faces Portalに含まれる機能の一部は次のとおりです。
     * `liferay-security:permissionsURL` &rarr; `portal:permissionsURL`
     * `liferay-portlet:runtime` &rarr; `portal:runtime`
 
-    詳細については、[https://liferayfaces.org/web/guest/portal-showcase](https://liferayfaces.org/web/guest/portal-showcase)をご覧ください。
+    詳細については、 [https://liferayfaces.org/web/guest/portal-showcase](https://liferayfaces.org/web/guest/portal-showcase) をご覧ください。
 
 * 式言語：Liferay固有の情報を取得するための`liferay`や、Liferayのデフォルトの国際化されたメッセージと統合するための`i18n`など、ELキーワードのセットを追加します。
 
 ## 追加情報
 
-* [Developing a JSF Portlet Application \(Help Center\)](https://help.liferay.com/hc/en-us/articles/360029069451-Developing-a-JSF-Portlet-Application)
+* [Developing a JSF Portlet Application \(Help Center\)](https://help.liferay.com/hc/ja/articles/360029069451-Developing-a-JSF-Portlet-Application)
 * [Liferay Faces Bridge](./liferay-faces-bridge.md)
 * [Liferay Faces Alloy](./liferay-faces-alloy.md)

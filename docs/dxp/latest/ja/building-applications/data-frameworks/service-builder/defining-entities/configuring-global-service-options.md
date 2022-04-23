@@ -25,7 +25,7 @@ Spring依存性インジェクター：
 ```
 
 ```{important}
-[サービスビルダーテンプレート](../../../tooling/blade-cli/generating-projects-with-blade-cli.md#creating-a-project)を使用してプロジェクトを作成する場合、宣言型サービスの依存性インジェクターとその依存性は、デフォルトでプロジェクト用に構成されています。 代わりにSpring依存性インジェクターを使用するには、[Blade CLI](../../../tooling/blade-cli/generating-projects-with-blade-cli.md)のサービスビルダーテンプレートと`--dependency-injector spring`オプションを使用してプロジェクトを作成します。 
+[サービスビルダーテンプレート](../../../tooling/blade-cli/generating-projects-with-blade-cli.md#creating-a-project) を使用してプロジェクトを作成する場合、宣言型サービスの依存性インジェクターとその依存性は、デフォルトでプロジェクト用に構成されています。 代わりにSpring依存性インジェクターを使用するには、[Blade CLI](../../../tooling/blade-cli/generating-projects-with-blade-cli.md)のサービスビルダーテンプレートと`--dependency-injector spring`オプションを使用してプロジェクトを作成します。 
 ```
 
 ```{note}
@@ -45,7 +45,7 @@ Liferay DXP/Portal 7.2より前は、Springが唯一の依存性インジェク�
 
 ## マルチバージョン同時実行制御（MVCC）
 
-`service-builder`要素の`mvcc-enabled`属性は、デフォルトでは`false`です。 `mvcc-enabled="true"`を設定すると、すべてのエンティティに対して[マルチバージョン同時実行制御](https://en.wikipedia.org/wiki/Multiversion_concurrency_control)（MVCC）が有効になります。 システムでは、同時更新が一般的です。 MVCCがないと、知らないうちに無効な状態からデータを読み取ったり上書きしたりする人がいる可能性があります。 MVCCでは、各変更は特定の基本バージョン番号に基づいて行われます。 Hibernate永続レイヤーは更新を受信すると、`update` SQLステートメントを生成します。このステートメントでは、`where`句を使用して現在のデータバージョンが期待するバージョンであることを確認します。
+`service-builder`要素の`mvcc-enabled`属性は、デフォルトでは`false`です。 `mvcc-enabled="true"`を設定すると、すべてのエンティティに対して [マルチバージョン同時実行制御](https://en.wikipedia.org/wiki/Multiversion_concurrency_control) （MVCC）が有効になります。 システムでは、同時更新が一般的です。 MVCCがないと、知らないうちに無効な状態からデータを読み取ったり上書きしたりする人がいる可能性があります。 MVCCでは、各変更は特定の基本バージョン番号に基づいて行われます。 Hibernate永続レイヤーは更新を受信すると、`update` SQLステートメントを生成します。このステートメントでは、`where`句を使用して現在のデータバージョンが期待するバージョンであることを確認します。
 
 現在のデータバージョンが
 
@@ -85,7 +85,7 @@ Liferay DXP/Portal 7.2より前は、Springが唯一の依存性インジェク�
 
 サービスビルダーは、SQLスクリプトを使用して、`service.xml`が定義するすべてのエンティティのデータベーステーブルを作成します。 データベーステーブル名には、作成時にネームスペースが付加されます。 この例のネームスペースの値は`GB`であるため、エンティティ用に作成されたデータベーステーブル名はプレフィックスとして`GB__`で始まります。 各サービスビルダープロジェクトのネームスペースは一意である必要があります。 個別のプラグインは個別のネームスペースを使用する必要があり、Liferayエンティティ（`Users`や`Groups`など）ですでに使用されているネームスペースを使用しないでください。 Liferayのデータベースのテーブル名をチェックして、すでに使用されているネームスペースを確認してください。
 
-**警告：** ネームスペースの値の割り当てには注意が必要です。 一部のデータベースには、データベーステーブルと列名の長さに強い制限があります。 サービスビルダーの[Gradleプラグイン](https://github.com/liferay/liferay-portal/tree/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/sdk/gradle-plugins-service-builder)のパラメーター`databaseNameMaxLength`は、テーブル名と列名に使用できる最大長を設定します。 以下に、ビルドファイルで`databaseNameMaxLength`を設定する例をいくつか示します。
+**警告：** ネームスペースの値の割り当てには注意が必要です。 一部のデータベースには、データベーステーブルと列名の長さに強い制限があります。 サービスビルダーの [Gradleプラグイン](https://github.com/liferay/liferay-portal/tree/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/modules/sdk/gradle-plugins-service-builder) のパラメーター`databaseNameMaxLength`は、テーブル名と列名に使用できる最大長を設定します。 以下に、ビルドファイルで`databaseNameMaxLength`を設定する例をいくつか示します。
 
 **Gradle `build.gradle`**
 

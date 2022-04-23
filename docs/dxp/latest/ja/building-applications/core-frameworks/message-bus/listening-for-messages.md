@@ -18,10 +18,10 @@
 
     **パスワード：** `test`
 
-1. [サンプルのプロジェクト](dxp/latest/en/building-applications/core-frameworks/message-bus/liferay-w3a4.zip)をダウンロードして解凍します。
+1. [サンプルのプロジェクト](dxp/latest/en/building-applications/core-frameworks/message-bus/liferay-w3a4.zip) をダウンロードして解凍します。
 
     ```bash
-    curl https://learn.liferay.com/dxp/latest/en/building-applications/core-frameworks/message-bus/liferay-w3a4.zip -O
+    curl https://learn.liferay.com/dxp/latest/ja/building-applications/core-frameworks/message-bus/liferay-w3a4.zip -O
     ```
 
     ```bash
@@ -60,17 +60,17 @@
 
 ## 宛先を決定する
 
-メッセージの宛先は、その名前で参照されます。 APIは宛先名を指定します。 たとえば、[`DestinationNames`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/DestinationNames.java)クラスは、Liferayの組み込みの宛先を一覧表示します。 サンプルの`MessageListener`は、次の`String`定数で指定されたLiferayの宛先に送信されたメッセージをリッスンします。
+メッセージの宛先は、その名前で参照されます。 APIは宛先名を指定します。 たとえば、 [`DestinationNames`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/DestinationNames.java) クラスは、Liferayの組み込みの宛先を一覧表示します。 サンプルの`MessageListener`は、次の`String`定数で指定されたLiferayの宛先に送信されたメッセージをリッスンします。
 
 ```java
 DestinationNames.DOCUMENT_LIBRARY_PDF_PROCESSOR
 ```
 
-[ソースコード](https://github.com/liferay/liferay-portal/tree/[$LIFERAY_LEARN_PORTAL_GIT_TAG$])でLiferayの`*DestinationNames`クラスを検索するか、他のAPIでリスナーを追加できる宛先を検索します。 メッセージリスナーで宛先名を指定します。
+[ソースコード](https://github.com/liferay/liferay-portal/tree/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]) でLiferayの`*DestinationNames`クラスを検索するか、他のAPIでリスナーを追加できる宛先を検索します。 メッセージリスナーで宛先名を指定します。
 
 ## `MessageListener`インターフェイスを実装する
 
-メッセージを受信するクラスで、[`MessageListener`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/MessageListener.java)インターフェイスを実装します。
+メッセージを受信するクラスで、 [`MessageListener`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/MessageListener.java) インターフェイスを実装します。
 
 ```{literalinclude} ./listening-for-messages/resources/liferay-w3a4.zip/w3a4-impl/src/main/java/com/acme/w3a4/internal/messaging/W3A4MessageListener.java
    :language: java
@@ -85,7 +85,7 @@ DestinationNames.DOCUMENT_LIBRARY_PDF_PROCESSOR
    :lines: 17-27
 ```
 
-上記の実装は、メッセージのペイロードと宛先名をログに記録します。 他のメソッドの詳細については、[`Message`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/MessageListener.java)クラスを参照してください。
+上記の実装は、メッセージのペイロードと宛先名をログに記録します。 他のメソッドの詳細については、 [`Message`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-kernel/src/com/liferay/portal/kernel/messaging/MessageListener.java) クラスを参照してください。
 
 ## MessageListenerを宛先に登録する
 
@@ -104,4 +104,4 @@ DestinationNames.DOCUMENT_LIBRARY_PDF_PROCESSOR
 
 ## 追加情報
 
-* [Message Bus](../message-bus.md)
+* [Message Busメッセージバス](../message-bus.md)
