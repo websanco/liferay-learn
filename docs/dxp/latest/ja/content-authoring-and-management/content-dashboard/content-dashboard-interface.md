@@ -14,12 +14,16 @@
 
 コンテンツ情報サイドバーにアクセスするには、コンテンツの **アクションメニュー**（![Action Menu](../../images/icon-actions.png)）をクリックし、 ［**Info**］ オプションを選択します。 または、記事の上にカーソルを置き、 ［**Info**］（![Info](../../images/icon-information.png)）をクリックします。 **統計情報を表示**（![Metrics](../../images/icon-analytics.png)）オプションの詳細は、[About the Content Performance Panel](../content-performance-tool/about-the-content-performance-tool.md)を参照してください。
 
+<a name="accessing-the-content-dashboard" />
+
 ## コンテンツダッシュボードへのアクセス
 
 1. グローバルメニューをクリックし、 ［**コンテンツ**］ 領域で、 ［**コンテンツダッシュボード**］ をクリックします。
 1. グローバルメニューが無効になっている場合は、プロダクトメニューを開き、 **サイト** メニューの下にある ［**コンテンツ**］ &rarr; ［**コンテンツダッシュボード**］ に移動します。
 
     ![グローバルメニューからコンテンツダッシュボードを開きます.](./content-dashboard-interface/images/03.png)
+
+<a name="content-audit-tool" />
 
 ## コンテンツ監査ツール
 
@@ -56,6 +60,8 @@
 
 ![コンテンツパフォーマンスユーザーインターフェイスの概要](./content-dashboard-interface/images/04.png)
 
+<a name="customizing-the-vocabularies-and-categories-in-the-content-audit-tool" />
+
 ### コンテンツ監査ツールでボキャブラリとカテゴリをカスタマイズする
 
 デフォルトでは、棒グラフには、選択したグローバルボキャブラリの各カテゴリのアセットの総数が表示されますが、この情報はさまざまな方法で絞り込むことができます。
@@ -80,6 +86,8 @@
 ```
 
 灰色のバーは、選択したボキャブラリの1つにカテゴリーがないコンテンツを示します。 このコンテンツの表ラベルは独特です。 たとえば、オーディエンスボキャブラリを選択すると、［オーディエンス］に分類されていないコンテンツには、 ［**No Audience Specified**］ ラベルが表示されます。
+
+<a name="contents-list" />
 
 ## コンテンツ一覧
 
@@ -127,6 +135,8 @@
 ディスプレイページテンプレートに基づくコンテンツには、［View］、［Info］、および［統計情報を表示］オプションを使用します。 コンテンツの編集権限がある場合は、［Edit］オプションを使用します。
 ```
 
+<a name="filtering-and-sorting-content-in-the-contents-list" />
+
 ### コンテンツ一覧内のコンテンツの絞り込みとソート
 
 1. ［**フィルターと並び替え**］ ドロップダウンメニューをクリックします。
@@ -149,6 +159,8 @@
 ```{note}
 ［コンテンツダッシュボード］ページを閉じると、デフォルトのフィルターと並べ替えオプションが再度設定されます。
 ```
+
+<a name="filter-options-reference" />
 
 ### フィルターオプションリファレンス
 
@@ -176,6 +188,8 @@
 
 ![タイプまたは内線フィルターで使用する検索条件は、コンテンツリストに含まれています。](./content-dashboard-interface/images/13.png)
 
+<a name="understanding-how-filtering-works-in-the-contents-list" />
+
 ### コンテンツリストでの絞り込みの仕組みを理解する
 
 - 複数の基準でカテゴリーフィルターまたはタグフィルターを使用すると、結果はすべての基準を満たすコンテンツに相当します（例Aを参照）。
@@ -187,6 +201,8 @@
 | A | カテゴリ      | カテゴリー： **Entrepreneur** および **Family** | **Entrepreneur** `および` Familyカテゴリーの両方に属しているアセットのみ |
 | B | 作成者       | 作成者： **Peter** および **Linda** | **Peter** `または` **Linda** `または`両者が作成したアセット。         |
 | C | カテゴリー、作成者 | カテゴリーは **Entrepreneur** 、作成者は **Linda** | **Entrepreneur** カテゴリーにあり、`かつ`Lindaが作成したアセットのみ。    |
+
+<a name="content-info-sidebar" />
 
 ## コンテンツ情報サイドバー
 
@@ -200,6 +216,8 @@
 1. または、アセットの上にカーソルを置き、 ［**Info**］（![Information icon](../../images/icon-information.png)）アイコンをクリックします。
 
     ![情報サイドバーには、コンテンツのさまざまなメタデータが提供されます.](./content-dashboard-interface/images/09.png)
+
+<a name="related-information" />
 
 ## 関連情報
 

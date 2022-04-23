@@ -56,6 +56,8 @@
 
 ![コンテンツエディタの [カテゴリ設定]セクションから新しいカテゴリを追加します。](./defining-categories-and-vocabularies-for-content/images/04.png)
 
+<a name="creating-categories" />
+
 ### カテゴリ作成
 
 1.  プロダクトメニューを開き、サイトメニューの下で、 [**カテゴリ設定**] → [**カテゴリ**] に移動します。
@@ -64,6 +66,8 @@
 4.  カテゴリの **名前** と、必要に応じて **説明** を入力します。
 5. [**保存**] をクリックするか、さらにカテゴリを追加するには [**保存して新規追加**] をクリックします。
 6.  既存のカテゴリを編集するには、カテゴリ名の横にある **アクション**（![Actions](../../images/icon-actions.png)）メニューをクリックします。
+
+<a name="creating-subcategories" />
 
 ### サブカテゴリの作成
 
@@ -74,6 +78,8 @@
 3.  新しいサブカテゴリを作成するカテゴリ名をクリックします。
 4. [**新規サブカテゴリの追加**] 画面で、サブカテゴリの **名前** を入力し、オプションで **説明** を入力します。
 5. [**保存**] をクリックするか、さらにサブカテゴリを追加するには [**保存して新規追加**] をクリックします。
+
+<a name="moving-categories" />
 
 ### カテゴリの移動
 
@@ -90,6 +96,8 @@
     ```{note}
     カテゴリは、同じ [Visibility タイプ](./organizing-content-with-categories-and-tags.md#vocabulary-visibility) のボキャブラリにのみ移動できます 。 
     ```
+
+<a name="editing-additional-category-properties" />
 
 ### 追加のカテゴリプロパティの編集
 

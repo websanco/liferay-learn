@@ -16,9 +16,13 @@ recycle-bin/recycle-bin-api.md
 * [Developer Guide](./recycle-bin/developer-guide.md)
 * [Recycle Bin API](./recycle-bin/recycle-bin-api.md)
 
+<a name="developer-guide" />
+
 ## Developer Guide
 
 Coming soon!
+
+<a name="apis" />
 
 ## APIs
 

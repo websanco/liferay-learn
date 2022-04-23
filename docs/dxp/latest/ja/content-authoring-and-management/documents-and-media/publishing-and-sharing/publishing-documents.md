@@ -44,6 +44,8 @@ Liferayでは、ドキュメントやその他の種類のメディアファイ�
 
 <a name="using-the-documents-and-media-widget" />
 
+## [ドキュメントとメディア]ウィジェットの使用
+
 ## ［ドキュメントとメディア］ウィジェットの使用
 
 1.  [コンテンツ管理]セクションから、 [**ドキュメントとメディア**] ウィジェットをページに追加します。
@@ -106,15 +108,21 @@ Liferayでは、ドキュメントやその他の種類のメディアファイ�
 
 <a name="using-the-asset-publisher-widget" />
 
+## [アセットパブリッシャー]ウィジェットの使用
+
 ## ［アセットパブリッシャー］ウィジェットの使用
 
 [［アセットパブリッシャー］](../../../site-building/displaying-content/using-the-asset-publisher-widget/displaying-assets-using-the-asset-publisher-widget.md)ウィジェットは、基準に基づいてさまざまなアセットとコレクションを公開できます。 このウィジェットを使用して、ドキュメントとメディアライブラリのコンテンツを表示できます。
 
 <a name="using-documents-in-other-assets" />
 
+<a name="using-documents-in-other-assets" />
+
 ## 他のアセットでのドキュメントの使用
 
 ドキュメントやメディアファイルを他の種類のアセットに追加するのは簡単です。
+
+<a name="web-content" />
 
 ### Webコンテンツ
 
@@ -130,6 +138,8 @@ Liferayでは、ドキュメントやその他の種類のメディアファイ�
 
 1. これで、ドキュメントまたはメディアファイルを選択して、それらをWebコンテンツに追加できるようになりました。
 
+<a name="blogs" />
+
 ### ブログ
 
 1. ドキュメントとメディアをブログに追加するには、最初にブログアプリケーションに移動します。
@@ -139,6 +149,8 @@ Liferayでは、ドキュメントやその他の種類のメディアファイ�
 3.  [関連アセット]で、 [**Select**] ボタンをクリックして、ブログ投稿に追加するドキュメントとメディアを選択します。
 
     ![ [関連するアセット]で、選択ボタンをクリックして、ドキュメントまたはメディアファイルを追加します。](publishing-documents-on-a-dxp-site/images/17.png)
+
+<a name="wikis" />
 
 ### Wiki
 

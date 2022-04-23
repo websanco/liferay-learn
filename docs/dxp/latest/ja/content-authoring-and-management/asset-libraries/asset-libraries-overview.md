@@ -16,6 +16,8 @@
 
 <a name="additional-information" />
 
+<a name="additional-information" />
+
 ## 追加情報
 
   - [アセットライブラリの作成と管理](./creating-and-managing-asset-libraries.md)

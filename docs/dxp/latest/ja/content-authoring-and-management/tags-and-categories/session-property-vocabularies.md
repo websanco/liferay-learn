@@ -12,6 +12,8 @@
 2.  [セッションプロパティのボキャブラリを定義します](#defining-the-session-property-vocabulary) 。
 3.  [セッションベースのセグメントを作成します](#creating-the-session-based-segment) 。
 
+<a name="configuring-the-vocabulary-for-the-session-based-segment" />
+
 ## セッションベースセグメントのボキャブラリの設定
 
 このボキャブラリで定義するカテゴリ（1）は、 [セッションプロパティ](../../site-building/personalizing-site-experience/segmentation/segments-editor-ui-reference.md#session-properties) を使用してセグメントを作成するときに選択できるカテゴリ（2）です。

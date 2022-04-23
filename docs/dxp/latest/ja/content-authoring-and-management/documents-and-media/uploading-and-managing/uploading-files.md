@@ -4,9 +4,9 @@
 
 適切な権限を持つユーザーは、単一のファイルまたは複数のファイルを同時にアップロードできます。 詳細については、 [ドキュメントとメディアの権限リファレンス](../publishing-and-sharing/managing-document-access/documents-and-media-permissions-reference.md) を参照してください。 DXPのロールと権限の詳細については、 [Roles and Permissions](https://help.liferay.com/hc/articles/360017895212-Roles-and-Permissions) をご覧ください 。
 
-```{important}
-自動アンチウイルススキャンを有効にして、アップロード時にファイルをスキャンできます。 詳細については、 [アップロードされたファイルのウイルス対策スキャンを有効にする](../../../system-administration/file-storage/enabling-antivirus-scanning-for-uploaded-files.md) を参照してください。
-```
+<a name="configuring-file-upload-reference" />
+
+## 単一ファイルのアップロード
 
 ファイルをアップロードする最も簡単な方法は、サイトページにデプロイされた [**Documents and Media**] ウィジェットを使用することです。 ルートフォルダまたは特定のフォルダ内にファイルをアップロードできます。
 
@@ -30,7 +30,9 @@
 
 1. 指定されたドロップゾーンにファイルをドラッグアンドドロップするか、ファイルセレクターを使用してファイルを参照します。
 
-   ［**ファイルアップロード**］ を選択した場合、アップロード画面は次のように表示されます。
+<a name="additional-information" />
+
+## 複数のファイルのアップロード
 
    ![アップロードするファイルを1つ選択します。](./uploading-files/images/05.png)
 

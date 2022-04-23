@@ -56,6 +56,8 @@ Google Cloud Natural Languageプロバイダーが設定されました。
 
 サーバー上に複数の仮想インスタンスがある場合は、 [**コントロールパネル**] → [**Instance Settings**] → [**アセット**] から、インスタンスごとにこれらの設定を上書きできます。
 
+<a name="configuring-opennlp-text-auto-tagging" />
+
 ## OpenNLP Text Auto Taggingの設定
 
 1. [**グローバルメニュー**] → [**コントロールパネル**] をクリックします。
@@ -76,6 +78,8 @@ Google Cloud Natural Languageプロバイダーが設定されました。
 OpenNLPプロバイダーが設定されました。
 
 サーバー上に複数の仮想インスタンスがある場合は、 [**コントロールパネル**] → [**Instance Settings**] → [**アセット**] から、インスタンスごとにこれらの設定を上書きできます。
+
+<a name="additional-information" />
 
 ## 追加情報
 

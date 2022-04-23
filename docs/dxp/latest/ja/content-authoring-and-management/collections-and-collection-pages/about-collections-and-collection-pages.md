@@ -24,6 +24,8 @@ Liferayには2種類のコレクションがあります。
 
 <a name="displaying-collections" />
 
+<a name="displaying-collections" />
+
 ## コレクションの表示
 
 コレクションの表示には、 [コレクションページ](../../site-building/displaying-content/additional-content-display-options/displaying-collections.md#displaying-collections-on-a-collection-page) や [コレクション表示フラグメント](../../site-building/displaying-content/additional-content-display-options/displaying-collections.md#adding-a-collection-display-fragment-to-a-page) を使用することができます。
@@ -38,6 +40,8 @@ Liferayには2種類のコレクションがあります。
 
 詳細は、[Displaying Collections](../../site-building/displaying-content/additional-content-display-options/displaying-collections.md)を参照してください。
 
+<a name="customizing-collections" />
+
 ## コレクションのカスタマイズ
 
 Liferayセグメントをコレクションに関連付けて、[セグメント設定](../../site-building/personalizing-site-experience/segmentation/creating-and-managing-user-segments.md)に基づいてさまざまなコレクション項目を表示できます。
@@ -48,11 +52,17 @@ Liferayセグメントをコレクションに関連付けて、[セグメント
 
 <a name="converting-asset-publisher-configurations-to-collections" />
 
+<a name="converting-asset-publisher-configurations-to-collections" />
+
 ## アセットパブリッシャー設定をコレクションに変換する
 
 コレクションは、直接作成することも、[アセットパブリッシャーウィジェット](../../site-building/displaying-content/using-the-asset-publisher-widget/displaying-assets-using-the-asset-publisher-widget.md)から作成することもできます。 アセットパブリッシャーオプションは、カスタマイズを他のページのコレクションとして使用する場合に役立ちます。 詳細は、 [コレクションの作成](./creating-collections.md#creating-a-collection-from-an-asset-publisher) をご覧してください。
 
+<a name="liferay-dxp-72" />
+
 ## Liferay DXP 7.2
+
+<a name="managing-content-sets" />
 
 ### コンテンツセットの管理
 
@@ -62,17 +72,25 @@ Liferayセグメントをコレクションに関連付けて、[セグメント
     以前のバージョンのLiferay DXPでは、アセットパブリッシャーを使用して、タグ、カテゴリ、アセットタイプなどの基準に基づいて、アセットの静的リストまたは動的リストのいずれかを定義および表示していました。 Liferay DXPコンテンツセットでは、さまざまなタイプのアセットリストを定義するという基本的な考え方を取り入れて拡張しています。 コンテンツリストは、特定のアプリケーションまたはウィジェットのコンテキスト外で作成され、さまざまなチャンネルやアプリケーションで使用および再利用できます。
 ```
 
+<a name="creating-and-displaying-content-sets" />
+
 ### コンテンツセットの作成と表示
 
 コンテンツセットは、サイト管理インターフェイスを介して作成されます。 コンテンツセットを作成および管理するためのすべての機能がここに含まれています。 コンテンツセットは、Liferayのウィジェットまたは独自のカスタムアプリケーションを使用して表示されます。 詳細は、 [Creating Content Sets](./creating-collections.md#creating-content-sets) および [Displaying Content Sets](../../site-building/displaying-content/additional-content-display-options/displaying-collections.md#displaying-content-sets) を参照してください。
+
+<a name="content-set-personalization" />
 
 ### コンテンツセットのパーソナライゼーション
 
 コンテンツセットには、Liferay DXPのパーソナライゼーションエンジンによって駆動されるバリエーションを含めることができます。 コンテンツセットを作成した後、少なくとも1つのユーザーセグメントを作成している場合は、そのセグメントのコンテンツセットのパーソナライズされたエクスペリエンスを作成できます。 コンテンツセットのエクスペリエンスのパーソナライゼーションの力を活用する方法については、 [コンテンツセットのパーソナライゼーション](../../site-building/personalizing-site-experience/experience-personalization/personalizing-collections.md#content-set-personalization) を参照してください。
 
+<a name="converting-asset-publisher-configurations-to-content-sets" />
+
 ### アセットパブリッシャー設定をコンテンツセットに変換する
 
 あなたはすでにアセットパブリッシャーを使用して、完全で精選されたコンテンツの一覧を作成するためにすでに多くの作業を行ってきたかもしれませんが、今度は作業を複製せずにその一覧を他の場所に表示したいと考えています。 コンテンツセットでそれを行うことができます。 詳細は、 [Converting Asset Publisher Configuration to Content Sets guide](./creating-collections.md#converting-asset-publisher-configurations-to-content-sets) を参照してください。
+
+<a name="related-information" />
 
 ## 関連情報
 

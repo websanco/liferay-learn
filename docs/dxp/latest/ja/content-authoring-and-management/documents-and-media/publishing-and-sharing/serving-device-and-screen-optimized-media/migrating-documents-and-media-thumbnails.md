@@ -25,6 +25,8 @@ DXPは、アダプティブメディアを使用して、ドキュメントと�
 
 <a name="creating-the-adaptive-media-images" />
 
+<a name="creating-the-adaptive-media-images" />
+
 ## アダプティブメディア画像の作成
 
 必要な画像解像度がそろったら、ドキュメントとメディアのサムネイルをアダプティブメディア画像に変換できます。
@@ -34,6 +36,8 @@ DXPは、アダプティブメディアを使用して、ドキュメントと�
   - サムネイルの画像解像度に合わせて画像を調整する：これにより、既存のサムネイルがアダプティブメディアの画像解像度の値にスケーリングされます。これには、画像の数によっては時間がかかる場合があります。 これは、画像の数が少ない場合、または画像を最初から生成する場合にのみお勧めします。 このアプローチについては、 [Generating Missing Adapted Images](./managing-image-resolutions.md#generating-missing-adapted-images) で詳しく説明しています。
 
 * 既存のサムネイルを再利用する移行プロセスを実行する：既存のサムネイルがアダプティブメディアにコピーされます。これにより、計算コストの高いスケーリング操作が回避されるため、パフォーマンスが向上します。
+
+<a name="running-the-migration-process" />
 
 ### 移行プロセスの実行
 
@@ -51,6 +55,8 @@ DXPは、アダプティブメディアを使用して、ドキュメントと�
 
 4.  `thumbnails:cleanUp`コマンドを実行します。 これにより、オリジナルのドキュメントとメディアのサムネイルがすべて削除され、`thumbnails:check`で返される数が更新されます。 したがって、`thumbnails:cleanUp`は、migrateコマンドを実行し、移行が正常に実行され、移行が保留されている画像がないことを確認した後で **のみ** 実行する必要があります。
 
+<a name="troubleshooting" />
+
 ## トラブルシューティング
 
 移行プロセスの実行後のある時点でアダプティブメディアをアンデプロイする場合は、ドキュメントとメディアのサムネイルを再生成する必要があります。
@@ -62,6 +68,8 @@ DXPは、アダプティブメディアを使用して、ドキュメントと�
 2. [**Reset preview and thumbnail files for Documents and Media**] の横にある [**実行**] をクリックします。
 
    ![Gogo シェルに移動します。](./migrating-documents-and-media-thumbnails/images/02.png)
+
+<a name="additional-information" />
 
 <a name="additional-information" />
 

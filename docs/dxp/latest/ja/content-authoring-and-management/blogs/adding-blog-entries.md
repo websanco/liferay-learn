@@ -4,6 +4,8 @@
 
 ブログエントリを作成する最も簡単な方法は、サイトページにデプロイされた [**Blogs**] ウィジェットを使用することです。
 
+<a name="creating-an-entry" />
+
 ## エントリの作成
 
 1. **製品メニュー**（![Product Menu](../../images/icon-product-menu.png)）を開き、 **サイト管理** メニューのコンパスアイコン（![Compass](../../images/icon-compass.png)）をクリックします。 ブログを作成するサイトを選択します。
@@ -20,6 +22,8 @@
 
 6. [**Content**] フィールドにエントリのコンテンツを入力します。 さまざまなテキスト編集機能の詳細については、 [ブログエントリエディターのリファレンス](./blog-entry-editor-reference.md) の記事を参照してください。
 
+<a name="organizing-blog-entries-with-tags-and-related-assets" />
+
 ### タグと関連アセットを使用してブログエントリを整理する
 
 <!-- ```{note} Available in Liferay DXP 7.3+. This section must be updated to reflect the new by-default categories and vocabularies in 7.3 -->
@@ -34,6 +38,8 @@
 アセット関係を追加するには：
 
 1. [**Related Assets**] セクションを展開し、 [**Select**] ボタンを使用して、リンクする目的のアセットを選択します。
+
+<a name="configuring-how-the-entry-is-displayed" />
 
 ### エントリの表示方法の設定
 

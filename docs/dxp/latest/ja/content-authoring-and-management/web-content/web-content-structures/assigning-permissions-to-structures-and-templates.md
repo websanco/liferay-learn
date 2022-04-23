@@ -33,6 +33,8 @@ FreeMarkerでテンプレートを作成または編集する権限は信頼で�
 4. [**テンプレート作成を有効にする**] のチェックを外します。
 5. [**保存**] をクリックします。
 
+<a name="assigning-permissions" />
+
 ## 権限の割り当て
 
 1. [**サイト管理者**] → [**Content & Data**] → [**Webコンテンツ**] に移動します。
@@ -44,6 +46,8 @@ FreeMarkerでテンプレートを作成または編集する権限は信頼で�
 ![Webコンテンツストラクチャーとテンプレートの権限設定ダイアログ](./assigning-permissions-to-structures-and-templates/images/01.png).
 
 権限の設定の詳細は、 [ロール権限の定義](../../../users-and-permissions/roles-and-permissions/defining-role-permissions.md) を参照してください。
+
+<a name="related-information" />
 
 ## 関連情報
 

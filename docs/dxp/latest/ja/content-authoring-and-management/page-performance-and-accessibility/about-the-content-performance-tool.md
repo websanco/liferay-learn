@@ -16,6 +16,8 @@
 - ページまたはコンテンツの編集権限がある。
 - コンテンツがコンテンツページ、ウィジェットページにあるか、または[ディスプレイページテンプレート](../../site-building/displaying-content/using-display-page-templates/publishing-content-with-display-pages.md)に基づいている。
 
+<a name="accessing-the-content-performance-tool" />
+
 ## コンテンツパフォーマンスツールへのアクセス
 
 ［**コンテンツパフォーマンス**］（![Content Performance](../../images/icon-analytics.png)）ボタンを使用して、コンテンツパフォーマンスツールを開くことができます。
@@ -23,6 +25,8 @@
 - Webコンテンツ、ドキュメント、ブログエントリーなど、 [ディスプレイページテンプレートに基づくコンテンツ](#accessing-the-content-performance-tool-from-content-based-on-a-display-page-template) 。
 - [コンテンツまたはウィジェットページ](#accessing-the-content-performance-tool-from-content-or-widget-pages) （Liferay DXP 7.4以降）。
 - [コンテンツダッシュボード](#accessing-the-content-performance-tool-from-the-content-dashboard) 。
+
+<a name="accessing-the-content-performance-tool-from-content-based-on-a-display-page-template" />
 
 ### ディスプレイページテンプレートに基づくコンテンツからコンテンツパフォーマンスツールにアクセスする
 
@@ -40,6 +44,8 @@
 
 1. 閲覧モードで、 [アプリケーションツールバー](../../getting-started/navigating-dxp.md#applications-bar) の ［**コンテンツパフォーマンス**］（![Content Performance](../../images/icon-analytics.png)）アイコンをクリックします。
 
+<a name="accessing-the-content-performance-tool-from-content-or-widget-pages" />
+
 ### コンテンツまたはウィジェットページからコンテンツパフォーマンスツールにアクセスする
 
 1. ［**サイト管理**］ &rarr; ［**サイトビルダー**］ &rarr; ［**Pages**］ に移動します。
@@ -47,6 +53,8 @@
 1. アプリケーションツールバーの ［**コンテンツパフォーマンス**］（![Content Performance](../../images/icon-analytics.png)）アイコンをクリックします。
 
    ![コンテンツまたはウィジェットページのコンテンツパフォーマンスメトリクスにアクセスします。](./about-the-content-performance-tool/images/03.png)
+
+<a name="accessing-the-content-performance-tool-from-the-content-dashboard" />
 
 ### コンテンツダッシュボードからコンテンツパフォーマンスツールにアクセスする
 
@@ -59,6 +67,8 @@
 ```{note}
 コンテンツパフォーマンスオプションが使用できない場合、コンテンツは1つ以上の条件を満たしていません。 詳細については、 [About the Content Performance Tool](#about-the-content-performance-tool) を参照してください。
 ```
+
+<a name="related-information" />
 
 ## 関連情報
 

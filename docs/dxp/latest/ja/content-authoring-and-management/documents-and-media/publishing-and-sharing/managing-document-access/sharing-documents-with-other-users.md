@@ -16,29 +16,35 @@ DXPの **ドキュメントとメディア** アプリを使用すると、ユ�
 
 <a name="sharing-files-in-documents-and-media" />
 
-## ドキュメントとメディアでファイルを共有する
+<a name="sharing-files-in-documents-and-media" />
+
+## 統合
 
 ドキュメントとメディアライブラリをMicrosoftOffice365™またはGoogleドライブと統合できます。 詳細は、 [Microsoft Office 365でドキュメントの作成と編集を有効にする](../../devops/enabling-document-creation-and-editing-with-microsoft-office-365.md) 、 [Googleドライブドキュメントへのリンクを有効にする](../../devops/google-drive-integration/enabling-links-to-google-drive-documents.md) 、および [Googleドライブでドキュメントの作成と編集を有効にする](../../devops/google-drive-integration/enabling-document-creation-and-editing-with-google-drive.md) を参照してください。
 
 最後に、WebDAVを使用して、ファイルマネージャーからドキュメントにアクセスできます。 詳細は、 [WebDAVを使用したドキュメントへのアクセス](../accessing-documents-with-webdav.md) を参照してください
 
-1. ［**ドキュメントとメディア**］ ウィジェットがデプロイされているページに移動します。
+<a name="working-with-shared-files" />
+
+## ドキュメントとメディアでのワークフローの使用
 
 DXPの[ワークフロー](../../../../process-automation/workflow/introduction-to-workflow.md)を使用して公開設定を管理できます。ドキュメントとメディアに対してワークフローが有効になっている場合、ドキュメントは公開される前にレビューされる必要があります。 ドキュメントとメディアに対しワークフローを有効化する詳細は、 [ワークフローのアクティブ化](../../../../process-automation/workflow/using-workflows/activating-workflow.md#activating-workflow-for-specific-applications) を参照してください。
 
 1. 共有するファイルをクリックします（例：`speech.txt`）。
 1. **情報** ボタンをクリックして、情報パネルを展開します。
 
-    ![情報ボタンをクリックすると、［共有］ボタンがある情報パネルが展開されます。](./sharing-documents-with-other-users/images/02.png)
+<a name="managing-shared-files" />
+
+## バックアップとインポート / エクスポート
 
 1. ［**共有**］ をクリックします。
 1. コラボレーターのメールアドレスを入力します。 複数のアドレスを入力できます。
 1. 受信ユーザーにファイルを共有させるには、 ［**Allow the document to be shared with other users**］ ボックスをオンにします。
 1. 受信ユーザーに付与するファイルの権限を選択します。 受信ユーザーに付与する次のファイル権限のいずれかを選択します。
 
-    ***アップデート：** 表示、コメント、およびアップデート。
-    ***コメント：** 表示およびコメント。
-    ***View：** 閲覧のみ。
+<a name="additional-information" />
+
+## メディアギャラリー
 
     ![受信ユーザーに付与する権限を選択します。](./sharing-documents-with-other-users/images/03.png)
 

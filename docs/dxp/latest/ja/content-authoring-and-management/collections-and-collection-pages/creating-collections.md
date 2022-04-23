@@ -6,6 +6,8 @@
 
 **手動** コレクションまたは **動的** コレクションを作成できます。 コレクションの種類については、[コレクションとコレクションページについて](./about-collections-and-collection-pages.md)を参照してください。
 
+<a name="creating-a-manual-collection" />
+
 ## 手動コレクションの作成
 
 1. [**サイト管理**] → [**サイトビルダー**] → [**コレクション**] に移動します。
@@ -102,6 +104,8 @@
 
 6. [**保存**] をクリックします。
 
+<a name="creating-a-collection-from-an-asset-publisher" />
+
 ## アセットパブリッシャーからコレクションを作成する
 
 [アセットパブリッシャーウィジェット](../../site-building/displaying-content/using-the-asset-publisher-widget/displaying-assets-using-the-asset-publisher-widget.md)から新しいコレクションを作成できます。 これは、他のページでコレクションとして使用するアセットパブリッシャーのカスタマイゼーションがある場合に役立ちます。
@@ -131,7 +135,11 @@
 
 8.  新しいコレクションは、 [**サイト管理**] → [**サイトビルダー**] → [**コレクション**] にあります。
 
+<a name="liferay-dxp-72" />
+
 ## Liferay DXP 7.2
+
+<a name="creating-content-sets" />
 
 ### コンテンツセットの作成
 
@@ -181,6 +189,8 @@
 これにより、現在 **トレンド** としてタグ付けされている項目を含むコンテンツセットが作成され、今後 **トレンド** とタグ付けされた項目はコンテンツセットに自動的に追加されます。
 
 コンテンツセットを作成したので、 [それらをページに表示する](../../site-building/displaying-content/displaying-collections.md#displaying-content-sets) ことができます。
+
+<a name="converting-asset-publisher-configurations-to-content-sets" />
 
 ### アセットパブリッシャー設定をコンテンツセットに変換する
 

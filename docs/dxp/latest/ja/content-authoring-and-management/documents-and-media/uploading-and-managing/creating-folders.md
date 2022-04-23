@@ -2,6 +2,8 @@
 
 ドキュメントとメディアフォルダを使用して、ファイルを整理できます。 必要な権限を持つ認証されたユーザーのみがフォルダを管理できます。 詳細については、 [ドキュメントとメディアの権限リファレンス](../publishing-and-sharing/managing-document-access/documents-and-media-permissions-reference.md) を参照してください。 DXPのロールと権限の詳細については、 [Roles and Permissions](https://help.liferay.com/hc/articles/360017895212-Roles-and-Permissions) をご覧ください 。
 
+<a name="adding-a-folder" />
+
 ## フォルダを追加する
 
 フォルダを追加する最も簡単な方法は、サイトページにデプロイされた [**Documents and Media**] ウィジェットを使用することです。
@@ -19,6 +21,8 @@
 1. ［**保存**］ をクリックして新規フォルダを作成します。
 
 5. [**保存**] をクリックします。
+
+<a name="document-type-restrictions-and-workflow" />
 
 <a name="document-type-restrictions-and-workflow" />
 
@@ -49,6 +53,8 @@
     ![ドキュメントタイプを選択](./creating-folders/images/04.png)
 
 9.  完了したら、 [**保存**] をクリックします。
+
+<a name="additional-information" />
 
 ## 追加情報
 

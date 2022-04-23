@@ -22,6 +22,8 @@ FreeMarkerの` utilLocator`、` objectUtil`、および` staticUtil`変数はデ
 
 テンプレートを保存すると、DXPはWebDAV URLと静的URLを提供します。 これらの値は、ストラクチャーのXMLソースにアクセスします。 保存後にテンプレートに戻り、 [**Details**] セクションを展開すると、これらのURLを見つけることができます。 WebDAVとWebDAV URLの使用の詳細は、[WebDAV Access](../../documents-and-media/publishing-and-sharing/accessing-documents-with-webdav.md)セクションを参照してください。
 
+<a name="additional-information" />
+
 ## 追加情報
 
   - [テンプレートへのウィジェットの埋め込み](./embedding-widgets-in-templates.md)

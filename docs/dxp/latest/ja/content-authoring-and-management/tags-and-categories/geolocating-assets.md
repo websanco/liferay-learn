@@ -36,6 +36,8 @@ Webコンテンツの場所を設定するには、ブラウザと現在地を�
 
 動的データリストで位置情報を使用するには、最初に位置情報フィールドを含むデータ定義を作成する必要があります。
 
+<a name="creating-a-new-data-list-definition" />
+
 ### 新しいデータリスト定義の作成
 
 1.  プロダクトメニューを開き、サイトに移動します。
@@ -59,6 +61,8 @@ Webコンテンツの場所を設定するには、ブラウザと現在地を�
 7.  完了したら、 [**保存**] をクリックします。
 
 データ定義が作成されたので、この定義を使用して新しいデータリストを作成します。
+
+<a name="creating-a-new-data-list" />
 
 ### 新しいデータリストの作成
 
@@ -84,6 +88,8 @@ Webコンテンツの場所を設定するには、ブラウザと現在地を�
 
 ドキュメントとメディアで位置情報を有効にするには、最初に位置情報メタデータを含む[ドキュメントタイプ](../documents-and-media/uploading-and-managing/managing-metadata/defining-document-types.md)を作成する必要があります。 または、[メタデータセット](../documents-and-media/uploading-and-managing/managing-metadata/using-metadata-sets.md)の一部として位置情報メタデータを追加することもできます。 そのメタデータセットを作成したら、それをドキュメントタイプの一部として含めることができます。
 
+<a name="adding-geolocation-in-a-metadata-set" />
+
 ### メタデータセットへの位置情報の追加
 
 以下の手順に従ってください。
@@ -103,6 +109,8 @@ Webコンテンツの場所を設定するには、ブラウザと現在地を�
     ![ [位置情報]フィールドを他のフィールドと一緒にドラッグアンドドロップして、メタデータセットを作成します。](./geolocating-assets/images/08.png)
 
 6.  完了したら、 [**保存**] をクリックします。
+
+<a name="adding-a-geolocation-field-in-a-document-type" />
 
 ### ドキュメントタイプに位置情報フィールドを追加する
 
@@ -127,6 +135,8 @@ Webコンテンツの場所を設定するには、ブラウザと現在地を�
 7.  位置情報メタデータを含むメタデータセットを選択します。
 
 8. [**保存**] をクリックします。
+
+<a name="adding-geolocation-to-a-document" />
 
 ### ドキュメントへの位置情報の追加
 

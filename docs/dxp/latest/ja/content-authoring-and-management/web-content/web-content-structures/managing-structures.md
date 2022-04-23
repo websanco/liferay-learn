@@ -7,6 +7,8 @@
 3.  ストラクチャーの横にある **アクションメニュー**（![Action Menu](../../../images/icon-actions.png)）を開き、 [使用可能なアクション](#available-actions) の1つを選択します。
 4. [**保存**] をクリックして変更を適用します。
 
+<a name="available-actions" />
+
 ## 使用可能なアクション
 
 次のアクションは、ストラクチャーのアクションメニュー（![Action Menu](../../../images/icon-actions.png)）から実行できます。
