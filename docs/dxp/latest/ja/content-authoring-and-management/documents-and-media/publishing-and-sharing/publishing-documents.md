@@ -20,7 +20,7 @@ Liferayでは、ドキュメントやその他の種類のメディアファイ�
 
 1. ウィジェットが表示されると、以前にアップロードされたメディアファイルがすでに表示されているはずです。 [メディアファイルを追加](../uploading-and-managing/uploading-files.md)したい場合は、［ドキュメントとメディア］からアップロードできます。
 
-［メディアギャラリー］ウィジェットには、 **オプション**(![Options icon](../../../images/icon-options.png)) &rarr; ［**設定**］ をクリックして設定できるいくつかのオプションがあります。
+[メディアギャラリー]ウィジェットには、 **オプション**(![Options icon](../../../images/icon-options.png)) → [**設定**] をクリックして設定できるいくつかのオプションがあります。
 
 ![設定ウィンドウには、4つの異なるタブがあります。](publishing-documents-on-a-dxp-site/images/02.png)
 
@@ -46,13 +46,11 @@ Liferayでは、ドキュメントやその他の種類のメディアファイ�
 
 ## ［ドキュメントとメディア］ウィジェットの使用
 
-このウィジェットは、すべてのタイプのファイルを公開する方法を提供します。 ［メディアギャラリー］ウィジェットとは異なり、ドキュメントやその他の種類のメディアを公開できます。
+1.  [コンテンツ管理]セクションから、 [**ドキュメントとメディア**] ウィジェットをページに追加します。
 
 1. ［コンテンツ管理］セクションから、 ［**ドキュメントとメディア**］ ウィジェットをページに追加します。
 
     ![ウィジェットの［コンテンツ管理］セクションの下にリストされている［ドキュメントとメディア］ウィジェットを見つけます。](publishing-documents-on-a-dxp-site/images/05.png)
-
-1. [メディアファイルを追加](../uploading-and-managing/uploading-files.md)したい場合は、［ドキュメントとメディア］アプリケーションからアップロードできます。
 
 **オプション** ボタン（![Options button](../../../images/icon-options.png)）を使用して、ドキュメントとメディアを設定できます。
 
@@ -104,7 +102,7 @@ Liferayでは、ドキュメントやその他の種類のメディアファイ�
 
 **ごみ箱へ移動:****ゴミ箱** アイコン（![Recycle icon](../../../images/icon-trash.png)）をクリックして、ファイルを削除します。
 
-**アクション:****アクション** アイコン（![Actions icon](../../../images/icon-actions.png)）には、 ［**チェックイン**］ および ［**チェックアウト**］ などのオプションがあります。 [Google Drive Integration](../devops/google-drive-integration/enabling-document-creation-and-editing-with-google-drive.md)、[Office 365 Integration](../devops/enabling-document-creation-and-editing-with-microsoft-office-365.md)、および[LibreOffice Integration](../devops/enabling-openoffice-libreoffice-integration.md)を参照してください。
+**アクション:****アクション** アイコン（![Actions icon](../../../images/icon-actions.png)）には、 [**チェックイン**] および [**チェックアウト**] などのオプションがあります。 [Google Drive Integration](../devops/google-drive-integration/enabling-document-creation-and-editing-with-google-drive.md)、[Office 365 Integration](../devops/enabling-document-creation-and-editing-with-microsoft-office-365.md)、および[LibreOffice Integration](../devops/enabling-openoffice-libreoffice-integration.md)を参照してください。
 
 <a name="using-the-asset-publisher-widget" />
 
@@ -138,7 +136,7 @@ Liferayでは、ドキュメントやその他の種類のメディアファイ�
 
 1. 追加アイコン（![Add icon](../../../images/icon-add.png)）をクリックして、新規ブログを追加します。
 
-1. ［関連アセット］で、 ［**Select**］ ボタンをクリックして、ブログ投稿に追加するドキュメントとメディアを選択します。
+3.  [関連アセット]で、 [**Select**] ボタンをクリックして、ブログ投稿に追加するドキュメントとメディアを選択します。
 
    ![［関連するアセット］で、選択ボタンをクリックして、ドキュメントまたはメディアファイルを追加します。](publishing-documents-on-a-dxp-site/images/17.png)
 
@@ -146,6 +144,6 @@ Liferayでは、ドキュメントやその他の種類のメディアファイ�
 
 1. Wikiノードに移動します。
 
-1. ［関連アセット］で、 ［**Select**］ ボタンをクリックして、Wikiページに追加するドキュメントとメディアを選択します。
+2.  [関連アセット]で、 [**Select**] ボタンをクリックして、Wikiページに追加するドキュメントとメディアを選択します。
 
    ![［関連するアセット］で、選択ボタンをクリックして、ドキュメントまたはメディアファイルを追加します。](publishing-documents-on-a-dxp-site/images/17.png)

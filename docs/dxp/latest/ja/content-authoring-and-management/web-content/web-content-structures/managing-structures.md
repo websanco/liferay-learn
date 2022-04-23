@@ -4,10 +4,8 @@
 
 1.  プロダクトメニューを開き、サイトメニューの見出し → [**Content & Data**] → [**Webコンテンツ**] に移動します。
 2. [**ストラクチャー**] タブを選択します。
-3.  ストラクチャーの横にある **アクションメニュー**（![Action Menu](../../../images/icon-actions.png)）を開き、 [使用可能なアクション](#available-actions) の1つを選択します。
+3.  ストラクチャーの横にある **アクションメニュー**（![Action Menu](../../../images/icon-actions.png)）を開き、 [使用可能なアクション](#available-actions)の1つを選択します。
 4. [**保存**] をクリックして変更を適用します。
-
-<a name="available-actions" />
 
 ## 使用可能なアクション
 

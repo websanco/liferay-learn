@@ -8,7 +8,7 @@
 コンテンツパフォーマンスメトリクスは、[デフォルトのエクスペリエンス](../../site-building/personalizing-site-experience/experience-personalization/creating-and-managing-experiences.md)でのみ使用できます。
 ```
 
-コンテンツの*［統計情報を表示］*（![View Metrics](../../images/icon-analytics.png)）オプションを使用して、コンテンツパフォーマンスツールにアクセスします。 このオプションは、[アプリケーションツールバー](../../getting-started/navigating-dxp.md#applications-bar)と[コンテンツダッシュボード](../content-dashboard/about-the-content-dashboard.md)にあります。 詳しくは、[About the Content Performance Tool](./about-the-content-performance-tool.md)を参照してください。
+コンテンツの ［**統計情報を表示**］（![View Metrics](../../images/icon-analytics.png)）オプションを使用して、コンテンツパフォーマンスツールにアクセスします。 このオプションは、[アプリケーションツールバー](../../getting-started/navigating-dxp.md#applications-bar)と[コンテンツダッシュボード](../content-dashboard/about-the-content-dashboard.md)にあります。 詳しくは、[About the Content Performance Tool](./about-the-content-performance-tool.md)を参照してください。
 
 コンテンツパフォーマンスツールには、次の3つの異なる領域があります。
 

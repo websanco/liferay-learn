@@ -58,8 +58,6 @@ FreeMarkerでテンプレートを作成または編集する権限は信頼で�
 
   - **メイン画像** : URLまたはデバイスからテンプレートのメイン画像を選択します。
 
-<a name="additional-information" />
-
 ## 追加情報
 
   - [ストラクチャーの作成](../web-content-structures/creating-structures.md)

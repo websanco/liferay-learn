@@ -39,7 +39,7 @@ DXPは、アダプティブメディアを使用して、ドキュメントと�
 
 移行プロセスは、[Gogoコンソールコマンド](../../../../liferay-internals/fundamentals/using-the-gogo-shell/gogo-shell-commands.md)のセットです。
 
-1. ［**グローバルメニュー**］ &rarr; ［**コントロールパネル**］ &rarr; ［**Gogo シェル**］ に移動します。
+1. [**グローバルメニュー**] → [**コントロールパネル**] → [**Gogo シェル**] に移動します。
 
    ![Gogo シェルに移動します。](./migrating-documents-and-media-thumbnails/images/01.png)
 
@@ -47,17 +47,19 @@ DXPは、アダプティブメディアを使用して、ドキュメントと�
 1. `thumbnails:migrate`コマンドを実行します。 これにより、移行プロセスが実行されます。画像の数によっては、完了するまでに時間がかかる場合があります。
 1. `thumbnails:cleanUp`コマンドを実行します。 これにより、オリジナルのドキュメントとメディアのサムネイルがすべて削除され、`thumbnails:check`で返される数が更新されます。 したがって、`thumbnails:cleanUp`は、migrateコマンドを実行し、移行が正常に実行され、移行が保留されている画像がないことを確認した後で **のみ** 実行する必要があります。
 
-<a name="troubleshooting" />
+3.  `thumbnails:migrate`コマンドを実行します。 これにより、移行プロセスが実行されます。画像の数によっては、完了するまでに時間がかかる場合があります。
+
+4.  `thumbnails:cleanUp`コマンドを実行します。 これにより、オリジナルのドキュメントとメディアのサムネイルがすべて削除され、`thumbnails:check`で返される数が更新されます。 したがって、`thumbnails:cleanUp`は、migrateコマンドを実行し、移行が正常に実行され、移行が保留されている画像がないことを確認した後で **のみ** 実行する必要があります。
 
 ## トラブルシューティング
 
 移行プロセスの実行後のある時点でアダプティブメディアをアンデプロイする場合は、ドキュメントとメディアのサムネイルを再生成する必要があります。
 
-1. ［**グローバルメニュー**］ &rarr; ［**コントロールパネル**］ &rarr; ［**サーバ管理**］ に移動します。
+1. [**グローバルメニュー**] → [**コントロールパネル**] → [**サーバ管理**] に移動します。
 
    ![サーバ管理に移動します。](./migrating-documents-and-media-thumbnails/images/03.png)
 
-1. ［**Reset preview and thumbnail files for Documents and Media**］ の横にある ［**実行**］ をクリックします。
+2. [**Reset preview and thumbnail files for Documents and Media**] の横にある [**実行**] をクリックします。
 
    ![Gogo シェルに移動します。](./migrating-documents-and-media-thumbnails/images/02.png)
 

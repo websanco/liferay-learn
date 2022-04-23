@@ -24,7 +24,7 @@
 
     **複数カテゴリの許可:** このオプションを有効にすると、ボキャブラリの複数のカテゴリを使用してアセットを分類できます。 無効にすると、ボキャブラリから1つのカテゴリしか使用できません。
 
-    **Visibility:** 詳細は、 [ボキャブラリの可視性](./organizing-content-with-categories-and-tags.md#vocabulary-visibility) を参照してください。
+    **Visibility:** 詳細は、[ボキャブラリの可視性](./organizing-content-with-categories-and-tags.md#vocabulary-visibility)を参照してください。
 
     ```{important}
     ボキャブラリを保存した後、[Visibility]を変更することはできません。

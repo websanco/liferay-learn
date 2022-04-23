@@ -83,8 +83,6 @@ TensorFlowプロバイダーが設定されました。
 
 7.  完了したら、 [**保存**] をクリックします。
 
-<a name="configuring-microsoft-cognitive-services" />
-
 ## Microsoft Cognitive Servicesの設定
 
 1. [**グローバルメニュー**] → [**コントロールパネル**] をクリックします。
@@ -107,13 +105,11 @@ TensorFlowプロバイダーが設定されました。
 
 **APIキー:** Computer Vision API V2の [APIキー](https://azure.microsoft.com/en-us/try/cognitive-services/my-apis/?apiSlug=computer-services) 。
 
-**APIエンドポイント:** [Computer Vision API V2](https://westcentralus.api.cognitive.microsoft.com/vision/v2.0) のエンドポイント。
+**APIエンドポイント:**[Computer Vision API V2](https://westcentralus.api.cognitive.microsoft.com/vision/v2.0)のエンドポイント。
 
 Microsoft CognitiveServicesプロバイダーが設定されました。 詳細は、 [Microsoft Cognitive Servicesのドキュメンテーション](https://docs.microsoft.com/en-us/azure/cognitive-services/) を参照してください。
 
 複数の仮想インスタンスがある場合は、各インスタンスを個別に設定できます。 [**コントロールパネル**] → [**Instance Settings**] に移動します。 [**アセット**] をクリックし、そこでプロバイダーを設定します。
-
-<a name="additional-information" />
 
 ## 追加情報
 

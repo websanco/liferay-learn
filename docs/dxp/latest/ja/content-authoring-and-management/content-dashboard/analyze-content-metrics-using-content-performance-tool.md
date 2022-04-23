@@ -9,19 +9,19 @@
 コンテンツパフォーマンスにアクセスするには、次の条件を満たす必要があります。
 
   - コンテンツの表示および編集権限がある。
-  - コンテンツが、 [ディスプレイページテンプレート](../../site-building/displaying-content/using-display-page-templates/displaying-content-with-display-page-templates.md)（ *ページ*（![Page](../../images/icon-page.png)）アイコン で示される）に基づいている。
-  - Liferay DXPインスタンスがアクティブに有効な [Liferay Analytics Cloudへの接続](https://learn.liferay.com/analytics-cloud/latest/ja/connecting-data-sources/connecting-liferay-dxp-to-analytics-cloud.html) があり、サイトが同期されている。
+  - コンテンツが、 [ディスプレイページテンプレート](../../site-building/displaying-content/using-display-page-templates/displaying-content-with-display-page-templates.md)（**ページ**（![Page](../../images/icon-page.png)）アイコン で示される）に基づいている。
+  - Liferay DXPインスタンスがアクティブに有効な[Liferay Analytics Cloudへの接続](https://learn.liferay.com/analytics-cloud/latest/en/getting-started/connecting-data-sources/connecting-liferay-dxp-to-analytics-cloud.html)があり、サイトが同期されている。
 
 コンテンツパフォーマンスサイドバーを開くには：
 
-1.  確認するコンテンツの横にある*アクション*メニュー（![Actions Menu](../../images/icon-actions.png)）をクリックし、*[統計情報を表示]* を選択します。
-2.  または、コンテンツの上にカーソルを置き、*[統計情報を表示]*（![View Metrics](../../images/icon-analytics.png)）アイコンをクリックします。
+1.  確認するコンテンツの横にある **アクション** メニュー（![Actions Menu](../../images/icon-actions.png)）をクリックし、 [**統計情報を表示**] を選択します。
+2.  または、コンテンツの上にカーソルを置き、 [**統計情報を表示**]（![View Metrics](../../images/icon-analytics.png)）アイコンをクリックします。
 
-コンテンツダッシュボードの外部からパフォーマンスメトリクスにアクセスすることもできます。 *[統計情報を表示]* ボタンは、Webコンテンツのレイアウトを編集する権限がある場合、Webコンテンツの閲覧モードで使用できます。
+コンテンツダッシュボードの外部からパフォーマンスメトリクスにアクセスすることもできます。 [**統計情報を表示**] ボタンは、Webコンテンツのレイアウトを編集する権限がある場合、Webコンテンツの閲覧モードで使用できます。
 
 ![ [統計情報を表示]ボタンからコンテンツパフォーマンスメトリクスにアクセスします](../content-performance-panel/analyze-content-metrics-using-content-performance-panel/images/08.png)
 
-コンテンツがさまざまな言語にローカライズされている場合、 *[Languages Translated Into]* セクションで各言語のメトリクスを表示することができます。 これを行うには、言語アイコンセレクターをクリックして、言語を選択します。
+コンテンツがさまざまな言語にローカライズされている場合、 [**Languages Translated Into**] セクションで各言語のメトリクスを表示することができます。 これを行うには、言語アイコンセレクターをクリックして、言語を選択します。
 
 ```{note}
 言語選択は、ローカライズされたコンテンツでのみ使用できます。

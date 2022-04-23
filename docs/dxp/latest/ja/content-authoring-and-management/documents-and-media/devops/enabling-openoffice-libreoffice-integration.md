@@ -6,13 +6,13 @@
 OpenOfficeとLibreOfficeはどちらも統合可能ですが、一部の機能はすべてのLiferay製品と互換性がない場合があります。 サポートされているテクノロジーのリストについては、[Liferay's Integrated Technologies Compatibility Matrix］(https://help.liferay.com/hc/en-us/articles/360016294272-Liferay-DXP-Integrated-Technologies-Compatibility-Matrix)を参照してください。 
 ```
 
-インストールしたら、次の手順に従って、コントロールパネルからLiferayのOpenOffice / LibreOffice統合を有効にします。
+<!-- TODO: Leaving this as placeholder now until we can review and provide better direction on this topic.
+1. Open the Product Menu and go to **Control Panel** &rarr; **Configuration** &rarr; **System Settings**
+1. Select **Connectors** under the Platform heading.
 
 1. **グローバルメニュー** を開き、 ［**コントロールパネル**］ &rarr; ［**システム設定**］ &rarr; ［**コネクター**］ &rarr; ［**OpenOffice の利用**］ に移動します。
 
-   ```{note}
-   または、 `com.liferay.document.library.document.conversion.internal.configuration.OpenOfficeConfiguration.config`ファイルを`[Liferay Home]/osgi/configs`フォルダにデプロイしてこれらの設定を調整することもできます。 
-   ```
+1. Check the **Server Enabled** box and click **Save** to apply the changes.
 
    ![［システム設定］の［コネクター］の下にある［OpenOffice の利用］に移動します。](./enabling-openoffice-libreoffice-integration/images/01.png)
 

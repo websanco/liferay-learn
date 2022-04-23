@@ -1,6 +1,6 @@
 # セッションプロパティのボキャブラリ
 
-**セッションプロパティのボキャブラリ** では、定義済みの値を使用して [セッションベースのセグメントプロパティ](../../site-building/personalizing-site-experience/segmentation/segments-editor-ui-reference.md#session-properties) を作成できます。 このオプションは、新しいセグメントの作成中にセグメントエディタでプロパティの値を手動で入力したくない場合に役立ちます。代わりに、ユーザーが事前定義された値のリストからそれらを選択できるようにします。 セッションプロパティのボキャブラリは、セグメントを定義するタスクを容易にし、手動入力エラーを排除します。
+**セッションプロパティのボキャブラリ** では、定義済みの値を使用して[セッションベースのセグメントプロパティ](../../site-building/personalizing-site-experience/segmentation/segments-editor-ui-reference.md#session-properties)を作成できます。 このオプションは、新しいセグメントの作成中にセグメントエディタでプロパティの値を手動で入力したくない場合に役立ちます。代わりに、ユーザーが事前定義された値のリストからそれらを選択できるようにします。 セッションプロパティのボキャブラリは、セグメントを定義するタスクを容易にし、手動入力エラーを排除します。
 
 たとえば、マーケティングチームは、デバイスのブランド情報を使用して、Appleデバイス用の新しいアプリのプロモーションなど、さまざまなコンテンツをWebサイトの訪問者にターゲティングしたい場合があります。 マーケティングチームのプロセスを容易にするために、さまざまなデバイスのブランドを含むセッションプロパティのボキャブラリを作成し、このボキャブラリを[ユーザーセグメント](../../site-building/personalizing-site-experience/segmentation/creating-and-managing-user-segments.md)にリンクすることができます。 このように、マーケティングチームが「デバイスブランド」 [セッションプロパティ](../../site-building/personalizing-site-experience/segmentation/segments-editor-ui-reference.md#session-properties) を使用してセグメントを作成する場合、異なるデバイスブランドオプションを入力する必要はありません。 可能なオプションのリストが事前定義されました。
 

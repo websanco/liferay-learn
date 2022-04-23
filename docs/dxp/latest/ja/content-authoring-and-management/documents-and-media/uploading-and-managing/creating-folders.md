@@ -6,11 +6,11 @@
 
 ## フォルダを追加する
 
-1. **サイトメニュー** を開き、 [**Content & Data**] &rarr; ［**ドキュメントとメディア**］ に移動します。
+フォルダを追加する最も簡単な方法は、サイトページにデプロイされた [**Documents and Media**] ウィジェットを使用することです。
 
-1. **追加**（![Add Button](../../../images/icon-add.png)）をクリックし、 ［**フォルダ**］ を選択します。
+1. [**Documents and Media**] ウィジェットがデプロイされているサイトページに移動します。
 
-    ![追加ボタンをクリックして、［フォルダ］を選択します。](./creating-folders/images/01.png)
+2.  ウィジェットのタイトルメニューの上にマウスを置き、 **追加** アイコン（![Add](../../../images/icon-add.png)）をクリックして [**Folder**] を選択します。
 
 1. 新規フォルダの名前を入力します。
 
@@ -20,7 +20,7 @@
 
 1. ［**保存**］ をクリックして新規フォルダを作成します。
 
-作成すると、フォルダが **ドキュメントとメディア** アプリケーションに表示されます。 目的のフォルダを開き、上記のプロセスを繰り返すことで、サブフォルダを作成できます。
+5. [**保存**] をクリックします。
 
 <a name="document-type-restrictions-and-workflow" />
 
@@ -30,21 +30,27 @@
 
 1. **サイトメニュー** を開き、 [**Content & Data**] &rarr; ［**ドキュメントとメディア**］ に移動します。
 
-1. 設定するフォルダの **アクション**（![Actions](../../../images/icon-actions.png)）をクリックし、 ［**編集**］ を選択します。
+1.  サイトの **サイト管理** メニューに移動します。
 
-1. ［**ドキュメントタイプ制限およびワークフロー**］ で、目的の構成を選択します。
+2. [**Content & Data**] → [**Documents and Media**] の順にクリックします。
 
-   ***Use Document Type Restrictions and Workflow of the Parent Folder (parent-folder**) ：親フォルダの構成を使用するように現在のフォルダを設定します。
+3.  フォルダの **アクション** メニュー（![Actions](../../../images/icon-actions.png)）をクリックし、 [**Edit**] を選択します。
 
-   ***Define Specific Document Type Restrictions and Workflow for this Folder (current-folder**) ：1つ以上のドキュメントタイプを選択して、現在のフォルダのコンテンツを制限し、カスタムワークフローを選択します。
+4. [**Document Type Restrictions and Workflow**] セクションを展開します。
 
-   ***Default Workflow for This Folder (current-folder**) ：ドキュメントタイプを制限せずに、現在のフォルダのデフォルトワークフローを選択します。
+5. [**Define Specific Document Type Restrictions and Workflow for this Folder（現在のフォルダ**）] をクリックします。
 
-      ![［ドキュメントタイプ制限およびワークフロー］で、目的の構成を選択します。](./creating-folders/images/03.png)
+6. [**Select Document Type**] をクリックします。
 
 1. 完了したら、 ［**保存**］ をクリックします。
 
-<a name="additional-information" />
+7.  このフォルダに関連付けるドキュメントタイプの横にある [**Choose**] をクリックします。
+
+8.  このフォルダに関連付けるワークフローを選択します。
+
+    ![ドキュメントタイプを選択](./creating-folders/images/04.png)
+
+9.  完了したら、 [**保存**] をクリックします。
 
 ## 追加情報
 

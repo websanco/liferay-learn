@@ -6,19 +6,19 @@
 
 **ブログ** アプリの使用を開始する最も早い方法は、ウィジェットを[サイトページ](../../site-building/creating-pages/understanding-pages/understanding-pages.md)にデプロイすることです。
 
-1. 目的のサイトとページに移動します（例： **Community Blog**）。
-1. ［**Add**］ ボタンをクリックします。
-1. ［**Widgets**］ をクリックし、次に ［**Collaboration**］ をクリックしてメニューを展開します。
+1.  目的のサイトとページに移動します（例： **Community Blog**）。
 
-    ![［Blogs］ウィジェットをページに追加する](./getting-started-with-blogs/images/01.png)
+2. [**Add**] ボタンをクリックします。
 
-1. ［**Blogs**］ ウィジェットをページ上の目的の場所にドラッグアンドドロップします。
+3. [**Widgets**] をクリックし、次に [**Collaboration**] をクリックしてメニューを展開します。
 
 ![［Blogs］ウィジェットをページに追加する](./getting-started-with-blogs/images/02.png)
 
-サイトのメンバーは、 ［**Blogs**］ ウィジェットを使用してブログ投稿を作成できます。 1ページあたりに設定できる ［**Blogs**］ ウィジェットの数は1つだけであることに注意してください。
+4. [**Blogs**] ウィジェットをページ上の目的の場所にドラッグアンドドロップします。
 
-<a name="whats-next" />
+![[Blogs]ウィジェットをページに追加する](./getting-started-with-blogs/images/02.png)
+
+サイトのメンバーは、 [**Blogs**] ウィジェットを使用してブログ投稿を作成できます。 1ページあたりに設定できる [**Blogs**] ウィジェットの数は1つだけであることに注意してください。
 
 ## 次のステップ
 
