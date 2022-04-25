@@ -2,10 +2,10 @@
 
 When you publish an Object, Liferay automatically generates REST APIs for it. These APIs differ for Company and Site scoped Objects, but they all use the `c/[pluralobjectlabel]` naming pattern (e.g., `c/timeoffrequests`). You can use these APIs to create, access, update, and remove Object entries.
 
-Here you'll use cURL commands to perform basic CRUD operations for a custom Object. Before proceeding, set up a new Liferay DXP/Portal 7.4 instance and download the provided tutorial code.
+Here you'll use cURL commands to perform basic CRUD operations for a custom Object. Before proceeding, [set up](#setting-up-a-liferay-instance) a new Liferay DXP/Portal 7.4 instance and [prepare](#preparing-the-sample-code) the provided tutorial code.
 
 ```{tip}
-For a complete list of APIs generated for Site and Company Objects, see [Object's Headless Framework Integration](../../understanding-object-integrations/headless-framework-integration.md). You can also view and test an Object's APIs via the Liferay API Explorer at `[server]:[port]/o/api` (e.g., `localhost:8080/o/api`). REST APIs are listed under *REST Applications*.
+For a complete list of APIs generated for both Site and Company Objects, see [Object's Headless Framework Integration](../../understanding-object-integrations/headless-framework-integration.md). You can view and test custom Object APIs via the Liferay API Explorer at `[server]:[port]/o/api` (e.g., `localhost:8080/o/api`). They are listed under *REST Applications*.
 ```
 
 ## Setting Up a Liferay Instance
@@ -28,16 +28,16 @@ Once the container has started, log in and follow these steps to [create](../../
    | Plural Label | `Ables` |
    | Name | `Able` |
 
-1. Select the new *Object* draft, click on the *Field* tab, and add a single text *field*:
+1. Select the new *Object* draft, go to the *Fields* tab, and add a single text field:
 
    | Label | Field Name | Type | Required |
    | :--- | :--- | :--- | :--- |
    | Name | name | Text | &#10004; |
 
-1. Click on the *Details* tab and click *Publish*.
+1. Go to the *Details* tab and click *Publish*.
 
    ```{important}
-   You must use the above values since they're used in the sample code.
+   For this tutorial, you must use the above values.
    ```
 
 [Publishing an Object](../../creating-and-managing-objects/creating-objects.md#publishing-object-drafts) creates and activates a new application for receiving and storing data. You can now access it via Headless APIs.
@@ -78,7 +78,7 @@ These scripts include the following APIs:
    ./Able_POST_ToCompany.sh
    ```
 
-   The terminal displays the complete schema for the newly created entries. Copy the first entry's ID for use with the following GET, PUT, and DELETE methods.
+   The terminal displays the complete schema for the newly created entries. Copy the first entry's ID for use with the following methods.
 
    ```bash
    {
