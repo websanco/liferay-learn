@@ -2,10 +2,10 @@
 
 When you publish an Object, Liferay automatically generates REST APIs for it. These include the batch APIs for bulk POST, PUT, and DELETE operations. Here you'll use cURL commands to call these batch APIs for a custom Object.
 
-Before proceeding, set up a new Liferay DXP/Portal 7.4 instance and download the provided tutorial code.
+Before proceeding, [set up](#setting-up-a-liferay-instance) a new Liferay DXP/Portal 7.4 instance and [prepare](#preparing-the-sample-code) the provided tutorial code.
 
 ```{tip}
-For a complete list of APIs generated for Site and Company Objects, see [Object's Headless Framework Integration](../../understanding-object-integrations/headless-framework-integration.md). You can also view and test an Object's APIs via the Liferay API Explorer at `[server]:[port]/o/api` (e.g., `localhost:8080/o/api`). REST APIs are listed under *REST Applications*.
+For a complete list of APIs generated for both Site and Company Objects, see [Object's Headless Framework Integration](../../understanding-object-integrations/headless-framework-integration.md). You can view and test custom Object APIs via the Liferay API Explorer at `[server]:[port]/o/api` (e.g., `localhost:8080/o/api`). They are listed under *REST Applications*.
 ```
 
 ## Setting Up a Liferay Instance
@@ -28,23 +28,23 @@ Once the container has started, log in and follow these steps to [create](../../
    | Plural Label | `Ables` |
    | Name | `Able` |
 
-1. Select the new *Object* draft, click on the *Field* tab, and add a single text *field*:
+1. Select the new *Object* draft, go to the *Fields* tab, and add a single text *field*:
 
    | Label | Field Name | Type | Required |
    | :--- | :--- | :--- | :--- |
    | Name | name | Text | &#10004; |
 
-1. Click on the *Details* tab and click *Publish*.
+1. Go to the *Details* tab and click *Publish*.
 
    ```{important}
-   You must use the above values since they're used in the sample code.
+   For this tutorial, you must use the above values.
    ```
 
 [Publishing an Object](../../creating-and-managing-objects/creating-objects.md#publishing-object-drafts) creates and activates a new application for receiving and storing data. You can now access it via Headless APIs.
 
 ## Preparing the Sample Code
 
-Run this commands to download and unzip the sample cURL scripts:
+Run the following commands to download and unzip the provided sample code:
 
 ```bash
 curl https://learn.liferay.com/dxp/latest/en/building-applications/objects/objects-tutorials/using-apis/liferay-t4r3.zip -O
@@ -54,7 +54,7 @@ curl https://learn.liferay.com/dxp/latest/en/building-applications/objects/objec
 unzip liferay-t4r3.zip
 ```
 
-The provided scripts include the following batch APIs:
+These scripts include the following batch APIs:
 
 | HTTP Method | HTTP Endpoint | Description |
 | :--- | :--- | :--- |
@@ -75,8 +75,6 @@ The GET method is also included for demonstration purposes. This returns a compl
    ```
 
 1. Execute `Ables_POST_Batch`. This creates multiple Object entries.
-
-   **For cURL:**
 
    ```bash
    ./Ables_POST_Batch.sh
@@ -171,17 +169,17 @@ The GET method is also included for demonstration purposes. This returns a compl
        ...
        "id" : 41985,
        ...
-       "name" : "Able 4"
+       "name" : "Able One"
      }, {
        ...
        "id" : 41987,
        ...
-       "name" : "Able 5"
+       "name" : "Able Two"
      }, {
        ...
        "id" : 41989,
        ...
-       "name" : "Able 6"
+       "name" : "Able Three"
      } ],
      "lastPage" : 1,
      "page" : 1,
