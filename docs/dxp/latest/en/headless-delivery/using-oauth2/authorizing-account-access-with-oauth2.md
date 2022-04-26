@@ -17,10 +17,6 @@ https://[hostname]/o/oauth2/authorize?response_type=code&client_id=[client ID]
 
 The client ID comes from registering the application. It's automatically generated (you can change it if you edit the application).
 
-```{important}
-Sometimes the phrase "web application" is used loosely, implying applications where the above URL is requested from the web browser directly. If this happens, you'd leak the client secret, compromising the security of the grant flow and the application. In such cases, select the "User Agent Application" client profile instead when registering your application. This makes a secure alternative available to your application: PKCE Extended Authorization Code flow (see below).
-```
-
 Once the user has authorized the requested permissions to their resources, the authorization server returns an authorization code to your application at its registered callback URI (A.K.A. redirect URI) as a query string parameter.
 
 ```
@@ -31,6 +27,10 @@ Your application must then exchange this authorization code for an access token 
 
 ```
 http://localhost:8080/o/oauth2/token
+```
+
+```{important}
+Sometimes the phrase "web application" is used loosely, implying applications where the above URL is requested from the web browser directly. If this happens, you'd leak the client secret, compromising the security of the grant flow and the application. In such cases, select the "User Agent Application" client profile instead when registering your application. This makes a secure alternative available to your application: PKCE Extended Authorization Code flow (see below).
 ```
 
 With the following parameters in the body (encoded as `application/x-www-form-urlencoded`):
