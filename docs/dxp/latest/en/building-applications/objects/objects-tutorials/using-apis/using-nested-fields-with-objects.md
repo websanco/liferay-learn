@@ -1,12 +1,12 @@
 # Using Nested Fields with Objects
 
-When you publish an Object, Liferay automatically generates REST APIs for it. When calling these APIs, you can use nested fields to run complex queries involving multiple levels of Object relationships. This means you can use the `nestedFields` parameter with GET calls to return multiple levels of related Objects. You can also use the `nestedFieldsDepth` parameter to determine the depth of Object entries included in the query: `0-5`.
-
-Here you'll use cURL scripts to call Object APIs with nested fields. Before proceeding, set up a new Liferay DXP/Portal 7.4 instance and download the provided tutorial code.
+With custom Object APIs, you can use the `nestedFields` parameter to return multiple levels of related Objects in a single GET request. You can also use the `nestedFieldsDepth` parameter to determine the depth of Object entries included in the query: `0-5`. Here you'll use cURL scripts to call Object APIs with nested fields.
 
 ```{tip}
-For a complete list of APIs generated for Site and Company Objects, see [Object's Headless Framework Integration](../../understanding-object-integrations/headless-framework-integration.md). You can also view and test an Object's APIs via the Liferay API Explorer at `[server]:[port]/o/api` (e.g., `localhost:8080/o/api`). REST APIs are listed under *REST Applications*.
+Nested fields are a convenient way to retrieve information that would usually require multiple requests. This way you can have all the information of a related entity from the entity itself without sending a new request with the related entity id.
 ```
+
+Before proceeding, [set up](#setting-up-a-liferay-instance) a new Liferay DXP/Portal 7.4 instance and [prepare](#preparing-the-sample-code) the provided tutorial code.
 
 ## Setting Up a Liferay Instance
 
@@ -68,7 +68,7 @@ Once published, you can access each Object via Headless APIs.
 
 ## Preparing the Sample Code
 
-Run these commands to download and unzip the sample code:
+Run the following commands to download and unzip the provided sample code:
 
 ```bash
 curl https://learn.liferay.com/dxp/latest/en/building-applications/objects/objects-tutorials/using-apis/liferay-w4s7.zip -O
@@ -79,6 +79,10 @@ unzip liferay-w4s7.zip
 ```
 
 The sample code includes POST commands for each Object, as well as a GET command for `Charlie`.
+
+```{tip}
+For a complete list of APIs generated for both Site and Company Objects, see [Object's Headless Framework Integration](../../understanding-object-integrations/headless-framework-integration.md). You can view and test custom Object APIs via the Liferay API Explorer at `[server]:[port]/o/api` (e.g., `localhost:8080/o/api`). They are listed under *REST Applications*.
+```
 
 ## Using the Sample Code
 
