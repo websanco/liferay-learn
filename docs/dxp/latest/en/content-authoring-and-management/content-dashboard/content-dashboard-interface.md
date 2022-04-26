@@ -101,18 +101,21 @@ In the list of contents, you can find the following columns:
 | Title | Article title(*). |
 | Author | Author's name. |
 | Type | Specifies a [Web Content Article](../web-content/web-content-articles/adding-a-basic-web-content-article.md) or [Documents](../documents-and-media/documents-and-media-overview.md) asset type (available in Liferay DXP 7.4+.) |
-| Subtype | Article's [Subcategory](../tags-and-categories/defining-categories-and-vocabularies-for-content.md#creating-subcategories). |
+| Subtype | Content [Subcategory](../tags-and-categories/defining-categories-and-vocabularies-for-content.md#creating-subcategories). |
 | Site or Asset Library | Location of the article in the Liferay DXP instance. |
 | Status | Article workflow status. Articles with more than one version in different statuses show all than statuses. |
 | *First Vocabulary* | This is the first Vocabulary in the Content Audit Tool. |
 | *Second Vocabulary* | The optional second Vocabulary in the Content Audit Tool. |
 | Modified Date | Date or time of the last article update. |
 
-(*) The *Page* (![Page](../../images/icon-page.png)) icon denotes articles based on a [Display Page Template](../../site-building/displaying-content/using-display-page-templates/about-display-page-templates-and-display-pages.md).
+(*) The *Page* (![Page](../../images/icon-page.png)) icon denotes content based on a [Display Page Template](../../site-building/displaying-content/using-display-page-templates/about-display-page-templates-and-display-pages.md).
 
 ```{note}
 The *First Vocabulary* and *Second Vocabulary* columns depend on the Vocabularies you select.
 ```
+```{warning}
+The *subtypes* column only displays Basic documents (doc, pdf, xls, jpg, etc.) and External Video Shortcuts on the content performance panel.
+``` 
 
 For each entry in the Contents list, you can access the following options using the *Actions* menu (![Actions Menu](../../images/icon-actions.png)) or hovering over the article and clicking the corresponding option:
 
@@ -200,6 +203,41 @@ To open the Information sidebar,
 1. Alternatively, hover over the asset and click the *Info* (![Information icon](../../images/icon-information.png)) icon.
 
     ![The Information sidebar provides different metadata for your content.](./content-dashboard-interface/images/09.png)
+
+
+All the document info panels will show:
+
+* Title of the document
+
+* Read-only input showing the file URL with a copy URL button
+
+* File name (example.jpg)
+
+* Document subtype
+
+* Versions and status labels
+
+* Author's avatar and name
+
+* Preview (image) with a link to the preview. The preview link is available if the document can have an image preview, for example, .png has a link but a .zip doesn't.
+
+* Download button (video shortcuts won't have download button)
+
+* Description
+
+* Categorization section:
+
+* List of categories assigned to the content
+
+* List of tags
+
+* Details section:
+
+* Extension and size of the file
+
+* Created and Modified dates
+
+* File ID
 
 ## Related Information
 
