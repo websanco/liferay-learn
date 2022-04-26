@@ -1,6 +1,6 @@
 # Using a Style Book to Standardize Site Appearance
 
-> Available: Liferay DXP/Portal 7.3+
+{bdg-secondary}`Available 7.3+`
 
 A *Style Book* is a set of visual rules that apply to a Site to provide a consistent experience across its pages. They determine various visual settings on the Site, including spacing between elements (such as widgets), colors, and fonts. Each of these settings applies equally to every page using the Style Book.
 
