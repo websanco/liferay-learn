@@ -1,5 +1,7 @@
 # Using Google Sheets with Objects
 
+{bdg-secondary}`Available 7.4+`
+
 ```{toctree}
 :maxdepth: 3
 

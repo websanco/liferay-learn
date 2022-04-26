@@ -1,5 +1,7 @@
 # Using Zapier to Sync Object Data with Google Sheets
 
+{bdg-secondary}`Available 7.4+`
+
 Here you'll learn how to use webhooks to trigger sync tasks between Liferay Objects and Google Sheets using [Zapier](https://zapier.com/). Syncing your data in this way requires a premium Zapier account, Google Spreadsheet, and active DXP 7.4 instance. The DXP instance must also have a published Object with the desired fields for sending or receiving data to the Google Spreadsheet.
 
 ## Syncing Object Data to a Google Sheet

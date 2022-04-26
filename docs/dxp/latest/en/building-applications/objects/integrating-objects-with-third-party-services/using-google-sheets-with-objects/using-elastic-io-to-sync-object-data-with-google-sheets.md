@@ -1,5 +1,7 @@
 # Using Elastic.io to Sync Object Data with Google Sheets
 
+{bdg-secondary}`Available 7.4+`
+
 You can use Liferay Objects with data integration tools to create automated tasks for syncing Object data with external services. These tasks are triggered using webhooks and can connect to Google applications, Microsoft Office, and more.
 
 Here you'll learn how to use webhooks to trigger sync tasks between Liferay Objects and Google Sheets using [Elastic.io](https://www.elastic.io/). Syncing your data in this way requires an Elastic.io account, Google Spreadsheet, and active DXP 7.4 instance. The DXP instance must also have a published Object with the desired fields for sending or receiving data to the Google Spreadsheet.
