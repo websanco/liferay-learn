@@ -12,13 +12,11 @@ See [Using APIs](../objects-tutorials/using-apis.md) for related Object tutorial
 
 ## Object REST APIs
 
-With the REST APIs, you can perform both single and batch CRUD operations for Object entries.
+With the [REST APIs](../../../headless-delivery/consuming-apis/consuming-rest-services.md), you can perform both single and batch CRUD operations for Object entries. You can also run complex queries using aggregation terms and [nested fields](../objects-tutorials/using-apis/using-nested-fields-with-objects.md).
 
 ![Each Object appears under REST Applications.](./headless-framework-integration/images/01.png)
 
 All endpoints and Java methods use the Object's name. In the following examples, replace `ObjectName` and `objectName` with the name of your Object.
-
-See [Consuming REST Services](../../../headless-delivery/consuming-apis/consuming-rest-services.md) for more information.
 
 ```{important}
 In Liferay DXP 7.4 GA1, Picklist field values must use the following format in Object API calls: `"samplePicklist": "string"`. As of Liferay DXP 7.4 U1, the format changes, and values must use this format: `"samplePicklist": {"key": "string"}`.
