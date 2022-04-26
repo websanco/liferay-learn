@@ -4,7 +4,7 @@ This article documents how to update an account's billing and shipping addresses
 
 ## Using the Account Management Widget
 
-1. Click the left _Menu Display_ → _Account Management_.
+1. Click the left _Navigation Menu_ → _Account Management_.
 1. Select an account.
 1. Click the _Addresses_ tab.
 

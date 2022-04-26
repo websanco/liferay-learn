@@ -58,5 +58,5 @@ Users can access page options by clicking the _Options_ (![Option](../../images/
 
 ## Additional Information
 
-* [Using Navigation Menus](./using-navigation-menus-application.md)
+* [Using Navigation Menus](./using-the-navigation-menus-application.md)
 * [Configuring Navigation Menus](./configuring-navigation-menus.md)

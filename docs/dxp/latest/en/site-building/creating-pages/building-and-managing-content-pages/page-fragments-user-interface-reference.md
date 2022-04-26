@@ -234,7 +234,7 @@ Use *Navigation Bar* Fragments to add a custom header to [Master Page Templates]
 
 > Available: Liferay DXP/Portal 7.4+.
 
-Using the Menu Display Fragment, you can create a navigation menu anywhere in your Content Page. This navigation menu is based on your Site's Public or Private Pages hierarchy, or any other hierarchy you define using Liferay DXP  [Navigation Menus](../../site-navigation/using-navigation-menus-application.md). To learn more about how to configure the Menu Display Fragment for your Site navigation, read [Managing Site Navigation](../../site-navigation/managing-site-navigation.md).
+Using the Menu Display Fragment, you can create a navigation menu anywhere in your Content Page. This navigation menu is based on your Site's Public or Private Pages hierarchy, or any other hierarchy you define using Liferay DXP  [Navigation Menus](../../site-navigation/using-the-navigation-menus-application.md). To learn more about how to configure the Menu Display Fragment for your Site navigation, read [Managing Site Navigation](../../site-navigation/managing-site-navigation.md).
 
 ![The Menu Display Fragment is available under the Fragments and Widget section of your Content Page.](./page-fragments-user-interface-reference/images/15.png)
 

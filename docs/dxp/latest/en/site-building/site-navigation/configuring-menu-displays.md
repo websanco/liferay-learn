@@ -1,6 +1,6 @@
 # Configuring Menu Displays 
 
-To display and configure a [Menu Display](./using-navigation-menus-application.md), you can use the [Menu Display Fragment](../creating-pages/building-and-managing-content-pages/page-fragments-user-interface-reference.md#menu-display) (available in Liferay DXP 7.4+) or Menu Display Widget. With any of these two options, you can define the menu display options and create different navigation levels for your Site.
+To display and configure a [Menu Display](./using-the-navigation-menus-application.md), you can use the [Menu Display Fragment](../creating-pages/building-and-managing-content-pages/page-fragments-user-interface-reference.md#menu-display) (available in Liferay DXP 7.4+) or Menu Display Widget. With any of these two options, you can define the menu display options and create different navigation levels for your Site.
 
 ```{note}
 Configuring the Menu Display Fragment is easier than the Menu Display Widget, and you have preview options working with [Master Page Template](../creating-pages/defining-headers-and-footers/creating-a-master-page-template.md) that Menu Display Widgets do not provide.
@@ -78,7 +78,7 @@ You can configure which pages at what level from the menu appear in the widget. 
 
 ## Additional Information
 
-- [Using Navigation Menus Application](./using-navigation-menus-application.md)
+- [Using The Navigation Menus Application](./using-the-navigation-menus-application.md)
 - [Managing Site Navigation](./managing-site-navigation.md)
 - [Adding Elements to Content Pages](../creating-pages/building-and-managing-content-pages/adding-elements-to-content-pages.md)
 - [Content Page Editor User Interface Reference](../creating-pages/building-and-managing-content-pages/content-page-editor-user-interface-reference.md)
