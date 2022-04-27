@@ -84,6 +84,10 @@ When you've finished making your changes, you can publish them immediately or sc
 
 When you begin the publishing process, Liferay performs a compatibility check to determine if there are any conflicts between the publication and production. If there are conflicts, DXP notifies you. While some conflicts are resolved automatically, others require manual resolution. Resolving all conflicts is necessary for publishing changes. See [Resolving Conflicts](./resolving-conflicts.md) for more information.
 
+```{important}
+Before upgrading to a new fix pack or service pack, ensure you've published all active publications. After upgrading, active publications are marked as outdated and cannot be published.
+```
+
 ### Publishing Now
 
 Follow these steps to publish changes immediately:
