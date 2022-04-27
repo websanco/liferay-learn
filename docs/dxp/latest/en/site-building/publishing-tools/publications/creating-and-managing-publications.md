@@ -6,6 +6,10 @@ With Publications, users can create instance-scoped blocks of changes. Because e
 
 Once Publications is [enabled](./enabling-publications.md), you can create, edit, publish, or remove a publication via the Publications application page or the Publications drop-down menu.
 
+```{important}
+Before upgrading to a new fix pack or service pack, ensure you've published all active publications. After upgrading, active publications are marked as outdated and cannot be published. Also you cannot revert publications published before your upgrade. The *Revert* option is removed for these publications.
+```
+
 ## Creating a New Publication
 
 Follow these steps to create a new publication.

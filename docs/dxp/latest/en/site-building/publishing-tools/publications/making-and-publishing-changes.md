@@ -10,8 +10,10 @@ By default, users can only use the publications they've created. However, they c
 
 If you haven't already created a publication to track your changes, see [Creating a New Publication](./creating-and-managing-publications.md#creating-a-new-publication) for more information.
 
-```{note}
 Once created, a publication is automatically updated with changes made to production, provided they don't conflict with changes made in the publication. This ensures you and your team are working on the latest version of production.
+
+```{important}
+Before upgrading to a new fix pack or service pack, ensure you've published all active publications. After upgrading, active publications are marked as outdated and cannot be published.
 ```
 
 ## Making Changes in a Publication
@@ -83,10 +85,6 @@ Click on an individual change to view more details. From here, you can also clic
 When you've finished making your changes, you can publish them immediately or schedule them to be published at a later time. Once published, a publication is listed in the *History* tab of the Publications application. This maintains a clear audit trail that you can use review and revert Site changes when needed. See [Reverting Changes](./reverting-changes.md) for more information.
 
 When you begin the publishing process, Liferay performs a compatibility check to determine if there are any conflicts between the publication and production. If there are conflicts, DXP notifies you. While some conflicts are resolved automatically, others require manual resolution. Resolving all conflicts is necessary for publishing changes. See [Resolving Conflicts](./resolving-conflicts.md) for more information.
-
-```{important}
-Before upgrading to a new fix pack or service pack, ensure you've published all active publications. After upgrading, active publications are marked as outdated and cannot be published.
-```
 
 ### Publishing Now
 
