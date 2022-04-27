@@ -1,4 +1,4 @@
-# Using Nested Fields with Objects
+# Using Nested Fields with REST APIs
 
 With custom Object APIs, you can use the `nestedFields` parameter to return multiple levels of related Objects in a single GET request. You can also use the `nestedFieldsDepth` parameter to determine the depth of Object entries included in the query: `0-5`. Here you'll use cURL scripts to call Object APIs with nested fields.
 
@@ -214,7 +214,7 @@ Follow these steps to add and query related Object entries:
 
 ## Examining the GET Script
 
-```{literalinclude} ./using-nested-fields-with-objects/resources/liferay-w4s7.zip/curl/Charlie_GET_ById.sh
+```{literalinclude} ./using-nested-fields-with-rest-apis/resources/liferay-w4s7.zip/curl/Charlie_GET_ById.sh
    :language: bash
 ```
 
@@ -225,6 +225,6 @@ The provided GET method calls a URL with the `nestedFields` and `nestedFieldsDep
 
 ## Additional Information
 
-* [Headless Framework Integration](../../understanding-object-integrations/headless-framework-integration.md)
 * [Object API Basics](./object-api-basics.md)
-* [Batch Object APIs](./batch-object-apis.md)
+* [Using Batch APIs](./using-batch-apis.md)
+* [Using Aggregation Terms with REST APIs](./using-aggregation-terms-with-rest-apis.md)
