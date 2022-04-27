@@ -1,9 +1,11 @@
 # Reverting Changes
 
-Liferay Publications maintains a history of all published changes. You can use this publishing history to easily create publications that revert earlier changes to production. While reverting changes, you can also make additional changes.
+Liferay Publications maintains a history of all published changes. You can use this publishing history to easily create publications that revert earlier changes to production. While reverting a publication, you can also make additional changes.
 
-```{note}
-Users cannot revert the same publication twice. Attempting this results in an *Addition Conflict*.
+```{important}
+After upgrading to a new fix pack or service pack, you cannot revert publications published before your upgrade. The *Revert* option is removed for these publications.
+
+Also, users cannot revert the same publication twice. Attempting this results in an *Addition Conflict*. See [Resolving Conflicts](./resolving-conflicts.md) to learn more about conflict types.
 ```
 
 Follow these steps to revert published changes.
@@ -12,7 +14,7 @@ Follow these steps to revert published changes.
 
    ![Go to the Publications overview page and click on History.](./reverting-changes/images/01.png)
 
-1. Click on *Revert* for the desired publication.
+1. Click *Revert* for the desired publication.
 
 1. Set a *name* and *description* for the new publication. The default name is `Revert "[Publication Name]"`.
 
@@ -24,7 +26,7 @@ Follow these steps to revert published changes.
 
    **Later**: This creates the publication and allows users to make additional changes to the publication before publishing.
 
-1. Click on *Revert and Create Publication*.
+1. Click *Revert and Create Publication*.
 
 This creates a new publication that includes all necessary changes for reverting the selected publication.
 
