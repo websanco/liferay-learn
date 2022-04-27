@@ -1,4 +1,4 @@
-# Using Aggregation Terms with Objects
+# Using Aggregation Terms with REST APIs
 
 When querying Object entries using REST APIs, you can use an Object's fields as facet criteria for aggregating entry data. To do this, add the `aggregationTerms` parameter to your GET request and specify the data fields you want to use as facet criteria. These criteria can include custom fields, default metadata fields, or relationship fields. The request response then groups the specified data facets into a single `facets` block.
 
@@ -149,7 +149,7 @@ These scripts include the following APIs:
 
 ## Examining the Code
 
-```{literalinclude} ./using-aggregation-terms-with-objects/resources/liferay-b3x5.zip/curl/Ables_GET_FromCompany.sh
+```{literalinclude} ./using-aggregation-terms-with-rest-apis/resources/liferay-b3x5.zip/curl/Ables_GET_FromCompany.sh
    :language: bash
 ```
 
@@ -158,5 +158,5 @@ This batch GET method includes the `aggregationTerms` URL parameter with two val
 ## Additional Information
 
 * [Object API Basics](./object-api-basics.md)
-* [Batch Object APIs](./batch-object-apis.md)
-* [Using Nested Fields with Objects](./using-nested-fields-with-objects.md)
+* [Using Batch APIs](./using-batch-apis.md)
+* [Using Nested Fields with REST APIs](./using-nested-fields-with-rest-apis.md)
