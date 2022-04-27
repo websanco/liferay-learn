@@ -32,12 +32,6 @@ Search Blueprints is the first feature in the Search Experiences application. To
 - [Search Blueprints Configuration Reference](./search-experiences/search-blueprints-configuration-reference.md)
 - [Creating Elements](./search-experiences/creating-and-managing-elements.md)
 
-```{important}
-Out of the box, elements are available to use in creating your Blueprints. However, if you've installed the Search Experiences application into an existing Liferay installation, you must re-index the `SXPElement` entity for the elements to appear in the Blueprints UI. Navigate to Control Panel &rarr; Search &rarr; Index Actions, then find the `com.liferay.search.experiences.model.SXPElement` entry and click _Execute_.
-
-![Reindex the SXPElement model to see all the out of the box elements.](./search-experiences/creating-and-managing-search-blueprints/images/09.png)
-```
-
 ## Getting Liferay Search Experiences
 
 Liferay Search Experiences will be made available to Liferay DXP customers with a [Liferay Enterprise Search](../liferay-enterprise-search.md) subscription in Liferay DXP 7.3 and 7.4:

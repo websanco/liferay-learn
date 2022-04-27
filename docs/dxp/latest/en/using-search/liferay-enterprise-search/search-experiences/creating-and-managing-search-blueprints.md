@@ -16,12 +16,6 @@ To create Search Blueprints,
 
    - [Query Builder](#using-the-query-builder): in the Query Elements section, add new query clauses to the search by choosing or composing Elements for the Blueprint. In the Query Settings section, configure additional settings for the query (like which asset and object types to search).
 
-        ```{note}
-        Out of the box, elements are available to use in creating your Blueprints. However, if you've installed the Search Experiences application into an existing Liferay installation, you must re-index the `SXPElement` entity for the elements to appear in the Blueprints UI. Navigate to Control Panel &rarr; Search &rarr; Index Actions, then find the `com.liferay.search.experiences.model.SXPElement` entry and click _Execute_.
-
-        ![Reindex the SXPElement model to see all the out of the box elements.](./creating-and-managing-search-blueprints/images/09.png)
-        ```
-
    - [Configuration](#adding-configurations): Configure advanced settings (e.g., Sorts or Aggregations) in the search.
 
 1. Test the Blueprint as you build and configure it. Click _Preview_ and enter a search keyword.
