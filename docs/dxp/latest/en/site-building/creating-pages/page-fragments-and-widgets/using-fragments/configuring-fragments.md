@@ -5,6 +5,7 @@
 
 configuring-fragments/general-settings-reference.md
 configuring-fragments/styles-reference.md
+configuring-fragments/advanced-settings-reference.md
 configuring-fragments/fragment-sub-elements-reference.md
 configuring-fragments/localizing-fragment-configuration-fields.md
 ```
@@ -31,6 +32,10 @@ The General tab includes both standard configuration options (e.g., visibility a
 ### Styles
 
 The Styles tab includes standard options for configuring a Fragment's style. This includes a Fragment's dimensions, background, borders, and more. See [Configuring Fragment Styles](./configuring-fragments/styles-reference.md) for more information.
+
+### Advanced
+
+The Advanced tab includes more advanced or technical configurations. This includes hiding Fragments from search results, or changing the HTML generated on a page. See [Advanced Settings Reference](./configuring-fragments/advanced-settings-reference.md) for more information.
 
 ## Fragment Sub-Element Settings
 

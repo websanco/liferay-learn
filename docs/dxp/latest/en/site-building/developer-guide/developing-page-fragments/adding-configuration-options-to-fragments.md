@@ -236,6 +236,10 @@ Now that you know how the configuration works, you can modify it.
     }
     ```
 
+    ```{tip}
+    You can add a `configurationRole` value to the field set (alongside the `fields` object in the JSON) to specify which tab the associated fields appear in. Set the value as `styles` to make the fields appear in the Styles tab, or set it to `advanced` to make them appear in the Advanced tab (*only in Liferay DXP versions U23+ or GA23+*). If no `configurationRole` is set, then they appear in the General tab by default.
+    ```
+
 1. Go back to the *HTML* pane in the *Code* tab and wrap the paragraph element with a conditional statement to check for the checkbox's value. Click *Publish* to apply the changes.
 
     ```html
