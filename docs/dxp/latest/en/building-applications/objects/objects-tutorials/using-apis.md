@@ -4,8 +4,9 @@
 :maxdepth: 3
 
 using-apis/object-api-basics.md
-using-apis/batch-object-apis.md
-using-nested-fields-with-objects.md
+using-apis/using-batch-apis.md
+using-apis/using-nested-fields-with-rest-apis.md
+using-apis/using-aggregation-terms-with-rest-apis.md
 ```
 
 ::::{grid} 2
@@ -15,11 +16,15 @@ using-nested-fields-with-objects.md
 :link: ./using-apis/object-api-basics.md
 :::
 
-:::{grid-item-card} Batch Object APIs
-:link: ./using-apis/batch-object-apis.md
+:::{grid-item-card} Using Batch APIs
+:link: ./using-apis/using-batch-apis.md
 :::
 
-:::{grid-item-card} Using Nested Fields with Objects
-:link: ./using-apis/using-nested-fields-with-objects.md
+:::{grid-item-card} Using Nested Fields with REST APIs
+:link: ./using-apis/using-nested-fields-with-rest-apis.md
+:::
+
+:::{grid-item-card} Using Aggregation Terms with REST APIs
+:link: ./using-apis/using-aggregation-terms-with-rest-apis.md
 :::
 ::::

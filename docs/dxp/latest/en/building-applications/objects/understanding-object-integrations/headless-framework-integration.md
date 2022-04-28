@@ -12,7 +12,7 @@ See [Using APIs](../objects-tutorials/using-apis.md) for related Object tutorial
 
 ## Object REST APIs
 
-With the [REST APIs](../../../headless-delivery/consuming-apis/consuming-rest-services.md), you can perform both single and batch CRUD operations for Object entries. You can also run complex queries using aggregation terms and [nested fields](../objects-tutorials/using-apis/using-nested-fields-with-objects.md).
+With the [REST APIs](../../../headless-delivery/consuming-apis/consuming-rest-services.md), you can perform both single and batch CRUD operations for Object entries. You can also run complex queries using [aggregation terms](../objects-tutorials/using-apis/using-aggregation-terms-with-rest-apis.md) and [nested fields](../objects-tutorials/using-apis/using-nested-fields-with-rest-apis.md).
 
 ![Each Object appears under REST Applications.](./headless-framework-integration/images/01.png)
 
