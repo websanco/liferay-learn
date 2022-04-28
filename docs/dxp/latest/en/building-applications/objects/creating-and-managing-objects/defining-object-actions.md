@@ -1,18 +1,22 @@
 # Defining Object Actions
 
-> Available: Liferay DXP/Portal 7.4+
+{bdg-secondary}`Available Liferay DXP/Portal 7.4+`
 
-With Liferay Objects, you can define actions that are triggered under specified conditions. When an action is active, Liferay listens for when an Object's data is added, deleted, or removed and then performs the set action.
+With Liferay Objects, you can define actions that are triggered under specified conditions. When an action is active, Liferay listens for when an Object's data is added, deleted, or updated and then performs the set action.
 
 ```{important}
-Currently, Actions only supports triggering *webhooks* that deliver a payload to an exernal source to sync and process data.
+Currently, Actions only supports triggering *webhooks* that deliver a payload to an external source to sync and process data.
 ```
 
 Follow these steps to define actions for an Object:
 
 1. Open the *Global Menu* (![Global Menu](../../../images/icon-applications-menu.png)), click on the *Control Panel* tab, and go to *Objects*.
 
-1. Select an existing custom Object or [create a new one](./creating-objects.md).
+1. Select an existing Object or [create a new one](./creating-objects.md).
+
+   ```{note}
+   Beginning with Liferay DXP 7.4 U22, you can add actions to system Objects.
+   ```
 
 1. While viewing the Object, select the *Actions* tab and click the *Add* button (![Add Button](../../../images/icon-add.png)).
 
