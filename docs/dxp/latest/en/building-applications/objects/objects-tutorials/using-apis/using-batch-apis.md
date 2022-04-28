@@ -1,4 +1,4 @@
-# Batch Object APIs
+# Using Batch APIs
 
 When you publish an Object, Liferay automatically generates REST APIs for it. These include the batch APIs for bulk POST, PUT, and DELETE operations. Here you'll use cURL commands to call these batch APIs for a custom Object.
 
@@ -206,24 +206,24 @@ The GET method is also included for demonstration purposes. This returns a compl
 
 ### `Ables_POST_Batch.sh`
 
-```{literalinclude} ./batch-object-apis/resources/liferay-t4r3.zip/curl/Ables_POST_Batch.sh
+```{literalinclude} ./using-batch-apis/resources/liferay-t4r3.zip/curl/Ables_POST_Batch.sh
    :language: bash
 ```
 
 ### `Ables_PUT_Batch.sh`
 
-```{literalinclude} ./batch-object-apis/resources/liferay-t4r3.zip/curl/Ables_PUT_Batch.sh
+```{literalinclude} ./using-batch-apis/resources/liferay-t4r3.zip/curl/Ables_PUT_Batch.sh
    :language: bash
 ```
 
 ### `Ables_DELETE_Batch.sh`
 
-```{literalinclude} ./batch-object-apis/resources/liferay-t4r3.zip/curl/Ables_DELETE_Batch.sh
+```{literalinclude} ./using-batch-apis/resources/liferay-t4r3.zip/curl/Ables_DELETE_Batch.sh
    :language: bash
 ```
 
 ## Additional Information
 
-* [Headless Framework Integration](../../understanding-object-integrations/headless-framework-integration.md)
 * [Object API Basics](./object-api-basics.md)
-* [Using Nested Fields with Objects](./using-nested-fields-with-object.md)
+* [Using Nested Fields with REST APIs](./using-nested-fields-with-rest-apis.md)
+* [Using Aggregation Terms with REST APIs](./using-aggregation-terms-with-rest-apis.md)
