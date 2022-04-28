@@ -159,6 +159,6 @@ The following are examples of the tutorial's cURL commands.
 
 ## Additional Information
 
-* [Headless Framework Integration](../../understanding-object-integrations/headless-framework-integration.md)
-* [Batch Object APIs](./batch-object-apis.md)
-* [Using Nested Fields with Objects](./using-nested-fields-with-objects.md)
+* [Using Batch APIs](./using-batch-apis.md)
+* [Using Nested Fields with REST APIs](./using-nested-fields-with-rest-apis.md)
+* [Using Aggregation Terms with REST APIs](./using-aggregation-terms-with-rest-apis.md)
