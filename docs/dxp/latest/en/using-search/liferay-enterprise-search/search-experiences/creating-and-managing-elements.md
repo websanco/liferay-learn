@@ -4,22 +4,25 @@ Elements are one of the fundamental building blocks of [Search Blueprints](under
 
 ![Create and Manage Elements from the Blueprints application.](./creating-and-managing-elements/images/01.png)
 
+```{warning}
+The [Element schema](#understanding-the-schema) can change. If the schema changes between Liferay versions, importing the older Element's JSON may fail.
+```
+
 ## Managing Elements
 
 To create new Elements, click the Add (![Add](../../../images/icon-add.png)) button. See [Creating Elements](#creating-elements) for more details.
 
 To delete existing custom Elements, select the Element(s) using the checkbox selector and click the Delete (![Delete](../../../images/icon-trash.png)) button.
 
-```{warning} System (i.e., out of the box) Elements cannot be edited or deleted. Duplicate an existing Element if you would like to create a custom Element base don an existing Element.
+```{note}
+System (i.e., out of the box) Elements cannot be edited or deleted. Duplicate an existing Element if you would like to create a custom Element base don an existing Element.
 ```
 
 To duplicate an existing Element, click the Actions (![Actions](../../../images/icon-actions.png)) button and select _Copy_. The duplicated Element can be deleted or edited just like any other custom Element.
 
-To export an Element, click the Actions (![Actions](../../../images/icon-actions.png)) button and select _Export_.
+To export an Element, click the Actions (![Actions](../../../images/icon-actions.png)) button for the Element and select _Export_.
 
-To preview what the Element's configuration window will look like in the Query Builder, click the _Preview_ link (next to the Cancel button).
-
-![Preview the Element Configuration window.](./creating-and-managing-elements/images/03.png)
+To import an Element, click the Actions (![Actions](../../../images/icon-actions.png)) button in the top corner of the screen (next to the Global Menu icon). Click _Import_ and browse to the Element's JSON file.
 
 ## Creating Elements
 
@@ -32,7 +35,9 @@ There are a lot of [system Elements that ship with Search Blueprints](search-blu
 
 ### Using the Custom JSON Element
 
-Elements can be added in the [Query Builder](creating-and-managing-search-blueprints.md#using-the-query-builder) while working on a Blueprint. Add the Custom JSON Element to the builder and begin editing the boilerplate JSON:
+Elements that are not meant to be reused in other Blueprints can be added in the [Query Builder](creating-and-managing-search-blueprints.md#using-the-query-builder) while working on a Blueprint. These are only available in the Blueprint of origin and are not visible in the Elements section of Search Blueprints. 
+
+Add the Custom JSON Element to the builder and begin editing the boilerplate JSON:
 
 ```json
 {
@@ -49,6 +54,8 @@ Elements can be added in the [Query Builder](creating-and-managing-search-bluepr
    }
 }
 ```
+
+As you type in the JSON editor, auto-completion reveals the available properties. To further understand the available JSON properties, see [Understanding the Schema](#understanding-the-schema).
 
 While any Element can be written in the Custom JSON Element, usually this approach is best reserved for simple Elements that add a query clause and perhaps a condition. Often these will not need a `uiConfiguration` section and will not make extensive use of the predefined template variables that can be used in an Element. For more complex cases, use the [Element source editor](#using-the-add-element-source-editor).
 
@@ -124,45 +131,116 @@ This Element depends on a custom template variable that can be added using the P
 
 A more robust editing experience is available for building your Elements. From the Elements section of Search Blueprints, click the Add (![Add](../../../images/icon-add.png)) button. 
 
-Name the Element and click _Create_. The Element Source editor is displayed, and the Predefined Variables are shown in the pane to the left of the editor.
+Name the Element and click _Create_. The Element Source editor is displayed, and the Predefined Variables are shown in the pane to the left of the editor. As you type in the JSON editor, auto-completion reveals the available properties. To further understand the available JSON properties, see [Understanding the Schema](#understanding-the-schema).
+
 
 ![Create Elements in the Element source editor.](./creating-and-managing-elements/images/02.png)
 
-```{note}
-The boilerplate JSON populating the Element is nearly identical to the [Text Match over Multiple Field](search-blueprints-elements-reference.md#text-match-over-multiple-fields) system Element.
-```
+To preview what the Element's configuration window will look like in the Query Builder, click the _Preview_ link (next to the Cancel button).
+
+![Preview the Element Configuration window.](./creating-and-managing-elements/images/03.png)
 
 ### Using Predefined Variables
 
-To be written...
+To add a Predefined Variable to the Element in the Element Source editor, place the cursor where the variable will be, then click on the variable in the left hand sidebar to have it inserted. In the Custom JSON Element you must type the variable directly into the editor. The syntax for each variable is included in the table below.
 
-### User Custom Fields as Predefined Variables
+| Variable | Type: Definition | Syntax |
+| :--- | :--- | :--- |
+| | **CONTEXT** | |
+| Company ID | Number: Return the company ID of the current instance| `${context.company_id}` |
+| Is Staging Group | Boolean: Return whether the current site is staged | `${context.is_staging_group}` |
+| Language | Text: Return the 2-letter code for the current language (e.g., `en`) | `${context.language}` |
+| Language ID | Text: Return the 4-letter language code (e.g., `en_US`) of the current language | `${context.language_id}` |
+| Layout Name Localized | Text: Return the localized name of the page | `${context.layout-name-localized}` |
+| Page Layout ID | Number: Return the ID of the page | `${context.plid}` |
+| Publication ID | Number: Return the Publication ID | `${context.publication_id}` |
+| Scope Group ID | Return the current Site's ID | `${context.scope_group_id}` |
+|| **TIME** ||
+| Current Date | Date: Return the current date | `${time.current_date}` |
+| Current Day of Month | Number: Return the day of the month | `${time.current_day_of_month}` |
+| Current Day of Week | Number: Return the day of the week (_1 = Monday_) | `${time.current_day_of_week}` |
+| Current Day of Year | Number: Return the day of the year | `${time.current_day_of_year}` |
+| Current Hour | Number: Return the current hour | `${time.current_hour}` |
+| Current Year | Number: Return the current year | `${time.current_year}` |
+| Time of Day | Time: Return the time | `${time.time_of_day}` |
+| Time Zone Name Localized | Text: Return the time zone, localized for the locale | `${time.time_zone_name_localized}` |
+|| **USER** || 
+| Active Segment Entry IDs | Number: Return the User's segment IDs | `${user.active_segment_entry_ids}` |
+| Age | Number: Return the User's age in number of years | `${user.age}` |
+| Birthday | Date: Return he User's birth date | `${user.birthday}` |
+| Create Date | Date: Return the date when the User Account was created in Liferay | `${user.create_date}` |
+| Current Site Role IDs | Number: Return the IDs of the User's Site Roles | `${user.current_site_role_ids}` |
+| Email Domain | Text: Return the domain of the User's email | `${user.email_domain}` |
+| First Name | Text: Return the User's first name | `${user.first_name}` |
+| Full Name | Text: Return the User's full name | `${user.full_name}` |
+| Group IDs | Number: Return the IDs of Sites the User is a member of | `${user.group_ids}` |
+| User ID | Number: Return the User's ID | `${user.id}` |
+| Is Female | Boolean: Return true if the User is female | `${user.is_female}` |
+| Is Gender X | Boolean: Return true if the user is gender X | `${user.is_gender_x}` |
+| Is Male | Boolean: Return true if the user is Male | `${user.is_male}` |
+| Is Signed In | Boolean: Return true if the User is signed in | `${user.is_signed_in}` |
+| Job Title | Text: Return the User's job title | `${user.job_title}` |
+| Language ID | Text: Return the User's language code (e.g., `en_US`) | `${user.language_id}` |
+| Last Name | Text: Return the User's last name | `${user.last_name}` |
+| Regular Role IDs | Number: Return the Role IDs for the User's Regular Roles | `${user.regular_role_ids}` |
+| User group IDs | Number: Return the IDs of the User Groups that the User is part of | `${user.user_group_ids}` |
+| | **NOT DISPLAYED IN THE ELEMENT SOURCE EDITOR** | |
+| Is Omni Admin | Boolean: Return true if the user is the Omni Admin User (the default User of the default Instance) | `${user.is_omniadmin}` |
+| IP Stack City | Text: Return the city where the searching IP address originates | `${ipstack.city}`
+| IP Stack Continent Code | Text: Return the continent code (e.g., NA for North America) where the searching IP address originates | `${ipstack.continent_code}`
+| IP Stack Continent Name | Text: Return the continent name | `${ipstack.continent_name}`
+| IP Stack Country Code | Text: Return the country code (e.g., US for United States)  | `${ipstack.country_code}`
+| IP Stack Country Name | Text: Return the country name | `${ipstack.country_name}`
+| IP Stack Latitude | Number: Return the latitude in decimal degrees | `${ipstack.latitude}`
+| IP Stack Longitude | Number: Return the longitude in decimal degrees | `${ipstack.longitude}`
+| IP Stack Region Code | Text: Return the region code (e.g., CA for California) | `${ipstack.region_code}`
+| IP Stack Region Name | Text: Return the region name | `${ipstack.region_name}`
+| IP Stack Zip Code | Number: Return the zip code | `${ipstack.zip}`
+| Open Weather Map Temperature | Number: Return the temperature | `${openweathermap.temp}`
+| Open Weather Map Weather Description | Text: Return a description of the weather (e.g., "clear sky") | `${openweathermap.weather_description}`
+| Open Weather Map Weather ID | Number: Return the [ID corresponding to the weather description](https://openweathermap.org/weather-conditions#Weather-Condition-Codes-2) | `${openweathermap.weather_id}`
+| Open Weather Map Main Label| Text: Return the [primary identifier for the weather (e.g., Rain; this is the Main field in OpenWeatherMap's API response](https://openweathermap.org/weather-conditions#Weather-Condition-Codes-2), according to the weather ID | `${openweathermap.weather_main}`
+| Open Weather Map Wind Speed | Number: Return the Wind Speed in km/h | `${openweathermap.wind_speed}`
 
-To be written...
+Ipstack and OpenWeatherMap variables are only available if you have enabled the API. Visit System or Instance Settings &rarr; Platform &rarr; Search Experiences. Click the Enabled checkbox and Save the configuration for the service you're configuring. See [Personalizing the Search Experience](./personalizing-the-search-experience.md) and example using the Ipstack service.
+
+In addition to these out-of-the-box variables, [Custom Fields](../../../system-administration/configuring-liferay/adding-custom-fields.md) on the User entity can also be referenced as variables in the Element. For example, a User Custom Field with the name _Employee_ is referenced in an Element with `user.custom.field.employee`.
+
+<!-- The conditionally added parameters do not show up in the Predefined Variables UI. In the code you can see that more context vars are added if commerce is active, if the IPStack is enabled, and if OpenWeatherMap is enabled. Should I document them here? So far I've included IPStack and OpenWeatherMap-->
+
+<!-- We may need a separate article--it's getting quite long -->
 
 ## Understanding the Element Schema
 
-The schema for Search Blueprint Elements is defined in the [sxp-query-element.schema.json](https://github.com/liferay/liferay-portal/blob/master/modules/dxp/apps/search-experiences/search-experiences-web/src/main/resources/META-INF/resources/sxp_blueprint_admin/schemas/sxp-query-element.schema.json) file.
+The schema for Search Blueprint Elements is defined in the [sxp-query-element.schema.json](https://github.com/liferay/liferay-portal/blob/master/modules/dxp/apps/search-experiences/search-experiences-web/src/main/resources/META-INF/resources/sxp_blueprint_admin/schemas/sxp-query-element.schema.json) file. Users with access to the REST API Explorer can browse the schema more conveniently. While logged in to Liferay visit
+
+<http://localhost:8080/o/api?endpoint=http://localhost:8080/o/search-experiences-rest/v1.0/openapi.json>
+
+Expand the _POST /v1.0/sxp-blueprints_ endpoint entry. Scroll down and click the _Schema_ link (next to the _Example Value_ link).
+
+![Explore the Element schema from the API Explorer.](./creating-and-managing-elements/images/04.png)
 
 ```{tip}
 Inspect the syntax in the system Elements to better understand how the Elements are constructed using the schema elements.
 ```
 
-Each Element has these three top-level properties: `description_i18n`, `elementDefinition`, and `title_i18n`.
+Each Element has these two mandatory top-level properties: `elementDefinition` and `title_i18n`. The `elementDefinition` must include the `category` and the `configuration` &rarr; `queryConfiguration` properties:
 
 ```json
 {
-   "description_i18n": {
-      "en_US": "Search for a text match over multiple text fields."
-   },
-   "elementDefinition": {},
-   "title_i18n": {
-      "en_US": "Text Match Over Multiple Fields"
-   }
+	"elementDefinition": {
+		"category": "custom",
+		"configuration": {
+			"queryConfiguration": {}
+		}
+	},
+	"title_i18n": {
+		"en_US": "Custom JSON Element"
+	}
 }
 ```
 
-The title and description fields are straightforward: set the title and description text for the Element, in as many languages as you need.
+In the title field, set the title text for the Element in as many languages as needed.
 
 ### Creating the Element `elementDefinition`
 
@@ -170,7 +248,7 @@ The `elementDefinition` is where you'll do the bulk of the work. Its properties 
 
 - `category` provides a string that classifies the behavior of the Element. Specify `match`, `boost`, `conditional`, `filter`, `hide`, or `custom`.
 - `configuration` provides the `queryConfiguration`, which holds the query clauses you're contributing, via the `queryEntries` property.
-- `icon` sets a string that sets which available icon to use for the Element. Any image available in the [Lexicon Icon Library](https://github.com/liferay/lexiconcss/tree/master/images/icons) can be used (e.g., `thumb-up`). <!-- need clarification on this: for example custom-field is not in Lexicon -->
+- `icon` sets a string that sets which available icon to use for the Element. Any image available in the [Lexicon Icon Library](https://learn.liferay.com/dxp/latest/en/building-applications/developing-a-java-web-application/using-mvc/tag-libraries/clay-tag-library/clay-icons.html) can be used (e.g., `thumbs-up`).
 - `uiConfiguration` sets the configuration elements that you'll show in the UI and then pass into your custom Element with the configured values. 
 
 For example, an Element that boosts a term query match on the `entryClassName` field can configure the query and the UI like this:
@@ -222,14 +300,13 @@ Diving into the `queryEntries` JSON, it can contain the properties `clauses`, `c
 
 - The snippet above shows how `clauses` (an array of elements) is used to add a query clause the Element contributes to the Blueprint-driven search. In addition to `query`, you can add `additive`, `boost`, `content`, `disabled`, `field`, `name`, `occur`, `parent`, `type`, or `value` properties.
 - A `condition` provides a boolean check. If true the provided clauses are included in the search query, if false they are left out.
-- Set `enabled` to false (it's true by default) if <!--Does this do what it sounds like? Disable the Element? -->
+- Set `enabled` to false (it's true by default) to disable the Element.
 - Add `postFilterClauses` (as an array of `clause` elements). You can add `additive`, `boost`, `content`, `disabled`, `field`, `name`, `occur`, `parent`, `query`, `type`, or `value` properties.
-
-### Defining the Element `uiConfiguration`
+- Add `rescores` to recalculate the relevance score for results of a query. Specify the `query`, `queryWeight`, `rescoreQueryWeight`, `scoreMode`, and `windowSize`. See the [Elasticsearch documentation](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/filter-search-results.html#rescore) for details.
 
 The `uiConfiguration` property holds the nested properties `fieldSet` and `field`.
 
-There are a number of configurations you can add for each field in the UI Configuration:
+There are a number of configuration properties you can add for each field in the UI Configuration:
 
 - `fieldMappings` <!--not sure what this does -->
 - Enter `helpText` to display help text for the field in the Blueprints UI.
