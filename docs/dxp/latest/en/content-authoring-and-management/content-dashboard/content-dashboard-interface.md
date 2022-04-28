@@ -114,7 +114,7 @@ In the list of contents, you can find the following columns:
 The *First Vocabulary* and *Second Vocabulary* columns depend on the Vocabularies you select.
 ```
 ```{warning}
-The *subtypes* column only displays Basic documents (doc, pdf, xls, jpg, etc.) and External Video Shortcuts on the content performance panel.
+The subtypes of documents displayed in the content dashboard are Basic documents (doc, pdf, xls, jpg, etc.) and External Video Shortcuts.
 ``` 
 
 For each entry in the Contents list, you can access the following options using the *Actions* menu (![Actions Menu](../../images/icon-actions.png)) or hovering over the article and clicking the corresponding option:
