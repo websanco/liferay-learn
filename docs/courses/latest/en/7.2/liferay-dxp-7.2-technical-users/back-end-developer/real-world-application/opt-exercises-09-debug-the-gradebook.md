@@ -4,9 +4,7 @@ title: Debug the Gradebook
 order: 9
 ---
 
-<h2 class="exercise">Optional Exercise</h2>
-
-## Debug the Gradebook
+# Debug the Gradebook
 
 <div class="ahead">
 <h4>Exercise Goals</h4>
@@ -17,14 +15,14 @@ order: 9
 	</ul>
 </div>
 
-#### (Re)start Tomcat in Debug Mode
+## (Re)start Tomcat in Debug Mode
 
 1. **Stop** the Liferay server.
 2. **Start** the Liferay server in debug mode by clicking the "bug" icon:
 
 <img src="../images/starting-debug.png" style="max-height: 100%"/>
 
-#### Add Breakpoint
+## Add Breakpoint
 
 1. **Open** `com.liferay.training.gradebook.service.impl.AssignmentLocalServiceImpl` class in the *gradebook-service* module.
 1. **Find** call to the `_assignmentValidator.validate()` in the beginning of `addAssignment()` method.

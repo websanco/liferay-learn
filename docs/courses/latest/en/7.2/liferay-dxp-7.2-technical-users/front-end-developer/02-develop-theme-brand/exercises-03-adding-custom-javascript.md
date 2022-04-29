@@ -1,8 +1,6 @@
-<h2 class="exercise">Exercises</h2>
+# Add Custom JavaScript to a Theme
 
-## Add Custom JavaScript to a Theme
-
-<div class="ahead">
+<!-- <div class="ahead">
 <h4>Exercise Goals</h4>
     <ul>
     <li>Add JavaScript to the theme</li>
@@ -14,11 +12,12 @@
     </ul>
 </div>
 
-#### Add Main.js to the Theme
+## Add Main.js to the Theme
+
 1. **Copy** the `main.js` from the _`exercise-src\js`_ folder. 
 3. **Paste** it into your `livingstone-fjord-theme/src/js` folder.
 
-#### Set DOM Variables and the Sign-In Widget
+## Set DOM Variables and the Sign-In Widget
 1. **Drop** the `main.js` from _`livingstone-fjord-theme\src\js`_ into the _Visual Studio Code_ editor. 
 2. **Click** to highlight the `// Insert snippet 01-variables-and-sign-in here` comment.
 3. **Type** `lfr` to view the available code snippets.
@@ -40,7 +39,7 @@ var fullScreenToggleIcon = A.one('.full-screen-navigation #banner .navbar-toggle
 
 <br />
 
-#### Add the Click Event for Closing the Navigation
+## Add the Click Event for Closing the Navigation
 1. **Click** to highlight the `// Insert snippet 02-close-nav-click here` comment.
 2. **Type** `lfr` to view the available code snippets.
 3. **Choose** the `02-close-nav-click` snippet.
@@ -58,8 +57,8 @@ if (fullScreenToggleIcon) {
 }
 ```
 
-#### Deploy the Theme to See the JavaScript Changes
+## Deploy the Theme to See the JavaScript Changes
 1. **Run** `npm run gulp deploy` in the _Command Line_ or _Terminal_. 
   * If you're already running gulp watch, this isn't needed.
 
-<img src="../images/sign-in-js-example.png" style="max-height:39%">
+<img src="../images/sign-in-js-example.png" style="max-height:39%"> -->

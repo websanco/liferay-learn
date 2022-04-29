@@ -1,6 +1,4 @@
-<h3 class="exercise">Exercises</h3>
-
-## Connecting to an LDAP Server
+# Connecting to an LDAP Server
 
 <div class="ahead">
 	<h3>Exercise Goals:</h3>
@@ -11,7 +9,7 @@
 		</ul>
 </div>
 
-#### Make Sure the LDAP Server is Running
+## Make Sure the LDAP Server is Running
 
 1. **Open** the _docker-compose.yml_ file for the Tomcat stack.
     * You can find the file at _liferay/liferay-tomcat_.
@@ -34,7 +32,7 @@
 8. **Press** _Enter_.
     - You should see both the tomcat-1 server and the apacheds containers running along with the mysql container, as all these services are required by the _liferay-tomcat-1_ service.
 
-#### Start up Apache Directory Studio
+## Start up Apache Directory Studio
 
 If the ApacheDS LDAP server was configured to run on port 389 (the default), you would need to become _root_ before you could start the server. We've configured the LDAP server to run on port 10389 so this isn't necessary.
 
@@ -44,7 +42,7 @@ If the ApacheDS LDAP server was configured to run on port 389 (the default), you
 
 <img src="../images/chapter-5/apache-directory-studio-empty.png" style="max-width:100%;">
 
-#### Connect Apache Directory Studio with the LDAP Server
+## Connect Apache Directory Studio with the LDAP Server
 
 1. **Click** _`File → New...`_.
 2. **Choose** _`LDAP Browser → LDAP Connection`_ in the _Select a wizard_ pop-up.
@@ -62,7 +60,7 @@ If the ApacheDS LDAP server was configured to run on port 389 (the default), you
 
 <br>
 
-#### Authenticate the Connection
+## Authenticate the Connection
 
 1. **Type** in the following fields:
     - **uid=admin,ou=system** for the *Bind DN*
@@ -72,7 +70,7 @@ If the ApacheDS LDAP server was configured to run on port 389 (the default), you
 
 <img src="../images/chapter-5/check-authentication.png" style="max-width:100%;">
 
-#### Browse the LDAP Directory
+## Browse the LDAP Directory
 
 Let's browse our LDAP directory and look at the entries we're going to import into Liferay.
 
@@ -88,7 +86,7 @@ We will import the entries belonging to the *Users* and *Groups* organization un
     Note: We're also using our OpenDJ LDAP server for OpenAM's (an SSO server) configuration data store and user data store.
 </div>
 
-#### Navigate to LDAP Configuration Settings in Liferay
+## Navigate to LDAP Configuration Settings in Liferay
 
 1. **Go to** *localhost:8081* in your web browser if it isn't already up.
 2. **Sign in** to Liferay as an administrator.
@@ -99,7 +97,7 @@ We will import the entries belonging to the *Users* and *Groups* organization un
 5. **Click** on *Servers* on the left-hand side.
 6. **Click** *Add*.
 
-#### Configure LDAP Connection Settings
+## Configure LDAP Connection Settings
 
 1. **Type** *Apache LDAP* for the _Server Name_.
 2. **Click** the _Apache Directory Server_ radio button.
@@ -113,7 +111,7 @@ We will import the entries belonging to the *Users* and *Groups* organization un
 
 <img src="../images/chapter-5/ldap-connected.png" style="max-width:100%;">
 
-#### Test the New LDAP Users
+## Test the New LDAP Users
 
 1. **Go to** the _Users_ section.
 2. **Check** that the following fields are filled out properly:
@@ -135,7 +133,7 @@ We will import the entries belonging to the *Users* and *Groups* organization un
 
 <img src="../images/chapter-5/ldap-users-connected.png" style="max-width:100%;">
 
-#### Test the New LDAP Groups
+## Test the New LDAP Groups
 
 1. **Go to** the *Groups* section.
 2. **Check** that the following fields are filled out properly:
@@ -155,7 +153,7 @@ You've just connected the LDAP server to the platform.
 
 <!-- Could not get import to work by restarting or even rebuilding the tomcat-1 instance.
 
-#### Test the LDAP Configuration
+## Test the LDAP Configuration
 
 1. **Click** on the *Import* section on the left-hand side of the page.
 2. **Check** the *Enable Import* box.
@@ -170,7 +168,7 @@ You've just connected the LDAP server to the platform.
 
 Since we did not set up user import, users are never imported from LDAP en masse. Instead, LDAP users are imported upon log-in. We can configure user import so that users will be imported en masse from LDAP according to the provided interval.
 
-#### Enable User Import
+## Enable User Import
 
 Now, let's import all of our LDAP users into Liferay.
 
@@ -186,7 +184,7 @@ Now, let's import all of our LDAP users into Liferay.
 
 <img src="../images/chapter-5/tomcat-restart.png" style="max-width:100%;">
 
-#### Verify the Import
+## Verify the Import
 
 Once Liferay has restarted and the import is complete, we can look at Liferay's user list to verify that the import was successful.
 

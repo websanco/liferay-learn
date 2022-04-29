@@ -4,13 +4,13 @@ title: Basic Search Concepts
 order: 3
 ---
 
-## Basic Search Concepts
-
+# Basic Search Concepts
+<!-- 
 Many of the platform search customization tasks require an understanding of basic search concepts that are not Liferay-specific, but common for search engines in general. Some of these fundamental concepts are *indexing*, *analysis*, *searching*, and *queries*.
 
 > In versions prior to 7.1, search and indexing was accomplished with one single indexer class extending a BaseIndexer. The new pattern is based on API-SPI model and composition of multiple worker components. Although deprecated, the old approach still works in 7.2.
 
-#### Indexing 
+## Indexing 
 
 To be able to search for model entities in Liferay, they have to be indexed. Indexing is a process of transforming input data to a search engine document, which is the storage model type for search engines. 
 
@@ -95,7 +95,7 @@ public class BlogsEntryModelDocumentContributor
 
 <br /><br /><br />
 
-#### Analysis
+## Analysis
 
 Analysis is a field-level process of transforming input data into search engine document field data. This process varies depending on the engine, but in Elasticsearch, analysis is accomplished in three phases:
 
@@ -111,7 +111,7 @@ Below is a logical view to the indexing and analysis process in Elasticsearch:
 
 <img src="../images/how-indexing-works.png" style="max-width: 100%;" />
 
-#### Searching
+## Searching
 
 Searching in technical terms involves sending a search query and obtaining results, also called hits, from the search engine.  
 
@@ -139,4 +139,4 @@ Below is a logical view showing the different phases and components when doing a
 	</ul>
 	<li>_________________ involves sending a search query and obtaining results, also called ______________, from the search engine.  </li>
 </ul>
-</div>
+</div> -->

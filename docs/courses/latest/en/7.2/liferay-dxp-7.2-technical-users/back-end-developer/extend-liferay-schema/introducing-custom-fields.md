@@ -4,7 +4,7 @@ title: Introducing Custom Fields
 order: 2
 ---
 
-## Introducing Custom Fields
+# Introducing Custom Fields
 
 As a developer or system administrator, you may sometimes want to add a persistable and manageable attribute to an existing Liferay data model. Such use cases could be, for example:
 
@@ -18,7 +18,7 @@ For creating and managing custom fields, there is a management user interface in
 
 <img src="../images/custom-fields.png" style="max-width: 100%;"/>
 
-#### Supported Types {#types}
+## Supported Types {#types}
 
 The following types are supported for custom fields:
 
@@ -48,13 +48,13 @@ The following types are supported for custom fields:
 	* Group of text values
 	* Localized text
 
-#### Searchability {#search}
+## Searchability {#search}
 
 Setting a custom field to __searchable__ means that the value of the field is indexed and searchable. The indexed type can be chosen between a keyword and, for strings, a text type.
 
 > When a searchability setting is changed, the indexes must be updated to make the change effective to the existing entities.
 
-#### Accessing Custom Fields From Templates {#fields}
+## Accessing Custom Fields From Templates {#fields}
 
 Custom fields can be accessed from FreeMarker templates by calling the expando bridge:
 

@@ -4,9 +4,7 @@ title: Implement Integration Tests
 order: 8
 ---
 
-<h2 class="exercise">Optional Exercise</h2>
-
-## Implement Integration Tests
+# Implement Integration Tests
 
 <div class="ahead">
 <h4>Exercise Goals</h4>
@@ -20,15 +18,17 @@ order: 8
 	</ul>
 </div>
 
-#### Create a Gradebook Test Module
+## Create a Gradebook Test Module
 
 **Option 1: Use the Command Line Blade tools**
 
 1. **Open** command line shell in your Liferay Workspace `modules` folder.
 1. **Run** command:
+
 ```bash
 blade create -t activator -v 7.1  gradebook-test
 ```
+
 1. **Run** Gradle refresh on the IDE.
 
 **Option 2: Use Developer Studio Wizard**
@@ -46,7 +46,7 @@ Clean the unnecessary resources created by the wizard and create a new source fo
 1. **Delete** the `src/main` folder.
 1. **Create** a new __source folder__ `src/testIntegration` (watch the case).
 
-#### Declare Dependencies
+## Declare Dependencies
 
 1. **Open** the `build.gradle`.
 1. **Replace** the dependencies section with the following:
@@ -70,7 +70,7 @@ testIntegrationRuntime group: "com.liferay", name: "com.liferay.petra.memory"
 testIntegrationCompile project(":modules:gradebook:gradebook-api")
 ```
 
-#### Configure Test Settings
+## Configure Test Settings
 
 Configure the Gradle settings for the test Tomcat bundle and error logging:
 
@@ -108,22 +108,27 @@ stopTestableTomcat {
 
 <br />
 
-#### Implement the Test Class
+## Implement the Test Class
 
 1. **Create** a new Class `com.liferay.gradebook.service.impl.test.AssignmentLocalServiceImplTest.java` in the `testIntegration` source folder.
 1. **Annotate** the class with `@RunWith` to make it an Arquillian test:
+
 	```java
 	@RunWith(Arquillian.class)
 	public class AssignmentLocalServiceImplTest
 	```
+
 1. **Declare** the Liferay JUnit class rule variable :
+
 	```java
 	@ClassRule
 	@Rule
 	public static final AggregateTestRule aggregateTestRule =
 		new LiferayIntegrationTestRule();	
 	```
+
 1. **Add** the required references to the end of the class:
+
 	```java
 	@Inject
 	private AssignmentLocalService _assignmentLocalService;
@@ -137,6 +142,7 @@ stopTestableTomcat {
 	@Inject
 	private Portal _portal;
 	```
+
 1. **Implement** the test methods as follows:
 
 ```java
@@ -203,12 +209,13 @@ private long getGuestGroupId()
 		_portal.getDefaultCompanyId(), groupName).getGroupId();
 }
 ```
-	
-#### Final Code Review
+
+## Final Code Review
 
 The complete files will look like this: 
 
 **build.gradle**
+
 ```groovy
 dependencies {
 	testIntegrationCompile group: "com.liferay.portal", name: "com.liferay.portal.kernel"
@@ -257,6 +264,7 @@ stopTestableTomcat {
 ```
 
 **AssignmentLocalServiceImplTest.java**
+
 ```java
 
 package com.liferay.training.gradebook.service.impl.test;
@@ -376,7 +384,7 @@ public class AssignmentLocalServiceImplTest {
 }
 ```
 
-#### Run the Test
+## Run the Test
 
 1. **Run** the Gradle `testIntegration` task.
 

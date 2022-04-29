@@ -1,16 +1,16 @@
-## Adding Custom JavaScript to a Theme
+# Adding Custom JavaScript to a Theme
 
-Beyond simple styling, pages across a platform often need to have JavaScript functions and components added to create a great user experience. Developers may need to add both global JavaScript as well as specific JavaScript components or applications. The Theme is the context in which global JavaScript can be added for each site page.
+<!-- Beyond simple styling, pages across a platform often need to have JavaScript functions and components added to create a great user experience. Developers may need to add both global JavaScript as well as specific JavaScript components or applications. The Theme is the context in which global JavaScript can be added for each site page.
 
 <figure>
   <img src="../images/coding.png" style="max-height: 18%" />
 </figure>
 
-#### JavaScript on the Livingstone Platform {#livingstone}
+## JavaScript on the Livingstone Platform {#livingstone}
 
 Kaito needs to create a custom sign-in modal and add some JavaScript to the top search for every page on the different Livingstone Hotels & Resorts sites. He will do this by implementing JavaScript in a theme similar to how he added custom CSS. For the remaining JavaScript needs, he can use the Bundle Generator to create JavaScript modules.
 
-#### Global JavaScript {#globaljs}
+## Global JavaScript {#globaljs}
 
 Just like the HTML and CSS, the theme also controls the JavaScript that gets loaded for every single site page when the theme is applied. If there are functions that need to be defined or functions that should be available globally, they should be added to the theme.
 
@@ -54,7 +54,7 @@ AUI().ready(
 
 This is used to make the password visible `(type, text)` and hidden `(type, password)` at the press of a button when combined with the FreeMarker and CSS defined in a theme. 
 
-#### Using Third-Party JavaScript {#thirdjs}
+## Using Third-Party JavaScript {#thirdjs}
 
 Developers can also take advantage of the other JavaScript libraries included in Liferay. 
 
@@ -106,4 +106,4 @@ Global JavaScript that will be executed on every page can be added to __________
   <li>Metal.js and jQuery are included by default with Liferay, but any front-end ____________________ can be used when writing your JavaScript.</li>
   <li>JavaScript can be organized in a more ____________________ way by requiring other JS files in the main.js.</li>
 </ul>
-</div>
+</div> -->

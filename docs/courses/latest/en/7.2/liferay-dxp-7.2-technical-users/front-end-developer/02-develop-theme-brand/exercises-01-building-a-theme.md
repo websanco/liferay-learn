@@ -1,8 +1,6 @@
-<h2 class="exercise">Exercises</h2>
+# Create the Livingstone Fjord Theme
 
-## Create the Livingstone Fjord Theme
-
-<div class="ahead">
+<!-- <div class="ahead">
 <h4>Exercise Goals</h4>
 	<ul>
 	<li>Install Visual Studio Code and add code snippets</li>
@@ -15,13 +13,13 @@
 	</ul>
 </div>
 
-#### Install Visual Studio Code
+## Install Visual Studio Code
 1. **Go to** `https://code.visualstudio.com/`.
 2. **Click** to download the VS Code for your OS.
 3. **Double-click** to run the installer for your operating system.  
 4. **Click** through the installation steps.
 
-#### Create a Global Snippets File in Visual Studio Code
+## Create a Global Snippets File in Visual Studio Code
 1. **Open** _Visual Studio Code_.
 2. **Go to** the _User Snippets_ menu.
 	* Windows: `File → Preferences → User Snippets`
@@ -31,14 +29,14 @@
 	* The full file name will be _lfr-front-end.code-snippets_.
 5. **Click** _Save_.
 
-#### Add the Snippet Content
+## Add the Snippet Content
 1. **Open** the `lfr-front-end-snippets.json` in your module exercises folder.
 2. **Copy** the contents of the file.   
 3. **Paste** the contents of the file in the `lfr-front-end.code-snippets` file just created in Visual Studio Code.
 	* Make sure to replace all the existing content in the file.
 4. **Save** the file.
 
-#### Generate the Base Theme
+## Generate the Base Theme
 1. **Go to** the _liferay_ folder you already created in the _Command Line/Terminal_.
 	- Windows: _C:\liferay_
 	- Mac/Linux: _~/liferay_
@@ -71,7 +69,7 @@ Note: If the Theme Generator returns an error, make sure you are using NPM 10.15
 Note: Liferay themes created with the theme generator are bundled with Gulp. In order to run Gulp locally from the command line, we must add a script to the package.json file. Additionally, some setups run into issues running scripts with npm. If this is the case, try creating an .npmrc file in the root of your project and add the <code>ignore-scripts=false</code> configuration.
 </div>
 
-#### Add Gulp Scripts to package.json
+## Add Gulp Scripts to package.json
 1. **Go to** your _`livingstone-fjord-theme`_ folder.
 * **Open** your `package.json` file.
 * **Add** the following in the "scripts":
@@ -120,7 +118,7 @@ When you're finished, `package.json` should look something like this:
 }
 ```
 
-#### Deploy the Base Theme to Our Liferay Instance
+## Deploy the Base Theme to Our Liferay Instance
 1. **Go to** _Livingstone Fjord Theme_ using `cd livingstone-fjord-theme` in the _Command Line_.
 	- This is assuming you are still running _Command Prompt/Terminal_ from `C:\liferay`.
 2. **Run** the `npm run gulp deploy` command.  
@@ -142,7 +140,7 @@ When you're finished, `package.json` should look something like this:
 
 <br />
 
-#### Add the Directory Structure to the SRC Folder
+## Add the Directory Structure to the SRC Folder
 1. **Go to** the _`livingstone-fjord-theme\src`_ folder.  
 	- Windows: _`C:\liferay\livingstone-fjord-theme\src`_
 	- Mac/Linux: _`~/liferay/livingstone-fjord-theme\src`_
@@ -152,18 +150,18 @@ When you're finished, `package.json` should look something like this:
 
 <div class="note">Note: We will be using npm run deploy throughout the course. If you decide to use gulp watch, you will not need to run npm run deploy.</div>
 
-#### Set Variables to Start
+## Set Variables to Start
 1. **Copy** the `liferay-look-and-feel.xml` file from the _`WEB-INF`_ folder in your _`exercise-src`_ folder.  
 2. **Paste** the file into the _`livingstone-fjord-theme\src\WEB-INF`_ folder.
 	* You will need to replace the original file.
 
-#### Modify Theme Templates
+## Modify Theme Templates
 1. **Copy** the files in the _`exercise-src/templates`_ folder.
 2. **Paste** the contents into the _`livingstone-fjord-theme\src\templates`_ folder.
 3. **Open** the _Visual Studio Code_ editor.
 4. **Drop** the `portal_normal.ftl` file from the _`livingstone-fjord-theme\src\templates`_ file into the _Visual Studio Code_ editor.  
 
-#### Modify the Header
+## Modify the Header
 1. **Click** to highlight the `<#-- Insert snippet 01-portal-normal-header here -->` comment.
 2. **Type** `lfr` to view the available code snippets.
 3. **Choose** the `ftl: 01-portal-normal-header` snippet.
@@ -174,14 +172,14 @@ When you're finished, `package.json` should look something like this:
 </#if>
 ```
 
-#### Add the Content Section
+## Add the Content Section
 1. **Click** to highlight the `<#-- Insert snippet 02-portal-normal-main here -->` comment.
 2. **Type** `lfr` to view the available code snippets.
 3. **Choose** the `ftl: 02-portal-normal-main` snippet.
 
 <br /><br />
 
-#### Keep the Footer Code Distinct
+## Keep the Footer Code Distinct
 1. **Click** to highlight the `<#-- Type footer.ftl include here -->` comment.
 2. **Type** in the following to include the footer.ftl file:
 ```FreeMarker
@@ -191,14 +189,14 @@ When you're finished, `package.json` should look something like this:
 ```
 3. **Save** the file.
 
-#### Add Code to the Footer FTL File
+## Add Code to the Footer FTL File
 1. **Drop** the `footer.ftl` file from _`livingstone-fjord-theme\src\templates`_ into the _Visual Studio Code_ editor.   
 2. **Click** to highlight the `<#-- Insert 03-footer-ftl here -->` comment.
 3. **Type** `lfr` to view the available code snippets.
 4. **Choose** the `03-footer-ftl` snippet.
 5. **Save** the file.
 
-#### Add a Sign-In Link to the Footer
+## Add a Sign-In Link to the Footer
 1. **Drop** the `footer_navigation.ftl` file from _`livingstone-fjord-theme\src\templates`_ into the _Visual Studio Code_ editor.
 2. **Click** to highlight the `<#-- Insert snippet 04-footer-nav-sign-in here -->` comment.
 3. **Type** `lfr` to view the available code snippets.
@@ -215,7 +213,7 @@ When you're finished, `package.json` should look something like this:
 </#if>
 ```
 
-#### Add the Footer Navigation
+## Add the Footer Navigation
 1. **Click** to highlight the `<#-- Insert snippet 05-footer-nav-menu here -->` comment.
 2. **Type** `lfr` to view the available code snippets.
 3. **Choose** the `05-footer-nav-menu` snippet.  
@@ -232,8 +230,8 @@ When you're finished, `package.json` should look something like this:
 ```
 4. **Save** the file.
 
-#### Deploy the Theme to See the HTML Changes
+## Deploy the Theme to See the HTML Changes
 1. **Run** `npm run gulp deploy` in the _Command Line_ or _Terminal_.
 	* If you're already running gulp watch, this isn't needed.
 
-<img src="../images/updated-templates.png" style="max-height: 100%">
+<img src="../images/updated-templates.png" style="max-height: 100%"> -->

@@ -1,6 +1,4 @@
-<h2 class="exercise">Exercises</h2>
-
-## Set Up Docker on Windows 10 Professional
+# Set Up Docker on Windows 10 Professional
 
 <div class="ahead">
 	<h3>Exercise Goals:</h3>
@@ -14,7 +12,7 @@
 	Note: Docker Desktop requires Windows 10 Pro or Enterprise edition and will enable Microsoft Hyper-V. When Hyper-V is enabled on your system, <b>VirtualBox will no longer work</b>. If you have a VirtualBox workflow or if you are on Windows 10 Home or an earlier version of Windows, you will need to install <i>Docker Toolbox</i>. For installation instructions and the download link see the Docker Toolbox page at <a>https://docs.docker.com/toolbox/toolbox_install_windows/ </a>.
 </div>
 
-#### Create A Docker Account on Docker Hub
+## Create A Docker Account on Docker Hub
 
 1. **Go to** https://hub.docker.com/editions/community/docker-ce-desktop-windows in your browser.
 	* You'll have to create a Docker ID and login in before you can download the installer.
@@ -32,7 +30,7 @@
 
 <img src="../images/chapter-1/login-to-download.png" style="max-height:20%;" />
 
-#### Download and Install the CE Version of Docker
+## Download and Install the CE Version of Docker
 
 1. **Sign in** to Docker Hub with your _Docker ID_ and _Password_.
 2. **Click** the _Get Docker_ button.
@@ -48,7 +46,7 @@ After the system restarts a Docker pop-up will appear telling you that _Docker i
 
 <img src="../images/chapter-1/docker-running.png" style="max-height:20%;" />
 
-#### Confirm the Docker Installation and Pull Your First Image
+## Confirm the Docker Installation and Pull Your First Image
 1. **Open** a command-line terminal window.
 2. **Type** `docker version`.
 3. **Press** _Enter_.
@@ -57,7 +55,7 @@ After the system restarts a Docker pop-up will appear telling you that _Docker i
 
 You should see the message _Hello from Docker_! This message shows that you can successfully pull and run images from Docker Hub.
 
-#### Give Docker Access to the `C` Drive and Increase Resources
+## Give Docker Access to the `C` Drive and Increase Resources
 
 Before we move on, let's update a few Docker settings. Depending on the stack you're running, Docker can become fairly resource intensive. We suggest allocating a _minimum of 6GB of memory_ to Docker, with a recommended 8GB if possible. Also be sure your machine has adequate disk space as containers can quickly eat up space.
 
@@ -78,7 +76,7 @@ Your new settings will be applied and Docker will restart. Congratulations! You 
 
 ---
 
-#### Bonus Exercises: 
+## Bonus Exercises: 
 
 Try the following bonus exercise after completing the main exercises:
 1. Download an Ubuntu image and run it in terminal mode: `$ docker run -it ubuntu bash`

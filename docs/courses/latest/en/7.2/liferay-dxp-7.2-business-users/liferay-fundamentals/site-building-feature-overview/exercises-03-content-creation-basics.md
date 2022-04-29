@@ -1,6 +1,4 @@
-<h2 class="exercise">Exercises</h2>
-
-## Content Feature Overview
+# Content Feature Overview
 
 <div class="ahead">
 <h4>Exercise Goals</h4>
@@ -13,7 +11,8 @@
 </ul>
 </div>
 
-#### Modify the Travel Blogs Page Header Text in the Livingstone Life Site
+## Modify the Travel Blogs Page Header Text in the Livingstone Life Site
+
 1. **Go to** the _Livingstone Life_ Site if you're not already there.
 2. **Click** on the _Travel Blogs_ page.
 3. **Click** the _Edit_ icon at the top right.
@@ -24,7 +23,8 @@
 8. **Click** _Edit_.
 9. **Type** _Inviting you to take a journey of discovery and experience._ to replace the default text.
 
-#### Add a Background Image to the Blogs Page Header
+## Add a Background Image to the Blogs Page Header
+
 1. **Click** the background of the banner.
 2. **Click** _Edit_ at the top.
 3. **Click** _Select File_.
@@ -36,7 +36,8 @@
 
 <img src="../images/jumbotron-heading-edit.png" style="max-height: 31%">
 
-#### Create a New Travel Blog for the Livingstone Life Site
+## Create a New Travel Blog for the Livingstone Life Site
+
 1. **Open** the _Menu_.
 2. **Go to** _`Content & Data → Blogs`_ in the _Site Administration_ panel.
 3. **Click** _Add_.
@@ -53,7 +54,8 @@
 
 ---
 
-#### Bonus Exercises
+## Bonus Exercises
+
 1. Create a new Digital Article with Web Content to publish on the _Articles_ page.
 2. Use the Section Builder to create a new _Page_ section to replace the header of either page.
 3. Create another blog and add metadata to it. 

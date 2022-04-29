@@ -1,5 +1,3 @@
-<h3 class="exercise">Exercises</h3>
-
 # Install a Fixpack or Hotfix
 
 <div class="ahead">
@@ -9,7 +7,7 @@
 		</ul>
 </div>
 
-#### Patching your installation
+## Patching your installation
 
 Patching is quite easy: Liferay Support provides Fixpacks and Hotfixes for you. For this training, we're providing a Hotfix, and the availability of this hotfix will be immediately visible when you open your browser on the default homepage:
 
@@ -44,7 +42,7 @@ Let's first look at the installation of a hotfix outside of Docker:
     [ I] hotfix-11-7210 :: Currently not installed; Will be installed. :: DXP-TRAINING :: Built for THESPACEPRO
     $ 
     ```
-    
+
 This command gave you some information about the system you're installing on, and the patches that are already available and installed (hint: 1 available, 0 installed). You can now install the hotfix
 
     ```shell
@@ -64,7 +62,7 @@ Subsequent `./patching-tool info` runs will tell you what's installed. To instal
 
 The OSGi runtime caches quite a lot of deployed modules in the folder `osgi/state`, which you might need to wipe for the patches to become active.
 
-#### Updating your Docker Image
+## Updating your Docker Image
 
 For this training, we didn't create any automated build environment (e.g. Continuous Integration server). Thus, we'll need to simulate it by working manually. You may choose how to bring the updates back into the Docker Image. One option is to just zip up the patched directory from the previous chapter, and build the Docker Image from that updated file. Another one is to embed the patches during the building of the Docker Image.
 

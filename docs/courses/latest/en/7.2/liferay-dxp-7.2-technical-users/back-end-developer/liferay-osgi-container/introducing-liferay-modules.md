@@ -4,17 +4,17 @@ title: Introducing Liferay Modules
 order: 3
 ---
 
-## Introducing Liferay Modules
+# Introducing Liferay Modules
 
 Since Liferay 7.0 / DXP, all Liferay plugins have been called *modules*. Technically, a module is a project type, but after being built and deployed, it becomes an OSGi *bundle* running in the OSGi container. In Liferay terminology, the term *module* is used to refer to both.	
 
 Liferay provides a comprehensive set of project, module, and component templates you can use to generate project stubs and classes. 
 
-#### Project Templates
+## Project Templates
 
 <img src="../images/liferay-project-templates.png" style="max-height:22%;" />
 
-#### Module Templates
+## Module Templates
 
 A module template creates the basic project skeleton with default settings for the deployable components. When you start a new Liferay module project, you can choose from a selection of templates. Generally speaking, if you are interested only in a blank module project, the API template is a good choice, since only a minimal structure is generated. 
 
@@ -30,13 +30,13 @@ The project skeleton comprises:
 
 > Notice that while you can still create legacy Java EE style WAR plugins, these plugins are automatically converted to OSGi bundles on deploy time by the WAB plugin. For more information on the different templates, please see this [Developer Network article](https://dev.liferay.com/develop/reference/-/knowledge_base/7-1/project-templates).
 
-#### Component Templates
+## Component Templates
 
 The Liferay component wizard provides a selection of common component templates. You can use this wizard to add components to your existing project:
 
 <img src="../images/component-templates.png" style="max-height: 30%"/>
 
-#### Creating Modules from the Command Line
+## Creating Modules from the Command Line
 
 Modules can also be created from the _Command Line_ with the Blade CLI command line tool and Maven: 
 

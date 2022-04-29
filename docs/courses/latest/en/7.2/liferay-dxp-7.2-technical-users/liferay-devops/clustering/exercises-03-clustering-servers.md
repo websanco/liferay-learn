@@ -1,6 +1,4 @@
-<h3 class="exercise">Exercises</h3>
-
-## Enable Load Balancing for the Tomcat Stack
+# Enable Load Balancing for the Tomcat Stack
 
 <div class="ahead">
 	<h3>Exercise Goals:</h3>
@@ -9,7 +7,7 @@
 		</ul>
 </div>
 
-#### Update HAProxy's Configurations
+## Update HAProxy's Configurations
 
 Let's configure the HAProxy service to enable load balancing.
 

@@ -1,4 +1,4 @@
-## Content Feature Overview
+# Content Feature Overview
 
 At a basic level, users regularly return to different websites, platforms, and services because the information and content is relevant to them. A large part of crafting the best user experiences is a combination of design, availability, and relevance of content. Businesses also need to be able to organize their content effectively, ensure visibility with SEO, and increase searchability on the platform. In many cases, meeting all these needs requires using multiple services and different software. Fortunately, Liferay DXP comes out-of-the-box with the features businesses require to meet the needs of their users.
 
@@ -9,7 +9,7 @@ At a basic level, users regularly return to different websites, platforms, and s
 
 <br />
 
-#### Livingstone Content Needs {#livingstone}
+## Livingstone Content Needs {#livingstone}
 
 Livingstone's many sites have many different kinds of content. Josiah Copeland and the web team are responsible for managing content for all the sites leading up to launch. Let's take a look at some of their primary needs.
 
@@ -28,7 +28,7 @@ For all of these use cases, different teams need to make sure all their digital 
 
 <br />
 
-#### What are Assets? {#assets}
+## What are Assets? {#assets}
 
 One of the primary ways of creating content on the platform is to work within the _Asset Framework_. The Asset Framework includes several content types as well as metadata and content organization features. These different types of content are known as _Assets_. There are a number of default Assets on the platform, and developers can also create new ones as needed.
 
@@ -78,7 +78,7 @@ The Asset Framework includes common features, methods of organization, and metad
 * Asset Comment and Ratings
 * Workflow Integration
 
-#### Digital Asset Management Features {#damfeatures}
+## Digital Asset Management Features {#damfeatures}
 
 Along with the other features, Liferay has a number of organization features for the different types of content:
 * Repositories
@@ -113,7 +113,7 @@ The concept of the _folder_ is demonstrated with most available Assets. At times
 	<figcaption style="font-size: x-small">Fig.5 Documents on the Platform</figcaption>
 </figure>
 
-#### Types and Structures {#typesandstructures}
+## Types and Structures {#typesandstructures}
 
 Web Content and Documents are two assets that include features that further specify types. Web Content includes _Structures_. Structures are named after the type of Web Content and fields that can be added to specify what content needs to be included. 
 
@@ -144,7 +144,7 @@ Key Point: <br/>
 </ul>
 </div>
 
-#### Page Fragments {#pagefragments}
+## Page Fragments {#pagefragments}
 
 In addition to using Assets with their common features, administrators can use Page Fragments. _Page Fragments_ are reusable parts of a page that consist of HTML, CSS, and JavaScript code. They can be used to quickly create editable parts of the page, allowing developers to start content creation on a Site, but giving content and marketing teams the ability to quickly edit and update the content.
 

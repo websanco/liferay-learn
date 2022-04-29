@@ -1,7 +1,5 @@
-<h2 class="exercise">Exercises</h2>
-
-## Configure the Theme to Provide Administrative Options
-
+# Configure the Theme to Provide Administrative Options
+<!-- 
 <div class="ahead">
 <h4>Exercise Goals</h4>
     <ul>
@@ -19,14 +17,14 @@
     </ul>
 </div>
 
-#### Add WEB-INF Files to the Theme
+## Add WEB-INF Files to the Theme
 1. **Copy** the `liferay-plugin-package.properties` and `src` folder from the _`exercise-src/WEB-INF`_ folder.  
 2. **Paste** the files into the `livingstone-fjord-theme/src/WEB-INF` folder.
   * You'll need to replace the existing `liferay-plugin-package.properties`.
 
 <img src="../images/web-inf-files.png" style="max-height:100%">
 
-#### Add Portlet Decorators
+## Add Portlet Decorators
 1. **Drop** the `liferay-look-and-feel.xml` file from `livingstone-fjord-theme/src/WEB-INF` into the _Visual Studio Code_ editor.
 2. **Click** to highlight the `<!-- Insert snippet 01-portlet-decorators here -->` comment.
 3. **Type** `lfr` to view the available code snippets.
@@ -50,7 +48,7 @@
 </portlet-decorator>
 ```
 
-#### Add Sass Styling for the Portlet Decorator
+## Add Sass Styling for the Portlet Decorator
 1. **Drop** the `_portlet_decorator.scss` from _`livingstone-fjord-theme\src\css\portlet`_ into the _Visual Studio Code_ editor.
 2. **Click** to highlight the `// Insert snippet 09-portlet-decorator-scss here` comment.
 3. **Type** `lfr` to view the available code snippets.
@@ -80,7 +78,7 @@
 }
 ```
 
-#### Add Custom Theme Settings to the Theme XML File
+## Add Custom Theme Settings to the Theme XML File
 1. **Drop** the `liferay-look-and-feel.xml` from _`livingstone-fjord-theme\src\WEB-INF`_ into the _Visual Studio Code_ editor.
 2. **Click** to highlight the `<!-- Insert snippet 02-theme-settings here -->` comment.
 3. **Type** `lfr` to view the available code snippets.
@@ -95,7 +93,7 @@
 <setting configurable="true" key="twitter-icon-link-url" value="http://www.twitter.com" />
 ```
 
-#### Add Custom Variables in the Init_Custom File
+## Add Custom Variables in the Init_Custom File
 1. **Drop** the `init_custom.ftl` from _`livingstone-fjord-theme\src\templates`_ into the _Visual Studio Code_ editor.
 2. **Click** to highlight the `<#-- Insert snippet 06-init-custom-settings here -->` comment.
 3. **Type** `lfr` to view the available code snippets.
@@ -110,7 +108,7 @@ twitter_icon = getterUtil.getBoolean(themeDisplay.getThemeSetting("twitter-icon"
 twitter_icon_link_url = themeDisplay.getThemeSetting("twitter-icon-link-url")
 ```
 
-#### Add Social Media Icons to the Theme Footer
+## Add Social Media Icons to the Theme Footer
 1. **Drop** the `portal_normal.ftl` from _`livingstone-fjord-theme\src\templates`_ into the _Visual Studio Code_ editor.
 2. **Click** to highlight the `<#-- Insert snippet 07-social-portal-normal here -->` comment.
 3. **Type** `lfr` to view the available code snippets.
@@ -124,7 +122,7 @@ twitter_icon_link_url = themeDisplay.getThemeSetting("twitter-icon-link-url")
 </div>
 ```
 
-#### Add the Code to the Social Media FreeMarker File
+## Add the Code to the Social Media FreeMarker File
 1. **Drop** the `social_media.ftl` from _`livingstone-fjord-theme\src\templates`_ into the _Visual Studio Code_ editor.
 * **Click** to highlight the `<#-- Insert snippet 08-social-media-footer here -->` comment.
 * **Type** `lfr` to view the available code snippets.
@@ -155,7 +153,7 @@ twitter_icon_link_url = themeDisplay.getThemeSetting("twitter-icon-link-url")
 </#if>
 ```
 
-#### Add Sass Styling to Social Media Icons
+## Add Sass Styling to Social Media Icons
 1. **Drop** the `_footer.scss` from _`livingstone-fjord-theme\src\css\partial`_ into the _Visual Studio Code_ editor.
 2. **Click** to highlight the `// Insert snippet 10-social-media-footer-scss here` comment.
 3. **Type** `lfr` to view the available code snippets.
@@ -175,9 +173,9 @@ twitter_icon_link_url = themeDisplay.getThemeSetting("twitter-icon-link-url")
 }
 ```
 
-#### Deploy the Theme to See the JavaScript Changes
+## Deploy the Theme to See the JavaScript Changes
 1. **Run** `npm run gulp deploy` in the _Command Line_ or _Terminal_.
   * If you're already running gulp watch, this isn't needed.
   * You may need to reselect the Livingstone Fjord theme, if the default theme is still shown after refreshing the page. 
 
-<img src="../images/theme-settings-complete.png" style="max-height:45%">
+<img src="../images/theme-settings-complete.png" style="max-height:45%"> -->

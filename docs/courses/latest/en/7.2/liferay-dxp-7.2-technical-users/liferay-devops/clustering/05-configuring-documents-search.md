@@ -1,8 +1,8 @@
-## Configuring Documents and Search
+# Configuring Documents and Search
 
 With ClusterLink and a few other configurations, half the battle is already won. Each of our nodes can communicate with one another; our cache is clustered as well as our scheduler. The last half of the battle comes with the content portion of Liferay. In this section, we'll cover clustering Liferay's Document Repository and Search.
 
-### Clustering the Document Repository {#docrepo}
+## Clustering the Document Repository {#docrepo}
 
 Each of our Liferay instances has its own document repository that stores content. If our document repository isn't clustered, content created in Node 1 is stored in Node 1's document repository. Node 2 has its own document repository that is unaware of Node 1's and vice versa. As it stands, they'll never sync with one another.
 
@@ -68,7 +68,7 @@ The document repository can also be stored in the Liferay database by setting `d
 
 To review, using *System Settings*, we are able to cluster our document repository very quickly and easily. We can also use configuration files to manually configure our document repository settings. Although `portal-ext.properties` is an option, it only provides the ability to set which method to cluster the document repository.
 
-### Clustering Elasticsearch {#elastic}
+## Clustering Elasticsearch {#elastic}
 
 Elasticsearch is a distributed search engine built on Lucene. It is a highly-scalable full-text search and analytics engine. You can use it to store, search, and analyze a large volume of data. Elasticsearch is also extensible with plugins, visualizations, and tools.
 

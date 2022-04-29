@@ -4,9 +4,7 @@ title: Add Localization Resources
 order: 8
 ---
 
-<h2 class="exercise">Exercises</h2>
-
-## Add Localization Resources
+# Add Localization Resources
 
 <div class="ahead">
 <h4>Exercise Goals</h4>
@@ -18,7 +16,7 @@ order: 8
 	</ul>
 </div>
 
-#### Review Portlet Component Properties
+## Review Portlet Component Properties
 
 Take a look at the component properties of `GradebookPortlet.java`. See the resource bundle property:
 
@@ -43,7 +41,7 @@ public class GradebookPortlet extends MVCPortlet {
 
 The value of the property translates to a file system path `src/main/resources/content/Language.properties`, which was done automatically by the module template. By setting this property, localization resources of `Language.properties` are available for Liferay JSP tag libraries automatically. To add support for another language, let's say for German, just add a new language properties file `src/main/resources/content/Language_de_DE.properties`.
 
-#### Change the Localization File Encoding
+## Change the Localization File Encoding
 
 Default encoding for the language text files is ISO-8859-1. While it usually works for English, localizations for other languages with non-standard ASCII special characters will break.
 
@@ -53,7 +51,7 @@ Let's change the file encoding to UTF-8:
 1. **Click** on *Properties*.
 1. **Change** the *Text file encoding* to UTF-8 and close the dialog.
 
-#### Provide Localization Resources
+## Provide Localization Resources
 
 1. **Open** the `gradebook-web/src/main/resources/content/Language.properties` file.
 1. **Implement** the file as follows:
@@ -152,7 +150,7 @@ your-submission=Your Submission
 
 > Notice that some of the keys are used at later and optional exercise steps.
 
-#### Test the User Interface
+## Test the User Interface
 
 1. **Open** the Gradebook application in your web browser and refresh the page. You should now be able to see the labels and messages correctly:
 

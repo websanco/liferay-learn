@@ -1,14 +1,14 @@
-## Gathering User Feedback with Forms
+# Gathering User Feedback with Forms
 
 Surveys and feedback forms are powerful tools that can be leveraged by any business. Integrating these assets into your platform is essential for gathering and organizing data from your users. Being able to create and customize forms with various input fields is a powerful out-of-the-box feature of Liferay DXP.
 
-#### Collecting Feedback Online at Livingstone {#livingstone}
+## Collecting Feedback Online at Livingstone {#livingstone}
 
 Josiah Copeland and his team of administrators along with Natalia and the Marketing team want to ensure that the Livingstone Hotels & Resorts platform is meeting the needs of their employees as well as the expectations of their customers.
 
 Josiah wants to gather feedback by providing surveys on both Livingstone Loop for their employees and the public-facing Hotel location sites for their customers. Natalia needs to create forms with specific fields relevant to each aspect of the guest and employee experiences.
 
-#### Forms in Liferay DXP {#forms}
+## Forms in Liferay DXP {#forms}
 
 One of the Assets available in the _Content & Data_ section of the _Site Administration_ panel is _Forms_. Content Creators can use Forms to create surveys that users can fill out on different sites within the platform.
 
@@ -24,7 +24,7 @@ Key Point: <br />
 
 New forms can be created by going to `Content & Data → Forms` in the _Site Administration_ panel. Here, the Content and Marketing teams can create new _Forms_ and _Element Sets_.
 
-#### Forms vs. Dynamic Data Lists {#ddl}
+## Forms vs. Dynamic Data Lists {#ddl}
 
 When you need a Form, what you are really looking for is data. There are two applications for building forms to collect the data you need in Liferay DXP:
 
@@ -54,7 +54,7 @@ If you do not need any of the features listed above, it is recommended that you 
 Note: A third form-building tool is available to Enterprise customers called Kaleo Forms. Kaleo Forms integrates form-building with workflow to create form-based business processes, like a Conference Room Checkout Form or a Support Ticket Process so support tickets go through the proper channels on their way to resolution. Read more about Kaleo Forms in the workflow section. Kaleo Forms and Workflow are covered in the Manage Business Workflow course module.
 </div>
 
-#### Creating Forms {#create}
+## Creating Forms {#create}
 
 To create a Form or manage an existing Form, you need to use the _Forms_ section of the _Site Administration_ panel. The first thing you'll see in this section is a list of existing forms, if there are any. To add a new Form, click the _Add_ button on the _Forms_ page.
 
@@ -100,7 +100,7 @@ The Forms editor also allows you to add multiple pages to your forms, creating a
 	<figcaption style="font-size: x-small">Fig.5 Adding a second page to a Form</figcaption>
 </figure>
 
-#### Adding Element Sets {#sets}
+## Adding Element Sets {#sets}
 
 It is beneficial for Content Creators to have a way to reuse multiple elements and their configurations in multiple Forms. This is where _Element Sets_ come in.
 
@@ -120,7 +120,7 @@ For example, a Content Creator could create an Element Set for User Information 
 
 Element Sets can be created from _`Content & Data → Forms → Element Sets`_ in the _Site Administration_ panel. From there, creating an Element Set is just like creating a Form. The only difference is that an Element Set is not publishable; it must be added to Forms after they have been created and saved. Once an Element Set is saved, it is immediately available for use within a Form.
 
-#### Form Rules and Advanced Features {#rules}
+## Form Rules and Advanced Features {#rules}
 
 When a Form is created, you can open it back up to add _Rules_. The _Rules_ tab lets you define conditions and actions for the fields you add to the form. The _Select from List_ field, for instance, allows you to define conditions such as "Is equal to," "Is not equal to," "Contains," "Does not contain," and "Is empty" and define actions such as:
 
@@ -154,7 +154,7 @@ Web designers can use advanced Form features, like Rules, to customize their For
 
 <br />
 
-#### Success Pages {#success}
+## Success Pages {#success}
 
 Add a success page under the _Options_ menu in the Forms editor. The page is added to the end of your form and gives you the option to add a Title and Content paragraph that users will see once they have submitted the form.
 
@@ -174,7 +174,7 @@ A <strong>Success Page</strong> is a static page that can be added to the end of
 
 A Success Page is simple. It has a title in bold text and a description beneath the title. A common alternative to using a Success Page is to redirect users to a different page in your site. What should you put in a Success Page? Whatever you want. If you can’t think of anything important or creative to say, use the default message: "Your information was successfully received. Thank you for filling out the form."
 
-#### Displaying Forms to Users {#display}
+## Displaying Forms to Users {#display}
 
 The Form widget can be used to display your Forms to users on a page in a site. The Forms widget allows you to configure whether or not users can share Forms on different sites, as well as choose if they want to display Forms from the current site or the Global Site. 
 

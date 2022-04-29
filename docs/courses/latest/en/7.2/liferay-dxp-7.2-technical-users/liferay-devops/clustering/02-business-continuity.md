@@ -1,4 +1,4 @@
-## Business Continuity
+# Business Continuity
 
 An important aspect of configuring your Liferay deployment is not just optimizing the setup for how it should work, but being prepared for what to do when things don't work. In the computing world, disaster strikes frequently: the data center loses power, cloud services go down, and the wrong script gets run on the wrong server.
 
@@ -13,7 +13,7 @@ In general, any backup site needs to have:
 
 That covers the core requirements for the site, but there are also considerations for how it's configured.
 
-### Hot, Warm, and Cold Backup Sites {#backups}
+## Hot, Warm, and Cold Backup Sites {#backups}
 
 Generally speaking, there are three kinds of backup sites: _hot_, _warm_, and _cold_. 
 
@@ -54,7 +54,7 @@ A Hot Site would look like:
 - Another VM with a Liferay bundle installed, configured, and up-to-date
 - It would be connected to a very recent database backup from the live instance
 
-### HA Cluster Configuration {#clusterconfig}
+## HA Cluster Configuration {#clusterconfig}
 
 High-availability Clusters (HA Clusters) minimize your downtime in the event of a failed node.
 
@@ -125,7 +125,7 @@ Let's take a look at a two-node example to demonstrate what each High-Availabili
 	<figcaption style="font-size: x-small">Fig.6 Simple Active-Active example</figcaption>
 </figure>
 
-### Fault Tolerance Strategies for the Cloud {#cloudstrat}
+## Fault Tolerance Strategies for the Cloud {#cloudstrat}
 
 The goal of business continuity and fault tolerance is simple: maintain maximum uptime, no matter the circumstances. When deploying to a cloud infrastructure, the end goal is the same. There are two major differences in approaching a cloud deployment versus an in-house deployment: the physical proximity of servers and additional assistance and services. Most Enterprise cloud providers offer servers and additional assistance during catastrophic failures and routine maintenance. Using these features may make a cloud deployment less labor-intensive than a standard deployment.
 
@@ -164,7 +164,7 @@ As with document storage, database schemas and entries should be backed up. This
 
 In all, building a fault-tolerant solution in the cloud is very similar to an in-house solution. Unlike in-house solutions, cloud solutions often provide services to replace whole servers for specific features of your deployment. In many cases, you can gain higher redundancy and resiliency for lower cost. Make sure you check what options are available to you from your service provider in setting up the layers of your application.
 
-### Auto-Scaling {#autoscale}
+## Auto-Scaling {#autoscale}
 
 Most of the business continuity practices have focused on maintaining a steady, predictable flow of traffic to your sites. This works for most use cases, but not all of the time. Let's say you have a major ad push during a widely-televised event. Everyone's going to visit your site after seeing your ad. For this limited period of time, your user traffic will spike abnormally high. You don't expect to sustain this level of traffic long-term, so it doesn't make sense to build out new servers for this one event.
 

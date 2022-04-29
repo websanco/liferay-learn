@@ -4,9 +4,7 @@ title: Create a Liferay Module
 order: 2
 ---
 
-<h2 class="exercise">Exercises</h2>
-
-## Create a Liferay Module
+# Create a Liferay Module
 
 <div class="ahead">
 <h4>Exercise Goals</h4>
@@ -19,7 +17,7 @@ order: 2
 	</ul>
 </div>
 
-#### Create a Liferay Module Project
+## Create a Liferay Module Project
 
 Option 1: Use the Command Line Blade tools
 
@@ -45,7 +43,7 @@ Option 2: Use the Developer Studio Wizard
 
 <br />
 
-#### Deploy and Test the Module
+## Deploy and Test the Module
 
 1. **Drag** the `training-portlet` folder from the *Project Explorer*  onto the Liferay server in the *Servers* panel.
 1. **Watch** the console. The module is successfully deployed when you see a message like:

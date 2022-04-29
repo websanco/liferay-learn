@@ -4,9 +4,7 @@ title: Set Up the Liferay Workspace and Portal
 order: 1
 ---
 
-<h2 class="exercise">Exercises</h2>
-
-## Set Up the Liferay Workspace and Portal
+# Set Up the Liferay Workspace and Portal
 
 <div class="ahead">
 <h4>Exercise Goals</h4>
@@ -24,7 +22,7 @@ order: 1
 	</ul>
 </div>
 
-#### Create an Eclipse Workspace
+## Create an Eclipse Workspace
 
 1. **Find** the provided `training-workspace` folder.
 	* Make sure it has been extracted/unzipped.
@@ -32,7 +30,7 @@ order: 1
 1. **Type** the location where a new Eclipse workspace will be created.
 1. **Click** *Launch*. 
 
-#### Import the Provided Liferay Workspace
+## Import the Provided Liferay Workspace
 
 1. **Click** the *Import Liferay Workspace* link on the Welcome Screen:
 	<img src="../images/import-liferay-workspace.png" style="max-height:25%"/>
@@ -45,7 +43,7 @@ order: 1
 
 <br />
 
-#### Run the initBundle Gradle Task
+## Run the initBundle Gradle Task
 
 Next, we will prepare the portal bundle for Liferay Workspace. Running the `initBundle` Gradle task either downloads the bundle or, when available, uses a local copy of the portal Tomcat bundle defined in the workspace's `gradle.properties`.
 
@@ -58,7 +56,7 @@ Next, we will prepare the portal bundle for Liferay Workspace. Running the `init
 3. **Refresh** the _Project Explorer_ view after you see a `BUILD SUCCESSFUL` message on the console.
 	* Make sure that the portal bundle has been extracted to the `bundles` directory. 
 
-#### Create a New Liferay Server
+## Create a New Liferay Server
 
 1. **Click** the link saying that there are no servers available on the *Servers* panel.
 
@@ -82,7 +80,7 @@ Next, we will prepare the portal bundle for Liferay Workspace. Running the `init
 
 	<img src="../images/server-installed.png" style="max-height:25%" />
 
-#### Start the Server and Run the Portal Setup Wizard
+## Start the Server and Run the Portal Setup Wizard
 
 1. **Click** on the *Liferay 7.x* server at the bottom left.
 1. **Click** the green *Start the Server* icon on the *Servers* panel to start our newly-created Liferay server.
@@ -102,7 +100,7 @@ Next, we will prepare the portal bundle for Liferay Workspace. Running the `init
 	* You'll be redirected to the home page, where you'll see an error message saying that the portal is not activated.
 
 
-#### Activate the Portal
+## Activate the Portal
 
 When Liferay starts for the first time, a subfolder is created called `deploy` under the `LIFERAY_HOME` directory. This is the folder where applications and the license are deployed.
 
@@ -116,7 +114,7 @@ When Liferay starts for the first time, a subfolder is created called `deploy` u
 	``` 
 	* The activation key xml file will vanish immediately from the `deploy` directory after it has been detected by Liferay's *AutoDeployScanner*. 
 	
-#### Log in to the Portal
+## Log in to the Portal
 
 1. **Sign in** to the portal with:
 	* __Username:__ test@liferay.com

@@ -1,4 +1,4 @@
-## Configuring Document Settings
+# Configuring Document Settings
 
 <div class="ahead">
 	<h3>Exercise Goals:</h3>
@@ -8,14 +8,14 @@
 		</ul>
 </div>
 
-#### Find the Documents and Media Settings in System Settings
+## Find the Documents and Media Settings in System Settings
 
 1. **Open** the *Menu* for _liferay-tomcat-1_.
 2. **Go to** _`Control Panel → Configuration → System Settings`_.
 3. **Find** the *Content and Data* section near the top of the _System Settings_ menu.
 4. **Click** on *Documents and Media*.
 
-#### Create a New MIME Type for Markdown Files
+## Create a New MIME Type for Markdown Files
 
 1. **Click** on _Service_ on the left-hand side.
 2. **Click** the "+" next to the top entry.
@@ -24,7 +24,7 @@
 
 <img src="../images/text-mark.png" style="max-height: 40%">
 
-#### Export the New MIME Type Configuration
+## Export the New MIME Type Configuration
 
 Let's take a look at how to export our settings.
 
@@ -35,7 +35,7 @@ Let's take a look at how to export our settings.
 
 <img src="../images/chapter-2/export-service.png" style="max-width: 100%">
 
-#### Find the Exported Configuration and Add it to the Wildfly Volume
+## Find the Exported Configuration and Add it to the Wildfly Volume
 
 1. **Go to** your *Downloads* folder.
     - You should see your custom _Documents and Media_ configuration file: `com.liferay.document.library.configuration.DLConfiguration.config`
@@ -43,7 +43,7 @@ Let's take a look at how to export our settings.
     - _liferay/liferay-wildfly/volumes/liferay-wildfly/osgi/configs_
     - You may see some configuration files already in the folder.
 
-#### Start the Wildfly Container for Testing the Configuration
+## Start the Wildfly Container for Testing the Configuration
 
 1. **Start** the Liferay Wildfly instance to test the settings:
 	- Open a new _Terminal_.
@@ -61,7 +61,7 @@ docker-compose restart liferay-wildfly
     - User Name: *test@liferay.com*
     - Password: *test*
 
-#### Confirm the Imported Configuration is on the Wildfly Server
+## Confirm the Imported Configuration is on the Wildfly Server
 
 1. **Open** the *Menu*.
 2. **Go to** _`Control Panel → Configuration → System Settings`_.
@@ -73,7 +73,7 @@ docker-compose restart liferay-wildfly
 
 ---
 
-#### Bonus Exercises:
+## Bonus Exercises:
 
 Try the following bonus exercise after completing the main exercises:
 

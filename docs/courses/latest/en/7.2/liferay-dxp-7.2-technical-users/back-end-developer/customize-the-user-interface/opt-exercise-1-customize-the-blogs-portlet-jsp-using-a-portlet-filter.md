@@ -4,9 +4,7 @@ title: Customize Blogs Portlet Entry View Using a Portlet Filter
 order: 3
 ---
 
-<h2 class="exercise">Optional Exercise</h2>
-
-## Customize Blogs Portlet Entry View Using a Portlet Filter
+# Customize Blogs Portlet Entry View Using a Portlet Filter
 
 <div class="ahead">
 <h4>Exercise Goals</h4>
@@ -19,7 +17,7 @@ order: 3
 	</ul>
 </div> 
 
-#### Create a Liferay Module Project
+## Create a Liferay Module Project
 
 **Option 1: Use the Command Line Blade tools**
 
@@ -48,7 +46,7 @@ blade create -t service -p com.liferay.training.jspportletfilter -s javax.portle
 	> We are going to change this later in the exercise.
 1. **Click** *Finish* to close the wizard
 
-#### Declare Dependencies
+## Declare Dependencies
 
 Because we plan to use the `PortletFilter` interface, we have to depend on the `portlet-api` and the `javax.servlet-api` packages:
 
@@ -59,7 +57,7 @@ compileOnly group: "javax.portlet", name: "portlet-api"
 compileOnly group: "javax.servlet", name: "javax.servlet-api"
 ```
   
-#### Implement RenderFilter  
+## Implement RenderFilter  
  
 First we have to fix the `javax.portlet.name` component property value. We also have to change the service property to `PortletFilter` interface even though we are implementing it's extension RenderFilter:  
   
@@ -146,7 +144,7 @@ First we have to fix the `javax.portlet.name` component property value. We also 
 	```
 1. **Resolve** missing imports.
 
-#### Final Code Review
+## Final Code Review
 
 The complete implementation of `build.gradle` and the `BlogsRenderFilter`  will look like this: 
 
@@ -269,7 +267,7 @@ public class BlogsRenderFilter implements RenderFilter {
 }
 ```
 
-#### Deploy and Test
+## Deploy and Test
 
 1. **Deploy** the module to the Liferay server.
 1. **Open** your browser to http://localhost:8080 and sign in.
@@ -278,6 +276,6 @@ public class BlogsRenderFilter implements RenderFilter {
 
 <img src="../images/blogs-filter.png" style="max-height:100%;"/>
 
-#### Takeaways
+## Takeaways
 
 Portlet filters can be used to do many different types of pre or post processing for portlets. In this case, you've seen that you can use a RenderFilter to modify the content of a portlet without having to change the code directly. Along with using Module Fragments, this gives you another option to customize the view layer of existing Liferay applications.

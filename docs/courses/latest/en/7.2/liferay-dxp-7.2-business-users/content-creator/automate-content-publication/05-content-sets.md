@@ -1,12 +1,12 @@
-## Content Sets and Personalization
+# Content Sets and Personalization
 
 At some point, it will make sense to start grouping all the different types of content in a site in different ways depending on how you want content to be displayed to your users. The Asset Publisher already works to do this as previously discussed, but you may want to have adaptable groups of content that change depending on who is viewing the content. To do this, Content Sets have been introduced for Liferay DXP 7.2.
 
-#### Content Groupings for Livingstone's Platform {#livingstone}
+## Content Groupings for Livingstone's Platform {#livingstone}
 
 Livingstone Hotels & Resorts wants to display different groups of content on the Livingstone Life site depending on whether or not a user is subscribed to the blog. Josiah is tasked with creating a unique group of Omar's content to show to subscribers of Livingstone Life and a different group of content to non-subscribers. Content Sets are a great solution.
 
-#### Content Sets {#sets}
+## Content Sets {#sets}
 
 A Content Set is exactly what it sounds like: a set of content items. An administrator can define a list of content, and then that list can be displayed on a page. The way that the Content Set is displayed is determined by the method used to display it. For example, if the Content Set is being viewed on a mobile device, it could be displayed as a simple list of titles, and selecting a title would cause the full article text to be displayed in a readable form. The same Content Set could be displayed in a web browser with the full content of each article.
 
@@ -24,7 +24,7 @@ Key Point: <br />
 
 Content Sets take the idea behind the Asset Publisher, i.e., lists of different types of content organized based on metadata, and expands it outside of the context of that single widget. Content Lists are created outside the context of a specific application or widget and can be used and re-used in different areas of the platform.
 
-#### Creating Content Sets {#create}
+## Creating Content Sets {#create}
 
 Content Creators can create Content Sets from under the _Site Builder_ section of the _Site Administration_ panel. Content Sets can use either manual or dynamic content selection (similar to how the Asset Publisher can be configured) to choose which pieces of content you want to include.
 
@@ -46,9 +46,9 @@ There are two ways to create Content Sets:
 
 Defining Content Sets manually means that you can choose each bit of content you want to include, but content must be changed manually any time you want to update it. Defining Content Sets dynamically means that you choose content based on certain parameters, and any content that meets those parameters will be displayed, so the Content Set will update automatically.
 
-#### The Asset Publisher and Content Sets {#asset}
+## The Asset Publisher and Content Sets {#asset}
 
-Content Sets are primarily displayed through the Asset Publisher. However, custom applications can be built that utilize Content Sets. Content Sets can also be created using the Asset Publisher. 
+Content Sets are primarily displayed through the Asset Publisher. However, custom applications can be built that utilize Content Sets. Content Sets can also be created using the Asset Publisher.
 
 <div class="key-point">
 Key Point: <br />
@@ -64,7 +64,7 @@ The <strong>Asset Publisher</strong> is used to display Content Sets and can eve
 
 To create a Content Set using the Asset Publisher, an Asset Publisher must be configured on a page. From there, it is as simple as the click of a mouse: go into the configuration of an existing Asset Publisher and click _Create a content set from this configuration_. By clicking that button, you create a Content Set with the same configuration as the Asset Publisher that is added to the _Content Sets_ section of the _Site Administration_ panel.
 
-#### Content Set Personalization {#person}
+## Content Set Personalization {#person}
 
 In the last section, we covered User Segments and Content Page personalization. Content Set personalization makes up the last aspect of Personalization Experience Management in Liferay DXP. Distinct variations of a Content Set can be created and assigned to different User Segments similar to how Content Pages can have multiple Experiences created for different Segments.
 

@@ -1,4 +1,4 @@
-## Automating Staging Publication
+# Automating Staging Publication
 
 <div class="ahead">
 <h4>Exercise Goals</h4>
@@ -8,7 +8,8 @@
 </ul>
 </div>
 
-#### Add a New Seasonal Site Page Variation
+## Add a New Seasonal Site Page Variation
+
 1. **Click** the _Options_ menu in the top right of the _Staging_ menu.
 	* Make sure you are on Staging in the Livingstone Hotels & Resorts site.
 * **Choose** _Site Pages Variations_.
@@ -20,7 +21,8 @@
 
 <img src="../images/holiday-season-variation.png" style="max-height:35%;" />
 
-#### Add the Hotel Banner Structure
+## Add the Hotel Banner Structure
+
 1. **Open** the _Menu_.
 * **Go to** _`Content & Data → Web Content`_ in the _Site Administration_ panel.
 * **Click** on the _Structures_ tab. 
@@ -34,7 +36,8 @@
 
 <img src="../images/hotel-banner-structure.png" style="max-height:35%;" />
 
-#### Add the Hotel Banner Template
+## Add the Hotel Banner Template
+
 1. **Click** on the _Templates_ tab. 
 * **Click** the _Add_ button.
 * **Type** `Hotel Banner Template` for the _Untitled Template_.
@@ -45,7 +48,8 @@
 
 <img src="../images/hotel-banner-template.png" style="max-height:35%;" />
 
-#### Create a New Seasonal Banner for the News & Specials Page
+## Create a New Seasonal Banner for the News & Specials Page
+
 1. **Click** the _Web Content_ tab.
     * You may need to click the back button at the top.
 * **Click** the _Add_ button.
@@ -63,7 +67,8 @@
 
 <img src="../images/add-new-holiday-banner.png" style="max-height:30%;" />
 
-#### Replace the Banner with the New Seasonal Banner
+## Replace the Banner with the New Seasonal Banner
+
 1. **Click** _Go to Site_ in the _Site Administration_ panel.
 	* Make sure _Holiday Season Variation_ is selected under _Site Page Variations_ if not selected already.
 * **Click** on _News & Specials_ in the _Navigation_ menu.  
@@ -78,7 +83,8 @@
 
 <img src="../images/add-banner.png" style="max-height:30%;" />
 
-#### Set up a Publishing Schedule for This Change
+## Set up a Publishing Schedule for This Change
+
 1. **Click** the _Ready for Publication_ slider at the top of the page.
 * **Click** _Publish to Live_.
 * **Click** _Switch to Advanced Publication_.
@@ -101,6 +107,7 @@
 
 ---
 
-#### Bonus Exercises
+## Bonus Exercises
+
 1. Make more changes to the Holiday Season Variant. Improve the Holiday Banner and put it on the _Home_ page. Add additional special offers for the Holiday Season using the Special Offers Web Content Structures.
 2. Set up Staging on a new site. Create a new Site Pages Variation, add content to pages, and merge the new Site Pages Variation with the Main Variation for your site.

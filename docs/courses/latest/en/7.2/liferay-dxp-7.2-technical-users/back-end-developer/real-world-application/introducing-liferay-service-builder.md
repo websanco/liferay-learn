@@ -4,7 +4,7 @@ title: Introducing Liferay Service Builder
 order: 3
 ---
 
-## Introduction
+# Introduction
 
 Liferay Service Builder is a code generation tool that takes an XML configuration file as an input and generates the complete service layer as an output. The generated code includes the database schema definition, persistence and caching code, service classes with CRUD methods, and a remote service layer supporting JSON and SOAP web services. The generated code can be complemented and overridden by service implementation classes, which are created for every entity defined in the service schema.
 
@@ -22,7 +22,7 @@ The generated database schema can be fine-tuned on a field-mapping level, and yo
 
 Let's walk through the basic concepts of Liferay Service Builder.
 
-#### service.xml
+## service.xml
 
 `service.xml` is the main Service Builder configuration file containing:
 
@@ -68,7 +68,7 @@ While we'll walk through the basic `service.xml` configuration in our Gradebook 
 
 > When upgrading Service Builder projects to a newer portal versions, it's important to update the DTD to get all the improvements in the generated code within.
 
-#### portlet-model-hints.xml
+## portlet-model-hints.xml
 
 The `portlet-model-hints.xml` file is generated when the `buildService` task is run in `resources/META-INF`. It lets you customize the entity to SQL column mapping, like field types, column sizes, and validation.
 
@@ -147,7 +147,7 @@ Below is the `portlet-model-hints.xml` of  [Liferay's Blogs application](https:/
 </model-hints>
 ```
 
-#### Local Service
+## Local Service
 
 When configuring the service, you can define which kind of services are generated in the `service.xml`. There are two kinds of services available: the Local service and the Remote service.
 
@@ -159,7 +159,7 @@ The Local service generation is enabled in `service.xml`:
 <entity name="Assignment" local-service="true" ... >
 ```
 
-#### Remote Service
+## Remote Service
 
 The remote service serves two purposes. First, it's meant to be a façade layer for the local service, a place where you can implement permission checking. The other purpose is to provide JSON and SOAP APIs for the service.
 
@@ -171,7 +171,7 @@ Remote service generation for an entity is enabled in the entity definition in `
 <entity name="Assignment" remote-service="true" ... >
 ```
 
-#### Service Implementation Classes
+## Service Implementation Classes
 
  Service implementation classes are for overriding and customizing the generated service methods and for implementing your own business logic. They are the __only generated classes to be modified manually__. When you build and generate the service, the implementation classes are, depending on the entity configuration, created in the service module for:
 
@@ -211,7 +211,7 @@ public Assignment updateAssignment(
 ```
 
 > Having the entity as a return value in the CRUD methods is mandatory when using the `@Indexable` annotations in integrating with the search framework. 
-	
+
 Remember that the `buildService` task must be run whenever `service.xml` is modified or any of the method signatures in the model, service, or finder implementation classes have been changed. Thus, a typical workflow in creating the service layer is:
 
 1. Define the model entities and finder queries in `service.xml`.
@@ -222,7 +222,7 @@ Remember that the `buildService` task must be run whenever `service.xml` is modi
 1. Run the `buildService` task.
 1. ...
 
-#### "Silencing" Generated Service Methods
+## "Silencing" Generated Service Methods
 
 Sometimes it's useful to silence generated methods or method signatures to ensure the correct usage of the API. Below is an example of overriding a generated signature in a service implementation class:
 
@@ -238,7 +238,7 @@ public class AssignmentLocalServiceImpl extends AssignmentLocalServiceBaseImpl {
 }
 ```
 
-#### Finders
+## Finders
 
 Finders are methods for querying the database and are defined in `service.xml`. They are automatically cached and can be customized in the entity-specific finder implementation classes.
 
@@ -268,7 +268,7 @@ public List<BlogsEntry> findByG_S(long groupId, int status) {
 }
 ```
 
-#### Service Wrappers
+## Service Wrappers
 
 When the `buildService` task is run, it not only generates implementation classes for all the model entities, it also generates so-called service wrapper APIs, which allow you to override your services in an external module. With this approach, you can also override Liferay core services. 
 
@@ -278,7 +278,7 @@ The diagram below illustrates Service Builder design and architecture as well as
 
 > Service Wrappers will be discussed in detail in *Module 10 - Customize the Service Layer*.
 
-#### Service Context
+## Service Context
 
 When you work with Liferay services you'll often see a `ServiceContext` object in the method parameters. The `ServiceContext` is a wrapper object for contextual information, implementing the [Parameter Object](http://principles-wiki.net/patterns:parameter_object) design pattern. It aggregates information necessary for features used throughout Liferay’s portlets and services, such as:
 
@@ -295,7 +295,7 @@ When you work with Liferay services you'll often see a `ServiceContext` object i
 
 > See [Liferay Developer Network](https://dev.liferay.com/develop/tutorials/-/knowledge_base/7-2/understanding-servicecontext) for more information about the `ServiceContext`.
 
-#### Service Builder Caching
+## Service Builder Caching
 
 Service Builder provides built-in caching support for all entities and finders defined in the service configuration. Cache implementation relies on [EHCache](https://www.ehcache.org/).
 
@@ -309,7 +309,7 @@ Hibernate cache has two layers: level 1 (L1) and level 2 (L2). __Level 1__ is us
 
 __Level 2__ stores both database objects (Entity Cache) and results of queries (Query Cache) and is able to span across database sessions. Liferay provides custom Service Builder Entity and Query (Finder) caches, making the Hibernate L2 cache redundant. L2 cache is disabled by default, and unless you are accessing Hibernate code directly, there shouldn't be a reason to enable it.
 
-#### Service Builder and OSGi
+## Service Builder and OSGi
 
 An important thing to notice is that, currently, the Service Builder-generated service classes are Spring beans and not OSGi service components. Although they are wired to the OSGi service registry, you can't use the OSGi `@Reference` annotation inside the Service Builder-generated classes. Making other Liferay services available in your custom service class should be done by referencing them in the `service.xml` configuration file or using the Spring `@ServiceReference` and `@BeanReference` annotations.
 

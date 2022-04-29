@@ -1,11 +1,10 @@
-Configuring Liferay Settings
-============================
+# Configuring Liferay Settings
 
 ## Liferay's Default Settings
 
 Liferay aims to offer the user as much flexibility and control as needed. This applies even in configuring the platform. There are two primary ways to configure Liferay: via the Settings Menus in the user interface or with `properties` files.
 
-#### System and Instance Settings Menus
+## System and Instance Settings Menus
 
 The simplest way to configure Liferay is through the UI. Configuration options are found by clicking on the _Menu_ button, then on *Control Panel*. Once in the *Control Panel*, an administrator is able to configure many of Liferay's properties and settings. You'll find most of the configuration settings in the *System Settings* options and settings under the *Configuration* section. 
 
@@ -33,7 +32,7 @@ The settings configured in *System Settings* can be exported as zip files contai
 	<figcaption style="font-size: x-small">Fig.3 Instance Settings in the Control Panel</figcaption>
 </figure>
 
-#### Properties Files
+## Properties Files
 
 Another method of configuring Liferay settings is through `properties` files. Before doing any configuration, however, we must first understand how Liferay gets the values from properties files. The read order of our properties files is:
 
@@ -56,7 +55,7 @@ The properties file that is read last will override the properties of the previo
 
 The recommended way to configure properties in Liferay is through the System and Instance Settings menus in the UI, as those changes are made directly to the database and do not require restarting the platform. Keep in mind that none of the changes made in the UI end up in properties files.
 
-#### Default Data
+## Default Data
 
 When you unzip a Liferay Bundle and run it, you'll notice that there is a large amount of default data already on the platform. The default data is there primarily to provide examples and guidance for using features. In addition to the database, there's a default document repository, search indices, and a number of applications. For testing, QA, installation, or demoing, you may need to remove or reset some or all of this data.
 
@@ -94,7 +93,7 @@ Applications deployed to Liferay are either standard Java web applications or mo
 
 Modules in **`modules/`** and **`marketplace/`** can be removed as needed. Don't remove Liferay modules for necessary features. When in doubt, don't remove the module. You can test module functionality by stopping individual modules as necessary without removing them. 
 
-#### Configuring Locales and Time Zones
+## Configuring Locales and Time Zones
 
 Within the various properties associated with Liferay are the properties that control the locales and time zones. As soon as you fire up Liferay, there are already a number of languages Liferay is using and even more that are in reserve. When it comes to locales (as well as many other aspects of Liferay), there are three scopes we have to consider:
 
@@ -117,7 +116,7 @@ Documents and Media is part of Liferay's Foundation. Documents and Media enables
 
 Documents and Media is also compatible with third-party applications like Sharepoint, Alfresco, and Amazon S3. There are a few ways to look at Documents and Media as well as its several pieces. Documents and Media represents the repository itself, which stores files for each site. You can also use "Documents and Media" to refer to the specific application users access to manage the repository.
 
-#### Document Repository
+## Document Repository
 
 When you add a document to Documents and Media, Liferay saves:
 
@@ -145,7 +144,7 @@ There are many other features you can use with Documents and Media:
 - You can use all of these features in custom applications with the Documents and Media API.
 - You can integrate with external applications to use features like document conversion, previews, and audio/video playback.
 
-#### Document MIME Types
+## Document MIME Types
 
 When using any document repository, there's going to be some concern for document MIME types or content types. The content type can be an image, video, text document, etc., or specifically the format .PNG, .JPG, .AVI, or .DOCX. There are several settings that you can configure based on the Document's MIME type. You can configure how images will be optimized for display on the internet. You can also manage which types will automatically generate previews. For security purposes, you can configure certain types of files to be run through filters or disallow upload.
 
@@ -175,7 +174,7 @@ Additional settings can be found in `portal.properties` and overridden in custom
 - **`dl.file.entry.raw.metadata.processor.excluded.mime.types`** will exclude all content types listed from automatic metadata extraction
 - **`dl.file.entry.preview.audio.mime.types`**, **`dl.file.entry.preview.image.mime.types`**, and **`dl.file.entry.preview.video.mime.types`** will determine which file types trigger automatic audio, image, and video previews
 
-#### Reading Document Metadata
+## Reading Document Metadata
 
 Files have two parts: binary data, the contents of the file, and metadata, information about the file. In some cases, metadata might just be something simple, like the date a file was created. In other cases, like an audio or video file, you might have a whole host of information, ranging from the title to the release date and more. 
 
@@ -205,7 +204,7 @@ Exposure Time    | 1/500
 
 Now let's take a look at what Liferay does with that information. After you upload an image, you can view the image and then click on the information icon in the top right of the screen. From there, you can select *Metadata* as a view option, and Liferay will display the automatically extracted metadata. So, if you regularly take pictures with your smartphone or a digital camera, you generate metadata all the time, without even knowing it.
 
-#### Enabling Document Conversion
+## Enabling Document Conversion
 
 You can enhance your document management capabilities by connecting to *LibreOffice* or *OpenOffice*. The enhanced document features include:
 
@@ -286,7 +285,7 @@ For example, if you wanted to set a default article to appear any time a Web Con
 
 You can save the settings to apply them to your current instance, but when you make a lot of changes, you'll also want to be able to preserve that configuration. 
 
-#### Config Files
+## Config Files
 
 You can export and manage any configuration changes outside of Liferay using `.config` files. From the *System Settings* root, click on the context menu in the top right, and select *Export All Settings.* This will download a zip file with all of your configuration changes packaged in `.config` files. 
 
@@ -307,7 +306,7 @@ From here, we could manually change this to a different value or we could change
 
 The App Manager, found in _`Control Panel → Applications → App Manager`_, is your final destination for application management. By final destination, we mean that this is where you go to deactivate and delete applications that are currently installed. Always be careful when doing this, as some applications may have dependencies on others, and removing one could render some features unusable. As a best practice, you should *Deactivate* anything that you plan on deleting and test it before you finally delete it.
 
-#### Configuring for Environment-Specific Settings
+## Configuring for Environment-Specific Settings
 
 Whatever your environment (Dev server, UAT, Production), Liferay makes it easy to carry your settings from one environment to another.
 
@@ -319,7 +318,7 @@ Default configurations can also be restored via _System Settings_. Typically, us
 
 Many other configurations, including some found in *Instance Settings* and *System Settings*, can be configured through a portal-ext.properties. But, as discussed earlier, this comes with the price of requiring a restart.
 
-#### Liferay Marketplace
+## Liferay Marketplace
 
 Liferay Marketplace is your hub for getting new Liferay applications and expanding the features of your site. You can find Liferay-developed applications, including some that are exclusive to Digital Experience Platform subscribers, as well as applications developed by our partners and community members. You can also put your own applications up on Marketplace to be shared with or sold to other Liferay users.
 
@@ -330,7 +329,7 @@ Liferay Marketplace is your hub for getting new Liferay applications and expandi
 
 You can take advantage of hot deploy to install applications directly to your running Liferay instance. Once you've connected the correct account and purchased the applications you want, you can view and install those applications from the _`Control Panel → Apps → Purchased`_. Applications can also be manually downloaded and deployed.
 
-#### Hot Deploy
+## Hot Deploy
 
 Liferay supports the installation of two major types of applications:
 - Modules
@@ -373,7 +372,7 @@ auto.deploy.[SERVER].dest.dir
 
 `[SERVER]` is where your Java server type goes.
 
-#### The OSGi Container
+## The OSGi Container
 
 When Liferay's *hot deploy* mechanism picks up a module, it installs it in the *OSGi Container*. The *OSGi Container* is built on top of OSGi technology. The default location for the *Container* is `[LIFERAY_HOME]/osgi`. 
 

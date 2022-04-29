@@ -1,8 +1,8 @@
-## Deploying to the Cloud
+# Deploying to the Cloud
 
 Cloud computing has changed the IT industry landscape and the way that most companies do business. By leveraging the power and flexibility of the cloud many administrative tasks and challenges that once required significant resources are now relatively simple to accomplish. It is easier than it ever has been before to build, scale, backup and maintain large production systems. While this isn't a course on cloud computing and architecting distributed systems, it's still important to understand the cloud and how Liferay and the cloud can go hand in hand.
 
-### What is the Cloud? {#cloud}
+## What is the Cloud? {#cloud}
 
 When we talk about using the cloud we're talking about using distributed compute resources and servers that can be accessed via networks and the Internet. Deploying your application to the cloud means deploying your stack to managed servers, often housed in remote data centers. The cloud can provide businesses with access to virtually unlimited compute power and storage, especially when taking advantage of public cloud offerings. With the cloud it's easy to scale and manage systems and services.
 
@@ -20,7 +20,7 @@ Many providers now also offer what is known as _Platforms as a Service_. With th
 
 It's important to remember that you can implement DevOps tools and philosophy apart from the cloud. Also keep in mind that  using the cloud doesn't by default mean you're "doing DevOps". However, they both can go hand in hand and when brought together it becomes easier to take full advantage of all of the resources and benefits of both DevOps and the cloud.
 
-### Liferay and the Cloud {#liferaycloud}
+## Liferay and the Cloud {#liferaycloud}
 
 Liferay has been designed to work on any cloud environment be it using the public cloud or an internal private structure. While the Liferay platform would fall within the application tier of your stack, you can use the cloud to stand up the rest of your stack and be able to be manage and remotely maintain all of the services and setup required to run a Liferay stack.
 

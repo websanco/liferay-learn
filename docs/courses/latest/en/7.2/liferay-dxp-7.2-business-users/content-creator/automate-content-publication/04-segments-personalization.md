@@ -1,12 +1,12 @@
-## User Segments and Content Page Personalization
+# User Segments and Content Page Personalization
 
 In previous sections, we have seen how to create static pages with Web Content and Content Pages and how to create dynamic pages using the Asset Publisher and Display Pages. While these are powerful features, there are times and places within the platform where different content should be displayed to different users. For example, if an existing client is logged in, you do not want all your content focused on getting them to join. Instead, you might want existing clients to see how they can upgrade their services and, when a prospective client is logged in and viewing the same page, you might want the prospective client to see how they can start using your company's services.
 
-#### Grouping Users for Personalized Content at Livingstone {#livingstone}
+## Grouping Users for Personalized Content at Livingstone {#livingstone}
 
 Livingstone Hotels & Resorts wants certain pages to adapt based on what kind of user is viewing the page. Specifically, Josiah and Natalie Michaels are tasked with creating a page for Livingstone's Rewards Group that serves as a call to action for users to sign up for the Rewards Group if they are not already signed up. However, the page should display the latest deals and news for those users who are already a part of the Rewards Group.
 
-#### User Segments {#segments}
+## User Segments {#segments}
 
 In order to create targeted content, users must first be grouped into specific audiences that make sense for the different types of content we want to create. You can create _User Segments_ to capture every target audience you might need to hit.
 
@@ -26,7 +26,7 @@ Create Segments by using user, organization, and session data, and then use thos
 Note: Analytics Cloud is a Liferay service that provides in-depth information on who uses your site and how they use it. Analytics Cloud is a key component that allows you to fully utilize Segments and Personalization, since it enables you to see the full picture of how users and visitors on your site behave and interact with both standard and targeted content. You can learn more about this at <a href="https://help.liferay.com/hc/en-us/articles/360029041751-Using-Analytics-Cloud-With-User-Segments">https://help.liferay.com/hc/en-us/articles/360029041751-Using-Analytics-Cloud-With-User-Segments</a>.
 </div>
 
-#### Creating Segments with the Segment Editor {#edit}
+## Creating Segments with the Segment Editor {#edit}
 
 Liferay DXP 7.2 provides an editor for defining User Segments. This _Segment Editor_ is used to add Segments from under _`People → Segments`_ in the _Site Administration_ panel.
 
@@ -61,7 +61,7 @@ Note: A full list of properties and their respective fields and operators can be
 
 After Segments have been created, a full list of all Segments in a site can be viewed from _`People → Segments`_ in the _Site Administration_ panel. From here, not only can Segments be added using the Segment Editor as discussed above, but you can also edit, delete, or change permissions for your Segments as well. Segments cannot be deleted if they are being used in an Experience, and changing permissions changes user access to Segment management (i.e., who can access Segments via the _Site Administration_ panel).
 
-#### Content Page Personalization {#person}
+## Content Page Personalization {#person}
 
 User Segments provide one aspect of Personalization Experience Management, and personalizing Content (via both Content Pages and Content Sets) provides the other aspect. Once Content Pages are created, you can then edit them and click on the _Experience_ to manage the options for that page.
 

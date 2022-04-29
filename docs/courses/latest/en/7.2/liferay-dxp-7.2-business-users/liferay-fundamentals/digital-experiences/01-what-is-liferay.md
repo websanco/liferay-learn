@@ -1,4 +1,4 @@
-## Creating Digital Experiences with Liferay
+# Creating Digital Experiences with Liferay
 
 It's no secret that, in order to keep up with an ever-evolving market, today's businesses need more effective ways to engage with their customers, partners, and allies. Customers have higher expectations for companies in which they decide to invest. They want faster speeds, fewer clicks, and more information at their fingertips on any device, so businesses need to find software that will equip them to give customers what they want.
 
@@ -15,7 +15,7 @@ The kind of software a business chooses should allow them to implement many, if 
 	<figcaption style="font-size: x-small">Fig.1 Sites created with Liferay</figcaption>
 </figure>
 
-#### What is Liferay? {#what}
+## What is Liferay? {#what}
 
 Enter Liferay. Ever since the introduction of Liferay Portal, Liferay's aim as a company has been to provide the tools today's businesses need in a unified product. Liferay helps you focus on what matters: providing great digital experiences for your customers and getting out to market quickly. 
 
@@ -32,7 +32,7 @@ Liferay offers a range of products and services that equip you to meet your busi
 
 For the Liferay Fundamentals modules, we'll be keeping our attention on the Liferay DXP product. For more information on the other products, you can take a look at our other course offerings or our documentation.
 
-#### Liferay DXP {#dxp}
+## Liferay DXP {#dxp}
 
 Liferay DXP is our core platform, acting as a one-stop shop that contains a number of out-of-the-box widgets and applications as well as a developer framework for in-depth customizations. Liferay DXP enables you to address multiple business requirements on one unified platform. With Liferay, you can:
 * Create websites that engage employees and users

@@ -1,12 +1,12 @@
-## Adding Custom Styling to the Platform
+# Adding Custom Styling to the Platform
 
-Controlling styling across the platform is important for ensuring a consistent user experience. Theme modules are the context by which developers control not only global CSS, but also the specific styling of different components.
+<!-- Controlling styling across the platform is important for ensuring a consistent user experience. Theme modules are the context by which developers control not only global CSS, but also the specific styling of different components.
 
-#### Styling Livingstone's Platform {#livingstone}
+## Styling Livingstone's Platform {#livingstone}
 
 CSS styles set the tone for widgets and content and control the style of things like typeface, margins, buttons, links, etc. In order for Kaito Tanaka to implement the overall design mockups, he needs to be able to customize global styles like header, footer, background, font, as well as specific css components like buttons and portlet styling. He'll be able to take advantage of the theme flexibility to do just that. 
 
-#### SCSS {#scss}
+## SCSS {#scss}
 
 In the `_styled` base theme, the Clay base (the implementation of Lexicon) is included using _SCSS Partials_.
 
@@ -49,7 +49,7 @@ This also allows developers to include their own custom partials. As long as the
 	<figcaption style="font-size: x-small">Fig.2 Base theme CSS folder</figcaption>
 </figure>
 
-#### SASS Features {#scssfeatures}
+## SASS Features {#scssfeatures}
 
 SASS is similar to technologies like Less.js that use a pre-processor to allow for features not currently in CSS. 
 
@@ -65,7 +65,7 @@ SASS benefits developers by allowing them to include the following in their CSS:
 </ol>
 </div>
 
-#### SASS Variables and Mixins {#varmixins}
+## SASS Variables and Mixins {#varmixins}
 
 We can see some examples of each of these throughout the default Classic theme SCSS files. For example, in the `_clay_custom.scss` partial, there are a number of default variables set that can be used throughout the other SCSS files:
 ```SCSS
@@ -116,7 +116,7 @@ This should generate CSS that looks like this:
 
 Other mixins work similarly. With Bourbon, we get greater functionality with fewer lines of code.
 
-#### SASS Inheritance, Nesting, and Operators {#sassfeat}
+## SASS Inheritance, Nesting, and Operators {#sassfeat}
 
 With Inheritance, developers can reference a set of CSS properties from another selector instead of having to rewrite the same code. For example, since Clay is built on top of Bootstrap, the developers of the classic theme were able to simply inherit the alert classes for application messages in the `_liferay_custom.scss` file:
 ```SCSS
@@ -189,7 +189,7 @@ class-a[role="main"] {
 Note: For more information on Sass and Bourbon, you can go to <a href="https://sass-lang.com/">https://sass-lang.com/</a> and <a href="https://www.bourbon.io/">https://www.bourbon.io/</a>
 </div>
 
-#### Customizing Styling {#customstyle}
+## Customizing Styling {#customstyle}
 
 Front-end developers can define background color, accent colors, widget styling, and other styling features globally within the `_custom.scss` file.
 
@@ -229,4 +229,4 @@ ____________________ is used to control style across the platform.
   <li>The Clay base structure is ____________________ in its use of SASS partials and the individual components that can be modified.</li>
   <li>For all other global styles, ____________________ is the main source file and can include partial imports.</li>
 </ul>
-</div>
+</div> -->

@@ -4,8 +4,8 @@ title: Intercept Events with Model Listeners
 order: 3
 ---
 
-## Intercept Events with Model Listeners
-
+# Intercept Events with Model Listeners
+<!-- 
 Model Listeners listen to persistence events on the models and their associations, allowing you to create actions on them. They are available for both the core model entities as well as custom, Service Builder-generated entities.
 
 Model listeners are OSGi components that implement the [ModelListener](https://github.com/liferay/liferay-portal/blob/7.2.x/portal-kernel/src/com/liferay/portal/kernel/model/ModelListener.java) interface and usually extend the [BaseModelListener](https://github.com/liferay/liferay-portal/blob/7.2.x/portal-kernel/src/com/liferay/portal/kernel/model/BaseModelListener.java).
@@ -160,4 +160,4 @@ Generally, the steps for creating a model listener are as follows:
 	<li>_______________________ are OSGi components that implement the <code>com.liferay.portal.kernel.model.ModelListener</code> interface and extend the <code>com.liferay.portal.kernel.model.BaseModelListener</code>.</li>
 	<li>The association-named events are triggered on model _______________________.</li>
 </ul>
-</div>
+</div> -->

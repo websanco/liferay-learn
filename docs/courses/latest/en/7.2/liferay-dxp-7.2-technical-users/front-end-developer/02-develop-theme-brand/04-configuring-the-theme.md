@@ -1,12 +1,12 @@
-## Configuring the Theme
+# Configuring the Theme
 
-When managing multiple sites, flexibility in fulfilling the particular requirements that are necessary to crafting a tailored user experience is important. The web-team responsible for the creation and management of sites will often need the ability to add, move, or remove different UI elements added in the theme. For example, if the web-team wanted to use the same basic theme elements on an intranet site without footer icon links to social media, they'll need options to remove those. With a Liferay Theme, developers can create configuration settings that bridge the gap between the developer team and the web-team to meet these needs.
+<!-- When managing multiple sites, flexibility in fulfilling the particular requirements that are necessary to crafting a tailored user experience is important. The web-team responsible for the creation and management of sites will often need the ability to add, move, or remove different UI elements added in the theme. For example, if the web-team wanted to use the same basic theme elements on an intranet site without footer icon links to social media, they'll need options to remove those. With a Liferay Theme, developers can create configuration settings that bridge the gap between the developer team and the web-team to meet these needs.
 
-#### Livingstone's Theme Configuration {#livingstone}
+## Livingstone's Theme Configuration {#livingstone}
 
 Kaito and Martin are responsible for the design and implementation of the Livingstone Hotels & Resorts brand as a whole and Josiah Copeland, the Platform Administrator, will be the one responsible for leading the effort to set up each of Livingstone Hotels & Resorts's sites. As of right now, if Kaito were to deploy the theme to production, the theme would be HTML, CSS, and JavaScript complete. But Josiah needs to update certain aspects of the page, layout, and widgets.  Kaito can configure the theme to include a number of configurable settings as well as layouts.
 
-#### Theme Settings and Packages {#settingspackages}
+## Theme Settings and Packages {#settingspackages}
 
 Configurable settings allow administrators to do things like configure the site to display the theme, configure how content is being displayed, and modify aspects of the page without having to modify and redeploy the theme itself.
 
@@ -31,7 +31,7 @@ Key Point <br />
 
 <br />
 
-#### Adding Configurable Theme Settings {#configuretheme}
+## Adding Configurable Theme Settings {#configuretheme}
 
 _Theme Settings_ will allow developers to give administrators control over different elements of the page without having to touch the code at all.
 
@@ -131,7 +131,7 @@ To add and use custom theme settings, developers need to do the following:
 </#if>
 ```
 
-#### Providing Custom Portlet Decorators {#portletdecorators}
+## Providing Custom Portlet Decorators {#portletdecorators}
 
 Developers can also provide different designs for the portlets displaying content on any site. This can be done by adding new portlet decorators to the liferay-look-and-feel.xml.
 
@@ -172,7 +172,7 @@ Once deployed, administrators have control over which decorators to set for diff
 	<figcaption style="font-size: x-small">Fig.2 Choosing a Decorator</figcaption>
 </figure>
 
-#### Including Color Scheme Variations {#colorscheme}
+## Including Color Scheme Variations {#colorscheme}
 
 In many cases, administrators will also want to change UI elements of the landing pages in order to highlight them. One aspect of this can, of course, be accomplished by theme settings and portlet decorators. But if an administrator wants to provide variations specifically for CSS and images, developers can add color schemes.
 
@@ -216,7 +216,7 @@ And finally, the color scheme partial files must be included in the _\_custom.sc
 @import "color_schemes/custom";
 ```
 
-#### Bundling Layout Template Modules into the Theme {#layouts}
+## Bundling Layout Template Modules into the Theme {#layouts}
 
 Finally, developers can include any custom layouts that are necessary for the overall user experience when the theme is deployed. Once custom layouts have been created by the team, everything can be bundled together. This removes the need for the platform administrators to have to deploy multiple modules at once.
 
@@ -261,4 +261,4 @@ With all these settings included, administrators will be able to control all the
     </ul>
   </li>
 </ul>
-</div>
+</div> -->

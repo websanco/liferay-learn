@@ -1,4 +1,4 @@
-## Manage Site Configuration
+# Manage Site Configuration
 
 You can build a wide variety of different types of websites using sites:
 - Sites for your organizations
@@ -10,7 +10,7 @@ You can build a wide variety of different types of websites using sites:
 
 Businesses can use sites to manage their internal teams by leveraging Liferay's robust user management and permission features.
 
-#### Livingstone's Website Needs {#livingstone}
+## Livingstone's Website Needs {#livingstone}
 
 Let's think about what kinds of sites _Livingstone Hotels & Resorts_ will need:
 
@@ -28,7 +28,7 @@ Let's think about what kinds of sites _Livingstone Hotels & Resorts_ will need:
 
 Using the versatility of Liferay Sites, _Livingstone_ can create exactly the kinds of sites needed to meet their needs.
 
-#### Site Membership {#membership}
+## Site Membership {#membership}
 
 Once a user is a site member, they not only have access to a site's private pages, but they are also given any additional permissions that belong to the Site Member role. Member permissions can be modified through the permissions menus on the site or by creating different Site Teams.
 
@@ -48,7 +48,7 @@ You can view all the available open and restricted sites by adding the _My Sites
 Note: Site Membership is a default Site Role that gives users access to Private Pages in that site, along with permissions to view site assets.
 </div>
 
-#### Site Roles
+## Site Roles
 
 It is also possible to assign different roles within a site to Site Members. This can be done through _Site Roles_, which are defined equally for all sites, or through _Teams_, which are unique for each site.
 
@@ -62,7 +62,7 @@ Key Point: <br />
 	<figcaption style="font-size: x-small">Fig.1 The default Site Roles as seen in the Control Panel</figcaption>
 </figure>
 
-#### Teams
+## Teams
 
 Teams offer another way of giving users access to resources within a site. Site Roles can give you access to any number of resources in a site, whereas Teams only give you access to specific permissions for a specific site resource.
 
@@ -73,7 +73,7 @@ Key Point: <br />
 
 If a Site Administrator has a group of users who need to perform the same set of tasks in a site, he or she needs to organize them into Site Teams. The team can then be assigned permissions for various site-specific functions. Site Administrators cannot create custom Site Roles, so Teams are their preferred method for collecting permissions within a single site.
 
-#### Public Vs. Private Pages {#pages}
+## Public Vs. Private Pages {#pages}
 
 Sites are collections of content displayed on pages, but that content can be displayed to only a select group of users. With Liferay Sites, it is possible to create a site that has none, some, or all of its content public, while the rest can only be accessed by Site Members. This is possible using _Public_ and _Private_ pages.
 
@@ -87,7 +87,7 @@ Key Point: <br />
 
 An employee intranet will be a collection of private pages. Employees will need to be Site Members of the intranet site in order to access any of the content on the intranet. Sites can also be arranged hierarchically, meaning that within a private site, there can be private sites and pages that are only accessible to specific groups of users. In practice, this means that while all employees may be members of the top-level intranet site, not all will be members of the Board of Directors' site within the intranet, and therefore cannot access the content or pages within this site. This powerful control over which users can see and act on pages in Liferay is one of the key features of Liferay Sites.
 
-#### Sites and Organizations {#org}
+## Sites and Organizations {#org}
 
 Sites can be independent of, or associated with, Organizations. For example, you could create a Design organization that collects all Design employees in a company, and then create a site that belongs to that organization. Users that are members of the Design organization will automatically become members of the Design organization's site. Once they are members, they will be able to see all the private pages for that site.
 
@@ -101,7 +101,7 @@ Key Point: <br />
 	<figcaption style="font-size: x-small">Fig.2 When selected, an organization site will automatically be created.</figcaption>
 </figure>
 
-#### Site Navigation {#nav}
+## Site Navigation {#nav}
 
 Liferay DXP separates site-scoped information from the _Control Panel_ by placing it in the _Site Administration_ panel. From here, you can select the specific site you want to work on. That site gives you features to work with under each of the following categories: Build, Content, Categorization, Recycle Bin, Members, Configuration, and Publishing.
 
@@ -126,7 +126,7 @@ Key Point: <br />
 	<figcaption style="font-size: x-small">Fig.4 The Navigation Menu widget can be added from the Add panel.</figcaption>
 </figure>
 
-#### Site Hierarchies {#hierarchy}
+## Site Hierarchies {#hierarchy}
 
 As we saw in the last exercise with the creation of child sites under the default site, sites can be organized hierarchically to organize pages, content, application data, and users (via site memberships). Content-sharing is available for sites within the same hierarchy. For instance, if a parent site has a document called _Lunar Goals_ and _Objectives_ and wants all its child sites to have a copy, the parent site’s administrator can enable content-sharing to share the document automatically with its child sites. Content-sharing privileges can be set to let every site administrator share content across sites they manage. For example, web content structures and templates, categories, and widget templates can all be shared hierarchically across sites by site administrators.
 

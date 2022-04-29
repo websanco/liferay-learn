@@ -4,25 +4,25 @@ title: Integrate with Liferay Frameworks
 order: 6
 ---
 
-## Integrate with the Asset Framework
+# Integrate with the Asset Framework
 
 The Asset Framework is a Liferay platform framework that makes it possible to publish and manage any kind of content in a unified way and through a standard API. The framework provides ways of associating and linking content with, for example, other portal assets, tags, and categories, and makes it possible to integrate with portal search, workflows and staging.
 
 The central concepts in integrating with the Asset Framework are an Asset, an Asset Renderer, and an Asset Renderer Factory.
 
-#### Assets
+## Assets
 
 An Asset is an abstract, generic representation of any model entity wrapped in an [AssetEntry](https://github.com/liferay/liferay-portal/blob/7.2.x/portal-kernel/src/com/liferay/asset/kernel/model/AssetEntry.java) class guaranteeing a certain set of metadata (fields) for the consuming applications and APIs. 
 
-#### Asset Renderers
+## Asset Renderers
 
 The Asset Renderer Class is responsible for rendering the URLs for viewing and editing an asset, checking view permissions, and providing access to the wrapped entity. The Asset Renderer implements the [AssetRenderer](https://github.com/liferay/liferay-portal/blob/7.2.x/portal-kernel/src/com/liferay/asset/kernel/model/AssetRenderer.java) interface. 
 
-#### Asset Renderer Factories
+## Asset Renderer Factories
 
 An Asset Renderer Factory is an OSGi component class that makes an Asset Renderer available to the calling application or API. The factory pattern provides a possibility to have multiple renderers for a single asset type.
 
-#### Asset Framework Diagram
+## Asset Framework Diagram
 
 The diagram below illustrates and summarizes the components of the Asset Framework.
 
@@ -30,11 +30,12 @@ On a portal page, there is an __Asset Publisher__ portlet querying the newest as
 
 <img src="../images/asset-framework.png" style="max-height:100%"/>
 
-#### An Asset in the Database
+## An Asset in the Database
 
 Below is an example of database table structures for BlogsEntry and AssetEntry. You can see that the AssetEntry contains a subset of the data of BlogsEntry:
 
 **BlogsEntry**
+
 ```sql
 
 mysql> describe blogsentry;
@@ -75,6 +76,7 @@ mysql> describe blogsentry;
 ```
 
 **AssetEntry**
+
 ```sql
 mysql> describe assetentry;
 +----------------+-------------+------+-----+---------+-------+
@@ -114,6 +116,7 @@ mysql> describe assetentry;
 The wrapped model entity is referenced by its ID in the AssetEntry's `classPK` (Class Primary Key) field. In the example below, the `classPK` contains the `entryId` for a BlogsEntry:
 
 **AssetEntry**
+
 ```sql
 mysql> select entryId, classPK,  groupId, companyId, userId, userName, title from assetentry where classPK=63341;
 +---------+---------+---------+-----------+--------+--------------+----------------------+
@@ -125,6 +128,7 @@ mysql> select entryId, classPK,  groupId, companyId, userId, userName, title fro
 ```
 
 **BlogsEntry**
+
 ```sql
 mysql> select entryId, groupId, companyId, userId, userName, title from blogsentry where entryId=63341;
 +--------------------------------------+---------+---------+-----------+--------+--------------+----------------------+
@@ -163,7 +167,7 @@ Asset entry fields and their descriptions:
 * __width:__ this can be set to 0
 * __priority:__ specifies how the entity is ranked among peer entity instances; the lower numbers take priority
 
-#### The Benefits of Integrating the Asset Framework
+## The Benefits of Integrating the Asset Framework
 
 To leverage most of Liferay's native features, a custom entity must be integrated into the Asset Framework. Integration allows you to: 
 
@@ -179,7 +183,7 @@ To leverage most of Liferay's native features, a custom entity must be integrate
 * Track the number of times an asset is viewed
 * Implement Recycle Bin support
 
-#### Steps for Integrating the Asset Framework
+## Steps for Integrating the Asset Framework
 
 Generally, the steps to integrate with the Asset Framework are:
 
@@ -196,7 +200,7 @@ Additionally, if you want to show your assets in the Asset Publisher:
 
 > See the Developer Network article: https://dev.liferay.com/fi/develop/tutorials/-/knowledge_base/7-2/assets-integrating-with-liferays-framework for more information.
 
-#### Integrate with the Search Framework
+## Integrate with the Search Framework
 
 Before version 7.1, there used to be a single indexer component for taking care of everything search indexer related for a model entity. In 7.1 the approach was modularized to provide a clean approach for controlling different aspects of search framework integration. You can still use the old approach, however.
 
@@ -212,7 +216,7 @@ Generally, the steps to integrate with the Search framework are:
 
 > See details about all the available contributors and integrating to Search Framework in the Developer Network: https://dev.liferay.com/en/develop/tutorials/-/knowledge_base/7-2/search-and-indexing. For a real world example, see https://github.com/liferay/liferay-portal/tree/7.2.x/modules/apps/blogs/blogs-service/src/main/java/com/liferay/blogs/internal/search.
 
-#### Keeping the Search Index Updated on Entity Modification Events
+## Keeping the Search Index Updated on Entity Modification Events
 
 When you use Service Builder, the Liferay-provided method level `@Indexable` annotation automates the task for you. Just annotate those methods, which should trigger an index update. The only requirement for annotated  methods is that they __have to return the target entity__. 
 
@@ -224,6 +228,7 @@ The @Indexable annotation has two action types:
 Below is an example from a Service Builder project implementation class, where an index document gets created on entity add and deleted on deletion:
 
 **addAssignment()**
+
 ```java
 @Indexable(
 	type = IndexableType.REINDEX
@@ -238,6 +243,7 @@ public Assignment addAssignment(
 ```
 
 **deleteAssignment()**
+
 ```java
 @Indexable(
 	type = IndexableType.DELETE
@@ -251,7 +257,7 @@ public Assignment deleteAssignment(Assignment assignment)
 
 > Notice that by default, the CRUD methods of Service Builder generated service __base classes__ are annotated with @Indexable automatically. If you call the annotated base class methods from your implementation class, you don't have to annotate them.
 
-#### Creating a Custom Search Interface
+## Creating a Custom Search Interface
 
 To get your custom entities to show up in standard portal search, you  have to integrate with the Liferay Asset Framework. If, however, you would like to create your own custom search user interface, you can call the extensive portal search API directly.
 

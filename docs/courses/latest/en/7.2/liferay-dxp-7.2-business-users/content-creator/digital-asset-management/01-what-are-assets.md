@@ -1,12 +1,12 @@
-## What are Assets?
+# What are Assets?
 
 Once your platform is up and running, it's time to begin creating content. Remember that sites act as content repositories, so you will want to make sure you are working in the appropriate site before you start creating content in Liferay DXP. Then you can start creating a variety of content that can be used throughout the platform using tools that come with Liferay DXP out-of-the-box.
 
-#### Content in the Livingstone Platform {#livingstone}
+## Content in the Livingstone Platform {#livingstone}
 
 Maria Flores works as a content creator for Livingstone Hotels & Resorts and has been tasked with creating content for the public-facing Livingstone Hotels & Resorts site. She believes that the content on a page is the most important part of a site and wants to make sure the her content is meaningful by reaching the right audience. Maria also wants site content to be presented in an attractive and engaging way, in line with the mockups provided by the Design Team.
 
-#### Liferay Assets {#assets}
+## Liferay Assets {#assets}
 
 With Liferay, you can create different kinds of content. Any individual piece of content created in Liferay DXP is called an _Asset_.
 
@@ -15,7 +15,7 @@ Key Point: <br />
 <strong>Assets</strong> are all the different content types that can be created in a site.
 </div>
 
-The different Assets you can create in Liferay DXP include: 
+The different Assets you can create in Liferay DXP include:
 
 * _Web Content_: the most widely-used Asset for displaying content in Liferay. Web Content has a backbone structure and can be as basic as plain text and images or include a custom design with Templates provided by your Front-End team.
 * _Documents and Media_: You can create and import all kinds of documents and files to your platform including:
@@ -30,7 +30,7 @@ The different Assets you can create in Liferay DXP include:
 * _Polls_: A little simpler than Liferay Forms, Polls are used to present questions to users and gather their quick responses.
 * _Bookmarks_: With bookmarks, you can collect, store, and organize URLs.
 
-#### The Asset Framework {#framework}
+## The Asset Framework {#framework}
 
 <div class="key-point">
 Key Point: <br />
@@ -43,7 +43,7 @@ Key Point: <br />
 </ul>
 </div>
 
-For example, a content creator can relate a blog post to an image gallery that supplements the blog or a Wiki to Web Content covering a similar subject. Each of these Assets can be organized with tags to make them more easily searchable. Users can also comment on and rate blog posts or images. This level of control over content in Liferay allows for powerful content management. 
+For example, a content creator can relate a blog post to an image gallery that supplements the blog or a Wiki to Web Content covering a similar subject. Each of these Assets can be organized with tags to make them more easily searchable. Users can also comment on and rate blog posts or images. This level of control over content in Liferay allows for powerful content management.
 
 <br />
 
@@ -52,9 +52,9 @@ For example, a content creator can relate a blog post to an image gallery that s
 	<figcaption style="font-size: x-small">Fig.1 A blog post that has been related to an image gallery</figcaption>
 </figure>
 
-The _Asset Framework_ also allows you to access customizable publishing tools like the _Asset Publisher_ and _Content Sets_. With these tools, you can configure the types and ways in which your content is displayed. We will look at publishing content a little later. For now, keep in mind that _Assets_ are the different types of content in Liferay. 
+The _Asset Framework_ also allows you to access customizable publishing tools like the _Asset Publisher_ and _Content Sets_. With these tools, you can configure the types and ways in which your content is displayed. We will look at publishing content a little later. For now, keep in mind that _Assets_ are the different types of content in Liferay.
 
-#### Page Fragments and Content Pages {#frags}
+## Page Fragments and Content Pages {#frags}
 
 Users with web design skills can create editable _Page Fragments_ using HTML, CSS, and JavaScript. Business users and Marketing teams can then take Page Fragments and place them on _Content Pages_ as desired. Content Pages are designed to accelerate and simplify content creation and are, as the name suggests, content-centric. Content editors can directly enter and update text and images in-line by leveraging the rich editor.
 
@@ -72,18 +72,18 @@ There are a few differences between Content Pages and the Layout/Widget pages yo
 	* Widget pages are built by dragging and dropping widgets to a page layout of columns and rows.
 	* Widget pages are recommended for pages focused on displaying existing interactive content, displaying lists of reusable content or displaying several reusable content details.
 
-#### Creating Page Fragments {#createfrags}
+## Creating Page Fragments {#createfrags}
 
 Page Fragments are reusable pieces of content that can be combined with Assets to create pages that can be easily maintained and edited by Marketing and content teams.
 
 <div class="key-point">
 Key Point: <br />
-Use the <strong>Fragment Editor</strong> to create Page Fragments or save a completed section of a page as a Page Fragment and reuse it in multiple pages. 
+Use the <strong>Fragment Editor</strong> to create Page Fragments or save a completed section of a page as a Page Fragment and reuse it in multiple pages.
 </div>
 
 Content creators with basic web design skills can try their hand at creating content using Page Fragments. All Fragments are part of _Collections_, so content creators will have to create a Fragment collection when building their first Page Fragment. Collections group Page Fragments together for later use and administrative flexibility.
 
-Fragments should be grouped by purpose. When creating new Fragment collections, try to create categories that can be clearly understood and reused. For example, you could create Collections for: 
+Fragments should be grouped by purpose. When creating new Fragment collections, try to create categories that can be clearly understood and reused. For example, you could create Collections for:
 
 * Page Headers
 * Banners
@@ -102,9 +102,9 @@ Once a content creator has created his or her collection, he or she can open up 
 
 Fragments are designed to be reusable and easily editable once added to a page. The Design and Web Teams can work to create pixel-perfect page templates that other users can take and use across the platform. Using the Page Template Editor, content creators and business users can place available Page Fragments on a page and quickly design and publish beautiful site pages.
 
-#### Document Types and Metadata {#doctypes}
+## Document Types and Metadata {#doctypes}
 
-While uploading documents using the _Basic Document_ type works for some uploads, as the number of uploaded files increases, creating categories and types of documents will make file management easier and more efficient. Administrators can use **Document Types** and metadata to organize their content. They can add metadata to different kinds of documents to make it easier to organize and search by creating custom **Document Types**. 
+While uploading documents using the _Basic Document_ type works for some uploads, as the number of uploaded files increases, creating categories and types of documents will make file management easier and more efficient. Administrators can use **Document Types** and metadata to organize their content. They can add metadata to different kinds of documents to make it easier to organize and search by creating custom **Document Types**.
 
 <br />
 
@@ -115,14 +115,14 @@ While uploading documents using the _Basic Document_ type works for some uploads
 
 <br />
 
-Document Types give the user the ability to describe and categorize documents by adding custom metadata to uploaded files. This metadata not only helps distinguish files, it also makes files searchable by metadata and allows the user to take advantage of Liferay's search features. 
+Document Types give the user the ability to describe and categorize documents by adding custom metadata to uploaded files. This metadata not only helps distinguish files, it also makes files searchable by metadata and allows the user to take advantage of Liferay's search features.
 
 <div class="key-point">
 Key Point: <br />
 <strong>Document Types</strong> associate a set of custom metadata fields with files of a certain type as soon as they are added to the platform.
 </div>
-  
-Document managers can benefit from adding document types, as they not only distinguish what kind of documents they need to upload, but can then add metadata. By adding metadata descriptions to files as they are uploaded, users are defining how the documents will be categorized. 
+
+Document managers can benefit from adding document types, as they not only distinguish what kind of documents they need to upload, but can then add metadata. By adding metadata descriptions to files as they are uploaded, users are defining how the documents will be categorized.
 
 For example, instead of having all uploaded PDFs show up as Basic Document types, administrators can distinguish the PDF types that contain content that relates to their marketing team from the types that contain financial reports. They can create a Document Type called _Marketing Data_ and another called _Financial Reports_ and include additional information that needs to be filled out. This way, it's clear which documents are which, and the metadata will be recorded with every submission.
 

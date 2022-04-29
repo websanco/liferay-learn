@@ -4,9 +4,7 @@ title: Integrate with the Asset Framework
 order: 12
 ---
 
-<h2 class="exercise">Exercises</h2>
-
-## Integrate with the Asset Framework
+# Integrate with the Asset Framework
 
 <div class="ahead">
 <h4>Exercise Goals</h4>
@@ -19,8 +17,8 @@ order: 12
 	</ul>
 </div>
 
-#### Add the Required Fields to the Assignment Entity
-	
+## Add the Required Fields to the Assignment Entity
+
 The Asset Framework requires a certain set of fields (columns) from all the entities. We are currently missing the status fields:
 
 * __status__: used to determine an entity's status in the workflow 
@@ -32,6 +30,7 @@ We'll also add a status finder for listing Assignments by their status.
 
 1. **Open** the `service.xml` in the *gradebook-service* module.
 1. **Add** the status fields (see the highlighted fields). The final `service.xml` will look like this:
+
 	```xml
 	<?xml version="1.0"?>
 	<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 7.2.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_7_2_0.dtd">
@@ -103,9 +102,10 @@ We'll also add a status finder for listing Assignments by their status.
 			<exception>AssignmentValidation</exception>
 		</exceptions>
 	</service-builder>
-	```		
+	```
+
 1. **Run** the `buildService` task to regenerate the service.
-	
+
 > Take a quick look at the re-generated `com.liferay.training.gradebook.model.AssignmentModel` interface in the *gradebook-api* model. After you added the status fields, the `WorkflowedModel` interface is also implemented, enabling the model to support Workflows:
 > ```java
 >	public interface AssignmentModel extends BaseModel<Assignment>, GroupedModel,
@@ -113,13 +113,14 @@ We'll also add a status finder for listing Assignments by their status.
 >	...
 >	}
 >```
-	
-#### Implement Asset Resource Management in the Local Service 
+
+## Implement Asset Resource Management in the Local Service
 
 As with permissions, the Asset resource lifecycle has to be kept in sync with your entity: whenever you create, update, or delete an Assignment entity, you have to take care of the Asset resource:
 
 1. **Open** the class `com.liferay.training.gradebook.service.impl.AssignmentLocalServiceImpl`. 
 1. **Implement** the new `updateAsset()` method:
+
 	```java
 	private void updateAsset(
 		Assignment assignment, ServiceContext serviceContext)
@@ -138,7 +139,9 @@ As with permissions, the Asset resource lifecycle has to be kept in sync with yo
 			serviceContext.getAssetPriority());
 	}
 	```
+
 1.  **Add** the call to the `updateAsset()` to the very end of `addAssignment()` before the `return` statement: 
+
 	```java
 		// Update asset resources.
 
@@ -147,7 +150,9 @@ As with permissions, the Asset resource lifecycle has to be kept in sync with yo
 		return assignment;
 	}
 	```
+
 1. **Implement** the updating Asset resource in the `updateAssignment()` method:
+
 	```java
 		// Update Asset resources.
 		
@@ -156,7 +161,9 @@ As with permissions, the Asset resource lifecycle has to be kept in sync with yo
 		return assignment;
 	}
 	```	
+
 1. **Implement** deleting the Asset resource at the very end of the `deleteAssignment()` method before the return statement:
+
 	```java
 		// Delete the Asset resource.
 
@@ -166,10 +173,11 @@ As with permissions, the Asset resource lifecycle has to be kept in sync with yo
 		return super.deleteAssignment(assignment);
 	}
 	```
+
 1. **Resolve** missing imports.
 1. **Rebuild** the service.
 
-#### Implement an Asset Renderer Factory for the Assignments
+## Implement an Asset Renderer Factory for the Assignments
 
 The service layer is now ready for the Asset Framework. Next, we'll create the AssetRenderer and AssetRendererFactory components in the *gradebook-web* to take care of displaying the assets in a standard way, for example, in the Asset Publisher portlet.
 
@@ -177,16 +185,19 @@ First, we'll add the required dependencies to the *gradebook-web*.
 
 1. **Open** the `build.gradle` of the *gradebook-web* bundle.
 1. **Add** dependency for the AssetHelper utility, located in the `com.liferay.asset.api` bundle, and Asset Display Page Api:
+
 	```groovy
 	compileOnly group: "com.liferay", name: "com.liferay.asset.api"
 	compileOnly group: "com.liferay", name: "com.liferay.asset.display.page.api"
 	
 	```	
+
 1. **Run** Gradle refresh to refresh the dependencies.
 
 Create an AssetRendererFactory component to take care of providing the AssetRenderer:
 
 1. **Create** a class `com.liferay.training.gradebook.web.asset.model.AssignmentAssetRendererFactory` and implement as follows:
+
 	```java
 	package com.liferay.training.gradebook.web.asset.model;
 	
@@ -348,11 +359,12 @@ Create an AssetRendererFactory component to take care of providing the AssetRend
 	}
 	```
 
-#### Implement an AssetRenderer for the Assignments
+## Implement an AssetRenderer for the Assignments
 
 Create the AssetRenderer class for the Assignments:
 
 1. **Create** a class `com.liferay.training.gradebook.web.asset.model.AssignmentAssetRenderer` and implement as follows:
+
 	```java
 	package com.liferay.training.gradebook.web.asset.model;
 	
@@ -622,7 +634,7 @@ Create the AssetRenderer class for the Assignments:
 
 > See [Liferay Developer Network](https://portal.liferay.dev/docs/7-2/tutorials/-/knowledge_base/t/implementing-asset-renderers) for more information about Asset renderers.
 
-#### Implement the JSP files
+## Implement the JSP files
 
 At the final step, we'll implement the JSP files for *abstract* and *full content* Asset views. If you take a look at the `getJspPath()` method in the AssetRenderer just created, you'll see how the file path is built:
 
@@ -637,6 +649,7 @@ public String getJspPath(HttpServletRequest request, String template) {
 Implement the JSP files: 
 
 1. **Add** imports for the [AssetRenderer](https://github.com/liferay/liferay-portal/blob/7.1.x/portal-kernel/src/com/liferay/asset/kernel/model/AssetRenderer.java) and [WebKeys](https://github.com/liferay/liferay-portal/blob/7.1.x/portal-kernel/src/com/liferay/portal/kernel/util/WebKeys.java) in the `src/main/resources/META-INF/resources/init.jsp`.
+
 	```html
 	<%@ page import="com.liferay.asset.kernel.model.AssetRenderer"%>
 	<%@ page import="com.liferay.portal.kernel.util.WebKeys"%>
@@ -646,6 +659,7 @@ Implement the JSP files:
 1. **Implement** the two files in the folder:
 
 **abstract.jsp**
+
 ```html
 <%@ include file="/init.jsp"%>
 
@@ -659,6 +673,7 @@ Implement the JSP files:
 ```
 
 **full_content.jsp**	
+
 ```html   
 <%@ include file="/init.jsp"%>
 
@@ -679,7 +694,7 @@ Implement the JSP files:
 </div>
 ```
 
-#### Deploy and Test
+## Deploy and Test
 
 1. **Check** that the *gradebook-web* module redeploys successfully and that you are able to access the Gradebook application in your web browser.
 

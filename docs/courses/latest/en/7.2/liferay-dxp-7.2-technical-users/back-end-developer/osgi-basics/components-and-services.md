@@ -4,9 +4,9 @@ title: Components and Services
 order: 4
 ---
 
-## Components and Services
+# Components and Services
 
-#### A Component
+## A Component
 
 An OSGi component is any Java class inside a bundle that is declared to be a component, usually by annotating it with `@Component`. When a class is declared to be a component, it becomes managed by the OSGi container.
 
@@ -35,7 +35,7 @@ public class TrainingComponent {
 }
 ```
 
-#### A Service
+## A Service
 
 A service is an OSGi component registered to the OSGi container's __service registry__. Compared to a plain OSGi component, a service component has two additional characteristics:
 
@@ -106,7 +106,7 @@ public class EmployeeClient {
 }
 ```
 
-#### The Service Registry
+## The Service Registry
 
 The OSGi *service registry* subsystem provides mechanisms to:
 
@@ -133,7 +133,7 @@ The diagram below shows a scenario with multiple implementations of the same ser
 
 If the service client doesn't specify any policies or filters for the service implementation, the first available implementation will be bound to the client component. The client may also define policies that allow multiple implementations to be bound. This is especially useful when implementing factory patterns.
 
-#### Declarative Services
+## Declarative Services
 
 [Declarative Services (DS)](https://osgi.org/specification/osgi.cmpn/7.0.0/service.component.html) is an OSGi framework service handling dependency injection that allows you to publish, find, and bind services based on XML metadata and annotations.
 
@@ -147,7 +147,7 @@ The standard annotations of Declarative Services are:
 * __@Modified:__ 	Identify the annotated method as the _modified_ method of a Service Component.
 * __@Reference:__ 	Inject a service implementation to the annotated variable (or by using a _setter_ method).
 
-#### Declarative Services and Bndtools
+## Declarative Services and Bndtools
 
 By default, Declarative Services expects the service declarations to exist as XML files in the OSGi-INF folder of the bundle. These declaration files may be created and modified manually.
 

@@ -1,7 +1,5 @@
-<h2 class="exercise">Exercises</h2>
-
-## Create a Featured Hotels Structure and Template
-
+# Create a Featured Hotels Structure and Template
+<!-- 
 <div class="ahead">
 <h4>Exercise Goals</h4>
 	<ul>
@@ -16,7 +14,7 @@
 	</ul>
 </div>
 
-#### Create a Global Snippets File in Visual Studio Code
+## Create a Global Snippets File in Visual Studio Code
 1. **Open** _Visual Studio Code_.
 2. **Go to** the _User Snippets_ menu.
 	* Windows: `File → Preferences → User Snippets`
@@ -26,14 +24,14 @@
 	* The full file name will be `lfr-experience-management.code-snippets`.
 5. **Click** _Save_.
 
-#### Add the Snippet Content
+## Add the Snippet Content
 1. **Open** the `experience-management-snippets.json` in your module exercises folder.
 2. **Copy** the contents of the file.   
 3. **Paste** the contents of the file in the `lfr-experience-management.code-snippets` file just created in Visual Studio Code.
 	* Make sure to replace all the existing content in the file.
 4. **Save** the file.
 
-#### Create a Structure with Two Text Fields, an Image, and Link Field
+## Create a Structure with Two Text Fields, an Image, and Link Field
 1. **Go to** _`Site Administration → Content & Data → Web Content`_ in the _Menu_.  
 * **Click** the _Structures_ tab at the top.  
 * **Click** _Add_ at the top right.
@@ -45,7 +43,7 @@
 
 <img src="../images/exercise-images/featured-hotels-structure.png" style="max-height:30%;">
 
-#### Configure the Field Labels
+## Configure the Field Labels
 1. **Click** the first _Text_ field at the top of the page.  
 * **Double-click** the _Field Label_ value to edit the value name.  
 * **Type** `Title`.  
@@ -65,7 +63,7 @@
 
 <img src="../images/exercise-images/fields-filled-part-1.png" style="max-height:25%;">
 
-#### Repeat the Field Set In Order to Feature Four Hotels
+## Repeat the Field Set In Order to Feature Four Hotels
 1. **Click** the _Add_ button at the top right of the Field set we just created for a second set.
 2. **Click** on the _Add_ button again for a third set
 3. **Click** on the _Add_ button again for a fourth set
@@ -73,7 +71,7 @@
 
 <img src="../images/exercise-images/structure-part-2.png" style="max-height: 25%;">
 
-#### Label the Second Set of Fields
+## Label the Second Set of Fields
 1. **Click** the third _Text_ field.  
 * **Double-click** the _Field Label_ value to edit the value name.  
 * **Type** `Text2`.  
@@ -87,7 +85,7 @@
 * **Type** `Link2`.
 * **Click** _Save_.
 
-#### Label the Third Set of Fields
+## Label the Third Set of Fields
 1. **Click** the fourth _Text_ field.  
 * **Double-click** the _Field Label_ value to edit the value name.  
 * **Type** `Text3`.  
@@ -101,7 +99,7 @@
 * **Type** `Link3`.
 * **Click** _Save_.
 
-#### Label the Fourth Set of Fields
+## Label the Fourth Set of Fields
 1. **Click** the fifth _Text_ field.  
 * **Double-click** the _Field Label_ value to edit the value name.  
 * **Type** `Text4`.  
@@ -118,7 +116,7 @@
 
 <img src="../images/exercise-images/structure-complete.png" style="max-height:15%;">
 
-#### Import Example Featured Hotels Content
+## Import Example Featured Hotels Content
 1. **Go to** the _Web Content_ tab.
 * **Click** the _Options_ icon in the top right.
 * **Choose** _Export/Import_.
@@ -130,7 +128,7 @@
 	* If the import process duplicates the template, use the template with the older Modified Date.
 * **Close** the pop-up.
 
-#### Add Content to the Livingstone Landing Page
+## Add Content to the Livingstone Landing Page
 1. **Click** _Go to Site_ in Site Administration.    
 * **Click** the _Add_ button in the top right.
 * **Open** _Content_ in the Add Menu.
@@ -138,7 +136,7 @@
 
 <img src="../images/exercise-images/no-template.png" style="max-height:20%;">
 
-#### Begin Creating the Featured Hotels Tempalate
+## Begin Creating the Featured Hotels Tempalate
 1. **Go to** your _exercise-src_ folder.
 * **Open** the `featured-hotels-template.ftl` file with _Visual Studio Code_.
 * **Click** to highlight the `<#-- Insert 01-div-header-and-body snippet here -->` comment.
@@ -154,7 +152,7 @@
 </div>
 ```
 
-#### Add Code for the Image Header
+## Add Code for the Image Header
 1. **Press** _Enter_ and _Tab_ after the `<div class="card-header aspect-ratio">` line
 * **Type** `lfr` and choose the `02-hotel-image` snippet.
     * Alternatively, you can type the following to replace the comment:
@@ -167,7 +165,7 @@
 </#if>
 ```
 
-#### Add Code for the Title and Link
+## Add Code for the Title and Link
 1. **Press** _Enter_ and _Tab_ after the `<div class="card-body">` line.
 * **Type** `lfr` and choose the `03-hotel-title-link` snippet.
     * Alternatively, you can Type the following to replace the comment:
@@ -178,7 +176,7 @@
 </h2>
 ```
 
-#### Add the Second Rows and Columns
+## Add the Second Rows and Columns
 1. **Click** to highlight the `<#-- Insert 04-top-row-second-column snippet here -->` comment.
 * **Type** `lfr` and choose the `04-top-row-second-column` snippet.
     * Alternatively, you can Type the following to replace the comment:
@@ -202,7 +200,7 @@
 </li>
 ```
 
-#### Add the Final Rows and Columns
+## Add the Final Rows and Columns
 1. **Click** to highlight the `<#-- Insert 05-second-row snippet here -->` comment.
 * **Type** `lfr` and choose the `05-second-row` snippet.
     * Alternatively, you can Type the following to replace the comment:
@@ -245,7 +243,7 @@
 ```
 3. **Save** the file.
 
-#### Add the Template to the Platform and Include the Title Data
+## Add the Template to the Platform and Include the Title Data
 1. **Go to** the _Livingstone Hotels & Resorts_ site in the browser.
   * Make sure you're logged in.  
 * **Go to** _`Site Administration → Content & Data → Web Content`_ in the _Menu_.  
@@ -260,7 +258,7 @@
 * **Click** the _Title_ field in the _Fields_ section to the left.
 * **Click** _Save_.
 
-#### Select the Template and View the Content
+## Select the Template and View the Content
 1. **Go to** the _Web Content_ tab.
 * **Click** the _2019 Featured Hotels Content_.
 * **Click** _Select_ under the _Default Template_ field in the right column.
@@ -275,10 +273,10 @@
 
 ---
 
-#### Bonus Exercises
+## Bonus Exercises
 1. Create a Structure for a Press Release with the following:
     * Headline
     * Date of Publication
     * Logo
     * Content
-2. Create a Template for the Press Release using the built in editor.
+2. Create a Template for the Press Release using the built in editor. -->

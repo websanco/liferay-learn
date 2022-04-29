@@ -1,4 +1,4 @@
-## Building Sites
+# Building Sites
 
 One of the primary ways you can provide a great digital experience for your users is by creating different websites or applications that allow users to access information, request services, and perform actions. Different groups of users need access to different kinds of content and services, so businesses need to manage multiple sites accessible by different devices. 
 
@@ -10,6 +10,7 @@ One of the primary ways you can provide a great digital experience for your user
 <br />
 
 Many companies provide external and internal experiences by building and maintaining different kinds of sites, such as: 
+
 * **Partner Portals** 
 * **Intranets** 
 * **Customer Portals** 
@@ -21,7 +22,7 @@ When building these digital experiences, web teams need to be able to perform th
 * Create content to display on pages
 * Easily edit and manage content
 
-#### Livingstone Site Requirements {#livingstone}
+## Livingstone Site Requirements {#livingstone}
 
 Livingstone Hotels & Resorts has several websites that need to be created to provide both external and internal users with the experiences they expect from a premier global hospitality company. Here are a few of the main sites that Livingstone needs to create and maintain:
 * **Livingstone Life**
@@ -72,7 +73,7 @@ The **Livingstone Rewards** site will be a hotel rewards program site where user
 
 <br />
 
-#### Liferay Sites {#sites}
+## Liferay Sites {#sites}
 
 In Liferay, any website requirement can be met using Liferay _Sites_. Individual Sites can be created for external and/or internal purposes and contain a number of applications and widgets. Administrators can create different pages and control access to the pages and resources in the Site.
 
@@ -99,7 +100,7 @@ In order to ensure that businesses can provide the best user experience for thei
 
 <br />
 
-#### Site Membership {#sitemembership}
+## Site Membership {#sitemembership}
 
 Each Site can have a Site Type that determines how Users become members of that Site. When a User becomes a Site Member, they are given the Site Member Role. This Role gives them access to a Site's Private Pages and basic permissions, allowing the person with the Role to interact with widgets or content on the private pages.
 
@@ -115,7 +116,7 @@ Key Point: <br/>
 </ul>
 </div>
 
-#### Organization Sites and Membership {#orgsites}
+## Organization Sites and Membership {#orgsites}
 
 Organizations represent business hierarchies such as departments or other business structures. If Users organized into an Organization need a web presence or Site of their own, administrators can create _Organization Sites_.
 
@@ -134,7 +135,7 @@ Key Point: <br/>
 	<figcaption style="font-size: x-small">Fig.7 Collection of Permissions in Roles</figcaption>
 </figure>
 
-#### Site Hierarchies {#sitehierarchies}
+## Site Hierarchies {#sitehierarchies}
 
 Just as Organizations are hierarchies that represent the business grouping of Users, Sites can include child sites to represent a content and page hierarchy. When Organization Sites are created, Sites will automatically fit into a Site Hierarchy that mirrors the Organization Hierarchy. 
 

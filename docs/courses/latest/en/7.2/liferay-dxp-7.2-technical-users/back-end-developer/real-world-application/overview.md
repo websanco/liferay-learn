@@ -14,13 +14,13 @@ In the optional exercises we'll extend the application to support assignment sub
 
 Features and requirements for the Gradebook application:
 
-#### Application Features
+## Application Features
 
 * Teachers can create assignments.
 * Students can send submissions to assignments.
 * Teachers can grade the submissions.
 
-#### Functional Requirements
+## Functional Requirements
 
 * Assignments have to be listable in the __Asset Publisher__ portlet
 * Assignments have to be __searchable__ with portal search
@@ -28,14 +28,14 @@ Features and requirements for the Gradebook application:
 * The Application has to be __configurable__
 * The application has to support __localization__
 
-#### Non-Functional Requirements
+## Non-Functional Requirements
 
 * The application has to be __modular__
 * Data has to be __persisted__ in the database
 * Form submissions have to be __validated__
 * There has to be basic level __integration tests__
 
-#### Development Technologies
+## Development Technologies
 
 We will build the model and service layer of the Gradebook application using the *Liferay Service Builder* code generation tool, which greatly reduces the need for boilerplate coding, automatically creates the persistence layer, implements caching, and creates both local and remote service APIs.
 
@@ -51,7 +51,7 @@ Like Liferay core applications, this application will follow the MVC design patt
 
 <img src="../images/mvc-pattern.png" style="max-height: 45%" />
 
-#### Module Architecture
+## Module Architecture
 
 The application will be divided into four modules:
 
@@ -61,7 +61,7 @@ The application will be divided into four modules:
 
 In the optional exercises, we will also create an integration test module called *gradebook-test*.
 
-#### Implementation Steps Overview
+## Implementation Steps Overview
 
 The main implementation steps are:
 

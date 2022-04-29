@@ -4,9 +4,7 @@ title: Integrate with Portal Search
 order: 13
 ---
 
-<h2 class="exercise">Exercises</h2>
-
-## Integrate with Portal Search
+# Integrate with Portal Search
 
 <div class="ahead">
 <h4>Exercise Goals</h4>
@@ -31,7 +29,7 @@ order: 13
 
 <br />
 
-#### Declare Dependencies
+## Declare Dependencies
 
 Integration to portal search depends on both the Search API and Search SPI:
 
@@ -42,7 +40,7 @@ Integration to portal search depends on both the Search API and Search SPI:
 	compileOnly group: "com.liferay", name: "com.liferay.portal.search.api"
 	```	
 
-#### Implement a Gradebook Registrar Class
+## Implement a Gradebook Registrar Class
 
 The registrar class registers the Assignments with the search framework:
 
@@ -113,9 +111,9 @@ The registrar class registers the Assignments with the search framework:
 		private ServiceRegistration<?> _serviceRegistration;
 	
 	}
-	```	
+	```
 
-#### Implement an Assignment Model Document Contributor
+## Implement an Assignment Model Document Contributor
 
 The model document contributor controls which fields are indexed. This class’s contribute method is called each time the add and update methods in the entity’s service layer are called.
 
@@ -175,9 +173,9 @@ The model document contributor controls which fields are indexed. This class’s
 			}
 		}
 	}
-	```	
-	
-#### Implement an Assignment Model Indexer Writer Contributor
+	```
+
+## Implement an Assignment Model Indexer Writer Contributor
 
 The Model Indexer Writer Contributor configures the re-indexing and batch re-indexing behavior for the model entity. This class’s method is called when a re-index is triggered from the Search administrative application found in *Control Panel → Configuration → Search*:
 
@@ -241,12 +239,13 @@ The Model Indexer Writer Contributor configures the re-indexing and batch re-ind
 	}
 	```
 
-#### Implement a Gradebook Keyword Query Contributor
+## Implement a Gradebook Keyword Query Contributor
 
 The Keyword Query Contributor contributes model-specific clauses to the ongoing search query:
 
 1. **Create** a class `com.liferay.training.gradebook.internal.search.spi.model.query.contributor.AssignmentKeywordQueryContributor` in the *gradebook-service* module.
 1. **Implement** as follows:
+
 	```java
 	package com.liferay.training.gradebook.internal.search.spi.model.query.contributor;
 	
@@ -288,12 +287,13 @@ The Keyword Query Contributor contributes model-specific clauses to the ongoing 
 	}
 	```
 
-####  Implement a Gradebook Model Summary Contributor
+## Implement a Gradebook Model Summary Contributor
 
 The Model Summary Contributor constructs the results summary, including specifying which fields to use:
 
 1. **Create** a class `com.liferay.training.gradebook.internal.search.spi.model.result.contributor.AssignmentModelSummaryContributor` in the *gradebook-service* module.
 1. **Implement** as follows:
+
 	```java
 	package com.liferay.training.gradebook.internal.search.spi.model.result.contributor;
 	
@@ -344,10 +344,11 @@ The Model Summary Contributor constructs the results summary, including specifyi
 		}
 	
 	}
-	```	
+	```
+
 1. **Rebuild** the service.
 
-#### Review the Service Implementation Classes for `@Indexable` Annotations
+## Review the Service Implementation Classes for `@Indexable` Annotations
 
 The final step is to review when and how indexing is triggered. Indexing is triggered by the Local Service methods annotated with the `@Indexable` annotation. If you take a look at the `com.liferay.training.gradebook.service.base.AssignmentLocalServiceBaseImpl` class, you'll see that the methods for adding, deleting, and updating Assignments are all annotated with `@Indexable`:
 
@@ -370,14 +371,14 @@ The final step is to review when and how indexing is triggered. Indexing is trig
 
 As long as our customizations and overloads of these methods in the `AssignmentLocalServiceImpl` call the base class, we don't have to add annotations to trigger indexing. If you want your custom `AssignmentLocalServiceImpl` method to trigger indexing, just annotate it with `@Indexable` and remember that an indexable method has to return the updated entity.
 
-#### Reindex the Search Index
+## Reindex the Search Index
 
 If you have created test Assignments, you have to reindex the search index to get the Assignments to appear on the results list:
 
 1. **Open** *Control Panel → Configuration → Search*.
 1. **Reindex** all search indexes.
 
-#### Test the Application
+## Test the Application
 
 1. **Use** the portal search bar to search Assignments.
 1. **Create** a new Assignment and check whether it appears in the search.

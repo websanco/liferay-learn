@@ -1,6 +1,4 @@
-<h2 class="exercise">Exercises</h2>
-
-## Configuring Default Settings via the Platform UI
+# Configuring Default Settings via the Platform UI
 
 <div class="ahead">
 	<h3>Exercise Goals:</h3>
@@ -11,7 +9,7 @@
 		</ul>
 </div>
 
-#### Build and Start the Container for the Tomcat Service
+## Build and Start the Container for the Tomcat Service
 1. **Open** a new _Terminal_ window.
 2. **Go to** the _liferay-tomcat_ folder in your exercise source.
 3. **Run** the following command to build the _tomcat_ and _mysql_ services:
@@ -23,7 +21,7 @@ docker-compose build liferay-tomcat-1 mysql
 docker-compose up -d liferay-tomcat-1
 ```
 
-#### Log in to the Server and Find the Instance Settings
+## Log in to the Server and Find the Instance Settings
 
 1. **Go to** `localhost:8081` in your browser to access the site.
 2. **Sign in** to the platform with the following credentials:
@@ -36,7 +34,7 @@ docker-compose up -d liferay-tomcat-1
 5. **Go to** _`Control Panel → Configuration → Instance Settings`_.
 6. **Click** on the *Localization* option on the *Instance Settings* page.
 
-#### Set a New Default Language for the Platform
+## Set a New Default Language for the Platform
 
 Notice there are a number of options for both locales and time zones. For now, let's focus on just the locales, specifically the default language. When setting a default language, whatever is selected will be applied first.
 
@@ -45,7 +43,7 @@ Notice there are a number of options for both locales and time zones. For now, l
 
 <img src="../images/chapter-2/default-language-changed.png" style="max-width: 100%">
 
-#### Verify the Language Change in a New Browser
+## Verify the Language Change in a New Browser
 
 You'll notice right away that nothing has changed. This is because the current user's default language is not French.
 
@@ -54,7 +52,7 @@ You'll notice right away that nothing has changed. This is because the current u
 
 <img src="../images/chapter-2/liferay-french.png" style="max-width: 100%">
 
-#### Revert to the Original Default Language
+## Revert to the Original Default Language
 
 1. **Go to** your original browser again, where we were configuring the default language.
 2. **Choose** *English (United States)* as the default language, under the *Default Language* drop-down menu.
@@ -64,7 +62,7 @@ You may notice the section below the default language, where you can see the hea
 
 <img src="../images/chapter-2/available-languages.png" style="max-width: 100%">
 
-#### Set a Custom Time Zone for the Platform
+## Set a Custom Time Zone for the Platform
 
 While we are here in *Display Settings*, let's discuss changing the time zone.
 
@@ -76,7 +74,7 @@ This sets the time zone throughout the whole instance, but because the user sett
 
 <img src="../images/chapter-2/time-zone.png" style="max-width: 100%">
 
-#### Find the Site-Level Configuration Options
+## Find the Site-Level Configuration Options
 
 Now that we've seen how to set the locales at the instance level, we'll take a look at how to set them at the site level.
 
@@ -91,7 +89,7 @@ Now that we've seen how to set the locales at the instance level, we'll take a l
 
 We are given two options under *Languages*. The first option, *Use the default language options*, takes the values established in the *Instance Settings* of the *Control Panel*. The second option, *Define a custom default language and additional available languages for this Site*, allows you to take the current languages set by *Instance Settings* and disable them.
 
-#### Find the App Manager Settings
+## Find the App Manager Settings
 
 Within your operations role, you may be tasked with managing or monitoring an application component or module. Modules, like properties, can be managed in two ways. The first way to manage modules is through the UI.
 
@@ -103,7 +101,7 @@ Within your operations role, you may be tasked with managing or monitoring an ap
 
 In the *App Manager*, we can manage all of the apps that are installed in Liferay. Let's take a look at the *Liferay Blogs Module*.
 
-#### Deactivate a Module Using the App Manager in the UI
+## Deactivate a Module Using the App Manager in the UI
 
 1. **Click** on *Liferay Blogs*, and you'll see all the modules that make up the Blogs app.
 2. **Click** on the *Options* menu next to the _Liferay Blogs API_.
@@ -114,7 +112,7 @@ You'll see that the status has been changed from *Active* to *Resolved*, letting
 
 <img src="../images/chapter-2/blogs-resolved.png" style="max-width: 100%">
 
-#### Log in to a Telnet Session In Your Terminal
+## Log in to a Telnet Session In Your Terminal
 
 Another way to manage modules in Liferay is through the Gogo Shell. The Gogo Shell allows you to check the status and stop and start modules through the *Terminal*.
 
@@ -129,7 +127,7 @@ Another way to manage modules in Liferay is through the Gogo Shell. The Gogo She
 NOTE:
 Telnet has been removed from the lastest MacOS releases. You can still access the Gogo Shell through Liferay's UI by going to _Control Panel → Configuration → Gogo Shell_.
 
-#### Examine and Restart a Module Using Telnet
+## Examine and Restart a Module Using Telnet
 
 1. **Type** `lb blogs`.
 2. **Press** *Enter* to search for the Blogs module to show all the modules with the word "blogs".
@@ -147,7 +145,7 @@ If you refresh the App Manager in the browser, you'll see that the module is mar
 
 ---
 
-#### Bonus Exercises: 
+## Bonus Exercises: 
 
 Try the following bonus exercise after completing the main exercises:
 

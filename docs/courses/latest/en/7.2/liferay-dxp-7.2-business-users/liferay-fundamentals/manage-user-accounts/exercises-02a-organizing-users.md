@@ -1,6 +1,4 @@
-<h2 class="exercise">Exercises</h2>
-
-## Create an Organization Hierarchy for Livingstone
+# Create an Organization Hierarchy for Livingstone
 
 <div class="ahead">
 <h4>Exercise Goals</h4>
@@ -12,7 +10,8 @@
 </ul>
 </div>
 
-#### Create a New Livingstone Rewards Organization
+## Create a New Livingstone Rewards Organization
+
 1. **Open** the _Menu_.
 * **Go to** _`Control Panel → Users → Users and Organizations`_.
 * **Click** on the _Organizations_ tab.
@@ -22,7 +21,8 @@
 
 <img src="../images/livingstone-rewards-org.png" style="max-height: 35%">
 
-#### Create a Sub-Organization for Livingstone Rewards United States
+## Create a Sub-Organization for Livingstone Rewards United States
+
 1. **Click** the back button at the top left.
 * **Click** on the _Options_ menu to the right of the _Livingstone Rewards_ organization.
 * **Click** _Add Organization_.
@@ -34,7 +34,8 @@
 
 <img src="../images/livingstone-us.png" style="max-height: 50%">
 
-#### Create an Organization Site for Livingstone Rewards U.S.
+## Create an Organization Site for Livingstone Rewards U.S.
+
 1. **Click** _Organization Site_ in the left menu.
 * **Click** the _Create Site_ toggle.
 * **Choose** the _Intranet Site_ for the _Private Pages_ drop-down.
@@ -42,7 +43,8 @@
 
 <img src="../images/livingstone-us-org-site-template.png" style="max-height: 30%">
 
-#### Create a Sub-Organization for Livingstone Rewards Fiji
+## Create a Sub-Organization for Livingstone Rewards Fiji
+
 1. **Click** on _Users and Organizations_ in the Menu.
 * **Click** on the _Organizations_ tab.
 * **Click** on the _Options_ menu to the right of the _Livingstone Rewards_ organization.
@@ -55,7 +57,8 @@
 
 <img src="../images/livingstone-fiji.png" style="max-height: 38%">
 
-#### Create an Organization Site for Livingstone Rewards Fiji
+## Create an Organization Site for Livingstone Rewards Fiji
+
 1. **Click** _Organization Site_ in the left menu.
 * **Click** the _Create Site_ toggle.
 * **Choose** the _Intranet Site_ for the _Private Pages_ drop-down.
@@ -65,7 +68,8 @@
 
 <br />
 
-#### Assign Jason Murray as a User to the Livingstone Rewards U.S. Organization
+## Assign Jason Murray as a User to the Livingstone Rewards U.S. Organization
+
 1. **Click** on _Users and Organizations_ in the Menu.
 * **Click** on the _Organizations_ tab.
 * **Click** on the _Livingstone Rewards_ Organization.
@@ -80,7 +84,8 @@
 
 <br />
 
-#### Log In as Jason Murray
+## Log In as Jason Murray
+
 1. **Open** the _Personal Menu_ at the top right.
 * **Click** _Sign Out_ at the bottom.
 * **Click** _Sign In_ at the top right.
@@ -96,7 +101,8 @@
 
 <br />
 
-#### Go to the Livingstone Rewards U.S. Organization Site
+## Go to the Livingstone Rewards U.S. Organization Site
+
 1. **Click** on the _Personal Menu_.
 * **Click** _My Sites_.
 * **Click** the _My Sites_ tab.
@@ -109,7 +115,8 @@
 
 ---
 
-#### Bonus Exercise:
+## Bonus Exercise:
+
 1. Create Sub-Organizations for the regions of Indonesia, Spain, and Japan.
 2. Add Organization Logos for any of the new Organizations.
 3. Add Contact Information for each region's Organization.

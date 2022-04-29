@@ -1,4 +1,4 @@
-## Introduction to CI/CD Pipelines
+# Introduction to CI/CD Pipelines
 
 System automation is great, but a DevOps approach would not be complete if automated system provisioning isn't integrated with the development and deployment of the application. Here is where Continuous Integration, Delivery, and Deployment come into play to close the loop.
 
@@ -36,7 +36,7 @@ What are the benefits of implementing a CI/CD/CD pipeline?
 
 Now that we have a general understanding of these concepts and how they make life easier for us, let’s look at each one in detail and how we can apply them in Liferay projects.
 
-#### Continuous Integration {#ci}
+## Continuous Integration {#ci}
 
 <div class="key-point">
 Key Point: <br />
@@ -54,7 +54,7 @@ We will not get too deep into testing in this section, but tests can essentially
 Note: All these tests can be coded using popular frameworks like JUnit, Mockito, Selenium, Cucumber, and so on.
 </div>
 
-#### Continuous Delivery {#cdel}
+## Continuous Delivery {#cdel}
 
 <div class="key-point">
 Key Point: <br />
@@ -67,7 +67,7 @@ This makes rolling back changes easier, meaning there are fewer user errors and 
 Note: For Continuous Delivery to work, you need to integrate Systems Provisioning with Application Development. This means that both orchestration and image-building could be included in the CI pipeline to build and deploy images to different environments with a single click.
 </div>
 
-#### Continuous Deployment {#cdep}
+## Continuous Deployment {#cdep}
 
 _Continuous Deployment_, the second CD, is the ultimate scenario, automation nirvana.
 

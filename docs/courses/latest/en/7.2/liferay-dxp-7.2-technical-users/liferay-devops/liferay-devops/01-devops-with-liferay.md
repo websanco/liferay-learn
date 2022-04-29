@@ -1,4 +1,4 @@
-## DevOps with Liferay
+# DevOps with Liferay
 
 A key part of any product's lifecycle is deploying to production. System administrators and operations engineers play a vital role in this process. Traditionally, however, there have been significant barriers between the developers who create software and the administrators who deploy and manage that software's code in a production environment. Not uncommon is a constant ideological struggle between developers looking to increase development speed and system administrators aiming for operational stability. A separation of responsibilities and seemingly opposed goals lead to issues that negatively impact product, teams, and, ultimately, the business. How many times have you heard someone say, _"That's a development issue"_ or _"Sorry, that's an operations problem"_?
 
@@ -6,7 +6,7 @@ The team at Livingstone Hotels & Resorts needs to find a way to decrease the tim
 
 The Livingstone team is prepared to make the move to restructure their organizational culture using a DevOps philosophy and methodology. They'll be aiming for improved inter-team dynamics and more automated processes and tools in order to reduce friction and decrease time to market. 
 
-### What is DevOps? {#devops}
+## What is DevOps? {#devops}
 
 The DevOps philosophy aims to tear down the silos that often isolate development and operations teams by increasing communication and collaboration between these teams. This ultimately leads to the creation of products that are more stable, higher quality, and delivered more quickly. DevOps is a combination of _Development_ and _Operations_. The DevOps movement has its roots in Agile methodologies. It is _primarily_ a culture and set of values that has subsequently developed into a set of processes, practical tools, and practices for getting work done. These processes and tools feature a strong focus on automation and infrastructure as code. The movement is seeing incredible growth in the IT world and has been adopted by many industry professionals.
 
@@ -29,7 +29,7 @@ DevOps takes these ideas and philosophies about how to do work and pairs them wi
 
 We've talked a little about the philosophy behind DevOps. Now let's take a high-level look at its tools and how DevOps can integrate with Liferay.
 
-### DevOps and Automation {#automation}
+## DevOps and Automation {#automation}
 
 One of the most important practical components of the DevOps methodology is automation. Ultimately, you should aim to automate everything, including: 
 
@@ -68,7 +68,7 @@ By combining orchestration and cloud environments, you can introduce _auto-scali
 
 Throughout this course, we'll look closely at a containerized Liferay stack setup using Docker containers and Docker Compose.
 
-### Continuous Integration, Delivery, and Deployment {#continuous}
+## Continuous Integration, Delivery, and Deployment {#continuous}
 
 In the DevOps mindset, system automation is only half of the equation. The picture is not complete without integrated application development and deployment. In order to include development, testing, and deployment stages of a product's lifecycle most effectively into a DevOps workflow, proponents of the DevOps way have settled on a set of best practices:
 
@@ -82,7 +82,7 @@ The central piece of this continuous approach pipeline is the "build server", a 
 
 Reaching this level of DevOps "nirvana" takes work and requires more than simple tooling changes. However, you will likely find that the benefits far outweigh the risks and growing pains that are required to implement the DevOps philosophy. 
 
-### Integrating With DevOps Culture {#integrate}
+## Integrating With DevOps Culture {#integrate}
 
 Throughout this course, we'll take an introductory look at some key DevOps tools and practices implemented in a Liferay ecosystem. 
 

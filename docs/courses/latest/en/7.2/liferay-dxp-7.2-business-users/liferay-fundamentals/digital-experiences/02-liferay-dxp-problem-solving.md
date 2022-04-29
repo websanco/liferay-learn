@@ -1,8 +1,8 @@
-## Liferay DXP Problem Solving
+# Liferay DXP Problem Solving
 
 Multiple technologies, services, and solutions can help businesses tackle the challenges that crop up in day-to-day work. Let's talk about some common business challenges for which Liferay has a solution by looking at the business needs of a company called Livingstone Hotels & Resorts. 
 
-#### Livingstone Hotels & Resorts {#livingstone}
+## Livingstone Hotels & Resorts {#livingstone}
 
 Livingstone Hotels & Resorts is a premier hospitality company with 120 hotels and resorts in 72 countries, six global offices, and a popular travel journal called _Livingstone Life_.
 
@@ -37,7 +37,7 @@ Here is the core team responsible for implementing solutions for these business 
 *Designer*: responsible for creating Livingstone's brand identity and defining a site's look and feel     |  *Web Developer*: responsible for taking Martin's designs and implementing them
 <img src="../images/persona-images/martin-llewellyn.jpg" style="max-width:60%; border-radius:7px;" /> |  <img src="../images/persona-images/kaito-tanaka.png" style="max-height:30%; border-radius:7px;" />
 
-#### How Liferay Addresses Common Business Problems {#problems}
+## How Liferay Addresses Common Business Problems {#problems}
 
 Liferay DXP is a platform that includes a number of widgets with varying functionality. Many of these widgets and applications are grouped in out-of-the-box _Application Suites_. The tools in these suites can be used alone or in tandem with additional Liferay products. Let's look at a few examples of how these suites solve some of the issues the Livingstone team is trying to address. 
 
@@ -52,7 +52,7 @@ Liferay DXP's out-of-the-box <i>Application Suites</i> include:
 </ul>
 </div>
 
-#### Cutting Development Time {#development}
+## Cutting Development Time {#development}
 
 With the abundance of features available on the platform, the Livingstone team can use out-of-the-box features to accomplish their goals, only customizing or developing when absolutely necessary. For example, the Livingstone team has a loyalty program and an existing authentication system that stores their customers and customer status. The loyalty program has an impact on the following:
 1. Which groups are available and what groups are organized into specific loyalty categories 
@@ -70,7 +70,7 @@ When customization is necessary, developers have access to a number of APIs, pro
 	<figcaption style="font-size: x-small">Fig.2 Configuring user roles on the platform</figcaption>
 </figure>
 
-#### Cutting Time to Market {#market}
+## Cutting Time to Market {#market}
 
 Livingstone Hotels & Resorts is a rapidly expanding business with new hotels, resorts, and travel package offerings coming out on a regular basis. To make sure their customers are getting the best possible experience, they need be able to get new sites, pages, and content out quickly. 
 
@@ -85,7 +85,7 @@ The team can take advantage of the many reusable templates that the _Liferay Fou
 	<figcaption style="font-size: x-small">Fig.3 Example of a reusable content template</figcaption>
 </figure>
 
-#### Cutting Administrative Costs with Self-Service and User Collaboration {#costs}
+## Cutting Administrative Costs with Self-Service and User Collaboration {#costs}
 
 The _Livingstone Life_ website is intended to be a new project that allows the team to regularly publish travel blogs and collaborate with their user base on different service projects and events. They need to be able to automate publication and use tools that allow for user collaboration and feedback. 
 
@@ -99,7 +99,7 @@ The team can take advantage of features from the _Liferay Web Experience_ and _L
 	<figcaption style="font-size: x-small">Fig.4 Blog posts on the Liferay platform</figcaption>
 </figure>
 
-#### Gathering Metrics and User Feedback {#metrics}
+## Gathering Metrics and User Feedback {#metrics}
 
 In order to ensure the best experience for their customer base, the Livingstone team needs a way to gather metrics, internal feedback, and customer feedback on their platform so they can make metrics-driven decisions. 
 
@@ -113,7 +113,7 @@ The team can leverage the _Liferay Forms and Workflow_ suite and use Analytics C
 	<figcaption style="font-size: x-small">Fig.5 Metrics data on Analytics Cloud</figcaption>
 </figure>
 
-#### Digital Asset Management {#assets}
+## Digital Asset Management {#assets}
 
 Finally, with all the legal documents, contracts, employee documents, and marketing photos that the Livingstone team will need to manage for different hotels and resorts, the team needs features that can let them organize and categorize effectively so they can add and retrieve the information they need as easily as possible.
 

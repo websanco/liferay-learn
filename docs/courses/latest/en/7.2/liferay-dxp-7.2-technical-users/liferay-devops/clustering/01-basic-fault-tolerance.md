@@ -1,4 +1,4 @@
-## Basics of Fault Tolerance
+# Basics of Fault Tolerance
 
 In order to understand managing fault tolerance in Liferay, we first need to understand Liferay's architecture. Liferay is a Web Application, which comes with its own set of requirements:
 
@@ -48,7 +48,7 @@ Like the index, the document store is, by default, embedded in Liferay. The docu
 
 Now that we've covered the basics of Liferay architecture for clustering, we'll take a more practical look into creating an unbreakable Liferay.
 
-### Fault-Tolerant Configurations {#config}
+## Fault-Tolerant Configurations {#config}
 
 A typical production configuration has a few goals. One is to handle traffic to the website with no issues. The other is to respond well when issues do occur. 
 
@@ -85,7 +85,7 @@ Sooner or later, your hardware is going to fail. It will probably happen when yo
 
 In addition to your backup strategy and other continuity practices, it's vital to provide adequate fault tolerance for your deployments. The reference architecture is a minimum configuration for a single data center and cluster. Additional nodes mean additional fault tolerance and data centers.
 
-### Server Affinity {#affinity}
+## Server Affinity {#affinity}
 
 Imagine, if you will, a new dystopia, where you sit down at your favorite chain restaurant to order, and suddenly you find yourself at the same table but at a different restaurant in the next town. Confused, you provide your order to the new waiter, and when you're done, you find yourself back at the first restaurant, but they're asking you to leave, because you've been there for too long without ordering. Not an ideal situation, clearly. Without configuring Load Balancing behavior, this is what can happen to sessions in your cluster. Users can find themselves losing data or getting bounced from node to node, with very confusing results.
 
@@ -101,7 +101,7 @@ There are two pieces to the sticky session configuration: the **Load Balancer** 
 
 Each Application Server will be responsible for serving up each node in the cluster. You need to configure each node to work with the Load Balancer.
 
-### Using a Full-Featured Web Server As a Load Balancer {#loadbalance}
+## Using a Full-Featured Web Server As a Load Balancer {#loadbalance}
 
 Instead of a hardware Load Balancer, you can also use a web server like Apache. Apache uses the concept of **workers** to manage cluster nodes - each node in the cluster is a worker. All incoming traffic will go to Apache and is directed to a worker.
 
@@ -119,7 +119,7 @@ There are a few technologies used to route the traffic between nodes. Apache use
 	<figcaption style="font-size: x-small">Fig.3 Routing traffic between nodes</figcaption>
 </figure>
 
-### Session Replication {#repl}
+## Session Replication {#repl}
 
 Now that we've taken a look at the specific technologies, let's head back to our restaurant for a different scenario. What if, instead of ensuring that you're not magically transported to another restaurant while you're eating, the solution was just to make every restaurant in the chain prepare the meal that you requested? This would be **Session Replication**.
 

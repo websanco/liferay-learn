@@ -1,7 +1,5 @@
-<h2 class="exercise">Exercises</h2>
-
-## Setting up and Deploying with the NPM Theme Generator
-
+# Setting up and Deploying with the NPM Theme Generator
+<!-- 
 <div class="ahead">
 <h4>Exercise Goals</h4>
 	<ul>
@@ -16,7 +14,8 @@
 	</ul>
 </div>
 
-#### Install a Liferay Tomcat Bundle in a New Bundles Folder
+## Install a Liferay Tomcat Bundle in a New Bundles Folder
+
 1. **Create** a new _`bundles`_ folder in your liferay folder so that you have a directory that looks like this:
 	* Windows: _C:\liferay\bundles_
 	* Unix Systems: _[user-home]/liferay/bundles_
@@ -28,13 +27,15 @@
 Note: This file can be found in the software materials provided by the instructor. Windows' built-in archive tool causes problems with Liferay when it tries to extract the large .zip file. We recommend using a third-party tool, like 7-Zip or WinZip.
 </div>
 
-#### Set the Tomcat Bundle to Developer Mode
+## Set the Tomcat Bundle to Developer Mode
+
 1. **Copy** the _portal-ext.properties_ file from this module's exercise folder.
 2. **Paste** the file into the _liferay home_ folder.
 	* Windows: _C:\liferay\bundles\liferay-dxp-tomcat-[version]_
 	* Unix Systems: _[user-home]/liferay/bundles/liferay-dxp-tomcat-[version]_
 
-#### Install Node v10.15.1
+## Install Node v10.15.1
+
 1. **Go to** [https://nodejs.org/download/release/v10.15.1/](https://nodejs.org/download/release/v10.15.1/).
 2. **Click** the appropriate installer for your operating system.
 3. **Click** through the installer.
@@ -51,25 +52,31 @@ Note: It is possible you may run into errors with the latest LTS version of Node
 
 <img src="../images/node-LTS.png" style="max-height: 100%">
 
-#### Mac OSX and Linux: Redirect the NPM Global Command
+## Mac OSX and Linux: Redirect the NPM Global Command
+
 1. **Create** an `.npmrc` file in your user home.
 	* You can navigate here in your _Terminal_ using `cd ~/[username]`.
 2. **Add** the following in your `.npmrc` file:
+
 ```
 prefix=/Users/[username]/.npm-packages
 ```
+
 3. **Save** the file.
 4. **Open** your `.profile` file.
 	* Use the shortcut `CMD + SHIFT + .` to view hidden files in your user home.
 5. **Add** the following to your `.profile` file:
+
 ```
 export NPM_PACKAGES=/Users/[username]/.npm-packages
 export PATH=${PATH}:${NPM_PACKAGES}/bin
 ```
+
 6. **Save** the file.
 7. **Restart** the _Terminal_ for the changes to take place.
 
-#### Install Yeoman and the Liferay Theme Generator
+## Install Yeoman and the Liferay Theme Generator
+
 1. **Run** `npm install -g yo` to install the Yeoman and Gulp dependency.  
 2. **Run** `npm install -g generator-liferay-theme@9.x.x` to install the Liferay Theme Generator.  
 3. **Run** `yo` in the _Command Line/Terminal_ to see that the generator is installed.  
@@ -78,7 +85,8 @@ export PATH=${PATH}:${NPM_PACKAGES}/bin
 
 <img src="../images/get-me-out-of-here.png" style="max-height: 100%">
 
-#### Start the Liferay-Tomcat Bundle
+## Start the Liferay-Tomcat Bundle
+
 1. **Go to** the Tomcat server's `bin` directory:
 	* Windows: _C:\liferay\bundles\liferay-dxp-[version]\tomcat-[version]\bin_ in the file manager
 	* Mac/Linux: _[userhome]/liferay/bundles/liferay-dxp-[version]/tomcat-[version]/bin_ using the _Terminal_
@@ -86,13 +94,15 @@ export PATH=${PATH}:${NPM_PACKAGES}/bin
 	* Windows: **Double-click** on the `startup.bat`.  
 	* Mac/Linux: **Run** `./catalina.sh run` in your _Terminal_.
 
-#### Deploy the Activation Key
+## Deploy the Activation Key
+
 1. **Copy** the _activation-key-digitalenterprisedevelopment-7.2-liferaycom.xml_ file from your provided materials.
 2. **Paste** the file into your _liferay-dxp-[version]/deploy_ folder.
 
 You should see that the Activation Key is registered in the _Terminal_ or _Command Line_ window.
 
-#### Complete the Liferay Setup Wizard
+## Complete the Liferay Setup Wizard
+
 1. **Go to** _localhost:8080_ in the browser.
 	* You may be redirected here already.
 2. **Type** _Livingstone Hotels & Resorts_ as the _Portal Name_.
@@ -108,7 +118,8 @@ You should see that the Activation Key is registered in the _Terminal_ or _Comma
 11. **Type** in an answer.
 12. **Click** _Save_.
 
-#### Create a New Theme to Deploy
+## Create a New Theme to Deploy
+
 1. **Go to** your _`liferay`_ folder in your _Command Line/Terminal_.
 	* Windows: _C:\liferay_
 	* Unix Systems: _[userhome]/liferay_
@@ -127,7 +138,8 @@ You should see that the Activation Key is registered in the _Terminal_ or _Comma
 Note: Liferay themes created with the theme generator are bundled with Gulp. In order to run Gulp locally from the command line, we must add a script to the package.json file. Additionally, some setups run into issues running scripts with npm. If this is the case, try creating an .npmrc file in the root of your project and add the <code>ignore-scripts=false</code> configuration.
 </div>
 
-#### Add Gulp Scripts to package.json
+## Add Gulp Scripts to package.json
+
 1. **Go to** your _`my-test-theme`_ folder.
 * **Open** your `package.json` file.
 * **Add** the following beneath the "liferayTheme" dependencies:
@@ -170,13 +182,14 @@ When you're finished, `package.json` should look something like this:
 }
 ```
 
-#### Deploy the Theme
+## Deploy the Theme
+
 1. **Go to** your new theme directory in the _Command Line/Terminal_:
 	* Windows: _C:\liferay\my-test-theme_
 	* Unix Systems: _[userhome]/liferay/my-test-theme_
 * **Run** _npm run gulp deploy_ in the _Command Line/Terminal_.
 
-#### Select the New Theme on the Platform
+## Select the New Theme on the Platform
 1. **Log in** to _localhost:8080_ if you're not already logged in.
 2. **Open** the _Menu_.
 3. **Go to** _`Site Builder → Pages`_ in the _Site Administration_ panel.
@@ -190,6 +203,7 @@ When you're finished, `package.json` should look something like this:
 
 ---
 
-#### Bonus Exercises
+## Bonus Exercises
+
 1. Change the theme back to the _Classic_ theme.
-2. Explore the new theme project and add some css to the _custom.scss_ file in the _src_ folder and deploy the changes.
+2. Explore the new theme project and add some css to the _custom.scss_ file in the _src_ folder and deploy the changes. -->

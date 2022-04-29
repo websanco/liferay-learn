@@ -4,7 +4,7 @@ title: Manage Module Dependencies
 order: 5
 ---
 
-## Manage Module Dependencies
+# Manage Module Dependencies
 
 Liferay applications are modular and typically consist of multiple modules. In addition to inter-module dependencies within the project workspace, projects usually have external dependencies too. 
 
@@ -14,7 +14,7 @@ Dependencies of a deployable OSGi JAR archive are defined as import headers in t
 
 If dependencies are already available in the OSGi container, declaring it in the `compileOnly` or `provided` scope is usually the only necessary dependency management step for a developer. In case of external dependencies, the Liferay-provided `compileInclude` additionally embeds the dependencies in the bundle archive JAR. Sometimes, however, you might need to declare explicit _import_ or _resource including - or excluding_ statements in the `bnd.bnd` file.
 
-#### Target Platform
+## Target Platform
 
 Since version 7.1, Liferay has provided a Gradle plugin called *Target Platform*. This plugin helps you to target your dependencies to a specific release of Liferay Portal so that the dependency versions get resolved automatically. This makes not only development time but upgrading modules substantially easier.
 
@@ -37,9 +37,10 @@ dependencies {
 }
 
 ```
+
 > See more information about the Target Platform plugin on [Developer Network](https://dev.liferay.com/de/develop/tutorials/-/knowledge_base/7-1/managing-the-target-platform-for-liferay-workspace).
 
-#### Common Dependency Management Tasks
+## Common Dependency Management Tasks
 
 Although the Target Platform plugin handles many of the time-taking dependency management tasks, sometimes we have to define the versions numbers explicitly. It's also good to know how dependency management works behind the scenes.
 
@@ -52,7 +53,7 @@ Examples of common tasks you might encounter when dealing with module dependenci
 1. Embed non-OSGi-compliant libraries into your module.
 1. Use a class from the global class loader (e.g., `TOMCAT/lib/ext`).
 
-#### 1 - Referencing a Dependent Module Project
+## 1 - Referencing a Dependent Module Project
 
 Declaring a dependent Liferay module project on the same Liferay Workspace is done in `build.gradle`. Bndtools will automatically take care of creating the feature-sharing headers:
 
@@ -60,11 +61,11 @@ Declaring a dependent Liferay module project on the same Liferay Workspace is do
 compileOnly project(":modules:training-module:training-module-api")
 ```
 
-#### 2 - Finding a Library Bundle Containing a Liferay Class
+## 2 - Finding a Library Bundle Containing a Liferay Class
 
 A common task in developing Liferay modules is to find the dependency bundle containing a certain Liferay class. Liferay's bundle repository makes it easy:
 
-#### Step 1 - Find the Bundle for BlogsEntry
+## Step 1 - Find the Bundle for BlogsEntry
 
 Go to https://repository.liferay.com/nexus/index.html and search the bundle by the class name "BlogsEntry": 
 
@@ -74,7 +75,7 @@ The *Group*, *Artifact* and *Version* information can be found in the *Maven* pa
 
 <br />
 
-#### Step 2 - Add the Dependency to build.gradle
+## Step 2 - Add the Dependency to build.gradle
 
 As the Blogs API in the example is under Target Platform management, you can remove the version:
 
@@ -90,7 +91,7 @@ dependencies {
 }
 ```
 
-#### 3 - Determining Gradle Dependency Scope
+## 3 - Determining Gradle Dependency Scope
 
 If a dependent library is available in the OSGi container at runtime, you should usually try to use the `compileOnly` scope, which includes the dependency classes only at compile time but doesn't include those in the bundle. The `compileOnly` scope is not transitive, meaning that dependencies of the dependent library are not resolved automatically, and you have to take care of declaring those too. 
 
@@ -103,7 +104,7 @@ Below is a list of Gradle dependency scopes commonly used in Liferay plugin deve
 * __runtime:__ classes needed at runtime
 * __testCompile:__ like compileOnly, but for tests
 
-#### 4 - Defining Version Range for the Dependency
+## 4 - Defining Version Range for the Dependency
 
 Target Platform usually doesn't require using versions in the `build.gradle`, but the feature-sharing of OSGi requires explicit versions. If you need to explicitly declare feature-sharing directives in the `bnd.bnd`, you'll always use version ranges:
 
@@ -145,7 +146,7 @@ Using, for example, version 1.3.1, would result in:
 Unresolved requirement: Import-Package: com.liferay.module; version="[1.3.2,4.0.0)"
 ```
 
-#### 5 - Embed Non-OSGi-Compliant Libraries into Your Module
+## 5 - Embed Non-OSGi-Compliant Libraries into Your Module
 
 The Liferay-provided, custom `compileInclude` Gradle scope provides a convenient way to embed a dependent artifact into the lib folder of a module’s JAR. The required `Bundle-ClassPath` header is added to the bundle manifest automatically:
 
@@ -160,6 +161,7 @@ dependencies {
 External libraries can be embedded in the module JAR as well using the standard Gradle scopes. Below is an example of embedding Google's Guava library. First, declare the dependency in `build.gradle`, and then reference it in `bnd.bnd`:
 
 **build.gradle**
+
 ```groovy
 dependencies {
 	compileOnly group: 'com.google.guava', name: 'guava', version: '21.0'
@@ -183,7 +185,7 @@ Bundle-ClassPath:\
 
 > See the Developer Network article (https://dev.liferay.com/develop/tutorials/-/knowledge_base/7-1/adding-third-party-libraries-to-a-module) for more information on this use case. 
 
-#### 6 - Importing a Library From a Global Class Loader
+## 6 - Importing a Library From a Global Class Loader
 
 Every OSGi bundle in the container has its own class loader. Class loader delegation is managed by the OSGi container, which requires bundles to explicitly define what they expose from themselves to the container. This means that, by default, none of the bundle's own classes nor any embedded libraries are exposed to other bundles in the container.
 
@@ -196,7 +198,7 @@ portal-ext.properties:
 module.framework.system.packages.extra=my.dependendent.library.package
 ```
 
-#### Using Non-OSGi-Compliant Libraries
+## Using Non-OSGi-Compliant Libraries
 
 An OSGi-compliant library bundle can be deployed to the OSGi container and made available to other bundles. But what do you do if your project depends on a library that is not OSGi-compliant? 
 

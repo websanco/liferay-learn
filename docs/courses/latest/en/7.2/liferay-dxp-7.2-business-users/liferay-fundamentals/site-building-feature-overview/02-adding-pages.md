@@ -1,4 +1,4 @@
-## Adding and Managing Pages
+# Adding and Managing Pages
 
 Sites are distinct groups of content, which means that administrators can choose to manage content that is restricted to a certain group of Users that have access to the Site Administration panel, or they can display content on _Pages_ to engage with their Users. Pages in Sites have a number of different configurations and options that ensure the best User experiences are possible. 
 
@@ -9,7 +9,7 @@ Sites are distinct groups of content, which means that administrators can choose
 
 <br />
 
-#### Livingstone Site Pages {#livingstonepages}
+## Livingstone Site Pages {#livingstonepages}
 
 Each of the core Livingstone team members will be responsible for different aspects of the site lifecycle. Josiah Copeland will need a way to rapidly generate new sites and pages for the different location sites. Maria Flores and Natalia Michaels will primarily be responsible for generating content for the sites. 
 
@@ -21,7 +21,7 @@ Here are some examples of the different kinds of pages Josiah needs to generate 
 
 Some of these pages are unique, while others, such as the hotel and resort pages, will all have the same general format and should be built from the same template. 
 
-#### Page Types and Templates {#pagetypes}
+## Page Types and Templates {#pagetypes}
 
 Liferay DXP includes several different page types and templates that empower administrators to create pages that align with multiple use cases. These different kinds of pages can have widgets or coded fragments, not only to provide the best experience for users, but also to manage the pages better. 
 

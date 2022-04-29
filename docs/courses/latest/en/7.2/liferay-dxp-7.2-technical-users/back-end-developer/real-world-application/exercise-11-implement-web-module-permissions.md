@@ -4,9 +4,7 @@ title: Implement Web Module Permissions
 order: 11
 ---
 
-<h2 class="exercise">Exercises</h2>
-
-## Implement Web Module Permissions
+# Implement Web Module Permissions
 
 <div class="ahead">
 <h4>Exercise Goals</h4>
@@ -21,7 +19,7 @@ order: 11
 	</ul>
 </div>
 
-#### Define the Permissions
+## Define the Permissions
 
 1. **Create** a folder `src/main/resources/resource-actions` in the *gradebook-web* module.
 1. **Create** a file `src/main/resources/resource-actions/default.xml` and implement as follows (switch to *Source* mode, if needed):
@@ -54,7 +52,7 @@ order: 11
 	</resource-action-mapping>
 	```
 
-#### Define the Permissions Definition Location
+## Define the Permissions Definition Location
 
 1. **Create** a file `src/main/resources/portlet.properties` in the *gradebook-web* module.
 1. **Implement** the file as follows:
@@ -62,7 +60,7 @@ order: 11
 	resource.actions.configs=/resource-actions/default.xml
 	```
 
-#### Implement the Top-Level Resource Permission Checker Class
+## Implement the Top-Level Resource Permission Checker Class
 
 Implement a helper class in the *gradebook-web* module for checking top-level permissions. This is a permission checker class we'll call from the user interface.
 
@@ -108,7 +106,7 @@ Implement a helper class in the *gradebook-web* module for checking top-level pe
 	}
 	```
 
-#### Implement the Model Resource Permission Checker Class
+## Implement the Model Resource Permission Checker Class
 
 Implement a class for checking existing entity permissions.
 
@@ -167,12 +165,13 @@ Implement a class for checking existing entity permissions.
 	}
 	```
 
-#### Implement Permission Checking in the JSP Files
+## Implement Permission Checking in the JSP Files
 
 We'll put our entity permission checking object into the request attributes of our main view so that it can be used in the JSP files.
 
 1. **Open** the class `com.liferay.training.gradebook.web.portlet.action.ViewAssignmentsMVCRenderCommand`
 1. **Add** a service reference for the permission checker:
+
 	```java
 	@Reference
 	protected AssignmentPermission _assignmentPermission;
@@ -346,17 +345,19 @@ We'll put our entity permission checking object into the request attributes of o
 	}
 	```
 
-
 So far, everybody has been able to see the assignment actions menu. Now we'll hide them from unauthorized users. 
 
 We'll also add an option to manage entity permissions. For that purpose, we'll use the `<liferay-security>` tag library:
 
 1. **Declare** the `<liferay-security>` taglib in `src/main/resources/META-INF/resources/init.jsp`
+
 	```html
 	<%@ taglib prefix="liferay-security" uri="http://liferay.com/tld/security" %>.
 	```
+
 1. **Open** the file `src/main/resources/META-INF/resources/assignment/entry_actions.jsp`
 1. **Wrap** all the actions with permission checks so that only authorized users can access the functions and add a permissions menu option. Replace the contents of the file with the following. Notice the highlighted rows:
+
 	```html
 	<%@ include file="/init.jsp"%>
 	
@@ -417,9 +418,9 @@ We'll also add an option to manage entity permissions. For that purpose, we'll u
 			<liferay-ui:icon-delete url="${deleteAssignmentURL}" />
 		</c:if>
 	</liferay-ui:icon-menu>
-	```	
+	```
 
-#### Implement Permission Checking in the Management Toolbar
+## Implement Permission Checking in the Management Toolbar
 
 The last thing to do is to hide the plus button on the management toolbar for adding assignments. Let's add a permission check to the management toolbar backing class:
 
@@ -455,11 +456,12 @@ The last thing to do is to hide the plus button on the management toolbar for ad
 		};		
 	}
 	```
+
 1. **Resolve** missing imports.
 
 <br />
 
-#### Test the Application
+## Test the Application
 
 1. **Sign out** and test whether you can add, edit, or delete Assignments.
 1. **Create** a new user with just the *User* role.

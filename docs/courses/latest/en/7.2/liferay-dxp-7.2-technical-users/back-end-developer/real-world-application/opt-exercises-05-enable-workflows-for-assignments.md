@@ -4,9 +4,7 @@ title: Enable Workflows for Assignments
 order: 5
 ---
 
-<h2 class="exercise">Optional Exercise</h2>
-
-## Enable Workflows for Assignments
+# Enable Workflows for Assignments
 
 <div class="ahead">
 <h4>Exercise Goals</h4>
@@ -25,7 +23,7 @@ order: 5
 
 > This exercise requires that you have completed the "Integrate with the Asset Framework" exercise.
 
-#### Add WorkflowInstance Reference to `service.xml`
+## Add WorkflowInstance Reference to `service.xml`
 
 Remember how in the *Integrate with the Asset Framework* exercise we added the status fields to the Assignment entity. These fields are also required in integrating with the Workflow framework. 
 
@@ -33,17 +31,20 @@ We'll make the [WorkflowInstanceLink](https://github.com/liferay/liferay-portal/
 
 1. **Open** the `service.xml` in the *gradebook-service* module.
 1. **Add** `WorkflowInstanceLink` to the Assignment entity's references as follows:
+
 	```xml
 	<reference entity="WorkflowInstanceLink" package-path="com.liferay.portal" />
 	```
+
 1. **Rebuild** the service.
 	
-#### Manage WorkflowInstanceLink resources in the Assignment Local Service
+## Manage WorkflowInstanceLink resources in the Assignment Local Service
 
 Workflows are bound to model entities with WorkflowInstanceLink resources. Like with permission and Asset resources, we have to take care of managing these resources in the Assignment local service:
 
 1. **Open** the class `com.liferay.training.gradebook.service.impl.AssignmentLocalServiceImpl` in the *gradebook-service* module.
 1. **Implement** a new method for creating a WorkflowInstanceLink as follows:
+
 	```java
 	protected Assignment startWorkflowInstance(
 		long userId, Assignment assignment, ServiceContext serviceContext)
@@ -71,12 +72,14 @@ Workflows are bound to model entities with WorkflowInstanceLink resources. Like 
 			Assignment.class.getName(), assignment.getAssignmentId(),
 			assignment, serviceContext, workflowContext);
 	}
-	```	
+	```
+
 1. **Organize** missing imports.
 
 Next, implement updating the status fields and managing WorkFlowInstances on creating and deleting Assignments:
 	
 1. **Implement** setting status fields and creating a WorkFlowInstanceLink in the `addAssignment()` method. Replace the method's code with the following. See the highlighted lines for changes:
+
 	```java
 	public Assignment addAssignment(long groupId, Map<Locale, String> titleMap, Map<Locale, String> descriptionMap,
 			Date dueDate, ServiceContext serviceContext) throws PortalException {
@@ -141,7 +144,9 @@ Next, implement updating the status fields and managing WorkFlowInstances on cre
 		return startWorkflowInstance(userId, assignment, serviceContext);
 	}
 	```
+
 1. **Implement** deleting the WorkflowInstanceLink in `deleteAssignment()`. Replace the code with following. See highlighted rows for changes:
+
 	```java
 	public Assignment deleteAssignment(Assignment assignment)
 		throws PortalException {
@@ -165,11 +170,12 @@ Next, implement updating the status fields and managing WorkFlowInstances on cre
 		// Delete the Assignment
 
 		return super.deleteAssignment(assignment);
-	}	
-	```	
-1. **Organize** imports.	
+	}
+	```
 
-#### Create an Assignment Workflow Handler
+1. **Organize** imports.
+
+## Create an Assignment Workflow Handler
 
 A workflow handler is an OSGi component that registers itself to the OSGi service registry as responsible for handling workflow status changes on defined model entities.
 
@@ -177,6 +183,7 @@ For updating the workflow status, create first the actual worker method in the l
 
 1. **Open** the class `com.liferay.training.gradebook.service.impl.AssignmentLocalServiceImpl` in the *gradebook-service* module.
 1. **Implement** a new `updateStatus()` method as follows:
+
 	```java
 	public Assignment updateStatus(
 		long userId, long assignmentId, int status,
@@ -208,6 +215,7 @@ For updating the workflow status, create first the actual worker method in the l
 		return assignment;
 	}
 	```
+
 1. **Organize** missing imports.
 1. **Rebuild** the service.
 
@@ -217,7 +225,6 @@ Now implement the WorkflowHandler component:
 1. **Implement** the class as follows:
 
 ```java
-
 package com.liferay.training.gradebook.service.workflow;
 
 import com.liferay.portal.kernel.exception.PortalException;
@@ -284,11 +291,10 @@ public class AssignmentWorkflowHandler extends BaseWorkflowHandler<Assignment> {
 
 	@Reference
 	private ResourceActions _resourceActions;
-	
 }
 ```
 
-#### Implement Support for Status in the Getter Methods
+## Implement Support for Status in the Getter Methods
 
 Now our entities support workflows on the service layer but we also have to be able to query them by their status so that for example draft entities are not shown to unauthorized users. 
 
@@ -329,6 +335,7 @@ These methods are called through the remote service, so let's add facades for th
 
 1. **Open** the class `com.liferay.training.gradebook.service.impl.AssignmentServiceImpl.java` in the *gradebook-service* module.
 1. **Implement** the new facade methods as follows:
+
 	```java
 	public List<Assignment> getAssignmentsByKeywords(
 		long groupId, String keywords, int start, int end, int status,
@@ -345,12 +352,13 @@ These methods are called through the remote service, so let's add facades for th
 			groupId, keywords, status);
 	}	
 	```
+
 1. **Rebuild** the service.
 
-#### Implement Workflow Support for Search
+## Implement Workflow Support for Search
 
 Implement a pre filter for Assignments search so that only approved entities are shown:
-	
+
 1. **Create** a class `com.liferay.training.gradebook.internal.search.spi.model.query.contributor.AssignmentModelPreFilterContributor` in the *gradebook-service* module.
 1. **Implement** as follows:
 
@@ -398,7 +406,7 @@ public class AssignmentModelPreFilterContributor
 
 <br /><br /><br />
 
-#### Implement Support for Workflow Status in the MVC Render Command
+## Implement Support for Workflow Status in the MVC Render Command
 
 Next we'll change the implementation of the `ViewAssignmentsMVCRenderCommand`, which is responsible for listing the Assignments, so that it takes the `status` field into account and for the sake of exercise, exposes drafted entities only for the administrators:
 
@@ -601,7 +609,7 @@ public class ViewAssignmentsMVCRenderCommand implements MVCRenderCommand {
 }
 ```
 
-#### Implement Support for Workflow Status in the JSP Files
+## Implement Support for Workflow Status in the JSP Files
 
 The last thing to do is to show status in the user interface. Let's add the `status` column to the JSP file responsible for showing the Assignments list columns. 
 
@@ -751,7 +759,7 @@ The last thing to do is to show status in the user interface. Let's add the `sta
 </c:choose>
 ```
 
-#### Test the Application
+## Test the Application
 
 To be able to test, we have to enable and define a workflow for Assignments:
 

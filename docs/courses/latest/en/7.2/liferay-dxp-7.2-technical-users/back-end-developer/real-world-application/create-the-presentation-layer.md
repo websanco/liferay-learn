@@ -4,7 +4,7 @@ title: Create the Presentation Layer
 order: 4
 ---
 
-## Create the Presentation Layer
+# Create the Presentation Layer
 
 In modular Liferay applications, the presentation layer is usually located in what's called the *web module*. For example, in the native Blogs application, this module is called [blogs-web](https://github.com/liferay/liferay-portal/tree/7.1.x/modules/apps/blogs). In terms of the MVC pattern, the web module typically contains both the view (user interface) and the controller (portlet) layers.
 
@@ -32,7 +32,7 @@ The implementation steps and their order of execution depend on the chosen techn
 
 Let's discuss the steps and concepts related to the user interface of our Gradebook application.
 
-#### Creating the Web Module
+## Creating the Web Module
 
 Liferay provides several module templates for building the presentation layer, like:
 
@@ -44,7 +44,7 @@ Liferay provides several module templates for building the presentation layer, l
 
 In addition to these, JSF and [Vaadin](https://vaadin.com/) portlet-type user interfaces are supported out of the box.
 
-#### Implementing Portlet Actions with MVC Commands
+## Implementing Portlet Actions with MVC Commands
 
 The interaction between a portlet back-end and a user is handled by portlet lifecycle methods as described in *Module 5 - Java Standard Portlet*. 
 
@@ -69,7 +69,7 @@ By convention, the MVC command classes are named by the following pattern, corre
 
 With this pattern, an MVC command responsible for rendering assignments list view could become `ViewAssignmentsMVCRenderCommand`.
 
-#### MVC Render Commands
+## MVC Render Commands
 
 MVC Render Commands handle portlet's *render* phase. They are called by setting the `mvcRenderCommandName` parameter in the calling URL:
 
@@ -82,7 +82,7 @@ MVC Render Commands handle portlet's *render* phase. They are called by setting 
 <a href="<%= viewEntryUrl">Click here to view the entry</a>
 ```
 
-#### MVC Action Commands
+## MVC Action Commands
 
 MVC action commands handle the portlet's *action* phase. Actions are typically form submits that trigger events, like entity update, on the model layer. The action to respond is defined in the calling URL's `name` parameter.
 
@@ -92,7 +92,7 @@ MVC action commands handle the portlet's *action* phase. Actions are typically f
 <aui:form action="<%= editEntryURL %>" method="post" name="fm">
 ```
 
-#### MVC Resource Commands
+## MVC Resource Commands
 
 MVC Resource Commands handle the *resource serving* phase. As the resource serving lifecycle phase doesn't invoke the render phase, it's typically used for operations that don't need full page refresh. Such use cases can be, for example:
 
@@ -104,7 +104,7 @@ MVC Resource Commands handle the *resource serving* phase. As the resource servi
 <portlet:resourceURL id="/login/captcha" var="captchaURL" />
 ```
 
-#### Using Tag Libraries
+## Using Tag Libraries
 
 Tag libraries are collections of user interface components called *tags* for JSP development. From a user interface design perspective, they allow a clean separation between the look-and-feel and business logic. 
 Tag libraries can significantly reduce development time and remove boilerplate coding. 
@@ -148,7 +148,7 @@ Below is an example of using a `liferay-ui` tag library for showing user details
 </div>
 ```
 
-#### Standard Tag Libraries
+## Standard Tag Libraries
 
 The *Portlet Standard* libraries are:
 * __portlet:__ standard portlet JSR 168 tag library (overrun in Liferay's portlet\_2\_0 library)
@@ -206,7 +206,7 @@ The standard JSR-362 (portlet\_3\_0) library provides portlet lifecycle url gene
 </portlet:renderURL>
 ```
 
-#### Liferay Tag Libraries
+## Liferay Tag Libraries
 
 Liferay provides a rich set of its own libraries, like:
 
@@ -255,13 +255,13 @@ The code above renders as:
 
 > See [Developer Network](https://dev.liferay.com/en/develop/tutorials/-/knowledge_base/7-2/front-end-taglibs) for more information about Liferay tag libraries.
 
-#### Implementing Validation and Feedback
+## Implementing Validation and Feedback
 
 In real world application design, it's important to have control over both user input and output. A robust validation is done on multiple layers, and it never relies solely on the user interface.
 
 When implementing validation and feedback, it's good to be aware of Liferay's utility classes. Liferay provides utility classes for validation but other common tasks, like string manipulation, date formatting and parameter handling. Many of the utilities can be found in the [com.liferay.portal.kernel.util](https://docs.liferay.com/portal/7.2-latest/javadocs/portal-kernel/com/liferay/portal/kernel/util/package-summary.html) package and in the [Petra libraries](https://github.com/liferay/liferay-portal/tree/7.2.x/modules/apps/petra).
 
-#### Input Validation
+## Input Validation
 
 There are many good reasons to implement multi-level input validation and user interface feedback in your applications:
 1. __Security:__ to protect against malicious input, no user input should be allowed to enter the model layer without validation
@@ -322,7 +322,7 @@ If (Validator.isNull(name)) {
 }
 ```
 
-#### Note on AntiSamy
+## Note on AntiSamy
 
 Although not a validation functionality as such, there is an additional security module that protects against malicious user input. The __AntiSamy__ module leverages the OWASP AntiSamy library, processing user input on form submit and stripping away all the HTML elements and content not explicitly allowed. The module is configurable through *Control Panel → System Settings → Foundation → AntiSamy Sanitizer*.
 
@@ -342,7 +342,7 @@ On the server side, the Liferay HTMLUtil class can be used:
 request.setAttribute("bodyText", HtmlUtil.escape(bodyText));	
 ```
 
-#### Showing Feedback
+## Showing Feedback
 
 In Liferay portlet JSP applications, the feedback from the back-end to the user interface is often transported  with [SessionErrors](https://github.com/liferay/liferay-portal/blob/7.2.x/portal-kernel/src/com/liferay/portal/kernel/servlet/SessionErrors.java) and [SessionMessages](https://github.com/liferay/liferay-portal/blob/7.2.x/portal-kernel/src/com/liferay/portal/kernel/servlet/SessionMessages.java) objects. Below is an example demonstrating setting a message key in the back-end, doing a localization in `Language.properties`, and showing the message on the user interface using the `<liferay-ui:success>` and `<liferay-ui:error>` tags:
 
@@ -391,7 +391,7 @@ Liferay sets default success messages for successful portlet actions. These mess
 )		 	 	 		
 ```
 
-#### Common Guidelines for Implementing Validation
+## Common Guidelines for Implementing Validation
 
 * Establish validation on both the client and server side.
 	* User interface validation is not for securing but for usability.
@@ -406,7 +406,7 @@ Overview of required steps for implementing basic validation in your application
 1. Show validation feedback on the screen using liferay-ui tag library
 1. Clean user-contributed output 
 
-#### Internationalizing the Application
+## Internationalizing the Application
 
 __Internationalization (i18n)__ means designing an application so that it isn't hardwired to one language only. 
 
@@ -414,11 +414,11 @@ Internationalization is not just about localizing your application, but about a 
 
 __Localization (i10n)__ is similar to internationalization, but adds support to a specific language.
 
-#### About Language Keys
+## About Language Keys
 
 Language keys are unique string identifiers for the display messages. The same keys can be reused in the code as many times as needed. As a good practice, you should use describing keys like *submit-form* to improve code readability. Parametrization of keys is supported.
 
-#### Language files
+## Language files
 
 Language files, or localization files, contain a list of key value pairs for a single language. The default `Language.properties` file, which serves as a fallback default file, is automatically generated by a portlet module template and is located in the `src/main/resources/content` folder. 
 
@@ -433,11 +433,11 @@ Examples:
 
 > Language files should use UTF-8 encoding.
 
-#### Configuring Language Resources
+## Configuring Language Resources
 
 In order to use the language files, portlets and other components have to be made aware of the available resource bundles. In the case of portlets, this is done by defining the `javax.portlet.resource-bundle` component property. When using Liferay portlet module templates, default resources and component properties are created automatically.
 
-#### Localization Example
+## Localization Example
 
 Let's now have a look at a concrete localization example. 
 
@@ -474,7 +474,7 @@ my-favourite-dogs-are-x-and-x=My favourite-dogs are {0} and {1}
 
 > When using tag libraries, notice that when a matching language key is not found in the portlet language file, the lookup falls back to the portal resource bundle. If the value is not found, the key is shown.
 
-#### Note on Localizing Portlet Name
+## Note on Localizing Portlet Name
 
 Portlet standard message localization follows a special pattern:
 
@@ -496,7 +496,7 @@ Gradebook portlet display name:
 javax.portlet.display-name.gradebook-web=Gradebook Portlet
 ```
 
-#### Localization in the Back-End
+## Localization in the Back-End
 
 Accessing the localization resources in a Java class requires loading the resource bundle manually. The `target` property of the `ResourceBundleLoader` reference is used to filter the resource:
 
@@ -528,7 +528,7 @@ private Language _language;
 
 ```
 
-#### Sharing Resource Bundles Between Modules
+## Sharing Resource Bundles Between Modules
 
 In modular OSGi design, a single module is self-contained and usually contains all the resources it needs. In a multi-module application, however, you'll sometimes want either to centralize all localization resources in a dedicated module or let modules access localization resources from each other. 
 
@@ -542,7 +542,7 @@ In modular OSGi design, a single module is self-contained and usually contains a
 
 > The current module’s resource bundle is prioritized over those of the listed modules.
 
-#### Adding CSS Resources
+## Adding CSS Resources
 
 Portlet CSS files are defined in portlet component properties. The following properties are available, each of them allowing multiple values:
 
@@ -577,7 +577,7 @@ css-portlet/src/main/resources/META-INF/resources/css/main.scss
 
 > Notice that the reference to a CSS file in the portlet's properties is still `.css` even if you use the `.scss` as a suffix
 
-#### Adding JavaScript Resources
+## Adding JavaScript Resources
 
 Following the logic of portlet component CSS properties, portlet JavaScript files can be defined with: 
 
@@ -632,7 +632,7 @@ console.log("This is the main1.js file.")
 console.log("This is the main2.js file.")
 ```
 
-#### Configuring JavaScript
+## Configuring JavaScript
 
 To configure Javascript, look for the properties with the following prefixes in the [portal properties](https://github.com/liferay/liferay-portal/blob/7.2.x/portal-impl/src/portal.properties):
 
@@ -640,7 +640,7 @@ To configure Javascript, look for the properties with the following prefixes in 
 * minifier
 * combo
 
-#### Liferay JavaScript API
+## Liferay JavaScript API
 
 The Liferay JavaScript object is available on all the pages and contains helpful platform utilities like:
 
@@ -663,11 +663,11 @@ Liferay.Service(
     }
 );
 ```
-#### Good to Know 
+## Good to Know 
 
 Alloy UI and jQuery libraries are globally available, but the platform doesn't restrict you from using any other preferred library. Also, support for ES2015 as well as NPM modules is available as well as a configurable AMD loader. These topics are discussed more in detail in the Front-End Developer course.
 
-#### Links and Resources
+## Links and Resources
 
 * Alloy UI Validator: https://github.com/liferay/alloy-ui/blob/master/src/aui-form-validator/js/aui-form-validator.js
 * Internationalizing Liferay applications: https://dev.liferay.com/en/develop/tutorials/-/knowledge_base/7-2/internationalization

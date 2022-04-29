@@ -1,6 +1,4 @@
-<h3 class="exercise">Exercises</h3>
-
-## Monitoring your platform
+# Monitoring your platform
 
 <div class="ahead">
 	<h3>Exercise Goals:</h3>
@@ -9,7 +7,7 @@
 		</ul>
 </div>
 
-#### Bonus Exercise: Configure your DXP instance for JConsole access
+## Bonus Exercise: Configure your DXP instance for JConsole access
 
 If you want to access vital data of your JVM, or the running application on top of it, JConsole can provide you with the basic data:
 

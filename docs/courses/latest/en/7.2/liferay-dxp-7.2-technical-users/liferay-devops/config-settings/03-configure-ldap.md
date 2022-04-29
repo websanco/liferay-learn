@@ -1,4 +1,4 @@
-## Integrating LDAP and SSO
+# Integrating LDAP and SSO
 
 _Single Sign-on (SSO)_ describes a number of services that enable users to manage sign-ons to multiple sites or services using only one account. There are a number of different SSO implementations, including both software and hardware solutions. One of the most popular SSO solutions is _Lightweight Directory Access Protocol (LDAP)._
 
@@ -73,7 +73,7 @@ Import enables you to make all of your LDAP users also Liferay users. If you wan
 
 Regardless of what technology you'll use, you'll need to answer similar questions for how it interacts with Liferay. Questions like: Where are the users stored? How are the passwords encrypted? Who is responsible for managing authentication?
 
-### Using LDAP with Liferay
+## Using LDAP with Liferay
 
 Liferay has a generic user import service that imports users from any external system into Liferay's user store. The LDAP user import is an LDAP-specific implementation of this service. 
 
@@ -141,7 +141,7 @@ Export is a bit simpler than import. If you want to keep your LDAP and Liferay u
 
 <!-- No longer applicable: OpenDJ is a free, open-source LDAP server sponsored by ForgeRock. It's a cross-platform, entirely Java-based application. OpenDJ provides a control panel, which allows you to manage the LDAP server and browse the directory using a graphical interface. We've already installed OpenDJ on your VMs. We've also imported some sample data into LDAP: two Organizations called *Astronauts* and *Engineers* and some users belonging to these Organizations. We'll import these LDAP Organizations and users into Liferay.-->
 
-### Using SSO with Liferay
+## Using SSO with Liferay
 
 Consider three organizations that maintain a number of distinct web applications. Organization A uses no sign solution, and users need to remember user name/password combinations for each distinct web application. Organization B also uses a number of distinct web applications, but uses LDAP credentials to authenticate to each one. Members of Organization B only have to remember one user name/password combination (their LDAP credentials), but they still have to authenticate to each distinct web application separately. Finally, Organization C uses SSO to provide access to a number of distinct web applications. Members of Organization C only have to remember one user name/password combination (their SSO credentials), and they only have to authenticate once to gain access to all the systems.
 
@@ -172,7 +172,7 @@ Token SSO authentication was introduced in Liferay 7 to standardize support for 
 
 The token contains either the Liferay user's screen name or email address, whichever Liferay has been configured to use as a user name for that particular company.
 
-### CAS Configuration Fields
+## CAS Configuration Fields
 
 Let's take a look at some of the CAS Configuration fields: 
 - `importFromLDAP`: Users authenticated from CAS that do not exist in the platform are imported from LDAP. LDAP must be enabled separately.
@@ -183,7 +183,7 @@ Let's take a look at some of the CAS Configuration fields:
 - `serviceURL`: If provided, this will be used as the URL that the CAS server will provide tickets to. This overrides any URL constructed based on the Server Name as above.
 - `noSuchUserRedirectURL`: Set the URL to redirect the user if the user can authenticate with CAS but cannot be found in the platform. If "Import from LDAP" is enabled, the user is redirected if he cannot be found or could not be imported from LDAP.
 
-### Facebook Configuration Fields
+## Facebook Configuration Fields
 
 Facebook SSO is an integration with Facebook's Graph API and works on the basis of retrieving the user's Facebook profile information, and then attempting to match existing Liferay users on either Facebook ID or email address. In order to integrate Liferay with Facebook, you must first create an "application" on Facebook's website at https://developers.facebook.com. This is because Facebook Connect requires Liferay to authenticate using the OAuth 2.0 protocol. Facebook will provide you with the necessary application ID and secret that will be used in OAuth messages sent between Liferay and Facebook. One benefit of this is allowing the Facebook user to revoke access from Liferay at a later date. The integration will attempt to retrieve the following Facebook profile information in order to successfully create a user in Liferay:
 - Email Address
@@ -202,7 +202,7 @@ Let's take a look at some of Facebook's configuration fields:
 - `OAuth Token URL`: Facebook's OAuth access token URL. Liferay will use this URL to exchange a request token for an access token.
 - `OAuth Redirect URL`: This is the URL that the user will be directed back to once an OAuth request token has been generated. The URL points to a Liferay service that will exchange the request token for the access token, which is required in order for Liferay to make successful calls to the Facebook Graph API. You should only ever need to change this URL if requests to your Liferay instance need to go via a fronting web server such as Apache that does URL rewriting.
 
-### NTLM Configuration Fields
+## NTLM Configuration Fields
 
 OpenID SSO authentication was introduced in Liferay. As a decentralized authentication protocol, it leaves the user to decide which iDP (Identity provider) the user wishes to use to log into Liferay.
 Let's take a look at a few NTLM Configuration fields: 
@@ -213,14 +213,14 @@ Let's take a look at a few NTLM Configuration fields:
 - `servicePassword`: Enter the password for the service account.
 - `negotiateFlags`: Only available at system level. Set according to the client's requested capabilities and the server's ServerCapabilities.
 
-### Google Configuration Fields
+## Google Configuration Fields
 
 Here are a few of Google's Configuration fields: 
 - `enabled`: If enabled
 - `clientId`: The client ID provided by Google
 - `clientSecret`: The client secret provided by Google
 
-### Open SSO Configuration Fields: 
+## Open SSO Configuration Fields: 
 
 - `enabled`: if enabled
 - `importFromLDAP`: If true, then users authenticated from OpenSSO that do not exist in the platform are imported from LDAP. LDAP must be enabled.
@@ -234,7 +234,7 @@ Here are a few of Google's Configuration fields:
 
 OpenAM is a free, open-source SSO solution sponsored by ForgeRock. OpenAM is a fork of the OpenSSO project that began when Oracle discontinued development of OpenSSO. It's a cross-platform, Java-based application that runs on a servlet container. We've put a separate Tomcat server on your VMs: `/opt/openam/tomcat`. If you want to install and set up OpenAM to test with Liferay, you can try it here!
 
-### Configuring for SAML
+## Configuring for SAML
 
 <div class="key-point">
 Key Point:<br>

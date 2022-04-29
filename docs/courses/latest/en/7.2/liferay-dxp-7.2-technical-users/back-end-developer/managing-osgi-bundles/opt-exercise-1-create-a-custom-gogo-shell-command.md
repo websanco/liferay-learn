@@ -6,7 +6,7 @@ order: 1
 
 <h2 class="exercise">Optional Exercise</h2>
 
-## Create a Custom Gogo Shell Command
+# Create a Custom Gogo Shell Command
 
 <div class="ahead">
 <h4>Exercise Goals</h4>
@@ -21,7 +21,7 @@ order: 1
 	</ul>
 </div>
 
-#### Create a Liferay Module Project
+## Create a Liferay Module Project
 
 **Option 1: Use the Command Line Blade tools**
 
@@ -81,7 +81,7 @@ While being a service, this component is not meant to be referenced from other c
 	```
 1. **Organize** missing imports.
 
-#### Implement the OSGi command component
+## Implement the OSGi command component
 
 1. **Add** references to [GroupLocalService](https://github.com/liferay/liferay-portal/blob/7.1.x/portal-kernel/src/com/liferay/portal/kernel/service/GroupLocalService.java) and [UserLocalService](https://github.com/liferay/liferay-portal/blob/7.1.x/portal-kernel/src/com/liferay/portal/kernel/service/UserLocalService.java) to the end of the class:
 	```java
@@ -102,7 +102,7 @@ While being a service, this component is not meant to be referenced from other c
 	```
 1. **Organize** imports.
 
-#### Final Code Review
+## Final Code Review
 
 The complete `com.liferay.training.gogo.command.api.TrainingCommand` will look like this:
 
@@ -143,7 +143,7 @@ public class TrainingCommand {
 }
 ```
 
-#### Deploy and Test
+## Deploy and Test
 
 1. **Deploy** the module.
 1. **Login** to Gogo shell

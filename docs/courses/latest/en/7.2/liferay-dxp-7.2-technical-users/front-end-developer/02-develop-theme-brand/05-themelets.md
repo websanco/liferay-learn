@@ -1,8 +1,8 @@
-## Themelets
+# Themelets
 
-Although Themes are used for global styling, a business with multiple sites might require custom styling tailored to each individual site while maintaining some common components. If they are using multiple themes to accomplish these business requirements, they can take advantage of Themelets to re-use those common styles and components.
+<!-- Although Themes are used for global styling, a business with multiple sites might require custom styling tailored to each individual site while maintaining some common components. If they are using multiple themes to accomplish these business requirements, they can take advantage of Themelets to re-use those common styles and components.
 
-#### Livingstone and Themelets {#livingstone}
+## Livingstone and Themelets {#livingstone}
 
 Livingstone Hotels & Resorts might want all their sites to use the same font, or a particular menu design, while providing a different overall look-and-feel for each hotel location. This can, of course, be accomplished by creating additional themes for each of the hotel sites. Kaito and the web development team want to provide some user interface components that can be shared across themes and updated individually:
   1. Better visualization when moving widgets onto a page 
@@ -10,7 +10,7 @@ Livingstone Hotels & Resorts might want all their sites to use the same font, or
 
 It would save them a lot of time if they did not need to copy the necessary code for these components into every theme and then copy any updates to that code into every theme. It is useful for developers to customize UI components that can be shared across their themes.
 
-#### What are Themelets? {#themelets}
+## What are Themelets? {#themelets}
 
 Themelets can consist of CSS (SCSS), HTML templates (FreeMarker), images, or JavaScript, just like the larger themes. Typically, Themelets are small snippets of code, such as a component implemented through SCSS.
 
@@ -30,7 +30,7 @@ Note: You can find the complete list of themelets on the npm registry. Publishin
 	<figcaption style="font-size: x-small">Fig.1 Themelet visual</figcaption>
 </figure>
 
-#### Using Themelets {#usethemelets}
+## Using Themelets {#usethemelets}
 
 The Theme generator is packaged with the Themelet sub-generator. Similar to building a new theme, developers can run `yo liferay-theme: themelet` in the _Command Line_ or _Terminal_ to build a new themelet. After naming the Themelet and choosing the appropriate Liferay version (7.1), the Themelet should appear with a src folder and a .json package. The src directory acts similarly to the theme src, in that all custom code should go here. The default build will include a css folder.
 
@@ -73,4 +73,4 @@ Themelets are small code snippets or components and can be _____________________
   </ul>
   <li>A Themelet must be ___________________________ in a theme in order to be used by that theme.</li>
 </ul>
-</div>
+</div> -->

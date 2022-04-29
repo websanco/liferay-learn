@@ -1,5 +1,5 @@
-## Front-End Development Frameworks in Liferay
-
+# Front-End Development Frameworks in Liferay
+<!-- 
 There are many different programming languages and frameworks that developers can use to craft their user experiences. Each of these frameworks comes with its own unique features and libraries that provide more flexibility and give more power. The Liferay platform includes many of these frameworks out-of-the-box in order to create the best developer experience.
 
 <figure>
@@ -7,7 +7,7 @@ There are many different programming languages and frameworks that developers ca
 	<figcaption style="font-size: x-small">Fig.1 Development Frameworks</figcaption>
 </figure>
 
-#### Liferay's Experience Language: Lexicon {#lexicon}
+## Liferay's Experience Language: Lexicon {#lexicon}
 
 You'll want to craft a consistent look-and-feel across your platform so that users don't feel any abrupt change. Because of this, many large companies like Google and Apple have created their own Design Language.
 Design Languages are intended to help developers determine how to best integrate into the platform they're using. These languages act as a blueprint that developers can use to ensure their applications or content look consistent. Liferay comes with its own Design Language, the _Lexicon Experience Language_.
@@ -30,7 +30,7 @@ Key Point: <br>
 	<figcaption style="font-size: x-small">Fig.2 Lexicon</figcaption>
 </figure>
 
-#### Lexicon Design Principles {#designprinciples}
+## Lexicon Design Principles {#designprinciples}
 
 Lexicon enables developers to craft consistent user experiences by detailing the different design principles behind the platform implementation. 
 
@@ -63,6 +63,7 @@ Lexicon includes a number of design principles that, when followed, help you mai
 </div>
 
 Lexicon has some primary colors to set the visual identity of Lexicon. This sets the color schemes and variation expectation. Each of these colors is used for different aspects of the design and include variations:
+
 * _Main_: Texts/icons, navigation background, borders, and dividers
 * _Primary_: Main actions like primary buttons, links, hover, and active
 * _White_: Cards background, toolbar background, modals, forms, and texts/icons
@@ -126,7 +127,7 @@ Finally, for whenever text is used, Lexicon has writing standards that include t
   Note: You can find more information on the Lexicon site: <a href="https://liferay.design/lexicon">https://liferay.design/lexicon</a>
 </div>
 
-#### Lexicon Design Implementation: Clay {#clay}
+## Lexicon Design Implementation: Clay {#clay}
 
 In order to implement the Lexicon design, Liferay has created the Clay CSS framework. Clay is modeled after Lexicon's pattern library, allowing developers to be confident that their web application's UI will have a consistent style and user experience.
 
@@ -199,7 +200,7 @@ By combining some of the Clay classes like card, sticker, icon, etc, like the ab
 	<figcaption style="font-size: x-small">Fig.9 Clay Card Example</figcaption>
 </figure>
 
-#### JavaScript in Liferay DXP {#javascript}
+## JavaScript in Liferay DXP {#javascript}
 
 Along with a styling framework, developers need to manipulate the DOM to provide interactive pop-ups, visually appealing search features, and different applications or widgets to place on sites. There are a number of places developers can add JavaScript to the platform. 
 
@@ -231,7 +232,7 @@ Developers can use JavaScript on the platform in the following ways:
 	<figcaption style="font-size: x-small">Fig.10 Angular Salesforce Application Examples</figcaption>
 </figure>
 
-#### Using Different JavaScript Libraries {#javascriptlibs}
+## Using Different JavaScript Libraries {#javascriptlibs}
 
 There are a couple of JavaScript frameworks built into the platform by default that the front-end development team can take advantage of. 
 
@@ -287,13 +288,13 @@ Adding JavaScript libraries can be done in a theme by simply adding the script t
 
 ```
 <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
-``` 
+```
 
 <div class="note">
 For more information on how to use external JavaScript libraries, you can take a look at: <a href="https://dev.liferay.com/develop/tutorials/-/knowledge_base/7-1/using-external-javascript-libraries">https://dev.liferay.com/develop/tutorials/-/knowledge_base/7-1/using-external-javascript-libraries</a>
 </div>
 
-#### FreeMarker Templates in Liferay {#freemarker}
+## FreeMarker Templates in Liferay {#freemarker}
 
 When it comes to building HTML pages or templates, Liferay takes advantage of the FreeMarker template language to provide the ability to write semantic HTML as well as take advantage of FreeMarker Java API referencing and other features. 
 
@@ -376,9 +377,11 @@ Many of these construct examples are found in a theme project. For example, if a
 ```
 
 The variable can then be used in his FreeMarker template by using:
+
 ```
 ${show_header_search}
 ```
+
 With variables created, developers can use them in _If_ statements with includes, macros, or just basic html. For example, if they wanted to add a specific footer FreeMarker file to keep the footer html structure in its own file, they could create a variable and add something like this to the HTML source file:
 
 ```
@@ -389,9 +392,10 @@ With variables created, developers can use them in _If_ statements with includes
 
 <br /><br />
 
-#### Using Macros and Taglibs in Templates {#macrostaglibs}
+## Using Macros and Taglibs in Templates {#macrostaglibs}
 
 When using templates in themes, there are several built-in variables, which we'll look at later. There are also several _macros_ and _taglibs_ that can be used to quickly add in functionality, and even embedded widgets, into your templates. As an example, if you wanted to add a navigation widget to the footer of the site pages, you could add the following into a custom theme's html source file:
+
 ```
 <@liferay.navigation_menu
   instance_id="footer_navigation_menu"
@@ -399,11 +403,12 @@ When using templates in themes, there are several built-in variables, which we'l
 />
 ```
 
-#### Using Clay in Templates {#claytemplates}
+## Using Clay in Templates {#claytemplates}
 
 Clay can also be used in Templates to add consistent design to content. To do this, developers can simply add any of these components to any of our html structures to inherit the styling needed for consistent design. 
 
 If, for instance, the Design Team has required a user display presentation on the platform and the development team wanted to implement this using Clay, they could use the _card_ and _icon_ classes in his templates:
+
 ```html
 <div class="card">
     <div class="crop-img crop-img-bottom crop-img-center">
@@ -452,4 +457,4 @@ With the above, they would see the following output:
         Creating custom JavaScript ____________________
       </li>
 </ul>
-</div>
+</div> -->

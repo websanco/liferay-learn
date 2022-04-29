@@ -1,6 +1,4 @@
-<h2 class="exercise">Exercises</h2>
-
-## Add Sites to the Livingstone Platform
+# Add Sites to the Livingstone Platform
 
 <div class="ahead">
 <h4>Exercise Goals</h4>
@@ -10,7 +8,8 @@
 	</ul>
 </div>
 
-#### Create a Site Template for Luxury Hotel Location Landing Pages
+## Create a Site Template for Luxury Hotel Location Landing Pages
+
 1. **Open** the _Menu_.
 * **Go to** _`Control Panel → Sites → Site Templates`_ in the _Menu_. 
 * **Click** the _Add_ button near the top right.
@@ -30,14 +29,16 @@
 	- When the configuration page loads, make sure the _Inherit Changes_ slider is set to _YES_.
 * **Click** the _Save_ button at the bottom of the page.
 
-#### Add a Room & Suites Page to the Site Template
+## Add a Room & Suites Page to the Site Template
+
 1. **Click** the _Add_ button near the top right.
 * **Choose** _Widget Page_.
 * **Type** `Room & Suites` as the _Name_.
 * **Click** _Add_.
 * **Click** the _Save_ button at the bottom of the page.
 
-#### Add Child Pages for Suites, Rooms, and Options
+## Add Child Pages for Suites, Rooms, and Options
+
 1. **Click** the _Add_ icon to the right of the _Room & Suites_ page we just created.
 * **Choose** _Widget Page_.
 * **Type** `Suites` as the _Name_.
@@ -54,7 +55,8 @@
 * **Click** _Add_.
 * **Click** the _Save_ button at the bottom of the page.
 
-#### Finish Creating the Page Structure for the Site Template
+## Finish Creating the Page Structure for the Site Template
+
 1. **Click** the _Add_ button at the top right.
 * **Choose** _Widget Page_.
 * **Type** `Amenities` as the _Name_.
@@ -71,7 +73,8 @@
 * **Click** _Add_.
 * **Click** the _Save_ button at the bottom of the page.
 
-#### Create a New Site Using the New Site Template
+## Create a New Site Using the New Site Template
+
 1. **Go to** _`Control Panel → Sites → Sites`_ in the _Menu_.   
 * **Click** the _options_ icon next to _Livingstone Hotels & Resorts_.
 * **Choose** _Add Child Site_.  
@@ -84,7 +87,8 @@
 
 <img src="../images/exercise-images/hotel-americana.png" style="max-height: 100%" />
 
-#### Create Two More Luxury Hotel Sites with the Site Template
+## Create Two More Luxury Hotel Sites with the Site Template
+
 1. **Go to** _`Control Panel → Sites → Sites`_.  
 * **Click** the _options_ icon next to _Livingstone Hotels & Resorts_.  
 * **Choose** _Add Child Site_.
@@ -104,7 +108,8 @@
 
 ---
 
-#### Bonus Exercises
+## Bonus Exercises
+
 1. Create a Site Template for Livingstone's Regional Office locations. The template should have at least three pages that include at least one widget on them.
 2. Add Luxury Hotel Location Landing sites for the Bavarian and Parisian locations. Make sure they are created as child sites of the main Livingstone site.
 3. Add a custom page to one of the new Luxury Hotel Location Landing sites created from the Site Template in the bonus exercise above. Navigate to the new site and look at the pages you added within the site itself.

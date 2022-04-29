@@ -4,9 +4,7 @@ title: Implement the Main View
 order: 5
 ---
 
-<h2 class="exercise">Exercises</h2>
-
-## Implement the Main View
+# Implement the Main View
 
 <div class="ahead">
 <h4>Exercise Goals</h4>
@@ -19,7 +17,7 @@ order: 5
 	</ul>
 </div>
 
-#### Implement the init.jsp
+## Implement the init.jsp
 
 By convention, the `init.jsp` file is used to centralize imports, taglib declarations, variable initializations, and any common tasks for all the user interface JSP files. The `init.jsp` is then included in the other JSP files, like `view.jsp`.
 
@@ -57,7 +55,7 @@ We'll use taglib declarations for Clay and Liferay Front-End, Liferay Item Selec
 	<portlet:defineObjects />
 	```
 
-#### Implement the view.jsp
+## Implement the view.jsp
 
 The `view.jsp` implements the Assignments list view. We'll use the Management Toolbar from Clay as well the Search Container from the Liferay UI tag library to implement the view.
 
@@ -109,7 +107,7 @@ The `view.jsp` implements the Assignments list view. We'll use the Management To
 
 > We generally rely heavily on [liferay-ui](https://dev.liferay.com/fi/develop/tutorials/-/knowledge_base/7-2/using-the-liferay-ui-taglib-in-your-portlets) and [clay](https://dev.liferay.com/fi/develop/tutorials/-/knowledge_base/7-2/using-the-clay-taglib-in-your-portlets) tag libraries to simplify the JSP code. Take a look at the [Search container]((https://docs.liferay.com/ce/portal/7.2-latest/taglibs/util-taglib/liferay-ui/tld-summary.html)) component, which is one of the most common Liferay UI components, facilitating the task of showing item lists and search results.
 
-#### Implement the Other JSP Files
+## Implement the Other JSP Files
 
 We need three more JSP files to display a single row on the assignment list, show available actions, and display the _details_ view.
 
@@ -306,13 +304,13 @@ We need three more JSP files to display a single row on the assignment list, sho
 	</div>
 	```
 	
-#### Implement the MVC Render Command for Showing the Assignments List
+## Implement the MVC Render Command for Showing the Assignments List
 
 Now we have the JSP files in place and need *MVC Command* components to take care of the portlet lifecycle handling and  interaction between the user interface and back-end. MVC Commands respond to portlet URLs, which in JSP files are generated with the `<portlet>` tag library. 
 
 At this stage, we need two MVC Render Commands: one for displaying the Assignments list and one for displaying a single Assignment.
 
-#### Implement MVCCommandNames.java
+## Implement MVCCommandNames.java
 
 Before implementing our MVC render commands, implement a constants class to hold the command names. This is a good practice to reduce the risk of typos when referencing the command names.
 
@@ -501,7 +499,7 @@ Now implement the render command for showing the assignments list:
 	}
 	```
 
-#### Implement the MVC Render Command for Showing a Single Assignment
+## Implement the MVC Render Command for Showing a Single Assignment
 
 1. **Create** a class `com.liferay.training.gradebook.web.portlet.action.ViewSingleAssignmentMVCRenderCommand`.
 1. **Implement** as follows:
@@ -603,7 +601,7 @@ Now implement the render command for showing the assignments list:
 	}
 	```
 
-#### Implement the Back-End Class for the UI Management Toolbar
+## Implement the Back-End Class for the UI Management Toolbar
 
 Our last task at this step is to implement the backing class for the Clay management toolbar. We won't go into implementation details with this class, but you can take a look at the documentation [here](https://dev.liferay.com/en/develop/tutorials/-/knowledge_base/7-2/clay-management-toolbar):
 
@@ -876,7 +874,7 @@ public class AssignmentsManagementToolbarDisplayContext
 }
 ```
 
-#### Test the User Interface
+## Test the User Interface
 
 After the module has restarted successfully, refresh the browser to see the changes:
 

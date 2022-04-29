@@ -1,12 +1,12 @@
-## Including Resources and Widgets
+# Including Resources and Widgets
 
-Businesses often have the Design team create wireframes and mockups of the sites they want included on the platform. These mockups include not only the overall look-and-feel, but the kind of styled content expected on the different sites. The development team not only needs to implement the global look-and-feel changes, providing the framework for content, but they may also need to implement the entire mockup. It is useful for them to bring in the resources they need all at once and build the sites initially as close to those mockups as they can.
+<!-- Businesses often have the Design team create wireframes and mockups of the sites they want included on the platform. These mockups include not only the overall look-and-feel, but the kind of styled content expected on the different sites. The development team not only needs to implement the global look-and-feel changes, providing the framework for content, but they may also need to implement the entire mockup. It is useful for them to bring in the resources they need all at once and build the sites initially as close to those mockups as they can.
 
-#### Livingstone's Resource Needs {#livingstone}
+## Livingstone's Resource Needs {#livingstone}
 
 The Livingstone Hotels & Resorts website will contain a number of separate sites for each individual hotel and resort. Each site requires a consistent user experience with different landing pages, types of content, fragments, etc. To help minimize the work of the different teams setting up and maintaining new Hotel and Resort sites, Kaito and team can provide content and fragment resources to be deployed and available with the theme.
 
-#### The Resources Importer {#resourcesimporter}
+## The Resources Importer {#resourcesimporter}
 
 Liferay's _Resources Importer_ allows developers to deploy custom themes with predefined content. The Resources Importer is useful for adding assets, structures, templates (including Application Display Templates), metadata, and any other resources with the Theme. This will help provide a holistic style change to implement an initial mockup or wireframe design.
 
@@ -59,7 +59,7 @@ Liferay will check to see the value at `[site-name]` for an existing site, and i
 
 <br />
 
-#### JSON Files {#json}
+## JSON Files {#json}
 
 <div class="key-point">
 Key Point: <br />
@@ -118,7 +118,7 @@ Tags can be applied to any content type from this file. Other assets can have mo
 }
 ```
 
-#### Understanding the File Structure {#filestructure}
+## Understanding the File Structure {#filestructure}
 
 The document_library/documents/ folder is where all the folders and files in the _Documents and Media_ repository will be placed. When deployed, those folders and files will show up on the platform through the Site Template or individual site.
 
@@ -195,7 +195,7 @@ From the `sitemap.json`, widget preferences can be set with a few lines of code.
 Note: The portlet decorator can also be set up when embedding widgets into a theme.
 </div>
 
-#### Site Initializers {#siteinitializers}
+## Site Initializers {#siteinitializers}
 
 Liferay DXP 7.2 also includes a java module that allows developers to build sites with Site Resources, _Site Initializers_. 
 
@@ -286,7 +286,7 @@ Once the Site Initializer is deployed, it will generate a new Site Template opti
 
 <br />
 
-#### Embedding Widgets {#embedding}
+## Embedding Widgets {#embedding}
 
 You may also need to include widgets in different parts of the page, such as the header or footer. For example, if you want to add a footer search, navigation, or even language widgets to each page, you can use one of three different taglibs.
 
@@ -356,4 +356,4 @@ Using these taglibs will give developers like Kaito the flexibility they need to
     <li>______________________</li>
   <ul>
 </ul>
-</div>
+</div> -->

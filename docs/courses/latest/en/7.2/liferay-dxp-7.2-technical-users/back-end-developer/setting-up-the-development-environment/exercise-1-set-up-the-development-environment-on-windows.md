@@ -4,9 +4,7 @@ title: Set Up the Development Environment on Windows
 order: 3
 ---
 
-<h2 class="exercise">Exercises</h2>
-
-## Set Up the Development Environment on Windows 10
+# Set Up the Development Environment on Windows 10
 
 <div class="ahead">
 <h4>Exercise Goals</h4>
@@ -30,7 +28,7 @@ Please consult your trainer if either of these are missing.
 You should also have credentials to log in to Liferay's website. If you don't have those, please register at <a href="https://web.liferay.com/sign-in">https://web.liferay.com/sign-in</a>.
 </div>
 
-#### Install Java 8 JDK
+## Install Java 8 JDK
 
 If you already have a Java 8 JDK installed, you can skip this step. Please note that a full JDK is required. You can check whether Java has been installed and its version in your Command Prompt with:
 
@@ -58,7 +56,7 @@ If a full JDK is installed, output should be something like:
 javac 1.8.0_181
 ```
 
-#### Install Java on Windows
+## Install Java on Windows
 
 1. **Go to** http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html.
 2. **Download** the Java 8 JDK for your processor architecture (usually Windows x64).
@@ -68,13 +66,15 @@ javac 1.8.0_181
 1. **Click** on the *Environment Variables*.
 1. **Create** a new system variable called `JAVA_HOME`.
 1. **Set** the *Variable value* to the path to your JDK, for example:
+
 ```
 C:\Program Files\Java\jdk1.8.0_181
 ```
+
 1. **Add** `%JAVA_HOME%/bin` to your `Path` system variable:
 <img src="../images/windows-path.png" style="max-height:35%" />
 
-#### Install Dev Studio DXP
+## Install Dev Studio DXP
 
 1. **Run** the Developer Studio installer to start the installation process.
 	* A notification window may appear with regard to an unrecognized third-party app. If it does, click *More Info → Run Anyway*.

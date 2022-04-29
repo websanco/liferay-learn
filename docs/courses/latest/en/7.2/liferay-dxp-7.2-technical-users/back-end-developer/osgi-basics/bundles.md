@@ -4,13 +4,13 @@ title: Bundles
 order: 3
 ---
 
-## Bundles
+# Bundles
 
 The basic unit of modularization in an OSGi environment is called a *bundle*. A bundle contains an OSGi application or part of an OSGi application. Basically, an OSGi bundle is just a regular JAR archive made up of Java classes and resources like any other JAR archive. The only required archive level difference is the `Bundle-SymbolicName` identifier in the JAR's `MANIFEST.MF` file:
 
 <img src="../images/osgi-bundle.png" />
 
-#### Bundle Identifier
+## Bundle Identifier
 
 Every bundle inside an OSGi container has to have a unique identifier. The identifier is composed of two headers:
 
@@ -32,7 +32,7 @@ Export-Package: com.liferay.training.clock.api
 
 > You can omit setting the `Bundle-Version` explicitly, which sets it automatically to `0.0.0` by the runtime.
 
-#### Bundle Semantic Versioning
+## Bundle Semantic Versioning
 
 Bundle version numbers provide a powerful feature called [Semantic Versioning](https://www.osgi.org/wp-content/uploads/SemanticVersioning.pdf), meaning that each of the four sections of the version identifier have a specific meaning for the OSGi container. The syntax is presented in the diagram below:
 
@@ -51,7 +51,7 @@ Semantic Versioning effectively doesn't allow a bundle to run with an API-incomp
 
 <br />
 
-#### Using Version Ranges
+## Using Version Ranges
 
 Declaring dependencies to other OSGi bundles requires defining version numbers. This is done in the bundle manifest and is always done using version ranges, which have the following syntax:
 
@@ -71,7 +71,7 @@ Import-Package: com.liferay.training.osgi.bundle; version=“[1.2,2.0)”
 
 > If the `Import-Package` doesn't specify the *version* attribute, it is added implicitly and assumed to be from 0.0.0 to infinity.
 
-#### Bundle Lifecycle
+## Bundle Lifecycle
 
 OSGi bundles are state-aware. *Bundle activators* are classes that implement the `org.osgi.framework.BundleActivator` interface and are used, for example, to prepare and clean up resources when a bundle is started and stopped. The `start()` method is run when the bundle starts, just before it gets into the *active* state. The `stop()` method runs when the bundle is stopped:
 

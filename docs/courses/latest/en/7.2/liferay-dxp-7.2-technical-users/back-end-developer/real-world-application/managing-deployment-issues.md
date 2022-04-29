@@ -4,15 +4,15 @@ title: Managing Deployment Issues
 order: 13
 ---
 
-## Managing Deployment Issues
+# Managing Deployment Issues
 
 In this section, we discuss module deployment-related issues and some methods for resolving them. We've already learned that only the Liferay web application itself is deployed to and managed by the Java application server. All Liferay applications run in a Liferay-embedded OSGi container, and that's why resolving module deployment issues typically involves Gogo Shell.
 
-#### Deploying Modules Overview
+## Deploying Modules Overview
 
 There are multiple ways to deploy and undeploy Liferay modules. Understanding these methods is essential in troubleshooting, as the changes they make in the file system depend on the method. 
 
-#### Autodeploy
+## Autodeploy
 
 Autodeploy is the default method of deploying modules to Liferay. You copy the module JAR or legacy WAR into the autodeploy folder, and it gets automatically deployed to the OSGi container. 
 
@@ -31,13 +31,13 @@ It's worth noticing that while the autodeploy method copies the module JARs to `
 
 > Note that the autodeploy mechanism is not cluster-aware; modules deployed to a node's autodeploy folder are deployed only to that node.
 
-#### Deploying from the Control Panel
+## Deploying from the Control Panel
 
 In scenarios where autodeploy folder access is restricted, custom modules can also be deployed from the Control Panel. This method still uses the autodeploy folder internally, meaning that module JARS will also be copied to the `LIFERAY_HOME/osgi/modules` folder:
 
 <img src="../images/deploy-from-control-panel.png" style="max-height:100%"/>
 
-#### Deploying from the Gogo Shell
+## Deploying from the Gogo Shell
 
 Modules can be installed from within the Gogo Shell directly using the standard Felix Shell commands:
 
@@ -57,11 +57,11 @@ A few things should be noticed with this method:
 * This method doesn't start the bundle automatically.
 * The module JAR is not copied to `LIFERAY_HOME/osgi/modules`. 
 
-#### Deploying in Dev Studio
+## Deploying in Dev Studio
 
 When you deploy the modules in Liferay IDE using hot deploy, the autodeploy folder is not used. This method copies the compiled bytecode directly to `LIFERAY_HOME/osgi/state/BUNDLE_ID`.
 
-#### Deploying Using Blade
+## Deploying Using Blade
 
 Modules can be deployed using the Blade CLI. This method detects the running JVM automatically, building and deploying the module directly to `LIFERAY_HOME/osgi/state/BUNDLE_ID`. This method can only be used for JARS and not for legacy WARS:
 
@@ -77,7 +77,7 @@ liferay@liferay$ blade deploy -w
 
 <br />
 
-#### Deploying Using the Gradle Wrapper Script
+## Deploying Using the Gradle Wrapper Script
 
 This method is meant to be used with Liferay Workspace with a Tomcat bundle. It tries to copy the compiled module JAR into `WORKSPACE_DIR/bundles/osgi/modules`:
 
@@ -85,7 +85,7 @@ This method is meant to be used with Liferay Workspace with a Tomcat bundle. It 
 liferay@liferay$ ./gradlew -w
 ```
 
-#### Deploying Java EE Style WAR Modules
+## Deploying Java EE Style WAR Modules
 
 Liferay supports deploying legacy Java EE WAR-style web applications into the OSGi Container. When a WAR file is copied to the autodeploy folder, it gets automatically converted into a WAB bundle, which is then deployed to the OSGi Container. The WAB is an OSGi bundle and stands for *Web Application Bundle*. The WAB is specified in OSGi Compendium.
 
@@ -103,21 +103,21 @@ module.framework.web.generator.generated.wabs.store=true
 module.framework.web.generator.generated.wabs.store.dir=${module.framework.base.dir}/wabs
 ```
 
-#### Note on Marketplace Applications
+## Note on Marketplace Applications
 
 Liferay Marketplace applications are packaged in Liferay's proprietary LPKG package format. Although the autodeployment process of LPKG packages is the same as for any deployable package type, the LPKG packages are stored in `LIFERAY_HOME/osgi/marketplace`.
 
 <br />
 
-#### Undeploying Modules Overview
+## Undeploying Modules Overview
 
 Let's take a look at the common different undeployment methods and some caveats in using them.
 
-#### Deleting a Module JAR
+## Deleting a Module JAR
 
 If the deployment method copied the JAR to `LIFERAY_HOME/osgi/modules/MODULE.jar`, removing this file undeploys the module automatically. This is the most common use case.
 
-#### Undeploying from the Control Panel
+## Undeploying from the Control Panel
 
 Undeploying the module from the Control Panel removes the module state from `LIFERAY_HOME/osgi/state`, but does not remove the module JAR from `LIFERAY_HOME/osgi/modules`:
 
@@ -127,7 +127,7 @@ A couple things are worth noticing when this method is used. Undeploying from th
 
 <img src="../images/blacklist-entry.png" style="max-height:100%"/>
 
-#### Undeploying from Gogo Shell
+## Undeploying from Gogo Shell
 
 Modules can be uninstalled directly from the OSGi container using the `uninstall` command. This method does not remove the module JAR from `LIFERAY_HOME/osgi/modules`:
 
@@ -145,7 +145,7 @@ g! uninstall 961
 
 <br />
 
-#### Module Deployment Recap
+## Module Deployment Recap
 
 Understanding the file-level changes during deployment helps to troubleshoot deployment-related issues. The following diagrams summarize the changes during the deployment process:
 
@@ -155,7 +155,7 @@ As seen in the folder structure:
 
 <img src="../images/deployment-related-directories.png" style="max-height:100%"/>
 
-#### Troubleshooting Deployment Issues
+## Troubleshooting Deployment Issues
 
 Steps to clean the platform and the module state completely are generally as follows:
 
@@ -171,46 +171,46 @@ Steps to clean the platform and the module state completely are generally as fol
 
 Let's discuss some of the common module deployment-related scenarios.
 
-#### Undeployed Module Reappears After Restart
+## Undeployed Module Reappears After Restart
 
-#### Symptoms
+## Symptoms
 
 The undeployed module is installed and active after restart.
 
-#### Possible Cause
+## Possible Cause
 
 The module JAR, WAR, or LPKG file was not removed by the undeploy method.
 
-#### Suggested Solution
+## Suggested Solution
 
 Delete the module JAR, LPKG, or WAR file from the respective folder.
 
-#### Module Redeployment Fails
+## Module Redeployment Fails
 
-#### Symptoms
+## Symptoms
 
 Redeploying a module fails. The module is either not deployed at all or just doesn't start.
 
-#### Possible Cause
+## Possible Cause
 
 An old module JAR file might be blocking the redeployment. This might happen, for example, if you were using Gradle deploy or autodeploy and __undeployed__ the module from within Gogo Shell, which doesn't remove the module JAR. There might also be a blacklist entry for the module.
 
-#### Possible Solutions
+## Possible Solutions
 
 * Delete the module JAR from `LIFERAY_HOME/osgi/modules`.
 * Check blacklisting settings in *Control Panel → Configuration → System Settings → Platform → Bundle Blacklist*.
 
 ### Module Resources Not Refreshing
 
-#### Symptoms
+## Symptoms
 
 Redeploying the module won't refresh static resources like CSS and JavaScript files or compiled JSP files. 
 
-#### Possible Cause
+## Possible Cause
 
 Caching settings might prevent resources from refreshing. There might also be a system time skew or faulty timezone settings letting the system know that current resources are newer than the updated ones.
 
-#### Possible Solutions
+## Possible Solutions
 
 * Check that the portal is running on development mode. 
 * Check that both the development and server machine clocks are synchronized. 
@@ -218,39 +218,39 @@ Caching settings might prevent resources from refreshing. There might also be a 
 
 To clear the JSP cache in production, you can also try to clear the direct servlet cache from *Control Panel → Server Administration → Resources → Clear the direct servlet cache*.
 
-#### Module Gets Installed But Doesn't Start
+## Module Gets Installed But Doesn't Start
 
 This issue type usually falls into two possible categories: 
 
 1. Unsatisfied module dependencies
 1. Unsatisfied module requirements
 
-#### Unsatisfied Module Dependencies
+## Unsatisfied Module Dependencies
 
-#### Symptoms
+## Symptoms
 
 The module deploys but remains in the *installed* state and doesn't become *active*.
 
-#### Possible Cause
+## Possible Cause
 
 The module didn't make it to the *resolved* state because some of the module's dependencies are missing or couldn't get activated. This might also happen because of the wrong dependency compile scope.
 
-#### Possible Solutions
+## Possible Solutions
 
 * Check the compile scopes in `build.gradle` if any resource should be included in the build (`compileInclude`).
 * Use the Gogo `diag` command to find any missing dependencies in the container.
 
-#### Unsatisfied Module Requirements
+## Unsatisfied Module Requirements
 
-#### Symptoms
+## Symptoms
 
 The module is in the *active* state, but some of its service components seem not to be working. 
 
-#### Possible Cause
+## Possible Cause
 
 OSGi bundles and components have different lifecycles; a bundle may start even if some of its components do not. Usually this happens when some of the component's references (`@Reference`) are not satisfied, i.e., not found or started. There might also be a circular reference. 
 
-#### Possible Solutions
+## Possible Solutions
 
 * Use the Gogo Shell to find the failing component id by running `ds:unsatisfied BUNDLE_ID`. Then run `scr:info COMPONENT_ID` to find unsatisfied references.
 Find out why the reference was not available.

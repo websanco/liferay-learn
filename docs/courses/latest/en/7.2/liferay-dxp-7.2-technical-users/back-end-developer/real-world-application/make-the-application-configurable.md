@@ -4,7 +4,7 @@ title: Make the Application Configurable
 order: 7
 ---
 
-## Introducing Liferay's Configuration API
+# Introducing Liferay's Configuration API
 
 Liferay's configuration API is a configuration management framework for both the Liferay platform and applications on the platform. The configuration API is based on the [OSGi Configuration Admin service](https://osgi.org/specification/osgi.cmpn/7.0.0/service.cm.html), which allows you to dynamically set and manage configuration data for OSGi bundles and components. The configuration API is part of the OSGi Compendium specification.
 
@@ -34,15 +34,15 @@ On a high level, the minimum steps required for making a Liferay application con
 
 > As the Liferay configuration API is relying on the standard OSGi configuration Admin service, the component runtime configuration data can be read with standard OSGi management tools like the Gogo Shell and Felix Web Console.
 
-#### Example: Creating a System-Wide Portlet Configuration
+### Example: Creating a System-Wide Portlet Configuration
 
-#### Step 1 - Add Metatype API Dependency
+### Step 1 - Add Metatype API Dependency
 
 ```groovy
 compileOnly group: "com.liferay", name: "com.liferay.portal.configuration.metatype.api"
 ```
 
-#### Step 2 - Create the Configuration Interface
+### Step 2 - Create the Configuration Interface
 
 Creating the configuration interface automatically creates the configuration user interface in *Control Panel → System Settings*.  The configuration `id` property has to match the interface fully qualified name.
 
@@ -69,7 +69,7 @@ public interface ModuleConfiguration {
 }
 ```
 
-#### Step 3 - Make the Configuration Data Available in an OSGi Component
+### Step 3 - Make the Configuration Data Available in an OSGi Component
 
 Reference the configuration by its id using the component property `configurationPid`. The configuration variable has to be `volatile`. After that, the configuration can be consumed, for example, by putting values into the request:
 
@@ -115,7 +115,7 @@ public class ConfigurationExamplePortlet extends MVCPortlet {
 
 > A note on the annotations: `@Meta.OCD` and `@Meta.AD` are part of the bnd library, while `@ObjectClassDefinition` and `@AttributeDefinition` are OSGi core equivalents. Both can be used, but only bnd annotations are available at runtime.
 
-#### Further Reading
+### Further Reading
 
 * Configurable Applications: https://dev.liferay.com/en/develop/tutorials/-/knowledge_base/7-2/configurable-applications
 

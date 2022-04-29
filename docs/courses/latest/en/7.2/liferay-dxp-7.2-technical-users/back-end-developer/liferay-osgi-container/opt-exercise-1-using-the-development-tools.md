@@ -4,17 +4,17 @@ title: Using the Development Tools
 order: 4
 ---
 
-<h2 class="exercise">Optional Exercise</h2>
+# Optional Exercise
 
 In this optional exercise, you can find tips and instructions for the training exercises. 
 
 Always ask your trainer, if you are unsure about the exercise instructions.
 
-#### Creating Modules from the Command Line
+## Creating Modules from the Command Line
 
 Be sure to be in the right folder when creating a module from the command line because the template generator behaves differently depending on the current location. If you are outside of the Liferay Workspace, the template generator creates an independently buildable module.
 
-#### Creating Classes
+## Creating Classes
 
 When creating a new class or interface, you don't have to copy/enter the package name and class separately:
 
@@ -23,7 +23,7 @@ When creating a new class or interface, you don't have to copy/enter the package
 
 The path field will populate automatically.
 
-#### Organizing Missing Imports
+## Organizing Missing Imports
 
 1. **Use** the *Source Menu -> Organize Imports* or keyboard shortcut CTRL+SHIFT+O to organize missing imports.
 
@@ -42,18 +42,15 @@ For the component annotations, use the `org.osgi.service` instead of `bnd` packa
 * org.osgi.service.component.annotations.Component
 * org.osgi.service.component.annotations.Modified 
 
-#### Declaring Dependencies
+## Declaring Dependencies
 
 When you declare new dependencies in the `build.gradle` they should refresh automatically. If this doesn't happen and you cannot fix the missing imports, you can force the refresh manually:
 
 1. **Right-click** on the affected module or Liferay Workspace root folder, in the Eclipse *Project Explorer* view.
 1. **Select** *Gradle -> Refresh Gradle Project*
 
-#### Opening Classes and Resources for Editing
+## Opening Classes and Resources for Editing
 
 1. **Use** CTRL+SHIFT+R and type the class name to find the resource.
 
 > Notice that you can use wildcards like *LocalService*.
-
-
-

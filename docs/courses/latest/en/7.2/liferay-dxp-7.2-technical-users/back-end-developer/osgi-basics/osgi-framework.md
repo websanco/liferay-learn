@@ -4,7 +4,7 @@ title: OSGi Framework
 order: 2
 ---
 
-## OSGi Framework
+# OSGi Framework
 
 __OSGi__ stands for Open Service Gateway Initiative. OSGi is a specification and a set of standards for modular software development with Java. The organization behind the initiative is the [OSGi Alliance](https://www.osgi.org/), founded in 1999. 
 

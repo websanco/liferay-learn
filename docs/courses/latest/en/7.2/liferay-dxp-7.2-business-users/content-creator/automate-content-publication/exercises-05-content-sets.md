@@ -1,6 +1,4 @@
-<h3 class="exercise">Exercises</h3>
-
-## Creating Content Sets to Personalize Site Content
+# Creating Content Sets to Personalize Site Content
 
 <div class="ahead">
 <h4>Exercise Goals</h4>
@@ -12,7 +10,7 @@
 </ul>
 </div>
 
-#### Create User Segments for Livingstone Life Subscribers and Non-Subscribers
+## Create User Segments for Livingstone Life Subscribers and Non-Subscribers
 1. **Open** the _Menu_.
 * **Click** the _Site Selector_ in the _Site Administration_ panel.
 * **Click** the _My Sites_ tab.
@@ -27,7 +25,7 @@
 
 <img src="../images/livingstone-life-segment.png" style="max-height:25%;" />
 
-#### Create a Content Set from the Livingstone Life Asset Publisher
+## Create a Content Set from the Livingstone Life Asset Publisher
 1. **Click** _Go to Site_ in the _Site Administration_ panel.
 * **Click** the _What's New_ tab.
 * **Click** the _Options_ menu for the _Recently Published_ Asset Publisher.
@@ -39,7 +37,7 @@
 
 <img src="../images/livingstone-life-content-set.png" style="max-height:25%;" />
 
-#### Import Content for the Content Set
+## Import Content for the Content Set
 1. **Go to** _`Content & Data → Web Content`_ in the _Site Administration_ panel.
 * **Click** the _Options_ icon.
 * **Choose** _Export/Import_.
@@ -52,7 +50,7 @@
 
 <img src="../images/content-imported.png" style="max-height:20%;" />
 
-#### Create a Personalized Variant of the Content Set
+## Create a Personalized Variant of the Content Set
 1. **Go to** _`Content & Data → Content Sets`_ in the _Site Administration_ panel.
 * **Click** _Livingstone Life's Latest Content_.
 * **Click** the _New Personalized Variant_ button.
@@ -65,7 +63,7 @@
 
 <img src="../images/subscriber-set.png" style="max-height:32%;" />
 
-#### Update the Anyone Variant for the Content Set
+## Update the Anyone Variant for the Content Set
 1. **Click** the _Anyone_ Personalized Variation.
 * **Expand** the _Source_ section if it is not already expanded.
 * **Choose** _Web Content Article_ under Asset Entry Type.
@@ -74,7 +72,7 @@
 
 <img src="../images/anyone-variant.png" style="max-height:30%;" />
 
-#### View the Content Set via the Asset Publisher
+## View the Content Set via the Asset Publisher
 1. **Click** _Go to Site_ in the _Site Administration_ panel.
 * **Click** the _What's New_ tab.
 * **Click** the _Options_ menu above the _Recently Published_ Asset Publisher.
@@ -94,6 +92,6 @@
 
 ---
 
-#### Bonus Exercises
+## Bonus Exercises
 1. Create a Content Set that includes both the Blog and Web Content Article seen in the exercise above.
 2. Create a User Segment for non-subscribers (Site does not equal Livingstone Life under Conditions) and create a Personalized Variation for the Content Set we made above using this new User Segment. This time make it so that only non-subscribers can see the blog.

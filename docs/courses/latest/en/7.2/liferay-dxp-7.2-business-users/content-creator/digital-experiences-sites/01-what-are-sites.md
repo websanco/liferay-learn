@@ -1,4 +1,4 @@
-## What are Sites?
+# What are Sites?
 
 Websites have a structure of pages that can be navigated by digital users and are used by virtually every modern business, but a website without content is like a book without pages. When you're building a website, you need to figure out how to include content and how to structure and display that content efficiently. So what is the best way to deliver content in a site for your business? That is the question this course will help you answer.
 
@@ -7,7 +7,7 @@ Websites have a structure of pages that can be navigated by digital users and ar
 	<figcaption style="font-size: x-small">Fig.1 Liferay Site Management</figcaption>
 </figure>
 
-#### Livingstone Hotels & Resorts {#livingstone}
+## Livingstone Hotels & Resorts {#livingstone}
 
 Livingstone Hotels & Resorts has tasked Josiah Copeland with leading a team to build a new platform for the entire company. This platform needs to have an employee intranet, _Livingstone Loop_, that will improve communication and connectivity across multiple departments, increase employee enablement, retention, and morale by helping maintain a work/life balance, and engage employees to ensure content is actually being seen and read. As the platform administrator, Josiah is also in charge of empowering the web development team (Kaito Tanaka, Martin Llewellyn, and Maria Flores) to create the public website for Livingstone Hotels & Resorts. This website needs to:
 
@@ -16,7 +16,7 @@ Livingstone Hotels & Resorts has tasked Josiah Copeland with leading a team to b
 * Present content that's useful and relevant that increases Livingstone's online presence while simultaneously establishing a connection with the reader
 * Reach the appropriate audience
 
-#### Sites in Liferay DXP {#sites}
+## Sites in Liferay DXP {#sites}
 
 Sites act as repositories in which all content and content types (Liferay Assets) are stored. Pages can be created within Sites in order to display content to Users. Josiah can add content to these pages via _Widgets_.
 
@@ -49,7 +49,7 @@ In Liferay, widgets can be placed in the center of each page within a grid-like 
 
 <br />
 
-#### The Content Management System {#contentmanage}
+## The Content Management System {#contentmanage}
 
 Anyone that has used a website before probably has a pretty good idea of how sites look and work. Liferay Sites are similar in concept, but there are a few distinctions that make the creation and management of content and pages more effective. They serve as a foundational block of content, documents, and pages. Each Site contains its own unique group of content and provides a framework for managing Roles and permissions to control access. Content can be displayed to a wider audience on Site Pages.
 
@@ -86,7 +86,7 @@ Sharing Content through the Global Site is generally recommended. Using the glob
 	<figcaption style="font-size: x-small">Fig.5 The Global Site and default site on the Livingstone platform</figcaption>
 </figure>
 
-#### The Asset Framework {#asset}
+## The Asset Framework {#asset}
 
 Content teams can work with a couple of content management features within their sites. The first is the traditional _Asset Framework_. The Asset Framework allows for many different kinds of content to be created within the Liferay platform. In addition, there are common features such as adding metadata for content organization or allowing users to interact with comments. This makes for an easy way to sort, find, and interact with the content in the platform.
 
@@ -95,7 +95,7 @@ Key Point: <br />
 The <strong>Asset Framework</strong> provides a number of different content types and features.
 </div>
 
-#### Experience Management Features in Liferay DXP 7.2 {#expmanage}
+## Experience Management Features in Liferay DXP 7.2 {#expmanage}
 
 Content teams can also work with new Web Experience tools now available in Liferay 7.2. These tools are designed to empower business users in the creation and management of modern sites. These tools include:
 
@@ -122,7 +122,7 @@ Key Point:  <br />
 	<figcaption style="font-size: x-small">Fig.6 A Page Fragment used to create a modern site page</figcaption>
 </figure>
 
-#### Putting Everything Together {#everything}
+## Putting Everything Together {#everything}
 
 Liferay has many great individual content features, but putting all the features together makes for a powerful content strategy. Containing and finding content is easy using Sites, and when combined with content-centric pages, Content Creators will have an easy time creating, editing, and displaying content. With Liferay's new content creation tools, users have an easier time than ever getting to that content thanks to Modern Navigation Tools--and the content looks even better. Finally, taking advantage of the Asset Framework features ties it all together, making it easy for content creators and administrators to organize content and for users to interact with that content.
 

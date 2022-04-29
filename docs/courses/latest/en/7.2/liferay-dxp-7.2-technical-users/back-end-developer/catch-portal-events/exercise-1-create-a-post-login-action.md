@@ -3,10 +3,8 @@ description: 12 - Catch Portal Events
 title: Creating a Post Login Event Listener
 order: 1
 ---
-
-<h2 class="exercise">Exercises</h2>
-
-## Creating a Post Login Event Listener
+<!-- 
+# Creating a Post Login Event Listener
 
 <div class="ahead">
 <h4>Exercise Goals</h4>
@@ -19,7 +17,7 @@ order: 1
 	</ul>
 </div>
 
-#### Create a Liferay Module Project
+## Create a Liferay Module Project
 
 **Option 1: Use the Command Line Blade tools**
 
@@ -44,13 +42,13 @@ blade create -t service -p com.liferay.training.login.events.post -s com.liferay
 1. **Click** on the browse button next to the *Service Name* field.
 	* Enter "\*.LifecycleAction" in the *Select Service Name*.
 	* Select `com.liferay.portal.kernel.events.LifecycleAction` from the list.
-1. **Click** the green plus button to add a property. 
+1. **Click** the green plus button to add a property.
 	* Enter "key" for the *Name*.
 	* Enter "login.events.post" for the *Value*.
 	* Press the _Enter/Return_ key to confirm your property.
 1. **Click** *Finish* to close the wizard.
 
-#### Declare Dependencies
+## Declare Dependencies
 
 Since we want to send an email in our `PostLoginEventListener`, we have to add `javax.mail` to our dependencies:
 
@@ -59,7 +57,7 @@ Since we want to send an email in our `PostLoginEventListener`, we have to add `
 	compileOnly group: "javax.mail", name: "mail"
 ```
 
-#### Implement the Event Listener Class
+## Implement the Event Listener Class
 
 1. **Open** the class `com.liferay.training.login.events.post.PostLoginEventListener`.
 1. **Add** the service references to the end of the class as follows:
@@ -74,7 +72,7 @@ Since we want to send an email in our `PostLoginEventListener`, we have to add `
 1. **Implement** the `processLifecycleEvent()` method as follows:
 	```java
 	@Override
-	public void processLifecycleEvent(LifecycleEvent lifecycleEvent) 
+	public void processLifecycleEvent(LifecycleEvent lifecycleEvent)
 			throws ActionException {
 		try {
 
@@ -113,7 +111,7 @@ Since we want to send an email in our `PostLoginEventListener`, we have to add `
 )
 ```
 
-#### Final Code Review
+## Final Code Review
 
 1. **Check** that the implementation files look like this:
 
@@ -156,7 +154,7 @@ import org.osgi.service.component.annotations.Reference;
 public class PostLoginEventListener implements LifecycleAction {
 
 	@Override
-	public void processLifecycleEvent(LifecycleEvent lifecycleEvent) 
+	public void processLifecycleEvent(LifecycleEvent lifecycleEvent)
 			throws ActionException {
 		try {
 
@@ -193,7 +191,7 @@ public class PostLoginEventListener implements LifecycleAction {
 }
 ```
 
-#### Deploy and Test
+## Deploy and Test
 
 1. **Find** the file `exercise-files/12-catch-portal-events/fakeSMTP-2.0.jar` in the provided materials.
 1. **Run** the JAR to start the server, using the port `25`.
@@ -204,4 +202,4 @@ public class PostLoginEventListener implements LifecycleAction {
 1. **Deploy** the *post-login-event-listener* module to the Liferay server.
 1. **Open** http://localhost:8080/ with your browser.
 1. **Sign in** with any user.
-1. **Check** the FakeSMTP server for an email.
+1. **Check** the FakeSMTP server for an email. -->

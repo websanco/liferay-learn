@@ -4,7 +4,7 @@ title: Implement Workflow Support
 order: 8
 ---
 
-## Implement Workflow Support Introduction
+# Implement Workflow Support Introduction
 
 A workflow is an orchestrated and repeatable pattern or sequence of operations. Typically, workflows are used in review processes, but they're often used in integrating with other systems as well.
 
@@ -14,7 +14,7 @@ For designing the workflows, there is a workflow editor available in the *Contro
 
 <img src="../images/workflow-editor.png" style="max-height:100%"/>
 
-#### Implementing Support for Workflows
+## Implementing Support for Workflows
 
 Here are the general steps for enabling workflows for a custom entity:
 
@@ -25,11 +25,11 @@ Here are the general steps for enabling workflows for a custom entity:
 1. Create a workflow handler component.
 1. Implement the status on the user interface as needed.
 
-#### Implementation Example
+## Implementation Example
 
 As an example, let's take a look at the workflow support implementation in the Liferay Blogs application: https://github.com/liferay/liferay-portal/blob/7.1.x/modules/apps/blogs.
 
-#### 1. Status Field in service.xml
+## 1. Status Field in service.xml
 
 ```xml
 <?xml version="1.0"?>
@@ -49,7 +49,7 @@ As an example, let's take a look at the workflow support implementation in the L
 		...
 ```
 
-#### 2. Workflow Instance Creation and Deletion Handling on the Service Layer
+## 2. Workflow Instance Creation and Deletion Handling on the Service Layer
 
 Workflow instance creation and deletion is handled in `com.liferay.blogs.service.impl.BlogsEntryLocalServiceImpl`:
 
@@ -90,7 +90,7 @@ public BlogsEntry addEntry(
 	}
 ```
 
-#### 3. Status-Aware Getter Methods
+## 3. Status-Aware Getter Methods
 
 Status in a parameter in the getter methods in `com.liferay.blogs.service.impl.BlogsEntryLocalServiceImpl`: 
 
@@ -116,7 +116,7 @@ Status in a parameter in the getter methods in `com.liferay.blogs.service.impl.B
 	...
 ```
 
-#### 4. Method for Updating Status
+## 4. Method for Updating Status
 
 The status updating method is in the `com.liferay.blogs.service.impl.BlogsEntryLocalServiceImpl`:
 

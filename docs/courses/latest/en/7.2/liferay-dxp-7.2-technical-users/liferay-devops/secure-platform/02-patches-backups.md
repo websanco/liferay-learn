@@ -1,4 +1,4 @@
-## Managing Fixes and Backups
+# Managing Fixes and Backups
 
 Keeping your platform up-to-date and patched is important for:
 - Security
@@ -63,7 +63,7 @@ The Patching Tool provides many benefits:
 *Make sure to learn about the Patching Tool and install the latest fix packs when working on a project.*
 For more on patching, you can check out https://help.liferay.com.
 
-### Restoring From a Backup {#restore}
+## Restoring From a Backup {#restore}
 
 <div class="key-point">
 Key Point:<br />
@@ -124,11 +124,12 @@ It's important to test your backup system. You should only be confident that a b
 
 Let's walk through an example of how you could restore from a backup.
 
-#### Restore the Database
+## Restore the Database
 
 1. Open a _Terminal_ (Mac or Linux users)/_Powershell_ (Windows users) window.
 2. Go to your database backup directory.
 3. Run the command to import the database dump, for example:
+
 ```bash
 $ mysql recovery < liferay_warm_09142016.sql
 ```
@@ -139,29 +140,33 @@ Wait as the import finishes. It's always important to back up all Liferay config
 Note: If you are implementing containerization (such as we have been using in the course exercises with Docker), it is not necessary to back-up the configuration files in this way. Instead make sure that you are able to build the same image again and run it in a different environment.
 </div>
 
-#### Restore the Liferay Configuration
+## Restore the Liferay Configuration
 
 1. Go to the configuration backup folder.
 2. Copy the configuration `.cfg`/`.config` files.
 3. Copy the properties over, for example:
+
 ```bash
 $ sudo cp portal-ext.properties /opt/recovery/
 ```
 
 Liferay stores configuration files, search indexes, and cache information in a folder called `/data` in Liferay Home by default. If you're using the *File System Store* or the *Advanced File System Store*, the Documents and Media repository is also stored here by default. It's always important to back up your `/data` folder. The files that make up Liferay's OSGi runtime are stored in a folder called `/osgi` in Liferay Home. This folder contains JAR files for all of the apps and modules that you've deployed to Liferay and other required JAR files, configuration files, and log files. It's also important to back up your `/osgi` folder. We don't have any custom modules or apps to restore.
 
-#### Restore the Documents
+## Restore the Documents
 
 1. Go to the backup document store.
 2. Copy the old document store over, for example:
+
 ```bash
 $ sudo rsync -r document_libary /opt/recovery/data/
 ```
 
 **If possible, back up your entire application server and Liferay Home folder**. This allows you to revert to a working instance quickly in the event of an issue. This was already handled for us. You should be able to start up your recovered system using the Tomcat startup script:
+
 ```bash
 $ sudo /opt/recovery/tomcat/bin/catalina.sh run
 ```
+
 Or you can use the `startup.bat` file if you're on Windows.
 
 This process will depend on the infrastructure you're using. See this documentation for further details: https://dev.liferay.com/discover/deployment/-/knowledge_base/7-1/backing-up-a-liferay-installation.

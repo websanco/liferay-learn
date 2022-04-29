@@ -4,7 +4,7 @@ title: Implement Access Control
 order: 5
 ---
 
-## Implement Access Control
+# Implement Access Control
 
 Liferay has a robust security model that allows for the configuration of fine-grained access control. Liferay's access control system lets you define who can use an application and who is allowed to add and edit a model resource.
 
@@ -12,15 +12,16 @@ For example, all applications dealing with user and site management are only acc
 
 Access control in Liferay is based on four key concepts: Resources, Actions, Permissions, and Roles.
 
-#### Resources
+## Resources
 
 A resource in Liferay's permission framework is a generic representation of any application or model entity that can be used as an action target. There are two distinct kinds of resources: portlet and model resources.
 
-#### Portlet Resources
+## Portlet Resources
 
 A portlet resource represents a portlet application, like the Blogs or Wiki, and is identified in the permission system by a portlet's ID, defined by a `javax.portlet.name` property. By convention, a component's fully qualified classname with the dots replaced by underscores is used as the ID, as seen in the code snippet taken from Liferay's [Blogs Portlet](https://github.com/liferay/liferay-portal/tree/7.2.x/modules/apps/blogs): 
 
 **BlogsPortlet.java**
+
 ```java
 @Component(
 	immediate = true,
@@ -49,7 +50,7 @@ public class BlogsPortletKeys {
 
 > A best practice is to define the portlet's ID as a constant in a dedicated keys class in order to avoid ambiguities and misspellings. 
 
-#### Model Resources
+## Model Resources
 
 A Model Resource represents a model entity, usually managed by a portlet application. Examples of model resources include: 
 
@@ -62,11 +63,11 @@ Model resources are usually identified and referenced by an entity's fully quali
 * __Web Content:__ com.liferay.journal.model.JournalArticle	
 * __BlogsEntry:__ com.liferay.blogs.model.BlogsEntry
 
-#### Actions
+## Actions
 
 Actions are operations that can be performed on a given resource, either on a portlet or a model resource.
 
-Examples for portlet resource actions: 
+Examples for portlet resource actions:
 
 * __ADD\_TO\_PAGE__: gives users the ability to add a portlet to a page
 * __CONFIGURATION__: lets users access a portlet's configuration menu
@@ -76,26 +77,26 @@ Examples for model resource actions:
 
 * ADD_ENTRY
 * UPDATE
-* DELETE 
+* DELETE
 * PERMISSIONS
 * VIEW
 
 > The above example actions are taken from Liferay's core applications, but you can define custom actions for your own applications.
 
-#### Action Types
+## Action Types
 
-There are two types of actions: 
+There are two types of actions:
 
 1.  __Top-level actions:__ general model actions that can't be applied to an existing resource, for example, `ADD_ENTRY`.
 1. __Resource actions:__  actions applied to an existing resource, for example, `DELETE`.
 
 > By convention, the *top-level actions* are referenced by the package name of the respective service, for example, `com.liferay.blogs`, and the *resource actions* by the fully qualified name of the targeted model entity, for example, `com.liferay.blogs.model.BlogsEntry`.
 
-#### Permissions
+## Permissions
 
 A permission is when a *resource* meets an *action* or, more formally: a permission is an *action* that can be performed on a *resource*. The permission to update a Blogs post, for example, is defined by the combination of the BlogsEntry's model resource identifier and the UPDATE action: `  com.liferay.blogs.model.BlogsEntry` + `UPDATE`.
 
-#### Permission Scopes
+## Permission Scopes
 
 The scope of a permission defines how broadly the permission applies to the resources in the portal. There are four options:
 
@@ -104,7 +105,7 @@ The scope of a permission defines how broadly the permission applies to the reso
 1. __Group Template__: similar to *Group* scope, except that it does not automatically apply to a specific group. A user must be a member of a group (generally either a site or an organization), and they must have been given the role within that group before they are granted its permissions.
 1. __Individual__: applies only to a single resource of the type
 
-#### Roles
+## Roles
 
 Roles are entities that bind all the previously mentioned concepts to a user or a user group. In other words, __roles are collections of permissions__ that give users access to different parts of the platform and lets them perform certain tasks. 
 
@@ -129,7 +130,7 @@ __Permissions are always granted to roles__, not to users directly.
 
 <br />
 
-#### Wrapping it Up
+## Wrapping it Up
 
 Liferay's access control system can be summarized as follows:
 
@@ -145,7 +146,7 @@ Permissions for roles can be granted on an individual resource level. You can ma
 
 <img src="../images/permission-management.png" style="max-height:100%"/>
 
-#### Permissions in the Database
+## Permissions in the Database
 
 There are two database tables storing the permissions information:
 
@@ -160,7 +161,7 @@ Example of Blogs-related permissions in the ResourcePermissions table:
 
 <img src="../images/resourcepermission-table.png" style="max-height:100%"/>
 
-#### Implementing Permissioning
+## Implementing Permissioning
 
 To implement permissioning, you need to define permissions, manage the resource lifecycle, and implement permission checking. Where and how you define permissions depends on the application structure. 
 
@@ -177,7 +178,7 @@ Generally, the steps for implementing permissioning are:
 
 Let's walk through an example:
 
-#### Step 1 - Define the Path to the Permission Definition File
+## Step 1 - Define the Path to the Permission Definition File
 
 Create a file called `portlet.properties` in the `src/main/resources` folder of your module project and implement as follows:
 
@@ -189,7 +190,7 @@ Create a file called `portlet.properties` in the `src/main/resources` folder of 
 resource.actions.configs=resource-actions/default.xml
 ```
 
-#### Step 2 - Create the Permission Definition File
+## Step 2 - Create the Permission Definition File
 
 Now you have to implement the actual file that defines module resources and the available permissions. Following the example, this file would be `src/main/resources/resource-actions/default.xml`.
 
@@ -200,7 +201,8 @@ The second one is the permission definition file for model resources and is loca
 1. Resources that have the *model-name* `com.liferay.blogs` are *top-level actions*, which are applied to generic model actions.
 1. Resources have the full class path `com.liferay.blogs.model.BlogsEntry` as the *model-name* and are called *resource actions* and are applied to existing entities.
 
-**blogs-web default.xml **
+**blogs-web default.xml**
+
 ```xml
 <?xml version="1.0"?>
 <!DOCTYPE resource-action-mapping PUBLIC "-//Liferay//DTD Resource Action Mapping 7.0.0//EN" "http://www.liferay.com/dtd/liferay-resource-action-mapping_7_0_0.dtd">
@@ -251,6 +253,7 @@ The second one is the permission definition file for model resources and is loca
 ```
 
 **blogs-service default.xml**
+
 ```xml
 <?xml version="1.0"?>
 <!DOCTYPE resource-action-mapping PUBLIC "-//Liferay//DTD Resource Action Mapping 7.0.0//EN" "http://www.liferay.com/dtd/liferay-resource-action-mapping_7_0_0.dtd">
@@ -318,11 +321,12 @@ The second one is the permission definition file for model resources and is loca
 </resource-action-mapping>
 ```
 
-Sources: 
+Sources:
+
 * https://github.com/liferay/liferay-portal/blob/7.2.x/modules/apps/blogs/blogs-web/src/main/resources/resource-actions/default.xml
 * https://github.com/liferay/liferay-portal/blob/7.2.x/modules/apps/blogs/blogs-service/src/main/resources/resource-actions/default.xml
 
-#### Step 3 - Manage the Permission Resources Lifecycle
+## Step 3 - Manage the Permission Resources Lifecycle
 
 Permission resources are permission container objects bound to the model entities. We need to take care of adding, updating, and deleting permission resources for our entities. 
 
@@ -331,6 +335,7 @@ In a Service Builder project, adding is usually done in the method adding a new 
 Below is an excerpt of resource handling methods in a Blogs application's local service class: [com.liferay.blogs.service.impl.BlogsEntryLocalServiceImpl.java](https://github.com/liferay/liferay-portal/blob/7.1.0-ga1/modules/apps/blogs/blogs-service/src/main/java/com/liferay/blogs/service/impl/BlogsEntryLocalServiceImpl.java): 
 
 **Adding resources**
+
 ```java
 @Override
 public void addEntryResources(
@@ -356,6 +361,7 @@ public void addEntryResources(
 ```
 
 **Updating resources**
+
 ```java
 @Override
 public void updateEntryResources(
@@ -381,6 +387,7 @@ public void updateEntryResources(
 ```
 
 **Resource Deletion**
+
 ```java
 @Indexable(type = IndexableType.DELETE)
 @Override
@@ -468,11 +475,12 @@ public BlogsEntry deleteEntry(BlogsEntry entry) throws PortalException {
 }
 ```
 
-#### Step 4 - Create Permission Registrar Classes
+## Step 4 - Create Permission Registrar Classes
 
 Next, we'll have to create permissions registrar classes. These follow what you did in `default.xml`: you need one for your portlet permissions and one for each of your entities. By convention, registrar classes are placed in the sub-package `internal.security.permission.resource`.
 
 **BlogsEntryModelResourcePermissionDefinition.java**
+
 ```java
 /**
  * Copyright (c) 2000-present Liferay, Inc. All rights reserved.
@@ -572,6 +580,7 @@ public class BlogsEntryModelResourcePermissionDefinition
 ```
 
 **BlogsPortletResourcePermissionDefinition.java**
+
 ```java
 /**
  * Copyright (c) 2000-present Liferay, Inc. All rights reserved.
@@ -640,6 +649,7 @@ Next, we'll need a permission checker class for portlets and all the entities. I
 <br /><br />
 
 **BlogsPermission.java**
+
 ```java
 /**
  * Copyright (c) 2000-present Liferay, Inc. All rights reserved.
@@ -693,6 +703,7 @@ public class BlogsPermission {
 ```
 
 **BlogsEntryPermission.java**
+
 ```java
  * Copyright (c) 2000-present Liferay, Inc. All rights reserved.
  *
@@ -760,7 +771,7 @@ Sources:
 * [BlogsEntryPermission](https://github.com/liferay/liferay-portal/blob/7.2.x/modules/apps/blogs/blogs-web/src/main/java/com/liferay/blogs/web/internal/security/permission/resource/BlogsEntryPermission.java)
 * [BlogsPermission](https://github.com/liferay/liferay-portal/blob/7.2.x/modules/apps/blogs/blogs-web/src/main/java/com/liferay/blogs/web/internal/security/permission/resource/BlogsPermission.java)
 
-#### Step 6 - Implement Permission Checking
+## Step 6 - Implement Permission Checking
 
 The final step is to make use of the permissions. 
 
@@ -769,6 +780,7 @@ In the user interface, you should check permissions to control viewing, adding, 
 The examples below from a Blogs applications [BlogsEntryServiceImpl](https://github.com/liferay/liferay-portal/blob/7.2.x/modules/apps/blogs/blogs-service/src/main/java/com/liferay/blogs/service/impl/BlogsEntryServiceImpl.java) and from a [JSP](https://github.com/liferay/liferay-portal/blob/7.2.x/modules/apps/blogs/blogs-web/src/main/resources/META-INF/resources/blogs/entry_action.jsp) file class demonstrates permission checking:
 
 **BlogsEntryServiceImpl.java**
+
 ```java
 @Override
 public BlogsEntry addEntry(
@@ -795,6 +807,7 @@ public BlogsEntry addEntry(
 ```
 
 **entry_action.jsp**
+
 ```html
 <c:if test="<%= BlogsEntryPermission.contains(permissionChecker, entry, ActionKeys.PERMISSIONS) %>">
 	<liferay-security:permissionsURL

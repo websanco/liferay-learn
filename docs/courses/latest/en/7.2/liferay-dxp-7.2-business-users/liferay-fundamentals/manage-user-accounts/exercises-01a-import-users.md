@@ -1,5 +1,3 @@
-<h2 class="exercise">Exercises</h2>
-
 ## Create New User Accounts
 
 <div class="ahead">
@@ -15,7 +13,8 @@
 </ul>
 </div>
 
-#### Create a User Account for Jason Murray
+## Create a User Account for Jason Murray
+
 1. **Sign in** to Liferay if you're not already logged in.
     * Make sure you go to _localhost:8080_ in your browser once Liferay is started.
 2. **Open** the _Menu_.
@@ -29,7 +28,8 @@
 
 <img src="../images/jmurray-added.png" style="max-height: 25%" />
 
-#### Give Jason a Password
+## Give Jason a Password
+
 1. **Click** on _Password_ in the left menu.
 2. **Type** a new password in the _New Password_ and _Enter Again_ fields.
     * For simplicity, you can just use _test_.
@@ -37,7 +37,8 @@
 
 <img src="../images/added-password.png" style="max-height: 30%" />
 
-#### Give Jason Access to the Default Site
+## Give Jason Access to the Default Site
+
 1. **Click** on _Memberships_ in the left menu.
 2. **Click** _Select_ at the top right.
 3. **Click** to choose the default Site.
@@ -46,7 +47,8 @@
 
 <img src="../images/site-membership.png" style="max-height: 30%" />
 
-#### Create a User Account for Hannah Jones
+## Create a User Account for Hannah Jones
+
 1. **Go to** the _`Control Panel → Users → Users and Organizations`_.
 2. **Click** the _Add_ button at the top right to add a User.
 3. **Type** _h.jones_ for the _Screen Name_.
@@ -57,7 +59,8 @@
 
 <img src="../images/hannah-added.png" style="max-height: 25%" />
 
-#### Give Hannah a Password
+## Give Hannah a Password
+
 1. **Click** on _Password_ in the left menu.
 2. **Type** a new password in the _New Password_ and _Enter Again_ fields.
     * For simplicity, you can just use _test_.
@@ -65,7 +68,8 @@
 
 <img src="../images/added-password.png" style="max-height: 30%" />
 
-#### Give Hannah Access to the Default Site
+## Give Hannah Access to the Default Site
+
 1. **Click** on _Memberships_ in the left menu.
 2. **Click** _Select_ at the top right.
 3. **Click** to choose the default Site.
@@ -76,7 +80,8 @@
 
 ---
 
-#### Bonus Exercises:
+## Bonus Exercises:
+
 1. Create a new User for yourself.
 2. Give yourself the Regular Administrator Role.
 3. Add some contact information in the _Contact_ tab of the User Account.

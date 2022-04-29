@@ -1,4 +1,4 @@
-## Clustering the Portal
+# Clustering the Portal
 
 A key aspect of clustering is the ability of each node to talk across the cluster. As with database servers, app servers, and search indexes, Liferay needs to send and receive messages. Without a way to talk to all the servers in the cluster, each Liferay node acts alone. Solitary confinement of Liferay instances prevents the platform from working in a cluster. With Liferay comes a number of technologies:
 - Search
@@ -48,7 +48,7 @@ cluster.link.enabled=true
 ```
 Once the nodes are restarted, they will register on the *multicast IP*, discover other peers, and begin sending messages to the group. Bringing a new node up in the cluster is a simple matter of starting a Liferay instance on the network with *ClusterLink* enabled and configured the same way.
 
-### Configuring Multicast {#multicast}
+## Configuring Multicast {#multicast}
 
 When running a cluster in various networks, you may need to change some of the multicast settings. In a larger setup, you may have clusters in multiple environments:
 - A *dev* environment for product development
@@ -98,7 +98,7 @@ You can find additional useful settings related to *ClusterLink* in `portal.prop
 
 Using these properties, you can move channels around the network landscape. This will help you adjust cluster nodes to fit within your network topology. You can also adjust the *ClusterLink* settings to accommodate unicast and TCP.
 
-### Clustering the Cache {#cache}
+## Clustering the Cache {#cache}
 
 Liferay handles a lot of data:
 - Users
@@ -144,7 +144,7 @@ ehcache.multi.vm.config.location=/ehcache/liferay-multi-vm-clustered.xml
 ```
 To override the Ehcache configuration, you need to create a new configuration file at the portal classpath and define that location at `portal-ext.properties`.
 
-### Clustering the Scheduler {#scheduler}
+## Clustering the Scheduler {#scheduler}
 
 Liferay often performs a variety of background tasks:
 
@@ -184,7 +184,7 @@ How do we turn on this magical cluster awareness? Liferay provides a simple swit
 
 The secret to getting *Quartz* working with *ClusterLink* is simple. Turn on *ClusterLink*. That's it. No tricks. Once *ClusterLink* is enabled in `portal-ext.properties`, everything is handled behind the scenes. That means we don't have to do anything to get our cluster to behave because it already does!
 
-### Configuring for Unicast {#unicast}
+## Configuring for Unicast {#unicast}
 
 So far we've focused on Liferay's preferred cluster setup, *multicast* clustering. We've also briefly mentioned *unicast*. Although multicast is usually the best option, some network environments or specific servers will require the use of unicast clustering. Let's take a closer look at unicast clustering and its configuration in Liferay.
 

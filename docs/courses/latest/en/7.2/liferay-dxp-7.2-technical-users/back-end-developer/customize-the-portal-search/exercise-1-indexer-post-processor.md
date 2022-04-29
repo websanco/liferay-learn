@@ -4,10 +4,8 @@ title: Implement a Keyword Match Query
 order: 14
 ---
 
-<h2 class="exercise">Exercises</h2>
-
-## Implement a Keywork Match Query
-
+# Implement a Keywork Match Query
+<!-- 
 <div class="ahead">
 <h4>Exercise Goals</h4>
 	<ul>
@@ -19,7 +17,7 @@ order: 14
 	</ul>
 </div>
 
-#### Create a Liferay Module Project
+## Create a Liferay Module Project
 
 **Option 1: Use the Command Line Blade tools**
 
@@ -44,7 +42,7 @@ blade create -t service -p com.liferay.training.search -s com.liferay.portal.ker
 	* __Service Name__: "com.liferay.portal.kernel.search.IndexerPostProcessor"
 1. **Click** *Finish* to close the wizard.
 
-#### Extend the BaseIndexerPostProcessor
+## Extend the BaseIndexerPostProcessor
 
 Our generated class declaration implements the `IndexerPostProcessor` interface. Implementing that directly would require a lot of boilerplate code in the class. We'll change the class declaration so that it extends the `BaseIndexerPostProcessor`. That way, we only need to implement the methods we need.
 
@@ -55,7 +53,7 @@ Our generated class declaration implements the `IndexerPostProcessor` interface.
 public class BoostingIndexerPostProcessor extends BaseIndexerPostProcessor
 ```
 
-#### Set Component Properties
+## Set Component Properties
 
 We have to configure the component properties with the property `indexer.class.name`, which defines what model types the processor should handle. We'll configure it only to apply to Journal Articles: 
 
@@ -72,7 +70,7 @@ We have to configure the component properties with the property `indexer.class.n
 )
 ```
 
-#### Override the `postProcessSearchQuery()` Method
+## Override the `postProcessSearchQuery()` Method
 
 1. **Open** the class `com.liferay.training.search.BoostingIndexerPostProcessor`.
 1. **Right-click** somewhere on the class code.
@@ -113,7 +111,7 @@ public void postProcessSearchQuery(
 
 > Choose `com.liferay.portal.kernel.search.Field` and `com.liferay.portal.kernel.util.Validator` when prompted for the right import.
 
-#### Final Code Review
+## Final Code Review
 
 1. **Check** that the `BoostingIndexerPostProcessor` class looks like this:
 
@@ -177,7 +175,7 @@ public class BoostingIndexerPostProcessor extends BaseIndexerPostProcessor {
 }
 ```
 
-#### Deploy and Test
+## Deploy and Test
 
 For testing, we need to create two test pieces of content. 
 
@@ -203,6 +201,6 @@ For testing, we need to create two test pieces of content.
 	* The "Official Fox" should appear first on the list because of our customization:
 	<img src="../images/fox-spec.png" style="max-height:18%;" />
 
-#### Takeaways
+## Takeaways
 
-We've demonstrated how to extend the querying functionality of the Liferay search framework. In the same way, IndexexPostProcessors can be used to intercept content indexing, for example, to enrich the index document data. Using these techniques, you should be able to customize the search for any of the built-in Liferay entities. In addition, developers should be able to use this same technique to extend the search functionality of custom applications as well.
+We've demonstrated how to extend the querying functionality of the Liferay search framework. In the same way, IndexexPostProcessors can be used to intercept content indexing, for example, to enrich the index document data. Using these techniques, you should be able to customize the search for any of the built-in Liferay entities. In addition, developers should be able to use this same technique to extend the search functionality of custom applications as well. -->

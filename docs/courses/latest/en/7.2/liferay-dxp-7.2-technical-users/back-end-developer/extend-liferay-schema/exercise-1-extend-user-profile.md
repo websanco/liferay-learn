@@ -4,9 +4,7 @@ title: Extend User Profile Using Expandos and Lifecycle Actions
 order: 1
 ---
 
-<h2 class="exercise">Exercises</h2>
-
-## Extend User Profile Using Expandos and Lifecycle Actions
+# Extend User Profile Using Expandos and Lifecycle Actions
 
 <div class="ahead">
 <h4>Exercise Goals</h4>
@@ -17,7 +15,7 @@ order: 1
 	</ul>
 </div>
 
-#### Create a Liferay Module Project
+## Create a Liferay Module Project
 
 **Option 1: Use the Command Line Blade tools**
 
@@ -47,7 +45,7 @@ blade create -t service -p com.liferay.training.expando -s com.liferay.portal.ke
 	* Enter "login.events.post" for the *Value*.
 1. **Click** *Finish* to close the wizard.
 
-#### Implement the LifecycleAction Component
+## Implement the LifecycleAction Component
 
 1. **Open** the class `com.liferay.training.expando.UserExpandoStartupAction`.
 1. **Put** the mouse over the class name (showing an error) and select *Add unimplemented methods* from the menu.	
@@ -83,7 +81,7 @@ blade create -t service -p com.liferay.training.expando -s com.liferay.portal.ke
 1. **Resolve** missing imports.  
 	- Using the `ExpandoBridgeFactoryUtil` saves us the work of dealing with the Expando local services (`ExpandoTableLocalService` and `ExpandoColumnLocalService`) directly. Using Liferay's utility classes guarantees both consistency and maintainability of your code. For an alternative implementation demonstrating the inner workings of the Expando framework, you may want to check out the `09-01-using-expandos-and-lifecycle-actions-with-local-services` branch of the solution workspace repository.
 
-#### Add the Event Key to Component Properties
+## Add the Event Key to Component Properties
 
 1. **Add** `"key=application.startup.events"` to the component's property configuration:
 
@@ -97,7 +95,7 @@ blade create -t service -p com.liferay.training.expando -s com.liferay.portal.ke
 )
 ```
 
-#### Final Code Review
+## Final Code Review
 
 The complete implementation of the `UserExpandoStartupAction` component will look like this: 
 
@@ -155,8 +153,8 @@ public class UserExpandoStartupAction implements LifecycleAction {
 }
 ```
 
-#### Deploy and Test
- 
+## Deploy and Test
+
 1. **Deploy** the module to the Liferay server.
 1. **Restart** the server.
 1. **Open** your browser to http://localhost:8080 and sign in.
@@ -166,6 +164,6 @@ public class UserExpandoStartupAction implements LifecycleAction {
 
 <img../images src="../images/expando.png" style="max-width: 100%;"/>
 
-#### Takeaways
+## Takeaways
 
 In this exercise, we demonstrated how to extend Liferay's user model using Expandos. The user model is one of the most commonly extended ones, and, as you've seen here, it's very easy to do with Expandos. Although Expandos are a great tool to extend or create databases dynamically, they are not without their limitations. If you are doing more than adding simple fields to the database, you may want to consider creating a new database table with the user ID as a foreign key instead.

@@ -4,10 +4,8 @@ title: Creating a User Model Listener
 order: 2
 ---
 
-<h2 class="exercise">Exercises</h2>
-
-## Creating a User Model Listener
-
+# Creating a User Model Listener
+<!-- 
 <div class="ahead">
 <h4>Exercise Goals</h4>
 	<ul>
@@ -20,7 +18,7 @@ order: 2
 	</ul>
 </div>
 
-#### Create a Liferay Module Project
+## Create a Liferay Module Project
 
 **Option 1: Use the Command Line Blade tools**
 
@@ -45,14 +43,14 @@ blade create -t service -p com.liferay.training.model.listener -s com.liferay.po
 	* __Service Name__: "com.liferay.portal.kernel.model.ModelListener"
 1. **Click** *Finish* to close the wizard.
 
-#### Declare Dependencies
+## Declare Dependencies
 
 1. **Open** the `build.gradle` file and declare dependencies as follows:
   ```groovy
 	compileOnly group: "javax.mail", name: "mail"
 	```
   
-#### Extend the BaseModelListener
+## Extend the BaseModelListener
 
 Our generated class declaration implements the `ModelListener` interface. Implementing that directly would require a lot of boilerplate code in the class. We'll change the class declaration so that it extends the `BaseModelListener`. That way, we only need to implement the methods we need.
 
@@ -63,7 +61,7 @@ Our generated class declaration implements the `ModelListener` interface. Implem
 public class UserPostUpdateModelListener extends BaseModelListener<User>
 ``` 
   
-#### Override the `onAfterUpdate()` Method  
+## Override the `onAfterUpdate()` Method  
   
 1. **Open** the class `com.liferay.training.model.listener.UserPostUpdateModelListener`.
 1. **Add** the MailService reference to the end of the class as follows:
@@ -96,7 +94,7 @@ public class UserPostUpdateModelListener extends BaseModelListener<User>
 	```
 1. **Resolve** missing imports.
 
-#### Final Code Review
+## Final Code Review
 
 The complete implementation files will look like this:
 
@@ -172,7 +170,7 @@ public class UserPostUpdateModelListener extends BaseModelListener<User> {
 }
 ```
 
-#### Deploy and Test
+## Deploy and Test
 
 1. **Find** the file `exercise-files/12-catch-portal-events/fakeSMTP-2.0.jar` in the provided materials.
 1. **Run** the JAR to start the server, using the port `25`.
@@ -186,4 +184,4 @@ public class UserPostUpdateModelListener extends BaseModelListener<User> {
 1. **Go to** *Control Panel → Users → Users and Organizations*.
 1. **Open** any account for editing and make any changes.
 1. **Click** *Save*.
-1. **Check** the FakeSMTP server for an email. There should be an email waiting.
+1. **Check** the FakeSMTP server for an email. There should be an email waiting. -->

@@ -4,7 +4,7 @@ title: Working With Liferay Workspace
 order: 4
 ---
 
-## Working With Liferay Workspace
+# Working With Liferay Workspace
 
 Liferay Workspace is a generated wrapper environment for Liferay projects. Liferay Workspace provides you with all the tools needed to create and build Liferay modules and can be used from within a Java IDE or independently. Liferay Workspace is not mandatory for Liferay development, but in most cases, it simplifies and speeds up the development process significantly.
 
@@ -15,7 +15,7 @@ Liferay Workspace provides:
 
 > While Gradle and Maven are supported as dependency management tools, Liferay doesn't restrict you from using any other tools. Since Gradle is the preferred build and dependency management tool and is also used in core Liferay development, we'll be using it in our examples.
 
-#### Blade CLI
+## Blade CLI
 
 Blade is an acronym for *Bootstrap Liferay Advanced Developer Environment*, which is a set of backbone command line tools for creating and managing Liferay module projects and the Liferay Workspace environment. Blade CLI is an independent set of tools and can also be used outside of Liferay Workspace.
 
@@ -37,13 +37,13 @@ The most relevant Blade CLI commands are listed below:
 
 > See Blade CLI's [GitHub page](https://github.com/liferay/liferay-blade-cli)
 
-#### Using Gradle
+## Using Gradle
 
 Gradle is the default build and dependency management tool for Liferay plugin development. Available Gradle Tasks are listed in the Gradle Tasks pane of the Liferay Workspace perspective of the IDE. The perspective can be selected from Dev Studio's *Window* menu. By default, the Gradle Tasks pane is displayed in the perspective's upper right corner:
 
 <img src="../images/workspace-gradle-tasks.png" style="max-height:33%"/>
 
-#### Gradle Wrapper
+## Gradle Wrapper
 
 Liferay Workspace ships with Gradle Wrapper scripts, taking care of downloading and making a compatible version of Gradle available. That way, you don't have to install Gradle manually in your development environment, and everybody who uses the project builds it with exactly the same version of Gradle.
 
@@ -76,7 +76,7 @@ distBundleZip - Assembles the Liferay bundle and zips it up.
 initBundle - Downloads and unzips the bundle.
 ```
 
-#### Using Maven
+## Using Maven
 
 You can choose to use Maven when creating a new module:
 
@@ -95,7 +95,7 @@ mvn archetype:generate \
 
 For more information on how to use Liferay Workspace with Maven, see the developer documentation at [Liferay Developer Network](https://dev.liferay.com/develop/tutorials/-/knowledge_base/7-1/maven-workspace).
 
-#### Liferay Workspace Structure
+## Liferay Workspace Structure
 
 By default, a Liferay Workspace is generated with the following files and folders: 
 
@@ -114,7 +114,7 @@ By default, a Liferay Workspace is generated with the following files and folder
 * __gradlew__: executes the Gradle command wrapper
 * __settings.gradle:__ applies plugins to the workspace and configures its dependencies
 
-#### Using Liferay Workspace Without IDE
+## Using Liferay Workspace Without IDE
 
 Liferay Workspace can be used without an IDE as well. Below is an example of the steps required to build a Workspace project which, for example, has been downloaded from GitHub:
 
@@ -128,7 +128,7 @@ PATH_TO_LIFERAY_WORKSPACE/gradlew clean build
 
 After your build has completed successfully, the deployables can be found in the *build/libs* directories of the respective project folders. 
 
-#### Setting Up Liferay Portal for Liferay Workspace
+## Setting Up Liferay Portal for Liferay Workspace
 
 If you use Tomcat as your development server, you can choose to manually download a Liferay Tomcat bundle and create a server in the Dev Studio workspace using the Liferay 7.x server adapter, or you can let Liferay Workspace do the work automatically for you.
 
@@ -141,7 +141,7 @@ If you didn't choose to download the server when you initially created the Lifer
 
 Using Liferay Workspace server bundles facilitates generating and configuring multiple server environments in your development environment. For more information about this scenario, please see the [Developer Network article](https://dev.liferay.com/develop/tutorials/-/knowledge_base/7-1/development-lifecycle-for-a-liferay-workspace#testing-projects).
 
-#### Portal Configuration Files
+## Portal Configuration Files
 
 The main portal configuration file, `portal.properties`, defines every aspect of the platform configuration. Amongst others, it defines default settings for: 
 

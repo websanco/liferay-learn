@@ -4,8 +4,8 @@ title: Customize Indexing and Searching
 order: 4
 ---
 
-## Customize Indexing and Searching
-
+# Customize Indexing and Searching
+<!-- 
 The customization approaches for the platform search can generally be divided into the following categories: 
 
 * __User interface related__
@@ -21,7 +21,7 @@ The customization approaches for the platform search can generally be divided in
 	* Contribute to the model's indexing with the [Contributor SPI](https://github.com/liferay/liferay-portal/tree/7.2.x/modules/apps/portal-search/portal-search-spi/src/main/java/com/liferay/portal/search/spi/model/query/contributor) component.
 	* Customize searching with [Indexer Post Processors](https://github.com/liferay/liferay-portal/blob/7.2.x/portal-kernel/src/com/liferay/portal/kernel/search/IndexerPostProcessor.java).
 
-#### Search Contributors
+## Search Contributors
 
 Since version 7.1, Liferay's search framework has relied on API-SPI (Service Provider Interface) architecture and on a composition model, where index documents, search queries, and result hits are built with model-specific or generic model contributor components. 
 
@@ -82,7 +82,7 @@ public class SampleQueryPreFilterContributor
 
 There are many extension points available. See the sources for the extendable Search Model Contributor SPI here: https://github.com/liferay/liferay-portal/tree/7.2.x/modules/apps/portal-search/portal-search-spi/src/main/java/com/liferay/portal/search/spi/model/.  
 
-#### Indexer Post Processor
+## Indexer Post Processor
 
 Indexer post processors are components that allow you to customize both indexing and searching. Although you can achieve the same results with both Search Model Contributors and Indexer Post Processors, processors are less specialized components but give control over the query, query filters, and indexing in a single component. It's also important to notice that Contributor components are executed after the Indexer Post Processors.  
 
@@ -115,8 +115,8 @@ public class BlogsIndexerPostProcessor implements IndexerPostProcessor {
 ```
 
 When you create indexer post processors, you typically extend the [BaseIndexerPostProcessor](https://github.com/liferay/liferay-portal/blob/7.2.x/portal-kernel/src/com/liferay/portal/kernel/search/BaseIndexerPostProcessor.java) base class instead of implementing the IndexerPostProcessor interface directly. That way, you can override just the methods you want and not implement the whole interface.
- 
-#### The Hits Processor
+
+## The Hits Processor
 
 The [HitsProcessor](https://github.com/liferay/liferay-portal/blob/7.2.x/portal-kernel/src/com/liferay/portal/kernel/search/hits/HitsProcessor.java) allows you to perform actions on the hits returned. Example use cases include processing the hits before they are sent to the user interface, spell-checking, doing an alternative query, and indexing successful queries for the autocompletion/keyword suggestion purposes.
 
@@ -184,4 +184,4 @@ The following hits processors are run by default. Configuration is done in [port
 		<li>____________________________</li>
 	</ul>
 </ul>
-</div>
+</div> -->

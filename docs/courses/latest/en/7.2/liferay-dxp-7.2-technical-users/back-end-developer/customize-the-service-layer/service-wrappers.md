@@ -4,8 +4,8 @@ title: Service Wrappers
 order: 2
 ---
 
-## Customize the Service Layer
-
+# Customize the Service Layer
+<!-- 
 All Liferay core services have been designed and generated with the Liferay *Service Builder* pattern, which automatically generates service wrapper APIs for both remote and local service variants. 
 
 The wrapper API is a service façade that provides a transactionally safe way to customize the underlying service. In a Service Builder project, the wrapper API will be created in the API module:
@@ -43,4 +43,4 @@ public com.liferay.blogs.model.BlogsEntry addEntry(
 
 The important thing to notice here is that when you do a service call, like in this case with `BlogsEntryLocalService.addBlogsEntry()`, it's actually the service wrapper façade method that gets first executed. By default, the call is just redirected to the underlying service.
 
-By creating your custom Service Wrapper, you can override the default wrappers and, in doing so, override the default behavior.
+By creating your custom Service Wrapper, you can override the default wrappers and, in doing so, override the default behavior. -->

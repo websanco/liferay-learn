@@ -1,5 +1,3 @@
-<h3 class="exercise">Exercises</h3>
-
 # Update an Organization's Password Policy
 
 <div class="ahead">
@@ -10,7 +8,7 @@
 		</ul>
 </div>
 
-#### Create a New Organization
+## Create a New Organization
 
 To demonstrate the power and flexibility of Liferay's password policies, we'll create a new, incredibly strict policy specifically for admin users. To do this, we'll create a new organization and assign it the Administrator role, which we'll assume is where all Administrators are assigned.
 
@@ -25,7 +23,7 @@ To demonstrate the power and flexibility of Liferay's password policies, we'll c
 
 <img src="../images/chapter-4/administrators-org.png" style="max-width:100%;">
 
-#### Update the Password Policy
+## Update the Password Policy
 
 1. <span class="action">Go to</span> _`Control Panel → Users → Password Policies`_ in the *Menu*.
 2. <span class="action">Click</span> the *Add* button to add a new policy.
@@ -35,7 +33,7 @@ To demonstrate the power and flexibility of Liferay's password policies, we'll c
 
 <img src="../images/chapter-4/new-password-policy.png" style="max-width:100%;">
 
-#### Define Password Syntax
+## Define Password Syntax
 
 1. <span class="action">Click</span> to expand the _Password Syntax Checking_ section.
 2. <span class="action">Click</span> the _Enable Syntax Checking_ slider so that it says _YES_.
@@ -49,7 +47,7 @@ To demonstrate the power and flexibility of Liferay's password policies, we'll c
 
 <img src="../images/chapter-4/password-syntax.png" style="max-width:100%;">
 
-#### Complete and Save the Password Policy
+## Complete and Save the Password Policy
 
 1. <span class="action">Click</span> to expand the _Password History_ section.
 2. <span class="action">Click</span> the _Enable History_ slider so that it says _YES_.
@@ -62,7 +60,7 @@ To demonstrate the power and flexibility of Liferay's password policies, we'll c
 
 <img src="../images/chapter-4/password-configured.png" style="max-width:100%;">
 
-#### Assign the Password Policy
+## Assign the Password Policy
 1. <span class="action">Click</span> the *Administrator* password policy.
 2. <span class="action">Click</span> the *Assignees* tab at the top for the new *Administrators* policy.
 3. <span class="action">Click</span> the *Organizations* tab.
@@ -74,7 +72,7 @@ Your password policy is now configured for Administrators!
 
 <img src="../images/chapter-4/password-assignees.png" style="max-width:100%;">
 
-#### Test the New Password Policy
+## Test the New Password Policy
 
 Now let's add a new admin user to the organization and change the password to test the new policy.
 
@@ -89,7 +87,7 @@ Now let's add a new admin user to the organization and change the password to te
 
 The user is now a member of the organization!
 
-#### Change Your Password
+## Change Your Password
 
 1. <span class="action">Click</span> on the *Password* section under the _General_ tab for the new user.
 1. <span class="action">Add</span> a password that doesn't meet the criteria set.

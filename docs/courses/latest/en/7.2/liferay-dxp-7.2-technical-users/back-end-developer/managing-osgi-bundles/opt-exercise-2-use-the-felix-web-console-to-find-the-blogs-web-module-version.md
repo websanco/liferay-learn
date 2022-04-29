@@ -4,9 +4,7 @@ title: Use the Felix Web Console to Find the Blogs Web Module Version
 order: 2
 ---
 
-<h2 class="exercise">Optional Exercise</h2>
-
-## Use the Felix Web Console to Find the Blogs Web Module Version
+# Use the Felix Web Console to Find the Blogs Web Module Version
 
 <div class="ahead">
 <h4>Exercise Goals</h4>
@@ -23,7 +21,7 @@ order: 2
 The <a href="http://felix.apache.org/documentation/subprojects/apache-felix-web-console.html">Apache Felix Web Console</a> is a good alternative for common bundle management and troubleshooting tasks. 
 </div>
 
-#### Install the Felix Web Console
+## Install the Felix Web Console
 
 Felix Web Console is an OSGi bundle that we have to install into the OSGi container.
 
@@ -41,7 +39,7 @@ Felix Web Console is an OSGi bundle that we have to install into the OSGi contai
 	* __Username__: admin
 	* __Password__: admin
 
-#### Find the Blogs Web Module Version  
+## Find the Blogs Web Module Version  
 
 1. **Enter** "com.liferay.blogs.web" in the *Filter* field
 1. **Click** the arrow on the left side of the bundle name to open the information.

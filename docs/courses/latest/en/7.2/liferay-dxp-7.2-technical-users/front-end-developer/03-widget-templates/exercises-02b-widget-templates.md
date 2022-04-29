@@ -1,6 +1,6 @@
-## Create a Navigation Widget Template
+# Create a Navigation Widget Template
 
-<div class="ahead">
+<!-- <div class="ahead">
 <h4>Exercise Goals</h4>
 	<ul>
     <li>Create a Navigation Widget Template</li>
@@ -13,10 +13,10 @@
 	</ul>
 </div>
 
-#### Add Alert Information If There are No Pages
+## Add Alert Information If There are No Pages
 1. **Go to** the module exercise folder.  
 2. **Drop** the `vertical-navigation.ftl` into your _Visual Studio Code_ editor.  
-3. **Click** to highlight the `<#-- Insert 04-if-no-content-message here -->` comment.
+3. **Click** to highlight the comment.
 4. **Type** `lfr-widget` to view the available code snippets.
 5. **Choose** the `04-if-no-content-message` snippet.
   * Alternatively, you can type:
@@ -29,8 +29,8 @@
 </#if>
 ```
 
-#### Add a Macro for the Navigation Pages
-1. **Click** to highlight the `<#-- insert 05-build-navigation-macro here -->` comment.
+## Add a Macro for the Navigation Pages
+1. **Click** to highlight the comment.
 2. **Type** `lfr-widget` to view the available code snippets.
 3. **Choose** the `05-build-navigation-macro` snippet.
   * Alternatively, you can type:
@@ -50,8 +50,9 @@
 </#macro>
 ```
 
-#### Add Nav Item and Nav Item CSS Variables 
-1. **Click** to highlight the `<#-- Add 06-nav-item-assignments snippet here -->` comment.
+## Add Nav Item and Nav Item CSS Variables 
+
+1. **Click** to highlight the comment.
 2. **Type** `lfr-widget` to view the available code snippets.
 3. **Choose** the `06-nav-item-assignments` snippet.
   * Alternatively, you can type:
@@ -68,7 +69,8 @@
 </#if>
 ```
 
-#### Add If Statement for Child Pages in the Menu
+## Add If Statement for Child Pages in the Menu
+
 1. **Click** to highlight the `<#-- Add 07-children-menu-if-statement snippet here -->` comment.
 2. **Type** `lfr-widget` to view the available code snippets.
 3. **Choose** the `07-children-menu-if-statement` snippet.
@@ -92,7 +94,8 @@
 </#if>
 ```
 
-#### Add Clay Icon Macros for Child Menu Icons
+## Add Clay Icon Macros for Child Menu Icons
+
 1. **Click** to highlight the `<#-- Add 08-opt-clay-symbol-macros snippet or type here -->` comment.
 2. **Type** `<span class="collapse-icon-closed">` to replace the comment.
 3. **Press** _Enter_.
@@ -115,8 +118,8 @@
     <@clay.icon symbol="caret-bottom" />
 </span>
 ```
- 
-#### Add a List with Child Navigation Items Macro
+
+## Add a List with Child Navigation Items Macro
 1. **Click** to highlight the `<#-- Add 9-opt-nav-children-macro snippet or type here -->` comment.
 2. **Type** `<#list navItem.getBrowsableChildren() as navItemChild>` to replace the comment.
 3. **Press** _Enter_.
@@ -133,13 +136,13 @@
 
 <br />
 
-#### Add the Final Navigation Code Using the Custom Macro 
+## Add the Final Navigation Code Using the Custom Macro 
 1. **Click** to highlight the `<#-- Insert 10-nav-menu-using-macro here -->` comment.
 2. **Type** `lfr-widget` to view the available code snippets.
 3. **Choose** the `10-nav-menu-using-macro` snippet.
   * Alternatively, you can type:
 
-```HTML
+<!-- ```HTML
 <nav class="menubar menubar-transparent menubar-vertical-expand-md">
     <a aria-controls="navigationWDTExample" aria-expanded="false" class="menubar-toggler" data-toggle="collapse" href="#navigationWDTExample" role="button">
         ${themeDisplay.getLayout().getNameCurrentValue()}
@@ -155,11 +158,11 @@
         </ul>
     </div>
 </nav>
-```
-
+``` -->
+<!--
 4. **Save** the file.
 
-#### Add the new Navigation Widget Template to the Platform
+## Add the new Navigation Widget Template to the Platform
 1. **Go to** the default Site in your browser.
   * Make sure you're logged in.
 * **Open** the _Menu_.
@@ -172,7 +175,7 @@
 * **Paste** the contents into the Widget Template editor.
 * **Click** _Save_ at the bottom.
 
-#### Change the Theme
+## Change the Theme
 1. **Go to** _`Site Administration → Site Builder → Pages`_ in the Menu.
 * **Open** the _Configuration menu_ next to _Public Pages_.
   * This is the gear icon.
@@ -180,7 +183,7 @@
 * **Choose** _Classic_.  
 * **Click** the _Save_ button at the bottom.
 
-#### Change the Navigation Widget Template
+## Change the Navigation Widget Template
 1. **Click** _Go to Site_ in the _Site Administration_ panel.
 2. **Go to** the _Livingstone Life Blogs_ page.
 * **Click** the _Options_ menu at the top of the Navigation Menu.
@@ -195,7 +198,8 @@
 
 ---
 
-#### Bonus Exercises
+## Bonus Exercises
+
 1. Create child pages to test the navigation
 2. Test the Navigation in Mobile, Tablet, or Desktop sizes using the Simulation Menu at the top right
-3. Create new widget templates for other widgets
+3. Create new widget templates for other widgets -->

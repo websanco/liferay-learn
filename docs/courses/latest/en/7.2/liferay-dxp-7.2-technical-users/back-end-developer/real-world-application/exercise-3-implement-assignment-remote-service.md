@@ -4,9 +4,7 @@ title: Implement Assignment Remote Service
 order: 3
 ---
 
-<h2 class="exercise">Exercises</h2>
-
-## Implement Assignment Remote Service
+# Implement Assignment Remote Service
 
 <div class="ahead">
 <h4>Exercise Goals</h4>
@@ -18,7 +16,7 @@ order: 3
 	</ul>
 </div>
 
-#### Declare Dependencies
+## Declare Dependencies
 
 For our implementation, we need to make the Servlet and Portlet API available:
 
@@ -28,8 +26,8 @@ For our implementation, we need to make the Servlet and Portlet API available:
 	compileOnly group: "javax.portlet", name: "portlet-api"
 	compileOnly group: "javax.servlet", name: "javax.servlet-api"
 	```
-	
-#### Implement the Façade Methods
+
+## Implement the Façade Methods
 
 1. **Open** the `AssignmentServiceImpl.java` class. The empty class looks like this:
 	```java
@@ -140,9 +138,10 @@ For our implementation, we need to make the Servlet and Portlet API available:
 			assignmentId, titleMap, descriptionMap, dueDate, serviceContext);
 	}
 	```
+
 1. **Resolve** missing imports.
 
-#### Final Code Review
+## Final Code Review
 
 The complete files will look like this:
 
@@ -282,7 +281,7 @@ public class AssignmentServiceImpl extends AssignmentServiceBaseImpl {
 }
 ```
 
-#### Rebuild and Deploy the Service
+## Rebuild and Deploy the Service
 
 Now it's time to deploy our service to the server. 
 

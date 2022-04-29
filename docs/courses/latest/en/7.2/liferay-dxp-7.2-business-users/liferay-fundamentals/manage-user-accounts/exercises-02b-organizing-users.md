@@ -1,4 +1,4 @@
-## Create and Manage a User Group for Livingstone
+# Create and Manage a User Group for Livingstone
 
 <div class="ahead">
 <h4>Exercise Goals</h4>
@@ -10,7 +10,8 @@
 </ul>
 </div>
 
-#### Log in as Your Main Administrative User
+## Log in as Your Main Administrative User
+
 1. **Click** on the _Personal Menu_ at the top right.
 * **Click** _Sign Out_ at the bottom.
 * **Click** _Sign In_ at the top right.
@@ -21,7 +22,8 @@
 
 <img src="../images/sign-in-josiah.png" style="max-height: 40%">
 
-#### Create the Livingstone Rewards Silver User Group
+## Create the Livingstone Rewards Silver User Group
+
 1. **Open** the _Menu_.
 * **Go to** _`Control Panel → Users → User Groups`_.
 * **Click** the _Add_ button at the top right to add a new User Group.
@@ -30,21 +32,24 @@
 
 <img src="../images/livingstone-silver.png" style="max-height: 33%">
 
-#### Create the Livingstone Rewards Gold User Group
+## Create the Livingstone Rewards Gold User Group
+
 1. **Click** the _Add_ button at the top right to add a new User Group.
 * **Type** _Livingstone Rewards Gold_ for the _Name_.
 * **Click** _Save_ at the bottom.
 
 <img src="../images/livingstone-gold.png" style="max-height: 33%">
 
-#### Create the Livingstone Rewards Platinum User Group
+## Create the Livingstone Rewards Platinum User Group
+
 1. **Click** the _Add_ button at the top right to add a new User Group.
 * **Type** _Livingstone Rewards Platinum_ for the _Name_.
 * **Click** _Save_ at the bottom.
 
 <img src="../images/livingstone-platinum.png" style="max-height: 33%">
 
-#### Assign Jason Murray to the Livingstone Platinum User Group
+## Assign Jason Murray to the Livingstone Platinum User Group
+
 1. **Click** the _Options_ menu next to _Livingstone Rewards Platinum_.
 * **Click** _Assign Members_.
 * **Click** the _Add_ button at the top right to add a new User.
@@ -57,7 +62,8 @@
 
 <br />
 
-#### Create a Livingstone Platinum Private User Group Site
+## Create a Livingstone Platinum Private User Group Site
+
 1. **Click** on the _Options_ menu at the top right for the User Group.
 * **Click** _Manage Pages_.
 * **Click** _Add_ at the top right to add a new page.
@@ -68,7 +74,8 @@
 
 <img src="../images/rewards-overview-page.png" style="max-height: 50%">
 
-#### Add Widgets to the Livingstone Platinum Site
+## Add Widgets to the Livingstone Platinum Site
+
 1. **Click** _Go to Site_ in the _Site Administration_ panel.
 * **Open** the _Add_ menu at the top right.
 * **Open** the _Widget_ section.
@@ -80,7 +87,8 @@
 
 <img src="../images/account-overview-page.png" style="max-height: 100%">
 
-#### Log in as Jason Murray
+## Log in as Jason Murray
+
 1. **Click** on the _Personal Menu_ at the top right.
 * **Click** _Sign Out_ at the bottom.
 * **Click** _Sign In_ at the top right.
@@ -88,7 +96,8 @@
 * **Type** _liferay_ for the _Password_.
 * **Click** _Sign In_.
 
-#### View Jason Murray's Dashboard
+## View Jason Murray's Dashboard
+
 1. **Click** on the _Personal Menu_.
 * **Click** on _My Dashboard_.
 * **Click** on the _Account Overview_ page.
@@ -100,7 +109,8 @@
 
 ---
 
-#### Bonus Exercises:
+## Bonus Exercises:
+
 1. Create a new Private Dashboard User Group Page for the Livingstone Rewards Gold Group with new widgets.
 2. Create a new Private Dashboard User Group Page for the Livingstone Rewards Silver Group with new widgets.
 3. Create User Group Web Content to add to the Account Overview page.

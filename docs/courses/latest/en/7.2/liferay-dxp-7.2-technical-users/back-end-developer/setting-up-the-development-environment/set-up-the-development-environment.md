@@ -4,7 +4,7 @@ title: Set Up the Development Environment
 order: 2
 ---
 
-## Overview
+# Overview
 
 Liferay offers developers a platform and a comprehensive set of tools for building web applications. Although the platform itself relies on Java EE and the OSGi framework for modular application development, Liferay is completely tool-agnostic when it comes to writing code. You can use any Java IDE or even a text editor to write Liferay applications.
 
@@ -17,7 +17,7 @@ The minimum set of tools required to develop for Liferay includes:
 
 <img src="../images/development-environment-structure.png" style="max-width: 100%;"/>
 
-#### IDE Support
+## IDE Support
 
 Any Java IDE can be used for Liferay development, but support is only provided for the Eclipse-based *Liferay Dev Studio*, which is available in two versions:
 
@@ -31,15 +31,15 @@ With regard to other IDEs, an IntelliJ plugin is also available: https://plugins
 
 Liferay Plugins SDK is deprecated but still available. It should be used only for developing Ext-plugins (deprecated) or for upgrading legacy plugins. For new projects, always use Liferay Workspace. 
 
-#### Java Runtime
+## Java Runtime
 
 A __full JDK__ is required both by the development tools and for running the Liferay platform. Oracle Java 11, OpenJDK 11, and IBM J9 JDK 11 for WebSphere are supported. Using certified JDKs is recommended.  See the Liferay Portal Compatibility Matrix (https://web.liferay.com/services/support/compatibility-matrix) for the supported runtimes.
 
-#### Servlet Containers
+## Servlet Containers
 
 Liferay can run on any Java servlet container or EE server. Portal bundles for Apache Tomcat and WildFly are provided. When using the Liferay Workspace development environment, the Tomcat bundle can be downloaded and installed automatically from within the workspace and integrated seamlessly into the environment. Liferay Dev Studio also provides a server connector for Tomcat, which lets you control multiple servlet containers from within the IDE.
 
-#### Database
+## Database
 
 A relational database is needed for running the Liferay platform. A Liferay server bundle ships with the Hypersonic in memory database, which is __meant only for testing or evaluation purposes__. Using a supported database product for development is recommended as well. See the Liferay Portal Compatibility Matrix (https://web.liferay.com/services/support/compatibility-matrix) for a complete list of supported databases.
 
@@ -47,19 +47,19 @@ A relational database is needed for running the Liferay platform. A Liferay serv
 
 ## Tooling Scenario Examples
 
-#### "Minimal"
+## "Minimal"
 
 This hypothetical scenario demonstrates the bare minimum for Liferay development.
 
 <img src="../images/tooling-scenario-1.png" style="max-width: 100%;"/>
 
-#### "Typical"
+## "Typical"
 
 Any Java IDE can be used for developing on the Liferay platform. But, especially when you start a new project, Liferay Dev Studio in connection with the Tomcat server bundle provides an easy and quick way to access all tools required for a productive Liferay development process.
 
 <img src="../images/tooling-scenario-2.png" style="max-width: 100%;"/>
 
-#### "Advanced"
+## "Advanced"
 
 Depending on your project's requirements, in advanced scenarios, the development environment can be integrated with additional tools like a testing and continuous integration pipeline, a Java profiler, or a graphical SQL client.
 

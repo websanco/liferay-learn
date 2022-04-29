@@ -4,9 +4,7 @@ title: Create an OSGi Service Using Declarative Services and Bndtools
 order: 3
 ---
 
-<h2 class="exercise">Exercises</h2>
-
-## Create an OSGi Service Using Declarative Services and Bndtools
+# Create an OSGi Service Using Declarative Services and Bndtools
 
 <div class="ahead">
 <h4>Exercise Goals</h4>
@@ -23,7 +21,7 @@ order: 3
 	</ul>
 </div>
 
-#### Create a Bnd OSGi Project
+## Create a Bnd OSGi Project
 
 1. **Click** *File → New → Other* in the Dev Studio menu bar to launch the new project wizard.
 1. **Enter** "bnd" in the search bar.
@@ -50,7 +48,7 @@ order: 3
 1. **Click** *Next*	leaving the default values and *Finish* to close the wizard:
 	<img src="../images/java-settings.png" style="max-height:30%;"/>
 
-#### Implement the Service Interface
+## Implement the Service Interface
 
 The wizard generated an example class in the package `com.liferay.training.osgi.service`. We'll remove that and create our own class:
 
@@ -66,7 +64,7 @@ public interface ClockApi {
 }
 ```
 
-#### Implement the Service Implementation Component
+## Implement the Service Implementation Component
 
 Next, we'll create an implementation class for the interface. We will use the Declarative Services `@Component` annotation to declare our class component and use the `service` property to declare which service we are publishing.
 
@@ -92,7 +90,7 @@ public class ClockImpl implements ClockApi {
 }
 ```
 
-#### Implement the Command Interpreter Service Component
+## Implement the Command Interpreter Service Component
 
 Last, we will create a Gogo Shell command to get the current time using a command called *telltime*. For that, we will create a new component.
 
@@ -123,7 +121,7 @@ public class ClockCommand {
 }
 ```
 
-#### Final Code Review
+## Final Code Review
 
 1. **Check** that the classes created in this exercise look like this:
 
@@ -178,7 +176,7 @@ public class ClockCommand {
 }
 ```
 
-#### Run and Test the Application in the Gogo Shell
+## Run and Test the Application in the Gogo Shell
 
 The Bndtools launcher will take care of compiling the `MANIFEST.MF` when the application is built. We'll enable Bndtools to automatically handle any missing requirements:
 

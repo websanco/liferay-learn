@@ -1,12 +1,12 @@
-## Using Analytics Cloud with Forms to Optimize Evaluation
+# Using Analytics Cloud with Forms to Optimize Evaluation
 
 Content Creators and Administrators can view the Form Entries from within whichever site the Form is located. Going through individual entries might work for a small platform with only a few different Forms, but not for a larger platform, where thousands of users may be filling out each and every Form. In order to take advantage of all that data, the Marketing team needs to be able to view summaries of the data instead of individual Form Entries. This is where Liferay's Analytics Cloud comes in.
 
-#### Analyzing Livingstone's Feedback {#livingstone}
+## Analyzing Livingstone's Feedback {#livingstone}
 
 The Forms created by Josiah and Natalia are meant to be filled out by as many users as possible, so sorting through individual entries manually will take too long. Instead, Natalia wants an easy way of visualizing all the data for every Form she creates. She can then hand that data to her data analysts to provide useful information for Livingstone. Fortunately, Josiah wants to add Liferay's Analytics Cloud to the platform, giving Natalia that functionality.
 
-#### Leveraging Asset Data with Liferay Analytics Cloud {#asset}
+## Leveraging Asset Data with Liferay Analytics Cloud {#asset}
 
 Liferay's Analytics Cloud allows Content Creators to see all Form data using the Asset Analytics feature.
 
@@ -24,7 +24,7 @@ Key Point: <br />
 
 After setting up _Liferay Analytics Cloud_ on your platform, you can click on the _Assets_ section of the _Operations_ menu to review data on various assets on the platform.
 
-#### Accessing Forms Data with Analytics Cloud {#forms}
+## Accessing Forms Data with Analytics Cloud {#forms}
 
 In the _Forms_ tab of the Assets page, you will be able to see all the Forms that exist in a site along with some basic information.
 

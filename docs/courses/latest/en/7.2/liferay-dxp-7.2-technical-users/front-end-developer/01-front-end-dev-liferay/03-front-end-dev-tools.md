@@ -1,8 +1,8 @@
-## Front-End Development Tools in Liferay
-
+# Front-End Development Tools in Liferay
+<!-- 
 Front-end developers need to be familiar with efficient development tools in order to implement business and design requirements. They also need to use tools that can work within a DevOps process. There are several tools available to developers working on the Liferay platform that allow them to do just that. 
 
-#### The Livingstone Team Toolset {#livingstonetoolset}
+## The Livingstone Team Toolset {#livingstonetoolset}
 
 Kaito Tanaka and his team of front-end developers need to create the following for the new Livingstone sites:
 * New Themes for the different Livingstone Hotel and Resort sites
@@ -18,7 +18,7 @@ Kaito Tanaka and his team of front-end developers need to create the following f
 
 <br/>
 
-#### Understanding Tools for Liferay DXP {#tools}
+## Understanding Tools for Liferay DXP {#tools}
 
 It's important to note that Liferay is tool-agnostic. Anything from a command prompt, text editor, or a full-blown IDE can be used to develop. Liferay DXP has introduced a number of new tools the team can take advantage of to simplify front-end module development. Developers can take advantage of Eclipse and IntelliJ IDEA IDE plugins, Yeoman generators within an npm workflow, or Liferay's Blade CLI.
 
@@ -43,7 +43,7 @@ Key Point: <br />
     </ul>
 </div>
 
-#### Developing with IntelliJ IDEA and Eclipse {#ide}
+## Developing with IntelliJ IDEA and Eclipse {#ide}
 
 Developers can use Liferay Developer Plugins with Eclipse or IntelliJ IDEA to develop different kinds of modules for the platform. These plugins give developers the tools to do the following:
 * Create a Liferay Workspace (Gradle and Maven based)
@@ -69,7 +69,7 @@ These plugins can be installed through the Eclipse and IntelliJ marketplace. Alt
   </ul>
 </div>
 
-#### Using the Blade CLI's Theme Template {#bladecli}
+## Using the Blade CLI's Theme Template {#bladecli}
 
 Developers can also use the Blade CLI tool to build Liferay module projects. This tool can be used to create projects with a Liferay Workspace or in a standalone environment. Blade CLI is a command line tool bootstrapped to a Gradle-based environment that allows developers to do the following:
 * Create projects (Gradle or Maven) that can be used with any IDE or development environment
@@ -91,7 +91,7 @@ For Liferay DXP 7.2, this toolset can be used to create and deploy theme and lay
   </ul>
 </div>
 
-#### Using the Liferay NPM Toolkit {#npmtoolkit}
+## Using the Liferay NPM Toolkit {#npmtoolkit}
 
 Finally, developers can use the Liferay NPM toolkit, which includes the following project generators:
 * **Liferay Theme Generator**: used to create theme and layout template projects
@@ -144,4 +144,4 @@ Key Point: <br />
       <li>____________________: used to create page fragments that can be deployed to the platform</li>
     </ul>
 </ul>
-</div>
+</div> -->

@@ -4,9 +4,7 @@ title: Set Up the Development Environment on OSX
 order: 2
 ---
 
-<h2 class="exercise">Exercises</h2>
-
-## Set Up the Development Environment on OSX
+# Set Up the Development Environment on OSX
 
 <div class="ahead">
 <h4>Exercise Goals</h4>
@@ -30,7 +28,7 @@ Please consult your trainer if either of these are missing.
 You should also have credentials to log in to Liferay's website. If you don't have those, please register at <a href="https://web.liferay.com/sign-in">https://web.liferay.com/sign-in</a>.
 </div>
 
-#### Install Java 8 JDK
+## Install Java 8 JDK
 
 If you already have a Java 8 JDK installed, you can skip this step. Please note that a full JDK is required. You can check whether Java has been installed and its version in the _Terminal_ with:
 
@@ -58,7 +56,7 @@ If a full JDK is installed, output should be something like:
 java version "1.8.0_161"
 ```
 
-#### Install Java JDK on OSX
+## Install Java JDK on OSX
 
 1. **Go to** http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html in your web browser.
 1. **Find** the Java 8 JDK for your processor architecture.
@@ -67,24 +65,32 @@ java version "1.8.0_161"
   * You will need to create an account with Oracle in order to download JDK 8.
 * **Double-click** the package icon to launch the installer.
 * **Open** the profile in order to add the `JAVA_HOME` environment variable to your user profile settings:
+
 ```bash
 nano ~/.profile
 ```
+
 * **Add** the following lines to the end of the file:
+
 ```bash
 export JAVA_HOME="$(/usr/libexec/java_home -v 1.8)"
 ```
+
 * **Type** in the following to make the settings effective in the current _Terminal_:
+
 ```bash
 source ~/.profile
 ```
+
     * You can check that the path is correct by running:
+
     ```bash
     echo $JAVA_HOME
     ```
+
     * The output should point to your JDK installation folder.
 
-#### Install Dev Studio DXP
+## Install Dev Studio DXP
 
 1. **Run** the Dev Studio installer to start the installation process.
 1. **Choose** the full Java 8 JDK as the Java runtime.

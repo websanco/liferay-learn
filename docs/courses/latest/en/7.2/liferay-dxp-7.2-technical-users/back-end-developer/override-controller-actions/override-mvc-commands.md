@@ -4,7 +4,7 @@ title: Override MVC Commands
 order: 2
 ---
 
-## Override MVC Commands
+# Override MVC Commands
 
 All Liferay platform applications are portlets. MVC Commands are portlet lifecycle handlers that implement the [MVCCommand](https://github.com/liferay/liferay-portal/blob/7.2.x/portal-kernel/src/com/liferay/portal/kernel/portlet/bridges/mvc/MVCCommand.java) interface and are used to break up the controller layer into smaller and more manageable code entities. 
 
@@ -14,7 +14,7 @@ There are three types of MVC commands that correspond to portlet lifecycle phase
 * [MVC Render Commands](https://github.com/liferay/liferay-portal/blob/7.2.x/portal-kernel/src/com/liferay/portal/kernel/portlet/bridges/mvc/MVCRenderCommand.java)
 * [MVC Resource Commands](https://github.com/liferay/liferay-portal/blob/7.2.x/portal-kernel/src/com/liferay/portal/kernel/portlet/bridges/mvc/MVCResourceCommand.java)
 
-#### MVC Action Commands
+## MVC Action Commands
 
 MVC Action Commands are components that handle a portlet's *action phase* requests. They are typically used to process form submissions and trigger a service action on the model layer. Here are a few example use cases:
 
@@ -119,7 +119,7 @@ public class UploadSmallImageMVCActionCommand extends BaseMVCActionCommand {
 > * edit_entry.jsp: https://github.com/liferay/liferay-portal/blob/7.2.x/modules/apps/blogs/blogs-web/src/main/resources/META-INF/resources/blogs/edit_entry.jsp
 > * UploadSmallImageMVCActionCommand.java: https://github.com/liferay/liferay-portal/blob/7.1.0-ga1/modules/apps/blogs/blogs-web/src/main/java/com/liferay/blogs/web/internal/portlet/action/UploadSmallImageMVCActionCommand.java
 
-#### MVC Render Commands
+## MVC Render Commands
 
 MVC render commands are components that handle a portlet's *render phase* requests.
 
@@ -307,7 +307,7 @@ public class ViewEntryMVCRenderCommand implements MVCRenderCommand {
 > * view.jsp: https://github.com/liferay/liferay-portal/blob/7.2.x/modules/apps/blogs/blogs-web/src/main/resources/META-INF/resources/blogs/view.jsp
 > * ViewEntryMVCRenderCommand.java: https://github.com/liferay/liferay-portal/blob/7.2.x/modules/apps/blogs/blogs-web/src/main/java/com/liferay/blogs/web/internal/portlet/action/ViewEntryMVCRenderCommand.java
 
-#### MVC Resource Commands
+## MVC Resource Commands
 
 MVC resource commands are components that handle a portlet's *resource serving phase* requests.
 
@@ -460,7 +460,7 @@ public class AutocompleteUserMentionsMVCResourceCommand
 > * edit\_microblogs\_entry.jsp: https://github.com/liferay/liferay-portal/blob/7.2.x/modules/apps/microblogs/microblogs-web/src/main/resources/META-INF/resources/microblogs/edit_microblogs_entry.jsp
 > * AutocompleteUserMentionsMVCResourceCommand.java: https://github.com/liferay/liferay-portal/blob/7.2.x/modules/apps/microblogs/microblogs-web/src/main/java/com/liferay/microblogs/web/internal/portlet/action/AutocompleteUserMentionsMVCResourceCommand.java
 
-#### Overriding MVC Commands
+## Overriding MVC Commands
 
 The same pattern applies to overriding any portal MVC Commands. Generally, the steps for overriding MVC Commands are as follows:
 
@@ -473,11 +473,11 @@ As an example, we'll demonstrate overriding an MVC Action Command.
 
 <br />
 
-#### Overriding the Blogs Admin Portlet Edit Entry Action Command
+## Overriding the Blogs Admin Portlet Edit Entry Action Command
 
 In the example below, we will customize the MVC Action Command responsible for editing a Blogs entry. In the customization, we'll create a notification when somebody is trying to delete an entry from the *Control Panel*. After the notification, the original action is executed. 
 
-#### Step 1 - Find out the Blogs Web Bundle Name
+## Step 1 - Find out the Blogs Web Bundle Name
 
 Use the Gogo Shell to find the web bundle for blogs:
 
@@ -504,11 +504,11 @@ true
 g! 
 ```
 
-#### Step 2 - Find the MVC Command Class to Override
+## Step 2 - Find the MVC Command Class to Override
 
 <img src="../images/blogs-example-2.png" style="max-height:32%;" />
 
-#### Step 3 - Locate the `mvc.command.name` Parameter to Override
+## Step 3 - Locate the `mvc.command.name` Parameter to Override
 
 ```java
 @Component(
@@ -525,7 +525,7 @@ public class EditEntryMVCActionCommand extends BaseMVCActionCommand {
 	...
 ```
 
-#### Step 4 - Implement an Overriding OSGi MVC Command Component with a Higher Service Ranking
+## Step 4 - Implement an Overriding OSGi MVC Command Component with a Higher Service Ranking
 
 ```java
 

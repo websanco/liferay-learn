@@ -28,12 +28,12 @@ Coming Soon!
 <ul>
     </ul>
 	<li>Unzipped module exercise files in the following folder structure:</li>
-	<ul>	
+	<ul>
 		<li>Windows: <code>C:\liferay</code></li>
 		<li>Unix Systems: <code>[user-home]/liferay</code></li>
 	</ul>
 	<li>A Liferay DXP or CE 7.2 instance up and running</li>
-	    <ul>    
+	    <ul>
         <li>If you have not started your instance yet, first, make sure you have downloaded Docker. Then, use the following commands to get and start the Liferay Docker Image:</li>
         <ul>
             <li><code>docker pull liferay/[product]:[version]</code></li>

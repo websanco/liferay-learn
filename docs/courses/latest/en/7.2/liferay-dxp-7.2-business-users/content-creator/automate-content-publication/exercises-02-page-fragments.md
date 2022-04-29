@@ -1,6 +1,4 @@
-<h2 class="exercise">Exercises</h2>
-
-## Creating Structures and Templates for Content Display
+# Creating Structures and Templates for Content Display
 
 <div class="ahead">
 <h4>Exercise Goals</h4>
@@ -10,7 +8,7 @@
 </ul>
 </div>
 
-#### Import a Fragment Collection
+## Import a Fragment Collection
 1. **Open** the _Menu_.
 * **Go to** _`Site Builder → Page Fragments`_ in the _Site Administration_ panel.
 	* You should be in the Livingstone Hotels & Resorts site. When you get to the Page Fragments section of _Site Administration_, you should see there are currently no Collections available.
@@ -23,17 +21,17 @@
 
 <img src="../images/imported-fragments.png" style="max-height:25%;" />
 
-#### View the Fragments Editor
+## View the Fragments Editor
 1. **Click** on the new _01-Main Banner_ fragment.
     * Here you'll see the code that makes up the Banner. The code is using _Bootstrap_ classes to style HTML content. You'll also see a preview of the content in the bottom right corner. Notice that the HTML also contains the `<lfr-editable>` tag for a few elements.
 2. **Click** the _Publish_ button at the top right corner.
 
 <img src="../images/fragment-editor.png" style="max-height:40%;" />
 
-#### Add the Fragments to a Content Page
+## Add the Fragments to a Content Page
 1. **Go to** _`Site Builder → Pages`_ in the _Site Administration_ panel.
 * **Click** _Add_.
-* **Choose** _Content Page_. 
+* **Choose** _Content Page_.
 * **Type** `Home` for the page _Name_.
 * **Click** _Add_.
 * **Click** on the _Livingstone Front Page_ collection on the right side of the Page Editor.
@@ -42,10 +40,10 @@
 * **Click** the _edit_ icon.
     - This is the icon that looks like a pencil.
 * **Replace** the text with `Welcome to Livingstone`.
-    
+
 <img src="../images/edit-banner.png" style="max-height:35%">
 
-#### Add the Remaining Fragments to the Content Page
+## Add the Remaining Fragments to the Content Page
 1. **Click** to add the _02-Featured Content_ Fragment.
 * **Click** to add the _03-Call to Action_ Fragment.
 * **Click** to add the _04-Middle Banner_ Fragment.
@@ -60,7 +58,7 @@
 
 <br />
 
-#### Update the Fragment Content Titles
+## Update the Fragment Content Titles
 1. **Click** on the main body text in the _01-Main Banner_ Fragment.
 * **Click** the _edit_ icon.
 * **Replace** the text with `Get ready for your next big adventure. Livingstone Hotels & Resorts will take you there.`
@@ -76,7 +74,7 @@
 
 <img src="../images/updated-content.png" style="max-height:40%;" />
 
-#### Clean up the Fragment Text
+## Clean up the Fragment Text
 1. **Edit** the body text under _120 Hotels_ in the _05-Hotel_ Fragment.
 * **Replace** `16 hotels` with `120 hotels`.
 * **Edit** the body text under _Award Winning Service_ in the _05-Hotel_ Fragment.
@@ -85,7 +83,7 @@
 
 <img src="../images/updated-text.png" style="max-height:22%;" />
 
-#### Publish the Content Page
+## Publish the Content Page
 1. **Click** _Publish_ in the top right corner.
 * **Open** the _Menu_.
 * **Go to** _`Go to Site`_ in the _Site Administration_ panel.
@@ -93,7 +91,7 @@
 
 <img src="../images/home-page.png" style="max-height:65%;" />
 
-#### Update the Home Page
+## Update the Home Page
 1. **Open** the _Menu_.
 2. **Go to** _`Site Builder → Pages`_ in the _Site Administration_ panel.
 3. **Drag** the _Home_ Content Page from the bottom of the page list to the top.
@@ -107,7 +105,7 @@
 
 ---
 
-#### Bonus Exercise
+## Bonus Exercise
 1. Create a second Content Page using the default Page Fragments found in the _Basic Sections_ collection. Use your own images and come up with text that would make sense for Livingstone's _About_ page.
 2. Use some of the Page Fragments from the Livingstone Front Page collection to create a marketing page for Livingstone. Edit any editable elements to create a page highlighting Livingstone's travel packages.
 

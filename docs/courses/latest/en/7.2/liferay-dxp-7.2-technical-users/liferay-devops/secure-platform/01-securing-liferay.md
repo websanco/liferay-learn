@@ -1,4 +1,5 @@
-## Hardening Your Liferay Solution
+# Hardening Your Liferay Solution
+
 Hardening is the process of securing a system by reducing its vulnerability. Reducing available avenues of attack typically includes the removal of unnecessary software, user names, or logins, and disabling or removing unnecessary services. The ultimate "hardened" computer would be one with no internet access, no input ports or devices, and no physical access. This computer would also be completely useless. When hardening, we need to strike a balance between functionality and security.
 
 <div class="key-point">
@@ -51,10 +52,12 @@ You also need to strengthen the database server:
 </div>
 
 Inside of Liferay, managing account creation is a way to improve security. Disable account creation if registration is not required:
+
 ```properties
 #portal.properties
 company.security.strangers=false
 ```
+
 Verify what account creation settings are necessary for your usage. Check default Roles / Site memberships / Groups / Organizations at _`Configuration → Instance Settings → Users`_.
 
 <br>
@@ -64,6 +67,7 @@ Verify what account creation settings are necessary for your usage. Check defaul
 <br>
 
 You can **disable** a user's personal public and private pages ("My Profile" and "My Dashboard") if those pages won't be needed by editing the following properties:
+
 ```properties
 #portal.properties
 
@@ -76,6 +80,7 @@ layout.user.private.layouts.power.user.required=false
 ```
 
 When you start Liferay for the first time, a default administrative user will be created. You should change the default administrative account for any production Liferay instance.
+
 ```properties
 # portal.properties default values
 
@@ -85,6 +90,7 @@ default.admin.email.address.prefix=test
 ```
 
 Liferay offers various encryption algorithms. You can manage Liferay's encryption with these properties:
+
 ```properties
 #passwords.encryption.algorithm.legacy=BCRYPT
 #passwords.encryption.algorithm.legacy=MD5
@@ -132,7 +138,7 @@ Non-used OSGi portlets can be removed from Liferay like this:
 </ul>
 </div>
 
-### Password Policies {#pass}
+## Password Policies {#pass}
 
 One of the simplest ways to compromise a system is by taking advantage of insecure passwords. Every time there is a major data breach and passwords are compromised, you see lists of people using passwords like "12345" or "password". Sometimes it's a little bit more complicated, and they go with "baseball" or "qwerty", but bad passwords are everywhere. In addition to bad passwords, you have old passwords. If a shared account password hasn't been changed in five years, that means that the guy who got fired five years ago still has the password, and that's not a good thing. This is where password policies come in.
 
@@ -160,7 +166,7 @@ Let's take a look at a few common policy elements:
 
 Each element of a password policy serves a different purpose. Forcing a user to change a system-generated password eliminates the risk of a password being compromised through new account setup or a password reset email. Syntax checking prevents users from creating easily guessable passwords. Combined with Lockout, it helps prevent brute force attacks (where a script tries numerous possible passwords in hopes of guessing the right one eventually). Password history and expiration settings help prevent situations like a stale password that may have been written on a post-it note and thrown away from being found and used. These settings also frequently prevent users from using the same password on their email or Facebook as they do for more sensitive accounts.
 
-### Password Hashing {#hash}
+## Password Hashing {#hash}
 
 Of course, none of this matters much if you're storing plain text user credentials in a `.txt` file on your server, and this is where password hashing comes in. Hashing enables you to protect the passwords themselves from being compromised. By default, Liferay uses PBKDF2WithHmacSHA1/160/128000 hashing (Password Based Key Derivation Function, 160 bits, 128000 rounds) to provide the level of security recommended by the Open Web Application Security Project (OWASP). You can choose a different algorithm any time. Today, the algorithm is typically chosen for how much it discourages brute-force discovery. You can choose from several hashing algorithms. You can configure them in the `portal.properties` file:
 
@@ -236,7 +242,7 @@ For maximum security and performance, you can offload all password management to
 
 <img src="../images/password-ldap-conf.png" style="max-width:100%;">
 
-### Securing Liferay at the Network Level {#network}
+## Securing Liferay at the Network Level {#network}
 
 We've looked at a broad view of security, ranging from the physical security of your servers to user management and administrative account policies. Now we're going to take a closer look at network security. We need to ensure that the connection between your site and your users is secure. We'll look at TLS, HTTPS, and the other technologies you need to secure your site and ensure the privacy and security of your data and your users' data. But due to local machine names and the need for certificates for local machines, we won't have an exercise actually setting it up.
 
@@ -261,7 +267,7 @@ Network communication can be limited through router firewalls: Each layer should
 
 <br>
 
-### Encryption Tools {#encrypt}
+## Encryption Tools {#encrypt}
 
 <div class="key-point">
 Key Point:<br>
@@ -286,7 +292,7 @@ Generally speaking, a page is either served up encrypted through HTTPS or not us
 
 In our current setup, web traffic will initially hit the HAProxy load balancer that we have set up, and then be directed to the Liferay-Tomcat node. Traffic between your users and the load balancer is via HTTP. Traffic between the web server and your Java servers can be HTTP or AJP. If you use Apache httpd instead of HAProxy, and `mod_proxy_ajp` for communication, you'll use AJP, or you can use `mod_proxy_http` or `mod_jk_http`. AJP is often preferred, as it provides additional metadata in the communication over HTTP. In either case, if you're using HTTPS, you will need to also use a TLS connector to secure traffic between the load balancer/reverse proxy and the application server.
 
-### Security Settings {#securitysettings}
+## Security Settings {#securitysettings}
 
 Many security settings are configured through `portal.properties`, while others are configured through *System Settings*/`.config`.
 
@@ -318,7 +324,7 @@ For a clustered environment, remember, all settings will need to be exported and
 
 One of the easiest ways to keep your system secure is simply to keep your system up to date. Liferay provides easy-to-install security updates for DXP users. Keeping up to date with all of the software in your web server stack will also protect you from any potential vulnerabilities in that software.
 
-### Securing Services {#services}
+## Securing Services {#services}
 
 <div class="key-point">
 Key Point:<br>
@@ -335,6 +341,7 @@ Web service requests must pass all four layers of security.
 <img src="../images/remote-service-invocation.png" style="max-width:60%;">
 
 A remote agent needs to originate from an IP or host allowed by Liferay. IP addresses can be listed explicitly in `portal.properties`:
+
 ```bash
 main.servlet.hosts.allowed=SERVER_IP,230.20.45.255
 ```
@@ -398,7 +405,7 @@ Securing services can be approached from many levels:
 
 Using a combination of these methods provides the highest level of security to ensure that only authorized agents can remotely access services in your Liferay instances.
 
-### Service Access Policies {#sap}
+## Service Access Policies {#sap}
 
 Once a user has access to a remote service, he or she can usually run any methods the service allows. As a best practice, services implement permission-checking on remote users. However, there may be situations where you'd like to limit what services and methods a user can access. Your developers may provide a new mobile messaging app that accesses Liferay's Message Board services.
 
@@ -451,7 +458,7 @@ Take time to audit your Liferay instance's *Service Access Policies* along with 
 <br>
 <br>
 
-### Security for Remote Staging {#remotestage}
+## Security for Remote Staging {#remotestage}
 
 Similar to other layers in our deployment, Staging introduces potential attack vectors. Like performance, security in Staging depends on whether you support *Local Live* Staging or *Remote Live* Staging.
 
@@ -481,6 +488,7 @@ As with performance, you can achieve better security if you designate one partic
 When staging using *Remote Live*, the process is the same as adding a new network segment. The staging environment should exist in its own subnet, away from production or any other environment. Network traffic should only flow in one direction: Outside access to staging should only come from one external connection or router. The staging environment network should only allow incoming traffic from the external router. Traffic leaving staging can only go to the production network. Traffic can't flow "backwards". Production can't reach staging, and external clients can't reach production. As with *Local Live* security, you can require TLS, VPN access, limit IP ranges to inside a particular subnet for specific clients, or implement any other restriction you'd like to impose.
 
 *Remote Live* staging adds another complication: the staging server needs to communicate and authenticate with the production server without a user inputting his or her password. This is done with the Tunneling Servlet using a *shared secret*. The shared secret can be a plain ASCII key or a hex key. The shared secret is then encrypted and sent over the network for verification on the remote production instance. You can control the encryption by setting one of various key production algorithms (AES, Blowfish, DESede, etc.) Encryption schemes are set through the property:
+
 ```properties
 tunneling.servlet.encryption.algorithm
 ```

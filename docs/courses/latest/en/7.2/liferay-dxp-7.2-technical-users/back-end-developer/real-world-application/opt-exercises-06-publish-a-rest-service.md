@@ -4,9 +4,7 @@ title:  Publish a REST Service
 order: 6
 ---
 
-<h2 class="exercise">Optional Exercise</h2>
-
-## Publish a REST Service
+# Publish a REST Service
 
 <div class="ahead">
 <h4>Exercise Goals</h4>
@@ -25,17 +23,19 @@ order: 6
 
 >In this exercise, we will be adding a REST API to the service layer by way of a JAX-RS Whiteboard. We will be using the standard JAX-RS Whiteboard annotations. You can find more information regarding JAX-RS Whiteboard in the official [OSGi documentation](https://osgi.org/specification/osgi.cmpn/7.0.0/service.jaxrs.html). We'll expose two REST methods: one to get all the Assignments and another one to look up a specific Assignment by its ID.
 
-> a cURL command line client is needed for this exercise. Windows users can download a client for example [here](https://curl.haxx.se/windows/). 
+> a cURL command line client is needed for this exercise. Windows users can download a client for example [here](https://curl.haxx.se/windows/).
 
-#### Create a Liferay Module Project
+## Create a Liferay Module Project
 
 **Option 1: Use the Command Line Blade tools**
 
 1. **Open** command line shell in your Liferay Workspace `modules` folder.
 1. **Run** command:
+
 ```bash
 blade create -t rest -v 7.2 -p com.liferay.training.gradebook.rest -c AssignmentRest gradebook-rest
 ```
+
 1. **Run** Gradle refresh on the IDE.
 
 **Option 2: Use Developer Studio Wizard**
@@ -51,20 +51,21 @@ blade create -t rest -v 7.2 -p com.liferay.training.gradebook.rest -c Assignment
 	* __Package Name__: "com.liferay.training.gradebook.rest"
 1. **Click** *Finish* to close the wizard
 
-#### Resolve Dependencies
+## Resolve Dependencies
 
 We'll need to resolve dependencies for the portal kernel, servlet, portlet and Gradebook API:
 
 1. **Open** the `build.gradle`.
 1. **Add** the following new dependencies:
+
 ```groovy
 compileOnly group: "com.liferay.portal", name: "com.liferay.portal.kernel"
 compileOnly group: "javax.portlet", name: "portlet-api"
 compileOnly group: "javax.servlet", name: "javax.servlet-api"
 compileOnly project(":modules:gradebook:gradebook-api")
-```	
+```
 
-#### Implement the GradebookRestApplication Class
+## Implement the GradebookRestApplication Class
 
 Well implement a simple rest application which you can use to fetch the list of all the Assignment or just a single one by its ID. OAuth will be disabled in this application.
 
@@ -183,11 +184,12 @@ public class AssignmentRestApplication extends Application {
 }
 ```
 
-#### Final Code Review
+## Final Code Review
 
 The complete implementation files will look like this:
 
 **build.gradle**
+
 ```groovy
 dependencies {
 	compileOnly group: "com.liferay.portal", name: "com.liferay.portal.kernel"
@@ -201,6 +203,7 @@ dependencies {
 ```	
 
 **AssignmentRestApplication.java**
+
 ```java
 package com.liferay.training.gradebook.rest.application;
 
@@ -311,11 +314,12 @@ public class AssignmentRestApplication extends Application {
 }
 ```
 
-#### Deploy and Test
+## Deploy and Test
 
 1. **Open** your browser to http://localhost:8080 and sign in.
 1. **Open** your browser in http://localhost:8080/o/gradebook-rest/assignments. 
 	You'll get an access denied message:
+
 	```xml
 	<Forbidden>
 		<message>
@@ -323,10 +327,10 @@ public class AssignmentRestApplication extends Application {
 		</message>
 	</Forbidden>
 	```
-	
+
 The JAX-RS REST application requires OAuth 2.0 authorization by default and we have to configure that to grant access to the service.
 
-#### Create an OAuth 2.0 Application
+## Create an OAuth 2.0 Application
 
 1. **Go to** the *Control Panel → Configuration → OAuth2 Administration*
 1. **Click** the Add icon to add an application.
@@ -341,32 +345,40 @@ The JAX-RS REST application requires OAuth 2.0 authorization by default and we h
 1. **Open** the *Gradebook.Rest* and check *read data on your behalf*
 1. **Click** *Save*. 
 
-#### Test
+## Test
 1. **Open** the command line shell
-1. **Use** a cURL request to get an access token. Use the client ID and secret values from the previous step :
+1. **Use** a cURL request to get an access token. Use the client ID and secret values from the previous step:
+
 	```bash
 	curl http://localhost:8080/o/oauth2/token -d 'grant_type=client_credentials&client_id=[CLIENT_ID]&client_secret=[CLIENT_SECRET'
 	```
+
 	You'll get the access token as a response:
+
 	```bash
 	{"access_token":"262e6fffb6faffef928b251efa9f15644526023d63a7a9a3d6527b94ef12b2c","token_type":"Bearer","expires_in":600,"scope":"Gradebook.Rest.everything.read"}
 	```
+
 1. **Now** use the access token and call the Assignment REST service to list all the assignments:
+
 	```bash
 	curl -H 'Accept: application/json' -H "Authorization: Bearer [ACCESS_TOKEN]" http://localhost:8080/o/gradebook-rest/assignments
 	 ```
+
 	You'll get Assignments list as a response:
+
 	```bash
 	{"javaClass":"java.util.ArrayList","list":[{"contextName":"com.liferay.training.gradebook.service_1.0.0","javaClass":"com.liferay.training.gradebook.model.impl.AssignmentImpl","serializable":{"statusDate":null,"originalUuid":"ee4172af-a9d8-83cd-5f2a-cdd341813732","columnBitmask":0,"cachedModel":false,"groupId":20123,"dueDate":{"javaClass":"java.sql.Timestamp","time":1559260800000},"description":"<?xml version='1.0' encoding='UTF-8'?><root available-locales=\"en_US\" default-locale=\"en_US\"><Description language-id=\"en_US\">Please write a short 1000 character essay about the concept of positivism ...
 	```
+
 1. **Locate** any `assignmentId` value in the response and get a single assignment from our REST service:
+
 	```bash
 	curl -H 'Accept: application/json' -H "Authorization: Bearer [ACCESS_TOKEN]" http://localhost:8080/o/gradebook-rest/assignment/[ASSIGNMENT_ID]
 	 ```
 
-#### Takeaways 
+## Takeaways
 
 You've seen in this exercise how easy it is to create a REST API for your Liferay Services. Because JAX-RS Whiteboard is a standard OSGi specification, you now have another convenient tool at your disposal to create APIs that others can use to easily integrate with your applications.
 
 > See Developer Network article (https://dev.liferay.com/en/develop/tutorials/-/knowledge_base/7-2/jax-rs-and-jax-ws) for more information about using JAX RS and JAX WS in your projects.
-

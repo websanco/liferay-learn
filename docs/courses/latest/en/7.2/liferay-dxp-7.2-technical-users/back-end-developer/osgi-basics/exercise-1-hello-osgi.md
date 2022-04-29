@@ -6,7 +6,7 @@ order: 1
 
 <h2 class="exercise">Exercises</h2>
 
-## Hello OSGi
+# Hello OSGi
 
 <div class="ahead">
 <h4>Exercise Goals</h4>
@@ -27,7 +27,7 @@ order: 1
 	</ul>
 </div>
 
-#### Create a New Plugin Project Using the *Hello OSGi* Template
+## Create a New Plugin Project Using the *Hello OSGi* Template
 
 1. **Click** *File → New → Other* on the Dev Studio menu bar to launch the new project wizard.
 1. **Enter** "plugin" in the search bar.
@@ -62,7 +62,7 @@ You have reached the first checkpoint. Check that the following items were creat
 
 <img src="../images/hello-ready.png" style="max-height: 35%"/>
 
-#### Set up the OSGi Framework Run Configuration
+## Set up the OSGi Framework Run Configuration
 
 Before running the bundle, we'll enable only the bundles needed to run the OSGi container.
 
@@ -86,7 +86,7 @@ Before running the bundle, we'll enable only the bundles needed to run the OSGi 
 1. **Click** *Apply* and close the dialog.
 	<img src="../images/set-run-arguments.png" style="max-height: 25%"/>
 
-#### Run the Application
+## Run the Application
 
 1. **Right-click** the project to open the context menu.
 1. **Click**  *Run As → OSGi Framework*:

@@ -4,11 +4,11 @@ title: Testing
 order: 11
 ---
 
-## Testing
+# Testing
 
 In this section, we'll discuss some general principles, practices, and guidelines of software testing. The practical part of the section will focus on integration testing.
 
-#### Why Test?
+## Why Test?
 
 Humans make mistakes and create bugs in the software. But that's not the only reason for software testing. Here are some additional reasons for testing:
 
@@ -20,19 +20,19 @@ Humans make mistakes and create bugs in the software. But that's not the only re
 
 Testing provides concrete metrics about the state of your software. When done properly, it inevitably improves software quality and, ultimately, customer satisfaction.
 
-####  What You Should Test
+##  What You Should Test
 
 Things that generally should be tested include:
 
 * The "business logic"
 * CRUD functionalities
-* Code or functionalities that are intensively used everywhere in the application 
+* Code or functionalities that are intensively used everywhere in the application
 * Code or functionalities developed by multiple developers
 * Code or functionality that changes often
 
 > Consider quantity vs. quality: having fewer well-targeted tests of qood quality is usually better than the opposite.
 
-#### Functional vs Non-Functional Testing
+## Functional vs Non-Functional Testing
 
 Software testing is often divided into two main categories:
 
@@ -45,7 +45,7 @@ __Non-Functional Testing__ is used to verify the way the system works. Non-funct
 
 Both functional and non-functional testing categories are necessary. Although functional testing often takes the major role in testing, performance and load tests can expose defects that otherwise would pass the process and go to production. Fixing issues in production is often more difficult, and more expensive.
 
-#### Stages of Testing
+## Stages of Testing
 
 Properly done, testing happens in multiple stages. The smallest software components like methods are tested first, then their interaction, then the complete system and, last, the user perception.
 
@@ -55,7 +55,7 @@ The diagram below shows some tooling examples for the different stages:
 
 <img src="../images/tooling-examples.png" style="max-height:100%"/>
 
-#### General Recommendations for Testing
+## General Recommendations for Testing
 
 Make a proper __testing plan__ and try to test on all the stages of the development cycle. 
 
@@ -69,11 +69,11 @@ Keep tests __simple__. Creating tests can be time-consuming. Try to keep tests s
 
 <br />
 
-#### Testing Types
+## Testing Types
 
 Let's do a brief overview of some of the most common functional testing types. 
 
-#### Unit Testing
+## Unit Testing
 
 Unit testing is the first stage of testing. It's meant for the smallest units of code, usually done against methods. Unit tests should be atomic and have only minimal dependencies on other units of code. 
 
@@ -149,7 +149,7 @@ Below is an example of a JUnit test using the PowerMock Mockito extension:
 }
 ```
 
-#### Integration Testing
+## Integration Testing
 
 In integration testing, a component is tested as a whole with all its integrations to other modules and services. Integration testing tries to expose defects in interfaces and interaction between integrated components.
 
@@ -192,7 +192,7 @@ public class BlogsEntryLocalServiceImplTest {
 }
 ```
 
-#### End-to-End Testing
+## End-to-End Testing
 
 End-to-end testing, sometimes also called user interface or browser testing, strives to emulate and test the (human) interaction with an application. Probably the most common testing framework in this category is [Selenium](https://www.seleniumhq.org). 
 
@@ -253,7 +253,7 @@ public class BasicPortletFunctionalTest {
 }
 ```
 
-#### Introducing Arquillian
+## Introducing Arquillian
 
 Arquillian is an integration and functional testing platform for Java. Running tests against a dedicated container, it provides a way to test the Liferay modules comprehensively in a real environment and with real dependencies.
 
@@ -270,7 +270,7 @@ Below is a diagram of an Arquillian test:
 
 <img src="../images/arquillian-flow.png" style="max-height:40%"/>
 
-#### Arquillian Components
+## Arquillian Components
 
 The Arquillian framework has four main components:
 
@@ -332,12 +332,12 @@ public class GradebookPortletTest {
 }
 ```
 
-#### Liferay Arquillian Extension JUnit Bridge
+## Liferay Arquillian Extension JUnit Bridge
 
 The Arquillian Extension is an extension for Liferay OSGi in-container deployments that takes care of managing the test container, deploying the test bundle, and running the tests.
 
 
-#### Steps to Implement Liferay Arquillian Integration Tests
+## Steps to Implement Liferay Arquillian Integration Tests
 
 Typical steps for setting up Liferay Arquillian tests:
 

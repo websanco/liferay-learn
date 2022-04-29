@@ -4,10 +4,8 @@ title: Customize Liferay UserLocalService with a Service Wrapper
 order: 1
 ---
 
-<h2 class="exercise">Exercises</h2>
-
-## Customize the Service Layer
-
+# Customize the Service Layer
+<!-- 
 <div class="ahead">
 <h4>Exercise Goals</h4>
 	<ul>
@@ -18,7 +16,7 @@ order: 1
 	</ul>
 </div>
 
-#### Create a Liferay Module Project
+## Create a Liferay Module Project
 
 **Option 1: Use the Command Line Blade Tools**
 
@@ -45,7 +43,7 @@ blade create -t service-wrapper -p com.liferay.training.user.service -c UserLoca
 	* Choose `com.liferay.portal.kernel.service.UserLocalServiceWrapper`.
 1. **Click** *Finish* to close the wizard.
 
-#### Override the `addUserWithWorkflow()` Method
+## Override the `addUserWithWorkflow()` Method
 
 1. **Open** the class `com.liferay.training.user.service.UserLocalServiceOverride`.
 1. **Right-click** on the `UserLocalServiceOverride()` constructor.
@@ -86,7 +84,7 @@ public User addUserWithWorkflow(
 
 > Note the personal email domains that will be rejected as the user is added.
 
-#### Final Code Review
+## Final Code Review
 
 The complete implementation of the class will look like this: 
 
@@ -152,7 +150,7 @@ public class UserLocalServiceOverride extends UserLocalServiceWrapper {
 }
 ```
 
-#### Deploy and Test
+## Deploy and Test
 
 1. **Deploy** the module to the Liferay server.
 1. **Open** your browser to http://localhost:8080 and sign in.
@@ -168,6 +166,6 @@ You will see an error message on the page stating that the user was not added. Y
 You must enter a work email address. User will not be added.
 ```
 
-#### Takeaways
+## Takeaways
 
-Using the pattern above, you will be able to override any Liferay Service with a service wrapper.
+Using the pattern above, you will be able to override any Liferay Service with a service wrapper. -->

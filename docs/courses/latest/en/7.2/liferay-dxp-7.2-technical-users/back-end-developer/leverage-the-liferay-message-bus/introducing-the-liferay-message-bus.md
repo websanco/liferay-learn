@@ -4,7 +4,7 @@ title: Introducing Liferay Message Bus
 order: 2
 ---
 
-## Introducing Liferay Message Bus
+# Introducing Liferay Message Bus
 
 Liferay Message Bus (LMB) is a service-level API for exchanging messages inside Liferay. Liferay Message Bus is similar to [JMS](https://download.oracle.com/otndocs/jcp/7195-jms-1.1-fr-spec-oth-JSpec/) (Java Message Service), but has a smaller feature set. It also supports synchronous and asynchronous messaging in the cluster, but lacks, for example, transactional and reliable delivery (acknowledgments).
 
@@ -29,13 +29,13 @@ The Message Bus API is available for custom applications and is the recommended 
 * Auditing
 * Sending payload to an integrated system
 
-#### Message Bus Components
+## Message Bus Components
 
 The message bus has three main components: *destinations*, *senders*, and *listeners*.
 
 <img src="../images/components.png" style="max-height:20%;" />
 
-#### Destinations
+## Destinations
 
 Destinations are addresses or named endpoints for sending and receiving messages that provide a loose coupling between *senders* and *listeners*.
 
@@ -181,7 +181,7 @@ public class MessageBusDestinationRegistrator {
 }
 ```
 
-#### Senders
+## Senders
 
 Senders invoke the Message Bus to send messages to registered destinations. Sending a message can be done from any class:
 
@@ -263,7 +263,7 @@ protected void sendSyncMessage(String messageText)
 }
 ```
 
-#### Listeners
+## Listeners
 
 Listeners receive messages sent to their destinations. In order to receive messages, a listener has to register to a destination. Registration to an endpoint can be done in three ways:
 
@@ -336,28 +336,28 @@ In order to receive cluster messages, a ClusterBridgeMessageListener service com
 	}
 ```
 
-#### Message Bus and Service Builder
+## Message Bus and Service Builder
 
 Liferay Service Builder can leverage the message bus with two annotations: `@Async` and `@Clusterable`.
 
-#### @Async
+## @Async
 
 If any public service method is annotated with `@Async`, then the message bus calls to the method will be converted to asynchronous. This allows you to implement fire and forget capabilities in your services. This option is especially useful for features like notifications.
 
-#### @Clusterable
+## @Clusterable
 
 Any service method annotated with `@Clusterable` will be invoked across the cluster. The `@Clusterable` annotation has two attributes:
 
 * __onMaster:__ if set to true, it will only execute the request if the current portal JVM is holding the cluster wide “master” token
 * __acceptor:__ specifies a custom ClusterInvokeAcceptor to determine whether a given portal JVM should accept and execute the request
 
-#### Getting Message Bus Statistics
+## Getting Message Bus Statistics
 
 Message bus destinations are available as MBeans and can be monitored with any JMX tool like JConsole:
 
 <img src="../images/jconsole.png" style="max-height:100%;" />
 
-#### Further Reading
+## Further Reading
 
 * Liferay Message Bus articles on Developer Network: https://dev.liferay.com/de/develop/tutorials/-/knowledge_base/7-2/message-bus
 

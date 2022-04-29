@@ -4,7 +4,7 @@ title: Practice Gogo Shell Basic Commands
 order: 1
 ---
 
-<h2 class="exercise">Exercises</h2>
+# Exercises
 
 ## Practice Gogo Shell Basic Commands
 
@@ -23,7 +23,7 @@ order: 1
 	</ul>
 </div>
 
-#### Telnet to the Liferay OSGi Container
+## Telnet to the Liferay OSGi Container
 
 We use Telnet to connect to Liferay's embedded OSGi container.
 
@@ -35,7 +35,7 @@ We use Telnet to connect to Liferay's embedded OSGi container.
 
 > If you are using macOS High Sierra or newer (Mojave or Catalina), you will need to download Telnet. This can be done through the Homebrew package manager, which can be downloaded by opening Terminal and using `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`. When Homebrew has been successfully installed, use `brew install telnet` in Terminal to install Telnet.
 
-#### Use lb to Check the Bundle State
+## Use lb to Check the Bundle State
 
 The `lb` (list bundles) command shows a list of all bundles installed in the container. 
 
@@ -53,7 +53,7 @@ The output should look like:
 
 <br />
 
-#### Use dm wtf to Show Information About Missing Dependencies
+## Use dm wtf to Show Information About Missing Dependencies
 
 `dm wtf` (dependency manager where is the failure) shows if there are any dependency resolution problems in the bundles.
 
@@ -76,7 +76,7 @@ If there are no problems, the output will show:
 	<img src="../images/dm-not-ok.png" style="max-height:100%;" />
 1. **Start** the `blogs-api` again.
 
-#### Use headers to Investigate Bundle Manifest Headers
+## Use headers to Investigate Bundle Manifest Headers
 
 The `headers` command shows the bundle's manifest headers. With this command, you can, for example, check an `Import-Package` header and see if there's a problem with a dependent bundle.
 
@@ -89,7 +89,7 @@ The `headers` command shows the bundle's manifest headers. With this command, yo
 The output should look like: 
 <img src="../images/headers.png" style="max-height: 100%"/>
 
-#### Use scr:list and scr:info to Show Information About a Component
+## Use scr:list and scr:info to Show Information About a Component
 
 1. **List** all the components in the OSGi container:
 	```BASH
@@ -102,7 +102,7 @@ The output should look like:
 The output should look like: 
 <img src="../images/scr-info.png" style="max-height: 100%"/>
 
-#### Use services to Find Information About a Service
+## Use services to Find Information About a Service
 
 The `services` command lists all the registered (published) services in the OSGi container.
 
@@ -115,7 +115,7 @@ With this command, LDAP-style filtering is supported.
 The output should look like:
 <img src="../images/services.png" style="max-height: 100%"/>
 
-#### Use inspect to Inspect Bundle Capabilities and Requirements
+## Use inspect to Inspect Bundle Capabilities and Requirements
 
 The `inspect` command can be used to show information about a service. This command also shows information about a bundle's capabilities and requirements.
 

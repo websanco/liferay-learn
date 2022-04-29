@@ -4,7 +4,7 @@ title: Manage OSGi Bundles with the Gogo Shell
 order: 2
 ---
 
-## Manage OSGi Bundles with the Gogo Shell
+# Manage OSGi Bundles with the Gogo Shell
 
 OSGi framework implementations provide tools for managing the bundles inside the container. Some of the common bundle management tasks are to:
 
@@ -28,7 +28,7 @@ The Apache Felix project provides the Gogo Shell and Felix Web Console tools for
 
 > Notice that since version 7.1, Gogo Shell access from the _Command Line_ is __disabled__ by the portal default configuration (portal.properties). You can, however, also access the Gogo Shell from the _Control Panel_ directly.
 
-#### Command Namespaces
+## Command Namespaces
 
 Gogo Shell commands are divided into namespaces:
 
@@ -45,7 +45,7 @@ Gogo Shell commands are divided into namespaces:
 
 Using namespace prefixes is not mandatory, but you should be aware that some of the commands exist in multiple namespaces. Without using the namespace, there's no guarantee which one will be executed. These commands are, for example, *list* or *refresh*.
 
-#### Basic Commands
+## Basic Commands
 
 * __help:__ shows a list of all commands
 * __help [command]:__ shows command-specific help
@@ -62,9 +62,9 @@ Using namespace prefixes is not mandatory, but you should be aware that some of 
 * __dm wtf:__ shows any missing dependencies 
 * __getProperties:__ shows system properties 
 
-#### Command Examples
+## Command Examples
 
-#### lb
+## lb
  
 Find bundles by their symbolic name, containing a word "blogs":
 
@@ -99,7 +99,7 @@ g! lb -l | grep "com.liferay.blogs.web"
 true
 ```
 
-#### inspect
+## inspect
 
 Show services provided by a bundle:
 
@@ -126,7 +126,7 @@ service; com.liferay.portal.kernel.security.permission.ResourcePermissionChecker
 ...
 ```
 
-#### scr:info
+## scr:info
 
 Show component info
 
@@ -156,7 +156,7 @@ Component Description:
 		component.name = com.liferay.portal.target.platform.indexer.IndexerFactory
 ```
 
-#### Scripting Support
+## Scripting Support
 
 OSGi runtime components are available and accessible in the Gogo Shell.
 
@@ -178,7 +178,7 @@ users=$userService getCompanyUsers $defaultCompanyId 0 100
 each $users { $it getFullName }
 </code></pre>
 
-#### Using Gogo With Blade CLI
+## Using Gogo With Blade CLI
 
 You can also execute Gogo Shell commands from Blade CLI. This allows you, for example, to pipe the Gogo Shell command ouput to your Bash shell. The syntax for the commands is:
 ```bash
@@ -201,7 +201,7 @@ do
 done <<< "$(blade sh lb -s | grep -i blogs | awk '{print}')"
 ```
 
-#### Creating Custom Shell Commands
+## Creating Custom Shell Commands
 
 Gogo Shell commands are OSGi service components. To create your own Gogo Shell commands, you just have to create an OSGi command component and deploy it to the OSGi. 
 
@@ -220,7 +220,7 @@ public class PortalStatisticsCommands {
 }
 ```
 
-#### Shell Configuration
+## Shell Configuration
 
 Access to the Gogo Shell as well as its port is controlled by the following property in [`portal.properties`](https://github.com/liferay/liferay-portal/blob/7.1.x/portal-impl/src/portal.properties):
 

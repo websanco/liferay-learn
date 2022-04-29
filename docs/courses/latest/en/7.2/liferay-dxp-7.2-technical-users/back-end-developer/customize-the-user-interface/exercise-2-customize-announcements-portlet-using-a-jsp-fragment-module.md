@@ -4,9 +4,7 @@ title: Customize the Announcements Portlet JSP Using a Fragment Module
 order: 2
 ---
 
-<h2 class="exercise">Exercises</h2>
-
-## Customize the Announcements Portlet JSP Using a Fragment Module
+# Customize the Announcements Portlet JSP Using a Fragment Module
 
 <div class="ahead">
 <h4>Exercise Goals</h4>
@@ -18,7 +16,7 @@ order: 2
 	</ul>
 </div> 
 
-#### Create the Liferay Module Project Fragment
+## Create the Liferay Module Project Fragment
 
 **Option 1: Use the Command Line Blade tools**
 
@@ -42,7 +40,7 @@ blade create -t fragment announcements-jsp-override -h com.liferay.announcements
 	<img src="../images/announcements-jsp-override-wizard.png" style="max-height:30%;"/>
 1. **Click** *Finish* to close the wizard.
 
-#### Implement the JSP
+## Implement the JSP
 
 1. **Open** the file `src/main/resources/META-INF/resources/announcements/view.jsp`.
 1. **Implement** as follows:
@@ -60,7 +58,7 @@ blade create -t fragment announcements-jsp-override -h com.liferay.announcements
 />
 ```
 
-#### Deploy the Module
+## Deploy the Module
 
 When you deploy a fragment module, you won't see a "STARTED" message for this module in the log because fragment bundles don't get to the *ACTIVE* state. However, the host bundle will restart:
 
@@ -71,7 +69,7 @@ When you deploy a fragment module, you won't see a "STARTED" message for this mo
 	2019-04-15 14:30:41.180 INFO  [Refresh Thread: Equinox Container: 35d41383-88fd-461a-b88f-b22dd8dfb6af][BundleStartStopLogger:39] STARTED com.liferay.announcements.web_4.0.0 [251]
 	```
 
-#### Verify and Test
+## Verify and Test
 
 1. **Open** your browser to http://localhost:8080 and sign in.
 1. **Add** the *Announcements* portlet onto the page.

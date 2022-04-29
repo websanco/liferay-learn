@@ -4,9 +4,7 @@ title: Add CSS Resources
 order: 9
 ---
 
-<h2 class="exercise">Exercises</h2>
-
-## Add CSS Resources
+# Add CSS Resources
 
 <div class="ahead">
 <h4>Exercise Goals</h4>
@@ -25,7 +23,7 @@ The styling of the assignment list needs polishing. In the _Table_ view, the aut
 
 Provide CSS resources for the Gradebook portlet to fix the issues.
 
-#### Add CSS Resources
+## Add CSS Resources
 
 Let's first create a CSS file to provide our custom styles for the *gradebook-web* module. 
 
@@ -95,7 +93,7 @@ Let's first create a CSS file to provide our custom styles for the *gradebook-we
 }
 ```
 
-#### Configure the Portlet Component
+## Configure the Portlet Component
 
 The portlet component needs to know where to load the CSS resources from. Also, it's a good practice to encapsulate portlet styles by wrapping the portlet in a CSS class.
 
@@ -105,8 +103,8 @@ The portlet component needs to know where to load the CSS resources from. Also, 
 "com.liferay.portlet.css-class-wrapper=gradebook-portlet",
 "com.liferay.portlet.header-portlet-css=/css/main.css",
 ```
-	
-#### Test the Changes
+
+## Test the Changes
 
 1. **Refresh** the browser to see the changes after the module has redeployed correctly. 
 2. **Switch** the list to the *Table* view using the button on the left side of the search bar, if necessary. The Author column is now better aligned and the links have underlining:

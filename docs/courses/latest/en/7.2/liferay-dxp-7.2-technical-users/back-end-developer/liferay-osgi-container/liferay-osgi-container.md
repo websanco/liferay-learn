@@ -4,7 +4,7 @@ title: Liferay's OSGi Container
 order: 2
 ---
 
-## Liferay's OSGi Container
+# Liferay's OSGi Container
 
 So far, we have learned that OSGi applications are usually made up of multiple modules that share features with each other. The modules, called *bundles*, need a runtime environment called an *OSGi container*.
 
@@ -20,8 +20,8 @@ The diagram below shows how the OSGi runtime is embedded into the Liferay platfo
 
 The Liferay platform still runs as a Java EE web application in a servlet container, but it also has an embedded OSGi container where all its applications live.
 
-#### Components and Services in Liferay
- 
+## Components and Services in Liferay
+
 OSGi components, services, and the service registry are the main ways to achieve modularity within the OSGi framework. Liferay follows these paradigms: functionalities and services in Liferay are mostly implemented as OSGi components, and the platform's core services are exposed through the OSGi service registry.
 
 Below are some Liferay code examples demonstrating how Liferay leverages OSGi patterns and how Liferay functionalities are implemented as OSGi components.
@@ -122,7 +122,7 @@ public class LanguageRule extends BaseJSPRule {
 }
 ```
 
-#### Service Component Development Flow
+## Service Component Development Flow
 
 Some typical Liferay development flows to create a service:
 

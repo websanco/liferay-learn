@@ -4,9 +4,9 @@ title: Change the Default Application UI with Widget Templates
 order: 3
 ---
 
-## Change the Default Application UI with Widget Templates
+# Change the Default Application UI with Widget Templates
 
-Widget Templates, which in pre-7.2 versions were known as Application Display Templates (ADT), are a templating framework that allows you to customize and override portal application user interfaces. Native portlets supporting the Widget Templates are:
+<!-- Widget Templates, which in pre-7.2 versions were known as Application Display Templates (ADT), are a templating framework that allows you to customize and override portal application user interfaces. Native portlets supporting the Widget Templates are:
 
 * Asset Publisher
 * Asset Categories Navigation
@@ -48,7 +48,7 @@ Although both Velocity and FreeMarker templating languages are supported for imp
 
 <img src="../images/adt-example.png" style="max-height:30%;" />
 
-#### Adding Widget Template Support for Custom Applications {#support}
+## Adding Widget Template Support for Custom Applications {#support}
 
 Widget Template support can be implemented in custom applications. Here is an overview of the steps required:
 
@@ -69,4 +69,4 @@ Custom Template Handers components can be created for introducing custom objects
     <li>To consume the Liferay service API via ADTs, users must be given access to the ____________________________ utility.</li>
     <li> Application Display Template support can also be implemented in ____________________________.</li>
 </ul>
-</div>
+</div> -->

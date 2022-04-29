@@ -1,8 +1,8 @@
-## Organizing Assets with Metadata
+# Organizing Assets with Metadata
 
 As more content is added to the platform, it becomes increasingly necessary to organize it. Site Administrators should be able to quickly access content for review or to display content on pages within their sites. Likewise, Content Creators should be able to efficiently organize their content for Site Administrators and Content Managers, as well as for SEO purposes, when it is created. In this section, we dive into ways the assets created and managed in Liferay DXP can be organized.
 
-#### Organizing Livingstone's Content {#livingstone}
+## Organizing Livingstone's Content {#livingstone}
 
 Josiah wants to take advantage of the collaborative tools in Liferay to promote employee interactions. Josiah would like employees to be able to:
 
@@ -12,7 +12,7 @@ Josiah wants to take advantage of the collaborative tools in Liferay to promote 
 
 Ideally, employees should be able to organize their contributions and interactions themselves so that other employees can find it without Josiah needing to manage every bit of content created. On the other hand, other types of Liferay Assets created in the Livingstone platform need to have a strict organizational structure that Josiah and his team of Site Administrators can define. For example, the thousands of documents that will eventually exist within Livingstone Loop should be organized in a logical structure so that HR employees, managers, and anyone else who needs to access documents can find them quickly. Liferay DXP utilizes out-of-the-box metadata that meets Livingstone's organizational needs.
 
-#### Using Metadata for Organizations {#metadata}
+## Using Metadata for Organizations {#metadata}
 
 Content can be organized and made more easily searchable using metadata. Aside from Metadata Sets defined by Document Types, users can organize content by attributing other metadata to Liferay Assets.
 
@@ -34,7 +34,7 @@ There are two types of <strong>metadata</strong> that can be used to organize an
 
 Both types of metadata can be attributed to any asset in the platform, and both can be created and managed from within the _Categorization_ section of the _Site Administration_ panel. You can tag or categorize an asset when it is created or when editing an already existing asset. If you click on the _Metadata_ or _Categorization_ section (which one it is depends on the Asset type) when creating or editing an Asset, you will find an interface for adding Tags and Categories. If no categories are available to be added to the asset (which means no categories have been created), the _Select_ option will not appear.
 
-#### Tags {#tags}
+## Tags {#tags}
 
 You probably already understand the concept of tagging content, which helps users organize their own content. The most familiar example may be hashtags on social media. In Liferay DXP, Tags are an important tool that can help organize information and make it easier for users to find the content they want. Tags are all-lowercase words or phrases that you can attach to any assets. Users can create posts or repost articles, and they can organize their content with a new tag or a trending tag as they see fit.
 
@@ -50,7 +50,7 @@ Tags allow users to organize their own content and make it easy for others to fi
 	<figcaption style="font-size: x-small">Fig.2 A new tag created from Site Administration</figcaption>
 </figure>
 
-#### Auto-Tagging Assets {#auto}
+## Auto-Tagging Assets {#auto}
 
 In Liferay DXP 7.2, it is possible to tag content automatically. For example, Liferay DXP can scan an image on upload and apply tags that describe the image’s content. This lets you leverage tags without requiring your Content Creators to apply them manually. Currently, auto-tagging can be configured for images, text-based documents, and text-based Web Content.
 
@@ -111,7 +111,7 @@ Note: OpenNLP uses the open source Apache OpenNLP library to analyze and automat
 	<figcaption style="font-size: x-small">Fig.4 The two text auto-tagging providers</figcaption>
 </figure>
 
-#### Categories {#categories}
+## Categories {#categories}
 
 Although Tags make for improved searchability, they lack an organizational structure. _Categories_ solve that problem. 
 

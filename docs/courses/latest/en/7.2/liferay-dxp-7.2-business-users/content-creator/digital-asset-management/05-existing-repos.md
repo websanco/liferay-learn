@@ -1,12 +1,12 @@
-## Connecting with Existing Repositories
+# Connecting with Existing Repositories
 
 In the folders section, we discussed how you might have thousands, hundreds of thousands, or even millions of files that you want users to have access to from within your platform. It is going to be very difficult to manage all these files if they are sitting in a single unstructured repository, and even then, moving every single file might not be your preferred solution. Instead, it is often preferable to connect to existing external repositories from within your Liferay instance.
 
-#### Connecting with Livingstone's External Repositories {#livingstone}
+## Connecting with Livingstone's External Repositories {#livingstone}
 
 Livingstone has many files and documents that already exist in an external content management system. Josiah will have his hands full trying to manage all the external files and documents that need to be imported. Fortunately for Josiah and his team, Liferay allows for direct integration with existing document repositories so they do not all need to be imported. In fact, many of Livingstone's files exist in repositories that can be directly linked to their Liferay platform.
 
-#### Integrating with Existing Repositories {#existing}
+## Integrating with Existing Repositories {#existing}
 
 Administrators can connect any external repositories their business might be using to store and share files with Liferay DXP.
 

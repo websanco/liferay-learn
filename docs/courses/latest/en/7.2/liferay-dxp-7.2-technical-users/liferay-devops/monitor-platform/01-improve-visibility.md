@@ -1,4 +1,4 @@
-## Monitoring Tools
+# Monitoring Tools
 
 A core aspect of business continuity and performance is monitoring your running applications.
 
@@ -27,7 +27,7 @@ Monitoring can cover a variety of systems:
 
 In addition to standard IT monitoring, we're interested in how Liferay performs in production and what users are doing.
 
-### Application Performance Monitoring {#apm}
+## Application Performance Monitoring {#apm}
 
 A core component of tracking the overall health of your deployment and determining performance needs is *Application Performance Monitoring*. A fundamental level of APM is JVM monitoring. Tracking the memory usage, garbage collection status, thread listing, and thread dumps provides valuable information. More extensive APM is provided by various vendors on top of the basic Java toolset.
 
@@ -90,7 +90,7 @@ Understanding the habits of users on your website is important for a variety of 
 
 Because of all this, monitoring is important for everyone from marketing to security to infrastructure.
 
-### Integrating Monitoring Tools at the Site-Level {#integratesite}
+## Integrating Monitoring Tools at the Site-Level {#integratesite}
 
 There are many tools and services available to integrate monitoring into your site. **Google Analytics** remains one of the most popular services, and it has both free and premium versions. **Piwik** is a free open-source alternative to the many proprietary systems out there. There are many other tools available from various vendors including Adobe, Mint, Clicky, and more. All of these tools will help you do traffic analysis on your website to find out more about your users.
 
@@ -126,7 +126,7 @@ You can take a look at the Audit trails on the platform as follows:
 
 <p style="page-break-before: always"></p>
 
-### Analyzing Logs {#logs}
+## Analyzing Logs {#logs}
 
 When you start talking about "analyzing logs", usually one of two things come to mind. Either you're doing a quality check on these:
 

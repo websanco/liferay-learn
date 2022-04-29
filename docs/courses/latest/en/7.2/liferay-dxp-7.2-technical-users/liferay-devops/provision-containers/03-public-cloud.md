@@ -1,4 +1,4 @@
-## Architect for the Cloud
+# Architect for the Cloud
 
 Deploying a Liferay solution onsite is a great way to control all of the layers of your apps directly. However, with managing all of the systems comes a plethora of additional needs:
 - Machines for servers
@@ -18,7 +18,7 @@ Sometimes it's advantageous to outsource some or all of these layers to a third-
 
 It's possible to do everything onsite with a cloud-based hot backup. It's possible to do everything in the cloud with a local hot backup. It's also useful to run production from an onsite setup with cloud-based expansion for high-traffic overflow. Whether we're going to do everything in the cloud, or use some aspect of the cloud, we have to account for the difference in deployment.
 
-### Recreating Your Stack in the Cloud {#recreate}
+## Recreating Your Stack in the Cloud {#recreate}
 
 Cloud services cover the gamut: from load balancers to no-SQL databases and everything in between. To consider re-creating our production environment in the cloud, we need to reconstruct our layers:
 - Firewall Tier
@@ -68,7 +68,7 @@ We'll put this to the virtual test and walk through a deployment in a specific c
 
 As mentioned earlier, you can also take advantage of **DXP Cloud** to gain access to an official Liferay solution in the cloud. DXP Cloud is a PaaS solution that offers a completely hosted and managed Liferay stack so that you can focus using Liferay for your needs. You can take a look at our _Getting Started with DXP Cloud_ course for more information.
 
-### Use Case: Deploying to Amazon Web Services {#aws}
+## Use Case: Deploying to Amazon Web Services {#aws}
 
 We'll take these general guidelines and principles and apply them specifically to *Amazon Web Services*. AWS is a well-established cloud provider with a wide variety of services. It's possible to run our entire deployment in the cloud, so let's check how we might do that.
 

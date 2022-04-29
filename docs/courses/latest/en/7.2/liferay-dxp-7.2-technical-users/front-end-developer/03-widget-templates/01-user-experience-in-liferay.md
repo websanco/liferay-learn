@@ -1,12 +1,12 @@
-## Controlling the User Experience in Liferay
+# Controlling the User Experience in Liferay
 
-Front-end developers need to control the design and branding of the content presentation of individual elements in addition to the Site as a whole. They need to customize how the pages are laid out and how content is displayed on those pages. In order to understand how to control the HTML structures throughout the platform, we should take a look at _FreeMarker Templates_.
+<!-- Front-end developers need to control the design and branding of the content presentation of individual elements in addition to the Site as a whole. They need to customize how the pages are laid out and how content is displayed on those pages. In order to understand how to control the HTML structures throughout the platform, we should take a look at _FreeMarker Templates_.
 
-#### User Experience in the Livingstone Platform {#Livingstone}
+## User Experience in the Livingstone Platform {#Livingstone}
 
 Kaito and the front-end team have been given designs and mockups from Martin and the design team. The team has been able to implement the responsive framework by implementing the Theme and Layout Modules. To keep in line with the brand identity of the company defined in these mockups, the team can take advantage of various kinds of templates to style _Livingstone Hotels & Resorts_ content and widgets. There are a number of _Livingstone_ resources that need to be styled. 
 
-#### FreeMarker {#FreeMarker}
+## FreeMarker {#FreeMarker}
 
 FreeMarker templates in Liferay act as the intermediary between the back-end code in Java and the front-end. They enhance HTML by adding constructs such as variables, conditional statements, and loops. Once it’s processed, the result is HTML, which is then styled by your CSS and displayed by the browser. FreeMarker provides a straightforward, clean, and simple method for incorporating dynamic content in a webpage. It permits the user to use a simple yet powerful template language to reference objects defined in the Java code.
 
@@ -74,7 +74,7 @@ Note: Developers also have access to Liferay's Experience Language implementatio
 
 <br />
 
-#### FreeMarker Templates {#Templates}
+## FreeMarker Templates {#Templates}
 
 There are a number of different options on the platform that can be used to control the User Experience. To start, developers can make use of FreeMarker Templates on the platform to control things like widgets, content, and notifications.
 
@@ -106,7 +106,7 @@ Ultimately the goal of using templates is to control the presentation of content
 
 <br />
 
-#### FreeMarker Templates in a Deployment Process {#AsCode}
+## FreeMarker Templates in a Deployment Process {#AsCode}
 
 In order to keep a clean separation of code and platform, the best practice for handling Templates is to treat them like code. Developers can create and deploy their templates in a deployment process by making use of the Resources Importer in a Theme. The Resources Importer is provided on the platform in 7.2 DXP and allows Developers import content, document and template resources along with the Theme. 
 
@@ -137,7 +137,7 @@ resources-importer-target-value=[site-name]
   Note: For more information on the Resources Importer, you can reference Front-End Developer module 2.
 </div>
 
-#### Page Fragments {#PageFragments}
+## Page Fragments {#PageFragments}
 
 Page Fragments are another option developers have to control the user experience in a Site. Front-end Developers can use HTML, CSS, and JavaScript to create sections and components of the page, allowing the different content teams to rapidly create Site. 
 
@@ -182,7 +182,7 @@ Page Fragments are created with HTML, CSS, and JavaScript and are created inside
 
 <br />
 
-#### Layout Templates {#Layouts}
+## Layout Templates {#Layouts}
 
 Developers still need to be able to control the structure of the pages in the case where the content team is using the traditional _Widget Page_. In order to control the structure of these Widget Pages, developers can create _Layout Templates_. 
 
@@ -208,4 +208,4 @@ Layout Templates are modules that are created using the Liferay Theme Generator 
   <li>___________________________ are reusable HTML, CSS, and JavaScript sections and components that can be added to a Content Page.</li>
   <li>___________________________ are used to control the grid-like structure on a Widget Page.</li>
 </ul>
-</div>
+</div> -->

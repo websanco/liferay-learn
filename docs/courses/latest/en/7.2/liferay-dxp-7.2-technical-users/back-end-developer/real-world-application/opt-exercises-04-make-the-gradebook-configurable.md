@@ -4,9 +4,7 @@ title: Make the Gradebook Configurable
 order: 4
 ---
 
-<h2 class="exercise">Optional Exercise</h2>
-
-## Make the Gradebook Configurable
+# Make the Gradebook Configurable
 
 <div class="ahead">
 <h4>Exercise Goals</h4>
@@ -23,18 +21,19 @@ order: 4
 	</ul>
 </div>
 
-#### Declare Dependencies
+## Declare Dependencies
 
 We need to add dependencies for the BND annotations and Metatype API:
 
 1. **Open** the `build.gradle` in the *gradebook-api* module.
 1. **Add** the following dependencies:
+
 ```groovy
 compileOnly group: "biz.aQute.bnd", name: "biz.aQute.bnd.annotation", version: "3.1.0"
 compileOnly group: "com.liferay", name: "com.liferay.portal.configuration.metatype.api"
 ```
 
-#### Create the Configuration Interface in the API Module
+## Create the Configuration Interface in the API Module
 
 1. **Create** a new interface `com.liferay.training.gradebook.configuration.GradebookSystemServiceConfiguration` in the *gradebook-api* module.
 1. **Implement** the interface as follows:
@@ -90,7 +89,7 @@ public interface GradebookSystemServiceConfiguration {
 
 > Note that the configuration ID __has to be__ the fully qualified name of the interface.
 
-#### Add Exported Package
+## Add Exported Package
 
 To be able to consume the configuration from other bundles, we have to expose it by exporting its package:
 
@@ -110,10 +109,11 @@ Export-Package:\
 -check: EXPORTS
 -includeresource: META-INF/service.xml=../gradebook-service/service.xml
 ```
-	
-#### Add the Localization Resources
+
+## Add the Localization Resources
 
 Notice the resource bundle property in our configuration interface:
+
 ```java
 @Meta.OCD(
 	id = "com.liferay.training.gradebook.configuration.GradebookSystemServiceConfiguration",
@@ -123,27 +123,31 @@ Notice the resource bundle property in our configuration interface:
 ```
 
 Let's add the referenced resources to localize the user interface:
+
 1. **Create** a file `src/main/resources/content/Language.properties` in the *gradebook-api* module
 1. **Implement** the file as follows:
+
 ```properties
 gradebook-service-configuration-name=Gradebook Service Configuration
 description-max-length-description=Maximum length of a description (in characters).
 description-max-length-name=Description Maximum Length
 description-min-length-description=Minimum length of a description (in characters).
 description-min-length-name=Description Minimum Length
-```		
+```
 
-#### Test the Configuration Interface
+## Test the Configuration Interface
 
 Creating a configuration interface automatically generates an user interface.
 
 1. **Open** the browser and go to the *Control Panel → Configuration → System Settings*. 
+
 	> You should see the Gradebook configuration in the *Other* category. You can also search for *Gradebook*.
+
 1. **Click** the configuration icon.
 
 <img src="../images/gradebook-configuration.png" style="max-height: 100%"/>
 
-#### Declare Dependencies
+## Declare Dependencies
 
 We need to add a dependency to the Metatype API:
 
@@ -153,10 +157,11 @@ We need to add a dependency to the Metatype API:
 compileOnly group: "com.liferay", name: "com.liferay.portal.configuration.metatype.api"
 ```
 
-#### Implement Configuration Support to the Assignment Validator Service
+## Implement Configuration Support to the Assignment Validator Service
 
 1. **Open** the validator service component `com.liferay.training.gradebook.util.validator.AssignmentValidatorImpl` in the *gradebook-service* module.
 1. **Add** the `configurationPid` component property as follows:
+
 	```java
 	@Component(
 		configurationPid = "com.liferay.training.gradebook.configuration.GradebookSystemServiceConfiguration", 
@@ -164,11 +169,15 @@ compileOnly group: "com.liferay", name: "com.liferay.portal.configuration.metaty
 		service = AssignmentValidator.class
 	)
 	```
+
 1. **Add** a volatile variable to the end of the class for holding the configuration:
+
 	```java
 	private volatile GradebookSystemServiceConfiguration _moduleConfiguration;
 	```
+
 1. **Add** a component activation  method to instantiate the configuration:
+
 	```java
 	@Activate
 	@Modified
@@ -178,7 +187,9 @@ compileOnly group: "com.liferay", name: "com.liferay.portal.configuration.metaty
 			GradebookSystemServiceConfiguration.class, properties);
 	}	 
 	```
+
 1. **Replace** the contents of `isDescriptionValid()` method with the following (notice the highlighted code):
+
 	```java
 	private boolean isDescriptionValid(
 		final Map<Locale, String> descriptionMap, final List<String> errors) {
@@ -226,30 +237,33 @@ compileOnly group: "com.liferay", name: "com.liferay.portal.configuration.metaty
 
 		return result;
 	}
-	```	
-1. **Organize** missing imports.	
+	```
+
+1. **Organize** missing imports.
 
 <br /><br />
 
-#### Show Messages in the User Interface
+## Show Messages in the User Interface
 
 1. **Open** the file `src/main/resources/META-INF/resources/assigment/edit_assignment.jsp` in *gradebook-web* module.
 1. **Add** the following messages after you find the error message tags in the beginning of the file: 
+
 ```html
 <liferay-ui:error key="assignmentDescriptionTooShort" message="error.description-too-short" />
 <liferay-ui:error key="assignmentDescriptionTooLong" message="error.description-too-long" />	
-```	
+```
 
-#### Add Error Message Localizations
+## Add Error Message Localizations
 
 1. **Open** the localization file `src/main/resources/content/Language.properties` in the *gradebook-web* module
 1. **Add** localizations for the new error messages:
+
 ```properties
 error.description-too-short=Description text too short.
 error.description-too-long=Description text too long.
 ```
 
-#### Test the Application
+## Test the Application
 
 1. **Test** creating new Assignments with either too short or too long descriptions, after refreshing.
 

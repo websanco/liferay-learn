@@ -1,6 +1,4 @@
-<h3 class="exercise">Exercises</h3>
-
-## Configure the Portal for Clustering
+# Configure the Portal for Clustering
 
 <div class="ahead">
 	<h3>Exercise Goals:</h3>
@@ -13,7 +11,7 @@
 		</ul>
 </div>
 
-#### Update the Docker Files for AdvanceFileSystem Store
+## Update the Docker Files for AdvanceFileSystem Store
 
 1. **Find** the _# Configure the AdvancedFileSystemStore_ comment around line 40.
 1. **Remove** the comment symbol from the `COPY` command under the _AdvancedFileSystemStore_ comment:
@@ -42,7 +40,7 @@ Note: Our Advanced File System Store will use the same directory as Simple File 
 
 Now that the data exists in the newly configured location, shut down the server, so that you're not tempted to upload a new document to the old store that's still active. In a production system, you'd need to make sure that nobody else currently updates documents during this migration. We're now going to activate the store.
 
-#### Enable the AdvancedFileSystem Store
+## Enable the AdvancedFileSystem Store
 
 Next, we'll enable and move our Document Library to the Advanced File System Store. The Advanced File System Store programmatically creates a structure that can expand to millions of files by alphabetically nesting the files in folders. This will allow us to store a large number of files without performance degradation. 
 
@@ -53,7 +51,7 @@ Next, we'll enable and move our Document Library to the Advanced File System Sto
 	```
 1. **Save** the file.
 
-#### Update the Docker Files for Elasticsearch
+## Update the Docker Files for Elasticsearch
 
 1. **Open** the _Dockerfile_ for the Tomcat service.
 	* This file can be located at _liferay/liferay-tomcat/_.
@@ -70,7 +68,7 @@ Next, we'll enable and move our Document Library to the Advanced File System Sto
 	clusterName="LiferayElasticsearchCluster"
 	``` 
 
-#### Update portal-ext.properties to Enable ClusterLink
+## Update portal-ext.properties to Enable ClusterLink
 
 Let's configure our Tomcat services for clustering.
 
@@ -89,7 +87,7 @@ Let's configure our Tomcat services for clustering.
 	```
 	* Setting this property to true enables the use of DXP ClusterLink.
 
-#### Update Docker Settings
+## Update Docker Settings
 
 Before we can start up our cluster, we need to enable our _liferay-tomcat-2_ service.
 
@@ -113,7 +111,7 @@ liferay-tomcat-2:
 ```
 	* This will allow us to create the _liferay-tomcat-2_ service with Docker Compose. This service references the same _liferay-tomcat_ build context as does the _liferay-tomcat-1_ service.
 
-#### Review Elasticsearch Settings
+## Review Elasticsearch Settings
 
 1. **Find** the _elasticsearch_ service around line 12.
 	```dockerfile
@@ -152,7 +150,7 @@ liferay-tomcat-2:
 	```
 1. **Save** the file.
 
-#### Build the Updated Tomcat Images
+## Build the Updated Tomcat Images
 
 1. **Open** a new _Terminal_ or _Command Line_ window at `liferay/liferay-tomcat`.
 1. **Stop** any running containers if necessary:
@@ -175,7 +173,7 @@ liferay-tomcat-2:
 	Note: You can also build multiple images at once by specifying multiple services in the docker command as follows: <code>docker-compose build haproxy liferay-tomcat-1 liferay-tomcat-2</code>
 </div>
 
-#### Build Elasticsearch and Start the Containers
+## Build Elasticsearch and Start the Containers
 
 1. **Build** the _elasticsearch_ service:
 	```shell
@@ -212,7 +210,7 @@ Here you can see that load balancing is configured for our back-end servers and 
 
 <img src="../images/chapter-3/c3s4-haproxy-load.png" style="max-width: 100%">
 
-#### Add a File to the liferay-tomcat-1 Document Repository
+## Add a File to the liferay-tomcat-1 Document Repository
 
 1. **Go to** _localhost:8081_ in your web browser to access _liferay-tomcat-1_.
 1. **Open** the _Menu_.
@@ -222,7 +220,7 @@ Here you can see that load balancing is configured for our back-end servers and 
 1. **Choose** the `hello.txt` file provided in the _liferay-tomcat/dependencies_ folder.
 1. **Click** _Publish_.
 
-#### Verify the Document Repository Clustering
+## Verify the Document Repository Clustering
 
 1. **Go to** _localhost:8082_ in a web browser to access _liferay-tomcat-2_.
 	* Use a different browser or incognito mode.
@@ -233,7 +231,7 @@ You should see the `hello.txt` in the _liferay-tomcat-2_ Document Repository.
 
 <img src="../images/chapter-3/c3s5a-share-docs.png" style="max-width: 30%;">
 
-#### Verify Elasticsearch Settings
+## Verify Elasticsearch Settings
 
 1. **Go to** _localhost:8081_ in a web browser.
 1. **Go to** the _`Control Panel → Configuration → System Settings`_ in the *Menu*. 

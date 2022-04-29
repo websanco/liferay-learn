@@ -4,9 +4,7 @@ title: Implement Service Module Permissions
 order: 10
 ---
 
-<h2 class="exercise">Exercises</h2>
-
-## Implement Service Module Permissions
+# Implement Service Module Permissions
 
 <div class="ahead">
 <h4>Exercise Goals</h4>
@@ -26,7 +24,7 @@ order: 10
 
 > Before proceeding, you have to __remove all the test assignments__ you have created so far. This is because the existing test entities don't have the resources to support permissioning and will cause errors.
 
-#### Create the Resource Constants Class
+## Create the Resource Constants Class
 
 To avoid misspellings in permission properties, we'll create a constants class in the *gradebook-api* module.
 
@@ -56,7 +54,7 @@ To avoid misspellings in permission properties, we'll create a constants class i
 	-includeresource: META-INF/service.xml=../gradebook-service/service.xml
 	```	
 
-#### Define the Permissions
+## Define the Permissions
 
 By default, permissions are defined in the file called `default.xml`. 
 
@@ -126,7 +124,7 @@ By default, permissions are defined in the file called `default.xml`.
 	
 > Notice that submission permissions are related to the optional exercises.
 
-#### Define the Permissions Definition Location
+## Define the Permissions Definition Location
 
 1. **Create** a file `src/main/resources/portlet.properties` in the *gradebook-service* module.
 1. **Implement** the file as follows:
@@ -134,7 +132,7 @@ By default, permissions are defined in the file called `default.xml`.
 	resource.actions.configs=/resource-actions/default.xml
 	```
 
-#### Implement Permission Resource Management
+## Implement Permission Resource Management
 
 Permissions need container objects for the model entities. When we create an entity, we need to create and bind a resource object to that. Accordingly, we have to take care of cleaning up the resources when we delete the entity:
 
@@ -215,12 +213,13 @@ Permissions need container objects for the model entities. When we create an ent
 	> Don't worry about the errors when adding a new method. Errors will go away after you rebuild the service.
 1. **Resolve** missing imports.	
 
-#### Create the Permission Registrar Classes
+## Create the Permission Registrar Classes
 
 Create classes for registering the model and top-level resource permissions:
 
 1. **Create** a class  `com.liferay.training.gradebook.internal.security.permission.resource.definition.AssignmentModelResourcePermissionDefinition` in the *gradebook-service* module.
 1. **Implement** as follows:
+
 	```java
 	package com.liferay.training.gradebook.internal.security.permission.resource.definition;
 	
@@ -313,8 +312,10 @@ Create classes for registering the model and top-level resource permissions:
 		private WorkflowPermission _workflowPermission;
 	}
 	```
+
 1. **Create** a class for registering the Gradebook portlet resources and top level permissions: `com.liferay.training.gradebook.internal.security.permission.resource.definition.AssignmentPortletResourcePermissionDefinition`
 1. **Implement** as follows:
+
 	```java
 	package com.liferay.training.gradebook.internal.security.permission.resource.definition;
 	
@@ -358,10 +359,10 @@ Create classes for registering the model and top-level resource permissions:
 	
 	}
 	```
-	
+
 > For more technical information about registrar classes see [Lifery Developer Network](https://portal.liferay.dev/docs/7-2/tutorials/-/knowledge_base/t/registering-your-defined-permissions)
 
-#### Implement Permission Checking in the Remote Service
+## Implement Permission Checking in the Remote Service
 
 Now let's implement the permission checking in our remote service class. Let's go through the implementation steps first.
 
@@ -576,11 +577,11 @@ public class AssignmentServiceImpl extends AssignmentServiceBaseImpl {
 }
 ```
 
-#### Rebuild the Service
+## Rebuild the Service
 
 1. **Run** the `buildService` task to deploy the changes.
 
-#### Test the Application
+## Test the Application
 
 1. **Sign out** of the portal.
 1. **Try** to add an assignment. You should get an error message:

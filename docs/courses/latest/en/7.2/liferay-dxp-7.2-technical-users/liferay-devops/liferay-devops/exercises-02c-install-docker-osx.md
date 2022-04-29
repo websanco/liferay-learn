@@ -1,4 +1,4 @@
-## Set Up Docker on OSX
+# Set Up Docker on OSX
 
 <div class="ahead">
 	<h3>Exercise Goals:</h3>
@@ -13,7 +13,7 @@
 	Note: You'll need macOS 10.10.3 or newer and a minimum of 4GB of RAM for _Docker Desktop for Mac_ to launch.
 </div>
 
-#### Download the Docker Desktop Installer
+## Download the Docker Desktop Installer
 
 We'll start by downloading the _Docker Desktop for Mac_ installer.
 
@@ -32,7 +32,7 @@ We'll start by downloading the _Docker Desktop for Mac_ installer.
 
 The installer will begin downloading.
 
-#### Extract and Run the Docker Installer
+## Extract and Run the Docker Installer
 
 1. **Go to** your _Downloads_ folder to find the installer.
 1. **Double-click** the `Docker.dmg` image to run the installer.
@@ -53,27 +53,30 @@ The installer will begin downloading.
 
 You'll see the Docker icon on your top menu bar. A dialog will open prompting for your Docker ID and Password.
 
-#### Pull an Image to Verify the Installation
+## Pull an Image to Verify the Installation
 
 Let's test our installation and make sure everything looks good.
-
 
 1. **Sign-in** using your DockerID and Password.
 	* You can click on the Docker icon on the top menu to access Preferences, Documentation, User Settings and more.
 	<img src="../images/chapter-1/osx-docker-top-dialog.png" style="max-width:25%;" />
 1. **Open** a new _Terminal_ session.
 1. **Run** the following command to check your Docker version:
+
 ```shell
 docker --version
 ```
+
 	* _Note: You should be running 18.X.X-ce_
 1. **Run** the following command to set up a simple container:
+
 ```shell
 docker run hello-world
 ```
+
 	* You'll see that Docker downloads the latest _hello-world_ image from DockerHub.
 
-#### Increase Resources Available to Docker 
+## Increase Resources Available to Docker 
 
 Before we move on, let's update a few Docker settings. Depending on the stack you're running, Docker can become fairly resource-intensive. We suggest allocating a _minimum of 6GB of memory_ to Docker, with a recommended 8GB, if possible. Be sure your machine has adequate disk space, as containers can quickly eat up space.
 
@@ -91,7 +94,7 @@ Congratulations! You've successfully installed the latest version of Docker and 
 
 ---
 
-#### Bonus Exercises: 
+## Bonus Exercises: 
 
 Try the following bonus exercise after completing the main exercises:
 1. Download an Ubuntu image and run it in _Terminal_ mode: `$ docker run -it ubuntu bash`

@@ -4,9 +4,7 @@ title: Sharing Features with Export-Import
 order: 4
 ---
 
-<h2 class="exercise">Exercises</h2>
-
-## Sharing Features with Export-Import
+# Sharing Features with Export-Import
 
 <div class="ahead">
 <h4>Exercise Goals</h4>
@@ -25,7 +23,7 @@ order: 4
 	</ul>
 </div>
 
-#### Create an API Bundle
+## Create an API Bundle
 
 1. **Click** *File → New → Other* in the Dev Studio menu bar to launch the new project wizard.
 1. **Enter** "plugin" in the search bar.
@@ -46,7 +44,7 @@ order: 4
 
 > When prompted, you can change perspectives to the *Plug-In* perspective.
 
-#### Create an Interface in the API Bundle
+## Create an Interface in the API Bundle
 
 1. **Create** a service interface `com.liferay.training.clock.api.ClockApi.java`.
 1. **Implement** the `getTime()` in the interface as follows:
@@ -61,14 +59,14 @@ public interface ClockApi {
 }
 ```
 
-#### Create an Implementation Bundle
+## Create an Implementation Bundle
 
 1. **Create** the implementation bundle exactly as you did the API bundle but using the following information (replacing the "api" with "impl"):
 * __Project Name__: "clock-impl"
 * __ID:__ "com.liferay.training.clock.impl"
 * __Name:__ "Clock Impl"
 
-#### Create the Implementation Class
+## Create the Implementation Class
 
 Since we're just demonstrating how OSGi shares features, we don't need to make the implementation class a component. In real life, the implementation class would be annotated with `@Component`:
 
@@ -93,7 +91,7 @@ Since we're just demonstrating how OSGi shares features, we don't need to make t
 
 > You'll notice that the ClockApi won't resolve. That's because we haven't shared the features yet.
 
-#### Create the Export-Package Header in the API Bundle
+## Create the Export-Package Header in the API Bundle
 
 To make our interface accessible to other bundles in the OSGi container, we have to use the `Export-Package` manifest header.
 
@@ -116,7 +114,7 @@ Export-Package: com.liferay.training.clock.api
 
 <br /><br /><br />
 
-#### Create the Import-Package Header in the Implementation Bundle
+## Create the Import-Package Header in the Implementation Bundle
 
 To make the interface available for the implementation bundle classes, we must first import the API package into our bundle.
 
@@ -135,14 +133,14 @@ To make the interface available for the implementation bundle classes, we must f
 	Import-Package: com.liferay.training.clock.api
 ```
 
-#### Resolve Imports
+## Resolve Imports
 
 Now that we have shared the features, the `ClockApi` interface should be available for the `ClockImpl` class:
 
 1. **Open** the class `com.liferay.training.clock.impl.ClockImpl`.
 1. **Resolve** missing imports.
 
-#### Run and Test
+## Run and Test
 
 Now that we have the implementation bundle importing and implementing the API bundle, both bundles are ready to be deployed.
 
@@ -160,7 +158,7 @@ Now that we have the implementation bundle importing and implementing the API bu
 	<img  src="../images/clock-impl-installed.png" style="max-height:12%;" />
 1. **Stop** the OSGi container, restore the header, and try again.
 
-#### Takeaways
+## Takeaways
 
 We demonstrated that in order to access features from other bundles, they have to be shared. Here we used the *Import-Package - Export-Package* mechanism and, while more robust and complex, the *Provide-Capability - Require-Capability* (used in wiring the OSGi services) works conceptually the same way.
 

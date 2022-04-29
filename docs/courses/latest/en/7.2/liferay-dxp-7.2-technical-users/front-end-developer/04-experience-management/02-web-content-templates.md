@@ -1,5 +1,5 @@
-## Controlling Web Content Presentation
-
+# Controlling Web Content Presentation
+<!-- 
 Administrators can make use of Liferay's Asset Framework in addition to Widget Pages in a Site. This gives them access to a number of different types of content as well as the ability to organize that content with metadata like tags. One of the most widely used Assets, due to its flexibility, is _Web Content_. Web Content can be anything from simple static text with images to full dynamic Carousels or even simple applications. This kind of flexibility is possible in large part because of _Web Content Templates_. Web Content Templates allow developers to create a consistent presentation that simplifies the creation and publication of content by reducing time for formatting and styling.
 
 <figure>
@@ -7,11 +7,11 @@ Administrators can make use of Liferay's Asset Framework in addition to Widget P
   <figcaption style="font-size: x-small">Fig.1 Content Presentation</figcaption>
 </figure>
 
-#### Using Web Content Templates to Style Livingstone Content {#Livingstone}
+## Using Web Content Templates to Style Livingstone Content {#Livingstone}
 
 The Livingstone webteam has different groups responsible for Site administration and front-end development. Natalia and Maria are responslbe for generating some of the design and marketing content for the different Livingstone hotel Sites, while Martin and Kaito are working together to create mockups and implementing those designs on the different Sites. Without the use of Templates, Natalia and Maria are making use of the out-of-the-box WYSIWYG editor to format and style the content. By creating Templates that control the presentation of the different kinds of Web Content, Kaito can help streamline the publication process.
 
-#### Structuring and Designing Content {#StructuresTemplates}
+## Structuring and Designing Content {#StructuresTemplates}
 
 Web Content can be used for any number of different types of content, ranging from static design to full press releases. This is done by determining what information needs to be included through the use of _Web Content Structures_. Structures are groups of fields for a specific type of web content. For example, a _Press Release_ structure could be created that has a headline, date of publication, logo, and text content. Creating multiple Structures allows copy-writers and content creators to see the different kinds of content they can add to the platform and ensures the correct content is included through the Structure.
 
@@ -37,7 +37,7 @@ Key Point: <br />
   <figcaption style="font-size: x-small">Fig.2 An example of a Web Content Template.</figcaption>
 </figure>
 
-#### Web Content Structures {#Structures}
+## Web Content Structures {#Structures}
 
 Structures are based on Liferay's forms functionality allowing administrators build new web content types using the following fields:
 * **Boolean**: Adds a checkbox
@@ -69,7 +69,7 @@ Let's take a look at the Press Release example again. The Press Release Web Cont
 * **Image**: Logo Image
 * **HTML**: Article Text
 
-#### Web Content Templates {#Templates}
+## Web Content Templates {#Templates}
 
 Web Content Templates are FreeMarker templates that give developers access to Java API in Liferay as well as inherit the Theme's global styling by default. Web Content Templates, like Themes, can take advantage of Clay classes, and if the Theme has customized any of the base Clay styling, these changes also apply to Web Content Templates.
 
@@ -99,7 +99,7 @@ For example, developers could put together Clay classes like _aspect-ratio, card
   <figcaption style="font-size: x-small">Fig.5 Clay in a Web Content Template.</figcaption>
 </figure>
 
-#### Generic Templates, Embedding, and Preferences {#GenericTemplates}
+## Generic Templates, Embedding, and Preferences {#GenericTemplates}
 
 Web Content Templates can also be used without an associated Structure. These kinds of templates are called _Generic Templates_ and can be imported into other Templates via the FreeMarker include: `<#include "${templatesPath}/TEMPLATE-ID" />`.
 
@@ -171,4 +171,4 @@ With all this available to developers, Web Content Templates can be a powerful t
   <li>Templates inherit SCSS and Clay components from a ___________________________.</li>
   <li>___________________________ are stand-alone Templates that can be used to include reusable code.</li>
 </ul>
-</div>
+</div> -->

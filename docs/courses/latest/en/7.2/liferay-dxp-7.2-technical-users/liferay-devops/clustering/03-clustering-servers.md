@@ -1,4 +1,4 @@
-## Clustering the Servers
+# Clustering the Servers
 
 Preparing for high user traffic and server failure is a key aspect of business continuity. An essential tool for fault tolerance is clustering. Clustering allows us to distribute user load across multiple servers and provide backup machines when one goes down. Liferay is designed for high-availability situations and scales well when clustered. Clustering is included in Liferay DXP Digital Enterprise. A typical clustering setup provides for additional servers in all tiers for maximum fault tolerance.
 
@@ -49,7 +49,7 @@ Our cluster will be a simple, smaller-scale setup:
 
 <br>
 
-### Configuring the Load Balancer {#configbal}
+## Configuring the Load Balancer {#configbal}
 
 In our cluster setup, the first layer a request will come into contact with is the Load Balancer Tier and the Web Tier. Depending on your needs, hardware availability, and network infrastructure, you may have a combined Load Balancer/Web Tier. Load balancing can be done separately through hardware appliances or dedicated servers. Load balancing may also be combined with the Web Tier by using a load balancer in a web server.
 
@@ -70,7 +70,7 @@ At least two load balancers and two web servers should be set up to handle incom
 
 We're implementing our Load Balancer Tier and Web Tier using HAProxy. We'll take a closer look at configuring the load balancer in the exercises for this chapter section. 
 
-### Clustering the Java EE Application Servers {#clusterjavaee}
+## Clustering the Java EE Application Servers {#clusterjavaee}
 
 Traffic entering through the firewall and load balancer will pass through the web servers. The web servers, in turn, act as reverse proxies, passing traffic through to assigned Java Application servers. Whether app servers or servlet containers, they perform the same function in a cluster. We'll need to consider how the web servers communicate with the Java EE Application servers.
 
@@ -99,7 +99,7 @@ While *sticky sessions* are controlled mostly in the Load Balancer Tier and the 
 
 To implement a fault-tolerant and continuous App Tier, you should set up both *sticky sessions* and *Session Replication*.
 
-### Deploying Applications in a Cluster {#appcluster}
+## Deploying Applications in a Cluster {#appcluster}
 
 Once we've set up an entire clustered environment with clustered load balancers, clustered web servers, and clustered Java EE Application servers, we'll need to consider how to manage deploying apps in this environment. For general deployment, each app will need to be deployed to each node in the cluster.
 

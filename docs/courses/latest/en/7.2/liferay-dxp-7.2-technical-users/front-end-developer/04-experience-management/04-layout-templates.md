@@ -1,5 +1,5 @@
-## Controlling Page Layouts with Layout Templates
-
+# Controlling Page Layouts with Layout Templates
+<!-- 
 Layout templates control the position of content and widgets in the content section of a page, in between the header and footer sections of a Page.
 
 <figure>
@@ -12,7 +12,7 @@ Key Point<br />
 Layout templates allow you to set the rows and columns of a page and determine where content can be placed.
 </div>
 
-#### Using Layout Templates in the Livingstone Platform {#Livingstone}
+## Using Layout Templates in the Livingstone Platform {#Livingstone}
 
 The web team at Livingstone is making use of many of the Assets included in Liferay out-of-the-box, including Blogs and Web Content. This means on many of their Hotel and Resort Sites, as well as _Livingstone Life_ the marketing Site, they'll need to make use of traditional Layouts and Widgets. Kaito and his team can quickly new layouts using the NPM tools when the default layouts don't quite fit the use-case.
 
@@ -34,7 +34,7 @@ For the individual hotel sites, the Design team wants to go with a more modern l
 
 The default _1-2-1 layout_ provides a similar look to their mockups, but it's not exactly what they're looking for. Since none of the default layouts meet their needs, Kaito will need to create a custom page layout.
 
-#### Creating Custom Layout Templates {#CustomLayout}
+## Creating Custom Layout Templates {#CustomLayout}
 
 Layouts can have any number of rows with up to twelve columns per row. Columns in a layout use Bootstrap's Grid system (https://getbootstrap.com/docs/4.0/layout/grid/) to determine screen and column size. 
 
@@ -92,7 +92,7 @@ Once a layout is complete, it can be bundled and included with a theme by follow
 2. Add the `.ftl` file to the `{theme}/src/layouttpl` folder.
 3. Copy the `<layout-template>` structure from the `liferay-layout-templates.xml` found in _WEB-INF_ and paste it into the theme's `liferay-look-and-feel.xml`.
 
-#### Creating Templates Manually {#Manually}
+## Creating Templates Manually {#Manually}
 
 Layout Templates can also be created manually by creating a `.ftl` file. Let's take a look at the basic layout template file for the _Porygon-50-50_ layout to see what should be included when creating a `.ftl` file.
 
@@ -176,7 +176,7 @@ For example, on medium-sized view ports like tablets, `column-1` would be 33.33%
 </div>
 ```
 
-#### Embedding Widgets into Layout Templates {#Embedding}
+## Embedding Widgets into Layout Templates {#Embedding}
 
 It's also possible to embed widgets into layout templates. This is very similar to embedding a widget into a theme. The major difference is that developers can be more flexible with where to apply a layout. If the widget does not have a Java class that extends `BasePortletProvider`, developers can use `$theme.runtime()`. If it does, a widget can be embedded using `$processor.processPortlet("CLASS_NAME", ACTION)`.
 
@@ -221,4 +221,4 @@ If you want a widget, such as the search or language widget, to be embedded on e
     <li>Layout templates can be created with the ___________________________ or manually.</li>
     <li>Layout templates can have ___________________________ embedded in them.</li>
   </ul>
-</div>
+</div> -->

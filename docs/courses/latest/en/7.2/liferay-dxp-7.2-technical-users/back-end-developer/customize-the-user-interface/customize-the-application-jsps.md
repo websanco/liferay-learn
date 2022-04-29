@@ -4,7 +4,7 @@ title: Customize the Application JSPs
 order: 4
 ---
 
-## Customize the Application JSPs
+# Customize the Application JSPs
 
 Widget Templates have limitations: not all applications support them, they are only implemented for modifying view templates, and you can only use them to customize _some_ parts of the JSP file. Sometimes, you need to customize the JSP directly. There are a few ways to do this, from API-based content injection to overriding the JSP files completely:
 
@@ -13,7 +13,7 @@ Widget Templates have limitations: not all applications support them, they are o
 * Fragment modules
 * Portlet filters
 
-#### Dynamic Includes {#dynamic}
+## Dynamic Includes {#dynamic}
 
 Dynamic includes allow you to inject content in the JSP files in the pre-defined places implemented with the `<liferay-util:dynamic-include>` tag. Dynamic includes are supported, for example, in Wysiwyg editors, Login, Blogs, and Asset Publisher portlets.
 
@@ -59,11 +59,11 @@ This would produce a customized Blogs entry view:
 
 <img src="../images/dynamic-includes.png"  style="max-height:25%;" />
 
-#### Custom JSP Bag {#jsp}
+## Custom JSP Bag {#jsp}
 
 Custom JSP bags are a JSP customization method for legacy portal core JSP files. This method has only a few applicable use cases and is deprecated as of Liferay DXP 7.0. Read more information about it on the Developer Network: https://dev.liferay.com/en/develop/tutorials/-/knowledge_base/7-2/jsp-overrides-using-custom-jsp-bag.
 
-#### Fragment Modules {#fragment}
+## Fragment Modules {#fragment}
 
 Fragment modules allow you to override entire JSPs. This is a fast and straightforward method, but it also requires attention to platform patches and upgrades because there might be breaking changes in the original JSP.
 
@@ -72,15 +72,15 @@ The process of creating a fragment module, which is equivalent to an *OSGi Fragm
 1. Create a Liferay fragment module for the desired module JSP
 1. Override the desired JSP in the same path as the original
 
-#### Example: Overriding the Blogs Portlet `view_entry.jsp` {#blogs}
+## Example: Overriding the Blogs Portlet `view_entry.jsp` {#blogs}
 
-#### Step 1 - Create a Fragment Module {#one}
+## Step 1 - Create a Fragment Module {#one}
 
 Choose the host bundle and file to override:
 
 <img src="../images/fragment-example-1.png" style="max-height:40%;" />
 
-#### Step 2 - Override the JSP {#two}
+## Step 2 - Override the JSP {#two}
 
 ```html
 <%@ include file="/blogs/init.jsp" %>
@@ -101,7 +101,7 @@ if (Validator.isNull(redirect)) {
 }
 ```
 
-#### Step 3 - Deploy and Test {#three}
+## Step 3 - Deploy and Test {#three}
 
 <img src="../images/fragment-example-2.png" style="max-height:30%;" />
 
@@ -114,7 +114,7 @@ Bundle-Version: 1.0.0
 Fragment-Host: com.liferay.blogs.web;bundle-version="3.0.0" 
 ```
 
-#### Portlet Filter {#filter}
+## Portlet Filter {#filter}
 
 The portlet filter is an API-based way of overriding the application JSPs. The portlet filter operates directly on the request and response content, giving access to all the content sent back to the client. 
 

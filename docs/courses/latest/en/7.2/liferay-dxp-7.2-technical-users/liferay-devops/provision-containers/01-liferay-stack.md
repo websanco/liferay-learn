@@ -1,8 +1,8 @@
-## Setting Up A Liferay Solution
+# Setting Up A Liferay Solution
 
 The goal of this module is to prepare you to use Liferay in a production environment. We'll begin by talking about the basics of a Liferay deployment and looking at examples of typical setups.
 
-### The Liferay Stack {#stack}
+## The Liferay Stack {#stack}
 
 Liferay is a web application and needs a "stack" of software to function. The first thing you'll need to run any web application is a server. The server can be either a simple _Web Container_ or a _Full Profile Java EE Application Server_.
 
@@ -33,7 +33,7 @@ Let's break down the term "server", since it can be used in a few different ways
 
 In some cases, this might be a **Web Container** (also known as a _Servlet Container_), which provides only the necessary components for deploying applications. We might also be talking about a **Full Profile Application Server**, which includes the full complement of Java EE technologies, including JPA, EJBs, as well as everything provided in the Web Container.
 
-### Web Containers {#webcontainers}
+## Web Containers {#webcontainers}
 
 A Web Container is going to be your most lightweight option for deploying Liferay. Web Containers implement only the web component contract of the Java EE architecture. They are primarily responsible for managing the lifecycle of servlets and mapping URLs to servlets so that they can be accessed by users. The container handles requests to servlets and files like JSPs. It also creates servlet instances, manages requests, and performs other tasks.
 
@@ -41,7 +41,7 @@ Liferay DXP can be run on web containers like Apache Tomcat.
 
 <img src="../images/liferay-container-web-container.png" style="max-width: 100%" />
 
-### Full Profile Application Server {#fullprofile}
+## Full Profile Application Server {#fullprofile}
 
 A **Full Profile Application Server** is a server that implements the entirety of the Java EE architecture. It includes all of the Web Container, in addition to a number of other features like EJB,JAX Web Services, JavaMail, and many others. Some Web Containers may contain additional features beyond the minimum functionality, but they are only Full Profile Application Servers if they contain the entire spec.
 
@@ -61,7 +61,7 @@ Liferay provides a _dependencies package_ that adds Liferay-specific libraries t
 - `portlet.jar:` Provides support for portlets, which Liferay uses as a primary UI element
 - `com.liferay.petra.*:` OSGi friendly modules providing utilities once found in `com.liferay.util.java`
 
-### The Database {#database}
+## The Database {#database}
 
 The database is responsible for storing the majority of your data. It stores everything from permissions configuration to user data, web content, and more. Liferay supports a large number of databases including:
 
@@ -88,7 +88,7 @@ By the end of this course, we'll use Docker containers to have built something s
 
 <img src="../images/liferay-container-big-picture.png" style="max-height:40%" />
 
-### Securing Your Instance {#secure}
+## Securing Your Instance {#secure}
 
 Running Tomcat as a container makes it very easy to start and stop the server. Once the server is up and running we will want to find a way to secure the server.
 
@@ -127,7 +127,6 @@ It's the best of both worlds for very little overhead.
     Additional talking points, if trainer is familiar with them: Aspects of mod_proxy_http: Forwarding information about the request. Options for encryption of the Apache httpd->tomcat traffic.
 </div>
 -->
-
 
 <div class="trainersguide" style="display:none;">
     Additional talking points for summary:

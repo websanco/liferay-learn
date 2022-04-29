@@ -1,8 +1,8 @@
-## Adding Custom Branding to Liferay with Themes
+# Adding Custom Branding to Liferay with Themes
 
-Though the default look-and-feel of Liferay may work for some businesses, others need to create their own brand identity across the platform. Customizing the look-and-feel of the platform is a necessary part of the development process. 
+<!-- Though the default look-and-feel of Liferay may work for some businesses, others need to create their own brand identity across the platform. Customizing the look-and-feel of the platform is a necessary part of the development process.
 
-#### Perfecting the Livingstone Platform Design {#livingstone}
+## Perfecting the Livingstone Platform Design {#livingstone}
 
 Martin Llewellyn has been hard at work creating the design mockups for the many Livingstone Hotels & Resorts sites. His primary work responsibilities are the following: 
 * Designing graphic UI elements
@@ -13,7 +13,7 @@ Martin Llewellyn has been hard at work creating the design mockups for the many 
 
 He has created the designs for different Hotel and Resort sites, the Livingstone Rewards sites, as well as the internal employee intranet. As head of the front-end development team, Kaito Tanaka is in charge of tailoring the user experience and implementing the design mockups on the platform. To start, he needs to learn to modify the presentation of the many site pages and content on the platform.
 
-#### Themes {#themes}
+## Themes {#themes}
 
 In Liferay, developers can control the global HTML, CSS styles, animations, icon sets, margins, and JavaScript by creating a _Theme_ module.
 
@@ -50,14 +50,14 @@ Custom themes are created on top of one of two base themes:
 These base themes provide a base that maintains Liferay functionality while allowing developers to apply custom styling. Base files are provided with base themes that can be customized. With these, there is no need to start from scratch, saving developers a lot of time.
 
 To build and customize a new theme, we can do the following:
-1. Create the theme (generate the source files from a base theme)  
+1. Create the theme (generate the source files from a base theme)
 2. Customize HTML  
 3. Define styles in SCSS  
 4. Customize images  
 5. Add JavaScript  
 6. Finish theme module configuration
 
-#### Liferay Theme Generator {#themegenerator}
+## Liferay Theme Generator {#themegenerator}
 
 In order to build new themes, developers can take advantage of NPM and use the yeoman _Liferay Theme Generator_. This allows developers to work with tools that easily integrate into a DevOps process and quickly build and deploy new themes. 
 
@@ -95,7 +95,7 @@ Finally, the Theme Generator has a few different versions available to work with
 Note: Running <code>npm install -g generator-liferay-theme</code> will always give you the latest version of the generator in line with the latest product. In order to ensure you have the correct version that corresponds with the product version you're working with, you should use <code>npm install -g generator-liferay-theme@^[version].x.x</code>.
 </div>
 
-#### Customizing the Theme Source Files {#themesrc}
+## Customizing the Theme Source Files {#themesrc}
 
 In order for developers to customize the base theme, they'll need to take the source files from the base and put them in a new folder. Every customized folder and file needs to be added to the `src` folder. This means the files need to be copied from the `build` folder, which includes the base theme files, to the `src` folder.
 
@@ -133,7 +133,7 @@ The order of deployment will deploy the Base theme (`styled` or `unstyled`) firs
 	<figcaption style="font-size: x-small">Fig.2 Mirroring build files in the SRC folder</figcaption>
 </figure>
 
-#### Customizing the Theme HTML Files {#customizehtml}
+## Customizing the Theme HTML Files {#customizehtml}
 
 To start, let's focus on customizing the html of the themes, starting with the `portal_normal.ftl` file. As stated above, the `portal_normal` file contains the main structure of every site page and is the main HTML source file.
 
@@ -161,7 +161,7 @@ Another example can be found in the header with include navigation. This uses a 
 ```
 The above example shows that it's a good practice to keep the `portal_normal` uncluttered by including external files instead of adding all the code here. Next, let's look at the additional FreeMarker files included in the base theme.
 
-#### Structuring Navigation, Pop-Ups, and Widgets {#navwidgets}
+## Structuring Navigation, Pop-Ups, and Widgets {#navwidgets}
 
 Some aspects of the `portal_normal` are simply read and kept as separate `ftl` files. In the Base Themes, this includes the `navigation.ftl`, `portal_pop_up.ftl`, and `portlet.ftl` files. Each of these files can be used to control the HTML mark-up for the navigation, pop-ups, and widgets. 
 
@@ -170,7 +170,7 @@ Each of these files can be used to modify the corresponding aspects of a site pa
 <#include "${full_templates_path}/footer.ftl" />
 ```
 
-#### Using and Customizing FreeMarker Variables {#variables}
+## Using and Customizing FreeMarker Variables {#variables}
 
 Each of these files has a number of variables and macros in use. But where do these variables come from? 
 
@@ -221,4 +221,4 @@ Themes are used to modify the look-and-feel of sites to utilize Liferay to refle
   <li>main.js contains JavaScript to be loaded on ____________________ page.</li>
   <li>liferay-look-and-feel.xml can be used to add ____________________ to the platform.</li>
 </ul>
-</div>
+</div> -->

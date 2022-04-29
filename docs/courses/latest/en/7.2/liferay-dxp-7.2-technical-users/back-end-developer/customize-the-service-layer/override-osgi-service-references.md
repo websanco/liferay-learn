@@ -4,9 +4,9 @@ title: Override OSGi Service References
 order: 3
 ---
 
-## Override OSGi Service References
+# Override OSGi Service References
 
-[OSGi Declarative Services](https://osgi.org/specification/osgi.cmpn/7.0.0/service.component.html) allow you to automatically and dynamically inject published services in the OSGi service registry into your components using the `@Reference` annotation. Below is an excerpt of the Liferay Blogs application's [BlogsAdminPortlet](https://github.com/liferay/liferay-portal/blob/7.2.x/modules/apps/blogs/blogs-web/src/main/java/com/liferay/blogs/web/internal/portlet/BlogsAdminPortlet.java) portlet component, which has multiple service references:
+<!-- [OSGi Declarative Services](https://osgi.org/specification/osgi.cmpn/7.0.0/service.component.html) allow you to automatically and dynamically inject published services in the OSGi service registry into your components using the `@Reference` annotation. Below is an excerpt of the Liferay Blogs application's [BlogsAdminPortlet](https://github.com/liferay/liferay-portal/blob/7.2.x/modules/apps/blogs/blogs-web/src/main/java/com/liferay/blogs/web/internal/portlet/BlogsAdminPortlet.java) portlet component, which has multiple service references:
 
 ```java
 @Component(
@@ -66,7 +66,7 @@ If an OSGi container allows multiple implementations of a service to co-exist an
 1. The available implementation's `service.ranking` property value
 1. `@Reference` annotation attributes
 
-#### The `service.ranking` Property {#ranking}
+## The `service.ranking` Property {#ranking}
 
 The `service.ranking` property defines the priority of this implementation among the other components implementing the same service.
 
@@ -96,13 +96,13 @@ The default value for the `service.ranking` property is 0. An implementation wit
 private volatile List<Processor> _processors = null;
 ```
 
-#### `@Reference` Attributes {#attributes}
+## `@Reference` Attributes {#attributes}
 
 From the perspective of the consuming component, the injection behavior depends on the consuming component's `@Reference` annotation attributes. With default attributes, the first implementation available gets injected and is reluctant to change even if an implementation that takes higher priority becomes available. This is called a *static and reluctant policy*. In this scenario, the OSGi bundle startup order defines the implementation.
 
 Let's take a look at the available attributes.
 
-#### Target {#target}
+## Target {#target}
 
 Target attributes allow you to filter or query the service implementation to be injected, using the LDAP query syntax. 
 
@@ -146,7 +146,7 @@ public class ElasticsearchSpellCheckIndexWriter
 ...
 ```
 
-#### Reference Cardinality {#cardinal}
+## Reference Cardinality {#cardinal}
 
 Reference cardinality defines whether a reference has to be satisfied for a component to be able to activate. Cardinality has the following possible values:
 
@@ -157,21 +157,21 @@ Reference cardinality defines whether a reference has to be satisfied for a comp
 
 > When using the multi options, a setter method has to be defined.
 
-#### Reference Policy {#policy}
+## Reference Policy {#policy}
 
 The reference policy defines whether an injected service reference can be replaced dynamically. The following options are available:
 
 * __STATIC:__ the reference is required and the component will not be notified of alternative services as they become available (default)
 * __DYNAMIC:__ the reference is not required and the component accepts new references as they become available
 
-#### The Reference PolicyOption {#poloption}
+## The Reference PolicyOption {#poloption}
 
 The policy option provides more granularity for the dynamic injection policy:
 
 * __RELUCTANT:__ For a single reference cardinality, new available references will be ignored. For multiple reference cardinality, new reference potentials will be bound.
 * __GREEDY:__  As new reference potentials become available, the component will bind to them.
 
-#### Other @Reference Attributes {#other}
+## Other @Reference Attributes {#other}
 
 * __bind:__ the name of the bind method for this reference
 * __field:__ the name of the field for this reference
@@ -184,7 +184,7 @@ The policy option provides more granularity for the dynamic injection policy:
 * __unbind:__ unbind the event method for the reference
 * __updated:__ updated the event method for the reference
 
-#### @Reference Attributes Example {#example}
+## @Reference Attributes Example {#example}
 
 Let's interpret the reference example below, with multiple attibutes:
 
@@ -207,7 +207,7 @@ private PermissionFilterQueryBuilder _permissionFilterQueryBuilder;
 * The reference calls for a removePermissionFilterQueryBuilder(PermissionFilterQueryBuilder) method when unsetting the reference (`unbind`). 
 * The implementation has the service type `PermissionFilterQueryBuilder`(`service`).
 
-#### Overriding Static and Reluctant References {#override}
+## Overriding Static and Reluctant References {#override}
 
 Even when the consuming component's reference has a static and reluctant policy, meaning that it's not allowing new candidates after being satisfied, it's possible to manually override the used implementation by configuring the OSGi container itself. This approach is explained on Liferay Developer Network (https://dev.liferay.com/en/develop/tutorials/-/knowledge_base/7-2/reconfiguring-components-to-use-your-service).
 
@@ -220,4 +220,4 @@ Even when the consuming component's reference has a static and reluctant policy,
 	<li>The ___________________________ defines whether an injected service reference can be replaced dynamically.</li>
 	<li>The policy option provides more granularity for the ___________________________ policy.</li>
 </ul>
-</div>
+</div> -->

@@ -1,5 +1,7 @@
 # Configure Settings for a Liferay Environment
 
+Coming Soon!
+
 <!--
 
 <div class="ahead">

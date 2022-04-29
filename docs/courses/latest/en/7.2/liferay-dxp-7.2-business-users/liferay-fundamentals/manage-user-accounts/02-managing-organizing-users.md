@@ -1,4 +1,4 @@
-## Manage and Organize Users
+# Manage and Organize Users
 
 Each business has its own way of organizing its users. This can be an internal departmental structure, or in relation to customers, partners, etc. Many businesses have a traditional hierarchical business structure, while other more modern businesses have more lateral team structures. Whether you're coming with the hierarchy or lateral structures, administrative teams need to know the most effective way to organize their Users on the Liferay DXP platform.
 
@@ -7,7 +7,7 @@ Each business has its own way of organizing its users. This can be an internal d
 	<figcaption style="font-size: x-small">Fig.1 Example Business Hierarchy</figcaption>
 </figure>
 
-#### Livingstone's Organization Structure {#livingstoneorgs}
+## Livingstone's Organization Structure {#livingstoneorgs}
 
 Livingstone Hotels & Resorts has both hierarchical structures and lateral teams that work across their hierarchical structures. Here are the User structures they will need to represent:
 1. Department Structure 
@@ -27,7 +27,7 @@ Josiah Copeland and the Livingstone team will need to organize the imported User
 	<figcaption style="font-size: x-small">Fig.2 Livingstone Department Hierarchy</figcaption>
 </figure>
 
-#### Hierarchical Organizations in Liferay {#organizations}
+## Hierarchical Organizations in Liferay {#organizations}
 
 In order to represent hierarchical business structures, administrators can take advantage of _Organizations_.
 
@@ -47,7 +47,7 @@ It's important to note that members of a parent Organization are not always memb
 
 <br />
 
-#### Organization Sites {#sites}
+## Organization Sites {#sites}
 
 Some Organizations require some kind of web presence. Examples include an Organization representing a product team requiring a public site, or an internal HR organization managing an intranet. When this is the case, administrators can create _Organization Sites_. 
 
@@ -67,7 +67,7 @@ Membership of an Organization Site is restricted to the members of the Organizat
 	<figcaption style="font-size: x-small">Fig.4 Organization Site Relationship</figcaption>
 </figure>
 
-#### Users Groups in Liferay {#usergroups}
+## Users Groups in Liferay {#usergroups}
 
 Sometimes Users need to be organized outside the Organizational hierarchy. Users in different departments, for example, might need to be grouped together for a specific reason. A single hierarchical structure will not meet the needs of all users all of the time.
 
@@ -92,7 +92,7 @@ In addition to standing outside of the Organization structure, User Groups also 
 2. Assign Permissions by assigning Roles to the entire User Group
 3. Manage User Profiles or Dashboards by creating predefined pages that the entire User Group has access to.
 
-#### User Group Sites {#usergroupsites}
+## User Group Sites {#usergroupsites}
 
 By default, Users have a Profile and Dashboard on the platform. The Profile is essentially a public set of pages a User can manage, while the Dashboard is a User's set of private pages that Users can manage with different widgets and content. 
 
@@ -120,7 +120,7 @@ Although Organizations and User Groups are two different ways of organizing User
 
 <br />
 
-#### GDPR Compliance {#gdpr}
+## GDPR Compliance {#gdpr}
 
 With the introduction of the GDPR laws, companies will also need to be more considerate about how they manage User data. 
 

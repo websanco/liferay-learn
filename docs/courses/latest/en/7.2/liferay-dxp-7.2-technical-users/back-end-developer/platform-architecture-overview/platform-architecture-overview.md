@@ -4,7 +4,7 @@ title: Platform Architecture Overview
 order: 2
 ---
 
-## Platform Architecture Overview
+# Platform Architecture Overview
 
 The Liferay platform core builds on the following technologies:
 
@@ -33,7 +33,7 @@ Liferay is compliant with many industry-proven standards. The following standard
 	  * __Declarative Services:__ Supports a dynamic component model for Liferay development
 	  * __Configuration Admin__: Lets you create configurable applications that can be reconfigured on the fly. Liferay provides an auto-generated UI to change the configuration of any component that leverages this standard.
 	  
-#### Other Standards {#other}
+## Other Standards {#other}
 
 Liferay provides tools and development patterns to comply with the EU’s General Data Protection Regulation (GDPR). In custom Service Builder projects, Liferay provides a way to define fields as *anonymizable* with the help of UAD (User Associated Data) attributes, for example:
 
@@ -42,20 +42,20 @@ Liferay provides tools and development patterns to comply with the EU’s Genera
 ```
 
 > See the Developer Network article (https://portal.liferay.dev/docs/7-2/user/-/knowledge_base/u/managing-users) on using UAD attributes.
- 
-#### Diagramming the Platform Architecture {#diagramming}
+
+## Diagramming the Platform Architecture {#diagramming}
 
 There are multiple ways to approach diagramming the logical and physical architecture of the platform. Below are some examples.  
 
-#### Physical View {#physical}
+## Physical View {#physical}
 
 <img src="../images/physical-architecture.png" style="max-height:100%;" />
 
-#### Logical View {#logical}
+## Logical View {#logical}
 
 <img src="../images/logical-architecture.png" style="max-height:100%;" />
 
-#### Further Reading {#reading}
+## Further Reading {#reading}
 
 * Liferay Fundamentals: https://portal.liferay.dev/docs/7-2/user
 

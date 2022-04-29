@@ -4,9 +4,7 @@ title: Implement Submissions
 order: 2
 ---
 
-<h2 class="exercise">Optional Exercise</h2>
-
-## Implement Submissions
+# Implement Submissions
 
 <div class="ahead">
 <h4>Exercise Goals</h4>
@@ -37,10 +35,11 @@ order: 2
 > * Localizations in the `Language.properties` of the *gradebook-web* module
 > * MVC Command name constants in the `MVCCommandNames.java` class in the *gradebook-web* module.
 
-#### Define the Submission entity in `service.xml`
+## Define the Submission entity in `service.xml`
 
 1. **Open** the `service.xml` in the *gradebook-service* module.
 1. **Implement** the submission entity definition right after the closing `<entity>` tag of Assignment:
+
 	```xml
 	<entity name="Submission" local-service="true" remote-service="true">
 	
@@ -86,36 +85,41 @@ order: 2
 		<reference package-path="com.liferay.portlet.asset" entity="AssetTag" />    
 	</entity>	
 	```
-	
+
 	> The reference field between Assigment and Submission is `assignmentId`.
 1. **Add** `SubmissionValidationException` definition in the `<exceptions>` tag:
+
 	```xml
 	<exceptions>
         <exception>AssignmentValidation</exception>
         <exception>SubmissionValidation</exception>
     </exceptions>
 	```
+
 1. **Rebuild** the service to generate the Submission services.
 
-#### Increase Submission Text Column Size by Modifying the `portlet-model-hints.xml`
+## Increase Submission Text Column Size by Modifying the `portlet-model-hints.xml`
 
 The default size for a text column is 75 characters. Increase the size to 1024 characters:
 
 1. **Open** the file `src/main/resources/META-INF/portlet-model-hints.xml` in the *gradebook-service* module.
 1. **Find** the definition of `submissionText` column and replace it with:
+
 	```xml
 	<field name="submissionText" type="String">
 		<hint name="max-length">1024</hint>
 	</field>
 	```
+
 1. **Rebuild** the service.	
 
-#### Implement Message Stacking in the Submission Validation Exception
+## Implement Message Stacking in the Submission Validation Exception
 
 When validating entities, it's often desired to get all validation errors on the screen at once. Let's customize the submission validation exception and add a new constructor taking a list as a parameter:
 
 1. **Open** the class `com.liferay.training.gradebook.exception.SubmissionValidationException` in the *gradebook-api* module.
 1. **Implement** the new constructor, getter method and list variable to the class as follows:
+
 	```java
 	/**
 	 * Custom constructor for validation
@@ -132,14 +136,16 @@ When validating entities, it's often desired to get all validation errors on the
 	
 	private List<String> _errors;
 	```
+
 1. **Organize** missing imports.	
 
-#### Implement SubmissionLocalServiceImpl
+## Implement SubmissionLocalServiceImpl
 
 Implement the CRUD logic for the Submission entities:
 
 1. **Open** the class `com.liferay.training.gradebook.service.impl.SubmissionLocalServiceImpl` in the *gradebook-service* module.
 1. **Replace** the contents of the class with the following:
+
 	```java
 	/**
 	 * Copyright (c) 2000-present Liferay, Inc. All rights reserved.
@@ -378,14 +384,16 @@ Implement the CRUD logic for the Submission entities:
 		}	
 	}	
 	```
+
 1. **Rebuild** the service.	
 
-#### Implement SubmissionServiceImpl
+## Implement SubmissionServiceImpl
 
 Implement the facade methods in the remote service implementation class:
 
 1. **Open** the class `com.liferay.training.gradebook.service.impl.SubmissionServiceImpl` in the *gradebook-service* module.
 1. **Implement** as follows:
+
 	```java
 	/**
 	 * Copyright (c) 2000-present Liferay, Inc. All rights reserved.
@@ -546,9 +554,10 @@ Implement the facade methods in the remote service implementation class:
 	
 	}
 	```
+
 1. **Rebuild** the service.
 
-#### Implement the MVC Action Commands
+## Implement the MVC Action Commands
 
 1. **Add** and implement the three MVC Action Commands in the *gradebook-web* module for adding, editing, grading and deleting submissions:
 	* `com.liferay.training.gradebook.web.portlet.action.EditSubmissionMVCActionCommand`
@@ -556,6 +565,7 @@ Implement the facade methods in the remote service implementation class:
 	* `com.liferay.training.gradebook.web.portlet.action.DeleteSubmissionMVCActionCommand`
 
 **EditSubmissionMVCActionCommand**
+
 ```java
 
 package com.liferay.training.gradebook.web.portlet.action;
@@ -691,6 +701,7 @@ public class EditSubmissionMVCActionCommand extends BaseMVCActionCommand {
 ```
 
 **GradeSubmissionMVCActionCommand**
+
 ```java
 
 package com.liferay.training.gradebook.web.portlet.action;
@@ -769,6 +780,7 @@ public class GradeSubmissionMVCActionCommand extends BaseMVCActionCommand {
 ```
 
 **DeleteSubmissionMVCActionCommand**
+
 ```java
 
 package com.liferay.training.gradebook.web.portlet.action;
@@ -838,7 +850,7 @@ public class DeleteSubmissionMVCActionCommand extends BaseMVCActionCommand {
 }
 ```
 
-#### Implement the MVC Render Commands
+## Implement the MVC Render Commands
 
 1. **Add** and implement the following three MVC Render Commands in the *gradebook-web* module as follows:
 	* `com.liferay.training.gradebook.web.portlet.action.EditSubmissionMVCRenderCommand`
@@ -846,6 +858,7 @@ public class DeleteSubmissionMVCActionCommand extends BaseMVCActionCommand {
 	* `com.liferay.training.gradebook.web.portlet.action.ViewSubmissionMVCRenderCommand`
 
 **EditSubmissionMVCRenderCommand**
+
 ```java
 
 package com.liferay.training.gradebook.web.portlet.action;
@@ -964,6 +977,7 @@ public class EditSubmissionMVCRenderCommand implements MVCRenderCommand {
 ```
 
 **GradeSubmissionMVCRenderCommand**
+
 ```java
 
 package com.liferay.training.gradebook.web.portlet.action;
@@ -1089,8 +1103,8 @@ public class GradeSubmissionMVCRenderCommand implements MVCRenderCommand {
 ```
 
 **ViewSubmissionMVCRenderCommand**
-```java
 
+```java
 package com.liferay.training.gradebook.web.portlet.action;
 
 import com.liferay.portal.kernel.exception.PortalException;
@@ -1206,7 +1220,7 @@ public class ViewSubmissionMVCRenderCommand implements MVCRenderCommand {
 }
 ```
 
-#### Modify the MVC Render Command for Showing a Single Assignment
+## Modify the MVC Render Command for Showing a Single Assignment
 
 Modify the MVC Render Command for showing a single assignment so that is includes the list of related submissions in the request attributes:
 
@@ -1214,7 +1228,6 @@ Modify the MVC Render Command for showing a single assignment so that is include
 1. **Replace** the contents of the class with the following:
 
 ```java
-
 package com.liferay.training.gradebook.web.portlet.action;
 
 import com.liferay.portal.kernel.dao.search.SearchContainer;
@@ -1413,12 +1426,13 @@ public class ViewSingleAssignmentMVCRenderCommand implements MVCRenderCommand {
 }
 ```
 
-#### Implement the JSP files
+## Implement the JSP files
 
 1. **Create** a folder `src/main/resources/META-INF/resources/submission` in the *gradebook-web* module.
 1. **Implement** the following JSP files in the folder:
 	
-**edit_submission.jsp**	
+**edit_submission.jsp**
+
 ```html
 <%-- 
 	Submission editing view.
@@ -1534,8 +1548,9 @@ public class ViewSingleAssignmentMVCRenderCommand implements MVCRenderCommand {
 	</c:if>
 </div>
 ```
-	
+
 **entry_actions.jsp**	
+
 ```html   
 <%@ include file="/init.jsp"%>
 
@@ -1599,7 +1614,8 @@ public class ViewSingleAssignmentMVCRenderCommand implements MVCRenderCommand {
 ```
 
 **entry_search_columns.jspf**
-```html   
+
+```html
 <%-- Generate view submission URL. --%>
 
 <portlet:renderURL var="viewSubmissionURL">
@@ -1763,6 +1779,7 @@ public class ViewSingleAssignmentMVCRenderCommand implements MVCRenderCommand {
 ```
 
 **view_submission.jsp**
+
 ```html   
 <%--
 	Single submission view.
@@ -1858,7 +1875,7 @@ public class ViewSingleAssignmentMVCRenderCommand implements MVCRenderCommand {
 </div>	
 ```
 
-#### Customize the JSP for Showing a Single Assigment	
+## Customize the JSP for Showing a Single Assigment	
 
 Implement showing the list of submissions on single Assignment view:
 
@@ -1947,7 +1964,7 @@ Implement showing the list of submissions on single Assignment view:
 </div>
 ```
 
-#### Test the Application
+## Test the Application
 
 > Be sure that you have rebuilt the services. If you encounter `ClassNotFoundExceptions` while testing, remove all the Gradebook modules from the server and redeploy to refresh the resources.
 

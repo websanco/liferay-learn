@@ -4,9 +4,7 @@ title: Create the Gradebook Web Module
 order: 4
 ---
 
-<h2 class="exercise">Exercises</h2>
-
-## Create the Gradebook Web Module
+# Create the Gradebook Web Module
 
 <div class="ahead">
 <h4>Exercise Goals</h4>
@@ -29,7 +27,7 @@ We will use the Liferay MVC portlet as a portlet component. The portlet lifecycl
 
 The user interface will be implemented with JSP technology. We will be using Liferay tag libraries, which both minimize the need for HTML coding and guarantee a [Twitter Bootstrap](https://getbootstrap.com/)-based responsive layout.
 
-#### Create a Liferay MVC Portlet Module
+## Create a Liferay MVC Portlet Module
 
 Option 1: Use the Command Line Blade Tools
 
@@ -54,7 +52,7 @@ Option 2: Use Developer Studio Wizard
 	* __Package Name__: "com.liferay.training.gradebook.web"
 1. **Click** *Finish* to close the wizard.
 
-#### Declare Dependencies
+## Declare Dependencies
 
 We need to declare dependencies for the Gradebook service (API), Liferay Clay tag library, and Petra function utility:
 
@@ -69,7 +67,7 @@ We need to declare dependencies for the Gradebook service (API), Liferay Clay ta
 
 	> What is Petra? If you developed for pre-7 Liferay, you probably remember the `com.liferay.util.java` utilities. The Petra library family contains the modularized and OSGi-ready versions of those utilities.  
 
-#### Set Portlet Properties
+## Set Portlet Properties
 
 We'll have the following requirements for our portlet:
 
@@ -85,7 +83,7 @@ Let's change the portlet component properties to match these requirements:
 	"com.liferay.portlet.instanceable=false",
 	```
 
-#### Set the Portlet Name
+## Set the Portlet Name
 
 It's a good practice to use a fully qualified name of the portlet class as the portlet identifier. We also have to update the name in our resource bundle (we'll discuss localization at later steps):
 
@@ -103,8 +101,8 @@ It's a good practice to use a fully qualified name of the portlet class as the p
 	javax.portlet.short-title.com_liferay_training_gradebook_web_portlet_GradebookPortlet=Gradebook
 	javax.portlet.title.com_liferay_training_gradebook_web_portlet_GradebookPortlet=Gradebook
 	```
-	
-#### Do a Final Code Review
+
+## Do a Final Code Review
 
 **build.gradle**
 ```groovy
@@ -184,8 +182,8 @@ javax.portlet.short-title.com_liferay_training_gradebook_web_portlet_GradebookPo
 javax.portlet.title.com_liferay_training_gradebook_web_portlet_GradebookPortlet=Gradebook
 gradebook.caption=Hello from Gradebook!
 ```
-	
-#### Deploy the Module
+
+## Deploy the Module
 
 1. **Drag** the *gradebook-web* onto the Liferay server to deploy the module. 
 	* You should see the following message in the log:
@@ -193,7 +191,7 @@ gradebook.caption=Hello from Gradebook!
 	STARTED com.liferay.training.gradebook.web_1.0.0
 	```
 
-#### Test the Module
+## Test the Module
 
 Dev Studio's hot deploy feature allows us to see the changes on the user interface in almost real-time as we work with the code. Let's do a quick test to see how this feature works:
 
@@ -201,5 +199,5 @@ Dev Studio's hot deploy feature allows us to see the changes on the user interfa
 1. **Click** the *Add* icon on the top right corner of the page.
 1. **Expand** the *category.training* category in the *Widgets* menu.
 1. **Add** the *gradebook-web* portlet on the page.
-	
+
 <img src="../images/gradebook-web-on-a-page.png" style="max-height: 100%"/>

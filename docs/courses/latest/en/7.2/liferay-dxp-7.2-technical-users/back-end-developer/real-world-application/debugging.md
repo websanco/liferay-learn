@@ -4,13 +4,13 @@ title: Debugging
 order: 12
 ---
 
-## Debugging
+# Debugging
 
 Your application might be failing integration tests or crashing in production because of unknown reasons. The code complexity might have gotten to the point where you aren't sure how everything is working together. Developers make mistakes, and tests can't cover every possible use case scenario. This is where debugging comes in. Debugging covers a number of different approaches, tools, and methodologies under its umbrella.
 
 Here, for the sake of training, we limit the scope to the basics of using the IDE debugger tool, which enables you to monitor and control the execution of a program, setting breakpoints and changing values in memory. We'll also briefly discuss some methods of troubleshooting and debugging issues in production, where there's no source code or IDE available. 
 
-#### Introducing JPDA
+## Introducing JPDA
 
 JPDA (Java Platform Debugger Architecture) is the backbone of Java debugging. It's a collection of Java APIs to facilitate debugging, profiling, and monitoring local and remote Java applications.
 
@@ -24,7 +24,7 @@ JPDA consists of three layers: JDI, JDWP, and JVM TI.
 
 While JVM TI is a native programming interface requiring agents to be written in C / C++, `java.lang.instrument` is a higher-level API on top of JVM TI, providing a Java programming interface for bytecode instrumentation, which is one of the most important enablers of Java debugging.
 
-#### Enabling Debug Mode in IDE
+## Enabling Debug Mode in IDE
 
 To enable debugging, the JVM has to be started in debug mode with JPDA enabled. If you are using a Tomcat server adapter in Liferay Dev Studio, IDE takes care of enabling JPDA, and you only need to start the server in debug mode.
 
@@ -46,7 +46,7 @@ When debugging a remote server (including a server not launched from IDE), a rem
 
 <img src="../images/setup-remote-debugging.png" style="max-height:30%"/>
 
-#### Debugging Basics
+## Debugging Basics
 
 In running debugger, we are often interested to see why a certain variable gets an unprecedented value and what the application state is when some code block, method, or call is reached. For that purpose, we set *breakpoints*, which can be static, meaning that we always stop the execution at that point, or conditional, meaning that the execution only stops when a certain condition is met. We can also set variable watchpoints, which are triggered when a variable value is changed.
 
@@ -60,7 +60,7 @@ When we have an idea about the area where the issue comes from, we can set a bre
 
 <img src="../images/use-steps.png" style="max-height:100%"/>
 
-#### Setting Up Liferay Source Code for Debugging
+## Setting Up Liferay Source Code for Debugging
 
 Sometimes you might want to put a breakpoint in Liferay's code to see what happens at some specific point. For that purpose, you have to set up the portal source code for the IDE. Liferay provides source code packages for all the portal releases, including fix packs. To set up the source code, you need to:
 
@@ -68,17 +68,17 @@ Sometimes you might want to put a breakpoint in Liferay's code to see what happe
 1. Import the source code project into a workspace
 1. Set up the debugger configuration (if remote)	
 
-#### Step 1 - Download the Source Code
+## Step 1 - Download the Source Code
 
 Liferay commercial release source codes can be downloaded from the customer portal at https://customer.liferay.com/.
 
-#### Step 2 - Import the Source Code into the Workspace (Eclipse)
+## Step 2 - Import the Source Code into the Workspace (Eclipse)
 
 When you extract the source code package and try to import that into Eclipse, you might notice there are no Eclipse project files present. To import the code into your workspace and auto-create the project files, use *File → Open Projects* from the File System:
 
 <img src="../images/import-source-code.png" style="max-height:100%"/>
 
-#### Step 3 - Set Up Debugger Configuration (Remote Debugging)
+## Step 3 - Set Up Debugger Configuration (Remote Debugging)
 
 After the source code project is set up in the workspace, you need to create a debugger configuration for it:
 
@@ -92,7 +92,7 @@ Also disable building at launch in your Eclipse workspace preferences in *Window
 
 <img src="../images/disable-build-at-launch.png" style="max-height:100%"/>
 
-#### Overview of Debugging in Production
+## Overview of Debugging in Production
 
 Debugging in production usually has a different toolset. At the development stage, the development environment, source code, and IDE debugger are available, and often there's more time to resolve issues. The nature of debugging is forward-tracing, where you can run the program line by line to see what's causing or would possibly be causing an issue. Testing also falls into this category of forward-tracing debugging. 
 
@@ -102,7 +102,7 @@ Debugging in production often involves monitoring and profiling JVM and applicat
 
 <br />
 
-#### Thread Dumps
+## Thread Dumps
 
 A thread dump shows information about what each thread is doing at a given time. This information includes the exact method call being executed and the thread state at that point in time.
 
@@ -149,7 +149,7 @@ If you had a stability issue in your system, you'd probably start looking for th
 
 When debugging issues in production, it's good to remember the time aspect: a thread could, for example, be blocked at some point in time, and that would be completely normal. If that very same thread would be blocked after 30 seconds, you'd probably be having an issue. That's why, when taking thread dumps, it's important to take several thread dumps during the problematic application state.
 
-#### Monitoring Memory with JStat
+## Monitoring Memory with JStat
 
 JVM problems are often memory-related. Your application might be leaking memory resources, or there might just be a resource allocation problem during a peak load. The JDK tool [JStat](https://docs.oracle.com/javase/8/docs/technotes/tools/unix/jstat.html) shows statistics of JVM memory usage and garbage collection. It both helps in detecting the memory leaks and in tuning the JVM memory and garbage collection parameters.
 

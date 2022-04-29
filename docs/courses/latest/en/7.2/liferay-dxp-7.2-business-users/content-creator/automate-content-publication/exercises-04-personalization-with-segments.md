@@ -1,6 +1,4 @@
-<h2 class="exercise">Exercises</h2>
-
-## Personalizing Content with User Segments
+# Personalizing Content with User Segments
 
 <div class="ahead">
 <h4>Exercise Goals</h4>
@@ -11,7 +9,8 @@
 </ul>
 </div>
 
-#### Create the Livingstone Rewards Group
+## Create the Livingstone Rewards Group
+
 1. **Open** the _Menu_.
 * **Go to** _`Users → User Groups`_ in the _Control Panel_.
 * **Click** the _Add_ button.
@@ -21,7 +20,8 @@
 
 <img src="../images/rewards-created.png" style="max-height:27%;" />
 
-#### Create a User Segment for Rewards Group Users
+## Create a User Segment for Rewards Group Users
+
 1. **Click** the _Site Selector_ in the _Site Administration_ panel.
 * **Choose** _Livingstone Hotels & Resorts_.
 * **Go to** _`People → Segments`_ in the _Site Administration_ panel.
@@ -35,7 +35,8 @@
 
 <img src="../images/rewards-segment.png" style="max-height:26%;" />
 
-#### Import Page Fragments for Livingstone Rewards
+## Import Page Fragments for Livingstone Rewards
+
 1. **Go to** _`Site Builder → Page Fragments`_ in the _Site Administration_ panel.
 * **Click** the _Options_ icon next to _Collections_.
 * **Choose** _Import_.
@@ -46,7 +47,8 @@
 
 <img src="../images/rewards-fragments.png" style="max-height:25%;" />
 
-#### Create a Content Page for Livingstone Rewards
+## Create a Content Page for Livingstone Rewards
+
 1. **Go to** _`Site Builder → Pages`_ in the _Site Administration_ panel.
 * **Click** the _Add_ button.
 * **Choose** _Content Page_.
@@ -59,7 +61,8 @@
 
 <img src="../images/content-page-created.png" style="max-height:25%;" />
 
-#### Add a New Experience for Livingstone Rewards Members
+## Add a New Experience for Livingstone Rewards Members
+
 1. **Click** the _Options_ icon next to the Livingstone Rewards page we just created.
 * **Choose** _Edit_.
 * **Click** the _Default_ drop-down at the top of the page.
@@ -79,7 +82,8 @@
 
 <img src="../images/rewards-experience.png" style="max-height:50%;" />
 
-#### View the Livingstone Rewards Page
+## View the Livingstone Rewards Page
+
 1. **Open** the _Menu_.
 * **Click** _Go to Site_ in the _Site Administration_ panel.
 * **Click** _Livingstone Rewards_ in the navigation menu.
@@ -87,7 +91,8 @@
 
 <img src="../images/view-rewards-page.png" style="max-height:33%;" />
 
-#### View the Rewards Members Experience Version of the Page
+## View the Rewards Members Experience Version of the Page
+
 1. **Go to** _`Users → User Groups`_ in the _Control Panel_.
 * **Click** the _Livingstone Rewards_ group.
 * **Click** the _Add_ button.
@@ -104,6 +109,7 @@
 
 ---
 
-#### Bonus Exercises
+## Bonus Exercises
+
 1. Create a User Segment for Business Rewards members. You will need to create a new User Group for Business Rewards Members. In the Segment Editor, ensure that Livingstone Rewards group members are not included as a Condition of the Business Rewards members Segment.
 2. Create a new Experience for the Livingstone Rewards Content Page. This Experience should be targeted to the Business Rewards Members Segment and be composed of existing fragments that are edited to include exclusive deals for business travelers.

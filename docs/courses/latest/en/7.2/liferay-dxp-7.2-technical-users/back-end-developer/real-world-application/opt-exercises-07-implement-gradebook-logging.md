@@ -4,9 +4,7 @@ title: Implement Gradebook Logging
 order: 7
 ---
 
-<h2 class="exercise">Optional Exercise</h2>
-
-## Implement Gradebook Logging
+# Implement Gradebook Logging
 
 <div class="ahead">
 <h4>Exercise Goals</h4>
@@ -17,7 +15,7 @@ order: 7
 	</ul>
 </div>
 
-#### Add the SLF4J API dependency to the Service Module
+## Add the SLF4J API dependency to the Service Module
 
 1. **Open** the `build.gradle` of the *gradebook-service* module.
 2. **Add** the dependency for SLF4J in the `dependencies` block:
@@ -26,27 +24,32 @@ order: 7
 compileOnly group: "org.slf4j", name: "slf4j-api"
 ```
 
-#### Add Logging Code to the Gradebook Service
+## Add Logging Code to the Gradebook Service
 
 1. **Open** the *com.liferay.training.gradebook.service.impl.AssignmentLocalServiceImpl* class in the *gradebook-service* module.
 1. **Add** logger variable instantiation to the very end of the class:
+
 	```java
 	private static final Logger _logger = LoggerFactory.getLogger(AssignmentLocalServiceImpl.class);
 	```
+
 1. **Implement** logging code to the `addAssignment()` method:
+
 	```java
 	if (_logger.isInfoEnabled()) {
 		_logger.info("User " + userId + " is adding an assignment.");
 	}
 	```
+
 1. **Organize** imports and save the class. Changes should be deployed automatically.
 
 If you test adding an assignment, you won't see any messages in the log yet because the logging level for the package `com.liferay` is set by default to `ERROR`. Next, we will add a Log4J configuration file and set the logging level for debugging purposes to `DEBUG`.
 
-#### Create and Configure Logging with `module-log4j.xml`
+## Create and Configure Logging with `module-log4j.xml`
 
 1. **Create** a logging configuration file `src/main/resources/META-INF/module-log4j.xml` in the *gradebook-service* module.
 1. **Implement** the file as follows:
+
 	```xml
 	<?xml version="1.0"?>
 	<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
@@ -59,6 +62,7 @@ If you test adding an assignment, you won't see any messages in the log yet beca
 	    </category>
 	</log4j:configuration>
 	```
+
 1. **Create** a new Assignment in the Gradebook application. You should see a similar entry in your log:
 
 ```xml

@@ -1,14 +1,14 @@
-## Creating Reusable Page Structures with Page Templates
+# Creating Reusable Page Structures with Page Templates
 
 When a business begins to add content to their digital experience platform, it's important to provide consistent page design and enable rapid page creation throughout the platform. Some use cases may require a large amount of similar pages throughout the platform. Marketing might want every landing page to have the same layout and design. The platform administrator might find that having a few different basic page layouts ready to go improves efficiency when adding new pages to existing sites.
 
-#### Rapid Page Publication for Livingstone {#livingstone}
+## Rapid Page Publication for Livingstone {#livingstone}
 
 The Livingstone Hotels & Resorts team has decided that they need landing pages for each of their hotels and resorts. These new pages need to be in line with the hotel group's current marketing push and will also feature a blurb about the hotel and any current deals and packages. The design team would like all the pages to have a similar structure and design to stay in line with their mockups.
 
 Josiah Copeland wants an easy way to rapidly add pages with the same basic structure as a landing page for each of the hotels and resorts. The easier it is to add the landing pages and get them approved by Marketing, the faster the Livingstone platform can go live. Josiah also realizes that it is important to have a way to save the landing page design and structure in case Livingstone ever adds any new hotels or resorts, and, conversely, if the Livingstone design team ever changes their design, the landing pages should all inherit the necessary changes. This way, they don't need to edit each one individually.
 
-#### What are Page Templates? {#what}
+## What are Page Templates? {#what}
 
 Although individual pages can be created and modified manually, it's best to streamline the process as much as possible. One of the best ways to do this is by implementing Liferay's _Page Templates_.
 
@@ -82,7 +82,7 @@ Page Templates for Widget Pages can be found under the _Global Templates_ collec
 
 <br />
 
-#### Benefits of Page Templates {#benefits}
+## Benefits of Page Templates {#benefits}
 
 Page Templates are useful for rapidly adding similar types of pages throughout the platform. Using page templates for similar types of pages creates a consistent look and feel for your platform and simplifies site development. After initial platform development, Page Templates are still useful because all pages created from a page template can inherit the changes made to that template. This way, a design change for a certain type of page only needs to be made once if all pages of that type share the same template.
 
@@ -97,7 +97,7 @@ When a user creates a Widget Page Template and chooses to _Inherit changes_, any
 Note: When Inherit Changes is activated, individual instances of the Widgets on the page can no longer be customized. If you need to turn automatic propagation off, go to the Configuration menu for the page and turn off the Inherit Changes option.
 </div>
 
-#### Configuring Page Templates {#configure}
+## Configuring Page Templates {#configure}
 
 Once a Widget Page Template is created, there are a few other configuration options available to the user: 
 

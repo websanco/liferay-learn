@@ -4,19 +4,19 @@ title:  OSGi Benefits
 order: 7
 ---
 
-## OSGi Benefits
+# OSGi Benefits
 
-#### True Modularization
+## True Modularization
 
 In traditional Java EE web application development, because of the class loading and contextual restrictions, web applications tended to end up being monolithic and difficult to maintain.
 
 Developing applications based on the OSGi framework removes many of the restrictions of traditional web application development and allows for a truly modular application design and architecture. The OSGi framework takes control of application class loading, provides a dynamic application lifecycle management, and requires modules to explicitly declare what they expose of themselves. The service registry allows you to publish and bind services in a granular and controlled way across module boundaries. Bundle identity management with semantic versioning provides a way for multiple versions of the same bundle or library to coexist within the same container. 
 
-#### Solving "JAR Hell"
+## Solving "JAR Hell"
 
 If you have created complex web applications before, you probably have either encountered it by yourself or have at least heard about it: "JAR hell." At the heart of the problem lies the traditional Java class loading.
 
-#### Class Loading
+## Class Loading
 
 Class loading is a mechanism of the Java runtime environment to dynamically load classes. Practically, it means scanning all the jars on the classpath to find a certain requested class. 
 
@@ -24,7 +24,7 @@ What is a class loader? Each object in a Java runtime environment is linked to t
 
 According to the Servlet Specification, each Java EE web application has its own class loader in the runtime environment. In addition to class loaders of other web applications, there are also other class loaders like the common class loader of the application server and the Java Bootstrap class loader.
 
-#### How Does Class Loading Work?
+## How Does Class Loading Work?
 
 Class loaders are arranged in a hierarchical tree. When class scanning is executed, it is carried out in a hierarchical manner that can, depending on the runtime environment or application server, be configured. The most common class loading mode is the __parent first__ mode.
 
@@ -62,7 +62,7 @@ In this kind of scenario, dependent classes could be loaded by the web applicati
 
 This brings the application to the state known as *JAR hell*.
 
-#### How Does OSGi Help?
+## How Does OSGi Help?
 
 In the OSGi environment, each bundle has its own class loader, but the class loader delegation is completely managed by the OSGi container.
 
@@ -80,7 +80,7 @@ OSGi applications:
 
 <img src="../images/osgi-application.png" style="max-height:28%;" />
 
-#### Further OSGi Benefits
+## Further OSGi Benefits
 
 The OSGi framework service component model, which requires interfacing that enforces loose coupling, makes the code more modular and reusable. This also ensures consistency both in the code and in the design patterns.
 

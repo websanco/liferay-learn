@@ -4,9 +4,7 @@ title: Change Lifecycle State of an OSGi Bundle
 order: 2
 ---
 
-<h2 class="exercise">Exercises</h2>
-
-## Change Lifecycle State of an OSGi Bundle
+# Change Lifecycle State of an OSGi Bundle
 
 <div class="ahead">
 <h4>Exercise Goals</h4>
@@ -19,7 +17,7 @@ order: 2
 	</ul>
 </div>
 
-#### Stop the Hello OSGi Bundle
+## Stop the Hello OSGi Bundle
 
 If the *Hello OSGi* application is not running, right-click the *hello-osgi* project to open the context menu and click *Run As → OSGi Framework*. You should see the *Hello World!!* message on the console:
 
@@ -41,7 +39,7 @@ Use Gogo Shell to check the lifecycle state of our bundle:
 1. **Enter** `lb` to check the bundle state again.
 	* The bundle should now be in the *resolved* state, which means that all its dependencies have been satisfied, but the bundle is not running. Being in an *installed* state would mean that the bundle was deployed successfully, but some of its dependencies were not satisfied.
 
-#### Start the Hello OSGi Bundle
+## Start the Hello OSGi Bundle
 
 1. **Enter** `start [BUNDLE_ID]` to start the bundle again.
 	* You'll see the *Hello World!!* message from the `HelloBundleActivator` class on the console again:

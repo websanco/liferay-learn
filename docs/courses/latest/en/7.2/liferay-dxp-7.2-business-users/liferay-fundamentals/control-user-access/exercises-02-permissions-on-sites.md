@@ -1,6 +1,4 @@
-<h2 class="exercise">Exercises</h2>
-
-## Control Community Permissions on the Default Site
+# Control Community Permissions on the Default Site
 
 <div class="ahead">
 <h4>Exercise Goals</h4>
@@ -10,7 +8,8 @@
 </ul>
 </div>
 
-#### Go to the Default Site
+## Go to the Default Site
+
 1. **Open** the _Menu_.  
 2. **Open** the _Site Administration_ panel.
 3. **Click** _Go to Site_ for the default site.
@@ -18,7 +17,8 @@
 
 <img src="../images/go-to-site.png" style="max-height: 40%">
 
-#### Create a Web Moderator's Site Team in the Members Tab
+## Create a Web Moderator's Site Team in the Members Tab
+
 1. **Open** _People_ in the _Site Administration_ panel.
 2. **Click** _Teams_.
 3. **Click** the _Add_ button at the top right.
@@ -27,7 +27,8 @@
 
 <img src="../images/web-moderator-team.png" style="max-width: 100%">
 
-#### Add a User to the New Site Team
+## Add a User to the New Site Team
+
 1. **Click** into the new _Web Moderators_ team.
 2. **Click** the _Add_ button at the top right.
 3. **Check** your User from the list of Site Members.
@@ -36,7 +37,8 @@
 
 <img src="../images/added-users-to-wm.png" style="max-width: 100%">
 
-#### Create a New Community Page
+## Create a New Community Page
+
 1. **Open** _Site Builder_ in the _Site Administration_ panel.
 2. **Click** _Pages_.
 3. **Click** _Add_ at the top right.
@@ -47,7 +49,8 @@
 
 <img src="../images/created-new-page.png" style="max-width: 100%">
 
-#### Add a Message Board Widget to the New Page
+## Add a Message Board Widget to the New Page
+
 1. **Click** _Go to Site_ for the default site.
 2. **Go to** the _Community_ page.
 3. **Open** the _Add_ menu at the top right.
@@ -58,7 +61,8 @@
 
 <br />
 
-#### Grant the Web Moderator Team Permissions to the Message Board Widget
+## Grant the Web Moderator Team Permissions to the Message Board Widget
+
 1. **Click** on the _Options_ menu next to the _New Thread_ button.
 2. **Click** _Permissions_.
 3. **Check** every permission except for _Permissions_ for _Web Moderators_.
@@ -69,7 +73,8 @@
 
 ---
 
-#### Bonus Exercises:
+## Bonus Exercises:
+
 1. Create new Users or add existing Users to the Team.
 2. Add new Widgets to the page and grant permissions to the team.
 3. Log in as another User and test the Site Team permissions.

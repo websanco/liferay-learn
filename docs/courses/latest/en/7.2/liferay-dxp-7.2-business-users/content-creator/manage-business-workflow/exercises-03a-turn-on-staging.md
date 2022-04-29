@@ -1,6 +1,4 @@
-<h2 class="exercise">Exercises</h2>
-
-## Turning on Staging and Publishing Content
+# Turning on Staging and Publishing Content
 
 <div class="ahead">
 <h4>Exercise Goals</h4>
@@ -10,7 +8,8 @@
 </ul>
 </div>
 
-#### Enable Staging on the Main Livingstone Site
+## Enable Staging on the Main Livingstone Site
+
 1. **Open** the _Menu_.
 * **Go to** _`Publishing → Staging`_ in the _Site Administration_ panel.
  - Make sure you are on the main Livingstone Hotels and Resorts site.
@@ -23,7 +22,8 @@
 
 <br />
 
-#### Create the News and Specials Page
+## Create the News and Specials Page
+
 1. **Go to** _`Site Builder → Pages`_ in the _Site Administration_ panel.
 * **Click** the _Add_ button.
 * **Choose** _Widget Page_.
@@ -34,7 +34,8 @@
 
 <img src="../images/news-and-specials.png" style="max-height:45%;" />
 
-#### Add New Bavarian Resort Offer Web Content
+## Add New Bavarian Resort Offer Web Content
+
 1. **Click** _Go to Site_ in the _Site Administration_ panel.
 * **Click** on _News & Specials_ in the _Navigation_ menu.  
 * **Open** the _Add_ menu at the top right of the page.
@@ -48,7 +49,8 @@
 
 <img src="../images/barebone-bavarian-offer.png" style="max-height:100%;" />
 
-#### Publish Our Changes to Live
+## Publish Our Changes to Live
+
 1. **Click** the _Ready for Publication_ slider at the top.  
 * **Click** _Publish to Live_.  
 * **Type** `Initial Publication` as the _Name_.  
@@ -57,7 +59,8 @@
 
 <img src="../images/initial-publish.png" style="max-height:100%;" />
 
-#### Create a Content Update Page Variation
+## Create a Content Update Page Variation
+
 1. **Click** the _Options_ menu in the top right of the _Staging_ menu. 
 * **Choose** _Page Variation_.  
 * **Click** _Add Page Variation_.  
@@ -67,7 +70,8 @@
 
 <img src="../images/americana-offer-variation.png" style="max-height:40%;" />
 
-#### Add Hotel Americana Offer to the New Content Update Variation
+## Add Hotel Americana Offer to the New Content Update Variation
+
 1. **Click** on the _Add_ menu at the top right.
 * **Open** _Content_.
 * **Drag** the _Hotel Americana Special Offer_ content onto the page under the _Bavarian Special Offer_.
@@ -79,7 +83,8 @@
 
 <img src="../images/americana-offer-complete.png" style="max-height:40%;" />
 
-#### Publish the Content Update to Live
+## Publish the Content Update to Live
+
 1. **Click** the _Ready for Publication_ slider at the top.  
 * **Click** the _Publish to Live_ button.  
 * **Type** `Hotel Americana Offer Added` as the _Name_.  
@@ -90,6 +95,7 @@
 
 ---
 
-#### Bonus Exercises
+## Bonus Exercises
+
 1. View the changes we made in the live version of the site. Practice making changes and switching between staging and live in the UI.
 2. Create a special offer Web Content article for the Bali Resort location. Create another Page Variation that replaces the Bavarian Special Offer with the new Bali Special Offer. Publish the Page Variation to live.

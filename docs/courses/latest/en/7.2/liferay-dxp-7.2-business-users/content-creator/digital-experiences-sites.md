@@ -25,13 +25,13 @@ Coming Soon!
 <h4>Exercise Prerequisites</h4>
 <ul>
 <li>Docker Desktop installed for your device:
-    <ul>    
+    <ul>
         <li> Windows: <a href="https://docs.docker.com/docker-for-windows/install/">https://docs.docker.com/docker-for-windows/install/</a></li>
         <li> OSX: <a href="https://docs.docker.com/docker-for-mac/install/">https://docs.docker.com/docker-for-mac/install/</a></li>
         <li> Linux: <a href="https://docs.docker.com/install/linux/docker-ce/ubuntu/">https://docs.docker.com/install/linux/docker-ce/ubuntu/</a></li>
     </ul>
 	<li>Unzipped module exercise files in the following folder structure:
-	<ul>	
+	<ul>
 		<li> Windows: <code>C:\liferay</code></li>
 		<li> Unix Systems: <code>[user-home]/liferay</code></li>
 	</ul>

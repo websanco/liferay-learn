@@ -4,17 +4,18 @@ title: Integrate with External Systems
 order: 9
 ---
 
-## Integrate with External Systems
+# Integrate with External Systems
 
 Liferay Service Builder can automatically generate JSON and SOAP web services APIs for your service. As Liferay platform core services are created using the Service Builder pattern, they all have web service APIs available.
 
 In addition to Service Builder generated web services, it is possible to publish JAX-RS REST and JAX-WS endpoints for any ad-hoc service.
 
-#### Enabling Remote Services
+## Enabling Remote Services
 
 Setting the `remote-service` attribute to true in the Service Builder entity definition creates the remote service variant for the entity and adds the `@JSONWebService` annotation to the service interface, making all the public methods of that interface available as JSON web services:
 
 **service.xml**
+
 ```xml
 <entity name="Assignment" uuid="true" local-service="true" remote-service="true">
 ```
@@ -39,10 +40,10 @@ Setting the `remote-service` attribute to true in the Service Builder entity def
 )
 public interface AssignmentService extends BaseService {
 	...
-}	
+}
 ```
 
-#### Ignoring a Method
+## Ignoring a Method
 
 A method can be prevented from being exposed as a web service by setting the mode attribute to `JSONWebServiceMode.IGNORE` in the remote service implementation class:
 
@@ -53,7 +54,7 @@ A method can be prevented from being exposed as a web service by setting the mod
 public String myIgnoredMethod() {
 ```
 
-#### Defining HTTP Methods
+## Defining HTTP Methods
 
 JSON enabled services are mapped to GET or POST HTTP methods with the following logic:
 
@@ -74,7 +75,7 @@ public void doSomething() {
 
 <br /><br />
 
-#### Explicit Method Registration
+## Explicit Method Registration
 
 By setting the JSONWebService mode to `MANUAL`, the methods to be exposed can be declared manually. In the example below, only the getAssignment() method is exposed to the web service API.
 
@@ -94,7 +95,7 @@ public class AssignmentServiceImpl extends AssignmentServiceBaseImpl{
 	}    
 ```
 
-#### Configuring the JSON Web Service API Properties
+## Configuring the JSON Web Service API Properties
 
 Global JSON Web Service configuration is done in the [portal properties](https://github.com/liferay/liferay-portal/blob/7.2.x/portal-impl/src/portal.properties). For example, the following settings are available:
 
@@ -118,17 +119,17 @@ jsonws.web.service.paths.includes=get*,has*,is*,
 jsonws.web.service.paths.excludes=set*, add*
 ```
 
-#### Testing the JSON Web Service API
+## Testing the JSON Web Service API
 
 A JSON web service test page can be accessed at http://localhost:8080/api/jsonsws. URL, cURL, and JavaScript examples are provided:
 
 <img src="../images/jsonws-test.png" style="max-height:65%"/>
 
-#### Service Builder and SOAP API
+## Service Builder and SOAP API
 
 Liferay uses [Apache Axis](https://axis.apache.org/axis/) for the SOAP services. To generate the SOAP API for your custom application, the WSDD builder task has to be added to the project to create the web service definition. The WSDD creation process is described in detail in this [Liferay Developer Network article](https://dev.liferay.com/develop/tutorials/-/knowledge_base/7-2/creating-remote-services).
 
-#### Configuring the SOAP API Properties
+## Configuring the SOAP API Properties
 
 The hosts allowed to access the SOAP API can be defined explicitly in the portal-ext.properties:
 
@@ -136,13 +137,13 @@ The hosts allowed to access the SOAP API can be defined explicitly in the portal
 axis.servlet.hosts.allowed=192.168.100.100, 127.0.0.1, [SERVER_IP]
 ```
 
-#### Testing the SOAP API
+## Testing the SOAP API
 
 A test page is available at http://localhost:8080/api/axis
 
 <img src="../images/axis-test-page.png" style="max-height:100%"/>
 
-#### Publishing JAX-RS and JAX-WS Services
+## Publishing JAX-RS and JAX-WS Services
 
 Liferay supports publishing JAX-WS and JAX-RS services via the Apache CXF implementation. Publishing JAX-WS and JAX-RS services requires defining an endpoint and an extender. CXF endpoints are context paths the JAX web services are deployed to and accessible from. Extenders specify where the services are deployed:
 
@@ -157,7 +158,7 @@ Steps for Publishing a JAX Web Service:
 
 > See [Developer Network](https://dev.liferay.com/en/develop/tutorials/-/knowledge_base/7-0/jax-ws-and-jax-rs) for more information.
 
-#### REST Builder
+## REST Builder
 
 Liferay 7.2 provides a new API generator tool which consumes OpenAPI profiles and generates the API scaffolding: JAX-RS endpoints, parsing, XML generation, and advanced features like filtering or multipart (binary files) support. The developer only has to fill the resource implementations, calling liferay remote services. 
 

@@ -1,16 +1,16 @@
-## Simplifying Content Updates and Page Creation with Page Fragments
+# Simplifying Content Updates and Page Creation with Page Fragments
 
-Some aspects of your sites will need more attention than others. A site banner, for instance, is an important part of every public-facing page. The site banner is the primary place for the web team to create immediate brand recognition and helps set the identity of the entire platform. 
+Some aspects of your sites will need more attention than others. A site banner, for instance, is an important part of every public-facing page. The site banner is the primary place for the web team to create immediate brand recognition and helps set the identity of the entire platform.
 
 Marketing teams often work on portions of a site together and in greater detail. A platform that requires coding expertise to modify different aspects of the page could be a problem for marketing teams.
 
-#### Livingstone's Dynamic Digital Marketing Needs {#livingstone}
+## Livingstone's Dynamic Digital Marketing Needs {#livingstone}
 
 The Livingstone Hotels & Resorts web team needs to create a new dynamic banner that fits with their corporate identity, but ultimately the marketing team will be responsible for using and updating these banners on each of the sites. Martin needs a place to work with Kaito, the Web Developer, to incorporate the banners across the platform. They need a way to work together to quickly design and implement the visual presentation of the sites at a level below pages, while giving the marketing team the tools they need to maintain it from there.
 
-#### Liferay's Page Fragments {#frags}
+## Liferay's Page Fragments {#frags}
 
-Liferay DXP uses _Page Fragments_ to create dynamic content-centric pages. A Page Fragment can be any aspect of the page that needs to be reusable and editable. 
+Liferay DXP uses _Page Fragments_ to create dynamic content-centric pages. A Page Fragment can be any aspect of the page that needs to be reusable and editable.
 
 <div class="key-point">
 Key Point: <br />
@@ -30,7 +30,7 @@ Examples of what you can build with Page Fragments include:
 
 These examples only scratch the surface of what it is possible to create using Page Fragments. Page Fragments allow for greater versatility and customization, also creating a space for easy collaboration.
 
-#### Creating Page Fragments {#create}
+## Creating Page Fragments {#create}
 
 Creation of Page Fragments will be the responsibility of the front-end developers working to implement the designs provided. Once the Fragments are created, the Marketing team can take advantage of editing and reusing these fragments on any Livingstone Hotels & Resorts site.
 
@@ -58,7 +58,7 @@ The Fragment Editor allows you to edit Fragments from within the browser. It was
 Note: It is not necessary to include CSS and JavaScript to create a working Fragment. CSS provides style to the HTML you've used to create the Fragment, and JavaScript provides additional dynamic behavior (beyond editable elements) to the Fragment.
 </div>
 
-#### Creating Editable Elements {#edit}
+## Creating Editable Elements {#edit}
 
 It is also possible to specify which parts of the Fragment can be modified and which cannot. Elements within a particular Page Fragment can be either mandatory or removable as well as customizable. This allows Marketing and Content Teams to reuse Page Fragments over and over again instead of needing new Fragments every time they have to create unique Content.
 
@@ -71,7 +71,7 @@ Key Point: <br />
   <li>Links</li>
 </ul>
 </div>
- 
+
 ```html
 <h1><lfr-editable id="main-title" type="text">Take the trip of a lifetime</lfr-editable></h1>
 
@@ -84,9 +84,9 @@ Key Point: <br />
 </p>
 ```
 
-The `<lfr-editable>` tags require a unique id (one of four types) and content enclosed between them in order to create an editable element. 
+The `<lfr-editable>` tags require a unique id (one of four types) and content enclosed between them in order to create an editable element.
 
-In the example above, we're using ids for each element in the example (`main-title`, `main-image`, and `body-text`) and have elements of both the `text` and `image` type.  
+In the example above, we're using ids for each element in the example (`main-title`, `main-image`, and `body-text`) and have elements of both the `text` and `image` type.
 
 There are four `type` values that can be used in the `<lfr-editable>` tag:
 
@@ -97,7 +97,7 @@ There are four `type` values that can be used in the `<lfr-editable>` tag:
 
 These editable tags are what will allow Content Creators to modify and maintain the Fragments on various sites on the platform and even on multiple pages within the same site. In the above example, a Content Creator would be able to keep the core design while simply editing the title, image, or content when the Fragment is displayed on a page.
 
-Other than editable elements, Fragments can be made to be more dynamic by embedding widgets within the Fragment. Portlets can be embedded as widgets within Fragment code using the `<lfr-widget-[name]>` tag. For example, to add the Navigation widget to a Fragment, you could use the following code: 
+Other than editable elements, Fragments can be made to be more dynamic by embedding widgets within the Fragment. Portlets can be embedded as widgets within Fragment code using the `<lfr-widget-[name]>` tag. For example, to add the Navigation widget to a Fragment, you could use the following code:
 
 ```html
 <div>
@@ -105,7 +105,7 @@ Other than editable elements, Fragments can be made to be more dynamic by embedd
 </div>
 ```
 
-#### Reusing Page Fragments {#reuse}
+## Reusing Page Fragments {#reuse}
 
 Page Fragment administration can be found alongside the other assets in the _Site Administration_ panel under `Site Builder → Page Fragments`. Administrators can create what are called _Collections_ from this section of _Site Administration_, which helps to organize and distinguish the purpose of the grouped Fragments. Collections can be created to distinguish Fragments from one another and create groups like the following:
 

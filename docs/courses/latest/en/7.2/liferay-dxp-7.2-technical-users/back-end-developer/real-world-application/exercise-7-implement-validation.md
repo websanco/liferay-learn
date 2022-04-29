@@ -4,9 +4,7 @@ title: Implement Validation
 order: 7
 ---
 
-<h2 class="exercise">Exercises</h2>
-
-## Implement Validation
+# Implement Validation
 
 <div class="ahead">
 <h4>Exercise Goals</h4>
@@ -23,7 +21,7 @@ order: 7
 	</ul>
 </div>
 
-#### Customize the AssignmentValidationException to Support Message Stacking
+## Customize the AssignmentValidationException to Support Message Stacking
 
 The Assignment validation process may encounter multiple issues. Content can be too long and have illegal characters at the same time, for example. It would be convenient to provide feedback to the user of all the issues encountered at once. To support message stacking, we have to customize the generated `AssignmentValidationException` class we defined in the `service.xml`. 
 
@@ -50,7 +48,7 @@ The Assignment validation process may encounter multiple issues. Content can be 
 	```	
 1. **Organize** missing imports.
 
-#### Implement an Assignment Validator Interface
+## Implement an Assignment Validator Interface
 
 1. **Go to** the *gradebook-api* module.
 1. **Create** an interface `com.liferay.training.gradebook.validator.AssignmentValidator`.
@@ -80,7 +78,7 @@ The Assignment validation process may encounter multiple issues. Content can be 
 	}
 	```
 
-#### Export the `com.liferay.training.gradebook.validator` Package
+## Export the `com.liferay.training.gradebook.validator` Package
 
 1. Open the `bnd.bnd` file of the *gradebook-api* project.
 1. Export the `com.liferay.training.gradebook.validator` package. Afterwards the file will look like this:
@@ -98,7 +96,7 @@ The Assignment validation process may encounter multiple issues. Content can be 
 	-includeresource: META-INF/service.xml=../gradebook-service/service.xml
 	```
 
-#### Implement an Assignment Validator Service Component
+## Implement an Assignment Validator Service Component
 
 1. **Create** a class `com.liferay.training.gradebook.util.validator.AssignmentValidatorImpl`.
 1. **Implement** as follows:
@@ -268,7 +266,7 @@ The Assignment validation process may encounter multiple issues. Content can be 
 	}
 	```
 
-####  Implement Validation in the Assignment Service
+## Implement Validation in the Assignment Service
 
 The Assignment service can not only be accessed from the portlet user interface, but, for example, through a JSON web service call or even from a completely different application. To ensure validity, we have to implement validation in the service layer addAssignment() and updateAssignment() methods.
 
@@ -304,7 +302,7 @@ The Assignment service can not only be accessed from the portlet user interface,
 1. **Organize** missing imports.
 1. **Rebuild** the service.
 
-#### Implement Feedback Messages Dispatching on the Controller Layer
+## Implement Feedback Messages Dispatching on the Controller Layer
 
 Validation is now implemented on the service layer. As we call the services on the controller layer through the MVC commands in the *gradebook-web* module, we have to pass the feedback messages from the service layer to the user interface there.
 
@@ -317,12 +315,13 @@ You've probably noticed the default success message the platform sets when you a
 	```properties
 	"javax.portlet.init-param.add-process-action-success-action=false"
 	```	
-	
+
 Modify the `doProcessAction()` methods of the three MVC Action Command classes in the *gradebook-web* module, calling the service to set the success and error messages for the user interface:
 
 1. **Update** the code of all of the following MVC Action Command classes as follows:
-	
+
 **AddAssignmentMVCActionCommand.java**
+
 ```java
 package com.liferay.training.gradebook.web.portlet.action;
 
@@ -436,6 +435,7 @@ public class AddAssignmentMVCActionCommand extends BaseMVCActionCommand {
 ```
 
 **EditAssignmentMVCActionCommand.java**
+
 ```java
 package com.liferay.training.gradebook.web.portlet.action;
 
@@ -542,8 +542,9 @@ public class EditAssignmentMVCActionCommand extends BaseMVCActionCommand {
 	protected AssignmentService _assignmentService;
 }
 ```
-	
+
 **DeleteAssignmentMVCActionCommand.java**
+
 ```java
 package com.liferay.training.gradebook.web.portlet.action;
 
@@ -612,11 +613,11 @@ public class DeleteAssignmentMVCActionCommand extends BaseMVCActionCommand {
 
 <br />
 
-#### Display Feedback Messages on the User Interface
+## Display Feedback Messages on the User Interface
 
 The last thing to do for displaying the error messages from the service layer is to implement the user interface. We'll be using the `<liferay-ui>` tag library for this purpose.
 
-#### init.jsp
+## init.jsp
 
 Add an import for the `SessionErrors` class for showing the error message details:
 1. **Add** an import in `src/main/resources/META-INF/resources/init.jsp`:
@@ -624,7 +625,7 @@ Add an import for the `SessionErrors` class for showing the error message detail
 	<%@ page import="com.liferay.portal.kernel.servlet.SessionErrors"%>
 	```
 
-#### view.jsp
+## view.jsp
 
 After we add, update, or delete an Assignment successfully, we are redirected to the main list view, implemented with the `view.jsp`:
 1. **Add** `<liferay-ui>` tags to `src/main/resources/META-INF/resources/view.jsp` just after the `init.jsp` include:
@@ -641,7 +642,7 @@ After we add, update, or delete an Assignment successfully, we are redirected to
 
 <br />
 
-#### edit_assignment.jsp
+## edit_assignment.jsp
 
 1. **Add** `<liferay-ui>` tags to `src/main/resources/META-INF/resources/assignment/edit_assigment.jsp` just after the `init.jsp` include:
 	```html
@@ -654,7 +655,7 @@ After we add, update, or delete an Assignment successfully, we are redirected to
 	<liferay-ui:error key="assignmentDescriptionEmpty" message="error.assignment-description-empty" />
 	```
 
-#### Test the Server-Side Validation
+## Test the Server-Side Validation
 
 Server-side validation is now implemented. Let's test it.
 
@@ -667,7 +668,7 @@ Server-side validation is now implemented. Let's test it.
 
 > If you get a `NoSuchMethodError` error in your log, remove and redeploy the modules from the server.
 
-#### Implement Client-Side Validation
+## Implement Client-Side Validation
 
 Detecting invalid input early on the user interface, client-side, improves the user experience and reduces server load. Remember, however, that user interface validation, typically JavaScript-based, is more about usability than security: if you disable page JavaScripts, your security is gone.
 
@@ -781,7 +782,7 @@ The complete `edit_assignment.jsp` file will look like this:
 </div>
 ```
 
-#### Test the Client-Side Validation
+## Test the Client-Side Validation
 
 1. **Open** the Gradebook application in your web browser.
 1. **Click** on the plus sign to add an Assignment

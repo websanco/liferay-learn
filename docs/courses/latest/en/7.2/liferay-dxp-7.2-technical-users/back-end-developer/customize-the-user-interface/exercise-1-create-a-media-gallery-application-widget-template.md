@@ -6,7 +6,7 @@ order: 1
 
 <h2 class="exercise">Exercises</h2>
 
-## Create a Media Gallery Widget Template
+# Create a Media Gallery Widget Template
 
 <div class="ahead">
 <h4>Exercise Goals</h4>
@@ -29,7 +29,7 @@ order: 1
 
 <img src="../images/upload-to-gallery.png" style="max-height:30%;"/>
 
-#### Create a Custom Widget Display Template
+## Create a Custom Widget Display Template
 
 1. **Click** the *Options* icon in the top left corner of the Media Gallery.
 * **Choose** *Configuration*.

@@ -1,4 +1,4 @@
-## Simulating A Production Environment
+# Simulating A Production Environment
 
 Deploying from a bundle is the easiest way to install Liferay, but in most environments you already have an existing app server setup you'd like to use. If we can't use a bundle, how do we install from scratch?
 
@@ -13,7 +13,7 @@ As a webapp, Liferay can be installed on a wide range of Java servers:
     If we want the full experience of Java EE and access to the Java EE suite of features, we should use a Full Profile Application Server.
 </div>
 
-### Using A Full Profile Application Server {#usingj2ee}
+## Using A Full Profile Application Server {#usingj2ee}
 
 A Full Profile Application Server implements all of the features outlined in the Java EE Spec. For many cases, this will be more than is required for your project, and you'll want to go with a Web Profile Server. In other cases, you will need all or nearly all of the features, so you should go with the Full Profile Application Server.
 
@@ -53,7 +53,7 @@ Whatever server you're using, Wildfly, its enterprise-supported cousin JBoss EAP
 - Configuring the server container to run as a daemon if required
 - Customizing any settings needed for deploying Liferay or your other webapps
 
-### Supporting Apps {#support}
+## Supporting Apps {#support}
 
 Liferay has a number of global dependencies:
 
@@ -64,7 +64,7 @@ Liferay has a number of global dependencies:
 
 All we need to do is copy the appropriate dependencies to our server's library folder to make it available to Liferay and supporting apps. We'll add these dependencies to our server in the exercises for this section.
 
-### Customizing Server Settings {#customsettings}
+## Customizing Server Settings {#customsettings}
 
 Each server has different settings to customize:
 
@@ -170,7 +170,7 @@ Wildfly provides three methods of deployment:
 
 This flexibility allows you to choose what fits your environment and toolchain the best.
 
-### Managing JNDI Connections {#managejndi}
+## Managing JNDI Connections {#managejndi}
 
 Once we decide to fully install Liferay on a Java EE server, we can take advantage of offloading common resources to external servers:
 
@@ -233,7 +233,7 @@ Although simple and easy to manage, this method has some disadvantages:
 
 We'll need to find a more sustainable, secure method for configuring external connections.
 
-### Using JNDI {#usejndi}
+## Using JNDI {#usejndi}
 
 Instead of directly configuring connections to JDBC or the mail server, we can *point* to the right connection. Using a Java app server gives us access to JNDI, the virtual directory name interface.
 
@@ -271,6 +271,7 @@ Just like changing the JDBC connection settings directly, setting a JNDI name in
 - Mail Server
 
 These are done with very simple properties:
+
 ```properties
 jdbc.default.jndi.name
 mail.session.jndi.name
@@ -288,7 +289,7 @@ Full Profile Application Servers like Wildfly fully support the broad range of J
 
 DBAs typically handle any setup and configuration of the database servers and can let you know if your data source needs *XA* support.
 
-### Configuring Data Sources {#configdata}
+## Configuring Data Sources {#configdata}
 
 Many Full Profile Application Servers have robust management consoles to manage connections and more. Configuration can also be done through XML and properties files in most cases. We'll configure our Wildfly datasource configuration in the XML files directly, but you could also setup in the console.
 

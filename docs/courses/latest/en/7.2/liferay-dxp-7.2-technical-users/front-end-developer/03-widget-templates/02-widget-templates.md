@@ -1,16 +1,16 @@
-## Customizing Widget Presentation
+# Customizing Widget Presentation
 
-In order to ensure brand consistency, developers need to be able to use and develop functionality as well as control the presentation. Liferay DXP comes with a number of widgets that can be used to aggregate and display content on Site Pages, providing the functionality needed to provide different User Experiences. Developers can make use of _Widget Templates_ to ensure that the Widget presentation are in line with the branding of the platform.
+<!-- In order to ensure brand consistency, developers need to be able to use and develop functionality as well as control the presentation. Liferay DXP comes with a number of widgets that can be used to aggregate and display content on Site Pages, providing the functionality needed to provide different User Experiences. Developers can make use of _Widget Templates_ to ensure that the Widget presentation are in line with the branding of the platform.
 
 <img src="../images/widget-content-list.png" style="max-height: 100%;">
 
-#### Displaying Livingstone's Content {#livingstone}
+## Displaying Livingstone's Content {#livingstone}
 
 The Livingstone webteam is responsible for developing and maintaining Blog and Article content that was previously published in their magazine, called _Livingstone Life_. The team will be using Widget pages along with a number of different widgets like the Asset Publisher, Blogs, Tags and Category Navigation. In order to ensure an consistant User Experience and the best presentation, Kaito and his team will need to create Widget Templates for these different Widgets.
 
 <img src="../images/wt-example.png" style="max-height: 100%;">
 
-#### Using Widget Templates {#widgettemplates}
+## Using Widget Templates {#widgettemplates}
 
 Widget Templates are FreeMarker templates that can be used to modify the presentation of a number of existing widgets as well as custom applications built by back-end developers. They reinforce styling, but their main purpose is to display, or _render_, different types of assets. 
 
@@ -45,7 +45,7 @@ With Widget Templates, developers can:
 Note: For more detailed information on creating the Java components needed to register a widget for use with Widget Templates, setting up the permissions for the widget in the widgets's <code>default.xml</code>, and exposing the Widget Template options via the Widget's JSP, check out the Liferay documentation at <a href="https://portal.liferay.dev/docs/7-0/tutorials/-/knowledge_base/t/implementing-application-display-templates">https://portal.liferay.dev/docs/7-0/tutorials/-/knowledge_base/t/implementing-application-display-templates</a>. 
 </div>
 
-#### Creating Widget Templates {#creating}
+## Creating Widget Templates {#creating}
 
 Widget Templates can be created globally or for individual Sites. This can be done by going to _`Site Builder → Widget Templates`_ in the Site Administration panel or by deploying Widget Templates through a Liferay Theme's resources importer. When developing on the platform itself, developers can make use of the _Template Editor_ to make use of a number of common variables used in the specific Widget Template being developed. For example, the Asset Publisher widget displays any number of configured Assets. The _Asset Entries_ Field in the editor gives developers a starting point by using an `#if` statement that checks for content entries:
 
@@ -74,4 +74,4 @@ Note: Administrators can set default Widget Templates for all Sites or specific 
   <li>Widget Templates can be used on both ___________________________ and ___________________________ widgets.</li>
   <li>Widget Templates are created with ___________________________, and developers can take advantage of the default variables in the Liferay Template Editor.</li>
 </ul>
-</div>
+</div> -->

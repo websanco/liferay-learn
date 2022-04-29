@@ -4,7 +4,7 @@ title: Sharing Features
 order: 5
 ---
 
-## Sharing Features
+# Sharing Features
 
 OSGi applications typically consist of multiple bundles. By default, bundles have a private class and package visibility, and they do not expose any features to other bundles in the container. By *features* in this context, we mean:
 
@@ -18,7 +18,7 @@ There are three primary ways to share *features* between bundles:
 * Provide Capability - Require Capability
 * Require bundle 
 
-#### Export Package - Import Package
+## Export Package - Import Package
 
 This method is meant to make classes available for other bundles.
 
@@ -48,7 +48,7 @@ Import-Package: com.liferay.training.osgi.service.api, org.osgi.framework;versio
 Automatic-Module-Name: com.liferay.training.osgi.service.impl
 ```
 
-#### Provide Capability - Require Capability
+## Provide Capability - Require Capability
 
 A capability describes a functionality for the OSGi Container. In general terms, a *capability* is defined by two main attributes:
 
@@ -71,11 +71,11 @@ Require-Capability =\
 	osgi.service;filter:="(objectClass=com.liferay.training.gradebook.service.AssignmentService)";effective:=active
 ```
 
-#### Require Bundle
+## Require Bundle
 
 Requiring a bundle in another bundle defines an explicit dependency contract and a tight coupling between the bundles, as all the packages in the imported bundle are exposed automatically to the importing bundle. Generally, __this approach should be avoided__.
 
-#### Links and Resources
+## Links and Resources
 
 * Raymond Auge's Blog About Using Requirements and Capabilities: https://blog.osgi.org/2015/12/using-requirements-and-capabilities.html
 

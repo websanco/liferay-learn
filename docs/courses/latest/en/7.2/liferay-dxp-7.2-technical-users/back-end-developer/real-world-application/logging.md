@@ -4,7 +4,7 @@ title: Logging
 order: 10
 ---
 
-## Logging
+# Logging
 
 Logging is a powerful method for emitting application metrics and statistics and for helping with troubleshooting and resolving production issues. When properly used, logging improves application quality and maintainability. Examples of use cases:
 
@@ -14,7 +14,7 @@ Logging is a powerful method for emitting application metrics and statistics and
 
 Although the role of logging in troubleshooting can be essential, in many cases, logging doesn't expose the root cause, but just detects a problem. Debugging helps find the underlying problem.
 
-#### Overview
+## Overview
 
 The following out-of-the-box options are available to implement logging in your custom modules:
 
@@ -27,7 +27,7 @@ Except for the Java native logger, all the options use SLF4J and [Log4J](https:/
 
 Let's take a look at the different ways to invoke logging. 
 
-#### Using Liferay Native Logger 
+## Using Liferay Native Logger 
 
 Liferay native logger is called via `LogFactoryUtil.getLog(CLASS_NAME)`. 
 
@@ -65,18 +65,20 @@ public class EmployeeHandler {
 }
 ```
 
-#### Using SLF4J Logger
+## Using SLF4J Logger
 
 In this approach, you'd first declare the dependency for the SLF4J API. The logger could then be invoked by calling the SLF4J `LoggerFactory`, as in the example below. This logging approach is the recommended one, as it doesn't bind the code to any specific implementation:
 
 <br />
 
 **build.gradle**
+
 ```groovy
 compileOnly group: "org.slf4j", name: "slf4j-api", version: "1.7.2"
 ```
 
 **Java class**
+
 ```java
 package com.liferay.training.sample.log;
 
@@ -110,7 +112,7 @@ public class EmployeeHandler {
 }
 ```
 
-#### OSGi Log Service
+## OSGi Log Service
 
 OSGi Log Service is a message logger service for the OSGi framework, specified in the OSGi Compendium. OSGi Log Service has three main components:
 
@@ -165,7 +167,7 @@ For an OSGi LogService to start Liferay logging, there has to be a level definit
 
 > It should be noticed that this logging approach is limited to OSGi components.
 
-#### Configuring Logging
+## Configuring Logging
 
 Logging levels can be globally configured platform-wide from the Control Panel. Changes made there won't, however, persist after restart:
 
@@ -224,7 +226,7 @@ Below is an example of the `module-log4j.xml` configuration file. Note the packa
 </log4j:configuration>
 ```
 
-#### Other Logging-Related Settings
+## Other Logging-Related Settings
 
 Although SQL logging is not directly related to Liferay's platform, you can enable logging for Hibernate queries in portal-ext.properties with the following setting:
 
@@ -240,7 +242,7 @@ javascript.log.enabled=true
 
 > Remember to disable Hibernate logging in production systems as it produces excessive amount of data.
 
-#### Wrapping it Up
+## Wrapping it Up
 
 If you choose to use platform-provided logging functionalities, using SLF4J Logger is recommended for the best code portability. 
 

@@ -1,6 +1,4 @@
-<h2 class="exercise">Exercises</h2>
-
-## Automating Publishing with the Asset Publisher
+# Automating Publishing with the Asset Publisher
 
 <div class="ahead">
 <h4>Exercise Goals</h4>
@@ -12,7 +10,8 @@
 </ul>
 </div>
 
-#### Create a What's New Page for Livingstone Life
+## Create a What's New Page for Livingstone Life
+
 1. **Open** the _Menu_.
 * **Click** the _Site Selector_ in the _Site Administration_ panel.
 * **Click** the _My Sites_ tab.
@@ -26,20 +25,21 @@
 
 <img src="../images/livingstone-life-new.png" style="max-height:27%;" />
 
-#### Configure the Asset Publisher
+## Configure the Asset Publisher
+
 1. **Click** _Go to Site_ in the _Site Administration_ panel.
 * **Click** the _What's New_ page in the _Navigation Menu_.
 * **Click** the _Configure Page_ icon in the top right corner.
 	- This is the icon that looks like a gear.
 * **Click** to slide the _Inherit Changes_ slider from _YES_ to _NO_.
 * **Click** _Save_.
-* **Click** the _Options_ icon above the _Asset Publisher_.  
-* **Click** on _Configuration_.  
+* **Click** the _Options_ icon above the _Asset Publisher_.
+* **Click** on _Configuration_.
 * **Expand** the _Source_ section.
 * **Choose** _Blogs Entry_ in the drop-down field.
 * **Expand** the _Ordering_ section.
 * **Choose** _Publish Date_ in the _Order by_ drop-down field.
-* **Click** the _Save_ button.  
+* **Click** the _Save_ button.
 * **Close** the pop-up.
 * **Click** the title _Asset Publisher_.
     - This should display a text box where you can change the title of the Asset Publisher.
@@ -48,7 +48,8 @@
 
 <img src="../images/asset-publisher-configured.png" style="max-height:24%;" />
 
-#### Import a Page Fragment for the Display Page
+## Import a Page Fragment for the Display Page
+
 1. **Open** the _Menu_.
 * **Click** the _Site Selector_ in the _Site Administration_ panel.
 * **Click** the _My Sites_ tab.
@@ -63,7 +64,8 @@
 
 <img src="../images/imported-display-page.png" style="max-height:20%;" />
 
-#### Create a Display Page
+## Create a Display Page
+
 1. **Go to** _`Site Builder → Pages`_ in the _Site Administration_ panel.
 * **Click** on the _Display Page Templates_ tab.
 * **Click** the _Add_ button.
@@ -77,7 +79,8 @@
 
 <img src="../images/news-fragment.png" style="max-height:20%;" />
 
-#### Map Web Content Fields to the Fragment
+## Map Web Content Fields to the Fragment
+
 1. **Click** on _Map Article Title Here_.
 * **Click** _Map_.
 * **Choose** the _Article Title_ mapping field.
@@ -90,7 +93,8 @@
 
 <img src="../images/mapped-title.png" style="max-height:33%;" />
 
-#### Map Remaining Fields to the Fragment
+## Map Remaining Fields to the Fragment
+
 1. **Click** on _Map Image Here_.
 * **Click** _Map_.
 * **Choose** the _Story Image_ mapping field.
@@ -106,28 +110,30 @@
 
 <img src="../images/news-display.png" style="max-height:25%;" />
 
-#### Add New Web Content
+## Add New Web Content
+
 Finally, let's create some new Web Content to test out our Display Page.
-1. **Open** the _Menu_. 
+1. **Open** the _Menu_.
 * **Go to** _`Content & Data → Web Content`_ in the _Site Administration_ panel.
 * **Click** _`Add → News`_.
     * Choose the top option if you see two.
 * **Type** `New GM driven by desire to bring hotel back to its roots` in both the _Title_ and _Article Title_ fields.
-* **Type** `Natalia Michaels` in the _Byline_ field. 
+* **Type** `Natalia Michaels` in the _Byline_ field.
 * **Choose** today's date in the _Posted on_ field.
 * **Click** _Select_ under the _Story Image_ field.
 * **Click** _Select File_.
 * **Choose** the `lounge.jpg` file from your Course Module exercises folder.
 * **Click** _Add_.
 * **Type** `Dan Torrance is bringing fresh ideas to hotel management` in the _Lead_ field.
-* **Open** the `news-text.txt` file from your Course Module exercises folder. 
+* **Open** the `news-text.txt` file from your Course Module exercises folder.
 * **Copy** the contents of the file.
 * **Paste** the contents into the _Content_ field.
 * **Click** _Publish_.
 
 <img src="../images/new-web-content.png" style="max-height:30%;" />
 
-#### View the Display Page
+## View the Display Page
+
 1. **Click** _Go to Site_ in the _Site Administration_ panel.
 * **Click** on the _Hotels & Resorts_ page.
 * **Click** the _Add_ icon to open the _Add_ panel.
@@ -139,7 +145,8 @@ Finally, let's create some new Web Content to test out our Display Page.
 
 ---
 
-#### Bonus Exercises
+## Bonus Exercises
+
 1. Create a second Display Page using any existing Page Fragments. Use the 4 Image Structure we imported in the first exercise.
 2. Create new Web Content using the 4 Image Structure and view the mapped Web Content in your custom Display Page.
 

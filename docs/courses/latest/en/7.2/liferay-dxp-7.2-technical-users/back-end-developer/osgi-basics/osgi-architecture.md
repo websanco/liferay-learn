@@ -4,13 +4,13 @@ title:  OSGi Architecture
 order: 6
 ---
 
-## OSGi Architecture
+# OSGi Architecture
 
 OSGi has two main specifications: *OSGi Core* and *OSGi compendium*. 
 
 <img src="../images/osgi-specification.png" style="max-height:20%;" />
 
-#### OSGi Core
+## OSGi Core
 
 The [Core specification](https://osgi.org/specification/osgi.core/7.0.0/) specifies APIs, which are the bare minimum to run OSGi applications, and which every framework implementation must implement.	
 
@@ -21,7 +21,7 @@ There are several core implementations, like:
 * Knopflerfish
 * ProSyst
 
-#### OSGi Compendium
+## OSGi Compendium
 
 The [Compendium specification](https://osgi.org/specification/osgi.cmpn/7.0.0/) is a collection of additional OSGi framework services and APIs, which may be used in a modular fashion, meaning that implementations may only implement selected parts of the compendium. 
 
@@ -36,7 +36,7 @@ dependencies {
 }
 ```
 
-#### OSGi Subsystems
+## OSGi Subsystems
 
 All in all, the OSGi framework consists of five layers, also called subsystems:
 

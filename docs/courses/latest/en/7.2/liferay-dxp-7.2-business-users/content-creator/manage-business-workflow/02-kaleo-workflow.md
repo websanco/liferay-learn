@@ -1,8 +1,8 @@
-## Kaleo Workflow Definitions
+# Kaleo Workflow Definitions
 
 In the last section, we saw the default Single Approver workflow and walked through how it works. But, many times, content submissions require review tasks with multiple reviewers. Liferay DXP comes out of the box with tools to help you create the exact workflow you need for your Content Creation processes.
 
-#### Livingstone's Custom Workflows {#livingstone}
+## Livingstone's Custom Workflows {#livingstone}
 
 Content added to the front page for the Livingstone Hotels & Resorts corporate site needs to be reviewed by both Josiah, the platform administrator, and Natalia, the marketing lead. The Single Approver definition won't work in this case, as several reviewers must go over the content. Additionally, because of the nature of the content added to the page, reviews must be completed in a timely manner to make sure that time-sensitive content is displayed as soon as possible. For this reason, a requirement has been set that all reviews for corporate site content be completed and submitted within 72 hours. A new workflow definition will need to be created to meet the following requirements for this new business review process:
 
@@ -14,7 +14,7 @@ Content added to the front page for the Livingstone Hotels & Resorts corporate s
 	<figcaption style="font-size: x-small">Fig.1 Livingstone's workflow, visualized</figcaption>
 </figure>
 
-#### Creating Custom Definitions with the Kaleo Designer {#custom}
+## Creating Custom Definitions with the Kaleo Designer {#custom}
 
 Administrators can take advantage of the _Kaleo Designer_ to create their custom workflow definition graphically and set up all the components for the workflow.
 
@@ -96,7 +96,7 @@ Key Point: <br />
 	<figcaption style="font-size: x-small">Fig.5 Setting up notifications for an assignment in Kaleo</figcaption>
 </figure>
 
-#### Advanced Options {#advanced}
+## Advanced Options {#advanced}
 
 The review process for your site may require simultaneous and timely reviews in order to avoid delays. Site Administrators want to make sure that content is reviewed within 72 hours of being posted to comply with these requirements. To allow for multiple reviews, Administrators can update the current definition to include a fork and join. Using the fork and join will allow for a more streamlined process where reviewers are notified and can review simultaneously.
 

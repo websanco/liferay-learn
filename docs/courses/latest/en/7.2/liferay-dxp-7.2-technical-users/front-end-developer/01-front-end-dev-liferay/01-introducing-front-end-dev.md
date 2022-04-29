@@ -1,5 +1,5 @@
-## Adding Custom Branding to the Liferay Platform
-
+# Adding Custom Branding to the Liferay Platform
+<!-- 
 One of the basic needs of any business is the need to control branding and design when developing different websites and apps to provide users with the best user experience. To start, each site needs its own branding, controlling things like logos, fonts, color schemes, etc., as well as the responsive framework. Brand control also includes page and content presentation and different JavaScript widgets and functionality. 
 
 Front-end developers are familiar with a number of tool-sets and have experience with different languages and frameworks. Working with a platform that allows front-end developers to use the knowledge and skills they have will make for a much better development experience. Liferay's open development framework makes this possible. 
@@ -9,7 +9,7 @@ Front-end developers are familiar with a number of tool-sets and have experience
 	<figcaption style="font-size: x-small">Fig.1 Design and Planning</figcaption>
 </figure>
 
-#### Livingstone Hotels & Resorts {#livingstone}
+## Livingstone Hotels & Resorts {#livingstone}
 
 Livingstone Hotels & Resorts is a premier hospitality company responsible for creating and maintaining a number of different sites for their hotels, resorts, and corporate employees. The web-team is responsible for implementing the branding and functionality needed to provide the ideal user experience for customers and employees. 
 
@@ -19,7 +19,7 @@ Natalia Michaels from Marketing and Martin Llewellyn from Design are responsible
 * React
 * Angular 
 
-#### Front-End Development on Liferay DXP {#introfrontend}
+## Front-End Development on Liferay DXP {#introfrontend}
 
 In order to customize the branding and presentation of the platform, developers have different options. These options give developers the ability to control the high-level experience as well as the specific content, widget, and component presentation.
 
@@ -33,7 +33,7 @@ Key Point: <br />
     </ul>
 </div>
 
-#### Themes and Layout Templates {#themes}
+## Themes and Layout Templates {#themes}
 
 Themes and Layout Templates are modules that give developers the ability to customize the global look-and-feel of a site as well as the layout of the pages with widgets on them. Themes are comprised of HTML, CSS, and JavaScript source files that control each page in a site as well as some site configuration options. Layouts are comprised of TPL source files and are based on the bootstrap grid system. Using both of these modules, developers have full control over the global branding and structure of their sites and pages.
 
@@ -44,7 +44,7 @@ Themes and Layout Templates are modules that give developers the ability to cust
 
 <br/>
 
-#### Web Content and Widget Display Templates {#displaytemplates}
+## Web Content and Widget Display Templates {#displaytemplates}
 
 Once the global design and page structure has been created, developers can create templates on the platform that control the presentation of the different widgets and content on the site. 
 
@@ -68,9 +68,10 @@ Each page in a site can also contain a number of widgets that display different 
 	<figcaption style="font-size: x-small">Fig.3 Widget Display Template Example</figcaption>
 </figure>
 
-#### Page Fragments: Sections and Components {#fragments}
+## Page Fragments: Sections and Components {#fragments}
 
 Finally, _Page Fragments_ will give the developers the tools they need to craft reusable page sections and components that can be used on pages along with other Assets or on _Content Pages_. Fragments can help bridge the gap between front-end developers and marketing/content teams responsible for creating and managing sites. These sections and components can be made editable by developers so that, once deployed, the content teams can edit them as needed to fit the use case and design of the site they're working on. Fragments can be created in two different ways:
+
 1. On the platform, using the Page Fragment UI in Site Administration
 2. Using the Liferay Fragments yeoman generator
 
@@ -106,4 +107,4 @@ Key Point: <br />
     </ul>
   <li>____________________ are reusable sections and components of a site page.</li>
 </ul>
-</div>
+</div> -->

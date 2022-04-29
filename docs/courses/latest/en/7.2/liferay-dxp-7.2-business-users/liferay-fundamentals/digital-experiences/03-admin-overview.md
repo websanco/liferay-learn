@@ -1,15 +1,15 @@
-## Liferay DXP Administration Overview and Navigation
+# Liferay DXP Administration Overview and Navigation
 
 Now that we've looked at how Liferay DXP can solve numerous business problems, let's dive into the product itself. 
 
-#### Menus and Administration {#menuadmin}
+## Menus and Administration {#menuadmin}
 
 On the Liferay DXP platform, there are three primary menus that contain all the features discussed in the previous section:
 1. The **Control Menu** 
 2. The **Product Menu** 
 3. The **Personal Menu**
 
-#### Control Menu {#control}
+## Control Menu {#control}
 
 The **Control Menu** is the menu at the top of each page. This menu will change what it displays based on context. For example, from a Site, administrators are given access to the following:
 * The Product Menu to the left
@@ -43,7 +43,7 @@ The <b>Control Menu</b>:
 </ul>
 </div>
 
-#### Product Menu {#product}
+## Product Menu {#product}
 
 The **Product Menu**, seen as simply _the Menu_ in the product, is accessed on the left side of the Control Menu. This is the menu that contains the majority of the Application Suite features. Inside the Product Menu, there are two _Panels_ that distinguish the features:
 1. The _Control Panel_
@@ -67,7 +67,7 @@ The <b>Product Menu</b> is the primary hub for configuring the following:
 
 <br />
 
-#### Product Menu Panels {#panels}
+## Product Menu Panels {#panels}
 
 The **Control Panel** is the top panel in _the Menu_. This panel contains the majority of the applications the are included in the _Liferay Foundation_ suite as well as some from the _Liferay Forms and Workflow_ suite. These applications are included in the following sections:
 1. **Users**: Includes User management applications that allow admins to organize, control access, monitor, and provide password policies for Users on the platform
@@ -104,7 +104,7 @@ The **Site Administration Panel** is where creating and managing Sites happens. 
 
 <br /><br />
 
-#### The Personal Menu {#personalmenu}
+## The Personal Menu {#personalmenu}
 
 The **Personal Menu** can be found at the top right of each page and allows Users to manage their account settings or sign out of the platform. Users will have access to this menu, even if they do not have the permissions to access the other two menus. The Personal Menu includes:
 1. Access to the following:
@@ -122,7 +122,7 @@ The **Personal Menu** can be found at the top right of each page and allows User
 	<figcaption style="font-size: x-small">Fig.6 The Personal Menu</figcaption>
 </figure>
 
-#### Help Center and Documentation {#help}
+## Help Center and Documentation {#help}
 
 For more information on many of the resources that were highlighted in this module or on development and system administration in Liferay, you can visit the Liferay Help Center at https://help.liferay.com. The Liferay Help Center is home to the official documentation, user guides, tutorials, and Learning Paths for developing in Liferay, with community-contributed resources like the Liferaypedia. You can also check out the Liferay Community site at https://community.liferay.com or our traditional documentation at https://dev.liferay.com. 
 

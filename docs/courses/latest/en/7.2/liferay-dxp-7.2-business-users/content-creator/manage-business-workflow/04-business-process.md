@@ -1,12 +1,12 @@
-## Business Process Considerations
+# Business Process Considerations
 
 Staging provides an excellent way of creating, reviewing, and publishing content, but streamlining a workflow is the key to unlocking its full potential. It is critical to notify the web team, marketing team, and design team when it is time to make and review changes in order to optimize efficiency when building your platform. When reviewing pages in a site, it's also very important to be able to see what the page will look like on different devices with various screen sizes. Implementing all of this with a work-in-progress environment before pages are published is important to platform development.
 
-#### Updating Livingstone's Platform Systematically {#livingstone}
+## Updating Livingstone's Platform Systematically {#livingstone}
 
 So far, the Livingstone Hotels & Resorts platform has been updated in a kind of free-for-all. Some pages have had a specific workflow implemented, but a lot of the platform has been built by Content Creators adding their content while the Design team has created the layouts and look. Josiah has been left to organize it all. Josiah wants to define a workflow for the entire platform that notifies everyone when scheduled updates for the platform are going to go live, and by when they need to get things finished. He wants to create a system that minimizes labor while maximizing the amount of content they are able to produce without error.
 
-#### Implementing Workflows Across the Platform {#work}
+## Implementing Workflows Across the Platform {#work}
 
 As we learned in an earlier section, creating a review process in Liferay DXP is easy using _Workflows_. Although publishing without a workflow might work well for smaller projects, publishing large-scale productions will go much more smoothly with a Workflow in place so that page changes can be reviewed and approved systematically. Without a review process, you can unintentionally publish content that is not up-to-date or that is not presented the way you want it to be.
 
@@ -44,7 +44,7 @@ Using Staging and Workflows together is necessary to create the full business re
 
 As mentioned above, Pages can be configured for a full review process, similar to Content workflows. This process can be accessed in the _Site Administration_ menu in the _Workflow_ section. Simply assign an existing workflow definition to Page Revision, or create your own with the Kaleo Designer.
 
-#### Putting Everything Together {#put}
+## Putting Everything Together {#put}
 
 From beginning to end, Content Creators add content to the platform, add metadata, assign it to a Display Page, and submit it for review. An Administrator or Content Reviewer reviews the content. Once the content is approved, Content Creators place it on the page (or the content is published automatically if automation is set up). Once all the content is on the page, a page workflow can be set up so that every page will be reviewed, edited, tested, and finally published to live.
 

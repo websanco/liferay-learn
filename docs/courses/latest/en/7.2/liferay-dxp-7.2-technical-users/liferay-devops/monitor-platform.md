@@ -1,5 +1,7 @@
 # Monitor Your Liferay Platform
 
+Coming Soon!
+
 <!--
 
 <div class="ahead">

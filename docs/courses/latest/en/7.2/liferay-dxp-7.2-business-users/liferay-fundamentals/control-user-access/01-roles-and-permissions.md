@@ -1,4 +1,4 @@
-## Roles and Permissions
+# Roles and Permissions
 
 With all of the assets and data businesses are required to manage and secure, controlling user access is incredibly important. Managing different public and private sites along with their different assets requires a flexible approach to access control. Some of this can be handled by system administrators, but much of this requires a platform that has a great way of handling permissions. System administrators or Ops teams are responsible for securing the different servers, application servers, file system, etc. In essence, their primary job is ensuring uptime and system security. 
 
@@ -23,7 +23,7 @@ In order to ensure that administrators have as much control on the platform as n
 
 <br />
 
-#### Controlling Access for Livingstone Hotels & Resorts {#controlaccess}
+## Controlling Access for Livingstone Hotels & Resorts {#controlaccess}
 
 The Livingstone Hotels & Resorts web team is comprised of many people with different job functions on the platform. Different groups in the team are responsible for managing the following:
 1. Organization of User Accounts into Organizations and User Groups
@@ -48,7 +48,7 @@ Managing these different aspects of the platform requires different kinds of Rol
 
 Each of the team members needs access to different levels of the platform to do their specific job roles. Some need access to User management, while others need access to site and asset management. 
 
-#### Liferay's Fine-Grained Permissions {#finegrained}
+## Liferay's Fine-Grained Permissions {#finegrained}
 
 Liferay DXP comes with a built-in permissions system that allows administrators to control which Users can perform actions on which resources. Permissions are, by definition, the actions Users can be granted on different resources on the platform. If a User needs to create content, for example, the User needs to be able to _add_ and _edit_ a certain kind of content, such as _Web Content_.
 
@@ -79,7 +79,7 @@ The resources she will be primarily working with to accomplish these goals inclu
 
 With the actions needed and the resources identified, we know what permissions Maria needs to be given.
 
-#### Using Roles to Group and Apply Permissions to Users {#roles}
+## Using Roles to Group and Apply Permissions to Users {#roles}
 
 In order to grant specific permissions to Users, administrators need to use _Roles_. In Liferay DXP, there are a number of out-of-the-box Roles as well as the ability to create custom Roles. 
 
@@ -137,7 +137,7 @@ The scope of each Role will determine the context in which the Role can be grant
 
 You can take advantage of these different scopes to provide distributed administration that reflects real-world hierarchies and job functions. Administrators can also edit non-administrator Roles if there are Permissions they need to add or remove. 
 
-#### Creating Custom Roles to Meet Business Requirements {#customroles}
+## Creating Custom Roles to Meet Business Requirements {#customroles}
 
 Many of these default Roles will be sufficient to meet some basic use cases, like having a platform-wide administrator or an Organization administrator for different organization structures. If your business requires more custom Roles, they can be created on the platform for each scope.
 
@@ -168,7 +168,7 @@ Custom Roles can be created in the _Control Panel → Users → Roles_ section o
 	<figcaption style="font-size: x-small">Fig.7 Define Permissions Menu</figcaption>
 </figure>
 
-#### Roles and Workflow {#rolesworkflow}
+## Roles and Workflow {#rolesworkflow}
 
 Liferay's Workflow engine can also create Roles that are identified in the Workflow definition. Targeting a Role in a workflow definition is how administrators can identify that Users with that Role can enter the workflow review process. Here is how the workflow definition will manage Roles:
 1. If the Role  exists, it will simply target the existing Role.

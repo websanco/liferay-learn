@@ -1,14 +1,14 @@
-## Evaluating User Feedback with Forms
+# Evaluating User Feedback with Forms
 
 Once forms have been created and published and users have filled them out and submitted them, businesses need to see and use the information gathered. Data Analytics has become increasingly important, and statistical analysis is a great way to interpret the information gathered from Forms. 
 
 It's also important to ensure the information your users fill out in your Forms is accurate. Answers given should always fit the appropriate requirements (e.g., an email address field should always include `@[somedomain].com`), and the Forms should only be filled out by actual users. In this section, we will learn how to optimize Forms to meet these requirements.
 
-#### Gathering Feedback from Livingstone's Forms {#livingstone}
+## Gathering Feedback from Livingstone's Forms {#livingstone}
 
 Josiah and Natalia have created and added Forms within the Livingstone platform. Natalia believes the user information she gathers from these Forms will help Livingstone have a clear picture of how to improve both the guest and employee experience, but if users don't fill out Natalia's forms correctly, gathering feedback in order to make any necessary business adjustments becomes significantly more challenging.
 
-#### Form Entries {#entries}
+## Form Entries {#entries}
 
 Once users have filled out the Forms you have created for the sites within your platform, you will want to be able to access their data from those filled-out Forms.
 
@@ -33,7 +33,7 @@ To view Form Entries, go to the _Forms_ section of _Site Administration_ and cli
 
 In order to export all Form Entries, simply select that option for an individual Form from within the _Forms_ section of _Site Administration_. This can also be done by selecting _Export_ under the _Options_ icon at the top of the Form Entries page. Entries can be exported as CSV, JSON, XLS, or XML files for use with third-party applications.
 
-#### Ensuring Forms are Filled Out Properly {#valid}
+## Ensuring Forms are Filled Out Properly {#valid}
 
 Certain fields in the Forms you create might need to only allow for particular values. You need to have a way to validate answers within these fields when you create your Form and before users start filling the form out. Likewise, your Forms should have a way to validate that an actual user filled out the Form and not a bot pretending to be that user. Liferay offers solutions to both of these issues through Field Validation and enabling CAPTCHA for Form Submissions.
 

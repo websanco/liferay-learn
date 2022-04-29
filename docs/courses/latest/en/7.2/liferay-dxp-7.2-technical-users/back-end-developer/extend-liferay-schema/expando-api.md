@@ -4,35 +4,35 @@ title:  Expando API
 order: 3
 ---
 
-## Expando API
+# Expando API
 
 The underlying API for the custom fields is called the *Expando API*. That's why, when you take a look at Liferay's code, you will notice that custom fields are referred to there as Expando fields.
 
 In an example use case for the Expando API, you could be populating a custom user attribute from the LDAP directory at login time. Expando API also allows you to create virtual tables not related to any model class, extending the features available from the management user interface.
 
-#### Expando Data Model {#data}
+## Expando Data Model {#data}
 
 The Expando virtual data model has four entities. Let's take a look at them on the database level.
 
-#### ExpandoTable {#table}
+## ExpandoTable {#table}
 
 ExpandoTable represents a virtual table definition for a model class and is bound to it with the __classNameId__ field:
 
 <img src="../images/expando-table.png" />
 
-#### ExpandoColumn {#column}
+## ExpandoColumn {#column}
 
 ExpandoColumn represents a single column definition in a virtual table. The *Name* field is the custom field name:
 
 <img src="../images/expando-column.png" />
 
-#### ExpandoRow {#row}
+## ExpandoRow {#row}
 
 ExpandoRow represents a data row for a model instance and is bound to a model instance with the *classPK* field:
 
 <img src="../images/expando-row.png" />
 
-#### ExpandoValue {#value}
+## ExpandoValue {#value}
 
 ExpandoValue represents a single custom field value for an asset instance and is bound to that model instance with the *classPK* field:
 
@@ -44,7 +44,7 @@ The diagram below illustrates the Expando data model logical view:
 
 <img src="../images/expando-logical-architecture.png" />
 
-#### Using Expando Services {#services}
+## Using Expando Services {#services}
 
 All the entities of the Expando data model have their local and remote services:
 
@@ -63,7 +63,7 @@ All the entities of the Expando data model have their local and remote services:
 
 > As always with Liferay's core services, the local service variant is for privileged access without access control.
 
-#### Using the Expando API {#use}
+## Using the Expando API {#use}
 
 Create an Expando table programmatically:
 

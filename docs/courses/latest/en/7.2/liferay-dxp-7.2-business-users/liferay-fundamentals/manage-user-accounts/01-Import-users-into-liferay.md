@@ -1,4 +1,4 @@
-## Import Your Users into Liferay
+# Import Your Users into Liferay
 
 One of the main purposes of a DXP platform is to provide a great experience for your Users. You may need to manage many different kinds of User accounts on your platform, such as the following:
 * Employees
@@ -35,7 +35,7 @@ In Liferay, there are two primary methods for importing and authenticating outsi
 
 <br />
 
-#### Livingstone Authentication Structure {#livingstone}
+## Livingstone Authentication Structure {#livingstone}
 
 The Livingstone Hotels & Resorts team already has a company identity management system in place using LDAP (Lightweight Directory Access Protocol). It contains all the data for their employees and Livingstone Rewards customers.  They need a way to sync the data from Livingstone's identity management system. The Livingstone identity management system includes the following information about their users:
 * First and Last Name
@@ -53,7 +53,7 @@ Once Josiah, the Livingstone platform administrator, has connected their identit
 	<figcaption style="font-size: x-small">Fig.2 Livingstone Identity Management</figcaption>
 </figure>
 
-#### Liferay Authentication {#liferayauth}
+## Liferay Authentication {#liferayauth}
 
 Liferay comes out-of-the-box with a number of authentication options in the _Instance Settings_ found in _Control Panel → Configuration → Instance Settings_. 
 
@@ -71,7 +71,7 @@ Administrators can configure the general authentication settings for _Users_, th
 	<figcaption style="font-size: x-small">Fig.3 General Authentication Options</figcaption>
 </figure>
 
-#### LDAP Mapping {#ldapmapping}
+## LDAP Mapping {#ldapmapping}
 
 Liferay also integrates seamlessly with LDAP servers and can sync your current identity management system. Once connected to the platform, administrators can choose from the following configurations to determine what information is coming to the Liferay platform and what information to keep in sync with your identity management system: 
 1. Enable Import from LDAP
@@ -96,7 +96,7 @@ Liferay integrates with LDAP and allows administrators to keep the systems in sy
 </ol>
 </div>
 
-#### Alternative Authentication {#alternativeauth}
+## Alternative Authentication {#alternativeauth}
 
 Administrators can also set up Oauth 2 and SSO integration, which enable the user to log in once for all connected systems, including Liferay. Some of these alternate forms of authentication Liferay supports are:
  
@@ -113,7 +113,7 @@ Administrators can also set up Oauth 2 and SSO integration, which enable the use
 	<figcaption style="font-size: x-small">Fig.5 SSO Configuration</figcaption>
 </figure>
 
-#### OAuth2 and SAML {#ssosaml}
+## OAuth2 and SAML {#ssosaml}
 
 SAML allows Users can log in with their credentials and are given access to other supported service providers. SAML works by transferring a user's identity from an identity provider (the system into which the user is logged in) to a service provider. OAuth2 on the other hand is a standard for the authorization of resources. Both can be used to use Liferay as both an identity and a service provider. 
 

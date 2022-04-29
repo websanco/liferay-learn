@@ -4,9 +4,7 @@ title: Use the Felix Web Console to Locate MVCRender Command Components for the 
 order: 3
 ---
 
-<h2 class="exercise">Optional Exercise</h2>
-
-## Use the Felix Web Console to Locate MVCRender Command Components for the Blogs Portlet
+# Use the Felix Web Console to Locate MVCRender Command Components for the Blogs Portlet
 
 <div class="ahead">
 <h4>Exercise Goals</h4>

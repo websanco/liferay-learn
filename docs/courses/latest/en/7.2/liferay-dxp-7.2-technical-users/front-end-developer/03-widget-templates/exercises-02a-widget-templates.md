@@ -1,7 +1,5 @@
-<h2 class="exercise">Exercises</h2>
-
-## Create an Asset Publisher Blog Display Widget Template
-
+# Create an Asset Publisher Blog Display Widget Template
+<!-- 
 <div class="ahead">
 <h4>Exercise Goals</h4>
 	<ul>
@@ -14,7 +12,7 @@
 	</ul>
 </div>
 
-#### Create a New Livingstone Life Page
+## Create a New Livingstone Life Page
 1. **Sign in** to Liferay in your browser.
 2. **Open** the _Menu_.
 3. **Go to** _`Site Builder → Pages`_ in the _Site Administration_ panel.
@@ -27,7 +25,7 @@
 
 <img src="../images/add-new-blogs-page.png" style="max-height: 24%;">
 
-#### Import Assets to the Default Site
+## Import Assets to the Default Site
 1. **Open** the _Menu_.
 2. **Go to** _`Content & Data → Blogs`_ in the Site Administration panel.  
 3. **Click** the _Options_ icon in the top right.  
@@ -41,7 +39,7 @@
 
 <img src="../images/imported-blogs.png" style="max-height: 21%;">
 
-#### Add an Asset Publisher to the Page
+## Add an Asset Publisher to the Page
 1. **Click** _Go to Site_ in the Site Administration panel.
 2. **Go to** the _Livingstone Life Blogs_ page.
 3. **Click** _Add_ in the top right corner to open the Widget Panel.  
@@ -53,7 +51,7 @@
 
 <img src="../images/new-asset-publisher.png" style="max-height: 20%;">
 
-#### Create a Global Snippets File in Visual Studio Code
+## Create a Global Snippets File in Visual Studio Code
 1. **Open** _Visual Studio Code_.
 2. **Go to** the _User Snippets_ menu.
 	* Windows: `File → Preferences → User Snippets`
@@ -63,17 +61,17 @@
 	* The full file name will be `lfr-widget-templates.code-snippets`.
 5. **Press** enter to save.
 
-#### Add the Snippet Content
+## Add the Snippet Content
 1. **Open** the `widget-template-snippets.json` in your module exercises folder.
 2. **Copy** the contents of the file.   
 3. **Paste** the contents of the file in the `lfr-widget-templates.code-snippets` file just created in Visual Studio Code.
 	* Make sure to replace all the existing content in the file.
 4. **Save** the file.
 
-#### Add Code to Check for Assets
+## Add Code to Check for Assets
 1. **Go to** the module exercise folder.  
 2. **Drop** the `ap-blog-presentation-template.ftl` into your _Visual Studio Code_ editor.  
-3. **Click** to highlight the `<#-- Insert 01-no-results-message here -->` comment.
+3. **Click** to highlight the comment.
 4. **Type** `lfr-widget` to view the available code snippets.
 5. **Choose** the `01-no-results-message` snippet.
   * Alternatively, you can type:
@@ -87,8 +85,8 @@
 </div>
 ```
 
-#### Use the AssetRenderer to Retrieve Asset Information
-1. **Click** to highlight the `<#-- Insert 02-asset-renderer here -->` comment.
+## Use the AssetRenderer to Retrieve Asset Information
+1. **Click** to highlight the comment.
 2. **Type** `lfr-widget` to view the available code snippets.
 3. **Choose** the `02-asset-renderer` snippet.
   * Alternatively, you can type:
@@ -103,7 +101,7 @@
 />
 ```
 
-#### Build the Div Structure for the Blog Presentation
+## Build the Div Structure for the Blog Presentation
 1. **Press** _Enter_ after the closing angle bracket for the `<#assign curEntry.../>` line, before the `</#list>` tag.
 * **Type** `<div class="col-md-4 entry-card lfr-asset-item">`.
 * **Press** _Enter_.
@@ -126,7 +124,7 @@
 </div>
 ```
 
-#### Add the new Widget Template to the Platform
+## Add the new Widget Template to the Platform
 1. **Go to** the default Site in your browser.
   * Make sure you're logged in.
 * **Open** the _Menu_.
@@ -139,7 +137,7 @@
 * **Paste** the contents into the Widget Template editor.
 * **Click** _Save_ at the bottom.
 
-#### Change the Asset Publisher Widget Template
+## Change the Asset Publisher Widget Template
 1. **Click** _Go to Site_ in Site Administration.
 2. **Go to** the _Livingstone Life Blogs_ page.
 * **Click** the _Options_ menu at the top of the Asset Publisher.
@@ -158,8 +156,8 @@
 
 ---
 
-#### Bonus Exercises
+## Bonus Exercises
 1. Look at the different Clay class options and modify the Template presentation
   * You can find the Clay components here: https://clayui.com/
 2. Create new blogs and see how they propagate on the Asset Publisher
-3. Change the configuration of the Asset Publisher
+3. Change the configuration of the Asset Publisher -->

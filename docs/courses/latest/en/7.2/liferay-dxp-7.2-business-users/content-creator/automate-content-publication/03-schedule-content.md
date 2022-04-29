@@ -1,8 +1,8 @@
-## Create Self-Publishing Pages
+# Create Self-Publishing Pages
 
 The more content you have in your platform, the more time it takes to manage. Automating the publication process can dramatically improve efficiency and time-to-market. In this section, we will look closely at how to configure Self-Publishing pages that automatically publish content created by Content Creators on your digital experience platform.
 
-#### Livingstone's Automated Publishing {#livingstone}
+## Livingstone's Automated Publishing {#livingstone}
 
 As more content is created in the Livingstone platform, it has become more time-consuming for members of the Web Team like Maria Flores to update the sites she manages. Adding new Updates, News, and Press Releases to the Livingstone Hotel & Resorts corporate site can be a major time sink. Right now, Maria and the rest of the Web Team have to go through several steps to create and update the page with the new content:
 
@@ -14,7 +14,7 @@ As more content is created in the Livingstone platform, it has become more time-
 * Add the content to the page
 * Configure the widget to display the content as desired
 
-#### Asset Publisher {#ap}
+## Asset Publisher {#ap}
 
 Your web team should have a practical way to automate updates on pages they manage. The _Asset Publisher_ is the perfect solution.
 
@@ -30,7 +30,7 @@ The <strong>Asset Publisher</strong> contains a number of configuration options 
 
 Since the Asset Publisher publishes assets, it excels at publishing mixed content types like images, documents, blogs, and of course, web content. This helps in creating a more dynamic web site: you can place user-created wiki entries, blog posts, or message board messages in context with your web content.
 
-#### Configuring the Asset Publisher {#configure}
+## Configuring the Asset Publisher {#configure}
 
 The Asset Publisher works by querying for mixed types of content on the fly. Since you can control what and how content is displayed from one location, the Asset Publisher helps to push up the most relevant content to your users. The configuration options of the Asset Publisher allow administrators to determine what, when, and how content is displayed.
 
@@ -51,7 +51,7 @@ The Asset Publisher has two starting options in the _Asset Selection_ section.
 
 <br />
 
-The _Asset Selection_ configuration will display the following filtering options: 
+The _Asset Selection_ configuration will display the following filtering options:
 
 * _Source_: Here, you can select the site scope and Asset type. Depending on the Asset type, new filtering options become available, such as field or structure.
 * _Filter_: With this option, you can filter content based on tags or categories.
@@ -82,7 +82,7 @@ There are also a number of toggle-able options that can be changed:
 * _Show Add Content Button_: This option allows you to turn the _Add_ button on or off from the widget itself. This ensures that nobody adds additional content manually once configured.
 * _Display Template_: This section allows you to choose from a number of default display templates or any custom Application Display Templates that have been created. The display template will determine the next few configuration field options.
 * _Show Available Locales_: If there are any translations available, they will show as an option.
-* _Set as the Default Asset Publisher for this Page_: This is a very important option that allows us to create a Content Display Page. 
+* _Set as the Default Asset Publisher for this Page_: This is a very important option that allows us to create a Content Display Page.
 * _Additional Enable Options_: There are a number of additional options that can be enabled, such as comments, flags, print mode, etc.
 
 <br />
@@ -105,7 +105,7 @@ The _Show Metadata_ section allows you to determine what metadata you want to di
 	<figcaption style="font-size: x-small">Fig.6 Example metadata that can be used to configure the Asset Publisher</figcaption>
 </figure>
 
-#### Display Page Templates {#display}
+## Display Page Templates {#display}
 
 _Display Page Templates_ provide a way of displaying content on a specialized page and provide a visual editor so that non-technical users can define how structured web content will be displayed. Designers and Content Creators are given greater control over the look and feel of web content, while also simplifying the management of navigation from any place within a site. Display Pages are created using existing Page Fragments and mapping Web Content to the editable elements in the Page Fragments.
 

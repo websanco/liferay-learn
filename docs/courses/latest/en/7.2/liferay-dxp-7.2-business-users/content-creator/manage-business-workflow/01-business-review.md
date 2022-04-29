@@ -1,8 +1,8 @@
-## Business Review Processes
+# Business Review Processes
 
 The majority of content created for your platform will not be published right away. Most likely, you will need to have your content go through a submission and approval process before the content should be published. Liferay DXP comes out-of-the-box with ready-to-handle review processes for your content.
 
-#### Livingstone's Review Processes {#livingstone}
+## Livingstone's Review Processes {#livingstone}
 
 The _Livingstone Hotels & Resorts_ web team has a number of employees that will need to create content across all of their sites:
 
@@ -12,7 +12,7 @@ The _Livingstone Hotels & Resorts_ web team has a number of employees that will 
 
 Team leads and Site Administrators need the power to review and request updates on content before it is published to a site. With Liferay's Workflow engine, Josiah can define a workflow definition and be notified when new content is ready to be reviewed.
 
-#### Workflow Definitions {#workflow}
+## Workflow Definitions {#workflow}
 
 Liferay DXP's built-in _Kaleo Workflow Engine_ allows administrators to define and enable business review processes on different resources across the platform. Liferay DXP provides a simple, default workflow definition called the _Single Approver_ workflow. This definition only requires one content reviewer to approve content. The reviewer can approve or reject new content as well as leave notes for updating.
 
@@ -60,7 +60,7 @@ In order to create Workflow Definitions, Administrators can either:
 	<figcaption style="font-size: x-small">Fig.3 The XML file for the Single Approver workflow</figcaption>
 </figure>
 
-#### Setting Workflow with Folder Restrictions {#folder}
+## Setting Workflow with Folder Restrictions {#folder}
 
 <div class="key-point">
 Key Point: <br />
@@ -82,7 +82,7 @@ For example, an Administrator can create a new folder for HR documents and set t
 	<figcaption style="font-size: x-small">Fig.4 Adding the Single Approver workflow to a Document Folder</figcaption>
 </figure>
 
-#### Walking Through the Review Process {#walk}
+## Walking Through the Review Process {#walk}
 
 Let's take a look at the default definition again. Administrators can add the _Single Approver_ workflow for all newly-created Web Content. This can be done by:
 

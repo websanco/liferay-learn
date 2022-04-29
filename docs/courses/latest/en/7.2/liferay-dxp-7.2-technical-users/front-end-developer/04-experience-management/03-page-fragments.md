@@ -1,8 +1,8 @@
-## Reducing Time to Market with Page Fragments
-
+# Reducing Time to Market with Page Fragments
+<!-- 
 When it comes to being successful in the digital era, it often comes down to speeding up time-to-market. Web Teams and copy-writers need to get webpages and content created and out the door quickly to promote new products, updates, or to communicate to the different audiences using the platform. Because there are so many different hands involved in a successful Site launch, Liferay DXP 7.2 includes Site Building features that can be created by front-end developers and combined and added in a GUI by administrators to meet the ever-changing business demands.  
 
-#### Building Livingstone's Pages with Fragments {#LivingstoneFragments}
+## Building Livingstone's Pages with Fragments {#LivingstoneFragments}
 
 With the growing business of _Livingstone Hotels & Resorts_, there are new Hotel and Resort offerings happening on a regular basis. To continue to thrive as a premier Hospitality company, the Livingstone team needs to regularly create new hotel and resort Sites with modern pages with the information travelers need to get the most out of their stay. In order to make this process of new Site building as streamlined as possible, Kaito and the development team can create editable Page Fragments that can be used by the web team. From there, the web team will simply need to create a new Site, add the Fragments as needed and customize the text and images to match the new hotel or resort being represented by the new Site.
 
@@ -11,7 +11,7 @@ With the growing business of _Livingstone Hotels & Resorts_, there are new Hotel
   <figcaption style="font-size: x-small">Fig.1 Livingstone Fragment Example</figcaption>
 </figure>
 
-#### Page Fragments {#LiferayFragments}
+## Page Fragments {#LiferayFragments}
 
 In order for the different Site building teams to quickly re-use and combine different aspects of a page, they can use _Page Fragments_. Page Fragments _Sections_ and _Components_ can be combined to provide layouts with specific text and image components that can be added to any part of a _Content Page_. Here are some examples of what developers can build with Page Fragments include:
 * Calls to action  
@@ -31,7 +31,7 @@ Page Fragments are a combination of HTML, CSS, and JavaScript and act as reusabl
   <figcaption style="font-size: x-small">Fig.2 Fragment Example on a Content Page</figcaption>
 </figure>
 
-#### Creating Page Fragments {#Creating}
+## Creating Page Fragments {#Creating}
 
 Page Fragments can be created using the Fragments NPM Generator or on the platform using the Fragment Editor. Page Fragments are managed in _Collections_. Collections are like folders that contain fragments. When creating a Content Page, admins will see the different Collections available and from there can choose the fragments they wish to use.
 
@@ -97,7 +97,7 @@ Custom widgets can also be configured to be embeddable within fragments by addin
 
 <br />
 
-#### Developing Fragments with the Fragments Generator {#Reusing}
+## Developing Fragments with the Fragments Generator {#Reusing}
 
 For those working with NPM tools, the primary way to build, manage, and deploy Fragments is by making use of the Liferay Fragments Generator. Just like the other generators, the Fragments generator requires the following:
 * NodeJS 8+
@@ -134,7 +134,7 @@ Finally, Developers can connect to a running Liferay server to do things like ex
 
 <br />
 
-#### Tool-Agnostic Fragment Development {#Developing}
+## Tool-Agnostic Fragment Development {#Developing}
 
 Front-End Developers also have the ability to create Page Fragments using any of the development tools they would use in their current workflow. As Fragments are just HTML, CSS, and JavaScript, any text editor or tool will work to create Page Fragments.
 
@@ -198,7 +198,7 @@ Users can package as many Fragments as needed in a Collection.
 
 Once Fragments are created and organized as desired, users can zip the file and upload it to the Liferay platform.
 
-#### Display Page Templates {#DisplayPage}
+## Display Page Templates {#DisplayPage}
 
 Page Fragments created by Front-End Developers can also be used as a stand-in for Web Content Templates when using _Display Page Templates_. 
 
@@ -227,4 +227,4 @@ This option gives developers the ability to control the front-end presentation o
   <li>Developers can create Collections and Fragments using the _________________________ Generator.</li>
   <li>Page Fragments can be used as Front-end views of _________________________, _________________________, and _________________________.</li>
 </ul>
-</div>
+</div> -->

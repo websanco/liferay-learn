@@ -1,5 +1,4 @@
-Configuring for Staging
-=======================
+# Configuring for Staging
 
 When setting up our sites and placing applications on the page, changes happen instantaneously. Say that we want to update our production site, so we begin moving things around and adding new applications and content. This will result in a poor user experience for customers as the production site updates in real time.
 
@@ -26,13 +25,13 @@ In Liferay, there is a way to make changes behind the scenes without affecting t
 
 Let's take a look at the different methods of Staging and see what they entail.
 
-#### Local Live Staging
+## Local Live Staging
 
 Local Live creates the staged environment on the same server as your live environment. Because both the staged and live environment are on the same server, they also share the same database. When using Local Live, only the Assets that are selected in the `staged content` section will be staged.
 
 When Local Live is enabled, the Live Site is copied to create the staged environment. Once Staging is turned off, the staged environment is deleted, along with any content that was in the staged environment. Local Live staging also shares one Global scope across both live and staged environments. With Local Live, we don't have to worry about sending data across any sort of medium, making publishing much faster than Remote Live. It's also faster to switch between the staged environment and the live environment. On the other hand, because the data is on the same database, it isn't well protected or backed up. Local Live also cannot install new versions of an app, since only one version of an app can be installed at any given time.
 
-#### Remote Live Staging
+## Remote Live Staging
 
 Remote Live staging establishes a connection between a remote server and the current site. The site on the remote server becomes the live environment, while the current site becomes the staged environment. This allows each environment to use a separate database and two Global scopes.
 
@@ -40,7 +39,7 @@ With the data stored in two different databases, this ensures that our data is p
 
 When pushing the staged environment to the live environment, by default all changes that are made will be pushed to the live environment. This keeps things simple so we don't have to worry about options or configurations. If you're interested, you can enter advanced settings for Staging and configure what is published to live.
 
-#### Setting up a Remote Staging Server
+## Setting up a Remote Staging Server
 
 Remote Live Staging is often the best option for large amounts of enterprise data. When enabling Remote Live, make sure that the remote server and the local server are completely separate systems and that the remote server and the local server do not share the same database. When enabled, all of your site data will be transferred over the network.
 
@@ -70,7 +69,7 @@ auth.ParameterAutoLogin,com.liferay.portal.security.auth.
 PortalSessionAuthVerifier
 ```
 
-#### Shared Secrets
+## Shared Secrets
 
 Liferay uses a shared key between the Staging and Production environments to help secure the remote publication process. This is done by providing an authorization context for the user using the permission checker. 
 
@@ -107,7 +106,7 @@ tunneling.servlet.shared.secret=liferay
 tunneling.servlet.shared.secret.hex=false
 ```
 
-#### Configuring Staging for Performance
+## Configuring Staging for Performance
 
 Staging content is a key feature for content management teams. With such a commonly used tool, you need to make sure Staging performs well in practice. The best way to handle Staging will vary slightly depending on what type of Staging best fits your use case.
 

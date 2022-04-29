@@ -4,48 +4,48 @@ title: Override Struts Actions
 order: 3
 ---
 
-## Override Struts Actions
+# Override Struts Actions
 
 Although the [Apache Struts MVC framework](https://struts.apache.org/) is being replaced with the MVC Commands in Liferay, the platform is still using the framework for some of the native functionalities like portal login and logout. That's why there might be use cases where you'd still need to customize them. Generally, however, because the feature is deprecated, you should try to avoid customization scenarios with the Apache Struts MVC framework if you have other applicable approaches.
 
 Let's take a very brief look at basic Struts concepts and implementation in Liferay.
 
-#### Struts Basic Concepts
+## Struts Basic Concepts
 
-#### The Action Servlet
+## The Action Servlet
 
 The action servlet is a servlet that forwards Struts requests to Struts action controllers.
 
 The servlet mapping is defined in the `web.xml` and the path to action mapping in `struts-config.xml`.
 
-#### The Action Controller
+## The Action Controller
 
 An action controller is a class that extends the `org.apache.struts.action.Action` and is responsible for performing actions based on the action paths like:
 
 * */view_entry*
 * */edit_entry*
 
-#### The Action Form (Bean)
+## The Action Form (Bean)
 
 The Action Form represents the model layer. Practically, the Action Form is a data transfer object that transports model objects from the back-end to the user interface and vice versa. The action controller takes care of syncing the action form values with the persistence layer. 
 
 The user interface action form name to Java bean mapping is defined in the `struts-config.xml` file.
 
-#### The View Layer
+## The View Layer
 
 The view layer of the Struts framework is implemented with the JSP. Process-wise in the back-end, the action controllers first set an *action forward* name. The name for the JSP file mapping is defined in `struts-config.xml` or, if you're using Apache Tiles, in `tiles-defs.xml`.
 
-#### The Struts Process Flow
+## The Struts Process Flow
 
 The following diagram roughly summarizes the Struts framework process flow when using Apache Tiles, like in Liferay:
 
 <img src="../images/struts.png" style="max-height:50%;" />
 
-#### Struts in Liferay 
+## Struts in Liferay 
 
 Let's look at an example of how Struts works in Liferay. The example is an action for updating user language and is missing an ActionForward, meaning, effectively, that a user stays on the same page after the action has been processed.
 
-#### 1 - Action URL in the JSP
+## 1 - Action URL in the JSP
 
 We call the Struts Action from a portal JSP file:
 
@@ -61,7 +61,7 @@ We call the Struts Action from a portal JSP file:
 	</aui:a>
 </c:if>
 ```
-#### 2- Action Mapping in `struts-config.xml`
+## 2- Action Mapping in `struts-config.xml`
 
 The action mapping is defined in the `struts-config.xml`:
 
@@ -73,7 +73,7 @@ The action mapping is defined in the `struts-config.xml`:
 </action-mappings>
 ```
 
-#### 3 - An Action Controller
+## 3 - An Action Controller
 
 The mapped action controller implements the Struts Action interface and processes the request. It returns a `null`, meaning that we won't leave the JSP where we were. That's why there's also no need for a Tiles JSP mapping.
 
@@ -265,7 +265,7 @@ public class UpdateLanguageAction implements Action {
 > * Liferay's struts-config.xml: https://github.com/liferay/liferay-portal/blob/7.2.x/portal-web/docroot/WEB-INF/struts-config.xml
 > * UpdateLanguageAction.java: https://github.com/liferay/liferay-portal/blob/7.2.x/portal-impl/src/com/liferay/portal/action/UpdateLanguageAction.java
 
-#### Overriding Liferay Struts Actions
+## Overriding Liferay Struts Actions
 
 Overriding Struts actions in the context of Liferay means overriding action controller classes. Generally, the steps for overriding Liferay Struts actions are as follows:
 
@@ -274,7 +274,7 @@ Overriding Struts actions in the context of Liferay means overriding action cont
 1. Create a new Struts Action Component
 1. Override and implement methods as needed
 
-#### Example of Catching Portal Logout Struts Action
+## Example of Catching Portal Logout Struts Action
 
 Below is an example of a component listening to a `/portal/logout` Struts action, defined in the `struts-config.xml`:
 

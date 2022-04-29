@@ -6,7 +6,7 @@ order: 1
 
 <h2 class="exercise">Exercises</h2>
 
-## Override the Documents and Media MVC Action Command
+# Override the Documents and Media MVC Action Command
 
 <div class="ahead">
 <h4>Exercise Goals</h4>
@@ -18,7 +18,7 @@ order: 1
 	</ul>
 </div>
 
-#### Create a Liferay Module Project
+## Create a Liferay Module Project
 
 **Option 1: Use the Command Line Blade tools**
 
@@ -44,7 +44,7 @@ blade create -t service -p com.liferay.training.mvccommandoverride -s com.lifera
 	* Select `com.liferay.portal.kernel.portlet.bridges.mvc.MVCActionCommand` from the list.
 1. **Click** *Finish* to close the wizard.
 
-#### Declare Dependencies
+## Declare Dependencies
 
 Because we intend to override an `MVCActionCommand`, we have to depend on the `portlet-api` and `javax.servlet-api` packages. Additionally, we depend on the `com.liferay.document.library.api` package, because we interface with the Document Library. 
 
@@ -56,7 +56,7 @@ compileOnly group: "javax.portlet", name: "portlet-api"
 compileOnly group: "javax.servlet", name: "javax.servlet-api"
 ```
   
-#### Implement the MVC Action Command Override
+## Implement the MVC Action Command Override
 
 <div class="note">
 <ul>
@@ -102,7 +102,7 @@ compileOnly group: "javax.servlet", name: "javax.servlet-api"
   ```
 1. **Resolve** the missing imports.
 
-#### Final Code Review
+## Final Code Review
 
 1. **Check** that the final code looks like this:
 
@@ -167,7 +167,7 @@ public class DocLibMVCActionCommand implements MVCActionCommand {
 }
 ```
 
-#### Deploy and Test
+## Deploy and Test
 
 1. **Deploy** the module to the Liferay server.
 1. **Open** your browser to http://localhost:8080 and sign in.
@@ -182,7 +182,7 @@ CMD=add
 ```
 
 <!--
-#### Takeaways
+## Takeaways
 
 MVC Commands are the foundation in much of Liferay's application code. After running through this exercise, you should be able to use the pattern here to customize other Liferay applications that are implemented using MVCPortlet and MVC Commands. The same pattern can be used to extend and override MVCRenderCommand, MVCActionCommand, and MVCResourceCommand.
 -->

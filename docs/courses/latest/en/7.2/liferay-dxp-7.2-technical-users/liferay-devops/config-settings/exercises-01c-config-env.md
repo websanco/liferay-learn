@@ -1,4 +1,4 @@
-## Configuring Environment Settings
+# Configuring Environment Settings
 
 <div class="ahead">
 	<h3>Exercise Goals:</h3>
@@ -9,8 +9,7 @@
 		</ul>
 </div>
 
-
-#### Update the File System Store in System Settings
+## Update the File System Store in System Settings
 
 *System Settings* are easily migrated from one environment to another. We'll first change the settings of the *Advanced File System Store*.
 
@@ -22,7 +21,7 @@
 
 <img src="../images/chapter-2/file-system-store.png" style="max-width: 100%">
 
-#### Export the Updated File Store Configuration
+## Export the Updated File Store Configuration
 
 Let's export the changes we've made.
 
@@ -36,7 +35,7 @@ Let's export the changes we've made.
 
 <img src="../images/chapter-2/export-all.png" style="max-width: 100%">
 
-#### Copy the Configuration to the Wildfly Configs Directory and Verify Changes
+## Copy the Configuration to the Wildfly Configs Directory and Verify Changes
 
 1. **Copy** the *Advanced File System Store* configuration file to the Wildfly server.
 	- Copy this file: com.liferay.portal.store.file.system.configuration.AdvancedFileSystemStoreConfiguration.config.
@@ -59,7 +58,7 @@ Now that we have our configurations migrated to another Liferay instance, how do
 
 ---
 
-#### Bonus Exercises: 
+## Bonus Exercises: 
 
 Try the following bonus exercise after completing the main exercises:
 

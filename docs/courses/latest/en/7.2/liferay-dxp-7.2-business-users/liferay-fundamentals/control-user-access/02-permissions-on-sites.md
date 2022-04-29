@@ -1,8 +1,8 @@
-## Controlling Specific Permissions on Sites
+# Controlling Specific Permissions on Sites
 
 Controlling access on specific sites is an important part of providing the best user experience. Administrators may need to give more permissions than Roles provide or may need to make sure that they're engaging the right personas with their content. Liferay comes out-of-the-box with features that give administrators control over their site resource permissions.
 
-#### Resource Permissions Menus {#permissionmenus}
+## Resource Permissions Menus {#permissionmenus}
 
 Each resource on the Site has an _Options_ menu that includes a _Permissions_ menu. These _Permissions_ menus display the different permissions on the resource in question as well as what each Role can do. 
 
@@ -15,7 +15,7 @@ Each resource on the Site has an _Options_ menu that includes a _Permissions_ me
 
 Administrators can modify these permissions menus to grant or remove permissions for any Role available on the platform. 
 
-#### Site Teams {#siteteams}
+## Site Teams {#siteteams}
 
 Site Administrators are typically responsible for managing any individual Site, but by default they do not have the platform permissions to create new Roles. There may be some cases, however, when Site Administrators need to be able to grant specific permissions to different Users rather than assigning a general Role to a group of Users. This can be done with Site _Teams_.
 
@@ -33,7 +33,7 @@ Teams can be created in Sites. They display in the _Permissions_ menu for each r
 	<figcaption style="font-size: x-small">Fig.2 Site Team in a Permissions Menu</figcaption>
 </figure>
 
-#### Livingstone Life Site Teams {#livingstonesiteteams}
+## Livingstone Life Site Teams {#livingstonesiteteams}
 
 Livingstone wants to use a new site called _Livingstone Life_ to serve as their online travel magazine. The site should increase SEO and customer trust by giving customers valuable free content. Specifically, the site will be used to digitize past articles and to create new blogs and videos that give helpful travel tips and highlight destinations with Livingstone accommodations. 
 

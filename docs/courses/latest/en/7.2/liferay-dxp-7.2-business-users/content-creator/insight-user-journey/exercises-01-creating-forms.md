@@ -1,6 +1,4 @@
-<h3 class="exercise">Exercises</h3>
-
-## Creating Forms in Liferay
+# Creating Forms in Liferay
 
 <div class="ahead">
 <h4>Exercise Goals</h4>
@@ -10,7 +8,8 @@
 </ul>
 </div>
 
-#### Navigate to the Global Forms Page
+## Navigate to the Global Forms Page
+
 1. **Open** the _Menu_.
 * **Click** on the _Site Selector_ in the _Site Administration_ panel.
 * **Click** on the _My Sites_ tab.
@@ -20,14 +19,16 @@
 
 <img src="../images/new-form.png" style="max-height:30%;" />
 
-#### Create the New Guest Feedback Form 
+## Create the New Guest Feedback Form 
+
 1. **Click** _Untitled Form_ to edit the form title.
 * **Type** `Satisfaction Survey` in the _Title_ section.
 * **Type** `The Guest Satisfaction survey for each Hotel location` under the _Title_.
 
 <img src="../images/survey-titled.png" style="max-height:33%;" />
 
-#### Add a Single Selection Field to Gather the Overall Opinion
+## Add a Single Selection Field to Gather the Overall Opinion
+
 1. **Click** the _Add_ button near the top right.
 	* This will open up a sidebar of fields we can add to the form.
 * **Drag** the _Single Selection_ field into the form.  
@@ -41,7 +42,8 @@
 
 <img src="../images/field-1.png" style="max-height:33%;" />
 
-#### Add a Multiple Selection Field to Gather Positive Associations
+## Add a Multiple Selection Field to Gather Positive Associations
+
 1. **Click** the back arrow on the sidebar to get back to the fields. 
 * **Drag** the _Multiple Selection_ field into the form under the _Single Selection_ field.  
 * **Type** `Which of the following do you associate with Livingstone Hotels & Resorts?` in the _Label_ field.  
@@ -54,7 +56,8 @@
 
 <img src="../images/field-2.png" style="max-height:40%;" />
 
-#### Add a Text Field to Gather What Improvements Can Be Done
+## Add a Text Field to Gather What Improvements Can Be Done
+
 1. **Drag** a _Text Field_ into the form under the _Multiple Selection_ field.  
 * **Type** `Is there anything specific we could be doing better?` under _Label_.  
 * **Choose** _Multiple Lines_ under _My text field has_.
@@ -64,7 +67,8 @@
 
 <br />
 
-#### Add a Success Page
+## Add a Success Page
+
 1. **Click** on the _Options_ menu for the survey. 
 	* This will be the _Options_ menu in the form builder.
 * **Choose** the _Add Success Page_ option.
@@ -78,7 +82,8 @@
 
 <br />
 
-#### Add the Form to the Luxury Hotel Landing Page Site Template
+## Add the Form to the Luxury Hotel Landing Page Site Template
+
 1. **Open** the _Menu_.
 * **Go to** _`Sites → Site Templates`_ in the _Control Panel_.
 * **Click** _Luxury Hotel Location Site_.
@@ -97,7 +102,8 @@
 
 <img src="../images/form-displayed.png" style="max-height:50%;" />
 
-#### Import the Employee Satisfaction Form
+## Import the Employee Satisfaction Form
+
 1. **Open** the _Menu_.
 * **Click** on the _Site Selector_ in the _Site Administration_ panel.
 * **Click** on the _My Sites_ tab.
@@ -113,20 +119,23 @@
 
 <img src="../images/imported-survey.png" style="max-height:50%;" />
 
-#### Review the Imported Form
+## Review the Imported Form
+
 1. **Click** the _Employee Feedback Form_.  
 * **Click** the field that says _How satisfied are you with the following_.
 
 <img src="../images/grid-field.png" style="max-height:35%;" /> 
 
-#### Update the Form's Grid Field
+## Update the Form's Grid Field
+
 1. **Type** `Amount of Work Time vs. Break Time` into the last option field under _Rows_.  
 * **Click** the _Save Form_ button at the bottom.  
 * **Click** _Preview Form_ at the bottom.
 
 <img src="../images/employee-satisfaction-preview.png" style="max-height:35%;" />
 
-#### Create an End of Form Element Set
+## Create an End of Form Element Set
+
 1. **Close** the tab displaying the Form preview.
 * **Click** the _Back_ button at the top left to navigate back to the Forms application page.
 * **Click** the _Element Sets_ tab.  
@@ -138,7 +147,8 @@
 
 <img src="../images/element-set-titled.png" style="max-height:35%;" />
 
-#### Add a Select From List Field to Gather Survey Satisfaction
+## Add a Select From List Field to Gather Survey Satisfaction
+
 1. **Click** the _Add_ button.  
 * **Drag** the _Select from List_ field into the form.  
 * **Type** `I think the length of this survey:` under _Label_.  
@@ -149,7 +159,8 @@
 
 <img src="../images/element-set-field-1.png" style="max-height:28%;" />
 
-#### Add a Text Field for Additional Comments
+## Add a Text Field for Additional Comments
+
 1. **Click** the _back_ button.
 * **Drag** a _Text Field_ into the form.
 * **Type** `Is there anything else you would like to let us know about?` under _Label_.
@@ -158,7 +169,8 @@
 
 <img src="../images/element-set-complete.png" style="max-height:32%;" />
 
-#### Add the Element Set to an Existing Form
+## Add the Element Set to an Existing Form
+
 1. **Click** the _Back_ button at the top left to navigate back to the Forms application page.
 * **Click** on the _Forms_ tab.
 * **Click** on the _Employee Feedback Form_.
@@ -172,6 +184,7 @@
 
 ---
 
-#### Bonus Exercises
+## Bonus Exercises
+
 1. Create a new form on the Livingstone Hotels & Resorts site for gathering feedback about the user experience. The form should be at least three pages long with no more than five fields on a page.
 2. Create an Element Set for commonly asked user experience questions and add it to the new form.

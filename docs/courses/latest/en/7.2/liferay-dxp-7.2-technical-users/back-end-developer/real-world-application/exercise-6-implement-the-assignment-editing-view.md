@@ -4,9 +4,7 @@ title: Implement the Assignment Editing View
 order: 6
 ---
 
-<h2 class="exercise">Exercises</h2>
-
-## Implement the Assignment Editing View
+# Implement the Assignment Editing View
 
 <div class="ahead">
 <h4>Exercise Goals</h4>
@@ -20,7 +18,7 @@ order: 6
 	</ul>
 </div>
 
-#### Implement the Assignment Editing Form
+## Implement the Assignment Editing Form
 
 We'll use the AUI tag library to create the Assignment editing form:
 
@@ -93,7 +91,7 @@ We'll use the AUI tag library to create the Assignment editing form:
 	</div>
 	```
 
-#### Implement an MVC Render Command for Switching to the Editing View
+## Implement an MVC Render Command for Switching to the Editing View
 
 If you take a look at the user interface in the browser, you'll see the plus icon for adding assignments.
 The button is wired in the `getCreationMenu()` method in the `AssignmentsManagementToolbarDisplayContext.java` class:
@@ -223,7 +221,7 @@ The renderURL for switching to the editing view is created, but no MVC Render Co
 Test and click the plus button. You should now be able to see the editing form, but it doesn't work yet. We still need to implement an MVC Action Command to handle the form submits.
 <img src="../images/assignment-editing-form.png" style="max-height: 100%"/>
 
-#### Implement an MVC Action Command for Adding an Assignment
+## Implement an MVC Action Command for Adding an Assignment
 
 We need MVC Action Commands to handle adding, editing, and deleting assignments. A single command can handle multiple command names, so we can handle adding and editing cases in the same class. For better modularity, however, we'll choose to implement these use cases in separate classes:
 
@@ -331,7 +329,7 @@ We need MVC Action Commands to handle adding, editing, and deleting assignments.
 	}
 	```
 
-#### Implement an MVC Action Command for Editing an Assignment
+## Implement an MVC Action Command for Editing an Assignment
 
 1. **Create** a class `com.liferay.training.gradebook.web.portlet.action.EditAssignmentMVCActionCommand`.
 1. **Implement** as follows:
@@ -429,8 +427,8 @@ We need MVC Action Commands to handle adding, editing, and deleting assignments.
 		protected AssignmentService _assignmentService;
 	}
 	```
-	
-#### Implement an MVC Action Command for Deleting an Assignment
+
+## Implement an MVC Action Command for Deleting an Assignment
 	
 1. **Create** a class `com.liferay.training.gradebook.web.portlet.action.DeleteAssignmentMVCActionCommand`.
 1. **Implement** as follows:
@@ -495,11 +493,8 @@ We need MVC Action Commands to handle adding, editing, and deleting assignments.
 
 <br /><br />
 
-#### Test the Application
+## Test the Application
 
 After the module has restarted successfully, refresh the browser window and try adding, editing, viewing, deleting Assignments:
 
 <img src="../images/first-assignments.png" style="max-height: 100%"/>
-
-	
-	

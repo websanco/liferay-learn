@@ -1,6 +1,4 @@
-<h2 class="exercise">Exercises</h2>
-
-## Configuring the Platform for Staging 
+# Configuring the Platform for Staging 
 
 <div class="ahead">
 	<h3>Exercise Goals:</h3>
@@ -13,7 +11,7 @@
 
 In this exercise, we are going to be connecting a Staging server (liferay-staging) to our live cluster (liferay-tomcat-1 and its other services). This will enable Content Creators and Developers to make all the changes they need to on the Staged instance of Liferay, and then push to production whenever they're ready.
 
-#### Configure the Tomcat Server for Remote Live Staging
+## Configure the Tomcat Server for Remote Live Staging
 
 Let's configure our nodes for Remote Live Staging, starting with our Tomcat instance. We need to make sure both servers trust each other.
 
@@ -29,8 +27,7 @@ Let's configure our nodes for Remote Live Staging, starting with our Tomcat inst
 	- The configuration defined in this file allows for a connection to be made between this, our live server, and the staging server. This configuration only needs to be set for the **live server**.
 	- Lines 1, 3, and 4 are the default configuration, while line 2 is set to the host server's IP address.
 
-
-#### Configure the Staging Server for Local Staging
+## Configure the Staging Server for Local Staging
 
 Let's configure our nodes for Remote Live Staging, starting with our Tomcat instance.
 
@@ -41,7 +38,7 @@ Let's configure our nodes for Remote Live Staging, starting with our Tomcat inst
 	- Setting this to true ensures that the secret is read as hexadecimal encoding.
 1. **Save** the file.
 
-#### Rebuild and Start the Server Containers
+## Rebuild and Start the Server Containers
 
 1. **Open** a _Terminal_ window at the _liferay/devops/tomcat/_ folder.
 2. **Run** the following command:
@@ -59,7 +56,7 @@ $ docker-compose up -d liferay-tomcat-1
 $ docker-compose up -d liferay-staging
 ```
 
-#### Create a New Blank Site on the Remote Live Server
+## Create a New Blank Site on the Remote Live Server
 
 Once both containers have restarted, we need to do a couple more things.
 
@@ -74,7 +71,7 @@ Once both containers have restarted, we need to do a couple more things.
 
 <img src="../images/blank_site.png" style="max-width: 100%">
 
-#### Add the Remote Server IP Address to the Staging Server
+## Add the Remote Server IP Address to the Staging Server
 
 With our new blank site created, let's finish up.
 
@@ -88,7 +85,7 @@ With our new blank site created, let's finish up.
 
 <img src="../images/chapter-2/remote-host-ip.png" style="max-width: 100%">
 
-#### Activate Remote Staging for Both Servers
+## Activate Remote Staging for Both Servers
 
 1. **Type**  *8080* into the *Remote Port* field.
     - This is the remote server's port. We use *8080* instead of *8081* because we are connecting between containers internally.
@@ -100,7 +97,7 @@ With our new blank site created, let's finish up.
 
 You now have Staging configured! You can configure Page Versioning and what content you want to have staged. Lastly, let's test it to see if it works.
 
-#### Make Changes to the Site to Verify Staging Configuration
+## Make Changes to the Site to Verify Staging Configuration
 
 1. **Go to** _`Site Administration → Go to Site`_ in the *Menu*.
 2. **Click** the *Options* icon at the top right of the *Hello World* widget.
@@ -124,7 +121,7 @@ You can run `docker-compose down` to shut down all of your running containers fo
 
 ---
 
-#### Bonus Exercises: 
+## Bonus Exercises: 
 
 Try the following bonus exercise after completing the main exercises:
 
