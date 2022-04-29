@@ -1,6 +1,6 @@
 # Evaluating User Feedback with Forms
 
-Once forms have been created and published and users have filled them out and submitted them, businesses need to see and use the information gathered. Data Analytics has become increasingly important, and statistical analysis is a great way to interpret the information gathered from Forms. 
+<!-- Once forms have been created and published and users have filled them out and submitted them, businesses need to see and use the information gathered. Data Analytics has become increasingly important, and statistical analysis is a great way to interpret the information gathered from Forms. 
 
 It's also important to ensure the information your users fill out in your Forms is accurate. Answers given should always fit the appropriate requirements (e.g., an email address field should always include `@[somedomain].com`), and the Forms should only be filled out by actual users. In this section, we will learn how to optimize Forms to meet these requirements.
 
@@ -88,4 +88,4 @@ To enable CAPTCHA in your Form, simply go to the Form's settings. This can be do
   </ul>
   <li>_____________________ prevents bots from submitting Forms.</li>
 </ul>
-</div>
+</div> -->

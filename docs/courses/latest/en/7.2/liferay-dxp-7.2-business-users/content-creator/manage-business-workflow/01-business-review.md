@@ -1,6 +1,6 @@
 # Business Review Processes
 
-The majority of content created for your platform will not be published right away. Most likely, you will need to have your content go through a submission and approval process before the content should be published. Liferay DXP comes out-of-the-box with ready-to-handle review processes for your content.
+<!-- The majority of content created for your platform will not be published right away. Most likely, you will need to have your content go through a submission and approval process before the content should be published. Liferay DXP comes out-of-the-box with ready-to-handle review processes for your content.
 
 ## Livingstone's Review Processes {#livingstone}
 
@@ -160,4 +160,4 @@ Once the content goes through the update process, or if it's good to go on first
   <li>Workflow definitions have at least four key parts: State, Transition, Task, and _______________________________.</li>
   <li>Workflows can be applied to individual resources from the Control Panel or through folder restrictions for _______________________________ and _______________________________.</li>
 </ul>
-</div>
+</div> -->

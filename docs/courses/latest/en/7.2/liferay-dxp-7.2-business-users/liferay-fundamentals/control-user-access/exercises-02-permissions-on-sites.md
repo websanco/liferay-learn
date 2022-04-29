@@ -1,6 +1,6 @@
 # Control Community Permissions on the Default Site
 
-<div class="ahead">
+<!-- <div class="ahead">
 <h4>Exercise Goals</h4>
 <ul>
     <li>Create a Site Team for the Livingstone Hotels & Resorts site</li>
@@ -77,4 +77,4 @@
 
 1. Create new Users or add existing Users to the Team.
 2. Add new Widgets to the page and grant permissions to the team.
-3. Log in as another User and test the Site Team permissions.
+3. Log in as another User and test the Site Team permissions. -->

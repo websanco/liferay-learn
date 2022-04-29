@@ -5,7 +5,7 @@ order: 2
 ---
 
 # Implement Submissions
-
+<!-- 
 <div class="ahead">
 <h4>Exercise Goals</h4>
 	<ul>
@@ -1974,4 +1974,4 @@ Implement showing the list of submissions on single Assignment view:
 1. **Try** creating a submission from the link on the bottom of the page.
 1. **Try** editing, grading and deleting submissions.
 
-<img src="../images/submissions.png" style="max-height: 100%"/>
+<img src="../images/submissions.png" style="max-height: 100%"/> -->

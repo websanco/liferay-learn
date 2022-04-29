@@ -5,7 +5,7 @@ order: 4
 ---
 
 # Create the Presentation Layer
-
+<!-- 
 In modular Liferay applications, the presentation layer is usually located in what's called the *web module*. For example, in the native Blogs application, this module is called [blogs-web](https://github.com/liferay/liferay-portal/tree/7.1.x/modules/apps/blogs). In terms of the MVC pattern, the web module typically contains both the view (user interface) and the controller (portlet) layers.
 
 You can use a variety of technologies to develop Liferay portlets. Module templates are provided for example for:
@@ -688,4 +688,4 @@ Alloy UI and jQuery libraries are globally available, but the platform doesn't r
 	</ul>
   </li> 
 </ul>
-</div>
+</div> -->

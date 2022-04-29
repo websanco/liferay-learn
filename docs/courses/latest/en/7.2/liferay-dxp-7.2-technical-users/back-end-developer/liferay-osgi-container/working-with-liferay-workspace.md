@@ -5,7 +5,7 @@ order: 4
 ---
 
 # Working With Liferay Workspace
-
+<!-- 
 Liferay Workspace is a generated wrapper environment for Liferay projects. Liferay Workspace provides you with all the tools needed to create and build Liferay modules and can be used from within a Java IDE or independently. Liferay Workspace is not mandatory for Liferay development, but in most cases, it simplifies and speeds up the development process significantly.
 
 Liferay Workspace provides:
@@ -180,4 +180,4 @@ Some of the settings found in `portal.properties` are portal instance-specific a
 	<li>The main portal configuration file, __________________________, defines every aspect of the platform configuration.</li>
 	<li>You can override the main configuration file by editing either the _________________________ or the ___________________________ files.</li>
 </ul>
-</div>
+</div> -->

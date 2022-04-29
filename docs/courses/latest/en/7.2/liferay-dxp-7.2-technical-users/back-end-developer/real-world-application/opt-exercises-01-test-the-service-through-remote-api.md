@@ -5,7 +5,7 @@ order: 1
 ---
 
 # Test the Service Through Remote API
-
+<!-- 
 <div class="ahead">
 <h4>Exercise Goals</h4>
 	<ul>
@@ -71,4 +71,4 @@ On the menu, you'll see a list of methods we just added to our remote service. W
 
 1. **Click** *delete-assignment* on the page menu.
 2. **Enter** the assignment ID.
-3. **Click** *Invoke*.
+3. **Click** *Invoke*. -->

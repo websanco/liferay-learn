@@ -5,7 +5,7 @@ order: 4
 ---
 
 # Create the Gradebook Web Module
-
+<!-- 
 <div class="ahead">
 <h4>Exercise Goals</h4>
 	<ul>
@@ -200,4 +200,4 @@ Dev Studio's hot deploy feature allows us to see the changes on the user interfa
 1. **Expand** the *category.training* category in the *Widgets* menu.
 1. **Add** the *gradebook-web* portlet on the page.
 
-<img src="../images/gradebook-web-on-a-page.png" style="max-height: 100%"/>
+<img src="../images/gradebook-web-on-a-page.png" style="max-height: 100%"/> -->

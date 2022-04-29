@@ -4,11 +4,9 @@ title: Override the Documents and Media MVC Action Command
 order: 1
 ---
 
-<h2 class="exercise">Exercises</h2>
-
 # Override the Documents and Media MVC Action Command
 
-<div class="ahead">
+<!-- <div class="ahead">
 <h4>Exercise Goals</h4>
 	<ul>
 		<li>Create a Liferay Module project using the service template</li>

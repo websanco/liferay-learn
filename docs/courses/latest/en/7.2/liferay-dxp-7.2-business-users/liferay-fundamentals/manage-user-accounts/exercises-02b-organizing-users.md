@@ -1,6 +1,6 @@
 # Create and Manage a User Group for Livingstone
 
-<div class="ahead">
+<!-- <div class="ahead">
 <h4>Exercise Goals</h4>
 <ul>
     <li>Create three User Groups for the Livingstone Rewards Groups</li>
@@ -114,4 +114,4 @@
 1. Create a new Private Dashboard User Group Page for the Livingstone Rewards Gold Group with new widgets.
 2. Create a new Private Dashboard User Group Page for the Livingstone Rewards Silver Group with new widgets.
 3. Create User Group Web Content to add to the Account Overview page.
-4. Add Hannah Jones to the Platinum User Group and verify access to the Account Overview page.
+4. Add Hannah Jones to the Platinum User Group and verify access to the Account Overview page. -->

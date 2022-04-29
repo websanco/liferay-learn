@@ -1,6 +1,6 @@
 # Getting Started with the Livingstone Platform
 
-<div class="ahead">
+<!-- <div class="ahead">
 <h4>Exercise Goals</h4>
 <ul>
     <li>Set up and run an instance of Liferay using one of the following methods:</li>
@@ -84,4 +84,4 @@ _Note: Since this is a local instance with no mail server set up, disabling emai
 
 1. Explore the _General_ Section and change the Mail Domain to use livingstone.com.
 2. Go back to Instance Settings and choose which languages to use on the platform in _Localization_.
-3. Explore the _Users_ section of Instance Settings and add some Default User Associations.
+3. Explore the _Users_ section of Instance Settings and add some Default User Associations. -->

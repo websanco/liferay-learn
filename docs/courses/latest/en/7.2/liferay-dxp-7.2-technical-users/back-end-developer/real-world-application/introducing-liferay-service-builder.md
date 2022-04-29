@@ -5,7 +5,7 @@ order: 3
 ---
 
 # Introduction
-
+<!-- 
 Liferay Service Builder is a code generation tool that takes an XML configuration file as an input and generates the complete service layer as an output. The generated code includes the database schema definition, persistence and caching code, service classes with CRUD methods, and a remote service layer supporting JSON and SOAP web services. The generated code can be complemented and overridden by service implementation classes, which are created for every entity defined in the service schema.
 
 The diagram below illustrates a Service Builder project file structure before and after code generation:
@@ -334,4 +334,4 @@ For further reading on the Service Builder resources in Liferay Developer Networ
 	<li>Service _____________________________ are the only classes meant to be _____________________________.</li>
 	<li>_____________________________ allow you to override Service Builder-generated services. They can also be used to override core Liferay services.</li>   
 </ul>
-</div>
+</div> -->

@@ -1,6 +1,6 @@
 # Add Public and Private Sites to the Platform
 
-<div class="ahead">
+<!-- <div class="ahead">
 <h4>Exercise Goals</h4>
 	<ul>
 		<li>Create the Livingstone Loop employee intranet as a private site on the Livingstone platform</li>
@@ -51,4 +51,4 @@
 ## Bonus Exercises
 
 1. Add Child Sites to the Livingstone Loop intranet. Make one for the Hotel Management employees and one for the Livingstone executives.
-2. Create an organization and organization site for one of the hotel location's employees. Add private pages to the organization site. Create a new user and add them to the organization. Log in as your user and access the private pages in the organization site.
+2. Create an organization and organization site for one of the hotel location's employees. Add private pages to the organization site. Create a new user and add them to the organization. Log in as your user and access the private pages in the organization site. -->

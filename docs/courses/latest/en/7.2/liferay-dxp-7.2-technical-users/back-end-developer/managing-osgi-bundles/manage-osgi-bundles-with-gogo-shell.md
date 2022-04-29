@@ -5,7 +5,7 @@ order: 2
 ---
 
 # Manage OSGi Bundles with the Gogo Shell
-
+<!-- 
 OSGi framework implementations provide tools for managing the bundles inside the container. Some of the common bundle management tasks are to:
 
 * Check which bundles are installed and what their versions are
@@ -236,4 +236,4 @@ module.framework.properties.osgi.console=localhost:11311
 	<li>To create your own Gogo __________________, you just have to create an OSGi command component and deploy it to the OSGi container.</li>
 	<li>The Gogo Shell can be configured from ______________________________.</li>
 </ul>
-</div>
+</div> -->

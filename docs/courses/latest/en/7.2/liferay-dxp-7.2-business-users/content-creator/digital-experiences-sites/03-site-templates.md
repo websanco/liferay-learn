@@ -1,6 +1,6 @@
 # Getting Sites Out to Market Quickly with Site Templates
 
-Companies can grow and change very quickly, so having a platform that reflects that by adapting to change seamlessly is important. Businesses need the ability to create a vast variety of content rapidly and to build sites that display that content in a way that makes sense. The creation of new sites should be easy and efficient, meeting the demand of modern businesses.
+<!-- Companies can grow and change very quickly, so having a platform that reflects that by adapting to change seamlessly is important. Businesses need the ability to create a vast variety of content rapidly and to build sites that display that content in a way that makes sense. The creation of new sites should be easy and efficient, meeting the demand of modern businesses.
 
 <br/>
 
@@ -82,4 +82,4 @@ Change the template from the Control Panel to make changes to Site Template page
 	  <li>Turn on the Enable Propagation of changes from the Site template option in order to inherit ________________________ from the template to the Site Pages.</li>
 	  <li>Inherited changes from a _______________________ template lock down the page from configuration changes, while inherited changes from a Page Template still allow administrative flexibility.</li>
 	</ul>
-</div>
+</div> -->

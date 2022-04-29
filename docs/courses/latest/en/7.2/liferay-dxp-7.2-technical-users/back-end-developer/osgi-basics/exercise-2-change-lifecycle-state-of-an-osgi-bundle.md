@@ -5,7 +5,7 @@ order: 2
 ---
 
 # Change Lifecycle State of an OSGi Bundle
-
+<!-- 
 <div class="ahead">
 <h4>Exercise Goals</h4>
 	<ul>
@@ -45,4 +45,4 @@ Use Gogo Shell to check the lifecycle state of our bundle:
 	* You'll see the *Hello World!!* message from the `HelloBundleActivator` class on the console again:
 	<img src="../images/restart-the-bundle.png" style="max-height: 100%;"/>
 
-> Note that restarting the bundle could also have been done with the *refresh* command.
+> Note that restarting the bundle could also have been done with the *refresh* command. -->

@@ -4,10 +4,8 @@ title: Hello OSGi
 order: 1
 ---
 
-<h2 class="exercise">Exercises</h2>
-
 # Hello OSGi
-
+<!-- 
 <div class="ahead">
 <h4>Exercise Goals</h4>
 	<ul>
@@ -92,4 +90,4 @@ Before running the bundle, we'll enable only the bundles needed to run the OSGi 
 1. **Click**  *Run As → OSGi Framework*:
 	<img src="../images/run-application.png" style="max-height: 27%"/>
 	* You should see the hello message in the console:
-	<img src="../images/hello-checkpoint.png" style="max-height: 28%"/>
+	<img src="../images/hello-checkpoint.png" style="max-height: 28%"/> -->

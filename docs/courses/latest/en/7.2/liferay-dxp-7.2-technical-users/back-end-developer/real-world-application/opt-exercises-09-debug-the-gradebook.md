@@ -5,7 +5,7 @@ order: 9
 ---
 
 # Debug the Gradebook
-
+<!-- 
 <div class="ahead">
 <h4>Exercise Goals</h4>
 	<ul>
@@ -45,4 +45,4 @@ In the debug mode, you can fully control application execution. You can move bac
 
 <img src="../images/debug-step-over.png" style="max-height: 100%"/>
 
-After you're done with the exercise, restart the server in normal mode.
+After you're done with the exercise, restart the server in normal mode. -->

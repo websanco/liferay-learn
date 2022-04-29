@@ -1,6 +1,6 @@
 # Importing Livingstone Solutions
 
-<div class="ahead">
+<!-- <div class="ahead">
 <h4>Exercise Goals</h4>
 <ul>
     <li>Import solutions for two of the Livingstone use cases:</li>
@@ -35,4 +35,4 @@
 ## Bonus Exercise:
 
 1. Modify the new imported pages with new content or widgets.
-2. Add new pages that would make sense for the Livingstone Hotels & Resorts Site.
+2. Add new pages that would make sense for the Livingstone Hotels & Resorts Site. -->

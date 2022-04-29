@@ -6,7 +6,7 @@ order: 3
 
 # Bundles
 
-The basic unit of modularization in an OSGi environment is called a *bundle*. A bundle contains an OSGi application or part of an OSGi application. Basically, an OSGi bundle is just a regular JAR archive made up of Java classes and resources like any other JAR archive. The only required archive level difference is the `Bundle-SymbolicName` identifier in the JAR's `MANIFEST.MF` file:
+<!-- The basic unit of modularization in an OSGi environment is called a *bundle*. A bundle contains an OSGi application or part of an OSGi application. Basically, an OSGi bundle is just a regular JAR archive made up of Java classes and resources like any other JAR archive. The only required archive level difference is the `Bundle-SymbolicName` identifier in the JAR's `MANIFEST.MF` file:
 
 <img src="../images/osgi-bundle.png" />
 
@@ -145,4 +145,4 @@ The following diagram illustrates the possible command sequences:
 	<li>____________________ shared between bundles requires defined version numbers.</li>
 	<li>Bundle ___________________ are classes that implement the <code>org.osgi.framework.BundleActivator</code> interface.</li>
 </ul>
-</div>
+</div> -->

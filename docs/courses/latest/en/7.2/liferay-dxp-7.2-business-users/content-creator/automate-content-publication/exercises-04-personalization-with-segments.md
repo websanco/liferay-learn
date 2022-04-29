@@ -1,6 +1,6 @@
 # Personalizing Content with User Segments
 
-<div class="ahead">
+<!-- <div class="ahead">
 <h4>Exercise Goals</h4>
 <ul>
     <li>Create a User Segment for Members of the Livingstone Rewards Group</li>
@@ -112,4 +112,4 @@
 ## Bonus Exercises
 
 1. Create a User Segment for Business Rewards members. You will need to create a new User Group for Business Rewards Members. In the Segment Editor, ensure that Livingstone Rewards group members are not included as a Condition of the Business Rewards members Segment.
-2. Create a new Experience for the Livingstone Rewards Content Page. This Experience should be targeted to the Business Rewards Members Segment and be composed of existing fragments that are edited to include exclusive deals for business travelers.
+2. Create a new Experience for the Livingstone Rewards Content Page. This Experience should be targeted to the Business Rewards Members Segment and be composed of existing fragments that are edited to include exclusive deals for business travelers. -->

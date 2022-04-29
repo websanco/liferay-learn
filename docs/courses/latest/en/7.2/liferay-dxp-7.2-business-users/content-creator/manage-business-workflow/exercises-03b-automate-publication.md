@@ -1,6 +1,6 @@
 # Automating Staging Publication
 
-<div class="ahead">
+<!-- <div class="ahead">
 <h4>Exercise Goals</h4>
 <ul>
     <li>Create a Seasonal Site Page Variation</li>
@@ -110,4 +110,4 @@
 ## Bonus Exercises
 
 1. Make more changes to the Holiday Season Variant. Improve the Holiday Banner and put it on the _Home_ page. Add additional special offers for the Holiday Season using the Special Offers Web Content Structures.
-2. Set up Staging on a new site. Create a new Site Pages Variation, add content to pages, and merge the new Site Pages Variation with the Main Variation for your site.
+2. Set up Staging on a new site. Create a new Site Pages Variation, add content to pages, and merge the new Site Pages Variation with the Main Variation for your site. -->

@@ -5,7 +5,7 @@ order: 2
 ---
 
 # Liferay User Interface Technologies Overview
-
+<!-- 
 Because of comprehensive web service APIs, the Liferay platform can be accessed from many kinds of user interfaces. In addition to the portal web user interface, Liferay makes it possible for desktop and mobile Sync clients to access the document repository, providing tools like [Liferay Screens](https://dev.liferay.com/en/develop/tutorials/-/knowledge_base/7-2/android-apps-with-liferay-screens) and [Mobile SDK](https://dev.liferay.com/en/develop/tutorials/-/knowledge_base/7-2/mobile-sdk) for creating native mobile applications. In the following sections, we will discuss the basic concepts and means of customizing the portal web user interface. 
 
 ## Web User Interface Technologies Overview {#web}
@@ -109,4 +109,4 @@ The following mindmap summarizes the typical approaches for user interface custo
     <li>The Liferay web user interface still relies on ___________, but Metal.js is increasingly being introduced in the new native applications.</li>
     <li>As a development platform, Liferay is framework-agnostic. Developers can use any preferred ___________ libraries.</li>
 </ul>
-</div>
+</div> -->

@@ -1,6 +1,6 @@
 # Controlling Specific Permissions on Sites
 
-Controlling access on specific sites is an important part of providing the best user experience. Administrators may need to give more permissions than Roles provide or may need to make sure that they're engaging the right personas with their content. Liferay comes out-of-the-box with features that give administrators control over their site resource permissions.
+<!-- Controlling access on specific sites is an important part of providing the best user experience. Administrators may need to give more permissions than Roles provide or may need to make sure that they're engaging the right personas with their content. Liferay comes out-of-the-box with features that give administrators control over their site resource permissions.
 
 ## Resource Permissions Menus {#permissionmenus}
 
@@ -51,4 +51,4 @@ This site will include widgets and assets that promote a vibrant community of wo
 	<li>Administrators can grant or remove permissions on a Site resource in the __________________.</li>
 	<li>__________________ are groups of Site Members that can be given additional permissions on specific resources on a Site.</li>
 </ul>
-</div>  
+</div>   -->

@@ -1,6 +1,6 @@
 # Liferay DXP Problem Solving
 
-Multiple technologies, services, and solutions can help businesses tackle the challenges that crop up in day-to-day work. Let's talk about some common business challenges for which Liferay has a solution by looking at the business needs of a company called Livingstone Hotels & Resorts. 
+<!-- Multiple technologies, services, and solutions can help businesses tackle the challenges that crop up in day-to-day work. Let's talk about some common business challenges for which Liferay has a solution by looking at the business needs of a company called Livingstone Hotels & Resorts. 
 
 ## Livingstone Hotels & Resorts {#livingstone}
 
@@ -139,4 +139,4 @@ With all of these features and more, Liferay DXP can meet the Livingstone team's
         <li> ______________________________: This suite includes collaborative functionality such as adding comments, mentions, and widgets such as Message Boards and Blogs.</li>
 	</ul>
 </ul>
-</div>  
+</div>   -->

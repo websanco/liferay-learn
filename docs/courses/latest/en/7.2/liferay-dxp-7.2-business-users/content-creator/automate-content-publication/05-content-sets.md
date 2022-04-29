@@ -1,6 +1,6 @@
 # Content Sets and Personalization
 
-At some point, it will make sense to start grouping all the different types of content in a site in different ways depending on how you want content to be displayed to your users. The Asset Publisher already works to do this as previously discussed, but you may want to have adaptable groups of content that change depending on who is viewing the content. To do this, Content Sets have been introduced for Liferay DXP 7.2.
+<!-- At some point, it will make sense to start grouping all the different types of content in a site in different ways depending on how you want content to be displayed to your users. The Asset Publisher already works to do this as previously discussed, but you may want to have adaptable groups of content that change depending on who is viewing the content. To do this, Content Sets have been introduced for Liferay DXP 7.2.
 
 ## Content Groupings for Livingstone's Platform {#livingstone}
 
@@ -92,4 +92,4 @@ To create a Personalized Variation of a Content Set, the Content Set must alread
   <li>Use the __________________________ to display and even create Content Sets.</li>
   <li>Target different User Segments by creating __________________________ of Content Sets.</li>
 </ul>
-</div>
+</div> -->

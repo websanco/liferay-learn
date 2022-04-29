@@ -4,10 +4,8 @@ title: Create a Media Gallery Widget Template
 order: 1
 ---
 
-<h2 class="exercise">Exercises</h2>
-
 # Create a Media Gallery Widget Template
-
+<!--
 <div class="ahead">
 <h4>Exercise Goals</h4>
 	<ul>
@@ -92,4 +90,4 @@ order: 1
 	- You may have to refresh the page to see the new option in the drop-down menu.
 9. **Save** and close the configuration dialog.
 
-<img src="../images/carousel-example.png" style="max-height:40%;" />
+<img src="../images/carousel-example.png" style="max-height:40%;" /> -->

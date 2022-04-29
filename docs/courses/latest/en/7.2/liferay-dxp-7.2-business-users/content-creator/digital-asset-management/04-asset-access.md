@@ -1,6 +1,6 @@
 # Controlling Access to Assets
 
-Content Creators will be busy adding and editing content for your sites once the platform is up and running, but how do administrators ensure that not just any user can start adding content to the platform wherever he or she might want? Administrators and Content Creators alike need clear access to what they and their team members need in order to do their jobs, but should not have access to anything that goes beyond the scope of their jobs. Clearly defining access to create, edit, and organize assets is one of the most important parts of a healthy and efficient platform.
+<!-- Content Creators will be busy adding and editing content for your sites once the platform is up and running, but how do administrators ensure that not just any user can start adding content to the platform wherever he or she might want? Administrators and Content Creators alike need clear access to what they and their team members need in order to do their jobs, but should not have access to anything that goes beyond the scope of their jobs. Clearly defining access to create, edit, and organize assets is one of the most important parts of a healthy and efficient platform.
 
 ## Giving Permissions to Livingstone Content Creators {#livingstone}
 
@@ -92,4 +92,4 @@ Note: Specific permissions are generally defined for specific widgets. For examp
   	<li>___________________________</li>
   </ul>
 </ul>
-</div>
+</div> -->

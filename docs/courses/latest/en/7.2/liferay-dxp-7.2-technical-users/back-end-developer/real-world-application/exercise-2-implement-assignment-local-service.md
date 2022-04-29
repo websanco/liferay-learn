@@ -5,7 +5,7 @@ order: 2
 ---
 
 # Implement Assignment Local Service
-
+<!-- 
 <div class="ahead">
 <h4>Exercise Goals</h4>
 	<ul>
@@ -436,4 +436,4 @@ public class AssignmentLocalServiceImpl extends AssignmentLocalServiceBaseImpl {
 
 ## Rebuild the Service
 
-1. **Run** the `buildService` Gradle task to regenerate the service.
+1. **Run** the `buildService` Gradle task to regenerate the service. -->

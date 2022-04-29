@@ -1,6 +1,6 @@
 # Create Self-Publishing Pages
 
-The more content you have in your platform, the more time it takes to manage. Automating the publication process can dramatically improve efficiency and time-to-market. In this section, we will look closely at how to configure Self-Publishing pages that automatically publish content created by Content Creators on your digital experience platform.
+<!-- The more content you have in your platform, the more time it takes to manage. Automating the publication process can dramatically improve efficiency and time-to-market. In this section, we will look closely at how to configure Self-Publishing pages that automatically publish content created by Content Creators on your digital experience platform.
 
 ## Livingstone's Automated Publishing {#livingstone}
 
@@ -160,4 +160,4 @@ This link can be used as a reference elsewhere on the platform to direct users t
   <li>The Asset Publisher can publish content manually or _______________________.</li>
   <li>_______________________ Templates allow you to map Content fields to Page Fragment elements.</li>
 </ul>
-</div>
+</div> -->

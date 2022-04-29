@@ -1,6 +1,6 @@
 # Business Process Considerations
 
-Staging provides an excellent way of creating, reviewing, and publishing content, but streamlining a workflow is the key to unlocking its full potential. It is critical to notify the web team, marketing team, and design team when it is time to make and review changes in order to optimize efficiency when building your platform. When reviewing pages in a site, it's also very important to be able to see what the page will look like on different devices with various screen sizes. Implementing all of this with a work-in-progress environment before pages are published is important to platform development.
+<!-- Staging provides an excellent way of creating, reviewing, and publishing content, but streamlining a workflow is the key to unlocking its full potential. It is critical to notify the web team, marketing team, and design team when it is time to make and review changes in order to optimize efficiency when building your platform. When reviewing pages in a site, it's also very important to be able to see what the page will look like on different devices with various screen sizes. Implementing all of this with a work-in-progress environment before pages are published is important to platform development.
 
 ## Updating Livingstone's Platform Systematically {#livingstone}
 
@@ -59,4 +59,4 @@ Once the full functionality has been checked out, make a final check to ensure t
   <li>Pages should have ______________________ placed on them and be reviewed in Staging before publishing to live.</li>
   <li>Set Workflow definitions for Pages under the Configuration section of the ______________________.</li>
 </ul>
-</div>
+</div> -->

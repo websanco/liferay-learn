@@ -5,7 +5,7 @@ order: 1
 ---
 
 # Extend User Profile Using Expandos and Lifecycle Actions
-
+<!-- 
 <div class="ahead">
 <h4>Exercise Goals</h4>
 	<ul>
@@ -166,4 +166,4 @@ public class UserExpandoStartupAction implements LifecycleAction {
 
 ## Takeaways
 
-In this exercise, we demonstrated how to extend Liferay's user model using Expandos. The user model is one of the most commonly extended ones, and, as you've seen here, it's very easy to do with Expandos. Although Expandos are a great tool to extend or create databases dynamically, they are not without their limitations. If you are doing more than adding simple fields to the database, you may want to consider creating a new database table with the user ID as a foreign key instead.
+In this exercise, we demonstrated how to extend Liferay's user model using Expandos. The user model is one of the most commonly extended ones, and, as you've seen here, it's very easy to do with Expandos. Although Expandos are a great tool to extend or create databases dynamically, they are not without their limitations. If you are doing more than adding simple fields to the database, you may want to consider creating a new database table with the user ID as a foreign key instead. -->

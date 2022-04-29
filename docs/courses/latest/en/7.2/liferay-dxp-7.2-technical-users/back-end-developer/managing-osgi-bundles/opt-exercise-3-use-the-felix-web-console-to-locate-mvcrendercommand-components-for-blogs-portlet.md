@@ -5,7 +5,7 @@ order: 3
 ---
 
 # Use the Felix Web Console to Locate MVCRender Command Components for the Blogs Portlet
-
+<!-- 
 <div class="ahead">
 <h4>Exercise Goals</h4>
 	<ul>
@@ -32,4 +32,4 @@ order: 3
 
 The output will show you all the [MVCRenderCommand](https://github.com/liferay/liferay-portal/blob/7.1.x/portal-kernel/src/com/liferay/portal/kernel/portlet/bridges/mvc/MVCRenderCommand.java) components having the componen property `mvc.command.name=/blog`:	
 
-<img src="../images/blogs-commands.png" style="max-width: 100%"/>
+<img src="../images/blogs-commands.png" style="max-width: 100%"/> -->

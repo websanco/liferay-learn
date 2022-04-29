@@ -1,6 +1,6 @@
 # Content Feature Overview
 
-<div class="ahead">
+<!-- <div class="ahead">
 <h4>Exercise Goals</h4>
 <ul>
     <li>Add some initial content to the Livingstone Life site, including:</li>
@@ -59,4 +59,4 @@
 1. Create a new Digital Article with Web Content to publish on the _Articles_ page.
 2. Use the Section Builder to create a new _Page_ section to replace the header of either page.
 3. Create another blog and add metadata to it. 
-4. Create any of the other Asset types.
+4. Create any of the other Asset types. -->

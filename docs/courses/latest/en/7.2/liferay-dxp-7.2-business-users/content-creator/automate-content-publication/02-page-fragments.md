@@ -1,6 +1,6 @@
 # Simplifying Content Updates and Page Creation with Page Fragments
 
-Some aspects of your sites will need more attention than others. A site banner, for instance, is an important part of every public-facing page. The site banner is the primary place for the web team to create immediate brand recognition and helps set the identity of the entire platform.
+<!-- Some aspects of your sites will need more attention than others. A site banner, for instance, is an important part of every public-facing page. The site banner is the primary place for the web team to create immediate brand recognition and helps set the identity of the entire platform.
 
 Marketing teams often work on portions of a site together and in greater detail. A platform that requires coding expertise to modify different aspects of the page could be a problem for marketing teams.
 
@@ -145,4 +145,4 @@ Using Page Fragments, Web Designers, Front-End Developers, and Content Creators 
   <li>Editable Elements can be created using the ______________________ tags.</li>
   <li>Page Fragments can be managed by creating ______________________ in the new Site Administration section.</li>
 </ul>
-</div>
+</div> -->

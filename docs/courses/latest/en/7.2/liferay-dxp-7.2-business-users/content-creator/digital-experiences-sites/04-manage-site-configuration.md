@@ -1,6 +1,6 @@
 # Manage Site Configuration
 
-You can build a wide variety of different types of websites using sites:
+<!-- You can build a wide variety of different types of websites using sites:
 - Sites for your organizations
 - Corporate websites
 - Company intranets
@@ -158,4 +158,4 @@ Note: If you wanted a user to have administrative access to all sites in a paren
   <li>Sites allow for both __________________________ and __________________________ pages.</li>
   <li>Organizing sites hierarchically gives __________________________ more precise control over pages, content, app data, and site members.</li>
 </ul>
-</div>
+</div> -->

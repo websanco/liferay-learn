@@ -1,6 +1,6 @@
 # Creating Structures and Templates for Content Display
 
-<div class="ahead">
+<!-- <div class="ahead">
 <h4>Exercise Goals</h4>
 <ul>
     <li>Create a Content Page using Page Fragments</li>
@@ -108,4 +108,4 @@
 ## Bonus Exercise
 1. Create a second Content Page using the default Page Fragments found in the _Basic Sections_ collection. Use your own images and come up with text that would make sense for Livingstone's _About_ page.
 2. Use some of the Page Fragments from the Livingstone Front Page collection to create a marketing page for Livingstone. Edit any editable elements to create a page highlighting Livingstone's travel packages.
-
+ -->

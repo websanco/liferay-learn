@@ -5,7 +5,7 @@ order: 2
 ---
 
 # Set Up the Development Environment on OSX
-
+<!-- 
 <div class="ahead">
 <h4>Exercise Goals</h4>
 	<ul>
@@ -106,4 +106,4 @@ source ~/.profile
 <img src="../images/workspace-location.png" style="max-height:35%;" />
 
 Developer Studio is now set up and ready:
-<img src="../images/checkpoint.png" style="max-height:35%" />
+<img src="../images/checkpoint.png" style="max-height:35%" /> -->

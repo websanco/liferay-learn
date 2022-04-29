@@ -1,6 +1,6 @@
 # Gathering User Feedback with Forms
 
-Surveys and feedback forms are powerful tools that can be leveraged by any business. Integrating these assets into your platform is essential for gathering and organizing data from your users. Being able to create and customize forms with various input fields is a powerful out-of-the-box feature of Liferay DXP.
+<!-- Surveys and feedback forms are powerful tools that can be leveraged by any business. Integrating these assets into your platform is essential for gathering and organizing data from your users. Being able to create and customize forms with various input fields is a powerful out-of-the-box feature of Liferay DXP.
 
 ## Collecting Feedback Online at Livingstone {#livingstone}
 
@@ -201,4 +201,4 @@ Once users have given feedback, entries can be viewed in the `Content & Data →
   <li>_______________________ enable further Form customization.</li>
   <li>A _______________________ Page can be added to the end of a Form.</li>
 </ul>
-</div>
+</div> -->

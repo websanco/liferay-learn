@@ -5,7 +5,7 @@ order: 7
 ---
 
 # Implement Validation
-
+<!-- 
 <div class="ahead">
 <h4>Exercise Goals</h4>
 	<ul>
@@ -789,4 +789,4 @@ The complete `edit_assignment.jsp` file will look like this:
 1. **Put** a dollar `$` sign in the title field and leave the *Description* field empty
 1. **Submit** the form:
 
-<img  src="../images/client-side-validation.png" style="max-height: 100%"/>
+<img  src="../images/client-side-validation.png" style="max-height: 100%"/> -->

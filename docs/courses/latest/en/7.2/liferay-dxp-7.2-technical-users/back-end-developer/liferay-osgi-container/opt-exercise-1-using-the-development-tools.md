@@ -5,7 +5,7 @@ order: 4
 ---
 
 # Optional Exercise
-
+<!-- 
 In this optional exercise, you can find tips and instructions for the training exercises. 
 
 Always ask your trainer, if you are unsure about the exercise instructions.
@@ -53,4 +53,4 @@ When you declare new dependencies in the `build.gradle` they should refresh auto
 
 1. **Use** CTRL+SHIFT+R and type the class name to find the resource.
 
-> Notice that you can use wildcards like *LocalService*.
+> Notice that you can use wildcards like *LocalService*. -->

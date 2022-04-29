@@ -5,7 +5,7 @@ order: 1
 ---
 
 # Optional Exercises
-
+<!-- 
 <div class="ahead">
 
 <h4>Tasks to Accomplish</h4>
@@ -26,4 +26,4 @@ order: 1
         </ul>
     <li>Practice using Liferay Log and Gogo shell for troubleshooting failing module deployment</li>
 </ul>
-</div>
+</div> -->

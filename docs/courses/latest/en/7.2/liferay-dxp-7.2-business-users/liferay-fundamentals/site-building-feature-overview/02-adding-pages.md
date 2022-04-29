@@ -1,6 +1,6 @@
 # Adding and Managing Pages
 
-Sites are distinct groups of content, which means that administrators can choose to manage content that is restricted to a certain group of Users that have access to the Site Administration panel, or they can display content on _Pages_ to engage with their Users. Pages in Sites have a number of different configurations and options that ensure the best User experiences are possible. 
+<!-- Sites are distinct groups of content, which means that administrators can choose to manage content that is restricted to a certain group of Users that have access to the Site Administration panel, or they can display content on _Pages_ to engage with their Users. Pages in Sites have a number of different configurations and options that ensure the best User experiences are possible. 
 
 <figure>
 	<img src="../images/page-example.png" style="max-height: 35%" />
@@ -108,4 +108,4 @@ Key Point: <br/>
 		<li>__________________</li>
 	</ul>
 </ul>
-</div>  
+</div>   -->

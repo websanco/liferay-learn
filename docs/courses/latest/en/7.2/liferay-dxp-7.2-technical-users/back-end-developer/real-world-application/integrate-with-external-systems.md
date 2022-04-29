@@ -5,7 +5,7 @@ order: 9
 ---
 
 # Integrate with External Systems
-
+<!-- 
 Liferay Service Builder can automatically generate JSON and SOAP web services APIs for your service. As Liferay platform core services are created using the Service Builder pattern, they all have web service APIs available.
 
 In addition to Service Builder generated web services, it is possible to publish JAX-RS REST and JAX-WS endpoints for any ad-hoc service.
@@ -169,4 +169,4 @@ Liferay 7.2 provides a new API generator tool which consumes OpenAPI profiles an
 <ul>
   <li>In addition to Service Builder-generated web services, it is possible to publish _____________________________________________________________________________________________________________________ for any _____________________________________________________.</li>
 </ul>
-</div>
+</div> -->

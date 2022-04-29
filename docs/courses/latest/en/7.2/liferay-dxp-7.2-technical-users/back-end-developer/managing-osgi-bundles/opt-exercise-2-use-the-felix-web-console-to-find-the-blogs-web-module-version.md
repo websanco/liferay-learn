@@ -5,7 +5,7 @@ order: 2
 ---
 
 # Use the Felix Web Console to Find the Blogs Web Module Version
-
+<!-- 
 <div class="ahead">
 <h4>Exercise Goals</h4>
 	<ul>
@@ -46,4 +46,4 @@ Felix Web Console is an OSGi bundle that we have to install into the OSGi contai
 
 Here you can see the version number for the bundle.
 
-<img src="../images/blogs-web.png" style="max-width: 100%"/>
+<img src="../images/blogs-web.png" style="max-width: 100%"/> -->

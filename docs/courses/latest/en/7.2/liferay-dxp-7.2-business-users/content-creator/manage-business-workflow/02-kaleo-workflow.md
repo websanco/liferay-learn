@@ -1,6 +1,6 @@
 # Kaleo Workflow Definitions
 
-In the last section, we saw the default Single Approver workflow and walked through how it works. But, many times, content submissions require review tasks with multiple reviewers. Liferay DXP comes out of the box with tools to help you create the exact workflow you need for your Content Creation processes.
+<!-- In the last section, we saw the default Single Approver workflow and walked through how it works. But, many times, content submissions require review tasks with multiple reviewers. Liferay DXP comes out of the box with tools to help you create the exact workflow you need for your Content Creation processes.
 
 ## Livingstone's Custom Workflows {#livingstone}
 
@@ -152,4 +152,4 @@ Task Timers can also be set in the Kaleo Designer.
   <li>Workflows can be defined to include ________________ timers, conditions, and even script actions.</li>
   <li>With the Kaleo designer, Administrators can _______________________ design workflow definitions.</li>
 </ul>
-</div>
+</div> -->

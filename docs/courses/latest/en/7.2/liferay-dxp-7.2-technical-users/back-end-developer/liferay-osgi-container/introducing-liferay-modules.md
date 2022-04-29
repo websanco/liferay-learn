@@ -5,7 +5,7 @@ order: 3
 ---
 
 # Introducing Liferay Modules
-
+<!-- 
 Since Liferay 7.0 / DXP, all Liferay plugins have been called *modules*. Technically, a module is a project type, but after being built and deployed, it becomes an OSGi *bundle* running in the OSGi container. In Liferay terminology, the term *module* is used to refer to both.	
 
 Liferay provides a comprehensive set of project, module, and component templates you can use to generate project stubs and classes. 
@@ -64,4 +64,4 @@ mvn archetype:generate -Dfilter=liferay
 	<li>Use the ____________________________ to add components to your existing project.</li>
 	<li>Module Templates can be created with ____________________.</li>
 </ul>
-</div>
+</div> -->

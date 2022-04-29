@@ -5,7 +5,7 @@ order: 5
 ---
 
 # Implement the Main View
-
+<!-- 
 <div class="ahead">
 <h4>Exercise Goals</h4>
 	<ul>
@@ -878,4 +878,4 @@ public class AssignmentsManagementToolbarDisplayContext
 
 After the module has restarted successfully, refresh the browser to see the changes:
 
-<img src="../images/gradebook-web-view.png" style="max-height: 100%"/>
+<img src="../images/gradebook-web-view.png" style="max-height: 100%"/> -->

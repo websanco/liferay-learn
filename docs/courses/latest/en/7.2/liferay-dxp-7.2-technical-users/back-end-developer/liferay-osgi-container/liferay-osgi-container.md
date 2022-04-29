@@ -5,7 +5,7 @@ order: 2
 ---
 
 # Liferay's OSGi Container
-
+<!-- 
 So far, we have learned that OSGi applications are usually made up of multiple modules that share features with each other. The modules, called *bundles*, need a runtime environment called an *OSGi container*.
 
 The Liferay platform is built on OSGi technology: Liferay applications are OSGi applications, and the platform has an embedded OSGi container. Liferay's OSGi container implementation is standard-compliant, which means that you can run any standard OSGi bundle inside it.
@@ -149,4 +149,4 @@ Specifically in creating a Liferay service component or override, like an MVC Re
 	<li>All of the Liferay platform's core applications are ________________ applications.</li>
 	<li>Services and functionalities within the Liferay platform leverage the OSGi __________________________________ model.</li>
 </ul>
-</div>
+</div> -->

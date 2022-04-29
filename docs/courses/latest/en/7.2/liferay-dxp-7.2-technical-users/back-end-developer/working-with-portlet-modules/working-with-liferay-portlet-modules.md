@@ -4,8 +4,8 @@ title: Working with Liferay Portlet Modules
 order: 3
 ---
 
-## Working with Liferay Portlet Modules
-
+# Working with Liferay Portlet Modules
+<!-- 
 Liferay has a portlet container that supports the [JSR-168](https://www.jcp.org/en/jsr/detail?id=168), [JSR-286](https://www.jcp.org/en/jsr/detail?id=286), and [JSR-362](https://www.jcp.org/en/jsr/detail?id=362) portlet specifications. If you created a portlet using the standard portlet methodology, you can get it to work and deploy in Liferay. 
 
 While Liferay's native OSGi portlets are based on the Java portlet standards, they do not follow them completely. Liferay has its own implementation of a portlet that extends the [javax.portlet.GenericPortlet](https://portals.apache.org/pluto/portlet-2.0-apidocs/javax/portlet/GenericPortlet.html). Many of the concepts discussed in the Java standard portlet sections are in effect, but implemented differently. In this section, we'll explain the most important concepts of a Liferay OSGi portlet.
@@ -223,4 +223,4 @@ Liferay provides several MVC Portlet extensions to leverage technologies other t
   <li>In a Liferay app, the ___________________________________ only makes up one part of the application.</li>
   <li>The _______ and the _____________________________________________________ for a Liferay app are usually contained in a ______________________________________________________________________.</li>
 </ul>
-</div>
+</div> -->

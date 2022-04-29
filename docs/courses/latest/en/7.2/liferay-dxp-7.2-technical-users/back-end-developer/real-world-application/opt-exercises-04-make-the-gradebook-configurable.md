@@ -5,7 +5,7 @@ order: 4
 ---
 
 # Make the Gradebook Configurable
-
+<!-- 
 <div class="ahead">
 <h4>Exercise Goals</h4>
 	<ul>
@@ -267,4 +267,4 @@ error.description-too-long=Description text too long.
 
 1. **Test** creating new Assignments with either too short or too long descriptions, after refreshing.
 
-<img src="../images/configured-validation-error.png" style="max-height: 100%"/>
+<img src="../images/configured-validation-error.png" style="max-height: 100%"/> -->

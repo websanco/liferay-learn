@@ -1,6 +1,6 @@
 # Streamlining Content Publication with Structures and Templates
 
-Your platform needs a consistent design and structure throughout. A consistent design empowers your users and creates a recognizable brand image for your business. Consistent structures make it easier for Content Creators to get their jobs done efficiently. When design is taken care of globally, it streamlines your entire platform.
+<!-- Your platform needs a consistent design and structure throughout. A consistent design empowers your users and creates a recognizable brand image for your business. Consistent structures make it easier for Content Creators to get their jobs done efficiently. When design is taken care of globally, it streamlines your entire platform.
 
 ## Livingstone's Custom Content {#livingstone}
 
@@ -125,4 +125,4 @@ Access to specific Templates and Structures can be given individually via the co
   	<li>______________________</li>
   </ul>
 </ul>
-</div>
+</div> -->

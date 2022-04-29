@@ -5,7 +5,7 @@ order: 2
 ---
 
 # Customize the Announcements Portlet JSP Using a Fragment Module
-
+<!-- 
 <div class="ahead">
 <h4>Exercise Goals</h4>
 	<ul>
@@ -75,4 +75,4 @@ When you deploy a fragment module, you won't see a "STARTED" message for this mo
 1. **Add** the *Announcements* portlet onto the page.
 	*  You should see the message in the overridden JSP file:
 
-<img src="../images/announcements-overridden.png" style="max-height:100%;"/>
+<img src="../images/announcements-overridden.png" style="max-height:100%;"/> -->

@@ -5,7 +5,7 @@ order: 7
 ---
 
 # OSGi Benefits
-
+<!-- 
 ## True Modularization
 
 In traditional Java EE web application development, because of the class loading and contextual restrictions, web applications tended to end up being monolithic and difficult to maintain.
@@ -91,4 +91,4 @@ The OSGi framework service component model, which requires interfacing that enfo
 	<li>The most common class loading mode is the _______________________ mode.</li>
 	<li>In the OSGi environment, each bundle has its own ___________________, but the class loader delegation is completely managed by the OSGi container.</li>
 </ul>
-</div>
+</div> -->

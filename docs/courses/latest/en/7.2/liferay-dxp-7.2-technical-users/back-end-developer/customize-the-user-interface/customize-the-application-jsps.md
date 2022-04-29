@@ -6,7 +6,7 @@ order: 4
 
 # Customize the Application JSPs
 
-Widget Templates have limitations: not all applications support them, they are only implemented for modifying view templates, and you can only use them to customize _some_ parts of the JSP file. Sometimes, you need to customize the JSP directly. There are a few ways to do this, from API-based content injection to overriding the JSP files completely:
+<!-- Widget Templates have limitations: not all applications support them, they are only implemented for modifying view templates, and you can only use them to customize _some_ parts of the JSP file. Sometimes, you need to customize the JSP directly. There are a few ways to do this, from API-based content injection to overriding the JSP files completely:
 
 * Dynamic includes
 * Custom JSP bag
@@ -150,4 +150,4 @@ public class BlogsRenderFilter implements RenderFilter  {
     <li> __________________ allow you to override entire JSPs.</li>
     <li> ___________________ is an API-based and Liferay-recommended method of overriding the application JSPs.</li>
 </ul>
-</div>
+</div> -->

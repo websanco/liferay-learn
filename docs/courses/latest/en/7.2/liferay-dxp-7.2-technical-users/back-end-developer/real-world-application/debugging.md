@@ -5,7 +5,7 @@ order: 12
 ---
 
 # Debugging
-
+<!-- 
 Your application might be failing integration tests or crashing in production because of unknown reasons. The code complexity might have gotten to the point where you aren't sure how everything is working together. Developers make mistakes, and tests can't cover every possible use case scenario. This is where debugging comes in. Debugging covers a number of different approaches, tools, and methodologies under its umbrella.
 
 Here, for the sake of training, we limit the scope to the basics of using the IDE debugger tool, which enables you to monitor and control the execution of a program, setting breakpoints and changing values in memory. We'll also briefly discuss some methods of troubleshooting and debugging issues in production, where there's no source code or IDE available. 
@@ -185,4 +185,4 @@ Timestamp         S0     S1     E      O      M     CCS    YGC     YGCT    FGC  
   <li>_________________________ is a collection of Java APIs used to facilitate debugging, profiling, and monitoring local and remote Java applications.</li>
   <li>Debugging issues in production systems is usually _________________________ and often relies on interpreting the symptoms from _________________________, _________________________, and _________________________.</li>
 </ul>
-</div>
+</div> -->

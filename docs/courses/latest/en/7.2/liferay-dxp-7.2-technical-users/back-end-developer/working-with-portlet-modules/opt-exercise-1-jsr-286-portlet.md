@@ -4,11 +4,9 @@ title: Implement a Basic JSR-286-Compliant Portlet
 order: 1
 ---
 
-<h2 class="exercise">Optional Exercise</h2>
+# Implement a Basic JSR-286-Compliant Portlet
 
-## Implement a Basic JSR-286-Compliant Portlet
-
-<div class="ahead">
+<!-- <div class="ahead">
 <h4>Exercise Goals</h4>
 	<ul>
 	<li>Implement a basic JSR-286-compliant portlet that illustrates the most basic concepts of the Portlet Specification 2.0, like the portlet lifecycle, the portlet modes, and window states.</li>
@@ -251,4 +249,4 @@ You can now explore the portlet's behavior when it is deployed multiple times on
 When you click the button in one instance, the background color of the respective portlet changes, while all other instances remain the same:
 
 <img src="../images/render-parameter-1.png" style="max-height:100%;"/>
-
+ -->

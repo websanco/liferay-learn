@@ -1,6 +1,6 @@
 # User Segments and Content Page Personalization
 
-In previous sections, we have seen how to create static pages with Web Content and Content Pages and how to create dynamic pages using the Asset Publisher and Display Pages. While these are powerful features, there are times and places within the platform where different content should be displayed to different users. For example, if an existing client is logged in, you do not want all your content focused on getting them to join. Instead, you might want existing clients to see how they can upgrade their services and, when a prospective client is logged in and viewing the same page, you might want the prospective client to see how they can start using your company's services.
+<!-- In previous sections, we have seen how to create static pages with Web Content and Content Pages and how to create dynamic pages using the Asset Publisher and Display Pages. While these are powerful features, there are times and places within the platform where different content should be displayed to different users. For example, if an existing client is logged in, you do not want all your content focused on getting them to join. Instead, you might want existing clients to see how they can upgrade their services and, when a prospective client is logged in and viewing the same page, you might want the prospective client to see how they can start using your company's services.
 
 ## Grouping Users for Personalized Content at Livingstone {#livingstone}
 
@@ -92,4 +92,4 @@ All Content Pages start off with a _Default Experience_. When editing an existin
   <li>The ________________________ is used to create Segments in a site.</li>
   <li>________________________ allows for different versions of a Content Page to be created for different User Segments.</li>
 </ul>
-</div>
+</div> -->

@@ -5,7 +5,7 @@ order: 12
 ---
 
 # Integrate with the Asset Framework
-
+<!-- 
 <div class="ahead">
 <h4>Exercise Goals</h4>
 	<ul>
@@ -698,4 +698,4 @@ Implement the JSP files:
 
 1. **Check** that the *gradebook-web* module redeploys successfully and that you are able to access the Gradebook application in your web browser.
 
-Remember that to be able to show Assets in the Asset Publisher portlet, we also have to integrate to the Search Framework. We are going to do that in the next exercise.
+Remember that to be able to show Assets in the Asset Publisher portlet, we also have to integrate to the Search Framework. We are going to do that in the next exercise. -->

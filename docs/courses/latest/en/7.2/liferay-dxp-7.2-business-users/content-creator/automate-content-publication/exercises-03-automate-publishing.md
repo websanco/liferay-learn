@@ -1,6 +1,6 @@
 # Automating Publishing with the Asset Publisher
 
-<div class="ahead">
+<!-- <div class="ahead">
 <h4>Exercise Goals</h4>
 <ul>
     <li>Create an automated self-publishing page using the Asset Publisher</li>
@@ -150,4 +150,4 @@ Finally, let's create some new Web Content to test out our Display Page.
 1. Create a second Display Page using any existing Page Fragments. Use the 4 Image Structure we imported in the first exercise.
 2. Create new Web Content using the 4 Image Structure and view the mapped Web Content in your custom Display Page.
 
-
+ -->

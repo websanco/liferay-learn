@@ -1,6 +1,6 @@
-## Create New User Accounts
+# Create New User Accounts
 
-<div class="ahead">
+<!-- <div class="ahead">
 <h4>Exercise Goals</h4>
 <ul>
     <li>Create two new User Accounts to Organize</li>
@@ -85,4 +85,4 @@
 1. Create a new User for yourself.
 2. Give yourself the Regular Administrator Role.
 3. Add some contact information in the _Contact_ tab of the User Account.
-4. Change your preferences in the _Preferences_ tab of the User Account.
+4. Change your preferences in the _Preferences_ tab of the User Account. -->

@@ -5,7 +5,7 @@ order: 13
 ---
 
 # Integrate with Portal Search
-
+<!-- 
 <div class="ahead">
 <h4>Exercise Goals</h4>
 	<ul>
@@ -381,4 +381,4 @@ If you have created test Assignments, you have to reindex the search index to ge
 ## Test the Application
 
 1. **Use** the portal search bar to search Assignments.
-1. **Create** a new Assignment and check whether it appears in the search.
+1. **Create** a new Assignment and check whether it appears in the search. -->

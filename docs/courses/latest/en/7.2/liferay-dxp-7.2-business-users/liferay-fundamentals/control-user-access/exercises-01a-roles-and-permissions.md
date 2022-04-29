@@ -1,5 +1,5 @@
 # Customize the Site Content Reviewer Role
-
+<!-- 
 <div class="ahead">
 <h4>Exercise Goals</h4>
 <ul>
@@ -54,4 +54,4 @@
 3. Go to the main Site _Configuration_ section and turn workflow on for Web Content.
 4. Create a new Web Content Article in the main site as the Admin User.
 5. Log in as the new User to check for a notification from the workflow.
-6. Assign it to yourself and edit the Web Content.
+6. Assign it to yourself and edit the Web Content. -->

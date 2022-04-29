@@ -5,7 +5,7 @@ order: 3
 ---
 
 # Customize Blogs Portlet Entry View Using a Portlet Filter
-
+<!-- 
 <div class="ahead">
 <h4>Exercise Goals</h4>
 	<ul>
@@ -278,4 +278,4 @@ public class BlogsRenderFilter implements RenderFilter {
 
 ## Takeaways
 
-Portlet filters can be used to do many different types of pre or post processing for portlets. In this case, you've seen that you can use a RenderFilter to modify the content of a portlet without having to change the code directly. Along with using Module Fragments, this gives you another option to customize the view layer of existing Liferay applications.
+Portlet filters can be used to do many different types of pre or post processing for portlets. In this case, you've seen that you can use a RenderFilter to modify the content of a portlet without having to change the code directly. Along with using Module Fragments, this gives you another option to customize the view layer of existing Liferay applications. -->

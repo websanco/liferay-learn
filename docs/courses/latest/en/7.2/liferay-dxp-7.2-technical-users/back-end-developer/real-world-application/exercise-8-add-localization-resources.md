@@ -5,7 +5,7 @@ order: 8
 ---
 
 # Add Localization Resources
-
+<!-- 
 <div class="ahead">
 <h4>Exercise Goals</h4>
 	<ul>
@@ -154,4 +154,4 @@ your-submission=Your Submission
 
 1. **Open** the Gradebook application in your web browser and refresh the page. You should now be able to see the labels and messages correctly:
 
-<img src="../images/localizations-in-place.png" style="max-height: 35%"/>
+<img src="../images/localizations-in-place.png" style="max-height: 35%"/> -->

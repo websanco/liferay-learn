@@ -5,7 +5,7 @@ order: 6
 ---
 
 # Publish a REST Service
-
+<!-- 
 <div class="ahead">
 <h4>Exercise Goals</h4>
 	<ul>
@@ -381,4 +381,4 @@ The JAX-RS REST application requires OAuth 2.0 authorization by default and we h
 
 You've seen in this exercise how easy it is to create a REST API for your Liferay Services. Because JAX-RS Whiteboard is a standard OSGi specification, you now have another convenient tool at your disposal to create APIs that others can use to easily integrate with your applications.
 
-> See Developer Network article (https://dev.liferay.com/en/develop/tutorials/-/knowledge_base/7-2/jax-rs-and-jax-ws) for more information about using JAX RS and JAX WS in your projects.
+> See Developer Network article (https://dev.liferay.com/en/develop/tutorials/-/knowledge_base/7-2/jax-rs-and-jax-ws) for more information about using JAX RS and JAX WS in your projects. -->

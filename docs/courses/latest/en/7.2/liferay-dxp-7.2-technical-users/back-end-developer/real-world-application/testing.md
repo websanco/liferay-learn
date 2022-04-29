@@ -5,7 +5,7 @@ order: 11
 ---
 
 # Testing
-
+<!-- 
 In this section, we'll discuss some general principles, practices, and guidelines of software testing. The practical part of the section will focus on integration testing.
 
 ## Why Test?
@@ -364,4 +364,4 @@ Typical steps for setting up Liferay Arquillian tests:
 			<li>____________________________________________________</li>
 		</ul>
 </ul>
-</div>
+</div> -->

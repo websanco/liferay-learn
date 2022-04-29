@@ -1,6 +1,6 @@
 # Preparing Pages and Content for Production
 
-Any public-facing website needs to be created and edited separately from the live site. Users should never deal with a site that is being changed in real time. You need a work-in-progress environment where you can make sure everything is reviewed and finalized before the site is updated. Because multiple teams often work on a platform at the same time, you also need this work-in-progress environment to be collaborative.
+<!-- Any public-facing website needs to be created and edited separately from the live site. Users should never deal with a site that is being changed in real time. You need a work-in-progress environment where you can make sure everything is reviewed and finalized before the site is updated. Because multiple teams often work on a platform at the same time, you also need this work-in-progress environment to be collaborative.
 
 Businesses need to modify their pages for seasonal promotions, events, or campaigns. Pages on larger sites also tend to have groups of people working on them at the same time. You need a way to allow different versions of a page to be worked on and merged together without losing any of the new changes.
 
@@ -189,4 +189,4 @@ In order to schedule seasonal variations for sites and pages, Administrators can
 	<li>_____________________________ allows for different versions of pages to be created for promotions and campaigns.</li>
 	<li>With the _____________________________ feature, Administrators can schedule automatic content publishing for sites.</li>
 </ul>
-</div>
+</div> -->

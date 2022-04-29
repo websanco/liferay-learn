@@ -5,7 +5,7 @@ order: 3
 ---
 
 # Expando API
-
+<!-- 
 The underlying API for the custom fields is called the *Expando API*. That's why, when you take a look at Liferay's code, you will notice that custom fields are referred to there as Expando fields.
 
 In an example use case for the Expando API, you could be populating a custom user attribute from the LDAP directory at login time. Expando API also allows you to create virtual tables not related to any model class, extending the features available from the management user interface.
@@ -142,4 +142,4 @@ All custom attributes can be listed conveniently using the liferay-ui tag librar
 	</li>
 	<li>The ___________________________ variant is for privileged access without access control.</li>
 </ul>
-</div>
+</div> -->

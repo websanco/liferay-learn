@@ -1,6 +1,6 @@
 # Create an Organization Hierarchy for Livingstone
 
-<div class="ahead">
+<!-- <div class="ahead">
 <h4>Exercise Goals</h4>
 <ul>
     <li>Create a Basic Livingstone Rewards Organization Hierarchy</li>
@@ -121,4 +121,4 @@
 2. Add Organization Logos for any of the new Organizations.
 3. Add Contact Information for each region's Organization.
 4. Create Organization Sites for all the new regions.
-5. Assign the Hannah Jones user to one of the Organizations and log in.
+5. Assign the Hannah Jones user to one of the Organizations and log in. -->

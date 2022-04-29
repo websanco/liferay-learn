@@ -1,6 +1,6 @@
 # Creating Reusable Page Structures with Page Templates
 
-When a business begins to add content to their digital experience platform, it's important to provide consistent page design and enable rapid page creation throughout the platform. Some use cases may require a large amount of similar pages throughout the platform. Marketing might want every landing page to have the same layout and design. The platform administrator might find that having a few different basic page layouts ready to go improves efficiency when adding new pages to existing sites.
+<!-- When a business begins to add content to their digital experience platform, it's important to provide consistent page design and enable rapid page creation throughout the platform. Some use cases may require a large amount of similar pages throughout the platform. Marketing might want every landing page to have the same layout and design. The platform administrator might find that having a few different basic page layouts ready to go improves efficiency when adding new pages to existing sites.
 
 ## Rapid Page Publication for Livingstone {#livingstone}
 
@@ -130,4 +130,4 @@ When configuring a page template's advanced features, administrators can add thi
   <li>Page Templates can be created to ______________________ layouts, styling, and widgets for individual pages.</li>
   <li>_______________________ can have the Inherit Changes option turned on to inherit changes from the template to the page using it.</li>
 </ul>
-</div>
+</div> -->

@@ -5,7 +5,7 @@ order: 11
 ---
 
 # Implement Web Module Permissions
-
+<!-- 
 <div class="ahead">
 <h4>Exercise Goals</h4>
 	<ul>
@@ -466,4 +466,4 @@ The last thing to do is to hide the plus button on the management toolbar for ad
 1. **Sign out** and test whether you can add, edit, or delete Assignments.
 1. **Create** a new user with just the *User* role.
 	* Test whether you can add, edit, or delete Assignments.
-	* Add the *Add Entry* permission to the role and test again.
+	* Add the *Add Entry* permission to the role and test again. -->

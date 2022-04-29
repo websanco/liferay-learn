@@ -5,7 +5,7 @@ order: 6
 ---
 
 # Integrate with the Asset Framework
-
+<!-- 
 The Asset Framework is a Liferay platform framework that makes it possible to publish and manage any kind of content in a unified way and through a standard API. The framework provides ways of associating and linking content with, for example, other portal assets, tags, and categories, and makes it possible to integrate with portal search, workflows and staging.
 
 The central concepts in integrating with the Asset Framework are an Asset, an Asset Renderer, and an Asset Renderer Factory.
@@ -291,4 +291,4 @@ public Hits doSearch(ThemeDisplay, BooleanClause booleanClause, int start, int e
 @Reference
 private IndexSearcherHelper _indexSearcherHelper;
 
-```
+``` -->

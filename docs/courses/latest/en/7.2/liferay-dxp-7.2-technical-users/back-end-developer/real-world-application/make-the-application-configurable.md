@@ -5,7 +5,7 @@ order: 7
 ---
 
 # Introducing Liferay's Configuration API
-
+<!-- 
 Liferay's configuration API is a configuration management framework for both the Liferay platform and applications on the platform. The configuration API is based on the [OSGi Configuration Admin service](https://osgi.org/specification/osgi.cmpn/7.0.0/service.cm.html), which allows you to dynamically set and manage configuration data for OSGi bundles and components. The configuration API is part of the OSGi Compendium specification.
 
 While standard portlet preferences can still be used in portlet applications, the configuration API is more flexible and feature-rich, superseding standard preferences as the preferred portlet application configuration framework.
@@ -126,4 +126,4 @@ public class ConfigurationExamplePortlet extends MVCPortlet {
 	<li>The_____________  is based on OSGi _____________.</li>
 	<li>Configuration data is stored in _____________  and can be _____________.</li>
 </ul>
-</div>
+</div> -->

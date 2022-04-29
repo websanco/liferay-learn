@@ -5,7 +5,7 @@ order: 2
 ---
 
 # Platform Architecture Overview
-
+<!-- 
 The Liferay platform core builds on the following technologies:
 
 * __Java EE:__ the runtime and programming environment
@@ -71,4 +71,4 @@ There are multiple ways to approach diagramming the logical and physical archite
   <li>Liferay is compliant with many ____________________ standards such as the portlet standard and JSF.</li>
   <li>Liferay supports the ____________ family of standards.</li>
 </ul>
-</div>
+</div> -->

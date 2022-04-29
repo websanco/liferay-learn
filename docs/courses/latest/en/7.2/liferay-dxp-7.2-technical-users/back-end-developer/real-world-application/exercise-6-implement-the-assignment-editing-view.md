@@ -5,7 +5,7 @@ order: 6
 ---
 
 # Implement the Assignment Editing View
-
+<!-- 
 <div class="ahead">
 <h4>Exercise Goals</h4>
 	<ul>
@@ -497,4 +497,4 @@ We need MVC Action Commands to handle adding, editing, and deleting assignments.
 
 After the module has restarted successfully, refresh the browser window and try adding, editing, viewing, deleting Assignments:
 
-<img src="../images/first-assignments.png" style="max-height: 100%"/>
+<img src="../images/first-assignments.png" style="max-height: 100%"/> -->

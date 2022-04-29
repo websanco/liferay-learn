@@ -1,6 +1,6 @@
 # Liferay DXP Administration Overview and Navigation
 
-Now that we've looked at how Liferay DXP can solve numerous business problems, let's dive into the product itself. 
+<!-- Now that we've looked at how Liferay DXP can solve numerous business problems, let's dive into the product itself. 
 
 ## Menus and Administration {#menuadmin}
 
@@ -145,4 +145,4 @@ For more information on many of the resources that were highlighted in this modu
 		<li>__________________________</li>
 	</ul>
 </ul>
-</div>  
+</div>   -->

@@ -4,10 +4,8 @@ title: Practice Gogo Shell Basic Commands
 order: 1
 ---
 
-# Exercises
-
-## Practice Gogo Shell Basic Commands
-
+# Practice Gogo Shell Basic Commands
+<!-- 
 <div class="ahead">
 <h4>Exercise Goals</h4>
 	<ul>
@@ -124,4 +122,4 @@ The `inspect` command can be used to show information about a service. This comm
 	inspect cap service [BUNDLE_ID]
 	```
 The output should look like:
-<img src="../images/inspect.png" style="max-height: 100%"/>
+<img src="../images/inspect.png" style="max-height: 100%"/> -->

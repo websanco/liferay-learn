@@ -1,6 +1,6 @@
 # Creating Digital Experiences with Liferay
 
-It's no secret that, in order to keep up with an ever-evolving market, today's businesses need more effective ways to engage with their customers, partners, and allies. Customers have higher expectations for companies in which they decide to invest. They want faster speeds, fewer clicks, and more information at their fingertips on any device, so businesses need to find software that will equip them to give customers what they want.
+<!-- It's no secret that, in order to keep up with an ever-evolving market, today's businesses need more effective ways to engage with their customers, partners, and allies. Customers have higher expectations for companies in which they decide to invest. They want faster speeds, fewer clicks, and more information at their fingertips on any device, so businesses need to find software that will equip them to give customers what they want.
 
 The kind of software a business chooses should allow them to implement many, if not all, of the following: 
 * **Partner Portals** for partners, suppliers, agents, franchises, and other trusted allies
@@ -72,4 +72,4 @@ Liferay DXP is a platform with carefully designed components that work together:
 	</ul>
 	<li> __________________ is the core platform used to provide digital experiences.</li>
 </ul>
-</div>  
+</div>   -->

@@ -1,6 +1,6 @@
 # Add Sites to the Livingstone Platform
 
-<div class="ahead">
+<!-- <div class="ahead">
 <h4>Exercise Goals</h4>
 	<ul>
 		<li>Create a Site Template for luxury hotel locations</li>
@@ -112,4 +112,4 @@
 
 1. Create a Site Template for Livingstone's Regional Office locations. The template should have at least three pages that include at least one widget on them.
 2. Add Luxury Hotel Location Landing sites for the Bavarian and Parisian locations. Make sure they are created as child sites of the main Livingstone site.
-3. Add a custom page to one of the new Luxury Hotel Location Landing sites created from the Site Template in the bonus exercise above. Navigate to the new site and look at the pages you added within the site itself.
+3. Add a custom page to one of the new Luxury Hotel Location Landing sites created from the Site Template in the bonus exercise above. Navigate to the new site and look at the pages you added within the site itself. -->

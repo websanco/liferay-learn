@@ -5,7 +5,7 @@ order: 3
 ---
 
 # Override Struts Actions
-
+<!-- 
 Although the [Apache Struts MVC framework](https://struts.apache.org/) is being replaced with the MVC Commands in Liferay, the platform is still using the framework for some of the native functionalities like portal login and logout. That's why there might be use cases where you'd still need to customize them. Generally, however, because the feature is deprecated, you should try to avoid customization scenarios with the Apache Struts MVC framework if you have other applicable approaches.
 
 Let's take a very brief look at basic Struts concepts and implementation in Liferay.
@@ -315,4 +315,4 @@ public class LogoutActionOverride implements StrutsAction {
 	<li>The _______________________ represents the model layer.</li>
 	<li>Overriding Struts _______________________ in the context of Liferay means overriding action controller classes.</li>
 </ul>
-</div>
+</div> -->

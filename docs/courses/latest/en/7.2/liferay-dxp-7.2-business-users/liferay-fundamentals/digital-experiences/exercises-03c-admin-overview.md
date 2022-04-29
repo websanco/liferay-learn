@@ -1,6 +1,6 @@
 # Looking at Livingstone Solutions
 
-<div class="ahead">
+<!-- <div class="ahead">
 <h4>Exercise Goals</h4>
 <ul>
     <li>Walk through the out-of-the-box features that can act as solutions for Livingstone Hotels & Resorts:</li>
@@ -60,4 +60,4 @@
 1. Create a new fragment and edit the homepage to include it.
 	* Alternatively, you can edit the homepage to use different fragments from the existing collection.
 * Edit the existing fragment text on the homepage.
-* Create a new blog to update the list of "travel" blogs.
+* Create a new blog to update the list of "travel" blogs. -->

@@ -5,7 +5,7 @@ order: 4
 ---
 
 # Components and Services
-
+<!-- 
 ## A Component
 
 An OSGi component is any Java class inside a bundle that is declared to be a component, usually by annotating it with `@Component`. When a class is declared to be a component, it becomes managed by the OSGi container.
@@ -162,4 +162,4 @@ When bndtools is enabled in the project, it takes the responsibility of writing 
 	<li>A ___________________ is an OSGi component registered to the OSGi container's <i>service registry</i>.</li>
 	<li>Declarative Services (DS) is a service that handles OSGi ______________________ and allows it to <i>publish, find, and bind</i> services based on XML metadata and annotations.</li>
 </ul>
-</div>
+</div> -->

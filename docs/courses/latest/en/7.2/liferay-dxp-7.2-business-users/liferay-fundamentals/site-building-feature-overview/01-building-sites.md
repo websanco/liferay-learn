@@ -1,6 +1,6 @@
 # Building Sites
 
-One of the primary ways you can provide a great digital experience for your users is by creating different websites or applications that allow users to access information, request services, and perform actions. Different groups of users need access to different kinds of content and services, so businesses need to manage multiple sites accessible by different devices. 
+<!-- One of the primary ways you can provide a great digital experience for your users is by creating different websites or applications that allow users to access information, request services, and perform actions. Different groups of users need access to different kinds of content and services, so businesses need to manage multiple sites accessible by different devices. 
 
 <figure>
 	<img src="../images/devices-and-apps.png" style="max-height: 40%" />
@@ -165,4 +165,4 @@ Site Hierarchy membership can be managed individually by administrators of each 
 	<li>An Organization Site is a __________________ Site that includes Organization members as Site Members.</li>
 	<li>__________________ can be created to reflect hierarchical content structures.</li>
 </ul>
-</div>  
+</div>   -->

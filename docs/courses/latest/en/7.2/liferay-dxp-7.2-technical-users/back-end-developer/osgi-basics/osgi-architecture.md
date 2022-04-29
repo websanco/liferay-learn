@@ -5,7 +5,7 @@ order: 6
 ---
 
 # OSGi Architecture
-
+<!-- 
 OSGi has two main specifications: *OSGi Core* and *OSGi compendium*. 
 
 <img src="../images/osgi-specification.png" style="max-height:20%;" />
@@ -65,4 +65,4 @@ __Execution Environment:__ The _execution environment_ layer manages the Java ru
     <li> The ____________________ specifies the API that every OSGi framework implementation must implement.
     <li> OSGi implementations may only implement selected parts of the __________________. 
 </ul>
-</div>
+</div> -->

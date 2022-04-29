@@ -1,6 +1,6 @@
 # Add Assets to the Platform
 
-<div class="ahead" />
+<!-- <div class="ahead" />
 <h4>Exercise Goals</h4>
 <ul>
     <li>Create new document types</li>
@@ -212,4 +212,4 @@ Note: Our Web Content will not show up in the Web Content Display widget since t
 
 1. Go through all the Hotel landing sites and check that the Web Content we created is displayed at the top of the page.
 2. Change the the top Banner Web Content to have a _Barebone_ Application Decorator configuration in the Hotel Landing Page Page Template.
-2. Add an _Image Type_ document to the main Livingstone site using the `grand-hotel.jpg` file provided in your module exercise folder. Use _Other_ as the image type.
+2. Add an _Image Type_ document to the main Livingstone site using the `grand-hotel.jpg` file provided in your module exercise folder. Use _Other_ as the image type. -->

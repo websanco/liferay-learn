@@ -1,6 +1,6 @@
 # Organizing Assets with Categories and Tags
 
-<div class="ahead">
+<!-- <div class="ahead">
 <h4>Exercise Goals</h4>
 <ul>
     <li>Create a Vocabulary and categorize the assets</li>
@@ -129,4 +129,4 @@
 ## Bonus Exercises
 
 1. Create a Vocabulary for the _Livingstone Hotels & Resorts_ site. Be sure to add categories for Hotels, Resorts, and Vacation Packages.
-2. Disable asset auto-tagging on the _Livingstone Life_ site by going to _`Configuration → Settings`_ in the _Site Administration_ panel.
+2. Disable asset auto-tagging on the _Livingstone Life_ site by going to _`Configuration → Settings`_ in the _Site Administration_ panel. -->

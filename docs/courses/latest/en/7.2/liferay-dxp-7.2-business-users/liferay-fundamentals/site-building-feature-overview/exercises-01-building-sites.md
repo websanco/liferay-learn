@@ -1,6 +1,6 @@
 # Create Basic Sites for Livingstone Hotels & Resorts
 
-<div class="ahead">
+<!-- <div class="ahead">
 <h4>Exercise Goals</h4>
 <ul>
     <li>Create the following core sites needed for Livingstone Hotels & Resorts:</li>
@@ -101,4 +101,4 @@
 ## Bonus Exercises
 
 1. Create more Hotel and Resort sites as Child Sites for Livingstone Hotels & Resorts.
-2. Add your user as a member of any site with private pages, log in, and use the _Personal_ menu to navigate there.
+2. Add your user as a member of any site with private pages, log in, and use the _Personal_ menu to navigate there. -->

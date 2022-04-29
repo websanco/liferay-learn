@@ -5,7 +5,7 @@ order: 13
 ---
 
 # Managing Deployment Issues
-
+<!-- 
 In this section, we discuss module deployment-related issues and some methods for resolving them. We've already learned that only the Liferay web application itself is deployed to and managed by the Java application server. All Liferay applications run in a Liferay-embedded OSGi container, and that's why resolving module deployment issues typically involves Gogo Shell.
 
 ## Deploying Modules Overview
@@ -254,4 +254,4 @@ OSGi bundles and components have different lifecycles; a bundle may start even i
 
 * Use the Gogo Shell to find the failing component id by running `ds:unsatisfied BUNDLE_ID`. Then run `scr:info COMPONENT_ID` to find unsatisfied references.
 Find out why the reference was not available.
-* Run `ds:softCircularDependency` to detect circular references.
+* Run `ds:softCircularDependency` to detect circular references. -->

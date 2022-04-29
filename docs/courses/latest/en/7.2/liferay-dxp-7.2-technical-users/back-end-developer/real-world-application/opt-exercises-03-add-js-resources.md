@@ -5,7 +5,7 @@ order: 3
 ---
 
 # Add JavaScript Resources
-
+<!-- 
 <div class="ahead">
 <h4>Exercise Goals</h4>
 	<ul>
@@ -209,4 +209,4 @@ The complete file will now look like:
 
 <img src="../images/tooltip.png" style="max-height: 100%"/> 
 
-> See the Developer Network (https://dev.liferay.com/en/develop/tutorials/-/knowledge_base/7-2/using-npm-in-your-portlets) for more information abouy using the NPM in your portlet modules.
+> See the Developer Network (https://dev.liferay.com/en/develop/tutorials/-/knowledge_base/7-2/using-npm-in-your-portlets) for more information abouy using the NPM in your portlet modules. -->

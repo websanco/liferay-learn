@@ -1,6 +1,6 @@
 # What are Assets?
 
-Once your platform is up and running, it's time to begin creating content. Remember that sites act as content repositories, so you will want to make sure you are working in the appropriate site before you start creating content in Liferay DXP. Then you can start creating a variety of content that can be used throughout the platform using tools that come with Liferay DXP out-of-the-box.
+<!-- Once your platform is up and running, it's time to begin creating content. Remember that sites act as content repositories, so you will want to make sure you are working in the appropriate site before you start creating content in Liferay DXP. Then you can start creating a variety of content that can be used throughout the platform using tools that come with Liferay DXP out-of-the-box.
 
 ## Content in the Livingstone Platform {#livingstone}
 
@@ -140,4 +140,4 @@ If an administrator finds that there are some common sets of metadata that shoul
   <li>_________________ can be used to build Content Pages.</li>
   <li>Users can also create Document Types, which are groups of _________________that improve document organization and SEO.</li>
 </ul>
-</div>
+</div> -->

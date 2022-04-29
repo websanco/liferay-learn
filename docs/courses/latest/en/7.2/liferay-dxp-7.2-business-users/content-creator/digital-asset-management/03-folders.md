@@ -1,6 +1,6 @@
 # Organizing Assets into a Folder Structure
 
-Depending on the size and scope of your business, you may have thousands, hundreds of thousands, or even millions of files that you want users to have access to from within your platform. It's going to be very difficult to manage all these files if they are sitting in a single repository, unstructured. In order to efficiently manage the myriad documents in your platform, you need to structure them using folders in each of your sites on Liferay DXP.
+<!-- Depending on the size and scope of your business, you may have thousands, hundreds of thousands, or even millions of files that you want users to have access to from within your platform. It's going to be very difficult to manage all these files if they are sitting in a single repository, unstructured. In order to efficiently manage the myriad documents in your platform, you need to structure them using folders in each of your sites on Liferay DXP.
 
 ## Managing Documents in Livingstone {#livingstone}
 
@@ -108,4 +108,4 @@ For example, an administrator can create a new folder for HR documents and set t
   <li>Create file hierarchies to organize your files by adding ______________________ beneath your folders.</li>
   <li>Workflows can be applied through folder restrictions for both ______________________ and ______________________.</li>
 </ul>
-</div>
+</div> -->

@@ -1,6 +1,6 @@
 # Create a Custom Site Content Creator Role
 
-<div class="ahead">
+<!-- <div class="ahead">
 <h4>Exercise Goals</h4>
 <ul>
     <li>Create a Content Creator role that allows the content team to do the following:</li>
@@ -129,4 +129,4 @@
 1. Create a new User in _Users and Organizations_ and make them a member of the main site.
 2. Grant the new User the _Site Content Creator_ role.
 3. Log in as the new User.
-4. Create Web Content, Documents, or Blogs in the main site.
+4. Create Web Content, Documents, or Blogs in the main site. -->

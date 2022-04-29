@@ -5,7 +5,7 @@ order: 5
 ---
 
 # Enable Workflows for Assignments
-
+<!-- 
 <div class="ahead">
 <h4>Exercise Goals</h4>
 	<ul>
@@ -771,4 +771,4 @@ To be able to test, we have to enable and define a workflow for Assignments:
 1. **Create** a new assignment. After refreshing the page, you should see a notification on your avatar image indicating a new workflow event:
 	<img src="../images/pending-workflow.png" style="max-height: 100%"/>
 
-Now you can manage the workflows for Assignments as for any other Liferay assets.
+Now you can manage the workflows for Assignments as for any other Liferay assets. -->

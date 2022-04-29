@@ -1,5 +1,5 @@
 # Creating Structures and Templates for Content Display
-
+<!-- 
 <div class="ahead">
 <h4>Exercise Goals</h4>
 <ul>
@@ -192,4 +192,4 @@
 
 1. Create a Structure for a Call to Action. Include fields for the Call to Action Message and an Image.
 2. Create a simple Template for your Call to Action. Use the `<h1>` tag for the message and add the image below.
-3. Use the Call to Action structure to add new Web Content to the main Livingstone site. Be sure to see how the content looks using the Web Content Display widget on the _Home_ page.
+3. Use the Call to Action structure to add new Web Content to the main Livingstone site. Be sure to see how the content looks using the Web Content Display widget on the _Home_ page. -->

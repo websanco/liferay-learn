@@ -5,7 +5,7 @@ order: 2
 ---
 
 # Override MVC Commands
-
+<!-- 
 All Liferay platform applications are portlets. MVC Commands are portlet lifecycle handlers that implement the [MVCCommand](https://github.com/liferay/liferay-portal/blob/7.2.x/portal-kernel/src/com/liferay/portal/kernel/portlet/bridges/mvc/MVCCommand.java) interface and are used to break up the controller layer into smaller and more manageable code entities. 
 
 There are three types of MVC commands that correspond to portlet lifecycle phases:
@@ -596,4 +596,4 @@ public class CustomEditEntryMVCActionCommand extends BaseMVCActionCommand {
 	<li>MVC _______________ commands are OSGi components that handle a portlet's <b>render phase</b> requests.</li>
 	<li>MVC _______________ commands are OSGi components that handle a portlet's <b>resource serving phase</b> requests.</li>
 </ul>
-</div>
+</div> -->

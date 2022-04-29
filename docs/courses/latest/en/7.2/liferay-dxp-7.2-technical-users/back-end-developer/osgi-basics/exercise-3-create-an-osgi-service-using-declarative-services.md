@@ -5,7 +5,7 @@ order: 3
 ---
 
 # Create an OSGi Service Using Declarative Services and Bndtools
-
+<!-- 
 <div class="ahead">
 <h4>Exercise Goals</h4>
 	<ul>
@@ -189,4 +189,4 @@ The Bndtools launcher will take care of compiling the `MANIFEST.MF` when the app
 	<img src="../images/auto-resolve-requirements.png" style="max-height:35%"/>
 1. **Enter** "telltime" in the console to test our application. You should get the time as a response:
 	
-<img src="../images/telltime.png" style="max-height:35%"/>
+<img src="../images/telltime.png" style="max-height:35%"/> -->

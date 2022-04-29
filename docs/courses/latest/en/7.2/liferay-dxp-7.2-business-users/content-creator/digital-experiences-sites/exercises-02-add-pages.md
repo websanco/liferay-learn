@@ -1,6 +1,6 @@
 # Add Pages to the Livingstone Platform with Page Templates
 
-<div class="ahead">
+<!-- <div class="ahead">
 <h4>Exercise Goals</h4>
 	<ul>
 		<li>Create a Landing Page Template</li>
@@ -98,4 +98,4 @@
 ## Bonus Exercises:
 
 1. Add another _Widget Page_ template called _Hotel Room Comparisons_. Use two Asset Publishers and a Web Content Display. Choose whichever page layout looks best to you.
-2. Add more pages to the default _Livingstone Hotels & Resorts_ site. Use any existing Page Templates to create the new pages. View the new pages in the default Navigation Menu.
+2. Add more pages to the default _Livingstone Hotels & Resorts_ site. Use any existing Page Templates to create the new pages. View the new pages in the default Navigation Menu. -->

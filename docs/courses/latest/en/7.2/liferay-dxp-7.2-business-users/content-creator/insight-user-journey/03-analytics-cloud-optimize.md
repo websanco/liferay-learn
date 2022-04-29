@@ -1,6 +1,6 @@
 # Using Analytics Cloud with Forms to Optimize Evaluation
 
-Content Creators and Administrators can view the Form Entries from within whichever site the Form is located. Going through individual entries might work for a small platform with only a few different Forms, but not for a larger platform, where thousands of users may be filling out each and every Form. In order to take advantage of all that data, the Marketing team needs to be able to view summaries of the data instead of individual Form Entries. This is where Liferay's Analytics Cloud comes in.
+<!-- Content Creators and Administrators can view the Form Entries from within whichever site the Form is located. Going through individual entries might work for a small platform with only a few different Forms, but not for a larger platform, where thousands of users may be filling out each and every Form. In order to take advantage of all that data, the Marketing team needs to be able to view summaries of the data instead of individual Form Entries. This is where Liferay's Analytics Cloud comes in.
 
 ## Analyzing Livingstone's Feedback {#livingstone}
 
@@ -75,4 +75,4 @@ The Analytics Dashboard makes it easy for you to leverage all your user-filled d
 	</ul>
 </ul>
 </div>
-
+ -->

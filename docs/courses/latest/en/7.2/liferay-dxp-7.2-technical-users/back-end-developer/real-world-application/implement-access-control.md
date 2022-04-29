@@ -5,7 +5,7 @@ order: 5
 ---
 
 # Implement Access Control
-
+<!-- 
 Liferay has a robust security model that allows for the configuration of fine-grained access control. Liferay's access control system lets you define who can use an application and who is allowed to add and edit a model resource.
 
 For example, all applications dealing with user and site management are only accessible for Liferay Administrators and not for regular users. Wiki Pages can be created and edited by any member of a site, while Blogs posts by default can only be edited by their original author.  
@@ -844,4 +844,4 @@ public BlogsEntry addEntry(
 		<li>Implement permission _____________  where ever necessary.</li>
 	</ul>
 </ul>
-</div>
+</div> -->

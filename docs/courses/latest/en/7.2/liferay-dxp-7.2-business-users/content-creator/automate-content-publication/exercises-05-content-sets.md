@@ -1,6 +1,6 @@
 # Creating Content Sets to Personalize Site Content
 
-<div class="ahead">
+<!-- <div class="ahead">
 <h4>Exercise Goals</h4>
 <ul>
     <li>Create a User Segment for Livingstone Life subscribers</li>
@@ -94,4 +94,4 @@
 
 ## Bonus Exercises
 1. Create a Content Set that includes both the Blog and Web Content Article seen in the exercise above.
-2. Create a User Segment for non-subscribers (Site does not equal Livingstone Life under Conditions) and create a Personalized Variation for the Content Set we made above using this new User Segment. This time make it so that only non-subscribers can see the blog.
+2. Create a User Segment for non-subscribers (Site does not equal Livingstone Life under Conditions) and create a Personalized Variation for the Content Set we made above using this new User Segment. This time make it so that only non-subscribers can see the blog. -->

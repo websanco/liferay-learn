@@ -5,7 +5,7 @@ order: 5
 ---
 
 # Manage Module Dependencies
-
+<!-- 
 Liferay applications are modular and typically consist of multiple modules. In addition to inter-module dependencies within the project workspace, projects usually have external dependencies too. 
 
 While the custom Gradle scopes provided by Liferay and Bndtools hide most of the complexity of dependency management tasks, it's important to understand the different roles of Gradle and Bndtools as well as the corresponding `build.gradle`, `bnd.bnd`, and `MANIFEST.MF` files. 
@@ -218,4 +218,4 @@ An OSGi-compliant library bundle can be deployed to the OSGi container and made 
 	<li>Run __________________________ whenever modifying the dependencies.</li>
 	<li>In case of problems, clear the __________________ cache.</li>
 </ul>
-</div>
+</div> -->

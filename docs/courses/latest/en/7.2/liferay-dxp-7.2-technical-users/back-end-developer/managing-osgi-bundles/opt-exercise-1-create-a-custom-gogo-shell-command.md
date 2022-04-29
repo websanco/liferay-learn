@@ -4,11 +4,9 @@ title: Create a Custom Gogo Shell Command
 order: 1
 ---
 
-<h2 class="exercise">Optional Exercise</h2>
-
 # Create a Custom Gogo Shell Command
 
-<div class="ahead">
+<!-- <div class="ahead">
 <h4>Exercise Goals</h4>
 	<ul>
 	<li>Create a new Gogo Shell command to get the number of users and groups in the system:</li>
@@ -153,4 +151,4 @@ g! blade:portalstats
 # of users: 2
 # of groups: 11
 ```
-
+ -->

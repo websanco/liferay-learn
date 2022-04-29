@@ -1,6 +1,6 @@
 # Manage and Organize Users
 
-Each business has its own way of organizing its users. This can be an internal departmental structure, or in relation to customers, partners, etc. Many businesses have a traditional hierarchical business structure, while other more modern businesses have more lateral team structures. Whether you're coming with the hierarchy or lateral structures, administrative teams need to know the most effective way to organize their Users on the Liferay DXP platform.
+<!-- Each business has its own way of organizing its users. This can be an internal departmental structure, or in relation to customers, partners, etc. Many businesses have a traditional hierarchical business structure, while other more modern businesses have more lateral team structures. Whether you're coming with the hierarchy or lateral structures, administrative teams need to know the most effective way to organize their Users on the Liferay DXP platform.
 
 <figure>
 	<img src="../images/future-now.png" style="max-height: 100%" />
@@ -145,4 +145,4 @@ Liferay incorporates strong data protection and security capabilities with User 
 	<li> ____________________ are Sites that can be created in conjunction with an Organization.</li>
 	<li> ____________________ is a template of pages that is added to the Profile or Dashboard of every User Group member.</li>
 </ul>
-</div>  
+</div>   -->

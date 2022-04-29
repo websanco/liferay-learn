@@ -1,6 +1,6 @@
 # Set Up the Livingstone Hotels & Resorts Platform
 
-<div class="ahead">
+<!-- <div class="ahead">
 <h4>Exercise Goals</h4>
 	<ul>
 		<li>Start up an instance of Liferay DXP</li>
@@ -76,4 +76,4 @@ _Note: Since this is a local instance with no mail server set up, disabling emai
 ## Bonus Exercises:
 
 1. Explore the Liferay DXP UI. Open the _Menu_ and click through the panels.
-2. Add a site to the platform. Name the site `Livingstone test` and try navigating between it and the default site.
+2. Add a site to the platform. Name the site `Livingstone test` and try navigating between it and the default site. -->

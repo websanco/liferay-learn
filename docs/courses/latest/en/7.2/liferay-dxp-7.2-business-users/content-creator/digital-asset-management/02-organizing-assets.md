@@ -1,6 +1,6 @@
 # Organizing Assets with Metadata
 
-As more content is added to the platform, it becomes increasingly necessary to organize it. Site Administrators should be able to quickly access content for review or to display content on pages within their sites. Likewise, Content Creators should be able to efficiently organize their content for Site Administrators and Content Managers, as well as for SEO purposes, when it is created. In this section, we dive into ways the assets created and managed in Liferay DXP can be organized.
+<!-- As more content is added to the platform, it becomes increasingly necessary to organize it. Site Administrators should be able to quickly access content for review or to display content on pages within their sites. Likewise, Content Creators should be able to efficiently organize their content for Site Administrators and Content Managers, as well as for SEO purposes, when it is created. In this section, we dive into ways the assets created and managed in Liferay DXP can be organized.
 
 ## Organizing Livingstone's Content {#livingstone}
 
@@ -158,4 +158,4 @@ Now that we have categories, Tags, and Document Types set up, let's help Josiah 
   <li>Categories are a ____________________: they have a clear and defined hierarchical structure.</li>
   <li>Categories are organized using ____________________.</li>
 </il>
-</div>
+</div> -->

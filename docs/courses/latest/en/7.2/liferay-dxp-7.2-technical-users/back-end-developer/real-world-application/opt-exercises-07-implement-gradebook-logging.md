@@ -5,7 +5,7 @@ order: 7
 ---
 
 # Implement Gradebook Logging
-
+<!-- 
 <div class="ahead">
 <h4>Exercise Goals</h4>
 	<ul>
@@ -67,4 +67,4 @@ If you test adding an assignment, you won't see any messages in the log yet beca
 
 ```xml
 	2018-09-24 09:18:50.880 INFO  [http-nio-8080-exec-2][AssignmentLocalServiceImpl:148] User 20139 is adding an assignment.
-```
+``` -->

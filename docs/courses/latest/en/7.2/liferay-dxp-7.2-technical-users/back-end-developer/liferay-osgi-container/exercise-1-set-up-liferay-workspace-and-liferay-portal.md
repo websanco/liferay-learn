@@ -5,7 +5,7 @@ order: 1
 ---
 
 # Set Up the Liferay Workspace and Portal
-
+<!-- 
 <div class="ahead">
 <h4>Exercise Goals</h4>
 	<ul>
@@ -120,4 +120,4 @@ When Liferay starts for the first time, a subfolder is created called `deploy` u
 	* __Username:__ test@liferay.com
 	* __Password:__ *The password you provided*
 
-<img src="../images/checkpoint.png" style="max-height: 40%"/>
+<img src="../images/checkpoint.png" style="max-height: 40%"/> -->

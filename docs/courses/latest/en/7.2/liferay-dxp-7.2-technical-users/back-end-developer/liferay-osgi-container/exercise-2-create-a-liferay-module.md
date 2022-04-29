@@ -5,7 +5,7 @@ order: 2
 ---
 
 # Create a Liferay Module
-
+<!-- 
 <div class="ahead">
 <h4>Exercise Goals</h4>
 	<ul>
@@ -70,4 +70,4 @@ When you make changes in the source code, the changes deploy almost instantly:
 	<p>Hello Liferay!</p>
 	```
 9. **Save** the file and refresh the page on your browser:
-	<img src="../images/hello-liferay.png" style="max-height: 35%"/>
+	<img src="../images/hello-liferay.png" style="max-height: 35%"/> -->

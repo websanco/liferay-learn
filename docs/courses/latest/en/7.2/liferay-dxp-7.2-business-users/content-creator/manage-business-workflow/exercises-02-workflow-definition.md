@@ -1,6 +1,6 @@
 # Creating Workflow Definitions
 
-<div class="ahead">
+<!-- <div class="ahead">
 <h4>Exercise Goals</h4>
 <ul>
     <li>Create a Workflow definition</li>
@@ -197,4 +197,4 @@
 ## Bonus Exercises
 
 1. Create a new piece of Web Content for the Livingstone Hotels & Resorts site. Assign the Parallel Review workflow definition to the folder.
-2. Add a new piece of Web Content article and go through the review workflow. You will need to have a user assigned to the Site Content Reviewer role.
+2. Add a new piece of Web Content article and go through the review workflow. You will need to have a user assigned to the Site Content Reviewer role. -->

@@ -5,7 +5,7 @@ order: 2
 ---
 
 # Introducing Liferay Message Bus
-
+<!-- 
 Liferay Message Bus (LMB) is a service-level API for exchanging messages inside Liferay. Liferay Message Bus is similar to [JMS](https://download.oracle.com/otndocs/jcp/7195-jms-1.1-fr-spec-oth-JSpec/) (Java Message Service), but has a smaller feature set. It also supports synchronous and asynchronous messaging in the cluster, but lacks, for example, transactional and reliable delivery (acknowledgments).
 
 The message bus is used in Liferay for many background and asynchrous processes like:
@@ -374,4 +374,4 @@ Message bus destinations are available as MBeans and can be monitored with any J
 	</ul>
 	<li> Liferay Service Builder can leverage the message bus with two annotations: ______________________ and ______________________.</li>
 </ul>
-</div>
+</div> -->

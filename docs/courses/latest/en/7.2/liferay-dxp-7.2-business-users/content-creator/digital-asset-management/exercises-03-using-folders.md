@@ -1,6 +1,6 @@
 # Using Folders to Organize Assets
 
-<div class="ahead">
+<!-- <div class="ahead">
 <h4>Exercise Goals</h4>
 <ul>
     <li>Create folders for Documents and Media</li>
@@ -166,4 +166,4 @@
 ## Bonus Exercises
 
 1. Create a folder structure for the Web Content in the _Livingstone Hotels & Resorts_ site. Make sure to include folders for headings, footers, calls to action, and promoted content.
-2. Add a folder to the _Documents and Media_ repository in the _Livingstone Life_ site called _Blog Images_. Assign the _Single Approver_ workflow to the new folder.
+2. Add a folder to the _Documents and Media_ repository in the _Livingstone Life_ site called _Blog Images_. Assign the _Single Approver_ workflow to the new folder. -->

@@ -5,7 +5,7 @@ order: 2
 ---
 
 # Overview
-
+<!-- 
 Liferay offers developers a platform and a comprehensive set of tools for building web applications. Although the platform itself relies on Java EE and the OSGi framework for modular application development, Liferay is completely tool-agnostic when it comes to writing code. You can use any Java IDE or even a text editor to write Liferay applications.
 
 The minimum set of tools required to develop for Liferay includes:
@@ -74,4 +74,4 @@ Depending on your project's requirements, in advanced scenarios, the development
 	<li>A full Eclipse-based IDE is provided under the name _________________________, containing all the tools needed for efficient back-end development.</li>
 	<li>The ___________________________ is seamlessly integrated into the Liferay Workspace environment, but can also be downloaded separately.</li>
 	<li>Any _________________ container or ____________________ can be used for running the platform.</li>
-</div>
+</div> -->

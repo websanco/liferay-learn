@@ -5,7 +5,7 @@ order: 4
 ---
 
 # Sharing Features with Export-Import
-
+<!-- 
 <div class="ahead">
 <h4>Exercise Goals</h4>
 	<ul>
@@ -162,4 +162,4 @@ Now that we have the implementation bundle importing and implementing the API bu
 
 We demonstrated that in order to access features from other bundles, they have to be shared. Here we used the *Import-Package - Export-Package* mechanism and, while more robust and complex, the *Provide-Capability - Require-Capability* (used in wiring the OSGi services) works conceptually the same way.
 
-Multi-module projects can use Liferay development tools to take care of creating the feature-sharing headers automatically for you. But understanding the internal workings makes troubleshooting during development much easier.
+Multi-module projects can use Liferay development tools to take care of creating the feature-sharing headers automatically for you. But understanding the internal workings makes troubleshooting during development much easier. -->

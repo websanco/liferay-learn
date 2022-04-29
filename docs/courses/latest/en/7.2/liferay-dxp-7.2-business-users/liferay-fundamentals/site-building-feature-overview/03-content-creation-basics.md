@@ -1,6 +1,6 @@
 # Content Feature Overview
 
-At a basic level, users regularly return to different websites, platforms, and services because the information and content is relevant to them. A large part of crafting the best user experiences is a combination of design, availability, and relevance of content. Businesses also need to be able to organize their content effectively, ensure visibility with SEO, and increase searchability on the platform. In many cases, meeting all these needs requires using multiple services and different software. Fortunately, Liferay DXP comes out-of-the-box with the features businesses require to meet the needs of their users.
+<!-- At a basic level, users regularly return to different websites, platforms, and services because the information and content is relevant to them. A large part of crafting the best user experiences is a combination of design, availability, and relevance of content. Businesses also need to be able to organize their content effectively, ensure visibility with SEO, and increase searchability on the platform. In many cases, meeting all these needs requires using multiple services and different software. Fortunately, Liferay DXP comes out-of-the-box with the features businesses require to meet the needs of their users.
 
 <figure>
 	<img src="../images/coming-back-for-content.png" style="max-height: 35%" />
@@ -193,4 +193,4 @@ Key Point: <br/>
 	<li>__________________ and __________________ can be created to identify specific kinds of documents and web content.</li>
 	<li>__________________ are reusable sections and components for pages.</li>
 </ul>
-</div>  
+</div>   -->

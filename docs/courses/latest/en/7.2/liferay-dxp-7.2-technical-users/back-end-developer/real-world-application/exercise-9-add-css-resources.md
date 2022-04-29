@@ -5,7 +5,7 @@ order: 9
 ---
 
 # Add CSS Resources
-
+<!-- 
 <div class="ahead">
 <h4>Exercise Goals</h4>
 	<ul>
@@ -109,4 +109,4 @@ The portlet component needs to know where to load the CSS resources from. Also, 
 1. **Refresh** the browser to see the changes after the module has redeployed correctly. 
 2. **Switch** the list to the *Table* view using the button on the left side of the search bar, if necessary. The Author column is now better aligned and the links have underlining:
 
-<img src="../images/table-css-after.png" style="max-height: 100%"/>
+<img src="../images/table-css-after.png" style="max-height: 100%"/> -->

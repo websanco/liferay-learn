@@ -1,6 +1,6 @@
 # Accessing Assets
 
-<div class="ahead">
+<!-- <div class="ahead">
 <h4>Exercise Goals</h4>
 <ul>
     <li>Create a Content Creator role that allows the content team to do the following:</li>
@@ -215,4 +215,4 @@
 1. Create a new user named Maria Flores in _Users and Organizations_ and make her a member of the main site.
 2. Grant the new user the _Site Content Creator_ role.
 3. Log in as Maria Flores.
-4. Create Basic Web Content and publish it on the main _Livingstone Hotels & Resorts_ site.
+4. Create Basic Web Content and publish it on the main _Livingstone Hotels & Resorts_ site. -->

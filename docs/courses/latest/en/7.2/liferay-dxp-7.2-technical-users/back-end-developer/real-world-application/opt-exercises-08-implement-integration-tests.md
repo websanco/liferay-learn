@@ -5,7 +5,7 @@ order: 8
 ---
 
 # Implement Integration Tests
-
+<!-- 
 <div class="ahead">
 <h4>Exercise Goals</h4>
 	<ul>
@@ -388,4 +388,4 @@ public class AssignmentLocalServiceImplTest {
 
 1. **Run** the Gradle `testIntegration` task.
 
-Watch the output on the console.
+Watch the output on the console. -->

@@ -1,6 +1,6 @@
 # Turning on Staging and Publishing Content
 
-<div class="ahead">
+<!-- <div class="ahead">
 <h4>Exercise Goals</h4>
 <ul>
     <li>Turn on Staging</li>
@@ -98,4 +98,4 @@
 ## Bonus Exercises
 
 1. View the changes we made in the live version of the site. Practice making changes and switching between staging and live in the UI.
-2. Create a special offer Web Content article for the Bali Resort location. Create another Page Variation that replaces the Bavarian Special Offer with the new Bali Special Offer. Publish the Page Variation to live.
+2. Create a special offer Web Content article for the Bali Resort location. Create another Page Variation that replaces the Bavarian Special Offer with the new Bali Special Offer. Publish the Page Variation to live. -->

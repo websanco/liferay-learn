@@ -5,7 +5,7 @@ order: 5
 ---
 
 # Sharing Features
-
+<!-- 
 OSGi applications typically consist of multiple bundles. By default, bundles have a private class and package visibility, and they do not expose any features to other bundles in the container. By *features* in this context, we mean:
 
 * Classes
@@ -89,4 +89,4 @@ Requiring a bundle in another bundle defines an explicit dependency contract and
     <li>A capability describes a functionality for the ____________ Container.</li>
     <li>In general, ________________ a bundle should not be used.</li>
 </ul>
-</div>
+</div> -->

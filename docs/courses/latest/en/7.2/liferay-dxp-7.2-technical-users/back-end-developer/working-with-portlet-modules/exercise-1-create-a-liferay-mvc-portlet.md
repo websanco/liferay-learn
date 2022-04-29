@@ -4,10 +4,8 @@ title: Create a Liferay MVC Portlet Module
 order: 1
 ---
 
-<h2 class="exercise">Exercises</h2>
-
 ## Create a Liferay MVC Portlet Module
-
+<!-- 
 <div class="ahead">
 <h4>Exercise Goals</h4>
 	<ul>
@@ -180,4 +178,4 @@ public class HandleFormMVCActionCommand implements MVCActionCommand {
 2019-04-16 21:33:59.602 INFO  [pipe-start 1074][BundleStartStopLogger:39] STARTED com.liferay.training.portletmodule.portlet_1.0.0 [1074]
 HandleFormMVCActionCommand.doProcessAction()
 backgroundColor = aqua
-```
+``` -->

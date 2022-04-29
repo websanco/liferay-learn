@@ -1,6 +1,6 @@
 # Import Your Users into Liferay
 
-One of the main purposes of a DXP platform is to provide a great experience for your Users. You may need to manage many different kinds of User accounts on your platform, such as the following:
+<!-- One of the main purposes of a DXP platform is to provide a great experience for your Users. You may need to manage many different kinds of User accounts on your platform, such as the following:
 * Employees
 * Customers
 * Business Partners
@@ -137,4 +137,4 @@ Note: SAML Authentication is implemented via the SAML 2.0 Provider application. 
 	</ul>
 	<li>Administrators can keep Liferay and LDAP in sync by what data needs to be ____________________ and ____________________.</li>
 </ul>
-</div>  
+</div>   -->

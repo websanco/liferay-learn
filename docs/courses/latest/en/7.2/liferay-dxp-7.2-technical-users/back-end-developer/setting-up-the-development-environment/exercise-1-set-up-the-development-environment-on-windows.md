@@ -5,7 +5,7 @@ order: 3
 ---
 
 # Set Up the Development Environment on Windows 10
-
+<!-- 
 <div class="ahead">
 <h4>Exercise Goals</h4>
 	<ul>
@@ -93,4 +93,4 @@ C:\Program Files\Java\jdk1.8.0_181
 <img src="../images/workspace-location-windows.png" style="max-height:35%" />
 
 Developer Studio is now set up and ready:
-<img src="../images/checkpoint.png" style="max-height:35%" />
+<img src="../images/checkpoint.png" style="max-height:35%" /> -->

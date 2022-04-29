@@ -5,7 +5,7 @@ order: 2
 ---
 
 # Introducing Custom Fields
-
+<!-- 
 As a developer or system administrator, you may sometimes want to add a persistable and manageable attribute to an existing Liferay data model. Such use cases could be, for example:
 
 * Adding an identification number for a user model
@@ -60,4 +60,4 @@ Custom fields can be accessed from FreeMarker templates by calling the expando b
 
 ```xml
 <#assign expandoAttribute = user.getExpandoBridge().getAttribute("my_sample_field") />
-```
+``` -->

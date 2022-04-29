@@ -5,7 +5,7 @@ order: 10
 ---
 
 # Troubleshoot Module Deployment
-
+<!-- 
 <div class="ahead">
 <h4>Exercise Goals</h4>
 	<ul>
@@ -38,4 +38,4 @@ The exercise is completed when you get the following message in the log:
 2019-04-08 11:12:54.703 INFO  [Thread-2496][BundleStartStopLogger:39] STARTED com.liferay.training.deployment.failing.api_1.0.0 [979]
 ```
 
-> __Hint:__ You might want to start with the Gogo shell tool for diagnosing dependency problems. You can ask your trainer any time for hints.
+> __Hint:__ You might want to start with the Gogo shell tool for diagnosing dependency problems. You can ask your trainer any time for hints. -->

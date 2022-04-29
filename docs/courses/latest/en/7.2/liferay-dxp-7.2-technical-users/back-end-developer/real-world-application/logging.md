@@ -5,7 +5,7 @@ order: 10
 ---
 
 # Logging
-
+<!-- 
 Logging is a powerful method for emitting application metrics and statistics and for helping with troubleshooting and resolving production issues. When properly used, logging improves application quality and maintainability. Examples of use cases:
 
 * Adding additional, contextual information like user ID or thread ID to stack traces
@@ -263,4 +263,4 @@ if (_log.isDebugEnabled()) {
 	<li>For the best code portability, using _____________ logger is recommended.</li>
 	<li>Too extensive and excessive logging severely _____________ application performance.</li>
 </ul> 
-</div>
+</div> -->

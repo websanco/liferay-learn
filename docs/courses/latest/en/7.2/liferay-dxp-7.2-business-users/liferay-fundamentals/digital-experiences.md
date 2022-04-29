@@ -1,4 +1,4 @@
-# Module 1: Building Digital Experiences with Liferay DXP 
+# Module 1: Building Digital Experiences with Liferay DXP
 
 Coming Soon!
 

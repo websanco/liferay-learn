@@ -1,6 +1,6 @@
 # Creating Forms in Liferay
 
-<div class="ahead">
+<!-- <div class="ahead">
 <h4>Exercise Goals</h4>
 <ul>
     <li>Create a simple Form</li>
@@ -187,4 +187,4 @@
 ## Bonus Exercises
 
 1. Create a new form on the Livingstone Hotels & Resorts site for gathering feedback about the user experience. The form should be at least three pages long with no more than five fields on a page.
-2. Create an Element Set for commonly asked user experience questions and add it to the new form.
+2. Create an Element Set for commonly asked user experience questions and add it to the new form. -->

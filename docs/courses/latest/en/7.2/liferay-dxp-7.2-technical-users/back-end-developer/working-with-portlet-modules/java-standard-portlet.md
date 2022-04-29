@@ -4,8 +4,8 @@ title: Java Standard Portlet
 order: 2
 ---
 
-## Java Standard Portlet
-
+# Java Standard Portlet
+<!-- 
 Liferay's user interface relies on portlets but not strictly on the standard portlet specification. Although there are many ways of building out your application's user interface, using the MVC pattern along with portlets as the implementation of the Controller and View Layer is still the essence of Liferay development. 
 
 Understanding key portlet concepts and the portlet lifecycle is fundamental to learning back-end development in Liferay and fundamental to customizing Liferay's controller layer, discussed in *Module 11 - Override Controller Actions*.
@@ -514,4 +514,4 @@ A portlet can share the otherwise private session data by declaring the followin
 	<li>There are three Portlet Modes: ___________, ___________ and ___________.</li>
 	<li>JSR-268 established two methods of Inter-Portlet Communication: _________________ and _________________________________________.</li>
 </ul>
-</div>
+</div> -->

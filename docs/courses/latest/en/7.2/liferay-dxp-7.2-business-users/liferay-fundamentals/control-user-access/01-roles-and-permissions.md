@@ -1,6 +1,6 @@
 # Roles and Permissions
 
-With all of the assets and data businesses are required to manage and secure, controlling user access is incredibly important. Managing different public and private sites along with their different assets requires a flexible approach to access control. Some of this can be handled by system administrators, but much of this requires a platform that has a great way of handling permissions. System administrators or Ops teams are responsible for securing the different servers, application servers, file system, etc. In essence, their primary job is ensuring uptime and system security. 
+<!-- With all of the assets and data businesses are required to manage and secure, controlling user access is incredibly important. Managing different public and private sites along with their different assets requires a flexible approach to access control. Some of this can be handled by system administrators, but much of this requires a platform that has a great way of handling permissions. System administrators or Ops teams are responsible for securing the different servers, application servers, file system, etc. In essence, their primary job is ensuring uptime and system security. 
 
 <div class="note">
 Note: You can learn more about system security in the Liferay DevOps course.
@@ -208,4 +208,4 @@ If an administrator wants to add specific permissions, such as giving a reviewer
 	</ul>
 	<li>Workflow can __________________ assigned Roles if they don't already exist.</li>
 </ul>
-</div>  
+</div>   -->

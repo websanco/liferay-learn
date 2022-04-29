@@ -5,7 +5,7 @@ order: 1
 ---
 
 # Set Up the Development Environment on Linux
-
+<!-- 
 <div class="ahead">
 <h4>Exercise Goals</h4>
 	<ul>
@@ -116,4 +116,4 @@ The output should point to your JDK installation folder.
 <br />
 
 Developer Studio is now set up and ready:
-<img src="../images/checkpoint.png" style="max-height:30%;" />
+<img src="../images/checkpoint.png" style="max-height:30%;" /> -->

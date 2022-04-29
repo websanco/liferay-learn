@@ -5,7 +5,7 @@ order: 2
 ---
 
 ## Overview of Developing a Real World Application
-
+<!-- 
 In this chapter, we'll create a real-world Liferay application using Liferay's time-saving tools and frameworks. 
 
 In the required exercise steps, we'll build an assignment management system for a course gradebook. First, we'll define the Assignment entity and use the Liferay Service Builder code generation tool to create the database and service layer for it. Then, we'll create the user interface using the JSP technology and taking advantage of Liferay's tag libraries. Finally, we'll implement access control and integrate to Liferay's Asset and Search frameworks.
@@ -68,4 +68,4 @@ The main implementation steps are:
 1. Create the API and service modules and define the data model
 1. Create the portlet module and implement the user interface
 1. Implement access control
-1. Integrate with portal Asset and Search frameworks
+1. Integrate with portal Asset and Search frameworks -->

@@ -5,7 +5,7 @@ order: 1
 ---
 
 # Create the Assignment Service
-
+<!-- 
 <div class="ahead">
 <h4>Exercise Goals</h4>
 	<ul>
@@ -281,4 +281,4 @@ buildService {
 }
 
 group = "com.liferay.training.gradebook"
-```
+``` -->

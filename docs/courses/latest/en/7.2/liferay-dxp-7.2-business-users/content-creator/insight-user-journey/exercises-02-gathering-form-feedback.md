@@ -1,6 +1,6 @@
 # Preparing Forms with Validation and Gathering Feedback
 
-<div class="ahead">
+<!-- <div class="ahead">
 <h4>Exercise Goals</h4>
 <ul>
     <li>Add Text Validation for the Employee Feedback Form</li>
@@ -81,4 +81,4 @@
 ## Bonus Exercises
 
 1. Add a field for employees to fill in the number of years they have worked at Livingstone. Enable validation so that employees cannot put in a number greater than 25 (Livingstone has only been around for 25 years).
-2. Fill out the Form as Omar Miles. View the Form Entries and look at Omar's response to the Employee Feedback Form.
+2. Fill out the Form as Omar Miles. View the Form Entries and look at Omar's response to the Employee Feedback Form. -->

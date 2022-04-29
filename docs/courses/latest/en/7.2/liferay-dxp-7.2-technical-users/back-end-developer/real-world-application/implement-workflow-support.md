@@ -5,7 +5,7 @@ order: 8
 ---
 
 # Implement Workflow Support Introduction
-
+<!-- 
 A workflow is an orchestrated and repeatable pattern or sequence of operations. Typically, workflows are used in review processes, but they're often used in integrating with other systems as well.
 
 In Liferay, any registered asset can be assigned to a workflow. For handling the workflows, Liferay is using its own Kaleo workflow engine, but integrations to other workflow engines are available from third parties.
@@ -229,4 +229,4 @@ Status field is displayed, for example, in the Blogs search page:
 		/>
 	</c:when>
 </c:choose>
-```
+``` -->

@@ -1,6 +1,6 @@
 # Create and Manage Pages for the New Sites
 
-<div class="ahead">
+<!-- <div class="ahead">
 <h4>Exercise Goals</h4>
 <ul>
     <li>Add the following pages with new widgets for the Livingstone Life site:</li>
@@ -102,4 +102,4 @@
 
 1. Edit the new pages and include new page fragments.
 2. Add new widget or content pages to the Livingstone Resort in Bali or the Livingstone Loop sites.
-3. Configure the layout of any widget pages created.
+3. Configure the layout of any widget pages created. -->

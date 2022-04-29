@@ -1,6 +1,6 @@
 # What are Sites?
 
-Websites have a structure of pages that can be navigated by digital users and are used by virtually every modern business, but a website without content is like a book without pages. When you're building a website, you need to figure out how to include content and how to structure and display that content efficiently. So what is the best way to deliver content in a site for your business? That is the question this course will help you answer.
+<!-- Websites have a structure of pages that can be navigated by digital users and are used by virtually every modern business, but a website without content is like a book without pages. When you're building a website, you need to figure out how to include content and how to structure and display that content efficiently. So what is the best way to deliver content in a site for your business? That is the question this course will help you answer.
 
 <figure>
 	<img src="../images/lecture-images/site-examples-lrsite.png" style="max-height: 100%" />
@@ -133,4 +133,4 @@ Liferay has many great individual content features, but putting all the features
 	<li>Site Pages are the part of a Site where the content is _______________________.</li>
 	<li>The _______________________ is a set of features that can be applied to all content.</li>
 </ul>
-</div>
+</div> -->

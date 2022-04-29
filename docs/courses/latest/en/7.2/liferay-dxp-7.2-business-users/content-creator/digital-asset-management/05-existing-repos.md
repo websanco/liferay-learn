@@ -1,6 +1,6 @@
 # Connecting with Existing Repositories
 
-In the folders section, we discussed how you might have thousands, hundreds of thousands, or even millions of files that you want users to have access to from within your platform. It is going to be very difficult to manage all these files if they are sitting in a single unstructured repository, and even then, moving every single file might not be your preferred solution. Instead, it is often preferable to connect to existing external repositories from within your Liferay instance.
+<!-- In the folders section, we discussed how you might have thousands, hundreds of thousands, or even millions of files that you want users to have access to from within your platform. It is going to be very difficult to manage all these files if they are sitting in a single unstructured repository, and even then, moving every single file might not be your preferred solution. Instead, it is often preferable to connect to existing external repositories from within your Liferay instance.
 
 ## Connecting with Livingstone's External Repositories {#livingstone}
 
@@ -56,4 +56,4 @@ Once the platform is connected to an external document repository, users are abl
   <li>In order to connect with a document repository, that repository must support the _________________ standard.</li>
   <li>When you connect to a document repository, Liferay DXP creates a _________________ that acts as a proxy for your external repository.</li>
 </ul>
-</div>
+</div> -->
