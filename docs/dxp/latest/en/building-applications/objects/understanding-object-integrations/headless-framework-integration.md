@@ -2,7 +2,7 @@
 
 > Available: Liferay DXP/Portal 7.4+
 
-When you publish Objects, you also publish headless REST APIs with them. Liferay automatically generates both REST and [GraphQL](https://graphql.org) APIs for each Object you create. The APIs generated for an Object depend on its scope (i.e., company or Site).
+When you publish an Object, Liferay automatically generates both REST and [GraphQL](https://graphql.org) APIs for it. This provides headless access with custom Objects, so you can perform CRUD operations. The APIs generated for an Object depend on its scope (i.e., company or Site).
 
 All Objects use the `c/[pluralobjectlabel]` naming pattern (e.g., `c/timeoffrequests`). Each Object entry schema includes all of the Object's fields and relationships.
 
@@ -63,7 +63,7 @@ For the API's `scopesKey` parameter, use the proper identifier for the desired d
 
 ## Object GraphQL APIs
 
-With the GraphQL APIs, you can both query and mutate Object data. Use Liferay's Graph*i*QL IDE  to search Object schemas, draft queries, run requests, and more.
+With the GraphQL APIs, you can both query and mutate Object data. All APIs for custom Objects are listed under `c` in Liferay's GraphQL schema. You can use Liferay's integrated Graph*i*QL IDE to search Object schemas, draft queries, run requests, and more. To access it, go to Liferay's API Explorer at `[server]:[port]/o/api` (e.g., `localhost:8080/o/api`) and click *GraphQL*.
 
 ![Use Liferay's GraphiQL explorer to search Object schemas and run your requests.](./headless-framework-integration/images/02.png)
 
