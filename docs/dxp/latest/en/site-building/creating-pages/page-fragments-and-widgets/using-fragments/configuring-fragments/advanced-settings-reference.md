@@ -20,7 +20,7 @@ Follow these steps to access a Fragment's Advanced Settings menu:
 
 ## HTML Tag
 
-Several HTML tags exist that allow web scrapers, browsers, and Site renderers to more easily find and retrieve what kind of content is on a page. *Container* Page Fragments provide the option to choose which tag is generated for the page.
+Several HTML tags exist that allow web scrapers, browsers, and Site renderers to more easily find and retrieve what kind of content is on a page. *Container* Page Fragments provide the option to choose which tag is generated for the Container Fragment's HTML element on the page.
 
 | Field | Description |
 | :--- | :--- |
