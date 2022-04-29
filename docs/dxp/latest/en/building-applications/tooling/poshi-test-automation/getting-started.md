@@ -20,7 +20,7 @@ getting-started/understanding-test-results-and-debugging-tests.md
 Previously, Poshi tests could only be executed by downloading and creating the test files within the [Liferay source
 code](https://github.com/liferay/liferay-portal/). The _Poshi Standalone_ gradle project enables you to use Poshi in any directory of your choosing without having to fetch the entire Liferay Portal github repository.
 
-::::{grid} 2
+::::{grid} 1
 :gutter: 3 3 3 3
 
 :::{grid-item-card} Setup
