@@ -17,6 +17,10 @@ package com.liferay.learn.dxp.importer;
 import com.liferay.headless.delivery.client.dto.v1_0.ContentField;
 import com.liferay.headless.delivery.client.dto.v1_0.ContentFieldValue;
 import com.liferay.headless.delivery.client.dto.v1_0.StructuredContent;
+import com.liferay.headless.delivery.client.dto.v1_0.StructuredContentFolder;
+import com.liferay.headless.delivery.client.pagination.Page;
+import com.liferay.headless.delivery.client.pagination.Pagination;
+import com.liferay.headless.delivery.client.resource.v1_0.StructuredContentFolderResource;
 import com.liferay.headless.delivery.client.resource.v1_0.StructuredContentResource;
 import com.liferay.petra.string.StringPool;
 import com.liferay.portal.kernel.util.HashMapBuilder;
@@ -40,10 +44,13 @@ import com.vladsch.flexmark.util.data.MutableDataSet;
 import java.io.File;
 
 import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
 
 import java.util.Arrays;
+import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
+import java.util.regex.Matcher;
 
 import org.apache.commons.io.FileUtils;
 
@@ -57,6 +64,8 @@ public class Main {
 		Set<String> fileNames = new TreeSet<>();
 
 		_addFileNames("../docs", fileNames);
+		
+		_initStructuredContentResources();
 
 		for (String fileName : fileNames) {
 			if (fileName.contains("/en/") && fileName.endsWith(".md")) {
@@ -79,6 +88,29 @@ public class Main {
 		fileNames.add(fileName);
 	}
 
+	private static StructuredContentFolder _addTopLevelFolder(String folderName) 
+		throws Exception {
+
+		return _structuredContentFolderResource.postSiteStructuredContentFolder(
+			_GROUP_ID, new StructuredContentFolder() {
+				{
+					description = "";
+					name = folderName;
+				}
+		});
+
+	}
+
+	private static long _getFolderId(String fileName) throws Exception {
+		String[] fileFolders = fileName.split(Matcher.quoteReplacement(System.getProperty("file.separator")));
+
+		List<String> folderList = _sanitizeFolderList(fileFolders);
+
+		return _retrieveCreateFolderId(folderList, _getTopLevelFolders());
+
+	}
+
+
 	private static String _getTitle(String text) {
 		int x = text.indexOf("#");
 
@@ -87,6 +119,141 @@ public class Main {
 		String title = text.substring(x + 1, y);
 
 		return title.trim();
+	}
+
+	private static ArrayList<StructuredContentFolder> _getTopLevelFolders() throws Exception {
+
+		Page<StructuredContentFolder> page = 
+			_structuredContentFolderResource.getSiteStructuredContentFoldersPage(
+			_GROUP_ID, null, null, null, null, Pagination.of(1,50), null);
+
+		ArrayList<StructuredContentFolder> topLevelFolders = (ArrayList)page.getItems();
+
+		return topLevelFolders;
+	}
+
+	private static void _initStructuredContentResources() {
+
+		StructuredContentResource.Builder builder =
+			StructuredContentResource.builder();
+
+		_structuredContentResource =
+			builder.authentication(
+				"test@liferay.com", "test"
+			).build();
+
+		StructuredContentFolderResource.Builder folderBuilder = 
+			StructuredContentFolderResource.builder();
+
+		_structuredContentFolderResource = 
+			folderBuilder.authentication(
+				"test@liferay.com", "test"
+			).build();
+	}
+
+	private static long _retrieveCreateFolderId(List<String> fileList, 
+		ArrayList<StructuredContentFolder> liferayList) throws Exception {
+		long folderId = 0;
+
+		StructuredContentFolder folder;
+
+		// If we have an empty liferayList coming in
+		if (liferayList.size() == 0) {
+
+			folder = _addTopLevelFolder(fileList.get(0));
+
+			folderId = folder.getId();
+
+			liferayList = _getTopLevelFolders();
+
+		} 
+
+		for (int i=0;i<fileList.size();i++) {
+			String folderName = fileList.get(i);
+
+			if (liferayList.size() > 0) {
+
+				boolean matched = false; 
+
+				for (StructuredContentFolder liferayFolder : liferayList) {
+
+					 if (folderName.equalsIgnoreCase(liferayFolder.getName())) {
+
+						folderId = liferayFolder.getId();
+
+						matched = true;
+
+					} 
+					
+				}
+
+				if (matched == false) {
+
+					if (folderId == 0) {
+						folder = _addTopLevelFolder(folderName);
+
+						folderId = folder.getId();
+
+					} else {
+					folder = 
+						_structuredContentFolderResource.postStructuredContentFolderStructuredContentFolder(
+						folderId, new StructuredContentFolder() { 
+							{
+								description = "";
+								name = folderName;
+							}
+						});
+
+					folderId = folder.getId();
+
+					}
+				}
+
+			} else {
+
+				folder = 
+					_structuredContentFolderResource.postStructuredContentFolderStructuredContentFolder(
+					folderId, new StructuredContentFolder() { 
+						{
+							description = "";
+							name = folderName;
+						}
+					});
+
+				folderId = folder.getId();
+			}
+
+			Page<StructuredContentFolder> page = 
+				_structuredContentFolderResource.getStructuredContentFolderStructuredContentFoldersPage(
+					folderId, null, null, null, Pagination.of(1, 50), null);
+
+			liferayList = (ArrayList)page.getItems();
+
+		}
+
+		return folderId;
+	}
+
+	private static List _sanitizeFolderList(String[] folderList) {
+
+		ArrayList<String> fileFolders = new ArrayList();
+		
+		for (int i=0;i<folderList.length;i++) {
+			String fileFolder = folderList[i];
+
+			if (!fileFolder.equalsIgnoreCase("..") && !fileFolder.equalsIgnoreCase("docs") && 
+				!fileFolder.equalsIgnoreCase("latest") && !fileFolder.equalsIgnoreCase("en") && 
+				!fileFolder.equalsIgnoreCase("ja") && !fileFolder.endsWith(".md") && 
+				!fileFolder.endsWith(".html") && 
+				!fileFolder.endsWith(".rst")) {
+
+				fileFolders.add(fileFolder);
+
+			}
+
+		}
+
+		return fileFolders;
 	}
 
 	private static String _toHTML(String text) {
@@ -129,6 +296,7 @@ public class Main {
 
 	private static StructuredContent _toStructuredContent(String fileName)
 		throws Exception {
+
 
 		StructuredContent structuredContent = new StructuredContent();
 
@@ -194,20 +362,18 @@ public class Main {
 	}
 
 	private static void _uploadHTML(String fileName) throws Exception {
-		StructuredContentResource.Builder builder =
-			StructuredContentResource.builder();
+		long folderId = _getFolderId(fileName);
 
-		StructuredContentResource structuredContentResource =
-			builder.authentication(
-				"test@liferay.com", "test"
-			).build();
-
-		structuredContentResource.postSiteStructuredContent(
-			_GROUP_ID, _toStructuredContent(fileName));
+		_structuredContentResource.postStructuredContentFolderStructuredContent(
+			folderId, _toStructuredContent(fileName));
 	}
 
 	private static final long _CONTENT_STRUCTURE_ID = 39756;
 
 	private static final long _GROUP_ID = 20123;
+
+	private static StructuredContentResource _structuredContentResource;
+
+	private static StructuredContentFolderResource _structuredContentFolderResource;
 
 }
