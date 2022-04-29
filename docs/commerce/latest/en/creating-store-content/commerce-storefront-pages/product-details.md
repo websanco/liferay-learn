@@ -2,7 +2,7 @@
 
 The Product Details page displays important information of a product. The Product Details page can contain information such as a short description about the product, its specifications, and product images. The Product Details page may also contain links to [related products](../../product-management/creating-and-managing-products/products/related-products-up-sells-and-cross-sells.md).
 
-The sample page highlighted below is built using the Minium Accelerator and contains the _Product Details_, _Product Publisher_, and the _Product Comparison Bar_ widgets.
+The sample page highlighted below is using the Minium Accelerator and contains the _Product Details_, _Product Publisher_, and the _Product Comparison Bar_ widgets.
 
 ![The sample Product Details page available in Minium.](./product-details/images/01.png)
 
