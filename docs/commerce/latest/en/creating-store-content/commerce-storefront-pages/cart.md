@@ -1,19 +1,19 @@
 # Cart
 
-The Cart page is a required page that allows users to manage the contents of their cart. There are three associated widgets: _Cart_, _Cart Summary_, _Mini Cart_.
+You can use the Cart page to manage the contents of your cart. There are three associated widgets: _Cart_, _Cart Summary_, _Mini Cart_.
 
-**Cart** displays the contents of the cart. The widget contains the _Update_ button to change the quantity and _Delete_ to remove the item from the cart.
+**Cart** displays the contents of the cart. The widget contains the _Update_ button to change the quantity and _Delete_ button to remove items from the cart.
 
 **Cart Summary** displays the cart's subtotal, any applicable taxes, the total amount, and the _Checkout_ button.
 
-![Cart Summary](./cart/images/01.png)
+![The Cart Summary widget displays the cart's subtotal, any applicable taxes, the total amount, and the Checkout button](./cart/images/01.png)
 
 **Mini Cart** displays the cart’s contents and an _Edit Cart_ button that links to the Commerce _Cart_ widget. The _Mini Cart_ widget has to be deployed on the same page with the _Cart_ widget.
 
-![Mini Cart](./cart/images/02.png)
+![The Mini Cart widget displays the cart's contents and has an Edit Cart button that links to the Commerce Cart widget.](./cart/images/02.png)
 
 ```{note}
-The *Mini Cart* widget supports Liferay's Adaptive Media out-of-the-box. Adaptive Media generates a set of images for use on various screens. When the content is accessed, it checks the screen type and resolution and selects the appropriate image. See [Serving Device and Screen Optimized Media](https://learn.liferay.com/dxp/latest/en/content-authoring-and-management/documents-and-media/publishing-and-sharing/serving-device-and-screen-optimized-media.html) for more information.
+The *Mini Cart* widget supports Liferay's Adaptive Media out-of-the-box. See [Serving Device and Screen Optimized Media](https://learn.liferay.com/dxp/latest/en/content-authoring-and-management/documents-and-media/publishing-and-sharing/serving-device-and-screen-optimized-media.html) for more information.
 ```
 
 ## Additional Information
