@@ -4,6 +4,10 @@ Media providers must consider differences between devices (phones, laptops, tabl
 
 Adaptive Media integrates with Documents and Media, Blogs, Web Content, and Content Pages (starting with Liferay DXP 7.4+). It generates a set of images for use on various screens. When the content is accessed, Adaptive Media checks the screen type and resolution and selects the appropriate image. Adaptive Media comes pre-installed in DXP.
 
+```{note}
+Adaptive Media is available OOTB for the following Commerce widgets: [Search Results](https://learn.liferay.com/commerce/latest/en/creating-store-content/commerce-storefront-pages/search.html), [Product Details, Product Publisher](https://learn.liferay.com/commerce/latest/en/creating-store-content/commerce-storefront-pages/product-details.html), [Mini Cart widget](https://learn.liferay.com/commerce/latest/en/creating-store-content/liferay-commerce-widgets/using-the-mini-cart-widget.html) and component, [Checkout](https://learn.liferay.com/commerce/latest/en/creating-store-content/commerce-storefront-pages/checkout.html).
+```
+
 Here, you'll learn about Adaptive Media and how to prepare it to handle images. <!--Q: What about other assets? -->
 
 To use Adaptive Media, you must first define the resolutions for the images delivered to users' devices. Adaptive Media then generates new images scaled to fit those resolutions, while maintaining the original aspect ratio. See [Adding Image Resolutions](./adding-image-resolutions.md) to learn more about creating new Image Resolutions.
