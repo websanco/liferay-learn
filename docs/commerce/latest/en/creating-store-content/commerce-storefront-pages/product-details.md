@@ -16,6 +16,10 @@ In this example, the _Product Publisher_ widget has been configured to display s
 
 ![Product Publisher configuration](./product-details/images/02.png)
 
+```{note}
+The *Product Details* widget and the *Product Publisher* widget support Liferay's Adaptive Media out-of-the-box. Adaptive Media generates a set of images for use on various screens. When the content is accessed, it checks the screen type and resolution and selects the appropriate image. See [Serving Device and Screen Optimized Media](https://learn.liferay.com/dxp/latest/en/content-authoring-and-management/documents-and-media/publishing-and-sharing/serving-device-and-screen-optimized-media.html) for more information.
+```
+
 ## Additional Information
 
 * [Related Products, Upsells, and Cross-Sells](../../product-management/creating-and-managing-products/products/related-products-up-sells-and-cross-sells.md)

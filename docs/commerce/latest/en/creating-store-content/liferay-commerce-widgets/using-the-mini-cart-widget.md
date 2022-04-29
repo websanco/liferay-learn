@@ -6,6 +6,10 @@ Liferay Commerce comes with a *Mini Cart* widget that provides a quick overview 
 The Mini Cart widget is not the same as the custom mini cart component present in accelerators like Minium and Speedwell.
 ```
 
+```{note}
+The *Mini Cart* widget and the custom mini cart component supports Liferay's Adaptive Media out-of-the-box. Adaptive Media generates a set of images for use on various screens. When the content is accessed, it checks the screen type and resolution and selects the appropriate image. See [Serving Device and Screen Optimized Media](https://learn.liferay.com/dxp/latest/en/content-authoring-and-management/documents-and-media/publishing-and-sharing/serving-device-and-screen-optimized-media.html) for more information.
+```
+
 ## Adding the Mini Cart Widget to a Page
 
 1. Click the *Add* (![Add Widget](../../images/icon-add-widget.png)) button from the top menu.

@@ -12,6 +12,10 @@ The Cart page is a required page that allows users to manage the contents of the
 
 ![Mini Cart](./cart/images/02.png)
 
+```{note}
+The *Mini Cart* widget supports Liferay's Adaptive Media out-of-the-box. Adaptive Media generates a set of images for use on various screens. When the content is accessed, it checks the screen type and resolution and selects the appropriate image. See [Serving Device and Screen Optimized Media](https://learn.liferay.com/dxp/latest/en/content-authoring-and-management/documents-and-media/publishing-and-sharing/serving-device-and-screen-optimized-media.html) for more information.
+```
+
 ## Additional Information
 
 * [Widget Reference Guide](../liferay-commerce-widgets/widget-reference.md)
