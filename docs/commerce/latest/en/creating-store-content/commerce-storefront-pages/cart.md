@@ -8,7 +8,7 @@ You can use the Cart page to manage the contents of your cart. There are three a
 
 ![The Cart Summary widget displays the cart's subtotal, any applicable taxes, the total amount, and the Checkout button](./cart/images/01.png)
 
-**Mini Cart** displays the cart’s contents and an _Edit Cart_ button that links to the Commerce _Cart_ widget. The _Mini Cart_ widget has to be deployed on the same page with the _Cart_ widget.
+**Mini Cart** displays the cart’s contents and an _Edit Cart_ button that links to the Commerce _Cart_ widget.
 
 ![The Mini Cart widget displays the cart's contents and has an Edit Cart button that links to the Commerce Cart widget.](./cart/images/02.png)
 
