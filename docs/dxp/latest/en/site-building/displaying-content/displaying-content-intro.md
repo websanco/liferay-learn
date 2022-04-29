@@ -1,16 +1,20 @@
 # Displaying Content
 
-You can display content in various ways. The option you choose depends on the type of asset you want to display, how many assets you want to display at once, and how you want your content to be viewed. Three key options are available: The Web Content Display widget, the Asset Publisher widget, and Display Page Templates. The table below compares the key behaviors of these display options:
+You can display content in various ways. The option you choose depends on the type of asset you want to display, how many assets you want to display at once, and how you want your content to be viewed. Four key options are available: the Collection Display Fragment, the Web Content Display widget, the Asset Publisher widget, and Display Page Templates. The table below compares the key behaviors of these display options:
 
-| Behavior | Web Content Display | Asset Publisher | Display Pages |
-| :--- | :--- | :--- | :--- |
-| Display individual content | &#10004; | | &#10004; |
-| Supports multiple content types | | &#10004; | &#10004; |
-| Supports Manual content selection | &#10004; | &#10004; | &#10004; |
-| Display multiple pieces of content | | &#10004; |  |
-| Supports Dynamic content selection | | &#10004; | |
-| Displays content on its own page | | | &#10004; |
-| Provides a unique friendly URL for web content | | | &#10004; |
+| Behavior | Collection Display | Web Content Display | Asset Publisher | Display Pages |
+| :--- | :--- | :--- | :--- | :--- |
+| Display individual content | | &#10004; | | &#10004; |
+| Supports multiple content types | &#10004; | &#10004; | &#10004; |
+| Supports Manual content selection | &#10004; | &#10004; | &#10004; | &#10004; |
+| Display multiple pieces of content | &#10004; | | &#10004; |  |
+| Supports Dynamic content selection | &#10004; | | &#10004; | |
+| Displays content on its own page | | | | &#10004; |
+| Provides a unique friendly URL for web content | | | | &#10004; |
+
+## Collection Display Fragment
+
+The Collection Display Fragment displays a single [Collection](../../content-authoring-and-management/collections-and-collection-pages/about-collections-and-collection-pages.md) of assets. This Fragment gives you all the flexibility of Collections, which can manually or dynamically include assets (from one or multiple asset types). Read [Displaying Collections](./additional-content-display-options/displaying-collections.md) to learn more.
 
 ## Web Content Display Widget
 
