@@ -13,7 +13,7 @@ If you haven't already created a publication to track your changes, see [Creatin
 Once created, a publication is automatically updated with changes made to production, provided they don't conflict with changes made in the publication. This ensures you and your team are working on the latest version of production.
 
 ```{important}
-Before upgrading to a new fix pack or service pack, ensure you've published all active publications. After upgrading, active publications are marked as outdated and cannot be published.
+After upgrading your Liferay version, existing publications cannot be changed, published, or reverted. All active publications are marked as out of date and can only be viewed or deleted. Also, the *Revert* option is removed for publications published before your upgrade.
 ```
 
 ## Making Changes in a Publication

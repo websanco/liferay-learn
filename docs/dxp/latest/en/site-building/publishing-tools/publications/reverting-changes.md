@@ -3,7 +3,7 @@
 Liferay Publications maintains a history of all published changes. You can use this publishing history to easily create publications that revert earlier changes to production. While reverting a publication, you can also make additional changes.
 
 ```{important}
-After upgrading to a new fix pack or service pack, you cannot revert publications published before your upgrade. The *Revert* option is removed for these publications.
+After upgrading your Liferay version, you cannot revert publications published before your upgrade. The *Revert* option is removed for these publications.
 
 Also, users cannot revert the same publication twice. Attempting this results in an *Addition Conflict*. See [Resolving Conflicts](./resolving-conflicts.md) to learn more about conflict types.
 ```
