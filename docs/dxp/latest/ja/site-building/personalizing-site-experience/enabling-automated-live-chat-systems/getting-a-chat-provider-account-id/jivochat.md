@@ -2,6 +2,8 @@
 
 [JivoChat](https://jivochat.com/) は、プラットフォーム間でチームをユーザーに接続するメッセージングプラットフォームです。 JivoChatアカウントIDをLiferayインスタンスと[統合できます](../enabling-automated-live-chat-systems.md)。
 
+<a name="locating-your-jivochat-account-id" />
+
 ## JivoChatアカウントIDを見つける
 
 1. [JivoChatアカウント](https://app.jivosite.com/) にログインします。

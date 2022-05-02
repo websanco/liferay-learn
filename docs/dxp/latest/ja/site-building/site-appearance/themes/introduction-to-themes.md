@@ -2,6 +2,8 @@
 
 テーマで、サイトのデフォルトのルックアンドフィールをカスタマイズします。 サイト全体でブランドやラベルのスタイルやビジュアルアイデンティティを定義できます。
 
+<a name="themes-and-site-design" />
+
 ## テーマとサイトデザイン
 
 テーマは、作成する任意のサイトですぐに使用できます。 サイトのルックアンドフィールを定義する方法は他にもいくつかありますが（[スタイルブック](../style-books/using-a-style-book-to-standardize-site-appearance.md)など）、完全にカスタマイズされたソリューションが必要な場合は、テーマが最も柔軟性があります。
@@ -14,15 +16,21 @@
 テーマを介してサイトにカスタマイズを追加すると、Liferayのあるバージョンから別のバージョンにアップグレードする際のメンテナンスが増える可能性があります。 可能であれば、[マスターページテンプレート](../../creating-pages/defining-headers-and-footers/master-page-templates.md)と[スタイルブック](../style-books/using-a-style-book-to-standardize-site-appearance.md)を使用してサイトの外観を管理してください。
 ```
 
+<a name="developing-themes" />
+
 ## テーマの開発
 
 テーマを使用して、ページのスタイル設定、テンプレートの作成、ランタイム時の機能の拡張など、さまざまな方法でサイトをカスタマイズできます。
+
+<a name="styling-your-site" />
 
 ### サイトのスタイリング
 
 テーマは、サイトのスタイリングの基礎となるものです。 サイトのページのUIの詳細、カスタマイズされたポートレットデコレータを定義したり <!--リンクがあれば追加してください--> 、サイトの配色を定義 <!--リンクがあれば追加してください--> したりできます。
 
 テーマに基づいてカスタムの[スタイルブックトークン定義](../style-books/developer-guide/style-book-token-definitions.md)を構成することもできます。 <!--Add link when available: See Hooking Style Book Tokens into Your Theme for more information.-->
+
+<a name="designing-pages" />
 
 ### ページのデザイン
 
@@ -33,6 +41,8 @@
 ```{note}
 [マスターページ](../../creating-pages/defining-headers-and-footers/master-page-templates.md)または[ページテンプレート](../../creating-pages/adding-pages/creating-a-page-template.md)を使用して、ページのテンプレートを作成することもできます。
 ```
+
+<a name="bundling-resources" />
 
 ### リソースのバンドル
 
@@ -48,6 +58,8 @@
 リソースインポーターは、Liferay DXP 7.1で廃止予定になりました。
 ```
 
+<a name="modifying-behavior" />
+
 ### 動作の変更
 
 テーマは、サイトのさまざまな部分の動作を変更するための強力なツールでもあります。
@@ -58,6 +70,8 @@
 
 * [スタイルブック](../style-books/using-a-style-book-to-standardize-site-appearance.md)でスタイリングするためのカテゴリを定義するために使用される[トークン定義](../style-books/developer-guide/style-book-token-definitions.md)を追加できます。
 
+<a name="upgrading-themes" />
+
 ## テーマのアップグレード
 
 テーマをアップグレードするための最初のステップは、Liferayテーマジェネレーターを使用してアップグレードタスクを実行することです。 このタスクは、テーマのバージョンを更新して、新しいバージョンのDXPにデプロイできるようにします。 詳細については、 [テーマのアップグレード](./upgrading-a-theme.md) を参照してください。
@@ -65,6 +79,8 @@
 <!-- If and when at least one more article is made for the extra work for upgrades, maybe add:
 
     Using the Liferay Theme Generator allows your theme to be deployed, but more work may be required to accommodate other changes in the new version, such as UI or functionality changes. See this article for more information... -->
+
+<a name="tools" />
 
 ## ツール
 

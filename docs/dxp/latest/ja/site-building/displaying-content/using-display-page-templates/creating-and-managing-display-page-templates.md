@@ -8,6 +8,8 @@
 表示ページテンプレートは、ウェブコンテンツ、ドキュメント、ブログエントリー、カテゴリにのみ対応しています（Liferay DXP 7.4 以降）。
 ```
 
+<a name="creating-a-display-page-template" />
+
 ## 表示ページテンプレートの作成
 
 1. プロダクトメニューを開き、 [**デザイン**] &rarr; [**ページテンプレート**] をクリックします。
@@ -42,6 +44,8 @@
 
 これで、表示ページテンプレートを使用して[コンテンツを公開できます。](./publishing-content-with-display-pages.md)
 
+<a name="preview-the-display-page-template-content-mappings" />
+
 ### 表示ページテンプレートコンテンツマッピングのプレビュー
 
 > 対応可能：Liferay DXP/Portal 7.4以降
@@ -54,6 +58,8 @@
 1. または、表示ページテンプレートエディターから、 ［**プレビュー**］(![Preview](../../../images/icon-preview.png)) ボタンをクリックし、プレビューしたいコンテンツを選択します。
 
    ![ [プレビュー]ボタンをクリックして、表示ページテンプレートのマッピングをプレビューします。](./creating-and-managing-display-page-templates/images/08.png)
+
+<a name="viewing-display-page-template-usage" />
 
 ## 表示ページテンプレートの使用量を見る
 
@@ -82,6 +88,8 @@
 1. [**OK**] をクリックします。
 
 コンテンツを新しい表示ページテンプレートに割り当てた場合は、コンテンツが期待どおりに表示されることを確認してください。 コンテンツのプレビューと公開については、 [Publishing Content with Display Pages](./publishing-content-with-display-pages.md)を参照してください。
+
+<a name="additional-information" />
 
 ## 追加情報
 

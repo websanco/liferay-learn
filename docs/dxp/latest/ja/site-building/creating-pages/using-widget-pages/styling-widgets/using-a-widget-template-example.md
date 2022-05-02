@@ -6,6 +6,8 @@
 
 ![メディアギャラリーウィジェットに画像を追加して、Liferayエクスペリエンスをカスタマイズします。](./using-a-widget-template-example/images/04.gif)
 
+<a name="configuring-the-media-gallery-widget" />
+
 ## メディアギャラリーウィジェットを設定する
 
 1. ドキュメントとメディアにまだ画像がない場合は、ドキュメントとメディアに画像を追加してください。 プロダクトメニューを開き、［サイトビルダー］→［ページ］と進みます。 ［**コンテンツとデータ**］ へ移動し、 [［**ドキュメントとメディア**］](../../../../content-authoring-and-management/documents-and-media/uploading-and-managing/uploading-files.md) &rarr; ［**追加**］（![Add](../../../../images/icon-add.png)）をクリックしてアップロードするファイルを選択します。
@@ -23,6 +25,8 @@
   これでウィジェットにはカルーセル表示テンプレートが使用されるようになりました。
 
 ![メディアギャラリーの設定画面。](./using-a-widget-template-example/images/04.gif)
+
+<a name="additional-information" />
 
 ## 追加情報
 

@@ -21,6 +21,8 @@
 Liferay DXP 7.4以降の場合、フラグメントコレクションはLiferay UIではフラグメントセットと呼ばれます。
 ```
 
+<a name="deploy-a-contributed-fragment-set" />
+
 ## 提供されたフラグメントセットのデプロイ
 
 まず、サンプルをデプロイして、提供されたフラグメントセットがどのように見えるかを確認します。
@@ -69,6 +71,8 @@ Liferay DXP 7.4以降の場合、フラグメントコレクションはLiferay 
 
 ご覧のとおり、提供されたフラグメントセットはデフォルトのフラグメントセットとともに表示され、フラグメントは UI から変更できません。 セットを変更する唯一の方法は、元のモジュールを更新するか、 [フラグメントを別のセットにコピー](../../creating-pages/page-fragments-and-widgets/using-fragments/managing-fragments.md#managing-individual-page-fragments) してフラグメントのコピーを変更することです。
 
+<a name="contributed-fragment-set-logic-and-metadata" />
+
 ## 提供されたフラグメントセットのロジックとメタデータ
 
 フラグメントセットのコントリビューターは、`*FragmentCollectionContributor` クラスの 2 つのメソッドをオーバーライドして、セットに関する情報を提供します。
@@ -110,6 +114,8 @@ private ServletContext _servletContext;
 
 次に、プロジェクトを変更して、提供されたセットに別のフラグメントを含めます。
 
+<a name="add-fragment-resources" />
+
 ## フラグメントリソースの追加
 
 以下の手順で、提供されたフラグメントセットに新しいパッケージ化されたフラグメントを追加します。
@@ -149,6 +155,8 @@ private ServletContext _servletContext;
     ![カスタムのジャンボトロンフラグメントが提供されたセットに含まれています。](./creating-a-contributed-fragment-set/images/02.png)
 
 　 これで、提供されたフラグメントセットを作成する方法を理解し、提供された新しいフラグメントセットを Liferay に追加しました。
+
+<a name="related-information" />
 
 ## 関連情報
 

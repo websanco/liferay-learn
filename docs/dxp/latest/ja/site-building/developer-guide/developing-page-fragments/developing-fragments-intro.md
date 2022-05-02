@@ -8,9 +8,13 @@
 Liferay DXP 7.4以降の場合、フラグメントコレクションはLiferay UIではフラグメントセットと呼ばれます。
 ```
 
+<a name="fragment-sets" />
+
 ## フラグメントセット
 
 セットはフラグメントを編成して、関連するフラグメントのグループを管理および共有できるようにします。 ユーザーは、ページに追加するフラグメントを選択する際にセットを移動するので、ページに組み合わせやすいように、フラグメントをセットで作成します。 管理ページに一例が表示されており、すぐに使用できるすべてのフラグメント (およびそのコード) が表示されています。 ページ フラグメントのコードは、管理インターフェイスから更新できます。 ページ フラグメントのコードを静的 (ロックされており、インターフェイスから編集できない) にしたい場合は、[提供されたフラグメントセット](./creating-a-contributed-fragment-set.md)を作成できます。
+
+<a name="tooling" />
 
 ## ツーリング
 
@@ -18,6 +22,8 @@ Liferay DXP 7.4以降の場合、フラグメントコレクションはLiferay 
 
 * [組み込みのフラグメント エディター](./using-the-fragments-editor.md): 組み込みのエディターを使用して、Liferay Portal 内のページ フラグメントを作成します。
 * [フラグメント ツールキット](./using-the-fragments-toolkit.md): フラグメント CLI を使用して、デスクトップからページ フラグメントおよびフラグメント セットを生成、インポート、およびエクスポートします。
+
+<a name="features" />
 
 ## 機能一覧
 
@@ -32,6 +38,8 @@ Liferay DXP 7.4以降の場合、フラグメントコレクションはLiferay 
 FreeMarkerでテンプレートを作成または編集する権限は信頼できるユーザーにのみ付与してください。 Webコンテンツテンプレートのセキュリティについては、 [Webコンテンツストラクチャーとテンプレートへのアクセス許可の割り当て](../../../content-authoring-and-management/web-content/web-content-structures/assigning-permissions-to-structures-and-templates.md#security-considerations-for-web-content-templates) をご覧ください。
 ```
 
+<a name="best-practices" />
+
 ## ベストプラクティス
 
 フラグメント コードを書き込む際は、次のベスト プラクティスをお勧めします。
@@ -41,6 +49,8 @@ FreeMarkerでテンプレートを作成または編集する権限は信頼で�
 * 自動生成されたフラグメント クラスを、追加するすべての CSS セレクターの基礎として使用して、他のフラグメントに影響を与えないようにしてください。
 * JavaScript は簡単に再利用できないため、慎重に使用してください。 代わりに、外部の JavaScript ライブラリを参照してください。
 * フラグメント設定テキスト値のエスケープ。
+
+<a name="additional-information" />
 
 ## 追加情報
 

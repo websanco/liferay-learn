@@ -17,6 +17,8 @@ Liferayには、すぐに使用できるさまざまなフラグメントが用�
 使用可能な構成オプションは、フラグメントおよびフラグメントのサブ要素によって異なります。 詳細については、 [フラグメントの設定](./configuring-fragments.md) を参照してください。
 ```
 
+<a name="layout-elements" />
+
 ## レイアウト要素
 
 > 利用可能：Liferay Portal 7.3 GA2以降、以前は **パネル** および **行** を含むレイアウトと呼ばれていました。
@@ -27,6 +29,8 @@ Liferayには、すぐに使用できるさまざまなフラグメントが用�
 |:------ |:------------------------------------------------------ |
 | コンテナ   | 構成可能なドロップゾーンを追加します。                                    |
 | グリッド   | 複数のドロップゾーンモジュールを追加します。 これらのモジュールは、垂直または水平に構成および配置できます。 |
+
+<a name="basic-components" />
 
 ## 基本コンポーネント
 
@@ -49,6 +53,8 @@ Liferayには、すぐに使用できるさまざまなフラグメントが用�
 | タブ                     | ウィジェットやその他のフラグメントを追加するための、[単純なテキスト要素](./configuring-fragments/fragment-sub-elements-reference.md)と個々のドロップゾーンを備えた複数のタブを追加します。                                                                                                                                                |
 | ビデオURL（以前は **ビデオフラグメント**） | Youtubeまたはドキュメントとメディアからのビデオをページまたはテンプレートに埋め込みます。 ビデオを自動再生、ループ、またはミュートに設定できます。 エンドユーザーからビデオコントロールを非表示にすることもできます。 詳細は、[Liferayアセットとページへのビデオの埋め込み](../../../../content-authoring-and-management/documents-and-media/videos/embedding-videos-into-liferay-assets-and-pages.md)を参照してください。 |
 
+<a name="content-display" />
+
 ## コンテントの表示
 
 > 対応可能：Liferay DXP/Portal 7.3以降
@@ -64,6 +70,8 @@ Liferayには、すぐに使用できるさまざまなフラグメントが用�
 | 適用されたフィルター（7.4以降で利用可能）  | コレクション表示に適用されるフィルターを表示および管理するための要素を追加します。                                                                                                                                                                                                                           |
 | コレクション表示                | 手動および動的に定義されたコレクションと、コレクションプロバイダーによって定義されたコレクションを表示します。 コレクションを **グリッド** で表示するか、リスト **テンプレート**（境界付き、記号付き、インライン、番号付き、スタイルなし）で表示するかを構成できます。 詳細は、 [コレクションの表示](../../../displaying-content/additional-content-display-options/displaying-collections.md) を参照してください。 |
 
+<a name="cookie-banner" />
+
 ## Cookieバナー
 
 > Liferay DXP/Portal 7.4以降で利用可能 <!--TASK: Add more details.--> > 
@@ -71,6 +79,8 @@ Liferayには、すぐに使用できるさまざまなフラグメントが用�
 | フラグメント           | 説明                                                                                                                                                                  |
 |:---------------- |:------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Cookieバナー (シンプル) | サイトのCookieを受け入れるための[リッチテキスト](./configuring-fragments/fragment-sub-elements-reference.md)と[リンク](./configuring-fragments/fragment-sub-elements-reference.md)要素を追加します。 |
+
+<a name="featured-content" />
 
 ## 主なコンテンツ
 
@@ -80,11 +90,15 @@ Liferayには、すぐに使用できるさまざまなフラグメントが用�
 Liferay DXP/Portal 7.3の場合、各フラグメントの*情報*アイコン(![Information](../../../../images/icon-information.png))にカーソルを合わせると、レイアウトをプレビューできます。
 ```
 
+<a name="banners" />
+
 ### バナー
 
 **バナー** フラグメントを使用して、CTA（Call to Action）バナーを作成するためのテキストおよびリンク要素をコンテントページに追加します。 DXPには、次のレイアウトが含まれています。
 
 ![Call to Actionバナーを作成するためのテキストおよびリンク要素をコンテンツページに追加します。](./default-fragments-reference/images/01.png)
+
+<a name="features" />
 
 ### 機能
 
@@ -92,11 +106,15 @@ Liferay DXP/Portal 7.3の場合、各フラグメントの*情報*アイコン(!
 
 ![テキスト、画像、リンク要素をコンテンツページに追加して、主要な機能をプロモートします。](./default-fragments-reference/images/02.png)
 
+<a name="highlights" />
+
 ### ハイライト
 
 **ハイライト** フラグメントを使用して、画像、テキスト、およびリンク要素をコンテンツページに追加してハイライト表示します。 DXPでは次のレイアウトが提供されています。
 
 ![コンテンツページに画像、テキスト、リンクの要素を追加し、ハイライト表示します。](./default-fragments-reference/images/03.png)
+
+<a name="footers" />
 
 ## フッタ
 
@@ -106,6 +124,8 @@ Liferay DXP/Portal 7.3の場合、各フラグメントの*情報*アイコン(!
 
 ![コンテンツページのマスターページテンプレートにカスタムフッタを追加します。](./default-fragments-reference/images/04.png)
 
+<a name="navigation-bars" />
+
 ## ナビゲーションバー
 
 > 利用可能：Liferay DXP 7.3以降、以前は ［**Sections**］ パネルに含まれていました。
@@ -114,9 +134,13 @@ Liferay DXP/Portal 7.3の場合、各フラグメントの*情報*アイコン(!
 
 ![コンテンツページ用のマスターページテンプレートにカスタムヘッダを追加します。](./default-fragments-reference/images/05.png)
 
+<a name="menu-display" />
+
 ## メニュー表示
 
 > 対応可能：Liferay DXP/Portal 7.4以降 <!--TASK: Revisit --> メニュー表示フラグメントを使うと、コンテントページの任意の場所にナビゲーションメニューを作成することができます。 このナビゲーションメニューは、サイトのパブリックページやプライベートページの階層、またはLiferay DXPの[ナビゲーションメニュー](../../../site-navigation/using-navigation-menus.md)を使って定義したその他の階層に基づいています。 サイトナビゲーションのメニュー表示フラグメントの設定方法については、 [サイトナビゲーションの管理](../../../site-navigation/managing-site-navigation.md)を参照してください。
+
+<a name="additional-information" />
 
 ## 追加情報
 

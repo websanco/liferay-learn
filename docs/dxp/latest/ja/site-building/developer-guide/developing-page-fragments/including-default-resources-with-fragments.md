@@ -6,6 +6,8 @@
 Liferay DXP 7.4以降の場合、フラグメントコレクションはLiferay UIではフラグメントセットと呼ばれます。
 ```
 
+<a name="import-a-fragment-set-with-resources" />
+
 ## リソースとともにフラグメント セットをインポートする
 
 まず、フラグメント セットのサンプルをインポートして、フラグメント リソースがどのように機能するかを確認します。
@@ -71,6 +73,8 @@ Liferay DXP 7.4以降の場合、フラグメントコレクションはLiferay 
 
     ![リソースはフラグメントセットで使用できます。](./including-default-resources-with-fragments/images/01.png)
 
+<a name="fragment-set-structure-with-resources" />
+
 ## リソースを含むフラグメントセットストラクチャー
 
 リソースを含むフラグメントセットは、次の構造を使用します。
@@ -101,6 +105,8 @@ Liferay DXP 7.4以降の場合、フラグメントコレクションはLiferay 
 ```{tip}
 `img[src="[resources:image-name.extension]"]` という構文を使用して、CSS で画像リソースのスタイルを設定できます。
 ```
+
+<a name="include-a-new-resource" />
 
 ## 新しいリソースを含める
 
@@ -133,6 +139,8 @@ Liferay DXP 7.4以降の場合、フラグメントコレクションはLiferay 
 ```
 
 これで、画像リソースのフラグメント セットの使用方法がわかりました。
+
+<a name="related-information" />
 
 ## 関連情報
 

@@ -8,6 +8,8 @@
 Liferay DXP 7.4以降の場合、フラグメントコレクションはLiferay UIではフラグメントセットと呼ばれます。
 ```
 
+<a name="deploy-an-auto-deployable-fragment-set" />
+
 ## 自動デプロイ可能なフラグメントセットをデプロイする
 
 フラグメントセットのサンプルを自動デプロイすることから始めます。
@@ -58,6 +60,8 @@ Liferay DXP 7.4以降の場合、フラグメントコレクションはLiferay 
 
 ![セットが利用可能です。](./auto-deploying-fragments/images/01.png)
 
+<a name="fragment-project-structure" />
+
 ## フラグメントプロジェクトのストラクチャー
 
 自動デプロイ可能なフラグメントプロジェクトの構造は次のとおりです。
@@ -98,6 +102,8 @@ Liferay DXP 7.4以降の場合、フラグメントコレクションはLiferay 
 フラグメントツールキット[npm run compress command](./using-the-fragments-toolkit.md) を使用すると、フラグメント ZIP ファイルとそのデプロイメント記述子の作成が容易になります。
 ```
 
+<a name="modify-the-fragment-set-and-redeploy" />
+
 ## フラグメントセットを変更して再デプロイする
 
 フラグメントセットを変更して再デプロイするには、次の手順に従います。
@@ -121,6 +127,8 @@ Liferay DXP 7.4以降の場合、フラグメントコレクションはLiferay 
     ![新しいフラグメントは、自動デプロイされたセットに含まれます。](./auto-deploying-fragments/images/02.png)
 
 これで、ローカルでフラグメントセットを操作する方法、フラグメントセットにサイトを指定する方法、自動デプロイメントを使ってフラグメントセットをインポートする方法がわかりました。
+
+<a name="additional-information" />
 
 ## 追加情報
 

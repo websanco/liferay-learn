@@ -20,6 +20,8 @@
 表示ページテンプレートのコンテンツページのウィジェットでは、ルック＆フィールの設定オプションは使用できません。
 ```
 
+<a name="general-settings" />
+
 ## 一般設定
 
 ［General］タブには、次のオプションがあります。
@@ -33,6 +35,8 @@
 ```
 
 ![ルック＆フィール設定メニューの一般タブでは、カスタムウィジェットタイトルを定義し、デコレータを使用してウィジェットのコントラストオプションを選択することができます。](./configuring-widget-look-and-feel/images/01.png)
+
+<a name="text-styles" />
 
 ## テキストのスタイル
 
@@ -56,11 +60,15 @@
 
 **Letter Spacing：** -10pxから50pxの範囲で設定します。0pxがデフォルトです。
 
+<a name="background-styles" />
+
 ## 背景のスタイル
 
 ［Background Styles］タブは、ウィジェットの背景色を指定します。 テキストスペースを選択すると、背景色を選択するためのカラーパレットが表示されます。または、6桁の16進カラーコードを手動で入力することもできます。
 
 ![背景スタイルタブでは、ウィジェットの背景色を指定することができます。](./configuring-widget-look-and-feel/images/03.png)
+
+<a name="border-styles" />
 
 ## 枠線のスタイル
 
@@ -70,6 +78,8 @@
 
 枠線の幅は、%値、em値、px値を指定できます。 線のスタイルは、ダッシュ、二重線、点線、溝、非表示、差込み、着手、リッジ、ソリッドから選択可能です。 枠線の色は、文字色や背景色と同じように、6桁の16進数カラーコードを入力することができます。 また、カラーパレットを使用することもできます。
 
+<a name="margin-and-padding" />
+
 ## マージンとパディング
 
 ［Margin and Padding］タブでは、ウィジェットの端のマージンとパディングの長さを指定します。 枠線と同様に、 **Same for All** セレクターを有効にしておくと、ウィジェットの各サイド（上、右、下、左）に同じ設定を適用することができます。
@@ -78,6 +88,8 @@
 
 パディングとマージンの両方に、任意の％値、em値、またはpx値を指定できます。
 
+<a name="advanced-styling" />
+
 ## 詳細設定
 
 ［Advanced Styling］タブは、ウィジェットのLiferay IDやCSSクラスなど、ウィジェットに関する現在の情報を表示します。
@@ -85,6 +97,8 @@
 ![図6：Advanced StylingタブにはウィジェットのLiferay IDが表示され、CSSコードを入力してウィジェットのルック＆フィールをカスタマイズすることが可能です。](./configuring-widget-look-and-feel/images/06.png)
 
 また、ウィジェットのカスタムCSSクラス名とカスタムCSSコードを入力することができます。 **Add a CSS rule for just this portlet** または **Add a CSS rule for all portlets like this one** リンクをクリックすると、CSSコードシェルがカスタムCSSテキストボックス内に追加されます。
+
+<a name="additional-information" />
 
 ## 追加情報
 

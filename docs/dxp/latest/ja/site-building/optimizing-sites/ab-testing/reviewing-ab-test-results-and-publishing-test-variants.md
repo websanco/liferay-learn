@@ -32,6 +32,8 @@ A/Bテストの結果を確認し、バリアントを公開するには、
 
 A/Bテストパネルの ［**Analytics Cloudでデータを表示**］ ボタンをクリックして、Analytics Cloudのダッシュボードに移動し、他のテスト統計を表示できます。 詳細は、 [A/Bテスト](https://learn.liferay.com/analytics-cloud/latest/ja/optimization/a-b-testing.html) を参照してください。
 
+<a name="related-information" />
+
 ## 関連情報
 
 * [A/Bテスト](./ab-testing.md)

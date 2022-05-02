@@ -25,6 +25,8 @@ Analytics Cloudとの同期は即時ではないため、Analytics CloudとLifer
 
 Analytics Cloudセグメントをクリックすると、Analytics Cloudに移動して、セグメントを編集し、条件を変更できます。 Liferay DXPでAnalytics Cloudセグメントを編集することはできません。
 
+<a name="related-information" />
+
 ## 関連情報
 
 * [ユーザーセグメントへのロールの割り当て](../../../users-and-permissions/roles-and-permissions/assigning-roles-to-user-segments.md)

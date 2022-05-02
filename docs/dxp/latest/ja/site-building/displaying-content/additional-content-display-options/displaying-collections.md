@@ -10,9 +10,13 @@
 コレクションを表示する前に、コレクションを作成する必要があります。 詳細は、 [コレクションの作成](../../../content-authoring-and-management/collections-and-collection-pages/creating-collections.md) を参照してください。
 ```
 
+<a name="displaying-collections-on-a-page" />
+
 ## ページにコレクションを表示する
 
 コレクションを表示する最も簡単な2つの方法は、コレクションページを追加する方法と、コレクション表示フラグメントを既存のページに追加する方法です。
+
+<a name="displaying-collections-on-a-collection-page" />
 
 ### コレクションページでコレクションを表示する
 
@@ -40,6 +44,8 @@
 
 これで、コレクション表示フラグメント内に選択したコレクションを表示するコレクションページができました。
 
+<a name="adding-a-collection-display-fragment-to-a-page" />
+
 ### コレクション表示フラグメントをページに追加する
 
 コレクション表示フラグメントは、コンテンツページにコレクションを表示します。 選択したコレクションを任意のスタイルまたはレイアウトで表示するように構成できます。
@@ -62,6 +68,8 @@
 
 コレクション表示フラグメントがページに表示され、選択したコレクションが表示されます。
 
+<a name="configuring-a-collection-display-fragment" />
+
 ## コレクション表示フラグメントの設定
 
 コレクション表示フラグメントを手動で追加した場合でも、コレクションページ経由で追加した場合でも、ページを編集してフラグメントを選択することで設定できます。
@@ -78,6 +86,8 @@
 コレクション内のアセットを構成どおりに表示する準備ができたら、ページを公開します。
 
 <!-- Add reference to developer tutorials to add more options for the List styles/List item styles when available -->
+
+<a name="mapping-components-to-display-a-collections-assets" />
 
 ### コレクションのアセットを表示するためのコンポーネントのマッピング
 
@@ -115,6 +125,8 @@
 
 1. ［**Publish**］ をクリックします。
 
+<a name="paginating-display-items" />
+
 ## 表示項目のページネーション
 
 > 対応可能：Liferay DXP/Portal 7.4以降
@@ -139,6 +151,8 @@ Liferay DXP 7.4 からは、ページネーション設定を使用して コレ
 
     ![コレクション表示項目のページネーションオプションを選択します。](./images/../displaying-collections/images/12.gif)
 
+<a name="viewing-collections-usage-throughout-the-site" />
+
 ## サイト全体でのコレクションの使用状況の表示
 
 サイトのコレクションの使用統計を確認することができます。
@@ -148,7 +162,11 @@ Liferay DXP 7.4 からは、ページネーション設定を使用して コレ
 
   ![ [利用数を表示] を選択して、サイト全体でコレクションがどのように使用されているかを把握します](./displaying-collections/images/05.png)
 
+<a name="liferay-dxp-72" />
+
 ## Liferay DXP 7.2
+
+<a name="displaying-content-sets" />
 
 ### コンテンツセットの表示
 
@@ -202,6 +220,8 @@ Liferay DXP 7.4 からは、ページネーション設定を使用して コレ
 1. **ホーム** ページに戻って、一覧に追加された画像を確認します。
 
 コンテンツセットは、サイト全体に表示するコンテンツやその他のアセットを1か所で簡単に定義できる強力な機能です。 また、再利用が可能なので、ユーザーに優れたコンテンツを届けるための繰り返しの作業が少なくて済みます。
+
+<a name="related-information" />
 
 ## 関連情報
 

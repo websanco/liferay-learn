@@ -22,6 +22,8 @@ Liferay 7.2以下では、コレクションは[コンテンツセット](../../
 
 1. アセットを選択してウィジェットを構成したら、 ［**Save**］ をクリックします。
 
+<a name="asset-selection-options" />
+
 ## データ選択方法オプション
 
 さまざまなオプションを使用して、［アセットパブリッシャー］ダイアログの［データ選択方法］セクションでアセットを選択できます。
@@ -30,6 +32,8 @@ Liferay 7.2以下では、コレクションは[コンテンツセット](../../
 - [手動](#manual)
 - [コレクション](#collection)
 - [コレクションプロバイダー](#collection-provider)
+
+<a name="dynamic" />
 
 ### 動的
 
@@ -42,6 +46,8 @@ Liferay 7.2以下では、コレクションは[コンテンツセット](../../
   1. ［Ordering］セクションで、アセットパブリッシャーウィジェットでのアセットの表示順序を選択します。
 
  ![ソース、スコープ、フィルター、カスタムユーザー属性、順序付けなど、動的アセットコレクションのオプションを定義します。](selecting-assets-in-the-asset-publisher-widget/images/05.png)
+
+<a name="manual" />
 
 ### 手動
 
@@ -58,6 +64,8 @@ Liferay 7.2以下では、コレクションは[コンテンツセット](../../
  選択に基づいて、新しいコレクションが作成されます。
  ```
 
+<a name="collection" />
+
 ### コレクション
 
 以前に保存したコレクションから選択するには、このオプションを選択します。 コレクションの詳細については、[コレクションとコレクションページについて](../../../content-authoring-and-management/collections-and-collection-pages/about-collections-and-collection-pages.md)をお読みください。
@@ -68,9 +76,13 @@ Liferay 7.2以下では、コレクションは[コンテンツセット](../../
 
  ![［選択］をクリックして、保存済みのコレクションから選択します。](selecting-assets-in-the-asset-publisher-widget/images/04.png)
 
+<a name="collection-provider" />
+
 ### コレクションプロバイダー
 
 これは、開発者がより高度な基準で特定のコレクションを作成できるようにするLiferay DXP 7.3の新機能です。 詳細については、 [Infoフレームワーク](https://help.liferay.com/hc/ja/articles/360029067251-Introduction-to-The-Info-Framework) 開発者ドキュメントの [Creating an Information List Provider](https://help.liferay.com/hc/ja/articles/360029067271-Creating-an-Information-List-Provider) に関する情報をお読みください。
+
+<a name="related-information" />
 
 ## 関連情報
 

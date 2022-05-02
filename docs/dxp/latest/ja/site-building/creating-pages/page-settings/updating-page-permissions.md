@@ -20,6 +20,8 @@
 
 1. ［**保存**］ をクリックして変更を適用します。
 
+<a name="additional-information" />
+
 ## 追加情報
 
 * [ロールと権限について](../../../users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.md)

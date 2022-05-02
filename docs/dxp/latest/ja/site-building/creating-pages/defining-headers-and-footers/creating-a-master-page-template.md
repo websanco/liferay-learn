@@ -34,6 +34,8 @@
 カスタムマスターページテンプレートを使用している場合、そのページのテーマはマスターページテンプレートで定義され、ページの設定から変更することはできません。 詳しくは、 [Changing a Master Page Template's Theme](./managing-master-page-templates.md#changing-a-master-page-template-s-theme) をご覧ください。
 ```
 
+<a name="additional-information" />
+
 ## 追加情報
 
 - [マスターページテンプレートの管理](./managing-master-page-templates.md)

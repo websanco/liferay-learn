@@ -13,6 +13,8 @@ Liferay Portalインスタンスの複数のサイトや組織で使用するユ
 * [チーム権限の管理](#managing-team-permissions)
 * [チームアプリの権限の管理](#managing-team-app-permissions)
 
+<a name="adding-a-team-to-a-site" />
+
 ## サイトにチームを追加する
 
 1. プロダクトメニューを開き、サイトのメニューを開きます。
@@ -30,6 +32,8 @@ Liferay Portalインスタンスの複数のサイトや組織で使用するユ
 
 ![サイト内にチームを作成すると、チームの権限によってチームメンバーは同じリソースにアクセスして同じ種類のタスクを実行できるようになるため、チームワークとコラボレーションを促進することができます。](./creating-teams-for-sites/images/02.png)
 
+<a name="adding-members-to-a-team" />
+
 ## チームにメンバーを追加する
 
 1. チーム名のリンクをクリックします。
@@ -37,6 +41,8 @@ Liferay Portalインスタンスの複数のサイトや組織で使用するユ
 1. ［追加］ボタン（![Add Button](../../../images/icon-add.png)）をクリックします。
 
 1. チームに追加するユーザーを選択し、 ［**追加**］ をクリックします。
+
+<a name="managing-team-permissions" />
 
 ## チーム権限の管理
 
@@ -47,6 +53,8 @@ Liferay Portalインスタンスの複数のサイトや組織で使用するユ
     ```
 
 1. 権限をオン/オフにして、 ［**保存**］ をクリックします。
+
+<a name="managing-team-app-permissions" />
 
 ## チームアプリの権限の管理
 

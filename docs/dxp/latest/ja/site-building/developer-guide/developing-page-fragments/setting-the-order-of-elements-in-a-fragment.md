@@ -10,6 +10,8 @@
 
 Liferay DXP 7.4から、スライダーとタブフラグメントはその要素を順番に表示するようになりました。 さらに、Liferay DXP 7.4 には新しい `data-lfr-priority` HTML 属性があり、フラグメント内の要素の順序を設定することができます。 `data-lfr-priority` の値が小さい要素は、HTMLコード内の順序とは無関係に、セレクションリスト内で優先されます。
 
+<a name="customizing-the-order-of-elements-in-the-slider-fragment" />
+
 ## スライダーフラグメントの要素の順序をカスタマイズする
 
 1. ［**サイト管理**］ &rarr; ［**デザイン**］ &rarr; ［**フラグメント**］ へ移動します。
@@ -66,6 +68,8 @@ Liferay DXP 7.4から、スライダーとタブフラグメントはその要�
     JavaScript、CSS、設定など、フラグメントの他の部分のコードを編集する必要はありません。
     ```
 
+<a name="verifying-the-new-order-of-elements-in-the-content-page-editor" />
+
 ## コンテントページエディタで要素の新しい並び順を確認する
 
 1. ［**サイト管理**］ &rarr; ［**サイトビルダー**］ &rarr; ［**Pages**］ に移動します。
@@ -83,6 +87,8 @@ Liferay DXP 7.4から、スライダーとタブフラグメントはその要�
     ```{note}
     Liferay DXP 7.4 より前のバージョンからインポートしたスライダーやタブフラグメントは、コンテントページエディタのサイドバーに順番に表示されますが、 `data-lfr-priority` HTML属性が含まれません。 この属性を含めるには、HTML フラグメントのコードを編集する必要があります。
     ```
+
+<a name="related-information" />
 
 ## 関連情報
 

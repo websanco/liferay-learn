@@ -8,6 +8,8 @@
 * [サイトディレクトリアプリケーション](#the-sites-directory-application)
 * [サイトマップアプリケーション](#the-site-map-application)
 
+<a name="content-sharing-between-sites" />
+
 ## サイト間のコンテンツ共有
 
 コンテンツの共有は、同一階層内のサイトで利用できます。 例えば、親サイトに **Devcon Presentation** というドキュメントタイプがあり、すべての子サイトがそのコピーを持つ必要がある場合、親サイトの管理者はコンテンツ共有を有効にして、ドキュメントタイプを子サイトと自動的に共有することができます。 また、コンテンツ共有権限を設定することで、すべてのサイト管理者が自分の管理するサイトでコンテンツを共有することができます。 これらのコンテンツタイプは、サイト間で共有することができます。
@@ -21,6 +23,8 @@
 
 関連する設定可能なプロパティのリストについては、Liferayの`portal.properties`ファイルの [サイトの管理ポートレット](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#Sites%20Admin%20Portlet) のセクションを参照してください。 例えば、`Sites.content.sharing.with.children.enabled`プロパティでは、サイトと子サイト間のコンテンツ共有を無効/有効にすることができますが、サイト管理者はサイトごとに設定することができます。
 
+<a name="site-hierarchy-roles-and-permissions" />
+
 ## サイト階層のロールと権限設定
 
 これらのルールは、サイトの階層に適用されます。
@@ -33,6 +37,8 @@
 ```{note}
 サイト/子サイトの階層にあるすべてのサイトへの管理アクセス権をユーザーに持たせたい場合は、サイト管理者ロールをベースにして、*子サイトを管理する*権限を持つロールを作成する必要があります。
 ```
+
+<a name="navigating-site-hierarchy-with-the-sites-directory-application" />
 
 ## サイトディレクトリアプリケーションによるサイト階層のナビゲーション
 

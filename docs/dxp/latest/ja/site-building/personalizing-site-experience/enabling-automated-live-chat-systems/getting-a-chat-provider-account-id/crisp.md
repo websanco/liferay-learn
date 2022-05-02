@@ -2,6 +2,8 @@
 
 [Crisp](https://crisp.chat/) は、マルチチャネルのメッセージングプラットフォームです。 この記事では、Liferayインスタンスとの[統合を可能にする](../enabling-automated-live-chat-systems.md)ためにCrispアカウントIDを見つける方法について説明します。
 
+<a name="locating-your-crisp-account-id" />
+
 ## CrispアカウントIDを見つける
 
 1. [Crispアカウント](https://app.crisp.chat/initiate/login/) にログインします。

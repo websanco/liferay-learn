@@ -36,9 +36,13 @@ SEOとOpen Graphの設定を行う際、値を直接入力したり、フィー�
 Liferay は可能な限り、マッピングされたフィールドの翻訳を提供します。 ただし、マッピングされたフィールド以外で提供されたテキストは翻訳されません。
 ```
 
+<a name="seo-settings-reference" />
+
 ## SEO設定の参考
 
 検索エンジン最適化 (SEO) とは、検索エンジン結果ページ (SERP) でのページのランキングを改善するために使用される方法を指します。 表示ページテンプレートを使用すると、コンテンツの表示ページをSEO用に設定することができます。
+
+<a name="html-title" />
 
 ### HTMLタイトル
 
@@ -52,6 +56,8 @@ SEOとOpenGraphのタイトルを一緒に更新することをお勧めしま�
 
 ![マッピングされた複数のフィールドを組み合わせて、独自のHTMLタイトルを構築することができます。](./configuring-seo-and-open-graph/images/03.png)
 
+<a name="description" />
+
 ### 説明
 
 ［**Description**］ フィールドは、表示ページの説明 `<meta>` タグを定義します。 この説明は、ページをランク付けするために検索エンジンによって使用され、ページのプレビューとして検索エンジンの結果に表示されます。 デフォルトでは、表示ページテンプレートはこのフィールドを `${description}`にマップしています。 必要に応じて、この値を直接編集し、フィールドセレクタを使用して追加のマッピングを含めることができます（例： `${description} ${authorName:Author Name}`）。
@@ -64,6 +70,8 @@ SEOとOpenGraphの説明を一緒に更新することをお勧めします。
 
 ![複数のマッピングされたフィールドを組み合わせて、カスタム HTML の説明を作成します。](./configuring-seo-and-open-graph/images/04.png)
 
+<a name="robots" />
+
 ### ロボット
 
 ［**Robots**］ フィールドは、表示ページの `robots.txt` ルールを構成します。 これらのルールは、サイトをクロールしてインデックスを作成する検索エンジンやその他のツールに指示を与え、クロールするパスとクロールしないパスを定義します。 Webクローラーは、`robots.txt` の指示に従う場合もあれば、従わない場合もあることに注意してください。
@@ -72,11 +80,15 @@ SEOとOpenGraphの説明を一緒に更新することをお勧めします。
 
 ![ [ロボット] フィールドは、表示ページの robots.txt ルールを構成します。](./configuring-seo-and-open-graph/images/05.png)
 
+<a name="sitemap" />
+
 ### サイトマップ
 
 表示ページを `sitemap.xml` ファイルに含めるかどうかを決定し、 ［**Page Priority**］ と ［**Change Frequency**］ を設定します。 これらのフィールドは、表示ページをクロールしてインデックスを作成するかどうか、他のサイト ページと比較してそのページにどのように優先順位を付けるか、および更新頻度を検索エンジンに通知します。
 
 ![sitemap.xml ファイルに表示ページを含めるかどうかを決定し、その重要度と定期更新を設定します。](./configuring-seo-and-open-graph/images/06.png)
+
+<a name="open-graph-settings-reference" />
 
 ## Open Graph 設定の参考
 
@@ -90,6 +102,8 @@ Liferay DXP を使用すると、ページの Open Graph `<meta>` タグを動�
 Open Graph [](meta) タグは、認証されていないユーザーへの公開ページヘッダーにのみ含まれます。 非公開ページや、ユーザーがログインしているときの公開ページには含まれません。
 ```
 
+<a name="title" />
+
 ### タイトル
 
 ［**タイトル**］ フィールドは、表示ページの `og:title` プロパティを定義します。これは、リッチプレビューでコンテンツに表示されるタイトルを定義します。 デフォルトでは、このフィールドは `${title}`にマッピングされます。 必要に応じて、この値を直接編集し、フィールドセレクタを使用して追加のマッピングを含めることができます（例： `${title} ${authorName:Author Name}`）。
@@ -100,6 +114,8 @@ SEOとOpenGraphのタイトルを一緒に更新することをお勧めしま�
 
 ![複数のマッピングされたフィールドを組み合わせて、カスタムの og:title 値を作成します。](./configuring-seo-and-open-graph/images/07.png)
 
+<a name="description-1" />
+
 ### 説明
 
 ［**Description**］ フィールドは、表示ページの `og:description` プロパティを定義します。これは、リッチ プレビューでコンテンツに表示される説明を決定します。 デフォルトでは、このフィールドは `${description}`にマッピングされます。 必要に応じて、この値を編集し、フィールドセレクタを使用して追加のマッピングを含めることができます（例： `${description} ${authorName:Author Name}`）。
@@ -109,6 +125,8 @@ SEOとOpenGraphの説明を一緒に更新することをお勧めします。
 ```
 
 ![複数のマッピングされたフィールドを組み合わせて、カスタムの og:description 値を作成します。](./configuring-seo-and-open-graph/images/08.png)
+
+<a name="image" />
 
 ### 画像
 
@@ -126,6 +144,8 @@ SEOとOpenGraphの説明を一緒に更新することをお勧めします。
 
 ![ [画像] フィールドは、表示ページの og:image プロパティを定義します。](./configuring-seo-and-open-graph/images/09.png)
 
+<a name="image-alt-description" />
+
 ### 画像の別の説明
 
 ［**Image Alt Description**］ フィールドは、表示ページの `og:image:alt` プロパティを定義します。これは、表示されたコンテンツの `og:image` プロパティに対してスクリーン リーダーが読み取る代替テキストを決定します。
@@ -137,6 +157,8 @@ SEOとOpenGraphの説明を一緒に更新することをお勧めします。
 デフォルトでは、このフィールドは表示ページ テンプレートにマップされていません。 つまり、別のテキスト フィールドを選択しない限り、テンプレートはデフォルトでサイト レベルで設定された代替テキストになります。
 
 ![ [画像の別の説明] フィールドは、表示ページの og:image:alt プロパティを定義します](./configuring-seo-and-open-graph/images/10.png)
+
+<a name="additional-information" />
 
 ## 追加情報
 

@@ -22,6 +22,8 @@
 
 ![［Publish Displayed Content by Default］をオンまたはオフにします。](./configuring-automatic-publishing-of-displayed-content/images/01.png)
 
+<a name="additional-information" />
+
 ## 追加情報
 
 * [ステージング](../staging.md)

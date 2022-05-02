@@ -2,6 +2,8 @@
 
 フラグメントの[設定オプション](./adding-configuration-options-to-fragments.md)を定義する際に、`text` タイプのフィールドに有効なエントリーのルールを決める `validation` プロパティを追加することができます。 ルールのタイプ（`text`、`number`、`email`、`url`、または `pattern`）を指定することで、各フィールドが受け入れるデータのタイプを決定します。  また、カスタムのエラーメッセージを追加して、無効なエントリーをユーザーに通知することもできます。
 
+<a name="text-validation-rules" />
+
 ## テキスト検証ルール
 
 次のJSONコードは、 `text`タイプフィールドの有効なエントリー（つまり`minLength`および`maxLength`）で使用される最小および最大文字数を設定する`text`検証ルールを追加します。
@@ -31,6 +33,8 @@
 ```
 
 ![テキスト検証ルールを使用して、有効なエントリーで使用される最小および最大の文字数を設定します。](./adding-validation-rules/images/01.png)
+
+<a name="number-validation-rules" />
 
 ## 数値検証ルール
 
@@ -63,6 +67,8 @@
 
 ![数値検証ルールを使用して、有効なエントリーの数値範囲を定義します。](./adding-validation-rules/images/02.png)
 
+<a name="email-validation-rules" />
+
 ## メール検証ルール
 
 次のJSONコードは、メール構文を要求し、`text`タイプフィールドの有効なエントリーの文字長（つまり`minLength`および`maxLength`）を定義する`email`検証ルールを追加します。
@@ -93,6 +99,8 @@
 
 ![メール検証ルールを使用して、メールの構文を要求し、有効なエントリーの文字長を定義します。](./adding-validation-rules/images/03.png)
 
+<a name="url-validation-rules" />
+
 ## URL検証ルール
 
 次のJSONコードは、適切なURLプロトコルを要求し、`text`タイプフィールドの有効なURLの文字長（つまり`minLength`および`maxLength`）を定義する`url`検証ルールを追加します。
@@ -122,6 +130,8 @@
 ```
 
 ![URL検証ルールを使用して、適切なURLプロトコルを要求し、有効なURLの文字長を定義します。](./adding-validation-rules/images/04.png)
+
+<a name="pattern-validation-rules" />
 
 ## パターン検証ルール
 
@@ -155,6 +165,8 @@
 ```
 
 ![正規表現を使ったパターン検証ルールを使用して、有効なエントリーを定義します。](./adding-validation-rules/images/05.png)
+
+<a name="additional-information" />
 
 ## 追加情報
 

@@ -6,6 +6,8 @@ Liferay DXPインスタンスを最初に起動して設定すると、デフォ
 
 ![Liferay DXPで強力なサイトを構築することができます。](./introduction-to-site-building/images/01.png)
 
+<a name="creating-sites" />
+
 ## サイトの作成
 
 Liferay DXPには[サイトを構築](./building-sites/adding-a-site.md)し、[ページを作成する ](./creating-pages/adding-pages/adding-a-page-to-a-site.md)のに必要なツールがすべて含まれています。 アプリケーションを含む事前定義されたページのセットを含む既存の[サイトテンプレート](./building-sites/building-sites-with-site-templates.md)からサイトを作成することもできますし、空白のサイトを作成してゼロから構築することもできます。
@@ -17,6 +19,8 @@ Liferay DXPには[サイトを構築](./building-sites/adding-a-site.md)し、[�
 ページとサイトの[ナビゲーション](./site-navigation/using-navigation-menus.md)動作の構成は直感的で柔軟性があります。 ページが作成されると、自動的にナビゲーションに追加されます。 ページを非表示にすることもできますし、単純に非公開にすることもできますので、適切な権限を持った [サイトの](./building-sites/site-membership/adding-members-to-sites.md) メンバーだけが閲覧することができます。
 
 また、Liferay DXPは、ユーザーエクスペリエンスを妨げることなく、サイトの変更を可能にするツールを提供しています。 Liferayサイトはステージングすることができ、ユーザーに公開する前にサイト上で変更を加えてテストすることができます。 Liferay DXPの [公開](./publishing-tools/publications.md) 機能がこれを処理してくれます。 ユーザーが見ている本番のサイトに影響を与えることなく、安全な環境でサイトの開発、追跡、更新を行うために、公開を利用することができます。
+
+<a name="displaying-content" />
 
 ## コンテンツの表示
 
@@ -30,17 +34,23 @@ Liferay DXPのコンテンツ管理システム（CMS）は、さまざまな種
 
 ![表示ページテンプレートでは、Webコンテンツをページフラグメントにマッピングして、コンテンツを思い通りのデザインやレイアウトで表示することができます。](./introduction-to-site-building/images/02.png)
 
+<a name="personalizing-user-experiences" />
+
 ## ユーザーエクスペリエンスのカスタマイズ
 
 Liferay DXPの [パーソナライズとセグメンテーション](./personalizing-site-experience/personalizing-site-experience.md) フレームワークにより、ユーザーの興味やニーズに対応したサイト体験を構築することができます。 所属する組織やサイト内での役割など、特定の条件に基づいて[ユーザーセグメントを作成](./personalizing-site-experience/segmentation/creating-and-managing-user-segments.md)し、それを使ってユーザー層に合わせて [パーソナライズされたページレイアウトやコンテンツ](./personalizing-site-experience/experience-personalization/content-page-personalization.md) を表示することができます。または、 [Analytics Cloudと連携](https://learn.liferay.com/analytics-cloud/latest/ja/connecting-data-sources/connecting-liferay-dxp-to-analytics-cloud.html) して、セグメント内のユーザーがどのようにサイトを利用しているのか、その行動を分析することができます。 [ユーザーの行動に基づいてコンテンツを推奨](./personalizing-site-experience/experience-personalization/understanding-content-recommendations.md)することもできます。
 
 <!-- Screenshot -->
 
+<a name="customizing-and-configuring-sites" />
+
 ## サイトのカスタマイズと設定
 
 サイトの外観、動作、機能を変更するための[設定](./site-settings/site-settings-ui-reference.md)が多数用意されています。 必要に応じて、[サイトとそのコンテンツを複数の言語にローカライズ](./site-settings/site-localization.md)できます。
 
 サイトのルック＆フィールを[異なるテーマを使用することで変更](../getting-started/changing-your-sites-appearance.md)することができます。 テーマは、[Liferay マーケットプレイス](../system-administration/installing-and-managing-apps/using-marketplace.md)からダウンロードしてデプロイするか、[自分でテーマを作成する](../setting-up-the-site-building/site-appearance/themes/theme-development/getting-started/setting-up-an-environment-and-creating-a-theme.md)ことも可能です。 テーマは、サイトの全体的なルック＆フィールを決定し、ページのCSS、JavaScript、HTMLを定義します（FreeMarkerテンプレートを使用）。  FreeMarkerは、標準的なHTML要素を組み合わせ、変数、条件文、ループなどの機能を追加しています。 詳細は、[Developing Themes](./developer_guide.md)を参照してください。
+
+<a name="optimizing-sites" />
 
 ## サイトの最適化
 

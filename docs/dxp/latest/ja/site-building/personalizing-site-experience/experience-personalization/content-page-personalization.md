@@ -7,6 +7,8 @@
 1. パーソナライズされたエクスペリエンスを提供するユーザー用の[セグメントを定義](../segmentation/creating-and-managing-user-segments.md)します。
 1. セグメント用にカスタマイズされたコンテンツで[エクスペリエンスを作成](./creating-and-managing-experiences.md)します。
 
+<a name="understanding-how-experiences-work" />
+
 ## エクスペリエンスがどのように機能するかを理解する
 
 > 一部のエクスペリエンス機能は、Liferay 7.4以降、7.3フィックスパック1以降、および7.2フィックスパック11以降でのみ使用できます。
@@ -44,6 +46,8 @@
 - ［**No customization**］ エクスペリエンスは ［**Anyone**］ セグメントに適用され、最初にリストされているため、認証されたユーザーには ［**Authenticated user**］ エクスペリエンスは表示されません。
 - ［**Anonymous User**］ または ［**Authenticated User**］ セグメントに属していないユーザーには、 ［**Anyone**］ を対象としている ［**No customization**］ エクスペリエンスが表示されます。
 
+<a name="content-page-experiences-and-ab-testing" />
+
 ## コンテントページエクスペリエンスとA/Bテスト
 
 Liferay DXPで[A/Bテストを作成](../../optimizing-sites/ab-testing/creating-ab-tests.md)するときは、テストのエクスペリエンスを選択します。  このエクスペリエンスは、デフォルトのエクスペリエンスにすることも、自分で作成したその他のエクスペリエンスにすることもできます。
@@ -51,6 +55,8 @@ Liferay DXPで[A/Bテストを作成](../../optimizing-sites/ab-testing/creating
 A/Bテストの結果に干渉する可能性のあるエクスペリエンスの変更を回避するため、実行中のA/Bテストの一部となっているエクスペリエンスを編集することはできません。 この場合、エクスペリエンスの名前の横にロッカーアイコン（![locker](../../../images/icon-lock.png)）が表示されます。
 
 Liferay DXPおよびLiferay AnalyticsでのA/Bテストの詳細については、 [A/Bテスト](../../optimizing-sites/ab-testing/ab-testing.md) を参照してください。
+
+<a name="related-information" />
 
 ## 関連情報
 

@@ -2,6 +2,8 @@
 
 [LivePerson](https://www.liveperson.com/) は、AIを利用したチャットボットプラットフォームです。 この記事では、Liferayインスタンスとの[統合を可能にする](../enabling-automated-live-chat-systems.md)ためにLivePersonアカウントIDを見つける方法について説明します。
 
+<a name="locating-your-liveperson-account-id" />
+
 ## LivePersonアカウントIDを見つける
 
 1. [LivePersonアカウント](https://authentication.liveperson.net/login.html) にログインします。

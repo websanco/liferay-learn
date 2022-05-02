@@ -11,6 +11,8 @@ Liferay DXPの子サイトが親サイトのコンテンツを表示すること
 
 インスタンスまたはサイトスコープでコンテンツ共有設定を構成できます。 インスタンススコープ構成によって、デフォルトのサイトスコープ構成が決まります。 たとえば、インスタンススコープでコンテンツ共有を無効にすると、サイトスコープではデフォルトで設定が無効になります。
 
+<a name="configuring-content-sharing-at-the-instance-scope" />
+
 ## インスタンススコープでのコンテンツ共有の構成
 
 1. プロダクトメニューを開き、 ［**コントロールパネル**］ &rarr; ［**設定**］ &rarr; ［**Instance Settings**］ に移動します。
@@ -18,6 +20,8 @@ Liferay DXPの子サイトが親サイトのコンテンツを表示すること
 1. ［仮想インスタンススコープ］で、 ［**コンテンツ共有**］ をクリックします。
 1. ［**Allow site administrators to display content from other sites they administer**］ チェックボックスをオンにして、サイト管理者が管理するサイト間でコンテンツを共有できるようにします。
 1. サイトとサブサイト間の [コンテンツ共有設定を構成](#configure-the-content-sharing-setting-between-sites-and-subsites) します。
+
+<a name="configuring-content-sharing-at-the-site-scope" />
 
 ## サイトスコープでのコンテンツ共有の構成
 
@@ -39,6 +43,8 @@ Liferay DXPの子サイトが親サイトのコンテンツを表示すること
 
 1. サイトとサブサイト間の [コンテンツ共有設定を構成](#configure-the-content-sharing-setting-between-sites-and-subsites) します。
 
+<a name="configure-the-content-sharing-setting-between-sites-and-subsites" />
+
 ## サイトとサブサイト間のコンテンツ共有設定を構成する
 
 ［**Allow subsites to display content from parent sites**］ ドロップダウンメニューで、次のいずれかのオプションを選択します。
@@ -48,6 +54,8 @@ Liferay DXPの子サイトが親サイトのコンテンツを表示すること
 - **Disabled** ：子サイトは親サイトのコンテンツを表示できません。 サイトスコープでこのオプションを変更することはできません。
 
 ![仮想インスタンスとサイトのコンテンツ共有設定を構成します。](./managing-content-sharing-across-sites/images/01.png)
+
+<a name="related-content" />
 
 ## 関連するコンテンツ
 

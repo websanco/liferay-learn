@@ -2,6 +2,8 @@
 
 **Iframe** ウィジェットは、Webページを埋め込んで表示できる [iframe](https://www.w3schools.com/html/html_iframe.asp) です。
 
+<a name="setting-up-the-iframe-widget" />
+
 ## IFrameウィジェットのセットアップ
 
 1. iFrameウィジェットをページに追加します。
@@ -17,6 +19,8 @@
    ［**保存**］ をクリックします。
 
    すべてのWebサイトで **Iframe** ウィジェットにページを表示できるわけではないことに注意してください。
+
+<a name="using-the-iframe-widget-1" />
 
 ## iframeウィジェットの使用
 

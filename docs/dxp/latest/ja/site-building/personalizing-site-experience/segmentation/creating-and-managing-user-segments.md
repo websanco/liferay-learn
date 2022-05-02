@@ -2,6 +2,8 @@
 
 **セグメント** を使用すると、ユーザーの **役職** やユーザーの **言語** など、共通のプロパティセットに基づいて、さまざまなユーザーグループを作成できます。 セグメントの定義に使用できるプロパティのリストについては、 [セグメントエディターUIリファレンス](./segments-editor-ui-reference.md) を参照してください。 既存のプロパティに加えて、ユーザーグループと組織グループの[カスタムフィールド](../../../system-administration/configuring-liferay/adding-custom-fields.md)を追加し、セグメント基準でこれらのフィールドを使用できます。
 
+<a name="compound-segments" />
+
 ## 複合セグメント
 
 > 対応可能：Liferay DXP/Portal 7.3以降
@@ -15,6 +17,8 @@
 ```
 
 ![2つ以上のセグメントを組み合わせて、新しい複合セグメントを作成します](./creating-and-managing-user-segments/images/08.png)
+
+<a name="creating-user-segments" />
 
 ## ユーザーセグメントの作成
 
@@ -37,6 +41,8 @@
 1. セグメントの条件を設定します（以下の [セグメントの条件の設定](#configuring-segment-conditions) を参照）。
 
 1. ［**保存**］ をクリックします。
+
+<a name="configuring-segment-conditions" />
 
 ### セグメント条件の設定
 
@@ -62,6 +68,8 @@
 ```{note}
 エクスペリエンスで使用されているユーザーセグメントは削除できません。
 ```
+
+<a name="related-information" />
 
 ## 関連情報
 

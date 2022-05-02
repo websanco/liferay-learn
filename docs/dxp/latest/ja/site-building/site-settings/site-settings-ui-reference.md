@@ -4,6 +4,8 @@
 
 Liferay DXP 7.4以降、サイト設定アプリケーションのレイアウトは、インスタンス設定やシステム設定などの他の設定エリアと一致しています。
 
+<a name="accessing-the-site-settings-application" />
+
 ## サイト設定アプリケーションへのアクセス
 
 1. サイト管理rarr; ［**Configuration**］ &rarr; ［**Site Settings**］ へ行きます。
@@ -18,6 +20,8 @@ Liferay DXP 7.4以降、サイト設定アプリケーションのレイアウ�
 
 ![サイト設定は4つのエリアに分かれています。](./site-settings-ui-reference/images/20.png)
 
+<a name="commerce" />
+
 ## コマース
 
 デフォルトでは、Commerceエリアには以下の設定が含まれています。
@@ -31,6 +35,8 @@ Liferay DXP 7.4以降、サイト設定アプリケーションのレイアウ�
 
 ![コマースのデフォルトサイト設定](./site-settings-ui-reference/images/21.png)
 
+<a name="platform" />
+
 ## プラットフォーム
 
 デフォルトでは、プラットフォームエリアには以下の設定が含まれています。
@@ -42,6 +48,8 @@ Liferay DXP 7.4以降、サイト設定アプリケーションのレイアウ�
 - [サードパーティアプリケーション](#third-party-applications)
 - [ユーザー](#users)
 
+<a name="analytics" />
+
 ### 分析
 
 これらの設定を使用して、お客様のサイトのGoogle Analyticsオプションを設定します。 また、Piwik Analyticsのトラッキングコードを設定することもできます。
@@ -52,11 +60,15 @@ Piwikの設定では、スクリプトの開始タグと終了タグを含む完
 
 別のアナリティクスサービスが必要な場合は、追加できます。 異なるアナリティクスサービスのための追加フィールドを追加する方法については、 [新しいアナリティクスサービスの追加](./adding-a-new-analytics-service.md) を参照してください。
 
+<a name="localization" />
+
 ### ローカライズ
 
 ここでは、インストールのデフォルト言語オプションを使用するか、サイト用に独自の言語を定義するかを選択できます。 サイトの言語オプションの設定についての詳細は、 [サイトのローカライズ](../site-settings/site-localization.md)をご覧ください。
 
 ![サイトの言語オプションを設定するには、「ローカライズ」設定を使用します。](./site-settings-ui-reference/images/22.png)
+
+<a name="site-configuration" />
 
 ### サイト設定
 
@@ -79,9 +91,13 @@ Piwikの設定では、スクリプトの開始タグと終了タグを含む完
 | フレンドリURL     | サイトの公開・非公開に関わらず、カスタムURLを設定することができます。 詳細は、[サイトのフレンドリーURLの設定](../site-settings/managing-site-urls/configuring-your-sites-friendly-url.md)を参照してください。                                 |
 | 公開ページと非公開ページ | パブリックおよびプライベートのバーチャルホストを設定して、サイトのパブリックページおよびプライベートページにマッピングすることができます。 詳細は、 [仮想ホストサイトURLの設定](../site-settings/managing-site-urls/configuring-virtual-hosts-site-urls.md)を参照してください。 |
 
+<a name="third-party" />
+
 ### サードパーティー
 
 Liferay CommerceのPunchOut2Go Site設定を行います。 詳細は、 [Liferay Commerce Connector to PunchOut2Goのリファレンスのガイド](https://learn.liferay.com/commerce/latest/en/add-ons-and-connectors/liferay-commerce-connector-to-punchout2go-reference-guide.html) を参照してください。
+
+<a name="third-party-applications" />
 
 ### サードパーティアプリケーション
 
@@ -92,9 +108,13 @@ Liferay CommerceのPunchOut2Go Site設定を行います。 詳細は、 [Lifera
 | アセットの自動タグ付け | 有効にすると、インスタンススコープで構成されたプロバイダによってアセットが自動タグ付けされます。 詳細は、[アセットの自動タグ付けの設定](../../content-authoring-and-management/tags-and-categories/auto-tagging/configuring-asset-auto-tagging.md)を参照してください。                            |
 | カテゴリの設定     | このセクションでは、お客様のサイトを分類します。 この設定は、本サイトで利用可能なカテゴリーやタグには影響しません。 カテゴリとタグの使用の詳細は、[カテゴリとタグを使用したコンテンツの整理](../../content-authoring-and-management/tags-and-categories/organizing-content-with-categories-and-tags.md)を参照してください。 |
 
+<a name="users" />
+
 ### ユーザー
 
 デフォルトでは、ユーザーセクションには「デフォルトユーザーの関連付け」の設定が含まれており、ここで新しいサイトメンバーのデフォルトのロールとチームを設定することができます。 詳細は、[サイトメンバーの役割とチームのデフォルトの設定](../site-settings/site-users/configuring-role-and-team-defaults-for-site-members.md)を参照してください。
+
+<a name="content-and-data" />
 
 ## コンテンツとデータ
 
@@ -111,12 +131,16 @@ Liferay CommerceのPunchOut2Go Site設定を行います。 詳細は、 [Lifera
 - [報告](#reports)
 - [共有](#sharing)
 
+<a name="assets" />
+
 ### アセット
 
 | セクション                | 説明                                                                                                                                                                                                                                     |
 |:-------------------- |:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 地図                   | サイト内でジオロカライズされたアセットを表示する際に使用するマップAPIプロバイダーを選択します。 ドキュメント、ウェブコンテンツの記事、DDLレコードなどに対して、ジオローカライズされたアセットを表示することができます。 詳しくは、 [Geo-locating Assets](../../content-authoring-and-management/tags-and-categories/geolocating-assets.md) をご覧ください。 |
 | Google Places API キー | Google Places API Keyを設定します。                                                                                                                                                                                                           |
+
+<a name="click-to-chat" />
 
 ### チャット機能
 
@@ -132,12 +156,16 @@ Liferay DXPは多くのライブサポートチャットプラットフォーム
 インスタンススコープでの設定によっては、サイトスコープでの設定を更新できない場合があります。 インスタンスの設定を確認するには、［サイトメニュー］ → ［コントロールパネル］ →［インスタンスの設定］→［コンテンツとデータ］→［チャット］をクリックしてください。
 ```
 
+<a name="community-tools" />
+
 ### コミュニティーツール
 
 | セクション             | 説明                                                                                                                                                                            |
 |:----------------- |:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 自分について書かれた記事/コメント | サイト内のアプリケーションで、ユーザーが他のユーザーに言及することを許可するかどうかを決定します。 詳しくは、 [メンションを設定する](../../collaboration-and-social/notifications-and-requests/user-guide/configuring-mentions.md) を参照してください。 |
 | 評価                | ここでは、さまざまなサイトアプリケーションに使用されるレーティングのタイプを選択できます。 詳しくは、 [コンテンツの評価タイプを設定する](../site-settings/site-content-configurations/configuring-content-rating-type.md) を参照してください。            |
+
+<a name="digital-signature" />
 
 ### デジタル署名
 
@@ -149,15 +177,21 @@ Liferay DXPとDocuSignを統合し、電子署名を管理することができ�
 インスタンススコープでのデジタル署名の構成によっては、サイトスコープでの構成を更新できない場合があります。 インスタンスの設定を確認するには、［サイトメニュー］ →［コントロールパネル］ →［インスタンスの設定］ →［コンテンツとデータ］→［デジタル署名］と進みます。 
 ```
 
+<a name="documents-and-media" />
+
 ### ドキュメントとメディア
 
 有効にすると、表示権限を持つユーザーがサイトのドキュメントライブラリファイルとフォルダを閲覧できます。 詳細は、[サイトのドキュメント内容の保護](../site-settings/site-content-configurations/securing-site-documents-content.md)を参照してください。
+
+<a name="message-boards" />
 
 ### 掲示板
 
 このオプションを使用すると、あらかじめ定義されたメッセージ数の後に、メッセージボード上のユーザーメッセージの自動モデレーションを有効にすることができます。
 
 ![メッセージボードの自動モデレーションを設定します。](./site-settings-ui-reference/images/25.png)
+
+<a name="pages" />
 
 ### ページ
 
@@ -167,6 +201,8 @@ Liferay DXPとDocuSignを統合し、電子署名を管理することができ�
 | Open Graph                                    | これらのタグは、ページのメタデータを定義し、Facebook、Slack、TwitterなどのOpen Graphプロトコルをサポートするアプリケーションで共有する際に、サイトのコンテンツを魅力的に表現します。 Open Graphを有効にすると、`<meta>`タグがサイトのページの`head`に埋め込まれます。 詳細は、[Open Graphの設定](./configuring-open-graph.md)を参照してください。                             |
 | ページ                                           | サイトの公開と非公開のページを表示します。 このセクションでは、サイトテンプレートが存在する場合、そのテンプレートからの変更の伝搬を設定することもできます。 詳細は、[サイトテンプレートを使用したサイトの構築](../../../en/site-building/building-sites/building-sites-with-site-templates.md)を参照してください。                                                         |
 
+<a name="recycle-bin" />
+
 ### ゴミ箱
 
 サイトのゴミ箱の設定 アセットが自動削除されるまでの、ごみ箱に残っている時間を指定できます。 デフォルトでは、リサイクルアイテムの最大経過年数は43200分（30日）です。 詳細は、
@@ -174,11 +210,15 @@ Liferay DXPとDocuSignを統合し、電子署名を管理することができ�
 
 
 
+<a name="reports" />
+
 ### 報告
 
 レポートグループサービス機能の設定
 
 
+
+<a name="sharing" />
 
 ### 共有
 
@@ -189,6 +229,8 @@ Liferay DXPとDocuSignを統合し、電子署名を管理することができ�
 
 
 
+
+<a name="other" />
 
 ## その他
 
@@ -202,6 +244,8 @@ Liferay DXPとDocuSignを統合し、電子署名を管理することができ�
 
 
 
+
+<a name="site-setting-ui-reference-in-liferay-dxp-72-and-73" />
 
 ## Liferay DXP 7.2および7.3のサイト設定UIリファレンス
 
@@ -222,6 +266,8 @@ Liferay DXPとDocuSignを統合し、電子署名を管理することができ�
 
 
 
+
+<a name="general" />
 
 ### 一般
 
@@ -256,6 +302,8 @@ Liferay DXPとDocuSignを統合し、電子署名を管理することができ�
 ![［ページ］セクションでは、サイトの公開ページと非公開ページを表示できます。](./site-settings-ui-reference/images/03.png)
 
 
+
+<a name="custom-fields" />
 
 ### カスタムフィールド
 
@@ -330,6 +378,8 @@ Liferay DXPとDocuSignを統合し、電子署名を管理することができ�
 
 
 
+<a name="social" />
+
 ### ソーシャル
 
 ここでは、サイト上のユーザー間のソーシャルインタラクションを管理できます。
@@ -350,6 +400,8 @@ Liferay DXPとDocuSignを統合し、電子署名を管理することができ�
 
 
 
+<a name="language" />
+
 ### 言語設定
 
 ここでは、インストールのデフォルトの言語オプションを使用するか、サイトに独自の言語オプションを定義するかを選択できます。
@@ -357,6 +409,8 @@ Liferay DXPとDocuSignを統合し、電子署名を管理することができ�
 ![サイト設定の［言語］タブから言語オプションを更新できます。](./site-settings-ui-reference/images/13.png)
 
 
+
+<a name="advanced" />
 
 ### 詳細設定
 
@@ -405,6 +459,8 @@ Liferay DXPとDocuSignを統合し、電子署名を管理することができ�
 ![サブサイトがこのサイトのコンテンツを表示できるかどうかを決定できます。](./site-settings-ui-reference/images/18.png)
 
 
+
+<a name="additional-information" />
 
 ## 追加情報
 

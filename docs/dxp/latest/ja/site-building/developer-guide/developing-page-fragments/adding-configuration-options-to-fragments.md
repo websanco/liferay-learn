@@ -15,6 +15,8 @@
 Liferay DXP 7.4以降の場合、フラグメントコレクションはLiferay UIではフラグメントセットと呼ばれます。
 ```
 
+<a name="deploy-a-configurable-fragment" />
+
 ## 構成可能なフラグメントのデプロイ
 
 まず、サンプルをデプロイして、フラグメント設定の構成オプションがどのように機能するかを確認します。
@@ -83,6 +85,8 @@ Liferay DXP 7.4以降の場合、フラグメントコレクションはLiferay 
    ![構成可能なフラグメントには、フラグメントのルック アンド フィールを変更するオプションが用意されています。](./adding-configuration-options-to-fragments/images/02.png)
 
 構成可能なフラグメントを正常にインポートして設定しました。
+
+<a name="examine-the-configuration" />
 
 ## 構成の検討
 
@@ -192,6 +196,8 @@ Liferay DXP 7.4以降の場合、フラグメントコレクションはLiferay 
 
 この例は、選択の構成を示しています。 使用可能なフラグメント構成タイプの完全なリストは、[Configuration Types Reference](../reference/fragments/fragment-configuration-types-reference.md)を参照してください。
 
+<a name="escape-configuration-text-values" />
+
 ### 構成テキスト値のエスケープ
 
 悪意のあるコードがテキストフィールドに挿入され、他のフラグメントユーザーに大損害を与える可能性があります。 クロスサイトスクリプティング（XSS）攻撃から保護するには、フラグメントテキスト値をエスケープする必要があります。
@@ -211,6 +217,8 @@ function (fragmentElement, configuration) {
     const escapedValue = Liferay.Util.escapeHTML(configuration.text)
 }
 ```
+
+<a name="modify-the-configuration" />
 
 ## 設定の変更
 
@@ -251,6 +259,8 @@ function (fragmentElement, configuration) {
 また、`const configurationValue = configuration.textAppliedStyle;`という構文でJavaScriptから構成値にアクセスすることもできます。
 ```
 
+<a name="propagate-the-changes-and-test" />
+
 ## 変更のプロパゲートとテスト
 
 これで、更新をテストできます。
@@ -270,6 +280,8 @@ function (fragmentElement, configuration) {
     ![フラグメントには、必要な数の構成オプションを設定できます。](./adding-configuration-options-to-fragments/images/05.png)
 
 これで、構成オプションをフラグメントに追加する方法がわかりました。 その他の設定例については、[Fragment Configuration Types](../reference/fragments/fragment-configuration-types-reference.md)を参照してください。
+
+<a name="related-information" />
 
 ## 関連情報
 

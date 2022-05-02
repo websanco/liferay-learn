@@ -2,6 +2,8 @@
 
 Liferay DXPには、サイトのトラフィックを分析するためのGoogle AnalyticsとPiwikのサポートが含まれています。 別のアナリティクスサービスが必要な場合は、サイトに追加できます。 次の手順に従って、新しいアナリティクスサービスを有効にします。
 
+<a name="adding-a-new-analytics-service-1" />
+
 ## 新しいアナリティクスサービスの追加
 
 1. [グローバルメニュー](../../getting-started/navigating-dxp.md) ( ![Global Menu icon](../../images/icon-applications-menu.png) ) を開き、 [**コントロールパネル**] → ［**インスタンス設定**］ に移動します。
@@ -11,6 +13,8 @@ Liferay DXPには、サイトのトラフィックを分析するためのGoogle
 1. 追加したいサービスの名前を ［**Analytics**］ フィールドに入力します。
 
     ![［Instance Settings］から追加のアナリティクスサービスを入力できます。](./adding-a-new-analytics-service/images/01.png)
+
+<a name="adding-the-tracking-code-for-your-analytics-service" />
 
 ## アナリティクスサービスの追跡コードを追加する
 

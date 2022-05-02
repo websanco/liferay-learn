@@ -10,11 +10,15 @@ Liferayサイトのデザインや機能は、様々な補完的なメカニズ�
 | スタイル、スペーシング、カラーなどのカスタマイズが可能です。 |    ✓    |               |  ✓  |
 | 機能の追加                          |         |               |  ✓  |
 
+<a name="master-page-templates" />
+
 ## マスターページテンプレート
 
 [マスターページテンプレート](../creating-pages/defining-headers-and-footers/master-page-templates.md) では、フラグメントを使ってページの共通要素、特にヘッダーやフッターを定義することができます。 これらを利用して、本サイトの任意の数のページをデザインしたルック＆フィールに適合させることができます。
 
 ![マスターページテンプレートは、ヘッダーやフッターなど、すべてのページに共通する要素を定義する簡単な方法です。](./site-appearance/images/01.png)
+
+<a name="style-books" />
 
 ## スタイルブック
 
@@ -30,12 +34,16 @@ TODO:
 Note how they tie into themes as well (depending on them for definitions), possibly? And then maybe link to developer guide articles? (Unless maybe developer guide material is not good to go into for this overview... then perhaps it'd be better to just briefly reference their reliance on the theme and leave it as that, not even with an H3)
 -->
 
+<a name="widgetfragment-appearance" />
+
 ## ウィジェット/フラグメントの外観
 
 フラグメントとウィジェットは、サイトの構成要素です。 サイトの外観に合わせて、様々なカスタマイズが可能です。
 
 * [フラグメントのカスタマイズ](../developer-guide/developing-page-fragments/developing-fragments-intro.md) は、サイトのフラグメントページのルック＆フィールを調整するために使用されます。
 * アプリケーション表示テンプレート <!--利用可能な場合はリンクを追加--> は、サイト上のウィジェットの外観や動作をカスタマイズすることができます。
+
+<a name="themes" />
 
 ## テーマ
 

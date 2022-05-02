@@ -12,6 +12,8 @@
 
 
 
+<a name="connecting-analytics-cloud-to-your-liferay-dxp-instance" />
+
 ## Analytics CloudをLiferay DXPインスタンスに接続する
 
 ユーザーにコンテンツリコメンデーションを提供するには、Analytics CloudをLiferay DXPインスタンスに接続する必要があります。
@@ -21,6 +23,8 @@ Analytics CloudをLiferay DXPに接続し、サイトのコンテンツを同期
 ![Liferay DXPをAnalytics Cloudに接続する](./configuring-content-recommendations/images/02.png)
 
 
+
+<a name="creating-a-dynamic-collection" />
 
 ## 動的コレクションの作成
 
@@ -53,6 +57,8 @@ Analytics CloudをLiferay DXPに接続し、サイトのコンテンツを同期
 
 
 
+<a name="displaying-the-dynamic-collection" />
+
 ## 動的コレクションの表示
 
 コレクションまたはコンテンツセットを表示する方法は、Liferay DXPのバージョンによって異なります。 DXP 7.2では、アセットパブリッシャーを使用して [表示ページにコンテンツセットを表示](#display-the-collection-or-content-set-in-a-display-page-using-the-asset-publisher) します。 DXP 7.3以降では、アセットパブリッシャーに加えて、 [コレクション表示フラグメントまたはコレクションページを使用して](#display-the-collection-using-a-collection-display-fragment-or-a-collection-page) コレクションのコンテンツを表示できます。
@@ -66,6 +72,8 @@ Analytics CloudをLiferay DXPに接続し、サイトのコンテンツを同期
 
 
 
+<a name="display-the-collection-using-a-collection-display-fragment-or-a-collection-page" />
+
 ### コレクション表示フラグメントまたはコレクションページを使用してコレクションを表示する
 
 
@@ -77,6 +85,8 @@ Analytics CloudをLiferay DXPに接続し、サイトのコンテンツを同期
 コレクションページは、コレクションにリンクされているページの一種です。 コレクションページを使用してコレクションを表示するには、 [コレクションの表示](../../displaying-content/additional-content-display-options/displaying-collections.md) トピックの [Displaying Collections on a Collection Page](../../displaying-content/additional-content-display-options/displaying-collections.md#displaying-collections-on-a-collection-page) セクションを参照してください。
 
 
+
+<a name="display-the-collection-or-content-set-in-a-display-page-using-the-asset-publisher" />
 
 ### アセットパブリッシャーを使用してコレクションまたはコンテンツセットを表示ページに表示する
 
@@ -90,6 +100,8 @@ Analytics CloudをLiferay DXPに接続し、サイトのコンテンツを同期
 1. コレクション（Liferay 7.3以降）またはコンテンツセット（Liferay 7.2）を使用してアセットパブリッシャーを構成します。 詳細は、 [コレクションの表示](../../displaying-content/additional-content-display-options/displaying-collections.md) を参照してください。
 
 
+
+<a name="related-information" />
 
 ## 関連情報
 

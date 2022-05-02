@@ -14,6 +14,8 @@
 Liferay DXP でコンテンツを表示するさまざまな方法についての詳細は、 [コンテンツの表示](../displaying-content-intro.md) を参照してください。
 ```
 
+<a name="understanding-display-page-templates-and-display-pages" />
+
 ## 表示ページテンプレートと表示ページについて
 
 表示ページテンプレートは、表示ページにコンテンツを表示およびマップする方法を決定します。 表示ページテンプレートの作成は、[コンテントページに要素を追加する方法](../../creating-pages/using-content-pages/adding-elements-to-content-pages.md)と似ています。 ただし、表示ページは常に特定のタイプのコンテンツに関連付けられていますが、コンテンツページは関連付けられていません。
@@ -38,6 +40,8 @@ Liferay DXP でコンテンツを表示するさまざまな方法について�
 
     ![表示ページの設定は、ページテンプレートアプリケーションの下にあります。](./about-display-page-templates-and-display-pages/images/04.png)
 
+<a name="using-display-page-templates-and-display-pages-example" />
+
 ## 表示ページテンプレートの使用と表示ページ例
 
 この例では、表示ページテンプレートと表示ページをサイトに実装する方法について、よりよく理解することができます。
@@ -55,6 +59,8 @@ Liferay DXP でコンテンツを表示するさまざまな方法について�
 これをするには、 **Insurance Details** という1つの表示ページテンプレートを作成し、Webコンテンツ記事のフィールドをテンプレート構成内のフラグメントに対応させます。 次に、この新しい表示ページテンプレートを、ウェブコンテンツの記事プロパティを使用して、ウェブコンテンツに定義します。 このWebコンテンツをフレンドリURLで表示する場合、表示ページには表示ページテンプレートのレイアウトとマッピングが使用されます。
 
 ![Webコンテンツ記事に表示ページテンプレートを構成します。](./about-display-page-templates-and-display-pages/images/01.png)
+
+<a name="related-information" />
 
 ## 関連情報
 

@@ -4,6 +4,8 @@
 
 有効にすると、サイトのドキュメントとメディアのファイルは、 `http://localhost:8080/documents/site-name` (例： **Marketing** というサイトの場合は`http://localhost:8080/documents/marketing` ) で閲覧できます。
 
+<a name="configuring-document-visibility-in-the-web-server-directory-index" />
+
 ## Webサーバーディレクトリインデックスでドキュメントの表示を設定する
 
 1. ［Enable Directory Indexing］オプションにアクセスします。
@@ -29,6 +31,8 @@
     ```
 
 1. ［**保存**］ をクリックします。
+
+<a name="related-information" />
 
 ## 関連情報
 

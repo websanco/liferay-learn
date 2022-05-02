@@ -2,9 +2,13 @@
 
 以下の手順では、サイトに新しいページを追加し、一般的なオプションを設定する方法について説明します。 残りのページ設定を設定する方法については、 [ページ単位での設定](../page-settings/configuring-individual-pages.md) を参照するか、または [ページセット](../understanding-pages/understanding-pages.md#page-sets) のオプションを設定する方法について [ページセットの設定](../page-settings/configuring-page-sets.md) を参照してください。
 
+<a name="adding-a-new-page" />
+
 ## 新しいページを追加する
 
 ページの管理画面やページツリー（Liferay DXP 7.3以降のバージョンに限る）から、新しいページを追加することができます。
+
+<a name="adding-a-new-page-from-pages-administration" />
 
 ### ページ管理から新しいページを追加する
 
@@ -30,6 +34,8 @@
 デフォルトでは、新しいページはサイトのナビゲーションメニューに含まれます。 このナビゲーションメニューを設定するには、[サイトナビゲーションの管理](../../site-navigation/managing-site-navigation.md)を参照してください。
 ```
 
+<a name="adding-a-new-page-from-the-page-tree-menu" />
+
 ### ページツリーメニューから新しいページを追加する
 
 > 対応可能：Liferay DXP/Portal 7.3以降
@@ -46,9 +52,13 @@
 下書き状態のページには、ページツリーで名前の横にアスタリスク（*）が表示されます。
 ```
 
+<a name="adding-a-child-page" />
+
 ## サブページを追加する
 
 サブページは、ページ管理またはページツリー（Liferay DXP 7.3以降のバージョンに限る）から追加することができます。
+
+<a name="adding-a-child-page-from-pages-administration" />
 
 ### ページ管理からサブページを追加する
 
@@ -64,6 +74,8 @@
 ページの横にあるアクションメニュー (![Actions Menu](../../../images/icon-actions.png)) を使用すると、コンテントページのドラフトをプレビュー（Liferay DXP 7.2以降）したり、下書きを承認（Liferay DXP 7.2 のみ）することができます。 これらのオプションは、下書き状態のページと、ページの編集権限を持つユーザーで利用できます。
 ```
 
+<a name="adding-a-child-page-from-the-pages-tree" />
+
 ### ページツリーからサブページを追加する
 
 > 対応可能：Liferay DXP/Portal 7.3以降
@@ -75,6 +87,8 @@
     ![ページツリーメニューを使用して子ページを追加する。](adding-a-page-to-a-site/images/01.png)
 
 1. [上記](#adding-a-new-page) のページ作成の標準的な手順に従ってください。
+
+<a name="related-information" />
 
 ## 関連情報
 

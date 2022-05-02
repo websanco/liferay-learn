@@ -4,6 +4,8 @@
 
 [表示ページテンプレート](./about-display-page-templates-and-display-pages.md) を使用すると、Webコンテンツ、ドキュメント、ブログエントリーを [表示ページ](../../../site-building/displaying-content/using-display-page-templates/publishing-content-with-display-pages.md)にレンダリングすることができます。 Liferay DXP 7.4 からは、表示ページでカテゴリーをレンダリングすることもできます。 これは、 [カテゴリーを使って整理した](../../../content-authoring-and-management/tags-and-categories/organizing-content-with-categories-and-tags.md)複数の製品やサービスを紹介したい場合に便利です。 ディスプレイページは、カタログの要素を一貫して表示するのに適しているため、カテゴリベースのディスプレイページを使用すると、製品やサービスのカタログを閲覧する際に、ユーザーに一貫した体験を提供することができます。
 
+<a name="displaying-categories-in-display-pages" />
+
 ## 表示ページを使用したカテゴリー表示
 
 表示ページのカテゴリーは、他のタイプの表示ページコンテンツと同じ方法でレンダリングされます。 2つのオプションがあります。
@@ -14,6 +16,8 @@
 また、複数のカテゴリに一度に表示ページテンプレートを割り当てることも可能です。 サイト管理&rarr; ［**カテゴリー設定**］ &rarr; ［**カテゴリ］/0>で、アップデートしたいカテゴリをチェックし、ページ (![Page](../../../images/icon-page.png)) アイコンをクリックするか、上部のアクション (![Actions](../../../images/icon-actions.png)) メニューから、**［表示ページテンプレートの割り当て］*を選択します。</p>
 
 ![Actionsメニューで表示ページテンプレートをデフォルトに設定します。](./displaying-categories-using-display-pages/images/07.png)
+
+<a name="example-using-category-based-navigation-on-a-display-page" />
 
 ## 例：表示ページでのカテゴリベースのナビゲーションの使用
 
@@ -29,6 +33,8 @@
 次の例は、デフォルトの表示ページテンプレートを変更する方法です。 本番用サイトでの混乱を避けるため、この手順はテスト用サイトで行ってください。
 ```
 
+<a name="step-1-creating-and-editing-the-categories" />
+
 ### ステップ1：カテゴリの作成と編集
 
 カテゴリがまだ存在しない場合は作成し、表示ページにマッピングしたい情報を記載します。 この例では、説明と画像を含む2つの新しいカテゴリを作成します。各カテゴリは、異なるサービスに対応しています。
@@ -41,6 +47,8 @@
 
 1. ［**画像**］ タブをクリックし、 ［**画像の追加**］(![Add Image](../../../images/icon-add.png)) ボタンを使用して、カテゴリの画像を追加します。
 1. ［**Details**］ タブを再度クリックし、 ［**保存**］ をクリックします。
+
+<a name="step-2-creating-the-display-page-template" />
 
 ### ステップ２：表示ページテンプレートの作成
 
@@ -59,6 +67,8 @@ Liferay DXP 7.4から、表示ページテンプレートにコンテンツの�
     ![新しい表示ページテンプレートのコンテンツタイプとして、 [ナビゲーション]を選択します。](./displaying-categories-using-display-pages/images/02.png)
 
 1. ［**保存**］ をクリックします。
+
+<a name="step-3-edit-and-publish-the-display-page-template" />
 
 ### ステップ３：表示ページテンプレートの編集と公開
 
@@ -97,6 +107,8 @@ Liferay DXP 7.4から、表示ページテンプレートにコンテンツの�
 表示ページでは、表示ページテンプレートのマッピングを使用して、カテゴリフィールドを表示します。 表示ページのURLは、選択したカテゴリ用のユニークのものとなっています。
 
 ![表示ページテンプレートは、カテゴリフィールドを表示し、ユニークなURLを提供します。](./displaying-categories-using-display-pages/images/06.png)
+
+<a name="related-information" />
 
 ## 関連情報
 

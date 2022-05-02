@@ -6,6 +6,8 @@
 * [関連するサイトの権限](#related-site-permissions)
 * [個々のバリエーションの権限](#individual-variation-permissions)
 
+<a name="general-staging-permissions" />
+
 ## 一般的なステージング権限
 
 1. ［**コントロールパネル**］ &rarr; ［**Users**］ &rarr; ［**Roles**］ に移動します。
@@ -21,6 +23,8 @@
 1. ユーザーロールに割り当てる一般的なステージング権限を選択し、そのスコープを定義します。
 
    ![必要なステージング権限を割り当て、そのスコープを定義します](./managing-staging-permissions/images/04.png)
+
+<a name="related-site-resource-permissions" />
 
 ## 関連するサイトリソースの権限
 
@@ -44,6 +48,8 @@
 
 **ステージを見る** ： ［**ステージングを公開する**］ 、 ［**Manage Pages**］ 、 ［**ステージングを管理する**］ 、または ［**権限の更新**］ が付与されていない場合、この権限はサイト管理メニューのステージングアプリを表示/非表示にします。
 
+<a name="individual-variation-permissions" />
+
 ## 個々のバリエーションの権限
 
 個々のバリエーションに権限を設定して、特定のユーザーがすべてのバリエーションではなく一部のバリエーションを管理できるようにすることもできます。
@@ -59,6 +65,8 @@
 1. チェックボックスを使用して、選択したバリエーションのユーザー権限を設定し、 ［**保存**］ をクリックします。
 
    ![チェックボックスを使用して、選択したバリエーションのユーザー権限を設定します。](./managing-staging-permissions/images/03.png)
+
+<a name="additional-information" />
 
 ## 追加情報
 

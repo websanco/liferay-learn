@@ -18,6 +18,8 @@ A/Bテストを実行するには、Liferay DXPインスタンスを [Liferay An
 
 Analytics CloudでA/Bテストを行う詳細は、 [A/Bテスト](https://learn.liferay.com/analytics-cloud/latest/ja/optimization/a-b-testing.html) を参照してください。
 
+<a name="related-information" />
+
 ## 関連情報
 
 - [A/Bテスト要件の確認](./verifying-ab-test-requirements.md)

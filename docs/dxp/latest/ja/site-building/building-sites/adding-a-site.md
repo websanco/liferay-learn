@@ -24,6 +24,8 @@
 
 サイトメニューで新しいサイトが選択されました。 利用可能なすべてのサイト設定の概要については、 [サイト設定のUI リファレンス](../site-settings/site-settings-ui-reference.md) を参照してください。
 
+<a name="related-information" />
+
 ## 関連情報
 
 * [サイト構築の概要](../introduction-to-site-building.md)

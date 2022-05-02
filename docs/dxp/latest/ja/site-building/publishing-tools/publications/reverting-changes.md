@@ -34,6 +34,8 @@ Liferay Publicationsは、公開されたすべての変更の履歴を保持し
 
 ［**Later**］ の公開設定を選択した場合は、新しいパブリケーションの［変更の確認］ページにリダイレクトされます。 この時点で、パブリケーションにさらに変更を加え、準備ができたら公開できます。
 
+<a name="additional-information" />
+
 ## 追加情報
 
 * [パブリケーションの作成と管理](./creating-and-managing-publications.md)

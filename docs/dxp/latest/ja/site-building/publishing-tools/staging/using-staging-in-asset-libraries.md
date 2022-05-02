@@ -20,6 +20,8 @@ Liferayのステージングアプリケーションは、DXPでの変更を管�
 
 ステージング環境で変更が行われると、それらは一度にすべて、または一度に1つずつ公開できます。 [サイト](./site-staging-ui-reference.md#publish-to-live) と同様に、 [シンプル](./site-staging-ui-reference.md#simple-publishing) または [高度な](./site-staging-ui-reference.md#advanced-publishing) 公開設定オプションを使用できます。
 
+<a name="additional-information" />
+
 ## 追加情報
 
 * [ステージングの概要](../staging.md)

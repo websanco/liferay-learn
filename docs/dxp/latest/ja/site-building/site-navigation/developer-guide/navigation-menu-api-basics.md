@@ -2,6 +2,8 @@
 
 LiferayのREST APIは、Liferayのナビゲーションメニューにサービスを提供します。 APIを使用してナビゲーションメニューを作成および編集できます。 まずは、新しいナビゲーションメニューを追加する例を見てみましょう。
 
+<a name="adding-a-navigation-menu" />
+
 ## ナビゲーションメニューの追加
 
 1. Liferay DXPを起動します。 まだDockerコンテナがない場合は、以下を使用します。
@@ -64,6 +66,8 @@ LiferayのREST APIは、Liferayのナビゲーションメニューにサービ�
     java -classpath .:* -DsiteId=1234 NavigationMenu_POST_ToSite
     ```
 
+<a name="examine-the-curl-command" />
+
 ## cURLコマンドの検証
 
 `NavigationMenu_POST_ToSite.sh`スクリプトは、cURLコマンドを使用してRESTサービスを呼び出します。
@@ -87,6 +91,8 @@ LiferayのREST APIは、Liferayのナビゲーションメニューにサービ�
 ```
 
 他のcURLコマンドも同様のJSON引数を使用しています。
+
+<a name="examine-the-java-class" />
 
 ## Javaクラスを調べる
 
@@ -120,9 +126,13 @@ LiferayのREST APIは、Liferayのナビゲーションメニューにサービ�
 
 以下は、cURLとJavaを使って、他の`NavigationMenu` RESTサービスを呼び出す例です。
 
+<a name="get-navigation-menus-from-site" />
+
 ## サイトからナビゲーションメニューを取得する
 
 次のcURLまたはJavaコマンドを実行すると、サイトのナビゲーションメニューを一覧表示できます。 上記のように、`1234`をサイトのIDに置き換えてください。
+
+<a name="navigationmenus_get_fromsitesh" />
 
 ### NavigationMenus **GET** FromSite.sh
 
@@ -137,6 +147,8 @@ LiferayのREST APIは、Liferayのナビゲーションメニューにサービ�
 ```{literalinclude} ./navigation-menu-api-basics/resources/liferay-p7s4.zip/curl/NavigationMenus_GET_FromSite.sh
    :language: bash
 ```
+
+<a name="navigationmenus_get_fromsitejava" />
 
 ### NavigationMenus **GET** FromSite.java
 
@@ -156,6 +168,8 @@ java -classpath .:* -DsiteId=1234 NavigationMenus_GET_FromSite
 
 サイトの`NavigationMenu`オブジェクトがJSONに一覧表示されます。
 
+<a name="get-a-navigation-menu" />
+
 ## ナビゲーションメニューを取得する
 
 以下のcURLまたはJavaコマンドで特定のナビゲーションメニューを取得します。 `1234` をナビゲーションメニューのIDに置き換えてください。
@@ -163,6 +177,8 @@ java -classpath .:* -DsiteId=1234 NavigationMenus_GET_FromSite
 ```{tip}
 avigationMenus_GET_FromSite.[java|sh]`を使用して、`NavigationMenu`  IDを取得します。
 ```
+
+<a name="navigationmenu_get_byidsh" />
 
 ### NavigationMenu **GET** ById.sh
 
@@ -177,6 +193,8 @@ avigationMenus_GET_FromSite.[java|sh]`を使用して、`NavigationMenu`  IDを�
 ```{literalinclude} ./navigation-menu-api-basics/resources/liferay-p7s4.zip/curl/NavigationMenu_GET_ById.sh
    :language: bash
 ```
+
+<a name="navigationmenu_get_byidjava" />
 
 ### NavigationMenu **GET** ById.java
 
@@ -196,9 +214,13 @@ java -classpath .:* -DnavigationMenuId=1234 NavigationMenu_GET_ById
 
 `NavigationMenu`フィールドがJSONに一覧表示されます。
 
+<a name="put-a-navigation-menu" />
+
 ## ナビゲーションメニューを配置する
 
 次のcURLおよびJavaコマンドを使用して、既存のナビゲーションメニューを完全に上書きします。 なお、 `1234` は、ナビゲーションメニューのIDに置き換えてください。
+
+<a name="navigationmenu_put_byidsh" />
 
 ### NavigationMenu **PUT** ById.sh
 
@@ -213,6 +235,8 @@ java -classpath .:* -DnavigationMenuId=1234 NavigationMenu_GET_ById
 ```{literalinclude} ./navigation-menu-api-basics/resources/liferay-p7s4.zip/curl/NavigationMenu_PUT_ById.sh
    :language: bash
 ```
+
+<a name="navigationmenu_put_byidjava" />
 
 ### NavigationMenu **PUT** ById.java
 
@@ -230,9 +254,13 @@ java -classpath .:* -DnavigationMenuId=1234 NavigationMenu_PUT_ById
    :lines: 9-27
 ```
 
+<a name="delete-a-navigation-menu" />
+
 ## ナビゲーションメニューを削除する
 
 以下のcURLおよびJavaコマンドで既存のナビゲーションメニューを削除します。 なお、 `1234` は、ナビゲーションメニューのIDに置き換えてください。
+
+<a name="navigationmenu_delete_byidsh" />
 
 ### NavigationMenu **DELETE** ById.sh
 
@@ -247,6 +275,8 @@ java -classpath .:* -DnavigationMenuId=1234 NavigationMenu_PUT_ById
 ```{literalinclude} ./navigation-menu-api-basics/resources/liferay-p7s4.zip/curl/NavigationMenu_DELETE_ById.sh
    :language: bash
 ```
+
+<a name="navigationmenu_delete_byidjava" />
 
 ### NavigationMenu **DELETE** ById.java
 

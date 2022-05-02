@@ -40,6 +40,8 @@
 
     ![表示ページテンプレートのコンテキストでコンテンツをプレビューするか、コンテンツのアクションメニューを使用して表示ページを表示します。](./publishing-content-with-display-pages/images/04.png)
 
+<a name="configuring-the-default-display-page-template" />
+
 ## デフォルトの表示ページテンプレートの構成
 
 デフォルトの表示ページテンプレートを構成するときは、次のことを考慮してください。
@@ -55,6 +57,8 @@
 1. デフォルトに設定したい表示ページテンプレートの **アクション**(![Actions](../../../images/icon-actions.png))メニューをクリックし、 ［**Mark As Default**］ を選びます。
 
     ![アクションメニューから、コンテンツタイプのデフォルトとして表示する表示ページテンプレートを選択します。](./publishing-content-with-display-pages/images/05.png)
+
+<a name="additional-information" />
 
 ## 追加情報
 

@@ -10,6 +10,8 @@
 - Webコンテンツ
 - Wiki
 
+<a name="configuring-content-rating-types-for-site-applications" />
+
 ## サイトアプリケーションのコンテンツ評価タイプの設定
 
 サイトアプリケーションで使用される評価タイプを構成するには、次の手順に従います。
@@ -31,6 +33,8 @@
     ![サイトのソーシャル設定から、さまざまなアプリケーションの評価タイプを設定できます。](./configuring-content-ratings-type/images/01.png)
 
 1. ［**保存**］ をクリックします。
+
+<a name="related-information" />
 
 ## 関連情報
 

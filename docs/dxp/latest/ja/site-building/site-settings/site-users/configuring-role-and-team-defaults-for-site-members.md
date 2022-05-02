@@ -28,6 +28,8 @@
 構成するデフォルトのサイトロールとチームは、既存のサイトメンバーには影響しません。
 ```
 
+<a name="related-information" />
+
 ## 関連情報
 
 - [サイトメンバーシップタイプの変更](./changing-site-membership-type.md)

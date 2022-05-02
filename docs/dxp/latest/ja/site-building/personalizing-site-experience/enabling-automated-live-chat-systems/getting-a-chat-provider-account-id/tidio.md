@@ -2,6 +2,8 @@
 
 [Tidio](https://www.tidio.com/) はカスタマーエンゲージメントプラットフォームです。 この記事では、Liferayインスタンスとの[統合を可能にする](../enabling-automated-live-chat-systems.md)ためにTidioアカウントIDを見つける方法について説明します。
 
+<a name="locating-your-tidio-account-id" />
+
 ## TidioアカウントIDを見つける
 
 1. [Tidioアカウント](https://www.tidio.com/panel/login) にログインします。

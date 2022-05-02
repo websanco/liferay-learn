@@ -24,6 +24,8 @@ Liferayは、高度なドロップダウンメニューを作成するための�
 
 ![ドロップダウンパネルのドロップゾーンサイズは、パネルタイプオプションを使用して定義することができます。](./creating-dropdown-menus-with-fragments/images/03.gif)
 
+<a name="additional-information" />
+
 ## 追加情報
 
 * [フラグメントの使用](../using-fragments.md)

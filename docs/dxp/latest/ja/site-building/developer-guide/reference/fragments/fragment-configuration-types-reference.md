@@ -16,6 +16,8 @@
 FreeMarker コンテキストに挿入された設定値は、JSON ファイルで指定された定義済みの `datatype` 値に従います。 たとえば、`dataType`が String の場合、`configuration.[name-value]?is_string` は `true`となります。
 ```
 
+<a name="checkbox-configuration" />
+
 ## チェックボックスの設定
 
 次の JSON 構成は、ブール値の選択が必要な場合に実装できるチェックボックスを作成します。
@@ -40,6 +42,8 @@ FreeMarker コンテキストに挿入された設定値は、JSON ファイル�
 ```
 
 ![チェックボックス設定は、ブール値の選択が必要な場合に役立ちます。](./fragment-configuration-types-reference/images/01.png)
+
+<a name="color-palette-configuration" />
 
 ## カラーパレットの設定
 
@@ -78,6 +82,8 @@ FreeMarker コンテキストに挿入された設定値は、JSON ファイル�
 白を選択した場合、 `h3` タグの見出しはクラス `text-white'` を持ちます。
 
 ![カラー パレットの設定は、色の選択が必要な場合に役立ちます。](./fragment-configuration-types-reference/images/02.png)
+
+<a name="item-selector-configuration" />
 
 ## アイテムセレクターの設定
 
@@ -176,6 +182,8 @@ FreeMarker コンテキストに挿入された設定値は、JSON ファイル�
 
 ![アイテム セレクターの設定は、既存のコンテンツを表示するオプションの選択が必要な場合に役立ちます。](./fragment-configuration-types-reference/images/03.png)
 
+<a name="select-configuration" />
+
 ## 選択設定
 
 次の JSON 構成は、事前定義されたオプションを選択する必要がある場合に実装できるセレクターを作成します。
@@ -209,6 +217,8 @@ FreeMarker コンテキストに挿入された設定値は、JSON ファイル�
 
 ![選択設定は、オプションの選択が必要な場合に役立ちます。](./fragment-configuration-types-reference/images/04.png)
 
+<a name="text-configuration" />
+
 ## テキスト設定
 
 次の JSON 構成は、テキスト オプションを手動で入力する必要がある場合に実装できる入力テキスト フィールドを作成します。
@@ -237,6 +247,8 @@ FreeMarker コンテキストに挿入された設定値は、JSON ファイル�
 ```
 
 ![テキスト設定は、入力テキスト オプションが必要な場合に役立ちます。](./fragment-configuration-types-reference/images/05.png)
+
+<a name="video-selector" />
 
 ## ビデオセレクター
 
@@ -307,6 +319,8 @@ FreeMarker コンテキストに挿入された設定値は、JSON ファイル�
 ```{note}
 `videoSelector`型は、 [外部ビデオ](../../../creating-pages/page-fragments-and-widgets/using-fragments/default-fragments-reference.md#external-video) フラグメントと互換性がありますが、[ビデオURL](../../../creating-pages/page-fragments-and-widgets/using-fragments/default-fragments-reference.md)フラグメントとは互換性がありません。
 ```
+
+<a name="collection-selector" />
 
 ## コレクションセレクター
 
@@ -385,6 +399,8 @@ FreeMarker コンテキストに挿入された設定値は、JSON ファイル�
 ```{tip}
 設定には `itemTime` の他に、`itemSubtype` を指定することができます。 `itemSubtype`はアセット`classPK`に対応します。
 ```
+
+<a name="additional-information" />
 
 ## 追加情報
 

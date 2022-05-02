@@ -18,6 +18,8 @@ DXP 7.3では、カスタムフィールドを使って、ナビゲーション�
 ```
 <!-- Add links to this annotation for Custom Fields and ADTs when available. -->
 
+<a name="creating-navigation-menus" />
+
 ## ナビゲーションメニューの作成
 
 1. **プロダクトメニュー**(![Product Menu](../../images/icon-product-menu.png)) &rarr; ［**サイトビルダー**］ &rarr; ［**ナビゲーションメニュー**］ をクリックします。
@@ -29,6 +31,8 @@ DXP 7.3では、カスタムフィールドを使って、ナビゲーション�
 1. 完了したら、 ［**Save**］ をクリックします。
 
 新しいナビゲーションメニューが作成されました。
+
+<a name="assigning-pages-to-a-navigation-menu" />
 
 ## ナビゲーションメニューへのページの割り当て
 
@@ -46,6 +50,8 @@ DXP 7.3では、カスタムフィールドを使って、ナビゲーション�
 1. 新しいナビゲーションメニューが作成されたことを確認します。
 
     ![新しいナビゲーションメニューに子ページがあることを確認します。](./using-navigation-menus/images/04.png)
+
+<a name="assigning-new-pages-to-a-navigation-menu" />
 
 ### ナビゲーションメニューへの新しいページの割り当て
 
@@ -67,6 +73,8 @@ DXP 7.3では、カスタムフィールドを使って、ナビゲーション�
 
 ![このナビゲーションメニューにページが自動的に追加される設定を無効にします。](./using-navigation-menus/images/08.png)
 
+<a name="categorize-a-navigation-menu" />
+
 ## ナビゲーションメニューの分類
 
 ナビゲーションメニューは、以下のように分類することができます。
@@ -84,12 +92,16 @@ DXP 7.3では、カスタムフィールドを使って、ナビゲーション�
 
 ナビゲーションメニューのタイプが ［**Marked As**］ フィールドに表示されます。 各タイプの詳細は、 [ナビゲーションメニューの設定](./configuring-navigation-menus.md#navigation-menu) を参照してください。
 
+<a name="deleting-a-navigation-menu" />
+
 ## ナビゲーションメニューの削除
 
 1. 目的のナビゲーションメニュー（例： **New Menu**）の横にある（![Options](../../images/icon-options.png)）アイコンをクリックし、 ［**削除**］ をクリックします。
 1. 確認ウィンドウで ［**OK**］ をクリックします。
 
 ナビゲーションメニューが削除されました。
+
+<a name="additional-information" />
 
 ## 追加情報
 

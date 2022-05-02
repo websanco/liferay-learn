@@ -34,6 +34,8 @@ Open Graph [](meta) タグは、認証されていないユーザーへの公開
 
 1. ［**保存**］ をクリックします。
 
+<a name="analyzing-the-ogimage-properties" />
+
 ## `og:image`プロパティの分析
 
 画像を選択すると、DXPは選択した画像の表示方法を決定する多くの構造化プロパティを自動的に追加します。 ［画像］ フィールドは、次の `<meta>` タグを定義します。
@@ -53,6 +55,8 @@ Open Graph画像のローカライズされた別の説明を作成するには�
 ```html
 <meta property="og:image:alt" content="This is an example." />
 ```
+
+<a name="additional-information" />
 
 ## 追加情報
 

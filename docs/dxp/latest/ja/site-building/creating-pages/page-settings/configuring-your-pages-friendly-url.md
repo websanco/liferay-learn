@@ -4,6 +4,8 @@ Liferay DXPを使用すると、サイトの各ページにフレンドリURLを
 
 サイトページを作成すると、ページの名前と一致するフレンドリURLが自動的に生成されますが、いつでも変更できます。 また、Liferay DXPは、リンク切れを防ぎ、変更を簡単に元に戻すことができるように、ページに以前に使用されたURLの履歴を保持します。
 
+<a name="changing-a-pages-friendly-url" />
+
 ## ページのフレンドリURLの変更
 
 ページのフレンドリURLを変更するには、 **プロダクトメニュー** を開き、 ［**Site Builder**］ &rarr; ［**Pages**］ に移動します。 次に、カスタマイズするページの **アクション** ボタン（![Actions button](../../../images/icon-staging-bar-options.png)）をクリックし、 ［**Configure**］ を選択します。
@@ -22,6 +24,8 @@ Liferay DXPを使用すると、サイトの各ページにフレンドリURLを
 カスタムURLを設定する場合、サイトのページ階層を維持する必要はありません。 つまり、子ページは、フレンドリURLの一部として親を含める必要がありません。
 ```
 
+<a name="managing-a-pages-url-history" />
+
 ## ページのURL履歴の管理
 
 > 対応可能：Liferay DXP/Portal 7.3以降
@@ -39,6 +43,8 @@ Liferay DXPは、ページに使用されるすべてのフレンドリURLのリ
 **記憶したURL情報を消去** ：ページに関連付けられたフレンドリURLが不要になった場合は、 **記憶したURL情報を消去** ボタン（![Delete icon](../../../images/icon-delete.png)）をクリックします。 ユーザーが消去されたURLを使用してページにアクセスしようとすると、リンクが壊れ、Liferayは「Not found」というメッセージを表示します。
 
 ![古いURLにカーソルを合わせると、［復元］オプションと［消去］オプションが表示されます。](./configuring-your-pages-friendly-url/images/04.png)
+
+<a name="additional-information" />
 
 ## 追加情報
 

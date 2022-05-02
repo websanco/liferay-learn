@@ -8,6 +8,8 @@ Liferay Portal/DXPの多くのメニューは、 [サイトメニュー](../../.
 
 サイトメニューなどの標準のUIコンポーネントを編集またはスタイル設定する場合は、テーマコントリビューターで変更をデプロイする必要があります。 テーマコントリビューターを使用して、新しいUIコンポーネントまたはスタイルを追加することもできます。
 
+<a name="deploy-a-simple-theme-contributor" />
+
 ## シンプルなテーマコントリビューターをデプロイする
 
 サンプルのテーマコントリビューターをデプロイすることから始めます。
@@ -56,9 +58,13 @@ Liferay Portal/DXPの多くのメニューは、 [サイトメニュー](../../.
 
 次に、カスタムCSSの変更でテーマコントリビューターがどのように見えるかを学習します。
 
+<a name="examine-the-example-theme-contributor" />
+
 ## サンプルのテーマコントリビューターを調べる
 
 テーマコントリビューターはOSGiモジュールであり、その`bnd.bnd`ファイルにプロパティが必要です。 次に、カスタマイズが `resources`フォルダに追加されます。 サンプルのテーマコントリビューターは、`custom.css`ファイルを使用して各ページの背景色を変更します。
+
+<a name="examine-the-theme-contributor-properties" />
 
 ### テーマコントリビューターのプロパティを調べる
 
@@ -78,6 +84,8 @@ Liferay Portal/DXPの多くのメニューは、 [サイトメニュー](../../.
 
 `bnd.bnd`ファイルに必要なプロパティがあれば、あとはモジュールに必要なカスタマイズを行うだけです。
 
+<a name="examine-the-style-customizations" />
+
 ### スタイルのカスタマイズを調べる
 
 必要なCSSまたはJavaScriptファイルは、モジュール内のサブフォルダに追加する必要があります。 CSSファイルは`src/main/resources/META-INF/resources/css/`サブフォルダに属し、JavaScriptファイルは`src/main/resources/META-INF/resources/js/`サブフォルダに属します。
@@ -91,6 +99,8 @@ body, #wrapper {
 ```
 
 必要なCSSまたはJavaScriptファイルをすべて正しいサブフォルダに追加した後、モジュールをデプロイすると、それらが各ページに適用されます。
+
+<a name="change-the-background-color" />
 
 ## 背景色を変更する
 
@@ -122,9 +132,13 @@ body, #wrapper {
 
 ![CSSファイルの背景色を変更すると、デプロイ時にすべてのページに影響します。](./bundling-independent-ui-resources-via-theme-contributors/images/03.png)
 
+<a name="conclusion" />
+
 ## まとめ
 
 　 CSSスタイルを変更したテーマコントリビューターを作成しました。 [スタイルブック](../../../style-books/using-a-style-book-to-standardize-site-appearance.md)を使用して、サイトのページに特定のスタイル変更を適用することもできます。
+
+<a name="additional-information" />
 
 ## 追加情報
 

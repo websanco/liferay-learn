@@ -34,6 +34,8 @@
 
 定義したら、フラグメントまたはウィジェットをドロップゾーンにドラッグアンドドロップできます。
 
+<a name="identifying-the-drop-zones-in-the-fragment-code" />
+
 ## フラグメントコードのドロップゾーンを特定する
 
 > LiferayDXP7.4以降で利用できます。
@@ -57,6 +59,8 @@
    ```{tip}
    フラグメント内のドロップゾーンおよびその他の要素の順序を構成できます。 詳細については、[Setting the Order of Elements in a Fragment]（./setting-the-order-of-elements-in-a-fragment.md）を参照してください。
    ```
+
+<a name="additional-information" />
 
 ## 追加情報
 

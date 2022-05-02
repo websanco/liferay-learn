@@ -19,6 +19,8 @@ DXP 7.3以降では、ウィジェットページの上部にある目のアイ�
 ウィジェットはウィジェットページの、 [render-weight](https://learn.liferay.com/reference/latest/en/dxp/definitions/liferay-portlet-app_7_3_0.dtd.html#render-weight) に従ってレンダリングされます。
 ```
 
+<a name="additional-information" />
+
 ## 追加情報
 
 - [ウィジェットページのユーザーパーソナライズの有効化](./enabling-user-personalization-of-widget-pages.md)

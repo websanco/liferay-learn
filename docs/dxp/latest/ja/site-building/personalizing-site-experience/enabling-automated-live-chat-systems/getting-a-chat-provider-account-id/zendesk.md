@@ -2,6 +2,8 @@
 
 [Zendesk](https://www.zendesk.com/) は顧客サービスプラットフォームです。 この記事では、Liferayインスタンスとの[統合を可能にする](../enabling-automated-live-chat-systems.md)ためにZendeskアカウントIDを見つける方法について説明します。
 
+<a name="locating-your-zendesk-account-id" />
+
 ## ZendeskアカウントIDを見つける
 
 1. [Zendeskアカウント](https://www.zendesk.com/login/#login) にログインします。

@@ -6,6 +6,8 @@
 Liferay DXP 7.4以降の場合、フラグメントコレクションはLiferay UIではフラグメントセットと呼ばれます。
 ```
 
+<a name="setting-up-the-toolkit" />
+
 ## ツールキットの設定
 
 ツールキットには次のソフトウェアが必要です。
@@ -42,6 +44,8 @@ Liferay の [setup_tutorial.sh](https://github.com/liferay/liferay-learn/blob/ma
     ```
 
 スクリプトによって報告された満たしていない要件をすべて解決し、環境の準備が整ったと報告されるまでスクリプトを再実行してください。
+
+<a name="create-a-fragments-project" />
 
 ## フラグメント プロジェクトを作成する
 
@@ -108,6 +112,8 @@ Liferay の [setup_tutorial.sh](https://github.com/liferay/liferay-learn/blob/ma
 
 ジェネレータは、プロジェクト名から派生したフォルダに各プロジェクトを作成します。 この例では、プロジェクト名を `Sample Liferay Fragments` としたので、ジェネレータは `sample-liferay-fragments`というプロジェクト フォルダを作成します。
 
+<a name="import-the-sample-fragment-set" />
+
 ## サンプルのフラグメントセットをインポートする
 
 フラグメントを表示するには、サンプルのフラグメント セットを Liferay にインポートします。
@@ -162,6 +168,8 @@ Liferay の [setup_tutorial.sh](https://github.com/liferay/liferay-learn/blob/ma
 
 フラグメントセットを正常にデプロイしました。
 
+<a name="fragment-set-structure" />
+
 ## フラグメントセットのストラクチャー
 
 各フラグメントセットは、次の構造を使用します。
@@ -206,6 +214,8 @@ Liferay の [setup_tutorial.sh](https://github.com/liferay/liferay-learn/blob/ma
 
 フラグメントツールキットを使用して、このストラクチャーを持つプロジェクトをすばやく作成できます。
 
+<a name="add-a-fragment-set-to-the-project" />
+
 ## プロジェクトにフラグメントセットを追加する
 
 `add-collection` コマンドを使用して、プロジェクトにフラグメントセットを追加します。
@@ -233,6 +243,8 @@ Liferay の [setup_tutorial.sh](https://github.com/liferay/liferay-learn/blob/ma
         "name": "My Set"
     }
     ```
+
+<a name="create-a-new-fragment" />
 
 ## 新規フラグメントを作成する
 
@@ -300,6 +312,8 @@ Liferay の [setup_tutorial.sh](https://github.com/liferay/liferay-learn/blob/ma
 ```
 
 フラグメント HTML は、`data-lfr` の新しい編集可能な構文を使用します。
+
+<a name="edit-your-fragment" />
 
 ## フラグメントを編集する
 
@@ -375,6 +389,8 @@ Liferay 7.2以下を使用している場合は、[フラグメント固有の�
 フラグメントと設定オブジェクトは JavaScript の引数として渡され、それぞれ `fragmentElement` と `configuration`パラメーターとして利用できます。
 ```
 
+<a name="import-your-new-fragment" />
+
 ## 新しいフラグメントをインポートする
 
 元のサンプルフラグメントと同じように、新しいフラグメントをインポートできます。
@@ -390,6 +406,8 @@ Liferay 7.2以下を使用している場合は、[フラグメント固有の�
 ![セットが利用可能です。](./using-the-fragments-toolkit/images/03.png)
 
 これで、フラグメント ツールキットを使用してフラグメントを作成および管理する方法がわかりました。 ツールキット コマンドの詳細は、 [フラグメントツールキットコマンドリファレンス](../reference/fragments/fragments-toolkit-command-reference.md) を参照してください。
+
+<a name="related-information" />
 
 ## 関連情報
 

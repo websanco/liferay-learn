@@ -30,6 +30,8 @@
 変更を加えて公開すると、マスターページテンプレートを使用しているすべてのページにプロパゲートします。
 ```
 
+<a name="changing-the-master-page-template-of-a-page" />
+
 ## ページのマスターページテンプレートを変更する
 
 ページのマスターページテンプレートは、[コンテントページエディタ](../using-content-pages/content-page-editor-ui-reference.md)で変更することができます。 次の手順を実行します：
@@ -39,6 +41,8 @@
 1. ［Masters］セクションで、使用したい ［**マスターページテンプレート**］ をクリックします。
 
    ![ページデザインメニューから、使用するマスターページテンプレートをクリックします。](./managing-master-page-templates/images/03.png)
+
+<a name="changing-a-master-page-templates-theme" />
 
 ## マスターページテンプレートのテーマの変更
 
@@ -57,6 +61,8 @@
 
 1. 下にスクロールして、 ［**現在のテーマを変更**］ をクリックします。
 1. **利用可能なテーマ** のリストから、新しいテーマを選択し、 ［**保存**］ をクリックして変更を適用してください。
+
+<a name="additional-information" />
 
 ## 追加情報
 

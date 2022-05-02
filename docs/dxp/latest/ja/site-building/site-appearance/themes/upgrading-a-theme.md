@@ -2,6 +2,8 @@
 
 以前のバージョンのLiferay DXP用に開発されたテーマは、新しいバージョンにデプロイするためにアップグレードする必要があります。 `gulp upgrade`タスクを実行すると、Liferayバージョンの参照とテーマの依存関係が更新されます。 これにより、テーマを新しいバージョンのLiferayにデプロイできます。
 
+<a name="prerequisites" />
+
 ## 前提条件
 
 Liferayテーマジェネレーターは、アップグレードタスクを実行するために使用されます。 インストールしていない場合は、次のコマンドを使用してインストールしてください。
@@ -15,6 +17,8 @@ npm install -g generator-liferay-theme@10.x.x
 ```bash
 npm install -g yo gulp
 ```
+
+<a name="running-the-upgrade-task" />
 
 ## アップグレードタスクの実行
 

@@ -2,6 +2,8 @@
 
 [Chatwoot](https://www.chatwoot.com/) は、オープンソースの顧客コミュニケーションプラットフォームです。 この記事では、Liferayインスタンスとの[統合を可能にする](../enabling-automated-live-chat-systems.md)ためにChatwootアカウントIDを見つける方法について説明します。
 
+<a name="locating-your-chatwoot-account-id" />
+
 ## ChatwootアカウントIDを見つける
 
 1. [Chatwootアカウント](https://app.chatwoot.com/app/login) にログインします。

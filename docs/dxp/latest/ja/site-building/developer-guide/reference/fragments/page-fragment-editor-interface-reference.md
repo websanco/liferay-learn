@@ -7,6 +7,8 @@
 
 以下のセクションでは、インターフェイスのこれらの部分の使用方法について説明します。 ページ フラグメントの作成方法については、 [Developing Page Fragments](../../developing-page-fragments/developing-fragments-intro.md) を参照してください。
 
+<a name="code-editor" />
+
 ## コードエディタ
 
 コードエディタは 4 つのペインに分割されます。
@@ -25,6 +27,8 @@
 
 ![フラグメント エディタは、フラグメントのすべての部分を作成するための環境を提供します。](./page-fragment-editor-interface-reference/images/01.png)
 
+<a name="configuration" />
+
 ## 設定
 
 ```{note}
@@ -42,6 +46,8 @@
 DXP 7.3 以降では、ページの上部にあるチェックボックスを選択して、フラグメントをキャッシュ可能にすることもできます。 このオプションを有効にすると、フラグメントがページに追加されるときにフラグメントがキャッシュに追加され、これらのフラグメントを含むページのパフォーマンスが向上します。
 
 ![フラグメントをキャッシュしてページのパフォーマンスを向上させるには、 [キャッシュ可能] オプションをオンにします。](./page-fragment-editor-interface-reference/images/02.png)
+
+<a name="additional-information" />
 
 ## 追加情報
 

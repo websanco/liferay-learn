@@ -8,6 +8,8 @@
 ステージングとパブリケーションを同時に有効にすることはできません。 いずれかのサイトでステージングが有効になっている場合は、パブリケーションを有効にする前に、まずステージングを無効にする必要があります。 詳細については、 [Disabling Local Live Staging](../staging/configuring-local-live-staging.md#disabling-local-live-staging) および [Disabling Remote Live Staging](../staging/configuring-remote-live-staging.md#disabling-remote-live-staging) を参照してください。
 ```
 
+<a name="how-to-enable-publications" />
+
 ## パブリケーションを有効にする方法
 
 パブリケーションを有効にするには、次の手順に従います。
@@ -25,6 +27,8 @@
 ![DXPインスタンスのどこからでもドロップダウンの［Publications］バーメニューにアクセスできます。](./enabling-publications/images/02.png)
 
 このメニューを使用して、新しいパブリケーションを作成したり、作業するパブリケーションを選択したり、編集モードと本番環境モードを切り替えたり、現在のパブリケーションの変更を確認して公開したりできます。 個々のパブリケーションの作成、編集、および削除については、[パブリケーションの作成と管理](./creating-and-managing-publications.md)を参照してください。
+
+<a name="how-to-disable-publications" />
 
 ## パブリケーションを無効にする方法
 
@@ -44,6 +48,8 @@
 無効にすると、アクティブなすべてのパブリケーションが無効になり、スケジュールされたパブリケーションがキャンセルされ、パブリケーション履歴にアクセスできなくなります。 ただし、DXPはインスタンスのパブリケーション履歴を保持するため、パブリケーションを再度有効にすれば再度アクセスできます。
 ```
 
+<a name="enabling-publications-for-73x" />
+
 ## 7.3.xのパブリケーションの有効化
 
 パブリケーションを有効にするには、次の手順に従います。
@@ -60,6 +66,8 @@
 
    ![トグルを［Yes］に設定し、［送信］または［保存して概要に移動］をクリックします。](./enabling-publications/images/05.png)
 
+<a name="disabling-publications-for-73x" />
+
 ## 7.3.xのパブリケーションの無効化
 
 必要に応じて、パブリケーションの ［**Settings**］ ページからいつでもパブリケーションを無効にできます。
@@ -73,6 +81,8 @@
 ```{important}
 無効にすると、アクティブなすべてのパブリケーションが無効になり、スケジュールされたパブリケーションがキャンセルされ、パブリケーション履歴にアクセスできなくなります。 ただし、DXPはインスタンスのパブリケーション履歴を保持するため、パブリケーションを再度有効にすれば再度アクセスできます。
 ```
+
+<a name="additional-information" />
 
 ## 追加情報
 

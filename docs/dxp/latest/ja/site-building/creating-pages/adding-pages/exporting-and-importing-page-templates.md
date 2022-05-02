@@ -8,6 +8,8 @@
 Liferay DXP 7.4以降の場合、ページテンプレートコレクションは、Liferay UIではページテンプレートセットと呼ばれます。
 ```
 
+<a name="exporting-a-page-template" />
+
 ## ページテンプレートのエクスポート
 
 ページテンプレートを作成するには、次の手順に従います。
@@ -41,6 +43,8 @@ Liferay DXP 7.4以降の場合、ページテンプレートコレクション�
 
 ZIPファイルには、 `display-page-template.json`, `master-page.json`, `page-template-collection.json` , `page-template.json`というように異なるタイプのページテンプレートも含まれる場合があります。
 
+<a name="importing-a-page-template" />
+
 ## ページテンプレートのインポート
 
 ページテンプレートをインポートするには、次の手順に従います。
@@ -60,6 +64,8 @@ ZIPファイルには、 `display-page-template.json`, `master-page.json`, `page
 1. ［**インポート**］ ウィンドウを閉じます。
 
 ページテンプレートがサイトにインポートされました。
+
+<a name="additional-information" />
 
 ## 追加情報
 

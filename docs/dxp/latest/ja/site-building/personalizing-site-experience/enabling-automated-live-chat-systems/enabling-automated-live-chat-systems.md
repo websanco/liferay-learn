@@ -4,6 +4,8 @@
 
 Liferayは現在、多数のライブサポートチャットプラットフォームとの統合を提供しています。 この統合を有効にすると、Liferayインスタンスのサイトにチャットウィンドウが追加され、ユーザーのサポートとサイトエクスペリエンスを向上させるために使用できます。
 
+<a name="enabling-click-to-chat" />
+
 ## Click To Chatの有効化
 
 Click To Chatを有効にするには、 ［**Instance Settings**］ に移動します。
@@ -39,6 +41,8 @@ Click To Chatを有効にするには、 ［**Instance Settings**］ に移動�
 1. ［**保存**］ をクリックします。
 
 Click To Chatとライブチャットプロバイダーとの統合が構成されました。
+
+<a name="getting-the-chat-provider-account-id-or-token" />
 
 ## チャットプロバイダーのアカウントIDまたはトークンの取得
 

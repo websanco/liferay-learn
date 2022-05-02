@@ -6,6 +6,8 @@
 コンテンツリコメンデーションをユーザーに提供するには、[Analytics CloudをLiferay DXPインスタンスに接続する] (https://learn.liferay.com/analytics-cloud/latest/en/connecting-data-sources/connecting-liferay-dxp-to-analytics-cloud.html)必要があります。
 ```
 
+<a name="how-content-recommendations-work" />
+
 ## コンテンツリコメンデーションの仕組み
 
 コンテンツリコメンデーションの構成は、2段階のプロセスです。 まず、ユーザーの行動を追跡し、関心のあるトピックを定義します。 この手順では、 [Analytics CloudがDXPインスタンスに接続されている](https://learn.liferay.com/analytics-cloud/latest/ja/connecting-data-sources/connecting-liferay-dxp-to-analytics-cloud.html) 必要があります。 Analytics Cloudは、サイトでの以前のユーザーの行動に基づいて、関心のあるトピックを定義およびランク付けし、これらの関心をサイトのユーザーIDに関連付けます。 次に、ユーザーの興味に基づいて、ユーザーに推奨するコンテンツを表示します。 この手順では、[動的コレクション](../../../content-authoring-and-management/collections-and-collection-pages/about-collections-and-collection-pages.md)を作成し、このコレクションをWebサイトに表示する必要があります。 Analytics Cloudは、ユーザーの関心に基づいて一連のキーワードをDXPに送信し、これらのキーワードはコレクション内のフィルターとして機能します。 ユーザーに表示するコンテンツの種類を定義するには、コレクションが必要です。
@@ -21,6 +23,8 @@ Analytics Cloudは、タイル、説明、[カテゴリ](../../../content-author
 ```{note}
 Analytics Cloudは現在、ユーザーの興味を引くためのタイトルと説明には英語のみを考慮しています。
 ```
+
+<a name="configuring-content-recommendations" />
 
 ## コンテンツ推薦の設定
 
@@ -45,6 +49,8 @@ Analytics Cloudは現在、ユーザーの興味を引くためのタイトル�
 
 
 
+<a name="an-example-of-how-to-implement-content-recommendations" />
+
 ## コンテンツ推薦を実装する方法の例
 
 コンテキストでのコンテンツ推薦を理解するために、次の例を考えてみましょう。 あなたのオンラインのキッチン用品店では、さまざまなキッチン関連商品を提供しています。 あるユーザーがサイトにアクセスし、コーヒーメーカー、コーヒーマグ、コーヒーブレンダーなどのコーヒーアクセサリと対話します。 Analytics Cloudは、ユーザーの対話に基づいて、ユーザーが関心を持つトピック（この例では「コーヒー」）を生成します。
@@ -55,6 +61,8 @@ DXPでは、動的コレクションを作成し、カトラリー、調理器�
 
 
 
+<a name="content-recommendations-and-segments" />
+
 ## コンテンツリコメンデーションとセグメント
 
 ユーザーの行動に基づいて推奨コンテンツを表示することは、[セグメント](../segmentation/creating-and-managing-user-segments.md)を使用してユーザーエクスペリエンスをパーソナライズすることとは異なります。 セグメントを使用する場合、ユーザーをグループに分類し、これらの特定のグループにコンテンツをターゲティングします。 セグメントベースのパーソナライゼーションでは、特定のコンテンツを特定のユーザーグループにターゲティングします。 コンテンツ推薦では、サイトでのユーザーの以前の動作に基づいてコンテンツがユーザーに自動的に推奨されるため、グループを定義する必要はありません。
@@ -62,6 +70,8 @@ DXPでは、動的コレクションを作成し、カトラリー、調理器�
 ただし、[セグメントを使用してコレクションをカスタマイズする](./personalizing-collections.md)機能を利用して、特定のユーザーグループにコンテンツ推薦を提供できます。 たとえば、コンテンツ推薦の動的コレクションを、ドイツからの訪問者のみを含むセグメントと組み合わせることができます。 この場合、ドイツからサイトに訪問した人だけが、このコレクションからコンテンツ推薦を受け取ります。
 
 
+
+<a name="related-information" />
 
 ## 関連情報
 

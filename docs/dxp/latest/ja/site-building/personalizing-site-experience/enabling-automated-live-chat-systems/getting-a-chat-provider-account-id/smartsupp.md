@@ -2,6 +2,8 @@
 
 [Smartsupp](https://www.smartsupp.com/) は、マルチチャネルの顧客コミュニケーションプラットフォームです。 この記事では、Liferayインスタンスとの[統合を可能にする](../enabling-automated-live-chat-systems.md)ためにSmartsuppアカウントIDを見つける方法について説明します。
 
+<a name="locating-your-smartsupp-account-id" />
+
 ## SmartsuppアカウントIDを見つける
 
 1. [Smartsuppアカウント](https://app.smartsupp.com/app/sign/in) にログインします。

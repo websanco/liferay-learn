@@ -6,6 +6,8 @@
 
 サイトの公開ページにテーマを割り当てると、そのテーマに含まれているトークン定義が、サイトのスタイルブックを作成するときに使用されます。
 
+<a name="defining-tokens-for-your-style-book" />
+
 ## スタイルブックのトークン定義
 
 トークン定義はテーマに関連付けられているため、トークン定義はテーマモジュールに含まれているCSS変数に対応している必要があります。 トークン定義自体は、テーマモジュールの`src/WEB-INF/`フォルダ内にある`.json`ファイルに、 `frontend-token-definition.json`という名前で指定します。
@@ -122,6 +124,8 @@
 ]
 ```
 
+<a name="matching-css-variables-to-style-book-tokens" />
+
 ## CSS変数をスタイルブックトークンに一致させる
 
 トークンの定義を含む`frontend-token-definition.json`ファイルは、テーマモジュールフォルダの`src/WEB-INF/`フォルダになければなりません。 トークン定義で定義されたすべてのトークンは、CSSでテーマのスタイル（色、間隔、フォントなど）を表している必要があります。
@@ -160,6 +164,8 @@ body {
 ```{important}
 `defaultValue`の値がトークン定義に含まれている場合、これは一致するCSS変数定義で定義されているデフォルト値と一致する必要があります。
 ```
+
+<a name="additional-information" />
 
 ## 追加情報
 

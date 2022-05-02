@@ -4,6 +4,8 @@
 
 ![プレースホルダー画像を使用したカスタムテーマ。](./bundling-a-thumbnail-preview-into-your-theme/images/01.png)
 
+<a name="adding-the-thumbnail" />
+
 ## サムネイルを追加する
 
 次の手順に従ってサムネイルを作成し、テーマにバンドルします。

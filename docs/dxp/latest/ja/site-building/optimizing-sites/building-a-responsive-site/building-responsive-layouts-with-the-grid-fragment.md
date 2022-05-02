@@ -14,6 +14,8 @@ Liferay DXPではデフォルトで[レスポンシブデザインが使用](./b
 
 ![デフォルトのグリッドレイアウトスタイルは、スマートフォンのスクリーンサイズに最適化されていません。](./building-responsive-layouts-with-the-grid-fragment/images/02.png)
 
+<a name="modifying-the-layout-of-the-grid-fragment" />
+
 ## グリッドフラグメントのレイアウトの変更
 
 1. [コンテントページを開いて編集](../../creating-pages/using-content-pages/adding-elements-to-content-pages.md)します（または新しい[コンテントページ](./../../creating-pages/adding-pages/adding-a-page-to-a-site.md)を作成します）。
@@ -36,6 +38,8 @@ Liferay DXPではデフォルトで[レスポンシブデザインが使用](./b
 ```{tip}
 選択したグリッドフラグメント構成を保存して、他のコンテンツページで再利用できます。 詳細については、 [フラグメント構成の保存](../../creating-pages/page-fragments-and-widgets/using-fragments/saving-fragment-compositions.md) を参照してください。
 ```
+
+<a name="additional-information" />
 
 ## 追加情報
 

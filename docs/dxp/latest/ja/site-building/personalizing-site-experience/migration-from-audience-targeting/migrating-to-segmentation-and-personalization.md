@@ -20,6 +20,8 @@ Liferay 7.2からは、セグメンテーションとパーソナライゼーシ
 
 最後に、オーディエンスターゲティングで行動ベースの機能を移行する必要があります。 Liferay DXP 7.2以降では、動作ベースのルールはLiferay Analytics Cloudを使用して管理されます。 詳細は、 [Analytics Cloudのドキュメント](https://learn.liferay.com/analytics-cloud/latest/ja/people/segments/segments.html) を参照してください。
 
+<a name="related-information" />
+
 ## 関連情報
 
 - [ユーザーセグメントの移行](./migrating-user-segments.md)

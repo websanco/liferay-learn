@@ -4,6 +4,8 @@
 初めてLiferayのインストールをセットアップする場合は、まず [初期インスタンスのローカリゼーション](../../installation-and-upgrades/setting-up-liferay/initial-instance-localization.md) を確認することをお勧めします。
 ```
 
+<a name="configuring-site-languages" />
+
 ## サイト言語の設定
 
 サイトのデフォルト言語を設定できます。 サイトで有効な言語を定義することもできます。
@@ -25,6 +27,8 @@
 1. 左矢印ボタンと右矢印ボタンを使用して、追加の言語を有効または無効にします。
 
 1. ［**保存**］ ボタンをクリックして変更を保存します。
+
+<a name="modifying-localizable-site-fields" />
 
 ## ローカライズ可能なサイトフィールドの変更
 

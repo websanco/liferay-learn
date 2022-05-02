@@ -13,15 +13,21 @@
 
 コンテナを追加したら、グリッドフラグメントを使用して、さまざまなビューポートのコンテンツレイアウトをカスタマイズできます。 詳細については、 [グリッドフラグメントを使用したレスポンシブレイアウトの構築](./../../../optimizing-sites/building-a-responsive-site/building-responsive-layouts-with-the-grid-fragment.md) を参照してください。
 
+<a name="containers" />
+
 ## コンテナ
 <!--TASK: Add Image-->
 コンテナフラグメントは、構成可能なドロップゾーンをコンテントページに追加します。 各コンテナには、標準の[一般](./configuring-fragments/general-settings-reference.md)オプションと[スタイル](./configuring-fragments/styles-reference.md)オプションが含まれています。 幅を設定してリンクを追加することもできます。 詳細については、 [Container Options](./configuring-fragments/general-settings-reference.md#container-options) を参照してください。
+
+<a name="grids" />
 
 ## グリッド
 <!--TASK: Add Image-->
 グリッドフラグメントは、ページまたはテンプレートに複数のドロップゾーンモジュールを追加します。 これらのモジュールは、水平および垂直に配置できます。
 
 標準の[一般](./configuring-fragments/general-settings-reference.md)および[スタイル](./configuring-fragments/styles-reference.md)オプションに加えて、各グリッドのモジュール数、行ごとのモジュール数、および各モジュールのコンテンツの垂直位置を決定できます。 各モジュールの幅を手動で調整し、モジュール間のパッディングを追加または削除することもできます。 詳細については、 [Grid Options](./configuring-fragments/general-settings-reference.md#grid-options) を参照してください。
+
+<a name="additional-information" />
 
 ## 追加情報
 

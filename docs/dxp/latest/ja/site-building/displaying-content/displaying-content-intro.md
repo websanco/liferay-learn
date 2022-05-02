@@ -12,9 +12,13 @@
 | 独自のページにコンテンツを表示         |             |             | &#10004; |
 | Webコンテンツに固有のフレンドリURLを提供 |             |             | &#10004; |
 
+<a name="web-content-display-widget" />
+
 ## Webコンテンツの表示ウィジェット
 
 Webコンテンツの表示ウィジェットは、個々の Web コンテンツ記事を表示します。 コメントや印刷オプションなど、ユーザーが有効にできるカスタマイズ可能な機能を提供します。 詳細は、[Webコンテンツの表示ウィジェットの使用](./additional-content-display-options/using-the-web-content-display-widget.md)を参照してください。
+
+<a name="asset-publisher" />
 
 ## アセットパブリッシャー
 
@@ -22,9 +26,13 @@ Webコンテンツの表示ウィジェットは、個々の Web コンテンツ
 
 表示するアセットを指定できます。 例えば、特定のタグやキーワードなど、特定の条件を満たすアセットのみを表示することができます。 アセットの静的なコレクションを手動で作成することも、その場で動的にコンテンツを選択するように設定することもできます。 詳細は、[Using the Asset Publisher Widget](./using-the-asset-publisher-widget/displaying-assets-using-the-asset-publisher-widget.md)を参照してください。
 
+<a name="display-page-template" />
+
 ## ディスプレイページテンプレート
 
 ディスプレイページテンプレートは、Webコンテンツをページ上でどのように編成およびフォーマットするかを定義します。 Asset PublisherまたはそのフレンドリURLからWebコンテンツの全文が表示されると、表示ページテンプレートに基づいて、独自のページに表示されます。 詳細は、[Using Display Pages](./using-display-page-templates/about-display-page-templates-and-display-pages.md)を参照してください。
+
+<a name="other-methods" />
 
 ## その他の方法
 

@@ -12,6 +12,8 @@ DXP 7.3では、複数のサイトで使用するナビゲーションメニュ�
 
 サイトビルダーメニューでは、ページとナビゲーションメニューを作成および整理できます。
 
+<a name="managing-pages" />
+
 ## ページの管理
 
 ［**サイトビルダー**］ → ［**ページ**］ メニューに表示されている階層が、そのサイトのページ構成の主なリファレンスです。 ナビゲーションメニューは一部のページを表示するようにカスタマイズされていますが、このメニューは常にサイト上のページの主要なリファレンスです。
@@ -20,12 +22,16 @@ DXP 7.3では、複数のサイトで使用するナビゲーションメニュ�
 
 新しいページは、 **サイトビルダー** &rarr; **ページ** メニューで作成されます。 ページは、誰でも閲覧できる公開ページにすることも、サイトメンバーだけが閲覧できる非公開ページにすることもできます。 ページを追加する方法については、 [サイトにページを追加する](../creating-pages/adding-pages/adding-a-page-to-a-site.md) を参照してください。
 
+<a name="using-navigation-menus" />
+
 ## ナビゲーションメニューの使用
 
 ナビゲーションメニューを作成してページに配置する方法については、 [ナビゲーションメニューの使用](./using-navigation-menus.md) を参照してください。 [メニュー表示フラグメント](../creating-pages/page-fragments-and-widgets/using-fragments/default-fragments-reference.md#menu-display) （Liferay DXP 7.4以降で使用可能）およびナビゲーションメニューウィジェットを構成する方法の詳細については、
 Configuring Navigation Menus を参照してください。
 
 
+
+<a name="using-the-page-tree" />
 
 ## ページツリーの使用
 
@@ -54,6 +60,8 @@ Configuring Navigation Menus を参照してください。
      ![ページツリーメニューからページを追加、プレビュー、構成、または並べ替えることができます。](./managing-site-navigation/images/04.png)
 
 
+
+<a name="additional-information" />
 
 ## 追加情報
 

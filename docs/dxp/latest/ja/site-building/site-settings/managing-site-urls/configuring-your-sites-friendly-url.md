@@ -2,6 +2,8 @@
 
 フレンドリURLは、公開ページと非公開ページの両方に使用されます。 公開サイトのベースURLは`https://localhost:8080/web`であり、非公開ページのベースURLは`https://localhost:8080/group`です。 これにより、ユーザーは長いURLを思い出さなくても、サイトにすばやくアクセスできます。 フレンドリURLはそれぞれ一意である必要があります。 URLパスは、`https://localhost:8080/`のURLに追加されます（例： `https://localhost:8080/web/my-site/`）。
 
+<a name="setting-a-sites-friendly-url" />
+
 ## サイトのフレンドリURLを設定する
 
 サイトのフレンドリURLを更新するには、次の手順に従います。
@@ -15,6 +17,8 @@
 ![サイトのフレンドリURLを設定できます。](./configuring-your-sites-friendly-url/images/01.png)
 
 サイトのホームページにフレンドリURLを追加する場合は、次のセクションの追加の手順に従ってください。
+
+<a name="updating-your-instances-home-url" />
 
 ## インスタンスのホームURLを更新する
 

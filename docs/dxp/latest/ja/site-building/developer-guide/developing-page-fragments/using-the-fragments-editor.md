@@ -9,6 +9,8 @@ Liferay DXP には、コンテンツページフラグメントを作成する�
 Liferay DXP 7.4以降の場合、フラグメントコレクションはLiferay UIではフラグメントセットと呼ばれます。
 ```
 
+<a name="creating-a-fragment-set" />
+
 ## フラグメントセットの作成
 
 新しいフラグメントを作成する前に、最初にそれらを配置する新しいフラグメントセットを作成する必要があります。
@@ -32,6 +34,8 @@ Liferay DXP 7.4以降の場合、フラグメントコレクションはLiferay 
 1. ［**Save**］ をクリックします。
 
 保存したら、フラグメントをセットに追加できます。
+
+<a name="creating-a-new-fragment" />
 
 ## 新しいフラグメントの作成
 
@@ -104,6 +108,8 @@ Liferay DXP 7.4以降の場合、フラグメントコレクションはLiferay 
 ```{note}
 Liferay DXP 7.2 SP1以降および Liferay Portal 7.2 GA2以降では、*グローバル* サイトでページ フラグメントを作成して、すべてのサイトで利用できるようにすることができます。 これらのバージョンの初期リリースでこの機能を公開するには、 `com.liferay.fragment.web.internal.configuration.FragmentGlobalPanelAppConfiguration.config` という名前の `.config` ファイルを作成し、 `enabled=B "true"` というプロパティを追加する必要があります。 そして、Liferay DXPインスタンスの `osgi/configs` フォルダにコピーしてください。 グローバル ページ フラグメントは子サイトに継承され、グローバル サイトからのみ編集できます。 グローバル ページ フラグメントがグローバル サイトから参照するすべてのリソースは、ページ フラグメントを利用するサイトにコピーされます。
 ```
+
+<a name="additional-information" />
 
 ## 追加情報
 

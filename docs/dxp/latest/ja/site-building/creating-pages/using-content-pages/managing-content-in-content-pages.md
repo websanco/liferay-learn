@@ -32,6 +32,8 @@
    インラインテキストを編集するには、*インラインコンテンツの編集*権限が必要です。
    ```
 
+<a name="for-liferay-dxpportal-73" />
+
 ## Liferay DXP/Portal 7.3の場合
 
 Liferay DXP/Portal 7.3の場合、 **コンテンツ** パネル（![Contents](../../../images/icon-list-ul.png)）のフラグメントとウィジェットを使用して展開されたWebコンテンツを確認できます。
@@ -51,6 +53,8 @@ Liferay DXP/Portal 7.3の場合、 **コンテンツ** パネル（![Contents](.
     ****編集** ：Webコンテンツを編集します
     ****権限設定** ：Webコンテンツの権限を更新します
     ****利用数を表示** ：Webコンテンツがサイトで使用されている場所を確認します
+
+<a name="additional-information" />
 
 ## 追加情報
 
