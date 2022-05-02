@@ -16,7 +16,7 @@ DXP 7.3以降では、ウィジェットページの上部にある目のアイ�
 ```
 
 ```{note}
-ウィジェットはウィジェットページの、 [render-weight](https://learn.liferay.com/reference/latest/en/dxp/definitions/liferay-portlet-app_7_3_0.dtd.html#render-weight) に従ってレンダリングされます。
+ウィジェットはウィジェットページの、 [render-weight](https://docs.liferay.com/ce/portal/7.3-latest/definitions/liferay-portlet-app_7_3_0.dtd.html#render-weight) に従ってレンダリングされます。
 ```
 
 <a name="additional-information" />

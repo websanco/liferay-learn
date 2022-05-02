@@ -37,7 +37,7 @@
 ```
 
 ```{note}
-ウィジェットページではポートレットは [render-weight](https://learn.liferay.com/reference/latest/en/dxp/definitions/liferay-portlet-app_7_3_0.dtd.html#render-weight) に従ってレンダリングされますが、コンテントページではその限りではありません。 ポートレットは、コンテントページでページ上に表示される順番（つまり、左から右、上から下）にレンダリングされます。したがって、コンテントページでの配置によって、一部のポートレットが早くレンダリングされたり遅かったりすることに気づくかもしれません。
+ウィジェットページではポートレットは [render-weight](https://docs.liferay.com/ce/portal/7.3-latest/definitions/liferay-portlet-app_7_3_0.dtd.html#render-weight) に従ってレンダリングされますが、コンテントページではその限りではありません。 ポートレットは、コンテントページでページ上に表示される順番（つまり、左から右、上から下）にレンダリングされます。したがって、コンテントページでの配置によって、一部のポートレットが早くレンダリングされたり遅かったりすることに気づくかもしれません。
 ```
 
 <a name="converting-widget-pages-directly-to-content-pages" />

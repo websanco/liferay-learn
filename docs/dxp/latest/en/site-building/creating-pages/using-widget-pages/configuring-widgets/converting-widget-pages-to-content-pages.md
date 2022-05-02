@@ -33,7 +33,7 @@ If you've already confirmed that a custom layout template can be converted, You 
 ```
 
 ```{note}
-While portlets are rendered according to [render-weight](https://learn.liferay.com/reference/latest/en/dxp/definitions/liferay-portlet-app_7_3_0.dtd.html#render-weight) on Widget Pages, that is not true for Content Pages. Portlets are rendered in the order they appear on the page on Content Pages (i.e. left to right, top to bottom), so you may notice some portlets are rendered sooner or later, depending on their placement on the Content Page.
+While portlets are rendered according to [render-weight](https://docs.liferay.com/ce/portal/7.3-latest/definitions/liferay-portlet-app_7_3_0.dtd.html#render-weight) on Widget Pages, that is not true for Content Pages. Portlets are rendered in the order they appear on the page on Content Pages (i.e. left to right, top to bottom), so you may notice some portlets are rendered sooner or later, depending on their placement on the Content Page.
 ```
 
 ## Converting Widget Pages Directly to Content Pages
