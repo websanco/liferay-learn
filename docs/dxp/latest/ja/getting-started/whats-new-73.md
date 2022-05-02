@@ -22,7 +22,7 @@ Liferay DXPの最新バージョンには多くの新機能が追加されまし
 
 ![コレクション表示フラグメントでは、ドラッグアンドドロップのインターフェイスを使用してアセットを公開します。](./whats-new-73/images/02.gif)
 
-[コレクション表示](../site-building/displaying-content/additional-content-display-options/displaying-collections.md#adding-a-collection-display-fragment-to-a-page)フラグメントでは、ドラッグアンドドロップ編集で一連のアセットを表示します。 フラグメントがページに追加されたら、コレクションにリンク付けします。 その後、コレクション内の各アセットのスペースを定義します。 スペースの調整は、残りのスペースにも反映されます。 編集可能なフィールドをコレクションの共通フィールドにマッピングすることができます。 例えば、見出しフラグメントが追加されると、Webコンテンツストラクチャーのタイトルフィールドにマッピングされます。このマッピングは各項目にプロパゲートします。
+[コレクション表示](../site-building/displaying-content/additional-content-display-options/displaying-collections.md#adding-a-collection-display-fragment-to-a-page) フラグメントでは、ドラッグアンドドロップ編集で一連のアセットを表示します。 フラグメントがページに追加されたら、コレクションにリンク付けします。 その後、コレクション内の各アセットのスペースを定義します。 スペースの調整は、残りのスペースにも反映されます。 編集可能なフィールドをコレクションの共通フィールドにマッピングすることができます。 例えば、見出しフラグメントが追加されると、Webコンテンツストラクチャーのタイトルフィールドにマッピングされます。このマッピングは各項目にプロパゲートします。
 
 ### ビジュアル・レスポンシブ・レイアウト・エディター
 
@@ -80,8 +80,6 @@ Liferay DXP 7.3でReactを使用するためにページエディターを全面
 
 Liferay DXP 7.3では、 [閲覧に関して、サイトメンバーのみとするか一般公開とするか](../content-authoring-and-management/tags-and-categories/organizing-content-with-categories-and-tags.md#vocabulary-visibility) 設定できるよう、ボキャブラリーに新しい設定を追加しました。 すぐに利用可能なオーディエンス、ステージ、およびトピックのグローバルボキャブラリーを使えば、サイト全体で体系的な分類がしやすくなります。
 
-<a name="publication-management" />
-
 ## パブリケーション管理
 
 [パブリケーション](../site-building/publishing-tools/publications/publications-overview.md) は、コンテンツ作成者が変更点に対応し、スケジュールに合わせて公開することができる新機能です。 画像やコピーの更新、新しいページの追加など、季節ごとの特別なプロモーションを展開しなければならない場合は、パブリケーションを作成し、必要なユーザーを招待して変更を行ってから公開することができます。 複数のパブリケーションを一度に作成できるため、一度に多くのアップデートを一括作成し、スケジュールに合わせて展開することが可能です。
@@ -126,8 +124,6 @@ Liferay DXP 7.3では、 [閲覧に関して、サイトメンバーのみとす
 
 この履歴により、あらゆるページで使用されている [レンドリーURLをすべて、言語ごとに](../site-building/creating-pages/page-settings/configuring-your-pages-friendly-url.md#managing-a-page-s-url-history) 簡単に確認でき、視覚的に管理できます。 URLを覚える必要はなく、他のページで再利用したり、古いフレンドリURLを復元したりすることができます。
 
-<a name="content-performance" />
-
 ## コンテンツパフォーマンス
 
 > サブスクリプションが必要です
@@ -168,7 +164,7 @@ Liferay DXP 7.3では、 [閲覧に関して、サイトメンバーのみとす
 
 > 変更通知を受け取り（購読）が必要
 
-アプリビルダーには、[承認のためのワークフロープロセス](../developing-applications/developing-low-code-applications/creating-a-workflow-powered-application.md)が含まれています。 プロセスの段階を定義し、アプリケーションの各段階でどの情報を要求、表示させるべきか指定します。 アプリのプロセスのパフォーマンスと健全性を把握できるよう、 [ワークフローメトリクス](#workflow-metrics-improvements) を活用することもできます。
+アプリビルダーには、[承認のためのワークフロープロセス](../building-applications/app-builder/creating-a-workflow-powered-application.md)が含まれています。 プロセスの段階を定義し、アプリケーションの各段階でどの情報を要求、表示させるべきか指定します。 アプリのプロセスのパフォーマンスと健全性を把握できるよう、 [ワークフローメトリクス](#workflow-metrics-improvements) を活用することもできます。
 
 ![プロセス主導型アプリ](./whats-new-73/images/22.png)
 
@@ -250,7 +246,7 @@ Liferay DXP 7.3では、 [閲覧に関して、サイトメンバーのみとす
 
 ## グローバルメニュー
 
-新しいアプリケーションドロワーには、ワークフロー、フォーム、および [コマース](https://learn.liferay.com/commerce/latest/en/index.html)などのクロスサイトアプリケーションが格納されています。
+新しいアプリケーションドロワーには、ワークフロー、フォーム、および [コマース](https://learn.liferay.com/commerce/latest/ja/index.html) などのクロスサイトアプリケーションが格納されています。
 
 ![グローバルメニューにより、クロスサイトアプリケーションが利用しやすくなります。](./whats-new-73/images/29.png)
 

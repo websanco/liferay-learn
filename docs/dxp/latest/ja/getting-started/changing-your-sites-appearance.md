@@ -14,7 +14,7 @@ DXP Dockerイメージには **クラシック** デフォルトで利用可能�
     docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
     ```
 
-1. [ Acmeサンプルブルーテーマ](./liferay-5b2v-theme.war) を含むWARをダウンロードする ：
+2.  [ Acmeサンプルブルーテーマ](./liferay-5b2v-theme.war) を含むWARをダウンロードする ：
 
     ```bash
     curl https://learn.liferay.com/dxp/latest/en/getting-started/changing-your-sites-appearance/liferay-5b2v-theme.war -O
@@ -48,7 +48,7 @@ DXP Dockerイメージには **クラシック** デフォルトで利用可能�
 
 4.  下にスクロールして、 **現在のテーマを変更をクリックします** ボタン：
 
-    ![［現在のテーマを変更］をクリックして、パブリックページの新しいテーマを選択します。](./changing-your-sites-appearance/images/02.png)
+    ![ [現在のテーマを変更]をクリックして、パブリックページの新しいテーマを選択します。](./changing-your-sites-appearance/images/02.png)
 
 5.  デプロイされたサンプルテーマ **Acme Sample Blue Themeを選択します。**
 

@@ -22,7 +22,7 @@ Liferay DXPのすぐに使えるナビゲーションは、 **個人用メニュ
 
 ## アプリケーションバー
 
-**アプリケーションバー** は、各ページの上部に表示され、アプリケーションは [サイトメニュー](#site-menu)に一覧表示されます。 アプリケーションバーには、現在開いているアプリケーションに応じて、さまざまなオプションが含まれるアクション（![Actions](../images/icon-actions.png)）メニューが表示されます。
+**アプリケーションバー** は、各ページの上部に表示され、アプリケーションは [サイトメニュー](#site-menu) に一覧表示されます。 アプリケーションバーには、現在開いているアプリケーションに応じて、さまざまなオプションが含まれるアクション（![Actions](../images/icon-actions.png)）メニューが表示されます。
 
 ![アプリケーションバーで使用できるアクションは、現在開いているアプリケーションによって異なります。](./navigating-dxp/images/07.png)
 
@@ -60,7 +60,7 @@ Liferay DXPのすぐに使えるナビゲーションは、 **個人用メニュ
 
 ユーザーはパーソナルメニューを使用して次のことができます。
 
-* [アカウント情報を変更する](./introduction-to-the-admin-account.md#changing-account-information)（名前、パスワードなど）
+* [アカウント情報を変更する](./introduction-to-the-admin-account.md#changing-account-information) （名前、パスワードなど）
 * [メンバーとなっているサイトを確認する](../site-building/building-sites/site-membership/adding-members-to-sites.md)
 * [サイト通知を確認する](../collaboration-and-social/notifications-and-requests/user-guide/managing-notifications-and-requests.md)
 * [サインアウトする](./introduction-to-the-admin-account.md#signing-out)
@@ -96,13 +96,13 @@ Liferay 7.3 CE GA6およびLiferay DXP 7.3 GA1以降、Liferay Commerce 3.0はLi
 
 **コマース** メニューから管理できる機能は次のとおりです。
 
-* [新しいカタログを作成する](https://learn.liferay.com/commerce/latest/en/managing-a-catalog/catalogs/creating-a-new-catalog.html)
-* [新しいチャンネルを作成する](https://learn.liferay.com/commerce/latest/en/starting-a-store/channels/managing-channels.html)
-* [在庫を管理する](https://learn.liferay.com/commerce/latest/en/managing-a-catalog/managing-inventory/introduction-to-managing-inventory.html)
-* [注文を処理する](https://learn.liferay.com/commerce/latest/en/orders-and-fulfillment/orders/processing-an-order.html)
+* [新しいカタログを作成する](https://learn.liferay.com/commerce/latest/ja/managing-a-catalog/catalogs/creating-a-new-catalog.html)
+* [新しいチャンネルを作成する](https://learn.liferay.com/commerce/latest/ja/starting-a-store/channels/managing-channels.html)
+* [在庫を管理する](https://learn.liferay.com/commerce/latest/ja/managing-a-catalog/managing-inventory/introduction-to-managing-inventory.html)
+* [注文を処理する](https://learn.liferay.com/commerce/latest/ja/orders-and-fulfillment/orders/processing-an-order.html)
 * その他
 
-Liferay Commerceの詳細については、[Introduction to Liferay Commerce](https://learn.liferay.com/commerce/latest/en/starting-a-store/introduction-to-liferay-commerce.html)を参照してください。
+Liferay Commerceの詳細については、 [Liferay Commerceの概要](https://learn.liferay.com/commerce/latest/ja/starting-a-store/introduction-to-liferay-commerce.html) を参照してください。
 
 ### コントロールパネル
 
