@@ -1,53 +1,70 @@
-# サイトテンプレートを使用したサイトの構築
+# サイトテンプレートによるサイト構築
 
 サイトテンプレートは、サイトの事前構成された構造を定義します。これには、ページ、テーマ、コンテンツ、レイアウト、ページテンプレート、アプリケーション、および各ページに定義されたアプリの構成が含まれます。 サイトテンプレートに加えられた変更は、特に指定がない限り、それを使用するサイトに自動的に反映されます。
 
+```{note}
+サイトテンプレートは、サイトの変更を伝えるものではありますが、サイトのデータを伝える手段としては使用しないでください。 サイトのデータを伝播させるには、代わりに[データをエクスポートして別のサイトにインポートする](./importing-exporting-pages-and-content.md)が必要です。
+```
+
 すぐに使用できる3つのサイトテンプレートが用意されています。
 
-  - **空白のサイト：**ページやコンテンツを含まないサイトを作成します。
+- **ブランクサイト：** ページやコンテンツを持たないサイトを作成します。
 
-  - **コミュニティサイト：**メッセージボード、検索、ポール、アクティビティ、およびWikiアプリケーションがサイトページに事前にデプロイされた、事前設定されたサイトを作成します。
+- **コミュニティーサイト：** 掲示板、検索、アンケート、最近のコンテンツ、Wiki、ナビゲーションなどのアプリケーションがサイトページに事前デプロイされた、設定済みのサイトを作成します。
 
-  - **イントラネットサイト：**イントラネット用に事前設定されたサイトを作成します。 ホームページには、サイトのメンバーのアクティビティ、検索、言語セレクター、およびイントラネットで作成された最近のコンテンツのリストが表示されます。 また、ドキュメントとメディアのページと、パブリックフィードを介して取得した外部ニュースのページも提供されます。
+- **社内ポータルサイト：**社内ポータル用に事前設定されたサイトを作成します。 ホームページには、サイトメンバーのアクティビティ、言語選択機能、社内ポータルで作成された最近のコンテンツの一覧などが表示されます。 また、ドキュメントとメディアのページと、パブリックフィードを介して取得した外部ニュースのページも提供されます。
 
 ## サイトテンプレートからサイトを作成する
 
 サイトテンプレートを使用してサイトを作成するには、次の手順に従います。
 
-1.  製品メニューを開き、 *[Control Panel]* → *[Sites]* → *[Sites]* に移動します。
+1. [グローバルメニュー](../../getting-started/navigating-dxp.md) （ ![Global Menu icon](../../images/icon-applications-menu.png)）を開き、*［Control Panel］* &rarr; *［Sites］*へ行きます。
 
-    ![コントロールパネルの [Sites]オプションに移動。](./building-sites-with-site-templates/images/03.png)
+    ![コントロールパネルの［サイト］オプションに移動。](./building-sites-with-site-templates/images/01.png)
 
-2.  *追加*アイコン（![Add Site](../../images/icon-add.png)）をクリックし、メニューからサイトテンプレートを選択します。
+1. *追加* アイコン (![Add Site](../../images/icon-add.png)) をクリックし、メニューから［サイトテンプレート］を選択します。
 
-3.  サイトの名前を入力します。
-
-      - *[Create default pages as private (available only to members)]* をオンにすると、ゲストユーザーはサイトページを表示できなくなります。
-
-4.  *[保存]* をクリックします。
-
-5.  [サイト設定](../site-settings/README.rst) を構成します。
-
-6.  フォームの下の*[Pages]* パネルを開きます。
-
-    ![サイト構成ページのドロップダウンを展開し、サイトテンプレートのオプションを表示。](building-sites-with-site-templates/images/04.png)
+1. サイトの名前を入力します。
 
     ```{note}
     [*Enable propagation of changes from the Site template*]をオンにすると、サイトテンプレートが変更された場合にサイトが更新を受信できるようになります。 サイトテンプレートから作成されたサイトに直接変更が加えられた場合、そのサイトはサイトテンプレートから更新を受け取りません。 詳細については、[Merging Site Template Changes](./merging-site-template-changes.md)を参照してください。
     ```
 
-7.  *[保存]* をクリックしてサイトを作成します。
+1. *［Save］*をクリックします。
 
-8.  製品メニューを開き、コントロールパネルの*[Sites]* → *[Sites]* に移動します。
+1. [サイトの設定](../site-settings/site-settings-ui-reference.md)を構成します。
 
-9.  *[Actions]* をクリックし、新しいサイトの横にある*[Go to Public Pages]* または*[Go to Private Pages]* を選択して表示します。
+    - Liferay DXP 7.4+の場合
 
-    ```{tip}
-    To view a newly created *blank site*, you must first create a page for it. See [サイトにページを追加する](../creating-pages/adding-pages/adding-a-page-to-a-site.md) for more information.
+      1. サイトメニューから、*［Configuration］* &rarr; *［Site Settings］*に移動します。
+      1. ［コンテンツとデータ］セクションで、*［Pages］*をクリックします。
+      1. サイトスコープで*［Pages］*をクリックします。
+
+            ![Liferay DXP 7.4では、ページセクションからページの設定を変更します。](./building-sites-with-site-templates/images/03.png)
+
+    - 以前のLiferay DXPバージョンの場合
+
+      1. サイトメニューから、*［Configuration］* &rarr; *［Settings］*に移動します。
+      1. 一般エリアで、*［ページ］* のセクションを展開します。
+
+            ![Liferay DXPの旧バージョンでは、PagesセクションからPagesの設定を変更します。](./building-sites-with-site-templates/images/02.png)
+
+    ```{note}
+    *Enable propagation of changes from Site Template*は、サイトテンプレートが変更された場合に、サイトが更新情報を受け取ることを可能にします。 サイトテンプレートから作成されたサイトに直接変更が加えられた場合、そのサイトはサイトテンプレートから更新を受け取りません。 詳しくは[サイトテンプレートの変更をマージする](./merging-site-template-changes.md)をご覧ください。
     ```
 
-## 追加情報
+1. *［保存］*をクリックしてサイトを作成します。
 
-  - [Introduction to Site Building (近日公開！)](../introduction-to-site-building.md)
-  - Creating a Site Template
-  - [Adding Members to Sites](./adding-members-to-sites.md)
+1. グローバルメニュー（ ![Global Menu icon](../../images/icon-applications-menu.png) ）を開き、*［コントロールパネル］* のタブから*［サイト］*を開きます。
+
+1. 新しいサイトの横にある*アクション*をクリックし、 ![アクションアイコン](../../images/icon-actions.png) *［公開ページへ移動］* または *［非公開ページへ移動］* を選択して表示します。
+
+    ```{tip}
+    新しく作成した*ブランクサイト*を見るには、まずそのページを作成する必要があります。 詳しくは「サイトにページを追加する」(../creating-pages/adding-pages/adding-a-page-to-a-site.md)をご覧ください。
+    ```
+
+## 関連情報
+
+- [サイト構築の概要](../introduction-to-site-building.md)
+- [サイトテンプレートの作成](./building-sites-with-site-templates.md)
+- [サイトにメンバーを追加する](./site-membership/adding-members-to-sites.md)

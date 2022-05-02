@@ -1,34 +1,44 @@
 # Open Graphの設定
 
-[Open Graph](https://ogp.me/) のメタタグはすべてのページに埋め込まれているため、Facebook、Twitter、Slackなどの対応するアプリケーションでコンテンツを共有できます。 この動作は、サイトの一般設定から無効にできます。
+> 対応可能：Liferay DXP/Portal 7.3以降
 
-<!-- It'd be great to have a screenshot here of the practical application of this feature. -->
+[Open Graph](https://ogp.me/) は、Facebook、Slack、Twitterなど、サイトコンテンツをサポートしているアプリケーションコンテキストで共有する際に、サイトコンテンツのプレビューを標準化するインターネットプロトコルです。 これは、 `<meta>` タグとしてページヘッダーに構造化データを埋め込むことで、 [RDFa](https://en.wikipedia.org/wiki/RDFa) と同じように実現します。
 
-1.  サイトメニューを開き、*[設定]* → *[Settings]* （以前は *[サイト設定]*）に移動します。
+デフォルトでは、Open Graph `<meta>`タグはすべてのLiferay公開ページに埋め込まれていますが、必要に応じてサイトレベルでこの動作を無効にすることができます。 サイト設定では、デフォルトの`og:image`プロパティを設定することもできます。 これらの値は、 [ページ](../creating-pages/page-settings/configuring-individual-pages.md#open-graph) または[表示ページ](../displaying-content/using-display-page-templates/configuring-seo-and-open-graph.md)レベルで上書きされない限り、すべてのページに使用されます。
 
-2.  *[Open Graph]* 小見出しまで下にスクロールして、展開します。
+```{note}
+Open Graph [](meta) タグは、認証されていないユーザーへの公開ページヘッダーにのみ含まれます。 非公開ページや、ユーザーがログインしているときの公開ページには含まれません。
+```
 
-3.  *[Open Graphを有効にする]* 設定をオン/オフにしてこの機能を有効/無効にしたり、オプションでOpen Graphタグのデフォルトとして機能するOpen Graph画像を設定します。
+次の手順に従って、サイトにOpen Graphを構成します。
 
-![サイトの設定の [全般]タブで、サイト全体のOpen Graph設定を構成します。](./configuring-open-graph/images/01.png)
+1. *サイトメニュー* （![Site Menu](../../images/icon-product-menu.png)）を開き、*［設定］* &rarr; *［Settings］* （以前は*［サイト設定］*）に移動します。
 
-ここから、Open Graphを有効/無効にしたり、サイトのページに使用されるデフォルトの`og:image`プロパティを定義したりできます。
+1. *［Open Graph］*小見出しまで下にスクロールして、展開します。
 
-## Open Graphの有効化と無効化
+1. *［Enable Open Graph］*設定をオンまたはオフにし、サイトのOpen Graphを有効または無効にします。
 
-デフォルトでは、Open Graph `<meta>`タグは、すべてのページに埋め込まれています。 Open Graphに対応するアプリケーションで共有したときに、コンテンツがどのように表示されるかをカスタマイズできます。 この動作を無効にするには、単に*[Open Graphを有効にする]* をオフにします。
+   ![サイトのページに埋め込まれたOpen Graphタグを有効または無効にします。](./configuring-open-graph/images/01.png)
 
-![サイトのページに埋め込まれたOpen Graphタグを有効または無効にします。](./configuring-open-graph/images/02.png)
+1. （オプション）*［Image］*フィールドと*［画像の別の説明］*フィールドを使用して、サイトのページのデフォルトの`og:image`プロパティを設定します。
 
-## Open Graph画像の設定
+   これらの値は、 [ページ](../creating-pages/page-settings/configuring-individual-pages.md#open-graph) および[表示ページ](../displaying-content/using-display-page-templates/configuring-seo-and-open-graph.md)の構成によって上書きされます。
 
-*[Image]* および*[画像の別の説明]* フィールドを使用して、サイトの`og:image`プロパティを定義することができます。
+   ![サイトで使用されるデフォルトのog:imageおよびog:image:altプロパティを定義します。](./configuring-open-graph/images/02.png)
 
-![サイトで使用されるデフォルトのog:imageおよびog:image:altプロパティを定義します。](./configuring-open-graph/images/03.png)
+1. デフォルトの`og:image`構成をプレビューします。
 
-画像を選択すると、DXPは選択した画像の表示方法を決定する多くの構造化プロパティを自動的に追加します。 [画像] フィールドは、次の `<meta>` タグを定義します。
+   画像の比率は、共有する場所によって変わる可能性があることに注意してください。
 
-``` html
+   ![デフォルトのOpen Graph設定をプレビューします。](./configuring-open-graph/images/03.png)
+
+1. *［保存］* をクリックします。
+
+## `og:image`プロパティの分析
+
+画像を選択すると、DXPは選択した画像の表示方法を決定する多くの構造化プロパティを自動的に追加します。 ［画像］ フィールドは、次の `<meta>` タグを定義します。
+
+```html
 <meta property="og:image" content="http://example.com/ogp.jpg" />
 <meta property="og:image:secure_url" content="https://secure.example.com/ogp.jpg" />
 <meta property="og:image:type" content="image/jpeg" />
@@ -36,20 +46,16 @@
 <meta property="og:image:height" content="300" />
 ```
 
-[画像の別の説明]フィールドにテキストを入力すると、選択した画像のスクリーンリーダーで読み取られるデフォルトのテキストが決まります。 Open Graph画像のローカライズされた別の説明を作成するには、*[言語フラグ]* ボタンをクリックして、設定する言語を選択します。 ここで入力された値によって、デフォルトの`og:image:alt`タグが定義されます。
+［画像の別の説明］フィールドにテキストを入力すると、選択した画像のスクリーンリーダーで読み取られるデフォルトのテキストが決まります。
 
-``` html
+Open Graph画像のローカライズされた別の説明を作成するには、*［言語フラグ］*ボタンをクリックして、設定する言語を選択します。 ここで入力された値によって、デフォルトの`og:image:alt`タグが定義されます。
+
+```html
 <meta property="og:image:alt" content="This is an example." />
 ```
 
-ここでは、サポートされているコンテキストでOpen Graph画像がどのように表示されるかをプレビューすることもできます。 ただし、ページのURLが共有されている場所によって、画像の比率が変わる場合があります。
-
-![デフォルトのOpen Graph設定をプレビューします。](./configuring-open-graph/images/05.png)
-
-終了したら、*[保存]* をクリックして変更を適用します。
-
 ## 追加情報
 
-  - [Search Engine Optimization](./../optimizing_sites.html#search-engine-optimization)
-  - [サイト設定UIリファレンス](./site-settings-ui-reference.md)
-  - [個々のページの構成 (近日公開！)](./../creating-pages/page-settings/configuring-individual-pages.md)
+* [検索エンジンを最適化](../../optimizing_sites.html)
+* [サイト設定UIリファレンス](./site-settings-ui-reference.md)
+* [ページ単位での設定](./../creating-pages/page-settings/configuring-individual-pages.md)

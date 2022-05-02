@@ -10,17 +10,17 @@ A/Bテストでは、さまざまなユーザーのバリエーションをテ�
 
 A/Bテストを実行するには、Liferay DXPインスタンスを [Liferay Analytics Cloudに接続する](https://learn.liferay.com/analytics-cloud/latest/ja/connecting-data-sources/connecting-liferay-dxp-to-analytics-cloud.html) 必要があります。 プロセスは次のとおりです。
 
-  - Liferay DXPでA/Bテストを作成します。
-  - A/BテストはAnalytics Cloudと自動的に同期します。
-  - Liferay DXPまたはAnalytics CloudでA/Bテストを開始または終了します。
-  - Liferay DXPとAnalytics Cloudは、テストが終了すると、テストのステータスと勝利したバリアントを表示します。
-  - Analytics CloudでA/Bテストの他の側面（テスト履歴、統計、バリアント比較など）を管理します。
+* Liferay DXPでA/Bテストを作成します。
+* A/BテストはAnalytics Cloudと自動的に同期します。
+* Liferay DXPまたはAnalytics CloudでA/Bテストを開始または終了します。
+* Liferay DXPとAnalytics Cloudは、テストが終了すると、テストのステータスと勝利したバリアントを表示します。
+* Analytics CloudでA/Bテストの他の側面（テスト履歴、統計、バリアント比較など）を管理します。
 
 Analytics CloudでA/Bテストを行う詳細は、 [A/Bテスト](https://learn.liferay.com/analytics-cloud/latest/ja/optimization/a-b-testing.html) を参照してください。
 
 ## 関連情報
 
-  - [A/Bテスト要件の確認](./verifying-ab-test-requirements.md)
-  - [A/Bテストの作成](./creating-ab-tests.md)
-  - [Running and Monitoring A/B Tests](./running-and-monitoring-ab-tests)
-  - [A/Bテスト結果のレビューとテストバリアントの公開](./reviewing-ab-test-results-and-publishing-test-variants.md)
+- [A/Bテスト要件の確認](./verifying-ab-test-requirements.md)
+- [A/Bテストの作成](./creating-ab-tests.md)
+- [A/Bテストの実行と監視](./running-and-monitoring-ab-tests)
+- [A/Bテスト結果のレビューとテストバリアントの公開](./reviewing-ab-test-results-and-publishing-test-variants.md)

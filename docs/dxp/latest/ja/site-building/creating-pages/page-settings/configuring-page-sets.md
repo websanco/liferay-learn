@@ -1,80 +1,100 @@
-# ページセットの構成
+# ページセットの設定
 
-近日公開！
+[ページセット](../understanding-pages/understanding-pages.md#page-sets) は、サイト内のページのグループです。これらのページは公開ページ又は非公開ページのいずれかになります。 ページセット用に設定された設定は、ページセット内のすべてのページに適用され、サイトレベルのオプションをオーバーライドします。 [個々のページのカスタマイズ](./configuring-individual-pages.md)は、 ページセットのカスタマイズをオーバーライドします。
 
+ページセットの設定にアクセスするには
 
-<!-- Options configured for the Page Set apply to all its pages and override options set at the Site level. However, [customizations to an individual page](./configuring-individual-pages.md) override those for the Page Set. To configure a Page Set, follow these steps:
+1. _プロダクト_（![Product menu](../../../images/icon-product-menu.png)）メニュー &rarr; _［サイトビルダー］_&rarr; _［Pages］_ に移動します。
+1 _［公開ページ］_の隣にある歯車のアイコンをクリックします。 また、サイトの_［Private Pages］_のページセットを変更することもできます。
 
-1. Open the Product Menu and go to *Site Builder* &rarr; *Pages* under the Site Menu. Alternatively, since Liferay DXP 7.3, you can click the (![icon-page-tree](../../../../icon-page-tree.png)) icon next to the Site name to open the Page Tree Menu.
+![公開ページのページセットオプションに移動します。](./configuring-page-sets/images/01.png)
 
-1. Click the Gear icon, or select *Configure* from the Actions Menu in the Page Tree Menu, next to the Page Set to configure its pages.
+## ページセットのルック＆フィールを設定する
 
-1. Configure the options under the [*Look and Feel* tab](#look-and-feel) and [*Advanced* tab](#advanced) (if required) for the Page Set.
+_［Look and Feel］_ タブでは、サイトのページセットのルック&フィールとサイトロゴをカスタマイズすることができます。
 
-1. Click *Save* to apply the updates to the Page Set.
+### ルック&フィール
 
-The available Page Set settings are described below.
+テーマは、サイトの全体的な雰囲気を作り出し、外観をまったく変えてしまうことができます。 _［Current Theme］_ セクションには、現在ページセットに適用されているテーマと、そのテーマが持つ設定可能なテーマ設定および配色が表示されます。 多くのテーマには複数の配色が含まれており、既存のルック＆フィールを維持しながら、サイトに異なるテイストを与えることができます。
 
-## Look and Feel
+![ルック&フィールインターフェイスでは、現在のサイトのテーマを選択することができます。](./configuring-page-sets/images/02.png)
 
-Page Set configuration starts with the *Look and Feel* tab. Here you can choose a Theme for the current site and update the logo.
+現在のテーマを変更する場には
 
-![Figure 1: The Look and Feel page set tab.](./configuring-page-sets/images/01.png)
+1. _［現在のテーマを変更する］_ ボタンをクリックし、表示されたウィンドウからテーマを選択します。
+1. 希望のテーマを選択します。
 
-### Current Theme
+    ![用意されたテーマの中から好きなものを選んでください。](./configuring-page-sets/images/05.png)
 
-Themes create the overall feel for the Site and can transform the look entirely. The *Current Theme* section displays the Theme currently applied to the Page Set, along with any configurable theme settings and color schemes that the Theme has. Many Themes include more than one color scheme, which keeps the existing look and feel while giving the Site a different flavor. The *CSS* section lets you enter custom CSS for tweaking your Theme. You can apply Themes to the entire Site (described here) or to individual pages (described in [Configuring Pages](./configuring-individual-pages.md#look-and-feel)).
+1. _［保存］_ をクリックすると、新しいテーマがページセットに適用されます。
 
-To apply a Theme to the Page Set, follow these steps:
+*［CSS］* セクションにカスタムCSSを入力し、テーマを変更することができます。 テーマは、サイト全体（ここで説明）または個々のページ（ [ページの設定](./configuring-individual-pages.md#look-and-feel) で説明）に適用することができます。
 
-1. Click the *Change Current Theme* button and select the Theme from the window that appears.
+### ロゴ
 
-1. Configure the Theme's settings.
+デフォルトでは、サイトのページにはLiferayのロゴが使用されます。 サイトに独自のロゴを使用するには
 
-1. Click *Save* to apply the new Theme to the Page Set.
+1. _［ロゴ］_ セクションを展開します。
+1. _［変更］_ ボタンをクリックします。
+1. ロゴのある場所を参照します。 ロゴが、お使いのサイトのテーマの左上隅にあるスペースに収まることを確認してください。 そうしないと、他のページ要素が押しのけられ、ロゴが配置されることになります。
+1. サイトにサイト名を表示するかどうかを選択します。 _［サイト名を表示］_ を有効にすると、ロゴの横にサイト名が表示されるようになります。
 
-![Figure 2: The Look and Feel interface allows you to choose a theme for the current site.](./configuring-page-sets/images/02.png)
+    ```{note}
+    このオプションはデフォルトで有効になっており、*インスタンス設定*で*Allow Site Administrators to set their own logo*オプションが無効になっている場合は無効化することができません。 サイト名の削除は、デフォルトのLiferayサイトでは利用できません--新しいサイトとユーザーページでのみ設定可能です。
+    ```
 
-See the [Themes](TODO) section for information on creating and developing your own custom Themes ([creating theme settings](TODO), [color schemes](TODO), etc.).
+1. *［保存］*をクリックして変更を適用します。
 
-### Logo
+サイトのロゴの設定が完了しました。
 
-By default, the Liferay logo is used for your Site's pages. To use your own logo for a Site, follow these steps:
+## ページセットの詳細設定の設定
 
-1. Expand the *Logo* panel under the *Look and Feel* tab.
+_［Advanced］_タブには、サイトと全体のパフォーマンスに影響を与えるいくつかのオプションが含まれています。 管理者の方は注意して進めてください。
 
-1. Click the *Change* button and browse to the location of your logo. Make sure your logo fits the space in the top left corner of the Theme you're using for your Site. If you don't, you could wind up with a Site that's difficult to navigate, as other page elements are pushed aside to make way for the logo.
-
-1. Choose whether to display the Site name on the Site. When *Show Site Name* is enabled, the Site name appears next to the logo.
-
-  ```{note}
-  This option is enabled by default and can't be disabled if the *Allow Site Administrators to set their own logo* option is disabled in *Instance Settings*. Removing the Site name is not available for the default Liferay Site---you can configure this only for new Sites and User pages.
-  ```
-
-1. Click *Save* to apply the changes.
-
-## Advanced
-
-```{warning}
-The *Advanced* tab contains powerful options that should only be used by those with a firm command of the technology, or they could have major unintended side effects. Proceed with caution.
-```
+![［詳細設定］タブには、サイトを拡張するための複数のオプションが含まれています。](./configuring-page-sets/images/03.png)
 
 ### JavaScript
 
-At the top of the *Advanced* tab is a JavaScript editor. Code entered here is executed at the bottom of every page in the Site. Your site's JavaScript is most likely (and should be) included with the Theme. However, this may be a good place to quickly test JavaScript code while not in production.
+_［JavaScript］_タブでは、JavaScriptエディターでJavaScriptを貼り付けることができます。 ここで入力されたコードは、サイトのすべてのページの下部で実行されます。 あなたのサイトのJavaScriptは、テーマに含まれている可能性が高いです（含まれている必要があります）。 しかし、本番環境でない間に、JavaScriptのコードを素早くテストするには良い場所かもしれません。
 
-### Advanced
+### 詳細設定
 
-If you have multiple Sites on your Liferay Portal instance, one Site is marked as the *Default Site* that visitors are shown when they visit the Site. By default, only the default Site's Public Pages are displayed in the navigation. You can display the other Site's Public Pages in the default Site's navigation as well by enabling the *Merge public pages* option for that Site. Be careful, as adding too many pages to the main navigation can make it become unwieldy very quickly.
+複数のサイトがある場合、1つのサイトは _デフォルトサイト_ としてマークされ、訪問者があなたのドメイン名を訪問したときに表示されます。 デフォルトでは、ナビゲーションに表示されるのは、デフォルトサイトの公開ページのみです。
 
-### Mobile Device Rules
+そのサイトの_［公開ページをマージする］_オプションを有効にすると、別のサイトの公開ページをデフォルトサイトのナビゲーションに表示することができます。
 
-*Mobile Device Rules* lets you configure behaviors for specific mobile devices or types for the Page Set. Mobile device rules are inherited from your Public Pages, but you can define specific rules per page. You can edit the Look and Feel of specific pages for mobile devices, including the theme. See [Mobile Device Rules](TODO) for more information.
+```{warning}
+メインナビゲーションに多くのページを追加すると、すぐに使い勝手が悪くなってしまいます。
+```
 
-### Robots
+1. _［Merge Liferay DXP public pages］_ ボックスにチェックを入れます。
 
-The *Robots* option lets you configure `robots.txt` rules for the domain's public and private pages. The `robots.txt` file provides instructions to search engines and other tools that are automatically crawling and indexing your Site. For example, you can specify not to index certain pages.
+    ![あなたのサイトの一番上のレベルをDXPゲストサイトに統合することができます。](./configuring-page-sets/images/04.png)
 
-### Sitemap
+1. 完了したら、_［保存］_をクリックします。
 
-The *Sitemap* option generates a sitemap you can send to some search engines so they can crawl your site. It uses the industry standard sitemap protocol. Select a search engine link to send the sitemap to it (only required once per Site), or select the *preview* link to see the generated XML that is sent to search engines. -->
+### モバイルデバイスルール
+
+_［Mobile Device Rules］_を追加すると、ページセットの特定のモバイルデバイスまたはタイプの動作を設定することができます。 モバイルデバイスルールは、公開ページから継承されますが、ページごとに特定のルールを定義することができます。 テーマを含む、モバイル端末向けの特定のページのルック&フィールを編集することができます。 詳しくは、[モバイルデバイスルール](../../optimizing-sites/building-a-responsive-site/creating-mobile-device-rules.md)を参照してください。
+
+### ロボット
+
+ここでは、ドメインの公開ページと非公開ページの `robots.txt`ルールに検索とインデックスのルールを設定することができます。 `robots.txt`ファイルは、あなたのサイトを自動的にクロールおよびインデックスしている検索エンジンやその他のツールに対する指示を提供します。 例えば、特定のページをインデックスしないように指定することができます。
+
+### サイトマップ
+
+検索エンジンがあなたのサイトをクロールできるように、サイトマップを生成します。 業界標準のサイトマッププロトコルを使用しています。 検索エンジンのリンクを選択してサイトマップを送信するか（1サイトにつき1回のみ必要）、 _プレビュー_リンクを選択して検索エンジンに送信された生成XMLを確認することができます。
+
+## ページツリーメニューを使う
+
+Liferay DXP 7.3では、_ページツリー_メニューから同じ設定にアクセスすることができます。
+
+1. （![icon-page-tree](../../../images/icon-page-tree.png)）アイコンをクリックします。
+1. ドロップダウンメニューから、_［Public Pages］_または_［非公開ページ］_を選択します。
+1. 歯車のアイコンをクリックします。
+
+    ![ページツリーメニューから、同じページセットオプションにアクセスすることができます。](./configuring-page-sets/images/06.png)
+
+## 追加情報
+
+* [ページ単位での設定](./configuring-individual-pages.md)

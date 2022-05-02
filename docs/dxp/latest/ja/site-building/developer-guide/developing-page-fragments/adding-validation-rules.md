@@ -6,7 +6,7 @@
 
 次のJSONコードは、 `text`タイプフィールドの有効なエントリー（つまり`minLength`および`maxLength`）で使用される最小および最大文字数を設定する`text`検証ルールを追加します。
 
-``` json
+```json
 {
     "fieldSets": [
         {
@@ -36,7 +36,7 @@
 
 次のJSONコードは、 `text`タイプフィールドの有効なエントリーの数値範囲（つまり`min`および`max`）を定義する`number`検証ルールを追加します。
 
-``` json
+```json
 {
     "fieldSets": [
         {
@@ -67,7 +67,7 @@
 
 次のJSONコードは、メール構文を要求し、`text`タイプフィールドの有効なエントリーの文字長（つまり`minLength`および`maxLength`）を定義する`email`検証ルールを追加します。
 
-``` json
+```json
 {
     "fieldSets": [
         {
@@ -97,7 +97,7 @@
 
 次のJSONコードは、適切なURLプロトコルを要求し、`text`タイプフィールドの有効なURLの文字長（つまり`minLength`および`maxLength`）を定義する`url`検証ルールを追加します。
 
-``` json
+```json
 {
     "fieldSets": [
         {
@@ -128,10 +128,10 @@
 次のJSONコードは、正規表現を使用して`pattern`検証ルールを`text`タイプフィールドに追加して、有効なエントリーを定義します。
 
 ```{note}
-正規表現値の文字をエスケープするためにバックスラッシュを使用する場合（例：`\d`）、最初にバックスラッシュをエスケープするために`JSON`ファイル内で2つのバックスラッシュを使用する必要があります (例：`\\d`)。 JSONの文法の詳細は、 [IETF](./https://www.ietf.org/rfc/rfc4627.txt) ドキュメンテーションを参照してください。
+正規表現値の文字をエスケープするためにバックスラッシュを使用する場合（例：`\d`）、最初にバックスラッシュをエスケープするために`JSON`ファイル内で2つのバックスラッシュを使用する必要があります (例：`\\d``)。 JSONの文法については、 [IETF]（https://www.ietf.org/rfc/rfc4627.txt） のドキュメントを参照してください。
 ```
 
-``` json
+```json
 {
     "fieldSets": [
         {
@@ -158,6 +158,6 @@
 
 ## 追加情報
 
-  - [フラグメントの開発](./developing-fragments-intro.md)
-  - [フラグメントエディターの使用](./using-the-fragments-editor.md)
-  - [フラグメントへの構成オプションの追加](./adding-configuration-options-to-fragments.md)
+* [フラグメントの開発](./developing-fragments-intro.md)
+* [フラグメントエディターの使用](./using-the-fragments-editor.md)
+* [フラグメントへの構成オプションの追加](./adding-configuration-options-to-fragments.md)

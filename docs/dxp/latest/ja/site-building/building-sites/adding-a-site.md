@@ -1,39 +1,31 @@
-# サイトを追加する
+# サイトの追加
 
 新しいサイトをLiferay Portalインスタンスに追加するには：
 
-1.  [製品メニュー](../../getting-started/navigating-dxp.md)を開き、コントロールパネルに移動して、*[Sites]* → *[Sites]* の順に選択します。
+1. [グローバルメニュー](../../getting-started/navigating-dxp.md) （ ![Global Menu icon](../../images/icon-applications-menu.png) ）を開き、［Control Panel］に移動して、*［Sites］*を選択します。
 
-    ![サイトのコントロールパネルの場所。](./adding-a-site/images/02.png)
+    ![サイトコントロールパネルの場所です。](./adding-a-site/images/01.png)
 
-2.  ページの右上にある追加アイコン（![Add Site](../../images/icon-add.png)）をクリックします。
+1. ページの右上にある追加アイコン（![Add Site](../../images/icon-add.png)）をクリックします。
 
-3.  サイトテンプレートを選択します。 サイトテンプレートの作成の詳細については、[Site Templates](./building-sites-with-site-templates.md)を参照してください。
+1. サイトテンプレートを選択してください。 サイトテンプレートの作成の詳細は、[サイトテンプレート ](./building-sites-with-site-templates.md)を参照してください。
 
-4.  サイトの名前を入力し、オプションで説明を入力します。
+1. サイトの名前を入力します。
 
-5.  *[Membership Type]* を設定します。 次のメンバーシップタイプが利用可能です。 <!-- What does it mean for a user to be a member of a site? What abilities/permissions does that typically confer? To answer that question it probably doesn't make sense here, but should link to another article, potentially, "Understanding Site Membership" -->
-    
-      - **Open：**ユーザーはいつでもサイトのメンバーになることができます。
-      - **Restricted：**ユーザーはサイトメンバーシップを要求できますが、サイト管理者がユーザーがメンバーになるための要求を承認する必要があります。
-      - **Private：**ユーザーはサイトに参加したり、サイトのメンバーシップを要求したりできません。 サイト管理者は手動でユーザーを選択し、サイトメンバーとして割り当てる必要があります。
+1. ページ付きのサイトテンプレートを使用している場合は、必要に応じてチェックボックスをクリックして、デフォルトのページをプライベートにします。
 
-6.  残りの設定を構成し、*[保存]* をクリックします。
+    ![公開ページではなくプライベートページをサイトに反映させるチェックボックスは、ページを持つテンプレートにのみ存在します。](./adding-a-site/images/02.png)
 
-    ![ [General]セクションには、サイトの基本情報が示されます。](./adding-a-site/images/01.png)
+1. *［Save］*をクリックします。
 
 ```{tip}
-新しく作成された*空のサイト*を表示するには、まずそのサイトにページを作成する必要があります。 See [サイトにページを追加する](../creating-pages/adding-pages/adding-a-page-to-a-site.md) for more information.
+新しく作成された*ブランクサイト*を表示するには、まずそのサイトにページを作成する必要があります。 詳しくは 「サイトにページを追加する」(../creating-pages/adding-pages/adding-a-page-to-a-site.md)をご覧ください。
 ```
 
-製品メニューを開くと、新しいサイトが選択されています。 利用可能なすべてのサイト設定の概要については、 [Site Settings](../site-settings/README.rst) を参照してください。
+サイトメニューで新しいサイトが選択されました。 利用可能なすべてのサイト設定の概要については、 [サイト設定のUI リファレンス](../site-settings/site-settings-ui-reference.md) を参照してください。
 
-## 追加情報
+## 関連情報
 
-  - [Introduction to Site Building (近日公開！)](../introduction-to-site-building.md)
-  - [サイトテンプレートを使用したサイトの構築](./building-sites-with-site-templates.md)
-  - [Adding Members to Sites](./adding-members-to-sites.md) <!-- ### The Default Site
-
-@Michael Williams - This information feels out of place here.
-
-When you first start and configure your Liferay Portal instance, a default Site is included. This Site doesn't have its own name but rather takes the name of the instance. By default the instance name is *Liferay*, but this value can be changed through the configuration of the setup wizard or through the Instance Configuration in the Control Panel. See [Configuring the Virtual Instance](TODO) for more information. -->
+* [サイト構築の概要](../introduction-to-site-building.md)
+* [サイトテンプレートによるサイト構築](./building-sites-with-site-templates.md)
+* [サイトにメンバーを追加する](./site-membership/adding-members-to-sites.md)

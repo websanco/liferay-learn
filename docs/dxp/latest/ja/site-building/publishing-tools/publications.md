@@ -1,4 +1,4 @@
-# パブリケーションの概要
+# パブリケーション
 
 ```{toctree}
 :maxdepth: 3
@@ -6,9 +6,12 @@
 publications/enabling-publications.md
 publications/creating-and-managing-publications.md
 publications/making-and-publishing-changes.md
+publications/collaborating-on-publications.md
 publications/resolving-conflicts.md
 publications/reverting-changes.md
 ```
+
+> 対応可能：Liferay DXP/Portal 7.3以降
 
 *パブリケーション*を使用して、DXPインスタンス全体で変更を開発、追跡、および公開できます。 これは、データベース列を作成して、本番環境のサイトに表示されるコンテンツのバージョンを決定することによって機能します。 これを使用して、ユーザーは個別の*パブリケーション*を作成し、変更を公開可能なブロックにグループ化します。
 

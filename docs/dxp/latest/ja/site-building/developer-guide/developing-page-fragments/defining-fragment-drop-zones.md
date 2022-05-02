@@ -4,26 +4,63 @@
 
 ドロップゾーンを定義するには、次の手順に従います。
 
-1.  [フラグメントエディター](./using-the-fragments-editor.md)を開きます。
+1. *［サイト管理］* &rarr; *［デザイン］* &rarr; *［フラグメント］*へ移動します。
 
-2.  `<lfr-drop-zone></lfr-drop-zone>` ラベルを追加して、フラグメント内のドロップゾーンを定義します。
+1. ［Fragment Sets］で、編集したいフラグメントのあるセットを選択します。
 
-    ドロップゾーンには ID がないため、指定した順序でレンダリングされ、フラグメント内で再配置することはできません。
+1. フラグメントの*アクション* (![Action](./../../../images/icon-actions.png)) ボタンをクリックして*［編集］*を選択し、[［フラグメントエディター］](./using-the-fragments-editor.md)を開きます。
 
-    ```{important}
-    フラグメント内の編集可能な要素にドロップゾーンを追加することはできません。
-    ```
+1. HTMLコードエリアに、 `<lfr-drop-zone></lfr-drop-zone>` ラベルを追加して、フラグメント内にドロップゾーンを定義することができます。
 
-次の画像は、このラベルを使用してタブフラグメント内のドロップゾーンを定義する方法を示しています。
+   ```{important}
+   フラグメント内の編集可能な要素にドロップゾーンを追加することはできません。
+   ```
 
-![このラベルを追加して、ドロップゾーンを定義します。](./defining-fragment-drop-zones/images/01.png)
+次のコードは、このラベルを使用して、タブフラグメント内にドロップゾーンを定義する方法を示しています。
 
-![このラベルは、タブフラグメントのドロップゾーンを定義するために使用されます。](./defining-fragment-drop-zones/images/02.png)
+   ```html
+      <div class="tab-panel">
+         [#list 0..configuration.numberOfTabs-1 as i]
+         <div aria-labelledby="tab${i+1}" class="tab-panel-item d-none" data-fragment-namespace="${fragmentEntryLinkNamespace}" id="tabPanel${i+1}" role="tabpanel" tabindex="0">
+            <lfr-drop-zone></lfr-drop-zone>
+         </div>
+         [/#list]
+      </div>
+   ```
+
+この画像は、コンテントページエディターのサイドバーに結果を示しています。
+
+![タブフラグメントは、コンテンツページエディタに4つの異なるドロップゾーンを表示します。](./defining-fragment-drop-zones/images/04.png)
 
 定義したら、フラグメントまたはウィジェットをドロップゾーンにドラッグアンドドロップできます。
 
+## フラグメントコードのドロップゾーンを特定する
+
+> LiferayDXP7.4以降で利用できます。
+
+ドロップゾーンを特定したい場合は、 `data-lfr-drop-zone-id` HTML属性を `<lfr-drop-zone></lfr-drop-zone>` ラベルに記述してください。 Liferay DXP 7.4以降で作成するフラグメントには、デフォルトで `data-lfr-drop-zone` id1HTML属性が含まれています。
+
+![コンテンツページエディタのドロップゾーンレイアウトは、LiferayDXP7.3とLiferayDXP7.4以降で異なります。](./defining-fragment-drop-zones/images/03.png)
+
+次の例は、 `data-lfr-drop-zone-id` 属性を使用して、タブフラグメント内のドロップゾーンを特定する方法を示しています。
+
+   ```html
+      <div class="tab-panel">
+         [#list 0..configuration.numberOfTabs-1 as i]
+         <div aria-labelledby="tab${i+1}-${fragmentEntryLinkNamespace}" class="tab-panel-item d-none" data-fragment-namespace="${fragmentEntryLinkNamespace}" id="tabPanel${i+1}-${fragmentEntryLinkNamespace}" role="tabpanel" tabindex="0">
+            <lfr-drop-zone data-lfr-drop-zone-id="${i+1}"></lfr-drop-zone>
+         </div>
+         [/#list]
+      </div>
+   ```
+
+   ```{tip}
+   フラグメント内のドロップゾーンおよびその他の要素の順序を構成できます。 詳細については、[Setting the Order of Elements in a Fragment]（./setting-the-order-of-elements-in-a-fragment.md）を参照してください。
+   ```
+
 ## 追加情報
 
-  - [フラグメントの開発](./developing-fragments-intro.md)
-  - [フラグメントエディターの使用](./using-the-fragments-editor.md)
-  - [フラグメントツールキットの使用](./using-the-fragments-toolkit.md)
+- [フラグメントの開発](./developing-fragments-intro.md)
+- [フラグメントエディターの使用](./using-the-fragments-editor.md)
+- [フラグメントツールキットの使用](./using-the-fragments-toolkit.md)
+- [フラグメント内の要素の順序を設定する](./setting-the-order-of-elements-in-a-fragment.md)

@@ -1,32 +1,63 @@
 # ユーザーセグメントの作成と管理
 
-セグメントは、セグメントの評価に*[Job Title]* フィールドや組織メンバーシップなどのユーザーデータを使用します。 次の手順では、新しいユーザーセグメントを作成する方法について説明します。
+*セグメント*を使用すると、ユーザーの*役職*やユーザーの*言語*など、共通のプロパティセットに基づいて、さまざまなユーザーグループを作成できます。 セグメントの定義に使用できるプロパティのリストについては、 [セグメントエディターUIリファレンス](./segments-editor-ui-reference.md) を参照してください。 既存のプロパティに加えて、ユーザーグループと組織グループの[カスタムフィールド](../../../system-administration/configuring-liferay/adding-custom-fields.md)を追加し、セグメント基準でこれらのフィールドを使用できます。
 
-1.  製品メニューを開き、サイトのメニューから*[People]* → *[Segments]* に移動します。
+## 複合セグメント
 
-    ![ [People ]メニューからユーザーセグメントを追加します。](./creating-and-managing-user-segments/images/01.png)
+> 対応可能：Liferay DXP/Portal 7.3以降
 
-2.  *追加*ボタン（![Add](../../../images/icon-add.png)）をクリックします。
+既存のセグメントを組み合わせて、新しい_複合セグメント_を作成できます。 複合セグメントは、ベースとなるセグメントからプロパティを継承し、メンバーを自動的に更新します。 プロパティを追加して、複合セグメントをさらにカスタマイズできます。
 
-3.  上部のテキスト領域をクリックして、ユーザーセグメントの名前を入力します。
+複合セグメントがどのように機能するかを理解するために、次の例を考えてみましょう。 米国からの訪問者とカナダからの訪問者のニーズは異なるため、プロパティが異なる2つのセグメントを作成し、国ごとに1つのセグメントを作成します。 その後、北米からの訪問者用に新しい標準セグメントを作成し、米国とカナダのセグメントのプロパティを手動でコピーします。 米国またはカナダのセグメントのプロパティを変更すると、北米のセグメントはその変更を継承しません。 これらの変更を反映するには、北米のセグメントを手動で更新する必要があります。 ただし、北米セグメントを複合セグメントとして作成した場合、米国またはカナダのセグメントを変更すると、この複合セグメントはその定義とメンバーを自動的に更新します。
 
-4.  必要な*[User]*、*[Organization]*、*[Session]* プロパティを[Conditions]ボックスにドラッグし、フィールドを構成してユーザーセグメントの条件を作成します。 エディターの使用の詳細と使用できるすべてのプロパティの説明については、[The Segments Editor UI Reference](./segments-editor-ui-reference.md)をご覧ください。 カスタムフィールドを作成することにより、デフォルトのリストにプロパティを追加できます <!-- link todo --> ユーザーまたは組織向け。
+```{important}
+既存の複合セグメントを使用して新しいセグメントを作成することはできません。
+```
 
-    ![インターフェイスを介して組織を直接選択することにより、タイプミスを防ぐことができます。](./creating-and-managing-user-segments/images/02.png)
+![2つ以上のセグメントを組み合わせて、新しい複合セグメントを作成します](./creating-and-managing-user-segments/images/08.png)
 
-    次の図の例では、役職が「Engineer」であるユーザーのユーザーセグメントを作成します。
+## ユーザーセグメントの作成
 
-    ![比較演算子を含むように設定すると、セグメントにソフトウェアエンジニアのようなエンジニアのバリエーションが含まれます。](./creating-and-managing-user-segments/images/03.png)
+次の手順では、新しいセグメントを作成する方法について説明します。
 
-    編集すると、基準を満たすメンバーの数がページの上部に表示されます。 *[View Members]* をクリックしてリストを表示できます。 これは、セグメントを正しく定義しているかどうかを判断するのに役立ちます。
+1. 画面左側のサイトメニューから、*［People］* &rarr; *［セグメント］*に移動します。
 
-    ![セグメントメンバーのリストはいつでも表示できます。](./creating-and-managing-user-segments/images/04.png)
+    ![［People］メニューからユーザーセグメントを追加します。](./creating-and-managing-user-segments/images/01.png)
 
-5.  *[保存]* をクリックしてユーザーセグメントを保存します。
+1. *追加*ボタン（![Add](../../../images/icon-add.png)）をクリックします。
 
-6.  ユーザーセグメントを作成すると、*[Segments]* ページのユーザーセグメントのリストに表示されます。 ここから、アクションメニュー（![Actions](../../../images/icon-actions.png)）を使用して、ユーザーセグメントを管理（編集、削除、 [サイトロール](../../../users-and-permissions/roles-and-permissions/assigning-roles-to-user-segments.md) 割り当て、またはユーザーセグメントへのアクセス権を持つユーザーの変更）を行うことができます。 ユーザーセグメントの名前をクリックして編集することもできます。
+1. 上部のテキスト領域をクリックして、ユーザーセグメントの名前を入力します。
 
-    ![アクションメニューから権限を編集、削除、または管理できます。](./creating-and-managing-user-segments/images/05.png)
+   ```{tip}
+   セグメント名の横にあるフラグセレクターを使用して、セグメントの名前を変換できます。
+   ```
+
+1. *［Properties］*領域から、グループとプロパティを選択してセグメントを定義します。 *プロパティ*を*［Conditions］*領域にドラッグアンドドロップします。
+
+1. セグメントの条件を設定します（以下の [セグメントの条件の設定](#configuring-segment-conditions) を参照）。
+
+1. *［保存］* をクリックします。
+
+### セグメント条件の設定
+
+*［条件］*領域には、次のオプションがあります。
+
+- 比較ドロップダウンメニュー（A）を使用して、比較基準を編集します。
+- 条件の名前（B）の横にあるボタンを使用して、同じ*プロパティ*グループから*条件*を追加または削除します。
+- *プロパティ*（C）をドラッグアンドドロップして、別の*プロパティ*グループを使用して条件を追加します。
+- *条件を*AND*および*OR*演算子（DおよびE）と組み合わせます。</p>
+
+   ![条件を追加および組み合わせて、セグメント基準を定義します。](./creating-and-managing-user-segments/images/06.png)</li> </ul>
+
+[セッションプロパティ](./segments-editor-ui-reference.md#session-properties) の場合、[セッションプロパティのボキャブラリ](../../../content-authoring-and-management/tags-and-categories/session-property-vocabularies.md)を使用して事前定義された値のリストを構成できます。 このオプションにより、セグメントを定義するタスクが容易になり、手動入力のエラーがなくなります。
+
+編集すると、基準を満たすメンバーの数が［Conditions］領域の上部に表示されます。 *［View Members］*をクリックしてリストを表示できます。 これは、セグメントを正しく定義しているかどうかを判断するのに役立ちます。
+
+![セグメントメンバーのリストはいつでも表示できます。](./creating-and-managing-user-segments/images/04.png)
+
+ユーザーセグメントを作成すると、*［Segments］*ページのユーザーセグメントのリストに表示されます。 ここから、アクションメニュー（![Actions](../../../images/icon-actions.png)）を使用して、ユーザーセグメントの管理（編集、削除、 [サイトロールの割り当て](../../../users-and-permissions/roles-and-permissions/assigning-roles-to-user-segments.md)、ユーザーセグメントへのアクセス権を持つユーザーの権限変更）を行うことができます。 ユーザーセグメントの名前をクリックして編集することもできます。
+
+![アクションメニューから権限を編集、削除、または管理できます。](./creating-and-managing-user-segments/images/05.png)
 
 ```{note}
 エクスペリエンスで使用されているユーザーセグメントは削除できません。
@@ -34,6 +65,7 @@
 
 ## 関連情報
 
-  - [ユーザーセグメントへのロールの割り当て](../../../users-and-permissions/roles-and-permissions/assigning-roles-to-user-segments.md)
-  - [ユーザーセグメントの分析の取得](./getting-analytics-for-user-segments.md)
-  - [コンテンツページのパーソナライゼーション](../experience-personalization/content-page-personalization.md)
+- [ユーザーセグメントへのロールの割り当て](../../../users-and-permissions/roles-and-permissions/assigning-roles-to-user-segments.md)
+- [ユーザーセグメントの分析を取得する](./getting-analytics-for-user-segments.md)
+- [コンテンツページのパーソナライゼーション](../experience-personalization/content-page-personalization.md)
+- [セッションプロパティのボキャブラリ](../../../content-authoring-and-management/tags-and-categories/session-property-vocabularies.md)

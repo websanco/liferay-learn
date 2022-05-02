@@ -1,140 +1,190 @@
-# 個々のページの構成
+# ページ単位での設定
 
-近日公開！
+お客様のニーズに合わせて、個々のページを設定することができます。 この方法で行われたすべての変更は、選択されたページに範囲設定されます。
 
+ページの設定は、 *サイトメニュー* から *［サイトビルダー］* &rarr; *［Pages］*へ移動して行います。 次に、カスタマイズしたいページの *アクション* ボタン（![Actions button](../../../images/icon-staging-bar-options.png)）をクリックし、 *［Configure］*を選択してください。
 
-<!-- After you've configured your Page Set, you can reconfigure some options at the individual page level, including options that weren't available when you initially created the page. Options selected here only affect the page you've selected; they don't affect other pages of the site. Many of these options are the same as those that configure the complete Page Set; See [Configuring Page Sets](./05-configuring-page-sets.md) for more information on those.
+![カスタマイズするページのアクションボタンをクリックし、［設定］を選択します](./configuring-individual-pages/images/01.png)
 
-To configure an individual page, follow these steps:
+または、カスタマイズするページに移動して、*アプリケーションバー*の右上にある*ページ設定*ボタン（![Configure Page Button](./../../../images/icon-cog.png)）をクリックして、個々のページ設定にアクセスすることもできます。
 
-1. Open the Product Menu and go to *Site Builder* &rarr; *Pages* under your site's menu. Alternatively, since Liferay DXP 7.3, you can click the (![icon-page-tree](../../../../icon-page-tree.png)) icon next to the Site name to open the Page Tree Menu.
+これらの設定は、以下のタブに整理されています。
 
-1. Open the Actions menu (![Options](../../../../images/icon-options.png)) next to the page you want to configure and select &rarr; *Configure*. Alternatively, you can click the *Configure* icon on the top right of any page.
+* [一般](#general)
+* [SEO](#seo)
+* [Open Graph](#open-graph)
+* [カスタムメタタグ](#custom-meta-tags)
 
-1. Update the settings under the [*General*](#general), [*SEO*](#seo), [*Look and Feel*](#look-and-feel), and [*Advanced*](#advanced) tabs with the new values. Note that the *Look and Feel* and *Advanced* tabs aren't available for Content Pages
+```{note}
+これらの設定の多くは、ユーザーのロケールに応じた翻訳を提供するためにローカライズすることができます。 [Introduction to Localization](../../../installation-and-upgrades/setting-up-liferay/initial-instance-localization.md) と [Modifying Localizable Site Fields](../../site-settings/site-localization.md#modifying-localizable-site-fields) で、より詳細な情報をご覧下さい。
+```
 
-  ```{note}
-  Many of the configuration field values are localizable. Click the language flag next to a localized field, select the desired flag for the localization, and provide the translation for the user's locale to translate the field.
-  ```
+## 一般
 
-1. Click *Save* to apply the updates to the page.
+ページ名、フレンドリーURL、レイアウトなど、ページの基本的な情報やデザインを設定することができます。
 
-The available page settings are described in more detail below.
+### 名前とフレンドリURL
 
-## General
+［Name］フィールドを使用して、ブラウザのタイトルバーに表示される、サイトナビゲーションのページタイトルを設定します。 また、［Friendly URL］フィールドを使用してページの新しいURLを設定するか、 *復元*アイコン ( ![Friendly URL Restore icon](./../../../images/icon-restore.png) ) をクリックして、以前に使用したURLを表示して復元します。 詳細については、 [ページのフレンドリURLの設定](./configuring-your-pages-friendly-url.md) を参照してください。
 
-The *General* tab lets you configure the basic information and the design for Widget Pages. You can change the *Name*, *Friendly URL*, and *Page Layout* (Widget Pages only).
+![ページのタイトルを設定するには、名前フィールドを使用します。](./configuring-individual-pages/images/02.png) ![フレンドリURLフィールドを使用して、ページのカスタムURLを設定します。](./configuring-individual-pages/images/03.png)
 
-**Name:** The title that appears in the browser's title bar, and how the page is identified in the navigation
+```{tip}
+ページの名前とフレンドリーURLは、ページ作成時に一緒に定義されますが、その後は別々に設定されます。 両者が一致するように、一緒に更新するのがベストプラクティスです。
+```
 
-**Hidden from Navigation Menu Widget:** Whether to include the page in the navigation.
+### ナビゲーションメニューウィジェット
 
-**Friendly URL:** Defines the page's link. It's best practice to have the URL match the name of the Page, so you should update both fields at the same time.
+公開ページの階層を表示するナビゲーションメニューウィジェットから、ページを非表示にすることができます。 この機能を有効にすると、非表示のページを他のナビゲーションメニューに追加すると、他のナビゲーションメニューに表示できます。 詳しくは、 [サイトナビゲーションの管理](./../../site-navigation/managing-site-navigation.md) を参照してください。
 
-**Inherit Changes:** Defines whether to inherit changes made to the Page Template. This option is only available for pages based on a Page Template, and it is enabled by default. See [Propagating Changes](./07-creating-a-page-template.md#propagating-changes) for more information.
+### ページレイアウト
 
-**Page Layout (only available for Widget Pages):** For Widget Pages, you can select a Layout Template that defines droppable locations for widgets. Layout Templates define a number of sections with columns and rows. Widgets added to a section expand (or contract) horizontally to fill the space and can be stacked vertically.
+グローバルテンプレートを使用して作成された基本ウィジェットページ(ブログ、Wiki、検索など)の場合、グローバルテンプレートに加えられた*変更をページが継承*するかどうかを確認します。 ページが変更を継承しない場合、カスタムレイアウトを選択して、そのウィジェットの行と列のコンテナを定義します。
 
-![Setting a layout template for your page.](./configuring-individual-pages/images/01.png)
+![レイアウトテンプレートを選択し、ウィジェットの行と列のコンテナを定義します。](./configuring-individual-pages/images/05.png)
+
+### カテゴリ設定
+
+*トピック*と*タグ*を使ってページのコンテンツを分類し、ユーザーがより簡単にコンテンツを探せるようにすることができます。 タグとカテゴリの使用の詳細については、 [カテゴリとタグを使用したコンテンツの整理](../../../content-authoring-and-management/tags_and_categories.html) を参照してください。
+
+### ルック&フィール
+
+ここでは、ページセットのテーマ設定を使用するか、ページの独自のルック＆フィールを定義することができます。 ページのテーマをカスタマイズする場合、様々なテーマ設定を切り替えることができます。
+
+また、CSSエディタにアクセスし、ページにカスタムCSSコードを追加することができます。 この方法でページに追加されたCSSコードは、テーマの後に読み込まれます。
+
+![ページセットのテーマ設定を使用するか、ページ独自のルック＆フィールを定義するかを決定します。](./configuring-individual-pages/images/07.png)
+
+```{note}
+ウィジェットページがここに*ルック&フィール*タブを含むのに対し、コンテントページは*編集*サイドバーメニューにこれらの設定を含みます。
+```
+
+### 詳細設定
+
+検索文字列、 [モバイルデバイスのルール](../../optimizing-sites/building-a-responsive-site/creating-mobile-device-rules.md)、カスタムフィールド、埋め込みウィジェットなど、ページのコンテンツや機能をカスタマイズするための追加設定にアクセスできます。
+
+```{note}
+ウィジェットページには［詳細設定］タブがありますが、コンテンツページには編集サイドバーメニューのルック＆フィールの下にこれらの設定項目があります。
+```
+
+**検索文字列**：ページに他のパラメータが存在しない場合、デフォルトのパラメータを提供するために使用します。 検索文字列は、webコンテンツテンプレートに役立ちます。
+
+**ターゲット**：このフィールドを使用して、新しいウィンドウ、タブ、またはフレームセットでリンクを開くなど、特定のターゲット属性を使用してページリンクの動作を決定します。
+
+**アイコン**： サイトのナビゲーションメニューでページ名と一緒に表示されるアイコンを選択します。
+
+**JavaScript**: ページにJavaScriptのコードを追加します。 追加されたコードは、ページの一番下で実行されます。 また、ページセットの*設定*ページでもこのエディターにアクセスすることができます。
+
+```{tip}
+サイトのテーマがJavaScriptを使用している場合、個々のページやページセットではなく、テーマにカスタムJavaScriptコードを追加することが最善です。 これにより、サイトのJavaScriptコードを一カ所にまとめることができます。 JavaScriptを使用しないテーマの場合、ここにサイトのすべてのJavaScriptコードを配置します。
+```
+
+**モバイルデバイスルール**：ページがモバイルデバイスのためにそのページセットのルールを使用するか、独自に設定されているかを判断します。 これらのルールは、ページのコンテンツがさまざまな種類のモバイルデバイスでどのように表示されるかを決定します。
+
+**カスタマイズの設定**：ウィジェットページのカラムをユーザーが*カスタマイズ可能* にするかどうかを決定します。 カスタマイズが有効な場合、ユーザーがカスタマイズできる列を指定します。 詳しくは、 [Personalizing Pages](../using-widget-pages/enabling-user-personalization-of-widget-pages.md) を参照してください。
+
+![ユーザーがウィジェットページをカスタマイズできるかどうかを判断します。](./configuring-individual-pages/images/12.png)
+
+**カスタムフィールド**：サイトページに定義した *カスタムフィールド* を表示、設定します。 詳細については、 [カスタムフィールドの追加](../../../system-administration/configuring-liferay/adding-custom-fields.md)を参照してください。
+
+**埋め込みウィジェット**：Webコンテンテンツテンプレート、ページフラグメント、またはテーマを使用してページに埋め込んだウィジェットにアクセスできます。
+
+```{note}
+カスタムフィールドと埋め込みウィジェットのセクションは、カスタムフィールドと埋め込みウィジェットをページに作成した場合にのみ表示されます。
+```
 
 ## SEO
 
-The *SEO* tab provides categorization fields for organizing the page and Search Engine Optimization (SEO) fields for managing the indexing options for the page.
+検索エンジン最適化（SEO）とは、検索エンジン結果ページ（SERP）におけるページの順位を向上させるために用いられる手法のことを指します。 ［SEO］タブでは、ページのコンテンツを最適化するための設定に簡単にアクセスできます。 以下の設定については、[SEOとOpen Graphを設定する](../../displaying-content/using-display-page-templates/configuring-seo-and-open-graph.md)を参照してください。
 
-### Categorization
+### HTMLタイトル
 
-The *Categorization* section shows the categorization options. These tools help organize the page so users can find it through search and navigation. For more information on using tags and categories, see [Organizing Content with Tags and Categories](TODO).
+HTMLタイトルフィールドを使用して、ページの `<title>` タグを定義してください。 このタイトルは、検索エンジンがあなたのページをランク付けするために使用され、検索エンジンの結果でページの見出しとして機能しますが、ページの [名前](#name-and-friendly-url) を置き換えることはありません。 HTMLタイトルの推奨される長さは 60 文字未満です。
 
-### SEO
+### 説明
 
-SEO provides several ways to optimize the data the page provides to an indexer that's crawling the page.
+説明文フィールドを使用して、ページの`<description>`タグを定義してください。 この説明文は、検索エンジンがあなたのページをランク付けするために使用され、あなたのページの検索結果のプレビューにも表示されます。 説明文の推奨される長さは155文字未満です。
 
-**HTML Title:** Sets the value of the `<title>` element for the page, which defines the document's title displayed in the browser's title bar or page's tab in the browser.
+### カスタム正規化URL
 
-**Meta Tags:** Sets the meta information for the Site's description, keywords, and robots.
+ページのカスタム正規化URLを設定します。 この方法で設定されたカスタムURLは、グローバルレベルやインスタンスレベルの設定より優先されます。
 
-**Sitemap:** tells robots how frequently the page is updated and how it should be prioritized.
+### キーワード
 
-  * *Include:* Whether to include the page in the sitemap.
+あなたのページのコンテンツを検索するときに使われる可能性の高い単語をリストアップします。 これらのキーワードは、あなたのページのランキングに貢献します。
 
-  * *Page Priority:* The priority of the page's URL relative to other URLs for the site. See the Sitemap Protocol's [`<priority>` tag](https://www.sitemaps.org/protocol.html#prioritydef) for more information.
+```{tip}
+タイトル、見出し、説明文、段落、画像のaltテキストなど、ページのコンテンツ全体にキーワードを頻繁に使用します。
+```
 
-  * *Change Frequency:* How frequently the page is likely to change. See the Sitemap Protocol's [`<changefreq>` tag](https://www.sitemaps.org/protocol.html#changefreqdef) for more information.
+### SERPプレビュー
 
-**Canonical URL:** Each asset (web content article, blog entry, etc.) has a unique URL. From the search engine's point of view, this makes your pages rank higher since any references to variations of a specific URL are considered references to the same page. You can also use a canonical URL. If the page is localized, you can set whether to generate canonical links by language. If you want to set some of these settings for the entire Site, you can specify them from the Sitemaps and Robots tabs of the Manage Site Settings dialog box (see below).
+HTMLタイトル、説明文、カスタムURLの設定に基づき、検索エンジンの結果ページ（SERP）でページがどのように表示されるかをプレビューします。
 
-  * *Use Custom Canonical URL:* Whether to use a custom canonical URL for the page instead of using the System Settings configuration. Once enabled, enter your desired canonical URL in the field that appears. You can define a custom canonical URL for each language. If there's no value for a specific language, the canonical URL for that language is controlled by the global/instance-level setting.
+![検索エンジンの検索結果にページがどのように表示されるかをプレビューします。](./configuring-individual-pages/images/13.png)
 
-  ![Enter the custom canonical URL that you want to use for the page.](./configuring-individual-pages/images/02.png)
+### ロボット
 
-You can also configure canonical URLs at the global and instance levels.
+`robots.txt` のルールをページに設定します。 このルールは、検索エンジンやその他のツールがお客様のサイトをクロールし、インデックスする際に、クローラーが指定したパスにアクセスすることをブロックしたり、許可したりする指示を与えるものです。
+
+### サイトマップ
+
+サイトクローラーが使用するサイトマップにページが含まれているかどうかを判定します。 ページを除外することで、サイトクローラーがあなたのサイトをクロールしインデックスする際に、そのページをスキップするように指示します。
+
+### ページの優先度
+
+ページの優先順位を0.0から1.0まで設定します。 これは、サイトをクロールしインデックスするツールに、サイト内の他のページに対するページの優先順位を通知するものです。
+
+### 定期更新
+
+ドロップダウンメニューを使用すると、サイトのクロールとインデックスするツールに、ページの更新頻度を知らせることができます。
+
+## Open Graph
+
+> 対応可能：Liferay DXP/Portal 7.3以降
+
+[Open Graph](https://ogp.me/) は、Facebook、Slack、Twitterなどのアプリケーションコンテキストで共有する際に、サイトコンテンツのプレビューを標準化するインターネットプロトコルです。 これは、 `<meta>` タグとしてページヘッダーに構造化データを埋め込むことで、 [RDFa](https://en.wikipedia.org/wiki/RDFa) と同じように実現します。
+
+*［Open Graph］*タブでは、Open Graph `<meta>` タグを使ってページのメタデータを定義し、コンテンツの魅力を表現することが可能です。 ここで定義された値は、[サイト](../../site-settings/configuring-open-graph.md)レベルで定義されたデフォルト値をオーバーライドします。
 
 ```{note}
-Any custom canonical URLs set for individual pages take precedent over the global and instance level settings.
+Open Graph [](meta) タグは、認証されていないユーザーへの公開ページヘッダーにのみ含まれます。 非公開ページや、ユーザーがログインしているときの公開ページには含まれません。
 ```
 
-1. Open the Product Menu and go to *Control Panel* &rarr; *Configuration*
+### 画像
 
-1. Click on the scope: *System Settings* or *Instance Settings*.
+画像フィールドを使用して、ページに対して以下のOpen Graph `<meta>` プロパティを定義することができます。
 
-1. Go to *Pages* &rarr; *SEO* and choose one of these options in the *Canonical URL* menu:
+   ```html
+   <meta property="og:image" content="http://example.com/ogp.jpg" />
+   <meta property="og:image:secure_url" content="https://secure.example.com/ogp.jpg" />
+   <meta property="og:image:type" content="image/jpeg" />
+   <meta property="og:image:width" content="400" />
+   <meta property="og:image:height" content="300" />
+   ```
 
-  **Use Default Language URL (default):** When a user visits a page in any supported language, the default language's URL is used as the canonical URL.
+### 画像の別の説明
 
-  **Use Localized URL:** The page's localized URL is used as the canonical URL.
+ページの `og:image:alt` プロパティを定義するには、画像の別の説明フィールドを使用してください。 *［言語フラグ］*ボタンを使用して画像の別の説明をローカライズすることもできます。
 
-![You can also configure canonical URLs at the global and instance levels.](./configuring-individual-pages/images/03.png)
+### カスタムタイトルと説明文
 
-## Look and Feel
+`og:title` と `og:description` のプロパティを定義するには、タイトルと説明フィールドを使ってください。 これらのプロパティは、ページのHTMLタイトルと説明の代わりに、リッチプレビューに使用されるカスタムテキストを作成します。 また、これらの値は、 *［言語フラグ］* ボタンでローカライズすることができます。
 
-*Look and Feel* lets you set a page-specific theme. You can inherit what you already have configured for your [Page Set's Theme](./05-configuring-page-sets.md#look-and-feel), or you can define a theme per page. This section is available for Content Pages through the [*Look and Feel* menu](./03-content-page-elements.md#look-and-feel) of the Section Builder.
+### Open Graphのページ表示のプレビュー
 
-Follow these steps to manage the Theme for a page:
+ページのOpen Graph設定をプレビューします。 このセクションでは、プロトコルをサポートするコンテキストでURLが共有されたときに、あなたのページのコンテンツがどのように表示されるかを表示します。 ただし、画像の比率はURLが掲載されている場所によって変わることがあります。
 
-1. Click the radio button for *Define a specific look and feel for this page*.
+![Open Graphの設定をプレビューします。](./configuring-individual-pages/images/23.png)
 
-1. Optionally click the *Change Current Theme* button to choose a different Theme.
+## カスタムメタタグ
 
-1. Modify the available theme settings, color scheme(s), and CSS for the Theme and click *Save* to apply the changes to the page. See the [Configuring Page Sets](./05-configuring-page-sets.md#current-theme) for more information on the available settings for themes.
+ここでは、ページの `<head>` にカスタム `<meta>` タグを追加することができます。 これらのタグは、ページのHTMLソースコードにのみ表示され、ページのデータを記述し、そのデータが検索エンジンの結果やソーシャルメディアの投稿など、さまざまなコンテキストでどのように表示されるかを決定するために使用されます。 各タグはプロパティ属性とコンテンツ属性で定義されます。
 
-![You can define a specific look and feel for a page.](./configuring-individual-pages/images/04.png)
+![プロパティとコンテンツ項目を使用して、ページの見出しにカスタムメタタグを追加します。](./configuring-individual-pages/images/24.png)
 
-## Advanced
+## 追加情報
 
-The *Advanced* tab contains options useful for specific cases. Some of these are the same as the options available at the Site or Page Set level, but *Custom Fields*, *Embedded Widgets*, and *Customization Settings* are unique to the individual page configuration.
-
-```{warning}
-The *Advanced* section contains powerful options that should only be used by those with a firm command of the technology, or they can have major unintended side effects. Proceed with caution.
-```
-
-### Advanced Section
-
-*Query String:* Provides parameters to the page. This can be useful for web content templates.
-
-*Target:* sets a target for the page so that it pops up in a particularly named window or appears in a frameset.
-
-*Icon:* Sets an icon for the page that appears in the navigation menu.
-
-### Custom Fields
-
-*Custom Fields* lets you edit the custom fields you have configured for the *Page* resource. These are metadata about the page and can be anything you like, such as author or creation date. If you don't have any custom fields configured in your Site, this option doesn't appear. See [Custom Fields](TODO) for more information on creating Custom Fields.
-
-### Embedded Widgets
-
-This option only appears if you have embedded one or more widgets on the page.
-
-Widgets can be embedded on a page via a web content template or Fragment. See [Adding Templates](TODO) for more information. You can embed a widget on a page layout or theme programmatically. See [Embedding Portlets in Themes](TODO) for more information.
-
-### JavaScript
-
-Code entered in the JavaScript editor is executed at the bottom of the page. Your page's JavaScript is most likely (and should be) included with the Theme. However, this may be a good place to quickly test JavaScript code on a page while not in production.
-
-This configuration option is also available for Page Sets like Public Pages and Private Pages. See the [JavaScript section](./05-configuring-page-sets.md#javascript) of Configuring Page Sets for more information.
-
-### Mobile Device Rules
-
-Apply rules for how this page should render for various mobile devices here. See [Mobile Device Rules](TODO) for more information.
-
-### Customization Settings
-
-This configuration option is only available for Widget Pages. It lets you make portions of the page customizable for site members. You can learn more about page customizations in [Enabling User Personalization of Widget Pages](../using-widget-pages/enabling-user-personalization-of-widget-pages.md). -->
+* [サイトにページを追加する](./../adding-pages/adding-a-page-to-a-site.md)
+* [コンテントページの使用](../using-content-pages.md)
+* [ページセットの構成](./configuring-page-sets.md)

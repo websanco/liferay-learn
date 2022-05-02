@@ -1,19 +1,36 @@
 # サイトメンバーのロールとチームのデフォルトの設定
 
-サイトの新しく割り当てられたメンバーが受け取るデフォルトのロールとチームを設定できます。
+新しいサイトメンバーに割り当てるデフォルトのロールとチームを構成できます。
 
-1.  プロダクトメニューを開き、*[設定]* → *[Settings]* （以前は *[サイト設定]*）に移動し、*[詳細設定]* タブを選択します。
+1. ［Default User Associations］オプションにアクセスするには：
 
-    ![サイトメニューの設定セクションからサイトメンバーシップタイプを変更できます](./configuring-role-and-team-defaults-for-site-members/images/01.png)
+    - Liferay DXP 7.4+の場合
 
-2.  *[Default User Associations]* パネルの下にある*[Select]* ボタンをクリックして、 *[サイトロール]* ラベルでデフォルトのロールを定義するか、*[チーム]* ラベルでサイトメンバーのデフォルトのチーム（存在する場合）を定義します。
+      1. サイトのメニューから、*［Configuration］* &rarr; *［Site Settings］*に移動します。
+      1. ［プラットフォーム］セクションで、*［Users］*をクリックし、*［Default User Associations］*をクリックします。
 
-    ![サイトの設定から、デフォルトのロールをサイトメンバーに割り当てることができます。](./configuring-role-and-team-defaults-for-site-members/images/02.png)
+       ![Liferay DXP 7.4以降では、［サイト設定］セクションから［Default User Association］を変更します。](./configuring-role-and-team-defaults-for-site-members/images/03.png)
 
-3.  下にスクロールして、*[保存]* をクリックして変更を適用します。
+    - 以前のLiferay DXPバージョンの場合
 
-<!-- Does this change apply retroactively to users who are already members of a site? -->
+      1. サイトメニューから、*［設定］* &rarr; *［Settings］*に移動します。
+      1. ［Advanced］領域で、［Default User Associations］オプションを見つけます。
 
-サイトに追加されたユーザーは、設定されたロールとチームの割り当てを受け取るようになりました。
+       ![以前のLiferay DXPバージョンでは、［Settings］セクションから［Default User Associations］を変更します。](./configuring-role-and-team-defaults-for-site-members/images/01.png)
 
-詳細については、[ロールと権限](../../../users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.md)および[Creating Teams for Advanced Site Membership Management](../../building-sites/site-membership/creating-teams-for-sites.md)を参照してください。
+1. ［Default User Associations］領域にある*［Select］*をクリックして、 *［Site  Role］*ラベルでデフォルトのロールを定義するか、*［Teams］*ラベルでサイトメンバーのデフォルトのチーム（存在する場合）を定義します。
+
+1. 新しいサイトメンバーのデフォルトのサイトロールとチームを選択します。
+
+1. *［保存］* をクリックします。
+
+```{note}
+構成するデフォルトのサイトロールとチームは、既存のサイトメンバーには影響しません。
+```
+
+## 関連情報
+
+- [サイトメンバーシップタイプの変更](./changing-site-membership-type.md)
+- [サイト設定UIリファレンス](../site-settings-ui-reference.md)
+- [ロールと権限](../../../users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.md)
+- [Creating Teams for Advanced Site Membership Management](../../building-sites/site-membership/creating-teams-for-sites.md)

@@ -1,49 +1,67 @@
 # フラグメントエディターの使用
 
-Liferay DXP には、コンテンツページフラグメントを作成するための組み込み[エディター](../reference/fragments/page-fragment-editor-interface-reference.md)が含まれています。 エディターにアクセスするには、*サイトメニュー*の *[デザイン]* → *[フラグメント]* に移動します。 ここから、既存のフラグメントとコレクションを表示および管理したり、新しいフラグメントとコレクションを作成したりできます。
+Liferay DXP には、コンテンツページフラグメントを作成するための組み込み [エディター](../reference/fragments/page-fragment-editor-interface-reference.md) が含まれています。 エディターにアクセスするには、*サイトメニュー* (![Site Menu](../../../images/icon-product-menu.png)) を開き、 *［デザイン］* &rarr; *［フラグメント］*に移動します。 ここから、フラグメントおよびフラグメントセットを表示、管理、および作成できます。
 
-  - [フラグメントコレクションの作成](#creating-a-fragment-collection)
-  - [新しいフラグメントの作成](#creating-a-new-fragment)
+* [フラグメントセットの作成](#creating-a-fragment-set)
+* [新しいフラグメントの作成](#creating-a-new-fragment)
 
-## フラグメントコレクションの作成
+```{note}
+Liferay DXP 7.4以降の場合、フラグメントコレクションはLiferay UIではフラグメントセットと呼ばれます。
+```
 
-新しいフラグメントを作成する前に、最初にそれらを配置する新しいコレクションを作成する必要があります。
+## フラグメントセットの作成
 
-1.  *サイトメニュー*を開き、 *[デザイン]* → *[フラグメント]* に移動します。
+新しいフラグメントを作成する前に、最初にそれらを配置する新しいフラグメントセットを作成する必要があります。
+
+1. *サイトメニュー*を開き、 *[デザイン]* &rarr; *[フラグメント]*に移動します。
 
     ```{note}
     Liferay DXP 7.1 および 7.2 では、*プロダクトメニュー* を開き、*サイト* → *サイトビルダー* → *ページフラグメント* に移動します。
     ```
 
-2.  *[Add]* ボタン（![追加ボタン](../../../images/icon-duplicate.png)）をクリックして、新しいコレクションの*名前*と*説明*を入力します。 コレクションの名前は、コンテンツページのサイドバーの[フラグメントとウィジェット]パネルに表示されます。
+1. フラグメントセットの横にある*プラス*ボタン（![Add Button](../../../images/icon-plus.png)）をクリックします。
+
+   ![プラスボタンをクリックして、フラグメントセットにネストします。](./using-the-fragments-editor/images/01.png)
+
+1. 新しいセットの*名前*と*説明*を入力します。
 
     ```{tip}
-    機能ごと、またはチームや部門ごとにフラグメントをグループ化するコレクションを作成します。
+    機能ごと、またはチームや部門ごとにフラグメントをグループ化するセットを作成します。
     ```
 
-3.  *[保存]* をクリックします。
+1. *［Save］*をクリックします。
 
-![コレクションはフラグメントを整理するのに役立ちます。](./using-the-fragments-editor/images/01.png)
-
-最初のコレクションを作成したら、新しいフラグメントの作成を開始できます。
+保存したら、フラグメントをセットに追加できます。
 
 ## 新しいフラグメントの作成
 
-1.  目的のコレクションに移動し、 *[Add]*（![追加ボタン](../../../images/icon-add.png)）をクリックして、新しいフラグメントを作成します。
+フラグメントを作成するには、次の手順に従います。
 
-    ```{note}
-    Liferay DXP 7.3 より前では、フラグメントはセクションまたはコンポーネントのいずれかでした。 Liferay DXP 7.3以降では、ページフラグメントはすべてコンポーネントです。
-    ```
+1. 目的のフラグメントセットに移動し、*追加*ボタン（![Add Button](../../../images/icon-add.png)）をクリックして、新しいフラグメントを作成します。
 
-2.  フラグメントの*名前*を入力し、*[保存]* をクリックします。
+   ![目的のフラグメントセットに移動し、追加ボタンをクリックします。](./using-the-fragments-editor/images/02.png)
 
-    ![新しいコンポーネントの名前を入力します。](./using-the-fragments-editor/images/02.png)
+   ```{note}
+   Liferay DXP 7.3 より前では、フラグメントはセクションまたはコンポーネントのいずれかでした。 Liferay DXP 7.3以降では、ページフラグメントはすべてコンポーネントです。
+   ```
 
-3.  [コード] タブで、CSS、HTML、および JavaScript フィールドを使用してフラグメントのリソースを追加します。 ここでは、さまざまなデバイスコンテキストでのフラグメントの外観のライブプレビューを表示することもできます。
+1. フラグメントの*名前*を入力し、*［保存］*をクリックします。
+
+    ![新しいフラグメントの名前を入力します。](./using-the-fragments-editor/images/03.png)
+
+1. [コード] タブで、CSS、HTML、および JavaScript フィールドを使用してフラグメントのリソースを追加します。 ここでは、さまざまなデバイスコンテキストでのフラグメントの外観のライブプレビューを表示することもできます。
+
+    ここでは、HTML編集のショートカットを紹介します。
+
+    * 開角括弧 (`<`) を入力すると、標準の HTML タグと Liferay の フラグメント固有のタグにアクセスすることができます。
+
+    * 要素属性を `data` で開始し、Liferayの [編集可能なフラグメント属性](../reference/fragments/fragment-specific-tags-reference.md) にアクセスします。
+
+    ![Liferayの編集可能なフラグメント属性は、エディターで確認できます。](./using-the-fragments-editor/images/04.png)
 
     以下の例では、編集可能なテキストを含むカードコンポーネントを追加しています。
 
-    ``` html
+    ```html
     <div class="marketing-card-fragment-01">
       <div class="card">
         <lfr-editable id="01-card-image" type="image">
@@ -64,30 +82,30 @@ Liferay DXP には、コンテンツページフラグメントを作成する�
     </div>
     ```
 
-    ``` css
+    ```css
     .marketing-card-fragment-01 .card img {
       max-width: 100%;
     }
     ```
 
 
-    ![Add CSS, HTML, and Javascript resources to the Fragment and see a live preview.](./using-the-fragments-editor/images/03.png)
+    ![Add CSS, HTML, and Javascript resources to the Fragment and see a live preview.](./using-the-fragments-editor/images/05.png)
 
-4.  [設定] タブで、`[JSON]` フィールドを使用して、[設定オプション](./adding-configuration-options-to-fragments.md)) をページ フラグメントに追加します。
+1. [設定] タブで、`[JSON]` フィールドを使用して、[設定オプション](./adding-configuration-options-to-fragments.md)) をページ フラグメントに追加します。
 
-    ![ページ フラグメントに構成オプションを追加します。](./using-the-fragments-editor/images/04.png)
+   ![ページ フラグメントに構成オプションを追加します。](./using-the-fragments-editor/images/06.png)
 
-5.  *[Publish]* をクリックして、 [コンテンツページ](../../creating-pages/understanding-pages/understanding-pages.md#content-pages) で使用できるようにします。
+1. *[Publish]* をクリックして、 [コンテンツページ](../../creating-pages/understanding-pages/understanding-pages.md#content-pages) で使用できるようにします。
 
-    ![フラグメントはコンテンツ ページで使用できます。](./using-the-fragments-editor/images/05.png)
+    ![フラグメントはコンテンツ ページで使用できます。](./using-the-fragments-editor/images/07.png)
 
-フラグメントの作成中、変更内容はフラグメントが公開されるまで自動的にドラフトとして保存されます。 コレクションに追加すると、フラグメントエディターでいつでもフラグメントをコピー、エクスポート、編集、および削除できます。 ページ フラグメントで使用可能なアクションの詳細は、 [ページフラグメントの管理](../../displaying-content/using-fragments/managing-page-fragments.md) を参照してください。
+フラグメントの作成中、変更内容はフラグメントが公開されるまで自動的にドラフトとして保存されます。 セットに追加すると、フラグメントエディターでいつでもフラグメントをコピー、エクスポート、編集、および削除できます。 ページ フラグメントで使用可能なアクションの詳細は、 [フラグメントの管理](../../creating-pages/page-fragments-and-widgets/using-fragments/managing-fragments.md) を参照してください。
 
 ```{note}
-Liferay DXP 7.2 SP1以降および Liferay Portal CE 7.2 GA2以降では、*グローバル* サイトでページ フラグメントを作成して、すべてのサイトで利用できるようにすることができます。 これらのバージョンの最初のリリースでこの機能を公開するには、`com.liferay.fragment.web.internal.configuration.FragmentGlobalPanelAppConfiguration.config` という名前の `.config` ファイルを作成し、`enabled=B"true"` プロパティを追加する必要があります。 それを Liferay DXP インスタンスの `osgi/configs` フォルダにコピーします。 グローバル ページ フラグメントは子サイトに継承され、グローバル サイトからのみ編集できます。 グローバル ページ フラグメントがグローバル サイトから参照するすべてのリソースは、ページ フラグメントを利用するサイトにコピーされます。
+Liferay DXP 7.2 SP1以降および Liferay Portal 7.2 GA2以降では、*グローバル* サイトでページ フラグメントを作成して、すべてのサイトで利用できるようにすることができます。 これらのバージョンの初期リリースでこの機能を公開するには、 `com.liferay.fragment.web.internal.configuration.FragmentGlobalPanelAppConfiguration.config` という名前の `.config` ファイルを作成し、 `enabled=B "true"` というプロパティを追加する必要があります。 そして、Liferay DXPインスタンスの `osgi/configs` フォルダにコピーしてください。 グローバル ページ フラグメントは子サイトに継承され、グローバル サイトからのみ編集できます。 グローバル ページ フラグメントがグローバル サイトから参照するすべてのリソースは、ページ フラグメントを利用するサイトにコピーされます。
 ```
 
 ## 追加情報
 
-  - [フラグメントツールキットの使用](./using-the-fragments-toolkit.md)
-  - [フラグメントへの構成オプションの追加](./adding-configuration-options-to-fragments.md)
+* [フラグメントツールキットの使用](./using-the-fragments-toolkit.md)
+* [フラグメントへの構成オプションの追加](./adding-configuration-options-to-fragments.md)

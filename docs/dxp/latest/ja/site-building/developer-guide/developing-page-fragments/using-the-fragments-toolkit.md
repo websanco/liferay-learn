@@ -1,39 +1,43 @@
 # フラグメントツールキットの使用
 
-フラグメント ツールキットは、お気に入りのツールを使用してフラグメントをローカルで作成および管理するのに役立ちます。 ここでは、ツールキットを使用して、サンプルのフラグメントを含むフラグメント プロジェクトを生成し、デプロイして、独自のフラグメント コレクションを追加します。
+フラグメント ツールキットは、お気に入りのツールを使用してフラグメントをローカルで作成および管理するのに役立ちます。 ここでは、ツールキットを使用して、サンプルのフラグメントを含むフラグメント プロジェクトを生成し、デプロイして、独自のフラグメント セットを追加します。
+
+```{note}
+Liferay DXP 7.4以降の場合、フラグメントコレクションはLiferay UIではフラグメントセットと呼ばれます。
+```
 
 ## ツールキットの設定
 
 ツールキットには次のソフトウェアが必要です。
 
-  - [NPM](https://www.npmjs.com/)
-  - [NodeJS](https://nodejs.org/)
-  - [Yeoman](https://yeoman.io/)
-  - [Yarn](https://classic.yarnpkg.com/)
+* [NPM](https://www.npmjs.com/)
+* [NodeJS](https://nodejs.org/)
+* [Yeoman](https://yeoman.io/)
+* [Yarn](https://classic.yarnpkg.com/)
 
 NPM と Yarn は、依存するツールキットとモジュールをインストールするために使用するパッケージ マネージャーです。
 
-Liferay の [setup\_tutorial.sh](https://github.com/liferay/liferay-learn/blob/master/docs/_template/js/setup_tutorial.sh) スクリプトは、Yeoman、Yarn、およびツールキットを設定するためのコマンドを提供します。 スクリプトは、サンプルの ZIP ファイルと、サンプルのすべての JavaScript プロジェクトの ZIP ファイルで使用できます。
+Liferay の [setup_tutorial.sh](https://github.com/liferay/liferay-learn/blob/master/docs/_template/js/setup_tutorial.sh) スクリプトは、Yeoman、Yarn、およびツールキットを設定するためのコマンドを提供します。 スクリプトは、サンプルの ZIP ファイルと、サンプルのすべての JavaScript プロジェクトの ZIP ファイルで使用できます。
 
-1.  [Node.js LTS](https://nodejs.org/en/download/) を介して NPM と Node.js をインストールすることから始めます。
+1. [Node.js LTS](https://nodejs.org/en/download/) を介して NPM と Node.js をインストールすることから始めます。
 
-2.  サンプルの JavaScript プロジェクトの ZIP ファイルをダウンロードして解凍します。
+1. サンプルの JavaScript プロジェクトの ZIP ファイルをダウンロードして解凍します。
 
-    ``` bash
-    curl https://learn.liferay.com/dxp/7.x/ja/site-building/developer-guide/developing-page-fragments/liferay-x2y6.zip -O
+    ```bash
+    curl https://learn.liferay.com/dxp/latest/ja/site-building/developer-guide/developing-page-fragments/liferay-x2y6.zip -O
     ```
 
-    ``` bash
+    ```bash
     unzip liferay-x2y6.zip
     ```
 
-3.  `setup_tutorial.sh` スクリプトを使用して、フラグメント ツールキットとその依存関係を設定します。
+1. `setup_tutorial.sh` スクリプトを使用して、フラグメント ツールキットとその依存関係を設定します。
 
-    ``` bash
+    ```bash
     cd liferay-x2y6
     ```
 
-    ``` bash
+    ```bash
     ./setup_tutorial.sh
     ```
 
@@ -51,69 +55,82 @@ Liferay の [setup\_tutorial.sh](https://github.com/liferay/liferay-learn/blob/m
 
 フラグメント プロジェクトを生成する方法は次のとおりです。
 
-1.  `yo liferay-fragments` コマンドを実行して、プロジェクト ジェネレータを起動します。
-   
-        yo liferay-fragments
+1. `yo liferay-fragments` コマンドを実行して、プロジェクト ジェネレータを起動します。
 
-2.  プロジェクトに名前を付けます。 この例では、Enter をクリックしてデフォルトのプロジェクト名を受け入れます。
-   
-        ? Project name (Sample Liferay Fragments)
+    ```bash
+    yo liferay-fragments
+    ```
 
-3.  サンプル コンテンツを追加するかどうかを示します。 この例では、 `Yes` と入力します。
-   
-        ? Add sample content? Yes
-        Creating directory
-           force .yo-rc.json
-          create src/.gitkeep
-          create .editorconfig
-          create .gitignore
-          create liferay-npm-bundler.config.js
-          create package.json
-          create README.md
-        Adding sample content...
-        Warning: some of these fragments are not compatible all
-        portal versions, please check the generator documentation before using them:
-        https://www.npmjs.com/package/generator-liferay-fragments#creating-new-fragments
-        Running yarn...
-        Done!
-        You're ready to create fragments.
-          create src/sample-collection/collection.json
-          create src/sample-collection/sample-fragment/index.html
-          create src/sample-collection/sample-fragment/main.js
-          create src/sample-collection/sample-fragment/styles.css
-          create src/sample-collection/sample-fragment/fragment.json
-          create src/sample-collection/sample-fragment/configuration.json
-          create src/sample-collection/sample-fragment-with-new-editables/index.html
-          create src/sample-collection/sample-fragment-with-new-editables/main.js
-          create src/sample-collection/sample-fragment-with-new-editables/styles.css
-          create src/sample-collection/sample-fragment-with-new-editables/fragment.json
-          create src/sample-collection/sample-fragment-with-new-editables/configuration.json
-          create src/sample-collection/sample-fragment-with-react/index.html
-          create src/sample-collection/sample-fragment-with-react/main.js
-          create src/sample-collection/sample-fragment-with-react/styles.css
-          create src/sample-collection/sample-fragment-with-react/fragment.json
-          create src/sample-collection/sample-fragment-with-react/configuration.json
+1. プロジェクトに名前を付けます。 この例では、Enter をクリックしてデフォルトのプロジェクト名を受け入れます。
 
-フラグメント プロジェクトが生成されました。
+    ```bash
+    ? Project name (Sample Liferay Fragments)
+    ```
+
+1. サンプル コンテンツを追加するかどうかを示します。 この例では、 `Yes` と入力します。
+
+    ```bash
+    ? Add sample content? Yes
+    Creating directory
+       force .yo-rc.json
+      create src/.gitkeep
+      create .editorconfig
+      create .gitignore
+      create liferay-npm-bundler.config.js
+      create package.json
+      create README.md
+    Adding sample content...
+    Warning: some of these fragments are not compatible all
+    portal versions, please check the generator documentation before using them:
+    https://www.npmjs.com/package/generator-liferay-fragments#creating-new-fragments
+    Running yarn...
+    Done!
+    You're ready to create fragments.
+      create src/sample-collection/collection.json
+      create src/sample-collection/sample-fragment/index.html
+      create src/sample-collection/sample-fragment/main.js
+      create src/sample-collection/sample-fragment/styles.css
+      create src/sample-collection/sample-fragment/fragment.json
+      create src/sample-collection/sample-fragment/configuration.json
+      create src/sample-collection/sample-fragment-with-new-editables/index.html
+      create src/sample-collection/sample-fragment-with-new-editables/main.js
+      create src/sample-collection/sample-fragment-with-new-editables/styles.css
+      create src/sample-collection/sample-fragment-with-new-editables/fragment.json
+      create src/sample-collection/sample-fragment-with-new-editables/configuration.json
+      create src/sample-collection/sample-fragment-with-react/index.html
+      create src/sample-collection/sample-fragment-with-react/main.js
+      create src/sample-collection/sample-fragment-with-react/styles.css
+      create src/sample-collection/sample-fragment-with-react/fragment.json
+      create src/sample-collection/sample-fragment-with-react/configuration.json
+    ```
+
+これでフラグメント プロジェクトが生成されました。
 
 ジェネレータは、プロジェクト名から派生したフォルダに各プロジェクトを作成します。 この例では、プロジェクト名を `Sample Liferay Fragments` としたので、ジェネレータは `sample-liferay-fragments`というプロジェクト フォルダを作成します。
 
-## サンプル コレクションのインポート
+## サンプルのフラグメントセットをインポートする
 
-フラグメントを表示するには、サンプルのフラグメント コレクションを Liferay にインポートします。
+フラグメントを表示するには、サンプルのフラグメント セットを Liferay にインポートします。
 
-1.  以下のコマンドを実行して、Docker コンテナを起動します。
+1. 以下のコマンドを実行して、Docker コンテナを起動します。
 
-    ``` bash
-    docker run -it -p 8080:8080 [$LIFERAY_LEARN_DXP_DOCKER_IMAGE$]
+    ```bash
+    docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
     ```
 
-2.  `sample-liferay-fragments` プロジェクト フォルダで `yarn run import` コマンドを呼び出して、フラグメント コレクションを Liferay インスタンスにインポートします。 あるいは、[手動でフラグメントコレクションをインポート](../../displaying-content/using-fragments/managing-page-fragments.md)することもできます。
+1. プロジェクトのルートフォルダ（例：`sample-liferay-fragments`）で`yarn run import`コマンドを呼び出して、フラグメントセットをLiferayインスタンスにインポートします。  あるいは、[手動でフラグメントセットをインポート](../../creating-pages/page-fragments-and-widgets/using-fragments/managing-fragments.md)することもできます。
 
-    ``` bash
+    ```bash
+    cd sample-liferay-fragments
+    ```
+
+    ```bash
     yarn run import
-    yarn run v1.22.10
-    warning package.json: No license field
+    ```
+
+1. プロンプトに答えます。
+
+    ```bash
     $ yo liferay-fragments:import
     ? Liferay host & port http://localhost:8080
     ? Username test@liferay.com
@@ -131,42 +148,42 @@ Liferay の [setup\_tutorial.sh](https://github.com/liferay/liferay-learn/blob/m
     Done in 21.43s.
     ```
 
-3.  フラグメントコレクションが利用可能であることを確認します。 ブラウザで`https://localhost:8080`にアクセスし、画面左側のサイトメニューで、*[デザイン]* → *[フラグメント]* に移動します。 コレクションがコレクションリストに表示されます。
+1. フラグメントセットが利用可能であることを確認します。 *サイトメニュー* (![Site Menu](../../../images/icon-product-menu.png)) を開き、 *［デザイン］* &rarr; *［フラグメント］*に移動します。 セットがリストに表示されます。
 
-    ![コレクションが利用可能です。](./using-the-fragments-toolkit/images/01.png)
+    ![セットが利用可能です。](./using-the-fragments-toolkit/images/01.png)
 
     ```{note}
     Liferay DXP 7.1および7.2では、代わりにプロダクトメニューの*サイト* → *サイトビルダー* → *ページ フラグメント*に移動して、*フラグメント*ページを表示します。
     ```
 
-4.  フラグメントを選択して、フラグメント エディターで表示します。
+1. フラグメントを選択して、フラグメント エディターで表示します。
 
     ![React を使用したフラグメントのサンプルです。](./using-the-fragments-toolkit/images/02.png)
 
-フラグメントコレクションを正常にデプロイしました。
+フラグメントセットを正常にデプロイしました。
 
-## コレクション形式の概要
+## フラグメントセットのストラクチャー
 
-フラグメント コレクションは次のプロジェクト構造を使用します。
+各フラグメントセットは、次の構造を使用します。
 
-  - `collection.json`: コレクションを説明するテキスト ファイル。
+* `collection.json`: フラグメントセットを説明するテキスト ファイル。
 
-    ``` json
+    ```json
     {
         "description": "Optional description",
-        "name": "Collection name"
+        "name": "Fragment Set Name"
     }
     ```
 
-  - `language.properties` (オプション): コレクションに定義された言語キー。
+* `language.properties` (オプション)：フラグメントセットに定義された言語キー。
 
-  - `[fragment-name]/`: フラグメントのすべてのファイルを含むフォルダ。
+* `[fragment-name]/`: フラグメントのすべてのファイルを含むフォルダ。
 
-      - `configuration.json`(オプション): フラグメントの構成を定義する JSON ファイル。 詳細は、 [フラグメントへの構成オプションの追加](./adding-configuration-options-to-fragments.md) を参照してください。
+    * `configuration.json`(オプション): フラグメントの構成を定義する JSON ファイル。 詳細は、 [フラグメントへの構成オプションの追加](./adding-configuration-options-to-fragments.md) を参照してください。
 
-      - `fragment.json`: フラグメントを説明するテキスト ファイル。
+    * `fragment.json`: フラグメントを説明するテキスト ファイル。
 
-        ``` json
+        ```json
         {
             "cssPath": "styles.css",
             "configurationPath": "configuration.json",
@@ -177,73 +194,78 @@ Liferay の [setup\_tutorial.sh](https://github.com/liferay/liferay-learn/blob/m
         }
         ```
 
-        CSS、構成、HTML、および JavaScript ファイルの名前で `*Path` プロパティを更新します。
+      CSS、構成、HTML、および JavaScript ファイルの名前で `*Path` プロパティを更新します。
 
-      - `index.html`: フラグメントの HTML ソース。
+    * `index.html`: フラグメントの HTML ソース。
 
-      - `main.js`: フラグメントの JavaScript ソース。
+    * `main.js`: フラグメントの JavaScript ソース。
 
-      - `styles.css`: フラグメントの CSS ソース。
+    * `styles.css`: フラグメントの CSS ソース。
 
-  - `resources/` (オプション): フラグメントが必要とする追加の画像またはファイルを含むフォルダ。 詳細は、 [フラグメントにデフォルトのリソースを含める](./including-default-resources-with-fragments.md) を参照してください。
+* `resources/` (オプション): フラグメントが必要とする追加の画像またはファイルを含むフォルダ。 詳細は、 [フラグメントにデフォルトのリソースを含める](./including-default-resources-with-fragments.md) を参照してください。
 
-フラグメント ツールキットを使うと、フラグメント コレクションを簡単に作成できます。
+フラグメントツールキットを使用して、このストラクチャーを持つプロジェクトをすばやく作成できます。
 
-## 新しいコレクションとフラグメントを追加する
+## プロジェクトにフラグメントセットを追加する
 
-`yarn run add-collection` コマンドを使用して既存のプロジェクトにフラグメント コレクションを作成し、コレクションの名前とオプションで説明を入力してプロンプトに答えます。
+`add-collection` コマンドを使用して、プロジェクトにフラグメントセットを追加します。
 
-``` bash
-yarn run add-collection
+1. プロジェクトのルートフォルダに移動して、次のコマンドを実行します。
 
-> yo liferay-fragments:collection
+    ```bash
+    yarn run add-collection
+    ```
 
-? Collection name (required) My Collection
-? Collection description (optional) This is my new Fragment Collection.
-   create src/my-collection/collection.json
-```
+1. プロンプトが表示されたら、フラグメントセットの名前と説明を入力します。
 
-結果の `collection.json` ファイル:
+    ```bash
+    > yo liferay-fragments:collection
+    ? Collection name (required) My Set
+    ? Collection description (optional) This is my new Fragment Set.
+    create src/my-set/collection.json
+    ```
 
-``` json
-{
-    "description": "This is my new Fragment Collection.",
-    "name": "My Collection"
-}
-```
+1. 新しいフラグメントセットがプロジェクトの`src`フォルダに正常に作成されたことを確認します。 `collection.json`ファイルのみが含まれているはずです。
+
+    ```json
+    {
+        "description": "This is my new Fragment Set.",
+        "name": "My Set"
+    }
+    ```
 
 ## 新規フラグメントを作成する
 
-`add-fragment` コマンドを入力するごとにフラグメントが生成されます。
+`add-fragment` コマンドを使用して、新しいフラグメントをセットに追加します。
 
-1.  `add-fragment` コマンドを実行します。
+1. プロジェクトのルートフォルダに移動して、次のコマンドを実行します。
 
-    ``` bash
+    ```bash
     yarn run add-fragment
     ```
 
     CLI がプロセスを開始します:
 
-    ``` bash
+    ```bash
     > yo liferay-fragments:fragment
     ```
 
-2.  フラグメントに名前を付けます。
+1. フラグメントに名前を付けます。
 
-    ``` bash
+    ```bash
     ? Fragment name (required) My Jumbotron
     ```
 
-3.  React または別の JavaScript フレームワークを使用するかどうかを選択します。 React には Liferay 7.3 以降が必要です。 このチュートリアルでは、React の使用を拒否してください。
+1. React または別の JavaScript フレームワークを使用するかどうかを選択します。 React には Liferay 7.3 以降が必要です。 このチュートリアルでは、React の使用を拒否してください。
 
-    ``` bash
-    ? Use React (or other JS framework)? No
+    ```bash
+    ? Use React (or other JS framework)? いいえ
     ```
 
-4.  Liferay 7.3 以降の場合は、新しい編集可能な要素の構文を使用します。
+1. Liferay 7.3 以降の場合は、新しい編集可能な要素の構文を使用します。
 
-    ``` bash
-    ? Use new data-lfr editable syntax? Yes
+    ```bash
+    ? Use new data-lfr editable syntax? はい
     ```
 
     ```{note}
@@ -251,27 +273,25 @@ yarn run add-collection
     ```
 
     ```{note}
-    Liferay の編集可能なデータ構文の詳細は、[Fragment-Specific Tags](../reference/fragments/fragment-specific-tags-reference.md) を参照してください。
+    Liferayの編集可能なデータ構文については、[フラグメント固有のタグと属性のリファレンス](../reference/fragments/fragment-specific-tags-reference.md) を参照してください。
     ```
 
-5.  先ほど作成したコレクションを選択します (`My Collection`)。
+1. 先ほど作成したフラグメントセットを選択します（`My Set`）。
 
-    ``` bash
-    ? Choose a collection (my-collection)
-       create src/my-collection/my-jumbotron/index.html
-       create src/my-collection/my-jumbotron/main.js
-       create src/my-collection/my-jumbotron/styles.css
-       create src/my-collection/my-jumbotron/fragment.json
-       create src/my-collection/my-jumbotron/configuration.json
+    ```bash
+    ? Choose a collection
+        My Set
+        Sample Set
+        + New Collection
     ```
 
     ```{note}
-    `fragment.json` はフラグメントの CSS、HTML、JavaScript へのパスを定義します。 これらのファイル名のいずれかを変更した場合は、`fragment.json` 内のパスを更新してください。
+    `fragment.json` には、Fragment の CSS、HTML、JavaScript へのパスを定義します。 これらのファイル名のいずれかを変更した場合は、`fragment.json` 内のパスを更新してください。
     ```
 
 フラグメントの `index.html` は次のとおりです。
 
-``` html
+```html
 <div class="my-jumbotron">
     <h1 data-lfr-editable-id="title" data-lfr-editable-type="text">
         My Jumbotron
@@ -285,14 +305,14 @@ yarn run add-collection
 
 フラグメントの任意の部分を変更します。
 
-  - HTML (`index.html`)
-  - CSS (`styles.css`)
-  - JavaScript (`main.js`)
-  - [構成オプション](./adding-configuration-options-to-fragments.md) (`configuration.json`)
+* HTML (`index.html`)
+* CSS (`styles.css`)
+* JavaScript (`main.js`)
+* [構成オプション](./adding-configuration-options-to-fragments.md) (`configuration.json`)
 
 たとえば、上記の HTML から構築し、 [Clay](https://clayui.com/) の [Bootstrap](https://getbootstrap.com/) ベースのコンポーネントを使用して、次の `index.html` に示すように、注目を集める見出しと説明を持つフラグメントを作成できます。
 
-``` html
+```html
 <div class="component-my-jumbotron">
     <div class="jumbotron">
         <h1
@@ -333,46 +353,46 @@ yarn run add-collection
 ```
 
 ```{note}
-Liferay 7.2 以下を使用している場合は、 [Fragment-Specific Tags](../reference/fragments/fragment-specific-tags-reference.md) で説明されているように、`data-lfr-editable-[id|type]` 属性を削除し、`lfr-editable` 要素でコンテンツ要素をラップしてください。
+Liferay 7.2以下を使用している場合は、[フラグメント固有のタグと属性のリファレンス](../reference/fragments/fragment-specific-tags-reference.md) にあるように、 `data-lfr-editable-[id|type]` 属性を削除してコンテンツ要素を `lfr-editable` 要素で囲んでください。
 ```
 
 最初の `div` 要素の `class="component-my-jumbotron"` 属性は、ページ上のこのフラグメントを一意に識別しようとします。
 
 ```{tip}
-フラグメントの HTML ファイルで、メインのラッパー要素 (上記の例では `<div>`) を使用してフラグメントを一意に識別し、ページ上の他のコンポーネントと競合しないようにします。
+フラグメントのHTMLファイルでは、メインラッパー要素（上記の例では [](div) ）を使ってフラグメントを一意に識別し、ページ上の他のコンポーネントと衝突しないようにします。
 ```
 
 次に、 `<div class="jumbotron"/>` 要素がコンテンツをラップし、 [Bootstrap](https://getbootstrap.com/) のジャンボトロン コンポーネントを適用します。 このコンポーネントは、コンテンツを際立たせます。 コンテンツ要素は次のとおりです。
 
-  - `<h1 class="display-4" ...>Editable Jumbotron ...` は、フラグメントの見出しを作成します。 [Bootstrap](https://getbootstrap.com/) の `display-4` サイズ スタイルを使用します。 `data-lfr-editable-` 属性は、見出しテキストを[編集可能](../reference/fragments/fragment-specific-tags-reference.md)にします。 `data-lfr-editable-id="03-text"` 属性は要素を識別し、`data-lfr-editable-type="rich-text"` 属性はコンテンツ タイプを宣言します。
-  - `<p class="lead" ...>Edit this text ...` は、Clay の [`lead`](https://clayui.com/docs/css/content/typography.html#css-lead) スタイル コンポーネントで識別されるリード本文テキストです。 `data-lfr-editable-` 属性は、段落を編集可能にします。
-  - `<hr/>` 要素と次の `<p ...` 要素は、それぞれ水平方向の罫線と別の編集可能な段落を生成します。
-  - `<a class="btn btn-primary btn-lg" ...` は変更可能なリンクを指定します。 `btn-primary` クラスはそれをメイン ボタンとしてスタイル設定し、`btn-lg` はそれを拡大します。 `href="#"` 属性は、リンクをクリックしたときにユーザーをページの上部に移動します。 `data-lfr-editable-type="link"` 属性は、リンクを[編集可能](../reference/fragments/fragment-specific-tags-reference.md)にします。
+* `<h1 class="display-4" ...>Editable Jumbotron ...` は、フラグメントの見出しを作成します。 [Bootstrap](https://getbootstrap.com/) の `display-4` サイズ スタイルを使用します。 `data-lfr-editable-` 属性は、見出しテキストを[編集可能](../reference/fragments/fragment-specific-tags-reference.md)にします。 `data-lfr-editable-id="03-text"` 属性は要素を識別し、`data-lfr-editable-type="rich-text"` 属性はコンテンツ タイプを宣言します。
+* `<p class="lead" ...>Edit this text ...` は、Clay の [`lead`](https://clayui.com/docs/css/content/typography.html#css-lead) スタイル コンポーネントで識別されるリード本文テキストです。 `data-lfr-editable-` 属性は、段落を編集可能にします。
+* `<hr/>` 要素と次の `<p ...` 要素は、それぞれ水平方向の罫線と別の編集可能な段落を生成します。
+* `<a class="btn btn-primary btn-lg" ...` は変更可能なリンクを指定します。 `btn-primary` クラスはそれをメイン ボタンとしてスタイル設定し、`btn-lg` はそれを拡大します。 `href="#"` 属性は、リンクをクリックしたときにユーザーをページの上部に移動します。 `data-lfr-editable-type="link"` 属性は、リンクを[編集可能](../reference/fragments/fragment-specific-tags-reference.md)にします。
 
 フラグメントにリソースを含めることもできます。 詳細は、 [フラグメントにデフォルトのリソースを含める](./including-default-resources-with-fragments.md) を参照してください。
 
 ```{note}
-フラグメントと設定オブジェクトは JavaScript の引数として渡され、それぞれ `fragmentElement` と `configuration` パラメーターとして利用できます。
+フラグメントと設定オブジェクトは JavaScript の引数として渡され、それぞれ `fragmentElement` と `configuration`パラメーターとして利用できます。
 ```
 
 ## 新しいフラグメントをインポートする
 
 元のサンプルフラグメントと同じように、新しいフラグメントをインポートできます。
 
-1.  import コマンドを実行し、資格情報を提供します。
+1. import コマンドを実行し、資格情報を提供します。
 
-    ``` bash
+    ```bash
     yarn run import
     ```
 
-2.  新しいフラグメントコレクションが利用可能であることを確認します。 ブラウザで`https://localhost:8080`にアクセスし、画面左側のサイトメニューで、*[デザイン]* → *[フラグメント]* に移動します。 コレクションがコレクションリストに表示されます。
+1. フラグメントセットが利用可能であることを確認します。 *サイトメニュー* (![Site Menu](../../../images/icon-product-menu.png)) を開き、 *［デザイン］* &rarr; *［フラグメント］*に移動します。 セットがリストに表示されます。
 
-![コレクションが利用可能です。](./using-the-fragments-toolkit/images/03.png)
+![セットが利用可能です。](./using-the-fragments-toolkit/images/03.png)
 
 これで、フラグメント ツールキットを使用してフラグメントを作成および管理する方法がわかりました。 ツールキット コマンドの詳細は、 [フラグメントツールキットコマンドリファレンス](../reference/fragments/fragments-toolkit-command-reference.md) を参照してください。
 
 ## 関連情報
 
-  - [Creating a Contributed Fragment Collection](./creating-a-contributed-fragment-collection.md)
-  - [フラグメントエディターの使用](./using-the-fragments-editor.md)
-  - [フラグメントツールキットコマンドリファレンス](../reference/fragments/fragments-toolkit-command-reference.md)
+* [提供されたフラグメントセットの作成](./creating-a-contributed-fragment-set.md)
+* [フラグメントエディターの使用](./using-the-fragments-editor.md)
+* [フラグメントツールキットコマンドリファレンス](../reference/fragments/fragments-toolkit-command-reference.md)

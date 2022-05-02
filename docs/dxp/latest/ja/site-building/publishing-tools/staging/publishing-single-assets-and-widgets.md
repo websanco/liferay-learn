@@ -4,33 +4,33 @@
 
 ## 単一アセットの公開
 
-この方法でアセットを公開するには、ユーザーが*[アプリケーション情報をエクスポート/インポートする]* および*[ステージングを公開する]* の権限を持っている必要があります。 詳細は、[ステージング権限の管理](./managing-staging-permissions.md)を参照してください。
+この方法でアセットを公開するには、ユーザーが*［アプリケーション情報をエクスポート/インポートする］*および*［ステージングを公開する］*の権限を持っている必要があります。 詳細は、[ステージング権限の管理](./managing-staging-permissions.md)を参照してください。
 
-1.  *製品*メニューの*[Content & Data]* に移動し、公開するコンテンツまたはデータの種類を選択します。
+1. *製品*メニューの*[Content & Data]*に移動し、公開するコンテンツまたはデータの種類を選択します。
 
-2.  公開するアセットの*アクション*ボタン（![Actions button](../../../images/icon-actions.png)）をクリックし、*[本番環境に公開]* を選択します。
+1. 公開するアセットの*アクション*ボタン（![Actions button](../../../images/icon-actions.png)）をクリックし、*［Publish to Live］*を選択します。
 
-    ![公開するアセットのアクションボタンをクリックし、 [本番環境に公開]を選択します。](./publishing-single-assets-and-widgets/images/01.png)
+   ![公開するアセットのアクションボタンをクリックし、 [本番環境に公開]を選択します。](./publishing-single-assets-and-widgets/images/01.png)
 
 確認すると、公開ステータスを確認できるプロセスページに移動します。
 
 標準のプロセスと同様に、単一アセットの公開には、関連する依存関係（画像、カスタムテンプレート、またはフォルダ）が含まれます。
 
 ```{note}
-Single asset publishing is not supported for page-scoped content.
+単一アセットの公開は、ページスコープのコンテンツではサポートされていません。
 ```
 
 ## 単一のウィジェットの公開
 
 ステージングは通常、コンテンツの公開に使用されますが、ウィジェットを公開することもできます。 たとえば、ウィジェットのタイトルを変更して、変更を本番環境に公開できます。 これが可能なのは、ウィジェット設定が常にステージングされているためです。 ページ上にあるウィジェットを公開するには、最初にページを公開する必要があります。
 
-ウィジェットを変更した後、ウィジェットの *アクション* ボタン（ ![Actions button](../../../images/icon-actions.png)）をクリックして*[ステージング]* を選択することにより、ウィジェットを公開できます。
+ウィジェットを変更した後、ウィジェットの *アクション* ボタン（ ![Actions button](../../../images/icon-actions.png)）をクリックして*［Staging］*を選択することにより、ウィジェットを公開できます。
 
 ![ウィジェットのアクションボタンをクリックして、 [ステージング]を選択します。](./publishing-single-assets-and-widgets/images/04.png)
 
 ## 追加情報
 
-  - [ステージングの概要](../staging.md)
-  - [ステージング権限の管理](./managing-staging-permissions.md)
-  - [ページバージョニング](./page-versioning.md)
-  - [Staging UI Reference](./staging-ui-reference.md)
+* [ステージングの概要](../staging.md)
+* [ステージング権限の管理](./managing-staging-permissions.md)
+* [ページバージョニング](./page-versioning.md)
+* [サイトステージングUIリファレンス](./site-staging-ui-reference.md)
