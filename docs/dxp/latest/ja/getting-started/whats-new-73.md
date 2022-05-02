@@ -262,7 +262,7 @@ Liferay DXP 7.3では、 [閲覧に関して、サイトメンバーのみとす
 
 > 変更通知を受け取り（購読）が必要
 
-[多要素認証](../installation-and-upgrades/securing-liferay/multi-factor-authentication/using-multi-factor-authentication.md) (MFA) では、ユーザーに複数の方法、または _要素_で本人確認を求めることで、より優れたセキュリティを実現します。 基本的なユーザー名とパスワードの組み合わせは、1つまたは複数のカスタマイズ可能な要素で強化されます。 これには、デフォルトのワンタイムパスワード（OTP）とカスタマイズ可能なIPアドレス、時間ベースのOTPが含まれています。また、システムに拡張性があるため、ユーザーが書きたい要素も使用できます。
+[多要素認証](../installation-and-upgrades/securing-liferay/multi-factor-authentication/using-multi-factor-authentication.md) (MFA) では、ユーザーに複数の方法、または **要素** で本人確認を求めることで、より優れたセキュリティを実現します。 基本的なユーザー名とパスワードの組み合わせは、1つまたは複数のカスタマイズ可能な要素で強化されます。 これには、デフォルトのワンタイムパスワード（OTP）とカスタマイズ可能なIPアドレス、時間ベースのOTPが含まれています。また、システムに拡張性があるため、ユーザーが書きたい要素も使用できます。
 
 ### インスタンスレベルでのSAMLの設定
 

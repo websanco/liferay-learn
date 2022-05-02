@@ -24,7 +24,7 @@ Liferay DXP 7.4は、強化された機能とエキサイティングな改良�
 
 ### コンテンツパフォーマンスツールでのトラフィック獲得チャネル
 
-[Content Performance Tool](../content-authoring-and-management/content-performance-panel/analyze-content-metrics-using-content-performance-panel.md) のトラフィック獲得チャネルは、<0>Analytics Cloud</0> のデータを使用しており、オーガニック検索、有料検索、ソーシャル・トラフィック、およびリファラルの測定値が含まれています。 チャンネルの詳細表示では、すべての参照元URLとドメインが表示されます。
+[Content Performance Tool](../content-authoring-and-management/content-performance-panel/analyze-content-metrics-using-content-performance-panel.md) のトラフィック獲得チャネルは、[Analytics Cloud](https://learn.liferay.com/analytics-cloud/latest/en/index.html) のデータを使用しており、オーガニック検索、有料検索、ソーシャル・トラフィック、およびリファラルの測定値が含まれています。 チャンネルの詳細表示では、すべての参照元URLとドメインが表示されます。
 
 ![トラフィック獲得チャネルには、検索、ソーシャル、リファラルデータなどがあります。](./whats-new-74/images/image9.png)
 
