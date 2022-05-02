@@ -2,6 +2,8 @@
 
 管理者ユーザーアカウントは、Liferay DXPの新規インストールでデフォルトで作成され、Liferay DXPインスタンスのすべてのファセットを変更するための完全なアクセス権を持っています。 管理者ユーザーは、サイト、ユーザー、ページを作成、変更、削除し、すべてのサイト管理タスクを実行できます。
 
+<a name="accessing-liferay-dxp-as-the-admin-user" />
+
 ## 管理者ユーザーとしてLiferay DXPにアクセスする
 
 1. ブラウザで`http://localhost:8080`を開きます。
@@ -27,6 +29,8 @@
 
 ## 管理者ユーザーの設定
 
+<a name="changing-the-login-password" />
+
 ### ログインパスワードの変更
 
 1. ［**User Avatar**］ をクリックして、 ［**アカウント設定**］ &rarr; ［**Password**］ に移動します。
@@ -34,6 +38,8 @@
 1. **現在のパスワード** を入力し、新しいパスワードを入力します。
 
     ![パスワード設定](./introduction-to-the-admin-account/images/02.png "パスワード設定")
+
+<a name="changing-account-information" />
 
 ### アカウント情報の変更
 
@@ -44,6 +50,8 @@
 1. ［**Information**］ タブで、必要に応じてユーザー情報を変更または追加します。
 
     ![アカウント情報](./introduction-to-the-admin-account/images/04.png "アカウント情報")
+
+<a name="signing-out" />
 
 ## ログアウト
 

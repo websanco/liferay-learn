@@ -28,6 +28,8 @@
 
 <a name="viewing-the-site" />
 
+<a name="viewing-the-site" />
+
 ## サイトを表示する
 
 新しく作成したサイトを表示するには：

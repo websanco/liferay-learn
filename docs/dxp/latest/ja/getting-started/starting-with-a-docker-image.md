@@ -8,6 +8,8 @@ Dockerをお持ちではありませんか？ まずは [Linux](https://docs.doc
 
 <a name="get-started-with-liferay-portal" />
 
+## Liferayを使ってみる
+
 ## Liferay Portalを始める
 
 Liferay Portalは、説得力のある柔軟なWebエクスペリエンスを構築するための、オープンソースでコミュニティがサポートするプラットフォームです。
@@ -34,7 +36,7 @@ Liferay Portalは、説得力のある柔軟なWebエクスペリエンスを構
 
 <a name="get-started-with-liferay-dxp" />
 
-## Liferayを使ってみる
+### Liferayを使ってみる
 
 Liferay DXPは、世界中で使用されている商用サポート済みのエンタープライズ対応プラットフォームであり、Liferayポータルの基盤の上に構築されています。 Dockerイメージから始めるのは簡単で、トライアルライセンスが含まれています。
 
@@ -51,6 +53,8 @@ Liferay DXPは、世界中で使用されている商用サポート済みのエ
     ```
 
 1. ブラウザで`https://localhost:8080`を開きます。
+
+<a name="whats-next" />
 
 <a name="whats-next" />
 

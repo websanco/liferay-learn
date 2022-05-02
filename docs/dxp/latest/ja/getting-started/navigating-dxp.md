@@ -2,6 +2,8 @@
 
 Liferay DXPのすぐに使えるナビゲーションは、 **個人用メニュー** 、 **グローバルメニュー** 、 **サイトメニュー** の3つの主要な領域に編成されています。
 
+<a name="site-menu" />
+
 ## サイトメニュー
 
 画面の左側にあるDXP **サイトメニュー** には、現在表示されている特定のサイトを対象とするアクション、コンテンツ、および構成が含まれています。 アプリケーションバーのサイトメニューアイコン（![Site Menu](../images/icon-menu.png)）をクリックすると、サイトメニューの表示・非表示を切り替えることができます。
@@ -19,6 +21,8 @@ Liferay DXPのすぐに使えるナビゲーションは、 **個人用メニュ
 * [サイトメンバーシップの管理](../site-building/building-sites/site-membership/adding-members-to-sites.md)
 * [サイトの動作と機能の設定と最適化](../site_building.html)
 * など・・・
+
+<a name="applications-bar" />
 
 ## アプリケーションバー
 
@@ -52,6 +56,8 @@ Liferay DXPのすぐに使えるナビゲーションは、 **個人用メニュ
 コンテンツページとウィジェットページのアプリケーションバーオプションは、Lifera yDXPのバージョンによって異なります。 [コンテンツパフォーマンス](../content-authoring-and-management/content-performance-tool/about-the-content-performance-tool.md)は、Liferay DXP 7.3以降のコンテンツページと、Liferay DXP 7.4以降のウィジェットページで利用できます。 ページ監査は、Liferay DXP7.4以降で利用できます。 トグルコントロールオプションは、Liferay DXP7.3以降で使用できます。
 ```
 
+<a name="personal-menu" />
+
 ## 個人用メニュー
 
 パーソナルメニューは、ログインしているユーザーの情報とアクティビティのハブです。
@@ -66,6 +72,8 @@ Liferay DXPのすぐに使えるナビゲーションは、 **個人用メニュ
 * [サインアウトする](./introduction-to-the-admin-account.md#signing-out)
 * など・・・
 
+<a name="global-menu" />
+
 ## グローバルメニュー
 
 DXPの **グローバルメニュー** には、 **アプリケーションメニュー** と **コントロールパネル** が含まれています。 画面上部の **アプリケーションメニュー** アイコン（![Applications Menu icon](../images/icon-applications-menu.png)）をクリックしてアクセスします。
@@ -75,6 +83,8 @@ DXPの **グローバルメニュー** には、 **アプリケーションメ�
 ```
 
 インターフェイスの右側の **グローバルメニュー** の ［**Applications**］ タブまたは ［**コントロールパネル**］ タブから、利用可能な他のサイトに移動することもできます。
+
+<a name="applications-menu" />
 
 ### アプリケーションメニュー
 
@@ -87,6 +97,8 @@ DXPの **グローバルメニュー** には、 **アプリケーションメ�
 * [コレクション](../content-authoring-and-management/collections-and-collection-pages/about-collections-and-collection-pages.md)とコンテンツダッシュボード
 * [ワークフロー](../process-automation/workflow/introduction-to-workflow.md)
 * [アプリビルダー](../building-applications/app-builder.md)
+
+<a name="commerce-menu" />
 
 ### コマースメニュー
 
@@ -104,6 +116,8 @@ Liferay 7.3 CE GA6およびLiferay DXP 7.3 GA1以降、Liferay Commerce 3.0はLi
 
 Liferay Commerceの詳細については、 [Liferay Commerceの概要](https://learn.liferay.com/commerce/latest/ja/starting-a-store/introduction-to-liferay-commerce.html) を参照してください。
 
+<a name="control-panel" />
+
 ### コントロールパネル
 
 **コントロールパネル** には、Liferay DXPインストールまたは特定のインスタンスに **グローバル** にスコープできる一般的な管理アクションと構成が含まれています。
@@ -118,15 +132,21 @@ Liferay Commerceの詳細については、 [Liferay Commerceの概要](https://
 * サイト上のアプリケーションに新しいカスタムフィールドを追加する
 * など・・・
 
+<a name="dxp-71-and-72" />
+
 ## DXP7.1および7.2
 
 Liferay DXP 7.3以前のバージョンでは、グローバルメニューの内容は、画面の左側のサイトメニューの上にあるコントロールパネルの中にあります。
 
 ![DXP 7.1および7.2のコントロールパネルは、サイトメニューの上にあります。](./navigating-dxp/images/06.png)
 
+<a name="whats-next" />
+
 ## 次のステップ
 
 引き続きスタートガイドを進め、[最初のサイトを作成する](./creating-your-first-site.md)方法について紹介します。
+
+<a name="related-information" />
 
 ## 関連情報
 

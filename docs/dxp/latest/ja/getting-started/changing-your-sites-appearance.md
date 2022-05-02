@@ -4,7 +4,11 @@
 
 DXP Dockerイメージには **クラシック** デフォルトで利用可能なテーマ。 この例では、新しいシンプルなテーマをデプロイしてから、テーマを切り替える方法を示します。
 
+<a name="changing-your-sites-theme" />
+
 ## サイトのテーマを変更する
+
+<a name="deploy-a-new-theme" />
 
 ### 新しいテーマをデプロイする
 
@@ -34,6 +38,8 @@ DXP Dockerイメージには **クラシック** デフォルトで利用可能�
 2020-03-11 17:06:35.601 INFO  [fileinstall-/opt/liferay/osgi/war][BundleStartStopLogger:39] STARTED liferay-5b2v-theme_1.0.0 [1112]
 ```
 
+<a name="change-your-sites-theme" />
+
 ### サイトのテーマを変更する
 
 デプロイされたテーマを使用するようにサイトのページを構成します。
@@ -58,7 +64,9 @@ DXP Dockerイメージには **クラシック** デフォルトで利用可能�
 
 サイトのテーマが更新されました。
 
-### 次のステップ
+<a name="whats-next" />
+
+### テーマリソース
 
 サイトの外観を管理する方法の全容については、[Managing Your Site's Appearance](../site-building/site-appearance/site-appearance.md)を参照してください。
 

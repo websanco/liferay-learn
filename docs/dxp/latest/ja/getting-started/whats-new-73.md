@@ -6,11 +6,15 @@ Liferay DXPの最新バージョンには多くの新機能が追加されまし
 
 ## ページ構築
 
+<a name="master-pages" />
+
 ### マスターページ
 
 [マスターページ](../site-building/creating-pages/defining-headers-and-footers/creating-a-master-page-template.md) は、サイト内の複数ページ、あるいはすべてのページにおいて、一貫性のあるページ領域を定義します。 ヘッダーやフッター、サイドバーを定義する際に、最もよく使用します。 本機能が搭載される前は、共通のページ領域はテーマ内でしか定義できませんでした。 これにより、技術者でないユーザーでも、自分のマスターページを作成して、サイト全体で使用でき、さらにいつでも変更することができます。行った変更はすべてのページに自動的に適用されます。
 
-### 元に戻すとやり直すボタン
+<a name="undo-and-redo" />
+
+### 「元に戻す」と「やり直す」
 
 ![「元に戻す」ボタンと「やり直し」ボタンは、編集作業全体に使用できます。](./whats-new-73/images/01.gif)
 
@@ -18,11 +22,15 @@ Liferay DXPの最新バージョンには多くの新機能が追加されまし
 
 また、編集セッションで任意のページ状態にすばやく移動するために、実行されたすべてのアクションを一覧表示するパネルもあります。
 
+<a name="collection-display" />
+
 ### コレクション表示
 
 ![コレクション表示フラグメントでは、ドラッグアンドドロップのインターフェイスを使用してアセットを公開します。](./whats-new-73/images/02.gif)
 
 [コレクション表示](../site-building/displaying-content/additional-content-display-options/displaying-collections.md#adding-a-collection-display-fragment-to-a-page) フラグメントでは、ドラッグアンドドロップ編集で一連のアセットを表示します。 フラグメントがページに追加されたら、コレクションにリンク付けします。 その後、コレクション内の各アセットのスペースを定義します。 スペースの調整は、残りのスペースにも反映されます。 編集可能なフィールドをコレクションの共通フィールドにマッピングすることができます。 例えば、見出しフラグメントが追加されると、Webコンテンツストラクチャーのタイトルフィールドにマッピングされます。このマッピングは各項目にプロパゲートします。
+
+<a name="visual-responsive-layout-editor" />
 
 ### ビジュアル・レスポンシブ・レイアウト・エディター
 
@@ -30,9 +38,13 @@ Liferay DXPの最新バージョンには多くの新機能が追加されまし
 
 ![ビジュアル・レスポンシブ・レイアウト・エディターでは、さまざまな画面幅のプレビューを表示します。](./whats-new-73/images/03.gif)
 
+<a name="general-performance-improvements" />
+
 ### 一般的なパフォーマンスの向上
 
 Liferay DXP 7.3でReactを使用するためにページエディターを全面的にオーバーホールしました。 これにより、特に大きなページを扱う際のエディターのパフォーマンスが大幅に向上しました。
+
+<a name="visual-fragment-composition" />
 
 ### ビジュアルフラグメントの構成
 
@@ -48,11 +60,17 @@ Liferay DXP 7.3でReactを使用するためにページエディターを全面
 
 ![テーマ、スタイルブック、フラグメント、マスターページ、ページテンプレートが、すべて統合されているため、コンテンツに優れたUIを提供できます。](./whats-new-73/images/05.png)
 
+<a name="style-books" />
+
 ### スタイルブック
 
 [スタイルブック](../site-building/site-appearance/style-books/using-a-style-book-to-standardize-site-appearance.md) は、スタイルエディターのUIで作成できるスタイルを集めたものです（CSSルールセット）。 スタイルブックでは、UXデザイナーが、再利用かつ共有可能なスタイルやスタイルルールを用いて、ページ間で一貫したユーザーエクスペリエンスを作成できるよう、「デザインシステム」を提供しています。 テーマ作成者は同じサイトに複数のスタイルブックを作成することができ、ページ作成者は特定のページのスタイルブックを選択することができます。 スタイルブックを使えば、複数のコンテンツ制作者とウェブデザイナーが並行して新しいエクスペリエンスを作成する際に、不整合を減らすことができます。
 
+<a name="content-authoring-and-management" />
+
 ## コンテンツの作成と管理
+
+<a name="asset-libraries" />
 
 ### アセットライブラリ
 
@@ -62,6 +80,8 @@ Liferay DXP 7.3でReactを使用するためにページエディターを全面
 
 ![アセットライブラリはサイト間で共有することができ、あらゆるアセットタイプがあります。](./whats-new-73/images/06.png)
 
+<a name="content-dashboard" />
+
 ### コンテンツダッシュボード
 
 使用していない可能性のある大規模データベースに大量のコンテンツを保有している企業向けに、Liferayは [コンテンツダッシュボード](../content-authoring-and-management/content-dashboard/about-the-content-dashboard.md)を作成しました。 コンテンツダッシュボードでは、コンテンツ作成者が、特定のサイトだけでなく、Liferayインスタンス内にあるすべてのサイトやアセットライブラリの全コンテンツにワンストップでアクセスできます。 こうした大量のコンテンツを容易に把握できるよう、包括的なフィルターセットが搭載されています。これを使えば、コンテンツリストのフィルタリングと並び替えができ、必要なコンテンツの監査がしやすくなる監査グラフも入手できます。
@@ -70,15 +90,21 @@ Liferay DXP 7.3でReactを使用するためにページエディターを全面
 
 ![コンテンツダッシュボードを使えば、放置されていた可能性のあるデータの中から重要なデータを見つけることができます。](./whats-new-73/images/07.gif)
 
+<a name="content-audit-tool" />
+
 ### コンテンツ監査ツール
 
 この新しいコンテンツダッシュボードには、 [種類別にコンテンツを簡単に監査](../content-authoring-and-management/content-dashboard/content-dashboard-interface.md#content-audit-tool) できるツールが含まれています。 ボキャブラリーを選択し、コンテンツ監査のグラフで、ボキャブラリーの各カテゴリにおける既存のアセット数を計算します。 カテゴリ、タグ、作成者、アセットのサブタイプ、サイトなどでフィルタリングし、グラフに表示されるアセットを調整することができます。
 
 ![コンテンツ監査ツールにより、コンテンツの種類を確認できます。](./whats-new-73/images/08.gif)
 
+<a name="extended-categorization-capabilities" />
+
 ### カテゴリー設定の拡張機能
 
 Liferay DXP 7.3では、 [閲覧に関して、サイトメンバーのみとするか一般公開とするか](../content-authoring-and-management/tags-and-categories/organizing-content-with-categories-and-tags.md#vocabulary-visibility) 設定できるよう、ボキャブラリーに新しい設定を追加しました。 すぐに利用可能なオーディエンス、ステージ、およびトピックのグローバルボキャブラリーを使えば、サイト全体で体系的な分類がしやすくなります。
+
+<a name="publication-management" />
 
 ## パブリケーション管理
 
@@ -86,11 +112,15 @@ Liferay DXP 7.3では、 [閲覧に関して、サイトメンバーのみとす
 
 ![パブリケーションでは、任意のスケジュールでサイトを更新できます。](./whats-new-73/images/09.gif)
 
+<a name="dedicated-translation-experience-for-web-content" />
+
 ### Webコンテンツに特化した翻訳エクスペリエンス
 
 [新しい翻訳UI](../content-authoring-and-management/web-content/translating-web-content/manually-translating-web-content.md)では、並べて表示するUIでプロセスを最適化し、コンテンツの翻訳がしやすくなります。 翻訳者は、許可された言語にのみ翻訳し、Liferayのワークフロープロセスにより、その翻訳を簡単にレビューすることができます。
 
 ![新しい翻訳UIにより、翻訳プロセス全体が簡略化されています。](./whats-new-73/images/10.png)
+
+<a name="importexport-of-web-content-for-translations" />
 
 ### 翻訳対象のWebコンテンツのインポート/エクスポート
 
@@ -102,11 +132,15 @@ Liferay DXP 7.3では、 [閲覧に関して、サイトメンバーのみとす
 
 ## SEO設定
 
+<a name="open-graph" />
+
 ### Open Graph
 
 ![Open Graphでは、ソーシャルメディアや検索エンジン用のリンクの設定やプレビューをサポートします。](./whats-new-73/images/12.gif)
 
 [Open Graph](../site-building/site-settings/configuring-open-graph.md)のサポートにより、ソーシャルメディア上でのページのプレビューを設定できるようになりました。 また、検索エンジンやソーシャルネットワーク上で自社ページがどのように表示されるかをリアルタイムでプレビューすることができます。
+
+<a name="redirection-management" />
 
 ### リダイレクト管理
 
@@ -118,11 +152,15 @@ Liferay DXP 7.3では、 [閲覧に関して、サイトメンバーのみとす
 
 ![404レポートは、リンク切れの可能性があるサイトを見つけるのに役立ちます。](./whats-new-73/images/14.png)
 
+<a name="friendly-url-history" />
+
 ### フレンドリURLの履歴
 
 ![フレンドリーURLの履歴には、あらゆるページにおけるこれまでに使用されたすべてのURLが表示されます。](./whats-new-73/images/15.png)
 
 この履歴により、あらゆるページで使用されている [レンドリーURLをすべて、言語ごとに](../site-building/creating-pages/page-settings/configuring-your-pages-friendly-url.md#managing-a-page-s-url-history) 簡単に確認でき、視覚的に管理できます。 URLを覚える必要はなく、他のページで再利用したり、古いフレンドリURLを復元したりすることができます。
+
+<a name="content-performance" />
 
 ## コンテンツパフォーマンス
 
@@ -150,6 +188,8 @@ Liferay DXP 7.3では、 [閲覧に関して、サイトメンバーのみとす
 
 [アプリビルダー](../building-applications/app-builder.md)は、データエンジンに裏打ちされたLiferay DXP用の新しいローコードアプリケーション開発ソリューションです。 本アプリケーションは、直感的なGUIでフォームやテーブルビューを定義し、ワークフローを活用してビジネスプロセスのデジタル化と自動化を目的としたアプリケーションを構築します。 アプリケーションは、スタンドアロンでデプロイしたり、ウィジェットとして、またはプロダクトメニューからページに追加したりすることが可能です。
 
+<a name="form-view-rules-and-field-sets" />
+
 ### フォームビュールールとフィールドセット
 
 アプリビルダーにはルールビルダーが用意されており、フィールドの可視性を設定したり、フィールドを有効または無効にするために事前に定義された条件を使用するなど、動的なフォームの動作を定義できます。
@@ -160,6 +200,8 @@ Liferay DXP 7.3では、 [閲覧に関して、サイトメンバーのみとす
 
 ![フィールドセットでは、フィールドをグループ化し、フォーム間で共有できるようにします。](./whats-new-73/images/21.png)
 
+<a name="process-driven-apps" />
+
 ### プロセス主導型アプリ
 
 > 変更通知を受け取り（購読）が必要
@@ -168,9 +210,13 @@ Liferay DXP 7.3では、 [閲覧に関して、サイトメンバーのみとす
 
 ![プロセス主導型アプリ](./whats-new-73/images/22.png)
 
+<a name="localized-applications" />
+
 ### ローカライズされたアプリケーション
 
 アプリビルダーアプリケーションは、複数の異なる言語にローカライズすることもできます。 フォームビュービルダーには、フィールドを選択し、希望する言語に翻訳するためのインターフェイスがあります。
+
+<a name="data-engine-improvements" />
 
 ### データエンジンの改良
 
@@ -192,17 +238,25 @@ Liferay DXP 7.3では、 [閲覧に関して、サイトメンバーのみとす
 -   位置情報フィールド
 -   カラーフィールド
 
+<a name="forms" />
+
 ## フォーム
 
 ユーザーが提供したデータは、 [Webフォーム](../process-automation/forms/introduction-to-forms.md)を使用して収集されることが多いため、Liferayでは、GDPRの要件に準拠したフォームを設計するためのGUIと開発ツールを提供しています。
+
+<a name="data-erasure-aka-gdpr-right-to-be-forgotten" />
 
 ### データ消去（またはGDPRの「忘れられる権利」）
 
 「忘れられる権利」（いわゆる「消去権」）では、企業が個人データを本人の要求に応じて削除することを求めています。 個人データは、特定可能な個人に合理的に関連する可能性がなくなった場合に消去されるものとします。 シンプルなインターフェースにより、フォームエントリーを確認し、必要に応じて個人情報を編集、匿名化、削除することができるようになりました。
 
+<a name="data-export-aka-gdpr-right-to-data-portability" />
+
 ### データエクスポート（または、GDPR データポータビリティの権利）
 
 データポータビリティの権利では、要請に応じてユーザーの個人データを機械で読み取れる形式でエクスポートすることを企業に求めています。 フォームから送信されたユーザーの個人データを、消去する前にエクスポートできるようになりました。
+
+<a name="forms-reports" />
 
 ### フォームレポート
 
@@ -210,13 +264,19 @@ Liferay DXP 7.3では、 [閲覧に関して、サイトメンバーのみとす
 
 ![フォームレポートでは、回答のサマリーがデフォルトで、簡単に確認できるようになりました。](./whats-new-73/images/23.png)
 
+<a name="page-reorder" />
+
 ### ページの並び替え
 
 複数ページのフォームの作成や管理だけでなく、フォームのページの並べ替えも容易になりました。
 
 ![ご要望の多かったページの並び替え機能が、フォームに実装されました。](./whats-new-73/images/24.png)
 
+<a name="workflow-metrics-improvements" />
+
 ### ワークフローメトリクスの改善
+
+<a name="workload-by-assignee" />
 
 ### 担当者ごとの作業量
 
@@ -224,17 +284,23 @@ Liferay DXP 7.3では、 [閲覧に関して、サイトメンバーのみとす
 
 ![担当者ごとの作業量では、様々なユーザーのワークフローのキューが一目でわかるようになっています。](./whats-new-73/images/25.png)
 
+<a name="performance-by-assignee" />
+
 ### 担当者ごとのパフォーマンス
 
 パフォーマンスタブの下にある新しいカードに、各担当者の平均完了時間と完了タスクの合計が表示され、優れたパフォーマーが誰であるか把握できます。
 
 ![担当者の平均パフォーマンスが一目でわかるようになりました。](./whats-new-73/images/26.png)
 
+<a name="performance-by-step" />
+
 ### ステップごとのパフォーマンス
 
 各ステップで発生したSLA違反の数とステップの平均完了時間を確認することで、プロセスのボトルネックがどこにあるかを特定します。
 
 ![ステップごとのパフォーマンスでは、ボトルネックがどこにあるかを示しています。](./whats-new-73/images/27.png)
+
+<a name="bulk-actions" />
 
 ### 一括アクション
 
@@ -254,11 +320,15 @@ Liferay DXP 7.3では、 [閲覧に関して、サイトメンバーのみとす
 
 ## アプリケーションのセキュリティ
 
+<a name="multi-factor-authentication" />
+
 ### 多要素認証
 
 > 変更通知を受け取り（購読）が必要
 
 [多要素認証](../installation-and-upgrades/securing-liferay/multi-factor-authentication/using-multi-factor-authentication.md) (MFA) では、ユーザーに複数の方法、または **要素** で本人確認を求めることで、より優れたセキュリティを実現します。 基本的なユーザー名とパスワードの組み合わせは、1つまたは複数のカスタマイズ可能な要素で強化されます。 これには、デフォルトのワンタイムパスワード（OTP）とカスタマイズ可能なIPアドレス、時間ベースのOTPが含まれています。また、システムに拡張性があるため、ユーザーが書きたい要素も使用できます。
+
+<a name="saml-configuration-on-instance-level" />
 
 ### インスタンスレベルでのSAMLの設定
 
@@ -266,17 +336,23 @@ Liferay DXP 7.3では、 [閲覧に関して、サイトメンバーのみとす
 
 新しいSAMLプロパティ、 「**不明なユーザーはゲストです**」 が導入されました。  このプロパティにより、エンドユーザーがゲストである場合のSAML IdP接続の動作が決まります。 このプロパティは、ポータルデータベースに既に存在しないユーザーをゲストとして分類するかどうかを定義します。 分類後、ポータルインスタンスの既存のゲスト処理ポリシーにより、IdPのSAMLアサーションから得られる情報を使用して、ユーザーを自動的にプロビジョニングするかどうかを決定します。
 
+<a name="oauth-2-configuration-on-instance-level" />
+
 ### インスタンスレベルでのOAuth 2の設定
 
 [OAuth 2](../headless-delivery/using-oauth2.md)アプリケーションスコープの画面が簡素化されたため、アプリケーションの認証要求中にスコープの表示をより制御できるようになりました。 たとえば、2つのAPIアプリケーションに関連する2つのスコープを、1つのスコープであるかのように表示することができます。
 
 有効期限切れの認証情報を削除する設定も可能です。 有効期限切れの認証情報の猶予期間後、バックグラウンドで実行されている予定されたプロセスにより、認証データが自動的に削除されます。
 
+<a name="openid-connect-configuration-on-instance-level" />
+
 ### インスタンスレベルでのOpenId Connectの設定
 
 各インスタンスでは、異なる[OpenId Connect](../installation-and-upgrades/securing-liferay/configuring-sso/using-openid-connect.md)プロバイダへの接続を設定できます。
 
 システムレベルのOpenId Connectプロバイダーは、すべてのインスタンスに表示され、デフォルトのOpenId Connectプロバイダーと同じように動作します。
+
+<a name="cors-configuration-on-instance-level" />
 
 ### インスタンスレベルでのCORSの設定
 
@@ -290,17 +366,25 @@ URLパターンは、始めにインスタンスレベルで、次にシステ�
 
 [ElasticsearchとのLiferay DXP 7.3の検索エンジンコネクター](../using-search/installing-and-upgrading-a-search-engine/elasticsearch.md)の改良、変更をいくつか行いました。
 
+<a name="elasticsearch-7-support" />
+
 ### Elasticsearch 7のサポート
 
 Liferay DXPのデフォルトの検索エンジンがElasticsearch 7にアップグレードされました。
+
+<a name="multiple-connections" />
 
 ### 複数の接続
 
 Liferay DXPは、複数のElasticsearchクラスターに接続できます。 これにより、低レベル検索オプションおよび検索結果ウィジェットと組み合わせて使用することで、Elasticsearchクラスターを使用しているサードパーティシステムからの結果を表示することができます。
 
+<a name="rest-client" />
+
 ### RESTクライアント
 
 Elasticsearchとの通信にはTransportクライアントではなくRESTクライアントを使用します。
+
+<a name="widget-template-support" />
 
 ### ウィジェットテンプレートのサポート
 
@@ -309,6 +393,8 @@ Elasticsearchとの通信にはTransportクライアントではなくRESTクラ
 <a name="developer-experience" />
 
 ## 開発者向けエクスペリエンス
+
+<a name="api-explorer" />
 
 ### APIエクスプローラー
 
@@ -320,41 +406,61 @@ Elasticsearchとの通信にはTransportクライアントではなくRESTクラ
 
 [GraphQLクライアント](../headless-delivery/consuming-apis/consuming-graphql-apis.md) により、クエリの定義とテストが簡単に行えます。
 
+<a name="openapi-validator" />
+
 ### OpenAPIバリデーター
 
 OpenAPIバリデーターにより、設定ファイルにエラーがあるかどうか、標準のLiferayがまだサポートしていない機能があるかどうかがわかります。
+
+<a name="batch-operations" />
 
 ### バッチ処理
 
 ヘッドレスAPIでバッチ処理をサポートします。
 
+<a name="manage-all-translations-of-localized-content-in-a-single-request" />
+
 ### ローカライズされたコンテンツのすべての翻訳を単一のリクエストで管理します。
 
 ヘッドレスAPIでは、翻訳の追加、更新、取得を同時に行うことができます。
+
+<a name="expose-actions-in-headless-apis" />
 
 ### ヘッドレスAPIでアクションを公開します。
 
 パーミッションに基づいて許可されたユーザーアクションをクエリで取得できます。 動的アクションメニューがあるアプリを作成し、ユーザーが実行可能なアクションのみを表示できるようにしました。
 
+<a name="exposing-metadata-in-documents--media-apis" />
+
 ### ドキュメントとメディアAPIにおけるメタデータの公開
 
 ドキュメントとメディアAPIでは、ドキュメントタイプに含まれるメタデータの全セットを公開できます。
+
+<a name="content-template-api" />
 
 ### コンテンツテンプレートAPI
 
 APIを通してコンテンツテンプレートを取得すれば、必要に応じてLiferay以外でコンテンツをレンダリングすることができます。
 
+<a name="asset-libraries-delivery-apis" />
+
 ### アセットライブラリ配信API
 
 アセットライブラリに保存されているコンテンツやドキュメントにヘッドレスRESTやGraphQL APIからアクセスできるため、Liferay DXPを他のアプリケーションのコンテンツリポジトリとして利用することができます。
+
+<a name="headless-apis-extensibility" />
 
 ### ヘッドレスAPIの拡張性
 
 ヘッドレスAPIには拡張性があり、OOTBアプリケーションでの新しいプロパティや新しいコンポーネントの公開、エンドポイントの非アクティブ化、GraphQLでのコントリビューションの追加などを簡単に行うことができます。
 
+<a name="return-facets-in-collections" />
+
 ### コレクションにおけるファセットの返却
 
 ヘッドレスAPIを使用する際に、要素のコレクション（ドキュメント、構造化コンテンツなど）を検索する際に検索ファセットを要求できます。 これにより、エンドユーザーを表示するための動的フィルターを構築することができます。
+
+<a name="reactjs-facilities" />
 
 ### React.js機能
 
@@ -363,6 +469,8 @@ Liferayでは、内部UIの大部分をReactに移行することを開始して
 **ReactRenderer：** Reactコンポーネントをレンダリングするための低レベルなJavaのプリミティブ型です。ReactコンポーネントのBootstrapを簡素化し、必要なJavaScriptコードを生成して、初期化を行います。
 
 **React:component：** 高レベルのJSPタグ。従来の`MVCPortlet`アプローチと組み合わせて、従来のJSPから複雑なReactアプリケーションをレンダリングして初期化することができます。 これにより、複雑なJSアプリケーションをスムーズに移行し、より近代的なフロントエンドのワークフローを適用できます。
+
+<a name="upgrade-improvements" />
 
 ### アップグレードの向上
 
