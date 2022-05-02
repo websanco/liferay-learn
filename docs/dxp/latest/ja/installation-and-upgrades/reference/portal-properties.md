@@ -1,6 +1,6 @@
 # ポータルプロパティ
 
-構成オプションは、サーバーの起動時に **ポータルプロパティ** 、プロパティファイルから読み取られた名前と値のペアのセット、およびDocker環境変数を使用して指定されます。 [デフォルト値](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html) は`portal-impl.jar/portal.properties`ファイルで指定されます。
+構成オプションは、 **ポータルプロパティ** を使用して指定されます*名前と値のペアのセットは、サーバーの起動時にプロパティファイルと環境変数から読み取られます。 [デフォルト値](https://docs.liferay.com/dxp/portal/7.2-latest/propertiesdoc/portal.properties.html)は`portal-impl.jar/portal.properties`ファイルで指定されます。</p>
 
 一部のプロパティはユーザーインターフェイス（UI）を介して変更できますが、その他のプロパティはプロパティファイルまたはDocker環境変数でのみ変更できます。 これらには、 [Liferay Home](./liferay-home.md) フォルダの場所を宣言するデータベースへの接続が含まれます。 そして [ユーザーがどのように認証するかを変更する](../securing-liferay/authentication-basics.md#configuring-authentication-type-using-properties) (メールアドレスではなくスクリーン名で)。
 
@@ -106,6 +106,12 @@ company.security.auth.type=userId
 
 特定のプロパティでは、最後に読み取られた値が優先されます。 プロパティソースは、`include-and-override`と呼ばれるプロパティを介して構成可能な [決定論的な順序](#configuration-processing) で読み取られます。 
 
+1.  プロパティソースは3つあります。
+   
+    * `portal-impl.jar/portal.properties`ファイル
+    * 拡張プロパティファイル
+    * Liferay Docker Env変数
+2. **共有プロパティ**（複数回定義されたプロパティ）に定義された最後の値が優先されます。
 
 
 ### 構成処理
@@ -239,7 +245,7 @@ mail.session.jndi.name=mail/DevMailSession
 
 DXPデータベースに格納されているプロパティは、ポータルプロパティファイルで設定されているプロパティよりも優先されます。
 
-［**設定**］ &rarr; ［**システム設定**］ の ［**コントロールパネル**］ に移動して、［システム設定］を見つけます。 システム設定は`.config`ファイルとしてエクスポートし、ソースコントロールに保存し、分散DXPインストールで使用できます。 システム設定を介して設定されたポータルプロパティと構成ファイルは、データベースに保存されます。 すぐに適用されるプロパティもあれば、サーバーの再起動が必要なプロパティもあります。
+**設定** の **コントロールパネル** → **システム設定** に移動してシステム設定を検索します。 システム設定は`.config`ファイルとしてエクスポートし、ソースコントロールに保存し、分散DXPインストールで使用できます。 システム設定を介して設定されたポータルプロパティと構成ファイルは、データベースに保存されます。 すぐに適用されるプロパティもあれば、サーバーの再起動が必要なプロパティもあります。
 
 
 

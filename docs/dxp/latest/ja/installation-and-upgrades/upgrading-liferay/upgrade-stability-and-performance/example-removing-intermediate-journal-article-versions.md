@@ -6,7 +6,7 @@
 
 1. **保持する最新バージョンの数を決定します。** 元のバージョンと最新バージョンを保持する必要がありますが、追加の最新バージョンを保持することもできます。 たとえば、2つの最新バージョンを保持することも、最新バージョンのみを保持することもできます。
 
-2. **エンティティのバージョンを削除する方法を見つけます。** Liferay DXPの [アプリAPI](https://docs.liferay.com/dxp/apps/) と [com.liferay.portal.kernel API](https://learn.liferay.com/reference/latest/en/dxp/javadocs/portal-kernel/) が使用可能なオプションです。
+2. **エンティティのバージョンを削除する方法を見つけます。** Liferay DXPの[アプリAPI](https://docs.liferay.com/dxp/apps/)と[com.liferay.portal.kernel API](https://docs.liferay.com/dxp/portal/7.3-latest/javadocs/portal-kernel/)が使用可能なオプションです。
 
     [Service Builder](https://help.liferay.com/hc/ja/articles/360030958811-Running-Service-Builder) エンティティの場合は、エンティティの`*LocalServiceUtil`クラスの`delete*`メソッドを調べます。
 
@@ -59,7 +59,7 @@
         }
         ```
 
-    1. `JournalArticleResource`ごとに（`JournalArticle`エンティティごとに1つあります）、保持する最初のバージョンと最新バージョンの範囲内にあり、かつステータスが削除に適している中間バージョンのリストを作成します。 たとえば、承認済みまたは期限切れの中間記事バージョン（ [WorkflowConstants.STATUS **APPROVEDまたはWorkflowConstants.STATUS** EXPIRED](https://learn.liferay.com/reference/latest/en/dxp/javadocs/portal-kernel/com/liferay/portal/kernel/workflow/WorkflowConstants.html) ）を削除することができます。 `MIN_NUMBER_FIRST_VERSIONS_KEPT`および`MIN_NUMBER_LATEST_VERSIONS_KEPT`変数は、保持する最初の（最も古い）バージョンと最新の（最も新しい）バージョンの最小数と最大数をマークします。
+    3.  `JournalArticleResource`ごとに（`JournalArticle`エンティティごとに1つあります）、保持する最初のバージョンと最新バージョンの範囲内にあり、かつステータスが削除に適している中間バージョンのリストを作成します。 たとえば、承認済みまたは期限切れの中間記事バージョン（[WorkflowConstants.STATUS\ **APPROVEDまたはWorkflowConstants.STATUS\** EXPIRED](https://docs.liferay.com/dxp/portal/7.3-latest/javadocs/portal-kernel/com/liferay/portal/kernel/workflow/WorkflowConstants.html)）を削除することができます。 `MIN_NUMBER_FIRST_VERSIONS_KEPT`および`MIN_NUMBER_LATEST_VERSIONS_KEPT`変数は、保持する最初の（最も古い）バージョンと最新の（最も新しい）バージョンの最小数と最大数をマークします。
 
         ```java
         List<Double> journalArticlesVersionsToDelete =

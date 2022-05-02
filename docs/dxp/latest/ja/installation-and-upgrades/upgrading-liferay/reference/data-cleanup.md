@@ -4,11 +4,11 @@
 
 廃止された機能からデータをクリーンアップする方法は次のとおりです。
 
-1. **コントロールパネル** で、 ［**システム設定**］ &rarr; ［**Upgrades**］（［**プラットフォーム**］ カテゴリ内） &rarr; ［**Data Cleanup**］ に移動します。 ［Data Cleanup］画面が表示されます。
+1. [**コントロールパネル**] で、 [**システム設定**] → [**Upgrades**]（[**プラットフォーム**] カテゴリ内） → [**Data Cleanup**] に移動します。 [Data Cleanup]画面が表示されます。
 
     ![［Data Cleanup］では、廃止されたLiferayアプリケーションからデータを削除するためのインターフェイスが提供されます。](./data-cleanup/images/01.png)
 
-1. クリーンアップするモジュールを選択し、 ［**保存**］ をクリックします。
+2.  クリーンアップするモジュールを選択し、 [**保存**] をクリックします。
 
     ```{note}
     [構成ファイル](../../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md)にクリーンアップ設定を保存するには、 **アクション** メニューをクリックして、 **エクスポート** を選択します。

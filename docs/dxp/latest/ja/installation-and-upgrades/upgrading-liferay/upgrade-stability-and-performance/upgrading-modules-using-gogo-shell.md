@@ -64,14 +64,12 @@ scr:info com.liferay.journal.upgrade.JournalServiceUpgrade
 
 モジュールのアップグレードステップ（クラス）は順番に解決する必要があります。  `upgrade:list [module_name]`を呼び出すと、モジュールのすべてのアップグレードステップが一覧表示されます。 たとえば、`upgrade:list com.liferay.bookmarks.service`（ブックマークサービスモジュールの場合）を実行すると、次のように表示されます。
 
-```
-Registered upgrade processes for com.liferay.bookmarks.service 1.0.0
-        {fromSchemaVersionString=0.0.0, toSchemaVersionString=1.0.0, upgradeStep=com.liferay.portal.spring.extender.internal.context.ModuleApplicationContextExtender$ModuleApplicationContextExtension$1@6e9691da}
-        {fromSchemaVersionString=0.0.1, toSchemaVersionString=1.0.0-step-3, upgradeStep=com.liferay.bookmarks.upgrade.v1_0_0.UpgradePortletId@5f41b7ee}
-        {fromSchemaVersionString=1.0.0-step-1, toSchemaVersionString=1.0.0, upgradeStep=com.liferay.bookmarks.upgrade.v1_0_0.UpgradePortletSettings@53929b1d}
-        {fromSchemaVersionString=1.0.0-step-2, toSchemaVersionString=1.0.0-step-1, upgradeStep=com.liferay.bookmarks.upgrade.v1_0_0.UpgradeLastPublishDate@3e05b7c8}
-        {fromSchemaVersionString=1.0.0-step-3, toSchemaVersionString=1.0.0-step-2, upgradeStep=com.liferay.bookmarks.upgrade.v1_0_0.UpgradeClassNames@6964cb47}
-```
+    Registered upgrade processes for com.liferay.bookmarks.service 1.0.0
+            {fromSchemaVersionString=0.0.0, toSchemaVersionString=1.0.0, upgradeStep=com.liferay.portal.spring.extender.internal.context.ModuleApplicationContextExtender$ModuleApplicationContextExtension$1@6e9691da}
+            {fromSchemaVersionString=0.0.1, toSchemaVersionString=1.0.0-step-3, upgradeStep=com.liferay.bookmarks.upgrade.v1 **0** 0.UpgradePortletId@5f41b7ee}
+            {fromSchemaVersionString=1.0.0-step-1, toSchemaVersionString=1.0.0, upgradeStep=com.liferay.bookmarks.upgrade.v1 **0** 0.UpgradePortletSettings@53929b1d}
+            {fromSchemaVersionString=1.0.0-step-2, toSchemaVersionString=1.0.0-step-1, upgradeStep=com.liferay.bookmarks.upgrade.v1 **0** 0.UpgradeLastPublishDate@3e05b7c8}
+            {fromSchemaVersionString=1.0.0-step-3, toSchemaVersionString=1.0.0-step-2, upgradeStep=com.liferay.bookmarks.upgrade.v1 **0** 0.UpgradeClassNames@6964cb47}
 
 アプリケーションのアップグレードステップクラス名は、通常、その意図を表します。 たとえば、サンプルの`com.liferay.bookmarks.upgrade.v1_0_0.UpgradePortletId`アップグレードステップクラスは、アプリのポートレットIDを更新します。 他の例のアップグレードステップクラスは、クラス名、`LastPublishDate`、および`PortletSettings`を更新します。 この例の`0.0.0`～`1.0.0`のステップでは、空のデータベースからモジュールをアップグレードします。
 

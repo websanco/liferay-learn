@@ -26,7 +26,7 @@ Most Patching Tool commands (such as `install`) cannot be run on a Slim Bundle u
 
 パッチファイルのセットアップ手順は次のとおりです。
 
-1.  [ヘルプセンター](https://customer.liferay.com/downloads) からパッチファイルをダウンロードします。 Fix Pack または Service Pack に移動し、ドロップダウンから **パッチファイル** を選択し、 **ダウンロード** をクリックして、パッチファイルをダウンロードします。
+1.  [ヘルプセンター](https://customer.liferay.com/downloads)からパッチファイルをダウンロードします。 Fix Pack または Service Pack に移動し、ドロップダウンから **パッチファイル** を選択し、 **ダウンロード** をクリックして、パッチファイルをダウンロードします。
 
 2.  パッチファイルをスリムバンドルの `patching-tool/patches` フォルダーに抽出します。
 

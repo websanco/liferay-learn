@@ -16,7 +16,7 @@ LiferayがCDN経由でのサービス提供をサポートしているリソー�
 * 動的に生成されたJavaScript *
 * 動的に生成されたイメージ*
 
-**\* CDN動的リソースを有効にする必要があります。**
+**\** CDN動的リソースを有効にする必要があります。*
 
 ```{note}
 CDNは、外部から動的に読み込まれたリソースを提供するものではありません。
@@ -48,11 +48,11 @@ CDNを設定するための方法には、次の2つがあります。
 
 コントロールパネルでCDNを設定する方法は次のとおりです。
 
-1. Liferayで、 **グローバルメニュー**（![Global Menu](../../images/icon-applications-menu.png)）をクリックし、 ［**コントロールパネル**］ タブを選択します。
+1.  Liferayで、 **グローバルメニュー**（![Global Menu](../../images/icon-applications-menu.png)）をクリックし、 [**コントロールパネル**] タブを選択します。
 
-1. ［設定］カテゴリで、 ［**Instance Settings**］ を選択します。 ［Instance Settings］ページが表示されます。
+2.  [設定]カテゴリで、 [**Instance Settings**] を選択します。 [Instance Settings]ページが表示されます。
 
-1. ［仮想インスタンススコープ］ナビゲーションで、 ［**一般**］ をクリックします。 ［General Main Configuration］ページが表示され、次の3つのCDN関連フィールドが含まれています。
+3.  [仮想インスタンススコープ]ナビゲーションで、 [**一般**] をクリックします。 [General Main Configuration]ページが表示され、次の3つのCDN関連フィールドが含まれています。
 
     ****CDN ホスト HTTP**
     ****CDN ホスト HTTPS**
@@ -64,7 +64,7 @@ CDNホストのURLを指定するときは、必ずプロトコルとドメイ�
 
 **CDNホストHTTP：** `http://cdnhost1.liferay.com` **CDNホストHTTPS：** `https://cdnhost2.liferay.com`
 
-［**CDN Dynamic Resources**］ が選択されている場合（デフォルト）、Liferayは動的に生成されたCSS、JavaScript、および画像をCDN経由で提供します。 これを無効にすると、リソースの遅延読み込みに対応していないCDNを使用できます。
+[**CDN Dynamic Resources**] が選択されている場合（デフォルト）、Liferayは動的に生成されたCSS、JavaScript、および画像をCDN経由で提供します。 これを無効にすると、リソースの遅延読み込みに対応していないCDNを使用できます。
 
 CDNホストを設定しました。 これでLiferayは、古いホストを新しいCDNホストに置き換えた静的リソースURLを生成し、そのURLをCDNによって自動的にキャッシュして、提供できるようになりました。
 

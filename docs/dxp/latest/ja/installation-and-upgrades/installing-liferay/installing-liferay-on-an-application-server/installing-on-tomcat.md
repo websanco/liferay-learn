@@ -24,7 +24,7 @@ Java JDK 8または11が必要です。
 サポートされているJDK、データベース、および環境については、[互換性マトリックス](https://help.liferay.com/hc/en-us/articles/360049238151) を参照してください。  推奨されるJVM設定については、[JVM Configuration](../../reference/jvm-configuration.md)を参照してください。
 ```
 
-Tomcatサーバーの親フォルダは[*Liferay Home*](../../reference/liferay-home.md)です。 `$TOMCAT_HOME`はTomcatサーバーフォルダを参照します。 通常は、`tomcat-［version］`または`apache-tomcat-［version］`という名前です。
+Tomcatサーバーの親フォルダは[**Liferay Home**](../../reference/liferay-home.md)です。 `$TOMCAT_HOME`はTomcatサーバーフォルダを参照します。 通常は、`tomcat-［version］`または`apache-tomcat-［version］`という名前です。
 
 ## DXP WARのインストール
 
@@ -33,7 +33,7 @@ Tomcatサーバーの親フォルダは[*Liferay Home*](../../reference/liferay-
 
 ## 依存関係のインストール
 
-DXPは、Liferay-Tomcatバンドルに含まれている多くのJARに依存しています。 バンドル内のJARの中には必須ではないファイルもありますが、有用なJARもあります。 Tomcatバンドルを使用していない場合は、ダウンロードした*OSGi依存関係*アーカイブと、以下で説明するサードパーティのJAR依存関係を使用します。
+DXPは、Liferay-Tomcatバンドルに含まれている多くのJARに依存しています。 バンドル内のJARの中には必須ではないファイルもありますが、有用なJARもあります。 Tomcatバンドルを使用していない場合は、ダウンロードした **OSGi依存関係** アーカイブと、以下で説明するサードパーティのJAR依存関係を使用します。
 
 1. OSGi Dependencies ZIPファイルの内容を `［Liferay Home］/osgi` フォルダーに解凍します（このフォルダーが存在しない場合は作成します）。 LiferayのOSGiランタイムは、これらのモジュールに依存しています。
 1. DXP 7.4+ WARファイルには、MariaDBおよびPostgreSQLのドライバーが含まれています。 以前のWARにはそれらがありません。 7.4以降のWARに、使用中のサポートされているデータベースのドライバーがない場合は、データベースベンダーのJDBC JARファイルをダウンロードして、`$CATALINA_BASE/standalone/deployments/ROOT.war/WEB-INF/shielded-container-lib`フォルダーに配置します。
@@ -205,10 +205,10 @@ DXP 7.3以前の場合、`common.loader`プロパティの値リストの先頭�
 1. デフォルトの使用可能メモリとメタスペース制限が設定されています。
 1. `$CATALINA_BASE/conf/Catalina/localhost/ROOT.xml`はWebアプリケーションコンテキストを宣言している。
 1. `$CATALINA_BASE/conf/server.xml`は、UTF-8エンコーディングを設定している。
-1. `$CATALINA_BASE/conf/server.xml`は、ホストアクセスログを書き込むための値を宣言していない。 *(オプション)*
+1. `$CATALINA_BASE/conf/server.xml`は、ホストアクセスログを書き込むための値を宣言していない。 (**オプション**)
 1. `$CATALINA_HOME/conf/logging.properties`は、必要なログレベルを設定している。
 1. `$CATALINA_HOME/conf/web.xml`は、タグハンドラープールを設定し、Java 8をJSPコンパイラとして設定している。
-1. `$CATALINA_HOME/conf/web.xml`は、アプリケーションサーバーが追加のメタデータを検索しないように指定している。 *(オプション)*
+1. `$CATALINA_HOME/conf/web.xml`は、アプリケーションサーバーが追加のメタデータを検索しないように指定している。 (**オプション**)
 1. Tomcatの`bin`フォルダ内のスクリプトは実行可能である。
 1. `$CATALINA_BASE/conf/catalina.properties`の`common.loader`プロパティは、Catalinaに必要なJARへのアクセスを許可している。
 
@@ -254,7 +254,7 @@ Liferay DXPは、DXPに組み込まれているデータソースを使用する
 
     データベースのURL、ユーザー名、パスワードを適切な値に置き換えてください。
 
-1. **[Liferay_Home]**の`portal-ext.properties`ファイルで、データソースを指定します。 例:
+1. [**Liferay_Home**] の`portal-ext.properties`ファイルで、データソースを指定します。 例:
 
     ```properties
     jdbc.default.jndi.name=jdbc/LiferayPool

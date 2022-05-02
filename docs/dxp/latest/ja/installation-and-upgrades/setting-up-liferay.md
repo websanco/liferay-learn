@@ -38,18 +38,7 @@ setting-up-liferay/tuning-your-jvm.md
 
 **その他のセットアップ作業**
 
-* [マーケットプレイスからアプリをインストールする](#install-apps-from-marketplace)
-* [ロールと権限の設定](#configure-roles-and-permissions)
-* [カスタムフィールドの追加](#add-custom-fields)
-* [既存のシステムとの統合](#integrate-with-existing-systems)
-* [メディアファイルのプレビュー設定](#configure-media-file-previews)
-* [CDNの設定](#configure-a-cdn)
-* [高可用性の設定](#configure-high-availability)
-* [Liferayの調整](#tune-liferay)
-
-上記の各タスクは、以下の説明にリンクしており、該当する記事への参照も含まれています。 最初のタスクは、本番用のLiferayインスタンスには不可欠です。 お使いのシステムにも適用される **その他のセットアップタスク** を調べてください。 タスクを完了するときは、必ず上記のチェックリストを見直すようにしてください。
-
-<a name="configure-your-instance" />
+上記の各タスクは、以下の説明にリンクしており、該当する記事への参照も含まれています。 最初のタスクは、本番用のLiferayインスタンスには不可欠です。 お使いのシステムに適用される **その他のセットアップタスク** を調べてください。 タスクを完了するときは、必ず上記のチェックリストを見直すようにしてください。
 
 ## Liferayの起動
 

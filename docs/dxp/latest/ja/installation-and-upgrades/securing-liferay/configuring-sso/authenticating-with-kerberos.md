@@ -10,7 +10,7 @@ Kerberosを使用して、Liferay DXPでMicrosoft Windows&trade;アカウント�
 
 Windows&trade;サーバーでKerberosとActive Directoryをセットアップする方法についてはこの記事では説明しませんが、Liferay認証を設定するための最低限の前提条件について説明します。
 
-1. ADサーバーとLiferay DXPがネットワーク上で相互に解決できるようにActive DirectoryとDNSがセットアップされたWindows&trade;サーバー。 つまり、 **名前で** 相互にpingできる必要があります。
+1.  ADサーバーとLiferay DXPがネットワーク上で相互に解決できるようにActive DirectoryとDNSがセットアップされたWindows™サーバー。 つまり、 **名前で** 相互にpingできる必要があります。
 
 1. AD Liferay DXPの管理ユーザーがADへのバインドに使用できる。
 
@@ -139,21 +139,21 @@ Windows&trade;サーバーでKerberosとActive Directoryをセットアップす
 
 1. ［設定］ &rarr; ［Instance Settings］ &rarr; ［認証］ &rarr; ［LDAP］に移動し、LDAPサーバーを追加して、Liferay DXPをAD over LDAPに接続します。 インストールに適切な情報を提供します。
 
-   | 構成                               | 説明                                                                                  |
-   | :--- | :--- |
-   | **Base Provider URL** | 適切なポート上のADサーバー。                                                                     |
-   | **Base DN** | ドメイン構成。 上記の例では `DC=INTDOMAIN.DC=LOCAL`。                                             |
-   | **Principal/Credentials** | keytabファイルにエクスポートされたユーザーの資格情報を入力します。                                                |
-   | **Authentication Search Filter** | ユーザーオブジェクトを返す適切な検索フィルターを指定します。 例：`(&(objectCategory=person)(sAMAccountName=*))` |
-   | **UUID** | `sAMAccountName`など、ユーザーを一意に識別するものを指定します。                                            |
-   | **Screen Name** | `sAMAccountName`など、Liferay DXPの画面名フィールドにマップする必要があるフィールドを指定します。                      |
-   | **パスワード** | `userPassword`など、ユーザーのパスワードを含むフィールドを指定します。                                          |
+    | 設定                               | 説明                                                                                  |
+    | :--- | :--- |
+    | **Base Provider URL** | 適切なポート上のADサーバー。                                                                     |
+    | **Base DN** | ドメイン構成。 上記の例では `DC=INTDOMAIN.DC=LOCAL`。                                             |
+    | **Principal/Credentials** | keytabファイルにエクスポートされたユーザーの資格情報を入力します。                                                |
+    | **Authentication Search Filter** | ユーザーオブジェクトを返す適切な検索フィルターを指定します。 例：`(&(objectCategory=person)(sAMAccountName=*))` |
+    | **UUID** | `sAMAccountName`など、ユーザーを一意に識別するものを指定します。                                            |
+    | **Screen Name** | `sAMAccountName`など、Liferay DXPの画面名フィールドにマップする必要があるフィールドを指定します。                      |
+    | **Password** | `userPassword`など、ユーザーのパスワードを含むフィールドを指定します。                                          |
 
 1. 接続をテストし、構成を保存して有効にします。
 
 1. 最後に、［設定］ &rarr; ［システム設定］ &rarr; ［セキュリティ］ &rarr; ［SSO］ &rarr; ［トークン方式SSO］で、シングルサインオン用のトークンを設定します。 ユーザートークン名が、Webサーバーで設定したトークンと **正確に** 一致していることを確認します。 ［**Enabled**］ および ［**Import from LDAP**］ ボックスをクリックし、 ［**保存**］ をクリックします。
 
-    ![［Instance Settings］メニューでSSOを有効にする。](authenticating-with-kerberos/images/02.png)
+4.  最後に、[Configuration] → [System Settings] → [Security] → [SSO] → [Token Based SSO]で、シングルサインオン用のトークンを設定します。 ユーザートークン名が、Webサーバーで設定したトークンと **正確に** 一致していることを確認します。 [**Enabled**] および [**Import from LDAP**] ボックスをクリックし、 [**保存**] をクリックします。
 
 Excellent! サーバーを構成しました。 あとはクライアントを設定するだけです。
 

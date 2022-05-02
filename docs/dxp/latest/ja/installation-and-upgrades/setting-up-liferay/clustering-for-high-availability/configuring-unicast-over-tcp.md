@@ -32,11 +32,13 @@
     どれを選択すればよいかわからない場合は、TCPPingを使用してください。 これらの残りのステップでは、TCPPingを使用します。 他の詳細は、 [代替発見プロトコル](#alternative-discovery-protocols) を参照してください。
     <!-- the craziness in the next step is probably an example of something that Brian Chan would want to see get improved in the product. We should bring this up w/ the core team or with Brian Chan himself to see his thoughts. jrhoun -->
 
-1. `$LIFERAY.HOME/osgi/marketplace/Liferay Foundation - Liferay Portal - Impl.lpkg/com.liferay.Portal.cluster.multiple-［version］.jar/lib/jgroups-［version］.Final.jar/tcp.xml`から`tcp.xml`ファイルをDXPにアクセスできる場所に展開します。 jar/lib/jgroups-［version］.Final.jar/tcp.xml</code>を、DXPウェブアプリケーションの`WEB-INF/classes`フォルダ内の`jgroupsというフォルダなど、DXPでアクセス可能な場所に移動します。
-<pre><code>    WEB-INF/classes/jgroups/tcp.xml
-`</pre>
+3.  `$LIFERAY.HOME/osgi/marketplace/Liferay Foundation - Liferay Portal - Impl.lpkg/com.liferay.portal.cluster.multiple-[version].jar/lib/jgroups-[version].Final.jar/tcp.xml`から`tcp.xml`ファイルをDXPにアクセスできる場所に展開します。 `jar/lib/jgroups-[version].Final.jar/tcp.xml` を、DXPウェブアプリケーションの`WEB-INF/classes`フォルダ内の`jgroups`というフォルダなど、DXPでアクセス可能な場所に移動します。
 
-1. `tcp.xml` ファイルで、TCPバインドポートをノードの未使用ポートに設定します。 以下に例を示します。
+    ```
+    WEB-INF/classes/jgroups/tcp.xml
+    ```
+
+4. `tcp.xml` ファイルで、TCPバインドポートをノードの未使用ポートに設定します。 以下に例を示します。
 
     ```xml
     <TCP bind_port="7800"/>
@@ -77,7 +79,7 @@
     cluster.link.channel.properties.transport.0=/jgroups/tcp.xml
     ```
 
-上記のJGroups構成は、通常、Unicast over TCPに必要なすべての構成です。 ただし、非常に特定の場合には、 （**および場合のみ**） のクラスタ・ノードが複数のネットワークにまたがって展開され、次いで `external_addr` TCPトランスポートパラメータは、ファイアウォールの外部（パブリックIP）アドレスに、各ホストに設定されなければなりません。 この種の構成は通常、ノードが地理的に離れている場合にのみ必要です。 これを設定することにより、別々のネットワークにデプロイされたクラスター化されたノード（たとえば、異なるファイアウォールによって分離されたノード）は互いに通信できます。 この構成は、システムのセキュリティ監査でフラグが立てられる場合があります。 詳細は、 [JGroupsドキュメント](http://www.jgroups.org/manual4/index.html#_transport_protocols) を参照してください。
+上記のJGroups構成は、通常、Unicast over TCPに必要なすべての構成です。 ただし、非常に特定の場合には、 （**および場合のみ**） のクラスタ・ノードが複数のネットワークにまたがって展開され、次いで `external_addr` TCPトランスポートパラメータは、ファイアウォールの外部（パブリックIP）アドレスに、各ホストに設定されなければなりません。 この種の構成は通常、ノードが地理的に離れている場合にのみ必要です。 これを設定することにより、別々のネットワークにデプロイされたクラスター化されたノード（たとえば、異なるファイアウォールによって分離されたノード）は互いに通信できます。 この構成は、システムのセキュリティ監査でフラグが立てられる場合があります。 詳細は、 [JGroupsのドキュメント](http://www.jgroups.org/manual4/index.html#_transport_protocols) を参照してください。
 
 ```{note}
 `singleton_name`TCP属性はJGroups v4.0.0で非推奨になったため、JGroups v4.1.1-Finalを使用するLiferay DXP 7.2 SP1およびLiferay Portal GA2以降では削除されました。
@@ -138,8 +140,9 @@ JGroupsは、Rackspace Ping、BPing、File Pingなど、クラスターメンバ
     -Djgroups.bind **addr=[node** ip_address]
     ```
 
-1. `$LIFERAY.HOME/osgi/marketplace/Liferay Foundation - Liferay Portal - Impl.lpkg/com.liferay.Portal.cluster.multiple-［version］.jar/lib/jgroups-［version］.Final.jar/tcp.xml`から`tcp.xml`ファイルをDXPにアクセスできる場所に展開します。 jar/lib/jgroups-［version］.Final.jar/tcp.xml</code>を、DXPウェブアプリケーションの`WEB-INF/classes`フォルダ内の`jgroupsというフォルダなど、DXPでアクセス可能な場所に移動します。</p></li>
-<li><p spaces-before="0">同じ場所に <code>tcp.xml` コピーを作成し、両方のファイルの名前を変更して、1つを制御チャネル用に、もう1つをトランスポートチャネル用に指定します。 たとえば、次のファイル名を使用できます。
+2.  `$LIFERAY.HOME/osgi/marketplace/Liferay Foundation - Liferay Portal - Impl.lpkg/com.liferay.Portal.cluster.multiple-[version].jar/lib/jgroups-[version].Final.jar/tcp.xml`から`tcp.xml`ファイルをDXPにアクセスできる場所に展開します。 `jar/lib/jgroups-[version].Final.jar/tcp.xml`を、DXPウェブアプリケーションの`WEB-INF/classes`フォルダ内の`jgroups`というフォルダなど、DXPでアクセス可能な場所に移動します。
+
+3. 同じ場所に `tcp.xml` コピーを作成し、両方のファイルの名前を変更して、1つを制御チャネル用に、もう1つをトランスポートチャネル用に指定します。 たとえば、次のファイル名を使用できます。
 
     * `tcp-control.xml`
     * `tcp-transport.xml`
@@ -152,9 +155,9 @@ JGroupsは、Rackspace Ping、BPing、File Pingなど、クラスターメンバ
     cluster.link.channel.properties.transport.0=/jgroups/tcp-transport.xml
     ```
 
-1. 各 `tcp-*。xml` ファイルのTCPおよび検出プロトコルタグ（たとえば、TCPPingを使用している場合は `TCPPing` タグ）を変更して、各ノードのIPアドレスとバインドポートを考慮します。
+5.  各 `tcp-*.xml` ファイルのTCPおよび検出プロトコルタグ（たとえば、TCPPingを使用している場合は `TCPPing` タグ）を変更して、各ノードのIPアドレスとバインドポートを考慮します。
 
-垂直方向にクラスタリングしている場合（つまり、同じ物理システムまたは仮想システムで複数のサーバーを実行している場合）、すべてのチャネルは、ディスカバリ通信に未使用の一意のバインドポートを使用する必要があります。 各 `tcp-*。xml` ファイルで、TCPタグの `bind_port` 属性を一意の未使用ポートに割り当てます。
+垂直方向にクラスタリングしている場合（つまり、同じ物理システムまたは仮想システムで複数のサーバーを実行している場合）、すべてのチャネルは、ディスカバリ通信に未使用の一意のバインドポートを使用する必要があります。 各 `tcp-*.xml` ファイルで、TCPタグの `bind_port` 属性を一意の未使用ポートに割り当てます。
 
 たとえば、最初の2つのノードがこれらのバインドポートを割り当てる場合があります。
 

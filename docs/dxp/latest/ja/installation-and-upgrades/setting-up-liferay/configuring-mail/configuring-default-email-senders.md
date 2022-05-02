@@ -8,13 +8,13 @@
 
 デフォルトのメール送信者を変更するには、次の手順に従います。
 
-1. **プロダクトメニュー** を開き、 ［**コントロールパネル**］ → ［**設定**］ → ［**Instance Settings**］ に移動します。
+1. **製品メニュー** を開き、 [**Control Panel**] → [**Configuration**] → [**Instance Settings**] に移動します。
 
     ![［Instance Settings］メニューでメール設定オプションを見つける。](./configuring-default-email-senders/images/01.png)
 
-1. ［**Email**］ をクリックします。
+2. [**Email**] をクリックします。
 
-1. ［**Email Sender**］ をクリックします。
+3. [**Email Sender**] をクリックします。
 
 1. 次のフィールドに値を入力します。
 
@@ -23,7 +23,7 @@
 
     ![デフォルトのメール送信者名とメールアドレスを変更する。](./configuring-default-email-senders/images/02.png)
 
-1. ［**保存**］ をクリックします。
+5. [**保存**] をクリックします。
 
 ### ポータルプロパティを使用したデフォルトの電子メール送信者の設定
 

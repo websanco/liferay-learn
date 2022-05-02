@@ -8,7 +8,7 @@
 
 ## インストール
 
-1. [カスタマーポータル](https://customer.liferay.com/downloads) からパッチツールをダウンロードします。
+1.  [カスタマーポータル](https://customer.liferay.com/downloads?p **p** id=com **liferay** osb **customer** downloads **display** web **DownloadsDisplayPortlet&** com **liferay** osb **customer** downloads **display** web **DownloadsDisplayPortlet** productAssetCategoryId=118191019& **com** liferay **osb** customer **downloads** display **web** DownloadsDisplayPortlet_fileTypeAssetCategoryId=118191066)からパッチツールをダウンロードします。
 
     ***DXP 7.3以降の場合、** 最新のパッチツールをダウンロードします。
     ***DXP 7.2の場合、** 最新バージョンのパッチツール2.xをダウンロードします。
@@ -30,7 +30,7 @@ cd patching-tool
 
 Patching Toolは、インストールするパッチに新しいPatching Toolバージョンが必要な場合を報告します。 パッチツールを更新する方法は次のとおりです。
 
-1. [カスタマーポータル](https://customer.liferay.com/downloads) からパッチツールをダウンロードします。
+1.  最新の [パッチツール](https://customer.liferay.com/downloads?p **p** id=com **liferay** osb **customer** downloads **display** web **DownloadsDisplayPortlet&** com **liferay** osb **customer** downloads **display** web **DownloadsDisplayPortlet** productAssetCategoryId=118191019& **com** liferay **osb** customer **downloads** display **web** DownloadsDisplayPortlet_fileTypeAssetCategoryId=118191066)ダウンロードします。
 
     ***DXP 7.3以降の場合、** 最新のパッチツールをダウンロードします。
     ***DXP 7.2の場合、** パッチツールの最新の2.xバージョンをダウンロードします。

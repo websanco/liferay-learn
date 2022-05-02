@@ -17,7 +17,7 @@ Authentication Verifierは、一元化された拡張可能な方法でLiferay P
 
 ## 認証検証プロセス
 
-Authentication Verifierを設定するには、 ［**コントロールパネル**］ &rarr; ［**設定**］ &rarr; ［**システム設定**］ &rarr; ［**セキュリティ**］ &rarr; ［**API 認証**］ に移動します。
+Authentication Verifierを設定するには、 [**Control Panel**] → [**Configuration**] → [**System Settings**] → [**Security**] → [**API Authentication**] に移動します。
 
 ![Authentication Verifierの設定画面](./using-authentication-verifiers/images/01.png)
 
@@ -53,7 +53,7 @@ Authentication Verifierを設定するには、 ［**コントロールパネル
 
 ### 基本認証ヘッダー
 
-このAuth Verifierにより、リモートクライアントは [HTTP基本認証](https://en.wikipedia.org/wiki/Basic_access_authentication) を使用して認証できます。 この方法で認証する必要のあるURLパスを指定して設定します。 ［**Force Basic Authentication**］ フィールドがオンになっている場合は、HTTP基本認証が必要です。
+このAuth Verifierにより、リモートクライアントは[HTTP基本認証](https://en.wikipedia.org/wiki/Basic_access_authentication)を使用して認証できます。 この方法で認証する必要のあるURLパスを指定して設定します。 [**Force Basic Authentication**] フィールドがオンになっている場合は、HTTP基本認証が必要です。
 
 WebサービスのデフォルトのURLは`/api/*,/xmlrpc*`です。 このマッピングでは、`TunnelServlet`へのアクセスを防ぐために`/api/liferay*`を除外しています。 詳細については、「トンネルAuthentication Verifier」をご覧ください。
 

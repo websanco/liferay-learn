@@ -25,9 +25,9 @@ db_upgrade.sh --help
 
 **--help** または **-h** ：ツールのヘルプメッセージを出力します。
 
-**--jvm-opts** or **-j** + [**arg**] ：アップグレードプロセスのJVMオプションを設定します。
+**--jvm-opts** または **-j** + **\[arg\**] ：アップグレードプロセスのJVMオプションを設定します。
 
-**--log-file** or **-l** + [**arg**] ：ツールのログファイル名を指定します。デフォルト名は`upgrade.log`です。
+**--log-file** または **-l** + **\[arg\**] ：ツールのログファイル名を指定します。デフォルト名は`upgrade.log`です。
 
 **--shell** または **-s** ：アップグレード作業終了後、[Gogoシェル](../../../liferay-internals/fundamentals/using-the-gogo-shell.md)に自動的に接続します。
 
@@ -154,7 +154,7 @@ server.detector.server.id=tomcat
     dl.store.impl=com.liferay.portal.store.s3.S3Store
     ```
 
-* `hibernate.jdbc.batch_size`：パフォーマンスを向上させるために使用されるJDBCバッチサイズ（デフォルトでは **250** に設定）。 **このプロパティを使用するとアップグレードのパフォーマンスが向上しますが、必須ではありません。**
+  - `hibernate.jdbc.batch_size`：パフォーマンスを向上させるために使用されるJDBCバッチサイズ（デフォルトでは **250** に設定）。 **このプロパティを使用するとアップグレードのパフォーマンスが向上しますが、必須ではありません。**
 
 #### アップグレード構成の例
 

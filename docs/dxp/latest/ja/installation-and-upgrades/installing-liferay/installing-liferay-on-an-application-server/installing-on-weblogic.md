@@ -1,6 +1,6 @@
 # WebLogicへのインストール
 
-アプリケーションサーバーとしてWebLogicを使用している場合は、DXPをWebLogic管理対象サーバーにインストールすることを*強くお勧め*します。 管理対象サーバーは、DXPをすばやく起動または停止でき、クラスター構成に変換できます。 ここでは、DXPを管理対象サーバーにインストールします。
+アプリケーションサーバーとしてWebLogicを使用している場合は、DXPをWebLogic管理対象サーバーにインストールすることを **強くお勧め** します。 管理対象サーバーは、DXPをすばやく起動または停止でき、クラスター構成に変換できます。 ここでは、DXPを管理対象サーバーにインストールします。
 
 ## 前提条件
 
@@ -24,7 +24,7 @@ Liferay DXPにはJava JDK 8または11が必要です。 JDKの選択には [互
 
 1. 拡張されたWARの`WEB-INF/classes`フォルダに[`portal-ext.properties`](../../reference/portal-properties.md)というファイルを作成します。
 
-1. `portal-ext.properties`ファイルで、`liferay.home`プロパティを[*Liferay Home*](../../reference/liferay-home.md)フォルダパスに設定します。 WebLogicでは、[`[Liferay Home]`](../../reference/liferay-home.md)は通常、ドメインのフォルダに設定されていますが、任意のローカルフォルダを使用できます。 例:
+1. `portal-ext.properties`ファイルで、`liferay.home`プロパティを[**Liferay Home**](../../reference/liferay-home.md)フォルダパスに設定します。 WebLogicでは、[`[Liferay Home]`](../../reference/liferay-home.md)は通常、ドメインのフォルダに設定されていますが、任意のローカルフォルダを使用できます。 例:
 
     ```properties
     liferay.home=/full/path/to/your/liferay/home/folder
@@ -92,13 +92,13 @@ StartScriptEnabled=true
 
     `* _MEM_ARGS`変数は、DXPの開始および最大ヒープメモリ容量を設定します。
 
-1. 管理対象サーバの起動時に、ノードマネージャがDXPのメモリ要件を設定していることを確認してください。 管理サーバーのコンソールUIで、DXPがデプロイされる管理対象サーバーに移動し、［ *サーバーの開始* ］タブを選択します。 *Arguments* フィールドに次のパラメータを入力します。
+1. 管理対象サーバの起動時に、ノードマネージャがDXPのメモリ要件を設定していることを確認してください。 管理サーバーのコンソールUIで、DXPがデプロイされる管理対象サーバーに移動し、［**サーバーの開始**］タブを選択します。 **Arguments** フィールドに次のパラメータを入力します。
 
     ```bash
     -Xms2560m -Xmx2560m -XX:MaxNewSize=1536m -XX:MaxMetaspaceSize=768m -XX:MetaspaceSize=768m -XX:NewSize=1536m -XX:SurvivorRatio=7
     ```
 
-1. *［保存］*をクリックします。
+1. ［**保存**］ をクリックします。
 
 Javaオプションとメモリ引数について以下に説明します。
 
@@ -161,7 +161,7 @@ DXPの起動時に、DXPはアーカイブを解凍してインストールし�
 
 ## データベースに接続
 
-DXPには、デモンストレーション目的で組み込みのHypersonicデータベースが含まれていますが、 _本番環境では使用しないでください_。 フル機能のサポートされているデータベースを使用してください。 データベースのセットアップについては、[Configure a Database](../configuring-a-database.md)を参照してください。
+DXPには、デモンストレーション目的で組み込みのHypersonicデータベースが含まれていますが、 **本番環境では使用しないでください** 。 フル機能のサポートされているデータベースを使用してください。 データベースのセットアップについては、[Configure a Database](../configuring-a-database.md)を参照してください。
 
 Liferay DXPは、DXPの組み込みデータソース（推奨）またはアプリサーバー上のJNDIデータソースを使用してデータベースに接続できます。
 
@@ -171,15 +171,15 @@ Liferay DXPは、DXPの組み込みデータソース（推奨）またはアプ
 
 1. DXP WAR（7.4以降）またはデータベースベンダーからJDBC JARを取得し、ドメインの`lib`フォルダにコピーします。
 1. AdminServerコンソールにログインします。
-1. *ドメイン構造*ツリーでドメインを見つけ、*［Services］* &rarr; *［JDBC］* &rarr; *［Data Sources］*に移動します。
-1. 新しいデータソースを作成するには、［ *New*］をクリックします。
-1. *Name*フィールドに`Liferay Data Source`を、*JNDI Name*フィールドに`jdbc/LiferayPool`を入力します。
-1. データベースのタイプとドライバーを選択します。 たとえば、MySQLは*MySQL's Driver (Type 4) Versions:using com.mysql.cj.jdbc.Driver*です。
-1. *［Next］*をクリックして次に進みます。
-1. このページのデフォルト設定を受け入れ、 *［Next］* をクリックして次に進みます。
+1. **ドメイン構造** ツリーでドメインを見つけ、 ［**Services**］ &rarr; ［**JDBC**］ &rarr; ［**Data Sources**］ に移動します。
+1. 新しいデータソースを作成するには、［**New**］をクリックします。
+1. **Name** フィールドに`Liferay Data Source`を、 **JNDI Name** フィールドに`jdbc/LiferayPool`を入力します。
+1. データベースのタイプとドライバーを選択します。 たとえば、MySQLは **MySQL's Driver (Type 4) Versions:using com.mysql.cj.jdbc.Driver** です。
+1. ［**Next**］ をクリックして次に進みます。
+1. このページのデフォルト設定を受け入れ、 ［**Next**］ をクリックして次に進みます。
 1. MySQLデータベースのデータベース情報を入力します。
-1. MySQLを使用する場合は、`?useUnicode=true&characterEncoding=UTF-8&\useFastDateParsing=false`をURL行に追加し、接続をテストします。 完了したら、* ［Next］*をクリックします。
-1. データソースのターゲットを選択し、 *［Finish］*をクリックします。
+1. MySQLを使用する場合は、`?useUnicode=true&characterEncoding=UTF-8&\useFastDateParsing=false`をURL行に追加し、接続をテストします。 完了したら、 ［**Next**］ をクリックします。
+1. データソースのターゲットを選択し、 ［**Finish**］ をクリックします。
 1. DXPをJDBCデータソースに接続します。 `portal-ext.properties`ファイル（上記を参照）に、データソースのJNDI名を入力します。 例:
 
     ```properties
@@ -193,12 +193,12 @@ Liferay DXPは、DXPの組み込みデータソース（推奨）またはアプ
 組み込みのメールセッションを使用して、Liferay DXPを[メールサーバー](../../setting-up-liferay/configuring-mail.md) に接続できます。 それ以外の場合は、WebLogicのメールセッションを使用できます。
 
 1. WebLogicを起動し、管理サーバーのコンソールにログインします。
-1. 管理サーバーのコンソールUIの左側にある*［Domain Structure］*ボックスから*［Services］* &rarr; *［Mail Sessions］*を選択します。
-1. ［ *新規* をクリックして、新しいメールセッションの作成を開始します。
-1. セッションに*LiferayMail*という名前を付け、JNDI名`mail/MailSession`を付けます。
-1. メールサーバーに合わせて、 *セッションユーザー名*、 *セッションパスワード*、 *セッションパスワードの確認*、 *JavaMailプロパティ* の各フィールドを入力します。 これらのフィールドの詳細は、 [WebLogic documentation](http://docs.oracle.com/middleware/1221/wls/FMWCH/pagehelp/Mailcreatemailsessiontitle.html) を参照してください。
-1. *[Next]*をクリックします。
-1. DXPをインストールする管理対象サーバーを選択し、 *終了*をクリックします。
+1. 管理サーバーのコンソールUIの左側にある ［**Domain Structure**］ ボックスから ［**Services**］ &rarr; ［**Mail Sessions**］ を選択します。
+1. ［**新規** をクリックして、新しいメールセッションの作成を開始します。
+1. セッションに **LiferayMail** という名前を付け、JNDI名`mail/MailSession`を付けます。
+1. メールサーバーに合わせて、 **セッションユーザー名** 、 **セッションパスワード** 、 **セッションパスワードの確認** 、 **JavaMailプロパティ** の各フィールドを入力します。 これらのフィールドの詳細は、 [WebLogic documentation](http://docs.oracle.com/middleware/1221/wls/FMWCH/pagehelp/Mailcreatemailsessiontitle.html) を参照してください。
+1. [**Next**] をクリックします。
+1. DXPをインストールする管理対象サーバーを選択し、 **終了** をクリックします。
 1. 管理対象サーバーと管理サーバーをシャットダウンします。
 1. 管理対象サーバーと管理サーバーをシャットダウンした状態で、次のプロパティをLiferayホームの `portal-ext.properties` ファイルに追加します。
 
@@ -217,14 +217,14 @@ DXPがデプロイされると、`portal-ext.properties`ファイルはドメイ
 次の手順に従って、DXP WARファイルをデプロイします。
 
 1. DXPをデプロイしている指定の管理対象サーバーがシャットダウンされていることを確認します。
-1. 管理サーバーのコンソールUIで、左側の*ドメイン構造*ボックスから*デプロイ*を選択します。
-1. ［ *インストール* ］をクリックして、新しい展開を開始します。
-1. マシンでDXP WARファイルまたはその拡張コンテンツを選択します。 または、 *ファイルのアップロード* リンクをクリックして、WARファイルをアップロードします。 *[Next]*をクリックします。
-1. ［ *この展開をアプリケーションとしてインストールする* ］を選択し、［ *次へ*］をクリックします。
-1. DXPを展開している指定管理対象サーバーを選択し、*［Next］*をクリックしてください。
-1. デフォルトの名前がインストールに適している場合は、そのままにしておきます。 それ以外の場合は、別の名前を入力して*Next*をクリックします。
-1. ［ *完了*クリックし* 。</li>
-1 配置が完了したら、構成が正しい場合は、［ *Save* ］をクリックします。
+1. 管理サーバーのコンソールUIで、左側の **ドメイン構造** ボックスから **デプロイ** を選択します。
+1. ［**インストール**］をクリックして、新しい展開を開始します。
+1. マシンでDXP WARファイルまたはその拡張コンテンツを選択します。 または、 **ファイルのアップロード** リンクをクリックして、WARファイルをアップロードします。 [**Next**] をクリックします。
+1. ［**この展開をアプリケーションとしてインストールする**］を選択し、［**次へ**］をクリックします。
+1. DXPを展開している指定管理対象サーバーを選択し、 ［**Next**］ をクリックしてください。
+1. デフォルトの名前がインストールに適している場合は、そのままにしておきます。 それ以外の場合は、別の名前を入力して **Next** をクリックします。
+1. ［**完了** クリックし* 。</li>
+1 配置が完了したら、構成が正しい場合は、［**Save**］をクリックします。
 1 DXPをデプロイした管理対象サーバーを起動します。 DXPはすべてのJSPをプリコンパイルしてから起動します。</ol>
 
 DXPのデプロイ後に、 `PhaseOptimizer`を含む以下のような過剰な警告やログメッセージが表示される場合があります。 これらは良性なので、無視しても構いません。 これらのメッセージは、アプリサーバーのログレベルまたはログフィルターを調整することでオフにできます。

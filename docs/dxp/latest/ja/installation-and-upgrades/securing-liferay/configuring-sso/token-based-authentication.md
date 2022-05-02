@@ -27,7 +27,7 @@ Incompatible setting for: company.security.auth.type
 
 ## トークンベースの認証の構成
 
-トークンベースの認証はデフォルトで無効になっています。 トークンベースのSSO認証を管理するには、［コントロールパネル］ &rarr; ［**システム設定**］ &rarr; ［**セキュリティ**］ &rarr; ［**SSO**］ に移動します。
+トークンベースの認証はデフォルトで無効になっています。 トークンベースのSSO認証を管理するには、コントロールパネル → [**System Settings**] → [**Security**] → [**SSO**] に移動します。
 
 ![SSO設定は、システム設定のセキュリティセクションにあります。](token-based-authentication/images/01.png)
 
@@ -35,24 +35,20 @@ Incompatible setting for: company.security.auth.type
 
 | 構成                         | 説明                                                                    |
 | :--- | :--- |
-| **有効** | トークンベースのSSO認証を有効にするには、このボックスをオンにします。                                  |
+| **Enabled** | トークンベースのSSO認証を有効にするには、このボックスをオンにします。                                  |
 | **Import from LDAP** | ユーザーが存在しない場合にLDAPから自動的にインポートするには、このボックスをオンにします。                       |
 | **User token name** | トークンの名前と同じに設定します。 これは、指定された場所から取得されます。 （例：`SM_USER`）                  |
 | **Token location** | ユーザートークンのタイプ（HTTPリクエストパラメータ、HTTPリクエストヘッダー、HTTP Cookie、セッション属性）に設定します。 |
 | **Authentication cookies** | ログアウト後に削除する必要があるCookie名に設定します。 （例：`SMIDENTITY`、`SMSESSION`）           |
 | **Logout redirect URL** | ユーザーがLiferay Portalからログアウトすると、ユーザーはこのURLにリダイレクトされます。                  |
 
-［**保存**］ をクリックして、トークンベースのSSOをアクティブにしてください。
-
-<a name="required-siteminder-configuration" />
+[**保存**] をクリックして、トークンベースのSSOをアクティブにしてください。
 
 ## 必要なSiteMinder構成
 
 SiteMinderを使用する場合は、Liferay PortalのURLにチルダ文字が使用される場合があることに注意してください。 デフォルトでは、SiteMinderはチルダ文字（およびその他）を不正な文字として扱い、それらを含むURLを処理するとHTTP 500エラーを返します。 この問題を回避するには、SiteMinder構成でこのデフォルト設定を次のように変更します。
 
-```
-BadUrlChars       //,./,/.,/*,*.,\,%00-%1f,%7f-%ff,%25
-```
+    BadUrlChars       //,./,/.,/ **,** .,\,%00-%1f,%7f-%ff,%25
 
 上記の設定は、`~`文字を除いてデフォルトと同じです。 SiteMinderを再起動して、構成のアップデートを有効にします。 詳細は、SiteMinderの [ドキュメント](https://techdocs.broadcom.com/us/product-content/recommended-reading/technical-document-index/ca-siteminder-informational-documentation-index.html) を参照してください。
 

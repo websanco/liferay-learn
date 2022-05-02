@@ -79,7 +79,7 @@ Dockerイメージを使用してアップグレードする手順は次のと�
     `rootDir="data/document_library"`
     ```
 
-1. データベースベンダーが推奨するJDBCデータベースドライバーを使用していることを確認してください。 たとえば、MySQLを使用している場合は、[`new-version/files/portal-ext.properties`](../../reference/portal-properties.md)でjdbc.default.driverClassName=com.mysql.cj.jdbc.Driverを設定し、アプリケーションサーバーが使用するMySQL JDBCドライバーのJARを置き換えます。 詳細は、 [Database Drivers](../configuration-and-infrastructure/migrating-configurations-and-properties.md#database-drivers) を参照してください。
+5.  データベースベンダーが推奨するJDBCデータベースドライバーを使用していることを確認してください。 たとえば、MySQLを使用している場合は、[`new-version/files/portal-ext.properties`](../../reference/portal-properties.md)で `jdbc.default.driverClassName=com.mysql.cj.jdbc.Driver` を設定し、アプリケーションサーバーが使用するMySQL JDBCドライバーのJARを置き換えます。 詳細は、[データベースドライバー](../configuration-and-infrastructure/migrating-configurations-and-properties.md#database-drivers)を参照してください。
 
 1. 新しいバージョンのフォルダにマウントされた[Dockerイメージ](../../installing-liferay/using-liferay-docker-images/providing-files-to-the-container.md)を、以下のコマンドで実行します。 必要に応じて、イメージ名、タグ、環境値を差し替えてください。
 

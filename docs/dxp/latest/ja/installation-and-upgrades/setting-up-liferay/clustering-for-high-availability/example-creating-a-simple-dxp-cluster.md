@@ -258,7 +258,7 @@ DXPクラスターノードは、次のURLで入手できます。
 
 DXPコンテンツのインデックス作成を開始します。
 
-1. ［**コントロールパネル］ &rarr; ［設定］ &rarr; ［検索機能**］ に移動します。
+1. [**コントロールパネル] → [設定] → [検索機能**] に移動します。
 
 1. ［アクションをインデックスする］タブで、次のオプションをクリックします。
 
@@ -297,19 +297,19 @@ DXPクラスター用に[データベース](./database-configuration-for-cluste
 
 サンプルのDXPサーバーコンテナは次の設定を使用しています。
 
-| 設定                                                                                                                                                                              | 説明                                |
-|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |:--------------------------------- |
-| LIFERAY **JDBC** PERIOD **DEFAULT** PERIOD **JNDI** PERIOD_NAME=                                                                                                                      | データソースJNDI名                       |
-| LIFERAY **JDBC** PERIOD **DEFAULT** PERIOD **DRIVER** UPPERCASEC **LASS\\<br>** UPPERCASEN_AME=\\<br>org.mariadb.jdbc.Driver                                            | データベースドライバークラス                    |
-| LIFERAY **JDBC** PERIOD **DEFAULT** PERIOD **URL=\\<br>jdbc:mariadb://some-mariadb:3306/dxp** db?\\<br>useUnicode=true&characterEncoding=UTF-8&useFastDateParsing=false | データソースURL                         |
-| LIFERAY **JDBC** PERIOD **DEFAULT** PERIOD_USERNAME=\\<br>root                                                                                                              | データベース管理者のユーザー名                   |
-| LIFERAY **JDBC** PERIOD **DEFAULT** PERIOD_PASSWORD=\\<br>my-secret-pw                                                                                                      | データベース管理者ユーザーのパスワード               |
-| LIFERAY **CLUSTER** PERIOD **LINK** PERIOD_ENABLED=\\<br>true                                                                                                               | クラスタリンクを有効にする                     |
-| LIFERAY **CLUSTER** PERIOD **LINK** PERIOD **CHANNEL** PERIOD **LOGIC** PERIOD **NAME\\<br>** PERIOD_CONTROL=\\<br>control-channel-logic-name-2                           | クラスターノードの一意のコントロールチャネル名           |
-| LIFERAY **CLUSTER** PERIOD **LINK** PERIOD **CHANNEL** PERIOD **LOGIC** PERIOD **NAME\\<br>** PERIOD **TRANSPORT** PERIOD_NUMBER0=\\<br>transport-channel-logic-name-2      | クラスターノードの一意のトランスポートチャネル名          |
-| LIFERAY **CLUSTER** PERIOD **LINK** PERIOD **AUTODETECT** PERIOD_ADDRESS=\\<br>some-mariadb:3306                                                                              | クラスターノードアドレスを取得するためにpingする既知のアドレス |
-| LIFERAY **WEB** PERIOD **SERVER** PERIOD **DISPLAY** PERIOD_NODE=\\<br>true                                                                                                   | サーバーアドレスとウェブサーバーポートを表示します         |
-| LIFERAY **DL** PERIOD **STORE** PERIOD_IMPL=\\<br>com.liferay.portal.store.db.DBStore                                                                                       | ファイルストア（ドキュメントライブラリストア）クラス        |
+| 設定                                                                                                                                                                                                    | 説明                                |
+|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |:--------------------------------- |
+| LIFERAY\ **JDBC\** PERIOD\ **DEFAULT\** PERIOD\ **JNDI\** PERIOD\_NAME=                                                                                                                             | データソースJNDI名                       |
+| LIFERAY\ **JDBC\** PERIOD\ **DEFAULT\** PERIOD\ **DRIVER\** UPPERCASEC\ **LASS\\<br>\** UPPERCASEN\_AME=\\<br>org.mariadb.jdbc.Driver                                               | データベースドライバークラス                    |
+| LIFERAY\ **JDBC\** PERIOD\ **DEFAULT\** PERIOD\ **URL=\\<br>jdbc:mariadb://some-mariadb:3306/dxp\** db?\\<br>useUnicode=true\&characterEncoding=UTF-8\&useFastDateParsing=false     | データソースURL                         |
+| LIFERAY\ **JDBC\** PERIOD\ **DEFAULT\** PERIOD\_USERNAME=\\<br>root                                                                                                                         | データベース管理者のユーザー名                   |
+| LIFERAY\ **JDBC\** PERIOD\ **DEFAULT\** PERIOD\_PASSWORD=\\<br>my-secret-pw                                                                                                                 | データベース管理者ユーザーのパスワード               |
+| LIFERAY\ **CLUSTER\** PERIOD\ **LINK\** PERIOD\_ENABLED=\\<br>true                                                                                                                          | クラスタリンクを有効にする                     |
+| LIFERAY\ **CLUSTER\** PERIOD\ **LINK\** PERIOD\ **CHANNEL\** PERIOD\ **LOGIC\** PERIOD\ **NAME\\<br>\** PERIOD\_CONTROL=\\<br>control-channel-logic-name-2                          | クラスターノードの一意のコントロールチャネル名           |
+| LIFERAY\ **CLUSTER\** PERIOD\ **LINK\** PERIOD\ **CHANNEL\** PERIOD\ **LOGIC\** PERIOD\ **NAME\\<br>\** PERIOD\ **TRANSPORT\** PERIOD\_NUMBER0=\\<br>transport-channel-logic-name-2 | クラスターノードの一意のトランスポートチャネル名          |
+| LIFERAY\ **CLUSTER\** PERIOD\ **LINK\** PERIOD\ **AUTODETECT\** PERIOD\_ADDRESS=\\<br>some-mariadb:3306                                                                                     | クラスターノードアドレスを取得するためにpingする既知のアドレス |
+| LIFERAY\ **WEB\** PERIOD\ **SERVER\** PERIOD\ **DISPLAY\** PERIOD\_NODE=\\<br>true                                                                                                          | サーバーアドレスとウェブサーバーポートを表示します         |
+| LIFERAY\ **DL\** PERIOD\ **STORE\** PERIOD\_IMPL=\\<br>com.liferay.portal.store.db.DBStore                                                                                                  | ファイルストア（ドキュメントライブラリストア）クラス        |
 
 詳細は、Env/ [ポータルプロパティ](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html) の定義を参照してください。
 

@@ -88,7 +88,7 @@ Liferayコンテナの起動と運用の詳細については、 [Using Liferay 
 
 ### Liferay環境変数の使用
 
-*ポータルプロパティ* ごとに [Env](../../reference/portal-properties.md)変数があります。 環境変数は、Liferay Dockerコンテナのポータルプロパティをオーバーライドする[Docker環境変数](https://docs.docker.com/engine/reference/commandline/run/#set-environment-variables--e---env---env-file)です。
+**ポータルプロパティ** ごとに [Env](../../reference/portal-properties.md)変数があります。 環境変数は、Liferay Dockerコンテナのポータルプロパティをオーバーライドする[Docker環境変数](https://docs.docker.com/engine/reference/commandline/run/#set-environment-variables--e---env---env-file)です。
 
 1. [ポータル プロパティ](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html) のオンライン説明で、オーバーライドするプロパティを見つけます。
 
@@ -116,7 +116,7 @@ Liferayコンテナの起動と運用の詳細については、 [Using Liferay 
     コンテナの起動と運用の詳細については、 [Using Liferay Docker Images](../using-liferay-docker-images.md)を参照してください。
     ```
 
-プロパティは、コントロールパネルの _［設定］_ &rarr; _［サーバー管理］_ &rarr; _［プロパティ］_ &rarr; _［ポータルプロパティ］_で表示されます。
+プロパティは、コントロールパネルの ［**設定**］ &rarr; ［**サーバー管理**］ &rarr; ［**プロパティ**］ &rarr; ［**ポータルプロパティ**］ で表示されます。
 
 ### ポータルプロパティファイルの使用
 
@@ -140,7 +140,7 @@ Liferayコンテナの起動と運用の詳細については、 [Using Liferay 
     docker run -it -m 8g -p 8080:8080 -v [host folder path]:/mnt/liferay liferay/dxp:[tag]
     ```
 
-プロパティは、コントロールパネルの _［設定］_ &rarr; _［サーバー管理］_ &rarr; _［プロパティ］_ &rarr; _［ポータルプロパティ］_で表示されます。
+プロパティは、コントロールパネルの ［**設定**］ &rarr; ［**サーバー管理**］ &rarr; ［**プロパティ**］ &rarr; ［**ポータルプロパティ**］ で表示されます。
 
 ```{note}
 データベースポータルプロパティの例については、[Database Templates](../../reference/database-templates.md)を参照してください。
@@ -238,7 +238,7 @@ LIFERAY_TERMS_PERIOD_OF_PERIOD_USE_PERIOD_REQUIRED=false
     コンテナの`/mnt/liferay`フォルダにバインドマウントする方法については、[コンテナへのファイル提供](./providing-files-to-the-container.md#bind-mounting-a-host-folder-to-mnt-liferay)を参照してください。
     ```
 
-プロパティは、コントロールパネルの _［設定］_ &rarr; _［サーバー管理］_ &rarr; _［プロパティ］_ &rarr; _［システムプロパティ］_で表示されます。
+プロパティは、コントロールパネルの ［**設定**］ &rarr; ［**サーバー管理**］ &rarr; ［**プロパティ**］ &rarr; ［**システムプロパティ**］ で表示されます。
 
 <a name="system-settings" />
 
@@ -278,7 +278,7 @@ Liferayシステム設定は、 [コントロールパネル](../../../system-ad
     コンテナの`/mnt/liferay`フォルダにバインドマウントする方法については、［コンテナへのファイル提供］(./providing-files-to-the-container.md#bind-mounting-a-host-folder-to-mnt-liferay)を参照してください。
     ```
 
-システムコンポーネントの構成は、そのコンポーネントの画面のコントロールパネルで、_［設定］_ &rarr; _［システム設定］_に表示されます。
+システムコンポーネントの構成は、そのコンポーネントの画面のコントロールパネルで、 ［**設定**］ &rarr; ［**システム設定**］ に表示されます。
 
 ### 実行時の構成ファイルの適用
 

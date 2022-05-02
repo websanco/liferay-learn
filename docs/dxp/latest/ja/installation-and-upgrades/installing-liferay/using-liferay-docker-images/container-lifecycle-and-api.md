@@ -17,18 +17,16 @@
 環境でコンテナを作成した後、コンテナエントリポイントはその環境で次のライフサイクルフェーズを実行します。
 
 1. **事前設定：** TomcatおよびLiferayを設定する前に、[ユーザー提供のスクリプトを実行します](./running-scripts-in-containers.md)。
-1. **設定：** TomcatでDXPを実行する準備をします。
-    1. [TomcatのJavaランタイム環境の設定](./configuring-containers.md#jvm-options) 。
-    1. [ユーザが提供したファイル](./configuring-containers.md) を [Liferay Home](../../reference/liferay-home.md) にコピー。
-    1. [ユーザー提供のスクリプトの実行](./running-scripts-in-containers.md)。
-    1. [ユーザー提供のアーティファクトのデプロイ](./installing-apps-and-other-artifacts-to-containers.md)。
-    1. [パッチツール](./patching-dxp-in-docker.md#updating-the-patching-tool) をユーザー指定のバージョンで更新します。
-    1. [ユーザー提供のパッチをインストールします](./patching-dxp-in-docker.md)。
-1. **起動前：**[Tomcatを起動する前に、ユーザー提供のスクリプトを実行します](./running-scripts-in-containers.md)。
-1. **Tomcat起動：** Catalinaスクリプトを使用してTomcatを起動します。
-1. **シャットダウン後：**[Tomcatの停止後にユーザー指定のスクリプトを実行します](./running-scripts-in-containers.md)。
-
-<a name="api" />
+2. **設定：** TomcatでDXPを実行する準備をします。
+    1.  [TomcatのJavaランタイム環境の設定](./configuring-containers.md#jvm-options)。
+    2.  [ユーザが提供したファイル](./configuring-containers.md) を [Liferay Home](../../reference/liferay-home.md) にコピー。
+    3.  [ユーザー提供のスクリプトの実行](./running-scripts-in-containers.md)。
+    4.  [ユーザー提供のアーティファクトのデプロイ](./installing-apps-and-other-artifacts-to-containers.md)。
+    5.  [パッチツール](./patching-dxp-in-docker.md#updating-the-patching-tool) をユーザー指定のバージョンで更新します。
+    6.  [ユーザー提供のパッチをインストールします](./patching-dxp-in-docker.md)。
+3. **起動前：**[Tomcatを起動する前に、ユーザー提供のスクリプトを実行します](./running-scripts-in-containers.md)。
+4. **Tomcat起動：** Catalinaスクリプトを使用してTomcatを起動します。
+5. **シャットダウン後：**[Tomcatの停止後にユーザー指定のスクリプトを実行します](./running-scripts-in-containers.md)。
 
 ## API
 

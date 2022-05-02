@@ -28,18 +28,18 @@ Liferayサポートチームはお客様と協力して、問題が製品にあ�
 1. DXPをアプリケーションサーバー上に `.war` としてデプロイした場合は、ホットフィックスを適用するために `.war` を一時的な場所に解凍してください。
 1. [Liferay Home](../reference/liferay-home.md)で `patching-tool.sh` パッチングツールスクリプトを見つけるか、DXPインストールにパッチングツールがない場合はパッチングツールをインストールします。
 
-    * **DXP Tomcat Bundle:**`[Liferay Home]/patching-tool/`
-    * **DXPアプリのサーバーをインストール:**サーバーホストに [パッチングツール をインストール](./reference/installing-the-patching-tool.md)。
+    ***DXP Tomcat Bundle:** `[Liferay Home]/patching-tool/`
+    ***DXPアプリのサーバーをインストール:** サーバーホストに [パッチングツール をインストール](./reference/installing-the-patching-tool.md)。
 
 1. DXPのインストール用にパッチングツールを設定します。
 
-    **DXP Tomcat バンドル:** [`auto-discovery` コマンド](./reference/configuring-the-patching-tool.md)を自動的に実行するようにツールを設定します。
+    **DXP Tomcat バンドル:**[`auto-discovery` コマンド](./reference/configuring-the-patching-tool.md)を自動的に実行するようにツールを設定します。
 
     ```bash
     ./patching-tool.sh auto-discovery
     ```
 
-    **DXPアプリサーバーのインストール:** [パッチングツールを手動で構成します。](./reference/configuring-the-patching-tool.md)、これにはパッチングツールの `war.path` プロパティ（例： `default.properties`）を解凍したDXP `..war` の場所に設定することも含まれます。
+    **DXPアプリサーバーのインストール:**[パッチングツールを手動で構成します。](./reference/configuring-the-patching-tool.md)、これにはパッチングツールの `war.path` プロパティ（例： `default.properties`）を解凍したDXP `..war` の場所に設定することも含まれます。
 
 ## ホットフィックスのインストール
 

@@ -60,8 +60,6 @@ Cluster Linkには、ノード間の1対多タイプの通信を提供する拡�
 
 Cluster Linkを有効にすると、DXPのデフォルトのクラスタリング構成が有効になります。 この設定では、 **UDP上のIPマルチキャスト** を定義します。 独自のノードでマルチキャストを使用できない場合（たとえば、地理的に離れている場合やファイアウォールによって分離されている場合）、代わりにユニキャスト実装を構成できます。 詳細は、 [TCPを介したユニキャストの設定](./configuring-unicast-over-tcp.md) を参照してください。
 
-
-
 ### UDPを介したマルチキャストの使用
 
 DXPは、JGroups</a> チャネルの2つのグループを使用して、UDPを介したマルチキャストを実装します。コントロールグループとトランスポートグループです。 [チャネルのプロパティ](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#Cluster%20Link) をカスタマイズする場合は、次のポータルプロパティを `portal-ext.properties`に追加することにより、カスタマイズできます。</p> 

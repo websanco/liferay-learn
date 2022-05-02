@@ -8,7 +8,7 @@
 
 ## デフォルトのサービスアクセスポリシー
 
-サービス・アクセス・ポリシーを表示および管理するには、 ［**コントロールパネル**］ &rarr; ［**設定**］ &rarr; ［**サービス・アクセス・ポリシー**］ に移動します。
+サービスアクセスポリシーを表示および管理するには、 [**Control Panel**] → [**Configuration**] → [**Service Access Policy**] に移動します。
 
 ![サービスアクセスポリシービュー](./setting-service-access-policies/images/01.png)
 
@@ -16,11 +16,11 @@
 
 | サービスアクセスポリシー                | 説明                                                                                                                                                                                                                                                                       | デフォルトで有効 |
 | :--- | :--- | :--- |
-| **ASSET** ENTRY **DEFAULT** | アセットが取得されたときにアセットのビューカウンターを更新できるようにします。                                                                                                                                                                                                                                  | &#10004; |
-| **AUTHORIZED** OAUTH2 **SAP** | OAuth 2によって承認されたすべてのRESTリクエストを許可します。                                                                                                                                                                                                                                     | &#10004; |
-| **CALENDAR_DEFAULT** | カレンダーで公開イベントを検索できるようにします。                                                                                                                                                                                                                                                | &#10004; |
-| **SYSTEM_DEFAULT** | JavaScriptの呼び出しによって国/地域のサービスにアクセスできるため、ユーザーはその場で言語を切り替えることができます。 認証されていないリクエストを含むすべてのリクエストに適用されます。                                                                                                                                                                       | &#10004; |
-| **SYSTEM** USER **PASSWORD** | 任意のメソッドを呼び出すことができます。 もちろん、API関数には権限チェックが含まれているため、この呼び出しは、ユーザーが必要な権限を持っている場合にのみ機能します。 これは、`AuthVerifierResult.isPasswordBasedAuthentication` が`true`のリクエスト（つまりユーザー認証がパスワードを使用して行われたとき）に適用されます。 特定のAPI関数の呼び出しを完全に禁止する場合は、`SYSTEM_USER_PASSWORD`ポリシーを`*`よりも制限の厳しいものに変更できます。 | &#10004; |
+| **ASSET\** ENTRY\ **DEFAULT** | アセットが取得されたときにアセットのビューカウンターを更新できるようにします。                                                                                                                                                                                                                                  | ✔        |
+| **AUTHORIZED\** OAUTH2\ **SAP** | OAuth 2によって承認されたすべてのRESTリクエストを許可します。                                                                                                                                                                                                                                     | ✔        |
+| **CALENDAR\_DEFAULT** | カレンダーで公開イベントを検索できるようにします。                                                                                                                                                                                                                                                | ✔        |
+| **SYSTEM\_DEFAULT** | JavaScriptの呼び出しによって国/地域のサービスにアクセスできるため、ユーザーはその場で言語を切り替えることができます。 認証されていないリクエストを含むすべてのリクエストに適用されます。                                                                                                                                                                       | ✔        |
+| **SYSTEM\** USER\ **PASSWORD** | 任意のメソッドを呼び出すことができます。 もちろん、API関数には権限チェックが含まれているため、この呼び出しは、ユーザーが必要な権限を持っている場合にのみ機能します。 これは、`AuthVerifierResult.isPasswordBasedAuthentication` が`true`のリクエスト（つまりユーザー認証がパスワードを使用して行われたとき）に適用されます。 特定のAPI関数の呼び出しを完全に禁止する場合は、`SYSTEM_USER_PASSWORD`ポリシーを`*`よりも制限の厳しいものに変更できます。 | ✔        |
 
 ```{note}
 「SYSTEM_DEFAULT」、および「Default」が「Yes」に設定されている他のポリシーは、認証されていないリクエストを含むすべての受信リクエストに適用されます。
@@ -30,11 +30,8 @@
 
 | サービスアクセスポリシー                                           | 説明                                                                                                                                                                                                                      | デフォルトで有効 |
 | :--- | :--- | :--- |
-| **OAUTH2_analytics.read/write**                        | [Liferay Analytics Cloud](https://www.liferay.com/products/analytics-cloud) と統合して、JSON Webサービスにアクセスできるようにします。                                                                                                            | &#10004; |
-| **OAUTH2_everything/read/documents/userprofile/write** | Everythingポリシーは、さまざまな理由ですべてのJSON Webサービスへのアクセスを許可します。 Everythingとはすべて、つまりすべてのJSON Webサービスです（`*`に一致）。 その他は、その説明に適したメソッドシグネチャと一致します。 たとえば、OAUTH2_everything.readは、`fetch`、`get`、`has`、`is`、または`search`で始まるすべてのメソッドに一致します。 | &#10004; |
-| :--- | :--- | :--- |
-| **OAUTH2_analytics.read/write** | [Liferay Analytics Cloud](https://www.liferay.com/products/analytics-cloud) と統合して、JSON Webサービスにアクセスできるようにします。                                                                                                            | &#10004; |
-| **OAUTH2** everything/read/documents/userprofile/write **| Everythingポリシーは、さまざまな理由ですべてのJSON Webサービスへのアクセスを許可します。 Everythingとはすべて、つまりすべてのJSON Webサービスです（`*`に一致）。 その他は、その説明に適したメソッドシグネチャと一致します。 たとえば、OAUTH2** everything.readは、`fetch`、`get`、`has`、`is`、または`search`で始まるすべてのメソッドに一致します。 | &#10004; |
+| **OAUTH2\_analytics.read/write** | [Liferay Analytics Cloud](https://www.liferay.com/products/analytics-cloud)と統合して、JSON Webサービスにアクセスできるようにします。                                                                                                               | ✔        |
+| **OAUTH2\** everything/read/documents/userprofile/write **| Everythingポリシーは、さまざまな理由ですべてのJSON Webサービスへのアクセスを許可します。 Everythingとはすべて、つまりすべてのJSON Webサービスです（`*`に一致）。 その他は、その説明に適したメソッドシグネチャと一致します。 たとえば、OAUTH2\** everything.readは、`fetch`、`get`、`has`、`is`、または`search`で始まるすべてのメソッドに一致します。 | ✔        |
 
 デフォルトの構成では、システムに付属するすべてのWebサービスへのアクセスを提供する対応するスコープが使用可能になります。 スコープを使用できるようにするには、OAuth 1または2アプリケーションに割り当てる必要があります。 管理者は、使用するスコープを確認し、他のスコープを無効にする必要があります。
 
@@ -69,21 +66,29 @@ com.liferay.document.library.kernel.service.DLAppService#get*
 
 新しいサービスアクセスポリシーを作成するには：
 
-1. コントロールパネルの ［**設定**］ &rarr; ［**サービス・アクセス・ポリシー**］ セクションに移動します。
-1. **追加**（![add](../../../images/icon-add.png)）をクリックします。
-1. ポリシーに名前を付けます。
-1. ポリシーを有効にするには、 ［**Enabled**］ トグルを切り替えます。
-1. 認証されていない要求と認証されている要求にポリシーを適用する場合は、 ［**Default**］ というラベルの付いたトグルを切り替えます。
-1. ポリシーにローカライズされたタイトルを付けます。
-1. ［**Allowed Service Signatures**］ で、インストールされているサービスクラスの完全修飾名を入力します。
-1. ［Method Name］で、サービスメソッド呼び出しの入力を開始します。
+1.  コントロールパネルの [**Configuration**] → [**Service Access Policy**] セクションに移動します。
+
+2. **追加**（![add](../../../images/icon-add.png)）をクリックします。
+
+3.  ポリシーに名前を付けます。
+
+4. [**Enabled**] を反転して、ポリシーを有効にします。
+
+5.  認証されていない要求と認証されている要求にポリシーを適用する場合は、 [**Default**] というラベルの付いたトグルを切り替えます。
+
+6.  ポリシーにローカライズされたタイトルを付けます。
+
+7. [**Allowed Service Signatures**] で、インストールされているサービスクラスの完全修飾名を入力します。
+
+8.  [Method Name]で、サービスメソッド呼び出しの入力を開始します。
 
     ```{note}
     コード補完は、［Service Class］フィールドと［Method Name］フィールドの両方で使用できます。
     ```
 
-1. 別のサービスまたはメソッドを指定するには、プラスアイコンをクリックして別のエントリを追加します。
-1. 完了したら、 ［**保存**］ をクリックします。
+9.  別のサービスまたはメソッドを指定するには、プラスアイコンをクリックして別のエントリを追加します。
+
+10. 完了したら、 [**保存**] をクリックします。
 
 ```{tip}
 すべてのメソッドシグネチャが事前にわかっている場合は、［*Switch to Advanced Mode*］をクリックして、すべてを1つのフィールドの別々の行に入力します。
@@ -117,12 +122,8 @@ Liferayのサービスアクセスポリシーモジュールは、ソースコ�
 
 ## サービスアクセスポリシーモジュールの構成
 
-1. ［**コントロールパネル**］ &rarr; ［**システム設定**］ &rarr; ［**API 認証**］ に移動します。
-
-    ![サービスアクセスポリシーモジュールの場所](./setting-service-access-policies/images/02.png)
-
-1. ［Security］セクションの ［**Service Access Policies**］ モジュールをクリックします。 名前をクリックして編集します。
-
-1. デフォルトのサービスアクセスポリシー設定は編集できます。 `AuthVerifier`によってポリシーが適用されていない場合でも、デフォルトのポリシーを強制的に適用することもできます。
+1. [**Control Panel**] → [**System Settings**] → [**API Authentication**] に移動します。 ![サービスアクセスポリシーモジュールの場所](./setting-service-access-policies/images/02.png)
+2.  [Security]セクションの [**Service Access Policies**] モジュールをクリックします。 名前をクリックして編集します。
+3.  デフォルトのサービスアクセスポリシー設定は編集できます。 `AuthVerifier`によってポリシーが適用されていない場合でも、デフォルトのポリシーを強制的に適用することもできます。
 
 `AuthenticatedAccessControlPolicy`もあります。 `ServiceAccessPolicyManager`実装が存在する場合、このポリシーは何もしません。 ただし、サービスアクセスポリシーモジュールが無効になっている場合、`AuthenticatedAccessControlPolicy`によってフォールバックが提供され、Webサービスには引き続き認証済みのアクセスが必要になります。

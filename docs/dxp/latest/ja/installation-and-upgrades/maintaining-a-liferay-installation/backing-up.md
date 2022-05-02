@@ -20,19 +20,15 @@ DXP Cloudは、ドキュメントライブラリとLiferay DXPデータベース
 
 Liferayホームフォルダーには次のファイルが含まれているため、バックアップすることが重要です。
 
-***ポータルのプロパティとシステムのプロパティ:** Liferayホームフォルダには、DXP[ポータルのプロパティファイル](../reference/portal-properties.md)(例:`portal-ext.properties`、`portal-setup-wizard.properties`など)とDXP[システムのプロパティファイル](../reference/system-properties.md)が格納されています(例:`system-ext.properties`)。
+  - **ポータルのプロパティとシステムのプロパティ:** Liferayホームフォルダには、DXP[ポータルのプロパティファイル](../reference/portal-properties.md)(例:`portal-ext.properties`、`portal-setup-wizard.properties`など)とDXP[システムのプロパティファイル](../reference/system-properties.md)が格納されています(例:`system-ext.properties`)。
 
-***`/data`フォルダ:** DXPは、Liferay Homeの`/data`フォルダに設定ファイル、検索インデックス、キャッシュ情報を保存します。 Note, the `/data/document_library` folder is the default storage configuration location for the [Simple File System Store](../../system-administration/file-storage/other-file-store-types/simple-file-system-store.md) . [高度なファイルシステムストア](../../system-administration/file-storage/configuring-file-storage.md)では、保存場所を明示的に設定する必要があります。
+  - **`/data`フォルダ:** DXPは、Liferay Homeの`/data`フォルダに設定ファイル、検索インデックス、キャッシュ情報を保存します。 [ドキュメントとメディアリポジトリ](https://help.liferay.com/hc/en-us/articles/360028810112-Document-Repository-Configuration)にアップロードされたアセットは、`/data`フォルダにも保存されます。 デフォルトのストレージ構成(ファイルシステムストアまたは高度なファイルシステムストア)を使用している場合。
 
-***`/license`フォルダ(Subscription):** Liferay Enterpriseサブスクリプションのアクティベーションキーを保持します。
+  - **`/license`フォルダ(Subscription):** Liferay Enterpriseサブスクリプションのアクティベーションキーを保持します。
 
-***`/osgi`フォルダ:** DXPのOSGiランタイムを構成するファイルは、Liferay Homeの`/osgi`フォルダに保存されます。 DXPにデプロイされたすべてのアプリとモジュールのJARファイルが含まれています。 `/osgi`フォルダには、他の必要なJARファイル、 [設定ファイル](https://help.liferay.com/hc/ja/articles/360029131651-Understanding-System-Configuration-Files) 、およびログファイルも含まれています。
+  - **`/osgi`フォルダ:** DXPのOSGiランタイムを構成するファイルは、Liferay Homeの`/osgi`フォルダに保存されます。 DXPにデプロイされたすべてのアプリとモジュールのJARファイルが含まれています。 `/osgi`フォルダには、他の必要なJARファイル、[設定ファイル](https://help.liferay.com/hc/en-us/articles/360029131651-Understanding-System-Configuration-Files)、およびログファイルも含まれています。
 
-***`/logs`フォルダ:** DXPのログファイルが含まれています。 DXPで問題が発生した場合、ログファイルは、問題の原因を特定するための情報を提供します。
-
-```{note}
-Liferay Dockerイメージを使用していて、バインドマウントを介してカスタムLiferayおよびアプリケーションサーバーの構成ファイルを使用している場合は、それらのファイル（たとえば、 `[host folder]/files`フォルダ内のファイル）をバックアップします。
-```
+  - **`/logs`フォルダ:** DXPのログファイルが含まれています。 DXPで問題が発生した場合、ログファイルは、問題の原因を特定するための情報を提供します。
 
 Git、BitBucket、Subversion、CVSなどのソース管理リポジトリを使用すると、Liferayホームフォルダーをバックアップできます。
 

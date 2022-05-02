@@ -12,7 +12,7 @@ Liferay DXPは、言語、タイムゾーンなどによるローカリゼーシ
 
 DXPを開始する前にデフォルトの仮想インスタンスのローカリゼーションを設定する場合は、 [`portal-ext.properties` ファイル](../reference/portal-properties.md)を使用します。
 
-| **ポータルプロパティ**               | **説明**                                                                                                                                                                 |
+| **ポータルプロパティ** | **説明** |
 |:--------------------------- |:---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `company.default.locale`    | [`locales`](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#Languages%20and%20Time%20Zones)ポータルプロパティに定義されている使用可能なロケールに設定します。    |
 | `company.default.time.zone` | [`time.zones`](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#Languages%20and%20Time%20Zones)ポータルプロパティで定義されている任意のタイムゾーンに設定します。 |
@@ -30,7 +30,7 @@ company.default.time.zone=Europe/Lisbon
 
 ## セットアップウィザード
 
-[セットアップウィザード](../installing-liferay/running-liferay-for-the-first-time.md) は、DXPインスタンスのデフォルトの言語とタイムゾーンを設定します。 これらは、 _［Default Language］_ と _［Time Zone］_ セレクタで選択できます。
+[セットアップウィザード](../installing-liferay/running-liferay-for-the-first-time.md) は、DXPインスタンスのデフォルトの言語とタイムゾーンを設定します。 これらは、 ［**Default Language**］ と ［**Time Zone**］ セレクタで選択できます。
 
 ![Use the Setup Wizard to set the DXP instance's default language and time zone](./initial-instance-localization/images/01.png)
 
@@ -42,7 +42,7 @@ company.default.time.zone=Europe/Lisbon
 
 ## コントロールパネル
 
-仮想インスタンスのデフォルトの言語とタイムゾーンは、インスタンスの_ローカリゼーション_ページを使用して変更できます。 手順については、[Configuring a Virtual Instance Localization](../../system-administration/configuring-liferay/virtual-instances/localization.md)を参照してください。
+仮想インスタンスのデフォルトの言語とタイムゾーンは、インスタンスの **ローカリゼーション** ページを使用して変更できます。 手順については、[Configuring a Virtual Instance Localization](../../system-administration/configuring-liferay/virtual-instances/localization.md)を参照してください。
 
 ## まとめ
 

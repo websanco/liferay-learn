@@ -57,7 +57,7 @@ Liferay DXP 7.2以前でLiferay Connected Services（LCS）を使用している
 
 1. LCSを使用してDXPをアクティブ化している場合は、 [Liferay Home](../reference/liferay-home.md) の`osgi/marketplace`フォルダからLiferay Connected ServicesクライアントのLPKGファイル（`.lpkg`）を削除します。
 
-1. `［Liferay Home］/data/license`フォルダの **コンテンツ** は削除しますが、フォルダは保持します。
+3.  `[Liferay Home]/data/license`フォルダの **コンテンツ** は削除しますが、フォルダは保持します。
 
 1. `［Liferay Home］/osgi/modules`フォルダからすべての`activation-key-［...］.xml`ファイルを削除します。
 

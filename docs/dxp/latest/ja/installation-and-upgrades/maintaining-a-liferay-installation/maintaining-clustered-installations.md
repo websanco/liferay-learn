@@ -2,8 +2,14 @@
 
 [クラスター](../../setting-up-liferay/clustering-for-high-availability.md)で機能するようにLiferay DXPのインストールを設定すると、パフォーマンスとスケーラビリティが向上しますが、適切にサポートおよび維持するために追加の考慮事項も必要です。 これには、新規および更新されたプラグインとモジュールのデプロイ、[パッチとフィックスパックのインストール](../patching-liferay/patching-liferay.md)、構成の変更などが含まれます。 概説されているLiferay DXPクラスターのメンテナンス方法は、サーバーの稼働時間を最大化し、サーバーメンテナンスのリスクを最小限に抑えます。 Liferay DXPは、標準のクラスターメンテナンス技法の使用をサポートしています。
 
-* [ローリング再起動](./rolling-restarts.md)：ノードはシャットダウンされ、一度に1つずつ更新されます。
-* [ブルーグリーンデプロイ](./blue-green-deployments.md)：ブルーグリーンには、現在の環境（**ブルー** 環境）の複製、複製の更新（**グリーン** 環境）、および更新された環境（グリーン）へのユーザーのカットオーバーが含まれます。
+maintaining-clustered-installations/rolling-restarts.md
+maintaining-clustered-installations/blue-green-deployments.md
+```
+
+[クラスター](../setting-up-liferay/clustering-for-high-availability.md)で機能するようにLiferay DXPのインストールを設定すると、パフォーマンスとスケーラビリティが向上しますが、適切にサポートおよび維持するために追加の考慮事項も必要です。 これには、新規および更新されたプラグインとモジュールのデプロイ、[パッチとフィックスパックのインストール](./patching-dxp-7-3-and-earlier.md)、構成の変更などが含まれます。 概説されているLiferay DXPクラスターのメンテナンス方法は、サーバーの稼働時間を最大化し、サーバーメンテナンスのリスクを最小限に抑えます。 Liferay DXPは、標準のクラスターメンテナンス技法の使用をサポートしています。
+
+  - [ローリング再起動](./maintaining-clustered-installations/rolling-restarts.md)：ノードはシャットダウンされ、一度に1つずつ更新されます。
+  - [ブルーグリーンデプロイ](./maintaining-clustered-installations/blue-green-deployments.md)：ブルーグリーンには、現在の環境（**ブルー** 環境）の複製、複製の更新（**グリーン** 環境）、および更新された環境（グリーン）へのユーザーのカットオーバーが含まれます。
 
 これらの手法を以下で比較します。
 

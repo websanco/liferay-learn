@@ -91,19 +91,10 @@ Liferayインスタンスから切り離された状態でデータベースを�
     [新しいLiferay Dockerイメージにアップグレードする](../../installing-liferay/using-liferay-docker-images/upgrading-to-a-new-docker-image.md)場合は、Docker環境変数の代わりに [ポータルプロパティ](../../reference/portal-properties.md) ファイルを使用してデータベース接続を指定してください。 [ポータルプロパティリファレンス](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html) には、各Liferay環境変数に対応するポータルプロパティが一覧表示されています。
     ```
 
-
-1. 必要に応じて、[アップグレードレポート](../reference/upgrade-reports.md)を有効にして、環境や変更などをレポートに記録します。 
-   
-   
-
-    ```bash
-    echo "upgrade.report.enabled=\"true\"" << tools/portal-tools-db-upgrade-client/portal-upgrade-ext.properties
-    ```
-
-
-
-
-<a name="running-the-upgrade-tool" />
+| DXP版                   | ダウンロード手順                                                                                                                                                                                                                                    |
+|:---------------------- |:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Liferay DXP（サブスクリプション） | [**ダウンロード** ページ](https://customer.liferay.com/group/customer/downloads)に移動し、DXPバージョンと **製品/サービスパック** のファイルタイプを選択します。 表示されるリストで、 **Liferay DXPアップグレードクライアント** 用の [**Download**] をクリックします。                                                                   |
+| LiferayポータルCE          | [[**Downloads**] ページ](https://www.liferay.com/downloads-community)に移動します。 [**Liferay Portal**] ダウンロードメニューで、 [**Other files**] を選択して、 [**ダウンロード**] をクリックします。 最新のLiferay PortalのリリースアセットのGitHubページが表示されます。 `liferay-ce-portal-tools-[version].zip`をクリックします。 |
 
 ## アップグレードツールの実行
 

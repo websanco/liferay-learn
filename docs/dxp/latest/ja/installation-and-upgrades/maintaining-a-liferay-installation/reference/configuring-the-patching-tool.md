@@ -43,17 +43,15 @@ Patching Toolの `auto-discovery` コマンドは、DXPファイルをスキャ�
 
 Liferay Homeへの間違ったパスを指定した場合、またはLiferay Homeが親フォルダにない場合、パッチツールは次のようなエラーを報告します。
 
-```
-The .liferay-home has not been detected in the given directory tree.
-
-Configuration:
-patching.mode=binary
-war.path=../tomcat-9.0.17/webapps/ROOT/
-global.lib.path=../tomcat-9.0.17/lib/ext/
-liferay.home=**[please enter manually]**
-
-The configuration hasn't been saved. Please save this to the default.properties file.
-```
+    The .liferay-home has not been detected in the given directory tree.
+    
+    Configuration:
+    patching.mode=binary
+    war.path=../tomcat-9.0.17/webapps/ROOT/
+    global.lib.path=../tomcat-9.0.17/lib/ext/
+    liferay.home= [**please enter manually**]
+    
+    The configuration hasn't been saved. Please save this to the default.properties file.
 
 次のいずれかの方法を使用して問題を解決します。
 
@@ -90,19 +88,19 @@ Product information:
 
 ### 一般的なプロパティ
 
-| プロパティ                               | 説明                                                                                                                                                                     |
-|:----------------------------------- |:---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `global.lib.path`                   | グローバルクラスパス上の `.jar` ファイルを保存する場所を指定します。 ヒント：`portal-kernel.jar`はグローバルクラスパス上にあります。<br><br>DXP 7.2では、`global.lib.path`は、`patching.mode`が`binary`の場合にのみ使用されます。 |
-| `liferay.home`                      | [Liferay Home](../../reference/liferay-home.md) フォルダーを指定します。これは通常、DXPの `osgi` および `tools` フォルダーの親フォルダーです。                                                              |
-| `module.framework.core.path`        | DXPの `osgi/core` フォルダーへのパス。                                                                                                                                            |
-| `module.framework.marketplace.path` | DXPの `osgi/marketplace` フォルダーへのパス。                                                                                                                                     |
-| `module.framework.modules.path`     | DXPの `osgi/modules` フォルダーへのパス。                                                                                                                                         |
-| `module.framework.portal.path`      | DXPの `osgi/portal` フォルダーへのパス。                                                                                                                                          |
-| `module.framework.static.path`      | DXPの `osgi/static` フォルダーへのパス。                                                                                                                                          |
-| `patches.folder`                    | パッチを保存する場所を指定します。 デフォルトの場所は `./patches`です。                                                                                                                             |
-| `patching.mode` （**DXP 2.0のみ**） | パッチには、更新されたバイナリファイルとソースファイルが含まれています。 モードは、適用するファイルタイプを決定します。<br><br> **`binary`（デフォルト）：DXPインストールの更新用。<br>** `source`：DXPを拡張するソースツリーの更新用。               |
-| `source.path` （**DXP 2.0のみ**） | DXPソースツリーの場所を指定します。 `source.path`は、`patching-mod`eが`source`の場合にのみ使用されます。                                                                                               |
-| `war.path`                          | DXP Webアプリケーションへのパス（展開されたフォルダー構造または `.war` ファイルへのパス）を指定します。                                                                                                            |
+| プロパティ                               | 説明                                                                                                                                                                  |
+|:----------------------------------- |:------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `global.lib.path` （`バイナリ` モードのみ）    | グローバルクラスパス上の `.jar` ファイルを保存する場所を指定します。 ヒント： `portal-kernel.jar` はグローバルクラスパス上にあります。                                                                                  |
+| `liferay.home`                      | [Liferay Home](../../reference/liferay-home.md) フォルダーを指定します。これは通常、DXPの `osgi` および `tools` フォルダーの親フォルダーです。                                                           |
+| `module.framework.core.path`        | DXPの `osgi/core` フォルダーへのパス。                                                                                                                                         |
+| `module.framework.marketplace.path` | DXPの `osgi/marketplace` フォルダーへのパス。                                                                                                                                  |
+| `module.framework.modules.path`     | DXPの `osgi/modules` フォルダーへのパス。                                                                                                                                      |
+| `module.framework.portal.path`      | DXPの `osgi/portal` フォルダーへのパス。                                                                                                                                       |
+| `module.framework.static.path`      | DXPの `osgi/static` フォルダーへのパス。                                                                                                                                       |
+| `patches.folder`                    | パッチを保存する場所を指定します。 デフォルトの場所は `./patches`です。                                                                                                                          |
+| `patching.mode`                     | パッチには、更新されたバイナリファイルとソースファイルが含まれています。 モードは、適用するファイルタイプを決定します。<br><br>\ **` binary ` （デフォルト）：DXPインストールの更新用。<br>\** ` source `：DXPを拡張するソースツリーの更新用。 |
+| `source.path` （`source` モードのみ）      | DXPソースツリーの場所を指定します。                                                                                                                                                 |
+| `war.path`                          | DXP Webアプリケーションへのパス（展開されたフォルダー構造または `.war` ファイルへのパス）を指定します。                                                                                                         |
 
 ### プロキシ設定
 

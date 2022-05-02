@@ -11,7 +11,7 @@ maintaining-a-liferay-installation/patching-dxp-7-3-and-earlier.md
 maintaining-a-liferay-installation/reference.md
 ```
 
-Liferayがバグを修正したり、機能を追加するので、それらについていく必要があります。 Liferay DXP 7.3 SPは、 *ローリングリリース*を行っています。 つまり、DXPのソースコードには継続的に修正や目立たない機能が追加され、アップデートリリース（Update）でエンタープライズサブスクライバーに提供されます。 サブスクライバーは、DXPで確認されたミッションクリティカルな問題に対して [Hot Fixes](./maintaining-a-liferay-installation/applying-a-hotfix.md) をリクエストすることができます。
+Liferayがバグを修正したり、機能を追加するので、それらについていく必要があります。 Liferay DXP 7.3 SPは、 **ローリングリリース** を行っています。 つまり、DXPのソースコードには継続的に修正や目立たない機能が追加され、アップデートリリース（Update）でエンタープライズサブスクライバーに提供されます。 サブスクライバーは、DXPで確認されたミッションクリティカルな問題に対して [Hot Fixes](./maintaining-a-liferay-installation/applying-a-hotfix.md) をリクエストすることができます。
 
 ```{important}
 Liferay DXP 7.3 SP3以前のバージョンでは、代わりにパッチモデルを使用しています。 Liferay DXP 7.3 SP3以前のバージョンをお使いの方は、[Patching DXP](./maintaining-a-liferay-installation/patching-dxp-7-3-and-earlier.md)をご覧ください。

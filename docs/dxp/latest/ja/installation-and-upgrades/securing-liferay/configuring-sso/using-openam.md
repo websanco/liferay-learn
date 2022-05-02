@@ -33,19 +33,17 @@ OpenAM 12以下はLiferay DXPで動作しますが、サポートは終了して
 1. OpenAMでLiferay DXP管理ユーザーを作成する
 1. 認証用にOpenAMを有効にする
 
-ユーザーは画面名によって前後にマッピングされるため、OpenAMのユーザーIDをLiferay管理ユーザーの画面名と必ず一致させてください。 たとえば、Liferay DXP管理ユーザーのスクリーン名が **admin** の場合、 [`admin.email.from.address`](http://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html#Admin%20Portlet) [ポータルプロパティ](../../reference/portal-properties.md) で指定された **admin** のIDと電子メールアドレスを使用してOpenAMにユーザーを登録します。 ユーザーを設定したら、このユーザーを使用してOpenAMにログインします。
+ユーザーは画面名によって前後にマッピングされるため、OpenAMのユーザーIDをLiferay管理ユーザーの画面名と必ず一致させてください。 たとえば、Liferay DXP管理ユーザーの画面名が **admin** の場合は、 **admin** のIDと[`admin.email.from.address`](http://docs.liferay.com/portal/7.2-latest/propertiesdoc/portal.properties.html#Admin%20Portlet)[ポータルプロパティ](../../reference/portal-properties.md)で指定された電子メールアドレスを使用して、ユーザーをOpenAMに登録します。 ユーザーを設定したら、このユーザーを使用してOpenAMにログインします。
 
 1. 同じブラウザウィンドウで、管理ユーザーとして（以前の管理者の電子メールアドレスを使用して）Liferay DXPにログインします。
 
-1. コントロールパネルに移動して、 ［**設定**］ &rarr; ［**Instance Settings**］ &rarr; ［**セキュリティ**］ &rarr; ［**SSO**］ をクリックします。 次に、左側のリストで ［**OpenSSO**］ を選択します。
+2.  コントロールパネルに移動し、 [**Configuration**] → [**Instance Settings**] → [**Security**] → [**SSO**] の順にクリックします。 次に、左側のリストで [**OpenSSO**] を選択します。
 
     ![統合を機能させるには、LiferayのOpenSSO設定を有効にする必要があります。](./using-openam/images/01.png)
 
-1. OpenAMサーバーを指すように3つのURLフィールド（［Login URL］、［Logout URL］、および［Service URL］）を変更し（つまり、URLのホスト名部分のみを変更）、 ［**Enabled**］ チェックボックスをオンにして、 ［**保存**］ をクリックします。
+3.  OpenAMサーバーを指すように3つのURLフィールド（[Login URL]、[Logout URL]、および[Service URL]）を変更し（つまり、URLのホスト名部分のみを変更）、 [**Enabled**] チェックボックスをオンにして、 [**保存**] をクリックします。
 
-Liferay DXPは、ユーザーが`/c/portal/login` URLをリクエストすると（たとえば、 ［**Sign In**］ リンクをクリックしたとき）、ユーザーをOpenAMにリダイレクトします。
-
-<a name="configuring-openam-at-a-different-liferay-scope" />
+Liferay DXPは、ユーザーが`/c/portal/login` URLをリクエストすると（たとえば、 [**Sign In**] リンクをクリックしたとき）、ユーザーをOpenAMにリダイレクトします。
 
 ## 別のLiferayスコープでOpenAMを構成する
 
@@ -55,13 +53,13 @@ Liferay DXPのOpenAM構成は、システムスコープでもインスタンス
 
 1. コントロールパネルに移動します。
 
-1. ［**設定**］ &rarr; ［**システム設定**］ &rarr; ［**セキュリティ**］ &rarr; ［**SSO**］ &rarr; ［**OpenSSO**］ の順にクリックします。 以下の設定が表示されます。 ここで設定されている値は、すべてのポータルインスタンスのデフォルト値です。 リテラル値を使用してJavaプリミティブ型を初期化する場合と同じ形式で入力します。
+2. [**Configuration**] → [**System Settings**] → [**Security**] → [**SSO**] → [**OpenSSO**] の順にクリックします。 以下の設定が表示されます。 ここで設定されている値は、すべてのポータルインスタンスのデフォルト値です。 リテラル値を使用してJavaプリミティブ型を初期化する場合と同じ形式で入力します。
 
 | プロパティラベル                    | プロパティキー            | 説明                                                                                                         | タイプ       |
 | :--- | :--- | :--- | :--- |
 | **Version** | `version`          | 使用するOpenAMバージョン（12以下または13）                                                                                 | `String`  |
 | **Enabled** | `enabled`          | OpenAM認証を有効にするには、このボックスをオンにします。 OpenAMは、LDAP認証も有効になっていて、Liferay DXPの認証タイプが画面名に設定されている場合にのみ機能することに注意してください。 | `boolean` |
-| **Import from LDAP** | `importFromLDAP`   | これをオンにすると、Liferay DXPに存在しないOpenAMから認証されたユーザがLDAPからインポートされます。 LDAPを有効にする必要があります。                            | `ブール値`    |
+| **Import from LDAP** | `importFromLDAP`   | これをオンにすると、Liferay DXPに存在しないOpenAMから認証されたユーザがLDAPからインポートされます。 LDAPを有効にする必要があります。                            | `boolean` |
 | **Login URL** | `loginURL`         | OpenAMサーバーのログインページへのURL                                                                                    | `String`  |
 | **Logout URL** | `logoutURL`        | OpenAMサーバーのログアウトページへのURL                                                                                   | `String`  |
 | **Service URL** | `serviceURL`       | 認証されたWebサービスを使用するためにOpenAMにアクセスできるURL。 OpenAM Express 8以降を使用している場合は、サーバーでJava 6を実行する必要があります。               | `String`  |
@@ -70,4 +68,4 @@ Liferay DXPのOpenAM構成は、システムスコープでもインスタンス
 | **First Name Attribute** | `firstNameAttr`    | ユーザーの名を表すOpenAM上の属性の名前                                                                                     | `String`  |
 | **Last Name Attribute** | `lastNameAttr`     | ユーザーの姓を表すOpenAM上の属性の名前                                                                                     | `String`  |
 
-特定のポータルインスタンスのこれらのデフォルト設定を上書きするには、コントロールパネルに移動して、 ［**設定**］ &rarr; ［**Instance Settings**］ &rarr; ［**セキュリティ**］ &rarr; ［**SSO**］ の順にクリックします。 次に、左側のリストで ［**OpenSSO**］ を選択します。
+特定のポータルインスタンスのこれらのデフォルト設定を上書きするには、コントロールパネルに移動し、 [**Configuration**] → [**Instance Settings**] → [**Security**] → [**SSO**] をクリックします。 次に、左側のリストで [**OpenSSO**] を選択します。

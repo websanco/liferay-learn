@@ -20,23 +20,23 @@ Liferay DXPは、メールサーバーを使用して、ユーザー登録とパ
 
 1.  管理ユーザー（[[Basic Configuration]ページ](../../getting-started/using-the-setup-wizard.md)で指定されたユーザー）としてサインインします。
 
-2.  *[Control Panel] → [Configuration] → [Server Administration] → [Mail]* に移動します。
+2. [**Control Panel] → [Configuration] → [Server Administration] → [Mail**] に移動します。
 
 3.  [次のフィールド](#mail-configuration-reference) に値を入力します。
 
-    * **Incoming POP Server：** pop.gmail.com
-    * **Incoming Port：** 110
-    * **Use a Secure Network Connection：** Flagged
-    * **User Name：** joe.bloggs
-    * **Password：** \*\*\*\*\*
-    * **Outgoing SMTP Server：** smtp.gmail.com
-    * **Outgoing Port：** 465
-    * **Use a Secure Network Connection：** Flagged
-    * **User Name：** joe.bloggs
-    * **Password：** \*\*\*\*\*
-    * **Manually specify additional JavaMail properties to override the above configuration：** 指定する必要のある追加のプロパティがある場合は、ここで指定します。
+    ***Incoming POP Server：** pop.gmail.com
+    ***Incoming Port：** 110
+    ***Use a Secure Network Connection：** Flagged
+    ***User Name：** joe.bloggs
+    ***Password：** \ **\** \ **\** \*
+    ***Outgoing SMTP Server：** smtp.gmail.com
+    ***Outgoing Port：** 465
+    ***Use a Secure Network Connection：** Flagged
+    ***User Name：** joe.bloggs
+    ***Password：** \ **\** \ **\** \*
+    ***Manually specify additional JavaMail properties to override the above configuration：** 指定する必要のある追加のプロパティがある場合は、ここで指定します。
 
-4.  *[Save]* をクリックします。
+4. [**Save**] をクリックします。
 
 DXPがすぐにメールセッションに接続します。
 

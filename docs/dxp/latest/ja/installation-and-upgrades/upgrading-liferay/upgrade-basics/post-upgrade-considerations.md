@@ -18,9 +18,9 @@ rm osgi/configs/com.liferay.portal.search.configuration.IndexStatusManagerConfig
 
 ほとんどのアップグレードでは検索インデックスの再インデックス化が必要ですが、通常、同じLiferayバージョン内でサービスパックを適用したり、新しいGA（ローリングリリース）にアップグレードしたりする場合は必要ありません。 インデックスを再構築する方法は次のとおりです。
 
-1. **グローバルメニュー**（![Global Menu icon](./post-upgrade-considerations/images/01.png)）をクリックし、 ［**コントロールパネル**］ タブを選択します。 コントロールパネルが表示されます。
+1. **グローバルメニュー**（![Global Menu icon](./post-upgrade-considerations/images/01.png)）をクリックし、 [**コントロールパネル**] タブを選択します。 コントロールパネルが表示されます。
 
-1. ［設定］セクションで ［**検索機能**］ をクリックし、 ［**アクションをインデックスする**］ タブを選択し、 ［**Reindex all search indexes**］ に対し ［**実行**］ をクリックします。インデックスの再構築が実行され、完了すると成功メッセージが表示されます。
+2.  [設定]セクションで [**検索機能**] をクリックし、 [**アクションをインデックスする**] タブを選択し、 [**Reindex all search indexes**] に対し [**実行**] をクリックします。インデックスの再構築が実行され、完了すると成功メッセージが表示されます。
 
 ![コントロールパネルでサーチインデックスのインデックスを再作成できます。](./post-upgrade-considerations/images/02.png)
 
@@ -40,7 +40,7 @@ rm osgi/configs/com.liferay.portal.search.configuration.IndexStatusManagerConfig
 
 ## 最新のマーケットプレイスアプリのインストール
 
-新しいLiferayバージョンの[マーケットプレイスアプリ](../../../system-administration/installing-and-managing-apps/installing-apps/downloading-apps.md)の最新バージョンをまだインストールしていない場合は、それらをインストールし、[Gogoシェルコマンド](../upgrade-stability-and-performance/upgrading-modules-using-gogo-shell.md)を使用して、必要なデータベースのアップグレードを確認して実行します。
+以前のLiferayバージョンのマーケットプレイスアプリを使用していた場合は、 **新しい** DXPバージョンと互換性のある各アプリのバージョンを使用する必要があります。 各[マーケットプレイスアプリ](../../../system-administration/installing-and-managing-apps/installing-apps/downloading-apps.md)の互換性のある最新バージョンをダウンロードしてインストールします。
 
 <a name="accounting-for-feature-changes" />
 
@@ -52,7 +52,7 @@ rm osgi/configs/com.liferay.portal.search.configuration.IndexStatusManagerConfig
 
 7.1より前は、すべてのユーザーがデフォルトでWebコンテンツの記事を表示できました。 現在は、表示権限がデフォルトでオンになっています。 表示権限を開くための主なオプションは次のとおりです。
 
-**オプション1：**［**コントロールパネル**］ → ［**設定**］ → ［**System Settings**］ → ［**Web Content**］ → ［**Virtual Instance Scope**］ → ［**Web Content**］ に移動し、 ［**Article view permissions check enabled**］ の選択を解除して、すべてのWebコンテンツの記事の表示権限を開きます。
+**オプション1：**[**コントロールパネル**] → [**設定**] → [**システム設定**] → [**Webコンテンツ**] → [**仮想インスタンススコープ**] → [**Webコンテンツ**] に移動し、 [**Article view permissions check enabled**] の選択を解除して、すべてのWebコンテンツの記事の表示権限を開きます。
 
 ![［システム設定］の［Webコンテンツ］メニューを下にスクロールして、Webコンテンツを表示するための権限チェックを無効にします。](./post-upgrade-considerations/images/03.png)
 

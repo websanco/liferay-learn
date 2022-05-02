@@ -18,7 +18,7 @@ DXPバンドルとDXPアプリケーションサーバーのインストール�
 DXPをDockerコンテナで動作させている場合は、[Patching DXP in Docker](./../installing-liferay/using-liferay-docker-images/patching-dxp-in-docker.md)の指示に従ってください。
 ```
 
-DXPバンドルにパッチを適用する場合は、以下の基本的なパッチ適用手順に進んでください。 アプリケーションサーバーでDXPにパッチを適用する場合は、パッチを適用する手順を実行する*前*に、[追加の準備を行ってください](#preparing-to-patch-dxp-on-an-application-server)。
+DXPバンドルにパッチを適用する場合は、以下の基本的なパッチ適用手順に進んでください。 アプリケーションサーバーでDXPにパッチを適用する場合は、パッチを適用する手順を実行する **前** に、[追加の準備を行ってください](#preparing-to-patch-dxp-on-an-application-server)。
 
 ## パッチ適用手順
 
