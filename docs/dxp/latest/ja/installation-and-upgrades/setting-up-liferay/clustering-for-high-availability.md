@@ -35,6 +35,8 @@ DXPクラスターを構成したら、それにアプリケーションをデ�
 
 <a name="whats-next" />
 
+<a name="whats-next" />
+
 ## 次のステップ
 
 例としてクラスタを作成することは、DXPクラスタリングを理解するための優れた最初のステップです。 詳細は、「 [例：単純なDXPクラスター](./clustering-for-high-availability/example-creating-a-simple-dxp-cluster.md) 作成」から始めてください。 次に、上記の [クラスタリング要件](#clustering-requirements) 対処します。

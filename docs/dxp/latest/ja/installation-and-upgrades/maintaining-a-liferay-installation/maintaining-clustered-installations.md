@@ -56,6 +56,8 @@ maintaining-clustered-installations/blue-green-deployments.md
 
 <a name="additional-information" />
 
+<a name="additional-information" />
+
 ## 追加情報
 
   - [ローリング再起動の実行](./maintaining-clustered-installations/rolling-restarts.md)

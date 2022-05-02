@@ -20,6 +20,8 @@ Liferay DXP 7.3 SP3以前のバージョンでは、代わりにパッチモデ�
 Liferay DXP/Portal の General Availability (GA) リリースは、ソースコードからビルドされます。 アップデートとセキュリティアップデートはGAに沿って行われ、またソースコードから構築されます。
 ```
 
+<a name="updating-to-a-new-docker-image" />
+
 ## 新しいDocker Imageへのアップデート
 
 1. 現在のDockerコンテナをシャットダウンします。
@@ -76,6 +78,8 @@ Liferay DXP/Portal の General Availability (GA) リリースは、ソースコ�
 
 新しいLiferayアップデートDockerイメージで動作しています。
 
+<a name="updating-to-a-new-liferay-tomcat-bundle" />
+
 ## 新しいLiferay Tomcatバンドルへの更新
 
 1. 修正したシステム設定（ [ファイルストレージ](../../system-administration/file-storage/configuring-file-storage.md) と [Elasticsearch](../../using-search/installing-and-upgrading-a-search-engine/elasticsearch/connecting-to-elasticsearch.md) の設定を含む）を [`.config ` ファイル](../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md#creating-configuration-files) にエクスポートし、 `[Liferay Home]/osgi/configs/` フォルダにコピーします。
@@ -120,6 +124,8 @@ Liferay DXP/Portal の General Availability (GA) リリースは、ソースコ�
 1. アプリケーションサーバーを起動します。
 
 LiferayアップデートTomcatバンドルで動作しています。
+
+<a name="updating-an-application-server-installation" />
 
 ## アプリケーションサーバのインストールのアップデート
 
@@ -173,6 +179,8 @@ LiferayアップデートTomcatバンドルで動作しています。
 1. アプリケーションサーバーを再度起動します。
 
 　 Liferayインスタンスがアップデートされ、実行されています。
+
+<a name="additional-information" />
 
 ## 追加情報
 

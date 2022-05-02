@@ -25,6 +25,8 @@
 
 5. [**保存**] をクリックします。
 
+<a name="using-portal-properties-to-configure-the-default-email-sender" />
+
 ### ポータルプロパティを使用したデフォルトの電子メール送信者の設定
 
 デフォルトのメール送信者は、[`portal-ext.properties`ファイル](../../reference/portal-properties.md)を使用して設定することもできます。 次のプロパティ値は、独自の値に置き換えることができます。

@@ -39,7 +39,7 @@ LiferayDXP認証は柔軟です。 デフォルトでは、ユーザーは [**Si
 
 <a name="permissions" />
 
-## 権限
+## パーミッション
 
 Liferay DXPには、堅牢なロールベースのアクセス制御（RBAC）システムがあります。 ユーザーは、サイト、チーム、ユーザーグループ、または組織に割り当てることができます。 カスタムのロールを作成し、権限をこれらのロールに割り当て、それらのロールをユーザーに割り当てることができます。 ロールは、サイト、組織、またはグローバルなどの特定のコンテキストでのみ適用されるようにスコープが設定されています。 詳細は、[ロールと権限](../users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.md)を参照してください。
 
@@ -79,6 +79,8 @@ Liferayポータルの理念は「デフォルトで安全」です。 セキュ
 Liferay Portalのインストールのセキュリティ保護の詳細は、 [当社のセキュリティステートメント](https://www.liferay.com/security) 、 [コミュニティセキュリティチーム](https://portal.liferay.dev/people/community-security-team) 、およびこれらのページに記載されているリソースを参照してください。
 
 [Liferay マーケットプレイス](https://www.liferay.com/marketplace) から追加のセキュリティプラグインを入手できます。
+
+<a name="next-steps" />
 
 ## 次のステップ
 

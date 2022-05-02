@@ -45,6 +45,8 @@ OpenAM 12以下はLiferay DXPで動作しますが、サポートは終了して
 
 Liferay DXPは、ユーザーが`/c/portal/login` URLをリクエストすると（たとえば、 [**Sign In**] リンクをクリックしたとき）、ユーザーをOpenAMにリダイレクトします。
 
+<a name="configuring-openam-at-a-different-liferay-scope" />
+
 ## 別のLiferayスコープでOpenAMを構成する
 
 Liferay DXPのOpenAM構成は、システムスコープでもインスタンススコープでも適用できます。

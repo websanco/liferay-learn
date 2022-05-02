@@ -20,6 +20,8 @@ Liferay DXPは、Webサービスに4つのセキュリティレイヤーを提�
 
 <a name="authorization" />
 
+<a name="authorization" />
+
 ## 承認
 
 Liferay DXPには、いくつかの調整可能な承認レイヤーが含まれています。

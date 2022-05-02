@@ -6,10 +6,14 @@
 
 <a name="overview" />
 
+<a name="overview" />
+
 ## 概要
 
 * [アップグレードツールの使用](#database-upgrade-tool-usage)
 * [アップグレードツールの設定](#configuring-the-upgrade-tool)
+
+<a name="database-upgrade-tool-usage" />
 
 <a name="database-upgrade-tool-usage" />
 
@@ -31,6 +35,8 @@ db_upgrade.sh --help
 
 **--shell** または **-s** ：アップグレード作業終了後、[Gogoシェル](../../../liferay-internals/fundamentals/using-the-gogo-shell.md)に自動的に接続します。
 
+<a name="logging-output" />
+
 ### ログ出力
 
 `-l`オプションは、ツールのログファイル名を指定します。
@@ -38,6 +44,8 @@ db_upgrade.sh --help
 ```bash
 db_upgrade.sh -l "output.log"
 ```
+
+<a name="recommended-jvm-options" />
 
 ### 推奨されるJVMオプション
 
@@ -87,6 +95,8 @@ Please enter your database host (localhost):
 ```{note}
    省略された値は、括弧内に表示されているデフォルトを使用します。
 ```
+
+<a name="manual-configuration" />
 
 ### 手動設定
 

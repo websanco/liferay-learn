@@ -4,6 +4,8 @@ Kerberosを使用して、Liferay DXPでMicrosoft Windows&trade;アカウント�
 
 セキュリティの脆弱性が存続するため、この構成は [NTLM](https://portal.liferay.dev/docs/7-1/deploy/-/knowledge_base/d/ntlm-single-sign-on-authentication) よりも優先されます。
 
+<a name="prerequisites" />
+
 ## 前提条件
 
 Windows&trade;サーバーでKerberosとActive Directoryをセットアップする方法についてはこの記事では説明しませんが、Liferay認証を設定するための最低限の前提条件について説明します。
@@ -45,6 +47,8 @@ Windows&trade;サーバーでKerberosとActive Directoryをセットアップす
 1. Liferay DXP
 1. Windows&trade;クライアント。
 
+<a name="step-1-creating-the-user-keytab" />
+
 ### ステップ1：ユーザーKeytabの作成
 
 1. Liferay DXPがActive Directoryにバインドできるようにユーザーを作成します。
@@ -62,6 +66,8 @@ Windows&trade;サーバーでKerberosとActive Directoryをセットアップす
     ```
 
 1. ADドメインコントローラーとWebサーバーがDNS構成または`hosts`ファイルを介してネットワーク上で相互に認識できることを確認します。
+
+<a name="step-2-configuring-your-web-server" />
 
 ### ステップ2：Webサーバーの構成
 
@@ -131,6 +137,8 @@ Windows&trade;サーバーでKerberosとActive Directoryをセットアップす
 
 最後の行は、ユーザー設定に基づいてコメントアウトされています。 Liferay DXPに保存するときにユーザー名からドメインを削除する場合は、コメントを解除してください。 それ以外の場合は、コメントアウトしたままにして、ドメインとユーザー名を保存します。
 
+<a name="step-3-connecting-liferay-dxp-to-active-directory-over-ldap" />
+
 ### ステップ3：LDAPを介してLiferay DXPをActive Directoryに接続する
 
 1. 最後に、LDAPプロトコルを介してActive DirectoryにアクセスするようにLiferay DXPを構成します。 ［設定］ &rarr; ［Instance Settings］ &rarr; ［認証］ &rarr; ［一般］で、画面名による認証に変更します。
@@ -156,6 +164,8 @@ Windows&trade;サーバーでKerberosとActive Directoryをセットアップす
     ![ [Instance Settings]メニューでSSOを有効にする。](authenticating-with-kerberos/images/02.png)
 
 サーバーを構成しました。 あとはクライアントを設定するだけです。
+
+<a name="step-4-configuring-your-clients" />
 
 ### ステップ4：クライアントの設定
 

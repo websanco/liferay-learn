@@ -28,7 +28,11 @@ Liferay DXPにはJava JDK 8または11が必要です。 JDKを選択するに�
 
 [`［Liferay Home］`](../../reference/liferay-home.md) フォルダーは、Liferay DXPが機能するために必要なファイルとフォルダーを格納および管理する場所です。 WebSphereでは、`［Liferay Home］`フォルダは通常`［Install Location］/WebSphere/AppServer/profiles/［your-profile］/liferay`です。
 
+<a name="configuring-websphere" />
+
 ## WebSphereの構成
+
+<a name="creating-a-websphere-profile" />
 
 ### WebSphereプロファイルの作成
 
@@ -61,6 +65,8 @@ WebSphereはプロファイルを作成し、プロファイルが正常に作�
 
 最後に、アプリケーションサーバーをシャットダウンします。
 
+<a name="configuring-the-websphere-application-server" />
+
 ### WebSphereアプリケーションサーバーの構成
 
 ```{warning}
@@ -75,6 +81,8 @@ com.ibm.ws.webcontainer.invokeFilterInitAtStartup = true
 ```
 
 WebSphereアプリケーションサーバーで`webcontainer`プロパティを設定するには、WebSphereの [ドキュメンテーション](http://www-01.ibm.com/support/docview.wss?rss=180&uid=swg21284395) の指示に従ってください。
+
+<a name="setting-up-jvm-parameters-for-liferay-dxp" />
 
 ### Liferay DXPのJVMパラメータの設定
 
@@ -128,6 +136,8 @@ Javaオプションとメモリ引数について以下に説明します。
 | `-XX:MaxMetaspaceSize` | 静的コンテンツ用の最大スペース。                                                       |
 | `-XX:SurvivorRatio`    | 新しいスペースとSurvivor領域の比率。 Survivor領域は、古い世代の領域に昇格する前に、若い世代のオブジェクトを保持します。   |
 
+<a name="removing-the-securesessioncookie-tag" />
+
 ### `secureSessionCookie`タグの削除
 
 同じプロファイルで、DXP起動エラーの原因となる可能性のある`secureSessionCookie`タグを削除します。 これは単なるデフォルト設定であることに注意してください。 DXPがインストールされたら、使用環境に基づいてWebSphereを適切に調整してください。
@@ -141,6 +151,8 @@ WSVR0501E: Error creating component com.ibm.ws.runtime.component.CompositionUnit
 com.ibm.ws.exception.RuntimeWarning: com.ibm.ws.webcontainer.exception.WebAppNotLoadedException: Failed to load webapp: Failed to load webapp: SRVE8111E: The application, LiferayEAR, is trying to modify a cookie which matches a pattern in the restricted programmatic session cookies list ［domain=*, name=JSESSIONID, path=/］.
 ```
 
+<a name="configuration-checkpoint" />
+
 ### 構成チェックポイント
 
 この時点で、次の手順が完了している必要があります。
@@ -151,6 +163,8 @@ com.ibm.ws.exception.RuntimeWarning: com.ibm.ws.webcontainer.exception.WebAppNot
 1. ファイルのエンコーディングとしてUTF-8が設定されている。
 1. サーバーのタイムゾーンがGMTに設定されている。
 1. `secureSessionCookie`タグが削除されている。
+
+<a name="installing-dependencies" />
 
 ## 依存関係のインストール
 
@@ -166,6 +180,8 @@ HypersonicデータベースはDXPにバンドルされており、テスト目�
 ```{note}
 DXP 7.3以前の場合は、依存関係のZIPファイルを解凍し、そのコンテンツをWebSphereアプリケーションサーバーの`[Install Location]/WebSphere/AppServer/lib/ext`フォルダに配置します。 データベースベンダーのJDBC JARファイルもこのフォルダに入れてください。
 ```
+
+<a name="installing-elasticsearch-archives" />
 
 ## Elasticsearchアーカイブのインストール
 
@@ -183,6 +199,8 @@ Liferay DXP 7.3を起動すると、デフォルトの[sidecar](../../../using-s
 
 Liferay DXPを起動すると、アーカイブがアンパッケージされてインストールされ、SidecarのElasticsearchサーバーが起動します。
 
+<a name="installing-the-dxp-portletjar" />
+
 ### DXP portlet.jarのインストール
 
 DXPの`portlet.jar`（バージョン3）は、バージョン2.0との下位互換性があります。 DXP 7.4 `.war`には`portlet.jar`が含まれており、以前のDXPバージョンの依存関係ZIPにも含まれています。 WebSphereの`portlet.jar`バージョン2.0をオーバーライドする必要があります。
@@ -195,6 +213,8 @@ DXPの`portlet.jar`（バージョン3）は、バージョン2.0との下位互
 
 1. 設定を保存します。
 
+<a name="ensuring-that-the-dxp-portletjar-is-loaded-first" />
+
 ### DXP Portlet.jarが最初に読み込まれるようにする
 
 DXPの`portlet.jar`をサーバーに関連付けられた共有ライブラリに配置することに加えて、`config.ini`ファイルを最初にロードされるように構成します。
@@ -203,6 +223,8 @@ DXPの`portlet.jar`をサーバーに関連付けられた共有ライブラリ�
 1. プロパティ`com.ibm.CORBA,com.ibm`を検索します。
 1. プロパティ`javax.portlet,javax.portlet.filter,javax.portlet.annotations`を`com.ibm.CORBA`の後、`com.ibm`の前に挿入します。
 1. ファイルを保存します。
+
+<a name="dependencies-checkpoint" />
 
 ### 依存関係チェックポイント
 
@@ -274,11 +296,15 @@ Liferayは、デモ目的でデフォルトでHSQLを使用しています。 HS
     jdbc.default.jndi.name=jdbc/LiferayPool
     ```
 
+<a name="mail-configuration" />
+
 ## メール設定
 
 DXPの組み込みメールセッションを使用する場合は、このセクションをスキップしてください。 DXPの組み込みメールセッションの使用方法については、 [メールの構成](../../setting-up-liferay/configuring-mail.md) の記事をご覧ください。
 
 WebSphereを使用してメールセッションを管理する場合は、次の手順に従います。
+
+<a name="creating-a-websphere-managed-mail-session" />
 
 ### WebSphere管理のメールセッションの作成
 
@@ -299,6 +325,8 @@ WebSphereを使用してメールセッションを管理する場合は、次�
     ```
 
 メールサーバーからSSL証明書を取得し、それをWebSphereのトラストストアに追加する必要がある場合があることに注意してください。 この手順については、WebSphereのドキュメントを参照してください。
+
+<a name="verifying-websphere-mail-provider" />
 
 ### WebSphereメールプロバイダーの検証
 
@@ -321,6 +349,8 @@ User 0 is not allowed to access URL http://localhost:9081/web/guest/home and por
 1. ［**Restrict cookies to HTTPS sessions**］ の選択を解除します。
 1. ［**Apply**］ をクリックします。
 1. ［**保存**］ をクリックします。
+
+<a name="deploying-dxp" />
 
 ## DXPのデプロイ
 
@@ -356,6 +386,8 @@ DXPでは、JSPをJava 8バイトコード形式にコンパイルする必要�
 
 DXP `.war`は、`ibm-web-ext.xmi`ファイルにあらかじめパッケージ化されていることに注意してください。この形式は機能的に`.xml`と同じで、WebSphereは両方の形式を認識します。 WebSphereによるJSPのコンパイル方法に関する一般的な情報については、IBMの [WebSphere Application Server 9.0.0.x](https://www.ibm.com/support/knowledgecenter/en/SSEQTP_9.0.0/com.ibm.websphere.base.doc/ae/rweb_jspengine.html) の公式ドキュメントを参照してください。
 
+<a name="starting-dxp" />
+
 ## DXPの開始
 
 1. [セットアップウィザード](../running-liferay-for-the-first-time.md)を使用する場合は、次の手順にスキップしてください。 ただし、WebSphereのデータソースとメールセッションを使用していて、セットアップウィザードをバイパスする場合は、`portal-ext.properties`ファイルで次のポータルプロパティを設定します。
@@ -383,6 +415,8 @@ DXPをデプロイした後、`PhaseOptimizer`に関連する以下のような�
 Liferay DXP Enterpriseサブスクリプションをお持ちの場合、DXPはアクティベーションキーを要求します。 詳細は、 [Liferay DXPのアクティブ化](../../setting-up-liferay/activating-liferay-dxp.md) を参照してください。
 
 　 Liferay DXPをWebSphereで実行しています。
+
+<a name="next-steps" />
 
 ## 次のステップ
 

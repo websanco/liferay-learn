@@ -14,6 +14,8 @@ Liferay DXPは、メールサーバーを使用して、ユーザー登録とパ
 カテゴリのメーリングリストにIMAP<https://support.google.com/mail/answer/7126229?hl=en>プロトコルを使用している場合は、メーリングリストのユーザーにメッセージを送信するメールクライアントによってメッセージがプルされたときにメッセージが削除されるようにIMAP受信トレイを設定<https://support.google.com/mail/answer/78892?hl=en>してください。 そうしないと、サーバーに保持されている各電子メールメッセージは、カテゴリに新しい投稿や更新があるたびにメーリングリストに送信されます。
 ```
 
+<a name="configuring-the-built-in-mail-session" />
+
 ## DXP組み込みメールセッションの構成
 
 コントロールパネルからメールセッションを構成するには、次の手順に従います。
@@ -40,6 +42,8 @@ Liferay DXPは、メールサーバーを使用して、ユーザー登録とパ
 
 DXPがすぐにメールセッションに接続します。
 
+<a name="mail-configuration-reference" />
+
 ## メール構成リファレンス
 
 | フィールド                                                                               | 説明                                                                                            |
@@ -55,6 +59,8 @@ DXPがすぐにメールセッションに接続します。
 | User Name                                                                           | DXPがSMTPサーバーへのログインに使用するユーザーID。                                                                |
 | パスワード                                                                               | DXPがSMTPサーバーへのログインに使用するパスワード。                                                                 |
 | Manually specify additional JavaMail properties to override the above configuration | このフィールドは、追加のJavaMail設定用です。                                                                    |
+
+<a name="additional-information" />
 
 ## 追加情報
 

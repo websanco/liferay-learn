@@ -40,6 +40,8 @@ setting-up-liferay/tuning-your-jvm.md
 
 上記の各タスクは、以下の説明にリンクしており、該当する記事への参照も含まれています。 最初のタスクは、本番用のLiferayインスタンスには不可欠です。 お使いのシステムに適用される **その他のセットアップタスク** を調べてください。 タスクを完了するときは、必ず上記のチェックリストを見直すようにしてください。
 
+<a name="activate-liferay" />
+
 ## Liferayの起動
 
 `サブスクライバー`
@@ -48,11 +50,15 @@ Liferay DXPを使用している場合は、[アクティベーションキー](
 
 <a name="localize-your-instance" />
 
+<a name="configure-your-instance" />
+
 ## インスタンスの設定
 
 バーチャルインスタンスの基本的な外観、連絡先情報、利用規約、ランディングページやログアウトページなどの必須ページを設定します。 [インスタンス設定](../system-administration/configuring-liferay/virtual-instances/instance-configuration.md) explains how to do it all.
 
 <a name="configure-mail" />
+
+<a name="localize-your-instance" />
 
 ## インスタンスのローカライズ
 
@@ -60,11 +66,15 @@ Liferay DXPを使用している場合は、[アクティベーションキー](
 
 <a name="configure-users" />
 
+<a name="configure-mail" />
+
 ## メールの設定
 
 [Set up a mail server](./setting-up-liferay/configuring-mail/connecting-to-a-mail-server.md) to communicate with Users. Then configure your [email settings](../system-administration/configuring-liferay/virtual-instances/email-settings.md), including your email sender and message templates for email verifications, password resets, and password changes.
 
 <a name="configure-file-storage" />
+
+<a name="configure-users" />
 
 ## ユーザーの設定
 
@@ -80,13 +90,15 @@ Liferay DXPを使用している場合は、[アクティベーションキー](
 
 <a name="install-a-search-engine" />
 
+<a name="configure-file-storage" />
+
 ## ファイルストレージの設定
 
 [ドキュメントとメディア](../content-authoring-and-management/documents-and-media/documents-and-media-overview.md)、添付ファイルおよびコンテンツへの画像の埋め込みを使用するには、ファイルストレージが必要です。  設定するには、[ファイルストレージ](../system-administration/file-storage/configuring-file-storage.md)にアクセスします。
 
 ファイルストレージを設定した後、ウイルス対策のファイルスキャンを有効にすることを検討してください。 方法については、 [アップロードされたファイルのウイルス対策スキャンを有効にする](../system-administration/file-storage/enabling-antivirus-scanning-for-uploaded-files.md) を参照してください。
 
-<a name="secure-liferay" />
+<a name="install-a-search-engine" />
 
 ## 検索エンジンのインストール
 
@@ -94,11 +106,15 @@ Liferay DXPを使用している場合は、[アクティベーションキー](
 
 <a name="configure-backups" />
 
+<a name="secure-liferay" />
+
 ## Liferayの保護
 
 Liferayを保護することはとても重要です。 詳しくは、[Securing Liferay](./securing-liferay/securing-liferay.md)をご覧ください。
 
 <a name="other-setup-tasks" />
+
+<a name="configure-backups" />
 
 ## バックアップの設定
 
@@ -106,11 +122,15 @@ Liferayを保護することはとても重要です。 詳しくは、[Securing
 
 <a name="install-apps-from-marketplace" />
 
+<a name="other-setup-tasks" />
+
 ## その他のセットアップ作業
 
 上記のようなタスクは、一般的に（必ずしもそうではありませんが）最初に完了します。 状況に応じて、次のタスクを適宜実行する必要があります。
 
 <a name="configure-roles-and-permissions" />
+
+<a name="install-apps-from-marketplace" />
 
 ## マーケットプレイスからアプリをインストールする
 
@@ -118,11 +138,15 @@ Liferayを保護することはとても重要です。 詳しくは、[Securing
 
 <a name="add-custom-fields" />
 
+<a name="configure-roles-and-permissions" />
+
 ## ロールと権限の設定
 
 [ロール](../users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.md)を使用して、すべてのユーザーを分類します。 インスタンスとサイトでユーザーが実行するアクティビティの[権限](../users-and-permissions/roles-and-permissions/defining-role-permissions.md)を定義します。
 
 <a name="integrate-with-existing-systems" />
+
+<a name="add-custom-fields" />
 
 ## カスタムフィールドの追加
 
@@ -130,17 +154,21 @@ Liferayを保護することはとても重要です。 詳しくは、[Securing
 
 <a name="configure-media-file-previews" />
 
+<a name="integrate-with-existing-systems" />
+
 ## 既存のシステムとの統合
 
 Liferayはいくつかの他のシステムと統合することができます。 例えば、LDAPなどのディレクトリを使用している場合、そこからユーザーをインポートすることができます。 プロセスについては、 [LDAPディレクトリへの接続](../users-and-permissions/connecting-to-a-user-directory/connecting-to-an-ldap-directory.md) で説明しています。 必要な場合は、このサイトで統合について検索してください。
 
 <a name="configure-a-cdn" />
 
+<a name="configure-media-file-previews" />
+
 ## メディアファイルのプレビュー設定
 
 サイト内の画像、動画、音声ファイルの外部サービスを設定します。 方法については、 [外部サービスの構成](../system-administration/using-the-server-administration-panel/configuring-external-services.md) を参照してください。
 
-<a name="configure-high-availability" />
+<a name="configure-a-cdn" />
 
 ## CDNの設定
 
@@ -148,17 +176,23 @@ Liferayはいくつかの他のシステムと統合することができます�
 
 <a name="tune-liferay" />
 
+<a name="configure-high-availability" />
+
 ## 高可用性の設定
 
 サイトのダウンタイムをなくす、あるいは最小限に抑える必要があります。 サーバーが故障したり、メンテナンスのために停止する必要がある場合、リクエストを処理するために他のサーバーを用意することが重要です。 Liferay、検索エンジン、その他のコンポーネントに複数のサーバーを構成することで、サイトの可用性を最大限に高めることができます。 サーバーをクラスター化する方法については、 [高可用性のクラスタリング](./setting-up-liferay/clustering-for-high-availability.md) をご覧ください。
 
 <a name="whats-next" />
 
+<a name="tune-liferay" />
+
 ## Liferayの調整
 
 LiferayのJVM、接続プールなどを最適なパフォーマンスに調整します。 詳細については、 [Liferayの調整](./setting-up-liferay/tuning-liferay.md) および [JVMの調整](./setting-up-liferay/tuning-your-jvm.md) を参照してください。
 
 <a name="次のステップ" />
+
+<a name="whats-next" />
 
 ## 次のステップ
 

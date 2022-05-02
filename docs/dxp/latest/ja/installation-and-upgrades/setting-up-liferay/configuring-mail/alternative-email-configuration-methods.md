@@ -4,6 +4,8 @@
 
 <a name="configuring-the-built-in-mail-session-using-portal-properties" />
 
+<a name="configuring-the-built-in-mail-session-using-portal-properties" />
+
 ## ポータルプロパティを使用した組み込みメールセッションの構成
 
 オフラインで、またはDXPをデプロイする前にメールセッションを構成するには：

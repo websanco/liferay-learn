@@ -18,6 +18,8 @@ IPアドレスチェッカーは、Liferay DXPが内部ネットワークから�
 
 **許可するIPアドレスとネットワークマスク** : 許可されたIPアドレス範囲とネットワークマスクを追加します。 デフォルトは`127.0.0.1/255.0.0.0、::1/128, 10.0.0.0/8、172.16.0.0/12、192.168.0.0/16、fc00::/7`です。
 
+<a name="time-based-one-time-password-mfa-checker" />
+
 ## タイムベースワンタイムパスワードMFAチェッカー
 
 タイムベースワンタイムパスワードチェッカーは、 [Google App Authenticator](https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2) をベースにした追加のチェッカーを提供するものです。

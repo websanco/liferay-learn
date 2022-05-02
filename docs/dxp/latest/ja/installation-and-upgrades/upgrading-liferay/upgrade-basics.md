@@ -26,6 +26,8 @@ Liferayのツールや説明書は、DXPやポータルCE環境を安全かつ�
   - [アップグレードパフォーマンスの向上](#improving-upgrade-performance)
   - [データベースのアップグレードの実行](#executing-the-database-upgrade)
 
+<a name="preparation-and-planning" />
+
 ## 準備と計画
 
 準備と計画は、小規模でカジュアルなインストールではあまり重要でない場合がありますが、大規模なエンタープライズレベルのインストールでは **必須** です。
@@ -65,9 +67,13 @@ Liferayデータベースをアップグレードする前に、マーケット�
 
 データベースをアップグレードした後、新しいLiferayインスタンスの最新のアプリバージョンをインストールします。
 
+<a name="upgrading-custom-development" />
+
 ## カスタム開発のアップグレード
 
 開発したプラグイン（テーマ、アプリ、カスタマイゼーションなど）は、新しいLiferayバージョンに適合させる必要があります。 これは、依存関係の更新と同じくらい簡単な場合もあれば、APIの変更に合わせたコードの更新が必要な場合もあります。 カスタムプラグインの更新をしないと、新しいLiferayバージョンで無効になる場合があります。 [カスタム開発のアップグレード](./upgrading-custom-development.md) では、コードのアップグレードのプロセスを説明しています。
+
+<a name="migrating-and-updating-configurations-and-infrastructure" />
 
 ## 構成とインフラストラクチャの移行と更新
 
@@ -78,6 +84,8 @@ Liferayデータベースをアップグレードする前に、マーケット�
 ```
 
 データベースのアップグレードが完了してから、他の設定を更新します。 詳細は、[構成とプロパティの移行](./migrating-configurations-and-properties.md)を参照してください。
+
+<a name="improving-upgrade-performance" />
 
 ## アップグレードパフォーマンスの向上
 
@@ -91,6 +99,8 @@ Liferayサーバーに不要なインスタンス、サイト、ページ、ま�
 
 アップグレード操作（本番環境よりもデータ書き込みが多い）用にデータベースを調整すると、データベースのアップグレードパフォーマンスが向上します。 詳細は、[アップグレードのためのデータベース調整](./upgrade-stability-and-performance/database-tuning-for-upgrades.md)を参照してください。
 
+<a name="executing-the-database-upgrade" />
+
 ## データベースのアップグレードの実行
 
 Liferayデータベースをアップグレードするには、2つの方法があります。
@@ -98,6 +108,8 @@ Liferayデータベースをアップグレードするには、2つの方法が
   - [Dockerによるアップグレード](./upgrade-basics/upgrading-via-docker.md)では、Dockerイメージを起動するためのコマンドに自動アップグレードパラメータを渡します。 イメージはデータベースを更新し、アップグレードされたデータベースを使用して起動します。
 
   - [データベースアップグレードツールの使用](./upgrade-basics/using-the-database-upgrade-tool.md) 。 アップグレードツールは、Liferayインスタンスから切り離された状態でLiferayデータベースを更新するためのクライアントプログラムです。 これにより、アップグレードプロセスに重点が置かれ、アップグレード操作のための[データベースの調整](./upgrade-stability-and-performance/database-tuning-for-upgrades.md)、[不要なデータの削除](./upgrade-stability-and-performance/database-pruning-for-faster-upgrades.md)が容易になり、データベースのアップグレードが迅速化されます。
+
+<a name="conclusion" />
 
 ## まとめ
 

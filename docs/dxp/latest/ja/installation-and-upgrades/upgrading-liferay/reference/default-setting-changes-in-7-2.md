@@ -34,6 +34,8 @@ Liferayのほとんどの新しいバージョンには、デフォルト設定�
 | com.liferay.portal.servlet.filters.strip.StripFilter          | true                                                                                              | false                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | login.create.account.allow.custom.password                    | false                                                                                             | true                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 
+<a name="default-settings-changed-in-71" />
+
 ## 7.1で変更されたデフォルト設定
 
 | **ポータルプロパティ** | **7.0のデフォルト** | **7.1のデフォルト** |
@@ -62,6 +64,8 @@ Liferayのほとんどの新しいバージョンには、デフォルト設定�
 | com.liferay.portal.servlet.filters.jsoncontenttype.JSONContentTypeFilter                        | true                                                                                       | false                                                                                                                                          |
 | dl.entry.columns                                                                                | [値](https://docs.liferay.com/ce/portal/7.0-latest/propertiesdoc/portal.properties.html) を参照 | document-typeを追加                                                                                                                               |
 | ratings.upgrade.thumbs.class.names                                                              | [値](https://docs.liferay.com/ce/portal/7.0-latest/propertiesdoc/portal.properties.html) を参照 | 値の`com.liferay.message.boards.kernel.model.*`を`com.liferay.message.boards.model.*`に置き換え                                                        |
+
+<a name="default-settings-changed-in-70" />
 
 ## 7.0で変更されたデフォルト設定
 
@@ -144,6 +148,8 @@ Liferayのほとんどの新しいバージョンには、デフォルト設定�
 | 評価タグライブラリ                                                             | [値](https://docs.liferay.com/ce/portal/6.2-sp17/propertiesdoc/portal.properties.html) を参照 | [値](https://docs.liferay.com/ce/portal/7.0-latest/propertiesdoc/portal.properties.html) を参照                                                                                                                                                                                                                                                                                                       |
 
 最新の [ポータルプロパティリファレンス](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html) では、プロパティの詳細と例を提供しています。 多くのプロパティがOSGi構成に置き換えられています。これらの構成には、[システム設定](../../../system-administration/configuring-liferay/system-settings.md)のUIからアクセスできます。
+
+<a name="additional-information" />
 
 ## 追加情報
 

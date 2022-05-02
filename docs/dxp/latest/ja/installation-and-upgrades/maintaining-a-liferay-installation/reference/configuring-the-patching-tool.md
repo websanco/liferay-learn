@@ -13,6 +13,8 @@
 
 <a name="automatic-configuration-using-auto-discovery" />
 
+<a name="automatic-configuration-using-auto-discovery" />
+
 ## `自動検出を使用した自動構成`
 
 Patching Toolの `auto-discovery` コマンドは、DXPファイルをスキャンし、パッチに使用するプロパティファイルにそれらのパスを書き込みます。
@@ -60,6 +62,8 @@ Liferay Homeへの間違ったパスを指定した場合、またはLiferay Hom
 
 <a name="testing-the-configuration" />
 
+<a name="testing-the-configuration" />
+
 ## 構成のテスト
 
 パッチツールが設定されている場合、 `info` コマンドを実行すると、次のようなすべての製品情報とパッチ情報が報告されます。
@@ -86,6 +90,8 @@ Product information:
 
 パッチツールプロパティファイルを編集します。 `auto-discovery` コマンドは、デフォルトで `default.properties` ファイルを作成するか、指定したファイル（例： [Patching Profile](#using-patching-profiles) ）を作成します。
 
+<a name="general-properties" />
+
 ### 一般的なプロパティ
 
 | プロパティ                               | 説明                                                                                                                                                                  |
@@ -101,6 +107,8 @@ Product information:
 | `patching.mode`                     | パッチには、更新されたバイナリファイルとソースファイルが含まれています。 モードは、適用するファイルタイプを決定します。<br><br>\ **` binary ` （デフォルト）：DXPインストールの更新用。<br>\** ` source `：DXPを拡張するソースツリーの更新用。 |
 | `source.path` （`source` モードのみ）      | DXPソースツリーの場所を指定します。                                                                                                                                                 |
 | `war.path`                          | DXP Webアプリケーションへのパス（展開されたフォルダー構造または `.war` ファイルへのパス）を指定します。                                                                                                         |
+
+<a name="proxy-settings" />
 
 ### プロキシ設定
 

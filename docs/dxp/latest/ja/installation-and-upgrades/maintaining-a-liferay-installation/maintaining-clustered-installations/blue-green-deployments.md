@@ -19,6 +19,8 @@
 * [BlueGreenDeployment](http://martinfowler.com/bliki/BlueGreenDeployment.html)
 * [Implementing Blue-Green Deployments with AWS](https://www.thoughtworks.com/insights/blog/implementing-blue-green-deployments-aws)
 
+<a name="additional-information" />
+
 ## 追加情報
 
 * [Rolling Restarts](./rolling-restarts.md)

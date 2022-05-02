@@ -44,6 +44,8 @@ Incompatible setting for: company.security.auth.type
 
 [**保存**] をクリックして、トークンベースのSSOをアクティブにしてください。
 
+<a name="required-siteminder-configuration" />
+
 ## 必要なSiteMinder構成
 
 SiteMinderを使用する場合は、Liferay PortalのURLにチルダ文字が使用される場合があることに注意してください。 デフォルトでは、SiteMinderはチルダ文字（およびその他）を不正な文字として扱い、それらを含むURLを処理するとHTTP 500エラーを返します。 この問題を回避するには、SiteMinder構成でこのデフォルト設定を次のように変更します。
@@ -51,6 +53,8 @@ SiteMinderを使用する場合は、Liferay PortalのURLにチルダ文字が�
     BadUrlChars       //,./,/.,/ **,** .,\,%00-%1f,%7f-%ff,%25
 
 上記の設定は、`~`文字を除いてデフォルトと同じです。 SiteMinderを再起動して、構成のアップデートを有効にします。 詳細については、SiteMinderの [ドキュメント](https://techdocs.broadcom.com/us/product-content/recommended-reading/technical-document-index/ca-siteminder-informational-documentation-index.html) を参照してください。
+
+<a name="summary" />
 
 ## まとめ
 

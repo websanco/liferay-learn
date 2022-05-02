@@ -28,6 +28,8 @@
 4. **Tomcat起動：** Catalinaスクリプトを使用してTomcatを起動します。
 5. **シャットダウン後：**[Tomcatの停止後にユーザー指定のスクリプトを実行します](./running-scripts-in-containers.md)。
 
+<a name="api" />
+
 ## API
 
 コンテナエントリポイントは、次のコンテナフォルダでファイルをスキャンし、それらのファイルを使用して、コンテナ、Tomcat、Liferayを設定し、Liferayで動作します。
@@ -48,11 +50,15 @@
 * [起動前段階のAPI](#pre-startup-phase-api)
 * [シャットダウン後段階のAPI](#post-shutdown-phase-api)
 
+<a name="pre-configure-phase-api" />
+
 ### 事前設定フェーズAPI
 
 | ファイルの場所                                    | 操作                  | ユースケース                                                |
 |:------------------------------------------ |:------------------- |:----------------------------------------------------- |
 | `/usr/local/liferay/scripts/pre-configure` | スクリプトをアルファベット順に実行する | [設定段階前のスクリプト](./running-scripts-in-containers.md) の実行 |
+
+<a name="configure-phase-api" />
 
 ### 設定段階のAPI
 
@@ -63,11 +69,15 @@
 | `/mnt/liferay/deploy`   | Liferay起動時にアーティファクトを自動展開するために、 `/mnt/liferay/deploy` を `/opt/ liferay/deploy` にシンボリックリンクします。<br><br>実行時、`/mnt/liferay/deploy`、 `/opt/liferay/deploy`、またはいずれかのフォルダに取り付けられたフォルダにコピーされたアーティファクトを自動デプロイします。<br><br>注：自動デプロイされたアーティファクトは、 `/opt/liferay/osgi`下の適切なフォルダに移動されます。 | [コンテナへのアプリやその他のアーティファクトのインストール](./installing-apps-and-other-artifacts-to-containers.md)                        |
 | `/mnt/liferay/patching` | パッチツールが提供されている場合は、それをインストールします。 提供されているパッチをインストールします。                                                                                                                                                                                                                                             | [DockerでDXPにパッチを適用する](./patching-dxp-in-docker.md)                                                             |
 
+<a name="pre-startup-phase-api" />
+
 ### 起動前フェーズAPI
 
 | ファイルの場所                                  | 操作                  | ユースケース                                                      |
 |:---------------------------------------- |:------------------- |:----------------------------------------------------------- |
 | `/usr/local/liferay/scripts/pre-startup` | スクリプトをアルファベット順に実行する | [Tomcatを開始する前にスクリプトを実行](./running-scripts-in-containers.md) |
+
+<a name="post-shutdown-phase-api" />
 
 ### シャットダウン後フェーズAPI
 

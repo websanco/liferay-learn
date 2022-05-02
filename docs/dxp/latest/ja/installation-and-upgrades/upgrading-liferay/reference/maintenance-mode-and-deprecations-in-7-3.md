@@ -71,6 +71,8 @@
   - [7.1の非推奨事項](https://help.liferay.com/hc/ja/articles/360018403151-Digital-Experience-Platform-7-1-Deprecated-and-Removed-Items)
   - [7.0の非推奨事項](https://help.liferay.com/hc/ja/articles/360018123832-Digital-Experience-Platform-7-0-Deprecated-and-Removed-Items)
 
+<a name="features-moved-to-maintenance-mode-in-73" />
+
 ## 7.3でメンテナンスモードに移行された機能
 
 7.3でメンテナンスモードに移行した機能は次のとおりです。
@@ -80,6 +82,8 @@
 * Liferayモバイルエクスペリエンス：モバイルSDK、プッシュ
 * Liferayレポート
 * サイトテンプレート
+
+<a name="additional-information" />
 
 <a name="additional-information" />
 

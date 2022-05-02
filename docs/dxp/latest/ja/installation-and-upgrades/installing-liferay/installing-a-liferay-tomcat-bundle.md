@@ -18,6 +18,8 @@ Liferay DXPにはJava JDK 8または11が必要です。 JDKの選択には [互
 
 <a name="download" />
 
+<a name="download" />
+
 ## DXPをダウンロードする
 
 1.  [ヘルプセンター](https://help.liferay.com/hc) （サブスクリプション）または [コミュニティダウンロード](https://www.liferay.com/downloads-community) にアクセスします。
@@ -38,6 +40,8 @@ Liferay DXPにはJava JDK 8または11が必要です。 JDKの選択には [互
 バンドルをDXPホスト上の場所に展開します。 この場所は、 [Liferay Home](../reference/liferay-home.md) と呼ばれます。
 
 　 Liferay DXPをインストールしました。 次にデータベースを設定します。
+
+<a name="next-steps" />
 
 <a name="next-steps" />
 

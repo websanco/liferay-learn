@@ -11,6 +11,8 @@ Liferay DXP7.0でファイルストアオプションと設定値が変更され
 
 次のセクションでは、ファイルストアを更新する方法について説明します。
 
+<a name="updating-the-store-implementation-class-name" />
+
 ## ストア実装クラス名の更新
 
 ストア実装クラスのパッケージ名が、Liferay Portal 6.2の`com.liferay.portlet.documentlibrary.store.*`からDXP 7.0の`com.liferay.portal.store.*`に変更されました。 次のいずれかの方法で、[`portal-ext.properties`](../../reference/portal-properties.md) の `dl.store.impl`プロパティを設定してください。
@@ -22,13 +24,19 @@ dl.store.impl=com.liferay.portal.store.file.system.AdvancedFileSystemStore
 dl.store.impl=com.liferay.portal.store.s3.S3Store
 ```
 
+<a name="migrating-from-jcr-store" />
+
 ## JCR Storeからの移行
 
 JCR StoreはDXP 7.0で非推奨になりました。 他のストアオプションについては、[ファイルストレージ](../../../system-administration/file-storage.md)のドキュメンテーションで説明しています。 データベースをアップグレードする前に、[サポートされているファイルストアに移行](../../../system-administration/file-storage/file-store-migration.md)してください。
 
+<a name="migrating-from-cmis-store" />
+
 ## CMIS Storeからの移行
 
 CMISストアは7.0.10フィックスパック14で非推奨になり、DXP 7.2で削除されました。 他のストアオプションについては、[ファイルストレージ](../../../system-administration/file-storage.md)のドキュメンテーションで説明しています。 データベースをアップグレードする前に、[サポートされているファイルストアに移行](../../../system-administration/file-storage/file-store-migration.md)してください。
+
+<a name="configuring-the-file-store-in-system-settings" />
 
 ## システム設定でファイルストアを構成する
 

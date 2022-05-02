@@ -2,6 +2,8 @@
 
 JBoss EAPにインストールするには、DXP WARのインストール、依存関係のインストール、JBossの設定、およびJBossへのDXPのデプロイが必要です。 データベースとメールサーバーの接続も設定する必要があります。
 
+<a name="prerequisites" />
+
 ## 前提条件
 
 Liferay DXPにはJava JDK 8または11が必要です。 詳細は、 [互換性マトリクス](https://help.liferay.com/hc/ja/articles/360049238151) を参照してください。
@@ -18,10 +20,14 @@ Liferay DXPにはJava JDK 8または11が必要です。 詳細は、 [互換性
 
 `$JBOSS_HOME`：JBossサーバーフォルダー。 通常、`jboss-eap-[version]`という名前です。
 
+<a name="installing-the-dxp-war" />
+
 ## DXP WARのインストール
 
 1. クリーンなJBossインストールを開始していて、`$JBOSS_HOME/standalone/deployments/ROOT.war`フォルダが存在する場合は、そのすべてのサブフォルダとファイルを削除します。
 1. DXP WARファイルを`$JBOSS_HOME/standalone/deployments/ROOT.war`フォルダに解凍します（このフォルダが存在しない場合は作成します）。
+
+<a name="installing-dependencies" />
 
 ## 依存関係のインストール
 
@@ -33,6 +39,8 @@ Liferay DXPにはJava JDK 8または11が必要です。 詳細は、 [互換性
 ```{note}
 DXPには、テスト目的に役立つHypersonicデータベースが含まれています。 本番環境インスタンスにはHSQLを**使用しないでください**。
 ```
+
+<a name="install-dependencies-for-earlier-versions" />
 
 ### 以前のバージョンの依存関係をインストールする
 
@@ -67,6 +75,8 @@ DXP 7.3以前の場合は、次の追加手順に従います。
     ```xml
     <resource-root path="com.liferay.petra.concurrent.jar" />
     ```
+
+<a name="running-dxp-on-jboss-eap-in-standalone-mode-vs-domain-mode" />
 
 ## スタンドアロンモードとドメインモードのJBoss EAPでのDXPの実行
 
@@ -214,6 +224,8 @@ Javaオプションとメモリ引数について以下に説明します。
 DXPのインストール後、これらの構成（これらのJVMオプションを含む）をさらに調整して、パフォーマンスを向上させることができます。 詳細については、 [Liferayの調整](../../setting-up-liferay/tuning-liferay.md) および [JVMの調整](../../setting-up-liferay/tuning-your-jvm.md) を参照してください。
 ```
 
+<a name="using-the-ibm-jdk" />
+
 ### IBM JDKの使用
 
 JBossサーバーでIBM JDKを使用する場合は、以下の追加手順を実行します。
@@ -231,6 +243,8 @@ JBossサーバーでIBM JDKを使用する場合は、以下の追加手順を�
 `</pre>
 
 追加されたパスは、ポータルのデプロイメントの例外と画像のアップロードの問題を解決します。
+
+<a name="connect-to-a-database" />
 
 ## データベースに接続する
 
@@ -352,6 +366,8 @@ current AST contains: [ES3 keywords as identifiers, getters, reserved words as p
 Liferay DXP Enterpriseサブスクリプションをお持ちの場合、DXPはアクティベーションキーを要求します。 詳細は、 [Liferay DXPのアクティブ化](../../setting-up-liferay/activating-liferay-dxp.md) を参照してください。
 
 　 DXPはJBoss EAPで実行されています。
+
+<a name="next-steps" />
 
 ## 次のステップ
 

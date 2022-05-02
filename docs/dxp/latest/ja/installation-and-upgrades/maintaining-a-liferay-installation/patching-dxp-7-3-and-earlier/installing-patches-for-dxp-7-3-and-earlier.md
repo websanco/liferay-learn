@@ -20,6 +20,8 @@ DXPをDockerコンテナで動作させている場合は、[Patching DXP in Doc
 
 DXPバンドルにパッチを適用する場合は、以下の基本的なパッチ適用手順に進んでください。 アプリケーションサーバーでDXPにパッチを適用する場合は、パッチを適用する手順を実行する **前** に、 [追加の準備を行ってください](#preparing-to-patch-dxp-on-an-application-server) 。
 
+<a name="patching-steps" />
+
 ## パッチ適用手順
 
 1. パッチを `patching-tool/patches` フォルダーにダウンロードします---パッチを解凍しないでください。
@@ -142,6 +144,8 @@ DXPバンドルにパッチを適用する場合は、以下の基本的なパ�
 ```{note}
 パッチがインストールされない場合、または発生したエラーを解決できない場合は、 [Help Center ticket](https://help.liferay.com/hc/) を開き、`./patching-tool.sh info > output.txt` を実行し、`output.txt`ファイルをチケットに添付して、パッチツールの完全な`info`出力を提供してください。
 ````
+
+<a name="preparing-to-patch-dxp-on-an-application-server" />
 
 ## アプリケーションサーバーのDXPにパッチを適用する準備
 

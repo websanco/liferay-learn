@@ -8,6 +8,8 @@ OpenID Connectは、ユーザーが他のシステムにあるアカウントを
 
 OpenID ConnectのトークンフローはOAuth 2.0の機能の上に構築されているため、OAuth 2.0に似ています。 OAuth 2.0は認証プロトコルにすぎないため、特定のAPIへのアクセスを許可する **アクセストークン** を送信します。 OpenID Connectは、ユーザーが認証され、権限を付与されている場合に、 **名前** や **電子メール** などのユーザー情報を渡す **IDトークン** をこれに追加します。
 
+<a name="creating-a-client-in-openid-connect-provider" />
+
 ## OpenID Connectプロバイダーでクライアントを作成する
 
 OpenID Connectを使用するには、まずプロバイダーにクライアントとして登録する必要があります。 これはOAuth 2.0クライアントです。 プロセスはプロバイダーによって異なります。
@@ -96,6 +98,8 @@ com.liferay.portal.security.sso.openid.connect.internal.configuration.OpenIdConn
 ```
 
 ここで、`［name］`には、`provider1`などの一意の名前を入力します。
+
+<a name="enabling-openid-connect-authentication" />
 
 <a name="enabling-openid-connect-authentication" />
 

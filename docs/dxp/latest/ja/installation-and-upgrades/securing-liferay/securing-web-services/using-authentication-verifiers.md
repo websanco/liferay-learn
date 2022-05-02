@@ -21,11 +21,15 @@ Authentication Verifierを設定するには、 [**Control Panel**] → [**Confi
 
 ![Authentication Verifierの設定画面](./using-authentication-verifiers/images/01.png)
 
+<a name="step-1-verify-request-credentials" />
+
 ### ステップ1：リクエストの認証情報を確認する
 
 このレイヤは、Chain of Responsibilityの設計パターンを使用して、組み込みおよびサードパーティの`AuthVerifier`実装の両方をサポートしています。 各`AuthVerifier`は、マップされたURLやその他のプロパティを指定する構成を提供できます。
 
 各着信要求は、登録済みのすべての`AuthVerifier`と照合され、要求の処理に使用される`AuthVerifier`の最終リストが選択されます。 受信要求の認証情報を確認するのは、各`AuthVerifier`の責任です。
+
+<a name="step-2-create-an-authorization-context" />
 
 ### ステップ2：承認コンテキストを作成する
 
@@ -51,17 +55,23 @@ Authentication Verifierを設定するには、 [**Control Panel**] → [**Confi
 
 > *デフォルトで有効になっており、追加の設定不要でリモートAPIにアクセスするために使用できます。
 
+<a name="basic-auth-header" />
+
 ### 基本認証ヘッダー
 
 このAuth Verifierにより、リモートクライアントは [HTTP基本認証](https://en.wikipedia.org/wiki/Basic_access_authentication) を使用して認証できます。 この方法で認証する必要のあるURLパスを指定して設定します。 [**Force Basic Authentication**] フィールドがオンになっている場合は、HTTP基本認証が必要です。
 
 WebサービスのデフォルトのURLは`/api/*,/xmlrpc*`です。 このマッピングでは、`TunnelServlet`へのアクセスを防ぐために`/api/liferay*`を除外しています。 詳細については、「トンネルAuthentication Verifier」をご覧ください。
 
+<a name="digest-auth-header" />
+
 ### ダイジェスト認証ヘッダー
 
 このAuth Verifierにより、リモートクライアントは [HTTPダイジェスト認証](https://en.wikipedia.org/wiki/Digest_access_authentication) を使用して認証できます。 この方法で認証する必要のあるURLパスを指定して設定します。 [Force Digest Authentication]フィールドがオンになっている場合は、HTTP基本認証が必要です。
 
 このAuth Verifierはデフォルトでは有効になっていません。
+
+<a name="http-tunnel-extender" />
 
 ### HTTPトンネルエクステンダー
 
@@ -71,6 +81,8 @@ Liferayではモジュール性を採用したため、このエクステンダ�
 
 これはリモートAPIをエクスポートする方法としてはお勧めできません。JAX-RSまたはLiferay JSON Web Serviceテクノロジーを使用してリモートサービスを公開する方がはるかに優れています。
 
+<a name="image-request-authentication-verifier" />
+
 ### 画像リクエストAuthentication Verifier
 
 LibreOffice/OpenOfficeに接続している場合、Officeプロセスは、画像を含むドキュメントをレンダリングするためにLiferay Portalから画像をダウンロードする必要があります。 これを行うには、画像に安全にアクセスするための [JWTトークン](https://jwt.io) を作成します。
@@ -79,17 +91,23 @@ LibreOffice/OpenOfficeに接続している場合、Officeプロセスは、画�
 
 このAuth Verifierはデフォルトでは有効になっていません。
 
+<a name="portal-sessions-auth-verifiers" />
+
 ### ポータルセッションAuth Verifier
 
 ブラウザのJavaScriptが、既存のポータルセッションを使用してLiferay JSON Webサービスにアクセスできるようにします。
 
 デフォルトの構成では、URLに含まれるフィールドは、レガシーJSONリモートサービスレイヤー`/api/json*,/api/jsonws*,/c/portal/json_service*`へのアクセスを保護します。
 
+<a name="request-parameter-auth-verifiers" />
+
 ### リクエストパラメータAuth Verifier
 
 `RequestParameterAutoLogin`との下位互換性のために、HTTP要求パラメーター`parameterAutoLoginLogin`および`parameterAutoLoginPassword`内の資格情報を使用して、ポータルエンドポイントを認証してアクセスできます。
 
 このAuth Verifierはデフォルトでは有効になっていません。
+
+<a name="tunnel-authentication-verifiers" />
 
 ### トンネルAuthentication Verifier
 
@@ -99,6 +117,8 @@ LibreOffice/OpenOfficeに接続している場合、Officeプロセスは、画�
 
 信頼されたリモートクライアントは、ポータルプロパティ`tunneling.servlet.shared.secret`に格納されている共有シークレットを使用して認証します。 初期値は空であり、すべてのアクセスが禁止されます。
 デフォルト設定はデフォルトで有効になっていますが、アクセスはローカルホストのみに制限されています。 トンネリングを許可するクライアントIPアドレスを設定して構成します。 詳細については、 [プロパティのドキュメント](https://docs.liferay.com/portal/7.2-latest/propertiesdoc/portal.properties.html#HTTP%20Tunneling) とリモートステージングを参照してください。
+
+<a name="related-topics" />
 
 ## 関連トピック
 

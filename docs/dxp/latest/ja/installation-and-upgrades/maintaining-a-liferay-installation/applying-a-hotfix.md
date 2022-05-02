@@ -12,6 +12,8 @@
 DXPをDockerコンテナで動作させている場合は、 [DXPをDockerでパッチする](./installing-liferay/using-liferay-docker-images/patching-dxp-in-docker.md)の手順に従ってホットフィックスを適用してください。
 ```
 
+<a name="requesting-a-hotfix" />
+
 ## ホットフィックスをリクエストする
 
 ここでは、ホットフィックスのリクエスト方法について説明します。
@@ -20,6 +22,8 @@ DXPをDockerコンテナで動作させている場合は、 [DXPをDockerでパ
 1. チケットを作成.
 
 Liferayサポートチームはお客様と協力して、問題が製品にあるかどうかを判断し、製品の意図しない動作に対する修正を提供します。
+
+<a name="configuring-the-patching-tool" />
 
 ## パッチツールの構成
 
@@ -40,6 +44,8 @@ Liferayサポートチームはお客様と協力して、問題が製品にあ�
     ```
 
     **DXPアプリサーバーのインストール:**[パッチングツールを手動で構成します。](./reference/configuring-the-patching-tool.md)、これにはパッチングツールの `war.path` プロパティ（例： `default.properties`）を解凍したDXP `..war` の場所に設定することも含まれます。
+
+<a name="installing-a-hotfix" />
 
 ## ホットフィックスのインストール
 
@@ -89,6 +95,8 @@ Liferayサポートチームはお客様と協力して、問題が製品にあ�
 1. アプリケーションサーバーを再度起動します。
 
 　 DXPのインストールにホットフィックスを適用しました。
+
+<a name="additional-information" />
 
 ## 追加情報
 

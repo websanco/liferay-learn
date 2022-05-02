@@ -7,6 +7,8 @@ Liferay Homeの場所は、インストールタイプによって異なりま�
   - **DXPバンドルでは** 、Liferay Homeはインストールの最上位フォルダであり、アプリケーションサーバーが含まれています。
   - **アプリケーションサーバー上のインストールでは** 、Liferay Homeフォルダはアプリケーションサーバーによって異なります。 アプリケーションサーバー上にインストールしている場合、Liferay Homeの場所については、そのアプリケーションサーバーに関する記事（例： **\[app server\]でのDXPのインストール**）を参照してください。
 
+<a name="liferay-home-structure" />
+
 ## Liferay Homeの構造
 
 DXPのインストールには、アプリケーションサーバーに関係なく、次のフォルダ構造が含まれています。
@@ -30,6 +32,8 @@ DXPのインストールには、アプリケーションサーバーに関係�
     ├── tools
     └── work
 ```
+
+<a name="liferay-home-reference" />
 
 <a name="liferay-home-reference" />
 

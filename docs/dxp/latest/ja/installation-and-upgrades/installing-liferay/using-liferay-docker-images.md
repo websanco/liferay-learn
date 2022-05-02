@@ -27,6 +27,8 @@ Docker Hub ホスト [Liferay DXP](https://hub.docker.com/r/liferay/dxp) と [Li
 
 これらのコンテナは、標準のDockerコンテナであり、そのまま起動および停止できます。 次の例では、 [Docker CLI（`docker`）](https://docs.docker.com/engine/reference/commandline/docker/) を使用していますが、任意のDockerコンテナツールを使用できます。
 
+<a name="starting-a-container-for-the-first-time" />
+
 ## コンテナを初めて起動する
 
 コンテナはポート `8080` リッスンし、すべてのDockerコンテナと同様に開始します。
@@ -51,6 +53,8 @@ Docker Hub ホスト [Liferay DXP](https://hub.docker.com/r/liferay/dxp) と [Li
 
 Liferayを使用する準備が整いました。
 
+<a name="viewing-logs" />
+
 ## ログの表示
 
 Liferayログメッセージとログファイルは、ライブで表示したり、ホストにコピーしたりできます。
@@ -58,6 +62,8 @@ Liferayログメッセージとログファイルは、ライブで表示した�
 ```{tip}
 `[container]`値は、 ` run`コマンドで ` --name [some name] `を介して入力した名前です。
 ```
+
+<a name="docker-logs-commands" />
 
 ### `Dockerログ` コマンド
 
@@ -69,6 +75,8 @@ Liferayログメッセージとログファイルは、ライブで表示した�
 | `docker logs -f [container]` | `tail -f [file]` のように、新しいログメッセージをストリーミングする |
 | `docker logs -t [container]` | 各ログメッセージにタイムスタンプを追加します                     |
 
+<a name="docker-cp-command" />
+
 ### `docker cp` コマンド
 
 以下のような [`docker cp`](https://docs.docker.com/engine/reference/commandline/cp/) コマンドを使用して、ホストマシンにログファイルをコピーできます。
@@ -76,6 +84,8 @@ Liferayログメッセージとログファイルは、ライブで表示した�
 ``` bash
 docker cp [container]:/opt/liferay/logs/liferay.[timestamp].log .
 ```
+
+<a name="stopping-a-container" />
 
 ## コンテナの停止
 
@@ -85,6 +95,8 @@ docker cp [container]:/opt/liferay/logs/liferay.[timestamp].log .
 |:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |:--------------------------------------------------------------------------------------------------------------------------------------------- |:----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `docker exec [container] /opt/liferay/tomcat/bin/shutdown.sh`                                                                                                                                             | Liferay、Tomcat、およびその他のアプリがリソースを解放できるようにします。 コンテナエントリポイントは、 [シャットダウン後のスクリプト](./using-liferay-docker-images/container-lifecycle-and-api.md#post-shutdown-phase-api) を実行します。 |                                                                                                                                                                         |
 | `i `引数を指定して実行しているターミナルセッションで `Ctrl-C` を実行します。<br><br>注意：これは SIGINT または [`SIGKILL` シグナルをアタッチされたコンテナに送信します。](https://docs.docker.com/engine/reference/commandline/attach/#extended-description) | コンテナを停止する最速の方法。                                                                                                                               | Liferay、Tomcat、およびコンテナエントリポイントは、リソースを解放せずにすぐに停止します。 エントリポイントの [シャットダウン後フェーズ](./using-liferay-docker-images/container-lifecycle-and-api.md#post-shutdown-phase-api) はスキップされます。 本番環境ではこの方法を使用しないでください |
+
+<a name="restarting-a-container" />
 
 ## コンテナの再起動
 
@@ -99,6 +111,8 @@ docker start [container]
 ```
 
 これで、Liferayコンテナの開始、停止、監視の基本を理解できました。
+
+<a name="whats-next" />
 
 ## 次のステップ
 

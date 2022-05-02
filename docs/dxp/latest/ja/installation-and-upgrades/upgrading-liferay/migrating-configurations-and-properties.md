@@ -4,11 +4,15 @@
 
 <a name="overview" />
 
+<a name="overview" />
+
 ## 概要
 
 * [Liferay Homeの移行](#migrating-liferay-home)
 * [データベースアップグレードの設定の更新](#updating-settings-used-by-the-database-upgrade)
 * [ポータルプロパティの移行](#migrating-portal-properties)
+
+<a name="migrating-liferay-home-and-application-server-files" />
 
 <a name="migrating-liferay-home-and-application-server-files" />
 
@@ -27,6 +31,8 @@
 
 3.  [ファイル ストア (ドキュメント ライブラリ)](../../system-administration/file-storage.md)を、[バックアップ](../maintaining-a-liferay-installation/backing-up.md)から新しいインストールにコピーするか、または [`.config`ファイル](../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md#creating-configuration-files) を介して使用するように新しいインストールを設定してセットアップします。
 
+<a name="updating-settings-for-the-database-upgrade" />
+
 ## データベースアップグレードの設定の更新
 
 DXPおよび一部のマーケットプレイスアプリのアップグレードプロセスでは、ポータルプロパティとOSGi構成を使用します。 カスタムコードのアップグレードプロセスでも、プロパティの更新と構成の更新が必要になる場合があります。 これらの設定と更新は、データベースのアップグレード **前** に行う必要があります。 その他の更新は、データベースのアップグレード後に行うことができます。
@@ -42,6 +48,8 @@ DXPアップグレードプロセスに必要な設定の更新は次のとお�
    マーケットプレイスアプリとカスタムコードで、必要な設定の更新を確認してください。
 ```
 
+<a name="database-drivers" />
+
 ### データベースドライバー
 
 推奨されるデータベースドライバーについては、データベースベンダーのドキュメントを確認してください。 新しいドライバーが推奨されている場合は、既存のドライバーのJARファイルを置き換え、`portal-ext.properties`ファイルの`jdbc.default.driverClassName`プロパティを新しいドライバークラス名で更新します。
@@ -53,6 +61,8 @@ jdbc.default.driverClassName=com.mysql.cj.jdbc.Driver
 ```
 
 その他のドライバーの例については、 [データベーステンプレート](../reference/database-templates.md) を参照してください。
+
+<a name="migrating-portal-properties" />
 
 ## ポータルプロパティの移行
 
@@ -67,7 +77,9 @@ jdbc.default.driverClassName=com.mysql.cj.jdbc.Driver
 * プロパティをOSGi構成に変換する
 * プロパティの移行に関する特別な考慮事項
 
-### Blade CLIを使用して互換性のないプロパティを報告する
+<a name="using-blade-cli-to-report-incompatible-properties" />
+
+### ブレードCLIを使用して互換性のないプロパティを報告する
 
 [Blade CLI](../../../developing-applications/tooling/blade-cli/installing-and-updating-blade-cli.md)ツールの`upgradeProps`コマンドは、ポータルプロパティファイル間の変更を報告します。 このツールは、次のタイプの変更を報告します。
 
@@ -103,6 +115,8 @@ web.server.protocol
 ...
 ```
 
+<a name="converting-properties-to-osgi-configurations" />
+
 ### プロパティをOSGi構成に変換する
 
 モジュール化された機能のプロパティが変更され、[OSGi構成ファイル](../../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md)（OSGi構成管理）にデプロイされるようになりました。
@@ -124,6 +138,8 @@ rootDir="{document_library_path}"
 ```tip::
    コントロールパネルの［*System Settings*］画面（［*Configuration*］の下）は、OSGi構成管理の値を管理します。 これらの画面は ``.config`` ファイルを作成する最も正確な方法です。 構成する機能の構成画面を見つけて*保存*をクリックし、オプションボタンを [使用して画面の構成](../../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md) を ``.config`` ファイルにエクスポートします。
 ```
+
+<a name="special-property-migration-considerations" />
 
 ### プロパティの移行に関する特別な考慮事項
 
@@ -148,6 +164,8 @@ rootDir="{document_library_path}"
    ```
 
 6.  7.3以降、キャッシュはEhcache XMLファイルを使用してのみ構成されます。 ポータルプロパティでキャッシュを有効にしたり設定したりすることができなくなりました。 ポータルプロパティを使用してキャッシュを構成した場合は、モジュール内のEhcache XMLファイルを使用してキャッシュを構成してください。 詳細は、 [キャッシュ構成](https://help.liferay.com/hc/ja/articles/360035581451-Introduction-to-Cache-Configuration) を参照してください。
+
+<a name="next-steps" />
 
 ## 次のステップ
 

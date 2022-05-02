@@ -70,6 +70,8 @@ Liferayコンテナのバインドマウントは、いくつかの方法で整�
 
 次の表に、バインドマウントメソッドの例をいくつか示し、それらの長所と短所を説明します。
 
+<a name="example-bind-mounts" />
+
 ### バインドマウントの例
 
 | 方式                             | 例                                                                                                                                                               | 長所                                    | 短所                                                                                               |
@@ -79,6 +81,8 @@ Liferayコンテナのバインドマウントは、いくつかの方法で整�
 | 個々のファイルにマウント                   | `-v ［host path］/setenv.sh:/mnt/liferay/files/tomcat/bin/setenv.sh`                                                                                              | 入力ファイルは、 `docker run` コマンドで明確に表示されます。 | 長いdocker実行コマンド。 管理するホストファイルのロケーションがさらに増えます。                                                      |
 
 コンテナの [構成フェーズ](./container-lifecycle-and-api.md#lifecycle) ファイルを提供する最も一般的な方法は、ホストフォルダーをコンテナの `/mnt/liferay` フォルダーにバインドマウントすることです。
+
+<a name="bind-mounting-a-host-folder-to-mntliferay" />
 
 ## ホストフォルダを `/mnt/liferay`にバインドマウントする
 
@@ -133,6 +137,8 @@ Liferayへの構成、パッチ適用、およびデプロイのためのファ�
     ```
 
 [コンテナライフサイクル](./container-lifecycle-and-api.md#liferay-phases) に従って、新しいコンテナはマウントされたホストフォルダ内のファイル（およびネストされたフォルダ）に作用し、Tomcatを起動します
+
+<a name="using-docker-cp" />
 
 ## `docker cp`を使用する
 

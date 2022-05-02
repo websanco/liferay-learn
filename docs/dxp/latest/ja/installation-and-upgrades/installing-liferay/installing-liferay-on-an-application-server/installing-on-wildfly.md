@@ -2,6 +2,8 @@
 
 WildFlyにインストールするには、DXP WARのインストール、依存関係のインストール、WildFlyの設定、およびWildFlyへのDXPのデプロイが必要です。 データベースとメールサーバーの接続も設定する必要があります。
 
+<a name="prerequisites" />
+
 ## 前提条件
 
 Liferay DXPにはJava JDK 8または11が必要です。 詳細は、 [互換性マトリクス](https://help.liferay.com/hc/ja/articles/360049238151) を参照してください。
@@ -18,10 +20,14 @@ Liferay DXPにはJava JDK 8または11が必要です。 詳細は、 [互換性
 
 `$WILDFLY_HOME`：WildFlyサーバーフォルダー。 通常、`wildfly-［version］`という名前です。
 
+<a name="installing-the-dxp-war" />
+
 ## DXP WARのインストール
 
 1. クリーンなWildflyインストールを開始していて、`$WILDFLY_HOME/standalone/deployments/ROOT.war`フォルダが存在する場合は、そのすべてのサブフォルダとファイルを削除します。
 1. DXP WARファイルを`$WILDFLY_HOME/standalone/deployments/ROOT.war`フォルダに解凍します（このフォルダが存在しない場合は作成します）。
+
+<a name="installing-dependencies" />
 
 ## 依存関係のインストール
 
@@ -33,6 +39,8 @@ Liferay DXPにはJava JDK 8または11が必要です。 詳細は、 [互換性
 ```{note}
 HypersonicデータベースはDXPにバンドルされており、テスト目的で役立ちます。 本番環境のDXPインスタンスにはHSQLを**使用しないでください**。
 ```
+
+<a name="installing-dependencies-for-earlier-versions" />
 
 ### 以前のバージョンの依存関係をインストールする
 
@@ -74,6 +82,8 @@ DXP 7.3以前の場合は、次の追加手順に従います。
 1. データベースベンダーのJDBCドライバーがインストールされています。
 1. `module.xml` は `<resource-root>` 要素内のすべての JAR をリストしています。
 
+<a name="running-dxp-on-wildfly-in-standalone-mode-vs-domain-mode" />
+
 ## WildFlyでのスタンドアロンモードとドメインモードのDXPの実行
 
 WildFlyは、 **スタンドアロン** モードまたは **ドメイン** モードのいずれかで起動できます。 ドメインモードでは、単一のコントロールポイントから複数のアプリケーションサーバーインスタンスを管理できます。 このようなアプリケーションサーバーのコレクションは、 **ドメイン** と呼ばれます。 スタンドアロンモードとドメインモードの詳細は、 [WildFly管理ガイド](https://docs.jboss.org/author/display/WFLY/Admin+Guide#AdminGuide-Operatingmodes) このトピックに関するセクションを参照してください。 DXPは、スタンドアロンモードではWildFlyを完全にサポートしますが、ドメインモードではサポートしません。
@@ -86,7 +96,7 @@ DXPは、スタンドアロンモードで実行する場合はWildFlyをサポ�
 これにより、DXPが複数のWildFlyサーバー上のクラスター環境で実行されるのを防ぐことはできません。 スタンドアロンモードで実行されていてWildFlyサーバーで実行されているDXPインスタンスのクラスターを設定できます。 詳細については、[クラスタリングの記事](../../setting-up-liferay/clustering-for-high-availability.md) を参照してください。
 ```
 
-<a name="wildflyの構成" />
+<a name="configuring-wildfly" />
 
 ## WildFlyの構成
 
@@ -245,7 +255,7 @@ WildFlyサーバーでIBM JDKを使用する場合は、以下の追加手順を
 
 これで、WildFlyにDXPをインストールするための規定のスクリプト変更が完了しました。
 
-<a name="データベースに接続する" />
+<a name="connect-to-a-database" />
 
 ## データベースに接続する
 
@@ -314,7 +324,7 @@ WildFlyを使用してデータソースを管理する場合は、次の手順�
 
 これでデータソースが構成され、準備が整いました。
 
-<a name="メールサーバーに接続する" />
+<a name="connect-to-a-mail-server" />
 
 ## メールサーバーに接続する
 
@@ -345,7 +355,7 @@ WildFlyでメールセッションを管理する場合は、次の手順に従�
     mail.session.jndi.name=java:jboss/mail/MailSession
     ```
 
-<a name="dxpのデプロイ" />
+<a name="deploying-dxp" />
 
 ## DXPのデプロイ
 
@@ -367,6 +377,8 @@ current AST contains: [ES3 keywords as identifiers, getters, reserved words as p
 Liferay DXP Enterpriseサブスクリプションをお持ちの場合、DXPはアクティベーションキーを要求します。 詳細は、 [Liferay DXPのアクティブ化](../../setting-up-liferay/activating-liferay-dxp.md) を参照してください。
 
 　 DXPはWildFlyで実行されています。
+
+<a name="next-steps" />
 
 ## 次のステップ
 

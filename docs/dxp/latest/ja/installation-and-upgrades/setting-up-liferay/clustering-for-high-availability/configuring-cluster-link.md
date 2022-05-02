@@ -15,8 +15,6 @@ DXPのクラスタリングは、ネットワークとクラスタノードの�
 * [クラスタリンクの構成](#configuring-cluster-link)
 * [まとめ](#conclusion)
 
-
-
 <a name="enabling-cluster-link" />
 
 ## クラスタリンクの有効化
@@ -52,13 +50,13 @@ Cluster Linkは [JGroups](http://www.jgroups.org) 依存し、ノードが通信
 
 Cluster Linkには、ノード間の1対多タイプの通信を提供する拡張アルゴリズムが含まれています。 これはJGroupsのUDPマルチキャストでデフォルトで実装されていますが、ユニキャストとTCPも利用できます。
 
-
-
 <a name="configuring-cluster-link-1" />
 
 ## クラスタリンクの構成
 
 Cluster Linkを有効にすると、DXPのデフォルトのクラスタリング構成が有効になります。 この設定では、 **UDP上のIPマルチキャスト** を定義します。 独自のノードでマルチキャストを使用できない場合（たとえば、地理的に離れている場合やファイアウォールによって分離されている場合）、代わりにユニキャスト実装を構成できます。 詳細は、 [TCPを介したユニキャストの設定](./configuring-unicast-over-tcp.md) を参照してください。
+
+<a name="using-multicast-over-udp" />
 
 ### UDPを介したマルチキャストの使用
 
@@ -110,8 +108,6 @@ cluster.link.autodetect.address=www.google.com:80
 
 ネットワーク構成により、TCPを介したマルチキャストを使用できない場合があります。これらの状況については、「 [TCPを介したユニキャストの構成](./configuring-unicast-over-tcp.md) を参照してください。 これらのメソッドはすべてJGroupsによって提供されることに注意してください。
 
-
-
 <a name="conclusion" />
 
 ## まとめ
@@ -133,9 +129,13 @@ GMS: address=oz-52865, cluster=liferay-channel-control, physical address=192.168
 
 <a name="whats-next" />
 
+<a name="whats-next" />
+
 ## 次のステップ
 
 負荷をかけた状態でDXPクラスタをテストし、システムの最適化を調査するのが最善です。 サイトで最も使用されているエンティティを検討し、キャッシュ設定を適切に調整します。 キャッシュの構成については、 [キャッシュ構成](https://help.liferay.com/hc/ja/articles/360035581451-Introduction-to-Cache-Configuration) を参照してください。
+
+<a name="additional-information" />
 
 ## 追加情報
 

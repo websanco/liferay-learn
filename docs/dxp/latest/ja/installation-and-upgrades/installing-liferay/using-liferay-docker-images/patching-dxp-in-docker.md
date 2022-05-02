@@ -82,6 +82,8 @@ DXPは、アーティファクトとファイルを使用して新しいコン�
 
 2.  [新しいコンテナへのパッチのインストール](#installing-to-a-new-container) 。
 
+<a name="installing-to-an-existing-container" />
+
 ### 既存のコンテナへのインストール
 
 既存のコンテナにパッチをインストールする手順は次のとおりです。
@@ -91,6 +93,8 @@ DXPは、アーティファクトとファイルを使用して新しいコン�
 2.  パッチを [ダウンロード](https://customer.liferay.com/downloads) して、コンテナの`/mnt/liferay/patching`フォルダにマップするボリュームまたは[バインドマウント](./providing-files-to-the-container.md)内のフォルダにコピーします。
 
 3.  [コンテナを再起動します](./using-liferay-docker-images.md#restartings-a-container) 。
+
+<a name="installing-to-a-new-container" />
 
 ### 新しいコンテナへのインストール
 
@@ -147,6 +151,8 @@ DXPは、アーティファクトとファイルを使用して新しいコン�
     ```
 
 4.  以前に使用した`docker run`引数を使用して、同じイメージまたは互換性のあるフィックスパックレベルを持つイメージから新しいコンテナを作成します。 ボリュームまたは [バインドマウント](./providing-files-to-the-container.md#bind-mounting-a-host-folder-to-mnt-liferay) を介して、必要なパッチを適用します。
+
+<a name="updating-the-patching-tool" />
 
 ## パッチツールの更新
 

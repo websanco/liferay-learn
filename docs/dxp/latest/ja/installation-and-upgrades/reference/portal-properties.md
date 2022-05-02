@@ -40,6 +40,8 @@ DXP 7.3以降、仮想インスタンスごとのポータルプロパティフ�
 
 ここにいくつかの設定例があります。
 
+<a name="setting-a-database-connection" />
+
 ### データベース接続の設定
 
 データベース接続プロパティは通常、`portal-ext.properties`ファイルに設定されます。 たとえば、データベース接続を変更する場合は、`portal-ext.properties`ファイルを作成し、[データベース接続プロパティ](./database-templates.md)を必要な値に設定します。
@@ -52,6 +54,8 @@ jdbc.default.password=123456
 ```
 
 データベース構成の詳細は、[Database Configurations](./database-configurations.md)および [データベーステンプレート](./database-templates.md) を参照してください 。
+
+<a name="setting-the-liferay-home-location" />
 
 ### Liferayホームの場所の設定
 
@@ -66,6 +70,8 @@ liferay.home=/home/jbloggs/liferay
 
 
 
+
+<a name="changing-how-users-authenticate" />
 
 ### ユーザーの認証方法の変更
 
@@ -91,9 +97,6 @@ company.security.auth.type=screenName
 company.security.auth.type=userId
 ```
 
-
-
-
 <a name="portal-property-priority" />
 
 ## ポータルプロパティの優先度
@@ -114,6 +117,8 @@ company.security.auth.type=userId
 2. **共有プロパティ**（複数回定義されたプロパティ）に定義された最後の値が優先されます。
 
 3.  プロパティソースは [決定論的順序](#configuration-processing) で読み込まれます。
+
+<a name="configuration-processing" />
 
 ### 構成処理
 
@@ -149,6 +154,8 @@ Liferay Dockerコンテナは、Liferay環境変数を、リストに追加さ�
 ```
 
 ![DXPサーバーのすべてのポータルプロパティは、コントロールパネルの[構成]セクションの [サーバー管理]ページに表示できます。](./portal-properties/images/02.png)
+
+<a name="portal-property-priority-examples" />
 
 ### ポータルプロパティの優先度の例
 
@@ -231,9 +238,6 @@ mail.session.jndi.name=mail/DevMailSession
 ```{tip}
 プロパティファイルを必要なだけ使用すると、DXP構成の管理が簡単になります。
 ```
-
-
-
 
 <a name="using-system-settings-and-configuration-files" />
 

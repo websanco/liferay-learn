@@ -89,9 +89,13 @@
 
 <a name="alternative-discovery-protocols" />
 
+<a name="alternative-discovery-protocols" />
+
 ## 代替発見プロトコル
 
 TCP Pingは、大部分のユースケースに適合するために使用できるデフォルトの検出プロトコルです。 ただし、以下で説明する他の検出プロトコルを使用することもできます。
+
+<a name="jdbc-ping" />
 
 ### JDBC Ping
 
@@ -106,6 +110,8 @@ TCP Pingを使用してクラスターメンバーを検出する代わりに、
 ```
 
 JDBC接続値の例については、 [データベーステンプレート](../../reference/database-templates.md)を参照してください。 JDBC Pingの詳細は、 [JGroupsのドキュメント](http://www.jgroups.org/manual4/index.html#DiscoveryProtocols) を参照してください。
+
+<a name="s3-ping" />
 
 ### S3 ping
 
@@ -122,9 +128,13 @@ S3 Pingを構成するには、 [ユニキャスト構成](#unicast-configuratio
 
 上記のパラメーターの値としてAmazonキーを指定します。 S3 Pingの詳細は、 [JGroupsのドキュメント](http://www.jgroups.org/manual4/index.html#_s3_ping) を参照してください。
 
+<a name="other-pings" />
+
 ### その他のping
 
 JGroupsは、Rackspace Ping、BPing、File Pingなど、クラスターメンバーがお互いを発見するための他の手段を提供します。 これらの検出方法については、 [JGroups Documentation](http://www.jgroups.org/manual4/index.html#DiscoveryProtocols) を参照してください。
+
+<a name="using-different-control-and-transport-channel-ports" />
 
 <a name="using-different-control-and-transport-channel-ports" />
 

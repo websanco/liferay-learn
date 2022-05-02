@@ -26,6 +26,8 @@ JDKを選択するには [Liferay DXP互換性マトリクス](https://help.life
 * [WebLogic](../installing-liferay/installing-liferay-on-an-application-server/installing-on-weblogic.md)
 * [WebSphere](../installing-liferay/installing-liferay-on-an-application-server/installing-on-websphere.md)
 
+<a name="known-issue-illegal-access-warnings" />
+
 ## 既知の問題：不正アクセスの警告
 
 JDK 11では、次のような **不正アクセス** 警告がログに出力されることがあります。
@@ -53,6 +55,8 @@ WARNING: All illegal access operations will be denied in a future release
 --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
 --add-opens=java.xml/com.sun.org.apache.xerces.internal.parsers=ALL-UNNAMED
 ```
+
+<a name="example-tomcat-script" />
 
 ## Tomcatスクリプトの例
 

@@ -10,6 +10,8 @@ Tomcatにインストールするには、DXP WARのインストール、依存�
 
 これを実現する最も単純で簡単な方法は、[Liferay Liferay-Tomcatバンドルをダウンロード](../installing-a-liferay-tomcat-bundle.md)し、依存関係、スクリプト、および`ROOT.xml`をそこから以下に説明する場所にコピーすることです。 それ以外の方法としては、依存関係をダウンロードして、Tomcatを手動で構成できます。
 
+<a name="prerequisites" />
+
 ## 前提条件
 
 Tomcatの構成方法に関係なく、 [ヘルプセンター](https://customer.liferay.com/downloads) （サブスクリプション）または [Liferayコミュニティのダウンロード](https://www.liferay.com/downloads-community) からこれらのファイルをダウンロードしてインストールする必要があります。
@@ -26,10 +28,14 @@ Java JDK 8または11が必要です。
 
 Tomcatサーバーの親フォルダは[**Liferay Home**](../../reference/liferay-home.md)です。 `$TOMCAT_HOME`はTomcatサーバーフォルダを参照します。 通常は、`tomcat-［version］`または`apache-tomcat-［version］`という名前です。
 
+<a name="installing-the-dxp-war" />
+
 ## DXP WARのインストール
 
 1. クリーンなTomcatのインストールを開始する場合は、`$CATALINA_BASE/webapps/ROOT`フォルダのコンテンツを削除します。 これにより、デフォルトのTomcatホームページが削除されます。
 1. DXP `.war`ファイルのコンテンツを`$CATALINA_BASE/webapps/ROOT`に展開します。
+
+<a name="installing-dependencies" />
 
 ## 依存関係のインストール
 
@@ -47,6 +53,8 @@ HypersonicデータベースはDXPにバンドルされており、テスト目�
 ```{note}
 DXP 7.3以前の場合は、依存関係ZIPファイルのコンテンツを$TOMCAT_HOME/lib/extフォルダに解凍します（このフォルダが存在しない場合は作成します）。 データベースベンダーのJDBC JARファイルもこのフォルダに入れてください。
 ```
+
+<a name="configuring-tomcat" />
 
 ## Tomcatの設定
 
@@ -226,6 +234,8 @@ Liferay DXPは、DXPに組み込まれているデータソースを使用する
 
 それ以外の場合は、Tomcatでデータソースを設定できます。
 
+<a name="configuring-the-tomcat-data-source" />
+
 ### Tomcatデータソースの設定
 
 1. データベースサーバーがインストールされ、動作していることを確かめます。 別のマシンにインストールされている場合は、DXPマシンがアクセスできることを確認してください。
@@ -304,6 +314,8 @@ Tomcatを使用してメールセッションを管理する場合は、次の�
 
 メールセッションはTomcatで設定されます。
 
+<a name="deploying-dxp" />
+
 ## DXPのデプロイ
 
 `$CATALINA_HOME/bin`に移動して`./startup.sh`を実行し、Tomcatを起動します。 または、`./catalina.sh run`を実行して、DXPのログファイルを追跡します。 ログは起動アクティビティを監査し、デプロイのデバッグに役立ちます。
@@ -311,6 +323,8 @@ Tomcatを使用してメールセッションを管理する場合は、次の�
 Liferay DXP Enterpriseサブスクリプションをお持ちの場合、DXPはアクティベーションキーを要求します。 詳細は、 [Liferay DXPのアクティブ化](../../setting-up-liferay/activating-liferay-dxp.md) を参照してください。
 
 　 DXPはTomcatで実行されています。
+
+<a name="next-steps" />
 
 ## 次のステップ
 

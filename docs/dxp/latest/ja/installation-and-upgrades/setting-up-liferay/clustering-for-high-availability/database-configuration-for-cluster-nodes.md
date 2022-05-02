@@ -16,6 +16,8 @@ Clustering will not work with the embedded HSQL database.
 
 次のセクションで説明するように、読み取りと読み取り/書き込み [データソース](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#JDBC) を分離する接続は、JDBCまたはJNDI [ポータルプロパティ](../../reference/portal-properties.md) （たとえば、 [`portal-ext.properties` ファイル](../../reference/portal-properties.md)）を使用して構成されます。 データソースは、DXPデータベースの個別のインスタンスを使用する必要があります。この場合、読み取り/書き込みデータベースインスタンスが読み取りデータベースインスタンスに複製されます。
 
+<a name="jdbc" />
+
 ### JDBC
 
 次の手順に従って `portal-ext.properties` ファイルを編集し、 [JDBC](../../installing-liferay/configuring-a-database.md)を使用して個別の読み取りおよび書き込みデータソースに直接接続します。
@@ -68,6 +70,8 @@ Clustering will not work with the embedded HSQL database.
 
     詳細については、 [Spring構成のポータルプロパティ](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html#Spring) 参照してください。
 
+<a name="jndi" />
+
 ### JNDI
 
 次の手順に従って `portal-ext.properties` ファイルを編集し、JNDIを使用してアプリサーバーの読み取りおよび書き込みデータソースに接続します。
@@ -119,6 +123,8 @@ DXPは、次回の起動時に、読み取りデータソース、書き込み�
 ## データベースの複製
 
 データベースクラスタを使用すると、フォールトトレランスとDXPのパフォーマンスが向上します。 データベースクラスタインスタンスは常に同期している必要があります。 レプリケーションは、変更されたデータと変更されたスキーマを1つのデータベースインスタンスから別のデータベースインスタンスにコピーするプロセスです。 すべて [サポートされるデータベース](https://help.liferay.com/hc/ja/articles/360049238151) のサポートレプリケーション。 データベースクラスターを使用している場合は、データベースベンダーの指示に従って、データベースをレプリケーション用に設定します。
+
+<a name="whats-next" />
 
 ## 次のステップ
 

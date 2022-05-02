@@ -62,6 +62,8 @@ com.liferay.document.library.kernel.service.DLAppService#get*
 
 <a name="creating-a-service-access-policy" />
 
+<a name="creating-a-service-access-policy" />
+
 ## サービスアクセスポリシーの作成
 
 新しいサービスアクセスポリシーを作成するには：

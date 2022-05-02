@@ -17,6 +17,8 @@
 
 <a name="command-usage" />
 
+<a name="command-usage" />
+
 ## コマンドの使用
 
 [Gogoシェルポートレット](../../../liferay-internals/fundamentals/using-the-gogo-shell.md)を使用して、モジュールのアップグレードおよび検証コマンドを実行します。
@@ -136,7 +138,9 @@ The following service(s) are missing:
 
 `dm wtf`コマンドは、ポートレット定義およびカスタムポートレットの`schemaVersion`フィールドのエラー検出にも役立ちます。
 
-### Release_テーブルの確認
+<a name="checking-the-release_-table" />
+
+### Release\_テーブルの確認
 
 各モジュールには1つの`Release_`テーブルレコードがあり、その`schemaVersion`フィールドの値は`1.0.0`以上である必要があります。 `1.0.0`は、バージョン6.2以前を対象とした従来のプラグインであったものを除き、Liferay DXPモジュールの初期バージョンです。
 
@@ -147,6 +151,8 @@ The following service(s) are missing:
 一部のモジュールには検証プロセスがあります。 これらは、アップグレードが正常に実行されたことを確認します。 Liferay DXPのアップグレード後に、コアのプロセスが自動的に実行されることを確認します。 [`verify.*`ポータルプロパティ](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html#Verify) を設定してサーバーを再起動することで、これらを実行することもできます。
 
 使用可能な検証プロセスを確認するには、Gogoシェルコマンド`verify:list`を入力します。 検証プロセスを実行するには、`verify:execute ［verify_qualified_name］`と入力します。
+
+<a name="related-topics" />
 
 <a name="related-topics" />
 

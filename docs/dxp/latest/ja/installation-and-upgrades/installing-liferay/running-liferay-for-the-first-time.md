@@ -2,6 +2,8 @@
 
 [Liferay DXPをインストール](./installing-a-liferay-tomcat-bundle.md#installing) して[データベースを構成](./configuring-a-database.md)すると、Liferay DXPを実行する準備が整います。
 
+<a name="start-the-server" />
+
 ## Liferay DXPを起動する
 
 1. アプリケーションサーバーにバンドルされている起動スクリプトを実行します。 Tomcatバンドルの例：
@@ -56,11 +58,15 @@ Liferay DXP Enterpriseサブスクリプションをお持ちの場合、DXPは�
 
 アプリケーションサーバーにバンドルされているシャットダウンスクリプトおよび起動スクリプトを使用してサーバーを再起動します。 Tomcatのサンプルコマンド：
 
+<a name="shutdown" />
+
 ### シャット ダウン
 
 ```bash
 ./liferay-dxp-version/tomcat-version/bin/shutdown.sh
 ```
+
+<a name="startup" />
 
 ### 起動
 
@@ -73,6 +79,8 @@ DXPは、セットアップウィザードで指定したデータベースと�
 ![DXPを構成してサーバーを再起動すると、DXPのホームページが表示され、サインインできるようになります!](./running-liferay-for-the-first-time/images/03.png)
 
 　 オンプレミスのLiferay DXPインスタンスを起動しました。
+
+<a name="next-steps" />
 
 <a name="next-steps" />
 

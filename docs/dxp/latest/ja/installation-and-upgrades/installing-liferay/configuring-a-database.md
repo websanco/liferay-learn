@@ -13,6 +13,8 @@
 
 <a name="configure-the-database" />
 
+<a name="configure-the-database" />
+
 ## データベースを構成する
 
 1. UTF-8を使用するデータベースを作成します。 MySQLコマンドの例を次に示します。

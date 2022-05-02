@@ -38,6 +38,8 @@
 
 カスタマーポータルは、復帰不可能な[フィックスパック](../patching-dxp-7-3-and-earlier.md)を特定し、ローリング再起動の対象外となります。 他のすべてのフィックスパックは対象です。
 
+<a name="reverting-fix-packs" />
+
 ## フィックスパックの復元
 
 > サブスクリプション
@@ -49,6 +51,8 @@
 ## portal-ext.propertiesによって制御されるポータルプロパティ
 
 [ポータルプロパティ](../../reference/portal-properties.md) ファイルの変更は、ローリング再起動に適用できます。
+
+<a name="system-settings-controlled-by-configuration-admin-files" />
 
 <a name="system-settings-controlled-by-configuration-admin-files" />
 
@@ -69,6 +73,8 @@
 Javaのマイナーバージョンの更新はローリング再起動時に適用できます。 メジャーバージョンの更新はローリング再起動ではサポートされていません。代わりに、すべてのクラスターノードがシャットダウンされたときに実行する必要があります。
 
 ローリング再起動の対象となるすべての更新は、前述のローリング再起動手順を使用して適用できます。 他の更新は、次に説明するように異なる方法で行う必要があります。
+
+<a name="additional-information" />
 
 ## 追加情報
 

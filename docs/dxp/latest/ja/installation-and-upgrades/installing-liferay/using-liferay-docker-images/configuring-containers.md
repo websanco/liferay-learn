@@ -20,6 +20,8 @@ Liferayインストールで構成可能なものはすべて、Liferay Docker�
 
 TomcatのJVMオプションは、追加または置換できます。
 
+<a name="appending-jvm-options-to-catalina_opts" />
+
 ### JVMオプションをCATALINA_OPTSに追加する
 
 JVM オプションは 、コンテナを作成する際に `LIFERAY_JVM_OPTS` 環境変数に指定することにより、Tomcat の `CATALINA_OPTS` 変数に追加できます。
@@ -33,6 +35,8 @@ LIFERAY_JVM_OPTS`の値では、スペース文字をエスケープするため
 ```
 
 コンテナは Tomcat の `CATALINA_OPTS` に追加された `LIFERAY_JVM_OPTS` で実行されます。
+
+<a name="replacing-the-setenvsh-file" />
 
 ### setenv.shファイルの置き換え
 
@@ -86,6 +90,8 @@ Liferayコンテナの起動と運用の詳細については、 [Liferay Docker
 * [Liferay環境変数の使用](#using-liferay-env-variables)
 * [ポータルプロパティファイルの使用](#using-a-portal-properties-file)
 
+<a name="using-liferay-env-variables" />
+
 ### Liferay環境変数の使用
 
 **ポータルプロパティ** ごとに [Env](../../reference/portal-properties.md)変数があります。 環境変数は、Liferay Dockerコンテナのポータルプロパティをオーバーライドする [Docker環境変数](https://docs.docker.com/engine/reference/commandline/run/#set-environment-variables--e---env---env-file) です。
@@ -118,6 +124,8 @@ Liferayコンテナの起動と運用の詳細については、 [Liferay Docker
 
 プロパティは、コントロールパネルの ［**設定**］ &rarr; ［**サーバー管理**］ &rarr; ［**プロパティ**］ &rarr; ［**ポータルプロパティ**］ で表示されます。
 
+<a name="using-a-portal-properties-file" />
+
 ### ポータルプロパティファイルの使用
 
 コンテナのポータルプロパティは、 `portal-ext.properties` ファイルを使用して上書きできます。 この例では、 [バインドマウント](./providing-files-to-the-container.md) を使用します。
@@ -146,6 +154,8 @@ Liferayコンテナの起動と運用の詳細については、 [Liferay Docker
 データベースポータルプロパティの例については、 [データベーステンプレート](../../reference/database-templates.md) を参照してください。
 ```
 
+<a name="image-defined-environment-variables" />
+
 ## 画像定義の環境変数
 
 Liferayイメージは、いくつかの環境変数を定義します。 いくつかの変数は、 [Liferay Home](../../reference/liferay-home.md) パスや、Tomcat をデバッグモードで起動するオプションなど、内部的な設定を行います。 その他の変数は [ポータルプロパティ](../../reference/portal-properties.md)を設定します。 以下は、ポータルプロパティを設定する画像定義の環境変数です。
@@ -162,6 +172,8 @@ LIFERAY_USERS_PERIOD_REMINDER_PERIOD_QUERIES_PERIOD_ENABLED=false
 
 上記を含むすべてのDocker環境変数は不変です。 環境変数を設定する場合、またはLiferayのイメージ定義の環境変数に依存する場合は、必要な値があることを確認してください。
 
+<a name="environment-variable-options" />
+
 ### 環境変数オプション
 
 イメージ定義の環境変数を操作するためのオプションは、次の通りです。
@@ -177,6 +189,8 @@ LIFERAY_USERS_PERIOD_REMINDER_PERIOD_QUERIES_PERIOD_ENABLED=false
     ```bash
     docker run -e [varable] -v [host folder path]:/mnt/liferay ...
     ```
+
+<a name="example-working-with-an-image-defined-portal-property-environment-variable" />
 
 ### 例：画像定義のポータルプロパティ環境変数の操作
 
@@ -242,7 +256,7 @@ LIFERAY_TERMS_PERIOD_OF_PERIOD_USE_PERIOD_REQUIRED=false
 
 <a name="system-settings" />
 
-## System Settings
+## システム設定
 
 Liferayシステム設定は、 [コントロールパネル](../../../system-administration/configuring-liferay/system-settings.md) または [構成ファイル](../../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md) （`.config` ファイル）をコンテナに提供することで構成できます。 最初から `.config` ファイルを作成するか、UIからコンポーネント設定値をエクスポートすることができます。
 
@@ -251,6 +265,8 @@ Liferayシステム設定は、 [コントロールパネル](../../../system-ad
 * [新しいコンテナへの構成の適用](#applying-configurations-to-a-new-container)
 * [実行時の構成ファイルの適用](#applying-configuration-files-at-run-time)
 * [コントロールパネルの使用](../../../system-administration/configuring-liferay/system-settings.md)
+
+<a name="applying-configurations-to-a-new-container" />
 
 ### 新しいコンテナへの構成の適用
 
@@ -279,6 +295,8 @@ Liferayシステム設定は、 [コントロールパネル](../../../system-ad
     ```
 
 システムコンポーネントの構成は、そのコンポーネントの画面のコントロールパネルで、 ［**設定**］ &rarr; ［**システム設定**］ に表示されます。
+
+<a name="applying-configuration-files-at-run-time" />
 
 ### 実行時の構成ファイルの適用
 

@@ -32,6 +32,8 @@ Should we remove this diagram since it includes a load balancer? -->
 
 <a name="start-a-database-server" />
 
+<a name="start-a-database-server" />
+
 ## データベースサーバーを起動する
 
 DXPクラスターには、すべてのDXPクラスターノードからアクセスできるデータソースが必要です。 データソースは、JNDIデータソースにするか、データベースサーバーまたはデータベースサーバークラスターへの直接接続にすることができます。 DXPバージョンがサポートするデータベースサーバーについては、 [互換性マトリックス](https://help.liferay.com/hc/ja/articles/360049238151) を参照してください。 詳細は、[クラスタノードのデータベース構成](./database-configuration-for-cluster-nodes.md)を参照してください。
@@ -77,6 +79,8 @@ DXPクラスターには、すべてのDXPクラスターノードからアク�
 ## ファイルストアサーバーを起動する
 
 DXPクラスターには、すべてのDXPクラスターノードからアクセスできるファイルストアが必要です。 便宜上、この例では、DXPデータベースで構成された [DBStoreファイルストア](../../../system-administration/file-storage/other-file-store-types/dbstore.md)を使用しています。 この例ですでに起動しているデータベースサーバーには、ファイルストアが含まれています。 すべてのファイルストアタイプの設定については、[ファイルストレージの構成](../../../system-administration/file-storage/configuring-file-storage.md)を参照してください。
+
+<a name="start-a-search-engine-server" />
 
 <a name="start-a-search-engine-server" />
 
@@ -241,6 +245,8 @@ DXPコンテナを起動します。
 
 `-e ［variable］=［value］`オプションは、DXPコンテナ環境変数を設定します。 詳細は、 [付録A：環境設定](#appendix-a-environment-settings) を参照してください。
 
+<a name="visit-the-dxp-nodes" />
+
 ### DXPノードにアクセスする
 
 DXPクラスターノードは、次のURLで入手できます。
@@ -254,6 +260,8 @@ DXPクラスターノードは、次のURLで入手できます。
 
 各ノードのコンテナIDとポート（`ノード：  [id]:[port]`）は、各ページの下部に表示されます。 `LIFERAY_WEB_PERIOD_SERVER_PERIOD_DISPLAY_PERIOD_NODE=true`環境設定により、この表示機能が有効になりました。 [`docker container ls`](https://docs.docker.com/engine/reference/commandline/container_ls/) コマンドを使用してコンテナのIDを見つけることができます。
 
+<a name="index-the-content-into-the-search-engine" />
+
 ### コンテンツを検索エンジンにインデックス付けする
 
 DXPコンテンツのインデックス作成を開始します。
@@ -266,6 +274,8 @@ DXPコンテンツのインデックス作成を開始します。
     ****Reindex all spell check indexes**
 
 コンテンツは検索エンジンにインデックス付けされます。 詳細は、 [検索の概要](../../../using-search/getting-started/search-overview.md) を参照してください。
+
+<a name="test-the-dxp-cluster" />
 
 ## DXPクラスターをテストする
 
@@ -282,6 +292,8 @@ DXPコンテンツのインデックス作成を開始します。
 ![コンテンツはクラスターノード間で同期されます。](./example-creating-a-simple-dxp-cluster/images/03.png)
 
 作業中の DXPクラスタを作成しました!
+
+<a name="whats-next" />
 
 <a name="whats-next" />
 
@@ -310,6 +322,8 @@ DXPクラスター用に[データベース](./database-configuration-for-cluste
 | LIFERAY\ **DL\** PERIOD\ **STORE\** PERIOD\_IMPL=\\<br>com.liferay.portal.store.db.DBStore                                                                                                  | ファイルストア（ドキュメントライブラリストア）クラス        |
 
 詳細は、Env/ [ポータルプロパティ](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html) の定義を参照してください。
+
+<a name="additional-information" />
 
 ## 追加情報
 

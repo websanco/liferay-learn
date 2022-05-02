@@ -6,6 +6,8 @@ Liferay DXPは、言語、タイムゾーンなどによるローカリゼーシ
 * [セットアップウィザード](#setup-wizard) ：DXPの起動の一環として、UIを介してデフォルトを設定します。
 * [コントロールパネル](#control-panel) ：DXPインスタンスを起動した後、UIを介してデフォルトを変更します。
 
+<a name="portal-properties" />
+
 ## ポータルプロパティ
 
 DXPを開始する前にデフォルトの仮想インスタンスのローカリゼーションを設定する場合は、 [`portal-ext.properties` ファイル](../reference/portal-properties.md)を使用します。
@@ -42,9 +44,13 @@ company.default.time.zone=Europe/Lisbon
 
 仮想インスタンスのデフォルトの言語とタイムゾーンは、インスタンスの **ローカリゼーション** ページを使用して変更できます。 手順については、[Configuring a Virtual Instance Localization](../../system-administration/configuring-liferay/virtual-instances/localization.md)を参照してください。
 
+<a name="conclusion" />
+
 ## まとめ
 
 DXPインスタンスのデフォルトの言語とタイムゾーンを構成しました。 ロケールの選択を容易にする方法など、DXPのローカライズに関する詳細は、 [サイトのローカライゼーション](../../site-building/site-settings/site-localization.md)を参照してください。
+
+<a name="additional-information" />
 
 ## 追加情報
 

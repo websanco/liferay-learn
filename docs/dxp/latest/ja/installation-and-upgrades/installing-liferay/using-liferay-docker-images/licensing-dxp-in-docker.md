@@ -59,6 +59,8 @@ INFO  [fileinstall-directory-watcher][LicenseManager:?] License registered for D
 
 DXPライセンスを更新しました。
 
+<a name="additional-information" />
+
 ## 追加情報
 
 * [Liferay DXPのアクティブ化](../../setting-up-liferay/activating-liferay-dxp.md)

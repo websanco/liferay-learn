@@ -19,6 +19,8 @@
 
 [Authentication Verifier](./securing-web-services/using-authentication-verifiers.md)はリモートアプリケーションの認証を管理でき、[認証パイプライン](../../building-applications/README.md)はユーザーが1つまたは複数のシステムによって検証される方法を定義します。
 
+<a name="authentication-types" />
+
 ## 認証の種類
 
 ユーザーは、次の3つの認証タイプのいずれかを使用してログインするように設定できます。
@@ -37,6 +39,8 @@
 
 **認証タイプ** は、コントロールパネルまたはプロパティファイルから設定できます。
 
+<a name="configuring-authentication-type-through-the-control-panel" />
+
 ### コントロールパネルから認証タイプを設定する
 
 1. コントロールパネルに移動します。
@@ -44,6 +48,8 @@
 1. ［**How do users authenticate?**］ セレクタでオプションを選択します。
 
     ![3種類の認証から選択できます。](./authentication-basics/images/03.png)
+
+<a name="configuring-authentication-type-using-properties" />
 
 ### プロパティを使用して認証タイプを設定する
 
@@ -55,9 +61,13 @@ company.security.auth.type=emailAddress
 #company.security.auth.type=userId
 ```
 
+<a name="using-and-configuring-the-sign-in-widget" />
+
 ## ログインウィジェットの使用と設定
 
 ［Sign In］ウィジェットは、ユーザーを認証するさまざまなメカニズム（ポータルデータベース、LDAPサーバー、SAML IDプロバイダー、またはユーザーが認証できる任意の方法）を呼び出します。 その動作は、いくつかの方法で設定およびカスタマイズできます。
+
+<a name="disabling-guest-account-creation" />
 
 ### ゲストアカウント作成の無効化
 
@@ -69,6 +79,8 @@ company.security.auth.type=emailAddress
 
     ![このボックスがオフの場合、ゲストはアカウントを作成できません。](./authentication-basics/images/04.png)
 
+<a name="preventing-password-resets" />
+
 ### パスワードリセットの防止
 
 ユーザーが自分のパスワードをリセットできないようにする必要がある場合は、同じ画面から設定できます。
@@ -76,6 +88,8 @@ company.security.auth.type=emailAddress
 1. ［コントロールパネル］ &rarr; ［**設定**］ &rarr; ［**Instance Settings**］ &rarr; ［**プラットフォーム**］ &rarr; ［**ユーザー認証**］ に移動します。
 1. ［**Allow users to request password reset links?**］ をオフにします。
 1. ［**保存**］ をクリックします。
+
+<a name="configuring-captcha-or-recaptcha" />
 
 ### CAPTCHAまたはreCAPTCHAの構成
 
@@ -92,6 +106,8 @@ CAPTCHAまたはreCAPTCHAを有効にして、ボットによるアカウント�
 1. ［CAPTCHAエンジン］を選択します。 デフォルトでは、［Simple CAPTCHA］が有効になっています。 GoogleのreCAPTCHAを選択することもできます。そのためには、外部サービスを個別に設定する必要があります。 reCAPTCHAを選択した場合は、Googleからの公開鍵と秘密鍵を提供します。
 1. その他のオプションを使用すると、開発者が Simple CAPTCHA エンジンをカスタマイズできます。
 1. 完了したら、 ［**保存**］ をクリックします。
+
+<a name="additional-information" />
 
 ## 追加情報
 

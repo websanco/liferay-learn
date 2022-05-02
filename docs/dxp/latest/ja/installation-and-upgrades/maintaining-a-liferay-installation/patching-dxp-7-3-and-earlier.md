@@ -14,6 +14,8 @@ Liferay DXP 7.3 SP3+はアップデートを用いたローリングリリース
 
 Liferayの修正プログラムがリリースされたら、DXPインスタンスを最新の状態にしておきましょう。 Liferayは修正を集約し、 **パッチ** と呼ばれるZIPファイルでエンタープライズサブスクライバーが利用できるようにします。
 
+<a name="patch-types" />
+
 ## パッチの種類
 
 パッチにはいくつかの種類があり、それらは異なる目的を果たします。
@@ -33,13 +35,19 @@ Liferayの修正プログラムがリリースされたら、DXPインスタン�
 
 [パッチタイプについて](./patching-dxp-7-3-and-earlier/understanding-patch-types-for-dxp-7-3-and-earlier.md) 上記のパッチオプションについて説明します。
 
+<a name="installing-patches" />
+
 ## Installing Patches
 
 必要なパッチが見つかったら、パッチングツールを使って適用します。 [パッチのインストール](./patching-dxp-7-3-and-earlier/installing-patches-for-dxp-7-3-and-earlier.md) では、DXPに安全かつ包括的にパッチを適用するための基本的な手順を説明しています。
 
+<a name="configuring-the-patching-tool" />
+
 ## パッチングツールの構成
 
 [`patching-tool.sh auto-discovery` コマンド](./reference/configuring-the-patching-tool.md) は、Tomcatバンドルおよび一般的なアプリサーバー構成に対してツールを自動的に構成します。 パッチングツールを手動で設定して、DXPインストールのバリエーションを処理することもできます。
+
+<a name="other-patching-topics" />
 
 ## その他のパッチ適用に関するトピック
 
@@ -47,6 +55,8 @@ Liferayの修正プログラムがリリースされたら、DXPインスタン�
 
 * [パッチ情報の取得](./reference/getting-patch-information.md)
 * [パッチのアンインストール](./reference/uninstalling-patches.md)
+
+<a name="patching-dxp-72" />
 
 ## DXP 7.2へのパッチ適用
 

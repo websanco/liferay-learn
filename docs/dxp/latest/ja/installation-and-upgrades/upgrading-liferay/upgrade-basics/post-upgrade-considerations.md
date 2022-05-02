@@ -8,6 +8,8 @@
 
 データベースのアップグレードが完了したら、本番環境設定を再度有効にします。
 
+<a name="search-indexing" />
+
 ### サーチインデックス
 
 7.2にアップグレードするために検索インデックスを無効にした場合は、無効にした`.config`ファイルを削除するか、`.config`ファイルに`indexReadOnly="false"`を設定して、検索インデックスを再度有効にします。 例:
@@ -28,6 +30,8 @@ rm osgi/configs/com.liferay.portal.search.configuration.IndexStatusManagerConfig
 古いバージョン（7.1以下）からアップグレードした場合は、検索インデックスを処理するために[Elasticsearchのインストール](../../../using-search/installing-and-upgrading-a-search-engine/installing-a-search-engine.md)を検討してください。
 ```
 
+<a name="database-configurations" />
+
 ### データベース設定
 
 データベースをアップグレードする前に、アップグレード用にデータベースを調整している場合があります（ [アップグレードのためのデータベース調整](../upgrade-stability-and-performance/database-tuning-for-upgrades.md) を参照）。 アップグレードが完了したので、本番環境データベースの設定を復元します。
@@ -44,9 +48,13 @@ rm osgi/configs/com.liferay.portal.search.configuration.IndexStatusManagerConfig
 
 <a name="accounting-for-feature-changes" />
 
+<a name="accounting-for-feature-changes" />
+
 ## 機能変更の考慮
 
 新しいLiferayバージョンでは、機能と動作が変わります。 以下の変更点を確認してください。
+
+<a name="enable-web-content-view-permissions" />
 
 ### Webコンテンツの表示権限を有効にする
 
@@ -57,6 +65,8 @@ rm osgi/configs/com.liferay.portal.search.configuration.IndexStatusManagerConfig
 ![[システム設定]の [Webコンテンツ]メニューを下にスクロールして、Webコンテンツを表示するための権限チェックを無効にします。](./post-upgrade-considerations/images/03.png)
 
 **オプション2：** Webコンテンツの記事が少ない場合は、ロールに基づきWebコンテンツの記事ごとに表示権限を編集します。
+
+<a name="check-web-content-images" />
 
 ### Webコンテンツの画像を確認する
 
@@ -70,11 +80,13 @@ Unable to add the journal article image {filename} into the file repository
 
 <a name="account-for-deprecations-and-features-in-maintenance-mode" />
 
-## メンテナンスモードでの非推奨項目と機能の考慮
+### メンテナンスモードでの非推奨項目と機能の考慮
 
 [メンテナンスモードでの非推奨項目と機能](../reference/maintenance-mode-and-deprecations-in-7-3.md)を確認し、Liferayインスタンスへの影響に対応するための計画を立ててください（まだ行ってない場合）。
 
 <a name="remove-obsolete-data" />
+
+### 廃止されたデータを削除する
 
 ## 廃止されたデータを削除する
 
@@ -83,6 +95,8 @@ Unable to add the journal article image {filename} into the file repository
 * 廃止されたLiferayアプリまたはモジュールからのデータ。 [データクリーンアップ](../reference/data-cleanup.md)ツールを使用して削除します。
 
 * 利用可能なLiferayアプリおよびモジュールからの廃止されたデータ。 [データ削除](../reference/data-removal.md) ツールを使用して削除します。
+
+<a name="conclusion" />
 
 <a name="conclusion" />
 

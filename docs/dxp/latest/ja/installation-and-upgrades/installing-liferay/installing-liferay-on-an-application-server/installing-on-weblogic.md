@@ -2,6 +2,8 @@
 
 アプリケーションサーバーとしてWebLogicを使用している場合は、DXPをWebLogic管理対象サーバーにインストールすることを **強くお勧め** します。 管理対象サーバーは、DXPをすばやく起動または停止でき、クラスター構成に変換できます。 ここでは、DXPを管理対象サーバーにインストールします。
 
+<a name="prerequisites" />
+
 ## 前提条件
 
 [WebLogicのドキュメンテーション](http://www.oracle.com/technetwork/middleware/weblogic/documentation/index.html) に従って、管理サーバーと管理対象サーバーを構成します。
@@ -13,6 +15,8 @@ Liferay DXPにはJava JDK 8または11が必要です。 JDKを選択するに�
 * DXP WARファイル
 * OSGi依存関係のZIPファイル
 * 依存関係のZIPファイル（DXP 7.3以前）
+
+<a name="preparing-the-dxp-war" />
 
 ## DXP WARの準備
 
@@ -34,7 +38,11 @@ Liferay DXPにはJava JDK 8または11が必要です。 JDKを選択するに�
 DXPのデプロイ後に`portal-ext.properties`を更新する必要がある場合は、ユーザードメインの`autodeploy/ROOT/WEB-INF/classes`フォルダにあります。 `autodeploy/ROOT`フォルダにはDXPデプロイメントが含まれていることに注意してください。
 ```
 
+<a name="configuring-weblogic" />
+
 ## WebLogicの構成
+
+<a name="configuring-weblogics-node-manager" />
 
 ### WebLogicのノードマネージャのコンフィグレーション
 
@@ -53,6 +61,8 @@ StartScriptEnabled=true
 ```
 
 詳細は、Oracleの [Configuring Java Node Manager](https://docs.oracle.com/middleware/1212/wls/NODEM/java_nodemgr.htm#NODEM173) ドキュメントを参照してください。
+
+<a name="configuring-weblogics-jvm" />
 
 ### WebLogicのJVMの構成
 
@@ -124,6 +134,8 @@ Javaオプションとメモリ引数について以下に説明します。
 DXPのインストール後、これらの構成（これらのJVMオプションを含む）をさらに調整して、パフォーマンスを向上させることができます。 詳細については、 [Liferayの調整](../../setting-up-liferay/tuning-liferay.md) および [JVMの調整](../../setting-up-liferay/tuning-your-jvm.md) を参照してください。
 ```
 
+<a name="installing-dependencies" />
+
 ## 依存関係のインストール
 
 DXPは、OSGiモジュール（OSGi依存関係ZIP）とデータベースドライバーに依存しています。
@@ -141,6 +153,8 @@ HypersonicデータベースはDXPにバンドルされており、テスト目�
 DXP 7.3以前の場合、依存関係のZIPファイルをWebLogicドメインの `lib`フォルダに解凍します。 データベースベンダーのJDBC JARファイルもこのフォルダに入れてください。
 ```
 
+<a name="installing-elasticsearch" />
+
 ## Elasticsearchのインストール
 
 DXPが起動すると、デフォルトの[sidecar](../../../using-search/installing-and-upgrading-a-search-engine/elasticsearch/using-the-sidecar-or-embedded-elasticsearch.md) Elasticsearchサーバーがインストールされて起動します。 インストールを成功させるには、いくつかのアーカイブを提供する必要があります。
@@ -154,6 +168,8 @@ DXPが起動すると、デフォルトの[sidecar](../../../using-search/instal
 * [Stempel Polish Analysis Plugin](https://www.elastic.co/guide/en/elasticsearch/plugins/7.9/analysis-stempel.html) （ [ダウンロード](https://artifacts.elastic.co/downloads/elasticsearch-plugins/analysis-stempel/analysis-stempel-7.9.0.zip) ）
 
 DXPの起動時に、DXPはアーカイブを解凍してインストールし、SidecarのElasticsearchサーバーを起動します。
+
+<a name="connect-to-database" />
 
 ## データベースに接続
 
@@ -208,6 +224,8 @@ DXPがデプロイされると、`portal-ext.properties`ファイルはドメイ
 
 管理サーバーと管理サーバーを再起動すると、変更が有効になります。
 
+<a name="deploying-dxp" />
+
 ## DXPのデプロイ
 
 次の手順に従って、DXP WARファイルをデプロイします。
@@ -238,6 +256,8 @@ May 02, 2018 9:12:27 PM com.google.javascript.jscomp.PhaseOptimizer$NamedPass pr
 Liferay DXP Enterpriseサブスクリプションをお持ちの場合、DXPはアクティベーションキーを要求します。 詳細は、 [Liferay DXPのアクティブ化](../../setting-up-liferay/activating-liferay-dxp.md) を参照してください。
 
 　 WebLogicでDXPを実行しています。
+
+<a name="next-steps" />
 
 ## 次のステップ
 

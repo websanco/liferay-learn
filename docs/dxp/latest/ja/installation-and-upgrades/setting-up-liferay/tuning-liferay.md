@@ -15,6 +15,8 @@ Liferayのパフォーマンスを調整する方法はいくつかあります�
 
 すべての開発者ポータルプロパティを無効にすることから始めます。
 
+<a name="portal-developer-properties" />
+
 ### ポータル開発者プロパティ
 
 Liferayの[ポータルプロパティ](../reference/portal-properties.md)は、開発を容易にするいくつかのプロパティが含まれています。 Liferayのインストールに含まれている [`portal-developer.properties`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-impl/src/portal-developer.properties) は、すべてのプロパティを宣言するものですが、デフォルトでは無効になっています。 このファイルは、次の設定を使って、`portal-ext.properties`ファイルで参照した場合のみ有効になります。
@@ -33,6 +35,8 @@ Liferayの`portal-developer.properties`ファイルを含めた場合、また�
 同様に、開発者プロパティを個別に有効にした場合は、それらもコメントアウトします。
 
 次に、JSPエンジンで開発者設定を無効にします。
+
+<a name="jsp-engine-settings" />
 
 ### JSPエンジン設定
 
