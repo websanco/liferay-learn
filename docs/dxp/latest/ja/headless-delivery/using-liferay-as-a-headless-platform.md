@@ -7,9 +7,9 @@ Liferayでは、Webインターフェイスで利用可能なアクションと�
 ## 接続する方法
 
 クライアントがWeb APIを介してLiferay DXPに接続するには、3つの異なるアプローチがあります。
-* OpenAPIの仕様に準拠した[__ヘッドレスREST API__](#headless-rest-apis)
-* GraphQLの仕様に準拠した[__GraphQL API__](#graphql-api)
-* サービスビルダによって生成された、[__プレーンWeb / RESTサービス__](#plain-webrest-services)
+* OpenAPIの仕様に準拠した[**_** ヘッドレスREST API **_**](#headless-rest-apis)
+* GraphQLの仕様に準拠した[**_** GraphQL API **_**](#graphql-api)
+* サービスビルダによって生成された、[**_** プレーンWeb / RESTサービス **_**](#plain-webrest-services)
 
 ### ヘッドレスREST API
 
@@ -21,7 +21,7 @@ LiferayのヘッドレスAPIは、Liferay DXPリソースとの [RESTful](https:
 
 [GraphQL](https://graphql.org/) APIは、ヘッドレスREST APIと同様のインタラクションをサポートするクエリ言語ですが、若干柔軟性が高いものです。 Liferay DXPは`［server］［:port］/o/graphql`でこのAPIを公開しています。
 
-[GraphQLクライアント](https://graphql.org/graphql-js/graphql-clients/)を介してAPIまたはそのドキュメントを調べることにより、詳細情報を確認できます。 Liferayには組み込みクライアントが含まれており、`［server］［:port］/o/api`（右上の_GraphQL_を選択）で実行中のインスタンスで確認できます。
+[GraphQLクライアント](https://graphql.org/graphql-js/graphql-clients/)を介してAPIまたはそのドキュメントを調べることにより、詳細情報を確認できます。 Liferayには組み込みクライアントが含まれており、`［server］［:port］/o/api`（右上の **GraphQL** を選択）で実行中のインスタンスで確認できます。
 
 ### プレーンWeb / RESTサービス
 

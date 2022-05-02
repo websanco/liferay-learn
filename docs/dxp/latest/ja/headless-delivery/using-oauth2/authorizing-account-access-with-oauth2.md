@@ -13,9 +13,7 @@
 
 この認証用のURLを作成するには、次のパターンに従います。
 
-```
-https://[hostname]/o/oauth2/authorize?response_type=code&client_id=[client ID]
-```
+    https://[hostname]/o/oauth2/authorize?response **type=code&client** id=[client ID]
 
 クライアントIDは、アプリケーションの登録から取得されます。 自動的に生成されます（アプリケーションを編集する場合は変更できます）。
 
@@ -37,9 +35,7 @@ http://localhost:8080/o/oauth2/token
 
 本文に次のパラメータを使用します（`application/x-www-form-urlencoded`としてエンコードされています）：
 
-```
-client_id=［client ID］ client_secret=［client secret］ grant_type=authorization_code code=［authorization server generated code］ redirect_uri=［registered callback URI］
-```
+    client **id=[client ID] client** secret=[client secret] grant **type=authorization** code code=[authorization server generated code] redirect_uri=[registered callback URI]
 
 このリクエストに対するHTTP応答の本文では、次のようなJSONを受け取ります。
 
@@ -65,31 +61,21 @@ client_id=［client ID］ client_secret=［client secret］ grant_type=authoriza
 
 このフローをサポートするには、アプリケーションの作成時に許可された承認タイプとしてPKCEを定義しておく必要があります。 これは、ネイティブアプリケーションおよびユーザーエージェントアプリケーションのクライアントプロファイルの一部です。 PKCEを使用して認証コードをリクエストするには、`code_challenge`リクエストパラメータを含むURLを使用します。
 
-```
-https://［hostname］/o/oauth2/authorize?response_type=code&client_id=［client ID］&code_challenge=［PKCE code challenge］
-```
+    https://[hostname]/o/oauth2/authorize?response **type=code&client** id=[client ID]&code_challenge=[PKCE code challenge]
 
 残りのプロセスは認証コードフローと同じですが、アクセストークンを取得するための最終リクエストを行うときに、次のパラメーターも指定する必要があります。
 
-```
-code_verifier=［Code Verifier that was transformed and sent as code_challenge previously］
-```
-
-<a name="client-credentials-and-resource-owner-flows" />
+    code **verifier=[Code Verifier that was transformed and sent as code** challenge previously]
 
 ## クライアント資格情報とリソース所有者のフロー
 
 他に、使用頻度の低いフローが2つあります。 2つのサーバーが合意された、ユーザー中心でないデータを交換するシナリオがある場合は、ユーザーの［Allow/Deny］画面をバイパスして、クライアントを承認できます。 これはクライアント資格情報フローと呼ばれ、次のURLパターンを使用します。
 
-```
-https://［hostname］/o/oauth2/token?grant_type=client_credentials&client_id=［client ID］&client_secret=［client secret］
-```
+    https://[hostname]/o/oauth2/token?grant **type=client** credentials&client **id=[client ID]&client** secret=[client secret]
 
 ユーザーがパスワードでアプリケーションを信頼する最後のフローはまれですが、可能です。 これはリソース所有者パスワードフローと呼ばれ、そのURLパターンは次のようになります。
 
-```
-https://［hostname］/o/oauth2/token?grant_type=password&client_id=［client ID］&client_secret=［client secret］&username=［user@emailaddress.com］&password=
-```
+    https://[hostname]/o/oauth2/token?grant **type=password&client** id=[client ID]&client_secret=[client secret]&username=[user@emailaddress.com]&password=
 
 ユーザーはパスワードの入力を求められ、ログインに成功すると認証コードを受け取ります。
 
@@ -115,17 +101,13 @@ OAuth 2.0は、資格情報を共有せずに、ユーザがクライアント�
 
 ![ユーザーは、自分のアカウントプロファイル内のデータにアクセスできるアプリケーションを完全に制御できます。](./authorizing-account-access-with-oauth2/images/01.png)
 
-ユーザーは自分のアカウント領域で、 ［**接続済みのアプリケーション**］ をクリックして、自分のアカウントへのアクセスを許可したアプリケーションのリストを表示できます。 ここから、アクションメニューの ［**Remove Access**］ アイテムまたはアプリケーションの詳細画面の ［**Remove Access**］ ボタンをクリックして、アクセスを取り消すことができます。
+ユーザーは自分のアカウント領域で、 [**OAuth2 Connected Applications**] をクリックして、自分のアカウントへのアクセスを許可したアプリケーションのリストを表示できます。 ここから、アクションメニューの [**Remove Access**] アイテムまたはアプリケーションの詳細画面の [**Remove Access**] ボタンをクリックして、アクセスを取り消すことができます。
 
-![［接続済みのアプリケーション］では、ユーザーは承認されたアプリを表示してアクセスを取り消すことができます。](./authorizing-account-access-with-oauth2/images/02.png)
+管理者は、 [**Control Panel**] → [**Configuration**] → [**OAuth2 Administration**] で任意のアプリの[Authorizations]タブをクリックして承認内容を表示できます。
 
 管理者は、 ［**コントロールパネル**］ &rarr; ［**設定**］ &rarr; ［**OAuth2 管理**］ の任意のアプリの［権限］タブで権限を表示できます。  アプリが信頼されている場合、または［Remember My Authorization］チェックボックスがオンになっている場合は、その情報が表示されます。
 
-![アプリのすべての権限は、アプリの［権限］タブに表示されます。](./authorizing-account-access-with-oauth2/images/03.png)
-
-リストされている承認の ［**Revoke**］ ボタンをクリックすると、そのユーザーのアカウントへのそのアプリケーションのアクセスが取り消されます。
-
-<a name="summary" />
+リストされている承認の [**Revoke**] ボタンをクリックすると、そのユーザーのアカウントへのそのアプリケーションのアクセスが取り消されます。
 
 ## まとめ
 
