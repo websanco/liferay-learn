@@ -6,14 +6,14 @@
 
 1. [Tawk.toアカウント](https://dashboard.tawk.to/login) にログインします。
 
-1. *［Administration］*ボタンをクリックします。
+1. ［**Administration**］ ボタンをクリックします。
 
     ![Tawk-toの管理ボタンが表示されます。](./tawk-to/images/01.png)
 
-1. *［Channels］*に移動し、*［Chat Widget］*をクリックします。
+1. ［**Channels**］ に移動し、 ［**Chat Widget**］ をクリックします。
 
     ![チャットウィジェットオプションが表示されます。](./tawk-to/images/02.png)
 
-1. *［Direct Chat Link］*ヘッダの下で、URLの強調表示された部分をコピーし、それをチャットプロバイダーアカウントIDとして使用して、Liferayインスタンスとの[自動ライブチャット統合を有効にします](../enabling-automated-live-chat-systems.md)。
+1. ［**Direct Chat Link**］ ヘッダの下で、URLの強調表示された部分をコピーし、それをチャットプロバイダーアカウントIDとして使用して、Liferayインスタンスとの[自動ライブチャット統合を有効にします](../enabling-automated-live-chat-systems.md)。
 
     ![ダイレクトチャットリンクのこの部分をLiferayチャットアカウントIDとして使用します。](./tawk-to/images/03.png)

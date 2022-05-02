@@ -49,7 +49,7 @@ Liferay DXP 7.3以降で利用できます。 このセクションは、以前�
 Liferay DXP 7.3以降で利用できます。 これらのフラグメントは、以前は[*Sections*]パネルに含まれていました。
 ```
 
-*[Footers]* パネルには、ページのフッターとして追加できるフラグメントが含まれています。 Liferay DXP 7.3での使用については、 [Master Pages](./README.md#creating-pages) を参照してください。
+[**Footers**] パネルには、ページのフッターとして追加できるフラグメントが含まれています。 Liferay DXP 7.3での使用については、 [Master Pages](./README.md#creating-pages) を参照してください。
 
 ### ナビゲーションバー
 
@@ -57,14 +57,14 @@ Liferay DXP 7.3以降で利用できます。 これらのフラグメントは�
 Liferay DXP 7.3以降で利用できます。 これらのフラグメントは、以前は[*Sections*]パネルに含まれていました。
 ```
 
-*[Navigation Bars]* パネルには、ページのヘッダーとして追加できるフラグメントが含まれています。 Liferay DXP 7.3での使用については、 [Master Pages](./README.md#creating-pages) を参照してください。
+[**Navigation Bars**] パネルには、ページのヘッダーとして追加できるフラグメントが含まれています。 Liferay DXP 7.3での使用については、 [Master Pages](./README.md#creating-pages) を参照してください。
 
 ### コンテンツ表示
 
 ```{note}
 Liferay DXP 7.3以降で利用できます。
 ```
-*[Content Display]* セクションでは、コンテンツ表示フラグメントを追加して、単一の既存のWebコンテンツ、ブログエントリ、またはドキュメントを表示できます。 詳細については、[Using the Content Display Fragment](./README.md#using-fragments)を参照してください。 <!--Including this doc in the Page Fragments section-->
+[**Content Display**] セクションでは、コンテンツ表示フラグメントを追加して、単一の既存のWebコンテンツ、ブログエントリ、またはドキュメントを表示できます。 詳細については、[Using the Content Display Fragment](./README.md#using-fragments)を参照してください。 <!--Including this doc in the Page Fragments section-->
 
 ## ウィジェット
 
@@ -76,7 +76,7 @@ Rather than spend valuable real estate here comparing to how its different from 
 
 -->
 
-[Widgets]セクションは、 	ウィジェットページの*[Add]* メニューと同様に機能します。 使用可能なウィジェットの完全なリストが表示され、それらをページに追加できます。 主な違いは、コンテンツページのウィジェットの主要な設定オプションのみが表示される点です。 *ルックアンドフィール*のような他の様々な設定は、ウィジェットページのウィジェットに対してのみ利用できます。
+[Widgets]セクションは、 	ウィジェットページの [**Add**] メニューと同様に機能します。 使用可能なウィジェットの完全なリストが表示され、それらをページに追加できます。 主な違いは、コンテンツページのウィジェットの主要な設定オプションのみが表示される点です。 **ルックアンドフィール** のような他の様々な設定は、ウィジェットページのウィジェットに対してのみ利用できます。
 
 ![ [Widgets]セクションには、レイアウト内に追加できるウィジェットのリストが表示されます。](./content-pages-overview/images/06.png)
 
@@ -86,7 +86,7 @@ Rather than spend valuable real estate here comparing to how its different from 
 Liferay DXP 7.3以降で利用できます。
 ```
 
-[Contents]セクションには、ページで使用されているWebコンテンツのリストが表示されます。 ウィジェットに表示されるコンテンツやコンテンツフィールドにマップされたコンテンツなどがあります。 *コンテンツ*ボタン（![Contents](../../images/icon-contents.png)）をクリックして、[Contents]パネルを開きます。 このセクションから、さまざまなアクションを実行して、Webコンテンツを編集および管理できます。 詳細については、[Managing Web Content on Content Pages](./managing-web-content-on-content-pages.md)を参照してください。
+[Contents]セクションには、ページで使用されているWebコンテンツのリストが表示されます。 ウィジェットに表示されるコンテンツやコンテンツフィールドにマップされたコンテンツなどがあります。 **コンテンツ** ボタン（![Contents](../../images/icon-contents.png)）をクリックして、[Contents]パネルを開きます。 このセクションから、さまざまなアクションを実行して、Webコンテンツを編集および管理できます。 詳細については、[Managing Web Content on Content Pages](./managing-web-content-on-content-pages.md)を参照してください。
 
 ## ページ構造
 
@@ -96,7 +96,7 @@ Liferay DXP 7.3以降で利用できます。
 
 ## ルックアンドフィール
 
-*ルックアンドフィール*アイコン（![Look and Feel](../../images/icon-look-and-feel.png)）をクリックして、テーマを変更したり、ページの他のオプションを管理したりします。 これらのオプションについては、 [Configuring Individual Pages](./06-configuring-individual-pages.md#look-and-feel) でさらに詳しく説明します。
+**ルックアンドフィール** アイコン（![Look and Feel](../../images/icon-look-and-feel.png)）をクリックして、テーマを変更したり、ページの他のオプションを管理したりします。 これらのオプションについては、 [Configuring Individual Pages](./06-configuring-individual-pages.md#look-and-feel) でさらに詳しく説明します。
 
 ## コメント
 

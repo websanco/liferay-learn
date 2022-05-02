@@ -40,7 +40,7 @@ npm install -g yo gulp
 
     ```{important}
     このコマンドにベーステーマの名前を追加して、新しいテーマのベースにすることができます。 たとえば、 `yo liferay-theme:classic`を実行すると、DXPの標準テーマに基づいて新しいテーマが作成されます。
-    ```<!-- Add link to an explanation of choosing (and changing) the base theme when available.-->1. プロンプトでテーマの名前を入力します。 デフォルトの「My Liferay Theme」を使用するには、Enterキーを押します。
+    ``` <!-- Add link to an explanation of choosing (and changing) the base theme when available.-->1. プロンプトでテーマの名前を入力します。 デフォルトの「My Liferay Theme」を使用するには、Enterキーを押します。
 
     ```
     ? What would you like to call your theme? (My Liferay Theme)
@@ -79,7 +79,7 @@ npm install -g yo gulp
 
 ## ブレードを使用したテーマの作成
 
-近日公開！<!-- Link to Theme Templates documentation when available-->
+近日公開！ <!-- Link to Theme Templates documentation when available-->
 
 ## 追加情報
 

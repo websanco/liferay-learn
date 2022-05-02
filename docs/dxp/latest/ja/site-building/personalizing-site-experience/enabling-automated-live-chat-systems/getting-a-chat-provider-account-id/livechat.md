@@ -6,11 +6,11 @@
 
 1. [LiveChatアカウント](https://my.livechatinc.com/) にログインします。
 
-1. 左下隅にある*［Settings Cog］*をクリックします。
+1. 左下隅にある ［**Settings Cog**］ をクリックします。
 
     ![LiveChatダッシュボードページが表示されます。](./livechat/images/01.png)
 
-1. *［Channels］* &rarr; *［Chat Page］*の順にクリックします。
+1. ［**Channels**］ &rarr; ［**Chat Page**］ の順にクリックします。
 
     ![LiveChatのチャットページが表示されます。](./livechat/images/02.png)
 

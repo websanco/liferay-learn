@@ -15,7 +15,7 @@ using-content-pages/content-page-editor-ui-reference.md
 
 他のページタイプと同様に、 [ウィジェット](./using-content-pages/using-widgets-on-a-content-page.md) を使用してコンテンツページに動的な機能を追加し、ブログ、Wiki、掲示板などを統合することができます。 コンテントページは、主に[ページフラグメント](./page-fragments-and-widgets/using-fragments.md)を使って構築されます。 ページフラグメントは、テキスト、画像、リンクなどの編集可能なコンポーネントを含む、拡張可能で再利用可能なページ要素であり、利用可能なコンテンツにマップすることもできます。 DXPのすぐに使えるフラグメントの詳細については [デフォルトのフラグメントリファレンス](./page-fragments-and-widgets/using-fragments/default-fragments-reference.md) を、独自のフラグメントを作成する方法については [フラグメントの開発](../developer-guide/developing-page-fragments/developing-fragments-intro.md) を参照してください。
 
-コンテントページを編集する場合、 *サイトビルダー* を介して変更が行われ、下書きとして保存されます。 本番環境に影響を与えることなく、現在の編集セッションで行った変更を確認したり、元に戻したり、やり直したりすることができます。 準備ができたら、変更をすぐに公開するか、カスタム [ワークフロー](../../process-automation/workflow/introduction-to-workflow.md) を有効にして、レビューと公開のプロセスを指示します。 ページ要素に[コメント](./using-content-pages/using-page-comments.md)を追加して、チームメンバーと共同作業することもできます。
+コンテントページを編集する場合、 **サイトビルダー** を介して変更が行われ、下書きとして保存されます。 本番環境に影響を与えることなく、現在の編集セッションで行った変更を確認したり、元に戻したり、やり直したりすることができます。 準備ができたら、変更をすぐに公開するか、カスタム [ワークフロー](../../process-automation/workflow/introduction-to-workflow.md) を有効にして、レビューと公開のプロセスを指示します。 ページ要素に[コメント](./using-content-pages/using-page-comments.md)を追加して、チームメンバーと共同作業することもできます。
 
 ![コンテントページを編集する場合、すべての変更はサイトビルダーを介して行われます。](./using-content-pages/images/01.png)
 

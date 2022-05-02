@@ -6,21 +6,21 @@ Liferay 7.4+ DXP/Portal以降では、ページに翻訳されたコンテンツ
 
 hreflangsがこのように制限されている場合、Liferayの動作はページタイプによって異なる可能性があります。
 
-* **ウィジェットページ**：ウィジェットページの名前の翻訳に使用される言語がhreflangタグに追加されます。
+***ウィジェットページ** ：ウィジェットページの名前の翻訳に使用される言語がhreflangタグに追加されます。
 
-* **コンテンツページ**/**表示ページテンプレート**：ページフラグメントの翻訳に使用される言語がhreflangタグに追加されます。
+***コンテンツページ** / **表示ページテンプレート** ：ページフラグメントの翻訳に使用される言語がhreflangタグに追加されます。
 
 ## インスタンス設定
 
 Liferayインスタンスのhreflang動作を構成するには、次の手順に従います。
 
-1. *グローバルメニュー*（![Global Menu](../../images/icon-applications-menu.png)）を開き、*［コントロールパネル］*タブをクリックして、*［Instance Settings］* &rarr; *［Pages］* &rarr; *［SEO］*（仮想インスタンススコープ）に移動します。
+1. **グローバルメニュー**（![Global Menu](../../images/icon-applications-menu.png)）を開き、 ［**コントロールパネル**］ タブをクリックして、 ［**Instance Settings**］ &rarr; ［**Pages**］ &rarr; ［**SEO**］（仮想インスタンススコープ）に移動します。
 
-1. *［Enable Only Translated Hreflangs］*をオンまたはオフにします。
+1. ［**Enable Only Translated Hreflangs**］ をオンまたはオフにします。
 
    ![すべてのインスタンスページのhreflang動作を有効または無効にします。](./configuring-hreflang-meta-data/images/01.png)
 
-1. *［保存］* をクリックします。
+1. ［**保存**］ をクリックします。
 
 有効にすると、hreflangメタデータは、ページに翻訳されたコンテンツがある言語に対してのみ生成されます。 無効にすると、ページのhreflangタグにサイトで使用可能なすべての言語が設定されます。
 
@@ -28,13 +28,13 @@ Liferayインスタンスのhreflang動作を構成するには、次の手順�
 
 サイトスコープを使用してインスタンス内のすべてのサイトのhreflang動作を構成するには、次の手順に従います。
 
-1. *グローバルメニュー*（![Global Menu](../../images/icon-applications-menu.png)）を開き、*［コントロールパネル］*タブをクリックして、*［Instance Settings］* &rarr; *［Pages］* &rarr; *［SEO］*（サイトスコープ）に移動します。
+1. **グローバルメニュー**（![Global Menu](../../images/icon-applications-menu.png)）を開き、 ［**コントロールパネル**］ タブをクリックして、 ［**Instance Settings**］ &rarr; ［**Pages**］ &rarr; ［**SEO**］（サイトスコープ）に移動します。
 
-1. *［Enable Only Translated Hreflangs］*をオンまたはオフにします。
+1. ［**Enable Only Translated Hreflangs**］ をオンまたはオフにします。
 
    ![すべてのサイトのhreflang動作を有効または無効にします。](./configuring-hreflang-meta-data/images/02.png)
 
-1. *［Save］* をクリックします。
+1. ［**Save**］ をクリックします。
 
 有効にすると、hreflangメタデータは、ページに翻訳されたコンテンツがある言語に対してのみ生成されます。 無効にすると、ページのhreflangタグにサイトで使用可能なすべての言語が設定されます。
 
@@ -46,17 +46,17 @@ Liferayインスタンスのhreflang動作を構成するには、次の手順�
 
 次の手順に従って、個々のサイトのhreflang設定を構成します。
 
-1. 目的の*サイト*に移動します。
+1. 目的の **サイト** に移動します。
 
-1. *サイトメニュー*（![Site Menu](../../images/icon-product-menu.png)）を開き、*［Configuration］*を展開し、*［Site Setting］* &rarr; *［Pages］* &rarr; *［SEO］*に移動します。
+1. **サイトメニュー**（![Site Menu](../../images/icon-product-menu.png)）を開き、 ［**Configuration**］ を展開し、 ［**Site Setting**］ &rarr; ［**Pages**］ &rarr; ［**SEO**］ に移動します。
 
-1. *［Enable Only Translated Hreflangs］*をオンまたはオフにします。
+1. ［**Enable Only Translated Hreflangs**］ をオンまたはオフにします。
 
    この構成は、現在のサイトのページにのみ影響します。
 
    ![サイトのページのhreflang動作を有効または無効にします。](./configuring-hreflang-meta-data/images/03.png)
 
-1. *［Save］* をクリックします。
+1. ［**Save**］ をクリックします。
 
 有効にすると、hreflangメタデータは、ページに翻訳されたコンテンツがある言語に対してのみ生成されます。 この構成は、現在のサイトのすべてのページに影響し、インスタンス構成の設定より優先されます。
 

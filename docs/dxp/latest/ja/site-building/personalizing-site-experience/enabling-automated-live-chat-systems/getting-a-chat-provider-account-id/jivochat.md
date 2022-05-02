@@ -6,15 +6,15 @@
 
 1. [JivoChatアカウント](https://app.jivosite.com/) にログインします。
 
-2. _［Configure Your Channel］_に移動し、左下隅にある*［Manage］*をクリックします。
+2. ［**Configure Your Channel**］ に移動し、左下隅にある ［**Manage**］ をクリックします。
 
     ![［Configure Your Channel］に移動し、左下隅にある［管理する］をクリックします。](./jivochat/images/01.png)
 
-3. *［Channels］* &rarr; *［Settings］*の順にクリックします。
+3. ［**Channels**］ &rarr; ［**Settings**］ の順にクリックします。
 
     ![［チャネル］をクリックしてから、［Settings］をクリックします。](./jivochat/images/02.png)
 
-4. *［Installation］* をクリックします。
+4. ［**Installation**］ をクリックします。
 
     以下のスクリーンショットでは、強調表示されている部分がLiferayチャットプロバイダーアカウントIDとして使用されます。  この部分を選択してコピーし、チャットプロバイダーアカウントIDとして使用して、Liferayインスタンスとの[自動ライブチャット統合を有効にします](../enabling-automated-live-chat-systems.md)。
 

@@ -12,13 +12,13 @@ Webコンテンツの表示ウィジェットをページに追加して構成�
 
 2.  [Webコンテンツの表示ウィジェットの構成メニューを開きます](TODO:adding-widgets#configuration-menu) 。
 
-3.  *[選択]* ボタンをクリックして、Webコンテンツの一部を選択します。
+3. [**選択**] ボタンをクリックして、Webコンテンツの一部を選択します。
 
 4.  表示したい記事を検索してクリックします。
 
 5.  ウィジェットで有効にしたい [オプションを設定します](#using-the-web-content-display-widget-configuration-options) 。
 
-6.  *[保存]* をクリックして変更を適用し、構成ウィンドウを閉じます。 コンテンツページを使用している場合は、*[Publish]* をクリックして、ウィジェットを含むページを公開します。
+6. [**保存**] をクリックして変更を適用し、構成ウィンドウを閉じます。 コンテンツページを使用している場合は、 [**Publish**] をクリックして、ウィジェットを含むページを公開します。
 
 ## Webコンテンツ表示設定オプション
 
@@ -26,18 +26,18 @@ Webコンテンツの表示ウィジェットをページに追加して構成�
 
   - **ユーザーツール**
 
-      - *翻訳:* コンテンツで利用可能なロケールを表示します。 特定の言語のページで作業している場合は、ロケールに合ったコンテンツの翻訳を選択できます。
+      - **翻訳:** コンテンツで利用可能なロケールを表示します。 特定の言語のページで作業している場合は、ロケールに合ったコンテンツの翻訳を選択できます。
 
-      - *印刷する:* コンテンツの印刷に適したバージョンで印刷ダイアログを開きます。
+      - **印刷する:** コンテンツの印刷に適したバージョンで印刷ダイアログを開きます。
 
-      - *PDF | DOC | ODT | TXTでダウンロード:* 選択した形式でWebコンテンツをダウンロードします。 これらのオプションは、[Open Officeの統合が有効になっている](../../content-authoring-and-management/documents-and-media/devops/enabling-openoffice-libreoffice-integration.md)場合にのみ使用できます。
+      - **PDF | DOC | ODT | TXTでダウンロード:** 選択した形式でWebコンテンツをダウンロードします。 これらのオプションは、[Open Officeの統合が有効になっている](../../content-authoring-and-management/documents-and-media/devops/enabling-openoffice-libreoffice-integration.md)場合にのみ使用できます。
 
   - **メタデータコンテンツ**
 
-      - *関連するアセット*
-      - *評価*
-      - *コメント*
-      - *コメントの評価*
+      - **関連するアセット**
+      - **評価**
+      - **コメント**
+      - **コメントの評価**
 
 ![Webコンテンツの公開は簡単です。 最低限、公開したいコンテンツを選択すればよいだけです。 また、多くのオプション機能を有効にして、ユーザーがコンテンツを操作できるようにすることもできます。](./additional-content-display-options/using-the-web-content-display-widget/images/02.png)
 
@@ -45,15 +45,15 @@ Webコンテンツの表示ウィジェットをページに追加して構成�
 
 デフォルトでは、ゲストはWebコンテンツにコメントを残すことはできません。 Webコンテンツの記事にゲストがコメントできるようにするには、次の手順を実行します。
 
-1.  [グローバルメニュー](../../getting-started/navigating-dxp.md) ( ![Global Menu icon](../../images/icon-applications-menu.png) ) を開き、 *[コントロールパネル]* → *[ロール]* に移動します。
+1.  [グローバルメニュー](../../getting-started/navigating-dxp.md) ( ![Global Menu icon](../../images/icon-applications-menu.png) ) を開き、 [**コントロールパネル**] → [**ロール**] に移動します。
 
-2.  *[ゲスト]* → *[権限の定義]* を選択します。
+2. [**ゲスト**] → [**権限の定義**] を選択します。
 
-3.  左のメニューから、*[サイトとアセットライブラリの管理]* → *[Content & Data]* → *[Webコンテンツ]* を選択します。
+3.  左のメニューから、 [**サイトとアセットライブラリの管理**] → [**Content & Data**] → [**Webコンテンツ**] を選択します。
 
-4.  Webコンテンツ記事の見出しに移動し、*[Add Discussion]* チェックボックスをオンにします。
+4.  Webコンテンツ記事の見出しに移動し、 [**Add Discussion**] チェックボックスをオンにします。
 
-5.  *[保存]* をクリックします。
+5. [**保存**] をクリックします。
 
 ゲストはWebコンテンツの記事にコメントを投稿できるようになりました。
 
@@ -63,11 +63,11 @@ Webコンテンツの表示ウィジェットをページに追加して構成�
 
 1.  Webコンテンツの表示ウィジェットにカーソルを合わせます。
 2.  ウィジェットコンテナ内のアクションメニュー (![Options](../../images/icon-app-options.png)) を開きます。
-3.  *[Webコンテンツの編集]* を選択してエディターを起動するか、 *[テンプレートの編集]* を選択してWebコンテンツ記事のテンプレート用のテンプレートエディターを起動します (ある場合)。
+3. [**Webコンテンツの編集**] を選択してエディターを起動するか、 [**テンプレートの編集**] を選択してWebコンテンツ記事のテンプレート用のテンプレートエディターを起動します (ある場合)。
 
 ### Open OfficeとWebコンテンツの表示の統合
 
-Liferay Portalのインスタンスで[OpenOffice/LibreOfficeの統合を有効](../../content-authoring-and-management/documents-and-media/devops/enabling-openoffice-libreoffice-integration.md)にしている場合は、コンテンツのドキュメントの変換を有効にできます。 その後、ユーザーは選択した形式でコンテンツをダウンロードできます。 *ユーザーツール*のリストで、Webコンテンツ表示の設定ページに希望する変換オプションを有効にします。
+Liferay Portalのインスタンスで[OpenOffice/LibreOfficeの統合を有効](../../content-authoring-and-management/documents-and-media/devops/enabling-openoffice-libreoffice-integration.md)にしている場合は、コンテンツのドキュメントの変換を有効にできます。 その後、ユーザーは選択した形式でコンテンツをダウンロードできます。 **ユーザーツール** のリストで、Webコンテンツ表示の設定ページに希望する変換オプションを有効にします。
 
 ![アセットの変換オプションが一覧表示されます。](./additional-content-display-options/using-the-web-content-display-widget/images/03.png)
 

@@ -1,6 +1,6 @@
 # サイトエクスペリエンスのパーソナライズ
 
-Liferay DXPは、パーソナライズされたエクスペリエンスを理解して提供するための強力なツールを備えています。 パーソナライズされた体験を提供するための最初のステップは、ユーザーの収集、つまりセグメンテーションから始まります。 [*ユーザーセグメント*](./segmentation/creating-and-managing-user-segments.md) には、 [*コレクション*](../../content-authoring-and-management/collections-and-collection-pages/about-collections-and-collection-pages.md)が動的に割り当てられます。 ユーザーをコレクションに手動で割り当てる代わりに、ユーザーは共有属性または動作に基づいてセグメントに割り当てられます（詳細は、 [コレクションのパーソナライズ](./experience-personalization/personalizing-collections.md) を参照してください）。
+Liferay DXPは、パーソナライズされたエクスペリエンスを理解して提供するための強力なツールを備えています。 パーソナライズされた体験を提供するための最初のステップは、ユーザーの収集、つまりセグメンテーションから始まります。 [**ユーザーセグメント**](./segmentation/creating-and-managing-user-segments.md) には、 [**コレクション**](../../content-authoring-and-management/collections-and-collection-pages/about-collections-and-collection-pages.md)が動的に割り当てられます。 ユーザーをコレクションに手動で割り当てる代わりに、ユーザーは共有属性または動作に基づいてセグメントに割り当てられます（詳細は、 [コレクションのパーソナライズ](./experience-personalization/personalizing-collections.md) を参照してください）。
 
 ## セグメンテーション
 
@@ -28,7 +28,7 @@ Analytics Cloudとの統合により、機械学習を活用した詳細なデ�
 
 ### コンテンツページ
 
-コンテンツページのパーソナライゼーションを行うと、ページの閲覧者に基づいてページレイアウトとコンテンツが動的に変化します。 ページを表示しているユーザーのユーザーセグメント基準に基づいて、さまざまなテキスト、画像、ウィジェット、さらにはさまざまなレイアウトを提供する[コンテントページ](../creating-pages/using-content-pages.md)の*エクスペリエンス*を作成できます。 詳細は、 [コンテンツページのパーソナライゼーション](./experience-personalization/content-page-personalization.md) を参照してください。
+コンテンツページのパーソナライゼーションを行うと、ページの閲覧者に基づいてページレイアウトとコンテンツが動的に変化します。 ページを表示しているユーザーのユーザーセグメント基準に基づいて、さまざまなテキスト、画像、ウィジェット、さらにはさまざまなレイアウトを提供する[コンテントページ](../creating-pages/using-content-pages.md)の **エクスペリエンス** を作成できます。 詳細は、 [コンテンツページのパーソナライゼーション](./experience-personalization/content-page-personalization.md) を参照してください。
 
 ![ユーザーのさまざまなセグメントに固有のエクスペリエンスを作成できます。](./personalizing-site-experience/images/02.png)
 
@@ -44,7 +44,7 @@ Analytics Cloudとの統合により、機械学習を活用した詳細なデ�
 
 ### ユーザーエクスペリエンスのプレビュー
 
-ページの上部にある*シミュレーション*ボタン（![Simulation](../../images/icon-simulation.png)）をクリックし、*［Segments］*の選択からユーザーセグメントを選択して、そのユーザーセグメントのメンバーとしてページをプレビューすることにより、ユーザーがページで体験できるさまざまなエクスペリエンスをプレビューできます。
+ページの上部にある **シミュレーション** ボタン（![Simulation](../../images/icon-simulation.png)）をクリックし、 ［**Segments**］ の選択からユーザーセグメントを選択して、そのユーザーセグメントのメンバーとしてページをプレビューすることにより、ユーザーがページで体験できるさまざまなエクスペリエンスをプレビューできます。
 
 ユーザーセグメントのパースペクティブを表示すると、そのユーザーセグメントのコンテンツページまたはコンテンツセットのパーソナライゼーションがプレビューされます。
 

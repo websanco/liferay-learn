@@ -1,6 +1,6 @@
 # コンテントページエディタUIリファレンス
 
-コンテントページエディタを使用して、コンテントページに要素を[追加](./adding-elements-to-content-pages.md)および構成できます。 コンテントページエディタを開くには、 *アプリケーションバー*の右上にある*［編集］![Edit icon](../../../images/icon-edit.png)(*) をクリックしてください。 編集ツールバーとサイドバーが表示され、コンテントページを作成するためのツールやコンポーネントが表示されます。
+コンテントページエディタを使用して、コンテントページに要素を[追加](./adding-elements-to-content-pages.md)および構成できます。 コンテントページエディタを開くには、 **アプリケーションバー** の右上にある ［**編集］![Edit icon](../../../images/icon-edit.png**)() をクリックしてください。 編集ツールバーとサイドバーが表示され、コンテントページを作成するためのツールやコンポーネントが表示されます。
 
 - [編集ツールバー](#editing-toolbar)
 - [編集サイドバー](#editing-sidebar)
@@ -19,7 +19,7 @@
 
 ### 翻訳
 
-*［言語フラグ］*をクリックして、翻訳ドロップダウンメニューにアクセスします。 ここでは、ページの有効言語のステータスを表示したり、言語を切り替えて翻訳を直接表示および編集したりできます。 詳細は、[サイト言語の設定](../../site-settings/site-localization.md)を参照してください。
+［**言語フラグ**］ をクリックして、翻訳ドロップダウンメニューにアクセスします。 ここでは、ページの有効言語のステータスを表示したり、言語を切り替えて翻訳を直接表示および編集したりできます。 詳細は、[サイト言語の設定](../../site-settings/site-localization.md)を参照してください。
 
 [［エクスペリエンス］](../../personalizing-site-experience/experience-personalization/content-page-personalization.md) をコンテントページのパーソナライズに使用する場合、サイトで使用できる言語を使用してエクスペリエンスを設定することができます。 詳しくは、 [Managing Experience Localization](../../personalizing-site-experience/experience-personalization/content-page-personalization.md#managing-experience-localization) を参照してください。
 
@@ -61,7 +61,7 @@
 
 ### プレビューと公開
 
-変更後、 *プレビュー* (![Preview](../../../images/icon-preview.png)) をクリックすると、ページの公開ビューが表示されます。 変更をプレビューしながら、表示するエクスペリエンス、言語、およびデバイスレイアウトを選択できます。 完了したら、*［公開］*をクリックします。 デフォルトでは、公開すると変更がすぐに公開されます。 ただし、カスタム[ワークフロー](../../../process-automation/workflow/introduction-to-workflow.md)を有効にしてレビューと公開のプロセスを指示している場合は、［Publish］をクリックすると定義済みの手順が開始されます。
+変更後、 **プレビュー**(![Preview](../../../images/icon-preview.png)) をクリックすると、ページの公開ビューが表示されます。 変更をプレビューしながら、表示するエクスペリエンス、言語、およびデバイスレイアウトを選択できます。 完了したら、 ［**公開**］ をクリックします。 デフォルトでは、公開すると変更がすぐに公開されます。 ただし、カスタム[ワークフロー](../../../process-automation/workflow/introduction-to-workflow.md)を有効にしてレビューと公開のプロセスを指示している場合は、［Publish］をクリックすると定義済みの手順が開始されます。
 
 ## 編集サイドバー
 
@@ -84,29 +84,29 @@ DXP 7.4 以前では、ブラウザ (![Browser](../../../images/icon-browser.png
 
 フラグメントとウィジェットサイドバーパネル(![Fragments and Widgets icon](../../../images/icon-cards2.png))では、ページを作成するために、ページ要素とカスタムページ要素の両方にアクセスできます。
 
-- **フラグメント**：フラグメントは、コンテントページの主要な構成要素で、拡張可能で再利用可能なドラッグアンドドロップ要素です。 例としては、レイアウト要素、ビデオ、テキストオーバーレイ付きのバナー画像などがあります。 DXPのすぐに使えるフラグメントの詳細については [フラグメントの使用](../page-fragments-and-widgets/using-fragments.md) を、独自のフラグメントを作成する方法については [フラグメントの開発](../../developer-guide/developing-page-fragments/developing-fragments-intro.md) を参照してください。
+- **フラグメント** ：フラグメントは、コンテントページの主要な構成要素で、拡張可能で再利用可能なドラッグアンドドロップ要素です。 例としては、レイアウト要素、ビデオ、テキストオーバーレイ付きのバナー画像などがあります。 DXPのすぐに使えるフラグメントの詳細については [フラグメントの使用](../page-fragments-and-widgets/using-fragments.md) を、独自のフラグメントを作成する方法については [フラグメントの開発](../../developer-guide/developing-page-fragments/developing-fragments-intro.md) を参照してください。
 
    ```{note}
       コンテントページエディタのさまざまなページフラグメントの説明については、 [デフォルトのフラグメントリファレンス](./../page-fragments-and-widgets/using-fragments/default-fragments-reference.md) を参照してください。
    ```
 
-- **ウィジェット**：他のDXPコンテキストと同様に、ウィジェットはページに動的機能を追加する [アプリケーション](../../../building-applications.html) です。 例としては、ブログ、掲示板、カレンダーなどがあります。 詳細は、[Using Widgets on Content Pages](./using-widgets-on-a-content-page.md)を参照してください。
+- **ウィジェット** ：他のDXPコンテキストと同様に、ウィジェットはページに動的機能を追加する [アプリケーション](../../../building-applications.html) です。 例としては、ブログ、掲示板、カレンダーなどがあります。 詳細は、[Using Widgets on Content Pages](./using-widgets-on-a-content-page.md)を参照してください。
 
 ### ブラウザ
 
 > 対応可能：Liferay DXP/Portal 7.4以降
 
-*ブラウザ* サイドバーパネル (![Browser](../../../images/icon-browser.png)) では、ページ上の全てのWebコンテンツを表示、編集、管理することが可能です。 ページにマッピングされたコンテンツは、ドキュメントやメディア、Webコンテンツの記事など、さまざまな種類のアセットから作ることができます。 ウィジェットに表示されるコンテンツやコンテンツフィールドにマッピングされたコンテンツなどがあります。 詳細については、 [コンテントページのコンテンツの管理](./managing-content-in-content-pages.md) を参照してください。
+**ブラウザ** サイドバーパネル (![Browser](../../../images/icon-browser.png)) では、ページ上の全てのWebコンテンツを表示、編集、管理することが可能です。 ページにマッピングされたコンテンツは、ドキュメントやメディア、Webコンテンツの記事など、さまざまな種類のアセットから作ることができます。 ウィジェットに表示されるコンテンツやコンテンツフィールドにマッピングされたコンテンツなどがあります。 詳細については、 [コンテントページのコンテンツの管理](./managing-content-in-content-pages.md) を参照してください。
 
    ![［ブラウザ］タブでは、ページ上のWebコンテンツを閲覧、編集、管理することができます。](./content-page-editor-ui-reference/images/02.gif)
 
-- **ページ要素**：ページ要素は、すべてのページ要素の階層的なアウトラインを表示し、それらの要素を選択、設定、削除することが可能です。 デザインモード中にページ上の任意の要素をクリックすると、選択パネルが開き、階層内の選択した要素が強調表示されます。 要素を選択すると、その要素に一般、スタイル、およびリンクオプションがある場合はそれらにアクセスできます。 詳しくは、 [フラグメントの設定](../page-fragments-and-widgets/using-fragments/configuring-fragments.md) を参照してください。
+- **ページ要素** ：ページ要素は、すべてのページ要素の階層的なアウトラインを表示し、それらの要素を選択、設定、削除することが可能です。 デザインモード中にページ上の任意の要素をクリックすると、選択パネルが開き、階層内の選択した要素が強調表示されます。 要素を選択すると、その要素に一般、スタイル、およびリンクオプションがある場合はそれらにアクセスできます。 詳しくは、 [フラグメントの設定](../page-fragments-and-widgets/using-fragments/configuring-fragments.md) を参照してください。
 
    ```{note}
    ページのヘッダーとフッターは、ページ要素パネルの階層に表示されません。 これは、[マスターページテンプレート](../defining-headers-and-footers/master-page-templates.md)  でしか修正できないからです。
    ```
 
-- **ページコンテンツ**：ページコンテンツから、ページに含まれるコンテンツと、それらを編集するオプションにアクセスすることができます。 このコンテンツは、必須情報、名称、サブタイプなど、タイプ別に分類されています。 ここから、さまざまなアクションを行うことができます。
+- **ページコンテンツ** ：ページコンテンツから、ページに含まれるコンテンツと、それらを編集するオプションにアクセスすることができます。 このコンテンツは、必須情報、名称、サブタイプなど、タイプ別に分類されています。 ここから、さまざまなアクションを行うことができます。
 
   - コンテンツのタイプや名前でフィルタリングすることで、すぐに見つけて編集することができます。
   - [コレクション](../../../content-authoring-and-management/collections-and-collection-pages/about-collections-and-collection-pages.md) の全項目を見て、新規項目を追加します。
@@ -119,7 +119,7 @@ DXP 7.4 以前では、ブラウザ (![Browser](../../../images/icon-browser.png
 
 ### ページデザインオプション
 
-*ルック&フィール* (![Look and Feel](../../../images/icon-format.png)) をクリックすると [マスターページテンプレート](../defining-headers-and-footers/managing-master-page-templates.md) または [スタイルブック](../../site-appearance/style-books/using-a-style-book-to-standardize-site-appearance.md)を変更することができます。
+**ルック&フィール**(![Look and Feel](../../../images/icon-format.png)) をクリックすると [マスターページテンプレート](../defining-headers-and-footers/managing-master-page-templates.md) または [スタイルブック](../../site-appearance/style-books/using-a-style-book-to-standardize-site-appearance.md)を変更することができます。
 
 ### コメント
 

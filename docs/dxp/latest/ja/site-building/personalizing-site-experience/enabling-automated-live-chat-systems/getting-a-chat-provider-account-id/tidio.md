@@ -6,14 +6,14 @@
 
 1. [Tidioアカウント](https://www.tidio.com/panel/login) にログインします。
 
-1. *歯車アイコン*をクリックして、［Settings］メニューに入ります。
+1. **歯車アイコン** をクリックして、［Settings］メニューに入ります。
 
     ![［Settings］メニューに歯車アイコンが表示されます。](./tidio/images/01.png)
 
-1. *［General］*セクションに移動し、*［Developer］*メニューオプションをクリックします。
+1. ［**General**］ セクションに移動し、 ［**Developer**］ メニューオプションをクリックします。
 
     ![この画像は、［一般］セクションと［開発者］メニューオプションを示しています。](./tidio/images/02.png)
 
-1. *パブリックキー*をコピーし、それをチャットプロバイダーアカウントIDとして使用して、Liferayインスタンスとの[自動ライブチャット統合を有効にします](../enabling-automated-live-chat-systems.md)。
+1. **パブリックキー** をコピーし、それをチャットプロバイダーアカウントIDとして使用して、Liferayインスタンスとの[自動ライブチャット統合を有効にします](../enabling-automated-live-chat-systems.md)。
 
     ![パブリックキーをコピーして、チャットプロバイダーアカウントIDとして使用します。](./tidio/images/03.png)

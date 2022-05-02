@@ -6,7 +6,7 @@
 
 1. [LivePersonアカウント](https://authentication.liveperson.net/login.html) にログインします。
 
-1. 左下隅にある*ユーザーアイコン*をクリックします。
+1. 左下隅にある **ユーザーアイコン** をクリックします。
 
     ![ホームダッシュボードとその情報を確認できます。](./liveperson/images/01.png)
 

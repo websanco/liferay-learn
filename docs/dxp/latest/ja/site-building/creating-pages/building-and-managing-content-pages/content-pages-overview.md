@@ -18,7 +18,7 @@ Liferay Portalには、ページの作成に使用できるいくつかのレイ
 ## フラグメント
 
 <!-- ```note::
-   Available in Liferay DXP 7.3+. This panel was previously divided between the *Sections* and *Section Builder* panels.
+   Available in Liferay DXP 7.3+. This panel was previously divided between the **Sections** and **Section Builder** panels.
 ``` -->
 
 > 入手可能：Liferay 7.3以降。以前は *セクション* と *セクションビルダー* パネルに分割されていました。
@@ -46,7 +46,7 @@ Liferay Portalには、ページの作成に使用できるいくつかのレイ
 ### フッター
 
 <!-- ```note::
-   Available in Liferay DXP 7.3+. These Fragments were previously included in the *Sections* panel.
+   Available in Liferay DXP 7.3+. These Fragments were previously included in the **Sections** panel.
 ``` -->
 
 > 利用可能：Liferay DXP 7.3以降;以前は *Sections* パネルに含まれていました。
@@ -57,8 +57,8 @@ Liferay Portalには、ページの作成に使用できるいくつかのレイ
    Available in Liferay DXP 7.3+. These Fragments were previously included in the *Sections* panel.
 ``` -->
 
-> 利用可能：Liferay DXP 7.3以降;以前は *Sections* パネルに含まれていました。
-*[Navigation Bars]* パネルには、ページのヘッダーとして追加できるフラグメントが含まれています。 Liferay DXP 7.3での使用については、[Master Pages](../defining-headers-and-footers/master-page-templates.md)を参照してください。
+> 利用可能：Liferay DXP 7.3以降;以前は **Sections** パネルに含まれていました。
+[**Navigation Bars**] パネルには、ページのヘッダーとして追加できるフラグメントが含まれています。 Liferay DXP 7.3での使用については、[Master Pages](../defining-headers-and-footers/master-page-templates.md)を参照してください。
 ### コンテンツ表示
 
 <!-- ```note::
@@ -83,7 +83,7 @@ While portlets are rendered according to [render-weight](https://docs.liferay.co
 
 > 対応可能：Liferay DXP 7.3以降
 
-[コンテンツ]パネルには、ページで使用されているWebコンテンツのリストが表示されます。 ウィジェットに表示されるコンテンツやコンテンツフィールドにマップされたコンテンツなどがあります。 *コンテンツ*ボタン（![Contents](../../../images/icon-contents.png)）をクリックして、[Contents]パネルを開きます。 このパネルから、さまざまなアクションを実行して、Webコンテンツを編集および管理できます。 詳細については、 [コンテンツページでのWebコンテンツの管理](./managing-web-content-on-content-pages.md) を参照してください。
+[コンテンツ]パネルには、ページで使用されているWebコンテンツのリストが表示されます。 ウィジェットに表示されるコンテンツやコンテンツフィールドにマップされたコンテンツなどがあります。 **コンテンツ** ボタン（![Contents](../../../images/icon-contents.png)）をクリックして、[Contents]パネルを開きます。 このパネルから、さまざまなアクションを実行して、Webコンテンツを編集および管理できます。 詳細については、 [コンテンツページでのWebコンテンツの管理](./managing-web-content-on-content-pages.md) を参照してください。
 
 ## ページ構造
 
@@ -93,7 +93,7 @@ While portlets are rendered according to [render-weight](https://docs.liferay.co
 
 ## ルックアンドフィール
 
-*ルックアンドフィール*アイコン（![Look and Feel](../../../images/icon-look-and-feel.png)）をクリックして、テーマを変更したり、ページの他のオプションを管理したりします。 これらのオプションについては、 [Configuring Individual Pages](../page-settings/configuring-individual-pages.md#look-and-feel) でさらに詳しく説明します。
+**ルックアンドフィール** アイコン（![Look and Feel](../../../images/icon-look-and-feel.png)）をクリックして、テーマを変更したり、ページの他のオプションを管理したりします。 これらのオプションについては、 [Configuring Individual Pages](../page-settings/configuring-individual-pages.md#look-and-feel) でさらに詳しく説明します。
 
 ## コメント
 

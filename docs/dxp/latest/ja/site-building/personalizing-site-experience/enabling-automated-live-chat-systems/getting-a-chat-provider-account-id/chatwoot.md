@@ -6,15 +6,15 @@
 
 1. [Chatwootアカウント](https://app.chatwoot.com/app/login) にログインします。
 
-1. サイドナビゲーションバーの*［Inboxes］*をクリックします。
+1. サイドナビゲーションバーの ［**Inboxes**］ をクリックします。
 
     ![サイドナビゲーションバーの［Inboxes］をクリックします。](./chatwoot/images/01.png)
 
-1. *［Settings］*をクリックして、受信トレイの構成を表示します。
+1. ［**Settings**］ をクリックして、受信トレイの構成を表示します。
 
     ![［Settings］をクリックして、受信トレイの構成を表示します。](./chatwoot/images/02.png)
 
-1. *［Configuration］*メニュータブをクリックします。
+1. ［**Configuration**］ メニュータブをクリックします。
 
     `websiteToken`のフィールド値を探します。 値はスクリーンショットで強調表示されており、チャットプロバイダーアカウントIDとして使用して、Liferayインスタンスとの[自動ライブチャット統合を有効にする](../enabling-automated-live-chat-systems.md)ことができます。
 

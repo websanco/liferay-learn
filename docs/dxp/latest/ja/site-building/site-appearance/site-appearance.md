@@ -35,7 +35,7 @@ Note how they tie into themes as well (depending on them for definitions), possi
 フラグメントとウィジェットは、サイトの構成要素です。 サイトの外観に合わせて、様々なカスタマイズが可能です。
 
 * [フラグメントのカスタマイズ](../developer-guide/developing-page-fragments/developing-fragments-intro.md) は、サイトのフラグメントページのルック＆フィールを調整するために使用されます。
-* アプリケーション表示テンプレート<!--利用可能な場合はリンクを追加-->は、サイト上のウィジェットの外観や動作をカスタマイズすることができます。
+* アプリケーション表示テンプレート <!--利用可能な場合はリンクを追加--> は、サイト上のウィジェットの外観や動作をカスタマイズすることができます。
 
 ## テーマ
 

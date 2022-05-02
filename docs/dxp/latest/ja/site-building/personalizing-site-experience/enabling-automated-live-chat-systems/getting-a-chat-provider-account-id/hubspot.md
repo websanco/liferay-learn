@@ -18,17 +18,17 @@
 
 Hubspotアカウントにログインしている状態で、
 
-1. *Settings*ボタンをクリックします。
+1. **Settings** ボタンをクリックします。
 
     ![［Settings］ボタンをクリックします。](./hubspot/images/02.png)
 
-1. ページの左側にある</em>［Integrations］</em> &rarr; *［API Key］*をクリックします。</p>
+1. ページの左側にある</em>［Integrations］</em> &rarr; ［**API Key**］ をクリックします。</p>
 
     ![［Integrations］をクリックして、APIキーにアクセスします。](./hubspot/images/03.png)</li>
 
 1
 
-*［Show］*をクリックして、APIトークンキーを表示します。
+［**Show**］ をクリックして、APIトークンキーを表示します。
 
     ![［Show］をクリックして、APIトークンキーを表示します。](./hubspot/images/04.png)</ol>
 

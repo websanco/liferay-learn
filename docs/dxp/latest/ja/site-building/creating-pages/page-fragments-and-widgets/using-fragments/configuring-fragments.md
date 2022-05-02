@@ -9,7 +9,7 @@ configuring-fragments/fragment-sub-elements-reference.md
 configuring-fragments/localizing-fragment-configuration-fields.md
 ```
 
-Liferay DXPは、フラグメントとそのサブ要素の構成オプションを提供します。 これらのオプションは異なる場合がありますが、一部はすべてに共通です。 使用可能な構成オプションを表示するには、ページまたはテンプレートの編集を開始し、サイドバーメニューの*ブラウザ*パネル（![Browser](../../../../images/icon-browser.png)）を開きます。 次に、フラグメントまたはサブ要素をクリックし、使用可能なタブから設定するオプションを選択します。
+Liferay DXPは、フラグメントとそのサブ要素の構成オプションを提供します。 これらのオプションは異なる場合がありますが、一部はすべてに共通です。 使用可能な構成オプションを表示するには、ページまたはテンプレートの編集を開始し、サイドバーメニューの **ブラウザ** パネル（![Browser](../../../../images/icon-browser.png)）を開きます。 次に、フラグメントまたはサブ要素をクリックし、使用可能なタブから設定するオプションを選択します。
 
 ```{note}
 一部のフラグメント設定フィールドはローカライズできます。 詳細については、[フラグメント設定フィールドのローカライズ](./configuring-fragments/localizing-fragment-configuration-fields.md)を参照してください。

@@ -16,21 +16,21 @@
 
     - Liferay DXP 7.4+の場合
 
-      1. サイトのメニューから、*［Configuration］* &rarr; *［Site Settings］*に移動します。
-      1. ［プラットフォーム］セクションで、*［Site Configuration］*をクリックしてから、*［Details］*をクリックします。
+      1. サイトのメニューから、 ［**Configuration**］ &rarr; ［**Site Settings**］ に移動します。
+      1. ［プラットフォーム］セクションで、 ［**Site Configuration**］ をクリックしてから、 ［**Details**］ をクリックします。
 
        ![Liferay DXP 7.4以降では、［サイト設定］セクションからサイトメンバーシップタイプを変更します。](./changing-site-membership-type/images/02.png)
 
    - 以前のLiferay DXPバージョンの場合
 
-      1. サイトメニューから、*［Configuration］*に移動し、*［General］*セクションをクリックします。
+      1. サイトメニューから、 ［**Configuration**］ に移動し、 ［**General**］ セクションをクリックします。
       1. ［Details］領域で［メンバーシップタイプ］オプションを見つけます。
 
        ![以前のLiferay DXPバージョンでは、［Settings］セクションからサイトメンバーシップタイプを変更します。](./changing-site-membership-type/images/01.png)
 
-1. *［メンバーシップタイプ］* セレクターを開き、オプションを選択します。
+1. ［**メンバーシップタイプ**］ セレクターを開き、オプションを選択します。
 
-1. *［保存］* をクリックします。
+1. ［**保存**］ をクリックします。
 
 ## 関連情報
 

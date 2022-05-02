@@ -25,7 +25,7 @@ Liferay DXP 7.4以降の場合、フラグメントコレクションはLiferay 
 
 * [編集可能な要素](../reference/fragments/fragment-specific-tags-reference.md): テキスト、画像、リンク、および「リッチ」テキスト要素を編集可能にして、ユーザーがコンテンツをカスタムのテキストと画像に置き換えることができるようにします。 これは、フラグメントを再利用可能にするフラグメントの主要な機能です。 ウィジェットを埋め込むこともできます。
 * [ドロップ ゾーン](./defining-fragment-drop-zones) `<lfr-drop-zone></lfr-drop-zone>` ラベルを使用してフラグメントにドロップ ゾーンを追加します。 追加したら、フラグメントとウィジェットを定義した領域にドラッグ アンド ドロップできます。
-* [設定オプション](./adding-configuration-options-to-fragments.md)<!-- TODO: Fix link -->: フラグメントのフォントの色を変更するなど、アプリケーションの設定メニューに設定オプションを追加します。
+* [設定オプション](./adding-configuration-options-to-fragments.md) <!-- TODO: Fix link --> : フラグメントのフォントの色を変更するなど、アプリケーションの設定メニューに設定オプションを追加します。
 * [FreeMarker](https://freemarker.apache.org/) : FreeMarker は、変数、条件文などで HTML を拡張するテンプレート言語です。 HTML から、FreeMarker に [代替 (角括弧) 構文](https://freemarker.apache.org/docs/dgui_misc_alternativesyntax.html) を使用できます。
 
 ```{important}

@@ -8,9 +8,9 @@
 
 ### ページ管理から新しいページを追加する
 
-1. *プロダクトメニュー* (![Product Menu](../../../images/icon-menu.png)) をクリックして、 *［Site Builder］* &rarr; *［Pages］*に移動します。
+1. **プロダクトメニュー**(![Product Menu](../../../images/icon-menu.png)) をクリックして、 ［**Site Builder**］ &rarr; ［**Pages**］ に移動します。
 
-1. *追加* ボタン (![Add](../../../images/icon-add.png)) をクリックし、 *［ページの追加］*をクリックします。
+1. **追加** ボタン (![Add](../../../images/icon-add.png)) をクリックし、 ［**ページの追加**］ をクリックします。
 
     ![［Pages］画面では、サイトページ全体を編集できます。](./adding-a-page-to-a-site/images/02.png)
 
@@ -18,13 +18,13 @@
     7.3から、デフォルトのホームページはウィジェットページではなくコンテントページになりました。
     ```
 
-1. ［ Page Template Sets］下の、ページに使用する ［Basic Templates］または ［Global Templates］を選択します。 空の [コンテントページ](../understanding-pages/understanding-pages.md#page-types) から始めるには、 *空白の* [マスターページテンプレート](../defining-headers-and-footers/master-page-templates.md)をクリックしてください。 または、その他の見出しの下にあるページテンプレートのいずれかをクリックします。
+1. ［ Page Template Sets］下の、ページに使用する ［Basic Templates］または ［Global Templates］を選択します。 空の [コンテントページ](../understanding-pages/understanding-pages.md#page-types) から始めるには、 **空白の**[マスターページテンプレート](../defining-headers-and-footers/master-page-templates.md)をクリックしてください。 または、その他の見出しの下にあるページテンプレートのいずれかをクリックします。
 
    ![ページの基本テンプレートまたはグローバルテンプレートを選択します。](./adding-a-page-to-a-site/images/03.png)
 
-1. 追加ページダイアログで、名前を入力し、 *［追加］*をクリックします。
+1. 追加ページダイアログで、名前を入力し、 ［**追加**］ をクリックします。
 
-1. 新規の［ウィジェットページ］の場合、残りの設定を行い、 *［保存］*をクリックします。
+1. 新規の［ウィジェットページ］の場合、残りの設定を行い、 ［**保存**］ をクリックします。
 
 ```{tip}
 デフォルトでは、新しいページはサイトのナビゲーションメニューに含まれます。 このナビゲーションメニューを設定するには、[サイトナビゲーションの管理](../../site-navigation/managing-site-navigation.md)を参照してください。
@@ -34,9 +34,9 @@
 
 > 対応可能：Liferay DXP/Portal 7.3以降
 
-1. *プロダクトメニュー* (![Product Menu](../../../images/icon-menu.png)) をクリックし、画面左側の *ページツリー* (![Page Tree](../../../images/icon-page-tree.png))をクリックします。
+1. **プロダクトメニュー**(![Product Menu](../../../images/icon-menu.png)) をクリックし、画面左側の **ページツリー**(![Page Tree](../../../images/icon-page-tree.png))をクリックします。
 
-1. *追加* (![Add](../../../images/icon-add-app.png)) ボタンをクリックすると、新しいページが追加されます。
+1. **追加**(![Add](../../../images/icon-add-app.png)) ボタンをクリックすると、新しいページが追加されます。
 
    ![ページツリーメニューを使用して新規ページを追加する。](adding-a-page-to-a-site/images/04.png)
 
@@ -52,9 +52,9 @@
 
 ### ページ管理からサブページを追加する
 
-1. *プロダクトメニュー* (![Product Menu](../../../images/icon-menu.png)) をクリックして <*［Site Builder］* &rarr; *［Pages］*に移動します。
+1. **プロダクトメニュー**(![Product Menu](../../../images/icon-menu.png)) をクリックして < ［**Site Builder**］ &rarr; ［**Pages**］ に移動します。
 
-1. 既存のページの横にある *追加* ボタン（![Add](../../../images/icon-duplicate.png)）をクリックします。
+1. 既存のページの横にある **追加** ボタン（![Add](../../../images/icon-duplicate.png)）をクリックします。
 
    ![終了するページの横にある［Add］ボタンをクリックして、新しい子ページを作成します。](./adding-a-page-to-a-site/images/05.png)
 
@@ -68,9 +68,9 @@
 
 > 対応可能：Liferay DXP/Portal 7.3以降
 
-1. *プロダクトメニュー* (![Product Menu](../../../images/icon-menu.png)) をクリックし、 画面左側の*ページツリー* (![Page Tree](../../../images/icon-page-tree.png))をクリックします。
+1. **プロダクトメニュー**(![Product Menu](../../../images/icon-menu.png)) をクリックし、 画面左側の **ページツリー**(![Page Tree](../../../images/icon-page-tree.png))をクリックします。
 
-1. 既存のページの横にあるアクションメニュー（![Actions icon](../../../images/icon-actions.png)）をクリックし、 *［Add Child Page］*を選択します。
+1. 既存のページの横にあるアクションメニュー（![Actions icon](../../../images/icon-actions.png)）をクリックし、 ［**Add Child Page**］ を選択します。
 
     ![ページツリーメニューを使用して子ページを追加する。](adding-a-page-to-a-site/images/01.png)
 

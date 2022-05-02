@@ -6,11 +6,11 @@
 
 1. [Zendeskアカウント](https://www.zendesk.com/login/#login) にログインします。
 
-1. ［ダッシュボード］ホームページで、*［Manage widget］*リンクをクリックします。
+1. ［ダッシュボード］ホームページで、 ［**Manage widget**］ リンクをクリックします。
 
     ![Zendeskダッシュボードページが表示されます。](./zendesk/images/01.png)
 
-1. （オプション） *［Settings］*に移動し、次の手順の指示に従います。
+1. （オプション）［**Settings**］ に移動し、次の手順の指示に従います。
 
     ![Zendeskの［Settings］セクションが表示されます。](./zendesk/images/02.png)
 

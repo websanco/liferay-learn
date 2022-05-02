@@ -12,15 +12,15 @@ Open Graph [](meta) タグは、認証されていないユーザーへの公開
 
 次の手順に従って、サイトにOpen Graphを構成します。
 
-1. *サイトメニュー* （![Site Menu](../../images/icon-product-menu.png)）を開き、*［設定］* &rarr; *［Settings］* （以前は*［サイト設定］*）に移動します。
+1. **サイトメニュー**（![Site Menu](../../images/icon-product-menu.png)）を開き、 ［**設定**］ &rarr; ［**Settings**］（以前は ［**サイト設定**］）に移動します。
 
-1. *［Open Graph］*小見出しまで下にスクロールして、展開します。
+1. ［**Open Graph**］ 小見出しまで下にスクロールして、展開します。
 
-1. *［Enable Open Graph］*設定をオンまたはオフにし、サイトのOpen Graphを有効または無効にします。
+1. ［**Enable Open Graph**］ 設定をオンまたはオフにし、サイトのOpen Graphを有効または無効にします。
 
    ![サイトのページに埋め込まれたOpen Graphタグを有効または無効にします。](./configuring-open-graph/images/01.png)
 
-1. （オプション）*［Image］*フィールドと*［画像の別の説明］*フィールドを使用して、サイトのページのデフォルトの`og:image`プロパティを設定します。
+1. （オプション）［**Image**］ フィールドと ［**画像の別の説明**］ フィールドを使用して、サイトのページのデフォルトの`og:image`プロパティを設定します。
 
    これらの値は、 [ページ](../creating-pages/page-settings/configuring-individual-pages.md#open-graph) および[表示ページ](../displaying-content/using-display-page-templates/configuring-seo-and-open-graph.md)の構成によって上書きされます。
 
@@ -32,7 +32,7 @@ Open Graph [](meta) タグは、認証されていないユーザーへの公開
 
    ![デフォルトのOpen Graph設定をプレビューします。](./configuring-open-graph/images/03.png)
 
-1. *［保存］* をクリックします。
+1. ［**保存**］ をクリックします。
 
 ## `og:image`プロパティの分析
 
@@ -48,7 +48,7 @@ Open Graph [](meta) タグは、認証されていないユーザーへの公開
 
 ［画像の別の説明］フィールドにテキストを入力すると、選択した画像のスクリーンリーダーで読み取られるデフォルトのテキストが決まります。
 
-Open Graph画像のローカライズされた別の説明を作成するには、*［言語フラグ］*ボタンをクリックして、設定する言語を選択します。 ここで入力された値によって、デフォルトの`og:image:alt`タグが定義されます。
+Open Graph画像のローカライズされた別の説明を作成するには、 ［**言語フラグ**］ ボタンをクリックして、設定する言語を選択します。 ここで入力された値によって、デフォルトの`og:image:alt`タグが定義されます。
 
 ```html
 <meta property="og:image:alt" content="This is an example." />

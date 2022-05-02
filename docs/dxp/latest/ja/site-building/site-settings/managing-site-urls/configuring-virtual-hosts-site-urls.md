@@ -3,7 +3,7 @@
 バーチャルホストは、ドメイン名（つまり、`www.my-site.com`）をサイトに接続します。 これは、完全なドメインまたはサブドメイン（たとえば、`developers.my-site.com`）にできます。 これを使用して、1つのLiferay DXPサーバー上で複数のWebサイトを個別のサイトとしてホストできます。 次の手順に従って、バーチャルホストのサイトURLを設定します。
 
 1. プロバイダーで、Liferay DXPインスタンスのIPアドレスを指すようにDNS名を設定します（例：`developers.my-site.com`）。 <!-- I think we can take this .5 step further by either linking to a often cited resource on how on a common domain name provider, a user would update the DNS name to point to a particular IP address. -->
-1. Liferay DXP内で、プロダクトメニューを開き、サイトメニューの*［Configuration］* &rarr; *［Settings］*に移動します。
+1. Liferay DXP内で、プロダクトメニューを開き、サイトメニューの ［**Configuration**］ &rarr; ［**Settings**］ に移動します。
 1. ［一般］タブで、［Site URL］パネルを展開します。
 
     ![バーチャルホストを設定する場合、サイトの公開ページと非公開ページを異なるドメインに設定できます。](./configuring-virtual-hosts-site-urls/images/01.png)
@@ -20,7 +20,7 @@
     ロケールは、サイトで使用可能な言語に制限されます（定義されている場合）。 ロケールが指定されていない場合は、サイトのデフォルトのロケールが使用されます。 ロケールは、関連付けられているすべてのドメインのサイトに適用されます。
     ```
 
-1. **Liferay 7.3 GA2以降**では、複数のドメインを持っている場合、公開ページや非公開ページのURL入力の横にある`+`/`-`ボタンをクリックすると、そのページセットに新しいURLを追加したり、URLを削除したりできます。
+1. **Liferay 7.3 GA2以降** では、複数のドメインを持っている場合、公開ページや非公開ページのURL入力の横にある`+`/`-`ボタンをクリックすると、そのページセットに新しいURLを追加したり、URLを削除したりできます。
 
     ![複数のバーチャルホストを追加して、異なるドメインを指すようにすることができます。](./configuring-virtual-hosts-site-urls/images/03.png)
 
@@ -28,6 +28,6 @@
     ドメインは単一のサイトにのみ適用できます。 1つのドメインを複数のサイトにマッピングすることはできません。
     ```
 
-1. 変更を*保存*します。
+1. 変更を **保存** します。
 
 これで、設定済みのドメインを使用してサイトにアクセスできるようになりました。

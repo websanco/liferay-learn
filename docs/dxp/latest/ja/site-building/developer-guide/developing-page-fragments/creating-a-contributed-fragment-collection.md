@@ -56,7 +56,7 @@
     INFO  [fileinstall-directory-watcher][BundleStartStopLogger:46] STARTED com.acme.l3m9.impl_1.0.0 [1824]
     ```
 
-5.  提供されたコレクションとフラグメントが利用可能であることを確認します。 ブラウザで`https://localhost:8080`にアクセスし、画面左側のサイトメニューで、*[デザイン]* → *[フラグメント]* に移動します。 コレクションは、*デフォルト*コレクションのリストに表示されます。
+5.  提供されたコレクションとフラグメントが利用可能であることを確認します。 ブラウザで`https://localhost:8080`にアクセスし、画面左側のサイトメニューで、 [**デザイン**] → [**フラグメント**] に移動します。 コレクションは、 **デフォルト** コレクションのリストに表示されます。
 
     ![提供されたフラグメントコレクションは、デフォルトのコレクションとともに表示されます。](./creating-a-contributed-fragment-collection/images/01.png)
 
@@ -143,7 +143,7 @@ private ServletContext _servletContext;
     Windows での展開に失敗した場合は、必要に応じて、コンテナで [Liferay をバインドマウント](../../../installation-and-upgrades/installing-liferay/using-liferay-docker-images/providing-files-to-the-container.md) し、`.\gradlew jar` を使用してモジュール JAR をビルドし、バインドマウントされた適切なフォルダに JAR をコピーする必要があります。
     ```
 
-2.  更新されたフラグメントが提供されたコレクションに含まれていることを確認します。 ブラウザで`https://localhost:8080`にアクセスし、画面左側のサイトメニューで、*[デザイン]* → *[フラグメント]* に移動します。 L3M9 ジャンボトロンフラグメントが L3M9 コレクションに表示されます。
+2.  更新されたフラグメントが提供されたコレクションに含まれていることを確認します。 ブラウザで`https://localhost:8080`にアクセスし、画面左側のサイトメニューで、 [**デザイン**] → [**フラグメント**] に移動します。 L3M9 ジャンボトロンフラグメントが L3M9 コレクションに表示されます。
 
     ![カスタムのジャンボトロンフラグメントは、提供されたコレクションに含まれています。](./creating-a-contributed-fragment-collection/images/02.png)
 

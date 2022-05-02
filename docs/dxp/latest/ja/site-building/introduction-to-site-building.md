@@ -2,7 +2,7 @@
 
 サイトはLiferay DXPの基本的なコンポーネントです。 基本的に、サイトは、追加機能を提供するコンテンツアプリケーションを含むページのコレクションです。 多くのアプリケーションは、すぐに使用できます。
 
-Liferay DXPインスタンスを最初に起動して設定すると、デフォルトのサイトが含まれています。 デフォルトでは、インスタンス名は *Liferay*となっていますが、この値はセットアップウィザードの設定や、コントロールパネルの[［インスタンス設定］](../system-administration/configuring-liferay/virtual-instances/instance-configuration.md)で変更することができます。
+Liferay DXPインスタンスを最初に起動して設定すると、デフォルトのサイトが含まれています。 デフォルトでは、インスタンス名は **Liferay** となっていますが、この値はセットアップウィザードの設定や、コントロールパネルの[［インスタンス設定］](../system-administration/configuring-liferay/virtual-instances/instance-configuration.md)で変更することができます。
 
 ![Liferay DXPで強力なサイトを構築することができます。](./introduction-to-site-building/images/01.png)
 

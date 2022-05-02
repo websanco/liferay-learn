@@ -16,7 +16,7 @@ using-fragments/managing-fragments.md
 using-fragments/propagating-fragment-changes.md
 ```
 
-ページ*フラグメント*は、拡張可能で再利用可能なドラッグアンドドロップ要素であり、[コンテントページ](../using-content-pages.md)とテンプレート（[マスター](../defining-headers-and-footers/master-page-templates.md)、[ページ](../adding-pages/creating-a-page-template.md)、[表示ページ](../../displaying-content/using-display-page-templates/about-display-page-templates-and-display-pages.md)など）の作成に使用できます。 フラグメントはCSS、HTML、およびJavaScriptを使用して構築されており、ページに構造と機能の両方を提供できます。
+ページ **フラグメント** は、拡張可能で再利用可能なドラッグアンドドロップ要素であり、[コンテントページ](../using-content-pages.md)とテンプレート（[マスター](../defining-headers-and-footers/master-page-templates.md)、[ページ](../adding-pages/creating-a-page-template.md)、[表示ページ](../../displaying-content/using-display-page-templates/about-display-page-templates-and-display-pages.md)など）の作成に使用できます。 フラグメントはCSS、HTML、およびJavaScriptを使用して構築されており、ページに構造と機能の両方を提供できます。
 
 ![フラグメントを使用してコンテンツページとテンプレートを作成します。](./using-fragments/images/01.png)
 

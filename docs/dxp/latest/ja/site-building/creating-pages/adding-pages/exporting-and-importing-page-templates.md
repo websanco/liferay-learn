@@ -12,17 +12,17 @@ Liferay DXP 7.4以降の場合、ページテンプレートコレクション�
 
 ページテンプレートを作成するには、次の手順に従います。
 
-1. *サイトメニュー* (![Site Menu](../../../images/icon-product-menu.png)) を開き、 *［Design］* &rarr; *［Page Templates］*に移動します。
+1. **サイトメニュー**(![Site Menu](../../../images/icon-product-menu.png)) を開き、 ［**Design**］ &rarr; ［**Page Templates**］ に移動します。
 
-1. *［Page Templates］*タブをクリックします。
+1. ［**Page Templates**］ タブをクリックします。
 
 1. 目的のテンプレートを含むページテンプレートセットを選択します。
 
-1. 目的のページテンプレートの*アクション*ボタン (![Actions Button](../../../images/icon-actions.png))をクリックし、 *［Export］*を選択します。
+1. 目的のページテンプレートの **アクション** ボタン (![Actions Button](../../../images/icon-actions.png))をクリックし、 ［**Export**］ を選択します。
 
    ![［エクスポート］をクリックして、ページテンプレートをZipとしてエクスポートします。](./exporting-and-importing-page-templates/images/01.png)
 
-1. 確認ウィンドウで*［OK］*をクリックします。
+1. 確認ウィンドウで ［**OK**］ をクリックします。
 
 ページテンプレートは、ZIPファイルとしてローカルマシンにダウンロードされます。
 
@@ -45,19 +45,19 @@ ZIPファイルには、 `display-page-template.json`, `master-page.json`, `page
 
 ページテンプレートをインポートするには、次の手順に従います。
 
-1. *サイトメニュー* (![Site Menu](../../../images/icon-product-menu.png)) を開き、 *［デザイン］* &rarr; *［ページテンプレート］*に移動します。
+1. **サイトメニュー**(![Site Menu](../../../images/icon-product-menu.png)) を開き、 ［**デザイン**］ &rarr; ［**ページテンプレート**］ に移動します。
 
-1. アプリケーションバーの*アクション*ボタン（![Actions Button](../../../images/icon-actions.png)）をクリックし、*［Import］*を選択します。
+1. アプリケーションバーの **アクション** ボタン（![Actions Button](../../../images/icon-actions.png)）をクリックし、 ［**Import**］ を選択します。
 
    ![インポート機能は右上のオプションメニューにあります。](./exporting-and-importing-page-templates/images/02.png)
 
 1. 目的のページテンプレートファイルを選択します。
 
-1. *［Import］*をクリックします。
+1. ［**Import**］ をクリックします。
 
    ![ページテンプレートはZIPファイルとしてインポートされます。](./exporting-and-importing-page-templates/images/03.png)
 
-1. *［インポート］*ウィンドウを閉じます。
+1. ［**インポート**］ ウィンドウを閉じます。
 
 ページテンプレートがサイトにインポートされました。
 

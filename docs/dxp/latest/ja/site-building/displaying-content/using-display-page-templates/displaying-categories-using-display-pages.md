@@ -11,7 +11,7 @@
 - [カテゴリ用の表示ページテンプレート](../../creating-pages/using-content-pages/adding-elements-to-content-pages.md) を作成し、このテンプレートをデフォルトとして設定します。
 - [カテゴリを作成または編集する](../../../content-authoring-and-management/tags-and-categories/defining-categories-and-vocabularies-for-content.md)際に、お好みの表示ページテンプレートを選択してください。
 
-また、複数のカテゴリに一度に表示ページテンプレートを割り当てることも可能です。 サイト管理&rarr; *［カテゴリー設定］* &rarr; *［カテゴリ］/0>で、アップデートしたいカテゴリをチェックし、ページ (![Page](../../../images/icon-page.png)) アイコンをクリックするか、上部のアクション (![Actions](../../../images/icon-actions.png)) メニューから、 *［表示ページテンプレートの割り当て］*を選択します。</p>
+また、複数のカテゴリに一度に表示ページテンプレートを割り当てることも可能です。 サイト管理&rarr; ［**カテゴリー設定**］ &rarr; ［**カテゴリ］/0>で、アップデートしたいカテゴリをチェックし、ページ (![Page](../../../images/icon-page.png)) アイコンをクリックするか、上部のアクション (![Actions](../../../images/icon-actions.png)) メニューから、**［表示ページテンプレートの割り当て］*を選択します。</p>
 
 ![Actionsメニューで表示ページテンプレートをデフォルトに設定します。](./displaying-categories-using-display-pages/images/07.png)
 
@@ -33,32 +33,32 @@
 
 カテゴリがまだ存在しない場合は作成し、表示ページにマッピングしたい情報を記載します。 この例では、説明と画像を含む2つの新しいカテゴリを作成します。各カテゴリは、異なるサービスに対応しています。
 
-1. *自動車保険*という名前の [新規カテゴリーを作成します](../../content-authoring-and-management/tags-and-categories/defining-categories-and-vocabularies-for-content.md#defininig-categories) 。
-1. カテゴリアプリケーションで、新しいカテゴリの *［Actions ］* （![Actions](../../../images/icon-actions.png)）メニューをクリックし、 *［編集］*を選択します。
-1. *［Details］* タブをクリックし、このカテゴリの *［説明］* を追加します。
+1. **自動車保険** という名前の [新規カテゴリーを作成します](../../content-authoring-and-management/tags-and-categories/defining-categories-and-vocabularies-for-content.md#defininig-categories) 。
+1. カテゴリアプリケーションで、新しいカテゴリの ［**Actions**］（![Actions](../../../images/icon-actions.png)）メニューをクリックし、 ［**編集**］ を選択します。
+1. ［**Details**］ タブをクリックし、このカテゴリの ［**説明**］ を追加します。
 
    ![カテゴリを編集し、説明を追加します。](./displaying-categories-using-display-pages/images/01.png)
 
-1. *［画像］* タブをクリックし、 *［画像の追加］* (![Add Image](../../../images/icon-add.png)) ボタンを使用して、カテゴリの画像を追加します。
-1. *［Details］* タブを再度クリックし、 *［保存］*をクリックします。
+1. ［**画像**］ タブをクリックし、 ［**画像の追加**］(![Add Image](../../../images/icon-add.png)) ボタンを使用して、カテゴリの画像を追加します。
+1. ［**Details**］ タブを再度クリックし、 ［**保存**］ をクリックします。
 
 ### ステップ２：表示ページテンプレートの作成
 
 Liferay DXP 7.4から、表示ページテンプレートにコンテンツの種類としてカテゴリを使用するオプションが追加されました。
 
-1. *［サイト管理］* &rarr; *［デザイン］* &rarr; *［ページテンプレート］*へ移動します。
-1. *［表示ページテンプレート］* をクリックし、 *［追加］* (![Add Image](../../../images/icon-add.png)) ボタンをクリックします。
+1. ［**サイト管理**］ &rarr; ［**デザイン**］ &rarr; ［**ページテンプレート**］ へ移動します。
+1. ［**表示ページテンプレート**］ をクリックし、 ［**追加**］(![Add Image](../../../images/icon-add.png)) ボタンをクリックします。
 1. この表示ページテンプレートに使用するマスターページテンプレートを選択します。
 
     ```{tip}
     すべてのページやページテンプレートは、マスターページテンプレートを必要とします。 詳細については、 [マスターページテンプレート](../../creating-pages/defining-headers-and-footers/master-page-templates.md) を参照してください。
     ```
 
-1. 表示ページテンプレートの *名前* を入力し、 *［コンテンツの種類］*のドロップダウン・メニューで、 *［カテゴリ］*を選択してください。
+1. 表示ページテンプレートの **名前** を入力し、 ［**コンテンツの種類**］ のドロップダウン・メニューで、 ［**カテゴリ**］ を選択してください。
 
     ![新しい表示ページテンプレートのコンテンツタイプとして、 [ナビゲーション]を選択します。](./displaying-categories-using-display-pages/images/02.png)
 
-1. *［保存］*をクリックします。
+1. ［**保存**］ をクリックします。
 
 ### ステップ３：表示ページテンプレートの編集と公開
 
@@ -72,9 +72,9 @@ Liferay DXP 7.4から、表示ページテンプレートにコンテンツの�
 
 1. コンテナフラグメントをデフォルトのドロップゾーンにドラッグアンドドロップします。
 1. コンテナフラグメントの上に、新しいカードフラグメントをドラッグアンドドロップします。
-1. *Selection* メニュー（A）をクリックし、カードのタイトル（B）をクリックするとマッピングオプションが表示されます。
-1. マッピングエリアと *［ソース］* ドロップダウンメニューで、 *［カテゴリ］* がまだ選択されていない場合は、選択します。
-1. *［フィールド］* ドロップダウンメニューをクリックし、 *［名前］* (C) を選択して、カテゴリの名前とカードをマップします。
+1. **Selection** メニュー（A）をクリックし、カードのタイトル（B）をクリックするとマッピングオプションが表示されます。
+1. マッピングエリアと ［**ソース**］ ドロップダウンメニューで、 ［**カテゴリ**］ がまだ選択されていない場合は、選択します。
+1. ［**フィールド**］ ドロップダウンメニューをクリックし、 ［**名前**］(C) を選択して、カテゴリの名前とカードをマップします。
 
    ![カードフラグメントを使用して、表示ページテンプレートのカテゴリフィールドをマッピングします。](./displaying-categories-using-display-pages/images/03.png)
 
@@ -84,13 +84,13 @@ Liferay DXP 7.4から、表示ページテンプレートにコンテンツの�
     - コンテンツ &rarr; 説明
     - 画像 &rarr; メイン画像
 
-1. *［公開］*をクリックします。
-1. *表示ページテンプレート* リストで、新しい表示ページテンプレートの *［Actions］* (![Actions](../../../images/icon-actions.png)) メニューをクリックして *［Mark as Default］*を選択します。
+1. ［**公開**］ をクリックします。
+1. **表示ページテンプレート** リストで、新しい表示ページテンプレートの ［**Actions**］(![Actions](../../../images/icon-actions.png)) メニューをクリックして ［**Mark as Default**］ を選択します。
 
    ![Actionsメニューで表示ページテンプレートをデフォルトに設定します。](./displaying-categories-using-display-pages/images/04.png)
 
-1. *［サイト管理］* &rarr; *［カテゴリー設定］* &rarr; *［カテゴリ］* へ行き [Step 1](#step-1-creating-and-editing-the-categories) からカテゴリを持つボキャブラリを選択します。
-1. 任意のカテゴリで、 *［Actions］* （![Actions](../../../images/icon-actions.png)）メニューをクリックし、 *［表示ページを表示］*を選択します。
+1. ［**サイト管理**］ &rarr; ［**カテゴリー設定**］ &rarr; ［**カテゴリ**］ へ行き [Step 1](#step-1-creating-and-editing-the-categories) からカテゴリを持つボキャブラリを選択します。
+1. 任意のカテゴリで、 ［**Actions**］（![Actions](../../../images/icon-actions.png)）メニューをクリックし、 ［**表示ページを表示**］ を選択します。
 
    ![Actionsメニューのオプションを使用して、いずれかのカテゴリの表示ページを開きます。](./displaying-categories-using-display-pages/images/05.png)
 

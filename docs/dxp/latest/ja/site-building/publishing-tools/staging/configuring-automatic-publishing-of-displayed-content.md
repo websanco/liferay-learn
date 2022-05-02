@@ -8,17 +8,17 @@
 
 このステージング動作を構成するには、次の手順に従います。
 
-1. *グローバルメニュー*（![Global Menu](../../../images/icon-applications-menu.png)）を開き、*［コントロールパネル］*をクリックして、*［システム設定］* &rarr; *［Infrastructure］*に移動します。
+1. **グローバルメニュー**（![Global Menu](../../../images/icon-applications-menu.png)）を開き、 ［**コントロールパネル**］ をクリックして、 ［**システム設定**］ &rarr; ［**Infrastructure**］ に移動します。
 
-1. 左側のメニューの［仮想インスタンススコープ］の下にある*［ステージング］*をクリックします。
+1. 左側のメニューの［仮想インスタンススコープ］の下にある ［**ステージング**］ をクリックします。
 
-1. *［Publish Displayed Content by Default］*をオンまたはオフにします。
+1. ［**Publish Displayed Content by Default**］ をオンまたはオフにします。
 
    * 有効にすると、公開プロセスの構成に関係なく、表示されたコンテンツが動的データリスト(DDL)表示、フォーム、Webコンテンツの表示、およびWiki表示のウィジェットに対して再公開されます。
 
    * 無効にすると、公開プロセスの構成に含まれているコンテンツのみが公開されます。
 
-1. *［Save］* をクリックします。
+1. ［**Save**］ をクリックします。
 
 ![［Publish Displayed Content by Default］をオンまたはオフにします。](./configuring-automatic-publishing-of-displayed-content/images/01.png)
 

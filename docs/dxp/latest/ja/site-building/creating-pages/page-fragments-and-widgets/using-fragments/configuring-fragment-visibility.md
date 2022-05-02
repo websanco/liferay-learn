@@ -47,15 +47,15 @@
 
 コンテンツページのフラグメントの閲覧性は、次の3つの方法で変更できます。
 
-1. コンテントページエディタのサイドバーから、 *ブラウザ* (![Browser](../../../../images/icon-browser.png)) &rarr; *［Page Elements］* エリアに移動します。ページ フラグメントの横にある *Hide* (![Hide](../../../../images/icon-hide.png)) または *Unhide* (![Unhide](../../../../images/icon-preview.png)) のコントロールをクリックします。
+1. コンテントページエディタのサイドバーから、 **ブラウザ**(![Browser](../../../../images/icon-browser.png)) &rarr; ［**Page Elements**］ エリアに移動します。ページ フラグメントの横にある **Hide**(![Hide](../../../../images/icon-hide.png)) または **Unhide**(![Unhide](../../../../images/icon-preview.png)) のコントロールをクリックします。
 
    ![コンテントページエディタのサイドバーにある［Page Elements］エリアから、フラグメントの閲覧性を変更します。](./configuring-fragment-visibility/images/03.gif)
 
-1. コンテントページエディタのサイドバーから、 *ブラウザ* (![Browser](../../../../images/icon-browser.png)) &rarr; *［Styles］* エリアの*［Hide Fragment］*ボックスをオンまたはオフにします。
+1. コンテントページエディタのサイドバーから、 **ブラウザ**(![Browser](../../../../images/icon-browser.png)) &rarr; ［**Styles**］ エリアの ［**Hide Fragment**］ ボックスをオンまたはオフにします。
 
    ![コンテントページエディタのサイドバーにある［ブラウザ］ &rarr; ［Styles］エリアから、フラグメントの閲覧性を変更します。](./configuring-fragment-visibility/images/04.gif)
 
-1. フラグメントのアクションメニュー(![Actions](../../../../images/icon-widget-options.png))から、 *［Hide Fragment］* (![Hide Fragment](../../../../images/icon-hide.png))オプションを選択します。
+1. フラグメントのアクションメニュー(![Actions](../../../../images/icon-widget-options.png))から、 ［**Hide Fragment**］(![Hide Fragment](../../../../images/icon-hide.png))オプションを選択します。
 
    ![フラグメントのアクションメニューからフラグメントの閲覧性を変更します。](./configuring-fragment-visibility/images/05.gif)
 
@@ -69,7 +69,7 @@
 
 1. デフォルトのデスクトップビューポートから、スマートフォンアプリのプロモーションテキストを含む新規フラグメントを追加します。
 1. プロモーションテキストでフラグメントを非表示にします。 これでフラグメントがすべてのビューポートで非表示になります。
-1. *［スマホ（横）］* ビューポートをクリックします。 このビューポートでの変更は、スマホ（縦）ビューポートにも影響します。
+1. ［**スマホ（横**）］ ビューポートをクリックします。 このビューポートでの変更は、スマホ（縦）ビューポートにも影響します。
 1. [フラグメントの閲覧性を変更](#changing-fragment-visibility) して、スマートフォンのビューポートでプロモーションテキストを再表示します。
 1. 異なるビューポートをクリックすると、その効果を確認することができます。 プロモーションテキストは、スマホ（横）およびスマホ（縦）のビューポートでのみ利用可能になりました。
 

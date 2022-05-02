@@ -12,13 +12,13 @@
 
 パブリケーションを有効にするには、次の手順に従います。
 
-1. *グローバルメニュー*（![Global Menu](../../../images/icon-applications-menu.png)）を開き、*［Applications］*タブをクリックして、*［Publications］*に移動します。
+1. **グローバルメニュー**（![Global Menu](../../../images/icon-applications-menu.png)）を開き、 ［**Applications**］ タブをクリックして、 ［**Publications**］ に移動します。
 
 1. スイッチを切り替えて、パブリケーションを有効にします。
 
    ![スイッチを切り替えて、［保存］をクリックします。](./enabling-publications/images/01.png)
 
-1. *［Save］*をクリックして、構成を保存します。 これにより、［Publications］アプリケーションページにリダイレクトされます。
+1. ［**Save**］ をクリックして、構成を保存します。 これにより、［Publications］アプリケーションページにリダイレクトされます。
 
 有効にすると、DXPインスタンスのどこからでもドロップダウンの［Publications］バーメニューにアクセスできます。
 
@@ -30,15 +30,15 @@
 
 必要に応じて、［Publications］アプリケーションページからいつでもパブリケーションを無効にできます。
 
-1. *グローバルメニュー*（![Global Menu](../../../images/icon-applications-menu.png)）を開き、*［Applications］*タブをクリックして、*［Publications］*に移動します。
+1. **グローバルメニュー**（![Global Menu](../../../images/icon-applications-menu.png)）を開き、 ［**Applications**］ タブをクリックして、 ［**Publications**］ に移動します。
 
-1. アプリケーションバーの*アクション*ボタン（![Actions Button](../../../images/icon-actions.png)）をクリックし、*［Settings］*を選択します。
+1. アプリケーションバーの **アクション** ボタン（![Actions Button](../../../images/icon-actions.png)）をクリックし、 ［**Settings**］ を選択します。
 
    ![パブリケーションアプリケーションを開き、アクションボタンをクリックして、［Settings］を選択します。](./enabling-publications/images/03.png)
 
 1. スイッチを切り替えて、パブリケーションを無効にします。
 
-1. *［保存］*をクリックします。
+1. ［**保存**］ をクリックします。
 
 ```{important}
 無効にすると、アクティブなすべてのパブリケーションが無効になり、スケジュールされたパブリケーションがキャンセルされ、パブリケーション履歴にアクセスできなくなります。 ただし、DXPはインスタンスのパブリケーション履歴を保持するため、パブリケーションを再度有効にすれば再度アクセスできます。
@@ -48,27 +48,27 @@
 
 パブリケーションを有効にするには、次の手順に従います。
 
-1. *グローバルメニュー*（![Global Menu](../../../images/icon-applications-menu.png)）を開き、［Applications］タブをクリックし、*［Publications］*の下にある *［Settings］*をクリックします。
+1. **グローバルメニュー**（![Global Menu](../../../images/icon-applications-menu.png)）を開き、［Applications］タブをクリックし、 ［**Publications**］ の下にある ［**Settings**］ をクリックします。
 
    ![グローバルメニューで、［Publications］の下の［Settings］をクリックします。](./enabling-publications/images/04.png)
 
-1. スイッチを*［Yes］*に切り替えます。
+1. スイッチを ［**Yes**］ に切り替えます。
 
-1. *［Submit］*をクリックして、構成を保存します。
+1. ［**Submit**］ をクリックして、構成を保存します。
 
-   または、*［Save and Go to Overview］*をクリックすると、構成が保存され、［Publications］概要ページにリダイレクトされます。
+   または、 ［**Save and Go to Overview**］ をクリックすると、構成が保存され、［Publications］概要ページにリダイレクトされます。
 
    ![トグルを［Yes］に設定し、［送信］または［保存して概要に移動］をクリックします。](./enabling-publications/images/05.png)
 
 ## 7.3.xのパブリケーションの無効化
 
-必要に応じて、パブリケーションの*［Settings］*ページからいつでもパブリケーションを無効にできます。
+必要に応じて、パブリケーションの ［**Settings**］ ページからいつでもパブリケーションを無効にできます。
 
-1. *グローバルメニュー*（![Global Menu](../../../images/icon-applications-menu.png)）を開き、［Applications］タブをクリックし、*［Publications］*の下にある *［Settings］*をクリックします。
+1. **グローバルメニュー**（![Global Menu](../../../images/icon-applications-menu.png)）を開き、［Applications］タブをクリックし、 ［**Publications**］ の下にある ［**Settings**］ をクリックします。
 
-1. スイッチを*［No］*に切り替えます。
+1. スイッチを ［**No**］ に切り替えます。
 
-1. *［送信］*をクリックします 。
+1. ［**送信**］ をクリックします 。
 
 ```{important}
 無効にすると、アクティブなすべてのパブリケーションが無効になり、スケジュールされたパブリケーションがキャンセルされ、パブリケーション履歴にアクセスできなくなります。 ただし、DXPはインスタンスのパブリケーション履歴を保持するため、パブリケーションを再度有効にすれば再度アクセスできます。

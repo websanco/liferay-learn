@@ -14,22 +14,22 @@
 
     - Liferay DXP 7.4+の場合
 
-      1. サイトのメニューから、*［Configuration］* &rarr; *［Site Settings］*に移動します。
-      1. ［コンテンツとデータ］セクションで、*［Recycle Bin］*をクリックします。
+      1. サイトのメニューから、 ［**Configuration**］ &rarr; ［**Site Settings**］ に移動します。
+      1. ［コンテンツとデータ］セクションで、 ［**Recycle Bin**］ をクリックします。
 
          ![Liferay DXP 7.4以降では、［サイト設定］セクションからゴミ箱オプションを変更します。](./configuring-the-asset-recycle-bin-for-sites/images/02.png)
 
     - 以前のLiferay DXPバージョンの場合
 
-      1. サイトメニューから、*［Configuration］* &rarr; *［Settings］*に移動します。
-      1. ［Advanced］領域で、*［Recycle Bin］*セクションを展開します。
+      1. サイトメニューから、 ［**Configuration**］ &rarr; ［**Settings**］ に移動します。
+      1. ［Advanced］領域で、 ［**Recycle Bin**］ セクションを展開します。
 
          ![以前のLiferay DXPバージョンでは、［Settings］セクションからゴミ箱オプションを変更します。](./configuring-the-asset-recycle-bin-for-sites/images/01.png)
 
-1. *［ Enable Recycle Bin］*を切り替えて、サイトのごみ箱を有効または無効にします。
-1. 必要に応じて、*［Trash Entries Max Age］*入力フィールドに値（分単位）を指定して、リサイクルされたアセットが完全に削除される前にごみ箱にとどまる時間を指定します。
+1. ［**Enable Recycle Bin**］ を切り替えて、サイトのごみ箱を有効または無効にします。
+1. 必要に応じて、 ［**Trash Entries Max Age**］ 入力フィールドに値（分単位）を指定して、リサイクルされたアセットが完全に削除される前にごみ箱にとどまる時間を指定します。
 
-1. *［Save］* をクリックします。
+1. ［**Save**］ をクリックします。
 
 ## 関連情報
 

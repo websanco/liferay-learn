@@ -6,7 +6,7 @@
 
 1. [Smartsuppアカウント](https://app.smartsupp.com/app/sign/in) にログインします。
 
-1. *歯車アイコン* &rarr; *［Chat box］*の順にクリックします。
+1. **歯車アイコン** &rarr; ［**Chat box**］ の順にクリックします。
 
     ![Smartsuppの左側のサイドバーにオプションが表示されます。歯車アイコンとチャットボックスを選択します。](./smartsupp/images/01.png)
 

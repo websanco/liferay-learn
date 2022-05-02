@@ -12,7 +12,7 @@
 
    ![［サイトの設定］で、［言語］タブをクリックします。](./site-localization/images/01.png)
 
-1. *［Define a custom default language and additional available languages for this site］*をクリックします。
+1. ［**Define a custom default language and additional available languages for this site**］ をクリックします。
 
    ![［Define a custom default language and additional available languages for this site］をクリックします。](./site-localization/images/02.png)
 
@@ -24,7 +24,7 @@
 
 1. 左矢印ボタンと右矢印ボタンを使用して、追加の言語を有効または無効にします。
 
-1. *［保存］*ボタンをクリックして変更を保存します。
+1. ［**保存**］ ボタンをクリックして変更を保存します。
 
 ## ローカライズ可能なサイトフィールドの変更
 

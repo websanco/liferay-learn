@@ -18,18 +18,18 @@ Liferay DXPではデフォルトで[レスポンシブデザインが使用](./b
 
 1. [コンテントページを開いて編集](../../creating-pages/using-content-pages/adding-elements-to-content-pages.md)します（または新しい[コンテントページ](./../../creating-pages/adding-pages/adding-a-page-to-a-site.md)を作成します）。
 1. コンテントページで[グリッドフラグメントを構成](../../creating-pages/page-fragments-and-widgets/using-fragments/using-layout-elements.md)します。
-1. 編集サイドバーで、*［Selection］*をクリックし、カスタマイズするグリッドフラグメントをクリックします。
+1. 編集サイドバーで、 ［**Selection**］ をクリックし、カスタマイズするグリッドフラグメントをクリックします。
 1. 編集ツールバーの［Device Display］セクションで、最適化するスクリーンサイズを選択します。
 
     ![［Device Display］セクションで、カスタマイズするスクリーンサイズを選択します。](./building-responsive-layouts-with-the-grid-fragment/images/06.png)
 
-1. 編集サイドバーの*［Styles］*列で、スクリーンサイズに適したレイアウトオプションを選択します。  たとえば、*［スマホ（縦）］*レイアウトオプションでは、行ごとに1つのモジュールを設定した方がはるかに効果的です。
-1. ターゲットのスクリーンサイズの画像*解像度*を構成する（Liferay DXP 7.4以降で使用可能）か、デフォルトの*［Auto］*オプションのままにして[アダプティブメディア](../../../content-authoring-and-management/documents-and-media/publishing-and-sharing/serving-device-and-screen-optimized-media/how-adaptive-media-works.md)を使用します。
+1. 編集サイドバーの ［**Styles**］ 列で、スクリーンサイズに適したレイアウトオプションを選択します。  たとえば、 ［**スマホ（縦**）］ レイアウトオプションでは、行ごとに1つのモジュールを設定した方がはるかに効果的です。
+1. ターゲットのスクリーンサイズの画像 **解像度** を構成する（Liferay DXP 7.4以降で使用可能）か、デフォルトの ［**Auto**］ オプションのままにして[アダプティブメディア](../../../content-authoring-and-management/documents-and-media/publishing-and-sharing/serving-device-and-screen-optimized-media/how-adaptive-media-works.md)を使用します。
 
     ![ターゲットスクリーンサイズの画像解像度を選択するか、［Auto］オプションのままにしてアダプティブメディアを使用します。](./building-responsive-layouts-with-the-grid-fragment/images/05.png)
 
-1. *［公開］*をクリックします。
-1. 必要に応じて、メインツールバーの*［シミュレーション］*（![Simulation](../../../images/icon-simulation.png)）ボタンをクリックして、ターゲットデバイスでの変更を確認します。
+1. ［**公開**］ をクリックします。
+1. 必要に応じて、メインツールバーの ［**シミュレーション**］（![Simulation](../../../images/icon-simulation.png)）ボタンをクリックして、ターゲットデバイスでの変更を確認します。
 
     ![コンテンツページエディタの［Device Display］および［Styles］オプションを使用して、グリッドフラグメントのレイアウトをカスタマイズします。](./building-responsive-layouts-with-the-grid-fragment/images/03.gif)
 
