@@ -3,7 +3,7 @@
 ```{important}
 [Liferay-Tomcatバンドルの使用](../installing-a-liferay-tomcat-bundle.md) または[Dockerイメージ](../../../getting-started/starting-with-a-docker-image.md)は、Liferay DXPの使用を開始するための最速の方法です。 この記事は、Tomcatアプリケーションサーバーの設定を完全に制御したいユーザーを対象としています。
 
-続行する前に、[Installing a Liferay-Tomcat Bundle](../installing-a-liferay-tomcat-bundle.md)と[Configuring a Database](../configuring-a-database.md)の記事を確認してください。
+続行する前に、 [Liferay-Tomcatバンドルのインストール](../installing-a-liferay-tomcat-bundle.md) と [データベースの構成](../configuring-a-database.md) の記事を確認してください。
 ```
 
 Tomcatにインストールするには、DXP WARのインストール、依存関係のインストール、Tomcatの設定、およびDXPのデプロイが必要です。 データベースとメールサーバーの接続も設定する必要があります。
@@ -12,7 +12,7 @@ Tomcatにインストールするには、DXP WARのインストール、依存�
 
 ## 前提条件
 
-Tomcatの構成方法に関係なく、[ヘルプセンター](https://customer.liferay.com/downloads)（サブスクリプション）または[Liferayコミュニティのダウンロード](https://www.liferay.com/downloads-community)からこれらのファイルをダウンロードしてインストールする必要があります。
+Tomcatの構成方法に関係なく、 [ヘルプセンター](https://customer.liferay.com/downloads) （サブスクリプション）または [Liferayコミュニティのダウンロード](https://www.liferay.com/downloads-community) からこれらのファイルをダウンロードしてインストールする必要があります。
 
 * DXP WARファイル
 * OSGi依存関係のZIPファイル
@@ -21,7 +21,7 @@ Tomcatの構成方法に関係なく、[ヘルプセンター](https://customer.
 Java JDK 8または11が必要です。
 
 ```{note}
-サポートされているJDK、データベース、および環境については、[互換性マトリックス](https://help.liferay.com/hc/en-us/articles/360049238151) を参照してください。  推奨されるJVM設定については、[JVM Configuration](../../reference/jvm-configuration.md)を参照してください。
+サポートされているJDK、データベース、および環境については、 [互換性マトリックス](https://help.liferay.com/hc/ja/articles/360049238151) を参照してください。  推奨されるJVM設定については、 [JVM設定](../../reference/jvm-configuration.md) を参照してください。
 ```
 
 Tomcatサーバーの親フォルダは[**Liferay Home**](../../reference/liferay-home.md)です。 `$TOMCAT_HOME`はTomcatサーバーフォルダを参照します。 通常は、`tomcat-［version］`または`apache-tomcat-［version］`という名前です。
@@ -38,7 +38,7 @@ DXPは、Liferay-Tomcatバンドルに含まれている多くのJARに依存し
 1. OSGi Dependencies ZIPファイルの内容を `［Liferay Home］/osgi` フォルダーに解凍します（このフォルダーが存在しない場合は作成します）。 LiferayのOSGiランタイムは、これらのモジュールに依存しています。
 1. DXP 7.4+ WARファイルには、MariaDBおよびPostgreSQLのドライバーが含まれています。 以前のWARにはそれらがありません。 7.4以降のWARに、使用中のサポートされているデータベースのドライバーがない場合は、データベースベンダーのJDBC JARファイルをダウンロードして、`$CATALINA_BASE/standalone/deployments/ROOT.war/WEB-INF/shielded-container-lib`フォルダーに配置します。
 
-    サポートされているデータベースの一覧については、 [互換性マトリックス](https://help.liferay.com/hc/en-us/articles/360049238151) を参照してください。
+    サポートされているデータベースの一覧については、 [互換性マトリックス](https://help.liferay.com/hc/ja/articles/360049238151) を参照してください。
 
 ```{note}
 HypersonicデータベースはDXPにバンドルされており、テスト目的で役立ちます。 本番環境インスタンスにはHSQLを**使用しないでください**。
@@ -92,7 +92,7 @@ DXPを実行するためのTomcatの構成には、次のタスクが含まれ�
 | `-XX:SurvivorRatio` | 新しいスペースとSurvivor領域の比率。 Survivor領域は、古い世代の領域に昇格する前に、若い世代のオブジェクトを保持します。   |
 
 ```{note}
-DXPのインストール後、これらの構成（これらのJVMオプションを含む）をさらに調整して、パフォーマンスを向上させることができます。 詳細については、[Tuning Liferay](../../setting-up-liferay/tuning-liferay.md)および[Tuning Your JVM](../../setting-up-liferay/tuning-your-jvm.md)を参照してください。
+DXPのインストール後、これらの構成（これらのJVMオプションを含む）をさらに調整して、パフォーマンスを向上させることができます。 詳細については、 [Liferayの調整](../../setting-up-liferay/tuning-liferay.md) および [JVMの調整](../../setting-up-liferay/tuning-your-jvm.md) を参照してください。
 ```
 
 引き続き、Tomcatの構成を行います。
@@ -308,7 +308,7 @@ Tomcatを使用してメールセッションを管理する場合は、次の�
 
 `$CATALINA_HOME/bin`に移動して`./startup.sh`を実行し、Tomcatを起動します。 または、`./catalina.sh run`を実行して、DXPのログファイルを追跡します。 ログは起動アクティビティを監査し、デプロイのデバッグに役立ちます。
 
-Liferay DXP Enterpriseサブスクリプションをお持ちの場合、DXPはアクティベーションキーを要求します。 詳細は、[Activating Liferay DXP](../../setting-up-liferay/activating-liferay-dxp.md)を参照してください。
+Liferay DXP Enterpriseサブスクリプションをお持ちの場合、DXPはアクティベーションキーを要求します。 詳細は、 [Liferay DXPのアクティブ化](../../setting-up-liferay/activating-liferay-dxp.md) を参照してください。
 
 　 DXPはTomcatで実行されています。
 

@@ -20,7 +20,7 @@ Liferay DXPにはJava JDK 8または11が必要です。 JDKの選択には [互
 
 ## DXPをダウンロードする
 
-1. [ヘルプセンター](https://help.liferay.com/hc) （サブスクリプション）または [コミュニティダウンロード](https://www.liferay.com/downloads-community) にアクセスします。
+1.  [ヘルプセンター](https://help.liferay.com/hc) （サブスクリプション）または [コミュニティダウンロード](https://www.liferay.com/downloads-community) にアクセスします。
 
 2. 必要なLiferay DXPバージョンに移動します。
 
@@ -43,4 +43,4 @@ Liferay DXPにはJava JDK 8または11が必要です。 JDKの選択には [互
 
 ## 次のステップ
 
-* [データベースの構成](./configuring-a-database.md)
+  - [データベースの構成](./configuring-a-database.md)

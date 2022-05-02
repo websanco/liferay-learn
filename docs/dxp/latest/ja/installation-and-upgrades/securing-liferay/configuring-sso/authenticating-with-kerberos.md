@@ -4,8 +4,6 @@ Kerberosを使用して、Liferay DXPでMicrosoft Windows&trade;アカウント�
 
 セキュリティの脆弱性が存続するため、この構成は [NTLM](https://portal.liferay.dev/docs/7-1/deploy/-/knowledge_base/d/ntlm-single-sign-on-authentication) よりも優先されます。
 
-<a name="prerequisites" />
-
 ## 前提条件
 
 Windows&trade;サーバーでKerberosとActive Directoryをセットアップする方法についてはこの記事では説明しませんが、Liferay認証を設定するための最低限の前提条件について説明します。
@@ -155,7 +153,9 @@ Windows&trade;サーバーでKerberosとActive Directoryをセットアップす
 
 4.  最後に、[Configuration] → [System Settings] → [Security] → [SSO] → [Token Based SSO]で、シングルサインオン用のトークンを設定します。 ユーザートークン名が、Webサーバーで設定したトークンと **正確に** 一致していることを確認します。 [**Enabled**] および [**Import from LDAP**] ボックスをクリックし、 [**保存**] をクリックします。
 
-Excellent! サーバーを構成しました。 あとはクライアントを設定するだけです。
+    ![ [Instance Settings]メニューでSSOを有効にする。](authenticating-with-kerberos/images/02.png)
+
+サーバーを構成しました。 あとはクライアントを設定するだけです。
 
 ### ステップ4：クライアントの設定
 

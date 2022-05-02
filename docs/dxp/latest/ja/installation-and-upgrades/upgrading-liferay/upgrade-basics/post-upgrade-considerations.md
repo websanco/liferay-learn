@@ -54,7 +54,7 @@ rm osgi/configs/com.liferay.portal.search.configuration.IndexStatusManagerConfig
 
 **オプション1：**[**コントロールパネル**] → [**設定**] → [**システム設定**] → [**Webコンテンツ**] → [**仮想インスタンススコープ**] → [**Webコンテンツ**] に移動し、 [**Article view permissions check enabled**] の選択を解除して、すべてのWebコンテンツの記事の表示権限を開きます。
 
-![［システム設定］の［Webコンテンツ］メニューを下にスクロールして、Webコンテンツを表示するための権限チェックを無効にします。](./post-upgrade-considerations/images/03.png)
+![[システム設定]の [Webコンテンツ]メニューを下にスクロールして、Webコンテンツを表示するための権限チェックを無効にします。](./post-upgrade-considerations/images/03.png)
 
 **オプション2：** Webコンテンツの記事が少ない場合は、ロールに基づきWebコンテンツの記事ごとに表示権限を編集します。
 

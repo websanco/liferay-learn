@@ -12,11 +12,11 @@ Tomcatバンドルには、Liferay DXPが事前にデプロイされたApache To
 
 ## 前提条件
 
-Liferay DXPには **Java JDK 8または11** が必要です。 JDKをインストールするには、[www.java.com](https://www.java.com/)を参照してください。
+Liferay DXPには **Java JDK 8または11** が必要です。 JDKをインストールするには、 [www.java.com](https://www.java.com/) を参照してください。
 
 ## DXPをダウンロードする
 
-1.  [ヘルプセンター](https://help.liferay.com/hc)（サブスクリプション）または[コミュニティダウンロード](https://www.liferay.com/downloads-community)にアクセスします。
+1.  [ヘルプセンター](https://help.liferay.com/hc) （サブスクリプション）または [コミュニティダウンロード](https://www.liferay.com/downloads-community) にアクセスします。
 
 2.  必要なLiferay DXPバージョンに移動します。
 
@@ -29,10 +29,10 @@ Liferay DXPには **Java JDK 8または11** が必要です。 JDKをインス�
 
 ## DXPをインストールする
 
-バンドルをDXPホスト上の場所に展開します。 この場所は、[Liferay Home](../reference/liferay-home.md)と呼ばれます。
+バンドルをDXPホスト上の場所に展開します。 この場所は、 [Liferay Home](../reference/liferay-home.md) と呼ばれます。
 
 　 Liferay DXPをインストールしました。 次にデータベースを設定します。
 
 ## 次のステップ
 
-  - [Configuring a Database](../installing-liferay/configuring-a-database.md)
+  - [データベースの構成](../installing-liferay/configuring-a-database.md)

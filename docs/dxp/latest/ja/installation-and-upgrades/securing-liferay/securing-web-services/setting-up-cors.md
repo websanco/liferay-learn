@@ -2,7 +2,7 @@
 
 CORSは、クロスオリジンリソース共有（Cross-Origin Resource Sharing）の略です。 オリジンとは別のドメインにあるWebサーバーであり、リソースは画像、PDF、HTMLファイルなど、サーバーに保存されているアセットです。 別のオリジンに保存されているリソースを要求する必要がある場合があります。 これはクロスオリジン要求と呼ばれ、Webサーバーにはそのような要求を許可または拒否するポリシーがあります。
 
-たとえば、ブラウザ自体は、[クロスサイトスクリプト](https://en.wikipedia.org/wiki/Cross-site_scripting)攻撃を軽減するために、スクリプトからのクロスオリジンAJAXスタイルの要求を許可していません。 これらのAPIは **同一オリジン** のポリシーに従います。 ただし、特定のリソースについては、Liferay DXPがそれらを異なるオリジンに提供できるようにすると便利な場合があります。
+たとえば、ブラウザ自体は、 [クロスサイトスクリプト](https://en.wikipedia.org/wiki/Cross-site_scripting) 攻撃を軽減するために、スクリプトからのクロスオリジンAJAXスタイルの要求を許可していません。 これらのAPIは **同一オリジン** のポリシーに従います。 ただし、特定のリソースについては、Liferay DXPがそれらを異なるオリジンに提供できるようにすると便利な場合があります。
 
 たとえば、Docs & Mediaで画像を管理している場合、それらに対してクロスオリジン要求を許可することができます。 Liferay Portalの一致するURLまたはJAX-RSアプリケーションリソースに対してCORSを有効にできます。
 
@@ -25,7 +25,7 @@ CORSは、クロスオリジンリソース共有（Cross-Origin Resource Sharin
 | **有効** | エントリを有効にするには、このボックスをオンにします。                                                                                                                                                                                       |
 | **Name** | 構成エントリに名前を付けます。                                                                                                                                                                                                   |
 | **URL Pattern** | プラスボタンを使用して、必要な数のパターンを追加します。 共有するリソースへのURLと一致するパターンを定義します。 たとえば、ナレッジベースアプリケーションに多くの添付ファイルがある場合、パターン<br> `/knowledge_base/*` <br>を定義できます。これにより、以下の応答ヘッダーで設定したポリシーに適用できるように、ナレッジベースに格納されているリソースが定義されます。 |
-| **CORS Response Headers** | プラスボタンを使用して、必要な数のヘッダーを追加します。 ここで、[CORSヘッダー](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers#CORS)に対しポリシーを定義します。                                                                                         |
+| **CORS Response Headers** | プラスボタンを使用して、必要な数のヘッダーを追加します。 ここで、 [CORSヘッダー](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers#CORS) に対しポリシーを定義します。                                                                                         |
 CORS を設定するには、設定ファイルを使用することもできます。
 
 <a name="enabling-cors-for-jax-rs-applications" />
@@ -44,14 +44,14 @@ CORS を設定するには、設定ファイルを使用することもできま
 
 | 設定                                  | 説明                                                                                                                                                                                                                                                                                                                                                                            |
 | :--- | :--- |
-| **Dynamic Web Context OSGi Filter** | LDAPスタイルの[フィルター](https://osgi.org/specification/osgi.cmpn/7.0.0/service.http.whiteboard.html)を定義して、このエントリーのCORSヘッダーが適用されるJAX-RSホワイトボードアプリケーションを定義します。 デフォルトのフィルターは<br> `(&(!(liferay.cors=false))(osgi.jaxrs.name=*))` <br>です。このフィルターは、CORSヘッダーを、`liferay.cors=false` プロパティなしでデプロイされたすべてのJAX-RSホワイトボードアプリケーションに適用します。 これは開発時に役立ちますが、本番環境では可能な限り狭い構成を使用してください。 |
+| **Dynamic Web Context OSGi Filter** | LDAPスタイルの [フィルター](https://osgi.org/specification/osgi.cmpn/7.0.0/service.http.whiteboard.html) を定義して、このエントリーのCORSヘッダーが適用されるJAX-RSホワイトボードアプリケーションを定義します。 デフォルトのフィルターは<br> `(&(!(liferay.cors=false))(osgi.jaxrs.name=*))` <br>です。このフィルターは、CORSヘッダーを、`liferay.cors=false` プロパティなしでデプロイされたすべてのJAX-RSホワイトボードアプリケーションに適用します。 これは開発時に役立ちますが、本番環境では可能な限り狭い構成を使用してください。 |
 | **URL Pattern** | プラスボタンを使用して、必要な数のパターンを追加します。 アクセスするWebサービスへのURLに一致するパターンを定義します。                                                                                                                                                                                                                                                                                                               |
-| **CORS Response Headers** | プラスボタンを使用して、必要な数のヘッダーを追加します。 ここで、[CORSヘッダー](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers#CORS)に対しポリシーを定義します。                                                                                                                                                                                                                                                     |
+| **CORS Response Headers** | プラスボタンを使用して、必要な数のヘッダーを追加します。 ここで、 [CORSヘッダー](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers#CORS) に対しポリシーを定義します。                                                                                                                                                                                                                                                     |
 JAX-RS開発者は、 `@CORS` アノテーションを使用して、デプロイされたアプリケーションのポリシーを設定できます。
 
 <a name="additional-information" />
 
 ## 追加情報
 
-* [Liferayの保護](../../securing-liferay.md)
-* [Introduction to Securing Web Services](../securing-web-services.md)
+  - [Liferayの保護](../../securing-liferay.md)
+  - [Introduction to Securing Web Services](../securing-web-services.md)

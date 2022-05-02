@@ -29,7 +29,7 @@
 
 1. デフォルトのメールセッション値を独自の値に置き換えます。
 
-1. `portal-ext.properties`ファイルを [Liferay Home](../../reference/liferay-home.md) に配置します。
+4.  `portal-ext.properties`ファイルを [Liferay Home](../../reference/liferay-home.md) に配置します。
 
 DXPは次回の起動時にメールセッションに接続します。
 

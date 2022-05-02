@@ -21,7 +21,7 @@
     create database lportal character set utf8;
     ```
 
-1. 完全なデータベース権限を持つデータベースユーザーを設定します。 組織でDXPデータベースユーザーのデータベースアクセスを制限する必要がある場合は、 [High Security Database User Practices](../reference/database-configurations.md#high-security-database-user-practices) を参照してください。
+2.  完全なデータベース権限を持つデータベースユーザーを設定します。 組織でDXPデータベースユーザーのデータベースアクセスを制限する必要がある場合は、 [High Security Database User Practices](../reference/database-configurations.md#high-security-database-user-practices) を参照してください。
 
     ```{important}
        Liferay requires reading from and writing to the database. The Liferay database user must therefore have permissions to read and write data.
@@ -34,7 +34,7 @@
 | データベース | コネクタ          | ベンダーサイト                                     | メモ                                                                                                                                                |
 |:------ |:------------- |:------------------------------------------- |:------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Oracle | `ojdbc8.jar`  | [Oracle](https://www.oracle.com/index.html) | [データ切り捨ての問題](https://issues.liferay.com/browse/LPS-79229) がCLOB列からデータを読み取って検出されたため、少なくともOracle 12.2.0.1.0 JDBC 4.2バージョンを備えた`ojdbc8.jar`ライブラリが必要です。 |
-| DB2    | `db2jcc4.jar` | [IBM](https://www.ibm.com/)                 | ` dbc2jcc`コネクタは3.72以降廃止されました。                                                                                                                     |
+| DB2    | `db2jcc4.jar` | [IBM](https://www.ibm.com/)                 | `dbc2jcc` コネクタは3.72以降廃止されました。                                                                                                                     |
 
 　 Liferay DXPのデータベースを構成しました。
 

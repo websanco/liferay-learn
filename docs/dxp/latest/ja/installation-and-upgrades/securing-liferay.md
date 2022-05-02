@@ -30,10 +30,10 @@ Liferayのインストールのセキュリティ保護には、ホスティン�
 
 LiferayDXP認証は柔軟です。 デフォルトでは、ユーザーは [**Sign In**] ウィジェットを使用してLiferay DXPにログインします。このウィジェットでは、データベースを使用してユーザーを認証します。 デフォルトでは、ゲストは[Sign In]ウィジェットを使用して、デフォルトの権限を持つアカウントを作成できます。 デフォルトの認証エクスペリエンスのほぼすべての要素は、管理者が変更できます。 例:
 
-* [多要素認証](./securing-liferay/multi-factor-authentication/using-multi-factor-authentication.md)を設定できます。
-* [SSOを使用して](./securing-liferay/configuring-sso.md)認証を管理できます。
-* Liferayは、ポータルデータベースを使用する代わりに、[LDAPと統合](../users-and-permissions/connecting-to-a-user-directory/connecting-to-an-ldap-directory.md)してユーザーを検証することもできます。
-* ゲストアカウントの作成を [オフ](./securing-liferay/authentication-basics.md#disabling-guest-account-creation) にすることができます。
+  - [多要素認証](./securing-liferay/multi-factor-authentication/using-multi-factor-authentication.md)を設定できます。
+  - [SSOを使用して](./securing-liferay/configuring-sso.md)認証を管理できます。
+  - Liferayは、ポータルデータベースを使用する代わりに、[LDAPと統合](../users-and-permissions/connecting-to-a-user-directory/connecting-to-an-ldap-directory.md)してユーザーを検証することもできます。
+  - ゲストアカウントの作成を [オフ](./securing-liferay/authentication-basics.md#disabling-guest-account-creation) にすることができます。
 
 詳細は、 [認証の基本](./securing-liferay/authentication-basics.md) をご覧ください。
 
@@ -61,12 +61,12 @@ Liferay Webサービスには、セキュリティと承認に対する多層的
 
 追加のセキュリティ機能を微調整または無効にする方法は複数あります。
 
-* Liferay PortalのHTTPS [Webサーバー](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#Web%20Server) アドレスを設定する。
-* ユーザーを [リダイレクト](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#Redirect) できる許可されているサーバーのリストを構成する。
-* 任意のページからアクセスできる [ポートレット](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#Portlet) のリストを構成する。
-* アップロードおよびダウンロードを許可するファイルタイプを設定します。
+  - LiferayポータルのHTTPS [Webサーバー](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html#Web%20Server) アドレスを設定する。
+  - ユーザーを [リダイレクト](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html#Redirect) できる許可されているサーバーのリストを構成する。
+  - 任意のページからアクセスできる [ポートレット](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html#Portlet) のリストを構成する。
+  - アップロードおよびダウンロードを許可するファイルタイプを設定する。
 
-これらの機能は、 [ポータルプロパティ](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html) を使用して構成できます。
+これらの機能は、 [ポータルプロパティ](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html) を使用して構成できます。
 
 ```{warning}
 Liferayポータルの理念は「デフォルトで安全」です。 セキュリティ固有のデフォルトまたはホワイトリストを変更する場合は、十分に注意してください。 このようなアクションは、セキュリティの設定ミスや安全でないデプロイにつながる可能性があります。
@@ -79,8 +79,6 @@ Liferayポータルの理念は「デフォルトで安全」です。 セキュ
 Liferay Portalのインストールのセキュリティ保護の詳細は、 [当社のセキュリティステートメント](https://www.liferay.com/security) 、 [コミュニティセキュリティチーム](https://portal.liferay.dev/people/community-security-team) 、およびこれらのページに記載されているリソースを参照してください。
 
 [Liferay マーケットプレイス](https://www.liferay.com/marketplace) から追加のセキュリティプラグインを入手できます。
-
-<a name="next-steps" />
 
 ## 次のステップ
 

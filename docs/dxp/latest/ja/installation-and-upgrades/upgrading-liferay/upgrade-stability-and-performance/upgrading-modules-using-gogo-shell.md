@@ -144,7 +144,7 @@ The following service(s) are missing:
 
 ## 検証プロセスの実行
 
-一部のモジュールには検証プロセスがあります。 これらは、アップグレードが正常に実行されたことを確認します。 Liferay DXPのアップグレード後に、コアのプロセスが自動的に実行されることを確認します。 [`verify.*`ポータルプロパティ](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#Verify) を設定してサーバーを再起動することで、これらを実行することもできます。
+一部のモジュールには検証プロセスがあります。 これらは、アップグレードが正常に実行されたことを確認します。 Liferay DXPのアップグレード後に、コアのプロセスが自動的に実行されることを確認します。 [`verify.*`ポータルプロパティ](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html#Verify) を設定してサーバーを再起動することで、これらを実行することもできます。
 
 使用可能な検証プロセスを確認するには、Gogoシェルコマンド`verify:list`を入力します。 検証プロセスを実行するには、`verify:execute ［verify_qualified_name］`と入力します。
 

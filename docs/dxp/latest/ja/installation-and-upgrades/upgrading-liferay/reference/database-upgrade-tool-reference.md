@@ -92,9 +92,9 @@ Please enter your database host (localhost):
 
 また、アップグレードツールを事前設定して、ツールが生成するよりも多くの値を設定することもできます。 `［LIFERAY_HOME］/tools/portal-tools-db-upgrade-client/`にある次のファイルを使用して、コアアップグレードを手動で設定します。
 
-* `app-server.properties`：サーバーの場所とライブラリを指定します。
-* `portal-upgrade-database.properties`：データベース接続を構成します。
-* `portal-upgrade-ext.properties`：アップグレードに必要な残りのポータルプロパティを設定します。 現在のDXPサーバーを複製するには、現在のポータルプロパティ（データベースプロパティを除く）をこのファイルにコピーします。 現在のプロパティを使用する前に、必ず [現在のDXPバージョンに合わせて更新してください](./preparing-a-new-application-server.md#migrate-your-portal-properties) 。
+  - `app-server.properties`：サーバーの場所とライブラリを指定します。
+  - `portal-upgrade-database.properties`：データベース接続を構成します。
+  - `portal-upgrade-ext.properties`：アップグレードに必要な残りのポータルプロパティを設定します。 現在のDXPサーバーを複製するには、現在のポータルプロパティ（データベースプロパティを除く）をこのファイルにコピーします。 現在のプロパティを使用する前に、必ず [現在のDXPバージョンに合わせて更新してください](./preparing-a-new-application-server.md#migrate-your-portal-properties) 。
 
 #### app-server.propertiesの構成
 
@@ -130,14 +130,14 @@ server.detector.server.id=tomcat
 
 #### portal-upgrade-database.propertiesの構成
 
-次の情報を指定して、アップグレードするデータベースを構成します。 これらのプロパティは、`portal-ext.properties`ファイルで使用する [JDBCポータルプロパティ](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#JDBC) に対応することに注意してください。
+次の情報を指定して、アップグレードするデータベースを構成します。 これらのプロパティは、`portal-ext.properties`ファイルで使用する [JDBCポータルプロパティ](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html#JDBC) に対応することに注意してください。
 
 * `jdbc.default.driverClassName`
 * `jdbc.default.url`
 * `jdbc.default.username`
 * `jdbc.default.password`
 
-これらの値のリファレンスについては、最新の [ポータルプロパティリファレンス](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html) を参照してください。
+これらの値のリファレンスについては、最新の [ポータルプロパティリファレンス](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html) を参照してください。
 
 #### portal-upgrade-ext.propertiesの構成
 

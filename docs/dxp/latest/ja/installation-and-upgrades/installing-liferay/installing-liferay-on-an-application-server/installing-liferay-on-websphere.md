@@ -10,13 +10,13 @@ WebSphereにLiferay DXPをインストールするには、DXP WARファイル�
 
 ## 前提条件
 
-Liferay DXPが正しく機能するには、WebSphere 9（フィックスパック11が最新）がインストールされている必要があります。 このフィックスパックについて詳しくは、[IBMサポート](http://www-01.ibm.com/support/docview.wss?uid=swg24043005)にアクセスしてください。 Liferay DXPは現在、WebSphere Application Liberty Profileをサポートしていません。
+Liferay DXPが正しく機能するには、WebSphere 9（フィックスパック11が最新）がインストールされている必要があります。 このフィックスパックについて詳しくは、 [IBMサポート](http://www-01.ibm.com/support/docview.wss?uid=swg24043005) にアクセスしてください。 Liferay DXPは現在、WebSphere Application Liberty Profileをサポートしていません。
 
 ```{important}
-DXPをインストールする前に、 [Installing a Liferay DXP Tomcat Bundle](../installing-a-liferay-dxp-tomcat-bundle.md) および [Configuring a Database](../configuring-a-database.md) の記事を確認してください。
+DXPをインストールする前に、 [Installing a Liferay DXP Tomcat Bundle](../installing-a-liferay-dxp-tomcat-bundle.md) および [データベースの構成](../configuring-a-database.md) の記事を確認してください。
 ```
 
-次のファイルは、WebSphereアプリケーションサーバーにLiferay DXPをインストールするために必要であり、[ヘルプセンター](https://customer.liferay.com/downloads)（サブスクリプション）または[Liferayコミュニティのダウンロード](https://www.liferay.com/downloads-community)から入手できます。
+次のファイルは、WebSphereアプリケーションサーバーにLiferay DXPをインストールするために必要であり、 [ヘルプセンター](https://customer.liferay.com/downloads) （サブスクリプション）または [Liferayコミュニティのダウンロード](https://www.liferay.com/downloads-community) から入手できます。
 
 * DXP WARファイル
 * 依存関係のZIPファイル
@@ -91,7 +91,7 @@ com.ibm.ws.webcontainer.initFilterBeforeInitServlet = true
 com.ibm.ws.webcontainer.invokeFilterInitAtStartup = true
 ```
 
-WebSphereアプリケーションサーバーで`webcontainer`プロパティを設定するには、[WebSphereのドキュメント](http://www-01.ibm.com/support/docview.wss?rss=180&uid=swg21284395)の指示に従ってください。
+WebSphereアプリケーションサーバーで`webcontainer`プロパティを設定するには、 [WebSphereのドキュメント](http://www-01.ibm.com/support/docview.wss?rss=180&uid=swg21284395) の指示に従ってください。
 
 ### Liferay DXPのJVMパラメータの設定
 
@@ -176,7 +176,7 @@ HypersonicデータベースはDXPにバンドルされており、テスト目�
 
 ## データベース設定
 
-DXPには組み込みのHypersonicデータベースが含まれています。これはデモンストレーション目的には最適ですが、本番環境では使用しないでください。 デモの目的以外に、フル機能のサポートされているRDBMSを使用することをお勧めします。 データベースのセットアップについては、[Configuring a Database](../configuring-a-database.md)を参照してください。
+DXPには組み込みのHypersonicデータベースが含まれています。これはデモンストレーション目的には最適ですが、本番環境では使用しないでください。 デモの目的以外に、フル機能のサポートされているRDBMSを使用することをお勧めします。 データベースのセットアップについては、 [データベースの構成](../configuring-a-database.md) を参照してください。
 
 Liferay DXPは、DXPに組み込まれているデータソースを使用する（推奨）か、アプリケーションサーバー上に作成したデータソースを使用してデータベースに接続できます。
 
@@ -235,7 +235,7 @@ Liferayは、デモ目的でデフォルトでHSQLを使用しています。 HS
     ```
 
     ```{tip}
-    URLの例については、 [Database Templates](../../reference/database-templates.md) の`jdbc.default.url`の値を参照してください。
+    URLの例については、 [データベーステンプレート](../../reference/database-templates.md) の`jdbc.default.url`の値を参照してください。
     ```
 
 
@@ -247,7 +247,7 @@ Liferayは、デモ目的でデフォルトでHSQLを使用しています。 HS
 
 ## メール設定
 
-DXPの組み込みメールセッションを使用する場合は、このセクションをスキップしてください。 DXPの組み込みメールセッションの使用方法については、[Configuring Mail](../../setting-up-liferay/configuring-mail.md)の記事をご覧ください。
+DXPの組み込みメールセッションを使用する場合は、このセクションをスキップしてください。 DXPの組み込みメールセッションの使用方法については、 [メールの構成](../../setting-up-liferay/configuring-mail.md) の記事をご覧ください。
 
 WebSphereを使用してメールセッションを管理する場合は、次の手順に従います。
 
@@ -340,7 +340,7 @@ DXPでは、JSPをJava 8バイトコード形式にコンパイルする必要�
 /opt/IBM/WebSphere/AppServer/profiles/AppSrv01/config/cells/localhostNode01Cell/applications/liferayXX.ear/deployments/liferayXX/liferayXX.war/WEB-INF/ibm-web-ext.xmi
 ```
 
-DXP `.war`は、`ibm-web-ext.xmi`ファイルにあらかじめパッケージ化されていることに注意してください。この形式は機能的に`.xml`と同じで、WebSphereは両方の形式を認識します。 WebSphereによるJSPのコンパイル方法に関する一般的な情報については、IBMの[WebSphere Application Server 9.0.0.x](https://www.ibm.com/support/knowledgecenter/en/SSEQTP_9.0.0/com.ibm.websphere.base.doc/ae/rweb_jspengine.html)の公式ドキュメントを参照してください。
+DXP `.war`は、`ibm-web-ext.xmi`ファイルにあらかじめパッケージ化されていることに注意してください。この形式は機能的に`.xml`と同じで、WebSphereは両方の形式を認識します。 WebSphereによるJSPのコンパイル方法に関する一般的な情報については、IBMの [WebSphere Application Server 9.0.0.x](https://www.ibm.com/support/knowledgecenter/en/SSEQTP_9.0.0/com.ibm.websphere.base.doc/ae/rweb_jspengine.html) の公式ドキュメントを参照してください。
 
 ## DXPを起動する
 
@@ -373,7 +373,7 @@ DXPをデプロイした後、`PhaseOptimizer`に関連する以下のような�
 ## 次のステップ
 
 * [Installing a Liferay DXP Tomcat Bundle](../installing-a-liferay-dxp-tomcat-bundle.md)
-* [Activating Liferay DXP](../../setting-up-liferay/activating-liferay-dxp.md)
+* [Liferay DXPのアクティブ化](../../setting-up-liferay/activating-liferay-dxp.md)
 * Installing and Configuring a Search Engine
 * [Securing Liferay DXP](../../securing-liferay.md)
 * [Introduction to Clustering Liferay DXP](../../setting-up-liferay/clustering-for-high-availability.md)

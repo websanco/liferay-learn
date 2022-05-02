@@ -19,19 +19,18 @@ maintaining-clustered-installations/blue-green-deployments.md
 
 | Update                                         | ローリング再起動 | ブルーグリーン  |
 | :--- | :--- | :--- |
-| アクティベーションキー [1](#one)                           | &#10004; | &#10004; |
-| アプリケーションサーバーの更新                                | &#10004; | &#10004; |
-| クラスターコードの変更 [2](#two)                           |          | &#10004; |
-| フィックスパックのインストールと削除（復元可能なフィックスパック）              | &#10004; | &#10004; |
-| フィックスパックのインストール（元に戻せないフィックスパック）                |          | &#10004; |
-| JVM設定の変更                                       | &#10004; | &#10004; |
-| Javaバージョン（メジャー）                                |          | &#10004; |
-| Javaバージョン（マイナー）                                | &#10004; | &#10004; |
-| プラグイン/モジュールのインストール                             | &#10004; | &#10004; |
-| プラグイン/モジュールの更新（下位互換性のあるデータ/スキーマの変更）            | &#10004; | &#10004; |
-| プラグイン/モジュールの更新（下位互換性のないデータ/スキーマの変更） [3](#three) |          | &#10004; |
-| ポータルプロパティの変更                                   | &#10004; | &#10004; |
-| 構成管理ファイルによるシステム設定の変更                           | &#10004; | &#10004; |
+| プラグイン/モジュールのインストール                           | ✔        | ✔       |
+| プラグイン/モジュールの更新（下位互換性のあるデータ/スキーマの変更）          | ✔        | ✔       |
+| プラグイン/モジュールの更新（下位互換性のないデータ/スキーマの変更） [1](#one) |          | ✔       |
+| フィックスパックのインストールと削除（復元可能なフィックスパック）            | ✔        | ✔       |
+| フィックスパックのインストール（元に戻せないフィックスパック）              |          | ✔       |
+| クラスターコードの変更 [2](#two)                         |          | ✔       |
+| ポータルプロパティの変更                                 | ✔        | ✔       |
+| 構成管理ファイルによるシステム設定の変更                         | ✔        | ✔       |
+| アプリケーションサーバーの更新                              | ✔        | ✔       |
+| JVM設定の変更                                     | ✔        | ✔       |
+| 新しいJavaバージョン（マイナー）                           | ✔        | ✔       |
+| 新しいJavaバージョン（メジャー）                           |          | ✔       |
 
 [<a name="one">1</a>] Blue-Greenを使用したアクティベーションキーの更新は、仮想クラスターアクティベーションキーでのみサポートされます。 詳しくは、 [Virtual Cluster Activation Key for Liferay DXP and Liferay Commerce](https://help.liferay.com/hc/ja/articles/4402390080141) をご覧ください。
 
@@ -59,6 +58,6 @@ maintaining-clustered-installations/blue-green-deployments.md
 
 ## 追加情報
 
-* [Rolling Restarts](./rolling-restarts.md)
-* [Blue-Green Deployments](./blue-green-deployments.md)
-* [サーバー管理](./../../../system-administration/using-the-server-administration-panel.md)
+  - [ローリング再起動の実行](./maintaining-clustered-installations/rolling-restarts.md)
+  - [ブルーグリーンのデプロイ](./maintaining-clustered-installations/blue-green-deployments.md)
+  - [サーバー管理パネルの使用](../../system-administration/using-the-server-administration-panel/using-the-server-administration-panel.md)

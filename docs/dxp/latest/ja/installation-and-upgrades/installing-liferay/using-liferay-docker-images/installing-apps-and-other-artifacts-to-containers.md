@@ -8,7 +8,7 @@
 * [`docker cp`を使用したアーティファクトのインストール](#installing-artifacts-using-docker-cp)
 
 ```{note}
-また、[Docker volume](https://docs.docker.com/storage/volumes/)を使用し、コンテナにアーティファクトをインストールすることもできます。
+また、 [Docker volume](https://docs.docker.com/storage/volumes/) を使用し、コンテナにアーティファクトをインストールすることもできます。
 ```
 
 <a name="installing-artifacts-using-a-bind-mount" />
@@ -29,7 +29,7 @@
     cp my-app.lpkg [host folder]/deploy
     ```
 
-1. アーティファクトのフォルダをコンテナの `/mnt/liferay/deploy` フォルダにマッピングするバインドマウントを含むコンテナを作成します。 この例のアーティファクトは`deploy`というフォルダにあるので、[コンテナの`/mnt/liferay`フォルダにバインドマウントする](./providing-files-to-the-container.md#bind-mounting-a-host-folder-to-mnt-liferay)ことができます。
+1. アーティファクトのフォルダをコンテナの `/mnt/liferay/deploy` フォルダにマッピングするバインドマウントを含むコンテナを作成します。 この例のアーティファクトは`deploy`というフォルダにあるので、 [コンテナの`/mnt/liferay`フォルダにバインドマウントする](./providing-files-to-the-container.md#bind-mounting-a-host-folder-to-mnt-liferay) ことができます。
 
     ```bash
     docker run -it -m 8g -p 8080:8080 -v [host folder path]:/mnt/liferay liferay/dxp:[tag]

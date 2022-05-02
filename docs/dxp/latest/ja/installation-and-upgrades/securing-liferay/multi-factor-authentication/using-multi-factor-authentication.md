@@ -75,4 +75,4 @@
 
 ## 関連情報
 
-* [多要素認証チェッカー](./multi-factor-authentication-checkers.md)
+[多要素認証チェッカー](./multi-factor-authentication-checkers.md)

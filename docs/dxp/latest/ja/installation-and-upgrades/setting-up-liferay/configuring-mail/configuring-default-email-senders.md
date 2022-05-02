@@ -10,7 +10,7 @@
 
 1. **製品メニュー** を開き、 [**Control Panel**] → [**Configuration**] → [**Instance Settings**] に移動します。
 
-    ![［Instance Settings］メニューでメール設定オプションを見つける。](./configuring-default-email-senders/images/01.png)
+    ![ [Instance Settings]メニューでメール設定オプションを見つける。](./configuring-default-email-senders/images/01.png)
 
 2. [**Email**] をクリックします。
 

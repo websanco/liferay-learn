@@ -17,6 +17,6 @@ Liferayがバグを修正したり、機能を追加するので、それらに�
 Liferay DXP 7.3 SP3以前のバージョンでは、代わりにパッチモデルを使用しています。 Liferay DXP 7.3 SP3以前のバージョンをお使いの方は、[Patching DXP](./maintaining-a-liferay-installation/patching-dxp-7-3-and-earlier.md)をご覧ください。
 ```
 
-インストールを維持するために不可欠なのは、バックアップです。 定期的に保存するシステムコンポーネントの詳細については、 [Backing Up](./maintaining-a-liferay-installation/backing-up.md) を参照してください。
+インストールを維持するために不可欠なのは、バックアップです。 定期的に保存するシステムコンポーネントの詳細については、 [バックアップ](./maintaining-a-liferay-installation/backing-up.md) を参照してください。
 
 [apply the latest updates](./maintaining-a-liferay-installation/updating-liferay.md) を随時適用することができます。

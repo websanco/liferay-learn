@@ -34,7 +34,7 @@ Should we remove this diagram since it includes a load balancer? -->
 
 ## データベースサーバーを起動する
 
-DXPクラスターには、すべてのDXPクラスターノードからアクセスできるデータソースが必要です。 データソースは、JNDIデータソースにするか、データベースサーバーまたはデータベースサーバークラスターへの直接接続にすることができます。 DXPバージョンがサポートするデータベースサーバーについては、 [互換性マトリックス](https://help.liferay.com/hc/ja/articles/360049238151) を参照してください。 詳細は、 [クラスタノードのデータベース構成](./database-configuration-for-cluster-nodes.md) を参照してください。
+DXPクラスターには、すべてのDXPクラスターノードからアクセスできるデータソースが必要です。 データソースは、JNDIデータソースにするか、データベースサーバーまたはデータベースサーバークラスターへの直接接続にすることができます。 DXPバージョンがサポートするデータベースサーバーについては、 [互換性マトリックス](https://help.liferay.com/hc/ja/articles/360049238151) を参照してください。 詳細は、[クラスタノードのデータベース構成](./database-configuration-for-cluster-nodes.md)を参照してください。
 
 データベースサーバーとDXPデータベースを作成します。
 
@@ -165,7 +165,7 @@ DXPクラスターノードコンテナには、次の固有の設定があり�
 
 DXPコンテナを起動します。
 
-1. [`docker network inspect bridge`](https://docs.docker.com/engine/reference/commandline/network_inspect/) コマンドを実行して、`elasticsearch`および`some-mariadb`コンテナのコンテナIPアドレスを取得します。 `bridge`ネットワークがデフォルトネットワークです。
+1.  [`docker network inspect bridge`](https://docs.docker.com/engine/reference/commandline/network_inspect/) コマンドを実行して、`elasticsearch`および`some-mariadb`コンテナのコンテナIPアドレスを取得します。 `bridge`ネットワークがデフォルトネットワークです。
 
     ```{important}
     次の`docker run`コマンドでは、`[IP address]`を`elasticsearch`および`some-mariadb`コンテナのIPアドレスに置き換えます。
@@ -237,7 +237,7 @@ DXPコンテナを起動します。
     docker run -it --add-host elasticsearch:[IP address] --add-host some-mariadb:[IP address] -e LIFERAY **JDBC** PERIOD **DEFAULT** PERIOD **JNDI** PERIOD **NAME="" -e LIFERAY** JDBC **PERIOD** DEFAULT **PERIOD** DRIVER **UPPERCASEC** LASS **UPPERCASEN** AME=org.mariadb.jdbc.Driver -e LIFERAY **JDBC** PERIOD **DEFAULT** PERIOD **URL="jdbc:mariadb://some-mariadb:3306/dxp** db?useUnicode=true&characterEncoding=UTF-8&useFastDateParsing=false" -e LIFERAY **JDBC** PERIOD **DEFAULT** PERIOD **USERNAME=root -e LIFERAY** JDBC **PERIOD** DEFAULT **PERIOD** PASSWORD=my-secret-pw -e LIFERAY **CLUSTER** PERIOD **LINK** PERIOD **ENABLED=true -e LIFERAY** CLUSTER **PERIOD** LINK **PERIOD** CHANNEL **PERIOD** LOGIC **PERIOD** NAME **PERIOD** CONTROL=control-channel-logic-name-2 -e LIFERAY **CLUSTER** PERIOD **LINK** PERIOD **CHANNEL** PERIOD **LOGIC** PERIOD **NAME** PERIOD **TRANSPORT** PERIOD **NUMBER0=transport-channel-logic-name-2 -e LIFERAY** CLUSTER **PERIOD** LINK **PERIOD** AUTODETECT **PERIOD** ADDRESS=some-mariadb:3306 -e LIFERAY **WEB** PERIOD **SERVER** PERIOD **DISPLAY** PERIOD **NODE=true -e LIFERAY** DL **PERIOD** STORE **PERIOD** IMPL=com.liferay.portal.store.db.DBStore --name dxp-2 -p 11312:11311 -p 9009:8009 -p 9080:8080 -v $(pwd)/dxp-2:/mnt/liferay [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
     ```
 
-`--add-host ［domain］:［IP address］`オプションは、ドメイン名をマップする`/etc/hosts` [ファイルエントリ](https://docs.docker.com/engine/reference/run/#managing-etchosts) をIPアドレスに追加します。 これにより、設定（環境変数、ポータルプロパティ、 `.config`ファイルなど）がドメイン名でサーバーを参照できるようになります。
+`--add-host [domain]:[IP address]`オプションは、ドメイン名をマップする`/etc/hosts` [ファイルエントリ](https://docs.docker.com/engine/reference/run/#managing-etchosts) をIPアドレスに追加します。 これにより、設定（環境変数、ポータルプロパティ、 `.config`ファイルなど）がドメイン名でサーバーを参照できるようになります。
 
 `-e ［variable］=［value］`オプションは、DXPコンテナ環境変数を設定します。 詳細は、 [付録A：環境設定](#appendix-a-environment-settings) を参照してください。
 
@@ -252,7 +252,7 @@ DXPクラスターノードは、次のURLで入手できます。
 
 ![DXPクラスターノード。](./example-creating-a-simple-dxp-cluster/images/02.png)
 
-各ノードのコンテナIDとポート（`ノード：  ［id］:［port］`）は、各ページの下部に表示されます。 `LIFERAY_WEB_PERIOD_SERVER_PERIOD_DISPLAY_PERIOD_NODE=true`環境設定により、この表示機能が有効になりました。 [`docker container ls`](https://docs.docker.com/engine/reference/commandline/container_ls/) コマンドを使用してコンテナのIDを見つけることができます。
+各ノードのコンテナIDとポート（`ノード：  [id]:[port]`）は、各ページの下部に表示されます。 `LIFERAY_WEB_PERIOD_SERVER_PERIOD_DISPLAY_PERIOD_NODE=true`環境設定により、この表示機能が有効になりました。 [`docker container ls`](https://docs.docker.com/engine/reference/commandline/container_ls/) コマンドを使用してコンテナのIDを見つけることができます。
 
 ### コンテンツを検索エンジンにインデックス付けする
 
@@ -266,8 +266,6 @@ DXPコンテンツのインデックス作成を開始します。
     ****Reindex all spell check indexes**
 
 コンテンツは検索エンジンにインデックス付けされます。 詳細は、 [検索の概要](../../../using-search/getting-started/search-overview.md) を参照してください。
-
-<a name="test-the-dxp-cluster" />
 
 ## DXPクラスターをテストする
 
@@ -311,9 +309,7 @@ DXPクラスター用に[データベース](./database-configuration-for-cluste
 | LIFERAY\ **WEB\** PERIOD\ **SERVER\** PERIOD\ **DISPLAY\** PERIOD\_NODE=\\<br>true                                                                                                          | サーバーアドレスとウェブサーバーポートを表示します         |
 | LIFERAY\ **DL\** PERIOD\ **STORE\** PERIOD\_IMPL=\\<br>com.liferay.portal.store.db.DBStore                                                                                                  | ファイルストア（ドキュメントライブラリストア）クラス        |
 
-詳細は、Env/ [ポータルプロパティ](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html) の定義を参照してください。
-
-<a name="additional-information" />
+詳細は、Env/ [ポータルプロパティ](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html) の定義を参照してください。
 
 ## 追加情報
 

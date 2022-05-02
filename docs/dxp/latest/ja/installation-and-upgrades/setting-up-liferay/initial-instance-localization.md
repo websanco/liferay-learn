@@ -6,16 +6,14 @@ Liferay DXPは、言語、タイムゾーンなどによるローカリゼーシ
 * [セットアップウィザード](#setup-wizard) ：DXPの起動の一環として、UIを介してデフォルトを設定します。
 * [コントロールパネル](#control-panel) ：DXPインスタンスを起動した後、UIを介してデフォルトを変更します。
 
-<a name="portal-properties" />
-
 ## ポータルプロパティ
 
 DXPを開始する前にデフォルトの仮想インスタンスのローカリゼーションを設定する場合は、 [`portal-ext.properties` ファイル](../reference/portal-properties.md)を使用します。
 
 | **ポータルプロパティ** | **説明** |
 |:--------------------------- |:---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `company.default.locale`    | [`locales`](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#Languages%20and%20Time%20Zones)ポータルプロパティに定義されている使用可能なロケールに設定します。    |
-| `company.default.time.zone` | [`time.zones`](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#Languages%20and%20Time%20Zones)ポータルプロパティで定義されている任意のタイムゾーンに設定します。 |
+| `company.default.locale`    | [`locales`](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#Languages%20and%20Time%20Zones) ポータルプロパティに定義されている使用可能なロケールに設定します。    |
+| `company.default.time.zone` | [`time.zones`](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#Languages%20and%20Time%20Zones) ポータルプロパティで定義されている任意のタイムゾーンに設定します。 |
 
 例:
 
@@ -52,4 +50,4 @@ DXPインスタンスのデフォルトの言語とタイムゾーンを構成�
 
 * [仮想インスタンスのローカリゼーションの構成](../../system-administration/configuring-liferay/virtual-instances/localization.md)
 * [Overriding Global Language Translations](../../liferay-internals/extending-liferay/overriding-global-language-translations.md)
-* [アプリケーションのローカライズ](https://help.liferay.com/hc/en-us/articles/360028746692-Localizing-Your-Application)
+* [アプリケーションのローカライズ](https://help.liferay.com/hc/ja/articles/360028746692-Localizing-Your-Application)

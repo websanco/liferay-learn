@@ -63,13 +63,4 @@ jdbc.default.username=
 jdbc.default.password=
 ```
 
-### Docker変数
-
-```bash
--e LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_DRIVER_UPPERCASEC_LASS_UPPERCASEN_AME=org.postgresql.Driver \
--e LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_URL="jdbc:postgresql://hostname:3306/lportal?useUnicode=true&characterEncoding=UTF-8&useFastDateParsing=false" \
--e LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_USERNAME= \
--e LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_PASSWORD= \
-```
-
-その他のデータベーステンプレートについては、 [デフォルトのポータルプロパティ](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#JDBC) を参照してください。
+その他のデータベーステンプレートについては、 [デフォルトのポータルプロパティ](https://docs.liferay.com/dxp/portal/7.2-latest/propertiesdoc/portal.properties.html#JDBC) を参照してください。

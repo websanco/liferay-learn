@@ -50,9 +50,7 @@ SiteMinderを使用する場合は、Liferay PortalのURLにチルダ文字が�
 
     BadUrlChars       //,./,/.,/ **,** .,\,%00-%1f,%7f-%ff,%25
 
-上記の設定は、`~`文字を除いてデフォルトと同じです。 SiteMinderを再起動して、構成のアップデートを有効にします。 詳細は、SiteMinderの [ドキュメント](https://techdocs.broadcom.com/us/product-content/recommended-reading/technical-document-index/ca-siteminder-informational-documentation-index.html) を参照してください。
-
-<a name="summary" />
+上記の設定は、`~`文字を除いてデフォルトと同じです。 SiteMinderを再起動して、構成のアップデートを有効にします。 詳細については、SiteMinderの [ドキュメント](https://techdocs.broadcom.com/us/product-content/recommended-reading/technical-document-index/ca-siteminder-informational-documentation-index.html) を参照してください。
 
 ## まとめ
 

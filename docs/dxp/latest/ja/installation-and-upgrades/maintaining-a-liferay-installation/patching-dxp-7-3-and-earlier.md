@@ -9,7 +9,7 @@ patching-dxp-7-3-and-earlier/advanced-patching-for-dxp-7-2.md
 ```
 
 ```{note}
-Liferay DXP 7.3 SP3+はアップデートを用いたローリングリリースモデルを採用しています。 アップデートを適用する場合は、[Updating Liferay](./updating-liferay.md)を参照してください。 すべてのホットフィックスはパッチです。 ホットフィックスを適用する場合は、このまま読み進めてください。
+Liferay DXP 7.3 SP3+はアップデートを用いたローリングリリースモデルを採用しています。 アップデートを適用する場合は、 [Liferayのアップデート](./updating-liferay.md) を参照してください。 すべてのホットフィックスはパッチです。 ホットフィックスを適用する場合は、このまま読み進めてください。
 ```
 
 Liferayの修正プログラムがリリースされたら、DXPインスタンスを最新の状態にしておきましょう。 Liferayは修正を集約し、 **パッチ** と呼ばれるZIPファイルでエンタープライズサブスクライバーが利用できるようにします。
@@ -28,10 +28,10 @@ Liferayの修正プログラムがリリースされたら、DXPインスタン�
 **DXP 7.3 SP3以前のバージョンの場合**
 
 ***フィックスパック：** 最新の問題を解決します。
-***セキュリティフィックスパック：** 最新のセキュリティ問題に直ちに対処します。 なお、Liferay DXP 7.3 SP3+はセキュリティーアップデートを使用しています。 詳細は、 [Updating Liferay](./updating-liferay.md) を参照してください。
+***セキュリティフィックスパック：** 最新のセキュリティ問題に直ちに対処します。 なお、Liferay DXP 7.3 SP3+はセキュリティーアップデートを使用しています。 詳細は、 [Liferayのアップデート](./updating-liferay.md) を参照してください。
 ***サービスパック：** より多くのテストを必要とする大きな修正を組み込みます。 Service Packのリリースには、完全なDXP Service PackTomcatバンドルも含まれています。
 
-[Understanding Patch Types](./patching-dxp-7-3-and-earlier/understanding-patch-types-for-dxp-7-3-and-earlier.md) 上記のパッチオプションについて説明します。
+[パッチタイプについて](./patching-dxp-7-3-and-earlier/understanding-patch-types-for-dxp-7-3-and-earlier.md) 上記のパッチオプションについて説明します。
 
 ## Installing Patches
 

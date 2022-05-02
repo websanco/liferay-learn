@@ -37,7 +37,7 @@ DXPを使用する準備が整いました。
 
 ## キーが必要ですか？
 
-エンタープライズサブスクリプションをお持ちの場合は、 [［Activation Keys］](https://customer.liferay.com/activation-key) ページにアクセスしてアクティベーションキーをダウンロードするか、アクティベーションキーをリクエストしてください。
+エンタープライズサブスクリプションをお持ちの場合は、 [アクティベーションキー](https://customer.liferay.com/activation-key) ページにアクセスしてアクティベーションキーをダウンロードするか、アクティベーションキーをリクエストしてください。
 
 DXPをお試し中ですか？ [30日間の試用アクティベーションキー](https://www.liferay.com/products/dxp/30-day-trial) を取得してください。
 
@@ -55,7 +55,7 @@ Liferay DXP 7.2以前でLiferay Connected Services（LCS）を使用している
 
 1. アプリケーションサーバーを停止します。
 
-1. LCSを使用してDXPをアクティブ化している場合は、 [Liferay Home](../reference/liferay-home.md) の`osgi/marketplace`フォルダからLiferay Connected ServicesクライアントのLPKGファイル（`.lpkg`）を削除します。
+2.  LCSを使用してDXPをアクティブ化している場合は、 [Liferay Home](../reference/liferay-home.md) の`osgi/marketplace`フォルダからLiferay Connected ServicesクライアントのLPKGファイル（`.lpkg`）を削除します。
 
 3.  `[Liferay Home]/data/license`フォルダの **コンテンツ** は削除しますが、フォルダは保持します。
 

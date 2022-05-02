@@ -61,6 +61,6 @@ DXPライセンスを更新しました。
 
 ## 追加情報
 
-* [Activating Liferay DXP](../../setting-up-liferay/activating-liferay-dxp.md)
+* [Liferay DXPのアクティブ化](../../setting-up-liferay/activating-liferay-dxp.md)
 * [コンテナへのファイルの提供](./providing-files-to-the-container.md)
 * [新しいDockerイメージへのアップグレード](./upgrading-to-a-new-docker-image.md)

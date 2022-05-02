@@ -28,8 +28,6 @@ The tips given in this article worked well in test runs on specific versions of 
 
 [IBMの公式DB2ドキュメント](https://www.ibm.com/support/pages/db2-database-product-documentation-4) を参照してください。
 
-<a name="mariadb" />
-
 ## MariaDB
 
 InnoDBの二重書き込みをオフにし、トランザクションコミット時のInnoDBフラッシュログを`0`に設定します。
@@ -40,25 +38,17 @@ InnoDBの二重書き込みをオフにし、トランザクションコミッ�
 
 [トランザクションの耐久性](https://docs.microsoft.com/en-us/sql/relational-databases/logs/control-transaction-durability) を`FORCED`に設定します。
 
-<a name="mysql" />
-
 ## MySQL
 
 [InnoDBの二重書き込み](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_doublewrite) をオフにし、 [トランザクションコミット時のInnoDBフラッシュログ](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_flush_log_at_trx_commit) を`0`に設定します。
-
-<a name="oracle-database" />
 
 ## Oracle Database
 
 デフォルトの設定で適切に機能します。 [ディスクへの非同期I/O](https://docs.oracle.com/database/121/REFRN/GUID-FD8D1BD2-0F85-4844-ABE7-57B4F77D1608.htm#REFRN10048) を自動的に構成します。
 
-<a name="postgresql" />
-
 ## PostgreSQL
 
 [同期コミット](https://www.postgresql.org/docs/10/wal-async-commit.html) をオフにし、 [ログ先行書き込みライター遅延](https://www.postgresql.org/docs/10/wal-async-commit.html) を`1000`ミリ秒に設定します。
-
-<a name="conclusion" />
 
 ## まとめ
 

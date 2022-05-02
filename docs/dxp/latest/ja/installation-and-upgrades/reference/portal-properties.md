@@ -1,8 +1,8 @@
 # ポータルプロパティ
 
-構成オプションは、 **ポータルプロパティ** を使用して指定されます*名前と値のペアのセットは、サーバーの起動時にプロパティファイルと環境変数から読み取られます。 [デフォルト値](https://docs.liferay.com/dxp/portal/7.2-latest/propertiesdoc/portal.properties.html)は`portal-impl.jar/portal.properties`ファイルで指定されます。</p>
+構成オプションは、 **ポータルプロパティ** を使用して指定されます*名前と値のペアのセットは、サーバーの起動時にプロパティファイルと環境変数から読み取られます。 [デフォルト値](https://docs.liferay.com/dxp/portal/7.2-latest/propertiesdoc/portal.properties.html) は`portal-impl.jar/portal.properties`ファイルで指定されます。</p>
 
-一部のプロパティはユーザーインターフェイス（UI）を介して変更できますが、その他のプロパティはプロパティファイルまたはDocker環境変数でのみ変更できます。 これらには、 [Liferay Home](./liferay-home.md) フォルダの場所を宣言するデータベースへの接続が含まれます。 そして [ユーザーがどのように認証するかを変更する](../securing-liferay/authentication-basics.md#configuring-authentication-type-using-properties) (メールアドレスではなくスクリーン名で)。
+一部のプロパティはユーザー インターフェイス (UI) を介して変更できますが、他のプロパティはプロパティ ファイルでのみ変更できます。 これらには、 [Liferay Home](./liferay-home.md) フォルダの場所を宣言するデータベースへの接続が含まれます。 そして [ユーザーがどのように認証するかを変更する](../securing-liferay/authentication-basics.md#configuring-authentication-type-using-properties) (メールアドレスではなくスクリーン名で)。
 
 Liferayのインストールでは、プロパティファイルを使用します。 慣例により、`portal-ext.properties`は、デフォルトのプロパティ値を上書きするために、[`[Liferay Home]`](./liferay-home.md)フォルダまたは`[USER_HOME]`フォルダに作成する必要があります。  新規または変更されたプロパティファイルを適用するには、DXPを再起動する必要があります。
 
@@ -113,6 +113,7 @@ company.security.auth.type=userId
     * Liferay Docker Env変数
 2. **共有プロパティ**（複数回定義されたプロパティ）に定義された最後の値が優先されます。
 
+3.  プロパティソースは [決定論的順序](#configuration-processing) で読み込まれます。
 
 ### 構成処理
 
@@ -135,9 +136,7 @@ include-and-override=${liferay.home}/${external-properties}
 ```
 
 
-`portal-impl.jar/portal.properties`ファイルは上記`include-and-override`定義を指定します。 他の有効なプロパティソースが追加または競合する`include-and-override`プロパティ値を定義している場合、これらはデフォルトをオーバーライドするために使用されます。
-
-![DXPサーバーが使用しているインクルード拡張ファイルのリストは、コントロールパネルの［構成］セクションの［サーバー管理］ページにあります。](./portal-properties/images/01.png)
+![DXPサーバーが使用しているインクルード拡張ファイルのリストは、コントロールパネルの[構成]セクションの [サーバー管理]ページにあります。](./portal-properties/images/01.png)
 
 `${external-properties}` 定義は、DXPのJavaプロパティ `外部プロパティ` （たとえば、 `-Dexternal-properties = some.properties`）に割り当てられたプロパティファイルを表します。
 
@@ -149,8 +148,7 @@ Liferay Dockerコンテナは、Liferay環境変数を、リストに追加さ�
 複数のファイルのプロパティをオーバーライドすると、**最後**に定義されたプロパティソースが優先されます。 他のすべては無視されます。
 ```
 
-
-
+![DXPサーバーのすべてのポータルプロパティは、コントロールパネルの[構成]セクションの [サーバー管理]ページに表示できます。](./portal-properties/images/02.png)
 
 ### ポータルプロパティの優先度の例
 

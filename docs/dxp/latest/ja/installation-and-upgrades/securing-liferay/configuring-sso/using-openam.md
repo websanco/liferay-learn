@@ -33,7 +33,7 @@ OpenAM 12以下はLiferay DXPで動作しますが、サポートは終了して
 1. OpenAMでLiferay DXP管理ユーザーを作成する
 1. 認証用にOpenAMを有効にする
 
-ユーザーは画面名によって前後にマッピングされるため、OpenAMのユーザーIDをLiferay管理ユーザーの画面名と必ず一致させてください。 たとえば、Liferay DXP管理ユーザーの画面名が **admin** の場合は、 **admin** のIDと[`admin.email.from.address`](http://docs.liferay.com/portal/7.2-latest/propertiesdoc/portal.properties.html#Admin%20Portlet)[ポータルプロパティ](../../reference/portal-properties.md)で指定された電子メールアドレスを使用して、ユーザーをOpenAMに登録します。 ユーザーを設定したら、このユーザーを使用してOpenAMにログインします。
+ユーザーは画面名によって前後にマッピングされるため、OpenAMのユーザーIDをLiferay管理ユーザーの画面名と必ず一致させてください。 たとえば、Liferay DXP管理ユーザーの画面名が **admin** の場合は、 **admin** のIDと [`admin.email.from.address`](http://docs.liferay.com/portal/7.2-latest/propertiesdoc/portal.properties.html#Admin%20Portlet) [ポータルプロパティ](../../reference/portal-properties.md)で指定された電子メールアドレスを使用して、ユーザーをOpenAMに登録します。 ユーザーを設定したら、このユーザーを使用してOpenAMにログインします。
 
 1. 同じブラウザウィンドウで、管理ユーザーとして（以前の管理者の電子メールアドレスを使用して）Liferay DXPにログインします。
 

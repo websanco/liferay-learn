@@ -1,6 +1,6 @@
 # OpenID Connectの使用
 
-OpenID Connectは、ユーザーが他のシステムにあるアカウントを使用して認証できるようにする軽量の認証レイヤーです。 これは[OAuth 2.0承認](../../../headless-delivery/using_oauth2.rst)プロトコルの上に構築されています。 OpenID Connectを使用することで、ユーザー認証を他のプロバイダーに **委任** し、既存のアカウントを持つユーザがLiferayのインストールで簡単に認証できるようにします。
+OpenID Connectは、ユーザーが他のシステムにあるアカウントを使用して認証できるようにする軽量の認証レイヤーです。 これは [OAuth 2.0承認](../../../headless-delivery/using_oauth2.rst) プロトコルの上に構築されています。 OpenID Connectを使用することで、ユーザー認証を他のプロバイダーに **委任** し、既存のアカウントを持つユーザがLiferayのインストールで簡単に認証できるようにします。
 
 ```{note}
 インストールに複数のプロバイダーを追加できますが、Liferay DXPをOpenID Connectプロバイダーにすることはできません。
@@ -32,7 +32,7 @@ OpenID Connectを使用するには、まずプロバイダーにクライアン
 
 [**Control Panel**] → [**Configuration**] → [**System Settings**] → [**Security**] → [**SSO**] に移動して、 [**System Scope**] の下で ***[OpenID Connect Provider**]*を選択します。
 
-![［System Settings］メニューでOpenID構成を検索する。](using-openid-connect/images/01.png)
+![ [System Settings]メニューでOpenID構成を検索する。](using-openid-connect/images/01.png)
 
 次の手順を実行します：
 

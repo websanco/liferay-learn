@@ -13,7 +13,7 @@
 ```
 
 ```{important}
-   詳細は、 [Maintenance Mode and Deprecation Policies](https://help.liferay.com/hc/ja/articles/360015767952-Maintenance-Mode-and-Deprecation) を参照してください。
+詳細は、 [Maintenance Mode and Deprecation Policies](https://help.liferay.com/hc/ja/articles/360015767952-Maintenance-Mode-and-Deprecation) を参照してください。
 ```
 
 <a name="deprecated-feature-availability" />
@@ -49,12 +49,12 @@
 | JQueryのデフォルトのグローバルLiferay変数                       | バンドル（無効）                                                                                                                                                                     | [**システム設定**] → [**サードパーティー**] → [**jQuery**] で`[JQueryを有効にする]`プロパティを `[true]`に設定することで、以前の動作に戻すことができます。                                                       |
 | Liferayブックマーク                                     | アーカイブ                                                                                                                                                                        | 直接の置換はありません。                                                                                                                                          |
 | Liferay Mobile Device Detection Lite              | アーカイブ                                                                                                                                                                        | 直接の置換はありません。                                                                                                                                          |
-| Liferay同期コネクタと同期クライアント                            | マーケットプレイスと[ダウンロード](https://web.liferay.com/downloads/liferay-sync)                                                                                                           | 直接の置換はありません。                                                                                                                                          |
+| Liferay同期コネクタと同期クライアント                            | マーケットプレイスと [ダウンロード](https://web.liferay.com/downloads/liferay-sync)                                                                                                           | 直接の置換はありません。                                                                                                                                          |
 | OpenAM/OpenSSO                                    | バンドル                                                                                                                                                                         | 7.2で廃止。 [ SAMLベースの認証](../../securing-liferay/configuring-sso/authenticating-with-saml/single-sign-on-with-saml.md)に移行。      |
 | OpenID                                            | マーケットプレース                                                                                                                                                                    | [OpenID Connect](../../securing-liferay/configuring-sso/using-openid-connect.md)に置き換えられました。 7.2で廃止。                                        |
-| プロジェクトテンプレート：project-templates-activator          | [GitHub](https://github.com/liferay/liferay-blade-cli/tree/master/extensions)にアーカイブ済み                                                                                        | 置換はありません。                                                                                                                                             |
-| プロジェクトテンプレート：project-templates-freemarker-portlet | [GitHub](https://github.com/liferay/liferay-blade-cli/tree/master/extensions)にアーカイブ済み                                                                                        | 置換はありません。                                                                                                                                             |
-| Screens                                           | Github - iOS： [5.2.0](https://github.com/liferay/liferay-screens/releases/tag/5.2.0)、Android： [5.1.0](https://github.com/liferay/liferay-screens/releases/tag/5.1.0-android) | [モバイルSDK](../../../building-applications/tooling/other-tools/mobile-sdk.md)および[ヘッドレスAPI](../../../headless-delivery/consuming_apis.html)を使用してください。 |
+| プロジェクトテンプレート：project-templates-activator          | [GitHub](https://github.com/liferay/liferay-blade-cli/tree/master/extensions) にアーカイブ済み                                                                                        | 置換はありません。                                                                                                                                             |
+| プロジェクトテンプレート：project-templates-freemarker-portlet | [GitHub](https://github.com/liferay/liferay-blade-cli/tree/master/extensions) にアーカイブ済み                                                                                        | 置換はありません。                                                                                                                                             |
+| Screens                                           | Github - iOS： [5.2.0](https://github.com/liferay/liferay-screens/releases/tag/5.2.0) 、Android： [5.1.0](https://github.com/liferay/liferay-screens/releases/tag/5.1.0-android) | [モバイルSDK](../../../building-applications/tooling/other-tools/mobile-sdk.md)および [ヘッドレスAPI](../../../headless-delivery/consuming_apis.html) を使用してください。 |
 | **ツール** カテゴリの検索ウィジェット（クラシック）                        | バンドル                                                                                                                                                                         | 7.1で廃止。 **検索** カテゴリの[検索ウィジェット](../../../using-search/search-pages-and-widgets/search-results/search-results.md)に置き換えられました。                               |
 | SOAP Webサービス                                      | バンドル（無効）                                                                                                                                                                     | Axis サーブレット (例：`http://localhost:8080/api/axis/`にサービスを公開する) は、このポータルプロパティ設定`axis.servlet.enabled`で有効にすることができます。 Liferayの`*SOAP`クラスは廃止されます。            |
 | Solr                                              | マーケットプレース                                                                                                                                                                    | Elasticsearchに置き換えられました。                                                                                                                              |
@@ -67,11 +67,9 @@
 
 以前のLiferayバージョンからアップグレードする場合は、以前のバージョンで廃止になった機能も考慮する必要があります。
 
-* [7.2の非推奨事項とメンテナンスモードに移行した機能](./maintenance-mode-and-deprecations-in-7-2.md)
-* [7.1の非推奨事項](https://help.liferay.com/hc/ja/articles/360018403151-Digital-Experience-Platform-7-1-Deprecated-and-Removed-Items)
-* [7.0の非推奨事項](https://help.liferay.com/hc/ja/articles/360018123832-Digital-Experience-Platform-7-0-Deprecated-and-Removed-Items)
-
-<a name="features-moved-to-maintenance-mode-in-73" />
+  - [7.2の非推奨事項とメンテナンスモードに移行した機能](./maintenance-mode-and-deprecations-in-7-2.md)
+  - [7.1の非推奨事項](https://help.liferay.com/hc/ja/articles/360018403151-Digital-Experience-Platform-7-1-Deprecated-and-Removed-Items)
+  - [7.0の非推奨事項](https://help.liferay.com/hc/ja/articles/360018123832-Digital-Experience-Platform-7-0-Deprecated-and-Removed-Items)
 
 ## 7.3でメンテナンスモードに移行された機能
 
@@ -87,5 +85,5 @@
 
 ## 追加情報
 
-* [7.3破壊的な変更](../../../liferay-internals/reference/7-3-breaking-changes.md)
-* [7.3 Default Setting Changes](./default-setting-changes-in-7-3.md)
+  - [7.3破壊的な変更](../../../liferay-internals/reference/7-3-breaking-changes.md)
+  - [7.3 Default Setting Changes](./default-setting-changes-in-7-3.md)

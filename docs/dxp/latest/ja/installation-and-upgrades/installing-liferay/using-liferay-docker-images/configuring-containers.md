@@ -11,7 +11,7 @@ Liferayインストールで構成可能なものはすべて、Liferay Docker�
 * [システム設定](#system-settings)
 
 ```{note}
-コンテナにファイルを提供する設定のユースケースを、[bind mounts](https://docs.docker.com/storage/bind-mounts/)を使って示しています。 また、 [volumes](https://docs.docker.com/storage/volumes/)や、場合によっては`docker cp`コマンドを使用することもできます。 詳しくは [Providing Files to the Container](./providing-files-to-the-container.md)をご覧ください。
+コンテナにファイルを提供する設定のユースケースを、 [bind mounts](https://docs.docker.com/storage/bind-mounts/) を使って示しています。 また、 [volumes](https://docs.docker.com/storage/volumes/) や、場合によっては`docker cp`コマンドを使用することもできます。 詳しくは [コンテナへのファイルの提供](./providing-files-to-the-container.md) をご覧ください。
 ```
 
 <a name="jvm-options" />
@@ -50,7 +50,7 @@ JVMオプションを設定する別の方法は、Tomcatの `setenv.sh` スク�
     docker cp tmp-dxp:/opt/liferay/tomcat/bin/setenv.sh .
     ```
 
-1. [コンテナを停止します](../using-liferay-docker-images.md#stopping-a-container)。
+1. [コンテナを停止します](../using-liferay-docker-images.md#stopping-a-container) 。
 
 1. `setenv.sh` のコピーで JVM オプションを設定します。
 
@@ -70,11 +70,11 @@ JVMオプションを設定する別の方法は、Tomcatの `setenv.sh` スク�
 コンテナは `setenv.sh` スクリプトの JVM オプションを使用します。
 
 ```{note}
-コンテナの`/mnt/liferay`フォルダにバインドマウントする方法については、 [コンテナへのファイル提供](./providing-files-to-the-container.md#bind-mounting-a-host-folder-to-mnt-liferay)を参照してください。
+コンテナの`/mnt/liferay`フォルダにバインドマウントする方法については、 [コンテナへのファイル提供](./providing-files-to-the-container.md#bind-mounting-a-host-folder-to-mnt-liferay) を参照してください。
 ```
 
 ```{note}
-Liferayコンテナの起動と運用の詳細については、 [Using Liferay Docker Images](../using-liferay-docker-images.md)を参照してください。
+Liferayコンテナの起動と運用の詳細については、 [Liferay Dockerイメージの使用](../using-liferay-docker-images.md) を参照してください。
 ```
 
 <a name="portal-properties" />
@@ -88,7 +88,7 @@ Liferayコンテナの起動と運用の詳細については、 [Using Liferay 
 
 ### Liferay環境変数の使用
 
-**ポータルプロパティ** ごとに [Env](../../reference/portal-properties.md)変数があります。 環境変数は、Liferay Dockerコンテナのポータルプロパティをオーバーライドする[Docker環境変数](https://docs.docker.com/engine/reference/commandline/run/#set-environment-variables--e---env---env-file)です。
+**ポータルプロパティ** ごとに [Env](../../reference/portal-properties.md)変数があります。 環境変数は、Liferay Dockerコンテナのポータルプロパティをオーバーライドする [Docker環境変数](https://docs.docker.com/engine/reference/commandline/run/#set-environment-variables--e---env---env-file) です。
 
 1. [ポータル プロパティ](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html) のオンライン説明で、オーバーライドするプロパティを見つけます。
 
@@ -109,11 +109,11 @@ Liferayコンテナの起動と運用の詳細については、 [Using Liferay 
     ```
 
     ```{note}
-    データベース環境変数の例については、[Database Templates](../../reference/database-templates.md)を参照してください。
+    データベース環境変数の例については、 [データベーステンプレート](../../reference/database-templates.md) を参照してください。
     ```
 
     ```{note}
-    コンテナの起動と運用の詳細については、 [Using Liferay Docker Images](../using-liferay-docker-images.md)を参照してください。
+    コンテナの起動と運用の詳細については、 [Liferay Dockerイメージの使用](../using-liferay-docker-images.md) を参照してください。
     ```
 
 プロパティは、コントロールパネルの ［**設定**］ &rarr; ［**サーバー管理**］ &rarr; ［**プロパティ**］ &rarr; ［**ポータルプロパティ**］ で表示されます。
@@ -134,7 +134,7 @@ Liferayコンテナの起動と運用の詳細については、 [Using Liferay 
     echo "jdbc.default.jndi.name=jdbc/MyPool" >> [host folder]/files/portal-ext.properties
     ```
 
-1. `portal-ext.properties` ファイルのフォルダをコンテナの `/mnt/liferay/files` フォルダにバインドマウントを含むマッピングするコンテナを作成します。 この例の `portal-ext.properties` は `files`という名前のフォルダーにあるため、 [コンテナの `/mnt /liferay` フォルダーにバインドマウント](./providing-files-to-the-container.md#bind-mounting-a-host-folder-to-mnt-liferay)できます。
+1. `portal-ext.properties` ファイルのフォルダをコンテナの `/mnt/liferay/files` フォルダにバインドマウントを含むマッピングするコンテナを作成します。 この例の `portal-ext.properties` は `files`という名前のフォルダーにあるため、 [コンテナの `/mnt /liferay` フォルダーにバインドマウント](./providing-files-to-the-container.md#bind-mounting-a-host-folder-to-mnt-liferay) できます。
 
     ```bash
     docker run -it -m 8g -p 8080:8080 -v [host folder path]:/mnt/liferay liferay/dxp:[tag]
@@ -143,7 +143,7 @@ Liferayコンテナの起動と運用の詳細については、 [Using Liferay 
 プロパティは、コントロールパネルの ［**設定**］ &rarr; ［**サーバー管理**］ &rarr; ［**プロパティ**］ &rarr; ［**ポータルプロパティ**］ で表示されます。
 
 ```{note}
-データベースポータルプロパティの例については、[Database Templates](../../reference/database-templates.md)を参照してください。
+データベースポータルプロパティの例については、 [データベーステンプレート](../../reference/database-templates.md) を参照してください。
 ```
 
 ## 画像定義の環境変数
@@ -200,7 +200,7 @@ LIFERAY_TERMS_PERIOD_OF_PERIOD_USE_PERIOD_REQUIRED=false
     terms.of.use.required=true
     ```
 
-1. バインドマウントパスにある `portal-ext.properties` ファイルに必要な設定を指定します。 [ポータルプロパティファイルを使用する](#using-a-portal-properties-file)を参照してください。
+1. バインドマウントパスにある `portal-ext.properties` ファイルに必要な設定を指定します。 [ポータルプロパティファイルを使用する](#using-a-portal-properties-file) を参照してください。
 
     ```bash
     echo "terms.of.use.required=false" >> ./files/portal-ext.properties
@@ -235,7 +235,7 @@ LIFERAY_TERMS_PERIOD_OF_PERIOD_USE_PERIOD_REQUIRED=false
     ```
 
     ```{note}
-    コンテナの`/mnt/liferay`フォルダにバインドマウントする方法については、[コンテナへのファイル提供](./providing-files-to-the-container.md#bind-mounting-a-host-folder-to-mnt-liferay)を参照してください。
+    コンテナの`/mnt/liferay`フォルダにバインドマウントする方法については、 [コンテナへのファイル提供](./providing-files-to-the-container.md#bind-mounting-a-host-folder-to-mnt-liferay) を参照してください。
     ```
 
 プロパティは、コントロールパネルの ［**設定**］ &rarr; ［**サーバー管理**］ &rarr; ［**プロパティ**］ &rarr; ［**システムプロパティ**］ で表示されます。
@@ -301,5 +301,5 @@ LiferayコンテナのJVMオプション、ポータルプロパティ、イメ�
 * [Docker Container Basics](./docker-container-basics.md)
 * [コンテナのライフサイクルとAPI](./container-lifecycle-and-api.md)
 * [コンテナへのファイルの提供](./providing-files-to-the-container.md)
-* [Installing Apps and Other Artifacts to Containers](./installing-apps-and-other-artifacts-to-containers.md)
-* [Patching DXP in Docker](./patching-dxp-in-docker.md)
+* [コンテナへのアプリやその他のアーティファクトのインストール](./installing-apps-and-other-artifacts-to-containers.md)
+* [DockerでDXPにパッチを適用する](./patching-dxp-in-docker.md)

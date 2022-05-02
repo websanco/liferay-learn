@@ -17,7 +17,7 @@ Liferayのパフォーマンスを調整する方法はいくつかあります�
 
 ### ポータル開発者プロパティ
 
-Liferayの [ポータルプロパティ](../reference/portal-properties.md) は、開発を容易にするいくつかのプロパティが含まれています。 Liferayのインストールに含まれている [`portal-developer.properties`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-impl/src/portal-developer.properties) は、すべてのプロパティを宣言するものですが、デフォルトでは無効になっています。 このファイルは、次の設定を使って、`portal-ext.properties`ファイルで参照した場合のみ有効になります。
+Liferayの[ポータルプロパティ](../reference/portal-properties.md)は、開発を容易にするいくつかのプロパティが含まれています。 Liferayのインストールに含まれている [`portal-developer.properties`](https://github.com/liferay/liferay-portal/blob/[$LIFERAY_LEARN_PORTAL_GIT_TAG$]/portal-impl/src/portal-developer.properties) は、すべてのプロパティを宣言するものですが、デフォルトでは無効になっています。 このファイルは、次の設定を使って、`portal-ext.properties`ファイルで参照した場合のみ有効になります。
 
 ```properties 
 include-and-override=portal-developer.properties
@@ -107,7 +107,7 @@ CPUベースの負荷をテストする場合、またはCPU容量が心配な�
 
 接続数がデータベース接続制限に違反している場合は、カウンターデータソースのプールサイズを縮小してください。 カウンターデータベースのトランザクション数は少なく、高速で、ネストされることはないため、カウンター接続プールは削減に適した候補となります。 カウンターデータソースの詳細は、 [クラスタノードのデータベース構成](./clustering-for-high-availability/database-configuration-for-cluster-nodes.md) を参照してください。
 
-Liferayは、接続プールにC3PO、DBCP、HikariCP、またはTomcatを使用できます。 接続プールプロバイダーは、 [`jdbc.default.liferay.pool.provider`](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#JDBC) [ポータルプロパティ](../reference/portal-properties.md) を使用して設定します。 HikariCPがデフォルトです。
+Liferayは、接続プールにC3PO、DBCP、HikariCP、またはTomcatを使用できます。 接続プールプロバイダーは、 [`jdbc.default.liferay.pool.provider`](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html#JDBC) [ポータルプロパティ](../reference/portal-properties.md)を使用して設定します。 HikariCPがデフォルトです。
 
 ```properties
 jdbc.default.liferay.pool.provider=hikaricp
@@ -115,7 +115,7 @@ jdbc.default.maximumPoolSize=85
 jdbc.default.minimumIdle=10
 ```
 
-サポートされているすべての接続プールに対して、 [JDBC接続プールポータルプロパティ](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#JDBC) があります。 設定の詳細は、接続プールベンダーの情報を参照してください。
+サポートされているすべての接続プールに対して、 [JDBC接続プールポータルプロパティ](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html#JDBC) があります。 設定の詳細は、接続プールベンダーの情報を参照してください。
 
 スレッドプールと同様に、接続プールを監視し、パフォーマンステストに基づいて調整します。
 

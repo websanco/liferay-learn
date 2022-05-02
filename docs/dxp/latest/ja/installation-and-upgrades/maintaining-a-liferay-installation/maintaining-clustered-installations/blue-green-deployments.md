@@ -22,5 +22,5 @@
 ## 追加情報
 
 * [Rolling Restarts](./rolling-restarts.md)
-* [Clustering for High Availability](../../setting-up-liferay/clustering-for-high-availability.md)
+* [高可用性のクラスタリング](../../setting-up-liferay/clustering-for-high-availability.md)
 * [DXP へのパッチ適用](../patching-dxp-7-3-and-earlier.md)

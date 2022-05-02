@@ -15,7 +15,7 @@
 * [データベースアップグレードツール](../upgrade-basics/using-the-database-upgrade-tool.md): サーバーがオフラインの状態でも、データベースアップグレードツールを使用してコアおよびモジュールのデータベースのアップグレードを実行できます。
 
 ```{important}
-DXP/Portalのデータベースをアップグレードするための補足説明です。 出発点として、DXP/Portalのアップグレード手順については、[Upgrade Basics](../upgrade-basics.md)を参考にしてください。また、DXP/Portalのアップデートやフィックスパックの適用については、[Maintaining a Liferay Installation](../../maintaining-a-liferay-installation.md)を参考にしてください。
+DXP/Portalのデータベースをアップグレードするための補足説明です。 出発点として、DXP/Portalのアップグレード手順については、 [アップグレードの基本](../upgrade-basics.md) を参考にしてください。また、DXP/Portalのアップデートやフィックスパックの適用については、 [Liferay DXPインストールの管理](../../maintaining-a-liferay-installation.md) を参考にしてください。
 ```
 
 ## スキーマ変更レベルのデータベースアップグレードオプション

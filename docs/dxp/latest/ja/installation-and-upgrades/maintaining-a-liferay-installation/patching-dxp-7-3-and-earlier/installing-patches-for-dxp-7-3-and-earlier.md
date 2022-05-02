@@ -5,7 +5,7 @@
 [パッチングツール](../reference/installing-the-patching-tool.md)は、Liferay DXP 7.3 SP3以前のバージョンのフィックスパック（セキュリティフィックスパック、サービスパックを含む）を適用します。 また、任意のDXPバージョンのホットフィックスも適用されます。
 
 ```{note}
-Liferay DXP 7.3 SP3+のアップデート(またはセキュリティアップデート)を適用する場合は、[Updating Liferay](../updating-liferay.md)を参照してください。
+Liferay DXP 7.3 SP3+のアップデート(またはセキュリティアップデート)を適用する場合は、 [Liferayのアップデート](../updating-liferay.md) を参照してください。
 ```
 
 DXPバンドルとDXPアプリケーションサーバーのインストールのパッチ適用手順は似ています。 DXPバンドルには事前設定されたパッチツールが含まれているため、パッチをすぐに適用できます。 ただし、DXPアプリケーションサーバーのインストールでは、パッチを適用する前にパッチツールをインストールして構成する必要があります。
@@ -18,7 +18,7 @@ DXPバンドルとDXPアプリケーションサーバーのインストール�
 DXPをDockerコンテナで動作させている場合は、[Patching DXP in Docker](./../installing-liferay/using-liferay-docker-images/patching-dxp-in-docker.md)の指示に従ってください。
 ```
 
-DXPバンドルにパッチを適用する場合は、以下の基本的なパッチ適用手順に進んでください。 アプリケーションサーバーでDXPにパッチを適用する場合は、パッチを適用する手順を実行する **前** に、[追加の準備を行ってください](#preparing-to-patch-dxp-on-an-application-server)。
+DXPバンドルにパッチを適用する場合は、以下の基本的なパッチ適用手順に進んでください。 アプリケーションサーバーでDXPにパッチを適用する場合は、パッチを適用する手順を実行する **前** に、 [追加の準備を行ってください](#preparing-to-patch-dxp-on-an-application-server) 。
 
 ## パッチ適用手順
 
@@ -125,7 +125,7 @@ DXPバンドルにパッチを適用する場合は、以下の基本的なパ�
     ./patching-tool.sh info
     ```
 
-    インデックスの更新がある場合は、[`portal-ext.properties` ファイル](../../reference/portal-properties.md)の[`database.indexes.update.on.startup`](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#Database) Portal Propertyを `true` に設定します。
+    インデックスの更新がある場合は、[`portal-ext.properties` ファイル](../../reference/portal-properties.md)の [`database.indexes.update.on.startup`](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#Database) Portal Propertyを `true` に設定します。
 
     ```properties
     database.indexes.update.on.startup=true
@@ -133,7 +133,7 @@ DXPバンドルにパッチを適用する場合は、以下の基本的なパ�
 
     `LIFERAY_` OR `IX_` で始まるインデックスのみが更新されます。 カスタムインデックスがこの命名規則を使用していないことを確認してください。
 
-1. DXP 7.3をアプリケーションサーバーにインストールし直す場合は、パッチを適用したDXPアプリケーションを[一時的な場所](#preparing-to-patch-dxp-on-an-application-server)から`.war`ファイルに圧縮して戻し、ファイルをアプリケーションサーバーにコピーします。 アプリケーションサーバーの[DXPのインストール手順](../../installing-liferay/installing-liferay-on-an-application-server.md)を参照してください。
+1. DXP 7.3をアプリケーションサーバーにインストールし直す場合は、パッチを適用したDXPアプリケーションを [一時的な場所](#preparing-to-patch-dxp-on-an-application-server) から`.war`ファイルに圧縮して戻し、ファイルをアプリケーションサーバーにコピーします。 アプリケーションサーバーの[DXPのインストール手順](../../installing-liferay/installing-liferay-on-an-application-server.md)を参照してください。
 
 1. アプリケーションサーバーを再度起動します。
 

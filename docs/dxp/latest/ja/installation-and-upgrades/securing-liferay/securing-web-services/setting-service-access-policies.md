@@ -30,7 +30,7 @@
 
 | サービスアクセスポリシー                                           | 説明                                                                                                                                                                                                                      | デフォルトで有効 |
 | :--- | :--- | :--- |
-| **OAUTH2\_analytics.read/write** | [Liferay Analytics Cloud](https://www.liferay.com/products/analytics-cloud)と統合して、JSON Webサービスにアクセスできるようにします。                                                                                                               | ✔        |
+| **OAUTH2\_analytics.read/write** | [Liferay Analytics Cloud](https://www.liferay.com/products/analytics-cloud) と統合して、JSON Webサービスにアクセスできるようにします。                                                                                                               | ✔        |
 | **OAUTH2\** everything/read/documents/userprofile/write **| Everythingポリシーは、さまざまな理由ですべてのJSON Webサービスへのアクセスを許可します。 Everythingとはすべて、つまりすべてのJSON Webサービスです（`*`に一致）。 その他は、その説明に適したメソッドシグネチャと一致します。 たとえば、OAUTH2\** everything.readは、`fetch`、`get`、`has`、`is`、または`search`で始まるすべてのメソッドに一致します。 | ✔        |
 
 デフォルトの構成では、システムに付属するすべてのWebサービスへのアクセスを提供する対応するスコープが使用可能になります。 スコープを使用できるようにするには、OAuth 1または2アプリケーションに割り当てる必要があります。 管理者は、使用するスコープを確認し、他のスコープを無効にする必要があります。

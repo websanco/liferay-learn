@@ -18,7 +18,7 @@
 
 1. **事前設定：** TomcatおよびLiferayを設定する前に、[ユーザー提供のスクリプトを実行します](./running-scripts-in-containers.md)。
 2. **設定：** TomcatでDXPを実行する準備をします。
-    1.  [TomcatのJavaランタイム環境の設定](./configuring-containers.md#jvm-options)。
+    1.  [TomcatのJavaランタイム環境の設定](./configuring-containers.md#jvm-options) 。
     2.  [ユーザが提供したファイル](./configuring-containers.md) を [Liferay Home](../../reference/liferay-home.md) にコピー。
     3.  [ユーザー提供のスクリプトの実行](./running-scripts-in-containers.md)。
     4.  [ユーザー提供のアーティファクトのデプロイ](./installing-apps-and-other-artifacts-to-containers.md)。
@@ -36,7 +36,7 @@
 * `/user/local/liferay/scripts`
 
 ```{note}
-   You can pass files to these container folders in several different ways, including using [bind mounts](https://docs.docker.com/storage/bind-mounts/) , [volumes](https://docs.docker.com/storage/volumes/) , and `docker cp`. See [コンテナへのファイルの提供](./providing-files-to-the-container.md) for more information.
+[bind mount](https://docs.docker.com/storage/bind-mounts/) 、 [volumes](https://docs.docker.com/storage/volumes/) 、`docker cp` など、これらのコンテナフォルダにファイルを渡すことができます。 詳細は、 [コンテナへのファイルの提供](./providing-files-to-the-container.md) を参照してください。
 ```
 
 上記の主要なフォルダーには、特定のアクション用に指定されたサブフォルダーがあります。 次のセクションでは、サブフォルダー、それらのファイルで実行されるアクション、および関連するユースケースをライフサイクルの段階順に記述します。
@@ -58,7 +58,7 @@
 
 | ファイルの場所                 | 操作                                                                                                                                                                                                                                                                                                | ユースケース                                                                                                         |
 |:----------------------- |:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |:-------------------------------------------------------------------------------------------------------------- |
-| `/mnt/liferay/files`    | Liferay Home (`/opt/liferay` ) の下にあるフォルダにファイルをコピーする                                                                                                                                                                                                                                               | [コンテナの設定](./configuring-containers.md) <br><br> [Tomcatの設定](./configuring-containers.md#jvm-options) |
+| `/mnt/liferay/files`    | Liferay Home (`/opt/liferay` ) の下にあるフォルダにファイルをコピーする                                                                                                                                                                                                                                               | [コンテナの設定](./configuring-containers.md)<br><br> [Tomcatの設定](./configuring-containers.md#jvm-options) |
 | `/mnt/liferay/scripts`  | スクリプトをアルファベット順に実行する                                                                                                                                                                                                                                                                               | [構成中にスクリプトを実行](./running-scripts-in-containers.md)                                                             |
 | `/mnt/liferay/deploy`   | Liferay起動時にアーティファクトを自動展開するために、 `/mnt/liferay/deploy` を `/opt/ liferay/deploy` にシンボリックリンクします。<br><br>実行時、`/mnt/liferay/deploy`、 `/opt/liferay/deploy`、またはいずれかのフォルダに取り付けられたフォルダにコピーされたアーティファクトを自動デプロイします。<br><br>注：自動デプロイされたアーティファクトは、 `/opt/liferay/osgi`下の適切なフォルダに移動されます。 | [コンテナへのアプリやその他のアーティファクトのインストール](./installing-apps-and-other-artifacts-to-containers.md)                        |
 | `/mnt/liferay/patching` | パッチツールが提供されている場合は、それをインストールします。 提供されているパッチをインストールします。                                                                                                                                                                                                                                             | [DockerでDXPにパッチを適用する](./patching-dxp-in-docker.md)                                                             |

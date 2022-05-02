@@ -40,7 +40,7 @@ CDNは、次の要件を満たす必要があります。
 
 CDNを設定するための方法には、次の2つがあります。
 
-1. [ポータルプロパティ](../reference/portal-properties.md) ファイルで
+1.  [portal properties](../reference/portal-properties.md)ファイルで [コンテンツ配信ネットワークプロパティ](https://docs.liferay.com/dxp/portal/7.3-latest/propertiesdoc/portal.properties.html#Content%20Delivery%20Network) を設定する。
 
 コンテンツ配信ネットワークプロパティを設定する。</p></li> 
    

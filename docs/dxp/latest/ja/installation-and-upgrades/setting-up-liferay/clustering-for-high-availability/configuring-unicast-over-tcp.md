@@ -105,7 +105,7 @@ TCP Pingを使用してクラスターメンバーを検出する代わりに、
     connection_driver="［place your driver name here］"/>
 ```
 
-JDBC接続値の例については、 [データベーステンプレート](../../reference/database-templates.md) を参照してください。 JDBC Pingの詳細は、 [JGroups Documentation](http://www.jgroups.org/manual4/index.html#DiscoveryProtocols) を参照してください。
+JDBC接続値の例については、 [データベーステンプレート](../../reference/database-templates.md)を参照してください。 JDBC Pingの詳細は、 [JGroupsのドキュメント](http://www.jgroups.org/manual4/index.html#DiscoveryProtocols) を参照してください。
 
 ### S3 ping
 
@@ -120,7 +120,7 @@ S3 Pingを構成するには、 [ユニキャスト構成](#unicast-configuratio
     location="ControlBucket"/>
 ```
 
-上記のパラメーターの値としてAmazonキーを指定します。 S3 Pingの詳細は、 [JGroups Documentation](http://www.jgroups.org/manual4/index.html#_s3_ping) を参照してください。
+上記のパラメーターの値としてAmazonキーを指定します。 S3 Pingの詳細は、 [JGroupsのドキュメント](http://www.jgroups.org/manual4/index.html#_s3_ping) を参照してください。
 
 ### その他のping
 

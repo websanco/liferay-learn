@@ -6,7 +6,7 @@
 
 1. [**コントロールパネル**] で、 [**システム設定**] → [**Upgrades**]（[**プラットフォーム**] カテゴリ内） → [**Data Cleanup**] に移動します。 [Data Cleanup]画面が表示されます。
 
-    ![［Data Cleanup］では、廃止されたLiferayアプリケーションからデータを削除するためのインターフェイスが提供されます。](./data-cleanup/images/01.png)
+    ![ [Data Cleanup]では、廃止されたLiferayアプリケーションからデータを削除するためのインターフェイスが提供されます。](./data-cleanup/images/01.png)
 
 2.  クリーンアップするモジュールを選択し、 [**保存**] をクリックします。
 
@@ -32,8 +32,7 @@
 
 ## 追加情報
 
-* [データ削除](./data-removal.md)
-* [構成ファイルの使用](../../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md)
-* [Dockerによるアップグレード](../upgrade-basics/upgrading-via-docker.md)
-* [コンテナへのファイルの提供](../../installing-liferay/using-liferay-docker-images/providing-files-to-the-container.md)
-* [Using the Upgrade Tool](../upgrade-basics/using-the-database-upgrade-tool.md)
+  - [構成ファイルの使用](../../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md)
+  - [Dockerによるアップグレード](../upgrade-basics/upgrading-via-docker.md)
+  - [コンテナへのファイルの提供](../../installing-liferay/using-liferay-docker-images/providing-files-to-the-container.md)
+  - [Using the Upgrade Tool](../upgrade-basics/using-the-database-upgrade-tool.md)

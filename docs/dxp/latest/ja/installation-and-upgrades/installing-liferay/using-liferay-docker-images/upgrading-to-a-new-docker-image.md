@@ -1,6 +1,6 @@
 # 新しいDockerイメージへのアップグレード
 
-新しいLiferayバージョンがDockerイメージとしてリリースされると、それらにアップグレードできます。 [Upgrade Overview](../../upgrading-liferay/upgrade-basics/upgrade-overview.md)では、プロセスについて説明しています。
+新しいLiferayバージョンがDockerイメージとしてリリースされると、それらにアップグレードできます。 [アップグレードの基本](../../upgrading-liferay/upgrade-basics.md) では、プロセスについて説明しています。
 
 ```{important}
    アップグレードする前に、**必ず**データベースとインストールをバックアップ<../../maintaining-a-liferay-dxp-installation/backing-up.md>してください。 バックアップコピーでアップグレードプロセスをテストすることをお勧めします。

@@ -35,8 +35,10 @@
 
 1. [適用可能なパッチをインストールする](./installing-patches.md)ことで、インストールを希望のパッチレベルまで戻します。
 
-```tip::
-   インストールを特定のパッチレベルに復元する場合に備えて、パッチを便利な場所に保存すると便利です。 フィックスパックは、「カスタマーポータル<https://customer.liferay.com/downloads>」からいつでも再度ダウンロードできます。
+<!-- end list -->
+
+```{tip}
+It's helpful to store your patches in a convenient location in case you want to restore your installation to a particular patch level. You can always download fix packs again from the [Customer Portal](https://customer.liferay.com/downloads) .
 ```
 
 <a name="reverting-a-hotfix" />

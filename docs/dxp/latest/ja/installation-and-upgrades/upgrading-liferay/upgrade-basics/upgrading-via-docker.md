@@ -31,9 +31,7 @@ Dockerイメージを使用してアップグレードする手順は次のと�
 
 1. 新しいLiferay Dockerイメージで使用する任意のフォルダを作成し、`files`と`deploy`というサブフォルダを作成します。 例:
 
-    ```
-    mkdir -p new-version/files
-    ```
+      - `files`: Dockerコンテナはこのフォルダからコンテナの [Liferay Home](../../reference/liferay-home.md) フォルダにファイルをコピーします。
 
     ```
     mkdir -p new-version/deploy
@@ -41,7 +39,7 @@ Dockerイメージを使用してアップグレードする手順は次のと�
 
     * `files`: Dockerコンテナはこのフォルダからコンテナの [Liferay Home](../../reference/liferay-home.md) フォルダにファイルをコピーします。
 
-    * `deploy`: Dockerコンテナは、このフォルダからコンテナの自動デプロイ用フォルダにアーティファクトをコピーします。
+3.  [Liferay Homeのファイル](../../maintaining-a-liferay-installation/backing-up.md#liferay-home) と [アプリケーションサーバーファイル](../../maintaining-a-liferay-installation/backing-up.md#application-server) をバックアップから`files`フォルダ内の対応する場所（新しい`[Liferay Home]`）にコピーしてマージします。 例えば、アクティベーションキーを`new-version/files/license/`にコピーします。 ファイルには次のものが含まれる場合がありますが、これらに限定されません。
 
 1. [コマース](https://learn.liferay.com/commerce/latest/ja/index.html) を使用している場合は、コマースをアップグレードする準備をしてください。  詳細については、 [Liferay Commerceのアップグレード](https://learn.liferay.com/commerce/latest/ja/installation-and-upgrades/upgrading-liferay-commerce.html) を参照してください。
 
@@ -55,21 +53,7 @@ Dockerイメージを使用してアップグレードする手順は次のと�
 
     * `/log/*`：ログファイル。
 
-    * `/osgi/configs/*.config`：[OSGiの設定ファイル](../../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md)。
-
-    * `portal-*.properties`： [ポータルプロパティ](../../reference/portal-properties.md) ファイル（例：`portal-ext.properties`）。
-
-    * `setenv.sh`、`startup.sh`など：アプリケーションサーバーの設定スクリプト。
-
-    * `web.xml`：ポータルWebアプリケーション記述子。
-
-1. 7.2にアップグレードする場合は、`[Liferay Home]/files/osgi/config/`フォルダにある[構成ファイル](../../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md)を使用して検索インデックスを無効にします。 例:
-
-    ```bash
-    echo "indexReadOnly=\"true\"" >> new-version/files/osgi/config/com.liferay.portal.search.configuration.IndexStatusManagerConfiguration.config
-    ```
-
-1. [高度なファイルシステムストア](../../../system-administration/file-storage/configuring-file-storage.md)または[簡易ファイルシステムストア](../../../system-administration/file-storage/other-file-store-types/simple-file-system-store.md)を使用していて、保存場所を変更している場合は、ファイルストアの設定を [`.config`ファイル](../../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md#creating-configuration-files) にエクスポートして、`new-version/osgi/configs`フォルダにコピーします。
+4.  [高度なファイルシステムストア](../../../system-administration/file-storage.md)または[簡易ファイルシステムストア](../../../system-administration/file-storage/other-file-store-types/simple-file-system-store.md)を使用していて、保存場所を変更している場合は、ファイルストアの設定を [`.config`ファイル](../../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md#creating-configuration-files) にエクスポートして、`new-version/osgi/configs`フォルダにコピーします。
 
     ```{important}
     [高度なファイルシステムストア](../../../system-administration/file-storage/configuring-file-storage.md)を使用している場合は、データベースをアップグレードする前に、新しいインストールで`.config`ファイルを使って設定する必要があります。
@@ -79,7 +63,7 @@ Dockerイメージを使用してアップグレードする手順は次のと�
     `rootDir="data/document_library"`
     ```
 
-5.  データベースベンダーが推奨するJDBCデータベースドライバーを使用していることを確認してください。 たとえば、MySQLを使用している場合は、[`new-version/files/portal-ext.properties`](../../reference/portal-properties.md)で `jdbc.default.driverClassName=com.mysql.cj.jdbc.Driver` を設定し、アプリケーションサーバーが使用するMySQL JDBCドライバーのJARを置き換えます。 詳細は、[データベースドライバー](../configuration-and-infrastructure/migrating-configurations-and-properties.md#database-drivers)を参照してください。
+5.  データベースベンダーが推奨するJDBCデータベースドライバーを使用していることを確認してください。 たとえば、MySQLを使用している場合は、[`new-version/files/portal-ext.properties`](../../reference/portal-properties.md)で `jdbc.default.driverClassName=com.mysql.cj.jdbc.Driver` を設定し、アプリケーションサーバーが使用するMySQL JDBCドライバーのJARを置き換えます。 詳細は、 [データベースドライバー](../configuration-and-infrastructure/migrating-configurations-and-properties.md#database-drivers) を参照してください。
 
 1. 新しいバージョンのフォルダにマウントされた[Dockerイメージ](../../installing-liferay/using-liferay-docker-images/providing-files-to-the-container.md)を、以下のコマンドで実行します。 必要に応じて、イメージ名、タグ、環境値を差し替えてください。
 
@@ -104,7 +88,7 @@ Dockerイメージを使用してアップグレードする手順は次のと�
 
 1. 障害やエラーを解決した後、[アップグレード後の検討事項](./post-upgrade-considerations.md)を調べます。
 
-1. 新しいインストール先で [ポータルのプロパティを更新](../configuration-and-infrastructure/migrating-configurations-and-properties.md#migrating-portal-properties) します。
+9.  新しいインストール先で [ポータルのプロパティを更新](../configuration-and-infrastructure/migrating-configurations-and-properties.md#migrating-portal-properties) します。
 
 1. アップグレードしたデータベースを検証します。
 
@@ -115,7 +99,7 @@ Dockerイメージを使用してアップグレードする手順は次のと�
 新しいLiferayバージョンをDocker経由で使い続けたい場合は、 `-e LIFERAY_UPGRADE_PERIOD_DATABASE_PERIOD_AUTO_PERIOD_RUN=true`環境設定を、新しいコンテナの作成に使用する`docker run ...`コマンドから外してください。
 
 ```{note}
-[Docker Container Basics](../../../installation-and-upgrades/installing-liferay/using-liferay-docker-images/docker-container-basics.md)では、Dockerコンテナの作成、停止、再起動について説明しています。
+[Liferay Dockerイメージの使用](../../../installation-and-upgrades/installing-liferay/using-liferay-docker-images.md) では、Dockerコンテナの作成、停止、再起動について説明しています。
 ```
 
 <a name="conclusion" />
@@ -124,12 +108,10 @@ Dockerイメージを使用してアップグレードする手順は次のと�
 
 アップグレードされたデータベースで十分な場合は、新しいLiferayインスタンスを使用してください。 アップグレードの完了の他に作業が必要な場合は、以下の記事を参考にしてください。
 
-* [Upgrade Overview](./upgrade-overview.md)では、アップグレードに関するすべてのトピックについて説明しています。 まだ対処しなければならないトピックが見つかるかもしれません。
+  - [アップグレードの基本](../upgrade-basics.md) では、アップグレードに関するすべてのトピックについて説明しています。 まだ対処しなければならないトピックが見つかるかもしれません。
 
 * [データベースアップグレードツールの使用](./using-the-database-upgrade-tool.md) では、Liferayサーバーのオフライン時にデータベースをアップグレードする方法を示しています。 アップグレードに時間がかかりすぎる場合は、[データベースの調整](../upgrade-stability-and-performance/database-tuning-for-upgrades.md)、 [不要なデータの削除](../upgrade-stability-and-performance/database-pruning-for-faster-upgrades.md)、[データベース アップグレード ツールの使用](./using-the-database-upgrade-tool.md)を検討してください。
 
-* [カスタム開発のアップグレード](../upgrading-custom-development.md) では、カスタムプラグインコードを新しいLiferayバージョンに適応させる方法を示しています。
+  - [カスタム開発のアップグレード](../upgrading-custom-development.md) では、カスタムプラグインコードを新しいLiferayバージョンに適応させる方法を示しています。
 
-* [Maintaining Clustered Installations](../../maintaining-a-liferay-dxp-installation/maintaining-clustered-installations/maintaining-clustered-installations.md)では、クラスター環境でアップグレードする方法について説明しています。
-
-* [アップグレードのトラブルシューティング](../reference/troubleshooting-upgrades.md)
+  - [クラスター化されたインストールの維持](../../maintaining-a-liferay-installation/maintaining-clustered-installations.md) では、クラスター環境でアップグレードする方法について説明しています。

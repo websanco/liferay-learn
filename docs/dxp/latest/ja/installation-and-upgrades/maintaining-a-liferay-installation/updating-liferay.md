@@ -86,7 +86,7 @@ Liferay DXP/Portal の General Availability (GA) リリースは、ソースコ�
     rootDir="data/document_library"
     ```
 
-1. [Commerce](https://learn.liferay.com/commerce/latest/en/index.html) を使用していて、リリースノートにCommerceのデータベースのアップグレードが記載されている場合は、アップグレードの準備をしてください。 詳細については、[Upgrading Liferay Commerce](https://learn.liferay.com/commerce/latest/en/installation-and-upgrades/upgrading-liferay-commerce.html)を参照してください。
+1. [Commerce](https://learn.liferay.com/commerce/latest/ja/index.html) を使用していて、リリースノートにCommerceのデータベースのアップグレードが記載されている場合は、アップグレードの準備をしてください。 詳細については、 [Liferay Commerceのアップグレード](https://learn.liferay.com/commerce/latest/ja/installation-and-upgrades/upgrading-liferay-commerce.html) を参照してください。
 
 1. アプリケーションサーバーをシャットダウンします。
 
@@ -125,8 +125,8 @@ LiferayアップデートTomcatバンドルで動作しています。
 
 1. アップデートの `.war` ファイルとOSG依存関係のZIPファイルをダウンロードします。
 
-    * DXP:ヘルプセンター [ダウンロード](https://customer.liferay.com/downloads)。
-    * ポータル:Liferay コミュニティ [ダウンロード](https://www.liferay.com/downloads-community)。
+    * DXP:ヘルプセンター [ダウンロード](https://customer.liferay.com/downloads) 。
+    * ポータル:Liferay コミュニティ [ダウンロード](https://www.liferay.com/downloads-community) 。
 
 1. アプリケーションサーバーをシャットダウンします。
 
@@ -176,6 +176,6 @@ LiferayアップデートTomcatバンドルで動作しています。
 
 ## 追加情報
 
-* [Backing Up](./backing-up.md)
+* [バックアップ](./backing-up.md)
 * [ホットフィックスの適用](./applying-a-hotfix.md)
-* [Database Upgrade Options](../upgrading-liferay/reference/database-upgrade-options.md)
+* [データベースアップグレードオプション](../upgrading-liferay/reference/database-upgrade-options.md)

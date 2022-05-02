@@ -47,7 +47,7 @@
 
 ### プロパティを使用して認証タイプを設定する
 
-[`portal-ext.properties`](https://learn.liferay.com/dxp/latest/en/installation-and-upgrades/reference/portal-properties.html)ファイルを使用するには、以下のプロパティに貼り付け、目的の認証タイプのコメントを解除します。
+[`portal-ext.properties`](https://learn.liferay.com/dxp/latest/ja/installation-and-upgrades/reference/portal-properties.html) ファイルを使用するには、以下のプロパティに貼り付け、目的の認証タイプのコメントを解除します。
 
 ```properties
 company.security.auth.type=emailAddress

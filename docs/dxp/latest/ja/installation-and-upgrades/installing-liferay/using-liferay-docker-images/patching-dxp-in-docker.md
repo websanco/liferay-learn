@@ -1,6 +1,6 @@
 # DockerでDXPにパッチを適用する
 
-Liferayの[パッチ](../../maintaining-a-liferay-dxp-installation/patching-liferay/patching-liferay.md)はDXPの問題を修正し、パッチツールがパッチを適用します。 Liferayは、 [Docker Hub](https://hub.docker.com/r/liferay/dxp) 上で、新しい [フィックスパック](../../maintaining-a-liferay-dxp-installation/patching-liferay/patching-liferay.md#fix-packs) 、 [セキュリティフィックスパック](../../maintaining-a-liferay-dxp-installation/patching-liferay/patching-liferay.md#scurity-fix-packs) 、 [サービスパック](../../maintaining-a-liferay-dxp-installation/patching-liferay/patching-liferay.md#service-packs) がそれぞれあらかじめ組み込まれたイメージを提供しています。 また、LiferayはDXPコンテナにインストールする [セキュリティフィックスパック](../../maintaining-a-liferay-dxp-installation/patching-liferay/patching-liferay.md#scurity-fix-packs) 、 [ホットフィックス](../../maintaining-a-liferay-dxp-installation/patching-liferay/patching-liferay.md#hotfixes) 、および新しい[パッチツール](../../maintaining-a-liferay-dxp-installation/patching-liferay/installing-the-patching-tool.md)のバージョンも提供しています。
+Liferayの[パッチ](../../maintaining-a-liferay-installation/patching-	7-3-and-earlier.md) とパッチを適用するためのパッチツールを提供しています。 移行先の新しい DXPイメージ( [Docker Hub](https://hub.docker.com/r/liferay/dxp) )として、フィックスパックとサービスパックを提供します。 Liferayは、コンテナにインストールするセキュリティフィックスパック、ホットフィックス、および新しいパッチツールバージョンも提供します。
 
 > エンタープライズサブスクリプション
 
@@ -28,7 +28,7 @@ DXPコンテナのパッチに関するトピックは次のとおりです。
 
 新しいフィックスパック、セキュリティフィックスパック、またはサービスパックのイメージを使用するには、そのイメージに基づいてコンテナに移行する必要があります。 DXPコンテナから新しいパッチイメージに移行する方法は次のとおりです。
 
-1. [現在のDXPコンテナを停止します](./docker-container-basics.md#stopping-a-container) 。
+1.  [現在のDXPコンテナを停止します](./using-liferay-docker-images.md#stopping-a-container) 。
 
 1. DXPコンテナのカスタマイズに使用したファイルを[バックアップ](../../maintaining-a-liferay-dxp-installation/backing-up.md)します。
 
@@ -36,7 +36,7 @@ DXPコンテナのパッチに関するトピックは次のとおりです。
     git commit -a
     ```
 
-1. [Docker Hub](https://hub.docker.com/r/liferay/dxp) から新しいイメージをダウンロードします。
+3.  [Docker Hub](https://hub.docker.com/r/liferay/dxp) から新しいイメージをダウンロードします。
 
     ```bash
     docker pull liferay/dxp:[tag]
@@ -70,7 +70,7 @@ DXPは、アーティファクトとファイルを使用して新しいコン�
 
 パッチ要件：
 
-1. コンテナに既存のパッチがない。 新しいパッチを適用する前に、既存のパッチを [元に戻す](#reverting-a-patch) 必要があります。
+1.  コンテナに既存のパッチがない。 新しいパッチを適用する前に、既存のパッチを [元に戻す](#reverting-a-patch) 必要があります。
 
 1. イメージはセキュリティフィックスパックイメージであってはなりません。これらのイメージには、すでにパッチ（セキュリティフィックスパック）が含まれています。
 
@@ -78,19 +78,19 @@ DXPは、アーティファクトとファイルを使用して新しいコン�
 
 コンテナにパッチをインストールする方法は2つあります。
 
-1. [既存のコンテナへのパッチのインストール](#installing-to-an-existing-container) 。
+1.  [既存のコンテナへのパッチのインストール](#installing-to-an-existing-container) 。
 
-1. [新しいコンテナへのパッチのインストール](#installing-to-a-new-container) 。
+2.  [新しいコンテナへのパッチのインストール](#installing-to-a-new-container) 。
 
 ### 既存のコンテナへのインストール
 
 既存のコンテナにパッチをインストールする手順は次のとおりです。
 
-1. [現在のコンテナを停止します](./docker-container-basics.md#stopping-a-container) 。
+1.  [現在のコンテナを停止します](./using-liferay-docker-images.md#stopping-a-container) 。
 
-1. パッチを [ダウンロード](https://customer.liferay.com/downloads) して、コンテナの`/mnt/liferay/patching`フォルダにマップするボリュームまたは[バインドマウント](./providing-files-to-the-container.md)内のフォルダにコピーします。
+2.  パッチを [ダウンロード](https://customer.liferay.com/downloads) して、コンテナの`/mnt/liferay/patching`フォルダにマップするボリュームまたは[バインドマウント](./providing-files-to-the-container.md)内のフォルダにコピーします。
 
-1. [コンテナを再起動します](./docker-container-basics.md#restartings-a-container) 。
+3.  [コンテナを再起動します](./using-liferay-docker-images.md#restartings-a-container) 。
 
 ### 新しいコンテナへのインストール
 
@@ -102,22 +102,22 @@ DXPは、アーティファクトとファイルを使用して新しいコン�
     mkdir -p [host folder]/patching
     ```
 
-1. パッチを [ダウンロード](https://customer.liferay.com/downloads) して、 `［host folder］/patching`フォルダにコピーします。 例:
+2.  パッチを [ダウンロード](https://customer.liferay.com/downloads) して、 `[host folder]/patching`フォルダにコピーします。 例:
 
    ```bash
    cp ~/[patch file] [host folder]/patching
    ```
 
-1. [現在のDXPコンテナを停止します](./docker-container-basics.md#stopping-a-container) （実行されている場合）。
+3.  [現在のDXPコンテナを停止します](./using-liferay-docker-images.md#stopping-a-container) （実行されている場合）。
 
-1. パッチファイルのフォルダをコンテナの`/mnt/liferay/patching`フォルダにマップするバインドマウントを含むコンテナを作成します。 この例のパッチファイルは `patching`という名前のフォルダにあるため、親フォルダ（`［host folder］`） をコンテナの `/mnt /liferay` フォルダに [バインドマウント](./providing-files-to-the-container.md#bind-mounting-a-host-folder-to-mnt-liferay) できます。 これにより、DXPに適用するためのパッチにアクセスできるようになります。
+4.  パッチファイルのフォルダをコンテナの`/mnt/liferay/patching`フォルダにマップするバインドマウントを含むコンテナを作成します。 この例のパッチファイルは `patching`という名前のフォルダにあるため、親フォルダ（`[host folder]`） をコンテナの `/mnt /liferay` フォルダに [バインドマウント](./providing-files-to-the-container.md#bind-mounting-a-host-folder-to-mnt-liferay) できます。 これにより、DXPに適用するためのパッチにアクセスできるようになります。
 
     ```bash
     docker run ... -v [host folder path]:/mnt/liferay liferay/dxp:[tag]
     ```
 
     ```{note}
-       バインドマウントを指定する方法については、 [コンテナへのファイルの提供](./providing-files-to-the-container.md) を参照してください。
+    バインドマウントを指定する方法については、 [コンテナへのファイルの提供](./providing-files-to-the-container.md) を参照してください。
     ```
 
 パッチツールがパッチをインストールし、DXPが起動します。
@@ -132,7 +132,7 @@ DXPは、アーティファクトとファイルを使用して新しいコン�
 
 コンテナからパッチを元に戻したり、パッチを適用したコンテナに別のパッチをインストールしたりする場合は、コンテナを削除して新しいコンテナを作成する必要があります。
 
-1. [コンテナを停止します](./docker-container-basics.md#stopping-a-container) 。
+1.  [コンテナを停止します](./using-liferay-docker-images.md#stopping-a-container) 。
 
     ```bash
     docker stop [container]
@@ -146,9 +146,7 @@ DXPは、アーティファクトとファイルを使用して新しいコン�
     docker rm [container]
     ```
 
-1. 以前に使用した`docker run`引数を使用して、同じイメージまたは互換性のあるフィックスパックレベルを持つイメージから新しいコンテナを作成します。 ボリュームまたは [バインドマウント](./providing-files-to-the-container.md#bind-mounting-a-host-folder-to-mnt-liferay) を介して、必要なパッチを適用します。
-
-<a name="updating-the-patching-tool" />
+4.  以前に使用した`docker run`引数を使用して、同じイメージまたは互換性のあるフィックスパックレベルを持つイメージから新しいコンテナを作成します。 ボリュームまたは [バインドマウント](./providing-files-to-the-container.md#bind-mounting-a-host-folder-to-mnt-liferay) を介して、必要なパッチを適用します。
 
 ## パッチツールの更新
 
@@ -156,7 +154,7 @@ DXPは、アーティファクトとファイルを使用して新しいコン�
 
 ここでは、新しい[パッチツール](../../maintaining-a-liferay-dxp-installation/patching-liferay/installing-the-patching-tool.md)のバージョンをインストールする方法を説明します。
 
-1.  [カスタマーポータル](https://customer.liferay.com/downloads?p **p** id=com **liferay** osb **customer** downloads **display** web **DownloadsDisplayPortlet&** com **liferay** osb **customer** downloads **display** web **DownloadsDisplayPortlet** productAssetCategoryId=118191019& **com** liferay **osb** customer **downloads** display **web** DownloadsDisplayPortlet_fileTypeAssetCategoryId=118191066)から最新のパッチツールをダウンロードします。
+1.  [カスタマーポータル](https://customer.liferay.com/downloads?p **p** id=com **liferay** osb **customer** downloads **display** web **DownloadsDisplayPortlet&** com **liferay** osb **customer** downloads **display** web **DownloadsDisplayPortlet** productAssetCategoryId=118191019& **com** liferay **osb** customer **downloads** display **web** DownloadsDisplayPortlet_fileTypeAssetCategoryId=118191066) から最新のパッチツールをダウンロードします。
 
 1. パッチツールのZIPファイル名の形式が`patching-tool-x.y.z.zip`でない場合は、その形式を使用するよう名前を変更します。 例:
 
@@ -164,7 +162,7 @@ DXPは、アーティファクトとファイルを使用して新しいコン�
     mv patching-tool.zip patching-tool-2.0.15.zip
     ```
 
-1. [ホットフィックスとセキュリティフィックスパックがインストールされる](#installing-a-hotfix-or-security-fix-pack) のと同じ方法で、コンテナの `/mnt/liferay/patching` フォルダを介してパッチツールのZIPファイルをコンテナにインストールします。
+3.  [ホットフィックスとセキュリティフィックスパックがインストールされる](#installing-a-hotfix-or-security-fix-pack) のと同じ方法で、コンテナの `/mnt/liferay/patching` フォルダを介してパッチツールのZIPファイルをコンテナにインストールします。
 
 コンテナを再起動するか新しいコンテナを実行すると、コンテナのエントリポイントによって新しいパッチツールがインストールされます。
 

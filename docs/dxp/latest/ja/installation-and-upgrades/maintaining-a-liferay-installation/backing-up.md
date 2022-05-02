@@ -11,7 +11,7 @@ Liferay DXPのバックアップ計画を検討するときは、次の領域を
 * [ソースコード](#source-code)
 
 ```{note}
-DXP Cloudは、ドキュメントライブラリとLiferay DXPデータベースのバックアップを作成および管理するプロセスを自動化および簡素化します。 DXP CloudはGitベースのDevOpsパイプラインを使用するため、Liferayのすべての構成も自動的にバックアップされます。 詳細については、 [DXP Cloud Backup Service](https://learn.liferay.com/dxp-cloud/latest/ja/platform-services/backup-service/backup-service-overview.html) を参照してください。
+DXP Cloud automates and simplifies the process of creating and managing backups of the Document Library and Liferay DXP database. Because DXP Cloud uses a Git-based DevOps pipeline, all configurations for Liferay are also automatically backed up as well. To learn more, see [DXP Cloud Backup Service](https://learn.liferay.com/dxp-cloud/latest/ja/platform-services/backup-service.html) for more information.
 ```
 
 <a name="liferay-home" />
@@ -22,18 +22,18 @@ Liferayホームフォルダーには次のファイルが含まれているた�
 
   - **ポータルのプロパティとシステムのプロパティ:** Liferayホームフォルダには、DXP[ポータルのプロパティファイル](../reference/portal-properties.md)(例:`portal-ext.properties`、`portal-setup-wizard.properties`など)とDXP[システムのプロパティファイル](../reference/system-properties.md)が格納されています(例:`system-ext.properties`)。
 
-  - **`/data`フォルダ:** DXPは、Liferay Homeの`/data`フォルダに設定ファイル、検索インデックス、キャッシュ情報を保存します。 [ドキュメントとメディアリポジトリ](https://help.liferay.com/hc/en-us/articles/360028810112-Document-Repository-Configuration)にアップロードされたアセットは、`/data`フォルダにも保存されます。 デフォルトのストレージ構成(ファイルシステムストアまたは高度なファイルシステムストア)を使用している場合。
+  - **`/data`フォルダ:** DXPは、Liferay Homeの`/data`フォルダに設定ファイル、検索インデックス、キャッシュ情報を保存します。 [ドキュメントとメディアリポジトリ](https://help.liferay.com/hc/ja/articles/360028810112-Document-Repository-Configuration) にアップロードされたアセットは、`/data`フォルダにも保存されます。 デフォルトのストレージ構成(ファイルシステムストアまたは高度なファイルシステムストア)を使用している場合。
 
   - **`/license`フォルダ(Subscription):** Liferay Enterpriseサブスクリプションのアクティベーションキーを保持します。
 
-  - **`/osgi`フォルダ:** DXPのOSGiランタイムを構成するファイルは、Liferay Homeの`/osgi`フォルダに保存されます。 DXPにデプロイされたすべてのアプリとモジュールのJARファイルが含まれています。 `/osgi`フォルダには、他の必要なJARファイル、[設定ファイル](https://help.liferay.com/hc/en-us/articles/360029131651-Understanding-System-Configuration-Files)、およびログファイルも含まれています。
+  - **`/osgi`フォルダ:** DXPのOSGiランタイムを構成するファイルは、Liferay Homeの`/osgi`フォルダに保存されます。 DXPにデプロイされたすべてのアプリとモジュールのJARファイルが含まれています。 `/osgi`フォルダには、他の必要なJARファイル、 [設定ファイル](https://help.liferay.com/hc/ja/articles/360029131651-Understanding-System-Configuration-Files) 、およびログファイルも含まれています。
 
   - **`/logs`フォルダ:** DXPのログファイルが含まれています。 DXPで問題が発生した場合、ログファイルは、問題の原因を特定するための情報を提供します。
 
 Git、BitBucket、Subversion、CVSなどのソース管理リポジトリを使用すると、Liferayホームフォルダーをバックアップできます。
 
 ```{important}
-ファイルストア（ドキュメントライブラリ）を`[Liferay Home]/data`サブフォルダ以外の場所に構成した場合は、その場所をバックアップします。
+If you configured your [Documents and Media repository](https://help.liferay.com/hc/ja/articles/360028810112-Document-Repository-Configuration) to a location other than the default location, back up that location.
 ```
 
 <a name="application-server" />
@@ -68,9 +68,7 @@ mysqldump --databases my-liferay-database > my-liferay-database-backup.sql
 
 [検索インデクス](./../../using-search/installing-and-upgrading-a-search-engine/elasticsearch/upgrading-elasticsearch/backing-up-elasticsearch.md)は常にバックアップしてください。 ほとんどのLiferayデータは、完全なインデックスの再作成によってデータベースから復元できますが、 [一部のアプリケーションではプライマリストレージ](../../using-search/installing-and-upgrading-a-search-engine/elasticsearch/upgrading-elasticsearch/backing-up-elasticsearch.md#backing-up-and-restoring-indexes-used-for-primary-storage) として検索インデクスが使用されます。 インデックスのバックアップに失敗すると、これらのアプリケーションのデータが完全に失われる可能性があります。
 
-さらに、データセットが大きいユーザーは、バックアップから復元するときに、すべてのコンテンツとアセットのインデックスを再作成することを回避できます。 検索インデクスを保存する別の[ElasticsearchまたはSolr](../../using-search/installing-and-upgrading-a-search-engine/installing-a-search-engine.md)環境がある場合は、検索データのバックアップが最も簡単です。 詳細については、検索エンジンのバックアップ/復元のドキュメンテーションに従ってください（たとえば、Elasticsearchの [スナップショットと復元のドキュメンテーション](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/snapshot-restore.html) を参照してください）。
-
-<a name="source-code" />
+データセットが大きいユーザーは、バックアップから復元するときに、すべてのコンテンツとアセットのインデックスを再作成することを避けたい場合があります。 この場合、検索インデックスをバックアップすることをお勧めします。 これは、インデックスが格納されている別の [ElasticsearchまたはSolr](https://help.liferay.com/hc/ja/articles/360028711092-Introduction-to-Installing-a-Search-Engine) 環境がある場合に最も簡単です。 クラスター構成で、インデックスを複製している場合は、各インデックスレプリカをバックアップする必要があります。
 
 ## ソースコード
 

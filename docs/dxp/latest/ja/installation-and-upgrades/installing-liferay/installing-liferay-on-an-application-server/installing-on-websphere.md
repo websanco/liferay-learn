@@ -12,10 +12,10 @@ WebSphereにLiferay DXPをインストールするには、DXP WARのインス�
 
 ## 前提条件
 
-Liferay DXPが正しく機能するには、WebSphere 9（フィックスパック11以降）がインストールされている必要があります。 フィックスパックについて詳しくは、[IBMサポート](http://www-01.ibm.com/support/docview.wss?uid=swg24043005)にアクセスしてください。 Liferay DXPは現在、WebSphere Application Liberty Profileをサポートしていません。
+Liferay DXPが正しく機能するには、WebSphere 9（フィックスパック11以降）がインストールされている必要があります。 フィックスパックについて詳しくは、 [IBMサポート](http://www-01.ibm.com/support/docview.wss?uid=swg24043005) にアクセスしてください。 Liferay DXPは現在、WebSphere Application Liberty Profileをサポートしていません。
 
 ```{important}
-DXPをインストールする前に、[Installing a Liferay-Tomcat Bundle](../installing-a-liferay-tomcat-bundle.md)および[Configuring a Database](../configuring-a-database.md)の記事を確認してください。
+DXPをインストールする前に、 [Liferay-Tomcatバンドルのインストール](../installing-a-liferay-tomcat-bundle.md) および [データベースの構成](../configuring-a-database.md) の記事を確認してください。
 ```
 
 次のファイルは、WebSphereアプリケーションサーバーにLiferay DXPをインストールするために必要であり、 [ヘルプセンター](https://customer.liferay.com/downloads) （サブスクリプション）または [Liferayコミュニティのダウンロード](https://www.liferay.com/downloads-community) から入手できます。
@@ -24,7 +24,7 @@ DXPをインストールする前に、[Installing a Liferay-Tomcat Bundle](../i
 * OSGi依存関係のZIPファイル
 * 依存関係のZIPファイル（DXP 7.3以前）
 
-Liferay DXPにはJava JDK 8または11が必要です。 JDKを選択するには、 [互換性マトリックス](https://help.liferay.com/hc/en-us/articles/360049238151) を参照してください。 推奨される設定については、[JVM Configuration](../../reference/jvm-configuration.md)を参照してください。
+Liferay DXPにはJava JDK 8または11が必要です。 JDKを選択するには、 [互換性マトリックス](https://help.liferay.com/hc/ja/articles/360049238151) を参照してください。 推奨される設定については、 [JVM設定](../../reference/jvm-configuration.md) を参照してください。
 
 [`［Liferay Home］`](../../reference/liferay-home.md) フォルダーは、Liferay DXPが機能するために必要なファイルとフォルダーを格納および管理する場所です。 WebSphereでは、`［Liferay Home］`フォルダは通常`［Install Location］/WebSphere/AppServer/profiles/［your-profile］/liferay`です。
 
@@ -74,7 +74,7 @@ com.ibm.ws.webcontainer.initFilterBeforeInitServlet = true
 com.ibm.ws.webcontainer.invokeFilterInitAtStartup = true
 ```
 
-WebSphereアプリケーションサーバーで`webcontainer`プロパティを設定するには、WebSphereの[ドキュメンテーション](http://www-01.ibm.com/support/docview.wss?rss=180&uid=swg21284395)の指示に従ってください。
+WebSphereアプリケーションサーバーで`webcontainer`プロパティを設定するには、WebSphereの [ドキュメンテーション](http://www-01.ibm.com/support/docview.wss?rss=180&uid=swg21284395) の指示に従ってください。
 
 ### Liferay DXPのJVMパラメータの設定
 
@@ -91,7 +91,7 @@ WebSphereアプリケーションサーバーで`webcontainer`プロパティを
 ```
 
 ```{note}
-DXPのインストール後、これらの構成（これらのJVMオプションを含む）をさらに調整して、パフォーマンスを向上させることができます。 詳細については、[Tuning Liferay](../../setting-up-liferay/tuning-liferay.md)および[Tuning Your JVM](../../setting-up-liferay/tuning-your-jvm.md)を参照してください。
+DXPのインストール後、これらの構成（これらのJVMオプションを含む）をさらに調整して、パフォーマンスを向上させることができます。 詳細については、 [Liferayの調整](../../setting-up-liferay/tuning-liferay.md) および [JVMの調整](../../setting-up-liferay/tuning-your-jvm.md) を参照してください。
 ```
 
 `server.xml`の`<jvmEntries genericJvmArguments=.../>`属性でUTF-8プロパティを設定できます。 これは必須です。設定しないと、国際文字は正しく解析されません。 ヒープサイズの最大値と最小値も増やします。 `jvmEntries`タグ内に以下を追加します。
@@ -157,7 +157,7 @@ com.ibm.ws.exception.RuntimeWarning: com.ibm.ws.webcontainer.exception.WebAppNot
 1. OSGi依存関係ZIPファイルを解凍し、その内容を`［Liferay Home］/osgi`フォルダに置きます(まだ存在しない場合は、このフォルダを作成します)。 LiferayのOSGiランタイムは、これらのモジュールに依存しています。
 1. DXP 7.4+ WARファイルには、MariaDBおよびPostgreSQLのドライバーが含まれています。 以前のDXP WARにはそれらがありません。 7.4以降のWARに、使用中のサポートされているデータベースのドライバーがない場合は、DXP WARを任意の場所に解凍し、データベースベンダーのJDBC JARファイルを展開されたDXP WARの`WEB-INF/shielded-container-lib`フォルダーに配置し、DXP WARを再度圧縮します。
 
-    サポートされているデータベースの一覧については、 [互換性マトリックス](https://help.liferay.com/hc/en-us/articles/360049238151) を参照してください。
+    サポートされているデータベースの一覧については、 [互換性マトリックス](https://help.liferay.com/hc/ja/articles/360049238151) を参照してください。
 
 ```{note}
 HypersonicデータベースはDXPにバンドルされており、テスト目的に役立ちます。 本番環境インスタンスにはHSQLを**使用しないでください**。
@@ -173,11 +173,11 @@ Liferay DXP 7.3を起動すると、デフォルトの[sidecar](../../../using-s
 
 1. 次のアーカイブをダウンロードします。
 
-    * [Elasticsearch OSS No JDK 7.9](https://www.elastic.co/guide/en/elasticsearch/reference/7.9/release-notes-7.9.0.html)（[こちらで入手可能--7.9.0](https://www.elastic.co/downloads/past-releases/elasticsearch-oss-no-jdk-7-9-0))
-    * [ICU Analysis Plugin](https://www.elastic.co/guide/en/elasticsearch/plugins/7.9/analysis-icu.html)（[ダウンロード](https://artifacts.elastic.co/downloads/elasticsearch-plugins/analysis-icu/analysis-icu-7.9.0.zip)）
-    * [Japanese (kuromoji) Analysis Plugin](https://www.elastic.co/guide/en/elasticsearch/plugins/7.9/analysis-kuromoji.html)（[ダウンロード](https://artifacts.elastic.co/downloads/elasticsearch-plugins/analysis-kuromoji/analysis-kuromoji-7.9.0.zip)）
-    * [Smart Chinese Analysis Plugin](https://www.elastic.co/guide/en/elasticsearch/plugins/7.9/analysis-smartcn.html)（[ダウンロード](https://artifacts.elastic.co/downloads/elasticsearch-plugins/analysis-smartcn/analysis-smartcn-7.9.0.zip)）
-    * [Stempel Polish Analysis Plugin](https://www.elastic.co/guide/en/elasticsearch/plugins/7.9/analysis-stempel.html)（[ダウンロード](https://artifacts.elastic.co/downloads/elasticsearch-plugins/analysis-stempel/analysis-stempel-7.9.0.zip)）
+    * [Elasticsearch OSS No JDK 7.9](https://www.elastic.co/guide/en/elasticsearch/reference/7.9/release-notes-7.9.0.html) （ [こちらで入手可能--7.9.0](https://www.elastic.co/downloads/past-releases/elasticsearch-oss-no-jdk-7-9-0) )
+    * [ICU Analysis Plugin](https://www.elastic.co/guide/en/elasticsearch/plugins/7.9/analysis-icu.html) （ [ダウンロード](https://artifacts.elastic.co/downloads/elasticsearch-plugins/analysis-icu/analysis-icu-7.9.0.zip) ）
+    * [Japanese (kuromoji) Analysis Plugin](https://www.elastic.co/guide/en/elasticsearch/plugins/7.9/analysis-kuromoji.html) （ [ダウンロード](https://artifacts.elastic.co/downloads/elasticsearch-plugins/analysis-kuromoji/analysis-kuromoji-7.9.0.zip) ）
+    * [Smart Chinese Analysis Plugin](https://www.elastic.co/guide/en/elasticsearch/plugins/7.9/analysis-smartcn.html) （ [ダウンロード](https://artifacts.elastic.co/downloads/elasticsearch-plugins/analysis-smartcn/analysis-smartcn-7.9.0.zip) ）
+    * [Stempel Polish Analysis Plugin](https://www.elastic.co/guide/en/elasticsearch/plugins/7.9/analysis-stempel.html) （ [ダウンロード](https://artifacts.elastic.co/downloads/elasticsearch-plugins/analysis-stempel/analysis-stempel-7.9.0.zip) ）
 
 1. ダウンロードしたファイルを`[Liferay Home]`にコピーします。
 
@@ -191,7 +191,7 @@ DXPの`portlet.jar`（バージョン3）は、バージョン2.0との下位互
 
 1. DXP WAR（7.4以降）または`[インストール場所] /WebSphere/AppServer/lib/ext`フォルダからDXP `portlet.jar`を、作成した`app_shared_libraries`フォルダにコピーします。
 
-1. [サーバーに関連付けられた共有ライブラリを使用](https://www.ibm.com/support/pages/best-practice-using-common-application-files#usingserver)するためのIBMの手順に従ってください。手順4dで、 **最初にローカルクラスローダー（parent_Last）がロードされたクラス** を選択してください。
+1. [サーバーに関連付けられた共有ライブラリを使用](https://www.ibm.com/support/pages/best-practice-using-common-application-files#usingserver) するためのIBMの手順に従ってください。手順4dで、 **最初にローカルクラスローダー（parent_Last）がロードされたクラス** を選択してください。
 
 1. 設定を保存します。
 
@@ -261,7 +261,7 @@ Liferayは、デモ目的でデフォルトでHSQLを使用しています。 HS
    ```
 
    ```{tip}
-   URLの例については、[Database Templates](../../reference/database-templates.md)の`jdbc.default.url`の値を参照してください。
+   URLの例については、 [データベーステンプレート](../../reference/database-templates.md) の`jdbc.default.url`の値を参照してください。
    ```
 
    ［**OK**］ をクリックして、マスター構成に保存します。
@@ -276,7 +276,7 @@ Liferayは、デモ目的でデフォルトでHSQLを使用しています。 HS
 
 ## メール設定
 
-DXPの組み込みメールセッションを使用する場合は、このセクションをスキップしてください。 DXPの組み込みメールセッションの使用方法については、[Configuring Mail](../../setting-up-liferay/configuring-mail/connecting-to-a-mail-server.md)の記事をご覧ください。
+DXPの組み込みメールセッションを使用する場合は、このセクションをスキップしてください。 DXPの組み込みメールセッションの使用方法については、 [メールの構成](../../setting-up-liferay/configuring-mail.md) の記事をご覧ください。
 
 WebSphereを使用してメールセッションを管理する場合は、次の手順に従います。
 
@@ -380,16 +380,16 @@ DXPをデプロイした後、`PhaseOptimizer`に関連する以下のような�
 |     current AST contains: ［ES3 keywords as identifiers, getters, reserved words as properties, setters, string continuation, trailing comma, array pattern rest, arrow function, binary literal, block-scoped function declaration, class, computed property, const declaration, default parameter, destructuring, extended object literal, for-of loop, generator, let declaration, member declaration, new.target, octal literal, RegExp flag 'u', RegExp flag 'y', rest parameter, spread expression, super, template literal, exponent operator (**), async function, trailing comma in param list, object literals with spread, object pattern rest］
 ```
 
-Liferay DXP Enterpriseサブスクリプションをお持ちの場合、DXPはアクティベーションキーを要求します。 詳細は、[Activating Liferay DXP](../../setting-up-liferay/activating-liferay-dxp.md)を参照してください。
+Liferay DXP Enterpriseサブスクリプションをお持ちの場合、DXPはアクティベーションキーを要求します。 詳細は、 [Liferay DXPのアクティブ化](../../setting-up-liferay/activating-liferay-dxp.md) を参照してください。
 
 　 Liferay DXPをWebSphereで実行しています。
 
 ## 次のステップ
 
-[管理者ユーザーとしてサインイン](../../../getting-started/introduction-to-the-admin-account.md)して、\[DXPでのソリューションの構築\](../../../building_solutions_on_dxp.html)を開始できます。 または、[Liferay DXPのその他のセットアップ](../../setting-up-liferay.md)トピックを参照できます。
+[管理者ユーザーとしてサインイン](../../../getting-started/introduction-to-the-admin-account.md)して、\ [DXPでのソリューションの構築\](../../../building_solutions_on_dxp.html) を開始できます。 または、[Liferay DXPのその他のセットアップ](../../setting-up-liferay.md)トピックを参照できます。
 
 * [マーケットプレイスプラグインのインストール](../../../system-administration/installing-and-managing-apps/getting-started/using-marketplace.md#appendix-installing-the-marketplace-plugin)
 * [試用期間中のプラグインへのアクセス](../../../system-administration/installing-and-managing-apps/installing-apps/accessing-ee-plugins-during-a-trial-period.md)
 * [検索エンジンのインストール](../../../using-search/installing-and-upgrading-a-search-engine/installing-a-search-engine.md)
 * [Liferay DXPの保護](../../securing-liferay.md)
-* [Clustering for High Availability](../../setting-up-liferay/clustering-for-high-availability.md)
+* [高可用性のクラスタリング](../../setting-up-liferay/clustering-for-high-availability.md)
