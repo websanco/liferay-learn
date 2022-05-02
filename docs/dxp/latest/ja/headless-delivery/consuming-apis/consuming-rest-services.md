@@ -56,11 +56,15 @@ Liferay DXPの初期化後、ブラウザで`http://localhost:8080`にアクセ�
 
 <a name="make-the-service-call-using-credentials-with-access-to-the-data" />
 
+<a name="make-the-service-call-using-credentials-with-access-to-the-data" />
+
 ## データにアクセスできる認証情報を使用してサービス呼び出しを行う
 
 これで、呼び出しを行うために必要なものがすべて揃いました。 すべてのWebサービスには、要求しているデータにアクセスできる資格情報を使用してアクセスする必要があります。 最も簡単な方法は、URLで資格情報データを渡す基本認証を使用することです。 これは安全ではないため、この方法は開発時にのみ使用すべきです。 本番環境では、アプリケーションは[OAuth2](../using-oauth2/using-oauth2.md)を介してユーザーを承認する必要があります。
 
 以下の例では [ curl](https://curl.haxx.se) を使用しています。
+
+<a name="calling-a-service-using-basic-auth-during-development-only" />
 
 ### 基本認証を使用したサービスの呼び出し（開発中のみ）
 
@@ -69,6 +73,8 @@ Liferay DXPの初期化後、ブラウザで`http://localhost:8080`にアクセ�
 ```bash
 curl "http://localhost:8080/o/headless-delivery/v1.0/sites/20122/blog-postings/" -u 'test@liferay.com:test'
 ```
+
+<a name="calling-a-service-using-oauth2" />
 
 ### OAuth2を使用してサービスを呼び出す
 
@@ -109,6 +115,8 @@ curl -H "Authorization: Bearer d5571ff781dc555415c478872f0755c773fa159" http://l
 ```
 
 まず、ブログエントリを投稿します。
+
+<a name="posting-a-blog-entry" />
 
 ### ブログエントリの投稿
 
@@ -185,6 +193,8 @@ Liferay DXPは、ブログエントリの完全なJSON表現を返します。
   "taxonomyCategories" : ［ ］
 }
 ```
+
+<a name="getting-all-blog-entries" />
 
 ### すべてのブログエントリを取得する
 
@@ -264,6 +274,8 @@ curl "http://localhost:8080/o/headless-delivery/v1.0/sites/20122/blog-postings/"
 }
 ```
 
+<a name="getting-a-single-blog-entry" />
+
 ### 単一のブログエントリを取得する
 
 リクエストを行うたびに、Liferay DXPは他の考えられるエンドポイントを返します。 そのうちの1つは、IDによって単一のブログエントリを取得することです。 エントリのIDがわかっている場合は、それを取得できます。
@@ -273,6 +285,8 @@ curl "http://localhost:8080/o/headless-delivery/v1.0/blog-postings/35215" -u tes
 ```
 
 同じブログエントリが返されます。
+
+<a name="deleting-a-blog-entry" />
 
 ### ブログエントリの削除
 

@@ -8,6 +8,8 @@ Liferay DXPには、ほとんどのアプリケーションに対応している
 
 <a name="identify-the-service-to-consume" />
 
+<a name="identify-the-service-to-consume" />
+
 ## 使用するサービスを特定する
 
 GraphQL APIを呼び出すには、実行中のLiferay DXPが必要です。 Dockerを使用して取得するには、次のコマンドを実行します。
@@ -70,11 +72,15 @@ APIでは、エントリが投稿されるブログを含むサイトを把握�
 
 <a name="make-the-service-call-using-credentials-with-access-to-the-data" />
 
+<a name="make-the-service-call-using-credentials-with-access-to-the-data" />
+
 ## データにアクセスできる認証情報を使用してサービス呼び出しを行う
 
 これで、呼び出しを行うために必要なものがすべて揃いました。 すべてのWebサービスには、要求しているデータにアクセスできる資格情報を使用してアクセスする必要があります。 含まれているGraphQLクライアントは、ブラウザーを使用して認証します。 スタンドアロンのクライアントを作成する場合は、[OAuth2](../using-oauth2/using-oauth2.md)経由でユーザーを認証する必要があります。
 
 開発中は、URLで資格情報データを渡す基本認証を使用する方がはるかに簡単です。 これは安全ではないため、 **このメソッドをプロダクションに使用しません。**
+
+<a name="calling-a-graphql-api-using-basic-auth-during-development-only" />
 
 ### 基本認証を使用したGraphQL APIの呼び出し（開発中のみ）
 
@@ -83,6 +89,8 @@ APIでは、エントリが投稿されるブログを含むサイトを把握�
 ```bash
 curl --request POST --url http://localhost:8080/o/graphql \ -u test@liferay.com:test  --header 'content-type: application/json' --data '{"query":"query {blogPostings(filter: \"\", page: 1, pageSize: 10, search: \"\", siteKey: \"20122\", sort: \"\"){ page  items{ id articleBody headline  creator{ name }}}}"}'
 ```
+
+<a name="calling-a-service-using-oauth2" />
 
 ### OAuth2を使用してサービスを呼び出す
 
@@ -120,6 +128,8 @@ query {blogPostings(filter:"",page:1,pageSize:10,search:"",siteKey:"20122",sort:
 ```
 
 次に、ブログエントリを投稿します。
+
+<a name="posting-a-blog-entry" />
 
 ### ブログエントリの投稿
 
@@ -183,6 +193,8 @@ Liferay DXPは、ミューテーションでリクエストされたフィール
    ``curl --request POST --url http://localhost:8080/o/graphql -u test@liferay.com:test --header 'content-type: application/json' --data '{"query":"mutation CreateBlog($blog: InputBlogPosting){   createSiteBlogPosting(blogPosting: $blog, siteKey: \"20122\" ) {    headline    articleBody    id    friendlyUrlPath  }    } ","variables":{"blog":{"articleBody":"This Blog entry was created by using cURL to call the GraphQL service!","headline":"cURL GraphQL Blog Entry"}},"operationName":"CreateBlog"}'``
 ```
 
+<a name="getting-all-blog-entries" />
+
 ### すべてのブログエントリを取得する
 
 これで、最初のクエリを繰り返すことができます。
@@ -224,6 +236,8 @@ Liferay DXPは、投稿したブログエントリを含むJSONを返します�
 }
 ```
 
+<a name="getting-a-single-blog-entry" />
+
 ### 単一のブログエントリを取得する
 
 単一のブログエントリを取得するためのGraphQLスキーマからのAPI呼び出しには、パラメーターが1つしかありません。
@@ -257,6 +271,8 @@ query {blogPosting(blogPostingId: 35541)
   }
 }
 ```
+
+<a name="deleting-a-blog-entry" />
 
 ### ブログエントリの削除
 

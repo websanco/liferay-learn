@@ -67,6 +67,8 @@ http://localhost:8080/o/oauth2/token
 
     code **verifier=[Code Verifier that was transformed and sent as code** challenge previously]
 
+<a name="client-credentials-and-resource-owner-flows" />
+
 ## クライアント資格情報とリソース所有者のフロー
 
 他に、使用頻度の低いフローが2つあります。 2つのサーバーが合意された、ユーザー中心でないデータを交換するシナリオがある場合は、ユーザーの［Allow/Deny］画面をバイパスして、クライアントを承認できます。 これはクライアント資格情報フローと呼ばれ、次のURLパターンを使用します。
@@ -108,6 +110,8 @@ OAuth 2.0は、資格情報を共有せずに、ユーザがクライアント�
 ![図2：アプリのすべての承認内容は、アプリの [Authorizations]タブに表示されます。](./authorizing-account-access-with-oauth2/images/02.png)
 
 リストされている承認の [**Revoke**] ボタンをクリックすると、そのユーザーのアカウントへのそのアプリケーションのアクセスが取り消されます。
+
+<a name="summary" />
 
 ## まとめ
 

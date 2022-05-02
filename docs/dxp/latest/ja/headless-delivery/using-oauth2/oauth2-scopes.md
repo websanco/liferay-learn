@@ -8,6 +8,8 @@ OAuth 2.0では、アプリケーションはユーザーデータの制限さ�
 
 <a name="creating-a-scope-for-a-jsonws-service" />
 
+<a name="creating-a-scope-for-a-jsonws-service" />
+
 ## JSONWSサービスのスコープの作成
 
 スコープを作成する最も一般的な方法は、`OAUTH2_`という名前のプレフィックスが付いた[サービスアクセスポリシー](../../installation-and-upgrades/securing-liferay/securing-web-services/setting-service-access-policies.md)を作成することです。 この命名規則により、ポリシーはOAuthアプリケーションの設定画面にスコープとして表示されます。

@@ -11,17 +11,23 @@ Liferayでは、Webインターフェイスで利用可能なアクションと�
 * GraphQLの仕様に準拠した [**_** GraphQL API **_**](#graphql-api)
 * サービスビルダによって生成された、 [**_** プレーンWeb / RESTサービス **_**](#plain-webrest-services)
 
+<a name="headless-rest-apis" />
+
 ### ヘッドレスREST API
 
 LiferayのヘッドレスAPIは、Liferay DXPリソースとの [RESTful](https://www.w3.org/TR/2004/NOTE-ws-arch-20040211/#relwwwrest) インタラクションを可能にします。 これらのAPIは、RESTインターフェイスの標準を定義する [OpenAPI仕様](https://swagger.io/docs/specification/about/) に準拠しているため、より簡単な実装と使用が可能です。
 
 `［server］［:port］/o/api`で実行中のLiferay DXPインスタンスの定義にアクセスすると、これらのAPIの詳細情報を確認できます。 最も関連性の高いドキュメントは、`［server］［:port］/o/［api-name］/［api-version］/openapi.［yaml or json］`でraw形式でも入手できます。 ドキュメントは [SwaggerHub](https://app.swaggerhub.com/apis/liferayinc/) で入手できますが、実行中のバージョンと一致しない場合があります。
 
+<a name="graphql-api" />
+
 ### GraphQL API
 
 [GraphQL](https://graphql.org/) APIは、ヘッドレスREST APIと同様のインタラクションをサポートするクエリ言語ですが、若干柔軟性が高いものです。 Liferay DXPは`［server］［:port］/o/graphql`でこのAPIを公開しています。
 
 [GraphQLクライアント](https://graphql.org/graphql-js/graphql-clients/) を介してAPIまたはそのドキュメントを調べることにより、詳細情報を確認できます。 Liferayには組み込みクライアントが含まれており、`［server］［:port］/o/api`（右上の **GraphQL** を選択）で実行中のインスタンスで確認できます。
+
+<a name="plain-webrest-services" />
 
 ### プレーンWeb / RESTサービス
 
@@ -31,15 +37,23 @@ LiferayのWebサービスは古いフレームワークの一部であり、DXP�
 
 <a name="features" />
 
+<a name="features" />
+
 ## 機能一覧
+
+<a name="work-with-any-client" />
 
 ### 任意のクライアントと連携する
 
 LiferayのヘッドレスAPIはWeb経由でデータを提供するため、Web呼び出しを行うことができるすべてのアプリケーションがクライアントとして機能できます。 これらのAPIは、デフォルトでJSONコンテンツで応答しますが、XMLもネイティブでサポートしています。 拡張機能によって、必要に応じて他の方法でコンテンツを提供できます。 詳細は、 [API Headers Reference](./consuming-apis/api-headers-reference.md#accept) を参照してください。
 
+<a name="connect-securely" />
+
 ### 安全に接続する
 
 LiferayのWebインターフェイスと同様に、ヘッドレスAPIを介したすべてのインタラクションは、特定のユーザーアカウントを使用して（またはゲストとして）行われます。 LiferayのAPIは、基本認証、OAuthトークン、Cookieの3つの認証方法をサポートしています。 詳しくは、 [API Headers Reference](./consuming-apis/api-headers-reference.md#authorization) を参照してください。 ゲストとしてAPIリクエストを行うことも可能です。詳細は、 [認証されていないリクエストを行う](./consuming-apis/making-unauthenticated-requests.md) を参照してください。
+
+<a name="keep-data-size-manageable" />
 
 ### データサイズを管理しやすくする
 
@@ -54,6 +68,8 @@ LiferayのWebインターフェイスと同様に、ヘッドレスAPIを介し�
 `flatten`パラメーターは、階層APIの場合、階層コンテキストからリクエストを実行します。 これにより、たとえば、関連する組織を見つけるために組織図をトラバースする必要がなく、「マーケティング」と呼ばれる組織で検索を実行できます。
 
 これらのパラメーターのいずれかを使用する方法の詳細は、 [APIヘッダーリファレンス](./consuming-apis/api-headers-reference.md) を参照してください。
+
+<a name="related-information" />
 
 ## 関連情報
 
