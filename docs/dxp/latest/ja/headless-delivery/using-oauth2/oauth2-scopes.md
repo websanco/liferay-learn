@@ -24,7 +24,7 @@ http://［host］:［port］/api/jsonws/
 
 ポリシーを作成し、`OAUTH2_`プレフィックスを使用して名前を付けると、OAuth2管理の [**Scopes**] タブに表示されます。
 
-![図2：適切なプレフィックスを使用して名前が付けられたスコープが、アプリケーション設定の［Scopes］タブに表示されます。](./oauth2-scopes/images/02.png)
+![図2：適切なプレフィックスを使用して名前が付けられたスコープが、アプリケーション設定の [Scopes]タブに表示されます。](./oauth2-scopes/images/02.png)
 
 これを選択して、アプリケーションを保存できます。
 
@@ -36,7 +36,7 @@ http://［host］:［port］/api/jsonws/
 
 1. [**Control Panel**] → [**System Settings**] → [**Security**] → [**OAuth2**] に移動します。 左側の下部にある [**Authorize Screen**] という項目をクリックします。
 
-    ![［OAuth2 Authorize］画面の設定ページ。](./oauth2-scopes/images/03.png)
+    ![ [OAuth2 Authorize]画面の設定ページ。](./oauth2-scopes/images/03.png)
 
 2. 2つのデフォルトが表示されます。 1つ目は、承認ページのURLです。 デフォルトでは、`/group/guest/authorize-oauth2-application`です。 これは、デフォルトのサイトのURLと、`authorize-oauth2-application`と呼ばれるそのサイトのページに対応しています。
 
