@@ -1,4 +1,4 @@
-# Creating a .macro File
+# Creating a Macro File
 
 ## Test Scenario
 
