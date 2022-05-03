@@ -1,5 +1,7 @@
 # Workflow
 
+Liferay DXP ships with a workflow engine that allows reviewing and approving content such as Blogs, Web Content, or Wikis before publication. Define any number of business processes/workflows, deploy them, and manage them through a portal interface.
+
 ```{toctree}
 :maxdepth: 3
 
