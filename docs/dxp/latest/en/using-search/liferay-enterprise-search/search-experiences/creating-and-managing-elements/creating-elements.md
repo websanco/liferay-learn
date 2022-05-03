@@ -222,7 +222,7 @@ The `uiConfiguration` property holds the nested properties `fieldSet` and `field
 
 There are a number of configuration properties you can add for each field in the UI Configuration:
 
-- `fieldMappings` <!--not sure what this does -->
+<!-- `fieldMappings`-->
 - Enter `helpText` to display help text for the field in the Blueprints UI.
 - Enter a human readable `label`.
 - Enter a `name` that can be used to reference the field elsewhere in the Element, like when passing the field value into the query clause: `${configuration.name}`.
