@@ -5,7 +5,7 @@ When you publish an Object, Liferay automatically generates REST APIs for it. Th
 Before proceeding, [set up](#setting-up-a-liferay-instance) a new Liferay DXP/Portal 7.4 instance and [prepare](#preparing-the-sample-code) the provided tutorial code.
 
 ```{tip}
-For a complete list of APIs generated for both Site and Company Objects, see [Object's Headless Framework Integration](../../understanding-object-integrations/headless-framework-integration.md). You can view and test custom Object APIs via the Liferay API Explorer at `[server]:[port]/o/api` (e.g., `localhost:8080/o/api`). They are listed under *REST Applications*.
+For a complete list of APIs generated for both Site and Company Objects, see [Object's Headless Framework Integration](../../understanding-object-integrations/headless-framework-integration.md). You can view and test custom Object APIs via the Liferay API Explorer at `[server]:[port]/o/api` (e.g., `localhost:8080/o/api`). They appear under *REST Applications*.
 ```
 
 ## Setting Up a Liferay Instance
@@ -63,7 +63,7 @@ These scripts include the following batch APIs:
 | PUT | `/batch` | Replaces multiple Object entries using the details provided in the API call |
 
 ```{note}
-The GET method is also included for demonstration purposes. This returns a complete list of Object entries in a Liferay instance.
+The GET method is included for demonstration purposes. This returns a complete list of Object entries in a Liferay instance.
 ```
 
 ## Calling the Custom Object's APIs
@@ -80,7 +80,7 @@ The GET method is also included for demonstration purposes. This returns a compl
    ./Ables_POST_Batch.sh
    ```
 
-   The terminal should display a similar output.
+   The terminal shows a similar output.
 
    ```bash
    {
@@ -200,7 +200,7 @@ The GET method is also included for demonstration purposes. This returns a compl
    ./Ables_GET_FromCompany.sh
    ```
 
-   Since you deleted the entries in the preceding step, it should return an entries `NOT FOUND` error.
+   Since you deleted the entries in the preceding step, it returns an entries `NOT FOUND` error.
 
 ## Examining the Sample cURL Scripts
 
