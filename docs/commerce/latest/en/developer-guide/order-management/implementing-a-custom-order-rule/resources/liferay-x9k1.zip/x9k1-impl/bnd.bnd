@@ -1,0 +1,4 @@
+Bundle-Name: Acme X9K1 Implementation
+Bundle-SymbolicName: com.acme.x9k1.impl
+Bundle-Version: 1.0.0
+Web-ContextPath: /x9k1-impl
