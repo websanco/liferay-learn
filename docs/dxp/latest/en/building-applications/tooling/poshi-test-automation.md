@@ -14,7 +14,7 @@ Poshi is a test automation framework that is simple, easy to understand, and doe
 
 :::{grid-item-card}  Poshi Basics
 
-* [Poshi Basics](./poshi-test-automation/poshi-basics/poshi-advantages.md)
+* [Poshi Basics](./poshi-test-automation/poshi-basics.md)
 * [Poshi Advantages](./poshi-test-automation/poshi-basics/poshi-advantages.md)
 * [Poshi Layers](./poshi-test-automation/poshi-basics/poshi-layers.md)
 :::
