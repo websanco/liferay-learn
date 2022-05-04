@@ -1,10 +1,8 @@
 # Upgrading Your Database Tables
 
-```markdown
 {bdg-secondary}`Available Liferay DXP 7.4 U10+ or Liferay Portal 7.4 GA14+`
-```
 
-An upgrade of your application may require making changes to your database table. Liferay's Upgrade framework makes it easy to make these changes. Deploy the sample project to see this upgrade process. Follow [this guideline](https://help.liferay.com/hc/en-us/articles/360031165751-Creating-Upgrade-Processes-for-Modules) for previous versions of Liferay.
+An upgrade of your application may require making changes to your database tables. Liferay's Upgrade framework makes it easy to make these changes. Deploy the sample project to see this upgrade process. See [Creating Upgrade Processes for Modules](https://help.liferay.com/hc/en-us/articles/360031165751-Creating-Upgrade-Processes-for-Modules) for previous versions of Liferay.
 
 ## Deploy Version 1.0.0
 
@@ -57,7 +55,7 @@ An upgrade of your application may require making changes to your database table
 
 ## Upgrade to 2.0.0
 
-1. Now deploy the 2.0.0. Move into the `2.0.0` directory, build and deploy.
+1. Now deploy the 2.0.0 version. Move into the `2.0.0` directory, build and deploy.
 
    ```bash
    cd 2.0.0
@@ -67,11 +65,11 @@ An upgrade of your application may require making changes to your database table
    ../gradlew deploy -Ddeploy.docker.container.id=$(docker ps -lq)
    ```
 
-1. Login to Liferay and navigate to the Gogo shell console at *Control Panel* &rarr; *Gogo Shell*.
+1. Log into Liferay and navigate to the Gogo shell console at *Control Panel* &rarr; *Gogo Shell*.
 
 1. Verify that the 2.0.0 upgrade is available by entering the command `upgrade:list com.acme.p5d2.service`.
 
-1. Run the upgrade by entering the command `upgrade:execute com.acme.p5d2.service`. The Gogo shell console will show the completed upgrade process.
+1. Run the upgrade by entering the command `upgrade:execute com.acme.p5d2.service`. The Gogo shell console shows the completed upgrade process.
 
    ![Execute the upgrade in Gogo shell.](./upgrading-your-database-tables/images/02.png)
 
