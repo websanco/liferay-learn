@@ -23,12 +23,12 @@ To access the Content Info sidebar, click the *Actions Menu* (![Action Menu](../
 
 ## Content Audit Tool
 
-This tool is the graphical area at the top of the Content Dashboard page. The chart represents the total number of assets for the combination of vocabularies categories including *global* and all *sites & asset libraries* in the instance. This chart takes into account:
+This tool is the graphical area at the top of the Content Dashboard page. The chart represents the total number of assets for a given combination of vocabularies and categories,  including the *Global* scope and all *Sites & Asset Libraries* in the instance. This chart takes into account:
 
 - [Web Content Articles](../web-content/web-content-articles/adding-a-basic-web-content-article.md) and [Documents and Media](../documents-and-media/documents-and-media-overview.md) across all Sites and Asset Libraries.
 
     ```{note}
-    Documents and Media are available in the Content Dashboard starting with Liferay DXP 7.4+.
+    Documents and Media are available in the Content Dashboard starting with Liferay 7.4+.
     ```
 
 - Content you can access.
@@ -58,7 +58,7 @@ In the Content Audit Tool interface you can find:
 
 ### Customizing the Vocabularies and Categories in the Content Audit Tool
 
-By default, the bar chart shows the total number of assets for each Category in the selected Vocabularies, but you can filter this information in different ways:
+By default, the bar chart shows the total number of assets for each Category in the selected vocabularies, but you can filter this information in different ways:
 
 - Use the [filters](#filtering-and-sorting-content-in-the-contents-list) in the [Contents list](#contents-list).
 - Filter categories in the chart by checking or unchecking the Category name in the chart legend.
