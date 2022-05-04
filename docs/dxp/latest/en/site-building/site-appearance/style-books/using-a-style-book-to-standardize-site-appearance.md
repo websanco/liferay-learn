@@ -14,7 +14,7 @@ If you do not choose a specific Style Book for a page, the page uses the Style B
 From Liferay 7.4 U10+ and GA14+, every Site has at least one Style Book available called *Styles from Theme*. This Style Book uses the token definition defined in the theme, with all of the default values. This Style Book cannot be edited, and it is the default used for the Site if no other Style Book is configured.
 ```
 
-Follow these steps to set any page's Style Book: 
+Follow these steps to set any page's Style Book:
 
 1. Click *Edit* (![Edit icon](../../../images/icon-edit.png)) near the top of the page.
 
@@ -54,11 +54,9 @@ To make this Style Book the new default for your Site, open the Actions menu (![
 
 ### Previewing a Style Book
 
-While you are creating or editing a Style Book, you can preview the way it affects the look of various components of your Site, including pages, Page Templates, and Page Fragments.
+{bdg-secondary}`Available 7.4 DXP U9+ or GA13+`
 
-```{note}
-This feature requires Liferay DXP U9+ or GA13+.
-```
+While you are creating or editing a Style Book, you can preview the way it affects the look of various components of your Site, including pages, Page Templates, and Page Fragments.
 
 Use the two drop-down menus at the top of the screen to select what components to preview. The left drop-down menu determines the overall type to display (pages, Page Templates, Master Page Templates, Display Page Templates, or Page Fragments). The right drop-down menu determines which specific instance of the chosen type to display (or category, if applicable); only the four most recently used options are shown in the right drop-down menu, unless you click *More* from the list.
 
