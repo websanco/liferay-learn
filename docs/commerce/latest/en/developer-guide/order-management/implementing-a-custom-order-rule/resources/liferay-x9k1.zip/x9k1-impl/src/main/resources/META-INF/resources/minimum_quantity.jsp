@@ -1,7 +1,7 @@
 
-<%@page import="com.acme.x9k1.internal.commerce.order.rule.web.display.context.X9K1MinimumQuantityDisplayContext" %><%@
-page import="com.liferay.portal.kernel.language.LanguageUtil" %><%@
-page import="com.liferay.portal.kernel.util.WebKeys" %>
+<%@ page import="com.acme.x9k1.internal.commerce.order.rule.web.display.context.X9K1MinimumQuantityDisplayContext" %>
+
+<%@ page import="com.liferay.portal.kernel.util.WebKeys" %>
 
 <%@ include file="/init.jsp" %>
 
@@ -10,20 +10,18 @@ X9K1MinimumQuantityDisplayContext x9k1MinimumQuantityDisplayContext = (X9K1Minim
 %>
 
 <div class="row">
-    <div class="col">
-        <commerce-ui:panel
-                bodyClasses="flex-fill"
-                title="Configuration"
-        >
-        
-        	<div class="row">
-        		<div class="col">
-					<aui:input label="minimum-quantity" name='<%= "type--settings--minimum-quantity--" %>' required="<%= true %>" type="text" value="<%= x9k1MinimumQuantityDisplayContext.getMinimumQuantity() %>">
+	<div class="col">
+		<commerce-ui:panel
+			bodyClasses="flex-fill"
+			title="Configuration"
+		>
+			<div class="row">
+				<div class="col">
+					<aui:input label="minimum-quantity" name="type--settings--minimum-quantity--" required="<%= true %>" type="text" value="<%= x9k1MinimumQuantityDisplayContext.getMinimumQuantity() %>">
 						<aui:validator name="number" />
 					</aui:input>
 				</div>
 			</div>
-				
-        </commerce-ui:panel>
-    </div>
+		</commerce-ui:panel>
+	</div>
 </div>
