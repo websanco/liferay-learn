@@ -1,8 +1,6 @@
 # Analyze Content Metrics Using the Content Performance Tool
 
-```markdown
 {bdg-secondary}`Available 7.3+`
-```
 
 > Some Content Performance options are only available starting with Liferay DXP/Portal 7.4.
 

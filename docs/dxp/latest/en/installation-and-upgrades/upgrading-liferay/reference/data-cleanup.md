@@ -1,8 +1,6 @@
 # Data Cleanup
 
-```markdown
 {bdg-secondary}`Available 7.3+`
-```
 
 When you're done using an obsolete Liferay app or capability, you can remove its data. You can use the Control Panel or a [configuration file](../../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md) to do data cleanup.
 

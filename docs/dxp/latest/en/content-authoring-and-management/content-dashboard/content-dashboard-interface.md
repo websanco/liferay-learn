@@ -1,9 +1,6 @@
 # Content Dashboard Interface
 
-
-```markdown
 {bdg-secondary}`Available 7.3+`
-```
 
 The Content Dashboard interface has the following areas:
 

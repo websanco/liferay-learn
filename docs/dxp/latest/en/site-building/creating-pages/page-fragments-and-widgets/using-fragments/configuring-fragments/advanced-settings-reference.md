@@ -1,8 +1,6 @@
 # Advanced Settings Reference
 
-```{note}
-This feature requires Liferay DXP U23+ or GA23+.
-```
+{bdg-secondary}`Available 7.4 DXP U23+ or 7.4 GA23+`
 
 The *Advanced* Settings tab for Page Fragments provides fields for more complex or technical configurations. For example, advanced settings may alter the way web browsers handle the Fragment's HTML.
 
@@ -20,7 +18,7 @@ Follow these steps to access a Fragment's Advanced Settings menu:
 
 ## HTML Tag
 
-Several HTML tags exist that allow web scrapers, browsers, and Site renderers to more easily find and retrieve what kind of content is on a page. *Container* Page Fragments provide the option to choose which tag is generated for the Container Fragment's HTML element on the page.
+Several HTML tags exist that allow web scrapers, browsers, and site renderers to more easily find and retrieve what kind of content is on a page. *Container* Page Fragments provide the option to choose which tag is generated for the Container Fragment's HTML element on the page.
 
 | Field | Description |
 | :--- | :--- |

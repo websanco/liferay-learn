@@ -14,9 +14,7 @@ Here are the database pruning topics:
 
 Your database may have obsolete data or data leftover from obsolete features. Both are easy to clean up.
 
-```markdown
 {bdg-secondary}`Data Cleanup tool available 7.3+. Data Removal tool available 7.4+`
-```
 
 1. Use the [Data Cleanup](../reference/data-cleanup.md) tool to remove data from obsolete modules.
 
