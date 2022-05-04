@@ -2,7 +2,7 @@
 
 ```{toctree}
 
-configuration-files-and-factories/using-configuration-files.md 
+configuration-files-and-factories/using-configuration-files.md
 configuration-files-and-factories/using-factory-configuration.md
 ```
 

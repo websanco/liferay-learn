@@ -5,11 +5,9 @@
 
 system-administration/installing-and-managing-apps.md
 system-administration/file-storage.md
-system-administration/system-settings.md
+system-administration/configuring-liferay.md
 system-administration/using-the-script-engine.md
 system-administration/using-the-server-administration-panel.md
-system-administration/security-settings.md
-system-administration/virtual-instances.md
 ```
 
 ```{raw} html

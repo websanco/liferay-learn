@@ -16,7 +16,7 @@ virtual-instances/third-party.md
 ```
 
 * [Understanding Virtual Instances](./virtual-instances/understanding-virtual-instances.md)
-* [Adding a Virtual Instance](./virtual-instances/adding-a-virtual-instancemd)
+* [Adding a Virtual Instance](./virtual-instances/adding-a-virtual-instance.md)
 * [Instance Configuration](./virtual-instances/instance-configuration.md)
 * [Users](./virtual-instances/users.md)
 * [User Authentication](./virtual-instances/user-authentication.md)
