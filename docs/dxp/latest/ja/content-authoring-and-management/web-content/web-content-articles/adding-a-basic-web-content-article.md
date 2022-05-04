@@ -1,6 +1,6 @@
 # 基本的なWebコンテンツの記事の追加
 
-Webコンテンツは、サイトコンテンツを作成するための最も実用的で不可欠な方法の1つです。 Webコンテンツの記事は、 [フラグメント](../../../site-building/displaying-content/using-fragments.html) 、[表示ページ](../../../site-building/displaying-content/using-display-page-templates/creating-and-managing-display-page-templates.md)または[ウィジェット](../../../site-building/displaying-content/using-the-web-content-display-widget.md)を介して表示できます。
+Webコンテンツは、サイトコンテンツを作成するための最も実用的で不可欠な方法の1つです。 Webコンテンツの記事は、 [フラグメント](../../../site-building/displaying-content/using_fragments.html) 、[表示ページ](../../../site-building/displaying-content/using-display-page-templates/creating-and-managing-display-page-templates.md)または[ウィジェット](../../../site-building/displaying-content/using-the-web-content-display-widget.md)を介して表示できます。
 
 各Webコンテンツの記事は、使用可能なフィールドを定義するストラクチャーに基づいています。 Liferayには、 すぐに使える **基本Webコンテンツ** ストラクチャーが含まれていますが、独自のストラクチャーを作成することもできます。 詳しくは [Web コンテンツストラクチャーを理解する](../web-content-structures/understanding-web-content-structures.md) を参照してください。
 

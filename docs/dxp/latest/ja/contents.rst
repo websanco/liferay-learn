@@ -8,7 +8,7 @@
 
    getting_started
    building_solutions_on_dxp
-   site-building
+   site_building
    content-authoring-and-management
    process_automation
    using-search
