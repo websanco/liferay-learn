@@ -34,7 +34,7 @@ public class X9K1MinimumQuantityCOREntryTypeImpl implements COREntryType {
 		int minimumQuantity =
 			x9k1MinimumQuantityDisplayContext.getMinimumQuantity();
 
-		if (_getTotalOrderItemQuantity(commerceOrder) < minimumQuantity) {
+		if (minimumQuantity > _getTotalOrderItemsQuantity(commerceOrder)) {
 			return false;
 		}
 
@@ -54,7 +54,7 @@ public class X9K1MinimumQuantityCOREntryTypeImpl implements COREntryType {
 
 		return "Total order quantity is less than the total minimum order " +
 			"quantity of " + minimumQuantity + ". Please add " +
-				(minimumQuantity - _getTotalOrderItemQuantity(commerceOrder)) +
+				(minimumQuantity - _getTotalOrderItemsQuantity(commerceOrder)) +
 					" more item(s) to continue.";
 	}
 
