@@ -61,6 +61,14 @@ Features and configuration defaults may change in new versions of Liferay. See t
 
 If you have a Liferay DXP subscription, update to the latest fix pack and/or request an upgrade patch to prepare for the database upgrade. File a ticket in the [Help Center](https://help.liferay.com/hc/requests/new) to start this process.
 
+### Preparing Publications
+
+If [Publications](../../site-building/publishing-tools/publications.md) is enabled for your instance, ensure you've published all active publications before upgrading. After upgrading, active publications are marked as out of date and cannot be published or changed.
+
+```{note}
+Keep in mind that any publication you published before upgrading cannot be reverted after the upgrade process. The *Revert* option is removed for all publications made on your previous Liferay version.
+```
+
 ### Prepare for Upgrading Commerce
 
 If you're using [Commerce](https://learn.liferay.com/commerce/latest/en/index.html), prepare to upgrade it before upgrading the Liferay database. See [Upgrading Liferay Commerce](https://learn.liferay.com/commerce/latest/en/installation-and-upgrades/upgrading-liferay-commerce.html) for details.
