@@ -62,11 +62,11 @@ This feature requires Liferay DXP U9+ or GA13+.
 
 Use the two drop-down menus at the top of the screen to select what components to preview. The left drop-down menu determines the overall type to display (pages, Page Templates, Master Page Templates, Display Page Templates, or Page Fragments). The right drop-down menu determines which specific instance of the chosen type to display (or category, if applicable); only the four most recently used options are shown in the right drop-down menu, unless you click *More* from the list.
 
-![Use the two drop-down menus together to select what to display to preview your Style Book.](./using-a-style-book-to-standardize-site-appearance/images/08.png)
+![Use the two drop-down menus together to select what to display to preview your Style Book.](./using-a-style-book-to-standardize-site-appearance/images/03.png)
 
 Previewing a Collection of Page Fragments shows all Fragments in the Collection. The preview displays Fragments with multiple (selectable) configuration options with an instance of each option, so that you can preview your Style Book with any of them.
 
-![If you are previewing the Style Book's effect on Page Fragments, then you can preview any configuration of the Fragments from the chosen Collection.](./using-a-style-book-to-standardize-site-appearance/images/09.gif)
+![If you are previewing the Style Book's effect on Page Fragments, then you can preview any configuration of the Fragments from the chosen Collection.](./using-a-style-book-to-standardize-site-appearance/images/04.gif)
 
 ### Customizing Your Style Book's Colors
 
@@ -78,13 +78,13 @@ When you are choosing a color for any color field in your Style Book, you can ch
 
 * Click the *Value from Stylebook* button to open a menu of pre-defined colors to choose from. You can choose to reuse colors from each of the general categories that you can customize.
 
-![You have several options available to change the color for any color option.](./using-a-style-book-to-standardize-site-appearance/images/03.png)
+![You have several options available to change the color for any color option.](./using-a-style-book-to-standardize-site-appearance/images/05.png)
 
 If you click the Value from Stylebook button and select a Style Book token value (that is also defined in another category), then that color field is linked to the chosen Style Book token. Any future changes to the token value for this Style Book will also change this color field.
 
 When a color field is tied to a Style Book token, the Value from Stylebook button is replaced with a *Detach Token* button. Click this button to detach the color field from the token (but keep the same color value).
 
-![Click the *Detach Token* button to detach a color field from the Style Book token, but keep the same color value.](./using-a-style-book-to-standardize-site-appearance/images/04.png)
+![Click the *Detach Token* button to detach a color field from the Style Book token, but keep the same color value.](./using-a-style-book-to-standardize-site-appearance/images/06.png)
 
 ```{note}
 Attaching or detaching a color value to a Style Book token requires Liferay DXP 7.4 U10+ or GA14+.
@@ -110,7 +110,7 @@ The categories listed here are available as options for the Classic theme.
 
 The colors used for fonts and visual elements defined in your theme are customizable in the Color System category. Generally, this means you can modify the body, background, and text colors on your pages.
 
-![Change the colors used for displays or UI elements with options under the Color System category.](./using-a-style-book-to-standardize-site-appearance/images/05.png)
+![Change the colors used for displays or UI elements with options under the Color System category.](./using-a-style-book-to-standardize-site-appearance/images/07.png)
 
 ```{note}
 Changing the colors for alert-related elements (such as *Success* or *Warning*) may not affect the color of incoming alerts on your Site because each type of alert may use one of many colors. To fully customize the color of alerts, you must define customizable colors and use them in your own theme's categories.
@@ -124,7 +124,7 @@ Adjust the spacing between the main elements on your pages with the options in t
 
 These options modify color and spacing on elements that appear on every page of your Site. For example, the *Body Background* option changes the background color of all pages.
 
-![Use the Body Background option in the General category to customize the color of the background of your Site pages.](./using-a-style-book-to-standardize-site-appearance/images/06.png)
+![Use the Body Background option in the General category to customize the color of the background of your Site pages.](./using-a-style-book-to-standardize-site-appearance/images/08.png)
 
 ### Layout
 
@@ -138,7 +138,7 @@ These options define new fonts for your pages. You can also adjust the size of h
 
 These options modify the style for the default types of buttons. You can customize the background, foreground, and border colors for each of the buttons used in the Classic theme.
 
-![Change the colors under Button Primary to affect many common buttons for out-of-the-box widgets when using the Classic theme.](./using-a-style-book-to-standardize-site-appearance/images/07.png)
+![Change the colors under Button Primary to affect many common buttons for out-of-the-box widgets when using the Classic theme.](./using-a-style-book-to-standardize-site-appearance/images/09.png)
 
 ## Additional Information
 
