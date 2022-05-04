@@ -1,6 +1,9 @@
 # Content Dashboard Interface
 
-> Available: Liferay DXP/Portal 7.3+
+
+```markdown
+{bdg-secondary}`Available 7.3+`
+```
 
 The Content Dashboard interface has the following areas:
 
