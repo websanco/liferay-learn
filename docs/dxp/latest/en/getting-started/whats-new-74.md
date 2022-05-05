@@ -8,32 +8,32 @@ Liferay DXP 7.4 comes with enhanced functionality and exciting improvements that
 
 You can now [run AB tests on any element on the page](../site-building/optimizing-sites/ab-testing/creating-ab-tests.md). Before Liferay DXP 7.4, you could only select buttons and links as a Click Goal. With Liferay DXP 7.4, you can now select any page element by including its element ID.
 
-![You can now run AB tests on any element on the page.](./whats-new-74/images/image4.png)
+![You can now run AB tests on any element on the page.](./whats-new-74/images/04.png)
 
 ### More Insightful Content Audit Tool
 
 In the [Content Audit Tool](../content-authoring-and-management/content-dashboard/content-dashboard-interface.md) in the Content Dashboard, you can now click on the bars to zoom in on
 the results; and content assigned to only one vocabulary category is now represented in the graph. Marketers can now easily spot miscategorized content using this new set of enhancements.
 
-![Zoom in on Content Audit results.](./whats-new-74/images/image3.png)
+![Zoom in on Content Audit results.](./whats-new-74/images/03.png)
 
 ### Content Audit Tool UX Improvements
 
 We've also made several usability improvements to the [Content Audit Tool](../content-authoring-and-management/content-dashboard/content-dashboard-interface.md) in the Content Dashboard. For example, now it is much easier to select the vocabularies to be audited, and it is possible to flip the bar chart axes with a click.
 
-![Select vocabularies and flip the bar chart axes.](./whats-new-74/images/image10.png)
+![Select vocabularies and flip the bar chart axes.](./whats-new-74/images/10.png)
 
 ### Traffic Acquisition Channels in the Content Performance Tool
 
 The traffic acquisition channels in the [Content Performance Tool](../content-authoring-and-management/content-performance-panel/analyze-content-metrics-using-content-performance-panel.md) use [Analytics Cloud](https://learn.liferay.com/analytics-cloud/latest/en/index.html) data and include measurements for organic and paid search, social traffic, and referrals. A channel's detail view reveals all referring URLs and domains.
 
-![Traffic acquisition channels include search, social and referral data.](./whats-new-74/images/image9.png)
+![Traffic acquisition channels include search, social and referral data.](./whats-new-74/images/09.png)
 
 ### Content Performance Analytics for All Types of Pages
 
 The Content Performance Panel is now available for all pages: display pages templates of all assets, content, and widget pages. Before Liferay DXP 7.4, the Content Performance Too was only available for web content rendered through a display page template.
 
-![The Content Performance Panel can be used for all page types.](./whats-new-74/images/image6.png)
+![The Content Performance Panel can be used for all page types.](./whats-new-74/images/06.png)
 
 ## Empowering Practitioners to Build Rich Digital Experiences
 
@@ -41,19 +41,19 @@ The Content Performance Panel is now available for all pages: display pages temp
 
 Starting with Liferay DXP 7.4, you can use [the Page Audit tool](../content-authoring-and-management/page-performance-and-accessibility/analyze-seo-and-accessibility-on-pages.md) for auditing your pages' SEO and accessibility. The Page Audit tool uses the [Google PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights) service, providing specific recommendations for Liferay DXP. With the new Page audit tool, you can check your page's compliance with the best performance, accessibility, search engine metadata, and SEO practices.
 
-![Google PageSpeed Insights integration provides recommendations.](./whats-new-74/images/image2.png)
+![Google PageSpeed Insights integration provides recommendations.](./whats-new-74/images/02.png)
 
 ### More Flexibility to Replicate and Draft Experiences
 
 You can now draft and duplicate [Liferay DXP Experiences](../site-building/personalizing-site-experience/experience-personalization/content-page-personalization.md) and replace the default experience with another. These enhancements provide much more flexibility when creating and managing Experiences.
 
-![Replicate and Draft Experiences easily.](./whats-new-74/images/image7.png)
+![Replicate and Draft Experiences easily.](./whats-new-74/images/07.png)
 
 ### Documents Now Visible in the Content Dashboard
 
 Documents now appear in the [Content Dashboard](../content-authoring-and-management/content-dashboard/about-the-content-dashboard.md), with new filters based on asset type or MIME type. You can access these filters in the Filter and Order drop-down menu in the Content Dashboard.
 
-![There are new filters in the Content Dashboard.](./whats-new-74/images/image1.png)
+![There are new filters in the Content Dashboard.](./whats-new-74/images/01.png)
 
 ### Account Management Widget
 
@@ -105,7 +105,7 @@ The Type Facet widget supports searchable Liferay Object types, and the Search R
 
 You can now paginate the collection items in Collection Display Fragments. This new functionality is especially useful for Collections containing a large number of items. Large Collections become more readable, improving usability and overall experience.
 
-![You can now paginate collections in Collection Display Fragments.](./whats-new-74/images/image11.png)
+![You can now paginate collections in Collection Display Fragments.](./whats-new-74/images/11.png)
 
 ### Search and Filtering Fragments to Collection Displays
 
@@ -113,19 +113,19 @@ Liferay DXP 7.4 includes two new fragments: Collection Filter and Applied Filter
 
 Using these filters with Collection Display Fragments in your page, you can filter Collections based on different criteria and display what filters have been applied to your Collection.
 
-![New filters help users find data in collections.](./whats-new-74/images/image5.png)
+![New filters help users find data in collections.](./whats-new-74/images/05.png)
 
 ### Display Items Related to One Specific Item with Related Item Collections
 
 When working with the Collection Display Fragment, you can now choose and display items from related Collections using the new Related Items Collection Providers tab.
 
-![Now it's easy to choose related items.](./whats-new-74/images/image14.png)
+![Now it's easy to choose related items.](./whats-new-74/images/14.png)
 
 ### Define Pre-Filtering Options for the Collection Providers
 
 Developers can now customize Collection Providers using specific configuration fields. This way, users can pre-filter a Collection Provider and have more flexibility to choose items in the Collection Display Fragment. Users can access the filter from the Actions Menu in the Collection Display Fragment.
 
-![Now you can pre-filter Collection providers.](./whats-new-74/images/image12.png)
+![Now you can pre-filter Collection providers.](./whats-new-74/images/12.png)
 
 ### Specify Sub-Type Fields for Collection Providers as Mapping Elements
 
@@ -135,13 +135,13 @@ When building a Collection Provider with the Info Framework, developers can now 
 
 You can hide a Fragment on one Viewport while keeping it visible on another. This new capability allows you to further customize your content's responsiveness for a specific user platform.
 
-![You can hide a Fragment on one Viewport while keeping it visible on another.](./whats-new-74/images/image8.png)
+![You can hide a Fragment on one Viewport while keeping it visible on another.](./whats-new-74/images/08.png)
 
 ### Native Support for Adaptive Media in Content Pages and Display Page Templates
 
 You can now use [adaptive media in Content Page images](../site-building/creating-pages/page-fragments-and-widgets/using-fragments/configuring-fragments/fragment-sub-elements-reference.md#image-source-settings) to adjust the image resolution dynamically, based on the target screen size. After you [add an image resolution in Adaptive Media](../content-authoring-and-management/documents-and-media/publishing-and-sharing/serving-device-and-screen-optimized-media/adding-image-resolutions.md), the resolution appears in the Resolution drop-down menu for your Content Page image.
 
-![Adaptive Media can now adjust image resolutions dynamically based on screen size.](./whats-new-74/images/image13.gif)
+![Adaptive Media can now adjust image resolutions dynamically based on screen size.](./whats-new-74/images/13.gif)
 
 ## Reducing the Cost and Effort to Launch and Maintain Digital Experiences
 
