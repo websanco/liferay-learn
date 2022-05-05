@@ -81,7 +81,7 @@ unzip liferay-w4s7.zip
 The sample code includes POST commands for each Object, as well as a GET command for `Charlie`.
 
 ```{tip}
-For a complete list of APIs generated for both Site and Company Objects, see [Object's Headless Framework Integration](../../understanding-object-integrations/headless-framework-integration.md). You can view and test custom Object APIs via the Liferay API Explorer at `[server]:[port]/o/api` (e.g., `localhost:8080/o/api`). They are listed under *REST Applications*.
+For a complete list of APIs generated for both Site and Company Objects, see [Object's Headless Framework Integration](../../understanding-object-integrations/headless-framework-integration.md). You can view and test custom Object APIs via the Liferay API Explorer at `[server]:[port]/o/api` (e.g., `localhost:8080/o/api`). They appear under *REST Applications*.
 ```
 
 ## Using the Sample Code
@@ -128,7 +128,7 @@ Follow these steps to add and query related Object entries:
    ./Baker_POST_ToCompany.sh {able-entry-id}
    ```
 
-   This creates `Baker` entries related to the specified `Able` entry. Copy the first `Baker` entry ID ID for use with the following POST command.
+   This creates `Baker` entries related to the specified `Able` entry. Copy the first `Baker` entry ID for use with the following POST command.
 
    ```bash
    {
@@ -159,7 +159,7 @@ Follow these steps to add and query related Object entries:
    ./Charlie_POST_ToCompany.sh {baker-entry-id}
    ```
 
-   This creates `Charlie` entries related to the preceding `Baker` entry. Copy the first  entry's ID for use with the following GET command.
+   This creates `Charlie` entries related to the preceding `Baker` entry. Copy the first entry's ID for use with the following GET command.
 
    ```bash
    {
@@ -187,7 +187,7 @@ Follow these steps to add and query related Object entries:
 1. Execute `Charlie_GET_ById` using the `Charlie` entry ID as a parameter.
 
    ```bash
-   ./Charlie_GET_ById.sh {charlie-entry-id}
+   ./Charlie_GET_ById.sh [charlie-entry-id]
    ```
 
    This queries the entry using nested fields and returns the schema for all three levels of the related Objects.
@@ -220,8 +220,9 @@ Follow these steps to add and query related Object entries:
 
 The provided GET method calls a URL with the `nestedFields` and `nestedFieldsDepth` parameters.
 
-* `nestedFields`: Determines the types of entries included in the query (e.g., `able,baker`).
-* `nestedFieldsDepth`: Determines the depth of entries you want to include and can be set between 0-5.
+`nestedFields`: Determines the types of entries included in the query (e.g., `able,baker`).
+
+`nestedFieldsDepth`: Determines the depth of entries you want to include and can be set between 0-5.
 
 ## Additional Information
 
