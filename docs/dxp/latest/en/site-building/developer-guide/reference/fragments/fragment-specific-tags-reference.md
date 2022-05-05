@@ -165,7 +165,7 @@ For Liferay Portal 7.3 GA2 and below, use this syntax:
 
 ## Including Widgets Within A Fragment
 
-To include a widget, you must know its registered name. For example, the Menu Display is registered as `nav`. Each registered portlet has an `lfr-widget-[name]` tag that's used to embed it. For example: the Menu Display tag is `<lfr-widget-nav />`. You could embed it in a block like this:
+Each widget has a registered name and corresponding `lfr-widget-[name]` tag, which you must use to embed it in a fragment. For example, the Menu Display widget is registered as `nav`, so its tag is `<lfr-widget-nav />`. You could embed it in a block like this:
 
 ```html
 <div class="nav-widget">
