@@ -66,3 +66,9 @@ To add a Predefined Variable to the Element in the Element Source editor, place 
 **\*** Access Ipstack and OpenWeatherMap variables by enabling these services. Visit System or Instance Settings &rarr; Platform &rarr; Search Experiences. Click the Enabled checkbox and Save the configuration for the service you're configuring. See [Personalizing the Search Experience](../personalizing-the-search-experience.md) for an example using the Ipstack service.
 
 **\*\*** In addition to these out-of-the-box variables, [Custom Fields](../../../../system-administration/configuring-liferay/adding-custom-fields.md) on the User entity can also be referenced as variables in the Element. For example, a User Custom Field with the name _Employee_ is referenced in an Element with `user.custom.field.employee`.
+
+## Additional Information
+
+- [Creating Elements](./creating-elements.md)
+- [Search Blueprints Configuration Reference](../search-blueprints-configuration-reference.md)
+- [Managing Elements](./managing-elements.md)

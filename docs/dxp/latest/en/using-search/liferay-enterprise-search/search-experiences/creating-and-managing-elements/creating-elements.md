@@ -110,7 +110,7 @@ Name the Element and click _Create_. The Element Source editor is displayed, and
 
 ![Create Elements in the Element source editor.](./creating-elements/images/02.png)
 
-To preview what the Element's configuration window will look like in the Query Builder, click the _Preview_ link (next to the Cancel button).
+The UI configuration options are defined in a `uiConfiguration` property in the Element JSON. To preview what the Element's configuration window will look like in the Query Builder, click the _Preview_ link (next to the Cancel button).
 
 ![Preview the Element Configuration window.](./creating-elements/images/03.png)
 
@@ -118,7 +118,7 @@ To preview what the Element's configuration window will look like in the Query B
 
 To add a Predefined Variable to the Element in the Element Source editor, place the cursor where the variable will be, then click on the variable in the left hand sidebar to have it inserted. In the Custom JSON Element you must type the variable directly into the editor.
 
-See [Predefined Element Variables Reference](./predefined-element-variables-reference.md) for details.
+See the [Predefined Element Variables Reference](./predefined-element-variables-reference.md) for details.
 
 ## Understanding the Element Schema
 
@@ -222,11 +222,10 @@ The `uiConfiguration` property holds the nested properties `fieldSet` and `field
 
 There are a number of configuration properties you can add for each field in the UI Configuration:
 
-<!-- `fieldMappings`-->
+- Use `defaultValue` to enter an initial value for the field.
 - Enter `helpText` to display help text for the field in the Blueprints UI.
 - Enter a human readable `label`.
 - Enter a `name` that can be used to reference the field elsewhere in the Element, like when passing the field value into the query clause: `${configuration.name}`.
-- `step`
 - Set the `type` of the field. Choose from `date`, `fieldMapping`, `fieldMappingList` (a list of the available fields, with their locale and a field boost), `itemSelector`, `json`, `keywords`, `multiselect`, `number`, `select`, `slider`, and `text`
 - Use the `typeOptions` property to configure the options available for each type of field. For example, set the `options` displayed for a select field.
    - `boost` sets a per-field numeric boost value.
