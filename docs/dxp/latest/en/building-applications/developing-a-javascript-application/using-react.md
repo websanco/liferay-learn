@@ -27,7 +27,7 @@ Build your own solutions using Liferay and React.
 :::
 
 :::{grid-item-card} React Component Utilities Reference
-:link: .using-react/react-component-utilities-reference.md
+:link: ./using-react/react-component-utilities-reference.md
 :::
 
 ::::
