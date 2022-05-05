@@ -30,7 +30,7 @@ Enabling Limit to One Submission per User also requires that Users are authentic
 
 By default, forms never expire. If you disable the Never Expire setting, you can then set the date when the form expires. After this date, no submissions are allowed. Form users see an expiration notification when accessing the form.
 
-<!-- What does the user see when the form expires? -->
+![When a form expires, Users can only see the partial results, if enabled.](./using-forms-to-poll-users/images/04.png)
 
 ### Show Partial Results to Respondents
 
