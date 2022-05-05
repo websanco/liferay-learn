@@ -2,7 +2,7 @@
 
 > Available: Liferay DXP/Portal 7.4+
 
-When you publish an Object, Liferay automatically generates both REST and [GraphQL](https://graphql.org) APIs for it. This provides headless access with custom Objects, so you can perform CRUD operations. The APIs generated for an Object depend on its scope (i.e., company or Site).
+When you publish an Object, Liferay automatically generates both REST and [GraphQL](https://graphql.org) APIs for it. This provides headless access to custom Objects, so you can perform CRUD operations. The APIs generated for an Object depend on its scope (i.e., company or Site).
 
 All Objects use the `c/[pluralobjectlabel]` naming pattern (e.g., `c/timeoffrequests`). Each Object entry schema includes all of the Object's fields and relationships.
 
