@@ -48,22 +48,22 @@ After saving fields to an Object draft, you can select them to define whether th
 
 ## Field Types UI Reference
 
-{bdg-secondary}`For Liferay DXP 7.4 U20+`
+{bdg-secondary}`For Liferay DXP 7.4 U24+`
 
 | Type | Description |
 | :--- | :--- |
-| Attachment | Stores `jpeg`, `jpg`, `pdf`, and `png` files no larger than 100 MB. |
+| Attachment | Stores `jpeg`, `jpg`, `pdf`, and `png` files no larger than 100 MB |
 | Boolean | Stores true or false values |
 | Date | Stores date values |
 | Decimal (*previously Double*) | Stores a decimal number value that supports fractional portions |
 | Integer | Stores an integer up to 9 digits in length |
 | Long Integer (*previously Long*) | Stores a large integer up to 19 digits in length |
-| Long Text (*previously Clob*) | Stores a text box value that supports up to 65,000 characters |
+| Long Text (*previously Clob*) | Stores a text box value that supports up to 65,000 characters; when configuring this field type, you can limit the number of characters allowed |
 | Picklist | Stores a [Picklist](../picklists.md) string value |
 | Precision Decimal (*previously BigDecimal*) | Stores a high-precision decimal number without rounding |
 | Relationship | Stores the numeric ID for all related Object entries |
-| Rich Text | Stores text with advanced formatting tools and media elements (e.g., images, videos, audio). |
-| Text (*previously String*) | Stores simple text values up to 280 characters |
+| Rich Text | Stores text with advanced formatting tools and media elements (e.g., images, videos, audio) |
+| Text (*previously String*) | Stores simple text values up to 280 characters; when configuring this field type, you can limit the number of characters allowed |
 
 ## Additional Information
 

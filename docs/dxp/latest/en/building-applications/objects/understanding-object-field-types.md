@@ -1,6 +1,6 @@
 # Understanding Object Field Types
 
-{bdg-secondary}`For Liferay DXP 7.4 U20+`
+{bdg-secondary}`For Liferay DXP 7.4 U24+`
 
 Object fields represent database columns that store specific types of data for an Object. Fields can be added to both custom and system Objects and can only store one type of data.
 
@@ -8,18 +8,18 @@ Liferay provides a user-friendly name for each field type, which corresponds to 
 
 | Field Types (UI) | Data Type (HEADLESS) | Description |
 | :--- | :--- | :--- |
-| Attachment | Relationship > Long | Stores `jpeg`, `jpg`, `pdf`, and `png` files no larger than 100 MB. |
+| Attachment | Relationship > Long | Stores `jpeg`, `jpg`, `pdf`, and `png` files no larger than 100 MB |
 | Boolean | Boolean | Stores true or false values |
 | Date | Date | Stores date values |
 | Decimal (*previously Double*) | Double | Stores a decimal number value that supports fractional portions |
 | Integer | Integer | Stores an integer up to 9 digits in length |
 | Long Integer (*previously Long*) | Long | Stores a large integer up to 19 digits in length |
-| Long Text (*previously Clob*) | Clob | Stores a text box value that supports up to 65,000 characters |
+| Long Text (*previously Clob*) | Stores a text box value that supports up to 65,000 characters; when configuring this field type, you can limit the number of characters allowed |
 | Picklist | String | Stores a [Picklist](./picklists.md) string value |
 | Precision Decimal (*previously BigDecimal*) | BigDecimal | Stores a high-precision decimal number without rounding |
 | Relationship | Long | Stores the numeric ID for all related Object entries |
-| Rich Text | Clob | Stores text with advanced formatting tools and media elements (e.g., images, videos, audio). |
-| Text (*previously String*) | String | Stores simple text values up to 280 characters |
+| Rich Text | Clob | Stores text with advanced formatting tools and media elements (e.g., images, videos, audio) |
+| Text (*previously String*) | Stores simple text values up to 280 characters; when configuring this field type, you can limit the number of characters allowed |
 
 <!-- 
 ## Attachments
