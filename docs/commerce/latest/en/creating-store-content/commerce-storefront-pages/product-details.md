@@ -10,7 +10,7 @@ The sample page highlighted below is using the Minium Accelerator and contains t
 The *Product Comparison Bar* widget becomes active only when you select one or more products.
 ```
 
-In the above image, the _Product Publisher_ widget is configured to display similar items that have the same Categories and Tags. Store administrators can change the contents of this widget to display other types of related products. For more information, see the [Related Products, Upsells, and Cross-Sells](../../product-management/creating-and-managing-products/products/related-products-up-sells-and-cross-sells.md) article.
+In the above image, the _Product Publisher_ widget is configured to display similar items that have the same Categories and Tags. Store administrators can change the contents of this widget to display other types of related products. For more information, see [Related Products, Upsells, and Cross-Sells](../../product-management/creating-and-managing-products/products/related-products-up-sells-and-cross-sells.md).
 
 ![The configuration of the Product Publisher widget.](./product-details/images/02.png)
 
