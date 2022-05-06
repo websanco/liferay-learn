@@ -5,7 +5,7 @@
 terms-and-conditions/payment-and-delivery-terms.md
 ```
 
-Liferay supports the addition of Terms and Conditions to an order through Payment and Delivery Terms. These are conditions to which the buyer and seller both agree upon. Payment Terms relate to the payment methods of an order and Delivery Terms relate to the shipping methods of an order.
+Liferay supports adding Terms and Conditions to an order through Payment and Delivery Terms. These are conditions upon which the buyer and seller both must agree. Payment Terms define an order's payment methods, and Delivery Terms define an order's shipping methods. 
 
 ::::{grid} 2
 :gutter: 3 3 3 3
