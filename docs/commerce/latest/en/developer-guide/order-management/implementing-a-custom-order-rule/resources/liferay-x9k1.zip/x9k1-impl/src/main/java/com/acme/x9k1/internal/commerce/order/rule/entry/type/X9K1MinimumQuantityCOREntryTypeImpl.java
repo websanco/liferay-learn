@@ -6,6 +6,7 @@ import com.liferay.commerce.model.CommerceOrder;
 import com.liferay.commerce.model.CommerceOrderItem;
 import com.liferay.commerce.order.rule.entry.type.COREntryType;
 import com.liferay.commerce.order.rule.model.COREntry;
+import com.liferay.petra.string.StringBundler;
 import com.liferay.portal.kernel.exception.PortalException;
 import com.liferay.portal.kernel.language.LanguageUtil;
 
@@ -28,13 +29,7 @@ public class X9K1MinimumQuantityCOREntryTypeImpl implements COREntryType {
 	public boolean evaluate(COREntry corEntry, CommerceOrder commerceOrder)
 		throws PortalException {
 
-		X9K1MinimumQuantityDisplayContext x9k1MinimumQuantityDisplayContext =
-			new X9K1MinimumQuantityDisplayContext(corEntry);
-
-		int minimumQuantity =
-			x9k1MinimumQuantityDisplayContext.getMinimumQuantity();
-
-		if (minimumQuantity > _getTotalOrderItemsQuantity(commerceOrder)) {
+		if (_getMinimumQuantity(corEntry) > _getOrderQuantity(commerceOrder)) {
 			return false;
 		}
 
@@ -46,16 +41,29 @@ public class X9K1MinimumQuantityCOREntryTypeImpl implements COREntryType {
 			COREntry corEntry, CommerceOrder commerceOrder, Locale locale)
 		throws PortalException {
 
-		X9K1MinimumQuantityDisplayContext x9k1MinimumQuantityDisplayContext =
-			new X9K1MinimumQuantityDisplayContext(corEntry);
+		StringBundler sb = new StringBundler();
 
-		int minimumQuantity =
-			x9k1MinimumQuantityDisplayContext.getMinimumQuantity();
+		sb.append("Order quantity is less than the minimum quantity ");
 
-		return "Total order quantity is less than the total minimum order " +
-			"quantity of " + minimumQuantity + ". Please add " +
-				(minimumQuantity - _getTotalOrderItemsQuantity(commerceOrder)) +
-					" more item(s) to continue.";
+		int minimumQuantity = _getMinimumQuantity(corEntry);
+
+		sb.append(minimumQuantity);
+
+		sb.append(". Add ");
+
+		int delta = minimumQuantity - _getOrderQuantity(commerceOrder);
+
+		sb.append(delta);
+
+		sb.append(" more item");
+
+		if (delta > 1) {
+			sb.append("s");
+		}
+
+		sb.append(" to continue.");
+
+		return sb.toString();
 	}
 
 	@Override
@@ -68,11 +76,18 @@ public class X9K1MinimumQuantityCOREntryTypeImpl implements COREntryType {
 		return LanguageUtil.get(locale, "x9k1-minimum-order-quantity");
 	}
 
-	private int _getTotalOrderItemsQuantity(CommerceOrder commerceOrder) {
+	private int _getMinimumQuantity(COREntry corEntry) {
+		X9K1MinimumQuantityDisplayContext x9k1MinimumQuantityDisplayContext =
+			new X9K1MinimumQuantityDisplayContext(corEntry);
+
+		return x9k1MinimumQuantityDisplayContext.getMinimumQuantity();
+	}
+
+	private int _getOrderQuantity(CommerceOrder commerceOrder) {
+		int orderQuantity = 0;
+
 		List<CommerceOrderItem> commerceOrderItems =
 			commerceOrder.getCommerceOrderItems();
-
-		int orderQuantity = 0;
 
 		for (CommerceOrderItem commerceOrderItem : commerceOrderItems) {
 			orderQuantity = orderQuantity + commerceOrderItem.getQuantity();
