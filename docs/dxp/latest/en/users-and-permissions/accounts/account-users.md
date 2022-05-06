@@ -4,7 +4,7 @@
 
 Account Users are User accounts that are associated with a Business Account or a Person Account.
 
-## Adding an Account User
+## Adding a New Account User
 
 1. Open the Global Menu (![Global Menu](../../images/icon-applications-menu.png)). Navigate to *Applications* &rarr; *Account Users*.
 
@@ -19,7 +19,7 @@ Account Users are User accounts that are associated with a Business Account or a
    Click the *Save* button to save the new account user.
 
 ```{note}
-Users for Accounts can only be created within this *Account Users* interface. A regular DXP User that is created in the *Users and Organizations* interface cannot be associated with any Accounts. However, an Account User can be managed and edited from *Users and Organizations* after creation.
+If you are using a version before Liferay DXP 7.4 U21 or Liferay Portal 7.4 GA21, Users for Accounts can only be created within this *Account Users* interface. A regular DXP User that is created in the *Users and Organizations* interface cannot be associated with any Accounts. However, an Account User can be managed and edited from *Users and Organizations* after creation.
 ```
 
 ### Setting a Password for an Account User
@@ -31,6 +31,26 @@ If you haven't set up a mail server, set a password manually for the User.
 1. In Account Users, click on the _Options_ icon (![Options icon](../../images/icon-actions.png)) of the Account User you want to edit.
 
 1. Under the General tab, click *Password*. Set a password and click *Save*.
+
+### Associating an Existing User to a Business Account
+
+To associate an existing user to a Business Account,
+
+1. Open the Global Menu (![Global Menu](../../images/icon-applications-menu.png)). Navigate to *Applications* &rarr; *Accounts*.
+
+1. Click the _Options_ icon (![Options icon](../../images/icon-actions.png)) of the account you want to edit and click _Manage Users_. 
+
+1. Click the _Add_ icon and select a user to assign to the account. 
+
+### Associating and Existing User to a Personal Account
+
+To associate an existing user to a Personal Account,
+
+1. Open the Global Menu (![Global Menu](../../images/icon-applications-menu.png)). Navigate to *Applications* &rarr; *Accounts*.
+
+1. Click the _Options_ icon (![Options icon](../../images/icon-actions.png)) of the account you want to edit and click _Edit_. 
+
+1. Under the User section, click the _Assign_ button and select a user. Click the _Choose_ button.
 
 ## Editing an Account User
 
