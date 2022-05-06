@@ -77,7 +77,7 @@ function configure_env {
 
 	if [ "${1}" == "prod" ]
 	then
-		nodeenv -p --node=16.9.0
+		nodeenv -p --node=16.10.0
 
 		activate_venv
 
