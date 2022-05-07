@@ -25,4 +25,12 @@ Poshi is a test automation framework that is simple, easy to understand, and doe
 * [Setup](./poshi-test-automation/getting-started/setup.md)
 * [Creating a Path File](./poshi-test-automation/getting-started/creating-a-path-file.md)
 :::
+
+:::{grid-item-card}  Poshi Resources
+
+* [Poshi Resources](./poshi-test-automation/poshi-resources.md)
+* [Configuration](./poshi-test-automation/poshi-resources/configuration.md)
+* [Using Poshi Resources](./poshi-test-automation/poshi-resources/using-poshi-resources.md)
+:::
+
 ::::
