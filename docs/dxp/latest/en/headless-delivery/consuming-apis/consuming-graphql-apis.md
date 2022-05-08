@@ -6,23 +6,16 @@ Liferay DXP contains [GraphQL](https://graphql.org) APIs for most of its applica
 1. Identify the site containing the data you need.
 1. Make the API call using credentials that have access to the data.
 
-## Identify the Service to Consume
+You need a running Liferay DXP to call its GraphQL APIs.
 
-You need a running Liferay DXP to call its GraphQL APIs. To obtain one using Docker, run this command:
-
-```bash
-docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
+```{include} /_snippets/run-liferay.md
 ```
 
-After Liferay DXP initializes, you can find the service you need.
+## Identify the Service to Consume
 
-1. Go to `http://localhost:8080` and sign in using the default credentials:
-    **User Name:** `test@liferay.com`
-    **Password:** `test`
+Follow these steps:
 
-1. Go to this URL:
-
-        http://localhost:8080/o/api
+1. Go to `http://localhost:8080/o/api`.
 
 1. At the top-left of the screen that appears, pick *headless-delivery* from the selector. This is the category that contains the Blog posting API.
 
@@ -56,15 +49,15 @@ Since the API requires you to know the Site containing the Blog where the entry 
 
 ## Identify the Site Containing the Data
 
-Visit your site with your browser at `http://localhost:8080`.
+Now you must find the Site ID:
 
-Now you must find the default Site ID:
+1. Go to `http://localhost:8080`.
 
-1. Sign in using the default credentials:
-   **User Name:** `test@liferay.com`
-   **Password:** `test`
-1. Go to Control Panel &rarr; Sites &rarr; Sites.
-1. Click the Actions button next to the Liferay Site and choose *Go to Site Settings*.
+1. Open the *Global Menu* ![Global Menu](../../images/icon-applications-menu.png), click the *Control Panel* tab, and go to *Sites* &rarr; Sites.
+
+1. Click the *Actions* button ![Actions Button](../../images/icon-actions.png) next to the Liferay Site and choose *Go to Site Settings*.
+
+1. Go to *Site Configuration*.
 
 The Site ID appears at the top of the Details section. It's an Integer, like `20122`.
 
@@ -79,7 +72,7 @@ During development, it's much easier to use Basic Auth, which passes credential 
 To call a service using Basic Auth, provide the credentials in the URL:
 
 ```bash
-curl --request POST --url http://localhost:8080/o/graphql \ -u test@liferay.com:test  --header 'content-type: application/json' --data '{"query":"query {blogPostings(filter: \"\", page: 1, pageSize: 10, search: \"\", siteKey: \"20122\", sort: \"\"){ page  items{ id articleBody headline  creator{ name }}}}"}'
+curl --request POST --url http://localhost:8080/o/graphql \ -u test@liferay.com:learn  --header 'content-type: application/json' --data '{"query":"query {blogPostings(filter: \"\", page: 1, pageSize: 10, search: \"\", siteKey: \"20122\", sort: \"\"){ page  items{ id articleBody headline  creator{ name }}}}"}'
 ```
 
 ### Calling a Service Using OAuth2
@@ -176,7 +169,7 @@ Liferay DXP returns a JSON representation of your blog entry that contains the f
 ```{note}
 You can make these requests with any web client, such as cURL:
 
-`curl --request POST --url http://localhost:8080/o/graphql -u test@liferay.com:test --header 'content-type: application/json' --data '{"query":"mutation CreateBlog($blog: InputBlogPosting){   createSiteBlogPosting(blogPosting: $blog, siteKey: \"20122\" ) {    headline    articleBody    id    friendlyUrlPath  }    } ","variables":{"blog":{"articleBody":"This Blog entry was created by using cURL to call the GraphQL service!","headline":"cURL GraphQL Blog Entry"}},"operationName":"CreateBlog"}'`
+`curl --request POST --url http://localhost:8080/o/graphql -u test@liferay.com:learn --header 'content-type: application/json' --data '{"query":"mutation CreateBlog($blog: InputBlogPosting){   createSiteBlogPosting(blogPosting: $blog, siteKey: \"20122\" ) {    headline    articleBody    id    friendlyUrlPath  }    } ","variables":{"blog":{"articleBody":"This Blog entry was created by using cURL to call the GraphQL service!","headline":"cURL GraphQL Blog Entry"}},"operationName":"CreateBlog"}'`
 ```
 
 ### Getting All Blog Entries

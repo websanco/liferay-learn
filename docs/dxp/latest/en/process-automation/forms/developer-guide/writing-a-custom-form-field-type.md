@@ -20,17 +20,10 @@ To see how custom form fields work, deploy an example and then add some form dat
 
 ### Deploy the Example
 
-1. Start Liferay. If you don't already have a docker container, use
+```{include} /_snippets/run-liferay.md
+```
 
-    ```bash
-    docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
-    ```
-
-    If you already have a docker container, use
-
-    ```bash
-    docker start -i [container_name]
-    ```
+Then, follow these steps:
 
 1. Download and unzip [the Custom Form Field Type project](./writing-a-custom-form-field-type/resources/liferay-c2p9.zip).
 

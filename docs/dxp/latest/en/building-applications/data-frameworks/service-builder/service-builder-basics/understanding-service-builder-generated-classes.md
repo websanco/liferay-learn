@@ -168,11 +168,10 @@ The new method is available to publish with your modules.
 
 It's time to deploy your modules and test your new service.
 
-1. Start a [Liferay Docker container](../../../../installation-and-upgrades/installing-liferay/using-liferay-docker-images.md).
+```{include} /_snippets/run-liferay.md
+```
 
-   ```bash
-   docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
-   ```
+Then, follow these steps:
 
 1. Build and deploy the example.
 
@@ -190,14 +189,6 @@ It's time to deploy your modules and test your new service.
     STARTED com.acme.w9b7.api_1.0.0
     STARTED com.acme.w9b7.service_1.0.0
     ```
-
-1. Open a browser to `http://localhost:8080`.
-
-1. Sign in using the default credentials:
-
-    **User Name:** `test@liferay.com`
-
-    **Password:** `test`
 
 1. Navigate to the Script console at Control Panel → Server Administration → Script.
 

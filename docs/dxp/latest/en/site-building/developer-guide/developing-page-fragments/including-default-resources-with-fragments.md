@@ -8,13 +8,10 @@ For Liferay DXP 7.4+, Fragment Collections are called Fragment Sets in the Lifer
 
 ## Import a Fragment Set with Resources
 
-First, import an example Fragment Set to see how Fragment resources work:
+```{include} /_snippets/run-liferay.md
+```
 
-1. Run the command below to start the Docker container:
-
-    ```bash
-    docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
-    ```
+Then, follow these steps to import an example Fragment Set to see how Fragment resources work:
 
 1. Download and unzip the [example resources Fragment Set](https://learn.liferay.com/dxp/latest/en/site-building/developer-guide/developing-page-fragments/liferay-i6r3.zip):
 

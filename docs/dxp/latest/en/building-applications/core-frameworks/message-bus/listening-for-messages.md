@@ -4,19 +4,10 @@ You can listen for messages sent to any registered Message Bus destination, whet
 
 ## Run the Example Message Listener
 
-1.  Start the Liferay Docker image:
+```{include} /_snippets/run-liferay.md
+```
 
-    ```bash
-    docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
-    ```
-
-1. After DXP/Portal initializes, visit it with your browser at `http://localhost:8080`.
-
-1. Sign in using the default credentials:
-
-    **User Name:** `test@liferay.com`
-
-    **Password:** `test`
+Then, follow these steps:
 
 1. Download and unzip the [example project](dxp/latest/en/building-applications/core-frameworks/message-bus/liferay-w3a4.zip):
 

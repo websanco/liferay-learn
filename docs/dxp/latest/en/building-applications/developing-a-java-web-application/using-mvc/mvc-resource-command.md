@@ -8,11 +8,10 @@ You'll deploy an example portlet that uses an MVC Resource Command and then exam
 
 The example portlet downloads a simple file using an MVC Resource Command.
 
-1. Start a [Liferay Docker container](../../../installation-and-upgrades/installing-liferay/using-liferay-docker-images.md).
+```{include} /_snippets/run-liferay.md
+```
 
-   ```bash
-   docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
-   ```
+Then, follow these steps:
 
 1. Download and unzip the example.
 
@@ -43,14 +42,6 @@ The example portlet downloads a simple file using an MVC Resource Command.
     ```bash
     STARTED com.acme.p8v5.web_1.0.0
     ```
-
-1. Open a browser to `http://localhost:8080`.
-
-1. Sign in using the default credentials:
-
-    **User Name:** `test@liferay.com`
-
-    **Password:** `test`
 
 1. Add the *P8V5 Portlet* widget from the *Samples* category to a widget page. The P8V5 Portlet appears.
 

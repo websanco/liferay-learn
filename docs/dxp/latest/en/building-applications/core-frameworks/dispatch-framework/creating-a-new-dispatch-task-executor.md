@@ -44,13 +44,10 @@ The following sample module demonstrates how to create and deploy a custom Dispa
 
 ## Deploying the Sample Dispatch Task Executor
 
-Follow these steps to download, build, and deploy the sample Dispatch Task Executor to a new docker container:
+```{include} /_snippets/run-liferay.md
+```
 
-1. Start a new [Liferay Docker container](../../../installation-and-upgrades/installing-liferay/using-liferay-docker-images.md).
-
-   ```bash
-   docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
-   ```
+Then, follow these steps to download, build, and deploy the sample Dispatch Task Executor to the new Docker container:
 
 1. Download and unzip the example module.
 

@@ -9,11 +9,10 @@ First deploy and observe a working `ConditionEvaluator`.
 
 ## Deploy a Condition Evaluator
 
-1. Start Liferay.
+```{include} /_snippets/run-liferay.md
+```
 
-   ```bash
-   docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
-   ```
+Then, follow these steps:
 
 1. Download and unzip the Acme R6J9 Implementation project.
 

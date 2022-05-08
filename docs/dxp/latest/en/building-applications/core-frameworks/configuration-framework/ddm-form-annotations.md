@@ -4,11 +4,10 @@ The auto-generated [configuration interface](./setting-and-accessing-configurati
 
 ## See a Sample Configuration UI
 
-1. Start Liferay DXP. If you don't already have a docker container, use
+```{include} /_snippets/run-liferay.md
+```
 
-    ```bash
-    docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
-    ```
+Then, follow these steps:
 
 1. Download and unzip [DDM Form Annotations](./liferay-v1d9.zip)
 

@@ -56,6 +56,11 @@ Start with deploying the example API module project.
 
 The example module defines an API for generating a greeting.
 
+```{include} /_snippets/run-liferay.md
+```
+
+Then, follow these steps:
+
 1. Download and unzip the example.
 
     ```bash
@@ -82,12 +87,6 @@ The example module defines an API for generating a greeting.
     k8s2-api/build/libs/com.acme.k8s2.api-1.0.0.jar
     ```
 
-1. Start a [Liferay Docker container](../../installation-and-upgrades/installing-liferay/using-liferay-docker-images.md).
-
-    ```bash
-    docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
-    ```
-
 1. Deploy the module JAR.
 
     ```bash
@@ -102,11 +101,6 @@ The example module defines an API for generating a greeting.
     ```
 
     The `STARTED` message includes module's ID: `1152`
-
-1. Go to `http://localhost:8080` and sign in using the default credentials:
-
-   **User Name:** `test@liferay.com`
-   **Password:** `test`
 
 1. Open the [Gogo Shell](./using-the-gogo-shell.md).
 

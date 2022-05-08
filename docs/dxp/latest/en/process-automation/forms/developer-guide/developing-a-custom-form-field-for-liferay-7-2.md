@@ -224,7 +224,7 @@ Liferay 7.2 used a different front-end framework for custom form fields. To adju
 
    - To start a Liferay 7.2 Docker container run
       ```shell
-      docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
+      docker run -it -m 8g -p 8080:8080 liferay/portal:7.2.1-ga2
       ```
    - To deploy the reconfigured form field project, go to the `liferay-c2p9.zip` folder and run
       ```shell

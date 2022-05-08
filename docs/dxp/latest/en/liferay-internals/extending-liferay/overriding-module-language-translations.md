@@ -72,11 +72,10 @@ Note that the language translations for different languages and locales can be i
 
 The example changes the default `Add Blog Entry` language translation to a custom translation. Now it's time to deploy it. 
 
-1. Start Liferay DXP. If you don't already have a docker container, use
+```{include} /_snippets/run-liferay.md
+```
 
-    ```bash
-    docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
-    ```
+Then, follow these steps:
 
 1. Download and unzip `liferay-e6u7.zip`.
 
@@ -107,14 +106,6 @@ The example changes the default `Add Blog Entry` language translation to a custo
     ```bash
     STARTED com.acme.e6u7.impl_1.0.0 [1650]
     ```
-
-1. Open your browser to `https://localhost:8080`.
-
-1. Sign in using the default credentials:
-
-    **User Name:** `test@liferay.com`
-
-    **Password:** `test`
 
 1. Navigate to *Content & Data* &rarr; *Blogs*. Move your cursor over the add icon (![Add](../../images/icon-add.png)). The message now shows the custom language translation.
 

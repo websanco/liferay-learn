@@ -32,13 +32,10 @@ The following example uses a `RenderFilter` to audit the render phase for the Bl
 
 ## Deploy the Sample Portlet Filter
 
-Follow these steps to download, build, and deploy the sample Portlet Filter to a new docker container:
+```{include} /_snippets/run-liferay.md
+```
 
-1. Start a new [Liferay Docker container](../../../installation-and-upgrades/installing-liferay/using-liferay-docker-images.md).
-
-   ```bash
-   docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
-   ```
+Then, follow these step to download, build, and deploy the sample Portlet Filter to the new docker container:
 
 1. Download and unzip the example module.
 

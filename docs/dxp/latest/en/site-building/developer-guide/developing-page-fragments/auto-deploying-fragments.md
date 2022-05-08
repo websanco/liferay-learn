@@ -10,13 +10,10 @@ For Liferay DXP 7.4+, Fragment Collections are called Fragment Sets in the Lifer
 
 ## Deploy an Auto-deployable Fragment Set
 
-Start with auto-deploying an example Fragment Set.
+```{include} /_snippets/run-liferay.md
+```
 
-1. Run the command below to start the Docker container:
-
-    ```bash
-    docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
-    ```
+Then, follow these steps to auto-deploy an example Fragment Set:
 
 1. Download and unzip the [example auto-deployable Fragment Set](https://learn.liferay.com/dxp/latest/en/site-building/developer-guide/developing-page-fragments/liferay-a2f8.zip):
 

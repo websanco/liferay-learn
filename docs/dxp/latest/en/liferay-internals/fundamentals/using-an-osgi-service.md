@@ -31,13 +31,10 @@ For instructions on how to create an OSGi service, please see [APIs as OSGi Serv
 
 ## Deploy the Gogo Shell Command Example
 
-Start using the example.
+```{include} /_snippets/run-liferay.md
+```
 
-1. Start a [Liferay Docker container](../../installation-and-upgrades/installing-liferay/using-liferay-docker-images.md).
-
-    ```bash
-    docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
-    ```
+Then, follow these steps:
 
 1. Download and unzip `liferay-j1h1.zip`.
 

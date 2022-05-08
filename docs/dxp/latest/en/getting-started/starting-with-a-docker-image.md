@@ -26,7 +26,7 @@ Liferay Portal is the open source and community supported platform for building 
     Wait until you see `org.apache.catalina.startup.Catalina.start Server startup in [x] milliseconds` to indicate startup completion.
     ```
 
-1. Open your browser to `https://localhost:8080`.
+1. Sign in to Liferay at `<http://localhost:8080>` using the email address _test@liferay.com_ and the password _test_. When prompted, change your password.
 
     ![The Liferay Portal initial landing page.](./starting-with-a-docker-image/images/01.png)
 
@@ -37,16 +37,16 @@ Liferay DXP is the commercially supported and enterprise ready platform used aro
 1. Get the Docker image.
 
     ```bash
-    docker pull [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
+    docker pull [$LIFERAY_LEARN_DXP_WORKSPACE_TOKEN$]
     ```
 
 1. Start the Docker image.
 
     ```bash
-    docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
+    docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_DXP_WORKSPACE_TOKEN$]
     ```
 
-1. Open your browser to `https://localhost:8080`.
+1. Sign in to Liferay at `<http://localhost:8080>` using the email address _test@liferay.com_ and the password _test_. When prompted, change your password.
 
 ## What's Next
 

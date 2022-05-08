@@ -34,11 +34,10 @@ Here you'll start with examining an example project's messaging performance. The
 
 The example project creates a destination, registers message listeners, and lists destination statistics via a Gogo shell command.
 
-1. Start a [Liferay Docker container](../../../installation-and-upgrades/installing-liferay/using-liferay-docker-images.md).
+```{include} /_snippets/run-liferay.md
+```
 
-    ```bash
-    docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
-    ```
+Then, follow these steps:
 
 1. Download and unzip the example.
 

@@ -40,9 +40,9 @@ The containers listens on port `8080` and starts like all Docker containers.
     Memory, CPUs, and other Docker container resources are configurable. The `-m 8g` command arguments above set the container's memory limit to eight gigabytes. See the [Docker runtime options](https://docs.docker.com/config/containers/resource_constraints/) for details.
     ```
 
-1. Open the Liferay UI in your browser at `https://localhost:8080`.
+1. Sign in to Liferay at `<http://localhost:8080>` using the email address _test@liferay.com_ and the password _test_. When prompted, change your password.
 
-    ![Hre is Liferay's landing page.](./using-liferay-docker-images/images/01.png)
+    ![Here is Liferay's landing page.](./using-liferay-docker-images/images/01.png)
 
 Liferay is ready to use.
 

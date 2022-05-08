@@ -57,15 +57,10 @@ This example changes the `home` language translation setting to this:
 :language: properties
 ```
 
-Here's how to deploy the example:
+```{include} /_snippets/run-liferay.md
+```
 
-1. Start Liferay DXP/Portal. If you don't already have a docker container, use
-
-    ```bash
-    docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
-    ```
-
-    If you're running a different DXP/Portal version, adjust the above command accordingly. 
+Then, follow these steps to deploy the example:
 
 1. Download and unzip the `liferay-i2f4.zip` example project.
 
@@ -200,13 +195,7 @@ Here's how to deploy the example:
     STARTED com.acme.x8f3.impl_1.0.0 [3209]
     ```
 
-1. Open your browser to `https://localhost:8080`.
-
-1. Sign in using the default credentials:
-
-    **User Name:** `test@liferay.com`
-
-    **Password:** `test`
+1. Open your browser to `https://localhost:8080` and sign in.
 
 1. Navigate to a Site page and click the edit icon (![Edit](../../images/icon-edit.png)). The publish button shows the custom language translation.
 

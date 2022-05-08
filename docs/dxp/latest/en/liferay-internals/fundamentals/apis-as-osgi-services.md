@@ -17,13 +17,10 @@ Here you'll deploy API and implementation modules that create a simple greeter O
 
 ## Deploy a Simple API and Implementation
 
-Start the example modules.
+```{include} /_snippets/run-liferay.md
+```
 
-1. Start a [Liferay Docker container](../../installation-and-upgrades/installing-liferay/using-liferay-docker-images.md).
-
-    ```bash
-    docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
-    ```
+Then, follow these steps to start the example modules:
 
 1. Download and unzip `liferay-p9g2.zip`.
 

@@ -12,7 +12,10 @@ Start with sending a message to a serial destination where another class (a mess
 
 ## Send a Message
 
-Start with sending a message in an example project.
+```{include} /_snippets/run-liferay.md
+```
+
+Then, start with sending a message in an example project.
 
 1. Download and unzip the example.
 
@@ -22,12 +25,6 @@ Start with sending a message in an example project.
 
    ```bash
    unzip liferay-n8k5.zip
-   ```
-
-1. Start a [Liferay Docker container](../../../installation-and-upgrades/installing-liferay/using-liferay-docker-images.md).
-
-   ```bash
-   docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
    ```
 
 1. Build and deploy the destination module `n8k5-able-impl`.

@@ -12,11 +12,10 @@ The example portlet has two views: *View 1* displays its name and a link to *Vie
 
 Here's how to deploy the example portlet and navigate between its views. For learning purposes, the portlet logs the `mvcPath` parameter value.
 
-1. Start a [Liferay Docker container](../../../installation-and-upgrades/installing-liferay/using-liferay-docker-images.md).
+```{include} /_snippets/run-liferay.md
+```
 
-   ```bash
-   docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
-   ```
+Then, follow these steps:
 
 1. Download and unzip the example.
 
@@ -47,14 +46,6 @@ Here's how to deploy the example portlet and navigate between its views. For lea
     ```bash
     STARTED com.acme.c8m3.web_1.0.0
     ```
-
-1. Open a browser to `http://localhost:8080`.
-
-1. Sign in using the default credentials:
-
-   **User Name:** `test@liferay.com`
-
-   **Password:** `test`
 
 1. Add the *C8M3 Portlet* widget from the *Samples* category to a widget page. *View 1* (the portlet's default view) appears.
 

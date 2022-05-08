@@ -15,13 +15,10 @@ Here, you'll learn how to create model listeners:
 
 ## Examine a Running Model Listener
 
-First, deploy an example model listener for the `JournalArticle` model on your instance of Liferay DXP:
+```{include} /_snippets/run-liferay.md
+```
 
-1. Start the DXP image.
-
-    ```bash
-    docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
-    ```
+Then, follow these steps to deploy an example model listener for the `JournalArticle` model:
 
 1. Download and unzip `Acme Model Listener`.
 

@@ -12,11 +12,10 @@ You'll send a default synchronous message using an example project. Then you'll 
 
 The example project uses a `SynchronousMessageSender` in default mode to send a message and wait for a reply.
 
-1. Start a [Liferay Docker container](../../../installation-and-upgrades/installing-liferay/using-liferay-docker-images.md).
+```{include} /_snippets/run-liferay.md
+```
 
-    ```bash
-    docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
-    ```
+Then, follow these steps:
 
 1. Download and unzip the example.
 

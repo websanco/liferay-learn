@@ -19,11 +19,10 @@ Use the `ConfigurationVisibilityController` interface if you want to hide the co
 
 ### See an Example Implementation
 
-1. Start Liferay DXP. If you don't already have a docker container, use
+```{include} /_snippets/run-liferay.md
+```
 
-    ```bash
-    docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
-    ```
+Then, follow these steps.
 
 1. Download and unzip [Hiding the Configuration UI](./liferay-g8v3.zip)
 

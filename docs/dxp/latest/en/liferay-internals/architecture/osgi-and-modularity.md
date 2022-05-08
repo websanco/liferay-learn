@@ -30,13 +30,10 @@ It's time to see what module projects look like and see Liferay's modular develo
 
 ## Deploy the Gogo Shell Command Example
 
-Start using the example.
+```{include} /_snippets/run-liferay.md
+```
 
-1. Start a [Liferay Docker container](../../installation-and-upgrades/installing-liferay/using-liferay-docker-images.md).
-
-    ```bash
-    docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
-    ```
+Then, follow these steps to deploy the example:
 
 1. Download and unzip `liferay-r9u2.zip`.
 

@@ -6,11 +6,10 @@ Start with adding a new User.
 
 ## Adding Users
 
-1. Start Liferay DXP. If you don't already have a docker container, use
+```{include} /_snippets/run-liferay.md
+```
 
-   ```bash
-   docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
-   ```
+Then, follow these steps:
 
 1. Download and unzip [User Account API Basics](./liferay-y6q4.zip).
 
@@ -111,7 +110,7 @@ Here are the command's arguments:
 | `-X POST` | The HTTP method to invoke at the specified endpoint |
 | `"http://localhost:8080/o/headless-admin-user/v1.0/user-accounts"` | The REST service endpoint |
 | `-d "{\"alternateName\": \"Able\", \"emailAddress\": \"able@liferay.com\", \"familyName\": \"Foo\", \"givenName\": \"Able\"}"` | The data you are requesting to post |
-| `-u "test@liferay.com:test"` | Basic authentication credentials |
+| `-u "test@liferay.com:learn"` | Basic authentication credentials |
 
 ```{note}
 Basic authentication is used here for demonstration purposes. For production, you should authorize users via [OAuth2](../../headless-delivery/using-oauth2/using-oauth2.md).

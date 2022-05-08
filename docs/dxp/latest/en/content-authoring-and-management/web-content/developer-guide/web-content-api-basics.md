@@ -10,27 +10,14 @@ See the cURL and Java samples for Structures and structured content below. For m
 
 ## Setting Up Your Environment
 
-1. Start the Liferay DXP Docker image:
+```{include} /_snippets/run-liferay.md
+```
 
-    ```bash
-    docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
-    ```
+```{note}
+These scripts use basic authentication and are designed for testing. Do not use basic authentication in a production Liferay DXP environment.
+```
 
-   ```{note}
-   Use at least 8 GB of memory for the Liferay DXP Docker image.
-   ```
-
-1. After Liferay DXP initializes, open your browser at `http://localhost:8080`.
-
-1. Sign in using the default Liferay DXP Docker image credentials:
-
-   - User Name: `test@liferay.com`
-   - Password: `test`
-
-   ```{note}
-   - The cURL scripts here use these credentials by default. If you change the credentials in your Docker image, replace the username and password before running the scripts.
-   - These scripts use basic authentication and are designed for testing. Do not use basic authentication in a production Liferay DXP environment.
-   ```
+Then, follow these steps:
 
 1. Download and unzip the [Web Content API Basics](./liferay-r4h9.zip) files:
 

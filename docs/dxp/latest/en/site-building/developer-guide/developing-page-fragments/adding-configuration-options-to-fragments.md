@@ -17,13 +17,10 @@ For Liferay DXP 7.4+, Fragment Collections are called Fragment Sets in the Lifer
 
 ## Deploy a Configurable Fragment
 
-First, deploy an example to see how Fragment configuration options work:
+```{include} /_snippets/run-liferay.md
+```
 
-1. Run the command below to start the Docker container:
-
-    ```bash
-    docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
-    ```
+Then, follow these steps to deploy an example to see how Fragment configuration options work:
 
 1. Download and unzip the [example Fragment Set](https://learn.liferay.com/dxp/latest/en/site-building/developer-guide/developing-page-fragments/liferay-c7f8.zip):
 

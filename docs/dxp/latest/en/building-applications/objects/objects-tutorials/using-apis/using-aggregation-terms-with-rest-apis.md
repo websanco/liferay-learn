@@ -8,13 +8,10 @@ Before proceeding, [set up](#setting-up-a-liferay-instance) a new Liferay DXP/Po
 
 ## Setting Up a Liferay Instance
 
-Run this command to start a DXP/Portal 7.4+ container:
-
-```docker
-docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
+```{include} /_snippets/run-liferay.md
 ```
 
-Once the container has started, log in and follow these steps to [create](../../creating-and-managing-objects/creating-objects.md) a basic Object for this tutorial:
+Then, follow these steps to [create](../../creating-and-managing-objects/creating-objects.md) a basic Object for this tutorial:
 
 1. Open the *Global Menu* (![Global Menu](../../../../images/icon-applications-menu.png)), click the *Control Panel* tab, and go to *Objects*.
 

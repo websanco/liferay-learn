@@ -10,7 +10,10 @@ The application has a JSP with markup content and an `MVCPortlet` class that ren
 
 ## Deploy a Simple MVC Portlet Module
 
-Start with deploying the example.
+```{include} /_snippets/run-liferay.md
+```
+
+Then, follow these steps to deploy the example:
 
 1. Download and unzip the example.
 
@@ -20,12 +23,6 @@ Start with deploying the example.
 
    ```bash
    unzip liferay-w3e7.zip
-   ```
-
-1. Start a [Liferay Docker container](../../../installation-and-upgrades/installing-liferay/using-liferay-docker-images.md).
-
-   ```bash
-   docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
    ```
 
 1. Build and deploy the example.
@@ -47,14 +44,6 @@ Start with deploying the example.
     ```bash
     STARTED com.acme.w3e7.web_1.0.0
     ```
-
-1. Open a browser to `http://localhost:8080`.
-
-1. Sign in using the default credentials:
-
-    **User Name:** `test@liferay.com`
-
-    **Password:** `test`
 
 1. Verify the application's availability by adding the *W3E7 Portlet* widget from the *Samples* category to a widget page.
 

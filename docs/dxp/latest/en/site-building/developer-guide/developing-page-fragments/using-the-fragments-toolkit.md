@@ -110,13 +110,10 @@ The generator creates each project in a folder derived from the project name. Fo
 
 ## Import the Sample Fragment Set
 
-Import the sample Fragment Set to Liferay to view the Fragments:
+```{include} /_snippets/run-liferay.md
+```
 
-1. Run the command below to start the Docker container:
-
-    ```bash
-    docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
-    ```
+Then, follow these steps to import the sample Fragment Set to Liferay:
 
 1. Import the Fragment Set to your Liferay instance invoking the `yarn run import` command in the project's root folder (e.g., `sample-liferay-fragments`). Alternatively, you can [import the Fragment Set manually](../../creating-pages/page-fragments-and-widgets/using-fragments/managing-fragments.md).
 

@@ -4,13 +4,10 @@ As you work on an application you might have multiple modules, each of which has
 
 ## Run the Tutorial Code
 
-1. Start Liferay DXP. If you don't already have a docker container, use
+```{include} /_snippets/run-liferay.md
+```
 
-    ```bash
-    docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
-    ```
-
-    If you're running a different Liferay Portal version or Liferay DXP, adjust the above command accordingly. 
+Then, follow these steps:
 
 1. Download and unzip the example.
 

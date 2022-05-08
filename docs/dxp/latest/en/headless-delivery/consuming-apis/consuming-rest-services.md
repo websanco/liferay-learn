@@ -10,10 +10,9 @@ This example uses Docker image with a fresh install of Liferay DXP.
 
 ## Identify the Service to Consume
 
-You need a running Liferay DXP to call its REST services. To obtain one using Docker, run this command:
+You need a running Liferay DXP to call its REST services. 
 
-```bash
-docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
+```{include} /_snippets/run-liferay.md
 ```
 
 Liferay DXP's REST services are published at this URL:
@@ -40,13 +39,8 @@ APIs are divided into several categories. This example uses the `BlogPosting` se
 
 ## Identify the Site Containing the Data
 
-After Liferay DXP initializes, visit it with your browser at `http://localhost:8080`.
-
 Now you must find the default Site ID:
 
-1. Sign in using the default credentials:
-   **User Name:** `test@liferay.com`
-   **Password:** `test`
 1. Open the Site menu (![Site menu](../../images/icon-menu.png)) and go to *Configuration* &rarr; *Site Settings*.
 1. Under the Platform section, click *Site Configuration*. For Liferay DXP versions 7.3 and earlier, click the *General* tab.
 1. Find the Site identifier under Site ID.
@@ -64,7 +58,7 @@ The examples below use [cURL](https://curl.haxx.se).
 To call a service using Basic Auth, provide the credentials in the URL:
 
 ```bash
-curl "http://localhost:8080/o/headless-delivery/v1.0/sites/20122/blog-postings/" -u 'test@liferay.com:test'
+curl "http://localhost:8080/o/headless-delivery/v1.0/sites/20122/blog-postings/" -u 'test@liferay.com:learn'
 ```
 
 ### Calling a Service Using OAuth2
@@ -128,7 +122,7 @@ You can use the schema browser to learn how to post a blog entry.
 3. Make the request:
 
     ```bash
-    curl --header "Content-Type: application/json" --request POST --data '{ "headline": "Test Blog Entry from REST Services", "articleBody": "This article was posted via REST services provided by Liferay DXP." }' http://localhost:8080/o/headless-delivery/v1.0/sites/20122/blog-postings -u test@liferay.com:test
+    curl --header "Content-Type: application/json" --request POST --data '{ "headline": "Test Blog Entry from REST Services", "articleBody": "This article was posted via REST services provided by Liferay DXP." }' http://localhost:8080/o/headless-delivery/v1.0/sites/20122/blog-postings -u test@liferay.com:learn
     ```
 
 Liferay DXP returns the full JSON representation of your blog entry:
@@ -186,7 +180,7 @@ Liferay DXP returns the full JSON representation of your blog entry:
 Now you can repeat the first query you did to see that the blog entry you posted is there:
 
 ```bash
-curl "http://localhost:8080/o/headless-delivery/v1.0/sites/20122/blog-postings/" -u 'test@liferay.com:test'
+curl "http://localhost:8080/o/headless-delivery/v1.0/sites/20122/blog-postings/" -u 'test@liferay.com:learn'
 ```
 
 This returns a list of blog entries. The entry you added is the only one in the list:
@@ -264,7 +258,7 @@ This returns a list of blog entries. The entry you added is the only one in the 
 Each time you've made a request, Liferay DXP has returned other possible endpoints. One of these is to get a single blog entry by its ID. If you know your entry's ID, you can retrieve it:
 
 ```bash
-curl "http://localhost:8080/o/headless-delivery/v1.0/blog-postings/35215" -u test@liferay.com:test
+curl "http://localhost:8080/o/headless-delivery/v1.0/blog-postings/35215" -u test@liferay.com:learn
 ```
 
 This returns the same blog entry.
@@ -274,13 +268,13 @@ This returns the same blog entry.
 If you know its ID, you can also delete your blog entry:
 
 ```bash
-curl -X DELETE "http://localhost:8080/o/headless-delivery/v1.0/blog-postings/35215" -u test@liferay.com:test
+curl -X DELETE "http://localhost:8080/o/headless-delivery/v1.0/blog-postings/35215" -u test@liferay.com:learn
 ```
 
 In this case, nothing is returned, but you can verify your entry is gone by requesting it as you did above:
 
 ```bash
-curl "http://localhost:8080/o/headless-delivery/v1.0/blog-postings/35215" -u test@liferay.com:test
+curl "http://localhost:8080/o/headless-delivery/v1.0/blog-postings/35215" -u test@liferay.com:learn
 ```
 
 Liferay DXP then returns this JSON document in response:
@@ -291,4 +285,5 @@ Liferay DXP then returns this JSON document in response:
   "title" : "No BlogsEntry exists with the primary key 35215"
 }
 ```
+
 Congratulations! You've now learned how to call Liferay DXP's REST services. Remember that the examples above use Basic Auth: for production, use OAuth2 to call services in a secure way.

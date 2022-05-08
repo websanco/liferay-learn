@@ -14,17 +14,10 @@ To see how storage adapters work, deploy an example and then add some form data 
 
 ### Deploy the Example
 
-1. Start Liferay DXP. If you don't already have a docker container, use
+```{include} /_snippets/run-liferay.md
+```
 
-    ```bash
-    docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
-    ```
-
-    If you already have a docker container, use
-
-    ```bash
-    docker start -i [container_name]
-    ```
+Then, follow these steps:
 
 1. Download and unzip [the DDM Storage Adapter project](./writing-a-form-storage-adapter/resources/liferay-r2f1.zip).
 

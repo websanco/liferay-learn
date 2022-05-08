@@ -31,11 +31,10 @@ Below is a [sample external video shortcut provider](liferay-g9b6.zip) that demo
 
 ## Deploying the Sample Video Provider
 
-1. Start a new [Liferay Docker container](../../../installation-and-upgrades/installing-liferay/using-liferay-docker-images.md).
+```{include} /_snippets/run-liferay.md
+```
 
-   ```bash
-   docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
-   ```
+Then, follow these steps:
 
 1. Download and unzip the example module.
 
