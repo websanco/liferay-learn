@@ -10,7 +10,7 @@ The application has a JSP with markup content and an `MVCPortlet` class that ren
 
 ## Deploy a Simple MVC Portlet Module
 
-```{include} /_snippets/run-liferay.md
+```{include} /_snippets/run-liferay-portal.md
 ```
 
 Then, follow these steps to deploy the example:

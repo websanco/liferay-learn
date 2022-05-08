@@ -30,7 +30,7 @@ It's time to see what module projects look like and see Liferay's modular develo
 
 ## Deploy the Gogo Shell Command Example
 
-```{include} /_snippets/run-liferay.md
+```{include} /_snippets/run-liferay-portal.md
 ```
 
 Then, follow these steps to deploy the example:

@@ -8,7 +8,7 @@ Note, an application's configuration is overridden if portlet preferences are im
 
 ## See the Example Code
 
-```{include} /_snippets/run-liferay.md
+```{include} /_snippets/run-liferay-portal.md
 ```
 
 Then, follow these steps:

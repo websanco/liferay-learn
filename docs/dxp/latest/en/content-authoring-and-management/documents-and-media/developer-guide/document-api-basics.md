@@ -6,7 +6,7 @@ Start with uploading documents using an example cURL command and Java class.
 
 ## Post a Document
 
-```{include} /_snippets/run-liferay.md
+```{include} /_snippets/run-liferay-portal.md
 ```
 
 Once started, [retrieve the site's ID](../../../headless-delivery/consuming-apis/consuming-rest-services.md#identify-the-site-containing-the-data). You'll use this ID in several service calls.

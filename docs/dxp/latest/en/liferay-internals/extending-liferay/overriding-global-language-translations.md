@@ -57,7 +57,7 @@ This example changes the `home` language translation setting to this:
 :language: properties
 ```
 
-```{include} /_snippets/run-liferay.md
+```{include} /_snippets/run-liferay-portal.md
 ```
 
 Then, follow these steps to deploy the example:

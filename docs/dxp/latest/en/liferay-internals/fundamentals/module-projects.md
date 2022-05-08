@@ -56,7 +56,7 @@ Start with deploying the example API module project.
 
 The example module defines an API for generating a greeting.
 
-```{include} /_snippets/run-liferay.md
+```{include} /_snippets/run-liferay-portal.md
 ```
 
 Then, follow these steps:

@@ -8,7 +8,7 @@ Before proceeding with the tutorial, first set up a clean Liferay Docker contain
 
 ### Liferay Docker Container
 
-```{include} /_snippets/run-liferay.md
+```{include} /_snippets/run-liferay-portal.md
 ```
 
 Once started, retrieve the Site ID. To find your Site ID, open the *Site Menu* (![Site Menu](../../../images/icon-menu.png)), and go to *Configuration* &rarr; *Site Settings* &rarr; *Site Configuration*.

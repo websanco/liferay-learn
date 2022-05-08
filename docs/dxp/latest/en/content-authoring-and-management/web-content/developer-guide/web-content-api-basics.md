@@ -10,7 +10,7 @@ See the cURL and Java samples for Structures and structured content below. For m
 
 ## Setting Up Your Environment
 
-```{include} /_snippets/run-liferay.md
+```{include} /_snippets/run-liferay-portal.md
 ```
 
 ```{note}

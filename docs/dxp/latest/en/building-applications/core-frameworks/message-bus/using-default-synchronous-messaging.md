@@ -12,7 +12,7 @@ You'll send a default synchronous message using an example project. Then you'll 
 
 The example project uses a `SynchronousMessageSender` in default mode to send a message and wait for a reply.
 
-```{include} /_snippets/run-liferay.md
+```{include} /_snippets/run-liferay-portal.md
 ```
 
 Then, follow these steps:

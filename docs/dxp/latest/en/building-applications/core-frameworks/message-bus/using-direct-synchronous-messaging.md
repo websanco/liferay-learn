@@ -6,7 +6,7 @@ Direct synchronous messaging is the easiest way to block processing until all li
 
 In an example project, you'll use a `SynchronousMessageSender` to send a message directly to two listeners.
 
-```{include} /_snippets/run-liferay.md
+```{include} /_snippets/run-liferay-portal.md
 ```
 
 Then, follow these steps:

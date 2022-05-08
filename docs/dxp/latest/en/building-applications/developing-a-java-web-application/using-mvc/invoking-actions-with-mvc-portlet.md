@@ -8,7 +8,7 @@ Here you'll learn how to invoke and examine an example portlet that uses action 
 
 The example MVC Portlet has three portlet action URLs that map to separate portlet methods.
 
-```{include} /_snippets/run-liferay.md
+```{include} /_snippets/run-liferay-portal.md
 ```
 
 Then, follow these steps to deploy the portlet and trigger its actions:

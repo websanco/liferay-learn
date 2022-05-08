@@ -12,7 +12,7 @@ The example portlet has two views: *View 1* displays its name and a link to *Vie
 
 Here's how to deploy the example portlet and navigate between its views. For learning purposes, the portlet logs the `mvcPath` parameter value.
 
-```{include} /_snippets/run-liferay.md
+```{include} /_snippets/run-liferay-portal.md
 ```
 
 Then, follow these steps:

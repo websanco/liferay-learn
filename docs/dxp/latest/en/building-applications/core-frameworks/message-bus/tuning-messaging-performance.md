@@ -34,7 +34,7 @@ Here you'll start with examining an example project's messaging performance. The
 
 The example project creates a destination, registers message listeners, and lists destination statistics via a Gogo shell command.
 
-```{include} /_snippets/run-liferay.md
+```{include} /_snippets/run-liferay-portal.md
 ```
 
 Then, follow these steps:

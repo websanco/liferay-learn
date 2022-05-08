@@ -10,7 +10,7 @@ Before proceeding, [set up](#setting-up-a-liferay-instance) a new Liferay DXP/Po
 
 ## Setting Up a Liferay Instance
 
-```{include} /_snippets/run-liferay.md
+```{include} /_snippets/run-liferay-portal.md
 ```
 
 Then, follow these steps to [create](../../creating-and-managing-objects/creating-objects.md) three Objects:

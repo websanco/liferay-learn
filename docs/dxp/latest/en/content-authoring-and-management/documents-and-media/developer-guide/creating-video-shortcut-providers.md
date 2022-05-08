@@ -31,7 +31,7 @@ Below is a [sample external video shortcut provider](liferay-g9b6.zip) that demo
 
 ## Deploying the Sample Video Provider
 
-```{include} /_snippets/run-liferay.md
+```{include} /_snippets/run-liferay-portal.md
 ```
 
 Then, follow these steps:

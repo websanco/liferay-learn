@@ -23,7 +23,7 @@ For Liferay DXP 7.4+, Fragment Collections are called Fragment Sets in the Lifer
 
 ## Deploy a Contributed Fragment Set
 
-```{include} /_snippets/run-liferay.md
+```{include} /_snippets/run-liferay-portal.md
 ```
 
 Then, follow these steps to deploy an example to see what a contributed Fragment Set looks like:

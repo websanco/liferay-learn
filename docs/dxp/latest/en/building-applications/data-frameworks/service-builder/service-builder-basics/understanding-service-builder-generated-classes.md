@@ -168,7 +168,7 @@ The new method is available to publish with your modules.
 
 It's time to deploy your modules and test your new service.
 
-```{include} /_snippets/run-liferay.md
+```{include} /_snippets/run-liferay-portal.md
 ```
 
 Then, follow these steps:

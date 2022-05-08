@@ -9,7 +9,7 @@ First deploy and observe a working `ConditionEvaluator`.
 
 ## Deploy a Condition Evaluator
 
-```{include} /_snippets/run-liferay.md
+```{include} /_snippets/run-liferay-portal.md
 ```
 
 Then, follow these steps:

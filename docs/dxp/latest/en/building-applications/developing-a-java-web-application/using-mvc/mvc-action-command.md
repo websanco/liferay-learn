@@ -8,7 +8,7 @@ You'll deploy an example portlet that uses MVC Action Commands and then examine 
 
 The example portlet's two actions log messages that indicate the MVC Action Command class and method being invoked.
 
-```{include} /_snippets/run-liferay.md
+```{include} /_snippets/run-liferay-portal.md
 ```
 
 Then, follow these steps to deploy the portlet and trigger its actions:

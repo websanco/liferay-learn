@@ -4,7 +4,7 @@ You can use Liferay's configuration framework to add a settings UI for a MVC Por
 
 ## See the Example Portlet
 
-```{include} /_snippets/run-liferay.md
+```{include} /_snippets/run-liferay-portal.md
 ```
 
 Then, follow these steps:

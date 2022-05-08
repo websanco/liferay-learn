@@ -110,7 +110,7 @@ The generator creates each project in a folder derived from the project name. Fo
 
 ## Import the Sample Fragment Set
 
-```{include} /_snippets/run-liferay.md
+```{include} /_snippets/run-liferay-portal.md
 ```
 
 Then, follow these steps to import the sample Fragment Set to Liferay:

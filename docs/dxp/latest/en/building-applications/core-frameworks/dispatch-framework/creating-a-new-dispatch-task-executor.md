@@ -44,7 +44,7 @@ The following sample module demonstrates how to create and deploy a custom Dispa
 
 ## Deploying the Sample Dispatch Task Executor
 
-```{include} /_snippets/run-liferay.md
+```{include} /_snippets/run-liferay-portal.md
 ```
 
 Then, follow these steps to download, build, and deploy the sample Dispatch Task Executor to the new Docker container:

@@ -10,7 +10,7 @@ For Liferay DXP 7.4+, Fragment Collections are called Fragment Sets in the Lifer
 
 ## Deploy an Auto-deployable Fragment Set
 
-```{include} /_snippets/run-liferay.md
+```{include} /_snippets/run-liferay-portal.md
 ```
 
 Then, follow these steps to auto-deploy an example Fragment Set:

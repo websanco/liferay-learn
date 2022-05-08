@@ -8,7 +8,7 @@ The DXP Docker image has the _Classic_ theme available by default. In this examp
 
 ### Deploy a New Theme
 
-```{include} /_snippets/run-liferay.md
+```{include} /_snippets/run-liferay-portal.md
 ```
 
 Then, follow these steps:

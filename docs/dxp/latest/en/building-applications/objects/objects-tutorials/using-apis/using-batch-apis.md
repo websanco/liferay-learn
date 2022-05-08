@@ -10,7 +10,7 @@ For a complete list of APIs generated for both Site and Company Objects, see [Ob
 
 ## Setting Up a Liferay Instance
 
-```{include} /_snippets/run-liferay.md
+```{include} /_snippets/run-liferay-portal.md
 ```
 
 Then, follow these steps to [create](../../creating-and-managing-objects/creating-objects.md) a basic Object for this tutorial:

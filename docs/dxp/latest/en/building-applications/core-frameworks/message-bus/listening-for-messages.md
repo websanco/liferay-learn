@@ -4,7 +4,7 @@ You can listen for messages sent to any registered Message Bus destination, whet
 
 ## Run the Example Message Listener
 
-```{include} /_snippets/run-liferay.md
+```{include} /_snippets/run-liferay-portal.md
 ```
 
 Then, follow these steps:

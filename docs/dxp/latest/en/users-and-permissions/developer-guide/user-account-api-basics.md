@@ -6,7 +6,7 @@ Start with adding a new User.
 
 ## Adding Users
 
-```{include} /_snippets/run-liferay.md
+```{include} /_snippets/run-liferay-portal.md
 ```
 
 Then, follow these steps:

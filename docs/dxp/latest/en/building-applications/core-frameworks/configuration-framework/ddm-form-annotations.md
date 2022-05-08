@@ -4,7 +4,7 @@ The auto-generated [configuration interface](./setting-and-accessing-configurati
 
 ## See a Sample Configuration UI
 
-```{include} /_snippets/run-liferay.md
+```{include} /_snippets/run-liferay-portal.md
 ```
 
 Then, follow these steps:

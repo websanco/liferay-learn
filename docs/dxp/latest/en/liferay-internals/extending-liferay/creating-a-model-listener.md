@@ -15,7 +15,7 @@ Here, you'll learn how to create model listeners:
 
 ## Examine a Running Model Listener
 
-```{include} /_snippets/run-liferay.md
+```{include} /_snippets/run-liferay-portal.md
 ```
 
 Then, follow these steps to deploy an example model listener for the `JournalArticle` model:

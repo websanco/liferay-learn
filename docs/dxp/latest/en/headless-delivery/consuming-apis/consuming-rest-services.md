@@ -12,7 +12,7 @@ This example uses Docker image with a fresh install of Liferay DXP.
 
 You need a running Liferay DXP to call its REST services. 
 
-```{include} /_snippets/run-liferay.md
+```{include} /_snippets/run-liferay-portal.md
 ```
 
 Liferay DXP's REST services are published at this URL:

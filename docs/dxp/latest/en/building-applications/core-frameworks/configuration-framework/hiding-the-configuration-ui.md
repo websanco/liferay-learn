@@ -19,7 +19,7 @@ Use the `ConfigurationVisibilityController` interface if you want to hide the co
 
 ### See an Example Implementation
 
-```{include} /_snippets/run-liferay.md
+```{include} /_snippets/run-liferay-portal.md
 ```
 
 Then, follow these steps.

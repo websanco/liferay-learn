@@ -36,7 +36,7 @@ The sample modules demonstrate how to override an OSGi service. These modules in
 
 ## Deploy Sample Modules for Overriding
 
-```{include} /_snippets/run-liferay.md
+```{include} /_snippets/run-liferay-portal.md
 ```
 
 Then, follow these steps:

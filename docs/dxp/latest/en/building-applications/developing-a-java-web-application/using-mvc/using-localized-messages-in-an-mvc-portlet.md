@@ -4,7 +4,7 @@ Liferay's localization framework is for creating localized messages in your MVC 
 
 ## Deploy the Sample Code
 
-```{include} /_snippets/run-liferay.md
+```{include} /_snippets/run-liferay-portal.md
 ```
 
 Then, follow these steps:

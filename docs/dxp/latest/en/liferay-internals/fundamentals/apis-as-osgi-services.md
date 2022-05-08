@@ -17,7 +17,7 @@ Here you'll deploy API and implementation modules that create a simple greeter O
 
 ## Deploy a Simple API and Implementation
 
-```{include} /_snippets/run-liferay.md
+```{include} /_snippets/run-liferay-portal.md
 ```
 
 Then, follow these steps to start the example modules:

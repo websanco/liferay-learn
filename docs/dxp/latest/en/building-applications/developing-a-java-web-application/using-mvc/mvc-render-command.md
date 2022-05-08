@@ -6,7 +6,7 @@ MVC Render Commands are classes that handle which page to render. They are invok
 
 Here you'll deploy an example portlet that renders views using MVC render commands.
 
-```{include} /_snippets/run-liferay.md
+```{include} /_snippets/run-liferay-portal.md
 ```
 
 Then, follow these steps:

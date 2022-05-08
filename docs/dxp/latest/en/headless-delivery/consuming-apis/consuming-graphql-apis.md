@@ -8,7 +8,7 @@ Liferay DXP contains [GraphQL](https://graphql.org) APIs for most of its applica
 
 You need a running Liferay DXP to call its GraphQL APIs.
 
-```{include} /_snippets/run-liferay.md
+```{include} /_snippets/run-liferay-portal.md
 ```
 
 ## Identify the Service to Consume

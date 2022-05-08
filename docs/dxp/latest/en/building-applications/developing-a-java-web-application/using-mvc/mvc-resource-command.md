@@ -8,7 +8,7 @@ You'll deploy an example portlet that uses an MVC Resource Command and then exam
 
 The example portlet downloads a simple file using an MVC Resource Command.
 
-```{include} /_snippets/run-liferay.md
+```{include} /_snippets/run-liferay-portal.md
 ```
 
 Then, follow these steps:

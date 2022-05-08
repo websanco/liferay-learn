@@ -72,7 +72,7 @@ Note that the language translations for different languages and locales can be i
 
 The example changes the default `Add Blog Entry` language translation to a custom translation. Now it's time to deploy it. 
 
-```{include} /_snippets/run-liferay.md
+```{include} /_snippets/run-liferay-portal.md
 ```
 
 Then, follow these steps:

@@ -31,7 +31,7 @@ For instructions on how to create an OSGi service, please see [APIs as OSGi Serv
 
 ## Deploy the Gogo Shell Command Example
 
-```{include} /_snippets/run-liferay.md
+```{include} /_snippets/run-liferay-portal.md
 ```
 
 Then, follow these steps:

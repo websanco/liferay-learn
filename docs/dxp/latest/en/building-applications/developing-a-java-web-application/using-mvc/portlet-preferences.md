@@ -6,7 +6,7 @@ Note, portlet preferences are properties that are stored separately from an appl
 
 ## See a Sample Implementation
 
-```{include} /_snippets/run-liferay.md
+```{include} /_snippets/run-liferay-portal.md
 ```
 
 Then, follow these steps:

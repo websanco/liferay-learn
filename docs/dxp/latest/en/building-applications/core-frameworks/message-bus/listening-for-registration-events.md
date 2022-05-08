@@ -13,7 +13,7 @@ The example project demonstrates listening for these registration events. Start 
 
 These deploy a destination registration listener, a message listener registration listener, and classes that trigger the events they're listening for.
 
-```{include} /_snippets/run-liferay.md
+```{include} /_snippets/run-liferay-portal.md
 ```
 
 Then, follow these steps:

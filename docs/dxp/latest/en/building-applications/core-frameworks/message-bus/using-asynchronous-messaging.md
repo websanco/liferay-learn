@@ -12,7 +12,7 @@ Start with sending a message to a serial destination where another class (a mess
 
 ## Send a Message
 
-```{include} /_snippets/run-liferay.md
+```{include} /_snippets/run-liferay-portal.md
 ```
 
 Then, start with sending a message in an example project.

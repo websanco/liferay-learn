@@ -14,7 +14,7 @@ To see how storage adapters work, deploy an example and then add some form data 
 
 ### Deploy the Example
 
-```{include} /_snippets/run-liferay.md
+```{include} /_snippets/run-liferay-portal.md
 ```
 
 Then, follow these steps:

@@ -10,7 +10,7 @@ The example Data Provider demonstrated here consumes XML data from the [GeoDataS
 
 ## Deploy a Custom Data Provider
 
-```{include} /_snippets/run-liferay.md
+```{include} /_snippets/run-liferay-portal.md
 ```
 
 Then, follow these steps:

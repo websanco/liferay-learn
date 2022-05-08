@@ -4,7 +4,7 @@ As you work on an application you might have multiple modules, each of which has
 
 ## Run the Tutorial Code
 
-```{include} /_snippets/run-liferay.md
+```{include} /_snippets/run-liferay-portal.md
 ```
 
 Then, follow these steps:
