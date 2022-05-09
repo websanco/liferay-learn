@@ -14,13 +14,12 @@ Payment methods represent various ways customers can pay for orders. Liferay Com
 
 ## Deploy an Example
 
-In this section, we will get an example payment method up and running on your instance of Liferay Commerce. Follow these steps:
+In this section, we will get an example payment method up and running on your instance of Liferay Commerce.
 
-1. Start Liferay Commerce.
+```{include} /_snippets/run-liferay-portal.md
+```
 
-	```bash
-	docker run -it -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
-	```
+Then, follow these steps:
 
 1. Download and unzip the [Acme Commerce Payment Method](./liferay-b1c3.zip).
 

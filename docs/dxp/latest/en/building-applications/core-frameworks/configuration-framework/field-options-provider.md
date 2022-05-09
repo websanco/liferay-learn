@@ -4,11 +4,10 @@ You can populate a [drop-down list manually](./setting-and-accessing-configurati
 
 ## Deploy the Tutorial Code
 
-1. Start Liferay DXP. If you don't already have a docker container, use
+```{include} /_snippets/run-liferay-portal.md
+```
 
-    ```bash
-    docker run -it -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
-    ```
+Then, follow these steps:
 
 1. Download and unzip [Field Options Provider](./liferay-z4h3.zip)
 

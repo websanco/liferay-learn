@@ -23,7 +23,7 @@ The API module (`-api`) provides the public interfaces and utilities. The servic
 
 ## Examine the API Module
 
-The API module has only a bnd metadata file and a Gradle build file. 
+The API module has only a bnd metadata file and a Gradle build file.
 
 ```
 y7g4-api

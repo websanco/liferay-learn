@@ -14,13 +14,12 @@ Product types can be used to group products that share similar characteristics. 
 
 ## Deploy an Example
 
-In this section, we will get an example product type up and running on your instance of Liferay Commerce. Follow these steps:
+In this section, we will get an example product type up and running on your instance of Liferay Commerce. 
 
-1. Start Liferay Commerce.
+```{include} /_snippets/run-liferay-portal.md
+```
 
-    ```bash
-    docker run -it -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
-    ```
+Then, follow these steps:
 
 1. Download and unzip the [Acme Commerce Product Type](./liferay-c1n4.zip).
 

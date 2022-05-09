@@ -6,11 +6,10 @@ Start by seeing an example of adding a new blog post.
 
 ## Adding a Blog Post
 
-1. Start Liferay DXP. If you don't already have a docker container, use
+```{include} /_snippets/run-liferay-portal.md
+```
 
-   ```bash
-   docker run -it -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
-   ```
+Then, follow these steps:
 
 1. Download and unzip [Blog API Basics](./liferay-r3g4.zip).
 
@@ -91,7 +90,7 @@ Here are the command's arguments:
 | `-X POST` | The HTTP method to invoke at the specified endpoint |
 | `"http://localhost:8080/o/headless-delivery/v1.0/sites/${1}/blog-postings"` | The REST service endpoint |
 | `-d "{\"articleBody\": \"Foo\", \"headline\": \"Able\"}"` | The data you are requesting to post |
-| `-u "test@liferay.com:test"` | Basic authentication credentials |
+| `-u "test@liferay.com:learn"` | Basic authentication credentials |
 
 ```{note}
 Basic authentication is used here for demonstration purposes. For production, you should authorize users via [OAuth2](../../../headless-delivery/using-oauth2.md).

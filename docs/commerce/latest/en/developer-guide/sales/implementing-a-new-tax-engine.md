@@ -14,13 +14,12 @@ A tax engine performs the calculation for taxes when a transaction is made. Life
 
 ## Deploy an Example
 
-In this section, we will get an example tax engine up and running on your instance of Liferay Commerce. Follow these steps:
+In this section, we will get an example tax engine up and running on your instance of Liferay Commerce.
 
-1. Start Liferay Commerce.
+```{include} /_snippets/run-liferay-portal.md
+```
 
-    ```bash
-    docker run -it -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
-    ```
+Then, follow these steps:
 
 1. Download and unzip the [Acme Commerce Tax Engine](./liferay-q4b9.zip).
 

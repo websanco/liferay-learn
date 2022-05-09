@@ -14,13 +14,10 @@ Discount rule types define conditions for evaluating when discounts are applied 
 
 ## Deploy an Example
 
-First, you must deploy an example discount rule type on your instance of Liferay Commerce. Follow these steps:
+```{include} /_snippets/run-liferay-portal.md
+```
 
-1. Start Liferay Commerce.
-
-    ```bash
-    docker run -it -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
-    ```
+Then, follow these steps to deploy an example discount rule type on your Liferay Commerce instance:
 
 1. Download and unzip the [Acme Commerce Discount Rule Type](./liferay-m6a8.zip).
 

@@ -9,7 +9,7 @@ Start with uploading documents using an example cURL command and Java class.
 ```{include} /_snippets/run-liferay-portal.md
 ```
 
-Once started, [retrieve the site's ID](../../../headless-delivery/consuming-apis/consuming-rest-services.md#identify-the-site-containing-the-data). You'll use this ID in several service calls.
+When signed in, [retrieve the site's ID](../../../headless-delivery/consuming-apis/consuming-rest-services.md#identify-the-site-containing-the-data). You'll use this ID in several service calls.
 
 Then, follow these steps:
 
@@ -104,7 +104,7 @@ Here are the command's arguments:
 | `-H "Content-Type: multipart/form-data"` | The media type ([MIME type](https://en.wikipedia.org/wiki/Media_type)) being posted. |
 | `-X POST` | The HTTP method to invoke at the specified endpoint. |
 | `"http://localhost:8080/o/headless-delivery/v1.0/sites/${1}/documents"` | The REST service endpoint. Your site ID parameter replaces `${1}`. |
-| `-u "test@liferay.com:test"` | Basic authentication credentials. |
+| `-u "test@liferay.com:learn"` | Basic authentication credentials. |
 
 ```{note}
 Basic authentication is used here for demonstration purposes. For production, you should authorize users via [OAuth 2.0](../../../headless-delivery/using-oauth2/using-oauth2.md).
