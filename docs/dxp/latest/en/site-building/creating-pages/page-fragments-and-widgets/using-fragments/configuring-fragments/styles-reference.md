@@ -20,27 +20,19 @@ Follow these steps to access a Fragment's *Styles* menu:
 
 Many styles have defined tokens supported by Style Books. See [Creating a Style Book](../../../../site-appearance/style-books/using-a-style-book-to-standardize-site-appearance.md) and [Style Book Token Definitions](../../../../site-appearance/style-books/developer-guide/style-book-token-definitions.md) for more information.
 
-## Margin
+## Spacing
 
-Configure the space between a Fragment's frame and the end of its surrounding context (e.g., between the frame and the edge of the page, or between the frame and the edge of its Container or Grid).
+```{note}
+This feature requires Liferay DXP 7.4 U21+ or GA21+. If you are using an older version, see [this section](#liferay-7-4-u20-and-older) instead.
+```
 
-| Field | Description |
-| :--- | :--- |
-| Margin Top | Sets the top margin of an element. |
-| Margin Bottom | Sets the bottom margin of an element. |
-| Margin Left | Sets the left margin of an element. |
-| Margin Right | Sets the right margin of an element. |
+Configure the spacing around the Fragment by clicking on the regions surrounding the rectangle in the Spacing section. Click the outer buttons to configure the space between the Fragment's frame and the end of its surrounding context (the *margin* size); this affects margins such as the space between the Fragment's frame and the edge of the page, or the Fragment's Container. Click the inner buttons to configure the space between a Fragment's frame and its content (the *padding* size).
 
-## Padding
+![Click the regions aroud the rectangle in the Spacing section to configure the spacing for the Fragment's margin or padding.](./styles-reference/images/02.png)
 
-Configure the space between a Fragment's frame and its content.
+When you click one of these regions, a list appears with pre-defined options for how many pixels to set the chosen spacing to.
 
-| Field | Description |
-| :--- | :--- |
-| Padding Top | Sets the top padding (space) of an element. |
-| Padding Bottom | Sets the bottom padding of an element. |
-| Padding Left | Sets the left padding of an element. |
-| Padding Right | Sets the right padding of an element. |
+![When you click any of the regions, choose the desired spacing from the list shown.](./styles-reference/images/03.png)
 
 ## Text
 
@@ -88,6 +80,32 @@ Set the Fragment's opacity and determine whether it has a shadow.
 | :--- | :--- |
 | Opacity | Sets the transparency level; 100 is default and 0 is transparent. |
 | Shadow | Adds a shadow around the box; can choose from a small, medium, or large shadow. |
+
+## Liferay 7.4 U20 and Older
+
+Before Liferay DXP 7.4 U21 or GA21, the Spacing section is split into the *Margin* and *Padding* sections.
+
+### Margin
+
+Configure the space between a Fragment's frame and the end of its surrounding context (e.g., between the frame and the edge of the page, or between the frame and the edge of its Container or Grid).
+
+| Field | Description |
+| :--- | :--- |
+| Margin Top | Sets the top margin of an element. |
+| Margin Bottom | Sets the bottom margin of an element. |
+| Margin Left | Sets the left margin of an element. |
+| Margin Right | Sets the right margin of an element. |
+
+### Padding
+
+Configure the space between a Fragment's frame and its content.
+
+| Field | Description |
+| :--- | :--- |
+| Padding Top | Sets the top padding (space) of an element. |
+| Padding Bottom | Sets the bottom padding of an element. |
+| Padding Left | Sets the left padding of an element. |
+| Padding Right | Sets the right padding of an element. |
 
 ## Additional Information
 
