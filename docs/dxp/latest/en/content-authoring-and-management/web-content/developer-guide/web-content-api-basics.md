@@ -13,10 +13,6 @@ See the cURL and Java samples for Structures and structured content below. For m
 ```{include} /_snippets/run-liferay-portal.md
 ```
 
-```{note}
-These scripts use basic authentication and are designed for testing. Do not use basic authentication in a production Liferay DXP environment.
-```
-
 Then, follow these steps:
 
 1. Download and unzip the [Web Content API Basics](./liferay-r4h9.zip) files:
@@ -28,6 +24,10 @@ Then, follow these steps:
     ```bash
     unzip liferay-r4h9.zip
     ```
+
+   ```{note}
+   These scripts use basic authentication and are designed for testing. Do not use basic authentication in a production Liferay DXP environment.
+   ```
 
 1. Complete these steps to set up the environment:
 

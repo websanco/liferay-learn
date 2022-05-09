@@ -10,7 +10,10 @@ If you want to edit or style standard UI components like the Site Menu, then you
 
 ## Deploy a Simple Theme Contributor
 
-Start by deploying the example theme contributor.
+```{include} /_snippets/run-liferay-dxp.md
+```
+
+Then, follow these steps to deploy the example theme contributor:
 
 1. Download and unzip the example.
 
@@ -20,12 +23,6 @@ Start by deploying the example theme contributor.
 
     ```bash
     unzip liferay-w9m6.zip
-    ```
-
-1. Start a [Liferay Docker container](../../../../../installation-and-upgrades/installing-liferay/using-liferay-docker-images.md).
-
-    ```bash
-    docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_DXP_DOCKER_IMAGE$]
     ```
 
 1. Build and deploy the example.

@@ -6,11 +6,10 @@ You can manage [Accounts](../accounts.md) from the Applications menu, but you ca
 
 ## Adding an Account
 
-1. Start Liferay DXP. If you don't already have a docker container, use
+```{include} /_snippets/run-liferay-dxp.md
+```
 
-   ```bash
-   docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_DXP_DOCKER_IMAGE$]
-   ```
+Then, follow these steps:
 
 1. Download and unzip [Accounts API Basics](./liferay-t5p9.zip).
 
@@ -22,7 +21,7 @@ You can manage [Accounts](../accounts.md) from the Applications menu, but you ca
    unzip liferay-t5p9.zip
    ```
 
-2. Use the cURL script to add a new Account to your instance. On the command line, navigate to the `curl` folder. Execute the `Account_POST_ToInstance.sh` script.
+1. Use the cURL script to add a new Account to your instance. On the command line, navigate to the `curl` folder. Execute the `Account_POST_ToInstance.sh` script.
 
     ```bash
     ./Account_POST_ToInstance.sh
@@ -44,17 +43,17 @@ You can manage [Accounts](../accounts.md) from the Applications menu, but you ca
 
     ```
 
-3. Navigate to *Global Menu* &rarr; *Applications* &rarr; *Accounts*. See that a new Account has been added.
+1. Navigate to *Global Menu* &rarr; *Applications* &rarr; *Accounts*. See that a new Account has been added.
 
    ![See that a new account has been added.](./accounts-api-basics/images/01.png)
 
-4. The REST service can also be called using the Java client. Navigate out of the `curl` folder and into the `java` folder. Compile the source files with the following command:
+1. The REST service can also be called using the Java client. Navigate out of the `curl` folder and into the `java` folder. Compile the source files with the following command:
 
     ```bash
     javac -classpath .:* *.java
     ```
 
-5. Run the `Account_POST_ToInstance.java` class with the following command.
+1. Run the `Account_POST_ToInstance.java` class with the following command.
 
     ```bash
     java -classpath .:* Account_POST_ToInstance
@@ -76,7 +75,7 @@ Here are the command's arguments:
 | `-X POST` | The HTTP method to invoke at the specified endpoint |
 | `"http://localhost:8080/o/headless-admin-user/v1.0/accounts"` | The REST service endpoint |
 | `-d "{\"description\": \"Foo\", \"name\": \"Able\"}"` | The data you are requesting to post |
-| `-u "test@liferay.com:test"` | Basic authentication credentials |
+| `-u "test@liferay.com:learn"` | Basic authentication credentials |
 
 ```{note}
 Basic authentication is used here for demonstration purposes. For production, you should authorize users via [OAuth2](../../../installation-and-upgrades/securing-liferay/configuring-sso/using-oauth2/introduction-to-using-oauth2.md).

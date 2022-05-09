@@ -4,11 +4,10 @@ Liferay's REST APIs provide services for Liferay DXP/Portal's tags. You can crea
 
 ## Adding a Tag
 
-1. Start Liferay DXP. If you don't already have a docker container, use
+```{include} /_snippets/run-liferay-dxp.md
+```
 
-   ```bash
-   docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_DXP_DOCKER_IMAGE$]
-   ```
+Then, follow these steps:
 
 1. Download and unzip [Tags API Basics](./liferay-r7u9.zip).
 
@@ -20,9 +19,9 @@ Liferay's REST APIs provide services for Liferay DXP/Portal's tags. You can crea
    unzip liferay-r7u9.zip
    ```
 
-2. [Find your Site's ID](../../../headless-delivery/consuming-apis/consuming-rest-services.md#identify-the-site-containing-the-data). You'll use this in different service calls below.
+1. [Find your Site's ID](../../../headless-delivery/consuming-apis/consuming-rest-services.md#identify-the-site-containing-the-data). You'll use this in different service calls below.
 
-3. Use the cURL script to add a new tag to your Site. On the command line, navigate to the `curl` folder. Execute the `Keyword_POST_ToSite.sh` script with your site ID as a parameter.
+1. Use the cURL script to add a new tag to your Site. On the command line, navigate to the `curl` folder. Execute the `Keyword_POST_ToSite.sh` script with your site ID as a parameter.
 
     ```bash
     ./Keyword_POST_ToSite.sh 1234
@@ -48,17 +47,17 @@ Liferay's REST APIs provide services for Liferay DXP/Portal's tags. You can crea
    "siteId" : 20125
     ```
 
-4. Go to the Tags application by navigating to *Administration Menu* &rarr; *Categorization* &rarr; *Tags*. See that a new tag has been added.
+1. Go to the Tags application by navigating to *Administration Menu* &rarr; *Categorization* &rarr; *Tags*. See that a new tag has been added.
 
     ![See that a new tag has been added.](./tags-api-basics/images/01.png)
 
-5. The REST service can also be called using the Java client. Navigate out of the `curl` folder and into the `java` folder. Compile the source files with the following command:
+1. The REST service can also be called using the Java client. Navigate out of the `curl` folder and into the `java` folder. Compile the source files with the following command:
 
     ```bash
     javac -classpath .:* *.java
     ```
 
-6. Run the `Keyword_POST_ToSite` class with the following command. Replace the `siteId` value with your Site's ID:
+1. Run the `Keyword_POST_ToSite` class with the following command. Replace the `siteId` value with your Site's ID:
 
     ```bash
     java -classpath .:* -DsiteId=1234 Keyword_POST_ToSite
@@ -80,7 +79,7 @@ Here are the command's arguments:
 | `-X POST` | The HTTP method to invoke at the specified endpoint |
 | `"http://localhost:8080/o/headless-admin-taxonomy/v1.0/sites/${1}/keywords"` | The REST service endpoint |
 | `-d "{\"name\": \"Foo\"}"` | The data you are requesting to post |
-| `-u "test@liferay.com:test"` | Basic authentication credentials |
+| `-u "test@liferay.com:learn"` | Basic authentication credentials |
 
 ```{note}
 Basic authentication is used here for demonstration purposes. For production, you should authorize users via [OAuth2](../../../headless-delivery/using-oauth2.md).

@@ -12,10 +12,7 @@ Because of limitations with extending system Objects, you must create an Employe
 
 ![Build a Time Off Request application.](./building-a-time-off-requester/images/01.png)
 
-Before proceeding with the tutorial, run the following command to start up a new Liferay DXP 7.4 container:
-
-```docker
-docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_DXP_DOCKER_IMAGE$]
+```{include} /_snippets/run-liferay-dxp.md
 ```
 
 ## Adding a Department Picklist

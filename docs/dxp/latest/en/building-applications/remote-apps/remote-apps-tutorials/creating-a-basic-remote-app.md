@@ -111,13 +111,12 @@ Unique file names are generated for every build. When testing your custom applic
 
 ## Hosting the Application Files
 
-For demonstration purposes this tutorial hosts the application’s static resources in Liferay’s Document Library. In a production environment, instead host the application’s resources on a server optimized for hosting static resources.
+For demonstration purposes this tutorial hosts the application’s static resources in Liferay’s Document Library. In a production environment, you should host the application’s files on a server optimized for hosting static resources.
 
-1. Start up a new Liferay DXP 7.4+ container and log in.
+```{include} /_snippets/run-liferay-dxp.md
+```
 
-   ```docker
-   docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_DXP_DOCKER_IMAGE$]
-   ```
+Then, follow these steps:
 
 1. Open the *Site Menu* (![Site Menu](../../../images/icon-product-menu.png)), expand *Content & Data*, and go to *Documents and Media*.
 

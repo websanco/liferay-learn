@@ -6,13 +6,10 @@ An upgrade of your application may require making changes to your database table
 
 ## Deploy Version 1.0.0
 
-1. Start Liferay DXP. If you don't already have a docker container, use
+```{include} /_snippets/run-liferay-dxp.md
+```
 
-   ```bash
-   docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_DXP_DOCKER_IMAGE$]
-   ```
-
-   If you're running a different Liferay Portal version or Liferay DXP, adjust the above command accordingly. 
+Then, follow these steps:
 
 1. Download and unzip [Upgrading Your Database Tables](./liferay-p5d2.zip).
 

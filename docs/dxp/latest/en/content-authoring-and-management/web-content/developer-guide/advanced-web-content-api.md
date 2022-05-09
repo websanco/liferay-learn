@@ -10,37 +10,22 @@ For an introduction to the Web Content API, see [Web Content API Basics](./web-c
 
 ## Setting Up Your Environment
 
-1. Start the Liferay DXP Docker image:
+```{include} /_snippets/run-liferay-dxp.md
+```
 
-    ```bash
-    docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_DXP_DOCKER_IMAGE$]
-    ```
+Then, download and unzip the [sample project](https://learn.liferay.com/dxp/latest/en/content-authoring-and-management/web-content/developer-guide/liferay-m7b2.zip):
 
-   ```{important}
-   Use at least 8 GB of memory for the Liferay DXP Docker image.
-   ```
+```bash
+curl https://learn.liferay.com/dxp/latest/en/content-authoring-and-management/web-content/developer-guide/liferay-m7b2.zip -O
+```
 
-1. After Liferay DXP initializes, open your browser at `http://localhost:8080`.
+```bash
+unzip liferay-m7b2.zip
+```
 
-1. Sign in using the default Liferay DXP Docker image credentials:
-
-   - User Name: `test@liferay.com`
-   - Password: `test`
-
-   ```{note}
-   - The cURL scripts here use these credentials by default. If you change the credentials in your Docker image, replace the user name and password before running the scripts.
-   - These scripts use basic authentication and are designed for testing. Do not use basic authentication in a production Liferay DXP environment.
-   ```
-
-1. Download and unzip the [sample project](https://learn.liferay.com/dxp/latest/en/content-authoring-and-management/web-content/developer-guide/liferay-m7b2.zip):
-
-    ```bash
-    curl https://learn.liferay.com/dxp/latest/en/content-authoring-and-management/web-content/developer-guide/liferay-m7b2.zip -O
-    ```
-
-    ```bash
-    unzip liferay-m7b2.zip
-    ```
+```{note}
+These scripts use basic authentication and are designed for testing. Do not use basic authentication in a production Liferay DXP environment.
+```
 
 ### Identify the Site Id
 

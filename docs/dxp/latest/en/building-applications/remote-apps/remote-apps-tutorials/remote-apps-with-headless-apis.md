@@ -6,13 +6,10 @@ After [creating and publishing objects](../objects/creating-and-managing-objects
 
 ## Set Up Liferay DXP
 
-Before proceeding, start a new Liferay DXP 7.4+ container.
-
-```docker
-docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_DXP_DOCKER_IMAGE$]
+```{include} /_snippets/run-liferay-dxp.md
 ```
 
-Once started, follow these steps to add the `/o/c/*` URL pattern to the *Default Portal CORS Configuration*:
+Then, follow these steps to add the `/o/c/*` URL pattern to the *Default Portal CORS Configuration*:
 
 1. Open the *Global Menu* (![Global Menu](../../../images/icon-applications-menu.png)), click the *Control Panel* tab, and go to *System Settings* &rarr; *Security Tools*.
 

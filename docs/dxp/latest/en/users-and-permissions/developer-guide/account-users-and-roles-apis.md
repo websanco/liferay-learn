@@ -4,11 +4,10 @@ You can manage [Account Users](../accounts/account-users.md) and [Account Roles]
 
 ## Adding an Account User
 
-1. Start Liferay DXP. If you don't already have a docker container, use
+```{include} /_snippets/run-liferay-dxp.md
+```
 
-   ```bash
-   docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_DXP_DOCKER_IMAGE$]
-   ```
+Then, follow these steps:
 
 1. Download and unzip [Accounts API Basics](./liferay-t5p9.zip).
 
@@ -111,7 +110,7 @@ Here are the command's arguments:
 | `-X POST` | The HTTP method to invoke at the specified endpoint |
 | `"http://localhost:8080/o/headless-admin-user/v1.0/accounts/${1}/user-accounts"` | The REST service endpoint |
 | `-d "{\"alternateName\": \"Dog\", \"emailAddress\": \"dog@liferay.com\", \"familyName\": \"Easy\", \"givenName\": \"Dog\"}"` | The data you are requesting to post |
-| `-u "test@liferay.com:test"` | Basic authentication credentials |
+| `-u "test@liferay.com:learn"` | Basic authentication credentials |
 
 ```{note}
 Basic authentication is used here for demonstration purposes. For production, you should authorize users via [OAuth2](../../../installation-and-upgrades/securing-liferay/configuring-sso/using-oauth2/introduction-to-using-oauth2.md).

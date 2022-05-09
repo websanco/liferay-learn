@@ -6,13 +6,10 @@ Your [Upgrade Processes](../upgrade-processes.md) may involve making complex cha
 
 ## Deploy Version 1.0.0
 
-1. Start Liferay DXP. If you don't already have a docker container, use
+```{include} /_snippets/run-liferay-dxp.md
+```
 
-    ```bash
-    docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_DXP_DOCKER_IMAGE$]
-    ```
-
-    If you're running a different Liferay Portal version or Liferay DXP, adjust the above command accordingly. 
+Then, follow these steps:
 
 1. Download and unzip [Multithreading Process](./liferay-j7z3.zip).
 

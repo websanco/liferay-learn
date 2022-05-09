@@ -4,11 +4,10 @@ Liferay's REST APIs provide services for Liferay's navigation menus. You can cre
 
 ## Adding a Navigation Menu
 
-1. Start Liferay DXP. If you don't already have a docker container, use
+```{include} /_snippets/run-liferay-dxp.md
+```
 
-   ```bash
-   docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_DXP_DOCKER_IMAGE$]
-   ```
+Then, follow these steps:
 
 1. Download and unzip [Categories and Vocabulary API Basics](./liferay-p7s4.zip).
 
@@ -80,7 +79,7 @@ Here are the command's arguments:
 | `-X POST` | The HTTP method to invoke at the specified endpoint |
 | `"http://localhost:8080/o/headless-delivery/v1.0/sites/${1}/navigation-menus"` | The REST service endpoint |
 | `-d "{\"name\": \"Foo\"}"` | The data you are requesting to post |
-| `-u "test@liferay.com:test"` | Basic authentication credentials |
+| `-u "test@liferay.com:learn"` | Basic authentication credentials |
 
 ```{note}
 Basic authentication is used here for demonstration purposes. For production, you should authorize users via `OAuth2 <../../../installation-and-upgrades/securing-liferay/configuring-sso/using-oauth2/introduction-to-using-oauth2.md>`_.

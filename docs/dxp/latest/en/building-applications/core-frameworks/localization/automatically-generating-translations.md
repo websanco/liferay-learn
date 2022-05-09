@@ -10,13 +10,10 @@ The accuracy and correctness of machine translation can vary from language to la
 
 ## See the Sample Project
 
-1. Start Liferay DXP. If you don't already have a docker container, use
+```{include} /_snippets/run-liferay-dxp.md
+```
 
-   ```bash
-   docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_DXP_DOCKER_IMAGE$]
-   ```
-
-   If you're running a different Liferay Portal version or Liferay DXP, adjust the above command accordingly.
+Then, follow these steps:
 
 1. Download and unzip [Automatically Generating Translations](./liferay-m7d6.zip).
 
@@ -44,7 +41,7 @@ The accuracy and correctness of machine translation can vary from language to la
 
    In your terminal window, Language Builder generates the different language properties files. Note, if you see the error `Translation is disabled because credentials are not specified`, double-check that your subscription key is correct.
 
-2. Navigate to the module's `src/main/resources/content` folder to view the translated properties files.
+1. Navigate to the module's `src/main/resources/content` folder to view the translated properties files.
 
   ![The properties files are found in the src/main/resources/content folder.](./automatically-generating-translations/images/01.png)
 

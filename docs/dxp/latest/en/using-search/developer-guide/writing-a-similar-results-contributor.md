@@ -18,15 +18,10 @@ Since the Knowledge Base application does not implement a `SimilarResultsContrib
 
 ## Deploy an Example
 
-To get an example `SimilarResultsContributor` up and running on your instance of Liferay DXP,
+```{include} /_snippets/run-liferay-dxp.md
+```
 
-1. Start Liferay DXP. If you don't already have a docker container, use
-
-    ```bash
-    docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_DXP_DOCKER_IMAGE$]
-    ```
-
-    If you're running a different Liferay Portal version or Liferay DXP, adjust the above command accordingly.
+Then, follow these steps to get an example `SimilarResultsContributor` up and running on your Liferay DXP instance:
 
 1. Download and unzip [Acme Similar Results Contributor](./liferay-r1s1.zip).
 

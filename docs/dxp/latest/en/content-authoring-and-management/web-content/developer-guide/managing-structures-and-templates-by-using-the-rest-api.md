@@ -17,24 +17,10 @@ Here, you'll use a pre-built Liferay DXP Docker image with several [cURL](https:
 
 ## Setting Up Your Environment
 
-1. Start the Liferay DXP Docker image:
+```{include} /_snippets/run-liferay-dxp.md
+```
 
-    ```bash
-    docker run -it -p 8080:8080 [$LIFERAY_LEARN_DXP_DOCKER_IMAGE$]
-    ```
-
-1. After Liferay DXP initializes, open your browser at `http://localhost:8080`.
-
-1. Sign in using the default Liferay DXP Docker image credentials:
-
-   - User Name: `test@liferay.com`
-   - Password: `test`
-
-   ```{note}
-   The sample cURL scripts use this user name and password by default. If you're using different credentials, replace the values before running the scripts.
-
-   These scripts use basic authentication and are designed for testing. Do not use basic authentication in a production Liferay DXP environment.
-   ```
+Then, follow these steps:
 
 1. Download and unzip the [sample project](https://learn.liferay.com/dxp/latest/en/content-authoring-and-management/web-content/developer-guide/liferay-m7b1.zip):
 
@@ -44,6 +30,10 @@ Here, you'll use a pre-built Liferay DXP Docker image with several [cURL](https:
 
     ```bash
     unzip liferay-m7b1.zip
+    ```
+
+    ```{note}
+    These scripts use basic authentication and are designed for testing. Do not use basic authentication in a production Liferay DXP environment.
     ```
 
 1. Complete the following steps to set up the environment:
