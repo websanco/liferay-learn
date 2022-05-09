@@ -7,7 +7,7 @@ Publications provides a convenient and flexible way for you and your teams to de
 ```{important}
 Staging and Publications cannot be enabled at the same time. If Staging is enabled on any of your Sites, you must first disable Staging before enabling Publications. See [Disabling Local Live Staging](../staging/configuring-local-live-staging.md#disabling-local-live-staging) and [Disabling Remote Live Staging](../staging/configuring-remote-live-staging.md#disabling-remote-live-staging) for more information.
 
-[Workflow](../../../process-automation/workflow/introduction-to-workflow.md) cannot be used with Publications. In Publications, content editing occurs in _edit mode_, while Liferay's workflow system functions only in _production mode_.
+[Workflow](../../../process-automation/workflow/introduction-to-workflow.md) cannot be used with Publications.
 ```
 
 ## How to Enable Publications

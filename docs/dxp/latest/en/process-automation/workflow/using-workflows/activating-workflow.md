@@ -3,7 +3,7 @@
 You can activate a workflow process for an asset type either across the DXP instance or only on a specific site. When a workflow process is activated across the instance for a particular asset type such as _Wiki Pages_, all _Wiki Page_ submitted for publication must go through the review process regardless of which Site the _Wiki Page_ is created on.
 
 ```{warning}
-Workflow cannot be used with [Publications](../../../site-building/publishing-tools/publications.md). In Publications, content editing occurs in _edit mode_, while Liferay's workflow system functions only in _production mode_.
+Workflow cannot be used with [Publications](../../../site-building/publishing-tools/publications.md).
 ```
 
 You can enable or disable workflow on individual sites. By default, workflow is disabled on a site.
