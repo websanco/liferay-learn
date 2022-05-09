@@ -13,7 +13,7 @@ public class NavigationMenus_GET_FromSite {
 			NavigationMenuResource.builder();
 
 		NavigationMenuResource navigationMenuResource = builder.authentication(
-			"test@liferay.com", "test"
+			"test@liferay.com", "learn"
 		).build();
 
 		Page<NavigationMenu> page =

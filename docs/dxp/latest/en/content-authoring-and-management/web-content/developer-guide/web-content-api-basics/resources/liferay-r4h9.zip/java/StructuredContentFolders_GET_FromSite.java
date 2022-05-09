@@ -14,7 +14,7 @@ public class StructuredContentFolders_GET_FromSite {
 
 		StructuredContentFolderResource structuredContentFolderResource =
 			builder.authentication(
-				"test@liferay.com", "test"
+				"test@liferay.com", "learn"
 			).build();
 
 		Page<StructuredContentFolder> page =

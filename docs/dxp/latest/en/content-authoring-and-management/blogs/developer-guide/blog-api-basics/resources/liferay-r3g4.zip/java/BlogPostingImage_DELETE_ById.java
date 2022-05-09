@@ -11,7 +11,7 @@ public class BlogPostingImage_DELETE_ById {
 
 		BlogPostingImageResource blogPostingImageResource =
 			builder.authentication(
-				"test@liferay.com", "test"
+				"test@liferay.com", "learn"
 			).build();
 
 		blogPostingImageResource.deleteBlogPostingImage(

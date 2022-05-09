@@ -12,7 +12,7 @@ public class Organizations_GET_FromInstance {
 		OrganizationResource.Builder builder = OrganizationResource.builder();
 
 		OrganizationResource organizationResource = builder.authentication(
-			"test@liferay.com", "test"
+			"test@liferay.com", "learn"
 		).build();
 
 		Page<Organization> page = organizationResource.getOrganizationsPage(

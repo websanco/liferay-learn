@@ -14,7 +14,7 @@ public class MessageBoardSections_GET_FromSite {
 
 		MessageBoardSectionResource messageBoardSectionResource =
 			builder.authentication(
-				"test@liferay.com", "test"
+				"test@liferay.com", "learn"
 			).build();
 
 		Page<MessageBoardSection> page =

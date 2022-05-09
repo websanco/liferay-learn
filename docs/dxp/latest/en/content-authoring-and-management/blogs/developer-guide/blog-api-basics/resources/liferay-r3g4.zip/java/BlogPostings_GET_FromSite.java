@@ -12,7 +12,7 @@ public class BlogPostings_GET_FromSite {
 		BlogPostingResource.Builder builder = BlogPostingResource.builder();
 
 		BlogPostingResource blogPostingResource = builder.authentication(
-			"test@liferay.com", "test"
+			"test@liferay.com", "learn"
 		).build();
 
 		Page<BlogPosting> page = blogPostingResource.getSiteBlogPostingsPage(

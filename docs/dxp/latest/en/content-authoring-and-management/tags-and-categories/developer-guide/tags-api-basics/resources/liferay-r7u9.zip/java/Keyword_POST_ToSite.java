@@ -10,7 +10,7 @@ public class Keyword_POST_ToSite {
 		KeywordResource.Builder builder = KeywordResource.builder();
 
 		KeywordResource keywordResource = builder.authentication(
-			"test@liferay.com", "test"
+			"test@liferay.com", "learn"
 		).build();
 
 		Keyword keyword = keywordResource.postSiteKeyword(

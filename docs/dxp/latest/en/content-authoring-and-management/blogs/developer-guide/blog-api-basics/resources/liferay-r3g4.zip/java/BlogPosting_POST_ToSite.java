@@ -10,7 +10,7 @@ public class BlogPosting_POST_ToSite {
 		BlogPostingResource.Builder builder = BlogPostingResource.builder();
 
 		BlogPostingResource blogPostingResource = builder.authentication(
-			"test@liferay.com", "test"
+			"test@liferay.com", "learn"
 		).build();
 
 		BlogPosting blogPosting = blogPostingResource.postSiteBlogPosting(

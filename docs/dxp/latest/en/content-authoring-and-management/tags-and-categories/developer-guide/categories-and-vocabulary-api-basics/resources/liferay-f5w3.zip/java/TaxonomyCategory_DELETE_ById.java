@@ -11,7 +11,7 @@ public class TaxonomyCategory_DELETE_ById {
 
 		TaxonomyCategoryResource taxonomyCategoryResource =
 			builder.authentication(
-				"test@liferay.com", "test"
+				"test@liferay.com", "learn"
 			).build();
 
 		taxonomyCategoryResource.deleteTaxonomyCategory(

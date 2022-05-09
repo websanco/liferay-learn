@@ -14,7 +14,7 @@ public class Document_POST_ToDocumentFolder {
 		DocumentResource.Builder builder = DocumentResource.builder();
 
 		DocumentResource documentResource = builder.authentication(
-			"test@liferay.com", "test"
+			"test@liferay.com", "learn"
 		).build();
 
 		Document document = documentResource.postDocumentFolderDocument(

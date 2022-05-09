@@ -12,7 +12,7 @@ public class MessageBoardMessage_GET_ById {
 
 		MessageBoardMessageResource messageBoardMessageResource =
 			builder.authentication(
-				"test@liferay.com", "test"
+				"test@liferay.com", "learn"
 			).build();
 
 		MessageBoardMessage messageBoardMessage =

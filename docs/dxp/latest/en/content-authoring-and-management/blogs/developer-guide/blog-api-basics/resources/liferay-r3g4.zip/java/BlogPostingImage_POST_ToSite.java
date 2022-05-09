@@ -16,7 +16,7 @@ public class BlogPostingImage_POST_ToSite {
 
 		BlogPostingImageResource blogPostingImageResource =
 			builder.authentication(
-				"test@liferay.com", "test"
+				"test@liferay.com", "learn"
 			).build();
 
 		BlogPostingImage blogPostingImage =

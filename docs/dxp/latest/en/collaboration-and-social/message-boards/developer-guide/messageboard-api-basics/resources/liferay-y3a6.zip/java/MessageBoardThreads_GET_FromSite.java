@@ -14,7 +14,7 @@ public class MessageBoardThreads_GET_FromSite {
 
 		MessageBoardThreadResource messageBoardThreadResource =
 			builder.authentication(
-				"test@liferay.com", "test"
+				"test@liferay.com", "learn"
 			).build();
 
 		Page<MessageBoardThread> page =

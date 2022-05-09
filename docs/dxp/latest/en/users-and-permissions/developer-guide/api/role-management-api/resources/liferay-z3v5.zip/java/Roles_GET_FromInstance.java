@@ -12,7 +12,7 @@ public class Roles_GET_FromInstance {
 		RoleResource.Builder builder = RoleResource.builder();
 
 		RoleResource roleResource = builder.authentication(
-			"test@liferay.com", "test"
+			"test@liferay.com", "learn"
 		).build();
 
 		Page<Role> role = roleResource.getRolesPage(Pagination.of(1, 2));

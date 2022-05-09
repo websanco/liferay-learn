@@ -11,7 +11,7 @@ public class DocumentFolder_GET_ById {
 			DocumentFolderResource.builder();
 
 		DocumentFolderResource documentFolderResource = builder.authentication(
-			"test@liferay.com", "test"
+			"test@liferay.com", "learn"
 		).build();
 
 		DocumentFolder documentFolder =

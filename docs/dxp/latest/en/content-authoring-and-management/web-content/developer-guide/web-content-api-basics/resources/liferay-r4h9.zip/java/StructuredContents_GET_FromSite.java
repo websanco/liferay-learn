@@ -14,7 +14,7 @@ public class StructuredContents_GET_FromSite {
 
 		StructuredContentResource structuredContentResource =
 			builder.authentication(
-				"test@liferay.com", "test"
+				"test@liferay.com", "learn"
 			).build();
 
 		Page<StructuredContent> page =

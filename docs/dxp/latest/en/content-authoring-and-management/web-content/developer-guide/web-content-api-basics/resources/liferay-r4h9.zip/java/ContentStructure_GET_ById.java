@@ -12,7 +12,7 @@ public class ContentStructure_GET_ById {
 
 		ContentStructureResource contentStructureResource =
 			builder.authentication(
-				"test@liferay.com", "test"
+				"test@liferay.com", "learn"
 			).build();
 
 		ContentStructure contentStructure =

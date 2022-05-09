@@ -14,7 +14,7 @@ public class ContentStructures_GET_FromSite {
 
 		ContentStructureResource contentStructureResource =
 			builder.authentication(
-				"test@liferay.com", "test"
+				"test@liferay.com", "learn"
 			).build();
 
 		Page<ContentStructure> page =

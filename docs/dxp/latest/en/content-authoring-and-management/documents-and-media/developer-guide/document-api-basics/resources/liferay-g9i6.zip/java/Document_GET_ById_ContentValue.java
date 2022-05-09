@@ -14,7 +14,7 @@ public class Document_GET_ById_ContentValue {
 		builder.parameter("nestedFields", "contentValue");
 
 		DocumentResource documentResource = builder.authentication(
-			"test@liferay.com", "test"
+			"test@liferay.com", "learn"
 		).build();
 
 		Document document = documentResource.getDocument(

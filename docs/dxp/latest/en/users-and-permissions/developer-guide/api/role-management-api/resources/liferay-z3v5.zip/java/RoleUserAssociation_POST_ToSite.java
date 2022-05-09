@@ -9,7 +9,7 @@ public class RoleUserAssociation_POST_ToSite {
 		RoleResource.Builder builder = RoleResource.builder();
 
 		RoleResource roleResource = builder.authentication(
-			"test@liferay.com", "test"
+			"test@liferay.com", "learn"
 		).build();
 
 		roleResource.postSiteRoleUserAccountAssociation(

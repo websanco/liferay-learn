@@ -12,7 +12,7 @@ public class StructuredContentFolder_POST_ToSite {
 
 		StructuredContentFolderResource structuredContentFolderResource =
 			builder.authentication(
-				"test@liferay.com", "test"
+				"test@liferay.com", "learn"
 			).build();
 
 		StructuredContentFolder structuredContentFolder =

@@ -11,7 +11,7 @@ public class NavigationMenu_POST_ToSite {
 			NavigationMenuResource.builder();
 
 		NavigationMenuResource navigationMenuResource = builder.authentication(
-			"test@liferay.com", "test"
+			"test@liferay.com", "learn"
 		).build();
 
 		NavigationMenu navigationMenu =

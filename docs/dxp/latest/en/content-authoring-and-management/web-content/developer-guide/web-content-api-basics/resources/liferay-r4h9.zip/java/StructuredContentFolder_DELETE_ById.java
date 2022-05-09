@@ -11,7 +11,7 @@ public class StructuredContentFolder_DELETE_ById {
 
 		StructuredContentFolderResource structuredContentFolderResource =
 			builder.authentication(
-				"test@liferay.com", "test"
+				"test@liferay.com", "learn"
 			).build();
 
 		structuredContentFolderResource.deleteStructuredContentFolder(

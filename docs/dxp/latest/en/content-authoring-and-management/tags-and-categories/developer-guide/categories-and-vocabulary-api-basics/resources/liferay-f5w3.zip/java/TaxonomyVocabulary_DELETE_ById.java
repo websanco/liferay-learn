@@ -11,7 +11,7 @@ public class TaxonomyVocabulary_DELETE_ById {
 
 		TaxonomyVocabularyResource taxonomyVocabularyResource =
 			builder.authentication(
-				"test@liferay.com", "test"
+				"test@liferay.com", "learn"
 			).build();
 
 		taxonomyVocabularyResource.deleteTaxonomyVocabulary(

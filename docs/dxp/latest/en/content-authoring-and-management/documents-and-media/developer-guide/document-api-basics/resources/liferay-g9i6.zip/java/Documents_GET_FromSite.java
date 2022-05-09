@@ -12,7 +12,7 @@ public class Documents_GET_FromSite {
 		DocumentResource.Builder builder = DocumentResource.builder();
 
 		DocumentResource documentResource = builder.authentication(
-			"test@liferay.com", "test"
+			"test@liferay.com", "learn"
 		).build();
 
 		Page<Document> page = documentResource.getSiteDocumentsPage(

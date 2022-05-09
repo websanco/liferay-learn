@@ -10,7 +10,7 @@ public class User_GET_ById {
 		UserAccountResource.Builder builder = UserAccountResource.builder();
 
 		UserAccountResource userAccountResource = builder.authentication(
-			"test@liferay.com", "test"
+			"test@liferay.com", "learn"
 		).build();
 
 		UserAccount userAccount = userAccountResource.getUserAccount(

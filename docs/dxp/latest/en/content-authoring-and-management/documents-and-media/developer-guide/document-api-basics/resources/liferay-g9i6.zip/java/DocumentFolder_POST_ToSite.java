@@ -11,7 +11,7 @@ public class DocumentFolder_POST_ToSite {
 			DocumentFolderResource.builder();
 
 		DocumentFolderResource documentFolderResource = builder.authentication(
-			"test@liferay.com", "test"
+			"test@liferay.com", "learn"
 		).build();
 
 		DocumentFolder documentFolder =

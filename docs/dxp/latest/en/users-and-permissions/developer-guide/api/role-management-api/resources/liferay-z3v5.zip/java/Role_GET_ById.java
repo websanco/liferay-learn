@@ -10,7 +10,7 @@ public class Role_GET_ById {
 		RoleResource.Builder builder = RoleResource.builder();
 
 		RoleResource roleResource = builder.authentication(
-			"test@liferay.com", "test"
+			"test@liferay.com", "learn"
 		).build();
 
 		Role role = roleResource.getRole(

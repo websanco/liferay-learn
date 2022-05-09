@@ -14,7 +14,7 @@ public class StructuredContent_POST_ToSite {
 
 		StructuredContentResource structuredContentResource =
 			builder.authentication(
-				"test@liferay.com", "test"
+				"test@liferay.com", "learn"
 			).build();
 
 		StructuredContent structuredContent =

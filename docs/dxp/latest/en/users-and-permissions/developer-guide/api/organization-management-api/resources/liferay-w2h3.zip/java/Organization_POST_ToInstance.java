@@ -10,7 +10,7 @@ public class Organization_POST_ToInstance {
 		OrganizationResource.Builder builder = OrganizationResource.builder();
 
 		OrganizationResource organizationResource = builder.authentication(
-			"test@liferay.com", "test"
+			"test@liferay.com", "learn"
 		).build();
 
 		Organization organization = organizationResource.postOrganization(

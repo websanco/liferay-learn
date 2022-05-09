@@ -10,7 +10,7 @@ public class AccountUser_POST_ToAccount {
 		UserAccountResource.Builder builder = UserAccountResource.builder();
 
 		UserAccountResource userAccountResource = builder.authentication(
-			"test@liferay.com", "test"
+			"test@liferay.com", "learn"
 		).build();
 
 		UserAccount userAccount = userAccountResource.postAccountUserAccount(

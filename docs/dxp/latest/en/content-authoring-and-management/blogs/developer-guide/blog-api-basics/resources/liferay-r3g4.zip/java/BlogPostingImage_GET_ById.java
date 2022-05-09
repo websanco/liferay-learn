@@ -12,7 +12,7 @@ public class BlogPostingImage_GET_ById {
 
 		BlogPostingImageResource blogPostingImageResource =
 			builder.authentication(
-				"test@liferay.com", "test"
+				"test@liferay.com", "learn"
 			).build();
 
 		BlogPostingImage blogPostingImage =

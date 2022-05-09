@@ -14,7 +14,7 @@ public class BlogPostingImages_GET_FromSite {
 
 		BlogPostingImageResource blogPostingImageResource =
 			builder.authentication(
-				"test@liferay.com", "test"
+				"test@liferay.com", "learn"
 			).build();
 
 		Page<BlogPostingImage> page =

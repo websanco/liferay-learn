@@ -10,7 +10,7 @@ public class Account_GET_ById {
 		AccountResource.Builder builder = AccountResource.builder();
 
 		AccountResource accountResource = builder.authentication(
-			"test@liferay.com", "test"
+			"test@liferay.com", "learn"
 		).build();
 
 		Account account = accountResource.getAccount(

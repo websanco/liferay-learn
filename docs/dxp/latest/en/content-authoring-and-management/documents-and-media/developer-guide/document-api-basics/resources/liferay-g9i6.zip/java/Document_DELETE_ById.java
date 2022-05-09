@@ -9,7 +9,7 @@ public class Document_DELETE_ById {
 		DocumentResource.Builder builder = DocumentResource.builder();
 
 		DocumentResource documentResource = builder.authentication(
-			"test@liferay.com", "test"
+			"test@liferay.com", "learn"
 		).build();
 
 		documentResource.deleteDocument(

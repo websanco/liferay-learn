@@ -14,7 +14,7 @@ public class TaxonomyVocabularies_GET_FromSite {
 
 		TaxonomyVocabularyResource taxonomyVocabularyResource =
 			builder.authentication(
-				"test@liferay.com", "test"
+				"test@liferay.com", "learn"
 			).build();
 
 		Page<TaxonomyVocabulary> page =

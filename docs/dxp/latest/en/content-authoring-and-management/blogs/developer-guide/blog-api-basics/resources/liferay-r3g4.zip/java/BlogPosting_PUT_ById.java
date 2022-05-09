@@ -10,7 +10,7 @@ public class BlogPosting_PUT_ById {
 		BlogPostingResource.Builder builder = BlogPostingResource.builder();
 
 		BlogPostingResource blogPostingResource = builder.authentication(
-			"test@liferay.com", "test"
+			"test@liferay.com", "learn"
 		).build();
 
 		BlogPosting blogPosting = blogPostingResource.putBlogPosting(

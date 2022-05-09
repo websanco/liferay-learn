@@ -12,7 +12,7 @@ public class Keywords_GET_FromSite {
 		KeywordResource.Builder builder = KeywordResource.builder();
 
 		KeywordResource keywordResource = builder.authentication(
-			"test@liferay.com", "test"
+			"test@liferay.com", "learn"
 		).build();
 
 		Page<Keyword> page = keywordResource.getSiteKeywordsPage(

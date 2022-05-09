@@ -11,7 +11,7 @@ public class MessageBoardThread_DELETE_ById {
 
 		MessageBoardThreadResource messageBoardThreadResource =
 			builder.authentication(
-				"test@liferay.com", "test"
+				"test@liferay.com", "learn"
 			).build();
 
 		messageBoardThreadResource.deleteMessageBoardThread(

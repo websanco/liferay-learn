@@ -12,7 +12,7 @@ public class TaxonomyCategory_PATCH_ById {
 
 		TaxonomyCategoryResource taxonomyCategoryResource =
 			builder.authentication(
-				"test@liferay.com", "test"
+				"test@liferay.com", "learn"
 			).build();
 
 		TaxonomyCategory taxonomyCategory =

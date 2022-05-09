@@ -10,7 +10,7 @@ public class Keyword_PUT_ById {
 		KeywordResource.Builder builder = KeywordResource.builder();
 
 		KeywordResource keywordResource = builder.authentication(
-			"test@liferay.com", "test"
+			"test@liferay.com", "learn"
 		).build();
 
 		Keyword keyword = keywordResource.putKeyword(

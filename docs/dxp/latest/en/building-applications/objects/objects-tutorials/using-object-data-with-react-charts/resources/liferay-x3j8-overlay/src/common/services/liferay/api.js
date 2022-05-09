@@ -2,7 +2,7 @@ const { REACT_APP_LIFERAY_API = window.location.origin } = process.env
 
 const baseFetch = async (url, { body, method = 'GET' } = {}) => {
   let headers = new Headers({
-    Authorization: 'Basic ' + btoa('test@liferay.com:test'),
+    Authorization: 'Basic ' + btoa('test@liferay.com:learn'),
     'Content-Type': 'application/json'
   })
 

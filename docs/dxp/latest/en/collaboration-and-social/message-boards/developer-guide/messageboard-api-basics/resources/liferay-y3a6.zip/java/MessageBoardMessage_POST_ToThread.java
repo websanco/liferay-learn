@@ -12,7 +12,7 @@ public class MessageBoardMessage_POST_ToThread {
 
 		MessageBoardMessageResource messageBoardMessageResource =
 			builder.authentication(
-				"test@liferay.com", "test"
+				"test@liferay.com", "learn"
 			).build();
 
 		MessageBoardMessage messageBoardMessage =

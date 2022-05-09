@@ -11,7 +11,7 @@ public class StructuredContent_DELETE_ById {
 
 		StructuredContentResource structuredContentResource =
 			builder.authentication(
-				"test@liferay.com", "test"
+				"test@liferay.com", "learn"
 			).build();
 
 		structuredContentResource.deleteStructuredContent(

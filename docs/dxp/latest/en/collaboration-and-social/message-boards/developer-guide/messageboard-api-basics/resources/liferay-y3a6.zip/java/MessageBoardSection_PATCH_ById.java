@@ -12,7 +12,7 @@ public class MessageBoardSection_PATCH_ById {
 
 		MessageBoardSectionResource messageBoardSectionResource =
 			builder.authentication(
-				"test@liferay.com", "test"
+				"test@liferay.com", "learn"
 			).build();
 
 		MessageBoardSection messageBoardSection =

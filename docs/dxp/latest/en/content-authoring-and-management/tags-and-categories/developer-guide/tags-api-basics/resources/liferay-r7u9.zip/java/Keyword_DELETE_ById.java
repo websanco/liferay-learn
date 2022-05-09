@@ -9,7 +9,7 @@ public class Keyword_DELETE_ById {
 		KeywordResource.Builder builder = KeywordResource.builder();
 
 		KeywordResource keywordResource = builder.authentication(
-			"test@liferay.com", "test"
+			"test@liferay.com", "learn"
 		).build();
 
 		keywordResource.deleteKeyword(

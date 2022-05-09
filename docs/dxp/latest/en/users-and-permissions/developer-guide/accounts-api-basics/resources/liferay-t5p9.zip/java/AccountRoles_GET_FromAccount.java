@@ -12,7 +12,7 @@ public class AccountRoles_GET_FromAccount {
 		AccountRoleResource.Builder builder = AccountRoleResource.builder();
 
 		AccountRoleResource accountRoleResource = builder.authentication(
-			"test@liferay.com", "test"
+			"test@liferay.com", "learn"
 		).build();
 
 		Page<AccountRole> page = accountRoleResource.getAccountAccountRolesPage(

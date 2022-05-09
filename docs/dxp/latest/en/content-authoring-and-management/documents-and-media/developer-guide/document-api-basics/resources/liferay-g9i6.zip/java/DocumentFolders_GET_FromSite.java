@@ -13,7 +13,7 @@ public class DocumentFolders_GET_FromSite {
 			DocumentFolderResource.builder();
 
 		DocumentFolderResource documentFolderResource = builder.authentication(
-			"test@liferay.com", "test"
+			"test@liferay.com", "learn"
 		).build();
 
 		Page<DocumentFolder> page =

@@ -11,7 +11,7 @@ public class MessageBoardSection_DELETE_ById {
 
 		MessageBoardSectionResource messageBoardSectionResource =
 			builder.authentication(
-				"test@liferay.com", "test"
+				"test@liferay.com", "learn"
 			).build();
 
 		messageBoardSectionResource.deleteMessageBoardSection(

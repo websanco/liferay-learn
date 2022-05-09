@@ -12,7 +12,7 @@ public class TaxonomyVocabulary_PATCH_ById {
 
 		TaxonomyVocabularyResource taxonomyVocabularyResource =
 			builder.authentication(
-				"test@liferay.com", "test"
+				"test@liferay.com", "learn"
 			).build();
 
 		TaxonomyVocabulary taxonomyVocabulary =

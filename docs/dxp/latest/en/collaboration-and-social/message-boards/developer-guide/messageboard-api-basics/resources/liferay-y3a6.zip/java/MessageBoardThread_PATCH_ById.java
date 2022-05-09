@@ -12,7 +12,7 @@ public class MessageBoardThread_PATCH_ById {
 
 		MessageBoardThreadResource messageBoardThreadResource =
 			builder.authentication(
-				"test@liferay.com", "test"
+				"test@liferay.com", "learn"
 			).build();
 
 		MessageBoardThread messageBoardThread =

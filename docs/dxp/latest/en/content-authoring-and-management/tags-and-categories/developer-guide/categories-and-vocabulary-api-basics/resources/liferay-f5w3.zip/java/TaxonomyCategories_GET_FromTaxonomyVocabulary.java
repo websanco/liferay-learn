@@ -14,7 +14,7 @@ public class TaxonomyCategories_GET_FromTaxonomyVocabulary {
 
 		TaxonomyCategoryResource taxonomyCategoryResource =
 			builder.authentication(
-				"test@liferay.com", "test"
+				"test@liferay.com", "learn"
 			).build();
 
 		Page<TaxonomyCategory> page =

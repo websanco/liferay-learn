@@ -9,7 +9,7 @@ public class AccountRole_DELETE_UserAssociation {
 		AccountRoleResource.Builder builder = AccountRoleResource.builder();
 
 		AccountRoleResource accountRoleResource = builder.authentication(
-			"test@liferay.com", "test"
+			"test@liferay.com", "learn"
 		).build();
 
 		accountRoleResource.deleteAccountAccountRoleUserAccountAssociation(

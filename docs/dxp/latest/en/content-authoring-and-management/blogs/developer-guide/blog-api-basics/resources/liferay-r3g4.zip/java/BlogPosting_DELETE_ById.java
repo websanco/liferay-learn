@@ -9,7 +9,7 @@ public class BlogPosting_DELETE_ById {
 		BlogPostingResource.Builder builder = BlogPostingResource.builder();
 
 		BlogPostingResource blogPostingResource = builder.authentication(
-			"test@liferay.com", "test"
+			"test@liferay.com", "learn"
 		).build();
 
 		blogPostingResource.deleteBlogPosting(

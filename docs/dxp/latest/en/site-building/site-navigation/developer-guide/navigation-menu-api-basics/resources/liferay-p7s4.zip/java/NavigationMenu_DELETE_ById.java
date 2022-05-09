@@ -10,7 +10,7 @@ public class NavigationMenu_DELETE_ById {
 			NavigationMenuResource.builder();
 
 		NavigationMenuResource navigationMenuResource = builder.authentication(
-			"test@liferay.com", "test"
+			"test@liferay.com", "learn"
 		).build();
 
 		navigationMenuResource.deleteNavigationMenu(

@@ -12,7 +12,7 @@ public class StructuredContentFolder_PATCH_ById {
 
 		StructuredContentFolderResource structuredContentFolderResource =
 			builder.authentication(
-				"test@liferay.com", "test"
+				"test@liferay.com", "learn"
 			).build();
 
 		StructuredContentFolder structuredContentFolder =

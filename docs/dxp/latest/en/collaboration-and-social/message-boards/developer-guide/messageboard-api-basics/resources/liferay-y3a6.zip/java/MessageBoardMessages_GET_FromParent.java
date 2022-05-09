@@ -14,7 +14,7 @@ public class MessageBoardMessages_GET_FromParent {
 
 		MessageBoardMessageResource messageBoardMessageResource =
 			builder.authentication(
-				"test@liferay.com", "test"
+				"test@liferay.com", "learn"
 			).build();
 
 		Page<MessageBoardMessage> page =

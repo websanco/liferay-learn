@@ -10,7 +10,7 @@ public class DocumentFolder_DELETE_ById {
 			DocumentFolderResource.builder();
 
 		DocumentFolderResource documentFolderResource = builder.authentication(
-			"test@liferay.com", "test"
+			"test@liferay.com", "learn"
 		).build();
 
 		documentFolderResource.deleteDocumentFolder(

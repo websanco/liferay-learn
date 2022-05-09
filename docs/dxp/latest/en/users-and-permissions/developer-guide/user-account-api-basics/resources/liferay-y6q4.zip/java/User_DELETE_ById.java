@@ -9,7 +9,7 @@ public class User_DELETE_ById {
 		UserAccountResource.Builder builder = UserAccountResource.builder();
 
 		UserAccountResource userAccountResource = builder.authentication(
-			"test@liferay.com", "test"
+			"test@liferay.com", "learn"
 		).build();
 
 		userAccountResource.deleteUserAccount(

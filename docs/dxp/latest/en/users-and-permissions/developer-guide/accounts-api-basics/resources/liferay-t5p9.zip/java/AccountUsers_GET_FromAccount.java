@@ -12,7 +12,7 @@ public class AccountUsers_GET_FromAccount {
 		UserAccountResource.Builder builder = UserAccountResource.builder();
 
 		UserAccountResource userAccountResource = builder.authentication(
-			"test@liferay.com", "test"
+			"test@liferay.com", "learn"
 		).build();
 
 		Page<UserAccount> page = userAccountResource.getAccountUserAccountsPage(
