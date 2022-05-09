@@ -12,7 +12,7 @@ A comprehensive listing of form settings is included in the [Forms configuration
 
 ## Creating Polls
 
-Three settings were added to the Form Settings modal, in the Submissions section, to enabled polls-like functionality in Liferay Forms: Limit to One Submission Per User, Expiration Date, and Show Partial Results to Respondents.
+Three settings were added to the Form Settings modal, in the Submissions section, to enabled polls-like functionality in Liferay Forms: Limit to One Submission per User, Expiration Date, and Show Partial Results to Respondents.
 
 ![The Submissions settings are for configuring poll-like behavior.](./using-forms-to-poll-users/images/01.png)
 
@@ -48,7 +48,11 @@ Two applications make and display a poll: the *Forms* application in the Site Me
 
 1. Click the ![Add](../../images/icon-add.png) button and fill out the Title and Description.
 
-1. Configure the form to behave like a poll: open the Form Settings window, got to the Submissions section, and enable _Show Partial Results to Respondents_ and _Limit to One Submission per User_. Uncheck _Never Expire_ and set an _Expiration Date_, if desired.
+1. Configure the form to behave like a poll: open the Form Settings window, got to the Submissions section, and 
+
+   - **Show Partial Results to Respondents**: Enabled
+   - **Limit to One Submission per User**: Enabled
+   - **Never Expire**: Unchecked if desired (set the expiration date)
 
 1. Now configure the poll question. Add a required multi-line Text field to the form.
 
@@ -64,14 +68,18 @@ Two applications make and display a poll: the *Forms* application in the Site Me
 
 If you're upgrading Liferay along the path of Liferay 7.2 &rarr; 7.3 &rarr; 7.4, your Polls are automatically upgraded to use Forms. During the 7.4 lifecycle the upgrade process to accomplish this task was enhanced, and it can now
 
-1. Convert the Objects in the back-end so that they become Form entities and can be managed with the Forms application and APIs.
-1. Enable the form settings that provide polls-like behavior.
-1. Flag the forms in the UI, if the form was converted from Polls.
-1. If the Poll was displayed on a page in the Polls Display widget, post-upgrade it's displayed on the page in a Form widget
+- Convert the entities in the back-end so that Polls become Form entities and can be managed with the Forms application and APIs.
+- Enable the form settings that provide polls-like behavior.
+- Flag the forms in the UI, if the form was converted from Polls.
+- If the Poll was displayed on a page in the Polls Display widget, post-upgrade it's displayed on the page in a Form widget.
 
-```{warning
-For installations [upgraded](../../installation-and-upgrades/upgrading-liferay.md) to Liferay 7.4 versions prior to DXP Update 2X/CE GA 2X, the upgrade process missed a configuration for certain upgraded Polls. For these installations, check the post-upgrade Forms and make sure that the _Limit to One Submission Per User_ setting is configured.
+```{warning}
+For installations [upgraded](../../installation-and-upgrades/upgrading-liferay.md) to Liferay 7.4 versions prior to DXP Update 2X/CE GA 2X, the upgrade process missed a configuration for certain upgraded Polls. For these installations, check the post-upgrade Forms and make sure that the _Limit to One Submission per User_ setting is configured.
 ```
 <!-- Add the Update/GA version when it's released -->
 <!--If it is important enough we can share a Groovy script that takes the form Ids and automatically sets them to use the missing setting -->
 
+## Additional Information
+
+- [Creating and Managing Forms](./creating-and-managing-forms.md)
+- [Maintenance Mode and Deprecations in 7.4](../../installation-and-upgrades/upgrading-liferay/reference/maintenance-mode-and-deprecations-in-7-4.md)
