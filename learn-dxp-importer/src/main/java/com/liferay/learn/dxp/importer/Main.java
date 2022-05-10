@@ -300,9 +300,6 @@ public class Main {
 
 		StructuredContent structuredContent = new StructuredContent();
 
-		structuredContent.setAvailableLanguages(
-			new String[] {"en-US", "ja-JP"});
-
 		String englishText = FileUtils.readFileToString(
 			new File(fileName), StandardCharsets.UTF_8);
 
@@ -330,33 +327,41 @@ public class Main {
 				}
 			};
 			japaneseTitle = _getTitle(japaneseText);
+			structuredContent.setContentFields(
+				new ContentField[] {
+					new ContentField() {
+						{
+							contentFieldValue = englishContentFieldValue;
+							contentFieldValue_i18n = HashMapBuilder.put(
+								"en-US", englishContentFieldValue
+							).put(
+								"ja-JP", japaneseContentFieldValue
+							).build();
+							name = "content";
+						}
+					}
+				});
+			structuredContent.setTitle_i18n(
+				HashMapBuilder.put(
+					"en-US", englishTitle
+				).put(
+					"ja-JP", japaneseTitle
+				).build());
 		}
 		else {
-			japaneseContentFieldValue = englishContentFieldValue;
+			structuredContent.setContentFields(
+				new ContentField[] {
+					new ContentField() {
+						{
+							contentFieldValue = englishContentFieldValue;
+							name = "content";
+						}
+					}
+				});
 		}
 
-		structuredContent.setContentFields(
-			new ContentField[] {
-				new ContentField() {
-					{
-						contentFieldValue = englishContentFieldValue;
-						contentFieldValue_i18n = HashMapBuilder.put(
-							"en-US", englishContentFieldValue
-						).put(
-							"ja-JP", japaneseContentFieldValue
-						).build();
-						name = "content";
-					}
-				}
-			});
 		structuredContent.setContentStructureId(_CONTENT_STRUCTURE_ID);
 		structuredContent.setTitle(_getTitle(englishText));
-		structuredContent.setTitle_i18n(
-			HashMapBuilder.put(
-				"en-US", englishTitle
-			).put(
-				"ja-JP", japaneseTitle
-			).build());
 
 		return structuredContent;
 	}
@@ -368,9 +373,9 @@ public class Main {
 			folderId, _toStructuredContent(fileName));
 	}
 
-	private static final long _CONTENT_STRUCTURE_ID = 39756;
+	private static final long _CONTENT_STRUCTURE_ID = 40090;
 
-	private static final long _GROUP_ID = 20123;
+	private static final long _GROUP_ID = 20122;
 
 	private static StructuredContentResource _structuredContentResource;
 
