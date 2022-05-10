@@ -116,7 +116,7 @@ Changing the colors for alert-related elements (such as *Success* or *Warning*) 
 
 ### Spacing
 
-Adjust the spacing between the main elements on your pages with the options in the Spacing category.
+Adjust the spacing between the main elements on your pages with the options in the Spacing category. When you configure a Page Fragment using the corresponding Style Book, these values are given as options for the Fragment's margin and padding sizes.
 
 ### General
 

@@ -30,9 +30,13 @@ Configure the spacing around the Fragment by clicking on the regions surrounding
 
 ![Click the regions aroud the rectangle in the Spacing section to configure the spacing for the Fragment's margin or padding.](./styles-reference/images/02.png)
 
-When you click one of these regions, a list appears with pre-defined options for how many pixels to set the chosen spacing to.
+When you click one of these regions, a list appears with pre-defined options for how many pixels to set the chosen spacing size to. These sizes come from the numbered *Spacer* fields in the Spacing category when you [create or edit the Style Book](../../../../site-appearance/style-books/using-a-style-book-to-standardize-site-appearance.md#spacing).
 
-![When you click any of the regions, choose the desired spacing from the list shown.](./styles-reference/images/03.png)
+```{note}
+If the spacing options in your Style Book are defined in units other then pixels (such as `rem`), then they are converted to the equivalent number of pixels when you are selecting them in a Fragment's Styles configuration.
+```
+
+![When you click any of the regions, choose the desired spacing from the list of sizes shown.](./styles-reference/images/03.png)
 
 ## Text
 
@@ -83,7 +87,7 @@ Set the Fragment's opacity and determine whether it has a shadow.
 
 ## Liferay 7.4 U20 and Older
 
-Before Liferay DXP 7.4 U21 or GA21, the Spacing section is split into the *Margin* and *Padding* sections.
+In earlier versions than Liferay DXP 7.4 U21 or GA21, the Spacing section is split into the *Margin* and *Padding* sections.
 
 ### Margin
 
