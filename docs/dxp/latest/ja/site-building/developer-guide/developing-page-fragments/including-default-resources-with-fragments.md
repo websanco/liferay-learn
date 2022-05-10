@@ -145,5 +145,5 @@ Liferay DXP 7.4以降の場合、フラグメントコレクションはLiferay 
 ## 関連情報
 
 * [フラグメントへの構成オプションの追加](./adding-configuration-options-to-fragments.md)
-* [Auto-deploying Fragments](./auto-deploying-fragments.md)
+* [フラグメントの自動デプロイ](./auto-deploying-fragments.md)
 * [フラグメントエディターの使用](./using-the-fragments-editor.md)

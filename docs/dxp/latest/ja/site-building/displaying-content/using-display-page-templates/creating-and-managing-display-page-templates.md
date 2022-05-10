@@ -87,13 +87,13 @@
 1. 右上の ［**Actions**］ メニュー (![Actions](../../../images/icon-actions.png)) をクリックし、 ［**Assign to Default**］ または ［**Unassigned**］ を選択します。
 1. [**OK**] をクリックします。
 
-コンテンツを新しい表示ページテンプレートに割り当てた場合は、コンテンツが期待どおりに表示されることを確認してください。 コンテンツのプレビューと公開については、 [Publishing Content with Display Pages](./publishing-content-with-display-pages.md)を参照してください。
+コンテンツを新しい表示ページテンプレートに割り当てた場合は、コンテンツが期待どおりに表示されることを確認してください。 コンテンツのプレビューと公開については、 [表示ページによるコンテンツの公開](./publishing-content-with-display-pages.md) を参照してください。
 
 <a name="additional-information" />
 
 ## 追加情報
 
-- [Publishing Content with Display Pages](./publishing-content-with-display-pages.md)
+- [表示ページによるコンテンツの公開](./publishing-content-with-display-pages.md)
 - [SEOとOpen Graphの設定](./configuring-seo-and-open-graph.md)
 - [コンテントページの使用](./../../creating-pages/using-content-pages.md)
 - [コンテンツページへの要素の追加](../../creating-pages/using-content-pages/adding-elements-to-content-pages.md)

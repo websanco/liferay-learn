@@ -51,7 +51,7 @@ Click To Chatとライブチャットプロバイダーとの統合が構成さ�
 * [Chatwoot](./getting-a-chat-provider-account-id/chatwoot.md)
 * [Crisp](./getting-a-chat-provider-account-id/crisp.md)
 * [Hubspot](./getting-a-chat-provider-account-id/hubspot.md)
-* [Jivochat](./getting-a-chat-provider-account-id/jivochat.md)
+* [JivoChat](./getting-a-chat-provider-account-id/jivochat.md)
 * [LiveChat](./getting-a-chat-provider-account-id/livechat.md)
 * [Liveperson](./getting-a-chat-provider-account-id/liveperson.md)
 * [Smartsupp](./getting-a-chat-provider-account-id/smartsupp.md)

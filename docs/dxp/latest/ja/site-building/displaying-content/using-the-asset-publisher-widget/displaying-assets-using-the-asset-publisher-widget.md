@@ -17,7 +17,7 @@ Webコンテンツを作成するときは、掲示板のエントリーやブ�
 * Wikiページ
 
 ```{note}
-Liferay DXP 7.2以降、開発者は[情報フレームワーク](https://help.liferay.com/hc/en-us/articles/360029067251-Introduction-to-The-Info-Framework) を使用して [情報リスト](https://help.liferay.com/hc/ja/articles/360029067271-Creating-an-Information-List-Provider) からアセットを表示できるようになりました。
+Liferay DXP 7.2以降、開発者は [情報フレームワーク](https://help.liferay.com/hc/ja/articles/360029067251-Introduction-to-The-Info-Framework) を使用して [情報リスト](https://help.liferay.com/hc/ja/articles/360029067271-Creating-an-Information-List-Provider) からアセットを表示できるようになりました。
 ```
 
 手動で選択すると、表示されるアセットをコントロールできますが、リストを定期的に更新するとなると、リストの管理が面倒になります。 この場合は、アセットパブリッシャーウィジェットを使用してコンテンツを動的に選択する方が便利です。

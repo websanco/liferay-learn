@@ -285,6 +285,6 @@ function (fragmentElement, configuration) {
 
 ## 関連情報
 
-* [Auto-deploying Fragments](./auto-deploying-fragments.md)
+* [フラグメントの自動デプロイ](./auto-deploying-fragments.md)
 * [Including Default Resources with Fragments](./including-default-resources-with-fragments.md)
 * [フラグメント設定タイプのリファレンス](../reference/fragments/fragment-configuration-types-reference.md)

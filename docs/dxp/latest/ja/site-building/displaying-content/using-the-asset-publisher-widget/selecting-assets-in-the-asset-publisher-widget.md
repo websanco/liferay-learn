@@ -3,7 +3,7 @@
 特定の基準に基づいてアセットを動的に選択するようにアセットパブリッシャーウィジェットを構成するか、手動で表示するアセットを正確に指定することができます。 また、[コレクション](../../../content-authoring-and-management/collections-and-collection-pages/about-collections-and-collection-pages.md)のアセットを表示することもできます。
 
 ```{note}
-Liferay 7.2以下では、コレクションは[コンテンツセット](../../../content-authoring-and-management/collections-and-collection-pages/about-collections-and-collection-pages.md#liferay-dxp-7-2) と呼ばれています。
+Liferay 7.2以下では、コレクションは [コンテンツセット](../../../content-authoring-and-management/collections-and-collection-pages/about-collections-and-collection-pages.md#liferay-dxp-7-2) と呼ばれています。
 ```
 
 **アセットパブリッシャー** ウィジェットで公開するアセットを選択するには、
