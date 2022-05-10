@@ -73,10 +73,10 @@ Learn how to create custom applications and how to build modern websites with fr
 :::
 
 :::{grid-item-card}  Using Headless REST APIs with DXP
-:link: ./liferay-dxp-7.4-for-technical-users/build-react-apps-for-liferay-dxp.md
+:link: ./liferay-dxp-7.4-for-technical-users/using-headless-rest-apis-with-liferay-dxp.md
 :::
 
 :::{grid-item-card}  Build React Apps for Liferay
-:link: ./liferay-dxp-7.4-for-technical-users/using-headless-rest-apis-with-liferay-dxp.md
+:link: ./liferay-dxp-7.4-for-technical-users/build-react-apps-for-liferay-dxp.md
 :::
 ::::

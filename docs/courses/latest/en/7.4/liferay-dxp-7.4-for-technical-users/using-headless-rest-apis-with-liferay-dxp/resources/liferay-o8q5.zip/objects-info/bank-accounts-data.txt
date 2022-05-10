@@ -1,0 +1,18 @@
+Three Bank Accounts, Account Holder for all three is Test Test (admin user)
+
+Remaining Data is as follows:
+
+
+Account Type: Checking
+Account Number: 84566548
+Account Balance: 2547.56
+
+
+Account Type: Savings
+Account Number: 23755732
+Account Balance: 5874.98
+
+
+Account Type: Individual Retirement Account
+Account Number: 43211234
+Account Balance: 44367.68

@@ -1,0 +1,41 @@
+{
+    "actions": {
+        "get": {
+            "method": "GET",
+            "href": "http://localhost:8080/o/c/bankaccounts/41924"
+        },
+        "update": {
+            "method": "PUT",
+            "href": "http://localhost:8080/o/c/bankaccounts/41924"
+        },
+        "delete": {
+            "method": "DELETE",
+            "href": "http://localhost:8080/o/c/bankaccounts/41924"
+        }
+    },
+    "creator": {
+        "additionalName": "",
+        "contentType": "UserAccount",
+        "familyName": "Test",
+        "givenName": "Test",
+        "id": 20127,
+        "name": "Test Test"
+    },
+    "dateCreated": "2022-03-09T22:58:43Z",
+    "dateModified": "2022-03-09T22:58:43Z",
+    "externalReferenceCode": "",
+    "id": 41924,
+    "scopeKey": "Guest",
+    "status": {
+        "code": 0,
+        "label": "approved",
+        "label_i18n": "Approved"
+    },
+    "accountHolder": "Test Test",
+    "accountType": {
+        "key": "checking",
+        "name": "Checking"
+    },
+    "accountBalance": 2547.67,
+    "accountNumber": 84566548
+}

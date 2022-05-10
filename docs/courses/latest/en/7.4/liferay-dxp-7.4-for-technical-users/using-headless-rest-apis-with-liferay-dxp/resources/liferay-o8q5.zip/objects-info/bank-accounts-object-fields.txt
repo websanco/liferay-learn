@@ -1,0 +1,9 @@
+The bank accounts object should be scoped to the main site and have the following fields:
+
+Account Holder - String
+
+Account Number - Integer
+
+Account Type - Picklist (Options for Checking, Savings, and Individual Retirement Account)
+
+Account Balance - Double
