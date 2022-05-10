@@ -7,3 +7,7 @@
 ## Next Up
 
 * [Securing Content and Fine-Tuning Security](./securing-content-and-fine-tuning-security.md)
+
+## Previous Step
+
+* [Exercise 2: Enable CAPTCHA](./exercise-2-enable-captcha.md)

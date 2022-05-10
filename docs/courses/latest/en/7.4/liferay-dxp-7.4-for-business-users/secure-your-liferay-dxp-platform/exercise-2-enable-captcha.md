@@ -74,3 +74,7 @@
 ## Next Up
 
 * [Securing Web Services](./securing-web-services.md)
+
+## Previous Step
+
+* [Exercise 1: Create a Password Policy](./exercise-1-create-a-password-policy.md)
