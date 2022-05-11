@@ -1,10 +1,10 @@
-# Integrate with Portal Search
+# Exercise 2: Integrate with Portal Search
 
-Coming Soon!
+[$LIFERAY_LEARN_YOUTUBE_URL$]=https://www.youtube.com/embed/FfciSpw1Ij4
 
-<!--
+> The exercise video above uses DXP 7.3. To complete the exercise using DXP/CE 7.4, follow the updated exercise steps below.
 
-#### Exercise Goals
+## Exercise Goals
 
 - Declare dependencies
 - Implement a Gradebook registrar class to register with the search framework
@@ -12,20 +12,17 @@ Coming Soon!
 - Implement an Assignment Model Indexer Writer Contributor to configure reindexing
 - Implement a Gradebook Keyword Query Contributor to control which fields are being queried
 - Implement a Gradebook Model Summary Contributor to control the Gradebook summaries returned
-- Review the service implementation classes for <code>@Indexable</code> annotations
+- Review the service implementation classes for `@Indexable` annotations
 - Reindex the search index
 - Test the application
 
-</div>
+Before version 7.1, there used to be a single indexer component for taking care of everything search indexer-related for an entity. The new design provides a more modular and a clean approach for controlling different aspects of search framework integration. You can still use the old approach, however.
 
-> Before version 7.1, there used to be a single indexer component for taking care of everything search indexer-related for an entity. The new design provides a more modular and a clean approach for controlling different aspects of search framework integration. You can still use the old approach, however.
+All the available contributors are not covered in this exercise. See the [Liferay Help Center](https://help.liferay.com/hc/en-us/articles/360034199412-Enabling-Search-and-Indexing-for-Guestbooks) for more information. Also, take a look at the optional exercise "Enable Workflows for Assignments" where we will cover the `PreFilterContributor`.
 
-> All the available contributors are not covered in this exercise. See the [Liferay Help Center](https://help.liferay.com/hc/en-us/articles/360034199412-Enabling-Search-and-Indexing-for-Guestbooks) for more information. Also, take a look at the optional Module 7 exercise "Enable Workflows for Assignments" where we will cover the `PreFilterContributor`.
+## Declare Dependencies
 
-<br />
-
-#### Declare Dependencies
-1. **Open** the `build.gradle` in the *gradebook-service* module.
+1. **Open** the `build.gradle` in the _gradebook-service_ module.
 2. **Add** the new dependencies as follows:
 
 ```groovy
@@ -35,8 +32,9 @@ compileOnly group: "com.liferay", name: "com.liferay.portal.search.api"
 
 The registrar class registers the Assignments with the search framework.
 
-#### Implement a Gradebook Registrar Class
-1. **Create** a class `com.liferay.training.gradebook.internal.search.AssignmentSearchRegistrar` in the *gradebook-service* module.
+## Implement a Gradebook Registrar Class
+
+1. **Create** a class `com.liferay.training.gradebook.internal.search.AssignmentSearchRegistrar` in the _gradebook-service_ module.
 2. **Implement** as follows:
 
 ```java
@@ -108,8 +106,9 @@ public class AssignmentSearchRegistrar {
 
 The model document contributor controls which fields are indexed. This class’s contribute method is called each time the add and update methods in the entity’s service layer are called.
 
-#### Implement an Assignment Model Document Contributor
-1. **Create** a class `com.liferay.training.gradebook.internal.search.spi.model.index.contributor.AssignmentModelDocumentContributor` in the *gradebook-service* module.
+## Implement an Assignment Model Document Contributor
+
+1. **Create** a class `com.liferay.training.gradebook.internal.search.spi.model.index.contributor.AssignmentModelDocumentContributor` in the _gradebook-service_ module.
 2. **Implement** as follows:
 
 ```java
@@ -168,10 +167,11 @@ public class AssignmentModelDocumentContributor
 }
 ```	
 
-The Model Indexer Writer Contributor configures the re-indexing and batch re-indexing behavior for the model entity. This class’s method is called when a re-index is triggered from the Search administrative application found in `Control Panel > Configuration > Search`.
+The Model Indexer Writer Contributor configures the re-indexing and batch re-indexing behavior for the model entity. This class’s method is called when a re-index is triggered from the Search administrative application found in `Control Panel` &rarrw `Configuration` &rarrw `Search`.
 
-#### Implement an Assignment Model Indexer Writer Contributor
-1. **Create** a class `com.liferay.training.gradebook.internal.search.spi.model.index.contributor.AssignmentModelIndexerWriterContributor` in the *gradebook-service* module.
+## Implement an Assignment Model Indexer Writer Contributor
+
+1. **Create** a class `com.liferay.training.gradebook.internal.search.spi.model.index.contributor.AssignmentModelIndexerWriterContributor` in the _gradebook-service_ module.
 2. **Implement** as follows:
 
 ```java
@@ -234,8 +234,9 @@ public class AssignmentModelIndexerWriterContributor
 
 The Keyword Query Contributor contributes model-specific clauses to the ongoing search query.
 
-#### Implement a Gradebook Keyword Query Contributor
-1. **Create** a class `com.liferay.training.gradebook.internal.search.spi.model.query.contributor.AssignmentKeywordQueryContributor` in the *gradebook-service* module.
+## Implement a Gradebook Keyword Query Contributor
+
+1. **Create** a class `com.liferay.training.gradebook.internal.search.spi.model.query.contributor.AssignmentKeywordQueryContributor` in the _gradebook-service_ module.
 2. **Implement** as follows:
 
 ```java
@@ -281,8 +282,9 @@ public class AssignmentKeywordQueryContributor
 
 The Model Summary Contributor constructs the results summary, including specifying which fields to use.
 
-####  Implement a Gradebook Model Summary Contributor
-1. **Create** a class `com.liferay.training.gradebook.internal.search.spi.model.result.contributor.AssignmentModelSummaryContributor` in the *gradebook-service* module.
+##  Implement a Gradebook Model Summary Contributor
+
+1. **Create** a class `com.liferay.training.gradebook.internal.search.spi.model.result.contributor.AssignmentModelSummaryContributor` in the _gradebook-service_ module.
 2. **Implement** as follows:
 
 	```java
@@ -349,13 +351,26 @@ As long as our customizations and overloads of these methods in the `AssignmentL
 
 If you have created test Assignments, you have to reindex the search index to get the Assignments to appear on the results list.
 
-#### Reindex the Search Index
+## Reindex the Search Index
+
 1. **Redeploy** the module and go to `localhost:8080` in your browser.
-2. **Go to** `Global Menu > Control Panel > Configuration > Search`.
+2. **Go to** `Global Menu` &rarr; `Control Panel` &rarr; `Configuration` &rarr; `Search`.
 3. **Reindex** all search indexes.
 
-#### Test the Application
+## Test the Application
+
 1. **Use** the portal search bar to search Assignments.
 2. **Create** a new Assignment and check whether it appears in the search.
 
--->
+---
+
+## Previous Step
+
+* [Integrate with the Search Framework](./integrate-with-the-search-framework.md)
+
+## For Further Reading 
+
+* [Asset Framework](https://learn.liferay.com/dxp/latest/en/building-applications/data-frameworks/asset-framework.html)
+* [Contributing Custom Content to the Similar Results Widget](https://learn.liferay.com/dxp/latest/en/using-search/developer-guide/writing-a-similar-results-contributor.html)
+
+

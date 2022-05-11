@@ -1,17 +1,13 @@
 # Integrate with Liferay DXP Frameworks
 
-Coming Soon!
-
-<!--
-
 ```{toctree}
 :maxdepth: 2
 
-integrate-with-liferay-frameworks/.md
-integrate-with-liferay-frameworks/.md
+integrate-with-liferay-frameworks/integrate-with-the-asset-framework.md
+integrate-with-liferay-frameworks/exercise-1-integrate-with-the-asset-framework.md
+integrate-with-liferay-frameworks/integrate-with-the-search-framework.md
+integrate-with-liferay-frameworks/exercise-2-integrate-with-portal-search.md
 ```
-
-[$LIFERAY_LEARN_YOUTUBE_URL$]=https://www.youtube.com/embed/q3veTitreto
 
 ## Learning Objectives
 
@@ -34,7 +30,8 @@ integrate-with-liferay-frameworks/.md
 
 ## Next Steps
 
-* [](./integrate-with-liferay-frameworks/.md) 
-* [](./integrate-with-liferay-frameworks/.md) 
+* [](./integrate-with-liferay-frameworks/integrate-with-the-asset-framework.md) 
+* [](./integrate-with-liferay-frameworks/exercise-1-integrate-with-the-asset-framework.md)
+* [](./integrate-with-liferay-frameworks/integrate-with-the-search-framework.md) 
+* [](./integrate-with-liferay-frameworks/exercise-2-integrate-with-portal-search.md)  
 
--->
