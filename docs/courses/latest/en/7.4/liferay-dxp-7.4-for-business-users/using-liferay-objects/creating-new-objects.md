@@ -7,3 +7,7 @@
 ## Next Up
 
 * [Exercise 1: Create a Custom Business Object](./exercise-1-create-a-custom-business-object.md)
+
+## Previous Step
+
+* [Using Liferay Objects](../using-liferay-objects.md)
