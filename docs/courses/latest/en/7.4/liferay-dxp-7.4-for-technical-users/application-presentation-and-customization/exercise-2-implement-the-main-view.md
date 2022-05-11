@@ -1,10 +1,10 @@
-# Implement the Main View
+# Exercise 2: Implement the Main View
 
-Coming Soon!
+[$LIFERAY_LEARN_YOUTUBE_URL$]=https://www.youtube.com/embed/QRsxMaEI8xs
 
-<!--
+> The exercise video above uses DXP 7.3. To complete the exercise using DXP/CE 7.4, follow the updated exercise steps below.
 
-#### Exercise Goals
+## Exercise Goals
 
 - Implement the JSP files
 - Implement the MVC render command for showing the Assignment list
@@ -12,13 +12,12 @@ Coming Soon!
 - Implement the back-end class for the UI management toolbar
 - Test the user interface
 
-</div>
-
 By convention, the `init.jsp` file is used to centralize imports, taglib declarations, variable initializations, and any common tasks for all the user interface JSP files. The `init.jsp` is then included in the other JSP files, like `view.jsp`.
 
 We'll use taglib declarations for Clay and Liferay Front-End, Liferay Item Selector, as well as imports for the classes we will be using in the front-end implementation.
 
-#### Implement the init.jsp
+## Implement the init.jsp
+
 1. **Update** the contents of `src/main/resources/META-INF/resources/init.jsp` with:
 
 ```jsp
@@ -56,7 +55,8 @@ We'll use taglib declarations for Clay and Liferay Front-End, Liferay Item Selec
 
 The `view.jsp` implements the Assignments list view. We'll use the Management Toolbar from Clay as well the Search Container from the Liferay UI tag library to implement the view.
 
-#### Implement the view.jsp
+## Implement the view.jsp
+
 1. **Update** the contents of portlet *VIEW* mode JSP `src/main/resources/META-INF/resources/view.jsp` with:
 
 ```jsp
@@ -106,11 +106,13 @@ The `view.jsp` implements the Assignments list view. We'll use the Management To
 
 We need three more JSP files to display a single row on the assignment list, show available actions, and display the _details_ view.
 
-#### Implement the Other JSP Files
+## Implement the Other JSP Files
+
 1. **Create** a subfolder `src/main/resources/META-INF/resources/assignment`.
 2. **Implement** the following three files (notice the JSP fragment suffix `.jspf` in `entry_search_columns.jspf`) in the new subfolder:
 
 **entry_search_columns.jspf**
+
 ```jsp
 <%-- Generate assignment view  URL. --%>
 
@@ -231,6 +233,7 @@ We need three more JSP files to display a single row on the assignment list, sho
 ```
 
 **entry_actions.jsp**
+
 ```jsp
 <%@ include file="../init.jsp"%>
 
@@ -272,9 +275,8 @@ We need three more JSP files to display a single row on the assignment list, sho
 </liferay-ui:icon-menu>
 ```
 
-<div class="page"></div>
-
 **view_assignment.jsp**
+
 ```jsp
 <%@ include file="../init.jsp"%>
 
@@ -309,7 +311,8 @@ At this stage, we need two MVC Render Commands: one for displaying the Assignmen
 
 Before implementing our MVC render commands, implement a constants class to hold the command names. This is a good practice to reduce the risk of typos when referencing the command names.
 
-#### Implement MVCCommandNames.java
+## Implement MVCCommandNames.java
+
 1. **Create** a class `com.liferay.training.gradebook.web.constants.MVCCommandNames`.
 2. **Implement** as follows:
 
@@ -334,9 +337,8 @@ public class MVCCommandNames {
 }
 ```
 
-<div class="page"></div>
+## Implement ViewAssignmentsMVCRenderCommand.java
 
-#### Implement ViewAssignmentsMVCRenderCommand.java
 1. **Create** a class `com.liferay.training.gradebook.web.portlet.action.ViewAssignmentsMVCRenderCommand`.
 2. **Implement** as follows. Don't worry about the errors with `AssignmentsManagementToolbarDisplayContext`. We'll add that in the next step:
 
@@ -494,13 +496,13 @@ public class ViewAssignmentsMVCRenderCommand implements MVCRenderCommand {
 }
 ```
 
-<div class="page"></div>
+## Implement the MVC Render Command for Showing a Single Assignment
 
-#### Implement the MVC Render Command for Showing a Single Assignment
 1. **Create** a class `com.liferay.training.gradebook.web.portlet.action.ViewSingleAssignmentMVCRenderCommand`.
 2. **Implement** as follows:
 
 **ViewSingleAssignmentMVCRenderCommand.java**
+
 ```java
 package com.liferay.training.gradebook.web.portlet.action;
 
@@ -600,7 +602,8 @@ public class ViewSingleAssignmentMVCRenderCommand implements MVCRenderCommand {
 
 Our last task at this step is to implement the backing class for the Clay management toolbar. We won't go into implementation details with this class, but you can take a look at the [documentation](https://learn.liferay.com/dxp/latest/en/building-applications/developing-a-java-web-application/using-mvc/tag-libraries/clay-tag-library/clay-management-toolbar.html).
 
-#### Implement the Back-End Class for the UI Management Toolbar
+## Implement the Back-End Class for the UI Management Toolbar
+
 1. **Create** a class `com.liferay.training.gradebook.web.display.context.AssignmentsManagementToolbarDisplayContext`.
 2. **Implement** as follows:
 
@@ -870,11 +873,18 @@ public class AssignmentsManagementToolbarDisplayContext
 }
 ```
 
-#### Test the User Interface
+## Test the User Interface
+
 1. **Go to** localhost:8080 in your browser.
-* **Refresh** the page to see the changes.
-	* Make sure the module has restarted successfully or run `../gradlew deploy` again before refreshing the page.
+2. **Refresh** the page to see the changes.
+	- Make sure the module has restarted successfully or run `../gradlew deploy` again before refreshing the page.
 
--->
+---
 
+## Next Up
 
+* [Exercise 3: Implement the Assignment Editing View](./exercise-3-implement-the-assignment-editing-view.md)
+
+## Previous Step
+
+* [Introducing Tag Libraries](./introducing-tag-libraries.md)

@@ -1,10 +1,10 @@
-# Implement the Assignment Editing View
+# Exercise 3: Implement the Assignment Editing View
 
-Coming Soon!
+[$LIFERAY_LEARN_YOUTUBE_URL$]=https://www.youtube.com/embed/U5EFb5wj1tU
 
-<!--
+> The exercise video above uses DXP 7.3. To complete the exercise using DXP/CE 7.4, follow the updated exercise steps below.
 
-#### Exercise Goals
+## Exercise Goals
 
 - Implement the Assignment editing form JSP file
 - Implement an MVC render command for switching to the editing view
@@ -13,11 +13,10 @@ Coming Soon!
 - Implement an MVC action command for deleting an Assignment
 - Test the application
 
-</div>
+## Implement the Assignment Editing Form
 
-#### Implement the Assignment Editing Form
 1. **Create** the file `src/main/resources/META-INF/resources/assignment/edit_assignments.jsp`.
-* **Implement** code as follows:
+2. **Implement** code as follows:
 
 ```jsp
 <%@ include file="../init.jsp"%>
@@ -123,9 +122,10 @@ public CreationMenu getCreationMenu() {
 
 The renderURL for switching to the editing view is created, but no MVC Render Command is registered yet for the command name `MVCCommandNames.EDIT_ASSIGNMENT`.
 
-#### Implement an MVC Render Command for Switching to the Editing View
+## Implement an MVC Render Command for Switching to the Editing View
+
 1. **Create** a class `com.liferay.training.gradebook.web.portlet.action.EditAssignmentMVCRenderCommand`.
-* **Implement** code as follows:
+2. **Implement** code as follows:
 
 ```java
 package com.liferay.training.gradebook.web.portlet.action;
@@ -215,22 +215,22 @@ public class EditAssignmentMVCRenderCommand implements MVCRenderCommand {
 }
 ```
 
-> Note the return value of the `render()` method
+Note the return value of the `render()` method.
 
-#### Test Adding an Assignment
-1. **Go to** localhost:8080 in your browser.
-* **Refresh** the page.
-* **Click** the plus button on the gradebook widget.
+## Test Adding an Assignment
+
+1. **Go to** `localhost:8080` in your browser.
+2. **Refresh** the page.
+3. **Click** the plus button on the gradebook widget.
 
 You should now be able to see the editing form, but it doesn't work yet. We still need to implement an MVC Action Command to handle the form submits.
 
-<br />
-
 We need MVC Action Commands to handle adding, editing, and deleting assignments. A single command can handle multiple command names, so we can handle adding and editing cases in the same class. For better modularity, however, we'll choose to implement these use cases in separate classes:
 
-#### Implement an MVC Action Command for Adding an Assignment
+## Implement an MVC Action Command for Adding an Assignment
+
 1. **Create** a class `com.liferay.training.gradebook.web.portlet.action.AddAssignmentMVCActionCommand`.
-* **Implement** code as follows:
+2. **Implement** code as follows:
 
 ```java
 package com.liferay.training.gradebook.web.portlet.action;
@@ -325,9 +325,10 @@ public class AddAssignmentMVCActionCommand extends BaseMVCActionCommand {
 }
 ```
 
-#### Implement an MVC Action Command for Editing an Assignment
+## Implement an MVC Action Command for Editing an Assignment
+
 1. **Create** a class `com.liferay.training.gradebook.web.portlet.action.EditAssignmentMVCActionCommand`.
-* **Implement** code as follows:
+2. **Implement** code as follows:
 
 ```java
 package com.liferay.training.gradebook.web.portlet.action;
@@ -415,9 +416,10 @@ public class EditAssignmentMVCActionCommand extends BaseMVCActionCommand {
 }
 ```
 	
-#### Implement an MVC Action Command for Deleting an Assignment
+## Implement an MVC Action Command for Deleting an Assignment
+
 1. **Create** a class `com.liferay.training.gradebook.web.portlet.action.DeleteAssignmentMVCActionCommand`.
-* **Implement** code as follows:
+2. **Implement** code as follows:
 
 ```java
 package com.liferay.training.gradebook.web.portlet.action;
@@ -485,13 +487,18 @@ public class DeleteAssignmentMVCActionCommand extends BaseMVCActionCommand {
 }
 ```	
 
-<div class="page">
+## Test the Application
 
-#### Test the Application
 1. **Go to** localhost:8080 in your browser.
-* **Refresh** the page.
+2. **Refresh** the page.
 	- Make sure the module has restarted successfully before refreshing the browser window then try adding, editing, viewing, deleting Assignments.
 
--->
+---
 
+## Next Up
 
+* [Implementing Validation and Feedback](./implementing-validation-and-feedback.md)
+
+## Previous Step
+
+* [Exercise 2: Implement the Main View](./exercise-2-implement-the-main-view.md)
