@@ -17,7 +17,6 @@ setting-up-liferay/using-a-cdn.md
 setting-up-liferay/clustering-for-high-availability.md
 setting-up-liferay/tuning-liferay.md
 setting-up-liferay/tuning-your-jvm.md
-setting-up-liferay/setting-up-jndi.md
 ```
 
 After [installing Liferay](./installing-liferay.md), configure it to meet your needs. Here are common setup tasks.
@@ -131,10 +130,6 @@ You'll want eliminate or minimize any site downtime. If a server fails or needs 
 ## Tune Liferay
 
 Tune Liferay's JVM, connection pools, and more for optimal performance. See [Tuning Liferay](./setting-up-liferay/tuning-liferay.md) and [Tuning Your JVM](./setting-up-liferay/tuning-your-jvm.md) for details.
-
-## Setting Up JNDI
-
-Learn how to [setup Tomcat's JNDI connection](./setting-up-liferay/setting-up-jndi.md) to access your database.
 
 ## What's Next
 
