@@ -61,25 +61,28 @@ import org.apache.commons.io.FileUtils;
 public class Main {
 
 	public static void main(String[] arguments) throws Exception {
-		Main main = new Main();
+		Main main = new Main("test@liferay.com", "test");
 
 		main.uploadToLiferay();
 	}
 
-	public Main() {
-		StructuredContentResource.Builder builder =
+	public Main(String login, String password) {
+		StructuredContentResource.Builder structuredContentResourceBuilder =
 			StructuredContentResource.builder();
 
-		_structuredContentResource = builder.authentication(
-			"test@liferay.com", "test"
-		).build();
+		_structuredContentResource =
+			structuredContentResourceBuilder.authentication(
+				login, password
+			).build();
 
-		StructuredContentFolderResource.Builder folderBuilder =
-			StructuredContentFolderResource.builder();
+		StructuredContentFolderResource.Builder
+			structuredContentFolderResourceBuilder =
+				StructuredContentFolderResource.builder();
 
-		_structuredContentFolderResource = folderBuilder.authentication(
-			"test@liferay.com", "test"
-		).build();
+		_structuredContentFolderResource =
+			structuredContentFolderResourceBuilder.authentication(
+				login, password
+			).build();
 	}
 
 	public void uploadToLiferay() throws Exception {
