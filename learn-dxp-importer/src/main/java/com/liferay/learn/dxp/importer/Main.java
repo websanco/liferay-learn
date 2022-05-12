@@ -19,7 +19,6 @@ import com.liferay.headless.delivery.client.dto.v1_0.ContentFieldValue;
 import com.liferay.headless.delivery.client.dto.v1_0.StructuredContent;
 import com.liferay.headless.delivery.client.dto.v1_0.StructuredContentFolder;
 import com.liferay.headless.delivery.client.pagination.Page;
-import com.liferay.headless.delivery.client.pagination.Pagination;
 import com.liferay.headless.delivery.client.resource.v1_0.StructuredContentFolderResource;
 import com.liferay.headless.delivery.client.resource.v1_0.StructuredContentResource;
 import com.liferay.petra.string.StringPool;
@@ -45,10 +44,9 @@ import java.io.File;
 
 import java.nio.charset.StandardCharsets;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collection;
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Set;
 import java.util.TreeSet;
 import java.util.regex.Matcher;
@@ -115,132 +113,97 @@ public class Main {
 		_fileNames.add(fileName);
 	}
 
-	private StructuredContentFolder _addStructuredContentFolder(String dirName)
+	private Long _getStructuredContentFolderId(String fileName)
 		throws Exception {
 
-		return _structuredContentFolderResource.postSiteStructuredContentFolder(
-			_GROUP_ID,
-			new StructuredContentFolder() {
-				{
-					description = "";
-					name = dirName;
-				}
-			});
-	}
-
-	private long _getStructuredContentFolderId(String fileName)
-		throws Exception {
-
-		List<String> dirNames = new ArrayList<>();
+		Long structuredContentFolderId = 0L;
 
 		String[] parts = fileName.split(
 			Matcher.quoteReplacement(System.getProperty("file.separator")));
 
 		for (String part : parts) {
-			if (!part.endsWith(".html") && !part.endsWith(".md") &&
-				!part.endsWith(".rst") && !part.equalsIgnoreCase("..") &&
-				!part.equalsIgnoreCase("docs") &&
-				!part.equalsIgnoreCase("en") && !part.equalsIgnoreCase("ja") &&
-				!part.equalsIgnoreCase("latest")) {
+			if (part.endsWith(".html") || part.endsWith(".md") ||
+				part.endsWith(".rst") || part.equalsIgnoreCase("..") ||
+				part.equalsIgnoreCase("docs") || part.equalsIgnoreCase("en") ||
+				part.equalsIgnoreCase("ja") ||
+				part.equalsIgnoreCase("latest")) {
 
-				dirNames.add(part);
+				continue;
 			}
+
+			String dirName = part;
+
+			structuredContentFolderId = _getStructuredContentFolderId(
+				dirName, structuredContentFolderId);
+		}
+
+		return structuredContentFolderId;
+	}
+
+	private Long _getStructuredContentFolderId(
+			String dirName, Long parentStructuredContentFolderId)
+		throws Exception {
+
+		String key = parentStructuredContentFolderId + "#" + dirName;
+
+		Long structuredContentFolderId = _structuredContentFolderIds.get(key);
+
+		if (structuredContentFolderId != null) {
+			return structuredContentFolderId;
 		}
 
 		StructuredContentFolder structuredContentFolder = null;
-		long structuredContentFolderId = 0;
 
-		Collection<StructuredContentFolder> structuredContentFolders =
-			_getStructuredContentFolders();
+		if (parentStructuredContentFolderId == 0) {
+			Page<StructuredContentFolder> page =
+				_structuredContentFolderResource.
+					getSiteStructuredContentFoldersPage(
+						_GROUP_ID, null, null, null,
+						"name eq '" + dirName + "'", null, null);
 
-		if (structuredContentFolders.isEmpty()) {
-			structuredContentFolder = _addStructuredContentFolder(
-				dirNames.get(0));
+			structuredContentFolder = page.fetchFirstItem();
 
-			structuredContentFolderId = structuredContentFolder.getId();
-
-			structuredContentFolders = _getStructuredContentFolders();
-		}
-
-		for (String dirName : dirNames) {
-			if (structuredContentFolders.isEmpty()) {
+			if (structuredContentFolder == null) {
 				structuredContentFolder =
 					_structuredContentFolderResource.
-						postStructuredContentFolderStructuredContentFolder(
-							structuredContentFolderId,
+						postSiteStructuredContentFolder(
+							_GROUP_ID,
 							new StructuredContentFolder() {
 								{
 									description = "";
 									name = dirName;
 								}
 							});
-
-				structuredContentFolderId = structuredContentFolder.getId();
 			}
-			else {
-				boolean match = false;
-
-				for (StructuredContentFolder curStructuredContentFolder :
-						structuredContentFolders) {
-
-					if (dirName.equalsIgnoreCase(
-							curStructuredContentFolder.getName())) {
-
-						structuredContentFolderId =
-							curStructuredContentFolder.getId();
-
-						match = true;
-					}
-				}
-
-				if (!match) {
-					if (structuredContentFolderId == 0) {
-						structuredContentFolder = _addStructuredContentFolder(
-							dirName);
-
-						structuredContentFolderId =
-							structuredContentFolder.getId();
-					}
-					else {
-						structuredContentFolder =
-							_structuredContentFolderResource.
-								postStructuredContentFolderStructuredContentFolder(
-									structuredContentFolderId,
-									new StructuredContentFolder() {
-										{
-											description = "";
-											name = dirName;
-										}
-									});
-
-						structuredContentFolderId =
-							structuredContentFolder.getId();
-					}
-				}
-			}
-
+		}
+		else {
 			Page<StructuredContentFolder> page =
 				_structuredContentFolderResource.
 					getStructuredContentFolderStructuredContentFoldersPage(
-						structuredContentFolderId, null, null, null,
-						Pagination.of(1, 50), null);
+						parentStructuredContentFolderId, null, null,
+						"name eq '" + dirName + "'", null, null);
 
-			structuredContentFolders = page.getItems();
+			structuredContentFolder = page.fetchFirstItem();
+
+			if (structuredContentFolder == null) {
+				structuredContentFolder =
+					_structuredContentFolderResource.
+						postStructuredContentFolderStructuredContentFolder(
+							parentStructuredContentFolderId,
+							new StructuredContentFolder() {
+								{
+									description = "";
+									name = dirName;
+								}
+							});
+			}
 		}
 
+		structuredContentFolderId = structuredContentFolder.getId();
+
+		_structuredContentFolderIds.put(key, structuredContentFolderId);
+
 		return structuredContentFolderId;
-	}
-
-	private Collection<StructuredContentFolder> _getStructuredContentFolders()
-		throws Exception {
-
-		Page<StructuredContentFolder> page =
-			_structuredContentFolderResource.
-				getSiteStructuredContentFoldersPage(
-					_GROUP_ID, null, null, null, null, Pagination.of(1, 50),
-					null);
-
-		return page.getItems();
 	}
 
 	private String _getTitle(String text) {
@@ -362,6 +325,7 @@ public class Main {
 	private static final long _GROUP_ID = 20122;
 
 	private Set<String> _fileNames = new TreeSet<>();
+	private Map<String, Long> _structuredContentFolderIds = new HashMap<>();
 	private StructuredContentFolderResource _structuredContentFolderResource;
 	private StructuredContentResource _structuredContentResource;
 
