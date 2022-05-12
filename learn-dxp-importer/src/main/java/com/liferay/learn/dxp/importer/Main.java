@@ -68,6 +68,8 @@ public class Main {
 	}
 
 	public Main(String login, String password) {
+		_addFileNames("../docs");
+
 		StructuredContentResource.Builder structuredContentResourceBuilder =
 			StructuredContentResource.builder();
 
@@ -87,11 +89,7 @@ public class Main {
 	}
 
 	public void uploadToLiferay() throws Exception {
-		Set<String> fileNames = new TreeSet<>();
-
-		_addFileNames("../docs", fileNames);
-
-		for (String fileName : fileNames) {
+		for (String fileName : _fileNames) {
 			if (!fileName.contains("/en/") || !fileName.endsWith(".md")) {
 				continue;
 			}
@@ -106,16 +104,16 @@ public class Main {
 		}
 	}
 
-	private void _addFileNames(String fileName, Set<String> fileNames) {
+	private void _addFileNames(String fileName) {
 		File file = new File(fileName);
 
 		if (file.isDirectory()) {
 			for (String currentFileName : file.list()) {
-				_addFileNames(fileName + "/" + currentFileName, fileNames);
+				_addFileNames(fileName + "/" + currentFileName);
 			}
 		}
 
-		fileNames.add(fileName);
+		_fileNames.add(fileName);
 	}
 
 	private StructuredContentFolder _addTopLevelFolder(String folderName)
@@ -368,6 +366,7 @@ public class Main {
 
 	private static final long _GROUP_ID = 20122;
 
+	private Set<String> _fileNames = new TreeSet<>();
 	private StructuredContentFolderResource _structuredContentFolderResource;
 	private StructuredContentResource _structuredContentResource;
 
