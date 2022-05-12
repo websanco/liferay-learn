@@ -304,12 +304,7 @@ public class Main {
 				data = _toHTML(englishText);
 			}
 		};
-
 		String englishTitle = _getTitle(englishText);
-
-		ContentFieldValue japaneseContentFieldValue;
-
-		String japaneseTitle = englishTitle;
 
 		File japaneseFile = new File(fileName.replace("/en/", "/ja/"));
 
@@ -317,12 +312,6 @@ public class Main {
 			String japaneseText = FileUtils.readFileToString(
 				japaneseFile, StandardCharsets.UTF_8);
 
-			japaneseContentFieldValue = new ContentFieldValue() {
-				{
-					data = _toHTML(japaneseText);
-				}
-			};
-			japaneseTitle = _getTitle(japaneseText);
 			structuredContent.setContentFields(
 				new ContentField[] {
 					new ContentField() {
@@ -331,17 +320,23 @@ public class Main {
 							contentFieldValue_i18n = HashMapBuilder.put(
 								"en-US", englishContentFieldValue
 							).put(
-								"ja-JP", japaneseContentFieldValue
+								"ja-JP",
+								new ContentFieldValue() {
+									{
+										data = _toHTML(japaneseText);
+									}
+								}
 							).build();
 							name = "content";
 						}
 					}
 				});
+
 			structuredContent.setTitle_i18n(
 				HashMapBuilder.put(
 					"en-US", englishTitle
 				).put(
-					"ja-JP", japaneseTitle
+					"ja-JP", _getTitle(japaneseText)
 				).build());
 		}
 		else {
@@ -357,7 +352,7 @@ public class Main {
 		}
 
 		structuredContent.setContentStructureId(_CONTENT_STRUCTURE_ID);
-		structuredContent.setTitle(_getTitle(englishText));
+		structuredContent.setTitle(englishTitle);
 
 		return structuredContent;
 	}
