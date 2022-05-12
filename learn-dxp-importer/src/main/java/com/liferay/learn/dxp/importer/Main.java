@@ -149,20 +149,11 @@ public class Main {
 			}
 		}
 
-		return _retrieveCreateFolderId(folderList, _getTopLevelFolders());
+		return _retrieveCreateFolderId(
+			folderList, _getStructuredContentFolders());
 	}
 
-	private String _getTitle(String text) {
-		int x = text.indexOf("#");
-
-		int y = text.indexOf(StringPool.NEW_LINE, x);
-
-		String title = text.substring(x + 1, y);
-
-		return title.trim();
-	}
-
-	private ArrayList<StructuredContentFolder> _getTopLevelFolders()
+	private List<StructuredContentFolder> _getStructuredContentFolders()
 		throws Exception {
 
 		Page<StructuredContentFolder> page =
@@ -177,9 +168,18 @@ public class Main {
 		return topLevelFolders;
 	}
 
+	private String _getTitle(String text) {
+		int x = text.indexOf("#");
+
+		int y = text.indexOf(StringPool.NEW_LINE, x);
+
+		String title = text.substring(x + 1, y);
+
+		return title.trim();
+	}
+
 	private long _retrieveCreateFolderId(
-			List<String> fileList,
-			ArrayList<StructuredContentFolder> liferayList)
+			List<String> fileList, List<StructuredContentFolder> liferayList)
 		throws Exception {
 
 		long folderId = 0;
@@ -193,7 +193,7 @@ public class Main {
 
 			folderId = folder.getId();
 
-			liferayList = _getTopLevelFolders();
+			liferayList = _getStructuredContentFolders();
 		}
 
 		for (String folderName : fileList) {
