@@ -44,8 +44,8 @@ import com.vladsch.flexmark.util.data.MutableDataSet;
 import java.io.File;
 
 import java.nio.charset.StandardCharsets;
-import java.util.ArrayList;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Set;
@@ -61,22 +61,48 @@ import org.apache.commons.io.FileUtils;
 public class Main {
 
 	public static void main(String[] arguments) throws Exception {
+		Main main = new Main();
+
+		main.uploadToLiferay();
+	}
+
+	public Main() {
+		StructuredContentResource.Builder builder =
+			StructuredContentResource.builder();
+
+		_structuredContentResource = builder.authentication(
+			"test@liferay.com", "test"
+		).build();
+
+		StructuredContentFolderResource.Builder folderBuilder =
+			StructuredContentFolderResource.builder();
+
+		_structuredContentFolderResource = folderBuilder.authentication(
+			"test@liferay.com", "test"
+		).build();
+	}
+
+	public void uploadToLiferay() throws Exception {
 		Set<String> fileNames = new TreeSet<>();
 
 		_addFileNames("../docs", fileNames);
-		
-		_initStructuredContentResources();
 
 		for (String fileName : fileNames) {
-			if (fileName.contains("/en/") && fileName.endsWith(".md")) {
-				System.out.println(fileName);
-
-				_uploadHTML(fileName);
+			if (!fileName.contains("/en/") || !fileName.endsWith(".md")) {
+				continue;
 			}
+
+			System.out.println(fileName);
+
+			long folderId = _getFolderId(fileName);
+
+			_structuredContentResource.
+				postStructuredContentFolderStructuredContent(
+					folderId, _toStructuredContent(fileName));
 		}
 	}
 
-	private static void _addFileNames(String fileName, Set<String> fileNames) {
+	private void _addFileNames(String fileName, Set<String> fileNames) {
 		File file = new File(fileName);
 
 		if (file.isDirectory()) {
@@ -88,30 +114,29 @@ public class Main {
 		fileNames.add(fileName);
 	}
 
-	private static StructuredContentFolder _addTopLevelFolder(String folderName) 
+	private StructuredContentFolder _addTopLevelFolder(String folderName)
 		throws Exception {
 
 		return _structuredContentFolderResource.postSiteStructuredContentFolder(
-			_GROUP_ID, new StructuredContentFolder() {
+			_GROUP_ID,
+			new StructuredContentFolder() {
 				{
 					description = "";
 					name = folderName;
 				}
-		});
-
+			});
 	}
 
-	private static long _getFolderId(String fileName) throws Exception {
-		String[] fileFolders = fileName.split(Matcher.quoteReplacement(System.getProperty("file.separator")));
+	private long _getFolderId(String fileName) throws Exception {
+		String[] fileFolders = fileName.split(
+			Matcher.quoteReplacement(System.getProperty("file.separator")));
 
 		List<String> folderList = _sanitizeFolderList(fileFolders);
 
 		return _retrieveCreateFolderId(folderList, _getTopLevelFolders());
-
 	}
 
-
-	private static String _getTitle(String text) {
+	private String _getTitle(String text) {
 		int x = text.indexOf("#");
 
 		int y = text.indexOf(StringPool.NEW_LINE, x);
@@ -121,142 +146,120 @@ public class Main {
 		return title.trim();
 	}
 
-	private static ArrayList<StructuredContentFolder> _getTopLevelFolders() throws Exception {
+	private ArrayList<StructuredContentFolder> _getTopLevelFolders()
+		throws Exception {
 
-		Page<StructuredContentFolder> page = 
-			_structuredContentFolderResource.getSiteStructuredContentFoldersPage(
-			_GROUP_ID, null, null, null, null, Pagination.of(1,50), null);
+		Page<StructuredContentFolder> page =
+			_structuredContentFolderResource.
+				getSiteStructuredContentFoldersPage(
+					_GROUP_ID, null, null, null, null, Pagination.of(1, 50),
+					null);
 
-		ArrayList<StructuredContentFolder> topLevelFolders = (ArrayList)page.getItems();
+		ArrayList<StructuredContentFolder> topLevelFolders =
+			(ArrayList)page.getItems();
 
 		return topLevelFolders;
 	}
 
-	private static void _initStructuredContentResources() {
+	private long _retrieveCreateFolderId(
+			List<String> fileList,
+			ArrayList<StructuredContentFolder> liferayList)
+		throws Exception {
 
-		StructuredContentResource.Builder builder =
-			StructuredContentResource.builder();
-
-		_structuredContentResource =
-			builder.authentication(
-				"test@liferay.com", "test"
-			).build();
-
-		StructuredContentFolderResource.Builder folderBuilder = 
-			StructuredContentFolderResource.builder();
-
-		_structuredContentFolderResource = 
-			folderBuilder.authentication(
-				"test@liferay.com", "test"
-			).build();
-	}
-
-	private static long _retrieveCreateFolderId(List<String> fileList, 
-		ArrayList<StructuredContentFolder> liferayList) throws Exception {
 		long folderId = 0;
 
 		StructuredContentFolder folder;
 
 		// If we have an empty liferayList coming in
-		if (liferayList.size() == 0) {
 
+		if (liferayList.size() == 0) {
 			folder = _addTopLevelFolder(fileList.get(0));
 
 			folderId = folder.getId();
 
 			liferayList = _getTopLevelFolders();
+		}
 
-		} 
-
-		for (int i=0;i<fileList.size();i++) {
-			String folderName = fileList.get(i);
-
+		for (String folderName : fileList) {
 			if (liferayList.size() > 0) {
-
-				boolean matched = false; 
+				boolean matched = false;
 
 				for (StructuredContentFolder liferayFolder : liferayList) {
-
-					 if (folderName.equalsIgnoreCase(liferayFolder.getName())) {
-
+					if (folderName.equalsIgnoreCase(liferayFolder.getName())) {
 						folderId = liferayFolder.getId();
 
 						matched = true;
-
-					} 
-					
+					}
 				}
 
-				if (matched == false) {
-
+				if (!matched) {
 					if (folderId == 0) {
 						folder = _addTopLevelFolder(folderName);
 
 						folderId = folder.getId();
+					}
+					else {
+						folder =
+							_structuredContentFolderResource.
+								postStructuredContentFolderStructuredContentFolder(
+									folderId,
+									new StructuredContentFolder() {
+										{
+											description = "";
+											name = folderName;
+										}
+									});
 
-					} else {
-					folder = 
-						_structuredContentFolderResource.postStructuredContentFolderStructuredContentFolder(
-						folderId, new StructuredContentFolder() { 
-							{
-								description = "";
-								name = folderName;
-							}
-						});
-
-					folderId = folder.getId();
-
+						folderId = folder.getId();
 					}
 				}
-
-			} else {
-
-				folder = 
-					_structuredContentFolderResource.postStructuredContentFolderStructuredContentFolder(
-					folderId, new StructuredContentFolder() { 
-						{
-							description = "";
-							name = folderName;
-						}
-					});
+			}
+			else {
+				folder =
+					_structuredContentFolderResource.
+						postStructuredContentFolderStructuredContentFolder(
+							folderId,
+							new StructuredContentFolder() {
+								{
+									description = "";
+									name = folderName;
+								}
+							});
 
 				folderId = folder.getId();
 			}
 
-			Page<StructuredContentFolder> page = 
-				_structuredContentFolderResource.getStructuredContentFolderStructuredContentFoldersPage(
-					folderId, null, null, null, Pagination.of(1, 50), null);
+			Page<StructuredContentFolder> page =
+				_structuredContentFolderResource.
+					getStructuredContentFolderStructuredContentFoldersPage(
+						folderId, null, null, null, Pagination.of(1, 50), null);
 
 			liferayList = (ArrayList)page.getItems();
-
 		}
 
 		return folderId;
 	}
 
-	private static List _sanitizeFolderList(String[] folderList) {
-
+	private List _sanitizeFolderList(String[] folderList) {
 		ArrayList<String> fileFolders = new ArrayList();
-		
-		for (int i=0;i<folderList.length;i++) {
-			String fileFolder = folderList[i];
 
-			if (!fileFolder.equalsIgnoreCase("..") && !fileFolder.equalsIgnoreCase("docs") && 
-				!fileFolder.equalsIgnoreCase("latest") && !fileFolder.equalsIgnoreCase("en") && 
-				!fileFolder.equalsIgnoreCase("ja") && !fileFolder.endsWith(".md") && 
-				!fileFolder.endsWith(".html") && 
+		for (String fileFolder : folderList) {
+			if (!fileFolder.equalsIgnoreCase("..") &&
+				!fileFolder.equalsIgnoreCase("docs") &&
+				!fileFolder.equalsIgnoreCase("latest") &&
+				!fileFolder.equalsIgnoreCase("en") &&
+				!fileFolder.equalsIgnoreCase("ja") &&
+				!fileFolder.endsWith(".md") && !fileFolder.endsWith(".html") &&
 				!fileFolder.endsWith(".rst")) {
 
 				fileFolders.add(fileFolder);
-
 			}
-
 		}
 
 		return fileFolders;
 	}
 
-	private static String _toHTML(String text) {
+	private String _toHTML(String text) {
 		MutableDataSet mutableDataSet = new MutableDataSet().set(
 			AsideExtension.ALLOW_LEADING_SPACE, true
 		).set(
@@ -294,9 +297,8 @@ public class Main {
 		return htmlRenderer.render(parser.parse(text));
 	}
 
-	private static StructuredContent _toStructuredContent(String fileName)
+	private StructuredContent _toStructuredContent(String fileName)
 		throws Exception {
-
 
 		StructuredContent structuredContent = new StructuredContent();
 
@@ -366,19 +368,11 @@ public class Main {
 		return structuredContent;
 	}
 
-	private static void _uploadHTML(String fileName) throws Exception {
-		long folderId = _getFolderId(fileName);
-
-		_structuredContentResource.postStructuredContentFolderStructuredContent(
-			folderId, _toStructuredContent(fileName));
-	}
-
 	private static final long _CONTENT_STRUCTURE_ID = 40090;
 
 	private static final long _GROUP_ID = 20122;
 
-	private static StructuredContentResource _structuredContentResource;
-
-	private static StructuredContentFolderResource _structuredContentFolderResource;
+	private StructuredContentFolderResource _structuredContentFolderResource;
+	private StructuredContentResource _structuredContentResource;
 
 }
