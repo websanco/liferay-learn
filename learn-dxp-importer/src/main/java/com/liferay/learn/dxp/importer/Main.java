@@ -47,6 +47,7 @@ import java.nio.charset.StandardCharsets;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
@@ -153,7 +154,7 @@ public class Main {
 			folderList, _getStructuredContentFolders());
 	}
 
-	private List<StructuredContentFolder> _getStructuredContentFolders()
+	private Collection<StructuredContentFolder> _getStructuredContentFolders()
 		throws Exception {
 
 		Page<StructuredContentFolder> page =
@@ -162,10 +163,7 @@ public class Main {
 					_GROUP_ID, null, null, null, null, Pagination.of(1, 50),
 					null);
 
-		ArrayList<StructuredContentFolder> topLevelFolders =
-			(ArrayList)page.getItems();
-
-		return topLevelFolders;
+		return page.getItems();
 	}
 
 	private String _getTitle(String text) {
@@ -179,7 +177,8 @@ public class Main {
 	}
 
 	private long _retrieveCreateFolderId(
-			List<String> fileList, List<StructuredContentFolder> liferayList)
+			List<String> fileList,
+			Collection<StructuredContentFolder> liferayList)
 		throws Exception {
 
 		long folderId = 0;
