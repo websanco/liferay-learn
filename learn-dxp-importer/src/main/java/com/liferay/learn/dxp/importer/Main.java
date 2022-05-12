@@ -98,7 +98,7 @@ public class Main {
 
 			System.out.println(fileName);
 
-			long folderId = _getFolderId(fileName);
+			long folderId = _getStructuredContentFolderId(fileName);
 
 			_structuredContentResource.
 				postStructuredContentFolderStructuredContent(
@@ -131,53 +131,7 @@ public class Main {
 			});
 	}
 
-	private long _getFolderId(String fileName) throws Exception {
-		List<String> folderList = new ArrayList<>();
-
-		String[] parts = fileName.split(
-			Matcher.quoteReplacement(System.getProperty("file.separator")));
-
-		for (String part : parts) {
-			if (!part.endsWith(".html") &&
-				!part.endsWith(".md") &&
-				!part.endsWith(".rst") &&
-				!part.equalsIgnoreCase("..") &&
-				!part.equalsIgnoreCase("docs") &&
-				!part.equalsIgnoreCase("en") &&
-				!part.equalsIgnoreCase("ja") &&
-				!part.equalsIgnoreCase("latest")) {
-
-				folderList.add(part);
-			}
-		}
-
-		return _retrieveCreateFolderId(
-			folderList, _getStructuredContentFolders());
-	}
-
-	private Collection<StructuredContentFolder> _getStructuredContentFolders()
-		throws Exception {
-
-		Page<StructuredContentFolder> page =
-			_structuredContentFolderResource.
-				getSiteStructuredContentFoldersPage(
-					_GROUP_ID, null, null, null, null, Pagination.of(1, 50),
-					null);
-
-		return page.getItems();
-	}
-
-	private String _getTitle(String text) {
-		int x = text.indexOf("#");
-
-		int y = text.indexOf(StringPool.NEW_LINE, x);
-
-		String title = text.substring(x + 1, y);
-
-		return title.trim();
-	}
-
-	private long _retrieveCreateFolderId(
+	private long _getStructuredContentFolderId(
 			List<String> fileList,
 			Collection<StructuredContentFolder> liferayList)
 		throws Exception {
@@ -254,6 +208,51 @@ public class Main {
 		}
 
 		return folderId;
+	}
+
+	private long _getStructuredContentFolderId(String fileName)
+		throws Exception {
+
+		List<String> folderList = new ArrayList<>();
+
+		String[] parts = fileName.split(
+			Matcher.quoteReplacement(System.getProperty("file.separator")));
+
+		for (String part : parts) {
+			if (!part.endsWith(".html") && !part.endsWith(".md") &&
+				!part.endsWith(".rst") && !part.equalsIgnoreCase("..") &&
+				!part.equalsIgnoreCase("docs") &&
+				!part.equalsIgnoreCase("en") && !part.equalsIgnoreCase("ja") &&
+				!part.equalsIgnoreCase("latest")) {
+
+				folderList.add(part);
+			}
+		}
+
+		return _getStructuredContentFolderId(
+			folderList, _getStructuredContentFolders());
+	}
+
+	private Collection<StructuredContentFolder> _getStructuredContentFolders()
+		throws Exception {
+
+		Page<StructuredContentFolder> page =
+			_structuredContentFolderResource.
+				getSiteStructuredContentFoldersPage(
+					_GROUP_ID, null, null, null, null, Pagination.of(1, 50),
+					null);
+
+		return page.getItems();
+	}
+
+	private String _getTitle(String text) {
+		int x = text.indexOf("#");
+
+		int y = text.indexOf(StringPool.NEW_LINE, x);
+
+		String title = text.substring(x + 1, y);
+
+		return title.trim();
 	}
 
 	private String _toHTML(String text) {
