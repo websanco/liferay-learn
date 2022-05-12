@@ -96,11 +96,10 @@ public class Main {
 
 			System.out.println(fileName);
 
-			long folderId = _getStructuredContentFolderId(fileName);
-
 			_structuredContentResource.
 				postStructuredContentFolderStructuredContent(
-					folderId, _toStructuredContent(fileName));
+					_getStructuredContentFolderId(fileName),
+					_toStructuredContent(fileName));
 		}
 	}
 
@@ -116,7 +115,8 @@ public class Main {
 		_fileNames.add(fileName);
 	}
 
-	private StructuredContentFolder _addTopLevelFolder(String folderName)
+	private StructuredContentFolder _addStructuredContentFolder(
+			String folderName)
 		throws Exception {
 
 		return _structuredContentFolderResource.postSiteStructuredContentFolder(
@@ -141,7 +141,7 @@ public class Main {
 		// If we have an empty liferayList coming in
 
 		if (liferayList.size() == 0) {
-			folder = _addTopLevelFolder(fileList.get(0));
+			folder = _addStructuredContentFolder(fileList.get(0));
 
 			folderId = folder.getId();
 
@@ -162,7 +162,7 @@ public class Main {
 
 				if (!matched) {
 					if (folderId == 0) {
-						folder = _addTopLevelFolder(folderName);
+						folder = _addStructuredContentFolder(folderName);
 
 						folderId = folder.getId();
 					}
