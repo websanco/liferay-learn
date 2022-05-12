@@ -129,24 +129,41 @@ public class Main {
 			});
 	}
 
-	private long _getStructuredContentFolderId(
-			List<String> fileList,
-			Collection<StructuredContentFolder> structuredContentFolders)
+	private long _getStructuredContentFolderId(String fileName)
 		throws Exception {
+
+		List<String> folderList = new ArrayList<>();
+
+		String[] parts = fileName.split(
+			Matcher.quoteReplacement(System.getProperty("file.separator")));
+
+		for (String part : parts) {
+			if (!part.endsWith(".html") && !part.endsWith(".md") &&
+				!part.endsWith(".rst") && !part.equalsIgnoreCase("..") &&
+				!part.equalsIgnoreCase("docs") &&
+				!part.equalsIgnoreCase("en") && !part.equalsIgnoreCase("ja") &&
+				!part.equalsIgnoreCase("latest")) {
+
+				folderList.add(part);
+			}
+		}
 
 		StructuredContentFolder structuredContentFolder = null;
 		long structuredContentFolderId = 0;
 
+		Collection<StructuredContentFolder> structuredContentFolders =
+			_getStructuredContentFolders();
+
 		if (structuredContentFolders.isEmpty()) {
 			structuredContentFolder = _addStructuredContentFolder(
-				fileList.get(0));
+				folderList.get(0));
 
 			structuredContentFolderId = structuredContentFolder.getId();
 
 			structuredContentFolders = _getStructuredContentFolders();
 		}
 
-		for (String folderName : fileList) {
+		for (String folderName : folderList) {
 			if (structuredContentFolders.isEmpty()) {
 				structuredContentFolder =
 					_structuredContentFolderResource.
@@ -213,29 +230,6 @@ public class Main {
 		}
 
 		return structuredContentFolderId;
-	}
-
-	private long _getStructuredContentFolderId(String fileName)
-		throws Exception {
-
-		List<String> folderList = new ArrayList<>();
-
-		String[] parts = fileName.split(
-			Matcher.quoteReplacement(System.getProperty("file.separator")));
-
-		for (String part : parts) {
-			if (!part.endsWith(".html") && !part.endsWith(".md") &&
-				!part.endsWith(".rst") && !part.equalsIgnoreCase("..") &&
-				!part.equalsIgnoreCase("docs") &&
-				!part.equalsIgnoreCase("en") && !part.equalsIgnoreCase("ja") &&
-				!part.equalsIgnoreCase("latest")) {
-
-				folderList.add(part);
-			}
-		}
-
-		return _getStructuredContentFolderId(
-			folderList, _getStructuredContentFolders());
 	}
 
 	private Collection<StructuredContentFolder> _getStructuredContentFolders()
