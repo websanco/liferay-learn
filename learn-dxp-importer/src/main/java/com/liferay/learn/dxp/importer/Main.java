@@ -132,21 +132,20 @@ public class Main {
 	}
 
 	private long _getFolderId(String fileName) throws Exception {
-		String[] fileFolders = fileName.split(
-			Matcher.quoteReplacement(System.getProperty("file.separator")));
-
 		List<String> folderList = new ArrayList<>();
 
-		for (String fileFolder : fileFolders) {
-			if (!fileFolder.equalsIgnoreCase("..") &&
-				!fileFolder.equalsIgnoreCase("docs") &&
-				!fileFolder.equalsIgnoreCase("latest") &&
-				!fileFolder.equalsIgnoreCase("en") &&
-				!fileFolder.equalsIgnoreCase("ja") &&
-				!fileFolder.endsWith(".md") && !fileFolder.endsWith(".html") &&
-				!fileFolder.endsWith(".rst")) {
+		String[] parts = fileName.split(
+			Matcher.quoteReplacement(System.getProperty("file.separator")));
 
-				folderList.add(fileFolder);
+		for (String part : parts) {
+			if (!part.equalsIgnoreCase("..") &&
+				!part.equalsIgnoreCase("docs") &&
+				!part.equalsIgnoreCase("latest") &&
+				!part.equalsIgnoreCase("en") && !part.equalsIgnoreCase("ja") &&
+				!part.endsWith(".md") && !part.endsWith(".html") &&
+				!part.endsWith(".rst")) {
+
+				folderList.add(part);
 			}
 		}
 
