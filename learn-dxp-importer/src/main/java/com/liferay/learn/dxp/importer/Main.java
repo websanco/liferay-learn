@@ -138,12 +138,14 @@ public class Main {
 			Matcher.quoteReplacement(System.getProperty("file.separator")));
 
 		for (String part : parts) {
-			if (!part.equalsIgnoreCase("..") &&
+			if (!part.endsWith(".html") &&
+				!part.endsWith(".md") &&
+				!part.endsWith(".rst") &&
+				!part.equalsIgnoreCase("..") &&
 				!part.equalsIgnoreCase("docs") &&
-				!part.equalsIgnoreCase("latest") &&
-				!part.equalsIgnoreCase("en") && !part.equalsIgnoreCase("ja") &&
-				!part.endsWith(".md") && !part.endsWith(".html") &&
-				!part.endsWith(".rst")) {
+				!part.equalsIgnoreCase("en") &&
+				!part.equalsIgnoreCase("ja") &&
+				!part.equalsIgnoreCase("latest")) {
 
 				folderList.add(part);
 			}
