@@ -134,14 +134,14 @@ public class Main {
 			Collection<StructuredContentFolder> structuredContentFolders)
 		throws Exception {
 
-		long folderId = 0;
-
-		StructuredContentFolder folder;
+		StructuredContentFolder structuredContentFolder = null;
+		long structuredContentFolderId = 0;
 
 		if (structuredContentFolders.isEmpty()) {
-			folder = _addStructuredContentFolder(fileList.get(0));
+			structuredContentFolder = _addStructuredContentFolder(
+				fileList.get(0));
 
-			folderId = folder.getId();
+			structuredContentFolderId = structuredContentFolder.getId();
 
 			structuredContentFolders = _getStructuredContentFolders();
 		}
@@ -154,23 +154,25 @@ public class Main {
 						structuredContentFolders) {
 
 					if (folderName.equalsIgnoreCase(liferayFolder.getName())) {
-						folderId = liferayFolder.getId();
+						structuredContentFolderId = liferayFolder.getId();
 
 						matched = true;
 					}
 				}
 
 				if (!matched) {
-					if (folderId == 0) {
-						folder = _addStructuredContentFolder(folderName);
+					if (structuredContentFolderId == 0) {
+						structuredContentFolder = _addStructuredContentFolder(
+							folderName);
 
-						folderId = folder.getId();
+						structuredContentFolderId =
+							structuredContentFolder.getId();
 					}
 					else {
-						folder =
+						structuredContentFolder =
 							_structuredContentFolderResource.
 								postStructuredContentFolderStructuredContentFolder(
-									folderId,
+									structuredContentFolderId,
 									new StructuredContentFolder() {
 										{
 											description = "";
@@ -178,15 +180,16 @@ public class Main {
 										}
 									});
 
-						folderId = folder.getId();
+						structuredContentFolderId =
+							structuredContentFolder.getId();
 					}
 				}
 			}
 			else {
-				folder =
+				structuredContentFolder =
 					_structuredContentFolderResource.
 						postStructuredContentFolderStructuredContentFolder(
-							folderId,
+							structuredContentFolderId,
 							new StructuredContentFolder() {
 								{
 									description = "";
@@ -194,18 +197,19 @@ public class Main {
 								}
 							});
 
-				folderId = folder.getId();
+				structuredContentFolderId = structuredContentFolder.getId();
 			}
 
 			Page<StructuredContentFolder> page =
 				_structuredContentFolderResource.
 					getStructuredContentFolderStructuredContentFoldersPage(
-						folderId, null, null, null, Pagination.of(1, 50), null);
+						structuredContentFolderId, null, null, null,
+						Pagination.of(1, 50), null);
 
 			structuredContentFolders = page.getItems();
 		}
 
-		return folderId;
+		return structuredContentFolderId;
 	}
 
 	private long _getStructuredContentFolderId(String fileName)
