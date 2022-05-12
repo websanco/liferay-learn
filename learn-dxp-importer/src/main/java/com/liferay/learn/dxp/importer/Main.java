@@ -147,7 +147,21 @@ public class Main {
 		}
 
 		for (String folderName : fileList) {
-			if (!structuredContentFolders.isEmpty()) {
+			if (structuredContentFolders.isEmpty()) {
+				structuredContentFolder =
+					_structuredContentFolderResource.
+						postStructuredContentFolderStructuredContentFolder(
+							structuredContentFolderId,
+							new StructuredContentFolder() {
+								{
+									description = "";
+									name = folderName;
+								}
+							});
+
+				structuredContentFolderId = structuredContentFolder.getId();
+			}
+			else {
 				boolean matched = false;
 
 				for (StructuredContentFolder liferayFolder :
@@ -184,20 +198,6 @@ public class Main {
 							structuredContentFolder.getId();
 					}
 				}
-			}
-			else {
-				structuredContentFolder =
-					_structuredContentFolderResource.
-						postStructuredContentFolderStructuredContentFolder(
-							structuredContentFolderId,
-							new StructuredContentFolder() {
-								{
-									description = "";
-									name = folderName;
-								}
-							});
-
-				structuredContentFolderId = structuredContentFolder.getId();
 			}
 
 			Page<StructuredContentFolder> page =
