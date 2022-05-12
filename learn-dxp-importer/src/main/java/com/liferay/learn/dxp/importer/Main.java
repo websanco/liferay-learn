@@ -134,7 +134,20 @@ public class Main {
 		String[] fileFolders = fileName.split(
 			Matcher.quoteReplacement(System.getProperty("file.separator")));
 
-		List<String> folderList = _sanitizeFolderList(fileFolders);
+		List<String> folderList = new ArrayList<>();
+
+		for (String fileFolder : fileFolders) {
+			if (!fileFolder.equalsIgnoreCase("..") &&
+				!fileFolder.equalsIgnoreCase("docs") &&
+				!fileFolder.equalsIgnoreCase("latest") &&
+				!fileFolder.equalsIgnoreCase("en") &&
+				!fileFolder.equalsIgnoreCase("ja") &&
+				!fileFolder.endsWith(".md") && !fileFolder.endsWith(".html") &&
+				!fileFolder.endsWith(".rst")) {
+
+				folderList.add(fileFolder);
+			}
+		}
 
 		return _retrieveCreateFolderId(folderList, _getTopLevelFolders());
 	}
@@ -241,25 +254,6 @@ public class Main {
 		}
 
 		return folderId;
-	}
-
-	private List _sanitizeFolderList(String[] folderList) {
-		ArrayList<String> fileFolders = new ArrayList();
-
-		for (String fileFolder : folderList) {
-			if (!fileFolder.equalsIgnoreCase("..") &&
-				!fileFolder.equalsIgnoreCase("docs") &&
-				!fileFolder.equalsIgnoreCase("latest") &&
-				!fileFolder.equalsIgnoreCase("en") &&
-				!fileFolder.equalsIgnoreCase("ja") &&
-				!fileFolder.endsWith(".md") && !fileFolder.endsWith(".html") &&
-				!fileFolder.endsWith(".rst")) {
-
-				fileFolders.add(fileFolder);
-			}
-		}
-
-		return fileFolders;
 	}
 
 	private String _toHTML(String text) {
