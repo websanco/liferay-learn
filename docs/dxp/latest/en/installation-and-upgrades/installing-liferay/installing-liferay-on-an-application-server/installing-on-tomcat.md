@@ -265,6 +265,8 @@ Otherwise, you can configure the data source in Tomcat.
 
 The data source is configured.
 
+If you are using JNDI connections, see [Setting Up JNDI on Tomcat](./setting-up-jndi-on-tomcat.md)
+
 ## Mail Configuration
 
 The easiest way to configure mail is to use the DXP [built-in mail session](../../setting-up-liferay/configuring-mail.md). If you use the built-in mail session, you may skip this section.
