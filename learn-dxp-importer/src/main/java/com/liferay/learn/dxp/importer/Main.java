@@ -162,7 +162,7 @@ public class Main {
 				structuredContentFolderId = structuredContentFolder.getId();
 			}
 			else {
-				boolean matched = false;
+				boolean match = false;
 
 				for (StructuredContentFolder liferayFolder :
 						structuredContentFolders) {
@@ -170,11 +170,11 @@ public class Main {
 					if (folderName.equalsIgnoreCase(liferayFolder.getName())) {
 						structuredContentFolderId = liferayFolder.getId();
 
-						matched = true;
+						match = true;
 					}
 				}
 
-				if (!matched) {
+				if (!match) {
 					if (structuredContentFolderId == 0) {
 						structuredContentFolder = _addStructuredContentFolder(
 							folderName);
