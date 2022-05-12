@@ -52,7 +52,7 @@ Note the `<img>` tag with a `data-fileentryid` attribute. Adaptive Media uses th
 
 ## Staging Adapted Images
 
-Adaptive Media is fully integrated with DXP's [content staging](/dxp/latest/en/content-authoring-and-management.html) and [export/import](../../../../site-building/building-sites/importing-exporting-pages-and-content.md) functionality. Adaptive Media includes adapted images in staged content when published, and can update those images to match any new resolutions.
+Adaptive Media is fully integrated with DXP's [content staging](../../../../content-authoring-and-management.md) and [export/import](../../../../site-building/building-sites/importing-exporting-pages-and-content.md) functionality. Adaptive Media includes adapted images in staged content when published, and can update those images to match any new resolutions.
 
 Similarly, when content that contains adapted images is exported, Adaptive Media exports those images in the LAR file. That LAR file can then be imported to restore or transfer that content, along with its adapted images.
 
