@@ -164,11 +164,14 @@ public class Main {
 			else {
 				boolean match = false;
 
-				for (StructuredContentFolder liferayFolder :
+				for (StructuredContentFolder curStructuredContentFolder :
 						structuredContentFolders) {
 
-					if (folderName.equalsIgnoreCase(liferayFolder.getName())) {
-						structuredContentFolderId = liferayFolder.getId();
+					if (folderName.equalsIgnoreCase(
+							curStructuredContentFolder.getName())) {
+
+						structuredContentFolderId =
+							curStructuredContentFolder.getId();
 
 						match = true;
 					}
