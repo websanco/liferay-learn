@@ -131,28 +131,28 @@ public class Main {
 
 	private long _getStructuredContentFolderId(
 			List<String> fileList,
-			Collection<StructuredContentFolder> liferayList)
+			Collection<StructuredContentFolder> structuredContentFolders)
 		throws Exception {
 
 		long folderId = 0;
 
 		StructuredContentFolder folder;
 
-		// If we have an empty liferayList coming in
-
-		if (liferayList.size() == 0) {
+		if (structuredContentFolders.size() == 0) {
 			folder = _addStructuredContentFolder(fileList.get(0));
 
 			folderId = folder.getId();
 
-			liferayList = _getStructuredContentFolders();
+			structuredContentFolders = _getStructuredContentFolders();
 		}
 
 		for (String folderName : fileList) {
-			if (liferayList.size() > 0) {
+			if (structuredContentFolders.size() > 0) {
 				boolean matched = false;
 
-				for (StructuredContentFolder liferayFolder : liferayList) {
+				for (StructuredContentFolder liferayFolder :
+						structuredContentFolders) {
+
 					if (folderName.equalsIgnoreCase(liferayFolder.getName())) {
 						folderId = liferayFolder.getId();
 
@@ -202,7 +202,7 @@ public class Main {
 					getStructuredContentFolderStructuredContentFoldersPage(
 						folderId, null, null, null, Pagination.of(1, 50), null);
 
-			liferayList = (ArrayList)page.getItems();
+			structuredContentFolders = page.getItems();
 		}
 
 		return folderId;
