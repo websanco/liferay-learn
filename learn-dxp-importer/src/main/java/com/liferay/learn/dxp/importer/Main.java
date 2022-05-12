@@ -138,7 +138,7 @@ public class Main {
 
 		StructuredContentFolder folder;
 
-		if (structuredContentFolders.size() == 0) {
+		if (structuredContentFolders.isEmpty()) {
 			folder = _addStructuredContentFolder(fileList.get(0));
 
 			folderId = folder.getId();
@@ -147,7 +147,7 @@ public class Main {
 		}
 
 		for (String folderName : fileList) {
-			if (structuredContentFolders.size() > 0) {
+			if (!structuredContentFolders.isEmpty()) {
 				boolean matched = false;
 
 				for (StructuredContentFolder liferayFolder :
