@@ -115,8 +115,7 @@ public class Main {
 		_fileNames.add(fileName);
 	}
 
-	private StructuredContentFolder _addStructuredContentFolder(
-			String folderName)
+	private StructuredContentFolder _addStructuredContentFolder(String dirName)
 		throws Exception {
 
 		return _structuredContentFolderResource.postSiteStructuredContentFolder(
@@ -124,7 +123,7 @@ public class Main {
 			new StructuredContentFolder() {
 				{
 					description = "";
-					name = folderName;
+					name = dirName;
 				}
 			});
 	}
@@ -132,7 +131,7 @@ public class Main {
 	private long _getStructuredContentFolderId(String fileName)
 		throws Exception {
 
-		List<String> folderList = new ArrayList<>();
+		List<String> dirNames = new ArrayList<>();
 
 		String[] parts = fileName.split(
 			Matcher.quoteReplacement(System.getProperty("file.separator")));
@@ -144,7 +143,7 @@ public class Main {
 				!part.equalsIgnoreCase("en") && !part.equalsIgnoreCase("ja") &&
 				!part.equalsIgnoreCase("latest")) {
 
-				folderList.add(part);
+				dirNames.add(part);
 			}
 		}
 
@@ -156,14 +155,14 @@ public class Main {
 
 		if (structuredContentFolders.isEmpty()) {
 			structuredContentFolder = _addStructuredContentFolder(
-				folderList.get(0));
+				dirNames.get(0));
 
 			structuredContentFolderId = structuredContentFolder.getId();
 
 			structuredContentFolders = _getStructuredContentFolders();
 		}
 
-		for (String folderName : folderList) {
+		for (String dirName : dirNames) {
 			if (structuredContentFolders.isEmpty()) {
 				structuredContentFolder =
 					_structuredContentFolderResource.
@@ -172,7 +171,7 @@ public class Main {
 							new StructuredContentFolder() {
 								{
 									description = "";
-									name = folderName;
+									name = dirName;
 								}
 							});
 
@@ -184,7 +183,7 @@ public class Main {
 				for (StructuredContentFolder curStructuredContentFolder :
 						structuredContentFolders) {
 
-					if (folderName.equalsIgnoreCase(
+					if (dirName.equalsIgnoreCase(
 							curStructuredContentFolder.getName())) {
 
 						structuredContentFolderId =
@@ -197,7 +196,7 @@ public class Main {
 				if (!match) {
 					if (structuredContentFolderId == 0) {
 						structuredContentFolder = _addStructuredContentFolder(
-							folderName);
+							dirName);
 
 						structuredContentFolderId =
 							structuredContentFolder.getId();
@@ -210,7 +209,7 @@ public class Main {
 									new StructuredContentFolder() {
 										{
 											description = "";
-											name = folderName;
+											name = dirName;
 										}
 									});
 
