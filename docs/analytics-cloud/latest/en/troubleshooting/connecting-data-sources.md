@@ -73,6 +73,8 @@ Individual Profiles take longer to process and become available over time.
 
 ```{important}
 Your Liferay DXP installation must meet the following fix pack minimum requirements:
+
+  * 7.4+
   * 7.3 Fix Pack 1
   * 7.2 Fix Pack 11
   * 7.1 Fix Pack 22

@@ -4,6 +4,7 @@ To start using Liferay Analytics Cloud, visit [analytics.liferay.com](https://an
 
 ```{important}
 Your Liferay DXP installation must meet the following fix pack minimum requirements:
+* 7.4+
 * 7.3 Fix Pack 1
 * 7.2 Fix Pack 11
 * 7.1 Fix Pack 22

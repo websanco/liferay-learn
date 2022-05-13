@@ -4,6 +4,7 @@ After connecting your [Liferay DXP instance to Analytics Cloud](connecting-lifer
 
 ```{note}
 Selecting contact fields to sync is available in the following releases or higher:
+* Liferay 7.4+
 * Liferay 7.3 Fix Pack 1
 * Liferay 7.2 Fix Pack 9
 * Liferay 7.1 Fix Pack 20
