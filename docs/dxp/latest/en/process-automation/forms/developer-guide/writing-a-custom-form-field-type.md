@@ -9,9 +9,15 @@ The Forms application contains many highly configurable [field types out-of-the-
 * [Add custom settings to the field](#add-custom-settings-to-the-form-field)
 
 ```{note}
-The example project runs on Liferay 7.4. If you're running Liferay 7.3, the source code is compatible but the [Workspace project](../../../building-applications/tooling/liferay-workspace/what-is-liferay-workspace.md) must be reconfigured for Liferay 7.3. The steps to do this are included in the instructions below.
+- **Form field types in other applications:** Forms created with Documents and Media (Metadata Sets), Web Content (Structures), and the Forms application can all consume the same form fields. By default a custom form field is only used in the Forms application. To specify explicitly which applications should enable the form field type, add the component property:
 
-If you're running Liferay 7.2, this source code does not run due to a difference in supported front-end frameworks. Please see [Developing a Custom Form Field for Liferay 7.2](./developing-a-custom-form-field-for-liferay-7-2.md) to learn how to adapt the C2P9 Slider code sample for 7.2.
+    ```properties
+    "ddm.form.field.type.scope=document-library,forms,journal"
+    ```
+
+- **Project compatibility:** The example project runs on Liferay 7.4. If you're running Liferay 7.3, the source code is compatible but the [Workspace project](../../../building-applications/tooling/liferay-workspace/what-is-liferay-workspace.md) must be reconfigured for Liferay 7.3. The steps to do this are included in the instructions below.
+
+    If you're running Liferay 7.2, this source code does not run due to a difference in supported front-end frameworks. Please see [Developing a Custom Form Field for Liferay 7.2](./developing-a-custom-form-field-for-liferay-7-2.md) to learn how to adapt the C2P9 Slider code sample for 7.2.
 ```
 
 ## Examine the Custom Form Field in Liferay 
