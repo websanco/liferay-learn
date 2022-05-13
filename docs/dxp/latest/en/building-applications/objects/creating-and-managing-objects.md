@@ -10,6 +10,7 @@ creating-and-managing-objects/defining-object-relationships.md
 creating-and-managing-objects/defining-object-actions.md
 creating-and-managing-objects/designing-object-layouts.md
 creating-and-managing-objects/designing-object-views.md
+creating-and-managing-objects/adding-custom-validations.md
 creating-and-managing-objects/exporting-and-importing-object-structures.md
 creating-and-managing-objects/auditing-object-definition-events.md
 ```
