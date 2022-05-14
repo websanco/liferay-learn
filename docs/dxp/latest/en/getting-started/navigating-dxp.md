@@ -84,7 +84,7 @@ Here are some of the applications that can be managed from the _Applications Men
 
 * [Collections](../content-authoring-and-management/collections-and-collection-pages/about-collections-and-collection-pages.md) and the Content Dashboard
 * [Workflow](../process-automation/workflow/introduction-to-workflow.md)
-* [App Builder](../building-applications/app-builder.md)
+* [App Builder](../building-applications/app-builder.md) _(Deprecated and removed in Liferay 7.4)_
 
 ### Commerce Menu
 
