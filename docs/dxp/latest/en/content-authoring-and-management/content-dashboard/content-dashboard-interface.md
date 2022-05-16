@@ -113,7 +113,7 @@ In the list of contents, you can find the following columns:
 ```{note}
 The *First Vocabulary* and *Second Vocabulary* columns depend on the Vocabularies you select.
 ```
-```{warning}
+```{note}
 The subtypes of documents displayed in the content dashboard are Basic documents (doc, pdf, xls, jpg, etc.) and External Video Shortcuts.
 ``` 
 
