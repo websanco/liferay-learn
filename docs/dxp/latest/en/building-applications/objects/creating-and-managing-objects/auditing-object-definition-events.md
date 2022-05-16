@@ -1,5 +1,7 @@
 # Auditing Object Definition Events
 
+{bdg-secondary}`Available DXP 7.4 U24+ and Portal GA24+`
+
 The Objects application is integrated with Liferay's Audit framework, so you can keep track of events related to Object definitions. The Audit application lists these events in a table and includes both user and resource information.
 
 To access the Audit application, open the *Global Menu* (![Global Menu](../../../images/icon-applications-menu.png)), go to the *Control Panel* tab, and click *Audit*.
