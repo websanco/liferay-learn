@@ -1,8 +1,8 @@
 # Auditing Object Definition Events
 
-The Objects application is integrated with Liferay's Audit framework, so you can keep track of events related to Object definitions. The Audit application lists these events in a table and includes both user and resource information. 
+The Objects application is integrated with Liferay's Audit framework, so you can keep track of events related to Object definitions. The Audit application lists these events in a table and includes both user and resource information.
 
-To access the Audit application, open the *Global Menu* (![Global Menu](../../images/icon-applications-menu.png)), go to the *Control Panel* tab, and click *Audit*.
+To access the Audit application, open the *Global Menu* (![Global Menu](../../../images/icon-applications-menu.png)), go to the *Control Panel* tab, and click *Audit*.
 
 ![Click on Audit in the Control Panel to view events related to Object definitions.](./auditing-object-definition-events/images/01.png)
 
@@ -26,5 +26,5 @@ If desired, you can search and filter results using keywords and other facets.
 
 ## Additional Information
 
-* [Objects](../objects.md)
-* [Creating and Managing Objects](./creating-and-managing-objects.md)
+* [Objects](../../objects.md)
+* [Creating and Managing Objects](../creating-and-managing-objects.md)
