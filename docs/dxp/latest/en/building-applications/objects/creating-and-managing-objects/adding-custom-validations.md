@@ -1,6 +1,6 @@
 # Adding Custom Validations
 
-{bdg-secondary}`Available Liferay 7.4 U25+ and GA25+`
+{bdg-secondary}`Available Liferay 7.4 U26+ and GA26+`
 
 With custom Objects, you can add validations for both custom and metadata fields. Validations set rules used for determining valid field entries and can be defined using either [Groovy](https://groovy-lang.org/) scripts or Liferay's [expression builder](./expression-builder-validations-reference.md). Each validation has its own trigger, conditions, and error text, which you can set via the Objects UI. When triggered, the validation checks for valid field entires according to your defined conditions and displays your error text for invalid entries.
 
@@ -42,7 +42,7 @@ Follow these steps to add a custom validation:
 
 1. Go to the *Basic Info* tab and *activate* the validation.
 
-1. Select a *Trigger Event* to determine when the validation is run for field entries: on entry submission, creation, or update.
+1. Select a *Trigger Event* to determine when the validation is run for field entries.
 
    ```{note}
    Each validation can only have one trigger event.
@@ -58,7 +58,7 @@ Once activated, the validation is run for all new Object entries.
 
 {bdg-secondary}`Available Liferay DXP U24 and Portal GA24`
 
-The Groovy validation type supports all standard Groovy Script capabilities. However, when defining Groovy conditions, you must use the `invalidFields` variable and set its initial value to either `true` or `false`. Once set, `invalidFields` returns `true` whenever a field entry is invalid, while `false` is returned whenever it is valid. The error message is only displayed to users when `invalidFields` returns `true`.
+The Groovy validation type supports all standard Groovy Script capabilities. However, when defining Groovy conditions, you must use the `invalidFields` variable. This variable should return `true` for invalid field values, while it should return `false` for valid field values. The error message is only displayed to users when `invalidFields` returns `true`.
 
 ```{note}
 The Groovy type does not currently have a check syntax validation.
@@ -86,21 +86,21 @@ The following chart lists all default metadata fields included in custom Objects
 | `createDate` | When the entry was created |
 | `externalReferenceCode` | External reference code for the entry |
 | `groupId` | ID of the group in which the entry was created |
-| `lastPublishDate` | Date when the entry was last published<!--correct?--> |
-| `modifiedDate` | Date when the entry was last modified<!--correct?--> |
-| `mvccVersion` | MVCC version of the entry<!--correct?--> |
+| `lastPublishDate` | Date when the entry was last published |
+| `modifiedDate` | Date when the entry was last modified |
+| `mvccVersion` | MVCC version of the entry |
 | `objectDefinitionId` | ID of the entry's Object |
 | `objectEntryId` | ID for the entry |
 | `status` | Workflow status for the entry |
-| `statusByUserId` | ID of the assigned user<!--correct?--> |
-| `statusByUserName` | Name of the assigned user<!--correct?--> |
+| `statusByUserId` | ID of the assigned user |
+| `statusByUserName` | Name of the assigned user |
 | `statusDate` | Date when the status was list updated |
 | `userEmailAddress` | Email address for the entry's author |
 | `userFirstName` | First name of the entry's author |
 | `userId` | ID of the entry's author |
 | `userLastName` | Last name of the entry's author |
 | `userName` | Full name of the entry's author |
-| `uuid` | Unique universal ID for the entry<!--correct?--> |
+| `uuid` | Unique universal ID for the entry |
 
 ```{note}
 Besides custom fields, the following metadata fields are listed in the editing sidebar for easy access:

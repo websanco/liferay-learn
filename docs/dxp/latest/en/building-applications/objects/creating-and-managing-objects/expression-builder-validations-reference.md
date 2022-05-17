@@ -1,6 +1,6 @@
 # Expression Builder Validations Reference
 
-{bdg-secondary}`Available Liferay DXP U25 and Portal GA25`
+{bdg-secondary}`Available Liferay DXP U26 and Portal GA26`
 
 With custom Objects, you can create field validations using Liferay's Expression Builder. This tool provides an integrated editor for quickly defining complex validation rules using predefined fields, operators, and functions. You can browse available elements in the conditions side panel.
 
