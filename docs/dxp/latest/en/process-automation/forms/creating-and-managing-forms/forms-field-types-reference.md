@@ -17,11 +17,26 @@ The Liferay Forms application contains lots of field types and elements to add t
 
 The field configuration editor sidebar appears whenever you add a new field or click an existing one in the form builder. The available configuration options differ by field type.
 
-All Form Fields have at least two configuration types: basic and advanced. Many forms can be [created](../creating-and-managing-forms/creating-forms.md) with just the basic configurations, which include things like its label, [placeholder text, help text](../creating-and-managing-forms/providing-help-text-and-predefined-values.md), whether the field is required, and what the required message says. There are additional field-specific configurations as well.
+All Form Fields have at least two configuration types: basic and advanced. Many forms can be [created](../creating-and-managing-forms/creating-forms.md) with just the basic configurations, which include things like
+
+- label
+- [placeholder text](../creating-and-managing-forms/providing-help-text-and-predefined-values.md)
+- required (and what the required message says)
+- [help text]](../creating-and-managing-forms/providing-help-text-and-predefined-values.md)
+
+There are additional field-specific basic configurations as well.
 
 ![The Select from List field has several basic configurations.](./forms-field-types-reference/images/15.png)
 
-Advanced configurations include [predefined values](../creating-and-managing-forms/providing-help-text-and-predefined-values.md), search configurations, whether the field is repeatable, the system/programmatic field reference, field confirmation, and whether the field is hidden. There are additional-field-specific configurations as well.
+Advanced configurations include
+- [predefined values](../creating-and-managing-forms/providing-help-text-and-predefined-values.md)
+- search configurations
+- whether the field is repeatable
+- the system/programmatic field reference
+- field confirmation
+- whether the field is hidden 
+
+There are additional field-specific advanced configurations as well.
 
 ![The Text field has several advanced configurations.](./forms-field-types-reference/images/14.png)
 
