@@ -173,11 +173,9 @@ Users can select an image file (`.gif`, `.jpeg`, `.jpg`, or `.png`) from Web Con
 Guest Users cannot access or upload images. Avoid using this field unless only authenticated Users can access the form.
 ```
 
-After adding the image, the user can fill out an additional field for the image, _Description_. When the image field is optional, the usage is straightforward: neither the image or its description is required. However, like all forms fields, the image field can be marked required. On Liferay 7.4, when the image field is required, the form builder can choose whether the description is required or optional:
+After adding the image, the user can fill out an additional field for the image, _Description_. When the image field is optional, the usage is straightforward: neither the image or its description is required. However, like all forms fields, the image field can be marked required. When the image field is required, the form builder can choose whether the description is required or optional:
 
 ![The description field of a required image field can be required or optional.](./forms-field-types-reference/images/27.png)
-
-On Liferay 7.2 and 7.3 the description is required if the image field is required.
 
 ### Color
 
