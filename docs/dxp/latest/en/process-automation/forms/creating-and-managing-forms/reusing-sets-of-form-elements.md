@@ -3,7 +3,10 @@
 Forms often request the same sets of information, such as name, birthday, and address. Rather than adding these fields for every new form, you can group elements as a set to be reused. Element Sets include the layout and configuration of the fields.
 
 ```{note}
-Forms created using an Element Set *do not* inherit changes that are made later to an Element set.
+- Forms created using an Element Set *do not* inherit changes that are made later to an Element set.
+- A simpler form of repeatability is achieved by simply dropping one or more form fields on top of another form field to create a Fields Group. Fields Groups are useful within a single form for managing the entire group (moving the group, deleting it, or duplicating it) at once.
+
+   ![Field Grooups offer simpler field reusability and bulk management within a single form.](./reusing-sets-of-form-elements/images/04.png)
 ```
 
 ## Creating Element Sets

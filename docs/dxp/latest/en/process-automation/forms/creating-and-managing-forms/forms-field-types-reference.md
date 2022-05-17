@@ -9,6 +9,10 @@ The Liferay Forms application contains lots of field types and elements to add t
 
 ![There are many useful form elements.](./forms-field-types-reference/images/01.png)
 
+```{note}
+**Form Field Grouping and Repeatability:** Form fields can be grouped for use across your forms (using [Element Sets](./reusing-sets-of-form-elements.md) or can be made into Field Groups within the form. Create a Field group by dropping a field on top of another field. In addition, each field can be marked _repeatable_ in its configuration, which allows the end user of the form to duplicate the field in the form. 
+```
+
 ## Field Configuration Overview
 
 The field configuration editor sidebar appears whenever you add a new field or click an existing one in the form builder. The available configuration options differ by field type.
