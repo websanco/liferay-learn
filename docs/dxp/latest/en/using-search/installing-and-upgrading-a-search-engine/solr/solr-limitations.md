@@ -6,13 +6,15 @@ Liferay's Solr support is deprecated. Please plan to migrate to [Elasticsearch](
 
 ## End-User Feature Limitations 
 
-Liferay's Solr integration has limitations affect using Liferay Commerce and the following features. Elasticsearch is required to use the following features.
+Liferay's Solr integration has limitations. Elasticsearch is required to use the following features:
 
+* [Liferay Commerce](https://learn.liferay.com/commerce/latest/en/index.html)
 * [Workflow Metrics](../../../process-automation/workflow/using-workflows/using-workflow-metrics.md)
 * [Custom Filter search widget](../../search-pages-and-widgets/search-results/filtering-search-results.md)
-* The Low Level Search Options widget
-* Search Tuning: Customizing Search Results
-* Search Tuning: Synonyms
+* [The Low Level Search Options widget](../../search-pages-and-widgets/search-results/understanding-low-level-search-options.md)
+* [Search Tuning: Customizing Search Results](../../search-administration-and-tuning/result-rankings.md)
+* [Search Tuning: Synonyms](../../search-administration-and-tuning/synonym-sets.md)
+* [Content Dashboard](../../../content-authoring-and-management/content-dashboard.md)
 
 ## Developer Feature Limitations 
 
