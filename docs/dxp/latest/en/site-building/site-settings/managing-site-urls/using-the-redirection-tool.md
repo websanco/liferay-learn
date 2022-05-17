@@ -11,7 +11,7 @@ To access it, open the Site Menu (![Site Menu](../../../images/icon-product-menu
 Here, the Redirection tool's functionalities are organized into two tabs: *Redirects* and *404 URLs*.
 
 * [Redirects](#redirects)
-* [404 URLs](#404-urls)
+* [404 URLs](#urls)
 
 ```{important}
 For Liferay DXP/Portal 7.4+, 404 tracking is disabled by default. To use this feature, you must [enable 404 tracking](#enabling-404-tracking). This enables both 404 tracking and the 404 URLs tab in the Redirection application.
