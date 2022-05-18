@@ -8,7 +8,7 @@ By default, any user can see all the Collection's content and is part of *Anyone
 To customize a Collection using Segments, you must define the Segments first. For more information, see [Creating and Managing User Segments](../segmentation/creating-and-managing-user-segments.md).
 ```
 
-![Collections are available for anyone, by default](./personalizing-collections/images/02.png)
+![Collections are available for anyone, by default](./personalizing-collections/images/01.png)
 
 Consider the following example. You want to increase sales in your online Kitchenware Store by offering exclusive promotions to registered users. You create a Collection including promotions for registered users and news about your products. You want all users to see the news about your products, but you want to restrict the promotions to registered users. In this example, you can create a new Segment for registered users, and link the Segment to a new Personalized Variation that filters the promotional content.
 
@@ -16,12 +16,20 @@ Consider the following example. You want to increase sales in your online Kitche
 You can create multiple Personalized Variations for a Collection, and edit or delete them as needed. You can also edit the *Anyone* Personalized Variation, but you cannot delete it.
 ```
 
+## Prioritizing Variations
+
+> Availability: Liferay Portal 7.4
+
+The Collections variations offer a way to prioritize which variation should be rendered on your site to users belonging to more than one segment. You have access to a sortable list for the Personalized Variations in the Collection configuration page. You can order the list by clicking on the *Actions* button (![Actions Button](../../../images/icon-actions.png)) and choosing to prioritize/deprioritize or you can drag and drop.
+
+![](./personalizing-collections/images/02.png)
+
 ## Creating a Personalized Variation
 
 1. Go to *Site Administration* &rarr; *Site Builder* &rarr; *Collections*.
 1. From the *Collections* tab, click the *Options* menu (![Options](../../../images/icon-staging-bar-options.png)) next to the Collection you want to customize and select *Edit*.
 
-    ![Edit the Collection you want to customize](./personalizing-collections/images/01.png)
+    ![Edit the Collection you want to customize](./personalizing-collections/images/03.png)
 
 1. Under *Personalized Variations*, click *New Personalized Variation* or click the New button (![New](../../../images/icon-plus.png)).
 1. In the *New Personalized Variation* dialog, click the Segment you want to associate to this Collection.
@@ -36,7 +44,7 @@ You can create multiple Personalized Variations for a Collection, and edit or de
     - In the Manual Collection, click on the Personalized Variation's name to see the items.
     - In the Dynamic Collection, click the *Options* menu (![Options](../../../images/icon-staging-bar-options.png)) next to the Personalized Variation's name and select *View Items*.
 
-        ![Edit the Collection you want to customize](./personalizing-collections/images/03.png)
+        ![Edit the Collection you want to customize](./personalizing-collections/images/05.png)
 
 ## Liferay DXP 7.2
 
@@ -55,7 +63,7 @@ First create the default Content Set and configure it on the Home page using the
 3. Name it *Home Page Content*.
 4. For the new Content Set, click *Select* next to *Asset Entries* and select *Basic Web Content*.
 
-    ![Click Select to add a new Asset Entries.](./personalizing-collections/images/20.png)
+    ![Click Select to add a new Asset Entries.](./personalizing-collections/images/06.png)
 
 5. On the *Select Basic Web Content* page, check the boxes next to the content you want to add and click *Add*.
 6. Navigate to the *Home* page and add an Asset Publisher to the page.
@@ -72,7 +80,7 @@ Now create the content set for engineers and configure its display.
 1. Go back to the Content Set from *Site Administration*.
 2. Click *New Personalized Variation* and select the *American Engineers* segment
 
-    ![Create a new Personalized Variation.](./personalizing-collections/images/21.png)
+    ![Create a new Personalized Variation.](./personalizing-collections/images/07.png)
 
 3. Click *Select* next to *Asset Entries* and select *Basic Web Content*.
 4. Select articles appropriate to an engineering audience and click *Add*.
