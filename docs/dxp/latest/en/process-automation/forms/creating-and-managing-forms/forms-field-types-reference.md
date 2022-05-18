@@ -22,7 +22,7 @@ All Form Fields have at least two configuration types: basic and advanced. Many 
 - label
 - [placeholder text](../creating-and-managing-forms/providing-help-text-and-predefined-values.md)
 - required (and what the required message says)
-- [help text]](../creating-and-managing-forms/providing-help-text-and-predefined-values.md)
+- [help text](../creating-and-managing-forms/providing-help-text-and-predefined-values.md)
 
 There are additional field-specific basic configurations as well.
 
@@ -34,7 +34,7 @@ Advanced configurations include
 - whether the field is repeatable
 - the system/programmatic field reference
 - field confirmation
-- whether the field is hidden 
+- whether the field is hidden
 
 There are additional field-specific advanced configurations as well.
 
