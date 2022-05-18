@@ -27,6 +27,8 @@ Once you search for keywords that return Search Results, the Search Insights por
 
 ![The full query string isn't for the faint of heart. This example is clipped to spare the reader.](./search-insights/images/02.png)
 
+Some enhancements to the Search Insights interface were introduced in Liferay 7.4; you can browse the formatted JSON of the request and the response in the widget, and copy either with the click of a button.
+
 ## Explaining Search Results
 
 To enable or disable the Explain option,
@@ -37,7 +39,7 @@ To enable or disable the Explain option,
 
 Under the hood, the Explain option in the Search Insights widget exposes an Elasticsearch API: [Explain](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/search-explain.html). See the Elasticsearch documentation for more details.
 
-Here's an abbreviated portion of the scoring explanation for the Search Document of the Test Test User when the searched keyword was _test_:
+Here's an abbreviated portion of the response's scoring explanation for the Search Document of the Test Test User when the searched keyword was _test_:
 
 ```json
 _explanation":{  
