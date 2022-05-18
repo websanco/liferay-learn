@@ -4,5 +4,8 @@
 .. toctree::
    :maxdepth: 3
 
-.. include:: /site-building/04-site-navigation/README.rst
-   :start-line: 2
+   site-navigation/managing-site-navigation.md
+   site-navigation/managing-page-hierarchies.md
+   site-navigation/using-navigation-menus.md
+   site-navigation/configuring-navigation-menus.md
+   site-navigation/developer-guide.md
