@@ -12,13 +12,10 @@
 
 ## 複数のビューを持つMVCポートレットをデプロイする
 
+```{include} /_snippets/run-liferay-portal.md
+```
+
 サンプルポートレットをデプロイし、そのビュー間を移動する方法は次のとおりです。 学習の目的で、ポートレットは`mvcPath`パラメーター値をログに記録します。
-
-1. [Liferay Dockerコンテナ](../../../installation-and-upgrades/installing-liferay/using-liferay-docker-images.md)を起動します。
-
-   ```bash
-   docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
-   ```
 
 1. サンプルをダウンロードして解凍します。
 
@@ -49,14 +46,6 @@
     ```bash
     STARTED com.acme.c8m3.web_1.0.0
     ```
-
-1. ブラウザで`http://localhost:8080`を開きます。
-
-1. デフォルトの認証情報を使用してサインインします。
-
-   **ユーザー名** : `test@liferay.com`
-
-   **パスワード：** `test`
 
 1. **C8M3ポートレット** ウィジェットを ［**Samples**］ カテゴリからウィジェットページに追加します。 **ビュー1**（ポートレットのデフォルトビュー）が表示されます。
 

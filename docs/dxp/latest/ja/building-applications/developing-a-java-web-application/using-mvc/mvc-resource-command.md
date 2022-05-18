@@ -10,11 +10,10 @@ MVCリソースコマンドを使用するサンプルポートレットをデ�
 
 サンプルポートレットは、MVCリソースコマンドを使用して単純なファイルをダウンロードします。
 
-1. [Liferay Dockerコンテナ](../../../installation-and-upgrades/installing-liferay/using-liferay-docker-images.md)を起動します。
+```{include} /_snippets/run-liferay-portal.md
+```
 
-   ```bash
-   docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
-   ```
+次に、次の手順を実行します。
 
 1. サンプルをダウンロードして解凍します。
 
@@ -45,14 +44,6 @@ MVCリソースコマンドを使用するサンプルポートレットをデ�
     ```bash
     STARTED com.acme.p8v5.web_1.0.0
     ```
-
-1. ブラウザで`http://localhost:8080`を開きます。
-
-1. デフォルトの認証情報を使用してサインインします。
-
-    **ユーザー名** : `test@liferay.com`
-
-    **パスワード：** `test`
 
 1. **P8V5ポートレット** ウィジェットを ［**Samples**］ カテゴリからウィジェットページに追加します。 P8V5ポートレットが表示されます。
 

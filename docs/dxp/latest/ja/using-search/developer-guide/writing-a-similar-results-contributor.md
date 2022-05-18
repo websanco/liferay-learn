@@ -24,13 +24,10 @@
 
 Liferay DXPのインスタンスで例 `SimilarResultsContributor` 起動して実行するには、
 
-1. Liferay DXPを起動する。 まだDockerコンテナがない場合は、以下を使用します。
+```{include} /_snippets/run-liferay-dxp.md
+```
 
-    ```bash
-    docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_DXP_DOCKER_IMAGE$]
-    ```
-
-    異なるLiferay PortalのバージョンやLiferay DXPを使用している場合は、上記のコマンドを適宜調整してください。
+次に、次の手順を実行します。
 
 1. [Acme Similar Results Contributor](./liferay-r1s1.zip) をダウンロードと解凍します。
 

@@ -10,10 +10,7 @@ Liferay Objectsは、コードを書いたりモジュールをデプロイす�
 
 ![Build a Time Off Request application.](./building-a-time-off-requester/images/01.png)
 
-チュートリアルを進める前に、以下のコマンドを実行して、新しいLiferay DXP 7.4コンテナを立ち上げます。
-
-```docker
-docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_DXP_DOCKER_IMAGE$]
+```{include} /_snippets/run-liferay-dxp.md
 ```
 
 ## 部門選択リストの追加

@@ -19,13 +19,10 @@ Liferay DXP 7.4以降の場合、フラグメントコレクションはLiferay 
 
 ## 構成可能なフラグメントのデプロイ
 
-まず、サンプルをデプロイして、フラグメント設定の構成オプションがどのように機能するかを確認します。
+```{include} /_snippets/run-liferay-dxp.md
+```
 
-1. 以下のコマンドを実行して、Docker コンテナを起動します。
-
-    ```bash
-    docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
-    ```
+次に、サンプルをデプロイして、フラグメント設定の構成オプションがどのように機能するかを確認します。
 
 1. [サンプルのフラグメントセット](https://learn.liferay.com/dxp/latest/ja/site-building/developer-guide/developing-page-fragments/liferay-c7f8.zip) をダウンロードして解凍します。
 

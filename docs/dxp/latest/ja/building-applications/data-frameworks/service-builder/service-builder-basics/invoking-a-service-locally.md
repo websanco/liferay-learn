@@ -12,11 +12,10 @@ DXP/Portalにデプロイされたサービスビルダーサービスは、同�
 
 ## ポートレットからサービスを呼び出す
 
-1. [Liferay Dockerコンテナ](../../../../installation-and-upgrades/installing-liferay/using-liferay-docker-images.md)を起動します。
+```{include} /_snippets/run-liferay-dxp.md
+```
 
-   ```bash
-   docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_DXP_DOCKER_IMAGE$]
-   ```
+次に、次の手順を実行します。
 
 1. サンプルをダウンロードして解凍します。
 
@@ -49,14 +48,6 @@ DXP/Portalにデプロイされたサービスビルダーサービスは、同�
     STARTED com.acme.t2p5.service_1.0.0
     STARTED com.acme.t2p5.web_1.0.0
     ```
-
-1. ブラウザで`http://localhost:8080`を開きます。
-
-1. デフォルトの認証情報を使用してサインインします。
-
-    **ユーザー名** : `test@liferay.com`
-
-    **パスワード：** `test`
 
 1. **T2P5ポートレット** ウィジェットを ［**Samples**］ カテゴリからウィジェットページに追加します。 T2P5ポートレットが表示されます。
 

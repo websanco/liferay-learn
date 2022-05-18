@@ -118,11 +118,8 @@ Liferay の [setup_tutorial.sh](https://github.com/liferay/liferay-learn/blob/ma
 
 フラグメントを表示するには、サンプルのフラグメント セットを Liferay にインポートします。
 
-1. 以下のコマンドを実行して、Docker コンテナを起動します。
-
-    ```bash
-    docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
-    ```
+```{include} /_snippets/run-liferay-dxp.md
+```
 
 1. プロジェクトのルートフォルダ（例：`sample-liferay-fragments`）で`yarn run import`コマンドを呼び出して、フラグメントセットをLiferayインスタンスにインポートします。  あるいは、[手動でフラグメントセットをインポート](../../creating-pages/page-fragments-and-widgets/using-fragments/managing-fragments.md)することもできます。
 

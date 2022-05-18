@@ -8,11 +8,10 @@
 
 ## ユーザーの追加
 
-1. Liferay DXPを起動します。 まだDockerコンテナがない場合は、以下を使用します。
+```{include} /_snippets/run-liferay-portal.md
+```
 
-   ```bash
-   docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
-   ```
+次に、次の手順を実行します。
 
 1. [User Account API Basics](./liferay-y6q4.zip) をダウンロードし解答します。
 
@@ -115,7 +114,7 @@ cURLコマンドとJavaクラスの仕組みをご覧ください。
 | `-X POST`                                                                                                                                      | 指定されたエンドポイントで呼び出すHTTPメソッド   |
 | `"http://localhost:8080/o/headless-admin-user/v1.0/user-accounts"`                                                                             | RESTサービスのエンドポイント            |
 | `-d "{\"alternateName\": \"Able\", \"emailAddress\": \"able@liferay.com\", \"familyName\": \"Foo\", \"givenName\": \"Able\"}"` | 投稿をリクエストしているデータ             |
-| `-u "test@liferay.com:test"`                                                                                                                   | 基本認証の資格情報                   |
+| `-u "test@liferay.com:learn"`                                                                                                                   | 基本認証の資格情報                   |
 
 ```{note}
    ここでは、デモンストレーションの目的で基本認証を使用しています。 本番環境の場合は、[OAuth](../../../headless-delivery/using-oauth2/using-oauth2.md) 経由でユーザーを認証する必要があります。

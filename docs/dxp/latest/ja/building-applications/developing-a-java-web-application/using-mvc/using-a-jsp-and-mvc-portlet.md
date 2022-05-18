@@ -12,7 +12,10 @@ Webアプリケーションの開発を開始する簡単な方法は、JSPフ�
 
 ## シンプルなMVCポートレットモジュールをデプロイする
 
-サンプルをデプロイすることから始めます。
+```{include} /_snippets/run-liferay-portal.md
+```
+
+次に、次の手順を実行します。
 
 1. サンプルをダウンロードして解凍します。
 
@@ -22,12 +25,6 @@ Webアプリケーションの開発を開始する簡単な方法は、JSPフ�
 
    ```bash
    unzip liferay-w3e7.zip
-   ```
-
-1. [Liferay Dockerコンテナ](../../../installation-and-upgrades/installing-liferay/using-liferay-docker-images.md)を起動します。
-
-   ```bash
-   docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
    ```
 
 1. サンプルをビルドしてデプロイします。
@@ -49,14 +46,6 @@ Webアプリケーションの開発を開始する簡単な方法は、JSPフ�
     ```bash
     STARTED com.acme.w3e7.web_1.0.0
     ```
-
-1. ブラウザで`http://localhost:8080`を開きます。
-
-1. デフォルトの認証情報を使用してサインインします。
-
-    **ユーザー名** : `test@liferay.com`
-
-    **パスワード：** `test`
 
 1. ［**Samples**］ カテゴリからウィジェットページに ［**W3E7ポートレット**］ ウィジェットを追加して、アプリケーションの可用性を確認します。
 

@@ -18,13 +18,12 @@
 
 ## サンプルをデプロイする
 
-まず、Liferay Commerceのインスタンスに割引ルールタイプの例を展開する必要があります。 次の手順を実行します：
+まず、Liferay Commerceのインスタンスに割引ルールタイプの例を展開する必要があります。
 
-1. Liferay Commerceを開始します。
+```{include} /_snippets/run-liferay-portal.md
+```
 
-    ```bash
-    docker run -it -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
-    ```
+次に、次の手順を実行します。
 
 1. [Acme Commerce Discount Rule Type](./liferay-m6a8.zip) をダウンロードして解凍します。
 

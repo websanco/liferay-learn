@@ -43,13 +43,13 @@ Liferay DXPは、世界中で使用されている商用サポート済みのエ
 1. Dockerイメージを取得します。
 
     ```bash
-    docker pull [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
+    docker pull [$LIFERAY_LEARN_DXP_DOCKER_IMAGE$]
     ```
 
 1. Dockerイメージを取得します。
 
     ```bash
-    docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
+    docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_DXP_DOCKER_IMAGE$]
     ```
 
 1. ブラウザで`https://localhost:8080`を開きます。

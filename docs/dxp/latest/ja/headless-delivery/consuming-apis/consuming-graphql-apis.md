@@ -12,15 +12,12 @@ Liferay DXPには、ほとんどのアプリケーションに対応している
 
 ## 使用するサービスを特定する
 
-GraphQL APIを呼び出すには、実行中のLiferay DXPが必要です。 Dockerを使用して取得するには、次のコマンドを実行します。
+GraphQL APIを呼び出すには、実行中のLiferay DXPが必要です。
 
-```bash
-docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
+```{include} /_snippets/run-liferay-portal.md
 ```
 
 Liferay DXPの初期化後、必要なサービスを見つけることができます。
-
-1. `http：// localhost：8080` に移動し、デフォルトの認証情報を使用してサインインします： **ユーザー名：** `test@liferay.com` **パスワード：** `test`
 
 1. 次のURLにアクセスします。
    
@@ -60,13 +57,13 @@ APIでは、エントリが投稿されるブログを含むサイトを把握�
 
 ## データを含むサイトを特定する
 
-ブラウザで `http://localhost:8080`アクセスします。
-
 ここで、デフォルトのサイトIDを見つける必要があります。
 
-1.  デフォルトの認証情報を使用してサインインします（**ユーザー名：** `test@liferay.com` **パスワード：** `test`）。
-2.  [Control Panel] → [Sites] → [Sites]に移動します。
-3.  Liferayサイトの横にある[Actions]ボタンをクリックし、[**Go to Site Settings**]を選択します。
+1. ブラウザで`http://localhost:8080`にアクセスします。
+
+1.  [Control Panel] → [Sites] → [Sites]に移動します。
+
+1.  [アクション]ボタンをクリックし、 [**Go to Site Settings**] を選択します。
 
 サイトIDが［Details］セクションの上部に表示されます。 `20122`のような整数になります。
 
@@ -87,7 +84,7 @@ APIでは、エントリが投稿されるブログを含むサイトを把握�
 基本認証を使用してサービスを呼び出すには、URLに資格情報を指定します。
 
 ```bash
-curl --request POST --url http://localhost:8080/o/graphql \ -u test@liferay.com:test  --header 'content-type: application/json' --data '{"query":"query {blogPostings(filter: \"\", page: 1, pageSize: 10, search: \"\", siteKey: \"20122\", sort: \"\"){ page  items{ id articleBody headline  creator{ name }}}}"}'
+curl --request POST --url http://localhost:8080/o/graphql \ -u test@liferay.com:learn  --header 'content-type: application/json' --data '{"query":"query {blogPostings(filter: \"\", page: 1, pageSize: 10, search: \"\", siteKey: \"20122\", sort: \"\"){ page  items{ id articleBody headline  creator{ name }}}}"}'
 ```
 
 <a name="calling-a-service-using-oauth2" />
@@ -190,7 +187,7 @@ Liferay DXPは、ミューテーションでリクエストされたフィール
 ```note::
 これらのリクエストは、cURLなどの任意のWebクライアントで行うことができます：
 
-   ``curl --request POST --url http://localhost:8080/o/graphql -u test@liferay.com:test --header 'content-type: application/json' --data '{"query":"mutation CreateBlog($blog: InputBlogPosting){   createSiteBlogPosting(blogPosting: $blog, siteKey: \"20122\" ) {    headline    articleBody    id    friendlyUrlPath  }    } ","variables":{"blog":{"articleBody":"This Blog entry was created by using cURL to call the GraphQL service!","headline":"cURL GraphQL Blog Entry"}},"operationName":"CreateBlog"}'``
+   ``curl --request POST --url http://localhost:8080/o/graphql -u test@liferay.com:learn --header 'content-type: application/json' --data '{"query":"mutation CreateBlog($blog: InputBlogPosting){   createSiteBlogPosting(blogPosting: $blog, siteKey: \"20122\" ) {    headline    articleBody    id    friendlyUrlPath  }    } ","variables":{"blog":{"articleBody":"This Blog entry was created by using cURL to call the GraphQL service!","headline":"cURL GraphQL Blog Entry"}},"operationName":"CreateBlog"}'``
 ```
 
 <a name="getting-all-blog-entries" />

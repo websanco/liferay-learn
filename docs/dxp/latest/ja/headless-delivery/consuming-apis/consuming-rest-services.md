@@ -12,10 +12,9 @@ Liferay DXPには、ほとんどのアプリケーションに対応している
 
 ## 使用するサービスを特定する
 
-RESTサービスを呼び出すには、実行中のLiferay DXPが必要です。 Dockerを使用して取得するには、次のコマンドを実行します。
+RESTサービスを呼び出すには、実行中のLiferay DXPが必要です。
 
-```bash
-docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
+```{include} /_snippets/run-liferay-portal.md
 ```
 
 Liferay DXPのRESTサービスは、次のURLで公開されています。
@@ -44,13 +43,13 @@ APIはいくつかのカテゴリに分類されます。 この例では、`Blo
 
 ## データを含むサイトを特定する
 
-Liferay DXPの初期化後、ブラウザで`http://localhost:8080`にアクセスします。
-
 ここで、デフォルトのサイトIDを見つける必要があります。
 
-1.  デフォルトの認証情報を使用してサインインします（**ユーザー名：** `test@liferay.com` **パスワード：** `test`）。
-2.  [Control Panel] → [Sites] → [Sites]に移動します。
-3.  [アクション]ボタンをクリックし、 [**Go to Site Settings**] を選択します。
+1. ブラウザで`http://localhost:8080`にアクセスします。
+
+1.  [Control Panel] → [Sites] → [Sites]に移動します。
+
+1.  [アクション]ボタンをクリックし、 [**Go to Site Settings**] を選択します。
 
    ![［サイト設定］と［Site Configuration］オプションでサイトIDを特定します。](./consuming-rest-services/images/03.png)
 
@@ -71,7 +70,7 @@ Liferay DXPの初期化後、ブラウザで`http://localhost:8080`にアクセ�
 基本認証を使用してサービスを呼び出すには、URLに資格情報を指定します。
 
 ```bash
-curl "http://localhost:8080/o/headless-delivery/v1.0/sites/20122/blog-postings/" -u 'test@liferay.com:test'
+curl "http://localhost:8080/o/headless-delivery/v1.0/sites/20122/blog-postings/" -u 'test@liferay.com:learn'
 ```
 
 <a name="calling-a-service-using-oauth2" />
@@ -141,7 +140,7 @@ curl -H "Authorization: Bearer d5571ff781dc555415c478872f0755c773fa159" http://l
 3. リクエストを行います。
 
     ```bash
-    curl --header "Content-Type: application/json" --request POST --data '{ "headline": "Test Blog Entry from REST Services", "articleBody": "This article was posted via REST services provided by Liferay DXP." }' http://localhost:8080/o/headless-delivery/v1.0/sites/20122/blog-postings -u test@liferay.com:test
+    curl --header "Content-Type: application/json" --request POST --data '{ "headline": "Test Blog Entry from REST Services", "articleBody": "This article was posted via REST services provided by Liferay DXP." }' http://localhost:8080/o/headless-delivery/v1.0/sites/20122/blog-postings -u test@liferay.com:learn
     ```
 
 Liferay DXPは、ブログエントリの完全なJSON表現を返します。
@@ -201,7 +200,7 @@ Liferay DXPは、ブログエントリの完全なJSON表現を返します。
 ここで、最初のクエリを繰り返して、投稿したブログエントリが表示されることを確認できます。
 
 ```bash
-curl "http://localhost:8080/o/headless-delivery/v1.0/sites/20122/blog-postings/" -u 'test@liferay.com:test'
+curl "http://localhost:8080/o/headless-delivery/v1.0/sites/20122/blog-postings/" -u 'test@liferay.com:learn'
 ```
 
 ブログエントリのリストが返されます。 追加したエントリは、リスト内の唯一のエントリです。
@@ -281,7 +280,7 @@ curl "http://localhost:8080/o/headless-delivery/v1.0/sites/20122/blog-postings/"
 リクエストを行うたびに、Liferay DXPは他の考えられるエンドポイントを返します。 そのうちの1つは、IDによって単一のブログエントリを取得することです。 エントリのIDがわかっている場合は、それを取得できます。
 
 ```bash
-curl "http://localhost:8080/o/headless-delivery/v1.0/blog-postings/35215" -u test@liferay.com:test
+curl "http://localhost:8080/o/headless-delivery/v1.0/blog-postings/35215" -u test@liferay.com:learn
 ```
 
 同じブログエントリが返されます。
@@ -293,13 +292,13 @@ curl "http://localhost:8080/o/headless-delivery/v1.0/blog-postings/35215" -u tes
 IDがわかっている場合は、ブログエントリを削除することもできます。
 
 ```bash
-curl -X DELETE "http://localhost:8080/o/headless-delivery/v1.0/blog-postings/35215" -u test@liferay.com:test
+curl -X DELETE "http://localhost:8080/o/headless-delivery/v1.0/blog-postings/35215" -u test@liferay.com:learn
 ```
 
 この場合、何も返されませんが、上記のようにリクエストすることで、エントリが削除されたことを確認できます。
 
 ```bash
-curl "http://localhost:8080/o/headless-delivery/v1.0/blog-postings/35215" -u test@liferay.com:test
+curl "http://localhost:8080/o/headless-delivery/v1.0/blog-postings/35215" -u test@liferay.com:learn
 ```
 
 次に、Liferay DXPは、応答として次のJSONドキュメントを返します。

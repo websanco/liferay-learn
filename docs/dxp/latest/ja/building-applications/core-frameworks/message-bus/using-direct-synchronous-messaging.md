@@ -8,11 +8,10 @@
 
 サンプルプロジェクトでは、`SynchronousMessageSender`を使用して、2つのリスナーに直接メッセージを送信します。
 
-1. [Liferay Dockerコンテナ](../../../installation-and-upgrades/installing-liferay/using-liferay-docker-images.md)を起動します。
+```{include} /_snippets/run-liferay-portal.md
+```
 
-    ```bash
-    docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
-    ```
+次に、次の手順を実行します。
 
 1. サンプルをダウンロードして解凍します。
 

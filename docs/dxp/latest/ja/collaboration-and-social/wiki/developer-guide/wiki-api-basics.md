@@ -12,11 +12,10 @@ LiferayのHeadless Deliveryアプリケーションは、[Wiki](../getting-start
 
 次のチュートリアルでは、チュートリアルコードをテストするためにDXP/Portal 7.3+インスタンスが必要です。 Wiki・アプリケーションはサイトスコープであるため、チュートリアル全体でサイトIDも必要になります。
 
-新しいLiferay DXPコンテナを起動するには、次のコマンドを実行します。
-
-```docker
-docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
+```{include} /_snippets/run-liferay-portal.md
 ```
+
+次に、次の手順を実行します。
 
 開始したら、Site IDを取得します。 サイトIDを見つけるには、 **サイトメニュー**（![Site Menu](../../../images/icon-menu.png)）を開き、 ［**Configuration**］ &rarr; ［**Site Settings**］ &rarr; ［**Site Configuration**］ に移動します。
 

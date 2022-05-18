@@ -8,13 +8,10 @@ MVCアクションコマンドを使用するサンプルポートレットを�
 
 ## ポートレットのMVCアクションコマンドを呼び出す
 
+```{include} /_snippets/run-liferay-portal.md
+```
+
 サンプルポートレットの2つのアクションは、呼び出されているMVCアクションコマンドクラスとメソッドを示すメッセージをログに記録します。 ポートレットをデプロイしてそのアクションをトリガーする方法は次のとおりです。
-
-1. [Liferay Dockerコンテナ](../../../installation-and-upgrades/installing-liferay/using-liferay-docker-images.md)を起動します。
-
-   ```bash
-   docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
-   ```
 
 1. サンプルをダウンロードして解凍します。
 
@@ -45,14 +42,6 @@ MVCアクションコマンドを使用するサンプルポートレットを�
     ```bash
     STARTED com.acme.l6y9.web_1.0.0
     ```
-
-1. ブラウザで`http://localhost:8080`を開きます。
-
-1. デフォルトの認証情報を使用してサインインします。
-
-    **ユーザー名** : `test@liferay.com`
-
-    **パスワード：** `test`
 
 1. **L6Y9 ポートレット** ウィジェットを ［**Samples**］ カテゴリからウィジェットページに追加します。 L6Y9ポートレットが表示されます。
 

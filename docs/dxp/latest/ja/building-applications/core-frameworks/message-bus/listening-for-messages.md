@@ -6,19 +6,10 @@
 
 ## サンプルのメッセージリスナーを実行する
 
-1.  Liferay Dockerイメージを起動します。
+```{include} /_snippets/run-liferay-portal.md
+```
 
-    ```bash
-    docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
-    ```
-
-1. DXP/Portalの初期化後、ブラウザで`http://localhost:8080`にアクセスします。
-
-1. デフォルトの認証情報を使用してサインインします。
-
-    **ユーザー名** : `test@liferay.com`
-
-    **パスワード：** `test`
+次に、次の手順を実行します。
 
 1. [サンプルのプロジェクト](dxp/latest/en/building-applications/core-frameworks/message-bus/liferay-w3a4.zip) をダウンロードして解凍します。
 

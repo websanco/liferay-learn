@@ -18,13 +18,12 @@
 
 ## サンプルをデプロイする
 
-このセクションでは、清算ステップをLiferay Commerceのインスタンスで実行する例を示します。 次の手順を実行します：
+このセクションでは、清算ステップをLiferay Commerceのインスタンスで実行する例を示します。
 
-1. Liferay Commerceを開始します。
+```{include} /_snippets/run-liferay-portal.md
+```
 
-    ```bash
-    docker run -it -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
-    ```
+次に、次の手順を実行します。
 
 1. [Acme Commerce Checkout Step](./liferay-n8n6.zip) をダウンロードして解凍します。
 

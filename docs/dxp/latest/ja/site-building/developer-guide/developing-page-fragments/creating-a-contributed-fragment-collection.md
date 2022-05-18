@@ -13,20 +13,17 @@
 ここでは、フラグメントコレクションを提供する方法を学びます。
 
 1.  [提供されたフラグメントコレクションのデプロイ](#deploy-a-contributed-fragment-collection)
-2.  [フラグメントリソースの追加](#add-the-fragment-resources)
-3.  [デプロイとテスト](#deploy-and-test)
+1.  [フラグメントリソースの追加](#add-the-fragment-resources)
+1.  [デプロイとテスト](#deploy-and-test)
 
 ## 提供されたフラグメントコレクションのデプロイ
 
-まず、サンプルをデプロイして、提供されたフラグメントコレクションがどのように見えるかを確認します。
+```{include} /_snippets/run-liferay-dxp.md
+```
 
-1.  以下のコマンドを実行して、Docker コンテナを起動します。
+次に、サンプルをデプロイして、提供されたフラグメントコレクションがどのように見えるかを確認します。
 
-    ``` bash
-    docker run -it -p 8080:8080 [$LIFERAY_LEARN_DXP_DOCKER_IMAGE$]
-    ```
-
-2.  [サンプル](https://learn.liferay.com/dxp/7.x/ja/site-building/developer-guide/developing-page-fragments/liferay-l3m9.zip) をダウンロードして解凍します。
+1.  [サンプル](https://learn.liferay.com/dxp/7.x/ja/site-building/developer-guide/developing-page-fragments/liferay-l3m9.zip) をダウンロードして解凍します。
 
     ``` bash
     curl https://learn.liferay.com/dxp/7.x/ja/site-building/developer-guide/developing-page-fragments/liferay-l3m9.zip -O
@@ -36,7 +33,7 @@
     unzip liferay-l3m9.zip
     ```
 
-3.  モジュールルートから、提供されたコレクションの JAR をビルドしてデプロイします。
+1.  モジュールルートから、提供されたコレクションの JAR をビルドしてデプロイします。
 
     ``` bash
     cd liferay-l3m9
@@ -50,13 +47,13 @@
     Windows でテストする場合は、最初に `./gradlew build` でモジュールをビルドし、デプロイメントが失敗した場合は JAR を手動で `docker cp docker-container-name:/opt/liferay/osgi/modules` に直接コピーする必要があります。
     ```
 
-4.  Liferay Dockerコンテナコンソールへのデプロイを確認します。 以下のログ メッセージが Docker コンソールに表示されます。
+1.  Liferay Dockerコンテナコンソールへのデプロイを確認します。 以下のログ メッセージが Docker コンソールに表示されます。
 
     ``` bash
     INFO  [fileinstall-directory-watcher][BundleStartStopLogger:46] STARTED com.acme.l3m9.impl_1.0.0 [1824]
     ```
 
-5.  提供されたコレクションとフラグメントが利用可能であることを確認します。 ブラウザで`https://localhost:8080`にアクセスし、画面左側のサイトメニューで、 [**デザイン**] → [**フラグメント**] に移動します。 コレクションは、 **デフォルト** コレクションのリストに表示されます。
+1.  提供されたコレクションとフラグメントが利用可能であることを確認します。 ブラウザで`https://localhost:8080`にアクセスし、画面左側のサイトメニューで、 [**デザイン**] → [**フラグメント**] に移動します。 コレクションは、 **デフォルト** コレクションのリストに表示されます。
 
     ![提供されたフラグメントコレクションは、デフォルトのコレクションとともに表示されます。](./creating-a-contributed-fragment-collection/images/01.png)
 

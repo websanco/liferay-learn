@@ -29,11 +29,10 @@ Groovyアクションロジックをワークフロー定義の `<script>` 要�
 
 ## アクション・エクゼキュータの配置
 
-1. Liferayを起動します。
+```{include} /_snippets/run-liferay-dxp.md
+```
 
-   ```bash
-   docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_DXP_DOCKER_IMAGE$]
-   ```
+次に、次の手順を実行します。
 
 1. Acme E5C9 Implementationプロジェクトをダウンロードして解凍します。
 

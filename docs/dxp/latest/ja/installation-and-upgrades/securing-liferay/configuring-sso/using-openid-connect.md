@@ -36,7 +36,7 @@ OpenID Connectを使用するには、まずプロバイダーにクライアン
 
 ![ [System Settings]メニューでOpenID構成を検索する。](using-openid-connect/images/01.png)
 
-次の手順を実行します：
+次に、次の手順を実行します。
 
 1. [**Add**] ボタンをクリックしてプロバイダーを追加します。
 

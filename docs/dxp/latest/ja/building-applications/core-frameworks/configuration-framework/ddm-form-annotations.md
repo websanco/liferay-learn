@@ -6,11 +6,10 @@
 
 ## サンプルの構成UIを参照する
 
-1. Liferay DXPを起動します。 まだDockerコンテナがない場合は、以下を使用します。
+```{include} /_snippets/run-liferay-portal.md
+```
 
-    ```bash
-    docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
-    ```
+次に、次の手順を実行します。
 
 1. [DDMフォームのアノテーション](./liferay-v1d9.zip) をダウンロードして解凍します。
 

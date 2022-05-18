@@ -33,13 +33,10 @@ OSGiサービスの作成方法については、 [OSGiサービスとしてのA
 
 ## Gogo シェルコマンドの例をデプロイする
 
-サンプルの使用を開始します。
+```{include} /_snippets/run-liferay-portal.md
+```
 
-1. [Liferay Dockerコンテナ](../../installation-and-upgrades/installing-liferay/using-liferay-docker-images/docker-container-basics.md)を起動します。
-
-    ```bash
-    docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
-    ```
+次に、次の手順を実行します。
 
 1. `liferay-j1h1.zip`をダウンロードして解凍します。
 

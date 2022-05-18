@@ -8,11 +8,10 @@ MVCレンダーコマンドは、レンダリングするページを処理す�
 
 ここでは、MVCレンダーコマンドを使用してビューをレンダリングするサンプルポートレットをデプロイします。
 
-1. [Liferay Dockerコンテナ](../../../installation-and-upgrades/installing-liferay/using-liferay-docker-images.md)を起動します。
+```{include} /_snippets/run-liferay-portal.md
+```
 
-   ```bash
-   docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
-   ```
+次に、次の手順を実行します。
 
 1. サンプルをダウンロードして解凍します。
 
@@ -43,14 +42,6 @@ MVCレンダーコマンドは、レンダリングするページを処理す�
     ```bash
     STARTED com.acme.a4p1.web_1.0.0
     ```
-
-1. ブラウザで`http://localhost:8080`を開きます。
-
-1. デフォルトの認証情報を使用してサインインします。
-
-   **ユーザー名** : `test@liferay.com`
-
-   **パスワード：** `test`
 
 1. **A4P1ポートレット** ウィジェットを ［**Samples**］ カテゴリからウィジェットページに追加します。 A4P1ポートレットが表示されます。
 

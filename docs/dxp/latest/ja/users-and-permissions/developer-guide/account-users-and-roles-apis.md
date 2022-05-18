@@ -6,11 +6,10 @@
 
 ## アカウントユーザーの追加
 
-1. Liferay DXPを起動します。 まだDockerコンテナがない場合は、以下を使用します。
+```{include} /_snippets/run-liferay-dxp.md
+```
 
-   ```bash
-   docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_DXP_DOCKER_IMAGE$]
-   ```
+次に、次の手順を実行します。
 
 1. ダウンロードして解凍する [Accounts API Basics](./liferay-t5p9.zip) 。
 
@@ -115,7 +114,7 @@
 | `-X POST`                                                                                                                                    | 指定されたエンドポイントで起動するHTTPメソッド       |
 | `"http://localhost:8080/o/headless-admin-user/v1.0/accounts/${1}/user-accounts"`                                                             | RESTサービスのエンドポイント                |
 | `-d "{\"alternateName\": \"Dog\", \"emailAddress\": \"dog@liferay.com\", \"familyName\": \"Easy\", \"givenName\": \"Dog\"}"` | お客様が掲載を希望するデータ                  |
-| `-u "test@liferay.com:test"`                                                                                                                 | 基本的な認証情報                        |
+| `-u "test@liferay.com:learn"`                                                                                                                 | 基本的な認証情報                        |
 
 ```{note}
 ここでは、デモのためにベーシック認証を使用しています。 本番環境では、 [OAuth2](./../../installation-and-upgrades/securing-liferay/configuring-sso/using-oauth2/introduction-to-using-oauth2.md)でユーザーを認証する必要があります。

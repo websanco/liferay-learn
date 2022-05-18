@@ -57,13 +57,10 @@ Liferay DXP/Portal 7.4以降では、メタデータを使用してオーバー�
 
 サンプルをデプロイする方法は次のとおりです。
 
-1. Liferay DXP/Portalを起動します。 まだDockerコンテナがない場合は、以下を使用します。
+```{include} /_snippets/run-liferay-portal.md
+```
 
-    ```bash
-    docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
-    ```
-
-    別のDXP/Portalバージョンを実行している場合は、上記のコマンドを適宜調整してください。
+次に、次の手順を実行します。
 
 1. [最新のサンプル](./liferay-i2f4.zip) をダウンロードして解凍します。
 
@@ -203,14 +200,6 @@ Provide-Capability:\
     ```bash
     STARTED com.acme.x8f3.impl_1.0.0 [3209]
     ```
-
-1. ブラウザで`https://localhost:8080`を開きます。
-
-1. デフォルトの認証情報を使用してサインインします。
-
-    **ユーザー名** : `test@liferay.com`
-
-    **パスワード：** `test`
 
 1. Navigate to a Site page and click the edit icon (![Edit](../../images/icon-edit.png)). 公開ボタンには、カスタム言語キーが表示されます。
 

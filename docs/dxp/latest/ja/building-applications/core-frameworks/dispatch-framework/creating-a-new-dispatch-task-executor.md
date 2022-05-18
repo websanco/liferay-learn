@@ -46,13 +46,10 @@
 
 ## サンプルのディスパッチタスクエグゼキュータのデプロイ
 
+```{include} /_snippets/run-liferay-portal.md
+```
+
 次の手順に従って、サンプルのディスパッチタスクエグゼキュータをダウンロード、ビルドして、新しいDockerコンテナにデプロイします。
-
-1. 新しい[Liferay Dockerコンテナ](../../../installation-and-upgrades/installing-liferay/using-liferay-docker-images.md)を起動します。
-
-   ```bash
-   docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
-   ```
 
 1. サンプルモジュールをダウンロードして解凍します。
 

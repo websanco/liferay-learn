@@ -38,11 +38,10 @@ OSGiサービスをオーバーライドするには、次の手順に従いま�
 
 ## オーバーライドするサンプルモジュールをデプロイする
 
-1. 新しい[Liferay Dockerコンテナ](../../installation-and-upgrades/installing-liferay/using-liferay-docker-images/docker-container-basics.md)を起動します。
+```{include} /_snippets/run-liferay-portal.md
+```
 
-   ```bash
-   docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
-   ```
+次に、次の手順を実行します。
 
 1. サンプルモジュールをダウンロードして解凍します。
 

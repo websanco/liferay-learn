@@ -12,13 +12,12 @@ DXP Dockerイメージには **クラシック** デフォルトで利用可能�
 
 ### 新しいテーマをデプロイする
 
-1. Liferay DXP Dockerイメージを起動します。
+```{include} /_snippets/run-liferay-portal.md
+```
 
-    ```bash
-    docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
-    ```
+次に、次の手順を実行します。
 
-2.  [ Acmeサンプルブルーテーマ](./liferay-5b2v-theme.war) を含むWARをダウンロードする ：
+1.  [ Acmeサンプルブルーテーマ](./liferay-5b2v-theme.war) を含むWARをダウンロードする ：
 
     ```bash
     curl https://learn.liferay.com/dxp/latest/en/getting-started/changing-your-sites-appearance/liferay-5b2v-theme.war -O

@@ -14,7 +14,10 @@
 
 ## メッセージを送る
 
-サンプルプロジェクトでメッセージを送信することから始めます。
+```{include} /_snippets/run-liferay-portal.md
+```
+
+次に、次の手順を実行します。
 
 1. サンプルをダウンロードして解凍します。
 
@@ -24,12 +27,6 @@
 
    ```bash
    unzip liferay-n8k5.zip
-   ```
-
-1. [Liferay Dockerコンテナ](../../../installation-and-upgrades/installing-liferay/using-liferay-docker-images.md)を起動します。
-
-   ```bash
-   docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
    ```
 
 1. 宛先モジュール`n8k5-able-impl`をビルドしてデプロイします。

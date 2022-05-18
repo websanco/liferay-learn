@@ -8,19 +8,10 @@ LiferayのHeadless Deliveryアプリケーションは、[ドキュメントと�
 
 ## ドキュメントを投稿する
 
-1.  Liferay Dockerイメージを起動します。
+```{include} /_snippets/run-liferay-portal.md
+```
 
-    ```bash
-    docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
-    ```
-
-1. Liferayの初期化後、ブラウザで`http://localhost:8080`にアクセスします。
-
-1. デフォルトの認証情報を使用してサインインします。
-
-    **ユーザー名** : `test@liferay.com`
-
-    **パスワード：** `test`
+次に、次の手順を実行します。
 
 1. [サイトのIDを検索します](../../../headless-delivery/consuming-apis/consuming-rest-services.md#identify-the-site-containing-the-data) 。 このIDは、いくつかのサービス呼び出しで使用します。
 
@@ -46,10 +37,6 @@ cURLスクリプトを使用して、ファイルを[ドキュメントとメデ
 
     ```bash
     ./Document **POST** ToSite.sh 1234
-    ```
-
-    ```{note} 
-       ユーザーとパスワードがそれぞれ``test@liferay.com`` と``test``でない場合は、実行する前に``Document **POST** ToSite.sh``スクリプトでこれらの値を置き換えてください。
     ```
 
 スクリプトは、それ自体をサイトのドキュメントとメディアにアップロードします。
@@ -87,10 +74,6 @@ cURLスクリプトを使用して、ファイルを[ドキュメントとメデ
 
     ```bash
     java -classpath .: **-DsiteId=1234 Document****POST** ToSite
-    ```
-
-    ```{note} 
-       ユーザーとパスワードがそれぞれ``test@liferay.com``と``test``でない場合は、実行する前に``Document **POST** ToSite.java`` ファイル内のこれらの値を置き換えて、クラスを再コンパイルしてください。
     ```
 
 クラスは、ソースファイル`Document_POST_ToSite.java`をドキュメントとメディアにアップロードします。

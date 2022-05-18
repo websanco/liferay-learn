@@ -177,13 +177,10 @@ APIクラスは、パブリックインターフェイス、ユーティリテ�
 
 ## 新しいサービスメソッドのテスト
 
+```{include} /_snippets/run-liferay-portal.md
+```
+
 次に、モジュールをデプロイして、新しいサービスをテストします。
-
-1. [Liferay Dockerコンテナ](../../../../installation-and-upgrades/installing-liferay/using-liferay-docker-images.md)を起動します。
-
-   ```bash
-   docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
-   ```
 
 1. サンプルをビルドしてデプロイします。
 
@@ -201,14 +198,6 @@ APIクラスは、パブリックインターフェイス、ユーティリテ�
     STARTED com.acme.w9b7.api_1.0.0
     STARTED com.acme.w9b7.service_1.0.0
     ```
-
-1. ブラウザで`http://localhost:8080`を開きます。
-
-1. デフォルトの認証情報を使用してサインインします。
-
-    **ユーザー名** : `test@liferay.com`
-
-    **パスワード：** `test`
 
 1. ［コントロールパネル］→［サーバー管理］→［スクリプト］でスクリプトコンソールに移動します。
 

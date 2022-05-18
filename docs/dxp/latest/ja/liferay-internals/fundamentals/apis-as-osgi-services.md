@@ -19,13 +19,10 @@ APIと実装に関する懸念事項を異なるモジュールに分離する�
 
 ## シンプルなAPIと実装をデプロイする
 
-サンプルモジュールを開始します。
+```{include} /_snippets/run-liferay-portal.md
+```
 
-1. [Liferay Dockerコンテナ](../../installation-and-upgrades/installing-liferay/using-liferay-docker-images/docker-container-basics.md)を起動します。
-
-    ```bash
-    docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
-    ```
+次に、次の手順を実行します。
 
 1. `liferay-p9g2.zip`をダウンロードして解凍します。
 

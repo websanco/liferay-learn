@@ -58,6 +58,11 @@ Liferayでは、一般的に3種類のモジュールを使用します。
 
 サンプルモジュールでは、あいさつ文を生成するためのAPIを定義します。
 
+```{include} /_snippets/run-liferay-portal.md
+```
+
+次に、次の手順を実行します。
+
 1. サンプルをダウンロードして解凍します。
 
     ```bash
@@ -85,12 +90,6 @@ Liferayでは、一般的に3種類のモジュールを使用します。
     k8s2-api/build/libs/com.acme.k8s2.api-1.0.0.jar
     ```
 
-1. [Liferay Dockerコンテナ](../../installation-and-upgrades/installing-liferay/using-liferay-docker-images/docker-container-basics.md)を起動します。
-
-    ```bash
-    docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
-    ```
-
 1. モジュールのJARをデプロイします。
 
     ```bash
@@ -105,10 +104,6 @@ Liferayでは、一般的に3種類のモジュールを使用します。
     ```
 
     `STARTED` のメッセージには、モジュールのID `1152`が含まれています。
-
-1. `http://localhost:8080` にアクセスし、デフォルトの認証情報を使用してサインインします。
-
-   **ユーザ名：** `test@liferay.com` **パスワード：** `test`
 
 1. [Gogo シェル](./using-the-gogo-shell.md)を開きます。
 

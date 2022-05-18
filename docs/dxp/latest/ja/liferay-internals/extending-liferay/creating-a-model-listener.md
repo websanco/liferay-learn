@@ -17,13 +17,10 @@
 
 ## 実行中のモデルリスナーを調べる
 
-まず、Liferay DXPのインスタンスに `JournalArticle` モデルのサンプルモデルリスナーをデプロイします。
+```{include} /_snippets/run-liferay-portal.md
+```
 
-1. DXPイメージを起動します。
-
-    ```bash
-    docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
-    ```
+Liferay DXPのインスタンスに `JournalArticle` モデルのサンプルモデルリスナーをデプロイします。
 
 1. Acme Model Listenerを`ダウンロードして解凍します `。
 

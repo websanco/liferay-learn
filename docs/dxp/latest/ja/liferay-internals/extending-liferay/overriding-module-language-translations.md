@@ -74,11 +74,10 @@ Liferay DXP/Portal 7.4以降を使用している場合は、[Overriding Global 
 
 この例では、デフォルトの`Add Blog Entry`言語キーをカスタムキーに変更します。 今度はそれをデプロイします。
 
-1. Liferay DXPを起動します。 まだDockerコンテナがない場合は、以下を使用します。
+```{include} /_snippets/run-liferay-portal.md
+```
 
-    ```bash
-    docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
-    ```
+次に、次の手順を実行します。
 
 1. `liferay-e6u7.zip`をダウンロードして解凍します。
 
@@ -109,14 +108,6 @@ Liferay DXP/Portal 7.4以降を使用している場合は、[Overriding Global 
     ```bash
     STARTED com.acme.e6u7.impl_1.0.0 [1650]
     ```
-
-1. ブラウザで`https://localhost:8080`を開きます。
-
-1. デフォルトの認証情報を使用してサインインします。
-
-    **ユーザー名** : `test@liferay.com`
-
-    **パスワード：** `test`
 
 1. ［**Content & Data**］ &rarr; ［**Blogs**］ に移動します。 カーソルを追加アイコン（![Add](../../images/icon-add.png)）に合わせます。 メッセージにカスタム言語キーが表示されます。
 

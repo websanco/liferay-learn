@@ -8,11 +8,10 @@ RESTビルダーを使用すると、構築するAPIを定義でき、RESTビル
 
 RESTビルダーの動作を確認するために、カタログ内のIDによってダミー製品を取得するサンプルAPIをデプロイできます。 この簡単な例がどのように機能するかを理解したら、独自のアプリケーション用のAPIを作成できます。
 
-1. Liferay DXP Dockerイメージを起動します。
+```{include} /_snippets/run-liferay-portal.md
+```
 
-    ```bash
-    docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
-    ```
+次に、次の手順を実行します。
 
 1. [Acme Foo API](./producing-apis-with-rest-builder/liferay-r3b2.zip) を含む`.zip`アーカイブをダウンロードして解凍します。
 
@@ -56,7 +55,7 @@ RESTビルダーの動作を確認するために、カタログ内のIDによ�
 1. ターミナルから次のコマンドを実行し、`{fooId}`を1〜3の数字に置き換えて、APIをテストします。
 
     ```bash
-    curl -u 'test@liferay.com:test' "http://localhost:8080/o/headless-r3b2/v1.0/foo/{fooId}"
+    curl -u 'test@liferay.com:learn' "http://localhost:8080/o/headless-r3b2/v1.0/foo/{fooId}"
     ```
 
     クエリは、JSONオブジェクトでラップされた対応する製品のID、名前、および説明を返します。

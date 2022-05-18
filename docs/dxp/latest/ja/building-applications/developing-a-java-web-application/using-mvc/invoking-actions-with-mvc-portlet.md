@@ -8,13 +8,10 @@
 
 ## アクションを処理するMVCポートレットをデプロイする
 
+```{include} /_snippets/run-liferay-portal.md
+```
+
 サンプルのMVCポートレットには、個別のポートレットメソッドにマップする3つのポートレットアクションURLがあります。 ポートレットをデプロイしてそのアクションをトリガーする方法は次のとおりです。
-
-1. [Liferay Dockerコンテナ](../../../installation-and-upgrades/installing-liferay/using-liferay-docker-images.md)を起動します。
-
-   ```bash
-   docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
-   ```
 
 1. サンプルをダウンロードして解凍します。
 
@@ -45,14 +42,6 @@
     ```bash
     STARTED com.acme.u8t2.web_1.0.0
     ```
-
-1. ブラウザで`http://localhost:8080`を開きます。
-
-1. デフォルトの認証情報を使用してサインインします。
-
-    **ユーザー名** : `test@liferay.com`
-
-    **パスワード：** `test`
 
 1. **U8T2ポートレット** ウィジェットを ［**Samples**］ カテゴリからウィジェットページに追加します。 U8T2ポートレットが表示されます。
 

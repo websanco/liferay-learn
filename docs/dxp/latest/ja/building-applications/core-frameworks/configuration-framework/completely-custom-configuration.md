@@ -6,13 +6,10 @@
 
 ## サンプルプロジェクトを参照する
 
-1. Liferay DXPを起動します。 まだDockerコンテナがない場合は、以下を使用します。
+```{include} /_snippets/run-liferay-dxp.md
+```
 
-    ```bash
-    docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_DXP_DOCKER_IMAGE$]
-    ```
-
-    別のLiferay PortalバージョンまたはLiferay DXPを実行している場合は、上記のコマンドを適宜調整してください。
+次に、次の手順を実行します。
 
 1. [完全なカスタム構成](./liferay-u2g5.zip) をダウンロードして解凍します。
 

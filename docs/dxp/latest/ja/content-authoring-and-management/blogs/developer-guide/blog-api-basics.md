@@ -8,11 +8,10 @@ LiferayのREST APIは、ブログの投稿や画像を追加、変更、削除�
 
 ## ブログ投稿の追加
 
-1. Liferay DXPを起動します。 まだDockerコンテナがない場合は、以下を使用します。
+```{include} /_snippets/run-liferay-portal.md
+```
 
-   ```bash
-   docker run -it -p 8080:8080 [$LIFERAY_LEARN_PORTAL_DOCKER_IMAGE$]
-   ```
+次に、次の手順を実行します。
 
 1. [ブログAPIの基本](./liferay-r3g4.zip) をダウンロードして解凍します。
 
@@ -95,7 +94,7 @@ LiferayのREST APIは、ブログの投稿や画像を追加、変更、削除�
 | `-X POST`                                                                   | 指定されたエンドポイントで呼び出すHTTPメソッド       |
 | `"http://localhost:8080/o/headless-delivery/v1.0/sites/${1}/blog-postings"` | RESTサービスエンドポイント                 |
 | `-d "{\"articleBody\": \"Foo\", \"headline\": \"Able\"}"`           | お客様が掲載を希望するデータ                  |
-| `-u "test@liferay.com:test"`                                                | 基本認証の資格情報                       |
+| `-u "test@liferay.com:learn"`                                                | 基本認証の資格情報                       |
 
 ```{note}
    ここでは、デモンストレーションの目的で基本認証を使用しています。 本番環境では、 [OAuth2](../../../installation-and-upgrades/securing-liferay/configuring-sso/using-oauth2/introduction-to-using-oauth2.md) を介してユーザーを認証する必要があります。
