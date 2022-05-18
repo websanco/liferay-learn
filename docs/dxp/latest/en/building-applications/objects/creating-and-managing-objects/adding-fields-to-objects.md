@@ -52,7 +52,7 @@ After saving fields to an Object draft, you can select them to define whether th
 
 | Type | Description |
 | :--- | :--- |
-| Attachment | Stores `jpeg`, `jpg`, `pdf`, and `png` files no larger than 100 MB |
+| [Attachment](../understanding-object-field-types.md#attachment) | Stores `jpeg`, `jpg`, `pdf`, and `png` files no larger than 100 MB |
 | Boolean | Stores true or false values |
 | Date | Stores date values |
 | Decimal (*previously Double*) | Stores a decimal number value that supports fractional portions |
