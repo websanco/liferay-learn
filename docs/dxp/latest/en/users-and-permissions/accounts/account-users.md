@@ -1,6 +1,6 @@
 # Account Users
 
-> Available: Liferay DXP/Portal 7.4+
+{bdg-secondary}`Available 7.4+`
 
 Account Users are User accounts that are associated with a Business Account or a Person Account.
 
@@ -42,7 +42,7 @@ To associate an existing user to a Business Account,
 
 1. Click the _Add_ icon and select a user to assign to the account. 
 
-### Associating and Existing User to a Personal Account
+### Associating an Existing User to a Personal Account
 
 To associate an existing user to a Personal Account,
 
@@ -108,8 +108,8 @@ To see a deactivated User, click the *Filter and Order* drop-down menu and click
 
 ## Impersonating an Account User
 
-You can impersonate Account Users to view the system as they would see it. This helps to diagnose permission issues an administrator can't see, such as making sure a User doesn't have access to restricted data. Note, only Users with this permission can impersonate a different User.
+You can impersonate Account Users to view the system as they would see it. This can be used to diagnose permission issues an administrator can't see, such as making sure a User doesn't have access to restricted data. Only Users with this permission can impersonate a different User.
 
-1. In Account Users, click the Account User's _Options_ icon (![Options icon](../../images/icon-actions.png)). 
+1. In Account Users, click the Account User's _Options_ icon (![Options icon](../../images/icon-actions.png)).
 
 2. Click *Impersonate User* and a new window opens with you logged in as that Account User.
