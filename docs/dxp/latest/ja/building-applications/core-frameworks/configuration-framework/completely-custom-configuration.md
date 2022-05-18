@@ -9,7 +9,7 @@
 ```{include} /_snippets/run-liferay-dxp.md
 ```
 
-次に、次の手順を実行します。
+次に、以下の手順を実行します。
 
 1. [完全なカスタム構成](./liferay-u2g5.zip) をダウンロードして解凍します。
 

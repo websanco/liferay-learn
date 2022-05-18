@@ -27,7 +27,7 @@ Liferay DXPのインスタンスで例 `SimilarResultsContributor` 起動して�
 ```{include} /_snippets/run-liferay-dxp.md
 ```
 
-次に、次の手順を実行します。
+次に、以下の手順を実行します。
 
 1. [Acme Similar Results Contributor](./liferay-r1s1.zip) をダウンロードと解凍します。
 

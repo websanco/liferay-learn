@@ -32,7 +32,7 @@ Groovyアクションロジックをワークフロー定義の `<script>` 要�
 ```{include} /_snippets/run-liferay-dxp.md
 ```
 
-次に、次の手順を実行します。
+次に、以下の手順を実行します。
 
 1. Acme E5C9 Implementationプロジェクトをダウンロードして解凍します。
 

@@ -60,7 +60,7 @@ Liferay DXP/Portal 7.4以降では、メタデータを使用してオーバー�
 ```{include} /_snippets/run-liferay-portal.md
 ```
 
-次に、次の手順を実行します。
+次に、以下の手順を実行します。
 
 1. [最新のサンプル](./liferay-i2f4.zip) をダウンロードして解凍します。
 

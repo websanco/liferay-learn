@@ -22,7 +22,7 @@ APIと実装に関する懸念事項を異なるモジュールに分離する�
 ```{include} /_snippets/run-liferay-portal.md
 ```
 
-次に、次の手順を実行します。
+次に、以下の手順を実行します。
 
 1. `liferay-p9g2.zip`をダウンロードして解凍します。
 

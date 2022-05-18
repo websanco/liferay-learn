@@ -2,7 +2,7 @@
 
 [SharePoint OAuth2設定](./enabling-liferays-rest-connector-to-sharepoint.md#adding-a-sharepoint-oauth2-configuration) を追加すると、それを使用して、SharePointライブラリにマウントされるドキュメントとメディアにリポジトリを作成できます。
 
-次に、次の手順を実行します。
+次に、以下の手順を実行します。
 
 1. サイトまたはアセットライブラリでドキュメントとメディアアプリケーションを開きます。
 

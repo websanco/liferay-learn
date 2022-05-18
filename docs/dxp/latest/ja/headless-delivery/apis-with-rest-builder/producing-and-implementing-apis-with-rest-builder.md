@@ -11,7 +11,7 @@ RESTビルダーの動作を確認するために、カタログ内のIDによ�
 ```{include} /_snippets/run-liferay-portal.md
 ```
 
-次に、次の手順を実行します。
+次に、以下の手順を実行します。
 
 1. [Acme Foo API](./producing-apis-with-rest-builder/liferay-r3b2.zip) を含む`.zip`アーカイブをダウンロードして解凍します。
 

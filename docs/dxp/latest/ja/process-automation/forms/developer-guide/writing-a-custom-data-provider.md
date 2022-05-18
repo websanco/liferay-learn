@@ -15,7 +15,7 @@ RESTデータプロバイダーが目的に合わない場合は、`DDMDataProvi
 ```{include} /_snippets/run-liferay-portal.md
 ```
 
-次に、次の手順を実行します。
+次に、以下の手順を実行します。
 
 1. Acme XML Data Providerをダウンロードし、解凍する。
 

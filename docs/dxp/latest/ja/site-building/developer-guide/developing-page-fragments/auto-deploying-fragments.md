@@ -15,7 +15,7 @@ Liferay DXP 7.4以降の場合、フラグメントコレクションはLiferay 
 ```{include} /_snippets/run-liferay-dxp.md
 ```
 
-次に、フラグメントセットのサンプルを自動デプロイすることから始めます。
+次に、以下の手順を実行します。
 
 1. [サンプルの自動デプロイ可能なフラグメントセット](https://learn.liferay.com/dxp/latest/ja/site-building/developer-guide/developing-page-fragments/liferay-a2f8.zip) をダウンロードして解凍します。
 

@@ -13,7 +13,7 @@
 ```{include} /_snippets/run-liferay-portal.md
 ```
 
-次に、次の手順を実行します。
+次に、以下の手順を実行します。
 
 1. [ローカライズされたメッセージの共有](./liferay-x7y2.zip) をダウンロードして解凍します。
 

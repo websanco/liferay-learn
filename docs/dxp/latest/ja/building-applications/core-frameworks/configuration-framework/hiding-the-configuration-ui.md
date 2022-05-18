@@ -28,7 +28,7 @@ Liferayは、 [構成インターフェイスがデプロイ](./setting-and-acce
 ```{include} /_snippets/run-liferay-portal.md
 ```
 
-次に、次の手順を実行します。
+次に、以下の手順を実行します。
 
 1. [構成UIの非表示](./liferay-g8v3.zip) をダウンロードして解凍します。
 

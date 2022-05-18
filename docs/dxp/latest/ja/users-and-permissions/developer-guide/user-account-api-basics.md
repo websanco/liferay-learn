@@ -11,7 +11,7 @@
 ```{include} /_snippets/run-liferay-portal.md
 ```
 
-次に、次の手順を実行します。
+次に、以下の手順を実行します。
 
 1. [User Account API Basics](./liferay-y6q4.zip) をダウンロードし解答します。
 

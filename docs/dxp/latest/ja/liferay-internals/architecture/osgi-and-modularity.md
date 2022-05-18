@@ -37,7 +37,7 @@ Liferayでは、一般的に3種類のモジュールを使用します。
 ```{include} /_snippets/run-liferay-portal.md
 ```
 
-次に、次の手順を実行します。
+次に、以下の手順を実行します。
 
 1. `liferay-r9u2.zip`をダウンロードして解凍します。
 

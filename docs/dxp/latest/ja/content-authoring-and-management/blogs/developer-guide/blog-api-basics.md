@@ -11,7 +11,7 @@ LiferayのREST APIは、ブログの投稿や画像を追加、変更、削除�
 ```{include} /_snippets/run-liferay-portal.md
 ```
 
-次に、次の手順を実行します。
+次に、以下の手順を実行します。
 
 1. [ブログAPIの基本](./liferay-r3g4.zip) をダウンロードして解凍します。
 

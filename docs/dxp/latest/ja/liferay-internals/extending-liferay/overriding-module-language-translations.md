@@ -77,7 +77,7 @@ Liferay DXP/Portal 7.4以降を使用している場合は、[Overriding Global 
 ```{include} /_snippets/run-liferay-portal.md
 ```
 
-次に、次の手順を実行します。
+次に、以下の手順を実行します。
 
 1. `liferay-e6u7.zip`をダウンロードして解凍します。
 

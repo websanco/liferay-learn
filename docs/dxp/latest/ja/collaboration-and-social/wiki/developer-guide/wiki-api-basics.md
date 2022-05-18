@@ -15,7 +15,7 @@ LiferayのHeadless Deliveryアプリケーションは、[Wiki](../getting-start
 ```{include} /_snippets/run-liferay-portal.md
 ```
 
-次に、次の手順を実行します。
+次に、以下の手順を実行します。
 
 開始したら、Site IDを取得します。 サイトIDを見つけるには、 **サイトメニュー**（![Site Menu](../../../images/icon-menu.png)）を開き、 ［**Configuration**］ &rarr; ［**Site Settings**］ &rarr; ［**Site Configuration**］ に移動します。
 
