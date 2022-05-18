@@ -37,13 +37,13 @@ Liferay DXP is the commercially supported and enterprise ready platform used aro
 1. Get the Docker image.
 
     ```bash
-    docker pull [$LIFERAY_LEARN_DXP_WORKSPACE_TOKEN$]
+    docker pull [$LIFERAY_LEARN_DXP_DOCKER_IMAGE$]
     ```
 
 1. Start the Docker image.
 
     ```bash
-    docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_DXP_WORKSPACE_TOKEN$]
+    docker run -it -m 8g -p 8080:8080 [$LIFERAY_LEARN_DXP_DOCKER_IMAGE$]
     ```
 
 1. Sign in to Liferay at `<http://localhost:8080>` using the email address _test@liferay.com_ and the password _test_. When prompted, change your password.
