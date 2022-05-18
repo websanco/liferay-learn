@@ -8,14 +8,12 @@ The DXP _Site Menu_ on the left side of the screen contains actions, content, an
 
 ![Expand the Site Menu so that all options are visible.](./navigating-dxp/images/05.png)
 
-
 The *Site Menu* indicates the selected Site. In the above example, the Site is `Liferay`. You can change what site you are working with by clicking the Compass Icon ( ![Compass Icon](../images/icon-compass.png) ) in the Site Menu.
-
 
 The following common site building and management activities can be done in the _Site Menu_:
 
 * [Adding Pages](../site-building/creating-pages/adding-pages/adding-a-page-to-a-site.md)
-* [Creating Content](../content-authoring-and-management.html)
+* [Creating Content](../content-authoring-and-management.md)
 * [Managing Site Memberships](../site-building/building-sites/site-membership/adding-members-to-sites.md)
 * [Configuring and Optimizing Site Behavior and Functionality](../site_building.html)
 * And more...
@@ -32,24 +30,24 @@ When you open a Page in view mode, the available tools in the Applications Bar c
 
 For [Content Pages](../site-building/creating-pages/using-content-pages.md) (A), the available tools are:
 
-- Edit (![Edit](../images/icon-edit.png))
-- Configure Page (![Configure Page](../images/icon-settings.png))
-- Simulation (![Simulation](../images/icon-simulation.png))
-- Content Performance (![Performance](../images/icon-analytics.png))
-- A/B Test (![A/B Test](../images/icon-ab-testing.png))
-- Page Audit (![Page Audit](../images/icon-information.png))
+* Edit (![Edit](../images/icon-edit.png))
+* Configure Page (![Configure Page](../images/icon-settings.png))
+* Simulation (![Simulation](../images/icon-simulation.png))
+* Content Performance (![Performance](../images/icon-analytics.png))
+* A/B Test (![A/B Test](../images/icon-ab-testing.png))
+* Page Audit (![Page Audit](../images/icon-information.png))
 
 For [Widget Pages](../site-building/creating-pages/using-widget-pages/adding-widgets-to-a-page.md) (B), the available options are:
 
-- Configure Page (![Configure Page](../images/icon-settings.png))
-- Toggle Controls (![Toggle Controls](../images/icon-preview.png))
-- Add (![Add](../images/icon-plus.png))
-- Simulation (![Simulation](../images/icon-simulation.png))
-- Content Performance (![Performance](../images/icon-analytics.png))
-- Page Audit (![Page Audit](../images/icon-information.png))
+* Configure Page (![Configure Page](../images/icon-settings.png))
+* Toggle Controls (![Toggle Controls](../images/icon-preview.png))
+* Add (![Add](../images/icon-plus.png))
+* Simulation (![Simulation](../images/icon-simulation.png))
+* Content Performance (![Performance](../images/icon-analytics.png))
+* Page Audit (![Page Audit](../images/icon-information.png))
 
 ```{note}
-The Application Bar options for Content Pages and Widget Pages depend on your Liferay DXP version. [Content Performance](../content-authoring-and-management/content-performance-tool/about-the-content-performance-tool.md) is available for Content Pages starting with Liferay DXP 7.3 and for Widget Pages starting with Liferay DXP 7.4. Page Audit is available starting with Liferay DXP 7.4. The Toggle Controls option is available starting with Liferay DXP 7.3.
+The Application Bar options for Content Pages and Widget Pages depend on your Liferay DXP version. [Content Performance](../content-authoring-and-management/page-performance-and-accessibility/about-the-content-performance-tool.md) is available for Content Pages starting with Liferay DXP 7.3 and for Widget Pages starting with Liferay DXP 7.4. Page Audit is available starting with Liferay DXP 7.4. The Toggle Controls option is available starting with Liferay DXP 7.3.
 ```
 
 ## Personal Menu

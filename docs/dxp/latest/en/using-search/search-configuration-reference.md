@@ -237,7 +237,7 @@ This entry has one repeatable property (use array syntax if you're defining via 
 
 In *Control Panel* &rarr; *Configuration* &rarr; *Search* there are three administrative UIs: Connections, Index Actions, and Field Mappings.
 
-See the dedicated [Search Administration](search-administration.md) documentation for more details.
+See the dedicated [Search Administration and Tuning](./search-administration-and-tuning.md) documentation for more details.
 
 #### Connections
 
@@ -270,6 +270,6 @@ Portal properties are system scoped as well. The [Lucene Search](https://learn.l
 
 ## Related Content
 
-* [Search Administration](search-administration.md)
-* [Elasticsearch Connector Configuration Reference](../installing-and-upgrading-a-search-engine/elasticsearch/elasticsearch-connector-configuration-reference.md)
-* [Getting Started with Elasticsearch](../installing-and-upgrading-a-search-engine/elasticsearch/getting-started-with-elasticsearch.md)
+* [Search Administration and Tuning](search-administration-and-tuning.md)
+* [Elasticsearch Connector Configuration Reference](./installing-and-upgrading-a-search-engine/elasticsearch/elasticsearch-connector-configuration-reference.md)
+* [Getting Started with Elasticsearch](./installing-and-upgrading-a-search-engine/elasticsearch/getting-started-with-elasticsearch.md)

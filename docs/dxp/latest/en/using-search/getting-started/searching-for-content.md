@@ -83,6 +83,7 @@ http://localhost:8080/web/guest/search?q=data&target=this-site
 **Use Advanced Search Syntax:** If using Elasticsearch, enabling this allows users to enter [Query String Syntax](https://www.elastic.co/guide/en/elasticsearch/reference/7.6/query-dsl-simple-query-string-query.html) into the Search Bar. If using Solr, consult its documentation for the [proper syntax](https://lucene.apache.org/solr/guide/7_0/query-syntax-and-parsing.html).
 
 **Show Results from Staged Sites:** Content from [Staging environments](../../site-building/publishing-tools/staging.md) is [not searchable](../search-pages-and-widgets/search-results/search-results-behavior.md#search-and-staging) on live sites, regardless of this setting. This setting enables searching for content from other local staging sites when the Everything scope is configured in a site with local staging enabled.
+
 ## Searching for Liferay Objects
 
 Liferay 7.4 includes [Liferay Objects](../../building-applications/objects.md), a GUI-driven application-building framework. Fields of each Object's definition can be declared searchable; Object Entries (the records submitted by the application's users) can then be queried and returned in the Search Results widget. 

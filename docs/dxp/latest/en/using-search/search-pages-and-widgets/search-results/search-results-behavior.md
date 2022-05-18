@@ -118,6 +118,6 @@ To discover which fields are indexed for content pages, enable the Search Result
 
 ## Returning Objects in Search Results
 
-Liferay 7.4 includes [Liferay Objects](../../building-applications/objects.md), a GUI-driven application-building framework. Fields of each Object's definition can be declared searchable; Object Entries (the records submitted by the application's users) [can then be queried](../../getting-started/searching-for-content.md#searching-for-liferay-objects) and returned in the Search Results widget.
+Liferay 7.4 includes [Liferay Objects](../../../building-applications/objects.md), a GUI-driven application-building framework. Fields of each Object's definition can be declared searchable; Object Entries (the records submitted by the application's users) [can then be queried](../../getting-started/searching-for-content.md#searching-for-liferay-objects) and returned in the Search Results widget.
 
 ![A title and a content summary are displayed for Object Entries.](./search-results-behavior/images/13.png)

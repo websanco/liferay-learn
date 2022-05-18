@@ -1,6 +1,6 @@
 # Liferay CLI Tool
 
-The Liferay CLI tool makes it easy to create [Angular](https://angular.io/), JavaScript, [React](https://reactjs.org/), shared bundle, or [Vue.js](https://vuejs.org/) projects to interface with Liferay's REST and GraphQL services. Using a `liferay` command, you can generate, build, and deploy projects. 
+The Liferay CLI tool makes it easy to create [Angular](https://angular.io/), JavaScript, [React](https://reactjs.org/), shared bundle, or [Vue.js](https://vuejs.org/) projects to interface with Liferay's REST and GraphQL services. Using a `liferay` command, you can generate, build, and deploy projects.
 
 ```{note}
 The Liferay CLI tool replaces the old Yeoman generators used to create JavaScript application projects for Liferay DXP 7.4+. You can use either approach for older versions, but for 7.4+, you must use the CLI tool instead of the Yeoman generators.
@@ -20,7 +20,7 @@ If you would rather not install the CLI tool globally, you can also run the tool
 
 ## Generating a Project
 
-Use the `liferay new` command to create a new [Remote App](../remote-apps/creating-a-liferay-remote-app.md) or Liferay Platform project:
+Use the `liferay new` command to create a new [Remote App](../../remote-apps/remote-apps-tutorials/creating-a-basic-remote-app.md) or Liferay Platform project:
 
 1. Open a terminal and navigate to where you want to create the project. Run this command:
 
@@ -35,7 +35,7 @@ Use the `liferay new` command to create a new [Remote App](../remote-apps/creati
    ![Use the arrow keys and press Enter to select a Remote App or Liferay Platform project.](./liferay-cli-tool/images/01.png)
 
    ```{note}
-   [Remote App projects](../remote-apps/creating-a-liferay-remote-app.md) are hosted on a remote server that your Liferay DXP instance can access to use as an application. Liferay Platform projects are deployable to Liferay DXP/Portal.
+   [Remote App projects](../../remote-apps/remote-apps-tutorials/creating-a-basic-remote-app.md) are hosted on a remote server that your Liferay DXP instance can access to use as an application. Liferay Platform projects are deployable to Liferay DXP/Portal.
    ```
 
 1. Enter a human readable description of the new project at the prompt. The default value is "New Project".
