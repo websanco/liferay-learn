@@ -17,7 +17,7 @@
    ![この［Rate It Select from List］フィールドには、ほぼ "良い" の選択が寄せられています。](./form-reports/images/01.png)
 
 ```tip::
-   フォームレポートには、集計されたフォームデータが表示されます。 各フォームエントリーを個別に表示するには、[Managing Form Entries](./managing-form-entries.md#viewing-form-entries) を参照してください。
+   フォームレポートには、集計されたフォームデータが表示されます。 各フォームエントリーを個別に表示するには、`Managing Form Entries <./managing-form-entries.md#viewing-form-entries>`__を参照してください。
 ```
 
 <a name="form-fields-and-chart-types" />

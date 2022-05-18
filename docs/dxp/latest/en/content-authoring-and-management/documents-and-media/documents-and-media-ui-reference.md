@@ -93,7 +93,7 @@ Initiate [Export or Import](../../site-building/building-sites/importing-exporti
 Configure email notifications for Documents and Media. When configuring email notifications, you can use default placeholders for parsing information (e.g., `[$COMPANY_ID$]`, `[$DOCUMENT_TYPE$]`, `[$TO_NAME$]`). Available placeholders appear in each tab under *Definition of Terms*.
 
 ```{note}
-Using email notifications requires a connected mail server. See [Configuring Mail](../../installation-and-upgrades/setting-up-liferay/configuring-mail.md) for more information.
+Using email notifications requires a connected mail server. See `Configuring Mail <../../installation-and-upgrades/setting-up-liferay/configuring-mail.md>`_ for more information.
 ```
 
 **Email From Tab**: Enter a name and email address to use for the email's sender.

@@ -5,7 +5,7 @@ CCR構成プロセスを支援するために、ここでは本ガイドの段�
 以下の構成は、インストールでX-Pack Securityを介した暗号化通信（TLS/SSL）とユーザー認証を有効にすることを前提としています。 詳しくは、 [Elasticsearchの保護](../../installing-and-upgrading-a-search-engine/elasticsearch/securing-elasticsearch.md) を参照してください。
 
 ```{tip}
-   [Using Configuration Files](../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md) は、ファイルが1つのノードにデプロイされると同時に、DXPクラスタ全体に伝播されます。 しかし、各クラスタノードには同一の構成を用意することが最善の方法です。 
+   '<../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md>`_ は、ファイルが1つのノードにデプロイされると同時に、DXPクラスタ全体に伝播されます。 しかし、各クラスタノードには同一の構成を用意することが最善の方法です。 
 ```
 
 <a name="remote-dxp-cluster-node-configurations" />
