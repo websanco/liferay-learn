@@ -220,7 +220,7 @@ After installing DXP, these configurations (including these JVM options) can be 
 
 If you're using the IBM JDK with the JBoss server, complete these additional steps:
 
-1. Navigate to the `$JBOSS_HOME/modules/com/liferay/portal/main/module.xml` file and insert this dependency within the `<dependencies>` element:
+1. For DXP 7.3 and earlier, navigate to the `$JBOSS_HOME/modules/com/liferay/portal/main/module.xml` file and insert this dependency within the `<dependencies>` element:
 
     `<module name="ibm.jdk" />`
 
