@@ -2,7 +2,6 @@
 
 Being a member of a Site grants you access and abilities beyond a typical Guest. These key benefits come with Site membership:
 
-* Only Site members can view a Site's [Private Pages](../../understanding-pages.md#page-sets).
 * Site members have more permissions than guests for many widgets like Message Boards and Wikis that enable them to create content and collaborate on your Site.
 * Site members can be associated with Roles that grant Site privileges.
 
