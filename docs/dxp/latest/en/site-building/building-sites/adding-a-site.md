@@ -12,9 +12,9 @@ To add a new Site to your Liferay Portal instance:
 
 1. Enter a Name for the Site.
 
-1. If you are using a Site Template with pages, then click the checkbox to make default pages private, if desired.
-
-    ![The checkbox to populate the Site with private pages instead of public pages is only present for templates with pages.](./adding-a-site/images/02.png)
+   ```{note}
+   In Liferay DXP 7.3, if you are using a Site Template with pages, then you can check the box to make the default pages private.
+   ```
 
 1. Click *Save*.
 
