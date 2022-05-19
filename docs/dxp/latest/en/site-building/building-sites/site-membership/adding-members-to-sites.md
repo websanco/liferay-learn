@@ -47,7 +47,7 @@ To bulk remove Users from a Site, follow these steps:
 1. In the menu at the top of the page, click the `X` icon to remove the Users from the Site.
 1. In the pop-up that appears, confirm the removal.
 
-Removed Users lose access to the Site's Private Pages and membership in any Site Roles or Teams they had.
+Removed Users lose membership in any Site Roles or Teams they had.
 
 ### Assigning Site Roles
 
