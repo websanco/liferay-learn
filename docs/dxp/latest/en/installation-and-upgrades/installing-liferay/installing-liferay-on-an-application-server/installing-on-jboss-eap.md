@@ -313,9 +313,11 @@ If you're using JBoss to manage the data source, follow these steps:
                     <password>root</password>
                 </security>
             </datasource>
-            <driver name="mysql" module="com.liferay.portal">
-                <driver-class>com.mysql.cj.jdbc.Driver</driver-class>
-            </driver>
+            <drivers>
+                <driver name="mysql" module="com.liferay.portal">
+                    <driver-class>com.mysql.cj.jdbc.Driver</driver-class>
+                </driver>
+            </drivers>
         </datasources>
     </subsystem>
     ```
