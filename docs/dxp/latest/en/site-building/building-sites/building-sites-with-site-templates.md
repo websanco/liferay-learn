@@ -26,9 +26,9 @@ To create a Site using a Site Template, follow these steps:
 
 1. Enter a name for the Site.
 
-    ```{note}
-    Checking the *Create default pages as private (available only to members).* box prevents guest users from viewing Site pages.
-    ```
+   ```{note}
+   In Liferay DXP 7.3, if the Site Template includes pages, then you can check the box to make the default pages private.
+   ```
 
 1. Click *Save*.
 
@@ -57,7 +57,7 @@ To create a Site using a Site Template, follow these steps:
 
 1. Open the Global Menu ( ![Global Menu icon](../../images/icon-applications-menu.png) ) and go to *Sites* under the *Control Panel* tab.
 
-1. Click *Actions* ( ![Actions icon](../../images/icon-actions.png) ) beside your new Site and select *Go to Public Pages* or *Go to Private Pages* to view it.
+1. Click *Actions* ( ![Actions icon](../../images/icon-actions.png) ) beside your new Site and select *Go to Pages* to view it.
 
     ```{tip}
     To view a newly created *blank site*, you must first create a page for it. See [Adding a Page to a Site](../creating-pages/adding-pages/adding-a-page-to-a-site.md) for more information.
