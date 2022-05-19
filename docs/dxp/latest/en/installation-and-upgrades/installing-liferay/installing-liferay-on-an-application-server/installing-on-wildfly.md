@@ -219,6 +219,8 @@ The Java options and memory arguments are explained below.
 After installing DXP, these configurations (including these JVM options) can be further tuned for improved performance. Please see [Tuning Liferay](../../setting-up-liferay/tuning-liferay.md) and [Tuning Your JVM](../../setting-up-liferay/tuning-your-jvm.md) for more information.
 ```
 
+### Using the IBM JDK
+
 If you're using the IBM JDK with the WildFly server, complete these additional steps:
 
 1. Navigate to the `$WILDFLY_HOME/modules/com/liferay/portal/main/module.xml` file and insert this dependency within the `<dependencies>` element:
