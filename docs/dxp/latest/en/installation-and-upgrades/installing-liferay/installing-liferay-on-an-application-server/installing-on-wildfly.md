@@ -219,6 +219,13 @@ The Java options and memory arguments are explained below.
 After installing DXP, these configurations (including these JVM options) can be further tuned for improved performance. Please see [Tuning Liferay](../../setting-up-liferay/tuning-liferay.md) and [Tuning Your JVM](../../setting-up-liferay/tuning-your-jvm.md) for more information.
 ```
 
+**Checkpoint:**
+
+1. The file encoding, user time-zone, preferred protocol stack have been set in the `JAVA_OPTS` in the `standalone.conf.sh` script.
+1. The default amount of memory available has been increased.
+
+The prescribed script modifications are now complete for the DXP installation on WildFly.
+
 ### Using the IBM JDK
 
 If you're using the IBM JDK with the WildFly server, complete these additional steps:
@@ -238,13 +245,6 @@ If you're using the IBM JDK with the WildFly server, complete these additional s
     ```
 
 The added paths resolve issues with deployment exceptions and image uploading problems.
-
-**Checkpoint:**
-
-1. The file encoding, user time-zone, preferred protocol stack have been set in the `JAVA_OPTS` in the `standalone.conf.sh` script.
-1. The default amount of memory available has been increased.
-
-The prescribed script modifications are now complete for the DXP installation on WildFly.
 
 ## Connect to a Database
 
