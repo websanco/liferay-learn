@@ -19,32 +19,16 @@ import com.liferay.headless.delivery.client.dto.v1_0.ContentFieldValue;
 import com.liferay.headless.delivery.client.dto.v1_0.StructuredContent;
 import com.liferay.headless.delivery.client.dto.v1_0.StructuredContentFolder;
 import com.liferay.headless.delivery.client.pagination.Page;
+import com.liferay.headless.delivery.client.resource.v1_0.DocumentResource;
 import com.liferay.headless.delivery.client.resource.v1_0.StructuredContentFolderResource;
 import com.liferay.headless.delivery.client.resource.v1_0.StructuredContentResource;
 import com.liferay.petra.string.StringPool;
 import com.liferay.portal.kernel.util.HashMapBuilder;
 
-import com.vladsch.flexmark.ext.anchorlink.AnchorLinkExtension;
-import com.vladsch.flexmark.ext.aside.AsideExtension;
-import com.vladsch.flexmark.ext.attributes.AttributesExtension;
-import com.vladsch.flexmark.ext.definition.DefinitionExtension;
-import com.vladsch.flexmark.ext.footnotes.FootnoteExtension;
-import com.vladsch.flexmark.ext.gfm.strikethrough.StrikethroughExtension;
-import com.vladsch.flexmark.ext.media.tags.MediaTagsExtension;
-import com.vladsch.flexmark.ext.superscript.SuperscriptExtension;
-import com.vladsch.flexmark.ext.tables.TablesExtension;
-import com.vladsch.flexmark.ext.toc.TocExtension;
-import com.vladsch.flexmark.ext.typographic.TypographicExtension;
-import com.vladsch.flexmark.ext.yaml.front.matter.YamlFrontMatterExtension;
-import com.vladsch.flexmark.html.HtmlRenderer;
-import com.vladsch.flexmark.parser.Parser;
-import com.vladsch.flexmark.util.data.MutableDataSet;
-
 import java.io.File;
 
 import java.nio.charset.StandardCharsets;
 
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
@@ -84,6 +68,14 @@ public class Main {
 			structuredContentFolderResourceBuilder.authentication(
 				login, password
 			).build();
+
+		DocumentResource.Builder documentResourceBuilder = 
+			DocumentResource.builder();
+
+		_documentResource = documentResourceBuilder.authentication(
+				login, password
+			).build();
+
 	}
 
 	public void uploadToLiferay() throws Exception {
@@ -216,42 +208,13 @@ public class Main {
 		return title.trim();
 	}
 
-	private String _toHTML(String text) {
-		MutableDataSet mutableDataSet = new MutableDataSet().set(
-			AsideExtension.ALLOW_LEADING_SPACE, true
-		).set(
-			AsideExtension.EXTEND_TO_BLANK_LINE, false
-		).set(
-			AsideExtension.IGNORE_BLANK_LINE, false
-		).set(
-			AsideExtension.INTERRUPTS_ITEM_PARAGRAPH, true
-		).set(
-			AsideExtension.INTERRUPTS_PARAGRAPH, true
-		).set(
-			AsideExtension.WITH_LEAD_SPACES_INTERRUPTS_ITEM_PARAGRAPH, true
-		).set(
-			HtmlRenderer.GENERATE_HEADER_ID, true
-		).set(
-			Parser.EXTENSIONS,
-			Arrays.asList(
-				AnchorLinkExtension.create(), AsideExtension.create(),
-				AttributesExtension.create(), DefinitionExtension.create(),
-				FootnoteExtension.create(), MediaTagsExtension.create(),
-				StrikethroughExtension.create(), SuperscriptExtension.create(),
-				TablesExtension.create(), TocExtension.create(),
-				TypographicExtension.create(),
-				YamlFrontMatterExtension.create())
-		);
+	private String _toHTML(String text, File markdownFile) {
 
-		HtmlRenderer htmlRenderer = HtmlRenderer.builder(
-			mutableDataSet
-		).build();
+		DxpConverter converter = DxpConverter.getInstance();
 
-		Parser parser = Parser.builder(
-			mutableDataSet
-		).build();
+		return converter.convert(text, markdownFile, _documentResource, 
+			_GROUP_ID);
 
-		return htmlRenderer.render(parser.parse(text));
 	}
 
 	private StructuredContent _toStructuredContent(String fileName)
@@ -259,12 +222,14 @@ public class Main {
 
 		StructuredContent structuredContent = new StructuredContent();
 
+		File englishFile = new File(fileName);
+
 		String englishText = FileUtils.readFileToString(
-			new File(fileName), StandardCharsets.UTF_8);
+			englishFile, StandardCharsets.UTF_8);
 
 		ContentFieldValue englishContentFieldValue = new ContentFieldValue() {
 			{
-				data = _toHTML(englishText);
+				data = _toHTML(englishText, englishFile);
 			}
 		};
 		String englishTitle = _getTitle(englishText);
@@ -286,7 +251,7 @@ public class Main {
 								"ja-JP",
 								new ContentFieldValue() {
 									{
-										data = _toHTML(japaneseText);
+										data = _toHTML(japaneseText, japaneseFile);
 									}
 								}
 							).build();
@@ -320,7 +285,7 @@ public class Main {
 		return structuredContent;
 	}
 
-	private static final long _CONTENT_STRUCTURE_ID = 40090;
+	private static final long _CONTENT_STRUCTURE_ID = 40384;
 
 	private static final long _GROUP_ID = 20122;
 
@@ -328,5 +293,6 @@ public class Main {
 	private Map<String, Long> _structuredContentFolderIds = new HashMap<>();
 	private StructuredContentFolderResource _structuredContentFolderResource;
 	private StructuredContentResource _structuredContentResource;
+	private DocumentResource _documentResource;
 
 }
