@@ -1,10 +1,10 @@
-# OAuth2 Scopes
+# OAuth 2 Scopes
 
 In OAuth 2.0, applications are granted access to limited subsets of user data. These are called *scopes* (not to be confused with Liferay scopes). They are created in two ways:
 
-1. By administrators, by creating a Service Access Policy for the scope.
+* By administrators, by creating a Service Access Policy for the scope.
 
-2. By developers, by creating a JAX-RS endpoint. By default, scopes are generated based on the HTTP verbs supported by the JAX-RS endpoint. A special annotation overrides this behavior and registers specific scopes.
+* By developers, by creating a JAX-RS endpoint. By default, scopes are generated based on the HTTP verbs supported by the JAX-RS endpoint. A special annotation overrides this behavior and registers specific scopes.
 
 ## Creating a Scope for a JSONWS Service
 
@@ -30,24 +30,32 @@ Now you can select it and save your application.
 
 This step is optional. Users need an interface to authorize access to their accounts, and one is provided automatically. If, however, you want to customize the page, you can create an authorization page in your Site.
 
-1. Go to *Control Panel* &rarr; *Instance Settings* &rarr; *Security* &rarr; *OAuth2*. The one category is labeled *Authorize Screen*.
+1. Open the *Global Menu* (![Global Menu](../../images/icon-applications-menu.png)), click the *Control Panel* tab, and go to *Instance Settings* &rarr; *Security* &rarr; *OAuth 2* &rarr; *Authorize Screen*.
 
-    ![The OAuth2 Authorize Screen configuration page.](./oauth2-scopes/images/03.png)
+   This screen displays the Authorize Screen URL field with this default value: `/?p_p_id=com_liferay_oauth2_provider_web_internal_portlet_OAuth2AuthorizePortlet&p_p_state=maximized`. This corresponds to an internal portlet.
 
-2. Two defaults appear. The first is the URL to the authorize page. By default, it's `/?p_p_id=com_liferay_oauth2_provider_web_internal_portlet_OAuth2AuthorizePortlet&p_p_state=maximized`. This corresponds to an internal portlet. 
+   ![Configure the OAuth 2 Authorize Screen.](./oauth2-scopes/images/03.png)
 
-4. Go to your Site's *Site Builder* &rarr; *Pages* screen. Click the (![add](../../images/icon-add.png)) button and choose *Private Page*. This forces users to log in.
+1. Set the desired URL for the Authorize Screen (e.g., `/authorize`).
 
-5. Choose the *Full Page Application* type.
+1. Navigate to the desired Site and open the *Site Menu* (![Site Menu](../../images/icon-product-menu.png)),  expand *Site Builder*, and click *Pages*.
 
-6. Give the page the same name you configured in step 2.
+1. Click the *Add* button (![Add Button](../../images/icon-add.png)) button and choose *Page*.
 
-7. Turn the *Hidden from Navigation Menu Widget* switch on. You don't want this page showing up in your Site navigation.
+   ```{note}
+   For Liferay DXP 7.3 and earlier, create a Private Page. Only authenticated users can access Private Pages.
+   ```
 
-8. On the page that appears next, verify the Friendly URL matches the URL you configured in step 2.
+1. Choose the *Full Page Application* type.
 
-9. Under *Full Page Application*, choose *Application Authorization Request*.
+1. Give the page the same name you configured in step 2.
 
-10. Click *Save*.
+1. Turn the *Hidden from Navigation Menu Widget* switch on. You don't want this page showing up in your Site navigation.
+
+1. On the page that appears next, verify the Friendly URL matches the URL you configured in step 2.
+
+1. Under *Full Page Application*, choose *Application Authorization Request*.
+
+1. Click *Save*.
 
 Excellent! Users can use the default or the UI of your design to go through the authorization process. Now that you have the UI and you understand scopes, it's time to make the authorization process happen in your application.
