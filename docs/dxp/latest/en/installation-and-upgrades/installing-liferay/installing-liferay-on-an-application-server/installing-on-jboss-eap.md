@@ -236,9 +236,17 @@ If you're using the IBM JDK with the JBoss server, complete these additional ste
 
 The added paths resolve issues with portal deployment exceptions and image uploading problems.
 
-## Connect to a Database
+## Database Configuration
 
-The easiest way to handle database configuration is to let DXP manage the data source. You can use the [Setup Wizard](../running-liferay-for-the-first-time.md) to configure DXP's built-in data source. If you're using the built-in data source, skip this section.
+DXP contains a built-in Hypersonic database which is great for demonstration purposes but **should not be used in production**. For production, use a full-featured, supported RDBMS. See [Configure a Database](../configuring-a-database.md) to set up your database.
+
+Liferay DXP can connect with your database using DXP's built-in data source (recommended) or using a data source you create on your app server.
+
+You can configure DXP's built-in data source with your database the first time you run DXP by using the [Setup Wizard](../running-liferay-for-the-first-time.md). Or you can configure the data source in a [`portal-ext.properties` file](../../reference/portal-properties.md) based on the [Database Template](../../reference/database-templates.md) for your database.
+
+Otherwise, you can configure the data source in JBoss EAP.
+
+### Configuring the JBoss EAP Data Source
 
 If you're using JBoss to manage the data source, follow these steps:
 
