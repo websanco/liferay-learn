@@ -38,7 +38,7 @@ Follow these steps to export and import your Site's pages:
 
 1. Enter a Title.
 
-1. Under *Pages*, select Public or Private Pages and the settings you want to export.
+1. Under *Pages*, select the Pages and  settings you want to export.
 
 1. Under the *Content* category, select *All* to export all content or specify a date range or time to filter the content to export.
 
@@ -47,8 +47,6 @@ Follow these steps to export and import your Site's pages:
     ```
 
 1. Select whether the permissions for your exported pages and content are included.
-
-    ![You can configure your export options manually by selecting pages, content, and permissions.](./importing-exporting-pages-and-content/images/02.png)
 
 1. Click *Export*. The menu automatically switches to the *Processes* tab, where you see the status of your exported LAR file.
 
