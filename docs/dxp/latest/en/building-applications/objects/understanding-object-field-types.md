@@ -37,6 +37,10 @@ During field creation, the *Request Files* configuration determines how users ad
 
 * **Upload or Select from Documents and Media Item Selector**: Users can upload a file to Documents and Media or select from existing files using the item selector. Each uploaded file is saved to the root folder in Documents and Media and can be managed like other files.
 
+```{note}
+If desired, you can display hidden Attachment field folders in Documents an Media by adding this [portal property](../../installation-and-upgrades/reference/portal-properties.md) to your server: `dl.show.hidden.mount.folders=true`. 
+```
+
 ![The Request Files field determines how users add files to the Object entry.](./understanding-object-field-types/images/02.png)
 
 After creating an Attachment field, you can access the following configuration options for it:
