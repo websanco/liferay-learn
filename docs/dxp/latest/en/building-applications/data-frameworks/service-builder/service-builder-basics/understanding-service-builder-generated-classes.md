@@ -82,12 +82,12 @@ The API classes define the public interface, utilities, and constants.
 | `W9B7EntryModel` | Base model interface. This interface and its `W9B7EntryModelImpl` implementation serve only as containers for the default property accessors Service Builder generates. Any helper methods and all application logic should be added to `W9B7EntryImpl`. |
 | `W9B7EntrySoap` | SOAP model, similar to `W9B7EntryModelImpl`. `W9B7EntrySoap` is serializable; it does not implement `W9B7Entry`. |
 | `W9B7EntryTable` | Represents the entity's table. |
-| `W9B7EntryWrapper` | Wrapper, wraps `W9B7Entry`. This class is there to be extended to [customize the entity](../../../liferay-internals/extending-liferay/creating-service-wrappers.md). |
+| `W9B7EntryWrapper` | Wrapper, wraps `W9B7Entry`. This class is there to be extended to [customize the entity](../../../../liferay-internals/extending-liferay/creating-service-wrappers.md). |
 | `W9B7EntryPersistence` | Persistence interface that defines CRUD methods for the entity such as `create`, `remove`, `countAll`, `find`, `findAll`, etc. |
-| `W9B7EntryUtil` | Persistence utility class that wraps `W9B7EntryPersistenceImpl` and provides direct access to the database for CRUD operations. This utility should only be used by the service layer; in your portlet classes, use the `W9B7Entry` class by injecting it with the [`@Reference` annotation](../../../liferay-internals/fundamentals/using-an-osgi-service.md). |
+| `W9B7EntryUtil` | Persistence utility class that wraps `W9B7EntryPersistenceImpl` and provides direct access to the database for CRUD operations. This utility should only be used by the service layer; in your portlet classes, use the `W9B7Entry` class by injecting it with the [`@Reference` annotation](../../../../liferay-internals/fundamentals/using-an-osgi-service.md). |
 | `W9B7EntryLocalService` | Local service interface. |
 | `W9B7EntryLocalServiceUtil` | Local service utility class which wraps `W9B7EntryLocalServiceImpl`. |
-| `W9B7EntryLocalServiceWrapper` | Local service wrapper which implements `W9B7EntryLocalService`. This class is there to be extended to [customize the entity's local services](../../../liferay-internals/extending-liferay/creating-service-wrappers.md). |
+| `W9B7EntryLocalServiceWrapper` | Local service wrapper which implements `W9B7EntryLocalService`. This class is there to be extended to [customize the entity's local services](../../../../liferay-internals/extending-liferay/creating-service-wrappers.md). |
 
 ## Implementation Classes
 
@@ -108,7 +108,7 @@ The `*BaseImpl` abstract classes are rich with implementation. The `W9B7EntryImp
 
 ## Adding a Local Service Method
 
-Extend the local service by adding a convenience method for creating a `W9B7Entry` instance from given a name and description. 
+Extend the local service by adding a convenience method for creating a `W9B7Entry` instance from given a name and description.
 
 1. Add the following convenience method to your `W9B7EntryLocalServiceImpl` class.
 
@@ -154,7 +154,7 @@ Extend the local service by adding a convenience method for creating a `W9B7Entr
     Writing src/main/resources/service.properties
     ```
 
-   Service Builder updated the local service API to support the new local service method implementation. 
+   Service Builder updated the local service API to support the new local service method implementation.
 
 1. Check for the new method signature in the `w9b7-api` module's `W9B7EntryLocalService` class. 
 

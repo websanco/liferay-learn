@@ -23,5 +23,5 @@ Widgets are rendered according to [render-weight](https://docs.liferay.com/dxp/p
 ## Additional Information
 
 - [Enabling User Personalization of Widget Pages](./enabling-user-personalization-of-widget-pages.md)
-- [Converting Widget Pages to Content Pages](./converting-widget-pages-to-content-pages.md)
-- [Analyze Content Metrics Using the Content Performance Tool](../../../content-authoring-and-management/content-performance-tool/analyze-content-metrics-using-content-performance-tool.md)
+- [Converting Widget Pages to Content Pages](./configuring-widgets/converting-widget-pages-to-content-pages.md)
+- [Analyze Content Metrics Using the Content Performance Tool](../../../content-authoring-and-management/page-performance-and-accessibility/analyze-content-metrics-using-content-performance-tool.md)

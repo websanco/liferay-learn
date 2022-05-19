@@ -10,9 +10,9 @@ The Content Dashboard interface has the following areas:
 
 ![The Content Dashboard user interface contains three areas of information.](./content-dashboard-interface/images/05.png)
 
-When you [open the Content Dashboard](#accessing-the-content-dashboard), you see the [Content Audit Tool](#content-audit-tool) (1) at the top of the page and the [Contents list](#contents-list) (2) at the bottom. From the Contents list, you can access the [Content Info sidebar](#content-info-sidebar) (3) and the [Content Performance panel](../content-performance-tool/about-the-content-performance-tool.md). The Content Info sidebar and the Content Performance panel can collapse. They show additional details for each item in the Contents List.
+When you [open the Content Dashboard](#accessing-the-content-dashboard), you see the [Content Audit Tool](#content-audit-tool) (1) at the top of the page and the [Contents list](#contents-list) (2) at the bottom. From the Contents list, you can access the [Content Info sidebar](#content-info-sidebar) (3) and the [Content Performance panel](../page-performance-and-accessibility/about-the-content-performance-tool.md). The Content Info sidebar and the Content Performance panel can collapse. They show additional details for each item in the Contents List.
 
-To access the Content Info sidebar, click the *Actions Menu* (![Action Menu](../../images/icon-actions.png)) for the content and select the *Info* option. Alternatively, hover over the article and click *Info* (![Info](../../images/icon-information.png)). For information on the *View Metrics* (![Metrics](../../images/icon-analytics.png)) option, read [About the Content Performance Panel](../content-performance-tool/about-the-content-performance-tool.md).
+To access the Content Info sidebar, click the *Actions Menu* (![Action Menu](../../images/icon-actions.png)) for the content and select the *Info* option. Alternatively, hover over the article and click *Info* (![Info](../../images/icon-information.png)). For information on the *View Metrics* (![Metrics](../../images/icon-analytics.png)) option, read [About the Content Performance Panel](../page-performance-and-accessibility/about-the-content-performance-tool.md).
 
 ## Accessing the Content Dashboard
 
@@ -119,7 +119,7 @@ For each entry in the Contents list, you can access the following options using 
 - *View* (![View](../../images/icon-preview.png)): Opens the content based on a Display Page Template in view mode.
 - *Edit* (![Edit](../../images/icon-edit.png)): Opens the content in edit mode.
 - *Info* (![Information](../../images/icon-information.png)): Opens the [Content info](#content-info-sidebar) sidebar.
-- *View Metrics* (![View Metrics](../../images/icon-analytics.png)): Opens the [Content Performance panel](../content-performance-tool/about-the-content-performance-tool.md).
+- *View Metrics* (![View Metrics](../../images/icon-analytics.png)): Opens the [Content Performance panel](../page-performance-and-accessibility/about-the-content-performance-tool.md).
 
     ![Access the Content info sidebar and Content Performance panel from the Actions menu or the icons on each content row.](./content-dashboard-interface/images/11.png)
 

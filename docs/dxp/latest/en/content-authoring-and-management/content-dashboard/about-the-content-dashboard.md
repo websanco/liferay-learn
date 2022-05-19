@@ -1,6 +1,6 @@
 # About the Content Dashboard
 
-> Available: Liferay DXP/Portal 7.3+.
+{bdg-secondary}`Available 7.3+`
 
 The *Content Dashboard* is a global application for managing your content. From the Content Dashboard page, content authors and marketers can access and audit all content generated across Sites and Asset Libraries.
 
@@ -34,7 +34,7 @@ The [Content Audit Tool](./content-dashboard-interface.md#content-audit-tool) (1
 
 The [Contents List](./content-dashboard-interface.md#contents-list) (2) shows content across all Sites and Asset Libraries. From here, you can sort and filter your information using built-in or custom filters. The Content Audit Tool chart changes dynamically based on the filters that you set.
 
-From the Contents List, you can access the [Content info](./content-dashboard-interface.md#content-info-sidebar) sidebar (3) and the [Content Performance tool](../content-performance-tool/about-the-content-performance-tool.md). The Information sidebar shows different metadata for each asset, while the Content Performance tool gathers statistics for your content, like the number of views or the traffic acquisition channels.
+From the Contents List, you can access the [Content info](./content-dashboard-interface.md#content-info-sidebar) sidebar (3) and the [Content Performance tool](../page-performance-and-accessibility/about-the-content-performance-tool.md). The Information sidebar shows different metadata for each asset, while the Content Performance tool gathers statistics for your content, like the number of views or the traffic acquisition channels.
 
 To learn more about the Content Dashboard interface and how to customize the information for your needs, see the [Content Dashboard Interface](./content-dashboard-interface.md) topic.
 

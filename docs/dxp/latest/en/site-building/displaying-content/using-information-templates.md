@@ -40,7 +40,7 @@ Follow these steps to create an Info Template:
 
 1. Click *Save* when finished.
 
-Once created, Info Templates can be used in Content Display fragments and any other fragment with [sub-elements](../../../../../../site/build/input/dxp/latest/en/site-building/creating-pages/page-fragments-and-widgets/using-fragments/configuring-fragments/fragment-sub-elements-reference.md) that can be mapped, such as text and rich text. When selected, they determine how an item is rendered in Content Pages and Display Page Templates.
+Once created, Info Templates can be used in Content Display fragments and any other fragment with [sub-elements](../creating-pages/page-fragments-and-widgets/using-fragments/configuring-fragments/fragment-sub-elements-reference.md) that can be mapped, such as text and rich text. When selected, they determine how an item is rendered in Content Pages and Display Page Templates.
 
 ## Importing and Exporting Scripts
 
