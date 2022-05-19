@@ -21,7 +21,7 @@
 1. **Open** the Liferay API Explorer at `localhost:8080/o/api`.
 2. **Click** the _REST Applications_ dropdown to see a list of APIs that can be called.
 3. **Click** the `c/bankaccounts` Headless API.
-    - Note the reference is `http://localhost:8080/o/c/bankaccounts`. The Headless APIs for all Objects will automatically have the `c/` prefix followed by the Object name. This name is assigned when Liferay generates the Headless API.
+    - Note the reference is `http://localhost:8080/o/c/bankaccounts`. The Headless APIs for all Objects have the `c/` prefix followed by the Object name. This name is assigned when Liferay generates the Headless API.
 
 ## Create the Account1.js, Account2.js, and Account3.js Files
 
