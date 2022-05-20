@@ -1,24 +1,24 @@
 # Updating Page Permissions
 
-When Users join a Site, by default they can see all of the Site's Public and Private pages. You can update each page's permissions to allow (or deny) access to that page based on the User's assigned [Role](../../../users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.md).
+By default, when Users join a Site, they can see all of its Pages. However, you can configure permissions for individual Pages to restrict access based on User [roles](../../../users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.md).
 
-Modifying each Page's permission overrides the Site level's [Page Sets](./configuring-page-sets.md) settings.
+```{note}
+Individual Page's permission take priority over Site level configurations.
+```
 
-Only administrators can update a Page's permission.
+Follow these steps to update Page permissions:
 
-1. Navigate to your Site where the pages are published (for example, _Site 1_).
-1. Click the _Product Menu_ (![Product menu](../../../images/icon-product-menu.png)) icon.
-1. Click _Site Builder_ &rarr; _Pages_.
-1. Select the Page Set (_Public Pages_ or _Private Pages_) that contains the page whose permissions you are updating.
-1. Click the Options (![Options](../../../images/icon-options.png)) icon next to the desired page (_Public Page 1_) then _Permissions_.
+1. Open the *Site Menu* (![Site Menu](../../../images/icon-product-menu.png)), expand *Site Builder*, and click *Pages*.
 
-    ![The Page Permissions are found in the Control Panel's Site Builder menu.](./updating-page-permissions/images/02.png)
+1. Click the *Actions* button (![Actions Button](../../../images/icon-options.png)) for the desired Page and select *Permissions*.
+
+    ![The Page Permissions are found in the Control Panel's Site Builder menu.](./updating-page-permissions/images/01.png)
 
 1. Update the permissions for each Role.
 
-    ![The Permissions offer a plethora of options for each role.](./updating-page-permissions/images/01.png)
+    ![The Permissions offer a plethora of options for each role.](./updating-page-permissions/images/02.png)
 
-1. Click _Save_ to apply the changes.
+1. Click *Save* to apply the changes.
 
 ## Additional Information
 
