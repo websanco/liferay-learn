@@ -19,7 +19,7 @@ Then, follow these steps:
    unzip liferay-z3v5.zip
    ```
 
-1. Use the [Users_GET_FromInstance](./user-account-api-basics.md#get-instance-users) to get a list of user IDs. Make note of the User ID you wish to associate with an Regular Role.
+1. Use the [Users_GET_FromInstance](./user-account-api-basics.md#get-instance-users) to get a list of user IDs. Make note of the User ID you wish to associate with a Regular Role.
 
 1. Use the [Roles_GET_FromInstance](#get-roles-from-instance) to get a list of all role IDs. Make note of the role ID you wish to associate that is `roleType: regular`. For example, the Analytics Administrator Regular Role type.
 
@@ -29,7 +29,7 @@ Then, follow these steps:
    ./RoleUserAssociation_POST_ToInstance.sh 1234 5678
    ```
 
-1. Navigate to *Global Menu* &rarr; *Control Panel* &rarr; *Roles*. Under the Regular Roles tab, click the specific role you used to a associate a User. Click the *Assignees* tab. See that the User has been associated with the Role.
+1. Navigate to *Global Menu* &rarr; *Control Panel* &rarr; *Roles*. Under the Regular Roles tab, click the specific role you used to a associate the user. Click the *Assignees* tab. See that the user has been associated with the selected role.
 
    ![See that the User has been associated.](./roles-api-basics/images/01.png)
 
