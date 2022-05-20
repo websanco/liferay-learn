@@ -87,7 +87,7 @@ Determine whether to include a Display Page in your `sitemap.xml` file, as well 
 With Liferay DXP, you can create Display Page templates that dynamically configure a Page's Open Graph `<meta>` tags. Values defined here override default values defined at the [Site](../../site-settings/configuring-open-graph.md) level.
 
 ```{note}
-Open Graph `<meta>` tags are only included in public page headers to unauthenticated users. They are not included in private pages, or in public pages when the user is logged in.
+Open Graph `<meta>` tags are only included in page headers to unauthenticated users. They are not included when the user is logged in.
 ```
 
 ### Title
