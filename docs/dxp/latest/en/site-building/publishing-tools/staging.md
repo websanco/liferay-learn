@@ -43,7 +43,7 @@ As part of Staging configuration, you can select which content groups and applic
 
 ### Page Versioning
 
-When configuring Staging for Sites, you can enable the *Page versioning* feature. With this feature, you and your team can simultaneously develop variations of a Site's Content Pages and Widget Pages, whether public or private. You can see the complete history of Page versions and revert Pages to an earlier version if needed. See [Page Versioning](./staging/page-versioning.md) to learn how to create and manage variations and [Managing Staging Permissions](./staging/managing-staging-permissions.md) to learn about managing permissions for each variation.
+When configuring Staging for Sites, you can enable the *Page versioning* feature. With this feature, you and your team can simultaneously develop variations of a Site's Content Pages and Widget Pages. You can see the complete history of Page versions and revert Pages to an earlier version if needed. See [Page Versioning](./staging/page-versioning.md) to learn how to create and manage variations and [Managing Staging Permissions](./staging/managing-staging-permissions.md) to learn about managing permissions for each variation.
 
 ```{note}
 Starting with Liferay DXP 7.4, 7.3 Fix Pack 1, and 7.2 Fix Pack 11, you can use page versioning in Widget Pages and Content Pages. In previous versions, you could only create variations for Widget Pages. To learn more about variations for each type of Page, see [Types of Variations](./staging/page-versioning.md#types-of-variations).
