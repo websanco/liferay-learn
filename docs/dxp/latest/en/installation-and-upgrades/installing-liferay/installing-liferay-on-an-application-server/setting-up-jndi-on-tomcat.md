@@ -2,11 +2,11 @@
 
 {bdg-secondary}`Applicable for Liferay DXP 7.4+ or Liferay Portal 7.4+`
 
-To set up JNDI resources, you need to put the necessary JDBC drivers into the Tomcat lib directory (i.e. `tomcat-9.0.56\lib`). For example, if you are using an Oracle database, copy the `ojdbc8.jar` file. If you are using a [Hikari Connection Pool](https://github.com/brettwooldridge/HikariCP), you will need to copy the `hikaricp.jar` and `slf4-api.jar` files as well.
+To set up JNDI resources, you must put the necessary JDBC drivers in the Tomcat lib directory (i.e. `tomcat-9.0.56/lib`). For example, if you use an Oracle database, copy the `ojdbc8.jar` file. If you use the default [Hikari Connection Pool](https://github.com/brettwooldridge/HikariCP), you must copy the `hikaricp.jar` and `slf4-api.jar` files as well.
 
-After placing the necessary files, define your JNDI resources.
+After copying the necessary files, define your JNDI resources.
 
-For example, in the `tomcat-9.0.56\conf\Catalina\localhost\ROOT.xml` file:
+For example, modify the `tomcat-9.0.56/conf/Catalina/localhost/ROOT.xml` file:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -29,9 +29,11 @@ For example, in the `tomcat-9.0.56\conf\Catalina\localhost\ROOT.xml` file:
 </Context>
 ```
 
-Then in your `portal-ext.properties` file, use the JNDI reference: `jdbc.default.jndi.name=jdbc/liferay`.
+In your `portal-ext.properties` file, use the JNDI reference: `jdbc.default.jndi.name=jdbc/liferay`.
 
-Note that Liferay uses a shielded class loader in order to isolate the webapp class loader from the OSGi containers. Using `PortalClassLoaderUtil.getClassLoader()` returns the shielded class loader. Therefore, when invoking `getClassLoader()` use the following:
+<!-- Not sure how the information below applies. Can you explain? -Rich --> 
+
+Note that Liferay uses a shielded class loader to isolate the webapp class loader from the OSGi containers. `PortalClassLoaderUtil.getClassLoader()` returns the shielded class loader. Therefore, when invoking `getClassLoader()` use the following code:
 
 ```java
 PortalClassLoaderUtil.getClassLoader().getClass().getClassLoader()
