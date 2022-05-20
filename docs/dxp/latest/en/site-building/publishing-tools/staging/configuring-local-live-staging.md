@@ -12,9 +12,9 @@ With Local Live Staging, both your Staging and Live environments are hosted on t
 
    ![Select Local Live.](./configuring-local-live-staging/images/02.png)
 
-1. Select whether you want *Page Versioning* enabled on Public and/or Private Page sets.
+1. (For Sites only) Select whether you want *Page Versioning* enabled.
 
-   ![Enable Page Versioning for your Private and Public Page sets.](./configuring-local-live-staging/images/03.png)
+   ![Enable Page Versioning.](./configuring-local-live-staging/images/03.png)
 
 1. Select the data and content types you want to stage.
 

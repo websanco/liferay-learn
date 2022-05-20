@@ -100,9 +100,9 @@ Once you've prepared your Liferay servers, follow these steps to set up Remote L
 
 1. Determine whether to define manually the remote URL used for the Site or Asset Library.
 
-1. (For Sites only) Select whether you want *Page Versioning* enabled on Public and/or Private Pages.
+1. (For Sites only) Select whether you want *Page Versioning* enabled.
 
-   ![Enable Page Versioning for your Private and Public Page sets.](./configuring-remote-live-staging/images/03.png)
+   ![Enable Page Versioning.](./configuring-local-live-staging/images/03.png)
 
 1. Select the *data* and *content* types you want to stage.
 
