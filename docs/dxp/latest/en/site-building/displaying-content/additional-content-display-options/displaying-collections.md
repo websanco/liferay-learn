@@ -138,10 +138,10 @@ To paginate the display items in the Collection Display,
 
 1. In the General Settings, choose the pagination options:
 
-    * Pagination: None (no pagination), Numeric, or Simple (Previous/Next controls).
-    * Display All Pages: Whether to display the numbers or controls for every page in the pagination menu. If no pagination type is selected, then this option becomes *Display All Collection Items* instead.
-    * Maximum Number of Pages to Display: The maximum number of pages shown in the pagination menu. This option only appears if the Display All Pages checkbox is not selected.
-    * Maximum Number of Items per Page: The maximum number of items from the Collection to display per page, if pagination is enabled. If no pagination type is selected, then this option becomes *Maximum NUmber of Items to Display* instead.
+    * **Pagination**: None (no pagination), Numeric, or Simple (Previous/Next controls).
+    * **Display All Pages**: Whether to display the numbers or controls for every page in the pagination menu. If no pagination type is selected, then this option becomes *Display All Collection Items* instead.
+    * **Maximum Number of Pages to Display**: The maximum number of pages shown in the pagination menu. This option only appears if the Display All Pages checkbox is not selected.
+    * **Maximum Number of Items per Page**: The maximum number of items from the Collection to display per page, if pagination is enabled. If no pagination type is selected, then this option becomes *Maximum NUmber of Items to Display* instead.
 
     ![Choose the pagination options for the Collection Display items.](./displaying-collections/images/12.png)
 
