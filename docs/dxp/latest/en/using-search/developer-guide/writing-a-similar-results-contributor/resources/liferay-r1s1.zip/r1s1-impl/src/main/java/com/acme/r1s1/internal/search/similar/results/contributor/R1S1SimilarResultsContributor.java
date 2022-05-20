@@ -8,7 +8,7 @@ import com.liferay.knowledge.base.model.KBArticle;
 import com.liferay.knowledge.base.service.KBArticleLocalService;
 import com.liferay.petra.string.CharPool;
 import com.liferay.portal.kernel.search.Field;
-import com.liferay.portal.kernel.util.Http;
+import com.liferay.portal.kernel.util.HttpComponentsUtil;
 import com.liferay.portal.kernel.util.Portal;
 import com.liferay.portal.kernel.util.ReleaseInfo;
 import com.liferay.portal.kernel.util.StringUtil;
@@ -32,7 +32,7 @@ public class R1S1SimilarResultsContributor
 		RouteBuilder routeBuilder, RouteHelper routeHelper) {
 
 		String[] pathParts = StringUtil.split(
-			_http.getPath(routeHelper.getURLString()),
+			_httpComponentsUtil.getPath(routeHelper.getURLString()),
 			Portal.FRIENDLY_URL_SEPARATOR);
 
 		String[] parameters = StringUtil.split(
@@ -97,7 +97,7 @@ public class R1S1SimilarResultsContributor
 	private AssetEntryLocalService _assetEntryLocalService;
 
 	@Reference
-	private Http _http;
+	private HttpComponentsUtil _httpComponentsUtil;
 
 	@Reference
 	private KBArticleLocalService _kbArticleLocalService;
