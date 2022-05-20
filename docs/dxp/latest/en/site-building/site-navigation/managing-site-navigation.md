@@ -18,7 +18,7 @@ The hierarchy as displayed on _Site Builder_ &rarr; _Pages_ menu is the main ref
 
 ![The Site Builder's Pages Menu serves as the primary reference for all the pages on a site.](./managing-site-navigation/images/01.png)
 
-New pages are created on the _Site Builder_ &rarr; _Pages_ menu. Pages can be public which anyone can view, or private which can only be viewed by Site members. See [Adding a Page to a Site](../creating-pages/adding-pages/adding-a-page-to-a-site.md) to learn how to add a Page.
+New pages are created on the _Site Builder_ &rarr; _Pages_ menu. See [Adding a Page to a Site](../creating-pages/adding-pages/adding-a-page-to-a-site.md) to learn how to add a Page.
 
 ## Using Navigation Menus
 
@@ -39,14 +39,14 @@ To access the page tree,
 
     ![View each Site's Page Tree.](./managing-site-navigation/images/03.png)
 
-1. Change between your public and private Pages using the drop-down menu. You can also choose your Navigation Menus from this drop-down control.
+1. You can choose your Navigation Menus from this drop-down control.
 
 1. From here you can
 
-   - Find pages in the tree by using the search bar (A).
+   - Find pages in the tree by using the search bar (1).
    - Click on any Page for a Page preview.
-   - Add Pages or configure Pages using the Add (![Add](../../images/icon-plus.png)) and Configure (![Configure](../../images/icon-settings.png)) buttons, and the Actions menu (![Actions Menu](../../images/icon-actions.png)) next to each Page's name (B).
-   - Modify the order of Pages in the navigation menu by dragging and dropping the Pages in the tree (C).
+   - Add Pages or configure Pages using the Add (![Add](../../images/icon-plus.png)) and Configure (![Configure](../../images/icon-settings.png)) buttons, and the Actions menu (![Actions Menu](../../images/icon-actions.png)) next to each Page's name (2).
+   - Modify the order of Pages in the navigation menu by dragging and dropping the Pages in the tree (3).
 
    ![You can add, preview, configure, or reorder Pages from the Page Tree menu.](./managing-site-navigation/images/04.png)
 
