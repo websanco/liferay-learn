@@ -18,7 +18,7 @@ Three settings were added to the Form Settings modal, in the Submissions section
 
 ### Limit to One Submission Per User
 
-Limit submissions to one per User. Do not allow multiple form submissions to logged in Users. In addition to limiting the number of submissions. 
+Limit submissions to one per User. Do not allow multiple form submissions to logged in Users.
 
 ```{warning}
 Enabling Limit to One Submission per User also requires that Users are authenticated to fill out the form. This requirement overrides the permissions set on the form and the form setting _Require User Authentication: False_.
@@ -66,18 +66,20 @@ Two applications make and display a poll: the *Forms* application in the Site Me
 
 ## Upgrading Polls to Forms
 
-If you're upgrading Liferay along the path of Liferay 7.2 &rarr; 7.3 &rarr; 7.4, your Polls are automatically upgraded to use Forms. During the 7.4 lifecycle the upgrade process to accomplish this task was enhanced, and it can now
+If you're upgrading Liferay along the path of Liferay 7.2 &rarr; 7.3 &rarr; 7.4, your Polls are automatically upgraded to use Forms. During the 7.4 lifecycle the upgrade process to accomplish this task was enhanced; as of Liferay 7.4 GA/Update 26 it can now
 
 - Convert the entities in the back-end so that Polls become Form entities and can be managed with the Forms application and APIs.
 - Enable the form settings that provide polls-like behavior.
-- Flag the forms in the UI, if the form was converted from Polls.
 - If the Poll was displayed on a page in the Polls Display widget, post-upgrade it's displayed on the page in a Form widget.
 
 ```{warning}
-For installations [upgraded](../../installation-and-upgrades/upgrading-liferay.md) to Liferay 7.4 versions prior to DXP Update 2X/CE GA 2X, the upgrade process missed a configuration for certain upgraded Polls. For these installations, check the post-upgrade Forms and make sure that the _Limit to One Submission per User_ setting is configured.
+For installations [upgraded](../../installation-and-upgrades/upgrading-liferay.md) to Liferay 7.4 versions prior to DXP Update 26/CE GA 26, the upgrade process was incomplete. To fully upgrade the Polls you must
+
+- make sure that the _Limit to One Submission per User_ setting is configured in the form.
+- manually replace any Polls Display widget you had on a page with a Form widget.
 ```
-<!-- Add the Update/GA version when it's released -->
-<!--If it is important enough we can share a Groovy script that takes the form Ids and automatically sets them to use the missing setting -->
+<!-- Make sure to use the Update/GA version when all the tickets are released. See https://issues.liferay.com/browse/LPS-153046 -->
+<!--If it is important enough for U1-25 users, we can share a Groovy script that takes the form Ids that match convertedFromPolls:true and automatically set them to use the polls settings -->
 
 ## Additional Information
 
