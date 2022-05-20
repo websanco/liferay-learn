@@ -16,19 +16,19 @@
 - Reindex the search index
 - Test the application
 
-Before version 7.1, there used to be a single indexer component for taking care of everything search indexer-related for an entity. The new design provides a more modular and a clean approach for controlling different aspects of search framework integration. You can still use the old approach, however.
+Before version 7.1, there was a single indexer component for taking care of everything search indexer-related for an entity. The new design provides a more modular and a clean approach for controlling different aspects of search framework integration. You can still use the old approach, however.
 
 All the available contributors are not covered in this exercise. See the [Liferay Help Center](https://help.liferay.com/hc/en-us/articles/360034199412-Enabling-Search-and-Indexing-for-Guestbooks) for more information. Also, take a look at the optional exercise "Enable Workflows for Assignments" where we will cover the `PreFilterContributor`.
 
 ## Declare Dependencies
 
-1. **Open** the `build.gradle` in the _gradebook-service_ module.
+1. **Open** the `build.gradle` in the `gradebook-service` module.
 2. **Add** the new dependencies as follows:
 
 ```groovy
 compileOnly group: "com.liferay", name: "com.liferay.portal.search.spi"
 compileOnly group: "com.liferay", name: "com.liferay.portal.search.api"
-```	
+```
 
 The registrar class registers the Assignments with the search framework.
 
@@ -102,7 +102,7 @@ public class AssignmentSearchRegistrar {
 	private ServiceRegistration<?> _serviceRegistration;
 	
 }
-```	
+```
 
 The model document contributor controls which fields are indexed. This class’s contribute method is called each time the add and update methods in the entity’s service layer are called.
 
@@ -165,13 +165,13 @@ public class AssignmentModelDocumentContributor
 		}
 	}
 }
-```	
+```
 
-The Model Indexer Writer Contributor configures the re-indexing and batch re-indexing behavior for the model entity. This class’s method is called when a re-index is triggered from the Search administrative application found in `Control Panel` &rarrw `Configuration` &rarrw `Search`.
+The Model Indexer Writer Contributor configures the re-indexing and batch re-indexing behavior for the model entity. This class's method is called when a re-index is triggered from the Search administrative application found in _Control Panel_ &rarr; _Configuration_ &rarr; _Search_.
 
 ## Implement an Assignment Model Indexer Writer Contributor
 
-1. **Create** a class `com.liferay.training.gradebook.internal.search.spi.model.index.contributor.AssignmentModelIndexerWriterContributor` in the _gradebook-service_ module.
+1. **Create** a class `com.liferay.training.gradebook.internal.search.spi.model.index.contributor.AssignmentModelIndexerWriterContributor` in the `gradebook-service` module.
 2. **Implement** as follows:
 
 ```java
@@ -236,7 +236,7 @@ The Keyword Query Contributor contributes model-specific clauses to the ongoing 
 
 ## Implement a Gradebook Keyword Query Contributor
 
-1. **Create** a class `com.liferay.training.gradebook.internal.search.spi.model.query.contributor.AssignmentKeywordQueryContributor` in the _gradebook-service_ module.
+1. **Create** a class `com.liferay.training.gradebook.internal.search.spi.model.query.contributor.AssignmentKeywordQueryContributor` in the `gradebook-service` module.
 2. **Implement** as follows:
 
 ```java
@@ -284,7 +284,7 @@ The Model Summary Contributor constructs the results summary, including specifyi
 
 ##  Implement a Gradebook Model Summary Contributor
 
-1. **Create** a class `com.liferay.training.gradebook.internal.search.spi.model.result.contributor.AssignmentModelSummaryContributor` in the _gradebook-service_ module.
+1. **Create** a class `com.liferay.training.gradebook.internal.search.spi.model.result.contributor.AssignmentModelSummaryContributor` in the `gradebook-service` module.
 2. **Implement** as follows:
 
 	```java
@@ -347,14 +347,14 @@ The final step is to review when and how indexing is triggered. Indexing is trig
 	}
 ```
 
-As long as our customizations and overloads of these methods in the `AssignmentLocalServiceImpl` call the base class, we don't have to add annotations to trigger indexing. If you want your custom `AssignmentLocalServiceImpl` method to trigger indexing, just annotate it with `@Indexable` and remember that an indexable method has to return the updated entity.
+As long as our customizations and overloads of these methods in the `AssignmentLocalServiceImpl` call the base class, we don't have to add annotations to trigger indexing. If you want your custom `AssignmentLocalServiceImpl` method to trigger indexing, annotate it with `@Indexable` and remember that an indexable method must return the updated entity.
 
-If you have created test Assignments, you have to reindex the search index to get the Assignments to appear on the results list.
+If you have created test Assignments, you must reindex the search index to get the Assignments to appear on the results list.
 
 ## Reindex the Search Index
 
 1. **Redeploy** the module and go to `localhost:8080` in your browser.
-2. **Go to** `Global Menu` &rarr; `Control Panel` &rarr; `Configuration` &rarr; `Search`.
+2. **Go to** _Global Menu_ &rarr; _Control Panel_ &rarr; _Configuration_ &rarr; _Search_.
 3. **Reindex** all search indexes.
 
 ## Test the Application
