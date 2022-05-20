@@ -16,7 +16,7 @@
 
 Over the next few exercises, we will create the user interface for the Gradebook application. We will be using coding conventions and patterns recommended for Liferay development, leveraging libraries, components, and high-level superclasses to remove the need for boilerplate coding.
 
-We will use the Liferay MVC portlet as a portlet component. The portlet lifecycle and communication between the portlet back-end and user interface will be handled by MVC command components.
+We will use the Liferay MVC portlet as a portlet component. The portlet life cycle and communication between the portlet back-end and user interface will be handled by MVC command components.
 
 The user interface will be implemented with JSP technology. We will be using Liferay tag libraries, which both minimize the need for HTML coding and guarantee a [Twitter Bootstrap](https://getbootstrap.com/)-based responsive layout.
 
@@ -24,7 +24,7 @@ The user interface will be implemented with JSP technology. We will be using Lif
 
 ## Create a Liferay MVC Portlet Module
 
-1. **Create** a Liferay MVC Portlet Module in the _modules/gradebook_ subfolder with the following attributes:
+1. **Create** a Liferay MVC Portlet Module in the `modules/gradebook` subfolder with the following attributes:
 	- **Project Name**: "gradebook-web"
 	- **Project Template**: "mvc-portlet"
 	- **Component Class Name**: "Gradebook"
@@ -37,7 +37,7 @@ We need to declare dependencies for the Gradebook service (API), Liferay Clay ta
 ## Declare Dependencies
 
 1. **Open** the `build.gradle` of *gradebook-web* project.
-2. **Implement** the new dependencies as follows:
+2. **Implement** the new dependencies:
 
 ```groovy
 	// Clay taglib.
@@ -54,7 +54,7 @@ We need to declare dependencies for the Gradebook service (API), Liferay Clay ta
 	compileOnly project(":modules:gradebook:gradebook-api")
 ```
 
-Note here how we reference the API (gradebook-api) and not the implementation (gradebook-service).
+Note here how we reference the API (`gradebook-api`) and not the implementation (`gradebook-service`).
 
 > What is Petra? If you developed for pre-7 Liferay, you probably remember the `com.liferay.util.java` utilities. The Petra library family contains the modularized and OSGi-ready versions of those utilities.
 
@@ -68,7 +68,7 @@ Let's change the portlet component properties to match these requirements:
 ## Set Portlet Properties
 
 1. **Open** the `GradebookPortlet` class.
-2. **Implement** the changes to component properties as follows:
+2. **Implement** the changes to component properties:
 
 ```java
 	"com.liferay.portlet.display-category=category.training",
@@ -80,14 +80,14 @@ It's a good practice to use a fully qualified name of the portlet class as the p
 ## Set the Portlet Name
 
 1. **Open** the class `com.liferay.training.gradebook.web.constants.GradebookPortletKeys`.
-2. **Update** the portlet name constant as follows:
+2. **Update** the portlet name constant:
 
 ```java
 public static final String GRADEBOOK = "com_liferay_training_gradebook_web_portlet_GradebookPortlet";
 ```
 
 3. **Open** the file `src/main/resources/content/Language.properties`.
-4. **Implement** the contents as follows:
+4. **Implement** the contents:
 
 ```properties
 javax.portlet.description.com_liferay_training_gradebook_web_portlet_GradebookPortlet=GRADEBOOK 
