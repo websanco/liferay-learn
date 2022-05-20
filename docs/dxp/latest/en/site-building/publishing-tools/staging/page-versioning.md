@@ -6,7 +6,7 @@ With Page Versioning enabled, you and your team can work in parallel on multiple
 Starting with Liferay DXP 7.4, 7.3 Fix Pack 1, and 7.2 Fix Pack 11, you can create variations in Widget Pages and Content Pages. In previous Liferay DXP versions, you could create variations only on Widget Pages. To learn more about variations in these types of pages, see [Types of Variations](#types-of-variations).
 ```
 
-You can enable Page versioning for your Private and Public Pages during initial Staging configuration, or anytime afterward via the *Staging Configuration* page. Once enabled, you can create, merge, and publish variations for individual Pages or groups of Pages. You can also manage variation permissions for different User Roles.
+You can enable Page versioning for your Pages during initial setup or anytime afterward via the *Staging Configuration* page. Once enabled, you can create, merge, and publish variations for individual Pages or groups of Pages. You can also manage variation permissions for different User Roles.
 
 ## Types of Variations
 
