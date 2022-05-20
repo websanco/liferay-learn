@@ -23,7 +23,6 @@ import com.vladsch.flexmark.util.ast.VisitHandler;
 import com.vladsch.flexmark.util.ast.Visitor;
 import com.vladsch.flexmark.util.sequence.BasedSequence;
 import java.io.File;
-import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
 import org.apache.commons.io.FilenameUtils;
@@ -53,15 +52,17 @@ public class ImageVisitor {
 	public void visit (Image image) {
 
 		try {
-			String markdownPath = FilenameUtils.getPath(_markdownFile.getCanonicalPath());
+			String markdownPath = FilenameUtils.getPath(_markdownFile.getPath());
 			String url = ImporterUtil.BStoString(image.getUrl());
-			String fileName = "/" + markdownPath + url;
+			String fileName = markdownPath + url;
 			File imageFile = new File(fileName);
 			HashMap<String, File> contents = new HashMap();
-			contents.put(url, imageFile);
+			contents.put("file", imageFile);
+			Document imageEntry = new Document();
+			imageEntry.setTitle(fileName);
 			
 			Document document = _documentResource.postSiteDocument(
-				_GROUP_ID, new Document(), contents);
+				_GROUP_ID, imageEntry, contents);
 			
 			String imageSrc = document.getContentUrl();
 			BasedSequence newUrl = ImporterUtil.StringtoBS(imageSrc);
@@ -83,6 +84,10 @@ public class ImageVisitor {
 		}
 	}));
 
+	private Long _getDocumentFolderId (String dirName, Long parentDocumentFolderId) {
+
+		return new Long(1);
+	}
 	private List<String> _images;
 	private long _GROUP_ID;
 	private DocumentResource _documentResource;
