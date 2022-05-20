@@ -18,11 +18,15 @@ You can create multiple Personalized Variations for a Collection, and edit or de
 
 ## Prioritizing Variations
 
-> Availability: Liferay Portal 7.4
+> {bdg-secondary}`Available for Liferay DXP 7.4+`
 
-The Collections variations offer a way to prioritize which variation should be rendered on your site to users belonging to more than one segment. You have access to a sortable list for the Personalized Variations in the Collection configuration page. You can order the list by clicking on the *Actions* button (![Actions Button](../../../images/icon-actions.png)) and choosing to prioritize/deprioritize or you can drag and drop.
+You can prioritize Collections variations to determine which variation is displayed for users belonging to multiple segments. When editing a Collection, you can access a sortable list for the Personalized Variations. You can change the rank of a variation by clicking its *Actions* button (![Actions Button](../../../images/icon-actions.png)) and selecting Prioritize or Deprioritize. Alternatively, you can drag and drop variations to create the desired hierarchy.
 
-![](./personalizing-collections/images/02.png)
+```{note}
+Priority is assigned according to the position of each item in the list. The highest priority is the position at the top of the list.
+```
+
+![You can prioritize Collections variations to determine which variation is displayed for users](./personalizing-collections/images/02.png)
 
 ## Creating a Personalized Variation
 
