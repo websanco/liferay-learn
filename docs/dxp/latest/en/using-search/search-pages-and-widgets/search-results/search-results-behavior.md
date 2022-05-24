@@ -116,6 +116,8 @@ To discover which fields are indexed for content pages, enable the Search Result
 
 ![Inspect the document view of a content page to see what fields are indexed.](./search-results-behavior/images/12.png)
 
+In Liferay 7.4 GA25+/U25+, you can also search for widget pages (by title only).
+
 ## Returning Objects in Search Results
 
 Liferay 7.4 includes [Liferay Objects](../../../building-applications/objects.md), a GUI-driven application-building framework. Fields of each Object's definition can be declared searchable; Object Entries (the records submitted by the application's users) [can then be queried](../../getting-started/searching-for-content.md#searching-for-liferay-objects) and returned in the Search Results widget.
