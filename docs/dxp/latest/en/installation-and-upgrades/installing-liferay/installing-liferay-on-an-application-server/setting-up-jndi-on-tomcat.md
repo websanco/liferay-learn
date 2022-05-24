@@ -30,11 +30,3 @@ For example, modify the `tomcat-9.0.56/conf/Catalina/localhost/ROOT.xml` file:
 ```
 
 In your `portal-ext.properties` file, use the JNDI reference: `jdbc.default.jndi.name=jdbc/liferay`.
-
-<!-- Not sure how the information below applies. Can you explain? -Rich --> 
-
-Note that Liferay uses a shielded class loader to isolate the webapp class loader from the OSGi containers. `PortalClassLoaderUtil.getClassLoader()` returns the shielded class loader. Therefore, when invoking `getClassLoader()` use the following code:
-
-```java
-PortalClassLoaderUtil.getClassLoader().getClass().getClassLoader()
-```
