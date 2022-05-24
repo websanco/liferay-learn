@@ -14,6 +14,10 @@
 package com.liferay.learn.dxp.importer.flexmark;
 
 import com.liferay.headless.delivery.client.dto.v1_0.Document;
+import com.liferay.headless.delivery.client.dto.v1_0.DocumentFolder;
+import com.liferay.headless.delivery.client.pagination.Page;
+import com.liferay.headless.delivery.client.pagination.Pagination;
+import com.liferay.headless.delivery.client.resource.v1_0.DocumentFolderResource;
 import com.liferay.headless.delivery.client.resource.v1_0.DocumentResource;
 import com.liferay.learn.dxp.importer.util.ImporterUtil;
 import com.vladsch.flexmark.ast.Image;
@@ -23,8 +27,10 @@ import com.vladsch.flexmark.util.ast.VisitHandler;
 import com.vladsch.flexmark.util.ast.Visitor;
 import com.vladsch.flexmark.util.sequence.BasedSequence;
 import java.io.File;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import org.apache.commons.io.FilenameUtils;
 
 /**
@@ -56,13 +62,16 @@ public class ImageVisitor {
 			String url = ImporterUtil.BStoString(image.getUrl());
 			String fileName = markdownPath + url;
 			File imageFile = new File(fileName);
+			String dirName = FilenameUtils.getPath(fileName.substring(fileName.indexOf("/"), fileName.length()));
 			HashMap<String, File> contents = new HashMap();
 			contents.put("file", imageFile);
 			Document imageEntry = new Document();
 			imageEntry.setTitle(fileName);
 			
-			Document document = _documentResource.postSiteDocument(
-				_GROUP_ID, imageEntry, contents);
+			Long folderId = _getDocumentFolderId(dirName, 0L);
+			
+			Document document = _documentResource.postDocumentFolderDocument(
+				folderId, imageEntry, contents);
 			
 			String imageSrc = document.getContentUrl();
 			BasedSequence newUrl = ImporterUtil.StringtoBS(imageSrc);
@@ -84,13 +93,74 @@ public class ImageVisitor {
 		}
 	}));
 
-	private Long _getDocumentFolderId (String dirName, Long parentDocumentFolderId) {
+	private Long _getDocumentFolderId(String dirName, Long parentDocumentFolderId) throws Exception {
+		String key = parentDocumentFolderId + "#" + dirName;
 
-		return new Long(1);
+		Long documentFolderId = _documentFolderIds.get(key);
+
+		if (documentFolderId != null) {
+			return documentFolderId;
+		}
+
+		DocumentFolder documentFolder = null;
+ 
+		if (parentDocumentFolderId == 0) {
+			Page<DocumentFolder> page =
+				_documentFolderResource.
+					getSiteDocumentFoldersPage(
+						_GROUP_ID, null, null, 
+						null, "name eq '" + dirName + "'", null, null);
+
+			documentFolder = page.fetchFirstItem();
+
+			if (documentFolder == null) {
+				documentFolder =
+					_documentFolderResource.
+						postSiteDocumentFolder(
+							_GROUP_ID,
+							new DocumentFolder() {
+								{
+									description = "";
+									name = dirName;
+								}
+							});
+			}
+		}
+		else {
+			Page<DocumentFolder> page =
+				_documentFolderResource.
+					getDocumentFolderDocumentFoldersPage(
+						parentDocumentFolderId, null, null, 
+						null, "name eq '" + dirName + "'", null, null);
+
+			documentFolder = page.fetchFirstItem();
+
+			if (documentFolder == null) {
+				documentFolder =
+					_documentFolderResource.
+						postDocumentFolderDocumentFolder(
+							parentDocumentFolderId,
+							new DocumentFolder() {
+								{
+									description = "";
+									name = dirName;
+								}
+							});
+			}
+		}
+
+		documentFolderId = documentFolder.getId();
+
+		_documentFolderIds.put(key, documentFolderId);
+
+		return documentFolderId;
 	}
+
+	private Map<String, Long> _documentFolderIds = new HashMap<>();
+	private DocumentFolderResource _documentFolderResource;
+	private DocumentResource _documentResource;
 	private List<String> _images;
 	private long _GROUP_ID;
-	private DocumentResource _documentResource;
 	private File _markdownFile;
 
 }
