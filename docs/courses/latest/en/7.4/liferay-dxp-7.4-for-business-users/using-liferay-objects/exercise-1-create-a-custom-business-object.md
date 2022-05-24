@@ -208,7 +208,3 @@
 ## Next Up
 
 * [Integrating and Displaying Liferay Objects](./integrating-and-displaying-liferay-objects.md)
-
-## Previous Step
-
-* [Creating New Objects](./creating-new-objects.md)

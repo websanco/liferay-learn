@@ -136,7 +136,3 @@
 ## Next Up
 
 * [Creating Unique Digital Experiences](./create-unique-user-experiences.md)
-
-## Previous Step
-
-* [Using Master Page Templates and Style Books](./using-master-pages-style-books.md)

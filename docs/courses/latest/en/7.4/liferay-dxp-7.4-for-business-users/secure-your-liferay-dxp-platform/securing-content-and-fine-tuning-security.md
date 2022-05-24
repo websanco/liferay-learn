@@ -7,7 +7,3 @@
 ## Next Up
 
 * [Summary](./summary.md)
-
-## Previous Step
-
-* [Securing Web Services](./securing-web-services.md)

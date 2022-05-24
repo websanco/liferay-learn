@@ -7,7 +7,3 @@
 ## Next Up
 
 * [Exercise 2: Integrate Objects with Forms and Workflows](./exercise-2-integrate-objects-with-forms-and-workflows.md)
-
-## Previous Step
-
-* [Exercise 1: Create a Custom Business Object](./exercise-1-create-a-custom-business-object.md)

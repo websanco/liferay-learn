@@ -139,7 +139,3 @@
 ## Next Up
 
 * [Exercise 2: Enable CAPTCHA](./exercise-2-enable-captcha.md)
-
-## Previous Step
-
-* [Securing Liferay with User Authentication](./securing-liferay-with-user-authentication.md)

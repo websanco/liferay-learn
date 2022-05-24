@@ -271,7 +271,3 @@
 ## Next Up
 
 * [Preparing Pages and Content for Production](./preparing-pages-content-for-production.md)
-
-## Previous Step
-
-* [Create Custom Workflow Definitions](./create-custom-workflow-definitions.md)

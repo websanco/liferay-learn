@@ -7,7 +7,3 @@
 ## Next Up
 
 * [Exercise 1: Create Content Pages](./exercise-1-create-content-pages.md)
-
-## Previous Step
-
-* [Improve Sites With Liferay DXP's Modern Tools](../improve-sites-with-liferay-dxps-modern-tools.md)

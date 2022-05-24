@@ -7,7 +7,3 @@
 ## Next Up
 
 * [Exercise 1: Create a Password Policy](./exercise-1-create-a-password-policy.md)
-
-## Previous Step
-
-* [Secure Your Liferay DXP Platform](../secure-your-liferay-dxp-platform.md)

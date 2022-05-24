@@ -226,7 +226,3 @@
 ## Next Up
 
 * [Using Master Page Templates and Style Books](./using-master-pages-style-books.md)
-
-## Previous Step
-
-* [Create Content Pages](./create-content-pages.md)

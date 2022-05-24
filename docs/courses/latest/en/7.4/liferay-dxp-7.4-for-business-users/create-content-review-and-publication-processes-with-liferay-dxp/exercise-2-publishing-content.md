@@ -196,7 +196,3 @@
 ## Next Up
 
 * [Summary](./summary.md)
-
-## Previous Step
-
-* [Preparing Pages and Content for Production](./preparing-pages-content-for-production.md)

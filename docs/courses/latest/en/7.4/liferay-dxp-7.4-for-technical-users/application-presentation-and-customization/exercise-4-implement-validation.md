@@ -1,10 +1,10 @@
-# Exercise 4: Implement Validation
+# Implement Validation
 
-[$LIFERAY_LEARN_YOUTUBE_URL$]=https://www.youtube.com/embed/VBXKpqdpd2s
+Coming Soon!
 
-> The exercise video above uses DXP 7.3. To complete the exercise using DXP/CE 7.4, follow the updated exercise steps below.
+<!--
 
-## Exercise Goals
+#### Exercise Goals
 
 - Customize the AssignmentValidationException to support message stacking
 - Implement an Assignment validator interface
@@ -16,14 +16,19 @@
 - Implement client-side validation on the user interface
 - Test the client-side validation
 
+</div>
+
+<br />
+
 The Assignment validation process may encounter multiple issues. Content can be too long and have illegal characters at the same time, for example. It would be convenient to provide feedback to the user of all the issues encountered at once. To support message stacking, we have to customize the generated `AssignmentValidationException` class we defined in the `service.xml`. 
 
-## Customize the AssignmentValidationException to Support Message Stacking
+<div class="page"></div>
 
+#### Customize the AssignmentValidationException to Support Message Stacking
 1. **Open** the `com.liferay.training.gradebook.exception.AssignmentValidationException.java` in the *gradebook-api* module.
-2. **Implement** a new constructor and code to the class:
+* **Implement** a new constructor and code to the class:
 
-```java
+	```java
 	/**
 	 * Custom constructor taking a list as a parameter.
 	 * 
@@ -37,15 +42,14 @@ The Assignment validation process may encounter multiple issues. Content can be 
 		return _errors;
 	}
 	private List<String> _errors;	
-```
+	```
 
-3. **Organize** missing imports. Be sure to include `import java.util.List;`.
+* **Organize** missing imports. Be sure to include `import java.util.List;`.
 
-## Implement an Assignment Validator Interface
-
+#### Implement an Assignment Validator Interface
 1. **Go to** the *gradebook-api* module.
-2. **Create** an interface `com.liferay.training.gradebook.validator.AssignmentValidator`.
-3. **Implement** code as follows:
+* **Create** an interface `com.liferay.training.gradebook.validator.AssignmentValidator`.
+* **Implement** code as follows:
 
 ```java
 package com.liferay.training.gradebook.validator;
@@ -70,9 +74,9 @@ public interface AssignmentValidator {
 }
 ```
 
-## Export the com.liferay.training.gradebook.validator Package
+#### Export the com.liferay.training.gradebook.validator Package
 1. **Open** the `bnd.bnd` file of the *gradebook-api* project.
-2. **Export** the `com.liferay.training.gradebook.validator` package. Afterwards the file will look like this:
+* **Export** the `com.liferay.training.gradebook.validator` package. Afterwards the file will look like this:
 
 ```properties
 Bundle-Name: gradebook-api
@@ -88,9 +92,9 @@ Export-Package:\
 -includeresource: META-INF/service.xml=../gradebook-service/service.xml
 ```
 
-## Implement an Assignment Validator Service Component
+#### Implement an Assignment Validator Service Component
 1. **Create** a class `com.liferay.training.gradebook.util.validator.AssignmentValidatorImpl`.
-2. **Implement** code as follows:
+* **Implement** code as follows:
 
 ```java
 package com.liferay.training.gradebook.util.validator;
@@ -235,20 +239,21 @@ public class AssignmentValidatorImpl implements AssignmentValidator {
 }
 ```
 
-## Implement Validation in the Assignment Service
+<div class="page"></div>
 
+#### Implement Validation in the Assignment Service
 1. **Open** the class `com.liferay.training.gradebook.service.impl.AssignmentLocalServiceImpl`.
-2. **Add** a reference to the AssignmentValidator service to the end of the class:
+* **Add** a reference to the AssignmentValidator service to the end of the class:
 
 	```java
 	@Reference
 	AssignmentValidator _assignmentValidator;
 	```
 
-3. **Organize** missing imports.
-4. **Add** the validation call to the `addAssignment()` right after the method declaration:
+* **Organize** missing imports.
+* **Add** the validation call to the `addAssignment()` right after the method declaration:
 
-```java
+	```java
 	public Assignment addAssignment(
 		long groupId, String title, String description,
 		Date dueDate, ServiceContext serviceContext)
@@ -256,11 +261,11 @@ public class AssignmentValidatorImpl implements AssignmentValidator {
 		// Validate assignment parameters.
 		_assignmentValidator.validate(title, description, dueDate);
 		...
-```
+	```
 
-5. **Add** a validation call to `updateAssignment()` right after the method declaration:
+* **Add** a validation call to `updateAssignment()` right after the method declaration:
 	
-```java
+	```java
 	public Assignment updateAssignment(
 		long assignmentId, String title, String description,
 		Date dueDate, ServiceContext serviceContext)
@@ -268,32 +273,30 @@ public class AssignmentValidatorImpl implements AssignmentValidator {
 		// Validate assignment parameters.
 		_assignmentValidator.validate(title, description, dueDate);
 		...
-```
+	```
 
-6. **Organize** missing imports.
-7. **Rebuild** the service.
+* **Organize** missing imports.
+* **Rebuild** the service.
 
-Validation is now implemented on the service layer. As we call the services on the controller layer through the MVC commands in the _gradebook-web_ module, we have to pass the feedback messages from the service layer to the user interface there.
+Validation is now implemented on the service layer. As we call the services on the controller layer through the MVC commands in the *gradebook-web* module, we have to pass the feedback messages from the service layer to the user interface there.
 
 For transporting the messages to the user interface, we'll be using the [SessionMessages](https://github.com/liferay/liferay-portal/blob/7.1.x/portal-kernel/src/com/liferay/portal/kernel/servlet/SessionMessages.java) object for success messages and the [SessionErrors](https://github.com/liferay/liferay-portal/blob/7.1.x/portal-kernel/src/com/liferay/portal/kernel/servlet/SessionErrors.java) object for the error messages.
 
 You've probably noticed the default success message the platform sets when you add an Assignment. We'll silence that because we'll be using our custom message. 
 
-## Implement Feedback Messages Dispatching on the Controller Layer
+#### Implement Feedback Messages Dispatching on the Controller Layer
+1. **Open** the class `GradebookPortlet.java` in the *gradebook-web* module.
+* **Add** the following component property:
 
-1. **Open** the class `GradebookPortlet.java` in the _gradebook-web_ module.
-2. **Add** the following component property:
-
-```properties
+	```properties
 	"javax.portlet.init-param.add-process-action-success-action=false"
-```	
+	```	
+	
+	* Modify the `doProcessAction()` methods of the three MVC Action Command classes in the *gradebook-web* module, calling the service to set the success and error messages for the user interface.
 
-Modify the `doProcessAction()` methods of the three MVC Action Command classes in the _gradebook-web_ module, calling the service to set the success and error messages for the user interface.
-
-3. **Update** the code of all of the following MVC Action Command classes as follows:
+* **Update** the code of all of the following MVC Action Command classes as follows:
 	
 **AddAssignmentMVCActionCommand.java**
-
 ```java
 package com.liferay.training.gradebook.web.portlet.action;
 
@@ -405,7 +408,6 @@ public class AddAssignmentMVCActionCommand extends BaseMVCActionCommand {
 ```
 
 **EditAssignmentMVCActionCommand.java**
-
 ```java
 package com.liferay.training.gradebook.web.portlet.action;
 
@@ -508,8 +510,9 @@ public class EditAssignmentMVCActionCommand extends BaseMVCActionCommand {
 }
 ```
 
-**DeleteAssignmentMVCActionCommand.java**
+<div class="page"></div>
 
+**DeleteAssignmentMVCActionCommand.java**
 ```java
 package com.liferay.training.gradebook.web.portlet.action;
 
@@ -580,27 +583,26 @@ The last thing to do for displaying the error messages from the service layer is
 
 Add an import for the `SessionErrors` class for showing the error message details.
 
-## Import SessionErrors Class
-
+#### Import SessionErrors Class
 1. **Add** an import in `src/main/resources/META-INF/resources/init.jsp`:
 
-```html
-<%@ page import="com.liferay.portal.kernel.servlet.SessionErrors"%>
-```
+	```html
+	<%@ page import="com.liferay.portal.kernel.servlet.SessionErrors"%>
+	```
 
-After we add, update, or delete an Assignment successfully, we are redirected to the main list view, implemented with the `view.jsp`.
+	- After we add, update, or delete an Assignment successfully, we are redirected to the main list view, implemented with the `view.jsp`.
 
 2. **Add** `<liferay-ui>` tags to `src/main/resources/META-INF/resources/view.jsp` just after the `init.jsp` include:
 
-```html
-<%@ include file="init.jsp"%>
-<liferay-ui:error key="serviceErrorDetails">
-	<liferay-ui:message arguments='<%= SessionErrors.get(liferayPortletRequest, "serviceErrorDetails") %>' key="error.assignment-service-error" />
-</liferay-ui:error>
-<liferay-ui:success key="assignmentAdded" message="assignment-added-successfully" />
-<liferay-ui:success key="assignmentUpdated" message="assignment-updated-successfully" />
-<liferay-ui:success key="assignmentDeleted" message="assignment-deleted-successfully" />
-```
+	```html
+	<%@ include file="init.jsp"%>
+	<liferay-ui:error key="serviceErrorDetails">
+		<liferay-ui:message arguments='<%= SessionErrors.get(liferayPortletRequest, "serviceErrorDetails") %>' key="error.assignment-service-error" />
+	</liferay-ui:error>
+	<liferay-ui:success key="assignmentAdded" message="assignment-added-successfully" />
+	<liferay-ui:success key="assignmentUpdated" message="assignment-updated-successfully" />
+	<liferay-ui:success key="assignmentDeleted" message="assignment-deleted-successfully" />
+	```
 
 3. **Add** `<liferay-ui>` tags to `src/main/resources/META-INF/resources/assignment/edit_assigments.jsp` just after the `init.jsp` include:
 
@@ -616,27 +618,27 @@ After we add, update, or delete an Assignment successfully, we are redirected to
 
 Server-side validation is now implemented. Let's test it.
 
-## Test the Server-Side Validation
-
+#### Test the Server-Side Validation
 1. **Open** the Gradebook application in your web browser.
 2. **Click** on the plus sign to add an Assignment.
 3. **Leave** the *Title* field empty but enter something on the *Description* field.
 4. **Submit** the form:
 
-If you get a `NoSuchMethodError` error in your log, remove and redeploy the modules from the server.
+<br />
+
+> If you get a `NoSuchMethodError` error in your log, remove and redeploy the modules from the server.
 
 Detecting invalid input early on the user interface, client-side, improves the user experience and reduces server load. Remember, however, that user interface validation, typically JavaScript-based, is more about usability than security: if you disable page JavaScripts, your security is gone.
 
-Take a look at the `edit_assignments.jsp`. Notice the already existing `<aui:validator>` tag for the _description_ fields:
+Take a look at the `edit_assignments.jsp`. Notice the already existing <aui:validator> tag for the *description* fields:
 
 ```html
 <aui:validator name="required" />
 ```
 
-We will add two validators for the _title_ field. One is for setting the field mandatory, and the other one checks for valid characters.  
+We will add two validators for the *title* field. One is for setting the field mandatory, and the other one checks for valid characters.  
 
-## Implement Client-Side Validation
-
+#### Implement Client-Side Validation
 1. **Open** the `edit_assignments.jsp`.
 2. **Add** the following validator tags inside the `<aui:input name="title">` tag:
 
@@ -737,23 +739,12 @@ The complete `edit_assignments.jsp` file will look like this:
 </div>
 ```
 
-## Test the Client-Side Validation
-
+#### Test the Client-Side Validation
 1. **Open** the Gradebook application in your web browser.
-2. **Click** on the plus sign to add an Assignment.
-3. **Put** a dollar `$` sign in the title field and leave the *Description* field empty.
-4. **Submit** the form.
+* **Click** on the plus sign to add an Assignment.
+* **Put** a dollar `$` sign in the title field and leave the *Description* field empty.
+* **Submit** the form.
 
----
-
-## Previous Step
-
-* [Implementing Validation and Feedback](./implementing-validation-and-feedback.md)
-
-## For Further Reading
-
-* [Developing a Java Web Application](https://learn.liferay.com/dxp/latest/en/building-applications/developing-a-java-web-application.html) 
-
-
+-->
 
 

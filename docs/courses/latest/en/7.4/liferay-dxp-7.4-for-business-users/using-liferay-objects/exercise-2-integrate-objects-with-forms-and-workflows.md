@@ -261,7 +261,3 @@
 ## Next Up
 
 * [Summary](./summary.md)
-
-## Previous Step
-
-* [Integrating and Displaying Liferay Objects](./integrating-and-displaying-liferay-objects.md)
