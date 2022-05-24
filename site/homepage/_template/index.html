@@ -74,7 +74,6 @@
                         <ul class="dropdown-menu" id="productDropdown">
                             <li data-producturl="/analytics-cloud/latest/{{ language }}/{{ pathto('search') }}">{% trans %}Analytics Cloud{% endtrans %}</li>
                             <li data-producturl="/commerce/latest/{{ language }}/{{ pathto('search') }}">{% trans %}Commerce{% endtrans %}</li>
-                            <li data-producturl="/courses/latest/{{ language }}/{{ pathto('search') }}">{% trans %}Courses{% endtrans %}</li>
                             <li data-producturl="/dxp/latest/{{ language }}/{{ pathto('search') }}">{% trans %}DXP / Portal{% endtrans %}</li>
                             <li data-producturl="/dxp-cloud/latest/{{ language }}/{{ pathto('search') }}">{% trans %}DXP Cloud{% endtrans %}</li>
                             <li data-producturl="/reference/latest/{{ language }}/{{ pathto('search') }}">{% trans %}Reference{% endtrans %}</li>
@@ -125,10 +124,6 @@
 
                     <div class="col-lg-4">
                         {{ productCard(href="commerce/latest/" + language + "/index.html", iconId="#commerce-logo", title="Commerce") }}
-                    </div>
-
-                    <div class="col-lg-4">
-                        {{ productCard(href="courses/latest/" + language + "/index.html", iconId="#courses-logo", title="Courses") }}
                     </div>
 
                     <div class="col-lg-4">
