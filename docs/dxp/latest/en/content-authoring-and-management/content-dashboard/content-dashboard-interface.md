@@ -4,9 +4,9 @@
 
 The Content Dashboard interface has the following areas:
 
-- [Content Audit Tool](#content-audit-tool) (1)
-- [Contents list](#contents-list) (2)
-- [Content Info sidebar](#content-info-sidebar) (3)
+* [Content Audit Tool](#content-audit-tool) (1)
+* [Contents list](#contents-list) (2)
+* [Content Info sidebar](#content-info-sidebar) (3)
 
 ![The Content Dashboard user interface contains three areas of information.](./content-dashboard-interface/images/05.png)
 
@@ -25,15 +25,15 @@ To access the Content Info sidebar, click the *Actions Menu* (![Action Menu](../
 
 This tool is the graphical area at the top of the Content Dashboard page. The chart represents the total number of assets for a given combination of vocabularies and categories,  including the *Global* scope and all *Sites & Asset Libraries* in the instance. This chart takes into account:
 
-- [Web Content Articles](../web-content/web-content-articles/adding-a-basic-web-content-article.md) and [Documents and Media](../documents-and-media/documents-and-media-overview.md) across all Sites and Asset Libraries.
+* [Web Content Articles](../web-content/web-content-articles/adding-a-basic-web-content-article.md) and [Documents and Media](../documents-and-media/documents-and-media-overview.md) across all Sites and Asset Libraries.
 
     ```{note}
     Documents and Media are available in the Content Dashboard starting with Liferay 7.4+.
     ```
 
-- Content you can access.
-- The existing [filters](#filtering-and-sorting-content-in-the-contents-list) in the [Contents list](#contents-list).
-- A maximum of two Vocabularies (for the *x* and *y* axes.)
+* Content you can access.
+* The existing [filters](#filtering-and-sorting-content-in-the-contents-list) in the [Contents list](#contents-list).
+* A maximum of two Vocabularies (for the *x* and *y* axes.)
 
 ![Overview of the Content Audit Tool in the Content Dashboard](./content-dashboard-interface/images/10.png)
 
@@ -49,10 +49,10 @@ The following video shows and overview of the Content Audit tool:
 
 In the Content Audit Tool interface you can find:
 
-- Chart legend (1)
-- *X*-axis Categories for the first Vocabulary (2)
-- *Y*-axis Categories for the second Vocabulary (3)
-- Bar chart (4)
+* Chart legend (1)
+* *X*-axis Categories for the first Vocabulary (2)
+* *Y*-axis Categories for the second Vocabulary (3)
+* Bar chart (4)
 
 ![Overview of the Content Performance user interface](./content-dashboard-interface/images/04.png)
 
@@ -60,10 +60,10 @@ In the Content Audit Tool interface you can find:
 
 By default, the bar chart shows the total number of assets for each Category in the selected vocabularies, but you can filter this information in different ways:
 
-- Use the [filters](#filtering-and-sorting-content-in-the-contents-list) in the [Contents list](#contents-list).
-- Filter categories in the chart by checking or unchecking the Category name in the chart legend.
-- Click one of the bars to zoom-in on a specific Category's results.
-- Change which Vocabularies are displayed in the graph.
+* Use the [filters](#filtering-and-sorting-content-in-the-contents-list) in the [Contents list](#contents-list).
+* Filter categories in the chart by checking or unchecking the Category name in the chart legend.
+* Click one of the bars to zoom-in on a specific Category's results.
+* Change which Vocabularies are displayed in the graph.
 
 To change these Vocabularies:
 
@@ -87,10 +87,10 @@ By default, this area shows all the content you have access to, across all sites
 
 In the Contents list you can find the following elements:
 
-- Filter and Sort selector (1)
-- Filter editor (2)
-- Search field (3)
-- List of contents (4)
+* Filter and Sort selector (1)
+* Filter editor (2)
+* Search field (3)
+* List of contents (4)
 
 ![The Contents list contains several elements to help you find content.](./content-dashboard-interface/images/06.png)
 
@@ -101,7 +101,7 @@ In the list of contents, you can find the following columns:
 | Title | Article title(*). |
 | Author | Author's name. |
 | Type | Specifies a [Web Content Article](../web-content/web-content-articles/adding-a-basic-web-content-article.md) or [Documents](../documents-and-media/documents-and-media-overview.md) asset type (available in Liferay DXP 7.4+.) |
-| Subtype | Content [Subcategory](../tags-and-categories/defining-categories-and-vocabularies-for-content.md#creating-subcategories). |
+| Subtype | Content [Subcategory](../tags-and-categories/defining-categories-and-vocabularies-for-content.md#creating-subcategories). Includes Basic Documents and External Video Shortcuts |
 | Site or Asset Library | Location of the article in the Liferay DXP instance. |
 | Status | Article workflow status. Articles with more than one version in different statuses show all than statuses. |
 | *First Vocabulary* | This is the first Vocabulary in the Content Audit Tool. |
@@ -113,9 +113,6 @@ In the list of contents, you can find the following columns:
 ```{note}
 The *First Vocabulary* and *Second Vocabulary* columns depend on the Vocabularies you select.
 ```
-```{note}
-The subtypes of documents displayed in the content dashboard are Basic documents (doc, pdf, xls, jpg, etc.) and External Video Shortcuts.
-``` 
 
 For each entry in the Contents list, you can access the following options using the *Actions* menu (![Actions Menu](../../images/icon-actions.png)) or hovering over the article and clicking the corresponding option:
 
@@ -181,15 +178,15 @@ When using the Type or Extension filter, you can define your search criteria fro
 
 ### Understanding How Filtering Works in the Contents List
 
-- When you use the Categories or Tags filters with more than one criteria, the results correspond to content that meets all the criteria (see example A.)
-- When you choose multiple options for the same filter criteria, the Contents list shows assets matching at least one option (see example B.)
-- The criteria from different filters is combined using the `and` operator (see example C.)
+* When you use the Categories or Tags filters with more than one criteria, the results correspond to content that meets all the criteria (see example A.)
+* When you choose multiple options for the same filter criteria, the Contents list shows assets matching at least one option (see example B.)
+* The criteria from different filters is combined using the `and` operator (see example C.)
 
 | Example| Filter By | Filter Example | Contents List Results |
 | :--- | :--- | :--- | :--- |
 | A | Categories | Categories: *Entrepreneur* and *Family* | Only assets that belong to both the *Entrepreneur* `and` Family Categories. |
-| B | Authors | Authors: *Peter* and *Linda* | Assets authored by *Peter* `or` _Linda_ `or` both. |
-| C | Categories, Authors | Category is _Entrepreneur_ and Author is _Linda_ | Only assets under the *Entrepreneur* Category `and` authored by Linda. |
+| B | Authors | Authors: *Peter* and *Linda* | Assets authored by *Peter* `or` *Linda* `or` both. |
+| C | Categories, Authors | Category is *Entrepreneur* and Author is *Linda* | Only assets under the *Entrepreneur* Category `and` authored by Linda. |
 
 ## Content Info Sidebar
 
@@ -204,43 +201,8 @@ To open the Information sidebar,
 
     ![The Information sidebar provides different metadata for your content.](./content-dashboard-interface/images/09.png)
 
-
-All the document info panels will show:
-
-* Title of the document
-
-* Read-only input showing the file URL with a copy URL button
-
-* File name (example.jpg)
-
-* Document subtype
-
-* Versions and status labels
-
-* Author's avatar and name
-
-* Preview (image) with a link to the preview. The preview link is available if the document can have an image preview, for example, .png has a link but a .zip doesn't.
-
-* Download button (video shortcuts won't have download button)
-
-* Description
-
-* Categorization section:
-
-* List of categories assigned to the content
-
-* List of tags
-
-* Details section:
-
-* Extension and size of the file
-
-* Created and Modified dates
-
-* File ID
-
 ## Related Information
 
-- [About the Content Dashboard](./about-the-content-dashboard.md)
-- [About the Content Performance Tool](../page-performance-and-accessibility/about-the-content-performance-tool.md)
-- [Defining Categories and Vocabularies for Content](../tags-and-categories/defining-categories-and-vocabularies-for-content.md)
+* [About the Content Dashboard](./about-the-content-dashboard.md)
+* [About the Content Performance Tool](../page-performance-and-accessibility/about-the-content-performance-tool.md)
+* [Defining Categories and Vocabularies for Content](../tags-and-categories/defining-categories-and-vocabularies-for-content.md)
