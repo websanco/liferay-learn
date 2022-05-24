@@ -12,10 +12,10 @@ The table includes the following columns:
 
 | Column | Description |
 | :--- | :--- |
-| User ID | ID of the acting user |
-| User Name | Name of the acting user |
-| Resource ID | ID of the affected resource |
-| Resource Name | Name of the affected resource |
+| User ID | Acting user's ID |
+| User Name | Acting user's name |
+| Resource ID | Affected resource's ID |
+| Resource Name | Affected resource's name |
 | Resource Action | Action performed (`ADD`, `UPDATE`, or `DELETE`) |
 | Client IP | IP address responsible for the action |
 | Create Date | When the event record was created |
