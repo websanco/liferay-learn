@@ -1,10 +1,12 @@
 # Filtering Collections on a Page
 
-In order to improve the experience for Users viewing Collections on your Site, you may want them to be able to filter the content, with a keyword for example. There are two Page Fragments you can add to your pages to help Users filter content in displayed Collections: the [Collection Filter Fragment](#using-the-collection-filter-fragment) and the [Applied Filters Fragment](#using-the-applied-filters-fragment).
+In order to improve the experience for Users viewing Collections on your Site, you can add Page Fragments to allow them to filter content in those Collections. For example, you can add a Fragment that lets Users search for keywords and filter the displayed Collections with them.
+
+There are two Page Fragments you can add to your pages to help Users filter content in displayed Collections: the [Collection Filter Fragment](#using-the-collection-filter-fragment) and the [Applied Filters Fragment](#using-the-applied-filters-fragment).
 
 ## Using the Collection Filter Fragment
 
-The Collection Filter Fragment allows Users to filter the content displayed in a chosen Collection on the page. Users can 
+The Collection Filter Fragment allows Users to filter the content displayed in a chosen Collection on the page. Users can either search for keywords or select categories to filter the Collection associated with the filter Fragment.
 
 Follow these steps to add and configure a Collection Filter Fragment to a page (that is already displaying a Collection in a [Collection Display Fragment](./displaying-collections.md#configuring-a-collection-display-fragment)):
 
@@ -16,11 +18,11 @@ Follow these steps to add and configure a Collection Filter Fragment to a page (
 
     The *Filter* drop-down menu appears when you have selected a compatible Collection.
 
-1. Choose a type of filter for the Fragment, *Keywords* or *Category*.
+1. Use the Filter menu to choose a type of filter for the Fragment, *Keywords* or *Category*.
 
-    If you choose the Keywords filter type, then Users can search for any keyword to filter the Collection by. If you choose the Category filter type, then the *Source* input field appears, and Users can select a category from the configured source to filter the Collection by.
+    If you choose the *Keywords* filter type, then Users can search for any keyword to filter the Collection by. If you choose the *Category* filter type, then the *Source* input field appears to configure the selection of categories Users can choose from.
 
-1. If you chose the Category filter type, then click on the Source input field, and use the popup menu to choose the source of categories for Users to choose from.
+1. If you chose the Category filter type, then click on the Source input field, and use the popup dialog to choose the source of categories for Users to choose from.
 
     ![Select the vocabulary or category that contains the desired category selection.](./filtering-collections-on-a-page/images/02.png)
 
