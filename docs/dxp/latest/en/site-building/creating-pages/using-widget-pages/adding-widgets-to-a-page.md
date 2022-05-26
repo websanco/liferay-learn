@@ -6,7 +6,7 @@ Follow these steps to add a widget to a Widget Page:
 
 1. Click the *Add* button (![Add](../../../images/icon-add-app.png)) in the Control Menu.
 
-   ![The Widgets panel contains several default widgets that you can use to add functionality to the page.](./adding-widgets-to-a-page/images/01.png)
+    ![The Widgets panel contains several default widgets that you can use to add functionality to the page.](./adding-widgets-to-a-page/images/01.png)
 
 1. Open the *Widgets* panel and search or browse through the categories of available widgets to find the one you want.
 
@@ -22,6 +22,6 @@ Widgets are rendered according to [render-weight](https://docs.liferay.com/dxp/p
 
 ## Additional Information
 
-- [Enabling User Personalization of Widget Pages](./enabling-user-personalization-of-widget-pages.md)
+- [Enabling User Personalization of Widget Pages](./configuring-widgets/enabling-user-personalization-of-widget-pages.md)
 - [Converting Widget Pages to Content Pages](./configuring-widgets/converting-widget-pages-to-content-pages.md)
 - [Analyze Content Metrics Using the Content Performance Tool](../../../content-authoring-and-management/page-performance-and-accessibility/analyze-content-metrics-using-content-performance-tool.md)

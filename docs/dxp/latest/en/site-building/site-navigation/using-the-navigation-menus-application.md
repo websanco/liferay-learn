@@ -1,15 +1,15 @@
-# Using The Navigation Menus Application
+# Using the Navigation Menus Application
 
-Liferay provides the Navigation Menus application for creating custom menus for Site Pages and content. With it, you can determine which elements are included in a menu and how they're organized. Once created, you can display your custom menus using Page fragments and widgets.
+The Navigation Menus application is used to create custom menus for Site Pages and content. With it, you can determine which elements are included in a menu, and how they're organized. Once created, you can display your custom menus using [Page Fragments](../creating-pages/page-fragments-and-widgets/using-fragments.md) or [Widgets](../creating-pages/using-widget-pages/adding-widgets-to-a-page.md).
 
 ```{note}
-For Liferay 7.3 and earlier, Navigation Menus can only include Pages. As of Liferay DXP 7.4 U1+, Navigation Menus supports additional entities.
+For Liferay 7.3 and earlier, Pages are the only entity that can be added to a Navigation Menu. As of Liferay 7.4 U1+, Navigation Menus support adding additional entity types to a Navigation Menu.
 ```
 
 ![Creating Custom Menus for Site Pages and content](./using-the-navigation-menus-application/images/01.png)
 
 ```{tip}
-In DXP 7.3+, you can use Custom Fields to add more information to items in Navigation Menus (under `Site Navigation Menu Item` in the `Custom Fields` menu). You can then use this information with Application Display Templates to further customize your navigation menus.
+On Liferay 7.3+, you can use Custom Fields to add more information to items in Navigation Menus (under *Site Navigation Menu Item* in the *Custom Fields* menu). You can then use this information with Application Display Templates to further customize your navigation menus.
 ```
 
 ## Creating Navigation Menus
@@ -18,61 +18,61 @@ Follow these steps to create a Navigation Menu:
 
 1. Open the _Site Menu_ (![Site Menu](../../images/icon-product-menu.png)) and go to _Site Builder_ &rarr; _Navigation Menus_.
 
-   ![Access Navigation Menus in the Site Menu.](./using-the-navigation-menus-application/images/02.png)
+    ![Access Navigation Menus in the Site Menu.](./using-the-navigation-menus-application/images/02.png)
 
 1. Click the _Add_ button (![Add Button](../../images/icon-add.png)).
 
 1. Enter a _name_ for the Navigation Menu.
 
-   ![Create a Navigation Menu.](./using-the-navigation-menus-application/images/03.png)
+    ![Create a Navigation Menu.](./using-the-navigation-menus-application/images/03.png)
 
 1. Click _Save_.
 
 This redirects you to the new custom menu where you can begin adding elements (e.g., Pages, Documents, Categories).
 
-### Adding Elements to Navigation Menus
+### Adding New Elements to a Navigation Menu
 
-While editing a Navigation Menu, follow these steps to add elements: 
+While editing a Navigation Menu, follow these steps to add an element to the Navigation Menu:
 
 1. Click the _Add_ button (![Add Button](../../images/icon-add.png)).
 
-1. Select the _type of element_ you want to add to the menu (e.g., Page, Document, Category). This opens an item selector window.
+1. Select the type of element you want to add to the menu (e.g., Page, Document, Category). This opens an item selector window.
 
-   If desired, you can add multiple types of elements to the same menu.
+    You can add multiple elements to the same menu.
 
    ![Select the type of element you want to add to the menu.](./using-the-navigation-menus-application/images/04.png)
 
 1. Select the elements you want to add and click _Select_. 
 
-   If desired, you can select multiple elements.
+    You can select multiple elements.
 
-   ```{important}
-   When the added element does not have an associated display page, Liferay displays a warning. Items without a display page do not have links and are hidden from menus.
-   ```
+    ```{important}
+    When the added element does not have an [associated display page](../displaying-content/using-display-page-templates/about-display-page-templates-and-display-pages.md), Liferay displays a warning. Items without a display page do not have links and are hidden from menus.
+    ```
 
-   ![When the added element does not have an associated display page](./using-the-navigation-menus-application/images/05.png)
+    ![When the added element does not have an associated display page](./using-the-navigation-menus-application/images/05.png)
 
-1. (Optional) Drag and drop menu elements to reorganize them.
+1. Optionally, drag and drop menu elements to reorganize them or arrange them in a hierarchy.
 
-   ```{tip}
-   When organizing menu elements, you can structure them into hierarchies. You can also use the _Submenu_ type to add subsections to a menu. If you delete an element with child elements, then the child elements are also removed. 
-   ```
+    ```{tip}
+    In addition to structuring menu elements into a hierarchy, you can also use the _Submenu_ type to add subsections to a menu. If you delete an element with child elements, the child elements are also removed.
+    ```
 
-   ![Adding Elements to Navigation Menus](./using-the-navigation-menus-application/images/06.png)
+    ![Adding Elements to Navigation Menus](./using-the-navigation-menus-application/images/06.png)
 
-1. (Optinal) You can set localize display names for menu elements. 
-   
-   To do this, select a menu element, check *Use Custom Name* in the side panel, enter a name, and click *Save*.  
+1. Optionally, define localized display names for each of your menu elements.
 
-   ![Customize the display of menu elements.](./using-the-navigation-menus-application/images/07.png)
+    To do this, select a menu element, check *Use Custom Name* in the side panel, enter a name, and click *Save*.  
 
-All changes to the menu are saved automatically.
+    ![Customize the display of menu elements.](./using-the-navigation-menus-application/images/07.png)
+
+All changes to the menu are saved.
 
 ## Using Menus During Page Creation
 
-When creating Site Pages users can select from existing Navigation Menus by default. If desired, you can remove individual menus from the list of available menus.
+When Users are creating Site Pages, they are shown a list of all existing Navigation Menus. You can modify this behavior by hiding specific menus from the list of available menus.
 
-   ![Select from Existing Navigation Menus](./using-the-navigation-menus-application/images/08.png)
+![Select from Existing Navigation Menus](./using-the-navigation-menus-application/images/08.png)
 
 Follow these steps to configure this behavior for a Navigation Menu:
 
@@ -84,7 +84,7 @@ Follow these steps to configure this behavior for a Navigation Menu:
 
 1. Uncheck/Check the setting.
 
-   ![You can select from existing Navigation Menus when creating Site Pages](./using-the-navigation-menus-application/images/09.png)
+    ![You can select from existing Navigation Menus when creating Site Pages](./using-the-navigation-menus-application/images/09.png)
 
 1. Click _Save_.
 
@@ -98,9 +98,9 @@ Follow these steps to configure the Navigation Menu's type:
 
 1. Select the desired navigation type: _Primary Navigation_, _Secondary Navigation_, or _Social Navigation_.
 
-   ![Select the desired navigation type.](./using-the-navigation-menus-application/images/10.png)
+    ![Select the desired navigation type.](./using-the-navigation-menus-application/images/10.png)
 
-   Once selected, each menu's configuration appears in the _Marked As_ column.
+    Once selected, each menu's configuration appears in the _Marked As_ column.
 
 | Navigation Menu Type | Usage |
 | :--- | :--- |

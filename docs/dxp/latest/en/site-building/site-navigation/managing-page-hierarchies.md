@@ -28,7 +28,7 @@ The page order has been changed.
 
 ### Nesting Pages
 
-You can nest pages up to four levels: 
+You can nest pages up to four levels:
 
 1. Click the _Product Menu_ (![Product Menu](../../images/icon-product-menu.png)).
 1. Click _Site Builder_ &rarr; _Pages_.
@@ -58,5 +58,5 @@ Users can access page options by clicking the _Options_ (![Option](../../images/
 
 ## Additional Information
 
-* [Using Navigation Menus](./using-the-navigation-menus-application.md)
-* [Configuring Navigation Menus](./configuring-navigation-menus.md)
+* [Using the Navigation Menus Application](./using-the-navigation-menus-application.md)
+* [Configuring Navigation Menus](./configuring-menu-displays.md)

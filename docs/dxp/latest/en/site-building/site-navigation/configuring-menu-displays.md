@@ -1,14 +1,14 @@
-# Configuring Menu Displays 
+# Configuring Menu Displays
 
-To display and configure a [Menu Display](./using-the-navigation-menus-application.md), you can use the [Menu Display Fragment](../creating-pages/building-and-managing-content-pages/page-fragments-user-interface-reference.md#menu-display) (available in Liferay DXP 7.4+) or Menu Display Widget. With any of these two options, you can define the menu display options and create different navigation levels for your Site.
+To display and configure a [Menu Display](./using-the-navigation-menus-application.md), you can use the [Menu Display Fragment](../creating-pages/building-and-managing-content-pages/page-fragments-user-interface-reference.md#menu-display) or Menu Display Widget. With either of these two options, you can define the menu display options, levels, and behavior for your Site.
 
-```{note}
-Configuring the Menu Display Fragment is easier than the Menu Display Widget, and you have preview options working with [Master Page Template](../creating-pages/defining-headers-and-footers/creating-a-master-page-template.md) that Menu Display Widgets do not provide.
+```{tip}
+If you are new to Liferay, use the Menu Display Fragment to get started with building your site's navigation menus. The Menu Display fragment provides preview options that work with [Master Page Template](../creating-pages/defining-headers-and-footers/creating-a-master-page-template.md) and ease of configuration that Menu Display Widgets do not provide.
 ```
 
 ## Configuring the Menu Display Fragment
 
-> Available: Liferay DXP/Portal 7.4+.
+{bdg-secondary}`Available 7.4+`
 
 Using Liferay Navigation Menus application, you can create a navigation menu anywhere in your Content Page. This navigation menu is based on your Site's Public or Private Pages hierarchy, or any other hierarchy you define using Liferay's [Navigation Menus Application](./using-the-navigation-menus-application.md). You can also define the menu display style options and the number of sub-levels to include in the navigation.
 
@@ -80,6 +80,5 @@ You can configure which pages at what level from the menu appear in the widget. 
 
 - [Using the Navigation Menus Application](./using-the-navigation-menus-application.md)
 - [Managing Site Navigation](./managing-site-navigation.md)
-- [Adding Elements to Content Pages](../creating-pages/building-and-managing-content-pages/adding-elements-to-content-pages.md)
-- [Content Page Editor User Interface Reference](../creating-pages/building-and-managing-content-pages/content-page-editor-user-interface-reference.md)
-
+- [Adding Elements to Content Pages](../creating-pages/using-content-pages/adding-elements-to-content-pages.md)
+- [Content Page Editor User Interface Reference](../creating-pages/using-content-pages/content-page-editor-ui-reference.md)
