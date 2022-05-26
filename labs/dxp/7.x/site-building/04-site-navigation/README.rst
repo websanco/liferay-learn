@@ -1,4 +1,0 @@
-Site Navigation
-===============
-
-Coming soon!
