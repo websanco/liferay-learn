@@ -1,8 +1,8 @@
 # Personalizing Collections
 
-> Availability: Liferay Portal 7.3 GA6, Liferay DXP 7.3+
+{bdg-secondary}`Available Liferay Portal 7.3 GA6 / DXP 7.3+`
 
-By default, any user can see all the Collection's content and is part of *Anyone* group. You can create a *Personalized Variation* of the Collection's items using [Segments](../segmentation/creating-and-managing-user-segments.md). When you use a Personalized Variation, the items that are part of your Collection don't change, but the Collection Page or Collection Display Fragment show the items filtered for the Segment.
+By default, any user can see all the Collection's content and is part of the *Anyone* group. You can create a *Personalized Variation* of the Collection's items using [Segments](../segmentation/creating-and-managing-user-segments.md). When you use a Personalized Variation, the items that are part of your Collection don't change, but the Collection Page or Collection Display Fragment show the items filtered for the Segment.
 
 ```{note}
 To customize a Collection using Segments, you must define the Segments first. For more information, see [Creating and Managing User Segments](../segmentation/creating-and-managing-user-segments.md).
@@ -18,9 +18,9 @@ You can create multiple Personalized Variations for a Collection, and edit or de
 
 ## Prioritizing Variations
 
-> {bdg-secondary}`Available for Liferay DXP 7.4+`
+{bdg-secondary}`Available for Liferay DXP 7.4+`
 
-You can prioritize Collections variations to determine which variation is displayed for users belonging to multiple segments. When editing a Collection, you can access a sortable list for the Personalized Variations. You can change the rank of a variation by clicking its *Actions* button (![Actions Button](../../../images/icon-actions.png)) and selecting Prioritize or Deprioritize. Alternatively, you can drag and drop variations to create the desired hierarchy.
+For situations where a user may belong to multiple segments, Collection variations can be assigned a priority to determine which variation is displayed to a user. When editing a Collection, you can access a sortable list for the Personalized Variations. You can change the rank of a variation by clicking its *Actions* button (![Actions Button](../../../images/icon-actions.png)) and selecting *Prioritize* or *Deprioritize*. You can also drag and drop variations to reorder their priority.
 
 ```{note}
 Priority is assigned according to the position of each item in the list. The highest priority is the position at the top of the list.
