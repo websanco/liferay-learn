@@ -20,6 +20,10 @@ Follow these steps to add and configure a Collection Filter Fragment to a page (
 
 1. Use the Filter menu to choose a type of filter for the Fragment, *Keywords* or *Category*.
 
+    ```{note}
+    If any modules have been deployed adding custom Collection filters (by implementing the [`FragmentCollectionFilter`](https://github.com/liferay/liferay-portal/blob/master/modules/apps/fragment/fragment-collection-filter-api/src/main/java/com/liferay/fragment/collection/filter/FragmentCollectionFilter.java) and [`InfoFilter`](https://github.com/liferay/liferay-portal/blob/master/modules/apps/info/info-api/src/main/java/com/liferay/info/filter/InfoFilter.java) interfaces), then you can also choose these filters from the list.
+    ```
+
     If you choose the *Keywords* filter type, then Users can search for any keyword to filter the Collection by. If you choose the *Category* filter type, then the *Source* input field appears to configure the selection of categories Users can choose from.
 
 1. If you chose the Category filter type, then click on the Source input field, and use the popup dialog to choose the source of categories for Users to choose from.
