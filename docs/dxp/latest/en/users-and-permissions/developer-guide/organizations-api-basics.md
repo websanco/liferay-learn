@@ -198,7 +198,7 @@ The `Organization` fields appear in JSON.
 
 ## Patch an Organization
 
-Do a partial edit of an existing Organization with the following cURL and Java commands. Note, replace `1234` with your Organization's ID.
+Do a partial edit of an existing Organization with the following cURL and Java commands. Replace `1234` with your Organization's ID.
 
 ### Organization_PATCH_ById.sh
 
@@ -232,7 +232,7 @@ Code:
 
 ## Put an Organization
 
-Completely overwrite an existing Organization with the following cURL and Java commands. Note, replace `1234` with your Organization's ID.
+Completely overwrite an existing Organization with the following cURL and Java commands. Replace `1234` with your Organization's ID.
 
 ### Organization_PUT_ById.sh
 
@@ -266,7 +266,7 @@ Code:
 
 ## Delete an Organization
 
-Delete an existing Organization with the following cURL and Java commands. Note, replace `1234` with your Organization's ID.
+Delete an existing Organization with the following cURL and Java commands. Replace `1234` with your Organization's ID.
 
 ### Organization_DELETE_ById.sh
 
