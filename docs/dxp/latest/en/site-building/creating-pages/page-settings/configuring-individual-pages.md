@@ -36,7 +36,7 @@ While a Page's name and friendly URL are initially defined together at Page crea
 
 ### Menu Displays
 
-You can hide a Page from Menu Display widgets and fragments that show the Public Pages Hierarchy. When enabled, a hidden Page can still appear in other navigation menus if added to them. See [Configuring Site Navigation](./../../site-navigation/managing-site-navigation.md) for more information.
+You can hide a Page from Menu Display widgets and fragments that show the Pages Hierarchy. When enabled, a hidden Page can still appear in other navigation menus if added to them. See [Configuring Site Navigation](./../../site-navigation/managing-site-navigation.md) for more information.
 
 ### Page Layout
 
@@ -149,7 +149,7 @@ Use the drop-down menu to inform tools crawling and indexing your Site how frequ
 In the *Open Graph* tab, you can use Open Graph `<meta>` tags to define a Page's metadata and create engaging representations of your content. Values defined here override default values defined at the [Site](../../site-settings/configuring-open-graph.md) level.
 
 ```{note}
-Open Graph `<meta>` tags are only included in public page headers to unauthenticated users. They are not included in private pages, or in public pages when the user is logged in.
+Open Graph `<meta>` tags are only included in page headers to unauthenticated users. They are not included when the user is logged in.
 ```
 
 ### Image
