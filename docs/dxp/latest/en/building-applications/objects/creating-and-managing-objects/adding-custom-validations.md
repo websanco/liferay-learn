@@ -1,6 +1,6 @@
 # Adding Custom Validations
 
-{bdg-secondary}`Available Liferay 7.4 U26+ and GA26+`
+{bdg-secondary}`Available 7.4 U27+ and GA27+`
 
 With custom Objects, you can add validations for both custom and metadata fields. Validations set rules used for determining valid field entries and can be defined using either [Groovy](https://groovy-lang.org/) scripts or Liferay's [expression builder](./expression-builder-validations-reference.md). Each validation has its own trigger, conditions, and error text, which you can set via the Objects UI. When triggered, the validation checks for valid field entires according to your defined conditions and displays your error text for invalid entries.
 
