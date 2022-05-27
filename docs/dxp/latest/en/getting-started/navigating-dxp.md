@@ -82,9 +82,9 @@ The _Applications Menu_ contains a variety of links to manage many different app
 
 Here are some of the applications that can be managed from the _Applications Menu_:
 
-* [Collections](../content-authoring-and-management/collections-and-collection-pages/about-collections-and-collection-pages.md) and the Content Dashboard
+* [Content Dashboard](../content-authoring-and-management/content-dashboard.md)
 * [Workflow](../process-automation/workflow/introduction-to-workflow.md)
-* [App Builder](../building-applications/app-builder.md) _(Deprecated and removed in Liferay 7.4)_
+* [Remote Apps](../building-applications/remote-apps.md)
 
 ### Commerce Menu
 
