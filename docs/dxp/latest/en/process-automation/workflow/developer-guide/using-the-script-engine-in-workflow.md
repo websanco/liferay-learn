@@ -134,7 +134,7 @@ The following workflow script is written using Groovy and is used with a `Condit
 ```
 
 ```{note}
-A script's return value determines the next task or state.
+A script's `returnValue` variable determines the next task or state.
 ```
 
 See [Crafting Workflow Definitions](./crafting-xml-workflow-definitions.md) for links to downloadable workflow script examples.
