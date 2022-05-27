@@ -76,8 +76,8 @@ By default, Site Configuration includes the Details and Site URL sections.
 
 | Setting | Description |
 | :--- | :--- |
-| Friendly URL | Set a custom URL for both public and private Site pages. See [Configuring Your Site's Friendly URL](../site-settings/managing-site-urls/configuring-your-sites-friendly-url.md) for more information. |
-| Public and Private Pages | Set public and private Virtual Hosts to map to a Site's Public and Private Pages. See [Configuring Virtual Hosts Site URLs](../site-settings/managing-site-urls/configuring-virtual-hosts-site-urls.md) for more information. |
+| Friendly URL | Set a custom URL for Site pages. See [Configuring Your Site's Friendly URL](../site-settings/managing-site-urls/configuring-your-sites-friendly-url.md) for more information. |
+| Pages | Set Virtual Hosts that map to friendly URL for the Site's pages. See [Configuring Virtual Hosts Site URLs](../site-settings/managing-site-urls/configuring-virtual-hosts-site-urls.md) for more information. |
 
 ### Third Party
 
@@ -165,7 +165,7 @@ Using this option, you can enable automatic moderation of user messages on Messa
 | :--- | :--- |
 | Google PageSpeed Insights (Liferay DXP 7.4+) | Enable the Google PageSpeed Insight integration in Liferay DXP. Using this option, you can audit your pages for accessibility issues and check suggestions for fixing them. See [Analyzing SEO and Accessibility on Pages](../../content-authoring-and-management/content-performance-tool/analyzing-seo-and-accessibility-on-pages.md) for more information. |
 | Open Graph | These tags define page metadata to create engaging representations of your Site's content when shared in applications that support the Open Graph protocol, such as Facebook, Slack, and Twitter. When enabled Open Graph `<meta>` tags are embedded in the `head` of the Site's pages. For more information, read [Configuring Open Graph](./configuring-open-graph.md). |
-| Pages | View the Site Public and Private pages. On this section, you can also configure the propagation of changes from a Site template, if one exists. For more information, read [Building Sites with Site Templates](../../../en/site-building/building-sites/building-sites-with-site-templates.md). |
+| Pages | View the Site's pages. On this section, you can also configure the propagation of changes from a Site template, if one exists. For more information, read [Building Sites with Site Templates](../../../en/site-building/building-sites/building-sites-with-site-templates.md). |
 
 ### Recycle Bin
 
