@@ -2,7 +2,7 @@
 
 {bdg-secondary}`Available 7.4 U27+ and GA27+`
 
-With custom Objects, you can add validations for both custom and metadata fields. Validations set rules used for determining valid field entries and can be defined using either [Groovy](https://groovy-lang.org/) scripts or Liferay's [expression builder](./expression-builder-validations-reference.md). Each validation has its own trigger, conditions, and error text, which you can set via the Objects UI. When triggered, the validation checks for valid field entires according to your defined conditions and displays your error text for invalid entries.
+With custom Objects, you can add validations for both custom and metadata fields. Validations set rules used for determining valid field entries and are defined using either [Groovy](https://groovy-lang.org/) scripts or Liferay's [expression builder](./expression-builder-validations-reference.md). Each validation has its own trigger, conditions, and error text, which you can set via the Objects UI. When triggered, the validation checks for valid field entries according to your defined conditions and displays your error text for invalid entries.
 
 ![Create validations for custom and metadata Object fields.](./adding-custom-validations/images/01.png)
 
@@ -56,7 +56,7 @@ Once activated, the validation is run for all new Object entries.
 
 ## Using Groovy Validations
 
-The Groovy validation type supports all standard Groovy Script capabilities. However, when defining Groovy conditions, you must use the `invalidFields` variable. This variable should return `true` for invalid field values, while it should return `false` for valid field values. The error message is only displayed to users when `invalidFields` returns `true`.
+The Groovy validation type supports all standard Groovy Script capabilities. However, when defining Groovy conditions, you must use the `invalidFields` variable. This variable should return `true` for invalid field values and `false` for valid field values. The error message only appears when `invalidFields` returns `true`.
 
 ```{note}
 The Groovy type does not currently have a check syntax validation.
@@ -66,7 +66,7 @@ The Groovy type does not currently have a check syntax validation.
 
 ## Using Expression Builder Validations
 
-The Expression Builder type provides predefined fields, operators, and functions that you can access in the conditions side panel. Clicking an element adds it to the conditions editor. These functions return a Boolean value. For some, `true` indicates an valid entry, while for others `true` indicates an invalid entry. See [Expression Builder Validations Reference](./expression-builder-validations-reference.md) for a complete list of provided operators and functions.
+The Expression Builder type provides predefined fields, operators, and functions that you can access in the Conditions side panel. Clicking an element adds it to the conditions editor. These functions return a Boolean value. For some, `true` indicates an valid entry, while for others `true` indicates an invalid entry. See [Expression Builder Validations Reference](./expression-builder-validations-reference.md) for a complete list of provided operators and functions.
 
 ```{important}
 Expression Builder validations can only be used with text, numeric, date, and boolean field types.
@@ -82,24 +82,24 @@ The following chart lists all default metadata fields included in custom Objects
 
 | Field | Description |
 | :--- | :--- |
-| `companyId` | ID of the company in which the entry was created |
+| `companyId` | Portal instance where the entry was created |
 | `createDate` | When the entry was created |
 | `externalReferenceCode` | External reference code for the entry |
-| `groupId` | ID of the group in which the entry was created |
+| `groupId` | Site ID in where the entry was created |
 | `lastPublishDate` | Date when the entry was last published |
 | `modifiedDate` | Date when the entry was last modified |
 | `mvccVersion` | MVCC version of the entry |
 | `objectDefinitionId` | ID of the entry's Object |
 | `objectEntryId` | ID for the entry |
 | `status` | Workflow status for the entry |
-| `statusByUserId` | ID of the assigned user |
-| `statusByUserName` | Name of the assigned user |
-| `statusDate` | Date when the status was list updated |
+| `statusByUserId` | ID of the assigned user in Workflow |
+| `statusByUserName` | Name of the assigned user in Workflow |
+| `statusDate` | Date when the Workflow status was last updated |
 | `userEmailAddress` | Email address for the entry's author |
 | `userFirstName` | First name of the entry's author |
 | `userId` | ID of the entry's author |
 | `userLastName` | Last name of the entry's author |
-| `userName` | Full name of the entry's author |
+| `userName` | User name of the entry's author |
 | `uuid` | Unique universal ID for the entry |
 
 ```{note}
