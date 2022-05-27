@@ -1,6 +1,6 @@
 # Roles API Basics
 
-You can [Create and Manage Roles](../roles-and-permissions/creating-and-managing-roles.md) from the Application menu, but you can also use Liferay's REST APIs. Call these services to manage roles.
+You can [Create and Manage Roles](../roles-and-permissions/creating-and-managing-roles.md) from the Application menu, but you can also use Liferay's REST APIs. Call these services to manage Roles.
 
 ## Associate a User to a Regular Role
 
@@ -19,9 +19,9 @@ Then, follow these steps:
    unzip liferay-z3v5.zip
    ```
 
-1. Use the [Users_GET_FromInstance](./user-account-api-basics.md#get-instance-users) to get a list of user IDs. Make note of the User ID you wish to associate with a Regular Role.
+1. Use the [Users_GET_FromInstance](./user-account-api-basics.md#get-instance-users) to get a list of User IDs. Make note of the User ID you wish to associate with a Regular Role.
 
-1. Use the [Roles_GET_FromInstance](#get-roles-from-instance) to get a list of all role IDs. Make note of the role ID you wish to associate that is `roleType: regular`. For example, the Analytics Administrator Regular Role type.
+1. Use the [Roles_GET_FromInstance](#get-roles-from-instance) to get a list of all Role IDs. Make note of the Role ID you wish to associate that is `roleType: regular`. For example, the Analytics Administrator Regular Role type.
 
 1. Use the cURL script to associate a User to a Regular Role. On the command line, navigate to the `curl` folder. Execute the `RoleUserAssociation_POST_ToInstance.sh` script. Replace `1234` with a Regular Role's ID. Replace `5678` with a User's ID.
 
@@ -29,7 +29,7 @@ Then, follow these steps:
    ./RoleUserAssociation_POST_ToInstance.sh 1234 5678
    ```
 
-1. Navigate to *Global Menu* &rarr; *Control Panel* &rarr; *Roles*. Under the Regular Roles tab, click the specific role you used to a associate the user. Click the *Assignees* tab. See that the user has been associated with the selected role.
+1. Navigate to *Global Menu* &rarr; *Control Panel* &rarr; *Roles*. Under the Regular Roles tab, click the specific Role you used to a associate the User. Click the *Assignees* tab. See that the User has been associated with the selected Role.
 
    ![See that the User has been associated.](./roles-api-basics/images/01.png)
 
