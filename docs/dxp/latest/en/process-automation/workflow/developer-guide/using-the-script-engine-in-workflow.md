@@ -26,7 +26,7 @@ Here's the format for an action that invokes a script:
     <script>
         <![CDATA[script code goes here]]>
     </script>
-    <script-language>scripting language name goes here</script-language>
+    <script-language>groovy</script-language>
 </action>
 ...
 </actions>
@@ -34,7 +34,7 @@ Here's the format for an action that invokes a script:
 
 One common operation is to set the workflow status. For example, this script sets the workflow status to *approved*.
 
-```xml
+```groovy
 <script>
 <![CDATA[
     import com.liferay.portal.kernel.workflow.WorkflowStatusManagerUtil;
@@ -81,7 +81,7 @@ At virtually any point in a workflow, you can use Liferay's script engine to acc
 
 The following workflow script is written using Groovy and is used with a `Condition` Node. The script uses Liferay's [asset framework](../../../building-applications/data-frameworks/assets.md) to determine an asset's category and uses the category to determine the correct approval process automatically. If the asset is in the `legal` category, it is sent to the `Legal Review` task upon submission. Otherwise, the asset is sent to the `Default Review` task.
 
-```xml
+```groovy
 <script>
     <![CDATA[
         import com.liferay.portal.kernel.util.GetterUtil;
