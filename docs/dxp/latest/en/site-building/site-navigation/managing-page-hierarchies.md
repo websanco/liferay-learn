@@ -1,47 +1,16 @@
 # Managing Page Hierarchies
 
-Using the Page Hierarchy, you create public and private pages and organize those pages in whatever order or structure that you see fit.
+With Liferay, you can organize Pages into hierarchies to achieve the desired structure for your Site. This can be done by directly [adding child Pages](../creating-pages/adding-pages/adding-a-page-to-a-site.md#adding-a-child-page) to an existing Page or by reorganizing existing Pages into parent/child relationships.
 
-## Creating a Page
+To view a Site's Page hierarchy, open the *Site Menu* (![Site Menu](../../images/icon-product-menu.png)), expand *Site Builder*, and click *Pages*.
 
-Click _Site Builder_ &rarr; _Pages_ to create a new page. You can create public pages which anyone can view or private pages, which can only be viewed by Site members. See [Adding a Page to a Site](../creating-pages/adding-pages/adding-a-page-to-a-site.md) to learn how to add a page.
+![Open the Pages application to view and manage your Pages hierarchy.](./managing-page-hierarchies/images/01.png)
 
-Once the page is created, it appears in the hierarchy, and you can move or organize its position there.
+The Page listed first is the first Page users see when visiting your Site.
 
-## Organizing Pages
+You can drag and drop Pages to reorganize them in the hierarchy. Pages can be nested up to four levels.
 
-You can reorder pages in the hierarchy (and subsequently the default navigation that users see) by dragging and dropping them into position. The page at the top of the list is the first page that users see automatically when visiting your Site. You can treat this as the Site's landing page.
-
-### Reordering Pages
-
-1. Click the _Product Menu_ (![Product Menu](../../images/icon-product-menu.png)).
-1. Click _Site Builder_ &rarr; _Pages_.
-
-    ![The Site Builder is where you can manage your pages.](./managing-page-hierarchies/images/01.png)
-
-1. Drag and drop _Page 2_ above _Page 3_.
-1. Click _Home_ to see the changes.
-
-    ![Page 2 is now before Page 3.](./managing-page-hierarchies/images/02.png)
-
-The page order has been changed.
-
-### Nesting Pages
-
-You can nest pages up to four levels:
-
-1. Click the _Product Menu_ (![Product Menu](../../images/icon-product-menu.png)).
-1. Click _Site Builder_ &rarr; _Pages_.
-1. Drag and drop _Page 3_ inside _Page 2_ to nest it.
-1. Drag _Page 2_ inside _Page 1_.
-
-    ![Page 3 has been nested into page 2 which is nested in Page 1.](./managing-page-hierarchies/images/03.png)
-
-1. Click _Home_ to view the nested pages.
-
-### Public and Private Pages
-
-As noted above, private pages work just like public pages, except they can be viewed only by registered members of a Site. In the default configuration, public pages are at the URL `[web-address]/`**web**`/[site-name]` while private pages are at `[web-address]/`**group**`/[site-name]`. Other than the membership distinctions, public and private pages share the same behavior.
+![Drag and drop pages to create the desired hierarchy.](./managing-page-hierarchies/images/02.png)
 
 ## Configuring Page Options
 
