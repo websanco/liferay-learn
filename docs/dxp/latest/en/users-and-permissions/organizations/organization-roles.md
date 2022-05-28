@@ -17,7 +17,7 @@ Liferay DXP provides the following default Organization Roles:
 This role grants basic privileges within an Organization and is automatically assigned to all its members. If the Organization has an attached Site, this role also grants the User basic Site membership.
 
 ```{note}
-Members of child Organizations are implicit members of their parent Organizations. This means, for example, that members of child Organizations can access the private pages of their parent Organizations. This behavior can be customized in the `Organizations` [section of the portal-ext.properties](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#Organizations) file where the properties specific to Organizations are listed.
+Members of child Organizations are implicit members of their parent Organizations. This means, for example, that members of child Organizations can access the pages of their parent Organizations. This behavior can be customized in the `Organizations` [section of the portal-ext.properties](https://learn.liferay.com/reference/latest/en/dxp/propertiesdoc/portal.properties.html#Organizations) file where the properties specific to Organizations are listed.
 ```
 
 ### Organization Administrator
