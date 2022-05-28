@@ -31,7 +31,7 @@ Organization administrators can't access the Control Panel by default. Instead, 
 
 ## Organization Sites
 
-An Organization can have its own Site. Organization Sites are owned by Organization Administrators, who have permissions similar to the Site Administrators: they can manage the Site's pages, widgets, content, and Users. Members of an Organization with an attached Site are members of the Organization's Site. This means that they can access the private pages of the Organization's Site, along with any portlets or content there.
+An Organization can have its own Site. Organization Sites are owned by Organization Administrators, who have permissions similar to the Site Administrators: they can manage the Site's pages, widgets, content, and Users. Members of an Organization with an attached Site are members of the Organization's Site. This means that they can access pages in the Organization's Site, along with any portlets or content there.
 
 ## Next Steps
 
