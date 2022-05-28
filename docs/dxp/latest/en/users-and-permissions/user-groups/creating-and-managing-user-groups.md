@@ -9,7 +9,7 @@ A User Group is a list of Users created for a specific purpose. User Groups can 
 | Use Case                     | Description                                    |
 | :--- | :--- |
 | Manage Site membership       | Grant Site membership to all Users in a User Group. Using the previous example, the Teachers User Group could be added as a member of the Sites *University Employees* and *Students and Teachers Collaboration*. All users in that User Group would become members of those Sites. |
-| Manage Users' personal pages | Provide predefined public or private pages to those in the User Group. For example, the Teachers User Group could be created to ensure the home page on all teachers' personal Sites has the same layout and applications. |
+| Manage Users' personal pages | Provide predefined pages to those in the User Group. For example, the Teachers User Group could be created to ensure the home page on all teachers' personal Sites has the same layout and applications. |
 | Collect permissions          |Assign Roles and permissions to a group of Users that don't share an organization. For example, in a university's portal, a User Group could be created to group all teachers independently of their departments (organizations). This would make it easier to assign one or several Roles at once to all the teachers. |
 
 ## Creating a User Group
@@ -91,6 +91,6 @@ Other management options are available in each User Group's Actions menu (![Acti
 
 **Delete:** Remove the User Group. Note that you can't delete a User Group that contains Users. You must first remove the Users from the group.
 
-If your User Group has public and private Site pages, the options *Go to Profile Pages* and *Go to Dashboard Pages* also appear in your User Group's Actions menu. Clicking one of these links opens that Site in a new browser window. See [User Group Sites](./user-group-sites.md) for details.
+If your User Group has pages, the options *Go to Profile Pages* and *Go to Dashboard Pages* also appear in your User Group's Actions menu. Clicking one of these links opens that Site in a new browser window. See [User Group Sites](./user-group-sites.md) for details.
 
 ![The Actions menu for a User Group provides all the functions necessary for managing it.](./creating-and-managing-user-groups/images/06.png)
