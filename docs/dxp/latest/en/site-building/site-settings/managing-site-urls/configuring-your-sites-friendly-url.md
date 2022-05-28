@@ -1,26 +1,30 @@
 # Configuring Your Site's Friendly URL
 
-Friendly URLs are used for both Public and Private Pages. The public Site base URL is `https://localhost:8080/web`, and the private one is `https://localhost:8080/group`. This helps Users quickly access their Site without having to recall an extended URL. Each friendly URL must be unique. The URL path is appended to the `https://localhost:8080/` URL (i.e. `https://localhost:8080/web/my-site/`).
+Friendly URLs are readable URLs that can helps Users quickly access your Site. Each URL must be unique and is appended to `https://localhost:8080/web` (e.g., `https://localhost:8080/web/helloworld/`).
+
+```{note}
+When Private Pages are enabled, you can set friendly URLs for them as well. Once set, they are appended to `https://localhost:8080/group`.
+```
 
 ## Setting a Site's Friendly URL
 
-To update your site's friendly URL, follow these steps:
+Follow these steps to set your Site's friendly URL:
 
-1. From the Site Menu on the left side of the screen, navigate to *Configuration* &rarr; *Settings*.
+1. Open the *Site Menu* (![Site Menu](../../../images/icon-product-menu.png)), expand *Configuration*, and go to *Site Settings* &rarr; *Site Configuration* &rarr; *Site URL*.
 
-1. Scroll down and expand the *Site URL* panel.
+1. Enter a *Friendly URL*.
 
-1. Enter a new URL in the *Friendly URL* input and click *Save* to apply the changes.
+1. Click *Save*.
 
 ![You can configure a friendly URL for your Site.](./configuring-your-sites-friendly-url/images/01.png)
 
-If you add a friendly URL for your Site's Home Page, follow the additional steps in the next section.
+If you want to add a friendly URL for your Site's Home Page, follow the additional steps in the next section.
 
-## Updating Your Instance's Home URL
+## Setting Your Instance's Home URL
 
 If you add a friendly URL for your instance's Home Page, you should update your instance's Home URL field so that page requests to `http://localhost:8080` redirect properly: <!-- What is a Home URL? Do I HAVE to do this? What does it impact? -->
 
-1. Open the [Global Menu](../../../getting-started/navigating-dxp.md) ( ![Global Menu icon](../../../images/icon-applications-menu.png) ) and go to *Control Panel* &rarr; *Instance Settings*.
+1. Open the [Global Menu](../../../getting-started/navigating-dxp.md) ( ![Global Menu icon](../../../images/icon-applications-menu.png) ), click the *Control Panel* tab, and go to *Instance Settings*.
 
 1. Select *Instance Configuration* under the *Platform* heading and click the *General* link.
 
