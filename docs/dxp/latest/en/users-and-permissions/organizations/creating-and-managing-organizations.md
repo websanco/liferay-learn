@@ -34,7 +34,7 @@ Organization Administrators can't make these Role assignments and can't manage t
 
 **Edit:** Specify details about the Organization, including addresses, phone numbers, and email addresses. You can also create a Site for the Organization.
 
-**Manage Site:** Create and manage the public and private pages of the Organization's Site. This only appears after a Site has been created for the Organization.
+**Manage Site:** Create and manage Pages in the Organization's Site. This only appears after a Site has been created for the Organization.
 
 **Assign Organization Roles:** Assign Organization-scoped Roles to Users. By default, Organizations are created with three Roles: Organization Administrator, Organization User and Organization Owner. You can assign one or more of these Roles to Users in the Organization. All members of the Organization automatically get the Organization User Role so this Role is hidden when you click Assign Organization Roles.
 
