@@ -16,7 +16,7 @@ All roles available in a Liferay DXP installation can be viewed in the Roles adm
 
 ## Site Roles
 
-**Site Member:** The Site Member Role grants basic privileges within a Site, such as permission to visit the Site's private pages.
+**Site Member:** The Site Member Role grants basic privileges within a Site, such as permission to visit the Site's Pages.
 
 **Site Administrator:** The Site Administrator Role grants permission to manage *almost* all aspects of a Site including Site content, Site memberships, and Site settings. Site Administrators cannot delete the membership of or remove Roles from other Site Administrators or Site Owners. They also *cannot* assign other Users as Site Administrators or Site Owners.
 
@@ -53,7 +53,7 @@ In contrast, owners can do those things.
 <!-- commented out section as per LRDOCS-8188
 ## Account Roles
 
-**Account Member:** The Account Member Role grants basic privileges within a Account, such as permission to visit the Account's private pages.
+**Account Member:** The Account Member Role grants basic privileges within a Account, such as permission to visit the Account's pages.
 
 **Account Administrator:** Account Administrators are super users of their account. They have permissions to manage *almost* all aspects of a Account including Account content, Account memberships, and Account settings. Account Administrators cannot delete the membership of or remove Roles from other Account Administrators or Account Owners. They also *cannot* assign other Users as Account Administrators or Account Owners.
 -->
