@@ -16,16 +16,19 @@ package com.liferay.learn.dxp.importer;
 
 import com.liferay.headless.delivery.client.dto.v1_0.ContentField;
 import com.liferay.headless.delivery.client.dto.v1_0.ContentFieldValue;
+import com.liferay.headless.delivery.client.dto.v1_0.Document;
+import com.liferay.headless.delivery.client.dto.v1_0.DocumentFolder;
 import com.liferay.headless.delivery.client.dto.v1_0.StructuredContent;
 import com.liferay.headless.delivery.client.dto.v1_0.StructuredContentFolder;
 import com.liferay.headless.delivery.client.pagination.Page;
+import com.liferay.headless.delivery.client.resource.v1_0.DocumentFolderResource;
 import com.liferay.headless.delivery.client.resource.v1_0.DocumentResource;
 import com.liferay.headless.delivery.client.resource.v1_0.StructuredContentFolderResource;
 import com.liferay.headless.delivery.client.resource.v1_0.StructuredContentResource;
-import com.liferay.learn.dxp.importer.flexmark.ImageVisitor;
 import com.liferay.petra.string.StringPool;
 import com.liferay.portal.kernel.util.HashMapBuilder;
 
+import com.vladsch.flexmark.ast.Image;
 import com.vladsch.flexmark.ext.anchorlink.AnchorLinkExtension;
 import com.vladsch.flexmark.ext.aside.AsideExtension;
 import com.vladsch.flexmark.ext.attributes.AttributesExtension;
@@ -41,8 +44,12 @@ import com.vladsch.flexmark.ext.yaml.front.matter.AbstractYamlFrontMatterVisitor
 import com.vladsch.flexmark.ext.yaml.front.matter.YamlFrontMatterExtension;
 import com.vladsch.flexmark.html.HtmlRenderer;
 import com.vladsch.flexmark.parser.Parser;
-import com.vladsch.flexmark.util.ast.Document;
+import com.vladsch.flexmark.util.ast.NodeVisitor;
+import com.vladsch.flexmark.util.ast.VisitHandler;
+import com.vladsch.flexmark.util.ast.Visitor;
 import com.vladsch.flexmark.util.data.MutableDataSet;
+import com.vladsch.flexmark.util.sequence.BasedSequence;
+import com.vladsch.flexmark.util.sequence.CharSubSequence;
 
 import java.io.File;
 
@@ -56,6 +63,7 @@ import java.util.TreeSet;
 import java.util.regex.Matcher;
 
 import org.apache.commons.io.FileUtils;
+import org.apache.commons.io.FilenameUtils;
 
 /**
  * @author Brian Wing Shun Chan
@@ -101,6 +109,67 @@ public class Main {
 		}
 
 		_fileNames.add(fileName);
+	}
+
+	private Long _getDocumentFolderId(
+			String dirName, Long parentDocumentFolderId)
+		throws Exception {
+
+		String key = parentDocumentFolderId + "#" + dirName;
+
+		Long documentFolderId = _documentFolderIds.get(key);
+
+		if (documentFolderId != null) {
+			return documentFolderId;
+		}
+
+		DocumentFolder documentFolder = null;
+
+		if (parentDocumentFolderId == 0) {
+			Page<DocumentFolder> page =
+				_documentFolderResource.getSiteDocumentFoldersPage(
+					_GROUP_ID, null, null, null, "name eq '" + dirName + "'",
+					null, null);
+
+			documentFolder = page.fetchFirstItem();
+
+			if (documentFolder == null) {
+				documentFolder = _documentFolderResource.postSiteDocumentFolder(
+					_GROUP_ID,
+					new DocumentFolder() {
+						{
+							description = "";
+							name = dirName;
+						}
+					});
+			}
+		}
+		else {
+			Page<DocumentFolder> page =
+				_documentFolderResource.getDocumentFolderDocumentFoldersPage(
+					parentDocumentFolderId, null, null, null,
+					"name eq '" + dirName + "'", null, null);
+
+			documentFolder = page.fetchFirstItem();
+
+			if (documentFolder == null) {
+				documentFolder =
+					_documentFolderResource.postDocumentFolderDocumentFolder(
+						parentDocumentFolderId,
+						new DocumentFolder() {
+							{
+								description = "";
+								name = dirName;
+							}
+						});
+			}
+		}
+
+		documentFolderId = documentFolder.getId();
+
+		_documentFolderIds.put(key, documentFolderId);
+
+		return documentFolderId;
 	}
 
 	private Long _getStructuredContentFolderId(String fileName)
@@ -243,6 +312,13 @@ public class Main {
 	}
 
 	private void _initResourceBuilders(String login, String password) {
+		DocumentFolderResource.Builder documentFolderResourceBuilder =
+			DocumentFolderResource.builder();
+
+		_documentFolderResource = documentFolderResourceBuilder.authentication(
+			login, password
+		).build();
+
 		DocumentResource.Builder documentResourceBuilder =
 			DocumentResource.builder();
 
@@ -268,8 +344,12 @@ public class Main {
 			).build();
 	}
 
+	private BasedSequence _toBasedSequence(String string) {
+		return CharSubSequence.of(string.toCharArray(), 0, string.length());
+	}
+
 	private String _toHTML(File file, String text) {
-		Document document = _parser.parse(text);
+		com.vladsch.flexmark.util.ast.Document document = _parser.parse(text);
 
 		AbstractYamlFrontMatterVisitor abstractYamlFrontMatterVisitor =
 			new AbstractYamlFrontMatterVisitor();
@@ -279,11 +359,31 @@ public class Main {
 		/*Map<String, List<String>> data =
 			abstractYamlFrontMatterVisitor.getData();*/
 
-		ImageVisitor imageVisitor = new ImageVisitor();
+		_markdownFile = file;
 
-		imageVisitor.visit(document, file, _documentResource, _GROUP_ID);
+		try {
+			_nodeVisitor.visit(document);
+		}
+		finally {
+			_markdownFile = null;
+		}
 
 		return _renderer.render(document);
+	}
+
+	private String _toString(BasedSequence basedSequence) {
+
+		// TODO Perhaps BasedSequence#toString already does this
+
+		char[] array = new char[basedSequence.length()];
+
+		for (int i = 0; i < basedSequence.length(); i++) {
+			char c = basedSequence.charAt(i);
+
+			array[i] = c;
+		}
+
+		return new String(array);
 	}
 
 	private StructuredContent _toStructuredContent(String fileName)
@@ -301,6 +401,7 @@ public class Main {
 				data = _toHTML(englishFile, englishText);
 			}
 		};
+
 		String englishTitle = _getTitle(englishText);
 
 		File japaneseFile = new File(fileName.replace("/en/", "/ja/"));
@@ -355,12 +456,62 @@ public class Main {
 		return structuredContent;
 	}
 
+	private void _visit(Image image) {
+		try {
+			String fileName =
+				FilenameUtils.getPath(_markdownFile.getPath()) +
+					_toString(image.getUrl());
+
+			File file = new File(fileName);
+
+			Document document = _documentResource.postDocumentFolderDocument(
+				_getDocumentFolderId(
+					FilenameUtils.getPath(
+						fileName.substring(
+							fileName.indexOf("/"), fileName.length())),
+					0L),
+				new Document() {
+					{
+						title = fileName;
+					}
+				},
+				new HashMap<>() {
+					{
+						put("file", file);
+					}
+				});
+
+			image.setUrl(_toBasedSequence(document.getContentUrl()));
+		}
+		catch (Exception exception) {
+			throw new RuntimeException(exception);
+		}
+
+		_nodeVisitor.visitChildren(image);
+	}
+
 	private static final long _CONTENT_STRUCTURE_ID = 40384;
 
 	private static final long _GROUP_ID = 20122;
 
+	private Map<String, Long> _documentFolderIds = new HashMap<>();
+	private DocumentFolderResource _documentFolderResource;
 	private DocumentResource _documentResource;
 	private Set<String> _fileNames = new TreeSet<>();
+	private File _markdownFile;
+
+	private NodeVisitor _nodeVisitor = new NodeVisitor(
+		new VisitHandler<Image>(
+			Image.class,
+			new Visitor<Image>() {
+
+				@Override
+				public void visit(Image image) {
+					_visit(image);
+				}
+
+			}));
+
 	private Parser _parser;
 	private HtmlRenderer _renderer;
 	private Map<String, Long> _structuredContentFolderIds = new HashMap<>();
