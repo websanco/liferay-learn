@@ -8,7 +8,7 @@ The most common way to add a new category is by directly using the the _Message 
 
 1. On the Message Boards widget, click the _Add Category_ button.
 
-    ![Using the app to create a category](./creating-message-boards-categories/images/01.png)
+    ![Add a Message Board category.](./creating-message-boards-categories/images/01.png)
 
 1. Enter a name for the category (for example, **Staff Introductions**).
 1. Enter a description.
@@ -17,14 +17,14 @@ The most common way to add a new category is by directly using the the _Message 
     * **Default:** Classic display style for general purpose discussions.
     * **Question:** Threads appear in a question and answer style.
 
-    ![Select a Display Style](./creating-message-boards-categories/images/04.png)
+    ![Select a display style.](./creating-message-boards-categories/images/04.png)
 
 1. In the _Mailing List_ section, leave the _Active_ toggle to _NO_ to disable a mailing list for the category. If switched to _YES_, fill in the mail server settings. For more information, see the [Setting up Mail](../../../installation-and-upgrades/setting-up-liferay/configuring-mail.md) article.
 1. Leave the _Allow Anonymous Emails_ toggle to _NO_ to prevent anonymous users from posting to the category. Otherwise, if you do want to let anonymous users send emails to post to the message board category, switch the _Allow Anonymous Emails_ toggle to _YES_.
 
-    ![Figure 1: You have several options to create a message board category for your needs.](./creating-message-boards-categories/images/02.png)
+    ![Configure the message board category.](./creating-message-boards-categories/images/02.png)
 
-1. Leave the _Viewable by_ to **Anyone (Guest Role)** for now. This allows non-authenticated users (Guests) to view the Category if the site page is a public page. For more information about the different permissions available, see the [Message Boards Permissions Reference](./message-boards-permissions-reference.md)
+1. Leave the _Viewable by_ to **Anyone (Guest Role)** for now. For more information about the different permissions available, see the [Message Boards Permissions Reference](./message-boards-permissions-reference.md)
 1. Click _Save_.
 
 The new category now appears in the table.
@@ -33,15 +33,17 @@ New categories appear on the message board's home screen. The list displays the 
 
 ## Modifying Permissions
 
-For more information about the different permissions, see the [Message Boards Permissions Reference](./message-boards-permissions-reference.md#general-category-permissions)
-
-To modify a category's permissions:
+Follow these steps to configure permissions for a Message Board category:
 
 1. Click _Actions_ icon (![Actions](../../../images/icon-actions.png)) next to the _Category_.
-1. Click _Permissions_.
-1. The default permissions for this _Category_ are displayed. Check the boxes for the other roles to grant a permission.
 
-    ![Permissions](./creating-message-boards-categories/images/06.png)
+1. Click _Permissions_.
+
+1. Check the boxes to grant permissions to the desired roles.
+
+    For more information about each permission, see [Message Boards Permissions Reference](./message-boards-permissions-reference.md#general-category-permissions).
+
+    ![Modify permissions for a Message Board category.](./creating-message-boards-categories/images/06.png)
 
 1. Click _Save_ when finished.
 
@@ -73,7 +75,7 @@ Follow these steps to move a category or merge it with another:
 1. If you want to merge the category with the selected parent category, select _Merge with Parent Category_.
 1. Click _Move_.
 
-    ![Figure 3: The Move Category form lets you move and merge categories.](./creating-message-boards-categories/images/03.png)
+    ![Move and merge categories.](./creating-message-boards-categories/images/03.png)
 
 Regardless of how many categories (and subcategories) there are, a category is just a container to organize a message board's threads. To start creating threads, see the [Creating Threads](./creating-message-boards-threads.md) article.
 
