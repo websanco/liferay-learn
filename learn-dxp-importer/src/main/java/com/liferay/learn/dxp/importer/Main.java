@@ -69,13 +69,12 @@ public class Main {
 				login, password
 			).build();
 
-		DocumentResource.Builder documentResourceBuilder = 
+		DocumentResource.Builder documentResourceBuilder =
 			DocumentResource.builder();
 
 		_documentResource = documentResourceBuilder.authentication(
-				login, password
-			).build();
-
+			login, password
+		).build();
 	}
 
 	public void uploadToLiferay() throws Exception {
@@ -209,12 +208,10 @@ public class Main {
 	}
 
 	private String _toHTML(String text, File markdownFile) {
-
 		DxpConverter converter = DxpConverter.getInstance();
 
-		return converter.convert(text, markdownFile, _documentResource, 
-			_GROUP_ID);
-
+		return converter.convert(
+			text, markdownFile, _documentResource, _GROUP_ID);
 	}
 
 	private StructuredContent _toStructuredContent(String fileName)
@@ -251,7 +248,8 @@ public class Main {
 								"ja-JP",
 								new ContentFieldValue() {
 									{
-										data = _toHTML(japaneseText, japaneseFile);
+										data = _toHTML(
+											japaneseText, japaneseFile);
 									}
 								}
 							).build();
@@ -289,10 +287,10 @@ public class Main {
 
 	private static final long _GROUP_ID = 20122;
 
+	private DocumentResource _documentResource;
 	private Set<String> _fileNames = new TreeSet<>();
 	private Map<String, Long> _structuredContentFolderIds = new HashMap<>();
 	private StructuredContentFolderResource _structuredContentFolderResource;
 	private StructuredContentResource _structuredContentResource;
-	private DocumentResource _documentResource;
 
 }

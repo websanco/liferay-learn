@@ -11,10 +11,12 @@
  * FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more
  * details.
  */
+
 package com.liferay.learn.dxp.importer;
 
 import com.liferay.headless.delivery.client.resource.v1_0.DocumentResource;
 import com.liferay.learn.dxp.importer.flexmark.ImageVisitor;
+
 import com.vladsch.flexmark.ext.anchorlink.AnchorLinkExtension;
 import com.vladsch.flexmark.ext.aside.AsideExtension;
 import com.vladsch.flexmark.ext.attributes.AttributesExtension;
@@ -32,7 +34,9 @@ import com.vladsch.flexmark.html.HtmlRenderer;
 import com.vladsch.flexmark.parser.Parser;
 import com.vladsch.flexmark.util.ast.Document;
 import com.vladsch.flexmark.util.data.MutableDataSet;
+
 import java.io.File;
+
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
@@ -42,8 +46,45 @@ import java.util.Map;
  * @author Rich Sezov
  */
 public class DxpConverter {
-	private DxpConverter () {
 
+	public static DxpConverter getInstance() {
+		if (_converter == null) {
+			_converter = new DxpConverter();
+		}
+
+		return _converter;
+	}
+
+	public String convert(
+		String markdown, File markdownFile, DocumentResource documentResource,
+		long groupId) {
+
+		parse(markdown);
+
+		ImageVisitor imageVisitor = new ImageVisitor();
+
+		imageVisitor.visit(_document, markdownFile, documentResource, groupId);
+
+		String html = _renderer.render(_document);
+
+		return html;
+	}
+
+	public void parse(String markdown) {
+		_document = _parser.parse(markdown);
+		AbstractYamlFrontMatterVisitor yamlVisitor =
+			new AbstractYamlFrontMatterVisitor();
+
+		yamlVisitor.visit(_document);
+		Map<String, List<String>> data = yamlVisitor.getData();
+
+		// Below we'll get YAML front matter data in later iterations.
+		// For example,
+		// _tags = data.get("liferay-tags").get(0);
+
+	}
+
+	private DxpConverter() {
 		MutableDataSet mutableDataSet = new MutableDataSet().set(
 			AsideExtension.ALLOW_LEADING_SPACE, true
 		).set(
@@ -79,43 +120,10 @@ public class DxpConverter {
 		).build();
 	}
 
-	public String convert(String markdown, File markdownFile, 
-		DocumentResource documentResource, long groupId) {
-		parse (markdown);
-
-		ImageVisitor imageVisitor = new ImageVisitor();
-
-		imageVisitor.visit(_document, markdownFile, 
-			documentResource, groupId);
-
-		String html = _renderer.render(_document);
-
-		return html;
-
-	}
-	public static DxpConverter getInstance() {
-		if (_converter == null) {
-			_converter = new DxpConverter();
-		}
-
-		return _converter;
-	}
-	
-	public void parse (String markdown) {
-		
-		_document = _parser.parse(markdown);
-		AbstractYamlFrontMatterVisitor yamlVisitor = new AbstractYamlFrontMatterVisitor();
-		yamlVisitor.visit(_document);
-		Map<String, List<String>> data = yamlVisitor.getData();
-
-		// Below we'll get YAML front matter data in later iterations.
-		// For example, 
-		// _tags = data.get("liferay-tags").get(0);
-	}
-	
-	private Document _document;
 	private static DxpConverter _converter = null;
-	private final HtmlRenderer _renderer;
+
+	private Document _document;
 	private final Parser _parser;
+	private final HtmlRenderer _renderer;
 
 }

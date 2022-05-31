@@ -11,6 +11,7 @@
  * FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more
  * details.
  */
+
 package com.liferay.learn.dxp.importer.util;
 
 import com.vladsch.flexmark.util.sequence.BasedSequence;
@@ -25,21 +26,19 @@ public class ImporterUtil {
 	public static String BStoString(BasedSequence sequence) {
 		String string = "";
 
-		for (int i=0; i < sequence.length(); i++) {
+		for (int i = 0; i < sequence.length(); i++) {
 			char c = sequence.charAt(i);
 			string = string + c;
 		}
-		
-		return string;
 
+		return string;
 	}
-	
-	public static BasedSequence StringtoBS (String string) {
-		
-		BasedSequence bs = CharSubSequence.of(string.toCharArray(), 0, string.length());
+
+	public static BasedSequence StringtoBS(String string) {
+		BasedSequence bs = CharSubSequence.of(
+			string.toCharArray(), 0, string.length());
 
 		return bs;
-		
 	}
-	
+
 }
