@@ -38,7 +38,7 @@ The discount is now active. Configure the discount's rules and eligibility.
 
 If using a coupon code,
 
-1. Wwitch the _Use Coupon Code_ toggle to _Yes_.
+1. Switch the _Use Coupon Code_ toggle to _Yes_.
 1. Enter the following:
 
     * **Coupon Code**: spring-sale
@@ -101,6 +101,26 @@ You can make this discount available on all channels or specific ones. To specif
 1. Click _Publish_ when finished.
 
 Your store now has an active discount with 20% off selected goods for those in the specified Account Group.
+
+## Understanding Discount Specificity
+
+If an order is eligible for multiple discounts, the discount's rules and eligibility determine whether it qualifies or not. See the table below to understand discount specificity for the given eligibility.
+
+| **Account** | **Account Group** | **Channel** | **Order Type** | **Rank** |
+| :--- | :--- | :--- | :--- | :--- |
+| &#10004; | | &#10004; | &#10004; | 1 |
+| &#10004; | | | &#10004; | 2 |
+| &#10004; | | &#10004; | | 3 |
+| &#10004; | | | | 4 |
+|  | &#10004; | &#10004; | &#10004; | 5 |
+|  | &#10004; | | &#10004; | 6 |
+|  | &#10004; | &#10004; | | 7 |
+|  | &#10004; | | | 8 |
+|  | | &#10004; | &#10004; | 9 |
+|  | | | &#10004; | 10 |
+|  | | &#10004; | | 11 |
+
+For instance, consider Account Group A has a discount of 50% applied to shipping. There's another discount of 60% applied to shipping that is eligible to all accounts, account groups, channels and order types. In this case, Account Group A is only eligible for the discount of 50% since it is the most specific.
 
 ## Commerce 2.1 and Below
 
