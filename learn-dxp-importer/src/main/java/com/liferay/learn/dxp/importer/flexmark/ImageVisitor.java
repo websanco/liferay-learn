@@ -19,7 +19,6 @@ import com.liferay.headless.delivery.client.dto.v1_0.DocumentFolder;
 import com.liferay.headless.delivery.client.pagination.Page;
 import com.liferay.headless.delivery.client.resource.v1_0.DocumentFolderResource;
 import com.liferay.headless.delivery.client.resource.v1_0.DocumentResource;
-import com.liferay.learn.dxp.importer.util.ImporterUtil;
 
 import com.vladsch.flexmark.ast.Image;
 import com.vladsch.flexmark.util.ast.Node;
@@ -27,6 +26,7 @@ import com.vladsch.flexmark.util.ast.NodeVisitor;
 import com.vladsch.flexmark.util.ast.VisitHandler;
 import com.vladsch.flexmark.util.ast.Visitor;
 import com.vladsch.flexmark.util.sequence.BasedSequence;
+import com.vladsch.flexmark.util.sequence.CharSubSequence;
 
 import java.io.File;
 
@@ -42,11 +42,22 @@ import org.apache.commons.io.FilenameUtils;
  */
 public class ImageVisitor {
 
+	public String _toString(BasedSequence sequence) {
+		String string = "";
+
+		for (int i = 0; i < sequence.length(); i++) {
+			char c = sequence.charAt(i);
+			string = string + c;
+		}
+
+		return string;
+	}
+
 	public void visit(Image image) {
 		try {
 			String markdownPath = FilenameUtils.getPath(
 				_markdownFile.getPath());
-			String url = ImporterUtil.BStoString(image.getUrl());
+			String url = _toString(image.getUrl());
 
 			String fileName = markdownPath + url;
 
@@ -67,7 +78,7 @@ public class ImageVisitor {
 
 			String imageSrc = document.getContentUrl();
 
-			BasedSequence newUrl = ImporterUtil.StringtoBS(imageSrc);
+			BasedSequence newUrl = _toBasedSequence(imageSrc);
 
 			image.setUrl(newUrl);
 		}
@@ -84,6 +95,18 @@ public class ImageVisitor {
 		_visitor.visit(node);
 	}
 
+	NodeVisitor _visitor = new NodeVisitor(
+		new VisitHandler<Image>(
+			Image.class,
+			new Visitor<Image>() {
+
+				@Override
+				public void visit(Image image) {
+					ImageVisitor.this.visit(image);
+				}
+
+			}));
+
 	public void visit(
 		Node node, File markdownFile, DocumentResource documentResource,
 		long groupId) {
@@ -96,18 +119,6 @@ public class ImageVisitor {
 
 		visit(node);
 	}
-
-	NodeVisitor _visitor = new NodeVisitor(
-		new VisitHandler<Image>(
-			Image.class,
-			new Visitor<Image>() {
-
-				@Override
-				public void visit(Image image) {
-					ImageVisitor.this.visit(image);
-				}
-
-			}));
 
 	private Long _getDocumentFolderId(
 			String dirName, Long parentDocumentFolderId)
@@ -168,6 +179,13 @@ public class ImageVisitor {
 		_documentFolderIds.put(key, documentFolderId);
 
 		return documentFolderId;
+	}
+
+	private BasedSequence _toBasedSequence(String string) {
+		BasedSequence bs = CharSubSequence.of(
+			string.toCharArray(), 0, string.length());
+
+		return bs;
 	}
 
 	private long _GROUP_ID;
