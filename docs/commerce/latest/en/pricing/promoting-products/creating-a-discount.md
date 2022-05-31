@@ -104,9 +104,9 @@ Your store now has an active discount with 20% off selected goods for those in t
 
 ## Understanding Discount Specificity
 
-If an order is eligible for multiple discounts, the discount's rules and eligibility determine whether it qualifies or not. See the table below to understand discount specificity for the given eligibility.
+Discount rules and eligibility determine whether an order qualifies for one or many discounts. See the table below to understand discount specificity for the given eligibility.
 
-| **Account** | **Account Group** | **Channel** | **Order Type** | **Rank** |
+| **Specific Accounts** | **Specific Account Groups** | **Specific Channels** | **Specific Order Types** | **Rank** |
 | :--- | :--- | :--- | :--- | :--- |
 | &#10004; | | &#10004; | &#10004; | 1 |
 | &#10004; | | | &#10004; | 2 |
@@ -120,7 +120,7 @@ If an order is eligible for multiple discounts, the discount's rules and eligibi
 |  | | | &#10004; | 10 |
 |  | | &#10004; | | 11 |
 
-For instance, consider Account Group A has a discount of 50% applied to shipping. There's another discount of 60% applied to shipping that is eligible to all accounts, account groups, channels and order types. In this case, Account Group A is only eligible for the discount of 50% since it is the most specific.
+A discount that applies to all accounts, account groups, channels and order types is the least specific. For instance, consider Account Group A has a discount of 50% on shipping and another discount of 60% on shipping that is eligible to all accounts, account groups, channels and order types. Here, Account Group A is only eligible for the discount of 50% since it is the most specific. If there are multiple discounts of the same rank and an active OR discount rule, the highest discount has precedence.
 
 ## Commerce 2.1 and Below
 
