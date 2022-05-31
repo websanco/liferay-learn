@@ -1,7 +1,6 @@
 package com.acme.x9k1.internal.commerce.order.rule.entry.type;
 
-import com.acme.x9k1.internal.commerce.order.rule.web.display.context.X9K1MinimumQuantityDisplayContext;
-
+import com.acme.x9k1.internal.commerce.order.rule.entry.type.util.X9K1MinimumQuantityUtil;
 import com.liferay.commerce.model.CommerceOrder;
 import com.liferay.commerce.model.CommerceOrderItem;
 import com.liferay.commerce.order.rule.entry.type.COREntryType;
@@ -77,10 +76,10 @@ public class X9K1MinimumQuantityCOREntryTypeImpl implements COREntryType {
 	}
 
 	private int _getMinimumQuantity(COREntry corEntry) {
-		X9K1MinimumQuantityDisplayContext x9k1MinimumQuantityDisplayContext =
-			new X9K1MinimumQuantityDisplayContext(corEntry);
+		X9K1MinimumQuantityUtil x9k1MinimumQuantityUtil =
+			new X9K1MinimumQuantityUtil();
 
-		return x9k1MinimumQuantityDisplayContext.getMinimumQuantity();
+		return x9k1MinimumQuantityUtil.getMinimumQuantity(corEntry);
 	}
 
 	private int _getOrderQuantity(CommerceOrder commerceOrder) {
