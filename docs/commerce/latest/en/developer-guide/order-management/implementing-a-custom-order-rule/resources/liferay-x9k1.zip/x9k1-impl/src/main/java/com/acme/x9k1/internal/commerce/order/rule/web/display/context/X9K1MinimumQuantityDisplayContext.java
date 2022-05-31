@@ -11,10 +11,7 @@ public class X9K1MinimumQuantityDisplayContext {
 	}
 
 	public int getMinimumQuantity() {
-		X9K1MinimumQuantityUtil x9k1MinimumQuantityUtil =
-			new X9K1MinimumQuantityUtil();
-
-		return x9k1MinimumQuantityUtil.getMinimumQuantity(_corEntry);
+		return X9K1MinimumQuantityUtil.getMinimumQuantity(_corEntry);
 	}
 
 	private final COREntry _corEntry;

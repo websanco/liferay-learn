@@ -7,7 +7,7 @@ import com.liferay.portal.kernel.util.UnicodePropertiesBuilder;
 
 public class X9K1MinimumQuantityUtil {
 
-	public int getMinimumQuantity(COREntry corEntry) {
+	public static int getMinimumQuantity(COREntry corEntry) {
 		UnicodeProperties typeSettingsUnicodeProperties =
 			UnicodePropertiesBuilder.fastLoad(
 				corEntry.getTypeSettings()

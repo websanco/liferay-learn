@@ -77,10 +77,7 @@ public class X9K1MinimumQuantityCOREntryTypeImpl implements COREntryType {
 	}
 
 	private int _getMinimumQuantity(COREntry corEntry) {
-		X9K1MinimumQuantityUtil x9k1MinimumQuantityUtil =
-			new X9K1MinimumQuantityUtil();
-
-		return x9k1MinimumQuantityUtil.getMinimumQuantity(corEntry);
+		return X9K1MinimumQuantityUtil.getMinimumQuantity(corEntry);
 	}
 
 	private int _getOrderQuantity(CommerceOrder commerceOrder) {
