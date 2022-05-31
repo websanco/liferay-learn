@@ -10,7 +10,7 @@ If you are new to Liferay, use the Menu Display Fragment to get started with bui
 
 {bdg-secondary}`Available 7.4+`
 
-Using Liferay Navigation Menus application, you can create a navigation menu anywhere in your Content Page. This navigation menu is based on your Site's Public or Private Pages hierarchy, or any other hierarchy you define using Liferay's [Navigation Menus Application](./using-the-navigation-menus-application.md). You can also define the menu display style options and the number of sub-levels to include in the navigation.
+Using Liferay Navigation Menus application, you can create a navigation menu anywhere in your Content Page. This navigation menu is based on your Site's Pages hierarchy, or any other hierarchy you define using Liferay's [Navigation Menus Application](./using-the-navigation-menus-application.md). You can also define the menu display style options and the number of sub-levels to include in the navigation.
 
 The Menu Display Fragment appears under the Fragments and Widget section of your Content Page. You add and configure this Fragment as with other Fragments in your Content Pages. For more information, see [Adding Elements to Content Pages](../creating-pages/using-content-pages/adding-elements-to-content-pages.md) and [Configuring Fragments](../creating-pages/page-fragments-and-widgets/using-fragments/configuring-fragments.md).
 
@@ -18,7 +18,7 @@ The Menu Display Fragment appears under the Fragments and Widget section of your
 
 You can build the hierarchy of pages and subpages in the Menu Display Fragment using two methods: 
 
-- **Site Navigation Menus** (A) uses the menus you define using the Liferay DXP Navigation Menu for [Site navigation](./managing-site-navigation.md). By default, Liferay DXP provides two Site Menus based on the Public Pages and Private Pages hierarchies in your Site.
+- **Site Navigation Menus** (A) uses the menus you define using the Liferay DXP Navigation Menu for [Site navigation](./managing-site-navigation.md). By default, Liferay DXP provides two Site Menus based on the Pages hierarchy in your Site.
 - **Contextual Menus** (B) shows a menu that is based on the Page context. For example, you can create a more advanced navigation by combining a first-level Menu Display Fragment linked to one of your Site Menus with a second-level Menu Display Fragment that only shows the child Pages. This way, when the user clicks through the different Pages in the first-level menu, the second-level menu changes dynamically to show the children Pages.
 
 ![You can define the hierarchy of the Menu Display Fragment from your Site Menus or from Contextual Menus.](./configuring-menu-displays/images/05.png)
@@ -35,7 +35,7 @@ Select the desired navigation menu type; the desired navigation menu type appear
 
 | Navigation Menu Type | Description |
 | :--- | :--- |
-| **Public Pages Hierarchy** | Public Pages Hierarchy is based on the default hierarchy in the Site Builder. |
+| **Pages Hierarchy** | Pages Hierarchy is based on the default hierarchy in the Site Builder. |
 | **Primary Navigation** | Primary Navigation is the main navigation for a page. |
 | **Secondary Navigation** | Secondary Navigation is a second level of navigation, possibly a sidebar or a separate menu within a page. |
 | **Social Navigation** | Social Navigation is for menus that contain links for sharing content on social media or similar tasks. |
