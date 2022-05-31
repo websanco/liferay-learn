@@ -50,7 +50,6 @@ import java.nio.charset.StandardCharsets;
 
 import java.util.Arrays;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.TreeSet;
@@ -272,12 +271,13 @@ public class Main {
 	private String _toHTML(File file, String text) {
 		Document document = _parser.parse(text);
 
-		AbstractYamlFrontMatterVisitor yamlVisitor =
+		AbstractYamlFrontMatterVisitor abstractYamlFrontMatterVisitor =
 			new AbstractYamlFrontMatterVisitor();
 
-		yamlVisitor.visit(document);
+		abstractYamlFrontMatterVisitor.visit(document);
 
-		Map<String, List<String>> data = yamlVisitor.getData();
+		/*Map<String, List<String>> data =
+			abstractYamlFrontMatterVisitor.getData();*/
 
 		ImageVisitor imageVisitor = new ImageVisitor();
 
