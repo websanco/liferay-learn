@@ -10,7 +10,7 @@ The framework name and implementation details are unimportant, but understanding
 
 Field types have been added and improved as part of the move to Data Engine:
 
-- The Select from List field's options are ordered alphabetically.
+- The Select from List field's options can be ordered alphabetically (use the Advanced settings of the Select from List field).
 - Configure a Numeric field as an integer or decimal field.
 - The Grid field is a new field type in Web Content and Documents and Media. See the [Forms Field Type Reference](../../../process-automation/forms/creating-and-managing-forms/forms-field-types-reference.md).
 - The HTML field was replaced by the Rich Text field, which includes a convenient tool bar.
@@ -45,6 +45,10 @@ When you begin creating a new Structure, any existing fieldset or Structure will
 
 Structures in DE are represented by JSON (it was XML in DDM). Instead of allowing source editing in the Web Content Structures UI, you can now import and export the Structure definition to work with the Structure's source JSON locally.
 
+```{warning} 
+Be careful working with the JSON Structure source as it can be more complicated than it appears at first glance. For example, when adding a field to the structure, you must update both the `dataDefinitionFields` array and the `defaultDataLayout` element. 
+```
+
 To export a Structure's JSON, 
 
 1. Go to the Site Menu &rarr; Content and Data &rarr; Web Content.
@@ -69,6 +73,14 @@ To import a new Structure,
 1. Click _Import Structure_.
 
    ![Import JSON Structure files.](./whats-new-with-web-content-structures-in-7-4/images/02.png)
+
+Users with access to the REST API Explorer can browse the Structure (known as the Data Definition in the REST API) schema conveniently. While logged in to Liferay visit
+
+<http://localhost:8080/o/api?endpoint=http://localhost:8080/o/data-engine/v2.0/openapi.json>
+
+Expand the _POST /v2.0/sites/{siteId}/data-definitions/by-content-type/{contentType}_ endpoint entry. Scroll down and click the _Schema_ link (next to the _Example Value_ link).
+
+![Browse the Data Definition schema from the REST API Explorer.](./whats-new-with-web-content-structures-in-7-4/images/10.png)
 
 ## Flexible Structure Layout
 
