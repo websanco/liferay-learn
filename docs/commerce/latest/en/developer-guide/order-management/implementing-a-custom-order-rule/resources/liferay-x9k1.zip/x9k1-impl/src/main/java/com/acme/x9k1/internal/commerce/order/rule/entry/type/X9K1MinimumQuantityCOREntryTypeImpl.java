@@ -1,6 +1,7 @@
 package com.acme.x9k1.internal.commerce.order.rule.entry.type;
 
 import com.acme.x9k1.internal.commerce.order.rule.entry.type.util.X9K1MinimumQuantityUtil;
+
 import com.liferay.commerce.model.CommerceOrder;
 import com.liferay.commerce.model.CommerceOrderItem;
 import com.liferay.commerce.order.rule.entry.type.COREntryType;
