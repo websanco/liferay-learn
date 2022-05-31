@@ -41,13 +41,13 @@ Configure the Pages for your Site to use the deployed theme:
 
 1. In the _Site Menu_ on the left side of the screen, navigate to _Site Builder_ → _Pages_.
 
-1. Click the gear icon ![Gear icon](../images/icon-control-menu-gear.png) next to _Public Pages_ to configure them:
+1. Click the *Actions* button (![Action Button](../images/icon-actions.png)) in the Application Bar and select *Configuration*.
 
-    ![Open the Pages screen to configure your Public Pages.](./changing-your-sites-appearance/images/01.png)
+    ![Open the Pages screen, click the Actions button in the Application Bar, and select Configuration.](./changing-your-sites-appearance/images/01.png)
 
 1. Scroll down and click the _Change Current Theme_ button:
 
-    ![Click Change Current Theme to select a new theme for your Public Pages.](./changing-your-sites-appearance/images/02.png)
+    ![Click Change Current Theme to select a new theme.](./changing-your-sites-appearance/images/02.png)
 
 1. Select the deployed sample theme, _Acme Sample Blue Theme._
 
