@@ -4,6 +4,10 @@
 Liferay's Solr support is deprecated. Please plan to migrate to [Elasticsearch](../elasticsearch/getting-started-with-elasticsearch.md).
 ```
 
+## Search Results Quality
+
+Elasticsearch-specific APIs and mappings are being leveraged in Liferay's search functionality. Because some of these features are not included in Solr, a lower quality of search results is expected when using Solr as Liferay's search engine.
+
 ## End-User Feature Limitations 
 
 Liferay's Solr integration has limitations. Elasticsearch is required to use the following features:
