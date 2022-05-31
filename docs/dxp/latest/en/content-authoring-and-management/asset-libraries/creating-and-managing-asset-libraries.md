@@ -6,11 +6,6 @@ You can manage Asset Libraries via the Asset Libraries link in the *Applications
 
 ![Create and manage Asset Libraries via the Asset Libraries Page in the Applications tab of the Global Menu.](./creating-and-managing-asset-libraries/images/01.png)
 
-  - [Creating an Asset Library](#creating-an-asset-library)
-  - [Configuring Asset Libraries](#configuring-asset-libraries)
-  - [Managing Asset Library Memberships](#managing-asset-library-memberships)
-  - [Deleting an Asset Library](#deleting-an-asset-library)
-
 ## Creating an Asset Library
 
 1. Open the *Global Menu* (![Global Menu](../../images/icon-applications-menu.png)), and go to *Content* &rarr; *Asset Libraries* in the Applications tab.
@@ -55,12 +50,16 @@ Here you can connect or disconnect individual Sites to an Asset Library, as well
 
 **Make Searchable/Unsearchable**: Determine whether the Library's assets appear in search queries for the selected Site. By default, all connections are searchable.
 
-**Make Web Content Structures Available**: By default, this feature is disabled. When enabled, you can create Web Content Structures and Templates in the Site based on structures and types stored in the Library. Be careful: if you disable this feature later, content using these structures in Sites is no longer available.
+**Make Web Content Structures Available**: By default, this feature is disabled. When enabled, you can use the Library's Web Content structures and templates in connected Sites.
+
+   ```{important}
+   If you later disable this feature, Web Content using the Library's structures and templates in a Site is no longer available.
+   ```
 
 **Disconnect**: Disconnect the selected Site from the Library. When disconnected, the Library's assets are no longer accessible from the Site.
 
    ```{important}
-   You cannot disconnect a Library from a Site while its web content structures are made available. This is to avoid problems in Public Pages using them for their contents.
+   You cannot disconnect a Library from a Site while *Make Web Content Structures Available* is enabled. This is to avoid breaking Site content that uses the Library's structures and templates.
    ```
 
 ### Languages
