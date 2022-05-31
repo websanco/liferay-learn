@@ -14,13 +14,13 @@ If you disabled search indexing for upgrading to 7.2, re-enable search indexing 
 rm osgi/configs/com.liferay.portal.search.configuration.IndexStatusManagerConfiguration.config
 ```
 
-Reindexing search indexes is required for most upgrades, but is typically not required for applying a service pack or upgrading to a new GA (rolling release) within the same Liferay version. Here's how to reindex:
+Re-indexing search indexes is required for major version upgrades. When moving to a new update, applying a service pack, or upgrading to a new GA (rolling release) within the same Liferay version, consult the release highlights for the version to determine if a re-index is required. Here's how to re-index:
 
 1. Click on the *Global Menu* (![Global Menu icon](./post-upgrade-considerations/images/01.png)) and select the *Control Panel* tab. The Control Panel appears.
 
-1. Click on *Search* in the Configuration section, select the *Index Actions* tab, and click *Execute* for *Reindex all search indexes.* The reindex executes and displays a success message when done.
+1. Click on *Search* in the Configuration section, select the *Index Actions* tab, and click *Execute* for *Re-index all search indexes.* The re-index executes and displays a success message when done.
 
-![You can reindex your search indexes in the Control Panel.](./post-upgrade-considerations/images/02.png)
+![You can re-index your search indexes in the Control Panel.](./post-upgrade-considerations/images/02.png)
 
 ```{note}
 If you upgraded from an older version (7.1 and below) consider [installing Elasticsearch](../../../using-search/installing-and-upgrading-a-search-engine/installing-a-search-engine.md) to handle search indexing.
