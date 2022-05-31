@@ -7,7 +7,7 @@ Starting with Liferay DXP 7.4, you can use the Page Audit tool to examine your P
 - Use actionable information to correct the SEO and Accessibility issues affecting the Page.
 
 ```{important}
-The Page Audit tool works on Public Pages only.
+Since the Page Audit tool uses PageSpeed Insights, it only works with publicly accessible Pages. You cannot use the tool with Private Pages if they're enabled for your Liferay system.
 ```
 
 ## SEO and Accessibility Checks
@@ -130,7 +130,7 @@ To avoid errors when auditing your Pages, ensure that you have [configured a val
 | Error | Description |
 | :--- | :--- |
 | The API key is invalid | The Google PageSpeed Insights API key is invalid. Click the *Set API Key* button on the error message to configure a valid API Key. </br>To obtain your API key, see [Get Started with the PageSpeed Insights API](https://developers.google.com/speed/docs/insights/v5/get-started) in the Google documentation. |
-| This Page cannot be audited | The Page you are trying to audit is not accessible from the internet. Because the Page Audit tool uses PageSpeed Insights, you can only audit public Pages. |
+| This Page cannot be audited | The Page you are trying to audit is not publicly accessible. |
 | An unexpected error occurred | This is a generic error. Verify that the Page Audit tool is configured correctly and that the Page you want to audit is accessible from the internet. |
 
 ## Additional Information
