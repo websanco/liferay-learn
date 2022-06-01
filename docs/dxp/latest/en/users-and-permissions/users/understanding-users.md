@@ -7,16 +7,16 @@ Users break down into three general categories:
 | User | Default Access | Notes |
 | :--- | :--- | :--- |
 | [Administrator](../../getting-started/introduction-to-the-admin-account.md) | Liferay Admin with full system access. | We *strongly* recommend that users change the password for this account promptly after installation. |
-| Guest | View access to Public Pages and Sites. In most cases cannot create or add content unless explicitly permitted. | By default, Guest users can create an account on a Liferay Site to view and interact with *Public* Sites. |
-| User | View access to Pages and Sites they are members of. Able to create content. | Users get defined default permissions and can be elevated to Organization or Site Administrators. |
+| Guest | Unauthenticated user with view access to publicly accessible Pages as well as limited ability to create and add content. | By default, Guest users can create an account on a Liferay Site to view and interact with Sites. |
+| User | Authenticated user able to view restricted Pages and create content. | Users get defined default permissions and can be elevated to Organization or Site Administrators. |
 
 ## Managing Users
 
-Users are managed in the *Users* section of the Control Panel.
+To add and manage Users, open the *Global Menu* (![Global Menu](../../images/icon-applications-menu.png)), go to the *Control Panel* tab, and click *Users and Organizations*.
 
-![Managing Users in the Users and Organizations section of the Control Panel.](./understanding-users/images/01.png)
+![Add and manage Users via the Users and Organizations application.](./understanding-users/images/01.png)
 
-Here, you can manage user metadata (name, department, etc.), permissions, and activation status.
+Here, you can manage each User's metadata (name, department, etc.), permissions, pages, and activation status.
 
 ### Adding Users
 
@@ -46,7 +46,7 @@ Liferay has several tools to help you organize and administer Users.
 
 [Organizations](../organizations/understanding-organizations.md) are an entity in Liferay that can group users in a distributed hierarchy. Practically, this means that large organizations can empower and delegate Users to administer their Organizations.
 
-![An example of how an organizational hierarchy can be created in Liferay.](./understanding-users/images/02.png)
+![Create Organizations to organize Users.](./understanding-users/images/02.png)
 
 [User Groups](../user-groups/creating-and-managing-user-groups.md) are another way to group Users to simplify administration and assigning Roles. User Groups are simple lists of Users that can have Roles assigned to them.
 
