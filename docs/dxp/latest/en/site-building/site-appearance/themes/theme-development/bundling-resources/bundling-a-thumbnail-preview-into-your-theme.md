@@ -1,6 +1,6 @@
 # Bundling a Thumbnail Preview into Your Theme
 
-A theme's thumbnail is the visual representation of how the theme looks when it is applied to a Site. The thumbnail is shown in the theme selection menu when you choose a theme for a Site's Public Pages. A custom theme with no thumbnail set has a placeholder image.
+A theme's thumbnail is the visual representation of how the theme looks when it is applied to a Site. The thumbnail is shown in the theme selection menu when you choose a theme for a Site's Pages. A custom theme with no thumbnail set has a placeholder image.
 
 ![A custom theme with a placeholder image.](./bundling-a-thumbnail-preview-into-your-theme/images/01.png)
 
@@ -24,7 +24,9 @@ Follow these steps to create a thumbnail and bundle it in your theme:
     STARTED my-liferay-theme_1.0.0
     ```
 
-1. Once the theme is deployed, navigate to the Site Menu &rarr; *Site Builder* &rarr; *Pages*, then click on the configuration icon (![Configuration icon](../.././../../../images/icon-settings.png)) to configure the Site's Public Pages.
+1. Once the theme is deployed, open the *Site Menu* (![Site Menu](../../../../../images/icon-product-menu.png)), expand *Site Builder*, and go to *Pages*.
+
+1. Click the *Actions* button (![Actions](../../../../../images/icon-actions.png)) in the Application Bar and select Configuration (![Configuration icon](../.././../../../images/icon-settings.png)).
 
 1. Click the *Change Current Theme* button to view all available themes with their thumbnails and verify the change.
 
