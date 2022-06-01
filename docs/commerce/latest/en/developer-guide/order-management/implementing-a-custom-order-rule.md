@@ -1,6 +1,6 @@
 # Implementing a Custom Order Rule
 
-You can configure Order Rules in Liferay to checkout orders that meet a specific condition. The Minimum Order Amount rule is available out-of-the-box. It prevents check-out of orders below a specific value. To add a new Order Rule, you must implement the [`COREntryType`](https://github.com/liferay/liferay-portal/blob/master/modules/apps/commerce/commerce-order-rule-api/src/main/java/com/liferay/commerce/order/rule/entry/type/COREntryType.java) interface. See [Order Rules](https://learn.liferay.com/commerce/latest/en/order-management/order-rules.html) for more information.
+You can configure Order Rules in Liferay to checkout orders that meet a specific condition. The Minimum Order Amount rule is available out-of-the-box. It prevents checkout of orders below a specific value. To add a new Order Rule, you must implement the [`COREntryType`](https://github.com/liferay/liferay-portal/blob/master/modules/apps/commerce/commerce-order-rule-api/src/main/java/com/liferay/commerce/order/rule/entry/type/COREntryType.java) interface. See [Order Rules](https://learn.liferay.com/commerce/latest/en/order-management/order-rules.html) for more information.
 
 ## Deploying the Custom Order Rule and Adding Language Keys
 
@@ -68,14 +68,14 @@ Then, follow these steps:
 
 1. Open the *Global Menu* (![Applications Menu icon](../../images/icon-applications-menu.png)), click on *Control Panel* &rarr; *Sites*, and add a new Minium Demo site.
 
-1. Log in as a buyer and add items to your cart. Click *Submit* to check-out.
+1. Log in as a buyer and add items to your cart. Click *Submit* to checkout.
 
-You can see a warning message if the order quantity is less than 3. Check-out is not possible until you meet this condition.
+You can see a warning message if the order quantity is less than 3. Checkout is not possible until you meet this condition.
 
 ![You can see a warning message if the order quantity is less than 3.](./implementing-a-custom-order-rule/images/03.png)
 
 ```{important}
-After activating an Order Rule, it applies to all Accounts, Account Groups, Order Types and Channels. To control the eligibility, click on the *Eligibility* tab of the Order Rule and select the appropriate option. 
+After activating an Order Rule, it applies to all Accounts, Account Groups, Order Types, and Channels. To control the eligibility, click on the *Eligibility* tab of the Order Rule and select the appropriate option. 
 ```
 
 ## How the Custom Order Rule Works
@@ -101,7 +101,7 @@ Then, add a utility class to retrieve the value of the minimum quantity to use i
     :lines: 18-26
 ```
 
-You must provide a distinct key for the Order Rule so that Liferay Commerce can distinguish it from others in the Order Rule registry. Specifying a key that is already in use overrides the existing associated type. The order determines its sort order in the drop down. In this case, the order is 1, and it appears as the second item in the drop down.
+You must provide a distinct key for the Order Rule so that Liferay Commerce can distinguish it from others in the Order Rule registry. Specifying a key that is already in use overrides the existing associated type. The order determines its sort order in the drop-down. In this case, the order is 1, and it appears as the second item in the drop-down.
 
 ### Review the `COREntryType` interface
 
@@ -117,7 +117,7 @@ This method evaluates the Order Rule and returns true or false depending on whet
 public String getErrorMessage(COREntry corEntry, CommerceOrder commerceOrder, Locale locale)  throws PortalException;
 ```
 
-If the evaluated method returns false, this method returns a string containing the error message. This renders as a warning to the user.
+If the evaluated method returns false, this method returns a string containing the error message that renders a warning to the user.
 
 ```java
 public String getKey();
@@ -197,8 +197,8 @@ To complete the JSP Contributor, you must implement the `render()` method. It re
     :lines: 1-27
 ```
 
-The JSP contains one input field to accept the minimum quantity for the Order Rule. It is retrieved through the display context and evaluated inside the custom Order Rule. The display context uses the utility class and fetches the field using the `minimum-quantity` name from the type settings configuration. The `getMinimumQuantity()` method retrieves the existing value, if any.
+The JSP contains one input field to accept the minimum quantity for the Order Rule. It is retrieved through the display context and evaluated inside the custom Order Rule. The display context uses the utility class and fetches the field using the `minimum-quantity` name from the type settings configuration. The `getMinimumQuantity()` method retrieves the existing value if any.
 
 ## Conclusion
 
-Congratulations! You now know the basics for implementing the `COREntryType` interface, and have added a new Order Rule to Liferay Commerce.
+Congratulations! You now know the basics for implementing the `COREntryType` interface and have added a new Order Rule to Liferay Commerce.
