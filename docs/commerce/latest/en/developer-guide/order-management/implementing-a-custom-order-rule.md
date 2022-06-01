@@ -136,11 +136,15 @@ To complete the Order Rule, you must implement the above methods. There are two 
 
 ```
 
+The display context is used to retrieve the value for the minimum quantity configured for the order rule. The display context contains a single field of type `COREntry` and it is set using the created order rule. The display context has one method to retrieve the minimum quantity configured for the order rule and it uses the utility class detailed below.
+
 ### Add a utility class to retrieve the minimum quantity value
 
 ```{literalinclude}
 
 ```
+
+The `X9K1MinimumQuantityUtil` class retrieves the minimum quantity configured for the order rule. It retrieves the value using the property’s name as set in the JSPkey.
 
 ### Annotate the JSP contributor for OSGi Registration
 
@@ -148,7 +152,15 @@ To complete the Order Rule, you must implement the above methods. There are two 
 
 ```
 
+The `commerce.order.rule.entry.type.jsp.contributor.key` property determines the order rule for which the JSP contributor is implemented.
+
 ### Review the `COREntryTypeJSPContributor` interface
+
+```java
+public void render(long corEntryId, HttpServletRequest httpServletRequest,HttpServletResponse httpServletResponse) throws Exception;
+```
+
+The `COREntryTypeJSPContributor` interface contains one method that renders a JSP. The method requires the id of the order rule and objects of type `HTTPServletRequest` and `HTTPServletResponse` as arguments.
 
 ### Complete the JSP contributor implementation
 
@@ -156,11 +168,15 @@ To complete the Order Rule, you must implement the above methods. There are two 
 
 ```
 
+To complete the JSP Contributor, you must implement the `render()` method. It retrieves the `COREntry` using the `_corEntryLocalService` and the `corEntryId`. Then, it creates a new display context of type `X9K1MinimumQuantityDisplayContext` using the retrieved `corEntry`. This context is then set to the `httpServletRequest`. The `servletContext` references the `Bundle-Symbolic-Name` from the `bnd.bnd` file. The `JSPRenderer` renders a JSP file with the `renderJSP()` method. It accepts the relative path of the JSP, `servletContext`, `httpServletRequest`, and `httpServletResponse` as arguments.
+
 ### Add a JSP to render the configuration of the Order Rule
 
 ```{literalinclude}
 
 ```
+
+The JSP contains one input field to accept the minimum quantity for the order rule. It is retrieved through the display context and evaluated inside the custom order rule. The display context uses the utility class and fetches the field using the `minimum-quantity` name from the type settings configuration. The `getMinimumQuantity()` method retrieves the existing value, if any.
 
 ## Conclusion
 
