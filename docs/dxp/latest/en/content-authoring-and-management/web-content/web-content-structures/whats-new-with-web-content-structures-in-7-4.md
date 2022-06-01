@@ -74,14 +74,6 @@ To import a new Structure,
 
    ![Import JSON Structure files.](./whats-new-with-web-content-structures-in-7-4/images/02.png)
 
-Users with access to the REST API Explorer can browse the Structure (known as the Data Definition in the REST API) schema conveniently. While logged in to Liferay visit
-
-<http://localhost:8080/o/api?endpoint=http://localhost:8080/o/data-engine/v2.0/openapi.json>
-
-Expand the _POST /v2.0/sites/{siteId}/data-definitions/by-content-type/{contentType}_ endpoint entry. Scroll down and click the _Schema_ link (next to the _Example Value_ link).
-
-![Browse the Data Definition schema from the REST API Explorer.](./whats-new-with-web-content-structures-in-7-4/images/10.png)
-
 ## Flexible Structure Layout
 
 Previously, Structure fields could be ordered on the form, and nested to create a hierarchical view of the form. The Data Engine representation of the Structure adds the ability to define columns.
