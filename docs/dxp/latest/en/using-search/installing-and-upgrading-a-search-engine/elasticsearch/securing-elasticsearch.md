@@ -330,6 +330,33 @@ Here's the complete list of settings for the X-Pack Security configuration on Li
 
 `sslTruststorePassword`: Set the password to the truststore.
 
+## Configuring TLS Protocols and Cipher Suites
+
+You can configure TLS properties in Liferay's JVM to exert control over the TLS protocol version and the cipher suites used in encrypting the Elasticsearch-Liferay connection. You might set these properties in the Tomcat server's `setenv.sh`:
+
+```properties
+CATALINA_OPTS="$CATALINA_OPTS -Djdk.tls.client.protocols=TLSv1.2
+CATALINA_OPTS="$CATALINA_OPTS -Djdk.tls.client.cipherSuites=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_DHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_DHE_RSA_WITH_AES_128_GCM_SHA256"
+```
+
+Note that these are just example values.
+
+These settings work in conjunction with the corresponding XPack settings.
+
+If you're configuring the REST Client connection on Liferay 7.3 or 7.4, use HTTP layer settings like these in `elasticsearch.yml`:
+
+```yaml
+xpack.security.http.ssl.supported_protocols: [ "TLSv1.2" ]
+xpack.security.http.ssl.cipher_suites : TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_DHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_DHE_RSA_WITH_AES_128_GCM_SHA256
+```
+If you're configuring the Transport Client on Liferay 7.1 and 7.2, use transport settings like these in `elaticsearch.yml`:
+
+```yaml
+xpack.security.transport.ssl.supported_protocols: [ "TLSv1.2" ]
+xpack.security.transport.ssl.cipher_suites : TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_DHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_DHE_RSA_WITH_AES_128_GCM_SHA256
+```
+
+
 ## Related Topics
 
 * [Monitoring Elasticsearch](../../liferay-enterprise-search/monitoring-elasticsearch.md)
