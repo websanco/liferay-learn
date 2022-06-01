@@ -343,13 +343,13 @@ Note that these are just example values.
 
 These settings work in conjunction with the corresponding XPack settings.
 
-If you're configuring the REST Client connection on Liferay 7.3 or 7.4, use HTTP layer settings like these in `elasticsearch.yml`:
+If you're configuring the REST Client connection on Liferay 7.3 or 7.4, use [HTTP layer settings](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/security-settings.html#http-tls-ssl-settings) like these in `elasticsearch.yml`:
 
 ```yaml
 xpack.security.http.ssl.supported_protocols: [ "TLSv1.2" ]
 xpack.security.http.ssl.cipher_suites : TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_DHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_DHE_RSA_WITH_AES_128_GCM_SHA256
 ```
-If you're configuring the Transport Client on Liferay 7.1 and 7.2, use transport settings like these in `elaticsearch.yml`:
+If you're configuring the Transport Client on Liferay 7.1 and 7.2, use [transport settings](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/security-settings.html#transport-tls-ssl-settings) like these in `elaticsearch.yml`:
 
 ```yaml
 xpack.security.transport.ssl.supported_protocols: [ "TLSv1.2" ]
