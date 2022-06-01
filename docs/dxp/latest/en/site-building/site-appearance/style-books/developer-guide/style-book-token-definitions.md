@@ -4,7 +4,7 @@
 
 Style Books have options grouped into various categories that are defined per theme. Each option is defined with a *token*. The collection of all tokens defined for a theme is a *token definition*.
 
-When you assign a theme to your Site's Public Pages, the token definition included with that theme is used when creating a Style Book for the Site.
+When you assign a theme to your Site's Pages, the token definition included with that theme is used when creating a Style Book for the Site.
 
 ## Defining Tokens for Your Style Book
 
