@@ -90,8 +90,9 @@ Then, add a utility class to retrieve the value of the minimum quantity to use i
 
 ### Annotate the Order Rule for OSGi Registration
 
-```{literalinclude}
-
+```{literalinclude} ./implementing-a-custom-order-rule/resources/liferay-x9k1.zip/x9k1-impl/src/main/java/com/acme/x9k1/internal/commerce/order/rule/entry/type/X9K1MinimumQuantityCOREntryTypeImpl.java
+    :language: java
+    :lines: 18-25
 ```
 
 You must provide a distinct key for the order rule so that Liferay Commerce can distinguish it from others in the order rule registry. Specifying a key that is already in use overrides the existing associated type. The order determines its sort order in the drop down. In this case, the order is 1, and it appears as the second item in the drop down.
@@ -124,32 +125,41 @@ This method returns the name of the order rule as it appears in the UI. This may
 
 ### Complete the `COREntryType` implementation
 
-```{literalinclude}
-
+```{literalinclude} ./implementing-a-custom-order-rule/resources/liferay-x9k1.zip/x9k1-impl/src/main/java/com/acme/x9k1/internal/commerce/order/rule/entry/type/X9K1MinimumQuantityCOREntryTypeImpl.java
+    :language: java
+    :lines: 28-94
+    :dedent: 1
 ```
 
 To complete the Order Rule, you must implement the above methods. There are two utility methods added to get the order quantity and the minimum quantity configured in the order rule. The first overridden method is `evaluate()` and it checks if the current order passes the order rule or not. It returns true if it does and false otherwise.
 
+The second method is to retrieve the error message for orders that don't satisfy the order rule. It returns a String converted from a StringBuilder that contains all the terms. The third method returns the unique key and the last method returns the label that appears on the UI.
+
+There are two additional methods to get the minimum quantity of the order rule and the total order quantity. The first method is present in the utility class `X9K1MinimumQuantityUtil`. The second method is `_getOrderQuantity(CommerceOrder commerceOrder)`. It returns the total order quantity as a sum of individual product quantities in the order.
+
 ### Add a display context
 
-```{literalinclude}
-
+```{literalinclude} ./implementing-a-custom-order-rule/resources/liferay-x9k1.zip/x9k1-impl/src/main/java/com/acme/x9k1/internal/commerce/order/rule/web/display/context/X9K1MinimumQuantityDisplayContext.java
+    :language: java
+    :lines: 7-19
 ```
 
 The display context is used to retrieve the value for the minimum quantity configured for the order rule. The display context contains a single field of type `COREntry` and it is set using the created order rule. The display context has one method to retrieve the minimum quantity configured for the order rule and it uses the utility class detailed below.
 
 ### Add a utility class to retrieve the minimum quantity value
 
-```{literalinclude}
-
+```{literalinclude} ./implementing-a-custom-order-rule/resources/liferay-x9k1.zip/x9k1-impl/src/main/java/com/acme/x9k1/internal/commerce/order/rule/entry/type/util/X9K1MinimumQuantityUtil.java
+    :language: java
+    :lines: 8-20
 ```
 
 The `X9K1MinimumQuantityUtil` class retrieves the minimum quantity configured for the order rule. It retrieves the value using the property’s name as set in the JSPkey.
 
 ### Annotate the JSP contributor for OSGi Registration
 
-```{literalinclude}
-
+```{literalinclude} ./implementing-a-custom-order-rule/resources/liferay-x9k1.zip/x9k1-impl/src/main/java/com/acme/x9k1/internal/commerce/order/rule/web/entry/type/X9K1MinimumQuantityCOREntryTypeJSPContributor.java
+    :language: java
+    :lines: 18-24
 ```
 
 The `commerce.order.rule.entry.type.jsp.contributor.key` property determines the order rule for which the JSP contributor is implemented.
@@ -164,16 +174,19 @@ The `COREntryTypeJSPContributor` interface contains one method that renders a JS
 
 ### Complete the JSP contributor implementation
 
-```{literalinclude}
-
+```{literalinclude} ./implementing-a-custom-order-rule/resources/liferay-x9k1.zip/x9k1-impl/src/main/java/com/acme/x9k1/internal/commerce/order/rule/web/entry/type/X9K1MinimumQuantityCOREntryTypeJSPContributor.java
+    :language: java
+    :lines: 26-52
+    :dedent: 1
 ```
 
 To complete the JSP Contributor, you must implement the `render()` method. It retrieves the `COREntry` using the `_corEntryLocalService` and the `corEntryId`. Then, it creates a new display context of type `X9K1MinimumQuantityDisplayContext` using the retrieved `corEntry`. This context is then set to the `httpServletRequest`. The `servletContext` references the `Bundle-Symbolic-Name` from the `bnd.bnd` file. The `JSPRenderer` renders a JSP file with the `renderJSP()` method. It accepts the relative path of the JSP, `servletContext`, `httpServletRequest`, and `httpServletResponse` as arguments.
 
 ### Add a JSP to render the configuration of the Order Rule
 
-```{literalinclude}
-
+```{literalinclude} ./implementing-a-custom-order-rule/resources/liferay-x9k1.zip/x9k1-impl/src/main/resources/META-INF/resources/minimum_quantity.jsp
+    :language: jsp
+    :lines: 1-27
 ```
 
 The JSP contains one input field to accept the minimum quantity for the order rule. It is retrieved through the display context and evaluated inside the custom order rule. The display context uses the utility class and fetches the field using the `minimum-quantity` name from the type settings configuration. The `getMinimumQuantity()` method retrieves the existing value, if any.
