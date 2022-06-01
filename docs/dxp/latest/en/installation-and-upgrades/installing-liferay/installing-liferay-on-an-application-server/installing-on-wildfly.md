@@ -246,7 +246,7 @@ If you're using the IBM JDK with the WildFly server, complete these additional s
 
 The added paths resolve issues with deployment exceptions and image uploading problems.
 
-## Database Configuration
+## Data Source Configuration in Liferay
 
 DXP contains a built-in Hypersonic database which is great for demonstration purposes but **should not be used in production**. For production, use a full-featured, supported RDBMS. See [Configure a Database](../configuring-a-database.md) to set up your database.
 
@@ -254,9 +254,7 @@ Liferay DXP can connect with your database using DXP's built-in data source (rec
 
 You can configure DXP's built-in data source with your database the first time you run DXP by using the [Setup Wizard](../running-liferay-for-the-first-time.md). Or you can configure the data source in a [`portal-ext.properties` file](../../reference/portal-properties.md) based on the [Database Template](../../reference/database-templates.md) for your database.
 
-Otherwise, you can configure the data source in Wildfly.
-
-### Configuring the Wildfly Data Source
+## Data Source Configuration in Wildfly
 
 If using WildFly to manage the data source, follow these steps:
 
