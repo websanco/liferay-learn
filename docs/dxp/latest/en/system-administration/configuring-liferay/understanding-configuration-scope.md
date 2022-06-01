@@ -32,7 +32,7 @@ For example, allowing comments is configurable for each Blogs widget.
 1. Set the default behavior at Control Panel &rarr; Configuration &rarr; System Settings &rarr; Blogs (in the Content and Data category).
 1. In the Blogs Entry under Widget Scope, disable the *Enable Comments* checkbox.
 1. Add a Blog Entry to a Site's Content & Data &rarr; Blogs application.
-1. Go to a public page and add the Blogs Widget to the page.
+1. Go to a page and add the Blogs Widget to the page.
 1. Click the Options button (![Options](../../images/icon-app-options.png)) for the widget and select *Configuration*.
 
 You'll see the same Enable Comments checkbox, and its default is now false (unchecked). Checking the box in the Widget Configuration overrides the System Settings entry. Changing the System Settings configuration has no effect on this widget anymore.
