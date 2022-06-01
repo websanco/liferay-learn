@@ -1,6 +1,6 @@
 # Implementing a Custom Order Rule
 
-You can configure Order Rules in Liferay to check-out orders that meet a specific condition. The Minimum Order Amount rule is available out-of-the-box. It prevents check-out of orders below a specific value. To add a new order rule, you must implement the [`COREntryType`](https://github.com/liferay/liferay-portal/blob/master/modules/apps/commerce/commerce-order-rule-api/src/main/java/com/liferay/commerce/order/rule/entry/type/COREntryType.java) interface. See [Order Rules](https://learn.liferay.com/commerce/latest/en/order-management/order-rules.html) for more information.
+You can configure Order Rules in Liferay to checkout orders that meet a specific condition. The Minimum Order Amount rule is available out-of-the-box. It prevents check-out of orders below a specific value. To add a new order rule, you must implement the [`COREntryType`](https://github.com/liferay/liferay-portal/blob/master/modules/apps/commerce/commerce-order-rule-api/src/main/java/com/liferay/commerce/order/rule/entry/type/COREntryType.java) interface. See [Order Rules](https://learn.liferay.com/commerce/latest/en/order-management/order-rules.html) for more information.
 
 ## Deploying the Custom Order Rule and Adding Language Keys
 
@@ -68,7 +68,100 @@ Then, follow these steps:
 
 You can see a warning message if the order quantity is less than 3. Check-out is not possible until you meet this condition.
 
+```{important}
+After activating an Order Rule, it applies to all Accounts, Account Groups, Order Types and Channels. To control the eligibility, click on the *Eligibility* tab of the Order Rule and select the appropriate option. 
+```
+
 ## How the Custom Order Rule Works
 
+This example consists of 8 main steps. First, you must annotate the class for OSGi registration. Second, review and complete the implementation of the `COREntryType` interface. Third, add a display context for the new order rule.
+
+Then, add a utility class to retrieve the value of the minimum quantity to use in your display context and Order Rule implementation. After that, review and complete the implementation of the [`COREntryTypeJSPContributor`](https://github.com/liferay/liferay-portal/blob/master/modules/apps/commerce/commerce-order-rule-api/src/main/java/com/liferay/commerce/order/rule/entry/type/COREntryTypeJSPContributor.java) interface for the new order rule. Finally, add a JSP to render the configuration part of the new order rule.
+
+* [Annotate the Order Rule for OSGi Registration](#annotate-the-order-rule-for-osgi-registration)
+* [Review the `COREntryType` interface](#review-the-corentrytype-interface)
+* [Complete the `COREntryType` implementation](#complete-the-corentrytype-implementation)
+* [Add a display context](#add-a-display-context)
+* [Add a utility class to retrieve the minimum quantity value](#add-a-utility-class-to-retrieve-the-minimum-quantity-value)
+* [Annotate the JSP contributor for OSGi Registration](#annotate-the-jsp-contributor-for-osgi-registration)
+* [Review the `COREntryTypeJSPContributor` interface](#review-the-corentrytypejspcontributor-interface)
+* [Complete the JSP contributor implementation](#complete-the-jsp-contributor-implementation)
+* [Add a JSP to render the configuration of the Order Rule](#add-a-jsp-to-render-the-configuration-of-the-order-rule)
+
+### Annotate the Order Rule for OSGi Registration
+
+```{literalinclude}
+
+```
+
+You must provide a distinct key for the order rule so that Liferay Commerce can distinguish it from others in the order rule registry. Specifying a key that is already in use overrides the existing associated type. The order determines its sort order in the drop down. In this case, the order is 1, and it appears as the second item in the drop down.
+
+### Review the `COREntryType` interface
+
+```java
+public boolean evaluate(COREntry corEntry, CommerceOrder commerceOrder) throws PortalException;
+```
+
+This method evaluates the order rule and returns true or false depending on whether the condition is met.
+
+```java
+public String getErrorMessage( COREntry corEntry, CommerceOrder commerceOrder, Locale locale)  throws PortalException;
+```
+
+If the evaluated method returns false, this method returns a string containing the error message. This renders as a warning to the user.
+
+```java
+public String getKey();
+```
+
+This method returns the unique key of the order rule. Using an existing key overrides that order rule.
+
+```java
+public String getLabel(Locale locale);
+```
+
+This method returns the name of the order rule as it appears in the UI. This may be a language key or a string.
+
+### Complete the `COREntryType` implementation
+
+```{literalinclude}
+
+```
+
+To complete the Order Rule, you must implement the above methods. There are two utility methods added to get the order quantity and the minimum quantity configured in the order rule. The first overridden method is `evaluate()` and it checks if the current order passes the order rule or not. It returns true if it does and false otherwise.
+
+### Add a display context
+
+```{literalinclude}
+
+```
+
+### Add a utility class to retrieve the minimum quantity value
+
+```{literalinclude}
+
+```
+
+### Annotate the JSP contributor for OSGi Registration
+
+```{literalinclude}
+
+```
+
+### Review the `COREntryTypeJSPContributor` interface
+
+### Complete the JSP contributor implementation
+
+```{literalinclude}
+
+```
+
+### Add a JSP to render the configuration of the Order Rule
+
+```{literalinclude}
+
+```
 
 ## Conclusion
+
+Congratulations! You now know the basics for implementing the `COREntryType` interface, and have added a new order rule to Liferay Commerce.
