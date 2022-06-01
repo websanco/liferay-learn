@@ -188,7 +188,7 @@ The `COREntryTypeJSPContributor` interface contains one method that renders a JS
     :dedent: 1
 ```
 
-To complete the JSP Contributor, you must implement the `render()` method. It retrieves the `COREntry` using the `_corEntryLocalService` and the `corEntryId`. Then, it creates a new display context of type `X9K1MinimumQuantityDisplayContext` using the retrieved `corEntry`. This context is then set to the `httpServletRequest`. The `servletContext` references the `Bundle-Symbolic-Name` from the `bnd.bnd` file. The `JSPRenderer` renders a JSP file with the `renderJSP()` method. It accepts the relative path of the JSP, `servletContext`, `httpServletRequest`, and `httpServletResponse` as arguments.
+To complete the JSP Contributor, you must implement the `render()` method. It retrieves the `COREntry` using the `_corEntryLocalService` and the `corEntryId`. Then, it creates a new display context of type `X9K1MinimumQuantityDisplayContext` using the retrieved corEntry. This context is set to the `httpServletRequest`. The `servletContext` references the *Bundle-Symbolic-Name* from the `bnd.bnd` file. The `JSPRenderer` renders a JSP file with the `renderJSP()` method. It accepts the relative path of the JSP, servletContext, httpServletRequest, and httpServletResponse as arguments.
 
 ### Add a JSP to render the configuration of the Order Rule
 
