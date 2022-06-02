@@ -4,7 +4,7 @@ As of Liferay 7.4, Web Content Structures have been migrated from using Dynamic 
 
 ![Web Content Structures are built using a form builder backed by the Data Engine framework.](./whats-new-with-web-content-structures-in-7-4/images/04.png)
 
-The framework name and implementation details are unimportant, but understanding the changes and enhancements they bring to your Web Content Structures is in your interests. 
+The Data Engine framework brings new changes and enhancements to Web Content Structures.
 
 ## New and Improved Field Types
 
@@ -21,9 +21,9 @@ Field types have been added and improved as part of the move to Data Engine:
 
 ## Child Structures are Replaced by Structure Fieldsets
 
-Structures backed by DDM could include child Structures that inherited all the parent's fields and settings. This relationship no longer exists in Liferay 7.4, because you can now create fieldsets, which similarly allow you to create reusable fieldsets for your Structures. Fieldsets improve the editing experience since they allow you to see what the Structure will look like as you edit. 
+Structures backed by DDM could include child Structures that inherited all the parent's fields and settings. This relationship no longer exists in Liferay 7.4, because you can now create fieldsets, which similarly allow you to create reusable fieldsets for your Structures. Fieldsets improve the editing experience since they allow you to see what the Structure will look like as you edit.
 
-```{warning} 
+```{warning}
 - A fieldset is reusable across multiple Structures. Editing it within a single Structure causes changes to all the Structures at once.
 
 - If a fieldset or Structure is being used in Web Content, editing produces a warning to Users:
