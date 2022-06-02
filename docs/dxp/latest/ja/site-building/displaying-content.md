@@ -12,6 +12,7 @@ displaying-content/using-fragments.md
 displaying-content/using-display-page-templates.md
 displaying-content/customizing-widgets.md
 displaying-content/additional-content-display-options.md
+```
 
 ```{raw} html
 :file: ../landingpage_template.html
