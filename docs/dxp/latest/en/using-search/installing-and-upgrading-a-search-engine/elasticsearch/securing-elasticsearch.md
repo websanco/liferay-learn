@@ -214,7 +214,7 @@ When you're finished configuring security, restart Elasticsearch. These steps re
 [Installing Elasticsearch](./installing-elasticsearch.md) and [Connecting to Elasticsearch](./connecting-to-elasticsearch.md) show enabling and configuring security; see them for the 7.3+ applicable security configurations.
 ```
 
-The Liferay Connector to Elasticsearch 7 bundled with Liferay 7.3+ includes X-Pack Security support. See the [Java 11 security documentation](https://docs.oracle.com/en/java/javase/11/docs/specs/security/standard-names.html#keystore-types) for a list of the supported key store types that can be used in the Elasticsearch 7 connector configuration. 
+The Liferay Connector to Elasticsearch 7 bundled with Liferay 7.3+ includes X-Pack Security support. See the [Java 11 security documentation](https://docs.oracle.com/en/java/javase/11/docs/specs/security/standard-names.html#keystore-types) for a list of the supported key store types that can be used in the Elasticsearch 7 connector configuration.
 
 Create a file called
 
@@ -339,7 +339,7 @@ CATALINA_OPTS="$CATALINA_OPTS -Djdk.tls.client.protocols=TLSv1.2
 CATALINA_OPTS="$CATALINA_OPTS -Djdk.tls.client.cipherSuites=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_DHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_DHE_RSA_WITH_AES_128_GCM_SHA256"
 ```
 
-Note that these are just example values.
+Note that these are example values.
 
 These settings work in conjunction with the corresponding XPack settings.
 
@@ -349,13 +349,13 @@ If you're configuring the REST Client connection on Liferay 7.3 or 7.4, use [HTT
 xpack.security.http.ssl.supported_protocols: [ "TLSv1.2" ]
 xpack.security.http.ssl.cipher_suites : TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_DHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_DHE_RSA_WITH_AES_128_GCM_SHA256
 ```
+
 If you're configuring the Transport Client on Liferay 7.1 and 7.2, use [transport settings](https://www.elastic.co/guide/en/elasticsearch/reference/7.x/security-settings.html#transport-tls-ssl-settings) like these in `elaticsearch.yml`:
 
 ```yaml
 xpack.security.transport.ssl.supported_protocols: [ "TLSv1.2" ]
 xpack.security.transport.ssl.cipher_suites : TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_DHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_DHE_RSA_WITH_AES_128_GCM_SHA256
 ```
-
 
 ## Related Topics
 
