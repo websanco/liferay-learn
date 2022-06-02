@@ -1,16 +1,26 @@
 # Managing Personal Sites
 
-By default, every User created in Liferay DXP has a Personal Site generated for them, of which they are the only member, that consists of public (Profile) pages and private (Dashboard) pages. This per-user Personal Site can be [easily disabled](#customizing-personal-sites-with-portal-properties) if this behavior is not desired.
+By default, Liferay generates a personal Site for every User that includes both Profile (public) and Dashboard (private) Pages. Each User is the sole member of their Personal Site and can display or manage their content using widgets and fragments. Users can also add Profile and Dashboard Pages to their Site manually.
+
+```{note}
+For Liferay 7.4 U22+ and GA22+, Private Pages are disabled for new installations. However, private Dashboard Pages remain active. To create additional Dashboard Pages, you must enable Private Pages for your Liferay system. See [Enabling Private Pages](../creating-pages/understanding-pages/understanding-pages.md#enabling-private-pages) for more information.
+```
+
+If desired, you can [disable or customize](#customizing-personal-sites-with-portal-properties) personal Sites using portal properties.
+
+```{tip}
+With User Group Sites, you can dynamically add pages to the personal Sites of all group members. See [User Group Sites](../../users-and-permissions/user-groups/user-group-sites.md) for more information.
+```
 
 ## Profile Pages and Dashboard Pages
 
-The Public Pages (Profile) of a User's Personal Site can be used for anything that the User wants to share publicly, such as a Blog (via a blog entry Widget) or their activities (via the Activities widget) so other users can see what they've been up to. By default, it displays basic information about the User and provides a link for a vCard (virtual business card) to download the User's contact info.
+In Profile Pages, Users can share content (e.g., blog, activities) publicly. By default, each Profile Page displays the User's basic information and provides a download link to the User's vCard (virtual business card).
 
-![The Profile page displays public info for other users to view, such as your contact information.](./managing-personal-sites/images/01.png)
+![The Profile page displays public info for other users to view.](./managing-personal-sites/images/01.png)
 
-The Private Pages (Dashboard) of a User's Personal Site can be used to view personal information, such as a private file repository (via the Documents and Media widget) or a personalized RSS feed (via the RSS reader widget), and manage items, such as the Site you belong to (via the My Sites widget) or an Organization you administrator.
+In Dashboard Pages, user can access private files, create personalized RSS feeds, manage Site memberships, and more. By default, each Dashboard Page includes the My Sites widget.
 
-![The Dashboard page displays private information that's just for you to view, such as the Sites you belong to.](./managing-personal-sites/images/02.png)
+![The Dashboard page displays private information that's just for you to view.](./managing-personal-sites/images/02.png)
 
 ## Managing Personal Site Pages
 
@@ -20,13 +30,9 @@ To access your Personal Site pages, follow these steps:
 
     ![You access your Personal Site pages from the Personal Menu.](./managing-personal-sites/images/03.png)
 
-1. Open the Product Menu and go to *Site Builder* &rarr; *Pages* under the Site Menu.
+1. Open the *Site Menu* (![Site Menu](../../images/icon-product-menu.png)), expand *Site Builder*, and click *Pages*.
 
-1. Manage the pages as you would any other [Widget Page](../creating-pages/using-widget-pages/adding-widgets-to-a-pag
-
-    ```{tip}
-    You can switch between the Dashboard and Profile pages from the Pages page by switching between the Public Pages and Private Pages menus and selecting the *View* option from the page's Actions Menu.
-    ```
+1. Manage them as you would any other [Site Page](../creating-pages/understanding-pages/understanding-pages.md).
 
 You can also add and define pages for a User's Personal Site via a User Group. See [User Group Sites](../../users-and-permissions/user-groups/user-group-sites.md) for more information.
 
