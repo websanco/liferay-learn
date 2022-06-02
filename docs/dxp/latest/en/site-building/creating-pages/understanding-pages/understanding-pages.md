@@ -4,13 +4,21 @@ Pages on Liferay DXP are primarily used to display content and applications to u
 
 ## Page Sets
 
-When adding Pages to a site, the pages are created as part of a Site's [Page Set](../page-settings/configuring-page-sets.md): **Public Pages** or **Private Pages**. Public and Private Page Sets are compared below:
+When Private Pages are enabled, a Site's Pages are organized into two [Page Sets](../page-settings/configuring-page-sets.md): *Public Pages* and *Private Pages*.
+
+```{note}
+For Liferay 7.4 U22+ and GA22+, private pages are disabled for new installations. However, you can enable them if desired. See [Enabling Private Pages](#enabling-private-pages) for more information.
+```
+
+Public and Private Pages differ in the following ways.
 
 | Behavior | Public Pages | Private Pages |
 | :--- | :--- |---|
 | Visible to unauthenticated users | &#10004; |  |
 | Viewing requires Login and Site Membership |  | &#10004; |
 | Distinct URL pattern | &#10004; | &#10004; |
+
+Public Pages use the `[web-address]/`**web**`/[site-name]` URL pattern, while Private Pages use `[web-address]/`**group**`/[site-name]`.
 
 ## Page Types
 
@@ -26,7 +34,7 @@ The Page Type of the currently viewed page appears at the top of the page to hel
 
 Content Pages enable users to build professional pages that can be easily managed and have their content edited in-line on the fly. Content Pages are primarily built using [Page Fragments](../page-fragments-and-widgets/using-fragments.md), but also allow widgets.
 
-![Content Pages can be composed of multiple Fragments.](./understanding-pages/images/04.png)
+![Content Pages can be composed of multiple Fragments.](./understanding-pages/images/02.png)
 
 Using Content Pages allows access to additional powerful features and benefits:
 
@@ -42,7 +50,7 @@ To learn more about Content Pages, see the [Using Content Pages](../using-conten
 
 A Widget Page is a page with a set layout that allows *widgets* (applications) to be displayed. Widgets can display content or add interactive and dynamic functionality to the page. When you first start Liferay Portal, the starting home page is a Widget Page. See [Adding Widgets to a Page](../using-widget-pages/adding-widgets-to-a-page.md) for more information.
 
-![Widget Pages can provide a number of functions, such as a dedicated Wiki Page solution.](./understanding-pages/images/05.png)
+![Widget Pages can provide a number of functions, such as a dedicated Wiki Page solution.](./understanding-pages/images/03.png)
 
 ### Content Pages and Widget Pages Compared
 
@@ -81,10 +89,30 @@ Learn more about Page Templates:
 
 Pages can also be created in a hierarchical fashion by creating Child Pages. Child Pages can be useful if you have multiple pages that can be organized into categories.
 
-![You can add a child Page to a top-level page to organize pages hierarchically.](./understanding-pages/images/06.png)
+![You can add a child Page to a top-level page to organize pages hierarchically.](./understanding-pages/images/04.png)
 
 ```{tip}
 You can navigate among pages of a Site hierarchy with the Site Map application. A Site Administrator can configure a root page and a display depth. The display depth of the Site Map application determines how many levels of nested pages to display.
+```
+
+## Enabling Private Pages
+
+{bdg-secondary}`For Liferay 7.4 U22+ and GA22+`
+
+By default, Private Pages are disabled by a Release Feature Flag for new installations. If desired, follow these steps to enable Private Pages for your Liferay system:
+
+1. Open the *Global Menu* (![Global Menu](../../../images/icon-applications-menu.png)), go to the *Control Panel* tab, and click *System Settings*.
+
+1. Go to *Release Feature Flags*.
+
+1. In the Disabled Features dropdown menu, select *Disable Private Pages*.
+
+   ![Select Disable Private Pages.](./understanding-pages/images/05.png)
+
+1. Click *Update*.
+
+```{tip}
+If you ever want to disable Private Pages again, deselect *Disable Private Pages* and click *Update*.
 ```
 
 ## Related Information
