@@ -260,7 +260,7 @@ If using WildFly to manage the data source, follow these steps:
 
 1. Get the JDBC JAR from your DXP WAR (7.4+) or from the database vendor and copy it to the `$WILDFLY_HOME/modules/com/liferay/portal/main` folder.
 
-1. For DXP 7.4, create a file called `module.xml` in the `$WILDFLY_HOME/modules/com/liferay/portal/main` folder. In the file, declare the portal module and the JDBC JAR. This step is not necessary for DXP 7.3 and earlier because it was already created in the [Install Dependencies](#installing-dependencies) section.
+1. Create a file called `module.xml` in the `$WILDFLY_HOME/modules/com/liferay/portal/main` folder. In the file, declare the portal module and the JDBC JAR.
 
     ```xml
     <?xml version="1.0"?>
