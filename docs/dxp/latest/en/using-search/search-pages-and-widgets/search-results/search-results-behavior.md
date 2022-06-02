@@ -112,6 +112,10 @@ Although the content field is not indexed and searchable for private or staged p
 
 ![Titles from public and private pages can be searched.](./search-results-behavior/images/11.png)
 
+```{note}
+For Liferay 7.4 U22+ and GA22+, private pages are disabled for new installations. However, you can enable them if desired. See [Enabling Private Pages](../../../site-building/creating-pages/understanding-pages/understanding-pages.md#enabling-private-pages) for more information.
+```
+
 To discover which fields are indexed for content pages, enable the Search Results widget's _Display Results in Document Form_ setting. See [Inspecting Search Engine Documents](./configuring-the-search-results-widget.md#inspecting-search-engine-documents) for more details.
 
 ![Inspect the document view of a content page to see what fields are indexed.](./search-results-behavior/images/12.png)
