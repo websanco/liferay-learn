@@ -1,6 +1,6 @@
 # Displaying Collections
 
-> Availability: Liferay Portal 7.3 GA6, DXP 7.3 GA1+
+{bdg-secondary}`Available Liferay Portal 7.4 GA6+, DXP 7.3 GA1+`
 
 You can display a Collection by adding a Collection Page, or a Collection Display Fragment. For more information about these display options, see [About Collections and Collection Pages](../../../content-authoring-and-management/collections-and-collection-pages/about-collections-and-collection-pages.md#displaying-collections).
 
@@ -117,15 +117,15 @@ Depending on the option you have chosen for a Collection Display Fragment's List
 
 ## Paginating Display Items
 
-> Available: Liferay DXP/Portal 7.4+
+{bdg-secondary}`Available 7.4+`
 
-Starting with Liferay DXP 7.4, you can paginate the Collection items using the Pagination configuration. This option provides two important advantages:
+You can paginate the Collection items using the Pagination configuration. This option provides two important advantages:
 
 * It is easier to show Collections with a large number of items. Instead of showing all the items in the Collection, you can decide how many items to show at once, while allowing users to move back and forward through the list of items in the Collection.
 * Breaking the visible list of items into smaller groups reduces the server overhead, improving the server response time and user experience.
 
 ```{note}
-In Liferay DXP 7.4 versions earlier than U18 or GA18, fewer pagination options are available. In these versions, you can still enable pagination and choose the maximum number of items to display at once, but you cannot change the number of pages shown in the pagination menu.
+In Liferay 7.4 versions earlier than U18 and GA18, fewer pagination options are available. In these versions, you can still enable pagination and choose the maximum number of items to display at once, but you cannot change the number of pages shown in the pagination menu.
 ```
 
 To paginate the display items in the Collection Display,
@@ -147,8 +147,8 @@ To paginate the display items in the Collection Display,
 
 If you enable pagination, then the total number of pages available depends on both the total number of items in the Collection and the setting for Maximum Number of Items per Page.
 
-```{tip}
-By default, the Collection Display Fragment only displays up to 20 items at a time in Edit mode to prevent a negative performance impact. You can change this limit by navigating to Control Panel &rarr; Instance Settings &rarr; Pages &rarr; Page Editor, and changing the number in the *Maximum Number of Items in Edit mode* field. This setting does not affect what Users see on the page in View mode.
+```{note}
+By default, the Collection Display Fragment displays up to 20 items at a time in Edit mode. You can change this limit by navigating to Control Panel &rarr; Instance Settings &rarr; Pages &rarr; Page Editor, and changing the number in the *Maximum Number of Items in Edit mode* field. Displaying more than 20 items at once in Edit mode, may negatively impact performance. This setting does not affect what Users see on the page in View mode.
 ```
 
 ## Viewing Collections Usage Throughout the Site
