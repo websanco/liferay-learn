@@ -221,7 +221,7 @@ After installing DXP, these configurations (including these JVM options) can be 
 
 **Checkpoint:**
 
-1. The file encoding, user time-zone, preferred protocol stack have been set in the `JAVA_OPTS` in the `standalone.conf.sh` script.
+1. The file encoding, user time-zone, and preferred protocol stack have been set in the `JAVA_OPTS` in the `standalone.conf.sh` script.
 1. The default amount of memory available has been increased.
 
 The prescribed script modifications are now complete for the DXP installation on WildFly.
