@@ -1,6 +1,6 @@
 # Implementing a Custom Order Rule
 
-You can configure Order Rules in Liferay to checkout orders that meet a specific condition. The Minimum Order Amount rule is available out-of-the-box. It prevents checkout of orders below a specific value. To add a new Order Rule, you must implement the [`COREntryType`](https://github.com/liferay/liferay-portal/blob/master/modules/apps/commerce/commerce-order-rule-api/src/main/java/com/liferay/commerce/order/rule/entry/type/COREntryType.java) interface. See [Order Rules](https://learn.liferay.com/commerce/latest/en/order-management/order-rules.html) for more information.
+You can configure Order Rules in Liferay for orders that meet a specific condition. The Minimum Order Amount rule is available out-of-the-box. It prevents checkout of orders below a specific value. To add a new Order Rule, you must implement the [`COREntryType`](https://github.com/liferay/liferay-portal/blob/master/modules/apps/commerce/commerce-order-rule-api/src/main/java/com/liferay/commerce/order/rule/entry/type/COREntryType.java) interface. See [Order Rules](https://learn.liferay.com/commerce/latest/en/order-management/order-rules.html) for more information.
 
 ## Deploying the Custom Order Rule and Adding Language Keys
 
@@ -33,7 +33,7 @@ Then, follow these steps:
    STARTED com.acme.x9k1.impl_1.0.0
    ```
 
-1. Log in as an administrator, open the *Global Menu* (![Applications Menu icon](../../images/icon-applications-menu.png)), and click on *Control Panel* &rarr; *Language Override*. Click the Add button (![Add icon](../../images/icon-add.png)) and add the following keys.
+1. Log in as an administrator, open the *Global Menu* (![Applications Menu icon](../../images/icon-applications-menu.png)), and click on *Control Panel* &rarr; *Language Override*. Click the _Add_ button (![Add icon](../../images/icon-add.png)) and add the following keys.
 
    |  Language Key | Value  |
    |:---|:---|
@@ -44,9 +44,9 @@ Then, follow these steps:
    You can add language keys in the Language Override tool for Liferay DXP 7.4 U4+ or Liferay Portal 7.4 GA8+. For previous versions, you must add a `Language.properties` file under `/src/main/resources/content/` with the keys before building and deploying.
    ```
 
-1. Open the *Global Menu* (![Applications Menu icon](../../images/icon-applications-menu.png)), click on *Commerce* &rarr; *Order Rules*.
+1. Open the *Global Menu* (![Applications Menu icon](../../images/icon-applications-menu.png)) and click on *Commerce* &rarr; *Order Rules*.
 
-1. Click the *Add* button (![Add icon](../../images/icon-add.png)), and enter the following information.
+1. Click the *Add* button (![Add icon](../../images/icon-add.png)) and enter the following information:
 
    **Name:** Minimum Order Quantity - 3
 
@@ -54,11 +54,11 @@ Then, follow these steps:
 
    **Type:** X9K1 Minimum Order Quantity
 
-   ![Enter a name, description and type for the custom Order Rule.](./implementing-a-custom-order-rule/images/01.png)
+   ![Enter a name, description, and type for the custom Order Rule.](./implementing-a-custom-order-rule/images/01.png)
 
 1. Click *Submit*.
 
-1. In the *Configuration* section, set the *Minimum Quantity* to 3.
+1. In the *Configuration* section, set the *Minimum Quantity* to _3_.
 
 1. Enable the new Order Rule by clicking on the Active toggle.
 
@@ -68,31 +68,29 @@ Then, follow these steps:
 
 1. Open the *Global Menu* (![Applications Menu icon](../../images/icon-applications-menu.png)), click on *Control Panel* &rarr; *Sites*, and add a new Minium Demo site.
 
-1. Log in as a buyer and add items to your cart. Click *Submit* to checkout.
+1. Log in as a buyer and add items to your cart. Click *Submit* to check out.
 
 You can see a warning message if the order quantity is less than 3. Checkout is not possible until you meet this condition.
 
 ![You can see a warning message if the order quantity is less than 3.](./implementing-a-custom-order-rule/images/03.png)
 
 ```{important}
-After activating an Order Rule, it applies to all Accounts, Account Groups, Order Types, and Channels. To control the eligibility, click on the *Eligibility* tab of the Order Rule and select the appropriate option. 
+After activating an Order Rule, it applies to all Accounts, Account Groups, Order Types, and Channels. To control the eligibility, click the Order Rule's *Eligibility* tab and select the appropriate option. 
 ```
 
 ## How the Custom Order Rule Works
 
-This example consists of 8 main steps. First, you must annotate the class for OSGi registration. Second, review and complete the implementation of the `COREntryType` interface. Third, add a display context for the new Order Rule.
+This example has nine main steps: 
 
-Then, add a utility class to retrieve the value of the minimum quantity to use in your display context and Order Rule implementation. After that, review and complete the implementation of the [`COREntryTypeJSPContributor`](https://github.com/liferay/liferay-portal/blob/master/modules/apps/commerce/commerce-order-rule-api/src/main/java/com/liferay/commerce/order/rule/entry/type/COREntryTypeJSPContributor.java) interface for the new Order Rule. Finally, add a JSP to render the configuration part of the new Order Rule.
-
-* [Annotate the Order Rule for OSGi Registration](#annotate-the-order-rule-for-osgi-registration)
-* [Review the `COREntryType` interface](#review-the-corentrytype-interface)
-* [Complete the `COREntryType` implementation](#complete-the-corentrytype-implementation)
-* [Add a display context](#add-a-display-context)
-* [Add a utility class to retrieve the minimum quantity value](#add-a-utility-class-to-retrieve-the-minimum-quantity-value)
-* [Annotate the JSP contributor for OSGi Registration](#annotate-the-jsp-contributor-for-osgi-registration)
-* [Review the `COREntryTypeJSPContributor` interface](#review-the-corentrytypejspcontributor-interface)
-* [Complete the JSP contributor implementation](#complete-the-jsp-contributor-implementation)
-* [Add a JSP to render the configuration of the Order Rule](#add-a-jsp-to-render-the-configuration-of-the-order-rule)
+1. [Annotate the Order Rule for OSGi Registration](#annotate-the-order-rule-for-osgi-registration)
+1. [Review the `COREntryType` interface](#review-the-corentrytype-interface)
+1. [Complete the `COREntryType` implementation](#complete-the-corentrytype-implementation)
+1. [Add a display context](#add-a-display-context)
+1. [Add a utility class to retrieve the minimum quantity value](#add-a-utility-class-to-retrieve-the-minimum-quantity-value)
+1. [Annotate the JSP contributor for OSGi Registration](#annotate-the-jsp-contributor-for-osgi-registration)
+1. [Review the `COREntryTypeJSPContributor` interface](#review-the-corentrytypejspcontributor-interface)
+1. [Complete the JSP contributor implementation](#complete-the-jsp-contributor-implementation)
+1. [Add a JSP to render the configuration of the Order Rule](#add-a-jsp-to-render-the-configuration-of-the-order-rule)
 
 ### Annotate the Order Rule for OSGi Registration
 
@@ -101,7 +99,7 @@ Then, add a utility class to retrieve the value of the minimum quantity to use i
     :lines: 18-26
 ```
 
-You must provide a distinct key for the Order Rule so that Liferay Commerce can distinguish it from others in the Order Rule registry. Specifying a key that is already in use overrides the existing associated type. The order determines its sort order in the drop-down. In this case, the order is 1, and it appears as the second item in the drop-down.
+You must provide a distinct key for the Order Rule so Liferay Commerce can distinguish it from others in the Order Rule registry. Specifying a key that is already in use overrides the existing associated type. The order determines its sort order in the drop-down. In this case, the order is 1, and it appears as the second item in the drop-down.
 
 ### Review the `COREntryType` interface
 
@@ -141,7 +139,7 @@ This method returns the name of the Order Rule as it appears in the UI. This may
 
 To complete the Order Rule, you must implement the above methods. There are two utility methods added to get the order quantity and the minimum quantity configured in the Order Rule. The first overridden method is `evaluate()` and it checks if the current order passes the Order Rule or not. It returns true if it does and false otherwise.
 
-The second method is to retrieve the error message for orders that don't satisfy the Order Rule. It returns a String converted from a StringBuilder that contains all the terms. The third method returns the unique key and the last method returns the label that appears on the UI.
+The second method retrieves the error message for orders that don't satisfy the Order Rule. It returns a String converted from a `StringBuilder` that contains all the terms. The third method returns the unique key, and the last method returns the label that appears on the UI.
 
 There are two additional methods to get the minimum quantity of the Order Rule and the total order quantity. The first method is present in the utility class `X9K1MinimumQuantityUtil`. The second method is `_getOrderQuantity(CommerceOrder commerceOrder)`. It returns the total order quantity as a sum of individual product quantities in the order.
 
@@ -152,7 +150,7 @@ There are two additional methods to get the minimum quantity of the Order Rule a
     :lines: 7-19
 ```
 
-The display context is used to retrieve the value for the minimum quantity configured for the Order Rule. The display context contains a single field of type `COREntry` and it is set using the created Order Rule. The display context has one method to retrieve the minimum quantity configured for the Order Rule and it uses the utility class detailed below.
+The code retrieves the value for the minimum quantity configured for the Order Rule from the display context, which contains a single field of type `COREntry` and it is set using the created Order Rule. The display context has one method to retrieve the minimum quantity configured for the Order Rule and it uses the utility class detailed below.
 
 ### Add a utility class to retrieve the minimum quantity value
 
@@ -178,7 +176,7 @@ The `commerce.order.rule.entry.type.jsp.contributor.key` property determines the
 public void render(long corEntryId, HttpServletRequest httpServletRequest,HttpServletResponse httpServletResponse) throws Exception;
 ```
 
-The `COREntryTypeJSPContributor` interface contains one method that renders a JSP. The method requires the id of the Order Rule and objects of type `HTTPServletRequest` and `HTTPServletResponse` as arguments.
+The `COREntryTypeJSPContributor` interface contains one method that renders a JSP. The method requires the Order Rule's id and objects of type `HTTPServletRequest` and `HTTPServletResponse` as arguments.
 
 ### Complete the JSP contributor implementation
 
@@ -188,7 +186,7 @@ The `COREntryTypeJSPContributor` interface contains one method that renders a JS
     :dedent: 1
 ```
 
-To complete the JSP Contributor, you must implement the `render()` method. It retrieves the `COREntry` using the `_corEntryLocalService` and the `corEntryId`. Then, it creates a new display context of type `X9K1MinimumQuantityDisplayContext` using the retrieved corEntry. This context is set to the `httpServletRequest`. The `servletContext` references the *Bundle-Symbolic-Name* from the `bnd.bnd` file. The `JSPRenderer` renders a JSP file with the `renderJSP()` method. It accepts the relative path of the JSP, servletContext, httpServletRequest, and httpServletResponse as arguments.
+To complete the JSP Contributor, you must implement the `render()` method. It retrieves the `COREntry` using the `_corEntryLocalService` and the `corEntryId`. Then it creates a new display context of type `X9K1MinimumQuantityDisplayContext` using the retrieved `corEntry`. This context is set to the `httpServletRequest`. The `servletContext` references the Bundle-Symbolic-Name from the `bnd.bnd` file. The `JSPRenderer` renders a JSP file with the `renderJSP()` method. It accepts the relative path of the JSP, `servletContext`, `httpServletRequest`, and `httpServletResponse` as arguments.
 
 ### Add a JSP to render the configuration of the Order Rule
 
