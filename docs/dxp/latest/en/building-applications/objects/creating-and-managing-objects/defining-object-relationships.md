@@ -1,6 +1,6 @@
 # Defining Object Relationships
 
-> Available: Liferay DXP/Portal 7.4+
+{bdg-secondary}`Available Liferay DXP/Portal 7.4+`
 
 Relationships are connections between Objects that link their entities. You can add relationships to any published or unpublished custom Object.<!--TASK: Include system Objects once supported; "You can add relationships to any published or unpublished Object, including both system and custom Objects."-->
 
@@ -39,7 +39,7 @@ Follow these steps to add relationships to an Object:
 1. Select a relationship Type: *One to Many* or *Many to Many*. <!--TASK: Add One to One after it's been implemented-->
 
    ```{note}
-   If you intend to relate entries within the same Object, you must use the One to Many type. <!--TASK: Add One to One after it's been implemented-->
+   If you want to relate entries within the same Object, you must use the One to Many type. <!--TASK: Add One to One after it's been implemented-->
    ```
 
 1. Select an *Object* to relate to the current Object.
@@ -67,6 +67,28 @@ Available options include *Prevent*, *Disassociate*, and *Cascade*.
 **Disassociate**: Entries on the parent side can be freely deleted without affecting any related child entries.
 
 **Cascade**: Entries on the parent side can be freely deleted; deleting a parent entry also deletes any related child entries, provided the user has the requisite permissions for the child Object.
+
+## Removing Relationships
+
+{bdg-secondary}`Available Liferay 7.4 U26+ and GA26+`
+
+You can remove relationships from both draft and published Object definitions. Removing a relationship permanently deletes its field from the related Object definitions. For published definitions, this can affect many records.
+
+```{important}
+For versions before Liferay 7.4 U26/GA26, users cannot delete relationships included in an Object at the time it is [published](./creating-objects.md#publishing-object-drafts).
+```
+
+Follow these steps to remove relationships from a published Object definitions.
+
+1. Open the *Global Menu* (![Global Menu](../../../images/icon-applications-menu.png)), go to the *Control Panel* tab, and click on *Objects*.
+
+1. Begin editing the desired Object definition and go to the *Relationships* tab.
+
+1. Click the *Actions* button (![Actions Button](../../../images/icon-actions.png)) for the desired relationship and select *Delete*.
+
+1. In the dialog window, enter the *name* of the relationship and click *Done* to confirm.
+
+   ![Enter the name of the relationship and click Done.](./defining-object-relationships/images/04.png)
 
 ## Additional Information
 

@@ -1,6 +1,6 @@
 # Objects Application Permissions
 
-> Available: Liferay DXP/Portal 7.4+
+{bdg-secondary}`Available Liferay DXP/Portal 7.4+`
 
 Like other Liferay applications, the Objects portlet is integrated with the permissions framework. This means you can assign [application](#application-permissions) and [resource](#resource-permissions) permissions to user roles to determine which users have access to the Objects portlet and its data.
 
@@ -32,23 +32,23 @@ Objects has the following resource permissions.
 
 | Permission | Description |
 | :--- | :--- |
-| Add Object Definition | Create an Object draft |
+| Add Object Definition | Create an Object definition draft |
 | Extend System Object Definition | Add fields, relationships, and layouts to system Objects |
 | Permissions | View and manage permissions related to Objects |
-| Publish Object Definition | Publish an Object draft |
+| Publish Object Definition | Publish an Object definition draft |
 
 ### Actions on Database Entities
 
 | Permission | Description |
 | :--- | :--- |
-| Delete | Delete an Object draft |
-| Permissions | View and modify permissions for an Object |
-| Update | Update an Object |
-| View | View an Object |
+| Delete | Delete an Object definition |
+| Permissions | View and modify permissions for an Object definition |
+| Update | Update an Object definition |
+| View | View an Object definition |
 
 ## Managing Permissions for Individual Object Definitions
 
-> Available Liferay DXP 7.4 U17+ and Liferay Portal 7.4 GA17+
+{bdg-secondary}`Available Liferay 7.4 U17+ and 7.4 GA17+`
 
 Follow these steps to manage permissions for individual Object definitions:
 

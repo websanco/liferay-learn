@@ -1,6 +1,6 @@
 # Exporting and Importing Object Structures
 
-> Available for Liferay DXP 7.4 U5+ and Portal 7.4 GA9+
+{bdg-secondary}`Available Liferay 7.4 U5+ and 7.4 GA9+`
 
 With Liferay Objects, you can import and export Object structures as `.json` files. This provides flexibility during application development, enabling users to easily migrate Object definitions between Liferay environments.
 

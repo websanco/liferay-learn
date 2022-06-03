@@ -1,6 +1,6 @@
 # Adding Fields to Objects
 
-{bdg-secondary}`Available Liferay DXP 7.4+`
+{bdg-secondary}`Available Liferay DXP/Portal 7.4+`
 
 Fields are data definitions that represent database columns. They store different [types of values](#field-types-ui-reference) for Liferay Objects. You can add fields to any published or unpublished Object, including both system and custom Objects.
 

@@ -1,6 +1,6 @@
 # Creating Objects
 
-> Available: Liferay DXP/Portal 7.4+
+{bdg-secondary}`Available Liferay DXP/Portal 7.4+`
 
 Liferay Objects provides development capabilities in the Liferay UI. Using the Objects portlet, you can build fully integrated Liferay applications without writing any code or manually deploying modules. This process includes [creating](#creating-object-drafts) an initial draft of the Object, [editing](#editing-object-drafts) the Object draft, and finally [publishing](#publishing-object-drafts) the draft to create the new application. Publishing an Object draft creates a fully integrated Liferay application that can be [managed and extended](./managing-objects.md) at any time via the Objects portlet.
 
@@ -124,17 +124,21 @@ The publishing process includes the following operations:
 
 ### Configuration Restrictions for Published Objects
 
-To prevent data loss and system conflicts, some configuration options are removed for Objects, fields, and relationships after they are published.
+{bdg-secondary}`For Liferay 7.4 U26+ and GA26+`
 
-* Published Objects cannot be deleted or unpublished.
+To prevent data loss and system conflicts, some configuration options are removed for Objects, fields, and relationships after they are published.
 
 * The name and scope of a published Object cannot be changed.
 
-* Any fields or relationships included in an Object at the time of publishing cannot be removed.
+* Any fields included in an Object at the time of publishing cannot be removed.
 
 * Most configuration options for published fields and relationships cannot be changed.
 
 You can still edit and localize labels for Objects, fields, and relationships after publishing, but most configuration options are removed. For Objects, you can change the Panel Category Key as well as add new fields, relationships, and layouts. For relationships, you can configure its *Deletion Type*.
+
+```{note}
+For Liferay 7.4 U25/GA25 and earlier versions, users cannot delete published Object definitions or remove relationships included in an Object at the time of publishing.
+```
 
 ## Additional Information
 
