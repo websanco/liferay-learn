@@ -1,6 +1,6 @@
 # Using Picklists
 
-> Available: Liferay DXP/Portal 7.4+
+{bdg-secondary}`Available Liferay DXP/Portal 7.4+`
 
 Picklists is an application for creating standard lists of values that are understood across the Liferay Portal. The process of creating a Picklist includes creating the initial list and adding items to it. Once these values are defined, they can be used in supported applications.
 
@@ -56,11 +56,19 @@ A list cannot be deleted if it is used by an Object field, though list items can
 Updating or deleting a Picklist item automatically updates all Object entries using the item value.
 ```
 
-## Picklist Fields in API Calls
+## Picklist APIs
+
+Liferay provides headless APIs for creating and managing Picklists. You can view available Picklist APIs in Liferay's API Explorer at `localhost:8080/o/api` under `headless-admin-list-type`.
+
+![Access Picklist APIs under headless-admin-list-type](./using-picklists/images/07.png)
+
+With them, you can perform CRUD operations for both Picklist Definitions (`ListTypeDefinition`) and Picklist Entries (`ListTypeEntry`).
+
+## Picklist Fields in Object API Calls
 
 When making POST, PATCH, and PUT API calls for Objects that include a Picklist field, you must use the following formats.
 
-### For Liferay DXP 7.4 U1/Portal 7.4 GA5
+### For Liferay DXP 7.4 U1+/Portal 7.4 GA5+
 
 ```json
 "samplePicklist": {"key": "string"}
