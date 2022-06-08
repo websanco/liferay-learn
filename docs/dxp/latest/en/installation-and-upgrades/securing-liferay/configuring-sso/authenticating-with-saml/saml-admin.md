@@ -84,6 +84,30 @@ Your key is now imported.
 
 Note that the SAML Service Provider session is tied to the normal session on the application server. Session expiration on the application server terminates the session on the Service Provider but does not initiate single logout.
 
+## Configuring the Service Provider
+
+The Service Provider tab shows several configuration options: 
+
+**Require Assertion Signature:** Check this box to require SAML assertions to be individually signed by the IdP in addition to the entire SAML message. 
+
+**Clock Skew:** Set the tolerance for the time difference between the SP and the IdP in milliseconds. 
+
+**LDAP Import Enabled:** Check this box to import user attributes from the LDAP servers declared in this SP's instance settings. 
+
+**Sign Authn Requests?:** If configured as an SP, digitally sign Authn requests. 
+
+**Sign Metadata?:** Sign the metadata sent to peer SAML entities. 
+
+**SSL Required:** Check this box to require SSL for the transfer of all SAML messages. All URLs in metadata sent to peers become prefixed with the `https` protocol. 
+
+**Allow showing the login portlet:** Allow the login portlet to appear when no SAML IdP is matched to the login request. Users in this scenario log in locally to Liferay DXP. 
+
+```{Important}
+Individual assertions need not be signed as long as the SAML response itself is signed. The SP and IdP should always communicate over `https` to have encryption at the transport level. 
+
+Liferay DXP requires signed SAML responses. If you believe man-in-the-middle attacks are possible and the information in the assertions is sensitive, you can both sign and encrypt them. 
+```
+
 You can add multiple IdP connections. To add another Identity Provider, click *Add Identity Provider* again and enter the details for the other provider. When users log in, they are asked to choose an identity provider, so be sure to name the providers so users can recognize them.
 
 ## Setting Up Liferay DXP as a SAML Service Provider in a Clustered Environment
