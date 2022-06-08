@@ -28,7 +28,7 @@ Follow these steps to add relationships to an Object:
 
 1. Click the *Relationships* tab and select the *Add* button (![Add Button](../../../images/icon-add.png)).
 
-   ![Click on the Add button in the Relationships tab, then enter a label abd name, and select a relationship type and the desired Object.](./defining-object-relationships/images/01.png)
+   ![Click on the Add button in the Relationships tab, then enter a label and name, and select a relationship type and the desired Object.](./defining-object-relationships/images/01.png)
 
 1. Enter a *Label* and *Relationship Name*.
 
@@ -86,7 +86,7 @@ Follow these steps to remove relationships from a published Object definitions.
 
 1. Click the *Actions* button (![Actions Button](../../../images/icon-actions.png)) for the desired relationship and select *Delete*.
 
-1. In the dialog window, enter the *name* of the relationship and click *Done* to confirm.
+1. In the dialog window, enter the name of the relationship and click *Done* to confirm.
 
    ![Enter the name of the relationship and click Done.](./defining-object-relationships/images/04.png)
 
