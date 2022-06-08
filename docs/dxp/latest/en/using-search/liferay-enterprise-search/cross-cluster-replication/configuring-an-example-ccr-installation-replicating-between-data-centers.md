@@ -62,6 +62,8 @@ The example configurations are provided in full [here](./ccr-basic-use-case-conf
 
 ## Install the Cross-Cluster Replication Module
 
+Starting with Liferay DXP 7.4, the Liferay Enterprise Search (LES) applications are included with all Liferay DXP bundles and Docker containers. Therefore, installing the LPKG is unnecessary on Liferay DXP 7.4+. See [Activating LES](./activating-liferay-enterprise-search.md) for more information.
+
 1. Download the Liferay DXP Cross-Cluster Replication for Elasticsearch LPKG from the [LES downloads page](https://customer.liferay.com/downloads).
 
 1. [Install the LPKG](../../../system-administration/installing-and-managing-apps/installing-apps.md) into all DXP nodes.

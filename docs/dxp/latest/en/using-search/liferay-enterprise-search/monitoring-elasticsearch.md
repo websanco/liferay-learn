@@ -101,6 +101,10 @@ Stop Kibana before continuing.
 
 ## Install and Configure the LES Monitoring App
 
+```{note}
+Starting with Liferay DXP 7.4, the Liferay Enterprise Search (LES) applications are included with all Liferay DXP bundles and Docker containers. Therefore, installing the module is unnecessary on Liferay DXP 7.4+. See [Activating LES](./activating-liferay-enterprise-search.md) for more information.
+```
+
 Download the LES Monitoring app and install the LPKG file by copying it into the `[Liferay Home]/deploy` folder. If Liferay DXP is running, you may be prompted to restart your server. Alternatively, you can also place the LPKG file into the `[Liferay Home]/marketplace` folder while Liferay is not running.
 
 1. Once the connector is installed and Kibana and Elasticsearch are securely configured, create a [configuration file](../../system-administration/configuring-liferay/configuration-files-and-factories/using-configuration-files.md) named `com.liferay.portal.search.elasticsearch.monitoring.web.internal.configuration.MonitoringConfiguration.config`.

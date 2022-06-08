@@ -32,6 +32,10 @@ There are some prerequisites for using Learning to Rank to re-score Liferay quer
 
 - A [Liferay Enterprise Search](https://www.liferay.com/products/dxp/enterprise-search) (LES) subscription is required for Learning to Rank. Once you have a subscription, [download the Liferay Enterprise Search Learning to Rank](https://customer.liferay.com/en/downloads?p_p_id=com_liferay_osb_customer_downloads_display_web_DownloadsDisplayPortlet&_com_liferay_osb_customer_downloads_display_web_DownloadsDisplayPortlet_productAssetCategoryId=118191013&_com_liferay_osb_customer_downloads_display_web_DownloadsDisplayPortlet_fileTypeAssetCategoryId=118191060) LPKG file and [install it](../../system-administration/installing-and-managing-apps/installing-apps.md).
 
+   ```{note}
+   Starting with Liferay DXP 7.4, the Liferay Enterprise Search (LES) applications are included with all Liferay DXP bundles and Docker containers. See [Activating LES](./activating-liferay-enterprise-search.md) for more information.
+   ```
+
 - A remote Elasticsearch server with your data indexed into it.
 
 - The corresponding version of the [Elasticsearch Learning to Rank](https://github.com/o19s/elasticsearch-learning-to-rank) plugin installed into Elasticsearch.
