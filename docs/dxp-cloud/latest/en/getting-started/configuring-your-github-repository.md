@@ -74,7 +74,7 @@ The personal access token created must have all of the scope permissions under *
 ![Check the correct permissions to ensure that the PAT can be used successfully.](./configuring-your-github-repository/images/05.png)
 
 ```{note}
-If you are using an organization account with SAML single sign-on authentication, then you must take additional steps to authorize your access token. See [GitHub's official documentation](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/authorizing-a-personal-access-token-for-use-with-saml-single-sign-on)_ for more information.
+If you are using an organization account with SAML single sign-on authentication, then you must take additional steps to authorize your access token. See [GitHub's official documentation](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/authorizing-a-personal-access-token-for-use-with-saml-single-sign-on) for more information.
 ```
 
 After updating these environment variables, the Jenkins service will restart. Any pushed branches and pull requests in the new repository now trigger builds.

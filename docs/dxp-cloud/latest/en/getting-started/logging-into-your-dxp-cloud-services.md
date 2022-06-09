@@ -47,6 +47,6 @@ You can follow similar steps to access the Jenkins CI web interface. Navigate to
 
 ## Additional Information
 
-* [Introduction to the DXP Service](../using-the-liferay-dxp-service/introduction-to-the-liferay-dxp-service.md)
+* [Using the DXP Service](../using-the-liferay-dxp-service.md)
 * [Continuous Integration](../platform-services/continuous-integration.md)
 * [Web Server Service](../platform-services/web-server-service.md)
