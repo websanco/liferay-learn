@@ -46,8 +46,8 @@ The server creates a compressed database dump file named `database.gz`.
 
 If your document library is using an file storage method that is not a file system store (such as Amazon S3Store or DBStore), then you must migrate to a file system store before proceeding. You can either use the Simple File System Store or Advanced File System Store.
 
-```{tip}
-The [Advanced File System Store](https://learn.liferay.com/dxp/latest/en/system-administration/file-storage/configuring-file-storage.html) uses a folder structure that more easily scales to large data sets. Migrating to the Advanced File System Store is recommended to accommodate more files in the document library in the long term.
+```{important}
+The [Advanced File System Store](https://learn.liferay.com/dxp/latest/en/system-administration/file-storage/configuring-file-storage.html) uses a folder structure that more easily scales to large data sets. Migrating to the Advanced File System Store is recommended to accommodate more files in the document library in the long term. *You must use the Advanced File System Store for any production environment.*
 ```
 
 See [File Store Migration](https://learn.liferay.com/dxp/latest/en/system-administration/file-storage/file-store-migration.html) for steps on how to migrate the document library.
