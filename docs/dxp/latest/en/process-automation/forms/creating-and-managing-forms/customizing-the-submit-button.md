@@ -1,5 +1,7 @@
 # Customizing the Submit Button
 
+{bdg-secondary}`Available 7.4+`
+
 When a User is finished entering data into a form, they must submit the form. By default a button that says _Submit_ is displayed for this purpose.
 
 Sometimes _Submit_ isn't the clearest word for the action the User is taking when submitting the form. For example, you might want to use _Register Now_:
