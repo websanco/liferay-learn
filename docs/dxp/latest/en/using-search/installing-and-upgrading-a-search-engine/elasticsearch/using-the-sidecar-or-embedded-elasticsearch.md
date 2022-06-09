@@ -54,7 +54,7 @@ Here are common uses for the default Elasticsearch server (sidecar and embedded)
 
 ## App Server Differences
 
-An Elasticsearch sidecar server is bundled with the Tomcat bundles and Docker images in Liferay 7.4 (DXP and Portal), Liferay DXP 7.3, and Liferay Portal 7.3 GA4+. There are some key differences if you're installing the Liferay WAR onto any supported application server.
+An Elasticsearch sidecar server is included with the Tomcat bundles and Docker images in Liferay 7.4 (DXP and Portal), Liferay DXP 7.3, and Liferay Portal 7.3 GA4+. There are some key differences if you're installing the Liferay WAR onto any supported application server.
 
 ```{note}
 In the table below, the notation _7.3+_ includes Liferay 7.4 (DXP and Portal).
