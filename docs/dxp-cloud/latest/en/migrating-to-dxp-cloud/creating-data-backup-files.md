@@ -127,7 +127,7 @@ cd $LIFERAY_HOME\data
 ```
 
 ```
-7za volume.tgz volume.tar
+7za a volume.tgz volume.tar
 ```
 
 You now have a compressed document library archive called `volume.tgz`.
