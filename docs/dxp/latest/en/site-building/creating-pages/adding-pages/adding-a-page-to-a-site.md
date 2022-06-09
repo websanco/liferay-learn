@@ -8,7 +8,7 @@ For Liferay 7.4 U22+ and GA22+, private Pages are disabled for new installations
 
 ## Adding a New Page
 
-You can add a new Page from the Pages administration screen or from the Page Tree (Liferay DXP +7.3 only).
+You can add a new Page from the Pages administration screen or from the Page Tree (Liferay DXP 7.3+ only).
 
 ### Adding a New Page from Pages Administration
 
@@ -17,10 +17,6 @@ You can add a new Page from the Pages administration screen or from the Page Tre
 1. Click the *Add* button (![Add](../../../images/icon-add.png)) and select *Page*.
 
    ![Add a Page to the Site.](./adding-a-page-to-a-site/images/01.png)
-
-   ```{note}
-   Starting with 7.3, the default Home Page is a Content Page instead of a Widget Page.
-   ```
 
 1. Under Page Template Sets, select a Basic or Global template.
 

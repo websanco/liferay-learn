@@ -99,7 +99,7 @@ You can navigate among pages of a Site hierarchy with the Site Map application. 
 
 {bdg-secondary}`For Liferay 7.4 U22+ and GA22+`
 
-By default, Private Pages are disabled by a Release Feature Flag for new installations. If desired, follow these steps to enable Private Pages for your Liferay system:
+By default, new Liferay installations include a release feature flag that prevents users from creating Private Pages. If desired, follow these steps to enable Private Pages for your Liferay system:
 
 1. Open the *Global Menu* (![Global Menu](../../../images/icon-applications-menu.png)), go to the *Control Panel* tab, and click *System Settings*.
 

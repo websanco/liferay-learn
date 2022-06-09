@@ -3,7 +3,7 @@
 By default, when Users join a Site, they can see all of its Pages. However, you can configure permissions for individual Pages to restrict access based on User [roles](../../../users-and-permissions/roles-and-permissions/understanding-roles-and-permissions.md).
 
 ```{note}
-Individual Page's permission take priority over Site level configurations.
+Individual Page permissions take priority over Site level configurations.
 ```
 
 Follow these steps to update Page permissions:

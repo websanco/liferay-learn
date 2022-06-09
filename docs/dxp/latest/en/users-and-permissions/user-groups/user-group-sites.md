@@ -1,18 +1,36 @@
 # User Group Sites
 
-With User Group Sites, you can design profile and dashboard pages that are automatically added to each member's personal Site. If Users belong to multiple User Groups, all the pages from those groups are made part of their personal Sites.
+With User Group Sites, you can create pages that are added automatically to each member’s [personal Site](../../site-building/building-sites/managing-personal-sites.md). These pages are organized into two [page sets](../../site-building/creating-pages/understanding-pages/understanding-pages.md#page-sets), *My Profile* (public) and *My Dashboard* (private), just like personal Sites. If users belong to multiple User Groups, all pages from those groups are also added to their Sites.
 
 ![Create profile and dashboard pages that are added to each member's personal Site.](./user-group-sites/images/01.png)
 
-User Group Site pages function similarly to regular Site Template pages, with an important exception: User Group Site pages aren't copied for each User. They're shown dynamically along with any custom pages that Users may have on their personal Site. For this reason, Users can't modify pages inherited from the User Group.
+By default, inherited pages can only be edited from the User Group Site and cannot be edited from a personal Site. If needed, User Group administrators can define customizable page areas so users can add and configure widgets in a page.
 
-If needed, the User Group administrator can define certain areas of a page as customizable, like with regular Sites, and then Users can add and configure widgets in the specified area of the page. This provides flexibility in configuring a User's personal Site without having to modify it directly.
+User Group Sites can be designed [manually](#designing-user-group-sites-manually) or using a [Site Template](#using-site-templates).
 
-You can use [Site Templates](#using-site-templates) to design User Group Sites or design them [manually](#designing-user-group-sites-manually).
+```{important}
+For Liferay 7.4 U22+ and GA22+, new Liferay installations include a release feature flag that disables the creation of Private Pages, including My Dashboard pages. To manually create custom dashboard pages for a User Group, Private Pages must be enabled for your Liferay system. See [Enabling Private Pages](../../site-building/creating-pages/understanding-pages/understanding-pages.md#enabling-private-pages) for more information.
 
-```{note}
-For Liferay 7.4 U22+ and GA22+, private pages are disabled for new installations. To manually create custom dashboard Pages for a User Group, private Pages must be enabled for your Liferay system. See [Enabling Private Pages](../../site-building/creating-pages/understanding-pages/understanding-pages.md#enabling-private-pages) for more information.
+Alternatively, when Private Pages are disabled, you can add My Dashboard pages using a Site Template. Pages added to the template and applied to the My Dashboard page set are treated as Private Pages.
 ```
+
+## Designing User Group Sites Manually
+
+Follow these steps to design a User Group Site manually:
+
+1. Open the *Global Menu* (![Global Menu](../../images/icon-applications-menu.png)), go to the *Control Panel*, and click *User Groups*.
+
+1. Click the *Actions* button (![Actions Button](../../images/icon-actions.png)) for the desired group and select *Manage Pages*.
+
+1. [Add and design Site Pages](../../site-building/creating-pages/adding-pages/adding-a-page-to-a-site.md).
+
+   ```{note}
+   While private pages are disabled, all pages added in this way are added to the *My Profile* page set. You must enable and create private pages to add pages to the *My Dashboard* set.
+   ```
+
+1. (Optional) Click the *Site Menu* (![Site Menu](../../images/icon-product-menu.png)) to access additional Site applications and configuration options.
+
+Once pages are added to a User Group Site, you can view them via the the *User Groups* application. Just click the *Actions* button (![Actions Button](../../images/icon-actions.png)) for the desired group and select *Go to Profile Pages* or *Go to Dashboard Pages*.
 
 ## Using Site Templates
 
@@ -35,26 +53,6 @@ Follow these steps to populate a User Group Site with profile and dashboard page
 1. Click *Save*.
 
 Once saved, the template's pages are added to each group member's personal Site under their *My Profile* or *My Dashboard* page sets.
-
-## Designing User Group Sites Manually
-
-Instead of basing User Group Sites on a Site Template, you can create them manually:
-
-1. Open the *Global Menu* (![Global Menu](../../images/icon-applications-menu.png)), go to the *Control Panel*, and click *User Groups*.
-
-1. Click the *Actions* button (![Actions Button](../../images/icon-actions.png)) for the desired group and select *Manage Pages*.
-
-1. [Add and design Site Pages](../../site-building/creating-pages/adding-pages/adding-a-page-to-a-site.md).
-
-   ```{note}
-   While private pages are disabled, all pages added in this way are added to the *My Profile* page set. You must enable and create private pages to add pages to the *My Dashboard* set.
-   ```
-
-1. (Optional) Click the *Site Menu* (![Site Menu](../../images/icon-product-menu.png)) to access additional Site applications and configuration options.
-
-```{tip}
-Once pages are added, you can view them by returning to the *User Groups* application in the Control Panel, clicking the *Actions* button (![Actions Button](../../images/icon-actions.png)) for the desired group, and selecting *Go to Profile Pages* or *Go to Dashboard Pages*.
-```
 
 ## Legacy User Group Sites Behavior
 

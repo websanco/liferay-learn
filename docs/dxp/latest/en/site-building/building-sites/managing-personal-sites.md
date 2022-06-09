@@ -1,15 +1,15 @@
 # Managing Personal Sites
 
-By default, Liferay generates a personal Site for every User that includes both Profile (public) and Dashboard (private) Pages. Each User is the sole member of their Personal Site and can display or manage their content using widgets and fragments. Users can also add Profile and Dashboard Pages to their Site manually.
-
-```{note}
-For Liferay 7.4 U22+ and GA22+, Private Pages are disabled for new installations. However, private Dashboard Pages remain active. To create additional Dashboard Pages, you must enable Private Pages for your Liferay system. See [Enabling Private Pages](../creating-pages/understanding-pages/understanding-pages.md#enabling-private-pages) for more information.
-```
+By default, Liferay generates a personal Site for every User. Each Site includes two [page sets](../creating-pages/understanding-pages/understanding-pages.md#page-sets): My Profile (public) and My Dashboard (private). Each User is the sole member of their personal Site and can use it display and manage their content.
 
 If desired, you can [disable or customize](#customizing-personal-sites-with-portal-properties) personal Sites using portal properties.
 
+```{important}
+For Liferay 7.4 U22+ and GA22+, new Liferay installations include a release feature flag that disables the creation of Private Pages, including Dashboard Pages. To manually create custom Dashboard Pages for a personal Site, Private Pages must be enabled for your Liferay system. See [Enabling Private Pages](../creating-pages/understanding-pages/understanding-pages.md#enabling-private-pages) for more information.
+```
+
 ```{tip}
-With User Group Sites, you can dynamically add pages to the personal Sites of all group members. See [User Group Sites](../../users-and-permissions/user-groups/user-group-sites.md) for more information.
+With User Group Sites, you can dynamically add Pages to the personal Sites of all group members. See [User Group Sites](../../users-and-permissions/user-groups/user-group-sites.md) for more information.
 ```
 
 ## Profile Pages and Dashboard Pages
