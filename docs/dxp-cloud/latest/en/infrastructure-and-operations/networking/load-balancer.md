@@ -23,7 +23,7 @@ Having a dedicated load balancer provides a myriad of enhanced features, such as
 
 ## CDN
 
-Liferay's Content Delivery Network (CDN) is a built-in feature provided with DXP Cloud. This CDN caches your static content globally, greatly enhancing your delivery speed. This CDN is disabled by default, but you can enable it for a service in your `LCP.json` file, within the `loadbalancer` object:
+Liferay's Content Delivery Network (CDN) is a built-in feature provided with DXP Cloud. This CDN caches your static content globally, greatly enhancing your delivery speed. By default, it's enabled in all environments except `dev` environments. You can enable or disable the CDN for a service (in its `LCP.json` file) by setting the value of `cdn` within the `loadbalancer` object:
 
 ```json
 {
