@@ -13,6 +13,8 @@ Here's how to view Individual profiles:
     * Topic interests
     * Segment membership
 
+![The Overview tab for Individuals.](individual-profiles/images/01.png)
+
 Each Individual profile has these tabs:
 
 * Overview
@@ -24,9 +26,13 @@ Let's explore them to learn more about people you do business with.
 
 ## Overview
 
-The Overview tab shows the person's recent activities using a histogram of the customer's activities and frequency in the past 90 days. The activities include page views, downloads, and form submissions. If you click on a specific day, it lists the Touchpoints (pages and assets) the customer acted on during that day only.
+The bar graph presents a summary of the individual's recent activities. Change the view between daily, weekly, and monthly views. Click the time period selector to change the time range. Use the search bar to filter events by key terms.
 
-![The Overview tab for Individuals.](individual-profiles/images/01.png)
+The activity stream presents past activities that are separated by sessions. Each session is indicated by a blue dot on the left of the time stamp. Click on a session to see session's details (e.g. device and browser information).
+
+Each session lists out [individual events](../../touchpoints/events.md) that are tracked by Analytics Cloud including both [default events](../../workspace-data/definitions/definitions-for-events.md#default-events) and [custom events](../../workspace-data/definitions/definitions-for-events.md#custom-events). Click on any event to see the event's details (e.g. page tile and url).
+
+![See the events in the activity stream.](individual-profiles/images/02.png)
 
 The Overview tab also gives you a glimpse of a person's profile data, topics of interest, and associated audience segments. Clicking the *View all* ... link for the Details, Interests, or Segments summary opens its respective tab.
 
