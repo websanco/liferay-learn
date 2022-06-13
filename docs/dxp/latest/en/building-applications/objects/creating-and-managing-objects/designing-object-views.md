@@ -14,7 +14,7 @@ Follow these steps to design a view for a custom Object definition:
 
 1. Open the *Global Menu* (![Global Menu](../../../images/icon-applications-menu.png)), click the *Control Panel* tab, and go to *Objects*.
 
-1. Begin editing a custom *Object definition*, go to the *Views* tab, and click the *Add* button (![Add Button](../../../images/icon-add.png)).
+1. Begin editing a custom Object definition, go to the *Views* tab, and click the *Add* button (![Add Button](../../../images/icon-add.png)).
 
 1. Enter a *name* and click *Save*.
 
@@ -22,7 +22,7 @@ Follow these steps to design a view for a custom Object definition:
 
 1. Click the new *view* to begin editing it.
 
-1. In the *Basic Info* tab, check *Mark as Default* to set it as the *default* view for the Object definition.
+1. In the Basic Info tab, check *Mark as Default* to set it as the default view for the Object definition.
 
    ```{note}
    This ensures the view is used for the Object's application page. If no custom layout is selected as default, the Object uses its automatically generated layout.
@@ -30,17 +30,17 @@ Follow these steps to design a view for a custom Object definition:
 
    ![Set the view as default.](./designing-object-views/images/03.png)
 
-1. In the *View Builder* tab, [add columns](#adding-columns-to-a-view) to the view table.
+1. In the View Builder tab, [add columns](#adding-columns-to-a-view) to the view table.
 
 1. (Optional) [Change or localize](#renaming-columns) the display name for each column.
 
-1. (Optional) In the *Default Sort* tab, set the [default column sorting](#setting-a-default-sorting).
+1. (Optional) In the Default Sort tab, set the [default column sorting](#setting-a-default-sorting).
 
-1. (Optional) In the *Filters* tab, select which fields to provide as [view filters](#adding-filters).
+1. (Optional) In the Filters tab, select which fields to provide as [view filters](#adding-filters).
 
 1. Click *Save*.
 
-Once saved, the custom view is used to display the Object's entries.
+Once saved, the custom view displays the Object's entries.
 
 ```{tip}
 For 7.4 U21+, you can duplicate a view by clicking its *Actions* button (![Actions Button](../../../images/icon-actions.png)) and selecting *Duplicate*. This creates a complete copy of the original view with "(Copy)" appended to it's name. 
@@ -48,7 +48,7 @@ For 7.4 U21+, you can duplicate a view by clicking its *Actions* button (![Actio
 
 ## Adding Columns to a View
 
-In the View Builder tab, add and order fields for the view. Each field added is used as a column in the view table.
+In the View Builder tab, add and order fields for the view. Each field added becomes a column in the view table.
 
 ```{note}
 Custom views do not support columns containing multiple entries (e.g., *Many to Many* relationship fields).
@@ -56,11 +56,11 @@ Custom views do not support columns containing multiple entries (e.g., *Many to 
 
 Follow these steps to add columns:
 
-1. Begin editing the desired *view* and go to the *View Builder* tab.
+1. Begin editing the desired view and go to the *View Builder* tab.
 
 1. Click the *Add* button (![Add Button](../../../images/icon-add.png)),
 
-1. Check all *fields* you want to include in the view table and click *Save*.
+1. Check all fields you want to include in the view table and click *Save*.
 
    Available options include both [custom fields](./adding-fields-to-objects.md) and default metadata fields (i.e., ID, Author, Creation Date, Modified Date, and Workflow Status).
 
@@ -80,7 +80,7 @@ Once saved, the view table only displays the selected fields.
 
 Follow these steps to change or localize the display name of view columns:
 
-1. Begin editing the desired *view* and go to the *View Builder* tab.
+1. Begin editing the desired view and go to the *View Builder* tab.
 
 1. Click the *Actions* button (![Actions Button](../../../images/icon-actions.png)) for the desired column and select *Edit*.
 
@@ -124,15 +124,15 @@ Object entries are now sorted according to your default sorting.
 
 {bdg-secondary}`Available Liferay 7.4 U27+ and GA27+`
 
-When creating a custom view, you can determine which fields are available to users as filter facets. You can also set default filters that are automatically applied to the view.
+When creating a custom view, you can determine which fields are available to users as filter facets. You can also set default filters that are applied automatically to the view.
 
 Follow these steps to add filters to a custom view:
 
-1. Begin editing the desired *view* and go to the *Filters* tab.
+1. Begin editing the desired view and go to the *Filters* tab.
 
 1. Click the *Add* button (![Add Button](../../../images/icon-add.png)).
 
-1. Select a field to *filter by*.
+1. In *filter by*, select a field. 
 
    ```{note}
    Currently, Objects only supports Workflow Status, Creation Date, Modified Date, and Picklist fields as view filters.
@@ -140,7 +140,7 @@ Follow these steps to add filters to a custom view:
 
 1. (Optional) Select a filter type: *Include* or *Exclude*. This determines whether the default filter includes or excludes entries with the following values.
 
-1. (Optional) Enter field *values* to use as a default filter.
+1. (Optional) Enter field values to use as a default filter.
 
    ![Select a field, filter type, and values.](./designing-object-views/images/11.png)
 
